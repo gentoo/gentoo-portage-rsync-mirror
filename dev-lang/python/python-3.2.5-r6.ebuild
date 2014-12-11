@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.5-r6.ebuild,v 1.9 2014/08/09 10:47:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.5-r6.ebuild,v 1.10 2014/12/11 16:05:48 mgorny Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -368,13 +368,15 @@ eselect_python_update() {
 }
 
 pkg_postinst() {
-	eselect_python_update
-
-	if [[ "${python_updater_warning}" == "1" ]]; then
-		ewarn "You have just upgraded from an older version of Python."
-		ewarn "You should switch active version of Python ${PV%%.*} and run"
-		ewarn "'python-updater [options]' to rebuild Python modules."
-	fi
+	ewarn "Please note that Python ${PV%.*} is no longer supported in Gentoo."
+	ewarn "The interpreter is not well maintained, and may contain security"
+	ewarn "vulnerabilities. Gentoo ebuilds will no longer be built with support"
+	ewarn "for Python ${PV%.*}."
+	ewarn
+	ewarn "If you wish to use Python ${PV%.*} for your own purposes (development,"
+	ewarn "testing), we suggest establishing a virtualenv for this interpreter,"
+	ewarn "and installing the necessary dependencies inside it. However, we also"
+	ewarn "strongly discourage using Python ${PV%.*} on production systems."
 }
 
 pkg_postrm() {

@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.296 2014/11/23 15:55:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.297 2014/12/11 16:15:30 kensington Exp $
+
+  11 Dec 2014; Michael Palimaka <kensington@gentoo.org> package.use.mask,
+  package.use.stable.mask:
+  Move kde-base/systemsettings[kscreen] to stable USE mask as the dependencies
+  are now keyworded.
 
   23 Nov 2014; Mike Gilbert <floppym@gentoo.org> make.defaults:
   Disable python3_4 default for this arch.

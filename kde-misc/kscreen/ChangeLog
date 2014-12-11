@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/kscreen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.12 2014/11/11 20:52:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.14 2014/12/11 16:07:59 ago Exp $
+
+  11 Dec 2014; Agostino Sarubbo <ago@gentoo.org> kscreen-1.0.2.1.ebuild,
+  kscreen-1.0.71.ebuild:
+  Add ~ppc64, wrt bug #525558
+
+  11 Dec 2014; Agostino Sarubbo <ago@gentoo.org> kscreen-1.0.2.1.ebuild,
+  kscreen-1.0.71.ebuild:
+  Add ~ppc, wrt bug #525558
 
   11 Nov 2014; Markus Meier <maekke@gentoo.org> kscreen-1.0.71.ebuild:
   add ~arm, bug #525558
