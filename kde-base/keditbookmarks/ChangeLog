@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/keditbookmarks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.234 2014/12/11 13:05:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditbookmarks/ChangeLog,v 1.235 2014/12/11 15:45:02 mrueg Exp $
+
+  11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -keditbookmarks-4.14.2.ebuild:
+  Remove KDE SC 4.14.2
 
   11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> keditbookmarks-4.14.3.ebuild:
   amd64 stable wrt bug #517344
