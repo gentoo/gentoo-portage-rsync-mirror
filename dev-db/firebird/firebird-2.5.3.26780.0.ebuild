@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.2.26540.0.ebuild,v 1.1 2014/05/30 12:58:22 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.3.26780.0.ebuild,v 1.1 2014/12/11 11:51:32 pacho Exp $
 
-EAPI=4
-
-inherit flag-o-matic eutils autotools multilib user versionator
+EAPI=5
+inherit flag-o-matic eutils autotools multilib user readme.gentoo versionator
 
 MY_P=${PN/f/F}-$(replace_version_separator 4 -)
 #MY_P=${PN/f/F}-${PV/_rc/-ReleaseCandidate}
@@ -17,31 +16,30 @@ SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
 LICENSE="IDPL Interbase-1.0"
 SLOT="0"
 KEYWORDS="~amd64 -ia64 ~x86"
+
 IUSE="doc client superserver xinetd examples debug"
+REQUIRED_USE="
+	client? ( !superserver )
+	client? ( !xinetd )
+	superserver? ( !xinetd )
+"
+
 RESTRICT="userpriv"
 
-RDEPEND="dev-libs/libedit
-	dev-libs/icu"
+RDEPEND="
+	dev-libs/libedit
+	dev-libs/icu:=
+"
 DEPEND="${RDEPEND}
 	>=dev-util/btyacc-3.0-r2
-	doc? ( app-arch/unzip )"
+	doc? ( app-arch/unzip )
+"
 RDEPEND="${RDEPEND}
 	xinetd? ( virtual/inetd )
-	!sys-cluster/ganglia"
+	!sys-cluster/ganglia
+"
 
 S="${WORKDIR}/${MY_P}"
-
-pkg_pretend() {
-	if use client && use superserver ; then
-		die "Use flags client and superserver cannot be used together"
-	fi
-	if use client && use xinetd ; then
-		die "Use flags client and xinetd cannot be used together"
-	fi
-	if use superserver && use xinetd ; then
-		die "Use flags superserver and xinetd cannot be used together"
-	fi
-}
 
 pkg_setup() {
 	enewgroup firebird 450
@@ -97,7 +95,8 @@ src_configure() {
 	filter-flags -fprefetch-loop-arrays
 	filter-mfpmath sse
 
-	econf --prefix=/usr/$(get_libdir)/firebird \
+	econf \
+		--prefix=/usr/$(get_libdir)/firebird \
 		$(use_enable superserver superserver) \
 		$(use_enable debug) \
 		--with-editline \
@@ -233,14 +232,6 @@ pkg_postinst() {
 	# Hack to fix ownership/perms
 	chown -fR firebird:firebird "${ROOT}/etc/${PN}" "${ROOT}/usr/$(get_libdir)/${PN}"
 	chmod 750 "${ROOT}/etc/${PN}"
-
-	elog
-	elog "Firebird is no longer installed in /opt. Binaries are in"
-	elog "/usr/bin. The core, udfs, etc are in /usr/lib/firebird. Logs"
-	elog "are in /var/log/firebird, and lock files in /var/run/firebird"
-	elog "The command line tool isql has been renamed to fbsql."
-	elog "Please report any problems or issues to bugs.gentoo.org."
-	elog
 }
 
 pkg_config() {

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.411 2014/11/27 11:52:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.412 2014/12/11 11:53:33 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> kdm-4.11.14.ebuild:
+  amd64 stable wrt bug #517344
 
   27 Nov 2014; Michael Palimaka <kensington@gentoo.org> kdm-4.11.14.ebuild:
   Restrict parallel build wrt bug #413811.

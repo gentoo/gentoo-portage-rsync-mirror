@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.116 2014/09/07 13:09:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.117 2014/12/11 11:51:32 pacho Exp $
+
+*firebird-2.5.3.26780.0 (11 Dec 2014)
+
+  11 Dec 2014; Pacho Ramos <pacho@gentoo.org> +firebird-2.5.3.26780.0.ebuild,
+  -files/70firebird, -files/firebird-2.5.0.26074.0-Makefile.in.static.createdb,
+  -files/firebird-update-valgrind.patch, -files/firebird.conf.d,
+  -files/firebird.conf.d.2, -files/firebird.init.d, -files/firebird.xinetd.2,
+  -files/xinetd.2, -firebird-2.5.2.26540.0.ebuild:
+  Fix security bug 532124
 
   07 Sep 2014; Pacho Ramos <pacho@gentoo.org>
   -files/firebird-2.0.3.12981.0-CVE-2008-0387.patch,

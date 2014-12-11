@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.346 2014/11/14 19:33:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.347 2014/12/11 11:58:00 zlogene Exp $
+
+  11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> ksysguard-4.11.14.ebuild:
+  amd64 stable wrt bug #517344
 
   14 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -ksysguard-4.11.13.ebuild:
   Cleanup old.
