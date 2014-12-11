@@ -8,5 +8,6 @@
 		<flag name="luajit">Use the lua just-in-time compiler
 		<pkg>dev-lang/luajit</pkg> instead of <pkg>dev-lang/lua</pkg>, which
 		should make luakit faster.</flag>
+		<flag name="pax_kernel">Use paxctl to mark the luakit binary.</flag>
 	</use>
 </pkgmetadata>

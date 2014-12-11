@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.23 2013/07/15 18:22:05 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.24 2014/12/11 15:01:11 perfinion Exp $
 
 EAPI=4
 
 inherit toolchain-funcs
-IUSE="luajit vim-syntax"
+IUSE="luajit pax_kernel vim-syntax"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -41,6 +41,7 @@ COMMON_DEPEND="
 DEPEND="
 	virtual/pkgconfig
 	sys-apps/help2man
+	pax_kernel? ( sys-apps/elfix )
 	${COMMON_DEPEND}
 "
 
@@ -53,8 +54,8 @@ RDEPEND="
 src_prepare() {
 	sed -i -e "/^CFLAGS/s/-ggdb//" config.mk || die
 	# bug 385471
-	sed "s,@\$(CC) -o \$@ \$(OBJS) \$(LDFLAGS),@\$(CC) -o \$@ \$(OBJS)
-		\$(LDFLAGS)\n\t\paxctl -Cm luakit,g" -i Makefile
+	use pax_kernel && sed "s,@\$(CC) -o \$@ \$(OBJS) \$(LDFLAGS),@\$(CC) \
+		-o \$@ \$(OBJS) \$(LDFLAGS)\n\tpaxmark.sh -m luakit,g" -i Makefile
 }
 
 src_compile() {
