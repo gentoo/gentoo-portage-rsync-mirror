@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/mate-screensaver-1.8.1.ebuild,v 1.1 2014/12/09 22:16:41 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/mate-screensaver-1.8.1.ebuild,v 1.2 2014/12/11 09:55:55 pacho Exp $
 
 EAPI="5"
-
 GCONF_DEBUG="yes"
 
-inherit gnome2 multilib versionator
+inherit gnome2 multilib readme.gentoo versionator
 
 MATE_BRANCH="$(get_version_component_range 1-2)"
 
@@ -19,6 +18,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 IUSE="X consolekit kernel_linux libnotify opengl pam systemd"
+
+DOC_CONTENTS="
+	Information for converting screensavers is located in
+	/usr/share/doc/${PF}/xss-conversion.txt*
+"
 
 RDEPEND="
 	>=dev-libs/dbus-glib-0.71:0
@@ -75,8 +79,6 @@ src_configure() {
 		--with-xscreensaverhackdir=/usr/$(get_libdir)/misc/xscreensaver
 }
 
-DOCS="AUTHORS ChangeLog NEWS README"
-
 src_install() {
 	gnome2_src_install
 
@@ -92,6 +94,8 @@ src_install() {
 	if ! use pam ; then
 		fperms u+s /usr/libexec/mate-screensaver-dialog
 	fi
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
@@ -111,6 +115,5 @@ pkg_postinst() {
 		echo
 	fi
 
-	elog "Information for converting screensavers is located in "
-	elog "/usr/share/doc/${PF}/xss-conversion.txt.${PORTAGE_COMPRESS}"
+	readme.gentoo_print_elog
 }
