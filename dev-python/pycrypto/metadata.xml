@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>python</herd>
-<longdescription>
+  <herd>python</herd>
+  <longdescription>
 The Python Cryptography Toolkit is a collection of cryptographic
 algorithms and protocols, implemented for use from Python. Among
 the contents of the package:
@@ -18,7 +18,7 @@ the contents of the package:
 	* Some demo programs (currently all quite old and outdated).
 
 </longdescription>
-<longdescription lang="ja">
+  <longdescription lang="ja">
 このPython言語のクリプトグラフィー・ツールキットは、暗号手法のアルゴリズムとプロ
 トコルの集合で、Python言語から利用されるための実装です。このパッケージ内容は以下
 です。

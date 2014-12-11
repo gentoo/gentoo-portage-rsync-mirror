@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.104 2014/12/07 19:15:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.105 2014/12/11 09:07:04 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -592,6 +592,12 @@ distutils-r1_run_phase() {
 		local BUILD_DIR=${BUILD_DIR}/build
 	fi
 	local -x PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
+
+	# We need separate home for each implementation, for .pydistutils.cfg.
+	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
+		local -x HOME=${HOME}/${EPYTHON}
+		mkdir -p "${HOME}" || die
+	fi
 
 	# Set up build environment, bug #513664.
 	local -x AR=${AR} CC=${CC} CPP=${CPP} CXX=${CXX}

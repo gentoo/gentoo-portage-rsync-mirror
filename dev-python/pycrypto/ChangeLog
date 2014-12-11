@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.159 2014/12/10 16:33:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.160 2014/12/11 09:28:17 jlec Exp $
+
+  11 Dec 2014; Justin Lecher <jlec@gentoo.org> pycrypto-2.6.1-r1.ebuild,
+  metadata.xml:
+  Add missing call of distutils-r1_python_prepare_all
 
 *pycrypto-2.6.1-r1 (10 Dec 2014)
 

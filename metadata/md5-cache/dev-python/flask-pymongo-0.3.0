@@ -1,14 +1,15 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-python/flask-0.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/pymongo-2.4[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] doc? ( dev-python/sphinx[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) test? ( dev-python/nose[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DEPEND=>=dev-python/flask-0.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/pymongo-2.4[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] doc? ( dev-python/sphinx[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 DESCRIPTION=PyMongo support for Flask
 EAPI=5
 HOMEPAGE=http://pypi.python.org/pypi/Flask-PyMongo
-IUSE=doc examples test python_targets_python2_7
+IUSE=doc examples python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 RDEPEND=>=dev-python/flask-0.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=dev-python/pymongo-2.4[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
+RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/dcrosta/flask-pymongo/archive/0.3.0.tar.gz -> flask-pymongo-0.3.0.tar.gz
-_eclasses_=distutils-r1	05d050f2d617bfad25581eca4d62a290	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	a2dac9ffff107078f25147aac958a68f	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=4d596c6b778b39573fc56962885eda75
+_eclasses_=distutils-r1	77153bb8c09122a70620037ffa158eb8	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	a2dac9ffff107078f25147aac958a68f	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=e0e77d352d34be324eb070a01cfae2db

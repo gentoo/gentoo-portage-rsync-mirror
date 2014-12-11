@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.43 2014/10/13 20:09:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.44 2014/12/11 09:05:46 ultrabug Exp $
+
+  11 Dec 2014; Ultrabug <ultrabug@gentoo.org> pymongo-2.7.2.ebuild:
+  fix test dep #526980
 
   13 Oct 2014; Jeroen Roovers <jer@gentoo.org> pymongo-2.7.2.ebuild:
   Marked ~hppa (bug #525246). Conditionally depend on dev-db/mongodb (bug

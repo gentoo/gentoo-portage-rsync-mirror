@@ -1,19 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.17.5.ebuild,v 1.1 2014/12/08 07:52:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.62.ebuild,v 1.1 2014/12/11 09:04:23 jlec Exp $
 
 EAPI=5
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="8"
+K_GENPATCHES_VER="69"
 K_DEBLOB_AVAILABLE="1"
 UNIPATCH_STRICTORDER=1
 inherit kernel-2 eutils readme.gentoo
 detect_version
 detect_arch
 
-AUFS_VERSION=3.17_p20141208
+AUFS_VERSION=3.10.x_p20141208
 AUFS_TARBALL="aufs-sources-${AUFS_VERSION}.tar.xz"
 # git archive -v --remote=git://git.code.sf.net/p/aufs/aufs3-standalone aufs${AUFS_VERSION/_p*} > aufs-sources-${AUFS_VERSION}.tar
 AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1456 2014/12/09 18:38:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1457 2014/12/11 09:07:04 mgorny Exp $
+
+  11 Dec 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Restore using separate HOMEs for Python implementations, because of
+  .pydistutils.cfg. Bug #532236.
 
   09 Dec 2014; Manuel Rüger <mrueg@gentoo.org> kde4-base.eclass:
   Sync kde4-base.eclass with overlay.
