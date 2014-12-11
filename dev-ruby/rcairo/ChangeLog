@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.89 2014/10/16 19:33:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.91 2014/12/11 06:54:20 graaff Exp $
+
+  11 Dec 2014; Hans de Graaff <graaff@gentoo.org> -rcairo-1.12.8.ebuild:
+  Cleanup.
+
+*rcairo-1.14.0 (11 Dec 2014)
+
+  11 Dec 2014; Hans de Graaff <graaff@gentoo.org> +rcairo-1.14.0.ebuild:
+  Version bump.
 
   16 Oct 2014; Manuel Rüger <mrueg@gentoo.org> rcairo-1.12.9.ebuild:
   Add ruby21 support.

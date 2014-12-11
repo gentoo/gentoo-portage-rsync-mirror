@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.12.8.ebuild,v 1.2 2014/04/05 23:32:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.14.0.ebuild,v 1.1 2014/12/11 06:53:37 graaff Exp $
 
 EAPI=5
 
-# jruby → cannot work, it's a compiled extension
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_NAME="cairo"
 
@@ -38,6 +37,11 @@ ruby_add_bdepend "
 	dev-ruby/pkg-config
 	dev-ruby/ruby-glib2
 	test? ( >=dev-ruby/test-unit-2.1.0-r1:2 )"
+
+all_ruby_prepare() {
+	# Avoid development dependency.
+	sed -i -e '/notify/ s:^:#:' test/cairo-test-utils.rb || die
+}
 
 each_ruby_configure() {
 	${RUBY} -Cext/cairo extconf.rb || die "extconf failed"
