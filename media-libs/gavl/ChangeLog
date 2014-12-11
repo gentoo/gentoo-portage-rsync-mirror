@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gavl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.25 2013/08/10 22:25:38 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.26 2014/12/11 10:39:57 jer Exp $
+
+  11 Dec 2014; Jeroen Roovers <jer@gentoo.org> gavl-1.4.0-r1.ebuild:
+  Stable for HPPA (bug #526044).
 
 *gavl-1.4.0-r1 (10 Aug 2013)
 
