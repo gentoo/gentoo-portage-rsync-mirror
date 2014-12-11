@@ -4011,7 +4011,9 @@ media-sound/lyvi:mpris - Enable MPRIS support
 media-sound/mangler:espeak - Text to speech engine
 media-sound/mangler:g15 - Logitech g15 lcd support
 media-sound/mangler:opus - Codec specialized for speech over the internet
+media-sound/mixxx:hid - Enable HID controller support
 media-sound/mixxx:shout - Enable broadcasting support via media-libs/libshout
+media-sound/mixxx:vamp - Enable vamp analyzing plugins support
 media-sound/moc:cache - Enable tags caching support
 media-sound/moc:magic - Use libmagic to determine mimetypes
 media-sound/moc:sid - Build with SID (Commodore 64 Audio) support

@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mixxx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.68 2013/03/02 21:57:27 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.69 2014/12/11 04:21:00 radhermit Exp $
+
+*mixxx-1.11.0 (11 Dec 2014)
+
+  11 Dec 2014; Tim Harder <radhermit@gentoo.org> +mixxx-1.11.0.ebuild,
+  +files/mixxx-1.11.0-no-bzr.patch, +files/mixxx-1.11.0-system-libs.patch,
+  metadata.xml:
+  Version bump (bug #469506 by Alex Barker), add hid and vamp use flags.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mixxx-1.10.1.ebuild:
   Move Qt dependencies to the new category
