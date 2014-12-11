@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/path-py
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/path-py/ChangeLog,v 1.4 2014/11/18 08:10:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/path-py/ChangeLog,v 1.5 2014/12/11 01:41:58 floppym Exp $
+
+  11 Dec 2014; Mike Gilbert <floppym@gentoo.org> -path-py-6.0.ebuild,
+  path-py-7.0.ebuild:
+  Depend on app-arch/unzip.
 
   18 Nov 2014; Justin Lecher <jlec@gentoo.org> path-py-7.0.ebuild,
   metadata.xml:
