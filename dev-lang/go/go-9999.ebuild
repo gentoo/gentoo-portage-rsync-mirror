@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.20 2014/11/03 20:22:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.21 2014/12/11 17:28:16 williamh Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ fi
 src_prepare()
 {
 	if [[ ${PV} != 9999 ]]; then
-		epatch "${FILESDIR}"/${P}-no-Werror.patch
+		epatch "${FILESDIR}"/${PN}-1.2-no-Werror.patch
 	fi
 	epatch_user
 }
@@ -71,7 +71,7 @@ src_test()
 src_install()
 {
 	dobin bin/*
-	dodoc AUTHORS CONTRIBUTORS PATENTS README misc/editors
+	dodoc AUTHORS CONTRIBUTORS PATENTS README
 
 	dodir /usr/lib/go
 	insinto /usr/lib/go
@@ -82,6 +82,13 @@ src_install()
 	# [1] http://code.google.com/p/go/issues/detail?id=2775
 	doins -r doc include lib pkg src
 	fperms -R +x /usr/lib/go/pkg/tool
+}
+
+pkg_preinst()
+{
+	has_version '<dev-lang/go-1.4' &&
+		export had_support_files=true ||
+		export had_support_files=false
 }
 
 pkg_postinst()
@@ -99,5 +106,15 @@ pkg_postinst()
 	if [[ ${PV} != 9999 && -n ${REPLACING_VERSIONS} &&
 		${REPLACING_VERSIONS} != ${PV} ]]; then
 		elog "Release notes are located at http://golang.org/doc/go${PV}"
+	fi
+
+	if $had_support_files; then
+		ewarn
+		ewarn "All editor support, IDE support, shell completion"
+		ewarn "support, etc has been removed from the go package"
+		ewarn "upstream."
+		ewarn "For more information on which support is available, see"
+		ewarn "the following URL:"
+		ewarn "https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins"
 	fi
 }
