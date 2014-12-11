@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16211 2014/12/10 00:04:24 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16212 2014/12/11 10:08:39 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,8 +43,9 @@ sys-apps/kmscon
 # Complete redesign, masked for testing.
 >=app-admin/eselect-opengl-1.3.0
 =media-libs/mesa-10.3.4-r1
-=media-libs/mesa-10.3.5-r1
+>=media-libs/mesa-10.3.5-r1
 =x11-base/xorg-server-1.16.2-r1
+>=x11-base/xorg-server-1.16.2.901-r1
 >=x11-proto/glproto-1.4.17-r1
 
 # Ian Stakenvicius <axs@gentoo.org> (03 Dec 2014)

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.364 2014/10/27 01:52:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.365 2014/12/11 10:29:00 jer Exp $
+
+  11 Dec 2014; Jeroen Roovers <jer@gentoo.org> db-4.8.30-r2.ebuild:
+  Stable for HPPA (bug #525282).
 
   27 Oct 2014; Mike Frysinger <vapier@gentoo.org> db-4.8.30-r1.ebuild:
   Mark arm64/m68k/s390/sh stable.
