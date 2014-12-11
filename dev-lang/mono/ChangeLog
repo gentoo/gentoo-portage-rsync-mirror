@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.260 2014/11/18 02:45:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.261 2014/12/11 03:50:00 prometheanfire Exp $
+
+  11 Dec 2014; Matthew Thode <prometheanfire@gentoo.org> mono-2.10.9-r2.ebuild:
+  fixing stable mono for bug 467238
 
   18 Nov 2014; Rick Farina <zerochaos@gentoo.org> mono-2.10.9-r2.ebuild,
   mono-3.2.3.ebuild, mono-3.2.8.ebuild:

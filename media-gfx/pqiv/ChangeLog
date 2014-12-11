@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.43 2014/06/20 08:37:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.45 2014/12/11 03:41:59 radhermit Exp $
+
+  11 Dec 2014; Tim Harder <radhermit@gentoo.org> -pqiv-2.0.ebuild,
+  -pqiv-2.1.ebuild, -pqiv-2.1.1.ebuild, -files/pqiv-2.0-ldflags.patch:
+  Remove old.
+
+  11 Dec 2014; Tim Harder <radhermit@gentoo.org> pqiv-2.2.ebuild:
+  Stabilize for amd64 and x86.
 
 *pqiv-2.2 (20 Jun 2014)
 

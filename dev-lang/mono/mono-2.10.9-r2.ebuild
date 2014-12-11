@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.9-r2.ebuild,v 1.6 2014/11/18 02:45:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.9-r2.ebuild,v 1.7 2014/12/11 03:50:00 prometheanfire Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ DEPEND="${COMMONDEPEND}
 	sys-devel/bc
 	virtual/yacc
 	>=app-shells/bash-3.2
-	pax_kernel? ( sys-apps/paxctl )"
+	pax_kernel? ( sys-apps/elfix )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -61,12 +61,12 @@ pkg_setup() {
 src_prepare() {
 	go-mono_src_prepare
 
-	# we need to sed in the paxctl -mr in the runtime/mono-wrapper.in so it don't
-	# get killed in the build proces when MPROTEC is enable. #286280
-	# RANDMMAP kill the build proces to #347365
+	# we need to sed in the paxctl-ng -mr in the runtime/mono-wrapper.in so it doesn't
+	# get killed in the build process when MPROTECT is enabled. #286280
+	# RANDMMAP kills the build process to #347365
 	if use pax_kernel ; then
 		ewarn "We are disabling MPROTECT on the mono binary."
-		sed '/exec/ i\paxctl -mr "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in
+		sed '/exec "/ i\paxctl-ng -mr "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in || die "Failed to sed mono-wrapper.in"
 	fi
 }
 
