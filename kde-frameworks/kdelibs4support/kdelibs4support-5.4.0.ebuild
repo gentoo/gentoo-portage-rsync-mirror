@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kdelibs4support/kdelibs4support-5.4.0.ebuild,v 1.2 2014/12/01 08:47:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kdelibs4support/kdelibs4support-5.4.0.ebuild,v 1.3 2014/12/12 14:46:18 kensington Exp $
 
 EAPI=5
 
+QT_MINIMAL="5.3.0"
 VIRTUALX_REQUIRED="test"
 inherit kde5
 
@@ -40,6 +41,7 @@ COMMON_DEPEND="
 	$(add_frameworks_dep solid)
 	app-text/docbook-xml-dtd:4.2
 	dev-libs/openssl
+	=dev-qt/qtcore-5.3*:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtnetwork:5

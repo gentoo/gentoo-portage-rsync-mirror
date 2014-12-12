@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/frameworkintegration-5.4.0.ebuild,v 1.1 2014/11/14 11:01:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/frameworkintegration-5.4.0.ebuild,v 1.2 2014/12/12 14:47:24 kensington Exp $
 
 EAPI=5
 
+QT_MINIMAL="5.3.0"
 VIRTUALX_REQUIRED="test"
 inherit kde5
 
@@ -25,6 +26,7 @@ RDEPEND="
 	$(add_frameworks_dep knotifications)
 	$(add_frameworks_dep kwidgetsaddons)
 	$(add_frameworks_dep kxmlgui)
+	=dev-qt/qtcore-5.3*:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
