@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.57 2014/12/11 17:28:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.58 2014/12/12 18:23:32 williamh Exp $
+
+  12 Dec 2014; William Hubbs <williamh@gentoo.org> go-1.3.3.ebuild,
+  go-1.4.ebuild, go-9999.ebuild:
+  fix references to upstream issues
 
   11 Dec 2014; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
   sync live ebuild

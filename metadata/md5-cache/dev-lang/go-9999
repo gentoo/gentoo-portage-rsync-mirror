@@ -6,4 +6,4 @@ HOMEPAGE=http://www.golang.org
 LICENSE=BSD
 SLOT=0
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=c083f727eb5d8188b31e85445f6a90ee
+_md5_=ffab43ca43b7f98c6c07d7b90e7bd106

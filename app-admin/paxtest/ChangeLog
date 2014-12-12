@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/paxtest
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.43 2011/05/03 14:58:16 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.45 2014/12/12 18:15:44 blueness Exp $
+
+  12 Dec 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signature
+
+*paxtest-0.9.13 (12 Dec 2014)
+
+  12 Dec 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/paxtest-0.9.13-Makefile.patch, +paxtest-0.9.13.ebuild:
+  Version bump
 
   03 May 2011; Anthony G. Basile <blueness@gentoo.org>
   -paxtest-0.9.7_pre5.ebuild, -files/paxtest-0.9.7_pre5-Makefile.patch,
@@ -182,4 +191,3 @@
   04 Aug 2003; <solar@gentoo.org> metadata.xml, paxtest-0.9.1.ebuild:
   Initial import of paxtest into portage, PaX regression test suite developed by
   Peter Busser
-

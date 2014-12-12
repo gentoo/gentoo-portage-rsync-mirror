@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.3.ebuild,v 1.7 2014/11/21 09:55:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.3.3.ebuild,v 1.8 2014/12/12 18:23:32 williamh Exp $
 
 EAPI=5
 
@@ -86,7 +86,7 @@ src_install()
 	# There is a known issue which requires the source tree to be installed [1].
 	# Once this is fixed, we can consider using the doc use flag to control
 	# installing the doc and src directories.
-	# [1] http://code.google.com/p/go/issues/detail?id=2775
+	# [1] https://golang.org/issue/2775
 	doins -r doc include lib pkg src
 
 	dobashcomp misc/bash/go
