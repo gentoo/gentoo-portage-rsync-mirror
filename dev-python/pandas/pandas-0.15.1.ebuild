@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.1.ebuild,v 1.5 2014/12/08 08:57:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.1.ebuild,v 1.6 2014/12/12 07:47:58 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,8 @@ EXTRA_DEPEND="
 	"
 CDEPEND="
 	>dev-python/numpy-1.7[${PYTHON_USEDEP}]
-	>=dev-python/python-dateutil-2.3[${PYTHON_USEDEP}]
+	>=dev-python/python-dateutil-2.0[${PYTHON_USEDEP}]
+	<=dev-python/python-dateutil-2.3[${PYTHON_USEDEP}]
 	!~dev-python/openpyxl-1.9.0[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}
 	doc? (
@@ -39,7 +40,7 @@ DEPEND="${CDEPEND}
 		dev-python/lxml[${PYTHON_USEDEP}]
 		dev-python/matplotlib[${PYTHON_USEDEP}]
 		>=dev-python/openpyxl-1.6.1[${PYTHON_USEDEP}]
-		<dev-python/openpyxl-2.0[${PYTHON_USEDEP}]
+		dev-python/openpyxl[${PYTHON_USEDEP}]
 		>=dev-python/pytables-3.0.0[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]
 		dev-python/rpy[${PYTHON_USEDEP}]
@@ -79,7 +80,6 @@ RDEPEND="${CDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${P}-skip-tz-test.patch
-	"${FILESDIR}"/${P}-datetutil-2.3.patch
 )
 
 python_prepare_all() {

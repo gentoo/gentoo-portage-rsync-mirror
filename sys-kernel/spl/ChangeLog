@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.80 2014/12/12 05:59:03 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.81 2014/12/12 07:51:56 ryao Exp $
+
+  12 Dec 2014; Richard Yao <ryao@gentoo.org> spl-0.6.3-r1.ebuild,
+  spl-0.6.3.ebuild, spl-9999.ebuild:
+  s/PAX_OVERFLOW/PAX_SIZE_OVERFLOW/ - Thanks perfinition for catching the typo
 
   12 Dec 2014; Richard Yao <ryao@gentoo.org> spl-0.6.3-r1.ebuild,
   spl-0.6.3.ebuild, spl-9999.ebuild:
