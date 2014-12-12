@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.24.ebuild,v 1.5 2014/11/26 06:51:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.24.ebuild,v 1.6 2014/12/12 15:59:32 jer Exp $
 
 EAPI=5
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -102,7 +102,10 @@ multilib_src_compile() {
 				CPPFLAGS="${CPPFLAGS} -I\$(BOOST_INC_DIR) -I. -DEXV_HAVE_STDINT_H"
 		fi
 
-		use doc && emake doc
+		if use doc; then
+			emake samples
+			emake doc
+		fi
 	fi
 }
 

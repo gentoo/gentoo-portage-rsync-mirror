@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/epm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.36 2014/09/26 19:59:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.37 2014/12/12 15:43:36 jer Exp $
+
+  12 Dec 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Update e-mail address.
 
   26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/epm-1.33-prefix.patch, +files/epm-1.40-prefix.patch:

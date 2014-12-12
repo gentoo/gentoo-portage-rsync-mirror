@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.8.ebuild,v 1.1 2014/05/14 21:58:08 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.9.8.ebuild,v 1.2 2014/12/12 15:42:34 zlogene Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-linux"
 IUSE="debug nepomuk v4l"
 
 RDEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.8.5.ebuild,v 1.2 2014/11/03 11:15:35 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.8.5.ebuild,v 1.3 2014/12/12 15:46:31 zlogene Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -37,7 +37,7 @@ LICENSE="GPL-2"
 SLOT="4"
 
 if [[ ${KDE_BUILD_TYPE} == release ]] ; then
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm ~x86"
 fi
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +glew +glib +gsf gsl

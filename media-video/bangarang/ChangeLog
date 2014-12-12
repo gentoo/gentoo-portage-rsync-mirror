@@ -1,6 +1,9 @@
 # ChangeLog for media-video/bangarang
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.15 2014/05/13 18:08:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.16 2014/12/12 15:43:40 zlogene Exp $
+
+  12 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> bangarang-2.1-r2.ebuild:
+  amd64 stable wrt bug #517344
 
 *bangarang-2.1-r2 (13 May 2014)
 

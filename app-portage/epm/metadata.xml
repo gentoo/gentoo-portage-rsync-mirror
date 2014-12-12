@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>peter@weilbacher.org</email>
+		<email>gentoo@weilbacher.org</email>
 		<name>Peter Weilbacher</name>
 		<description>Current maintainer, assign bugs</description>
 	</maintainer>
