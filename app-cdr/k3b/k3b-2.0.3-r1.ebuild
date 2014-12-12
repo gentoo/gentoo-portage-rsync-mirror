@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3-r1.ebuild,v 1.2 2014/11/06 15:16:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3-r1.ebuild,v 1.3 2014/12/12 21:16:26 mrueg Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug dvd emovix encode ffmpeg flac mad mp3 musepack sndfile sox taglib vcd vorbis"
 
 CDEPEND="
-	$(add_kdebase_dep libkcddb)
+	|| ( kde-apps/libkcddb:4 $(add_kdebase_dep libkcddb) )
 	media-libs/libsamplerate
 	dvd? ( media-libs/libdvdread )
 	ffmpeg? ( virtual/ffmpeg )

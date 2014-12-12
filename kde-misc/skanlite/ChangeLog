@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/skanlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.35 2014/11/03 10:23:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.36 2014/12/12 21:11:14 mrueg Exp $
+
+  12 Dec 2014; Manuel Rüger <mrueg@gentoo.org> skanlite-1.1-r1.ebuild:
+  Add support for kde applications dependency.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -skanlite-1.0.ebuild,
   -skanlite-1.1.ebuild:

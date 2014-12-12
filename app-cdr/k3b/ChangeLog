@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.287 2014/11/06 15:16:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.288 2014/12/12 21:16:26 mrueg Exp $
+
+  12 Dec 2014; Manuel Rüger <mrueg@gentoo.org> k3b-2.0.3-r1.ebuild:
+  Add support for kde applications dependency.
 
   06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> k3b-2.0.3-r1.ebuild:
   Add missing dependency on gettext. Thanks to Nikoli. Fixes bug #528412.
