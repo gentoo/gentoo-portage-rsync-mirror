@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.3.2.ebuild,v 1.2 2014/11/26 16:13:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.4.0.ebuild,v 1.1 2014/12/12 18:53:23 xarthisius Exp $
 
 EAPI=5
 
@@ -15,12 +15,12 @@ if [[ ${PV} == *9999 ]]; then
 	inherit git-2
 else
 	SRC_URI="https://${GITHUB_URI}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	DOCKER_GITCOMMIT="39fa2fa"
+	DOCKER_GITCOMMIT="4595d4f"
 	KEYWORDS="~amd64"
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 fi
 
-inherit bash-completion-r1 linux-info systemd udev user
+inherit bash-completion-r1 linux-info multilib systemd udev user
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -145,7 +145,7 @@ src_compile() {
 	# setup CFLAGS and LDFLAGS for separate build target
 	# see https://github.com/tianon/docker-overlay/pull/10
 	export CGO_CFLAGS="-I${ROOT}/usr/include"
-	export CGO_LDFLAGS="-L${ROOT}/usr/lib"
+	export CGO_LDFLAGS="-L${ROOT}/usr/$(get_libdir)"
 
 	# if we're building from a zip, we need the GITCOMMIT value
 	[ "$DOCKER_GITCOMMIT" ] && export DOCKER_GITCOMMIT
