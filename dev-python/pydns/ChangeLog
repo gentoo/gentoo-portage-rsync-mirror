@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.28 2014/10/04 14:15:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.29 2014/12/12 11:18:00 jer Exp $
+
+  12 Dec 2014; Jeroen Roovers <jer@gentoo.org> pydns-3.1.0.ebuild:
+  Marked ~hppa too.
 
   04 Oct 2014; Anthony G. Basile <blueness@gentoo.org> pydns-2.3.4.ebuild,
   pydns-2.3.6-r1.ebuild, pydns-3.0.1.ebuild, pydns-3.0.2-r1.ebuild,

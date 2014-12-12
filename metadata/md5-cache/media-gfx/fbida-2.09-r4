@@ -11,4 +11,4 @@ REQUIRED_USE=pdf? ( tiff )
 SLOT=0
 SRC_URI=http://www.kraxel.org/releases/fbida/fbida-2.09.tar.gz http://dev.gentoo.org/~jer/fbida-2.09-jpeg-9a.patch.bz2 mirror://gentoo/ida.png.bz2
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=33d488003b338b48b0f2824b0226ccf5
+_md5_=3673535e05bf83385dee96dc5eea0a1f

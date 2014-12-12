@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.16 2014/09/01 16:47:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.10.0.ebuild,v 1.2 2014/12/12 11:20:09 thev00d00 Exp $
 
 EAPI="5"
 
@@ -23,34 +23,37 @@ HOMEPAGE="http://handbrake.fr/"
 LICENSE="GPL-2"
 
 SLOT="0"
-IUSE="fdk ffmpeg gstreamer gtk"
+IUSE="+fdk gstreamer gtk libav-aac"
 
-# Use either ffmpeg or gst-plugins/mpeg2dec for decoding MPEG-2.
-REQUIRED_USE="!ffmpeg? ( gstreamer )"
+REQUIRED_USE="^^ ( fdk libav-aac )"
 
 RDEPEND="
+	dev-libs/jansson
 	media-libs/a52dec
 	media-libs/libass
 	media-libs/libbluray
 	media-libs/libdvdnav
 	media-libs/libdvdread
-	media-libs/libmpeg2
-	media-libs/libmp4v2:0
-	media-libs/libmkv
 	media-libs/libsamplerate
 	media-libs/libtheora
 	media-libs/libvorbis
+	media-libs/libvpx
 	media-libs/x264:=
 	media-sound/lame
-	ffmpeg? ( || ( >=media-video/libav-9 >=media-video/ffmpeg-1.2.1:0 ) )
+	|| ( >=media-video/libav-10.1 >=media-video/ffmpeg-2.3:0 )
 	sys-libs/zlib
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
-		!ffmpeg? ( media-plugins/gst-plugins-mpeg2dec:1.0 )
+		media-libs/gst-plugins-good:1.0
+		media-libs/gst-plugins-bad:1.0
+		media-libs/gst-plugins-ugly:1.0
+		media-plugins/gst-plugins-a52dec:1.0
+		media-plugins/gst-plugins-libav:1.0
+		media-plugins/gst-plugins-x264:1.0
 	)
 	gtk? (
-		x11-libs/gtk+:3
+		>=x11-libs/gtk+-3.10
 		dev-libs/dbus-glib
 		dev-libs/glib:2
 		x11-libs/cairo
@@ -61,6 +64,7 @@ RDEPEND="
 	)
 	fdk? ( media-libs/fdk-aac )
 	"
+	#x265? ( =media-libs/x265-1.4 )
 
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
@@ -74,77 +78,44 @@ pkg_setup() {
 
 src_prepare() {
 	# Get rid of leftover bundled library build definitions,
-	# the version 0.9.9 supports the use of system libraries.
 	sed -i 's:.*\(/contrib\|contrib/\).*::g' \
 		"${S}"/make/include/main.defs \
 		|| die "Contrib removal failed."
-
-	# Instead of adding a #define to libmkv, we expand it in place. 
-	epatch "${FILESDIR}"/${PN}-9999-expand-MK_SUBTITLE_PGS.patch
-
-	# Fix compilation against the released 1.9.1 version of mp4v2.
-	epatch "${FILESDIR}"/${P}-fix-compilation-with-mp4v2-v1.9.1.patch
 
 	# Remove libdvdnav duplication and call it on the original instead.
 	# It may work this way; if not, we should try to mimic the duplication.
 	epatch "${FILESDIR}"/${PN}-9999-remove-dvdnav-dup.patch
 
-	# Remove faac dependency until its compilation errors can be resolved.
-	epatch "${FILESDIR}"/${P}-remove-faac-dependency.patch
-	sed -i 's/-lfaac//' gtk/configure.ac || die
+	# Remove faac dependency; TODO: figure out if we need to do this at all.
+	epatch "${FILESDIR}"/${PN}-9999-remove-faac-dependency.patch
 
-	# Make use of an older version of libmkv.
-	epatch "${FILESDIR}"/${PN}-9999-use-older-libmkv.patch
-
-	# Make use of an unpatched version of a52 that does not make a private field public.
-	epatch "${FILESDIR}"/${PN}-9999-use-unpatched-a52.patch
-
-	# Add gmodule to the linker command line for bug #482674.
-	epatch "${FILESDIR}"/${P}-add-gmodule-to-gtk-configure.patch
-
-	# Fixup configure.ac with newer automake
 	cd "${S}/gtk"
-	sed -i \
-		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
-		-e 's:AM_PROG_CC_STDC:AC_PROG_CC:g' \
-		-e 's:am_cv_prog_cc_stdc:ac_cv_prog_cc_stdc:g' \
-		configure.ac || die "Fixing up configure.ac failed"
-
-	# Don't run autogen.sh
+	# Don't run autogen.sh.
 	sed -i '/autogen.sh/d' module.rules || die "Removing autogen.sh call failed"
 	eautoreconf
 }
 
 src_configure() {
-	local myconf=""
-
-	if ! use gtk ; then
-		myconf+=" --disable-gtk"
-	fi
-
-	if ! use gstreamer ; then
-		myconf+=" --disable-gst"
-	fi
-
-	if use ffmpeg ; then
-		myconf+=" --enable-ff-mpeg2"
-	fi
-
-	if use fdk ; then
-		myconf+=" --enable-fdk-aac"
-	fi
-
 	./configure \
 		--force \
+		--verbose \
 		--prefix="${EPREFIX}/usr" \
+		--disable-local-autotools \
+		--disable-local-cmake \
+		--disable-local-yasm \
 		--disable-gtk-update-checks \
-		${myconf} || die "Configure failed."
+		$(use_enable libav-aac) \
+		$(use_enable fdk fdk-aac) \
+		$(use_enable gtk) \
+		$(usex !gstreamer --disable-gst) \
+		--disable-x265 || die "Configure failed."
+	#	$(use_enable x265) \
 }
 
 src_compile() {
 	emake -C build
 
-	# Documentation building is currently broken.
+	# TODO: Documentation building is currently broken, try to fix it.
 	#
 	# if use doc ; then
 	# 	emake -C build doc
