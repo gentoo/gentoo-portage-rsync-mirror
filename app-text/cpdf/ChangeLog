@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cpdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/ChangeLog,v 1.3 2014/12/08 16:17:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/ChangeLog,v 1.4 2014/12/12 02:58:54 radhermit Exp $
+
+  12 Dec 2014; Tim Harder <radhermit@gentoo.org> cpdf-2.1.1.ebuild:
+  Make DESCRIPTION a bit more descriptive.
 
   08 Dec 2014; Tim Harder <radhermit@gentoo.org> cpdf-2.1.1.ebuild:
   Set RESTRICT="mirror bindist" on recommendation of licensing discussion.

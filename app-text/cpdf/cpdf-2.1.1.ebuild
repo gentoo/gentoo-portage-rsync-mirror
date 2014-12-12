@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/cpdf-2.1.1.ebuild,v 1.3 2014/12/08 16:17:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/cpdf-2.1.1.ebuild,v 1.4 2014/12/12 02:58:54 radhermit Exp $
 
 EAPI=5
 
 inherit findlib
 
-DESCRIPTION="PDF command line tools"
+DESCRIPTION="A command line tool for manipulating PDF files"
 HOMEPAGE="http://community.coherentpdf.com/ https://github.com/johnwhitington/cpdf-source/"
 SRC_URI="https://github.com/johnwhitington/cpdf-source/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
