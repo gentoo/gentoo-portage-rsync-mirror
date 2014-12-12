@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.7.0-r1.ebuild,v 1.1 2014/08/25 02:12:03 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.7.0-r1.ebuild,v 1.2 2014/12/12 22:57:28 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,6 @@ IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
 	gnome-base/libglade:2.0
-	>=dev-util/glade-2.0.0-r1
 	>=dev-perl/glib-perl-1.020
 	>=dev-perl/gtk2-perl-1.012"
 DEPEND="${RDEPEND}
