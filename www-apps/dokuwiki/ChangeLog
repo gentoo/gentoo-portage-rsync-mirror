@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.70 2014/10/27 14:23:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.71 2014/12/12 13:47:14 jmbsvicetto Exp $
+
+*dokuwiki-20140929b (12 Dec 2014)
+*dokuwiki-20140505c (12 Dec 2014)
+
+  12 Dec 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +dokuwiki-20140505c.ebuild, +dokuwiki-20140929b.ebuild,
+  -dokuwiki-20121013.ebuild:
+  Bump dokuwiki versions to address an XSS with SWF uploads - announcement
+  https://www.freelists.org/post/dokuwiki/XSS-via-SWF-uploads-hotfix,3
 
   27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> dokuwiki-20140505b.ebuild,
   dokuwiki-20140929a.ebuild:

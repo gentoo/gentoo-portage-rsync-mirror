@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.10.ebuild,v 1.1 2013/08/29 10:32:25 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.10.ebuild,v 1.2 2014/12/12 13:41:15 ultrabug Exp $
 
 EAPI="5"
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7} )
 WANT_AUTOMAKE="1.12"
 
-inherit autotools base python
+inherit autotools base python-single-r1
 
 MY_PN="Pacemaker"
 MY_P=${MY_PN}-${PV/_/-}
@@ -34,6 +34,8 @@ DEPEND="
 	snmp? ( net-analyzer/net-snmp )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=("${FILESDIR}"/pacemaker-1.1.10-tinfo.patch)
 
 S="${WORKDIR}/${PN}-${MY_P}"
 
