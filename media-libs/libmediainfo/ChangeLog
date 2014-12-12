@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.79 2014/11/25 23:11:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.81 2014/12/12 03:11:31 radhermit Exp $
+
+  12 Dec 2014; Tim Harder <radhermit@gentoo.org> -libmediainfo-0.7.64.ebuild,
+  -libmediainfo-0.7.68.ebuild, -libmediainfo-0.7.69.ebuild,
+  libmediainfo-0.7.70.ebuild:
+  Revert stabilization, needs to wait for wxGTK-3 for mediainfo. Remove old.
+
+  12 Dec 2014; Tim Harder <radhermit@gentoo.org> libmediainfo-0.7.70.ebuild:
+  Stabilize for amd64 and x86.
 
 *libmediainfo-0.7.71 (25 Nov 2014)
 
