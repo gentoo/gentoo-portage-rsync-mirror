@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/File-RsyncP-0.700.0.ebuild,v 1.3 2014/06/27 17:20:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/File-RsyncP-0.700.0.ebuild,v 1.4 2014/12/12 22:29:51 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="net-misc/rsync"
 
-MAKEOPTS+=" -j1"
+PATCHES=( "${FILESDIR}/${P}-make.patch" )
 
 src_prepare() {
 	perl-module_src_prepare

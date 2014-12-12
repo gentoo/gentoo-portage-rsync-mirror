@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-RsyncP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.30 2014/06/27 17:20:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.31 2014/12/12 22:29:51 dilfridge Exp $
+
+  12 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  File-RsyncP-0.700.0.ebuild, +files/File-RsyncP-0.700.0-make.patch:
+  Add patch for parallel make bug 262156
 
   27 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -File-RsyncP-0.68.ebuild,
   File-RsyncP-0.700.0.ebuild:
