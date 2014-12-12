@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qttest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.18 2014/11/15 02:38:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.19 2014/12/12 14:30:05 kensington Exp $
+
+*qttest-5.4.0 (12 Dec 2014)
+
+  12 Dec 2014; Michael Palimaka <kensington@gentoo.org> +qttest-5.4.0.ebuild:
+  Version bump.
 
 *qttest-4.8.6-r1 (15 Nov 2014)
 

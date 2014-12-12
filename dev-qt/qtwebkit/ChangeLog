@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.21 2014/11/15 02:38:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.22 2014/12/12 14:30:04 kensington Exp $
+
+*qtwebkit-5.4.0 (12 Dec 2014)
+
+  12 Dec 2014; Michael Palimaka <kensington@gentoo.org> +qtwebkit-5.4.0.ebuild:
+  Version bump.
 
 *qtwebkit-4.8.6-r1 (15 Nov 2014)
 

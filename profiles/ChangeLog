@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9603 2014/12/12 09:36:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9604 2014/12/12 14:05:04 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Dec 2014; Michael Palimamka <kensington@gentoo.org> package.mask:
+  Add 5.4.0 to Qt5 mask.
 
   12 Dec 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask <x11-drivers/nvidia-drivers-304 (bug #532342).

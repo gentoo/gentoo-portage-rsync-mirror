@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.25 2014/11/26 18:26:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.26 2014/12/12 14:30:04 kensington Exp $
+
+*qthelp-5.4.0 (12 Dec 2014)
+
+  12 Dec 2014; Michael Palimaka <kensington@gentoo.org> +qthelp-5.4.0.ebuild:
+  Version bump.
 
   26 Nov 2014; Davide Pesavento <pesa@gentoo.org> qthelp-4.8.6-r1.ebuild:
   Restore mv of compat headers in src_unpack, accidentally deleted in the

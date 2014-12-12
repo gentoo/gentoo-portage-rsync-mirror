@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtmultimedia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.16 2014/11/15 02:37:05 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.17 2014/12/12 14:30:04 kensington Exp $
+
+*qtmultimedia-5.4.0 (12 Dec 2014)
+
+  12 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  +qtmultimedia-5.4.0.ebuild:
+  Version bump.
 
 *qtmultimedia-4.8.6-r1 (15 Nov 2014)
 
