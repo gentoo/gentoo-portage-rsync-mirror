@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1458 2014/12/11 18:32:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1459 2014/12/12 17:30:40 pesa Exp $
+
+  12 Dec 2014; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
+  Restrict tests for all release versions.
 
   11 Dec 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Always restore initial directory after sub-phase run. Fixes bug #532168 and
