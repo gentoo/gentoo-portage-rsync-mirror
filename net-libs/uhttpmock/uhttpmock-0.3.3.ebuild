@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/uhttpmock/uhttpmock-0.3.3.ebuild,v 1.1 2014/11/11 13:44:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/uhttpmock/uhttpmock-0.3.3.ebuild,v 1.2 2014/12/12 12:22:10 jer Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -20,7 +20,7 @@ REQUIRED_USE="
 	vala? ( introspection )
 "
 
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm hppa ~ppc ~ppc64 ~x86"
 
 RDEPEND="
 	>=dev-libs/glib-2.31:2

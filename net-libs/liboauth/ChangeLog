@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liboauth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.34 2013/09/08 13:21:07 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.35 2014/12/12 12:21:47 jer Exp $
+
+  12 Dec 2014; Jeroen Roovers <jer@gentoo.org> liboauth-1.0.1.ebuild:
+  Stable for HPPA (bug #529964).
 
   08 Sep 2013; Michael Palimaka <kensington@gentoo.org> -liboauth-0.9.7.ebuild:
   Remove old.
