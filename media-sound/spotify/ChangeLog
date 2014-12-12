@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.36 2014/10/08 19:48:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.37 2014/12/12 16:19:50 prometheanfire Exp $
+
+*spotify-0.9.4.183-r9 (12 Dec 2014)
+*spotify-0.9.11.27-r2 (12 Dec 2014)
+
+  12 Dec 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-0.9.11.27-r2.ebuild, +spotify-0.9.4.183-r9.ebuild,
+  -spotify-0.9.11.27-r1.ebuild, -spotify-0.9.4.183-r8.ebuild:
+  fixing libpng dep
 
 *spotify-0.9.11.27-r1 (08 Oct 2014)
 

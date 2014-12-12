@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.63 2014/10/10 02:13:38 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.64 2014/12/12 16:21:42 dlan Exp $
+
+*joomla-3.4.0_alpha (12 Dec 2014)
+
+  12 Dec 2014; Yixun Lan <dlan@gentoo.org> +joomla-3.4.0_alpha.ebuild:
+  version bump, fix bug 524778, thanks Harold Naparst
 
 *joomla-3.3.6 (10 Oct 2014)
 
