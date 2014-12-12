@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.15 2014/12/07 22:10:22 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.16 2014/12/12 01:23:56 twitch153 Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ src_prepare() {
 
 	# Remove automatic dependencies to prevent building without flags enabled.
 	if use !alsa; then
-		sed -i -e '^/include(FindALSA/d' CMakeLists.txt || die
+		sed -i -e '/^include(FindALSA/d' CMakeLists.txt || die
 	fi
 	if use !ao; then
 		sed -i -e '/^check_lib(AO/d' CMakeLists.txt || die
