@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/avidemux-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.23 2014/11/14 01:30:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.24 2014/12/12 09:23:52 pinkbyte Exp $
+
+  12 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  USE='vaapi' is now global, removing it's description from metadata
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Remove myself.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.517 2014/11/15 20:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.518 2014/12/12 09:21:57 pinkbyte Exp $
 
 # Keep them sorted
 
@@ -368,6 +368,7 @@ upnp-av - Enable UPnP audio/video streaming support
 upower - Enable power management support
 usb - Add USB support to applications that have optional USB support (e.g. cups)
 v4l - Enable support for video4linux (using linux-headers or userspace libv4l libraries)
+vaapi - Enable Video Acceleration API for hardware decoding
 vala - Enable bindings for dev-lang/vala
 vanilla - Do not add extra patches which change default behaviour; DO NOT USE THIS ON A GLOBAL SCALE as the severity of the meaning changes drastically
 vcd - Video CD support

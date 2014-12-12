@@ -1,0 +1,26 @@
+commit 754f4957d7a7e5be0df0e9de1d31aebeecdc4476
+Author: Moritz Barsnick <barsnick@gmx.net>
+Date:   Mon Dec 8 16:08:20 2014 +0100
+
+    configure: use use_pkg_config() instead of check_pkg_config() for libsmbclient
+    
+    This ensures that the CFLAGS and LDFLAGS are actually applied.
+    Fixes an incorrect change introduced with the clean-up in commit
+    cfcaf6b38e39ed6e788abb1a5a44f23660dce2f6.
+    
+    Reviewed-by: Nicolas George <george@nsup.org>
+    Signed-off-by: Michael Niedermayer <michaelni@gmx.at>
+
+diff --git a/configure b/configure
+index 40d5428..0933210 100755
+--- a/configure
++++ b/configure
+@@ -4887,7 +4887,7 @@ enabled libquvi           && require_pkg_config libquvi quvi/quvi.h quvi_init
+ enabled librtmp           && require_pkg_config librtmp librtmp/rtmp.h RTMP_Socket
+ enabled libschroedinger   && require_pkg_config schroedinger-1.0 schroedinger/schro.h schro_init
+ enabled libshine          && require_pkg_config shine shine/layer3.h shine_encode_buffer
+-enabled libsmbclient      && { check_pkg_config smbclient libsmbclient.h smbc_init ||
++enabled libsmbclient      && { use_pkg_config smbclient libsmbclient.h smbc_init ||
+                                require smbclient libsmbclient.h smbc_init -lsmbclient; }
+ enabled libsoxr           && require libsoxr soxr.h soxr_create -lsoxr
+ enabled libssh            && require_pkg_config libssh libssh/sftp.h sftp_init

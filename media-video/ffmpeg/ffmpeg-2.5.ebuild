@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.5.ebuild,v 1.1 2014/12/04 09:03:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.5.ebuild,v 1.2 2014/12/12 09:22:39 aballier Exp $
 
 EAPI="5"
 
@@ -193,6 +193,7 @@ src_prepare() {
 	if [[ "${PV%_p*}" != "${PV}" ]] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
+	epatch "${FILESDIR}/samba.patch"
 	epatch_user
 }
 
