@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imapclient/imapclient-0.11.ebuild,v 1.1 2014/05/31 03:59:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imapclient/imapclient-0.11.ebuild,v 1.2 2014/12/12 11:52:02 idella4 Exp $
 
 EAPI=5
-# "Python versions 2.6, 2.7, 3.2 and 3.3 are officially supported" therefore 
-# NOT adding py3.4 since it doesn't testsuite desn't even get started since it's clearly not ready
-PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy )
+
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -24,7 +23,7 @@ IUSE="doc examples test"
 RDEPEND="dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/mock[${PYTHON_USEDEP}] )"
+	test? ( $(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy) )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -47,7 +46,7 @@ python_prepare_all() {
 }
 
 python_test() {
-	esetup.py test
+	"${PYTHON}" -m unittest discover || die "tests failed under ${EPYTHON}"
 }
 
 python_install() {

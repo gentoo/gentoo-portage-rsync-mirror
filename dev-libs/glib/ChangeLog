@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.625 2014/10/27 01:54:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.626 2014/12/12 11:47:17 jer Exp $
+
+  12 Dec 2014; Jeroen Roovers <jer@gentoo.org> glib-2.40.2.ebuild:
+  Stable for HPPA (bug #529964).
 
   27 Oct 2014; Mike Frysinger <vapier@gentoo.org> glib-2.40.0-r1.ebuild:
   Mark arm64/m68k/s390/sh stable.

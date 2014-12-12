@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.108 2014/09/03 13:02:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.109 2014/12/12 11:51:27 jer Exp $
+
+  12 Dec 2014; Jeroen Roovers <jer@gentoo.org> gtk-doc-am-1.21.ebuild:
+  Stable for HPPA (bug #529964).
 
 *gtk-doc-am-1.21 (03 Sep 2014)
 
