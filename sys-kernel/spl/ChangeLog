@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/spl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.79 2014/12/01 06:57:33 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.80 2014/12/12 05:59:03 ryao Exp $
+
+  12 Dec 2014; Richard Yao <ryao@gentoo.org> spl-0.6.3-r1.ebuild,
+  spl-0.6.3.ebuild, spl-9999.ebuild:
+  Suspected false positives in PAX_OVERFLOW cause runtime failures according to
+  reports in IRC.
 
 *spl-0.6.3-r1 (01 Dec 2014)
 
