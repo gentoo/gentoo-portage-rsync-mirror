@@ -6,6 +6,5 @@
     <flag name="aften">Enable A/52 (AC-3) audio encoder support.</flag>
     <flag name="amr">Enable Adaptive Multi-Rate format support via <pkg>media-libs/opencore-amr</pkg>.</flag>
     <flag name="vpx">Enable VP8 codec support via <pkg>media-libs/libvpx</pkg>.</flag>
-    <flag name="vaapi">Enable VAAPI (Video Acceleration API) for hardware decoding.</flag>
   </use>
 </pkgmetadata>

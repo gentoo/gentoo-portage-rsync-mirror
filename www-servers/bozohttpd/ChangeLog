@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/bozohttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.18 2014/11/27 16:50:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/bozohttpd/ChangeLog,v 1.20 2014/12/12 09:54:36 pacho Exp $
+
+  12 Dec 2014; Pacho Ramos <pacho@gentoo.org> -bozohttpd-20100621.ebuild,
+  -bozohttpd-20111118.ebuild:
+  Drop old
+
+  12 Dec 2014; Agostino Sarubbo <ago@gentoo.org> bozohttpd-20140708.ebuild:
+  Stable for x86, wrt bug #518078
 
 *bozohttpd-20140708 (27 Nov 2014)
 

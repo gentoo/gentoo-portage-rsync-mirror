@@ -56,7 +56,6 @@
 	<flag name="sse4_2">Enables SSE4.2 optimizations: Nehalem-based Intel Core i7 or later.</flag>
     <flag name="ssse3">Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
 	<flag name="twolame">Enables MP2 encoding via <pkg>media-sound/twolame</pkg> as an alternative to the internal encoder.</flag>
-	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
 	<flag name="vis"> Adds support for SIMD optimizations for UltraSPARC processors.</flag>
 	<flag name="vpx">Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.</flag>
 	<flag name="xop">Enables XOP (eXtended Operations) optimizations: AMD processors starting with Bulldozer architecture.</flag>

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.86 2014/11/29 19:02:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.87 2014/12/12 09:31:58 armin76 Exp $
+
+  12 Dec 2014; Raúl Porcel <armin76@gentoo.org> po4a-0.45-r1.ebuild,
+  po4a-0.45-r2.ebuild:
+  arm64 stable
 
 *po4a-0.45-r2 (29 Nov 2014)
 

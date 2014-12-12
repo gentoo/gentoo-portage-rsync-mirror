@@ -16,7 +16,6 @@
  <flag name='rtmp'>Enable Real Time Messaging Protocol using librtmp</flag>
  <flag name='rsxs'>Enable really slick X screensavers</flag>
  <flag name='sftp'>Support browsing files over SFTP</flag>
- <flag name='vaapi'>Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
  <flag name='webserver'>Enable internal webserver</flag>
  <flag name='xrandr'>Support X randr extension</flag>
 </use>
