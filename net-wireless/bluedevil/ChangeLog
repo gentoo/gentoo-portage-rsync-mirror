@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.63 2014/12/11 17:37:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.64 2014/12/12 16:53:10 pacho Exp $
+
+  12 Dec 2014; Pacho Ramos <pacho@gentoo.org> -bluedevil-2.0_rc1-r1.ebuild,
+  bluedevil-2.0_rc1.ebuild:
+  Fix dependencies, drop unneeded revision (#509358)
 
   11 Dec 2014; Michael Palimaka <kensington@gentoo.org> bluedevil-1.3.2.ebuild,
   bluedevil-2.0.ebuild, bluedevil-2.0_rc1-r1.ebuild, bluedevil-2.0_rc1.ebuild:

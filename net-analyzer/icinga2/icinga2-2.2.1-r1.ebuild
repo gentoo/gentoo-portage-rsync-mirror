@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1-r1.ebuild,v 1.1 2014/12/11 16:51:01 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1-r1.ebuild,v 1.2 2014/12/12 16:50:55 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -124,14 +124,13 @@ src_install() {
 	keepdir /var/lib/icinga2/api/log
 	keepdir /var/spool/icinga2/perfdata
 
-	#remove dirs that shouldn't be installed
 	rm -r "${D}var/run" || die "failed to remove  /var/run"
 	rm -r "${D}var/cache" || die "failed to remove /var/cache"
 
-	fowners icinga:icinga /etc/icinga2 || die "Failed chown of /etc/icinga2"
-	fowners icinga:icinga /var/lib/icinga2 || die "Failed chown of /var/lib/icinga2"
-	fowners icinga:icinga /var/spool/icinga2 || die "Failed chown of /var/spool/icinga2"
-	fowners icinga:icingacmd /var/log/icinga2 || die "Failed chown of /var/log/icinga2"
+	fowners icinga:icinga /etc/icinga2
+	fowners icinga:icinga /var/lib/icinga2
+	fowners icinga:icinga /var/spool/icinga2
+	fowners icinga:icingacmd /var/log/icinga2
 
 	fperms ug+rwX,o-rwx /etc/icinga2
 	fperms ug+rwX,o-rwx /var/lib/icinga2
