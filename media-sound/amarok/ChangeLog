@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.472 2014/08/10 21:03:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.473 2014/12/12 15:29:29 zlogene Exp $
+
+  12 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> amarok-2.8.0-r3.ebuild:
+  amd64 stable wrt bug #517344
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> amarok-2.8.0-r1.ebuild,
   amarok-2.8.0-r2.ebuild, amarok-2.8.0-r3.ebuild, amarok-2.8.0.ebuild:
