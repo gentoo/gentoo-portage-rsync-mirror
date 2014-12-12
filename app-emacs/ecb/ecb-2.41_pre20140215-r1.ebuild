@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.41_pre20140215-r1.ebuild,v 1.2 2014/12/07 22:30:08 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ecb-2.41_pre20140215-r1.ebuild,v 1.4 2014/12/12 20:23:07 ulm Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java"
 
-DEPEND="java? ( app-emacs/jde )"
+DEPEND="!!<app-emacs/cedet-2.0
+	java? ( app-emacs/jde )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${PV%_*}"
