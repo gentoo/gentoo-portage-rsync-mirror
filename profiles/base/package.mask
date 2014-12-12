@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.67 2014/10/26 22:22:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.68 2014/12/12 20:38:13 prometheanfire Exp $
+
+# Matthew Thode <prometheanfire@gentoo.org> (12 Dec 2014)
+# Adding the mask so that end users are notified of the removal and have some
+# time to migrate.  Will fully remove app-admin/puppet-2.7 in a month or so.
+<app-admin/puppet-3.0.0
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Oct 2014)
 # Changes in vt allocation break startx on non-systemd, bugs #526762 and
