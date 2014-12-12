@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.18.ebuild,v 1.4 2014/12/09 21:35:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.18.ebuild,v 1.5 2014/12/12 21:50:18 mattst88 Exp $
 
 EAPI=5
 
@@ -102,6 +102,8 @@ src_prepare() {
 		touch src/Makefile.am.features
 		touch ChangeLog
 	fi
+
+	eautoreconf
 }
 
 multilib_src_configure() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.391 2014/12/09 21:35:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.392 2014/12/12 21:50:18 mattst88 Exp $
+
+  12 Dec 2014; Matt Turner <mattst88@gentoo.org> cairo-1.12.18.ebuild,
+  files/cairo-1.12.18-disable-test-suite.patch:
+  Disable the test suite better, bug 532338.
 
   09 Dec 2014; Matt Turner <mattst88@gentoo.org> cairo-1.12.18.ebuild,
   cairo-9999.ebuild:
