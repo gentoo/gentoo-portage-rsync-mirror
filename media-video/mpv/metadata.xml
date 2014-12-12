@@ -27,7 +27,6 @@
 	<flag name="radio">Enable V4L2 radio interface and support</flag>
 	<flag name="sdl">Enable <pkg>media-libs/libsdl2</pkg> based video and audio outputs</flag>
 	<flag name="shm">Enable support for shm</flag>
-	<flag name="vaapi">Enable VAAPI (Video Acceleration API) for hardware decoding</flag>
 	<flag name="vf-dlopen">Install additional video filters for using with -vf dlopen</flag>
 </use>
 </pkgmetadata>

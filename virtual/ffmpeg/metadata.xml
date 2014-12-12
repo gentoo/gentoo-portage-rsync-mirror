@@ -7,6 +7,5 @@
 </maintainer>
 <use>
 	<flag name="opus">Use the external opus library for encoding and decoding.</flag>
-	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
 </use>
 </pkgmetadata>

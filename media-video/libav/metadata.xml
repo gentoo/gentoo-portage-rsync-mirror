@@ -33,7 +33,6 @@
 	<flag name="ssl">Enable SSL/TLS support using <pkg>dev-libs/openssl</pkg> or <pkg>dev-libs/gnutls</pkg>.</flag>
 	<flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips).</flag>
 	<flag name="tools">Build and install small tools like aviocat, cws2fws, graph2dot, ismindex, qt-faststart.</flag>
-	<flag name="vaapi">Enable VAAPI (Video Acceleration API) for hardware decoding.</flag>
 	<flag name="vis"> Adds support for SIMD optimizations for UltraSPARC processors.</flag>
 	<flag name="vpx">Enable vp8 encoding support using <pkg>libvpx.</pkg></flag>
 	<flag name="webp">Enable WebP encoding with <pkg>media-libs/libwebp</pkg>.</flag>

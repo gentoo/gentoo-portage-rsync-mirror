@@ -17,6 +17,5 @@
 	  <flag name='sdl-sound'>Enable SDL audio output for the standalone player</flag>
 	  <flag name='ssh'>Enable using SSH for network authentication in libnet</flag>
 	  <flag name='ssl'>Enable directly using OpenSSL in libnet (not needed for nsplugin ssl support)</flag>
-	  <flag name='vaapi'>Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
 	</use>
 </pkgmetadata>
