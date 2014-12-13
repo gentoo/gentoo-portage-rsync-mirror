@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/monadrandom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadrandom/ChangeLog,v 1.3 2014/07/25 09:16:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadrandom/ChangeLog,v 1.4 2014/12/13 14:57:13 gienah Exp $
+
+*monadrandom-0.3.0.1 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +monadrandom-0.3.0.1.ebuild:
+  Bump monadrandom to 0.3.0.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> monadrandom-0.1.13.ebuild:
   Drop trailing '.' from description.

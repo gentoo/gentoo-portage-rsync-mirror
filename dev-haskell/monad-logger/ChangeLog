@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/monad-logger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-logger/ChangeLog,v 1.6 2014/07/25 09:16:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-logger/ChangeLog,v 1.7 2014/12/13 14:55:04 gienah Exp $
+
+*monad-logger-0.3.11 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +monad-logger-0.3.11.ebuild:
+  Bump monad-logger to 0.3.11
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   monad-logger-0.3.1.1.ebuild, monad-logger-0.3.3.1.ebuild,
