@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.630 2014/11/30 15:57:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.631 2014/12/13 10:56:49 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -133,8 +133,8 @@ dev-java/jboss-logging doc
 
 # Tom Wijsman <TomWij@gentoo.org> (02 May 2014)
 # Bluetooth support in MATE has incompatibilities with recent BlueZ versions.
-# If you want to try to get this working, unmask net-wireless/mate-bluetooth as 
-# well as the bluetooth USE flag on mate-extra/mate-user-share; I can't support 
+# If you want to try to get this working, unmask net-wireless/mate-bluetooth as
+# well as the bluetooth USE flag on mate-extra/mate-user-share; I can't support
 # this until the relevant upstreams have moved forward with their compatibility.
 #
 # https://bugs.gentoo.org/show_bug.cgi?id=508086
@@ -179,10 +179,6 @@ sys-infiniband/ofed ofed_drivers_ehca
 # Julian Ospald <hasufell@gentoo.org> (06 Apr 2014)
 # broken wrt #501582
 <net-misc/openvpn-9999 polarssl
-
-# Ben de Groot <yngwin@gentoo.org> (21 Mar 2014)
-# harfbuzz multilib ebuild is still masked
-media-libs/freetype harfbuzz
 
 # Manuel Rüger <mrueg@gentoo.org> (07 Mar 2014)
 # Mask ruby18-only compatible flags
