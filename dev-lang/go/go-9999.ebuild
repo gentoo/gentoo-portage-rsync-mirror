@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.22 2014/12/12 18:23:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.23 2014/12/13 05:08:41 williamh Exp $
 
 EAPI=5
 
@@ -9,8 +9,8 @@ export CTARGET=${CTARGET:-${CHOST}}
 inherit eutils toolchain-funcs
 
 if [[ ${PV} = 9999 ]]; then
-	EHG_REPO_URI="https://go.googlecode.com/hg"
-	inherit mercurial
+	EGIT_REPO_URI="git://github.com/golang/go.git"
+	inherit git-r3
 else
 	SRC_URI="https://storage.googleapis.com/golang/go${PV}.src.tar.gz"
 	# Upstream only supports go on amd64, arm and x86 architectures.
