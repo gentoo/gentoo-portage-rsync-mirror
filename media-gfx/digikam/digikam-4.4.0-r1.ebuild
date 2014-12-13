@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.4.0-r1.ebuild,v 1.4 2014/12/12 23:02:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.4.0-r1.ebuild,v 1.5 2014/12/13 00:21:24 mrueg Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ IUSE="addressbook debug doc gphoto2 mysql nepomuk semantic-desktop themedesigner
 CDEPEND="
 	|| (
 		(	kde-apps/kdebase-kioslaves:4
-			kde-apps/libkcdraw:4=
+			kde-apps/libkdcraw:4=
 			kde-apps/libkexiv2:4=
 			kde-apps/libkipi:4
 			kde-apps/marble:4=[plasma] )
