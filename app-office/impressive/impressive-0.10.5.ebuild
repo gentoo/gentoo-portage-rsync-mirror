@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.10.5.ebuild,v 1.1 2014/05/19 14:18:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.10.5.ebuild,v 1.2 2014/12/13 11:24:57 pacho Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="${PYTHON_DEPS}
 	x11-misc/xdg-utils
 	x11-apps/xrandr
 	|| ( app-text/xpdf app-text/ghostscript-gpl )
-	|| ( media-fonts/dejavu media-fonts/ttf-bitstream-vera media-fonts/corefonts )"
+	|| ( media-fonts/dejavu media-fonts/corefonts )"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 S=${WORKDIR}/${MY_PN}-${PV}

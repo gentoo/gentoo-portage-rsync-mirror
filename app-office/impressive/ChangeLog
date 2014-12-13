@@ -1,6 +1,10 @@
 # ChangeLog for app-office/impressive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/ChangeLog,v 1.13 2014/09/23 19:08:22 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/ChangeLog,v 1.14 2014/12/13 11:24:57 pacho Exp $
+
+  13 Dec 2014; Pacho Ramos <pacho@gentoo.org> -impressive-0.10.4.ebuild,
+  impressive-0.10.5.ebuild:
+  Stop RDEPENDing on obsolete font (#282754), drop old
 
   23 Sep 2014; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Remove python, not a python library
