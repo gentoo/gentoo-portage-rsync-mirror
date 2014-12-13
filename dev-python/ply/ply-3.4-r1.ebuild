@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4-r1.ebuild,v 1.15 2014/12/09 10:14:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4-r1.ebuild,v 1.16 2014/12/13 08:54:59 idella4 Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="examples"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
-
+RESTRICT="test"
 DOCS=( ANNOUNCE CHANGES README TODO )
 
 python_test() {

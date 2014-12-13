@@ -10,5 +10,5 @@ RDEPEND=bazaar? ( dev-vcs/bzr ) app-portage/portage-utils cron? ( virtual/cron )
 REQUIRED_USE=bazaar? ( || ( python_targets_python2_7 ) )
 SLOT=0
 SRC_URI=https://github.com/joeyh/etckeeper/archive/1.12.tar.gz -> etckeeper-1.12.tar.gz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	ddc59d206214ef1c240093e1bb2513cf	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	prefix	21058c21ca48453d771df15500873ede	python-r1	a2dac9ffff107078f25147aac958a68f	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	python-r1	a2dac9ffff107078f25147aac958a68f	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ee2a8a18a1cbb1ad3344e117b3c43f2a
