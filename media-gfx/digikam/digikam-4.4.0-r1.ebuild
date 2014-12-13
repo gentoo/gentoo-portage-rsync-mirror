@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.4.0-r1.ebuild,v 1.2 2014/12/12 15:53:12 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.4.0-r1.ebuild,v 1.4 2014/12/12 23:02:55 mrueg Exp $
 
 EAPI=5
 
@@ -30,11 +30,18 @@ SLOT="4"
 IUSE="addressbook debug doc gphoto2 mysql nepomuk semantic-desktop themedesigner +thumbnails video"
 
 CDEPEND="
-	$(add_kdebase_dep kdebase-kioslaves)
-	kde-base/libkdcraw:4=
-	kde-base/libkexiv2:4=
-	$(add_kdebase_dep libkipi)
-	kde-base/marble:4=[plasma]
+	|| (
+		(	kde-apps/kdebase-kioslaves:4
+			kde-apps/libkcdraw:4=
+			kde-apps/libkexiv2:4=
+			kde-apps/libkipi:4
+			kde-apps/marble:4=[plasma] )
+		( 	$(add_kdebase_dep kdebase-kioslaves)
+			kde-base/libkdcraw:4=
+			kde-base/libkexiv2:4=
+			$(add_kdebase_dep libkipi)
+			kde-base/marble:4=[plasma] )
+	)
 	media-libs/jasper
 	media-libs/lcms:2
 	media-libs/lensfun
@@ -62,10 +69,12 @@ CDEPEND="
 	)
 "
 RDEPEND="${CDEPEND}
-	$(add_kdebase_dep kreadconfig)
+	|| ( kde-apps/kreadconfig:4 $(add_kdebase_dep kreadconfig) )
 	media-plugins/kipi-plugins
 	video? (
 		|| (
+			kde-apps/ffmpegthumbs:4
+			kde-apps/mplayerthumbs:4
 			$(add_kdebase_dep mplayerthumbs)
 			$(add_kdebase_dep ffmpegthumbs)
 		)

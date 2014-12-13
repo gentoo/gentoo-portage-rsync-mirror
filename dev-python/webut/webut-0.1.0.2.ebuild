@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.13 2013/08/03 09:45:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.14 2014/12/12 23:23:24 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ IUSE="examples"
 
 RDEPEND=">=dev-python/nevow-0.9.18
 	>=dev-python/twisted-core-2
-	>=net-zope/zope-interface-3.0.1"
+	>=dev-python/zope-interface-3.0.1"
 DEPEND="${RDEPEND}"
 RESTRICT_PYTHON_ABIS="3.*"
 

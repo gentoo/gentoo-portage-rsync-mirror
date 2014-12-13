@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/pyramid-1.5.ebuild,v 1.2 2014/08/10 21:17:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/pyramid-1.5.ebuild,v 1.3 2014/12/12 23:23:19 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 #IUSE="test"
-# tests would pull in net-zope/zope-deprecation with its deps - not a good idea
+# tests would pull in dev-python/zope-deprecation with its deps - not a good idea
 
 RDEPEND="
 	dev-python/chameleon[${PYTHON_USEDEP}]
@@ -26,7 +26,7 @@ RDEPEND="
 	dev-python/webob[${PYTHON_USEDEP}]
 	dev-python/repoze-lru[${PYTHON_USEDEP}]
 	dev-python/mako[${PYTHON_USEDEP}]
-	net-zope/zope-interface[${PYTHON_USEDEP}]
+	dev-python/zope-interface[${PYTHON_USEDEP}]
 	dev-python/translationstring[${PYTHON_USEDEP}]
 	dev-python/pastedeploy[${PYTHON_USEDEP}]
 	dev-python/venusian[${PYTHON_USEDEP}]

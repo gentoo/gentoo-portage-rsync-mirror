@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Validate-IP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-IP/ChangeLog,v 1.2 2014/12/07 13:26:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-IP/ChangeLog,v 1.3 2014/12/12 23:17:09 dilfridge Exp $
+
+  12 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  Data-Validate-IP-0.240.0.ebuild:
+  Add test support and improve dependencies, bug 524554
 
   07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org>
   Data-Validate-IP-0.240.0.ebuild:

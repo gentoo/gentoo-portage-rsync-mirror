@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0-r1.ebuild,v 1.1 2014/08/25 02:22:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.81.0-r1.ebuild,v 1.2 2014/12/12 23:07:24 dilfridge Exp $
 
 EAPI=5
 
@@ -23,13 +23,5 @@ DEPEND="${RDEPEND}
 	>=dev-perl/extutils-pkgconfig-1.03
 	virtual/pkgconfig"
 
-SRC_TEST=do
-
-src_test(){
-	if [[ ${EUID} == 0 || ${HOME} = /root ]] ; then
-		ewarn "Test skipped. Don't run tests as root."
-		return
-	fi
-	mkdir "${HOME}/.gnome"
-	perl-module_src_test
-}
+SRC_TEST=skip
+# bug 423473

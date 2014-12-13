@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16215 2014/12/12 22:31:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16216 2014/12/12 23:22:18 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -292,11 +292,6 @@ razorqt-base/razorqt-session
 =net-misc/lxqt-openssh-askpass-0.8.0*
 =x11-misc/obconf-qt-0.1.0_p20141029
 =x11-misc/pcmanfm-qt-0.8.0*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2014)
-# Merged with games-engines/scummvm
-# masked for removal on 20141128
-games-engines/sarien
 
 # Mikle Kolyada <zlogene@gentoo.org> (27 Oct 2014)
 # Fails tests (bug #442480),

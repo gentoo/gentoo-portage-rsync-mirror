@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysaml2/pysaml2-2.1.0.ebuild,v 1.1 2014/11/10 06:09:43 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysaml2/pysaml2-2.1.0.ebuild,v 1.2 2014/12/12 23:23:20 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-python/decorator[${PYTHON_USEDEP}]
 	>=dev-python/requests-1.0.0[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
-	net-zope/zope-interface[${PYTHON_USEDEP}]
+	dev-python/zope-interface[${PYTHON_USEDEP}]
 	dev-python/repoze-who[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]

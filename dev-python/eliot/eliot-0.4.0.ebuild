@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eliot/eliot-0.4.0.ebuild,v 1.1 2014/09/25 20:35:42 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eliot/eliot-0.4.0.ebuild,v 1.2 2014/12/12 23:23:15 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -20,7 +20,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 RDEPEND="
 	dev-python/six[${PYTHON_USEDEP}]
-	net-zope/zope-interface[${PYTHON_USEDEP}]
+	dev-python/zope-interface[${PYTHON_USEDEP}]
 	"
 
 python_compile_all() {

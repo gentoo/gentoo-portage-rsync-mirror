@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.2.ebuild,v 1.8 2012/08/26 18:48:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.2.ebuild,v 1.9 2014/12/12 23:23:16 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ RDEPEND="dev-python/pexpect
 	smp? (
 		dev-python/foolscap
 		dev-python/pyopenssl
-		net-zope/zope-interface
+		dev-python/zope-interface
 	)
 	wxwidgets? ( dev-python/wxpython )"
 DEPEND="${DEPEND}

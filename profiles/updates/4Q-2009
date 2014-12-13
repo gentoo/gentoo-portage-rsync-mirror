@@ -1,7 +1,7 @@
 move net-im/twinkle net-voip/twinkle
 slotmove >=net-misc/kvpnc-0.9.1 1 4
 slotmove <net-misc/kvpnc-0.9.1 0 3.5
-move net-zope/zcbuildout net-zope/zc-buildout
+move net-zope/zcbuildout dev-python/zc-buildout
 move app-admin/realpath app-misc/realpath
 slotmove kde-misc/ksystemlog 0 3.5
 slotmove kde-misc/rsibreak 0 3.5

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.3 2014/08/10 21:02:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.4 2014/12/12 23:23:14 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	dev-python/pygame[${PYTHON_USEDEP}]
 	>=dev-python/twisted-core-2.5[${PYTHON_USEDEP}]
 	>=dev-python/twisted-web-0.6[${PYTHON_USEDEP}]
-	net-zope/zope-interface[${PYTHON_USEDEP}]
+	dev-python/zope-interface[${PYTHON_USEDEP}]
 
 	>=dev-python/kaa-base-0.6.0[${PYTHON_USEDEP}]
 	>=dev-python/kaa-metadata-0.7.3[${PYTHON_USEDEP}]

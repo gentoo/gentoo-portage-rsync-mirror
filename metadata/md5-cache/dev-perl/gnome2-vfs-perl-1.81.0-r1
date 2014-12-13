@@ -9,4 +9,4 @@ RDEPEND=>=gnome-base/gnome-vfs-2 >=dev-perl/glib-perl-1.120 dev-lang/perl:=[-bui
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TS/TSCH/Gnome2-VFS-1.081.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	28ca2b834dd6b64c9179af421c4d763e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=620bb2c91573a8e96129378e0620844d
+_md5_=eb73ae10c94b5ebdd8c1fd398a3d4a5f

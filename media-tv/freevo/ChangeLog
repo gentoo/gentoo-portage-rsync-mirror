@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.85 2014/08/10 21:02:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.86 2014/12/12 23:23:14 mgorny Exp $
+
+  12 Dec 2014; Michał Górny <mgorny@gentoo.org> freevo-1.9.0-r1.ebuild,
+  freevo-1.9.0.ebuild:
+  Rename net-zope/zope-interface to dev-python/zope-interface.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> freevo-1.7.6.1.ebuild,
   freevo-1.9.0-r1.ebuild, freevo-1.9.0.ebuild:

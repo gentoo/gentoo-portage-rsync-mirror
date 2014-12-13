@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/zc-buildout
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zc-buildout/ChangeLog,v 1.1 2014/12/12 23:22:46 mgorny Exp $
+
+*zc-buildout-2.2.4 (12 Dec 2014)
+*zc-buildout-2.2.5 (12 Dec 2014)
+
+  12 Dec 2014; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +zc-buildout-2.2.4.ebuild, +zc-buildout-2.2.5.ebuild:
+  Move from net-zope/zc-buildout.

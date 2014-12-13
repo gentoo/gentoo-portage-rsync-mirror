@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysaml2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysaml2/ChangeLog,v 1.1 2014/11/10 06:09:43 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysaml2/ChangeLog,v 1.2 2014/12/12 23:23:20 mgorny Exp $
+
+  12 Dec 2014; Michał Górny <mgorny@gentoo.org> pysaml2-2.1.0.ebuild:
+  Rename net-zope/zope-interface to dev-python/zope-interface.
 
 *pysaml2-2.1.0 (10 Nov 2014)
 

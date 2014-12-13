@@ -51,4 +51,4 @@ move games-emulation/fceultra games-emulation/fceux
 move games-emulation/gfceu games-emulation/gfceux
 move xfce-extra/thunar-svn-plugin xfce-extra/thunar-vcs-plugin
 slotmove media-radio/qgrid 0 3.5
-move net-zope/zopeinterface net-zope/zope-interface
+move net-zope/zopeinterface dev-python/zope-interface

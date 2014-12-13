@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9605 2014/12/12 22:31:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9606 2014/12/12 23:23:04 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Dec 2014; Michał Górny <mgorny@gentoo.org> updates/3Q-2009,
+  updates/4Q-2009, updates/4Q-2014:
+  Move net-zope/zc-buildout and net-zope/zope-interface into dev-python/.
 
   12 Dec 2014; Michał Górny <mgorny@gentoo.org> package.mask:
   Lastrite net-zope/zope-fixers.

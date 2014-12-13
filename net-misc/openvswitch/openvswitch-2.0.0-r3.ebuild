@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0-r3.ebuild,v 1.1 2014/02/17 05:07:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0-r3.ebuild,v 1.2 2014/12/12 23:23:07 mgorny Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND=">=sys-apps/openrc-0.10.5
 		dev-python/twisted-conch
 		dev-python/twisted-web
 		dev-python/PyQt4[${PYTHON_USEDEP}]
-		net-zope/zope-interface[${PYTHON_USEDEP}] )
+		dev-python/zope-interface[${PYTHON_USEDEP}] )
 	debug? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
