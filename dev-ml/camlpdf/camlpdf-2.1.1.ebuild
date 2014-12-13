@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlpdf/camlpdf-2.1.1.ebuild,v 1.2 2014/12/07 18:37:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlpdf/camlpdf-2.1.1.ebuild,v 1.3 2014/12/13 18:36:40 radhermit Exp $
 
 EAPI=5
 
@@ -10,7 +10,8 @@ DESCRIPTION="OCaml library for reading, writing, and modifying PDF files"
 HOMEPAGE="https://github.com/johnwhitington/camlpdf/"
 SRC_URI="https://github.com/johnwhitington/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="LGPL-2.1+"
+# technically LGPL-2.1+ with linking exception
+LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
