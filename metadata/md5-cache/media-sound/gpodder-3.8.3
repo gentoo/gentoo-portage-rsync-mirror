@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test
+DEPEND=>=dev-python/eyeD3-0.7 >=dev-python/feedparser-5.1.2 >=dev-python/mygpoclient-1.7 >=dev-python/pygtk-2.16:2 dbus? ( dev-python/dbus-python ) bluetooth? ( net-wireless/bluez ) gstreamer? ( dev-python/gst-python:0.10 ) ipod? ( media-libs/libgpod[python] ) mtp? ( >=media-libs/libmtp-1.0.0 ) webkit? ( dev-python/pywebkitgtk ) dev-util/intltool sys-apps/help2man test? ( dev-python/minimock dev-python/coverage ) >=dev-lang/python-2.7.5-r2:2.7[sqlite] dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] >=sys-apps/sed-4
+DESCRIPTION=A free cross-platform podcast aggregator
+EAPI=5
+HOMEPAGE=http://gpodder.org/
+IUSE=+dbus bluetooth gstreamer ipod kernel_linux mtp test webkit python_targets_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris
+LICENSE=GPL-3
+RDEPEND=>=dev-python/eyeD3-0.7 >=dev-python/feedparser-5.1.2 >=dev-python/mygpoclient-1.7 >=dev-python/pygtk-2.16:2 dbus? ( dev-python/dbus-python ) bluetooth? ( net-wireless/bluez ) gstreamer? ( dev-python/gst-python:0.10 ) ipod? ( media-libs/libgpod[python] ) mtp? ( >=media-libs/libmtp-1.0.0 ) webkit? ( dev-python/pywebkitgtk ) kernel_linux? ( sys-apps/iproute2 ) >=dev-lang/python-2.7.5-r2:2.7[sqlite] dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
+REQUIRED_USE=python_targets_python2_7
+SLOT=0
+SRC_URI=http://gpodder.org/src/gpodder-3.8.3.tar.gz
+_eclasses_=distutils-r1	14bf2faa8bf611e0b13aeedc24cefa6c	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=e4425c9f789e752f4bf178c63b225b08
