@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cpphs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.61 2014/07/25 09:16:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.62 2014/12/13 13:38:07 gienah Exp $
+
+*cpphs-1.18.6 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +cpphs-1.18.6.ebuild:
+  Bump cpphs to 1.18.6
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> cpphs-1.13.3.ebuild,
   cpphs-1.15.ebuild, cpphs-1.16.ebuild, cpphs-1.17.1.ebuild,

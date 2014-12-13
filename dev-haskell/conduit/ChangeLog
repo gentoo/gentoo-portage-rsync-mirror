@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/conduit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/conduit/ChangeLog,v 1.13 2014/07/25 09:16:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/conduit/ChangeLog,v 1.14 2014/12/13 13:34:30 gienah Exp $
+
+*conduit-1.2.3 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +conduit-1.2.3.ebuild:
+  Bump conduit to 1.2.3
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> conduit-1.0.15.1.ebuild,
   conduit-1.0.8.ebuild, conduit-1.0.9.3.ebuild, conduit-1.1.6.ebuild:

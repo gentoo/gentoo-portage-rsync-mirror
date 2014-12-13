@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/crypto-api
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-api/ChangeLog,v 1.4 2014/09/10 21:04:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-api/ChangeLog,v 1.5 2014/12/13 13:39:49 gienah Exp $
+
+*crypto-api-0.13.2 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +crypto-api-0.13.2.ebuild:
+  Bump crypto-api to 0.13.2
 
   10 Sep 2014; Sergei Trofimovich <slyfox@gentoo.org> crypto-api-0.13.ebuild:
   keyword for alpha/ia64

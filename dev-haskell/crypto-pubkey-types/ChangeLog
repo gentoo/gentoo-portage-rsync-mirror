@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/crypto-pubkey-types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey-types/ChangeLog,v 1.9 2014/07/25 08:59:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey-types/ChangeLog,v 1.10 2014/12/13 13:50:04 gienah Exp $
+
+*crypto-pubkey-types-0.4.2.3 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org>
+  +crypto-pubkey-types-0.4.2.3.ebuild:
+  Bump crypto-pubkey-types to 0.4.2.3
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

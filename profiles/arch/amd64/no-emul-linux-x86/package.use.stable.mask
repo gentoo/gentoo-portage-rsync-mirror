@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.26 2014/12/05 11:20:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.27 2014/12/13 13:55:11 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -128,6 +128,7 @@ gnome-base/libgnomeprint -abi_x86_32
 gnome-base/libgnomeprintui -abi_x86_32
 gnome-base/librsvg -abi_x86_32
 gnome-base/orbit -abi_x86_32
+media-gfx/exiv2 abi_x86_32
 media-gfx/graphite2 -abi_x86_32
 media-gfx/sane-backends -abi_x86_32
 media-libs/a52dec -abi_x86_32

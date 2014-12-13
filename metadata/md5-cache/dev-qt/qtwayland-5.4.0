@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
+DEPEND=>=dev-libs/wayland-1.3.0 >=dev-qt/qtcore-5.4.0:5[debug=] >=dev-qt/qtgui-5.4.0:5[debug=,egl=,opengl] media-libs/mesa[egl?] >=x11-libs/libxkbcommon-0.2.0 qml? ( >=dev-qt/qtdeclarative-5.4.0:5[debug=] ) xcomposite? ( x11-libs/libX11 x11-libs/libXcomposite ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost ) dev-lang/perl virtual/pkgconfig test? ( >=dev-qt/qttest-5.4.0:5[debug=] )
+DESCRIPTION=Wayland platform plugin for Qt
+EAPI=5
+HOMEPAGE=http://qt-project.org/wiki/QtWayland
+IUSE=egl qml wayland-compositor xcomposite test debug test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( LGPL-2.1 LGPL-3 )
+RDEPEND=>=dev-libs/wayland-1.3.0 >=dev-qt/qtcore-5.4.0:5[debug=] >=dev-qt/qtgui-5.4.0:5[debug=,egl=,opengl] media-libs/mesa[egl?] >=x11-libs/libxkbcommon-0.2.0 qml? ( >=dev-qt/qtdeclarative-5.4.0:5[debug=] ) xcomposite? ( x11-libs/libX11 x11-libs/libXcomposite ) dev-qt/qtchooser
+RESTRICT=test
+SLOT=5
+SRC_URI=http://download.qt-project.org/archive/qt/5.4/5.4.0/submodules/qtwayland-opensource-src-5.4.0.tar.xz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qt5-build	d49e52c950be2d95f61d90502ce17ba6	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=f9b1e02915dfff9685424513e2e05a57

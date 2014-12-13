@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/gio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.25 2014/07/25 09:16:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.26 2014/12/13 13:56:21 gienah Exp $
+
+*gio-0.13.0.3 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +gio-0.13.0.3.ebuild:
+  Bump gio to 0.13.0.3
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> gio-0.12.0.ebuild,
   gio-0.12.3.ebuild, gio-0.12.4-r1.ebuild, gio-0.12.5.0-r1.ebuild,

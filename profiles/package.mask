@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16216 2014/12/12 23:22:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16217 2014/12/13 13:53:11 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -441,6 +441,7 @@ dev-php/suhosin
 =dev-qt/qtsvg-5.4.0*
 =dev-qt/qttest-5.4.0*
 =dev-qt/qttranslations-5.4.0*
+=dev-qt/qtwayland-5.4.0*
 =dev-qt/qtwebkit-5.4.0*
 =dev-qt/qtwebsockets-5.4.0*
 =dev-qt/qtwidgets-5.4.0*

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/case-insensitive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/case-insensitive/ChangeLog,v 1.9 2014/07/25 08:58:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/case-insensitive/ChangeLog,v 1.10 2014/12/13 13:32:19 gienah Exp $
+
+*case-insensitive-1.2.0.1 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +case-insensitive-1.2.0.1.ebuild:
+  Bump case-insensitive to 1.2.0.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.
