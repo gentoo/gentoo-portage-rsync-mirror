@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/anyvc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/anyvc/ChangeLog,v 1.9 2013/08/09 06:50:37 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/anyvc/ChangeLog,v 1.10 2014/12/13 07:04:40 idella4 Exp $
+
+*anyvc-0.3.7.1-r1 (13 Dec 2014)
+
+  13 Dec 2014; Ian Delaney <idella4@gentoo.org> +anyvc-0.3.7.1-r1.ebuild,
+  -anyvc-0.3.5.ebuild, -anyvc-0.3.7.1.ebuild:
+  rebvump; convert -> distutils-r1, add missing dep, rm old
 
   09 Aug 2013; Michael Weber <xmw@gentoo.org> metadata.xml:
   global use flag "git"
