@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dina/dina-2.89.ebuild,v 1.3 2013/04/17 18:17:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dina/dina-2.89.ebuild,v 1.4 2014/12/13 09:53:44 yngwin Exp $
 
 inherit font
 
 DESCRIPTION="A monospace bitmap font, primarily aimed at programmers"
 HOMEPAGE="http://www.donationcoder.com/Software/Jibz/Dina/index.html"
-SRC_URI="http://omploader.org/vMjIwNA/dina-pcf-${PV}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~yngwin/distfiles/dina-pcf-${PV}.tar.gz"
 
 LICENSE="Dina"
 SLOT="0"
