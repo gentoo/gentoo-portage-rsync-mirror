@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/html2latex-1.1-r1.ebuild,v 1.2 2014/07/27 13:05:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/html2latex-1.1-r1.ebuild,v 1.3 2014/12/13 20:59:02 dilfridge Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DEPEND="dev-perl/HTML-Tree
 src_compile() {
 	# HTML::LaTex
 	cd HTML
-	perl-module_src_prep
+	perl-module_src_configure
 	perl-module_src_compile
 }
 

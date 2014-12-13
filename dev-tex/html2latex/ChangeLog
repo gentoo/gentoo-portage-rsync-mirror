@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/html2latex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/ChangeLog,v 1.18 2014/07/27 13:05:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/ChangeLog,v 1.19 2014/12/13 20:59:02 dilfridge Exp $
+
+  13 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  html2latex-1.1-r1.ebuild:
+  Replace perl-module_src_prep with perl-module_src_configure
 
   27 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -html2latex-1.1.ebuild,
   html2latex-1.1-r1.ebuild:

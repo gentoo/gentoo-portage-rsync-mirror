@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/aimsniff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.35 2012/09/18 01:34:06 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.36 2014/12/13 20:58:24 jer Exp $
+
+*aimsniff-0.9d (13 Dec 2014)
+
+  13 Dec 2014; Jeroen Roovers <jer@gentoo.org> -aimsniff-0.9-r2.ebuild,
+  +aimsniff-0.9d.ebuild:
+  EAPI bump. Set SF project homepage as HOMEPAGE (bug #532462). Fix $PV.
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> -aimsniff-0.9-r1.ebuild:
   Remove old.

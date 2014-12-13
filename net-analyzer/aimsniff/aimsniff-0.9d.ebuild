@@ -1,25 +1,27 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.14 2012/09/18 01:33:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9d.ebuild,v 1.1 2014/12/13 20:58:24 jer Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils webapp eutils depend.apache
 
-MY_P="${P}d"
 WAS_VER="0.1.2b"
 
 DESCRIPTION="Utility for monitoring and archiving AOL Instant Messenger messages across a network"
-HOMEPAGE="http://www.aimsniff.com/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
-	http? ( mirror://sourceforge/${PN}/was-${WAS_VER}.tar.gz )"
+HOMEPAGE="http://sourceforge.net/projects/aimsniff/"
+SRC_URI="
+	mirror://sourceforge/${PN}/${P}.tar.gz
+	http? ( mirror://sourceforge/${PN}/was-${WAS_VER}.tar.gz )
+"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc x86"
 #SLOT empty due to webapp
 IUSE="samba mysql http"
 
-DEPEND="dev-lang/perl[gdbm]
+RDEPEND="
+	dev-lang/perl[gdbm]
 	dev-perl/Net-Pcap
 	dev-perl/NetPacket
 	dev-perl/Unicode-String
@@ -28,29 +30,21 @@ DEPEND="dev-lang/perl[gdbm]
 	dev-perl/DBI
 	dev-perl/Unix-Syslog
 	mysql? ( virtual/mysql dev-perl/DBD-mysql )
-	samba? ( net-fs/samba )"
-RDEPEND=${DEPEND}
+	samba? ( net-fs/samba )
+"
 
 want_apache2 http
 
 RESTRICT="mirror"
 
-S=${WORKDIR}/${MY_P}
-
 pkg_setup() {
 	depend.apache_pkg_setup http
 
-	if use http
-	then
-		webapp_pkg_setup
-	fi
+	use http && webapp_pkg_setup
 }
 
 src_install() {
-	if use http
-	then
-		webapp_src_preinst
-	fi
+	use http && webapp_src_preinst
 
 	newsbin aimSniff.pl aimsniff
 	insinto /etc/${PN}
@@ -59,8 +53,7 @@ src_install() {
 	doins table.struct
 	dodoc README ChangeLog
 
-	if use http
-	then
+	if use http; then
 		cp ../was-${WAS_VER}/docs/README README.WAS
 		dodoc README.WAS
 
@@ -72,10 +65,6 @@ src_install() {
 		# This file needs to be serverowned as the server won't be able to write to it if it were
 		# webapp_configfile'ed.
 		webapp_serverowned ${MY_HTDOCSDIR}/was/.config.php
-
-		for phpfile in `ls -a "${D}"${MY_HTDOCSDIR}/was/ | grep ".php$"`; do
-			webapp_runbycgibin php ${MY_HTDOCSDIR}/was/${phpfile}
-		done
 
 		webapp_src_install
 	fi
@@ -90,16 +79,14 @@ pkg_postinst() {
 		elog "To create and enable the mysql database, please run: "
 		elog "emerge --config =${PF}"
 
-		if use http
-		then
+		if use http; then
 			echo "To create and enable the mysql database, please run:
 			emerge --config =${PF}" > apache-postinst
 			webapp_postinst_txt en apache-postinst
 		fi
 	fi
 
-	if use http
-	then
+	if use http; then
 		elog
 		elog "Go to http://${HOSTNAME}/was/admin.php to configure WAS."
 

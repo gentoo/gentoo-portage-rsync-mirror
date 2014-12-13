@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-1.04.000.ebuild,v 1.1 2014/11/14 09:00:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-20130203-r1.ebuild,v 1.1 2014/12/13 20:40:38 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -8,35 +8,38 @@ inherit autotools eutils python-single-r1 gnome2-utils games
 
 DESCRIPTION="GNU BackGammon"
 HOMEPAGE="http://www.gnubg.org/"
-SRC_URI="http://gnubg.org/media/sources/${PN}-release-${PV}-sources.tar.gz"
+SRC_URI="http://www.gnubg.org/media/sources/${PN}-source-SNAPSHOT-${PV}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="avx gtk opengl python sqlite3 sse sse2 threads"
+IUSE="gtk opengl python threads"
 
-RDEPEND="dev-libs/glib:2
-	media-libs/freetype:2
-	media-libs/libpng:0
+GTK_DEPS="
+	x11-libs/gtk+:2
 	x11-libs/cairo
-	x11-libs/pango
-	dev-db/sqlite:3
-	media-libs/libcanberra
+	x11-libs/pango"
+RDEPEND="dev-libs/glib:2
+	media-libs/libpng:0
 	dev-libs/libxml2
-	dev-libs/gmp:0
-	gtk? ( x11-libs/gtk+:2 )
+	media-libs/freetype:2
+	media-libs/libcanberra
+	gtk? ( ${GTK_DEPS} )
 	opengl? (
-		x11-libs/gtk+:2
+		${GTK_DEPS}
 		x11-libs/gtkglext
-		virtual/glu
+		>=media-libs/ftgl-2.1.2-r1
 	)
 	sys-libs/readline
 	python? ( ${PYTHON_DEPS} )
-	media-fonts/ttf-bitstream-vera
-	virtual/libintl"
+	media-fonts/dejavu
+	virtual/libintl
+	dev-db/sqlite:3"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext"
+
+S=${WORKDIR}/${PN}
 
 pkg_setup() {
 	games_pkg_setup
@@ -46,35 +49,21 @@ pkg_setup() {
 src_prepare() {
 	# use ${T} instead of /tmp for constructing credits (bug #298275)
 	sed -i -e 's:/tmp:${T}:' credits.sh || die
+	epatch "${FILESDIR}"/${P}-build.patch
+	eautoreconf
 	sed -i \
-		-e '/^localedir / s#=.*$#= @localedir@#' \
-		-e '/^gnulocaledir / s#=.*$#= @localedir@#' \
+		-e 's#^localedir =.*$#localedir = @localedir@#' \
+		-e 's#^gnulocaledir =.*$#gnulocaledir = @localedir@#' \
 		po/Makefile.in.in || die
-	sed -i \
-		-e '/^gnubgiconsdir / s#=.*#= /usr/share#' \
-		-e '/^gnubgpixmapsdir / s#=.*#= /usr/share/pixmaps#' \
-		pixmaps/Makefile.in || die
 }
 
 src_configure() {
-	local simd=no
-	local gtk_arg=--without-gtk
-
-	if use gtk || use opengl ; then
-		gtk_arg=--with-gtk
-	fi
-	use sse  && simd=sse
-	use sse2 && simd=sse2
-	use avx  && simd=avx
 	egamesconf \
 		--localedir=/usr/share/locale \
 		--docdir=/usr/share/doc/${PF}/html \
-		--disable-cputest \
-		--enable-simd=${simd} \
-		${gtk_arg} \
 		$(use_enable threads) \
 		$(use_with python) \
-		$(use_with sqlite3 sqlite) \
+		$(use gtk || use opengl && echo --with-gtk) \
 		$(use_with opengl board3d)
 }
 
@@ -82,8 +71,13 @@ src_install() {
 	default
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins ${PN}.weights *bd
-	rm -rf "${D}${GAMES_DATADIR}/${PN}/fonts"
-	dosym /usr/share/fonts/ttf-bitstream-vera "${GAMES_DATADIR}"/${PN}/fonts
+
+	rm -rf "${D}/${GAMES_DATADIR}"/${PN}/fonts/*.ttf
+	dosym /usr/share/fonts/dejavu/DejaVuSans.ttf "${GAMES_DATADIR}"/${PN}/fonts/Vera.ttf
+	dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf "${GAMES_DATADIR}"/${PN}/fonts/VeraBd.ttf
+	dosym /usr/share/fonts/dejavu/DejaVuSerif-Bold.ttf "${GAMES_DATADIR}"/${PN}/fonts/VeraSeBd.ttf
+
+	newicon -s 128 textures/logo.png gnubg.png
 	make_desktop_entry "gnubg -w" "GNU Backgammon"
 	prepgamesdirs
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5-r1.ebuild,v 1.4 2014/11/19 19:46:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.5-r1.ebuild,v 1.5 2014/12/13 20:59:54 dilfridge Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ src_compile() {
 
 	if use perl; then
 		cd "${S}"/bindings/Perl
-		perl-module_src_prep
+		perl-module_src_configure
 		local mymake=( OTHERLDFLAGS="${LDFLAGS} -L../../libpisock/.libs -lpisock" ) #308629
 		perl-module_src_compile
 	fi

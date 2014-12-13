@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.479 2014/12/08 05:59:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.480 2014/12/13 20:40:13 dilfridge Exp $
+
+  13 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> vim-7.4.273.ebuild,
+  vim-7.4.488.ebuild, vim-7.4.527.ebuild, vim-7.4.542.ebuild, vim-9999.ebuild:
+  Package links to libperl, so add a slot operator to Perl dependency
 
   08 Dec 2014; Tim Harder <radhermit@gentoo.org> -vim-7.3.762.ebuild,
   -vim-7.3.1214.ebuild, -vim-7.4.430.ebuild, -vim-7.4.475.ebuild,

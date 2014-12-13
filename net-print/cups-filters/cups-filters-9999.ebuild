@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.51 2014/11/26 00:11:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-9999.ebuild,v 1.52 2014/12/13 20:58:12 dilfridge Exp $
 
 EAPI=5
 
@@ -72,7 +72,7 @@ src_compile() {
 
 	if use perl; then
 		pushd "${S}/scripting/perl" > /dev/null
-		perl-module_src_prep
+		perl-module_src_configure
 		perl-module_src_compile
 		popd > /dev/null
 	fi

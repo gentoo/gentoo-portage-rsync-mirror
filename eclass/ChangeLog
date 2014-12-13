@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1461 2014/12/13 08:42:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1462 2014/12/13 20:51:23 dilfridge Exp $
+
+  13 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Move content of perl-module_src_prep into src_configure, add deprecation
+  warning to src_prep
 
   13 Dec 2014; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
   Disable parallel run support.

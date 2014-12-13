@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.158 2014/12/01 20:41:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.159 2014/12/13 20:51:23 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -134,22 +134,7 @@ perl-module_src_prepare() {
 # This function is to be called during the ebuild src_configure() phase.
 perl-module_src_configure() {
 	debug-print-function $FUNCNAME "$@"
-	perl-module_src_prep
-}
 
-# @FUNCTION: perl-module_src_prep
-# @USAGE: perl-module_src_prep
-# @DESCRIPTION:
-# Configure the ebuild sources (bis).
-#
-# This function is still around for historical reasons 
-# and will be soon deprecated.
-#
-# Please use the function above instead, perl-module_src_configure().
-#
-# TODO: Move code to perl-module_src_configure().
-perl-module_src_prep() {
-	debug-print-function $FUNCNAME "$@"
 	[[ ${SRC_PREP} = yes ]] && return 0
 	SRC_PREP="yes"
 
@@ -200,6 +185,21 @@ perl-module_src_prep() {
 		einfo "No Make or Build file detected..."
 		return
 	fi
+}
+
+# @FUNCTION: perl-module_src_prep
+# @USAGE: perl-module_src_prep
+# @DESCRIPTION:
+# Configure the ebuild sources (bis).
+#
+# This function is still around for historical reasons 
+# and will be soon deprecated.
+#
+# Please use the function above instead, perl-module_src_configure().
+perl-module_src_prep() {
+	debug-print-function $FUNCNAME "$@"
+	eqawarn "perl-modules.eclass: perl-module_src_prep is deprecated and will be removed. Please use perl-module_src_configure instead."
+	perl-module_src_configure
 }
 
 # @FUNCTION: perl-module_src_compile
