@@ -1143,6 +1143,10 @@ app-text/mathtex:png - Generate png images by default instead of gif
 app-text/mupdf:openssl - Use dev-libs/openssl crypto backend
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
 app-text/pandoc:http-conduit - Enable downloading of resources over https.
+app-text/pandoc:https - Enable support for downloading of resources over https.
+app-text/pandoc:make-pandoc-man-pages - Build program to regenerate pandoc man pages from README.
+app-text/pandoc:network-uri - Get Network.URI from the network-uri package.
+app-text/pandoc:trypandoc - Build trypandoc cgi executable.
 app-text/pastebinit:crypt - Install pbputs for gpg-encrypted pastes
 app-text/pdf2djvu:graphicsmagick - Enable media-gfx/graphicsmagick support
 app-text/pdfgrep:unac - Removing accents and ligatures before search
