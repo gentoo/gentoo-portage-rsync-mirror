@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apipkg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apipkg/ChangeLog,v 1.8 2014/12/13 07:13:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apipkg/ChangeLog,v 1.9 2014/12/13 07:40:25 idella4 Exp $
+
+  13 Dec 2014; Ian Delaney <idella4@gentoo.org> apipkg-1.2-r1.ebuild:
+  offending test seded out wrt Bug #530388
 
   13 Dec 2014; Ian Delaney <idella4@gentoo.org> -apipkg-1.0.ebuild,
   -apipkg-1.2.ebuild, apipkg-1.2-r1.ebuild:
