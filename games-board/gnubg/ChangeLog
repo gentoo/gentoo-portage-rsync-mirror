@@ -1,6 +1,12 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.79 2014/12/13 20:40:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.80 2014/12/13 21:34:51 mr_bones_ Exp $
+
+*gnubg-1.04.000 (13 Dec 2014)
+
+  13 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> +gnubg-1.04.000.ebuild,
+  -gnubg-20130203-r1.ebuild:
+  restore new version and add font fix
 
 *gnubg-20130203-r1 (13 Dec 2014)
 
