@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.10.ebuild,v 1.6 2014/12/13 12:52:24 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.11.ebuild,v 1.1 2014/12/13 12:52:24 tamiko Exp $
 
 EAPI=5
 
@@ -38,16 +38,6 @@ DEPEND="${RDEPEND}
 
 # testsuite is currently not included in upstream tarball
 RESTRICT="test"
-
-python_compile() {
-	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
-	distutils-r1_python_compile
-}
-
-python_install() {
-	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
-	distutils-r1_python_install
-}
 
 python_test() {
 	esetup.py test
