@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/easy-file
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/easy-file/ChangeLog,v 1.1 2014/12/13 14:01:47 gienah Exp $
+
+*easy-file-0.2.0 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +easy-file-0.2.0.ebuild,
+  +metadata.xml:
+  Add easy-file

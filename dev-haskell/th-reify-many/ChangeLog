@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/th-reify-many
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/th-reify-many/ChangeLog,v 1.1 2014/12/13 14:08:42 gienah Exp $
+
+*th-reify-many-0.1.2 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +th-reify-many-0.1.2.ebuild:
+  Add th-reify-many
