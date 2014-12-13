@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autobahn/autobahn-0.9.3.3.ebuild,v 1.1 2014/11/24 14:34:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autobahn/autobahn-0.9.3.3.ebuild,v 1.2 2014/12/13 08:21:50 mgorny Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="
 	dev-python/twisted-core[$(python_gen_usedep python2*)]
 	dev-python/ujson[${PYTHON_USEDEP}]
 	dev-python/wsaccel[${PYTHON_USEDEP}]
-	net-zope/zope-interface[${PYTHON_USEDEP}]
+	dev-python/zope-interface[${PYTHON_USEDEP}]
 	"
 DEPEND="${RDEPEND}"
 

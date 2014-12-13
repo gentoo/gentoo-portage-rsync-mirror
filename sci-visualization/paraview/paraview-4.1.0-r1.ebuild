@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.3 2014/05/22 20:05:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.4 2014/12/13 08:22:16 mgorny Exp $
 
 EAPI=5
 
@@ -61,7 +61,7 @@ RDEPEND="
 		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/sip[${PYTHON_USEDEP}]
 		dev-python/twisted-core
-		net-zope/zope-interface[${PYTHON_USEDEP}]
+		dev-python/zope-interface[${PYTHON_USEDEP}]
 		mpi? ( dev-python/mpi4py )
 		qt4? ( dev-python/PyQt4[opengl,webkit,${PYTHON_USEDEP}] )
 	)

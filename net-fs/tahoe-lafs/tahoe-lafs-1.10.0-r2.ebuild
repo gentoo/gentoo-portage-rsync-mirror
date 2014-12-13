@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r2.ebuild,v 1.6 2014/11/01 17:38:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r2.ebuild,v 1.7 2014/12/13 08:21:57 mgorny Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RDEPEND="
 	>=dev-python/twisted-core-9.0.0-r1[${PYTHON_USEDEP}]
 	dev-python/zbase32[${PYTHON_USEDEP}]
 	dev-python/zfec[${PYTHON_USEDEP}]
-	net-zope/zope-interface[${PYTHON_USEDEP}]"
+	dev-python/zope-interface[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/${MY_P}

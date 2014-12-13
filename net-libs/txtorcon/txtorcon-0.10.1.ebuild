@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/txtorcon/txtorcon-0.10.1.ebuild,v 1.1 2014/08/04 22:34:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/txtorcon/txtorcon-0.10.1.ebuild,v 1.2 2014/12/13 08:22:01 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -19,7 +19,7 @@ IUSE="test"
 RDEPEND="dev-python/twisted-core[${PYTHON_USEDEP}]
 	dev-python/ipaddr[${PYTHON_USEDEP}]
 	net-misc/tor
-	net-zope/zope-interface[${PYTHON_USEDEP}]"
+	dev-python/zope-interface[${PYTHON_USEDEP}]"
 
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]

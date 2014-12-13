@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/autobahn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autobahn/ChangeLog,v 1.2 2014/11/24 14:34:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autobahn/ChangeLog,v 1.3 2014/12/13 08:21:50 mgorny Exp $
+
+  13 Dec 2014; Michał Górny <mgorny@gentoo.org> autobahn-0.7.4.ebuild,
+  autobahn-0.9.3.3.ebuild:
+  Rename net-zope/zope-interface to dev-python/zope-interface.
 
 *autobahn-0.9.3.3 (24 Nov 2014)
 
@@ -12,4 +16,3 @@
   27 Jan 2014; Justin Lecher <jlec@gentoo.org> +autobahn-0.7.4.ebuild,
   +metadata.xml:
   New addition, written by me
-
