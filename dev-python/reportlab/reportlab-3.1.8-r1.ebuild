@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-3.0.ebuild,v 1.3 2014/08/10 21:20:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-3.1.8-r1.ebuild,v 1.1 2014/12/13 11:37:34 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -10,7 +10,7 @@ inherit distutils-r1 flag-o-matic prefix
 
 DESCRIPTION="Tools for generating printable PDF documents from any data source"
 HOMEPAGE="http://www.reportlab.com/"
-SRC_URI="http://www.reportlab.com/ftp/${P}.tar.gz
+SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz
 	http://www.reportlab.com/ftp/fonts/pfbfer-20070710.zip"
 
 LICENSE="BSD"
@@ -19,12 +19,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd6
 IUSE="doc examples"
 
 RDEPEND="
-	virtual/python-imaging[${PYTHON_USEDEP}]
-	media-fonts/ttf-bitstream-vera
+	media-fonts/dejavu
 	media-libs/libart_lgpl
-	sys-libs/zlib"
+	sys-libs/zlib
+	virtual/python-imaging[${PYTHON_USEDEP}]
+"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+"
 
 DISTUTILS_NO_PARALLEL_BUILD=1
 
@@ -36,7 +38,7 @@ src_unpack() {
 
 python_prepare_all() {
 	sed -i \
-		-e "s|/usr/lib/X11/fonts/TrueType/|${EPREFIX}/usr/share/fonts/ttf-bitstream-vera/|" \
+		-e "s|/usr/lib/X11/fonts/TrueType/|${EPREFIX}/usr/share/fonts/dejavu/|" \
 		-e 's|/usr/local/Acrobat|/opt/Acrobat|g' \
 		-e 's|%(HOME)s/fonts|%(HOME)s/.fonts|g' \
 		src/reportlab/rl_config.py || die

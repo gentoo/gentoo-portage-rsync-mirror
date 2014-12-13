@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.108 2014/12/11 23:45:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.109 2014/12/13 11:37:34 pacho Exp $
+
+*reportlab-3.1.8-r1 (13 Dec 2014)
+
+  13 Dec 2014; Pacho Ramos <pacho@gentoo.org> +reportlab-3.1.8-r1.ebuild,
+  -reportlab-2.5-r1.ebuild, -reportlab-2.5.ebuild, -reportlab-2.7.ebuild,
+  -reportlab-3.0.ebuild:
+  Use dejavu instead of bitstream-vera fonts (#405183), drop old
 
   11 Dec 2014; Ian Delaney <idella4@gentoo.org> reportlab-2.6.ebuild:
   drop py2.6, add missing call, fixes qa issue bug #529486, cross tested by

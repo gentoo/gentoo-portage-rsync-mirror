@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.36 2014/10/14 14:58:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.37 2014/12/13 11:35:18 pacho Exp $
+
+  13 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/rst2pdf-0.16_docutils-0.8.patch, -rst2pdf-0.92.ebuild,
+  -rst2pdf-0.93-r1.ebuild, -rst2pdf-0.93.ebuild:
+  Drop old
 
   14 Oct 2014; Tobias Klausmann <klausman@gentoo.org> rst2pdf-0.93-r2.ebuild:
   Keyworded on alpha, bug 515222

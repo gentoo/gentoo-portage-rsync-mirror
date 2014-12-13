@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/buzhug
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.7 2010/09/27 17:44:40 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.8 2014/12/13 11:34:11 monsieurp Exp $
+
+*buzhug-1.8-r1 (13 Dec 2014)
+
+  13 Dec 2014; Patrice Clement <monsieurp@gentoo.org> +buzhug-1.8-r1.ebuild,
+  -buzhug-1.8.ebuild:
+  Converted to distutils-r1, added required IUSE test as well as test phase, rm
+  old. Crosstested and approved by idella4. See #316509.
 
 *buzhug-1.8 (27 Sep 2010)
 
@@ -64,4 +71,3 @@
 
   03 Jul 2006; Tiziano Müller <gentoo@dev-zero.ch> ChangeLog:
   New ebuild for bug 138267
-

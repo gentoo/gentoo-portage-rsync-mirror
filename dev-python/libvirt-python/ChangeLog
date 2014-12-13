@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/libvirt-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.23 2014/12/01 07:01:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.24 2014/12/13 11:46:47 tamiko Exp $
+
+  13 Dec 2014; Matthias Maier <tamiko@gentoo.org> libvirt-python-1.2.10.ebuild:
+  tightly couple libvirt dependency to version
 
   01 Dec 2014; Ian Delaney <idella4@gentoo.org> libvirt-python-1.2.10.ebuild,
   libvirt-python-9999.ebuild:

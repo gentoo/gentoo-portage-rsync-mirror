@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.10.ebuild,v 1.4 2014/12/01 07:01:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.10.ebuild,v 1.5 2014/12/13 11:46:47 tamiko Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 IUSE="test"
 
-RDEPEND=">=app-emulation/libvirt-0.9.6:=[-python(-)]"
+RDEPEND="app-emulation/libvirt:0/${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-python/lxml[${PYTHON_USEDEP}]
