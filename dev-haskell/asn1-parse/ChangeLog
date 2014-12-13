@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/asn1-parse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-parse/ChangeLog,v 1.3 2014/07/25 09:16:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-parse/ChangeLog,v 1.4 2014/12/13 13:22:27 gienah Exp $
+
+*asn1-parse-0.9.0 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +asn1-parse-0.9.0.ebuild:
+  Bump asn1-parse to 0.9.0
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> asn1-parse-0.8.1.ebuild:
   Drop trailing '.' from description.

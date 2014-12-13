@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/blaze-builder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder/ChangeLog,v 1.13 2014/07/25 09:16:37 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder/ChangeLog,v 1.14 2014/12/13 13:26:35 gienah Exp $
+
+*blaze-builder-0.3.3.4 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +blaze-builder-0.3.3.4.ebuild:
+  Bump  blaze-builder to 0.3.3.4
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   blaze-builder-0.3.1.1.ebuild, blaze-builder-0.3.3.2.ebuild:

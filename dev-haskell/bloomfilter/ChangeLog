@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/bloomfilter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.9 2014/07/25 09:16:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.10 2014/12/13 13:31:04 gienah Exp $
+
+*bloomfilter-2.0.0.0 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +bloomfilter-2.0.0.0.ebuild:
+  Bump bloomfilter to 2.0.0.0
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   bloomfilter-1.2.6.10-r1.ebuild, bloomfilter-1.2.6.10-r2.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/aeson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/ChangeLog,v 1.12 2014/11/22 11:31:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/ChangeLog,v 1.13 2014/12/13 13:12:36 gienah Exp $
+
+*aeson-0.8.0.2 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +aeson-0.8.0.2.ebuild:
+  Bump aeson to 0.8.0.2
 
   22 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org> -aeson-0.7.0.2.ebuild,
   -aeson-0.7.0.3.ebuild, aeson-0.7.0.6.ebuild:

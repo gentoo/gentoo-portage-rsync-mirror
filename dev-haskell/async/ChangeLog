@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/async
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.6 2014/02/21 19:38:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.7 2014/12/13 13:15:50 gienah Exp $
+
+*async-2.0.1.6 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +async-2.0.1.6.ebuild:
+  Bump async to 2.0.1.6
 
 *async-2.0.1.5 (21 Feb 2014)
 

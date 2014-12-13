@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.47 2014/09/03 09:36:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.48 2014/12/13 13:13:44 gienah Exp $
+
+*binary-0.7.2.2 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +binary-0.7.2.2.ebuild:
+  Bump binary to 0.7.2.2
 
   03 Sep 2014; Sergei Trofimovich <slyfox@gentoo.org> binary-0.7.1.0.ebuild:
   Mark as bundled with ghc-7.8.3.

@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/flrig-1.3.15.ebuild,v 1.1 2014/02/06 17:39:20 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/flrig-1.3.18.ebuild,v 1.1 2014/12/13 13:19:46 tomjbe Exp $
 
 EAPI=5
+inherit autotools eutils
 
 DESCRIPTION="Transceiver control program for Amateur Radio use"
 HOMEPAGE="http://www.w1hkj.com/flrig-help/index.html"
@@ -19,6 +20,11 @@ RDEPEND="x11-libs/libX11
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
+
+src_prepare() {
+	epatch "${FILESDIR}"/fix-bashism.patch
+	eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install

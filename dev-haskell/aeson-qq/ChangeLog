@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/aeson-qq
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson-qq/ChangeLog,v 1.1 2014/12/13 13:17:54 gienah Exp $
+
+*aeson-qq-0.7.4 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +aeson-qq-0.7.4.ebuild,
+  +metadata.xml:
+  Bump aeson-qq to 0.7.4

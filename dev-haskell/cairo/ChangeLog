@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cairo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.32 2014/12/01 09:51:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.33 2014/12/13 13:29:33 gienah Exp $
+
+*cairo-0.13.0.5 (13 Dec 2014)
+
+  13 Dec 2014; Mark Wright <gienah@gentoo.org> +cairo-0.13.0.5.ebuild:
+  Bump cairo to 0.13.0.5
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> cairo-0.12.5.0-r1.ebuild:
   Stable for sparc, wrt bug #507390

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.4.ebuild,v 1.1 2014/12/13 12:28:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.4.ebuild,v 1.2 2014/12/13 13:29:03 yngwin Exp $
 
 EAPI=5
 inherit autotools-multilib flag-o-matic multilib toolchain-funcs
@@ -33,8 +33,8 @@ CDEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
-	infinality? ( media-libs/fontconfig-infinality )
 	abi_x86_32? ( utils? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) )"
+PDEPEND="infinality? ( media-libs/fontconfig-infinality )"
 
 src_prepare() {
 	enable_option() {
