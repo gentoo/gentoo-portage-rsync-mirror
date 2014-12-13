@@ -11,4 +11,4 @@ REQUIRED_USE=^^ ( fdk libav-aac )
 SLOT=0
 SRC_URI=http://handbrake.fr/rotation.php?file=HandBrake-0.10.0.tar.bz2 -> handbrake-0.10.0.tar.bz2
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=f358eca5fd2ae9edd2c57b76e6857329
+_md5_=b0345c3e94a658c6d9e1ceffc252f7ef

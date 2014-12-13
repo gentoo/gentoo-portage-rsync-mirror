@@ -1,6 +1,10 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.26 2014/12/12 11:10:32 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.27 2014/12/13 12:15:56 thev00d00 Exp $
+
+  13 Dec 2014; Ian Whyman <thev00d00@gentoo.org> handbrake-0.10.0.ebuild,
+  handbrake-9999.ebuild:
+  Remove invalid configure options, #532378
 
 *handbrake-0.10.0 (12 Dec 2014)
 

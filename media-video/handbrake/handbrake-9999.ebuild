@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.23 2014/12/12 11:20:09 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.24 2014/12/13 12:15:56 thev00d00 Exp $
 
 EAPI="5"
 
@@ -100,9 +100,6 @@ src_configure() {
 		--force \
 		--verbose \
 		--prefix="${EPREFIX}/usr" \
-		--disable-local-autotools \
-		--disable-local-cmake \
-		--disable-local-yasm \
 		--disable-gtk-update-checks \
 		$(use_enable libav-aac) \
 		$(use_enable fdk fdk-aac) \

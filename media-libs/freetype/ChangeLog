@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.407 2014/10/13 07:11:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.408 2014/12/13 12:28:59 yngwin Exp $
+
+*freetype-2.5.4 (13 Dec 2014)
+
+  13 Dec 2014; Ben de Groot <yngwin@gentoo.org> +freetype-2.5.4.ebuild,
+  -files/freetype-2.4.11-auto-hinter_compile_fix.patch,
+  -files/freetype-2.4.11-locale.patch,
+  -files/freetype-2.4.12-clean-include.patch,
+  -files/freetype-2.4.12-set-adobe-cff-hinting-as-default.patch,
+  -files/freetype-2.4.9-type1-incremental.patch,
+  -files/freetype-2.5.1-TT_Load_Simple_Glyph_fix.patch,
+  -files/ft2demos-2.5.1-compilefix.patch:
+  Version bump, with adjusted patchset from bohoomil/fontconfig-ultimate
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> freetype-2.5.3-r1.ebuild:
   Bump harfbuzz dep to match configure check, pointed out in bug #517442.
