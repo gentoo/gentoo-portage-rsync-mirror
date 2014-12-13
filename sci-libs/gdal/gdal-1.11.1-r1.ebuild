@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.3 2014/11/28 15:06:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.4 2014/12/13 21:03:49 dilfridge Exp $
 
 EAPI=5
 
@@ -273,7 +273,7 @@ src_compile() {
 
 	if use perl ; then
 		pushd "${S}"/swig/perl > /dev/null
-		perl-module_src_prep
+		perl-module_src_configure
 		perl-module_src_compile
 		popd > /dev/null
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.15 2014/11/22 21:59:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.16 2014/12/13 21:01:33 dilfridge Exp $
 
 EAPI=5
 
@@ -80,7 +80,7 @@ src_compile() {
 	cmake-multilib_src_compile
 	if use perl; then
 		cd contrib/perl || die
-		perl-module_src_prep
+		perl-module_src_configure
 		perl-module_src_compile
 	fi
 }

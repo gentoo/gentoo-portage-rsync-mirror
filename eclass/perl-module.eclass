@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.159 2014/12/13 20:51:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.160 2014/12/13 21:06:07 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -198,7 +198,7 @@ perl-module_src_configure() {
 # Please use the function above instead, perl-module_src_configure().
 perl-module_src_prep() {
 	debug-print-function $FUNCNAME "$@"
-	eqawarn "perl-modules.eclass: perl-module_src_prep is deprecated and will be removed. Please use perl-module_src_configure instead."
+	ewarn "perl-modules.eclass: perl-module_src_prep is deprecated and will be removed. Please use perl-module_src_configure instead."
 	perl-module_src_configure
 }
 
