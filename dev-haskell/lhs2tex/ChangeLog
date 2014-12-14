@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/lhs2tex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.31 2012/11/25 06:06:18 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.32 2014/12/14 09:33:43 gienah Exp $
+
+*lhs2tex-1.18.1-r1 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org>
+  +files/lhs2tex-1.18.1-mandir.patch, +lhs2tex-1.18.1-r1.ebuild,
+  -lhs2tex-1.17.ebuild:
+  Thanks to Vikraman Choudhury <vikraman@gentoo.org> for this fix: dev-
+  haskell/lhs2tex: Fix man page install location
 
 *lhs2tex-1.18.1 (25 Nov 2012)
 
