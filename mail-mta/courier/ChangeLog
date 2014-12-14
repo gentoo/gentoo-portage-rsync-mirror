@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.176 2014/11/03 12:50:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.177 2014/12/14 01:32:05 hanno Exp $
+
+*courier-0.74.0 (14 Dec 2014)
+
+  14 Dec 2014; <hanno@gentoo.org> +courier-0.74.0.ebuild,
+  +files/courier-0.74.0-fix-linking.diff:
+  Bump, fix --as-needed linking.
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> courier-0.71.ebuild:
   Update PostgreSQL dependencies and/or checks to virtual/postgresql.
