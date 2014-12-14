@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/sunflower
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/ChangeLog,v 1.15 2014/12/14 10:21:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/ChangeLog,v 1.16 2014/12/14 21:44:52 hasufell Exp $
+
+  14 Dec 2014; Julian Ospald <hasufell@gentoo.org>
+  -sunflower-0.1_alpha56.ebuild, -sunflower-0.1_alpha57.ebuild,
+  -sunflower-0.1_alpha58.ebuild, sunflower-0.2_alpha59.ebuild:
+  update HOMEPAGE, rm old
 
   14 Dec 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   New line at end of file.

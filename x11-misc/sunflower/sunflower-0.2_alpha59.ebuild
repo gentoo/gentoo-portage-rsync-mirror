@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.2_alpha59.ebuild,v 1.2 2014/08/24 18:37:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.2_alpha59.ebuild,v 1.3 2014/12/14 21:44:52 hasufell Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit eutils fdo-mime gnome2-utils python-r1
 MY_PN="Sunflower"
 DESCRIPTION="Small and highly customizable twin-panel file manager with plugin-support"
 HOMEPAGE="https://github.com/MeanEYE/Sunflower
-	http://code.google.com/p/sunflower-fm"
+	http://sunflower-fm.org/"
 SRC_URI="http://sunflower-fm.org/pub/sunflower-${PV/_alpha/-}.tgz"
 
 LICENSE="GPL-3"
