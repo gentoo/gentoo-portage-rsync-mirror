@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/android-studio-1.0.0.135.1626825_rc4.ebuild,v 1.1 2014/12/05 08:19:34 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/android-studio-1.0.1.135.1641136.ebuild,v 1.1 2014/12/14 12:43:49 perfinion Exp $
 
 EAPI=5
 inherit eutils versionator
 
 RESTRICT="strip"
-QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
+QA_PREBUILT="opt/${P}/bin/libbreakgen.so"
 STUDIO_V=$(get_version_component_range 1-3)
 BUILD_V=$(get_version_component_range 4-5)
 if [[ $(get_version_component_count) -gt 5 ]]; then

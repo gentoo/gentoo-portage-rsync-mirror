@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/android-studio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.10 2014/12/09 17:51:17 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.11 2014/12/14 12:43:49 perfinion Exp $
+
+*android-studio-1.0.1.135.1641136 (14 Dec 2014)
+
+  14 Dec 2014; Jason Zaman <perfinion@gentoo.org>
+  +android-studio-1.0.1.135.1641136.ebuild,
+  -android-studio-1.0.0.135.1626825_rc4.ebuild:
+  version bump and drop RCs
 
 *android-studio-1.0.0.135.1629389 (09 Dec 2014)
 
