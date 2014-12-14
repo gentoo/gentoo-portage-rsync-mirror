@@ -2893,6 +2893,7 @@ games-strategy/warzone2100:qt4 - Use qt-gui/qt-opengl for backend rendering inst
 games-strategy/wesnoth:server - Enable compilation of server
 games-util/gslist:web - Enable the web interface
 games-util/pyfa:graph - Enable support for graphs
+games-util/wit:fuse - Enable image mount support via fuse
 gnome-base/gconf:ldap - Build backend which enables default mail accounts, addressbooks and calendars for Evolution to be configured using each user's LDAP entry."
 gnome-base/gdm:audit - Enable support for sys-process/audit
 gnome-base/gdm:fprint - Enables experimental fingerprint authentication using sys-auth/fprintd

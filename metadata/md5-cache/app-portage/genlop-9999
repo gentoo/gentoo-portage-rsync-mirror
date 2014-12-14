@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl dev-perl/DateManip dev-perl/libwww-perl
 SLOT=0
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=f9d33833ff03b37f6f6243bd11420e82
+_md5_=a58053457b038f8bc9a5888283b376f3

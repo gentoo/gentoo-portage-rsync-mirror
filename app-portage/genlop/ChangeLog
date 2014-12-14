@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/genlop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.92 2014/11/23 18:50:59 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.93 2014/12/14 00:23:10 dilfridge Exp $
+
+*genlop-0.30.10 (14 Dec 2014)
+
+  14 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> -genlop-0.30.5.ebuild,
+  -genlop-0.30.7.ebuild, -genlop-0.30.8.ebuild, -genlop-0.30.8-r1.ebuild,
+  +genlop-0.30.10.ebuild, genlop-9999.ebuild:
+  New release, also to fix bug 490602; remove some old versions
 
   23 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> genlop-0.30.9-r1.ebuild:
   mark s390/sh/m68k stable

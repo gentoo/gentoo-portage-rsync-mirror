@@ -1,0 +1,11 @@
+# ChangeLog for games-util/wit
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/wit/ChangeLog,v 1.1 2014/12/14 00:10:51 radhermit Exp $
+
+*wit-2.30a (14 Dec 2014)
+
+  14 Dec 2014; Tim Harder <radhermit@gentoo.org> +wit-2.30a.ebuild,
+  +files/wit-2.30a-makefile.patch, +files/wit-2.30a-no-exec-stack.patch,
+  +files/wit-2.30a-sizeof-pointer-memaccess.patch, +metadata.xml:
+  Initial import (fixes bug #521468).
+
