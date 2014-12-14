@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/chef
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.26 2014/12/11 05:53:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.27 2014/12/14 10:29:27 graaff Exp $
+
+*chef-10.24.0-r1 (14 Dec 2014)
+
+  14 Dec 2014; Hans de Graaff <graaff@gentoo.org> +chef-10.24.0-r1.ebuild:
+  Fix chef gemspec to match the available json versions, fixing bug 532162.
 
   11 Dec 2014; Patrick Lauer <patrick@gentoo.org> chef-10.24.0.ebuild:
   Unrestrict dev-ruby/json dep #484348

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r5.ebuild,v 1.1 2014/12/07 12:19:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r5.ebuild,v 1.2 2014/12/14 10:30:17 amynka Exp $
 
 EAPI=5
 
@@ -107,7 +107,11 @@ src_install() {
 	domenu skype.desktop
 
 	if use pax_kernel; then
-		pax-mark Cm "${ED}"/opt/bin/${PN} || die
+		if use apulse; then
+			pax-mark Cm "${ED}"/opt/bin/${PN}-bin || die
+		else
+			pax-mark Cm "${ED}"/opt/bin/${PN} || die
+		fi
 		eqawarn "You have set USE=pax_kernel meaning that you intend to run"
 		eqawarn "${PN} under a PaX enabled kernel.  To do so, we must modify"
 		eqawarn "the ${PN} binary itself and this *may* lead to breakage!  If"

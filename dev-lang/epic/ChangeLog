@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/epic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/epic/ChangeLog,v 1.5 2012/11/18 06:53:41 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/epic/ChangeLog,v 1.6 2014/12/14 10:09:37 gienah Exp $
+
+*epic-0.9.3.2 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +epic-0.9.3.2.ebuild,
+  +files/respect-user-cflags.patch:
+  Bump epic to 0.9.3.2. Thanks to Michael Orlitzky <mjo@gentoo.org> for the
+  patch to respect CFLAGS
 
   18 Nov 2012; Mark Wright <gienah@gentoo.org> +files/epic-0.9.3-ghc-7.6.patch,
   epic-0.9.3.ebuild:
