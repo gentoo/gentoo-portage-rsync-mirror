@@ -1,10 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.221 2014/12/14 05:14:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.223 2014/12/14 06:55:58 gienah Exp $
 
 # Mark Wright <gienah@gentoo.org> (14 Dec 2014)
 # test dependencies need keywording
 dev-haskell/haskell-src-exts test
+dev-haskell/text test
+dev-haskell/vector test
 
 # Michał Górny <mgorny@gentoo.org> (30 Oct 2014)
 # Requires non-keyworded >=x11-libs/libxkbcommon-0.4.

@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.170 2014/12/14 06:31:04 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.171 2014/12/14 06:55:39 gienah Exp $
 
 # Mark Wright <gienah@gentoo.org> (14 Dec 2014)
 # test dependencies need keywording
 dev-haskell/text test
+dev-haskell/vector test
 
 # Tobias Klausmann <klausman@gentoo.org> (20 Nov 2014)
 # OpenCV likely will never work on Alpha

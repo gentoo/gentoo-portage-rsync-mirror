@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.236 2014/11/23 15:54:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.237 2014/12/14 06:56:09 gienah Exp $
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> package.use.mask:
+  Mask test for dev-haskell/{haskell-src-exts, text, vector}
+  as test dependencies need keywording.
 
   23 Nov 2014; Mike Gilbert <floppym@gentoo.org> make.defaults:
   Disable python3_4 default for this arch.
