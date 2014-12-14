@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warnings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.5 2014/12/04 12:02:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.6 2014/12/14 14:42:26 zlogene Exp $
+
+  14 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Warnings-0.16.0.ebuild:
+  Add ~alpha keyword wrt bug #531172
 
   04 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Warnings-0.16.0.ebuild:
   Add ~ppc keyword wrt bug #531274
