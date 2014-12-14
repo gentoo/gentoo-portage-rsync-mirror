@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.410 2014/12/14 19:40:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.411 2014/12/14 20:35:02 floppym Exp $
+
+*freetype-2.5.4-r1 (14 Dec 2014)
+
+  14 Dec 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/2.5.4-0001-pcf-Fix-Savannah-bug-43774.patch,
+  +files/2.5.4-0002-src-pcf-pcfread.c-pcf_read_TOC-Improve-fix-from-2014.patch,
+  +freetype-2.5.4-r1.ebuild, -freetype-2.5.4.ebuild:
+  Backport fixes for bug 532506.
 
   14 Dec 2014; Mike Gilbert <floppym@gentoo.org> freetype-2.5.4.ebuild:
   Switch back to ${S} after sedding the ftdemos Makefile so that epatch_user

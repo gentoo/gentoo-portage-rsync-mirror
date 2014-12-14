@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.4.ebuild,v 1.3 2014/12/14 19:40:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.4-r1.ebuild,v 1.1 2014/12/14 20:35:02 floppym Exp $
 
 EAPI=5
 inherit autotools-multilib flag-o-matic multilib toolchain-funcs
@@ -35,6 +35,11 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	abi_x86_32? ( utils? ( !app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) )"
 PDEPEND="infinality? ( media-libs/fontconfig-infinality )"
+
+PATCHES=(
+	"${FILESDIR}/2.5.4-0001-pcf-Fix-Savannah-bug-43774.patch"
+	"${FILESDIR}/2.5.4-0002-src-pcf-pcfread.c-pcf_read_TOC-Improve-fix-from-2014.patch"
+)
 
 src_prepare() {
 	enable_option() {
