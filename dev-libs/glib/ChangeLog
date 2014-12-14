@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.626 2014/12/12 11:47:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.627 2014/12/14 22:37:29 eva Exp $
+
+*glib-2.42.1 (14 Dec 2014)
+
+  14 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +glib-2.42.1.ebuild:
+  Version bump for Gnome 3.14.
 
   12 Dec 2014; Jeroen Roovers <jer@gentoo.org> glib-2.40.2.ebuild:
   Stable for HPPA (bug #529964).

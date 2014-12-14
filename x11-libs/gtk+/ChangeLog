@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.742 2014/12/12 11:59:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.743 2014/12/14 22:42:54 eva Exp $
+
+*gtk+-3.14.6 (14 Dec 2014)
+
+  14 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +gtk+-3.14.6.ebuild,
+  +files/gtk+-non-bash-support.patch:
+  Version bump for Gnome 3.14.
 
   12 Dec 2014; Jeroen Roovers <jer@gentoo.org> gtk+-2.24.25.ebuild:
   Stable for HPPA (bug #529964).
