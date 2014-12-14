@@ -21,5 +21,6 @@
 		<flag name='seccomp'>Enable system call filtering via seccomp</flag>
 		<flag name='terminal'>Enable experimental userspace virtual terminal support</flag>
 		<flag name='vanilla'>Disable Gentoo-specific behavior and compatibility quirks</flag>
+		<flag name='xkb'>Validate XKB keymap in logind</flag>
 	</use>
 </pkgmetadata>

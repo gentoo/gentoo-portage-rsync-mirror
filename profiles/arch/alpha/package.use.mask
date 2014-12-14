@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.171 2014/12/14 06:55:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.172 2014/12/14 15:52:04 floppym Exp $
 
 # Mark Wright <gienah@gentoo.org> (14 Dec 2014)
 # test dependencies need keywording
@@ -18,6 +18,7 @@ media-video/vlc opencv
 # Michał Górny <mgorny@gentoo.org> (30 Oct 2014)
 # Requires non-keyworded >=x11-libs/libxkbcommon-0.4.
 sys-apps/systemd terminal
+sys-apps/systemd xkb
 
 # Tobias Klausmann <klausman@gentoo.org> (11 Oct 2014)
 # app-emulation/qemu is not keyworded on alpha, masking flag that triggers

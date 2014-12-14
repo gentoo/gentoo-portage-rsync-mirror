@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.217 2014/12/14 06:55:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.218 2014/12/14 15:56:31 floppym Exp $
+
+  14 Dec 2014; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Mask sys-apps/systemd[xkb].
 
   14 Dec 2014; Mark Wright <gienah@gentoo.org> package.use.mask:
   Mask test for dev-haskell/{text, vector}
