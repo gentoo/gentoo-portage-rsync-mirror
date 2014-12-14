@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-24.ebuild,v 1.6 2014/08/10 20:28:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ngspice/ngspice-24.ebuild,v 1.7 2014/12/14 16:53:03 tomjbe Exp $
 
 EAPI="3"
 
@@ -30,6 +30,8 @@ src_prepare() {
 	sed -e 's/_CFLAGS -O2/_CFLAGS/' -i configure.ac || die "sed failed"
 	sed -e 's/LDFLAGS =/LDFLAGS +=/' -i src/xspice/icm/makedefs.in || die "sed failed"
 	sed -e '/AM_INIT_AUTOMAKE/s:-Werror::' -i configure.ac || die "sed failed"
+	# builds also with ncurses[tinfo] (bug #458128)
+	sed -e 's/ncurses termcap/ncurses termcap tinfo/g' -i configure.ac || die
 	eautoreconf
 }
 
