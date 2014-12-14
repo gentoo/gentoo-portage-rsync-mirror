@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.4.1.ebuild,v 1.2 2014/12/14 09:44:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.6.4.1.ebuild,v 1.3 2014/12/14 16:02:23 graaff Exp $
 
 EAPI=5
 
@@ -43,6 +43,7 @@ all_ruby_prepare() {
 	sed -i \
 		-e '/tasks\/cross_compile/s:^:#:' \
 		-e '/:test.*prerequisites/s:^:#:' \
+		-e '/license/ s:^:#:' \
 		Rakefile || die
 	# Remove the cross compilation options since they interfere with
 	# native building.

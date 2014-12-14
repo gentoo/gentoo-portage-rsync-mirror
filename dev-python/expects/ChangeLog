@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/expects
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/expects/ChangeLog,v 1.5 2014/12/07 20:01:01 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/expects/ChangeLog,v 1.6 2014/12/14 16:12:00 alunduil Exp $
+
+*expects-0.6.2 (14 Dec 2014)
+
+  14 Dec 2014; Alex Brandt <alunduil@gentoo.org> +expects-0.6.2.ebuild:
+  add version 0.6.2
 
 *expects-0.6.1 (07 Dec 2014)
 
