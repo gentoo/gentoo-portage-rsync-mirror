@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/parsec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.35 2014/03/05 10:40:39 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parsec/ChangeLog,v 1.36 2014/12/14 05:28:39 gienah Exp $
+
+*parsec-3.1.7 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +parsec-3.1.7.ebuild:
+  Bump parsec to 3.1.7
 
 *parsec-3.1.5 (05 Mar 2014)
 

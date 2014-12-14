@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/parallel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.21 2014/07/25 08:58:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.22 2014/12/14 05:27:54 gienah Exp $
+
+*parallel-3.2.0.5 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +parallel-3.2.0.5.ebuild:
+  Bump parallel to 3.2.0.5
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

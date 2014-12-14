@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.175 2014/11/11 11:17:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.176 2014/12/14 05:14:20 gienah Exp $
+
+# Mark Wright <gienah@gentoo.org> (14 Dec 2014)
+# test dependencies need keywording
+dev-haskell/haskell-src-exts test
 
 # Pacho Ramos <pacho@gentoo.org> (11 Nov 2014)
 # Missing keywords, bug #523686

@@ -1459,6 +1459,8 @@ dev-haskell/hslua:system-lua - Use the system-wide lua instead of the bundled co
 dev-haskell/hsopenssl:fast-bignum - Enable fast moving of bignums between OpenSSL and GMP (GHC Only)
 dev-haskell/hstringtemplate:quasi-quotation - Build module providing a quasi-quoter
 dev-haskell/hstringtemplate:syb-with-class - Generic instances for TOSElem
+dev-haskell/http:conduit10 - Use version 1.0.x or below of the conduit package (for the test suite).
+dev-haskell/http:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/http-client:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/httpd-shed:buildexamples - Build example executables.
 dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri package.

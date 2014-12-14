@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.155 2014/11/10 17:00:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.156 2014/12/14 05:17:21 floppym Exp $
+
+*hwids-20141214 (14 Dec 2014)
+
+  14 Dec 2014; Mike Gilbert <floppym@gentoo.org> +hwids-20141214.ebuild:
+  Version bump. Added udev/70-mouse.hwdb.
 
 *hwids-20141110 (10 Nov 2014)
 
