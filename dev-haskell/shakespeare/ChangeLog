@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/shakespeare
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shakespeare/ChangeLog,v 1.6 2014/07/25 08:58:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/shakespeare/ChangeLog,v 1.7 2014/12/14 05:47:00 gienah Exp $
+
+*shakespeare-2.0.2.1 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +shakespeare-2.0.2.1.ebuild:
+  Bump shakespeare to 2.0.2.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

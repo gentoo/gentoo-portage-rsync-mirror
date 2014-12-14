@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/pwstore-fast
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pwstore-fast/ChangeLog,v 1.4 2014/07/25 09:16:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pwstore-fast/ChangeLog,v 1.5 2014/12/14 05:37:41 gienah Exp $
+
+*pwstore-fast-2.4.4 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +pwstore-fast-2.4.4.ebuild:
+  Bump pwstore-fast to 2.4.4
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> pwstore-fast-2.3.ebuild,
   pwstore-fast-2.4.1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/primitive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.25 2014/07/05 12:57:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.26 2014/12/14 05:35:23 gienah Exp $
+
+*primitive-0.5.4.0 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +primitive-0.5.4.0.ebuild:
+  Bump primitive to 0.5.4.0
 
   05 Jul 2014; Tobias Klausmann <klausman@gentoo.org> primitive-0.5.1.0.ebuild:
   Stable on alpha, bug #495386

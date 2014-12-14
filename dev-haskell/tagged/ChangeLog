@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/tagged
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagged/ChangeLog,v 1.5 2014/09/10 21:04:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagged/ChangeLog,v 1.6 2014/12/14 05:54:14 gienah Exp $
+
+*tagged-0.7.3 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +tagged-0.7.3.ebuild:
+  Bump tagged to 0.7.3
 
   10 Sep 2014; Sergei Trofimovich <slyfox@gentoo.org> tagged-0.7.2.ebuild:
   keyword for alpha/ia64

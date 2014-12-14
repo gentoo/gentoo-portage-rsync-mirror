@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/persistent-template
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent-template/ChangeLog,v 1.6 2014/07/25 09:16:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent-template/ChangeLog,v 1.7 2014/12/14 05:33:40 gienah Exp $
+
+*persistent-template-2.1 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +persistent-template-2.1.ebuild:
+  Bump persistent-template to 2.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   persistent-template-1.1.3.1.ebuild, persistent-template-1.2.0.1.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/tasty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty/ChangeLog,v 1.7 2014/07/25 08:58:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty/ChangeLog,v 1.8 2014/12/14 05:57:19 gienah Exp $
+
+*tasty-0.10.1 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +tasty-0.10.1.ebuild:
+  Bump tasty to 0.10.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

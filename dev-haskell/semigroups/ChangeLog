@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/semigroups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroups/ChangeLog,v 1.10 2014/07/25 08:58:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroups/ChangeLog,v 1.11 2014/12/14 05:46:11 gienah Exp $
+
+*semigroups-0.16 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +semigroups-0.16.ebuild,
+  metadata.xml:
+  Bump semigroups to 0.16
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

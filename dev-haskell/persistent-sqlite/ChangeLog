@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/persistent-sqlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent-sqlite/ChangeLog,v 1.5 2014/07/25 09:16:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent-sqlite/ChangeLog,v 1.6 2014/12/14 05:33:01 gienah Exp $
+
+*persistent-sqlite-2.1.1 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +persistent-sqlite-2.1.1.ebuild:
+  Bump persistent-sqlite to 2.1.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   persistent-sqlite-1.1.5.ebuild, persistent-sqlite-1.2.0.ebuild,
