@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/ekg-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ekg-core/ChangeLog,v 1.2 2014/07/25 08:58:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ekg-core/ChangeLog,v 1.3 2014/12/14 10:55:06 gienah Exp $
+
+*ekg-core-0.1.0.2 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +ekg-core-0.1.0.2.ebuild:
+  Bump ekg-core to 0.1.0.2
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

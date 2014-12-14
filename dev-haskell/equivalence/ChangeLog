@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/equivalence
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/equivalence/ChangeLog,v 1.3 2014/07/25 09:16:22 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/equivalence/ChangeLog,v 1.4 2014/12/14 10:56:29 gienah Exp $
+
+*equivalence-0.2.5 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +equivalence-0.2.5.ebuild:
+  Bump equivalence to 0.2.5
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> equivalence-0.2.3.ebuild:
   Drop trailing '.' from description.

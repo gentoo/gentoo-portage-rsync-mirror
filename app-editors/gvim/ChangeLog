@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.446 2014/12/08 05:57:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.447 2014/12/14 10:58:01 dilfridge Exp $
+
+  14 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> gvim-7.4.273.ebuild,
+  gvim-7.4.488.ebuild, gvim-7.4.527.ebuild, gvim-7.4.542.ebuild,
+  gvim-9999.ebuild:
+  Links to libperl, so add a slot operator to Perl dependency
 
   08 Dec 2014; Tim Harder <radhermit@gentoo.org> -gvim-7.3.762.ebuild,
   -gvim-7.3.1214.ebuild, -gvim-7.4.430.ebuild, -gvim-7.4.475.ebuild,

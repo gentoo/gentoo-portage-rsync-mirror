@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/snap-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-server/ChangeLog,v 1.4 2014/12/14 06:15:24 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-server/ChangeLog,v 1.5 2014/12/14 10:44:45 gienah Exp $
+
+*snap-server-0.9.4.5-r3 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +snap-server-0.9.4.5-r3.ebuild,
+  -snap-server-0.9.4.5-r2.ebuild:
+  Loosen hsopenssl dependency in snap-server-0.9.4.5-r3
 
 *snap-server-0.9.4.5-r2 (14 Dec 2014)
 

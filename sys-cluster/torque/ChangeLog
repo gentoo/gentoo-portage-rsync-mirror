@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.173 2014/10/17 03:59:14 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.174 2014/12/14 10:40:19 jer Exp $
+
+  14 Dec 2014; Jeroen Roovers <jer@gentoo.org> torque-4.1.7.ebuild:
+  Stable for HPPA (bug #491270).
 
   17 Oct 2014; Justin Bronder <jsbronder@gentoo.org> torque-4.1.5.1-r1.ebuild,
   torque-4.1.7.ebuild, torque-4.2.9-r1.ebuild:

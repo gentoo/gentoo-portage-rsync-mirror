@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hlint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hlint/ChangeLog,v 1.4 2014/07/25 08:59:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hlint/ChangeLog,v 1.5 2014/12/14 11:00:39 gienah Exp $
+
+*hlint-1.9.10 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +hlint-1.9.10.ebuild,
+  metadata.xml:
+  Bump hlint to 1.9.10
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

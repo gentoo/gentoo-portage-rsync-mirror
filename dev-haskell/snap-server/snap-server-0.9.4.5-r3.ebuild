@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-server/snap-server-0.9.4.5-r2.ebuild,v 1.1 2014/12/14 06:15:24 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-server/snap-server-0.9.4.5-r3.ebuild,v 1.1 2014/12/14 10:44:45 gienah Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-haskell/attoparsec-0.10:=[profile?] <dev-haskell/attoparsec-0.13:
 	>=dev-haskell/text-0.11:=[profile?]
 	>=dev-haskell/unix-compat-0.2:=[profile?] <dev-haskell/unix-compat-0.5:=[profile?]
 	>=dev-lang/ghc-7.4.1:=
-	openssl? ( >=dev-haskell/hsopenssl-0.10:=[profile?] <dev-haskell/hsopenssl-0.11:=[profile?] )
+	openssl? ( >=dev-haskell/hsopenssl-0.10:=[profile?] <dev-haskell/hsopenssl-0.12:=[profile?] )
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.6
@@ -40,7 +40,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	cabal_chdeps \
 		'network                   >= 2.3      && < 2.6' 'network                   >= 2.3      && < 2.7' \
-		'text                      >= 0.11     && < 1.2' 'text                      >= 0.11'
+		'text                      >= 0.11     && < 1.2' 'text                      >= 0.11' \
+		'HsOpenSSL >= 0.10 && <0.11' 'HsOpenSSL >= 0.10 && <0.12'
 }
 
 src_configure() {

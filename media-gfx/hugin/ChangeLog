@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.151 2014/10/12 17:57:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.152 2014/12/14 10:54:19 dilfridge Exp $
+
+  14 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  hugin-2013.0.0-r1.ebuild, hugin-2014.0.0.ebuild, hugin-2014.0.0-r1.ebuild,
+  hugin-9999.ebuild:
+  Add slot operator on exiv2 dependency where possible
 
 *hugin-2014.0.0-r1 (12 Oct 2014)
 

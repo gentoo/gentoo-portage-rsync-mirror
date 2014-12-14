@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.542.ebuild,v 1.1 2014/12/08 05:41:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.542.ebuild,v 1.2 2014/12/14 10:58:01 dilfridge Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -58,7 +58,7 @@ RDEPEND="
 		!luajit? ( dev-lang/lua[deprecated] )
 	)
 	nls? ( virtual/libintl )
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
 	racket? ( dev-scheme/racket )
 	ruby? ( || ( dev-lang/ruby:2.1 dev-lang/ruby:2.0 dev-lang/ruby:1.9 ) )
