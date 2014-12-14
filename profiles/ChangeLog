@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9608 2014/12/13 13:53:11 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9609 2014/12/14 04:47:53 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Dec 2014; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask app-vim/cvscommand and app-vim/svncommand for removal.
 
   13 Dec 2014; Michael Palimaka <kensington@gentoo.org> package.mask:
   Add dev-qt/qtwayland to Qt5 mask.
