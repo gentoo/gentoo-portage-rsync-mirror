@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/cocaine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/ChangeLog,v 1.13 2014/12/02 23:38:37 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/ChangeLog,v 1.14 2014/12/14 08:30:45 graaff Exp $
+
+*cocaine-0.5.5 (14 Dec 2014)
+
+  14 Dec 2014; Hans de Graaff <graaff@gentoo.org> +cocaine-0.5.5.ebuild:
+  Version bump.
 
 *cocaine-0.5.4-r1 (02 Dec 2014)
 

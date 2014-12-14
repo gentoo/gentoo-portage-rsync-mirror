@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.38-r1.ebuild,v 1.1 2013/07/05 04:44:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.40.ebuild,v 1.1 2014/12/14 08:22:15 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 versionator virtualx
 
@@ -20,9 +20,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="examples test"
 
-RDEPEND=">=dev-python/pygtk-2.24[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}"
-RESTRICT="test"
+RDEPEND=">=dev-python/setuptools-0.8[${PYTHON_USEDEP}]
+		>=dev-python/pygtk-2.24[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}
+	test? ( dev-python/mock[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -31,15 +32,11 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
-# Just in case
 python_test() {
-	# Tarballs are missing files.
-	# https://code.launchpad.net/~floppym/kiwi/testfiles/+merge/106505
-	rm tests/{test_pyflakes.py,test_pep8.py,test_ui.py}
-
-	pushd "${BUILD_DIR}"/../ > /dev/null
+	# There is one fail of a test repeated 3 times in tests/test_ui.py however
+	# they are shy with their bug tracker. The fail is not a failing of the package's core modules
 	testing() {
-		PYTHONPATH="${PYTHONPATH}":tests "${PYTHON}" tests/run_all_tests.py
+		"${PYTHON}" -m unittest discover || die "tests failed"
 	}
 	VIRTUALX_COMMAND=virtualmake testing
 }
