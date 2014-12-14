@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.409 2014/12/13 13:29:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.410 2014/12/14 19:40:58 floppym Exp $
+
+  14 Dec 2014; Mike Gilbert <floppym@gentoo.org> freetype-2.5.4.ebuild:
+  Switch back to ${S} after sedding the ftdemos Makefile so that epatch_user
+  works properly. If the user wants to patch ftdemos, they are SOL for now.
 
   13 Dec 2014; Ben de Groot <yngwin@gentoo.org> freetype-2.5.4.ebuild:
   Prevent circular dependencies

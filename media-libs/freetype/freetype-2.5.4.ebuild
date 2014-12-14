@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.4.ebuild,v 1.2 2014/12/13 13:29:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.4.ebuild,v 1.3 2014/12/14 19:40:58 floppym Exp $
 
 EAPI=5
 inherit autotools-multilib flag-o-matic multilib toolchain-funcs
@@ -88,6 +88,7 @@ src_prepare() {
 		if ! use X; then
 			sed -i -e "/EXES\ +=\ ftdiff/ s:^:#:" Makefile || die
 		fi
+		cd "${S}" || die
 	fi
 
 	# we need non-/bin/sh to run configure
