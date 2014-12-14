@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/recaptcha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/recaptcha/ChangeLog,v 1.4 2014/07/25 09:16:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/recaptcha/ChangeLog,v 1.5 2014/12/14 06:13:47 gienah Exp $
+
+*recaptcha-0.1.0.3 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +recaptcha-0.1.0.3.ebuild,
+  metadata.xml:
+  Bump recaptcha to 0.1.0.3
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> recaptcha-0.1-r1.ebuild,
   recaptcha-0.1.0.2.ebuild:

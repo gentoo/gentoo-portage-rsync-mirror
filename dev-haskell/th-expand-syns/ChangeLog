@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/th-expand-syns
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/th-expand-syns/ChangeLog,v 1.1 2014/12/14 06:18:18 gienah Exp $
+
+*th-expand-syns-0.3.0.4 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +th-expand-syns-0.3.0.4.ebuild:
+  Add th-expand-syns

@@ -1496,6 +1496,7 @@ dev-haskell/persistent:nooverlap - Use OverlappingInstances only for String. Onl
 dev-haskell/persistent-sqlite:build-sanity-exe - Build a sanity check test executable.
 dev-haskell/persistent-sqlite:systemlib - Use the system-wide sqlite library.
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
+dev-haskell/recaptcha:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/rfc5051:mkunicodedata - build codes generator itself
 dev-haskell/scientific:bytestring-builder - Provide the Data.ByteString.Builder.Scientific module (requires bytestring >= 0.10).
 dev-haskell/semigroupoids:comonad - You can disable the use of the `comonad` package using `-f-comonad`. Disabling this is an unsupported configuration, but it may be useful for accelerating builds in sandboxes for expert users. If disabled we will not supply instances of `Comonad`
@@ -1526,7 +1527,7 @@ dev-haskell/snap-server:portable - no non-haskell unportable code.
 dev-haskell/tagsoup:download - Build with Download module.
 dev-haskell/tagsoup:testprog - Build the test program.
 dev-haskell/tasty:colors - Enable colorful output
-dev-haskell/texmath:cgi - Build texmath-cgi executable.
+dev-haskell/texmath:executable - Compile test executable.
 dev-haskell/text:developer - operate in developer mode
 dev-haskell/tls:compat - Accept SSLv2 compatible handshake
 dev-haskell/transformers-base:orphaninstances - Build instances for orphan datatypes.
