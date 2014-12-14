@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.519 2014/11/24 00:20:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.520 2014/12/13 23:43:14 alonbl Exp $
+
+  13 Dec 2014; Alon Bar-Lev <alonbl@gentoo.org> -gnutls-3.2.20.ebuild,
+  -gnutls-3.3.10-r1.ebuild:
+  Cleanup
 
   24 Nov 2014; Michał Górny <mgorny@gentoo.org> gnutls-3.3.10-r2.ebuild:
   Add work-around for gtk-doc out-of-source build issues, bug #519762.
