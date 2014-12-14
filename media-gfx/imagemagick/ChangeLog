@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.576 2014/11/10 13:51:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.578 2014/12/14 17:07:08 radhermit Exp $
+
+  14 Dec 2014; Tim Harder <radhermit@gentoo.org>
+  -imagemagick-6.8.8.10-r1.ebuild, -imagemagick-6.8.9.7.ebuild,
+  -imagemagick-6.8.9.8.ebuild,
+  -files/imagemagick-6.8.8.8-openjpeg-2.0.0-has-no-opj_stream_destroy_v3.patch,
+  -files/imagemagick-6.8.8.10-LIBOPENJP2_DELEGATE_not_JP2_DELEGATE.patch:
+  Remove old.
+
+*imagemagick-6.9.0.0 (14 Dec 2014)
+
+  14 Dec 2014; Tim Harder <radhermit@gentoo.org> +imagemagick-6.9.0.0.ebuild:
+  Version bump.
 
   10 Nov 2014; Agostino Sarubbo <ago@gentoo.org> imagemagick-6.8.9.9.ebuild:
   Stable for ppc64, wrt bug #527028
