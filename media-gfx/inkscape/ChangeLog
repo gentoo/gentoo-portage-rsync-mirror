@@ -1,6 +1,23 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.215 2014/10/30 09:55:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.217 2014/12/14 20:11:41 radhermit Exp $
+
+  14 Dec 2014; Tim Harder <radhermit@gentoo.org> -inkscape-0.48.4.ebuild,
+  -inkscape-0.48.4-r1.ebuild, -files/inkscape-0.48.1-libpng15.patch,
+  -files/inkscape-0.48.4-fix-member-decl.patch,
+  -files/inkscape-0.48.4-gc74.patch, -files/inkscape-0.48.4-poppler26.patch,
+  -files/inkscape-0.48.4-python2.patch:
+  Remove old.
+
+*inkscape-0.91_pre3 (14 Dec 2014)
+
+  14 Dec 2014; Tim Harder <radhermit@gentoo.org> +inkscape-0.91_pre3.ebuild,
+  +files/inkscape-0.91_pre3-automagic.patch,
+  +files/inkscape-0.91_pre3-cppflags.patch,
+  +files/inkscape-0.91_pre3-desktop.patch,
+  +files/inkscape-0.91_pre3-sk-man.patch, metadata.xml:
+  Version bump. Add cdr, dbus, imagemagick, openmp, static-libs, visio, and wpg
+  use flags.
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> inkscape-0.48.5.ebuild:
   Stable for x86, wrt bug #523384

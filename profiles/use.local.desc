@@ -3544,8 +3544,11 @@ media-gfx/imagemagick:q64 - Set quantum depth value to 64
 media-gfx/imagemagick:q8 - Set quantum depth value to 8
 media-gfx/imagemagick:webp - Enable webp image format support using media-libs/libwebp
 media-gfx/imageworsener:webp - enable webp image format support
+media-gfx/inkscape:cdr - Enable support for CorelDRAW Diagrams
 media-gfx/inkscape:dia - pull in app-office/dia for dia import extension
-media-gfx/inkscape:inkjar - enables support for OpenOffice.org SVG jar files
+media-gfx/inkscape:inkjar - Enable support for OpenOffice.org SVG jar files
+media-gfx/inkscape:visio - Enable support for Microsoft Visio Diagrams
+media-gfx/inkscape:wpg - Enable support for WordPerfect Graphics
 media-gfx/iscan-plugin-gt-f500:minimal - Install the firmware only, and not the plugin.
 media-gfx/jpeg2ps:metric - Default to A4 paper size
 media-gfx/k3d:3ds - Enable support for 3D Studio models
