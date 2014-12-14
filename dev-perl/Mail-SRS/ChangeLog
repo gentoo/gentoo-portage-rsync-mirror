@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mail-SRS
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.16 2014/08/24 01:14:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SRS/ChangeLog,v 1.17 2014/12/14 18:56:07 monsieurp Exp $
+
+*Mail-SRS-0.310.0-r2 (14 Dec 2014)
+
+  14 Dec 2014; Patrice Clement <monsieurp@gentoo.org>
+  +Mail-SRS-0.310.0-r2.ebuild, +files/srsd.conf, +files/srsd.init:
+  Revision bump: add {init,conf}.d files as requested by user. Fix #462920.
 
 *Mail-SRS-0.310.0-r1 (24 Aug 2014)
 
