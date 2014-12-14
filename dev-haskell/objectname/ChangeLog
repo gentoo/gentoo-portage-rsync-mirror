@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/objectname
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/objectname/ChangeLog,v 1.6 2014/07/25 08:59:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/objectname/ChangeLog,v 1.7 2014/12/14 11:40:51 gienah Exp $
+
+*objectname-1.0.1.0 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +objectname-1.0.1.0.ebuild:
+  Bump objectname to 1.0.1.0
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

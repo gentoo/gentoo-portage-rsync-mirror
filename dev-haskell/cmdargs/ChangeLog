@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cmdargs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdargs/ChangeLog,v 1.7 2014/07/25 08:58:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdargs/ChangeLog,v 1.8 2014/12/14 11:32:08 gienah Exp $
+
+*cmdargs-0.10.12 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +cmdargs-0.10.12.ebuild:
+  Bump cmdargs to 0.10.12
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.
