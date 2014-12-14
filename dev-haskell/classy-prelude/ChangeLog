@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/classy-prelude
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/classy-prelude/ChangeLog,v 1.6 2014/07/25 09:16:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/classy-prelude/ChangeLog,v 1.7 2014/12/14 11:10:10 gienah Exp $
+
+*classy-prelude-0.10.2 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +classy-prelude-0.10.2.ebuild:
+  Bump classy-prelude to 0.10.2
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   classy-prelude-0.5.8.ebuild, classy-prelude-0.5.9.ebuild,

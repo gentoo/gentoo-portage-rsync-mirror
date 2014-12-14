@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/basic-prelude
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/basic-prelude/ChangeLog,v 1.5 2014/07/25 09:16:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/basic-prelude/ChangeLog,v 1.6 2014/12/14 11:11:10 gienah Exp $
+
+*basic-prelude-0.3.10 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +basic-prelude-0.3.10.ebuild:
+  Bump basic-prelude to 0.3.10
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   basic-prelude-0.3.5.0.ebuild, basic-prelude-0.3.6.0.ebuild,

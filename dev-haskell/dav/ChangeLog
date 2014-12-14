@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/dav
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dav/ChangeLog,v 1.6 2014/09/06 18:56:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dav/ChangeLog,v 1.7 2014/12/14 11:06:47 gienah Exp $
+
+*dav-1.0.3 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +dav-1.0.3.ebuild, metadata.xml:
+  Bump dav to 1.0.3
 
 *dav-1.0.1 (06 Sep 2014)
 

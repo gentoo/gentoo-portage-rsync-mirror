@@ -1,6 +1,10 @@
 # ChangeLog for net-im/skype
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.171 2014/12/14 10:30:17 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.172 2014/12/14 11:15:17 ulm Exp $
+
+  14 Dec 2014; Ulrich Müller <ulm@gentoo.org> files/skype:
+  Pass arguments through the wrapper script, thanks to Martin Väth
+  <martin@mvath.de> in bug 531914.
 
   14 Dec 2014; Amy Winston <amynka@gentoo.org> skype-4.3.0.37-r5.ebuild:
   Pax with apulse repaired according to bug 531914. Thanks Radek Pilar(Mrkva)

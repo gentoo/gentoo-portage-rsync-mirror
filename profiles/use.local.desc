@@ -1411,6 +1411,7 @@ dev-haskell/authenticate:network-uri - Get Network.URI from the network-uri pack
 dev-haskell/cabal-install:noprefs - Ignore 'preferred-versions' file from hackage's tarball.
 dev-haskell/certificate:executable - Build the executable
 dev-haskell/cgi:extensible-exceptions-in-base - Required to be enabled for >=dev-lang/ghc-7.
+dev-haskell/cgi:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/chell:color-output - use colors in program output
 dev-haskell/cipher-aes:support_aesni - allow compilation with AESNI on system and architecture that supports it.
 dev-haskell/citeproc-hs:bibutils - use Chris Putnam's app-text/bibutils
@@ -1433,6 +1434,7 @@ dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/dataenc:tests - Build unit and quickcheck tests.
+dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.
 dev-haskell/entropy:halvm - Build for the HaLVM.
