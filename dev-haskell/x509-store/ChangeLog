@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/x509-store
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x509-store/ChangeLog,v 1.2 2014/07/25 08:59:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x509-store/ChangeLog,v 1.3 2014/12/14 07:11:46 gienah Exp $
+
+*x509-store-1.5.0 (14 Dec 2014)
+
+  14 Dec 2014; Mark Wright <gienah@gentoo.org> +x509-store-1.5.0.ebuild:
+  Bump x509-store to 1.5.0
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.
