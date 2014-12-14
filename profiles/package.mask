@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16218 2014/12/14 04:47:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16219 2014/12/14 19:04:53 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (14 Dec 2014)
+# Mask pre-releases
+=media-gfx/inkscape-0.91_pre*
 
 # Tim Harder <radhermit@gentoo.org> (14 Dec 2014)
 # Deprecated plugins, use app-vim/vcscommand instead.
