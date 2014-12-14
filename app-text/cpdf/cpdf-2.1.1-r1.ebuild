@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/cpdf-2.1.1.ebuild,v 1.4 2014/12/12 02:58:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cpdf/cpdf-2.1.1-r1.ebuild,v 1.1 2014/12/14 00:58:00 radhermit Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-RDEPEND="dev-lang/ocaml:=
-	~dev-ml/camlpdf-${PV}:="
+RDEPEND=">=dev-lang/ocaml-4:=
+	dev-ml/camlpdf:="
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror bindist"
