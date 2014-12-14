@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.297 2014/12/13 13:55:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.298 2014/12/14 09:07:59 mgorny Exp $
+
+  14 Dec 2014; Michał Górny <mgorny@gentoo.org> package.use:
+  Enable multilib by default on ati- and nvidia-drivers, bug #532492.
 
   13 Dec 2014; Michał Górny <mgorny@gentoo.org>
   no-emul-linux-x86/package.use.stable.mask, package.use.stable.mask:
