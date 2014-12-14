@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=dev-perl/Class-Accessor-Grouped-0.100.50 >=dev-perl/Getopt-Long-Descriptive-0.91.0 dev-perl/Hash-Merge test? ( >=dev-perl/Test-Deep-0.106 dev-perl/Test-Exception dev-perl/Test-Pod >=virtual/perl-Test-Simple-0.92 dev-perl/Test-Warn >=dev-perl/Clone-0.31 ) dev-lang/perl:=[-build(-)]
+DEPEND=>=dev-perl/Class-Accessor-Grouped-0.100.50 >=dev-perl/Getopt-Long-Descriptive-0.91.0 dev-perl/Hash-Merge dev-perl/Moo test? ( >=dev-perl/Test-Deep-0.106 dev-perl/Test-Exception dev-perl/Test-Pod >=virtual/perl-Test-Simple-0.92 dev-perl/Test-Warn >=dev-perl/Clone-0.31 ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Generate SQL from Perl data structures
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/SQL-Abstract/
 IUSE=test
 KEYWORDS=amd64 ~ppc x86 ~ppc-aix ~ppc-macos ~x86-solaris
 LICENSE=|| ( Artistic GPL-1+ )
-RDEPEND=>=dev-perl/Class-Accessor-Grouped-0.100.50 >=dev-perl/Getopt-Long-Descriptive-0.91.0 dev-perl/Hash-Merge dev-lang/perl:=[-build(-)]
+RDEPEND=>=dev-perl/Class-Accessor-Grouped-0.100.50 >=dev-perl/Getopt-Long-Descriptive-0.91.0 dev-perl/Hash-Merge dev-perl/Moo dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RI/RIBASUSHI/SQL-Abstract-1.78.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	116f8ca03c6608acf8f0a068a35bd3ea	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=dd845b7776a1a25e653e56b4f5c9fcdf
+_md5_=830cf3c14bd478e7d161a3a419e392f2

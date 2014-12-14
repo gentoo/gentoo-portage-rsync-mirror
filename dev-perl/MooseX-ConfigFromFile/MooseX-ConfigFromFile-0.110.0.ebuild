@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-ConfigFromFile/MooseX-ConfigFromFile-0.110.0.ebuild,v 1.1 2013/08/16 07:42:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-ConfigFromFile/MooseX-ConfigFromFile-0.110.0.ebuild,v 1.2 2014/12/13 23:26:27 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="test"
 RDEPEND="
 	>=dev-perl/Moose-0.350.0
 	dev-perl/MooseX-Getopt
-	dev-perl/MooseX-Types-Path-Tiny
+	>=dev-perl/MooseX-Types-Path-Tiny-0.5.0
 	dev-perl/Try-Tiny
 	dev-perl/namespace-autoclean
 "

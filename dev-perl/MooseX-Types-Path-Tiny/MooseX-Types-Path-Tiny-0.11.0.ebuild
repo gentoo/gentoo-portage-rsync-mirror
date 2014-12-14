@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-Path-Tiny/MooseX-Types-Path-Tiny-0.1.0.ebuild,v 1.1 2013/02/03 17:42:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-Path-Tiny/MooseX-Types-Path-Tiny-0.11.0.ebuild,v 1.1 2014/12/13 23:23:55 dilfridge Exp $
 
 EAPI=5
 
-MODULE_AUTHOR=DAGOLDEN
-MODULE_VERSION=0.001
+MODULE_AUTHOR=ETHER
+MODULE_VERSION=0.011
 inherit perl-module
 
 DESCRIPTION="Path::Tiny types and coercions for Moose"
@@ -17,13 +17,17 @@ IUSE="test"
 
 RDEPEND="
 	dev-perl/Path-Tiny
-	dev-perl/Moose
+	>=dev-perl/Moose-2.0.0
 	dev-perl/MooseX-Types
 	dev-perl/MooseX-Types-Stringlike
+	virtual/perl-if
+	dev-perl/namespace-autoclean
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-ExtUtils-MakeMaker-6.300.0
+	>=dev-perl/Module-Build-Tiny-0.37.0
 	test? (
+		virtual/perl-ExtUtils-MakeMaker
+		virtual/perl-File-Spec
 		dev-perl/File-pushd
 		dev-perl/Test-Fatal
 		>=virtual/perl-File-Temp-0.180.0
@@ -31,4 +35,5 @@ DEPEND="${RDEPEND}
 	)
 "
 
-SRC_TEST=do
+SRC_TEST="do parallel"
+mytargets="install"

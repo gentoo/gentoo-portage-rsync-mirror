@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.780.0.ebuild,v 1.2 2014/07/26 14:33:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.780.0.ebuild,v 1.3 2014/12/13 23:13:48 dilfridge Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ RDEPEND="
 	>=dev-perl/Class-Accessor-Grouped-0.100.50
 	>=dev-perl/Getopt-Long-Descriptive-0.91.0
 	dev-perl/Hash-Merge
+	dev-perl/Moo
 "
 DEPEND="${RDEPEND}
 	test? (
