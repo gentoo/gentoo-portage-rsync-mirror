@@ -1,6 +1,15 @@
 # ChangeLog for app-text/hnb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.30 2014/08/10 18:23:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.32 2014/12/14 13:25:17 jer Exp $
+
+  14 Dec 2014; Jeroen Roovers <jer@gentoo.org> hnb-1.9.18-r1.ebuild,
+  +files/hnb-1.9.18-printf.patch:
+  Fix printf call (bug #521252).
+
+  14 Dec 2014; Jeroen Roovers <jer@gentoo.org> hnb-1.9.18-r1.ebuild,
+  files/hnb-1.9.18-flags.patch, files/hnb-1.9.18-include.patch:
+  Fix grep locale (bug #532552). Fix building against sys-libs/ncurses[tinfo]
+  (bug #457530). Respect AR. Clean up patch.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> hnb-1.9.18-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

@@ -1,5 +1,5 @@
---- hnb-1.9.18/src/expanded.c.orig	2003-08-27 04:50:59.000000000 +0200
-+++ hnb-1.9.18/src/expanded.c	2009-10-23 14:40:16.000000000 +0200
+--- a/src/expanded.c
++++ b/src/expanded.c
 @@ -18,9 +18,9 @@
   * Temple Place - Suite 330, Boston, MA 02111-1307, USA.
   */
