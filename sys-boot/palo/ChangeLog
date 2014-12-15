@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/palo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.47 2014/01/30 15:42:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.48 2014/12/15 19:52:16 jer Exp $
+
+*palo-1.95 (15 Dec 2014)
+
+  15 Dec 2014; Jeroen Roovers <jer@gentoo.org> -palo-1.18-r1.ebuild,
+  +palo-1.95.ebuild, palo-9999.ebuild, -files/palo-1.16_p1-build.patch,
+  -files/palo-1.18-include.patch, +files/palo-1.95-toolchain.patch,
+  -files/palo-9999-toolchain.patch, -files/palo-remove-HOME-TERM.patch:
+  Version bump.
 
   30 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/palo.conf:
   Improve helpful comments.

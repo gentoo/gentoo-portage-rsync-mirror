@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xmpppy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.23 2013/07/21 08:53:20 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/ChangeLog,v 1.24 2014/12/15 19:41:58 mgorny Exp $
+
+*xmpppy-0.5.0_rc1-r1 (15 Dec 2014)
+
+  15 Dec 2014; Michał Górny <mgorny@gentoo.org> +xmpppy-0.5.0_rc1-r1.ebuild:
+  Convert to distutils-r1.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799

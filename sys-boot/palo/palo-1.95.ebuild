@@ -1,28 +1,28 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.7 2014/12/15 19:52:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.95.ebuild,v 1.1 2014/12/15 19:52:16 jer Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic git-r3 toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="PALO : PArisc Linux Loader"
 HOMEPAGE="http://parisc-linux.org/ https://parisc.wiki.kernel.org/"
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/deller/palo.git"
+SRC_URI="mirror://debian/pool/main/p/${PN}/${P/-/_}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="-* ~hppa"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.95-toolchain.patch
-	sed -i lib/common.h -e '/^#define PALOVERSION/{s|".*"|"'${PV}'"|g}' || die
 }
 
 src_compile() {
-	emake AR=$(tc-getAR) CC=$(tc-getCC) LD=$(tc-getLD) \
-		makepalo makeipl || die
-	emake CC=$(tc-getCC) iplboot || die
+	local target
+	for target in '-C palo' '-C ipl' 'iplboot'; do
+		emake AR=$(tc-getAR) CC=$(tc-getCC) LD=$(tc-getLD) ${target}
+	done
 }
 
 src_install() {
@@ -30,8 +30,8 @@ src_install() {
 	dosbin palo/palo
 
 	doman palo.8
-	dodoc palo.conf
 	dohtml README.html
+	dodoc Changes TODO debian/changelog
 
 	insinto /etc
 	doins "${FILESDIR}"/palo.conf

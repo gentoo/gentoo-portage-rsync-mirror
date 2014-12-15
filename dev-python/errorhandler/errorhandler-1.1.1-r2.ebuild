@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/errorhandler/errorhandler-1.1.1-r1.ebuild,v 1.2 2014/03/31 21:36:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/errorhandler/errorhandler-1.1.1-r2.ebuild,v 1.1 2014/12/15 19:59:18 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
@@ -36,13 +36,11 @@ python_compile_all() {
 
 python_test() {
 	"${PYTHON}" -c "import errorhandler.tests as et, unittest; \
-		unittest.TextTestRunner().run(et.test_suite())"
-# || die
+		unittest.TextTestRunner().run(et.test_suite())" \
+		|| die "Tests fail with ${EPYTHON}"
 }
 
-src_install() {
-	if use doc; then
-		dohtml -r docs/_build/html/
-	fi
-	distutils_src_install
+python_install_all() {
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	distutils-r1_python_install_all
 }
