@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.178 2014/05/25 03:50:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.179 2014/12/15 02:06:05 radhermit Exp $
+
+  15 Dec 2014; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild,
+  metadata.xml:
+  Don't build html docs by default. Drop dolsen as a maintainer.
 
   25 May 2014; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
   Drop python2_6 support.

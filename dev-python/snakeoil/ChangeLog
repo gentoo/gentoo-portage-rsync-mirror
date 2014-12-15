@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.72 2014/10/18 17:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.73 2014/12/15 02:03:46 radhermit Exp $
+
+  15 Dec 2014; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop dolsen as a maintainer and update upstream metadata.
 
   18 Oct 2014; Mike Frysinger <vapier@gentoo.org> snakeoil-0.5.2.ebuild,
   snakeoil-0.5.3.ebuild, snakeoil-9999.ebuild:

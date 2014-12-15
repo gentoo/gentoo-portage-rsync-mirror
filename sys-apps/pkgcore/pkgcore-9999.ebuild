@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.19 2014/05/25 03:50:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.20 2014/12/15 02:06:05 radhermit Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,7 @@ HOMEPAGE="http://pkgcore.googlecode.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+doc"
+IUSE="doc"
 
 RDEPEND="=dev-python/snakeoil-9999[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}

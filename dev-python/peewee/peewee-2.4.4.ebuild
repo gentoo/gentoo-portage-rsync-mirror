@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/peewee-2.4.0.ebuild,v 1.1 2014/11/01 10:13:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/peewee-2.4.4.ebuild,v 1.1 2014/12/15 02:21:26 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
