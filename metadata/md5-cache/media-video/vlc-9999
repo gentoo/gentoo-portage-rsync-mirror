@@ -9,4 +9,4 @@ RDEPEND=!<media-video/ffmpeg-1.2:0 dev-libs/libgpg-error:0 net-dns/libidn:0 >=sy
 REQUIRED_USE=aalib? ( X ) bidi? ( truetype ) cddb? ( cdda ) dvb? ( dvbpsi ) dxva2? ( avcodec ) ffmpeg? ( avcodec avformat swscale postproc ) fontconfig? ( truetype ) gnutls? ( gcrypt ) httpd? ( lua ) libcaca? ( X ) libtar? ( skins ) libtiger? ( kate ) qt4? ( X !qt5 ) qt5? ( X !qt4 ) sdl? ( X ) skins? ( truetype X ^^ ( qt4 qt5 ) ) vaapi? ( avcodec X ) vlm? ( encode ) xv? ( xcb )
 SLOT=0/5-7
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=b8b9a761b47c1ad5fce8e0755adb29b7
+_md5_=f649710e1ecf710bd0cb50118333983f

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.9999.ebuild,v 1.4 2014/11/16 14:37:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.9999.ebuild,v 1.5 2014/12/15 05:50:48 dlan Exp $
 
 EAPI="5"
 
@@ -35,7 +35,7 @@ LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-7" # vlc - vlccore
 
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64 ~arm ~ppc -sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~ppc -sparc ~x86 ~x86-fbsd"
 else
 	KEYWORDS=""
 fi
@@ -255,6 +255,14 @@ src_prepare() {
 
 	# Disable automatic running of tests.
 	find . -name 'Makefile.in' -exec sed -i 's/\(..*\)check-TESTS/\1/' {} \; || die
+
+	# If qtchooser is installed, it may break the build, because moc,rcc and uic binaries for wrong qt version may be used.
+	# Setting QT_SELECT environment variable will enforce correct binaries.
+	if use qt4; then
+		export QT_SELECT=qt4
+	elif use qt5; then
+		export QT_SELECT=qt5
+	fi
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.4.ebuild,v 1.11 2014/11/16 14:37:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.4.ebuild,v 1.12 2014/12/15 05:50:48 dlan Exp $
 
 EAPI="5"
 
@@ -119,7 +119,7 @@ RDEPEND="
 		projectm? ( media-libs/libprojectm:0 media-fonts/dejavu:0 )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22:0 )
 		qt4? ( >=dev-qt/qtgui-4.6.0:4 >=dev-qt/qtcore-4.6.0:4 )
-		rdp? ( net-misc/freerdp:0= )
+		rdp? ( <net-misc/freerdp-1.2:0= )
 		samba? ( || ( >=net-fs/samba-3.4.6:0[smbclient] >=net-fs/samba-4.0.0:0[client] ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
 		sdl? ( >=media-libs/libsdl-1.2.10:0
@@ -247,6 +247,14 @@ src_prepare() {
 
 	# Disable automatic running of tests.
 	find . -name 'Makefile.in' -exec sed -i 's/\(..*\)check-TESTS/\1/' {} \; || die
+
+	# If qtchooser is installed, it may break the build, because moc,rcc and uic binaries for wrong qt version may be used.
+	# Setting QT_SELECT environment variable will enforce correct binaries.
+	if use qt4; then
+		export QT_SELECT=qt4
+	elif use qt5; then
+		export QT_SELECT=qt5
+	fi
 }
 
 src_configure() {
