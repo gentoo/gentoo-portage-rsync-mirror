@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.86 2014/03/27 07:15:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.87 2014/12/15 07:51:09 jlec Exp $
+
+*nullmailer-1.13-r5 (15 Dec 2014)
+
+  15 Dec 2014; Justin Lecher <jlec@gentoo.org> +nullmailer-1.13-r5.ebuild:
+  Drop einstall in favour of plain emake, #521552; prepend chmod/chown calls in
+  pkg_* with ROOT, #532588
 
   27 Mar 2014; Justin Lecher <jlec@gentoo.org> -nullmailer-1.13-r2.ebuild,
   -files/init.d-nullmailer-r3:
