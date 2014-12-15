@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-7.2.0.ebuild,v 1.1 2014/09/14 04:10:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-7.4.0-r1.ebuild,v 1.1 2014/12/15 00:23:11 radhermit Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -23,8 +23,9 @@ ruby_atom() {
 
 # hacks to avoid using the ruby eclasses since this requires something similar
 # to the python-any-r1 eclass for ruby which currently doesn't exist
-RUBY_IMPLS=( ruby19 ruby20 ruby21 )
-RUBY_BDEPS="$(for ruby_impl in "${RUBY_IMPLS[@]}"; do echo $(ruby_atom ${ruby_impl}); done)"
+RUBY_IMPLS=( ruby21 ruby20 )
+RUBY_BDEPS="$(for ruby_impl in "${RUBY_IMPLS[@]}"; do
+	echo "( $(ruby_atom ${ruby_impl}) virtual/rubygems:${ruby_impl} )"; done)"
 
 RDEPEND="
 	>=dev-libs/libebml-1.3.0:=
@@ -70,8 +71,7 @@ src_prepare() {
 
 	[[ -z ${RUBY} ]] && die "No available ruby implementations to build with"
 
-	epatch "${FILESDIR}"/${PN}-5.8.0-system-pugixml.patch \
-		"${FILESDIR}"/${PN}-5.8.0-boost-configure.patch
+	epatch "${FILESDIR}"/${PN}-5.8.0-boost-configure.patch
 	eautoreconf
 }
 

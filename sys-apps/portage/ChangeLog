@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1421 2014/12/09 10:05:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1422 2014/12/15 00:09:21 zlogene Exp $
+
+  15 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.14.ebuild:
+  x86 stable wrt bug #531594
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> portage-2.2.14.ebuild:
   Stable for HPPA (bug #531594).
