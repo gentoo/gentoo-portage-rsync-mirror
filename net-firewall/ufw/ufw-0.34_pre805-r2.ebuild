@@ -1,13 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.34_pre805.ebuild,v 1.2 2013/05/20 09:05:50 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.34_pre805-r2.ebuild,v 1.1 2014/12/15 11:07:41 pinkbyte Exp $
 
-EAPI=4
-PYTHON_DEPEND="2:2.6 3:3.1"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 *-jython"
+EAPI=5
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+DISTUTILS_IN_SOURCE_BUILD=1
 
-inherit bash-completion-r1 eutils linux-info distutils systemd
+inherit bash-completion-r1 eutils linux-info distutils-r1 systemd
 
 DESCRIPTION="A program used to manage a netfilter firewall"
 HOMEPAGE="http://launchpad.net/ufw"
@@ -15,7 +14,7 @@ SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples ipv6"
 
 DEPEND="sys-devel/gettext"
@@ -26,6 +25,17 @@ RDEPEND=">=net-firewall/iptables-1.4[ipv6?]
 
 # tests fail; upstream bug: https://bugs.launchpad.net/ufw/+bug/815982
 RESTRICT="test"
+
+PATCHES=(
+	# Remove unnecessary build time dependency on net-firewall/iptables.
+	"${FILESDIR}"/${PN}-0.33-dont-check-iptables.patch
+	# Move files away from /lib/ufw.
+	"${FILESDIR}"/${PN}-0.31.1-move-path.patch
+	# Remove shebang modification.
+	"${FILESDIR}"/${P}-shebang.patch
+	# Fix bash completions, bug #526300
+	"${FILESDIR}"/${P}-bash-completion.patch
+)
 
 pkg_pretend() {
 	local CONFIG_CHECK="~PROC_FS
@@ -93,16 +103,7 @@ pkg_pretend() {
 	fi
 }
 
-src_prepare() {
-	# Allow to remove unnecessary build time dependency
-	# on net-firewall/iptables.
-	epatch "${FILESDIR}"/${PN}-0.33-dont-check-iptables.patch
-	# Move files away from /lib/ufw.
-	epatch "${FILESDIR}"/${PN}-0.31.1-move-path.patch
-	# Contains fixes related to SUPPORT_PYTHON_ABIS="1" (see comment in the
-	# file).
-	epatch "${FILESDIR}"/${PN}-0.31.1-python-abis.patch
-
+python_prepare_all() {
 	# Set as enabled by default. User can enable or disable
 	# the service by adding or removing it to/from a runlevel.
 	sed -i 's/^ENABLED=no/ENABLED=yes/' conf/ufw.conf \
@@ -128,9 +129,11 @@ src_prepare() {
 	else
 		_EMPTY_LOCALE_LIST="no"
 	fi
+
+	distutils-r1_python_prepare_all
 }
 
-src_install() {
+python_install_all() {
 	newconfd "${FILESDIR}"/ufw.confd ufw
 	newinitd "${FILESDIR}"/ufw-2.initd ufw
 	systemd_dounit "${FILESDIR}/ufw.service"
@@ -150,13 +153,15 @@ src_install() {
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*
 	fi
-	distutils_src_install
-	[[ $_EMPTY_LOCALE_LIST != yes ]] && domo locales/mo/*.mo
 	newbashcomp shell-completion/bash ${PN}
+
+	[[ $_EMPTY_LOCALE_LIST != yes ]] && domo locales/mo/*.mo
+
+	distutils-r1_python_install_all
+	python_replicate_script "${D}usr/sbin/ufw"
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
 		echo
 		elog "To enable ufw, add it to boot sequence and activate it:"
