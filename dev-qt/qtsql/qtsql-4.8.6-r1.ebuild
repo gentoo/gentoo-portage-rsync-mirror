@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-4.8.6-r1.ebuild,v 1.1 2014/11/15 02:38:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-4.8.6-r1.ebuild,v 1.2 2014/12/15 21:55:49 pesa Exp $
 
 EAPI=5
 
@@ -26,8 +26,8 @@ DEPEND="
 	mysql? ( >=virtual/mysql-5.6-r2:=[${MULTILIB_USEDEP}] )
 	oci8? ( >=dev-db/oracle-instantclient-basic-11.2.0.4[${MULTILIB_USEDEP}] )
 	odbc? ( || (
-		>=dev-db/unixODBC-2.3.2[${MULTILIB_USEDEP}]
-		>=dev-db/libiodbc-3.52.8[${MULTILIB_USEDEP}]
+		>=dev-db/unixODBC-2.3.2-r2[${MULTILIB_USEDEP}]
+		>=dev-db/libiodbc-3.52.8-r2[${MULTILIB_USEDEP}]
 	) )
 	postgres? ( virtual/postgresql:* )
 	sqlite? ( >=dev-db/sqlite-3.8.3:3[${MULTILIB_USEDEP}] )

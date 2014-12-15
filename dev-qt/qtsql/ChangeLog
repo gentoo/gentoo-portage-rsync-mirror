@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.21 2014/12/12 14:30:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.22 2014/12/15 21:55:49 pesa Exp $
+
+  15 Dec 2014; Davide Pesavento <pesa@gentoo.org> qtsql-4.8.6-r1.ebuild:
+  Raise deps to ensure correct multilib support.
 
 *qtsql-5.4.0 (12 Dec 2014)
 
