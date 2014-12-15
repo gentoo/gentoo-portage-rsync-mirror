@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] doc? ( dev-python/sphinx[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Configuration management tool
+EAPI=5
+HOMEPAGE=http://bcfg2.org
+IUSE=doc cheetah genshi server python_targets_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-solaris
+LICENSE=BSD-2
+RDEPEND=app-portage/gentoolkit[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] cheetah? ( dev-python/cheetah[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) genshi? ( dev-python/genshi[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) server? ( dev-libs/libgamin[python,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/lxml[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/nose[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] virtual/fam ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=ftp://ftp.mcs.anl.gov/pub/bcfg/bcfg2-1.2.4.tar.gz
+_eclasses_=distutils-r1	14bf2faa8bf611e0b13aeedc24cefa6c	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	a2dac9ffff107078f25147aac958a68f	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=9575a33e891931f448705133b4b6840d

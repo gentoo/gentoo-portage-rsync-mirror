@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sulfur
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sulfur/ChangeLog,v 1.18 2012/08/25 05:17:03 lxnay Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sulfur/ChangeLog,v 1.19 2014/12/15 05:22:07 mgorny Exp $
+
+*sulfur-1.0_rc104-r1 (15 Dec 2014)
+
+  15 Dec 2014; Michał Górny <mgorny@gentoo.org> +sulfur-1.0_rc104-r1.ebuild:
+  Convert to python-single-r1.
 
 *sulfur-1.0_rc104 (25 Aug 2012)
 
@@ -87,4 +92,3 @@
   19 Jul 2011; Fabio Erculiani <lxnay@gentoo.org> +sulfur-1.0_rc27.ebuild,
   +metadata.xml:
   new ebuild
-

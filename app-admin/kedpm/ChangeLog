@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/kedpm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.17 2011/07/20 13:38:34 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.18 2014/12/15 05:18:32 mgorny Exp $
+
+*kedpm-0.4.0-r2 (15 Dec 2014)
+
+  15 Dec 2014; Michał Górny <mgorny@gentoo.org> +kedpm-0.4.0-r2.ebuild:
+  Convert to distutils-r1.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
@@ -56,4 +61,3 @@
   19 Apr 2004; Daniel Black <dragonheart@gentoo.org> kedpm-0.4.0.ebuild,
   metadata.xml, files/setup-doc.patch:
   Initial Ebuild thanks to Lukasz Strzygowski <lucass@gentoo.pl> in bug 46270
-
