@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libltdl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.1 2014/11/03 05:31:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.2 2014/12/15 11:44:51 polynomial-c Exp $
+
+*libltdl-2.4.4 (15 Dec 2014)
+
+  15 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> +libltdl-2.4.4.ebuild:
+  Version bump.
 
 *libltdl-2.4.3 (03 Nov 2014)
 *libltdl-1.5.26 (03 Nov 2014)
