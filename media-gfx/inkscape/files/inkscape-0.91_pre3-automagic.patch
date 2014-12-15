@@ -1,8 +1,67 @@
-Add configure options for aspell, gtkspell, and imagemagick.
+Respect configure option for openmp and add configure options for aspell,
+gtkspell, imagemagick, jpeg, and exif.
 
 --- inkscape-0.91pre3/configure.ac
 +++ inkscape-0.91pre3/configure.ac
-@@ -675,9 +675,16 @@
+@@ -233,19 +233,28 @@
+ dnl Check for OpenMP 
+ dnl ******************************
+ AC_OPENMP
+-if test "x$ac_cv_prog_cxx_openmp" != "xunsupported"; then
+-	openmp_ok=yes
+-	dnl We have it, now set up the flags
+-	CXXFLAGS="$CXXFLAGS $OPENMP_CXXFLAGS"
+-	AC_DEFINE(HAVE_OPENMP, 1, [Use OpenMP])
++openmp_ok="no"
++if test "x$enable_openmp" = "xyes"; then
++	if test "x$ac_cv_prog_cxx_openmp" != "xunsupported"; then
++		openmp_ok=yes
++		dnl We have it, now set up the flags
++		CXXFLAGS="$CXXFLAGS $OPENMP_CXXFLAGS"
++		AC_DEFINE(HAVE_OPENMP, 1, [Use OpenMP])
++	fi
+ fi
+ 
+ dnl ******************************
+ dnl Check for libexif
+ dnl ******************************
+-PKG_CHECK_MODULES(EXIF, libexif, exif_ok=yes, exif_ok=no)
+-if test "x$exif_ok" = "xyes"; then
+-   AC_DEFINE(HAVE_EXIF, 1, [Use libexif])
++AC_ARG_ENABLE(exif,
++	AS_HELP_STRING([--enable-exif], [compile with EXIF support]),
++	enable_exif=$enableval,enable_exif=no)
++
++if test "x$enable_exif" = "xyes"; then
++	PKG_CHECK_MODULES(EXIF, libexif, exif_ok=yes, exif_ok=no)
++	if test "x$exif_ok" = "xyes"; then
++		AC_DEFINE(HAVE_EXIF, 1, [Use libexif])
++	fi
+ fi
+ AC_SUBST(EXIF_LIBS)
+ AC_SUBST(EXIF_CFLAGS)
+@@ -253,10 +262,16 @@
+ dnl ******************************
+ dnl Check for libjpeg
+ dnl ******************************
+-AC_CHECK_LIB(jpeg, jpeg_CreateDecompress, [AC_CHECK_HEADER(jpeglib.h, jpeg_ok=yes, jpeg_ok=no)], jpeg_ok=no)
+-if test "x$jpeg_ok" = "xyes"; then
+-   LIBS="-ljpeg $LIBS"
+-   AC_DEFINE(HAVE_JPEG, 1, [Use libjpeg])
++AC_ARG_ENABLE(jpeg,
++	AS_HELP_STRING([--enable-jpeg], [compile with JPEG support]),
++	enable_jpeg=$enableval,enable_jpeg=no)
++
++if test "x$enable_jpeg" = "xyes"; then
++	AC_CHECK_LIB(jpeg, jpeg_CreateDecompress, [AC_CHECK_HEADER(jpeglib.h, jpeg_ok=yes, jpeg_ok=no)], jpeg_ok=no)
++	if test "x$jpeg_ok" = "xyes"; then
++		LIBS="-ljpeg $LIBS"
++		AC_DEFINE(HAVE_JPEG, 1, [Use libjpeg])
++	fi
+ fi
+ 
+ dnl This check is to get a FIONREAD definition on Solaris 8
+@@ -675,9 +690,16 @@
  dnl Check for ImageMagick Magick++ 
  dnl ******************************
  
@@ -22,7 +81,7 @@ Add configure options for aspell, gtkspell, and imagemagick.
  fi
  AM_CONDITIONAL(USE_IMAGE_MAGICK, test "x$magick_ok" = "xyes")
  
-@@ -712,6 +719,10 @@
+@@ -712,6 +734,10 @@
  	AC_DEFINE(WITH_GLIBMM_2_32,1,[Build with Glibmm 2.32 or higher])
  fi
  
@@ -33,7 +92,7 @@ Add configure options for aspell, gtkspell, and imagemagick.
  dnl *********************************
  dnl   Allow experimental GTK+3 build
  dnl *********************************
-@@ -723,11 +734,13 @@
+@@ -723,11 +749,13 @@
  if test "x$enable_gtk3" = "xyes"; then
  
  	ink_spell_pkg=
@@ -51,7 +110,7 @@ Add configure options for aspell, gtkspell, and imagemagick.
  	PKG_CHECK_MODULES(GTK,
  			  gtkmm-3.0 >= 3.2
  			  gdkmm-3.0 >= 3.2
-@@ -800,11 +813,13 @@
+@@ -800,11 +828,13 @@
  else
  
  	ink_spell_pkg=
@@ -69,7 +128,7 @@ Add configure options for aspell, gtkspell, and imagemagick.
  	PKG_CHECK_MODULES(GTK,
  			  gtk+-2.0  >= 2.24
  			  $ink_spell_pkg
-@@ -928,12 +943,17 @@
+@@ -928,12 +958,17 @@
  dnl **************************
  dnl Check for aspell 
  dnl ******************************

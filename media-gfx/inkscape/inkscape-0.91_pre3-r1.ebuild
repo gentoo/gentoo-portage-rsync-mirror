@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.91_pre3.ebuild,v 1.1 2014/12/14 20:08:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.91_pre3-r1.ebuild,v 1.1 2014/12/15 17:43:10 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
-IUSE="cdr dia dbus gnome imagemagick openmp postscript inkjar lcms nls spell static-libs visio wpg"
+IUSE="cdr dia dbus exif gnome imagemagick openmp postscript inkjar jpeg lcms nls spell static-libs visio wpg"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 WPG_DEPS="
@@ -42,7 +42,6 @@ COMMON_DEPEND="
 	dev-python/lxml[${PYTHON_USEDEP}]
 	media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/libexif
 	media-libs/libpng:0
 	sci-libs/gsl
 	x11-libs/libX11
@@ -53,8 +52,10 @@ COMMON_DEPEND="
 		${WPG_DEPS}
 	)
 	dbus? ( dev-libs/dbus-glib )
+	exif? ( media-libs/libexif )
 	gnome? ( >=gnome-base/gnome-vfs-2.0 )
 	imagemagick? ( media-gfx/imagemagick:=[cxx] )
+	jpeg? ( virtual/jpeg:0 )
 	lcms? ( media-libs/lcms:2 )
 	spell? (
 		app-text/aspell
@@ -100,6 +101,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-automagic.patch \
 		"${FILESDIR}"/${P}-cppflags.patch \
 		"${FILESDIR}"/${P}-desktop.patch \
+		"${FILESDIR}"/${P}-exif.patch \
 		"${FILESDIR}"/${P}-sk-man.patch \
 		"${FILESDIR}"/${PN}-0.48.4-epython.patch
 
@@ -119,6 +121,8 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable nls) \
 		$(use_enable openmp) \
+		$(use_enable exif) \
+		$(use_enable jpeg) \
 		$(use_enable lcms) \
 		--enable-poppler-cairo \
 		$(use_enable wpg) \

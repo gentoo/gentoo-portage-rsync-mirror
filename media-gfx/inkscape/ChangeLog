@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.217 2014/12/14 20:11:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.218 2014/12/15 17:43:10 radhermit Exp $
+
+*inkscape-0.91_pre3-r1 (15 Dec 2014)
+
+  15 Dec 2014; Tim Harder <radhermit@gentoo.org> -inkscape-0.91_pre3.ebuild,
+  +inkscape-0.91_pre3-r1.ebuild, files/inkscape-0.91_pre3-automagic.patch,
+  +files/inkscape-0.91_pre3-exif.patch:
+  Respect openmp status (bug #532638) and add jpeg and exif use flags.
 
   14 Dec 2014; Tim Harder <radhermit@gentoo.org> -inkscape-0.48.4.ebuild,
   -inkscape-0.48.4-r1.ebuild, -files/inkscape-0.48.1-libpng15.patch,
