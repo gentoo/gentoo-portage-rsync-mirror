@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.438 2014/11/29 13:08:08 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.439 2014/12/15 18:34:40 redlizard Exp $
+
+  15 Dec 2014; Ruud Koolen <redlizard@gentoo.org> linux/amd64/package.use.mask,
+  linux/amd64/use.force, linux/x86/package.use.mask, linux/x86/use.force:
+  Removed redundant multilib clauses.
 
   29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.mask:
   Mask dev-vcs/git[mediawiki] (bug #497068)

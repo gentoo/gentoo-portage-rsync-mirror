@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/carl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.15 2014/12/15 09:20:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.16 2014/12/15 18:57:01 klausman Exp $
+
+  15 Dec 2014; Tobias Klausmann <klausman@gentoo.org> carl-0.9-r1.ebuild:
+  Also add pypy implementations
 
 *carl-0.9-r1 (15 Dec 2014)
 

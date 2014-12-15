@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-bitcoin
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bitcoin/ChangeLog,v 1.1 2014/12/15 18:49:23 swift Exp $
+
+*selinux-bitcoin-9999 (15 Dec 2014)
+
+  15 Dec 2014; Sven Vermeulen <swift@gentoo.org> +selinux-bitcoin-9999.ebuild,
+  +metadata.xml:
+  Initial bitcoin policy ebuild
+
