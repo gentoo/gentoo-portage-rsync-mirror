@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.31 2014/07/06 17:33:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.32 2014/12/15 10:24:19 grozin Exp $
+
+*sympy-0.7.6 (15 Dec 2014)
+
+  15 Dec 2014; Andrey Grozin <grozin@gentoo.org> +sympy-0.7.6.ebuild,
+  +files/sympy-0.7.6-doc-makefile.patch:
+  Version bump
 
   06 Jul 2014; Mike Gilbert <floppym@gentoo.org> sympy-0.7.4.1.ebuild:
   Use python_gen_cond_dep.
