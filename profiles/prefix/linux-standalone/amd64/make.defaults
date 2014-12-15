@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/prefix/standalone/linux-amd64-no-multilib/make.defaults,v 1.1 2014/12/15 18:41:32 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux-standalone/amd64/make.defaults,v 1.1 2014/12/15 20:58:21 redlizard Exp $
 
 ARCH="amd64"
 CHOST="x86_64-pc-linux-gnu"

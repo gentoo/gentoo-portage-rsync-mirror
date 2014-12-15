@@ -1,14 +1,10 @@
 # ChangeLog for profiles/features/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/prefix/Changelog,v 1.4 2014/12/15 18:41:32 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/prefix/Changelog,v 1.6 2014/12/15 20:52:04 redlizard Exp $
 
-  15 Dec 2014; Ruud Koolen <redlizard@gentoo.org>
-  standalong/linux-amd64-no-multilib/eapi,
-  standalong/linux-amd64-no-multilib/make.defaults,
-  standalong/linux-amd64-no-multilib/parent,
-  standalong/linux-x86/eapi, standalong/linux-x86/make.defaults,
-  standalong/linux-x86/parent:
-  Added amd64 and x86 standalone profiles.
+  15 Dec 2014; Ruud Koolen <redlizard@gentoo.org> package.use.mask, packages,
+  rpath/packages:
+  Moved several nonlinux-specific clauses to /profiles/prefix.
 
   15 Dec 2014; Ruud Koolen <redlizard@gentoo.org> rpath/use.force,
   rpath/use.mask, standalone/eapi, standalone/parent:

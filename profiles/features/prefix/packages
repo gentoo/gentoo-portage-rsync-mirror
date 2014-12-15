@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/prefix/packages,v 1.1 2014/01/18 02:01:20 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/prefix/packages,v 1.2 2014/12/15 20:52:04 redlizard Exp $
 
 # Gentoo Base Prefix Profile
 
@@ -17,8 +17,6 @@
 -*>=sys-apps/baselayout-2
 -*net-misc/iputils
 -*sys-apps/kbd
--*sys-process/procps
--*sys-process/psmisc
 -*sys-fs/e2fsprogs
 -*virtual/dev-manager
 -*virtual/modutils

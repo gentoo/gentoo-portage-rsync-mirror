@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/qtermwidget-9999.ebuild,v 1.2 2014/09/13 16:36:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/qtermwidget-9999.ebuild,v 1.3 2014/12/15 20:44:03 pesa Exp $
 
 EAPI="5"
 
 # Uncomment python related code when upstream updates their bindings
-
-#PYTHON_COMPAT=( python2_7 python3_{2,3} )
+#PYTHON_COMPAT=( python2_7 python3_3 )
 
 inherit cmake-utils git-r3 #python-r1
 
@@ -17,11 +16,13 @@ EGIT_REPO_URI="git://github.com/qterminal/qtermwidget.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="debug"
-# python
+IUSE="debug" # python
 
-DEPEND="dev-qt/qtcore:4
-	dev-qt/qtgui:4"
+DEPEND="
+	dev-qt/designer:4
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+"
 RDEPEND="${DEPEND}"
 
 #src_prepare() {
