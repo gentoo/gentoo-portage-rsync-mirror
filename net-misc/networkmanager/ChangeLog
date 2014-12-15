@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.216 2014/12/09 14:46:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.217 2014/12/15 15:17:37 pacho Exp $
+
+  15 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-0.9.10.1_pre20141101.ebuild:
+  NM shows lots of errors making nmcli neither unusable, bug #528748 (by Alex
+  Brandt), upstream bug #690457, add a warning then.
 
   09 Dec 2014; Pacho Ramos <pacho@gentoo.org>
   networkmanager-0.9.10.1_pre20141101.ebuild:

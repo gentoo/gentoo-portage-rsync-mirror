@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.5 2014/12/09 14:46:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.6 2014/12/15 15:17:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -291,5 +291,12 @@ pkg_postinst() {
 			ewarn "Since it won't be used, you will need to stop setting ifnet plugin there."
 			ewarn
 		fi
+	fi
+
+	# NM shows lots of errors making nmcli neither unusable, bug #528748 upstream bug #690457
+	if grep -r "psk-flags=1" "${EROOT}"/etc/NetworkManager/; then
+		ewarn "You have psk-flags=1 setting in above files, you will need to"
+		ewarn "either reconfigure affected networks or, at least, set the flag"
+		ewarn "value to '0'."
 	fi
 }
