@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.116 2014/12/14 16:02:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.117 2014/12/15 20:08:00 jer Exp $
+
+  15 Dec 2014; Jeroen Roovers <jer@gentoo.org> nokogiri-1.6.4.1.ebuild:
+  Stable for HPPA (bug #532532).
 
   14 Dec 2014; Hans de Graaff <graaff@gentoo.org> nokogiri-1.6.4.1.ebuild,
   nokogiri-1.6.5.ebuild:

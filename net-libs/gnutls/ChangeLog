@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.520 2014/12/13 23:43:14 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.521 2014/12/15 20:05:09 jer Exp $
+
+  15 Dec 2014; Jeroen Roovers <jer@gentoo.org> gnutls-3.3.10-r2.ebuild:
+  Stable for HPPA (bug #492522).
 
   13 Dec 2014; Alon Bar-Lev <alonbl@gentoo.org> -gnutls-3.2.20.ebuild,
   -gnutls-3.3.10-r1.ebuild:

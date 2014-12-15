@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xlutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlutils/ChangeLog,v 1.6 2012/12/03 21:29:15 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlutils/ChangeLog,v 1.7 2014/12/15 20:24:58 mgorny Exp $
+
+*xlutils-1.5.2-r1 (15 Dec 2014)
+
+  15 Dec 2014; Michał Górny <mgorny@gentoo.org> +xlutils-1.5.2-r1.ebuild:
+  Convert to distutils-r1.
 
   03 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> xlutils-1.5.2.ebuild:
   Keyword amd64-linux and x86-linux

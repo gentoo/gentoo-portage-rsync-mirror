@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.166 2014/12/14 16:58:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.167 2014/12/15 20:09:42 jer Exp $
+
+  15 Dec 2014; Jeroen Roovers <jer@gentoo.org> hoe-3.13.0.ebuild:
+  Stable for HPPA (bug #532572).
 
 *hoe-3.13.0-r1 (14 Dec 2014)
 
