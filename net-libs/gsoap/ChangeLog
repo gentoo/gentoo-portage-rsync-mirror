@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gsoap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.33 2014/12/15 07:40:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gsoap/ChangeLog,v 1.34 2014/12/15 08:46:04 polynomial-c Exp $
+
+  15 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -gsoap-2.8.17.ebuild,
+  -gsoap-2.8.18.ebuild:
+  Removed old.
 
 *gsoap-2.8.21 (15 Dec 2014)
 
