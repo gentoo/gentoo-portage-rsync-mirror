@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9612 2014/12/14 22:07:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9614 2014/12/15 00:49:02 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Restore Gnome 3.14 mask, without the unrelated noise.
+
+  15 Dec 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Revert previous change.
 
   14 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add mask for Gnome 3.14.
