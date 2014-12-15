@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9614 2014/12/15 00:49:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9615 2014/12/15 12:46:59 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2014; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Add >=media-gfx/photoqt-1.1 to Qt5 mask
 
   15 Dec 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
   Restore Gnome 3.14 mask, without the unrelated noise.
