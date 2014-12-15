@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/photoqt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoqt/ChangeLog,v 1.1 2014/12/15 13:02:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoqt/ChangeLog,v 1.2 2014/12/15 13:44:50 yngwin Exp $
+
+*photoqt-1.0 (15 Dec 2014)
+
+  15 Dec 2014; Ben de Groot <yngwin@gentoo.org> +photoqt-1.0.ebuild:
+  Add version bump to last Qt4-based version (bug #514622)
 
 *photo-0.8-r1 (19 Aug 2014)
 
