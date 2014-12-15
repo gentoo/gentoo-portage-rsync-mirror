@@ -7,3 +7,4 @@ move www-servers/ocsigen www-servers/ocsigenserver
 slotmove =dev-cpp/gstreamermm-0.10* 0 0.10
 move net-zope/zc-buildout dev-python/zc-buildout
 move net-zope/zope-interface dev-python/zope-interface
+move media-gfx/photo media-gfx/photoqt

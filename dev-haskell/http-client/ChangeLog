@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/http-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client/ChangeLog,v 1.6 2014/12/13 14:26:55 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client/ChangeLog,v 1.7 2014/12/15 14:02:49 mjo Exp $
+
+*http-client-0.4.6.1 (15 Dec 2014)
+
+  15 Dec 2014; Michael Orlitzky <mjo@gentoo.org> +http-client-0.4.6.1.ebuild,
+  -http-client-0.4.6.ebuild, http-client-0.3.3.2.ebuild:
+  Restrict tests in v0.3.3.2 and version bump to fix bug #532216.
 
 *http-client-0.4.6 (13 Dec 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client/http-client-0.3.3.2.ebuild,v 1.2 2014/07/25 09:16:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client/http-client-0.3.3.2.ebuild,v 1.3 2014/12/15 14:02:49 mjo Exp $
 
 EAPI=5
 
@@ -42,3 +42,6 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/streaming-commons-0.1.1
 		dev-haskell/zlib )
 "
+
+# Prior to version 0.4.6.1, the test suite required internet access.
+RESTRICT="test"
