@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shmux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.33 2014/10/31 11:11:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shmux/ChangeLog,v 1.34 2014/12/15 18:25:43 alicef Exp $
+
+  15 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> metadata.xml:
+  Update email and removed proxy-maintainers herd
 
   31 Oct 2014; Jeroen Roovers <jer@gentoo.org> shmux-1.0.2.ebuild,
   +files/shmux-1.0.2-tinfo.patch:
