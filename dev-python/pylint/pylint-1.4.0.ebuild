@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.4.0.ebuild,v 1.1 2014/12/10 07:51:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.4.0.ebuild,v 1.2 2014/12/15 10:39:06 idella4 Exp $
 
 EAPI=5
 
@@ -19,8 +19,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-python/logilab-common-0.53.0[${PYTHON_USEDEP}]
-	>=dev-python/astroid-1.3[${PYTHON_USEDEP}]"
+RDEPEND="
+	>=dev-python/logilab-common-0.53.0[${PYTHON_USEDEP}]
+	>=dev-python/astroid-1.3[${PYTHON_USEDEP}]
+	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( "${RDEPEND}" )"
