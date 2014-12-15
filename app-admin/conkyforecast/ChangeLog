@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conkyforecast
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/ChangeLog,v 1.4 2012/01/05 15:54:39 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/ChangeLog,v 1.5 2014/12/14 23:16:01 mgorny Exp $
+
+*conkyforecast-2.24-r1 (14 Dec 2014)
+
+  14 Dec 2014; Michał Górny <mgorny@gentoo.org> +conkyforecast-2.24-r1.ebuild:
+  Convert to distutils-r1.
 
 *conkyforecast-2.24 (05 Jan 2012)
 
@@ -23,4 +28,3 @@
   +conkyforecast-2.12.ebuild, +metadata.xml:
   Initial commit for conkyforecast. Fixes bug #255948, thanks to Hans Meier
   for the report and Christopher Robin Elmersson for the initial ebuilds
-

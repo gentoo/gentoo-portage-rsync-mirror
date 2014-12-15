@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/checkrestart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/checkrestart/ChangeLog,v 1.5 2014/01/19 16:21:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/checkrestart/ChangeLog,v 1.6 2014/12/14 23:01:28 mgorny Exp $
+
+*checkrestart-0.47-r3 (14 Dec 2014)
+
+  14 Dec 2014; Michał Górny <mgorny@gentoo.org> +checkrestart-0.47-r3.ebuild:
+  Convert to python-single-r1.
 
   19 Jan 2014; Markus Meier <maekke@gentoo.org> checkrestart-0.47-r2.ebuild:
   add ~arm, bug #496906
@@ -27,4 +32,3 @@
   20 Nov 2008; Jeroen Roovers <jer@gentoo.org> +metadata.xml,
   +checkrestart-0.47.ebuild:
   Initial commit.
-

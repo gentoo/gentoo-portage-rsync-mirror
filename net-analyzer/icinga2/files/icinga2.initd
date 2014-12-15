@@ -2,10 +2,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-DAEMON=/usr/sbin/icinga2
-ICINGA2_CONFIG_FILE=/etc/icinga2/icinga2.conf
-ICINGA2_RUN_DIR=/var/run
-ICINGA2_STATE_DIR=/var
+DAEMON="/usr/sbin/icinga2"
+ICINGA2_CONFIG_FILE="/etc/icinga2/icinga2.conf"
+ICINGA2_RUN_DIR="/run/icinga2"
+ICINGA2_STATE_DIR="/var/cache/icinga2"
+ICINGA2_CMD_DIR="${ICINGA2_RUN_DIR}/cmd"
 ICINGA2_PID_FILE="${ICINGA2_RUN_DIR}/icinga2/icinga2.pid"
 ICINGA2_DAEMON_ARGS="daemon -c $ICINGA2_CONFIG_FILE -e $ICINGA2_ERROR_LOG -d"
 
@@ -18,12 +19,27 @@ checkconfig() {
        ewarn "Config file '$ICINGA2_CONFIG_FILE' does not exist."
        eend 1
     fi
+
+    ICINGA2_USER=`$DAEMON variable get --current RunAsUser`
+    ICINGA2_GROUP=`$DAEMON variable get --current RunAsGroup`
+
+    checkpath -d -m 0750 -o $ICINGA2_USER:$ICINGA2_GROUP $ICINGA2_RUN_DIR
+    checkpath -d -m 0750 -o $ICINGA2_USER:$ICINGA2_COMMAND_GROUP $ICINGA2_STATE_DIR
+    checkpath -d -m 2750 -o $ICINGA2_USER:$ICINGA2_COMMAND_GROUP $ICINGA2_CMD_DIR
+
+    if ! $DAEMON daemon -c $ICINGA2_CONFIG_FILE -C > $ICINGA2_STARTUP_LOG 2>&1; then
+        eerror "Icinga 2 detected configuration errors. Check '$ICINGA2_STARTUP_LOG' for details."
+        return 1
+    fi
 }
 
 start() {
-    checkconfig
+    checkconfig || return 1
+
     ebegin "Starting icinga2"
-    $DAEMON $ICINGA2_DAEMON_ARGS > $ICINGA2_STARTUP_LOG 2>&1
+    start-stop-daemon --start --exec "${DAEMON}" \
+        --pidfile "${ICINGA2_PID_FILE}" \
+        -- $ICINGA2_DAEMON_ARGS > $ICINGA2_STARTUP_LOG 2>&1
     local retval=$?
     if [ $retval -ne 0 ]; then
         ewarn "Error starting icinga2. '$ICINGA2_STARTUP_LOG' for details."
