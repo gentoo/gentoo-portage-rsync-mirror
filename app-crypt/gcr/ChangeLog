@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.45 2014/10/11 11:29:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.46 2014/12/15 23:00:59 eva Exp $
+
+*gcr-3.14.0 (15 Dec 2014)
+
+  15 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +gcr-3.14.0.ebuild:
+  Version bump for Gnome 3.14.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gcr-3.12.2.ebuild:
   arm stable, bug #512012

@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.312 2014/11/01 15:55:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.313 2014/12/15 22:37:58 slyfox Exp $
+
+*mc-4.8.13-r1 (15 Dec 2014)
+
+  15 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/mc-4.8.13-3297-prealloc.patch, +mc-4.8.13-r1.ebuild:
+  Add epatch_user and pull prealloc patch (bug #532424 by Ulenrich).
 
   01 Nov 2014; Sergei Trofimovich <slyfox@gentoo.org>
   +files/mc-4.8.13-tinfo.patch, mc-4.8.13.ebuild:
