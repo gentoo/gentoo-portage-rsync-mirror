@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16227 2014/12/15 16:00:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16228 2014/12/15 16:03:22 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -721,11 +721,6 @@ app-admin/hwreport
 # Mikle Kolyada <zlogene@gentoo.org>
 # Masked due to upstream QA issues.
 =dev-perl/Alien-SDL-1.444.0
-
-# Pacho Ramos <pacho@gentoo.org> (24 Jul 2014)
-# It's a development version that was included without
-# notifying gnome team.
-=dev-python/pygobject-3.13.3
 
 # Yixun Lan <dlan@gentoo.org> (17 Jul 2014)
 # Masked for proper testing. (Major updates in the code).

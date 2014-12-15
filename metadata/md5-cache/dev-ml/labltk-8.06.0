@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/tk-8.0.3 >=dev-lang/ocaml-4.02:=[ocamlopt?]
 SLOT=0/8.06.0
 SRC_URI=https://forge.ocamlcore.org/frs/download.php/1455/labltk-8.06.0.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=3d42989a6cb478975676ed80837aefef
+_md5_=1eb66f0bf1e965d685adcafddd7d5374

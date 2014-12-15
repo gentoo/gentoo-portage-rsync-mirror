@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.0-r3.ebuild,v 1.6 2014/11/27 10:15:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.0-r3.ebuild,v 1.7 2014/12/15 16:23:49 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://mielke.cc/brltty/archive/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 x86"
 IUSE="+api +beeper bluetooth +contracted-braille doc +fm gpm iconv icu
 		java +midi ncurses nls ocaml +pcm python usb +speech
 		tcl X"
