@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-468.ebuild,v 1.1 2014/09/22 08:01:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/less-471.ebuild,v 1.1 2014/12/15 09:35:47 polynomial-c Exp $
 
 EAPI="4"
 
