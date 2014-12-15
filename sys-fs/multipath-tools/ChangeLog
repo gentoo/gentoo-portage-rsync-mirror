@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.68 2014/07/30 19:27:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.69 2014/12/15 03:08:13 radhermit Exp $
+
+  15 Dec 2014; Tim Harder <radhermit@gentoo.org>
+  -multipath-tools-0.4.9-r5.ebuild,
+  -files/multipath-tools-0.4.8-kparted-ext-partitions.patch,
+  -files/multipath-tools-0.4.9-buffer-overflows.patch,
+  -files/multipath-tools-0.4.9-build.patch,
+  -files/multipath-tools-0.4.9-log_enquery_overflow.patch:
+  Remove old.
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org>
   multipath-tools-0.4.9-r5.ebuild, multipath-tools-0.5.0-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.199 2014/08/10 20:19:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.200 2014/12/15 03:13:20 radhermit Exp $
+
+  15 Dec 2014; Tim Harder <radhermit@gentoo.org> -fuse-2.9.2.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fuse-2.9.2.ebuild,
   fuse-2.9.3.ebuild:
