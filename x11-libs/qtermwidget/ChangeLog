@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qtermwidget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/ChangeLog,v 1.11 2014/12/15 20:44:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtermwidget/ChangeLog,v 1.12 2014/12/15 21:17:34 pesa Exp $
+
+  15 Dec 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml,
+  qtermwidget-9999.ebuild:
+  Re-enable python bindings; add qt5 support.
 
   15 Dec 2014; Davide Pesavento <pesa@gentoo.org> qtermwidget-0.4.0.37.ebuild,
   qtermwidget-0.4.0.ebuild, qtermwidget-9999.ebuild:

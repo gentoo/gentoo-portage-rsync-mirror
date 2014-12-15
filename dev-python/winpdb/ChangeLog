@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/winpdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.25 2010/10/29 19:33:12 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.26 2014/12/15 21:11:09 mgorny Exp $
+
+*winpdb-1.4.8-r1 (15 Dec 2014)
+
+  15 Dec 2014; Michał Górny <mgorny@gentoo.org> +winpdb-1.4.8-r1.ebuild:
+  Convert to distutils-r1. Install winpdb only when wxwidgets is available for
+  the impl.
 
   29 Oct 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -winpdb-1.4.6.ebuild:
@@ -113,4 +119,3 @@
 
   12 Aug 2005; Rob Cakebread <pythonhead@gentoo.org> +winpdb-1.0.1.ebuild:
   Initial commit.
-

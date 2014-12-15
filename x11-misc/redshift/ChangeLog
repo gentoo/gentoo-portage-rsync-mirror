@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.30 2014/11/17 22:57:59 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.31 2014/12/15 21:10:23 sping Exp $
+
+*redshift-1.9.1-r2 (15 Dec 2014)
+
+  15 Dec 2014; Sebastian Pipping <sping@gentoo.org> +redshift-1.9.1-r2.ebuild:
+  Install systemd units provided by upstream (bug #532578)
 
   17 Nov 2014; Sebastian Pipping <sping@gentoo.org> redshift-1.9.1-r1.ebuild,
   metadata.xml:

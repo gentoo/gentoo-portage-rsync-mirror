@@ -5,6 +5,6 @@
 	<longdescription lang="en">
 	QTermWidget is an opensource project based on KDE4 Konsole application.
 	The main goal of this project is to provide unicode-enabled, embeddable
-	Qt4 widget for using as a built-in console or terminal emulation widget.
+	Qt widget for using as a built-in console or terminal emulation widget.
 	</longdescription>
 </pkgmetadata>
