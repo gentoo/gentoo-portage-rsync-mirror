@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16224 2014/12/15 14:06:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16226 2014/12/15 14:39:39 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -653,6 +653,7 @@ app-i18n/fcitx-qt5
 media-gfx/phototonic
 >=media-sound/drumstick-1.0.0
 >=media-sound/kmetronome-1.0.0
+x11-misc/kaqaz
 
 # Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
 # Security mask, wrt bugs #488212, #498164, #500260,
@@ -717,8 +718,6 @@ app-admin/hwreport
 # Alexis Ballier <aballier@gentoo.org> (4 Aug 2014)
 # <vlc-2.2 will not work with this ffmpeg version; others to be investigated.
 >=media-video/ffmpeg-2.3
-# bug #525070
->=media-video/mplayer-1.2_pre20141011
 
 # Mikle Kolyada <zlogene@gentoo.org>
 # Masked due to upstream QA issues.

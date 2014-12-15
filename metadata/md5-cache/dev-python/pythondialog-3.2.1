@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-util/dialog doc? ( dev-python/sphinx[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy3(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy3(-)] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy3? ( virtual/pypy3:0= ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy3(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy3(-)]
+DESCRIPTION=A Python module for making simple text/console-mode user interfaces
+EAPI=5
+HOMEPAGE=http://pythondialog.sourceforge.net/
+IUSE=doc examples python_targets_python3_3 python_targets_python3_4 python_targets_pypy3
+KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86
+LICENSE=LGPL-2
+RDEPEND=dev-util/dialog doc? ( dev-python/sphinx[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy3(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy3(-)] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) python_targets_pypy3? ( virtual/pypy3:0= ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_pypy3(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-),-python_single_target_pypy3(-)]
+REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 python_targets_pypy3 )
+SLOT=0
+SRC_URI=mirror://sourceforge/pythondialog//3.2.1/python3-pythondialog-3.2.1.tar.bz2
+_eclasses_=distutils-r1	14bf2faa8bf611e0b13aeedc24cefa6c	eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	a2dac9ffff107078f25147aac958a68f	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=1882bea7e7702764ae4149e8c39f89a4

@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.929 2014/11/02 12:02:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.931 2014/12/15 14:42:24 aballier Exp $
+
+  15 Dec 2014; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  update for recent upstream changes on internal dvd libs, bug #528706 by Dan
+  Douglas
+
+  15 Dec 2014; Alexis Ballier <aballier@gentoo.org>
+  mplayer-1.2_pre20141011.ebuild:
+  drop keywords on arches that are 6+ months late in ffmpeg rekeywording, which
+  version is needed by this snapshot
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> mplayer-1.2_pre20130729.ebuild,
   mplayer-1.2_pre20141011.ebuild, mplayer-9999.ebuild:

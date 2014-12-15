@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9616 2014/12/15 14:06:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9618 2014/12/15 14:39:39 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2014; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Add x11-misc/kaqaz to Qt5 mask
+
+  15 Dec 2014; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask >=media-video/mplayer-1.2_pre20141011 as 2 months have passed and
+  there does not seem to be any improvement for libav support while it starts
+  to cause issues to users, see bug #532562 and
+  https://bugs.gentoo.org/show_bug.cgi?id=525070#c14
 
   15 Dec 2014; Ben de Groot <yngwin@gentoo.org> updates/4Q-2014, package.mask:
   Add media-gfx/phototonic to Qt5 mask
