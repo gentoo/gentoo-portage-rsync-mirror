@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.114 2014/12/15 08:25:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.115 2014/12/15 13:27:13 jlec Exp $
+
+  15 Dec 2014; Justin Lecher <jlec@gentoo.org> Manifest:
+  Fix checksums, #532642
 
 *aufs3-3_p20141215 (15 Dec 2014)
 
