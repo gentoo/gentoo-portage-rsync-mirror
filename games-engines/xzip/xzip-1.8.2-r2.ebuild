@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/xzip-1.8.2-r2.ebuild,v 1.9 2007/07/01 23:13:59 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/xzip-1.8.2-r2.ebuild,v 1.10 2014/12/15 19:17:49 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="X interface to Z-code based text games"
@@ -21,12 +22,11 @@ S=${WORKDIR}/xzip
 src_compile() {
 	emake \
 		CFLAGS="${CFLAGS} -DAUTO_END_MODE" \
-		LDFLAGS="${LDFLAGS}" \
-		|| die "emake failed"
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dogamesbin xzip || die "dogamesbin failed"
+	dogamesbin xzip
 	dodoc README
 	doman xzip.1
 	prepgamesdirs
