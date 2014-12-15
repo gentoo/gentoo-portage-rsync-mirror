@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.12.6.ebuild,v 1.3 2014/07/23 15:23:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.12.6.ebuild,v 1.4 2014/12/15 15:36:34 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.14"
+VALA_MIN_API_VERSION="0.22" #532568
 VALA_USE_DEPEND="vapigen"
 
 inherit eutils gnome2 vala

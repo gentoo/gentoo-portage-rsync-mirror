@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16226 2014/12/15 14:39:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16227 2014/12/15 16:00:14 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -50,7 +50,6 @@
 >=dev-cpp/gtkmm-3.13
 >=dev-lang/vala-0.25
 >=dev-libs/atk-2.13
->=dev-libs/folks-0.10
 >=dev-libs/gdl-3.13
 >=dev-libs/gjs-1.41
 >=dev-libs/glib-2.41

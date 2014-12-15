@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gupnp-av
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.44 2014/07/23 15:23:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.45 2014/12/15 15:36:34 pacho Exp $
+
+  15 Dec 2014; Pacho Ramos <pacho@gentoo.org> -gupnp-av-0.12.5.ebuild,
+  gupnp-av-0.12.6.ebuild:
+  vala-0.22 is the minimum required version (#532568 by hfern@fernhout.info ),
+  drop old.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> gupnp-av-0.12.6.ebuild:
   Stable for x86, wrt bug #512012
