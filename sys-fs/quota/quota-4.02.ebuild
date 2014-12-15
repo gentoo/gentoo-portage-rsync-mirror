@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.00.ebuild,v 1.3 2012/12/24 02:29:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.02.ebuild,v 1.1 2014/12/15 09:20:54 polynomial-c Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit eutils flag-o-matic
+inherit eutils
 
 DESCRIPTION="Linux quota tools"
 HOMEPAGE="http://sourceforge.net/projects/linuxquota/"
@@ -28,7 +28,17 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/quota-tools
 
 src_prepare() {
-	sed -i '1iCC = @CC@' Makefile.in || die #446277
+	local args=(
+		-e '1iCC = @CC@' #446277
+	)
+	if ! use rpc ; then
+		args+=( #465810
+			-e '/^PROGS/s:rpc.rquotad::'
+			-e '/^RPCGEN/s:=.*:=false:'
+			-e '/^RPCCLNTOBJS/s:=.*:=:'
+		)
+	fi
+	sed -i "${args[@]}" Makefile.in || die
 }
 
 src_configure() {
@@ -41,30 +51,28 @@ src_configure() {
 }
 
 src_install() {
-	emake STRIP="" ROOTDIR="${D}" install || die
+	emake STRIP="" ROOTDIR="${D}" install
 	dodoc doc/* README.* Changelog
-	rm -r "${D}"/usr/include || die #70938
+	rm -r "${ED}"/usr/include || die #70938
 
 	insinto /etc
 	insopts -m0644
-	doins warnquota.conf quotatab || die
+	doins warnquota.conf quotatab
 
 	newinitd "${FILESDIR}"/quota.rc7 quota
 	newconfd "${FILESDIR}"/quota.confd quota
 
 	if use rpc ; then
 		newinitd "${FILESDIR}"/rpc.rquotad.initd rpc.rquotad
-	else
-		rm -f "${D}"/usr/sbin/rpc.rquotad
 	fi
 
 	if use ldap ; then
 		insinto /etc/openldap/schema
 		insopts -m0644
-		doins ldap-scripts/quota.schema || die
+		doins ldap-scripts/quota.schema
 
 		exeinto /usr/share/quota/ldap-scripts
-		doexe ldap-scripts/*.pl || die
-		doexe ldap-scripts/edquota_editor || die
+		doexe ldap-scripts/*.pl
+		doexe ldap-scripts/edquota_editor
 	fi
 }

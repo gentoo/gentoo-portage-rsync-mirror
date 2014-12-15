@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.66 2014/04/21 10:53:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.67 2014/12/15 09:20:54 polynomial-c Exp $
+
+*quota-4.02 (15 Dec 2014)
+
+  15 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -quota-3.14-r1.ebuild,
+  -quota-3.15.ebuild, -quota-3.16.ebuild, -quota-3.17.ebuild,
+  -quota-4.00.ebuild, +quota-4.02.ebuild, -files/quota-3.06-no-stripping.patch,
+  -files/quota-3.13-configure-LANG.patch, -files/quota-3.14-headers.patch,
+  -files/quota.rc, -files/quota.rc6:
+  Version bump. Removed old.
 
   21 Apr 2014; Julian Ospald <hasufell@gentoo.org> quota-4.01.ebuild,
   +files/quota-4.01-cflags.patch:
