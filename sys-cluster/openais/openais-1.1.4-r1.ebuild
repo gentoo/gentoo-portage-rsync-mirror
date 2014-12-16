@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4-r1.ebuild,v 1.5 2012/05/04 07:20:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/openais-1.1.4-r1.ebuild,v 1.6 2014/12/16 09:56:37 ultrabug Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa x86 ~x86-fbsd"
 IUSE="static-libs"
 
-RDEPEND="sys-cluster/corosync"
+RDEPEND="<sys-cluster/corosync-2.0.0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
