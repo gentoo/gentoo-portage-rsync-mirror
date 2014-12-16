@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mariadb-galera
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.10 2014/10/20 23:54:49 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/ChangeLog,v 1.11 2014/12/16 02:02:07 grknight Exp $
+
+*mariadb-galera-10.0.15 (16 Dec 2014)
+
+  16 Dec 2014; Brian Evans <grknight@gentoo.org> +mariadb-galera-10.0.15.ebuild:
+  Version bump
 
 *mariadb-galera-10.0.14 (20 Oct 2014)
 

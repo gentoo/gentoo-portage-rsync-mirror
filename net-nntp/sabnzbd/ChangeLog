@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/sabnzbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.24 2014/11/08 05:29:27 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.25 2014/12/16 02:03:49 jsbronder Exp $
+
+*sabnzbd-0.7.20 (16 Dec 2014)
+
+  16 Dec 2014; Justin Bronder <jsbronder@gentoo.org> +sabnzbd-0.7.20.ebuild:
+  Bump (#530894)
 
 *sabnzbd-0.7.19 (08 Nov 2014)
 
