@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.186 2014/11/13 10:48:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.187 2014/12/15 23:03:10 eva Exp $
+
+*seahorse-3.14.0 (15 Dec 2014)
+
+  15 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +seahorse-3.14.0.ebuild:
+  Version bump for Gnome 3.14.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/seahorse-2.32.0-libnotify-0.7.patch,

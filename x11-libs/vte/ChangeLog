@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.397 2014/10/11 12:36:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.399 2014/12/15 23:30:21 eva Exp $
+
+  15 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> vte-0.38.2.ebuild:
+  Fix bad edit, DEPEND -> RDEPEND.
+
+*vte-0.38.2 (15 Dec 2014)
+
+  15 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> vte-0.36.3.ebuild,
+  +vte-0.38.2.ebuild:
+  Version bump for Gnome 3.14. Allow multiple 2.90 slot to use newer
+  gnome-pty-helper.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> vte-0.36.3.ebuild:
   arm stable, bug #512012

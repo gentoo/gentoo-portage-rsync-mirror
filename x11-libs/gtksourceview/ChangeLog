@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.271 2014/10/11 12:33:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.272 2014/12/15 23:09:33 eva Exp $
+
+*gtksourceview-3.14.2 (15 Dec 2014)
+
+  15 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtksourceview-3.14.2.ebuild:
+  Version bump for Gnome 3.14.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gtksourceview-3.12.2.ebuild:
   arm stable, bug #512012
