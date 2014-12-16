@@ -15,6 +15,7 @@
 		<flag name="ants2">Enable support for Antminer S2 Bitmain</flag>
 		<flag name="avalon">Enable support for Avalon ASICs</flag>
 		<flag name="avalon2">Enable support for Avalon2 ASICs</flag>
+		<flag name="avalon4">Enable support for Avalon4 ASICs</flag>
 		<flag name="bab">Enable support for BlackArrow Bitfury</flag>
 		<flag name="bflsc">Enable support for BFL ASICs</flag>
 		<flag name="bitforce">Enable support for mining with ButterFly Labs BitFORCE FPGAs</flag>
