@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/openctm-1.0.3.ebuild,v 1.6 2014/10/20 08:02:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/openctm-1.0.3.ebuild,v 1.7 2014/12/16 10:54:57 amynka Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ DEPEND="dev-libs/tinyxml
 	media-libs/freeglut
 	media-libs/glew
 	media-libs/pnglite
-	virtual/opengl"
+	virtual/opengl
+	x11-libs/gtk+:2"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PF}"

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/cdcd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.30 2009/06/19 21:42:15 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/ChangeLog,v 1.31 2014/12/16 10:42:44 jer Exp $
+
+  16 Dec 2014; Jeroen Roovers <jer@gentoo.org> cdcd-0.6.6-r2.ebuild,
+  +files/cdcd-0.6.6-acinclude.m4, +files/cdcd-0.6.6-configure.patch,
+  -files/cdcd-0.6.6-fbsd.patch:
+  Remove sys-libs/ncurses dependency as nothing uses it (bug #459538).
 
   19 Jun 2009; Brent Baude <ranger@gentoo.org> cdcd-0.6.6-r2.ebuild:
   stable ppc64, bug 272102

@@ -1,7 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5-r1.ebuild,v 1.3 2014/08/30 12:18:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/weex/weex-2.6.1.5-r1.ebuild,v 1.4 2014/12/16 10:32:28 pacho Exp $
 
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Automates maintaining a web page or other FTP archive"
@@ -11,24 +12,21 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="nls"
+IUSE="" #nls
 
 DEPEND="sys-libs/ncurses"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-va_list.patch"
 	epatch "${FILESDIR}/formatstring.patch"
 }
 
-src_compile() {
-	econf $(use_enable nls) || die
-	emake || die "emake failed"
+src_configure() {
+	econf --disable-nls #532502
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	dodoc doc/TODO* doc/README* doc/FAQ* doc/sample* doc/ChangeLog* \
 		doc/BUG* doc/THANK*
 }

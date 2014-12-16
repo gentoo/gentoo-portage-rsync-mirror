@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/openctm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.7 2014/10/20 08:02:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.8 2014/12/16 10:54:57 amynka Exp $
 
   20 Oct 2014; Justin Lecher <jlec@gentoo.org> openctm-1.0.3.ebuild,
   files/openctm-fix-makefiles.patch, metadata.xml:
   Fix for multilib-strict
+
+  14 Oct 2014; Amy Winston <amynka@gentoo.org> openctm-1.0.3.ebuild:
+  Gtk+ dependency repaired bug #525328
 
   20 Aug 2014; Amy Winston <amynka@gentoo.org> +files/openctm-no-strip.patch,
   openctm-1.0.3.ebuild:
