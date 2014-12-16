@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.126 2014/11/23 19:56:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.127 2014/12/16 00:04:31 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -208,6 +208,10 @@ gnome2_src_install() {
 		emake DESTDIR="${D}" "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" install || die "install failed"
 	else
 		debug-print "Installing with 'einstall'"
+		eqawarn
+		eqawarn "Support for USE_EINSTALL will be dropped in a month,"
+		eqawarn "please stop using it (#482082)"
+		eqawarn
 		einstall "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" || die "einstall failed"
 	fi
 

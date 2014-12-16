@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.68 2014/11/19 08:19:38 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.69 2014/12/16 00:20:35 tamiko Exp $
 
 EAPI=5
 
@@ -109,6 +109,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
 	dev-lang/perl
+	dev-perl/XML-XPath
 	dev-libs/libxslt"
 
 DOC_CONTENTS="For the basic networking support (bridged and routed networks)

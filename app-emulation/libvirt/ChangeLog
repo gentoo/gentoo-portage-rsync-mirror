@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.404 2014/12/13 13:02:09 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.405 2014/12/16 00:20:35 tamiko Exp $
+
+  16 Dec 2014; Matthias Maier <tamiko@gentoo.org> libvirt-9999.ebuild:
+  fix DEPEND
 
   13 Dec 2014; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.11.ebuild,
   metadata.xml:
