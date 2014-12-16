@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.337 2014/12/11 01:29:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.338 2014/12/16 16:07:02 floppym Exp $
+
+  16 Dec 2014; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2-r3.ebuild,
+  grub-2.02_beta2-r6.ebuild, grub-9999-r1.ebuild:
+  Add blocker on broken freetype, bug 532506.
 
 *grub-2.02_beta2-r6 (11 Dec 2014)
 

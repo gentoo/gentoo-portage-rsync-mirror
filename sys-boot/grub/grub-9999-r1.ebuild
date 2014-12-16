@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.22 2014/10/22 21:03:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.23 2014/12/16 16:07:02 floppym Exp $
 
 EAPI=5
 
@@ -112,6 +112,8 @@ RDEPEND+="
 	!multislot? ( !sys-boot/grub:0 )
 	nls? ( sys-devel/gettext )
 "
+
+DEPEND+=" !!=media-libs/freetype-2.5.4"
 
 STRIP_MASK="*/grub/*/*.{mod,img}"
 RESTRICT="test"
