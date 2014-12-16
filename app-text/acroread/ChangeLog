@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.205 2014/11/07 21:54:05 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.206 2014/12/16 13:25:37 pacho Exp $
+
+  16 Dec 2014; Pacho Ramos <pacho@gentoo.org> acroread-9.5.5-r2.ebuild:
+  amd64/x86 stable, bug #528596
 
 *acroread-9.5.5-r2 (07 Nov 2014)
 

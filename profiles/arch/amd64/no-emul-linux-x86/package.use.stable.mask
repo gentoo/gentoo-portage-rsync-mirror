@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.28 2014/12/16 11:56:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.29 2014/12/16 13:19:08 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -108,6 +108,7 @@ dev-libs/udis86 -abi_x86_32
 dev-libs/wayland -abi_x86_32
 dev-libs/weston -abi_x86_32
 dev-libs/yajl -abi_x86_32
+dev-lua/LuaBitOp -abi_x86_32
 dev-lua/luaexpat -abi_x86_32
 dev-lua/luasocket -abi_x86_32
 dev-python/subunit -abi_x86_32
