@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.9.ebuild,v 1.15 2014/11/29 18:55:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.11.ebuild,v 1.1 2014/12/16 12:16:00 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="Subversion GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="apache2 berkdb ctypes-python debug doc +dso extras gnome-keyring +http java kde nls perl python ruby sasl test vim-syntax"
 
 COMMON_DEPEND=">=dev-db/sqlite-3.7.12
@@ -40,7 +40,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.7.12
 RDEPEND="${COMMON_DEPEND}
 	apache2? ( www-servers/apache[apache2_modules_dav] )
 	java? ( >=virtual/jre-1.5 )
-	kde? ( kde-base/kwalletd )
+	kde? ( || ( kde-apps/kwalletd:4 kde-base/kwalletd ) )
 	nls? ( virtual/libintl )
 	perl? ( dev-perl/URI )"
 # Note: ctypesgen doesn't need PYTHON_USEDEP, it's used once
@@ -58,7 +58,10 @@ DEPEND="${COMMON_DEPEND}
 REQUIRED_USE="
 	ctypes-python? ( ${PYTHON_REQUIRED_USE} )
 	python? ( ${PYTHON_REQUIRED_USE} )
-	test? ( ${PYTHON_REQUIRED_USE} )"
+	test? (
+		${PYTHON_REQUIRED_USE}
+		!dso
+	)"
 
 want_apache
 
@@ -116,8 +119,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.5.6-aix-dso.patch \
 		"${FILESDIR}"/${PN}-1.8.0-hpux-dso.patch \
 		"${FILESDIR}"/${PN}-fix-parallel-build-support-for-perl-bindings.patch \
-		"${FILESDIR}"/${PN}-1.8.1-revert_bdb6check.patch \
-		"${FILESDIR}"/${P}-po_fixes.patch
+		"${FILESDIR}"/${PN}-1.8.1-revert_bdb6check.patch
 	epatch_user
 
 	fperms +x build/transform_libtool_scripts.sh
@@ -284,31 +286,33 @@ src_compile() {
 }
 
 src_test() {
-	if ! has_version ~${CATEGORY}/${P} ; then
+	if has_version ~${CATEGORY}/${P} ; then
+		default
+
+		if use ctypes-python ; then
+			python_test() {
+				"${PYTHON}" subversion/bindings/ctypes-python/test/run_all.py \
+					|| die "ctypes-python tests fail with ${EPYTHON}"
+			}
+
+			distutils-r1_src_test
+		fi
+
+		if use python ; then
+			swig_py_test() {
+				pushd "${BUILD_DIR}" >/dev/null || die
+				"${PYTHON}" tests/run_all.py || die "swig-py tests fail with ${EPYTHON}"
+				popd >/dev/null || die
+			}
+
+			BUILD_DIR=subversion/bindings/swig/python \
+			python_foreach_impl swig_py_test
+		fi
+	else
 		ewarn "The test suite shows errors when there is an older version of"
-		ewarn "${CATEGORY}/${PN} installed."
-	fi
-
-	default
-
-	if use ctypes-python ; then
-		python_test() {
-			"${PYTHON}" subversion/bindings/ctypes-python/test/run_all.py \
-				|| die "ctypes-python tests fail with ${EPYTHON}"
-		}
-
-		distutils-r1_src_test
-	fi
-
-	if use python ; then
-		swig_py_test() {
-			pushd "${BUILD_DIR}" >/dev/null || die
-			"${PYTHON}" tests/run_all.py || die "swig-py tests fail with ${EPYTHON}"
-			popd >/dev/null || die
-		}
-
-		BUILD_DIR=subversion/bindings/swig/python \
-		python_foreach_impl swig_py_test
+		ewarn "${CATEGORY}/${PN} installed. Please install =${CATEGORY}/${P}*"
+		ewarn "before running the test suite."
+		ewarn "Test suite skipped."
 	fi
 }
 
@@ -363,7 +367,8 @@ src_install() {
 	fi
 
 	# Install Bash Completion, bug 43179.
-	newbashcomp tools/client-side/bash_completion subversion
+	newbashcomp tools/client-side/bash_completion svn
+	bashcomp_alias svn svn{admin,dumpfilter,look,sync,version}
 	rm -f tools/client-side/bash_completion
 
 	# Install hot backup script, bug 54304.

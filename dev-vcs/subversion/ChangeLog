@@ -1,6 +1,18 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.205 2014/12/14 02:52:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.206 2014/12/16 12:16:00 polynomial-c Exp $
+
+*subversion-1.8.11 (16 Dec 2014)
+
+  16 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -subversion-1.8.9.ebuild,
+  +subversion-1.8.11.ebuild,
+  -files/subversion-1.6.0-disable_linking_against_unneeded_libraries.patch,
+  -files/subversion-1.6.2-local_library_preloading.patch,
+  -files/subversion-1.6.3-kwallet_window.patch,
+  -files/subversion-1.7.6-kwallet.patch,
+  -files/subversion-1.7.6-revert-mod_dontdothat-move.patch,
+  -files/svnserve.initd:
+  Security bump (bug #532406). Removed old.
 
   14 Dec 2014; Manuel Rüger <mrueg@gentoo.org> subversion-1.8.10-r1.ebuild:
   Add support for kde applications dependency.
