@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagvis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.15 2014/08/10 20:58:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/ChangeLog,v 1.16 2014/12/16 22:34:42 pacho Exp $
+
+  16 Dec 2014; Pacho Ramos <pacho@gentoo.org> nagvis-1.6.6.ebuild:
+  confutils was wrongly set making this unbuildable due missing sqlite3 dep,
+  dropping its usage as USE deps in RDEPEND are enough
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> nagvis-1.6.6.ebuild:
   QA: drop trailing '.' from DESCRIPTION
