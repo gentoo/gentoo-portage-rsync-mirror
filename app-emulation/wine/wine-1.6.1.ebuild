@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.1.ebuild,v 1.7 2014/12/16 11:57:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.1.ebuild,v 1.8 2014/12/16 14:55:03 pacho Exp $
 
 EAPI="5"
 
@@ -120,13 +120,12 @@ COMMON_DEPEND="
 				>=media-libs/openal-1.15.1[abi_x86_32(-)]
 			) )
 			gstreamer? ( || (
-				app-emulation/emul-linux-x86-gstplugins[development,-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-medialibs[development,-abi_x86_32(-)] )
+				app-emulation/emul-linux-x86-medialibs[development,-abi_x86_32(-)]
 				(
 					>=media-libs/gstreamer-0.10.36-r2:0.10[abi_x86_32(-)]
 					>=media-libs/gst-plugins-base-0.10.36:0.10[abi_x86_32(-)]
 				)
-			)
+			) )
 			X? ( || (
 				app-emulation/emul-linux-x86-xlibs[development,-abi_x86_32(-)]
 				(

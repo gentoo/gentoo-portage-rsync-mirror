@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.103 2014/12/16 13:19:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.104 2014/12/16 14:55:22 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,6 @@ net-im/bitlbee skype
 app-accessibility/flite abi_x86_32
 app-admin/fam abi_x86_32
 app-admin/gamin abi_x86_32
-app-emulation/wine abi_x86_32
 app-arch/bzip2 abi_x86_32
 app-arch/xz-utils abi_x86_32
 app-crypt/heimdal abi_x86_32
