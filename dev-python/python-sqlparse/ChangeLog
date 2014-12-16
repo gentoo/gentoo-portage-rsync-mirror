@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-sqlparse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.38 2014/11/27 12:09:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.39 2014/12/16 20:45:06 maekke Exp $
+
+  16 Dec 2014; Markus Meier <maekke@gentoo.org> python-sqlparse-0.1.13.ebuild:
+  arm stable, bug #530586
 
   27 Nov 2014; Ian Delaney <idella4@gentoo.org> python-sqlparse-0.1.13.ebuild:
   clean old python impl
