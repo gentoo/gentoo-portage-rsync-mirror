@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/mysql-connector-python
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-connector-python/ChangeLog,v 1.2 2014/12/16 17:57:23 grknight Exp $
+
+  16 Dec 2014; Brian Evans <grknight@gentoo.org> metadata.xml:
+  Add python herd; ack by mgorny
+
+*mysql-connector-python-2.0.2 (16 Dec 2014)
+
+  16 Dec 2014; Brian Evans <grknight@gentoo.org> +metadata.xml,
+  +mysql-connector-python-2.0.2.ebuild:
+  Initial import

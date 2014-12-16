@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.9.0.ebuild,v 1.1 2014/12/16 17:29:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-4.9.0.ebuild,v 1.2 2014/12/16 17:43:02 blueness Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 
-HARDWARE="ants1 ants2 avalon avalon2 avalon4 bab bitmine_A1 bflsc bitforce bitfury cointerra drillbit hashfast hashratio icarus klondike knc minion modminer spondoolies"
+HARDWARE="ants1 ants2 avalon avalon2 avalon4 bab bitmine_A1 bflsc bitforce bitfury blockerupter cointerra drillbit hashfast hashratio icarus klondike knc minion modminer spondoolies"
 IUSE="doc examples udev hardened ncurses ${HARDWARE}"
 
 REQUIRED_USE="|| ( ${HARDWARE} )"
@@ -23,12 +23,15 @@ REQUIRED_USE="|| ( ${HARDWARE} )"
 RDEPEND="net-misc/curl
 	>=dev-libs/jansson-2.6
 	ncurses? ( sys-libs/ncurses )
+	ants1? ( virtual/libusb:1[udev] )
+	ants2? ( virtual/libusb:1[udev] )
 	avalon? ( virtual/libusb:1[udev] )
 	avalon2? ( virtual/libusb:1[udev] )
 	avalon4? ( virtual/libusb:1[udev] )
 	bflsc? ( virtual/libusb:1[udev] )
 	bitforce? ( virtual/libusb:1[udev] )
 	bitfury? ( virtual/libusb:1[udev] )
+	blockerupter? ( virtual/libusb:1[udev] )
 	cointerra? ( virtual/libusb:1[udev] )
 	drillbit? ( virtual/libusb:1[udev] )
 	hashfast? ( virtual/libusb:1[udev] )
@@ -60,6 +63,7 @@ src_configure() {
 		$(use_enable bflsc) \
 		$(use_enable bitforce) \
 		$(use_enable bitfury) \
+		$(use_enable blockerupter) \
 		$(use_enable cointerra) \
 		$(use_enable drillbit) \
 		$(use_enable hashfast) \

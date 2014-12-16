@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.106 2014/12/11 00:01:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.107 2014/12/16 17:54:40 haubi Exp $
+
+  16 Dec 2014; Michael Haubenwallner <haubi@gentoo.org> guile-1.8.8-r1.ebuild:
+  add ~ppc-aix Prefix keyword
 
   11 Dec 2014; Zac Medico <zmedico@gentoo.org> guile-1.8.8-r1.ebuild,
   guile-2.0.0.ebuild:
