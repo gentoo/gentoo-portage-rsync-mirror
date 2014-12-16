@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.27 2014/12/13 13:55:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.28 2014/12/16 11:56:33 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -9,6 +9,7 @@
 app-accessibility/flite -abi_x86_32
 app-admin/fam -abi_x86_32
 app-admin/gamin -abi_x86_32
+app-emulation/wine -abi_x86_32
 app-arch/bzip2 -abi_x86_32
 app-arch/xz-utils -abi_x86_32
 app-crypt/heimdal -abi_x86_32

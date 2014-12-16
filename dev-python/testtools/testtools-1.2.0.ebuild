@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.37.ebuild,v 1.1 2014/10/14 08:00:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.2.0.ebuild,v 1.1 2014/12/16 11:41:25 idella4 Exp $
 
 EAPI=5
 
@@ -34,16 +34,10 @@ python_compile_all() {
 python_prepare_all() {
 	# Take out failing tests
 	# https://bugs.launchpad.net/testtools/+bug/1380918
-	sed -e 's:test_test_module:_&:' -e 's:test_test_suite:_&:' \
-		-i testtools/tests/test_distutilscmd.py || die
+#	sed -e 's:test_test_module:_&:' -e 's:test_test_suite:_&:' \
+#		-i testtools/tests/test_distutilscmd.py || die
 
 	distutils-r1_python_prepare_all
-}
-
-src_test() {
-	# Required to allow / ensure all impls to pass run of testsuite
-	local DISTUTILS_NO_PARALLEL_BUILD=1
-	distutils-r1_src_test
 }
 
 python_test() {
