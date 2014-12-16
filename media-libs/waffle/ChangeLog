@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/waffle
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/ChangeLog,v 1.9 2014/09/26 20:46:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/ChangeLog,v 1.10 2014/12/16 03:21:59 mattst88 Exp $
+
+*waffle-1.5.0 (16 Dec 2014)
+
+  16 Dec 2014; Matt Turner <mattst88@gentoo.org> +waffle-1.5.0.ebuild:
+  Version bump to 1.5.0.
 
 *waffle-1.4.0 (26 Sep 2014)
 
