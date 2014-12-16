@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r2.ebuild,v 1.11 2013/09/14 10:56:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.16-r1.ebuild,v 1.1 2014/12/16 13:00:19 polynomial-c Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils flag-o-matic pam user systemd
 
@@ -12,15 +12,14 @@ SRC_URI="mirror://debian/pool/main/a/at/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam selinux"
 
 DEPEND="virtual/mta
 	>=sys-devel/autoconf-2.64
 	sys-devel/bison
 	>=sys-devel/flex-2.5.4a
-	pam? ( virtual/pam )
-	selinux? ( sec-policy/selinux-at )"
+	pam? ( virtual/pam )"
 RDEPEND="virtual/mta
 	virtual/logger
 	selinux? ( sec-policy/selinux-at )"
@@ -32,10 +31,10 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.8-more-deny.patch
-	epatch "${FILESDIR}"/${PN}-3.1.13-Makefile.patch
+	epatch "${FILESDIR}"/${PN}-3.1.14-Makefile.patch
 	# fix parallel make issues, bug #244884
 	epatch "${FILESDIR}"/${PN}-3.1.10.2-Makefile.in-parallel-make-fix.patch
-	epatch "${FILESDIR}"/${P}-configure.in-fix-PAM-automagick-dep.patch
+	epatch "${FILESDIR}"/${PN}-3.1.13-configure.in-fix-PAM-automagick-dep.patch
 	# Fix parallel make issue (bug #408375)
 	epatch "${FILESDIR}"/${PN}-3.1.13-parallel-make-fix.patch
 	epatch "${FILESDIR}"/${PN}-3.1.13-getloadavg.patch
@@ -56,9 +55,9 @@ src_configure() {
 }
 
 src_install() {
-	emake install IROOT="${D}" || die
+	emake install IROOT="${D}"
 
-	newinitd "${FILESDIR}"/atd.rc7 atd
+	newinitd "${FILESDIR}"/atd.rc8 atd
 	newconfd "${FILESDIR}"/atd.confd atd
 	newpamd "${FILESDIR}"/at.pamd-3.1.13-r1 atd
 

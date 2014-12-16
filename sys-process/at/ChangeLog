@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.68 2014/11/02 10:19:19 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.69 2014/12/16 13:00:19 polynomial-c Exp $
+
+*at-3.1.16-r1 (16 Dec 2014)
+
+  16 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -at-3.1.13-r2.ebuild,
+  -at-3.1.15.ebuild, +at-3.1.16-r1.ebuild, -files/at-3.1.13-Makefile.patch,
+  +files/atd.rc8:
+  Don't set dependency of init script for logger to "need" but "use" instead
+  (bug #473492). Removed old.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> at-3.1.14.ebuild,
   at-3.1.15.ebuild, at-3.1.16.ebuild:
