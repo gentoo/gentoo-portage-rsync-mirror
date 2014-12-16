@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1454 2014/12/11 18:47:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1456 2014/12/16 20:17:46 mpagano Exp $
+
+*gentoo-sources-3.17.7 (16 Dec 2014)
+
+  16 Dec 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.17.7.ebuild:
+  Linux patch 3.17.7. ALSA: hda - Add ultra dock support for Thinkpad X240. See
+  bug #532176.
+
+*gentoo-sources-3.18.1 (16 Dec 2014)
+
+  16 Dec 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.18.1.ebuild:
+  Linux patch 3.18.1
 
   11 Dec 2014; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-3.10.58.ebuild, -gentoo-sources-3.10.59.ebuild,
