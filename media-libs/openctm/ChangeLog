@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openctm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.8 2014/12/16 10:54:57 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openctm/ChangeLog,v 1.9 2014/12/16 11:10:52 jer Exp $
+
+  16 Dec 2014; Jeroen Roovers <jer@gentoo.org> openctm-1.0.3.ebuild:
+  Change MY_PF to MY_PV to avoid confusion.
 
   20 Oct 2014; Justin Lecher <jlec@gentoo.org> openctm-1.0.3.ebuild,
   files/openctm-fix-makefiles.patch, metadata.xml:
