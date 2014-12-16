@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/sdljoytest
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/sdljoytest/ChangeLog,v 1.5 2010/11/29 05:08:17 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/sdljoytest/ChangeLog,v 1.6 2014/12/16 03:56:09 mr_bones_ Exp $
+
+  16 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  sdljoytest-11102003.ebuild:
+  EAPI=5
 
   29 Nov 2010; Michael Sterrett <mr_bones_@gentoo.org>
   sdljoytest-11102003.ebuild:

@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=media-libs/libsdl[joystick,opengl,video] virtual/opengl media-libs/sdl-image
 DESCRIPTION=SDL app to test joysticks and game controllers
-EAPI=2
+EAPI=5
 HOMEPAGE=http://sdljoytest.sourceforge.net/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=media-libs/libsdl[joystick,opengl,video] virtual/opengl media-libs/sdl-i
 SLOT=0
 SRC_URI=mirror://sourceforge/sdljoytest/SDLJoytest-GL-11102003.tar.bz2
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e6e6243effefada6372775907c311086
+_md5_=975b0f67325c95350500edb093bb7250

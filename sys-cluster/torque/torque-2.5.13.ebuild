@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.13.ebuild,v 1.1 2014/06/19 19:55:00 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.13.ebuild,v 1.2 2014/12/16 03:33:43 jsbronder Exp $
 
 EAPI=4
 
@@ -101,7 +101,7 @@ src_configure() {
 		$(use_enable drmaa)
 		$(use_enable threads high-availability)
 		$(use_enable xml server-xml)
-		$(use_enable munge munge-auth)
+		$(use_enable munge munge-library)
 		--with-server-home=${PBS_SERVER_HOME}
 		--with-environ=/etc/pbs_environment
 		--with-default-server=${PBS_SERVER_NAME}
