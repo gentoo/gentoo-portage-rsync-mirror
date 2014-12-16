@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.8.ebuild,v 1.5 2013/12/22 12:01:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.8.ebuild,v 1.6 2014/12/16 16:40:04 dilfridge Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RDEPEND="
 		sys-apps/dbus
 		qt4? ( dev-qt/qtdbus:4 )
 	)
-	exif? ( >=media-gfx/exiv2-0.17 )
+	exif? ( >=media-gfx/exiv2-0.17:= )
 	fam? ( virtual/fam )
 	ffmpeg? ( virtual/ffmpeg )
 	log? ( >=dev-libs/log4cxx-0.10.0 )
