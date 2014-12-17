@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/aimsniff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.36 2014/12/13 20:58:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/ChangeLog,v 1.37 2014/12/16 23:12:55 jer Exp $
+
+  16 Dec 2014; Jeroen Roovers <jer@gentoo.org> aimsniff-0.9d.ebuild:
+  Drop RESTRICT="mirror".
 
 *aimsniff-0.9d (13 Dec 2014)
 

@@ -1,6 +1,12 @@
 # ChangeLog for games-server/monopd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.22 2011/12/15 17:53:14 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.23 2014/12/16 23:22:35 mr_bones_ Exp $
+
+*monopd-0.9.7 (16 Dec 2014)
+
+  16 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> +files/monopd.in,
+  +monopd-0.9.7.ebuild:
+  version bump
 
   15 Dec 2011; Michael Sterrett <mr_bones_@gentoo.org> monopd-0.9.3-r1.ebuild:
   EAPI=2; tidy
@@ -104,4 +110,3 @@
 
   1 Aug 2002; J. Alberto Suárez López <bass@gentoo.org> monopd-0.4.3.ebuild
   First relase 
-

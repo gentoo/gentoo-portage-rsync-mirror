@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.110 2014/12/16 11:41:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.111 2014/12/16 23:04:46 idella4 Exp $
+
+  16 Dec 2014; Ian Delaney <idella4@gentoo.org> testtools-1.1.0.ebuild,
+  testtools-1.2.0.ebuild:
+  add new dep, rm unneeded prepare phase. closes bug #532720
 
 *testtools-1.2.0 (16 Dec 2014)
 

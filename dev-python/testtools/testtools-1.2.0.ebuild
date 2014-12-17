@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.2.0.ebuild,v 1.1 2014/12/16 11:41:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.2.0.ebuild,v 1.2 2014/12/16 23:04:46 idella4 Exp $
 
 EAPI=5
 
@@ -25,19 +25,11 @@ RDEPEND="dev-python/mimeparse[${PYTHON_USEDEP}]
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( $(python_gen_cond_dep 'dev-python/twisted-core[${PYTHON_USEDEP}]' python2_7) )"
+	test? ( $(python_gen_cond_dep 'dev-python/twisted-core[${PYTHON_USEDEP}]' python2_7)
+		dev-python/unittest2[${PYTHON_USEDEP}] )"
 
 python_compile_all() {
 	use doc && emake -C doc html
-}
-
-python_prepare_all() {
-	# Take out failing tests
-	# https://bugs.launchpad.net/testtools/+bug/1380918
-#	sed -e 's:test_test_module:_&:' -e 's:test_test_suite:_&:' \
-#		-i testtools/tests/test_distutilscmd.py || die
-
-	distutils-r1_python_prepare_all
 }
 
 python_test() {
