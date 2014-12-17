@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_auth_openid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/ChangeLog,v 1.10 2014/08/25 22:31:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_openid/ChangeLog,v 1.11 2014/12/17 11:06:20 pacho Exp $
+
+  17 Dec 2014; Pacho Ramos <pacho@gentoo.org> mod_auth_openid-0.8.ebuild:
+  As seen in Fedora this version is compatible with 2.4 too
 
   25 Aug 2014; Christopher Reffett <2011creffett@gentoo.org>
   -mod_auth_openid-0.6.ebuild:
