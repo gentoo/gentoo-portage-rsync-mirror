@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-AutoConf/Config-AutoConf-0.304.ebuild,v 1.1 2014/06/02 09:32:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-AutoConf/Config-AutoConf-0.307.ebuild,v 1.1 2014/12/17 17:30:46 mrueg Exp $
 
 EAPI=5
 
