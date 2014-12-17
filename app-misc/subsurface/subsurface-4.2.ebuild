@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-4.2.ebuild,v 1.1 2014/08/29 02:08:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-4.2.ebuild,v 1.2 2014/12/17 18:19:37 kensington Exp $
 
 EAPI="5"
 
@@ -40,7 +40,7 @@ RDEPEND="dev-db/sqlite:3
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
 	dev-qt/qtwebkit:4
-	kde-base/marble:4=
+	kde-base/marble:4
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

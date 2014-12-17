@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.27.1_p20140817.ebuild,v 1.1 2014/08/18 02:25:27 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.27.1_p20140817.ebuild,v 1.2 2014/12/17 18:15:46 kensington Exp $
 
 EAPI=5
 
@@ -36,10 +36,10 @@ DEPEND="!media-plugins/mytharchive
 	=media-tv/mythtv-${PV}*:=[python]
 	dev-libs/glib:=
 	dev-libs/libxml2:=
-	dev-qt/qtcore:=
-	dev-qt/qtgui:=
-	dev-qt/qtopengl:=
-	dev-qt/qtsql:=
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	dev-qt/qtsql:4
 	dev-libs/openssl:=
 	media-libs/alsa-lib:=
 	media-libs/faac:=
@@ -111,7 +111,7 @@ DEPEND="!media-plugins/mytharchive
 		dev-perl/XML-XPath
 	)
 	mythbrowser? (
-		dev-qt/qtwebkit:=
+		dev-qt/qtwebkit:4
 	)"
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythplugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.35 2014/10/20 19:06:04 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.36 2014/12/17 18:28:01 kensington Exp $
+
+  17 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  mythplugins-0.27.1_p20140817.ebuild, mythplugins-0.27.3_p20140907.ebuild,
+  mythplugins-0.27.3_p20141009.ebuild, mythplugins-0.27.4_p20141018.ebuild:
+  Pin dev-qt dependencies to SLOT 4 and remove bogus slot operator dependency.
 
 *mythplugins-0.27.4_p20141018 (20 Oct 2014)
 

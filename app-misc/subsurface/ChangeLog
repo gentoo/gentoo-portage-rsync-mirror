@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/subsurface
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.14 2014/10/20 14:47:20 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.15 2014/12/17 18:19:37 kensington Exp $
+
+  17 Dec 2014; Michael Palimaka <kensington@gentoo.org> subsurface-4.2.ebuild,
+  subsurface-9999.ebuild:
+  Remove bogus subslot dependency operator.
 
   20 Oct 2014; Yixun Lan <dlan@gentoo.org> -subsurface-4.0.ebuild,
   -subsurface-4.0.3.ebuild:

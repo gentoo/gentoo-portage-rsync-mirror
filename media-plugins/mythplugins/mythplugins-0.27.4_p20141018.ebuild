@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.27.4_p20141018.ebuild,v 1.1 2014/10/20 19:06:04 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.27.4_p20141018.ebuild,v 1.2 2014/12/17 18:15:46 kensington Exp $
 
 EAPI=5
 
@@ -36,10 +36,10 @@ DEPEND="!media-plugins/mytharchive
 	=media-tv/mythtv-${PV}*:=[alsa=,hls=,ieee1394=,libass=,python,theora=,vorbis=,xml=,xvid=]
 	dev-libs/glib:=
 	xml? ( >=dev-libs/libxml2-2.6.0:= )
-	dev-qt/qtcore:=
-	dev-qt/qtgui:=
-	dev-qt/qtopengl:=
-	dev-qt/qtsql:=
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtopengl:4
+	dev-qt/qtsql:4
 	dev-libs/openssl:=
 	alsa? ( >=media-libs/alsa-lib-1.0.24:= )
 	hls? (
@@ -115,7 +115,7 @@ DEPEND="!media-plugins/mytharchive
 		dev-perl/XML-XPath
 	)
 	mythbrowser? (
-		dev-qt/qtwebkit:=
+		dev-qt/qtwebkit:4
 	)"
 RDEPEND="${DEPEND}"
 

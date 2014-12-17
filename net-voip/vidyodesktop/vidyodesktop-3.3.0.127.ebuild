@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/vidyodesktop/vidyodesktop-3.3.0.127.ebuild,v 1.1 2014/12/08 19:07:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/vidyodesktop/vidyodesktop-3.3.0.127.ebuild,v 1.2 2014/12/17 18:07:26 kensington Exp $
 
 EAPI=5
 
@@ -57,8 +57,8 @@ RDEPEND="
 	x11-libs/libXScrnSaver
 	x11-libs/libXv
 	x11-libs/libXxf86vm
-	dev-qt/qtgui
-	dev-qt/qtcore
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 "
 
 src_install() {
