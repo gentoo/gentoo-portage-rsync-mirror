@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ilmbase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.39 2014/12/09 00:01:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.40 2014/12/17 22:36:35 jer Exp $
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> ilmbase-2.1.0.ebuild:
+  Stable for HPPA (bug #526046).
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> ilmbase-2.1.0.ebuild,
   ilmbase-2.2.0.ebuild:
