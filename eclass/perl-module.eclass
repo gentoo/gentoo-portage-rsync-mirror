@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.160 2014/12/13 21:06:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.161 2014/12/17 16:40:53 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -15,11 +15,10 @@
 inherit eutils multiprocessing unpacker
 [[ ${CATEGORY} == "perl-core" ]] && inherit alternatives
 
-PERL_EXPF="src_unpack src_compile src_test src_install"
+PERL_EXPF="src_unpack src_prepare src_configure src_compile src_test src_install"
 
 case "${EAPI:-0}" in
 	4|5)
-		PERL_EXPF+=" src_prepare src_configure"
 		[[ ${CATEGORY} == "perl-core" ]] && \
 			PERL_EXPF+=" pkg_postinst pkg_postrm"
 
@@ -105,7 +104,6 @@ perl-module_src_unpack() {
 	debug-print-function $FUNCNAME "$@"
 
 	unpacker_src_unpack
-	has src_prepare ${PERL_EXPF} || perl-module_src_prepare
 }
 
 # @FUNCTION: perl-module_src_prepare
@@ -115,7 +113,6 @@ perl-module_src_unpack() {
 # This function is to be called during the ebuild src_prepare() phase.
 perl-module_src_prepare() {
 	debug-print-function $FUNCNAME "$@"
-	has src_prepare ${PERL_EXPF} && \
 	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
 	debug-print "$FUNCNAME: applying user patches"
 	epatch_user
@@ -210,8 +207,6 @@ perl-module_src_prep() {
 perl-module_src_compile() {
 	debug-print-function $FUNCNAME "$@"
 	perl_set_version
-
-	has src_configure ${PERL_EXPF} || perl-module_src_prep
 
 	if [[ $(declare -p mymake 2>&-) != "declare -a mymake="* ]]; then
 		local mymake_local=(${mymake})

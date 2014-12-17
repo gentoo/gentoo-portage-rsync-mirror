@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1465 2014/12/17 13:26:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1466 2014/12/17 16:40:53 dilfridge Exp $
+
+  17 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Remove code paths that are not called anymore
 
   17 Dec 2014; Manuel Rüger <mrueg@gentoo.org> kde5-functions.eclass:
   Sync eclass with kde overlay.
