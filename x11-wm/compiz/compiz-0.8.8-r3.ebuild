@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r3.ebuild,v 1.1 2013/04/09 07:26:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.8-r3.ebuild,v 1.2 2014/12/17 18:37:14 kensington Exp $
 
 EAPI=5
 
@@ -51,12 +51,7 @@ COMMONDEPEND="
 		>=x11-libs/libwnck-2.18.3:1
 		x11-libs/pango
 	)
-	kde? (
-		|| (
-			>=kde-base/kwin-4.2.0
-			kde-base/kwin:live
-		)
-	)
+	kde? ( >=kde-base/kwin-4.2.0 )
 	svg? (
 		>=gnome-base/librsvg-2.14.0:2
 		>=x11-libs/cairo-1.0
