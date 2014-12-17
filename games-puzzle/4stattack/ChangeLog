@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/4stattack
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/ChangeLog,v 1.8 2007/03/15 14:07:57 nyhm Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/4stattack/ChangeLog,v 1.9 2014/12/17 00:06:08 mr_bones_ Exp $
+
+  17 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> 4stattack-2.1.4.ebuild:
+  EAPI=5
 
   15 Mar 2007; Tristan Heaven <nyhm@gentoo.org> 4stattack-2.1.4.ebuild:
   Install menu entry, bug #159770
@@ -23,4 +26,3 @@
   30 Jul 2003; Michael Sterrett <msterret@gentoo.org> 4stattack-2.1.4.ebuild:
   initial commit.  ebuild and patch supplied by Rob Cakebread via bug 25229 then
   modified a bit.
-
