@@ -4,6 +4,10 @@
 	<maintainer>
 		<email>amynka@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>alicef@gentoo.org</email>
+		<name>Alice Ferrazzi</name>
+	</maintainer>
 	<longdescription>
 		Epoch is an init system (analogous to systemd or upstart)
 		for Linux by Subsentient. It is intended as a lightweight

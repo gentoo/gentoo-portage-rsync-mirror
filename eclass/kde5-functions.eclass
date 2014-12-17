@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.2 2014/10/28 16:45:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.3 2014/12/17 13:26:28 mrueg Exp $
 
 # @ECLASS: kde5-functions.eclass
 # @MAINTAINER:
@@ -79,7 +79,7 @@ _check_gcc_version() {
 # @FUNCTION: _add_kdecategory_dep
 # @INTERNAL
 # @DESCRIPTION:
-# Implementation of add_kdebase_dep and add_frameworks_dep.
+# Implementation of add_kdeplasma_dep and add_frameworks_dep.
 _add_kdecategory_dep() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -87,6 +87,7 @@ _add_kdecategory_dep() {
 	local package=${2}
 	local use=${3}
 	local version=${4}
+	local slot=
 
 	if [[ -n ${use} ]] ; then
 		local use="[${use}]"
@@ -97,7 +98,11 @@ _add_kdecategory_dep() {
 		local version="-${version}"
 	fi
 
-	echo " ${operator}${category}/${package}${version}:5${use}"
+	if [[ ${SLOT} = 4 || ${SLOT} = 5 ]] && ! has kde5-meta-pkg ${INHERITED} ; then
+		slot=":${SLOT}"
+	fi
+
+	echo " ${operator}${category}/${package}${version}${slot}${use}"
 }
 
 # @FUNCTION: add_frameworks_dep
@@ -131,7 +136,31 @@ add_frameworks_dep() {
 	_add_kdecategory_dep kde-frameworks "${1}" "${2}" "${version}"
 }
 
-# @FUNCTION: add_kdebase_dep
+# @FUNCTION: add_kdeapps_dep
+# @USAGE: <package> [USE flags] [minimum version]
+# @DESCRIPTION:
+# Create proper dependency for kde-apps/ dependencies.
+# This takes 1 to 3 arguments. The first being the package name, the optional
+# second is additional USE flags to append, and the optional third is the
+# version to use instead of the automatic version (use sparingly).
+# The output of this should be added directly to DEPEND/RDEPEND, and may be
+# wrapped in a USE conditional (but not an || conditional without an extra set
+# of parentheses).
+add_kdeapps_dep() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local version
+
+	if [[ -n ${3} ]]; then
+		version=${3}
+	elif [[ ${CATEGORY} = kde-apps ]]; then
+		version=${PV}
+	fi
+
+	_add_kdecategory_dep kde-apps "${1}" "${2}" "${version}"
+}
+
+# @FUNCTION: add_kdeplasma_dep
 # @USAGE: <package> [USE flags] [minimum version]
 # @DESCRIPTION:
 # Create proper dependency for kde-base/ dependencies.
@@ -141,18 +170,18 @@ add_frameworks_dep() {
 # The output of this should be added directly to DEPEND/RDEPEND, and may be
 # wrapped in a USE conditional (but not an || conditional without an extra set
 # of parentheses).
-add_kdebase_dep() {
+add_kdeplasma_dep() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	local version
 
 	if [[ -n ${3} ]]; then
 		version=${3}
-	elif [[ ${CATEGORY} = kde-base ]]; then
+	elif [[ ${CATEGORY} = kde-plasma ]]; then
 		version=${PV}
 	fi
 
-	_add_kdecategory_dep kde-base "${1}" "${2}" "${version}"
+	_add_kdecategory_dep kde-plasma "${1}" "${2}" "${version}"
 }
 
 # @FUNCTION: get_kde_version

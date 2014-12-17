@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/tasty-th
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-th/ChangeLog,v 1.3 2014/07/25 09:16:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-th/ChangeLog,v 1.4 2014/12/17 13:19:59 gienah Exp $
+
+*tasty-th-0.1.3 (17 Dec 2014)
+
+  17 Dec 2014; Mark Wright <gienah@gentoo.org> +tasty-th-0.1.3.ebuild:
+  Bump tasty-th to 0.1.3
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> tasty-th-0.1.2.ebuild:
   Drop trailing '.' from description.
