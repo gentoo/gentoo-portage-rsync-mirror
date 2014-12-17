@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.69 2014/12/16 13:00:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.70 2014/12/17 06:27:04 jer Exp $
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> at-3.1.16.ebuild:
+  Stable for HPPA (bug #532696).
 
 *at-3.1.16-r1 (16 Dec 2014)
 

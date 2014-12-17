@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.288 2014/12/12 05:43:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.289 2014/12/17 06:17:26 jer Exp $
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> file-5.21.ebuild:
+  Stable for HPPA (bug #532686).
 
 *file-5.21 (12 Dec 2014)
 
