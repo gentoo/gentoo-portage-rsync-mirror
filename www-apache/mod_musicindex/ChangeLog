@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_musicindex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_musicindex/ChangeLog,v 1.10 2014/03/22 18:01:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_musicindex/ChangeLog,v 1.11 2014/12/17 14:24:51 pacho Exp $
+
+  17 Dec 2014; Pacho Ramos <pacho@gentoo.org> mod_musicindex-1.4.1.ebuild:
+  Looking to debian 1.4.x is compatible with apache 2.4
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -mod_musicindex-1.3.7.ebuild:

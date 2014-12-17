@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.67 2014/12/10 11:09:19 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.68 2014/12/17 14:18:42 ultrabug Exp $
+
+*uwsgi-2.0.8-r3 (17 Dec 2014)
+
+  17 Dec 2014; Ultrabug <ultrabug@gentoo.org> +uwsgi-2.0.8-r3.ebuild,
+  +files/uwsgi.initd-r5:
+  respect UWSGI_EMPEROR_GROUP setting on PIDPATH creation
 
 *uwsgi-2.0.8-r2 (10 Dec 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_musicindex/mod_musicindex-1.4.1.ebuild,v 1.1 2013/11/13 20:52:40 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_musicindex/mod_musicindex-1.4.1.ebuild,v 1.2 2014/12/17 14:24:51 pacho Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ APACHE2_MOD_CONF="50_${PN}"
 APACHE2_MOD_DEFINE="MUSICINDEX"
 DOCFILES="AUTHORS BUGS ChangeLog README UPGRADING"
 
-need_apache2_2
+need_apache2
 
 src_configure() {
 	econf \
