@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_access_dnsbl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_access_dnsbl/ChangeLog,v 1.5 2012/11/27 19:03:15 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_access_dnsbl/ChangeLog,v 1.6 2014/12/17 20:22:36 mjo Exp $
+
+*mod_access_dnsbl-0.02 (17 Dec 2014)
+
+  17 Dec 2014; Michael Orlitzky <mjo@gentoo.org> +mod_access_dnsbl-0.02.ebuild:
+  Version bump for apache-2.4.x support, bug #532780.
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-
