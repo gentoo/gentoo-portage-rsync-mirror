@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.313 2014/12/15 22:37:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.314 2014/12/17 07:11:54 jer Exp $
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> mc-4.8.13.ebuild:
+  Stable for HPPA (bug #532424).
 
 *mc-4.8.13-r1 (15 Dec 2014)
 

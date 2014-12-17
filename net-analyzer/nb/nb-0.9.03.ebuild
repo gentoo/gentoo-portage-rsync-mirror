@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.8.16.ebuild,v 1.1 2014/05/03 21:30:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.9.03.ebuild,v 1.1 2014/12/17 07:21:06 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -9,17 +9,20 @@ DESCRIPTION="Nodebrain is a tool to monitor and do event correlation"
 HOMEPAGE="http://nodebrain.sourceforge.net/"
 SRC_URI="mirror://sourceforge/nodebrain/nodebrain-${PV}.tar.gz"
 
-LICENSE="GPL-2 LGPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static-libs"
 
+CDEPEND="dev-libs/libedit"
 DEPEND="
+	${CDEPEND}
 	dev-lang/perl
 	virtual/pkgconfig
 	sys-apps/texinfo
 "
 RDEPEND="
+	${CDEPEND}
 	!sys-boot/netboot
 	!www-apps/nanoblogger
 "

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rkelly-remix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rkelly-remix/ChangeLog,v 1.1 2014/04/11 02:31:21 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rkelly-remix/ChangeLog,v 1.2 2014/12/17 07:08:47 graaff Exp $
+
+  17 Dec 2014; Hans de Graaff <graaff@gentoo.org> rkelly-remix-0.0.6.ebuild:
+  Add missing dependency on hoe. Use custom test phase to avoid minitest
+  incompatibilities triggered by hoe tests. Add ruby20, ruby21.
 
 *rkelly-remix-0.0.6 (11 Apr 2014)
 
