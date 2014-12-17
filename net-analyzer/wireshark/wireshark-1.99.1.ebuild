@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.1.ebuild,v 1.1 2014/12/11 00:15:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.1.ebuild,v 1.2 2014/12/17 15:05:16 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps multilib qt4-r2 user
@@ -14,7 +14,7 @@ SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos lua +netlink +pcap
-	portaudio +qt4 qt5 selinux smi sse4_2 ssl zlib
+	portaudio +qt4 qt5 selinux sbc smi sse4_2 ssl zlib
 "
 REQUIRED_USE="
 	ssl? ( crypt )
@@ -54,6 +54,7 @@ CDEPEND="
 		dev-qt/qtwidgets:5
 		x11-misc/xdg-utils
 	)
+	sbc? ( media-libs/sbc )
 	smi? ( net-libs/libsmi )
 	ssl? ( net-libs/gnutls )
 	zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
@@ -93,7 +94,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
 		"${FILESDIR}"/${PN}-1.99.0.1975-gcc_option.patch \
 		"${FILESDIR}"/${PN}-1.99.0.1975-sse4_2.patch \
-		"${FILESDIR}"/${PN}-1.99.0-qt5.patch
+		"${FILESDIR}"/${PN}-1.99.0-qt5.patch \
+		"${FILESDIR}"/${PN}-1.99.1-sbc.patch
 
 	epatch_user
 
@@ -148,6 +150,7 @@ src_configure() {
 		$(use_with qt5) \
 		$(usex qt5 MOC=/usr/$(get_libdir)/qt5/bin/moc '') \
 		$(usex qt5 UIC=/usr/$(get_libdir)/qt5/bin/uic '') \
+		$(use_with sbc) \
 		$(use_with smi libsmi) \
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \

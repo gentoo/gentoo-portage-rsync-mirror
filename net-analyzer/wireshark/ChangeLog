@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.678 2014/12/11 00:15:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.680 2014/12/17 15:19:03 jer Exp $
+
+*wireshark-1.12.2-r1 (17 Dec 2014)
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> +wireshark-1.12.2-r1.ebuild,
+  wireshark-99999999.ebuild:
+  Same.
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.99.1.ebuild,
+  +files/wireshark-1.99.1-sbc.patch, metadata.xml:
+  Make media-libs/sbc support explicit.
 
 *wireshark-1.99.1 (11 Dec 2014)
 

@@ -32,6 +32,7 @@
 <flag name='netlink'>Use <pkg>dev-libs/libnl</pkg></flag>
 <flag name='pcap'>Use <pkg>net-libs/libpcap</pkg> for network packet capturing (build dumpcap, rawshark)</flag>
 <flag name='qt4'>Build the wireshark executable with an experimental Qt UI instead of GTK+.</flag>
+<flag name='sbc'>Use <pkg>media-libs/sbc</pkg> for playing back SBC encoded packets</flag>
 <flag name='smi'>Use <pkg>net-libs/libsmi</pkg> to resolve numeric OIDs into human readable format</flag>
 <flag name='sse4_2'> Support SSE4.2 (Streaming SIMD Extensions 4.2) instructions</flag>
 </use>

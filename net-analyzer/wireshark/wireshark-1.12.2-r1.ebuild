@@ -1,20 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.5 2014/12/17 15:19:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.2-r1.ebuild,v 1.1 2014/12/17 15:19:03 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps git-r3 multilib qt4-r2 user
+inherit autotools eutils fcaps multilib qt4-r2 user
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-EGIT_REPO_URI="https://code.wireshark.org/review/wireshark"
+SRC_URI="${HOMEPAGE}download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos lua +netlink +pcap
-	portaudio +qt4 qt5 sbc selinux smi sse4_2 ssl zlib
+	portaudio +qt4 qt5 sbc selinux smi ssl zlib
 "
 REQUIRED_USE="
 	ssl? ( crypt )
@@ -87,17 +87,11 @@ pkg_setup() {
 	enewgroup wireshark
 }
 
-src_unpack() {
-	git-r3_src_unpack
-}
-
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
-		"${FILESDIR}"/${PN}-1.99.0.1975-gcc_option.patch \
-		"${FILESDIR}"/${PN}-1.99.0.1975-sse4_2.patch \
 		"${FILESDIR}"/${PN}-1.99.0-qt5.patch \
 		"${FILESDIR}"/${PN}-1.99.1-sbc.patch
 
@@ -159,7 +153,6 @@ src_configure() {
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
 		$(usex netlink --with-libnl=3 --without-libnl) \
-		$(usex sse4_2 --enable-sse4_2 '') \
 		--disable-profile-build \
 		--disable-usr-local \
 		--disable-warnings-as-errors \
