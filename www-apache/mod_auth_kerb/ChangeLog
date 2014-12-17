@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_kerb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.15 2014/08/10 20:13:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.16 2014/12/17 10:58:17 pacho Exp $
+
+  17 Dec 2014; Pacho Ramos <pacho@gentoo.org> -mod_auth_kerb-5.4.ebuild,
+  mod_auth_kerb-5.4-r1.ebuild:
+  Fix dependency as this if for all apache2 versions, drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mod_auth_kerb-5.3.ebuild,
   mod_auth_kerb-5.4-r1.ebuild, mod_auth_kerb-5.4.ebuild:

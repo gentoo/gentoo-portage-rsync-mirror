@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.4-r1.ebuild,v 1.3 2014/08/10 20:13:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/mod_auth_kerb-5.4-r1.ebuild,v 1.4 2014/12/17 10:58:17 pacho Exp $
 
 inherit apache-module eutils
 
@@ -21,7 +21,7 @@ APACHE2_MOD_DEFINE="AUTH_KERB"
 
 DOCFILES="INSTALL README"
 
-need_apache2_2
+need_apache2
 
 src_unpack() {
 	unpack ${A}
