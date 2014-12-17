@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-fonts/oxygen-fonts-5.1.0.1.ebuild,v 1.1 2014/10/15 13:34:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/oxygen-fonts/oxygen-fonts-5.1.2.ebuild,v 1.1 2014/12/17 13:35:55 mrueg Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit cmake-utils font
 
 DESCRIPTION="Desktop/GUI font family for integrated use with the KDE desktop"
 HOMEPAGE="https://projects.kde.org/projects/kde/workspace/oxygen-fonts"
-SRC_URI="mirror://kde/stable/plasma/5.1.0/${P}.tar.xz"
+SRC_URI="mirror://kde/stable/plasma/${PV}/${P}.tar.xz"
 
 LICENSE="OFL-1.1"
 SLOT="5"
@@ -20,8 +20,6 @@ DEPEND="
 	media-gfx/fontforge
 "
 RDEPEND="!media-fonts/oxygen-fonts"
-
-S=${WORKDIR}/${PN}-5.1.0
 
 src_configure() {
 	local mycmakeargs=(
