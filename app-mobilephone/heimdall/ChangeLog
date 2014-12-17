@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/heimdall
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/heimdall/ChangeLog,v 1.9 2014/06/02 22:45:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/heimdall/ChangeLog,v 1.10 2014/12/17 09:07:29 polynomial-c Exp $
+
+  17 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> heimdall-9999.ebuild:
+  Fixed removal of libusb (bug #532756).
 
 *heimdall-1.4.1 (02 Jun 2014)
 
