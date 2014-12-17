@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gtetrinet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.29 2014/12/05 11:54:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.30 2014/12/17 09:49:07 pacho Exp $
+
+  17 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gtetrinet-0.7.11-format-security.patch:
+  I forgot to commit the patch, thanks to wschlich for reporting
 
 *gtetrinet-0.7.11-r3 (05 Dec 2014)
 
