@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/kwindowsystem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kwindowsystem/ChangeLog,v 1.4 2014/12/08 16:24:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kwindowsystem/ChangeLog,v 1.5 2014/12/17 21:24:22 mrueg Exp $
+
+*kwindowsystem-5.5.0 (17 Dec 2014)
+
+  17 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +kwindowsystem-5.5.0.ebuild:
+  Version bump.
 
   08 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -kwindowsystem-5.3.1.ebuild:
   Cleanup old.

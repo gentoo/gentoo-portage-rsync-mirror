@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/plasma
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/plasma/ChangeLog,v 1.5 2014/12/08 16:23:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/plasma/ChangeLog,v 1.6 2014/12/17 21:24:21 mrueg Exp $
+
+*plasma-5.5.0 (17 Dec 2014)
+
+  17 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +plasma-5.5.0.ebuild:
+  Version bump.
 
   08 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -plasma-5.3.1.ebuild:
   Cleanup old.
