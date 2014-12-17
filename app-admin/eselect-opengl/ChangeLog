@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.129 2014/12/10 03:32:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.130 2014/12/17 19:09:41 mgorny Exp $
+
+  17 Dec 2014; Michał Górny <mgorny@gentoo.org> eselect-opengl-1.3.0.ebuild,
+  eselect-opengl-1.3.1.ebuild:
+  Remove correct old file, reported by nE0sIghT.
 
   10 Dec 2014; Patrick Lauer <patrick@gentoo.org> eselect-opengl-1.2.7.ebuild:
   Fix xorg-server dep

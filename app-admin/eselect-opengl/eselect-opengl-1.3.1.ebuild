@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1.ebuild,v 1.1 2014/12/08 23:18:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1.ebuild,v 1.2 2014/12/17 19:09:41 mgorny Exp $
 
 EAPI=5
 
@@ -40,9 +40,9 @@ pkg_postinst() {
 	if [[ -n "${OLD_IMPL}" && "${OLD_IMPL}" != '(none)' ]] ; then
 		eselect opengl set "${OLD_IMPL}"
 	fi
-	if [[ -f ${EROOT}/etc/env.d/02opengl ]]; then
+	if [[ -f ${EROOT}/etc/env.d/03opengl ]]; then
 		# remove the old file, moved now
-		rm -vf "${EROOT}"/etc/env.d/02opengl
+		rm -vf "${EROOT}"/etc/env.d/03opengl
 	fi
 }
 

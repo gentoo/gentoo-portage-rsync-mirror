@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.0-r1.ebuild,v 1.1 2014/11/24 16:05:28 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.1.ebuild,v 1.1 2014/12/17 19:05:55 k_f Exp $
 
 EAPI="5"
 
@@ -158,7 +158,7 @@ pkg_postinst() {
 	ewarn "and to start a fresh daemon just run 'gpg-agent --daemon'."
 
 	if [[ -n ${REPLACING_VERSIONS} ]]; then
-		elog "If upgrading from a version prior than 2.1 you will have to re-import"
+		elog "If upgrading from a version prior than 2.1 you might have to re-import"
 		elog "secret keys after restarting the gpg-agent as the new version is using"
 		elog "a new storage mechanism."
 		elog "You can migrate the keys using gpg --import \$HOME/.gnupg/secring.gpg"
