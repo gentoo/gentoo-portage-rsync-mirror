@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.99 2014/08/01 16:31:13 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.100 2014/12/17 14:47:55 kensington Exp $
+
+*libjpeg-turbo-1.3.1-r1 (17 Dec 2014)
+
+  17 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  +files/libjpeg-turbo-1.3.1-jstdhuff.patch,
+  +files/libjpeg-turbo-1.3.1-overrun.patch, +libjpeg-turbo-1.3.1-r1.ebuild:
+  Backport fixes for motion JPEG video frames that are encoded without the
+  default Huffman tables. Required for browsers.
 
   01 Aug 2014;  <tgall@gentoo.org> libjpeg-turbo-1.3.1.ebuild:
   initial arm64 support
