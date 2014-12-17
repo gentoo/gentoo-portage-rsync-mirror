@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/frameworkintegration-5.4.0.ebuild,v 1.2 2014/12/12 14:47:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/frameworkintegration-5.4.0.ebuild,v 1.3 2014/12/17 17:54:47 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS=" ~amd64"
 IUSE="X"
 
 RDEPEND="
-	$(add_kdebase_dep oxygen-fonts)
+	$(add_kdeplasma_dep oxygen-fonts)
 	$(add_frameworks_dep kcompletion)
 	$(add_frameworks_dep kconfig)
 	$(add_frameworks_dep kconfigwidgets)

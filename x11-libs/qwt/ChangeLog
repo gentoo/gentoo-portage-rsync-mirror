@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.132 2014/10/09 19:12:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.133 2014/12/17 18:00:19 kensington Exp $
+
+  17 Dec 2014; Michael Palimaka <kensington@gentoo.org> qwt-6.1.0.ebuild,
+  qwt-6.1.1.ebuild:
+  Pin dev-qt/qtcore and dev-qt/qtgui to SLOT 4.
 
   09 Oct 2014; Rick Farina <zerochaos@gentoo.org> qwt-6.1.0.ebuild,
   qwt-6.1.1.ebuild:
