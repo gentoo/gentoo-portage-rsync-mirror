@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_vhost_ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.11 2014/08/10 20:18:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/ChangeLog,v 1.12 2014/12/18 02:11:23 mjo Exp $
+
+*mod_vhost_ldap-2.4.0 (18 Dec 2014)
+
+  18 Dec 2014; Michael Orlitzky <mjo@gentoo.org> +mod_vhost_ldap-2.4.0.ebuild:
+  Version bump for apache-2.4.x compatibility (bug #532872).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   mod_vhost_ldap-1.0.0-r1.ebuild:
