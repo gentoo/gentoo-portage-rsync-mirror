@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/syck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.33 2014/11/29 22:43:11 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.34 2014/12/18 21:36:22 dilfridge Exp $
+
+  18 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop to maintainer-needed
 
 *syck-0.55-r5 (29 Nov 2014)
 

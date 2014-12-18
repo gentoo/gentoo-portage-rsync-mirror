@@ -4,7 +4,7 @@
 # See rsync(1) and rsyncd.conf(5) man pages for help
 
 # This line is required by the /etc/init.d/rsyncd script
-pid file = @GENTOO_PORTAGE_EPREFIX@/var/run/rsyncd.pid
+pid file = @GENTOO_PORTAGE_EPREFIX@/run/rsyncd.pid
 use chroot = yes
 read only = yes
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/bucardo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/ChangeLog,v 1.7 2014/12/01 08:56:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/bucardo/ChangeLog,v 1.8 2014/12/18 21:41:51 dilfridge Exp $
+
+  18 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop perl herd
 
 *bucardo-5.2.0 (01 Dec 2014)
 
