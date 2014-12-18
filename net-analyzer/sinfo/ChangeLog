@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/sinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.15 2014/07/17 00:46:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sinfo/ChangeLog,v 1.17 2014/12/18 10:22:12 jer Exp $
+
+  18 Dec 2014; Jeroen Roovers <jer@gentoo.org> files/sinfo-0.0.48-acinclude.m4:
+  Strip AX_WITH_CURSES from acinclude.m4.
+
+*sinfo-0.0.48 (18 Dec 2014)
+
+  18 Dec 2014; Jeroen Roovers <jer@gentoo.org> +sinfo-0.0.48.ebuild,
+  +files/sinfo-0.0.48-acinclude.m4:
+  Version bump.
 
   17 Jul 2014; Jeroen Roovers <jer@gentoo.org> sinfo-0.0.47.ebuild,
   +files/sinfo-0.0.47-tinfo.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warnings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.7 2014/12/14 17:52:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.8 2014/12/18 10:04:23 zlogene Exp $
+
+  18 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Warnings-0.16.0.ebuild:
+  Add ~ia64 keyword
 
   14 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Test-Warnings-0.16.0.ebuild:
   Add ~amd64-fbsd keyword wrt bug #531172

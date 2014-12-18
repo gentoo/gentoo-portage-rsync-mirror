@@ -1,12 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4-r1.ebuild,v 1.17 2014/12/16 20:41:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ply-3.4-r1.ebuild,v 1.18 2014/12/18 10:15:14 pacho Exp $
 
 EAPI=5
-
-# if it doesn't work ...
-RESTRICT="test"
-
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
@@ -22,7 +18,10 @@ IUSE="examples"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
+
+# See bug #458648 for reference
 RESTRICT="test"
+
 DOCS=( ANNOUNCE CHANGES README TODO )
 
 python_test() {
