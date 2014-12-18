@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/mod_authn_sasl-1.2.ebuild,v 1.3 2014/10/23 19:45:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/mod_authn_sasl-1.2.ebuild,v 1.4 2014/12/18 13:20:03 pacho Exp $
 
 inherit eutils apache-module
 
@@ -20,7 +20,7 @@ APXS2_ARGS="-c ${PN}.c -lsasl2"
 APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="AUTHN_SASL"
 
-need_apache2_2
+need_apache2
 
 src_install() {
 	apache-module_src_install

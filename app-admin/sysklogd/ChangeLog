@@ -1,6 +1,19 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.101 2014/11/29 19:43:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.102 2014/12/18 13:03:07 polynomial-c Exp $
+
+  18 Dec 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -sysklogd-1.4.2_pre20061230-r2.ebuild, -sysklogd-1.5-r2.ebuild,
+  -sysklogd-1.5-r3.ebuild, -files/sysklogd-1.4.1-accept.patch,
+  -files/sysklogd-1.4.1-caen-owl-klogd-drop-root.diff,
+  -files/sysklogd-1.4.1-caen-owl-syslogd-bind.diff,
+  -files/sysklogd-1.4.1-caen-owl-syslogd-drop-root.diff,
+  -files/sysklogd-1.4.1-ksym-headers.patch,
+  -files/sysklogd-1.4.1-punt-SO_BSDCOMPAT.patch,
+  -files/sysklogd-1.4.1-querymod.patch, -files/sysklogd.rc6,
+  -files/syslog.conf, -files/syslog-cron, -files/syslogd-listfiles,
+  -files/syslogd-listfiles.8:
+  Removed old (vulnerable versions).
 
   29 Nov 2014; Markus Meier <maekke@gentoo.org> sysklogd-1.5.1.ebuild:
   arm stable, bug #524058
