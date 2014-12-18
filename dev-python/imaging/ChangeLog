@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.92 2014/07/30 01:21:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.94 2014/12/18 20:30:01 monsieurp Exp $
+
+  18 Dec 2014; Patrice Clement <monsieurp@gentoo.org> imaging-1.1.7-r4.ebuild:
+  Added fix to -r4 file accidentally. Removing it.
+
+*imaging-1.1.7-r5 (18 Dec 2014)
+
+  18 Dec 2014; Patrice Clement <monsieurp@gentoo.org>
+  +files/imaging-1.1.7-dont-run-multiple-viewers.patch,
+  +imaging-1.1.7-r5.ebuild, imaging-1.1.7-r4.ebuild:
+  Add patch to avoid launching multiple image viewers. Fix bug 353153.
 
   30 Jul 2014; Mike Frysinger <vapier@gentoo.org>
   +files/imaging-1.1.7-ft-header-include.patch, imaging-1.1.7-r4.ebuild:

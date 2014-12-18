@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r4.ebuild,v 1.6 2014/12/18 20:30:01 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r5.ebuild,v 1.1 2014/12/18 20:24:34 monsieurp Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -42,6 +42,7 @@ python_prepare_all() {
 		"${FILESDIR}/${P}-giftrans.patch"
 		"${FILESDIR}/${P}-missing-math.patch"
 		"${FILESDIR}/${P}-ft-header-include.patch"
+		"${FILESDIR}/${P}-dont-run-multiple-viewers.patch"
 	)
 
 	# Add shebangs.
