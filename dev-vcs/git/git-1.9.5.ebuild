@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.1.3.ebuild,v 1.2 2014/11/16 22:54:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.9.5.ebuild,v 1.1 2014/12/18 22:07:08 polynomial-c Exp $
 
 EAPI=5
 
@@ -10,7 +10,6 @@ GENTOO_DEPEND_ON_PERL=no
 PYTHON_COMPAT=( python2_{6,7} )
 [[ ${PV} == *9999 ]] && SCM="git-2"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
-EGIT_MASTER=pu
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion-r1 python-single-r1 systemd ${SCM}
 
@@ -22,7 +21,7 @@ DOC_VER=${MY_PV}
 DESCRIPTION="GIT - the stupid content tracker, the revision control system heavily used by the Linux kernel team"
 HOMEPAGE="http://www.git-scm.com/"
 if [[ ${PV} != *9999 ]]; then
-	SRC_URI_SUFFIX="xz"
+	SRC_URI_SUFFIX="gz"
 	SRC_URI_GOOG="http://git-core.googlecode.com/files"
 	SRC_URI_KORG="mirror://kernel/software/scm/git"
 	SRC_URI="${SRC_URI_GOOG}/${MY_P}.tar.${SRC_URI_SUFFIX}
@@ -33,7 +32,7 @@ if [[ ${PV} != *9999 ]]; then
 			${SRC_URI_KORG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			${SRC_URI_GOOG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			)"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 else
 	SRC_URI=""
 	KEYWORDS=""
@@ -90,7 +89,7 @@ DEPEND="${CDEPEND}
 		app-text/xmlto
 	)
 	nls? ( sys-devel/gettext )
-	test? (	app-crypt/gnupg	)"
+	test? (	app-crypt/gnupg )"
 
 # Live ebuild builds man pages and HTML docs, additionally
 if [[ ${PV} == *9999 ]]; then
@@ -225,7 +224,7 @@ src_unpack() {
 
 src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-2.0.0-r2-optional-cvs.patch
+	epatch "${FILESDIR}"/git-1.9.0_rc3-optional-cvs.patch
 
 	# install mediawiki perl modules also in vendor_dir
 	# hack, needs better upstream solution
@@ -325,12 +324,7 @@ src_compile() {
 
 	if use subversion ; then
 		cd "${S}"/contrib/svn-fe
-		# by defining EXTLIBS we override the detection for libintl and
-		# libiconv, bug #516168
-		local nlsiconv=
-		use nls && use !elibc_glibc && nlsiconv+=" -lintl"
-		use iconv && use !elibc_glibc && nlsiconv+=" -liconv"
-		git_emake EXTLIBS="${EXTLIBS} ${nlsiconv}" || die "emake svn-fe failed"
+		git_emake EXTLIBS="${EXTLIBS}" || die "emake svn-fe failed"
 		if use doc ; then
 			git_emake svn-fe.{1,html} || die "emake svn-fe.1 svn-fe.html failed"
 		fi
@@ -378,7 +372,6 @@ src_install() {
 	use doc && doinfo Documentation/{git,gitman}.info
 
 	newbashcomp contrib/completion/git-completion.bash ${PN}
-	bashcomp_alias git gitk
 	# Not really a bash-completion file (bug #477920)
 	# but still needed uncompressed (bug #507480)
 	insinto /usr/share/${PN}
@@ -421,6 +414,10 @@ src_install() {
 		cd "${S}"
 	fi
 
+	# git-diffall
+	dobin contrib/diffall/git-diffall
+	newdoc contrib/diffall/README git-diffall.txt
+
 	# diff-highlight
 	dobin contrib/diff-highlight/diff-highlight
 	newdoc contrib/diff-highlight/README README.diff-highlight
@@ -448,11 +445,19 @@ src_install() {
 		cd "${S}"
 	fi
 
+	# remote-helpers
+	if use python ; then
+		python_scriptinto /usr/libexec/git-core/
+		python_doscript "${S}"/contrib/remote-helpers/git-remote-{bzr,hg}
+		python_optimize
+	fi
+
 	dodir /usr/share/${PN}/contrib
 	# The following are excluded:
 	# completion - installed above
 	# credential/gnome-keyring TODO
 	# diff-highlight - done above
+	# diffall - done above
 	# emacs - installed above
 	# examples - these are stuff that is not used in Git anymore actually
 	# git-jump - done above
@@ -467,7 +472,7 @@ src_install() {
 	for i in \
 		buildsystems convert-objects fast-import \
 		hg-to-git hooks remotes2config.sh rerere-train.sh \
-		stats workdir \
+		stats vim workdir \
 		; do
 		cp -rf \
 			"${S}"/contrib/${i} \
@@ -515,7 +520,7 @@ src_install() {
 }
 
 src_test() {
-	local disabled="t7004-tag.sh" #520270
+	local disabled=""
 	local tests_cvs="t9200-git-cvsexportcommit.sh \
 					t9400-git-cvsserver-server.sh \
 					t9401-git-cvsserver-crlf.sh \

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.9.3.ebuild,v 1.5 2014/11/16 22:54:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.5.6.ebuild,v 1.1 2014/12/18 22:07:08 polynomial-c Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ if [[ ${PV} != *9999 ]]; then
 			${SRC_URI_KORG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			${SRC_URI_GOOG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 			)"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 else
 	SRC_URI=""
 	KEYWORDS=""
@@ -224,7 +224,10 @@ src_unpack() {
 
 src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-1.9.0_rc3-optional-cvs.patch
+	epatch "${FILESDIR}"/git-1.8.5-optional-cvs.patch
+
+	# honor and correctly quote DISTDIR (from upstream git master)
+	epatch "${FILESDIR}"/git-1.8.5-mw-destdir.patch
 
 	# install mediawiki perl modules also in vendor_dir
 	# hack, needs better upstream solution
@@ -373,9 +376,7 @@ src_install() {
 
 	newbashcomp contrib/completion/git-completion.bash ${PN}
 	# Not really a bash-completion file (bug #477920)
-	# but still needed uncompressed (bug #507480)
-	insinto /usr/share/${PN}
-	doins contrib/completion/git-prompt.sh
+	dodoc contrib/completion/git-prompt.sh
 
 	if use emacs ; then
 		elisp-install ${PN} contrib/emacs/git.{el,elc}
@@ -628,8 +629,8 @@ showpkgdeps() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	einfo "Please read /usr/share/bash-completion/git for Git bash command completion"
-	einfo "Please read /usr/share/git/git-prompt.sh for Git bash prompt"
-	einfo "Note that the prompt bash code is now in that separate script"
+	einfo "Please read /usr/share/bash-completion/git-prompt for Git bash prompt"
+	einfo "Note that the prompt bash code is now in the seperate script"
 	elog "These additional scripts need some dependencies:"
 	echo
 	showpkgdeps git-quiltimport "dev-util/quilt"
