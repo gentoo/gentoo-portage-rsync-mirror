@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.162 2014/12/18 19:34:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.163 2014/12/18 20:48:07 hwoarang Exp $
+
+  18 Dec 2014; Markos Chandras <hwoarang@gentoo.org> buildbot-0.8.10.ebuild,
+  buildbot-9999.ebuild:
+  buildbot-0.8.8 is compatible with sqlalchemy-0.8 and higher
 
   18 Dec 2014; Markos Chandras <hwoarang@gentoo.org> -buildbot-0.8.8-r2.ebuild:
   Drop 0.8.8
