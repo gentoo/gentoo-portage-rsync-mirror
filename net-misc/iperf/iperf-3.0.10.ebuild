@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-3.0.8.ebuild,v 1.1 2014/10/04 10:51:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-3.0.10.ebuild,v 1.1 2014/12/18 09:57:48 jer Exp $
 
 EAPI=5
 inherit autotools eutils
