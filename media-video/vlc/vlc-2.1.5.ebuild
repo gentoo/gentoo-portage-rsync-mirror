@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.5.ebuild,v 1.5 2014/12/15 05:50:48 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.5.ebuild,v 1.6 2014/12/18 13:36:50 kensington Exp $
 
 EAPI="5"
 
@@ -255,8 +255,6 @@ src_prepare() {
 	# Setting QT_SELECT environment variable will enforce correct binaries.
 	if use qt4; then
 		export QT_SELECT=qt4
-	elif use qt5; then
-		export QT_SELECT=qt5
 	fi
 }
 
