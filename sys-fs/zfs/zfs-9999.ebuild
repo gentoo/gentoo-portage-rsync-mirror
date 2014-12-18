@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.56 2014/12/01 07:04:45 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.57 2014/12/18 18:09:07 ryao Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3,3_4} )
@@ -91,7 +91,7 @@ src_configure() {
 		--bindir="${EPREFIX}/bin"
 		--sbindir="${EPREFIX}/sbin"
 		--with-config=user
-		--with-dracutdir="/usr$(get_libdir)/dracut"
+		--with-dracutdir="/usr/$(get_libdir)/dracut"
 		--with-linux="${KV_DIR}"
 		--with-linux-obj="${KV_OUT_DIR}"
 		--with-udevdir="$(get_udevdir)"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.88 2014/12/01 14:39:13 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.89 2014/12/18 18:09:07 ryao Exp $
+
+  18 Dec 2014; Richard Yao <ryao@gentoo.org> zfs-9999.ebuild:
+  Fix typo in dracut module installation on 9999 ebuild, thanks prometheanfire
 
 *zfs-0.6.3-r2 (01 Dec 2014)
 
