@@ -1,15 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.8-r1.ebuild,v 1.5 2014/02/24 01:46:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/buildbot-slave-0.8.10.ebuild,v 1.1 2014/12/18 19:33:54 hwoarang Exp $
 
 EAPI="5"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
-DISTUTILS_SRC_TEST="trial buildslave"
-DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
-
-inherit distutils readme.gentoo systemd user
+PYTHON_COMPAT=( python2_7 )
+inherit distutils-r1 readme.gentoo systemd user
 
 DESCRIPTION="BuildBot Slave Daemon"
 HOMEPAGE="http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot-slave"
@@ -20,22 +15,19 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-interix ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-interix ~amd64-linux"
 IUSE="test"
 
-RDEPEND="dev-python/setuptools
-	dev-python/twisted-core
-	!!<dev-util/buildbot-0.8.1
-	!<dev-util/buildbot-0.8.3"
+RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/twisted-core[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/mock )"
+	test? ( dev-python/mock[${PYTHON_USEDEP}] )"
 
 PYTHON_MODNAME="buildslave"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	python_pkg_setup
 	enewuser buildbot
 
 	DOC_CONTENTS="The \"buildbot\" user and the \"buildslave\" init script has been added
@@ -48,7 +40,7 @@ pkg_setup() {
 }
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 
 	doman docs/buildslave.1
 
@@ -60,6 +52,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
 	readme.gentoo_print_elog
 }
