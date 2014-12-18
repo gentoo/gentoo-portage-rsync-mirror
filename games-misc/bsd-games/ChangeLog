@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/bsd-games
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.56 2013/11/14 18:01:35 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.57 2014/12/18 22:41:46 mr_bones_ Exp $
+
+  18 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> bsd-games-2.17-r5.ebuild:
+  EAPI=5; update Debian patch; export GAMES_ variables for bug #531200
 
   14 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -bsd-games-2.17-r4.ebuild:

@@ -1,15 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r5.ebuild,v 1.6 2013/11/12 17:49:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r5.ebuild,v 1.7 2014/12/18 22:41:46 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
-DEB_PATCH_VER=21
+DEB_PATCH_VER=22
 DESCRIPTION="collection of games from NetBSD"
 HOMEPAGE="http://www.advogato.org/proj/bsd-games/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/${P}.tar.gz
-	mirror://debian/pool/main/b/bsdgames/bsdgames_${PV}-${DEB_PATCH_VER}.debian.tar.gz"
+	mirror://debian/pool/main/b/bsdgames/bsdgames_${PV}-${DEB_PATCH_VER}.debian.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -37,6 +37,9 @@ src_prepare() {
 	local d="${WORKDIR}"/debian/patches
 	EPATCH_SOURCE="${d}" epatch $(<"${d}"/series)
 
+	# Used by gentoo config.params. See bug 531200
+	export GAMES_BINDIR GAMES_DATADIR GAMES_STATEDIR
+
 	epatch \
 		"${FILESDIR}"/${P}-64bitutmp.patch \
 		"${FILESDIR}"/${P}-headers.patch \
@@ -50,8 +53,7 @@ src_prepare() {
 
 	sed -i \
 		-e "s:/usr/games:${GAMES_BINDIR}:" \
-		wargames/wargames \
-		|| die "sed wargames failed"
+		wargames/wargames || die
 
 	sed -i \
 		-e '/^CC :=/d' \
@@ -59,18 +61,17 @@ src_prepare() {
 		-e '/^CFLAGS/s/OPTIMIZE/CFLAGS/' \
 		-e '/^CXXFLAGS/s/OPTIMIZE/CXXFLAGS/' \
 		-e '/^LDFLAGS/s/LDFLAGS := /LDFLAGS := \$(LDFLAGS) /' \
-		Makeconfig.in \
-		|| die 'sed failed'
+		Makeconfig.in || die
 
-	cp "${FILESDIR}"/config.params-gentoo config.params
-	echo bsd_games_cfg_usrlibdir=\"$(games_get_libdir)\" >> ./config.params
-	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params
-	echo bsd_games_cfg_docdir=\"/usr/share/doc/${PF}\" >> ./config.params
+	cp "${FILESDIR}"/config.params-gentoo config.params || die
+	echo bsd_games_cfg_usrlibdir=\"$(games_get_libdir)\" >> ./config.params || die
+	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params || die
+	echo bsd_games_cfg_docdir=\"/usr/share/doc/${PF}\" >> ./config.params || die
 }
 
 src_test() {
 	addwrite /dev/full
-	emake -j1 check || die "make check failed"
+	emake -j1 check
 }
 
 build_game() {
@@ -78,13 +79,13 @@ build_game() {
 }
 
 do_statefile() {
-	touch "${D}/${GAMES_STATEDIR}/${1}"
-	chmod ug+rw "${D}/${GAMES_STATEDIR}/${1}"
+	touch "${D}/${GAMES_STATEDIR}/${1}" || die
+	chmod ug+rw "${D}/${GAMES_STATEDIR}/${1}" || die
 }
 
 src_install() {
 	dodir "${GAMES_BINDIR}" "${GAMES_STATEDIR}" /usr/share/man/man{1,6}
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install
 
 	dodoc AUTHORS BUGS ChangeLog ChangeLog.0 \
 		README PACKAGING SECURITY THANKS TODO YEAR2000
@@ -125,9 +126,8 @@ src_install() {
 		newman factor/factor.6 primes.6
 	fi
 
-	prepalldocs
 	prepgamesdirs
 
 	# state dirs
-	chmod -R ug+rw "${D}/${GAMES_STATEDIR}"/*
+	chmod -R ug+rw "${D}/${GAMES_STATEDIR}"/* || die
 }
