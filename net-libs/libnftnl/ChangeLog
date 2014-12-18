@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnftnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.8 2014/09/24 01:25:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.9 2014/12/18 16:28:17 mrueg Exp $
+
+*libnftnl-1.0.3 (18 Dec 2014)
+
+  18 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +libnftnl-1.0.3.ebuild,
+  -libnftnl-1.0.2.ebuild:
+  Version bump. Cleanup old.
 
   24 Sep 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/libnftnl-1.0.0-91264d8.patch, -libnftnl-1.0.0-r2.ebuild:
