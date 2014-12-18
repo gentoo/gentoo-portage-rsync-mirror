@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/bzip2 dev-libs/libxml2:2 sys-libs/zlib virtual/libiconv clucene? ( >=dev-cpp/clucene-0.9.21[-debug] ) dbus? ( sys-apps/dbus qt4? ( dev-qt/qtdbus:4 ) ) exif? ( media-gfx/exiv2:= ) fam? ( virtual/fam ) ffmpeg? ( virtual/ffmpeg ) log? ( >=dev-libs/log4cxx-0.10.0 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
 SLOT=0
 SRC_URI=http://www.vandenoever.info/software/strigi/strigi-0.7.8.tar.bz2
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=597524e34a614f7a2d2d62cf4d9fc241

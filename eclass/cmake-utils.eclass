@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.112 2014/10/27 09:49:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.113 2014/12/18 16:39:08 kensington Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -450,6 +450,7 @@ enable_cmake-utils_src_configure() {
 	if [[ ${CMAKE_BUILD_TYPE} = Gentoo ]]; then
 		# Handle release builds
 		if ! has debug ${IUSE//+} || ! use debug; then
+			local CPPFLAGS=${CPPFLAGS}
 			append-cppflags -DNDEBUG
 		fi
 	fi

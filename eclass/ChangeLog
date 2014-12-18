@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1467 2014/12/18 14:35:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1468 2014/12/18 16:39:08 kensington Exp $
+
+  18 Dec 2014; Michael Palimaka <kensington@gentoo.org> cmake-utils.eclass:
+  Declare local CPPFLAGS to avoid multiple appends in cmake-multilib.
 
   18 Dec 2014; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Fix breakage caused by recent multilib-build.eclass changes (bug 532510).

@@ -7,5 +7,5 @@ KEYWORDS=~alpha amd64 arm hppa ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=http://game-music-emu.googlecode.com/files/game-music-emu-0.6.0.tar.bz2
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=60b9bcdf88a211fa67a9e6ddc1c977bc

@@ -7,5 +7,5 @@ IUSE=dbus debug +download-subs linguas_bg linguas_ca linguas_cs linguas_da lingu
 LICENSE=GPL-2
 RDEPEND=dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 ) download-subs? ( dev-libs/quazip ) media-video/mplayer2[libass,png]
 SLOT=0
-_eclasses_=cmake-utils	e2cc76ea65ae78da8e4696dad93f5d29	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=dd590e9b120fb09ed5dc024740badcdf
