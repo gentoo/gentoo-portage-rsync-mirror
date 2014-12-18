@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=lua? ( >=dev-lang/lua-5.1 ) >=dev-libs/boost-1.33.1
+DESCRIPTION=The PowerDNS Recursor
+EAPI=4
+HOMEPAGE=http://www.powerdns.com/
+IUSE=lua
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=lua? ( >=dev-lang/lua-5.1 ) !<net-dns/pdns-2.9.20-r1
+SLOT=0
+SRC_URI=http://downloads.powerdns.com/releases/pdns-recursor-3.6.1.tar.bz2
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=5fd2e0021a2ebc33e8a0a5f3486d14a8

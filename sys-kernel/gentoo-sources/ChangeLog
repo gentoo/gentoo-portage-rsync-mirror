@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1458 2014/12/16 20:58:21 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1459 2014/12/18 21:11:20 zlogene Exp $
+
+  18 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> gentoo-sources-3.17.7.ebuild:
+  amd64 stable wrt bug #532934
 
 *gentoo-sources-3.10.63 (17 Dec 2014)
 

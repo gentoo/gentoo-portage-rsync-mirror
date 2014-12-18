@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.406 2014/12/18 11:15:49 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.407 2014/12/18 21:05:55 tamiko Exp $
+
+*libvirt-1.2.11-r2 (18 Dec 2014)
+
+  18 Dec 2014; Matthias Maier <tamiko@gentoo.org> +files/libvirtd.init-r14,
+  +libvirt-1.2.11-r2.ebuild, -libvirt-1.2.11-r1.ebuild, files/libvirtd.init-r13,
+  libvirt-9999.ebuild:
+  fail prominently in case of config directories being a regular file, bug
+  #532892
 
 *libvirt-1.2.11-r1 (18 Dec 2014)
 
