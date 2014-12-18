@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fusil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/ChangeLog,v 1.11 2014/08/10 21:11:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/ChangeLog,v 1.12 2014/12/17 23:25:56 monsieurp Exp $
+
+  17 Dec 2014; Patrice Clement <monsieurp@gentoo.org> fusil-1.5.ebuild:
+  Replaced && and || combo by an if else then statement. Fix #513268.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fusil-1.5.ebuild:
   QA: drop trailing '.' from DESCRIPTION

@@ -1,6 +1,11 @@
-# ChangeLog for kde-base/oxygen-fonts
+# ChangeLog for kde-plasma/oxygen-fonts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-plasma/oxygen-fonts/ChangeLog,v 1.1 2014/12/17 13:35:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/oxygen-fonts/ChangeLog,v 1.2 2014/12/17 23:05:59 mrueg Exp $
+
+*oxygen-fonts-5.1.2 (17 Dec 2014)
+
+  18 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +oxygen-fonts-5.1.2.ebuild:
+  Version bump.
 
 *oxygen-fonts-5.1.0.1 (15 Oct 2014)
 

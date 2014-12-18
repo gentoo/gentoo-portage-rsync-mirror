@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmetalink
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.21 2014/06/18 19:43:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmetalink/ChangeLog,v 1.22 2014/12/17 23:25:53 jer Exp $
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> libmetalink-0.1.1-r1.ebuild:
+  Stable for HPPA (bug #526012).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libmetalink-0.1.1-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

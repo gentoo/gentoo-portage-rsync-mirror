@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.273 2014/12/13 00:21:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.274 2014/12/17 23:03:05 mrueg Exp $
+
+  17 Dec 2014; Manuel Rüger <mrueg@gentoo.org> digikam-4.4.0-r1.ebuild:
+  Add kde-applications dependency option.
 
   13 Dec 2014; Manuel Rüger <mrueg@gentoo.org> digikam-4.4.0-r1.ebuild:
   Fix typo in dependency.

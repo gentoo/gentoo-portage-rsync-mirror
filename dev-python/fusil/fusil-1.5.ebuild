@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/fusil-1.5.ebuild,v 1.3 2014/08/10 21:11:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/fusil-1.5.ebuild,v 1.4 2014/12/17 23:25:56 monsieurp Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -20,10 +20,12 @@ DEPEND="doc? ( dev-python/docutils[${PYTHON_USEDEP}] )"
 RDEPEND=">=dev-python/python-ptrace-0.7[${PYTHON_USEDEP}]"
 
 python_compile_all() {
-	use doc && emake -C doc RST2HTML="rst2html.py" || die "Generation of documentation failed"
+	if use doc; then
+		emake -C doc RST2HTML="rst2html.py" || die "Generation of documentation failed"
+	fi
 }
 
-python_install_all(){
+python_install_all() {
 	use doc && local HTML_DOCS=( doc/. )
 	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.4.0-r1.ebuild,v 1.5 2014/12/13 00:21:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.4.0-r1.ebuild,v 1.6 2014/12/17 23:03:05 mrueg Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ CDEPEND="
 	media-libs/jasper
 	media-libs/lcms:2
 	media-libs/lensfun
-	>=media-libs/libkface-3.3.0
+	|| ( kde-apps/libkface:4 >=media-libs/libkface-3.3.0 )
 	media-libs/libkgeomap
 	media-libs/liblqr
 	>=media-libs/libpgf-6.12.27

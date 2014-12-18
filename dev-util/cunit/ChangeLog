@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.41 2014/06/18 19:21:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.42 2014/12/17 23:25:16 jer Exp $
+
+  17 Dec 2014; Jeroen Roovers <jer@gentoo.org> cunit-2.1_p2-r1.ebuild:
+  Stable for HPPA (bug #530916).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> cunit-2.1_p2-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
