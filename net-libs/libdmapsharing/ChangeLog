@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libdmapsharing
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.23 2014/09/26 18:00:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libdmapsharing/ChangeLog,v 1.24 2014/12/18 14:59:46 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> libdmapsharing-2.9.29.ebuild:
+  x86 stable, bug 529964
 
 *libdmapsharing-2.9.29 (26 Sep 2014)
 

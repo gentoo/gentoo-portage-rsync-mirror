@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.2 2014/11/17 00:24:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.3 2014/12/18 14:35:03 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -272,10 +272,14 @@ qt4_multilib_src_configure() {
 
 	qt4_symlink_tools_to_build_dir
 
-	# toolchain setup
-	tc-export CC CXX OBJCOPY STRIP
-	export AR="$(tc-getAR) cqs"
-	export LD="$(tc-getCXX)"
+	# toolchain setup ('local -x' because of bug 532510)
+	local -x \
+		AR="$(tc-getAR) cqs" \
+		CC=$(tc-getCC) \
+		CXX=$(tc-getCXX) \
+		LD=$(tc-getCXX) \
+		OBJCOPY=$(tc-getOBJCOPY) \
+		STRIP=$(tc-getSTRIP)
 
 	# convert tc-arch to the values supported by Qt
 	local arch=

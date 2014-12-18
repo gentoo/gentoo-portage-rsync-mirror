@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/colorhug-client
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/ChangeLog,v 1.20 2014/11/11 13:02:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/ChangeLog,v 1.21 2014/12/18 14:58:08 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> colorhug-client-0.2.3.ebuild:
+  x86 stable, bug 529964
 
 *colorhug-client-0.2.3 (11 Nov 2014)
 

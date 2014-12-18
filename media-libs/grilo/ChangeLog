@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.42 2014/09/02 13:04:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.43 2014/12/18 14:58:33 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> grilo-0.2.11.ebuild:
+  x86 stable, bug 529964
 
 *grilo-0.2.11 (02 Sep 2014)
 

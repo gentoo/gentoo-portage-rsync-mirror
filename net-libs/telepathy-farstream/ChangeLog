@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-farstream
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.28 2014/12/02 14:31:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.29 2014/12/18 15:00:06 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> telepathy-farstream-0.6.2.ebuild:
+  x86 stable, bug 529964
 
   02 Dec 2014; Pacho Ramos <pacho@gentoo.org> -telepathy-farstream-0.4.0.ebuild:
   drop old

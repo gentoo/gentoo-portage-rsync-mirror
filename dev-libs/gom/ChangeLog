@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gom
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gom/ChangeLog,v 1.1 2014/09/02 13:35:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gom/ChangeLog,v 1.2 2014/12/18 14:54:45 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> gom-0.2.1.ebuild:
+  x86 stable, bug 529964
 
 *gom-0.2.1 (02 Sep 2014)
 

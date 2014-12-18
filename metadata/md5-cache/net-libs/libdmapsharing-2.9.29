@@ -4,10 +4,10 @@ DESCRIPTION=A library that implements the DMAP family of protocols
 EAPI=5
 HOMEPAGE=http://www.flyn.org/projects/libdmapsharing
 IUSE=+introspection test
-KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.36:2 x11-libs/gdk-pixbuf:2 >=net-dns/avahi-0.6 >=net-libs/libsoup-2.32:2.4 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 sys-libs/zlib introspection? ( >=dev-libs/gobject-introspection-1.30 )
 SLOT=3.0/2
 SRC_URI=http://www.flyn.org/projects/libdmapsharing/libdmapsharing-2.9.29.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=c7eddb3ac5b46f9de9d14bcb563f4e7f
+_md5_=1e4d9a0034be0ef6e50b9c60b6a2ebfb

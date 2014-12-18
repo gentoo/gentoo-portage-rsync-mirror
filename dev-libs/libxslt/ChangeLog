@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.293 2014/12/12 11:50:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.294 2014/12/18 14:55:20 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> libxslt-1.1.28-r4.ebuild:
+  x86 stable, bug 529964
 
   12 Dec 2014; Jeroen Roovers <jer@gentoo.org> libxslt-1.1.28-r4.ebuild:
   Stable for HPPA (bug #529964).

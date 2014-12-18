@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-actions/nautilus-actions-3.2.4.ebuild,v 1.1 2014/09/04 12:16:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-actions/nautilus-actions-3.2.4.ebuild,v 1.2 2014/12/18 14:57:33 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.nautilus-actions.org/ https://git.gnome.org/browse/nautilus
 
 LICENSE="GPL-2 FDL-1.3"
 SLOT="3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="

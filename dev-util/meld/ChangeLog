@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.189 2014/11/25 09:06:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.190 2014/12/18 14:56:02 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> meld-3.12.2.ebuild:
+  x86 stable, bug 529964
 
 *meld-3.12.2 (25 Nov 2014)
 

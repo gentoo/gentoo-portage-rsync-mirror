@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gtimelog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/ChangeLog,v 1.11 2014/11/11 12:09:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/ChangeLog,v 1.12 2014/12/18 14:53:59 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> gtimelog-0.8.1.ebuild:
+  x86 stable, bug 529964
 
 *gtimelog-0.8.1 (11 Nov 2014)
 

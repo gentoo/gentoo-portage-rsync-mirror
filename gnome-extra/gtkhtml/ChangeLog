@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.296 2014/11/13 11:59:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.297 2014/12/18 14:57:28 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> gtkhtml-4.8.5.ebuild:
+  x86 stable, bug 529964
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/gtkhtml-3.32.2-g_thread_init.patch, -gtkhtml-3.32.2.ebuild,

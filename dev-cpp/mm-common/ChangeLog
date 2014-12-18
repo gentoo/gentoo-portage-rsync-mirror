@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/mm-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.28 2014/12/12 11:43:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.29 2014/12/18 14:54:19 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> mm-common-0.9.7.ebuild:
+  x86 stable, bug 529964
 
   12 Dec 2014; Jeroen Roovers <jer@gentoo.org> mm-common-0.9.7.ebuild:
   Stable for HPPA (bug #529964).

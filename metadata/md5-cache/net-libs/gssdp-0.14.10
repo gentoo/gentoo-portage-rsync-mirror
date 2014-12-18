@@ -4,10 +4,10 @@ DESCRIPTION=A GObject-based API for handling resource discovery and announcement
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Projects/GUPnP
 IUSE=+introspection +gtk abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.34.3:2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?] >=net-libs/libsoup-2.44.2:2.4[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?,abi_ppc_32(-)?,abi_ppc_64(-)?,abi_s390_32(-)?,abi_s390_64(-)?,introspection?] gtk? ( >=x11-libs/gtk+-3.0:3 ) introspection? ( || ( dev-lang/vala:0.24[vapigen] dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] ) >=dev-libs/gobject-introspection-0.6.7 ) !<net-libs/gupnp-vala-0.10.3
 SLOT=0/3
 SRC_URI=mirror://gnome/sources/gssdp/0.14/gssdp-0.14.10.tar.xz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	28e26c72b0f5257aa135444ffc6730b5	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=6781a70b4b79786147a02afa1f4c7eda
+_md5_=98666d9c2c8f7225477994e833462403

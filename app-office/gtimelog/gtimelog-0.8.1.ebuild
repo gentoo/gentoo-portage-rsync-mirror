@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/gtimelog-0.8.1.ebuild,v 1.1 2014/11/11 12:09:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtimelog/gtimelog-0.8.1.ebuild,v 1.2 2014/12/18 14:53:59 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,7 @@ SLOT="0"
 
 SRC_URI="https://launchpad.net/gtimelog/devel/${PV}/+download/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE="ayatana test"
 

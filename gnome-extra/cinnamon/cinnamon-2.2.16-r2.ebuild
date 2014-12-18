@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.16-r2.ebuild,v 1.1 2014/10/07 11:38:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.16-r2.ebuild,v 1.2 2014/12/18 14:56:52 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="+l10n +networkmanager" #+bluetooth
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 COMMON_DEPEND="
 	app-misc/ca-certificates

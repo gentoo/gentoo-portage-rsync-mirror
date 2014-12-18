@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.275 2014/11/13 10:54:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.276 2014/12/18 14:54:09 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> evince-3.12.2.ebuild:
+  x86 stable, bug 529964
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -evince-2.32.0-r4.ebuild,
   -files/evince-0.7.1-display-menu.patch,

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.40 2014/11/20 13:49:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.41 2014/12/18 14:53:28 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> geoclue-2.1.10.ebuild:
+  x86 stable, bug 529964
 
   20 Nov 2014; Pacho Ramos <pacho@gentoo.org> geoclue-2.1.9.ebuild:
   Looks like nothing need that slot on arm stable anymore (since webkit-gtk was

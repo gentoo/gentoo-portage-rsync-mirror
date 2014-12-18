@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pinpoint/pinpoint-0.1.5_pre20141026.ebuild,v 1.2 2014/10/26 11:24:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pinpoint/pinpoint-0.1.5_pre20141026.ebuild,v 1.3 2014/12/18 14:54:04 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="https://git.gnome.org/browse/${PN}/snapshot/${PN}-${MY_PV}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+gstreamer +pdf"
 
 # rsvg is used for svg-in-pdf -- clubbing it under pdf for now
