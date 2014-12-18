@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.175 2014/12/05 05:08:01 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.176 2014/12/18 12:54:02 idella4 Exp $
+
+  18 Dec 2014; Ian Delaney <idella4@gentoo.org> -matplotlib-1.2.0-r2.ebuild,
+  -matplotlib-1.2.1.ebuild, -matplotlib-1.3.1.ebuild:
+  remove some old
 
   05 Dec 2014; Benda Xu <heroxbd@gentoo.org> matplotlib-1.4.2.ebuild:
   Tune dependencies of matplotlib-1.4.2: according to INSTALL in the tarball, it
