@@ -90,5 +90,8 @@
 	<flag name="wireshark-plugins">
 		Build the <pkg>net-analyzer/wireshark</pkg> plugin for the Libvirt RPC protocol
 	</flag>
+	<flag name="glusterfs">
+		Enable GlusterFS support via <pkg>sys-cluster/glusterfs</pkg>
+	</flag>
 </use>
 </pkgmetadata>

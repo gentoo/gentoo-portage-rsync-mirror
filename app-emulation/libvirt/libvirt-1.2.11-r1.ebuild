@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.11.ebuild,v 1.1 2014/12/13 11:56:27 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.11-r1.ebuild,v 1.1 2014/12/18 11:15:49 tamiko Exp $
 
 EAPI=5
 
@@ -31,8 +31,8 @@ S="${WORKDIR}/${P%_rc*}"
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
-IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm lxc +macvtap nfs \
-	nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
+IUSE="audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm lxc \
+	+macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
 	elibc_glibc systemd"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
@@ -68,6 +68,7 @@ RDEPEND="sys-libs/readline
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	fuse? ( >=sys-fs/fuse-2.8.6 )
+	glusterfs? ( >=sys-cluster/glusterfs-3.4.1 )
 	iscsi? ( sys-block/open-iscsi )
 	lxc? ( !systemd? ( sys-power/pm-utils ) )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
@@ -279,6 +280,8 @@ src_configure() {
 	myconf+=" $(use_with lvm storage-lvm)"
 	myconf+=" $(use_with iscsi storage-iscsi)"
 	myconf+=" $(use_with parted storage-disk)"
+	mycond+=" $(use_with glusterfs)"
+	mycond+=" $(use_with glusterfs storage-gluster)"
 	myconf+=" $(use_with lvm storage-mpath)"
 	myconf+=" $(use_with rbd storage-rbd)"
 	myconf+=" $(use_with numa numactl)"
