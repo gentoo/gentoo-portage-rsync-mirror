@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.32 2014/12/18 14:53:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.33 2014/12/18 15:27:53 tamiko Exp $
+
+*libvirt-glib-0.2.0 (18 Dec 2014)
+
+  18 Dec 2014; Matthias Maier <tamiko@gentoo.org> +libvirt-glib-0.2.0.ebuild:
+  version bump; drop -j1, this seems to be fixed now
 
   18 Dec 2014; Pacho Ramos <pacho@gentoo.org> libvirt-glib-0.1.9.ebuild:
   x86 stable, bug 529964

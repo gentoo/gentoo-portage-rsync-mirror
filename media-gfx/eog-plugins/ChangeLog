@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.21 2014/12/01 12:48:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/ChangeLog,v 1.22 2014/12/18 15:03:16 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> eog-plugins-3.12.1-r1.ebuild:
+  x86 stable, bug 529964
 
   01 Dec 2014; Michał Górny <mgorny@gentoo.org> eog-plugins-3.12.1-r1.ebuild:
   Use python-r1 to avoid issues with python-single-r1 when depending on libpeas.

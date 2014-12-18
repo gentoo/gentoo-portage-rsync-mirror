@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-user-share
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.39 2014/12/05 12:03:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-user-share/ChangeLog,v 1.40 2014/12/18 15:03:23 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> gnome-user-share-3.10.2-r1.ebuild:
+  x86 stable, bug 529964
 
 *gnome-user-share-3.10.2-r1 (05 Dec 2014)
 

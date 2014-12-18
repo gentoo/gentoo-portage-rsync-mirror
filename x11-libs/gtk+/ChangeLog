@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.743 2014/12/14 22:42:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.744 2014/12/18 15:01:53 pacho Exp $
+
+  18 Dec 2014; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.25.ebuild:
+  x86 stable, bug 529964
 
 *gtk+-3.14.6 (14 Dec 2014)
 
