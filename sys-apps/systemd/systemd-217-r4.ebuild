@@ -1,16 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.150 2014/12/19 17:07:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-217-r4.ebuild,v 1.1 2014/12/19 17:07:50 pacho Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-r3
-#endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -20,14 +12,15 @@ inherit autotools-utils bash-completion-r1 linux-info multilib \
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
-SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
+SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz
+	http://dev.gentoo.org/~floppym/dist/systemd-gentoo-patches-217-r1.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gudev http
 	idn introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
-	selinux ssl sysv-utils terminal test vanilla xkb"
+	selinux ssl sysv-utils terminal test vanilla"
 
 MINKV="3.8"
 
@@ -56,10 +49,9 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.25:0=
 	seccomp? ( sys-libs/libseccomp:0= )
 	selinux? ( sys-libs/libselinux:0= )
 	sysv-utils? ( !sys-apps/sysvinit )
-	terminal? ( >=dev-libs/libevdev-1.2:0=
-		>=x11-libs/libxkbcommon-0.5:0=
-		>=x11-libs/libdrm-2.4:0= )
-	xkb? ( >=x11-libs/libxkbcommon-0.4.1:0= )
+	terminal? ( dev-libs/libevdev:0=
+		>=x11-libs/libxkbcommon-0.4:0=
+		x11-libs/libdrm:0= )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
@@ -94,18 +86,17 @@ DEPEND="${COMMON_DEPEND}
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
-#if LIVE
-DEPEND="${DEPEND}
-	app-text/docbook-xml-dtd:4.2
-	app-text/docbook-xml-dtd:4.5
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt:0
-	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5:0"
+src_prepare() {
+	# Bug 463376
+	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
-SRC_URI=
-KEYWORDS=
-#endif
+	# missing in tarball
+	cp "${FILESDIR}"/217-systemd-consoled.service.in \
+		units/user/systemd-consoled.service.in || die
+
+	EPATCH_FORCE=yes EPATCH_SUFFIX=patch epatch
+	autotools-utils_src_prepare
+}
 
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS ~DMIID
@@ -146,21 +137,6 @@ pkg_pretend() {
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
-}
-
-src_prepare() {
-#if LIVE
-	if use doc; then
-		gtkdocize --docdir docs/ || die
-	else
-		echo 'EXTRA_DIST =' > docs/gtk-doc.make
-	fi
-
-#endif
-	# Bug 463376
-	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
-
-	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -234,7 +210,6 @@ multilib_src_configure() {
 		$(multilib_native_use_enable terminal)
 		$(multilib_native_use_enable test tests)
 		$(multilib_native_use_enable test dbus)
-		$(multilib_native_use_enable xkb xkbcommon)
 
 		# Disable optional binaries for non-native abis
 		$(multilib_native_enable backlight)

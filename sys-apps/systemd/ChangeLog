@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.326 2014/12/19 16:58:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.327 2014/12/19 17:07:50 pacho Exp $
+
+*systemd-218-r1 (19 Dec 2014)
+*systemd-217-r4 (19 Dec 2014)
+*systemd-216-r2 (19 Dec 2014)
+
+  19 Dec 2014; Pacho Ramos <pacho@gentoo.org> +systemd-216-r2.ebuild,
+  +systemd-217-r4.ebuild, +systemd-218-r1.ebuild, metadata.xml,
+  systemd-9999.ebuild:
+  Add a USE flag to replace sys-apps/systemd-sysv-utils (#528006)
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org>
   -files/212-0001-sd-rtnl-fix-off-by-one.patch,

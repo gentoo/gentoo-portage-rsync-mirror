@@ -1,16 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.150 2014/12/19 17:07:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r2.ebuild,v 1.1 2014/12/19 17:07:50 pacho Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-r3
-#endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -25,13 +17,13 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gudev http
+IUSE="acl apparmor audit cryptsetup curl doc elfutils +firmware-loader gcrypt gudev http
 	idn introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
-	selinux ssl sysv-utils terminal test vanilla xkb"
+	selinux ssl sysv-utils test vanilla"
 
 MINKV="3.8"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.25:0=
+COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	sys-libs/libcap:0=
 	acl? ( sys-apps/acl:0= )
 	apparmor? ( sys-libs/libapparmor:0= )
@@ -55,21 +47,21 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.25:0=
 	qrcode? ( media-gfx/qrencode:0= )
 	seccomp? ( sys-libs/libseccomp:0= )
 	selinux? ( sys-libs/libselinux:0= )
-	sysv-utils? ( !sys-apps/sysvinit )
-	terminal? ( >=dev-libs/libevdev-1.2:0=
-		>=x11-libs/libxkbcommon-0.5:0=
-		>=x11-libs/libdrm-2.4:0= )
-	xkb? ( >=x11-libs/libxkbcommon-0.4.1:0= )
+	sysv-utils? ( !sys-apps/sysvinit
+		>=sys-apps/util-linux-2.24.1-r2 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
 # baselayout-2.2 has /run
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
+	|| (
+		>=sys-apps/util-linux-2.22
+		<sys-apps/sysvinit-2.88-r4
+	)
 	!sys-apps/systemd-sysv-utils
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.14
-	!sys-fs/eudev
 	!sys-fs/udev"
 
 # sys-apps/dbus: the daemon only (+ build-time lib dep for tests)
@@ -94,28 +86,23 @@ DEPEND="${COMMON_DEPEND}
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
-#if LIVE
-DEPEND="${DEPEND}
-	app-text/docbook-xml-dtd:4.2
-	app-text/docbook-xml-dtd:4.5
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt:0
-	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5:0"
+src_prepare() {
+	# Bug 463376
+	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
-SRC_URI=
-KEYWORDS=
-#endif
+	autotools-utils_src_prepare
+}
 
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS ~DMIID
 		~EPOLL ~FANOTIFY ~FHANDLE ~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS
 		~SECCOMP ~SIGNALFD ~SYSFS ~TIMERFD ~TMPFS_XATTR
 		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
-		~!GRKERNSEC_PROC ~!FW_LOADER_USER_HELPER"
+		~!GRKERNSEC_PROC"
 
 	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
 	kernel_is -lt 3 7 && CONFIG_CHECK+=" ~HOTPLUG"
+	use firmware-loader || CONFIG_CHECK+=" ~!FW_LOADER_USER_HELPER"
 
 	if linux_config_exists; then
 		local uevent_helper_path=$(linux_chkconfig_string UEVENT_HELPER_PATH)
@@ -140,27 +127,18 @@ pkg_pretend() {
 			ewarn "Kernel version at least ${MINKV} required"
 		fi
 
+		if ! use firmware-loader && kernel_is -lt 3 8; then
+			ewarn "You seem to be using kernel older than 3.8. Those kernel versions"
+			ewarn "require systemd with USE=firmware-loader to support loading"
+			ewarn "firmware. Missing this flag may cause some hardware not to work."
+		fi
+
 		check_extra_config
 	fi
 }
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
-}
-
-src_prepare() {
-#if LIVE
-	if use doc; then
-		gtkdocize --docdir docs/ || die
-	else
-		echo 'EXTRA_DIST =' > docs/gtk-doc.make
-	fi
-
-#endif
-	# Bug 463376
-	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
-
-	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -231,10 +209,8 @@ multilib_src_configure() {
 		$(multilib_native_use_enable qrcode qrencode)
 		$(multilib_native_use_enable seccomp)
 		$(multilib_native_use_enable selinux)
-		$(multilib_native_use_enable terminal)
 		$(multilib_native_use_enable test tests)
 		$(multilib_native_use_enable test dbus)
-		$(multilib_native_use_enable xkb xkbcommon)
 
 		# Disable optional binaries for non-native abis
 		$(multilib_native_enable backlight)
@@ -242,7 +218,6 @@ multilib_src_configure() {
 		$(multilib_native_enable bootchart)
 		$(multilib_native_enable coredump)
 		$(multilib_native_enable firstboot)
-		$(multilib_native_enable hibernate)
 		$(multilib_native_enable hostnamed)
 		$(multilib_native_enable localed)
 		$(multilib_native_enable logind)
@@ -250,6 +225,7 @@ multilib_src_configure() {
 		$(multilib_native_enable networkd)
 		$(multilib_native_enable quotacheck)
 		$(multilib_native_enable randomseed)
+		$(multilib_native_enable readahead)
 		$(multilib_native_enable resolved)
 		$(multilib_native_enable rfkill)
 		$(multilib_native_enable sysusers)
@@ -273,6 +249,12 @@ multilib_src_configure() {
 
 		--with-ntp-servers="0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org 2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org"
 	)
+
+	if use firmware-loader; then
+		myeconfargs+=(
+			--with-firmware-path="/lib/firmware/updates:/lib/firmware"
+		)
+	fi
 
 	if ! multilib_is_native_abi; then
 		myeconfargs+=(
@@ -338,7 +320,6 @@ multilib_src_install() {
 	fi
 
 	# install compat pkg-config files
-	# Change dbus to >=sys-apps/dbus-1.8.8 if/when this is dropped.
 	local pcfiles=( src/compat-libs/libsystemd-{daemon,id128,journal,login}.pc )
 	emake "${mymakeopts[@]}" install-pkgconfiglibDATA \
 		pkgconfiglib_DATA="${pcfiles[*]}"
@@ -352,6 +333,7 @@ multilib_src_install_all() {
 		for app in halt poweroff reboot runlevel shutdown telinit; do
 			dosym "..${ROOTPREFIX}/bin/systemctl" /sbin/${app}
 		done
+		dosym "..${ROOTPREFIX}/lib/systemd/systemd" /sbin/init
 	else
 		# we just keep sysvinit tools, so no need for the mans
 		rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
