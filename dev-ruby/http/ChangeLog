@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/http
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/ChangeLog,v 1.10 2014/11/27 07:23:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/ChangeLog,v 1.11 2014/12/19 13:27:28 ago Exp $
+
+  19 Dec 2014; Agostino Sarubbo <ago@gentoo.org> http-0.6.3.ebuild:
+  Add ~x86, wrt bug #511176
 
 *http-0.6.3 (27 Nov 2014)
 

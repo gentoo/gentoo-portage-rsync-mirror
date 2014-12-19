@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.33 2014/11/26 02:14:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.34 2014/12/19 13:27:25 ago Exp $
+
+  19 Dec 2014; Agostino Sarubbo <ago@gentoo.org> webmock-1.19.0.ebuild:
+  Add ~x86, wrt bug #511176
 
   26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> webmock-1.18.0.ebuild,
   webmock-1.19.0.ebuild, webmock-1.7.4.ebuild:

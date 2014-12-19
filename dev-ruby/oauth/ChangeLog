@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/oauth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.27 2014/11/11 11:07:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.28 2014/12/19 13:27:33 ago Exp $
+
+  19 Dec 2014; Agostino Sarubbo <ago@gentoo.org> oauth-0.4.7-r2.ebuild:
+  Add ~x86, wrt bug #511176
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> oauth-0.4.7-r1.ebuild,
   oauth-0.4.7-r2.ebuild:
