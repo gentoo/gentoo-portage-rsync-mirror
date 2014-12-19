@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enum34
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.2 2014/11/28 10:26:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.3 2014/12/19 03:17:11 patrick Exp $
+
+  19 Dec 2014; Patrick Lauer <patrick@gentoo.org> enum34-1.0.ebuild:
+  Keyword for ~x86
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> enum34-1.0.ebuild:
   Support python 3.4

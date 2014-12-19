@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/llvmlite
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmlite/ChangeLog,v 1.1 2014/12/19 03:26:12 patrick Exp $
+
+*llvmlite-0.2.0 (19 Dec 2014)
+
+  19 Dec 2014; Patrick Lauer <patrick@gentoo.org> +llvmlite-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import, dep of numba, ebuild by me
