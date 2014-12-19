@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/g-cpan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.88 2014/12/14 00:33:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.89 2014/12/19 19:43:56 dilfridge Exp $
+
+*g-cpan-0.16.6 (19 Dec 2014)
+
+  19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> +g-cpan-0.16.6.ebuild,
+  g-cpan-9999.ebuild:
+  Version bump, fixes bugs 376775, 526192, 376767
 
 *g-cpan-9999 (14 Dec 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-9999.ebuild,v 1.2 2014/12/19 19:43:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.16.6.ebuild,v 1.1 2014/12/19 19:43:56 dilfridge Exp $
 
 EAPI=5
 

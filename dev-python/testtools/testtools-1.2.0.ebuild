@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.2.0.ebuild,v 1.2 2014/12/16 23:04:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.2.0.ebuild,v 1.3 2014/12/19 19:45:22 floppym Exp $
 
 EAPI=5
 
@@ -21,12 +21,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc test"
 
 RDEPEND="dev-python/mimeparse[${PYTHON_USEDEP}]
-		dev-python/extras[${PYTHON_USEDEP}]"
+		dev-python/extras[${PYTHON_USEDEP}]
+		dev-python/unittest2[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( $(python_gen_cond_dep 'dev-python/twisted-core[${PYTHON_USEDEP}]' python2_7)
-		dev-python/unittest2[${PYTHON_USEDEP}] )"
+	test? ( $(python_gen_cond_dep 'dev-python/twisted-core[${PYTHON_USEDEP}]' python2_7) )"
 
 python_compile_all() {
 	use doc && emake -C doc html
