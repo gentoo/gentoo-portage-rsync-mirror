@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/statsmodels
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/ChangeLog,v 1.6 2014/12/19 07:26:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/ChangeLog,v 1.7 2014/12/19 08:55:52 jlec Exp $
+
+  19 Dec 2014; Justin Lecher <jlec@gentoo.org> statsmodels-0.6.1.ebuild:
+  Drop PYTHON_USEDEP suggested by Arfrever
 
   19 Dec 2014; Patrick Lauer <patrick@gentoo.org> statsmodels-0.6.1.ebuild:
   Quoting
