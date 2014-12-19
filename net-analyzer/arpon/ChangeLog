@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arpon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.16 2014/08/10 20:57:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.17 2014/12/19 21:01:07 hwoarang Exp $
+
+*arpon-2.7.2 (19 Dec 2014)
+
+  19 Dec 2014; Markos Chandras <hwoarang@gentoo.org> +arpon-2.7.2.ebuild:
+  Version bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> arpon-2.7-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

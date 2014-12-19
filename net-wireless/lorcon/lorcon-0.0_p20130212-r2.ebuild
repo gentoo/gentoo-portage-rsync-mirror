@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/lorcon-9999.ebuild,v 1.5 2014/12/19 20:55:35 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/lorcon/lorcon-0.0_p20130212-r2.ebuild,v 1.1 2014/12/19 20:55:35 axs Exp $
 
 EAPI=5
 
