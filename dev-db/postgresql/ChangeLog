@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.401 2014/12/19 00:29:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.402 2014/12/19 02:09:03 patrick Exp $
+
+  19 Dec 2014; Patrick Lauer <patrick@gentoo.org> postgresql-9.0.18-r2.ebuild,
+  postgresql-9.1.14-r2.ebuild, postgresql-9.2.9-r2.ebuild,
+  postgresql-9.3.5-r2.ebuild, postgresql-9.4.0.ebuild, postgresql-9999.ebuild:
+  Default-enable server useflag
 
 *postgresql-9.4.0 (19 Dec 2014)
 
