@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.11.ebuild,v 1.2 2014/08/14 19:35:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.11-r1.ebuild,v 1.1 2014/12/19 10:48:19 pacho Exp $
 
 EAPI=5
-
 inherit eutils systemd user autotools
 
 DESCRIPTION="Realtime Policy and Watchdog Daemon"
@@ -15,10 +14,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
 
-DEPEND="sys-apps/dbus
+RDEPEND="
+	sys-apps/dbus
 	sys-auth/polkit
-	sys-libs/libcap"
-RDEPEND="${DEPEND}"
+	sys-libs/libcap
+"
+DEPEND="${DEPEND}
+	app-arch/xz-utils
+"
 
 pkg_setup() {
 	enewgroup rtkit
@@ -26,26 +29,21 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-polkit.patch \
-		"${FILESDIR}"/${P}-gettime.patch
+	# Fedora patches
+	epatch "${FILESDIR}"/${P}-polkit.patch
+	epatch "${FILESDIR}"/${P}-gettime.patch
+	epatch "${FILESDIR}"/${P}-controlgroup.patch
 	eautoreconf
 }
+
 src_configure() {
 	econf $(systemd_with_unitdir)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	./rtkit-daemon --introspect > org.freedesktop.RealtimeKit1.xml
 	insinto /usr/share/dbus-1/interfaces
 	doins org.freedesktop.RealtimeKit1.xml
-}
-
-pkg_postinst () {
-	einfo "To start using RealtimeKit, you need to ensure that the 'dbus'"
-	einfo "service is running. If it is already running, you need to reload it"
-	einfo "with the following command:"
-	einfo ""
-	einfo "    /etc/init.d/dbus reload"
 }
