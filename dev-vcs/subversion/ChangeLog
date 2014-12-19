@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.208 2014/12/18 19:48:42 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.209 2014/12/19 17:58:27 tommy Exp $
+
+  19 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  subversion-1.7.19.ebuild:
+  Port perl changes for 1.7.18 to 1.7.19
 
 *subversion-1.7.19 (18 Dec 2014)
 

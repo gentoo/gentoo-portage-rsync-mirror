@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.19.ebuild,v 1.1 2014/12/18 19:48:42 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.19.ebuild,v 1.2 2014/12/19 17:58:27 tommy Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -30,7 +30,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.6.18[threadsafe(+)]
 	ctypes-python? ( ${PYTHON_DEPS} )
 	gnome-keyring? ( dev-libs/glib:2 sys-apps/dbus gnome-base/gnome-keyring )
 	kde? ( sys-apps/dbus dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 >=kde-base/kdelibs-4:4 )
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( >=dev-lang/ruby-1.8.2:1.8
 		dev-ruby/rubygems[ruby_targets_ruby18] )
@@ -327,7 +327,7 @@ src_install() {
 
 	if use perl; then
 		emake DESTDIR="${D}" INSTALLDIRS="vendor" install-swig-pl
-		fixlocalpod
+		perl_delete_localpod
 		find "${ED}" "(" -name .packlist -o -name "*.bs" ")" -delete
 	fi
 
@@ -424,8 +424,6 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	use perl && perl-module_pkg_postinst
-
 	if [[ -n "${CHANGED_BDB_VERSION}" ]]; then
 		ewarn "You upgraded from an older version of Berkeley DB and may experience"
 		ewarn "problems with your repository. Run the following commands as root to fix it:"
@@ -437,7 +435,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use perl && perl-module_pkg_postrm
+	:
 }
 
 pkg_config() {

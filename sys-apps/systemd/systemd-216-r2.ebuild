@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r2.ebuild,v 1.1 2014/12/19 17:07:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r2.ebuild,v 1.2 2014/12/19 17:36:41 pacho Exp $
 
 EAPI=5
 
@@ -47,7 +47,9 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	qrcode? ( media-gfx/qrencode:0= )
 	seccomp? ( sys-libs/libseccomp:0= )
 	selinux? ( sys-libs/libselinux:0= )
-	sysv-utils? ( !sys-apps/sysvinit
+	sysv-utils? (
+		!sys-apps/systemd-sysv-utils
+		!sys-apps/sysvinit
 		>=sys-apps/util-linux-2.24.1-r2 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
@@ -59,7 +61,6 @@ RDEPEND="${COMMON_DEPEND}
 		>=sys-apps/util-linux-2.22
 		<sys-apps/sysvinit-2.88-r4
 	)
-	!sys-apps/systemd-sysv-utils
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.14
 	!sys-fs/udev"
