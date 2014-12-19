@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.459 2014/11/29 20:57:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.460 2014/12/19 18:52:46 dilfridge Exp $
+
+*perl-5.20.1-r4 (19 Dec 2014)
+
+  19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-5.20.1-r2.ebuild, +perl-5.20.1-r4.ebuild,
+  +files/eblits/src_install-v50200001.eblit:
+  Make perl5.20.1 a symlink to perl, not the other way around, bug 527380
 
   29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> perl-5.18.2-r2.ebuild,
   perl-5.20.1-r2.ebuild, perl-5.20.1-r3.ebuild:

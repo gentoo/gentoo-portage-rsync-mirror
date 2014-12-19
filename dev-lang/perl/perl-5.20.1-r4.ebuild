@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.20.1-r2.ebuild,v 1.2 2014/11/29 20:57:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.20.1-r4.ebuild,v 1.1 2014/12/19 18:52:46 dilfridge Exp $
 
 EAPI=5
 
 inherit eutils alternatives flag-o-matic toolchain-funcs multilib multiprocessing
 
-PATCH_VER=1
+PATCH_VER=2
 
 PERL_OLDVERSEN="5.20.0"
 MODULE_AUTHOR=RJBS
@@ -21,7 +21,7 @@ SRC_URI="
 	mirror://cpan/src/5.0/${MY_P}.tar.bz2
 	mirror://cpan/authors/id/${MODULE_AUTHOR:0:1}/${MODULE_AUTHOR:0:2}/${MODULE_AUTHOR}/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.xz
-	http://dev.gentoo.org/~civil/distfiles/${CATEGORY}/${PN}/${MY_P}-patches-${PATCH_VER}.tar.xz
+	http://dev.gentoo.org/~dilfridge/distfiles/${MY_P}-patches-${PATCH_VER}.tar.xz
 "
 HOMEPAGE="http://www.perl.org/"
 
@@ -106,7 +106,7 @@ src_prepare()	{ eblit-run src_prepare   v50160001 ; }
 src_configure()	{ eblit-run src_configure v50180002 ; }
 #src_compile()	{ eblit-run src_compile   v50160001 ; }
 src_test()		{ eblit-run src_test      v50160001 ; }
-src_install()	{ eblit-run src_install   v50160001 ; }
+src_install()	{ eblit-run src_install   v50200001 ; }
 
 # FILESDIR might not be available during binpkg install
 # FIXME: version passing
