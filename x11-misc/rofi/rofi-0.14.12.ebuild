@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/rofi-0.14.12.ebuild,v 1.1 2014/12/09 15:38:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/rofi-0.14.12.ebuild,v 1.2 2014/12/19 13:54:49 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -20,7 +20,7 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXft
 	x11-libs/libXinerama
-	x11-libs/pango
+	x11-libs/pango[X]
 	i3? ( x11-wm/i3 )
 "
 DEPEND="

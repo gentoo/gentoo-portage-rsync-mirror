@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.4 2014/12/18 14:59:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.5 2014/12/19 13:41:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ SLOT="0"
 
 IUSE="debug +geoloc gnome gnome-online-accounts +map spell test +v4l"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
 
 # False positives caused by nested configure scripts
 QA_CONFIGURE_OPTIONS=".*"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.18.4.ebuild,v 1.2 2014/12/18 14:58:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.18.4.ebuild,v 1.3 2014/12/19 13:39:56 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0"
 IUSE="debug doc gtk +introspection test" # evdev tslib
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
 # XXX: uprof needed for profiling

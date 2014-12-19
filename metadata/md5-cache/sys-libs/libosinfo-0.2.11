@@ -4,11 +4,11 @@ DESCRIPTION=GObject library for managing information about real and virtual OSes
 EAPI=5
 HOMEPAGE=http://libosinfo.org/
 IUSE=+introspection +vala test
-KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=GPL-2 LGPL-2.1
 RDEPEND=>=dev-libs/glib-2:2 >=dev-libs/libxslt-1.0.0:= dev-libs/libxml2:= net-libs/libsoup-gnome:2.4 sys-apps/hwids introspection? ( >=dev-libs/gobject-introspection-0.9.7:= )
 REQUIRED_USE=vala? ( introspection )
 SLOT=0
 SRC_URI=http://fedorahosted.org/releases/l/i/libosinfo/libosinfo-0.2.11.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	vala	28e26c72b0f5257aa135444ffc6730b5	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=96e2e3af914def8c8bb8adc4b064ff02
+_md5_=d27580673af4daa6b7206c7e8e98a523

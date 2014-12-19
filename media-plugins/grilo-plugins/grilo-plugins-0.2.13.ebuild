@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.13.ebuild,v 1.4 2014/12/18 14:58:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.13.ebuild,v 1.5 2014/12/19 13:40:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Grilo"
 
 LICENSE="LGPL-2.1+"
 SLOT="0.2"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="daap +dvd flickr freebox gnome-online-accounts lua pocket thetvdb tracker upnp-av +vimeo +youtube"
 
 RDEPEND="

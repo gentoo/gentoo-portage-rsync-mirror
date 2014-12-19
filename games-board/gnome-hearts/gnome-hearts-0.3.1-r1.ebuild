@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.1-r1.ebuild,v 1.3 2014/12/18 14:56:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-hearts/gnome-hearts-0.3.1-r1.ebuild,v 1.4 2014/12/19 13:37:04 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -14,7 +14,7 @@ SRC_URI="http://www.jejik.com/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 RDEPEND="x11-libs/gtk+:2

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.6 2014/12/18 14:59:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.1.ebuild,v 1.7 2014/12/19 13:40:46 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="cdr daap dbus +libsecret html ipod libnotify lirc mtp nsplugin +python
 test +udev upnp-av visualizer webkit zeitgeist"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 REQUIRED_USE="
 	ipod? ( udev )

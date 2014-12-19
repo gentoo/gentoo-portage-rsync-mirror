@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.8.ebuild,v 1.4 2014/12/18 14:59:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/libnice-0.1.8.ebuild,v 1.5 2014/12/19 13:41:46 pacho Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="http://nice.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+introspection +upnp"
 
 RDEPEND="

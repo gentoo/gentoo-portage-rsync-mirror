@@ -1,6 +1,9 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.161 2014/12/18 14:59:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.162 2014/12/19 13:41:04 pacho Exp $
+
+  19 Dec 2014; Pacho Ramos <pacho@gentoo.org> empathy-3.12.7.ebuild:
+  amd64 stable, bug 529964
 
   18 Dec 2014; Pacho Ramos <pacho@gentoo.org> empathy-3.12.7.ebuild:
   x86 stable, bug 529964

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.1.ebuild,v 1.2 2014/12/18 14:59:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.1.ebuild,v 1.3 2014/12/19 13:41:10 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/3"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
 IUSE="+introspection"
 
 RDEPEND="

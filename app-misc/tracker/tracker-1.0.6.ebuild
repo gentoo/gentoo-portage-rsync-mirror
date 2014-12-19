@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.0.6.ebuild,v 1.2 2014/12/18 14:53:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.0.6.ebuild,v 1.3 2014/12/19 13:33:56 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE="cue eds elibc_glibc exif ffmpeg firefox-bookmarks flac gif gsf
 gstreamer gtk iptc +iso +jpeg +miner-fs mp3 nautilus networkmanager
 pdf playlist rss test thunderbird +tiff upnp-av upower +vorbis +xml xmp xps"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 REQUIRED_USE="
 	?? ( gstreamer ffmpeg )

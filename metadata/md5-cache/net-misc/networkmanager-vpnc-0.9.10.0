@@ -4,10 +4,10 @@ DESCRIPTION=NetworkManager VPNC plugin
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Projects/NetworkManager
 IUSE=gtk test
-KEYWORDS=~amd64 x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2+
 RDEPEND=>=net-misc/networkmanager-0.9.6 >=dev-libs/dbus-glib-0.74 >=dev-libs/glib-2.32:2 >=net-misc/vpnc-0.5 gtk? ( app-crypt/libsecret >=gnome-extra/nm-applet-0.9.9.0 >=x11-libs/gtk+-3.4:3 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/NetworkManager-vpnc/0.9/NetworkManager-vpnc-0.9.10.0.tar.xz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=9b1430e29cb2ba7c89f87e085b2053da
+_md5_=2b4ac28cdeebc34c77f14f4f88cdfca8

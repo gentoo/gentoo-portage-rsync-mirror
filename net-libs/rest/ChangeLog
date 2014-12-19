@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.30 2014/12/18 15:00:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.31 2014/12/19 13:41:52 pacho Exp $
+
+  19 Dec 2014; Pacho Ramos <pacho@gentoo.org> rest-0.7.92.ebuild:
+  amd64 stable, bug 529964
 
   18 Dec 2014; Pacho Ramos <pacho@gentoo.org> rest-0.7.92.ebuild:
   x86 stable, bug 529964
