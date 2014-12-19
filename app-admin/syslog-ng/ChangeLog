@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.412 2014/12/18 23:05:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.413 2014/12/19 02:57:42 mr_bones_ Exp $
+
+  19 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/3.6/syslog-ng-3.6.2-redis.patch, -files/3.5/syslog-ng.conf.gentoo,
+  -files/3.5/syslog-ng.conf.gentoo.fbsd,
+  -files/3.5/syslog-ng.conf.gentoo.hardened, -files/3.5/syslog-ng.confd,
+  -files/3.5/syslog-ng.rc6, syslog-ng-3.6.2.ebuild:
+  Add upstream patch to avoid memory leak with USE=redis
 
   18 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/3.6/syslog-ng-3.6.1-link-smtp.patch,
