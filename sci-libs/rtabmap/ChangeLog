@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/rtabmap
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rtabmap/ChangeLog,v 1.1 2014/12/19 15:09:20 aballier Exp $
+
+*rtabmap-9999 (19 Dec 2014)
+*rtabmap-0.8.0 (19 Dec 2014)
+
+  19 Dec 2014; Alexis Ballier <aballier@gentoo.org> +rtabmap-0.8.0.ebuild,
+  +rtabmap-9999.ebuild, +files/cmakeinstall.patch, +metadata.xml:
+  initial import, ebuild by me
+

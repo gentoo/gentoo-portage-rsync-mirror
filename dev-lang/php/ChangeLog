@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.908 2014/11/14 11:21:52 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.909 2014/12/19 15:09:48 olemarkus Exp $
+
+*php-5.5.20 (19 Dec 2014)
+*php-5.4.36 (19 Dec 2014)
+*php-5.6.4 (19 Dec 2014)
+
+  19 Dec 2014; Ole Markus With <olemarkus@gentoo.org> +php-5.4.36.ebuild,
+  +php-5.5.20.ebuild, +php-5.6.4.ebuild:
+  Version bump
 
 *php-5.4.35 (14 Nov 2014)
 *php-5.5.19 (14 Nov 2014)

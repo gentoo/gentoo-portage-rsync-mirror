@@ -1,0 +1,194 @@
+commit 5b7c36502e9f002fb9b3edd21950e27e635ca2c9
+Author: Alexis Ballier <aballier@gentoo.org>
+Date:   Wed Dec 17 17:28:21 2014 +0100
+
+    Use standard CMAKE_INSTALL_{BIN,LIB}DIR instead of INSTALL_{BIN,LIB}_DIR.
+    
+    Overriding them caused me to see these files installed in ${DESTDIR}/${BUILD_DIR}
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index af93f87..ba75b01 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,13 +1,11 @@
+ # Top-Level CmakeLists.txt
+-IF(APPLE OR WIN32)
+-  # BundleUtilities.cmake from 2.8.3 required on Mac and ?Windows?
+-  cmake_minimum_required(VERSION 2.8.3)
+-ELSE()
+-  cmake_minimum_required(VERSION 2.8.0)
+-ENDIF()
++# For GNUInstallDirs
++cmake_minimum_required(VERSION 2.8.5)
+ PROJECT( RTABMap )
+ SET(PROJECT_PREFIX rtabmap)
+ 
++INCLUDE(GNUInstallDirs)
++
+ ####### local cmake modules #######
+ SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
+ 
+@@ -94,9 +92,6 @@ SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+ SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+ 
+ ####### INSTALL DIR #######
+-# Offer the user the choice of overriding the installation directories
+-set(INSTALL_LIB_DIR lib CACHE PATH "Installation directory for libraries")
+-set(INSTALL_BIN_DIR bin CACHE PATH "Installation directory for executables")
+ set(INSTALL_INCLUDE_DIR include/${PROJECT_PREFIX}-${RTABMAP_MAJOR_VERSION}.${RTABMAP_MINOR_VERSION} CACHE PATH
+   "Installation directory for header files")
+ if(WIN32 AND NOT CYGWIN)
+@@ -191,7 +186,7 @@ ADD_CUSTOM_TARGET(uninstall
+ ####
+ # Create the RTABMapConfig.cmake and RTABMapConfigVersion files
+ file(RELATIVE_PATH REL_INCLUDE_DIR "${CMAKE_INSTALL_PREFIX}/${INSTALL_CMAKE_DIR}" "${CMAKE_INSTALL_PREFIX}/${INSTALL_INCLUDE_DIR}")
+-file(RELATIVE_PATH REL_LIB_DIR "${CMAKE_INSTALL_PREFIX}/${INSTALL_CMAKE_DIR}" "${CMAKE_INSTALL_PREFIX}/${INSTALL_LIB_DIR}")
++file(RELATIVE_PATH REL_LIB_DIR "${CMAKE_INSTALL_PREFIX}/${INSTALL_CMAKE_DIR}" "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
+    
+ # ... for the build tree
+ set(CONF_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/corelib/include" 
+diff --git a/app/src/CMakeLists.txt b/app/src/CMakeLists.txt
+index e9bc489..3e9c5df 100644
+--- a/app/src/CMakeLists.txt
++++ b/app/src/CMakeLists.txt
+@@ -83,7 +83,7 @@ ENDIF()
+ # Installation stuff
+ #--------------------------- 
+ INSTALL(TARGETS rtabmap
+-        RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++        RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+         BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+       
+ IF(APPLE AND BUILD_AS_BUNDLE)
+diff --git a/corelib/src/CMakeLists.txt b/corelib/src/CMakeLists.txt
+index ad37508..ff5c55b 100644
+--- a/corelib/src/CMakeLists.txt
++++ b/corelib/src/CMakeLists.txt
+@@ -126,9 +126,9 @@ SET_TARGET_PROPERTIES(
+ )
+ 
+ INSTALL(TARGETS rtabmap_core
+-        RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
+-        LIBRARY DESTINATION "${INSTALL_LIB_DIR}" COMPONENT devel
+-        ARCHIVE DESTINATION "${INSTALL_LIB_DIR}" COMPONENT devel)
++        RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
++        LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT devel
++        ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT devel)
+ 		
+ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../include/ 
+ 		DESTINATION "${INSTALL_INCLUDE_DIR}"
+diff --git a/guilib/src/CMakeLists.txt b/guilib/src/CMakeLists.txt
+index 9b883af..23ff8c1 100644
+--- a/guilib/src/CMakeLists.txt
++++ b/guilib/src/CMakeLists.txt
+@@ -122,8 +122,8 @@ SET_TARGET_PROPERTIES(
+ )
+ 
+ INSTALL(TARGETS rtabmap_gui
+-        RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
+-        LIBRARY DESTINATION "${INSTALL_LIB_DIR}" COMPONENT devel
+-        ARCHIVE DESTINATION "${INSTALL_LIB_DIR}" COMPONENT devel)
++        RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
++        LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT devel
++        ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT devel)
+         
+ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../include/ DESTINATION "${INSTALL_INCLUDE_DIR}" COMPONENT devel FILES_MATCHING PATTERN "*.h" PATTERN ".svn" EXCLUDE)
+diff --git a/tools/Calibration/CMakeLists.txt b/tools/Calibration/CMakeLists.txt
+index f2596f5..b9f7b89 100644
+--- a/tools/Calibration/CMakeLists.txt
++++ b/tools/Calibration/CMakeLists.txt
+@@ -25,5 +25,5 @@ SET_TARGET_PROPERTIES( calibration
+   PROPERTIES OUTPUT_NAME ${PROJECT_PREFIX}-calibration)
+   
+ INSTALL(TARGETS calibration
+-		RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++		RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+ 		BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+\ No newline at end of file
+diff --git a/tools/CameraRGBD/CMakeLists.txt b/tools/CameraRGBD/CMakeLists.txt
+index 1938614..bd10922 100644
+--- a/tools/CameraRGBD/CMakeLists.txt
++++ b/tools/CameraRGBD/CMakeLists.txt
+@@ -21,5 +21,5 @@ SET_TARGET_PROPERTIES( rgbd_camera
+   PROPERTIES OUTPUT_NAME ${PROJECT_PREFIX}-rgbd_camera)
+   
+ INSTALL(TARGETS rgbd_camera
+-		RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++		RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+ 		BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+\ No newline at end of file
+diff --git a/tools/ConsoleApp/CMakeLists.txt b/tools/ConsoleApp/CMakeLists.txt
+index ce17c65..32d4387 100644
+--- a/tools/ConsoleApp/CMakeLists.txt
++++ b/tools/ConsoleApp/CMakeLists.txt
+@@ -31,6 +31,6 @@ SET_TARGET_PROPERTIES( consoleApp
+   PROPERTIES OUTPUT_NAME ${PROJECT_PREFIX}-console)
+   
+ INSTALL(TARGETS consoleApp
+-		RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++		RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+ 		BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+ 
+diff --git a/tools/DataRecorder/CMakeLists.txt b/tools/DataRecorder/CMakeLists.txt
+index bcc7b67..7afddeb 100644
+--- a/tools/DataRecorder/CMakeLists.txt
++++ b/tools/DataRecorder/CMakeLists.txt
+@@ -33,5 +33,5 @@ SET_TARGET_PROPERTIES( dataRecorder
+   PROPERTIES OUTPUT_NAME ${PROJECT_PREFIX}-dataRecorder)
+ 
+ INSTALL(TARGETS dataRecorder
+-		RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++		RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+ 		BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+diff --git a/tools/DatabaseViewer/CMakeLists.txt b/tools/DatabaseViewer/CMakeLists.txt
+index d19b8c2..939de62 100644
+--- a/tools/DatabaseViewer/CMakeLists.txt
++++ b/tools/DatabaseViewer/CMakeLists.txt
+@@ -35,5 +35,5 @@ SET_TARGET_PROPERTIES( databaseViewer
+   PROPERTIES OUTPUT_NAME ${PROJECT_PREFIX}-databaseViewer)
+ 
+ INSTALL(TARGETS databaseViewer
+-		RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++		RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+ 		BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+diff --git a/tools/ExtractObject/CMakeLists.txt b/tools/ExtractObject/CMakeLists.txt
+index d5cd0fd..e57bea5 100644
+--- a/tools/ExtractObject/CMakeLists.txt
++++ b/tools/ExtractObject/CMakeLists.txt
+@@ -26,5 +26,5 @@ SET_TARGET_PROPERTIES( extractObject
+   PROPERTIES OUTPUT_NAME ${PROJECT_PREFIX}-extractObject)
+ 
+ INSTALL(TARGETS extractObject
+-		RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++		RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+ 		BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+\ No newline at end of file
+diff --git a/tools/OdometryViewer/CMakeLists.txt b/tools/OdometryViewer/CMakeLists.txt
+index 445ddcc..350dfe4 100644
+--- a/tools/OdometryViewer/CMakeLists.txt
++++ b/tools/OdometryViewer/CMakeLists.txt
+@@ -33,6 +33,6 @@ SET_TARGET_PROPERTIES( odometryViewer
+   PROPERTIES OUTPUT_NAME ${PROJECT_PREFIX}-odometryViewer)
+   
+ INSTALL(TARGETS odometryViewer
+-		RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
++		RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
+ 		BUNDLE DESTINATION "${CMAKE_BUNDLE_LOCATION}" COMPONENT runtime)
+ 
+diff --git a/utilite/src/CMakeLists.txt b/utilite/src/CMakeLists.txt
+index 3a69f9b..819314e 100644
+--- a/utilite/src/CMakeLists.txt
++++ b/utilite/src/CMakeLists.txt
+@@ -39,9 +39,9 @@ SET_TARGET_PROPERTIES(
+ )
+ 
+ INSTALL(TARGETS rtabmap_utilite
+-        RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT runtime
+-        LIBRARY DESTINATION "${INSTALL_LIB_DIR}" COMPONENT devel
+-        ARCHIVE DESTINATION "${INSTALL_LIB_DIR}" COMPONENT devel)
++        RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT runtime
++        LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT devel
++        ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT devel)
+ 		
+ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../include/ DESTINATION "${INSTALL_INCLUDE_DIR}" COMPONENT devel FILES_MATCHING PATTERN "*.h" PATTERN ".svn" EXCLUDE)
+ 
