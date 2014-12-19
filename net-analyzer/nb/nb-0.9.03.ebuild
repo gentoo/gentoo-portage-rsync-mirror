@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.9.03.ebuild,v 1.1 2014/12/17 07:21:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.9.03.ebuild,v 1.2 2014/12/19 14:54:23 jer Exp $
 
 EAPI=5
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="Nodebrain is a tool to monitor and do event correlation"
 HOMEPAGE="http://nodebrain.sourceforge.net/"
@@ -30,25 +30,13 @@ RDEPEND="
 S="${WORKDIR}/nodebrain-${PV}"
 
 src_prepare() {
-	# fdl.texi is not included in the sources
-	sed -i \
-		-e '/@include fdl.texi/d' \
-		doc/nbTutorial/nbTutorial.texi || die
-
 	epatch "${FILESDIR}"/${PN}-0.8.14-include.patch
-
-	eautoreconf
 }
 
 src_configure() {
 	econf \
 		$(use_enable static-libs static) \
 		--include=/usr/include
-}
-
-src_compile() {
-	# Fails at parallel make
-	emake -j1
 }
 
 src_install() {

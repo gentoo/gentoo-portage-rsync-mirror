@@ -1,6 +1,16 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.277 2014/12/19 13:34:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.278 2014/12/19 14:42:20 pacho Exp $
+
+*evince-3.12.2-r1 (19 Dec 2014)
+
+  19 Dec 2014; Pacho Ramos <pacho@gentoo.org> +evince-3.12.2-r1.ebuild,
+  +files/evince-3.12.2-memory-leak.patch,
+  +files/evince-3.12.2-print-center.patch,
+  +files/evince-3.12.2-scroll-search-1.patch,
+  +files/evince-3.12.2-scroll-search-2.patch, -evince-3.12.1.ebuild:
+  Fix scrolling when search is used (#532878 by Johan Hovold), apply some more
+  fixes from 3.12 branch. Drop old.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> evince-3.12.2.ebuild:
   amd64 stable, bug 529964
