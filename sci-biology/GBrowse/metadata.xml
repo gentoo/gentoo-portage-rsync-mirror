@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-biology</herd>
-<herd>perl</herd>
 <upstream>
   <remote-id type="cpan">GBrowse</remote-id>
 </upstream>

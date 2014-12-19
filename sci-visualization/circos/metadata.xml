@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-biology</herd>
-<herd>perl</herd>
 <longdescription>
   Circos visualizes data in a circular layout — this makes Circos
   ideal for exploring relationships between objects or

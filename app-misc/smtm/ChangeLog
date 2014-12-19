@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/smtm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.25 2014/01/19 12:25:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.26 2014/12/19 19:13:04 dilfridge Exp $
+
+  19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop to maintainer-needed
 
   19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -smtm-1.6.6.ebuild,
   smtm-1.6.10-r1.ebuild:

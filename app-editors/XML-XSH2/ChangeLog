@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/XML-XSH2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/ChangeLog,v 1.14 2014/08/29 19:10:15 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/ChangeLog,v 1.15 2014/12/19 19:10:06 dilfridge Exp $
+
+  19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Drop to maintainer-needed
 
 *XML-XSH2-2.1.6-r1 (29 Aug 2014)
 
