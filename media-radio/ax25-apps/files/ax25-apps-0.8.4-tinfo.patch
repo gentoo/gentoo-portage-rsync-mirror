@@ -1,6 +1,6 @@
 # fix tinof handling (bug 529776)
---- configure.ac.old	2014-11-23 15:05:03.000000000 +0100
-+++ configure.ac	2014-11-23 15:07:42.000000000 +0100
+--- a/configure.ac
++++ b/configure.ac
 @@ -17,7 +17,7 @@
  AC_SUBST(AX25_LIB)
  AC_SUBST(NCURSES_LIB)

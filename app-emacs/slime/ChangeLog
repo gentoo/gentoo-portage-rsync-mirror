@@ -1,6 +1,16 @@
 # ChangeLog for app-emacs/slime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.73 2014/07/11 08:44:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.74 2014/12/19 07:02:16 gienah Exp $
+
+*slime-2.11 (19 Dec 2014)
+
+  19 Dec 2014; Mark Wright <gienah@gentoo.org>
+  +files/2.0_p20110617/70slime-gentoo.el,
+  +files/2.0_p20110617/gentoo-dont-call-init.patch,
+  +files/2.0_p20110617/swank.asd, +files/2.0_p20130214/gentoo-module-load.patch,
+  +files/2.11/dont-load-sbcl-pprint.patch,
+  +files/2.11/gentoo-changelog-date.patch, +slime-2.11.ebuild:
+  Bump slime to 2.11, as requested in Bug 530148
 
   11 Jul 2014; Patrick Lauer <patrick@gentoo.org> slime-2.0_p20101103.ebuild:
   Stable on amd64 #511170

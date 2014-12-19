@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc4.ebuild,v 1.5 2014/11/23 14:34:28 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc4.ebuild,v 1.6 2014/12/19 07:27:44 jer Exp $
 
 EAPI=5
-inherit eutils
+inherit autotools eutils
 
 MY_P=${P/_/-}
 
@@ -26,6 +26,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "$FILESDIR"/$PN-0.8.4-tinfo.patch
+	eautoreconf
 }
 
 src_install() {
