@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.38 2014/12/05 18:53:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.39 2014/12/19 04:44:14 dlan Exp $
+
+*libguestfs-1.28.5 (19 Dec 2014)
+
+  19 Dec 2014; Yixun Lan <dlan@gentoo.org> +libguestfs-1.28.5.ebuild:
+  version bump, solved ocaml dep, bug 532698, thanks Richard Jones
 
 *libguestfs-1.28.3 (05 Dec 2014)
 
