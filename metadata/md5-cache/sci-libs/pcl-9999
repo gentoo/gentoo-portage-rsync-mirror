@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=sci-libs/flann-1.7.1 dev-libs/boost:=[threads] dev-cpp/eigen:3 opengl? ( virtual/opengl media-libs/freeglut ) pcap? ( net-libs/libpcap ) png? ( media-libs/libpng:0= ) qhull? ( media-libs/qhull ) qt4? ( dev-qt/qtgui:4 ) usb? ( virtual/libusb:1 ) vtk? ( >=sci-libs/vtk-5.6[imaging,rendering,qt4?] ) cuda? ( >=dev-util/nvidia-cuda-toolkit-4 ) !!dev-cpp/metslib doc? ( app-doc/doxygen ) tutorials? ( dev-python/sphinx dev-python/sphinxcontrib-doxylink ) test? ( >=dev-cpp/gtest-1.6.0 ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=sci-libs/flann-1.7.1 dev-libs/boost:=[threads] dev-cpp/eigen:3 opengl? ( virtual/opengl media-libs/freeglut ) openni? ( dev-libs/OpenNI ) openni2? ( dev-libs/OpenNI2 ) pcap? ( net-libs/libpcap ) png? ( media-libs/libpng:0= ) qhull? ( media-libs/qhull ) qt4? ( dev-qt/qtgui:4 ) usb? ( virtual/libusb:1 ) vtk? ( >=sci-libs/vtk-5.6[imaging,rendering,qt4?] ) cuda? ( >=dev-util/nvidia-cuda-toolkit-4 ) !!dev-cpp/metslib doc? ( app-doc/doxygen ) tutorials? ( dev-python/sphinx dev-python/sphinxcontrib-doxylink ) test? ( >=dev-cpp/gtest-1.6.0 ) virtual/pkgconfig >=dev-vcs/git-1.8.2.1 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=2D/3D image and point cloud processing
 EAPI=5
 HOMEPAGE=http://pointclouds.org/
-IUSE=cuda doc opengl pcap png +qhull qt4 usb vtk sse test tutorials
+IUSE=cuda doc opengl openni openni2 pcap png +qhull qt4 usb vtk sse test tutorials
 LICENSE=BSD
-RDEPEND=>=sci-libs/flann-1.7.1 dev-libs/boost:=[threads] dev-cpp/eigen:3 opengl? ( virtual/opengl media-libs/freeglut ) pcap? ( net-libs/libpcap ) png? ( media-libs/libpng:0= ) qhull? ( media-libs/qhull ) qt4? ( dev-qt/qtgui:4 ) usb? ( virtual/libusb:1 ) vtk? ( >=sci-libs/vtk-5.6[imaging,rendering,qt4?] ) cuda? ( >=dev-util/nvidia-cuda-toolkit-4 )
-REQUIRED_USE=tutorials? ( doc )
+RDEPEND=>=sci-libs/flann-1.7.1 dev-libs/boost:=[threads] dev-cpp/eigen:3 opengl? ( virtual/opengl media-libs/freeglut ) openni? ( dev-libs/OpenNI ) openni2? ( dev-libs/OpenNI2 ) pcap? ( net-libs/libpcap ) png? ( media-libs/libpng:0= ) qhull? ( media-libs/qhull ) qt4? ( dev-qt/qtgui:4 ) usb? ( virtual/libusb:1 ) vtk? ( >=sci-libs/vtk-5.6[imaging,rendering,qt4?] ) cuda? ( >=dev-util/nvidia-cuda-toolkit-4 )
+REQUIRED_USE=openni? ( usb ) openni2? ( usb ) tutorials? ( doc )
 SLOT=0
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=a578e365231c38fb538096dfeeddebe2
+_md5_=1d020f747d5f1c036b91ba0a6d6056ec

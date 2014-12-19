@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/OpenNI2
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenNI2/ChangeLog,v 1.1 2014/12/19 14:22:38 aballier Exp $
+
+*OpenNI2-9999 (19 Dec 2014)
+*OpenNI2-2.2_beta2 (19 Dec 2014)
+
+  19 Dec 2014; Alexis Ballier <aballier@gentoo.org> +OpenNI2-2.2_beta2.ebuild,
+  +OpenNI2-9999.ebuild, +files/jpeg.patch, +files/libopenni2.pc.in,
+  +files/pthread.patch, +files/rpath.patch, +files/soname.patch, +metadata.xml:
+  Initial import, ebuild by me
+

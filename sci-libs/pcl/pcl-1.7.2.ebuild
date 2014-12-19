@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-1.7.2.ebuild,v 1.2 2014/12/08 15:29:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-1.7.2.ebuild,v 1.4 2014/12/19 14:29:32 aballier Exp $
 
 EAPI=5
 
@@ -25,13 +25,15 @@ HOMEPAGE="http://pointclouds.org/"
 DESCRIPTION="2D/3D image and point cloud processing"
 LICENSE="BSD"
 SLOT="0"
-IUSE="cuda doc opengl pcap png +qhull qt4 usb vtk sse test tutorials"
+IUSE="cuda doc opengl openni openni2 pcap png +qhull qt4 usb vtk sse test tutorials"
 
 RDEPEND="
 	>=sci-libs/flann-1.7.1
 	dev-libs/boost:=[threads]
 	dev-cpp/eigen:3
 	opengl? ( virtual/opengl media-libs/freeglut )
+	openni? ( dev-libs/OpenNI )
+	openni2? ( dev-libs/OpenNI2 )
 	pcap? ( net-libs/libpcap )
 	png? ( media-libs/libpng:0= )
 	qhull? ( media-libs/qhull )
@@ -48,6 +50,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 REQUIRED_USE="
+	openni? ( usb )
+	openni2? ( usb )
 	tutorials? ( doc )
 "
 
@@ -66,6 +70,10 @@ src_configure() {
 		"-DWITH_QT=$(usex qt4 TRUE FALSE)"
 		"-DWITH_VTK=$(usex vtk TRUE FALSE)"
 		"-DWITH_PCAP=$(usex pcap TRUE FALSE)"
+		"-DWITH_OPENNI=$(usex openni TRUE FALSE)"
+		"-DBUILD_OPENNI=$(usex openni TRUE FALSE)"
+		"-DWITH_OPENNI2=$(usex openni2 TRUE FALSE)"
+		"-DBUILD_OPENNI2=$(usex openni2 TRUE FALSE)"
 		"-DPCL_ENABLE_SSE=$(usex sse TRUE FALSE)"
 		"-DWITH_DOCS=$(usex doc TRUE FALSE)"
 		"-DWITH_TUTORIALS=$(usex tutorials TRUE FALSE)"
