@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.4.1-r2.ebuild,v 1.1 2014/10/10 03:15:33 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0_rc4.ebuild,v 1.1 2014/12/19 06:44:44 dlan Exp $
 
 EAPI=5
 
@@ -14,8 +14,8 @@ if [[ $PV == *9999 ]]; then
 	EGIT_REPO_URI="git://xenbits.xen.org/${PN}.git"
 	live_eclass="git-2"
 else
-	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=1
+	KEYWORDS=""
+	UPSTREAM_VER=
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \

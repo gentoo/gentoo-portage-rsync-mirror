@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.3-r1.ebuild,v 1.2 2014/10/14 13:14:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.5-r3.ebuild,v 1.1 2014/12/19 06:44:44 dlan Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
@@ -13,9 +13,8 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	# Set to match entry in stable 4.3.1-r1, Bug 493944
-	KEYWORDS="amd64 -x86"
-	UPSTREAM_VER=0
+	KEYWORDS="~amd64 ~x86"
+	UPSTREAM_VER=2
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
@@ -33,7 +32,7 @@ DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://xen.org/"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="custom-cflags debug efi flask xsm"
+IUSE="custom-cflags debug efi flask pae xsm"
 
 DEPEND="${PYTHON_DEPS}
 	efi? ( >=sys-devel/binutils-2.22[multitarget] )
@@ -46,7 +45,9 @@ RESTRICT="test"
 # Approved by QA team in bug #144032
 QA_WX_LOAD="boot/xen-syms-${PV}"
 
-REQUIRED_USE="flask? ( xsm )"
+REQUIRED_USE="
+	flask? ( xsm )
+	"
 
 pkg_setup() {
 	python-any-r1_pkg_setup
@@ -87,7 +88,7 @@ src_prepare() {
 	fi
 
 	# Drop .config and fix gcc-4.6
-	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4.3-fix_dotconfig-gcc.patch
+	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch
 
 	if use efi; then
 		epatch "${FILESDIR}"/${PN}-4.2-efi.patch
@@ -116,6 +117,7 @@ src_prepare() {
 
 src_configure() {
 	use debug && myopt="${myopt} debug=y"
+	use pae && myopt="${myopt} pae=y"
 
 	if use custom-cflags; then
 		filter-flags -fPIE -fstack-protector
@@ -127,12 +129,13 @@ src_configure() {
 
 src_compile() {
 	# Send raw LDFLAGS so that --as-needed works
-	emake V=1 CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" LD="$(tc-getLD)" -C xen ${myopt}
+	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" LD="$(tc-getLD)" -C xen ${myopt}
 }
 
 src_install() {
 	local myopt
 	use debug && myopt="${myopt} debug=y"
+	use pae && myopt="${myopt} pae=y"
 
 	# The 'make install' doesn't 'mkdir -p' the subdirs
 	if use efi; then
@@ -147,5 +150,6 @@ pkg_postinst() {
 	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
 	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
+	use pae && ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"
 	use efi && einfo "The efi executable is installed in boot/efi/gentoo"
 }
