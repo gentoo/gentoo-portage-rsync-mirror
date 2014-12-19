@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gl/gst-plugins-gl-0.10.3-r1.ebuild,v 1.4 2014/07/23 15:21:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gl/gst-plugins-gl-0.10.3-r1.ebuild,v 1.5 2014/12/19 09:21:42 pacho Exp $
 
 EAPI="5"
 GST_TARBALL_SUFFIX="gz"
 
-inherit gstreamer
+inherit autotools eutils gstreamer
 
 DESCRIPTION="GStreamer OpenGL plugins"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
@@ -21,6 +21,7 @@ RDEPEND="
 	>=media-libs/gstreamer-0.10.36-r2:0.10[${MULTILIB_USEDEP}]
 	>=media-libs/gst-plugins-base-0.10.36:0.10[${MULTILIB_USEDEP}]
 	>=virtual/glu-9.0-r1[${MULTILIB_USEDEP}]
+	virtual/jpeg:0[${MULTILIB_USEDEP}]
 	>=virtual/opengl-7.0-r1[${MULTILIB_USEDEP}]
 	>=x11-libs/libSM-1.2.1-r1[${MULTILIB_USEDEP}]
 	libvisual? ( >=media-libs/libvisual-0.4.0-r3[${MULTILIB_USEDEP}] )
@@ -31,6 +32,12 @@ DEPEND="${RDEPEND}
 
 # FIXME: some deal with gst-plugin-scanner
 RESTRICT=test
+
+src_prepare() {
+	# Fix linking, bug 515014 (from 'master')
+	epatch "${FILESDIR}/${PN}-0.10.3-jpeg-check.patch"
+	eautoreconf
+}
 
 # FIXME: add support for libvisual
 multilib_src_configure() {

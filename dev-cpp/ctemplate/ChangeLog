@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/ctemplate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.29 2014/02/18 12:14:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.30 2014/12/19 09:24:37 pinkbyte Exp $
+
+  19 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> ctemplate-2.2_p129.ebuild:
+  Stable on amd64 and x86, wrt bug #529414
 
 *ctemplate-2.2_p129 (18 Feb 2014)
 
