@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.296 2014/11/18 13:45:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.297 2014/12/20 07:30:36 graaff Exp $
+
+  20 Dec 2014; Hans de Graaff <graaff@gentoo.org> -actionpack-3.2.20.ebuild,
+  -actionpack-4.0.11.ebuild, -actionpack-4.1.7.ebuild:
+  Cleanup of vulnerable versions.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/actionpack-2.3.10-i18n-0.4.2.patch,

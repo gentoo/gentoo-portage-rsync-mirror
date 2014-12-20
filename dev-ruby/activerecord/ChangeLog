@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.283 2014/11/18 13:51:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.284 2014/12/20 07:29:49 graaff Exp $
+
+  20 Dec 2014; Hans de Graaff <graaff@gentoo.org> -activerecord-3.2.20.ebuild,
+  -activerecord-4.0.11.ebuild, -activerecord-4.1.7.ebuild:
+  Cleanup of vulnerable versions.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/activerecord-2.3.10-rails3.patch,

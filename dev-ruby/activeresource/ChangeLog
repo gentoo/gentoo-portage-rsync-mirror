@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.181 2014/12/09 11:48:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.182 2014/12/20 07:31:06 graaff Exp $
+
+  20 Dec 2014; Hans de Graaff <graaff@gentoo.org>
+  -activeresource-3.2.20.ebuild:
+  Cleanup of vulnerable versions.
 
   09 Dec 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/activeresource-2.3.10-rails3.patch:

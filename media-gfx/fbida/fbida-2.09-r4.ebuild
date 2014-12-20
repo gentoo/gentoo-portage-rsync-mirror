@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r4.ebuild,v 1.2 2014/12/12 11:09:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r4.ebuild,v 1.3 2014/12/20 07:03:40 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -14,7 +14,7 @@ SRC_URI="
 "
 LICENSE="GPL-2 IJG"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="curl fbcon +gif lirc pdf +png scanner +tiff X +webp"
 REQUIRED_USE="
 	pdf? ( tiff )

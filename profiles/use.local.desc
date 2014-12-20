@@ -6192,20 +6192,6 @@ net-wireless/yatebts:bladerf - Build bladeRF transceiver
 net-wireless/yatebts:rad1 - Build RAD1 transceiver
 net-wireless/yatebts:uhd - Build UHD transceiver
 net-wireless/yatebts:usrp1 - Build USRP1 transceiver
-razorqt-base/razorqt-meta:lightdm - Install x11-misc/lightdm display manager and Razor-qt's LightDM greeter
-razorqt-base/razorqt-panel:clock - Add clock panel applet
-razorqt-base/razorqt-panel:colorpicker - Add colorpicker panel applet
-razorqt-base/razorqt-panel:cpuload - Add CPU load panel applet; depends on sys-libs/libstatgrab
-razorqt-base/razorqt-panel:desktopswitch - Add desktop switch panel applet
-razorqt-base/razorqt-panel:mainmenu - Add main menu panel applet
-razorqt-base/razorqt-panel:networkmonitor - Add network monitor panel applet; depends on sys-libs/libstatgrab
-razorqt-base/razorqt-panel:quicklaunch - Add quicklaunch panel applet
-razorqt-base/razorqt-panel:screensaver - Add screensaver panel applet
-razorqt-base/razorqt-panel:sensors - Add sensors panel applet; depends on sys-apps/lm_sensors
-razorqt-base/razorqt-panel:showdesktop - Add show desktop panel applet
-razorqt-base/razorqt-panel:taskbar - Add taskbar panel applet
-razorqt-base/razorqt-panel:tray - Add system tray panel applet
-razorqt-base/razorqt-panel:volume - Add volume mixer panel applet; depends on either media-libs/alsa-lib or media-sound/pulseaudio
 rox-base/rox:video - Enable rox-extra/videothumbnail for creating thumbnails of videos with mplayer or totem.
 rox-extra/archive:ace - Enable .ace extraction via app-arch/unace
 rox-extra/archive:compress - Enable tar.Z and *.Z extraction via app-arch/ncompress
