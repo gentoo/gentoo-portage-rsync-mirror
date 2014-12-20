@@ -1,6 +1,10 @@
 # ChangeLog for kde-frameworks/frameworkintegration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/ChangeLog,v 1.6 2014/12/17 21:24:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/ChangeLog,v 1.7 2014/12/20 14:26:21 mrueg Exp $
+
+  20 Dec 2014; Manuel Rüger <mrueg@gentoo.org>
+  -frameworkintegration-5.4.0.ebuild:
+  Remove old.
 
 *frameworkintegration-5.5.0 (17 Dec 2014)
 

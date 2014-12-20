@@ -1,6 +1,9 @@
 # ChangeLog for kde-frameworks/attica
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/attica/ChangeLog,v 1.4 2014/12/17 21:24:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/attica/ChangeLog,v 1.5 2014/12/20 14:26:21 mrueg Exp $
+
+  20 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -attica-5.4.0.ebuild:
+  Remove old.
 
 *attica-5.5.0 (17 Dec 2014)
 
