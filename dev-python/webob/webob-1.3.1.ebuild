@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.3.1.ebuild,v 1.3 2014/04/02 21:14:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.3.1.ebuild,v 1.4 2014/12/20 06:30:26 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -29,7 +29,7 @@ S=${WORKDIR}/${MY_P}
 
 python_compile_all() {
 	if use doc; then
-		"${PYTHON}" setup.py build_sphinx || die
+		"${PYTHON}" setup.py build_sphinx || die "Doc build failed"
 	fi
 }
 
@@ -38,6 +38,6 @@ python_test() {
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( build/sphinx/html/. )
+	use doc && local HTML_DOCS=( "${BUILD_DIR}"/sphinx/html/. )
 	distutils-r1_python_install_all
 }

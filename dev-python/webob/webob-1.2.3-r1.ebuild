@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.3-r1.ebuild,v 1.14 2014/06/18 16:01:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/webob-1.2.3-r1.ebuild,v 1.15 2014/12/20 06:30:26 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3} pypy )
 
 inherit distutils-r1
 
