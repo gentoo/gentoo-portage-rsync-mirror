@@ -1,21 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/libmediawiki-4.2.0.ebuild,v 1.1 2014/08/15 18:07:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-4.6.0.ebuild,v 1.1 2014/12/20 21:56:36 dilfridge Exp $
 
 EAPI=5
 
 KDE_LINGUAS=""
 KDE_MINIMAL="4.10"
-
 CMAKE_MIN_VERSION=2.8
-
 inherit kde4-base
 
 MY_PV=${PV/_/-}
 MY_P="digikam-${MY_PV}"
 SRC_URI="mirror://kde/stable/digikam/${MY_P}.tar.bz2"
 
-DESCRIPTION="KDE C++ interface for MediaWiki based web service as wikipedia.org"
+DESCRIPTION="Library for accessing the features of social networking site vkontakte.ru"
 HOMEPAGE="http://www.digikam.org/"
 
 LICENSE="GPL-2"
@@ -23,10 +21,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 SLOT=4
 
-DEPEND=""
+DEPEND=">=dev-libs/qjson-0.7.0"
 RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}/extra/${PN}
+
+PATCHES=( "${FILESDIR}/${PN}-2.2.0-libdir.patch" )
 
 src_configure() {
 	mycmakeargs=(

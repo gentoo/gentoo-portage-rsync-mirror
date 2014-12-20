@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libmediawiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/ChangeLog,v 1.29 2014/12/12 15:47:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/ChangeLog,v 1.30 2014/12/20 21:53:11 dilfridge Exp $
+
+*libmediawiki-4.6.0 (20 Dec 2014)
+
+  20 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libmediawiki-4.0.0.ebuild, -libmediawiki-4.2.0.ebuild,
+  +libmediawiki-4.6.0.ebuild:
+  Version bump; remove old
 
   12 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> libmediawiki-4.4.0.ebuild:
   amd64 stable wrt bug #517344
