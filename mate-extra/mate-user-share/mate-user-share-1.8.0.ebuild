@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-user-share/mate-user-share-1.8.0.ebuild,v 1.4 2014/07/02 09:48:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-user-share/mate-user-share-1.8.0.ebuild,v 1.5 2014/12/20 10:25:22 tamiko Exp $
 
 EAPI="5"
 
@@ -34,7 +34,7 @@ RDEPEND=">=app-mobilephone/obex-data-server-0.4:0
 	x11-libs/pango:0
 	>=x11-libs/libnotify-0.7:0
 	>=www-apache/mod_dnssd-0.6:0
-	=www-servers/apache-2.2*:2[apache2_modules_dav,apache2_modules_dav_fs,apache2_modules_authn_file,apache2_modules_auth_digest,apache2_modules_authz_groupfile]
+	>=www-servers/apache-2.2:2[apache2_modules_dav,apache2_modules_dav_fs,apache2_modules_authn_file,apache2_modules_auth_digest,apache2_modules_authz_groupfile]
 	virtual/libintl:0
 	bluetooth? (
 		>=net-wireless/mate-bluetooth-1.6:0
