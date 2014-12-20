@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r2.ebuild,v 1.2 2014/12/19 17:36:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r2.ebuild,v 1.3 2014/12/20 08:25:20 mgorny Exp $
 
 EAPI=5
 
@@ -332,9 +332,9 @@ multilib_src_install_all() {
 
 	if use sysv-utils; then
 		for app in halt poweroff reboot runlevel shutdown telinit; do
-			dosym "..${ROOTPREFIX}/bin/systemctl" /sbin/${app}
+			dosym "..${ROOTPREFIX-/usr}/bin/systemctl" /sbin/${app}
 		done
-		dosym "..${ROOTPREFIX}/lib/systemd/systemd" /sbin/init
+		dosym "..${ROOTPREFIX-/usr}/lib/systemd/systemd" /sbin/init
 	else
 		# we just keep sysvinit tools, so no need for the mans
 		rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \

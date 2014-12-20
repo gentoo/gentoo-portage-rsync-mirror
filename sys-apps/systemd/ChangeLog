@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.328 2014/12/19 17:36:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.329 2014/12/20 08:25:20 mgorny Exp $
+
+  20 Dec 2014; Michał Górny <mgorny@gentoo.org> systemd-216-r2.ebuild,
+  systemd-217-r4.ebuild, systemd-218-r1.ebuild, systemd-9999.ebuild:
+  Fix sysv-utils symlink install, bug #533090.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> systemd-216-r2.ebuild,
   systemd-217-r4.ebuild, systemd-218-r1.ebuild, systemd-9999.ebuild:
