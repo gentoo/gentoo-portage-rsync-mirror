@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.6 2014/08/10 20:01:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/bmpanel-0.9.27-r1.ebuild,v 1.7 2014/12/20 19:51:23 hwoarang Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug libev libevent"
 
-RDEPEND=">=media-libs/imlib2-1.4.0
+RDEPEND=">=media-libs/imlib2-1.4.0[X]
 	media-libs/freetype:2
 	x11-libs/libX11
 	x11-libs/libXrender

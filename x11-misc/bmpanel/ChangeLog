@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bmpanel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/ChangeLog,v 1.6 2014/08/10 20:01:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/ChangeLog,v 1.7 2014/12/20 19:51:23 hwoarang Exp $
+
+  20 Dec 2014; Markos Chandras <hwoarang@gentoo.org> bmpanel-0.9.27-r1.ebuild:
+  Update imlib dependency. Bug #533034
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bmpanel-0.9.27-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
