@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.33 2014/12/13 22:40:52 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.34 2014/12/20 09:52:26 gienah Exp $
+
+*pandoc-1.13.2 (20 Dec 2014)
+
+  20 Dec 2014; Mark Wright <gienah@gentoo.org> +pandoc-1.13.2.ebuild:
+  Bump pandoc to 1.13.2.
 
 *pandoc-1.13.1-r3 (13 Dec 2014)
 

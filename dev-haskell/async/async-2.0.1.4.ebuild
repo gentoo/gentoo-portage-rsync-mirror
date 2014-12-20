@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/async-2.0.1.4.ebuild,v 1.4 2013/09/13 09:53:08 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/async-2.0.1.4.ebuild,v 1.5 2014/12/20 09:31:11 slyfox Exp $
 
 EAPI=5
 
@@ -27,3 +27,8 @@ DEPEND="${RDEPEND}
 			dev-haskell/test-framework-hunit
 		)
 		>=dev-haskell/cabal-1.8"
+
+src_prepare() {
+	cabal_chdeps \
+		'base >= 4.3 && < 4.7' 'base >= 4.3'
+}

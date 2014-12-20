@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/deepseq-1.3.0.1.ebuild,v 1.10 2014/07/04 14:30:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq/deepseq-1.3.0.1.ebuild,v 1.11 2014/12/20 09:39:01 slyfox Exp $
 
 EAPI=5
 
@@ -25,3 +25,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 CABAL_CORE_LIB_GHC_PV="7.6.* 7.7.20121101 7.7.20121213"
+
+src_prepare() {
+	cabal_chdeps \
+		'array      >= 0.1 && < 0.5' 'array      >= 0.1'
+}
