@@ -1,6 +1,9 @@
 # ChangeLog for mate-extra/mate-user-share
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-user-share/ChangeLog,v 1.7 2014/12/20 10:25:22 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-user-share/ChangeLog,v 1.8 2014/12/20 17:40:09 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org> -mate-user-share-1.6.1.ebuild:
+  drop old
 
   20 Dec 2014; Matthias Maier <tamiko@gentoo.org> mate-user-share-1.8.0.ebuild:
   relax dependency on apache, wrt bug #532740

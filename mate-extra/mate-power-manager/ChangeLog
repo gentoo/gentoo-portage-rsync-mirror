@@ -1,6 +1,10 @@
 # ChangeLog for mate-extra/mate-power-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/ChangeLog,v 1.15 2014/12/09 22:10:53 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-power-manager/ChangeLog,v 1.16 2014/12/20 17:34:03 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  -mate-power-manager-1.6.3.ebuild:
+  drop old
 
 *mate-power-manager-1.8.1 (09 Dec 2014)
 

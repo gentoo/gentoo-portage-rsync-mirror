@@ -1,6 +1,10 @@
 # ChangeLog for mate-extra/mate-screensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.15 2014/12/11 09:55:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/mate-screensaver/ChangeLog,v 1.16 2014/12/20 17:35:40 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  -mate-screensaver-1.6.1-r2.ebuild:
+  drop old
 
   11 Dec 2014; Pacho Ramos <pacho@gentoo.org> mate-screensaver-1.8.1.ebuild:
   Use readme.gentoo.eclass (#510000), settings DOC is not needed here as they

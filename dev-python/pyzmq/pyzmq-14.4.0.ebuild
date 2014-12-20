@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.4.0.ebuild,v 1.7 2014/12/16 20:43:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.4.0.ebuild,v 1.8 2014/12/20 17:57:16 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -22,9 +22,9 @@ RDEPEND=">=net-libs/zeromq-2.1.9
 	dev-python/py[${PYTHON_USEDEP}]
 	dev-python/cffi[${PYTHON_USEDEP}]
 	green? ( dev-python/gevent[${PY2_USEDEP}] )"
-DEPEND="test? (
-		${RDEPEND}
-		dev-python/nose[${PYTHON_USEDEP}] )
+DEPEND="${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/numpydoc[${PYTHON_USEDEP}] )"
 
@@ -35,7 +35,8 @@ python_configure_all() {
 }
 
 python_prepare_all() {
-	sed -e s':intersphinx_mapping:#&:' -i docs/source/conf.py || die
+	# Work around bug 532708.
+	sed -i -e "/import distutils/i import setuptools" setup.py || die
 	distutils-r1_python_prepare_all
 }
 
