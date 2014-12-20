@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.100 2014/12/09 08:21:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.101 2014/12/20 16:44:29 maekke Exp $
+
+  20 Dec 2014; Markus Meier <maekke@gentoo.org> recode-3.6_p20-r1.ebuild:
+  arm stable, bug #525964
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> recode-3.6_p20-r1.ebuild:
   Stable for HPPA (bug #525964).

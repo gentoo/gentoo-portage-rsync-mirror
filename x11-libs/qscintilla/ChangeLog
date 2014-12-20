@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.104 2014/10/04 18:59:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.105 2014/12/20 16:57:28 pesa Exp $
+
+  20 Dec 2014; Davide Pesavento <pesa@gentoo.org> qscintilla-2.8.4-r1.ebuild:
+  amd64 stable wrt #524466
 
   04 Oct 2014; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Add upstream metadata tag.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.230 2014/12/09 12:41:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.231 2014/12/20 16:49:10 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (29 Nov 2014)
 # Unkeyworded deps, bug #518742
@@ -244,16 +244,7 @@ net-print/cups java
 =sys-devel/gettext-0.18.1.1-r3 java
 =sys-devel/gettext-0.18.2 java
 =sys-devel/gettext-0.18.3.2 java
-=sys-libs/db-1.85-r3 java
-=sys-libs/db-3.2.9_p2 java
-=sys-libs/db-4.2.52_p5-r1 java
-=sys-libs/db-4.3.29_p1-r1 java
-=sys-libs/db-4.5.20_p2 java
-=sys-libs/db-4.5.20_p2-r1 java
-=sys-libs/db-4.6.21_p4 java
-=sys-libs/db-4.7.25_p4 java
-=sys-libs/db-4.8.30 java
-=sys-libs/db-4.8.30-r1 java
+sys-libs/db java
 =www-client/seamonkey-2.0.14-r1 java
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)

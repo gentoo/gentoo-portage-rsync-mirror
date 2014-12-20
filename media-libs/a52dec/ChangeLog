@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.71 2014/12/09 08:20:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.72 2014/12/20 16:40:15 maekke Exp $
+
+  20 Dec 2014; Markus Meier <maekke@gentoo.org> a52dec-0.7.4-r7.ebuild:
+  arm stable, bug #525754
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> a52dec-0.7.4-r7.ebuild:
   Stable for HPPA (bug #525754).
