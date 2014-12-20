@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.14.ebuild,v 1.5 2014/12/15 00:09:21 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.14.ebuild,v 1.6 2014/12/20 15:17:14 zmedico Exp $
 
 EAPI=5
 
@@ -230,6 +230,36 @@ pkg_preinst() {
 		USERSYNC_UPGRADE=false
 		REPOS_CONF_UPGRADE=false
 	fi
+}
+
+get_ownership() {
+	case ${USERLAND} in
+		BSD)
+			stat -f '%Su:%Sg' "${1}"
+			;;
+		*)
+			stat -c '%U:%G' "${1}"
+			;;
+	esac
+}
+
+new_config_protect() {
+	# Generate a ._cfg file even if the target file
+	# does not exist, ensuring that the user will
+	# notice the config change.
+	local basename=${1##*/}
+	local dirname=${1%/*}
+	local i=0
+	while true ; do
+		local filename=$(
+			echo -n "${dirname}/._cfg"
+			printf "%04d" ${i}
+			echo -n "_${basename}"
+		)
+		[[ -e ${filename} ]] || break
+		(( i++ ))
+	done
+	echo "${filename}"
 }
 
 pkg_postinst() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1422 2014/12/15 00:09:21 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1423 2014/12/20 15:17:14 zmedico Exp $
+
+  20 Dec 2014; Zac Medico <zmedico@gentoo.org> portage-2.2.14.ebuild,
+  portage-2.2.15.ebuild:
+  Add missing get_ownership and new_config_protect functions for bug #533010.
 
   15 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.14.ebuild:
   x86 stable wrt bug #531594
