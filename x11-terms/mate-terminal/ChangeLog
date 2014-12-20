@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mate-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mate-terminal/ChangeLog,v 1.8 2014/12/09 23:21:14 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mate-terminal/ChangeLog,v 1.9 2014/12/20 18:05:11 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org> -mate-terminal-1.6.2.ebuild:
+  drop old
 
 *mate-terminal-1.8.1 (09 Dec 2014)
 

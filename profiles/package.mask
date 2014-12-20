@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16229 2014/12/20 15:46:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16230 2014/12/20 18:13:10 tamiko Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,28 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Maier <tamiko@gentoo.org> (20 Dec 2014)
+# Remove obsolete mate 1.6* packages. These are superseded by various mate
+# 1.8* packages
+# Mask for removal in 30 days
+app-arch/mate-file-archiver
+app-editors/mate-text-editor
+app-text/mate-document-viewer
+app-text/mate-doc-utils
+mate-base/libmatekeyring
+mate-base/mate-file-manager
+mate-base/mate-keyring
+mate-extra/mate-character-map
+mate-extra/mate-file-manager-image-converter
+mate-extra/mate-file-manager-open-terminal
+mate-extra/mate-file-manager-sendto
+mate-extra/mate-file-manager-share
+media-gfx/mate-image-viewer
+net-wireless/mate-bluetooth
+x11-libs/libmatewnck
+x11-misc/mate-menu-editor
+x11-wm/mate-window-manager
 
 # Manuel Rüger <mrueg@gentoo.org> (20 Dec 2014)
 # Mask further ruby-1.9 only packages.
@@ -850,17 +872,6 @@ dev-ruby/bitescript
 dev-ruby/duby
 dev-ruby/jruby-openssl
 dev-ruby/weakling
-
-# Tom Wijsman <TomWij@gentoo.org> (02 May 2014)
-# Bluetooth support in MATE has incompatibilities with recent BlueZ versions.
-# If you want to try to get this working, unmask net-wireless/mate-bluetooth as
-# well as the bluetooth USE flag on mate-extra/mate-user-share; I can't support
-# this until the relevant upstreams have moved forward with their compatibility.
-#
-# https://bugs.gentoo.org/show_bug.cgi?id=508086
-# https://github.com/mate-desktop/mate-bluetooth/issues/22
-# http://mate-desktop.org/blog/2014-03-11-mate-desktop-singing-the-bluez
-net-wireless/mate-bluetooth
 
 # Matti Bickel <mabi@gentoo.org> (22 Apr 2014)
 # Masked slotted lua for testing
