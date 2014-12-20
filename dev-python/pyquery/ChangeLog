@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.49 2014/11/28 08:59:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.50 2014/12/20 07:53:50 idella4 Exp $
+
+  20 Dec 2014; Ian Delaney <idella4@gentoo.org> -pyquery-1.1.1.ebuild,
+  -pyquery-1.2.1-r1.ebuild, -pyquery-1.2.1.ebuild, pyquery-1.2.4.ebuild,
+  pyquery-1.2.8.ebuild:
+  clean old impls, rm old
 
   28 Nov 2014; Ian Delaney <idella4@gentoo.org> pyquery-1.2.9.ebuild:
   clean old python impl

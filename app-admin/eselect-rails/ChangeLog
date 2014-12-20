@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-rails
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.56 2014/04/26 05:48:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.57 2014/12/20 07:50:53 graaff Exp $
+
+*eselect-rails-0.21 (20 Dec 2014)
+
+  20 Dec 2014; Hans de Graaff <graaff@gentoo.org> +eselect-rails-0.21.ebuild:
+  Version bump with support for Rails 4.2.
 
 *eselect-rails-0.20 (26 Apr 2014)
 
