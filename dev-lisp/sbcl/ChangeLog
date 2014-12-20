@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.210 2014/10/20 14:51:55 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.211 2014/12/20 15:37:16 grozin Exp $
+
+*sbcl-1.2.6 (20 Dec 2014)
+
+  20 Dec 2014; Andrey Grozin <grozin@gentoo.org> +sbcl-1.2.6.ebuild,
+  +files/bsd-sockets-test-1.2.6.patch:
+  Version bump
 
 *sbcl-1.2.4 (20 Oct 2014)
 
