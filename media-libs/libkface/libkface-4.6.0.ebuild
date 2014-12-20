@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-4.2.0.ebuild,v 1.1 2014/08/15 17:27:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-4.6.0.ebuild,v 1.1 2014/12/20 22:08:42 dilfridge Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.digikam.org/"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-SLOT=4
+SLOT="4/3"
 
 DEPEND=">=media-libs/opencv-2.4.9"
 RDEPEND=${DEPEND}

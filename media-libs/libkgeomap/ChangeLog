@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libkgeomap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.51 2014/12/12 21:39:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.53 2014/12/20 22:04:30 dilfridge Exp $
+
+  20 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkgeomap-4.4.0.ebuild, libkgeomap-4.6.0.ebuild:
+  Whitespace cleanup
+
+*libkgeomap-4.6.0 (20 Dec 2014)
+
+  20 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkgeomap-4.0.0.ebuild, -libkgeomap-4.2.0.ebuild, +libkgeomap-4.6.0.ebuild:
+  Version bump; remove old
 
   12 Dec 2014; Manuel Rüger <mrueg@gentoo.org> libkgeomap-4.4.0.ebuild:
   Add support for kde applications dependency.
