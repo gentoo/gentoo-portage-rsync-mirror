@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.298 2014/12/10 15:11:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.299 2014/12/20 16:23:17 pesa Exp $
+
+  20 Dec 2014; Davide Pesavento <pesa@gentoo.org> -sip-4.16.3.ebuild:
+  old
 
   10 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> sip-4.16.2.ebuild:
   amd64 stable wrt bug #517344

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/vsqlite++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/ChangeLog,v 1.2 2014/11/09 10:34:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/ChangeLog,v 1.3 2014/12/20 16:09:51 nimiux Exp $
+
+  20 Dec 2014; Chema Alonso <nimiux@gentoo.org> vsqlite++-0.3.12.ebuild:
+  Stable for amd64 wrt bug #505798
 
 *vsqlite++-0.3.13 (09 Nov 2014)
 

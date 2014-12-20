@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.1.3.ebuild,v 1.3 2014/10/22 19:11:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.1.3.ebuild,v 1.4 2014/12/20 16:28:53 maekke Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ IUSE="debug doc gpu image-cache openmp"
 REQUIRED_USE="openmp? ( !image-cache )"
 
 RDEPEND="
+	>=dev-libs/boost-1.31.0:=
 	media-libs/glew
 	>=media-libs/lcms-2.5:2
 	>=media-libs/libpng-1.2.43:0=
@@ -32,7 +33,6 @@ RDEPEND="
 	debug? ( dev-libs/dmalloc )
 	gpu? ( media-libs/freeglut )"
 DEPEND="${RDEPEND}
-	>=dev-libs/boost-1.31.0:=
 	sys-apps/help2man
 	virtual/pkgconfig
 	doc? (
