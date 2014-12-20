@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-13.1.3-r1.ebuild,v 1.2 2014/11/29 13:10:32 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/crossover-bin-13.1.0-r2.ebuild,v 1.1 2014/12/20 18:56:20 ryao Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )

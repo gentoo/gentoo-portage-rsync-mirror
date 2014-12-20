@@ -1,6 +1,31 @@
 # ChangeLog for app-emulation/crossover-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/ChangeLog,v 1.16 2014/11/29 13:10:32 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-bin/ChangeLog,v 1.17 2014/12/20 18:56:20 ryao Exp $
+
+*crossover-bin-13.2.0-r2 (29 Nov 2014)
+*crossover-bin-13.1.3-r2 (29 Nov 2014)
+*crossover-bin-13.1.2-r2 (29 Nov 2014)
+*crossover-bin-13.1.0-r2 (29 Nov 2014)
+*crossover-bin-13.0.1-r2 (29 Nov 2014)
+*crossover-bin-13.0.0-r2 (29 Nov 2014)
+*crossover-bin-12.5.1-r2 (29 Nov 2014)
+*crossover-bin-12.5.0-r2 (29 Nov 2014)
+
+  29 Nov 2014; Richard Yao <ryao@gentoo.org> -crossover-bin-12.5.0-r1.ebuild,
+  +crossover-bin-12.5.0-r2.ebuild, -crossover-bin-12.5.1-r1.ebuild,
+  +crossover-bin-12.5.1-r2.ebuild, -crossover-bin-13.0.0-r1.ebuild,
+  +crossover-bin-13.0.0-r2.ebuild, -crossover-bin-13.0.1-r1.ebuild,
+  +crossover-bin-13.0.1-r2.ebuild, -crossover-bin-13.1.0-r1.ebuild,
+  +crossover-bin-13.1.0-r2.ebuild, -crossover-bin-13.1.2-r1.ebuild,
+  +crossover-bin-13.1.2-r2.ebuild, -crossover-bin-13.1.3-r1.ebuild,
+  +crossover-bin-13.1.3-r2.ebuild, -crossover-bin-13.2.0-r1.ebuild,
+  +crossover-bin-13.2.0-r2.ebuild:
+  Bump >=app-emulation/crossover-bin-12.5.0 on Patrick Lauer's suggestion. The
+  rationale is that it is better to bump to force an upgrade so that all users
+  are forced to have proper dependencies, rather than just those that run
+  --deep. It probably is not a big deal since no users actually used this
+  functionality, but I see no reason to disagree with something that could make
+  debugging user issues easier for me.
 
   29 Nov 2014; Richard Yao <ryao@gentoo.org> crossover-bin-12.1.2-r2.ebuild,
   crossover-bin-12.2.0-r2.ebuild, crossover-bin-12.2.1-r2.ebuild,
