@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/libmateweather-1.8.0.ebuild,v 1.4 2014/07/02 09:45:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmateweather/libmateweather-1.8.0.ebuild,v 1.5 2014/12/20 10:34:32 tamiko Exp $
 
 EAPI="5"
 
@@ -44,28 +44,36 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext:*
 	virtual/pkgconfig:*"
 
+my_command() {
+	if use python ; then
+		python_foreach_impl run_in_build_dir $@
+	else
+		$@
+	fi
+}
+
 src_prepare() {
 	# Fix undefined use of MKDIR_P in python/Makefile.am.
 	epatch "${FILESDIR}"/${PN}-1.6.1-fix-mkdirp.patch
 	eautoreconf
 
-	python_copy_sources
-	python_foreach_impl run_in_build_dir gnome2_src_prepare
+	use python && python_copy_sources
+	my_command gnome2_src_prepare
 }
 
 src_configure() {
-	python_foreach_impl run_in_build_dir gnome2_src_configure \
+	my_command gnome2_src_configure \
 		--enable-locations-compression \
 		--disable-all-translations-in-one-xml \
 		$(use_enable python)
 }
 
 src_compile() {
-	python_foreach_impl run_in_build_dir gnome2_src_compile
+	my_command gnome2_src_compile
 }
 
 DOCS="AUTHORS ChangeLog NEWS"
 
 src_install() {
-	python_foreach_impl run_in_build_dir gnome2_src_install
+	my_command gnome2_src_install
 }
