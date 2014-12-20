@@ -1,6 +1,10 @@
 # ChangeLog for mate-base/mate-settings-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/ChangeLog,v 1.10 2014/12/09 01:07:11 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-settings-daemon/ChangeLog,v 1.11 2014/12/20 17:22:04 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  -mate-settings-daemon-1.6.2.ebuild:
+  drop old
 
 *mate-settings-daemon-1.8.2 (09 Dec 2014)
 

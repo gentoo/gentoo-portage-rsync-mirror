@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-common/ChangeLog,v 1.7 2014/07/02 09:46:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-common/ChangeLog,v 1.8 2014/12/20 17:10:32 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org> -mate-common-1.6.2.ebuild:
+  drop old
 
   02 Jul 2014; Pacho Ramos <pacho@gentoo.org> mate-common-1.8.0.ebuild:
   x86 stable, bug 513714

@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-panel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/ChangeLog,v 1.15 2014/12/09 21:39:06 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-panel/ChangeLog,v 1.16 2014/12/20 17:19:11 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org> -mate-panel-1.6.1.ebuild:
+  drop old
 
 *mate-panel-1.8.1-r1 (09 Dec 2014)
 

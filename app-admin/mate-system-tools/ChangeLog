@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mate-system-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mate-system-tools/ChangeLog,v 1.7 2014/12/09 22:29:11 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mate-system-tools/ChangeLog,v 1.8 2014/12/20 17:02:53 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  -mate-system-tools-1.6.0.ebuild:
+  drop old
 
 *mate-system-tools-1.8.1 (09 Dec 2014)
 

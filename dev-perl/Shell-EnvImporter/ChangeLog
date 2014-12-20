@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Shell-EnvImporter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Shell-EnvImporter/ChangeLog,v 1.38 2014/08/22 21:14:51 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Shell-EnvImporter/ChangeLog,v 1.39 2014/12/20 17:26:34 dilfridge Exp $
+
+*Shell-EnvImporter-1.70.0-r2 (20 Dec 2014)
+
+  20 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Shell-EnvImporter-1.70.0-r2.ebuild,
+  +files/Shell-EnvImporter-1.70.0-perl520.patch:
+  Fix warnings with Perl 5.20, bug 526188
 
 *Shell-EnvImporter-1.70.0-r1 (22 Aug 2014)
 

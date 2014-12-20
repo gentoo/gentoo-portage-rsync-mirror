@@ -1,6 +1,9 @@
 # ChangeLog for mate-base/mate-applets
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/ChangeLog,v 1.16 2014/12/09 00:22:42 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-applets/ChangeLog,v 1.17 2014/12/20 17:09:40 tamiko Exp $
+
+  20 Dec 2014; Matthias Maier <tamiko@gentoo.org> -mate-applets-1.6.2-r1.ebuild:
+  drop old
 
   09 Dec 2014; Matthias Maier <tamiko@gentoo.org> mate-applets-1.8.1.ebuild:
   also provide a upower use-flag, bug #527400
