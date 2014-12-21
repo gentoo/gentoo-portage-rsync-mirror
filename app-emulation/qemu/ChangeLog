@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.310 2014/12/21 11:41:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.311 2014/12/21 15:39:27 tamiko Exp $
+
+  21 Dec 2014; Matthias Maier <tamiko@gentoo.org> -qemu-2.1.2-r1.ebuild:
+  drop vulnerable, bug #531666 (CVE-2014-8106)
 
   21 Dec 2014; Agostino Sarubbo <ago@gentoo.org> qemu-2.1.2-r2.ebuild:
   Stable for x86, wrt bug #531666

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.1.ebuild,v 1.5 2014/12/21 15:35:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.2.ebuild,v 1.1 2014/12/21 15:35:49 jlec Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ DOCS="README"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-6.0.2-invalid-read.patch
-	"${FILESDIR}"/${P}-pc-destdir.patch
+	"${FILESDIR}"/${PN}-6.1.1-pc-destdir.patch
 	)
 
 src_prepare() {
@@ -60,9 +60,10 @@ src_prepare() {
 		-i src/src.pro || die
 
 	sed \
-		-e '/qwtAddLibrary/s:(qwt):(qwt6):g' \
+		-e '/qwtAddLibrary/s:qwt):qwt6):g' \
 		-i qwt.prf designer/designer.pro examples/examples.pri \
-		textengines/mathml/qwtmathml.prf textengines/textengines.pri || die
+		textengines/mathml/qwtmathml.prf textengines/textengines.pri \
+		designer/designer.pro || die
 
 	MULTIBUILD_VARIANTS=( )
 	use static-libs && MULTIBUILD_VARIANTS+=( static )
