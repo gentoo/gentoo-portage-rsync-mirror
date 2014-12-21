@@ -1,6 +1,16 @@
 # ChangeLog for games-emulation/virtualjaguar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.16 2014/10/15 03:50:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.18 2014/12/21 14:22:14 mgorny Exp $
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> -virtualjaguar-1.0.7.ebuild,
+  virtualjaguar-1.0.7-r1.ebuild:
+  Move stable keywords.
+
+*virtualjaguar-1.0.7-r1 (21 Dec 2014)
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> +virtualjaguar-1.0.7-r1.ebuild,
+  files/virtualjaguar:
+  Use sys-apps/gentoo-functions, bug #504390.
 
 *virtualjaguar-2.1.2 (15 Oct 2014)
 

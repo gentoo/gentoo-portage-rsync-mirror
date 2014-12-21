@@ -1,6 +1,17 @@
 # ChangeLog for app-arch/makeself
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.32 2014/02/18 06:18:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.34 2014/12/21 14:26:40 mgorny Exp $
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> -makeself-2.1.5-r1.ebuild,
+  makeself-2.1.5-r2.ebuild:
+  Move stable keywords.
+
+*makeself-2.2.0-r1 (21 Dec 2014)
+*makeself-2.1.5-r2 (21 Dec 2014)
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> +makeself-2.1.5-r2.ebuild,
+  +makeself-2.2.0-r1.ebuild, -makeself-2.2.0.ebuild, files/makeself-unpack:
+  Use sys-apps/gentoo-functions, bug #504388.
 
 *makeself-2.2.0 (18 Feb 2014)
 

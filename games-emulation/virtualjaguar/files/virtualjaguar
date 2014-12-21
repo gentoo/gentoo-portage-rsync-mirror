@@ -1,11 +1,11 @@
 #!/bin/bash
 # 
 # Script for launching virtualjaguar 
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.6 2007/05/05 05:17:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/files/virtualjaguar,v 1.7 2014/12/21 14:20:45 mgorny Exp $
 
-source /etc/init.d/functions.sh || exit 1
+source /lib/gentoo/functions.sh || exit 1
 
 shopt -s nullglob
 
