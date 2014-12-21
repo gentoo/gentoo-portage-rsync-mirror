@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.55 2014/06/08 10:26:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.56 2014/12/21 00:16:50 radhermit Exp $
+
+  21 Dec 2014; Tim Harder <radhermit@gentoo.org> pkgcore-checks-9999.ebuild:
+  Don't regen plugins in the pkgcore.plugins namespace.
 
   08 Jun 2014; Tim Harder <radhermit@gentoo.org> pkgcore-checks-9999.ebuild:
   Drop python3* support until support is finalized for pkgcore and fix python
