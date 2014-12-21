@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/network-uri
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network-uri/ChangeLog,v 1.1 2014/12/14 05:23:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network-uri/ChangeLog,v 1.2 2014/12/21 11:32:48 slyfox Exp $
+
+  21 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  network-uri-2.5.0.0.ebuild:
+  Stabilize for everything we have dev-haskell/netwotk-2.4:
+  alpha/amd64/ia64/ppc/ppc64/sparc/x86
 
 *network-uri-2.5.0.0 (14 Dec 2014)
 *network-uri-2.6.0.1 (14 Dec 2014)

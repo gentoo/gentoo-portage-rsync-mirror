@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.10.3.ebuild,v 1.3 2014/03/09 11:54:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.14.1.ebuild,v 1.1 2014/12/21 11:51:21 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Gnote"
 
 LICENSE="GPL-3+ FDL-1.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +X"
 
 # Automagic glib-2.32 dep
@@ -20,13 +20,13 @@ COMMON_DEPEND="
 	>=app-crypt/libsecret-0.8
 	>=app-text/gtkspell-3.0:3
 	>=dev-cpp/glibmm-2.32:2
-	>=dev-cpp/gtkmm-3.6:3.0
+	>=dev-cpp/gtkmm-3.10:3.0
 	>=dev-libs/boost-1.34
 	>=dev-libs/glib-2.32:2
 	>=dev-libs/libxml2-2:2
 	dev-libs/libxslt
 	>=sys-apps/util-linux-2.16:=
-	>=x11-libs/gtk+-3.6:3
+	>=x11-libs/gtk+-3.10:3
 	X? ( x11-libs/libX11 )
 "
 RDEPEND="${COMMON_DEPEND}

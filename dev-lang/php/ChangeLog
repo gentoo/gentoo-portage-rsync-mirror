@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.910 2014/12/21 09:25:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.912 2014/12/21 11:40:59 ago Exp $
+
+  21 Dec 2014; Agostino Sarubbo <ago@gentoo.org> php-5.4.36.ebuild,
+  php-5.5.20.ebuild:
+  Stable for x86, wrt bug #532914
+
+  21 Dec 2014; Agostino Sarubbo <ago@gentoo.org> php-5.4.36.ebuild,
+  php-5.5.20.ebuild:
+  Stable for amd64, wrt bug #532914
 
   21 Dec 2014; Jeroen Roovers <jer@gentoo.org> php-5.4.36.ebuild,
   php-5.5.20.ebuild:
