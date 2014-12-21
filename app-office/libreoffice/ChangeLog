@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.593 2014/11/18 10:02:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.594 2014/12/21 21:57:07 dilfridge Exp $
+
+  21 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.2.6.3.ebuild, libreoffice-4.2.9999.ebuild:
+  Make sure libodfgen has at least version 0.0.3, bug 523674
 
   18 Nov 2014; Justin Lecher <jlec@gentoo.org> libreoffice-4.3.4.1.ebuild,
   libreoffice-4.3.9999.ebuild, libreoffice-9999-r2.ebuild:

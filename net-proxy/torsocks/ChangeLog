@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/torsocks
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.15 2014/08/10 20:35:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.16 2014/12/21 21:34:58 mrueg Exp $
+
+*torsocks-2.0.0 (21 Dec 2014)
+
+  21 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +torsocks-2.0.0.ebuild:
+  Version bump. Fixes bug #530816.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> torsocks-1.2-r2.ebuild,
   torsocks-1.2.ebuild, torsocks-2.0.0_rc2.ebuild, torsocks-2.0.0_rc3.ebuild:
