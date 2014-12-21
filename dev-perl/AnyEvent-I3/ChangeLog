@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AnyEvent-I3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-I3/ChangeLog,v 1.10 2014/10/20 12:30:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent-I3/ChangeLog,v 1.11 2014/12/21 18:03:16 zlogene Exp $
+
+  21 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> AnyEvent-I3-0.150.0.ebuild:
+  amd64/x86 stable wrt bug #521070
 
   20 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -AnyEvent-I3-0.90.0.ebuild:
   Drop old.

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.38 2014/12/20 09:27:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.39 2014/12/21 18:29:37 jlec Exp $
+
+*pandas-0.15.2 (21 Dec 2014)
+
+  21 Dec 2014; Justin Lecher <jlec@gentoo.org> pandas-0.15.0.ebuild,
+  pandas-0.15.1.ebuild, +pandas-0.15.2.ebuild, pandas-9999.ebuild,
+  +files/pandas-0.15.1-enconding.patch, +files/pandas-0.15.2-zoneinfo.patch:
+  Version Bump; Allow fast testing via FAST_PANDAS=true; drop dead functions
 
   20 Dec 2014; Michał Górny <mgorny@gentoo.org> pandas-0.15.0.ebuild,
   pandas-0.15.1.ebuild:

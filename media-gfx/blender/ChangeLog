@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.279 2014/12/17 16:45:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.280 2014/12/21 18:30:37 hasufell Exp $
+
+*blender-2.72b-r1 (21 Dec 2014)
+
+  21 Dec 2014; Julian Ospald <hasufell@gentoo.org> +blender-2.72b-r1.ebuild:
+  revbump, revert unbundling until it's supported upstream
 
   17 Dec 2014; Julian Ospald <hasufell@gentoo.org> blender-2.72b.ebuild,
   +files/blender-2.72-T42797.diff:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.8 2014/12/20 09:27:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.0.ebuild,v 1.9 2014/12/21 18:29:37 jlec Exp $
 
 EAPI=5
 
@@ -78,14 +78,13 @@ RDEPEND="${CDEPEND}
 	R? ( dev-python/rpy[${PYTHON_USEDEP}] )"
 
 PATCHES=(
+	# https://github.com/pydata/pandas/issues/8639
 	"${FILESDIR}"/${PN}-0.15.1-skip-tz-test.patch
 )
 
 python_prepare_all() {
-	if use doc; then
-		# Prevent un-needed download during build
-		sed -e "/^              'sphinx.ext.intersphinx',/d" -i doc/source/conf.py || die
-	fi
+	# Prevent un-needed download during build
+	sed -e "/^              'sphinx.ext.intersphinx',/d" -i doc/source/conf.py || die
 
 	distutils-r1_python_prepare_all
 }
@@ -98,25 +97,6 @@ python_compile_all() {
 		cp -ar "${S}"/doc . && cd doc || die
 		LANG=C PYTHONPATH=. "${EPYTHON}" make.py html || die
 	fi
-}
-
-_python_compile() {
-	# https://github.com/pydata/pandas/issues/8033
-	if ! python_is_python3; then
-		local CFLAGS=${CFLAGS}
-		local CXXFLAGS=${CXXFLAGS}
-		export CFLAGS
-		export CXXFLAGS
-		append-cflags -fno-strict-aliasing
-		append-cxxflags -fno-strict-aliasing
-	fi
-
-	distutils-r1_python_compile
-}
-
-src_test() {
-	local DISTUTILS_NO_PARALLEL_BUILD=1
-	distutils-r1_src_test
 }
 
 python_test() {
@@ -143,6 +123,6 @@ pkg_postinst() {
 	local x
 	elog "Please install"
 	for x in ${EXTRA_DEPEND}; do
-		optfeature "additional functionality" ${x%%[*}
+		optfeature "additional functionality" "${x%%[*}"
 	done
 }
