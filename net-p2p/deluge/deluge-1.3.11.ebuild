@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.11.ebuild,v 1.1 2014/12/01 05:54:08 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.11.ebuild,v 1.2 2014/12/21 09:12:14 heroxbd Exp $
 
 EAPI="5"
 
@@ -51,6 +51,13 @@ python_prepare_all() {
 	)
 
 	distutils-r1_python_prepare_all
+}
+
+_distutils-r1_create_setup_cfg() {
+	# bug 531370: deluge has its own plugin system. No need to relocate its egg info files.
+	# Override this call from the distutils-r1 eclass.
+	# This does not respect the distutils-r1 API. DONOT copy this example.
+	:
 }
 
 python_install_all() {

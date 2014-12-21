@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.190 2014/12/01 05:54:08 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.191 2014/12/21 09:12:14 heroxbd Exp $
+
+  21 Dec 2014; Benda Xu <heroxbd@gentoo.org> deluge-1.3.11.ebuild:
+  Override _distutils-r1_create_setup_cfg to disable out-of-tree builds; needed
+  for the deluge plugin system.  Bug 531370.  Credits Kostas Kavourakis, poncho,
+  Anthony Ryan and Paolo Pedroni.
 
 *deluge-1.3.11 (01 Dec 2014)
 
