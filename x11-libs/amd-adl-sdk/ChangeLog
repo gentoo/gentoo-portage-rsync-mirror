@@ -1,4 +1,9 @@
 
+*amd-adl-sdk-7.0 (21 Dec 2014)
+
+  21 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-7.0.ebuild:
+  Version bump.
+
   14 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -amd-adl-sdk-4.0.ebuild:
   Cleanup old.
 
