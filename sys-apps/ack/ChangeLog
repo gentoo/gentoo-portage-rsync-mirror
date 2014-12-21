@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.43 2014/12/19 19:23:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.44 2014/12/21 00:45:21 radhermit Exp $
+
+  21 Dec 2014; Tim Harder <radhermit@gentoo.org> -ack-2.12.ebuild,
+  ack-2.14.ebuild, -files/ack-2.04-gentoo.patch:
+  Stabilize for amd64/x86 and remove old.
 
   19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop perl herd from metadata
