@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.83 2014/12/08 18:39:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.84 2014/12/21 07:17:57 zx2c4 Exp $
+
+*unbound-1.5.1-r1 (21 Dec 2014)
+
+  21 Dec 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +files/unbound-1.5.1-pmtudisc.patch, +unbound-1.5.1-r1.ebuild:
+  Fix breakage on 3.14 LTS kernels.
 
 *unbound-1.5.1 (08 Dec 2014)
 
