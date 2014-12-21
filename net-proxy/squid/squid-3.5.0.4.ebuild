@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.5.0.2.ebuild,v 1.2 2014/11/21 10:04:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.5.0.4.ebuild,v 1.1 2014/12/21 13:50:49 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -222,8 +222,7 @@ src_install() {
 
 	dodoc CONTRIBUTORS CREDITS ChangeLog INSTALL QUICKSTART README SPONSORS doc/*.txt
 	newdoc helpers/negotiate_auth/kerberos/README README.kerberos
-	newdoc helpers/basic_auth/MSNT-multi-domain/README.txt README.MSNT-multi-domain
-	newdoc helpers/basic_auth/LDAP/README README.LDAP
+	newdoc helpers/basic_auth/MSNT/README.html README-MSNT.html
 	newdoc helpers/basic_auth/RADIUS/README README.RADIUS
 	newdoc helpers/external_acl/kerberos_ldap_group/README README.kerberos_ldap_group
 	newdoc tools/purge/README README.purge

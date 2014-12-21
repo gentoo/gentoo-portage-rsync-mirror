@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20141203-r2 (21 Dec 2014)
+
+  21 Dec 2014; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20141203-r2.ebuild:
+  Release of 2.20141203-r2
+
   07 Dec 2014; Jason Zaman <perfinion@gentoo.org>
   selinux-pan-2.20140311-r7.ebuild:
   Stabilize 2.20140311-r7
