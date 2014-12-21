@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/adwaita-icon-theme
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/adwaita-icon-theme/ChangeLog,v 1.1 2014/12/21 12:13:53 eva Exp $
+
+*adwaita-icon-theme-3.14.1 (21 Dec 2014)
+
+  21 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +adwaita-icon-theme-3.14.1.ebuild, +metadata.xml:
+  New ebuild for Gnome 3.14. Required by gtk+. Superseeds gnome-icon-theme.
+

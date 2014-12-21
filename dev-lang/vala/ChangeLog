@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.186 2014/11/01 17:40:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.187 2014/12/21 12:25:00 eva Exp $
+
+*vala-0.26.1 (21 Dec 2014)
+
+  21 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -vala-0.24.0.ebuild,
+  +vala-0.26.1.ebuild:
+  Version bump for Gnome 3.14. Clean up old revision.
 
   01 Nov 2014; Pacho Ramos <pacho@gentoo.org> -vala-0.18.1.ebuild:
   Drop no longer needed version

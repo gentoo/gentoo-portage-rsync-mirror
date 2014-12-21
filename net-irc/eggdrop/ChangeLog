@@ -1,6 +1,19 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.93 2014/11/04 04:14:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.96 2014/12/21 12:14:04 mgorny Exp $
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> -eggdrop-1.6.21.ebuild,
+  eggdrop-1.6.21-r1.ebuild:
+  Move stable keywords.
+
+*eggdrop-1.6.21-r1 (21 Dec 2014)
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> +eggdrop-1.6.21-r1.ebuild:
+  Revbump to make sure people do not end up with broken eggdrop-installer.
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> eggdrop-1.6.21.ebuild,
+  files/eggdrop-installer:
+  Use sys-apps/gentoo-functions, bug #504418.
 
   04 Nov 2014; Patrick Lauer <patrick@gentoo.org> -eggdrop-1.6.18-r3.ebuild,
   -eggdrop-1.6.19.ebuild:

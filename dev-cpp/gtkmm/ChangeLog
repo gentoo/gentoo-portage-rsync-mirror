@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.289 2014/10/11 11:40:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.290 2014/12/21 12:21:54 eva Exp $
+
+*gtkmm-3.14.0 (21 Dec 2014)
+
+  21 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -gtkmm-3.10.1.ebuild,
+  +gtkmm-3.14.0.ebuild:
+  Version bump for Gnome 3.14. Clean up old revision.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gtkmm-3.12.0.ebuild:
   arm stable, bug #512012

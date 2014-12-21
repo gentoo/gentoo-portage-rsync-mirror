@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.21.ebuild,v 1.5 2014/11/03 13:37:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.21-r1.ebuild,v 1.2 2014/12/21 12:14:04 mgorny Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ IUSE="debug mysql postgres ssl static vanilla"
 REQUIRED_USE="vanilla? ( !mysql !postgres !ssl )"
 
 DEPEND="dev-lang/tcl
+	sys-apps/gentoo-functions
 	!vanilla? (
 		mysql? ( virtual/mysql )
 		postgres? ( virtual/postgresql[server] )

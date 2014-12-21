@@ -1,6 +1,12 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.278 2014/12/19 14:42:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.279 2014/12/21 12:16:18 eva Exp $
+
+*evince-3.14.1 (21 Dec 2014)
+
+  21 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +evince-3.14.1.ebuild,
+  +files/evince-3.14.0-non-bash-support.patch:
+  Version bump for Gnome 3.14.
 
 *evince-3.12.2-r1 (19 Dec 2014)
 

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
-DEPEND=>=dev-libs/glib-2.40:2 >=x11-libs/gtk+-3.8:3[introspection?] >=x11-libs/pango-1.22.0 sys-libs/ncurses x11-libs/libX11 x11-libs/libXft glade? ( >=dev-util/glade-3.9:3.10 ) introspection? ( >=dev-libs/gobject-introspection-0.9.0 ) || ( dev-lang/vala:0.24[vapigen] dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] ) >=dev-util/gtk-doc-am-1.13 >=dev-util/intltool-0.35 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
+DEPEND=>=dev-libs/glib-2.40:2 >=x11-libs/gtk+-3.8:3[introspection?] >=x11-libs/pango-1.22.0 sys-libs/ncurses x11-libs/libX11 x11-libs/libXft glade? ( >=dev-util/glade-3.9:3.10 ) introspection? ( >=dev-libs/gobject-introspection-0.9.0 ) || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) >=dev-util/gtk-doc-am-1.13 >=dev-util/intltool-0.35 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4
 DESCRIPTION=Library providing a virtual terminal emulator widget
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/action/show/Apps/Terminal/VTE
@@ -10,5 +10,5 @@ PDEPEND=>=x11-libs/gnome-pty-helper-0.38.2
 RDEPEND=>=dev-libs/glib-2.40:2 >=x11-libs/gtk+-3.8:3[introspection?] >=x11-libs/pango-1.22.0 sys-libs/ncurses x11-libs/libX11 x11-libs/libXft glade? ( >=dev-util/glade-3.9:3.10 ) introspection? ( >=dev-libs/gobject-introspection-0.9.0 ) !x11-libs/vte:2.90[glade]
 SLOT=2.91
 SRC_URI=mirror://gnome/sources/vte/0.38/vte-0.38.2.tar.xz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	28e26c72b0f5257aa135444ffc6730b5	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=95d75f5f555cbc5d58b8b11f66818aa3

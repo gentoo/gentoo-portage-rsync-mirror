@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=dev-libs/glib-2.28:2 virtual/libusb:1 virtual/libgudev:= introspection? ( >=dev-libs/gobject-introspection-1.29 ) app-arch/xz-utils dev-libs/libxslt dev-util/gtk-doc-am virtual/pkgconfig vala? ( || ( dev-lang/vala:0.24[vapigen] dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] ) )
+DEPEND=>=dev-libs/glib-2.28:2 virtual/libusb:1 virtual/libgudev:= introspection? ( >=dev-libs/gobject-introspection-1.29 ) app-arch/xz-utils dev-libs/libxslt dev-util/gtk-doc-am virtual/pkgconfig vala? ( || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) )
 DESCRIPTION=GObject wrapper for libusb
 EAPI=5
 HOMEPAGE=https://gitorious.org/gusb/
@@ -11,5 +11,5 @@ REQUIRED_USE=vala? ( introspection )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://people.freedesktop.org/~hughsient/releases/libgusb-0.1.6.tar.xz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	28e26c72b0f5257aa135444ffc6730b5
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb
 _md5_=51a563d1f52f43a620914cc6dabe7f55

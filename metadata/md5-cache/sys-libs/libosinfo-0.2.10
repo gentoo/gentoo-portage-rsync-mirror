@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=dev-libs/glib-2:2 >=dev-libs/libxslt-1.0.0:= dev-libs/libxml2:= net-libs/libsoup-gnome:2.4 sys-apps/hwids introspection? ( >=dev-libs/gobject-introspection-0.9.7:= ) dev-libs/gobject-introspection-common >=dev-util/gtk-doc-am-1.10 virtual/pkgconfig test? ( dev-libs/check ) vala? ( || ( dev-lang/vala:0.24[vapigen] dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] ) ) virtual/pkgconfig
+DEPEND=>=dev-libs/glib-2:2 >=dev-libs/libxslt-1.0.0:= dev-libs/libxml2:= net-libs/libsoup-gnome:2.4 sys-apps/hwids introspection? ( >=dev-libs/gobject-introspection-0.9.7:= ) dev-libs/gobject-introspection-common >=dev-util/gtk-doc-am-1.10 virtual/pkgconfig test? ( dev-libs/check ) vala? ( || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) ) virtual/pkgconfig
 DESCRIPTION=GObject library for managing information about real and virtual OSes
 EAPI=5
 HOMEPAGE=http://fedorahosted.org/libosinfo/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2:2 >=dev-libs/libxslt-1.0.0:= dev-libs/libxml2:= net-li
 REQUIRED_USE=vala? ( introspection )
 SLOT=0
 SRC_URI=http://fedorahosted.org/releases/l/i/libosinfo/libosinfo-0.2.10.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	vala	28e26c72b0f5257aa135444ffc6730b5
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	vala	a41415fe361172827ed11b6a32ee38fb
 _md5_=ad4604cbece7bc871a42f8637ce1108a

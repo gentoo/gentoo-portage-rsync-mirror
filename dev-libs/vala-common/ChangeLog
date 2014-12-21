@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/vala-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.55 2014/10/11 11:42:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.56 2014/12/21 12:23:17 eva Exp $
+
+*vala-common-0.26.1 (21 Dec 2014)
+
+  21 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +vala-common-0.26.1.ebuild:
+  Version bump for Gnome 3.14.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> vala-common-0.24.0.ebuild:
   arm stable, bug #512012

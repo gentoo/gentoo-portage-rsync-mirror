@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup unpack
-DEPEND=>=dev-libs/glib-2 dev-python/pygobject:2 dev-python/pygtk:2 x11-libs/gtk+:2 gconf? ( gnome-base/gconf:2 ) glade? ( gnome-base/libglade:2.0 ) gnome? ( gnome-base/gnome-desktop:2 ) || ( dev-lang/vala:0.24[vapigen] dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] ) dev-libs/gobject-introspection introspection? ( x11-libs/gtk+:2[introspection] ) =dev-lang/python-2.7* dev-lang/python !dev-lang/python[-threads]
+DEPEND=>=dev-libs/glib-2 dev-python/pygobject:2 dev-python/pygtk:2 x11-libs/gtk+:2 gconf? ( gnome-base/gconf:2 ) glade? ( gnome-base/libglade:2.0 ) gnome? ( gnome-base/gnome-desktop:2 ) || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) dev-libs/gobject-introspection introspection? ( x11-libs/gtk+:2[introspection] ) =dev-lang/python-2.7* dev-lang/python !dev-lang/python[-threads]
 DESCRIPTION=A desktop-agnostic library for GLib-based projects
 EAPI=4
 HOMEPAGE=https://launchpad.net/libdesktop-agnostic
@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=>=dev-libs/glib-2 dev-python/pygobject:2 dev-python/pygtk:2 x11-libs/gtk+:2 gconf? ( gnome-base/gconf:2 ) glade? ( gnome-base/libglade:2.0 ) gnome? ( gnome-base/gnome-desktop:2 ) =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=http://launchpad.net/libdesktop-agnostic/0.4/0.3.92/+download/libdesktop-agnostic-0.3.92.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	28e26c72b0f5257aa135444ffc6730b5	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb	waf-utils	8ba4703b0e4f03e42a8f6e7b8aabd9e6
 _md5_=86a2864e8853d3797d81bcf7db432cfb

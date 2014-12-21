@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.24.0.ebuild,v 1.1 2014/04/27 11:19:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.26.1.ebuild,v 1.1 2014/12/21 12:25:00 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,12 +11,12 @@ DESCRIPTION="Compiler for the GObject type system"
 HOMEPAGE="https://wiki.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
-SLOT="0.24"
+SLOT="0.26"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
-IUSE="test +vapigen"
+IUSE="test"
 
 RDEPEND="
-	>=dev-libs/glib-2.18:2
+	>=dev-libs/glib-2.24:2
 	>=dev-libs/vala-common-${PV}
 "
 DEPEND="${RDEPEND}
@@ -32,7 +32,5 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
-	gnome2_src_configure \
-		--disable-unversioned \
-		$(use_enable vapigen)
+	gnome2_src_configure --disable-unversioned
 }
