@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/semigroups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroups/ChangeLog,v 1.11 2014/12/14 05:46:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroups/ChangeLog,v 1.12 2014/12/21 10:22:03 gienah Exp $
+
+*semigroups-0.16.0.1 (21 Dec 2014)
+
+  21 Dec 2014; Mark Wright <gienah@gentoo.org> +semigroups-0.16.0.1.ebuild:
+  Bump semigroups to 0.16.0.1
 
 *semigroups-0.16 (14 Dec 2014)
 

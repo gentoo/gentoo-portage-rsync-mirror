@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tcpsound
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/ChangeLog,v 1.13 2014/07/18 21:27:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcpsound/ChangeLog,v 1.14 2014/12/21 10:27:09 jer Exp $
+
+  21 Dec 2014; Jeroen Roovers <jer@gentoo.org>
+  files/tcpsound-0.3.1-makefile.patch:
+  Remove -L$(libdir) from LIBS (maybe bug #533164).
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -tcpsound-0.3.1.ebuild,
   tcpsound-0.3.1-r1.ebuild, files/tcpsound-0.3.1-makefile.patch,

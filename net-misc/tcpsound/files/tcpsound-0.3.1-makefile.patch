@@ -20,7 +20,7 @@
 -CC         = $(MKTOOL)
 +MKTOOL     = install
 +CFLAGS     += -I$(includedir) 
-+LIBS	    = -L$(libdir) -lSDL -lmba -lpthread
++LIBS	    = -lSDL -lmba -lpthread
  
  .SUFFIXES: .1 .1.gz
  
