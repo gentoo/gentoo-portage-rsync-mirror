@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.12.3.ebuild,v 1.3 2014/07/24 18:20:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.12.3.ebuild,v 1.4 2014/12/21 11:23:11 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,11 +62,13 @@ If you have an AMD Processor, run:
 # modprobe kvm-amd"
 
 pkg_pretend() {
-	linux_config_exists
+	linux-info_get_any_version
 
-	if ! { linux_chkconfig_present KVM_AMD || \
-		linux_chkconfig_present KVM_INTEL; }; then
-		ewarn "You need KVM support in your kernel to use GNOME Boxes!"
+	if linux_config_exists; then
+		if ! { linux_chkconfig_present KVM_AMD || \
+			linux_chkconfig_present KVM_INTEL; }; then
+			ewarn "You need KVM support in your kernel to use GNOME Boxes!"
+		fi
 	fi
 }
 
