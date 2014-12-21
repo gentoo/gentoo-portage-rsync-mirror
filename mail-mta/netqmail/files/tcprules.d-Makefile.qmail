@@ -1,3 +1,0 @@
-QMAIL_CDBS = tcp.qmail-pop3.cdb tcp.qmail-qmqp.cdb tcp.qmail-qmtp.cdb tcp.qmail-smtp.cdb
-CDBS += $(QMAIL_CDBS)
-qmail: $(QMAIL_CDBS)

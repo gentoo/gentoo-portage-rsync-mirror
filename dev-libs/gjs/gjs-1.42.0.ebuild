@@ -1,28 +1,29 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.38.1.ebuild,v 1.14 2014/05/07 02:44:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.42.0.ebuild,v 1.1 2014/12/21 12:41:14 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit autotools eutils gnome2 pax-utils virtualx
+inherit eutils gnome2 pax-utils virtualx
 
 DESCRIPTION="Javascript bindings for GNOME"
-HOMEPAGE="http://live.gnome.org/Gjs"
+HOMEPAGE="https://wiki.gnome.org/Projects/Gjs"
 
 LICENSE="MIT || ( MPL-1.1 LGPL-2+ GPL-2+ )"
 SLOT="0"
-IUSE="+cairo examples test"
-KEYWORDS=" alpha amd64 arm ia64 ppc ppc64 sparc x86"
+IUSE="+cairo examples gtk test"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
 	>=dev-libs/glib-2.36:2
-	>=dev-libs/gobject-introspection-1.38
+	>=dev-libs/gobject-introspection-1.41.4
 
 	sys-libs/readline:0
-	dev-lang/spidermonkey:17
+	dev-lang/spidermonkey:24
 	virtual/libffi
-	cairo? ( x11-libs/cairo )
+	cairo? ( x11-libs/cairo[X] )
+	gtk? ( x11-libs/gtk+:3 )
 "
 DEPEND="${RDEPEND}
 	gnome-base/gnome-common
@@ -32,9 +33,8 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	# From master/1.39
-	epatch "${FILESDIR}/${PN}-1.38.1-fix-unittests.patch"
-	eautoreconf
+	# Disable broken unittests
+	epatch "${FILESDIR}"/${PN}-1.42.0-disable-unittest-*.patch
 
 	gnome2_src_prepare
 }
@@ -47,7 +47,8 @@ src_configure() {
 		--disable-systemtap \
 		--disable-dtrace \
 		--disable-coverage \
-		$(use_with cairo cairo)
+		$(use_with cairo cairo) \
+		$(use_with gtk)
 }
 
 src_test() {

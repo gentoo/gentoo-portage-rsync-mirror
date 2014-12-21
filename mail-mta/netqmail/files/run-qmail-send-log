@@ -1,7 +1,0 @@
-#!/bin/bash
-# Gentoo Startup script for qmail's send daemon (logging)
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/run-qmail-send-log,v 1.1 2006/02/12 18:42:33 hansmi Exp $
-
-SERVICE=send
-. /var/qmail/bin/qmail-config-system && \
-eval exec /usr/bin/setuidgid qmaill /usr/bin/multilog ${LOG_OPTS} ${LOG_DEST}

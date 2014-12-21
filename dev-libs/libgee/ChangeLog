@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.102 2014/10/11 11:45:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.103 2014/12/21 12:43:51 eva Exp $
+
+*libgee-0.16.1 (21 Dec 2014)
+
+  21 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -libgee-0.12.1.ebuild,
+  +libgee-0.16.1.ebuild:
+  Version bump for Gnome 3.14. Clean up old revision.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> libgee-0.14.0.ebuild:
   arm stable, bug #512012

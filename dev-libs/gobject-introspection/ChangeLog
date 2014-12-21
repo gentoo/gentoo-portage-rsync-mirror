@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.133 2014/12/19 13:35:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.134 2014/12/21 12:41:05 eva Exp $
+
+*gobject-introspection-1.42.0 (21 Dec 2014)
+
+  21 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gobject-introspection-1.42.0.ebuild:
+  Version bump for Gnome 3.14.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org>
   gobject-introspection-1.40.0-r2.ebuild:

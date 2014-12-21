@@ -1,6 +1,0 @@
-# Configuration file for qmail-send
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/files/conf-send,v 1.1 2006/02/12 18:42:33 hansmi Exp $
-
-# directory to log to
-# override conf-common on this
-LOG_DEST=/var/log/qmail/qmail-send

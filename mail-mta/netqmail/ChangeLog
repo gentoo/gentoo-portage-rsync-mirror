@@ -1,6 +1,19 @@
 # ChangeLog for mail-mta/netqmail
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.75 2013/06/09 16:01:23 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.76 2014/12/21 12:46:03 mgorny Exp $
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> -files/99qmail,
+  -files/conf-common, -files/conf-pop3d, -files/conf-qmqpd, -files/conf-qmtpd,
+  -files/conf-send, -files/conf-smtpd, -files/dot-qmail, -files/mailer.conf,
+  -files/mkservercert, -files/qmail-config-system, -files/qmail-genrsacert.sh,
+  -files/run-qmail-pop3d, -files/run-qmail-pop3d-log, -files/run-qmail-qmqpd,
+  -files/run-qmail-qmqpd-log, -files/run-qmail-qmtpd,
+  -files/run-qmail-qmtpd-log, -files/run-qmail-send, -files/run-qmail-send-log,
+  -files/run-qmail-smtpd, -files/run-qmail-smtpd-log, -files/servercert.cnf,
+  -files/tcp.pop3.sample, -files/tcp.qmqp.sample, -files/tcp.qmtp.sample,
+  -files/tcp.smtp.sample, -files/tcprules.d-Makefile.qmail,
+  -netqmail-1.05-r4.ebuild, -netqmail-1.05-r8.ebuild:
+  Remove 1.05* due to serious QA violations, bug #533182.
 
   09 Jun 2013; Agostino Sarubbo <ago@gentoo.org> netqmail-1.06-r2.ebuild:
   Stable for sh, wrt bug #372967
