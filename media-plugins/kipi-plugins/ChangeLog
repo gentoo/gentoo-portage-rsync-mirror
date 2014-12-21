@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.172 2014/12/12 15:50:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.173 2014/12/21 20:57:33 dilfridge Exp $
+
+*kipi-plugins-4.6.0 (21 Dec 2014)
+
+  21 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kipi-plugins-4.0.0.ebuild, -kipi-plugins-4.2.0.ebuild,
+  +kipi-plugins-4.6.0.ebuild, +files/kipi-plugins-4.6.0-options.patch:
+  Version bump; remove old
 
   12 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> kipi-plugins-4.4.0.ebuild:
   amd64 stable wrt bug #517344

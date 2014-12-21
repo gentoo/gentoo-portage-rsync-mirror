@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.2.0.ebuild,v 1.5 2014/12/09 21:30:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.6.0.ebuild,v 1.1 2014/12/21 20:57:33 dilfridge Exp $
+
+#
+# TODO: complete packaging of qtsoap and qtkoauth, see dilfridge overlay for work in progress
+#
 
 EAPI=5
 
@@ -39,7 +43,7 @@ COMMONDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/qjson
-	gpssync?	( >=media-libs/libkgeomap-4.2.0 )
+	gpssync?	( >=media-libs/libkgeomap-4.6.0 )
 	media-libs/libpng:0=
 	media-libs/tiff
 	virtual/jpeg
@@ -50,14 +54,14 @@ COMMONDEPEND="
 			  x11-libs/gtk+:2
 			)
 	mediawiki?	( >=net-libs/libmediawiki-3.0.0 )
-	redeyes?	( media-libs/opencv )
+	redeyes?	( >=media-libs/opencv-2.4.9 )
 	scanner? 	(
-		|| ( kde-apps/libksane:4  $(add_kdebase_dep libksane) )
+			|| ( kde-apps/libksane:4 $(add_kdebase_dep libksane) )
 			  media-gfx/sane-backends
 			)
 	upnp?		( media-libs/herqq )
 	videoslideshow?	(
-			  media-libs/qt-gstreamer
+			  >=media-libs/qt-gstreamer-0.9.0
 			  || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 			)
 	vkontakte?	( net-libs/libkvkontakte )
@@ -85,7 +89,7 @@ RESTRICT=test
 # bug 420203
 
 PATCHES=(
-	"${FILESDIR}/${PN}-3.0.0-options.patch"
+	"${FILESDIR}/${PN}-4.6.0-options.patch"
 )
 
 src_prepare() {
