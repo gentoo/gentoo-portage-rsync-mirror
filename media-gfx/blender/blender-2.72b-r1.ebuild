@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72b-r1.ebuild,v 1.1 2014/12/21 18:30:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72b-r1.ebuild,v 1.2 2014/12/21 22:31:45 mrueg Exp $
 
 ## BUNDLED-DEPS:
 # extern/cuew
@@ -277,4 +277,3 @@ pkg_postrm() {
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
 }
-
