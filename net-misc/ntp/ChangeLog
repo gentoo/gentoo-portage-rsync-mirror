@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.221 2014/11/02 09:09:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.222 2014/12/21 19:28:02 hwoarang Exp $
+
+*ntp-4.2.8 (21 Dec 2014)
+
+  21 Dec 2014; Markos Chandras <hwoarang@gentoo.org> +ntp-4.2.8.ebuild:
+  Version bump. Bug #515494. Thanks to mike@marineau.org for the ebuild
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> ntp-4.2.6_p5-r10.ebuild,
   ntp-4.2.6_p5-r11.ebuild:
