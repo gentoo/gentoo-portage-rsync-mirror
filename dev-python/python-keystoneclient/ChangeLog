@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.38 2014/11/11 02:12:05 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.39 2014/12/21 02:55:11 alunduil Exp $
+
+  21 Dec 2014; Alex Brandt <alunduil@gentoo.org>
+  -python-keystoneclient-9999.ebuild:
+  remove live ebuild
 
 *python-keystoneclient-0.11.2 (11 Nov 2014)
 
