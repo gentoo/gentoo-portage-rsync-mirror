@@ -3,7 +3,10 @@
 # To use something besides `emerge` to install packages, set
 # XCB_REBUILDER_INSTALL to that binary.
 
-. /etc/init.d/functions.sh
+if ! . /lib/gentoo/functions.sh 2>/dev/null; then
+	echo 'Please install sys-apps/gentoo-functions and rerun this script.'
+	exit 1
+fi
 
 case ${1} in
 	'') ;;

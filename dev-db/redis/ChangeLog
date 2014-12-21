@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.86 2014/12/02 15:33:37 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.87 2014/12/21 09:48:39 hwoarang Exp $
+
+*redis-2.8.19 (21 Dec 2014)
+
+  21 Dec 2014; Markos Chandras <hwoarang@gentoo.org>
+  +files/redis-2.8.19-sharedlua.patch, +redis-2.8.19.ebuild:
+  Version bump. Thanks to Johan Bergström <bugs@bergstroem.nu>. Bug #533000
 
   02 Dec 2014; Ultrabug <ultrabug@gentoo.org> redis-2.8.17.ebuild,
   +files/redis-2.8.17-config.patch, files/redis.initd-4:

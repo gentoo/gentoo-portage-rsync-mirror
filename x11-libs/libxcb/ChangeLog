@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.146 2014/10/22 17:27:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.147 2014/12/21 09:42:18 mgorny Exp $
+
+  21 Dec 2014; Michał Górny <mgorny@gentoo.org> files/xcb-rebuilder.sh:
+  Use sys-apps/gentoo-functions in xcb-rebuilder, bug #504420.
 
 *libxcb-1.11 (22 Oct 2014)
 
