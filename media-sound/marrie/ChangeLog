@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/marrie
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.9 2014/12/21 17:29:51 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/marrie/ChangeLog,v 1.10 2014/12/21 17:38:11 rafaelmartins Exp $
+
+*marrie-0.3.2-r1 (21 Dec 2014)
+
+  21 Dec 2014; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +marrie-0.3.2-r1.ebuild, -marrie-0.3.2.ebuild, marrie-9999.ebuild:
+  fixed feedparser dependency
 
 *marrie-0.3.2 (21 Dec 2014)
 
