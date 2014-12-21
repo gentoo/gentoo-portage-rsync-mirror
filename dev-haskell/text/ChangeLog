@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.45 2014/12/14 06:32:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.46 2014/12/20 23:51:00 gienah Exp $
+
+  20 Dec 2014; Mark Wright <gienah@gentoo.org> text-1.2.0.3.ebuild:
+  Thanks to Chris Kerr for reporting, add quickcheck-unicode to test
+  dependencies, part of fix for Bug 533126 - dev-haskell/text-1.2.0.3 requires
+  quickcheck-unicode for FEATURES=test
 
 *text-1.2.0.3 (14 Dec 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/text-1.2.0.3.ebuild,v 1.1 2014/12/14 06:32:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/text-1.2.0.3.ebuild,v 1.2 2014/12/20 23:51:00 gienah Exp $
 
 EAPI=5
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8
 	test? ( >=dev-haskell/hunit-1.2
 		>=dev-haskell/quickcheck-2.7
+		dev-haskell/quickcheck-unicode
 		dev-haskell/random
 		>=dev-haskell/test-framework-0.4
 		>=dev-haskell/test-framework-hunit-0.2
