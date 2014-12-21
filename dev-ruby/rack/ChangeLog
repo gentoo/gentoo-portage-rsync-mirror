@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.137 2014/11/12 17:01:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.138 2014/12/21 06:51:32 graaff Exp $
+
+*rack-1.6.0 (21 Dec 2014)
+*rack-1.5.2-r4 (21 Dec 2014)
+
+  21 Dec 2014; Hans de Graaff <graaff@gentoo.org> +rack-1.5.2-r4.ebuild,
+  +rack-1.6.0.ebuild:
+  Version bump.
 
   12 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -rack-1.4.5.ebuild:
   Cleanup old.
