@@ -1,6 +1,16 @@
 # ChangeLog for gnome-base/gsettings-desktop-schemas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.83 2014/10/11 12:07:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.84 2014/12/22 21:31:23 eva Exp $
+
+*gsettings-desktop-schemas-3.14.1 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  gsettings-desktop-schemas-3.6.1.ebuild,
+  -gsettings-desktop-schemas-3.10.1.ebuild,
+  -gsettings-desktop-schemas-3.12.0.ebuild,
+  +gsettings-desktop-schemas-3.14.1.ebuild,
+  -files/gsettings-desktop-schemas-3.8.0-metacity-theme.patch:
+  Version bump for Gnome 3.14. Clean up old revisions.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org>
   gsettings-desktop-schemas-3.12.2.ebuild:
