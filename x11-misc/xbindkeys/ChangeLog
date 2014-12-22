@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.63 2014/01/04 21:10:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.64 2014/12/22 22:46:49 nimiux Exp $
+
+  22 Dec 2014; Chema Alonso <nimiux@gentoo.org> xbindkeys-1.8.6.ebuild:
+  Stable for amd64 wrt bug #530444
 
 *xbindkeys-1.8.6 (04 Jan 2014)
 
