@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.51 2014/09/23 18:54:33 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.52 2014/12/22 16:47:41 djc Exp $
+
+*mod_wsgi-4.4.2 (22 Dec 2014)
+
+  22 Dec 2014; Dirkjan Ochtman <djc@gentoo.org> +mod_wsgi-4.4.2.ebuild:
+  Version bump mod_wsgi to 4.4.2
 
 *mod_wsgi-4.3.0 (23 Sep 2014)
 
