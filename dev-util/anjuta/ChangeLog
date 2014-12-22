@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.182 2014/11/01 17:19:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.183 2014/12/22 22:04:11 eva Exp $
+
+*anjuta-3.14.0 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +anjuta-3.14.0.ebuild:
+  Version bump for Gnome 3.14.
 
   01 Nov 2014; Pacho Ramos <pacho@gentoo.org> -anjuta-3.10.2.ebuild,
   -files/anjuta-3.5.91-cxx-check.patch:
