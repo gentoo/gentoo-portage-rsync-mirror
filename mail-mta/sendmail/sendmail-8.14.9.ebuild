@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.9.ebuild,v 1.10 2014/06/08 10:55:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.9.ebuild,v 1.11 2014/12/22 14:30:13 pinkbyte Exp $
 
 EAPI="5"
 inherit eutils multilib systemd toolchain-funcs user
@@ -9,7 +9,7 @@ DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
 SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
-LICENSE="Sendmail"
+LICENSE="Sendmail GPL-2" # GPL-2 is here for initscript
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="ssl ldap sasl tcpd mbox ipv6 nis sockets"

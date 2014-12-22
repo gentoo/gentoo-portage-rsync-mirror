@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/about-distro/about-distro-1.0.1.ebuild,v 1.2 2014/03/14 09:12:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/about-distro/about-distro-2.0.0.ebuild,v 1.1 2014/12/22 14:27:52 kensington Exp $
 
 EAPI=5
 
-KDE_LINGUAS="bs cs da de el es fi fr gl hu lt nl pl pt pt_BR ro ru sk sl sv tr
-ug uk"
-inherit kde4-base
+EGIT_BRANCH="frameworks"
+inherit kde5
 
 DESCRIPTION="KCM displaying distribution and system information"
 HOMEPAGE="https://projects.kde.org/projects/playground/base/about-distro"
@@ -21,17 +20,24 @@ else
 fi
 
 LICENSE="GPL-3"
-SLOT="4"
-IUSE="debug"
 
+DEPEND="
+	$(add_frameworks_dep kconfig)
+	$(add_frameworks_dep kconfigwidgets)
+	$(add_frameworks_dep kcoreaddons)
+	$(add_frameworks_dep ki18n)
+	$(add_frameworks_dep solid)
+	dev-qt/qtgui:5
+	dev-qt/qtwidgets:5
+"
 RDEPEND="${DEPEND}
-	sys-apps/lsb-release
+	!kde-misc/about-distro:4
 "
 
 src_install() {
-	kde4-base_src_install
+	kde5_src_install
 
-	insinto /usr/share/config
+	insinto /etc/xdg
 	doins "${FILESDIR}"/kcm-about-distrorc
 
 	insinto /usr/share/${PN}

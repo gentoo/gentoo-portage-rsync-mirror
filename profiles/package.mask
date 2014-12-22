@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16232 2014/12/22 12:09:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16233 2014/12/22 14:25:37 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -678,6 +678,7 @@ kde-frameworks/plasma
 kde-frameworks/solid
 kde-frameworks/sonnet
 kde-frameworks/threadweaver
+>=kde-misc/about-distro-2.0.0
 www-client/otter
 =app-text/calibre-2*
 app-i18n/fcitx-qt5
