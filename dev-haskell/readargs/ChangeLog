@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/readargs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readargs/ChangeLog,v 1.3 2014/12/14 11:09:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readargs/ChangeLog,v 1.4 2014/12/22 05:37:15 gienah Exp $
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> readargs-1.2.2.ebuild:
+  Loosen FEATURES=test hspec dependency in readargs-1.2.2
 
 *readargs-1.2.2 (14 Dec 2014)
 

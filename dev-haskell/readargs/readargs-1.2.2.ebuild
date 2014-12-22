@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readargs/readargs-1.2.2.ebuild,v 1.1 2014/12/14 11:09:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readargs/readargs-1.2.2.ebuild,v 1.2 2014/12/22 05:37:15 gienah Exp $
 
 EAPI=5
 
@@ -27,7 +27,12 @@ RDEPEND=">=dev-haskell/system-filepath-0.4.7:=[profile?] <dev-haskell/system-fil
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8
-	test? ( >=dev-haskell/hspec-1.3 <dev-haskell/hspec-2.1 )
+	test? ( >=dev-haskell/hspec-1.3 )
 "
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	cabal_chdeps \
+		'hspec >= 1.3 && < 2.1' 'hspec >= 1.3'
+}
