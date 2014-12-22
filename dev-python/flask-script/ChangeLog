@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-script
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.19 2014/11/24 21:03:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.20 2014/12/21 23:50:18 idella4 Exp $
+
+  21 Dec 2014; Ian Delaney <idella4@gentoo.org> -flask-script-0.6.2.ebuild,
+  -flask-script-0.6.3.ebuild, -flask-script-0.6.6.ebuild,
+  -flask-script-0.6.7.ebuild, -flask-script-2.0.3.ebuild:
+  rm old
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> flask-script-2.0.5.ebuild:
   Support python 3.4

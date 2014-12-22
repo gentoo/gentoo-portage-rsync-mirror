@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flask-restless
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/ChangeLog,v 1.13 2014/07/06 12:41:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/ChangeLog,v 1.14 2014/12/21 23:55:12 idella4 Exp $
+
+  21 Dec 2014; Ian Delaney <idella4@gentoo.org> -flask-restless-0.12.0.ebuild,
+  -flask-restless-0.12.1.ebuild, -flask-restless-0.13.0.ebuild:
+  rm old
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> flask-restless-0.12.0.ebuild,
   flask-restless-0.12.1.ebuild, flask-restless-0.13.0.ebuild,
