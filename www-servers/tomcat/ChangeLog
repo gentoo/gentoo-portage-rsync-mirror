@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.337 2014/12/14 11:51:54 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.338 2014/12/22 17:48:04 ercpe Exp $
+
+  22 Dec 2014; Johann Schmitz <ercpe@gentoo.org>
+  -files/tomcat-6.0.37-build.xml.patch, -files/tomcat-6.0.39-build.xml.patch,
+  -files/tomcat-7.0.42-build.xml.patch, -files/tomcat-7.0.47-build.xml.patch,
+  -files/tomcat-7.0.52-build.xml.patch, -tomcat-6.0.37.ebuild,
+  -tomcat-6.0.39.ebuild, -tomcat-7.0.42.ebuild, -tomcat-7.0.47.ebuild,
+  -tomcat-7.0.52.ebuild:
+  Dropped vulnerable versions
 
 *tomcat-7.0.57 (14 Dec 2014)
 

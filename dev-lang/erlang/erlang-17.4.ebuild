@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-17.0-r1.ebuild,v 1.1 2014/05/08 08:19:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-17.4.ebuild,v 1.1 2014/12/22 17:50:20 djc Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
@@ -54,9 +54,6 @@ src_prepare() {
 		sed -i 's: wx : :' lib/Makefile
 		rm -rf lib/wx
 	fi
-
-	# bug 508366: systemd dependency, turn it off by default
-	epatch "${FILESDIR}/${PV}-systemd.patch"
 
 	# Nasty workaround, reported upstream
 	cp "${S}"/lib/configure.in.src "${S}"/lib/configure.in
