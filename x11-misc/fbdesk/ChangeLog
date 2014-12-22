@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fbdesk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.37 2013/10/19 15:05:24 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.38 2014/12/22 09:15:38 jer Exp $
+
+  22 Dec 2014; Jeroen Roovers <jer@gentoo.org> fbdesk-1.4.1.ebuild,
+  files/fbdesk-1.4.1-gcc-4.3.patch:
+  Fix missing include (bug #533234 by Samuel BAUER).
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal

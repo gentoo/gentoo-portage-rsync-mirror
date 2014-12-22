@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.12 2011/09/13 13:02:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.13 2014/12/22 09:15:38 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils
 
 DESCRIPTION="fluxbox-util application that creates and manage icons on your Fluxbox desktop"

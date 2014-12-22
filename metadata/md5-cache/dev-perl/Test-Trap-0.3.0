@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-perl/Data-Dump virtual/perl-Exporter virtual/perl-File-Temp virtual/perl-IO >=virtual/perl-Module-Build-0.400.3 test? ( >=dev-perl/Test-Tester-0.107 ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Trap exit codes, exceptions, output, etc
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Test-Trap/
+IUSE=test
+KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=dev-perl/Data-Dump virtual/perl-Exporter virtual/perl-File-Temp virtual/perl-IO dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/E/EB/EBHANSSEN/Test-Trap-v0.3.0.tar.gz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=9466601ba41d4586acad2e194ef2b64a

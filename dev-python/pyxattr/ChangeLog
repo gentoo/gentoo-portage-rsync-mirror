@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.63 2014/11/25 11:01:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.64 2014/12/22 09:24:58 jer Exp $
+
+  22 Dec 2014; Jeroen Roovers <jer@gentoo.org> pyxattr-0.5.3.ebuild:
+  Stable for HPPA (bug #530296).
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> pyxattr-9999.ebuild:
   Support python 3.4
