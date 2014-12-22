@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.76 2014/11/02 09:48:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.77 2014/12/22 10:16:44 polynomial-c Exp $
+
+*man-db-2.7.1 (22 Dec 2014)
+
+  22 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -man-db-2.6.0.2.ebuild,
+  -man-db-2.6.1.ebuild, -man-db-2.6.2.ebuild, -man-db-2.6.3.ebuild,
+  -man-db-2.6.3-r1.ebuild, -man-db-2.6.4.ebuild, -man-db-2.6.5.ebuild,
+  +man-db-2.7.1.ebuild, -files/man-db-2.6.0.2-flock.h.patch,
+  -files/man-db-2.6.1-no-gets.patch:
+  Version bump. Removed old.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> man-db-2.6.6.ebuild,
   man-db-2.6.7.1.ebuild:

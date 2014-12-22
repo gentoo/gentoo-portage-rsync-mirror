@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2013.0.0-r1.ebuild,v 1.7 2014/12/14 10:54:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2013.0.0-r1.ebuild,v 1.8 2014/12/22 10:05:50 pinkbyte Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ CDEPEND="
 	!!dev-util/cocom
 	app-arch/zip
 	dev-cpp/tclap
-	>=dev-libs/boost-1.49.0-r1:=
+	<dev-libs/boost-1.54.0:=
 	dev-libs/zthread
 	>=media-gfx/enblend-4.0
 	media-gfx/exiv2:=

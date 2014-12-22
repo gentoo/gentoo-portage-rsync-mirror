@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.5.ebuild,v 1.14 2014/01/26 12:18:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.7.1.ebuild,v 1.1 2014/12/22 10:16:44 polynomial-c Exp $
 
 EAPI="4"
 
-inherit eutils user
+inherit eutils user versionator
 
 DESCRIPTION="a man replacement that utilizes berkdb instead of flat files"
 HOMEPAGE="http://www.nongnu.org/man-db/"
@@ -12,24 +12,26 @@ SRC_URI="mirror://nongnu/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~arm-linux ~x86-linux"
 IUSE="berkdb +gdbm nls selinux static-libs zlib"
 
-RDEPEND="dev-libs/libpipeline
+CDEPEND=">=dev-libs/libpipeline-1.4.0
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
 	!berkdb? ( !gdbm? ( sys-libs/gdbm ) )
 	sys-apps/groff
-	selinux? ( sec-policy/selinux-mandb )
 	zlib? ( sys-libs/zlib )
 	!sys-apps/man"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
 	nls? (
 		app-text/po4a
 		sys-devel/gettext
 	)"
+RDEPEND="${CDEPEND}
+	selinux? ( sec-policy/selinux-mandb )
+"
 
 pkg_setup() {
 	# Create user now as Makefile in src_install does setuid/chown
@@ -75,5 +77,12 @@ pkg_preinst() {
 		mkdir -p "${EROOT}var/cache/man"
 		chown -R man:0 "${EROOT}"var/cache/man
 		find "${EROOT}"var/cache/man -type d '!' -perm /g=s -exec chmod 2755 {} +
+	fi
+}
+
+pkg_postinst() {
+	if [[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 7 ]] ; then
+		einfo "Rebuilding man-db from scratch with new database format!"
+		mandb --quiet --create
 	fi
 }

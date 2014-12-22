@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2012.0.0.ebuild,v 1.6 2013/09/25 17:24:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2012.0.0.ebuild,v 1.7 2014/12/22 10:05:50 pinkbyte Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -22,7 +22,7 @@ CDEPEND="
 	!!dev-util/cocom
 	app-arch/zip
 	dev-cpp/tclap
-	>=dev-libs/boost-1.49.0-r1
+	<dev-libs/boost-1.54.0
 	dev-libs/zthread
 	>=media-gfx/enblend-4.0
 	media-gfx/exiv2

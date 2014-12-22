@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/nltk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.16 2014/04/02 15:14:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.17 2014/12/22 10:17:58 hwoarang Exp $
+
+*nltk-3.0.0 (22 Dec 2014)
+
+  22 Dec 2014; Markos Chandras <hwoarang@gentoo.org> +nltk-3.0.0.ebuild,
+  metadata.xml, nltk-2.0.4.ebuild:
+  Version bump and add optional numpy support. Thanks to Corentin LABBE. Bugs
+  #532608 and 528320
 
 *nltk-2.0.4 (02 Apr 2014)
 
