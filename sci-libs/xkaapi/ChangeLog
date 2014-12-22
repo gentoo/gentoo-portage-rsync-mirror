@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/xkaapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xkaapi/ChangeLog,v 1.3 2014/12/22 15:11:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xkaapi/ChangeLog,v 1.4 2014/12/22 15:51:53 jlec Exp $
+
+  22 Dec 2014; Justin Lecher <jlec@gentoo.org> xkaapi-3.0.3.ebuild:
+  Drop unrecognised configure options
 
 *xkaapi-3.0.3 (22 Dec 2014)
 

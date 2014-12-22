@@ -1,6 +1,12 @@
 # ChangeLog for app-text/antiword
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.48 2013/03/17 15:46:40 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/ChangeLog,v 1.49 2014/12/22 15:35:47 hwoarang Exp $
+
+*antiword-0.37-r1 (22 Dec 2014)
+
+  22 Dec 2014; Markos Chandras <hwoarang@gentoo.org> +antiword-0.37-r1.ebuild,
+  +files/antiword-0.37-CVE-2014-8123.patch:
+  Revbump to apply security patch. Thanks to Corentin LABBE
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

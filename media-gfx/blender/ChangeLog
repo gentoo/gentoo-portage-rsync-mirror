@@ -1,6 +1,24 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.281 2014/12/21 22:31:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.283 2014/12/22 15:46:07 hasufell Exp $
+
+*blender-2.72b-r2 (22 Dec 2014)
+
+  22 Dec 2014; Julian Ospald <hasufell@gentoo.org> -blender-2.72b.ebuild,
+  -blender-2.72b-r1.ebuild, +blender-2.72b-r2.ebuild,
+  -files/01-blender-2.68-doxyfile.patch,
+  -files/06-blender-2.68-fix-install-rules.patch,
+  -files/07-blender-2.70-sse2.patch, -files/08-blender-2.71-gflags.patch,
+  -files/02-blender-2.71-unbundle-colamd.patch,
+  -files/04-blender-2.71-unbundle-glog.patch,
+  -files/05-blender-2.72-unbundle-eigen3.patch,
+  -files/09-blender-2.72b-unbundle-minilzo.patch:
+  revbump for adding missing fix for T42797, rm old
+
+  22 Dec 2014; Julian Ospald <hasufell@gentoo.org>
+  +files/blender-2.68-doxyfile.patch,
+  +files/blender-2.68-fix-install-rules.patch, +files/blender-2.70-sse2.patch:
+  add missing patches
 
   21 Dec 2014; Manuel Rüger <mrueg@gentoo.org> blender-2.72b-r1.ebuild:
   Drop blank line.

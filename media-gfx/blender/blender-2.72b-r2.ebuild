@@ -1,27 +1,30 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72b.ebuild,v 1.3 2014/12/17 16:45:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72b-r2.ebuild,v 1.1 2014/12/22 15:46:07 hasufell Exp $
 
 ## BUNDLED-DEPS:
-# extern/recastnavigation
+# extern/cuew
+# extern/Eigen3
+# extern/xdnd
+# extern/carve
+# extern/glew
 # extern/libmv
 # extern/clew
-# extern/bullet2
-# extern/wcwidth
-# extern/cuew
-# extern/carve
-# extern/xdnd
-# extern/binreloc
-# extern/libredcode
+# extern/colamd
+# extern/lzma
 # extern/gtest
 # extern/rangetree
-# extern/lzma
-# extern/libmv/third_party/ceres
+# extern/libredcode
+# extern/wcwidth
+# extern/binreloc
+# extern/recastnavigation
+# extern/bullet2
+# extern/lzo
+# extern/libopenjpeg
 # extern/libmv/third_party/msinttypes
-
-# TODO:
-#   bundled-deps: bullet is modified
-#   multiple python abi?
+# extern/libmv/third_party/ceres
+# extern/libmv/third_party/gflags
+# extern/libmv/third_party/glog
 
 EAPI=5
 PYTHON_COMPAT=( python3_4 )
@@ -56,24 +59,21 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-cpp/gflags-2.1.1-r1
-	>=dev-cpp/glog-0.3.3-r1[gflags]
-	>=dev-libs/lzo-2.08:2
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	>=media-libs/freetype-2.0
+	>=media-libs/freetype-2.0:2
 	media-libs/glew
 	media-libs/libpng:0
 	media-libs/libsamplerate
-	sci-libs/colamd
 	sci-libs/ldl
 	sys-libs/zlib
 	virtual/glu
 	virtual/jpeg
 	virtual/libintl
 	virtual/opengl
-	x11-libs/libXi
 	x11-libs/libX11
+	x11-libs/libXi
+	x11-libs/libXxf86vm
 	boost? ( >=dev-libs/boost-1.44[nls?,threads(+)] )
 	collada? ( media-libs/opencollada )
 	colorio? ( <=media-libs/opencolorio-1.0.9 )
@@ -96,12 +96,11 @@ RDEPEND="
 	nls? ( virtual/libiconv )
 	openal? ( >=media-libs/openal-1.6.372 )
 	openimageio? ( media-libs/openimageio )
-	openexr? ( media-libs/openexr )
+	openexr? ( media-libs/ilmbase media-libs/openexr )
 	sdl? ( media-libs/libsdl[sound,joystick] )
 	sndfile? ( media-libs/libsndfile )
 	tiff? ( media-libs/tiff:0 )"
 DEPEND="${RDEPEND}
-	>=dev-cpp/eigen-3.1.3:3
 	doc? (
 		app-doc/doxygen[-nodot(-),dot(+)]
 		dev-python/sphinx
@@ -125,27 +124,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/01-${PN}-2.68-doxyfile.patch \
-		"${FILESDIR}"/02-${PN}-2.71-unbundle-colamd.patch \
-		"${FILESDIR}"/04-${PN}-2.71-unbundle-glog.patch \
-		"${FILESDIR}"/05-${PN}-2.72-unbundle-eigen3.patch \
-		"${FILESDIR}"/06-${PN}-2.68-fix-install-rules.patch \
-		"${FILESDIR}"/07-${PN}-2.70-sse2.patch \
-		"${FILESDIR}"/08-${PN}-2.71-gflags.patch \
-		"${FILESDIR}"/09-${PN}-2.72b-unbundle-minilzo.patch \
+	epatch "${FILESDIR}"/${PN}-2.68-doxyfile.patch \
+		"${FILESDIR}"/${PN}-2.68-fix-install-rules.patch \
+		"${FILESDIR}"/${PN}-2.70-sse2.patch \
 		"${FILESDIR}"/${PN}-2.72-T42797.diff
 
 	epatch_user
-
-	# remove some bundled deps
-	rm -r \
-		extern/Eigen3 \
-		extern/libopenjpeg \
-		extern/glew \
-		extern/colamd \
-		extern/lzo \
-		extern/libmv/third_party/{glog,gflags} \
-		|| die
 
 	# we don't want static glew, but it's scattered across
 	# thousand files
@@ -153,9 +137,6 @@ src_prepare() {
 	sed -i \
 		-e '/-DGLEW_STATIC/d' \
 		$(find . -type f -name "CMakeLists.txt") || die
-
-	ewarn "$(echo "Remaining bundled dependencies:";
-			( find extern -mindepth 1 -maxdepth 1 -type d; find extern/libmv/third_party -mindepth 1 -maxdepth 1 -type d; ) | sed 's|^|- |')"
 
 	# linguas cleanup
 	local i
@@ -282,6 +263,13 @@ pkg_postinst() {
 	elog "home directory. This can be done by starting blender, then"
 	elog "dragging the main menu down do display all paths."
 	elog
+	ewarn
+	ewarn "This ebuild does not unbundle the massive amount of 3rd party"
+	ewarn "libraries which are shipped with blender. Note that"
+	ewarn "these have caused security issues in the past."
+	ewarn "If you are concerned about security, file a bug upstream:"
+	ewarn "  https://developer.blender.org/"
+	ewarn
 	gnome2_icon_cache_update
 	fdo-mime_desktop_database_update
 }
