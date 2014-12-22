@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0-r1.ebuild,v 1.1 2013/08/31 16:03:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/pygtkglext-1.1.0-r1.ebuild,v 1.2 2014/12/22 12:09:42 idella4 Exp $
 
 EAPI=5
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=modules
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools-utils python-r1
 

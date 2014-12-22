@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.1.3_alpha.ebuild,v 1.4 2014/04/28 17:19:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-5.0.8.ebuild,v 1.1 2014/12/22 12:09:15 polynomial-c Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools

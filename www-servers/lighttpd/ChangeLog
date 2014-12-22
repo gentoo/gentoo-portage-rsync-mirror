@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.336 2014/12/21 09:21:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.337 2014/12/22 12:03:01 zlogene Exp $
+
+  22 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> lighttpd-1.4.35-r1.ebuild:
+  amd64 stable wrt bug #516842
 
   21 Dec 2014; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.35-r1.ebuild:
   Stable for HPPA (bug #516842).
