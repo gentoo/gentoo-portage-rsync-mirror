@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.21.8.ebuild,v 1.1 2014/12/22 14:29:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.21.8.ebuild,v 1.2 2014/12/22 14:32:52 polynomial-c Exp $
 
 EAPI=5
 
@@ -19,8 +19,4 @@ src_prepare() {
 	epatch "${FILESDIR}"/unrtf-0.21.8-automake-fix.patch
 	epatch "${FILESDIR}"/${PN}-0.21.8-iconv-detection.patch
 	eautoreconf
-}
-
-src_install() {
-	default
 }

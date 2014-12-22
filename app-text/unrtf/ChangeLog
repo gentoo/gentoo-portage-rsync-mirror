@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unrtf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.43 2014/12/22 14:29:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.44 2014/12/22 14:32:52 polynomial-c Exp $
+
+  22 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> unrtf-0.21.8.ebuild:
+  Removed now obsolete src_install function.
 
 *unrtf-0.21.8 (22 Dec 2014)
 

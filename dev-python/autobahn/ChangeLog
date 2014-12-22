@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/autobahn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autobahn/ChangeLog,v 1.3 2014/12/13 08:21:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autobahn/ChangeLog,v 1.4 2014/12/22 14:53:40 jlec Exp $
+
+*autobahn-0.9.4.2 (22 Dec 2014)
+
+  22 Dec 2014; Justin Lecher <jlec@gentoo.org> -autobahn-0.7.4.ebuild,
+  -autobahn-0.9.3.3.ebuild, +autobahn-0.9.4.2.ebuild:
+  Version Bump; drop old, fixes sandbox violation and file collisions, #504240
+  & #532548
 
   13 Dec 2014; Michał Górny <mgorny@gentoo.org> autobahn-0.7.4.ebuild,
   autobahn-0.9.3.3.ebuild:

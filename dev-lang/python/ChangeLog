@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.799 2014/12/14 17:14:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.800 2014/12/22 14:36:43 jer Exp $
+
+  22 Dec 2014; Jeroen Roovers <jer@gentoo.org> python-2.7.9.ebuild:
+  Stable for HPPA (bug #532232).
 
 *python-2.7.9 (14 Dec 2014)
 
