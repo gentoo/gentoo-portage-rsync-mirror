@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.2.1-r1.ebuild,v 1.16 2014/08/10 21:07:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.2.1-r1.ebuild,v 1.17 2014/12/22 02:36:54 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_{6,7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 

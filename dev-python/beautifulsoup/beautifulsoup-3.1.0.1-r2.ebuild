@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r2.ebuild,v 1.16 2014/11/24 13:47:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/beautifulsoup-3.1.0.1-r2.ebuild,v 1.17 2014/12/22 02:36:54 idella4 Exp $
 
 EAPI="5"
 # A few tests fail with python3.3/3.4 :(
-PYTHON_COMPAT=( python{3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{3_3,3_4} pypy3 )
 
 inherit distutils-r1 eutils
 
