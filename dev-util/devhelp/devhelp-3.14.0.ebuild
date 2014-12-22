@@ -1,29 +1,29 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.10.2.ebuild,v 1.5 2014/03/09 11:56:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.14.0.ebuild,v 1.1 2014/12/22 18:45:41 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 # gedit-3.8 is python3 only, this also per:
 # https://bugzilla.redhat.com/show_bug.cgi?id=979450
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_3,3_4} )
 
 inherit gnome2 python-single-r1 toolchain-funcs
 
 DESCRIPTION="An API documentation browser for GNOME"
-HOMEPAGE="http://live.gnome.org/devhelp"
+HOMEPAGE="https://wiki.gnome.org/Apps/Devhelp"
 
 LICENSE="GPL-2+"
 SLOT="0/3-1" # subslot = 3-(libdevhelp-3 soname version)
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="gedit"
 REQUIRED_USE="gedit? ( ${PYTHON_REQUIRED_USE} )"
 
 # FIXME: automagic python dependency
 COMMON_DEPEND="
 	>=dev-libs/glib-2.37.3:2
-	>=x11-libs/gtk+-3.9.8:3
-	>=net-libs/webkit-gtk-2:3
+	>=x11-libs/gtk+-3.13.4:3
+	>=net-libs/webkit-gtk-2:4
 "
 RDEPEND="${COMMON_DEPEND}
 	gedit? (

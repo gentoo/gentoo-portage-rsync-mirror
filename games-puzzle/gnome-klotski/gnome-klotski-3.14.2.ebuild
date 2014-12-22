@@ -1,30 +1,31 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-klotski/gnome-klotski-3.10.0.ebuild,v 1.5 2014/03/09 11:57:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-klotski/gnome-klotski-3.14.2.ebuild,v 1.1 2014/12/22 18:57:01 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.16"
+VALA_MIN_API_VERSION="0.22"
 
 inherit gnome-games vala
 
 DESCRIPTION="Slide blocks to solve the puzzle"
-HOMEPAGE="https://wiki.gnome.org/Klotski"
+HOMEPAGE="https://wiki.gnome.org/Apps/Klotski"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-libs/glib:2
+	>=dev-libs/glib-2.32:2
 	>=gnome-base/librsvg-2.32.0
-	>=x11-libs/gtk+-3.4.0:3
+	>=x11-libs/gtk+-3.10:3
 "
 DEPEND="${RDEPEND}
 	$(vala_depend)
 	app-text/yelp-tools
-	>=dev-util/intltool-0.35.0
+	dev-util/appdata-tools
+	>=dev-util/intltool-0.50
 	sys-devel/gettext
 	virtual/pkgconfig
 "
@@ -32,4 +33,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	gnome-games_src_prepare
 	vala_src_prepare
+}
+
+src_configure() {
+	gnome-games_src_configure APPDATA_VALIDATE=$(type -P true)
 }

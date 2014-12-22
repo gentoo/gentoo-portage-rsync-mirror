@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.13.3.ebuild,v 1.1 2014/07/23 01:44:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-3.14.0.ebuild,v 1.1 2014/12/22 18:43:17 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit gnome2 python-r1 virtualx
 
@@ -19,17 +19,18 @@ IUSE="+cairo examples test +threads"
 
 REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
-	test? ( cairo )"
+	test? ( cairo )
+"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.38:2
-	>=dev-libs/gobject-introspection-1.38
+	>=dev-libs/gobject-introspection-1.39
 	virtual/libffi:=
 	cairo? (
 		>=dev-python/pycairo-1.10.0[${PYTHON_USEDEP}]
 		x11-libs/cairo )
-	${PYTHON_DEPS}"
-
+	${PYTHON_DEPS}
+"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	cairo? ( x11-libs/cairo[glib] )
@@ -40,15 +41,18 @@ DEPEND="${COMMON_DEPEND}
 		x11-libs/cairo[glib]
 		x11-libs/gdk-pixbuf:2[introspection]
 		x11-libs/gtk+:3[introspection]
-		x11-libs/pango[introspection] )"
+		x11-libs/pango[introspection] )
+"
 # gnome-base/gnome-common required by eautoreconf
+
 # We now disable introspection support in slot 2 per upstream recommendation
 # (see https://bugzilla.gnome.org/show_bug.cgi?id=642048#c9); however,
 # older versions of slot 2 installed their own site-packages/gi, and
 # slot 3 will collide with them.
 RDEPEND="${COMMON_DEPEND}
 	!<dev-python/pygtk-2.13
-	!<dev-python/pygobject-2.28.6-r50:2[introspection]"
+	!<dev-python/pygobject-2.28.6-r50:2[introspection]
+"
 
 src_prepare() {
 	gnome2_src_prepare

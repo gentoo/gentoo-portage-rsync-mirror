@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.254 2014/11/13 11:40:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.255 2014/12/22 18:47:19 eva Exp $
+
+*at-spi-2.14.0 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +at-spi-2.14.0.ebuild:
+  Version bump for Gnome 3.14.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -at-spi-1.32.0-r2.ebuild,
   -at-spi-2.8.0.ebuild, -files/at-spi-1.22.0-tests.patch,
