@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.112 2014/12/19 19:45:22 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.113 2014/12/22 02:04:53 patrick Exp $
+
+*testtools-1.2.1 (22 Dec 2014)
+
+  22 Dec 2014; Patrick Lauer <patrick@gentoo.org> +testtools-1.2.1.ebuild:
+  Bump
 
   19 Dec 2014; Mike Gilbert <floppym@gentoo.org> testtools-1.2.0.ebuild:
   Unconditionally depend on unittest2 at run/build time, bug 532720.
