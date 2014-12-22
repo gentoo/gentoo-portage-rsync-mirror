@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.222 2014/12/21 19:28:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.224 2014/12/22 03:26:28 floppym Exp $
+
+  22 Dec 2014; Mike Gilbert <floppym@gentoo.org> ntp-4.2.8-r1.ebuild:
+  Drop redundant copy of ntp.conf. Remove cleanup code rendered obsolete by
+  previous change.
+
+*ntp-4.2.8-r1 (22 Dec 2014)
+
+  22 Dec 2014; Mike Gilbert <floppym@gentoo.org> +ntp-4.2.8-r1.ebuild,
+  -ntp-4.2.8.ebuild:
+  Do not blindly copy the contents of scripts/ to /usr/share/ntp, bug 533248.
 
 *ntp-4.2.8 (21 Dec 2014)
 
