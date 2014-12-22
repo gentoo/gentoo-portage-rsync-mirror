@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/http
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.48 2014/12/14 05:22:27 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http/ChangeLog,v 1.49 2014/12/22 04:49:27 gienah Exp $
+
+*http-4000.2.19 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +http-4000.2.19.ebuild:
+  Bump http to 4000.2.19
 
 *http-4000.2.18 (14 Dec 2014)
 
