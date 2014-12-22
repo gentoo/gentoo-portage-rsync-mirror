@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.4 2014/12/13 08:22:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.5 2014/12/21 23:03:05 tamiko Exp $
 
 EAPI=5
 
@@ -94,7 +94,9 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4.0.1-removesqlite.patch \
 		"${FILESDIR}"/${PN}-4.0.1-gcc-4.7.patch \
 		"${FILESDIR}"/${PN}-4.0.1-vtk-cg-path.patch \
-		"${FILESDIR}"/${PN}-4.0.1-Protobuf.patch
+		"${FILESDIR}"/${PN}-4.0.1-Protobuf.patch \
+		"${FILESDIR}"/${P}-glxext-legacy.patch \
+		"${FILESDIR}"/${P}-no-fatal-warnings.patch
 
 	# lib64 fixes
 	sed -i \
