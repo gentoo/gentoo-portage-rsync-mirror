@@ -1,14 +1,14 @@
-From b96c19976b6876648fd91949f78f06cf5d269b18 Mon Sep 17 00:00:00 2001
+From e61ece2b42b270dd3f68718fef291be7b7f44aa6 Mon Sep 17 00:00:00 2001
 From: Gilles Dartiguelongue <eva@gentoo.org>
 Date: Tue, 2 Nov 2010 23:19:07 +0100
-Subject: [PATCH] make custom session work
+Subject: [PATCH 1/4] make custom session work
 
 Gentoo bug: #216984
 
 fix custom sessions not doing sourcing in the proper order.
 ---
- data/Xsession.in |   18 +++++++++---------
- 1 files changed, 9 insertions(+), 9 deletions(-)
+ data/Xsession.in | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
 
 diff --git a/data/Xsession.in b/data/Xsession.in
 index 118518c..201be92 100755
@@ -47,5 +47,5 @@ index 118518c..201be92 100755
  sshagent="`gdmwhich ssh-agent`"
  if [ -n "$sshagent" ] && [ -x "$sshagent" ] && [ -z "$SSH_AUTH_SOCK" ]; then
 -- 
-1.7.7
+1.8.5.1
 

@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/quadrapassel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/ChangeLog,v 1.17 2014/07/23 15:16:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/ChangeLog,v 1.18 2014/12/22 21:14:22 eva Exp $
+
+*quadrapassel-3.14.0 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  -quadrapassel-3.10.2.ebuild, -quadrapassel-3.12.1.ebuild,
+  +quadrapassel-3.14.0.ebuild:
+  Version bump for Gnome 3.14. Clean up old revisions.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> quadrapassel-3.12.2.ebuild:
   Stable for x86, wrt bug #512012

@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/quadrapassel-3.12.1.ebuild,v 1.1 2014/04/27 16:42:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lightsoff/lightsoff-3.14.1.ebuild,v 1.1 2014/12/22 21:13:53 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.16"
+VALA_MIN_API_VERSION="0.22"
 
 inherit gnome-games vala
 
-DESCRIPTION="Fit falling blocks together"
-HOMEPAGE="https://wiki.gnome.org/Quadrapassel"
+DESCRIPTION="Turn off all the lights"
+HOMEPAGE="https://wiki.gnome.org/Apps/Lightsoff"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -18,11 +18,10 @@ IUSE=""
 
 RDEPEND="
 	dev-libs/glib:2
-	>=gnome-base/librsvg-2.32.0:2
-	>=media-libs/clutter-1:1.0
-	>=media-libs/clutter-gtk-0.91.6:1.0
-	>=media-libs/libcanberra-0.26[gtk3]
-	>=x11-libs/gtk+-3.10:3
+	>=gnome-base/librsvg-2.32:2
+	>=media-libs/clutter-1.14:1.0
+	>=media-libs/clutter-gtk-1.5.5:1.0
+	>=x11-libs/gtk+-3.13.2:3
 "
 DEPEND="${RDEPEND}
 	$(vala_depend)

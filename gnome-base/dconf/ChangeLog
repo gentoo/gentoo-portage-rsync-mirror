@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.72 2014/10/11 11:57:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.73 2014/12/22 21:16:30 eva Exp $
+
+*dconf-0.22.0 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -dconf-0.18.0.ebuild,
+  +dconf-0.22.0.ebuild:
+  Version bump for Gnome 3.14. Clean up old revision.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> dconf-0.20.0.ebuild:
   arm stable, bug #512012

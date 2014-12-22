@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/slock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.49 2014/10/12 10:50:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slock/ChangeLog,v 1.50 2014/12/22 21:04:41 jer Exp $
+
+*slock-1.2 (22 Dec 2014)
+
+  22 Dec 2014; Jeroen Roovers <jer@gentoo.org> +slock-1.2.ebuild,
+  +files/slock-1.2-dontdieonme.patch:
+  Version bump.
 
   12 Oct 2014; Jeroen Roovers <jer@gentoo.org> -slock-1.1.ebuild:
   Old.

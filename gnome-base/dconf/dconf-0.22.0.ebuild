@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.18.0.ebuild,v 1.11 2014/06/20 14:45:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.22.0.ebuild,v 1.1 2014/12/22 21:16:30 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,10 +16,10 @@ SLOT="0"
 # TODO: coverage ?
 IUSE="test +X"
 
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
 
 RDEPEND="
-	>=dev-libs/glib-2.35.2:2
+	>=dev-libs/glib-2.39.1:2
 	sys-apps/dbus
 	X? (
 		>=dev-libs/libxml2-2.7.7:2
@@ -39,7 +39,7 @@ src_configure() {
 		--disable-gcov \
 		--enable-man \
 		$(use_enable X editor) \
-		VALAC=$(type -P valac-0.18) # harmless even if valac-0.18 not found
+		VALAC=$(type -P true)
 }
 
 src_test() {

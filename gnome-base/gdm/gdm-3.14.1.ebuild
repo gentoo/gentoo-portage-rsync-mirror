@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.12.2.ebuild,v 1.5 2014/09/29 15:05:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.14.1.ebuild,v 1.1 2014/12/22 21:17:35 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -23,7 +23,7 @@ LICENSE="
 SLOT="0"
 IUSE="accessibility audit branding fprint +introspection ipv6 plymouth selinux smartcard +systemd tcpd test wayland xinerama"
 REQUIRED_USE="wayland? ( systemd )"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
 # nspr used by smartcard extension
@@ -129,7 +129,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# make custom session work, bug #216984
+	# make custom session work, bug #216984, upstream bug #737578
 	epatch "${FILESDIR}/${PN}-3.2.1.1-custom-session.patch"
 
 	# ssh-agent handling must be done at xinitrc.d, bug #220603
@@ -192,9 +192,6 @@ src_install() {
 	insinto /etc/X11/xinit/xinitrc.d
 	newins "${FILESDIR}/49-keychain-r1" 49-keychain
 	newins "${FILESDIR}/50-ssh-agent-r1" 50-ssh-agent
-
-	# log, etc.
-	keepdir /var/log/gdm
 
 	# gdm user's home directory
 	keepdir /var/lib/gdm
