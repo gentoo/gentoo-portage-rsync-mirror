@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r1.ebuild,v 1.2 2014/12/22 03:26:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r1.ebuild,v 1.3 2014/12/22 08:42:22 polynomial-c Exp $
 
 EAPI="4"
 
@@ -77,7 +77,7 @@ src_install() {
 
 	insinto /etc
 	doins "${FILESDIR}"/ntp.conf
-	newinitd "${FILESDIR}"/ntpd.rc ntpd
+	newinitd "${FILESDIR}"/ntpd.rc-r1 ntpd
 	newconfd "${FILESDIR}"/ntpd.confd ntpd
 	newinitd "${FILESDIR}"/ntp-client.rc ntp-client
 	newconfd "${FILESDIR}"/ntp-client.confd ntp-client

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.224 2014/12/22 03:26:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.225 2014/12/22 08:42:22 polynomial-c Exp $
+
+  22 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -ntp-4.2.4_p7-r1.ebuild,
+  -ntp-4.2.6_p2-r1.ebuild, -ntp-4.2.6_p3.ebuild, -ntp-4.2.6_p3-r1.ebuild,
+  -ntp-4.2.6_p4.ebuild, -ntp-4.2.6_p5.ebuild, -ntp-4.2.6_p5-r1.ebuild,
+  -ntp-4.2.6_p5-r2.ebuild, -ntp-4.2.6_p5-r7.ebuild, -ntp-4.2.6_p5-r9.ebuild,
+  ntp-4.2.8-r1.ebuild, -files/ntp-4.2.4_p7-CVE-2009-3563.patch,
+  +files/ntpd.rc-r1, -files/sntp.service:
+  Added rewritten init script for ntpd. Removed old versions.
 
   22 Dec 2014; Mike Gilbert <floppym@gentoo.org> ntp-4.2.8-r1.ebuild:
   Drop redundant copy of ntp.conf. Remove cleanup code rendered obsolete by
