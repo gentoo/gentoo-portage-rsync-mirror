@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.40 2014/12/19 13:35:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.41 2014/12/22 18:10:01 eva Exp $
+
+*libpeas-1.12.1 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -libpeas-1.10.0.ebuild,
+  +libpeas-1.12.1.ebuild:
+  Version bump for Gnome 3.14. Clean up old revision.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> libpeas-1.10.1.ebuild:
   amd64 stable, bug 529964

@@ -1,20 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.10.0.ebuild,v 1.6 2014/11/25 21:05:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/libpeas-1.12.1.ebuild,v 1.1 2014/12/22 18:10:01 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit eutils gnome2 multilib python-r1 virtualx
+inherit gnome2 multilib python-r1 virtualx
 
 DESCRIPTION="A GObject plugins library"
 HOMEPAGE="http://developer.gnome.org/libpeas/stable/"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="+gtk glade +python seed"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ?? ( $(python_gen_useflags 'python3*') ) )"
 
@@ -34,49 +34,33 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-if_use_python_python_foreach_impl() {
-	if use python; then
-		python_foreach_impl run_in_build_dir "$@"
-	else
-		"$@"
-	fi
-}
-
-src_prepare() {
-	use python && python_copy_sources
-	if_use_python_python_foreach_impl gnome2_src_prepare
-}
-
 src_configure() {
-	local myconf="
+	local myconf=(
 		$(use_enable glade glade-catalog)
 		$(use_enable gtk)
 		$(use_enable seed)
 		--disable-deprecation
-		--disable-static"
+		--disable-static
+
+		# possibly overriden below
+		--disable-python{2,3}
+	)
 	# Wtf, --disable-gcov, --enable-gcov=no, --enable-gcov, all enable gcov
 	# What do we do about gdb, valgrind, gcov, etc?
 
-	configuration() {
-		local myconf="$@"
-		[[ ${EPYTHON} == python2* ]] && myconf+=" --enable-python2 --disable-python3 PYTHON2_CONFIG=/usr/bin/python-config-${EPYTHON#python}"
-		[[ ${EPYTHON} == python3* ]] && myconf+=" --enable-python3 --disable-python2 PYTHON3_CONFIG=/usr/bin/python-config-${EPYTHON#python}"
-		gnome2_src_configure ${myconf}
+	python_configure() {
+		local v
+		python_is_python3 && v=3 || v=2
+		myconf+=(
+			"--enable-python${v}"
+			# it is just 'PYTHON' for py3 in the build system
+			"PYTHON${v#3}=${PYTHON}"
+			"PYTHON${v}_CONFIG=${PYTHON}-config"
+		)
 	}
+	use python && python_foreach_impl python_configure
 
-	if use python; then
-		python_foreach_impl run_in_build_dir configuration ${myconf}
-	else
-		gnome2_src_configure ${myconf}
-	fi
-}
-
-src_compile() {
-	if_use_python_python_foreach_impl gnome2_src_compile
-}
-
-src_install() {
-	if_use_python_python_foreach_impl gnome2_src_install
+	gnome2_src_configure "${myconf[@]}"
 }
 
 src_test() {
@@ -86,5 +70,5 @@ src_test() {
 	# >>> from gi.repository import Gtk
 	# >>> Gtk.IconTheme.get_default().has_icon("gtk-about")
 	# This should return True, it returns False for Xvfb
-	if_use_python_python_foreach_impl Xemake check
+	Xemake check
 }

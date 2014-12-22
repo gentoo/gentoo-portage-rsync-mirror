@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.50 2014/11/24 09:52:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.51 2014/12/22 18:27:39 eva Exp $
+
+*pyatspi-2.14.0 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +pyatspi-2.14.0.ebuild:
+  Version bump for Gnome 3.14.
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/pyatspi-2.2.0-AM_CHECK_PYMOD-pygtk.patch,

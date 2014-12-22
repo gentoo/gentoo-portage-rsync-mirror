@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.81 2014/08/10 21:09:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.82 2014/12/22 18:09:36 djc Exp $
+
+*dulwich-0.9.8 (22 Dec 2014)
+
+  22 Dec 2014; Dirkjan Ochtman <djc@gentoo.org> +dulwich-0.9.8.ebuild:
+  Version bump dulwich to 0.9.8
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dulwich-0.9.4.ebuild,
   dulwich-0.9.5.ebuild, dulwich-0.9.7.ebuild:
