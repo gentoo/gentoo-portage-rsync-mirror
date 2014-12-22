@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.76 2014/12/21 12:46:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.77 2014/12/22 01:02:03 patrick Exp $
+
+  22 Dec 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag from metadata.xml
 
   21 Dec 2014; Michał Górny <mgorny@gentoo.org> -files/99qmail,
   -files/conf-common, -files/conf-pop3d, -files/conf-qmqpd, -files/conf-qmtpd,

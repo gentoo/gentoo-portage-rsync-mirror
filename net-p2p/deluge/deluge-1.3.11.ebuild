@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.11.ebuild,v 1.2 2014/12/21 09:12:14 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.11.ebuild,v 1.3 2014/12/22 01:15:40 heroxbd Exp $
 
 EAPI="5"
 
@@ -29,21 +29,21 @@ IUSE="geoip gtk libnotify setproctitle sound webinterface"
 DEPEND=">=net-libs/rb_libtorrent-0.14.9[python]
 	dev-util/intltool"
 RDEPEND=">=net-libs/rb_libtorrent-0.14.9[python]
-	dev-python/chardet
-	dev-python/pyopenssl
-	dev-python/pyxdg
-	>=dev-python/twisted-core-8.1
-	>=dev-python/twisted-web-8.1
+	dev-python/chardet[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	dev-python/pyxdg[${PYTHON_USEDEP}]
+	>=dev-python/twisted-core-8.1[${PYTHON_USEDEP}]
+	>=dev-python/twisted-web-8.1[${PYTHON_USEDEP}]
 	geoip? ( dev-libs/geoip )
 	gtk? (
-		sound? ( dev-python/pygame )
-		dev-python/pygobject:2
-		>=dev-python/pygtk-2.12
+		sound? ( dev-python/pygame[${PYTHON_USEDEP}] )
+		dev-python/pygobject:2[${PYTHON_USEDEP}]
+		>=dev-python/pygtk-2.12[${PYTHON_USEDEP}]
 		gnome-base/librsvg
-		libnotify? ( dev-python/notify-python )
+		libnotify? ( dev-python/notify-python[${PYTHON_USEDEP}] )
 	)
-	setproctitle? ( dev-python/setproctitle )
-	webinterface? ( dev-python/mako )"
+	setproctitle? ( dev-python/setproctitle[${PYTHON_USEDEP}] )
+	webinterface? ( dev-python/mako[${PYTHON_USEDEP}] )"
 
 python_prepare_all() {
 	local PATCHES=(

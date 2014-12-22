@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.191 2014/12/21 09:12:14 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.192 2014/12/22 01:15:40 heroxbd Exp $
+
+  22 Dec 2014; Benda Xu <heroxbd@gentoo.org> deluge-1.3.11.ebuild:
+  Append PYTHON_USEDEP to the dependencies.
 
   21 Dec 2014; Benda Xu <heroxbd@gentoo.org> deluge-1.3.11.ebuild:
   Override _distutils-r1_create_setup_cfg to disable out-of-tree builds; needed
