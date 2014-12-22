@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.148 2014/12/21 05:49:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.149 2014/12/22 03:44:07 idella4 Exp $
+
+  22 Dec 2014; Ian Delaney <idella4@gentoo.org> django-1.7.ebuild:
+  postgres IUSE flag dropped and treated in the same as the dropped flag 'mysql'
+  and the msg to use via the readme.gentoo extended
 
   21 Dec 2014; Ian Delaney <idella4@gentoo.org> django-1.7.ebuild:
   drop IUSE mysql and dep dev-python/mysql-python in RDEPEND, substitute with
