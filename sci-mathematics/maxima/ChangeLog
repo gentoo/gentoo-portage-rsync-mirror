@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.114 2014/12/20 15:41:27 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.115 2014/12/22 10:49:42 grozin Exp $
+
+  22 Dec 2014; Andrey Grozin <grozin@gentoo.org> +files/wish-1.patch:
+  Adding a missing patch (#533202)
 
 *maxima-5.35.1 (20 Dec 2014)
 

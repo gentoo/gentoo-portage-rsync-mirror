@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.211 2014/12/20 15:37:16 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.212 2014/12/22 10:43:49 grozin Exp $
+
+  22 Dec 2014; Andrey Grozin <grozin@gentoo.org>
+  +files/concurrency-test-1.2.6.patch:
+  Adding a missing patch (#533158)
 
 *sbcl-1.2.6 (20 Dec 2014)
 

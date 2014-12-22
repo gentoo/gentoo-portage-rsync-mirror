@@ -1,6 +1,11 @@
 # ChangeLog for app-text/epspdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.24 2014/11/02 11:01:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epspdf/ChangeLog,v 1.25 2014/12/22 10:37:12 aballier Exp $
+
+*epspdf-0.6.1 (22 Dec 2014)
+
+  22 Dec 2014; Alexis Ballier <aballier@gentoo.org> +epspdf-0.6.1.ebuild:
+  version bump
 
   02 Nov 2014; Alexis Ballier <aballier@gentoo.org> epspdf-0.6.0.ebuild:
   depend on texlive-basic for luatex; this will help for texlive 2014 and
