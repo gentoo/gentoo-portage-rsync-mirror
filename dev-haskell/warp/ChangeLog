@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/warp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp/ChangeLog,v 1.12 2014/12/14 07:09:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp/ChangeLog,v 1.13 2014/12/22 11:22:06 gienah Exp $
+
+*warp-3.0.4.1 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +warp-3.0.4.1.ebuild:
+  Bump warp to 3.0.4.1
 
 *warp-3.0.4 (14 Dec 2014)
 

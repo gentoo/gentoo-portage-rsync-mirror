@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/yesod-form
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-form/ChangeLog,v 1.7 2014/12/14 08:30:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-form/ChangeLog,v 1.8 2014/12/22 11:09:42 gienah Exp $
+
+*yesod-form-1.4.3.1 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +yesod-form-1.4.3.1.ebuild:
+  Bump yesod-form to 1.4.3.1
 
 *yesod-form-1.4.3 (14 Dec 2014)
 

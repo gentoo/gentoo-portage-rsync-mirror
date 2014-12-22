@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1423 2014/12/20 15:17:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1425 2014/12/22 11:16:36 mgorny Exp $
+
+  22 Dec 2014; Michał Górny <mgorny@gentoo.org> portage-2.2.14.ebuild:
+  Update the comment not to support python-mhash in new stable too, bug #533190.
+
+  22 Dec 2014; Michał Górny <mgorny@gentoo.org> portage-2.2.15.ebuild,
+  portage-9999.ebuild:
+  Update the comment not to support python-mhash, bug #533190.
 
   20 Dec 2014; Zac Medico <zmedico@gentoo.org> portage-2.2.14.ebuild,
   portage-2.2.15.ebuild:

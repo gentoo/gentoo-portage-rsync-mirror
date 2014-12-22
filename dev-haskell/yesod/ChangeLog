@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/yesod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod/ChangeLog,v 1.8 2014/12/14 08:35:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod/ChangeLog,v 1.9 2014/12/22 11:19:30 gienah Exp $
+
+*yesod-1.4.1.3 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +yesod-1.4.1.3.ebuild:
+  Bump yesod to 1.4.1.3
 
 *yesod-1.4.1.1 (14 Dec 2014)
 

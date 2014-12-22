@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/yesod-static
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-static/ChangeLog,v 1.8 2014/12/14 08:33:13 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-static/ChangeLog,v 1.9 2014/12/22 11:12:29 gienah Exp $
+
+*yesod-static-1.4.0.4 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +yesod-static-1.4.0.4.ebuild:
+  Bump yesod-static to 1.4.0.4
 
 *yesod-static-1.4.0.3 (14 Dec 2014)
 

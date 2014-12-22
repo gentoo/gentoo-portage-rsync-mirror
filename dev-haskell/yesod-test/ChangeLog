@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/yesod-test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-test/ChangeLog,v 1.4 2014/12/14 08:34:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-test/ChangeLog,v 1.5 2014/12/22 11:15:16 gienah Exp $
+
+*yesod-test-1.4.2.1 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +yesod-test-1.4.2.1.ebuild:
+  Bump yesod-test to 1.4.2.1
 
 *yesod-test-1.4.2 (14 Dec 2014)
 
