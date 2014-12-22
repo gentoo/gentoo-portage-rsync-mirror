@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/gnome-sudoku
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.21 2014/11/24 10:45:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.22 2014/12/22 19:03:22 eva Exp $
+
+*gnome-sudoku-3.14.2 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-sudoku-3.14.2.ebuild:
+  Version bump for Gnome 3.14. Rewritten in vala.
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/gnome-sudoku-3.8.1-fix-numberbox.patch, -gnome-sudoku-3.10.2.ebuild,

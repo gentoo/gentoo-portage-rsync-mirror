@@ -1,0 +1,38 @@
+#!/sbin/runscript
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsclient.initd,v 1.1 2014/12/22 19:24:28 radhermit Exp $
+
+[ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
+
+depend() {
+	local myneed=""
+	if [ -e /etc/fstab ] ; then
+		fstabinfo -t nfs4 -q && myneed="$myneed rpc.idmapd"
+		fstabinfo -t nfs -q && myneed="$myneed rpc.statd"
+		fstabinfo -o -t nfs,nfs4 | while read opts; do
+			case $opts in
+				*sec=krb*|*sec=spkm*) myneed="$myneed rpc.gssd" ;;
+			esac
+		done
+	fi
+	before netmount
+	config /etc/fstab
+	need portmap ${myneed}
+	provide nfsmount
+	use ypbind dns
+}
+
+start() {
+	if [ -x /usr/sbin/sm-notify ] ; then
+		ebegin "Starting NFS sm-notify"
+		/usr/sbin/sm-notify ${OPTS_SMNOTIFY}
+		eend $?
+	fi
+
+	# Make sure nfs support is loaded in the kernel #64709
+	if [ -e /proc/modules ] && ! grep -qs 'nfs$' /proc/filesystems ; then
+		modprobe -q nfs
+	fi
+	return 0
+}

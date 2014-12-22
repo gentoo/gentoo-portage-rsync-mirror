@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/qqwing
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qqwing/ChangeLog,v 1.1 2014/12/22 19:01:18 eva Exp $
+
+*qqwing-1.3.3 (22 Dec 2014)
+
+  22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +qqwing-1.3.3.ebuild,
+  +files/qqwing-1.3.0-autotools.patch, +metadata.xml:
+  Initial ebuild. Required by >=games-puzzle/gnome-sudoku-3.14.
+
