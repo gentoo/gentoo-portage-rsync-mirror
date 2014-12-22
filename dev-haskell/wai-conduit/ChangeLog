@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wai-conduit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-conduit/ChangeLog,v 1.3 2014/12/14 07:06:12 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-conduit/ChangeLog,v 1.4 2014/12/22 08:18:47 gienah Exp $
+
+*wai-conduit-3.0.0.2 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +wai-conduit-3.0.0.2.ebuild:
+  Bump wai-conduit to 3.0.0.2
 
 *wai-conduit-3.0.0.1 (14 Dec 2014)
 

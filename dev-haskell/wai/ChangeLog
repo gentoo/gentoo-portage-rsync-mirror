@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wai
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/ChangeLog,v 1.12 2014/12/14 07:00:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/ChangeLog,v 1.13 2014/12/22 08:17:26 gienah Exp $
+
+*wai-3.0.2.1 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +wai-3.0.2.1.ebuild:
+  Bump wai to 3.0.2.1
 
 *wai-3.0.2 (14 Dec 2014)
 
