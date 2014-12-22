@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/system-fileio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/system-fileio/ChangeLog,v 1.5 2014/12/14 11:33:02 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/system-fileio/ChangeLog,v 1.6 2014/12/22 06:33:20 gienah Exp $
+
+*system-fileio-0.3.16 (22 Dec 2014)
+
+  22 Dec 2014; Mark Wright <gienah@gentoo.org> +system-fileio-0.3.16.ebuild:
+  Bump system-fileio to 0.3.16
 
 *system-fileio-0.3.15 (14 Dec 2014)
 
