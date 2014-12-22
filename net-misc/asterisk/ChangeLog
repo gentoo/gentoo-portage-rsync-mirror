@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.511 2014/12/21 11:40:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.512 2014/12/22 12:32:37 chainsaw Exp $
+
+*asterisk-12.8.0 (22 Dec 2014)
+*asterisk-11.15.0 (22 Dec 2014)
+
+  22 Dec 2014; Tony Vroon <chainsaw@gentoo.org> -asterisk-11.14.1.ebuild,
+  +asterisk-11.15.0.ebuild, +asterisk-12.8.0.ebuild:
+  Remove vulnerable stable ebuild for security bug #532242. Add newer ebuilds
+  on both branches which contain primarily crash fixes.
 
   21 Dec 2014; Agostino Sarubbo <ago@gentoo.org> asterisk-11.14.2.ebuild:
   Stable for x86, wrt bug #532242

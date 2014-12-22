@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtchooser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.3 2014/11/17 20:26:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.4 2014/12/22 12:33:18 pinkbyte Exp $
+
+  22 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> qtchooser-0_p20140613.ebuild:
+  Add ~mips keyword, wrt bug #529196
 
   17 Nov 2014; Jeroen Roovers <jer@gentoo.org> qtchooser-0_p20140613.ebuild:
   Marked ~hppa (bug #529196).

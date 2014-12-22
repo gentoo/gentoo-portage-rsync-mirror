@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.14.1.ebuild,v 1.3 2014/11/24 15:26:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.8.0.ebuild,v 1.1 2014/12/22 12:32:37 chainsaw Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user
@@ -10,10 +10,10 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-3.13.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-3.14.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file
@@ -32,6 +32,7 @@ PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
 CDEPEND="dev-db/sqlite:3
 	dev-libs/popt
+	dev-libs/jansson
 	dev-libs/libxml2
 	dev-libs/openssl
 	sys-libs/ncurses
@@ -170,7 +171,7 @@ src_configure() {
 	use_select calendar		res_calendar res_calendar_{caldav,ews,exchange,icalendar}
 	use_select cluster		res_corosync
 	use_select curl			func_curl res_config_curl res_curl
-	use_select dahdi		app_dahdibarge app_dahdiras chan_dahdi codec_dahdi res_timing_dahdi
+	use_select dahdi		app_dahdibarge app_dahdiras app_meetme chan_dahdi codec_dahdi res_timing_dahdi
 	use_select freetds		{cdr,cel}_tds
 	use_select gtalk		chan_motif
 	use_select http			res_http_post
@@ -290,8 +291,8 @@ pkg_postinst() {
 	elog "#gentoo-voip @ irc.freenode.net"
 	echo
 	echo
-	elog "Please read the Asterisk 11 upgrade document:"
-	elog "https://wiki.asterisk.org/wiki/display/AST/Upgrading+to+Asterisk+11"
+	elog "Please read the Asterisk 12 upgrade document:"
+	elog "https://wiki.asterisk.org/wiki/display/AST/Upgrading+to+Asterisk+12"
 }
 
 pkg_config() {
