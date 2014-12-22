@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.73 2014/12/21 11:41:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.74 2014/12/22 13:52:28 jmbsvicetto Exp $
+
+  22 Dec 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -dokuwiki-20140505b.ebuild, -dokuwiki-20140929a.ebuild:
+  Drop old vulnerable versions.
 
   21 Dec 2014; Agostino Sarubbo <ago@gentoo.org> dokuwiki-20140929b.ebuild:
   Stable for x86, wrt bug #532190

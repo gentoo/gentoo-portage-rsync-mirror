@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/safe_yaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.16 2014/10/30 15:55:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.17 2014/12/22 13:53:46 ago Exp $
+
+  22 Dec 2014; Agostino Sarubbo <ago@gentoo.org> safe_yaml-1.0.4.ebuild:
+  Add ~x86, wrt bug #491822
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -safe_yaml-1.0.2.ebuild,
   -safe_yaml-1.0.3.ebuild, safe_yaml-1.0.4.ebuild:
