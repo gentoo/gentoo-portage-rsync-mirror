@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.12 2014/11/02 09:27:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.13 2014/12/23 02:14:39 radhermit Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils systemd
 
@@ -19,9 +19,10 @@ HOMEPAGE="http://sourceforge.net/projects/rpcbind/"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="debug selinux tcpd warmstarts"
+IUSE="debug selinux systemd tcpd warmstarts"
 
 CDEPEND=">=net-libs/libtirpc-0.2.3
+	systemd? ( sys-apps/systemd:= )
 	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
@@ -38,6 +39,7 @@ src_configure() {
 		--bindir="${EPREFIX}"/sbin \
 		--with-statedir="${EPREFIX}"/run/${PN} \
 		--with-rpcuser=root \
+		--with-systemdsystemunitdir=$(usex systemd "$(systemd_get_unitdir)" "no") \
 		$(use_enable tcpd libwrap) \
 		$(use_enable debug) \
 		$(use_enable warmstarts)

@@ -1,6 +1,15 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.40 2014/12/22 23:19:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.42 2014/12/23 02:14:39 radhermit Exp $
+
+  23 Dec 2014; Tim Harder <radhermit@gentoo.org> rpcbind-9999.ebuild:
+  Sync changes to live ebuild.
+
+*rpcbind-0.2.2-r1 (23 Dec 2014)
+
+  23 Dec 2014; Tim Harder <radhermit@gentoo.org> -rpcbind-0.2.2.ebuild,
+  +rpcbind-0.2.2-r1.ebuild:
+  Add systemd use flag (fixes bug #533356).
 
 *rpcbind-0.2.2 (22 Dec 2014)
 
