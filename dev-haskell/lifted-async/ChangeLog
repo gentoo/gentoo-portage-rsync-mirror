@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/lifted-async
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-async/ChangeLog,v 1.3 2014/12/14 05:48:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-async/ChangeLog,v 1.4 2014/12/23 04:20:21 gienah Exp $
+
+*lifted-async-0.2.0.2-r1 (23 Dec 2014)
+
+  23 Dec 2014; Mark Wright <gienah@gentoo.org>
+  +files/lifted-async-0.2.0.2-monad-control-1.1.patch,
+  +lifted-async-0.2.0.2-r1.ebuild:
+  Apply patch by Roman Cheplyaka to allow lifted-async 0.2.0.2-r1 to build with
+  monad-control-1.0.0.1
 
 *lifted-async-0.2.0.2 (14 Dec 2014)
 
