@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.196 2014/10/13 07:22:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.197 2014/12/23 16:33:04 pacho Exp $
+
+*fontconfig-2.11.1-r2 (23 Dec 2014)
+
+  23 Dec 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/fontconfig-2.11.1-fc-cache-r.patch, +fontconfig-2.11.1-r2.ebuild:
+  Fix fc-cache -r (#531748)
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> fontconfig-2.10.92.ebuild,
   fontconfig-2.10.93.ebuild, fontconfig-2.11.0-r1.ebuild,

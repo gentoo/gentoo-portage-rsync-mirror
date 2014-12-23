@@ -1,6 +1,9 @@
 # ChangeLog for app-text/csvfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/csvfix/ChangeLog,v 1.8 2014/12/08 00:44:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/csvfix/ChangeLog,v 1.9 2014/12/23 16:58:19 radhermit Exp $
+
+  23 Dec 2014; Tim Harder <radhermit@gentoo.org> csvfix-1.6.ebuild:
+  Update HOMEPAGE.
 
 *csvfix-1.6 (08 Dec 2014)
 

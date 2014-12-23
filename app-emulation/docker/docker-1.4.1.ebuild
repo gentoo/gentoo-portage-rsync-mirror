@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.4.0.ebuild,v 1.1 2014/12/12 18:53:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.4.1.ebuild,v 1.1 2014/12/23 16:34:26 xarthisius Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ if [[ ${PV} == *9999 ]]; then
 	inherit git-2
 else
 	SRC_URI="https://${GITHUB_URI}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	DOCKER_GITCOMMIT="4595d4f"
+	DOCKER_GITCOMMIT="5bc2ff8"
 	KEYWORDS="~amd64"
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 fi
@@ -37,6 +37,7 @@ CDEPEND="
 DEPEND="
 	${CDEPEND}
 	>=dev-lang/go-1.3
+	<dev-lang/go-1.4
 	btrfs? (
 		>=sys-fs/btrfs-progs-3.16.1
 	)
