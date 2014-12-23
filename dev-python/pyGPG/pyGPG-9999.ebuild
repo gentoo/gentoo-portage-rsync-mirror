@@ -1,12 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/pyGPG-9999.ebuild,v 1.4 2013/09/05 18:45:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/pyGPG-9999.ebuild,v 1.5 2014/12/22 23:34:50 dolsen Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=(python{2_6,2_7})
+PYTHON_COMPAT=(python{2_7,3_3,3_4})
 
-EGIT_MASTER="pyGPG"
 EGIT_BRANCH="master"
 
 inherit distutils-r1 python-r1 git-2
@@ -40,6 +39,8 @@ pkg_postinst() {
 	einfo
 	einfo "Please file any enhancement requests, or bugs"
 	einfo "at https://github.com/dol-sen/pyGPG/issues"
-	einfo "I am also on IRC @ #porthole of the freenode network"
+	einfo "I am also on IRC @ #gentoo-keys of the freenode network"
 	einfo
+	ewarn "There may be some python 3 compatibility issues still."
+	ewarn "Please help debug/fix/report them in github or bugzilla."
 }

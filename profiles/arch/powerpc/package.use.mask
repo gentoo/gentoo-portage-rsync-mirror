@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.224 2014/12/14 15:57:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.225 2014/12/22 23:36:16 gienah Exp $
 
-# Mark Wright <gienah@gentoo.org> (14 Dec 2014)
+# Mark Wright <gienah@gentoo.org> (14-23 Dec 2014)
 # test dependencies need keywording
+dev-haskell/binary test
 dev-haskell/haskell-src-exts test
 dev-haskell/text test
 dev-haskell/vector test
