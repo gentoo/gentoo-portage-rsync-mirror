@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.58 2014/12/21 18:04:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.59 2014/12/23 17:31:15 xarthisius Exp $
+
+  23 Dec 2014; Kacper Kowalik <xarthisius@gentoo.org> -i3-4.6.ebuild,
+  -i3-4.7.2-r1.ebuild, -i3-4.7.2.ebuild, -i3-4.7.ebuild:
+  Drop old
 
   21 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> i3-4.8.ebuild:
   amd64/x86 stable wrt bug #521070

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.448 2014/12/23 08:25:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.449 2014/12/23 17:22:22 radhermit Exp $
+
+  23 Dec 2014; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Drop duplicate dep on eselect-vi.
 
   23 Dec 2014; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
   Use array for configure options.

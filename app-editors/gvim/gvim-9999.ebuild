@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.22 2014/12/23 08:25:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.23 2014/12/23 17:22:22 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -67,7 +67,6 @@ RDEPEND="
 	tcl? ( dev-lang/tcl )
 "
 DEPEND="${RDEPEND}
-	>=app-admin/eselect-vi-1.1
 	dev-util/ctags
 	sys-devel/autoconf
 	virtual/pkgconfig

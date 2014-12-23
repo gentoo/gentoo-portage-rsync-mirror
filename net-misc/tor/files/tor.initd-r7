@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r7,v 1.1 2014/09/23 23:14:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r7,v 1.2 2014/12/23 17:26:49 blueness Exp $
 
 PIDFILE=/var/run/tor/tor.pid
 CONFFILE=/etc/tor/torrc
@@ -63,10 +63,13 @@ graceful() {
 }
 
 gracefulstop() {
+	local rc=0
         ebegin "Gracefully stopping Tor"
 	ebegin "This can take up to ${GRACEFUL_TIMEOUT} seconds"
 	start-stop-daemon -P --stop --signal INT -R ${GRACEFUL_TIMEOUT} --pidfile "${PIDFILE}" --exec /usr/bin/tor -- --PidFile "${PIDFILE}"
-	eend $?
+	rc=$?
+	eend "done"
+	eend $rc
 }
 
 reload() {

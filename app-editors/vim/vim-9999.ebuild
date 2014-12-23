@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-9999.ebuild,v 1.20 2014/12/23 08:25:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-9999.ebuild,v 1.21 2014/12/23 17:20:55 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -55,9 +55,7 @@ RDEPEND="
 	X? ( x11-libs/libXt )
 "
 DEPEND="${RDEPEND}
-	>=app-admin/eselect-vi-1.1
 	sys-devel/autoconf
-	>=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )
 "
 
@@ -205,7 +203,7 @@ src_configure() {
 			$(use_enable cscope)
 			$(use_enable gpm)
 			$(use_enable lua luainterp)
-			$(use lua && echo --with-lua-prefix=${EPREFIX}/usr)
+			$(usex lua "--with-lua-prefix=${EPREFIX}/usr" "")
 			$(use_with luajit)
 			$(use_enable nls)
 			$(use_enable perl perlinterp)
