@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.226 2014/12/22 15:04:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.227 2014/12/23 16:09:19 ago Exp $
+
+  23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ntp-4.2.8-r1.ebuild:
+  Stable for alpha/amd64/arm/ia64/ppc/ppc64/s390/sh/sparc/x86, wrt bug #533076
 
   22 Dec 2014; Markos Chandras <hwoarang@gentoo.org>
   +files/ntp-4.2.8-ntp-keygen-no-openssl.patch, ntp-4.2.8-r1.ebuild:

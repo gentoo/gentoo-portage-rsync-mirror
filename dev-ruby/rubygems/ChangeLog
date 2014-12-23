@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.252 2014/12/22 13:46:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.253 2014/12/23 16:04:36 ago Exp $
+
+  23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> rubygems-2.2.2.ebuild:
+  Stable for alpha, wrt bug #532534
 
   22 Dec 2014; Agostino Sarubbo <ago@gentoo.org> rubygems-2.2.2.ebuild:
   Stable for sparc, wrt bug #532534

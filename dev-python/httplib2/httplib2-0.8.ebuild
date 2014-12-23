@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.8.ebuild,v 1.13 2014/12/08 11:05:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.8.ebuild,v 1.14 2014/12/23 16:04:00 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://httplib2.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
