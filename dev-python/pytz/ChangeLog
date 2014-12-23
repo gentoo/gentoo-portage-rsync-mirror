@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.188 2014/12/20 01:39:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.189 2014/12/23 16:00:42 ago Exp $
+
+  23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pytz-2014.9.ebuild:
+  Stable for alpha, wrt bug #530384
 
   20 Dec 2014; Ian Delaney <idella4@gentoo.org> -pytz-2012c.ebuild,
   -pytz-2012j.ebuild, -pytz-2013.9.ebuild, -pytz-2013b.ebuild,

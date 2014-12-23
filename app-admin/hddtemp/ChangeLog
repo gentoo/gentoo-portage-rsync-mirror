@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.159 2014/11/01 20:12:03 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.160 2014/12/23 15:47:28 mgorny Exp $
+
+  23 Dec 2014; Michał Górny <mgorny@gentoo.org> files/hddgentoo.db:
+  Add HTS547575A9E384, provided by Olexandr Burlaka,
+  https://bugs.funtoo.org/browse/FL-1850.
 
   01 Nov 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
   hddtemp-0.3_beta15-r24.ebuild, hddtemp-0.3_beta15-r25.ebuild,
