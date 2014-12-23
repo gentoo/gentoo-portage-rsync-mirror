@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.222 2014/12/17 00:56:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.223 2014/12/23 08:14:04 jer Exp $
+
+  23 Dec 2014; Jeroen Roovers <jer@gentoo.org> gpgme-1.5.2.ebuild:
+  Stable for HPPA (bug #533350).
 
 *gpgme-1.5.3 (17 Dec 2014)
 

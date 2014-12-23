@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-9999.ebuild,v 1.18 2014/12/13 20:40:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-9999.ebuild,v 1.20 2014/12/23 08:25:59 grobian Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -151,7 +151,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
+	local myconf=()
 
 	# Fix bug 37354: Disallow -funroll-all-loops on amd64
 	# Bug 57859 suggests that we want to do this for all archs
@@ -178,47 +178,56 @@ src_configure() {
 	done
 
 	if use minimal ; then
-		myconf="--with-features=tiny \
-			--disable-nls \
-			--disable-multibyte \
-			--disable-acl \
-			--enable-gui=no \
-			--without-x \
-			--disable-darwin \
-			--disable-luainterp \
-			--disable-perlinterp \
-			--disable-pythoninterp \
-			--disable-mzschemeinterp \
-			--disable-rubyinterp \
-			--disable-selinux \
-			--disable-tclinterp \
-			--disable-gpm"
+		myconf=(
+			--with-features=tiny
+			--disable-nls
+			--disable-multibyte
+			--disable-acl
+			--enable-gui=no
+			--without-x
+			--disable-darwin
+			--disable-luainterp
+			--disable-perlinterp
+			--disable-pythoninterp
+			--disable-mzschemeinterp
+			--disable-rubyinterp
+			--disable-selinux
+			--disable-tclinterp
+			--disable-gpm
+		)
 	else
 		use debug && append-flags "-DDEBUG"
 
-		myconf="--with-features=huge --enable-multibyte"
-		myconf+=" $(use_enable acl)"
-		myconf+=" $(use_enable cscope)"
-		myconf+=" $(use_enable gpm)"
-		myconf+=" $(use_enable lua luainterp)"
-		myconf+=" $(use_with luajit)"
-		myconf+=" $(use_enable nls)"
-		myconf+=" $(use_enable perl perlinterp)"
-		myconf+=" $(use_enable racket mzschemeinterp)"
-		myconf+=" $(use_enable ruby rubyinterp)"
-		myconf+=" $(use_enable selinux)"
-		myconf+=" $(use_enable tcl tclinterp)"
+		myconf=(
+			--with-features=huge
+			--enable-multibyte
+			$(use_enable acl)
+			$(use_enable cscope)
+			$(use_enable gpm)
+			$(use_enable lua luainterp)
+			$(use lua && echo --with-lua-prefix=${EPREFIX}/usr)
+			$(use_with luajit)
+			$(use_enable nls)
+			$(use_enable perl perlinterp)
+			$(use_enable racket mzschemeinterp)
+			$(use_enable ruby rubyinterp)
+			$(use_enable selinux)
+			$(use_enable tcl tclinterp)
+		)
 
 		if use python ; then
 			if [[ ${EPYTHON} == python3* ]] ; then
-				myconf+=" --enable-python3interp"
+				myconf+=( --enable-python3interp )
 				export vi_cv_path_python3="${PYTHON}"
 			else
-				myconf+=" --enable-pythoninterp"
+				myconf+=( --enable-pythoninterp )
 				export vi_cv_path_python="${PYTHON}"
 			fi
 		else
-			myconf+=" --disable-pythoninterp --disable-python3interp"
+			myconf+=(
+				--disable-pythoninterp
+				--disable-python3interp
+			)
 		fi
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
@@ -230,18 +239,22 @@ src_configure() {
 
 		# don't test USE=X here ... see bug #19115
 		# but need to provide a way to link against X ... see bug #20093
-		myconf+=" --enable-gui=no --disable-darwin $(use_with X x)"
+		myconf+=(
+			--enable-gui=no
+			--disable-darwin
+			$(use_with X x)
+		)
 	fi
 
 	# Let Portage do the stripping. Some people like that.
 	export ac_cv_prog_STRIP="$(type -P true ) faking strip"
 
 	# Keep Gentoo Prefix env contained within the EPREFIX
-	use prefix && myconf+=" --without-local-dir"
+	use prefix && myconf+=( --without-local-dir )
 
 	econf \
 		--with-modified-by=Gentoo-${PVR} \
-		${myconf}
+		"${myconf[@]}"
 }
 
 src_compile() {

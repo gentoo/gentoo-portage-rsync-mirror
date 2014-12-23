@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.21 2014/12/14 10:58:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.22 2014/12/23 08:25:35 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -151,7 +151,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
+	local myconf=()
 
 	# Fix bug 37354: Disallow -funroll-all-loops on amd64
 	# Bug 57859 suggests that we want to do this for all archs
@@ -179,30 +179,37 @@ src_configure() {
 
 	use debug && append-flags "-DDEBUG"
 
-	myconf="--with-features=huge --disable-gpm --enable-multibyte"
-	myconf+=" $(use_enable acl)"
-	myconf+=" $(use_enable cscope)"
-	myconf+=" $(use_enable lua luainterp)"
-	myconf+=" $(use_with luajit)"
-	myconf+=" $(use_enable netbeans)"
-	myconf+=" $(use_enable nls)"
-	myconf+=" $(use_enable perl perlinterp)"
-	myconf+=" $(use_enable racket mzschemeinterp)"
-	myconf+=" $(use_enable ruby rubyinterp)"
-	myconf+=" $(use_enable selinux)"
-	myconf+=" $(use_enable session xsmp)"
-	myconf+=" $(use_enable tcl tclinterp)"
+	myconf=(
+		--with-features=huge
+		--disable-gpm
+		--enable-multibyte
+		$(use_enable acl)
+		$(use_enable cscope)
+		$(use_enable lua luainterp)
+		$(use_with luajit)
+		$(use_enable netbeans)
+		$(use_enable nls)
+		$(use_enable perl perlinterp)
+		$(use_enable racket mzschemeinterp)
+		$(use_enable ruby rubyinterp)
+		$(use_enable selinux)
+		$(use_enable session xsmp)
+		$(use_enable tcl tclinterp)
+	)
 
 	if use python ; then
 		if [[ ${EPYTHON} == python3* ]] ; then
-			myconf+=" --enable-python3interp"
+			myconf+=( --enable-python3interp )
 			export vi_cv_path_python3="${PYTHON}"
 		else
-			myconf+=" --enable-pythoninterp"
+			myconf+=( --enable-pythoninterp )
 			export vi_cv_path_python="${PYTHON}"
 		fi
 	else
-		myconf+=" --disable-pythoninterp --disable-python3interp"
+		myconf+=(
+			--disable-pythoninterp
+			--disable-python3interp
+		)
 	fi
 
 	# --with-features=huge forces on cscope even if we --disable it. We need
@@ -222,25 +229,28 @@ src_configure() {
 	echo ; echo
 	if use aqua ; then
 		einfo "Building gvim with the Carbon GUI"
-		myconf+=" --enable-darwin --enable-gui=carbon"
+		myconf+=(
+			--enable-darwin
+			--enable-gui=carbon
+		)
 	elif use gtk ; then
-		myconf+=" --enable-gtk2-check"
+		myconf+=( --enable-gtk2-check )
 		if use gnome ; then
 			einfo "Building gvim with the Gnome 2 GUI"
-			myconf+=" --enable-gui=gnome2"
+			myconf+=( --enable-gui=gnome2 )
 		else
 			einfo "Building gvim with the gtk+-2 GUI"
-			myconf+=" --enable-gui=gtk2"
+			myconf+=( --enable-gui=gtk2 )
 		fi
 	elif use motif ; then
 		einfo "Building gvim with the MOTIF GUI"
-		myconf+=" --enable-gui=motif"
+		myconf+=( --enable-gui=motif )
 	elif use neXt ; then
 		einfo "Building gvim with the neXtaw GUI"
-		myconf+=" --enable-gui=nextaw"
+		myconf+=( --enable-gui=nextaw )
 	else
 		einfo "Building gvim with the Athena GUI"
-		myconf+=" --enable-gui=athena"
+		myconf+=( --enable-gui=athena )
 	fi
 	echo ; echo
 
@@ -248,7 +258,7 @@ src_configure() {
 	export ac_cv_prog_STRIP="$(type -P true ) faking strip"
 
 	# Keep Gentoo Prefix env contained within the EPREFIX
-	use prefix && myconf+=" --without-local-dir"
+	use prefix && myconf+=( --without-local-dir )
 
 	if [[ ${CHOST} == *-interix* ]]; then
 		# avoid finding of this function, to avoid having to patch either
@@ -259,8 +269,9 @@ src_configure() {
 
 	econf \
 		--with-modified-by=Gentoo-${PVR} \
-		--with-vim-name=gvim --with-x \
-		${myconf}
+		--with-vim-name=gvim \
+		--with-x \
+		"${myconf[@]}"
 }
 
 src_compile() {

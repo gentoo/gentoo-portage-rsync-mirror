@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.542.ebuild,v 1.2 2014/12/13 20:40:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.542.ebuild,v 1.3 2014/12/23 08:25:59 grobian Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -201,6 +201,7 @@ src_configure() {
 		myconf+=" $(use_enable cscope)"
 		myconf+=" $(use_enable gpm)"
 		myconf+=" $(use_enable lua luainterp)"
+		myconf+=" $(use lua && echo --with-lua-prefix=${EPREFIX}/usr)"
 		myconf+=" $(use_with luajit)"
 		myconf+=" $(use_enable nls)"
 		myconf+=" $(use_enable perl perlinterp)"
