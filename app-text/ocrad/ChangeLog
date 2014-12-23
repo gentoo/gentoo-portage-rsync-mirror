@@ -1,6 +1,15 @@
 # ChangeLog for app-text/ocrad
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.44 2014/05/14 14:41:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.46 2014/12/23 10:03:47 aballier Exp $
+
+  23 Dec 2014; Alexis Ballier <aballier@gentoo.org> -ocrad-0.17.ebuild,
+  -ocrad-0.21.ebuild, -files/ocrad-0.17-gcc43.patch:
+  remove old
+
+*ocrad-0.24 (23 Dec 2014)
+
+  23 Dec 2014; Alexis Ballier <aballier@gentoo.org> +ocrad-0.24.ebuild:
+  version bump
 
   14 May 2014; Agostino Sarubbo <ago@gentoo.org> ocrad-0.22.ebuild:
   Stable for sparc, wrt bug #506786

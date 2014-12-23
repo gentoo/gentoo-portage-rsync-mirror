@@ -1,15 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.21.ebuild,v 1.2 2014/02/27 21:14:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.24.ebuild,v 1.1 2014/12/23 10:02:54 aballier Exp $
 
 EAPI=5
 inherit unpacker toolchain-funcs
 
 DESCRIPTION="GNU Ocrad is an OCR (Optical Character Recognition) program"
 HOMEPAGE="http://www.gnu.org/software/ocrad/ocrad.html"
-SRC_URI="http://savannah.nongnu.org/download/ocrad/${P}.tar.lz"
+SRC_URI="mirror://nongnu/${PN}/${P}.tar.lz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
@@ -17,10 +17,16 @@ IUSE=""
 RDEPEND=""
 DEPEND="$(unpacker_src_uri_depends)"
 
-DOCS="AUTHORS NEWS README TODO"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 src_configure() {
-	econf CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
+	# ./configure is not based on autotools
+	./configure \
+		CPPFLAGS="${CPPFLAGS}" \
+		CXX="$(tc-getCXX)" \
+		CXXFLAGS="${CXXFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		--prefix=/usr
 }
 
 src_install() {
