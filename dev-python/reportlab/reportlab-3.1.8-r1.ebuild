@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-3.1.8-r1.ebuild,v 1.1 2014/12/13 11:37:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-3.1.8-r1.ebuild,v 1.2 2014/12/23 13:00:17 jer Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 RDEPEND="

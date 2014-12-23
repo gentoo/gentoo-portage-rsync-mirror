@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.292 2014/12/23 09:30:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.293 2014/12/23 12:39:17 maekke Exp $
+
+  23 Dec 2014; Markus Meier <maekke@gentoo.org> file-5.21.ebuild:
+  arm stable, bug #532686
 
   23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> file-5.21.ebuild:
   Stable for alpha, wrt bug #532686
