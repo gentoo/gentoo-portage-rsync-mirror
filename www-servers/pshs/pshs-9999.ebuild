@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-9999.ebuild,v 1.4 2014/12/01 19:19:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-9999.ebuild,v 1.5 2014/12/23 18:16:45 mgorny Exp $
 
 EAPI=5
 
@@ -20,11 +20,13 @@ SRC_URI="https://www.bitbucket.org/mgorny/${PN}/downloads/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+magic +netlink qrcode upnp"
+IUSE="+magic +netlink qrcode ssl upnp"
 
 RDEPEND=">=dev-libs/libevent-2:0=
 	magic? ( sys-apps/file:0= )
 	qrcode? ( media-gfx/qrencode:0= )
+	ssl? ( >=dev-libs/libevent-2.1:0=[ssl]
+		dev-libs/openssl:0= )
 	upnp? ( net-libs/miniupnpc:0= )"
 DEPEND="${RDEPEND}
 	netlink? ( sys-apps/iproute2
@@ -41,6 +43,7 @@ src_configure() {
 		$(use_enable magic libmagic)
 		$(use_enable netlink)
 		$(use_enable qrcode qrencode)
+		$(use_enable ssl)
 		$(use_enable upnp)
 	)
 

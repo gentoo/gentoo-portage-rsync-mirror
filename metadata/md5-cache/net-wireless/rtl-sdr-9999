@@ -1,4 +1,4 @@
-DEFINED_PHASES=postinst prepare unpack
+DEFINED_PHASES=configure postinst prepare unpack
 DEPEND=virtual/libusb:1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=turns your Realtek RTL2832 based DVB dongle into a SDR receiver
 EAPI=5
@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=virtual/libusb:1
 SLOT=0
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6605592346eb18c8aff6d3e47b5a80e3
+_md5_=c5c1e6ad979df8fe28fb2587920dd4a0

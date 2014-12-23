@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-0.5.3.ebuild,v 1.1 2014/07/06 21:22:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/rtl-sdr-0.5.3.ebuild,v 1.2 2014/12/23 18:17:11 tomjbe Exp $
 
 EAPI=5
 
@@ -37,7 +37,12 @@ src_unpack() {
 }
 
 src_prepare() {
+	sed -i "s:pkgdocdir:docdir:g" Makefile.am || die
 	eautoreconf
+}
+
+src_configure() {
+	econf --docdir="/usr/share/doc/${PF}"
 }
 
 pkg_postinst() {
