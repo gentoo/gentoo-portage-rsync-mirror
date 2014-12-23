@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.20 2014/08/20 20:37:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.21 2014/12/23 21:24:50 floppym Exp $
+
+  23 Dec 2014; Mike Gilbert <floppym@gentoo.org> pbr-0.8.2.ebuild:
+  Move ~alpha keyword forward.
 
   20 Aug 2014; Anthony G. Basile <blueness@gentoo.org> pbr-0.5.23-r2.ebuild,
   pbr-0.5.23.ebuild, pbr-0.7.0.ebuild, pbr-0.8.0.ebuild, pbr-0.8.2.ebuild:

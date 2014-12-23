@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.228 2014/12/23 17:43:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.229 2014/12/23 21:11:13 floppym Exp $
+
+*ntp-4.2.8-r2 (23 Dec 2014)
+
+  23 Dec 2014; Mike Gilbert <floppym@gentoo.org> +ntp-4.2.8-r2.ebuild:
+  Pass --docdir and --htmldir to configure and drop dohtml, bug 533410.
 
   23 Dec 2014; Mike Gilbert <floppym@gentoo.org> files/ntpd.rc-r1:
   Remove note about /usr/share/ntp/ntp.conf.
