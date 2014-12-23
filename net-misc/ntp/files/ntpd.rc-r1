@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc-r1,v 1.1 2014/12/22 08:42:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc-r1,v 1.2 2014/12/23 17:43:25 floppym Exp $
 
 description="ntpd - the network time protocol daemon"
 pidfile="/var/run/ntpd.pid"
@@ -17,7 +17,6 @@ depend() {
 start_pre() {
 	if [ ! -f /etc/ntp.conf ] ; then
 		eerror "Please create /etc/ntp.conf"
-		eerror "Sample conf: /usr/share/ntp/ntp.conf"
 		return 1
 	fi
 	return 0
