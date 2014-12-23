@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.48 2014/12/13 13:13:44 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.49 2014/12/23 04:35:35 gienah Exp $
+
+*binary-0.7.2.3 (23 Dec 2014)
+
+  23 Dec 2014; Mark Wright <gienah@gentoo.org> +binary-0.7.2.3.ebuild,
+  binary-0.7.2.1.ebuild, binary-0.7.2.2.ebuild:
+  Bump binary to 0.7.2.3. Added the FEATURES=test arch keywords to profiles/arch
+  package.use.mask to restore the missing keywords here.
 
 *binary-0.7.2.2 (13 Dec 2014)
 

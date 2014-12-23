@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.68 2014/07/25 08:58:17 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.69 2014/12/23 04:39:24 gienah Exp $
+
+*c2hs-0.20.1 (23 Dec 2014)
+
+  23 Dec 2014; Mark Wright <gienah@gentoo.org> +c2hs-0.20.1.ebuild,
+  -c2hs-0.16.3.ebuild:
+  Bump c2hs to 0.20.1. Remove obsolete c2hs-0.16.3, as it uses obsolete EAPI and
+  is replaced by c2hs-0.16.3-r1.
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.
