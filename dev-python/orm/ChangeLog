@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/orm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.10 2013/11/06 05:21:10 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/ChangeLog,v 1.11 2014/12/23 03:06:57 idella4 Exp $
+
+*orm-1.0.1-r1 (23 Dec 2014)
+
+  23 Dec 2014; Ian Delaney <idella4@gentoo.org> +orm-1.0.1-r1.ebuild,
+  -orm-1.0.1.ebuild:
+  revbump; convert -> distutils-r1, drop refs to package kinterbasdb long purged
+  from portage, add REQUIRED_USE to ensure use of a backend db, rm broken old
+  version
 
   06 Nov 2013; Patrick Lauer <patrick@gentoo.org> orm-1.0.1.ebuild:
   Shorten description, make repoman happier
