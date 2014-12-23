@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/scapy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.39 2014/12/22 07:35:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.40 2014/12/23 12:30:19 jer Exp $
+
+*scapy-2.3.1 (23 Dec 2014)
+
+  23 Dec 2014; Jeroen Roovers <jer@gentoo.org> +scapy-2.3.1.ebuild:
+  Version bump.
 
 *scapy-2.3.0 (22 Dec 2014)
 
