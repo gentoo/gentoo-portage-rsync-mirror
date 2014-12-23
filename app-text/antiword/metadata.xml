@@ -11,4 +11,7 @@
 		<name>LABBE Corentin (Montjoie)</name>
 		<description>Maintainer. Assign bugs to him</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:antiword_project:antiword</remote-id>
+	</upstream>
 </pkgmetadata>

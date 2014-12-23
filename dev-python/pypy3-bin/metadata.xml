@@ -2,11 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>alice.ferrazzi@gmail.com</email>
+		<email>alicef@gentoo.org</email>
 		<name>Alice Ferrazzi</name>
-		<description>Proxy maintainer</description>
 	</maintainer>
 	<use>
 		<flag name="shadowstack">Use a shadow stack for finding GC roots</flag>

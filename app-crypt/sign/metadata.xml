@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
 <maintainer>
-	<email>alice.ferrazzi@gmail.com</email>
+	<email>alicef@gentoo.org</email>
 	<name>Alice Ferrazzi</name>
-	<description>Assign bugs to her.</description>
+	<description>Assign bugs to me.</description>
 </maintainer>
 <maintainer>
 	<email>mrueg@gentoo.org</email>

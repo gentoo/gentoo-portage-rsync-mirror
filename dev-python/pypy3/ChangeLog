@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/ChangeLog,v 1.5 2014/11/11 12:32:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/ChangeLog,v 1.6 2014/12/23 09:40:38 alicef Exp $
+
+  23 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> metadata.xml:
+  Update email and removed proxy-maintainers herd
 
   11 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy3-2.4.0.ebuild:
   Fix incorrect PyPy environment export.

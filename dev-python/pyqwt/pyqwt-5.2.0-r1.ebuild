@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0-r1.ebuild,v 1.3 2013/09/05 18:45:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/pyqwt-5.2.0-r1.ebuild,v 1.4 2014/12/23 09:41:44 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit flag-o-matic python-r1
 
@@ -49,7 +49,7 @@ src_configure() {
 			-I/usr/include/qwt5 \
 			-lqwt \
 			${myconf[@]} \
-			|| return 1
+			|| die "configure.py failed"
 
 		# Avoid stripping of the libraries.
 		sed -i -e "/strip/d" {iqt5qt4,qwt5qt4}/Makefile || die "sed failed"
@@ -81,13 +81,9 @@ src_install() {
 
 	dodoc ANNOUNCEMENT-${PV} README
 
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins -r sphinx/build/*
-	fi
-
+	use doc && dodoc -r sphinx/build/.
 	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins qt4examples/*
+		docinto examples
+		dodoc -r qt4examples/.
 	fi
 }

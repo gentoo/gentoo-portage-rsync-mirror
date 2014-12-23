@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/rebar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rebar/ChangeLog,v 1.6 2014/05/28 07:10:47 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rebar/ChangeLog,v 1.7 2014/12/23 09:51:46 djc Exp $
+
+*rebar-2.3.1 (23 Dec 2014)
+
+  23 Dec 2014; Dirkjan Ochtman <djc@gentoo.org> +rebar-2.3.1.ebuild:
+  Version bump rebar to 2.3.1
 
   28 May 2014; Dirkjan Ochtman <djc@gentoo.org> -rebar-2.0.0.ebuild:
   Remove old version
