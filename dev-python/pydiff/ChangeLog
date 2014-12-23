@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pydiff
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydiff/ChangeLog,v 1.1 2014/12/23 06:08:00 idella4 Exp $
+
+*pydiff-0.2 (23 Dec 2014)
+
+  23 Dec 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +pydiff-0.2.ebuild:
+  new dep to test phase of autopep8-1.1, ebuild written by me

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.13.ebuild,v 1.1 2014/08/24 16:50:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.16.ebuild,v 1.1 2014/12/23 06:14:45 polynomial-c Exp $
 
 EAPI=5
 
