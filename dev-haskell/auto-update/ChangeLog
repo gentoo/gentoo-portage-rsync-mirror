@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/auto-update
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/auto-update/ChangeLog,v 1.1 2014/12/13 13:25:38 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/auto-update/ChangeLog,v 1.2 2014/12/23 03:58:28 gienah Exp $
+
+*auto-update-0.1.2.1 (23 Dec 2014)
+
+  23 Dec 2014; Mark Wright <gienah@gentoo.org> +auto-update-0.1.2.1.ebuild:
+  Bump auto-update to 0.1.2.1
 
 *auto-update-0.1.2 (13 Dec 2014)
 

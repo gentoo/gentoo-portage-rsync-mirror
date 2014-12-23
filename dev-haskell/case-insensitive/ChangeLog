@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/case-insensitive
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/case-insensitive/ChangeLog,v 1.10 2014/12/13 13:32:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/case-insensitive/ChangeLog,v 1.11 2014/12/23 04:00:15 gienah Exp $
+
+*case-insensitive-1.2.0.3 (23 Dec 2014)
+
+  23 Dec 2014; Mark Wright <gienah@gentoo.org> +case-insensitive-1.2.0.3.ebuild:
+  Bump case-insensitive to 1.2.0.3
 
 *case-insensitive-1.2.0.1 (13 Dec 2014)
 

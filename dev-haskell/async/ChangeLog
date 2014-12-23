@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/async
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.8 2014/12/20 09:31:11 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.9 2014/12/23 03:56:43 gienah Exp $
+
+*async-2.0.2 (23 Dec 2014)
+
+  23 Dec 2014; Mark Wright <gienah@gentoo.org> +async-2.0.2.ebuild:
+  Bump async to 2.0.2
 
   20 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org> async-2.0.1.4.ebuild:
   Allow ghc-7.8 (bug #533060 by Michael Jones).
