@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.116 2014/12/04 08:36:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.117 2014/12/23 08:35:29 jer Exp $
+
+*libssh-0.6.4 (23 Dec 2014)
+
+  23 Dec 2014; Jeroen Roovers <jer@gentoo.org> +libssh-0.6.4.ebuild:
+  Version bump (bug #533366).
 
   04 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libssh-0.6.3-r1.ebuild:
   Stable for ppc64, wrt bug #526074
