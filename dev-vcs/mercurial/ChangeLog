@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.162 2014/12/23 09:03:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.163 2014/12/23 13:06:27 jer Exp $
+
+  23 Dec 2014; Jeroen Roovers <jer@gentoo.org> mercurial-3.2.3.ebuild:
+  Stable for HPPA (bug #533008).
 
   23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mercurial-3.2.3.ebuild:
   Stable for x86, wrt bug #533008

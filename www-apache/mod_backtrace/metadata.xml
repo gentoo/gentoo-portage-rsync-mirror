@@ -2,4 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
+<use>
+  <flag name="unwind">
+    Use <pkg>sys-libs/libunwind</pkg> to provide better resolution of
+    function names.
+  </flag>
+</use>
 </pkgmetadata>

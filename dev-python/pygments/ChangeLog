@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.140 2014/12/01 09:45:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.141 2014/12/23 13:02:42 jer Exp $
+
+  23 Dec 2014; Jeroen Roovers <jer@gentoo.org> pygments-2.0.1.ebuild:
+  Stable for HPPA (bug #533316).
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   pygments-1.6_p20140324-r1.ebuild:
