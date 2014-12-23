@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnome-online-accounts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.44 2014/07/23 15:23:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.45 2014/12/23 23:00:37 eva Exp $
+
+*gnome-online-accounts-3.14.2 (23 Dec 2014)
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-online-accounts-3.10.4.ebuild, -gnome-online-accounts-3.12.3.ebuild,
+  +gnome-online-accounts-3.14.2.ebuild:
+  Version bump for Gnome 3.14. Clean up old revisions.
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-online-accounts-3.12.4.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.345 2014/11/04 22:37:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.346 2014/12/23 23:00:59 eva Exp $
+
+*libsoup-2.48.1 (23 Dec 2014)
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> libsoup-2.44.2.ebuild,
+  +libsoup-2.48.1.ebuild:
+  Version bump for Gnome 3.14. Clean up old revisions.
 
   04 Nov 2014; Gilles Dartiguelongue <eva@gentoo.org> -libsoup-2.46.0.ebuild,
   libsoup-2.46.0-r1.ebuild:

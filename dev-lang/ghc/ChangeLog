@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.269 2014/09/07 06:29:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.270 2014/12/23 22:46:09 slyfox Exp $
+
+*ghc-7.8.4 (23 Dec 2014)
+
+  23 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.8.3-ppc32-fPIC.patch, +ghc-7.8.4.ebuild:
+  Version bump.
 
   07 Sep 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3-r2.ebuild,
   ghc-7.0.4.ebuild:

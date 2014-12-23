@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hpc/ChangeLog,v 1.11 2014/10/05 18:30:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hpc/ChangeLog,v 1.12 2014/12/23 22:53:56 slyfox Exp $
+
+  23 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org> hpc-0.6.0.1.ebuild:
+  Mark as a core lib for ghc-7.8.4.
 
   05 Oct 2014; Sergei Trofimovich <slyfox@gentoo.org> hpc-0.6.0.1.ebuild:
   Mark as ghc-7.8.3 corelib (bug #524490 by redneb)

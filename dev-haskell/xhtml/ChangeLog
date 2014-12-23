@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.43 2014/08/12 10:07:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.44 2014/12/23 22:53:37 slyfox Exp $
+
+  23 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org> xhtml-3000.2.1-r1.ebuild:
+  Mark as a core lib for ghc-7.8.4.
 
   12 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> -xhtml-3000.2.0.1.ebuild,
   -xhtml-3000.2.1.ebuild, xhtml-3000.2.1-r1.ebuild:
