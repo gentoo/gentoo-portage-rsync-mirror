@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.317 2014/11/13 12:17:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.318 2014/12/23 21:59:07 eva Exp $
+
+*eog-3.14.3 (23 Dec 2014)
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +eog-3.14.3.ebuild:
+  Version bump for Gnome 3.14.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -eog-2.32.1.ebuild,
   -eog-3.10.2.ebuild, -eog-3.12.1.ebuild, -files/eog-2.32.1-gmodule.patch:

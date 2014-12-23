@@ -1,27 +1,24 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.12.1.ebuild,v 1.4 2014/07/23 15:18:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.14.1.ebuild,v 1.1 2014/12/23 21:59:44 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{3_2,3_3} )
+PYTHON_COMPAT=( python{3_3,3_4} )
 
-inherit gnome2 python-single-r1
+inherit gnome2 python-r1
 
 DESCRIPTION="Eye of GNOME plugins"
-HOMEPAGE="https://live.gnome.org/EyeOfGnome/Plugins"
+HOMEPAGE="https://wiki.gnome.org/Apps/EyeOfGnome/Plugins"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+exif +flickr map +picasa +python"
-# Let people emerge this by default, bug #472932
-IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
-
 REQUIRED_USE="
 	map? ( exif )
-	python? ( ${PYTHON_REQUIRED_USE} )"
+	python? ( ^^ ( $(python_gen_useflags '*') ) )"
 
 RDEPEND="
 	>=dev-libs/glib-2.32:2
@@ -45,13 +42,13 @@ RDEPEND="
 		x11-libs/pango[introspection] )
 "
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.50.1
 	sys-devel/gettext
 	virtual/pkgconfig
 "
 
 pkg_setup() {
-	use python && python-single-r1_pkg_setup
+	use python && [[ ${MERGE_TYPE} == binary ]] && python_setup
 }
 
 src_configure() {
