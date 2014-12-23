@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.16.2.ebuild,v 1.5 2014/03/09 12:02:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.18.2-r1.ebuild,v 1.1 2014/12/23 22:25:58 eva Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -9,19 +9,19 @@ CLUTTER_LA_PUNT="yes"
 inherit clutter gnome2 multilib virtualx
 
 DESCRIPTION="A library for using 3D graphics hardware to draw pretty pictures"
-HOMEPAGE="http://www.clutter-project.org/"
+HOMEPAGE="http://www.cogl3d.org/"
 
-LICENSE="LGPL-2.1+ FDL-1.1+"
-SLOT="1.0/15" # subslot = .so version
+LICENSE="MIT BSD"
+SLOT="1.0/20" # subslot = .so version
 # doc and profile disable for now due bugs #484750 and #483332
-IUSE="examples gles2 gstreamer +introspection +opengl +pango test" # doc profile
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+IUSE="examples gles2 gstreamer +introspection +kms +opengl +pango test wayland" # doc profile
+REQUIRED_USE="wayland? ( gles2 )"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
 	x11-libs/cairo:=
 	>=x11-libs/gdk-pixbuf-2:2
-	x11-libs/libdrm:=
 	x11-libs/libX11
 	>=x11-libs/libXcomposite-0.4
 	x11-libs/libXdamage
@@ -35,7 +35,13 @@ COMMON_DEPEND="
 		media-libs/gst-plugins-base:1.0 )
 
 	introspection? ( >=dev-libs/gobject-introspection-1.34.2 )
+	kms? (
+		media-libs/mesa[gbm]
+		x11-libs/libdrm:= )
 	pango? ( >=x11-libs/pango-1.20.0[introspection?] )
+	wayland? (
+		>=dev-libs/wayland-1.1.90
+		media-libs/mesa[egl,wayland] )
 "
 # before clutter-1.7, cogl was part of clutter
 RDEPEND="${COMMON_DEPEND}
@@ -48,10 +54,9 @@ DEPEND="${COMMON_DEPEND}
 		app-admin/eselect-opengl
 		media-libs/mesa[classic] )
 "
-#	doc? ( >=dev-util/gtk-doc-1.13 )
 
 # Need classic mesa swrast for tests, llvmpipe causes a test failure
-# Fox some reason GL3 conformance test all fails again...
+# For some reason GL3 conformance test all fails again...
 RESTRICT="test"
 
 src_prepare() {
@@ -72,7 +77,7 @@ src_prepare() {
 }
 
 src_configure() {
-	# TODO: think about kms-egl, quartz, sdl, wayland
+	# TODO: think about quartz, sdl
 	# Prefer gl over gles2 if both are selected
 	# Profiling needs uprof, which is not available in portage yet, bug #484750
 	# FIXME: Doesn't provide prebuilt docs, but they can neither be rebuilt, bug #483332
@@ -83,7 +88,6 @@ src_configure() {
 		--enable-deprecated        \
 		--enable-gdk-pixbuf        \
 		--enable-glib              \
-		--disable-gtk-doc          \
 		$(use_enable opengl glx)   \
 		$(use_enable opengl gl)    \
 		$(use_enable gles2)        \
@@ -92,10 +96,12 @@ src_configure() {
 		$(usex gles2 --with-default-driver=$(usex opengl gl gles2)) \
 		$(use_enable gstreamer cogl-gst)    \
 		$(use_enable introspection) \
+		$(use_enable kms kms-egl-platform) \
 		$(use_enable pango cogl-pango) \
 		$(use_enable test unit-tests) \
+		$(use_enable wayland wayland-egl-platform) \
+		$(use_enable wayland wayland-egl-server) \
 		--disable-profile
-#		$(use_enable doc gtk-doc)  \
 #		$(use_enable profile)
 }
 

@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=>=dev-libs/libevdev-0.4 >=sys-libs/mtdev-1.1 virtual/libudev virtual/pkgconfig test? ( >=dev-libs/check-0.9.10 )
+DESCRIPTION=Library to handle input devices in Wayland
+EAPI=5
+HOMEPAGE=http://www.freedesktop.org/wiki/Software/libinput/
+IUSE=test
+KEYWORDS=~amd64
+LICENSE=libtiff
+RDEPEND=>=dev-libs/libevdev-0.4 >=sys-libs/mtdev-1.1 virtual/libudev
+SLOT=0/5
+SRC_URI=http://www.freedesktop.org/software/libinput/libinput-0.7.0.tar.xz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=b817e68a6a4781c7565c9e755291b4f1

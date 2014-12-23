@@ -22,6 +22,7 @@
 </longdescription>
 <use>
   <flag name="clisp">Use CLISP for the runtime</flag>
+  <flag name="ecl">Use SCL for the runtime</flag>
   <flag name="sbcl">Use SBCL for the runtime</flag>
 </use>
 </pkgmetadata>

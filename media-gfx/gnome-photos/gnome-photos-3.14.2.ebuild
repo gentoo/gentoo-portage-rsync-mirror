@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.10.2.ebuild,v 1.5 2014/03/17 21:36:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.14.2.ebuild,v 1.1 2014/12/23 22:03:58 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,14 +12,15 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Photos"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="
-	>=app-misc/tracker-0.16:=
-	>=dev-libs/glib-2.35.1:2
+	>=app-misc/tracker-1:=
+	>=dev-libs/glib-2.39.3:2
 	gnome-base/gnome-desktop:3=
 	>=gnome-base/librsvg-2.26.0
+	>=dev-libs/libgdata-0.15.2
 	media-libs/babl
 	>=media-libs/gegl-0.2
 	>=media-libs/grilo-0.2.6:0.2
@@ -28,12 +29,20 @@ RDEPEND="
 	media-libs/lcms:2
 	>=media-libs/libexif-0.6.14
 	>=net-libs/gnome-online-accounts-3.8
+	>=net-libs/libgfbgraph-0.2.1:0.2
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	>=x11-libs/gtk+-3.9.11:3
+	>=x11-libs/gtk+-3.13.2:3
 "
 DEPEND="${RDEPEND}
 	dev-util/desktop-file-utils
 	>=dev-util/intltool-0.50.1
 	virtual/pkgconfig
 "
+
+# Requires dogtail
+RESTRICT="test"
+
+src_configure() {
+	gnome2_src_configure ITSTOOL=$(type -P true)
+}

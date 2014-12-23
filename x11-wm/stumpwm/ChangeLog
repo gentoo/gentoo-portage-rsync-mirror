@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/stumpwm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.9 2014/08/10 20:00:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.10 2014/12/23 22:28:11 nimiux Exp $
+
+*stumpwm-9999 (23 Dec 2014)
+*stumpwm-0.9.9 (23 Dec 2014)
+
+  23 Dec 2014; Chema Alonso <nimiux@gentoo.org> +stumpwm-0.9.9.ebuild,
+  +stumpwm-9999.ebuild, +files/70stumpwm-gentoo.el:
+  Bump to version 0.9.9. New live ebuild
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> stumpwm-0.9.7.ebuild:
   QA: drop trailing '.' from DESCRIPTION

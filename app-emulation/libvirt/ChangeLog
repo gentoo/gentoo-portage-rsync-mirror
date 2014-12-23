@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.407 2014/12/18 21:05:55 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.408 2014/12/23 22:13:13 tamiko Exp $
+
+*libvirt-1.2.10-r3 (23 Dec 2014)
+
+  23 Dec 2014; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.10-r3.ebuild,
+  -files/libvirt-1.2.9-cve-2014-7823.patch:
+  maintain upstream libvirt patches in own github repository; apply patches for
+  CVE-2014-8135, CVE-2014-8136
 
 *libvirt-1.2.11-r2 (18 Dec 2014)
 
