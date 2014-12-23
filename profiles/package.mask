@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16233 2014/12/22 14:25:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16234 2014/12/22 23:27:05 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -385,12 +385,6 @@ dev-perl/pgperl
 # Missing deps, uninstallable
 app-misc/email2trac
 www-apps/trac-downloads
-
-# Tim Harder <radhermit@gentoo.org> (24 Nov 2014)
-# Freecode is no longer being updated since 2014-06-18.
-# Masked for removal in 30 days
-dev-util/freshmeat-submit
-dev-util/freecode-submit
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (21 Nov 2014)
 # Dev channel releases are only for people who are developers or want more
