@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.153 2014/11/17 08:55:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.154 2014/12/24 01:52:20 dlan Exp $
+
+*ibus-1.5.9-r1 (24 Dec 2014)
+
+  24 Dec 2014; Yixun Lan <dlan@gentoo.org> +ibus-1.5.9-r1.ebuild:
+  bump upstream patches, fix bug 530768. enable USE=vala by default since
+  ui/gtk3/*.vala have been touched
 
   17 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ibus-1.5.5.ebuild:
   Stable for ppc64, wrt bug #517912

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16238 2014/12/24 00:25:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16240 2014/12/24 01:50:05 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (24 Dec 2014)
+# Have little evidence of usage and have no upstream development / support
+# for years. They do not support python 3. testoob is a testing framework
+# which are more than adequately stocked under dev-python. orm was broken
+# prior to conversion and was not highlighted as a qa violation by repoman.
+# For removal in 30 days.
+dev-python/testoob
+dev-python/orm
 
 # Markos Chandras <hwoarang@gentoo.org> (23 Dec 2014)
 # Homepage returns 404 which probably suggests upstream has vanished.
