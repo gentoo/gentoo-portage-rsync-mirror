@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bnfc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.22 2014/08/12 16:45:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.23 2014/12/24 04:28:23 gienah Exp $
+
+*bnfc-2.7.1 (24 Dec 2014)
+
+  24 Dec 2014; Mark Wright <gienah@gentoo.org> +bnfc-2.7.1.ebuild:
+  Bump bnfc to 2.7.1
 
   12 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bnfc-2.6.0.3.ebuild:
   Force lexer regeneration to be compatible with ghc-7.8 (bug #519728 by Juergen

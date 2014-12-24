@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyqtgraph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqtgraph/ChangeLog,v 1.1 2014/11/20 17:23:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqtgraph/ChangeLog,v 1.2 2014/12/24 04:21:09 radhermit Exp $
+
+*pyqtgraph-0.9.9 (24 Dec 2014)
+
+  24 Dec 2014; Tim Harder <radhermit@gentoo.org> +pyqtgraph-0.9.9.ebuild:
+  Version bump.
 
 *pyqtgraph-0.9.8 (20 Nov 2014)
 

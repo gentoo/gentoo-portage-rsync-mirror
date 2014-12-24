@@ -1,18 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.226 2014/12/23 23:15:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.227 2014/12/24 04:26:10 gienah Exp $
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
 # New dependencies for wayland support in Gnome 3.14
 # See bug #533420.
 media-libs/clutter egl
 
-# Mark Wright <gienah@gentoo.org> (14-23 Dec 2014)
+# Mark Wright <gienah@gentoo.org> (14-24 Dec 2014)
 # test dependencies need keywording
 dev-haskell/binary test
 dev-haskell/haskell-src-exts test
 dev-haskell/text test
 dev-haskell/vector test
+dev-util/bnfc test
 
 # Michał Górny <mgorny@gentoo.org> (30 Oct 2014)
 # Requires non-keyworded >=x11-libs/libxkbcommon-0.4.
