@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4-r2.ebuild,v 1.8 2014/06/01 08:07:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.14.3.ebuild,v 1.1 2014/12/23 23:55:19 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit autotools eutils gnome2 multilib pax-utils python-r1 systemd
 
@@ -16,28 +16,25 @@ LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+bluetooth +i18n +networkmanager -openrc-force"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 # libXfixes-5.0 needed for pointer barriers
 # FIXME:
 #  * gstreamer support is currently automagic
-#  * mutter/mutter-wayland support is automagic
 COMMON_DEPEND="
-	app-crypt/libsecret
 	>=app-accessibility/at-spi2-atk-2.5.3
 	>=dev-libs/atk-2[introspection]
 	>=app-crypt/gcr-3.7.5[introspection]
-	>=dev-libs/glib-2.37:2
-	>=dev-libs/gjs-1.38.1
+	>=dev-libs/glib-2.39.1:2
+	>=dev-libs/gjs-1.39
 	>=dev-libs/gobject-introspection-0.10.1
-	>=x11-libs/gtk+-3.7.9:3[introspection]
-	>=media-libs/clutter-1.13.4:1.0[introspection]
+	>=x11-libs/gtk+-3.13.2:3[introspection]
+	>=media-libs/clutter-1.15.90:1.0[introspection]
 	>=dev-libs/json-glib-0.13.2
 	>=dev-libs/libcroco-0.6.8:0.6
 	>=gnome-base/gnome-desktop-3.7.90:3=[introspection]
-	>=gnome-base/gsettings-desktop-schemas-3.7.4
+	>=gnome-base/gsettings-desktop-schemas-3.12
 	>=gnome-base/gnome-keyring-3.3.90
-	>=gnome-base/gnome-menus-3.5.3:3[introspection]
 	gnome-base/libgnome-keyring
 	>=gnome-extra/evolution-data-server-3.5.3:=
 	>=media-libs/gstreamer-0.11.92:1.0
@@ -46,7 +43,7 @@ COMMON_DEPEND="
 	>=sys-auth/polkit-0.100[introspection]
 	>=x11-libs/libXfixes-5.0
 	x11-libs/libXtst
-	>=x11-wm/mutter-3.10.4[introspection]
+	>=x11-wm/mutter-3.14.3[introspection]
 	>=x11-libs/startup-notification-0.11
 
 	${PYTHON_DEPS}
@@ -65,7 +62,9 @@ COMMON_DEPEND="
 	x11-apps/mesa-progs
 
 	bluetooth? ( >=net-wireless/gnome-bluetooth-3.9[introspection] )
-	networkmanager? ( >=net-misc/networkmanager-0.9.8[introspection] )
+	networkmanager? (
+		app-crypt/libsecret
+		>=net-misc/networkmanager-0.9.8[introspection] )
 "
 # Runtime-only deps are probably incomplete and approximate.
 # Introspection deps generated using:
@@ -86,7 +85,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=app-accessibility/caribou-0.4.8
 	media-libs/cogl[introspection]
 	>=sys-apps/accountsservice-0.6.14[introspection]
-	|| ( <sys-power/upower-0.99[introspection] sys-power/upower-pm-utils[introspection] )
+	>=sys-power/upower-0.99[introspection]
 
 	>=gnome-base/gnome-session-2.91.91
 	>=gnome-base/gnome-settings-daemon-3.8.3
@@ -120,35 +119,14 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	# Change favorites defaults, bug #479918
-	epatch "${FILESDIR}/${PN}-defaults.patch"
+	epatch "${FILESDIR}"/${PN}-3.14.0-defaults.patch
 
 	# Fix automagic gnome-bluetooth dep, bug #398145
-	epatch "${FILESDIR}/${PN}-3.10-bluetooth-flag.patch"
-
-	# Make networkmanager optional, bug #398593
-	epatch "${FILESDIR}/${PN}-3.10-networkmanager-flag.patch"
+	epatch "${FILESDIR}"/${PN}-3.12-bluetooth-flag.patch
 
 	# Fix silent bluetooth linking failure with ld.gold, bug #503952
 	# https://bugzilla.gnome.org/show_bug.cgi?id=726435
-	epatch "${FILESDIR}/${PN}-3.10.4-bluetooth-gold.patch"
-
-	# Fix background glitches with multiple monitors, from 3.11, bug #504530
-	epatch "${FILESDIR}/${PN}-3.10.4-fix-background-manager.patch"
-
-	# network: Add a Wired device (from 'master')
-	epatch "${FILESDIR}/${PN}-3.10.4-wired-network.patch"
-
-	# windowManager: Activate new workspace before removing the current one (from '3.10')
-	epatch "${FILESDIR}/${P}-activate-workspace.patch"
-
-	# perf: Restore shell after runs (from '3.10')
-	epatch "${FILESDIR}/${P}-restore-pref.patch"
-
-	# shell-global: Only set the scale factor if get_setting succeeded (from '3.10')
-	epatch "${FILESDIR}/${P}-scale-factor.patch"
-
-	# Magnifier: Restore crosshairs (from 'master')
-	epatch "${FILESDIR}/${PN}-3.10.4-broken-crosshairs.patch"
+	epatch "${FILESDIR}"/${PN}-3.14.0-bluetooth-gold.patch
 
 	epatch_user
 
@@ -159,7 +137,9 @@ src_prepare() {
 src_configure() {
 	# Do not error out on warnings
 	gnome2_src_configure \
+		--enable-browser-plugin \
 		--enable-man \
+		$(use_enable !openrc-force systemd) \
 		$(use_with bluetooth) \
 		$(use_enable networkmanager) \
 		BROWSER_PLUGIN_DIR="${EPREFIX}"/usr/$(get_libdir)/nsbrowser/plugins

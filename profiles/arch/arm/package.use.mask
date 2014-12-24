@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.232 2014/12/23 23:15:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.233 2014/12/23 23:47:00 eva Exp $
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
 # New dependencies for wayland support in Gnome 3.14
 # See bug #533420.
 media-libs/clutter egl
+x11-wm/mutter kms
 
 # Markus Meier <maekke@gentoo.org> (29 Nov 2014)
 # Unkeyworded deps, bug #518742

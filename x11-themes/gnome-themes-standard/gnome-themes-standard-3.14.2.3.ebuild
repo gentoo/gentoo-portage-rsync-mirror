@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.10.0.ebuild,v 1.12 2014/05/05 02:11:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.14.2.3.ebuild,v 1.1 2014/12/23 23:35:49 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,14 +14,14 @@ HOMEPAGE="https://git.gnome.org/browse/gnome-themes-standard/"
 LICENSE="LGPL-2.1+"
 SLOT="0"
 IUSE="+gtk"
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris"
 
 COMMON_DEPEND="
 	gnome-base/librsvg:2
 	x11-libs/cairo
 	gtk? (
 		>=x11-libs/gtk+-2.24.15:2
-		>=x11-libs/gtk+-3.9.12:3 )
+		>=x11-libs/gtk+-3.12:3 )
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
@@ -37,15 +37,6 @@ RDEPEND="${COMMON_DEPEND}
 	!<x11-themes/gnome-themes-2.32.1-r1
 "
 
-src_prepare() {
-	# Install cursors in the right place
-	sed -e 's:^\(cursordir.*\)icons\(.*\):\1cursors/xorg-x11\2:' \
-		-i themes/Adwaita/cursors/Makefile.am \
-		-i themes/Adwaita/cursors/Makefile.in || die
-
-	gnome2_src_prepare
-}
-
 src_configure() {
 	# The icon cache needs to be generated in pkg_postinst()
 	gnome2_src_configure \
@@ -53,11 +44,4 @@ src_configure() {
 		$(use_enable gtk gtk2-engine) \
 		$(use_enable gtk gtk3-engine) \
 		GTK_UPDATE_ICON_CACHE=$(type -P true)
-}
-
-src_install() {
-	gnome2_src_install
-
-	# Make it the default cursor theme
-	dosym Adwaita /usr/share/cursors/xorg-x11/default
 }

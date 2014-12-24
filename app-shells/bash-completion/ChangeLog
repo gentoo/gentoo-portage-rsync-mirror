@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.277 2014/11/20 11:48:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.278 2014/12/23 23:53:25 mgorny Exp $
+
+*bash-completion-2.1_p20141224 (23 Dec 2014)
+
+  23 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  +bash-completion-2.1_p20141224.ebuild:
+  Package a new snapshot with upstream fix for bug #528064 (and more). Update
+  the Gentoo bundle with new patch, proper eselect module version (bug #530798)
+  and fixed non-existing file ref (bug #532126).
 
 *bash-completion-2.1-r93 (20 Nov 2014)
 

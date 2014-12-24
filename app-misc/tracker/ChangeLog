@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.180 2014/12/19 13:33:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.181 2014/12/23 23:58:12 eva Exp $
+
+*tracker-1.2.5 (23 Dec 2014)
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +tracker-1.2.5.ebuild:
+  Version bump for Gnome 3.14.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> tracker-1.0.6.ebuild:
   amd64 stable, bug 529964
