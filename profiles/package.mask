@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16237 2014/12/23 23:57:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16238 2014/12/24 00:25:57 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -103,6 +103,7 @@ dev-ruby/twitter:4
 >=dev-util/devhelp-3.13
 >=dev-util/gdbus-codegen-2.41
 >=dev-util/gnome-devel-docs-3.13
+>=dev-vcs/gitg-3.14.1
 >=games-arcade/gnome-nibbles-3.13
 >=games-arcade/gnome-robots-3.13
 >=games-board/four-in-a-row-3.13
@@ -168,6 +169,7 @@ dev-ruby/twitter:4
 >=media-video/cheese-3.13
 >=media-video/totem-3.13
 >=net-irc/polari-3.13
+>=net-libs/farstream-0.2.6
 >=net-libs/glib-networking-2.41
 >=net-libs/gnome-online-accounts-3.13
 >=net-libs/libsoup-2.47

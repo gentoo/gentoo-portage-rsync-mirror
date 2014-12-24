@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.89 2014/11/13 12:23:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.90 2014/12/24 00:08:21 eva Exp $
+
+*cheese-3.14.2 (24 Dec 2014)
+
+  24 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +cheese-3.14.2.ebuild:
+  Version bump for Gnome 3.14. Dropped keywords, bug #523924.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -cheese-2.32.0.ebuild,
   -cheese-3.10.2.ebuild:

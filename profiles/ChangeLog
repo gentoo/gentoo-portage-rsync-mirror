@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9633 2014/12/23 23:57:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9634 2014/12/24 00:25:57 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add gitg (webkit:4) and farstream (glib) to Gnome 3.14 mask.
 
   23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add tracker and nautilus-tracker-tags to libmediaart mask.

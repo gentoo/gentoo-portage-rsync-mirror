@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.10.1.ebuild,v 1.5 2014/03/09 12:00:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions/gnome-shell-extensions-3.14.3.ebuild,v 1.1 2014/12/24 00:01:51 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,12 +8,12 @@ GCONF_DEBUG="no"
 inherit eutils gnome2 readme.gentoo
 
 DESCRIPTION="JavaScript extensions for GNOME Shell"
-HOMEPAGE="http://live.gnome.org/GnomeShell/Extensions"
+HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell/Extensions"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="examples"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.26:2
@@ -25,7 +25,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-libs/gobject-introspection
 	dev-libs/atk[introspection]
 	gnome-base/gnome-menus:3[introspection]
-	>=gnome-base/gnome-shell-3.5.91
+	>=gnome-base/gnome-shell-3.14.2
 	media-libs/clutter:1.0[introspection]
 	net-libs/telepathy-glib[introspection]
 	x11-libs/gdk-pixbuf:2[introspection]

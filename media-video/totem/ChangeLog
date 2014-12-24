@@ -1,6 +1,13 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.384 2014/12/19 13:40:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.385 2014/12/24 00:16:13 eva Exp $
+
+*totem-3.14.1 (24 Dec 2014)
+
+  24 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -totem-3.12.1.ebuild,
+  +totem-3.14.1.ebuild:
+  Version bump for Gnome 3.14. Dropped keywords, bug #523924. Needs gstreamer
+  1.4, to follow. Clean up old revision.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> totem-3.12.2.ebuild:
   amd64 stable, bug 529964
