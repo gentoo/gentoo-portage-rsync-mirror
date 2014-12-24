@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/persistent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent/ChangeLog,v 1.7 2014/12/22 10:57:47 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent/ChangeLog,v 1.8 2014/12/24 03:47:31 gienah Exp $
+
+*persistent-2.1.1.3 (24 Dec 2014)
+
+  24 Dec 2014; Mark Wright <gienah@gentoo.org> +persistent-2.1.1.3.ebuild,
+  -persistent-2.1.1.2.ebuild:
+  Bump persistent to 2.1.1.3, remove recently added 2.1.1.2 since 2.1.1.3 is
+  very similar
 
 *persistent-2.1.1.2 (22 Dec 2014)
 

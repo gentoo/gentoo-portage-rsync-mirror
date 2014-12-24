@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/crypto-pubkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey/ChangeLog,v 1.9 2014/12/13 13:41:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey/ChangeLog,v 1.10 2014/12/24 03:32:13 gienah Exp $
+
+*crypto-pubkey-0.2.6 (24 Dec 2014)
+
+  24 Dec 2014; Mark Wright <gienah@gentoo.org> +crypto-pubkey-0.2.6.ebuild:
+  Bump crypto-pubkey to 0.2.6
 
 *crypto-pubkey-0.2.5 (13 Dec 2014)
 
