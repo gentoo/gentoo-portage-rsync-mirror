@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-2.2.1-r1.ebuild,v 1.1 2014/06/25 11:36:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/dssp-2.2.1-r1.ebuild,v 1.2 2014/12/24 17:51:44 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.cmbi.ru.nl/pub/molbio/software/dssp-2/${P}.tgz"
 
 LICENSE="Boost-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/boost:="
