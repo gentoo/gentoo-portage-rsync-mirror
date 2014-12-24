@@ -1,6 +1,14 @@
 # ChangeLog for dev-lua/luasec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.11 2014/11/14 21:21:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.13 2014/12/24 10:42:19 mrueg Exp $
+
+  24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -luasec-0.4.ebuild:
+  Cleanup old.
+
+*luasec-0.5 (24 Dec 2014)
+
+  24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +luasec-0.5.ebuild:
+  Version bump. Fixes bug #499968.
 
   14 Nov 2014; Markus Meier <maekke@gentoo.org> luasec-0.4.1_p20130620.ebuild:
   arm stable, bug #511532

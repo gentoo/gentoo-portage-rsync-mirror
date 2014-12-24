@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.4.0.ebuild,v 1.1 2014/11/17 06:34:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.6.1.ebuild,v 1.1 2014/12/24 10:32:18 idella4 Exp $
 
 EAPI=5
 
@@ -44,8 +44,8 @@ python_prepare_all() {
 
 python_test() {
 	# intermittent fails or errors caused by an apparent race condition. suite is fine
-	# The setting --processes=-1 invokes this flaw
-	nosetests || die "Tests failed under ${EPYTHON}"
+	# test test_geocode attempts to connect the network and is excluded here
+	nosetests -e test_geocode || die "Tests failed under ${EPYTHON}"
 }
 
 python_compile_all() {

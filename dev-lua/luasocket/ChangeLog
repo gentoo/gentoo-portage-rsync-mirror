@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luasocket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.23 2014/12/09 09:55:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.24 2014/12/24 10:45:42 mrueg Exp $
+
+  24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -luasocket-3.0_rc1-r2.ebuild:
+  Remove old.
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> luasocket-3.0_rc1-r3.ebuild:
   Stable for HPPA (bug #526016).

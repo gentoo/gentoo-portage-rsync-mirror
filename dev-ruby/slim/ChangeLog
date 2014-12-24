@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/slim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slim/ChangeLog,v 1.3 2014/07/28 06:22:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slim/ChangeLog,v 1.4 2014/12/24 10:54:58 mrueg Exp $
+
+  24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -slim-2.0.2-r1.ebuild,
+  -slim-2.0.2.ebuild:
+  Remove old.
 
 *slim-2.0.3 (28 Jul 2014)
 

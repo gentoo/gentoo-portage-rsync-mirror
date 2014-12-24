@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/asciidoctor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/asciidoctor/ChangeLog,v 1.6 2014/12/02 12:34:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/asciidoctor/ChangeLog,v 1.7 2014/12/24 10:51:29 mrueg Exp $
+
+  24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -asciidoctor-0.1.4.ebuild,
+  -asciidoctor-1.5.1.ebuild:
+  Remove old.
 
 *asciidoctor-1.5.2 (02 Dec 2014)
 

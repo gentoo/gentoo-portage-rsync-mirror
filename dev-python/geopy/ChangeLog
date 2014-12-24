@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/geopy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/ChangeLog,v 1.16 2014/11/17 06:34:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/ChangeLog,v 1.18 2014/12/24 10:47:21 idella4 Exp $
+
+*geopy-1.6.1 (24 Dec 2014)
+
+  24 Dec 2014; Ian Delaney <idella4@gentoo.org> +geopy-1.6.1.ebuild:
+  bump; update test phase, rm disused patches & rm old versions
 
 *geopy-1.4.0 (17 Nov 2014)
 

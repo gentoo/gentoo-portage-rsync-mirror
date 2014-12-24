@@ -1,6 +1,12 @@
 # ChangeLog for dev-lua/luafilesystem
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luafilesystem/ChangeLog,v 1.13 2014/12/09 09:53:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luafilesystem/ChangeLog,v 1.14 2014/12/24 10:41:04 mrueg Exp $
+
+*luafilesystem-1.6.2 (24 Dec 2014)
+
+  24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +luafilesystem-1.6.2.ebuild,
+  -luafilesystem-1.4.1.ebuild, -luafilesystem-1.4.2.ebuild:
+  Version bump. Remove old. Fixes bug #437028.
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> luafilesystem-1.5.0.ebuild:
   Stable for HPPA (bug #526016).
