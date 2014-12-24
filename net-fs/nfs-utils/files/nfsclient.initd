@@ -1,16 +1,17 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsclient.initd,v 1.1 2014/12/22 19:24:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsclient.initd,v 1.3 2014/12/24 18:09:21 radhermit Exp $
 
 [ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
 depend() {
-	local myneed=""
+	local opts myneed=""
 	if [ -e /etc/fstab ] ; then
 		fstabinfo -t nfs4 -q && myneed="$myneed rpc.idmapd"
 		fstabinfo -t nfs -q && myneed="$myneed rpc.statd"
-		fstabinfo -o -t nfs,nfs4 | while read opts; do
+
+		for opts in $(fstabinfo -o -t nfs,nfs4) ; do
 			case $opts in
 				*sec=krb*|*sec=spkm*) myneed="$myneed rpc.gssd" ;;
 			esac

@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.274 2014/12/24 16:43:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.275 2014/12/24 18:06:29 tamiko Exp $
+
+  24 Dec 2014; Matthias Maier <tamiko@gentoo.org> doxygen-1.8.8.ebuild:
+  put ~amd64-fbsd back in place, bug #533458
 
   24 Dec 2014; Jeroen Roovers <jer@gentoo.org> doxygen-1.8.8.ebuild:
   Drop keywords (bug #533458).
