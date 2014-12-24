@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.631 2014/12/13 10:56:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.632 2014/12/24 19:37:24 ottxor Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -14,10 +14,6 @@ x11-libs/cairo directfb
 # Strongly recommened by upstream to disable lzo and zlib due to memory leaks
 # https://github.com/groonga/groonga/issues/6 (Japanese)
 app-text/groonga lzo zlib
-
-# Christoph Junghans <ottxor@gentoo.org> (24 Nov 2014)
-# needs boost auto_index tool (bug #529066)
->=sys-cluster/hpx-0.9.9 doc
 
 # Jeroen Roovers <jer@gentoo.org> (18 Nov 2014)
 # Requires dev-lang/lua-5.2 (bug #253269)

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.756 2014/12/16 00:17:42 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.757 2014/12/24 19:37:24 ottxor Exp $
+
+  24 Dec 2014; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  dropped hpx[doc] mask as bug #529066 got fixed
 
   16 Dec 2014; Ruud Koolen <redlizard@gentoo.org> make.defaults:
   Add prefix-guest to IUSE_IMPLICIT.
