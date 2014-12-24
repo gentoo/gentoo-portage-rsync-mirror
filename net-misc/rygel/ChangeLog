@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.60 2014/12/19 13:43:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.61 2014/12/23 23:17:14 eva Exp $
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -rygel-0.22.2.ebuild,
+  +rygel-0.24.2.ebuild:
+  Version bump for Gnome 3.14. Clean up old revision.
+
+*rygel-0.24.2 (23 Dec 2014)
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> -rygel-0.22.2.ebuild,
+  +rygel-0.24.2.ebuild:
+  Version bump for Gnome 3.14. Clean up old revision.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> rygel-0.22.3.ebuild:
   amd64 stable, bug 529964

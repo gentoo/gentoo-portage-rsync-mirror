@@ -1,8 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.142 2014/10/18 18:15:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.143 2014/12/23 23:15:26 eva Exp $
 
 # This file requires >=portage-2.1.1
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
+# New dependencies for wayland support in Gnome 3.14
+# See bug #533420.
+media-libs/clutter egl
 
 # Tim Harder <radhermit@gentoo.org> (11 Oct 2014)
 # Unmask skype support for unstable keywords

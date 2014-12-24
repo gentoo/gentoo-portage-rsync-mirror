@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-3.12.0.ebuild,v 1.1 2014/04/27 18:12:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-3.14.0.ebuild,v 1.1 2014/12/23 23:20:35 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug does not do anything useful
@@ -39,16 +39,9 @@ DEPEND="${RDEPEND}
 
 RESTRICT="test" # Need network #424719
 
-src_prepare() {
-	gnome2_src_prepare
-
-	# Crazy flags
-	sed -e 's:-Wall ::' -i configure || die
+src_test() {
+	export GVFS_DISABLE_FUSE=1
+	export GIO_USE_VFS=gvfs
+	ewarn "Tests require network access to http://where.yahooapis.com"
+	dbus-launch emake check || die "tests failed"
 }
-
-#src_test() {
-#	export GVFS_DISABLE_FUSE=1
-#	export GIO_USE_VFS=gvfs
-#	ewarn "Tests require network access to http://where.yahooapis.com"
-#	dbus-launch emake check || die "tests failed"
-#}

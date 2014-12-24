@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.312 2014/11/13 12:39:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.313 2014/12/23 23:27:53 eva Exp $
+
+*epiphany-3.14.2 (23 Dec 2014)
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +epiphany-3.14.2.ebuild,
+  +files/epiphany-3.14.0-missing-symbol.patch,
+  +files/epiphany-3.14.0-unittest-1.patch,
+  +files/epiphany-3.14.0-unittest-2.patch:
+  Version bump for Gnome 3.14.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -epiphany-2.30.6-r1.ebuild,
   -files/epiphany-2.30.6-clearing-passwd.patch,

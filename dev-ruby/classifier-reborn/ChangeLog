@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/classifier-reborn
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier-reborn/ChangeLog,v 1.4 2014/11/10 14:47:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier-reborn/ChangeLog,v 1.5 2014/12/23 23:02:12 mrueg Exp $
+
+*classifier-reborn-2.0.3 (23 Dec 2014)
+
+  23 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +classifier-reborn-2.0.3.ebuild:
+  Version bump.
 
 *classifier-reborn-2.0.2 (10 Nov 2014)
 

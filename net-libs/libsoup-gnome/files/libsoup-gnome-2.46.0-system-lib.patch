@@ -253,6 +253,31 @@ index 60920bd..26c5616 100644
 +CLEANFILES += $(gir_DATA) $(typelib_DATA) $(BUILT_SOURCES)
  
  endif
+@@ -326,6 +326,7 @@
+ 
+ # We only do this check on Linux, so we don't have to worry about
+ # different "nm" output on other platforms
++if BUILD_LIBSOUP
+ if OS_LINUX
+ check-local:
+ 	@echo Checking libsoup-2.4.so symbols
+@@ -335,3 +336,16 @@
+ 		env LANG=C sort -u | \
+ 		diff -U0 $(srcdir)/libsoup-2.4.sym - >&2
+ endif
++endif
++
++if BUILD_LIBSOUP_GNOME
++if OS_LINUX
++check-local:
++	@echo Checking libsoup-gnome-2.4.so symbols
++	@nm $(builddir)/.libs/libsoup-gnome-2.4.so | \
++		grep "^[[:xdigit:]]\+ [BTR] " | \
++		sed "s/^[[:xdigit:]]\+ [BTR] //" | \
++		env LANG=C sort -u | \
++		diff -U0 $(srcdir)/libsoup-gnome-2.4.sym - >&2
++endif
++endif
 -- 
 1.9.0
 

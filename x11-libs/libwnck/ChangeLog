@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.333 2014/12/19 13:44:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.334 2014/12/23 23:29:22 eva Exp $
+
+*libwnck-3.14.0 (23 Dec 2014)
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +libwnck-3.14.0.ebuild:
+  Version bump for Gnome 3.14.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> libwnck-3.4.9.ebuild:
   amd64 stable, bug 529964

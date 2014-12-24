@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.173 2014/12/22 23:36:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.174 2014/12/23 23:15:01 eva Exp $
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
+# New dependencies for wayland support in Gnome 3.14
+# See bug #533420.
+media-libs/clutter egl
 
 # Mark Wright <gienah@gentoo.org> (14-23 Dec 2014)
 # test dependencies need keywording

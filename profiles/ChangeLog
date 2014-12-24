@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9631 2014/12/23 20:11:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9632 2014/12/23 23:16:20 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add mask for newer rygel releases.
 
   23 Dec 2014; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask app-misc/fixdos for removal. Bug #533222

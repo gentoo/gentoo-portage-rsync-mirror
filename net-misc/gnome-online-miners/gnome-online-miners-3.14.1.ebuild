@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.10.3.ebuild,v 1.7 2014/03/30 10:30:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.14.1.ebuild,v 1.1 2014/12/23 23:05:38 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,20 +8,21 @@ GCONF_DEBUG="no"
 inherit gnome2
 
 DESCRIPTION="Crawls through your online content"
-HOMEPAGE="https://git.gnome.org/browse/gnome-online-miners"
+HOMEPAGE="https://wiki.gnome.org/Projects/GnomeOnlineMiners"
 
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	>=dev-libs/libgdata-0.13.3:0=
+	>=dev-libs/libgdata-0.15.2:0=
 	>=dev-libs/glib-2.35.1:2
-	>=net-libs/gnome-online-accounts-3.7.3
+	>=net-libs/gnome-online-accounts-3.13.3
 	>=media-libs/grilo-0.2.6:0.2
+	>=net-libs/libgfbgraph-0.2.2:0.2
 	>=net-libs/libzapojit-0.0.2
-	>=app-misc/tracker-0.16:0=
+	>=app-misc/tracker-1:0=
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
