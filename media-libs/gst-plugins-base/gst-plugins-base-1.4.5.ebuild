@@ -1,9 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.2.4.ebuild,v 1.1 2014/05/31 14:01:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.4.5.ebuild,v 1.1 2014/12/24 18:43:16 leio Exp $
 
 EAPI="5"
-inherit gst-plugins-base gst-plugins10
+
+GST_ORG_MODULE="gst-plugins-base"
+inherit gstreamer
 
 DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
@@ -19,28 +21,28 @@ REQUIRED_USE="
 
 RDEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.32:2
-	>=media-libs/gstreamer-1.2.0:1.0[introspection?]
-	sys-libs/zlib
-	alsa? ( >=media-libs/alsa-lib-0.9.1 )
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
+	>=media-libs/gstreamer-${PV}:1.0[introspection?,${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	ivorbis? ( media-libs/tremor )
-	ogg? ( >=media-libs/libogg-1 )
-	orc? ( >=dev-lang/orc-0.4.18 )
-	pango? ( >=x11-libs/pango-1.22 )
-	theora? ( >=media-libs/libtheora-1.1[encode] )
-	vorbis? ( >=media-libs/libvorbis-1 )
+	ivorbis? ( >=media-libs/tremor-0_pre20130223[${MULTILIB_USEDEP}] )
+	ogg? ( >=media-libs/libogg-1.3.0[${MULTILIB_USEDEP}] )
+	orc? ( >=dev-lang/orc-0.4.18[${MULTILIB_USEDEP}] )
+	pango? ( >=x11-libs/pango-1.36.3[${MULTILIB_USEDEP}] )
+	theora? ( >=media-libs/libtheora-1.1.1[encode,${MULTILIB_USEDEP}] )
+	vorbis? ( >=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}] )
 	X? (
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXv )
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXv-1.0.10[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
 	X? (
-		x11-proto/videoproto
-		x11-proto/xextproto
-		x11-proto/xproto )
+		>=x11-proto/videoproto-2.3.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
+		>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )
 "
 
 src_prepare() {
@@ -50,10 +52,10 @@ src_prepare() {
 	sed -i -e 's:X_PRE_LIBS -lSM -lICE:X_PRE_LIBS:' "${S}"/configure || die
 }
 
-src_configure() {
-	gst-plugins10_src_configure \
+multilib_src_configure() {
+	gstreamer_multilib_src_configure \
 		$(use_enable alsa) \
-		$(use_enable introspection) \
+		$(multilib_native_use_enable introspection) \
 		$(use_enable ivorbis) \
 		$(use_enable ogg) \
 		$(use_enable orc) \
@@ -76,14 +78,17 @@ src_configure() {
 			gst/audioconvert/Makefile \
 			gst/volume/Makefile || die
 	fi
+
+	if multilib_is_native_abi; then
+		local x
+		for x in libs plugins; do
+			ln -s "${S}"/docs/${x}/html docs/${x}/html || die
+		done
+	fi
 }
 
-src_compile() {
-	default
-}
-
-src_install() {
+multilib_src_install_all() {
 	DOCS="AUTHORS NEWS README RELEASE"
-	default
+	einstalldocs
 	prune_libtool_files --modules
 }

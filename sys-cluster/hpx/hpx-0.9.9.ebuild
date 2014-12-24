@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/hpx-0.9.9.ebuild,v 1.1 2014/11/05 05:30:37 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/hpx-0.9.9.ebuild,v 1.2 2014/12/24 18:57:40 ottxor Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-lang/python )
+	doc? ( >=dev-libs/boost-1.56.0-r1[tools] )
 "
 REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )
 	jemalloc? ( !perftools !tbb )

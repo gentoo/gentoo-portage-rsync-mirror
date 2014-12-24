@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.12 2014/11/23 16:36:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.13 2014/12/24 18:38:07 floppym Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
 # #456704 -- a lot of py2-only deps
 PY2_USEDEP=$(python_gen_usedep 'python2*')
 COMMON_DEPEND="
-	dev-python/numpy[${PYTHON_USEDEP}]
+	<dev-python/numpy-1.9.0[${PYTHON_USEDEP}]
 	dev-python/python-dateutil:0[${PYTHON_USEDEP}]
 	dev-python/pytz[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
