@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/geary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.32 2014/11/25 22:44:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.33 2014/12/24 16:37:21 leio Exp $
+
+  24 Dec 2014; Mart Raudsepp <leio@gentoo.org> geary-0.6.3-r1.ebuild,
+  geary-0.7.2-r1.ebuild, -geary-0.8.0.ebuild, -geary-0.8.1.ebuild,
+  geary-0.8.2.ebuild:
+  Update SRC_URI to use gnome mirror, which changed. Remove old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

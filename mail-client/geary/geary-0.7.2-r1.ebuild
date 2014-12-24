@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.7.2-r1.ebuild,v 1.1 2014/09/18 11:12:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.7.2-r1.ebuild,v 1.2 2014/12/24 16:37:21 leio Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit eutils fdo-mime gnome2-utils vala cmake-utils
 MY_P=${P/_pre/pr}
 DESCRIPTION="A lightweight, easy-to-use, feature-rich email client"
 HOMEPAGE="http://www.yorba.org/projects/geary/"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/geary/${PV:0:3}/${MY_P}.tar.xz"
+SRC_URI="mirror://gnome/sources/geary/${PV:0:3}/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
