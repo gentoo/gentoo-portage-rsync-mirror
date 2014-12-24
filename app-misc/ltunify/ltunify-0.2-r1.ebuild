@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ltunify/ltunify-0.2-r1.ebuild,v 1.1 2014/11/25 02:14:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ltunify/ltunify-0.2-r1.ebuild,v 1.2 2014/12/24 12:15:47 mrueg Exp $
 
 EAPI=5
 inherit toolchain-funcs udev
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 
 src_prepare() {
 	sed -i '/^override CFLAGS/d' Makefile || die
-	
+
 	# allow plugdev group r/w access
 	sed -i 's/^#MODE=/MODE=/' udev/42-logitech-unify-permissions.rules || die
 

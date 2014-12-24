@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/stumpwm-0.9.9.ebuild,v 1.1 2014/12/23 22:28:11 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/stumpwm-0.9.9.ebuild,v 1.2 2014/12/24 12:04:04 ulm Exp $
 
 EAPI=5
 
@@ -31,7 +31,8 @@ DEPEND="${RDEPEND}
 SITEFILE=70${PN}-gentoo.el
 
 get_lisp() {
-	for list in $@ ; do
+	local lisp
+	for lisp in "$@" ; do
 		use ${lisp} && echo ${lisp} && return
 	done
 }

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/stumpwm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.10 2014/12/23 22:28:11 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.11 2014/12/24 12:04:04 ulm Exp $
+
+  24 Dec 2014; Ulrich Müller <ulm@gentoo.org> stumpwm-0.9.9.ebuild:
+  Fix typo in variable name.
 
 *stumpwm-9999 (23 Dec 2014)
 *stumpwm-0.9.9 (23 Dec 2014)
