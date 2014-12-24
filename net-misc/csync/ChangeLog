@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/csync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.24 2014/11/25 15:33:59 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/ChangeLog,v 1.25 2014/12/24 05:15:50 jer Exp $
+
+  24 Dec 2014; Jeroen Roovers <jer@gentoo.org> csync-0.50.0.ebuild:
+  Fix DEPEND.
 
   25 Nov 2014; Bernard Cafarelli <voyageur@gentoo.org> csync-0.50.0.ebuild:
   Drop blocker on owncloud-client, it now installs ocsync in a private
