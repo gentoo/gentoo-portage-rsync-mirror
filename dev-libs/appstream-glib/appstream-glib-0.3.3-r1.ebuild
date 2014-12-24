@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.3-r1.ebuild,v 1.2 2014/12/08 13:15:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/appstream-glib/appstream-glib-0.3.3-r1.ebuild,v 1.3 2014/12/24 00:35:05 eva Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="
 	app-arch/libarchive
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.16.1:2
-	media-libs/fontconfig
+	>=media-libs/fontconfig-2.11
 	>=media-libs/freetype-2.4:2
 	>=net-libs/libsoup-2.24:2.4
 	>=x11-libs/gdk-pixbuf-2.14:2
