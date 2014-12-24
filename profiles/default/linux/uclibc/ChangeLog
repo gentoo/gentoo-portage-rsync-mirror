@@ -1,6 +1,9 @@
 # ChangeLog for the default/linux/uclibc profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/ChangeLog,v 1.3 2014/11/20 02:07:15 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/ChangeLog,v 1.4 2014/12/24 17:29:53 tamiko Exp $
+
+  24 Dec 2014; Matthias Maier <tamiko@gentoo.org> mips/package.use.mask:
+  use mask clang useflag for app-doc/doxygen
 
   20 Nov 2014; Davide Pesavento <pesa@gentoo.org> +arm/package.mask,
   mips/package.mask, ppc/package.mask:

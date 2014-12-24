@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/flac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.193 2014/12/24 14:45:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.194 2014/12/24 17:08:42 radhermit Exp $
+
+  24 Dec 2014; Tim Harder <radhermit@gentoo.org> -flac-1.2.1-r3.ebuild,
+  -flac-1.2.1-r4.ebuild, -flac-1.2.1-r5.ebuild, -flac-1.3.0.ebuild,
+  -flac-1.3.0-r1.ebuild, -files/flac-1.2.1-asm.patch,
+  -files/flac-1.2.1-asneeded.patch, -files/flac-1.2.1-cflags.patch,
+  -files/flac-1.2.1-dontbuild-examples.patch,
+  -files/flac-1.2.1-dontbuild-tests.patch,
+  -files/flac-1.2.1-gcc-4.3-includes.patch, -files/flac-1.2.1-ogg-m4.patch,
+  -files/flac-1.3.0-metaflac_strcat.patch:
+  Remove old.
 
   24 Dec 2014; Agostino Sarubbo <ago@gentoo.org> flac-1.3.1-r1.ebuild:
   Stable for ppc64, wrt bug #530288

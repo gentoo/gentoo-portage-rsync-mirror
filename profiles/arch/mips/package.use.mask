@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.68 2014/09/16 17:12:06 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.69 2014/12/24 17:24:44 tamiko Exp $
+
+# Matthias Maier <tamiko@gentoo.org> (24 Dec 2014)
+# sys-devel/clang is not keyworded
+app-doc/doxygen clang
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (16 Sep 2014)
 # Needs libepoxy keywording, bug #510940

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.150 2014/11/20 01:56:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.151 2014/12/24 17:24:44 tamiko Exp $
+
+  24 Dec 2014; Matthias Maier <tamiko@gentoo.org> package.use.mask:
+  mask clang use flag for app-doc/doxygen
 
   20 Nov 2014; Davide Pesavento <pesa@gentoo.org> package.mask:
   Move Qt 4.8.6 mask from global package.mask to arch profiles.
