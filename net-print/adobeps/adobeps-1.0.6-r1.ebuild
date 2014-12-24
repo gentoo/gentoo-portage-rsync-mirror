@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/adobeps/adobeps-1.0.6.ebuild,v 1.1 2008/02/17 22:38:44 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/adobeps/adobeps-1.0.6-r1.ebuild,v 1.1 2014/12/24 13:04:26 mrueg Exp $
+
+EAPI=5
 
 inherit eutils
 

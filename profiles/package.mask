@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16241 2014/12/24 12:38:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16242 2014/12/24 13:07:23 mjo Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Orlitzky <mjo@gentoo.org> (24 Dec 2014)
+# Masked for removal in 30 days (bug #531954). All current versions of
+# nagios block it, and it has unresolved LICENSE issues (bug #320241).
+net-analyzer/nagios-imagepack
 
 # Sergey Popov <pinkbyte@gentoo.org> (24 Dec 2014)
 # Mask new version of Boost - it's known to cause breakages

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9636 2014/12/24 12:38:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9637 2014/12/24 13:07:22 mjo Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Dec 2014; Michael Orlitzky <mjo@gentoo.org> package.mask:
+  Mask net-analyzer/nagios-imagepack for removal in 30 days.
 
   24 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Adjust mask for dev-libs/boost and dev-util/boost-build

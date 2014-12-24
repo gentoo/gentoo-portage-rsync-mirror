@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.8.ebuild,v 1.1 2014/10/31 19:05:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.9.ebuild,v 1.1 2014/12/24 13:26:08 idl0r Exp $
 
 EAPI="5"
 
