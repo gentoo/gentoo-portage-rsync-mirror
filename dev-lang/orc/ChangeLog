@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.43 2014/10/11 12:38:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.44 2014/12/24 14:36:20 leio Exp $
+
+*orc-0.4.23 (24 Dec 2014)
+
+  24 Dec 2014; Mart Raudsepp <leio@gentoo.org> -orc-0.4.16-r1.ebuild,
+  -orc-0.4.17.ebuild, -orc-0.4.17-r1.ebuild, -orc-0.4.18.ebuild,
+  +orc-0.4.23.ebuild, -files/orc-0.4.17-AM_CONFIG_HEADER.patch:
+  Version bump. Many bug fixes since last bump. Performance improvements, in
+  particular to ARM NEON and x86 SSE3, but also generic improvement in machine
+  instruction count and register usage. Remove obsolete versions.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> orc-0.4.19.ebuild:
   arm stable, bug #512012

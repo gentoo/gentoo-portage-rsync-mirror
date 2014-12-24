@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.5.ebuild,v 1.15 2014/12/24 14:48:58 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.8.ebuild,v 1.1 2014/12/24 14:48:58 tamiko Exp $
 
 EAPI=4
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4} )
 
 inherit eutils fdo-mime flag-o-matic python-any-r1 qt4-r2 toolchain-funcs
 
@@ -14,8 +14,8 @@ SRC_URI="http://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
-IUSE="debug doc dot qt4 latex sqlite elibc_FreeBSD userland_GNU"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+IUSE="clang debug doc dot doxysearch qt4 latex sqlite elibc_FreeBSD elibc_uclibc userland_GNU"
 
 #missing SerbianCyrilic, JapaneseEn, KoreanEn, Chinesetraditional
 
@@ -25,17 +25,20 @@ for X in "${LANGS[@]}" ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-RDEPEND="qt4? ( dev-qt/qtgui:4 )
-	latex? ( app-text/texlive[extra] )
+RDEPEND="app-text/ghostscript-gpl
 	dev-lang/perl
-	virtual/libiconv
 	media-libs/libpng
-	app-text/ghostscript-gpl
-	sqlite? ( dev-db/sqlite:3 )
+	virtual/libiconv
+	clang? ( sys-devel/clang )
 	dot? (
 		media-gfx/graphviz
 		media-libs/freetype
-	)"
+	)
+	doxysearch? ( =dev-libs/xapian-1.2* )
+	latex? ( app-text/texlive[extra] )
+	qt4? ( dev-qt/qtgui:4 )
+	sqlite? ( dev-db/sqlite:3 )
+	"
 
 DEPEND="sys-apps/sed
 	sys-devel/flex
@@ -138,6 +141,10 @@ src_configure() {
 		my_conf="${my_conf} --release "
 	fi
 
+	use clang && my_conf="${my_conf} --with-libclang"
+
+	use doxysearch  && my_conf="${my_conf} --with-doxysearch"
+
 	use qt4 && my_conf="${my_conf} --with-doxywizard"
 
 	use sqlite && my_conf="${my_conf} --with-sqlite3"
@@ -149,14 +156,14 @@ src_configure() {
 	export LINK="${QMAKE_LINK}"
 	export LINK_SHLIB="${QMAKE_CXX}"
 
+	./configure --prefix "${EPREFIX}/usr" ${my_conf} \
+			|| die
+
 	if use qt4 ; then
 		pushd addon/doxywizard &> /dev/null
 		eqmake4 doxywizard.pro -o Makefile.doxywizard
 		popd &> /dev/null
 	fi
-
-	./configure --prefix "${EPREFIX}/usr" ${my_conf} \
-			|| die
 }
 
 src_compile() {

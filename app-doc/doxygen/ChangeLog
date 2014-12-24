@@ -1,6 +1,15 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.272 2014/09/03 17:10:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.273 2014/12/24 14:48:58 tamiko Exp $
+
+*doxygen-1.8.8 (24 Dec 2014)
+
+  24 Dec 2014; Matthias Maier <tamiko@gentoo.org> +doxygen-1.8.8.ebuild,
+  doxygen-1.8.5.ebuild, metadata.xml:
+  version bump and support for python3, bug #499532; add support for doxysearch,
+  bug #508962; fix linkage on with sys-libc/uclibc, bug #512782; add support for
+  clang assisted parsing, bug #515840; fix linkage on Gentoo/FreeBSD, bug
+  #511024
 
   03 Sep 2014; Christoph Junghans <ottxor@gentoo.org> doxygen-1.8.5.ebuild:
   Added ~x64-macos (tested by me)
