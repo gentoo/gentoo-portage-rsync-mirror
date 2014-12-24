@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.338 2014/11/12 08:44:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.339 2014/12/24 12:36:25 pinkbyte Exp $
+
+*boost-1.56.0-r1 (24 Dec 2014)
+
+  24 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> -boost-1.55.0-r1.ebuild,
+  -boost-1.56.0.ebuild, +boost-1.56.0-r1.ebuild,
+  +files/boost-1.56.0-build-auto_index-tool.patch:
+  Build auto_index tool when USE tools is enabled, wrt bug #529066. Drop old
 
   12 Nov 2014; Sergey Popov <pinkbyte@gentoo.org> boost-1.55.0-r2.ebuild:
   Stable on amd64, wrt bug #525286

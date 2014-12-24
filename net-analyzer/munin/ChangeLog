@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.161 2014/11/03 13:25:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.162 2014/12/24 12:33:37 jlec Exp $
+
+*munin-2.0.25 (24 Dec 2014)
+
+  24 Dec 2014; Justin Lecher <jlec@gentoo.org> +munin-2.0.25.ebuild:
+  Version BUmp, #512070
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> munin-2.0.19.ebuild,
   munin-2.0.19-r1.ebuild, munin-2.1.9999.ebuild:

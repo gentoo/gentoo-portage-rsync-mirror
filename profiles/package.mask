@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16240 2014/12/24 01:50:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16241 2014/12/24 12:38:36 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (24 Dec 2014)
+# Mask new version of Boost - it's known to cause breakages
+~dev-util/boost-build-1.57.0
+~dev-libs/boost-1.57.0
 
 # Ian Delaney <idella4@gentoo.org> (24 Dec 2014)
 # Have little evidence of usage and have no upstream development / support
@@ -742,12 +747,6 @@ app-admin/hwreport
 >=media-libs/ilmbase-2.2.0
 >=media-libs/openexr-2.2.0
 >=media-gfx/openexr_viewers-2.2.0
-
-# Sergey Popov <pinkbyte@gentoo.org> (14 Aug 2014)
-# Mask new version of Boost - it's known to cause breakages,
-# according to it's ChangeLog
-~dev-util/boost-build-1.56.0
-~dev-libs/boost-1.56.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (05 Aug 2014)
 # Lacks patch in FILESDIR => fails to build
