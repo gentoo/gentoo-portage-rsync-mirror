@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.134 2014/12/21 15:35:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.135 2014/12/24 09:46:26 jlec Exp $
+
+  24 Dec 2014; Justin Lecher <jlec@gentoo.org> qwt-6.1.2.ebuild,
+  files/qwt-6.1.1-pc-destdir.patch:
+  Add opengl support; fix wrong lib location in pc file, #523490
 
 *qwt-6.1.2 (21 Dec 2014)
 

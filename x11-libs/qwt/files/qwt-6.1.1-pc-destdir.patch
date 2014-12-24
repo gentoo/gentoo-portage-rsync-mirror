@@ -1,10 +1,10 @@
- qwt-6.1.2/textengines/mathml/mathml.pro | 1 +
+ textengines/mathml/mathml.pro | 1 +
  1 file changed, 1 insertion(+)
 
-diff --git a/qwt-6.1.2/textengines/mathml/mathml.pro b/qwt-6.1.2/textengines/mathml/mathml.pro
+diff --git a/textengines/mathml/mathml.pro b/textengines/mathml/mathml.pro
 index 7032366..b1372f7 100644
---- a/qwt-6.1.2/textengines/mathml/mathml.pro
-+++ b/qwt-6.1.2/textengines/mathml/mathml.pro
+--- a/textengines/mathml/mathml.pro
++++ b/textengines/mathml/mathml.pro
 @@ -63,6 +63,7 @@ contains(QWT_CONFIG, QwtPkgConfig) {
  
      # QMAKE_PKGCONFIG_DESTDIR is buggy, in combination

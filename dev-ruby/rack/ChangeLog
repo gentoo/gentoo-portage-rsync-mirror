@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.138 2014/12/21 06:51:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.139 2014/12/24 09:38:43 graaff Exp $
+
+  24 Dec 2014; Hans de Graaff <graaff@gentoo.org> rack-1.6.0.ebuild:
+  Fix block dependency to refer to the correct slot.
 
 *rack-1.6.0 (21 Dec 2014)
 *rack-1.5.2-r4 (21 Dec 2014)

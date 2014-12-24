@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1471 2014/12/21 14:30:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1472 2014/12/24 09:58:27 xmw Exp $
+
+  24 Dec 2014; Michael Weber <xmw@gentoo.org> netsurf.eclass:
+  remove base.eclass inherit
 
   21 Dec 2014; Michał Górny <mgorny@gentoo.org> tests/python-utils-r1.sh:
   Update tests for unsupported python3.2.
