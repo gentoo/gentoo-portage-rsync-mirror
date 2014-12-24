@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.29 2014/11/09 08:33:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.30 2014/12/24 07:21:52 alicef Exp $
+
+  24 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> metadata.xml:
+  Update email and removed proxy-maintainers herd
 
   09 Nov 2014; Michał Górny <mgorny@gentoo.org> pypy-bin-2.4.0.ebuild:
   Generate ctypes cache in src_compile() to diverge less from the remaining

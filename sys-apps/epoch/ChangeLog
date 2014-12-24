@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/epoch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/ChangeLog,v 1.9 2014/12/17 13:25:57 alicef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/ChangeLog,v 1.10 2014/12/24 07:15:18 alicef Exp $
+
+*epoch-1.2.0 (24 Dec 2014)
+
+  24 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> +epoch-1.2.0.ebuild:
+  Bump to 1.2.0
 
   17 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> metadata.xml:
   add myself to maintainers

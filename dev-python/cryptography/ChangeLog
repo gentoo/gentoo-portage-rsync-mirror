@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.28 2014/12/09 10:23:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.29 2014/12/24 07:27:30 maekke Exp $
+
+  24 Dec 2014; Markus Meier <maekke@gentoo.org> cryptography-0.6.1.ebuild:
+  arm stable, bug #530294
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> cryptography-0.6.1.ebuild:
   Stable for HPPA (bug #530294).

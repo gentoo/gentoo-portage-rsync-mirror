@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.14.ebuild,v 1.7 2014/12/22 11:16:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.14.ebuild,v 1.8 2014/12/24 07:27:36 maekke Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ DESCRIPTION="Portage is the package management and distribution system for Gento
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_ru selinux xattr"
 
