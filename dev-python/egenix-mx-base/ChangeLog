@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.90 2014/12/23 00:43:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.91 2014/12/24 11:58:26 idella4 Exp $
+
+*egenix-mx-base-3.2.5 (24 Dec 2014)
+
+  24 Dec 2014; Ian Delaney <idella4@gentoo.org> +egenix-mx-base-3.2.5.ebuild:
+  re-add -3.2.5 to service stabled logilab-common-0.61.0
 
   23 Dec 2014; Ian Delaney <idella4@gentoo.org> -egenix-mx-base-3.1.3.ebuild,
   -egenix-mx-base-3.2.1-r1.ebuild, -egenix-mx-base-3.2.3.ebuild,
