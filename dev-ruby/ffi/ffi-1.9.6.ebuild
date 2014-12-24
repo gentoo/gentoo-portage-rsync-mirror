@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.6.ebuild,v 1.1 2014/10/09 22:10:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.6.ebuild,v 1.2 2014/12/24 08:23:10 graaff Exp $
 
 EAPI=5
 
@@ -30,8 +30,6 @@ RDEPEND+=" virtual/libffi"
 DEPEND+=" virtual/libffi"
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )"
-
-ruby_add_rdepend "virtual/ruby-threads"
 
 all_ruby_prepare() {
 	sed -i -e '/tasks/ s:^:#:' \
