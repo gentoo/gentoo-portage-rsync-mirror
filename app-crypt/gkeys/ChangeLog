@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/gkeys
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.1 2014/12/24 23:31:26 dolsen Exp $
+
+*gkeys-9999 (24 Dec 2014)
+
+  24 Dec 2014; Brian Dolbec <dolsen@gentoo.org> +gkeys-9999.ebuild,
+  +metadata.xml:
+  Initial live ebuild for gkeys.
+
