@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=A Openpgp/gpg keyring of official Gentoo release media gpg keys
+EAPI=5
+HOMEPAGE=https://wiki.gentoo.org/wiki/Project:Gentoo-keys
+KEYWORDS=alpha amd64 arm hppa ia64 ppc64 ppc sparc x86 ~arm64 ~x86-fbsd ~amd64-fbsd ~m68k ~mips ~s390 ~sh
+LICENSE=GPL-2
+RDEPEND=>=app-crypt/gnupg-2.0.0
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~dolsen/releases/keyrings/gentoo-keys-201412231301.tar.xz
+_md5_=e70b41e937a0c9b017be44b1f94a4485
