@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/nokogumbo
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogumbo/ChangeLog,v 1.1 2014/12/25 08:04:32 graaff Exp $
+
+*nokogumbo-1.2.0 (25 Dec 2014)
+
+  25 Dec 2014; Hans de Graaff <graaff@gentoo.org> +nokogumbo-1.2.0.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/sanitize.
+
