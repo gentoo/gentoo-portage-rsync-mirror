@@ -8,7 +8,6 @@
 		<flag name='cache'>Enable caching of content.</flag>
 		<flag name='monitor'>Pull in www-apps/hiawatha-monitor.</flag>
 		<flag name='rewrite'>Enable the rewrite toolkit.</flag>
-		<flag name='rproxy'>Allow Hiawatha to serve as a reverse proxy.</flag>
 		<flag name='tomahawk'>Enable Tomahawk control server.</flag>
 		<flag name='xslt'>Enable XSLT support.
 			This is also needed for directory listings.</flag>

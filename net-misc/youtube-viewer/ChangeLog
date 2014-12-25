@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/youtube-viewer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.40 2014/11/28 22:25:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/ChangeLog,v 1.41 2014/12/25 17:00:52 kensington Exp $
+
+  25 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  -files/youtube-viewer-3.0.8-button.patch, -youtube-viewer-3.0.8.ebuild,
+  -youtube-viewer-3.0.9-r2.ebuild, -youtube-viewer-3.1.0.ebuild:
+  Remove old.
 
   28 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   youtube-viewer-3.0.8.ebuild, youtube-viewer-3.0.9-r2.ebuild,

@@ -7469,7 +7469,6 @@ www-servers/gatling:diet - Compile against dev-libs/dietlibc
 www-servers/hiawatha:cache - Enable caching of content.
 www-servers/hiawatha:monitor - Pull in www-apps/hiawatha-monitor.
 www-servers/hiawatha:rewrite - Enable the rewrite toolkit.
-www-servers/hiawatha:rproxy - Allow Hiawatha to serve as a reverse proxy.
 www-servers/hiawatha:tomahawk - Enable Tomahawk control server.
 www-servers/hiawatha:xslt - Enable XSLT support. This is also needed for directory listings.
 www-servers/lighttpd:libev - Enable fdevent handler
