@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/tigcc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.24 2013/02/28 02:00:16 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.25 2014/12/25 10:49:18 pinkbyte Exp $
+
+*tigcc-0.96_beta8-r1 (25 Dec 2014)
+
+  25 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> -tigcc-0.96_beta8.ebuild,
+  +tigcc-0.96_beta8-r1.ebuild:
+  Revision bump: respect AR, CC and RANLIB, wrt bug #243866. Bump EAPI and fix
+  some QA issues, wrt bug #438218. Acked by Mikle Kolyada. Drop old revision
 
   28 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> -files/a68k-fix.patch,
   -tigcc-0.95_p3.ebuild:

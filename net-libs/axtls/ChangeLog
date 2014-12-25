@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/axtls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.36 2014/11/01 01:06:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/ChangeLog,v 1.37 2014/12/25 10:48:13 jer Exp $
+
+  25 Dec 2014; Jeroen Roovers <jer@gentoo.org> axtls-1.5.0.ebuild:
+  Stable for HPPA (bug #533396).
 
 *axtls-1.5.0 (01 Nov 2014)
 

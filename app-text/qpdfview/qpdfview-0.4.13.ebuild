@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.11.1.ebuild,v 1.2 2014/09/28 11:49:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.13.ebuild,v 1.1 2014/12/25 10:59:27 yngwin Exp $
 
 EAPI=5
 
@@ -16,37 +16,31 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="cups dbus djvu fitz +pdf postscript +qt4 qt5 sqlite +svg synctex"
 
-REQUIRED_USE="
-	^^ ( qt4 qt5 )
-	?? ( fitz pdf )
-"
+REQUIRED_USE="^^ ( qt4 qt5 )
+	?? ( fitz pdf )"
 
-RDEPEND="
-	cups? ( net-print/cups )
+RDEPEND="cups? ( net-print/cups )
 	djvu? ( app-text/djvu )
 	fitz? ( app-text/mupdf:0/1.4 )
 	postscript? ( app-text/libspectre )
-	qt4? (
-		dev-qt/qtcore:4[iconv]
+	qt4? ( dev-qt/qtcore:4[iconv]
 		dev-qt/qtgui:4
 		dbus? ( dev-qt/qtdbus:4 )
 		pdf? ( app-text/poppler[qt4] )
 		sqlite? ( dev-qt/qtsql:4[sqlite] )
-		svg? ( dev-qt/qtsvg:4 )
-	)
-	qt5? (
+		svg? ( dev-qt/qtsvg:4 ) )
+	qt5? ( dev-qt/linguist-tools:5
+		dev-qt/qtconcurrent:5
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5
+		dev-qt/qtprintsupport:5
 		dbus? ( dev-qt/qtdbus:5 )
 		pdf? ( >=app-text/poppler-0.26.4[qt5] )
 		sqlite? ( dev-qt/qtsql:5[sqlite] )
-		svg? ( dev-qt/qtsvg:5 )
-	)
-	!svg? ( virtual/freedesktop-icon-theme )
-"
+		svg? ( dev-qt/qtsvg:5 ) )
+	!svg? ( virtual/freedesktop-icon-theme )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-"
+	virtual/pkgconfig"
 
 DOCS=( CHANGES CONTRIBUTORS README TODO )
 
