@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=ssl? ( dev-libs/openssl ) sys-devel/flex sys-devel/bison pam? ( virtual/pam ) virtual/pkgconfig
+DESCRIPTION=a utility for monitoring and managing daemons or similar programs running on a Unix system
+EAPI=5
+HOMEPAGE=http://mmonit.com/monit/
+IUSE=pam ssl
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux
+LICENSE=GPL-3
+RDEPEND=ssl? ( dev-libs/openssl )
+SLOT=0
+SRC_URI=http://mmonit.com/monit/dist/monit-5.11.tar.gz
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=3b9e04cc68e0f47c42bde6615758745d

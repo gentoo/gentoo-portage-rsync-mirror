@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.15-r1.ebuild,v 1.1 2014/12/02 22:24:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/pybliographer-1.2.15-r1.ebuild,v 1.2 2014/12/25 12:14:02 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -28,7 +28,7 @@ DEPEND="${PYTHON_DEPS}
 	dev-python/libgnome-python:2[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]
 	dev-python/pygtk:2[${PYTHON_USEDEP}]
-	>=dev-python/python-bibtex-1.2.5
+	>=dev-python/python-bibtex-1.2.5[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 

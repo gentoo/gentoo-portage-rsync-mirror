@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-bibtex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.28 2014/05/03 09:15:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-bibtex/ChangeLog,v 1.29 2014/12/25 12:12:18 mgorny Exp $
+
+*python-bibtex-1.2.7-r1 (25 Dec 2014)
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org> +python-bibtex-1.2.7-r1.ebuild:
+  Convert to distutils-r1.
 
 *python-bibtex-1.2.7 (03 May 2014)
 

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/turbojson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/ChangeLog,v 1.15 2014/03/31 21:16:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbojson/ChangeLog,v 1.16 2014/12/25 12:09:45 idella4 Exp $
+
+*turbojson-1.3.2-r1 (25 Dec 2014)
+
+  25 Dec 2014; Ian Delaney <idella4@gentoo.org> +turbojson-1.3.2-r1.ebuild,
+  -turbojson-1.1.4.ebuild, -turbojson-1.3-r1.ebuild, -turbojson-1.3.2.ebuild,
+  -turbojson-1.3.ebuild:
+  revbump; conversion -> distutils-r1, drop test phase due to absence of
+  required dep in portage, rm old
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> turbojson-1.3-r1.ebuild:
   Add support for the new PyPy slotting.
