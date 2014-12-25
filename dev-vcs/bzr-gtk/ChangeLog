@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.21 2014/11/13 13:00:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-gtk/ChangeLog,v 1.22 2014/12/25 00:03:12 mgorny Exp $
+
+*bzr-gtk-0.104.0-r1 (25 Dec 2014)
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org> +bzr-gtk-0.104.0-r1.ebuild:
+  Convert to distutils-r1.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -bzr-gtk-0.100.0.ebuild,
   metadata.xml:
