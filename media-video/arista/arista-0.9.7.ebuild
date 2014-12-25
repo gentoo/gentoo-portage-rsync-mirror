@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.7.ebuild,v 1.2 2014/04/26 08:25:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/arista-0.9.7.ebuild,v 1.3 2014/12/25 19:48:21 mgorny Exp $
 
 EAPI="5"
 
@@ -33,7 +33,7 @@ RDEPEND=">=x11-libs/gtk+-2.16:2
 	dev-python/pycairo[${PYTHON_USEDEP}]
 	dev-python/gconf-python:2
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/python-gudev
+	dev-python/python-gudev[${PYTHON_USEDEP}]
 	gnome-base/librsvg
 	>=media-libs/gstreamer-0.10.22:0.10
 	dev-python/gst-python:0.10[${PYTHON_USEDEP}]
@@ -43,8 +43,8 @@ RDEPEND=">=x11-libs/gtk+-2.16:2
 	media-plugins/gst-plugins-meta:0.10
 	media-plugins/gst-plugins-ffmpeg:0.10
 	x11-themes/gnome-icon-theme
-	nautilus? ( dev-python/nautilus-python )
-	kde? ( dev-python/librsvg-python )
+	nautilus? ( dev-python/nautilus-python[${PYTHON_USEDEP}] )
+	kde? ( dev-python/librsvg-python[${PYTHON_USEDEP}] )
 	faac? ( media-plugins/gst-plugins-faac:0.10 )
 	x264? ( media-plugins/gst-plugins-x264:0.10 )
 	xvid? ( media-plugins/gst-plugins-xvid:0.10 )"
