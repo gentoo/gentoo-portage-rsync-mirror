@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.10.0.ebuild,v 1.6 2014/03/09 11:58:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.14.0.ebuild,v 1.1 2014/12/25 22:48:41 eva Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ IUSE="+bluetooth +cdr cups"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 # Note to developers:
 # This is a wrapper for the core apps tightly integrated with GNOME 3
@@ -21,14 +21,14 @@ RDEPEND="
 	>=gnome-base/gnome-core-libs-${PV}[cups?]
 
 	>=gnome-base/gnome-session-${PV}
-	>=gnome-base/gnome-menus-${PV}:3
+	>=gnome-base/gnome-menus-3.10.1:3
 	>=gnome-base/gnome-settings-daemon-${PV}[cups?]
 	>=gnome-base/gnome-control-center-${PV}[cups?]
 
 	>=app-crypt/gcr-${PV}
 	>=gnome-base/nautilus-${PV}
 	>=gnome-base/gnome-keyring-${PV}
-	>=gnome-extra/evolution-data-server-${PV}
+	>=gnome-extra/evolution-data-server-3.12.9
 
 	>=app-crypt/seahorse-${PV}
 	>=app-editors/gedit-${PV}
@@ -36,19 +36,18 @@ RDEPEND="
 	>=gnome-extra/gnome-contacts-${PV}
 	>=media-gfx/eog-${PV}
 	>=media-video/totem-${PV}
-	>=net-im/empathy-${PV}
+	>=net-im/empathy-3.12.7
 	>=x11-terms/gnome-terminal-${PV}
 
 	>=gnome-extra/gnome-user-docs-${PV}
 	>=gnome-extra/yelp-${PV}
 
 	>=x11-themes/gtk-engines-2.20.2:2
-	>=x11-themes/gnome-icon-theme-${PV}
-	>=x11-themes/gnome-icon-theme-symbolic-${PV}
+	>=x11-themes/adwaita-icon-theme-${PV}
 	>=x11-themes/gnome-themes-standard-${PV}
 
 	bluetooth? ( >=net-wireless/gnome-bluetooth-${PV} )
-	cdr? ( >=app-cdr/brasero-${PV} )
+	cdr? ( >=app-cdr/brasero-3.12.0 )
 
 	!gnome-base/gnome-applets
 "
