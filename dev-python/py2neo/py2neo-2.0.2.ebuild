@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/py2neo-2.0.1.ebuild,v 1.1 2014/12/15 07:38:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/py2neo-2.0.2.ebuild,v 1.1 2014/12/25 08:53:48 idella4 Exp $
 
 EAPI=5
 
@@ -16,3 +16,9 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+python_compile() {
+	# https://github.com/nigelsmall/py2neo/issues/380
+	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	distutils-r1_python_compile
+}
