@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3-r1.ebuild,v 1.1 2013/06/08 19:07:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.3-r1.ebuild,v 1.2 2014/12/25 12:31:37 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="app-text/silvercity
-	>=dev-db/metakit-2.4.9.2[python]
+	>=dev-db/metakit-2.4.9.2[python,${PYTHON_USEDEP}]
 	>=dev-python/cheetah-0.9.15[${PYTHON_USEDEP}]
 	>=dev-python/docutils-0.3[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]

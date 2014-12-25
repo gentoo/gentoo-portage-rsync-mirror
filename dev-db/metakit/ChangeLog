@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/metakit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.62 2012/09/26 13:02:23 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.63 2014/12/25 12:31:34 mgorny Exp $
+
+*metakit-2.4.9.7-r2 (25 Dec 2014)
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org> +metakit-2.4.9.7-r2.ebuild:
+  Convert to python-single-r1.
 
   26 Sep 2012; Michael Palimaka <kensington@gentoo.org>
   -files/metakit-2.4.9.7-LDFLAGS.patch, -metakit-2.4.9.7.ebuild:

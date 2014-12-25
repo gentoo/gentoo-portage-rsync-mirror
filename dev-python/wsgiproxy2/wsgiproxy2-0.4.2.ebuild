@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/wsgiproxy2-0.4.1.ebuild,v 1.9 2014/12/25 12:37:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/wsgiproxy2-0.4.2.ebuild,v 1.1 2014/12/25 12:37:51 patrick Exp $
 
 EAPI=5
 
@@ -25,7 +25,6 @@ RDEPEND="dev-python/urllib3[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( ${RDEPEND}
-		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/webtest[${PYTHON_USEDEP}]
 		dev-python/socketpool[${PYTHON_USEDEP}]
 		dev-python/restkit[$(python_gen_usedep python2_7)] )"
