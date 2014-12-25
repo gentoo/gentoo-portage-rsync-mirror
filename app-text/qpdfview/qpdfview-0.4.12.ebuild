@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.12.ebuild,v 1.2 2014/12/13 15:15:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.12.ebuild,v 1.3 2014/12/25 10:29:17 yngwin Exp $
 
 EAPI=5
 
@@ -29,7 +29,8 @@ RDEPEND="cups? ( net-print/cups )
 		pdf? ( app-text/poppler[qt4] )
 		sqlite? ( dev-qt/qtsql:4[sqlite] )
 		svg? ( dev-qt/qtsvg:4 ) )
-	qt5? ( dev-qt/qtcore:5
+	qt5? ( dev-qt/linguist-tools:5
+		dev-qt/qtcore:5
 		dev-qt/qtgui:5
 		dev-qt/qtprintsupport:5
 		dbus? ( dev-qt/qtdbus:5 )

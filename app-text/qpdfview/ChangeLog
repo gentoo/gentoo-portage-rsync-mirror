@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.59 2014/12/13 15:15:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.60 2014/12/25 10:29:17 yngwin Exp $
+
+  25 Dec 2014; Ben de Groot <yngwin@gentoo.org> qpdfview-0.4.12.ebuild:
+  Add dev-qt/linguist-tools:5 dependency for qt5 lrelease (bug #532962).
 
   13 Dec 2014; Ben de Groot <yngwin@gentoo.org> qpdfview-0.4.12.ebuild:
   With qt5 it needs qtprintsupport to build
