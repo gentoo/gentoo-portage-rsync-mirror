@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.632 2014/12/24 19:37:24 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.633 2014/12/25 18:52:50 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michał Górny <mgorny@gentoo.org> (25 Dec 2014)
+# Requires non-keyworded >=libevent-2.1, bug #533540.
+www-servers/pshs ssl
 
 # Michał Górny <mgorny@gentoo.org> (30 Nov 2014)
 # Not supported at the moment. DirectFB lacks multilib support,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/numba-0.16.0.ebuild,v 1.1 2014/12/19 03:33:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/numba-0.16.0.ebuild,v 1.2 2014/12/25 18:59:55 floppym Exp $
 
 EAPI=5
 
@@ -21,8 +21,8 @@ IUSE="doc examples"
 RDEPEND="
 	dev-python/llvmlite[${PYTHON_USEDEP}]
 	>=dev-python/numpy-1.6[${PYTHON_USEDEP}]
-	dev-python/enum34[${PYTHON_USEDEP}]
-	"
+	$(python_gen_cond_dep 'dev-python/enum34[${PYTHON_USEDEP}]' python{2_7,3_3})
+"
 DEPEND="${RDEPEND}"
 
 python_compile() {
