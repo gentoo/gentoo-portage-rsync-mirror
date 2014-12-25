@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.87 2014/12/21 09:48:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.88 2014/12/25 09:49:21 pinkbyte Exp $
+
+*redis-2.8.17-r1 (25 Dec 2014)
+
+  25 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> -redis-2.8.17.ebuild,
+  +redis-2.8.17-r1.ebuild:
+  Revision bump to proper fix bug #529050
 
 *redis-2.8.19 (21 Dec 2014)
 
