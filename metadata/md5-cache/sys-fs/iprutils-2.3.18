@@ -1,11 +1,12 @@
-DEFINED_PHASES=install postinst
+DEFINED_PHASES=compile install postinst prepare
 DEPEND=>=sys-libs/ncurses-5.4-r5 >=sys-apps/pciutils-2.1.11-r1 >=sys-fs/sysfsutils-1.3.0 virtual/udev
 DESCRIPTION=IBM's tools for support of the ipr SCSI controller
+EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/iprdd/
 KEYWORDS=~ppc ~ppc64
 LICENSE=IBM
 RDEPEND=>=sys-libs/ncurses-5.4-r5 >=sys-apps/pciutils-2.1.11-r1 >=sys-fs/sysfsutils-1.3.0 virtual/udev virtual/logger
 SLOT=0
-SRC_URI=mirror://sourceforge/iprdd/iprutils-2.3.0-src.tgz
+SRC_URI=mirror://sourceforge/iprdd/iprutils-2.3.18-src.tgz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=4730edf1ec4dd8b1819449da2c9acf6d
+_md5_=a728e6e3b05ec768f77f002e71609522

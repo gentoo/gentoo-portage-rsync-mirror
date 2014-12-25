@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/unar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/ChangeLog,v 1.8 2014/08/30 14:33:28 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unar/ChangeLog,v 1.9 2014/12/25 13:02:05 hanno Exp $
+
+*unar-1.8.1 (25 Dec 2014)
+
+  25 Dec 2014; <hanno@gentoo.org> +unar-1.8.1.ebuild:
+  Bump, respect CFLAGS.
 
   30 Aug 2014; Chema Alonso <nimiux@gentoo.org> unar-1.6.ebuild:
   Stable for amd64 wrt bug #513742

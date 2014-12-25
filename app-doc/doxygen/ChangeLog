@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.276 2014/12/25 09:50:21 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.277 2014/12/25 13:21:04 patrick Exp $
+
+  25 Dec 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag from metadata.xml
 
   25 Dec 2014; Matthias Maier <tamiko@gentoo.org> -doxygen-1.5.8-r1.ebuild,
   doxygen-1.8.8.ebuild:
