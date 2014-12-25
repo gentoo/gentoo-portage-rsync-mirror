@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.165 2014/12/24 14:45:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.166 2014/12/25 11:20:42 ago Exp $
+
+  25 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mercurial-3.2.3.ebuild:
+  Stable for ia64, wrt bug #533008
 
   24 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mercurial-3.2.3.ebuild:
   Stable for ppc64, wrt bug #533008

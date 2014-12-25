@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.216 2014/12/24 14:46:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.217 2014/12/25 11:27:50 ago Exp $
+
+  25 Dec 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.19.ebuild,
+  subversion-1.8.11.ebuild:
+  Stable for ia64, wrt bug #532406
 
   24 Dec 2014; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.19.ebuild,
   subversion-1.8.11.ebuild:

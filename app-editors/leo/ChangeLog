@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.33 2014/12/07 03:40:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.34 2014/12/25 11:13:19 mgorny Exp $
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org> leo-5.0.ebuild:
+  Add missing PYTHON_USEDEP.
 
   07 Dec 2014; Ian Delaney <idella4@gentoo.org>
   -files/leo-4.10-fix_syntax_errors.patch,

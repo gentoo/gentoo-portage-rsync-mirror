@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/createrepo/createrepo-0.9.9-r1.ebuild,v 1.1 2014/12/25 00:28:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/createrepo/createrepo-0.10.3.ebuild,v 1.2 2014/12/25 11:12:05 alonbl Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE='xml'
 
-inherit python-single-r1 eutils
+inherit python-single-r1 bash-completion-r1 eutils
 
 DESCRIPTION="Creates a common rpm-metadata repository"
 HOMEPAGE="http://createrepo.baseurl.org/"
@@ -30,17 +30,28 @@ DEPEND="${PYTHON_DEPS}"
 
 REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
-src_prepare() {
-	epatch "${WORKDIR}/${PN}-0.9.9-head.patch"
-	epatch "${FILESDIR}/${PN}-0.9.9-ten-changelog-limit.patch"
-
-	sed -i -e '/^sysconfdir/s:=.*/:=/:' Makefile || die
+pkg_setup() {
+	python-single-r1_pkg_setup
+	python_export PYTHON_SITEDIR
 }
 
-src_compile() { :; }
+src_prepare() {
+	epatch "${FILESDIR}/${P}-ten-changelog-limit.patch"
+	epatch "${FILESDIR}/${P}-pkglist.patch"
+}
+
+src_compile() {
+	:
+}
 
 src_install() {
-	emake install DESTDIR="${D}"
+	emake install \
+		DESTDIR="${ED}" \
+		PYTHON=true \
+		compdir="$(get_bashcompdir)" \
+		PKGDIR="${PYTHON_SITEDIR}/${PN}"
 	dodoc ChangeLog README
 	python_fix_shebang "${ED}"
+	python_optimize
+	python_optimize "${ED}/usr/share/createrepo"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-5.0.ebuild,v 1.2 2014/12/07 03:36:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-5.0.ebuild,v 1.3 2014/12/25 11:13:19 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
-RDEPEND="app-text/silvercity
+RDEPEND="app-text/silvercity[${PYTHON_USEDEP}]
 	dev-python/PyQt4[X,${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
