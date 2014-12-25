@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9639 2014/12/25 14:17:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9640 2014/12/25 15:54:47 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Dec 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Mask sci-physics/camfr.
 
   25 Dec 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add CLX license to MISC-FREE group, bug 533400.

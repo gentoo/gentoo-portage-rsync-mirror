@@ -11,4 +11,4 @@ RDEPEND=X? ( x11-misc/xdg-utils sci-visualization/gnuplot[gd] tk? ( dev-lang/tk 
 SLOT=0
 SRC_URI=mirror://sourceforge/maxima/maxima-5.35.1.tar.gz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=5e2b4d3ef5cb4f330d0815d12921062d
+_md5_=b15e3f58312d603416937ecb970eeae6

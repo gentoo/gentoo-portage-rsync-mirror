@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-gnome
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.75 2013/03/29 23:29:56 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.76 2014/12/25 15:45:44 mgorny Exp $
+
+*xchat-gnome-0.26.1-r3 (25 Dec 2014)
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org> +xchat-gnome-0.26.1-r3.ebuild:
+  Convert to python-single-r1.
 
   29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -xchat-gnome-0.26.1-r1.ebuild:

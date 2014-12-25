@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.115 2014/12/22 10:49:42 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.116 2014/12/25 16:00:06 grozin Exp $
+
+*maxima-5.35.1-r1 (25 Dec 2014)
+
+  25 Dec 2014; Andrey Grozin <grozin@gentoo.org> -maxima-5.35.1.ebuild,
+  +maxima-5.35.1-r1.ebuild:
+  5.35.1 tarball contains a wrong sys-proclaim.lisp; re-generate it (only
+  affects gcl)
 
   22 Dec 2014; Andrey Grozin <grozin@gentoo.org> +files/wish-1.patch:
   Adding a missing patch (#533202)

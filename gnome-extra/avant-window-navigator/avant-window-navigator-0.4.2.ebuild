@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.2.ebuild,v 1.4 2014/08/21 08:25:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.2.ebuild,v 1.5 2014/12/25 15:42:14 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -23,16 +23,16 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-libs/dbus-glib-0.80
 	>=dev-libs/glib-2.16
-	>=dev-python/pygtk-2.12:2
+	>=dev-python/pygtk-2.12:2[${PYTHON_USEDEP}]
 	>=gnome-base/libgtop-2
 	>=x11-libs/gtk+-2.12:2
 	>=x11-libs/libdesktop-agnostic-0.3.9[gconf?]
 	>=x11-libs/libwnck-2.22:1
-	dev-python/dbus-python
-	dev-python/librsvg-python
-	dev-python/pycairo
-	dev-python/pygobject:2
-	dev-python/pyxdg
+	dev-python/dbus-python[${PYTHON_USEDEP}]
+	dev-python/librsvg-python[${PYTHON_USEDEP}]
+	dev-python/pycairo[${PYTHON_USEDEP}]
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/pyxdg[${PYTHON_USEDEP}]
 	dev-vcs/bzr
 	x11-libs/libX11
 	x11-libs/libXcomposite

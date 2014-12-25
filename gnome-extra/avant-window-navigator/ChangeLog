@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/avant-window-navigator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.46 2014/08/21 08:25:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/ChangeLog,v 1.47 2014/12/25 15:42:14 mgorny Exp $
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  avant-window-navigator-0.4.2.ebuild:
+  Add missing PYTHON_USEDEP.
 
   21 Aug 2014; Jeroen Roovers <jer@gentoo.org>
   -avant-window-navigator-0.4.0.ebuild:
