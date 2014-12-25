@@ -1,13 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.14 2012/04/19 07:32:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.15 2014/12/25 19:22:00 mgorny Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
+EAPI=5
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
-inherit distutils git-2
+inherit distutils-r1 git-2
 
 EGIT_REPO_URI="http://git.tiker.net/trees/pyopencl.git"
 
@@ -20,48 +18,32 @@ SLOT="0"
 KEYWORDS=""
 IUSE="examples opengl"
 
-RDEPEND=">=dev-libs/boost-1.48[python]
-	dev-python/decorator
-	dev-python/numpy
-	dev-python/mako
-	=dev-python/pytools-9999
+RDEPEND=">=dev-libs/boost-1.48[python,${PYTHON_USEDEP}]
+	dev-python/decorator[${PYTHON_USEDEP}]
+	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/mako[${PYTHON_USEDEP}]
+	>=dev-python/pytools-9999[${PYTHON_USEDEP}]
 	>=virtual/opencl-0-r1"
 DEPEND="${RDEPEND}"
 
-DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
-
 src_configure()
 {
-	configuration() {
-		local myconf=()
+	local myconf=()
+	if use opengl; then
+		myconf+=(--cl-enable-gl)
+	fi
 
-		if use opengl; then
-			myconf+=(--cl-enable-gl)
-		fi
-
-		"$(PYTHON)" configure.py \
-			--boost-compiler=gcc \
-			--boost-python-libname=boost_python-${PYTHON_ABI}-mt \
-			--no-use-shipped-boost \
-			"${myconf[@]}"
-	}
-	python_execute_function -s configuration
+	"${PYTHON}" configure.py \
+		--boost-compiler=gcc \
+		--boost-python-libname=boost_python-${PYTHON_ABI}-mt \
+		--no-use-shipped-boost \
+		"${myconf[@]}"
 }
 
-src_install()
-{
-	distutils_src_install
-
+python_install_all() {
 	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
+		local EXAMPLES=( examples/. )
+		einfo "Some of the examples provided by this package require dev-python/matplotlib."
 	fi
-}
-
-pkg_postinst()
-{
-	distutils_pkg_postinst
-	if use examples; then
-		elog "Some of the examples provided by this package require dev-python/matplotlib."
-	fi
+	distutils-r1_python_install_all
 }
