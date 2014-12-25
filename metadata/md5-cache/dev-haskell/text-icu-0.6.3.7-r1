@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prerm setup test
-DEPEND=>=dev-haskell/text-0.9.1.0:=[profile?] >=dev-lang/ghc-6.10.4:= dev-libs/icu >=dev-haskell/cabal-1.10 test? ( >=dev-haskell/hunit-1.2 >=dev-haskell/quickcheck-2.4 dev-haskell/random >=dev-haskell/test-framework-0.4 >=dev-haskell/test-framework-hunit-0.2 >=dev-haskell/test-framework-quickcheck2-0.2 ) doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DEPEND=>=dev-haskell/text-0.9.1.0:=[profile?] >=dev-lang/ghc-6.10.4:= dev-libs/icu:= >=dev-haskell/cabal-1.10 test? ( >=dev-haskell/hunit-1.2 >=dev-haskell/quickcheck-2.4 dev-haskell/random >=dev-haskell/test-framework-0.4 >=dev-haskell/test-framework-hunit-0.2 >=dev-haskell/test-framework-quickcheck2-0.2 ) doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
 DESCRIPTION=Bindings to the ICU library
 EAPI=5
 HOMEPAGE=https://github.com/bos/text-icu
 IUSE=doc hscolour profile test
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
-RDEPEND=>=dev-haskell/text-0.9.1.0:=[profile?] >=dev-lang/ghc-6.10.4:= dev-libs/icu
+RDEPEND=>=dev-haskell/text-0.9.1.0:=[profile?] >=dev-lang/ghc-6.10.4:= dev-libs/icu:=
 SLOT=0/0.6.3.7
 SRC_URI=mirror://hackage/packages/archive/text-icu/0.6.3.7/text-icu-0.6.3.7.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	b6154aeaa4dfbbc6d8a66d7f739c22d1	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=059a96218908b6e5d6bc7c6a9bc295f8
+_md5_=6480eaf96f7bdf5fa5286546b823df79

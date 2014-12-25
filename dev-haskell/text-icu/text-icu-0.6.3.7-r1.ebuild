@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/text-icu-0.6.3.7-r1.ebuild,v 1.1 2014/03/04 15:40:43 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/text-icu-0.6.3.7-r1.ebuild,v 1.2 2014/12/25 17:31:32 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE=""
 
 RDEPEND=">=dev-haskell/text-0.9.1.0:=[profile?]
 	>=dev-lang/ghc-6.10.4:=
-	dev-libs/icu
+	dev-libs/icu:=
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.10
