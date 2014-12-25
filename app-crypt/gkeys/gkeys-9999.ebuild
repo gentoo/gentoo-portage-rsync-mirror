@@ -1,6 +1,6 @@
 # Copyright 2014-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-9999.ebuild,v 1.1 2014/12/24 23:31:26 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-9999.ebuild,v 1.2 2014/12/25 20:58:50 dolsen Exp $
 
 EAPI="5"
 
@@ -28,6 +28,7 @@ RDEPEND="${DEPEND}
 	>=app-crypt/gnupg-2.0.0
 	=dev-python/pyGPG-9999[${PYTHON_USEDEP}]
 	=dev-python/ssl-fetch-9999[${PYTHON_USEDEP}]
+	dev-python/snakeoil[${PYTHON_USEDEP}]
 	app-crypt/gentoo-keys
 	"
 

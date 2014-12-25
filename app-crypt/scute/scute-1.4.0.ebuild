@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/scute/scute-1.4.0.ebuild,v 1.2 2011/04/17 00:13:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/scute/scute-1.4.0.ebuild,v 1.3 2014/12/25 20:46:24 floppym Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools eutils libtool multilib
 
 DESCRIPTION="A PKCS #11 module for OpenPGP smartcards"
 HOMEPAGE="http://www.scute.org/"
-SRC_URI="ftp://ftp.gnupg.org/gcrypt/scute/${P}.tar.bz2"
+SRC_URI="mirror://gnupg/scute/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
