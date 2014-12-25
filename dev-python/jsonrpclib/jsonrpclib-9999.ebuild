@@ -1,12 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonrpclib/jsonrpclib-9999.ebuild,v 1.1 2012/04/18 14:54:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonrpclib/jsonrpclib-9999.ebuild,v 1.2 2014/12/25 20:03:43 mgorny Exp $
 
-EAPI="4"
+EAPI="5"
+PYTHON_COMPAT=( python2_6 python2_7 )
 
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-inherit distutils
+inherit distutils-r1
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://github.com/joshmarshall/jsonrpclib.git"
