@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/xdmf2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdmf2/ChangeLog,v 1.1 2014/12/26 14:33:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdmf2/ChangeLog,v 1.2 2014/12/26 15:55:21 jlec Exp $
+
+*xdmf2-1.0_p141226-r1 (26 Dec 2014)
+
+  26 Dec 2014; Justin Lecher <jlec@gentoo.org> -xdmf2-1.0_p141226.ebuild,
+  +xdmf2-1.0_p141226-r1.ebuild, +files/xdmf2-1.0_p141226-module.patch:
+  Install Modules correctly
 
 *xdmf2-1.0_p141226 (26 Dec 2014)
 

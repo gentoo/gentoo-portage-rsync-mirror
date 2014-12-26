@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdmf2/xdmf2-1.0_p141226.ebuild,v 1.1 2014/12/26 14:33:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdmf2/xdmf2-1.0_p141226-r1.ebuild,v 1.1 2014/12/26 15:55:21 jlec Exp $
 
 EAPI=5
 
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	python? ( dev-lang/swig:0 )
 "
+
+PATCHES=( "${FILESDIR}"/${P}-module.patch )
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup && python_export
@@ -54,4 +56,9 @@ src_configure() {
 #		$(cmake-utils_use java XDMF_WRAP_JAVA)
 	)
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	dosym XdmfConfig.cmake /usr/share/cmake/Modules/${PN}Config.cmake
 }
