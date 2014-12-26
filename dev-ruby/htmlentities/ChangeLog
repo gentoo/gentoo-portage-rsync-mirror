@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/htmlentities
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.38 2014/11/11 15:31:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/htmlentities/ChangeLog,v 1.39 2014/12/26 06:42:33 graaff Exp $
+
+*htmlentities-4.3.3 (26 Dec 2014)
+
+  26 Dec 2014; Hans de Graaff <graaff@gentoo.org> +htmlentities-4.3.3.ebuild:
+  Version bump.
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> htmlentities-4.3.1-r1.ebuild,
   htmlentities-4.3.2.ebuild:

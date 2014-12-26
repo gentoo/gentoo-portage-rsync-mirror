@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_krb5
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.68 2013/06/27 20:50:46 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_krb5/ChangeLog,v 1.69 2014/12/26 06:35:06 eras Exp $
+
+*pam_krb5-4.7 (26 Dec 2014)
+
+  26 Dec 2014; Eray Aslan <eras@gentoo.org> +pam_krb5-4.7.ebuild:
+  Version bump
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> pam_krb5-4.6.ebuild:
   keyword ~amd64-fbsd thanks to henning.f@swipnet.se, bug #473368
