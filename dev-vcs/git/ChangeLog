@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.309 2014/12/26 09:29:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.310 2014/12/26 13:54:35 polynomial-c Exp $
+
+  26 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -git-1.8.3.2-r1.ebuild,
+  -git-1.8.5.5.ebuild, -git-2.0.4.ebuild, -files/git-1.8.2-optional-cvs.patch,
+  -files/git-daemon.initd:
+  Removed vulnerable versions.
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> git-1.8.5.6.ebuild,
   git-1.9.5.ebuild, git-2.0.5.ebuild:

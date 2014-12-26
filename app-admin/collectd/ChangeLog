@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.66 2014/11/17 23:29:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.67 2014/12/26 13:43:04 mgorny Exp $
+
+*collectd-5.4.1-r1 (26 Dec 2014)
+
+  26 Dec 2014; Michał Górny <mgorny@gentoo.org> +collectd-5.4.1-r1.ebuild:
+  Convert to python-single-r1.
 
   17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> collectd-5.4.0.ebuild,
   collectd-5.4.1.ebuild:

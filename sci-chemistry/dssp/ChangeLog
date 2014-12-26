@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/dssp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/ChangeLog,v 1.15 2014/12/26 13:16:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/dssp/ChangeLog,v 1.16 2014/12/26 13:48:27 jlec Exp $
+
+  26 Dec 2014; Justin Lecher <jlec@gentoo.org> -dssp-0.70831.ebuild,
+  -dssp-2.0.4.ebuild, -dssp-2.1.0.ebuild:
+  Drop old, fixes #525622
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> dssp-2.2.1-r1.ebuild:
   Stable for x86, wrt bug #525624
