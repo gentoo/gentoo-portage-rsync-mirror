@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.136 2014/11/24 02:50:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.137 2014/12/26 16:12:09 tetromino Exp $
+
+*emul-linux-x86-gtklibs-20140508-r6 (26 Dec 2014)
+
+  26 Dec 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -emul-linux-x86-gtklibs-20140508-r5.ebuild,
+  +emul-linux-x86-gtklibs-20140508-r6.ebuild, -files/remove-native-20140508-r5,
+  +files/remove-native-20140508-r6:
+  Add multilib gtk-engines-xfce:3
 
 *emul-linux-x86-gtklibs-20140508-r5 (24 Nov 2014)
 

@@ -220,3 +220,4 @@ usr/lib32/libnotify.so
 usr/lib32/libnotify.so.4
 usr/lib32/libnotify.so.4.0.0
 usr/lib32/pkgconfig/libnotify.pc
+usr/lib32/gtk-3.0/3.0.0/theming-engines/libxfce.so

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140508-r5.ebuild,v 1.1 2014/11/24 02:50:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20140508-r6.ebuild,v 1.1 2014/12/26 16:12:09 tetromino Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -20,6 +20,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		!>=app-accessibility/at-spi2-atk-2.12.1-r1[abi_x86_32(-)]
 		!>=x11-libs/gtk+-3.12.2-r1[abi_x86_32(-)]
 		!>=x11-libs/libnotify-0.7.6-r1[abi_x86_32(-)]
+		!>=x11-themes/gtk-engines-xfce-3.0.1-r301:3[abi_x86_32(-)]
 	)
 	abi_x86_32? (
 		>=x11-libs/pixman-0.32.4[abi_x86_32(-)]
@@ -39,6 +40,7 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=app-accessibility/at-spi2-atk-2.12.1-r1[abi_x86_32(-)]
 		>=x11-libs/gtk+-3.12.2-r1[abi_x86_32(-)]
 		>=x11-libs/libnotify-0.7.6-r1[abi_x86_32(-)]
+		>=x11-themes/gtk-engines-xfce-3.0.1-r301:3[abi_x86_32(-)]
 	)"
 # RDEPEND on opengl stuff needed due cairo, bug #410213
 

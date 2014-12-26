@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.168 2014/12/23 16:14:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.169 2014/12/26 16:13:10 tetromino Exp $
+
+  26 Dec 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk-engines-xfce-3.0.1-r301.ebuild:
+  Fix file collision with emul-linux-x86-gtklibs
 
 *gtk-engines-xfce-3.0.1-r301 (23 Dec 2014)
 
