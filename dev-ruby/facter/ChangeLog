@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.108 2014/11/18 14:04:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.110 2014/12/26 09:56:55 graaff Exp $
+
+  26 Dec 2014; Hans de Graaff <graaff@gentoo.org> facter-2.0.2.ebuild,
+  facter-2.1.0.ebuild, facter-2.2.0.ebuild, facter-2.3.0.ebuild:
+  Add missing keywords for ppc and ppc64. It is not clear why these were
+  missing and all dependencies are now satisfied.
+
+  26 Dec 2014; Hans de Graaff <graaff@gentoo.org> -facter-1.7.1-r1.ebuild:
+  Remove vulnerable version for security bug 514476.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/facter-1.6.16-ifconfig-path.patch,
