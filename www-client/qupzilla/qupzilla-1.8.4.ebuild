@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.4.ebuild,v 1.1 2014/11/08 08:54:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.4.ebuild,v 1.2 2014/12/26 19:15:39 ago Exp $
 
 EAPI=5
 PLOCALES="ar_SA bg_BG ca_ES cs_CZ de_DE el_GR es_ES es_MX es_VE eu_ES fa_IR fi_FI fr_FR gl_ES he_IL hr_HR hu_HU id_ID it_IT ja_JP ka_GE lg lv_LV nl_NL nqo pl_PL pt_BR pt_PT ro_RO ru_RU sk_SK sr sr@ijekavian sr@ijekavianlatin sr@latin sv_SE tr_TR uk_UA uz@Latn zh_CN zh_TW"
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/QupZilla/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="dbus debug gnome-keyring kde nonblockdialogs +qt4 qt5"
 REQUIRED_USE="^^ ( qt4 qt5 )"
 

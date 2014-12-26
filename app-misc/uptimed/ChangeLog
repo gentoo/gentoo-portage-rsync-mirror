@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.103 2014/12/25 20:05:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.104 2014/12/26 19:15:27 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.18.ebuild:
+  Stable for amd64, wrt bug #533278
 
   25 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> files/uptimed.init:
   Make checkpath quiet in init script.
