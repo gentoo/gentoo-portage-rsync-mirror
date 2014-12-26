@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost-numpy/boost-numpy-0_pre20131206.ebuild,v 1.2 2014/05/01 10:33:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost-numpy/boost-numpy-0_pre20131206.ebuild,v 1.3 2014/12/26 12:06:12 patrick Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="doc examples"
 KEYWORDS="~amd64"
 
 CDEPEND="dev-python/numpy
-	dev-libs/boost"
+	dev-libs/boost[python]"
 DEPEND="${CDEPEND}"
 RDEPEND="${CDEPEND}"
 

@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-python/numpy dev-libs/boost sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+DEPEND=dev-python/numpy dev-libs/boost[python] sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
 DESCRIPTION=Boost.Python interface for NumPy
 EAPI=5
 HOMEPAGE=https://github.com/ndarray/Boost.NumPy
 IUSE=doc examples
 LICENSE=Boost-1.0
-RDEPEND=dev-python/numpy dev-libs/boost
+RDEPEND=dev-python/numpy dev-libs/boost[python]
 SLOT=0
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=03108617bb74123c023cfe5551e9dbbc
+_md5_=129e9a8852ab7efd929353e0c654c5cb
