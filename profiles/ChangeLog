@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9640 2014/12/25 15:54:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9642 2014/12/25 23:22:04 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Unmask libmediaart-0.7 and friends.
+
+  25 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Gnome 3.14 is complete in tree, remove mask.
 
   25 Dec 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
   Mask sci-physics/camfr.

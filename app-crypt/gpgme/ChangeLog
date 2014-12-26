@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.224 2014/12/24 23:46:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.225 2014/12/25 23:25:19 alonbl Exp $
+
+  25 Dec 2014; Alon Bar-Lev <alonbl@gentoo.org> gpgme-1.5.2.ebuild:
+  Revert stable, bug#529622
 
   24 Dec 2014; Chema Alonso <nimiux@gentoo.org> gpgme-1.5.2.ebuild:
   Stable for amd64 wrt bug #533350

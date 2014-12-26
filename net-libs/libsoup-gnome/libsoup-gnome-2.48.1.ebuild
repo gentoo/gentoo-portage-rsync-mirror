@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.48.1.ebuild,v 1.1 2014/12/23 23:04:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/libsoup-gnome-2.48.1.ebuild,v 1.2 2014/12/25 23:04:27 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -37,7 +37,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# Use lib present on the system
-	epatch "${FILESDIR}"/${PN}-2.46.0-system-lib.patch
+	epatch "${FILESDIR}"/${PN}-2.48.0-system-lib.patch
 	eautoreconf
 	gnome2_src_prepare
 }

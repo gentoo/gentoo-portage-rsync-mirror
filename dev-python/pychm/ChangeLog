@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pychm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/ChangeLog,v 1.12 2010/12/24 23:00:12 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychm/ChangeLog,v 1.13 2014/12/25 23:26:12 mgorny Exp $
+
+*pychm-0.8.4-r1 (25 Dec 2014)
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org> +pychm-0.8.4-r1.ebuild:
+  Convert to distutils-r1.
 
   24 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pychm-0.8.4.ebuild:
@@ -46,4 +51,3 @@
 
   14 Feb 2005; Lukasz Strzygowski <lucass@gentoo.org> +pychm-0.8.2.ebuild:
   Initial commit. Closing bug #40114.
-

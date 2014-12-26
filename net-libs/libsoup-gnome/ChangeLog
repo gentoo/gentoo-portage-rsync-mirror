@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.117 2014/12/23 23:04:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.118 2014/12/25 23:04:27 eva Exp $
+
+  25 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  libsoup-gnome-2.48.1.ebuild, files/libsoup-gnome-2.46.0-system-lib.patch,
+  +files/libsoup-gnome-2.48.0-system-lib.patch:
+  Fix unintended patch change for 2.46, bug #533544.
 
 *libsoup-gnome-2.48.1 (23 Dec 2014)
 

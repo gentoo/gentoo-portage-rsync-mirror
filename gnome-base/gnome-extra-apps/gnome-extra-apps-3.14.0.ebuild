@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.12.0.ebuild,v 1.4 2014/07/23 15:16:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.14.0.ebuild,v 1.1 2014/12/25 23:09:38 eva Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ IUSE="+games +shotwell +tracker"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 
 # Note to developers:
 # This is a wrapper for the extra apps integrated with GNOME 3
@@ -22,7 +22,7 @@ RDEPEND="
 
 	>=app-admin/gnome-system-log-3.9.90
 	>=app-arch/file-roller-${PV}
-	>=app-dicts/gnome-dictionary-3.10
+	>=app-dicts/gnome-dictionary-${PV}
 	>=gnome-extra/gconf-editor-3
 	>=gnome-extra/gnome-calculator-${PV}
 	>=gnome-extra/gnome-power-manager-${PV}
@@ -30,17 +30,18 @@ RDEPEND="
 	>=gnome-extra/gnome-system-monitor-${PV}
 	>=gnome-extra/gnome-tweak-tool-${PV}
 	>=gnome-extra/gucharmap-${PV}:2.90
-	>=gnome-extra/nautilus-sendto-3.8
-	>=gnome-extra/sushi-${PV}
-	>=mail-client/evolution-${PV}
+	>=gnome-extra/nautilus-sendto-3.8.2
+	>=gnome-extra/sushi-3.12.0
+	>=mail-client/evolution-3.12.9
 	>=media-gfx/gnome-font-viewer-${PV}
 	>=media-gfx/gnome-screenshot-${PV}
-	>=media-sound/sound-juicer-3.11.90
+	>=media-sound/sound-juicer-${PV}
 	>=media-video/cheese-${PV}
 	>=net-analyzer/gnome-nettool-3.8
 	>=net-misc/vinagre-${PV}
 	>=net-misc/vino-${PV}
 	>=sys-apps/baobab-${PV}
+	>=sys-apps/gnome-disk-utility-${PV}
 	>=www-client/epiphany-${PV}
 
 	games? (
@@ -60,13 +61,13 @@ RDEPEND="
 		>=games-puzzle/lightsoff-${PV}
 		>=games-puzzle/quadrapassel-${PV}
 		>=games-puzzle/swell-foop-${PV} )
-	shotwell? ( >=media-gfx/shotwell-0.15 )
+	shotwell? ( >=media-gfx/shotwell-0.20 )
 	tracker? (
-		>=app-misc/tracker-1
+		>=app-misc/tracker-1.2
 		>=gnome-extra/gnome-documents-${PV} )
 
-	amd64? ( >=gnome-extra/gnome-user-share-3.10.2 )
-	x86? ( >=gnome-extra/gnome-user-share-3.10.2 )
+	amd64? ( >=gnome-extra/gnome-user-share-${PV} )
+	x86? ( >=gnome-extra/gnome-user-share-${PV} )
 "
 # Note: bug-buddy is broken with GNOME 3
 # Note: aisleriot-3.4 is masked for guile-2
