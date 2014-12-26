@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchelf/patchelf-0.8.ebuild,v 1.1 2014/05/01 13:44:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchelf/patchelf-0.8.ebuild,v 1.2 2014/12/26 19:38:54 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://nixos.org/patchelf.html"
 SRC_URI="http://releases.nixos.org/${PN}/${P}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-3"
 IUSE=""
 

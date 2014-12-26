@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchelf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchelf/ChangeLog,v 1.9 2014/05/01 13:44:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchelf/ChangeLog,v 1.10 2014/12/26 19:38:54 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> patchelf-0.8.ebuild:
+  Stable for amd64, wrt bug #532850
 
 *patchelf-0.8 (01 May 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.152 2014/12/20 08:25:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.153 2014/12/26 19:58:55 floppym Exp $
 
 EAPI=5
 
@@ -277,6 +277,8 @@ multilib_src_configure() {
 
 	if ! multilib_is_native_abi; then
 		myeconfargs+=(
+			MOUNT_{CFLAGS,LIBS}=' '
+
 			ac_cv_search_cap_init=
 			ac_cv_header_sys_capability_h=yes
 		)

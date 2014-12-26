@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.53 2014/12/17 02:38:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.54 2014/12/26 19:39:05 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> lammps-20140905.ebuild:
+  Stable for amd64, wrt bug #532662
 
   17 Dec 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/mod_bw-0.9.2-r1.ebuild,v 1.2 2014/08/10 20:14:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/mod_bw-0.9.2-r1.ebuild,v 1.3 2014/12/26 19:38:49 ago Exp $
 
 EAPI=5
 inherit apache-module eutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ivn.cl/apache/"
 
 SRC_URI="http://ivn.cl/files/source/${P/9./9}.tgz"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""

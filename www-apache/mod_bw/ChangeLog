@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_bw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/ChangeLog,v 1.15 2014/08/10 20:14:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/ChangeLog,v 1.16 2014/12/26 19:38:49 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mod_bw-0.9.2-r1.ebuild:
+  Stable for amd64, wrt bug #532810
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mod_bw-0.9.2-r1.ebuild,
   mod_bw-0.9.2.ebuild:
