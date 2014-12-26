@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdmf2/xdmf2-1.0_p141226-r1.ebuild,v 1.1 2014/12/26 15:55:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xdmf2/xdmf2-1.0_p141226-r1.ebuild,v 1.2 2014/12/26 18:11:59 jlec Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://xdmf.org/index.php/Main_Page"
 SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 SLOT="0"
-LICENSE="paraview"
+LICENSE="VTK"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc python test"
 

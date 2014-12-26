@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0.ebuild,v 1.1 2014/12/26 12:19:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0.ebuild,v 1.2 2014/12/26 18:15:01 jlec Exp $
 
 EAPI=5
 
@@ -29,11 +29,12 @@ LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="
-	aqua boost cg doc examples imaging ffmpeg gdal java json kaapi mpi mysql
-	odbc offscreen postgres python qt4 rendering smp tbb test theora tk tcl
-	video_cards_nvidia views web R +X"
+	all-modules aqua boost cg doc examples imaging ffmpeg gdal java json kaapi mpi
+	mysql odbc offscreen postgres python qt4 rendering smp tbb test theora tk tcl
+	video_cards_nvidia views web xdmf2 R +X"
 
 REQUIRED_USE="
+	all-modules? ( python xdmf2 )
 	java? ( qt4 )
 	python? ( ${PYTHON_REQUIRED_USE} )
 	tcl? ( rendering )
@@ -73,7 +74,9 @@ RDEPEND="
 	gdal? ( sci-libs/gdal )
 	java? ( >=virtual/jre-1.5 )
 	kaapi? ( <sci-libs/xkaapi-3 )
-	mpi? ( virtual/mpi[cxx,romio] )
+	mpi? (
+		virtual/mpi[cxx,romio]
+		python? ( dev-python/mpi4py[${PYTHON_USEDEP}] )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	offscreen? ( media-libs/mesa[osmesa] )
@@ -81,6 +84,7 @@ RDEPEND="
 	python? (
 		${PYTHON_DEPS}
 		dev-python/sip[${PYTHON_USEDEP}]
+		)
 	)
 	qt4? (
 		dev-qt/designer:4
@@ -103,6 +107,7 @@ RDEPEND="
 			dev-python/zope-interface[${PYTHON_USEDEP}]
 			)
 		)
+	xdmf2? ( sci-libs/xdmf2 )
 	R? ( dev-lang/R )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
@@ -136,9 +141,11 @@ src_prepare() {
 		-i CMake/FindLIBPROJ4.cmake || die
 
 	local x
-	# missing: alglib exodusII freerange ftgl jsoncpp libproj4 mrmpi verdict xdmf2
-	for x in expat freetype gl2ps hdf5 jpeg libxml2 netcdf oggtheora png tiff zlib; do
+	# missing: VPIC alglib exodusII freerange ftgl libproj4 mrmpi sqlite utf8 verdict xmdf2 xmdf3
+	for x in expat freetype gl2ps hdf5 jpeg jsoncpp libxml2 netcdf oggtheora png tiff zlib; do
+		ebegin "Dropping bundled ${x}"
 		rm -r ThirdParty/${x}/vtk${x} || die
+		eend $?
 	done
 	rm -r \
 		ThirdParty/AutobahnPython/autobahn \
@@ -186,7 +193,8 @@ src_configure() {
 		-DVTK_USE_SYSTEM_PNG=ON
 		-DVTK_USE_SYSTEM_TIFF=ON
 		-DVTK_USE_SYSTEM_TWISTED=ON
-#		-DVTK_USE_SYSTEM_XDMF2=ON
+		-DVTK_USE_SYSTEM_XDMF2=OFF
+		-DVTK_USE_SYSTEM_XDMF3=OFF
 		-DVTK_USE_SYSTEM_ZLIB=ON
 		-DVTK_USE_SYSTEM_ZOPE=ON
 		-DVTK_USE_SYSTEM_LIBRARIES=ON
@@ -205,6 +213,7 @@ src_configure() {
 		$(cmake-utils_use_build doc DOCUMENTATION)
 		$(cmake-utils_use_build examples EXAMPLES)
 		$(cmake-utils_use_build test VTK_BUILD_ALL_MODULES_FOR_TESTS)
+		$(cmake-utils_use all-modules VTK_BUILD_ALL_MODULES)
 		$(cmake-utils_use doc DOCUMENTATION_HTML_HELP)
 		$(cmake-utils_use imaging VTK_Group_Imaging)
 		$(cmake-utils_use mpi VTK_Group_MPI)
@@ -218,7 +227,6 @@ src_configure() {
 		$(cmake-utils_use python VTK_WRAP_PYTHON)
 		$(cmake-utils_use python VTK_WRAP_PYTHON_SIP)
 		$(cmake-utils_use tcl VTK_WRAP_TCL)
-#		-DVTK_BUILD_ALL_MODULES=ON
 	)
 
 	mycmakeargs+=(
@@ -237,8 +245,9 @@ src_configure() {
 	# IO
 	mycmakeargs+=(
 		$(cmake-utils_use ffmpeg VTK_USE_FFMPEG_ENCODER)
-		$(cmake-utils_use gdal vtkIOGDAL)
-		$(cmake-utils_use json vtkIOGeoJSON)
+		$(cmake-utils_use gdal Module_vtkIOGDAL)
+		$(cmake-utils_use json Module_vtkIOGeoJSON)
+		$(cmake-utils_use xdmf2 Module_vtkIOXdmf2)
 	)
 	# Apple stuff, does it really work?
 	mycmakeargs+=( $(cmake-utils_use aqua VTK_USE_COCOA) )

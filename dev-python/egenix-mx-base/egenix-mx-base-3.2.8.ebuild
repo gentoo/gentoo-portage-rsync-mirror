@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.8.ebuild,v 1.1 2014/07/22 03:17:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.8.ebuild,v 1.2 2014/12/26 18:06:10 maekke Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.egenix.com/python/${P}.tar.gz"
 
 LICENSE="eGenixPublic-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 # Correct broken tests
 PATCHES=( "${FILESDIR}"/${PN}-3.2.6-tests.patch )

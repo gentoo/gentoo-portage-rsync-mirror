@@ -4,11 +4,11 @@ DESCRIPTION=GNU Midnight Commander is a text based file manager
 EAPI=5
 HOMEPAGE=http://www.midnight-commander.org
 IUSE=+edit gpm mclib nls samba sftp +slang spell test X +xdg
-KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris
+KEYWORDS=~alpha ~amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris
 LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.8:2 gpm? ( sys-libs/gpm ) kernel_linux? ( sys-fs/e2fsprogs ) samba? ( net-fs/samba ) sftp? ( net-libs/libssh2 ) slang? ( >=sys-libs/slang-2 ) !slang? ( sys-libs/ncurses ) spell? ( app-text/aspell ) X? ( x11-libs/libX11 x11-libs/libICE x11-libs/libXau x11-libs/libXdmcp x11-libs/libSM )
 REQUIRED_USE=spell? ( edit )
 SLOT=0
 SRC_URI=http://www.midnight-commander.org/downloads/mc-4.8.13.tar.xz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=75b4abdab3c9ee764a64c756d531ebaa
+_md5_=5e684d3edc60699f8e0f2bf6a1714620

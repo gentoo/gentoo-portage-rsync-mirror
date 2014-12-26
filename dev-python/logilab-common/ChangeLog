@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.146 2014/12/11 12:01:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.147 2014/12/26 18:06:40 maekke Exp $
+
+  26 Dec 2014; Markus Meier <maekke@gentoo.org> logilab-common-0.62.1.ebuild:
+  arm stable, bug #532490
 
   11 Dec 2014; Ian Delaney <idella4@gentoo.org> logilab-common-0.61.0.ebuild,
   logilab-common-0.62.1.ebuild:

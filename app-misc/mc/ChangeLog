@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.314 2014/12/17 07:11:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.315 2014/12/26 18:04:17 maekke Exp $
+
+  26 Dec 2014; Markus Meier <maekke@gentoo.org> mc-4.8.13.ebuild:
+  arm stable, bug #532424
 
   17 Dec 2014; Jeroen Roovers <jer@gentoo.org> mc-4.8.13.ebuild:
   Stable for HPPA (bug #532424).

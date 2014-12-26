@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.56 2014/11/20 01:51:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.57 2014/12/26 18:24:59 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org> package.use.mask:
+  Mask media-libs/opencv consumers due to missing keyword.
 
   20 Nov 2014; Davide Pesavento <pesa@gentoo.org> +package.mask:
   Move Qt 4.8.6 mask from global package.mask to arch profiles.

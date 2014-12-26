@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/cfv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.39 2014/03/11 19:57:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cfv/ChangeLog,v 1.41 2014/12/26 18:11:21 mgorny Exp $
+
+  26 Dec 2014; Michał Górny <mgorny@gentoo.org> cfv-1.18.3-r1.ebuild:
+  Add missing PYTHON_DEPS and PYTHON_REQUIRED_USE references.
+
+*cfv-1.18.3-r1 (26 Dec 2014)
+
+  26 Dec 2014; Michał Górny <mgorny@gentoo.org> +cfv-1.18.3-r1.ebuild:
+  Convert to python-single-r1.
 
   11 Mar 2014; Pacho Ramos <pacho@gentoo.org> -cfv-1.18.1.ebuild, metadata.xml:
   Cleanup due #53266

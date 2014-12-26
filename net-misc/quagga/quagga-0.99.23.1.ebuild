@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.23.1.ebuild,v 1.2 2014/12/11 10:21:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.23.1.ebuild,v 1.3 2014/12/26 18:03:15 maekke Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://nongnu/${PN}/${P}.tar.xz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ~ppc ~s390 ~sparc ~x86"
 IUSE="bgpclassless caps doc elibc_glibc ipv6 multipath ospfapi pam +readline snmp tcp-zebra"
 
 COMMON_DEPEND="

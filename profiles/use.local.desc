@@ -6485,6 +6485,7 @@ sci-libs/taucs:cilk - Enable multithreading using dev-lang/cilk)
 sci-libs/umfpack:cholmod - Use sci-libs/cholmod for matrix ordering
 sci-libs/votca-tools:system-boost - Use system boost (dev-libs/boost) instead of bundled one
 sci-libs/vtk:R - Enable support for dev-lang/R
+sci-libs/vtk:all-modules - Build all modules
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:gdal - Support for gdal formated data
@@ -6496,6 +6497,7 @@ sci-libs/vtk:rendering - Building Redering modules
 sci-libs/vtk:tbb - Use dev-cpp/tbb to handle smp support
 sci-libs/vtk:views - Building Views modules
 sci-libs/vtk:web - Install web component
+sci-libs/vtk:xdmf2 - Support for xdmf2 formated data
 sci-libs/xkaapi:blas - Kaapi BLAS tasks for PLASMA
 sci-libs/xkaapi:gpu - Build library for gpu threading
 sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
