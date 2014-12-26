@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.12.ebuild,v 1.1 2014/08/19 18:36:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.12.ebuild,v 1.2 2014/12/26 15:07:22 kensington Exp $
 
 EAPI=5
 
@@ -45,6 +45,7 @@ DEPEND="${RDEPEND}
 	|| ( media-gfx/imagemagick[png,svg] media-gfx/graphicsmagick[imagemagick,png,svg] )
 "
 
+PATCHES=( "${FILESDIR}/${P}-fr.patch" )
 DOCS=( AUTHORS CHANGES LICENSES README TODO )
 
 src_configure() {
