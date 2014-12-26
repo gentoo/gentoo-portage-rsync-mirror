@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.4.1.ebuild,v 1.3 2014/11/18 10:02:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.4.1.ebuild,v 1.4 2014/12/26 22:59:02 dilfridge Exp $
 
 EAPI=5
 
@@ -246,6 +246,7 @@ PATCHES=(
 
 	# from master branch
 	"${FILESDIR}/${PN}-4.3.1.2-implement--with-system-coinmp.patch"
+	"${FILESDIR}/${PN}-4.3.4.1-boost-1.56.0.patch"                  # bug 522178
 )
 
 REQUIRED_USE="

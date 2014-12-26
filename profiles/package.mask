@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16246 2014/12/26 11:03:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16247 2014/12/26 22:40:46 pesa Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -305,27 +305,6 @@ www-apps/trac-downloads
 # Eray Aslan <eras@gentoo.org> (11 Nov 2014)
 # Mask beta releases
 =net-proxy/squid-3.5*
-
-# Ben de Groot <yngwin@gentoo.org> (7 Nov 2014)
-# Unmaintained, no longer supported, and starting to throw compilation
-# errors (bug #513906, bug #528372). Masked for removal in 30 days.
-# Update to lxqt-base/* packages.
-razorqt-base/razorqt-appswitcher
-razorqt-base/razorqt-autosuspend
-razorqt-base/razorqt-config
-razorqt-base/razorqt-data
-razorqt-base/razorqt-desktop
-razorqt-base/razorqt-kbshortcuts
-razorqt-base/razorqt-libs
-razorqt-base/razorqt-lightdm-greeter
-razorqt-base/razorqt-meta
-razorqt-base/razorqt-notifications
-razorqt-base/razorqt-openssh-askpass
-razorqt-base/razorqt-panel
-razorqt-base/razorqt-policykit
-razorqt-base/razorqt-power
-razorqt-base/razorqt-runner
-razorqt-base/razorqt-session
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Nov 2014)
 # ConsoleKit2 from github by Eric Koegel, auth of xfce4-power-manager

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.594 2014/12/21 21:57:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.595 2014/12/26 22:59:02 dilfridge Exp $
+
+  26 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.3.4.1.ebuild, libreoffice-4.3.9999.ebuild,
+  +files/libreoffice-4.3.4.1-boost-1.56.0.patch:
+  Fix build with Boost 1.56, bug 522178
 
   21 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-4.2.6.3.ebuild, libreoffice-4.2.9999.ebuild:
