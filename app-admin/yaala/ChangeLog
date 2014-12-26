@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/yaala
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.22 2014/11/14 01:15:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.23 2014/12/26 12:50:51 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org> -yaala-0.6.3.ebuild,
+  -yaala-0.7.2.ebuild, -yaala-0.7.3.ebuild:
+  Remove old.
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Maintainer needed.

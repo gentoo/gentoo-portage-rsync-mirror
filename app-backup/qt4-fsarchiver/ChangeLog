@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/qt4-fsarchiver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/qt4-fsarchiver/ChangeLog,v 1.7 2014/11/25 22:38:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/qt4-fsarchiver/ChangeLog,v 1.8 2014/12/26 12:52:56 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  -qt4-fsarchiver-0.6.19.4.ebuild, -qt4-fsarchiver-0.6.19.5.ebuild:
+  Remove old.
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
