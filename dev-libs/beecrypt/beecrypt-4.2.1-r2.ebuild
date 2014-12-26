@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1-r2.ebuild,v 1.1 2014/12/26 18:57:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1-r2.ebuild,v 1.2 2014/12/26 20:45:10 mgorny Exp $
 
 EAPI=5
 
@@ -77,7 +77,7 @@ src_test() {
 
 src_install() {
 	default
-	rm -f "${D%/}$(python_get_sitedir)"/_bc.*a
+	use python && rm -f "${D%/}$(python_get_sitedir)"/_bc.*a
 
 	use static-libs || find "${ED}" -name '*.la' -delete
 
