@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.39 2014/08/10 02:14:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.40 2014/12/26 21:52:59 mgorny Exp $
+
+*gtkcdlabel-1.14-r1 (26 Dec 2014)
+
+  26 Dec 2014; Michał Górny <mgorny@gentoo.org> +gtkcdlabel-1.14-r1.ebuild:
+  Convert to python-single-r1.
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> gtkcdlabel-1.12.ebuild,
   gtkcdlabel-1.14.ebuild:
