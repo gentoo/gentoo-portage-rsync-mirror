@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rlog
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.20 2011/11/22 17:52:22 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.21 2014/12/26 17:51:46 maekke Exp $
+
+  26 Dec 2014; Markus Meier <maekke@gentoo.org> rlog-1.4.ebuild:
+  add ~arm, bug #526604
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #82110

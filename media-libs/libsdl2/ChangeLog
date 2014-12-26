@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.28 2014/11/03 09:37:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.29 2014/12/26 17:51:17 maekke Exp $
+
+  26 Dec 2014; Markus Meier <maekke@gentoo.org> libsdl2-2.0.3-r200.ebuild:
+  add ~arm, bug #508226
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> libsdl2-2.0.3-r200.ebuild:
   Stable for x86, wrt bug #522272

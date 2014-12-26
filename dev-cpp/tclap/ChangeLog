@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tclap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.18 2014/08/10 19:55:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.19 2014/12/26 17:53:50 maekke Exp $
+
+  26 Dec 2014; Markus Meier <maekke@gentoo.org> tclap-1.2.1.ebuild:
+  add ~arm, bug #529028
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tclap-1.2.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

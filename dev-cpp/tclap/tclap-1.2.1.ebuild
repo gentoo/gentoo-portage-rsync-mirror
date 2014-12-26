@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/tclap-1.2.1.ebuild,v 1.6 2014/08/10 19:55:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/tclap-1.2.1.ebuild,v 1.7 2014/12/26 17:53:50 maekke Exp $
 
 EAPI="5"
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux"
+KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"

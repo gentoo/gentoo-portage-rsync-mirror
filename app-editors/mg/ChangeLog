@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.91 2014/12/26 13:21:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.92 2014/12/26 18:00:33 maekke Exp $
+
+  26 Dec 2014; Markus Meier <maekke@gentoo.org> mg-20141007.ebuild:
+  arm stable, bug #531810
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mg-20141007.ebuild:
   Stable for x86, wrt bug #531810
