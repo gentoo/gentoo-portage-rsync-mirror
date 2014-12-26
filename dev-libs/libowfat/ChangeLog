@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libowfat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.39 2014/08/10 20:37:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.40 2014/12/26 09:27:02 patrick Exp $
+
+  26 Dec 2014; Patrick Lauer <patrick@gentoo.org> -libowfat-0.24.ebuild,
+  -libowfat-0.28-r1.ebuild, -libowfat-0.28.ebuild:
+  Remove old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libowfat-0.24.ebuild,
   libowfat-0.28-r1.ebuild, libowfat-0.28.ebuild, libowfat-0.29.ebuild:

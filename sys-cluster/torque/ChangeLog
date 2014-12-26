@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.182 2014/12/25 11:27:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.183 2014/12/26 09:28:35 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> torque-2.5.13.ebuild,
+  torque-4.1.7.ebuild:
+  Stable for sparc, wrt bug #491270
 
   25 Dec 2014; Agostino Sarubbo <ago@gentoo.org> torque-2.5.13.ebuild,
   torque-4.1.7.ebuild:

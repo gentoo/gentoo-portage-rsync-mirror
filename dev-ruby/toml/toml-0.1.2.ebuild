@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/toml-0.1.2.ebuild,v 1.1 2014/10/21 13:44:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/toml/toml-0.1.2.ebuild,v 1.2 2014/12/26 09:21:46 graaff Exp $
 
 EAPI=5
 
@@ -31,6 +31,9 @@ all_ruby_prepare() {
 	sed -i -e "s/, '~> 1.7.8'//" Gemfile || die
 	sed -i -e "/simplecov/d" -e "/[Bb]undle/d" Rakefile Gemfile || die
 	sed -i -e "/bundler/d" -e "1igem 'minitest', '~>5'" -e "s/MiniTest/Minitest/" test/test_*.rb || die
+
+	# Avoid dependency on git.
+	sed -i -e '/files/ s:^:#:' ${RUBY_FAKEGEM_GEMSPEC} || die
 }
 
 each_ruby_test() {

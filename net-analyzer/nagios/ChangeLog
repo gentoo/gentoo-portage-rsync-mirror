@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.119 2014/12/16 03:36:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.120 2014/12/26 09:23:17 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> nagios-3.5.1.ebuild:
+  Stable for alpha/ppc/ppc64/sparc, wrt bug #501200
 
   16 Dec 2014; Patrick Lauer <patrick@gentoo.org> -nagios-3.2.3.ebuild,
   -nagios-3.3.1.ebuild:

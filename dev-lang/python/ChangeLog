@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.807 2014/12/25 11:20:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.808 2014/12/26 09:18:24 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> python-2.7.9-r1.ebuild:
+  Stable for sparc, wrt bug #532232
 
   25 Dec 2014; Agostino Sarubbo <ago@gentoo.org> python-2.7.9-r1.ebuild:
   Stable for ia64, wrt bug #532232
