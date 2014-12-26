@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1472 2014/12/24 09:58:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1473 2014/12/25 23:35:18 eva Exp $
+
+  25 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> waf-utils.eclass:
+  Reflect reality of the status of waf-utils eclass maintenance as announced
+  months ago on gentoo-dev mailing list.
 
   24 Dec 2014; Michael Weber <xmw@gentoo.org> netsurf.eclass:
   remove base.eclass inherit

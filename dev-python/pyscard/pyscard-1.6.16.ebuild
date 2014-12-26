@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/pyscard-1.6.12.ebuild,v 1.4 2014/08/10 21:17:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyscard/pyscard-1.6.16.ebuild,v 1.1 2014/12/25 23:44:26 alonbl Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT=( python2_7 )
+
+inherit distutils-r1
 
 DESCRIPTION="pyscard is a python module adding smart cards support to python"
 HOMEPAGE="http://pyscard.sourceforge.net/ http://pypi.python.org/pypi/pyscard"
@@ -22,5 +21,4 @@ RDEPEND="sys-apps/pcsc-lite"
 DEPEND="${RDEPEND}
 	dev-lang/swig"
 
-DOCS="smartcard/ACKS smartcard/ChangeLog smartcard/TODO"
-PYTHON_MODNAME="smartcard"
+DOCS=( README smartcard/ACKS smartcard/ChangeLog smartcard/TODO )

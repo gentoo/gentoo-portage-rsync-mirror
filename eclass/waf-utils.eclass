@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.19 2014/04/16 11:33:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.20 2014/12/25 23:35:18 eva Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
-# gnome@gentoo.org
+# maintainer-needed@gentoo.org
 # @AUTHOR:
 # Original Author: Gilles Dartiguelongue <eva@gentoo.org>
 # Various improvements based on cmake-utils.eclass: Tomáš Chvátal <scarabeus@gentoo.org>
