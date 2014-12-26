@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.52 2014/12/09 08:49:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.53 2014/12/26 13:18:39 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pyenchant-1.6.6.ebuild:
+  Stable for x86, wrt bug #530302
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> pyenchant-1.6.6.ebuild:
   Stable for HPPA (bug #530302).

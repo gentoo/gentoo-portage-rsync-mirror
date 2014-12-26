@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.5.14.ebuild,v 1.7 2014/12/15 12:54:56 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.5.14.ebuild,v 1.8 2014/12/26 13:15:22 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 SLOT="0/${PV}"
 LICENSE="NVIDIA-CUDA"
-KEYWORDS="-* amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="-* amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="debugger doc eclipse profiler"
 
 DEPEND=""

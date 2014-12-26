@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.321 2014/12/23 16:06:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.322 2014/12/26 13:18:19 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gentoolkit-0.3.0.9-r2.ebuild:
+  Stable for x86, wrt bug #530264
 
   23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gentoolkit-0.3.0.9-r2.ebuild:
   Stable for alpha, wrt bug #530264

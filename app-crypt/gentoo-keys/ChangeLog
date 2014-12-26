@@ -1,10 +1,13 @@
 # ChangeLog for app-crypt/gentoo-keys
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gentoo-keys/ChangeLog,v 1.1 2014/12/24 23:12:09 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gentoo-keys/ChangeLog,v 1.2 2014/12/26 13:23:55 k_f Exp $
+
+  26 Dec 2014; Kristian Fiskerstrand <k_f@gentoo.org>
+  gentoo-keys-201412231301.ebuild:
+  Update to use built-in EAPI functionality
 
 *gentoo-keys-201412231301 (24 Dec 2014)
 
   24 Dec 2014; Brian Dolbec <dolsen@gentoo.org>
   +gentoo-keys-201412231301.ebuild, +metadata.xml:
   Initial release, new package, gentoo-keys gpg release media keyring. 
-

@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/libu2f-host
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.8 2014/11/10 17:01:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libu2f-host/ChangeLog,v 1.9 2014/12/26 13:24:46 jlec Exp $
+
+*libu2f-host-0.0.2 (26 Dec 2014)
+
+  26 Dec 2014; Justin Lecher <jlec@gentoo.org> +libu2f-host-0.0.2.ebuild:
+  Version Bump
 
 *libu2f-host-0.0.1-r2 (10 Nov 2014)
 

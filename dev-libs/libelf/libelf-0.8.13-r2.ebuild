@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13-r2.ebuild,v 1.5 2014/12/23 15:58:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.8.13-r2.ebuild,v 1.6 2014/12/26 13:16:25 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mr511.de/software/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug nls elibc_FreeBSD"
 
 RDEPEND="!dev-libs/elfutils

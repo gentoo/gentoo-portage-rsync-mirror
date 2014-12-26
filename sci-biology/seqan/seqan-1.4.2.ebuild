@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.4.2.ebuild,v 1.2 2014/10/24 06:44:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.4.2.ebuild,v 1.3 2014/12/26 13:01:33 jlec Exp $
 
 EAPI=5
 
@@ -29,6 +29,14 @@ PATCHES=(
 	"${FILESDIR}"/${P}-shared.patch
 	"${FILESDIR}"/${P}-include.patch
 )
+
+pkg_pretend() {
+	[[ ${MERGE_TYPE} = "binary" ]] && return 0
+	if ! echo "#include <smmintrin.h>" | gcc -E - 2>&1 > /dev/null; then
+		ewarn "Need at least SSE4.1 support"
+		die "Missing SSE4.1 support"
+	fi
+}
 
 src_prepare() {
 	rm -f \

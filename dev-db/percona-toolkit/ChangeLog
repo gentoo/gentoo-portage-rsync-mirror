@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/percona-toolkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.11 2014/12/24 18:51:23 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.12 2014/12/26 13:17:00 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> percona-toolkit-2.2.7.ebuild:
+  Stable for x86, wrt bug #525850
 
   24 Dec 2014; Chema Alonso <nimiux@gentoo.org> percona-toolkit-2.2.7.ebuild:
   Stable for amd64 wrt bug #525850
