@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.135 2014/12/24 09:46:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.136 2014/12/26 08:57:57 jlec Exp $
+
+  26 Dec 2014; Justin Lecher <jlec@gentoo.org> qwt-6.1.2.ebuild:
+  Fix ebuild for USE=-mathml, #533480
 
   24 Dec 2014; Justin Lecher <jlec@gentoo.org> qwt-6.1.2.ebuild,
   files/qwt-6.1.1-pc-destdir.patch:

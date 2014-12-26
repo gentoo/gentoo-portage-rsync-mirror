@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.2.ebuild,v 1.2 2014/12/24 09:46:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.2.ebuild,v 1.3 2014/12/26 08:57:57 jlec Exp $
 
 EAPI=5
 
@@ -103,9 +103,11 @@ src_install () {
 	rm -f doc/man/*/{_,deprecated}* || die
 	multibuild_foreach_variant run_in_build_dir qt4-r2_src_install
 
-	sed \
-		-e "s: -L${WORKDIR}.* -lqwt6: -lqwt6:g" \
-		-i "${ED}"/usr/$(get_libdir)/pkgconfig/qwtmathml.pc || die
+	if use mathml; then
+		sed \
+			-e "s: -L${WORKDIR}.* -lqwt6: -lqwt6:g" \
+			-i "${ED}"/usr/$(get_libdir)/pkgconfig/qwtmathml.pc || die
+	fi
 
 	use doc && dohtml -r doc/html/*
 
