@@ -1,15 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configshell/configshell-9999.ebuild,v 1.2 2012/10/19 04:56:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configshell/configshell-9999.ebuild,v 1.3 2014/12/26 00:23:58 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://linux-iscsi.org/${PN}.git"
-PYTHON_DEPEND="2"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* 2.5-jython"
-SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python2_7 )
 
-inherit eutils distutils git-2 python
+inherit distutils-r1 git-r3
 
 DESCRIPTION="ConfigShell Community Edition for target_core_mod/ConfigFS"
 HOMEPAGE="http://linux-iscsi.org/"
@@ -21,7 +19,7 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="
-	dev-python/epydoc
-	dev-python/simpleparse
+	dev-python/epydoc[${PYTHON_USEDEP}]
+	dev-python/simpleparse[${PYTHON_USEDEP}]
 	"
 RDEPEND="${DEPEND}"

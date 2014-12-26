@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyid3lib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.21 2012/02/21 08:10:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.22 2014/12/26 00:01:20 mgorny Exp $
+
+*pyid3lib-0.5.1-r2 (25 Dec 2014)
+
+  25 Dec 2014; Michał Górny <mgorny@gentoo.org> +pyid3lib-0.5.1-r2.ebuild:
+  Convert to distutils-r1.
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyid3lib-0.5.1-r1.ebuild:
   Restricting jython
@@ -76,4 +81,3 @@
 
   05 Jun 2004; Lukasz Strzygowski <lucass@gentoo.org> :
   Initial commit. Bug #35905. Thanks for Brock Filer and Rob Kruus.
-

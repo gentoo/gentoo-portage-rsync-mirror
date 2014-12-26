@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configshell
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configshell/ChangeLog,v 1.2 2012/10/19 04:56:43 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configshell/ChangeLog,v 1.3 2014/12/26 00:23:58 mgorny Exp $
+
+  26 Dec 2014; Michał Górny <mgorny@gentoo.org> configshell-9999.ebuild:
+  Convert to distutils-r1.
 
   19 Oct 2012; Patrick Lauer <patrick@gentoo.org> configshell-9999.ebuild:
   Restricting pythons
