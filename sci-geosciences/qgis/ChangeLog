@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.34 2014/11/10 15:21:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.35 2014/12/26 22:08:14 pesa Exp $
+
+  26 Dec 2014; Davide Pesavento <pesa@gentoo.org> qgis-1.8.0.ebuild:
+  Add := to dev-python/sip dependency wrt bug 462712. Drop obsolete python2_6
+  target.
 
   10 Nov 2014; Davide Pesavento <pesa@gentoo.org>
   +files/qgis-1.7.0-avoid-deprecated-pyqtconfig.patch, qgis-1.7.0.ebuild,

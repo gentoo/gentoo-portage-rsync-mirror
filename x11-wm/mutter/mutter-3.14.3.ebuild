@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.14.3.ebuild,v 1.1 2014/12/23 23:52:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.14.3.ebuild,v 1.2 2014/12/26 22:27:58 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -48,7 +48,7 @@ COMMON_DEPEND="
 
 	gnome-extra/zenity
 
-	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
+	introspection? ( >=dev-libs/gobject-introspection-1.42 )
 	kms? (
 		dev-libs/libinput
 		>=media-libs/clutter-1.20[egl]

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.49 2014/12/23 23:52:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.50 2014/12/26 22:27:58 eva Exp $
+
+  26 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> mutter-3.14.3.ebuild:
+  Raise dependency on gobject-introspection to 1.42, bug #526976.
 
 *mutter-3.14.3 (23 Dec 2014)
 
