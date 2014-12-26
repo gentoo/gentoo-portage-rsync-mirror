@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.481 2014/12/25 22:52:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.482 2014/12/26 03:04:19 patrick Exp $
+
+  26 Dec 2014; Patrick Lauer <patrick@gentoo.org> gnome-3.14.0.ebuild:
+  Remove keywords until dependencies catch up
 
 *gnome-3.14.0 (25 Dec 2014)
 
