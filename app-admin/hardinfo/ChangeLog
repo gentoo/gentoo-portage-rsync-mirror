@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hardinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.11 2014/11/25 22:37:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.12 2014/12/26 14:44:59 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org> -hardinfo-0.5.1.ebuild,
+  -hardinfo-0.5.2_pre20120527.ebuild:
+  Remove old.
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
