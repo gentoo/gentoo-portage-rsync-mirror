@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.12.5.ebuild,v 1.5 2014/05/08 07:32:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/kdepim-common-libs-4.12.5.ebuild,v 1.6 2014/12/26 10:40:41 kensington Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ IUSE="debug"
 DEPEND="
 	app-crypt/gpgme
 	>=app-office/akonadi-server-1.10.43[soprano(+)]
-	dev-libs/grantlee
+	dev-libs/grantlee:0
 	>=dev-libs/shared-desktop-ontologies-0.11.0
 	$(add_kdebase_dep kdepimlibs)
 "

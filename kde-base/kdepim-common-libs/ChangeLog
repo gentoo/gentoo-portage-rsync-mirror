@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.178 2014/12/11 15:45:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.179 2014/12/26 10:40:41 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  kdepim-common-libs-4.12.5.ebuild, kdepim-common-libs-4.14.3.ebuild:
+  Pin dev-libs/grantlee to SLOT 0.
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org>
   -kdepim-common-libs-4.14.2.ebuild:

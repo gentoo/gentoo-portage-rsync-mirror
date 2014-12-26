@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.14.3.ebuild,v 1.2 2014/12/11 13:05:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.14.3.ebuild,v 1.3 2014/12/26 10:34:31 kensington Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="
-	dev-libs/grantlee
+	dev-libs/grantlee:0
 	dev-qt/qtxmlpatterns:4
 "
 DEPEND="
