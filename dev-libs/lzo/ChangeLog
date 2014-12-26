@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.89 2014/07/06 17:46:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.90 2014/12/26 18:47:48 zlogene Exp $
+
+  26 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> -lzo-2.06-r1.ebuild,
+  -lzo-2.06.ebuild:
+  Security cleanup
 
   06 Jul 2014; Markus Meier <maekke@gentoo.org> lzo-2.08.ebuild:
   arm stable, bug #515238
