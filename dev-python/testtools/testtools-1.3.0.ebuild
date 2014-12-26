@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.3.0.ebuild,v 1.1 2014/12/24 08:51:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.3.0.ebuild,v 1.2 2014/12/26 07:52:43 idella4 Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="doc test"
 
 RDEPEND="dev-python/mimeparse[${PYTHON_USEDEP}]
 		dev-python/extras[${PYTHON_USEDEP}]
-		dev-python/unittest2[${PYTHON_USEDEP}]"
+		>=dev-python/unittest2-0.8.0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )

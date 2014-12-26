@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.114 2014/12/24 08:51:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.115 2014/12/26 07:52:43 idella4 Exp $
+
+  26 Dec 2014; Ian Delaney <idella4@gentoo.org> -testtools-1.1.0.ebuild,
+  -testtools-1.2.0.ebuild, testtools-1.3.0.ebuild:
+  add bordering required for unittest2, rm old
 
 *testtools-1.3.0 (24 Dec 2014)
 
