@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.8.ebuild,v 1.4 2014/12/25 09:50:21 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.8.ebuild,v 1.5 2014/12/26 10:19:07 jer Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4} )
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="clang debug doc dot doxysearch qt4 latex sqlite"
 
 #missing SerbianCyrilic, JapaneseEn, KoreanEn, Chinesetraditional

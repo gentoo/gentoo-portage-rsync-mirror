@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.9.0.ebuild,v 1.2 2014/07/17 13:18:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.9.0.ebuild,v 1.3 2014/12/26 10:25:40 kensington Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND="
 	$(add_kdebase_dep kdepimlibs)
 	app-crypt/qca:2
 	dev-db/sqlite:3
-	dev-libs/grantlee
+	dev-libs/grantlee:0
 	>=dev-libs/libofx-0.9.1
 	dev-libs/qjson
 	dev-qt/qtsql:4[sqlite]

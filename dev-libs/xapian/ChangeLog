@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.131 2014/12/05 10:17:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.132 2014/12/26 10:18:21 jer Exp $
+
+  26 Dec 2014; Jeroen Roovers <jer@gentoo.org> xapian-1.2.19.ebuild,
+  xapian-1.3.1-r1.ebuild:
+  Marked ~hppa (bug #533458).
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> xapian-1.2.18.ebuild:
   Stable for x86, wrt bug #520794

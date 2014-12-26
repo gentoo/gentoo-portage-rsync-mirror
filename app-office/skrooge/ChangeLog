@@ -1,6 +1,10 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.55 2014/07/17 13:18:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.56 2014/12/26 10:25:40 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org> skrooge-1.8.0.ebuild,
+  skrooge-1.9.0.ebuild:
+  Pin dev-libs/grantlee to SLOT 0.
 
   17 Jul 2014; Michael Palimaka <kensington@gentoo.org> skrooge-1.9.0.ebuild:
   Remove workaround now handled in the eclass.
