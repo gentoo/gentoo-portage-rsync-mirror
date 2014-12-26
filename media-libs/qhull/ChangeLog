@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/qhull
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.59 2014/09/26 11:18:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.60 2014/12/26 11:28:07 jlec Exp $
+
+*qhull-2012.1-r4 (26 Dec 2014)
+
+  26 Dec 2014; Justin Lecher <jlec@gentoo.org> +qhull-2012.1-r4.ebuild,
+  +files/qhull-2012.1-format-security.patch:
+  Fix format-security problems, #528110
 
   26 Sep 2014; Fabian Groffen <grobian@gentoo.org> qhull-2012.1-r3.ebuild:
   Fix out of Prefix rm, bug #523422

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1033 2014/11/04 03:20:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1034 2014/12/26 11:28:16 ago Exp $
+
+  26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gcc-4.8.3.ebuild:
+  Stable for sparc, wrt bug #516152
 
   04 Nov 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.8.3.ebuild:
   Mark arm64/m68k/s390/sh stable.

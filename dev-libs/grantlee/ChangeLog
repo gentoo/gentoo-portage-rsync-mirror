@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.27 2014/02/05 17:16:43 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.28 2014/12/26 11:05:56 kensington Exp $
+
+*grantlee-5.0.0 (26 Dec 2014)
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  +files/grantlee-slot.patch, +grantlee-5.0.0.ebuild:
+  Version bump.
 
 *grantlee-0.4.0 (05 Feb 2014)
 

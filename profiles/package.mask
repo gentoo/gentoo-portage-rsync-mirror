@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16245 2014/12/25 23:22:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16246 2014/12/26 11:03:07 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -573,6 +573,7 @@ kde-frameworks/threadweaver
 www-client/otter
 =app-text/calibre-2*
 app-i18n/fcitx-qt5
+dev-libs/grantlee:5
 >=media-gfx/photoqt-1.1
 media-gfx/phototonic
 >=media-sound/drumstick-1.0.0
