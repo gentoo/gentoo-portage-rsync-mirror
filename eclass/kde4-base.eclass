@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.145 2014/12/09 18:38:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.146 2014/12/26 11:42:21 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -474,8 +474,8 @@ _calculate_src_uri() {
 			;;
 		kdevelop|kdevelop-php*|kdevplatform)
 			case ${KDEVELOP_VERSION} in
-				4.[123].[6-9]*) SRC_URI="mirror://kde/unstable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2" ;;
-				*) SRC_URI="mirror://kde/stable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.bz2" ;;
+				4.[123].[6-9]*) SRC_URI="mirror://kde/unstable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.xz" ;;
+				*) SRC_URI="mirror://kde/stable/kdevelop/${KDEVELOP_VERSION}/src/${P}.tar.xz" ;;
 			esac
 			;;
 	esac
@@ -577,7 +577,7 @@ _calculate_live_repo() {
 			fi
 
 			# default branching
-			[[ ${PV} != 4.9999* && ${KDEBASE} == kde-base ]] && \
+			[[ ${PV} != 4.9999* && ${PV} != 9999 && ${KDEBASE} == kde-base ]] && \
 				EGIT_BRANCH="KDE/$(get_kde_version)"
 
 			# default repo uri

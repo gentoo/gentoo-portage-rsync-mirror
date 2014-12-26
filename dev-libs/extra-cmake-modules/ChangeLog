@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/extra-cmake-modules
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/extra-cmake-modules/ChangeLog,v 1.4 2014/12/17 21:26:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/extra-cmake-modules/ChangeLog,v 1.5 2014/12/26 11:44:22 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  -extra-cmake-modules-1.4.0.ebuild:
+  Remove old.
 
 *extra-cmake-modules-1.5.0 (17 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1473 2014/12/25 23:35:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1474 2014/12/26 11:42:21 kensington Exp $
+
+  26 Dec 2014; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass:
+  Sync with KDE overlay.
 
   25 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> waf-utils.eclass:
   Reflect reality of the status of waf-utils eclass maintenance as announced
