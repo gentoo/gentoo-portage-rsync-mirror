@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-2.17.ebuild,v 1.3 2014/10/18 19:17:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-2.19.ebuild,v 1.1 2014/12/27 12:16:45 dilfridge Exp $
 
 EAPI=5
 

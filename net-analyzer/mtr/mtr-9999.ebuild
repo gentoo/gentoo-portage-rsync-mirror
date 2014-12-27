@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-9999.ebuild,v 1.4 2014/01/26 10:38:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-9999.ebuild,v 1.5 2014/12/27 12:20:52 jer Exp $
 
 EAPI=5
-inherit eutils autotools flag-o-matic git-r3
+inherit eutils autotools fcaps flag-o-matic git-r3
 
 DESCRIPTION="My TraceRoute, an Excellent network diagnostic tool"
 HOMEPAGE="http://www.bitwizard.nl/mtr/"
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/gtk-2.0-for-mtr.m4.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gtk ipv6 suid"
+IUSE="gtk ipv6"
 
 RDEPEND="
 	sys-libs/ncurses
@@ -28,6 +28,7 @@ DEPEND="
 "
 
 DOCS=( AUTHORS FORMATS NEWS README SECURITY TODO )
+FILECAPS=( cap_net_raw /usr/sbin/mtr )
 
 src_unpack() {
 	git-r3_src_unpack
@@ -54,23 +55,4 @@ src_configure() {
 	econf \
 		$(use_enable ipv6) \
 		$(use_with gtk)
-
-	# It's a bit absurd to have to do this, but the package isn't
-	# actually "configured" and ready to be compiled until this is
-	# done because upstream packaged .o files with the tarball.
-	# Remember to take this out on future versions.
-	emake clean
-}
-
-src_install() {
-	default
-
-	if use !prefix ; then
-		fowners root:0 /usr/sbin/mtr
-		if use suid; then
-			fperms 4711 /usr/sbin/mtr
-		else
-			fperms 0710 /usr/sbin/mtr
-		fi
-	fi
 }
