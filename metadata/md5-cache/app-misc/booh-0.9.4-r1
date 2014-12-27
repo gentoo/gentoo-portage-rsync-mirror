@@ -10,5 +10,5 @@ RDEPEND=media-gfx/exiv2 gtk? ( >=x11-libs/gtk+-2.8:2 ) || ( media-gfx/imagemagic
 REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=http://booh.org/packages/booh-0.9.4.tar.bz2
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	6cf5f32d9aca8448c1da6c5d863b9a5a	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f159065c5fa5115030499a605cf23ef2

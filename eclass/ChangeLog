@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1478 2014/12/27 19:31:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1479 2014/12/27 20:04:21 graaff Exp $
+
+  27 Dec 2014; Hans de Graaff <graaff@gentoo.org> ruby-ng.eclass:
+  Add ruby22 RUBY_TARGET support.
 
   27 Dec 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Add die-checks for python.eclass & distutils.eclass variables.

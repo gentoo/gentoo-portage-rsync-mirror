@@ -10,5 +10,5 @@ RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/eventmachine-0.12.4[ruby_targets_ruby1
 REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
 SLOT=1.3
 SRC_URI=mirror://rubygems/amqp-1.3.0.gem
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	22fc880fe95a3d6f9639d3b57f3ffb84	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	22fc880fe95a3d6f9639d3b57f3ffb84	ruby-ng	6cf5f32d9aca8448c1da6c5d863b9a5a	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=6bb2c52538997b181de8e88ec53db164
