@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pystopwatch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/ChangeLog,v 1.6 2013/07/07 09:32:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/ChangeLog,v 1.7 2014/12/27 16:34:30 mgorny Exp $
+
+*pystopwatch-2012.12.24.1-r1 (27 Dec 2014)
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org>
+  +pystopwatch-2012.12.24.1-r1.ebuild:
+  Convert to python-single-r1.
 
   07 Jul 2013; Agostino Sarubbo <ago@gentoo.org>
   pystopwatch-2012.12.24.1.ebuild:
