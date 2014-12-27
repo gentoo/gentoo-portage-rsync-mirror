@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.745 2014/12/19 13:43:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.746 2014/12/27 01:16:09 eva Exp $
+
+*gtk+-2.24.25-r1 (27 Dec 2014)
+
+  27 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +gtk+-2.24.25-r1.ebuild,
+  gtk+-3.14.6.ebuild:
+  Reduce diff between :2 and :3. A number of code path are similar and should
+  stay easily readable from a diff. Add ownership of immodules.cache in :2
+  ebuild and fix handling in :3 for multilib. Add epatch_user in :3. Fix sed
+  for aqua not looking at files in relevant libdir.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.25.ebuild:
   amd64 stable, bug 529964
