@@ -1,7 +1,7 @@
-DEFINED_PHASES=configure install
-DEPEND=dev-libs/libpcre media-libs/libmpdclient boost? ( dev-libs/boost ) taglib? ( media-libs/taglib ) virtual/pkgconfig
+DEFINED_PHASES=configure install prepare
+DEPEND=dev-libs/libpcre media-libs/libmpdclient boost? ( dev-libs/boost ) taglib? ( media-libs/taglib ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=An ncurses based mpd client with vi like key bindings
-EAPI=4
+EAPI=5
 HOMEPAGE=http://vimpc.sourceforge.net/
 IUSE=boost taglib
 KEYWORDS=amd64 x86
@@ -9,4 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/libpcre media-libs/libmpdclient boost? ( dev-libs/boost ) taglib? ( media-libs/taglib )
 SLOT=0
 SRC_URI=mirror://sourceforge/project/vimpc/Release%200.09.1/vimpc-0.09.1.tar.gz
-_md5_=bd3a84622b8dae2eaec1a9cb1991a483
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=a6591f4b53081a5ed1803fabc3555324

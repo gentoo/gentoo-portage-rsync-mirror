@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/vimpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/ChangeLog,v 1.22 2014/08/10 21:12:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/ChangeLog,v 1.23 2014/12/27 11:24:11 jer Exp $
+
+  27 Dec 2014; Jeroen Roovers <jer@gentoo.org> vimpc-0.09.1.ebuild,
+  +files/vimpc-0.09.1-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #529768).
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> vimpc-0.09.0.ebuild,
   vimpc-0.09.1.ebuild:
