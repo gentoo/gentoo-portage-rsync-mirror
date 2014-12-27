@@ -1,6 +1,11 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.140 2014/11/08 19:20:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.141 2014/12/27 10:17:45 jer Exp $
+
+*dillo-3.0.4.1 (27 Dec 2014)
+
+  27 Dec 2014; Jeroen Roovers <jer@gentoo.org> +dillo-3.0.4.1.ebuild:
+  Version bump.
 
   08 Nov 2014; Samuli Suominen <ssuominen@gentoo.org> dillo-3.0.4.ebuild:
   Pull in correct SLOT of libjpeg to ensure headers and .so symlink are present.
