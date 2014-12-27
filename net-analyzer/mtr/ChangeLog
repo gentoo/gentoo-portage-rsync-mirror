@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.161 2014/07/18 14:31:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.163 2014/12/27 12:00:51 jer Exp $
+
+  27 Dec 2014; Jeroen Roovers <jer@gentoo.org> mtr-0.86.ebuild:
+  Inherit fcaps.eclass, drop USE=suid by Kevin Korb (bug #483080).
+
+*mtr-0.86 (27 Dec 2014)
+
+  27 Dec 2014; Jeroen Roovers <jer@gentoo.org> +mtr-0.86.ebuild:
+  Version bump.
 
   18 Jul 2014; Tobias Klausmann <klausman@gentoo.org>
   mtr-0.85_p20140126.ebuild:
