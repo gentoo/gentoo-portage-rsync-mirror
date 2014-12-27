@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.254 2014/12/26 18:07:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.255 2014/12/27 21:02:37 graaff Exp $
+
+*rubygems-2.4.5 (27 Dec 2014)
+
+  27 Dec 2014; Hans de Graaff <graaff@gentoo.org> +rubygems-2.4.5.ebuild:
+  Version bump. Add ruby22.
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> rubygems-2.2.2.ebuild:
   arm stable, bug #532534

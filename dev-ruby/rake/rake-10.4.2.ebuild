@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.4.2.ebuild,v 1.1 2014/12/07 14:41:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-10.4.2.ebuild,v 1.2 2014/12/27 21:01:45 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGES README.rdoc TODO"
@@ -23,11 +23,6 @@ IUSE="doc"
 DEPEND+=" app-arch/gzip"
 
 ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.4 )"
-
-all_ruby_prepare() {
-	# Decompress the file. The compressed version has errors, ignore them.
-	zcat doc/rake.1.gz > doc/rake.1
-}
 
 all_ruby_compile() {
 	if use doc; then

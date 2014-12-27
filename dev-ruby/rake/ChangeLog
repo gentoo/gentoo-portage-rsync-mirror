@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.161 2014/12/07 14:41:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.162 2014/12/27 21:01:45 graaff Exp $
+
+  27 Dec 2014; Hans de Graaff <graaff@gentoo.org> rake-10.4.2.ebuild:
+  Add ruby22.
 
 *rake-10.4.2 (07 Dec 2014)
 

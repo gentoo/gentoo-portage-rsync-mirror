@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.4.3.ebuild,v 1.2 2014/11/25 20:52:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-5.4.3.ebuild,v 1.3 2014/12/27 21:04:35 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 

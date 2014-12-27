@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.131 2014/11/26 02:00:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.132 2014/12/27 21:05:21 graaff Exp $
+
+  27 Dec 2014; Hans de Graaff <graaff@gentoo.org> rdoc-4.1.2.ebuild:
+  Add ruby22.
 
   26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rdoc-3.12.2.ebuild,
   rdoc-4.0.1-r1.ebuild, rdoc-4.0.1-r2.ebuild:

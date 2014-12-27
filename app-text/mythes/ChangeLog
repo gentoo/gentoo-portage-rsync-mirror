@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mythes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.17 2012/12/08 12:25:25 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/ChangeLog,v 1.18 2014/12/27 21:18:50 dilfridge Exp $
+
+*mythes-1.2.4 (27 Dec 2014)
+
+  27 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> +mythes-1.2.4.ebuild:
+  Version bump, bug 530506
 
   08 Dec 2012; Markus Meier <maekke@gentoo.org> mythes-1.2.3.ebuild:
   add ~arm, bug #440908
