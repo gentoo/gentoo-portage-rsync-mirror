@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-9999.ebuild,v 1.13 2014/12/27 16:26:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-0.5.0.ebuild,v 1.1 2014/12/27 16:26:20 dilfridge Exp $
 
 EAPI=5
 
@@ -19,6 +19,8 @@ SLOT="0.5"
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="" 
+# ^ since this is only needed for live libreoffice
 
 IUSE="static-libs man test"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.14.1.ebuild,v 1.1 2014/12/21 12:16:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.14.1.ebuild,v 1.2 2014/12/27 16:19:23 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -55,12 +55,15 @@ RDEPEND="${COMMON_DEPEND}
 "
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.3
+	app-text/yelp-tools
 	dev-util/gdbus-codegen
-	sys-devel/gettext
 	>=dev-util/gtk-doc-am-1.13
 	>=dev-util/intltool-0.35
+	sys-devel/gettext
 	virtual/pkgconfig
 "
+# eautoreconf needs:
+#  app-text/yelp-tools
 
 # Needs dogtail and pyspi from http://fedorahosted.org/dogtail/
 # Releases: http://people.redhat.com/zcerza/dogtail/releases/

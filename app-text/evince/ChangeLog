@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.279 2014/12/21 12:16:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.280 2014/12/27 16:19:23 eva Exp $
+
+  27 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> evince-3.14.1.ebuild:
+  Add missing dependency for eautoreconf, bug #533682.
 
 *evince-3.14.1 (21 Dec 2014)
 
