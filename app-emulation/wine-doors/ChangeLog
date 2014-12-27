@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine-doors
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/ChangeLog,v 1.4 2014/08/06 06:44:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/ChangeLog,v 1.5 2014/12/26 23:09:13 mgorny Exp $
+
+*wine-doors-0.1.3-r1 (26 Dec 2014)
+
+  26 Dec 2014; Michał Górny <mgorny@gentoo.org> +wine-doors-0.1.3-r1.ebuild:
+  Convert to distutils-r1.
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> wine-doors-0.1.3.ebuild:
   Make description more repoman-happy
