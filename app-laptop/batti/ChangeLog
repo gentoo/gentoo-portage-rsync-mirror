@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/batti
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.24 2014/09/01 16:48:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/batti/ChangeLog,v 1.25 2014/12/27 12:37:28 mgorny Exp $
+
+*batti-0.3.8-r3 (27 Dec 2014)
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> +batti-0.3.8-r3.ebuild:
+  Convert to distutils-r1.
 
   01 Sep 2014; Michał Górny <mgorny@gentoo.org> batti-0.3.8-r2.ebuild:
   Remove := subslot operator from || () block since it is meaningless and
