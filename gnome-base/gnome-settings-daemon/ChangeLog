@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.150 2014/12/22 23:27:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.151 2014/12/27 01:51:40 eva Exp $
+
+  27 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-settings-daemon-3.12.3.ebuild, gnome-settings-daemon-3.14.2.ebuild:
+  Add missing dependency between wacom and udev USE flags, bug #523316.
 
 *gnome-settings-daemon-3.14.2 (22 Dec 2014)
 

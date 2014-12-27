@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.14.2.ebuild,v 1.1 2014/12/22 23:27:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.14.2.ebuild,v 1.2 2014/12/27 01:51:40 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,6 +16,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+colord +cups debug input_devices_wacom -openrc-force networkmanager policykit +short-touchpad-timeout smartcard test +udev wayland"
 REQUIRED_USE="
+	input_devices_wacom? ( udev )
 	smartcard? ( udev )
 	test? ( ${PYTHON_REQUIRED_USE} )
 "
