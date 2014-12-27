@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.14.8-r1.ebuild,v 1.4 2014/08/13 18:38:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.14.8-r3.ebuild,v 1.1 2014/12/27 09:46:12 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC="none"
@@ -45,10 +45,6 @@ all_ruby_prepare() {
 	# Avoid dependency on cucumber since we can't run the features anyway.
 	sed -i -e '/[Cc]ucumber/ s:^:#:' Rakefile || die
 
-	# Remove jruby-specific comparison documents since for us the normal
-	# version passes.
-	cp spec/rspec/core/formatters/text_mate_formatted-1.8.7.html spec/rspec/core/formatters/text_mate_formatted-1.8.7-jruby.html|| die
-
 	# Cover all released versions of ruby 2.1.x. This should be reported
 	# upstream since ruby 2.1.x uses semantic versioning and the file
 	# should not have the full version number.
@@ -79,4 +75,10 @@ all_ruby_compile() {
 
 each_ruby_test() {
 	PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -Ilib bin/rspec spec || die "Tests failed."
+}
+
+all_ruby_install() {
+	all_fakegem_install
+
+	ruby_fakegem_binwrapper rspec /usr/bin/rspec-2 'gem "rspec", "~>2.0"'
 }
