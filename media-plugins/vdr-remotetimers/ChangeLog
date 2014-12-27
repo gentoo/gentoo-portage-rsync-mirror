@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-remotetimers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remotetimers/ChangeLog,v 1.17 2014/12/26 18:22:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-remotetimers/ChangeLog,v 1.18 2014/12/27 00:34:41 patrick Exp $
+
+  27 Dec 2014; Patrick Lauer <patrick@gentoo.org> vdr-remotetimers-1.0.1.ebuild:
+  Fix PATCHES for repoman happy
 
   26 Dec 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-remotetimers-1.0.1.ebuild,
@@ -99,4 +102,3 @@
   +files/vdr-remotetimers-0.0.1-vdr-1.5.3.diff, +metadata.xml,
   +vdr-remotetimers-0.0.1.ebuild:
   Initial import of ebuild written by me.
-
