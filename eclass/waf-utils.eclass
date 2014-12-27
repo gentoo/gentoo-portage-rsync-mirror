@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.20 2014/12/25 23:35:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.21 2014/12/27 18:07:31 mgorny Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -40,6 +40,18 @@ DEPEND="${DEPEND}
 # General function for configuring with waf.
 waf-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	if [[ ! ${_PYTHON_ANY_R1} && ! ${_PYTHON_SINGLE_R1} && ! ${_PYTHON_R1} ]]; then
+		eqawarn "Using waf-utils.eclass without any python-r1 suite eclass is not supported"
+		eqawarn "and will be banned on 2015-01-24. Please make sure to configure and inherit"
+		eqawarn "appropriate -r1 eclass. For more information and examples, please see:"
+		eqawarn "    https://wiki.gentoo.org/wiki/Project:Python/waf-utils_integration"
+	elif [[ ${PYTHON_REQ_USE} != *threads* ]]; then
+		eqawarn "Waf requires threading support in Python. To accomodate this requirement,"
+		eqawarn "please add 'threads(+)' to PYTHON_REQ_USE variable (above inherit line)."
+		eqawarn "For more information and examples, please see:"
+		eqawarn "    https://wiki.gentoo.org/wiki/Project:Python/waf-utils_integration"
+	fi
 
 	local libdir=""
 

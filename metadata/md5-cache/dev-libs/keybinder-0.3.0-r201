@@ -10,5 +10,5 @@ RDEPEND=>=x11-libs/gtk+-2.20:2 x11-libs/libX11 x11-libs/libXext x11-libs/libXren
 REQUIRED_USE=python? ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://kaizer.se/publicfiles/keybinder/keybinder-0.3.0.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	d5328656d500f65898a5f51634722f61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	ea81a78208d8b6cb692b07e590c187eb	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=0d1951090f4ab7d7dee66828fc33ec4d
