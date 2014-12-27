@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/hyphen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.29 2012/12/17 15:24:39 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hyphen/ChangeLog,v 1.30 2014/12/27 21:45:19 dilfridge Exp $
+
+*hyphen-2.8.8 (27 Dec 2014)
+
+  27 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> +hyphen-2.8.8.ebuild:
+  Version bump, bug 530504
 
   17 Dec 2012; Tomáš Chvátal <scarabeus@gentoo.org> -hyphen-2.8.5.ebuild:
   Remove older.
