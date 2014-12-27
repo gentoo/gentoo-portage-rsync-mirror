@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/evas_generic_loaders
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/ChangeLog,v 1.7 2014/02/23 20:09:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/ChangeLog,v 1.8 2014/12/27 17:38:15 tommy Exp $
+
+*evas_generic_loaders-1.12.0 (27 Dec 2014)
+
+  27 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +evas_generic_loaders-1.12.0.ebuild:
+  Version bump, fixes bug 529314, update gstreamer dependency to 1.0 for bug
+  526692
 
   23 Feb 2014; Markus Meier <maekke@gentoo.org>
   evas_generic_loaders-1.8.1.ebuild:
