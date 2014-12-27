@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zpipe
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpipe/ChangeLog,v 1.1 2011/01/05 16:17:30 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpipe/ChangeLog,v 1.2 2014/12/27 14:57:23 bircoph Exp $
+
+  27 Dec 2014; Andrew Savchenko <bircoph@gentoo.org> zpipe-2.01.ebuild:
+  Add ~x86 keyword, bug 531934.
 
 *zpipe-2.01 (05 Jan 2011)
 

@@ -3,10 +3,10 @@ DEPEND=app-arch/unzip
 DESCRIPTION=A set of additional compression profiles for app-arch/zpaq
 EAPI=5
 HOMEPAGE=http://mattmahoney.net/dc/zpaq.html
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=>=app-arch/zpaq-6.19
 SLOT=0
 SRC_URI=http://mattmahoney.net/dc/bwt_j3.zip http://mattmahoney.net/dc/bwt_slowmode1.zip http://mattmahoney.net/dc/exe_j1.zip http://mattmahoney.net/dc/jpg_test2.zip http://mattmahoney.net/dc/min.zip http://mattmahoney.net/dc/fast.cfg -> zpaq-fast.cfg http://mattmahoney.net/dc/mid.cfg -> zpaq-mid.cfg http://mattmahoney.net/dc/max.cfg -> zpaq-max.cfg http://mattmahoney.net/dc/bmp_j4c.zip http://mattmahoney.net/dc/lz1.zip http://mattmahoney.net/dc/lazy100.zip http://mattmahoney.net/dc/lazy210.zip
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=20011d97fb06714978fdac97b85b3651
+_md5_=76f29640a4ed648ae0262603bb6cc384

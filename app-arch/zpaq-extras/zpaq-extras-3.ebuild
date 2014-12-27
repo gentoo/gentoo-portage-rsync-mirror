@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/zpaq-extras-3.ebuild,v 1.1 2014/06/17 15:22:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/zpaq-extras-3.ebuild,v 1.2 2014/12/27 14:53:44 bircoph Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -22,7 +22,7 @@ SRC_URI="http://mattmahoney.net/dc/bwt_j3.zip
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
