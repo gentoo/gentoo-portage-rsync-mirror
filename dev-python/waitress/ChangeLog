@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/waitress
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/ChangeLog,v 1.12 2014/11/09 19:37:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/ChangeLog,v 1.13 2014/12/27 06:22:53 idella4 Exp $
+
+  27 Dec 2014; Ian Delaney <idella4@gentoo.org> -waitress-0.8.2.ebuild,
+  -waitress-0.8.3.ebuild, -waitress-0.8.5.ebuild, -waitress-0.8.6.ebuild,
+  -waitress-0.8.7.ebuild, -waitress-0.8.8.ebuild:
+  rm old
 
   09 Nov 2014; Mike Gilbert <floppym@gentoo.org> waitress-0.8.9.ebuild:
   Depend on setuptools.
