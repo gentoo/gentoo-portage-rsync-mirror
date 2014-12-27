@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/markups-0.2.4-r1.ebuild,v 1.2 2014/11/30 11:39:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markups/markups-0.2.4-r1.ebuild,v 1.3 2014/12/27 19:24:18 ago Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://pypi/M/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 S="${WORKDIR}"/${MY_P}
 

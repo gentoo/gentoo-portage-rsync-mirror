@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.83 2014/04/09 12:44:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.84 2014/12/27 19:22:38 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  nxserver-freenx-0.7.3_p104-r7.ebuild:
+  Stable for amd64, wrt bug #246819
 
 *nxserver-freenx-0.7.3_p104-r7 (09 Apr 2014)
 

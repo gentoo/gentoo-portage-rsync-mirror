@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/adifmerg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/ChangeLog,v 1.12 2014/08/07 07:03:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/ChangeLog,v 1.13 2014/12/27 19:21:24 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> adifmerg-31-r1.ebuild:
+  Stable for amd64, wrt bug #531974
 
 *adifmerg-31-r1 (07 Aug 2014)
 
@@ -50,4 +53,3 @@
   21 Aug 2010; Thomas Beierlein <tomjbe@gentoo.org> +adifmerg-26.ebuild,
   +metadata.xml:
   Moved from sunrise. See bug #265110
-

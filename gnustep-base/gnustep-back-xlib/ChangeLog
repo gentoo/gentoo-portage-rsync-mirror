@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.72 2014/01/29 15:13:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.73 2014/12/27 19:28:10 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnustep-back-xlib-0.24.0.ebuild:
+  Stable for amd64, wrt bug #508626
 
 *gnustep-back-xlib-0.24.0 (29 Jan 2014)
 

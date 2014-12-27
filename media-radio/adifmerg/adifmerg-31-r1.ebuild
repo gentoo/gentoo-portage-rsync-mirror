@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/adifmerg-31-r1.ebuild,v 1.1 2014/08/07 07:03:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/adifmerg/adifmerg-31-r1.ebuild,v 1.2 2014/12/27 19:21:24 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://jaakko.home.cern.ch/jaakko/Soft/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="dev-lang/perl"

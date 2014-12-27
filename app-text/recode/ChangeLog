@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.101 2014/12/20 16:44:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.102 2014/12/27 19:25:43 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> recode-3.6_p20-r1.ebuild:
+  Stable for amd64, wrt bug #525964
 
   20 Dec 2014; Markus Meier <maekke@gentoo.org> recode-3.6_p20-r1.ebuild:
   arm stable, bug #525964
@@ -357,4 +360,3 @@
  
   11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
-

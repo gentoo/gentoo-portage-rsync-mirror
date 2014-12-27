@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/matchbox-window-manager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.19 2014/07/08 11:39:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.20 2014/12/27 19:22:10 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  matchbox-window-manager-1.2-r1.ebuild:
+  Stable for amd64, wrt bug #522774
 
 *matchbox-window-manager-1.2-r1 (08 Jul 2014)
 

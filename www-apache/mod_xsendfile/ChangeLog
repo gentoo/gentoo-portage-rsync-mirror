@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_xsendfile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xsendfile/ChangeLog,v 1.10 2012/11/27 19:37:58 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xsendfile/ChangeLog,v 1.11 2014/12/27 19:30:32 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mod_xsendfile-1.0_beta1.ebuild:
+  Stable for amd64, wrt bug #523010
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

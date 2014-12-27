@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catfish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.24 2014/11/28 12:56:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catfish/ChangeLog,v 1.25 2014/12/27 19:23:11 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> catfish-1.2.2.ebuild:
+  Stable for amd64, wrt bug #530986
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> catfish-1.2.2.ebuild:
   Support python 3.4

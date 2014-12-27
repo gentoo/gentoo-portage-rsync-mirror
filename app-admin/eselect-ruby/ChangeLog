@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.57 2014/11/17 10:17:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.58 2014/12/27 19:14:14 mrueg Exp $
+
+*eselect-ruby-20141227 (27 Dec 2014)
+
+  27 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +eselect-ruby-20141227.ebuild:
+  Version bump. Adds support for ruby 2.2
 
   17 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -eselect-ruby-20100603.ebuild:
   Cleanup old.

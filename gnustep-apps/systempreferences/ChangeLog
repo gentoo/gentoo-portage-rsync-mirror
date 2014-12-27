@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/systempreferences
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/systempreferences/ChangeLog,v 1.14 2014/02/26 00:15:40 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/systempreferences/ChangeLog,v 1.15 2014/12/27 19:28:19 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> systempreferences-1.2.0.ebuild:
+  Stable for amd64, wrt bug #508626
 
 *systempreferences-1.2.0 (26 Feb 2014)
 
@@ -65,4 +68,3 @@
   03 Sep 2006; Fabian Groffen <grobian@gentoo.org> +metadata.xml,
   +systempreferences-1.0.1.ebuild:
   Initial commit, based on the ebuild by Dmitry S. Kulyabov (bug #124366)
-

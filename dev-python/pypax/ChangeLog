@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.94 2014/12/09 10:02:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.95 2014/12/27 19:25:34 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pypax-0.9.0.ebuild:
+  Stable for amd64, wrt bug #530570
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> pypax-0.9.0.ebuild:
   Stable for HPPA (bug #530570).

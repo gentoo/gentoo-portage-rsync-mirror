@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libaacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.29 2014/06/20 07:58:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/ChangeLog,v 1.30 2014/12/27 19:29:01 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libaacs-0.7.1.ebuild:
+  Stable for amd64, wrt bug #526050
 
 *libaacs-0.7.1 (20 Jun 2014)
 

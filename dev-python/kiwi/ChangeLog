@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.28 2014/12/14 08:22:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.29 2014/12/27 19:23:22 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> kiwi-1.9.39.2.ebuild:
+  Stable for amd64, wrt bug #532542
 
 *kiwi-1.9.40 (14 Dec 2014)
 

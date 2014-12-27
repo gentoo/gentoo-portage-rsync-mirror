@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.58 2014/02/24 01:11:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.59 2014/12/27 19:30:53 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  dansguardian-2.12.0.3-r2.ebuild:
+  Stable for amd64, wrt bug #495902
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   dansguardian-2.12.0.3-r2.ebuild:

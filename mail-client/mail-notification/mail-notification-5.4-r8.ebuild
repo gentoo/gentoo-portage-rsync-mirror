@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r8.ebuild,v 1.1 2014/12/11 11:28:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r8.ebuild,v 1.2 2014/12/27 19:27:37 ago Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ GIT_REVISION="eab5c13" # Same as Fedora
 SRC_URI="https://github.com/epienbroek/${PN}/tarball/${GIT_REVISION} -> ${PN}-${GIT_REVISION}.tar.gz"
 S="${WORKDIR}/epienbroek-${PN}-${GIT_REVISION}"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-linux"
+KEYWORDS="amd64 ~ppc ~sparc ~x86 ~x86-linux"
 SLOT="0"
 LICENSE="GPL-3"
 IUSE="+gnome-keyring sasl +sound ssl sylpheed"

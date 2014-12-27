@@ -3,7 +3,7 @@ DESCRIPTION=NVIDIA's C graphics compiler toolkit
 EAPI=5
 HOMEPAGE=http://developer.nvidia.com/object/cg_toolkit.html
 IUSE=doc examples multilib abi_x86_32 abi_x86_64
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=NVIDIA-r1
 RDEPEND=media-libs/freeglut amd64? ( abi_x86_32? ( || ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] >=media-libs/freeglut-2.8.1[abi_x86_32(-)] ) ) ) x86? ( virtual/libstdc++:3.3 )
 REQUIRED_USE=amd64? ( multilib? ( abi_x86_32 ) ) || ( abi_x86_32 abi_x86_64 )
@@ -11,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=abi_x86_32? ( http://developer.download.nvidia.com/cg/Cg_3.1/Cg-3.1_April2012_x86.tgz ) abi_x86_64? ( http://developer.download.nvidia.com/cg/Cg_3.1/Cg-3.1_April2012_x86_64.tgz )
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=ec4cae1a4aa49ca72d434ac36a1d57b8
+_md5_=9143c39d48bc9e5bfe26bdeb2c36281b

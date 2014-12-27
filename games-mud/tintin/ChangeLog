@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.130 2014/12/02 19:26:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.131 2014/12/27 19:21:52 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> tintin-2.01.0.ebuild:
+  Stable for amd64, wrt bug #531472
 
   02 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> tintin-2.01.0.ebuild:
   doesn't appear to need ncurses; add slot dep for readline

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moosic
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.24 2014/08/27 14:00:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.25 2014/12/27 19:22:15 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> moosic-1.5.6-r1.ebuild:
+  Stable for amd64, wrt bug #524824
 
 *moosic-1.5.6-r1 (27 Aug 2014)
 

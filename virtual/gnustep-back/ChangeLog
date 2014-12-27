@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnustep-back
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.50 2014/01/29 15:15:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/ChangeLog,v 1.51 2014/12/27 19:28:14 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gnustep-back-0.24.0.ebuild:
+  Stable for amd64, wrt bug #508626
 
 *gnustep-back-0.24.0 (29 Jan 2014)
 

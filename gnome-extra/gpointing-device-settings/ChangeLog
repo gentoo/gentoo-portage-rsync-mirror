@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gpointing-device-settings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/ChangeLog,v 1.20 2014/06/24 12:48:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gpointing-device-settings/ChangeLog,v 1.21 2014/12/27 19:24:35 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  gpointing-device-settings-1.5.1-r3.ebuild:
+  Stable for amd64, wrt bug #530028
 
 *gpointing-device-settings-1.5.1-r3 (24 Jun 2014)
 

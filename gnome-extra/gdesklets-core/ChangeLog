@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.158 2014/12/02 21:55:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.159 2014/12/27 19:22:49 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  gdesklets-core-0.36.3-r4.ebuild:
+  Stable for amd64, wrt bug #531492
 
 *gdesklets-core-0.36.3-r4 (02 Dec 2014)
 

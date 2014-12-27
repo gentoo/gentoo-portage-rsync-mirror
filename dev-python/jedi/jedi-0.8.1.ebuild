@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/jedi-0.8.1.ebuild,v 1.2 2014/11/27 15:22:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/jedi-0.8.1.ebuild,v 1.3 2014/12/27 19:30:11 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/j/jedi/jedi-${MY_PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc test"
 
 DEPEND="app-arch/xz-utils

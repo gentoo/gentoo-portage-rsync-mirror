@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/textedit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.19 2013/03/28 15:03:25 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/textedit/ChangeLog,v 1.20 2014/12/27 19:28:23 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  textedit-0.95_pre20100427-r1.ebuild:
+  Stable for amd64, wrt bug #508626
 
 *textedit-0.95_pre20100427-r1 (28 Mar 2013)
 
@@ -105,4 +109,3 @@
 
   09 Sep 2004; Armando Di Cianno <fafhrd@gentoo.org> :
   Added package
-

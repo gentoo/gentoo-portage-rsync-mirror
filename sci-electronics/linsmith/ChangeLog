@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/linsmith
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.22 2014/08/10 20:28:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.23 2014/12/27 19:28:29 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> linsmith-0.99.28.ebuild:
+  Stable for amd64, wrt bug #531158
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> linsmith-0.99.24.ebuild,
   linsmith-0.99.25.ebuild, linsmith-0.99.26.ebuild, linsmith-0.99.28.ebuild:

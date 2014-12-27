@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.44 2014/12/20 13:24:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.45 2014/12/27 19:24:04 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ipy-0.81.ebuild:
+  Stable for amd64, wrt bug #530528
 
   20 Dec 2014; Ian Delaney <idella4@gentoo.org> -ipy-0.76-r1.ebuild,
   -ipy-0.76.ebuild, ipy-0.81.ebuild:

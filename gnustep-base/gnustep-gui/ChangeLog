@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.103 2014/09/18 15:17:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.104 2014/12/27 19:27:54 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gnustep-gui-0.24.0.ebuild:
+  Stable for amd64, wrt bug #508626
 
   18 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-gui-0.24.0.ebuild:
