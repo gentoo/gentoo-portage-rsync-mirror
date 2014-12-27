@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/tomoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/ChangeLog,v 1.18 2014/12/27 13:24:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tomoe/ChangeLog,v 1.19 2014/12/27 13:47:52 mgorny Exp $
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> tomoe-0.6.0-r2.ebuild:
+  Fix unsetting PYTHON.
 
 *tomoe-0.6.0-r2 (27 Dec 2014)
 
