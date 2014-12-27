@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.87 2014/03/22 17:39:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.88 2014/12/27 15:50:20 mgorny Exp $
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> ktoblzcheck-1.45.ebuild:
+  Convert to python-single-r1.
 
 *ktoblzcheck-1.45 (22 Mar 2014)
 

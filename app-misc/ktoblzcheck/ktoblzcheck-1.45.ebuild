@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.45.ebuild,v 1.1 2014/03/22 17:39:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ktoblzcheck-1.45.ebuild,v 1.2 2014/12/27 15:50:20 mgorny Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2:2.6"
-inherit python
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
+inherit python-single-r1
 
 DESCRIPTION="Library to check account numbers and bank codes of German banks"
 HOMEPAGE="http://ktoblzcheck.sourceforge.net/"
@@ -19,21 +19,16 @@ RDEPEND="app-text/recode
 	virtual/awk
 	sys-apps/grep
 	sys-apps/sed
-	|| ( net-misc/wget www-client/lynx )"
+	|| ( net-misc/wget www-client/lynx )
+	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2.6b"
+REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
-src_prepare() {
-	>py-compile
+	use python && python-single-r1_pkg_setup
 }
 
 src_configure() {
@@ -43,12 +38,4 @@ src_configure() {
 src_install() {
 	default
 	find "${ED}" -name '*.la' -exec rm -f {} +
-}
-
-pkg_postinst() {
-	use python && python_mod_optimize ktoblzcheck.py
-}
-
-pkg_postrm() {
-	use python && python_mod_cleanup ktoblzcheck.py
 }

@@ -1,15 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-gsl/rb-gsl-1.16.0.1.ebuild,v 1.1 2014/05/03 23:28:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-gsl/rb-gsl-1.16.0.4.ebuild,v 1.1 2014/12/27 15:34:28 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 inherit ruby-fakegem multilib
 
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_EXTRADOC="ChangeLog README"
+
 RUBY_FAKEGEM_TASK_TEST="test:libs"
 DESCRIPTION="Ruby interface to GNU Scientific Library"
-HOMEPAGE="http://rb-gsl.rubyforge.org/ https://github.com/david-macmahon/rb-gsl"
+HOMEPAGE="https://github.com/david-macmahon/rb-gsl"
 #SRC_URI="https://github.com/david-macmahon/${PN}/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"

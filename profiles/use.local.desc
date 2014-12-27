@@ -5149,9 +5149,9 @@ net-im/qutim:xscreensaver - Use X screensaver protocol extension to monitor idle
 net-im/skype:apulse - Use media-sound/apulse for PulseAudio emulation
 net-im/skype:pax_kernel - Triggers a paxmarking of the main skype binary
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
-net-im/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
 net-im/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
 net-im/telepathy-connection-managers:sipe - Enable Sip Exchange Protocol.
+net-im/telepathy-connection-managers:xmpp - Enable XMPP protocol handler (this is also Google Talk).
 net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.
 net-im/telepathy-mission-control:systemd - Rely on systemd's logind to detect suspend and resume

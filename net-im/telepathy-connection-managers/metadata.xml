@@ -3,11 +3,11 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-  <flag name='zeroconf'>Enable Link-Local Messaging via the zeroconf or Bonjour protocol.</flag>
-  <flag name='sip'>Enable SIP/SIMPLE messaging and calling.</flag>
   <flag name='irc'>Enable Internet Relay Chat (IRC) support.</flag>
-  <flag name='yahoo'>Enable Yahoo! messaging support.</flag>
-  <flag name='jabber'>Enable XMPP protocol handler (this is also Google Talk).</flag>
+  <flag name='sip'>Enable SIP/SIMPLE messaging and calling.</flag>
   <flag name='sipe'>Enable Sip Exchange Protocol.</flag>
+  <flag name='xmpp'>Enable XMPP protocol handler (this is also Google Talk).</flag>
+  <flag name='yahoo'>Enable Yahoo! messaging support.</flag>
+  <flag name='zeroconf'>Enable Link-Local Messaging via the zeroconf or Bonjour protocol.</flag>
 </use>
 </pkgmetadata>
