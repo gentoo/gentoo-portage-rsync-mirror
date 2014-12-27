@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gnomecatalog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/ChangeLog,v 1.7 2014/08/10 18:04:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnomecatalog/ChangeLog,v 1.8 2014/12/26 23:57:01 eva Exp $
+
+*gnomecatalog-0.3.4.2-r1 (26 Dec 2014)
+
+  26 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnomecatalog-0.3.4.2-r1.ebuild:
+  Switch to EAPI=5, distutils-r1 and add missing calls to get mime database and
+  icon cache updated.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   gnomecatalog-0.3.4.2.ebuild:
