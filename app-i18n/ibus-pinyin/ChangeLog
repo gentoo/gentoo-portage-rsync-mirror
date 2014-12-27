@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/ibus-pinyin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.49 2014/11/15 23:21:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ChangeLog,v 1.51 2014/12/27 10:51:34 mgorny Exp $
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> ibus-pinyin-1.5.0-r2.ebuild:
+  Add missing PYTHON_DEPS and PYTHON_REQUIRED_USE references.
+
+*ibus-pinyin-1.5.0-r2 (27 Dec 2014)
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> +ibus-pinyin-1.5.0-r2.ebuild:
+  Convert to python-single-r1.
 
   15 Nov 2014; Pacho Ramos <pacho@gentoo.org> ibus-pinyin-1.5.0-r1.ebuild:
   amd64/x86 stable, bug #517722

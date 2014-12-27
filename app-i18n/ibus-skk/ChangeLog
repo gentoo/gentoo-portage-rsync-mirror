@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-skk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.27 2012/07/08 21:29:28 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ChangeLog,v 1.28 2014/12/27 10:56:52 mgorny Exp $
+
+*ibus-skk-1.4.1-r1 (27 Dec 2014)
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> +ibus-skk-1.4.1-r1.ebuild:
+  Remove Python dependency, it is no longer used upstream.
 
 *ibus-skk-1.4.1 (08 Jul 2012)
 
