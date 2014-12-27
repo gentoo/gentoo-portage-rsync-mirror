@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.214 2014/11/23 16:40:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.215 2014/12/27 19:35:53 graaff Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -11,6 +11,7 @@ cuda
 # on the way out
 ruby_targets_ruby18
 ruby_targets_jruby
+ruby_targets_ree18
 
 # masking here and unmasking in default/linux/
 kmod
@@ -290,9 +291,7 @@ prefix-guest
 pvm
 
 # Alex Legler <a3li@gentoo.org> (7 Dec 2009)
-# JRuby, REE18, and Rubinius are whitelisted on supported arches
-ruby_targets_jruby
-ruby_targets_ree18
+# Rubinius is whitelisted on supported arches
 ruby_targets_rbx
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (19 Oct 2010)

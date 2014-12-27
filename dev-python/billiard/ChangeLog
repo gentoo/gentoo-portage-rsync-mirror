@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.25 2014/12/07 06:43:02 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.26 2014/12/27 19:33:56 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> billiard-3.3.0.18.ebuild:
+  Stable for amd64, wrt bug #531862
 
 *billiard-3.3.0.19 (07 Dec 2014)
 

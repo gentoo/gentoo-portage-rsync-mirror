@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.68 2014/12/27 18:26:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.69 2014/12/27 19:31:39 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -842,6 +842,8 @@ python_wrapper_setup() {
 	[[ ${impl} ]] || die "${FUNCNAME}: no impl nor EPYTHON specified."
 
 	if [[ ! -x ${workdir}/bin/python ]]; then
+		_python_check_dead_variables
+
 		mkdir -p "${workdir}"/{bin,pkgconfig} || die
 
 		# Clean up, in case we were supposed to do a cheap update.
@@ -1167,6 +1169,35 @@ python_export_utf8_locale() {
 }
 
 # -- python.eclass functions --
+
+_python_check_dead_variables() {
+	local v
+
+	for v in PYTHON_DEPEND PYTHON_USE_WITH{,_OR,_OPT} {RESTRICT,SUPPORT}_PYTHON_ABIS
+	do
+		if [[ ${!v} ]]; then
+			die "${v} is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Ebuild_head"
+		fi
+	done
+
+	for v in PYTHON_TESTS_RESTRICTED_ABIS PYTHON_EXPORT_PHASE_FUNCTIONS \
+		PYTHON_VERSIONED_{SCRIPTS,EXECUTABLES} PYTHON_NONVERSIONED_EXECUTABLES \
+		PYTHON_TEST_VERBOSITY
+	do
+		if [[ ${!v} ]]; then
+			die "${v} is invalid for python-r1 suite"
+		fi
+	done
+
+	for v in DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES DISTUTILS_SETUP_FILES \
+		DISTUTILS_GLOBAL_OPTIONS DISTUTILS_SRC_TEST \
+		DISTUTILS_DISABLE_TEST_DEPENDENCY
+	do
+		if [[ ${!v} ]]; then
+			die "${v} is invalid for distutils-r1"
+		fi
+	done
+}
 
 python_pkg_setup() {
 	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#pkg_setup"

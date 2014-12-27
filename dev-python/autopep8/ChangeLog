@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.53 2014/12/23 07:01:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.54 2014/12/27 19:36:01 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> autopep8-1.0.4.ebuild:
+  Stable for amd64, wrt bug #502772
 
 *autopep8-1.1 (23 Dec 2014)
 

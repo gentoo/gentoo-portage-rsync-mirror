@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.73 2014/12/01 05:50:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.74 2014/12/27 19:35:23 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> apsw-3.8.5_p1.ebuild:
+  Stable for amd64, wrt bug #530390
 
   01 Dec 2014; Ian Delaney <idella4@gentoo.org> -apsw-3.7.17_p1.ebuild,
   -apsw-3.8.0.2_p1.ebuild, -apsw-3.8.0_p2.ebuild, -apsw-3.8.1_p1.ebuild,

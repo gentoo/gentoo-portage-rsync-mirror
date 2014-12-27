@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd-sysv-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/ChangeLog,v 1.11 2014/11/21 10:18:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/ChangeLog,v 1.12 2014/12/27 19:32:44 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> systemd-sysv-utils-215.ebuild:
+  Stable for amd64, wrt bug #520036
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org>
   systemd-sysv-utils-215.ebuild:

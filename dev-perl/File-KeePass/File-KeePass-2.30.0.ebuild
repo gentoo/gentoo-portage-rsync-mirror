@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-KeePass/File-KeePass-2.30.0.ebuild,v 1.1 2014/12/07 16:35:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-KeePass/File-KeePass-2.30.0.ebuild,v 1.2 2014/12/27 19:52:12 dilfridge Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ RDEPEND="
 	>=dev-perl/Crypt-Rijndael-1
 	>=virtual/perl-Digest-SHA-1
 	>=virtual/perl-MIME-Base64-1
+	dev-perl/XML-Parser
 "
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker

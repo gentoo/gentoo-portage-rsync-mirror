@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/evas_generic_loaders
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/ChangeLog,v 1.8 2014/12/27 17:38:15 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/ChangeLog,v 1.9 2014/12/27 19:41:13 tommy Exp $
+
+  27 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  evas_generic_loaders-1.12.0.ebuild:
+  Re-add missing ~arm keyword
 
 *evas_generic_loaders-1.12.0 (27 Dec 2014)
 

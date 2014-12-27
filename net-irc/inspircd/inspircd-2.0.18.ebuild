@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.18.ebuild,v 1.2 2014/11/03 13:38:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.18.ebuild,v 1.3 2014/12/27 19:34:04 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.github.com/inspircd/inspircd/archive/v${PV}.tar.gz -> ${P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="geoip gnutls ipv6 ldap mysql pcre posix postgres sqlite ssl tre"
 
 RDEPEND="

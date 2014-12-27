@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2 dev-python/pygobject:2[python_targets_python2_7(-)?,-p
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://launchpad.net/libdesktop-agnostic/0.4/0.3.92/+download/libdesktop-agnostic-0.3.92.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	ea81a78208d8b6cb692b07e590c187eb	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb	waf-utils	24c05836f4222380dd43386817e69b12
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	69895802cd8ecc60598b9e931d725804	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb	waf-utils	24c05836f4222380dd43386817e69b12
 _md5_=2dadde886cebf4624cee586235d16e0c

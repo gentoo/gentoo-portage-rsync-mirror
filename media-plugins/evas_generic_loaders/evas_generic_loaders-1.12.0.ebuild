@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/evas_generic_loaders-1.12.0.ebuild,v 1.1 2014/12/27 17:38:15 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/evas_generic_loaders-1.12.0.ebuild,v 1.2 2014/12/27 19:41:13 tommy Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.enlightenment.org/"
 SRC_URI="http://download.enlightenment.org/rel/libs/${PN}/${MY_P}.tar.bz2"
 
 LOCENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="gstreamer pdf postscript raw svg"
 
 S=${WORKDIR}/${MY_P}

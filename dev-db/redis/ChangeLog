@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.88 2014/12/25 09:49:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.89 2014/12/27 19:34:27 ago Exp $
+
+  27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> redis-2.8.17-r1.ebuild:
+  Stable for amd64, wrt bug #528312
 
 *redis-2.8.17-r1 (25 Dec 2014)
 

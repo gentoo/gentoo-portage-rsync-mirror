@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.18_p1.ebuild,v 1.2 2014/11/02 09:00:17 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.18_p1.ebuild,v 1.3 2014/12/27 19:31:20 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ S="${WORKDIR}/${P/_p/-}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="selinux"
 
 DEPEND="virtual/mta

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.11.6.ebuild,v 1.4 2014/07/27 11:31:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.11.6.ebuild,v 1.5 2014/12/27 19:32:21 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.xz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="+client +clipboard csc dec_av dec_av2 opengl pulseaudio +rencode server sound vpx webp x264"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
