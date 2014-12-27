@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.19 2014/09/06 10:31:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/use.mask,v 1.20 2014/12/27 21:01:08 graaff Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64-fbsd
@@ -45,3 +45,7 @@
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
 # virtual/opencl is not keyworded
 opencl
+
+# Hans de Graaff <graaff@gentoo.org> (27 Dec 2014)
+# dev-libs/jemalloc is not keyworded
+jemalloc

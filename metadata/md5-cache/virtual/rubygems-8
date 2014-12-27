@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
+DEPEND=ruby_targets_ruby22? ( dev-lang/ruby:2.2 )
+DESCRIPTION=Virtual ebuild for rubygems
+EAPI=5
+IUSE=elibc_FreeBSD ruby_targets_ruby22
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+RDEPEND=>=dev-ruby/rubygems-2.0.14[ruby_targets_ruby22] ruby_targets_ruby22? ( dev-lang/ruby:2.2 )
+REQUIRED_USE=|| ( ruby_targets_ruby22 )
+SLOT=ruby22
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	6cf5f32d9aca8448c1da6c5d863b9a5a	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=01e613c4abf0467d2294ca30686abec1
