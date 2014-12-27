@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/weberror
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/weberror/ChangeLog,v 1.5 2014/11/29 23:55:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weberror/ChangeLog,v 1.6 2014/12/27 04:44:36 idella4 Exp $
+
+  27 Dec 2014; Ian Delaney <idella4@gentoo.org> -weberror-0.10.3.ebuild:
+  rm old
 
 *weberror-0.10.3-r1 (29 Nov 2014)
 
