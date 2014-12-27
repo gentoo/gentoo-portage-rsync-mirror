@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.91 2014/12/24 08:08:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.92 2014/12/27 04:16:42 idella4 Exp $
+
+  27 Dec 2014; Ian Delaney <idella4@gentoo.org> -webtest-2.0.15.ebuild,
+  webtest-2.0.17.ebuild:
+  tidy, rm old
 
 *webtest-2.0.17 (24 Dec 2014)
 

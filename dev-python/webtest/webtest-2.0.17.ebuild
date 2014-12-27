@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.17.ebuild,v 1.1 2014/12/24 08:08:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.17.ebuild,v 1.2 2014/12/27 04:16:42 idella4 Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="doc test"
 
-#nose<1.3.0
+# nose<1.3.0 appears a leftover never updated in requires.txt. tests pass fine with latest
 RDEPEND="
 	dev-python/six[${PYTHON_USEDEP}]
 	>=dev-python/waitress-0.8.5[${PYTHON_USEDEP}]
@@ -54,10 +54,6 @@ python_compile_all() {
 	if use doc; then
 		sphinx-build docs html || die
 	fi
-}
-
-src_test() {
-	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
 }
 
 python_test() {
