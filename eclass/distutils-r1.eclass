@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.106 2014/12/11 18:32:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.107 2014/12/27 19:00:10 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -748,6 +748,40 @@ distutils-r1_src_install() {
 	if [[ ! ${_DISTUTILS_DEFAULT_CALLED} ]]; then
 		eqawarn "QA warning: python_install_all() didn't call distutils-r1_python_install_all"
 	fi
+}
+
+# -- distutils.eclass functions --
+
+distutils_get_intermediate_installation_image() {
+	die "${FUNCNAME}() is invalid for distutils-r1"
+}
+
+distutils_src_unpack() {
+	die "${FUNCNAME}() is invalid for distutils-r1, and you don't want it in EAPI ${EAPI} anyway"
+}
+
+distutils_src_prepare() {
+	die "${FUNCNAME}() is invalid for distutils-r1, you probably want: ${FUNCNAME/_/-r1_}"
+}
+
+distutils_src_compile() {
+	die "${FUNCNAME}() is invalid for distutils-r1, you probably want: ${FUNCNAME/_/-r1_}"
+}
+
+distutils_src_test() {
+	die "${FUNCNAME}() is invalid for distutils-r1, you probably want: ${FUNCNAME/_/-r1_}"
+}
+
+distutils_src_install() {
+	die "${FUNCNAME}() is invalid for distutils-r1, you probably want: ${FUNCNAME/_/-r1_}"
+}
+
+distutils_pkg_postinst() {
+	die "${FUNCNAME}() is invalid for distutils-r1, and pkg_postinst is unnecessary"
+}
+
+distutils_pkg_postrm() {
+	die "${FUNCNAME}() is invalid for distutils-r1, and pkg_postrm is unnecessary"
 }
 
 _DISTUTILS_R1=1

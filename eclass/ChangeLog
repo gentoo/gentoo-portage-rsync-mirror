@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1476 2014/12/27 18:26:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1477 2014/12/27 19:00:10 mgorny Exp $
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Add die-replacements for distutils.eclass functions, to help finding mistakes
+  in conversions.
 
   27 Dec 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Add die-replacements for python.eclass functions, to help finding mistakes in
