@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord-deprecated_finders/activerecord-deprecated_finders-1.0.3.ebuild,v 1.6 2014/12/27 10:20:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord-deprecated_finders/activerecord-deprecated_finders-1.0.3.ebuild,v 1.7 2014/12/27 17:30:27 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -19,12 +19,12 @@ SLOT="$(get_version_component_range 1-2)"
 
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? (
 	dev-ruby/bundler
-	dev-ruby/rails:4.0
+	dev-ruby/activerecord:4.0
 	>=dev-ruby/minitest-3
 	>=dev-ruby/sqlite3-1.3 )"
 

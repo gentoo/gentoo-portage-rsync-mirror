@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.200 2014/07/28 05:42:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.201 2014/12/27 17:03:42 tommy Exp $
+
+  27 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  enlightenment-0.17.6.ebuild:
+  Adjust usedep for dev-libs/efl as new versions have jpeg support always
+  enabled
 
 *enlightenment-1.0.14 (28 Jul 2014)
 

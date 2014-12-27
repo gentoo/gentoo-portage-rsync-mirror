@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.6.ebuild,v 1.3 2014/05/04 11:13:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.6.ebuild,v 1.4 2014/12/27 17:03:42 tommy Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ IUSE="pam spell static-libs +udev ukit ${IUSE_E_MODULES}"
 
 RDEPEND="
 	pam? ( sys-libs/pam )
-	|| ( >=dev-libs/efl-1.8.4[X,eet,jpeg,png] >=dev-libs/efl-1.8.4[xcb,eet,jpeg,png] )
+	|| ( >=dev-libs/efl-1.8.4[X,eet,jpeg(+),png] >=dev-libs/efl-1.8.4[xcb,eet,jpeg(+),png] )
 	>=dev-libs/e_dbus-1.7.10
 	ukit? ( >=dev-libs/e_dbus-1.7.10[udev] )
 	x11-libs/xcb-util-keysyms"
