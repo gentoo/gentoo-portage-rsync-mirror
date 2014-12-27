@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parser/parser-2.2.0_pre7.ebuild,v 1.1 2014/11/04 16:01:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parser/parser-2.2.0.ebuild,v 1.1 2014/12/27 14:30:02 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"

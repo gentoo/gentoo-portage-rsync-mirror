@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/parser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parser/ChangeLog,v 1.6 2014/11/20 22:20:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parser/ChangeLog,v 1.7 2014/12/27 14:30:02 mrueg Exp $
+
+*parser-2.2.0 (27 Dec 2014)
+
+  27 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +parser-2.2.0.ebuild,
+  -parser-2.2.0_pre7.ebuild, -parser-2.2.0_pre8.ebuild:
+  Version bump. Remove old.
 
 *parser-2.2.0_pre8 (20 Nov 2014)
 
