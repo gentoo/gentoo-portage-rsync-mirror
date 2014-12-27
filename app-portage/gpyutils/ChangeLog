@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gpyutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.15 2014/07/06 13:16:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gpyutils/ChangeLog,v 1.16 2014/12/27 00:18:11 mgorny Exp $
+
+  27 Dec 2014; Michał Górny <mgorny@gentoo.org> files/implementations.txt:
+  Update impl status.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> gpyutils-0.1.2.ebuild,
   gpyutils-0.1.3.ebuild, gpyutils-0.1.ebuild, gpyutils-9999.ebuild:
