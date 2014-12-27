@@ -1,6 +1,11 @@
 # ChangeLog for app-officeext/texmaths
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.15 2013/04/27 08:36:13 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/texmaths/ChangeLog,v 1.16 2014/12/27 22:11:55 dilfridge Exp $
+
+*texmaths-0.41 (27 Dec 2014)
+
+  27 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> +texmaths-0.41.ebuild:
+  Version bump, bug 529840
 
   27 Apr 2013; Tomáš Chvátal <scarabeus@gentoo.org> -texmaths-0.37.ebuild,
   texmaths-0.37-r1.ebuild:
