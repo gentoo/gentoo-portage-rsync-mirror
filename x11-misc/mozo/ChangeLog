@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/mozo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mozo/ChangeLog,v 1.5 2014/12/28 17:54:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mozo/ChangeLog,v 1.6 2014/12/28 21:43:33 eva Exp $
+
+  28 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> mozo-1.8.0.ebuild:
+  Drop support of unsupported python2.6. Drop run_in_build_dir which is
+  guaranteed to be included by python-r1.
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> mozo-1.8.0.ebuild:
   Drop SUPPORT_PYTHON_ABIS, bug 533836.
