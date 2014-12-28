@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.8 2014/09/14 08:32:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.9 2014/12/28 18:40:14 dilfridge Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://gitorious.org/ixion/ixion.git"
 
-[[ ${PV} == 9999 ]] && GITECLASS="git-2 autotools"
+[[ ${PV} == 9999 ]] && GITECLASS="git-r3 autotools"
 inherit eutils ${GITECLASS}
 unset GITECLASS
 

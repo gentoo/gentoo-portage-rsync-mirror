@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-1.1.2.ebuild,v 1.2 2013/05/20 02:03:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/pypolicyd-spf/pypolicyd-spf-1.1.2.ebuild,v 1.3 2014/12/28 18:40:36 floppym Exp $
 
 EAPI=5
 
@@ -20,5 +20,3 @@ IUSE=""
 DEPEND="dev-python/pyspf[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
 	dev-python/authres"
-
-PYTHON_MODNAME="policydspfsupp.py policydspfuser.py"

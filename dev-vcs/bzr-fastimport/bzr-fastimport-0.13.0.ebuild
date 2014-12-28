@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/bzr-fastimport-0.13.0.ebuild,v 1.4 2013/08/06 18:55:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/bzr-fastimport-0.13.0.ebuild,v 1.5 2014/12/28 18:39:43 floppym Exp $
 
 EAPI="5"
 
@@ -21,7 +21,6 @@ RDEPEND=">=dev-vcs/bzr-1.18
 	>=dev-python/python-fastimport-0.9"
 DEPEND=""
 
-PYTHON_MODNAME="bzrlib/plugins/fastimport"
 DOCS=( NEWS README.txt doc/notes.txt )
 
 pkg_postinst() {

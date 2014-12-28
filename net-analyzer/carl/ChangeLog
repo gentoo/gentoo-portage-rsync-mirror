@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/carl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.16 2014/12/15 18:57:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.17 2014/12/28 18:41:17 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> carl-0.9-r1.ebuild:
+  Drop PYTHON_MODNAME, bug 533838.
 
   15 Dec 2014; Tobias Klausmann <klausman@gentoo.org> carl-0.9-r1.ebuild:
   Also add pypy implementations
@@ -61,4 +64,3 @@
   09 Jan 2007; Raúl Porcel (armin76) <armin76@gentoo.org> +metadata.xml,
   +carl-0.7.ebuild:
   New ebuild, handy tool for rsync mirrors
-

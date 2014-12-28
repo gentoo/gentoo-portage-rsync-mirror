@@ -7,8 +7,8 @@ IUSE=chrome gtk kde qt4 python_targets_python2_7
 KEYWORDS=amd64 x86
 LICENSE=LGPL-3
 RDEPEND=>=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] dev-python/dbus-python[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] gtk? ( dev-python/pywebkitgtk ) qt4? ( dev-qt/qtwebkit:4 kde? ( kde-base/kdelibs ) )
-REQUIRED_USE=|| ( chrome gtk qt4 )
+REQUIRED_USE=|| ( chrome gtk qt4 ) python_targets_python2_7
 SLOT=0
 SRC_URI=https://github.com/lyricat/Hotot/archive/0.9.8.14.tar.gz -> hotot-0.9.8.14.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	af785b18ba64fd8cf8b60f6039927fa8	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=38c0357bbfa07c4496026c7005ed2890
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=60a1d3d2415a4ab5e460053bfd68cdaa

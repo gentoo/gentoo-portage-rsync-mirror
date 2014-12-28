@@ -1,11 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.14.ebuild,v 1.3 2013/06/25 16:57:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/hotot-0.9.8.14.ebuild,v 1.4 2014/12/28 18:47:11 floppym Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="gtk? 2"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit cmake-utils python-single-r1 vcs-snapshot
 
@@ -18,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="chrome gtk kde qt4"
 
-REQUIRED_USE="|| ( chrome gtk qt4 )"
+REQUIRED_USE="|| ( chrome gtk qt4 ) ${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-python/dbus-python[${PYTHON_USEDEP}]

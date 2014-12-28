@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.23.1.ebuild,v 1.1 2013/08/06 19:34:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.23.1.ebuild,v 1.2 2014/12/28 18:31:26 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,7 +25,6 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 DOCS=( AUTHORS.txt NEWS.txt README.txt TODO.txt )
-PYTHON_MODNAME="bzrlib/plugins/qbzr"
 
 src_test() {
 	elog "It's impossible to run tests at this point. If you wish to run tests"

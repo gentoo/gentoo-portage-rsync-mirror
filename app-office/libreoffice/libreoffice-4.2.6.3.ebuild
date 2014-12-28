@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.6.3.ebuild,v 1.16 2014/12/28 14:57:43 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.2.6.3.ebuild,v 1.17 2014/12/28 18:52:58 dilfridge Exp $
 
 EAPI=5
 
@@ -112,7 +112,7 @@ COMMON_DEPEND="
 	>=dev-cpp/clucene-2.3.3.4-r2
 	dev-cpp/libcmis:0.4
 	dev-db/unixODBC
-	>=dev-libs/boost-1.46:=
+	<dev-libs/boost-1.56:=	>=dev-libs/boost-1.46:=
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=

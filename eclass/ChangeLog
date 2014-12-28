@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1485 2014/12/28 11:24:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1486 2014/12/28 18:35:07 mgorny Exp $
+
+  28 Dec 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Make the invalid function/variable checks non-fatal for now.
 
   28 Dec 2014; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Do not check for PYTHON_TEST_VERBOSITY, it is intended for make.conf.
