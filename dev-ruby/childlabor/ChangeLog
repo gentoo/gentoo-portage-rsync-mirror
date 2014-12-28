@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/childlabor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.10 2014/10/30 13:48:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.11 2014/12/28 09:16:23 graaff Exp $
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> childlabor-0.0.3-r1.ebuild:
+  Use eclass rspec invocation to use the rspec-2 wrapper.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> childlabor-0.0.3-r1.ebuild:
   Drop jruby target.
