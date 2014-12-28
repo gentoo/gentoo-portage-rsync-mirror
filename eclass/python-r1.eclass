@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.80 2014/12/07 19:15:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.81 2014/12/28 10:56:55 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -723,6 +723,13 @@ python_foreach_impl() {
 # only a deprecated alias to python_foreach_impl.
 python_parallel_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	if [[ ! ${_PYTHON_PARALLEL_WARNED} ]]; then
+		eqawarn "python_parallel_foreach_impl() is no longer meaningful. All runs"
+		eqawarn "are non-parallel now. Please replace the call with python_foreach_impl."
+
+		_PYTHON_PARALLEL_WARNED=1
+	fi
 
 	local MULTIBUILD_VARIANTS
 	_python_obtain_impls

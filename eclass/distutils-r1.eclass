@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.107 2014/12/27 19:00:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.108 2014/12/28 10:56:55 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -651,6 +651,13 @@ _distutils-r1_run_common_phase() {
 # are enabled, once otherwise.
 _distutils-r1_run_foreach_impl() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	if [[ ${DISTUTILS_NO_PARALLEL_BUILD} ]]; then
+		eqawarn "DISTUTILS_NO_PARALLEL_BUILD is no longer meaningful. Now all builds"
+		eqawarn "are non-parallel. Please remove it from the ebuild."
+
+		unset DISTUTILS_NO_PARALLEL_BUILD # avoid repeated warnings
+	fi
 
 	# store for restoring after distutils-r1_run_phase.
 	local _DISTUTILS_INITIAL_CWD=${PWD}

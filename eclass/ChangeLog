@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1483 2014/12/28 10:13:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1484 2014/12/28 10:56:55 mgorny Exp $
+
+  28 Dec 2014; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
+  python-r1.eclass:
+  Verbosely deprecate python_parallel_foreach_impl and
+  DISTUTILS_NO_PARALLEL_BUILD.
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass:
   Add test recipe for rspec:3 slot.
