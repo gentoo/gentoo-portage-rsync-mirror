@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r9.ebuild,v 1.8 2014/01/06 21:59:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r9.ebuild,v 1.9 2014/12/28 18:17:29 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -21,8 +21,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-PYTHON_MODNAME="${MY_PN}"
 
 S="${WORKDIR}/${MY_P}"
 

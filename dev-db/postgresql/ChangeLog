@@ -1,6 +1,36 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.405 2014/12/26 17:55:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.406 2014/12/28 18:07:22 titanofold Exp $
+
+*postgresql-9.4.0-r1 (28 Dec 2014)
+*postgresql-9.3.5-r3 (28 Dec 2014)
+*postgresql-9.2.9-r3 (28 Dec 2014)
+*postgresql-9.1.14-r3 (28 Dec 2014)
+*postgresql-9.0.18-r3 (28 Dec 2014)
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-9.0.18-r3.ebuild, +postgresql-9.1.14-r3.ebuild,
+  +postgresql-9.2.9-r3.ebuild, +postgresql-9.3.5-r3.ebuild,
+  +postgresql-9.4.0-r1.ebuild, postgresql-9999.ebuild, +files/postgresql.confd,
+  +files/postgresql.init, +files/postgresql.init-pre_9.2,
+  +files/postgresql.service, +files/postgresql.tmpfilesd,
+  +files/postgresql-check-db-dir:
+  Eliminate the patch, initscript, and systemd tarball maintained out
+  of tree, and:
+  - Fix bug 460956 by changing directory mask to 1775 which allows
+    all to access sockets, users within the group to create a socket,
+    and restricts the deletion or modification to the socket owner or
+    directory owner.
+  - Fix bug 488246 by creating symbolic links to the configuration
+    files when PGDATA and DATADIR differ.
+  - Fix bug 511942 by warning if CONFIG_SYSVIPC is not enabled.
+  - Fix bug 518522 by appending the plperl.on_init workaround to
+    postgresql.conf. (This only affects new installs.)
+  - Fix bug 529680 by removing the autotools inherit, and removing
+    the sed statement. We don't change anything in configure.in, which
+    means we don't need to regenerate the configure script.
+  - Fix bug 530790 by correcting the typo.
+  - Fix bug 531820 by removing the pre-initdb tests.
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> postgresql-9.0.18-r2.ebuild,
   postgresql-9.1.14-r2.ebuild, postgresql-9.2.9-r2.ebuild,

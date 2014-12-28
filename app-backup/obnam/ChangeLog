@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/obnam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/ChangeLog,v 1.23 2014/05/19 17:59:28 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/ChangeLog,v 1.24 2014/12/28 18:21:45 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> obnam-1.7.4.ebuild,
+  obnam-1.8-r1.ebuild:
+  Drop PYTHON_MODNAME, bug 533838.
 
 *obnam-1.8-r1 (19 May 2014)
 

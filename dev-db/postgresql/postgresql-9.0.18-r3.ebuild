@@ -1,20 +1,24 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9999.ebuild,v 1.6 2014/12/28 18:07:22 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.0.18-r3.ebuild,v 1.1 2014/12/28 18:07:22 titanofold Exp $
 
 EAPI="5"
 
+# Testing within Portage's environment is broken, and the patch no
+# longer applies cleanly.
+RESTRICT="test"
+
 PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
 
-inherit base eutils flag-o-matic git-2 linux-info multilib pam prefix \
-		python-single-r1 systemd user versionator
+inherit eutils flag-o-matic linux-info multilib pam prefix python-single-r1 \
+		systemd user versionator
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+		  ~amd64-fbsd ~ppc-macos ~sparc-fbsd ~x86-fbsd ~x86-solaris"
 
-# Fix if needed
-SLOT="9.5"
+SLOT="$(get_version_component_range 1-2)"
 
-EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2"
 
 LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL RDBMS"
@@ -58,23 +62,11 @@ zlib? ( sys-libs/zlib )
 
 DEPEND="${CDEPEND}
 !!<sys-apps/sandbox-2.0
->=dev-lang/perl-5.8
-app-text/docbook-dsssl-stylesheets
-app-text/docbook-sgml-dtd:4.2
-app-text/docbook-xml-dtd:4.2
-app-text/docbook-xsl-stylesheets
-app-text/openjade
-dev-libs/libxml2
-dev-libs/libxslt
 sys-devel/bison
 sys-devel/flex
 nls? ( sys-devel/gettext )
 xml? ( virtual/pkgconfig )
 "
-src_unpack() {
-	base_src_unpack
-	git-2_src_unpack
-}
 
 RDEPEND="${CDEPEND}
 !dev-db/postgresql-docs:${SLOT}
@@ -99,6 +91,8 @@ src_prepare() {
 	# Set proper run directory
 	sed "s|\(PGSOCKET_DIR\s\+\)\"/tmp\"|\1\"${EPREFIX}/run/postgresql\"|" \
 		-i src/include/pg_config_manual.h || die
+
+	epatch "${FILESDIR}/pg_ctl-exit-status.patch"
 
 	use server || epatch "${FILESDIR}/${PN}-${SLOT}-no-server.patch"
 
@@ -132,6 +126,7 @@ src_configure() {
 		$(use_enable !pg_legacytimestamp integer-datetimes) \
 		$(use_enable threads thread-safety) \
 		$(use_with kerberos gssapi) \
+		$(use_with kerberos krb5) \
 		$(use_with ldap) \
 		$(use_with pam) \
 		$(use_with perl) \
@@ -149,10 +144,6 @@ src_configure() {
 src_compile() {
 	emake
 	emake -C contrib
-
-	# If use doc, generate all documentation, otherwise just the
-	# man pages
-	use doc && emake -C doc || emake -C doc man
 }
 
 src_install() {
@@ -161,6 +152,9 @@ src_install() {
 
 	dodoc README HISTORY doc/{TODO,bug.template}
 
+	# man pages are already built, but if we have the target make them,
+	# they'll be generated from source before being installed so we
+	# manually install man pages.
 	# We use ${SLOT} instead of doman for postgresql.eselect
 	insinto /usr/share/postgresql-${SLOT}/man/
 	doins -r doc/src/sgml/man{1,3,7}
@@ -194,7 +188,7 @@ src_install() {
 			"${FILESDIR}/${PN}.confd" | newconfd - ${PN}-${SLOT}
 
 		sed -e "s|@SLOT@|${SLOT}|g" -e "s|@LIBDIR@|$(get_libdir)|g" \
-			"${FILESDIR}/${PN}.init" | newinitd - ${PN}-${SLOT}
+			"${FILESDIR}/${PN}.init-pre_9.2" | newinitd - ${PN}-${SLOT}
 
 		sed -e "s|@SLOT@|${SLOT}|g" -e "s|@LIBDIR@|$(get_libdir)|g" \
 			"${FILESDIR}/${PN}.service" | \
@@ -372,23 +366,5 @@ pkg_config() {
 	else
 		einfo "You should use the '${EROOT%/}/etc/init.d/postgresql-${SLOT}' script to run PostgreSQL"
 		einfo "instead of 'pg_ctl'."
-	fi
-}
-
-src_test() {
-	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
-
-	if use server && [[ ${UID} -ne 0 ]] ; then
-		emake check
-
-		einfo "If you think other tests besides the regression tests are necessary, please"
-		einfo "submit a bug including a patch for this ebuild to enable them."
-	else
-		use server || \
-			ewarn 'Tests cannot be run without the "server" use flag enabled.'
-		[[ ${UID} -eq 0 ]] || \
-			ewarn 'Tests cannot be run as root. Enable "userpriv" in FEATURES.'
-
-		ewarn 'Skipping.'
 	fi
 }

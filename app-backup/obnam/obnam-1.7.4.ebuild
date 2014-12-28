@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.7.4.ebuild,v 1.2 2014/05/02 16:49:19 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/obnam-1.7.4.ebuild,v 1.3 2014/12/28 18:21:45 floppym Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="threads"
-PYTHON_MODNAME="${PN}lib"
 MY_P="${PN}_${PV}.orig"
 
 inherit eutils distutils-r1

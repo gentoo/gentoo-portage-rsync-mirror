@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.48 2014/11/15 23:20:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.49 2014/12/28 18:22:31 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> ibus-anthy-1.5.4.ebuild:
+  Drop PYTHON_DEPEND, bug 533838.
 
   15 Nov 2014; Pacho Ramos <pacho@gentoo.org> ibus-anthy-1.5.4.ebuild:
   amd64/x86 stable, bug #517722

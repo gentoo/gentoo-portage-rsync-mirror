@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/backintime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.22 2014/08/16 01:33:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.23 2014/12/28 18:20:45 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> backintime-1.0.24-r2.ebuild,
+  backintime-1.0.36-r1.ebuild:
+  s/PYTHON_DEPEND/PYTHON_DEPS/, bug 533838.
 
 *backintime-1.0.24-r2 (16 Aug 2014)
 *backintime-1.0.36-r1 (16 Aug 2014)
