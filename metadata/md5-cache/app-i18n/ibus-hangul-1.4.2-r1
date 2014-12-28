@@ -10,5 +10,5 @@ RDEPEND=>=app-i18n/ibus-1.4[python,python_targets_python2_7(-)?,-python_single_t
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://ibus.googlecode.com/files/ibus-hangul-1.4.2.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	69895802cd8ecc60598b9e931d725804	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	cc5b6367244dc2070b496eb9a92d5b87	python-utils-r1	97efb88e1ed365f3127c92520ff21080	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b4200ed77120623679ee3c6388095c91

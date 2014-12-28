@@ -9,4 +9,7 @@
     history completion and search work as in bash and completion word
     lists can be specified on the command line.
   </longdescription>
+  <use>
+    <flag name="debug">Enable debug</flag>
+  </use>
 </pkgmetadata>

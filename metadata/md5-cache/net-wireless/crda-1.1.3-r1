@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=dev-libs/openssl:0 dev-libs/libnl:3 net-wireless/wireless-regdb
 SLOT=0
 SRC_URI=http://linuxwireless.org/download/crda/crda-1.1.3.tar.bz2
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	69895802cd8ecc60598b9e931d725804	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	97efb88e1ed365f3127c92520ff21080	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=eeb52f14cf2f94a4a27927cc83e3abbe
