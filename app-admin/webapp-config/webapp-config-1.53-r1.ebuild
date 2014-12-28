@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.53.ebuild,v 1.5 2014/11/26 07:06:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.53-r1.ebuild,v 1.1 2014/12/28 01:55:44 twitch153 Exp $
 
 EAPI="5"
 
@@ -21,6 +21,10 @@ IUSE="+portage"
 DEPEND="app-text/xmlto
 	!dev-python/configparser"
 RDEPEND="portage? ( sys-apps/portage[${PYTHON_USEDEP}] )"
+
+python_prepare() {
+	epatch "${FILESDIR}/${P}-sources-function.sh-from-lib-gentoo.patch"
+}
 
 python_compile_all() {
 	emake -C doc/

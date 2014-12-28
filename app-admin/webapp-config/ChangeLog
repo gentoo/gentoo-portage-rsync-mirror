@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.116 2014/11/26 07:06:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.117 2014/12/28 01:55:44 twitch153 Exp $
+
+*webapp-config-1.53-r1 (28 Dec 2014)
+
+  28 Dec 2014; Devan Franchini <twitch153@gentoo.org>
+  +files/webapp-config-1.53-sources-function.sh-from-lib-gentoo.patch,
+  +webapp-config-1.53-r1.ebuild, -webapp-config-1.53.ebuild:
+  Adds patch to source functions.sh from /lib/gentoo, bug #504132
 
   26 Nov 2014; Ian Delaney <idella4@gentoo.org> webapp-config-1.53.ebuild:
   clean old python impls
