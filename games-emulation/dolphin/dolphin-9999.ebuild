@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.16 2014/12/12 01:23:56 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.17 2014/12/28 00:43:42 twitch153 Exp $
 
 EAPI=5
 
@@ -32,6 +32,7 @@ RDEPEND=">=media-libs/glew-1.10
 	sys-libs/readline
 	x11-libs/libXext
 	x11-libs/libXrandr
+	net-libs/polarssl[havege]
 	alsa? ( media-libs/alsa-lib )
 	ao? ( media-libs/libao )
 	bluetooth? ( net-wireless/bluez )

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.173 2014/12/26 18:11:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.174 2014/12/28 00:52:51 mrueg Exp $
+
+  28 Dec 2014; Manuel Rüger <mrueg@gentoo.org> hoe-3.13.0-r1.ebuild:
+  Add ruby2.2 target.
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> hoe-3.13.0.ebuild:
   arm stable, bug #532572

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wsgiproxy2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.14 2014/12/25 12:37:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.15 2014/12/28 00:57:27 idella4 Exp $
+
+  28 Dec 2014; Ian Delaney <idella4@gentoo.org> wsgiproxy2-0.4.2.ebuild:
+  add bordering required for webtest, clean old impl
 
 *wsgiproxy2-0.4.2 (25 Dec 2014)
 
