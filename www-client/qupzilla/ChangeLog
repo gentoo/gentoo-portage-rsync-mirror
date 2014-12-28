@@ -1,6 +1,13 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.50 2014/12/28 10:19:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.51 2014/12/28 13:56:33 kensington Exp $
+
+  28 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  -files/qupzilla-1.6.5-plugins-version-check-fix.patch,
+  -files/qupzilla-1.6.6-plugins-version-check-fix.patch, -qupzilla-1.4.4.ebuild,
+  -qupzilla-1.6.5.ebuild, -qupzilla-1.6.6.ebuild, -qupzilla-1.8.0.ebuild,
+  -qupzilla-1.8.3.ebuild:
+  Remove old.
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> qupzilla-1.8.4.ebuild:
   Stable for x86, wrt bug #533508

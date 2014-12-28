@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.124 2014/12/28 12:04:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.125 2014/12/28 14:00:09 kensington Exp $
+
+  28 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  -mail-notification-5.4-r7.ebuild:
+  Remove old.
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   mail-notification-5.4-r8.ebuild:
