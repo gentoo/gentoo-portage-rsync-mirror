@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.9.2-r1.ebuild,v 1.1 2014/04/27 23:49:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.9.4.ebuild,v 1.1 2014/12/28 11:40:05 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 jruby"
@@ -16,16 +16,17 @@ DESCRIPTION="Provide a standard and simplified way to build and package Ruby ext
 HOMEPAGE="http://github.com/luislavena/rake-compiler"
 LICENSE="MIT"
 
-SRC_URI="http://github.com/luislavena/${PN}/tarball/v${PV} -> ${P}.tar.gz"
-RUBY_S="luislavena-${PN}-*"
+SRC_URI="http://github.com/luislavena/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/rake"
-USE_RUBY="ruby19 ruby20 jruby" ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
-USE_RUBY="ruby19" ruby_add_bdepend "test? ( dev-util/cucumber )"
+
+ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
+
+USE_RUBY="ruby19 ruby20" ruby_add_bdepend "test? ( dev-util/cucumber )"
 
 each_ruby_prepare() {
 	case ${RUBY} in
@@ -44,13 +45,10 @@ each_ruby_prepare() {
 
 each_ruby_test() {
 	# Skip cucumber for jruby (not supported) and ruby20 (not ready yet)
-	# Skip rspec as well for ruby21 to allow bootstrapping rspec for ruby21
 	case ${RUBY} in
-		*ruby19)
+		*ruby19|*ruby20)
 			ruby-ng_rspec
 			ruby-ng_cucumber
-			;;
-		*ruby21)
 			;;
 		*)
 			ruby-ng_rspec

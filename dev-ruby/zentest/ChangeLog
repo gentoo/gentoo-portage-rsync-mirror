@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.152 2014/11/10 13:09:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.153 2014/12/28 11:37:40 mrueg Exp $
+
+  28 Dec 2014; Manuel Rüger <mrueg@gentoo.org> zentest-4.11.0.ebuild:
+  Add ruby2.2 target.
 
   10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -zentest-4.7.0.ebuild:
   Cleanup old.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.47 2014/08/25 11:58:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.48 2014/12/28 11:56:01 blueness Exp $
+
+  28 Dec 2014; Anthony G. Basile <blueness@gentoo.org> jemalloc-2.2.5-r1.ebuild,
+  jemalloc-3.3.1.ebuild, jemalloc-3.6.0.ebuild:
+  Keyword ~mips
 
   25 Aug 2014; Raúl Porcel <armin76@gentoo.org> jemalloc-3.6.0.ebuild:
   Add ~sparc
