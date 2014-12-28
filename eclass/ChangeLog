@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1482 2014/12/28 07:23:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1483 2014/12/28 10:13:18 graaff Exp $
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass:
+  Add test recipe for rspec:3 slot.
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass,
   ruby-ng.eclass:

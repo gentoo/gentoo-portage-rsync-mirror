@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.57 2014/12/26 19:38:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.58 2014/12/28 10:14:07 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> emacspeak-39.0-r2.ebuild:
+  Stable for x86, wrt bug #532738
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> emacspeak-39.0-r2.ebuild:
   Stable for amd64, wrt bug #532738

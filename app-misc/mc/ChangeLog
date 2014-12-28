@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.316 2014/12/27 19:27:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.317 2014/12/28 10:09:51 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mc-4.8.13.ebuild:
+  Stable for x86, wrt bug #532424
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mc-4.8.13.ebuild:
   Stable for amd64, wrt bug #532424

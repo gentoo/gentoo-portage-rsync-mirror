@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/demjson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.21 2014/12/27 19:34:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/ChangeLog,v 1.22 2014/12/28 10:07:07 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> demjson-2.2.2.ebuild:
+  Stable for x86, wrt bug #531894
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> demjson-2.2.2.ebuild:
   Stable for amd64, wrt bug #531894

@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gtetrinet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.31 2014/12/27 19:21:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.32 2014/12/28 10:04:09 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gtetrinet-0.7.11-r3.ebuild:
+  Stable for x86, wrt bug #531456
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gtetrinet-0.7.11-r3.ebuild:
   Stable for amd64, wrt bug #531456

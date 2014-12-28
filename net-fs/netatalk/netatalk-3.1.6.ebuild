@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.6.ebuild,v 1.3 2014/12/26 19:39:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.6.ebuild,v 1.4 2014/12/28 10:12:49 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PN}/$(get_version_component_range 
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="acl avahi cracklib dbus debug pgp kerberos ldap pam quota samba +shadow ssl static-libs tracker tcpd +utils"
 
 CDEPEND="

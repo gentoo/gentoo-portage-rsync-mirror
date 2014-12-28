@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.88 2014/12/27 19:25:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.89 2014/12/28 10:12:24 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> nullmailer-1.13-r5.ebuild:
+  Stable for x86, wrt bug #532622
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> nullmailer-1.13-r5.ebuild:
   Stable for amd64, wrt bug #532622

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.184 2014/12/27 19:30:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.185 2014/12/28 10:05:24 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.8.ebuild:
+  Stable for x86, wrt bug #531744
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> logrotate-3.8.8.ebuild:
   Stable for amd64, wrt bug #531744

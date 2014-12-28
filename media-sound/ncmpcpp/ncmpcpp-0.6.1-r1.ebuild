@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6.1-r1.ebuild,v 1.5 2014/12/27 19:34:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.6.1-r1.ebuild,v 1.6 2014/12/28 10:06:49 ago Exp $
 
 EAPI=5
 inherit bash-completion-r1 eutils
@@ -11,7 +11,7 @@ SRC_URI="http://ncmpcpp.rybczak.net/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 arm hppa ~ppc ~sparc x86"
 IUSE="clock curl outputs taglib unicode visualizer"
 
 RDEPEND="

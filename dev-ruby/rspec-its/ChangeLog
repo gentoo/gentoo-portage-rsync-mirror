@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rspec-its
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-its/ChangeLog,v 1.1 2014/12/28 10:21:16 graaff Exp $
+
+*rspec-its-1.1.0 (28 Dec 2014)
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> +rspec-its-1.1.0.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for app-admin/puppet-lint.
+
