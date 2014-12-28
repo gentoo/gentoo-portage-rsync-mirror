@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.68 2014/12/17 14:18:42 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.69 2014/12/28 17:01:45 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> uwsgi-1.4.10-r1.ebuild,
+  uwsgi-2.0.7-r1.ebuild, uwsgi-2.0.8.ebuild, uwsgi-2.0.8-r1.ebuild,
+  uwsgi-2.0.8-r2.ebuild, uwsgi-2.0.8-r3.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
 *uwsgi-2.0.8-r3 (17 Dec 2014)
 

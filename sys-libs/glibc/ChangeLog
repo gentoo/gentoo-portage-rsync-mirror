@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1031 2014/11/11 02:08:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1032 2014/12/28 17:09:09 blueness Exp $
+
+*glibc-2.20-r1 (28 Dec 2014)
+
+  28 Dec 2014; Anthony G. Basile <blueness@gentoo.org> +glibc-2.20-r1.ebuild:
+  Address bug #478764 in 2.20-r1
 
   11 Nov 2014; Mike Frysinger <vapier@gentoo.org>
   +files/2.20/glibc-2.20-hardened-inittls-nosysenter.patch, glibc-2.20.ebuild,

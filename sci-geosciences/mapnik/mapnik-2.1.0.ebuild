@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.1.0.ebuild,v 1.3 2014/11/03 13:55:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.1.0.ebuild,v 1.4 2014/12/28 17:30:45 titanofold Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND="
 	)
 	gdal? ( sci-libs/gdal )
 	geos? ( sci-libs/geos )
-	postgres? ( >=virtual/postgresql-8.3 )
+	postgres? ( >=dev-db/postgresql-8.3 )
 	sqlite? ( dev-db/sqlite:3 )
 "
 

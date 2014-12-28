@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.10-r1.ebuild,v 1.2 2014/11/03 14:05:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.10-r1.ebuild,v 1.3 2014/12/28 17:01:45 titanofold Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? *"
@@ -42,7 +42,7 @@ CDEPEND="caps? ( sys-libs/libcap )
 		php_targets_php5-4? ( dev-lang/php:5.4[embed] )
 		php_targets_php5-5? ( dev-lang/php:5.5[embed] )
 	)
-	probepg? ( virtual/postgresql:= )
+	probepg? ( dev-db/postgresql:= )
 	ruby? ( $(ruby_implementations_depend) )
 	sqlite? ( dev-db/sqlite:3 )
 	rsyslog? ( app-admin/rsyslog )
@@ -164,8 +164,8 @@ EOF
 	use zeromq || sed -i -e 's|uuid/uuid.h|DISABLED|' uwsgiconfig.py || die "sed failed"
 
 	if use probepg ; then
-		PGPV="$(best_version virtual/postgresql)"
-		PGSLOT="$(get_version_component_range 1-2 ${PGPV##virtual/postgresql-})"
+		PGPV="$(best_version dev-db/postgresql)"
+		PGSLOT="$(get_version_component_range 1-2 ${PGPV##dev-db/postgresql-})"
 		sed -i \
 			-e "s|pg_config|pg_config${PGSLOT/.}|" \
 			plugins/probepg/uwsgiplugin.py || die "sed failed"

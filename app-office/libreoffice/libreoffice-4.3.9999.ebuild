@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.8 2014/12/28 14:57:43 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.9 2014/12/28 17:12:34 dilfridge Exp $
 
 EAPI=5
 
@@ -60,6 +60,8 @@ unset DEV_URI
 # If you want them gone, patches are welcome.
 ADDONS_SRC+=" ${ADDONS_URI}/d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz" # modifies source code
+ADDONS_SRC+=" collada? ( ${ADDONS_URI}/4b87018f7fff1d054939d19920b751a0-collada2gltf-master-cb1d97788a.tar.bz2 )"
+ADDONS_SRC+=" collada? ( ${ADDONS_URI}/OpenCOLLADA-master-6509aa13af.tar.bz2 )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" libreoffice_extensions_wiki-publisher? ( ${ADDONS_URI}/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip )" # no release for 8 years, should we package it?
 ADDONS_SRC+=" libreoffice_extensions_scripting-javascript? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )" # Does not build with 1.6 rhino at all
@@ -72,7 +74,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding coinmp collada +cups dbus debug eds firebird gltf gnome gstreamer
-+gtk gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba vlc"
++gtk gtk3 jemalloc kde mysql odk opengl postgres telepathy test vlc"
 
 LO_EXTS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -91,6 +93,8 @@ SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 
+# FIXME: collada? ( media-libs/opencollada )
+#        how to configure system-collada?
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	app-arch/zip
@@ -144,7 +148,6 @@ COMMON_DEPEND="
 	x11-libs/libXrender
 	bluetooth? ( net-wireless/bluez )
 	coinmp? ( sci-libs/coinor-mp )
-	collada? ( media-libs/opencollada )
 	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
@@ -244,9 +247,13 @@ PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
 
-	# from master branch
+	# from 4.4 branch
 	"${FILESDIR}/${PN}-4.3.1.2-implement--with-system-coinmp.patch"
-	"${FILESDIR}/${PN}-4.3.4.1-boost-1.56.0.patch"                  # bug 522178
+	"${FILESDIR}/${PN}-4.3.4.1-boost-1.56.0.patch" # bug 522178
+	"${FILESDIR}/${PN}-4.3.5.2-system-opencollada.patch"
+	"${FILESDIR}/${PN}-4.3.5.2-detect-KDE5-fallback-to-KDE4UI.patch"
+
+	# from master branch
 )
 
 REQUIRED_USE="
@@ -446,6 +453,7 @@ src_configure() {
 	# --enable-extension-integration: enable any extension integration support
 	# --without-{fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
 	# --disable-report-builder: too much java packages pulled in without pkgs
+	# FIXME: $(use_with collada system-opencollada)
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
 		--with-system-headers \
@@ -512,7 +520,6 @@ src_configure() {
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable telepathy) \
-		$(use_enable vba) \
 		$(use_enable vlc) \
 		$(use_with coinmp system-coinmp) \
 		$(use_with gltf system-libgltf) \
@@ -582,6 +589,10 @@ src_install() {
 
 	# Remove desktop files for support to old installs that can't parse mime
 	rm -rf "${ED}"/usr/share/mimelnk/
+
+	# FIXME: Hack add missing file
+	insinto /usr/$(get_libdir)/${PN}/program
+	doins "${S}"/instdir/program/libsaxlo.so
 
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin

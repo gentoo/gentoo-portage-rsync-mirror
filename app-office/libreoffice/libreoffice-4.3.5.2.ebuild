@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.234 2014/12/28 17:12:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.5.2.ebuild,v 1.1 2014/12/28 17:12:34 dilfridge Exp $
 
 EAPI=5
 
@@ -91,7 +91,7 @@ unset lo_xt
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 
 # FIXME: collada? ( media-libs/opencollada )
 #        how to configure system-collada?
@@ -246,6 +246,17 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
+
+	# from 4.3 branch
+	"${FILESDIR}/${PN}-4.3.5.2-return-IsUserDefined-w-o-negation.patch" # bug 524770
+
+	# from 4.4 branch
+	"${FILESDIR}/${PN}-4.3.1.2-implement--with-system-coinmp.patch"
+	"${FILESDIR}/${PN}-4.3.4.1-boost-1.56.0.patch" # bug 522178
+	"${FILESDIR}/${PN}-4.3.5.2-system-opencollada.patch"
+	"${FILESDIR}/${PN}-4.3.5.2-detect-KDE5-fallback-to-KDE4UI.patch"
+
+	# from master branch
 )
 
 REQUIRED_USE="
@@ -455,7 +466,6 @@ src_configure() {
 		--enable-cairo-canvas \
 		--enable-graphite \
 		--enable-largefile \
-		--enable-mergelibs \
 		--enable-neon \
 		--enable-python=system \
 		--enable-randr \
@@ -469,6 +479,7 @@ src_configure() {
 		--disable-fetch-external \
 		--disable-gnome-vfs \
 		--disable-gstreamer-0-10 \
+		--disable-mergelibs \
 		--disable-report-builder \
 		--disable-kdeab \
 		--disable-kde \
@@ -581,6 +592,10 @@ src_install() {
 
 	# Remove desktop files for support to old installs that can't parse mime
 	rm -rf "${ED}"/usr/share/mimelnk/
+
+	# FIXME: Hack add missing file
+	insinto /usr/$(get_libdir)/${PN}/program
+	doins "${S}"/instdir/program/libsaxlo.so
 
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin

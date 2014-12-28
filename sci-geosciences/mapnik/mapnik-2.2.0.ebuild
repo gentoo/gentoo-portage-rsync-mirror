@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.2.0.ebuild,v 1.4 2014/11/03 13:55:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-2.2.0.ebuild,v 1.5 2014/12/28 17:30:45 titanofold Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_5,2_6,2_7,3_3} )
 MY_P="${PN}-v${PV}"
 
 inherit eutils python-single-r1 scons-utils toolchain-funcs
@@ -37,10 +37,9 @@ RDEPEND="
 		dev-cpp/cairomm
 		python? ( dev-python/pycairo[${PYTHON_USEDEP}] )
 	)
-	postgres? ( >=virtual/postgresql-8.3 )
+	postgres? ( >=dev-db/postgresql-8.3 )
 	gdal? ( sci-libs/gdal )
 	sqlite? ( dev-db/sqlite:3 )
-	python_single_target_python3_2? ( >=dev-libs/boost-1.53[${PYTHON_USEDEP}] )
 	python_single_target_python3_3? ( >=dev-libs/boost-1.53[${PYTHON_USEDEP}] )
 "
 

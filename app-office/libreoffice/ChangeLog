@@ -1,6 +1,16 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.596 2014/12/28 14:57:43 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.597 2014/12/28 17:12:34 dilfridge Exp $
+
+*libreoffice-4.3.5.2 (28 Dec 2014)
+
+  28 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-4.3.5.2.ebuild, libreoffice-4.3.9999.ebuild,
+  libreoffice-9999-r2.ebuild,
+  +files/libreoffice-4.3.5.2-detect-KDE5-fallback-to-KDE4UI.patch,
+  +files/libreoffice-4.3.5.2-return-IsUserDefined-w-o-negation.patch,
+  +files/libreoffice-4.3.5.2-system-opencollada.patch:
+  Version bump by Andreas Sturmlechner, bug 533160
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   libreoffice-4.2.6.3.ebuild, libreoffice-4.2.9999.ebuild,
