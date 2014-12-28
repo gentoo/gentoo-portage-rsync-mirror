@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openerp-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.7 2014/11/03 11:18:39 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp-server/ChangeLog,v 1.8 2014/12/28 15:00:08 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  openerp-server-5.0.16.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   openerp-server-5.0.16.ebuild:

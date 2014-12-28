@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-7.0.5-r1.ebuild,v 1.1 2014/11/28 09:59:29 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-7.0.5-r1.ebuild,v 1.2 2014/12/28 14:42:00 titanofold Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ IUSE="acl bacula-clientonly bacula-nodir bacula-nosd examples ipv6 logwatch mysq
 DEPEND="
 	dev-libs/gmp
 	!bacula-clientonly? (
-		postgres? ( virtual/postgresql[threads] )
+		postgres? ( dev-db/postgresql[threads] )
 		mysql? ( virtual/mysql )
 		sqlite3? ( dev-db/sqlite:3 )
 		!bacula-nodir? ( virtual/mta )

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.130 2014/12/16 14:18:41 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.131 2014/12/28 14:45:28 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> rsyslog-8.4.2.ebuild,
+  rsyslog-8.6.0.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
 *rsyslog-8.6.0 (16 Dec 2014)
 

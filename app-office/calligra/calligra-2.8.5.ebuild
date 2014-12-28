@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.8.5.ebuild,v 1.4 2014/12/21 15:57:11 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.8.5.ebuild,v 1.5 2014/12/28 14:55:07 titanofold Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -121,7 +121,7 @@ RDEPEND="
 		media-gfx/pstoedit
 	)
 	postgres? (
-		virtual/postgresql
+		dev-db/postgresql
 		dev-libs/libpqxx
 	)
 	spacenav? ( dev-libs/libspnav  )

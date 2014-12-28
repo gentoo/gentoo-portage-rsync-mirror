@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.117 2014/12/21 15:57:11 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.118 2014/12/28 14:55:07 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> calligra-2.7.5.ebuild,
+  calligra-2.8.5.ebuild, calligra-2.8.6.ebuild, calligra-2.8.7.ebuild,
+  calligra-9999.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   21 Dec 2014; Michael Palimaka <kensington@gentoo.org> calligra-2.8.5.ebuild,
   calligra-2.8.6.ebuild, calligra-2.8.7.ebuild, calligra-9999.ebuild:

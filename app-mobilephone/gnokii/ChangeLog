@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.121 2014/11/03 11:12:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.122 2014/12/28 14:51:05 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> gnokii-0.6.29.ebuild,
+  gnokii-0.6.31.ebuild, gnokii-9999.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> gnokii-0.6.29.ebuild,
   gnokii-0.6.31.ebuild, gnokii-9999.ebuild:

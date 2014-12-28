@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.18 2014/11/03 11:09:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.19 2014/12/28 14:47:09 titanofold Exp $
 
 inherit eutils autotools
 
@@ -19,7 +19,7 @@ DEPEND="acl? ( sys-apps/acl )
 	mhash? ( >=app-crypt/mhash-0.9.2 )
 	!mhash? ( dev-libs/libgcrypt )
 	nls? ( virtual/libintl )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	selinux? (
 		sys-libs/libselinux
 		sec-policy/selinux-aide

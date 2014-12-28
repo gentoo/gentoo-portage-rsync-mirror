@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.28.0.ebuild,v 1.7 2014/11/03 11:11:18 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.28.0.ebuild,v 1.8 2014/12/28 14:49:38 titanofold Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ RDEPEND="bluetooth? ( net-wireless/bluez )
 	curl? ( net-misc/curl )
 	usb? ( virtual/libusb:1 )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql[server] )
+	postgres? ( dev-db/postgresql[server] )
 	dbi? ( >=dev-db/libdbi-0.8.3 )
 	dev-util/dialog
 	!dev-python/python-gammu" # needs to be removed from the tree

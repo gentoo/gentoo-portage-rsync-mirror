@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/pficommon-1.3.1.0.ebuild,v 1.3 2014/11/03 11:19:22 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/pficommon-1.3.1.0.ebuild,v 1.4 2014/12/28 15:00:55 titanofold Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="fcgi? ( dev-libs/fcgi )
 	)
 	mprpc? ( dev-libs/msgpack )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	"
 DEPEND="${RDEPEND}
 	test? ( dev-cpp/gtest )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.5 2014/11/18 02:21:24 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.6 2014/12/28 14:40:24 titanofold Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ RDEPEND="net-firewall/iptables
 	nflog? ( >=net-libs/libnetfilter_log-1.0.0 )
 	mysql? ( virtual/mysql )
 	pcap? ( net-libs/libpcap )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}

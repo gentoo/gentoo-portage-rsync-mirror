@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-6.1.1-r1.ebuild,v 1.3 2014/11/03 11:17:51 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/openerp-6.1.1-r1.ebuild,v 1.4 2014/12/28 14:59:12 titanofold Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="postgres ldap ssl"
 
-CDEPEND="postgres? ( virtual/postgresql[server] )
+CDEPEND="postgres? ( dev-db/postgresql[server] )
 	dev-python/lxml
 	dev-python/psycopg:2
 	dev-python/pychart

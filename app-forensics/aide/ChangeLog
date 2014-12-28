@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.63 2014/11/03 11:09:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.64 2014/12/28 14:47:09 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> aide-0.13.1.ebuild,
+  aide-0.13.1-r3.ebuild, aide-0.13.1-r5.ebuild, aide-0.14.2.ebuild,
+  aide-0.15.1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> aide-0.13.1.ebuild,
   aide-0.13.1-r3.ebuild, aide-0.13.1-r5.ebuild, aide-0.14.2.ebuild,

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=fcgi? ( dev-libs/fcgi ) imagemagick? ( media-libs/lcms media-gfx/imagemagick[cxx] sys-devel/libtool ) mprpc? ( dev-libs/msgpack ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql ) test? ( dev-cpp/gtest ) dev-lang/python !dev-lang/python[-threads]
+DEPEND=fcgi? ( dev-libs/fcgi ) imagemagick? ( media-libs/lcms media-gfx/imagemagick[cxx] sys-devel/libtool ) mprpc? ( dev-libs/msgpack ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) test? ( dev-cpp/gtest ) dev-lang/python !dev-lang/python[-threads]
 DESCRIPTION=General purpose C++ library for PFI
 EAPI=4
 HOMEPAGE=https://github.com/pfi/pficommon
 IUSE=fcgi imagemagick mprpc mysql postgres test
 KEYWORDS=~amd64
 LICENSE=BSD
-RDEPEND=fcgi? ( dev-libs/fcgi ) imagemagick? ( media-libs/lcms media-gfx/imagemagick[cxx] sys-devel/libtool ) mprpc? ( dev-libs/msgpack ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql )
+RDEPEND=fcgi? ( dev-libs/fcgi ) imagemagick? ( media-libs/lcms media-gfx/imagemagick[cxx] sys-devel/libtool ) mprpc? ( dev-libs/msgpack ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql )
 SLOT=0
 SRC_URI=https://github.com/pfi/pficommon/tarball/1.3.1.0 -> pficommon-1.3.1.0.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	waf-utils	24c05836f4222380dd43386817e69b12
-_md5_=8ff0cf35e4ae621c58a2e806ff079f08
+_md5_=d19c5cf80e5e9aa82da05fed4032a0d3

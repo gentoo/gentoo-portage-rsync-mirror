@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.3-r1.ebuild,v 1.2 2014/11/03 11:05:51 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.3-r1.ebuild,v 1.3 2014/12/28 14:43:07 titanofold Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ DEPEND="
 	!app-backup/bacula
 	dev-libs/gmp
 	!clientonly? (
-		postgres? ( virtual/postgresql[threads] )
+		postgres? ( dev-db/postgresql[threads] )
 		mysql? ( virtual/mysql )
 		sqlite3? ( dev-db/sqlite:3 )
 		director? ( virtual/mta )

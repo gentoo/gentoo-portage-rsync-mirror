@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.4.2.ebuild,v 1.5 2014/11/03 11:01:46 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.4.2.ebuild,v 1.6 2014/12/28 14:45:28 titanofold Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -37,7 +37,7 @@ RDEPEND="
 	)
 	omudpspoof? ( >=net-libs/libnet-1.1.6 )
 	oracle? ( >=dev-db/oracle-instantclient-basic-10.2 )
-	postgres? ( >=virtual/postgresql-8.4.20 )
+	postgres? ( >=dev-db/postgresql-8.4.20 )
 	rabbitmq? ( >=net-libs/rabbitmq-c-0.3.0 )
 	redis? ( >=dev-libs/hiredis-0.11.0 )
 	relp? ( >=dev-libs/librelp-1.2.5 )

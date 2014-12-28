@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.93 2014/11/18 02:21:24 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.94 2014/12/28 14:40:24 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> ulogd-2.0.3.ebuild,
+  ulogd-2.0.4.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   18 Nov 2014; Yixun Lan <dlan@gentoo.org> ulogd-2.0.4.ebuild,
   +files/ulogd-2.0.4-linux-headers-3.17-ipt_ulog.patch:

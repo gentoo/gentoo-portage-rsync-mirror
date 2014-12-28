@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.29.ebuild,v 1.10 2014/11/03 11:12:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.29.ebuild,v 1.11 2014/12/28 14:51:05 titanofold Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ RDEPEND="!app-mobilephone/smstools
 	sms? (
 		!app-mobilephone/smstools
 		dev-libs/glib:2
-		postgres? ( >=virtual/postgresql-8.0 )
+		postgres? ( >=dev-db/postgresql-8.0 )
 		mysql? ( >=virtual/mysql-4.1 )
 	)
 	ical? ( dev-libs/libical )
