@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.21-r1.ebuild,v 1.7 2014/11/02 09:36:26 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.27.ebuild,v 1.1 2014/12/28 19:46:03 pacho Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 
 inherit autotools eutils multilib python-any-r1 readme.gentoo systemd udev user multilib-minimal
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/3"
-KEYWORDS="amd64 arm hppa ppc ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="cups debug +obex +readline selinux systemd test +udev"
 REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -43,7 +43,6 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-bluetooth )
 "
-
 DOC_CONTENTS="
 	If you want to use rfcomm as a normal user, you need to add the user
 	to the uucp group.
@@ -107,10 +106,10 @@ multilib_src_configure() {
 		)
 	fi
 
-	# Missing flags: experimental (sap, nfc, ...)
 	econf \
 		--localstatedir=/var \
 		--disable-android \
+		--enable-datafiles \
 		--enable-experimental \
 		--enable-optimization \
 		$(use_enable debug) \
@@ -119,6 +118,7 @@ multilib_src_configure() {
 		--enable-library \
 		$(multilib_native_use_enable test) \
 		--enable-tools \
+		--enable-manpages \
 		--enable-monitor \
 		$(multilib_native_use_enable cups) \
 		$(multilib_native_use_enable obex) \
@@ -146,6 +146,13 @@ multilib_src_install() {
 	if multilib_is_native_abi; then
 		emake DESTDIR="${D}" install
 
+		# Upstream don't install this, bug #524640
+		# http://permalink.gmane.org/gmane.linux.bluez.kernel/53115
+		# http://comments.gmane.org/gmane.linux.bluez.kernel/54564
+		# gatttool is only built with readline, bug #530776
+		use readline && dobin attrib/gatttool
+		dobin tools/hex2hcd
+
 		# Unittests are not that useful once installed
 		if use test ; then
 			rm -r "${ED}"/usr/$(get_libdir)/bluez/test || die
@@ -163,20 +170,25 @@ multilib_src_install_all() {
 
 	keepdir /var/lib/bluetooth
 
+	# Upstream don't want people to play with them
+	# But we keep installing them due 'historical' reasons
 	insinto /etc/bluetooth
 	local d
 	for d in input network proximity; do
 		doins profiles/${d}/${d}.conf
 	done
-
 	doins src/main.conf
 	doins src/bluetooth.conf
 
-	insinto /usr/share/dbus-1/system-services
-	doins src/org.bluez.service
+# FIXME:
+# Looks like upstream installs it only for systemd, probably not needed
+#	insinto /usr/share/dbus-1/system-services
+#	doins src/org.bluez.service
 
 	newinitd "${FILESDIR}"/bluetooth-init.d-r3 bluetooth
 	newinitd "${FILESDIR}"/rfcomm-init.d-r2 rfcomm
+
+	einstalldocs
 
 	readme.gentoo_create_doc
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-13.0.0-r3.ebuild,v 1.11 2014/12/12 23:23:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-13.0.0-r3.ebuild,v 1.12 2014/12/28 19:41:47 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -43,13 +43,12 @@ python_prepare_all() {
 }
 
 python_compile() {
-	local CFLAGS CXXFLAGS
-
-	if [[ ${EPYTHON} != python3* ]]; then
+	if ! python_is_python3; then
 		# Needed to make the sendmsg extension work
 		# (see http://twistedmatrix.com/trac/ticket/5701 )
 
-		append-flags -fno-strict-aliasing
+		local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+		local -x CXXFLAGS="${CXXFLAGS} -fno-strict-aliasing"
 	fi
 
 	distutils-r1_python_compile

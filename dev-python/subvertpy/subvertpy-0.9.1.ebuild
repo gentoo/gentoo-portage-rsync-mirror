@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.9.1.ebuild,v 1.5 2014/07/06 12:49:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/subvertpy-0.9.1.ebuild,v 1.6 2014/12/28 19:32:53 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -22,10 +22,13 @@ DEPEND="${RDEPEND}
 		dev-python/testtools
 	) )"
 
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
-
 DOCS=( NEWS AUTHORS )
 S=${WORKDIR}
+
+python_compile() {
+	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	distutils-r1_python_compile
+}
 
 python_test() {
 	distutils_install_for_testing
