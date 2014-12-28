@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.29 2014/11/07 18:11:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.30 2014/12/28 22:50:20 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -227,6 +227,150 @@ _python_single_set_globals() {
 	fi
 }
 _python_single_set_globals
+
+# @FUNCTION: python_gen_usedep
+# @USAGE: <pattern> [...]
+# @DESCRIPTION:
+# Output a USE dependency string for Python implementations which
+# are both in PYTHON_COMPAT and match any of the patterns passed
+# as parameters to the function.
+#
+# Remember to escape or quote the patterns to prevent shell filename
+# expansion.
+#
+# When all implementations are requested, please use ${PYTHON_USEDEP}
+# instead. Please also remember to set an appropriate REQUIRED_USE
+# to avoid ineffective USE flags.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT=( python{2_7,3_4} )
+# DEPEND="doc? ( dev-python/epydoc[$(python_gen_usedep 'python2*')] )"
+# @CODE
+#
+# It will cause the dependency to look like:
+# @CODE
+# DEPEND="doc? ( dev-python/epydoc[python_targets_python2_7(-)?,...] )"
+# @CODE
+python_gen_usedep() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local impl pattern
+	local matches=()
+
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${impl}" || continue
+
+		for pattern; do
+			if [[ ${impl} == ${pattern} ]]; then
+				matches+=(
+					"python_targets_${impl}(-)?"
+					"python_single_target_${impl}(+)?"
+				)
+				break
+			fi
+		done
+	done
+
+	[[ ${matches[@]} ]] || die "No supported implementations match python_gen_usedep patterns: ${@}"
+
+	local out=${matches[@]}
+	echo "${out// /,}"
+}
+
+# @FUNCTION: python_gen_useflags
+# @USAGE: <pattern> [...]
+# @DESCRIPTION:
+# Output a list of USE flags for Python implementations which
+# are both in PYTHON_COMPAT and match any of the patterns passed
+# as parameters to the function.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT=( python{2_7,3_4} )
+# REQUIRED_USE="doc? ( ^^ ( $(python_gen_useflags 'python2*') ) )"
+# @CODE
+#
+# It will cause the variable to look like:
+# @CODE
+# REQUIRED_USE="doc? ( ^^ ( python_single_target_python2_7 ) )"
+# @CODE
+python_gen_useflags() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local impl pattern
+	local matches=()
+
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${impl}" || continue
+
+		for pattern; do
+			if [[ ${impl} == ${pattern} ]]; then
+				matches+=( "python_single_target_${impl}" )
+				break
+			fi
+		done
+	done
+
+	echo "${matches[@]}"
+}
+
+# @FUNCTION: python_gen_cond_dep
+# @USAGE: <dependency> <pattern> [...]
+# @DESCRIPTION:
+# Output a list of <dependency>-ies made conditional to USE flags
+# of Python implementations which are both in PYTHON_COMPAT and match
+# any of the patterns passed as the remaining parameters.
+#
+# In order to enforce USE constraints on the packages, verbatim
+# '${PYTHON_USEDEP}' (quoted!) may be placed in the dependency
+# specification. It will get expanded within the function into a proper
+# USE dependency string.
+#
+# Example:
+# @CODE
+# PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+# RDEPEND="$(python_gen_cond_dep \
+#   'dev-python/unittest2[${PYTHON_USEDEP}]' python{2_5,2_6})"
+# @CODE
+#
+# It will cause the variable to look like:
+# @CODE
+# RDEPEND="python_single_target_python2_5? (
+#     dev-python/unittest2[python_targets_python2_5(-)?,...] )
+#	python_single_target_python2_6? (
+#     dev-python/unittest2[python_targets_python2_6(-)?,...] )"
+# @CODE
+python_gen_cond_dep() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local impl pattern
+	local matches=()
+
+	local dep=${1}
+	shift
+
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		_python_impl_supported "${impl}" || continue
+
+		for pattern; do
+			if [[ ${impl} == ${pattern} ]]; then
+				# substitute ${PYTHON_USEDEP} if used
+				# (since python_gen_usedep() will not return ${PYTHON_USEDEP}
+				#  the code is run at most once)
+				if [[ ${dep} == *'${PYTHON_USEDEP}'* ]]; then
+					local PYTHON_USEDEP=$(python_gen_usedep "${@}")
+					dep=${dep//\$\{PYTHON_USEDEP\}/${PYTHON_USEDEP}}
+				fi
+
+				matches+=( "python_single_target_${impl}? ( ${dep} )" )
+				break
+			fi
+		done
+	done
+
+	echo "${matches[@]}"
+}
 
 # @FUNCTION: python_setup
 # @DESCRIPTION:
