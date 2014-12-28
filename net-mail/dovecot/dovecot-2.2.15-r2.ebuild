@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.15-r2.ebuild,v 1.1 2014/11/04 07:51:23 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.15-r2.ebuild,v 1.2 2014/12/28 16:33:27 titanofold Exp $
 
 EAPI=5
 inherit autotools eutils multilib ssl-cert systemd user versionator
@@ -43,7 +43,7 @@ DEPEND="bzip2? ( app-arch/bzip2 )
 	lz4? ( app-arch/lz4 )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
-	postgres? ( virtual/postgresql !virtual/postgresql[ldap,threads] )
+	postgres? ( dev-db/postgresql !dev-db/postgresql[ldap,threads] )
 	selinux? ( sec-policy/selinux-dovecot )
 	solr? ( net-misc/curl dev-libs/expat )
 	sqlite? ( dev-db/sqlite )

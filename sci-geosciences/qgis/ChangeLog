@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/qgis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.35 2014/12/26 22:08:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.36 2014/12/28 16:51:34 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> qgis-1.7.0.ebuild,
+  qgis-1.8.0.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   26 Dec 2014; Davide Pesavento <pesa@gentoo.org> qgis-1.8.0.ebuild:
   Add := to dev-python/sip dependency wrt bug 462712. Drop obsolete python2_6

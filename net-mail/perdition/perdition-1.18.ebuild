@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.18.ebuild,v 1.4 2014/11/03 13:45:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/perdition/perdition-1.18.ebuild,v 1.5 2014/12/28 16:36:28 titanofold Exp $
 
 EAPI=4
 inherit eutils pam user
@@ -26,7 +26,7 @@ DEPEND="dev-scheme/guile
 	odbc? ( dev-db/unixODBC )
 	gdbm? ( sys-libs/gdbm )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql[server] )
+	postgres? ( dev-db/postgresql[server] )
 	ldap? ( net-nds/openldap )"
 RDEPEND="${DEPEND}"
 

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=dev-libs/expat dev-libs/libpcre:3 sci-libs/plplot sys-libs/zlib mysql? ( virtual/mysql ) pdf? ( media-libs/libharu ) png? ( sys-libs/zlib media-libs/libpng media-libs/gd ) postgres? ( virtual/postgresql ) !minimal? ( sci-biology/primer3 sci-biology/clustalw ) X? ( x11-libs/libXt ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-libs/expat dev-libs/libpcre:3 sci-libs/plplot sys-libs/zlib mysql? ( virtual/mysql ) pdf? ( media-libs/libharu ) png? ( sys-libs/zlib media-libs/libpng media-libs/gd ) postgres? ( dev-db/postgresql ) !minimal? ( sci-biology/primer3 sci-biology/clustalw ) X? ( x11-libs/libXt ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=The European Molecular Biology Open Software Suite - A sequence analysis package
 EAPI=4
 HOMEPAGE=http://emboss.sourceforge.net/
@@ -7,8 +7,8 @@ IUSE=doc minimal mysql pdf png postgres static-libs X
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-2 LGPL-2
 PDEPEND=!minimal? ( sci-biology/aaindex sci-biology/cutg sci-biology/prints sci-biology/prosite sci-biology/rebase sci-biology/transfac )
-RDEPEND=dev-libs/expat dev-libs/libpcre:3 sci-libs/plplot sys-libs/zlib mysql? ( virtual/mysql ) pdf? ( media-libs/libharu ) png? ( sys-libs/zlib media-libs/libpng media-libs/gd ) postgres? ( virtual/postgresql ) !minimal? ( sci-biology/primer3 sci-biology/clustalw ) X? ( x11-libs/libXt ) !sys-devel/cons
+RDEPEND=dev-libs/expat dev-libs/libpcre:3 sci-libs/plplot sys-libs/zlib mysql? ( virtual/mysql ) pdf? ( media-libs/libharu ) png? ( sys-libs/zlib media-libs/libpng media-libs/gd ) postgres? ( dev-db/postgresql ) !minimal? ( sci-biology/primer3 sci-biology/clustalw ) X? ( x11-libs/libXt ) !sys-devel/cons
 SLOT=0
 SRC_URI=ftp://emboss.open-bio.org/pub/EMBOSS/old/6.3.1_p4/EMBOSS-6.3.1.tar.gz ftp://emboss.open-bio.org/pub/EMBOSS/old/6.3.1_p4/fixes/patches/patch-1-4.gz -> emboss-6.3.1_p4.patch.gz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=c12124440bb2b631b574cd94200d4363
+_md5_=6ba6e2fcb62ae1ccd3dae89b405a10a6

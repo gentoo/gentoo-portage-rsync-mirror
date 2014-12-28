@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/libnss-pgsql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/ChangeLog,v 1.8 2014/11/03 14:00:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-pgsql/ChangeLog,v 1.9 2014/12/28 16:55:57 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  libnss-pgsql-1.4.0.ebuild, libnss-pgsql-1.5.0_beta.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   libnss-pgsql-1.4.0.ebuild, libnss-pgsql-1.5.0_beta.ebuild:

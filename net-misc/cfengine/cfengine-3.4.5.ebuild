@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.4.5.ebuild,v 1.2 2014/11/03 13:48:25 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.4.5.ebuild,v 1.3 2014/12/28 16:40:24 titanofold Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ vim-syntax xml"
 DEPEND=">=sys-libs/db-4
 	acl? ( virtual/acl )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	selinux? ( sys-libs/libselinux )
 	tokyocabinet? ( dev-db/tokyocabinet )
 	qdbm? ( dev-db/qdbm )

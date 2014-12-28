@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.8.0.ebuild,v 1.1 2014/12/22 12:32:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.8.0.ebuild,v 1.2 2014/12/28 16:39:12 titanofold Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user
@@ -61,7 +61,7 @@ CDEPEND="dev-db/sqlite:3
 	odbc? ( dev-db/unixODBC )
 	osplookup? ( net-libs/osptoolkit )
 	portaudio? ( media-libs/portaudio )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	radius? ( net-dialup/radiusclient-ng )
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )

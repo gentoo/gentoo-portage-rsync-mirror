@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/yate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.32 2014/11/03 13:52:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.33 2014/12/28 16:45:17 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> yate-5.4.0.ebuild,
+  yate-9999.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> yate-5.4.0.ebuild,
   yate-9999.ebuild:

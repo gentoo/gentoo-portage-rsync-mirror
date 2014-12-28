@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.6.2.ebuild,v 1.1 2014/11/30 10:36:40 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.6.2.ebuild,v 1.2 2014/12/28 16:40:24 titanofold Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ IUSE="acl examples libvirt mysql postgres +qdbm selinux tokyocabinet vim-syntax 
 
 DEPEND="acl? ( virtual/acl )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	selinux? ( sys-libs/libselinux )
 	tokyocabinet? ( dev-db/tokyocabinet )
 	qdbm? ( dev-db/qdbm )

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.6.3.ebuild,v 1.3 2014/11/03 14:02:34 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.6.3.ebuild,v 1.4 2014/12/28 16:58:09 titanofold Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ DEPEND="
 	munge? ( sys-auth/munge )
 	ypbind? ( net-nds/ypbind )
 	pam? ( virtual/pam )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	ssl? ( dev-libs/openssl )
 	lua? ( dev-lang/lua )
 	!lua? ( !dev-lang/lua )

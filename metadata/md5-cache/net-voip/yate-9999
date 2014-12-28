@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install preinst prepare unpack
-DEPEND=doc? ( || ( app-doc/doxygen dev-util/kdoc ) ) virtual/pkgconfig postgres? ( virtual/postgresql ) mysql? ( virtual/mysql ) gsm? ( media-sound/gsm ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl ) h323? ( net-libs/h323plus ) zlib? ( sys-libs/zlib ) qt4? ( dev-qt/qtgui:4 dev-qt/designer:4 ) ilbc? ( dev-libs/ilbc-rfc3951 ) spandsp? ( >=media-libs/spandsp-0.0.3 ) dahdi? ( net-misc/dahdi ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEPEND=doc? ( || ( app-doc/doxygen dev-util/kdoc ) ) virtual/pkgconfig postgres? ( dev-db/postgresql ) mysql? ( virtual/mysql ) gsm? ( media-sound/gsm ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl ) h323? ( net-libs/h323plus ) zlib? ( sys-libs/zlib ) qt4? ( dev-qt/qtgui:4 dev-qt/designer:4 ) ilbc? ( dev-libs/ilbc-rfc3951 ) spandsp? ( >=media-libs/spandsp-0.0.3 ) dahdi? ( net-misc/dahdi ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=The Yate AV Suite
 EAPI=5
 HOMEPAGE=http://yate.null.ro/
 IUSE=doc sse2 sctp dahdi zaptel wpcard tdmcard wanpipe +ilbc +ilbc-webrtc +isac-float isac-fixed postgres mysql +gsm +speex h323 spandsp +ssl qt4 +zlib amrnb
 LICENSE=GPL-2
-RDEPEND=postgres? ( virtual/postgresql ) mysql? ( virtual/mysql ) gsm? ( media-sound/gsm ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl ) h323? ( net-libs/h323plus ) zlib? ( sys-libs/zlib ) qt4? ( dev-qt/qtgui:4 dev-qt/designer:4 ) ilbc? ( dev-libs/ilbc-rfc3951 ) spandsp? ( >=media-libs/spandsp-0.0.3 ) dahdi? ( net-misc/dahdi )
+RDEPEND=postgres? ( dev-db/postgresql ) mysql? ( virtual/mysql ) gsm? ( media-sound/gsm ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl ) h323? ( net-libs/h323plus ) zlib? ( sys-libs/zlib ) qt4? ( dev-qt/qtgui:4 dev-qt/designer:4 ) ilbc? ( dev-libs/ilbc-rfc3951 ) spandsp? ( >=media-libs/spandsp-0.0.3 ) dahdi? ( net-misc/dahdi )
 SLOT=0
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=c9cf21b5bd7525eac789ba105dfffe13
+_md5_=a2b4d1bc005c159b91d1b815307c865f

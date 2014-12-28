@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install postinst unpack
-DEPEND=virtual/postgresql app-text/xmlto !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-db/postgresql app-text/xmlto !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Name Service Switch module for use with PostgreSQL
 HOMEPAGE=http://pgfoundry.org/projects/sysauth/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=virtual/postgresql
+RDEPEND=dev-db/postgresql
 SLOT=0
 SRC_URI=http://pgfoundry.org/frs/download.php/1878/libnss-pgsql-1.5.0-beta.tgz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=69c98090842a6fd341ae1d677c93122c
+_md5_=28015884de6f95c328b38521f95422a6

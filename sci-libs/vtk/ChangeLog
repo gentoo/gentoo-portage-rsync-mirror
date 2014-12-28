@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.121 2014/12/26 18:15:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.122 2014/12/28 16:53:38 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> vtk-6.0.0.ebuild,
+  vtk-6.1.0.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   26 Dec 2014; Justin Lecher <jlec@gentoo.org> vtk-6.1.0.ebuild, metadata.xml:
   Add support to build all modules, #500814

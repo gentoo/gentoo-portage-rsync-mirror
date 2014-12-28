@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/gearmand
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.23 2014/11/03 14:01:54 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gearmand/ChangeLog,v 1.24 2014/12/28 16:57:22 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  gearmand-0.34-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   gearmand-0.34-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33-r1.ebuild,v 1.4 2014/11/03 13:46:48 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33-r1.ebuild,v 1.5 2014/12/28 16:38:14 titanofold Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ REQUIRED_USE="mysql? ( !postgres )"
 DEPEND="virtual/qmail
 	maildrop? ( mail-filter/maildrop )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql[server] )
+	postgres? ( dev-db/postgresql[server] )
 	spamassassin? ( mail-filter/spamassassin )"
 RDEPEND="${DEPEND}"
 

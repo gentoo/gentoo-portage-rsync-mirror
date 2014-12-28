@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.98.ebuild,v 1.8 2014/11/06 05:51:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.99.98.ebuild,v 1.9 2014/12/28 16:37:50 titanofold Exp $
 
 EAPI=5
 PYTHON_DEPEND="python? 2"
@@ -36,7 +36,7 @@ RDEPEND="!mail-client/nmh
 	mysql? ( virtual/mysql )
 	nls? ( sys-devel/gettext )
 	pam? ( virtual/pam )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	sasl? ( virtual/gsasl )
 	ssl? ( net-libs/gnutls )
 	tcpd? ( sys-apps/tcp-wrappers )

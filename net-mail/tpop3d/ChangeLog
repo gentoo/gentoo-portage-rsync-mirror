@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.36 2014/11/03 13:45:52 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.37 2014/12/28 16:37:11 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> tpop3d-1.5.5.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> tpop3d-1.5.5.ebuild:
   Update PostgreSQL dependencies and/or checks to virtual/postgresql.

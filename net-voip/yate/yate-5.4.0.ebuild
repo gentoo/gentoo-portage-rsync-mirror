@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-5.4.0.ebuild,v 1.3 2014/11/03 13:52:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-5.4.0.ebuild,v 1.4 2014/12/28 16:45:17 titanofold Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="doc sse2 sctp dahdi zaptel wpcard tdmcard wanpipe +ilbc +ilbc-webrtc +isac-float isac-fixed postgres mysql +gsm +speex h323 spandsp +ssl qt4 +zlib amrnb"
 
 RDEPEND="
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	mysql? ( virtual/mysql )
 	gsm? ( media-sound/gsm )
 	speex? ( media-libs/speex )

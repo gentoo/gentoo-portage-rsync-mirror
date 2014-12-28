@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.70 2014/11/03 13:53:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.71 2014/12/28 16:46:09 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> emboss-6.3.1_p4.ebuild,
+  emboss-6.3.1_p4-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> emboss-6.3.1_p4.ebuild,
   emboss-6.3.1_p4-r1.ebuild:

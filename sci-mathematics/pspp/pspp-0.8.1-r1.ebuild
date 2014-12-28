@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.1-r1.ebuild,v 1.4 2014/11/03 13:59:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.1-r1.ebuild,v 1.5 2014/12/28 16:54:20 titanofold Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ RDEPEND="
 			x11-libs/gtk+:2
 			>=x11-libs/gtksourceview-2.2:2.0 )
 	ncurses? ( sys-libs/ncurses )
-	postgres? ( virtual/postgresql[server] )"
+	postgres? ( dev-db/postgresql[server] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( virtual/latex-base )"

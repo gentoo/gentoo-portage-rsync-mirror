@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7.3.1.ebuild,v 1.3 2014/11/03 14:01:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-pgsql/pam-pgsql-0.7.3.1.ebuild,v 1.4 2014/12/28 16:56:37 titanofold Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ else
 fi
 
 RDEPEND="virtual/pam
-	>=virtual/postgresql-8.0
+	>=dev-db/postgresql-8.0
 	>=dev-libs/libgcrypt-1.2.0:0"
 DEPEND="${RDEPEND}"
 

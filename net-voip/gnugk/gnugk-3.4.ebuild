@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-3.4.ebuild,v 1.2 2014/11/03 13:52:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/gnugk-3.4.ebuild,v 1.3 2014/12/28 16:44:27 titanofold Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ RDEPEND="net-libs/ptlib:=
 	lua? ( dev-lang/lua )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	snmp? ( net-analyzer/net-snmp )
 	ssh? ( net-libs/libssh )
 	sqlite? ( dev-db/sqlite:3 )"

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mico
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.41 2014/11/03 13:49:19 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.42 2014/12/28 16:41:22 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> mico-2.3.13-r4.ebuild,
+  mico-2.3.13-r5.ebuild, mico-2.3.13-r6.ebuild, mico-2.3.13-r7.ebuild,
+  mico-9999.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> mico-2.3.13-r4.ebuild,
   mico-2.3.13-r5.ebuild, mico-2.3.13-r6.ebuild, mico-2.3.13-r7.ebuild,

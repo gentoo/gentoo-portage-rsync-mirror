@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install postinst postrm prepare setup
-DEPEND=virtual/qmail maildrop? ( mail-filter/maildrop ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql[server] ) spamassassin? ( mail-filter/spamassassin ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4 >=sys-apps/sed-4
+DEPEND=virtual/qmail maildrop? ( mail-filter/maildrop ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql[server] ) spamassassin? ( mail-filter/spamassassin ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4 >=sys-apps/sed-4
 DESCRIPTION=A collection of programs to manage virtual email domains and accounts on your Qmail mail servers
 EAPI=5
 HOMEPAGE=http://www.inter7.com/index.php?page=vpopmail
 IUSE=clearpasswd ipalias maildrop mysql postgres spamassassin
 KEYWORDS=~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=virtual/qmail maildrop? ( mail-filter/maildrop ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql[server] ) spamassassin? ( mail-filter/spamassassin )
+RDEPEND=virtual/qmail maildrop? ( mail-filter/maildrop ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql[server] ) spamassassin? ( mail-filter/spamassassin )
 REQUIRED_USE=mysql? ( !postgres )
 SLOT=0
 SRC_URI=mirror://sourceforge/vpopmail/vpopmail-5.4.33.tar.gz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmail	9aa474d2def73a95c642872fdca9c014	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=d11b82ee557fc316cdf2fbde43f33110
+_md5_=334b6b313dba0eb0e383d96a7028cfdb

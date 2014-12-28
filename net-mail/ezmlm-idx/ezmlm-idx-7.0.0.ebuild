@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-7.0.0.ebuild,v 1.5 2014/11/03 13:43:44 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-7.0.0.ebuild,v 1.6 2014/12/28 16:34:45 titanofold Exp $
 
 inherit qmail
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="mysql postgres"
 
 DEPEND="mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )"
+	postgres? ( dev-db/postgresql )"
 RDEPEND="${DEPEND}
 	virtual/qmail"
 

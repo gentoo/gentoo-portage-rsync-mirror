@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.7 2014/12/26 22:08:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.8 2014/12/28 16:51:34 titanofold Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="
 	x11-libs/qwt:5[svg]
 	!bundled-libs? ( <x11-libs/qwtpolar-1 )
 	grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] )
-	postgres? ( >=virtual/postgresql-8.4 )
+	postgres? ( >=dev-db/postgresql-8.4 )
 	python? (
 		dev-python/PyQt4[X,sql,svg,${PYTHON_USEDEP}]
 		dev-python/sip:=[${PYTHON_USEDEP}]

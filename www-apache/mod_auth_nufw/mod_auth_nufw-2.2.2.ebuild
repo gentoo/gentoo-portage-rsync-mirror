@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.2.ebuild,v 1.4 2014/11/03 14:03:13 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.2.ebuild,v 1.5 2014/12/28 16:58:48 titanofold Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+mysql postgres"
 
 DEPEND="mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql[server] )"
+	postgres? ( dev-db/postgresql[server] )"
 RDEPEND="${DEPEND}"
 
 APACHE2_MOD_FILE="mod_auth_nufw.so"

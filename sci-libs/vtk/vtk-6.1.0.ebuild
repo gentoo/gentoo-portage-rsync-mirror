@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0.ebuild,v 1.2 2014/12/26 18:15:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0.ebuild,v 1.3 2014/12/28 16:53:38 titanofold Exp $
 
 EAPI=5
 
@@ -80,7 +80,7 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	offscreen? ( media-libs/mesa[osmesa] )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	python? (
 		${PYTHON_DEPS}
 		dev-python/sip[${PYTHON_USEDEP}]

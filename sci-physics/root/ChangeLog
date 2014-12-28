@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.134 2014/11/11 20:02:40 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.135 2014/12/28 16:55:15 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> root-5.32.03-r2.ebuild,
+  root-5.34.18.ebuild, root-5.34.18-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   11 Nov 2014; Andrew Savchenko <bircoph@gmail.com> metadata.xml:
   Package is now directly maintained instead of proxy-maintaining.

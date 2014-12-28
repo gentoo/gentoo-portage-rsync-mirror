@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.26.ebuild,v 1.5 2014/11/03 13:51:28 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.26.ebuild,v 1.6 2014/12/28 16:43:39 titanofold Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ DEPEND="dev-lang/python
 	dev-python/pkipplib
 	ldap?     ( dev-python/python-ldap )
 	mysql?    ( dev-python/mysql-python )
-	postgres? ( virtual/postgresql[server] dev-db/pygresql )
+	postgres? ( dev-db/postgresql[server] dev-db/pygresql )
 	snmp?     ( net-analyzer/net-snmp =dev-python/pysnmp-3.4* )
 	xml?      ( dev-python/jaxml )"
 RDEPEND="${DEPEND}"
