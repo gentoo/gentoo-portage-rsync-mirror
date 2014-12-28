@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.55 2014/12/27 20:04:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.56 2014/12/28 07:23:56 graaff Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -647,11 +647,24 @@ ruby_get_implementation() {
 	esac
 }
 
-# @FUNCTION: ruby-ng_rspec
+# @FUNCTION: ruby-ng_rspec <arguments>
 # @DESCRIPTION:
 # This is simply a wrapper around the rspec command (executed by $RUBY})
 # which also respects TEST_VERBOSE and NOCOLOR environment variables.
+# Optionally takes arguments to pass on to the rspec invocation.  The
+# environment variable RSPEC_VERSION can be used to control the specific
+# rspec version that must be executed. It defaults to 2 for historical
+# compatibility.
 ruby-ng_rspec() {
+	local version=${RSPEC_VERSION-2}
+	local files="$@"
+
+	# Explicitly pass the expected spec directory since the versioned
+	# rspec wrappers don't handle this automatically.
+	if [ ${#@} -eq 0 ]; then
+		files="spec"
+	fi
+
 	if [[ ${DEPEND} != *"dev-ruby/rspec"* ]]; then
 		ewarn "Missing dev-ruby/rspec in \${DEPEND}"
 	fi
@@ -675,7 +688,7 @@ ruby-ng_rspec() {
 			;;
 	esac
 
-	${RUBY} -S rspec ${rspec_params} "$@" || die "rspec failed"
+	${RUBY} -S rspec-${version} ${rspec_params} ${files} || die "rspec failed"
 }
 
 # @FUNCTION: ruby-ng_cucumber

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.86 2014/12/27 09:47:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.87 2014/12/28 07:19:26 graaff Exp $
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> rspec-core-2.14.8-r2.ebuild:
+  Move stable keywords forward to a version with the rspec-2 wrapper.
 
   27 Dec 2014; Hans de Graaff <graaff@gentoo.org> -rspec-core-2.14.8-r1.ebuild:
   Cleanup.
