@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.1.2-r1.ebuild,v 1.4 2014/10/29 19:08:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.1.2-r1.ebuild,v 1.5 2014/12/28 08:56:22 graaff Exp $
 
 EAPI=5
 
@@ -36,5 +36,5 @@ all_ruby_prepare() {
 each_ruby_test() {
 	# Only run the rspec 2 case since we don't have appraisals. Setting
 	# up everything correctly without it seems very complicated.
-	${RUBY} -S rspec --format progress spec/suites/rspec_2/unit || die
+	ruby-ng_rspec --format progress spec/suites/rspec_2/unit || die
 }

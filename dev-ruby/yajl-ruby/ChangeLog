@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yajl-ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.33 2014/08/30 10:26:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.34 2014/12/28 08:43:01 graaff Exp $
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> yajl-ruby-1.2.1.ebuild:
+  Use eclass rspec invocation to use the rspec-2 wrapper.
 
   30 Aug 2014; Manuel Rüger <mrueg@gentoo.org> yajl-ruby-1.1.0-r1.ebuild:
   Stable on amd64.

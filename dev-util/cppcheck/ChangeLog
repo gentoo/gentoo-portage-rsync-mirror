@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.58 2014/11/28 13:02:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.59 2014/12/28 08:47:36 jer Exp $
+
+*cppcheck-1.67 (28 Dec 2014)
+
+  28 Dec 2014; Jeroen Roovers <jer@gentoo.org> +cppcheck-1.67.ebuild:
+  Version bump (bug #525954 by Christian Strahl).
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> cppcheck-1.66.ebuild:
   Support python 3.4

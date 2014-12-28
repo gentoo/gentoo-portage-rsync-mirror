@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.2.1.ebuild,v 1.1 2014/08/20 18:44:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/yajl-ruby-1.2.1.ebuild,v 1.2 2014/12/28 08:43:01 graaff Exp $
 
 EAPI=5
 
@@ -42,5 +42,5 @@ each_ruby_compile() {
 each_ruby_test() {
 	# Set RUBYLIB to pass search path on to additional interpreters that
 	# are started.
-	RUBYLIB=lib ${RUBY} -S rspec --format progress spec || die
+	RUBYLIB=lib ruby-ng_rspec || die
 }
