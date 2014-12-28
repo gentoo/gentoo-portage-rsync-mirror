@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.119 2014/12/28 06:33:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.120 2014/12/28 22:24:40 twitch153 Exp $
+
+*webapp-config-1.53-r2 (28 Dec 2014)
+
+  28 Dec 2014; Devan Franchini <twitch153@gentoo.org>
+  +webapp-config-1.53-r2.ebuild, -webapp-config-1.53-r1.ebuild,
+  webapp-config-9999.ebuild:
+  Adds sys-apps/gentoo-functions to dependency, bug #504132
 
 *webapp-config-1.52-r1 (28 Dec 2014)
 
