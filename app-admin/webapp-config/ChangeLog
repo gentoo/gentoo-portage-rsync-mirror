@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.118 2014/12/28 02:14:16 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.119 2014/12/28 06:33:54 floppym Exp $
+
+*webapp-config-1.52-r1 (28 Dec 2014)
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> +webapp-config-1.52-r1.ebuild:
+  Restore stable ebuild.
 
   28 Dec 2014; Devan Franchini <twitch153@gentoo.org>
   -webapp-config-1.52-r1.ebuild:
