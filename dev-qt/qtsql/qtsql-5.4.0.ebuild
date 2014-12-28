@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-5.4.0.ebuild,v 1.1 2014/12/12 14:30:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-5.4.0.ebuild,v 1.2 2014/12/28 15:44:26 titanofold Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="
 	mysql? ( virtual/mysql:= )
 	oci8? ( dev-db/oracle-instantclient-basic )
 	odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
-	postgres? ( virtual/postgresql:* )
+	postgres? ( dev-db/postgresql:* )
 	sqlite? ( dev-db/sqlite:3 )
 "
 RDEPEND="${DEPEND}"

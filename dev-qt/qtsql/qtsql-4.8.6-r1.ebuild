@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-4.8.6-r1.ebuild,v 1.2 2014/12/15 21:55:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/qtsql-4.8.6-r1.ebuild,v 1.3 2014/12/28 15:44:26 titanofold Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="
 		>=dev-db/unixODBC-2.3.2-r2[${MULTILIB_USEDEP}]
 		>=dev-db/libiodbc-3.52.8-r2[${MULTILIB_USEDEP}]
 	) )
-	postgres? ( virtual/postgresql:* )
+	postgres? ( dev-db/postgresql:* )
 	sqlite? ( >=dev-db/sqlite-3.8.3:3[${MULTILIB_USEDEP}] )
 "
 RDEPEND="${DEPEND}"

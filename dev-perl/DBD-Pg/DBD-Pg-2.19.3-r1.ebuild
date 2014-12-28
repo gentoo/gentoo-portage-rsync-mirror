@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-2.19.3-r1.ebuild,v 1.2 2014/11/03 11:51:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-2.19.3-r1.ebuild,v 1.3 2014/12/28 15:39:31 titanofold Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="virtual/perl-version
 	>=dev-perl/DBI-1.52
-	virtual/postgresql"
+	dev-db/postgresql"
 DEPEND="${RDEPEND}"
 
 # testcases require a local database with an

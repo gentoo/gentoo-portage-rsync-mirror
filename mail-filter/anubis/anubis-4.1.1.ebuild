@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-4.1.1.ebuild,v 1.6 2014/11/03 12:48:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/anubis-4.1.1.ebuild,v 1.7 2014/12/28 15:52:31 titanofold Exp $
 
 EAPI=4
 inherit eutils autotools pam user
@@ -20,7 +20,7 @@ RDEPEND="sys-libs/gdbm
 	guile? ( >=dev-scheme/guile-1.8 )
 	mysql? ( virtual/mysql )
 	pam?   ( virtual/pam )
-	postgres? ( virtual/postgresql[server] )
+	postgres? ( dev-db/postgresql[server] )
 	nls? ( sys-devel/gettext )
 	pcre? ( >=dev-libs/libpcre-3.9 )
 	sasl? ( virtual/gsasl )

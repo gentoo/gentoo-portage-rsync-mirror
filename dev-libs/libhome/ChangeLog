@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.17 2014/11/04 02:58:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.18 2014/12/28 15:31:22 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  libhome-0.10.2-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   04 Nov 2014; Patrick Lauer <patrick@gentoo.org> libhome-0.10.2-r1.ebuild:
   More cleanups

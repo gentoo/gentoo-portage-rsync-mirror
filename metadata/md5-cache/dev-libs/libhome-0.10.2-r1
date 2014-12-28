@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=berkdb? ( >=sys-libs/db-4 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( virtual/postgresql[server] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=berkdb? ( >=sys-libs/db-4 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql[server] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=libhome is a library providing a getpwnam() emulation
 EAPI=5
 HOMEPAGE=http://pll.sourceforge.net
 IUSE=berkdb ldap mysql pam postgres
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2
-RDEPEND=berkdb? ( >=sys-libs/db-4 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( virtual/postgresql[server] )
+RDEPEND=berkdb? ( >=sys-libs/db-4 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql[server] )
 SLOT=0
 SRC_URI=mirror://sourceforge/pll/libhome-0.10.2.tar.gz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a615a18ba136d393d934894c6c08a7e8
+_md5_=e75820b8f03f319608d675734fc32e5b

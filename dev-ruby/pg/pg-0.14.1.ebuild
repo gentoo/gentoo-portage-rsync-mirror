@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.14.1.ebuild,v 1.9 2014/11/03 12:43:17 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.14.1.ebuild,v 1.10 2014/12/28 15:45:53 titanofold Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -22,10 +22,10 @@ KEYWORDS="amd64 ~arm ~hppa ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64
 IUSE=""
 
 RDEPEND="${RDEPEND}
-	virtual/postgresql"
+	dev-db/postgresql"
 DEPEND="${DEPEND}
-	virtual/postgresql
-	test? ( virtual/postgresql[server,threads] )"
+	dev-db/postgresql
+	test? ( dev-db/postgresql[server,threads] )"
 
 ruby_add_bdepend "
 	doc? (

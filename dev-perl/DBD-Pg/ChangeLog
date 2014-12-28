@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.137 2014/11/03 11:51:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.138 2014/12/28 15:39:31 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  DBD-Pg-2.19.3-r1.ebuild, DBD-Pg-3.3.0.ebuild, DBD-Pg-3.4.2.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   DBD-Pg-2.19.3-r1.ebuild, DBD-Pg-3.3.0.ebuild, DBD-Pg-3.4.2.ebuild:

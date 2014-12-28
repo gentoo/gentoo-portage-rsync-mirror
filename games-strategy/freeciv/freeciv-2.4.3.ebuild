@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.3.ebuild,v 1.3 2014/11/06 05:54:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.3.ebuild,v 1.4 2014/12/28 15:48:56 titanofold Exp $
 
 # FIXME: gtk3 support breaks ggz support
 
@@ -23,7 +23,7 @@ RDEPEND="app-arch/bzip2
 	sys-libs/zlib
 	auth? (
 		mysql? ( virtual/mysql )
-		postgres? ( virtual/postgresql )
+		postgres? ( dev-db/postgresql )
 		sqlite? ( dev-db/sqlite:3 )
 		!mysql? ( !postgres? ( !sqlite? ( virtual/mysql ) ) )
 	)

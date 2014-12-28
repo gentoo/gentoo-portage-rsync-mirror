@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.157 2014/11/06 05:54:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.158 2014/12/28 15:48:56 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> freeciv-2.4.3.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   06 Nov 2014; Mike Frysinger <vapier@gentoo.org> freeciv-2.4.3.ebuild:
   Depend on libltdl rather than libtool #528294 by Pacho Ramos.

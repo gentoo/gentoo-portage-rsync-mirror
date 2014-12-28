@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/barnyard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.29 2014/11/03 12:54:48 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.30 2014/12/28 16:01:11 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  barnyard-0.2.0-r3.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   barnyard-0.2.0-r3.ebuild:

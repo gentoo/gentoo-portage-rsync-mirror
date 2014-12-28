@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21-r1.ebuild,v 1.7 2014/11/03 12:40:28 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.21-r1.ebuild,v 1.8 2014/12/28 15:41:58 titanofold Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples"
 
 RDEPEND=">=dev-python/egenix-mx-base-2.0.3[${PYTHON_USEDEP}]
-	virtual/postgresql
+	dev-db/postgresql
 	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}"
 

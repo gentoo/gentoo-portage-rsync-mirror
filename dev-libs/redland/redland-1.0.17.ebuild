@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.17.ebuild,v 1.4 2014/11/06 05:40:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.17.ebuild,v 1.5 2014/12/28 15:34:51 titanofold Exp $
 
 EAPI=5
 inherit db-use libtool
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/libltdl:0
 	berkdb? ( sys-libs/db )
 	>=media-libs/raptor-2.0.14
 	>=dev-libs/rasqal-0.9.32
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	iodbc? ( dev-db/libiodbc )
 	odbc? ( dev-db/unixODBC )"
 DEPEND="${RDEPEND}
