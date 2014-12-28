@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.12.2.ebuild,v 1.2 2014/12/27 19:40:03 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.12.2.ebuild,v 1.3 2014/12/28 14:28:23 tommy Exp $
 
 EAPI="5"
 
@@ -17,6 +17,8 @@ else
 	SRC_URI="http://download.enlightenment.org/rel/libs/${PN}/${MY_P}.tar.bz2"
 	EKEY_STATE="snap"
 fi
+
+SRC_URI="${SRC_URI} mirror://gentoo/efl-1.12.2-lauch_via_logind_or_root_privilege.patch.xz"
 
 inherit autotools enlightenment
 
@@ -156,7 +158,7 @@ DEPEND="
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-lauch_via_logind_or_root_privilege.patch
+	epatch "${WORKDIR}"/${P}-lauch_via_logind_or_root_privilege.patch
 	eautoreconf
 	enlightenment_src_prepare
 }
