@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/twilio
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twilio/ChangeLog,v 1.1 2014/12/28 09:37:54 ercpe Exp $
+
+*twilio-3.6.9 (28 Dec 2014)
+
+  28 Dec 2014; Johann Schmitz <ercpe@gentoo.org> +metadata.xml,
+  +twilio-3.6.9.ebuild:
+  New ebuild for twilio api client

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/efl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.21 2014/12/27 19:40:03 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.22 2014/12/28 09:43:36 tommy Exp $
+
+  28 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/efl-1.12.2-lauch_via_logind_or_root_privilege.patch:
+  Add missing patch
 
   27 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> efl-1.12.2.ebuild:
   Re-add missing ~arm keyword

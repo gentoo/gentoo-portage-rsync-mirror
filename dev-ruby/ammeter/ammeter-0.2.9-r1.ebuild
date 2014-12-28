@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ammeter-0.2.9-r1.ebuild,v 1.2 2014/09/24 07:21:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ammeter-0.2.9-r1.ebuild,v 1.3 2014/12/28 09:34:00 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -52,6 +52,7 @@ all_ruby_prepare() {
 	sed -i \
 		-e '/git ls-files/d' \
 		-e '/\(cucumber\|aruba\)/s:,.*$::' \
+		-e '/rspec/ s/>=/~>/' \
 		${RUBY_FAKEGEM_GEMSPEC} || die
 
 	# Specs are not compatible with Rails 4.1
@@ -62,5 +63,5 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	${RUBY} -S bundle exec ${RUBY} -S rspec spec || die
+	${RUBY} -S bundle exec ${RUBY} -S rspec-2 spec || die
 }

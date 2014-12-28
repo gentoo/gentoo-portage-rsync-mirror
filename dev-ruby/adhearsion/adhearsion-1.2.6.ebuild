@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/adhearsion-1.2.6.ebuild,v 1.2 2013/08/12 02:20:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/adhearsion/adhearsion-1.2.6.ebuild,v 1.3 2014/12/28 09:38:17 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -41,7 +41,7 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	SKIP_RCOV=true ${RUBY} -S rspec spec || die
+	SKIP_RCOV=true ruby-ng_rspec || die
 }
 
 all_ruby_install() {
