@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.70 2014/12/27 23:22:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.71 2014/12/27 23:52:24 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -1180,9 +1180,16 @@ _python_check_dead_variables() {
 		fi
 	done
 
+	for v in PYTHON_{CPPFLAGS,CFLAGS,CXXFLAGS,LDFLAGS}
+	do
+		if [[ ${!v} ]]; then
+			die "${v} is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#PYTHON_CFLAGS"
+		fi
+	done
+
 	for v in PYTHON_TESTS_RESTRICTED_ABIS PYTHON_EXPORT_PHASE_FUNCTIONS \
 		PYTHON_VERSIONED_{SCRIPTS,EXECUTABLES} PYTHON_NONVERSIONED_EXECUTABLES \
-		PYTHON_TEST_VERBOSITY PYTHON_{CPPFLAGS,CFLAGS,CXXFLAGS,LDFLAGS}
+		PYTHON_TEST_VERBOSITY
 	do
 		if [[ ${!v} ]]; then
 			die "${v} is invalid for python-r1 suite"
@@ -1190,13 +1197,16 @@ _python_check_dead_variables() {
 	done
 
 	for v in DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES DISTUTILS_SETUP_FILES \
-		DISTUTILS_GLOBAL_OPTIONS DISTUTILS_SRC_TEST \
-		DISTUTILS_DISABLE_TEST_DEPENDENCY PYTHON_MODNAME
+		DISTUTILS_GLOBAL_OPTIONS DISTUTILS_SRC_TEST PYTHON_MODNAME
 	do
 		if [[ ${!v} ]]; then
-			die "${v} is invalid for distutils-r1"
+			die "${v} is invalid for distutils-r1, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#${v}"
 		fi
 	done
+
+	if [[ ${DISTUTILS_DISABLE_TEST_DEPENDENCY} ]]; then
+		die "${v} is invalid for distutils-r1, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#DISTUTILS_SRC_TEST"
+	fi
 }
 
 python_pkg_setup() {
