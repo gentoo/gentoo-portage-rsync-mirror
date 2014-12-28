@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.5.0.ebuild,v 1.4 2014/12/27 19:25:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/guake/guake-0.5.0.ebuild,v 1.5 2014/12/28 12:09:48 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.orig.tar.gz -> ${
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~x86"
+KEYWORDS="amd64 arm x86"
 
 RDEPEND="
 	dev-python/dbus-python

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.157 2014/12/19 13:43:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.158 2014/12/28 12:25:08 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> goffice-0.10.18.ebuild:
+  Stable for ppc, wrt bug #529964
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> goffice-0.10.18.ebuild:
   amd64 stable, bug 529964

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.198 2014/12/19 13:35:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.199 2014/12/28 12:23:13 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libsigc++-2.4.0.ebuild:
+  Stable for ppc, wrt bug #529964
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> libsigc++-2.4.0.ebuild:
   amd64 stable, bug 529964

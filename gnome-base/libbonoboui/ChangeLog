@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.222 2014/12/19 13:44:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.223 2014/12/28 12:23:58 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libbonoboui-2.24.5-r1.ebuild:
+  Stable for ppc, wrt bug #529964
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> libbonoboui-2.24.5-r1.ebuild:
   amd64 stable, bug 529964

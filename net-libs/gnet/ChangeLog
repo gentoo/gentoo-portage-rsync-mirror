@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.85 2014/12/19 13:41:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.86 2014/12/28 12:24:43 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gnet-2.0.8-r2.ebuild:
+  Stable for ppc, wrt bug #529964
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> gnet-2.0.8-r2.ebuild:
   amd64 stable, bug 529964

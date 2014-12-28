@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.274 2014/12/22 21:34:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.275 2014/12/28 12:23:48 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gvfs-1.20.3.ebuild:
+  Stable for ppc, wrt bug #529964
 
 *gvfs-1.22.2 (22 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gjs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.56 2014/12/21 12:41:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.57 2014/12/28 12:22:57 ago Exp $
+
+  28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gjs-1.40.1-r1.ebuild:
+  Stable for ppc, wrt bug #529964
 
 *gjs-1.42.0 (21 Dec 2014)
 
