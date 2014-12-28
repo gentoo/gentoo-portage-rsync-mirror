@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.12 2014/08/13 11:13:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/ChangeLog,v 1.13 2014/12/28 19:11:47 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> libhid-0.2.16-r4.ebuild:
+  Set REQUIRED_USE for python.
 
   13 Aug 2014; Jeroen Roovers <jer@gentoo.org> files/libhid-0.2.16-swig.patch:
   Add assert() patch by Martin von Gagern (bug #427010).

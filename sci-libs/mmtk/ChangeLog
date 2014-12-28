@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mmtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.13 2014/10/24 10:13:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.14 2014/12/28 19:05:33 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> mmtk-2.7.9.ebuild:
+  Drop PYTHON_MODNAME, bug 553838.
 
   24 Oct 2014; Justin Lecher <jlec@gentoo.org> mmtk-2.7.3.ebuild,
   mmtk-2.7.5.ebuild, mmtk-2.7.9.ebuild:
@@ -60,4 +63,3 @@
   +mmtk-2.4.6.ebuild:
   Add the Molecular Modeling ToolKit for Python. Copied from the
   scientificpython ebuild, with deps and global variables changed.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/imdbpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.23 2014/05/09 04:42:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.24 2014/12/28 19:24:06 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> imdbpy-4.9-r1.ebuild,
+  imdbpy-5.0.ebuild:
+  Drop DISTUTILS_GLOBAL_OPTIONS.
 
 *imdbpy-5.0 (09 May 2014)
 

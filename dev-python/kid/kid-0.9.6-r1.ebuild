@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.6-r1.ebuild,v 1.2 2013/10/22 11:55:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.6-r1.ebuild,v 1.3 2014/12/28 19:24:57 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,14 +19,8 @@ IUSE="doc examples test"
 RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/docutils[${PYTHON_USEDEP}] )"
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS=( README doc/{guide.txt,index.txt,notes.txt} )
-
-python_prepare_all() {
-	use test && DISTUTILS_NO_PARALLEL_BUILD=1
-	distutils-r1_python_prepare_all
-}
 
 python_compile_all() {
 	use doc && emake -C doc

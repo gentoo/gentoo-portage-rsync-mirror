@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mocker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.11 2014/03/31 21:11:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.12 2014/12/28 19:26:07 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> mocker-1.1.1-r1.ebuild:
+  python-r1 cleanup.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> mocker-1.1.1-r1.ebuild:
   Add support for the new PyPy slotting.

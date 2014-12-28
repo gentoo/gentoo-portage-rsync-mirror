@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kid
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.17 2013/10/22 11:55:10 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/ChangeLog,v 1.18 2014/12/28 19:24:57 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> kid-0.9.6-r1.ebuild:
+  python-r1 cleanup.
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> kid-0.9.6-r1.ebuild:
   Marked ~x64-macos, bug #487670

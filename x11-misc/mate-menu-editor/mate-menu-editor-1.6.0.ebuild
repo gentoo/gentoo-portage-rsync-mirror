@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mate-menu-editor/mate-menu-editor-1.6.0.ebuild,v 1.2 2014/05/04 14:55:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mate-menu-editor/mate-menu-editor-1.6.0.ebuild,v 1.3 2014/12/28 19:08:02 floppym Exp $
 
 EAPI="5"
 
 GCONF_DEBUG="no"
 PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="xml"
-SUPPORT_PYTHON_ABIS="1"
 
 inherit autotools gnome2 python-r1 versionator
 
@@ -21,12 +20,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
 
-COMMON_DEPEND=">=dev-python/pygobject-2.15.1:2[${PYTHON_USEDEP}]
+COMMON_DEPEND="${PYTHON_DEPS}
+	>=dev-python/pygobject-2.15.1:2[${PYTHON_USEDEP}]
 	>=dev-python/pygtk-2.13:2[${PYTHON_USEDEP}]
 	>=mate-base/mate-menus-1.6:0[introspection,python]"
 
 RDEPEND="${COMMON_DEPEND}
-	${PYTHON_DEPS}
 	>=mate-base/mate-panel-1.6:0
 	x11-libs/gdk-pixbuf:2[introspection]
 	x11-libs/gtk+:2[introspection]
@@ -36,6 +35,8 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40:*
 	sys-devel/gettext:*
 	virtual/pkgconfig:*"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
 	# Tarball has no proper build system, should be fixed on next release.

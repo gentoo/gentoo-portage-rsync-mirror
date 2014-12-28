@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.78 2014/10/24 13:01:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.79 2014/12/28 19:10:26 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> libdnet-1.12.ebuild:
+  python-r1 cleanup.
 
   24 Oct 2014; Jeroen Roovers <jer@gentoo.org> libdnet-1.12.ebuild:
   Drop dev-lang/python-2.6 support.

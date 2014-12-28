@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.25 2014/11/14 13:43:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/ChangeLog,v 1.26 2014/12/28 19:23:07 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org> -enable-4.3.0.ebuild:
+  Remove old.
 
 *enable-4.4.1 (14 Nov 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.9.ebuild,v 1.2 2014/10/24 10:13:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/mmtk-2.7.9.ebuild,v 1.3 2014/12/28 19:05:33 floppym Exp $
 
 EAPI=5
 
@@ -14,8 +14,6 @@ NUMBER="4324"
 
 MY_PN=${PN/mmtk/MMTK}
 MY_P=${MY_PN}-${PV}
-
-PYTHON_MODNAME="${MY_PN}"
 
 DESCRIPTION="Molecular Modeling ToolKit for Python"
 HOMEPAGE="http://dirac.cnrs-orleans.fr/MMTK/"

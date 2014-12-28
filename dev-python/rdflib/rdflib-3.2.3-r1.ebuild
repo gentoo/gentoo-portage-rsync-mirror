@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.2.3-r1.ebuild,v 1.11 2014/01/15 12:41:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-3.2.3-r1.ebuild,v 1.12 2014/12/28 19:30:39 floppym Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
-PYTHON_USE_WITH="sqlite?"
+PYTHON_REQ_USE="sqlite?"
 DISTUTILS_NO_PARALLEL_BUILD=true
 
 inherit distutils-r1

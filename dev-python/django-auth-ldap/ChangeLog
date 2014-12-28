@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-auth-ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/ChangeLog,v 1.16 2014/10/06 16:08:04 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-auth-ldap/ChangeLog,v 1.17 2014/12/28 19:22:08 floppym Exp $
+
+  28 Dec 2014; Mike Gilbert <floppym@gentoo.org>
+  -django-auth-ldap-1.1.4-r1.ebuild, -django-auth-ldap-1.2.0.ebuild:
+  Remove old.
 
   06 Oct 2014; Johann Schmitz <ercpe@gentoo.org> django-auth-ldap-1.2.2.ebuild:
   Added missing die to test call. Thanks jlec for catching that.

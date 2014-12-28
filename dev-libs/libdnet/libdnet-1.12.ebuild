@@ -1,11 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.21 2014/10/24 13:01:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.22 2014/12/28 19:10:26 floppym Exp $
 
 EAPI=5
 
 AT_M4DIR="config"
-PYTHON_DEPEND="python? 2"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=1
 
@@ -25,6 +24,7 @@ IUSE="ipv6 python static-libs test"
 DEPEND="python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}"
 RESTRICT="test"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 DOCS=( README THANKS TODO )
 

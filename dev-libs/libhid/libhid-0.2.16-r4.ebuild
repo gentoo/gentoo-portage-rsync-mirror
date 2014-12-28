@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16-r4.ebuild,v 1.1 2014/08/13 11:08:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16-r4.ebuild,v 1.2 2014/12/28 19:11:47 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -24,6 +24,7 @@ DEPEND="
 	doc? ( app-doc/doxygen )
 	python? ( dev-lang/swig )
 "
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
