@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.2.3.ebuild,v 1.2 2014/12/26 09:04:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.2.3.ebuild,v 1.3 2014/12/28 20:37:20 graaff Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -42,7 +42,7 @@ CDEPEND="${PYTHON_DEPS}
 		dev-libs/libzip
 		>=virtual/mysql-5.1
 		dev-libs/libpcre
-		>=sci-libs/gdal-1.11.1-r1
+		>=sci-libs/gdal-1.11.1-r1[-mdb]
 		virtual/opengl
 		>=dev-lang/lua-5.1[deprecated]
 		|| ( sys-libs/e2fsprogs-libs dev-libs/ossp-uuid )

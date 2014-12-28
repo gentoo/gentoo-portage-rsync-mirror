@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16247 2014/12/26 22:40:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16248 2014/12/28 21:00:04 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (28 Dec 2014)
+# Split ebuilds are no longer maintained. Migrate to the unified
+# ebuilds invoking the following, substituting SLOT for the desired
+# slot and optionally enabling the server and/or docs USE flags:
+#   emerge dev-db/postgresql:SLOT
+# No further action is required.
+dev-db/postgresql-docs
+dev-db/postgresql-base
+dev-db/postgresql-server
 
 # Mike Gilbert <floppym@gentoo.org> (25 Dec 2014)
 # Deprecated PIL imports, bug 471552.
