@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.2.8.31.ebuild,v 1.8 2014/11/03 13:32:35 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.2.8.31.ebuild,v 1.9 2014/12/28 16:18:27 titanofold Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="alias debug nls mysql postgres ssl static status"
 
 RDEPEND="mysql? ( virtual/mysql )
 	nls? ( virtual/libintl )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	ssl? ( dev-libs/openssl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.22-r1.ebuild,v 1.3 2014/11/04 04:06:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/nufw-2.2.22-r1.ebuild,v 1.4 2014/12/28 16:20:25 titanofold Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ DEPEND="
 	nfqueue? ( net-libs/libnfnetlink net-libs/libnetfilter_queue )
 	pam? ( sys-libs/pam )
 	pam_nuauth? ( sys-libs/pam )
-	postgres? ( virtual/postgresql[server] )
+	postgres? ( dev-db/postgresql[server] )
 	prelude? ( dev-libs/libprelude )
 "
 RDEPEND=${DEPEND}

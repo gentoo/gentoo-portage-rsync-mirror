@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/nufw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.44 2014/11/04 04:06:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nufw/ChangeLog,v 1.45 2014/12/28 16:20:25 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> nufw-2.2.22-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   04 Nov 2014; Patrick Lauer <patrick@gentoo.org> -nufw-2.2.21.ebuild,
   nufw-2.2.22-r1.ebuild:

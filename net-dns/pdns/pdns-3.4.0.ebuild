@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.0.ebuild,v 1.2 2014/11/03 13:33:17 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.0.ebuild,v 1.3 2014/12/28 16:19:25 titanofold Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RDEPEND="!static? (
 		cryptopp? ( dev-libs/crypto++ )
 		lua? ( dev-lang/lua )
 		mysql? ( virtual/mysql )
-		postgres? ( virtual/postgresql:= )
+		postgres? ( dev-db/postgresql:= )
 		ldap? ( >=net-nds/openldap-2.0.27-r4 )
 		sqlite? ( dev-db/sqlite:3 )
 		odbc? ( dev-db/unixODBC )
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 		cryptopp? ( dev-libs/crypto++[static-libs(+)] )
 		lua? ( dev-lang/lua[static-libs(+)] )
 		mysql? ( virtual/mysql[static-libs(+)] )
-		postgres? ( virtual/postgresql[static-libs(+)] )
+		postgres? ( dev-db/postgresql[static-libs(+)] )
 		ldap? ( >=net-nds/openldap-2.0.27-r4[static-libs(+)] )
 		sqlite? ( dev-db/sqlite:3[static-libs(+)] )
 		odbc? ( dev-db/unixODBC[static-libs(+)] )

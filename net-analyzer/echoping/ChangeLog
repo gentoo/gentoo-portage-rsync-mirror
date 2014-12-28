@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.35 2014/11/03 13:21:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.36 2014/12/28 16:02:50 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  echoping-6.0.2-r2.ebuild, echoping-6.0.2_p434.ebuild,
+  echoping-6.0.2_p434-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   echoping-6.0.2-r2.ebuild, echoping-6.0.2_p434.ebuild,

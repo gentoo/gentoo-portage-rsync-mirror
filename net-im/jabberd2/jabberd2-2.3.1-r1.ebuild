@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.1-r1.ebuild,v 1.9 2014/11/03 13:36:46 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.1-r1.ebuild,v 1.10 2014/12/28 16:24:33 titanofold Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="dev-libs/expat
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	ssl? ( >=dev-libs/openssl-1.0.1:0 )
 	sqlite? ( dev-db/sqlite:3 )
 	zlib? ( sys-libs/zlib )"

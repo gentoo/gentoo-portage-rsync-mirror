@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.129 2014/11/03 13:29:59 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.130 2014/12/28 16:14:40 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  freeradius-2.2.5.ebuild, freeradius-3.0.3.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   freeradius-2.2.5.ebuild, freeradius-3.0.3.ebuild:

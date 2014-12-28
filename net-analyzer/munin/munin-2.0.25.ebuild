@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.25.ebuild,v 1.1 2014/12/24 12:33:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.25.ebuild,v 1.2 2014/12/28 16:08:50 titanofold Exp $
 
 EAPI=5
 
@@ -62,7 +62,7 @@ DEPEND_COM="
 		dev-perl/Cache-Cache
 		dev-perl/DBD-mysql
 		)
-	postgres? ( dev-perl/DBD-Pg virtual/postgresql )
+	postgres? ( dev-perl/DBD-Pg dev-db/postgresql )
 	ssl? ( dev-perl/Net-SSLeay )
 	syslog? ( virtual/perl-Sys-Syslog )
 	!minimal? (

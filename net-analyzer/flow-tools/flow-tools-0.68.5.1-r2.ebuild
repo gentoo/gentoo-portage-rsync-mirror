@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r2.ebuild,v 1.7 2014/11/03 13:22:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68.5.1-r2.ebuild,v 1.8 2014/12/28 16:03:48 titanofold Exp $
 
 EAPI=4
 inherit eutils user
@@ -17,7 +17,7 @@ IUSE="debug mysql postgres ssl static-libs"
 RDEPEND="sys-apps/tcp-wrappers
 	sys-libs/zlib
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	ssl? ( dev-libs/openssl )"
 
 DEPEND="${RDEPEND}

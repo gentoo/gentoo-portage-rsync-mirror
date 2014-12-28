@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.96 2014/12/21 12:14:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.97 2014/12/28 16:25:53 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  eggdrop-1.6.21-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   21 Dec 2014; Michał Górny <mgorny@gentoo.org> -eggdrop-1.6.21.ebuild,
   eggdrop-1.6.21-r1.ebuild:

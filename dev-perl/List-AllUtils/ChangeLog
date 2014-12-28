@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-AllUtils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/ChangeLog,v 1.8 2014/12/14 14:44:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/ChangeLog,v 1.9 2014/12/28 16:26:59 zlogene Exp $
+
+  28 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> List-AllUtils-0.90.0.ebuild:
+  Add ~arm keyword
 
   14 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> List-AllUtils-0.90.0.ebuild:
   Add ~alpha keyword wrt bug #531172

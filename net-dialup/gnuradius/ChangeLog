@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnuradius
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.25 2014/11/04 03:20:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/ChangeLog,v 1.26 2014/12/28 16:15:33 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  gnuradius-1.6.1-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   04 Nov 2014; Patrick Lauer <patrick@gentoo.org> -gnuradius-1.5.ebuild,
   -gnuradius-1.6.1.ebuild, gnuradius-1.6.1-r1.ebuild:

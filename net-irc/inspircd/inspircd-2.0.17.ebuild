@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.17.ebuild,v 1.5 2014/11/05 19:39:10 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.17.ebuild,v 1.6 2014/12/28 16:26:45 titanofold Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	gnutls? ( net-libs/gnutls dev-libs/libgcrypt:0 )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql[server] )
+	postgres? ( dev-db/postgresql[server] )
 	pcre? ( dev-libs/libpcre )
 	sqlite? ( >=dev-db/sqlite-3.0 )
 	tre? ( dev-libs/tre )"

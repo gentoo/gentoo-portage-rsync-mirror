@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.96.ebuild,v 1.4 2014/11/03 13:40:09 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.96.ebuild,v 1.5 2014/12/28 16:29:23 titanofold Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND="dev-db/cdb"
 DEPEND="${RDEPEND}
 		>=dev-libs/bglibs-1.041
 		mysql? ( virtual/mysql )
-		postgres? ( virtual/postgresql[server] )
+		postgres? ( dev-db/postgresql[server] )
 		vpopmail? ( net-mail/vpopmail )
 		test? ( app-editors/vim )"
 # some of the testcases use ex/vi/xxd

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.12 2014/11/03 13:26:54 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.13 2014/12/28 16:10:24 titanofold Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping nagi
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	ssl? (
 		!gnutls? ( >=dev-libs/openssl-0.9.6g )
 		gnutls? ( net-libs/gnutls )

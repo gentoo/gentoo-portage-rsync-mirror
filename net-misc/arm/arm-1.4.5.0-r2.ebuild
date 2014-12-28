@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0-r2.ebuild,v 1.1 2014/12/08 22:47:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/arm-1.4.5.0-r2.ebuild,v 1.2 2014/12/28 16:20:35 nimiux Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.atagar.com/arm/resources/static/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 # Note: While we depend on net-misc/tor, we strictly speaking

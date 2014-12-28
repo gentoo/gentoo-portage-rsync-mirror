@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-1.5.0_rc3.ebuild,v 1.4 2014/11/03 13:27:40 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-1.5.0_rc3.ebuild,v 1.5 2014/12/28 16:11:25 titanofold Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -19,7 +19,7 @@ RDEPEND="
 	geoip? ( dev-libs/geoip )
 	mongodb? ( >=dev-libs/mongo-c-driver-0.8.1-r1 )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	sqlite? ( =dev-db/sqlite-3* )
 "
 DEPEND="

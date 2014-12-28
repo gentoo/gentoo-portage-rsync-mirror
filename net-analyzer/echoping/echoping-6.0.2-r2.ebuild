@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r2.ebuild,v 1.5 2014/11/03 13:21:58 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r2.ebuild,v 1.6 2014/12/28 16:02:50 titanofold Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE="gnutls http icp idn priority smtp ssl tos postgres ldap"
 RESTRICT="test"
 
 RDEPEND="idn? ( net-dns/libidn )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	ldap? ( net-nds/openldap )
 	ssl? (
 		gnutls? ( >=net-libs/gnutls-1.0.17 )

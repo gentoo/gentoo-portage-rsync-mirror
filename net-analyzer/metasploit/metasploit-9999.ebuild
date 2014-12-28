@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.33 2014/11/03 13:25:07 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.34 2014/12/28 16:07:25 titanofold Exp $
 
 EAPI="5"
 
@@ -68,7 +68,7 @@ ruby_add_bdepend "${RUBY_COMMON_DEPEND}
 			>=dev-ruby/rake-10.0.0 )"
 ruby_add_rdepend "${RUBY_COMMON_DEPEND}"
 
-COMMON_DEPEND="virtual/postgresql[server]
+COMMON_DEPEND="dev-db/postgresql[server]
 	>=app-crypt/johntheripper-1.7.9-r1[-minimal]
 	net-analyzer/nmap"
 DEPEND+=" ${COMMON_DEPEND}"

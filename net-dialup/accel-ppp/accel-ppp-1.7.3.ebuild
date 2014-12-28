@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.3.ebuild,v 1.3 2014/11/03 13:29:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.3.ebuild,v 1.4 2014/12/28 16:13:25 titanofold Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc postgres radius shaper snmp valgrind"
 
-RDEPEND="postgres? ( virtual/postgresql )
+RDEPEND="postgres? ( dev-db/postgresql )
 	snmp? ( net-analyzer/net-snmp )
 	dev-libs/libpcre
 	dev-libs/openssl:0"

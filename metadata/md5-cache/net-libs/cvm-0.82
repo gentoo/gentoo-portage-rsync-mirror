@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install test unpack
-DEPEND=dev-db/cdb >=dev-libs/bglibs-1.041 mysql? ( virtual/mysql ) postgres? ( virtual/postgresql[server] ) vpopmail? ( net-mail/vpopmail ) test? ( app-editors/vim )
+DEPEND=dev-db/cdb >=dev-libs/bglibs-1.041 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql[server] ) vpopmail? ( net-mail/vpopmail ) test? ( app-editors/vim )
 DESCRIPTION=Credential Validation Modules by Bruce Guenter
 EAPI=2
 HOMEPAGE=http://untroubled.org/cvm/
@@ -10,4 +10,4 @@ RDEPEND=dev-db/cdb
 SLOT=0
 SRC_URI=http://untroubled.org/cvm/archive/cvm-0.82.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=79786da5b75381d134fcb67641517024
+_md5_=47dba605a3c053394a8fb9d668f3cad6

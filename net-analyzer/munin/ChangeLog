@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.162 2014/12/24 12:33:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.163 2014/12/28 16:08:50 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> munin-2.0.19.ebuild,
+  munin-2.0.19-r1.ebuild, munin-2.0.25.ebuild, munin-2.1.9999.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
 *munin-2.0.25 (24 Dec 2014)
 

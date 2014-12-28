@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=mysql? ( virtual/mysql ) nls? ( virtual/libintl ) postgres? ( virtual/postgresql ) ssl? ( dev-libs/openssl ) virtual/libiconv nls? ( >=sys-devel/gettext-0.12 ) sys-devel/bison !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=mysql? ( virtual/mysql ) nls? ( virtual/libintl ) postgres? ( dev-db/postgresql ) ssl? ( dev-libs/openssl ) virtual/libiconv nls? ( >=sys-devel/gettext-0.12 ) sys-devel/bison !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A DNS-Server which gets its data from a MySQL-/PostgreSQL-database
 EAPI=5
 HOMEPAGE=http://www.mydns.pl/
 IUSE=alias debug nls mysql postgres ssl static status
 KEYWORDS=alpha amd64 ~hppa ia64 ~ppc sparc x86
 LICENSE=GPL-2
-RDEPEND=mysql? ( virtual/mysql ) nls? ( virtual/libintl ) postgres? ( virtual/postgresql ) ssl? ( dev-libs/openssl ) virtual/libiconv
+RDEPEND=mysql? ( virtual/mysql ) nls? ( virtual/libintl ) postgres? ( dev-db/postgresql ) ssl? ( dev-libs/openssl ) virtual/libiconv
 REQUIRED_USE=^^ ( mysql postgres )
 SLOT=0
 SRC_URI=mirror://sourceforge/mydns-ng/mydns-1.2.8.31.tar.gz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=d7feac0f6b0c32f8f45aeaf33167a84a
+_md5_=8b2076c0f92130e5145b8d1315aa9728

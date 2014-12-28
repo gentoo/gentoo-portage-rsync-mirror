@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1-r2.ebuild,v 1.1 2014/12/14 23:27:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.1-r2.ebuild,v 1.2 2014/12/28 16:05:49 titanofold Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -24,7 +24,7 @@ DEPEND="dev-util/cmake
 		sys-devel/bison
 		>=sys-devel/flex-2.5.35
 		mysql? ( virtual/mysql )
-		postgres? ( virtual/postgresql )"
+		postgres? ( dev-db/postgresql )"
 
 RDEPEND="${DEPEND}
 	plugins? ( net-analyzer/nagios-plugins )

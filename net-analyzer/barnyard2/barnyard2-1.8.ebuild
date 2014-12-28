@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/barnyard2-1.8.ebuild,v 1.5 2014/11/03 12:55:31 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/barnyard2-1.8.ebuild,v 1.6 2014/12/28 16:02:00 titanofold Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="static debug aruba gre mpls prelude ipv6 mysql odbc postgres"
 
 DEPEND="net-libs/libpcap
 		mysql? ( virtual/mysql )
-		postgres? ( virtual/postgresql[server] )
+		postgres? ( dev-db/postgresql[server] )
 		prelude? ( >=dev-libs/libprelude-0.9.0 )
 		odbc? ( dev-db/unixODBC )"
 

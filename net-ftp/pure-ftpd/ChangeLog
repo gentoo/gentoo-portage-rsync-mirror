@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.153 2014/11/03 13:35:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.154 2014/12/28 16:23:21 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  pure-ftpd-1.0.29-r1.ebuild, pure-ftpd-1.0.36.ebuild,
+  pure-ftpd-1.0.36-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   pure-ftpd-1.0.29-r1.ebuild, pure-ftpd-1.0.36.ebuild,

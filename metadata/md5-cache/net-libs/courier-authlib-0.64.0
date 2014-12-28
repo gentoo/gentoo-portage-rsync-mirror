@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst setup
-DEPEND=gdbm? ( sys-libs/gdbm ) !gdbm? ( sys-libs/db ) >=dev-libs/openssl-0.9.6 ldap? ( >=net-nds/openldap-1.2.11 ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( >=virtual/postgresql-8.4 )
+DEPEND=gdbm? ( sys-libs/gdbm ) !gdbm? ( sys-libs/db ) >=dev-libs/openssl-0.9.6 ldap? ( >=net-nds/openldap-1.2.11 ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( >=dev-db/postgresql-8.4 )
 DESCRIPTION=Courier authentication library
 HOMEPAGE=http://www.courier-mta.org/
 IUSE=berkdb crypt debug gdbm ldap mysql pam postgres vpopmail
@@ -10,4 +10,4 @@ RESTRICT=userpriv !berkdb? ( test )
 SLOT=0
 SRC_URI=mirror://sourceforge/courier/courier-authlib-0.64.0.tar.bz2
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=c8c8e549e45f6c9ec09eaa8e36a16b42
+_md5_=2c8a029e531e41da43c171f9dceb5b70
