@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.16.ebuild,v 1.3 2014/08/16 07:45:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.18.ebuild,v 1.1 2014/12/28 08:19:07 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -49,21 +49,23 @@ all_ruby_prepare() {
 
 	# Fix too-strict test dependencies
 	sed -e '/nokogiri/ s/~> 1.5.2/>= 1.5.2/' \
-		-e '/aruba/ s/0.5.2/0.5/' \
-		-e '/rake/ s/10.2/10.4/' -i ${RUBY_FAKEGEM_GEMSPEC} || die
+		-e '/aruba/ s/= 0.5.2/~> 0.5/' \
+		-e '/rake/ s/10.2/10.5/' -i ${RUBY_FAKEGEM_GEMSPEC} || die
 
 	# Make sure spork is run in the right interpreter
 	sed -i -e 's/#{Spork::BINARY}/-S #{Spork::BINARY}/' features/support/env.rb || die
 
 	# Avoid json, they most likely fail due to multi_json weirdness.
 	rm features/json_formatter.feature || die
+	# Avoid features that break with newer rspec versions.
+	sed -i -e '369,398d' features/background.feature || die
 
 	# Avoid dependency on git
 	sed -i -e '/git ls-files/d' cucumber.gemspec || die
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib -S rspec spec || die "Specs failed"
+	ruby-ng_rspec
 	RUBYLIB=lib ${RUBY} -Ilib bin/cucumber features || die "Features failed"
 }
 

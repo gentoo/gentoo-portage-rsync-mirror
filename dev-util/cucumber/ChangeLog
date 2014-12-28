@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.87 2014/11/16 18:15:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.90 2014/12/28 08:21:36 graaff Exp $
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> cucumber-1.2.1.ebuild,
+  cucumber-1.3.17.ebuild:
+  Use eclass rspec invocation to use the rspec-2 wrapper.
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> -cucumber-1.3.15.ebuild,
+  -cucumber-1.3.16.ebuild:
+  Cleanup.
+
+*cucumber-1.3.18 (28 Dec 2014)
+
+  28 Dec 2014; Hans de Graaff <graaff@gentoo.org> +cucumber-1.3.18.ebuild:
+  Version bump.
 
   16 Nov 2014; Agostino Sarubbo <ago@gentoo.org> cucumber-1.2.1.ebuild:
   Stable for ppc64, wrt bug #493780

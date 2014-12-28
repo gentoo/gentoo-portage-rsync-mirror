@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.17.ebuild,v 1.1 2014/09/15 05:29:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.17.ebuild,v 1.2 2014/12/28 08:21:36 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -63,7 +63,7 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib -S rspec spec || die "Specs failed"
+	ruby-ng_rspec
 	RUBYLIB=lib ${RUBY} -Ilib bin/cucumber features || die "Features failed"
 }
 
