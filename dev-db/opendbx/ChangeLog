@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.41 2014/12/15 18:56:52 alicef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.42 2014/12/28 15:06:33 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> opendbx-1.4.5.ebuild,
+  opendbx-1.4.6.ebuild, opendbx-1.5.0.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   15 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> metadata.xml:
   Update email and removed proxy-maintainers herd

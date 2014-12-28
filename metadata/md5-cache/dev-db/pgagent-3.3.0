@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=virtual/postgresql-8.3.0 x11-libs/wxGTK:2.8 >=dev-util/cmake-2.6 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=dev-db/postgresql-8.3.0 x11-libs/wxGTK:2.8 >=dev-util/cmake-2.6 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=pgAgent is a job scheduler for PostgreSQL
 EAPI=4
 HOMEPAGE=http://www.pgadmin.org/download/pgagent.php
 KEYWORDS=amd64 x86
 LICENSE=POSTGRESQL GPL-2
-RDEPEND=>=virtual/postgresql-8.3.0 x11-libs/wxGTK:2.8
+RDEPEND=>=dev-db/postgresql-8.3.0 x11-libs/wxGTK:2.8
 SLOT=0
 SRC_URI=mirror://postgresql/pgadmin3/release/pgagent/pgAgent-3.3.0-Source.tar.gz
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=2e1741f54a254b9cbc9987bf4aaaa91f
+_md5_=c1f88abf8a94fce68e45e83357a8d4ac

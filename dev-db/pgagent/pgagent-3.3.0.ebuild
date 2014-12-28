@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgagent/pgagent-3.3.0.ebuild,v 1.4 2014/11/03 11:27:28 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgagent/pgagent-3.3.0.ebuild,v 1.5 2014/12/28 15:09:08 titanofold Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ LICENSE="POSTGRESQL GPL-2"
 SLOT="0"
 IUSE=""
 
-RDEPEND=">=virtual/postgresql-8.3.0
+RDEPEND=">=dev-db/postgresql-8.3.0
 		 x11-libs/wxGTK:2.8
 "
 DEPEND="${RDEPEND}

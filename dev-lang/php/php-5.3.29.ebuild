@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.29.ebuild,v 1.12 2014/11/03 11:40:17 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.29.ebuild,v 1.13 2014/12/28 15:27:17 titanofold Exp $
 
 EAPI=5
 
@@ -124,7 +124,7 @@ DEPEND="
 	nls? ( sys-devel/gettext )
 	oci8-instant-client? ( dev-db/oracle-instantclient-basic )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	qdbm? ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgrouting/pgrouting-2.0.0.ebuild,v 1.1 2014/11/16 14:55:06 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgrouting/pgrouting-2.0.0.ebuild,v 1.2 2014/12/28 15:11:49 titanofold Exp $
 
 EAPI="5"
 POSTGRES_COMPAT=( 9.{0,1,2,3,4} )
@@ -20,11 +20,11 @@ REQUIRED_USE="html? ( doc ) pdf? ( doc )"
 
 RDEPEND="
 	|| (
-		virtual/postgresql:9.4[server]
-		virtual/postgresql:9.3[server]
-		virtual/postgresql:9.2[server]
-		virtual/postgresql:9.1[server]
-		virtual/postgresql:9.0[server]
+		dev-db/postgresql:9.4[server]
+		dev-db/postgresql:9.3[server]
+		dev-db/postgresql:9.2[server]
+		dev-db/postgresql:9.1[server]
+		dev-db/postgresql:9.0[server]
 	)
 	>=dev-db/postgis-2.0
 	dev-libs/boost

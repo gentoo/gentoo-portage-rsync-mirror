@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.97 2014/12/19 06:10:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.98 2014/12/28 15:15:03 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> postgis-2.0.3.ebuild,
+  postgis-2.0.6.ebuild, postgis-2.1.0.ebuild, postgis-2.1.1.ebuild,
+  postgis-2.1.4.ebuild, postgis-2.1.5.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
 *postgis-2.1.5 (19 Dec 2014)
 

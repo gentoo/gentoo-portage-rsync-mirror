@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cppdb/cppdb-0.3.1-r1.ebuild,v 1.2 2014/11/03 11:20:59 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cppdb/cppdb-0.3.1-r1.ebuild,v 1.3 2014/12/28 15:02:35 titanofold Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="doc examples mysql mysql_internal odbc odbc_internal postgres postgres_int
 DEPEND="
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	sqlite? ( dev-db/sqlite:3 )"
 RDEPEND="${DEPEND}"
 

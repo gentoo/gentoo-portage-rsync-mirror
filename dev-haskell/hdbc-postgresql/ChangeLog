@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdbc-postgresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.26 2014/11/04 00:06:42 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.27 2014/12/28 15:21:59 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  hdbc-postgresql-2.3.2.1.ebuild, hdbc-postgresql-2.3.2.2-r1.ebuild,
+  hdbc-postgresql-2.3.2.2-r2.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   04 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   hdbc-postgresql-2.3.2.1.ebuild, hdbc-postgresql-2.3.2.2-r1.ebuild,

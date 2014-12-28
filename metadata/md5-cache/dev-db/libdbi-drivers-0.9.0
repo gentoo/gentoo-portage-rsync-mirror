@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install prepare setup test
-DEPEND=>=dev-db/libdbi-0.9.0 firebird? ( dev-db/firebird ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql ) sqlite? ( dev-db/sqlite:3 ) doc? ( app-text/openjade ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=dev-db/libdbi-0.9.0 firebird? ( dev-db/firebird ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) sqlite? ( dev-db/sqlite:3 ) doc? ( app-text/openjade ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=The libdbi-drivers project maintains drivers for libdbi
 EAPI=4
 HOMEPAGE=http://libdbi-drivers.sourceforge.net/
 IUSE=bindist doc firebird mysql oci8 postgres +sqlite static-libs
 KEYWORDS=alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd
 LICENSE=LGPL-2.1
-RDEPEND=>=dev-db/libdbi-0.9.0 firebird? ( dev-db/firebird ) mysql? ( virtual/mysql ) postgres? ( virtual/postgresql ) sqlite? ( dev-db/sqlite:3 )
+RDEPEND=>=dev-db/libdbi-0.9.0 firebird? ( dev-db/firebird ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) sqlite? ( dev-db/sqlite:3 )
 REQUIRED_USE=firebird? ( !bindist ) || ( mysql postgres sqlite firebird oci8 )
 SLOT=0
 SRC_URI=mirror://sourceforge/project/libdbi-drivers/libdbi-drivers/libdbi-drivers-0.9.0/libdbi-drivers-0.9.0.tar.gz
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=de14c27229455a18b126e2c57b78a85e
+_md5_=99d8017355cb46ca65baa4fe37356cd5

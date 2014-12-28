@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/psqlodbc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/psqlodbc/ChangeLog,v 1.4 2014/11/03 11:33:01 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/psqlodbc/ChangeLog,v 1.5 2014/12/28 15:15:55 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  psqlodbc-09.01.0200.ebuild, psqlodbc-09.02.0100.ebuild,
+  psqlodbc-09.03.0210.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   psqlodbc-09.01.0200.ebuild, psqlodbc-09.02.0100.ebuild,

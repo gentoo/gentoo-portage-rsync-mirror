@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.18.1.ebuild,v 1.6 2014/11/03 11:26:41 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.18.1.ebuild,v 1.7 2014/12/28 15:08:20 titanofold Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="debug +databasedesigner"
 
 DEPEND="x11-libs/wxGTK:2.8[X,debug=]
-	>=virtual/postgresql-8.4.0
+	>=dev-db/postgresql-8.4.0
 	>=dev-libs/libxml2-2.6.18
 	>=dev-libs/libxslt-1.1"
 RDEPEND="${DEPEND}"

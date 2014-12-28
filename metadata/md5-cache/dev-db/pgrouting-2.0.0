@@ -6,10 +6,10 @@ HOMEPAGE=http://pgrouting.org/index.html
 IUSE=+drivingdistance doc pdf html
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 MIT Boost-1.0
-RDEPEND=|| ( virtual/postgresql:9.4[server] virtual/postgresql:9.3[server] virtual/postgresql:9.2[server] virtual/postgresql:9.1[server] virtual/postgresql:9.0[server] ) >=dev-db/postgis-2.0 dev-libs/boost drivingdistance? ( sci-mathematics/cgal )
+RDEPEND=|| ( dev-db/postgresql:9.4[server] dev-db/postgresql:9.3[server] dev-db/postgresql:9.2[server] dev-db/postgresql:9.1[server] dev-db/postgresql:9.0[server] ) >=dev-db/postgis-2.0 dev-libs/boost drivingdistance? ( sci-mathematics/cgal )
 REQUIRED_USE=html? ( doc ) pdf? ( doc )
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/pgRouting/pgrouting/archive/v2.0.0.tar.gz -> pgrouting-2.0.0.tar.gz
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e238f6076eec2123194d11acaa52f833
+_md5_=191fc16dd9aad4a218445da6d6794e81

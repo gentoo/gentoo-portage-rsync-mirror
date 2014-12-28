@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r7.ebuild,v 1.5 2014/11/03 11:43:22 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r7.ebuild,v 1.6 2014/12/28 15:30:29 titanofold Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ DEPEND="net-mail/mailbase
 	openldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	mysql? ( virtual/mysql )
 	pam? ( >=virtual/pam-0-r1[${MULTILIB_USEDEP}] )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	sqlite? ( >=dev-db/sqlite-3.8.2:3[${MULTILIB_USEDEP}] )
 	ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jdk-1.4 )"

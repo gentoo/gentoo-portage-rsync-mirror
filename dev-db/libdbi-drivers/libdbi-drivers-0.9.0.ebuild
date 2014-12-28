@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.9.0.ebuild,v 1.14 2014/11/03 11:22:20 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.9.0.ebuild,v 1.15 2014/12/28 15:03:53 titanofold Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=dev-db/libdbi-0.9.0
 	firebird? ( dev-db/firebird )
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql )
+	postgres? ( dev-db/postgresql )
 	sqlite? ( dev-db/sqlite:3 )
 "
 DEPEND="${RDEPEND}

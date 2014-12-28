@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.69 2014/11/23 15:02:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.70 2014/12/28 15:03:53 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  libdbi-drivers-0.9.0.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   23 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/libdbi-drivers-0.8.3-doc-build-fix.patch,

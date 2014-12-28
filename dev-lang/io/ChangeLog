@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/io
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.16 2014/11/03 11:38:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.17 2014/12/28 15:25:15 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  io-2011.09.12-r2.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   io-2011.09.12-r2.ebuild:

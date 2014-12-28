@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.2.1.ebuild,v 1.2 2014/11/03 11:35:19 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.2.1.ebuild,v 1.3 2014/12/28 15:18:12 titanofold Exp $
 
 EAPI="4"
 
@@ -21,14 +21,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND="|| (
-			virtual/postgresql:9.3[server]
-			virtual/postgresql:9.2[server]
-			virtual/postgresql:9.1[server]
-			virtual/postgresql:9.0[server]
-			virtual/postgresql:8.4[server]
-			virtual/postgresql:8.3[server]
+			dev-db/postgresql:9.3[server]
+			dev-db/postgresql:9.2[server]
+			dev-db/postgresql:9.1[server]
+			dev-db/postgresql:9.0[server]
+			dev-db/postgresql:8.4[server]
+			dev-db/postgresql:8.3[server]
 		)
-		virtual/postgresql[threads]
+		dev-db/postgresql[threads]
 		perl? ( dev-perl/DBD-Pg )
 "
 

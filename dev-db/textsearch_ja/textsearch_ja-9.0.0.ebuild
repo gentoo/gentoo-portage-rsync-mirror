@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/textsearch_ja/textsearch_ja-9.0.0.ebuild,v 1.3 2014/11/03 11:36:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/textsearch_ja/textsearch_ja-9.0.0.ebuild,v 1.4 2014/12/28 15:19:43 titanofold Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="app-text/mecab
-		>=virtual/postgresql-7.4[server]" # pgmecab requires PGXS
+		>=dev-db/postgresql-7.4[server]" # pgmecab requires PGXS
 RDEPEND="${DEPEND}"
 
 src_compile() {

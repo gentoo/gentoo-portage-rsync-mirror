@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgxnclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgxnclient/ChangeLog,v 1.3 2014/11/03 11:31:10 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgxnclient/ChangeLog,v 1.4 2014/12/28 15:13:51 titanofold Exp $
+
+  28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  pgxnclient-1.2-r1.ebuild:
+  Rename virtual/postgresql to dev-db/postgresql
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   pgxnclient-1.2-r1.ebuild:

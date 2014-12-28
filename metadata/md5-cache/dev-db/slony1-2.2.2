@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install setup
-DEPEND=|| ( virtual/postgresql:9.3[server] virtual/postgresql:9.2[server] virtual/postgresql:9.1[server] virtual/postgresql:9.0[server] virtual/postgresql:8.4[server] virtual/postgresql:8.3[server] ) virtual/postgresql[threads] perl? ( dev-perl/DBD-Pg )
+DEPEND=|| ( dev-db/postgresql:9.3[server] dev-db/postgresql:9.2[server] dev-db/postgresql:9.1[server] dev-db/postgresql:9.0[server] dev-db/postgresql:8.4[server] dev-db/postgresql:8.3[server] ) dev-db/postgresql[threads] perl? ( dev-perl/DBD-Pg )
 DESCRIPTION=A replication system for the PostgreSQL Database Management System
 EAPI=4
 HOMEPAGE=http://slony.info/
@@ -9,4 +9,4 @@ LICENSE=BSD GPL-2
 SLOT=0
 SRC_URI=http://main.slony.info/downloads/2.2/source/slony1-2.2.2.tar.bz2 http://main.slony.info/downloads/2.2/source/slony1-2.2.2-docs.tar.bz2
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=2d60677e0203663fc4627d287215c75e
+_md5_=4372249c092b59d238578493a5d7586b

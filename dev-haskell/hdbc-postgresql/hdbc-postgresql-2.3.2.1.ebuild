@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/hdbc-postgresql-2.3.2.1.ebuild,v 1.6 2014/11/04 00:06:42 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/hdbc-postgresql-2.3.2.1.ebuild,v 1.7 2014/12/28 15:21:59 titanofold Exp $
 
 EAPI=4
 
@@ -24,14 +24,14 @@ RESTRICT="test" # requires configured postgresql
 
 hdbc_PV=$(get_version_component_range 1-2)
 
-RDEPEND=">virtual/postgresql-8
+RDEPEND=">dev-db/postgresql-8
 		dev-haskell/convertible[profile?]
 		=dev-haskell/hdbc-${hdbc_PV}*[profile?]
 		dev-haskell/mtl[profile?]
 		dev-haskell/parsec[profile?]
 		dev-haskell/utf8-string[profile?]
 		>=dev-lang/ghc-6.8.2
-		>=virtual/postgresql-8"
+		>=dev-db/postgresql-8"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.8
 		test? ( dev-haskell/convertible
