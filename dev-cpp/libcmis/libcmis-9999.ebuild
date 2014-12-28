@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-9999.ebuild,v 1.13 2014/12/27 16:26:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/libcmis-9999.ebuild,v 1.14 2014/12/28 21:28:58 dilfridge Exp $
 
 EAPI=5
 
@@ -24,6 +24,9 @@ IUSE="static-libs man test"
 
 RDEPEND="
 	!dev-cpp/libcmis:0
+	!dev-cpp/libcmis:0.2
+	!dev-cpp/libcmis:0.3
+	!dev-cpp/libcmis:0.4
 	dev-libs/boost:=
 	dev-libs/libxml2
 	net-misc/curl
