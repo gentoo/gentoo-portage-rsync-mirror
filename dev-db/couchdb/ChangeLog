@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.103 2014/11/02 08:12:10 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.104 2014/12/29 10:51:33 djc Exp $
+
+*couchdb-1.6.1 (29 Dec 2014)
+
+  29 Dec 2014; Dirkjan Ochtman <djc@gentoo.org> +couchdb-1.6.1.ebuild:
+  Version bump couchdb to 1.6.1 (fix bug 501332, bug 529826, bug 520372)
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> couchdb-1.5.1.ebuild,
   couchdb-1.6.0.ebuild:
