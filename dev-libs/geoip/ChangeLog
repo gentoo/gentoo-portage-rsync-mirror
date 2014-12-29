@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.237 2014/12/28 10:22:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.238 2014/12/29 16:58:58 jer Exp $
+
+  29 Dec 2014; Jeroen Roovers <jer@gentoo.org> geoip-1.6.3.ebuild:
+  Stable for HPPA (bug #533668).
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> geoip-1.6.3.ebuild:
   Stable for x86, wrt bug #533668

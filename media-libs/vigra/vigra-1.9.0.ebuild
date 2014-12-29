@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.9.0.ebuild,v 1.6 2014/11/08 12:17:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.9.0.ebuild,v 1.7 2014/12/29 16:32:04 dilfridge Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="doc +fftw +hdf5 +jpeg openexr +png +python test +tiff"
 RDEPEND="dev-lang/python:2.7
 	>=dev-libs/boost-1.52.0-r6:=[python?,${PYTHON_USEDEP}]
 	fftw? ( sci-libs/fftw:3.0 )
-	hdf5? ( sci-libs/hdf5 )
+	hdf5? ( sci-libs/hdf5:= )
 	jpeg? ( virtual/jpeg )
 	openexr? ( media-libs/openexr:= )
 	png? ( media-libs/libpng:0= )

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.67 2014/11/08 12:17:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.69 2014/12/29 16:33:58 dilfridge Exp $
+
+  29 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> -vigra-1.8.0.ebuild,
+  -vigra-1.8.0-r1.ebuild:
+  Drop old
+
+  29 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> vigra-1.8.0.ebuild,
+  vigra-1.8.0-r1.ebuild, vigra-1.9.0.ebuild, vigra-1.10.0.ebuild:
+  Add slot operator to hdf5 dependency
 
   08 Nov 2014; Agostino Sarubbo <ago@gentoo.org> vigra-1.9.0.ebuild:
   Stable for ppc/ppc64/x86, wrt bug #526352
