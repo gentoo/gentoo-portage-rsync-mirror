@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.524 2014/12/16 15:06:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.525 2014/12/29 06:01:47 tetromino Exp $
+
+  29 Dec 2014; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.2.3.ebuild,
+  wine-1.3.28.ebuild, wine-1.4.1.ebuild, -wine-1.6.1.ebuild:
+  lcms:0 is being removed for security reasons (bug #526846); 1.6.1 is
+  superseded by 1.6.2
 
   16 Dec 2014; Pacho Ramos <pacho@gentoo.org> wine-1.6.1.ebuild,
   wine-1.6.2.ebuild, wine-1.7.0.ebuild, wine-1.7.10.ebuild, wine-1.7.11.ebuild,

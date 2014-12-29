@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.28.ebuild,v 1.18 2013/09/01 14:38:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.28.ebuild,v 1.19 2014/12/29 06:01:47 tetromino Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups custom-cflags dbus elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer jpeg lcms ldap mp3 ncurses nls openal opencl +opengl +oss +perl png +prelink samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags dbus elibc_glibc fontconfig +gecko gnutls gphoto2 gsm gstreamer jpeg ldap mp3 ncurses nls openal opencl +opengl +oss +perl png +prelink samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml"
 REQUIRED_USE="elibc_glibc? ( threads )" #286560
 RESTRICT="test" #72375
 
@@ -76,7 +76,6 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 )
 	gsm? ( media-sound/gsm:= )
 	jpeg? ( virtual/jpeg:0= )
 	ldap? ( net-nds/openldap:= )
-	lcms? ( media-libs/lcms:0= )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
 	nls? ( sys-devel/gettext )
 	samba? ( >=net-fs/samba-3.0.25 )
@@ -135,7 +134,7 @@ do_configure() {
 		--sysconfdir=/etc/wine \
 		$(use_with alsa) \
 		$(use_with capi) \
-		$(use_with lcms cms) \
+		--without-cms \
 		$(use_with cups) \
 		$(use_with ncurses curses) \
 		$(use_with fontconfig) \
