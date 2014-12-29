@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.9.ebuild,v 1.2 2014/10/11 08:15:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.11-r1.ebuild,v 1.1 2014/12/29 16:00:36 alonbl Exp $
 
 EAPI="5"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="A collection of several tools related to OpenPGP"
 HOMEPAGE="http://pgp-tools.alioth.debian.org/"
@@ -39,15 +39,29 @@ src_prepare() {
 	# media-gfx/springgraph
 	rm -r springgraph || die
 
+	cd keyanalyze/pgpring
+	mv configure.in configure.ac
+	sed -i 's/AM_C_PROTOTYPES//' configure.ac || die
+	eautoreconf
+	cd "${WORKDIR}"
+
+	find . -name Makefile | xargs sed -i -e 's/CFLAGS:=/CFLAGS=/' -e 's/CPPFLAGS:=/CPPFLAGS=/' -e 's/LDFLAGS:=/LDFLAGS=/'
+
 	sed -i "s:/usr/share/doc/signing-party/caff/caffrc.sample:${EPREFIX}/usr/share/doc/${P}/caff/caffrc.sample.gz:g" \
 		caff/caff || die
-	sed -i "s/make pgpring/\$(MAKE) pgpring/" keyanalyze/Makefile || die
+	sed -i -e 's/automake[^ ]*/true/g' -e 's/autoconf[^ ]*/true/g' keyanalyze/Makefile || die
+	sed -i 's/make /\$(MAKE) /' keyanalyze/Makefile || die
 	sed -i "s|:/usr/share/signing-party|:${EPREFIX}/usr/share/signing-party|" \
 		gpgsigs/gpgsigs || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" STRIP=true
+	emake \
+		CC="$(tc-getCC)" \
+		CPPFLAGS="${CPPFLAGS}" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		STRIP=true
 }
 
 src_install() {
