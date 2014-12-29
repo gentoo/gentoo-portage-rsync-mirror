@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.69 2014/09/17 19:37:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.70 2014/12/29 16:03:27 jer Exp $
+
+  29 Dec 2014; Jeroen Roovers <jer@gentoo.org> decorator-3.4.0-r1.ebuild:
+  Stable for HPPA (bug #530600).
 
   17 Sep 2014; Markos Chandras <hwoarang@gentoo.org> decorator-3.4.0-r1.ebuild:
   Add ~mips
