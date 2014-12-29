@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpstat
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.23 2014/07/17 16:57:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/ChangeLog,v 1.24 2014/12/29 06:57:24 jer Exp $
+
+  29 Dec 2014; Jeroen Roovers <jer@gentoo.org> tcpstat-1.5.ebuild,
+  tcpstat-1.5-r1.ebuild, tcpstat-1.5-r2.ebuild:
+  Fix license by Jonas Stein (bug #533794).
 
   17 Jul 2014; Jeroen Roovers <jer@gentoo.org> files/tcpstat-1.5-db.patch:
   Clean up patch.

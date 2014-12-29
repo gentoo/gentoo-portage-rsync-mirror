@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.5-r2.ebuild,v 1.1 2014/06/30 13:04:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.5-r2.ebuild,v 1.2 2014/12/29 06:57:24 jer Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.frenchfries.net/paul/tcpstat/"
 DEPEND="net-libs/libpcap"
 
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="BSD-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6"
 
