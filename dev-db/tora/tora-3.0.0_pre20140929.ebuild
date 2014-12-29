@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-3.0.0_pre20140929.ebuild,v 1.1 2014/11/04 15:19:16 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-3.0.0_pre20140929.ebuild,v 1.2 2014/12/29 02:28:25 patrick Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-qt/qtsql:4[mysql?,postgres?]
 	dev-qt/qtxmlpatterns:4
 	=dev-db/oracle-instantclient-basic-11*
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( dev-db/postgresql )
 "
 
 DEPEND="

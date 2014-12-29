@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/ChangeLog,v 1.12 2014/12/25 19:59:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/ChangeLog,v 1.13 2014/12/29 02:10:45 idella4 Exp $
+
+  29 Dec 2014; Ian Delaney <idella4@gentoo.org> -dap-2.2.6.7.ebuild:
+  rm old
 
 *dap-2.2.6.7-r1 (25 Dec 2014)
 
