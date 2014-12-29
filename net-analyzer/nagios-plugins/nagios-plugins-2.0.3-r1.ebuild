@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-2.0.3-r1.ebuild,v 1.2 2014/11/26 23:38:53 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-2.0.3-r1.ebuild,v 1.3 2014/12/29 02:32:31 patrick Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ IUSE="ipv6 ldap mysql nagios-dns nagios-ping nagios-game postgres samba snmp ssh
 REAL_DEPEND="dev-lang/perl
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
-	postgres? ( dev-db/postgresql-base )
+	postgres? ( dev-db/postgresql )
 	ssl? ( dev-libs/openssl )"
 
 DEPEND="${REAL_DEPEND}

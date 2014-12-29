@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/pcc-libs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.11 2013/10/13 12:48:25 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcc-libs/ChangeLog,v 1.12 2014/12/29 02:51:41 patrick Exp $
+
+*pcc-libs-1.1.0 (29 Dec 2014)
+
+  29 Dec 2014; Patrick Lauer <patrick@gentoo.org> +pcc-libs-1.1.0.ebuild:
+  Bump #533754
 
 *pcc-libs-1.0.1_pre20131013 (13 Oct 2013)
 
