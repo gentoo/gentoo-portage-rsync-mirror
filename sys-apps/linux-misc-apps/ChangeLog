@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/linux-misc-apps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/ChangeLog,v 1.7 2014/02/18 07:59:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/ChangeLog,v 1.8 2014/12/29 00:12:01 robbat2 Exp $
+
+*linux-misc-apps-3.18 (29 Dec 2014)
+
+  29 Dec 2014; Robin H. Johnson <robbat2@gentoo.org> +files/freefall.confd,
+  +files/freefall.initd, +linux-misc-apps-3.18.ebuild:
+  Bump.
 
   18 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
   linux-misc-apps-3.6-r2.ebuild:

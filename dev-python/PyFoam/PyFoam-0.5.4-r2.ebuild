@@ -1,13 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/PyFoam-0.5.4-r1.ebuild,v 1.4 2011/04/28 16:26:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/PyFoam-0.5.4-r2.ebuild,v 1.1 2014/12/29 00:07:59 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils eutils
+inherit distutils-r1
 
 DESCRIPTION="Tool to analyze and plot the residual files of OpenFOAM computations"
 HOMEPAGE="http://openfoamwiki.net/index.php/Contrib_PyFoam"
@@ -21,10 +19,11 @@ IUSE="extras"
 DEPEND="sci-visualization/gnuplot
 	|| ( sci-libs/openfoam sci-libs/openfoam-bin )
 	extras? (
-		dev-python/matplotlib
-		dev-python/numpy
-		dev-python/ply
-		dev-python/PyQt4
-		sci-libs/vtk
+		dev-python/matplotlib[${PYTHON_USEDEP}]
+		dev-python/numpy[${PYTHON_USEDEP}]
+		dev-python/ply[${PYTHON_USEDEP}]
+		dev-python/PyQt4[${PYTHON_USEDEP}]
+		sci-libs/vtk[${PYTHON_USEDEP}]
 	)"
+
 RDEPEND="${DEPEND}"

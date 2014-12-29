@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare setup unpack
+DEPEND=sys-apps/hwids >=dev-libs/glib-2.6 tcpd? ( sys-apps/tcp-wrappers ) !sys-power/pmtools virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Misc tools bundled with kernel sources
+EAPI=5
+HOMEPAGE=http://kernel.org/
+IUSE=static-libs tcpd
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/hwids >=dev-libs/glib-2.6 tcpd? ( sys-apps/tcp-wrappers ) !sys-power/pmtools
+SLOT=0
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.18.tar.xz
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=5389a926ebe3212544152b2756cb6a77
