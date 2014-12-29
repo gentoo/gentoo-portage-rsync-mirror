@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.14.1.ebuild,v 1.2 2014/12/14 22:22:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.14.1.ebuild,v 1.3 2014/12/29 07:42:42 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -39,6 +39,7 @@ multilib_src_configure() {
 }
 
 multilib_src_test() {
+	unset DBUS_SESSION_BUS_ADDRESS
 	Xemake check
 }
 

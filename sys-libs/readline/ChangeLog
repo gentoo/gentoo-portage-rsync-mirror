@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.218 2014/10/27 01:53:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.219 2014/12/29 07:42:08 polynomial-c Exp $
+
+  29 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -readline-6.2_p1.ebuild,
+  -readline-6.3_p8.ebuild, readline-6.3_p8-r1.ebuild:
+  Fixed installation location for documents (bug #533770 by Chris Mayo).
+  Removed old versions.
 
   27 Oct 2014; Mike Frysinger <vapier@gentoo.org> readline-6.2_p5-r1.ebuild:
   Mark m68k/s390/sh stable.

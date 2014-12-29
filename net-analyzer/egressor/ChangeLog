@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/egressor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.18 2014/12/29 07:28:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.19 2014/12/29 07:33:39 jer Exp $
+
+  29 Dec 2014; Jeroen Roovers <jer@gentoo.org> egressor-1.0-r2.ebuild,
+  files/1.0-flags.patch, files/1.0-libnet-1.0.patch:
+  Address QA complaints. Clean up patches.
 
   29 Dec 2014; Jeroen Roovers <jer@gentoo.org> -egressor-1.0-r1.ebuild:
   Old.

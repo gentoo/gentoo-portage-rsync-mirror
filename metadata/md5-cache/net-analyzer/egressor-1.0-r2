@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=<net-libs/libnet-1.1 >=net-libs/libnet-1.0.2a-r3
 DESCRIPTION=tool for checking router configuration
-EAPI=2
+EAPI=5
 HOMEPAGE=http://packetfactory.openwall.net/projects/egressor/
 KEYWORDS=amd64 ppc x86
 LICENSE=egressor
@@ -9,4 +9,4 @@ RDEPEND=net-libs/libpcap dev-perl/Net-RawIP dev-lang/perl
 SLOT=0
 SRC_URI=http://packetfactory.openwall.net/projects/egressor/egressor_release1.0.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=0673d5284a2853ee39168adf2c17c407
+_md5_=d13a7b03fa880e661d730301d614e36b

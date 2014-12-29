@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p8-r1.ebuild,v 1.1 2014/08/30 08:20:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p8-r1.ebuild,v 1.2 2014/12/29 07:42:08 polynomial-c Exp $
 
 EAPI=4
 
@@ -106,6 +106,7 @@ multilib_src_configure() {
 	ECONF_SOURCE=${S} \
 	econf \
 		--cache-file="${BUILD_DIR}"/config.cache \
+		--docdir=/usr/share/doc/${PF} \
 		--with-curses \
 		$(use_enable static-libs static)
 

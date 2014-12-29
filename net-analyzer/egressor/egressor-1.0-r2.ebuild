@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/egressor-1.0-r2.ebuild,v 1.5 2013/04/23 08:40:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/egressor-1.0-r2.ebuild,v 1.6 2014/12/29 07:33:39 jer Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="tool for checking router configuration"
@@ -12,7 +11,6 @@ SRC_URI="${HOMEPAGE}${PN}_release${PV}.tar.gz"
 
 LICENSE="egressor"
 SLOT="0"
-IUSE=""
 KEYWORDS="amd64 ppc x86"
 
 DEPEND="<net-libs/libnet-1.1
@@ -25,14 +23,13 @@ S=${WORKDIR}
 
 src_prepare() {
 	epatch \
-		${FILESDIR}/${PV}-libnet-1.0.patch \
-		${FILESDIR}/${PV}-flags.patch
+		"${FILESDIR}"/${PV}-libnet-1.0.patch \
+		"${FILESDIR}"/${PV}-flags.patch
 }
 
 src_compile() {
 	tc-export CC
-	cd client
-	emake || die
+	emake -C client
 }
 
 src_install() {

@@ -1,6 +1,5 @@
-diff -Naur a/client/Makefile b/client/Makefile
---- a/client/Makefile	2010-09-15 03:38:45.000000000 +0200
-+++ b/client/Makefile	2010-09-15 03:43:57.000000000 +0200
+--- a/client/Makefile
++++ b/client/Makefile
 @@ -5,8 +5,8 @@
  #----------------------------------------------------------------------
  
