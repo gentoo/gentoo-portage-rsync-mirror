@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16248 2014/12/28 21:00:04 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16249 2014/12/29 08:42:07 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (29 Dec 2014)
+# Initial maintainer left, added as a support to kombu however
+# appears to have never been used. Has no revdeps.
+# Removal in 30 days.
+dev-python/cl
 
 # Aaron W. Swenson <titanofold@gentoo.org> (28 Dec 2014)
 # Split ebuilds are no longer maintained. Migrate to the unified

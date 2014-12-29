@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.105 2014/11/18 13:51:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.106 2014/12/29 08:46:35 graaff Exp $
+
+  29 Dec 2014; Hans de Graaff <graaff@gentoo.org> builder-3.2.2.ebuild:
+  Add ruby22 target, bug 533892.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/builder-2.1.2-activesupport.patch,
