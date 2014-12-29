@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.601 2014/12/28 21:25:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.602 2014/12/29 20:05:21 dilfridge Exp $
+
+  29 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.2.9999.ebuild, libreoffice-4.3.5.2.ebuild,
+  libreoffice-4.3.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Add missing dodir, bug 498084
 
   28 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-4.2.6.3.ebuild:
