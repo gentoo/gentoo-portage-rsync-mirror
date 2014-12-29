@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc2.ebuild,v 1.1 2014/09/08 20:27:12 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc3.ebuild,v 1.1 2014/12/28 23:34:41 ottxor Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ -z ${PV%%*9999} ]]; then
 	inherit autotools cvs
 	ECVS_SERVER="gnuplot.cvs.sourceforge.net:/cvsroot/gnuplot"
 	ECVS_MODULE="gnuplot"
-	ECVS_BRANCH="HEAD"
+	ECVS_BRANCH="branch-5-0-stable"
 	ECVS_USER="anonymous"
 	ECVS_CVS_OPTIONS="-dP"
 	MY_P="${PN}"
@@ -74,9 +74,6 @@ src_prepare() {
 		for dir in config demo m4 term tutorial; do
 			emake -C "$dir" -f Makefile.am.in Makefile.am
 		done
-		eautoreconf
-	else
-		epatch "${FILESDIR}/${PN}-5.0_rc1-libcerf.patch"
 		eautoreconf
 	fi
 
