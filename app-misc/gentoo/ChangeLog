@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.141 2014/01/19 11:57:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.142 2014/12/29 15:15:56 jer Exp $
+
+*gentoo-0.20.5 (29 Dec 2014)
+
+  29 Dec 2014; Jeroen Roovers <jer@gentoo.org> +gentoo-0.20.5.ebuild:
+  Version bump.
 
   19 Jan 2014; Jeroen Roovers <jer@gentoo.org> -gentoo-0.19.13.ebuild,
   -gentoo-0.20.1.ebuild, -gentoo-0.20.3.ebuild:
