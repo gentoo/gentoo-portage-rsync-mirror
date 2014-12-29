@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.61 2014/12/26 13:19:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.62 2014/12/29 13:53:21 blueness Exp $
+
+  29 Dec 2014; Anthony G. Basile <blueness@gentoo.org>
+  ecb-2.41_pre20140215-r1.ebuild:
+  Stable on ppc, bug #530530
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ecb-2.41_pre20140215-r1.ebuild:
   Stable for x86, wrt bug #530530
