@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999-r1.ebuild,v 1.2 2014/11/13 12:55:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.9999-r1.ebuild,v 1.3 2014/12/29 11:28:11 ulm Exp $
 
 EAPI=5
 
@@ -291,7 +291,7 @@ src_install () {
 	EOF
 	elisp-site-file-install "${T}/${SITEFILE}" || die
 
-	dodoc README BUGS
+	dodoc README BUGS CONTRIBUTE
 
 	if use aqua; then
 		dodir /Applications/Gentoo
