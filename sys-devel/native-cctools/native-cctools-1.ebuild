@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/native-cctools-1.ebuild,v 1.1 2011/02/09 15:53:53 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/native-cctools-1.ebuild,v 1.2 2014/12/29 09:07:57 grobian Exp $
 
 EAPI="3"
 
 inherit eutils
 
 DESCRIPTION="Host OS native assembler as and static linker ld"
-HOMEPAGE="http://youroperatingsystem.com/"
+HOMEPAGE="http://prefix.gentoo.org/"
 SRC_URI=""
 
 LICENSE="GPL-2" # actually, we don't know, the wrapper is

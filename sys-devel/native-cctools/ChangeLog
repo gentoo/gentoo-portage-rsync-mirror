@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/native-cctools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/ChangeLog,v 1.5 2013/11/08 14:19:30 haubi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/ChangeLog,v 1.6 2014/12/29 09:07:57 grobian Exp $
+
+  29 Dec 2014; Fabian Groffen <grobian@gentoo.org> native-cctools-1.ebuild,
+  native-cctools-2.ebuild, native-cctools-4.ebuild:
+  Change HOMEPAGE to an existing page, bug #533760
 
 *native-cctools-4 (08 Nov 2013)
 
@@ -40,4 +44,3 @@
   Initial commit of native-cctools, a wrapper package around native installed
   cctools (ld, as, ar, etc) for operating systems where GNU binutils doesn't
   work, or the linker sources are unavailable.
-
