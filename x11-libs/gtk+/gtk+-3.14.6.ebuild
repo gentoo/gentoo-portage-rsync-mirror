@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.6.ebuild,v 1.2 2014/12/27 01:16:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.6.ebuild,v 1.3 2014/12/28 23:10:20 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -91,6 +91,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!<gnome-base/gail-1000
 	!<x11-libs/vte-0.31.0:2.90
+	>=x11-themes/adwaita-icon-theme-3.14
 	X? ( !<x11-base/xorg-server-1.11.4 )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20140508-r3

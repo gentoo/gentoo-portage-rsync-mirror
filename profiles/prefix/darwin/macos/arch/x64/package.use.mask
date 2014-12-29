@@ -1,10 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/arch/x64/package.use.mask,v 1.1 2011/12/30 15:49:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/arch/x64/package.use.mask,v 1.2 2014/12/28 23:19:48 ottxor Exp $
 
 # The 32-bits profile is inherited by the 64-bits one!
 # All the Mac OS X profiles inherit from their matching arch profile here.
 
+
+# Christoph Junghans <ottoxr@gentoo.org> (29 Dec 2014)
+# disable optimized assembly code, bug #529584
+media-libs/xvid -pic
 
 # Jeremy Olexa <darkside@gentoo.org> (29 Jul 2010)
 # Relocation issues on 32-bit OSX only, bug #329859
