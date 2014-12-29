@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-2.9.ebuild,v 1.2 2014/08/10 20:29:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/xnec2c-3.1.ebuild,v 1.1 2014/12/29 08:03:13 tomjbe Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils
 

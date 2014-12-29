@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.3.0.ebuild,v 1.1 2014/12/04 04:09:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.3.0-r1.ebuild,v 1.1 2014/12/29 08:25:52 polynomial-c Exp $
 
 EAPI="5"
 
@@ -13,18 +13,27 @@ SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="dns +kmod static-libs zlib"
+IUSE="dns +kmod static-libs +udev zlib"
 
 # Have the sub-libs in RDEPEND with [static-libs] since, logically,
 # our libssl.a depends on libz.a/etc... at runtime.
 LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )"
 DEPEND="kmod? ( sys-apps/kmod )
 	static-libs? ( ${LIB_DEPEND} )
-	!static-libs? ( ${LIB_DEPEND//\[static-libs(+)]} )"
+	!static-libs? ( ${LIB_DEPEND//\[static-libs(+)]} )
+	udev? ( virtual/libudev )"
 RDEPEND="${DEPEND}
 	sys-apps/hwids"
 DEPEND="${DEPEND}
 	kmod? ( virtual/pkgconfig )"
+
+switch_config() {
+	[[ $# -ne 2 ]] && return 1
+	local opt=$1 val=$2
+
+	sed "s@^\(${opt}=\).*\$@\1${val}@" -i Makefile || die
+	return 0
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.9-static-pc.patch
@@ -50,6 +59,7 @@ pemake() {
 		PCI_IDS=pci.ids \
 		LIBDIR="\${PREFIX}/$(get_libdir)" \
 		LIBKMOD=$(usex kmod) \
+		HWDB=$(usex udev) \
 		"$@"
 }
 

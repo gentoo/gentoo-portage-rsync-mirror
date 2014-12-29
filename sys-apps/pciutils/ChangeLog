@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.233 2014/12/04 04:09:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.234 2014/12/29 08:25:52 polynomial-c Exp $
+
+*pciutils-3.3.0-r1 (29 Dec 2014)
+
+  29 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -pciutils-3.3.0.ebuild,
+  +pciutils-3.3.0-r1.ebuild:
+  Added dependency on libudev (bug #533728).
 
 *pciutils-3.3.0 (04 Dec 2014)
 

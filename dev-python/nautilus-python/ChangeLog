@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nautilus-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.23 2014/12/25 00:08:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.24 2014/12/29 08:06:10 eva Exp $
+
+  29 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  nautilus-python-1.1-r2.ebuild:
+  Fix gtk-doc support, bug #533858. Add missing dependencies.
 
   25 Dec 2014; Michał Górny <mgorny@gentoo.org> nautilus-python-1.1-r2.ebuild:
   Add missing PYTHON_DEPS and PYTHON_REQUIRED_USE.
