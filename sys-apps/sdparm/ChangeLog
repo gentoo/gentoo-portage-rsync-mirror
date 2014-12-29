@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.79 2014/10/17 01:43:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.80 2014/12/29 12:56:00 polynomial-c Exp $
+
+*sdparm-1.09 (29 Dec 2014)
+
+  29 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> +sdparm-1.09.ebuild:
+  Version bump.
 
   17 Oct 2014; Mike Frysinger <vapier@gentoo.org> sdparm-1.08-r1.ebuild:
   Drop redundant install of sas_disk_blink #523406 by Michał Bartoszkiewicz.
