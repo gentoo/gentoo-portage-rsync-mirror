@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.188 2014/12/08 01:36:56 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.189 2014/12/29 18:47:39 mpagano Exp $
+
+*portpeek-2.1.18 (29 Dec 2014)
+
+  29 Dec 2014; Mike Pagano <mpagano@gentoo.org> -portpeek-2.1.16.ebuild,
+  -portpeek-2.1.16-r1.ebuild, +portpeek-2.1.18.ebuild:
+  Portpeek was removing a masked package in package.unmask, even if it was
+  installed and globally masked.
 
   08 Dec 2014; Mike Pagano <mpagano@gentoo.org> portpeek-2.1.16.ebuild:
   Dropping amd64 stable keyword. There might be an issue with this version. I
