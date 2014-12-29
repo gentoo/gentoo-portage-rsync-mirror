@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rply
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rply/ChangeLog,v 1.5 2014/04/24 06:52:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rply/ChangeLog,v 1.6 2014/12/29 11:56:51 djc Exp $
+
+*rply-0.7.3 (29 Dec 2014)
+
+  29 Dec 2014; Dirkjan Ochtman <djc@gentoo.org> +rply-0.7.3.ebuild:
+  Version bump rply to 0.7.3
 
   24 Apr 2014; Ian Delaney <idella4@gentoo.org> rply-0.7.2-r1.ebuild:
   Excluding failed tests under py3 subsequent to upstream issue rply/issues/26,
