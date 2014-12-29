@@ -1,10 +1,11 @@
-DEFINED_PHASES=install unpack
+DEFINED_PHASES=install prepare
 DESCRIPTION=ident daemon with masquerading and fake replies support
-HOMEPAGE=http://panorama.sth.ac.at/midentd/
+EAPI=5
+HOMEPAGE=https://wiki.gentoo.org/wiki/No_homepage
 KEYWORDS=~amd64 ~sparc x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
-SRC_URI=http://panorama.sth.ac.at/midentd/files/midentd-2.3.1.tar.gz
+SRC_URI=mirror://gentoo/midentd-2.3.1.tar.gz
 _eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=58327a1aa3f1cf09e68916a4413e9091
+_md5_=feb1ceb976691f3d48504805e0ab0448

@@ -634,6 +634,7 @@ app-emulation/virtualbox:additions - Install Guest System Tools ISO
 app-emulation/virtualbox:extensions - Install extension module packages
 app-emulation/virtualbox:headless - Build without any graphic frontend
 app-emulation/virtualbox:sdk - Enable building of SDK
+app-emulation/virtualbox:udev - Controls installation of special USB udev rules.
 app-emulation/virtualbox:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/virtualbox-bin:additions - Install Guest System Tools ISO
 app-emulation/virtualbox-bin:chm - Install kchmviewer binary to enable online help (in MS CHM format)

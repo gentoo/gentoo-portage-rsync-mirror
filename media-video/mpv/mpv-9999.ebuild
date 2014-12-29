@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.61 2014/12/05 18:33:22 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.62 2014/12/29 14:15:58 dlan Exp $
 
 EAPI=5
 
@@ -65,7 +65,7 @@ RDEPEND="
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? ( x11-libs/libXv )
 	)
-	alsa? ( media-libs/alsa-lib )
+	alsa? ( >=media-libs/alsa-lib-1.0.18 )
 	bluray? ( >=media-libs/libbluray-0.3.0 )
 	bs2b? ( media-libs/libbs2b )
 	cdio? (

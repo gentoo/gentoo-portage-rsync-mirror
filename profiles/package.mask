@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16249 2014/12/29 08:42:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16250 2014/12/29 14:14:56 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (29 Dec 2014)
+# Does not compile with Emacs 24.4 or later.
+# Use the CEDET included with Emacs instead.
+# Masked for removal in 30 days, bug 529298.
+app-emacs/cedet
 
 # Ian Delaney <idella4@gentoo.org> (29 Dec 2014)
 # Initial maintainer left, added as a support to kombu however
