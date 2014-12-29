@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.125 2014/05/03 20:34:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.126 2014/12/29 07:27:25 polynomial-c Exp $
+
+  29 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -pdnsd-1.2.9a.ebuild,
+  pdnsd-1.2.9a-r1.ebuild:
+  Removed dependency on openrc (bug #533820). Removed old version. Let the
+  ebuild create the cachedir if it's not already available.
 
   03 May 2014; Mikle Kolyada <zlogene@gentoo.org> pdnsd-1.2.9a-r1.ebuild:
   alpha/arm/ia64/ppc/sparc stable wrt bug #509380

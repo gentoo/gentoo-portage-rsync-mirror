@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a-r1.ebuild,v 1.3 2014/05/03 20:34:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a-r1.ebuild,v 1.4 2014/12/29 07:27:25 polynomial-c Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ~s390 sparc x86"
 IUSE="debug ipv6 isdn +urandom test"
 
-RDEPEND="sys-apps/openrc"
+RDEPEND=""
 DEPEND="test? ( net-dns/bind-tools )"
 
 pkg_setup() {
@@ -118,4 +118,15 @@ pkg_postinst() {
 	elog "The online interface will be listed in /etc/conf.d/pdnsd-online"
 	elog ""
 	elog "Sample config file in /etc/pdnsd/pdnsd.conf.sample"
+
+	# The tmpfiles.d configuration does not come into effect before the
+	# next reboot so create the cachedir now.
+	local cachedir="/var/cache/pdnsd"
+	if [[ ! -d ${cachedir} ]] ; then
+		mkdir ${cachedir} || eerror "Failed to create cache"
+	fi
+	chown pdnsd:pdnsd ${cachedir} \
+		|| eerror "Failed to set ownership for cachedir"
+	chmod 0750 ${cachedir} \
+		|| eerror "Failed to set permissions for cachedir"
 }
