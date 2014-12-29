@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.1.5.ebuild,v 1.4 2014/06/14 10:11:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/domination/domination-1.1.1.5.ebuild,v 1.5 2014/12/29 17:16:03 tupone Exp $
 
 EAPI=5
 inherit eutils java-pkg-2 java-ant-2 games
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=virtual/jre-1.4"
-DEPEND=">=virtual/jdk-1.4
+RDEPEND=">=virtual/jre-1.5"
+DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip"
 
 S=${WORKDIR}/Domination

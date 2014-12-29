@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.8.ebuild,v 1.5 2014/12/28 10:05:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.8.ebuild,v 1.6 2014/12/29 17:27:50 jer Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit autotools eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Rotates, compresses, and mails system logs"
 HOMEPAGE="https://fedorahosted.org/logrotate/"
@@ -34,8 +34,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ignore-hidden.patch \
 		"${FILESDIR}"/${P}-fbsd.patch \
 		"${FILESDIR}"/${P}-noasprintf.patch \
-		"${FILESDIR}"/${P}-atomic-create.patch
-	"${S}"/autogen.sh || die
+		"${FILESDIR}"/${P}-atomic-create.patch \
+		"${FILESDIR}"/${P}-Werror.patch
+	eautoreconf
 }
 
 src_compile() {
