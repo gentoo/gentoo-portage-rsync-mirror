@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pupynere
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/ChangeLog,v 1.9 2014/08/10 21:15:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/ChangeLog,v 1.11 2014/12/29 01:51:12 idella4 Exp $
+
+  29 Dec 2014; Ian Delaney <idella4@gentoo.org> -pupynere-1.0.15.ebuild,
+  pupynere-1.0.15-r1.ebuild:
+  clean old impl, rm old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pupynere-1.0.15.ebuild:
   QA: drop trailing '.' from DESCRIPTION
