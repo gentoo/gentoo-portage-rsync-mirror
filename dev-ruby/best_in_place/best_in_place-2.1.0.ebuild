@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-2.1.0.ebuild,v 1.3 2014/12/30 10:10:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-2.1.0.ebuild,v 1.4 2014/12/30 10:50:16 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
@@ -26,7 +26,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/rails-3.1
-	dev-ruby/jquery-rails:0"
+	dev-ruby/jquery-rails:2"
 
 ruby_add_bdepend "
 	test? (
@@ -58,5 +58,5 @@ all_ruby_prepare() {
 
 each_ruby_test() {
 	RAILS_ENV=test ${RUBY} -C test_app -S rake db:migrate || die "test_app migration failed"
-	VIRTUALX_COMMAND="${RUBY}" virtualmake -S bundle exec rspec-2 spec || die "Specs failed"
+	VIRTUALX_COMMAND="${RUBY}" virtualmake -S bundle exec ${RUBY} -S rspec-2 spec || die "Specs failed"
 }
