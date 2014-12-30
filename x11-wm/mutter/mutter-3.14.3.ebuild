@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.14.3.ebuild,v 1.2 2014/12/26 22:27:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.14.3.ebuild,v 1.3 2014/12/30 11:37:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,6 +15,8 @@ SLOT="0"
 IUSE="+introspection +kms test wayland"
 KEYWORDS="~amd64 ~arm ~x86"
 
+# libXi-1.7.4 or newer needed per:
+# https://bugzilla.gnome.org/show_bug.cgi?id=738944
 COMMON_DEPEND="
 	>=x11-libs/pango-1.2[X,introspection?]
 	>=x11-libs/cairo-1.10[X]
@@ -37,7 +39,7 @@ COMMON_DEPEND="
 	x11-libs/libXdamage
 	x11-libs/libXext
 	x11-libs/libXfixes
-	>=x11-libs/libXi-1.7
+	>=x11-libs/libXi-1.7.4
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender

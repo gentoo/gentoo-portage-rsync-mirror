@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.187 2014/12/15 23:03:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.188 2014/12/30 11:41:23 pacho Exp $
+
+  30 Dec 2014; Pacho Ramos <pacho@gentoo.org> seahorse-3.12.2.ebuild,
+  seahorse-3.14.0.ebuild:
+  Move away from || () gnupg dependency to plain >= requirement, bug #528460 by
+  Kristian Fiskerstrand and Alon Bar-Lev
 
 *seahorse-3.14.0 (15 Dec 2014)
 

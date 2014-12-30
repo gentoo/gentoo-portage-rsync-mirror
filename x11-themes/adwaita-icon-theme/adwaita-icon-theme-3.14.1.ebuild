@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/adwaita-icon-theme/adwaita-icon-theme-3.14.1.ebuild,v 1.2 2014/12/28 23:06:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/adwaita-icon-theme/adwaita-icon-theme-3.14.1.ebuild,v 1.3 2014/12/30 11:58:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,6 +23,7 @@ COMMON_DEPEND="
 	>=x11-themes/hicolor-icon-theme-0.10
 "
 RDEPEND="${COMMON_DEPEND}
+	gnome-base/librsvg:2
 	!<x11-themes/gnome-themes-standard-3.14
 "
 DEPEND="${COMMON_DEPEND}
