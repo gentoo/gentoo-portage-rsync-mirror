@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/corosync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.33 2014/12/02 14:55:49 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.34 2014/12/30 11:10:14 ultrabug Exp $
+
+  30 Dec 2014; Ultrabug <ultrabug@gentoo.org> files/corosync.initd:
+  fix typo in initd thx to Florian Tham
 
   02 Dec 2014; Ultrabug <ultrabug@gentoo.org> files/corosync.initd:
   add config detection to init script fix #488736
