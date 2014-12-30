@@ -1,6 +1,13 @@
 # ChangeLog for games-rpg/soltys
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/soltys/ChangeLog,v 1.1 2014/10/30 00:16:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/soltys/ChangeLog,v 1.2 2014/12/30 05:43:42 calchan Exp $
+
+*soltys-1.0-r1 (30 Dec 2014)
+
+  30 Dec 2014; Denis Dupeyron <calchan@gentoo.org> -soltys-1.0.ebuild,
+  +soltys-1.0-r1.ebuild:
+  Remove hq3x as default scaler as it can be too ambitious for some machines
+  and can be changed by the user at run time.
 
 *soltys-1.0 (30 Oct 2014)
 

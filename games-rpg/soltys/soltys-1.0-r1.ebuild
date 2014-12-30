@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/soltys/soltys-1.0.ebuild,v 1.1 2014/10/30 00:16:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/soltys/soltys-1.0-r1.ebuild,v 1.1 2014/12/30 05:43:42 calchan Exp $
 
 EAPI=5
 inherit unpacker eutils games
@@ -50,15 +50,15 @@ src_install() {
 	doins -r *
 	newicon "${DISTDIR}"/cat-soltys.png soltys.png
 	if use linguas_en || ( ! use linguas_en && ! use linguas_es && ! use linguas_pl ) ; then
-		games_make_wrapper soltys-en "scummvm -f -g hq3x -p \"${GAMES_DATADIR}/${PN}/en\" soltys" .
+		games_make_wrapper soltys-en "scummvm -f -p \"${GAMES_DATADIR}/${PN}/en\" soltys" .
 		make_desktop_entry ${PN}-en "Soltys (English)" soltys
 	fi
 	if use linguas_es ; then
-		games_make_wrapper soltys-es "scummvm -f -g hq3x -p \"${GAMES_DATADIR}/${PN}/es\" soltys" .
+		games_make_wrapper soltys-es "scummvm -f -p \"${GAMES_DATADIR}/${PN}/es\" soltys" .
 		make_desktop_entry ${PN}-es "Soltys (Español)" soltys
 	fi
 	if use linguas_pl ; then
-		games_make_wrapper soltys-pl "scummvm -f -g hq3x -p \"${GAMES_DATADIR}/${PN}/pl\" soltys" .
+		games_make_wrapper soltys-pl "scummvm -f -p \"${GAMES_DATADIR}/${PN}/pl\" soltys" .
 		make_desktop_entry ${PN}-pl "Soltys (Polski)" soltys
 	fi
 	prepgamesdirs
