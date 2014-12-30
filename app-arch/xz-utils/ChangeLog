@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.87 2014/12/28 10:17:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.88 2014/12/30 17:47:20 maekke Exp $
+
+  30 Dec 2014; Markus Meier <maekke@gentoo.org> xz-utils-5.0.8.ebuild:
+  arm stable, bug #533274
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> xz-utils-5.0.8.ebuild:
   Stable for x86, wrt bug #533274

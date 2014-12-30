@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.5 2013/01/30 18:06:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.6 2014/12/30 17:48:27 floppym Exp $
 
-EAPI=4
-inherit toolchain-funcs eutils
+EAPI="5"
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="User Interface for TuxOnIce"
 HOMEPAGE="http://www.tuxonice.net"
@@ -13,17 +14,16 @@ SRC_URI="http://tuxonice.net/files/${P}.tar.gz -> ${P}.tar
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-
 IUSE="fbsplash"
+
 DEPEND="fbsplash? (
+		>=app-arch/bzip2-1.0.6-r3[static-libs]
 		>=media-gfx/splashutils-1.5.2.1
-		media-libs/libmng[lcms]
-		>=media-libs/libpng-1.4.8[static-libs]
 		media-libs/freetype[static-libs]
-		|| ( <app-arch/bzip2-1.0.6-r3[static] >=app-arch/bzip2-1.0.6-r3[static-libs] )
-		media-libs/lcms:0[static-libs]
+		media-libs/libmng
+		>=media-libs/libpng-1.4.8[static-libs]
 		virtual/jpeg
-		)"
+	)"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
@@ -37,10 +37,10 @@ src_prepare() {
 
 src_compile() {
 	# Package contain binaries
-	emake clean || die "emake clean failed"
+	emake clean
 
 	use fbsplash && export USE_FBSPLASH=1
-	emake CC="$(tc-getCC)" tuxoniceui || die "emake tuxoniceui failed"
+	emake CC="$(tc-getCC)" tuxoniceui
 }
 
 src_install() {

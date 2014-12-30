@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.6.0-r1.ebuild,v 1.1 2014/12/26 12:44:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.6.0-r1.ebuild,v 1.2 2014/12/30 17:34:23 jsbronder Exp $
 
 EAPI=5
 
@@ -35,7 +35,10 @@ pkg_setup() {
 }
 
 src_configure() {
+	# systemd unit building fails, this can probably be re-enabled in the next
+	# release (#533598)
 	econf \
+		--without-systemdsystemunitdir \
 		--enable-gexec \
 		--sysconfdir="${EPREFIX}"/etc/${PN} \
 		--enable-static=no \

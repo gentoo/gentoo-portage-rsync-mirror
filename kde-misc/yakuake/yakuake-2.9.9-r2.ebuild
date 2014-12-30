@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.9-r2.ebuild,v 1.4 2013/05/20 12:47:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.9-r2.ebuild,v 1.5 2014/12/30 17:41:52 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://yakuake.kde.org/"
 SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ~arm ppc x86"
 SLOT="4"
 IUSE="debug"
 

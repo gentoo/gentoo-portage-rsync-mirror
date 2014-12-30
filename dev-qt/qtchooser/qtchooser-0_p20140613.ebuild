@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/qtchooser-0_p20140613.ebuild,v 1.4 2014/12/22 12:33:18 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/qtchooser-0_p20140613.ebuild,v 1.5 2014/12/30 17:42:23 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="qt5 test"
 
 DEPEND="qt5? ( test? (

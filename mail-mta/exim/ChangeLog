@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.306 2014/12/28 15:57:24 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.307 2014/12/30 17:44:56 grobian Exp $
+
+*exim-4.85_rc4 (30 Dec 2014)
+
+  30 Dec 2014; Fabian Groffen <grobian@gentoo.org> +exim-4.85_rc4.ebuild,
+  -exim-4.85_rc3.ebuild:
+  Bump 4.85 to RC4
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> exim-4.84.ebuild,
   exim-4.85_rc3.ebuild:

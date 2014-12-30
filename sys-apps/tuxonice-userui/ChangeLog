@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.36 2014/12/29 23:35:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.37 2014/12/30 17:48:27 floppym Exp $
+
+  30 Dec 2014; Mike Gilbert <floppym@gentoo.org> tuxonice-userui-1.1-r2.ebuild:
+  From Arfrever: Update dependencies (bug #526844).
 
   29 Dec 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Set maintainer=Arfrever.
