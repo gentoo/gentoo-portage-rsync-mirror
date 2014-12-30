@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.198 2014/10/11 12:43:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.199 2014/12/30 21:46:43 leio Exp $
+
+*gst-plugins-good-1.4.5 (30 Dec 2014)
+
+  30 Dec 2014; Mart Raudsepp <leio@gentoo.org> -gst-plugins-good-1.2.4.ebuild,
+  +gst-plugins-good-1.4.5.ebuild,
+  +files/gst-plugins-good-1.4.5-rtp-test-fixes.patch:
+  Version bump. Many updates since 1.2.x series as this is a many months
+  overdue next stable cycle upgrade. Includes new rtpstreampay, rtpstreamdepay
+  and rtprtx* RTP elements.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org>
   gst-plugins-good-0.10.31-r1.ebuild:

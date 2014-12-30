@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-1.2.4.ebuild,v 1.1 2014/05/31 14:08:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-1.4.5.ebuild,v 1.1 2014/12/30 21:46:43 leio Exp $
 
 EAPI="5"
 
-# order is important, gst-plugins10 after gst-plugins-good
-inherit eutils flag-o-matic gst-plugins-good gst-plugins10
+GST_ORG_MODULE="gst-plugins-good"
+inherit eutils flag-o-matic gstreamer
 
-DESCRIPTION="Basepack of plugins for gstreamer"
+DESCRIPTION="Basepack of plugins for GStreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
 
 LICENSE="LGPL-2.1+"
@@ -16,18 +16,26 @@ IUSE="+orc"
 
 # dtmf plugin moved from bad to good in 1.2
 RDEPEND="
-	>=dev-libs/glib-2.32:2
-	>=media-libs/gst-plugins-base-1.2.3:${SLOT}
-	>=media-libs/gstreamer-1.2.4:${SLOT}
-	app-arch/bzip2
-	sys-libs/zlib
-	orc? ( >=dev-lang/orc-0.4.17 )
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
+	>=media-libs/gst-plugins-base-${PV}:${SLOT}[${MULTILIB_USEDEP}]
+	>=media-libs/gstreamer-${PV}:${SLOT}[${MULTILIB_USEDEP}]
+	>=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}]
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
 
 	!<media-libs/gst-plugins-bad-1.1:${SLOT}
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.12
+	sys-apps/sed
 "
+
+src_prepare() {
+	# video coders subtest uses jpeg and png unconditionally; fixed upstream, check on bump, remove sys-apps/sed bdep
+	sed -e '/tcase_add_test.*test_video_encoders_decoders/d' -i "${S}"/tests/check/pipelines/simple-launch-lines.c || die
+
+	epatch "${FILESDIR}/${P}-rtp-test-fixes.patch"
+}
 
 src_configure() {
 	# gst doesnt handle optimisations well
@@ -35,11 +43,15 @@ src_configure() {
 	replace-flags "-O3" "-O2"
 	filter-flags "-fprefetch-loop-arrays" # see bug 22249
 
+	multilib-minimal_src_configure
+}
+
+multilib_src_configure() {
 	# Always enable optional bz2 support for matroska
 	# Always enable optional zlib support for qtdemux and matroska
 	# Many media files require these to work, as some container headers are often
 	# compressed, bug #291154
-	gst-plugins10_src_configure \
+	gstreamer_multilib_src_configure \
 		--enable-bz2 \
 		--enable-zlib \
 		--disable-examples \
@@ -47,12 +59,8 @@ src_configure() {
 		--with-default-visualizer=goom
 }
 
-src_compile() {
-	default
-}
-
-src_install() {
+multilib_src_install_all() {
 	DOCS="AUTHORS ChangeLog NEWS README RELEASE"
-	default
+	einstalldocs
 	prune_libtool_files --modules
 }
