@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.4.ebuild,v 1.3 2014/06/29 16:43:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.4.ebuild,v 1.4 2014/12/30 15:07:14 dilfridge Exp $
 
 EAPI=5
 
@@ -17,8 +17,8 @@ IUSE=""
 
 RDEPEND="
 	app-text/libetonyek
-	app-text/libwpd
-	app-text/libwpg
+	app-text/libwpd:0.9
+	app-text/libwpg:0.2
 "
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.46

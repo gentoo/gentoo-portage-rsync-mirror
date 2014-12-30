@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.66 2014/07/29 11:15:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.67 2014/12/30 15:10:36 blueness Exp $
+
+*binutils-config-4-r1 (30 Dec 2014)
+
+  30 Dec 2014; Anthony G. Basile <blueness@gentoo.org>
+  +binutils-config-4-r1.ebuild, -binutils-config-4.ebuild,
+  files/binutils-config-4:
+  Address bug #504120
 
 *binutils-config-4 (29 Jul 2014)
 
