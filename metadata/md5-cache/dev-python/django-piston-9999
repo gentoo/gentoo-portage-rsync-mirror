@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm prepare unpack
-DEPEND=dev-python/django dev-python/setuptools =dev-lang/python-2* dev-vcs/mercurial
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-python/setuptools[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-vcs/mercurial
 DESCRIPTION=A mini-framework for Django for creating RESTful APIs
-EAPI=3
+EAPI=5
 HOMEPAGE=http://bitbucket.org/jespern/django-piston/wiki/Home
-IUSE=examples
+IUSE=python_targets_python2_7
 LICENSE=BSD
-RDEPEND=dev-python/django =dev-lang/python-2*
+RDEPEND=dev-python/django[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	6faef4c127028ccbba3a11400d24ae34	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=725045a810746f928337c981538596e7
+_eclasses_=distutils-r1	6d697abf6c0c1d32af2c025a6b75e775	eutils	6faef4c127028ccbba3a11400d24ae34	mercurial	2fbda5894dda6392b71334ee9a92de0b	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=7e9d7fc052afc2fd2f23f9d38d593284

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-piston
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.8 2014/08/10 21:09:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-piston/ChangeLog,v 1.9 2014/12/30 04:50:14 idella4 Exp $
+
+  30 Dec 2014; Ian Delaney <idella4@gentoo.org> django-piston-0.2.3-r1.ebuild,
+  django-piston-9999.ebuild:
+  conversion -> distutils-r1 of live ebuild
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   django-piston-0.2.3-r1.ebuild, django-piston-9999.ebuild:
