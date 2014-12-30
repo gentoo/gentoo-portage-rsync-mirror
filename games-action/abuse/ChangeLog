@@ -1,6 +1,9 @@
 # ChangeLog for games-action/abuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.19 2014/05/15 16:19:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/ChangeLog,v 1.20 2014/12/30 19:00:57 tupone Exp $
+
+  30 Dec 2014; Tupone Alfredo <tupone@gentoo.org> abuse-0.8.ebuild:
+  Migration to EAPI 4
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> abuse-0.8.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
