@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.20 2012/05/05 03:52:28 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.21 2014/12/30 12:30:02 pacho Exp $
+
+  30 Dec 2014; Pacho Ramos <pacho@gentoo.org> libview-0.6.6-r2.ebuild:
+  Bump eapi and use gnome2.eclass a bit better
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libview-0.6.6-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -90,4 +93,3 @@
   23 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org> +metadata.xml,
   +libview-0.5.6.ebuild:
   Initial import of libview
-
