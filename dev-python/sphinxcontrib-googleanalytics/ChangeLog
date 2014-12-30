@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sphinxcontrib-googleanalytics
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-googleanalytics/ChangeLog,v 1.4 2012/10/12 07:04:45 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-googleanalytics/ChangeLog,v 1.5 2014/12/30 12:57:16 idella4 Exp $
+
+*sphinxcontrib-googleanalytics-0.1-r1 (30 Dec 2014)
+
+  30 Dec 2014; Ian Delaney <idella4@gentoo.org>
+  +sphinxcontrib-googleanalytics-0.1-r1.ebuild,
+  -sphinxcontrib-googleanalytics-0.1.ebuild:
+  revbump; conversion -> distutils-r1, rm old
 
   12 Oct 2012; Patrick Lauer <patrick@gentoo.org>
   sphinxcontrib-googleanalytics-0.1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/id3-py
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.14 2010/11/08 17:18:24 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/id3-py/ChangeLog,v 1.15 2014/12/30 12:48:53 idella4 Exp $
+
+*id3-py-1.2-r1 (30 Dec 2014)
+
+  30 Dec 2014; Ian Delaney <idella4@gentoo.org> +id3-py-1.2-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   08 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   id3-py-1.2.ebuild:
