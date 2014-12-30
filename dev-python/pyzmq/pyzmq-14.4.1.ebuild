@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.4.1.ebuild,v 1.4 2014/12/20 17:57:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.4.1.ebuild,v 1.5 2014/12/30 16:58:13 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -23,7 +23,6 @@ RDEPEND=">=net-libs/zeromq-2.1.9
 	dev-python/cffi[${PYTHON_USEDEP}]
 	green? ( dev-python/gevent[${PY2_USEDEP}] )"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep "dev-python/gevent[${PY2_USEDEP}]" python2_7)
@@ -37,12 +36,6 @@ REQUIRED_USE="test? ( green )"
 
 python_configure_all() {
 	tc-export CC
-}
-
-python_prepare_all() {
-	# Work around bug 532708.
-	sed -i -e "/import distutils/i import setuptools" setup.py || die
-	distutils-r1_python_prepare_all
 }
 
 python_compile_all() {
