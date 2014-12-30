@@ -1,6 +1,9 @@
 # ChangeLog for games-action/snipes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/snipes/ChangeLog,v 1.9 2011/12/18 16:39:43 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/snipes/ChangeLog,v 1.10 2014/12/30 20:05:08 mr_bones_ Exp $
+
+  30 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> snipes-1.0.4.ebuild:
+  EAPI=5
 
   18 Dec 2011; Tupone Alfredo <tupone@gentoo.org> snipes-1.0.4.ebuild,
   +files/snipes-1.0.4-nongnulinker.patch:
