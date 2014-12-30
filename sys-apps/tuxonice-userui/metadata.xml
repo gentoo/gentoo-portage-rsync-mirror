@@ -2,8 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>arfrever.fta@gmail.com</email>
+		<name>Arfrever Frehtes Taifersar Arahesis</name>
 	</maintainer>
+	<herd>proxy-maintainers</herd>
 	<use>
 		<flag name='fbsplash'>Add support for framebuffer splash</flag>
 	</use>
