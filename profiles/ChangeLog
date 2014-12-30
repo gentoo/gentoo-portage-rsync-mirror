@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9654 2014/12/30 17:38:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9655 2014/12/30 22:54:31 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask reverse deps of lcms:0 for removal
 
   30 Dec 2014; Fabian Groffen <grobian@gentoo.org> package.mask:
   Exim: extend mask for RC4
