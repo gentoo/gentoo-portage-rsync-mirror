@@ -1,14 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/cosmolopy-0.1.104.ebuild,v 1.3 2012/10/18 01:48:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/cosmolopy-0.1.104-r1.ebuild,v 1.1 2014/12/30 02:11:10 idella4 Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.5 3.* *-jython"
+PYTHON_COMPAT=( python2_7)
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN=CosmoloPy
 MY_P=${MY_PN}-${PV}
@@ -22,21 +20,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
-DEPEND="dev-python/nose
+DEPEND="dev-python/nose[${PYTHON_USEDEP}]
 	dev-lang/swig
-	doc? ( dev-python/epydoc )"
-RDEPEND="sci-libs/scipy"
+	doc? ( dev-python/epydoc[${PYTHON_USEDEP}] )"
+RDEPEND="sci-libs/scipy[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/${MY_P}
 
-src_install() {
-	distutils_src_install
+python_compile_all() {
 	if use doc; then
-		einfo "Generation of documentation"
 		epydoc -n "CosmoloPy - Cosmology routines built on NumPy/SciPy" \
 			--exclude='cosmolopy.EH._power' --exclude='cosmolopy.EH.power' \
 			--no-private --no-frames --html --docformat restructuredtext \
 			cosmolopy/ -o docAPI/ || die
-		dohtml -r docAPI/*
 	fi
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( docAPI/. )
+	distutils-r1_python_install_all
 }

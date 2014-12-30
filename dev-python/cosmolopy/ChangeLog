@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cosmolopy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.7 2012/10/18 01:48:04 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.8 2014/12/30 02:11:10 idella4 Exp $
+
+*cosmolopy-0.1.104-r1 (30 Dec 2014)
+
+  30 Dec 2014; Ian Delaney <idella4@gentoo.org> +cosmolopy-0.1.104-r1.ebuild,
+  -cosmolopy-0.1.104.ebuild:
+  revbump; conversion -> distutils-r1, rm old
 
   18 Oct 2012; Patrick Lauer <patrick@gentoo.org> cosmolopy-0.1.104.ebuild:
   Restricting CPython-2.5
