@@ -1,11 +1,15 @@
---- ucspi-tcp-0.88.orig/tcpserver.c	2005-01-06 20:51:16.590777128 +0100
-+++ ucspi-tcp-0.88/tcpserver.c	2005-01-06 20:52:34.075997584 +0100
+https://bugs.gentoo.org/18892
+
+patch by Michael Hanselmann <hansmi@gentoo.org>
+
+--- a/tcpserver.c
++++ b/tcpserver.c
 @@ -422,7 +422,11 @@
      se = getservbyname(x,"tcp");
      if (!se)
        strerr_die3x(111,FATAL,"unable to figure out port number for ",x);
 +#if __BYTE_ORDER == __BIG_ENDIAN || BYTE_ORDER == BIG_ENDIAN
-+	localport = ntohs(se->s_port);
++    localport = ntohs(se->s_port);
 +#else
      uint16_unpack_big((char*)&se->s_port,&localport);
 +#endif

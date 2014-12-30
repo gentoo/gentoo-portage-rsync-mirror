@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.372 2014/12/30 19:13:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.373 2014/12/30 22:10:06 williamh Exp $
+
+  30 Dec 2014; William Hubbs <williamh@gentoo.org> busybox-1.23.0.ebuild:
+  Put the openrc blocker behind the mdev use flag since it is not relevant
+  otherwise
 
 *busybox-1.23.0 (30 Dec 2014)
 

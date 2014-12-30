@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/ucspi-tcp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.77 2012/05/13 11:18:54 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.80 2014/12/30 22:28:36 vapier Exp $
+
+*ucspi-tcp-0.88-r18 (30 Dec 2014)
+
+  30 Dec 2014; Mike Frysinger <vapier@gentoo.org> +files/0.88-ar-ranlib.patch,
+  +files/0.88-large-responses.patch, +files/0.88-protos-ipv6.patch,
+  +files/0.88-protos-no-ipv6.patch, +files/0.88-protos-rblspp.patch,
+  +files/0.88-protos.patch, +files/0.88-uint-headers.patch,
+  +ucspi-tcp-0.88-r18.ebuild:
+  Update to EAPI=4. Re-add support for USE=ipv6. Respect AR/RANLIB in env. Clean
+  up various build warnings. #262273 by Brandon Turner.
+
+  30 Dec 2014; Mike Frysinger <vapier@gentoo.org> files/0.88-bigendian.patch,
+  files/0.88-errno.patch, files/0.88-tcprules.patch:
+  Clean up documentation on a few patches.
+
+  30 Dec 2014; Mike Frysinger <vapier@gentoo.org> -files/0.88-head-1.patch,
+  -files/0.88-limits.patch:
+  Drop unused patches.
 
   13 May 2012; <swift@gentoo.org> ucspi-tcp-0.88-r17.ebuild:
   SELinux policy for ucspi-tcp is provided by selinux-ucspi

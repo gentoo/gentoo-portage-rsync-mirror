@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.23.0.ebuild,v 1.1 2014/12/30 19:13:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.23.0.ebuild,v 1.2 2014/12/30 22:10:06 williamh Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -30,7 +30,7 @@ DEPEND="${COMMON_DEPEND}
 	static? ( selinux? ( sys-libs/libselinux[static-libs(+)] ) )
 	>=sys-kernel/linux-headers-2.6.39"
 RDEPEND="${COMMON_DEPEND}
-	!<sys-apps/openrc-0.13"
+mdev? ( !<sys-apps/openrc-0.13 )"
 
 S=${WORKDIR}/${MY_P}
 

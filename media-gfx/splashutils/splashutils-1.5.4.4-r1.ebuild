@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r1.ebuild,v 1.11 2014/08/28 16:51:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r1.ebuild,v 1.12 2014/12/30 22:22:01 dilfridge Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ JPEGSRC="libs/jpeg-${V_JPEG}"
 FT2SRC="libs/freetype-${V_FT}"
 
 RESTRICT="test"
-IUSE="hardened +png +truetype +mng gpm fbcondecor"
+IUSE="hardened +png +truetype gpm fbcondecor"
 
 DESCRIPTION="Framebuffer splash utilities"
 HOMEPAGE="http://fbsplash.berlios.de"
@@ -39,10 +39,6 @@ RDEPEND="gpm? ( sys-libs/gpm[static-libs] )
 		|| ( <app-arch/bzip2-1.0.6-r3 app-arch/bzip2[static-libs] )
 		|| ( <sys-libs/zlib-1.2.5.1-r2 sys-libs/zlib[static-libs] ) )
 	png? ( >=media-libs/libpng-1.4.3[static-libs] )
-	mng? (
-		media-libs/lcms:0[static-libs]
-		media-libs/libmng[static-libs]
-		)
 	virtual/jpeg:0[static-libs]
 	>=sys-apps/baselayout-1.9.4-r5
 	app-arch/cpio
@@ -116,7 +112,7 @@ src_configure() {
 	cd "${S}"
 	econf \
 		$(use_with png) \
-		$(use_with mng) \
+		--without-mng \
 		$(use_with gpm) \
 		$(use_with truetype ttf) \
 		$(use_with truetype ttf-kernel) \

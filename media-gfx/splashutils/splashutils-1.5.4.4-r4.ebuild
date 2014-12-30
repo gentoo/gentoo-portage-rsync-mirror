@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r4.ebuild,v 1.2 2014/08/26 10:22:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r4.ebuild,v 1.3 2014/12/30 22:22:01 dilfridge Exp $
 
 EAPI=5
 inherit autotools eutils multilib toolchain-funcs
@@ -18,7 +18,7 @@ JPEGSRC="libs/jpeg-${V_JPEG}"
 FT2SRC="libs/freetype-${V_FT}"
 
 RESTRICT="test"
-IUSE="hardened +png +truetype +mng gpm fbcondecor"
+IUSE="hardened +png +truetype gpm fbcondecor"
 
 DESCRIPTION="Framebuffer splash utilities"
 HOMEPAGE="http://fbsplash.berlios.de"
@@ -46,10 +46,6 @@ RDEPEND="
 	png? (
 		>=media-libs/libpng-1.4.3[static-libs]
 		sys-libs/zlib[static-libs(+)]
-	)
-	mng? (
-		media-libs/lcms:0[static-libs]
-		media-libs/libmng[static-libs(+)]
 	)
 	virtual/jpeg:0[static-libs]
 	app-arch/cpio
@@ -129,7 +125,7 @@ src_configure() {
 	cd "${S}"
 	econf \
 		$(use_with png) \
-		$(use_with mng) \
+		--without-mng \
 		$(use_with gpm) \
 		$(use_with truetype ttf) \
 		$(use_with truetype ttf-kernel) \
