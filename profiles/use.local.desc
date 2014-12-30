@@ -2427,6 +2427,8 @@ dev-qt/qtwebkit:webp - Add support for WebP image format
 dev-qt/qtwebsockets:qml - Build QML bindings
 dev-qt/qtwidgets:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
 dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
+dev-ruby/barby:datamatrix - Add support for datamatrix using dev-ruby/semacode.
+dev-ruby/barby:pdf-writer - Add support for writing PDFs using dev-ruby/pdf-writer.
 dev-ruby/barby:png - Add support for writing PNG images using dev-ruby/chunky_png.
 dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/prawn.
 dev-ruby/barby:qrcode - Add support for QRCode 2D codes using dev-ruby/rqrcode.

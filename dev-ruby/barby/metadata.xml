@@ -29,5 +29,13 @@
       PDF and SVG) using <pkg>dev-ruby/rcairo</pkg>. Not available on
       JRuby.
     </flag>
+
+    <flag name="datamatrix">
+      Add support for datamatrix using <pkg>dev-ruby/semacode</pkg>.
+    </flag>
+
+    <flag name="pdf-writer">
+      Add support for writing PDFs using <pkg>dev-ruby/pdf-writer</pkg>.
+    </flag>
   </use>
 </pkgmetadata>
