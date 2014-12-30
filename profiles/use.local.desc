@@ -2763,6 +2763,7 @@ games-engines/openmw:launcher - Install the launcher for configuring OpenMW.
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-engines/scummvm:mpeg2 - enable mpeg2 codec for cutscenes
+games-engines/scummvm:unsupported - enable unsupported and/or broken game engines (you're on your own)
 games-engines/solarus:doc - Install doxygen developer documentation.
 games-engines/solarus:luajit - Use LuaJIT instead of default Lua.
 games-fps/alienarena:vidmode - Link against x11-libs/libXxf86vm. Required for full-screen support.

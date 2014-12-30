@@ -1,6 +1,14 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.138 2014/10/29 20:35:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.139 2014/12/30 19:13:15 calchan Exp $
+
+*scummvm-1.7.0-r1 (30 Dec 2014)
+
+  30 Dec 2014; Denis Dupeyron <calchan@gentoo.org> -scummvm-1.7.0.ebuild,
+  +scummvm-1.7.0-r1.ebuild, metadata.xml:
+  Remove redundant jpeg flag in IUSE. Add unsupported USE flag to build
+  unsupported and/or broken game engines, with warning in metadata. Add support
+  for EXTRA_ECONF.
 
   29 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/scummvm-1.5.0-EE.patch, -scummvm-1.5.0.ebuild:

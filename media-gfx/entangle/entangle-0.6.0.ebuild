@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/entangle-0.5.0.ebuild,v 1.4 2014/07/24 18:25:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/entangle-0.6.0.ebuild,v 1.1 2014/12/30 19:12:20 dilfridge Exp $
 
 EAPI=5
 
@@ -22,10 +22,11 @@ DEPEND=">=dev-libs/glib-2.26:2
 	>=dev-libs/dbus-glib-0.60
 	>=dev-libs/gobject-introspection-0.9.3
 	>=media-libs/libgphoto2-2.4.11:=
-	>=media-libs/lcms-1.18:0
-	>=dev-libs/libpeas-0.5.5[gtk]
-	>=media-libs/gexiv2-0.2.2
+	media-libs/lcms:2
+	>=dev-libs/libpeas-1.2.0[gtk]
+	>=media-libs/gexiv2-0.4
 	>=x11-libs/libXext-1.3.0
+	>=x11-themes/gnome-icon-theme-symbolic-3.0.0
 	>=media-libs/libraw-0.9.0"
 RDEPEND="${DEPEND}"
 DEPEND+="

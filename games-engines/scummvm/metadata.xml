@@ -5,5 +5,6 @@
   <use>
     <flag name="fluidsynth">compile with support for fluidsynth</flag>
     <flag name="mpeg2">enable mpeg2 codec for cutscenes</flag>
+    <flag name="unsupported">enable unsupported and/or broken game engines (you're on your own)</flag>
   </use>
 </pkgmetadata>

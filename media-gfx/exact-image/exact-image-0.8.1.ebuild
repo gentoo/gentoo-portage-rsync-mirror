@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.6 2014/10/09 19:53:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.7 2014/12/30 19:17:14 dilfridge Exp $
 
 EAPI=2
 
@@ -15,14 +15,13 @@ SRC_URI="http://dl.exactcode.de/oss/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="expat jpeg jpeg2k lcms lua openexr php perl png python ruby swig tiff truetype X"
+IUSE="expat jpeg jpeg2k lua openexr php perl png python ruby swig tiff truetype X"
 
 RDEPEND="x11-libs/agg[truetype]
 	sys-libs/zlib
 	expat? ( dev-libs/expat )
 	jpeg2k? ( media-libs/jasper )
 	jpeg? ( virtual/jpeg )
-	lcms? ( =media-libs/lcms-1* )
 	lua? ( dev-lang/lua )
 	openexr? ( media-libs/openexr )
 	php? ( dev-lang/php )
@@ -78,7 +77,7 @@ src_configure() {
 		$(use_with jpeg2k jasper) \
 		$(use_with openexr) \
 		$(use_with expat) \
-		$(use_with lcms) \
+		--without-lcms \
 		--without-bardecode \
 		$(use_with lua) \
 		$(use_with swig) \
