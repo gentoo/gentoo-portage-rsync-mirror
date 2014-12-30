@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-1.1.12.ebuild,v 1.1 2014/05/04 11:20:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/libftd2xx-1.1.12-r1.ebuild,v 1.1 2014/12/30 08:33:23 dlan Exp $
 
 EAPI=5
 inherit multilib
@@ -13,7 +13,7 @@ SRC_URI="http://www.ftdichip.com/Drivers/D2XX/Linux/${MY_P}.tar.gz"
 
 LICENSE="FTDI LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="examples"
 
 QA_PREBUILT="*"
@@ -22,6 +22,7 @@ S=${WORKDIR}
 
 src_install() {
 
+	use arm && cd "${S}"/release/build/arm926
 	use amd64 && cd "${S}"/release/build/x86_64
 	use x86 && cd "${S}"/release/build/i386
 
@@ -35,11 +36,8 @@ src_install() {
 	dodir /etc/env.d
 	echo "LDPATH=\"/opt/$(get_libdir)\"" > ${D}/etc/env.d/50libftd2xx || die
 	if use examples ; then
-		find sample lib_table '(' -name '*.so' -o -name '*.[oa]' ')' -exec rm -f {} +
-		insinto /usr/share/doc/${PF}
-		doins -r sample
 		insinto /usr/share/doc/${PF}/sample
-		doins -r lib_table
+		doins -r "${S}"/release/examples
 	fi
 
 	dodoc "${S}"/release/ReadMe.txt

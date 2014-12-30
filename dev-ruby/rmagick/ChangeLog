@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.210 2014/11/28 07:04:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.211 2014/12/30 08:33:08 graaff Exp $
+
+  30 Dec 2014; Hans de Graaff <graaff@gentoo.org> rmagick-2.13.4.ebuild:
+  Avoid double compilation and dependency on rake-compiler. Add ruby22.
 
 *rmagick-2.13.4 (28 Nov 2014)
 

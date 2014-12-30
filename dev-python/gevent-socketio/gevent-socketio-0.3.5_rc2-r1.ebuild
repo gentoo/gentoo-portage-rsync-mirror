@@ -1,14 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-socketio/gevent-socketio-0.3.5_rc2.ebuild,v 1.2 2014/06/27 07:03:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-socketio/gevent-socketio-0.3.5_rc2-r1.ebuild,v 1.1 2014/12/30 08:37:54 idella4 Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.5"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
-DISTUTILS_SRC_TEST=""
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="gevent-socketio"
 MY_P="${MY_PN}-${PV/_/-}"
@@ -22,10 +19,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/gevent-websocket"
+RDEPEND="dev-python/gevent-websocket[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/gevent
-	dev-python/setuptools
-	dev-python/versiontools"
+	dev-python/gevent[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/versiontools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"

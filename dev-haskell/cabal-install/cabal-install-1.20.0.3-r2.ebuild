@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.20.0.3-r2.ebuild,v 1.1 2014/11/15 18:21:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.20.0.3-r2.ebuild,v 1.2 2014/12/30 08:47:02 slyfox Exp $
 
 EAPI=5
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	>=dev-haskell/http-4000.2.5 <dev-haskell/http-4000.3
 	>=dev-haskell/mtl-2.0 <dev-haskell/mtl-3
 	>=dev-haskell/network-2.0 <dev-haskell/network-2.7
+	dev-haskell/network-uri
 	>=dev-haskell/random-1 <dev-haskell/random-1.2
 	>=dev-haskell/stm-2.0 <dev-haskell/stm-3
 	>=dev-haskell/zlib-0.5.3 <dev-haskell/zlib-0.6
@@ -47,7 +48,8 @@ src_prepare() {
 	fi
 
 	cabal_chdeps \
-		'network    >= 2.0      && < 2.6' 'network    >= 2.0      && < 2.7' \
+		'network    >= 2.0      && < 2.6' 'network    >= 2.0      && < 2.7, network-uri' \
+		'network,' 'network,network-uri,' \
 		'random     >= 1        && < 1.1' 'random     >= 1        && < 1.2'
 }
 

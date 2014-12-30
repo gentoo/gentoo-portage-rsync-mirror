@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.4.ebuild,v 1.1 2014/11/28 07:04:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-2.13.4.ebuild,v 1.2 2014/12/30 08:33:08 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
@@ -24,17 +24,24 @@ IUSE="doc"
 RDEPEND+=" >=media-gfx/imagemagick-6.4.9:=[-hdri]"
 DEPEND+=" >=media-gfx/imagemagick-6.4.9:=[-hdri]"
 
+all_ruby_prepare() {
+	# Avoid unused dependency on rake-compiler. This also avoids an
+	# extra compile during tests.
+	sed -i -e '/extensiontask/ s:^:#:' \
+		-e '/ExtensionTask/,/end/ s:^:#:' \
+		-e '/compile/ s:^:#:' Rakefile || die
+
+	# Squelch harmless warning about imagemagick installation.
+	sed -i -e '/prefix/ s:ImageMagick:ImageMagick-6:' ext/RMagick/extconf.rb || die
+}
+
 each_ruby_configure() {
 	${RUBY} -Cext/RMagick extconf.rb || die "extconf.rb failed"
 }
 
 each_ruby_compile() {
 	emake -Cext/RMagick V=1
-}
-
-each_ruby_install() {
-	each_fakegem_install
-	ruby_fakegem_newins ext/RMagick/RMagick2$(get_modname) lib/RMagick2$(get_modname)
+	cp ext/RMagick/RMagick2$(get_modname) lib/ || die
 }
 
 all_ruby_install() {
