@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.513 2014/12/28 16:39:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.514 2014/12/30 21:15:52 tamiko Exp $
+
+*asterisk-11.14.2-r1 (30 Dec 2014)
+*asterisk-11.15.0-r1 (30 Dec 2014)
+*asterisk-12.8.0-r1 (30 Dec 2014)
+*asterisk-12.7.2-r1 (30 Dec 2014)
+
+  30 Dec 2014; Matthias Maier <tamiko@gentoo.org> +asterisk-11.14.2-r1.ebuild,
+  +asterisk-11.15.0-r1.ebuild, +asterisk-12.7.2-r1.ebuild,
+  +asterisk-12.8.0-r1.ebuild, +files/asterisk.service,
+  +files/asterisk.service.conf, +files/asterisk.tmpfiles.conf:
+  provide systemd service files, bug #529192
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   asterisk-11.14.2.ebuild, asterisk-11.15.0.ebuild, asterisk-12.7.2.ebuild,
