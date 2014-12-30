@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.14.2.ebuild,v 1.1 2014/12/22 19:03:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.14.2.ebuild,v 1.2 2014/12/30 19:53:30 maekke Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Sudoku"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE=""
 
 RDEPEND="

@@ -4,10 +4,10 @@ DESCRIPTION=Checks and undeletes partitions + PhotoRec, signature based recovery
 EAPI=5
 HOMEPAGE=http://www.cgsecurity.org/wiki/TestDisk
 IUSE=jpeg ntfs reiserfs static
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=!static? ( sys-apps/util-linux >=sys-libs/ncurses-5.2 jpeg? ( virtual/jpeg ) ntfs? ( sys-fs/ntfs3g ) reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 ) >=sys-fs/e2fsprogs-1.35 sys-libs/zlib )
 SLOT=0
 SRC_URI=http://www.cgsecurity.org/testdisk-6.14.tar.bz2
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e0daca7f520dc74953db5cc97a6f60ff
+_md5_=aac1c43d6978072ae3ce26cc7bbd1140

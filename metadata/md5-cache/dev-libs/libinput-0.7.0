@@ -4,10 +4,10 @@ DESCRIPTION=Library to handle input devices in Wayland
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/libinput/
 IUSE=test
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~arm
 LICENSE=libtiff
 RDEPEND=>=dev-libs/libevdev-0.4 >=sys-libs/mtdev-1.1 virtual/libudev
 SLOT=0/5
 SRC_URI=http://www.freedesktop.org/software/libinput/libinput-0.7.0.tar.xz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=b817e68a6a4781c7565c9e755291b4f1
+_md5_=fa390ca79a117062c3b7dcd5c1b35ed7

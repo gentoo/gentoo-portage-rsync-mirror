@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.14.ebuild,v 1.1 2013/08/10 05:28:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.14.ebuild,v 1.2 2014/12/30 19:51:44 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="jpeg ntfs reiserfs static"
 
 # WARNING: reiserfs support does NOT work with reiserfsprogs

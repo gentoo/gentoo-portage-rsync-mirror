@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/progsreiserfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/ChangeLog,v 1.19 2012/11/19 10:07:55 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/progsreiserfs/ChangeLog,v 1.20 2014/12/30 19:51:15 maekke Exp $
+
+  30 Dec 2014; Markus Meier <maekke@gentoo.org> progsreiserfs-0.3.1_rc8.ebuild:
+  add ~arm, bug #531444
 
   19 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   progsreiserfs-0.3.1_rc8.ebuild,
