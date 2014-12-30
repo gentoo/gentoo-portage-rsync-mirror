@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/dreamweb
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dreamweb/ChangeLog,v 1.1 2014/12/30 06:49:33 calchan Exp $
+
+*dreamweb-1.1 (30 Dec 2014)
+
+  30 Dec 2014; Denis Dupeyron <calchan@gentoo.org> +dreamweb-1.1.ebuild,
+  +metadata.xml:
+  Initial commit.
+

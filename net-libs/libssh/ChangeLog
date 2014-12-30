@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.117 2014/12/23 08:35:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.118 2014/12/30 07:00:18 polynomial-c Exp $
+
+  30 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> libssh-0.6.4.ebuild:
+  Fixed compilation with libgcrypt (bug #533424).
 
 *libssh-0.6.4 (23 Dec 2014)
 
