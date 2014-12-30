@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/gtk2-gladexml dev-perl/gtk2-perl dev-perl/HTML-Parser dev-perl/Locale-gettext virtual/perl-Pod-Simple dev-perl/URI dev-perl/Gtk2-Ex-PodViewer dev-perl/Gtk2-Ex-PrintDialog dev-perl/Gtk2-Ex-Simple-List || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] ) >=x11-libs/gtk+-2.6.0:2 >=x11-themes/gnome-icon-theme-2.10.0 >=gnome-base/libglade-2:2.0
 SLOT=0
 SRC_URI=http://jodrell.net/files/podbrowser/podbrowser-0.12.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9d7a38da65ddd339bcdec9b4c9fe1a50

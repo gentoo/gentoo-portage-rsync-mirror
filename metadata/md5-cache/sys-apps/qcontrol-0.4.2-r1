@@ -7,5 +7,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-lang/lua-5.1
 SLOT=0
 SRC_URI=mirror://debian/pool/main/q/qcontrol/qcontrol_0.4.2.orig.tar.gz mirror://debian/pool/main/q/qcontrol/qcontrol_0.4.2-6.diff.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9684f15807680f92f35bc6b336051da0

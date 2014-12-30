@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1 CDDL
 RDEPEND=~app-i18n/sunpinyin-2.0.3 x11-libs/gtk+:2 x11-libs/libX11
 SLOT=0
 SRC_URI=http://sunpinyin.googlecode.com/files/xsunpinyin-2.0.3.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7d10956c20441291672d4accb466b9ad

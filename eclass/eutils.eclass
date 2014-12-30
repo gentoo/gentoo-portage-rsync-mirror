@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.440 2014/11/15 09:49:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.441 2014/12/30 07:24:52 williamh Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1082,7 +1082,7 @@ _iconins() {
 				size=${2}
 			fi
 			case ${size} in
-			16|22|24|32|36|48|64|72|96|128|192|256)
+			16|22|24|32|36|48|64|72|96|128|192|256|512)
 				size=${size}x${size};;
 			scalable)
 				;;

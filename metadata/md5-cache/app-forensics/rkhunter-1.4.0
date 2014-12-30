@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash dev-lang/perl sys-process/lsof[rpc] virtual/cron virtual/mailx
 SLOT=0
 SRC_URI=mirror://sourceforge/rkhunter/rkhunter-1.4.0.tar.gz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ca413a921646cf10a0ae59368d9fef36

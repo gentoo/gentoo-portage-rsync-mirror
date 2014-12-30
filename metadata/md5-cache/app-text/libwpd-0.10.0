@@ -9,5 +9,5 @@ LICENSE=|| ( LGPL-2.1 MPL-2.0 )
 RDEPEND=dev-libs/librevenge !<app-text/libwpd-0.8.14-r1
 SLOT=0.10
 SRC_URI=mirror://sourceforge/libwpd/libwpd-0.10.0.tar.xz
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cf312f055c290e1268eb430e9b346f60

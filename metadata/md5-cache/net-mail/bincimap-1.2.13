@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=ssl? ( dev-libs/openssl ) virtual/daemontools sys-apps/ucspi-tcp net-mail/checkpassword !mail-mta/courier !net-mail/courier-imap !net-mail/cyrus-imapd !net-mail/uw-imap
 SLOT=0
 SRC_URI=http://www.bincimap.org/dl/tarballs/1.2/bincimap-1.2.13final.tar.bz2
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=398477bf0ceb9550b8a03cd984dd13a7

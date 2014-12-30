@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2.18.0:2 >=dev-libs/glib-2.26.0:2 >=x11-libs/pango-1.4.0 >=gnome-base/gconf-1.1.9:2 >=dev-libs/libxml2-2.6.27:2 >=dev-libs/libxslt-1.1.19 >=dev-db/sqlite-3.7.0:3 >=net-libs/libsoup-2.28.2:2.4 dev-libs/libunique:1 >=net-libs/webkit-gtk-1.2.2:2 dev-libs/json-glib ayatana? ( dev-libs/libindicate ) libnotify? ( >=x11-libs/libnotify-0.3.2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/liferea/liferea-1.8.11.tar.bz2
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=411d5e981b4cd7e3c52771e73436c21c

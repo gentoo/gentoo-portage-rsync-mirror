@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=>=sys-apps/net-tools-1.60_p20120127084908[-old-output] || ( net-misc/miniupnpd net-libs/miniupnpc )
 SLOT=0
 SRC_URI=http://miniupnp.free.fr/files/minissdpd-1.2.20141204.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7251c17693bb0f005c453aa59646c729

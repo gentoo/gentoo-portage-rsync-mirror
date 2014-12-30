@@ -8,5 +8,5 @@ LICENSE=HPND MIT
 RDEPEND=dev-libs/gmp
 SLOT=0
 SRC_URI=!binary? ( mirror://sourceforge/mlton/mlton-20100608.src.tgz ) binary? ( amd64? ( mirror://sourceforge/mlton/mlton-20100608-1.amd64-linux.static.tgz ) x86? ( mirror://sourceforge/mlton/mlton-20100608-1.x86-linux.static.tgz ) )
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=991fca29d7cd2d4f1d7bb629beba192e

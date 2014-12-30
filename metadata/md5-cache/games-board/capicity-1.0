@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtscript:4 !dedicated? ( dev-qt/qtgui:4 ) games-misc/games-envd
 SLOT=0
 SRC_URI=dedicated? ( mirror://sourceforge/project/capitalism/Capi%20City/1.0/Capid_1.0.tar.gz ) !dedicated? ( mirror://sourceforge/project/capitalism/Capi%20City/1.0/CapiCity_1.0.tar.gz )
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	games	bc8839608d26ccd57ca4f2f01c67460f	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	9e0174de733aecba0a7e66b2b01841d2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	games	bc8839608d26ccd57ca4f2f01c67460f	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	9e0174de733aecba0a7e66b2b01841d2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=33827f0d902cd024cdacd4f09eecf595

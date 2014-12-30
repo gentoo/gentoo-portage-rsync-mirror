@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/fontconfig ~media-libs/libvisual-0.4.0 x11-libs/libX11 x11-libs/libXext x11-libs/libXrender alsa? ( media-libs/alsa-lib ) gtk? ( x11-libs/gtk+:2 ) jack? ( >=media-sound/jack-audio-connection-kit-0.109 ) opengl? ( virtual/glu virtual/opengl )
 SLOT=0.4
 SRC_URI=mirror://sourceforge/libvisual/libvisual-plugins-0.4.0.tar.gz mirror://gentoo/libvisual-plugins-0.4.0-patches-4.tar.bz2 mirror://gentoo/libvisual-plugins-0.4.0-m4-1.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=a0c6eb622f7978c8f417fc3d3082a5d5

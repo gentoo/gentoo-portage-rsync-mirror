@@ -8,5 +8,5 @@ LICENSE=public-domain
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=http://www12.ocn.ne.jp/~imamura/jiskan16-2004-1.bdf.gz http://www12.ocn.ne.jp/~imamura/jiskan16-2000-1.bdf.gz http://www12.ocn.ne.jp/~imamura/jiskan16-2000-2.bdf.gz http://www12.ocn.ne.jp/~imamura/K14-2004-1.bdf.gz http://www12.ocn.ne.jp/~imamura/K14-2000-1.bdf.gz http://www12.ocn.ne.jp/~imamura/K14-2000-2.bdf.gz http://www12.ocn.ne.jp/~imamura/K12-1.bdf.gz http://www12.ocn.ne.jp/~imamura/K12-2.bdf.gz http://www12.ocn.ne.jp/~imamura/A14.bdf.gz http://www12.ocn.ne.jp/~imamura/A12.bdf.gz http://gitatsu.hp.infoseek.co.jp/bdf/jiskan24-2000-1.bdf.gz http://gitatsu.hp.infoseek.co.jp/bdf/jiskan24-2000-2.bdf.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	font	37271e0911f39dd15a28adcaf94f6956	font-ebdftopcf	cfc12172831c46e51665e6ec2d3e918a	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	font	37271e0911f39dd15a28adcaf94f6956	font-ebdftopcf	cfc12172831c46e51665e6ec2d3e918a	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=76059887427674dad56bba774376c78c

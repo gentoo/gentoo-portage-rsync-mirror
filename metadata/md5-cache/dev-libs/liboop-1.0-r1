@@ -8,5 +8,5 @@ KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=http://download.ofb.net/liboop/liboop-1.0.tar.bz2
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=abe089ff39dc61ea4837fc7a3c285a4c

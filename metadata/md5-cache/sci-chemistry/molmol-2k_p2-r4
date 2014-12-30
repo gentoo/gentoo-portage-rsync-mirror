@@ -8,5 +8,5 @@ LICENSE=molmol
 RDEPEND=|| ( ( media-libs/mesa x11-libs/libGLw ) media-libs/mesa[motif] ) media-libs/libpng:0 media-libs/tiff:0 sys-libs/zlib virtual/glu virtual/jpeg x11-libs/libXpm x11-libs/motif:0 x11-apps/xdpyinfo
 SLOT=0
 SRC_URI=ftp://ftp.mol.biol.ethz.ch/software/MOLMOL/unix-gzip/molmol-2k.2.0-src.tar.gz ftp://ftp.mol.biol.ethz.ch/software/MOLMOL/unix-gzip/molmol-2k.2.0-doc.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c56a910af6bc8570de4624726d0d416a

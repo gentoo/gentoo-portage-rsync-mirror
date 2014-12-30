@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=~mail-client/claws-mail-3.9.0 net-misc/curl dev-libs/libxml2 nls? ( >=sys-devel/gettext-0.12.1 )
 SLOT=0
 SRC_URI=http://www.claws-mail.org/downloads/plugins/rssyl-0.34.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b90f150993ad9d8b54ba4ad93e474d6e

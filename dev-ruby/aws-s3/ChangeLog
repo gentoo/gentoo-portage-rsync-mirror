@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/aws-s3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/ChangeLog,v 1.16 2014/11/11 11:06:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/ChangeLog,v 1.17 2014/12/30 07:33:44 graaff Exp $
+
+  30 Dec 2014; Hans de Graaff <graaff@gentoo.org> aws-s3-0.6.3.ebuild:
+  Add ruby20, ruby21. Avoid deprecated rake code. Fix tests to return a proper
+  exit code.
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> aws-s3-0.6.3.ebuild:
   Drop jruby target.

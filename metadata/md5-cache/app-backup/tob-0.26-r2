@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/afio
 SLOT=0
 SRC_URI=http://tinyplanet.ca/projects/tob/tob-0.26.tgz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=77927a61814730115c4afc2e883c73dd

@@ -9,5 +9,5 @@ PDEPEND=~lxqt-base/lxqt-session-0.8.0
 RDEPEND=~lxqt-base/liblxqt-0.8.0
 SLOT=0
 SRC_URI=http://lxqt.org/downloads/lxqt/0.8.0/lxqt-common-0.8.0.tar.xz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=bbd2acedf550159a286e6fae52fc9b74

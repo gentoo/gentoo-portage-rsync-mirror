@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-libs/libevent-0.6 perl? ( dev-perl/Cache-Memcached )
 SLOT=0
 SRC_URI=http://www.danga.com/memcached/dist/memcached-1.1.13.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=2bd29df598f3595fa83d9dc24926598f

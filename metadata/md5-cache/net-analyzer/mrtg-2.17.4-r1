@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-perl/SNMP_Session-1.13-r2 >=dev-perl/Socket6-0.23 dev-lang/perl media-libs/gd[png]
 SLOT=0
 SRC_URI=http://oss.oetiker.ch/mrtg/pub/mrtg-2.17.4.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=622d1f845ba668cf3ed13c718141fa19

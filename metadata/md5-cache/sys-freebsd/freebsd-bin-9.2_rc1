@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND==sys-freebsd/freebsd-lib-9.2* >=dev-libs/libedit-20120311.3.0-r1 sys-libs/ncurses sys-apps/ed !app-misc/realpath !<sys-freebsd/freebsd-ubin-8
 SLOT=0
 SRC_URI=mirror://gentoo/freebsd-bin-9.2_rc1.tar.bz2 mirror://gentoo/freebsd-ubin-9.2_rc1.tar.bz2 mirror://gentoo/freebsd-sbin-9.2_rc1.tar.bz2 mirror://gentoo/freebsd-lib-9.2_rc1.tar.bz2
-_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	freebsd	9df2a927373191607071d802c1058c96	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	freebsd	9df2a927373191607071d802c1058c96	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=21369d2ae340ee102720e9ce11d56e7f

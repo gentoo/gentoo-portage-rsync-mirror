@@ -10,5 +10,5 @@ PDEPEND=emacs? ( app-emacs/ocaml-mode ) xemacs? ( app-xemacs/ocaml )
 RDEPEND=tk? ( >=dev-lang/tk-3.3.3 ) ncurses? ( sys-libs/ncurses ) X? ( x11-libs/libX11 x11-proto/xproto )
 SLOT=0/4.01.0
 SRC_URI=ftp://ftp.inria.fr/INRIA/Projects/cristal/ocaml/ocaml-4.01/ocaml-4.01.0.tar.bz2 mirror://gentoo/ocaml-patches-6.tar.bz2
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=11d5c2c5f4c3d4af995de8e2634b7daa

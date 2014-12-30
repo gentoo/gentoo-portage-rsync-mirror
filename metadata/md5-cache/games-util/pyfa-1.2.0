@@ -9,5 +9,5 @@ LICENSE=GPL-3+ LGPL-2.1+ CC-BY-2.5 free-noncomm
 RDEPEND=dev-python/sqlalchemy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/wxpython:2.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] graph? ( dev-python/matplotlib[wxwidgets,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite,threads] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 SLOT=0
 SRC_URI=https://github.com/DarkFenX/Pyfa/releases/download/v1.2.0/pyfa-1.2.0-kronos-1.0-src.zip
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9737a26717e73248e375fc014240a36e

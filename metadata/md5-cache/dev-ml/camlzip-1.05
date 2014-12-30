@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt?] >=sys-libs/zlib-1.1.3
 SLOT=1/1.05
 SRC_URI=http://forge.ocamlcore.org/frs/download.php/1037/camlzip-1.05.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f3432666689e82d7fd6d05205285bb53

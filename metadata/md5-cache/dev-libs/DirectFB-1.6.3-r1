@@ -10,5 +10,5 @@ RDEPEND=gif? ( media-libs/giflib ) imlib2? ( media-libs/imlib2 ) jpeg? ( virtual
 REQUIRED_USE=gles2? ( opengl )
 SLOT=0
 SRC_URI=http://directfb.org/downloads/Core/DirectFB-1.6/DirectFB-1.6.3.tar.gz http://directfb.org/downloads/Old/DirectFB-1.6.3.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=dc93995b3b11ee0247b568d7f61e005c

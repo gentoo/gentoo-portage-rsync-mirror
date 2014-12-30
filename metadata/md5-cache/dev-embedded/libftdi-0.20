@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=virtual/libusb:0 cxx? ( dev-libs/boost ) python? ( dev-lang/python )
 SLOT=0
 SRC_URI=http://www.intra2net.com/en/developer/libftdi/download/libftdi-0.20.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=dad9db60b1d81928ccc5332a591ed0aa

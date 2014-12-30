@@ -8,5 +8,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.30 >=sys-auth/polkit-0.102 x11-libs/gtk+:3 !lxde-base/lxpolkit
 SLOT=0
 SRC_URI=mirror://gnome/sources/polkit-gnome/0.105/polkit-gnome-0.105.tar.xz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=19a5009b8e200cd1ee9b26ffa43d4f58

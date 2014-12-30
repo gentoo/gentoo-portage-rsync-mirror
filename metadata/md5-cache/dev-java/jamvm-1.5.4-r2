@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-java/gnu-classpath:0.98 libffi? ( virtual/libffi ) amd64? ( virtual/libffi ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/jamvm/jamvm-1.5.4.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	java-vm-2	834752b84da3c4deea95f5b186aada54	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	java-vm-2	834752b84da3c4deea95f5b186aada54	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c99f09722fa712c1cc58029ce08d68f7

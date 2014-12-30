@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libpng-1.2.16 gtk? ( dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 x11-libs/cairo ) libkms? ( x11-libs/libdrm[libkms] ) pango? ( >=x11-libs/pango-1.21 ) virtual/udev !<sys-kernel/dracut-0.37-r3
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~aidecoe/distfiles/sys-boot/plymouth/gentoo-logo.png
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	6faef4c127028ccbba3a11400d24ae34	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=af56b86ff94ac1ec9608e7dc0dd508d5

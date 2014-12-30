@@ -8,5 +8,5 @@ LICENSE=LSI
 RESTRICT=mirror fetch
 SLOT=0
 SRC_URI=http://www.lsi.com/downloads/Public/RAID%20Controllers/RAID%20Controllers%20Common%20Files/8.02.21_MegaCLI.zip
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f9fd0c48b6fea0ae1b021c1861c40caf

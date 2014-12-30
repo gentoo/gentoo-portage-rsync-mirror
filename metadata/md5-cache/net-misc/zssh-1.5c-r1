@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=readline? ( sys-libs/readline ) net-misc/openssh net-dialup/lrzsz
 SLOT=0
 SRC_URI=mirror://sourceforge/zssh/zssh-1.5c.tgz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=21d124582dc7cb7624feb79dab63b9c8

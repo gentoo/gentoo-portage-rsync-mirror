@@ -9,5 +9,5 @@ LICENSE=MPL-1.0
 RDEPEND=ldap? ( net-nds/openldap ) odbc? ( dev-db/unixODBC ) sasl? ( dev-libs/cyrus-sasl:2 ) sdl? ( media-libs/libsdl ) sound? ( alsa? ( media-libs/alsa-lib ) ) ssl? ( dev-libs/openssl ) video? ( v4l? ( media-libs/libv4l ) ) xml? ( dev-libs/expat ) !!dev-libs/pwlib ffmpeg? ( virtual/ffmpeg )
 SLOT=0
 SRC_URI=mirror://sourceforge/opalvoip/ptlib-2.6.7.tar.bz2 doc? ( mirror://sourceforge/opalvoip/ptlib-2.6.6-htmldoc.tar.bz2 )
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e20a611a09b401db0b04cb134bd1d45f

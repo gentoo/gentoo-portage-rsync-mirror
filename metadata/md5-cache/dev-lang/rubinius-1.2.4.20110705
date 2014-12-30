@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=sys-libs/readline llvm? ( >=sys-devel/llvm-2.8 <sys-devel/llvm-3 ) dev-libs/openssl sys-libs/zlib
 SLOT=0
 SRC_URI=http://asset.rubini.us/rubinius-1.2.4-20110705.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=10d596253ef2aaac738e9f80aa788bf3

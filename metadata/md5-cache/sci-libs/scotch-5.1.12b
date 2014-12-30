@@ -9,5 +9,5 @@ LICENSE=CeCILL-2
 RDEPEND=sys-libs/zlib mpi? ( virtual/mpi )
 SLOT=0
 SRC_URI=http://dev.gentooexperimental.org/~patrick/scotch_5.1.12b_esmumps.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=89ffa88b6ea6bc223ee5c7bc64f52c48

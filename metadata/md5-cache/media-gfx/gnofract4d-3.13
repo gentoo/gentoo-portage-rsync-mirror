@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=x11-libs/gtk+:2 >=media-libs/libpng-1.4 virtual/jpeg >=dev-python/pygtk-2 >=gnome-base/gconf-2 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=mirror://sourceforge/gnofract4d/gnofract4d-3.13.tar.gz
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8f5d4f1322686c7caec5e13e08f1660c

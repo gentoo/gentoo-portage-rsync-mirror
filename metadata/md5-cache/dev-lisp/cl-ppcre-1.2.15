@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=dev-lisp/common-lisp-controller virtual/commonlisp
 SLOT=0
 SRC_URI=mirror://gentoo/cl-ppcre_1.2.15.orig.tar.gz
-_eclasses_=common-lisp	c0762703d46ef354d2354f7d73b80008	common-lisp-common	cc88c2e76410141434593a63f108303b	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=common-lisp	c0762703d46ef354d2354f7d73b80008	common-lisp-common	cc88c2e76410141434593a63f108303b	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1c7166ddbd85eeaf577493916ec20e80

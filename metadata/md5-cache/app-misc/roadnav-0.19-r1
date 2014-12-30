@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/wxGTK:2.8[X] ~dev-libs/libroadnav-0.19 festival? ( app-accessibility/festival ) gps? ( sci-geosciences/gpsd )
 SLOT=0
 SRC_URI=mirror://sourceforge/roadnav/roadnav-0.19.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=068995ac921e2f6dc2089be3cabb4392

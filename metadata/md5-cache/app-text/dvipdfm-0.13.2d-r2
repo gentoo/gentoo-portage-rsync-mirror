@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!>=app-text/tetex-2 >=media-libs/libpng-1.2.1 >=sys-libs/zlib-1.1.4 !app-text/ptex virtual/latex-base
 SLOT=0
 SRC_URI=http://gaspra.kettering.edu/dvipdfm/dvipdfm-0.13.2d.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=04828f8390732f3be006d56e021de12c

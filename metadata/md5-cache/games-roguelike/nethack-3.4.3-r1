@@ -9,5 +9,5 @@ LICENSE=nethack
 RDEPEND=>=sys-libs/ncurses-5.2-r5 X? ( x11-libs/libXaw x11-libs/libXpm x11-libs/libXt ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/nethack/nethack-343-src.tgz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=237f7981b5bc7d5e0b1e3c9e33da66e0

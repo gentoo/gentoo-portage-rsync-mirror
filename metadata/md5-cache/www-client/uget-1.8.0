@@ -10,5 +10,5 @@ RDEPEND=dev-libs/libpcre >=dev-libs/glib-2:2 !gtk3? ( >=x11-libs/gtk+-2.18:2 ) g
 REQUIRED_USE=|| ( aria2 curl )
 SLOT=0
 SRC_URI=mirror://sourceforge/urlget/uget-1.8.0.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e40feac908152637ce87b62053ce92cd

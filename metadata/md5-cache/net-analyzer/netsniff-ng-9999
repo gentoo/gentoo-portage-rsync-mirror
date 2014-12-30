@@ -6,5 +6,5 @@ HOMEPAGE=http://netsniff-ng.org/
 LICENSE=GPL-2
 RDEPEND=dev-libs/geoip dev-libs/libnl:3 dev-libs/userspace-rcu net-libs/libnetfilter_conntrack sys-libs/ncurses:5 dev-libs/libcli net-libs/libpcap sys-libs/ncurses:5 net-libs/libnet:1.1
 SLOT=0
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7916c270b1447dbdc8159ca4ea9130d4

@@ -11,5 +11,5 @@ REQUIRED_USE=debug? ( jit )
 RESTRICT=ia64? ( test )
 SLOT=17
 SRC_URI=http://ftp.mozilla.org/pub/mozilla.org/js/mozjs17.0.0.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=01b70cf270c48f3255356f74a219a22f

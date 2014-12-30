@@ -7,5 +7,5 @@ IUSE=debug nls sdl system-ffmpeg vaapi vdpau video_cards_fglrx xv
 LICENSE=GPL-1 GPL-2 MIT PSF-2 public-domain
 RDEPEND=!<media-video/avidemux-9999:2.6 dev-db/sqlite:3 sdl? ( media-libs/libsdl:0 ) system-ffmpeg? ( >=virtual/ffmpeg-9:0[mp3,theora] ) xv? ( x11-libs/libXv:0 ) vaapi? ( x11-libs/libva:0 ) vdpau? ( x11-libs/libvdpau:0 ) video_cards_fglrx? ( x11-libs/xvba-video:0 ) nls? ( virtual/libintl:0 )
 SLOT=2.6
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f1fd56143154bb7f1193d8c6fc984f2f

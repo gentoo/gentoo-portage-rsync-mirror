@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=~net-analyzer/openvas-libraries-8_beta4 >=dev-db/sqlite-3 !net-analyzer/openvas-administrator
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/1815/openvas-manager-6.0+beta4.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4847440071aa6c26a024693219235301

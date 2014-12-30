@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/openssl-1.0 media-libs/alsa-lib media-libs/libsdl[X,sound,video,alsa] media-libs/portaudio[alsa] media-libs/sdl-mixer media-libs/sdl-sound media-libs/x264:* net-libs/sofia-sip virtual/ffmpeg:0[X] || ( <media-video/ffmpeg-2 media-video/libav ) dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtwebkit:4
 SLOT=0
 SRC_URI=https://github.com/Homer-Conferencing/Homer-Conferencing/archive/V0.24.1.tar.gz -> homer-0.24.1.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=eead2a256047120076013467a6d94918

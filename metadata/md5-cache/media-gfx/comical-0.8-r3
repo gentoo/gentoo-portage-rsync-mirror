@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-arch/unrar-4.1.4-r2 sys-libs/zlib[minizip] x11-libs/wxGTK:2.8[X]
 SLOT=0
 SRC_URI=mirror://sourceforge/comical/comical-0.8.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=ec09b6a89c29259015ec2234b9252a5e

@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.65 2013/02/19 04:52:06 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.66 2014/12/30 07:36:12 williamh Exp $
+
+*hicolor-icon-theme-0.14 (30 Dec 2014)
+
+  30 Dec 2014; William Hubbs <williamh@gentoo.org>
+  +hicolor-icon-theme-0.14.ebuild:
+  version bump approved by ssuominen
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> hicolor-icon-theme-0.12.ebuild:
   Add ~arm-linux keyword.

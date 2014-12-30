@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=>=games-emulation/mupen64plus-core-2.0-r1:0= media-libs/libsdl:0=[joystick]
 SLOT=0
 SRC_URI=https://github.com/mupen64plus/mupen64plus-input-sdl/releases/download/2.0/mupen64plus-input-sdl-src-2.0.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5a9db2a104501b7473267df2e760402a

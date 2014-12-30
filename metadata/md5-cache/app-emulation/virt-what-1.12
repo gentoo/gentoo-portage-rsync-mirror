@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash dmi? ( sys-apps/dmidecode )
 SLOT=0
 SRC_URI=http://people.redhat.com/~rjones/virt-what/files/virt-what-1.12.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f1082c5790491145ccdb79e63c8a15c4

@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-python/pygments dev-python/setuptools gtk? ( dev-python/pygobject:2 dev-python/pygtk ) urwid? ( dev-python/urwid ) || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-3.3*[ncurses] =dev-lang/python-3.2*[ncurses] =dev-lang/python-3.1*[ncurses] =dev-lang/python-2.7*[ncurses] =dev-lang/python-2.6*[ncurses] )
 SLOT=0
 SRC_URI=http://www.bpython-interpreter.org/releases/bpython-0.12.tar.gz
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1c057bc16d7748ff711e1131948bc8dc

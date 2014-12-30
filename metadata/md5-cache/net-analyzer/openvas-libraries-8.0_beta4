@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.16 >=dev-libs/hiredis-0.10.1 =net-libs/gnutls-2* net-libs/libpcap app-crypt/gpgme !net-analyzer/openvas-libnasl >=net-libs/libssh-0.5.0 ldap? ( net-nds/openldap )
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/1807/openvas-libraries-8.0+beta4.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7a4fac1cbe09fe85adb508ecd5b541a0

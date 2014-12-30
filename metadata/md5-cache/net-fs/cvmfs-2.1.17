@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-cpp/gtest dev-db/sqlite:3 dev-libs/openssl net-libs/pacparser net-misc/curl[adns] sys-apps/attr sys-libs/zlib client? ( dev-cpp/sparsehash dev-libs/leveldb sys-fs/fuse ) server? ( >=dev-cpp/tbb-4.2 ) client? ( net-fs/autofs ) server? ( www-servers/apache[ssl] )
 SLOT=0
 SRC_URI=https://ecsft.cern.ch/dist/cvmfs/cvmfs-2.1.17/cvmfs-2.1.17.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1e459e97e9c127786531e3feb02e2942

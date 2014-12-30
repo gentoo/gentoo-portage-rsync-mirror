@@ -7,5 +7,5 @@ KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/dvbsnoop/dvbsnoop-1.4.50.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ddb1c75627c7ead4438a9aab267f4e88

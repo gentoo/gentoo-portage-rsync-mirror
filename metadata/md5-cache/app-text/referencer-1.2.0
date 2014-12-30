@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/poppler-0.12.3-r3 >=dev-cpp/gtkmm-2.8 >=dev-cpp/libglademm-2.6.0 >=dev-cpp/gconfmm-2.14.0 >=dev-cpp/gtkmm-utils-0.4.1 >=dev-libs/boost-1.52.0-r4 =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=https://launchpad.net/referencer/1./1.2.0/+download/referencer-1.2.0.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=0c8df91c3391ba204f49fbf1a90edfd1

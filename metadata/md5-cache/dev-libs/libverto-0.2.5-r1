@@ -10,5 +10,5 @@ RDEPEND=!=app-crypt/mit-krb5-1.10.1-r0 !=app-crypt/mit-krb5-1.10.1-r1 !=app-cryp
 REQUIRED_USE=|| ( glib libev libevent tevent )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/l/i/libverto/libverto-0.2.5.tar.gz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9b547fb79158dbdf73036acc34e02b22

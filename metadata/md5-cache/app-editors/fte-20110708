@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 Artistic )
 RDEPEND=>=sys-libs/ncurses-5.2 X? ( x11-libs/libXdmcp x11-libs/libXau x11-libs/libX11 x11-libs/libXpm ) gpm? ( >=sys-libs/gpm-1.20 )
 SLOT=0
 SRC_URI=mirror://sourceforge/fte/fte-20110708-src.zip mirror://sourceforge/fte/fte-20110708-common.zip
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e28e9151b49e7cb324fc8c89587a2d4e

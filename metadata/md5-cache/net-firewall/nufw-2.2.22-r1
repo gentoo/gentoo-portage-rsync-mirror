@@ -11,5 +11,5 @@ REQUIRED_USE=pam_nuauth? ( plaintext )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.nufw.org/attachments/download/39/nufw-2.2.22.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6a30f334f4591f125a56dd93268c05c9

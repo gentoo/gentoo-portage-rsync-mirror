@@ -10,5 +10,5 @@ RDEPEND=media-libs/speex net-libs/libgsasl sys-libs/zlib qt4? ( >=dev-qt/qtcore-
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
 SRC_URI=https://github.com/euroelessar/jreen/archive/v1.2.0.tar.gz -> jreen-1.2.0.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	6faef4c127028ccbba3a11400d24ae34	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cb9fc4dc9af9c718542b29995c05949c

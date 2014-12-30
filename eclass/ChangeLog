@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1489 2014/12/28 22:55:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1490 2014/12/30 07:24:52 williamh Exp $
+
+  30 Dec 2014; William Hubbs <williamh@gentoo.org> eutils.eclass:
+  Allow 512x512 icons to be installed (this was approved by ssuominen).
 
   28 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> gstreamer.eclass:
   Add workaround for new orc break gstreamer ebuilds, bug #533664.

@@ -10,5 +10,5 @@ RDEPEND=sys-libs/glibc amd64? ( sys-libs/glibc[multilib] ) dedicated? ( app-misc
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=mirror://3dgamers/wolfensteinet/et-linux-2.60.x86.run mirror://idsoftware/et/linux/et-linux-2.60.x86.run ftp://ftp.red.telefonica-wholesale.net/GAMES/ET/linux/et-linux-2.60.x86.run mirror://idsoftware/et/ET-2.60b.zip dedicated? ( http://dev.gentoo.org/~wolf31o2/sources/dump/enemy-territory-all-0.1.tar.bz2 mirror://gentoo/enemy-territory-all-0.1.tar.bz2 )
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	6faef4c127028ccbba3a11400d24ae34	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=fa42c31988c031a5970a42ee3a493d45

@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-3 MPL-1.1 ) AIFFWriter.m BSD GPL-3 GPL-3+ LGPL-2.1+ MIT
 RDEPEND=>=media-libs/libsdl-1.2:=[X] sys-libs/zlib:= alsa? ( media-libs/alsa-lib:= ) jack? ( media-sound/jack-audio-connection-kit:= )
 SLOT=0
 SRC_URI=http://milkytracker.org/files/milkytracker-0.90.86.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	6faef4c127028ccbba3a11400d24ae34	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e973b8be644bcc0a23e6fc456d5ae9f1

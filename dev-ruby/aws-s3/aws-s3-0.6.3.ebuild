@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.3.ebuild,v 1.4 2014/11/11 11:06:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.3.ebuild,v 1.5 2014/12/30 07:33:44 graaff Exp $
 
 EAPI=4
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
-RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README"
 
@@ -33,3 +33,7 @@ ruby_add_bdepend "test? ( dev-ruby/flexmock )"
 RUBY_PATCHES=(
 	${P}+ruby19.patch
 )
+
+each_ruby_test() {
+	${RUBY} -I. -e "Dir['test/*_test.rb'].each {|f| require f }" || die
+}

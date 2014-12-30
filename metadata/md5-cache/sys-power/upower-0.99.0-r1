@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.30 sys-apps/dbus:= >=sys-auth/polkit-0.110 introspection? ( dev-libs/gobject-introspection ) kernel_linux? ( virtual/libusb:1 virtual/libgudev:= virtual/udev ios? ( >=app-pda/libimobiledevice-1:= >=app-pda/libplist-1:= ) )
 SLOT=0/2
 SRC_URI=http://upower.freedesktop.org/releases/upower-0.99.0.tar.xz
-_eclasses_=eutils	6faef4c127028ccbba3a11400d24ae34	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=ee6a05faf38a58768a4371fe8d0a6111
