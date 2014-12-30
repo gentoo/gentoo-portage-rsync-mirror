@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16250 2014/12/29 14:14:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16252 2014/12/30 15:01:12 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (30 Dec 2014)
+# Upstream dead since 2005, does not build, bug 515780
+# Masked for removal in 30 days
+app-office/imposter
 
 # Ulrich Müller <ulm@gentoo.org> (29 Dec 2014)
 # Does not compile with Emacs 24.4 or later.
@@ -366,17 +371,6 @@ www-apps/trac-downloads
 # Dead upstream (last release 5 years ago).
 # No reverse deps in the tree. Masked for removal in 30 days.
 dev-perl/Mail-ClamAV
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (24 Oct 2014)
-# Fails tests (bug 421797), no reverse deps in tree, VERY dead
-# upstream, last release 10 years ago. Masked for removal in 30 days.
-dev-perl/DateTime-Format-DateManip
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (24 Oct 2014)
-# Fails tests (bug 277407), no reverse deps in tree, no releases
-# since many years, unlikely to work with uptodate subversion
-# Masked for removal in 30 days
-dev-perl/SVN-Mirror
 
 # Markos Chandras <18 Oct 2014>
 # Not quite ready yet. Reverse deps seem to be broken
