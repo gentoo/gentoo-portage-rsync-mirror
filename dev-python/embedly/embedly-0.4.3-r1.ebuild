@@ -1,14 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/embedly/embedly-0.4.3.ebuild,v 1.1 2012/05/15 01:20:59 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/embedly/embedly-0.4.3-r1.ebuild,v 1.1 2014/12/30 06:09:35 idella4 Exp $
 
-EAPI=4
-DISTUTILS_SRC_TEST="nosetests"
-SUPPORT_PYTHON_ABIS="1"
-PYTHON_DEPEND="2"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="Embedly"
 MY_P="${MY_PN}-${PV}"
@@ -22,9 +19,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="dev-python/setuptools
-	dev-python/httplib2
-	dev-python/simplejson"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/httplib2[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
