@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testrepository
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/ChangeLog,v 1.15 2014/11/23 17:10:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/ChangeLog,v 1.16 2014/12/30 10:15:24 jer Exp $
+
+  30 Dec 2014; Jeroen Roovers <jer@gentoo.org> testrepository-0.0.18-r1.ebuild:
+  Stable for HPPA (bug #530600).
 
   23 Nov 2014; Mike Gilbert <floppym@gentoo.org>
   testrepository-0.0.17-r2.ebuild:

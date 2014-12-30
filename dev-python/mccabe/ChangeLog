@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mccabe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.10 2014/08/20 20:29:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.11 2014/12/30 10:09:28 jer Exp $
+
+  30 Dec 2014; Jeroen Roovers <jer@gentoo.org> mccabe-0.2.1.ebuild:
+  Stable for HPPA (bug #530600).
 
   20 Aug 2014; Anthony G. Basile <blueness@gentoo.org> mccabe-0.2.1.ebuild:
   Keyword ~ppc ~ppc64, bug #508282

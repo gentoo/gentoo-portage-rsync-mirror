@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-2.1.0.ebuild,v 1.2 2014/05/21 01:52:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/best_in_place/best_in_place-2.1.0.ebuild,v 1.3 2014/12/30 10:10:09 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -26,13 +26,13 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/rails-3.1
-	dev-ruby/jquery-rails"
+	dev-ruby/jquery-rails:0"
 
 ruby_add_bdepend "
 	test? (
-		dev-ruby/rspec-rails
+		dev-ruby/rspec-rails:2
 		>=dev-ruby/nokogiri-1.5.0
-		>=dev-ruby/capybara-1.1.2
+		>=dev-ruby/capybara-1.1.2:0
 		>=dev-ruby/rails-3.2
 		>=dev-ruby/sqlite3-1.3.4-r1
 		dev-ruby/kramdown
@@ -45,16 +45,18 @@ all_ruby_prepare() {
 
 	sed -i \
 		-e '/git ls-files/d' \
-		-e '/rspec-rails/s:,.*::' \
+		-e '/rspec-rails/ s:2.8.0:2.8:' \
+		-e 's/"jquery-rails"/"jquery-rails", "~>2.0"/' \
 		${RUBY_FAKEGEM_GEMSPEC} || die
 
 	sed -i \
 		-e '/gem .rails/s:3.2: ~> 3.2:' \
-		-e '/group :assets/,/^end/ d' \
 		test_app/Gemfile || die
+
+	sed -i -e '8agem "rspec", "~> 2.8"' Gemfile || die
 }
 
 each_ruby_test() {
 	RAILS_ENV=test ${RUBY} -C test_app -S rake db:migrate || die "test_app migration failed"
-	VIRTUALX_COMMAND="${RUBY}" virtualmake -S bundle exec rspec spec || die "Specs failed"
+	VIRTUALX_COMMAND="${RUBY}" virtualmake -S bundle exec rspec-2 spec || die "Specs failed"
 }

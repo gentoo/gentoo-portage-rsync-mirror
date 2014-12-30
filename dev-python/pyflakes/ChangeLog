@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.48 2014/11/03 11:20:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.49 2014/12/30 10:07:21 jer Exp $
+
+  30 Dec 2014; Jeroen Roovers <jer@gentoo.org> pyflakes-0.8.1.ebuild:
+  Stable for HPPA (bug #530600).
 
   03 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pyflakes-0.8.1.ebuild:
   Stable for x86, wrt bug #525508

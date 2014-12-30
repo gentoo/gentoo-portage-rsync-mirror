@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop-base
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.55 2014/12/28 12:23:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.56 2014/12/30 10:10:04 ago Exp $
+
+  30 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
+  gnome-python-desktop-base-2.32.0-r1.ebuild:
+  Stable for ppc64, wrt bug #529964
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-python-desktop-base-2.32.0-r1.ebuild:

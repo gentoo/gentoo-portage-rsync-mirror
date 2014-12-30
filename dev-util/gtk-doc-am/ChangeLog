@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.112 2014/12/28 12:23:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.113 2014/12/30 10:10:20 ago Exp $
+
+  30 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gtk-doc-am-1.21.ebuild:
+  Stable for ppc64, wrt bug #529964
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gtk-doc-am-1.21.ebuild:
   Stable for ppc, wrt bug #529964
