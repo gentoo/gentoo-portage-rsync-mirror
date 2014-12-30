@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.40.1-r1.ebuild,v 1.5 2014/12/30 10:09:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.40.1-r1.ebuild,v 1.6 2014/12/30 13:38:34 leio Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86"
 
 RDEPEND="
 	>=dev-libs/glib-2.36:2
-	>=dev-libs/gobject-introspection-1.39.3
+	>=dev-libs/gobject-introspection-1.40.0-r2
 
 	sys-libs/readline:0
 	dev-lang/spidermonkey:24

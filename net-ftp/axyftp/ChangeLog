@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/axyftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/axyftp/ChangeLog,v 1.10 2014/10/27 17:34:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/axyftp/ChangeLog,v 1.11 2014/12/30 14:01:01 kensington Exp $
+
+  30 Dec 2014; Michael Palimaka <kensington@gentoo.org> -axyftp-0.5.1-r1.ebuild:
+  Remove old.
 
 *axyftp-0.5.1-r2 (27 Oct 2014)
 
