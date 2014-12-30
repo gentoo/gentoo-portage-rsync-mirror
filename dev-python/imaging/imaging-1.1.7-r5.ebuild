@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r5.ebuild,v 1.1 2014/12/18 20:24:34 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r5.ebuild,v 1.2 2014/12/30 18:23:18 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -17,12 +17,11 @@ SRC_URI="http://www.effbot.org/downloads/${MY_P}.tar.gz"
 LICENSE="HPND"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
-IUSE="doc examples jpeg lcms scanner test tiff tk truetype zlib"
+IUSE="doc examples jpeg scanner test tiff tk truetype zlib"
 
 RDEPEND="
 	truetype? ( media-libs/freetype:2 )
 	jpeg? ( virtual/jpeg )
-	lcms? ( media-libs/lcms:0 )
 	scanner? ( media-gfx/sane-backends )
 	tiff? ( media-libs/tiff )
 	zlib? ( sys-libs/zlib )
@@ -50,7 +49,7 @@ python_prepare_all() {
 
 	# Disable all the stuff we don't want.
 	local f
-	for f in jpeg lcms tiff tk zlib; do
+	for f in jpeg tiff tk zlib; do
 		if ! use ${f}; then
 			sed -i -e "s:feature.${f} =:& None #:" setup.py || die
 		fi
@@ -58,6 +57,7 @@ python_prepare_all() {
 	if ! use truetype; then
 		sed -i -e 's:feature.freetype =:& None #:' setup.py || die
 	fi
+	sed -i -e "s:feature.lcms =:& None #:" setup.py || die
 
 	distutils-r1_python_prepare_all
 }

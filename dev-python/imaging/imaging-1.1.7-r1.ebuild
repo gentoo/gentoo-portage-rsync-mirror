@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r1.ebuild,v 1.13 2013/05/28 22:47:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7-r1.ebuild,v 1.14 2014/12/30 18:23:18 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,11 +20,10 @@ SRC_URI="http://www.effbot.org/downloads/${MY_P}.tar.gz"
 LICENSE="HPND"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
-IUSE="doc examples lcms scanner tk X"
+IUSE="doc examples scanner tk X"
 
 DEPEND="virtual/jpeg
 	media-libs/freetype:2
-	lcms? ( media-libs/lcms:0 )
 	scanner? ( media-gfx/sane-backends )
 	X? ( x11-misc/xdg-utils )"
 RDEPEND="${DEPEND}"
@@ -46,9 +45,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-sane.patch"
 	epatch "${FILESDIR}/${P}-giftrans.patch"
 	epatch "${FILESDIR}/${P}-missing-math.patch"
-	if ! use lcms; then
-		epatch "${FILESDIR}/${P}-nolcms.patch"
-	fi
+	epatch "${FILESDIR}/${P}-nolcms.patch"
 
 	# Add shebang.
 	sed -e "1i#!/usr/bin/python" -i Scripts/pilfont.py \
