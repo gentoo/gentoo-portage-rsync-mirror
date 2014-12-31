@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/glances-2.1.2.ebuild,v 1.1 2014/11/02 03:59:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/glances-2.2.1.ebuild,v 1.1 2014/12/31 04:03:30 idella4 Exp $
 
 EAPI=5
 
@@ -49,13 +49,10 @@ python_prepare_all() {
 
 python_install_all() {
 	# Abnormal setup for pre-built html docs in setup.py
+	use doc && local HTML_DOCS=( docs/_build/html/. )
+	rm -rf "${D}"usr/share/doc/${PF}/{glances-doc.html,images/} || die
+
 	distutils-r1_python_install_all
-	if use doc; then
-		mkdir "${D}"usr/share/doc/${P}/html || die
-		mv "${D}"usr/share/doc/${P}/{glances-doc.html,images/} "${D}"usr/share/doc/${P}/html/ || die
-	else
-		rm -rf "${D}"usr/share/doc/${P}/{glances-doc.html,images/} || die
-	fi
 }
 
 pkg_postinst() {
@@ -63,5 +60,8 @@ pkg_postinst() {
 		elog "${PN} can gain additional functionality with following packages:"
 		elog "   dev-python/jinja - export statistics to HTML"
 		elog "   app-admin/hddtemp - monitor hard drive temperatures"
+		elog "   dev-python/pysnmp - enable Python SNMP library support"
+		elog "   dev-python/bottle - for Web server mode"
+		elog "   dev-python/matplotlib - for graphical / chart support"
 	fi
 }

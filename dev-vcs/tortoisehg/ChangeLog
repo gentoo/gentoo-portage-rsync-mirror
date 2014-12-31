@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.67 2014/12/19 11:33:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.68 2014/12/31 04:26:17 floppym Exp $
+
+  31 Dec 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Reorder maintainers.
 
 *tortoisehg-3.2.2 (19 Dec 2014)
 
