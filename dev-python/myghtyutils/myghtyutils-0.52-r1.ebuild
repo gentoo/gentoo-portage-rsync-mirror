@@ -1,13 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/myghtyutils/myghtyutils-0.52.ebuild,v 1.5 2014/08/10 21:14:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/myghtyutils/myghtyutils-0.52-r1.ebuild,v 1.1 2014/12/31 04:36:53 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="MyghtyUtils"
 MY_P=${MY_PN}-${PV}
@@ -21,9 +19,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/myghty"
+RDEPEND="dev-python/myghty[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"

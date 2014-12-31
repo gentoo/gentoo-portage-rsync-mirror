@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.5.ebuild,v 1.1 2013/12/23 18:48:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.5.ebuild,v 1.2 2014/12/31 05:00:41 floppym Exp $
 
 EAPI=5
 
@@ -27,17 +27,17 @@ QA_PREBUILT="usr/$(get_libdir)/${PN}/plugins/attack/db/sqlmap/udf/mysql/linux/32
 	usr/$(get_libdir)/${PN}/plugins/attack/db/sqlmap/udf/postgresql/linux/*/8.4/lib_postgresqludf_sys.so
 	usr/$(get_libdir)/${PN}/plugins/attack/db/sqlmap/udf/postgresql/linux/*/9.0/lib_postgresqludf_sys.so"
 
-RDEPEND=">=dev-python/fpconst-0.7.2
-	dev-python/lxml
-	dev-python/nltk
-	dev-python/pybloomfiltermmap
-	dev-python/pyopenssl
-	dev-python/pyPdf
-	dev-python/python-cluster
-	dev-python/pyyaml
-	dev-python/simplejson
-	dev-python/soappy
-	dev-python/pysvn
+RDEPEND=">=dev-python/fpconst-0.7.2[${PYTHON_USEDEP}]
+	dev-python/lxml[${PYTHON_USEDEP}]
+	dev-python/nltk[${PYTHON_USEDEP}]
+	dev-python/pybloomfiltermmap[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	dev-python/pyPdf[${PYTHON_USEDEP}]
+	dev-python/python-cluster[${PYTHON_USEDEP}]
+	dev-python/pyyaml[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]
+	dev-python/soappy[${PYTHON_USEDEP}]
+	dev-python/pysvn[${PYTHON_USEDEP}]
 	|| (
 		net-analyzer/gnu-netcat
 		net-analyzer/netcat
@@ -46,6 +46,8 @@ RDEPEND=">=dev-python/fpconst-0.7.2
 	gtk? ( media-gfx/graphviz
 		>dev-python/pygtk-2.0
 		dev-python/pygtksourceview )"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare(){
 	rm doc/{GPL,INSTALL} || die
