@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.1.ebuild,v 1.2 2010/03/16 14:56:18 mr_bones_ Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/formido-1.0.1.ebuild,v 1.3 2014/12/31 14:13:21 tupone Exp $
+EAPI=4
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="A shooting game in the spirit of Phobia games"
@@ -17,10 +17,15 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd "${S}"
+	cd "${S}"/data
+	unpack ${PN}-music.tar.bz2
+}
+
+src_prepare() {
 	sed -i \
 		-e "s:g++:$(tc-getCXX):" \
 		-e "/^FLAGS=/s:$: ${CXXFLAGS}:" \
@@ -29,14 +34,12 @@ src_unpack() {
 		-e "s:\${DEFCONFIGDIR}:${GAMES_DATADIR}/${PN}:" \
 		Makefile \
 		|| die "sed failed"
-	cd data
-	unpack ${PN}-music.tar.bz2
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r ${PN}.cfg data || die "doins failed"
+	doins -r ${PN}.cfg data
 	newicon data/icon.dat ${PN}.bmp
 	make_desktop_entry ${PN} Formido /usr/share/pixmaps/${PN}.bmp
 	dodoc README README-1.0.1

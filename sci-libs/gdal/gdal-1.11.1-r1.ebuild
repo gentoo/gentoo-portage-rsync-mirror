@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.5 2014/12/28 16:52:40 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.6 2014/12/31 14:08:12 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="http://download.osgeo.org/${PN}/${PV}/${P}.tar.gz"
 SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="armadillo +aux_xml curl debug doc ecwj2k fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc ogdi opencl pdf perl png postgres python ruby spatialite sqlite threads xls"
+IUSE="armadillo +aux_xml curl debug doc fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc ogdi opencl pdf perl png postgres python ruby spatialite sqlite threads xls"
 
 RDEPEND="
 	dev-libs/expat
@@ -31,7 +31,6 @@ RDEPEND="
 	sys-libs/zlib[minizip(+)]
 	armadillo? ( sci-libs/armadillo[lapack] )
 	curl? ( net-misc/curl )
-	ecwj2k? ( sci-libs/libecwj2 )
 	fits? ( sci-libs/cfitsio )
 	geos?   ( >=sci-libs/geos-2.2.1 )
 	gif? ( media-libs/giflib )
@@ -72,7 +71,6 @@ AT_M4DIR="${S}/m4"
 MAKEOPTS+=" -j1"
 
 REQUIRED_USE="
-	ecwj2k? ( threads )
 	spatialite? ( sqlite )
 	mdb? ( java )
 "
@@ -203,7 +201,7 @@ gdal_src_configure() {
 		$(use_with armadillo) \
 		$(use_with aux_xml pam) \
 		$(use_with curl) \
-		$(use_with ecwj2k ecw) \
+		--without-ecw \
 		$(use_with fits cfitsio) \
 		$(use_with geos) \
 		$(use_with gif) \

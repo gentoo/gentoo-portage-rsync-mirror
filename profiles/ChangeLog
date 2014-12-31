@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9657 2014/12/31 12:17:21 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9658 2014/12/31 14:16:17 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add sci-libs/libecwj2 to lcms:0 mask
 
   31 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> updates/4Q-2014:
   Redo dev-db/postgresql-base to dev-db/postgresql package move.

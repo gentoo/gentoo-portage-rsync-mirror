@@ -6395,7 +6395,6 @@ sci-libs/flann:cuda - Enable support for nVidia CUDA
 sci-libs/flann:octave - Add bindings for sci-mathematics/octave
 sci-libs/gdal:armadillo - Use sci-libs/armadillo for faster TPS transform computation
 sci-libs/gdal:aux_xml - Enable Portable Auxilliary Metadata generation
-sci-libs/gdal:ecwj2k - Enable support for alternate jpeg2k library sci-libs/libecwj2
 sci-libs/gdal:fits - Enable support for NASA's sci-libs/cfitsio library
 sci-libs/gdal:geos - Add support for geometry engine (sci-libs/geos)
 sci-libs/gdal:gml - Enable support for dev-libs/xerces-c C++ API

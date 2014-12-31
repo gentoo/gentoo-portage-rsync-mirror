@@ -1,6 +1,9 @@
 # ChangeLog for games-action/formido
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/formido/ChangeLog,v 1.9 2010/03/16 14:56:18 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/formido/ChangeLog,v 1.10 2014/12/31 14:13:21 tupone Exp $
+
+  31 Dec 2014; Tupone Alfredo <tupone@gentoo.org> formido-1.0.1.ebuild:
+  Moving to EAPI 4
 
   16 Mar 2010; Michael Sterrett <mr_bones_@gentoo.org> formido-1.0.1.ebuild:
   update HOMEPAGE (bug #309719)

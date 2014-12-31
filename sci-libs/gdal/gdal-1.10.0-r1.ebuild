@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.0-r1.ebuild,v 1.6 2014/12/28 16:52:40 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.0-r1.ebuild,v 1.7 2014/12/31 14:08:12 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://download.osgeo.org/${PN}/${PV}/${P}.tar.gz"
 SLOT="0"
 LICENSE="MIT"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="armadillo +aux_xml curl debug doc ecwj2k fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc opencl pdf perl png postgres python ruby spatialite sqlite threads xls"
+IUSE="armadillo +aux_xml curl debug doc fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc opencl pdf perl png postgres python ruby spatialite sqlite threads xls"
 
 RDEPEND="
 	dev-libs/expat
@@ -26,7 +26,6 @@ RDEPEND="
 	|| ( <sys-libs/zlib-1.2.5.1-r1 >=sys-libs/zlib-1.2.5.1-r2[minizip] )
 	armadillo? ( sci-libs/armadillo[lapack] )
 	curl? ( net-misc/curl )
-	ecwj2k? ( sci-libs/libecwj2 )
 	fits? ( sci-libs/cfitsio )
 	geos?   ( >=sci-libs/geos-2.2.1 )
 	gif? ( media-libs/giflib )
@@ -190,7 +189,7 @@ src_configure() {
 		$(use_with gif) \
 		$(use_with hdf5) \
 		$(use_with jpeg2k jasper) \
-		$(use_with ecwj2k ecw) \
+		--without-ecw \
 		$(use_with gml xerces) \
 		$(use_with odbc) \
 		$(use_with opencl) \

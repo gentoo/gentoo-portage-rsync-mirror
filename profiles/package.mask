@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16256 2014/12/31 11:41:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16257 2014/12/31 14:16:17 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 www-client/netsurf
 media-gfx/photoprint
 media-gfx/rawstudio
+sci-libs/libecwj2
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (30 Dec 2014)
 # Upstream dead since 2005, does not build, bug 515780
