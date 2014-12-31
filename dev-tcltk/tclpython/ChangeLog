@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclpython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.21 2014/12/28 12:01:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.22 2014/12/31 16:02:04 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> tclpython-4.1-r4.ebuild:
+  Stable for ppc, wrt bug #529448
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> tclpython-4.1-r4.ebuild:
   Stable for x86, wrt bug #529448

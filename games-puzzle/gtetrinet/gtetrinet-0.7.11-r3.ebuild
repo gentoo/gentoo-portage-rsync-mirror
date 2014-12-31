@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r3.ebuild,v 1.3 2014/12/28 10:04:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/gtetrinet-0.7.11-r3.ebuild,v 1.4 2014/12/31 16:12:24 ago Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="nls ipv6"
 
 RDEPEND="

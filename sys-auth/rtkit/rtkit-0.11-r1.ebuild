@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.11-r1.ebuild,v 1.5 2014/12/30 17:43:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/rtkit/rtkit-0.11-r1.ebuild,v 1.6 2014/12/31 16:23:02 ago Exp $
 
 EAPI=5
 inherit eutils systemd user autotools
@@ -11,7 +11,7 @@ SRC_URI="http://0pointer.de/public/${P}.tar.xz"
 
 LICENSE="GPL-3 BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86"
 IUSE=""
 
 RDEPEND="

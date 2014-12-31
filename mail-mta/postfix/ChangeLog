@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.559 2014/12/29 07:24:57 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.560 2014/12/31 16:11:55 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> postfix-2.11.3.ebuild:
+  Stable for ppc, wrt bug #531430
 
 *postfix-2.12_pre20141228 (29 Dec 2014)
 

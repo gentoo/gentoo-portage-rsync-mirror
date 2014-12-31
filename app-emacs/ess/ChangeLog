@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.99 2014/12/28 10:16:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ChangeLog,v 1.100 2014/12/31 16:23:42 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ess-14.09.ebuild:
+  Stable for ppc, wrt bug #533056
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ess-14.09.ebuild:
   Stable for x86, wrt bug #533056

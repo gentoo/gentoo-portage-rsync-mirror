@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.25.ebuild,v 1.3 2014/11/02 08:24:30 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.25.ebuild,v 1.4 2014/12/31 16:30:33 grobian Exp $
 
 EAPI="5"
 
@@ -227,7 +227,7 @@ src_install() {
 		cp -p src.zip "${ddest}" || die
 	fi
 
-	if use !x86-macos && use !x64-macos ; then
+	if [[ -d jre/lib/desktop ]] ; then
 		# Install desktop file for the Java Control Panel.
 		# Using ${PN}-${SLOT} to prevent file collision with jre and or
 		# other slots.  make_desktop_entry can't be used as ${P} would

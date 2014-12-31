@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.146 2014/12/28 12:11:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.147 2014/12/31 16:07:02 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mailman-2.1.18_p1.ebuild:
+  Stable for ppc, wrt bug #530772
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mailman-2.1.18_p1.ebuild:
   Stable for x86, wrt bug #530772

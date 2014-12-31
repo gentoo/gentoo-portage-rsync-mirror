@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.55 2014/12/26 17:51:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.56 2014/12/31 16:13:54 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> fdupes-1.51.ebuild:
+  Stable for ppc, wrt bug #531778
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> fdupes-1.51.ebuild:
   arm stable, bug #531778

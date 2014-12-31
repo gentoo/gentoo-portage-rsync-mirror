@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/nvidiabl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.23 2014/12/27 19:29:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.24 2014/12/31 16:15:29 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> -nvidiabl-0.81.ebuild:
+  Remove old.
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> nvidiabl-0.83.ebuild:
   Stable for amd64, wrt bug #495338

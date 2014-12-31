@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.39.2.ebuild,v 1.3 2014/12/28 10:11:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.39.2.ebuild,v 1.4 2014/12/31 16:19:39 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="examples test"
 
 RDEPEND=">=dev-python/setuptools-0.8[${PYTHON_USEDEP}]

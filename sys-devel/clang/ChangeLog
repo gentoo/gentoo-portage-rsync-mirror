@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.114 2014/12/28 12:06:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.115 2014/12/31 16:07:47 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> clang-3.5.0-r100.ebuild:
+  Stable for ppc, wrt bug #530882
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> clang-3.5.0-r100.ebuild:
   Stable for x86, wrt bug #530882

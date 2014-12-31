@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.115 2014/12/28 10:10:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.116 2014/12/31 16:18:32 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> reportlab-3.1.8-r1.ebuild:
+  Stable for ppc, wrt bug #532440
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> reportlab-3.1.8-r1.ebuild:
   Stable for x86, wrt bug #532440

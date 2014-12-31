@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.130 2014/12/26 13:20:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.131 2014/12/31 16:15:06 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> auctex-11.88.ebuild:
+  Stable for ppc, wrt bug #531808
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> auctex-11.88.ebuild:
   Stable for x86, wrt bug #531808

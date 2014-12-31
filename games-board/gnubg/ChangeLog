@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.82 2014/12/28 10:11:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.83 2014/12/31 16:19:18 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gnubg-1.04.000.ebuild:
+  Stable for ppc, wrt bug #532512
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gnubg-1.04.000.ebuild:
   Stable for x86, wrt bug #532512
