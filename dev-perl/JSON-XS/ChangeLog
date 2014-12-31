@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON-XS
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/ChangeLog,v 1.44 2014/11/11 20:50:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/ChangeLog,v 1.45 2014/12/31 18:33:41 zlogene Exp $
+
+  31 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> JSON-XS-3.10.0.ebuild:
+  Add more keywords wrt bug #523298
 
   11 Nov 2014; Markus Meier <maekke@gentoo.org> JSON-XS-3.10.0.ebuild:
   add ~arm, bug #523298
