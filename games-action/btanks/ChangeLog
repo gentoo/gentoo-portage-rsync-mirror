@@ -1,6 +1,9 @@
 # ChangeLog for games-action/btanks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.26 2012/10/08 09:02:14 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.27 2014/12/31 11:36:52 tupone Exp $
+
+  31 Dec 2014; Tupone Alfredo <tupone@gentoo.org> btanks-0.9.8083.ebuild:
+  Migration to EAPI 4
 
   08 Oct 2012; Tupone Alfredo <tupone@gentoo.org> btanks-0.9.8083.ebuild,
   +files/btanks-0.9.8083-gcc47.patch:

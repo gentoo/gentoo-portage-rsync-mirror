@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/netrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/ChangeLog,v 1.4 2014/12/27 07:36:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/ChangeLog,v 1.5 2014/12/31 11:32:18 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> netrc-0.9.0.ebuild:
+  Add ~x86, wrt bug #517542
 
   27 Dec 2014; Hans de Graaff <graaff@gentoo.org> -netrc-0.7.7.ebuild,
   -netrc-0.8.0.ebuild:

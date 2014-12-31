@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/netrc-0.9.0.ebuild,v 1.1 2014/12/07 12:43:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/netrc/netrc-0.9.0.ebuild,v 1.2 2014/12/31 11:32:18 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -15,7 +15,7 @@ DESCRIPTION="This library reads and writes .netrc files"
 HOMEPAGE="https://github.com/geemus/netrc"
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
