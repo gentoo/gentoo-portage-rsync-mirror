@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.12.ebuild,v 1.2 2014/12/26 15:07:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.12.ebuild,v 1.3 2014/12/31 13:18:45 kensington Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RDEPEND="
 		media-libs/libogg
 		media-libs/opus
 	)
-	phonon? ( media-libs/phonon )
+	phonon? ( media-libs/phonon[qt4] )
 	pulseaudio? ( media-sound/pulseaudio )
 	vorbis? (
 		media-libs/libogg

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-3.1.2.ebuild,v 1.1 2014/11/14 18:16:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-3.1.2.ebuild,v 1.2 2014/12/31 13:17:39 kensington Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ RDEPEND="
 	mp3? ( media-libs/id3lib )
 	mp4? ( media-libs/libmp4v2:0 )
 	phonon? ( || (
-		media-libs/phonon
+		media-libs/phonon[qt4]
 		dev-qt/qtphonon:4
 	) )
 	taglib? ( media-libs/taglib )

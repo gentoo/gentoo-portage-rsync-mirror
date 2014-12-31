@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/musique-1.2.1.ebuild,v 1.5 2014/08/10 21:09:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/musique-1.2.1.ebuild,v 1.6 2014/12/31 13:19:49 kensington Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4[gtkstyle]
 	dev-qt/qtsql:4[sqlite]
-	|| ( dev-qt/qtphonon:4 media-libs/phonon )
+	|| ( dev-qt/qtphonon:4 media-libs/phonon[qt4] )
 	media-libs/taglib
 "
 DEPEND="${RDEPEND}"

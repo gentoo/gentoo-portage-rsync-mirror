@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1-r2.ebuild,v 1.2 2014/12/12 15:43:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1-r2.ebuild,v 1.3 2014/12/31 13:25:25 kensington Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="
 	$(add_kdebase_dep nepomuk)
 	$(add_kdebase_dep audiocd-kio)
 	media-libs/taglib
-	media-libs/phonon
+	media-libs/phonon[qt4]
 	dev-qt/qtscript:4
 "
 DEPEND="${RDEPEND}

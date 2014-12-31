@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.5-r1.ebuild,v 1.6 2013/12/28 02:06:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.5-r1.ebuild,v 1.7 2014/12/31 13:11:33 kensington Exp $
 
 EAPI=4
 
@@ -30,8 +30,8 @@ DEPEND="
 	opengl? ( ~dev-qt/qtopengl-${PV}[aqua=,debug=,qt3support?] )
 	openvg? ( ~dev-qt/qtopenvg-${PV}[aqua=,debug=,qt3support?] )
 	phonon? (
-		kde? ( media-libs/phonon[aqua=] )
-		!kde? ( || ( ~dev-qt/qtphonon-${PV}[aqua=,debug=] media-libs/phonon[aqua=] ) )
+		kde? ( media-libs/phonon[aqua=,qt4] )
+		!kde? ( || ( ~dev-qt/qtphonon-${PV}[aqua=,debug=] media-libs/phonon[aqua=,qt4] ) )
 	)
 	qt3support? ( ~dev-qt/qt3support-${PV}[aqua=,debug=] )
 	webkit? ( ~dev-qt/qtwebkit-${PV}[aqua=,debug=] )

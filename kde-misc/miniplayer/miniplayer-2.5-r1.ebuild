@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/miniplayer-2.5-r1.ebuild,v 1.2 2014/04/24 15:08:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/miniplayer/miniplayer-2.5-r1.ebuild,v 1.3 2014/12/31 13:13:53 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="4"
 IUSE="debug"
 
 DEPEND="
-	media-libs/phonon
+	media-libs/phonon[qt4]
 "
 RDEPEND="
 	${DEPEND}

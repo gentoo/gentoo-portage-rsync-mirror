@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.165 2014/06/23 09:43:43 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.166 2014/12/31 13:27:30 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  kmplayer-0.11.3d-r3.ebuild:
+  Enforce USE dependency for media-libs/phonon.
 
   23 Jun 2014; Michael Palimaka <kensington@gentoo.org>
   -kmplayer-0.11.3d-r1.ebuild:

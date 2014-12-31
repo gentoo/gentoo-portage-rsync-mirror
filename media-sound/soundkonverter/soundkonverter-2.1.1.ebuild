@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-2.1.1.ebuild,v 1.1 2014/06/12 11:45:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-2.1.1.ebuild,v 1.2 2014/12/31 13:20:46 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="debug"
 
 RDEPEND="
 	$(add_kdebase_dep libkcddb)
-	media-libs/phonon
+	media-libs/phonon[qt4]
 	media-libs/taglib
 	media-sound/cdparanoia
 "

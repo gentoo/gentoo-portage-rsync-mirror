@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.7.0.ebuild,v 1.7 2014/07/19 11:40:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.7.0.ebuild,v 1.8 2014/12/31 13:22:59 kensington Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ DEPEND="
 	>=dev-qt/qtwebkit-${QT_MINIMAL}:4
 	>=media-libs/liblastfm-1.0.1
 	>=media-libs/libechonest-2.0.3
-	>=media-libs/phonon-4.5.0
+	>=media-libs/phonon-4.5.0[qt4]
 	>=media-libs/taglib-1.6.0
 	x11-libs/libX11
 	jabber? ( >=net-libs/jreen-1.1.1 )
