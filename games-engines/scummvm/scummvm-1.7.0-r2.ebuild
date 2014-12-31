@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.7.0-r1.ebuild,v 1.1 2014/12/30 19:13:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.7.0-r2.ebuild,v 1.1 2014/12/31 20:59:53 calchan Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils toolchain-funcs games
@@ -79,7 +79,7 @@ src_configure() {
 		$(use_enable theora theoradec) \
 		$(use_enable truetype freetype2) \
 		$(use_enable x86 nasm) \
-		$(use_enable unsupported all-engines) \
+		$(use unsupported && echo --enable-all-engines) \
 		${myconf} ${EXTRA_ECONF} || die
 }
 
