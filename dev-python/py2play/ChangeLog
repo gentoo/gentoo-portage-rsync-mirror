@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py2play
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.25 2013/01/30 22:56:51 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.26 2014/12/31 10:29:07 idella4 Exp $
+
+*py2play-0.1.10-r1 (31 Dec 2014)
+
+  31 Dec 2014; Ian Delaney <idella4@gentoo.org> +py2play-0.1.10-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -py2play-0.1.9.ebuild:
   old
