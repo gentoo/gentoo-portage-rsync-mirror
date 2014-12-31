@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd-sysv-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/ChangeLog,v 1.15 2014/12/31 15:54:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/ChangeLog,v 1.16 2014/12/31 19:11:47 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> systemd-sysv-utils-215.ebuild:
+  Stable for ia64/ppc64/sparc, wrt bug #520036
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> systemd-sysv-utils-215.ebuild:
   Stable for ppc, wrt bug #520036
