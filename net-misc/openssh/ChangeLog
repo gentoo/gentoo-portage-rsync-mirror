@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.541 2014/12/31 07:29:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.542 2014/12/31 07:40:01 vapier Exp $
+
+  31 Dec 2014; Mike Frysinger <vapier@gentoo.org> openssh-6.7_p1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   31 Dec 2014; Mike Frysinger <vapier@gentoo.org> openssh-6.7_p1-r3.ebuild,
   openssh-6.7_p1.ebuild:

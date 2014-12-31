@@ -1,5 +1,5 @@
---- SConstruct.org	2011-06-07 21:33:28.876609681 +0200
-+++ SConstruct	2011-06-07 21:34:11.420368249 +0200
+--- SConstruct.org
++++ SConstruct
 @@ -70,6 +70,10 @@
      env.ParseConfig('pkg-config --cflags --libs gtk+-3.0')
      env.Append(CPPDEFINES=["_GTK3"])

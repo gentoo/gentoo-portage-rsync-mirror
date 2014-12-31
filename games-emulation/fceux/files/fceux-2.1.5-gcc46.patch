@@ -1,6 +1,5 @@
-diff -Naur a/fceu2.1.5/src/file.cpp b/fceu2.1.5/src/file.cpp
---- a/fceu2.1.5/src/file.cpp	2010-09-19 00:05:09.000000000 +0000
-+++ b/fceu2.1.5/src/file.cpp	2012-03-01 19:21:25.856204727 +0000
+--- a/fceu2.1.5/src/file.cpp
++++ b/fceu2.1.5/src/file.cpp
 @@ -310,7 +310,7 @@
  				if(magic==0x088b1f) {
  					 // maybe gzip... 

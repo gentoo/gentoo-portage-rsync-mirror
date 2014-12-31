@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.104 2014/11/22 20:14:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.106 2014/12/31 07:36:50 graaff Exp $
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> capistrano-3.3.5.ebuild:
+  Update HOMEPAGE.
+
+*capistrano-3.3.5 (31 Dec 2014)
+*capistrano-2.15.5-r2 (31 Dec 2014)
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> +capistrano-2.15.5-r2.ebuild,
+  +capistrano-3.3.5.ebuild:
+  Version bump. Capistrano 2.x can still be called directly with the new cap-2
+  command for compatibility.
 
   22 Nov 2014; Manuel Rüger <mrueg@gentoo.org> capistrano-2.15.5-r1.ebuild,
   capistrano-2.15.5.ebuild:

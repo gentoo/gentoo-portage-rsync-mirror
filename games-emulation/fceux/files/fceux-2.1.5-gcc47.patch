@@ -1,5 +1,5 @@
---- src/utils/endian.h.old	2012-10-26 09:07:24.000000000 +0200
-+++ src/utils/endian.h	2012-10-26 09:08:25.000000000 +0200
+--- src/utils/endian.h.old
++++ src/utils/endian.h
 @@ -93,19 +93,6 @@
  	}
  }
