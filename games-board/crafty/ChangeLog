@@ -1,6 +1,10 @@
 # ChangeLog for games-board/crafty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.62 2014/12/31 16:16:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.63 2014/12/31 17:11:28 mr_bones_ Exp $
+
+  31 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> -crafty-23.4.ebuild,
+  -files/crafty-23.4-64bits.patch:
+  old
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> crafty-24.1.ebuild:
   Stable for ppc, wrt bug #532022

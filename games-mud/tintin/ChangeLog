@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/tintin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.133 2014/12/31 16:12:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.134 2014/12/31 17:22:09 mr_bones_ Exp $
+
+  31 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/tintin-2.00.9-ldpermission.patch, -tintin-2.00.9.ebuild:
+  old
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> tintin-2.01.0.ebuild:
   Stable for ppc, wrt bug #531472
