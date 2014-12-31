@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.80 2014/12/29 12:56:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.81 2014/12/31 22:21:10 polynomial-c Exp $
+
+  31 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> sdparm-1.09.ebuild:
+  Fixed dependency on sg3_utils. Thanks to Jiří Moravec for reporting this in
+  bug #534142.
 
 *sdparm-1.09 (29 Dec 2014)
 

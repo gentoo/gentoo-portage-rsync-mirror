@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-1.09.ebuild,v 1.1 2014/12/29 12:56:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-1.09.ebuild,v 1.2 2014/12/31 22:21:10 polynomial-c Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 # Older releases contain a conflicting sas_disk_blink
-RDEPEND=">=sys-apps/sg3_utils-1.28"
+RDEPEND=">=sys-apps/sg3_utils-1.39"
 DEPEND="${RDEPEND}"
 
 DOCS=( AUTHORS ChangeLog CREDITS README notes.txt )
