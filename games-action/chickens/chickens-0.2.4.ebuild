@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.18 2014/04/26 09:10:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.19 2014/12/31 12:19:13 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 MY_P="ChickensForLinux-Linux-${PV}"
@@ -45,14 +45,14 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r dat sound || die "doins failed"
+	doins -r dat sound
 	dodoc AUTHOR README
 	insinto "${GAMES_STATEDIR}"/${PN}
-	doins HighScores || die "doins failed"
+	doins HighScores
 	insinto "${GAMES_SYSCONFDIR}"/${PN}
-	doins options.cfg || die "doins failed"
+	doins options.cfg
 	fperms g+w "${GAMES_STATEDIR}"/${PN}/HighScores
 	make_desktop_entry ${PN} Chickens
 	prepgamesdirs

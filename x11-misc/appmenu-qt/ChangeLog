@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/appmenu-qt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/appmenu-qt/ChangeLog,v 1.3 2013/03/02 23:47:12 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/appmenu-qt/ChangeLog,v 1.4 2014/12/31 12:28:59 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> appmenu-qt-0.2.6.ebuild:
+  Enforce USE dependency for dev-libs/libdbusmenu-qt.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> appmenu-qt-0.2.6.ebuild:
   Move Qt dependencies to the new category

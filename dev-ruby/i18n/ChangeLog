@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/i18n
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.68 2014/08/17 00:43:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.70 2014/12/31 12:18:07 graaff Exp $
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> i18n-0.6.9.ebuild,
+  i18n-0.6.9-r1.ebuild, i18n-0.6.11.ebuild:
+  Remove jruby.
+
+*i18n-0.7.0 (31 Dec 2014)
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> +i18n-0.7.0.ebuild:
+  Version bump for Rails 4.2.
 
   17 Aug 2014; Anthony G. Basile <blueness@gentoo.org> i18n-0.6.11.ebuild:
   Keyword on ~ppc and ~ppc64, request by mrueg
