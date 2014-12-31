@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/screen-message
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/ChangeLog,v 1.6 2014/05/29 16:30:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/ChangeLog,v 1.8 2014/12/31 19:59:43 sping Exp $
+
+  31 Dec 2014; Sebastian Pipping <sping@gentoo.org> screen-message-0.23.ebuild:
+  Clean-up ebuild
+
+*screen-message-0.23 (31 Dec 2014)
+
+  31 Dec 2014; Sebastian Pipping <sping@gentoo.org>
+  +screen-message-0.23.ebuild:
+  Bump to 0.23
 
 *screen-message-0.22 (29 May 2014)
 
