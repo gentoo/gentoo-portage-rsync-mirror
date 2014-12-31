@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.24 2014/08/28 19:27:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.25 2014/12/31 05:09:19 vapier Exp $
+
+  31 Dec 2014; Mike Frysinger <vapier@gentoo.org> gentoo-functions-0.8.ebuild:
+  Mark m68k/s390/sh stable.
 
 *gentoo-functions-0.8 (28 Aug 2014)
 

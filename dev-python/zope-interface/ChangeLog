@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/zope-interface
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zope-interface/ChangeLog,v 1.1 2014/12/12 23:22:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zope-interface/ChangeLog,v 1.2 2014/12/31 05:27:11 idella4 Exp $
+
+*zope-interface-4.1.2 (31 Dec 2014)
+
+  31 Dec 2014; Ian Delaney <idella4@gentoo.org> +zope-interface-4.1.2.ebuild:
+  clean old impls, bump
 
 *zope-interface-4.1.1 (12 Dec 2014)
 
