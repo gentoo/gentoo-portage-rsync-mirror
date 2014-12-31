@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.8.ebuild,v 1.9 2012/09/05 07:44:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.8.ebuild,v 1.10 2014/12/31 09:52:09 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils autotools games
 
 DESCRIPTION="BomberMan clone with network game support"
@@ -18,6 +18,7 @@ DEPEND=">=media-libs/libsdl-1.1.0
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[mod]
 	X? ( x11-libs/libXt )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	ecvs_clean
@@ -27,9 +28,8 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		$(use_with X x) \
-		--datadir="${GAMES_DATADIR_BASE}" || die
+		--datadir="${GAMES_DATADIR_BASE}"
 	sed -i \
 		-e "/PACKAGE_DATA_DIR/ s:/usr/games/share/games/:${GAMES_DATADIR}/:" \
 		config.h \
@@ -37,10 +37,10 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin src/${PN} || die
+	dogamesbin src/${PN}
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data/{gfx,maps,player,tileset,music} || die
+	doins -r data/{gfx,maps,player,tileset,music}
 	find "${D}" -name "Makefile*" -exec rm -f '{}' +
 
 	dodoc AUTHORS ChangeLog README TODO
