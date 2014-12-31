@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.7_p1-r3.ebuild,v 1.1 2014/11/25 22:35:45 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.7_p1-r3.ebuild,v 1.2 2014/12/31 07:29:47 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -315,8 +315,9 @@ pkg_postinst() {
 	# This instruction is from the HPN webpage,
 	# Used for the server logging functionality
 	if [[ -n ${HPN_PATCH} ]] && use hpn ; then
-		echo
 		einfo "For the HPN server logging patch, you must ensure that"
 		einfo "your syslog application also listens at /var/empty/dev/log."
 	fi
+	elog "Note: openssh-6.7 versions no longer support USE=tcpd as upstream has"
+	elog "      dropped it.  Make sure to update any configs that you might have."
 }
