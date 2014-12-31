@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calcurse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.38 2014/11/23 09:17:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calcurse/ChangeLog,v 1.39 2014/12/31 14:51:12 kensington Exp $
+
+*calcurse-3.2.1 (31 Dec 2014)
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> +calcurse-3.2.1.ebuild:
+  Version bump.
 
   23 Nov 2014; Jeroen Roovers <jer@gentoo.org>
   +files/calcurse-3.1.4-tinfo.patch, calcurse-3.1.4.ebuild:

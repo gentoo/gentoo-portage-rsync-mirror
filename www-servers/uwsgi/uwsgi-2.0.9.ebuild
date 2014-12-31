@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.8-r2.ebuild,v 1.2 2014/12/28 17:01:45 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.9.ebuild,v 1.1 2014/12/31 14:32:28 ultrabug Exp $
 
 EAPI="5"
 
@@ -136,9 +136,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}/1.1.2-threaded-php.patch"
-
 	sed -i \
 		-e "s|'-O2', ||" \
 		-e "s|'-Werror', ||" \
@@ -312,7 +309,7 @@ src_install() {
 		done
 	fi
 
-	newinitd "${FILESDIR}"/uwsgi.initd-r4 uwsgi
+	newinitd "${FILESDIR}"/uwsgi.initd-r5 uwsgi
 	newconfd "${FILESDIR}"/uwsgi.confd-r3 uwsgi
 	keepdir /etc/"${PN}".d
 	use uwsgi_plugins_spooler && keepdir /var/spool/"${PN}"

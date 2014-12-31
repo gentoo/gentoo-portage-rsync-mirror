@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16257 2014/12/31 14:16:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16258 2014/12/31 14:45:05 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -302,12 +302,6 @@ app-admin/rudy
 # Masked until mscms.dll.so that links to media-libs/lcms:2 is backported from
 # a newer wine, bug #526806.
 <app-emulation/crossover-bin-12.5.0
-
-# Aaron W. Swenson <titanofold@gentoo.org> (26 Nov 2014)
-# Masked for removal in 30 days. dev-perl/pgperl hasn't been updated
-# in 10 years. Use dev-perl/DBD-Pg or any modern module based on
-# DBD::Pg.
-dev-perl/pgperl
 
 # Patrick Lauer <patrick@gentoo.org> (24 Nov 2014)
 # Missing deps, uninstallable
