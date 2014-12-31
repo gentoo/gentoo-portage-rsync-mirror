@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-python/bsddb3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/lockfile[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DEPEND=dev-python/bsddb3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/lockfile[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/setuptools python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 DESCRIPTION=An anti-spam filter using on Bayesian filtering
 EAPI=5
 HOMEPAGE=http://spambayes.sourceforge.net
 IUSE=python_targets_python2_7
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=PSF-2.2 GPL-2
-RDEPEND=dev-python/bsddb3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/lockfile[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+RDEPEND=dev-python/bsddb3[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/lockfile[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/setuptools python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/spambayes/spambayes-1.1a6.tar.gz
 _eclasses_=distutils-r1	6d697abf6c0c1d32af2c025a6b75e775	eutils	f99a767f569b1f0731b3a1edd17c1d11	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e9652daa94eb827624143722e9f5b83c
+_md5_=b75fb73432738f36fef5d76d8ffe48f8

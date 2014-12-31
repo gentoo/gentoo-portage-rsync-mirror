@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1-r1.ebuild,v 1.1 2014/11/06 11:47:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1-r1.ebuild,v 1.2 2014/12/31 13:35:53 kensington Exp $
 
 EAPI=5
 
@@ -51,8 +51,8 @@ CDEPEND="
 		<net-libs/libotr-4.0.0
 	)
 	phonon? (
-		kde? ( media-libs/phonon )
-		!kde? ( || ( >=dev-qt/qtphonon-${QT_PV} media-libs/phonon ) )
+		kde? ( media-libs/phonon[qt4] )
+		!kde? ( || ( >=dev-qt/qtphonon-${QT_PV} media-libs/phonon[qt4] ) )
 	)
 	purple? ( net-im/pidgin )
 	qml? (

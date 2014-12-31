@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.38 2013/10/17 20:51:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.39 2014/12/31 13:38:03 kensington Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -30,7 +30,7 @@ RDEPEND=">=dev-qt/qtcore-4.6:4
 	kde? ( >=kde-base/kdelibs-4 )
 	oss? ( audiofile? ( media-libs/audiofile ) )
 	perl? ( dev-lang/perl )
-	phonon? ( || ( media-libs/phonon >=dev-qt/qtphonon-4.6:4 ) )
+	phonon? ( || ( media-libs/phonon[qt4] >=dev-qt/qtphonon-4.6:4 ) )
 	qt-dbus? ( >=dev-qt/qtdbus-4.6:4 )
 	ssl? ( dev-libs/openssl )
 	webkit? ( >=dev-qt/qtwebkit-4.6:4 )"

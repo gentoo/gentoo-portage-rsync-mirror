@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=app-arch/unzip app-arch/unarj
 DESCRIPTION=Demo data files for Descent 2
+EAPI=4
 HOMEPAGE=http://www.interplay.com/games/product.asp?GameID=109
 KEYWORDS=~amd64 ppc x86
 LICENSE=free-noncomm
@@ -8,4 +9,4 @@ RDEPEND=!<games-action/d2x-0.2.5-r3 games-misc/games-envd
 SLOT=0
 SRC_URI=ftp://ftp.funet.fi/pub/msdos/games/interplay/d2demo10.zip ftp://ftp.demon.co.uk/pub/ibmpc/dos/games/descent/d2demo10.zip mirror://3dgamers/descent2/d2demo10.zip
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=458908ad51773d5671390203aa477302
+_md5_=a42d30b13acc133c851e9c9a9d199d02

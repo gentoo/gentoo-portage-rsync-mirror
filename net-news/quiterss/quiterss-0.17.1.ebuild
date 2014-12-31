@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.17.1.ebuild,v 1.1 2014/11/16 20:19:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.17.1.ebuild,v 1.2 2014/12/31 13:42:24 kensington Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RDEPEND="
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4
 	dev-db/sqlite:3
-	phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
+	phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

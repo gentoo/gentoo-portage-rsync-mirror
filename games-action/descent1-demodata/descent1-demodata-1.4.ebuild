@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.5 2013/03/29 15:28:31 hasufell Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.6 2014/12/31 13:38:15 tupone Exp $
+EAPI=4
 inherit eutils unpacker games
 
 MY_PV=${PV/./}
@@ -44,7 +44,7 @@ src_install() {
 	local dir=${GAMES_DATADIR}/d1x
 
 	insinto "${dir}"
-	doins descent.* || die "doins failed"
+	doins descent.*
 
 	dodoc *.txt
 

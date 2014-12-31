@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.155 2013/10/17 20:51:41 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.156 2014/12/31 13:38:03 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  kvirc-4.4_pre6250.ebuild, kvirc-9999.ebuild:
+  Enforce USE dependency for media-libs/phonon.
 
   17 Oct 2013; Mike Gilbert <floppym@gentoo.org> kvirc-4.4_pre6250.ebuild,
   kvirc-9999.ebuild:

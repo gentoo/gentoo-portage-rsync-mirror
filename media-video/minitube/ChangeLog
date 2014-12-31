@@ -1,6 +1,10 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.99 2014/11/07 22:26:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.100 2014/12/31 13:31:12 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> minitube-2.0.ebuild,
+  minitube-2.1.6.ebuild, minitube-2.2.ebuild, minitube-2.3-r1.ebuild:
+  Enforce USE dependency for media-libs/phonon.
 
 *minitube-2.3-r1 (07 Nov 2014)
 

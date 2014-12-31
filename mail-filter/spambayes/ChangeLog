@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/spambayes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.24 2014/07/24 14:54:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.25 2014/12/31 13:57:59 lordvan Exp $
+
+  31 Dec 2014; Thomas Raschbacher <lordvan@gentoo.org>
+  -spambayes-1.1_alpha6-r1.ebuild, spambayes-1.1_alpha6-r2.ebuild,
+  spambayes-1.1_beta1.ebuild:
+  added dev-python/setuptools dep - fixes bug #515178
+  removed 1.1_alpha6-r1 with old distutils and EAPI
 
 *spambayes-1.1_beta1 (24 Jul 2014)
 

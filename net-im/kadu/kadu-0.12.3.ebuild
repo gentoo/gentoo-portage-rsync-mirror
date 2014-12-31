@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.6 2014/08/05 18:34:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.7 2014/12/31 13:34:24 kensington Exp $
 
 EAPI="4"
 
@@ -40,7 +40,7 @@ COMMON_DEPEND="
 	mpd? ( media-libs/libmpdclient )
 	phonon? (
 		|| (
-			media-libs/phonon
+			media-libs/phonon[qt4]
 			>=dev-qt/qtphonon-4.7.0:4
 		)
 	)

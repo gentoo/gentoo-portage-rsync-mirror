@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.8 2010/02/10 03:44:49 josejx Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.9 2014/12/31 13:58:01 tupone Exp $
+EAPI=4
 inherit eutils games
 
 MY_PN="d2demo"
@@ -57,7 +57,7 @@ src_unpack() {
 src_install() {
 	insinto "${dir}"
 	# The "controls" directory is not needed, nor the ini files
-	doins d2demo.* || die "doins failed"
+	doins d2demo.*
 
 	dodoc *.txt
 
