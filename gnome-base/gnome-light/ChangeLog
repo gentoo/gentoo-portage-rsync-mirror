@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.181 2014/11/13 11:25:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.182 2014/12/30 23:53:01 eva Exp $
+
+*gnome-light-3.14.0 (30 Dec 2014)
+
+  30 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-light-3.14.0.ebuild:
+  Version bump for Gnome 3.14, bug #534040.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gnome-light-2.32.1-r2.ebuild,
   -gnome-light-3.10.0.ebuild, metadata.xml:
