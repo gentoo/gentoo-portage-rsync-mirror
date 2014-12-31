@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.94 2014/11/26 16:13:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.95 2014/12/31 02:04:45 vapier Exp $
 
 EAPI=5
 
@@ -193,6 +193,7 @@ multilib_src_configure() {
 		--enable-keep-symbols
 		--enable-shared
 		--with-optimize-option=
+		$(tc-is-static-only && echo --disable-shared)
 		$(use_enable !debug optimized)
 		$(use_enable debug assertions)
 		$(use_enable debug expensive-checks)

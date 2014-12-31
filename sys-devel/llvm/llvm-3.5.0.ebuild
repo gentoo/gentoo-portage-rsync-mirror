@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.0.ebuild,v 1.8 2014/12/28 12:06:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.0.ebuild,v 1.9 2014/12/31 02:04:45 vapier Exp $
 
 EAPI=5
 
@@ -75,7 +75,6 @@ S=${WORKDIR}/${P}.src
 CMAKE_MAKEFILE_GENERATOR=emake
 
 pkg_pretend() {
-		$(tc-is-static-only && echo --disable-shared) \
 	# in megs
 	# !clang !debug !multitarget -O2       400
 	# !clang !debug  multitarget -O2       550
@@ -203,6 +202,7 @@ multilib_src_configure() {
 		--enable-keep-symbols
 		--enable-shared
 		--with-optimize-option=
+		$(tc-is-static-only && echo --disable-shared)
 		$(use_enable !debug optimized)
 		$(use_enable debug assertions)
 		$(use_enable debug expensive-checks)
