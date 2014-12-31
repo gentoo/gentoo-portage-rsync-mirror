@@ -1,13 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scripttest/scripttest-1.1.1.ebuild,v 1.1 2011/09/03 18:10:45 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scripttest/scripttest-1.2-r1.ebuild,v 1.1 2014/12/30 23:27:50 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="ScriptTest"
 MY_P="${MY_PN}-${PV}"
@@ -21,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/setuptools"
-RDEPEND="${DEPEND}"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"

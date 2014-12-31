@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/php-redmine-api
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-redmine-api/ChangeLog,v 1.1 2014/12/30 23:07:56 mjo Exp $
+
+*php-redmine-api-1.5.2 (30 Dec 2014)
+
+  30 Dec 2014; Michael Orlitzky <mjo@gentoo.org> +metadata.xml,
+  +php-redmine-api-1.5.2.ebuild:
+  New package dev-php/php-redmine-api, a simple object-oriented PHP Redmine API
+  client.

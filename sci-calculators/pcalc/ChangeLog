@@ -1,6 +1,14 @@
 # ChangeLog for sci-calculators/pcalc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.26 2014/01/18 05:23:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.28 2014/12/30 23:28:42 vapier Exp $
+
+*pcalc-3 (30 Dec 2014)
+
+  30 Dec 2014; Mike Frysinger <vapier@gentoo.org> +pcalc-3.ebuild:
+  Version bump.
+
+  30 Dec 2014; Mike Frysinger <vapier@gentoo.org> pcalc-2.ebuild:
+  Stabilize for all.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pcalc-1.3.ebuild,
   pcalc-2.ebuild:
