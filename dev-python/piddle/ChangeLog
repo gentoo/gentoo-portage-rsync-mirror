@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/piddle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.12 2010/07/01 02:48:47 arfrever Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/piddle/ChangeLog,v 1.13 2014/12/31 06:21:35 idella4 Exp $
+
+*piddle-1.0.15-r1 (31 Dec 2014)
+
+  31 Dec 2014; Ian Delaney <idella4@gentoo.org> +piddle-1.0.15-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   01 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   piddle-1.0.15.ebuild:
