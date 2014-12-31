@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asapm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.22 2014/03/25 14:26:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/ChangeLog,v 1.23 2014/12/31 15:47:37 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> -asapm-3.1.ebuild:
+  Remove old.
 
   25 Mar 2014; Jeroen Roovers <jer@gentoo.org> asapm-3.1-r1.ebuild,
   +files/asapm-3.1-autoconf.patch, files/asapm-3.1-ldflags.patch:

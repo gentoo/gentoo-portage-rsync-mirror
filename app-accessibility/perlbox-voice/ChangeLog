@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/perlbox-voice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.12 2014/12/19 19:06:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.13 2014/12/31 15:44:51 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  -perlbox-voice-0.09-r1.ebuild:
+  Remove old.
 
   19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop to maintainer-needed

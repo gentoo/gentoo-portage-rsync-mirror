@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.121 2014/12/28 12:00:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.122 2014/12/31 15:51:43 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> moc-2.5.0.ebuild:
+  Stable for ppc, wrt bug #512968
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> moc-2.5.0.ebuild:
   Stable for x86, wrt bug #512968

@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.129 2014/12/30 17:35:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.130 2014/12/31 15:55:11 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> procps-3.3.9-r2.ebuild:
+  Stable for ppc, wrt bug #525060
 
   30 Dec 2014; Jeroen Roovers <jer@gentoo.org> procps-3.3.9-r2.ebuild:
   Stable for HPPA (bug #525060).

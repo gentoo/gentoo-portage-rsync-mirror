@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.340 2014/12/30 18:07:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.341 2014/12/31 15:52:36 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.35-r1.ebuild:
+  Stable for ppc, wrt bug #516842
 
   30 Dec 2014; Markus Meier <maekke@gentoo.org> lighttpd-1.4.35-r1.ebuild:
   arm stable, bug #516842

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xpaint
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.27 2014/11/25 22:46:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.28 2014/12/31 15:59:52 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> -xpaint-2.9.9.4.ebuild:
+  Remove old.
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
