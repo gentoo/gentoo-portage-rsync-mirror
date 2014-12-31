@@ -1,13 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1-r1.ebuild,v 1.7 2014/08/10 21:13:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1-r2.ebuild,v 1.1 2014/12/31 03:25:29 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="Lupy"
 MY_P="${MY_PN}-${PV}"
@@ -28,11 +26,7 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS="changelog.txt releasenotes.txt"
 
-src_install() {
-	distutils_src_install
-
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
+python_install_all() {
+	use examples && local EXAMPLES=( examples/. )
+	distutils-r1_python_install_all
 }
