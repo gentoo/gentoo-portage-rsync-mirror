@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.11.2.ebuild,v 1.1 2014/10/07 19:01:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.11.2.ebuild,v 1.2 2014/12/31 11:27:36 tommy Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug examples fbcon quicklaunch sdl wayland X static-libs"
 
 DEPEND="
-	>=dev-libs/efl-1.11.2[sdl?,png,wayland?,X?]
+	=dev-libs/efl-1.11*[sdl?,png,wayland?,X?]
 	"
 RDEPEND="${DEPEND}"
 

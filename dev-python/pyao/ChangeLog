@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyao
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.20 2012/02/21 08:49:16 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.21 2014/12/31 11:19:52 idella4 Exp $
+
+*pyao-0.82-r3 (31 Dec 2014)
+
+  31 Dec 2014; Ian Delaney <idella4@gentoo.org> +pyao-0.82-r3.ebuild:
+  revbump; conversion -> distutils-r1
 
   21 Feb 2012; Patrick Lauer <patrick@gentoo.org> pyao-0.82-r2.ebuild:
   Restricting jython
@@ -69,4 +74,3 @@
 
   02 Mar 2003; Alastair Tse <liquidx@gentoo.org> pyao-0.81.ebuild files/digest-pyao-0.81 :
   Initial Ebuild. Thanks to mike wakerly <mikew@wakerly.com>. Resolves #15979.
-

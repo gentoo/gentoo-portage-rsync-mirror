@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/elementary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.23 2014/10/07 19:01:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.24 2014/12/31 11:27:36 tommy Exp $
+
+  31 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  elementary-1.11.2.ebuild:
+  Make required version more strict, also new versions of efl break elementary
 
 *elementary-1.11.2 (07 Oct 2014)
 
