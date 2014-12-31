@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.6.4.ebuild,v 1.1 2014/12/22 23:41:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.6.4.ebuild,v 1.2 2014/12/31 00:38:04 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,16 +16,17 @@ SRC_URI="http://www.webkitgtk.org/releases/${MY_P}.tar.xz"
 LICENSE="LGPL-2+ BSD"
 SLOT="4/37" # soname version of libwebkit2gtk-4.0
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
-IUSE="coverage debug +egl +geoloc gles2 +gstreamer +introspection +jit libsecret +opengl spell wayland +webgl +X"
+IUSE="coverage debug doc +egl +geoloc +gstreamer +introspection +jit libsecret +opengl spell +webgl"
+# gles2 wayland X
 # bugs 372493, 416331
 REQUIRED_USE="
 	geoloc? ( introspection )
 	introspection? ( gstreamer )
-	gles2? ( egl )
-	webgl? ( ^^ ( gles2 opengl ) )
-	!webgl? ( ?? ( gles2 opengl ) )
-	|| ( wayland X )
 "
+#	gles2? ( egl )
+#	webgl? ( ^^ ( gles2 opengl ) )
+#	!webgl? ( ?? ( gles2 opengl ) )
+#	|| ( wayland X )
 
 # use sqlite, svg by default
 # Aqua support in gtk3 is untested
@@ -44,7 +45,7 @@ RDEPEND="
 	>=media-libs/freetype-2.4.2:2
 	>=net-libs/libsoup-2.42:2.4[introspection?]
 	>=x11-libs/cairo-1.10.2:=[X]
-	>=x11-libs/gtk+-3.6.0:3[X?,introspection?]
+	>=x11-libs/gtk+-3.6.0:3[X,introspection?]
 	dev-db/sqlite:3=
 	>=x11-libs/pango-1.30.0.0
 	x11-libs/libXrender
@@ -53,7 +54,6 @@ RDEPEND="
 
 	egl? ( media-libs/mesa[egl] )
 	geoloc? ( >=app-misc/geoclue-2.1.5:2.0 )
-	gles2? ( media-libs/mesa[gles2] )
 	gstreamer? (
 		>=media-libs/gstreamer-1.2:1.0
 		>=media-libs/gst-plugins-base-1.2:1.0 )
@@ -61,12 +61,13 @@ RDEPEND="
 	libsecret? ( app-crypt/libsecret )
 	opengl? ( virtual/opengl )
 	spell? ( >=app-text/enchant-0.22:= )
-	wayland? ( >=x11-libs/gtk+-3.12:3[wayland] )
 	webgl? (
 		x11-libs/cairo[opengl]
 		x11-libs/libXcomposite
 		x11-libs/libXdamage )
 "
+#	gles2? ( media-libs/mesa[gles2] )
+#	wayland? ( >=x11-libs/gtk+-3.12:3[wayland] )
 
 # paxctl needed for bug #407085
 # Need real bison, not yacc
@@ -89,6 +90,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/make-3.82-r4
 	virtual/pkgconfig
 
+	doc? ( >=dev-util/gtk-doc-am-1.10 )
 	geoloc? ( dev-util/gdbus-codegen )
 	introspection? ( jit? ( sys-apps/paxctl ) )
 	test? (
@@ -174,8 +176,12 @@ src_configure() {
 	# should somehow let user select between them?
 	#
 	# FTL_JIT requires llvm + libcxxabi
+	# $(cmake-utils_use_enable wayland WAYLAND_TARGET)
+	# $(cmake-utils_use_enable X X11_TARGET)
+	# $(cmake-utils_use_find_package gles2 OpenGLES2)
 	local mycmakeargs=(
 		$(cmake-utils_use_enable test API_TESTS)
+		$(cmake-utils_use_enable doc GTKDOC)
 		$(cmake-utils_use_enable geoloc GEOLOCATION)
 		$(cmake-utils_use_enable gstreamer VIDEO)
 		$(cmake-utils_use_enable gstreamer WEB_AUDIO)
@@ -183,13 +189,11 @@ src_configure() {
 		$(cmake-utils_use_enable jit)
 		$(cmake-utils_use_enable libsecret CREDENTIAL_STORAGE)
 		$(cmake-utils_use_enable spell SPELLCHECK SPELLCHECK)
-		$(cmake-utils_use_enable wayland WAYLANG_TARGET)
 		$(cmake-utils_use_enable webgl WEBGL)
-		$(cmake-utils_use_enable X X11_TARGET)
 		$(cmake-utils_use_find_package egl EGL)
 		$(cmake-utils_use_find_package opengl OpenGL)
+		-DENABLE_X11_TARGET=ON
 		-DPORT=GTK
-		-DENABLE_GTKDOC=ON
 		-DENABLE_PLUGIN_PROCESS_GTK2=ON
 		${ruby_interpreter}
 	)
