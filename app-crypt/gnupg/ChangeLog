@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.561 2014/12/17 19:05:55 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.562 2014/12/31 18:27:16 alonbl Exp $
+
+*gnupg-2.0.26-r3 (31 Dec 2014)
+*gnupg-2.1.1-r1 (31 Dec 2014)
+
+  31 Dec 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/gnupg-2.0.26-misc-cve.patch, +files/gnupg-2.1.1-misc-cve.patch,
+  +gnupg-2.0.26-r3.ebuild, +gnupg-2.1.1-r1.ebuild, -gnupg-2.1.1.ebuild:
+  Fix misc CVEs, bug#534110
 
 *gnupg-2.1.1 (17 Dec 2014)
 
