@@ -4,11 +4,11 @@ DESCRIPTION=Portable sound event library
 EAPI=5
 HOMEPAGE=http://git.0pointer.net/libcanberra.git/
 IUSE=alsa gnome gstreamer +gtk +gtk3 oss pulseaudio +sound tdb udev
-KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris
 LICENSE=LGPL-2.1+
 RDEPEND=media-libs/libvorbis >=sys-devel/libtool-2.2.6b alsa? ( media-libs/alsa-lib:= udev? ( virtual/libudev:= ) ) gstreamer? ( media-libs/gstreamer:1.0 ) gtk? ( >=dev-libs/glib-2.32:2 >=x11-libs/gtk+-2.20.0:2 x11-libs/libX11 ) gtk3? ( >=dev-libs/glib-2.32:2 x11-libs/gtk+:3 x11-libs/libX11 ) pulseaudio? ( >=media-sound/pulseaudio-0.9.11 ) tdb? ( sys-libs/tdb:= ) gnome? ( gnome-base/gsettings-desktop-schemas ) sound? ( x11-themes/sound-theme-freedesktop )
 REQUIRED_USE=udev? ( alsa )
 SLOT=0
 SRC_URI=http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=737fb0d25f33f4ab66ea621726f00d1e
+_md5_=bb9a5572ce2a3f25ae4a55bb5d21a22f

@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.4.ebuild,v 1.6 2014/05/15 16:20:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/barrage-1.0.4.ebuild,v 1.7 2014/12/31 09:26:32 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="A violent point-and-click shooting game"
@@ -16,14 +16,14 @@ IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2[sound,video]
 	>=media-libs/sdl-mixer-1.2.4"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	egamesconf --datadir="${GAMES_DATADIR_BASE}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS BUGS ChangeLog README
+	default
 	newicon barrage48.png ${PN}.png
 	make_desktop_entry ${PN} Barrage
 	rm "${D}"/usr/share/applications/${PN}.desktop

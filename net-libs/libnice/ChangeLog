@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.84 2014/12/30 10:11:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.85 2014/12/31 09:16:54 ago Exp $
+
+  31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libnice-0.1.8.ebuild:
+  Stable for ia64, wrt bug #529964
 
   30 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libnice-0.1.8.ebuild:
   Stable for ppc64, wrt bug #529964

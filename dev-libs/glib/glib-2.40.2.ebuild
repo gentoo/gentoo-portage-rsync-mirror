@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.2.ebuild,v 1.6 2014/12/30 10:09:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.40.2.ebuild,v 1.7 2014/12/31 09:15:47 ago Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -28,7 +28,7 @@ REQUIRED_USE="
 	test? ( ${PYTHON_REQUIRED_USE} )
 "
 
-KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
 RDEPEND="
 	!<dev-util/gdbus-codegen-${PV}
