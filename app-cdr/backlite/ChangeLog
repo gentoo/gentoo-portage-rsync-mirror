@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/backlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.41 2014/03/01 22:39:54 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.42 2014/12/31 12:45:26 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  backlite-1.0.3-r1.ebuild:
+  Enforce USE dependency for media-libs/phonon.
 
   01 Mar 2014; Daniel Pielmeier <billie@gentoo.org> backlite-1.0.3-r1.ebuild:
   Depend on media-video/ffmpeg instead of virtual/ffmpeg. See bug #443192.

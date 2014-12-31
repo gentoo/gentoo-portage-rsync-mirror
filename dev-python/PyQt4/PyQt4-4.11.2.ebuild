@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.2.ebuild,v 1.1 2014/09/20 20:05:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.2.ebuild,v 1.2 2014/12/31 12:53:58 kensington Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -58,8 +58,8 @@ RDEPEND="
 	multimedia? ( >=dev-qt/qtmultimedia-${QT_PV} )
 	opengl? ( >=dev-qt/qtopengl-${QT_PV} )
 	phonon? (
-		kde? ( media-libs/phonon )
-		!kde? ( || ( >=dev-qt/qtphonon-${QT_PV} media-libs/phonon ) )
+		kde? ( media-libs/phonon[qt4] )
+		!kde? ( || ( >=dev-qt/qtphonon-${QT_PV} media-libs/phonon[qt4] ) )
 	)
 	script? ( >=dev-qt/qtscript-${QT_PV} )
 	sql? ( >=dev-qt/qtsql-${QT_PV} )

@@ -1,7 +1,7 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/deathchase3d/deathchase3d-0.9.ebuild,v 1.5 2011/06/13 07:27:17 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-action/deathchase3d/deathchase3d-0.9.ebuild,v 1.6 2014/12/31 12:49:01 tupone Exp $
+EAPI=4
 
 inherit games
 
@@ -15,11 +15,12 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl"
+RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-underlink.patch )
 
 src_install() {
-	dogamesbin "${PN}/${PN}" || die "dogamesbin failed"
+	dogamesbin "${PN}/${PN}"
 	dodoc README
 	dohtml "${PN}/docs/en/index.html"
 	prepgamesdirs

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/brewtarget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/ChangeLog,v 1.8 2014/10/17 23:53:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/ChangeLog,v 1.9 2014/12/31 12:46:52 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> brewtarget-2.0.2.ebuild,
+  brewtarget-2.1.0.ebuild:
+  Enforce USE dependency for media-libs/phonon.
 
   17 Oct 2014; Davide Pesavento <pesa@gentoo.org> brewtarget-2.1.0.ebuild:
   Don't build bogus tests (bug 525612).

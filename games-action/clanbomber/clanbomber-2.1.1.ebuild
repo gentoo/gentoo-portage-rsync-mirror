@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.7 2014/05/15 16:20:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/clanbomber-2.1.1.ebuild,v 1.8 2014/12/31 12:37:22 tupone Exp $
 
-EAPI=2
-inherit autotools base eutils flag-o-matic games
+EAPI=4
+inherit autotools eutils flag-o-matic games
 
 DESCRIPTION="Bomberman-like multiplayer game"
 HOMEPAGE="http://savannah.nongnu.org/projects/clanbomber/"
@@ -43,7 +43,7 @@ src_prepare() {
 }
 
 src_install() {
-	base_src_install
+	default
 	newicon src/pics/cup2.png ${PN}.png
 	make_desktop_entry ${PN}2 ClanBomber2
 	rm -f "${D}${GAMES_DATADIR}"/${PN}/fonts/DejaVuSans-Bold.ttf

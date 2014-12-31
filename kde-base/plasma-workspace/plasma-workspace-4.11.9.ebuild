@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.9.ebuild,v 1.5 2014/05/08 07:32:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.9.ebuild,v 1.6 2014/12/31 12:38:36 kensington Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="debug gps json python qalculate semantic-desktop"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 COMMONDEPEND="
-	dev-libs/libdbusmenu-qt
+	dev-libs/libdbusmenu-qt[qt4(+)]
 	>=dev-qt/qtcore-4.8.4-r3:4
 	!kde-misc/ktouchpadenabler
 	$(add_kdebase_dep kactivities)

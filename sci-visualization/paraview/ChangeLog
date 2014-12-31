@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.84 2014/12/21 23:03:05 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.85 2014/12/31 12:36:59 tamiko Exp $
+
+  31 Dec 2014; Matthias Maier <tamiko@gentoo.org>
+  +files/paraview-4.2.0-vtk-freetype.patch, paraview-4.2.0.ebuild:
+  fix compilation with freetype-2.5.4, bug #533444
 
 *paraview-4.2.0 (21 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/goldendict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.14 2014/04/19 18:17:22 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.15 2014/12/31 12:50:34 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> goldendict-1.0.1.ebuild:
+  Enforce USE dependency for media-libs/phonon.
 
   19 Apr 2014; Maxim Koltsov <maksbotan@gentoo.org> goldendict-1.0.1.ebuild:
   Fix desktop file, add missings x11-libs/libX11 dependency, bug #507066 and

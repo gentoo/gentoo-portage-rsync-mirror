@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-2.0.2.ebuild,v 1.1 2014/05/24 20:48:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/brewtarget/brewtarget-2.0.2.ebuild,v 1.2 2014/12/31 12:46:52 kensington Exp $
 
 EAPI=5
 
@@ -25,8 +25,8 @@ DEPEND="
 	>=dev-qt/qtsvg-4.8:4
 	>=dev-qt/qtwebkit-4.8:4
 	phonon? (
-		kde? ( media-libs/phonon )
-		!kde? ( || ( >=dev-qt/qtphonon-4.8:4 media-libs/phonon ) )
+		kde? ( media-libs/phonon[qt4] )
+		!kde? ( || ( >=dev-qt/qtphonon-4.8:4 media-libs/phonon[qt4] ) )
 	)
 "
 RDEPEND="${DEPEND}"

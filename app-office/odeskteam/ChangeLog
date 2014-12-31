@@ -1,6 +1,9 @@
 # ChangeLog for app-office/odeskteam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/ChangeLog,v 1.14 2014/11/26 14:49:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/ChangeLog,v 1.15 2014/12/31 12:48:11 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org> odeskteam-3.12.9.ebuild:
+  Enforce USE dependency for media-libs/phonon.
 
   26 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org>
   odeskteam-3.12.9.ebuild:

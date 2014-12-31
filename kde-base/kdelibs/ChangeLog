@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1040 2014/12/14 03:16:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1041 2014/12/31 12:37:06 kensington Exp $
+
+  31 Dec 2014; Michael Palimaka <kensington@gentoo.org>
+  kdelibs-4.12.5-r2.ebuild, kdelibs-4.14.3-r1.ebuild:
+  Enforce USE dependency for dev-libs/libdbusmenu-qt.
 
   14 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -kdelibs-4.14.3.ebuild,
   kdelibs-4.14.3-r1.ebuild:

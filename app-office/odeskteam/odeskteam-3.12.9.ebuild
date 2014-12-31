@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.12.9.ebuild,v 1.2 2014/11/26 14:49:57 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/odeskteam-3.12.9.ebuild,v 1.3 2014/12/31 12:48:11 kensington Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 S=${WORKDIR}
 
 RDEPEND="
-|| ( dev-qt/qtphonon:4 media-libs/phonon )
+|| ( dev-qt/qtphonon:4 media-libs/phonon[qt4] )
 >=dev-libs/glib-2
 app-arch/bzip2
 dev-libs/libxml2

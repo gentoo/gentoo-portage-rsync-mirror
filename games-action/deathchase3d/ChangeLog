@@ -1,6 +1,9 @@
 # ChangeLog for games-action/deathchase3d
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/deathchase3d/ChangeLog,v 1.5 2011/06/13 07:27:17 tupone Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/deathchase3d/ChangeLog,v 1.6 2014/12/31 12:49:01 tupone Exp $
+
+  31 Dec 2014; Tupone Alfredo <tupone@gentoo.org> deathchase3d-0.9.ebuild:
+  Migration to EAPI 4
 
   13 Jun 2011; Tupone Alfredo <tupone@gentoo.org> deathchase3d-0.9.ebuild,
   +files/deathchase3d-0.9-underlink.patch:
