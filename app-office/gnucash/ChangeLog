@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.286 2014/12/19 13:34:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.287 2014/12/31 10:34:52 graaff Exp $
+
+*gnucash-2.6.5 (31 Dec 2014)
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> +gnucash-2.6.5.ebuild:
+  Non-maintainer version bump. Acked by EvaSDK on #gentoo-dev. Fixes bug
+  533880.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.4.ebuild:
   amd64 stable, bug 529964
