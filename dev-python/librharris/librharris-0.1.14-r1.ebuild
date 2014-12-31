@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librharris/librharris-0.1.14.ebuild,v 1.2 2010/11/08 17:59:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librharris/librharris-0.1.14-r1.ebuild,v 1.1 2014/12/31 01:04:59 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 MY_PN="lib_rharris"
 MY_P="${MY_PN}-${PV}"
@@ -25,6 +23,3 @@ DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
-
-DOCS="changelog"
-PYTHON_MODNAME="${MY_PN}"
