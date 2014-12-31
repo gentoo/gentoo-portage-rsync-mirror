@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/expat >=gnome-base/libglade-2.5.0:2.0 >=virtual/ffmpeg-0.10 sys-libs/zlib >=x11-libs/gtk+-2.7.0:2 x11-libs/libX11 app-arch/gzip media-gfx/flam3 media-video/mplayer net-misc/curl x11-misc/xdg-utils
 SLOT=0
 SRC_URI=http://dev.gentooexperimental.org/~dreeevil/electricsheep-2.7_beta11.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=71b4348562c826cb82523d8c1f56a616

@@ -10,5 +10,5 @@ RDEPEND=>=media-libs/freetype-2.0:= sys-libs/zlib:= x11-libs/libX11:= x11-libs/l
 REQUIRED_USE=bluray? ( xml ) theora? ( vorbis )
 SLOT=0
 SRC_URI=https://github.com/MythTV/mythtv/archive/v0.27.4.tar.gz -> mythtv-0.27.4.tar.gz http://dev.gentoo.org/~rich0/distfiles/mythtv-0.27.4-b305eb5b7fc662146e74983fa3754d622695cdeb.tar.xz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=d2443799e1720a3b981136f664185409

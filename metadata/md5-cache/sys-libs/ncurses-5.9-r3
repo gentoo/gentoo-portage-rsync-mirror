@@ -10,5 +10,5 @@ PDEPEND=gpm? ( sys-libs/gpm[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mi
 RDEPEND=gpm? ( sys-libs/gpm ) !<x11-terms/rxvt-unicode-9.06-r3 abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r12 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=5
 SRC_URI=mirror://gnu/ncurses/ncurses-5.9.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=62d8d00924d6c64ca4d25b89e04eedb7

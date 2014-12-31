@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back debug? ( !<sys-devel/gdb-6.0 )
 SLOT=0
 SRC_URI=http://www.collaboration-world.com/affiche.data/releases/Stable/Affiche-0.6.0.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6975f197f07622023bbe482293d4f6a2

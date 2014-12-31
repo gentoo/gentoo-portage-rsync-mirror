@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.248 2014/11/21 09:58:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.249 2014/12/31 08:06:48 vapier Exp $
+
+*zsh-5.0.7-r2 (31 Dec 2014)
+
+  31 Dec 2014; Mike Frysinger <vapier@gentoo.org> +files/zsh-5.0.7-pid-ns.patch,
+  +zsh-5.0.7-r2.ebuild:
+  Add patch from upstream to fix behavior in new pid namespaces.
 
   21 Nov 2014; Tim Harder <radhermit@gentoo.org> zsh-5.0.5.ebuild,
   zsh-5.0.7-r1.ebuild, zsh-9999.ebuild:

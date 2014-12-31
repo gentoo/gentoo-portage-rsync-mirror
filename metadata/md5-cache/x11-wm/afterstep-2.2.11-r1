@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=media-libs/freetype alsa? ( media-libs/alsa-lib ) dbus? ( sys-apps/dbus ) jpeg? ( virtual/jpeg ) gif? ( >=media-libs/giflib-4.1.0 ) gtk? ( x11-libs/gtk+:2 ) png? ( media-libs/libpng:0= ) svg? ( gnome-base/librsvg:2 ) tiff? ( media-libs/tiff:0 ) x11-libs/libICE x11-libs/libXext x11-libs/libSM x11-libs/libXmu x11-libs/libXt x11-libs/libX11 x11-libs/libXpm x11-libs/libXrender xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=ftp://ftp.afterstep.org/stable/AfterStep-2.2.11.tar.bz2 mirror://sourceforge/afterstep/AfterStep-2.2.11.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=845d4ad7f0556782547bae1be19758b6

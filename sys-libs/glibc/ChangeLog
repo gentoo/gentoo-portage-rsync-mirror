@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1032 2014/12/28 17:09:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1034 2014/12/31 08:22:30 vapier Exp $
+
+  31 Dec 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.20-r1.ebuild:
+  Fix cross-compiler bootstrapping for arm targets.
+
+  31 Dec 2014; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_configure.eblit:
+  Fix glibc headers builds with newer EAPIs and newer glibc versions #532760 by
+  Ruud Koolen.
 
 *glibc-2.20-r1 (28 Dec 2014)
 

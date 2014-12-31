@@ -10,5 +10,5 @@ RDEPEND=>=gnustep-libs/performance-0.3.2 mysql? ( virtual/mysql ) postgres? ( de
 REQUIRED_USE=|| ( java mysql postgres sqlite )
 SLOT=0
 SRC_URI=ftp://ftp.gnustep.org/pub/gnustep/libs/SQLClient-1.7.0.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=9f8e63a5e898c53fdbc935ddfdda8f1e

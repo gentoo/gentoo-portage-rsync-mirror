@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/fuubar
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fuubar/ChangeLog,v 1.1 2014/12/31 08:19:46 graaff Exp $
+
+*fuubar-2.0.0 (31 Dec 2014)
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> +fuubar-2.0.0.ebuild,
+  +metadata.xml:
+  Initial import. Dependency for dev-ruby/rspectacular.
+

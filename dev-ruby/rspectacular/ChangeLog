@@ -1,0 +1,13 @@
+# ChangeLog for dev-ruby/rspectacular
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspectacular/ChangeLog,v 1.2 2014/12/31 08:20:39 graaff Exp $
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> rspectacular-0.54.0.ebuild:
+  Add forgotten dependencies.
+
+*rspectacular-0.54.0 (31 Dec 2014)
+
+  31 Dec 2014; Hans de Graaff <graaff@gentoo.org> +rspectacular-0.54.0.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/ruby-progressbar.
+

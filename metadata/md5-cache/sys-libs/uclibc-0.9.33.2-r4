@@ -7,5 +7,5 @@ LICENSE=LGPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://uclibc.org/downloads/uClibc-0.9.33.2.tar.bz2 mirror://gentoo/uClibc-0.9.33.2-patches-6.tar.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c83d29101feb8a4664b85ea158018201

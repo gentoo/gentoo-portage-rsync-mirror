@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.190 2014/09/01 09:02:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.191 2014/12/31 08:25:55 vapier Exp $
+
+*elfutils-0.161 (31 Dec 2014)
+
+  31 Dec 2014; Mike Frysinger <vapier@gentoo.org> +elfutils-0.161.ebuild,
+  +files/elfutils-0.161-libelf-dir-traversal.patch:
+  Version bump and libelf directory traversal fix from upstream #534000 by
+  Agostino Sarubbo.
 
 *elfutils-0.160 (01 Sep 2014)
 

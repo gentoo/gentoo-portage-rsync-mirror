@@ -9,5 +9,5 @@ LICENSE=CeCILL-2
 RDEPEND=sys-libs/zlib mpi? ( virtual/mpi )
 SLOT=0/6
 SRC_URI=http://gforge.inria.fr/frs/download.php/31832/scotch_6.0.0_esmumps.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f71dc5d56ad8bfc138ce8c444756fb9e
