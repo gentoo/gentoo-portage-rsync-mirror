@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.18 2013/04/22 16:07:17 mr_bones_ Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.8.0.ebuild,v 1.19 2015/01/01 19:12:58 tupone Exp $
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="Multiplayer, networked game of little tanks with really big weapons"
@@ -14,10 +14,9 @@ KEYWORDS="alpha amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libggi"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i 's:-g -O2::' configure \
 		|| die "sed configure failed"
 	cd src
@@ -28,10 +27,11 @@ src_unpack() {
 		|| die "sed gfx.c gfx.h failed"
 }
 
+DOCS="AUTHORS ChangeLog NEWS README doc/*.txt"
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	insinto "${GAMES_SYSCONFDIR}"
-	doins src/koth.cfg || die "doins failed"
-	dodoc AUTHORS ChangeLog NEWS README doc/*.txt
+	doins src/koth.cfg
 	prepgamesdirs
 }

@@ -1,6 +1,9 @@
 # ChangeLog for games-action/nighthawk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.15 2010/10/19 05:29:36 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/ChangeLog,v 1.16 2015/01/01 19:25:22 tupone Exp $
+
+  01 Jan 2015; Tupone Alfredo <tupone@gentoo.org> nighthawk-2.2.ebuild:
+  EAPI 4
 
   19 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org> nighthawk-2.2.ebuild:
   EAPI=2; honor LDFLAGS (bug #341719)

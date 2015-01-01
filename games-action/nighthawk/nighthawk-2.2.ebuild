@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/nighthawk-2.2.ebuild,v 1.14 2010/10/19 05:29:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/nighthawk/nighthawk-2.2.ebuild,v 1.15 2015/01/01 19:25:22 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="A tribute to Paradroid by Andrew Braybrook"
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/libXpm"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
@@ -25,6 +26,6 @@ src_prepare() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	default
 	prepgamesdirs
 }
