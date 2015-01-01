@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.136 2014/10/27 15:58:35 nativemad Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.137 2015/01/01 14:51:29 nativemad Exp $
+
+  01 Jan 2015; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.403.ebuild:
+  removed the debug flag due to bug 532302
 
   27 Oct 2014; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.403.ebuild,
   ardour-9999.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.403.ebuild,v 1.3 2014/10/27 15:58:35 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.403.ebuild,v 1.4 2015/01/01 14:51:29 nativemad Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs flag-o-matic waf-utils
@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="3"
-IUSE="altivec debug doc nls lv2 sse"
+IUSE="altivec doc nls lv2 sse"
 
 RDEPEND="media-libs/aubio
 	media-libs/liblo
@@ -112,9 +112,9 @@ src_configure() {
 		--destdir="${D}" \
 		--prefix=/usr \
 		--configdir=/etc \
+		--optimize \
 		$(use lv2 && echo "--lv2" || echo "--no-lv2") \
 		$(use nls && echo "--nls" || echo "--no-nls") \
-		$(use debug && echo "--stl-debug" || echo "--optimize") \
 		$({ use altivec || use sse; } && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
 		$(use doc && echo "--docs")
 }
