@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.426 2014/11/09 20:41:28 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.427 2015/01/01 07:27:18 vapier Exp $
+
+*bash-4.3_p33 (01 Jan 2015)
+
+  01 Jan 2015; Mike Frysinger <vapier@gentoo.org> +bash-4.3_p33.ebuild:
+  Version bump.
 
 *bash-4.3_p30-r1 (09 Nov 2014)
 
