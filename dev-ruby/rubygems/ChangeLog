@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.255 2014/12/27 21:02:37 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.256 2015/01/01 09:53:50 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> rubygems-2.2.2.ebuild:
+  Stable for ia64, wrt bug #532534
 
 *rubygems-2.4.5 (27 Dec 2014)
 

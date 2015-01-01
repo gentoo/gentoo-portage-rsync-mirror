@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/snap-server
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-server/ChangeLog,v 1.5 2014/12/14 10:44:45 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-server/ChangeLog,v 1.6 2015/01/01 09:50:30 gienah Exp $
+
+*snap-server-0.9.4.6 (01 Jan 2015)
+
+  01 Jan 2015; Mark Wright <gienah@gentoo.org> +snap-server-0.9.4.6.ebuild:
+  Bump snap-server to 0.9.4.6
 
 *snap-server-0.9.4.5-r3 (14 Dec 2014)
 
