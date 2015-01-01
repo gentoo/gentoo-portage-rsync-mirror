@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.653 2014/12/06 23:42:11 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.654 2015/01/01 21:22:12 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> cups-2.0.1-r1.ebuild:
+  arm stable, bug #533692
 
   06 Dec 2014; Matthias Maier <tamiko@gentoo.org>
   +files/cups-2.0.1-fix-linkage-to-gnutls.patch, cups-2.0.1-r1.ebuild:

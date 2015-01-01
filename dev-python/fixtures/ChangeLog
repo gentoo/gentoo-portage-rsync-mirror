@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fixtures
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.19 2014/12/30 10:02:04 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.20 2015/01/01 21:20:08 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> fixtures-0.3.14-r2.ebuild:
+  arm stable, bug #530600
 
   30 Dec 2014; Jeroen Roovers <jer@gentoo.org> fixtures-0.3.14-r2.ebuild:
   Stable for HPPA (bug #530600).

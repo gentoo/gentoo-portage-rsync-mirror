@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.46 2014/06/27 07:26:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.47 2015/01/01 21:23:03 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -31,6 +31,9 @@
 #   nocabaldep --  don't add dependency on cabal.
 #                  only used for packages that _must_ not pull the dependency
 #                  on cabal, but still use this eclass (e.g. haskell-updater).
+#   ghcdeps    --  constraint dependency on package to ghc onces
+#                  only used for packages that use libghc internally and _must_
+#                  not pull upper versions
 #   test-suite --  add support for cabal test-suites (introduced in Cabal-1.8)
 
 inherit eutils ghc-package multilib multiprocessing
@@ -61,7 +64,7 @@ inherit eutils ghc-package multilib multiprocessing
 # Needs working 'diff'.
 : ${CABAL_DEBUG_LOOSENING:=}
 
-HASKELL_CABAL_EXPF="pkg_setup src_compile src_test src_install"
+HASKELL_CABAL_EXPF="pkg_setup src_compile src_test src_install pkg_postinst pkg_postrm"
 
 # 'dev-haskell/cabal' passes those options with ./configure-based
 # configuration, but most packages don't need/don't accept it:
@@ -89,6 +92,7 @@ for feature in ${CABAL_FEATURES}; do
 		bin)        CABAL_HAS_BINARIES=yes;;
 		lib)        CABAL_HAS_LIBRARIES=yes;;
 		nocabaldep) CABAL_FROM_GHC=yes;;
+		ghcdeps)    CABAL_GHC_CONSTRAINT=yes;;
 		test-suite) CABAL_TEST_SUITE=yes;;
 		*) CABAL_UNKNOWN="${CABAL_UNKNOWN} ${feature}";;
 	esac
@@ -104,6 +108,11 @@ fi
 if [[ -n "${CABAL_USE_HSCOLOUR}" ]]; then
 	IUSE="${IUSE} hscolour"
 	DEPEND="${DEPEND} hscolour? ( dev-haskell/hscolour )"
+fi
+
+if [[ -n "${CABAL_USE_HOOGLE}" ]]; then
+	# enabled only in ::gentoo-haskell
+	:
 fi
 
 if [[ -n "${CABAL_USE_ALEX}" ]]; then
@@ -148,9 +157,7 @@ cabal-version() {
 			# of this package itself.
 			_CABAL_VERSION_CACHE="${PV}"
 		elif [[ "${CABAL_FROM_GHC}" ]]; then
-			local cabal_package=$(echo "$(ghc-libdir)"/Cabal-*)
-			# /path/to/ghc/Cabal-${VER} -> ${VER}
-			_CABAL_VERSION_CACHE="${cabal_package/*Cabal-/}"
+			_CABAL_VERSION_CACHE="$(ghc-cabal-version)"
 		else
 			# We ask portage, not ghc, so that we only pick up
 			# portage-installed cabal versions.
@@ -237,11 +244,31 @@ cabal-haddock() {
 	./setup "$@" || die "setup haddock failed"
 }
 
+cabal-hoogle() {
+	ewarn "hoogle USE flag requires doc USE flag, building without hoogle"
+}
+
 cabal-hscolour-haddock() {
 	# --hyperlink-source implies calling 'setup hscolour'
 	set -- haddock --hyperlink-source
 	echo ./setup "$@"
 	./setup "$@" --hyperlink-source || die "setup haddock --hyperlink-source failed"
+}
+
+cabal-hoogle-haddock() {
+	set -- haddock --hoogle
+	echo ./setup "$@"
+	./setup "$@" || die "setup haddock --hoogle failed"
+}
+
+cabal-hoogle-hscolour-haddock() {
+	cabal-hscolour-haddock
+	cabal-hoogle-haddock
+}
+
+cabal-hoogle-hscolour() {
+	ewarn "hoogle USE flag requires doc USE flag, building without hoogle"
+	cabal-hscolour
 }
 
 cabal-die-if-nonempty() {
@@ -303,6 +330,10 @@ cabal-configure() {
 	fi
 	if [[ -n "${CABAL_TEST_SUITE}" ]]; then
 		cabalconf+=($(use_enable test tests))
+	fi
+
+	if [[ -n "${CABAL_GHC_CONSTRAINT}" ]]; then
+		cabalconf+=($(cabal-constraint "ghc"))
 	fi
 
 	local option
@@ -413,8 +444,7 @@ cabal-pkg() {
 	if [[ -n ${CABAL_HAS_LIBRARIES} ]]; then
 		# Newer cabal can generate a package conf for us:
 		./setup register --gen-pkg-config="${T}/${P}.conf"
-		ghc-setup-pkg "${T}/${P}.conf"
-		ghc-install-pkg
+		ghc-install-pkg "${T}/${P}.conf"
 	fi
 }
 
@@ -487,16 +517,36 @@ cabal_src_compile() {
 
 	if [[ -n "${CABAL_USE_HADDOCK}" ]] && use doc; then
 		if [[ -n "${CABAL_USE_HSCOLOUR}" ]] && use hscolour; then
-			# hscolour and haddock
-			cabal-hscolour-haddock
+			if [[ -n "${CABAL_USE_HOOGLE}" ]] && use hoogle; then
+				# hoogle, hscolour and haddock
+				cabal-hoogle-hscolour-haddock
+			else
+				# haddock and hscolour
+				cabal-hscolour-haddock
+			fi
 		else
-			# just haddock
-			cabal-haddock
+			if [[ -n "${CABAL_USE_HOOGLE}" ]] && use hoogle; then
+				# hoogle and haddock
+				cabal-hoogle-haddock
+			else
+				# just haddock
+				cabal-haddock
+			fi
 		fi
 	else
 		if [[ -n "${CABAL_USE_HSCOLOUR}" ]] && use hscolour; then
-			# just hscolour
-			cabal-hscolour
+			if [[ -n "${CABAL_USE_HOOGLE}" ]] && use hoogle; then
+				# hoogle and hscolour
+				cabal-hoogle-hscolour
+			else
+				# just hscolour
+				cabal-hscolour
+			fi
+		else
+			if [[ -n "${CABAL_USE_HOOGLE}" ]] && use hoogle; then
+				# just hoogle
+				cabal-hoogle
+			fi
 		fi
 	fi
 }
@@ -538,27 +588,10 @@ cabal_src_install() {
 	local ghc_confdir_with_prefix="$(ghc-confdir)"
 	# remove EPREFIX
 	dodir ${ghc_confdir_with_prefix#${EPREFIX}}
-	local conf_file="${D}/$(ghc-confdir)/$(ghc-localpkgconf)"
-	[[ -e $conf_file ]] || echo '[]' > "$conf_file" || die
-
-	# make sure installed packages do not destroy ghc's
-	# bundled packages
-	local initial_pkg_db=${ROOT}/$(ghc-libdir)/package.conf.d.initial
-	if [[ -e ${initial_pkg_db} ]]; then
-		local checked_pkg
-		for checked_pkg in $(ghc-listpkg "${conf_file}")
-		do
-			local initial_pkg
-			for initial_pkg in $(ghc-listpkg "${initial_pkg_db}"); do
-				if [[ ${checked_pkg} = ${initial_pkg} ]]; then
-					eerror "Package ${checked_pkg} is shipped with $(ghc-version)."
-					eerror "Ebuild author forgot CABAL_CORE_LIB_GHC_PV entry."
-					eerror "Found in ${initial_pkg_db}."
-					die
-				fi
-			done
-		done
-	fi
+	local hint_db="${D}/$(ghc-confdir)"
+	local hint_file="${hint_db}/${PF}.conf"
+	mkdir -p "${hint_db}" || die
+	touch "${hint_file}" || die
 }
 
 haskell-cabal_src_install() {
@@ -567,6 +600,14 @@ haskell-cabal_src_install() {
 	cabal_src_install
 
 	popd > /dev/null
+}
+
+haskell-cabal_pkg_postinst() {
+	ghc-package_pkg_postinst
+}
+
+haskell-cabal_pkg_postrm() {
+	ghc-package_pkg_postrm
 }
 
 # @FUNCTION: cabal_flag
@@ -664,6 +705,16 @@ cabal_chdeps() {
 
 	echo "${new_c}" > "$cf" ||
 		die "failed to update"
+}
+
+# @FUNCTION: cabal-constraint
+# @DESCRIPTION:
+# Allowes to set contraint to the libraries that are
+# used by specified package
+cabal-constraint() {
+	while read p v ; do
+		echo "--constraint \"$p == $v\""
+	done < $(ghc-pkgdeps ${1})
 }
 
 # @FUNCTION: replace-hcflags

@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/haskell-updater
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.73 2014/08/01 13:46:54 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.74 2015/01/01 21:26:11 slyfox Exp $
+
+*haskell-updater-1.2.6 (01 Jan 2015)
+
+  01 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +haskell-updater-1.2.6.ebuild, metadata.xml:
+  Version bump, this version is able to restore from many breakages possible
+  with major ghc-package / haskell-cabal eclass change done 1 Jan 2015.
 
 *haskell-updater-1.2.3 (01 Aug 2014)
 

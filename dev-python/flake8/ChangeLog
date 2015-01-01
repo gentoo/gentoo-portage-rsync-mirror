@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flake8
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.21 2014/12/30 10:10:15 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.22 2015/01/01 21:23:37 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> flake8-2.2.5.ebuild:
+  arm stable, bug #530600
 
   30 Dec 2014; Jeroen Roovers <jer@gentoo.org> flake8-2.2.5.ebuild:
   Stable for HPPA (bug #530600).

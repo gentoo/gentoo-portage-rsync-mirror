@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pbr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.22 2014/12/30 10:17:54 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.23 2015/01/01 21:28:00 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> pbr-0.8.2.ebuild:
+  arm stable, bug #530600
 
   30 Dec 2014; Jeroen Roovers <jer@gentoo.org> pbr-0.8.2.ebuild:
   Stable for HPPA (bug #530600).

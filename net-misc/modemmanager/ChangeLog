@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/modemmanager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.78 2014/12/30 10:11:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.79 2015/01/01 21:11:16 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> modemmanager-1.4.0.ebuild:
+  arm stable, bug #529964
 
   30 Dec 2014; Agostino Sarubbo <ago@gentoo.org> modemmanager-1.4.0.ebuild:
   Stable for ppc64, wrt bug #529964

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.94 2014/12/29 17:05:34 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.95 2015/01/01 21:20:56 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> harfbuzz-0.9.35.ebuild:
+  arm stable, bug #531592
 
   29 Dec 2014; Jeroen Roovers <jer@gentoo.org> harfbuzz-0.9.35.ebuild:
   Stable for HPPA (bug #531592).

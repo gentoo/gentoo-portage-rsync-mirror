@@ -1,6 +1,21 @@
 # ChangeLog for app-emulation/wine
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.525 2014/12/29 06:01:47 tetromino Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.526 2015/01/01 21:01:23 ryao Exp $
+
+*wine-1.7.33 (01 Jan 2015)
+
+  01 Jan 2015; Richard Yao <ryao@gentoo.org> +wine-1.7.33.ebuild, metadata.xml,
+  wine-1.2.3.ebuild, wine-1.3.28.ebuild, wine-1.4.1.ebuild, wine-1.6.2.ebuild,
+  wine-1.7.0.ebuild, wine-1.7.10.ebuild, wine-1.7.11.ebuild, wine-1.7.12.ebuild,
+  wine-1.7.13.ebuild, wine-1.7.14.ebuild, wine-1.7.15.ebuild,
+  wine-1.7.16.ebuild, wine-1.7.17.ebuild, wine-1.7.18.ebuild,
+  wine-1.7.19-r1.ebuild, wine-1.7.20.ebuild, wine-1.7.21.ebuild,
+  wine-1.7.22.ebuild, wine-1.7.28.ebuild, wine-1.7.29.ebuild, wine-1.7.3.ebuild,
+  wine-1.7.4.ebuild, wine-1.7.8.ebuild, wine-1.7.9.ebuild, wine-9999.ebuild:
+  Version bump, see http://www.winehq.org/announce/1.7.33 for the announcement.
+  New USE flag pcap. It was originally added in wine 1.7.25, but the requisite
+  work in the portage tree for multilib compatibility was not done then, so it
+  was disabled until now.
 
   29 Dec 2014; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.2.3.ebuild,
   wine-1.3.28.ebuild, wine-1.4.1.ebuild, -wine-1.6.1.ebuild:

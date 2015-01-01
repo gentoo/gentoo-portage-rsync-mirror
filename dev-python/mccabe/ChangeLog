@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mccabe
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.11 2014/12/30 10:09:28 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.12 2015/01/01 21:23:04 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> mccabe-0.2.1.ebuild:
+  arm stable, bug #530600
 
   30 Dec 2014; Jeroen Roovers <jer@gentoo.org> mccabe-0.2.1.ebuild:
   Stable for HPPA (bug #530600).

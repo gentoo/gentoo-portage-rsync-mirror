@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.751 2015/01/01 08:41:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.752 2015/01/01 21:14:20 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> gtk+-2.24.25.ebuild:
+  arm stable, bug #529964
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gtk+-2.24.25.ebuild:
   Stable for sparc, wrt bug #529964

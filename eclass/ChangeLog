@@ -1,6 +1,15 @@
 # ChangeLog for eclass directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1490 2014/12/30 07:24:52 williamh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1492 2015/01/01 21:23:03 slyfox Exp $
+
+  01 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
+  haskell-cabal.eclass:
+  Add support for ghc-7.10 registration. User visible changes: ghc-package
+  stopped exporting pkg_* phases and now they are reexported by haskell-cabal.
+  pkg_* phases do not install any additional files anymore.
+
+  01 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> darcs.eclass:
+  Fix patch count on first clone (by vikraman).
 
   30 Dec 2014; William Hubbs <williamh@gentoo.org> eutils.eclass:
   Allow 512x512 icons to be installed (this was approved by ssuominen).

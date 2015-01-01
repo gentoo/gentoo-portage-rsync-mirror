@@ -16,6 +16,7 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 	<flag name='netapi'>Use libnetapi from <pkg>net-fs/samba</pkg> to support Windows networks in netapi32.dll</flag>
 	<flag name='opencl'>Enable OpenCL support</flag>
 	<flag name='osmesa'>Add support for OpenGL in bitmaps using libOSMesa</flag>
+	<flag name='pcap'>Support packet capture software (e.g. wireshark)</flag>
 	<flag name='perl'>Install helpers written in perl (winedump/winemaker)</flag>
 	<flag name='pipelight'>Apply unofficial Compholio patches for Pipelight/Silverlight support;
 		use at your own peril</flag>
