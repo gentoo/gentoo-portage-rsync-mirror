@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9660 2015/01/01 14:25:36 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9661 2015/01/01 16:56:49 mrueg Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jan 2015; Manuel Rüger <mrueg@gentoo.org> package.mask:
+  Remove obsolete masks.
 
   01 Jan 2015; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2014,
   ChangeLog: Split ChangeLog

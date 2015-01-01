@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16258 2014/12/31 14:45:05 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16259 2015/01/01 16:56:49 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -282,20 +282,6 @@ net-wireless/ussp-push
 # Unmaintained upstream.
 # Removal after 01 Jan 2015
 dev-ml/obrowser
-
-# Manuel Rüger <mrueg@gentoo.org> (01 Dec 2014)
-# No support for ruby 2.0 or later.
-# Ruby 1.9 is EOL
-# Masked for removal in 30 days
-dev-ruby/storable
-dev-ruby/rye
-dev-ruby/sysinfo
-dev-ruby/tryouts
-dev-ruby/hexoid
-dev-ruby/gibbler
-dev-ruby/attic
-dev-ruby/caesars
-app-admin/rudy
 
 # Richard Yao <ryao@gentoo.org> (29 Nov 2014)
 # Depends on media-libs/lcms:0, which has unspecified security vulnerabilities.
