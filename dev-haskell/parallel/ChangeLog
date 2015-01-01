@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/parallel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.23 2015/01/01 02:27:45 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/ChangeLog,v 1.24 2015/01/01 13:40:31 gienah Exp $
+
+  01 Jan 2015; Mark Wright <gienah@gentoo.org> parallel-3.2.0.3.ebuild:
+  Thanks to Dennis Schridde for reporting, loosen array dependency to fix bug
+  534178.
 
 *parallel-3.2.0.6 (01 Jan 2015)
 

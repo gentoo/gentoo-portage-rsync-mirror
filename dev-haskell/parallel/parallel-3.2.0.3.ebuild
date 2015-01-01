@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-3.2.0.3.ebuild,v 1.4 2013/03/31 10:23:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/parallel/parallel-3.2.0.3.ebuild,v 1.5 2015/01/01 13:40:31 gienah Exp $
 
 EAPI=5
 
@@ -23,3 +23,8 @@ RDEPEND=">=dev-haskell/deepseq-1.1:=[profile?]
 		>=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.6"
+
+src_prepare() {
+	cabal_chdeps \
+		'array      >= 0.1 && < 0.5' 'array      >= 0.1 && < 0.6'
+}
