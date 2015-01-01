@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/mm-common
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.33 2014/12/31 09:15:40 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.34 2015/01/01 08:40:20 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mm-common-0.9.7.ebuild:
+  Stable for sparc, wrt bug #529964
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mm-common-0.9.7.ebuild:
   Stable for ia64, wrt bug #529964
