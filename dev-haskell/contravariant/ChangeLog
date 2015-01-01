@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/contravariant
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/contravariant/ChangeLog,v 1.4 2014/12/14 08:41:54 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/contravariant/ChangeLog,v 1.5 2015/01/01 02:23:47 gienah Exp $
+
+*contravariant-1.2.0.1 (01 Jan 2015)
+
+  01 Jan 2015; Mark Wright <gienah@gentoo.org> +contravariant-1.2.0.1.ebuild,
+  metadata.xml:
+  Bump contravariant to 1.2.0.1
 
 *contravariant-1.2 (14 Dec 2014)
 
