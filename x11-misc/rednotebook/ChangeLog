@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/rednotebook
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.73 2014/01/13 20:52:11 mattm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.74 2015/01/01 22:28:16 mgorny Exp $
+
+  01 Jan 2015; Michał Górny <mgorny@gentoo.org> -rednotebook-1.6.6-r1.ebuild,
+  -rednotebook-1.7.3.ebuild, rednotebook-1.8.0.ebuild:
+  Fix the python-r1 code. Remove DISTUTILS_JOBS variable that is not intended
+  for ebuilds. Remove redundant PYTHON_DEPS. Add missing PYTHON_USEDEPs. Remove
+  pointless python_setup call. Remove old, broken ebuilds.
 
   13 Jan 2014; Matthew Marlowe <mattm@gentoo.org> rednotebook-1.7.3.ebuild,
   rednotebook-1.8.0.ebuild:
