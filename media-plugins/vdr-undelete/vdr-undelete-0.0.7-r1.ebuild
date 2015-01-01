@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-undelete/vdr-undelete-0.0.7-r1.ebuild,v 1.1 2014/06/01 11:37:48 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-undelete/vdr-undelete-0.0.7-r1.ebuild,v 1.2 2015/01/01 22:58:17 hd_brummy Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.5.7"

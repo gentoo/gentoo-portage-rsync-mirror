@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-undelete
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-undelete/ChangeLog,v 1.16 2014/06/01 11:37:48 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-undelete/ChangeLog,v 1.17 2015/01/01 22:58:17 hd_brummy Exp $
+
+  01 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-undelete-0.0.7-r1.ebuild:
+  stable amd64 x86
 
 *vdr-undelete-0.0.7-r1 (01 Jun 2014)
 
