@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.5.ebuild,v 1.1 2015/01/01 17:33:09 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.5.ebuild,v 1.2 2015/01/01 21:55:01 hd_brummy Exp $
 
 EAPI=5
 
@@ -109,11 +109,8 @@ pkg_postinst() {
 		ewarn "VDR_DVDBURNSPEED in /etc/conf.d/vdr.cd-dvd"
 	fi
 
-	einfo "Up from this version systemd is supported by gentoo-vdr-scripts"
-	einfo "Please see for detailed info on this:"
-	einfo "Also please report problems with systemd on gentoo-vdr-scripts direct in this bug"
-	einfo "https://bugs.gentoo.org/show_bug.cgi?id=353492"
-
+	einfo "systemd is now supported by gentoo-vdr-scripts"
+	einfo "Please read for detailed info on this vdr's README.systemd"
 }
 
 pkg_config() {

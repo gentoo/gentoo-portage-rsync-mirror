@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/whichwayisup
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.19 2013/02/07 22:07:08 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/ChangeLog,v 1.20 2015/01/01 21:40:14 mr_bones_ Exp $
+
+*whichwayisup-0.7.9-r1 (01 Jan 2015)
+
+  01 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +whichwayisup-0.7.9-r1.ebuild:
+  EAPI=5; use python-single-r1
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> whichwayisup-0.7.9.ebuild:
   Move Creative Commons licenses to shorter names.
@@ -73,4 +79,3 @@
   13 Aug 2007; Santiago M. Mola <coldwind@gentoo.org>
   +files/whichwayisup-32.xpm, +metadata.xml, +whichwayisup-0.7.0.ebuild:
   Initial ebuild. Thanks to Denilson.
-
