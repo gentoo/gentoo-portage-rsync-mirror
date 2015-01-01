@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/qct
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/ChangeLog,v 1.8 2010/04/08 08:48:11 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/ChangeLog,v 1.9 2015/01/01 01:49:51 mr_bones_ Exp $
+
+*qct-0.7-r1 (01 Jan 2015)
+
+  01 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> +qct-0.7-r1.ebuild:
+  convert to python-single-r1; EAPI=5
 
   08 Apr 2010; Tupone Alfredo <tupone@gentoo.org> qct-0.7.ebuild:
   Force use of python2 . Bug #312281 by arfrever@gentoo.org
@@ -26,4 +31,3 @@
   01 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
   qct-0.7.ebuild:
   initial commit; ebuild submitted by Alexandru Toma via bug #46472
-
