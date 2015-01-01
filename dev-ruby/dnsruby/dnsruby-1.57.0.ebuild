@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/dnsruby-1.55.ebuild,v 1.1 2014/10/11 06:47:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/dnsruby-1.57.0.ebuild,v 1.1 2015/01/01 17:55:10 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_DOCDIR="html"
-RUBY_FAKEGEM_EXTRADOC="DNSSEC EXAMPLES README"
+RUBY_FAKEGEM_EXTRADOC="DNSSEC EXAMPLES README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="A pure Ruby DNS client library"
@@ -18,6 +18,10 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
+
+all_ruby_prepare() {
+	sed -i -e "/[Cc]overall/d" Rakefile || die
+}
 
 each_ruby_test() {
 	# only run offline tests

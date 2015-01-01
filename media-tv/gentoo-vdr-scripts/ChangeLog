@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.129 2014/10/22 10:59:08 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.130 2015/01/01 17:33:09 hd_brummy Exp $
+
+*gentoo-vdr-scripts-2.5 (01 Jan 2015)
+
+  01 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +gentoo-vdr-scripts-2.5.ebuild:
+  bump; fixed locale handling for systemd, thx to D.Ferdinand wrt bug 530690;
+  fixed misusing 'need net', wrt bug 530828; fixed locale handling openrc
 
 *gentoo-vdr-scripts-2.5_rc4 (22 Oct 2014)
 
