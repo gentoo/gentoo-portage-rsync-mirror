@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-218-r1.ebuild,v 1.4 2014/12/26 15:08:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-218-r1.ebuild,v 1.5 2015/01/01 15:09:29 floppym Exp $
 
 EAPI=5
 
@@ -88,11 +88,12 @@ DEPEND="${COMMON_DEPEND}
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
 pkg_pretend() {
-	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS ~DMIID
-		~EPOLL ~FANOTIFY ~FHANDLE ~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS
-		~SECCOMP ~SIGNALFD ~SYSFS ~TIMERFD ~TMPFS_XATTR
-		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
-		~!GRKERNSEC_PROC ~!FW_LOADER_USER_HELPER"
+	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS
+		~DEVPTS_MULTIPLE_INSTANCES ~DEVTMPFS ~DMIID ~EPOLL ~FANOTIFY ~FHANDLE
+		~INOTIFY_USER ~IPV6 ~NET ~NET_NS ~PROC_FS ~SECCOMP ~SIGNALFD ~SYSFS
+		~TIMERFD ~TMPFS_XATTR
+		~!FW_LOADER_USER_HELPER ~!GRKERNSEC_PROC ~!IDE ~!SYSFS_DEPRECATED
+		~!SYSFS_DEPRECATED_V2"
 
 	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
 	kernel_is -lt 3 7 && CONFIG_CHECK+=" ~HOTPLUG"

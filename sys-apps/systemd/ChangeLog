@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.334 2014/12/31 19:13:39 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.335 2015/01/01 15:09:29 floppym Exp $
+
+  01 Jan 2015; Mike Gilbert <floppym@gentoo.org> systemd-215-r3.ebuild,
+  systemd-216-r2.ebuild, systemd-217-r4.ebuild, systemd-218-r1.ebuild,
+  systemd-9999.ebuild:
+  Add check for CONFIG_DEVPTS_MULTIPLE_INSTANCES, bug 534196 by Elias Probst.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> systemd-216-r2.ebuild:
   Stable for x86, wrt bug #525112
