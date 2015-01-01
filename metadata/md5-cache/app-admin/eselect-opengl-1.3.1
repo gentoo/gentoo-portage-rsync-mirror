@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst preinst prepare
+DEFINED_PHASES=install postinst preinst prepare pretend
 DEPEND=app-arch/xz-utils
 DESCRIPTION=Utility to change the OpenGL interface being used
 EAPI=5
@@ -8,4 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.4 !<media-libs/mesa-10.3.4-r1 !=media-libs/mesa-10.3.5 !<x11-proto/glproto-1.4.17-r1 !<x11-base/xorg-server-1.16.2-r1 !<x11-drivers/ati-drivers-14.12-r1
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~mgorny/dist/opengl.eselect-1.3.1.xz
-_md5_=b7d8d76e24cc00746ff7196c3e9c5cad
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=d906c1a51377858aa37da7ec35f5d7e3
