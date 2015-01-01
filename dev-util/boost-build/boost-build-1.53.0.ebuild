@@ -1,9 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.53.0.ebuild,v 1.3 2014/08/10 21:25:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.53.0.ebuild,v 1.4 2015/01/01 03:30:46 patrick Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
+
+RESTRICT="test"
 
 inherit eutils flag-o-matic multilib python toolchain-funcs versionator
 
