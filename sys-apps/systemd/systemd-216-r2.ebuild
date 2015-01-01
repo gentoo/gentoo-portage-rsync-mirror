@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r2.ebuild,v 1.6 2015/01/01 15:09:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-216-r2.ebuild,v 1.7 2015/01/01 19:46:51 floppym Exp $
 
 EAPI=5
 
@@ -86,6 +86,8 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( >=dev-util/gtk-doc-1.18 )
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
+
+PATCHES=( "${FILESDIR}/216-lz4-build.patch" )
 
 src_prepare() {
 	# Bug 463376

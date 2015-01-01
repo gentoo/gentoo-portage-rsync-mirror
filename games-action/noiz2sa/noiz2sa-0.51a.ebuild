@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.12 2012/06/13 06:44:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/noiz2sa/noiz2sa-0.51a.ebuild,v 1.13 2015/01/01 19:35:56 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="Abstract Shooting Game"
@@ -17,16 +17,13 @@ IUSE=""
 DEPEND="media-libs/sdl-mixer[vorbis]
 	>=dev-libs/libbulletml-0.0.3
 	virtual/opengl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}/src
 
-PATCHES=( "${FILESDIR}"/${P}-gcc41.patch
-	"${FILESDIR}"/${P}-underlink.patch
-)
-
 src_prepare(){
-	base_src_prepare
-
+	epatch "${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	sed -i \
 		-e "s:/.noiz2sa.prf:/noiz2sa.prf:" \
 		-e "s:getenv(\"HOME\"):\"${GAMES_STATEDIR}\":" \
@@ -39,7 +36,7 @@ src_prepare(){
 src_install(){
 	local datadir="${GAMES_DATADIR}/${PN}"
 
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	dodir "${datadir}" "${GAMES_STATEDIR}"
 	cp -r ../noiz2sa_share/* "${D}/${datadir}" || die "cp failed"
 	dodoc ../readme*
