@@ -1,6 +1,9 @@
 # ChangeLog for games-action/poopmup
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.15 2010/09/30 22:09:19 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.16 2015/01/01 20:14:18 tupone Exp $
+
+  01 Jan 2015; Tupone Alfredo <tupone@gentoo.org> poopmup-1.2.ebuild:
+  EAPI 4
 
   30 Sep 2010; Tupone Alfredo <tupone@gentoo.org> poopmup-1.2.ebuild,
   +files/poopmup-1.2-ldflags.patch:

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc3.ebuild,v 1.2 2012/03/03 01:28:03 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc3.ebuild,v 1.3 2015/01/01 20:07:18 tupone Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit cmake-utils eutils games
 
@@ -56,17 +56,17 @@ src_compile() {
 src_install() {
 	# NOTE: App uses case-insensitive file-handling
 	insinto "${GAMES_DATADIR}"/${PN}/
-	doins -r share/gamedir/* || die "doins failed"
+	doins -r share/gamedir/*
 
-	dodoc doc/{README,ChangeLog,Development,TODO} || die "dodoc failed"
+	dodoc doc/{README,ChangeLog,Development,TODO}
 	insinto /usr/share/doc/"${PF}"
-	doins -r doc/original_lx_docs || die "doins failed"
+	doins -r doc/original_lx_docs
 
-	doicon share/OpenLieroX.* || die "doicon failed"
+	doicon share/OpenLieroX.*
 	make_desktop_entry openlierox OpenLieroX OpenLieroX \
-			"Game;ActionGame;ArcadeGame;" || die "make_desktop_entry failed"
+			"Game;ActionGame;ArcadeGame;"
 
-	dogamesbin "${CMAKE_BUILD_DIR}"/bin/openlierox || die "dogamesbin failed"
+	dogamesbin "${CMAKE_BUILD_DIR}"/bin/openlierox
 
 	prepgamesdirs
 }

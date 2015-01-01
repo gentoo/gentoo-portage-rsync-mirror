@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.19 2010/10/11 20:43:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.20 2015/01/01 20:14:18 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="You are now free to fly around the city and poop on passers-by"
@@ -19,6 +19,7 @@ DEPEND="media-libs/freeglut
 	x11-libs/libXi
 	x11-libs/libXmu
 	virtual/opengl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
@@ -41,17 +42,17 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCXX) ${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCXX) ${CFLAGS}"
 }
 
 src_install() {
-	newgamesbin poopmup.o poopmup || die "newgamesbin failed"
+	newgamesbin poopmup.o poopmup
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins textures/* || die "doins failed"
+	doins textures/*
 
 	insinto "${GAMES_SYSCONFDIR}"
-	doins config/* || die "doins failed"
+	doins config/*
 
 	dodoc README docs/*.doc
 	dohtml docs/userman.htm

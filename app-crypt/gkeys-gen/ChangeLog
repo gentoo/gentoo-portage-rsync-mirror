@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gkeys-gen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/ChangeLog,v 1.1 2015/01/01 18:21:09 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/ChangeLog,v 1.2 2015/01/01 20:28:44 dolsen Exp $
+
+  01 Jan 2015; Brian Dolbec <dolsen@gentoo.org> gkeys-gen-9999.ebuild:
+  Forgot to edit the description. Corrected :)
 
 *gkeys-gen-9999 (01 Jan 2015)
 
