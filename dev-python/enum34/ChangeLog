@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enum34
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.7 2014/12/26 17:28:21 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.8 2015/01/01 20:53:24 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> enum34-1.0.4.ebuild:
+  add ~arm, bug #533430
 
   26 Dec 2014; Alex Brandt <alunduil@gentoo.org> metadata.xml:
   add python herd to metadata

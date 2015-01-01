@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/clang
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.115 2014/12/31 16:07:47 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.116 2015/01/01 20:52:48 maekke Exp $
+
+  01 Jan 2015; Markus Meier <maekke@gentoo.org> clang-3.5.0-r100.ebuild:
+  arm stable, bug #530882
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> clang-3.5.0-r100.ebuild:
   Stable for ppc, wrt bug #530882
