@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.6.2.ebuild,v 1.1 2015/01/01 06:01:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bub-n-bros/bub-n-bros-1.6.2.ebuild,v 1.2 2015/01/01 09:21:35 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,9 +17,10 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-python/pygame[${PYTHON_USEDEP}]
-    ${PYTHON_DEPS}"
-	RDEPEND=${DEPEND}
-	REQUIRED_USE=${PYTHON_REQUIRED_USE}
+	${PYTHON_DEPS}"
+RDEPEND=${DEPEND}
+
+REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
 S=${WORKDIR}/${MY_P}
 
@@ -30,7 +31,7 @@ pkg_setup() {
 
 src_prepare() {
 	ecvs_clean
-	epatch "${FILESDIR}"/${P}-home.patch 
+	epatch "${FILESDIR}"/${P}-home.patch
 	python_fix_shebang .
 }
 
