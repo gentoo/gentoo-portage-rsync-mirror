@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.12.ebuild,v 1.2 2015/01/01 12:15:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.12-r1.ebuild,v 1.1 2015/01/01 12:36:54 mgorny Exp $
 
 EAPI=5
 
@@ -494,9 +494,11 @@ src_install-libs() {
 	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so.${libmajor}
 	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so
 
-	exeinto ${ATI_ROOT}/extensions
-	doexe "${EX_BASE_DIR}"/usr/X11R6/${pkglibdir}/modules/extensions/fglrx/fglrx-libglx.so
-	mv "${D}"/${ATI_ROOT}/extensions/{fglrx-,}libglx.so
+	if multilib_is_native_abi; then
+		exeinto ${ATI_ROOT}/extensions
+		doexe "${EX_BASE_DIR}"/usr/X11R6/${pkglibdir}/modules/extensions/fglrx/fglrx-libglx.so
+		mv "${D}"/${ATI_ROOT}/extensions/{fglrx-,}libglx.so
+	fi
 
 	# other libs
 	exeinto /usr/$(get_libdir)
