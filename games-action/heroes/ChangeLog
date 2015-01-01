@@ -1,6 +1,9 @@
 # ChangeLog for games-action/heroes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.18 2013/01/03 21:18:38 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.19 2015/01/01 18:51:04 tupone Exp $
+
+  01 Jan 2015; Tupone Alfredo <tupone@gentoo.org> heroes-0.21-r1.ebuild:
+  EAPI 4
 
   03 Jan 2013; Julian Ospald <hasufell@gentoo.org> heroes-0.21-r1.ebuild,
   +files/heroes-0.21-automake-1.12.patch:
