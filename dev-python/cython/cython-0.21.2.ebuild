@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.21.2.ebuild,v 1.1 2015/01/01 01:25:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.21.2.ebuild,v 1.2 2015/01/01 04:41:31 floppym Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	>=dev-python/setuptools-9.1[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( $(python_gen_cond_dep 'dev-python/numpy[${PYTHON_USEDEP}]' 'python*') )"
+	test? ( dev-python/numpy[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_PN}-${PV%_*}"
 
