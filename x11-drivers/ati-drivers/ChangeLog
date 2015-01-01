@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.367 2014/12/10 20:45:09 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.368 2015/01/01 12:15:55 mgorny Exp $
+
+  01 Jan 2015; Michał Górny <mgorny@gentoo.org> ati-drivers-14.12.ebuild,
+  ati-drivers-14.9-r1.ebuild:
+  Restrict multilib ABIs to those actually supported.
 
 *ati-drivers-14.12 (10 Dec 2014)
 

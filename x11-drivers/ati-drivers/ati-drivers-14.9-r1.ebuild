@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.9-r1.ebuild,v 1.1 2014/11/20 10:55:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.9-r1.ebuild,v 1.2 2015/01/01 12:15:55 mgorny Exp $
 
 EAPI=5
 
+MULTILIB_COMPAT=( abi_x86_{32,64} )
 inherit eutils multilib-build linux-info linux-mod toolchain-funcs versionator pax-utils
 
 DESCRIPTION="Ati precompiled drivers for Radeon Evergreen (HD5000 Series) and newer chipsets"
