@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/qsstv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.25 2014/10/21 00:49:28 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.26 2015/01/01 17:14:09 tomjbe Exp $
+
+*qsstv-8.2.9 (01 Jan 2015)
+
+  01 Jan 2015; Thomas Beierlein <tomjbe@gentoo.org> +qsstv-8.2.9.ebuild:
+  Minor maintenance release
 
   21 Oct 2014; Rick Farina <zerochaos@gentoo.org> metadata.xml:
   adding radio herd with permission of maintainer
