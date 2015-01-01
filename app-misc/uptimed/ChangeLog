@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.106 2014/12/31 16:24:46 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.107 2015/01/01 11:33:58 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.18.ebuild:
+  Stable for ppc64, wrt bug #533278
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.18.ebuild:
   Stable for ppc, wrt bug #533278
