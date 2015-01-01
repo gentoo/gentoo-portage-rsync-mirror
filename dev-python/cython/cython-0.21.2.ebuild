@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.21.1.ebuild,v 1.4 2015/01/01 01:25:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.21.2.ebuild,v 1.1 2015/01/01 01:25:30 idella4 Exp $
 
 EAPI=5
 
@@ -18,18 +18,20 @@ SRC_URI="http://www.cython.org/release/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-IUSE="doc test"
+IUSE="doc examples test"
 
 RDEPEND=""
+# On testing, setuptools invokes an error in running the testsuite cited in a number of recent bugs
+# spanning several packages. This bug has been fixed in the recent release of version 9.1
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/setuptools-9.1[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( $(python_gen_cond_dep 'dev-python/numpy[${PYTHON_USEDEP}]' 'python*') )"
 
 S="${WORKDIR}/${MY_PN}-${PV%_*}"
 
 python_compile() {
-	if [[ ${EPYTHON} == python2* ]]; then
+	if ! python_is_python3; then
 		local CFLAGS="${CFLAGS}"
 		local CXXFLAGS="${CXXFLAGS}"
 		append-flags -fno-strict-aliasing
@@ -55,6 +57,6 @@ python_test() {
 python_install_all() {
 	local DOCS=( CHANGES.rst README.txt ToDo.txt USAGE.txt )
 	use doc && local HTML_DOCS=( docs/build/html/. )
-
+	use examples && local EXAMPLES=( Demos/. )
 	distutils-r1_python_install_all
 }

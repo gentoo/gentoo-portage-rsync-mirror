@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cython
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.139 2014/12/01 09:44:54 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.140 2015/01/01 01:25:30 idella4 Exp $
+
+*cython-0.21.2 (01 Jan 2015)
+
+  01 Jan 2015; Ian Delaney <idella4@gentoo.org> +cython-0.21.2.ebuild,
+  cython-0.21.1.ebuild:
+  bump; drop pypy support due to failing testsuites, set border to version of
+  setuptools, found to be required on testing, tidy
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> cython-0.21.ebuild:
   Stable for sparc, wrt bug #524416
