@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/ski
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.16 2014/05/22 06:36:54 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.17 2015/01/01 00:09:33 mr_bones_ Exp $
+
+  01 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> ski-6.8.ebuild:
+  punt 2_6
 
 *ski-6.8 (22 May 2014)
 

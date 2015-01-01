@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ski-6.8.ebuild,v 1.1 2014/05/22 06:36:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ski-6.8.ebuild,v 1.2 2015/01/01 00:09:33 mr_bones_ Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit python-single-r1 games
 
 DESCRIPTION="A simple text-mode skiing game"
