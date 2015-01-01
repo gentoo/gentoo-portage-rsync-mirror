@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/options
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/options/ChangeLog,v 1.3 2014/07/25 09:16:29 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/options/ChangeLog,v 1.4 2015/01/01 13:19:02 gienah Exp $
+
+*options-1.2.1 (01 Jan 2015)
+
+  01 Jan 2015; Mark Wright <gienah@gentoo.org>
+  +files/options-1.2.1-ghc-7.10.patch, +options-1.2.1.ebuild:
+  Bump options to 1.2.1, patch for ghc 7.10
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> options-1.2-r1.ebuild:
   Drop trailing '.' from description.

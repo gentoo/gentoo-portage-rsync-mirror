@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-0.7.0.ebuild,v 1.1 2014/09/23 13:17:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-0.7.0.ebuild,v 1.2 2015/01/01 13:25:34 kensington Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 VALA_USE_DEPEND="vapigen"
 VALA_MIN_API_VERSION="0.16"
 
-inherit gnome2 vala virtualx
+inherit autotools gnome2 vala virtualx
 
 DESCRIPTION="Manages, extracts and handles media art caches"
 HOMEPAGE="https://github.com/GNOME/libmediaart"
@@ -37,12 +37,16 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	use vala && vala_src_prepare
 	gnome2_src_prepare
+	epatch "${FILESDIR}/${P}-qt5.patch"
+	eautoreconf
 }
 
 src_configure() {
 	local myconf=""
-	if use qt4 -o use qt5 ; then
-		myconf="${myconf} --enable-qt"
+	if use qt4 ; then
+		myconf="${myconf} --enable-qt --with-qt-version=4"
+	elif use qt5 ; then
+		myconf="${myconf} --enable-qt --with-qt-version=5"
 	else
 		myconf="${myconf} --disable-qt"
 	fi
