@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.161 2014/12/31 16:13:09 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.162 2015/01/01 11:25:59 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  gdesklets-core-0.36.3-r4.ebuild:
+  Stable for ppc64, wrt bug #531492
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   gdesklets-core-0.36.3-r4.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.62.ebuild,v 1.7 2014/12/31 16:05:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.62.ebuild,v 1.8 2015/01/01 11:20:06 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="emf flash imagemagick plotutils pptx static-libs"
 
 RDEPEND="

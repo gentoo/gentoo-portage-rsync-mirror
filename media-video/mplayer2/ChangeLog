@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.136 2014/12/31 16:14:44 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.137 2015/01/01 11:27:35 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mplayer2-2.0_p20131009.ebuild:
+  Stable for ppc64, wrt bug #531798
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mplayer2-2.0_p20131009.ebuild:
   Stable for ppc, wrt bug #531798

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyelftools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.28 2014/12/31 16:04:47 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.29 2015/01/01 11:19:03 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pyelftools-0.22.ebuild:
+  Stable for ppc64, wrt bug #530556
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pyelftools-0.22.ebuild:
   Stable for ppc, wrt bug #530556

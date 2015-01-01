@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.10.ebuild,v 1.4 2014/12/31 16:10:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.10.ebuild,v 1.5 2015/01/01 11:25:26 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="http://dev.gentoo.org/~billie/distfiles/${P}.tar.xz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="X mmx sse"
 
 COMMON_DEP="dev-java/commons-net

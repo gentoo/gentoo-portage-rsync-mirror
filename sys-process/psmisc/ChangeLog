@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.162 2014/12/31 16:06:38 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.163 2015/01/01 11:20:53 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> psmisc-22.21.ebuild:
+  Stable for ppc64, wrt bug #530662
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> psmisc-22.21.ebuild:
   Stable for ppc, wrt bug #530662

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yajl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.44 2014/12/31 15:59:46 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.45 2015/01/01 11:14:24 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> yajl-2.0.4-r3.ebuild:
+  Stable for ppc64, wrt bug #526062
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> yajl-2.0.4-r3.ebuild:
   Stable for ppc, wrt bug #526062

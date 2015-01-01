@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.370 2014/12/31 15:55:39 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.371 2015/01/01 11:09:44 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> db-4.8.30-r2.ebuild:
+  Stable for ppc64, wrt bug #525282
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> db-4.8.30-r2.ebuild:
   Stable for ppc, wrt bug #525282

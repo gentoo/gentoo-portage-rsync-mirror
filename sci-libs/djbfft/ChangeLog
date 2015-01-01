@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/djbfft
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.26 2014/12/31 15:58:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.27 2015/01/01 11:12:59 ago Exp $
+
+  01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> djbfft-0.76-r2.ebuild:
+  Stable for ppc64, wrt bug #526034
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> djbfft-0.76-r2.ebuild:
   Stable for ppc, wrt bug #526034
