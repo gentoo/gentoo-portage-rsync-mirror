@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.369 2015/01/01 12:36:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.370 2015/01/01 18:29:56 mgorny Exp $
+
+*ati-drivers-14.9-r2 (01 Jan 2015)
+
+  01 Jan 2015; Michał Górny <mgorny@gentoo.org> +ati-drivers-14.9-r2.ebuild,
+  -ati-drivers-14.9-r1.ebuild:
+  Backport the non-native module removal to 14.9 to match Funtoo.
 
 *ati-drivers-14.12-r1 (01 Jan 2015)
 

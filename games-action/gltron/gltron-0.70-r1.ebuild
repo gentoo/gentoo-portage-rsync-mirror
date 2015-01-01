@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.8 2014/05/15 16:22:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.9 2015/01/01 18:20:35 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="3d tron, just like the movie"
@@ -22,6 +22,7 @@ DEPEND="virtual/opengl
 	media-libs/sdl-sound[vorbis,mikmod]
 	media-libs/smpeg
 	media-libs/libmikmod"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
@@ -44,8 +45,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog README
+	default
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} GLtron
 	prepgamesdirs
