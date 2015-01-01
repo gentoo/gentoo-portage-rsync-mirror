@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/mksh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.59 2014/10/30 09:54:45 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.60 2015/01/01 10:31:00 zlogene Exp $
+
+  01 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> -mksh-48b.ebuild,
+  -mksh-49.ebuild, -mksh-50b.ebuild, -mksh-50c.ebuild:
+  Security cleanup
 
   30 Oct 2014; Agostino Sarubbo <ago@gentoo.org> mksh-50d.ebuild:
   Stable for x86, wrt bug #522416
