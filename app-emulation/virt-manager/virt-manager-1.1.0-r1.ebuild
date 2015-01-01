@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-1.1.0.ebuild,v 1.7 2015/01/01 10:36:02 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-1.1.0-r1.ebuild,v 1.1 2015/01/01 10:36:02 tamiko Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.fedorahosted.org/virt-manager.git"
 else
 	SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-2"
@@ -50,6 +50,12 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 DOCS=( README NEWS )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-optional_avahi.patch
+
+	distutils-r1_src_prepare
+}
 
 distutils-r1_python_compile() {
 	local defgraphics=

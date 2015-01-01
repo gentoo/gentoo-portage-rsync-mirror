@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.115 2014/12/28 10:09:13 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.116 2015/01/01 10:36:02 tamiko Exp $
+
+*virt-manager-1.1.0-r1 (01 Jan 2015)
+
+  01 Jan 2015; Matthias Maier <tamiko@gentoo.org>
+  +files/virt-manager-1.1.0-optional_avahi.patch, +virt-manager-1.1.0-r1.ebuild,
+  virt-manager-1.1.0.ebuild, virt-manager-9999.ebuild:
+  supress an error message in case avahi is not installed, bug #532328
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> virt-manager-1.1.0.ebuild:
   Stable for x86, wrt bug #532208

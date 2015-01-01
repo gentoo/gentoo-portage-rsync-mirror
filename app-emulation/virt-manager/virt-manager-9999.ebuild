@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.25 2014/12/10 22:10:52 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.26 2015/01/01 10:36:02 tamiko Exp $
 
 EAPI=5
 
@@ -50,6 +50,12 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 DOCS=( README NEWS )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-optional_avahi.patch
+
+	distutils-r1_src_prepare
+}
 
 distutils-r1_python_compile() {
 	local defgraphics=
