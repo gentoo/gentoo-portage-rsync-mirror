@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/qmidiroute-0.3.0.ebuild,v 1.2 2013/03/02 22:00:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/qmidiroute-0.3.0.ebuild,v 1.3 2015/01/02 23:00:07 nimiux Exp $
 
 EAPI=2
 inherit flag-o-matic multilib
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/alsamodular/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-qt/qtgui:4

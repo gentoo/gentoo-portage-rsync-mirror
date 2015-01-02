@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mixlib-shellout
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-shellout/ChangeLog,v 1.10 2014/10/08 12:32:38 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-shellout/ChangeLog,v 1.11 2015/01/02 22:57:18 mrueg Exp $
+
+*mixlib-shellout-1.6.1 (02 Jan 2015)
+
+  02 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +mixlib-shellout-1.6.1.ebuild:
+  Version bump.
 
 *mixlib-shellout-1.6.0 (08 Oct 2014)
 

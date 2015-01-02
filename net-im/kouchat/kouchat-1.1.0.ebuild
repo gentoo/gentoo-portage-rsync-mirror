@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kouchat/kouchat-1.1.0.ebuild,v 1.4 2014/08/05 18:34:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kouchat/kouchat-1.1.0.ebuild,v 1.5 2015/01/02 22:49:53 mrueg Exp $
 
-EAPI=1
+EAPI=5
 JAVA_PKG_IUSE=""
 
 inherit eutils java-pkg-2 java-ant-2
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=virtual/jre-1.6"
 DEPEND=">=virtual/jdk-1.6"
 
-S="${WORKDIR}/${P}-src"
+S=${WORKDIR}/${P}-src
 
 src_install() {
 	java-pkg_newjar target/${P}.jar ${PN}.jar

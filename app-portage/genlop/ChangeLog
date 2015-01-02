@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/genlop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.93 2014/12/14 00:23:10 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.94 2015/01/02 22:32:49 mgorny Exp $
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> -genlop-0.30.8-r2.ebuild,
+  -genlop-0.30.9.ebuild:
+  Remove old.
 
 *genlop-0.30.10 (14 Dec 2014)
 

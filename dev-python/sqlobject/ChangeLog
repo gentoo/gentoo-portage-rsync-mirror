@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/sqlobject
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.58 2014/05/20 14:48:56 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.59 2015/01/02 23:00:16 idella4 Exp $
+
+*sqlobject-2.0.0 (02 Jan 2015)
+
+  02 Jan 2015; Ian Delaney <idella4@gentoo.org> +sqlobject-2.0.0.ebuild,
+  -sqlobject-1.3.1.ebuild, -sqlobject-1.3.2.ebuild, -sqlobject-1.4.0.ebuild,
+  -sqlobject-1.4.1-r1.ebuild, -sqlobject-1.4.1.ebuild, -sqlobject-1.5.0.ebuild,
+  -sqlobject-1.5.1.ebuild, sqlobject-1.6.0.ebuild:
+  bump; rm old, rm defunct IUSE flag firebird from last prior version
 
 *sqlobject-1.6.0 (20 May 2014)
 

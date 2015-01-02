@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.34 2015/01/02 12:16:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.35 2015/01/02 22:47:29 mgorny Exp $
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> -scrot-0.8.ebuild:
+  Remove old (bash-completion.eclass cleanup).
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> scrot-0.8_p13.ebuild:
   Stable for sparc, wrt bug #524822

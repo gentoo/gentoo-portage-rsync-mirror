@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmidiroute
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.6 2013/03/02 22:00:18 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiroute/ChangeLog,v 1.7 2015/01/02 23:00:07 nimiux Exp $
+
+  02 Jan 2015; Chema Alonso <nimiux@gentoo.org> qmidiroute-0.3.0.ebuild:
+  Stable for amd64 wrt bug #531366
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qmidiroute-0.3.0.ebuild:
   Move Qt dependencies to the new category

@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/nut
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.118 2014/11/02 10:18:14 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.119 2015/01/02 22:51:10 mgorny Exp $
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> -nut-2.6.0-r1.ebuild,
+  -nut-2.6.3.ebuild:
+  Remove old (bash-completion.eclass cleanup).
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> nut-2.6.5-r1.ebuild,
   nut-2.7.2-r2.ebuild:

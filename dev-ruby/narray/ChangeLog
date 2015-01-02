@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/narray
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.69 2014/06/08 11:07:41 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.70 2015/01/02 22:41:53 mrueg Exp $
+
+*narray-0.6.1.1 (02 Jan 2015)
+
+  02 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +narray-0.6.1.1.ebuild:
+  Version bump. Add ruby22.
 
   08 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -narray-0.6.0.1-r2.ebuild:
   Cleanup old.

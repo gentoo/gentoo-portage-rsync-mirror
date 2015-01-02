@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/topgit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/ChangeLog,v 1.8 2014/12/08 13:10:13 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/topgit/ChangeLog,v 1.9 2015/01/02 22:45:04 mgorny Exp $
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> -topgit-0.8.ebuild:
+  Remove old (bash-completion.eclass cleanup).
 
   08 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> topgit-0.9.ebuild:
   x86 stable wrt bug #521716
