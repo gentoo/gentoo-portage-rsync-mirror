@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/exfat-utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/ChangeLog,v 1.15 2014/07/20 12:41:51 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/exfat-utils/ChangeLog,v 1.16 2015/01/02 05:55:23 floppym Exp $
+
+*exfat-utils-1.1.1 (02 Jan 2015)
+
+  02 Jan 2015; Mike Gilbert <floppym@gentoo.org> +exfat-utils-1.1.1.ebuild:
+  Version bump.
 
 *exfat-utils-1.1.0 (20 Jul 2014)
 
