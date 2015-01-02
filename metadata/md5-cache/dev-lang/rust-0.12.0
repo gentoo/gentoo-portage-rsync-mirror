@@ -10,5 +10,5 @@ RDEPEND=libcxx? ( sys-libs/libcxx ) >=app-admin/eselect-rust-0.2_pre20141011 !de
 REQUIRED_USE=libcxx? ( clang )
 SLOT=0.12
 SRC_URI=http://static.rust-lang.org/dist/rust-0.12.0.tar.gz amd64? ( http://static.rust-lang.org/dist/rust-0.12.0-x86_64-unknown-linux-gnu.tar.gz ) x86? ( http://static.rust-lang.org/dist/rust-0.12.0-i686-unknown-linux-gnu.tar.gz )
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=605c7804ac0d555743f3d1de224874ee

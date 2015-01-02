@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.73 2014/12/28 18:35:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.75 2015/01/02 00:15:15 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -1176,14 +1176,14 @@ _python_check_dead_variables() {
 	for v in PYTHON_DEPEND PYTHON_USE_WITH{,_OR,_OPT} {RESTRICT,SUPPORT}_PYTHON_ABIS
 	do
 		if [[ ${!v} ]]; then
-			eqawarn "${v} is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Ebuild_head"
+			die "${v} is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Ebuild_head"
 		fi
 	done
 
 	for v in PYTHON_{CPPFLAGS,CFLAGS,CXXFLAGS,LDFLAGS}
 	do
 		if [[ ${!v} ]]; then
-			eqawarn "${v} is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#PYTHON_CFLAGS"
+			die "${v} is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#PYTHON_CFLAGS"
 		fi
 	done
 
@@ -1191,7 +1191,7 @@ _python_check_dead_variables() {
 		PYTHON_VERSIONED_{SCRIPTS,EXECUTABLES} PYTHON_NONVERSIONED_EXECUTABLES
 	do
 		if [[ ${!v} ]]; then
-			eqawarn "${v} is invalid for python-r1 suite"
+			die "${v} is invalid for python-r1 suite"
 		fi
 	done
 
@@ -1199,105 +1199,141 @@ _python_check_dead_variables() {
 		DISTUTILS_GLOBAL_OPTIONS DISTUTILS_SRC_TEST PYTHON_MODNAME
 	do
 		if [[ ${!v} ]]; then
-			eqawarn "${v} is invalid for distutils-r1, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#${v}"
+			die "${v} is invalid for distutils-r1, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#${v}"
 		fi
 	done
 
 	if [[ ${DISTUTILS_DISABLE_TEST_DEPENDENCY} ]]; then
-		eqawarn "${v} is invalid for distutils-r1, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#DISTUTILS_SRC_TEST"
+		die "${v} is invalid for distutils-r1, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#DISTUTILS_SRC_TEST"
 	fi
+
+	# python.eclass::progress
+	for v in PYTHON_BDEPEND PYTHON_MULTIPLE_ABIS PYTHON_ABI_TYPE \
+		PYTHON_RESTRICTED_ABIS PYTHON_TESTS_FAILURES_TOLERANT_ABIS \
+		PYTHON_CFFI_MODULES_GENERATION_COMMANDS
+	do
+		if [[ ${!v} ]]; then
+			die "${v} is invalid for python-r1 suite"
+		fi
+	done
 }
 
 python_pkg_setup() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#pkg_setup"
+	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#pkg_setup"
 }
 
 python_convert_shebangs() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#python_convert_shebangs"
+	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#python_convert_shebangs"
 }
 
 python_clean_py-compile_files() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_clean_installation_image() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_execute_function() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#python_execute_function"
+	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#python_execute_function"
 }
 
 python_generate_wrapper_scripts() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_merge_intermediate_installation_images() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_set_active_version() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#pkg_setup"
+	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#pkg_setup"
 }
 
 python_need_rebuild() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 PYTHON() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#.24.28PYTHON.29.2C_.24.7BEPYTHON.7D"
+	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#.24.28PYTHON.29.2C_.24.7BEPYTHON.7D"
 }
 
 python_get_implementation() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_get_implementational_package() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_get_libdir() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_get_library() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_get_version() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_get_implementation_and_version() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_execute_nosetests() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_execute_py.test() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_execute_trial() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_enable_pyc() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_disable_pyc() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite"
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 python_mod_optimize() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Python_byte-code_compilation"
+	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Python_byte-code_compilation"
 }
 
 python_mod_cleanup() {
-	eqawarn "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Python_byte-code_compilation"
+	die "${FUNCNAME}() is invalid for python-r1 suite, please take a look @ https://wiki.gentoo.org/wiki/Project:Python/Python.eclass_conversion#Python_byte-code_compilation"
+}
+
+# python.eclass::progress
+
+python_abi_depend() {
+	die "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_install_executables() {
+	die "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_get_extension_module_suffix() {
+	die "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_byte-compile_modules() {
+	die "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_clean_byte-compiled_modules() {
+	die "${FUNCNAME}() is invalid for python-r1 suite"
+}
+
+python_generate_cffi_modules() {
+	die "${FUNCNAME}() is invalid for python-r1 suite"
 }
 
 _PYTHON_UTILS_R1=1

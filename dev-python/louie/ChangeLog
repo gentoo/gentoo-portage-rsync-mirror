@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/louie
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/ChangeLog,v 1.12 2014/12/31 02:41:18 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/louie/ChangeLog,v 1.13 2015/01/02 00:05:59 mgorny Exp $
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> louie-1.1-r1.ebuild:
+  Remove obsolete DISTUTILS_SRC_TEST.
 
 *louie-1.1-r1 (31 Dec 2014)
 

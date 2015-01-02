@@ -10,5 +10,5 @@ PDEPEND=app-admin/python-updater
 RDEPEND=>=sys-libs/zlib-1.1.3:0= virtual/libffi:0= virtual/libintl:0= dev-libs/expat:0= dev-libs/openssl:0= bzip2? ( app-arch/bzip2:0= ) gdbm? ( sys-libs/gdbm:0= ) ncurses? ( sys-libs/ncurses:5= ) sqlite? ( dev-db/sqlite:3= ) tk? ( dev-lang/tk:0= dev-tcltk/tix:0= ) !dev-python/pypy3-bin:0
 SLOT=0/2.4
 SRC_URI=https://bitbucket.org/pypy/pypy/downloads/pypy3-2.4.0-src.tar.bz2
-_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	b8df2e405c0b53b95107d7f8493e4687	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=c75d28c50dc55f2a73f7a6d6fb77ee21

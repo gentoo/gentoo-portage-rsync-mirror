@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/rabbitmq-server
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.46 2014/12/28 18:58:07 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.48 2015/01/02 00:16:46 mgorny Exp $
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> rabbitmq-server-3.3.4.ebuild:
+  Switch to python-any-r1 since Python is only a build-time dependency.
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> rabbitmq-server-3.1.4.ebuild,
+  rabbitmq-server-3.2.3.ebuild, rabbitmq-server-3.2.4.ebuild,
+  rabbitmq-server-3.3.4.ebuild:
+  Remove obsolete PYTHON_DEPEND.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   rabbitmq-server-3.1.4.ebuild, rabbitmq-server-3.2.3.ebuild,
@@ -244,4 +252,3 @@
   19 Apr 2009; Caleb Tennis <caleb@gentoo.org +files/rabbitmq-server.init,
   +metadata.xml, +rabbitmq-server-1.5.4.ebuild:
   Initial import
-

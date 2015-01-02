@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9-r3.ebuild,v 1.1 2014/12/29 06:59:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/bicyclerepair-0.9-r3.ebuild,v 1.2 2015/01/02 00:06:55 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -22,7 +22,6 @@ DEPEND="emacs? (
 RDEPEND="${DEPEND}"
 
 SITEFILE="50${PN}-gentoo.el"
-PYTHON_MODNAME="BicycleRepairMan_Idle.py bike bikeemacs.py"
 
 python_prepare_all() {
 	# bikeemacs.py contains non-ASCII characters in comments.

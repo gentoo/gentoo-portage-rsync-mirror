@@ -1,10 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paisley/paisley-0.3.1-r1.ebuild,v 1.1 2014/12/31 05:14:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paisley/paisley-0.3.1-r1.ebuild,v 1.2 2015/01/02 00:04:43 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
-DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils-r1
 
