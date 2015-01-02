@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.4.ebuild,v 1.1 2014/08/31 23:37:54 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.4.ebuild,v 1.2 2015/01/02 22:05:49 nimiux Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.votca.org"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-macos"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-macos"
 IUSE="doc +fftw +gsl sqlite"
 
 RDEPEND="fftw? ( sci-libs/fftw:3.0 )

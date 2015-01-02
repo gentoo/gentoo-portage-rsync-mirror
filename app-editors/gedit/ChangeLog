@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.378 2014/12/19 13:33:36 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.379 2015/01/02 22:20:34 mgorny Exp $
+
+  02 Jan 2015; Michał Górny <mgorny@gentoo.org> gedit-3.12.2-r1.ebuild,
+  gedit-3.14.2.ebuild:
+  Do not reference Python sitedir when Python is disabled, bug #531968.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> gedit-3.12.2-r1.ebuild:
   amd64 stable, bug 529964

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/votca-csgapps-1.2.4.ebuild,v 1.2 2014/10/25 01:09:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/votca-csgapps-1.2.4.ebuild,v 1.3 2015/01/02 22:06:38 nimiux Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.votca.org"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-macos"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-macos"
 IUSE=""
 
 RDEPEND="~sci-chemistry/${PN%apps}-${PV}"

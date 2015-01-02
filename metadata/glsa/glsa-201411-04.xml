@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">php</product>
   <announced>November 09, 2014</announced>
-  <revised>November 09, 2014: 1</revised>
+  <revised>January 02, 2015: 2</revised>
   <bug>525960</bug>
   <access>remote</access>
   <affected>
@@ -17,6 +17,11 @@
       <unaffected range="ge">5.5.18</unaffected>
       <unaffected range="rge">5.4.34</unaffected>
       <unaffected range="rge">5.3.29</unaffected>
+      <unaffected range="rge">5.4.36</unaffected>
+      <unaffected range="rge">5.4.37</unaffected>
+      <unaffected range="rge">5.4.38</unaffected>
+      <unaffected range="rge">5.4.39</unaffected>
+      <unaffected range="rge">5.4.35</unaffected>
       <vulnerable range="lt">5.5.18</vulnerable>
     </package>
   </affected>
@@ -32,7 +37,7 @@
   </description>
   <impact type="normal">
     <p>A context-dependent attacker can possibly execute arbitrary code or
-      create a Denial of Service condition
+      create a Denial of Service condition.
     </p>
   </impact>
   <workaround>
@@ -71,5 +76,5 @@
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2014-3670">CVE-2014-3670</uri>
   </references>
   <metadata tag="requester" timestamp="Mon, 03 Nov 2014 23:38:25 +0000">ackle</metadata>
-  <metadata tag="submitter" timestamp="Sun, 09 Nov 2014 16:39:36 +0000">ackle</metadata>
+  <metadata tag="submitter" timestamp="Fri, 02 Jan 2015 22:13:49 +0000">ackle</metadata>
 </glsa>

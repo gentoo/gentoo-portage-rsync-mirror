@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/votca-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.24 2014/08/31 23:37:54 ottxor Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.25 2015/01/02 22:05:49 nimiux Exp $
+
+  02 Jan 2015; Chema Alonso <nimiux@gentoo.org> votca-tools-1.2.4.ebuild:
+  Stable for amd64 wrt bug #526968
 
 *votca-tools-1.2.4 (31 Aug 2014)
 

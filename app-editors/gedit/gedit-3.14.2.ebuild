@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.14.2.ebuild,v 1.1 2014/12/15 23:11:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.14.2.ebuild,v 1.2 2015/01/02 22:20:34 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -99,6 +99,9 @@ src_test() {
 }
 
 src_install() {
+	local args=()
 	# manually set pyoverridesdir due to bug #524018 and AM_PATH_PYTHON limitations
-	gnome2_src_install pyoverridesdir="$(python_get_sitedir)/gi/overrides"
+	use python && args+=( pyoverridesdir="$(python_get_sitedir)/gi/overrides" )
+
+	gnome2_src_install "${args[@]}"
 }
