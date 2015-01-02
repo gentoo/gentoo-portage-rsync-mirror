@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.5 2013/02/07 22:01:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.6 2015/01/02 11:08:32 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="A retro side-scrolling shoot'em up based on the editor war story"
@@ -36,8 +36,7 @@ src_compile() {
 	emake \
 		PREFIX="${GAMES_PREFIX}" \
 		DATADIR="${GAMES_DATADIR}/${PN}" \
-		MANDIR="/usr/share/man" \
-		|| die "emake failed"
+		MANDIR="/usr/share/man"
 }
 
 src_install() {
@@ -46,7 +45,7 @@ src_install() {
 		PREFIX="${GAMES_PREFIX}" \
 		DATADIR="${GAMES_DATADIR}/${PN}" \
 		MANDIR="/usr/share/man" \
-		install || die "emake install failed"
+		install
 	use portaudio || rm -rf "${D}${GAMES_DATADIR}"
 	dodoc README AUTHORS changelog.txt AAA_HOW_TO_MAKE_NEW_LEVELS.txt
 	newicon icons/wordwarvi_icon_128x128.png ${PN}.png

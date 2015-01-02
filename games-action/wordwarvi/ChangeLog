@@ -1,6 +1,9 @@
 # ChangeLog for games-action/wordwarvi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/ChangeLog,v 1.13 2013/02/07 22:01:29 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/ChangeLog,v 1.14 2015/01/02 11:08:32 tupone Exp $
+
+  02 Jan 2015; Tupone Alfredo <tupone@gentoo.org> wordwarvi-1.00.ebuild:
+  EAPI 4
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> wordwarvi-1.00.ebuild:
   Move Creative Commons licenses to shorter names.

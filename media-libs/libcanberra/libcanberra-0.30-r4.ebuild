@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.30-r3.ebuild,v 1.4 2015/01/01 21:06:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.30-r4.ebuild,v 1.1 2015/01/02 11:22:02 pacho Exp $
 
 EAPI="5"
 
@@ -69,6 +69,6 @@ src_install() {
 	prune_libtool_files --modules
 
 	# This is needed for desktops different than GNOME, bug #520550
-	insinto /etc/X11/xinit/xinitrc.d
-	newins "${FILESDIR}"/libcanberra-gtk-module.sh 40-libcanberra-gtk-module
+	exeinto /etc/X11/xinit/xinitrc.d
+	newexe "${FILESDIR}"/libcanberra-gtk-module.sh 40-libcanberra-gtk-module
 }

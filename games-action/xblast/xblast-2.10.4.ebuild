@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/xblast-2.10.4.ebuild,v 1.5 2009/04/15 22:00:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xblast/xblast-2.10.4.ebuild,v 1.6 2015/01/02 11:13:01 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools games
 
 # Change these as releases changes
@@ -39,15 +39,13 @@ src_prepare() {
 src_configure() {
 	egamesconf \
 		--with-otherdatadir="${GAMES_DATADIR}"/${PN} \
-		--enable-sound \
-		|| die
+		--enable-sound
 }
 
 src_install() {
 	local IMAGE_INSTALL_DIR="${GAMES_DATADIR}/${PN}/image"
 
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 
 	# Images
 	dodir "${IMAGE_INSTALL_DIR}"
@@ -56,16 +54,15 @@ src_install() {
 
 	# Levels
 	insinto "${GAMES_DATADIR}/xblast/level"
-	doins "${WORKDIR}/${LEVELS}"/* || die "doins failed"
+	doins "${WORKDIR}/${LEVELS}"/*
 
 	# Models
 	insinto "${GAMES_DATADIR}/xblast/image/sprite"
-	doins "${WORKDIR}/${MODELS}"/* || die "doins failed"
+	doins "${WORKDIR}/${MODELS}"/*
 
 	# Music and sound
 	insinto "${GAMES_DATADIR}/xblast/sounds"
-	doins "${WORKDIR}/${MUSICS}"/* "${WORKDIR}/${SOUNDS}"/* \
-		|| die "doins failed"
+	doins "${WORKDIR}/${MUSICS}"/* "${WORKDIR}/${SOUNDS}"/*
 
 	# Cleanup
 	find "${D}" -name Imakefile -exec rm \{\} \;

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.119 2015/01/01 21:06:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.120 2015/01/02 11:22:02 pacho Exp $
+
+*libcanberra-0.30-r4 (02 Jan 2015)
+
+  02 Jan 2015; Pacho Ramos <pacho@gentoo.org> +libcanberra-0.30-r4.ebuild,
+  -libcanberra-0.30-r3.ebuild:
+  xinitrc.d file needs to be executable (#520550#c6 by Joakim Tjernlund)
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> libcanberra-0.30-r3.ebuild:
   arm stable, bug #529964

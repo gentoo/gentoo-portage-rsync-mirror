@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.4.0.ebuild,v 1.5 2006/12/01 19:56:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.4.0.ebuild,v 1.6 2015/01/02 11:04:35 tupone Exp $
 
+EAPI=4
 inherit games
 
 DESCRIPTION="A racing game starring Tux, the linux penguin"
@@ -24,10 +25,7 @@ RDEPEND=">=media-libs/plib-1.8.0
 DEPEND="${RDEPEND}
 	x11-libs/libXt"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	# apparently <sys/perm.h> doesn't exist on alpha
 	if use alpha; then
 		sed -i \
@@ -43,14 +41,12 @@ src_unpack() {
 		|| die "sed src/Makefile.in failed"
 }
 
-src_compile() {
-	egamesconf --datadir="${GAMES_DATADIR_BASE}" || die
-	emake || die "emake failed"
+src_configure() {
+	egamesconf --datadir="${GAMES_DATADIR_BASE}"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS CHANGES README
+	default
 	dohtml doc/*.html
 	rm -rf "${D}/usr/share/tuxkart/"
 
