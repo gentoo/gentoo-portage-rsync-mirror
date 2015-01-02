@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libwps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.57 2014/11/21 11:43:41 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.58 2015/01/02 14:23:55 mrueg Exp $
+
+*libwps-0.3.1 (02 Jan 2015)
+
+  02 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +libwps-0.3.1.ebuild:
+  Version bump.
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> libwps-0.3.0.ebuild:
   Keyworded on alpha, bug 520692
