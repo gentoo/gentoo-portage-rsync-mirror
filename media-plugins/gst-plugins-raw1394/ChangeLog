@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-raw1394
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.110 2014/08/21 10:44:11 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.111 2015/01/02 08:32:11 leio Exp $
+
+*gst-plugins-raw1394-1.4.5 (02 Jan 2015)
+
+  02 Jan 2015; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-raw1394-0.10.31.ebuild, -gst-plugins-raw1394-1.2.3.ebuild,
+  -gst-plugins-raw1394-1.2.4.ebuild, +gst-plugins-raw1394-1.4.5.ebuild:
+  Version bump, remove old. hdv1394src: fix selecting a camera via its GUID
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-raw1394-0.10.31-r1.ebuild, gst-plugins-raw1394-1.2.4-r1.ebuild:
