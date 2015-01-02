@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.92 2015/01/02 12:38:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.93 2015/01/02 15:00:21 zlogene Exp $
+
+  02 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> xz-utils-5.0.8.ebuild:
+  ia64 stable wrt bug #533274
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xz-utils-5.0.8.ebuild:
   Stable for sparc, wrt bug #533274

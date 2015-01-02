@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/units
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.78 2014/11/22 19:14:38 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.80 2015/01/02 14:53:34 zlogene Exp $
+
+  02 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> units-2.11.ebuild:
+  x86 stable wrt bug #509790
+
+  02 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> units-2.11.ebuild:
+  amd64 stable wrt bug #09790
 
   22 Nov 2014; Jeroen Roovers <jer@gentoo.org> units-2.11a.ebuild:
   Add python 3.4 support.
