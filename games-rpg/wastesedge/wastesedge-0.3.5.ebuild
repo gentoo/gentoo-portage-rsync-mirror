@@ -1,10 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.5.ebuild,v 1.2 2013/02/06 19:46:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.5.ebuild,v 1.3 2015/01/02 08:05:59 mr_bones_ Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_6 python2_7 )
-
+PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1 games
 
 DESCRIPTION="role playing game to showcase the adonthell engine"

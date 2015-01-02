@@ -3,6 +3,14 @@
 <pkgmetadata>
   <herd>sci-geosciences</herd>
   <maintainer>
+    <email>graaff@gentoo.org</email>
+  </maintainer>
+  <maintainer>
     <email>hanno@gentoo.org</email>
   </maintainer>
+  <use>
+    <flag name="magic">
+      Use libmagic to determine mimetypes
+    </flag>
+  </use>
 </pkgmetadata>

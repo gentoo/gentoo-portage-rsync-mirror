@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=app-arch/bzip2 dev-libs/expat dev-libs/glib:2 net-misc/curl sys-libs/zlib x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 gps? ( >=sci-geosciences/gpsd-2.96 ) exif? ( media-libs/libexif ) magic? ( sys-apps/file ) app-text/gnome-doc-utils dev-util/intltool dev-util/gtk-doc-am app-text/rarian dev-libs/libxslt virtual/pkgconfig sys-devel/gettext
+DESCRIPTION=GPS data editor and analyzer
+EAPI=5
+HOMEPAGE=http://viking.sourceforge.net/
+IUSE=doc +exif gps +magic nls
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=app-arch/bzip2 dev-libs/expat dev-libs/glib:2 net-misc/curl sys-libs/zlib x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 gps? ( >=sci-geosciences/gpsd-2.96 ) exif? ( media-libs/libexif ) magic? ( sys-apps/file ) sci-geosciences/gpsbabel
+SLOT=0
+SRC_URI=mirror://sourceforge/viking/viking-1.5.1.tar.bz2 doc? ( mirror://sourceforge/viking/viking.pdf )
+_md5_=0b71a466387e40ae2fd107767655233d

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/wastesedge
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/ChangeLog,v 1.18 2013/02/06 19:46:10 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/ChangeLog,v 1.19 2015/01/02 08:05:59 mr_bones_ Exp $
+
+  02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> wastesedge-0.3.5.ebuild:
+  punt 2_6
 
   06 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> wastesedge-0.3.5.ebuild:
   tidy

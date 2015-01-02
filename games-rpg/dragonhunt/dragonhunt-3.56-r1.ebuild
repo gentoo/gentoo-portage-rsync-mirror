@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56-r1.ebuild,v 1.2 2013/09/05 19:44:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/dragonhunt-3.56-r1.ebuild,v 1.3 2015/01/02 08:02:50 mr_bones_ Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1 games
 
 MY_P="Dragon_Hunt-${PV}"
@@ -33,38 +33,34 @@ src_prepare() {
 	sed -i "s:\.\./modules/:${GAMES_DATADIR}/${PN}/:" \
 		code/g.py \
 		code/map_editor.py \
-		code/rpg.py \
-		|| die "Could not change module path."
+		code/rpg.py || die
 
 	# Where to look for keybinding
 	sed -i "s:\.\./settings:${GAMES_SYSCONFDIR}/${PN}/settings:" \
-		code/g.py \
-		|| die "Could not change settings.txt directory"
+		code/g.py || die
 
 	# Save games in ~/.${PN}/.
 	sed -i \
 		-e "s:^\(from os import.*\):\1\, environ:" \
 		-e "s:g.mod_dir.*\"/saves/\?\":environ[\"HOME\"] + \"/.${PN}/\":" \
-		code/g.py code/loadgame.py \
-		|| die "Could not change savegames location."
+		code/g.py code/loadgame.py || die
 
 	# Save maps in ~/.
 	sed -i \
 		-e "s:^\(from os import.*\):\1\, environ:" \
 		-e "s:g.mod_dir.*\"map\.txt\":environ[\"HOME\"]\ +\ \"/dh_map.txt\":" \
-		code/map_editor.py \
-		|| die "Could not change map location."
+		code/map_editor.py || die
 }
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r modules/* || die "doins modules failed"
+	doins -r modules/*
 
 	insinto "${GAMES_SYSCONFDIR}"/${PN}
-	doins settings.txt || die "doins settings.txt failed"
+	doins settings.txt
 
 	insinto "$(games_get_libdir)"/${PN}
-	doins code/*.py || die "doins code failed"
+	doins code/*.py
 
 	games_make_wrapper ${PN} "${EPYTHON} ./rpg.py" "$(games_get_libdir)"/${PN}
 	games_make_wrapper ${PN}-mapeditor "${EPYTHON} ./map_editor.py" \

@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/dragonhunt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.9 2013/09/05 19:44:42 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.10 2015/01/02 08:02:50 mr_bones_ Exp $
+
+  02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  dragonhunt-3.56-r1.ebuild:
+  tidy
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> dragonhunt-3.56-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
