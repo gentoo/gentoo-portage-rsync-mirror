@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/transcend-0.3.ebuild,v 1.7 2011/04/26 07:11:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/transcend/transcend-0.3.ebuild,v 1.8 2015/01/02 10:47:13 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit games
 
 DESCRIPTION="retro-style, abstract, 2D shooter"
@@ -19,6 +19,7 @@ DEPEND="x11-libs/libXmu
 	virtual/opengl
 	virtual/glu
 	media-libs/freeglut"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/Transcend_${PV}_UnixSource/Transcend
 
@@ -42,22 +43,22 @@ src_prepare() {
 
 src_configure() {
 	cd portaudio
-	egamesconf || die
+	egamesconf --enable-dependency-tracking
 }
 
 src_compile() {
 	cd portaudio
-	emake
+	nonfatal emake
 	cd ../game
-	emake || die
+	emake
 	cd ..
 	cp game/Transcend ${PN} || die "cp failed"
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r levels/ || die "doins failed"
+	doins -r levels/
 	dodoc doc/how_to_*.txt
 	prepgamesdirs
 }

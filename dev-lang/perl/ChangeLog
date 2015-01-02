@@ -1,7 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.461 2015/01/01 16:53:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.462 2015/01/02 10:50:11 zlogene Exp $
+
+  02 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> -perl-5.20.1-r3.ebuild:
+  Drop old.
 
   01 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> +ChangeLog-2014:
   Split ChangeLog. For previous entries, please see ChangeLog-2014.
-
