@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-1.3.1.ebuild,v 1.1 2015/01/02 05:21:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-1.3.1.ebuild,v 1.2 2015/01/02 06:04:13 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -46,9 +46,4 @@ src_install() {
 	doicon picard.ico
 	domenu picard.desktop
 	readme.gentoo_create_doc
-}
-
-pkg_postinstall() {
-	default
-	readme.gentoo_pkg_postinst
 }

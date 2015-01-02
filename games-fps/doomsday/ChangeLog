@@ -1,6 +1,16 @@
 # ChangeLog for games-fps/doomsday
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.63 2014/12/16 07:51:01 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.65 2015/01/02 06:02:50 mr_bones_ Exp $
+
+  02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -doomsday-1.10.2-r1.ebuild, -doomsday-1.9.0_beta69.ebuild,
+  -files/doomsday-1.10.2-openal-link.patch,
+  -files/doomsday-1.9.0_beta69-png15.patch,
+  -files/doomsday-1.9.0_beta69-underlink.patch:
+  old
+
+  02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> doomsday-1.14.5.ebuild:
+  tidy
 
 *doomsday-1.14.5 (16 Dec 2014)
 

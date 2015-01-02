@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.49 2015/01/02 05:24:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.50 2015/01/02 06:04:13 yngwin Exp $
+
+  02 Jan 2015; Ben de Groot <yngwin@gentoo.org> picard-1.3.1.ebuild:
+  Remove unnecessary lines
 
   02 Jan 2015; Ben de Groot <yngwin@gentoo.org> -picard-1.2-r1.ebuild,
   -picard-1.3.ebuild:

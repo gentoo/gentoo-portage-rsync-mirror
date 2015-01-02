@@ -1,11 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.14.5.ebuild,v 1.1 2014/12/16 07:51:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.14.5.ebuild,v 1.2 2015/01/02 06:01:37 mr_bones_ Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
 EAPI=5
-
 PYTHON_COMPAT=( python2_6 python2_7 )
 inherit python-r1 confutils eutils qt4-r2 games
 
@@ -69,7 +68,7 @@ pkg_setup() {
 src_prepare() {
 	sed -i \
 		-e '/readme.path/s#$$PREFIX#/usr#' \
-		client/client.pro || die "fixing docdir failed!"
+		client/client.pro || die
 
 	sed -i \
 		-e "/^DENG_BASE_DIR =/s:\$\$PREFIX/share:${GAMES_DATADIR}:" \
