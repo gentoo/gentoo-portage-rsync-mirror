@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/language-c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.30 2015/01/02 09:58:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.31 2015/01/02 10:01:32 slyfox Exp $
+
+  02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  -language-c-0.3.2.1-r1.ebuild, -language-c-0.3.2.1.ebuild:
+  Drop old.
 
   02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> language-c-0.4.2.ebuild:
   Unquoted var.

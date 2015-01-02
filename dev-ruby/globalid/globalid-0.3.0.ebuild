@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/globalid/globalid-0.3.0.ebuild,v 1.1 2014/09/13 15:54:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/globalid/globalid-0.3.0.ebuild,v 1.2 2015/01/02 10:03:00 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/rails/globalid/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/bundler >=dev-ruby/activemodel-4.1.0 >=dev-ruby/railties-4.1.0 )"

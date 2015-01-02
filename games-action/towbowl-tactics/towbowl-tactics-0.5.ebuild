@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.12 2014/05/15 16:25:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/towbowl-tactics/towbowl-tactics-0.5.ebuild,v 1.13 2015/01/02 10:08:26 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="Tow Bowl Tactics is a game based on Games Workshop's Blood Bowl"
@@ -41,12 +41,12 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin tbt || die
+	dogamesbin tbt
 	dodir "${GAMES_DATADIR}/tbt"
 	cp -r ../data ../tbt.ico "${D}${GAMES_DATADIR}/tbt" || die
 	insinto "${GAMES_SYSCONFDIR}/tbt"
-	doins ../config.xml || die
-	newicon ../data/images/panel/turn.png ${PN}.png || die
-	make_desktop_entry tbt "Tow Bowl Tactics" || die
+	doins ../config.xml
+	newicon ../data/images/panel/turn.png ${PN}.png
+	make_desktop_entry tbt "Tow Bowl Tactics"
 	prepgamesdirs
 }

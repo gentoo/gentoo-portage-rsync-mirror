@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/binary-0.7.1.0.ebuild,v 1.11 2014/09/03 09:36:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/binary-0.7.1.0.ebuild,v 1.12 2015/01/02 10:07:49 slyfox Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 			>=dev-haskell/test-framework-quickcheck2-0.3
 		)"
 
-CABAL_CORE_LIB_GHC_PV="7.7.2013* 7.8.20140130 7.8.0.20140228 7.8.1 7.8.2 7.8.3"
+CABAL_CORE_LIB_GHC_PV="7.7.2013* 7.8.20140130 7.8.0.20140228 7.8.1 7.8.2 7.8.3 7.8.4"
 
 src_prepare() {
 	if has_version ">=dev-lang/ghc-7.7"; then

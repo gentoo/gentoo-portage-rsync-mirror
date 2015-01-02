@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.9-r1.ebuild,v 1.1 2014/12/24 01:52:20 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.9-r1.ebuild,v 1.2 2015/01/02 10:10:04 yngwin Exp $
 
 EAPI=5
 
@@ -39,7 +39,6 @@ COMMON_DEPEND="
 	app-text/iso-codes
 	>=gnome-base/dconf-0.13.4
 	x11-libs/libnotify
-
 	gconf? ( >=gnome-base/gconf-2.12:2 )
 	gtk? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3 )
@@ -70,8 +69,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )
-	vala? ( $(vala_depend) )
-	gnome-base/gconf"
+	vala? ( $(vala_depend) )"
 
 # stress test in bus/ fails
 # IBUS-CRITICAL **: bus_test_client_init: assertion `ibus_bus_is_connected (_bus)' failed

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activejob/activejob-4.2.0.ebuild,v 1.1 2015/01/01 10:19:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activejob/activejob-4.2.0.ebuild,v 1.2 2015/01/02 10:03:21 graaff Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="http://github.com/rails/rails/archive/v${PV}.tar.gz -> rails-${PV}.tgz"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE=""
 
 RUBY_S="rails-${PV}/${PN}"
