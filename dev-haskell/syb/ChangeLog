@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/syb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.32 2014/07/25 08:59:10 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.33 2015/01/02 02:42:13 gienah Exp $
+
+*syb-0.4.3 (02 Jan 2015)
+
+  02 Jan 2015; Mark Wright <gienah@gentoo.org> +files/syb-0.4.3-ghc-7.10.patch,
+  +syb-0.4.3.ebuild:
+  Bump syb to 0.4.3, with tests patched for ghc 7.10.
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

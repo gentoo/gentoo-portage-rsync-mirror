@@ -1437,7 +1437,6 @@ dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bit
 dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
-dev-haskell/dataenc:tests - Build unit and quickcheck tests.
 dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/distributive:lib-werror - Compile with the ghc -Werror option
 dev-haskell/encoding:systemencoding - Provide the getSystemEncoding action to query the locale.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.7.ebuild,v 1.2 2014/07/09 03:04:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.7.ebuild,v 1.3 2015/01/02 02:51:19 gienah Exp $
 
 EAPI=5
 
@@ -15,22 +15,27 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86"
-IUSE="tests"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ppc-macos ~x86-macos"
+IUSE="test"
 
 RDEPEND=">=dev-lang/ghc-7.4.1:=
-	tests? ( dev-haskell/hunit:=[profile?]
+"
+DEPEND="${RDEPEND}
+	>=dev-haskell/cabal-1.6
+	test? ( dev-haskell/hunit:=[profile?]
 			>=dev-haskell/quickcheck-2.5:2=[profile?] <dev-haskell/quickcheck-2.6:2=[profile?]
 			dev-haskell/test-framework:=[profile?]
 			dev-haskell/test-framework-hunit:=[profile?]
 			dev-haskell/test-framework-quickcheck2:=[profile?]
 			dev-haskell/test-framework-th:=[profile?] )
 "
-DEPEND="${RDEPEND}
-	>=dev-haskell/cabal-1.6
-"
+
+src_prepare() {
+	cabal_chdeps \
+		'base >= 3.0.0 && < 4.8' 'base >= 3.0.0'
+}
 
 src_configure() {
 	haskell-cabal_src_configure \
-		$(cabal_flag tests tests)
+		$(cabal_flag test tests)
 }

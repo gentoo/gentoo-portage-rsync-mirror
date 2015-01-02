@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.5.ebuild,v 1.9 2013/07/21 17:48:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.5.ebuild,v 1.10 2015/01/02 02:51:19 gienah Exp $
 
 EAPI=5
 
@@ -21,6 +21,12 @@ IUSE=""
 RDEPEND=">=dev-lang/ghc-6.10.4:="
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.6"
+
+src_prepare() {
+	cabal_chdeps \
+		'array >= 0.1.0 && < 0.5' 'array >= 0.1.0 && < 0.6' \
+		'base >= 3.0.0 && < 4.7' 'base >= 3.0.0'
+}
 
 src_configure() {
 	haskell-cabal_src_configure \
