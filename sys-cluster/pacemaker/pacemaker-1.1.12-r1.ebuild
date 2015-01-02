@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.10.ebuild,v 1.2 2014/12/12 13:41:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.12-r1.ebuild,v 1.1 2015/01/01 23:01:41 mgorny Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 WANT_AUTOMAKE="1.12"
 
-inherit autotools base python-single-r1
+inherit autotools eutils python-single-r1
 
 MY_PN="Pacemaker"
 MY_P=${MY_PN}-${PV/_/-}
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~hppa ~x86"
 REQUIRED_USE="cman? ( !heartbeat )"
 IUSE="acl cman heartbeat smtp snmp static-libs"
 
-DEPEND="
+DEPEND="${PYTHON_DEPS}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	sys-cluster/cluster-glue
@@ -35,23 +35,23 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+REQUIRED_USE=${PYTHON_REQUIRED_USE}
+
 PATCHES=("${FILESDIR}"/pacemaker-1.1.10-tinfo.patch)
 
 S="${WORKDIR}/${PN}-${MY_P}"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_prepare() {
-	base_src_prepare
+	epatch "${PATCHES[@]}"
+	epatch_user
+
 	sed -i -e "/ggdb3/d" configure.ac || die
 	sed -i -e "s/ -ggdb//g" configure.ac || die
 	sed -i -e "s/uid2username(uid)/uid2username(uid_client)/g" lib/common/ipc.c || die
 	sed -i -e "s:<glib/ghash.h>:<glib.h>:" lib/ais/plugin.c || die
 	eautoreconf
-	python_convert_shebangs -r 2 .
+
+	python_fix_shebang .
 }
 
 src_configure() {
@@ -78,7 +78,7 @@ src_configure() {
 }
 
 src_install() {
-	base_src_install
+	default
 	rm -rf "${D}"/var/run "${D}"/etc/init.d
 	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 	if has_version "<sys-cluster/corosync-2.0"; then

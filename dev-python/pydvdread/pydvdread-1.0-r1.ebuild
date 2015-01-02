@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydvdread/pydvdread-1.0-r1.ebuild,v 1.1 2014/07/02 03:02:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydvdread/pydvdread-1.0-r1.ebuild,v 1.2 2015/01/01 23:13:51 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
@@ -24,16 +24,6 @@ RDEPEND=""
 PATCHES=( "${FILESDIR}"/${P}-py3k.patch \
 		"${FILESDIR}"/${P}-api-update.patch )
 
-src_compile() {
-	# We had to patch some of the .i files, so regen the .py
-	# so that the distutils copy doesn't import old stuff.
-	# XXX: A python/swig expert might know a better way to do this.
-	set -- swig -python -o src/dvdread/all_wrap.c src/dvdread/all.i
-	echo "$@"
-	"$@"  || die
-	distutils-r1_src_compile
-}
-
 python_test() {
-	"$(PYTHON)" tests/TestAll.py || die "Tests failed"
+	"${PYTHON}" tests/TestAll.py || die "Tests fail with ${EPYTHON}"
 }

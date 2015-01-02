@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r12.ebuild,v 1.1 2014/12/25 12:05:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r13.ebuild,v 1.1 2015/01/01 23:27:23 mgorny Exp $
 
 EAPI=5
 
@@ -88,14 +88,13 @@ src_install() {
 	done
 
 	python_fix_shebang "${D}"
+	python_optimize "${ED%/}/usr/share/sgml/misc/sgmltools/python"
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/share/sgml/misc/sgmltools/python
 	sgml-catalog_pkg_postinst
 }
 
 pkg_postrm() {
-	python_mod_cleanup /usr/share/sgml/misc/sgmltools/python
 	sgml-catalog_pkg_postrm
 }

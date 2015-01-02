@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.7-r1.ebuild,v 1.7 2014/03/05 15:38:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.7-r1.ebuild,v 1.8 2015/01/01 23:04:25 mgorny Exp $
 
 EAPI=5
 
@@ -31,13 +31,6 @@ python_compile() {
 		cd doc
 		emake html || die "emake html failed"
 	fi
-}
-
-src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" test.py -v
-	}
-	python_execute_function testing
 }
 
 python_install() {

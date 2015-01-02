@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sgmltools-lite
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.63 2014/12/25 12:05:34 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.64 2015/01/01 23:27:23 mgorny Exp $
+
+*sgmltools-lite-3.0.3-r13 (01 Jan 2015)
+
+  01 Jan 2015; Michał Górny <mgorny@gentoo.org>
+  +sgmltools-lite-3.0.3-r13.ebuild, -sgmltools-lite-3.0.3-r12.ebuild:
+  Fix installed module byte-compilation.
 
 *sgmltools-lite-3.0.3-r12 (25 Dec 2014)
 

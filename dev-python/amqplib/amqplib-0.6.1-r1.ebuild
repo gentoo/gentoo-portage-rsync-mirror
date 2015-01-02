@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/amqplib-0.6.1-r1.ebuild,v 1.2 2013/09/05 18:46:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/amqplib-0.6.1-r1.ebuild,v 1.3 2015/01/01 23:08:42 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -19,31 +19,25 @@ IUSE="examples extras test"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
-python_prepare_all() {
-	if use test; then
-		epatch "${FILESDIR}/${P}_disable_socket_tests.patch"
-	fi
-	distutils-r1_python_prepare_all
-}
+PATCHES=(
+	"${FILESDIR}/${P}_disable_socket_tests.patch"
+)
 
 python_test() {
-	testing() {
-		PYTHONPATH="build-${PYTHON_ABI}/lib" python \
-			"tests/client_0_8/run_all.py"
-	}
-	python_execute_function testing
+	"${PYTHON}" tests/client_0_8/run_all.py \
+		|| die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
 	distutils-r1_python_install_all
 
-	dodoc docs/*
+	dodoc -r docs/.
 	if use examples; then
 		docinto examples
-		dodoc demo/* || die "dodoc failed"
+		dodoc -r demo/.
 	fi
 	if use extras; then
 		insinto /usr/share/${PF}
-		doins -r extras || die "doins failed"
+		doins -r extras
 	fi
 }
