@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycdf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.14 2014/08/10 21:16:14 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.15 2015/01/02 03:23:38 idella4 Exp $
+
+*pycdf-0.6.3-r1 (02 Jan 2015)
+
+  02 Jan 2015; Ian Delaney <idella4@gentoo.org> +pycdf-0.6.3-r1.ebuild,
+  -pycdf-0.6.3.ebuild:
+  revbump; conversion -> distutils-r1, rm old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pycdf-0.6.3.ebuild:
   QA: drop trailing '.' from DESCRIPTION

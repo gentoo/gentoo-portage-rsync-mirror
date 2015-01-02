@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/chell
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chell/ChangeLog,v 1.3 2014/07/25 09:16:26 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chell/ChangeLog,v 1.4 2015/01/02 03:27:03 gienah Exp $
+
+  02 Jan 2015; Mark Wright <gienah@gentoo.org> +files/chell-0.4-ghc-7.10.patch,
+  chell-0.4.ebuild:
+  Patch chell-0.4 for ghc 7.10
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> chell-0.4.ebuild:
   Drop trailing '.' from description.

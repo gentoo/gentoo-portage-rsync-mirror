@@ -3,9 +3,10 @@
 <pkgmetadata>
 <herd>gstreamer</herd>
 <longdescription lang="en">
-	GStreamer plugin for HTTP client sources via net-libs/libsoup.
+	GStreamer plugin for HTTP client source/sink via net-libs/libsoup.
 
-	Includes the following element:
+	Includes the following elements:
 	* souphttpsrc - Receive data as a client over the network via HTTP using SOUP
+	* souphttpclientsink - Sends streams to HTTP server via PUT
 </longdescription>
 </pkgmetadata>
