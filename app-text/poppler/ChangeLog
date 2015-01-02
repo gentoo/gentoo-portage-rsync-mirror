@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.437 2014/12/03 20:57:38 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.438 2015/01/02 13:44:56 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.26.5.ebuild:
+  Stable for x86, wrt bug #523164
 
   03 Dec 2014; Matthias Maier <tamiko@gentoo.org>
   +files/poppler-0.28.1-respect-cflags.patch, poppler-0.28.1.ebuild,

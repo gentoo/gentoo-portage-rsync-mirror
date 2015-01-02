@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.14.3.ebuild,v 1.3 2014/12/11 13:05:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.14.3.ebuild,v 1.4 2015/01/02 13:57:14 kensington Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
@@ -41,7 +41,7 @@ RDEPEND="
 	crash-reporter? ( $(add_kdebase_dep drkonqi ) )
 	handbook? ( || (
 		$(add_kdebase_dep khelpcenter)
-		kde-base/khelpcenter:5[compat(+)]
+		kde-plasma/khelpcenter:5[compat(+)]
 	) )
 	nepomuk? ( $(add_kdebase_dep nepomuk) )
 	!minimal? (

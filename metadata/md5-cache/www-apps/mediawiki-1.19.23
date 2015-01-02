@@ -4,11 +4,11 @@ DESCRIPTION=The MediaWiki wiki web application (as used on wikipedia.org)
 EAPI=5
 HOMEPAGE=http://www.mediawiki.org
 IUSE=imagemagick mysql postgres sqlite vhosts
-KEYWORDS=~alpha ~amd64 ~ppc ~x86
+KEYWORDS=~alpha amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/php-5.3[mysql?,postgres?,session,xml,xmlreader] imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) !imagemagick? ( dev-lang/php[gd] ) sqlite? ( dev-db/sqlite:3[fts3(+)] >=dev-lang/php-5.3[pdo] || ( dev-lang/php[sqlite] dev-lang/php[sqlite3] ) ) virtual/httpd-php >=app-admin/webapp-config-1.50.15
 RESTRICT=test
 SLOT=1.19.23
 SRC_URI=http://releases.wikimedia.org/mediawiki/1.19/mediawiki-1.19.23.tar.gz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=ad99b0f8fb63e36af1bf362324df944d
+_md5_=6adc08d48afaa8b16e574fca2d7731d9
