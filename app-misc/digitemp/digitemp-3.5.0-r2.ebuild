@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.5.0-r2.ebuild,v 1.3 2014/12/22 22:05:29 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.5.0-r2.ebuild,v 1.4 2015/01/02 18:20:48 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.digitemp.com/software/linux/${P}.tar.gz"
 IUSE="ds9097 ds9097u ds2490"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="ds2490? ( virtual/libusb:0 )"
 

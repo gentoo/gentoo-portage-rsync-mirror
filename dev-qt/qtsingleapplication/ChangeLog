@@ -1,6 +1,13 @@
 # ChangeLog for dev-qt/qtsingleapplication
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.8 2014/07/14 11:53:59 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.9 2015/01/02 18:17:33 kensington Exp $
+
+*qtsingleapplication-2.6.1_p20130904-r2 (02 Jan 2015)
+
+  02 Jan 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/qtsingleapplication5.prf,
+  +qtsingleapplication-2.6.1_p20130904-r2.ebuild:
+  Add Qt 5 support wrt bug #534304.
 
   14 Jul 2014; Davide Pesavento <pesa@gentoo.org>
   qtsingleapplication-2.6.1_p20130904-r1.ebuild:
