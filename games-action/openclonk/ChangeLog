@@ -1,6 +1,11 @@
 # ChangeLog for games-action/openclonk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.19 2014/11/25 23:05:01 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.20 2015/01/02 17:19:01 tupone Exp $
+
+  02 Jan 2015; Tupone Alfredo <tupone@gentoo.org> openclonk-5.3.3-r1.ebuild,
+  openclonk-5.5.1.ebuild, +files/openclonk-5.3.3-jpeg9.patch,
+  +files/openclonk-5.5.1-jpeg9.patch:
+  Build with jpeg-9 Bug #520884 by flameeyes@gentoo.org
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

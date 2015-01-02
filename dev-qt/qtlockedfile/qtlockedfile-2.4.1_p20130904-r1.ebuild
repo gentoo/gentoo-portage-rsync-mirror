@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r1.ebuild,v 1.1 2015/01/02 16:51:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r1.ebuild,v 1.2 2015/01/02 17:23:06 kensington Exp $
 
 EAPI=5
 
@@ -50,10 +50,10 @@ src_prepare() {
 src_configure() {
 	myconfigure() {
 		if [[ ${MULTIBUILD_VARIANT} = qt4 ]] ; then
-			eqmake4 buildlib/buildlib.pro
+			eqmake4
 		fi
 		if [[ ${MULTIBUILD_VARIANT} = qt5 ]] ; then
-			eqmake5 buildlib/buildlib.pro
+			eqmake5
 		fi
 	}
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.5.1.ebuild,v 1.1 2014/10/10 19:18:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/openclonk-5.5.1.ebuild,v 1.2 2015/01/02 17:19:01 tupone Exp $
 
 # FIXME: does not compile with gtk+3
 
@@ -56,6 +56,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${P}-tinyxml-shared.patch
 	"${FILESDIR}"/${P}-paths.patch
+	"${FILESDIR}"/${P}-jpeg9.patch
 )
 S=${WORKDIR}/${PN}-release-${PV}-src
 
