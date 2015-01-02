@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.47 2015/01/01 21:23:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.48 2015/01/02 09:35:02 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -112,7 +112,7 @@ fi
 
 if [[ -n "${CABAL_USE_HOOGLE}" ]]; then
 	# enabled only in ::gentoo-haskell
-	:
+	CABAL_USE_HOOGLE=
 fi
 
 if [[ -n "${CABAL_USE_ALEX}" ]]; then

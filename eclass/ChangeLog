@@ -1,6 +1,6 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1494 2015/01/02 00:15:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1495 2015/01/02 09:35:02 slyfox Exp $
 
   02 Jan 2015; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Make python.eclass commands/variables fatal once again since all in-tree
@@ -9,6 +9,9 @@
   02 Jan 2015; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Add progress overlay-specific commands and variables to the invalid
   command/variable lists.
+
+  02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
+  Properly disable USE=hoogle.
 
   01 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
   haskell-cabal.eclass:
