@@ -1,7 +1,7 @@
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=configure install prepare
 DEPEND=x11-libs/gtk+:2 dev-libs/glib:2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=window manager selector tool
-EAPI=1
+EAPI=5
 HOMEPAGE=http://ordiluc.net/selectwm
 IUSE=nls
 KEYWORDS=amd64 ppc sparc x86 ~x86-fbsd
@@ -10,4 +10,4 @@ RDEPEND=x11-libs/gtk+:2 dev-libs/glib:2
 SLOT=2
 SRC_URI=http://ordiluc.net/selectwm/selectwm-0.4.1.tar.bz2
 _eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2f9867e2d3eff752acd6f85632dbdaac
+_md5_=656d075a94c052f58a8e4e5d153300de

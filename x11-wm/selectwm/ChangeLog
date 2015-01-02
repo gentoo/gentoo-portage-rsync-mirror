@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/selectwm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.26 2013/10/19 15:29:36 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/selectwm/ChangeLog,v 1.27 2015/01/02 21:32:06 mrueg Exp $
+
+  02 Jan 2015; Manuel Rüger <mrueg@gentoo.org> selectwm-0.4.1.ebuild:
+  Bump to EAPI 5
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal
