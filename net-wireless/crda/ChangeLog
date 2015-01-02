@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.64 2015/01/01 11:17:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.65 2015/01/02 12:21:24 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> crda-1.1.3-r1.ebuild:
+  Stable for sparc, wrt bug #529514
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> crda-1.1.3-r1.ebuild:
   Stable for ppc64, wrt bug #529514

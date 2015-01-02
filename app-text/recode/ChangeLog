@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.105 2015/01/01 11:11:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.106 2015/01/02 12:18:33 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> recode-3.6_p20-r1.ebuild:
+  Stable for sparc, wrt bug #525964
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> recode-3.6_p20-r1.ebuild:
   Stable for ppc64, wrt bug #525964

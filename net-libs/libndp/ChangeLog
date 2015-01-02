@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libndp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libndp/ChangeLog,v 1.9 2015/01/01 21:10:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libndp/ChangeLog,v 1.10 2015/01/02 12:10:28 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libndp-1.4.ebuild:
+  Stable for alpha, wrt bug #529964
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> libndp-1.4.ebuild:
   arm stable, bug #529964

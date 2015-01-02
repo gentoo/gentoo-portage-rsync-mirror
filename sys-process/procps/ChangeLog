@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.132 2015/01/01 21:18:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.133 2015/01/02 12:16:54 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> procps-3.3.9-r2.ebuild:
+  Stable for sparc, wrt bug #525060
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> procps-3.3.9-r2.ebuild:
   arm stable, bug #525060

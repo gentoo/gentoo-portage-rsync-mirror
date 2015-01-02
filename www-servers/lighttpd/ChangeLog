@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.342 2015/01/01 11:07:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.343 2015/01/02 12:14:55 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.35-r1.ebuild:
+  Stable for sparc, wrt bug #516842
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.35-r1.ebuild:
   Stable for ppc64, wrt bug #516842

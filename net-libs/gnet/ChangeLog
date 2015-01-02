@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.89 2015/01/01 08:41:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/ChangeLog,v 1.90 2015/01/02 12:10:25 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gnet-2.0.8-r2.ebuild:
+  Stable for alpha, wrt bug #529964
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gnet-2.0.8-r2.ebuild:
   Stable for sparc, wrt bug #529964

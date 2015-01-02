@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.189 2014/12/23 16:00:42 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.190 2015/01/02 12:22:58 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pytz-2014.9.ebuild:
+  Stable for sparc, wrt bug #530384
 
   23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pytz-2014.9.ebuild:
   Stable for alpha, wrt bug #530384

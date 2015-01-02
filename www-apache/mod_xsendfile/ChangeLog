@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_xsendfile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xsendfile/ChangeLog,v 1.12 2014/12/28 12:03:47 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xsendfile/ChangeLog,v 1.14 2015/01/02 12:22:38 pacho Exp $
+
+  02 Jan 2015; Pacho Ramos <pacho@gentoo.org> -mod_xsendfile-0.12.ebuild,
+  -mod_xsendfile-0.9.ebuild:
+  Drop old
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mod_xsendfile-1.0_beta1.ebuild:
+  Stable for sparc, wrt bug #523010
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mod_xsendfile-1.0_beta1.ebuild:
   Stable for x86, wrt bug #523010

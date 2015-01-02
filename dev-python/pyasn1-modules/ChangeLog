@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1-modules
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.40 2014/12/23 16:03:43 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.41 2015/01/02 12:29:31 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pyasn1-modules-0.0.5-r1.ebuild:
+  Stable for sparc, wrt bug #531088
 
   23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pyasn1-modules-0.0.5-r1.ebuild:
   Stable for alpha, wrt bug #531088

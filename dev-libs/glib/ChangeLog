@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.634 2015/01/01 20:59:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.635 2015/01/02 12:08:50 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> glib-2.40.2.ebuild:
+  Stable for alpha, wrt bug #529964
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> glib-2.40.2.ebuild:
   arm stable, bug #529964

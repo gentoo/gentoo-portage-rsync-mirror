@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.107 2015/01/01 20:59:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.108 2015/01/02 12:09:10 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gdbus-codegen-2.40.2.ebuild:
+  Stable for alpha, wrt bug #529964
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> gdbus-codegen-2.40.2.ebuild:
   arm stable, bug #529964

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libbonobo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.210 2015/01/01 21:16:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.211 2015/01/02 12:09:41 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libbonobo-2.24.3-r1.ebuild:
+  Stable for alpha, wrt bug #529964
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> libbonobo-2.24.3-r1.ebuild:
   arm stable, bug #529964

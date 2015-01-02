@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.53 2014/12/26 13:18:39 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.54 2015/01/02 12:22:30 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pyenchant-1.6.6.ebuild:
+  Stable for sparc, wrt bug #530302
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pyenchant-1.6.6.ebuild:
   Stable for x86, wrt bug #530302

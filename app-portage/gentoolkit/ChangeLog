@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.323 2014/12/31 16:02:54 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.324 2015/01/02 12:21:47 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gentoolkit-0.3.0.9-r2.ebuild:
+  Stable for sparc, wrt bug #530264
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gentoolkit-0.3.0.9-r2.ebuild:
   Stable for ppc, wrt bug #530264

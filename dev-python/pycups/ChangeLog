@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.89 2015/01/01 11:23:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.90 2015/01/02 12:29:07 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pycups-1.9.68.ebuild:
+  Stable for sparc, wrt bug #530908
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pycups-1.9.68.ebuild:
   Stable for ppc64, wrt bug #530908

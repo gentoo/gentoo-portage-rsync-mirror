@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/mm-common
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.35 2015/01/01 20:55:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.36 2015/01/02 12:08:22 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mm-common-0.9.7.ebuild:
+  Stable for alpha, wrt bug #529964
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> mm-common-0.9.7.ebuild:
   arm stable, bug #529964

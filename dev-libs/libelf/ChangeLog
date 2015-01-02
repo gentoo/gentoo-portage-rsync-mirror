@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libelf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.49 2014/12/26 13:16:25 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.50 2015/01/02 12:17:38 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libelf-0.8.13-r2.ebuild:
+  Stable for sparc, wrt bug #525746
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libelf-0.8.13-r2.ebuild:
   Stable for x86, wrt bug #525746

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcddb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.69 2015/01/01 11:13:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/ChangeLog,v 1.70 2015/01/02 12:20:04 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libcddb-1.3.2-r1.ebuild:
+  Stable for sparc, wrt bug #526052
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libcddb-1.3.2-r1.ebuild:
   Stable for ppc64, wrt bug #526052
