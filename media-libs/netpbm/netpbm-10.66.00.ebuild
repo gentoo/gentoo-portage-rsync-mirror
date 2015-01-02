@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.2 2014/06/16 00:15:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.3 2015/01/02 09:13:11 vapier Exp $
 
 EAPI="4"
 
@@ -71,7 +71,7 @@ src_prepare() {
 
 	# disable certain tests based on active USE flags
 	local del=(
-		$(usex jbig '' 'jbigtopnm pnmtojbig')
+		$(usex jbig '' 'jbigtopnm pnmtojbig jbig-roundtrip')
 		$(usex rle '' 'utahrle-roundtrip')
 	)
 	if [[ ${#del[@]} -gt 0 ]] ; then

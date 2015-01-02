@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.276 2014/07/04 08:25:11 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.277 2015/01/02 09:13:11 vapier Exp $
+
+  02 Jan 2015; Mike Frysinger <vapier@gentoo.org> netpbm-10.66.00.ebuild:
+  Do not run jbig-roundtrip test when USE=-jbig #532350 by eroen.
 
   04 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/netpbm-10.61-test.patch, -netpbm-10.61.00.ebuild:
