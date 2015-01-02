@@ -7,4 +7,11 @@
 	<name>Angelo Arrifano</name>
 	<description>Regular ebuild maintenance, bugs and stuff..</description>
 </maintainer>
+<longdescription lang="en">
+	GStreamer plugin for JACK audio elements
+
+	Includes the following elements:
+	* jackaudiosink - Output audio to a JACK server
+	* jackaudiosrc - Captures audio from a JACK server
+</longdescription>
 </pkgmetadata>
