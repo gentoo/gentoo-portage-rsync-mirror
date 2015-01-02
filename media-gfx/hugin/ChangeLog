@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.155 2014/12/22 10:09:17 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.156 2015/01/02 18:36:29 maekke Exp $
+
+  02 Jan 2015; Markus Meier <maekke@gentoo.org> hugin-2014.0.0.ebuild,
+  hugin-2014.0.0-r1.ebuild, +files/hugin-2014.0.0-ParseExp.patch:
+  fix building with dev-libs/boost-1.56, bug #525400
 
   22 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> hugin-2014.0.0.ebuild:
   Stable on amd64 and x86, wrt bug #528330

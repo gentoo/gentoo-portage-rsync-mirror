@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/digitemp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.25 2015/01/02 18:20:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.26 2015/01/02 18:33:54 mrueg Exp $
+
+  02 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -digitemp-3.5.0-r1.ebuild:
+  Remove EAPI1 version.
 
   02 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> digitemp-3.5.0-r2.ebuild:
   x86 stable wrt bug #530008
