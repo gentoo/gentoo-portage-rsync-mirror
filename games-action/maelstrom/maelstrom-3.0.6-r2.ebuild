@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r2.ebuild,v 1.6 2014/07/18 14:23:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r2.ebuild,v 1.7 2015/01/02 15:51:08 tupone Exp $
 
 EAPI=5
 inherit autotools eutils games
@@ -36,6 +36,8 @@ src_prepare() {
 	# Install the high scores file in ${GAMES_STATEDIR}
 	sed -i \
 		-e "s:path.Path(MAELSTROM_SCORES):\"${GAMES_STATEDIR}/\"MAELSTROM_SCORES:" scores.cpp || die
+	mv configure.{in,ac}
+	rm aclocal.m4 acinclude.m4
 	eautoreconf
 }
 

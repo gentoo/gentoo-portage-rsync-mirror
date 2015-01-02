@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.197 2014/12/10 15:06:40 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.198 2015/01/02 15:52:28 blueness Exp $
+
+*stunnel-5.09 (02 Jan 2015)
+
+  02 Jan 2015; Anthony G. Basile <blueness@gentoo.org> +stunnel-5.09.ebuild:
+  Version bump
 
   10 Dec 2014; Anthony G. Basile <blueness@gentoo.org> -stunnel-5.02.ebuild,
   -stunnel-5.03.ebuild, -stunnel-5.04.ebuild, -stunnel-5.05.ebuild:
