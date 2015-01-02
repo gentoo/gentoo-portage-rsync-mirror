@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-what
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.14 2014/12/31 16:26:59 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-what/ChangeLog,v 1.15 2015/01/02 12:41:05 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> virt-what-1.12.ebuild:
+  Stable for sparc, wrt bug #533588
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> virt-what-1.12.ebuild:
   Stable for ppc, wrt bug #533588

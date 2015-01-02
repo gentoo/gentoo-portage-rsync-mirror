@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.93 2014/12/31 16:15:26 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.94 2015/01/02 12:33:09 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mg-20141007.ebuild:
+  Stable for sparc, wrt bug #531810
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mg-20141007.ebuild:
   Stable for ppc, wrt bug #531810

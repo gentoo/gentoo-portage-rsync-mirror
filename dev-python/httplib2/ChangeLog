@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/httplib2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.53 2014/12/23 16:04:00 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.54 2015/01/02 12:31:20 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> httplib2-0.8.ebuild:
+  Stable for sparc, wrt bug #531502
 
   23 Dec 2014; Agostino Sarubbo <ago@gentoo.org> httplib2-0.8.ebuild:
   Stable for alpha, wrt bug #531502

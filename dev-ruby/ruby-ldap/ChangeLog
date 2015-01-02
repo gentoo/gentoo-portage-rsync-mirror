@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.72 2015/01/01 09:53:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.73 2015/01/02 12:42:01 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ruby-ldap-0.9.16-r1.ebuild:
+  Stable for sparc, wrt bug #533592
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ruby-ldap-0.9.16-r1.ebuild:
   Stable for ia64, wrt bug #533592

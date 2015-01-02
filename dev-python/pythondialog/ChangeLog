@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pythondialog
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.26 2014/12/31 16:21:08 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.27 2015/01/02 12:36:45 ago Exp $
+
+  02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pythondialog-3.2.0.ebuild:
+  Stable for sparc, wrt bug #532648
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pythondialog-3.2.0.ebuild:
   Stable for ppc, wrt bug #532648
