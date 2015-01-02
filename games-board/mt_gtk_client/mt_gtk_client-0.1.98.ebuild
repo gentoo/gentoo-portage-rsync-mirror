@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/mt_gtk_client-0.1.98.ebuild,v 1.9 2012/03/26 07:34:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_gtk_client/mt_gtk_client-0.1.98.ebuild,v 1.10 2015/01/02 17:43:24 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 DESCRIPTION="client for the french tarot game maitretarot"
@@ -28,10 +28,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	if [[ -d "${D}"/${GAMES_DATADIR}/locale ]] ; then
 		mv "${D}"/${GAMES_DATADIR}/locale "${D}"/usr/share/ || die
 	fi
-	dodoc AUTHORS ChangeLog NEWS README TODO
 	prepgamesdirs
 }
