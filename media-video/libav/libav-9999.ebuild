@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.75 2014/12/02 13:36:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.76 2015/01/02 19:07:38 lu_zero Exp $
 
 EAPI=5
 
@@ -318,7 +318,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	dodoc Changelog README INSTALL
+	dodoc Changelog README.md INSTALL
 }
 
 multilib_src_test() {

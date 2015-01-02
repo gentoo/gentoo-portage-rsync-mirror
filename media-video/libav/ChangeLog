@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.235 2014/12/26 09:18:41 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.236 2015/01/02 19:07:38 lu_zero Exp $
+
+  02 Jan 2015; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Minor doc change
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libav-9.17.ebuild:
   Stable for sparc, wrt bug #531832

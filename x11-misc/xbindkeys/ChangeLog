@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xbindkeys
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.68 2015/01/02 12:23:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.69 2015/01/02 19:18:57 jer Exp $
+
+  02 Jan 2015; Jeroen Roovers <jer@gentoo.org> -xbindkeys-1.8.4.ebuild,
+  -xbindkeys-1.8.5.ebuild:
+  Old.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xbindkeys-1.8.6.ebuild:
   Stable for sparc, wrt bug #530444
