@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.45 2015/01/02 12:31:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.46 2015/01/02 16:01:28 zlogene Exp $
+
+  02 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> myspell-de-2013.12.06.ebuild:
+  alpha stable wrt bug #531550
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> myspell-de-2013.12.06.ebuild:
   Stable for sparc, wrt bug #531550
