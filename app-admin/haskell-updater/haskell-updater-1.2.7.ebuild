@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.7.ebuild,v 1.1 2015/01/02 13:59:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/haskell-updater-1.2.7.ebuild,v 1.2 2015/01/02 20:58:55 slyfox Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.12.1"

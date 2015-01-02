@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-metasploit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/ChangeLog,v 1.8 2014/10/09 03:29:11 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-metasploit/ChangeLog,v 1.9 2015/01/02 20:48:31 zerochaos Exp $
+
+*eselect-metasploit-0.16 (02 Jan 2015)
+
+  02 Jan 2015;  <zero@gentoo.org> +eselect-metasploit-0.16.ebuild,
+  +files/msfloader-0.16, -eselect-metasploit-0.15.ebuild, -files/msfloader-0.15:
+  fix loader script to use desired version of ruby
 
 *eselect-metasploit-0.15 (09 Oct 2014)
 
