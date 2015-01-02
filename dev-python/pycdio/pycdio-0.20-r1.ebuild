@@ -1,14 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/pycdio-0.20.ebuild,v 1.1 2013/09/18 06:05:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdio/pycdio-0.20-r1.ebuild,v 1.1 2015/01/02 04:32:08 idella4 Exp $
 
 EAPI=5
-PYTHON_DEPEND=2
-SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS="3.* *-jython"
-DISTUTILS_SRC_TEST=nosetests
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Python OO interface to libcdio (CD Input and Control library)"
 HOMEPAGE="http://savannah.gnu.org/projects/libcdio/ http://pypi.python.org/pypi/pycdio"
@@ -22,18 +19,13 @@ IUSE="examples"
 RDEPEND=">=dev-libs/libcdio-0.90"
 DEPEND="${RDEPEND}
 	dev-lang/swig
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
-PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
-
-DOCS=README.txt
-PYTHON_MODNAME="cdio.py iso9660.py pycdio.py pyiso9660.py"
+CFLAGS="${CFLAGS} -fno-strict-aliasing"
 
 RESTRICT="test"  # currently tests fail
 
-src_prepare() {
-	distutils_src_prepare
-
+python_prepare_all() {
 	# Remove obsolete sys.path and adjust 'data' paths in examples.
 	sed -i \
 		-e "s:^sys.path.insert.*::" \
@@ -43,14 +35,10 @@ src_prepare() {
 	# Disable failing tests.
 	sed -i -e "s/test_get_set/_&/" test/test-cdtext.py || die
 	sed -i -e "s/test_fs/_&/" test/test-isocopy.py || die
+	distutils-r1_python_prepare_all
 }
 
-src_install(){
-	distutils_src_install
-
-	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins example/{README,*.py}
-		doins -r data
-	fi
+python_install_all(){
+	use examples && local EXAMPLES=( example/. )
+	distutils-r1_python_install_all
 }

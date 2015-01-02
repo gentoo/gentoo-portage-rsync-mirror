@@ -8,6 +8,8 @@
 	Includes the following elements:
 	* jpegdec - Decode images from JPEG format
 	* jpegenc - Encode images in JPEG format
+
+	In 0.10 only (deprecated):
 	* smokedec - Decode video from Smoke format
 	* smokeenc - Encode images into the Smoke format
 
