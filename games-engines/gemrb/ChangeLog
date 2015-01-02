@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/gemrb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.38 2014/08/25 20:56:32 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gemrb/ChangeLog,v 1.39 2015/01/02 05:10:48 mr_bones_ Exp $
+
+*gemrb-0.8.2 (02 Jan 2015)
+
+  02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> +gemrb-0.8.2.ebuild:
+  version bump
 
   25 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -gemrb-0.8.0.1.ebuild:
   old
