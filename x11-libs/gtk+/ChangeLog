@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.752 2015/01/01 21:14:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.753 2015/01/02 11:53:03 pacho Exp $
+
+*gtk+-3.12.2-r2 (02 Jan 2015)
+
+  02 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gtk+-3.12.2-builtin-icon.patch, +gtk+-3.12.2-r2.ebuild,
+  gtk+-3.14.6.ebuild:
+  Include image data in the builtin icon cache (#518352 by Leho Kraav, Rafał
+  Mużyło and more), newer gdbus-codegen needed (#500216 by Vladimir Dolzhenko),
+  unset DISPLAY to make tests work in more environments (#527682 by Gangræna
+  Gorgeous, Mark Wright and Alexander Tsoy).
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> gtk+-2.24.25.ebuild:
   arm stable, bug #529964

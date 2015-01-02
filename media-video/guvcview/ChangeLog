@@ -1,6 +1,9 @@
 # ChangeLog for media-video/guvcview
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.43 2014/12/07 20:32:26 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.44 2015/01/02 11:47:55 pacho Exp $
+
+  02 Jan 2015; Pacho Ramos <pacho@gentoo.org> guvcview-2.0.1.ebuild:
+  Newer gtk+ is needed (#532596 by Uros)
 
   07 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org> guvcview-2.0.1.ebuild:
   Depend on libsdl2 instead of libsdl1, bug #531922.

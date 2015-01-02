@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.6.ebuild,v 1.4 2015/01/02 11:53:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.12.2-r2.ebuild,v 1.1 2015/01/02 11:53:03 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -30,13 +30,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
 # Use gtk+:2 for gtk-update-icon-cache
 COMMON_DEPEND="
-	>=dev-libs/atk-2.12[introspection?,${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.41.2:2[${MULTILIB_USEDEP}]
+	>=dev-libs/atk-2.7.5[introspection?,${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.39.5:2[${MULTILIB_USEDEP}]
 	media-libs/fontconfig[${MULTILIB_USEDEP}]
 	>=x11-libs/cairo-1.12[aqua?,glib,svg,X?,${MULTILIB_USEDEP}]
-	>=x11-libs/gdk-pixbuf-2.30:2[introspection?,X?,${MULTILIB_USEDEP}]
+	>=x11-libs/gdk-pixbuf-2.27.1:2[introspection?,X?,${MULTILIB_USEDEP}]
 	>=x11-libs/gtk+-2.24:2[${MULTILIB_USEDEP}]
-	>=x11-libs/pango-1.36.7[introspection?,${MULTILIB_USEDEP}]
+	>=x11-libs/pango-1.32.4[introspection?,${MULTILIB_USEDEP}]
 	x11-misc/shared-mime-info
 
 	cloudprint? (
@@ -46,7 +46,7 @@ COMMON_DEPEND="
 	cups? ( >=net-print/cups-1.2[${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1.39 )
 	wayland? (
-		>=dev-libs/wayland-1.5.91[${MULTILIB_USEDEP}]
+		>=dev-libs/wayland-1.3.90[${MULTILIB_USEDEP}]
 		media-libs/mesa[wayland,${MULTILIB_USEDEP}]
 		>=x11-libs/libxkbcommon-0.2[${MULTILIB_USEDEP}]
 	)
@@ -68,7 +68,6 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	app-text/docbook-xml-dtd:4.1.2
 	dev-libs/libxslt
-	dev-libs/gobject-introspection-common
 	>=dev-util/gdbus-codegen-2.38.2
 	>=dev-util/gtk-doc-am-1.20
 	sys-devel/gettext
@@ -91,7 +90,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!<gnome-base/gail-1000
 	!<x11-libs/vte-0.31.0:2.90
-	>=x11-themes/adwaita-icon-theme-3.14
 	X? ( !<x11-base/xorg-server-1.11.4 )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-gtklibs-20140508-r3
@@ -114,26 +112,32 @@ strip_builddir() {
 }
 
 src_prepare() {
-	# see bug #525928
-	epatch "${FILESDIR}"/${PN}-non-bash-support.patch
-
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
 	strip-flags
 
+	# Build fix on Darwin 10.6; bug #519058
+	epatch "${FILESDIR}/${P}-darwin10.6.patch"
+
+	# Include image data in the builtin icon cache, needs --enable-gtk2-dependency
+	# and, then, upstream reverted this patch lately. Fixed in 3.14.x, bug #518352
+	epatch "${FILESDIR}/${PN}-3.12.2-builtin-icon.patch"
+
 	if ! use test ; then
 		# don't waste time building tests
-		strip_builddir SRC_SUBDIRS testsuite Makefile.{am,in}
-		strip_builddir SRC_SUBDIRS tests Makefile.{am,in}
+		strip_builddir SRC_SUBDIRS testsuite Makefile.am
+		strip_builddir SRC_SUBDIRS testsuite Makefile.in
+		strip_builddir SRC_SUBDIRS tests Makefile.am
+		strip_builddir SRC_SUBDIRS tests Makefile.in
 	fi
 
 	if ! use examples; then
 		# don't waste time building demos
-		strip_builddir SRC_SUBDIRS demos Makefile.{am,in}
-		strip_builddir SRC_SUBDIRS examples Makefile.{am,in}
+		strip_builddir SRC_SUBDIRS demos Makefile.am
+		strip_builddir SRC_SUBDIRS demos Makefile.in
+		strip_builddir SRC_SUBDIRS examples Makefile.am
+		strip_builddir SRC_SUBDIRS examples Makefile.in
 	fi
-
-	epatch_user
 
 	eautoreconf
 	gnome2_src_prepare
@@ -201,7 +205,7 @@ multilib_src_install() {
 	if use aqua ; then
 		for i in gtk+-3.0.pc gtk+-quartz-3.0.pc gtk+-unix-print-3.0.pc; do
 			sed -e "s:Libs\: :Libs\: -framework Carbon :" \
-				-i "${ED%/}"/usr/$(get_libdir)/pkgconfig/$i || die "sed failed"
+				-i "${ED}"usr/$(get_libdir)/pkgconfig/$i || die "sed failed"
 		done
 	fi
 }
@@ -217,7 +221,7 @@ pkg_preinst() {
 	gnome2_pkg_preinst
 
 	multilib_pkg_preinst() {
-		# Make immodules.cache belongs to gtk+ alone
+		# Make sure loaders.cache belongs to gdk-pixbuf alone
 		local cache="usr/$(get_libdir)/gtk-3.0/3.0.0/immodules.cache"
 
 		if [[ -e ${EROOT}${cache} ]]; then
@@ -231,12 +235,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-
-	multilib_pkg_postinst() {
-		gnome2_query_immodules_gtk3 \
-			|| die "Update immodules cache failed (for ${ABI})"
-	}
-	multilib_parallel_foreach_abi multilib_pkg_postinst
+	gnome2_query_immodules_gtk3
 
 	if ! has_version "app-text/evince"; then
 		elog "Please install app-text/evince for print preview functionality."

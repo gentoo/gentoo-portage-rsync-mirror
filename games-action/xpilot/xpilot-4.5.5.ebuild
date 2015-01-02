@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.5.ebuild,v 1.3 2010/06/21 20:13:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.5.ebuild,v 1.4 2015/01/02 11:54:54 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="A multi-player 2D client/server space game"
@@ -34,15 +34,15 @@ src_prepare() {
 
 src_compile() {
 	xmkmf || die "xmkmf failed"
-	emake Makefiles || die "emake Makefiles failed"
-	emake includes || die "emake includes failed"
-	emake depend || die "emake depend failed"
-	emake CC="${CC}" CDEBUGFLAGS="${CFLAGS} ${LDFLAGS}" || die "emake failed"
+	emake Makefiles
+	emake includes
+	emake depend
+	emake CC="${CC}" CDEBUGFLAGS="${CFLAGS} ${LDFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	emake DESTDIR="${D}" install.man || die "emake install.man failed"
+	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install.man
 	newicon lib/textures/logo.ppm ${PN}.ppm
 	make_desktop_entry ${PN} XPilot /usr/share/pixmaps/${PN}.ppm
 	dodoc README.txt doc/{ChangeLog,CREDITS,FAQ,README*,TODO}

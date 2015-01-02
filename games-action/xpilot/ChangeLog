@@ -1,6 +1,9 @@
 # ChangeLog for games-action/xpilot
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/ChangeLog,v 1.12 2010/06/21 20:13:52 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/ChangeLog,v 1.13 2015/01/02 11:54:54 tupone Exp $
+
+  02 Jan 2015; Tupone Alfredo <tupone@gentoo.org> xpilot-4.5.5.ebuild:
+  EAPI 4
 
   21 Jun 2010; Markus Meier <maekke@gentoo.org> xpilot-4.5.5.ebuild:
   amd64/x86 stable, bug #323121

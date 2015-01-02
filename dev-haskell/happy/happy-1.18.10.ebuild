@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.18.10.ebuild,v 1.9 2013/03/31 10:03:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.18.10.ebuild,v 1.10 2015/01/02 11:38:54 slyfox Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.2.3
 		>=dev-haskell/mtl-1.0
-		>=dev-lang/ghc-6.8.2
+		>=dev-lang/ghc-6.8.2 <dev-lang/ghc-7.8
 		doc? (  ~app-text/docbook-xml-dtd-4.2
 				app-text/docbook-xsl-stylesheets )"
 
