@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1-r1.ebuild,v 1.2 2014/11/02 10:10:01 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1-r2.ebuild,v 1.1 2015/01/01 23:31:50 mgorny Exp $
 
 EAPI=5
 
@@ -97,6 +97,7 @@ src_configure() {
 
 src_install() {
 	default
+	python_optimize
 
 	dobin "${FILESDIR}/3.0/distcc-config"
 
@@ -164,7 +165,6 @@ pkg_postinst() {
 		fi
 	fi
 
-	python_mod_optimize include_server
 	use gnome && fdo-mime_desktop_database_update
 
 	elog
@@ -200,6 +200,5 @@ pkg_postrm() {
 		rmdir "${EPREFIX}${DCCC_PATH}"
 	fi
 
-	python_mod_cleanup include_server
 	use gnome && fdo-mime_desktop_database_update
 }

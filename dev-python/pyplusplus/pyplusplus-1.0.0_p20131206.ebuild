@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0_p20131206.ebuild,v 1.2 2014/02/25 01:56:52 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0_p20131206.ebuild,v 1.3 2015/01/01 23:43:25 mgorny Exp $
 
 EAPI=5
 
@@ -22,27 +22,22 @@ fi
 
 LICENSE="freedist Boost-1.0"
 SLOT="0"
-IUSE="doc examples numpy"
+IUSE="examples numpy"
 
-DEPEND="doc? ( >=dev-python/epydoc-3[${PYTHON_USEDEP}] )
-	app-arch/unzip
-	numpy? ( dev-python/numpy )"
+DEPEND="app-arch/unzip
+	numpy? ( dev-python/numpy[${PYTHON_USEDEP}] )"
 RDEPEND="dev-python/pygccxml[${PYTHON_USEDEP}]"
 
 src_prepare() {
 	use numpy && epatch --binary "${FILESDIR}"/${PN}-1.0.0_p20131206-numpy.patch
-}
-
-python_compile_all() {
-	use doc && "$(PYTHON)" setup.py doc
+	distutils-r1_src_prepare
 }
 
 python_test() {
-	"$(PYTHON)" unittests/test_all.py
+	"${PYTHON}" unittests/test_all.py || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=(  docs/documentation/apidocs/. )
 	use examples && local EXAMPLES=( examples/. )
 
 	distutils-r1_python_install_all

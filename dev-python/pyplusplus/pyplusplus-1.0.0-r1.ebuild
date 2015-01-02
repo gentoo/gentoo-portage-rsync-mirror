@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0-r1.ebuild,v 1.2 2013/10/27 08:24:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0-r1.ebuild,v 1.3 2015/01/01 23:43:25 mgorny Exp $
 
 EAPI=5
 
@@ -17,20 +17,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples +indexing"
 
-DEPEND="doc? ( >=dev-python/epydoc-3[${PYTHON_USEDEP}] )
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
 RDEPEND="=dev-python/pygccxml-1.0.0[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Py++-${PV}
 
-python_compile_all() {
-	if use doc; then
-		esetup.py doc
-	fi
-}
-
 python_test() {
-	"${PYTHON}" unittests/test_all.py
+	"${PYTHON}" unittests/test_all.py || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {

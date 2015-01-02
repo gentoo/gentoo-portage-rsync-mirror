@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyplusplus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/ChangeLog,v 1.7 2014/05/03 02:02:06 heroxbd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/ChangeLog,v 1.8 2015/01/01 23:43:25 mgorny Exp $
+
+  01 Jan 2015; Michał Górny <mgorny@gentoo.org> -pyplusplus-1.0.0.ebuild,
+  pyplusplus-1.0.0-r1.ebuild, pyplusplus-1.0.0_p20131206.ebuild,
+  pyplusplus-9999.ebuild:
+  Avoid unnecessary doc-regen in the old version, remove the obsolete doc-regen
+  code in the new version. Add missing PYTHON_USEDEP. Fix running tests.
 
   03 May 2014; Benda Xu <heroxbd@gentoo.org>
   files/pyplusplus-1.0.0_p20131206-numpy.patch:
