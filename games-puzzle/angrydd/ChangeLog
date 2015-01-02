@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/angrydd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.7 2010/09/09 16:43:17 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/angrydd/ChangeLog,v 1.10 2015/01/02 07:39:22 mr_bones_ Exp $
+
+*angrydd-1.0.1-r1 (02 Jan 2015)
+
+  02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> +angrydd-1.0.1-r1.ebuild:
+  EAPI=5; use python-single-r1
 
   09 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org> angrydd-1.0.1.ebuild:
   tidy
@@ -25,4 +30,3 @@
   08 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +angrydd-1.0.1.ebuild:
   initial commit - ebuild submitted by Martin von Gagern via bug #119995
-
