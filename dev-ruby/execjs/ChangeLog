@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/execjs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.22 2014/10/15 05:44:17 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.23 2015/01/02 07:23:44 graaff Exp $
+
+  02 Jan 2015; Hans de Graaff <graaff@gentoo.org> execjs-2.2.2.ebuild:
+  Add ruby22.
 
 *execjs-2.2.2 (15 Oct 2014)
 

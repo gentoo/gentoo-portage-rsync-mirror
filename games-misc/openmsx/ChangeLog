@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/openmsx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/openmsx/ChangeLog,v 1.10 2010/10/15 13:53:56 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/openmsx/ChangeLog,v 1.11 2015/01/02 07:06:10 mr_bones_ Exp $
+
+*openmsx-0.3.1-r1 (02 Jan 2015)
+
+  02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> +openmsx-0.3.1-r1.ebuild:
+  EAPI=5; use python-any-r1
 
   15 Oct 2010; Markus Meier <maekke@gentoo.org> openmsx-0.3.1.ebuild:
   add ~arm, bug #316003
@@ -41,4 +46,3 @@
   +openmsx-0.2.1.ebuild, +metadata.xml:
   initial commit - ebuild submitted by Locke 'Wizzleby' Shinseiko (bug
   #312993)
-
