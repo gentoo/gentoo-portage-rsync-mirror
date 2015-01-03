@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.704 2015/01/03 18:44:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.705 2015/01/03 19:54:54 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> samba-4.0.23.ebuild,
+  samba-4.1.14.ebuild:
+  Use python-single-r1. Add missing PYTHON_REQUIRED_USE and PYTHON_USEDEPs. Set
+  PYTHON_REQ_USE for waf.
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> -samba-4.0.22.ebuild,
   -samba-4.1.13.ebuild:

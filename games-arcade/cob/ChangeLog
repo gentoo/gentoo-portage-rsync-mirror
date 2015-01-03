@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/cob
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.10 2009/06/18 01:31:16 nyhm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.11 2015/01/03 19:31:13 tupone Exp $
+
+  03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> cob-0.9.ebuild:
+  EAPI 5
 
   18 Jun 2009; Tristan Heaven <nyhm@gentoo.org> cob-0.9.ebuild,
   +files/cob-0.9-gcc44.patch:
