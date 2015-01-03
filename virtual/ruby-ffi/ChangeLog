@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.45 2014/12/19 13:24:00 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.46 2015/01/03 09:58:29 graaff Exp $
+
+  03 Jan 2015; Hans de Graaff <graaff@gentoo.org> -ruby-ffi-1.ebuild:
+  Cleanup.
 
   19 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ruby-ffi-2.ebuild:
   Stable for ia64, wrt bug #523186

@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.2.ebuild,v 1.12 2014/12/04 08:34:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/parted-3.2.ebuild,v 1.13 2015/01/03 09:50:51 jer Exp $
 
 EAPI=5
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -32,6 +32,9 @@ DEPEND="
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-devmapper.patch
+
+	epatch "${FILESDIR}"/${PN}-3.2-po4a-mandir.patch
+	eautoreconf
 }
 
 src_configure() {

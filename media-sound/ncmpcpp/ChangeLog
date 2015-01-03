@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ncmpcpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.98 2015/01/02 12:33:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.100 2015/01/03 09:59:39 jer Exp $
+
+  03 Jan 2015; Jeroen Roovers <jer@gentoo.org> ncmpcpp-0.6.2.ebuild,
+  ncmpcpp-9999.ebuild:
+  Depend on dev-libs/boost[threads].
+
+  03 Jan 2015; Jeroen Roovers <jer@gentoo.org> ncmpcpp-0.6.2.ebuild,
+  ncmpcpp-9999.ebuild:
+  Add sub-SLOT dependency on dev-libs/boost.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ncmpcpp-0.6.1-r1.ebuild:
   Stable for sparc, wrt bug #531892
