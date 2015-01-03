@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst postrm setup test
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
 DEPEND=>=dev-haskell/text-0.9.1.0:=[profile?] >=dev-lang/ghc-7.4.1:= dev-libs/icu:= >=dev-haskell/cabal-1.10 test? ( >=dev-haskell/hunit-1.2 >=dev-haskell/quickcheck-2.4 dev-haskell/random >=dev-haskell/test-framework-0.4 >=dev-haskell/test-framework-hunit-0.2 >=dev-haskell/test-framework-quickcheck2-0.2 ) doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
 DESCRIPTION=Bindings to the ICU library
 EAPI=5
@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-haskell/text-0.9.1.0:=[profile?] >=dev-lang/ghc-7.4.1:= dev-libs/icu:=
 SLOT=0/0.7.0.0
 SRC_URI=mirror://hackage/packages/archive/text-icu/0.7.0.0/text-icu-0.7.0.0.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	f398638b447d3821846f2e2abbc33c1b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a8724df54f89e3f0a538a162bee662b9
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	f398638b447d3821846f2e2abbc33c1b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=11c7da7f564cbed0fe67e978d2fe90d8

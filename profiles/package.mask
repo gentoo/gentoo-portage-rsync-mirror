@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16261 2015/01/02 07:26:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16262 2015/01/03 04:25:54 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (02 Jan 2015)
+# No, upstream; no longer maintained; segfaults.
+# Use games-board/teg instead.
+# masked for removal on 20150202
+games-board/xfrisk
 
 # Michael Sterrett <mr_bones_@gentoo.org> (01 Jan 2015)
 # Crazy amount of patches and no upstream anymore.
