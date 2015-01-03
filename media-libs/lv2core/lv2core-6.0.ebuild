@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2core/lv2core-6.0.ebuild,v 1.3 2015/01/03 14:54:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2core/lv2core-6.0.ebuild,v 1.4 2015/01/03 15:01:37 mgorny Exp $
 
 EAPI=4
 
@@ -18,6 +18,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="${PYTHON_DEPS}"
 RDEPEND="!<media-libs/slv2-0.4.2"
 DOCS=( "AUTHORS" "README" "NEWS" )

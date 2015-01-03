@@ -1,12 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.8-r1.ebuild,v 1.1 2014/07/22 10:36:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.8-r1.ebuild,v 1.2 2015/01/03 15:06:12 mgorny Exp $
 
 EAPI=5
 
 VALA_MIN_API_VERSION=0.16
 
 PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE='threads(+)'
 
 unset _live_inherits
 

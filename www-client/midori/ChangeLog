@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.129 2014/07/22 10:36:03 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.130 2015/01/03 15:06:12 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> midori-0.5.5.ebuild,
+  midori-0.5.8-r1.ebuild, midori-0.5.8.ebuild:
+  Add PYTHON_REQ_USE as necessary for waf.
 
 *midori-0.5.8-r1 (22 Jul 2014)
 
