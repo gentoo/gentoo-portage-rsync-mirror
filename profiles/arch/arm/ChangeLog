@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.334 2014/12/23 23:47:00 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.335 2015/01/03 14:22:39 heroxbd Exp $
+
+  03 Jan 2015; Benda Xu <heroxbd@gentoo.org> package.use.mask:
+  Mask anthy[kasumi] and scim-anthy[canna-2ch] use flags: not tested.
 
   23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
   Add mask for USE=kms for x11-wm/mutter-3.14, bug #533420.

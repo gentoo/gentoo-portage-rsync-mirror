@@ -1,6 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.233 2014/12/23 23:47:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.234 2015/01/03 14:22:39 heroxbd Exp $
+
+# Benda Xu <heroxbd@gentoo.org> (03 Jan 2015)
+# not tested
+app-i18n/anthy canna-2ch
+app-i18n/scim-anthy kasumi
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
 # New dependencies for wayland support in Gnome 3.14
