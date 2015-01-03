@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/bomns
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.9 2015/01/03 16:58:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.10 2015/01/03 18:27:47 tupone Exp $
+
+  03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> bomns-0.99.2.ebuild,
+  +files/bomns-0.99.2-fpe.patch:
+  Fix a FPE
 
   03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> bomns-0.99.2.ebuild:
   EAPI 4
