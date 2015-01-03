@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-core
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.21 2014/12/04 12:44:49 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/ChangeLog,v 1.22 2015/01/03 10:12:18 pacho Exp $
+
+  03 Jan 2015; Pacho Ramos <pacho@gentoo.org> lc-core-0.6.60.ebuild,
+  lc-core-0.6.65.ebuild, lc-core-0.6.70.ebuild, lc-core-9999.ebuild:
+  qtdbus is needed (#532774 by Toralf Förster)
 
   04 Dec 2014; Manuel Rüger <mrueg@gentoo.org> lc-core-0.6.60.ebuild,
   lc-core-0.6.65.ebuild, lc-core-0.6.70.ebuild, lc-core-9999.ebuild:

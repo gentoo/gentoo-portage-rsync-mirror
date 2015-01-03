@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-shout2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.117 2014/08/25 11:02:02 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.118 2015/01/03 10:04:32 leio Exp $
+
+*gst-plugins-shout2-1.4.5 (03 Jan 2015)
+
+  03 Jan 2015; Mart Raudsepp <leio@gentoo.org>
+  gst-plugins-shout2-0.10.31.ebuild, -gst-plugins-shout2-1.2.3.ebuild,
+  -gst-plugins-shout2-1.2.4.ebuild, +gst-plugins-shout2-1.4.5.ebuild:
+  Version bump, remove old. Clarifies documentation and various ogg handling
 
   25 Aug 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-shout2-0.10.31-r1.ebuild, gst-plugins-shout2-1.2.4-r1.ebuild:

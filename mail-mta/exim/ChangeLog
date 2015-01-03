@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.307 2014/12/30 17:44:56 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.308 2015/01/03 10:04:57 grobian Exp $
+
+  03 Jan 2015; Fabian Groffen <grobian@gentoo.org> exim-4.84.ebuild,
+  exim-4.85_rc4.ebuild:
+  Re-add CDB support, thanks to Nico Erfurth in bug #534230
 
 *exim-4.85_rc4 (30 Dec 2014)
 

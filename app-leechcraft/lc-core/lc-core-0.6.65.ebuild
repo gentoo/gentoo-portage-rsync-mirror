@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-0.6.65.ebuild,v 1.4 2014/12/04 12:44:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-0.6.65.ebuild,v 1.5 2015/01/03 10:12:18 pacho Exp $
 
 EAPI="5"
 
@@ -17,6 +17,7 @@ IUSE="debug doc +sqlite postgres +qwt"
 
 COMMON_DEPEND=">=dev-libs/boost-1.46
 	dev-qt/qtcore:4
+	dev-qt/qtdbus:4
 	dev-qt/qtdeclarative:4
 	dev-qt/qtgui:4
 	dev-qt/qtscript:4
