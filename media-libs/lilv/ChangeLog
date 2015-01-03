@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lilv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/ChangeLog,v 1.14 2014/11/02 18:48:26 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/ChangeLog,v 1.15 2015/01/03 11:50:06 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> lilv-0.18.0.ebuild,
+  lilv-0.20.0.ebuild:
+  Use python-any-r1 for waf.
 
 *lilv-0.20.0 (02 Nov 2014)
 
@@ -60,4 +64,3 @@
   07 Dec 2011; Alexis Ballier <aballier@gentoo.org> +lilv-0.5.0.ebuild,
   +files/ldconfig.patch, +metadata.xml:
   initial import, ebuild by me
-

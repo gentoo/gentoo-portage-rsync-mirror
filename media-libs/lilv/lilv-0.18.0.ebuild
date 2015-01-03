@@ -1,10 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/lilv-0.18.0.ebuild,v 1.1 2014/01/18 12:22:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lilv/lilv-0.18.0.ebuild,v 1.2 2015/01/03 11:50:06 mgorny Exp $
 
 EAPI=4
 
-inherit base waf-utils bash-completion-r1
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_REQ_USE='threads(+)'
+
+inherit base python-any-r1 waf-utils bash-completion-r1
 
 DESCRIPTION="Library to make the use of LV2 plugins as simple as possible for applications"
 HOMEPAGE="http://drobilla.net/software/lilv/"
@@ -20,6 +23,7 @@ RDEPEND="media-libs/lv2
 	>=dev-libs/serd-0.14.0
 	>=dev-libs/sord-0.12.0"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig"
 

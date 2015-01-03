@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sratom
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/ChangeLog,v 1.10 2014/11/02 18:54:41 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/ChangeLog,v 1.11 2015/01/03 11:43:55 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> sratom-0.4.6.ebuild:
+  Use python-any-r1 for waf.
 
 *sratom-0.4.6 (02 Nov 2014)
 
@@ -43,4 +46,3 @@
   22 Apr 2012; Alexis Ballier <aballier@gentoo.org> +sratom-0.2.0.ebuild,
   +files/ldconfig.patch, +metadata.xml:
   initial import, ebuild by me
-

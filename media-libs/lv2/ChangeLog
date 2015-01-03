@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lv2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.9 2014/11/02 18:53:46 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.10 2015/01/03 11:39:11 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> lv2-1.10.0.ebuild,
+  lv2-1.8.0.ebuild:
+  Use python-single-r1 for waf + installed Python script. Add missing Python
+  deps.
 
 *lv2-1.10.0 (02 Nov 2014)
 
@@ -40,4 +45,3 @@
   21 Apr 2012; Alexis Ballier <aballier@gentoo.org> +lv2-1.0.0.ebuild,
   +metadata.xml:
   initial import, ebuild by me
-

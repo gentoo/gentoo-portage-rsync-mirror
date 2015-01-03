@@ -1,10 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.8.2.ebuild,v 1.1 2014/11/02 18:22:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/suil-0.8.2.ebuild,v 1.2 2015/01/03 12:00:57 mgorny Exp $
 
 EAPI=4
 
-inherit base waf-utils
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_REQ_USE='threads(+)'
+
+inherit python-any-r1 waf-utils
 
 DESCRIPTION="Lightweight C library for loading and wrapping LV2 plugin UIs"
 HOMEPAGE="http://drobilla.net/software/suil/"

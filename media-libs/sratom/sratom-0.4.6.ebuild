@@ -1,10 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/sratom-0.4.6.ebuild,v 1.1 2014/11/02 18:54:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/sratom-0.4.6.ebuild,v 1.2 2015/01/03 11:43:55 mgorny Exp $
 
 EAPI=4
 
-inherit waf-utils
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_REQ_USE='threads(+)'
+inherit python-any-r1 waf-utils
 
 DESCRIPTION="Library for serialising LV2 atoms to/from RDF, particularly the Turtle syntax"
 HOMEPAGE="http://drobilla.net/software/sratom/"
@@ -19,6 +21,7 @@ RDEPEND=">=media-libs/lv2-1.8.1
 	>=dev-libs/serd-0.14.0
 	>=dev-libs/sord-0.12.0"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig"
 
