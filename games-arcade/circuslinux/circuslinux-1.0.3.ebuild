@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.18 2012/09/05 07:21:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/circuslinux-1.0.3.ebuild,v 1.19 2015/01/03 19:23:32 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="clone of the Atari 2600 game \"Circus Atari\""
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[mod]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -30,7 +31,7 @@ src_prepare() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	newicon data/images/${PN}-icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Circus Linux!"
 	dodoc *.txt

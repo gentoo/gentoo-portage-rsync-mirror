@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.8.ebuild,v 1.6 2012/08/24 07:01:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.8.ebuild,v 1.7 2015/01/03 19:15:43 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Super-Pang clone (destroy bouncing balloons with your grapnel)"
@@ -38,8 +38,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	default
 	newicon data/ima/icono.png ${PN}.png
 	make_desktop_entry ceferino "Don Ceferino Hazaña"
 	prepgamesdirs

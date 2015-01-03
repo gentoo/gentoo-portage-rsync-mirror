@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-44.ebuild,v 1.1 2014/12/09 22:08:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-44.ebuild,v 1.2 2015/01/03 19:24:10 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER=2.8
@@ -46,7 +46,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-odbc.patch \
 		"${FILESDIR}"/${P}-win32.patch \
 		"${FILESDIR}"/${P}-freetype.patch \
-		"${FILESDIR}"/${P}-jpeg9.patch 
+		"${FILESDIR}"/${P}-jpeg9.patch
 	eautoreconf
 }
 

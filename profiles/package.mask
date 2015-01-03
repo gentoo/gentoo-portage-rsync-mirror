@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16263 2015/01/03 09:46:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16264 2015/01/03 19:30:03 hanno Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hanno Boeck <hanno@gentoo.org> (03 Jan 2015)
+# dead upstream, masked for removal
+app-emulation/wine-doors
+
+# Hanno Boeck <hanno@gentoo.org> (03 Jan 2015)
+# Was a dependency of taxbird which has been replaced by
+# geierlein. As this requires yearly changes it's unlikely
+# it has any use for anyone. Masked for removal.
+dev-libs/libgeier
 
 # Michael Sterrett <mr_bones_@gentoo.org> (03 Jan 2015)
 # GGZ is dead (bug #404349)

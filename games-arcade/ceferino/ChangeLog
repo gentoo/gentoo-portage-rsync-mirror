@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ceferino
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.16 2012/08/24 07:01:08 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.17 2015/01/03 19:15:43 tupone Exp $
+
+  03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> ceferino-0.97.8.ebuild:
+  EAPI 5
 
   24 Aug 2012; Michael Sterrett <mr_bones_@gentoo.org> ceferino-0.97.8.ebuild:
   any mod support will do

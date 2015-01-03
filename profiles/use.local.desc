@@ -2901,7 +2901,6 @@ games-strategy/dark-oberon:fmod - Add sound support (fmod)
 games-strategy/defcon-demo:system-libs - Use system libraries instead of the ones included in the upstream distribution.
 games-strategy/freeciv:aimodules - Support for dynamically loadable AI modules (server-side)
 games-strategy/freeciv:auth - Add authentication capability via mysql, postgres or sqlite3
-games-strategy/freeciv:ggz - Add support for GGZ Gaming Zone
 games-strategy/freeciv:mapimg - Additional mag image toolkit via media-gfx/imagemagick
 games-strategy/freeciv:modpack - Build the freeciv-modpack-program to download/install mods
 games-strategy/freeciv:server - Enable server support. Disabling this will also make it impossible to start local games.

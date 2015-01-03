@@ -7,7 +7,6 @@
 			modules (server-side)</flag>
 		<flag name="auth">Add authentication capability via
 			mysql, postgres or sqlite3</flag>
-		<flag name="ggz">Add support for GGZ Gaming Zone</flag>
 		<flag name="mapimg">Additional mag image toolkit
 			via <pkg>media-gfx/imagemagick</pkg></flag>
 		<flag name="modpack">Build the freeciv-modpack-program
