@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/git-annex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.33 2014/12/16 23:08:28 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.34 2015/01/03 01:58:42 gienah Exp $
+
+*git-annex-5.20141231 (03 Jan 2015)
+
+  03 Jan 2015; Mark Wright <gienah@gentoo.org> +git-annex-5.20141231.ebuild,
+  metadata.xml:
+  Bump git-annex to 5.20141231. Which contains the fix upstreamed by ?ukasz
+  Stelmach, thanks for fixing and reporting, for Bug 533342 - dev-vcs/git-
+  annex-5.20141203 - Remote/Helper/AWS.hs:16:18: Could not find module Aws.S3
 
 *git-annex-5.20141203 (16 Dec 2014)
 
