@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/abe
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/ChangeLog,v 1.10 2009/03/04 21:28:38 mr_bones_ Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/abe/ChangeLog,v 1.11 2015/01/03 12:57:17 tupone Exp $
+
+  03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> abe-1.1.ebuild:
+  EAPI 4
 
   04 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   +files/abe-1.1-settings.patch, abe-1.1.ebuild:

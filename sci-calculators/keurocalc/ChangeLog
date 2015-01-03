@@ -1,6 +1,11 @@
 # ChangeLog for sci-calculators/keurocalc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.15 2014/08/13 15:43:19 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.16 2015/01/03 12:32:32 mrueg Exp $
+
+*keurocalc-1.2.3 (03 Jan 2015)
+
+  03 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +keurocalc-1.2.3.ebuild:
+  Version bump.
 
   13 Aug 2014; Johannes Huber <johu@gentoo.org>
   -files/keurocalc-1.2.1-desktopfile.patch,

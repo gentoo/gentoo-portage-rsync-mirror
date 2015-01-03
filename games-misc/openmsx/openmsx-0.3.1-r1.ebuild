@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/openmsx/openmsx-0.3.1-r1.ebuild,v 1.2 2015/01/02 09:20:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/openmsx/openmsx-0.3.1-r1.ebuild,v 1.3 2015/01/03 12:38:20 slyfox Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -18,6 +18,11 @@ IUSE=""
 DEPEND="${PYTHON_DEPS}"
 
 S=${WORKDIR}/${P}-source
+
+pkg_setup() {
+	python-any-r1_pkg_setup
+	games_pkg_setup
+}
 
 src_compile() {
 	emake _V= bundle || die

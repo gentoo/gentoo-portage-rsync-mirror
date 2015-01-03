@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.21-r1.ebuild,v 1.13 2014/10/11 13:38:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.21-r1.ebuild,v 1.14 2015/01/03 12:36:26 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_REQ_USE="threads(+)"
 
 inherit waf-utils multilib-minimal python-single-r1
 
