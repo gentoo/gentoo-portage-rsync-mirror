@@ -1,15 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux-standalone/amd64/make.defaults,v 1.1 2014/12/15 20:58:21 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/linux-standalone/amd64/make.defaults,v 1.2 2015/01/03 03:32:53 redlizard Exp $
 
 ARCH="amd64"
 CHOST="x86_64-pc-linux-gnu"
 # The base profile sets ACCEPT_KEYWORDS=amd64 and we don't have that in prefix.
 ACCEPT_KEYWORDS="-amd64 ~amd64-linux"
-
-# multilib build stuff, single ABI (no multilib)
-MULTILIB_ABIS="amd64"
-DEFAULT_ABI="amd64"
-ABI="amd64"
-IUSE_IMPLICIT="abi_x86_64"
-LIBDIR_amd64="lib"

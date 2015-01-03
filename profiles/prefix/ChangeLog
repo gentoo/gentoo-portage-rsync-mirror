@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.442 2014/12/28 23:19:48 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.443 2015/01/03 03:32:52 redlizard Exp $
+
+  03 Jan 2015; Ruud Koolen <redlizard@gentoo.org>
+  linux-standalone/amd64/make.defaults, linux-standalone/x86/make.defaults:
+  Switched linux-standalone profiles to the same multilib settings as default.
 
   28 Dec 2014; Christoph Junghans <ottxor@gentoo.org>
   darwin/macos/arch/x64/package.use.mask:
