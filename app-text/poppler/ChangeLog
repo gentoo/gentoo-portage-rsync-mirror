@@ -1,6 +1,11 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.439 2015/01/02 14:20:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.440 2015/01/03 11:24:17 tamiko Exp $
+
+  03 Jan 2015; Matthias Maier <tamiko@gentoo.org>
+  +files/poppler-0.28.1-fix-multilib-configuration.patch, poppler-0.28.1.ebuild,
+  poppler-0.29.0.ebuild:
+  workaround for multilib portage, fix qt library locations for 32bit variant
 
 *poppler-0.29.0 (02 Jan 2015)
 

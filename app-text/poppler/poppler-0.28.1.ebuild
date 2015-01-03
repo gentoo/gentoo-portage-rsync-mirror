@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.28.1.ebuild,v 1.2 2014/12/03 20:57:38 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.28.1.ebuild,v 1.3 2015/01/03 11:24:17 tamiko Exp $
 
 EAPI=5
 
@@ -62,7 +62,8 @@ DOCS=(AUTHORS NEWS README README-XPDF TODO)
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.26.0-qt5-dependencies.patch"
-	"${FILESDIR}/${P}-respect-cflags.patch" )
+	"${FILESDIR}/${P}-respect-cflags.patch"
+	"${FILESDIR}/${P}-fix-multilib-configuration.patch" )
 
 src_configure() {
 	local mycmakeargs=(
