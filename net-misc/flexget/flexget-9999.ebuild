@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.50 2014/09/27 16:10:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.51 2015/01/03 06:29:33 floppym Exp $
 
 EAPI=5
 
@@ -49,6 +49,7 @@ DEPEND="
 	dev-python/tmdb3[${PYTHON_USEDEP}]
 	dev-python/path-py[${PYTHON_USEDEP}]
 	>=dev-python/guessit-0.9.3[${PYTHON_USEDEP}]
+	dev-python/APScheduler[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}
 	transmission? ( dev-python/transmissionrpc[${PYTHON_USEDEP}] )

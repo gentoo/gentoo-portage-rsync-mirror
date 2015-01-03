@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/flexget
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.55 2014/09/27 16:10:31 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.56 2015/01/03 06:29:33 floppym Exp $
+
+  03 Jan 2015; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Add dependency on dev-python/APScheduler.
 
 *flexget-1.2.192 (27 Sep 2014)
 

@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/APScheduler
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/APScheduler/ChangeLog,v 1.1 2015/01/03 06:27:25 floppym Exp $
+
+*APScheduler-3.0.1 (03 Jan 2015)
+
+  03 Jan 2015; Mike Gilbert <floppym@gentoo.org> +APScheduler-3.0.1.ebuild,
+  +metadata.xml:
+  New ebuild by me, dependency of net-misc/flexget.
