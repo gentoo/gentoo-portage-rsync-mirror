@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/gio
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.26 2014/12/13 13:56:21 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.27 2015/01/03 10:32:11 gienah Exp $
+
+*gio-0.13.0.4 (03 Jan 2015)
+
+  03 Jan 2015; Mark Wright <gienah@gentoo.org>
+  +files/gio-0.13.0.4-ghc-7.10.patch, +gio-0.13.0.4.ebuild, gio-0.13.0.3.ebuild:
+  Bump gio to 0.13.0.4. Patch gio 0.13.0.3 and 0.13.0.4 for ghc 7.10, restore
+  the KEYWORDS that ghc 7.8.4 has.
 
 *gio-0.13.0.3 (13 Dec 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/gio-0.13.0.3.ebuild,v 1.2 2015/01/03 10:32:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/gio-0.13.0.4.ebuild,v 1.1 2015/01/03 10:32:11 gienah Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ EAPI=5
 
 #nocabaldep is for the fancy cabal-detection feature at build-time
 CABAL_FEATURES="lib profile haddock hoogle hscolour nocabaldep"
-inherit haskell-cabal
+inherit base haskell-cabal
 
 DESCRIPTION="Binding to the GIO"
 HOMEPAGE="http://projects.haskell.org/gtk2hs/"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrestop
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.29 2014/11/19 09:54:39 jer Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrestop/ChangeLog,v 1.30 2015/01/03 10:45:55 jer Exp $
+
+  03 Jan 2015; Jeroen Roovers <jer@gentoo.org> xrestop-0.4.ebuild:
+  Add missing DEPEND on virtual/pkgconfig (bug #534166).
 
   19 Nov 2014; Jeroen Roovers <jer@gentoo.org> xrestop-0.4.ebuild,
   +files/xrestop-0.4-tinfo.patch:
