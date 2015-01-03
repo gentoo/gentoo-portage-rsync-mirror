@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r2.ebuild,v 1.1 2014/11/03 05:32:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r2.ebuild,v 1.2 2015/01/03 02:11:28 zerochaos Exp $
 
 EAPI="4"
 
@@ -30,7 +30,8 @@ RDEPEND="sys-devel/gnuconfig
 	>=sys-devel/automake-1.13
 	dev-libs/libltdl:0"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils"
+	app-arch/xz-utils
+	sys-apps/help2man"
 [[ ${PV} == "9999" ]] && DEPEND+=" sys-apps/help2man"
 
 src_unpack() {

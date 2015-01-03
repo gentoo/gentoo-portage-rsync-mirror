@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/darcs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.57 2014/12/14 09:28:01 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.58 2015/01/03 02:28:30 gienah Exp $
+
+  03 Jan 2015; Mark Wright <gienah@gentoo.org>
+  +files/darcs-2.8.5-ghc-7.10.patch, darcs-2.8.5-r3.ebuild:
+  Patch darcs-2.8.5 for ghc 7.10
 
 *darcs-2.8.5-r3 (14 Dec 2014)
 
