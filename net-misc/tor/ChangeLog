@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.458 2015/01/02 12:40:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.459 2015/01/03 15:56:35 blueness Exp $
+
+  03 Jan 2015; Anthony G. Basile <blueness@gentoo.org> tor-0.2.6.2_alpha.ebuild:
+  Add epatch_user for testing alpha, bug #534244.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> tor-0.2.5.10-r3.ebuild:
   Stable for sparc, wrt bug #533564

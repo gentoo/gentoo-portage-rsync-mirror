@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.2_alpha.ebuild,v 1.1 2015/01/01 12:04:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.2_alpha.ebuild,v 1.2 2015/01/03 15:56:35 blueness Exp $
 
 EAPI="5"
 
@@ -37,6 +37,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.3.14_alpha-torrc.sample.patch
+	epatch_user
 }
 
 src_configure() {

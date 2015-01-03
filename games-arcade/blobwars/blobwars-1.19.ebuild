@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.6 2013/02/07 22:03:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/blobwars-1.19.ebuild,v 1.7 2015/01/03 15:36:54 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils gnome2-utils games
 
 DESCRIPTION="Platform game about a blob and his quest to rescue MIAs from an alien invader"
@@ -38,7 +38,7 @@ src_compile() {
 		USEPAK="1" \
 		DATADIR="${GAMES_DATADIR}/${PN}/" \
 		DOCDIR="/usr/share/doc/${PF}/html/" \
-		LOCALEDIR="/usr/share/locale/" || die
+		LOCALEDIR="/usr/share/locale/"
 }
 
 src_install() {
@@ -51,12 +51,11 @@ src_install() {
 		ICONDIR="/usr/share/icons/hicolor/" \
 		DESKTOPDIR="/usr/share/applications/" \
 		LOCALEDIR="/usr/share/locale/" \
-		install || die
+		install
 
 	mv -vf \
 		"${D}"/usr/share/doc/${PF}/html/{changes,hacking,porting,readme} \
 		"${D}"/usr/share/doc/${PF}/
-	prepalldocs
 
 	prepgamesdirs
 }

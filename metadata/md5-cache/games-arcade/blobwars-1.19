@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
 DEPEND=media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-ttf media-libs/sdl-image media-libs/sdl-net sys-libs/zlib virtual/libintl sys-devel/gettext >=sys-apps/sed-4
 DESCRIPTION=Platform game about a blob and his quest to rescue MIAs from an alien invader
-EAPI=2
+EAPI=4
 HOMEPAGE=http://sourceforge.net/projects/blobwars/ https://sourceforge.net/apps/mediawiki/blobwars/index.php?title=Main_Page
 KEYWORDS=amd64 x86
 LICENSE=BSD CC-BY-SA-3.0 CC-BY-3.0 GPL-2 LGPL-2.1 fairuse public-domain
@@ -9,4 +9,4 @@ RDEPEND=media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-ttf media-libs/sdl
 SLOT=0
 SRC_URI=mirror://sourceforge/blobwars/blobwars-1.19.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	games	bc8839608d26ccd57ca4f2f01c67460f	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=19b7a1e67fbb1d6df960b4cf44cae15d
+_md5_=9d726aaa546dd779c4b908641d533924
