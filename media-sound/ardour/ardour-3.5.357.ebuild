@@ -1,9 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.357.ebuild,v 1.1 2014/02/25 16:17:24 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.357.ebuild,v 1.2 2015/01/03 14:37:25 mgorny Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs flag-o-matic waf-utils
+
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE='threads(+)'
+
+inherit eutils toolchain-funcs flag-o-matic python-any-r1 waf-utils
 
 DESCRIPTION="Digital Audio Workstation"
 HOMEPAGE="http://ardour.org/"
@@ -61,6 +65,7 @@ RDEPEND="media-libs/aubio
 	)"
 
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen[dot] )"
@@ -85,7 +90,6 @@ src_prepare(){
 
 	fi
 	epatch "${FILESDIR}"/${PN}-3.5.7-syslibs.patch
-	sed 's/python/python2/' -i waf
 	sed 's/'FLAGS\'\,\ optimization_flags'/'FLAGS\'\,\ \'\''/g' -i "${S}"/wscript
 }
 

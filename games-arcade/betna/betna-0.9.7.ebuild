@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/betna/betna-0.9.7.ebuild,v 1.10 2010/09/08 15:38:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/betna/betna-0.9.7.ebuild,v 1.11 2015/01/03 14:40:57 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils games
 
 DESCRIPTION="Defend your volcano from the attacking ants by firing rocks/bullets at them"
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl[video]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -31,14 +32,14 @@ src_prepare() {
 }
 
 src_compile() {
-	emake clean || die
-	emake || die
+	emake clean
+	emake
 }
 
 src_install() {
-	dogamesbin betna || die "dogamesbin failed"
+	dogamesbin betna
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins images/* || die "doins failed"
+	doins images/*
 	newicon images/target.bmp ${PN}.bmp
 	make_desktop_entry ${PN} Betna /usr/share/pixmaps/${PN}.bmp
 	dodoc README Q\&A

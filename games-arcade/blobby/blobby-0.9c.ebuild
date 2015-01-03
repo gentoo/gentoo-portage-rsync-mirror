@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.7 2014/05/15 16:27:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/blobby-0.9c.ebuild,v 1.8 2015/01/03 14:57:41 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit cmake-utils eutils games
 
 DESCRIPTION="A beach ball game with blobs of goo"
