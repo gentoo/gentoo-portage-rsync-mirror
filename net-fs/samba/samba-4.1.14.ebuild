@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.14.ebuild,v 1.2 2015/01/03 17:28:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.14.ebuild,v 1.3 2015/01/03 18:36:21 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -70,6 +70,8 @@ CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 PATCHES=(
 	"${FILESDIR}/${PN}-4.1.14-named.conf.dlz.patch"
 	"${FILESDIR}/${PN}-4.0.19-automagic_aio_fix.patch"
+	# support libsystemd (instead of libsystemd-daemon), bug #526362
+	"${FILESDIR}/${PN}-4.1.14-libsystemd.patch"
 )
 
 WAF_BINARY="${S}/buildtools/bin/waf"
