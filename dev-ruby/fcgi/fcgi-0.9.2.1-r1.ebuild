@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fcgi/fcgi-0.9.2.1-r1.ebuild,v 1.2 2014/11/11 15:30:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fcgi/fcgi-0.9.2.1-r1.ebuild,v 1.3 2015/01/03 01:21:20 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -25,18 +25,10 @@ IUSE=""
 SLOT="0"
 
 each_ruby_configure() {
-	case ${RUBY} in
-		*ruby19|*ruby20|*ruby21)
-			${RUBY} -C ext/fcgi extconf.rb || die "extconf failed"
-			;;
-	esac
+	${RUBY} -C ext/fcgi extconf.rb || die "extconf failed"
 }
 
 each_ruby_compile() {
-	case ${RUBY} in
-		*ruby19|*ruby20|*ruby21)
-			emake V=1 -C ext/fcgi
-			cp ext/fcgi/fcgi$(get_modname) lib || die
-			;;
-	esac
+	emake V=1 -C ext/fcgi
+	cp ext/fcgi/fcgi$(get_modname) lib || die
 }

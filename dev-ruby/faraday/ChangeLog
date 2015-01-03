@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/faraday
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.23 2014/08/15 14:03:56 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.24 2015/01/03 01:16:00 mrueg Exp $
+
+  03 Jan 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/faraday-0.4.5-gentoo.patch:
+  Remove old patches.
 
   15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> faraday-0.8.8.ebuild,
   faraday-0.9.0.ebuild:

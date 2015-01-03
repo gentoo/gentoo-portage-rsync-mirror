@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rack
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.139 2014/12/24 09:38:43 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.141 2015/01/03 01:25:03 mrueg Exp $
+
+  03 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -files/rack-1.0.1-gentoo.patch,
+  -files/rack-1.1.0-gentoo.patch, -files/rack-1.4.3-tmpdir.patch:
+  Remove old patches.
+
+  03 Jan 2015; Manuel Rüger <mrueg@gentoo.org> rack-1.4.5-r3.ebuild,
+  rack-1.5.2-r4.ebuild, rack-1.6.0.ebuild:
+  Add ruby22 target.
 
   24 Dec 2014; Hans de Graaff <graaff@gentoo.org> rack-1.6.0.ebuild:
   Fix block dependency to refer to the correct slot.
