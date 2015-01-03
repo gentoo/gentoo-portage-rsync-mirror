@@ -1,11 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.3.ebuild,v 1.4 2014/12/28 15:48:56 titanofold Exp $
-
-# FIXME: gtk3 support breaks ggz support
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.4.3.ebuild,v 1.5 2015/01/03 17:49:50 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils gnome2-utils games-ggz games
+inherit eutils gnome2-utils games
 
 DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
@@ -14,7 +12,7 @@ SRC_URI="mirror://sourceforge/freeciv/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="auth aimodules dedicated ggz +gtk ipv6 mapimg modpack mysql nls postgres readline sdl +server +sound sqlite"
+IUSE="auth aimodules dedicated +gtk ipv6 mapimg modpack mysql nls postgres readline sdl +server +sound sqlite"
 
 RDEPEND="app-arch/bzip2
 	app-arch/xz-utils
@@ -31,7 +29,6 @@ RDEPEND="app-arch/bzip2
 	dedicated? ( aimodules? ( dev-libs/libltdl:0 ) )
 	!dedicated? (
 		media-libs/libpng:0
-		ggz? ( games-board/ggz-gtk-client )
 		gtk? ( x11-libs/gtk+:2 )
 		mapimg? ( media-gfx/imagemagick )
 		modpack? ( x11-libs/gtk+:2 )
@@ -109,7 +106,7 @@ src_configure() {
 			use sdl && myclient="${myclient} sdl"
 			use gtk && myclient="${myclient} gtk2"
 		fi
-		myopts="$(use_enable server) $(use_with ggz ggz-client)"
+		myopts="$(use_enable server) --without-ggz-client"
 	fi
 
 	# disabling shared libs will break aimodules USE flag
@@ -121,8 +118,6 @@ src_configure() {
 		--enable-aimodules="$(usex aimodules "yes" "no")" \
 		--enable-shared \
 		--enable-fcdb="${mydatabase}" \
-		--with-ggzconfig=/usr/bin \
-		--enable-noregistry="${GGZ_MODDIR}" \
 		$(use_enable nls) \
 		$(use_with readline) \
 		$(use_enable sound sdl-mixer) \
@@ -170,11 +165,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	games-ggz_update_modules
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	games-ggz_update_modules
 	gnome2_icon_cache_update
 }

@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.3.4.ebuild,v 1.5 2014/05/15 17:03:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.3.4.ebuild,v 1.6 2015/01/03 17:49:50 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils gnome2-utils games-ggz games
+inherit eutils gnome2-utils games
 
 DESCRIPTION="multiplayer strategy game (Civilization Clone)"
 HOMEPAGE="http://www.freeciv.org/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/freeciv/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
-IUSE="auth dedicated ggz +gtk ipv6 nls readline sdl +sound"
+IUSE="auth dedicated +gtk ipv6 nls readline sdl +sound"
 REQUIRED_USE="!dedicated? ( || ( gtk sdl ) )"
 
 RDEPEND="readline? ( sys-libs/readline )
@@ -31,7 +31,6 @@ RDEPEND="readline? ( sys-libs/readline )
 			media-libs/libsdl[sound]
 			media-libs/sdl-mixer[vorbis]
 		)
-		ggz? ( games-board/ggz-gtk-client )
 		media-libs/libpng:0
 	)"
 DEPEND="${RDEPEND}
@@ -64,12 +63,11 @@ src_configure() {
 	else
 		use sdl && myclient="${myclient} sdl"
 		use gtk && myclient="${myclient} gtk"
-		myopts=$(use_with ggz ggz-client)
+		myopts="--without-ggz-client"
 	fi
 
 	egamesconf \
 		--localedir=/usr/share/locale \
-		--with-ggzconfig=/usr/bin \
 		--enable-noregistry="${GGZ_MODDIR}" \
 		$(use_enable auth) \
 		$(use_enable ipv6) \
@@ -116,11 +114,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	games-ggz_update_modules
 	gnome2_icon_cache_update
 }
 
 pkg_postrm() {
-	games-ggz_update_modules
 	gnome2_icon_cache_update
 }
