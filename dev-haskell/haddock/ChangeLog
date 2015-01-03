@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.115 2014/10/28 03:57:33 mjo Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.116 2015/01/02 23:16:40 slyfox Exp $
+
+  02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  -files/ghc-paths-1.0.5.0-GHC-Paths.hs, -files/haddock-2.6.1-cabal-1.8.patch,
+  -haddock-2.6.1.ebuild, haddock-2.10.0-r2.ebuild:
+  ppc64 stable, drop old
 
   28 Oct 2014; Michael Orlitzky <mjo@gentoo.org> haddock-2.13.2.ebuild:
   Update GHC dependency for haddock-2.13.2 as part of bug #511004.
