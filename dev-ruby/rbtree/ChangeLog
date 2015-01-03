@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rbtree
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/ChangeLog,v 1.14 2014/08/05 16:00:29 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/ChangeLog,v 1.15 2015/01/03 16:24:04 mrueg Exp $
+
+  03 Jan 2015; Manuel Rüger <mrueg@gentoo.org> rbtree-0.4.2.ebuild:
+  Add ruby22 target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> rbtree-0.4.2.ebuild:
   Remove trailing '.' from DESCRIPTION.
