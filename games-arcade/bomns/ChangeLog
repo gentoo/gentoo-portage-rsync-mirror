@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/bomns
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.8 2014/08/10 21:22:12 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.9 2015/01/03 16:58:15 tupone Exp $
+
+  03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> bomns-0.99.2.ebuild:
+  EAPI 4
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bomns-0.99.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION

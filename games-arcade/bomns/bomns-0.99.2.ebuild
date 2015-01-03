@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/bomns-0.99.2.ebuild,v 1.5 2014/08/10 21:22:12 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/bomns-0.99.2.ebuild,v 1.6 2015/01/03 16:58:15 tupone Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools flag-o-matic games
 
 DESCRIPTION="A fast-paced multiplayer deathmatch arcade game"
@@ -17,6 +17,7 @@ IUSE="gtk editor"
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	gtk? ( x11-libs/gtk+:2 )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -45,7 +46,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed."
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	default
 	prepgamesdirs
 }
