@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ldb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.69 2014/12/22 09:33:17 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.70 2015/01/03 13:06:57 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> ldb-1.1.12.ebuild,
+  ldb-1.1.15.ebuild, ldb-1.1.17-r1.ebuild, ldb-1.1.18.ebuild, ldb-1.1.19.ebuild:
+  Add PYTHON_REQ_USE as necessary for waf.
 
 *ldb-1.1.19 (22 Dec 2014)
 

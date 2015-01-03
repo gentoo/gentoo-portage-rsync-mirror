@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/alienwave
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/ChangeLog,v 1.12 2010/09/15 18:10:27 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/ChangeLog,v 1.13 2015/01/03 13:06:07 tupone Exp $
+
+  03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> alienwave-0.3.0.ebuild:
+  EAPI 4
 
   15 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
   alienwave-0.3.0.ebuild, files/alienwave-0.3.0-gentoo.patch:

@@ -1,10 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.7.1-r1.ebuild,v 1.1 2014/12/25 19:45:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/flowcanvas-0.7.1-r1.ebuild,v 1.3 2015/01/03 13:22:56 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE='threads(+)'
 
 inherit waf-utils python-any-r1 eutils
 
@@ -14,7 +15,7 @@ SRC_URI="http://download.drobilla.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc"
 
 RDEPEND="dev-libs/boost

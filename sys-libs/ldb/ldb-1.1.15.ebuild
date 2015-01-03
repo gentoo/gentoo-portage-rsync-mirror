@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.15.ebuild,v 1.8 2014/05/26 19:52:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.15.ebuild,v 1.9 2015/01/03 13:06:57 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
+PYTHON_REQ_USE="threads"
 
 inherit python waf-utils multilib
 

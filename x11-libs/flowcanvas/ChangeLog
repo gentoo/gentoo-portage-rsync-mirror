@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/flowcanvas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/ChangeLog,v 1.18 2014/12/25 19:45:50 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/ChangeLog,v 1.20 2015/01/03 13:22:56 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> -flowcanvas-0.7.1.ebuild,
+  flowcanvas-0.7.1-r1.ebuild:
+  Transfer stable keywords to -r1 since this was a build-time change only.
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> flowcanvas-0.7.1-r1.ebuild:
+  Add PYTHON_REQ_USE as necessary for waf.
 
 *flowcanvas-0.7.1-r1 (25 Dec 2014)
 

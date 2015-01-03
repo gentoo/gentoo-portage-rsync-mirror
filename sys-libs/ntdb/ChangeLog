@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ntdb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.5 2014/06/12 20:49:40 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.6 2015/01/03 13:14:16 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> ntdb-1.0-r1.ebuild,
+  ntdb-1.0.ebuild:
+  Add PYTHON_REQ_USE and DEPEND as necessary for waf.
 
 *ntdb-1.0-r1 (12 Jun 2014)
 
