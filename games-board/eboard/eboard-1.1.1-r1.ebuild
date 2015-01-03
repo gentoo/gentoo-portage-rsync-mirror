@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.10 2012/05/04 04:30:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1-r1.ebuild,v 1.11 2015/01/03 06:56:36 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DEB_V=${PV}-4.1
@@ -21,7 +21,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
 RDEPEND="x11-libs/gtk+:2
-	media-libs/libpng"
+	media-libs/libpng:0="
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	virtual/pkgconfig"
@@ -35,8 +35,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-libpng15.patch
 	sed -i \
 		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" \
-		configure \
-		|| die "sed configure failed"
+		configure || die
 }
 
 src_configure() {
@@ -50,23 +49,23 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README AUTHORS ChangeLog TODO Documentation/*.txt
+	default
+	dodoc Documentation/*.txt
 
 	newicon icon-eboard.xpm ${PN}.xpm
 	make_desktop_entry ${PN} ${PN} ${PN}
 
 	cd "${WORKDIR}"/${EXTRAS1}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins *.png *.wav || die "doins failed (extra1)"
-	newins extras1.conf themeconf.extras1 || die "newins failed (extra1)"
+	doins *.png *.wav
+	newins extras1.conf themeconf.extras1
 	newdoc ChangeLog Changelog.extras
 	newdoc README README.extras
 	dodoc CREDITS
 
 	cd "${WORKDIR}"/${EXTRAS2}
-	doins *.png *.wav || die "doins failed (extra2)"
-	newins extras2.conf themeconf.extras2 || die "newins failed (extra2)"
+	doins *.png *.wav
+	newins extras2.conf themeconf.extras2
 
 	prepgamesdirs
 }

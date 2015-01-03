@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnuchess-book
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/ChangeLog,v 1.19 2014/09/11 08:20:44 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess-book/ChangeLog,v 1.20 2015/01/03 07:00:19 mr_bones_ Exp $
+
+  03 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  gnuchess-book-1.02.ebuild:
+  tidy
 
   11 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
   gnuchess-book-1.02.ebuild:
