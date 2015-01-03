@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/munin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.163 2014/12/28 16:08:50 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.164 2015/01/03 12:12:32 swift Exp $
+
+*munin-2.0.25-r1 (03 Jan 2015)
+
+  03 Jan 2015; Sven Vermeulen <swift@gentoo.org> +munin-2.0.25-r1.ebuild,
+  munin-2.1.9999.ebuild:
+  Fix bug #527908 - Add SELinux dep to munin policy
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> munin-2.0.19.ebuild,
   munin-2.0.19-r1.ebuild, munin-2.0.25.ebuild, munin-2.1.9999.ebuild:

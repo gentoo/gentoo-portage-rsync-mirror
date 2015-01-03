@@ -1,12 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.11.ebuild,v 1.2 2014/11/02 12:07:03 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.11.ebuild,v 1.3 2015/01/03 12:22:14 mgorny Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 
-inherit eutils waf-utils pax-utils fdo-mime gnome2-utils
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_REQ_USE='threads(+)'
+
+inherit eutils python-any-r1 waf-utils pax-utils fdo-mime gnome2-utils
 [[ ${PV} == *9999* ]] && inherit git-r3
 
 WAF_V="1.7.15"
@@ -117,6 +120,7 @@ RDEPEND+="
 	)
 "
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	virtual/pkgconfig
 	>=dev-lang/perl-5.8
 	dev-python/docutils
@@ -147,6 +151,8 @@ pkg_setup() {
 	einfo "For additional format support you need to enable the support on your"
 	einfo "libavcodec/libavformat provider:"
 	einfo "    media-video/libav or media-video/ffmpeg"
+
+	python-any-r1_pkg_setup
 }
 
 src_unpack() {

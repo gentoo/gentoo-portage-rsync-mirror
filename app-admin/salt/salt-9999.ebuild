@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.14 2014/12/03 22:10:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.15 2015/01/03 12:26:40 swift Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -24,7 +24,7 @@ fi
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="cherrypy ldap libcloud libvirt gnupg keyring mako mongodb mysql nova"
-IUSE+=" openssl redis timelib raet +zeromq test"
+IUSE+=" openssl redis selinux timelib raet +zeromq test"
 
 RDEPEND="sys-apps/pciutils
 	dev-python/jinja[${PYTHON_USEDEP}]
@@ -52,6 +52,7 @@ RDEPEND="sys-apps/pciutils
 	keyring? ( dev-python/keyring[${PYTHON_USEDEP}] )
 	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
 	redis? ( dev-python/redis-py[${PYTHON_USEDEP}] )
+	selinux? ( sec-policy/selinux-salt )
 	timelib? ( dev-python/timelib[${PYTHON_USEDEP}] )
 	nova? ( >=dev-python/python-novaclient-2.17.0[${PYTHON_USEDEP}] )
 	gnupg? ( dev-python/python-gnupg[${PYTHON_USEDEP}] )

@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/kodkod
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/ChangeLog,v 1.5 2014/06/22 13:52:20 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/ChangeLog,v 1.6 2015/01/03 12:26:50 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> kodkod-1.5.2.ebuild:
+  Use python-any-r1 for waf.
 
   22 Jun 2014; Mark Wright <gienah@gentoo.org> kodkod-1.5.2.ebuild:
   Use waf 1.7.16 instead of 1.7.6 in kodkod to try to fix Bug 513978. Specify

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raul
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.19 2014/12/25 19:39:04 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raul/ChangeLog,v 1.20 2015/01/03 12:03:20 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> raul-0.8.0-r1.ebuild:
+  Add PYTHON_REQ_USE as necessary for waf.
 
 *raul-0.8.0-r1 (25 Dec 2014)
 

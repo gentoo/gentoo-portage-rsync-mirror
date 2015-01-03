@@ -1,10 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/jalv-1.4.0.ebuild,v 1.2 2013/03/02 21:55:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/jalv-1.4.0.ebuild,v 1.3 2015/01/03 12:12:06 mgorny Exp $
 
 EAPI=4
 
-inherit waf-utils
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_REQ_USE='threads(+)'
+
+inherit python-any-r1 waf-utils
 
 DESCRIPTION="Simple but fully featured LV2 host for Jack"
 HOMEPAGE="http://drobilla.net/software/jalv/"
@@ -27,6 +30,7 @@ RDEPEND=">=media-libs/lv2-1.3.0
 	gtkmm? ( >=dev-cpp/gtkmm-2.20.0:2.4 )
 	qt4? ( dev-qt/qtgui:4 )"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	virtual/pkgconfig"
 
 DOCS=( "AUTHORS" "NEWS" "README" )
