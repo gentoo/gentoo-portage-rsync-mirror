@@ -1,10 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/sord-0.12.0.ebuild,v 1.1 2013/02/21 10:12:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/sord-0.12.0.ebuild,v 1.2 2015/01/03 00:15:22 mgorny Exp $
 
 EAPI=4
 
-inherit waf-utils
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_REQ_USE='threads(+)'
+inherit python-any-r1 waf-utils
 
 DESCRIPTION="Library for storing RDF data in memory"
 HOMEPAGE="http://drobilla.net/software/sord/"
@@ -17,6 +19,7 @@ IUSE="doc static-libs test"
 
 RDEPEND=">=dev-libs/serd-0.14.0"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig"
 

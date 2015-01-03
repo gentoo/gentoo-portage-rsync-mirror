@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/sord
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/ChangeLog,v 1.14 2014/11/02 18:41:57 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sord/ChangeLog,v 1.15 2015/01/03 00:15:22 mgorny Exp $
+
+  03 Jan 2015; Michał Górny <mgorny@gentoo.org> sord-0.12.0.ebuild,
+  sord-0.12.2.ebuild:
+  Use python-any-r1 for waf.
 
   02 Nov 2014; Alexis Ballier <aballier@gentoo.org> -sord-0.10.0.ebuild,
   -sord-0.10.4.ebuild:
@@ -61,4 +65,3 @@
   27 May 2011; Alexis Ballier <aballier@gentoo.org> +sord-0.4.2.ebuild,
   +files/ldconfig.patch, +metadata.xml:
   initial import, ebuild by me
-

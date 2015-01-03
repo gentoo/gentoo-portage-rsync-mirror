@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.141 2015/01/01 04:41:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.142 2015/01/03 00:06:36 idella4 Exp $
+
+  03 Jan 2015; Ian Delaney <idella4@gentoo.org> cython-0.19.1-r1.ebuild,
+  cython-0.21.1.ebuild, cython-0.21.ebuild:
+  drop pypy support from remaining versions
 
   01 Jan 2015; Mike Gilbert <floppym@gentoo.org> cython-0.21.2.ebuild:
   Drop unnecessary python_gen_cond_dep call.

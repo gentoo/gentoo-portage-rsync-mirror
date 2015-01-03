@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvbhddevice/vdr-dvbhddevice-2.1.3_p20140115.ebuild,v 1.1 2014/01/20 10:01:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvbhddevice/vdr-dvbhddevice-2.1.3_p20140115.ebuild,v 1.2 2015/01/03 00:14:06 hd_brummy Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://powarman.dyndns.org/hg/dvbhddevice"
 SRC_URI="http://powarman.dyndns.org/hgwebdir.cgi/dvbhddevice/archive/${HG_REVISION}.tar.gz
 -> dvbhddevice-2.1.3_p${HG_REVISION_DATE}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""

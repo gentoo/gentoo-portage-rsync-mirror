@@ -1,10 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/pficommon-1.3.1.0.ebuild,v 1.4 2014/12/28 15:00:55 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pficommon/pficommon-1.3.1.0.ebuild,v 1.5 2015/01/03 00:05:26 mgorny Exp $
 
 EAPI=4
 
-inherit waf-utils eutils
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE='threads(+)'
+inherit python-any-r1 waf-utils eutils
 
 DESCRIPTION="General purpose C++ library for PFI"
 HOMEPAGE="https://github.com/pfi/pficommon"
@@ -26,6 +28,7 @@ RDEPEND="fcgi? ( dev-libs/fcgi )
 	postgres? ( dev-db/postgresql )
 	"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	test? ( dev-cpp/gtest )"
 
 src_unpack() {

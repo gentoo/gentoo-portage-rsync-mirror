@@ -1,5 +1,5 @@
-DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=fcgi? ( dev-libs/fcgi ) imagemagick? ( media-libs/lcms media-gfx/imagemagick[cxx] sys-devel/libtool ) mprpc? ( dev-libs/msgpack ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) test? ( dev-cpp/gtest ) dev-lang/python !dev-lang/python[-threads]
+DEFINED_PHASES=compile configure install prepare setup unpack
+DEPEND=fcgi? ( dev-libs/fcgi ) imagemagick? ( media-libs/lcms media-gfx/imagemagick[cxx] sys-devel/libtool ) mprpc? ( dev-libs/msgpack ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) || ( >=dev-lang/python-2.7.5-r2:2.7[threads(+)] ) test? ( dev-cpp/gtest ) dev-lang/python !dev-lang/python[-threads]
 DESCRIPTION=General purpose C++ library for PFI
 EAPI=4
 HOMEPAGE=https://github.com/pfi/pficommon
@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=fcgi? ( dev-libs/fcgi ) imagemagick? ( media-libs/lcms media-gfx/imagemagick[cxx] sys-devel/libtool ) mprpc? ( dev-libs/msgpack ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql )
 SLOT=0
 SRC_URI=https://github.com/pfi/pficommon/tarball/1.3.1.0 -> pficommon-1.3.1.0.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	waf-utils	24c05836f4222380dd43386817e69b12
-_md5_=d19c5cf80e5e9aa82da05fed4032a0d3
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	waf-utils	24c05836f4222380dd43386817e69b12
+_md5_=a09895e557d42c70c099fa1d4b9fa1b8

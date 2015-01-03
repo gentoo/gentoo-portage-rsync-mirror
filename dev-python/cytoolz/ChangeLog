@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cytoolz
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/ChangeLog,v 1.2 2014/12/24 08:36:08 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/ChangeLog,v 1.3 2015/01/03 00:09:14 idella4 Exp $
+
+  03 Jan 2015; Ian Delaney <idella4@gentoo.org> cytoolz-0.7.1.ebuild:
+  drop pypy support
 
 *cytoolz-0.7.1 (24 Dec 2014)
 

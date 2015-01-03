@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-saa716x/v4l-dvb-saa716x-0.0.1_p20140322.ebuild,v 1.1 2014/05/04 11:43:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-saa716x/v4l-dvb-saa716x-0.0.1_p20140322.ebuild,v 1.2 2015/01/03 00:30:18 hd_brummy Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://powarman.dyndns.org/hgwebdir.cgi/v4l-dvb-saa716x/archive/${HG_RE
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+firmware"
 
 DEPEND=""
