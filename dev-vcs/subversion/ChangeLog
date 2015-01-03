@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/subversion
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.220 2015/01/01 14:44:04 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.221 2015/01/03 13:39:14 polynomial-c Exp $
+
+  03 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> subversion-1.7.19.ebuild,
+  subversion-1.8.11.ebuild:
+  Fixed compilation with "gnome-keyring" USE flag (bug #534384 and patch by
+  Andrew Savchenko).
 
   01 Jan 2015; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2014,
   ChangeLog: Split ChangeLog

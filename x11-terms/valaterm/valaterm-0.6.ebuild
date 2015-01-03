@@ -1,11 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.6.ebuild,v 1.4 2013/08/18 13:26:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/valaterm/valaterm-0.6.ebuild,v 1.5 2015/01/03 13:49:42 mgorny Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION="0.16"
 
-inherit waf-utils vala
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE='threads(+)'
+
+inherit python-any-r1 waf-utils vala
 
 DESCRIPTION="A lightweight vala based terminal"
 HOMEPAGE="http://gitorious.org/valaterm"
@@ -20,6 +23,7 @@ RDEPEND=">=dev-libs/glib-2
 	x11-libs/gtk+:3
 	x11-libs/vte:2.90"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	$(vala_depend)
 	virtual/pkgconfig
 	nls? (
