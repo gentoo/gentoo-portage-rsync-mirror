@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.68 2014/11/02 12:42:26 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.69 2015/01/03 20:05:37 mrueg Exp $
 
 EAPI=5
 
@@ -326,7 +326,7 @@ pkg_postinst() {
 	if ! [[ "${REPLACING_VERSIONS}" ]]; then
 		echo
 		elog "For information about installing a printer and general cups setup"
-		elog "take a look at: http://www.gentoo.org/doc/en/printing-howto.xml"
+		elog "take a look at: https://wiki.gentoo.org/wiki/Printing"
 		echo
 	fi
 

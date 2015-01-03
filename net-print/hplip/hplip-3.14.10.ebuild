@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.10.ebuild,v 1.5 2015/01/01 11:24:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.10.ebuild,v 1.6 2015/01/03 20:03:37 mrueg Exp $
 
 EAPI=5
 
@@ -254,7 +254,7 @@ pkg_postinst() {
 	if [[ -z "${REPLACING_VERSIONS}" ]]; then
 		elog "For more information on setting up your printer please take"
 		elog "a look at the hplip section of the gentoo printing guide:"
-		elog "http://www.gentoo.org/doc/en/printing-howto.xml"
+		elog "https://wiki.gentoo.org/wiki/Printing"
 		elog
 		elog "Any user who wants to print must be in the lp group."
 	fi

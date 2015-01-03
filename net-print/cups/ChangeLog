@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.654 2015/01/01 21:22:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.655 2015/01/03 20:05:37 mrueg Exp $
+
+  03 Jan 2015; Manuel Rüger <mrueg@gentoo.org> cups-9999.ebuild:
+  Update doc URL in elog as suggested by a3li. Fixes bug #534496.
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> cups-2.0.1-r1.ebuild:
   arm stable, bug #533692
