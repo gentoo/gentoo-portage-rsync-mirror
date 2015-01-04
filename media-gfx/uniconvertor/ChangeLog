@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/uniconvertor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.22 2014/11/05 13:42:24 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.23 2015/01/04 12:35:46 jlec Exp $
+
+*uniconvertor-2.0_pre379-r1 (04 Jan 2015)
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> -uniconvertor-2.0_pre379.ebuild,
+  +uniconvertor-2.0_pre379-r1.ebuild,
+  +files/uniconvertor-2.0_pre379-import.patch,
+  +files/uniconvertor-2.0_pre379-libimg.patch,
+  +files/uniconvertor-2.0_pre379-test.patch:
+  Fix broken PIL import, #534074; enable testsuite
 
   05 Nov 2014; Justin Lecher <jlec@gentoo.org> uniconvertor-2.0_pre379.ebuild:
   Add additional HOMEPAGE for version 2, thanks Arfrever pointing this out
