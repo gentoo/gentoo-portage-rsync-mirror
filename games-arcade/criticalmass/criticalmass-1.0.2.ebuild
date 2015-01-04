@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.2.ebuild,v 1.7 2012/09/05 07:17:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.2.ebuild,v 1.8 2015/01/04 08:51:01 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="SDL/OpenGL space shoot'em up game"
@@ -19,6 +19,7 @@ DEPEND="media-libs/sdl-mixer
 	media-libs/libpng
 	virtual/opengl
 	net-misc/curl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/CriticalMass-${PV}
 
@@ -33,10 +34,9 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	rm -f "${D}${GAMES_BINDIR}/Packer"
 	dohtml Readme.html
-	dodoc TODO
 	newicon critter.png ${PN}.png
 	make_desktop_entry critter "Critical Mass"
 	prepgamesdirs

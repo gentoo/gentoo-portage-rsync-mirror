@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.12.ebuild,v 1.6 2012/09/05 07:13:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/defendguin/defendguin-0.0.12.ebuild,v 1.7 2015/01/04 08:54:21 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A clone of the arcade game Defender, but with a Linux theme"
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/sdl-mixer[mod]
 	media-libs/libsdl[video]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -28,9 +29,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r ./data/* || die
+	doins -r ./data/*
 	newicon data/images/ufo/ufo0.bmp ${PN}.bmp
 	make_desktop_entry ${PN} Defendguin /usr/share/pixmaps/${PN}.bmp
 	doman src/${PN}.6
