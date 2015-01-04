@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/cosmosmash
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/ChangeLog,v 1.10 2013/04/20 07:18:40 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/ChangeLog,v 1.11 2015/01/04 14:43:09 tupone Exp $
+
+  04 Jan 2015; Tupone Alfredo <tupone@gentoo.org> cosmosmash-1.4.6.ebuild,
+  cosmosmash-1.4.7.ebuild:
+  EAPI 5
 
 *cosmosmash-1.4.7 (20 Apr 2013)
 

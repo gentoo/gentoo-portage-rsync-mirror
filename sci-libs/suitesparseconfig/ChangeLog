@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/suitesparseconfig
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparseconfig/ChangeLog,v 1.4 2014/03/04 19:44:56 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparseconfig/ChangeLog,v 1.5 2015/01/04 14:36:43 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> -suitesparseconfig-4.0.2.ebuild,
+  suitesparseconfig-4.2.1.ebuild, metadata.xml:
+  Drop old
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   suitesparseconfig-4.2.1.ebuild:

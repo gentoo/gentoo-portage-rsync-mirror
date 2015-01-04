@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/fishsupper
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/ChangeLog,v 1.6 2014/05/15 16:28:04 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/ChangeLog,v 1.7 2015/01/04 14:58:56 tupone Exp $
+
+  04 Jan 2015; Tupone Alfredo <tupone@gentoo.org> fishsupper-0.1.6.ebuild:
+  EAPI 5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> fishsupper-0.1.6.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

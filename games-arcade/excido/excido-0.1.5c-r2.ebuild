@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r2.ebuild,v 1.4 2011/08/07 17:11:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r2.ebuild,v 1.5 2015/01/04 14:52:08 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 DESCRIPTION="A fast paced action game"
@@ -21,17 +21,17 @@ DEPEND="dev-games/physfs
 	media-libs/sdl-image[png]
 	media-libs/openal
 	media-libs/freealut"
-
+RDEPEND="${DEPEND}"
 PATCHES=( "${FILESDIR}"/${P}-freealut.patch "${FILESDIR}"/${P}-build.patch )
 
 src_compile() {
-	emake DATADIR="${GAMES_DATADIR}"/${PN}/ || die "emake failed"
+	emake DATADIR="${GAMES_DATADIR}"/${PN}/
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins data/* || die "doins failed"
+	doins data/*
 	dodoc BUGS CHANGELOG HACKING README TODO \
 		keyguide.txt data/CREDITS data/*.txt
 	prepgamesdirs

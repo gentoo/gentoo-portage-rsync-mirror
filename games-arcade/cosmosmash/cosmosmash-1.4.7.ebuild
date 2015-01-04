@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/cosmosmash-1.4.7.ebuild,v 1.1 2013/04/20 07:18:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cosmosmash/cosmosmash-1.4.7.ebuild,v 1.2 2015/01/04 14:43:09 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools games
 
 DESCRIPTION="A space rock shooting video game"
@@ -30,7 +30,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake -C src DESTDIR="${D}" install || die
+	emake -C src DESTDIR="${D}" install
 	doman doc/${PN}.6
 	dodoc AUTHORS NEWS README THANKS
 	prepgamesdirs

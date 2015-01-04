@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/fishsupper-0.1.6.ebuild,v 1.6 2014/05/15 16:28:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/fishsupper/fishsupper-0.1.6.ebuild,v 1.7 2015/01/04 14:58:56 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools games
 
 DESCRIPTION="A simple arcade/puzzle game, loosely based on the retro classic Frogger"
@@ -27,15 +27,8 @@ src_prepare() {
 	eautoreconf
 }
 
-src_configure() {
-	egamesconf \
-		--disable-dependency-tracking
-}
-
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS README
-
+	default
 	newicon data/images/fs_sprite_042.png ${PN}.png
 	make_desktop_entry ${PN} "Fish Supper"
 
