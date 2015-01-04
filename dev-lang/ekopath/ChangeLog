@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ekopath
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.21 2014/05/22 17:33:22 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.22 2015/01/04 15:29:10 anarchy Exp $
+
+  04 Jan 2015;  <anarchy@gentoo.org> ekopath-5.0.1_pre20131115.ebuild:
+  Use XT_PAX for marking the installer as EI_PAX is obsolete and PT_PAX breaks
+  the installer.
 
   22 May 2014; Sébastien Fabbro <bicatali@gentoo.org>
   -ekopath-4.0.12.1_pre20121102.ebuild, -ekopath-5.0.0_pre20130113.ebuild,

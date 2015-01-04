@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.3.ebuild,v 1.8 2014/03/04 19:42:55 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.3.ebuild,v 1.9 2015/01/04 15:13:15 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils fortran-2
 

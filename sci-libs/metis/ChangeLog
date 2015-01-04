@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/metis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.36 2014/07/09 03:33:02 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.37 2015/01/04 15:13:15 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> metis-4.0.3.ebuild:
+  Bump EAPI
 
   09 Jul 2014; Patrick Lauer <patrick@gentoo.org> metis-4.0.1-r1.ebuild:
   Fix 4.0.1-r1 to run all phases

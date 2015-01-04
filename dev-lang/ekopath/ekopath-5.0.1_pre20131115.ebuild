@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-5.0.1_pre20131115.ebuild,v 1.2 2014/05/22 17:33:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-5.0.1_pre20131115.ebuild,v 1.3 2015/01/04 15:29:10 anarchy Exp $
 
 EAPI=5
 
-inherit versionator multilib
+inherit versionator multilib pax-utils
 
 MY_PV=$(get_version_component_range 1-3)
 DATE=$(get_version_component_range 4)
@@ -64,9 +64,11 @@ src_install() {
 	addpredict /usr/$(get_libdir)/crt1.o
 	addpredict /usr/$(get_libdir)/crtn.o
 
-	# You must paxmark -m EI_PAX (not PT_PAX) to run the installer
-	# on a pax enabled kernel.  Adding PT_PAX breaks the binary.
-	scanelf -Xxz m ${P}.run >> /dev/null
+	# EI_PAX marking is obsolete and PT_PAX breaks the binary. 
+	# We must use XT_PAX to run the installer.
+	if [[ ${PAX_MARKINGS} == "XT" ]]; then
+		pax-mark m ${P}.run
+	fi
 
 	./${P}.run \
 		--prefix "${ED%/}/opt/${PN}" \

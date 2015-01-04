@@ -1,7 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.6 2007/03/13 21:42:26 nyhm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.7 2015/01/04 15:26:51 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Help West Muldune escape from a futuristic mental hospital"
@@ -18,12 +18,11 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"/${PN}
+src_prepare() {
+	cd ${PN}
 
 	# Modify data load code and paths to game data
 	sed -e "s:/usr/share/games:${GAMES_DATADIR}:" \
@@ -49,9 +48,9 @@ src_unpack() {
 
 src_install() {
 	cd ${PN}
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins *bmp *png *dat *att *lvl *wav *mod *IT || die "doins failed"
+	doins *bmp *png *dat *att *lvl *wav *mod *IT
 	newicon west00r.png ${PN}.png
 	make_desktop_entry ${PN} "Insane Odyssey"
 	prepgamesdirs

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/colamd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.35 2014/03/04 19:48:32 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.36 2015/01/04 15:06:32 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> -colamd-2.7.4.ebuild,
+  metadata.xml:
+  Drop old
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> colamd-2.8.0.ebuild:
   Add ~mips keyword.

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.5 2010/10/12 15:54:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/gav-0.9.0.ebuild,v 1.6 2015/01/04 15:03:11 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="GPL Arcade Volleyball"
@@ -25,6 +25,7 @@ IUSE=""
 DEPEND="media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-net
 	media-libs/libsdl[joystick,video]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	local d
@@ -53,17 +54,17 @@ src_prepare() {
 
 src_compile() {
 	# bug #41530 - doesn't like the hot parallel make action.
-	emake -C automa || die "emake failed"
-	emake -C menu || die "emake failed"
-	emake -C net || die "emake failed"
-	emake || die "emake failed"
+	emake -C automa
+	emake -C menu
+	emake -C net
+	emake
 }
 
 src_install() {
 	dodir "${GAMES_BINDIR}"
-	emake ROOT="${D}" install || die "emake install failed"
+	emake ROOT="${D}" install
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r sounds || die "doins failed"
+	doins -r sounds
 	dodoc CHANGELOG README
 	prepgamesdirs
 }
