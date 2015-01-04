@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/gtk-g-rays2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.11 2014/07/24 17:59:07 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gtk-g-rays2/ChangeLog,v 1.12 2015/01/04 18:36:20 hanno Exp $
+
+*gtk-g-rays2-2.05 (04 Jan 2015)
+
+  04 Jan 2015; <hanno@gentoo.org> +gtk-g-rays2-2.05.ebuild:
+  Bump, EAPI 5, add missing dep.
 
   24 Jul 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   gtk-g-rays2-2.01.ebuild:

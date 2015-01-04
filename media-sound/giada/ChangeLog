@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/giada
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/ChangeLog,v 1.15 2015/01/04 10:26:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/ChangeLog,v 1.16 2015/01/04 18:31:41 radhermit Exp $
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> -giada-0.6.1.ebuild,
+  -giada-0.6.2.ebuild, -giada-0.6.3.ebuild, -giada-0.6.4.ebuild:
+  Remove old.
 
   04 Jan 2015; Jeroen Roovers <jer@gentoo.org> giada-0.7.0.ebuild:
   Use fltk-config instead of hard-coding includes/libs (bug #534410 by Toralf
