@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r1.ebuild,v 1.1 2015/01/03 22:48:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r1.ebuild,v 1.2 2015/01/03 23:34:59 mgorny Exp $
 
 EAPI=5
 
@@ -37,13 +37,13 @@ RDEPEND=">=app-admin/eselect-1.2.4
 S=${WORKDIR}
 
 pkg_pretend() {
-	if grep -q -s "ModulePath.*/usr/$(get_libdir)/xorg/modules" \
+	if grep -q -s "Section.*Files" \
 		"${EROOT%/}"/etc/X11/xorg.conf
 	then
-		ewarn "Your /etc/X11/xorg.conf seems to set ModulePath to the standard Xorg"
-		ewarn "module directory. This is going to break eselect-opengl-1.3*. If you"
-		ewarn "need to add custom module paths, please move those definitions to"
-		ewarn "/etc/X11/xorg.conf.d/99local.conf or a similar file."
+		ewarn 'Your /etc/X11/xorg.conf seems to contain Section "Files". This is'
+		ewarn 'known to break eselect-opengl-1.3*. If you need a custom Files setup,'
+		ewarn 'please downgrade to <eselect-opengl-1.3. We are sorry for the issues,'
+		ewarn 'we are working on a more permanent solution.'
 	fi
 }
 

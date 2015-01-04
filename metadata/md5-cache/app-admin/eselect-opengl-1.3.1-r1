@@ -9,4 +9,4 @@ RDEPEND=>=app-admin/eselect-1.2.4 !<media-libs/mesa-10.3.4-r1 !=media-libs/mesa-
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~mgorny/dist/opengl.eselect-1.3.1.xz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=a28c59221b6f565dcbefc4ee092b7f11
+_md5_=9b8883fdc7ea53f74acdba56d0850e42
