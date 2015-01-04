@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1-r2.ebuild,v 1.1 2014/10/30 11:52:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1-r2.ebuild,v 1.2 2015/01/04 19:08:24 jlec Exp $
 
 EAPI=5
 
@@ -105,8 +105,9 @@ src_compile(){
 }
 
 src_test() {
+	python_export_best
 	cd tests || die
-	"${PYTHON}" apbs_tester.py -l log || die
+	LD_LIBRARY_PATH="${S}"/lib "${PYTHON}" apbs_tester.py -l log || die
 	grep -q 'FAILED' log && die "Tests failed"
 }
 

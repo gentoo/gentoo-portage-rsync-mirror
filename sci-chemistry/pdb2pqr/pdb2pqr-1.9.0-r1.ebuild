@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.9.0-r1.ebuild,v 1.3 2014/11/21 08:56:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.9.0-r1.ebuild,v 1.4 2015/01/04 19:15:11 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,6 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-python/numpy[${PYTHON_USEDEP}]
-	sci-chemistry/openbabel[python]
 	sci-chemistry/openbabel-python[${PYTHON_USEDEP}]
 	opal? ( dev-python/zsi[${PYTHON_USEDEP}] )
 	pdb2pka? ( sci-chemistry/apbs[${PYTHON_USEDEP},-mpi] )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-2.0_pre379-r1.ebuild,v 1.1 2015/01/04 12:35:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/uniconvertor-2.0_pre379-r1.ebuild,v 1.3 2015/01/04 19:10:27 jlec Exp $
 
 EAPI=5
 
@@ -17,12 +17,12 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 	dev-python/pycairo[${PYTHON_USEDEP}]
 	media-gfx/imagemagick
 	media-libs/lcms:2
 	virtual/python-imaging[${PYTHON_USEDEP}]"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/ghostscript-gpl"
 
@@ -34,7 +34,7 @@ PATCHES=(
 
 python_prepare_all() {
 	local wand
-	wand=$(pkg-config --libs Wand | sed -e "s:-l:\':g" -e "s: :',:g" -e "s:$:':g" -e "s:,'$::g")
+	wand=$(pkg-config --libs Wand | sed -e "s:^ *::g" -e "s: *$::g" -e "s:-l:\':g" -e "s: :',:g" -e "s:$:':g" -e "s:,'$::g")
 
 	distutils-r1_python_prepare_all
 
