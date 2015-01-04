@@ -1,8 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.9.0.0.ebuild,v 1.1 2014/12/14 17:06:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.9.0.3.ebuild,v 1.1 2015/01/04 12:02:41 jlec Exp $
 
 EAPI=5
+
 inherit eutils flag-o-matic libtool multilib toolchain-funcs versionator
 
 MY_P=ImageMagick-$(replace_version_separator 3 '-')
@@ -19,7 +20,8 @@ IUSE="autotrace bzip2 corefonts cxx djvu fftw fontconfig fpx graphviz hdri jbig 
 RESTRICT="perl? ( userpriv )"
 
 # Drop the libtool dep once libltdl goes stable.
-RDEPEND="|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 )
+RDEPEND="
+	|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 )
 	autotrace? ( >=media-gfx/autotrace-0.31.1 )
 	bzip2? ( app-arch/bzip2 )
 	corefonts? ( media-fonts/corefonts )
@@ -138,7 +140,8 @@ src_configure() {
 		$(use_with corefonts windows-font-dir "${EPREFIX}"/usr/share/fonts/corefonts) \
 		$(use_with wmf) \
 		$(use_with xml) \
-		--${openmp}-openmp
+		--${openmp}-openmp \
+		--with-gcc-arch=no-automagic
 }
 
 src_test() {
@@ -171,4 +174,7 @@ src_install() {
 		insinto /etc/sandbox.d
 		doins "${T}"/99${PN} #472766
 	fi
+
+	insinto /usr/share/${PN}
+	doins config/*icm
 }
