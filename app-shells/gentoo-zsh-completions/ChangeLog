@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/gentoo-zsh-completions
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/ChangeLog,v 1.9 2014/11/27 07:33:00 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-zsh-completions/ChangeLog,v 1.10 2015/01/04 05:07:03 radhermit Exp $
+
+*gentoo-zsh-completions-20150103 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org>
+  +gentoo-zsh-completions-20150103.ebuild,
+  gentoo-zsh-completions-99999999.ebuild:
+  Version bump.
 
   27 Nov 2014; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop shell-tools from metadata.
