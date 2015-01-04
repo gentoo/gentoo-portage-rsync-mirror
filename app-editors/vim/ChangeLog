@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.483 2014/12/23 17:20:55 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.484 2015/01/04 05:46:13 radhermit Exp $
+
+*vim-7.4.560 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> +vim-7.4.560.ebuild,
+  vim-9999.ebuild:
+  Version bump.
 
   23 Dec 2014; Tim Harder <radhermit@gentoo.org> vim-9999.ebuild:
   Drop duplicate dependencies and change lua prefix check to use usex.

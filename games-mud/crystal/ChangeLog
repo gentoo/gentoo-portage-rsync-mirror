@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/crystal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.14 2013/06/16 23:40:08 tristan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/ChangeLog,v 1.15 2015/01/04 05:56:51 mr_bones_ Exp $
+
+  04 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> crystal-0.2.4.ebuild:
+  EAPI=5
 
   16 Jun 2013; Tristan Heaven <tristan@gentoo.org> crystal-0.2.4.ebuild,
   +files/crystal-0.2.4-build.patch:
