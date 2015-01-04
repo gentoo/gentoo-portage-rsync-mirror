@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-9999.ebuild,v 1.3 2014/11/21 09:58:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-9999.ebuild,v 1.4 2015/01/04 01:34:42 radhermit Exp $
 
 EAPI=5
 
@@ -170,7 +170,6 @@ src_install() {
 
 pkg_postinst() {
 	if [[ -z ${REPLACING_VERSIONS} ]] ; then
-		# should link to http://www.gentoo.org/doc/en/zsh.xml
 		echo
 		elog "If you want to enable Portage completions and Gentoo prompt,"
 		elog "emerge app-shells/gentoo-zsh-completions and add"
@@ -192,6 +191,8 @@ pkg_postinst() {
 		elog "one method is to use a separate path-setting file that is conditionally sourced"
 		elog "in ~/.zshenv and also sourced from ~/.zprofile. For more information, see the"
 		elog "zshenv example in ${EROOT}/usr/share/doc/${PF}/StartupFiles/."
+		echo
+		elog "See https://wiki.gentoo.org/wiki/Zsh/HOWTO for more introduction documentation."
 		echo
 	fi
 }
