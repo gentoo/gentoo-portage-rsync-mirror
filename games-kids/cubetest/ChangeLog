@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/cubetest
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.17 2013/03/02 21:16:54 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/ChangeLog,v 1.18 2015/01/04 06:23:00 mr_bones_ Exp $
+
+  04 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> cubetest-0.9.4.ebuild:
+  EAPI=5
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cubetest-0.9.4.ebuild:
   Move Qt dependencies to the new category

@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bfg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bfg/ChangeLog,v 1.8 2014/12/11 05:45:15 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bfg/ChangeLog,v 1.9 2015/01/04 06:02:43 radhermit Exp $
+
+*bfg-1.12.0 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> +bfg-1.12.0.ebuild:
+  Version bump.
 
 *bfg-1.11.10 (11 Dec 2014)
 
