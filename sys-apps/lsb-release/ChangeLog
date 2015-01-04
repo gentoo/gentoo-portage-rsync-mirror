@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lsb-release
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.22 2014/09/27 19:19:30 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.23 2015/01/04 21:33:39 jer Exp $
+
+*lsb-release-1.4-r3 (04 Jan 2015)
+
+  04 Jan 2015; Jeroen Roovers <jer@gentoo.org> +lsb-release-1.4-r3.ebuild:
+  Use getopt -l instead of invalid --long by Merlijn Wajer (bug #534602).
 
 *lsb-release-1.4-r2 (27 Sep 2014)
 

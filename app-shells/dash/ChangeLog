@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/dash
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.127 2014/11/01 19:18:17 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.128 2015/01/04 21:47:14 polynomial-c Exp $
+
+*dash-0.5.8.2 (04 Jan 2015)
+
+  04 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -dash-0.5.7.3-r1.ebuild,
+  -dash-0.5.8.1.ebuild, -dash-0.5.8.1-r1.ebuild, +dash-0.5.8.2.ebuild:
+  Version bump. Removed old.
 
 *dash-0.5.8.1-r2 (01 Nov 2014)
 

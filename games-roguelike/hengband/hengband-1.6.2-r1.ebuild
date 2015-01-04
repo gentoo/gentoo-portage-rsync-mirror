@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.6 2010/10/28 11:12:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2-r1.ebuild,v 1.7 2015/01/04 21:31:19 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools games
 
 DESCRIPTION="An Angband variant, with a Japanese/fantasy theme"
@@ -29,12 +29,13 @@ src_prepare() {
 		-e 's|root\.|root:|' lib/*/Makefile.in \
 		|| die
 	sed -i \
-		-e 's:/games/:/:g' configure \
+		-e 's:/games/:/:g' configure.in \
 		|| die
 	epatch \
 		"../${P}"-mispellings.patch	\
 		"${FILESDIR}/${P}"-added_faq.patch \
 		"${FILESDIR}"/${P}-ovflfix.patch
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 
