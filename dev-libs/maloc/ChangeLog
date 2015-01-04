@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/maloc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.25 2014/05/01 12:22:13 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.26 2015/01/04 14:26:55 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> -maloc-1.4.ebuild,
+  -maloc-1.5.ebuild, maloc-1.5-r1.ebuild:
+  Drop old
 
 *maloc-1.5-r1 (01 May 2014)
 

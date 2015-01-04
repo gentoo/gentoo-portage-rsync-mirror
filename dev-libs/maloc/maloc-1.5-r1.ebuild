@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-1.5-r1.ebuild,v 1.1 2014/05/01 12:22:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-1.5-r1.ebuild,v 1.2 2015/01/04 14:26:55 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	doc? (
 		media-gfx/graphviz
-		app-doc/doxygen )"
+		app-doc/doxygen
+		)"
 
 S="${WORKDIR}/${PN}"
 
