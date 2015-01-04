@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/th-expand-syns
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/th-expand-syns/ChangeLog,v 1.1 2014/12/14 06:18:18 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/th-expand-syns/ChangeLog,v 1.2 2015/01/04 04:49:53 gienah Exp $
+
+  04 Jan 2015; Mark Wright <gienah@gentoo.org>
+  +files/th-expand-syns-0.3.0.4-ghc-7.10-1.patch,
+  +files/th-expand-syns-0.3.0.4-ghc-7.10-2.patch, th-expand-syns-0.3.0.4.ebuild:
+  Apply patch from upstream to allow th-expand-syns-0.3.0.4 to build with ghc
+  7.10
 
 *th-expand-syns-0.3.0.4 (14 Dec 2014)
 

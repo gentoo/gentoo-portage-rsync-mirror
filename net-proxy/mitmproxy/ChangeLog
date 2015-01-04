@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/mitmproxy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/ChangeLog,v 1.14 2014/11/22 02:58:29 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/ChangeLog,v 1.15 2015/01/04 04:51:26 radhermit Exp $
+
+*mitmproxy-0.11.3 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> +mitmproxy-0.11.3.ebuild:
+  Version bump.
 
 *mitmproxy-0.11.1 (22 Nov 2014)
 

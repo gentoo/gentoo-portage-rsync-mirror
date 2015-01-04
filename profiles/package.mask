@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16264 2015/01/03 19:30:03 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16265 2015/01/04 05:00:12 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michael Sterrett <mr_bones_@gentoo.org> (03 Jan 2015)
+# Uses net-libs/adns which is on the chopping block.
+# masked for removal on 20150203
+games-server/tetrix
+
 # Hanno Boeck <hanno@gentoo.org> (03 Jan 2015)
 # dead upstream, masked for removal
 app-emulation/wine-doors
@@ -51,7 +56,7 @@ games-board/ggz-sdl-games
 games-board/ggz-txt-client
 
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Jan 2015)
-# No, upstream; no longer maintained; segfaults.
+# No upstream; no longer maintained; segfaults.
 # Use games-board/teg instead.
 # masked for removal on 20150202
 games-board/xfrisk
