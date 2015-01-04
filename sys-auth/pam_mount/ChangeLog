@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_mount
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.77 2014/02/24 02:33:08 mattst88 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.78 2015/01/04 10:10:00 hanno Exp $
+
+*pam_mount-2.15 (04 Jan 2015)
+
+  04 Jan 2015; <hanno@gentoo.org> +pam_mount-2.15.ebuild:
+  Bump, EAPI=5.
 
   24 Feb 2014; Matt Turner <mattst88@gentoo.org>
   -files/pam_mount-2.13-fix-build-without-cryptsetup.patch,

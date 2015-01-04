@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.99.2.ebuild,v 1.1 2014/08/20 05:40:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.14.8-r4.ebuild,v 1.1 2015/01/04 10:12:39 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC="none"
@@ -12,6 +12,8 @@ RUBY_FAKEGEM_EXTRADOC="Changelog.md README.md"
 
 # Also install this custom path since internal paths depend on it.
 RUBY_FAKEGEM_EXTRAINSTALL="exe"
+
+RUBY_FAKEGEM_BINWRAP=""
 
 RUBY_FAKEGEM_GEMSPEC="rspec-core.gemspec"
 
@@ -31,7 +33,7 @@ ruby_add_bdepend "test? (
 		dev-ruby/syntax
 		>=dev-ruby/zentest-4.6.2
 		>=dev-ruby/rspec-expectations-2.14.0:2
-		>=dev-ruby/rspec-mocks-2.99.0:2
+		>=dev-ruby/rspec-mocks-2.12.0:2
 	)"
 
 # Skip yard for ruby20 for now since we don't support ruby20 eselected
@@ -45,6 +47,11 @@ all_ruby_prepare() {
 	# Avoid dependency on cucumber since we can't run the features anyway.
 	sed -i -e '/[Cc]ucumber/ s:^:#:' Rakefile || die
 
+	# Cover all released versions of ruby 2.1.x. This should be reported
+	# upstream since ruby 2.1.x uses semantic versioning and the file
+	# should not have the full version number.
+	cp spec/rspec/core/formatters/text_mate_formatted-2.1.0.html spec/rspec/core/formatters/text_mate_formatted-2.1.1.html|| die
+
 	# Duplicate exe also in bin. We can't change it since internal stuff
 	# also depends on this and fixing that is going to be fragile. This
 	# way we can at least install proper bin scripts.
@@ -54,19 +61,12 @@ all_ruby_prepare() {
 	sed -i -e '/git ls-files/ s:^:#:' rspec-core.gemspec || die
 
 	# Avoid aruba dependency so that we don't end up in dependency hell.
-	sed -i -e '/aruba/ s:^:#:' -e '/Aruba/,/}/ s:^:#:' spec/spec_helper.rb || die
+	sed -i -e '/aruba/ s:^:#:' -e '104,106 s:^:#:' spec/spec_helper.rb || die
 	rm spec/command_line/order_spec.rb || die
 }
 
 each_ruby_prepare() {
 	sed -i -e 's:ruby -e:'${RUBY}' -e:' spec/rspec/core_spec.rb || die
-
-	case ${RUBY} in
-		*jruby)
-			# Avoid tests specific to jruby but without jruby 1.6 support.
-			sed -e '/JRUBY_VERSION/ s:^:#:' -i spec/rspec/core/filter_manager_spec.rb || die
-			;;
-	esac
 }
 
 all_ruby_compile() {
@@ -77,4 +77,10 @@ all_ruby_compile() {
 
 each_ruby_test() {
 	PATH="${S}/bin:${PATH}" RUBYLIB="${S}/lib" ${RUBY} -Ilib bin/rspec spec || die "Tests failed."
+}
+
+all_ruby_install() {
+	all_fakegem_install
+
+	ruby_fakegem_binwrapper rspec /usr/bin/rspec-2 'gem "rspec", "~>2.0"'
 }

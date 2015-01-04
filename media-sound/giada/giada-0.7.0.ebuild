@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.7.0.ebuild,v 1.1 2013/06/05 08:57:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/giada/giada-0.7.0.ebuild,v 1.2 2015/01/04 10:26:18 jer Exp $
 
 EAPI=5
 
@@ -32,8 +32,8 @@ src_prepare() {
 }
 
 src_configure() {
-	append-cppflags -I/usr/include/fltk-1
-	append-ldflags -L/usr/$(get_libdir)/fltk-1
+	append-cppflags $(fltk-config --cflags)
+	append-ldflags $(fltk-config --ldflags)
 
 	econf \
 		--target=linux \
