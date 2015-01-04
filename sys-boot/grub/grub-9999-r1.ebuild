@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.23 2014/12/16 16:07:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.24 2015/01/04 03:16:03 floppym Exp $
 
 EAPI=5
 
@@ -310,7 +310,7 @@ pkg_postinst() {
 
 	if has_version 'sys-boot/grub:0'; then
 		elog "A migration guide for GRUB Legacy users is available:"
-		elog "    http://www.gentoo.org/doc/en/grub2-migration.xml"
+		elog "    https://wiki.gentoo.org/wiki/GRUB2_Migration"
 	fi
 
 	if [[ -z ${REPLACING_VERSIONS} ]]; then

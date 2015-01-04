@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/kildclient
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/ChangeLog,v 1.7 2012/05/03 03:32:33 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/ChangeLog,v 1.8 2015/01/04 03:02:40 mr_bones_ Exp $
+
+  04 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> kildclient-2.9.0.ebuild:
+  EAPI=5
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> kildclient-2.9.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -26,4 +29,3 @@
   +kildclient-2.9.0.ebuild, +files/kildclient-2.9.0-gentoo.patch,
   +metadata.xml:
   Initial commit - ebuild submitted by Michele R. Marino via bug #266567
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.8 2014/03/15 03:31:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.9 2015/01/04 03:16:03 floppym Exp $
 
 EAPI=5
 
@@ -295,7 +295,7 @@ pkg_postinst() {
 
 	if has_version 'sys-boot/grub:0'; then
 		elog "A migration guide for GRUB Legacy users is available:"
-		elog "    http://www.gentoo.org/doc/en/grub2-migration.xml"
+		elog "    https://wiki.gentoo.org/wiki/GRUB2_Migration"
 	fi
 
 	if [[ -z ${REPLACING_VERSIONS} ]]; then

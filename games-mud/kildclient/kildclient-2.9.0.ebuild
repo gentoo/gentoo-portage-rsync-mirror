@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.7 2012/05/03 03:32:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/kildclient-2.9.0.ebuild,v 1.8 2015/01/04 03:02:40 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="Powerful MUD client with a built-in PERL interpreter"
@@ -28,12 +28,12 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
 		"${FILESDIR}"/${P}-underlink.patch
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--localedir=/usr/share/locale \
 		--docdir=/usr/share/doc/${PF} \
 		--htmldir=/usr/share/doc/${PF}/html \
@@ -43,7 +43,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	prepgamesdirs
 }

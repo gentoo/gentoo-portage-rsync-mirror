@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pymetar
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.20 2013/11/06 05:21:10 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymetar/ChangeLog,v 1.21 2015/01/04 03:27:18 idella4 Exp $
+
+*pymetar-0.19-r1 (04 Jan 2015)
+
+  04 Jan 2015; Ian Delaney <idella4@gentoo.org> +files/setup.patch,
+  +pymetar-0.19-r1.ebuild, -pymetar-0.16.ebuild:
+  revbump; conversion -> distutils-r1, add patch to fix install of data, drop
+  sed statement
 
   06 Nov 2013; Patrick Lauer <patrick@gentoo.org> pymetar-0.16.ebuild,
   pymetar-0.19.ebuild:
