@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r3.ebuild,v 1.1 2014/10/02 20:42:18 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r3.ebuild,v 1.3 2015/01/04 08:10:23 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ USE_PHP="php5-6 php5-5 php5-4"
 
 inherit php-ext-source-r2 eutils
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="PHP extension that provides access to movie info"
 HOMEPAGE="http://sourceforge.net/projects/ffmpeg-php/"

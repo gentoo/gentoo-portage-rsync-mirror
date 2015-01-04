@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/pecl-apcu-4.0.7.ebuild,v 1.1 2014/10/15 14:44:31 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apcu/pecl-apcu-4.0.7.ebuild,v 1.3 2015/01/04 08:10:18 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ inherit php-ext-pecl-r2 confutils eutils
 
 S="${WORKDIR}/apcu-${PV}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="Stripped down version of APC supporting only user cache"
 LICENSE="PHP-3.01"
