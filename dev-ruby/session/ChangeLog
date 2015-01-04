@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/session
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.51 2014/11/26 02:23:51 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.52 2015/01/04 09:48:45 graaff Exp $
+
+  04 Jan 2015; Hans de Graaff <graaff@gentoo.org> session-3.2.0.ebuild:
+  Add ruby22.
 
   26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/session-3.1.0-jruby.patch,
   session-3.1.2.ebuild, session-3.2.0.ebuild:

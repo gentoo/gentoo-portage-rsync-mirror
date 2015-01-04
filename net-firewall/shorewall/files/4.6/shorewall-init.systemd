@@ -12,8 +12,8 @@ Conflicts=iptables.service firewalld.service
 Type=oneshot
 RemainAfterExit=yes
 StandardOutput=syslog
-ExecStart=/usr/sbin/shorewall-init start
-ExecStop=/usr/sbin/shorewall-init stop
+ExecStart=/sbin/shorewall-init start
+ExecStop=/sbin/shorewall-init stop
 
 [Install]
 WantedBy=basic.target

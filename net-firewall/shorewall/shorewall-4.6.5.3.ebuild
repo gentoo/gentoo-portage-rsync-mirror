@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.6.5.2.ebuild,v 1.1 2014/11/18 12:54:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.6.5.3.ebuild,v 1.1 2015/01/04 09:49:46 jlec Exp $
 
 EAPI="5"
 
@@ -117,7 +117,6 @@ RDEPEND="
 	!net-firewall/shorewall-lite
 	!net-firewall/shorewall6-lite
 	!net-firewall/shorewall-init
-	!<sys-apps/openrc-0.13
 	!<sys-apps/systemd-214
 "
 
@@ -151,7 +150,7 @@ src_prepare() {
 	# This allows us to use patches from upstream and keeps epatch_user working
 
 	einfo "Preparing shorewallrc ..."
-	cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewallrc-r1 "${S}"/shorewallrc.gentoo || die "Copying shorewallrc-r1 failed"
+	cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewallrc "${S}"/shorewallrc.gentoo || die "Copying shorewallrc failed"
 	eprefixify "${S}"/shorewallrc.gentoo
 
 	# shorewall-core

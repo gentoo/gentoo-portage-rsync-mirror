@@ -1,7 +1,7 @@
 #
 # Gentoo Shorewall 4.6 rc file
 #
-BUILD=                                  #Default is to detect the build system
+BUILD=gentoo                            #Default is to detect the build system
 HOST=gentoo                             #Gentoo GNU Linux
 PREFIX=@GENTOO_PORTAGE_EPREFIX@/usr                             #Top-level directory for shared files, libraries, etc.
 SHAREDIR=${PREFIX}/share                #Directory for arch-neutral files.
@@ -14,7 +14,7 @@ INITDIR=${CONFDIR}/init.d               #Directory where SysV init scripts are i
 INITFILE=${PRODUCT}                     #Name of the product's installed SysV init script
 INITSOURCE=init.gentoo.sh               #Name of the distributed file to be installed as the SysV init script
 ANNOTATED=                              #If non-zero, annotated configuration files are installed
-SYSTEMD=@GENTOO_PORTAGE_EPREFIX@/usr/lib/systemd/system         #Directory where .service files are installed (systems running systemd only)
+SERVICEDIR=@GENTOO_PORTAGE_EPREFIX@/usr/lib/systemd/system      #Directory where .service files are installed (systems running systemd only)
 SERVICEFILE=gentoo.service              #Name of the distributed file to be installed as systemd service file
 SYSCONFFILE=default.gentoo              #Name of the distributed file to be installed in $SYSCONFDIR
 SYSCONFDIR=${CONFDIR}/conf.d            #Directory where SysV init parameter files are installed

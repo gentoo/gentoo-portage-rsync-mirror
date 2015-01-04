@@ -1,6 +1,19 @@
 # ChangeLog for net-firewall/shorewall
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.268 2014/11/18 13:00:28 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.269 2015/01/04 09:49:46 jlec Exp $
+
+*shorewall-4.6.5.3 (04 Jan 2015)
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> -shorewall-4.6.5.2.ebuild,
+  +shorewall-4.6.5.3.ebuild, files/4.6/shorewall.initd,
+  files/4.6/shorewall.systemd, files/4.6/shorewall-init.initd,
+  files/4.6/shorewall-init.systemd, files/4.6/shorewall-lite.initd,
+  files/4.6/shorewall-lite.systemd, files/4.6/shorewall6-lite.initd,
+  files/4.6/shorewall6-lite.systemd, files/4.6/shorewall6.initd,
+  files/4.6/shorewall6.systemd, files/4.6/shorewallrc,
+  -files/4.6/shorewallrc-r1, metadata.xml:
+  Version Bump, #534232, Thanks Thomas D. for the patch; fixes bugs, #530704,
+  #534062
 
   18 Nov 2014; Michael Weber <xmw@gentoo.org>
   -files/4.5.18-r1/shorewall.conf-SUBSYSLOCK.patch,
