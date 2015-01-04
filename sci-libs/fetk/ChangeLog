@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fetk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fetk/ChangeLog,v 1.1 2011/04/16 07:51:52 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fetk/ChangeLog,v 1.2 2015/01/04 17:57:56 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> fetk-1.5.ebuild, metadata.xml:
+  Bump EAPI; sort dependencies
 
 *fetk-1.5 (16 Apr 2011)
 
