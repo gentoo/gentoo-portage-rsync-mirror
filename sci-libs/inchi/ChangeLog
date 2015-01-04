@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/inchi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.6 2013/02/20 19:42:07 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.7 2015/01/04 13:37:37 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> -inchi-1.03.ebuild,
+  inchi-1.04.ebuild, metadata.xml:
+  Drop old; add missing die; bump EAPI
 
   20 Feb 2013; Agostino Sarubbo <ago@gentoo.org> inchi-1.04.ebuild:
   Add ~arm, wrt bug #455960

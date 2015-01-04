@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.2.ebuild,v 1.3 2013/02/20 19:42:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.3.2.ebuild,v 1.4 2015/01/04 13:40:52 jlec Exp $
 
 EAPI=5
 
@@ -15,21 +15,18 @@ SRC_URI="mirror://sourceforge/openbabel/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="doc openmp perl python test wxwidgets"
+IUSE="doc openmp test wxwidgets"
 
 RDEPEND="
+	!sci-chemistry/babel
 	dev-cpp/eigen:3
 	dev-libs/libxml2:2
-	!sci-chemistry/babel
 	sci-libs/inchi
 	sys-libs/zlib
 	wxwidgets? ( x11-libs/wxGTK:2.8[X] )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.8
 	doc? ( app-doc/doxygen )"
-PDEPEND="
-	perl? ( sci-chemistry/openbabel-perl )
-	python? ( sci-chemistry/openbabel-python )"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS doc/*.inc doc/README* doc/*.mol2"
 
@@ -77,4 +74,9 @@ src_test() {
 	cmake-utils_src_configure
 	cmake-utils_src_compile
 	cmake-utils_src_test -E py
+}
+
+pkg_postinst() {
+	optfeature "perl support" sci-chemistry/openbabel-perl
+	optfeature "python support" sci-chemistry/openbabel-python
 }

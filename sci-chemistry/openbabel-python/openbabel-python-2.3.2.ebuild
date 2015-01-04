@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.9 2014/10/27 17:16:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.10 2015/01/04 13:44:02 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=(python{2_7,3_2,3_3,3_4})
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
 inherit cmake-utils eutils multilib python-r1
 
@@ -24,14 +24,14 @@ RDEPEND="${PYTHON_DEPS}
 	~sci-chemistry/openbabel-${PV}
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4.8
 	>=dev-lang/swig-2"
 
 S="${WORKDIR}"/openbabel-${PV}
 
 PATCHES=(
-	"${FILESDIR}/${P}-testpybel.patch"
-	"${FILESDIR}/${P}-bindings_only.patch" )
+	"${FILESDIR}"/${P}-testpybel.patch
+	"${FILESDIR}"/${P}-bindings_only.patch
+	)
 
 src_prepare() {
 	cmake-utils_src_prepare

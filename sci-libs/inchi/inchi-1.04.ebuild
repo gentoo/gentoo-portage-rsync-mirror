@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/inchi-1.04.ebuild,v 1.5 2013/02/20 19:42:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/inchi-1.04.ebuild,v 1.6 2015/01/04 13:37:37 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -44,17 +44,17 @@ src_compile() {
 			ISLINUX=1
 	)
 	for dir in  INCHI/gcc/inchi-1 INCHI_API/gcc_so_makefile; do
-	pushd ${dir} > /dev/null
+		pushd ${dir} > /dev/null
 		emake \
 			"${common_opts[@]}"
-		popd
+		popd > /dev/null
 	done
 	if use static-libs ; then
 		pushd INCHI_API/gcc_so_makefile > /dev/null
 		emake libinchi.a \
 				"${common_opts[@]}" \
 				STATIC=1
-		popd
+		popd > /dev/null
 	fi
 }
 
@@ -66,10 +66,9 @@ src_install() {
 		dodoc *.pdf readme.txt
 	fi
 	dobin "${S}"/INCHI/gcc/inchi-1/inchi-1
-	cd "${S}/INCHI_API/gcc_so_makefile/result"
-	rm *gz
+	cd "${S}/INCHI_API/gcc_so_makefile/result" || die
+	rm *gz || die
 	dolib.so lib*so*
 	use static-libs && dolib.a lib*a
-	insinto /usr/include
-	doins ../../inchi_main/inchi_api.h
+	doheader ../../inchi_main/inchi_api.h
 }
