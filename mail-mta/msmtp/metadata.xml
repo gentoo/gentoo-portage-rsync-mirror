@@ -4,5 +4,6 @@
 <herd>net-mail</herd>
 <use>
 	<flag name='mta'>Enable this to install as system-wide MTA</flag>
+	<flag name="libsecret">Enable libsecret support to store login credentials</flag>
 </use>
 </pkgmetadata>

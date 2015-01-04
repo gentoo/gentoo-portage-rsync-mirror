@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/mpop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/ChangeLog,v 1.8 2014/03/09 22:05:28 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/ChangeLog,v 1.10 2015/01/04 07:11:28 radhermit Exp $
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> -mpop-1.0.26.ebuild,
+  -mpop-1.0.27.ebuild, -mpop-1.0.28.ebuild:
+  Remove old.
+
+*mpop-1.2.0 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> +mpop-1.2.0.ebuild,
+  metadata.xml:
+  Version bump, gnome-keyring use flag replaced with libsecret.
 
 *mpop-1.0.29 (09 Mar 2014)
 

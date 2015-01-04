@@ -1,69 +1,70 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.30-r1.ebuild,v 1.10 2013/02/28 17:51:38 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.6.0.ebuild,v 1.1 2015/01/04 07:04:28 radhermit Exp $
 
-EAPI=4
-inherit multilib python eutils
+EAPI=5
+inherit multilib
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/msmtp/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/msmtp/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="doc gnome-keyring gnutls idn +mta nls sasl ssl vim-syntax"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="doc gnutls idn libsecret +mta nls sasl ssl vim-syntax"
 
 CDEPEND="
-	gnome-keyring? (
-		dev-python/gnome-keyring-python
-		gnome-base/libgnome-keyring
-	)
 	idn? ( net-dns/libidn )
+	libsecret? ( app-crypt/libsecret )
 	nls? ( virtual/libintl )
 	sasl? ( virtual/gsasl )
 	ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl )
-	)"
+	)
+"
 
 RDEPEND="${CDEPEND}
 	net-mail/mailbase
-	mta? (	!mail-mta/courier
-			!mail-mta/esmtp
-			!mail-mta/exim
-			!mail-mta/mini-qmail
-			!mail-mta/netqmail
-			!mail-mta/nullmailer
-			!mail-mta/postfix
-			!mail-mta/qmail-ldap
-			!mail-mta/sendmail
-			!mail-mta/opensmtpd
-			!<mail-mta/ssmtp-2.64-r2
-			!>=mail-mta/ssmtp-2.64-r2[mta] )"
+	mta? (
+		!mail-mta/courier
+		!mail-mta/esmtp
+		!mail-mta/exim
+		!mail-mta/mini-qmail
+		!mail-mta/netqmail
+		!mail-mta/nullmailer
+		!mail-mta/postfix
+		!mail-mta/qmail-ldap
+		!mail-mta/sendmail
+		!mail-mta/opensmtpd
+		!<mail-mta/ssmtp-2.64-r2
+		!>=mail-mta/ssmtp-2.64-r2[mta]
+	)
+"
 
 DEPEND="${CDEPEND}
 	doc? ( virtual/texi2dvi )
 	nls? ( sys-devel/gettext )
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 REQUIRED_USE="gnutls? ( ssl )"
 
+DOCS="AUTHORS ChangeLog NEWS README THANKS doc/msmtprc*"
+
 src_prepare() {
 	# Use default Gentoo location for mail aliases
-	sed -i -e 's:/etc/aliases:/etc/mail/aliases:' scripts/find_alias/find_alias_for_msmtp.sh || die
-
-	python_convert_shebangs 2 scripts/msmtp-gnome-tool/msmtp-gnome-tool.py
+	sed -i 's:/etc/aliases:/etc/mail/aliases:' scripts/find_alias/find_alias_for_msmtp.sh || die
 }
 
 src_configure() {
 	econf \
-		--disable-silent-rules \
-		$(use_with gnome-keyring ) \
-		$(use_with idn libidn) \
 		$(use_enable nls) \
+		$(use_with ssl ssl $(usex gnutls gnutls openssl)) \
 		$(use_with sasl libgsasl) \
-		$(use_with ssl ssl $(usex gnutls gnutls openssl))
+		$(use_with idn libidn) \
+		$(use_with libsecret )
 }
 
 src_compile() {
@@ -76,21 +77,17 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog NEWS README THANKS doc/{Mutt+msmtp.txt,msmtprc*}
+	default
 
 	if use doc ; then
 		dohtml doc/msmtp.html
 		dodoc doc/msmtp.pdf
 	fi
 
-	if use gnome-keyring ; then
-		src_install_contrib msmtp-gnome-tool msmtp-gnome-tool.py README
-	fi
-
 	if use mta ; then
 		dodir /usr/sbin
 		dosym /usr/bin/msmtp /usr/sbin/sendmail
+		dosym /usr/bin/msmtp /usr/bin/sendmail
 		dosym /usr/bin/msmtp /usr/$(get_libdir)/sendmail
 	fi
 

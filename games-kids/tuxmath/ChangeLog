@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/tuxmath
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.20 2013/07/05 18:22:07 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.21 2015/01/04 07:10:19 mr_bones_ Exp $
+
+  04 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -tuxmath-1.7.2.ebuild:
+  old
 
   05 Jul 2013; Agostino Sarubbo <ago@gentoo.org> tuxmath-2.0.1.ebuild:
   Stable for x86, wrt bug #475692
