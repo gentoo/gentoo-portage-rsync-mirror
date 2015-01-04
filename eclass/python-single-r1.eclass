@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.30 2014/12/28 22:50:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.31 2015/01/04 22:18:12 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -441,7 +441,7 @@ python_setup() {
 python-single-r1_pkg_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	python_setup
+	[[ ${MERGE_TYPE} != binary ]] && python_setup
 }
 
 _PYTHON_SINGLE_R1=1

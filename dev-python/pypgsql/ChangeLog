@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypgsql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.28 2014/12/28 15:42:53 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.29 2015/01/04 22:27:12 idella4 Exp $
+
+  04 Jan 2015; Ian Delaney <idella4@gentoo.org> pypgsql-2.5.1-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> pypgsql-2.5.1.ebuild,
   pypgsql-2.5.1-r1.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/bustle
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.24 2014/02/02 11:14:03 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.25 2015/01/04 22:24:16 slyfox Exp $
+
+*bustle-0.4.7-r1 (04 Jan 2015)
+
+  04 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> +bustle-0.4.7-r1.ebuild,
+  +files/bustle-0.4.7-gtk-0.13.patch:
+  Version bump (also fixes bug #533766 by Francesco Riosa which ports bustle to
+  dev-haskell/gtk-0.13).
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> bustle-0.4.2-r1.ebuild:
   Stable for sparc, wrt bug #488808

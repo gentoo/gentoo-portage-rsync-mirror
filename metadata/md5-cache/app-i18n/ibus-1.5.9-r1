@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( gtk gtk3 X ) deprecated? ( python ) python? ( python_targets_p
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/ibus/ibus/releases/download/1.5.9/ibus-1.5.9.tar.gz http://dev.gentoo.org/~dlan/distfiles/ibus-1.5.9-upstream-patches-0.tar.xz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	08e71d725177e430c95318425fd3fe92	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=9a8329724b8645bdf960397754599007

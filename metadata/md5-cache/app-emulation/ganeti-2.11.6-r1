@@ -10,5 +10,5 @@ RDEPEND=xen? ( >=app-emulation/xen-3.0 ) kvm? ( app-emulation/qemu ) lxc? ( app-
 REQUIRED_USE=kvm? ( || ( amd64 x86 ) )
 SLOT=0
 SRC_URI=http://downloads.ganeti.org/releases/2.11/ganeti-2.11.6.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-single-r1	08e71d725177e430c95318425fd3fe92	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=7b4d9a6b12c3169e1c87c15abeb66efe
