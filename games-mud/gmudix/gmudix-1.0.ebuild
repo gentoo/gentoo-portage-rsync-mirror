@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/gmudix-1.0.ebuild,v 1.12 2012/05/03 03:32:33 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/gmudix-1.0.ebuild,v 1.13 2015/01/04 02:25:47 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="GTK+ MUD client with ANSI color, macros, timers, triggers, variables, and an easy scripting language"
@@ -20,12 +20,13 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
-	rm -f missing
+	mv configure.in configure.ac || die
+	rm -f missing || die
 	eautoreconf
 }
 
 src_install() {
-	dogamesbin src/${PN} || die "dogamesbin failed"
+	dogamesbin src/${PN}
 	dodoc AUTHORS ChangeLog README TODO doc/*txt
 	prepgamesdirs
 }
