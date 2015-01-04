@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/torsocks
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.16 2014/12/21 21:34:58 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.17 2015/01/04 13:26:36 blueness Exp $
+
+  04 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  -torsocks-2.0.0_rc2.ebuild, -torsocks-2.0.0_rc3.ebuild, torsocks-2.0.0.ebuild:
+  Fix bug #534542.  Remove older RCs.
 
 *torsocks-2.0.0 (21 Dec 2014)
 

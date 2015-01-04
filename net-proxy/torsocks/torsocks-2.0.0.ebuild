@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-2.0.0.ebuild,v 1.1 2014/12/21 21:34:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-2.0.0.ebuild,v 1.2 2015/01/04 13:26:36 blueness Exp $
 
 EAPI=5
 
@@ -25,6 +25,11 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i -e "/dist_doc_DATA/s/^/#/" Makefile.am doc/Makefile.am || die
+
+	# Disable tests requiring network access.
+	sed -i -e '/^\.\/test_dns$/d' tests/test_list || \
+		die "failed to disable network tests"
+
 	eautoreconf
 }
 

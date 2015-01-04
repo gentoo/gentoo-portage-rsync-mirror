@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vinagre
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.110 2014/12/23 23:08:46 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.111 2015/01/04 13:16:53 jlec Exp $
+
+  04 Jan 2015; Justin Lecher <jlec@gentoo.org> vinagre-3.14.3.ebuild,
+  +files/vinagre-3.14.3-freerdp.patch, metadata.xml:
+  Backport patch to work with freerdp-1.2.0_beta, #531336
 
 *vinagre-3.14.3 (23 Dec 2014)
 
