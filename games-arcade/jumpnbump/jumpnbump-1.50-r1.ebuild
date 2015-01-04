@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.15 2014/05/15 16:28:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.16 2015/01/04 15:40:12 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="a funny multiplayer game about cute little fluffy bunnies"
@@ -37,7 +37,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	# clean up a bit.  It leaves a dep on Xdialog but ignore that.
 	use fbcon || rm -f "${D}${GAMES_BINDIR}/jumpnbump.fbcon"
 	use kde || rm -f "${D}${GAMES_BINDIR}/jumpnbump-kdialog"

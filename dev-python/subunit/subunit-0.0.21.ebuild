@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.21.ebuild,v 1.4 2014/10/30 18:38:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.21.ebuild,v 1.5 2015/01/04 15:41:15 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
 	dev-python/extras[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-lang/perl
+	dev-lang/perl:=
 	>=dev-libs/check-0.9.11[${MULTILIB_USEDEP}]
 	>=dev-util/cppunit-1.13.2[${MULTILIB_USEDEP}]
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]

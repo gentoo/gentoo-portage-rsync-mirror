@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/jumpnbump
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.20 2014/05/15 16:28:29 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/ChangeLog,v 1.21 2015/01/04 15:40:12 tupone Exp $
+
+  04 Jan 2015; Tupone Alfredo <tupone@gentoo.org> jumpnbump-1.50-r1.ebuild:
+  EAPI 5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> jumpnbump-1.50-r1.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.18.ebuild,v 1.4 2014/06/08 09:36:14 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.18.ebuild,v 1.5 2015/01/04 15:41:15 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND=">=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
 #requires keywording first; Bug #506510
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-lang/perl
+	dev-lang/perl:=
 	dev-libs/check
 	dev-util/cppunit
 	virtual/pkgconfig"
