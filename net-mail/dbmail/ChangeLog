@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.70 2015/01/02 13:47:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.71 2015/01/04 09:14:05 lordvan Exp $
+
+  04 Jan 2015; Thomas Raschbacher <lordvan@gentoo.org> -dbmail-3.1.15.ebuild,
+  -dbmail-3.2.0.ebuild:
+  removed vulnerable 3.2.0 (bug #534020) and old ~arch 3.1.15
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dbmail-3.2.2.ebuild:
   Stable for x86, wrt bug #534020
@@ -18,7 +22,7 @@
   02 Nov 2014; Thomas Raschbacher <lordvan@gentoo.org> -dbmail-3.1.9.ebuild,
   -dbmail-3.1.10.ebuild, -dbmail-3.1.11.ebuild, -dbmail-3.1.12.ebuild,
   +dbmail-3.2.0.ebuild:
-  removed old versions + added 3.2.0 
+  removed old versions + added 3.2.0
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> dbmail-3.1.10.ebuild,
   dbmail-3.1.11.ebuild, dbmail-3.1.12.ebuild, dbmail-3.1.13.ebuild,
@@ -225,8 +229,8 @@
 
   05 May 2008; Thomas Raschbacher <lordvan@gentoo.org>
   +dbmail-2.2.10.ebuild:
-  added 2.2.10 fixes bug #218136.
-  Thanks to svrmarty <svrmarty@gmx.net> for pointing this out	
+  added 2.2.10 fixes bug #218136
+  Thanks to svrmarty <svrmarty@gmx.net> for pointing this out
 
   17 Apr 2008; Markus Meier <maekke@gentoo.org> dbmail-2.2.9.ebuild:
   amd64/x86 stable, security bug #218154

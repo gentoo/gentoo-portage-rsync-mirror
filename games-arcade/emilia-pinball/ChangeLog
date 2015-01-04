@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/emilia-pinball
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.25 2014/11/06 05:54:05 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.26 2015/01/04 09:24:26 tupone Exp $
+
+  04 Jan 2015; Tupone Alfredo <tupone@gentoo.org>
+  emilia-pinball-0.3.1-r1.ebuild:
+  EAPI 5
 
   06 Nov 2014; Mike Frysinger <vapier@gentoo.org>
   emilia-pinball-0.3.1-r1.ebuild:

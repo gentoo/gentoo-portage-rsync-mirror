@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.9 2014/11/06 05:54:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1-r1.ebuild,v 1.10 2015/01/04 09:24:26 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 MY_PN=${PN/emilia-/}
@@ -43,12 +43,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake CXXFLAGS="${CXXFLAGS}" || die
+	emake CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
-	dodoc README || die
-	emake DESTDIR="${D}" install || die
+	default
 	dosym "${GAMES_BINDIR}"/pinball "${GAMES_BINDIR}"/emilia-pinball
 	mv "${D}/${GAMES_PREFIX}/include" "${D}/usr/" || die
 	dodir /usr/bin
