@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmatroska
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.118 2014/03/24 15:04:32 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.119 2015/01/04 18:13:51 radhermit Exp $
+
+*libmatroska-1.4.2 (04 Jan 2015)
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> +libmatroska-1.4.2.ebuild:
+  Version bump.
 
   24 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libmatroska-1.4.1.ebuild:
   Stable for ppc, wrt bug #492246

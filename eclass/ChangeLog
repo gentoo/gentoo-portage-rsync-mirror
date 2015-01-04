@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1496 2015/01/03 14:50:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1497 2015/01/04 18:24:06 radhermit Exp $
+
+  04 Jan 2015; Tim Harder <radhermit@gentoo.org> -vim.eclass:
+  Remove unused eclass.
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> waf-utils.eclass:
   Warn about unset EPYTHON.

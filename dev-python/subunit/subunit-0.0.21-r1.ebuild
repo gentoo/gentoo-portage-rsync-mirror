@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.21.ebuild,v 1.5 2015/01/04 15:41:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.21-r1.ebuild,v 1.1 2015/01/04 18:07:48 floppym Exp $
 
 EAPI=5
 
@@ -32,6 +32,10 @@ PATCHES=( "${FILESDIR}"/${PV}-tests.patch )
 
 src_prepare() {
 	sed -i -e 's/os.chdir(os.path.dirname(__file__))//' setup.py || die
+
+	# Install perl modules in vendor_perl, bug 534654.
+	export INSTALLDIRS=vendor
+
 	# needed for perl modules
 	distutils-r1_src_prepare
 	multilib_copy_sources
