@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/obexfs-0.12.ebuild,v 1.1 2009/07/23 08:54:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/obexfs/obexfs-0.12.ebuild,v 1.2 2015/01/04 11:06:06 pacho Exp $
 
-EAPI="2"
+EAPI=5
 
 DESCRIPTION="FUSE filesystem interface for ObexFTP"
 HOMEPAGE="http://dev.zuckschwerdt.org/openobex/wiki/ObexFs"
@@ -13,11 +13,14 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=app-mobilephone/obexftp-0.22
-	sys-fs/fuse"
+DEPEND="
+	>=app-mobilephone/obexftp-0.22
+	sys-fs/fuse
+"
 RDEPEND="${DEPEND}"
 
-src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog README
+src_prepare() {
+	# Fix building, bug #523062 (from ArchLinux)
+	export OBEXFTP_CFLAGS="-I/usr/include/obexftp -I/usr/include/multicobex -I/usr/include/bfb"
+	export OBEXFTP_LIBS="-lobexftp -lmulticobex -lbfb -lopenobex -lbluetooth"
 }
