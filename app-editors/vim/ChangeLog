@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.484 2015/01/04 05:46:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.485 2015/01/05 08:50:16 dlan Exp $
+
+  05 Jan 2015; Yixun Lan <dlan@gentoo.org> vim-7.4.560.ebuild:
+  keyword ~arm64, test on board
 
 *vim-7.4.560 (04 Jan 2015)
 
