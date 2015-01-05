@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daap/python-daap-0.7.1-r1.ebuild,v 1.1 2015/01/05 06:48:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daap/python-daap-0.7.1-r1.ebuild,v 1.2 2015/01/05 07:24:24 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -25,7 +25,7 @@ S="${WORKDIR}/${MY_P}"
 
 CFLAGS="${CFLAGS} -fno-strict-aliasing"
 
-python_install_ALL() {
+python_install_all() {
 	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
 }
