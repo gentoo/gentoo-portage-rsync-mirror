@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openbubbles/openbubbles-1.2.ebuild,v 1.7 2009/06/13 17:15:44 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openbubbles/openbubbles-1.2.ebuild,v 1.8 2015/01/05 16:02:22 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A clone of Evan Bailey's game Bubbles"
@@ -17,12 +17,11 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image
 	media-libs/sdl-gfx"
-
+RDEPEND="${DEPEND}"
 PATCHES=( "${FILESDIR}"/${P}-glibc2.10.patch )
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	newicon data/bubble.png ${PN}.png
 	make_desktop_entry ${PN} "OpenBubbles"
 	prepgamesdirs

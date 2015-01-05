@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.157 2014/12/31 14:08:12 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.158 2015/01/05 16:30:43 aballier Exp $
+
+  05 Jan 2015; Alexis Ballier <aballier@gentoo.org> gdal-1.11.1-r1.ebuild:
+  keyword ~arm
 
   31 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> gdal-1.9.2.ebuild,
   gdal-1.10.0-r1.ebuild, gdal-1.10.1.ebuild, gdal-1.11.1-r1.ebuild,
