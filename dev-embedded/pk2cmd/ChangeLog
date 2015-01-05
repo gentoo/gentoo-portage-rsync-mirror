@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/pk2cmd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.6 2012/05/25 08:01:20 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.7 2015/01/05 15:24:14 mrueg Exp $
+
+  05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pk2cmd-1.12.0-r1.ebuild,
+  pk2cmd-1.20.ebuild:
+  Bump to EAPI5, remove old.
 
   25 May 2012; Samuli Suominen <ssuominen@gentoo.org> pk2cmd-1.12.0-r1.ebuild,
   pk2cmd-1.20.ebuild:
@@ -33,4 +37,3 @@
   19 Sep 2008; Joseph Jezak <josejx@gentoo.org> +metadata.xml,
   +pk2cmd-1.12.0.ebuild:
   Initial ebuild import.
-

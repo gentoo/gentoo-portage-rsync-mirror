@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/netris-0.52.ebuild,v 1.16 2009/10/15 19:37:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/netris-0.52.ebuild,v 1.17 2015/01/05 15:27:58 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DEB_VER=7
@@ -17,6 +17,7 @@ KEYWORDS='amd64 ~mips ppc ~sparc x86 ~x86-fbsd'
 IUSE=''
 
 DEPEND='sys-libs/ncurses'
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${WORKDIR}"/netris_${PV}-${DEB_VER}.diff
@@ -60,7 +61,7 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin netris sr || die
+	dogamesbin netris sr
 	dodoc FAQ README robot_desc
 	prepgamesdirs
 }

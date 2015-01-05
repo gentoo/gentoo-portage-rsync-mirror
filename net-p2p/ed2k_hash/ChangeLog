@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ed2k_hash
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.21 2011/03/20 20:04:10 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ChangeLog,v 1.22 2015/01/05 15:28:49 mrueg Exp $
+
+  05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> ed2k_hash-0.4.0-r1.ebuild:
+  Bump to EAPI5
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> ed2k_hash-0.4.0-r1.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
@@ -72,4 +75,3 @@
 
   23 Oct 2003; Heinrich Wendel <lanius@gentoo.org> ed2k_hash-0.3.3.ebuild:
   initial revision, thx to Sven Wegener <sven.wegener@stealer.net> #31520
-

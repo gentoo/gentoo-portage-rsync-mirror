@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.9 2011/03/20 20:04:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k_hash/ed2k_hash-0.4.0-r1.ebuild,v 1.10 2015/01/05 15:28:49 mrueg Exp $
 
-EAPI="1"
+EAPI=5
 inherit flag-o-matic eutils
 
 DESCRIPTION="Tool for generating eDonkey2000 links"
@@ -15,12 +15,11 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="fltk"
 DEPEND="fltk? ( x11-libs/fltk:1 )"
 
-src_unpack() {
-	unpack ${P}.tar.gz
+src_prepare() {
 	epatch "${FILESDIR}/ed2k_64bit.patch"
 }
 
-src_compile() {
+src_configure() {
 	if use fltk; then
 		append-ldflags "$(fltk-config --ldflags)"
 		export CPPFLAGS="$(fltk-config --cxxflags)"
@@ -29,11 +28,9 @@ src_compile() {
 	fi
 
 	econf --disable-dependency-tracking
-	emake
 }
 
 src_install() {
-	make install DESTDIR="${D}" mydocdir=/usr/share/doc/${PF}/html || die
-
+	emake install DESTDIR="${D}" mydocdir=/usr/share/doc/${PF}/html
 	dodoc AUTHORS INSTALL README TODO
 }

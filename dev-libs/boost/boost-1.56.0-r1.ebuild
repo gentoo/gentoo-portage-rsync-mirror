@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.56.0-r1.ebuild,v 1.1 2014/12/24 12:36:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.56.0-r1.ebuild,v 1.2 2015/01/05 15:30:02 aballier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -75,7 +75,11 @@ create_user-config.jam() {
 	fi
 
 	if python_bindings_needed; then
-		python_configuration="using python : : ${PYTHON} ;"
+		if tc-is-cross-compiler; then
+			python_configuration="using python : ${EPYTHON#python} : : ${SYSROOT:-${EROOT}}/usr/include/${EPYTHON} : ${SYSROOT:-${EROOT}}/usr/$(get_libdir) ;"
+		else
+			python_configuration="using python : : ${PYTHON} ;"
+		fi
 	fi
 
 	cat > "${BOOST_ROOT}/user-config.jam" << __EOF__

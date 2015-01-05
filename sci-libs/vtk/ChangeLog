@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/vtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.122 2014/12/28 16:53:38 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.123 2015/01/05 15:02:43 aballier Exp $
+
+*vtk-6.1.0-r1 (05 Jan 2015)
+
+  05 Jan 2015; Alexis Ballier <aballier@gentoo.org> +vtk-6.1.0-r1.ebuild:
+  Add missing dep on jsoncpp, bug #533606 by Stephen Bosch; do not set
+  VTK_INSTALL_NO_DEVELOPMENT=ON as this makes it installs only libraries, not
+  headers nor cmake helpers, bug #534750 by Andreas Schäfer; override
+  webapp.eclass exported functions as we want webapp support optional, bug
+  #534036
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> vtk-6.0.0.ebuild,
   vtk-6.1.0.ebuild:
