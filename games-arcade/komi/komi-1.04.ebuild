@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/komi-1.04.ebuild,v 1.6 2010/08/25 16:24:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/komi-1.04.ebuild,v 1.7 2015/01/05 10:48:35 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Komi the Space Frog - simple SDL game of collection"
@@ -16,9 +16,12 @@ IUSE=""
 
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer"
+RDEPEND="${DEPEND}"
+DOCS=( CHANGELOG.txt README.txt TROUBLESHOOTING.txt )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-DESTDIR.patch
+	epatch "${FILESDIR}"/${PV}-DESTDIR.patch \
+		"${FILESDIR}"/${P}-install.patch
 	sed -i \
 		-e "/^BINPATH/s:=.*:=${GAMES_BINDIR}/:" \
 		-e "/^DATAPATH/s:=.*:=${GAMES_DATADIR}/${PN}/:" \
@@ -29,14 +32,13 @@ src_prepare() {
 }
 
 src_compile() {
-	emake ECFLAGS="${CFLAGS}" || die "emake failed"
+	emake ECFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	newicon komidata/sprites_komi.bmp ${PN}.bmp
 	make_desktop_entry komi Komi /usr/share/pixmaps/${PN}.bmp
 	doman komi.6
-	dodoc CHANGELOG.txt README.txt TROUBLESHOOTING.txt
 	prepgamesdirs
 }

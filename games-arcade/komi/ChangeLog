@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/komi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/ChangeLog,v 1.6 2010/08/25 16:24:44 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/komi/ChangeLog,v 1.7 2015/01/05 10:48:35 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> komi-1.04.ebuild,
+  +files/komi-1.04-install.patch:
+  EAPI 5
 
   25 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> komi-1.04.ebuild:
   EAPI=2; respect LDFLAGS (bug #334457)
