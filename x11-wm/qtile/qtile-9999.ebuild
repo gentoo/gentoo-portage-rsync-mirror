@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-9999.ebuild,v 1.8 2014/04/04 08:02:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-9999.ebuild,v 1.9 2015/01/05 18:24:05 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -22,17 +22,25 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="doc test"
 
-RDEPEND=">=dev-python/pycairo-1.10.0-r4[xcb,${PYTHON_USEDEP}]
+RDEPEND="
+	>=dev-python/pycairo-1.10.0-r4[xcb,${PYTHON_USEDEP}]
 	dev-python/pygtk:2[${PYTHON_USEDEP}]
-	>=x11-libs/xpyb-1.3.1-r1[${PYTHON_USEDEP}]"
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/cairocffi-0.6[${PYTHON_USEDEP}]
+	>=dev-python/cffi-0.8.2[${PYTHON_USEDEP}]
+	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
+	>=dev-python/xcffib-0.1.8[${PYTHON_USEDEP}]
+	>=x11-libs/xpyb-1.3.1-r1[${PYTHON_USEDEP}]
+"
+DEPEND="
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
 		${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/python-xlib[${PYTHON_USEDEP}]
 		x11-base/xorg-server[kdrive]
-	)"
+	)
+"
 
 # tests fail due to xauth errors from python-xlib
 RESTRICT="test"

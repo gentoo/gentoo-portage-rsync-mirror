@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.30 2015/01/05 10:26:32 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.31 2015/01/05 18:15:06 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -46,12 +46,10 @@
 # @ECLASS-VARIABLE: PO_SUBDIR
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# default DIR /po is in ${S}
-# use PO_SUBDIR if /po is in a subdir of ${S}
+# By default, translation are found in"${S}"/po but this
+# default can be overridden by defining PO_SUBDIR.
 #
 # Example:
-# for list of files: bla foo/bla
-#
 # @CODE
 # PO_SUBDIR="bla foo/bla"
 # @CODE
@@ -59,7 +57,7 @@
 # @ECLASS-VARIABLE: VDR_MAINTAINER_MODE
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# output from function dev_check if it is defined in ebuild or eclass,
+# Output from function dev_check if it is defined in ebuild or eclass,
 # helpfull for gentoo ebuild developer
 #
 # This will also install any debug files in /usr/share/vdr/maintainer-data
@@ -72,7 +70,7 @@
 # @FUNCTION: fix_vdr_libsi_include
 # @DESCRIPTION:
 # Plugins failed on compile with wrong path of libsi includes,
-# fix this by 'function + space separated list of files'
+# this can be fixed by 'function + space separated list of files'
 #
 # Example:
 # @CODE
@@ -84,7 +82,7 @@
 # Compile will fail if plugin still use the old i18n language handling,
 # most parts are fixed by vdr-plugin-2.eclass internal functions itself.
 # Remove unneeded i18.n includes from files, if they are still wrong there,
-# fix this by 'function + space separated list of files"
+# this can be fixed by 'function + space separated list of files"
 #
 # Example:
 # @CODE

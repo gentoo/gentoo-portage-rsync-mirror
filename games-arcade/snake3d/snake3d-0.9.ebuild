@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.5 2010/09/16 16:52:45 scarabeus Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/snake3d/snake3d-0.9.ebuild,v 1.6 2015/01/05 18:21:28 tupone Exp $
+EAPI=5
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="variant of the snake game"
@@ -18,23 +18,21 @@ DEPEND="media-libs/sdl-net
 	media-libs/freeglut
 	virtual/glu
 	media-libs/libsdl"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-amd64.patch \
 		"${FILESDIR}"/${P}-build.patch
 }
 
 src_compile() {
-	emake CXX=$(tc-getCXX) -C src snake3d.linux || die "emake failed"
+	emake CXX=$(tc-getCXX) -C src snake3d.linux
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	dodoc ChangeLog README TODO
 	prepgamesdirs
 }
