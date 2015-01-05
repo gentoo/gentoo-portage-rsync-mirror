@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.16 2011/09/14 08:11:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.17 2015/01/05 20:28:56 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="a Puzzle Bobble clone similar to Frozen-Bubble"
@@ -20,6 +20,7 @@ RDEPEND="x11-libs/libX11
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+DOCS=( AUTHORS ChangeLog NEWS NetworkProtocol README TODO )
 
 src_prepare() {
 	epatch \
@@ -42,9 +43,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	newicon data/themes/fancy/Bubble_black_DEAD_01.png ${PN}.png
 	make_desktop_entry ${PN} XBubble
-	dodoc AUTHORS ChangeLog NEWS NetworkProtocol README TODO
 	prepgamesdirs
 }

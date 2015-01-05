@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/procheck
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.10 2013/06/19 04:17:56 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/procheck/ChangeLog,v 1.11 2015/01/05 20:20:04 jlec Exp $
+
+*procheck-3.5.4-r2 (05 Jan 2015)
+
+  05 Jan 2015; Justin Lecher <jlec@gentoo.org> +procheck-3.5.4-r2.ebuild,
+  +files/procheck-3.5.4-close.patch, metadata.xml:
+  Add patch to fix problems with newer gfortran, thanks xarthisius for the
+  patch
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry

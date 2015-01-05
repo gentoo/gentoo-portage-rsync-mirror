@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/tuxdash-0.8.ebuild,v 1.8 2010/10/12 04:28:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/tuxdash-0.8.ebuild,v 1.9 2015/01/05 20:15:24 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A simple BoulderDash clone"
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-ttf"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	rm -f GPL TuxDash
@@ -37,11 +38,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake E_CXXFLAGS="${CXXFLAGS}" -C src || die "emake failed"
+	emake E_CXXFLAGS="${CXXFLAGS}" -C src
 }
 
 src_install() {
-	dogamesbin tuxdash || die "dogamesbin failed"
+	dogamesbin tuxdash
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r themes maps fonts savegames config "${D}/${GAMES_DATADIR}/${PN}" \
 		|| die "cp failed"

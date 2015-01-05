@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xbubble
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/ChangeLog,v 1.14 2011/09/14 08:11:24 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/ChangeLog,v 1.15 2015/01/05 20:28:56 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> xbubble-0.5.8.ebuild:
+  EAPI 5
 
   14 Sep 2011; Tupone Alfredo <tupone@gentoo.org> xbubble-0.5.8.ebuild,
   +files/xbubble-0.5.8-png15.patch:

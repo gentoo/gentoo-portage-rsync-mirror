@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-20110429.ebuild,v 1.5 2014/08/10 21:22:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxanci/tuxanci-20110429.ebuild,v 1.6 2015/01/05 20:12:38 tupone Exp $
 
-EAPI=3
+EAPI=5
 
 [[ ${PV} = 9999* ]] && GIT="git-2"
 EGIT_REPO_URI="git://repo.or.cz/tuxanci.git"

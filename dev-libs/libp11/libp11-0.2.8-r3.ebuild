@@ -1,8 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8-r2.ebuild,v 1.2 2015/01/05 20:28:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.8-r3.ebuild,v 1.1 2015/01/05 20:28:08 alonbl Exp $
 
-EAPI="4"
+EAPI="5"
+
 inherit eutils autotools
 
 DESCRIPTION="A library implementing a layer on top of PKCS#11 API to make using PKCS#11 implementations easier"
@@ -18,12 +19,6 @@ RDEPEND="dev-libs/openssl"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )"
-
-if [[ "${PV}" == "9999" ]]; then
-	DEPEND+="
-		app-text/docbook-xsl-stylesheets
-		dev-libs/libxslt"
-fi
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-ltdl.patch
@@ -42,5 +37,5 @@ src_configure() {
 
 src_install() {
 	default
-	find "${D}" -name '*.la' -delete
+	prune_libtool_files
 }

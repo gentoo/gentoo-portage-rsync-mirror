@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/tuxdash
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/ChangeLog,v 1.8 2010/09/30 04:29:54 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxdash/ChangeLog,v 1.9 2015/01/05 20:15:24 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> tuxdash-0.8.ebuild:
+  EAPI 5
 
   30 Sep 2010; Tupone Alfredo <tupone@gentoo.org> tuxdash-0.8.ebuild,
   +files/tuxdash-0.8-ldflags.patch:

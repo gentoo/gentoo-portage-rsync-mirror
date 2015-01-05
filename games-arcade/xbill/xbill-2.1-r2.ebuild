@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r2.ebuild,v 1.9 2012/05/04 04:22:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbill/xbill-2.1-r2.ebuild,v 1.10 2015/01/05 20:24:29 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools games
 
 DESCRIPTION="A game about an evil hacker called Bill!"
@@ -34,9 +34,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	newicon pixmaps/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} XBill ${PN}
-	dodoc ChangeLog README
 	prepgamesdirs
 }
