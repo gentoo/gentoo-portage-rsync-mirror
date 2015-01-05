@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.690.ebuild,v 1.1 2014/06/07 11:29:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.730.ebuild,v 1.1 2015/01/05 03:23:01 dlan Exp $
 
 EAPI="5"
 
@@ -26,7 +26,9 @@ IUSE="minimal +ssl mysql postgres ldap"
 # to install them using the in-built cpan module, and this will mess up perl on the system
 # That's why some modules are forced without a use flag
 # NOTE: pam, ssl and dnssec-tools deps are forced for security and Gentoo compliance installation reasons
-DEPEND="virtual/perl-Sys-Syslog
+DEPEND="virtual/perl-MIME-Base64
+	virtual/perl-Socket
+	virtual/perl-Sys-Syslog
 	virtual/perl-Time-HiRes
 	virtual/perl-Time-Local
 	dev-perl/Authen-Libwrap
@@ -284,8 +286,10 @@ pkg_config(){
 	export os_version='*'
 	export real_os_type='Gentoo Linux'
 	export real_os_version='Any version'
-	# Forcing 'ssl', 'ssl_redirect' and 'no_sslcompression' for tightening security
+	# Forcing 'ssl', 'no_ssl2', 'no_ssl3', 'ssl_redirect' and 'no_sslcompression' for tightening security
 	export ssl=1
+	export no_ssl2=1
+	export no_ssl3=1
 	export ssl_redirect=1
 	export no_sslcompression=1
 	export keyfile="${EROOT}etc/ssl/webmin/server.pem"

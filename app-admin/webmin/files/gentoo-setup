@@ -94,9 +94,11 @@ if [ "$upgrading" = 1 ]; then
 	real_os_type=`grep "^real_os_type=" $config_dir/config | sed -e 's/real_os_type=//g'`
 	real_os_version=`grep "^real_os_version=" $config_dir/config | sed -e 's/real_os_version=//g'`
 
-	# Get port, ssl, ssl_redirect, no_sslcompression and keyfile
+	# Get port, ssl, no_ssl2, no_ssl3, ssl_redirect, no_sslcompression and keyfile
 	port=`grep "^port=" $config_dir/miniserv.conf | sed -e 's/port=//g'`
 	ssl=`grep "^ssl=" $config_dir/miniserv.conf | sed -e 's/ssl=//g'`
+	no_ssl2=`grep "^no_ssl2=" $config_dir/miniserv.conf | sed -e 's/no_ssl2=//g'`
+	no_ssl3=`grep "^no_ssl3=" $config_dir/miniserv.conf | sed -e 's/no_ssl3=//g'`
 	ssl_redirect=`grep "^ssl_redirect=" $config_dir/miniserv.conf | sed -e 's/ssl_redirect=//g'`
 	no_sslcompression=`grep "^no_sslcompression=" $config_dir/miniserv.conf | sed -e 's/no_sslcompression=//g'`
 	keyfile=`grep "^keyfile=" $config_dir/miniserv.conf | sed -e 's/keyfile=//g'`
@@ -139,6 +141,8 @@ else
 	echo "logtime=168" >> $cfile
 	echo "ppath=$ppath" >> $cfile
 	echo "ssl=$ssl" >> $cfile
+	echo "no_ssl2=$no_ssl2" >> $cfile
+	echo "no_ssl3=$no_ssl3" >> $cfile
 	echo "ssl_redirect=$ssl_redirect" >> $cfile
 	echo "no_sslcompression=$no_sslcompression" >> $cfile
 	echo "keyfile=$keyfile" >> $cfile
@@ -206,7 +210,7 @@ if [ ! -f "${pidfile}" ]; then
 		systemctl start webmin.service
 	else
 		rc-service --ifexists -- webmin start
-	fi	
+	fi
 fi
 END
 
@@ -305,9 +309,22 @@ if [ "$?" != "0" ]; then
 	echo no_sslcompression=1 >> $config_dir/miniserv.conf
 fi
 
-# Make Perl crypt MD5 the default
-echo md5pass=1 >> $config_dir/config
+# Tighten SSL security
+grep no_ssl2= $config_dir/miniserv.conf >/dev/null
+if [ "$?" != "0" ]; then
+	echo no_ssl2=1 >> $config_dir/miniserv.conf
+fi
 
+grep no_ssl3= $config_dir/miniserv.conf >/dev/null
+if [ "$?" != "0" ]; then
+	echo no_ssl3=1 >> $config_dir/miniserv.conf
+fi
+
+# Make Perl crypt MD5 the default
+grep md5pass= $config_dir/config >/dev/null
+if [ "$?" != "0" ]; then
+	echo md5pass=1 >> $config_dir/config
+fi
 
 # Set a special theme if none was set before
 if [ "$theme" = "" ]; then
@@ -331,6 +348,13 @@ fi
 if [ "$themelist" != "" ]; then
 	echo "theme=$themelist" >> $config_dir/config
 	echo "preroot=$themelist" >> $config_dir/miniserv.conf
+fi
+
+# If the old blue-theme is still in use, change it (new in 1.730)
+oldtheme=`grep "^theme=" $config_dir/config | sed -e 's/theme=//g'`
+if [ "$oldtheme" = "blue-theme" ]; then
+   sed -i -e 's/theme=blue-theme/theme=gray-theme/g' $config_dir/config
+   sed -i -e 's/preroot=blue-theme/preroot=gray-theme/g' $config_dir/miniserv.conf
 fi
 
 # Set the product field in the global config

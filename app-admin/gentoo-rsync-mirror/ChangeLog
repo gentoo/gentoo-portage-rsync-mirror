@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.40 2015/01/05 02:34:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.41 2015/01/05 03:13:09 dlan Exp $
+
+  05 Jan 2015; Yixun Lan <dlan@gentoo.org> gentoo-rsync-mirror-1.0-r5.ebuild:
+  fix permission issue, bug 383895, proxy for maintainer
 
   05 Jan 2015; Yixun Lan <dlan@gentoo.org> gentoo-rsync-mirror-1.0-r4.ebuild,
   gentoo-rsync-mirror-1.0-r5.ebuild:
