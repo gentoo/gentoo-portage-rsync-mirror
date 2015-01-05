@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.57 2014/08/10 20:59:38 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.58 2015/01/05 08:13:39 jer Exp $
+
+  05 Jan 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> netselect-0.3-r3.ebuild:
   QA: drop trailing '.' from DESCRIPTION
