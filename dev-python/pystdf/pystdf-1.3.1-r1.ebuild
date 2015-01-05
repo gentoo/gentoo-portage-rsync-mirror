@@ -1,13 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pystdf/pystdf-1.3.1.ebuild,v 1.2 2011/01/01 21:32:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystdf/pystdf-1.3.1-r1.ebuild,v 1.1 2015/01/05 04:24:24 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Python module that makes it easy to work with STDF"
 HOMEPAGE="http://code.google.com/p/pystdf/"
