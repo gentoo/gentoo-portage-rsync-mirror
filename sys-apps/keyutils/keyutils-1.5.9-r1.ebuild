@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.5.9-r1.ebuild,v 1.11 2014/08/10 17:25:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/keyutils-1.5.9-r1.ebuild,v 1.12 2015/01/05 13:45:19 jlec Exp $
 
 EAPI="5"
 
@@ -56,8 +56,9 @@ multilib_src_compile() {
 		-e '/^C.*FLAGS/s|:=|+=|' \
 		-e 's:-Werror::' \
 		-e '/^BUILDFOR/s:=.*:=:' \
-		-e "/^LIBDIR/s:=.*:=/usr/$(get_libdir):" \
+		-e "/^LIBDIR/s:=.*:= /usr/$(get_libdir):" \
 		-e '/^USRLIBDIR/s:=.*:=$(LIBDIR):' \
+		-e "s: /: ${EPREFIX}/:g" \
 		Makefile || die
 
 	emake

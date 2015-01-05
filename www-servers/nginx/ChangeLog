@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/nginx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.399 2014/11/17 23:21:30 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.400 2015/01/05 13:35:34 mrueg Exp $
+
+*nginx-1.7.8 (05 Jan 2015)
+
+  05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +nginx-1.7.8.ebuild:
+  Proxy commit for Johan Bergström. Version bump.
 
   17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> nginx-1.7.6.ebuild,
   nginx-1.7.7.ebuild:

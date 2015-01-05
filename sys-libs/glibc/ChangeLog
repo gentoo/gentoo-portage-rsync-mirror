@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1034 2014/12/31 08:22:30 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1035 2015/01/05 13:39:18 blueness Exp $
+
+  05 Jan 2015; Anthony G. Basile <blueness@gentoo.org> glibc-9999.ebuild:
+  Depend on sys-apps/gentoo-functions, bug #504116#c1
 
   31 Dec 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.20-r1.ebuild:
   Fix cross-compiler bootstrapping for arm targets.

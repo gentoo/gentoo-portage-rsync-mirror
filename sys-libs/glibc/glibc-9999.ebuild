@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.27 2014/11/11 02:08:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-9999.ebuild,v 1.28 2015/01/05 13:39:18 blueness Exp $
 
 EAPI="4"
 
@@ -69,6 +69,7 @@ DEPEND=">=app-misc/pax-utils-0.1.10
 	!<sys-apps/portage-2.1.2
 	selinux? ( sys-libs/libselinux )"
 RDEPEND="!sys-kernel/ps3-sources
+	sys-apps/gentoo-functions
 	selinux? ( sys-libs/libselinux )
 	!sys-libs/nss-db"
 
