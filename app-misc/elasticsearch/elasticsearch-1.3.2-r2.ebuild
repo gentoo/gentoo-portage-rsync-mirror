@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/elasticsearch-1.3.2-r1.ebuild,v 1.1 2014/10/06 14:36:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/elasticsearch-1.3.2-r2.ebuild,v 1.1 2015/01/05 11:12:33 chainsaw Exp $
 
 EAPI=5
 
@@ -36,6 +36,9 @@ src_prepare() {
 	use x86 && {
 		rm lib/sigar/libsigar-amd64-linux.so
 	}
+
+	# Security bug #524682
+	epatch "${FILESDIR}/${PV}-http_cors_disable.patch"
 }
 
 src_install() {

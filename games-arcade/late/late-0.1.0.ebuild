@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.15 2011/04/08 01:38:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/late-0.1.0.ebuild,v 1.16 2015/01/05 11:20:24 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A game, similar to Barrack by Ambrosia Software"
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-image[jpeg]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
@@ -28,9 +29,8 @@ src_prepare() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	newicon graphics/latebg2.jpg ${PN}.jpg
 	make_desktop_entry late Late /usr/share/pixmaps/${PN}.jpg
-	dodoc AUTHORS
 	prepgamesdirs
 }

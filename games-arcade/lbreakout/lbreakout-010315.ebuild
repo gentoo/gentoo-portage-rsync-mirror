@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/lbreakout-010315.ebuild,v 1.9 2010/01/30 14:00:55 armin76 Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/lbreakout-010315.ebuild,v 1.10 2015/01/05 11:24:54 tupone Exp $
+EAPI=5
 inherit games
 
 DESCRIPTION="Breakout clone written with the SDL library"
@@ -14,10 +14,9 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.5"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/^sdir=/s:$datadir/games:$datadir:' \
 		-e '/^hdir=/s:/var/lib/games:$localstatedir:' \
@@ -27,8 +26,7 @@ src_unpack() {
 
 src_install() {
 	dodir "${GAMES_STATEDIR}"
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS README ChangeLog
+	default
 	dohtml lbreakout/manual/*
 	prepgamesdirs
 }

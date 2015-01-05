@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/lbreakout
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/ChangeLog,v 1.9 2010/01/30 14:00:55 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout/ChangeLog,v 1.10 2015/01/05 11:24:54 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> lbreakout-010315.ebuild:
+  EAPI 5
 
   30 Jan 2010; Raúl Porcel <armin76@gentoo.org> lbreakout-010315.ebuild:
   Drop ia64 keyword
