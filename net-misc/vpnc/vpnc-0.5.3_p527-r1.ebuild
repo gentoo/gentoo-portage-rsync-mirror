@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527-r1.ebuild,v 1.12 2014/11/02 09:18:49 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527-r1.ebuild,v 1.13 2015/01/05 12:55:51 jlec Exp $
 
 EAPI=5
 
@@ -70,5 +70,5 @@ src_install() {
 pkg_postinst() {
 	elog "You can generate a configuration file from the original Cisco profiles of your"
 	elog "connection by using /usr/bin/pcf2vpnc to convert the .pcf file"
-	elog "A guide is available in http://www.gentoo.org/doc/en/vpnc-howto.xml"
+	elog "A guide is available at https://wiki.gentoo.org/wiki/Vpnc"
 }

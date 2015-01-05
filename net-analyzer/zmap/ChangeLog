@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/zmap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/ChangeLog,v 1.7 2014/05/11 16:05:59 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/ChangeLog,v 1.8 2015/01/05 12:52:32 jlec Exp $
+
+*zmap-1.2.1 (05 Jan 2015)
+
+  05 Jan 2015; Justin Lecher <jlec@gentoo.org> +zmap-1.2.1.ebuild,
+  zmap-9999.ebuild:
+  Version Bump, #534260
 
 *zmap-1.2.0 (11 May 2014)
 

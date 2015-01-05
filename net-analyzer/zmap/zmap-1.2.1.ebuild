@@ -1,19 +1,18 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/zmap-9999.ebuild,v 1.7 2015/01/05 12:52:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/zmap-1.2.1.ebuild,v 1.1 2015/01/05 12:52:32 jlec Exp $
 
 EAPI=5
 
-inherit cmake-utils fcaps git-r3
+inherit cmake-utils fcaps
 
 DESCRIPTION="Fast network scanner designed for Internet-wide network surveys"
 HOMEPAGE="https://zmap.io/"
-SRC_URI=""
-EGIT_REPO_URI="git://github.com/zmap/zmap.git"
+SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Apache-2.0"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~x86"
 IUSE="json redis"
 
 RDEPEND="
@@ -24,8 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gengetopt
 	sys-devel/flex
-	dev-util/byacc
-"
+	dev-util/byacc"
 
 src_configure() {
 	local mycmakeargs=(
