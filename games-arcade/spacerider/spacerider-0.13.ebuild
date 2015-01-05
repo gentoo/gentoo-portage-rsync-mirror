@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/spacerider-0.13.ebuild,v 1.9 2010/10/29 08:31:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/spacerider-0.13.ebuild,v 1.10 2015/01/05 18:50:34 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="space-shooter written in C++, using the SDL"
@@ -19,6 +19,7 @@ DEPEND="media-libs/sdl-gfx
 	media-libs/sdl-image[jpeg]
 	media-libs/sdl-net
 	media-libs/sdl-ttf"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch \
@@ -31,9 +32,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data || die "doins failed"
+	doins -r data
 	dodoc AUTHORS
 	newman ${PN}.{1,6}
 	prepgamesdirs

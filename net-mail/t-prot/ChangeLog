@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/t-prot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.48 2014/10/07 23:42:11 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.49 2015/01/05 19:00:59 radhermit Exp $
+
+  05 Jan 2015; Tim Harder <radhermit@gentoo.org> t-prot-3.3.ebuild:
+  Stabilize for amd64/x86 (bug #535592).
 
 *t-prot-3.3 (07 Oct 2014)
 
