@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.210 2014/12/01 09:44:58 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.211 2015/01/05 09:15:14 dlan Exp $
+
+  05 Jan 2015; Yixun Lan <dlan@gentoo.org> docutils-0.12.ebuild:
+  keyword ~arm64, test on board
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> docutils-0.12.ebuild:
   Stable for sparc, wrt bug #524416

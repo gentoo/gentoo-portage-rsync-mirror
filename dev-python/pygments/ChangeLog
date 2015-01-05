@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.147 2015/01/02 12:39:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.148 2015/01/05 09:13:16 dlan Exp $
+
+  05 Jan 2015; Yixun Lan <dlan@gentoo.org> pygments-2.0.1.ebuild:
+  keyword ~arm64, test on board
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pygments-2.0.1.ebuild:
   Stable for sparc, wrt bug #533316
