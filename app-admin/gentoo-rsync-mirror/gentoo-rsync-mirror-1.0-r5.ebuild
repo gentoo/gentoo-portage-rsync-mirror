@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.5 2009/10/11 23:28:51 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.6 2015/01/05 02:34:22 dlan Exp $
 
 DESCRIPTION="Ebuild for setting up a Gentoo rsync mirror"
-HOMEPAGE="http://www.gentoo.org/doc/en/rsync.xml"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Infrastructure/Rsync"
 SRC_URI=""
 
 LICENSE="GPL-2"
@@ -46,5 +46,5 @@ pkg_postinst() {
 	elog "gentoo.org official rotations more than once a day.  Doing so puts"
 	elog "you at risk of having your IP address banned from the rotations."
 	elog
-	elog "For more information visit: http://www.gentoo.org/doc/en/rsync.xml"
+	elog "For more information visit: https://wiki.gentoo.org/wiki/Project:Infrastructure/Rsync"
 }
