@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.25.ebuild,v 1.4 2010/05/06 10:55:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/njam-1.25.ebuild,v 1.5 2015/01/05 15:45:25 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic games
 
 MY_P=${P}-src
@@ -19,7 +19,7 @@ DEPEND="media-libs/sdl-mixer
 	media-libs/sdl-image
 	media-libs/libsdl
 	media-libs/sdl-net"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
@@ -38,7 +38,7 @@ src_prepare() {
 
 src_install() {
 	dodir "${GAMES_STATEDIR}/${PN}"
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dohtml -r "${D}${GAMES_DATADIR}/njam/html/"*
 	rm -rf "${D}${GAMES_DATADIR}/njam/html/"
 	newicon data/njamicon.bmp njam.bmp

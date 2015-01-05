@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/nibbles-0.0.4.ebuild,v 1.14 2013/11/14 21:33:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/nibbles-0.0.4.ebuild,v 1.15 2015/01/05 15:34:24 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_P=${PN}-v${PV}
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-linux ~ppc-maco
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
@@ -33,10 +33,10 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin nibbles || die "dogamesbin"
+	dogamesbin nibbles
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins nibbles.levels/* || die "doins failed"
+	doins nibbles.levels/*
 
 	dodir "${GAMES_STATEDIR}"
 	touch "${D}${GAMES_STATEDIR}/nibbles.scores"

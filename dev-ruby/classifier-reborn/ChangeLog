@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/classifier-reborn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier-reborn/ChangeLog,v 1.5 2014/12/23 23:02:12 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/classifier-reborn/ChangeLog,v 1.6 2015/01/05 15:51:03 mrueg Exp $
+
+  05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -classifier-reborn-2.0.1.ebuild,
+  -classifier-reborn-2.0.2.ebuild, classifier-reborn-2.0.3.ebuild:
+  Add ruby22 target. Rework gsl logic. Remove old.
 
 *classifier-reborn-2.0.3 (23 Dec 2014)
 

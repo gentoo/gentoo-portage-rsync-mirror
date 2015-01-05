@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/njam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.11 2010/05/06 10:55:02 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/njam/ChangeLog,v 1.12 2015/01/05 15:45:25 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> njam-1.25.ebuild:
+  EAPI 5
 
   06 May 2010; Samuli Suominen <ssuominen@gentoo.org> njam-1.25.ebuild,
   +files/njam-1.25-gcc45.patch:

@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ninvaders-0.1.1.ebuild,v 1.6 2014/08/10 21:22:20 slyfox Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ninvaders/ninvaders-0.1.1.ebuild,v 1.7 2015/01/05 15:38:53 tupone Exp $
+EAPI=5
 inherit toolchain-funcs games
 
 DESCRIPTION="ASCII space invaders clone"
@@ -14,16 +14,16 @@ KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}" \
-		|| die "emake failed"
+		CFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	newgamesbin nInvaders ninvaders || die "newgamesbin failed"
+	newgamesbin nInvaders ninvaders
 	dodoc README
 	prepgamesdirs
 }

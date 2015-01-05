@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.514 2014/12/30 21:15:52 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.515 2015/01/05 15:38:29 chainsaw Exp $
+
+*asterisk-13.1.0 (05 Jan 2015)
+
+  05 Jan 2015; Tony Vroon <chainsaw@gentoo.org> +asterisk-13.1.0.ebuild:
+  Introduction of the LTS 13 branch, currently masked. Expect the 12 branch to
+  fall away and 13 to take its place. The aim is to have only 11 marked stable
+  for the short term. G729 VAD patch rediffed by Jaco Kroon. Closes bug #529396
+  by Milos Ivanovic.
 
 *asterisk-11.14.2-r1 (30 Dec 2014)
 *asterisk-11.15.0-r1 (30 Dec 2014)
