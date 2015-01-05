@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.1.1.0.ebuild,v 1.6 2010/01/06 14:01:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/xgalaga-2.1.1.0.ebuild,v 1.7 2015/01/05 20:31:56 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A clone of the classic game Galaga for the X Window System"
@@ -36,15 +36,15 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin xgalaga xgal.sndsrv.oss xgalaga-hyperspace || die "dogamesbin failed"
+	dogamesbin xgalaga xgal.sndsrv.oss xgalaga-hyperspace
 	dodoc README README.SOUND CHANGES
 	newman xgalaga.6x xgalaga.6
 
 	insinto "${GAMES_DATADIR}/${PN}/sounds"
-	doins sounds/*.raw || die "doins failed"
+	doins sounds/*.raw
 
 	insinto "${GAMES_DATADIR}/${PN}/levels"
-	doins levels/*.xgl || die "doins failed"
+	doins levels/*.xgl
 
 	make_desktop_entry ${PN} XGalaga
 

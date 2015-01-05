@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.16 2013/04/14 06:58:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/xrick-021212-r1.ebuild,v 1.17 2015/01/05 20:34:06 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Clone of the Rick Dangerous adventure game from the 80's"
@@ -16,6 +16,7 @@ IUSE=""
 RESTRICT="mirror bindist" # bug #149097
 
 DEPEND="media-libs/libsdl[video]"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -43,9 +44,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin xrick || die "dogamesbin failed"
+	dogamesbin xrick
 	insinto "$(games_get_libdir)"/${PN}
-	doins data.zip || die "doins failed"
+	doins data.zip
 	newicon src/xrickST.ico ${PN}.ico
 	make_desktop_entry ${PN} ${PN} /usr/share/pixmaps/${PN}.ico
 	dodoc README KeyCodes

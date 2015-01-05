@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xrick
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.16 2013/04/14 06:58:59 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xrick/ChangeLog,v 1.17 2015/01/05 20:34:06 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> xrick-021212-r1.ebuild:
+  EAPI 5
 
   14 Apr 2013; Ulrich Müller <ulm@gentoo.org> xrick-021212-r1.ebuild:
   Fix LICENSE, see README file. Add bindist restriction because the package

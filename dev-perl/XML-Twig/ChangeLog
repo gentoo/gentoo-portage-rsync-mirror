@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.114 2015/01/05 20:30:33 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.115 2015/01/05 20:31:36 zlogene Exp $
+
+  05 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> XML-Twig-3.460.0.ebuild:
+  Mark stable
 
 *XML-Twig-3.480.0 (05 Jan 2015)
 
