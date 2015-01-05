@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23-r1.ebuild,v 1.4 2014/08/10 20:34:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23-r1.ebuild,v 1.5 2015/01/05 19:56:01 zerochaos Exp $
 
 EAPI="4"
 
@@ -37,7 +37,7 @@ RDEPEND="${CDEPEND}
 	gconf? ( dev-python/gconf-python )
 	sendto? ( gnome-base/nautilus )
 	network? ( || ( net-dns/dnsmasq
-		=net-misc/dhcp-3*
+		net-misc/dhcp
 		>=net-misc/networkmanager-0.8 ) )
 	policykit? ( sys-auth/polkit )
 	pulseaudio? ( media-sound/pulseaudio )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-2.3.0.ebuild,v 1.1 2014/06/16 14:22:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-2.3.0.ebuild,v 1.2 2015/01/05 19:31:29 graaff Exp $
 
 EAPI=5
 # jruby → support needs to be written properly
@@ -35,7 +35,7 @@ ruby_add_bdepend \
 		dev-ruby/mocha
 		dev-ruby/test-unit:2
 	)
-	doc? ( virtual/ruby-rdoc )"
+	doc? ( dev-ruby/rdoc )"
 
 all_ruby_prepare() {
 	# Remove bundler support

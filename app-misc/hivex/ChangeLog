@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hivex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.26 2014/12/05 19:09:03 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.27 2015/01/05 19:44:24 graaff Exp $
+
+  05 Jan 2015; Hans de Graaff <graaff@gentoo.org> hivex-1.3.7-r1.ebuild,
+  hivex-1.3.11.ebuild:
+  Depend on dev-ruby/rdoc since virtual/ruby-rdoc is a noop these days.
 
 *hivex-1.3.11 (05 Dec 2014)
 

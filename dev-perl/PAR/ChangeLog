@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.25 2014/08/23 03:33:34 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.26 2015/01/05 19:43:36 zlogene Exp $
+
+  05 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> PAR-1.7.0-r1.ebuild:
+  Mark stable
 
 *PAR-1.7.0-r1 (23 Aug 2014)
 *PAR-1.5.0-r1 (23 Aug 2014)

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.6 2011/08/06 13:44:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.7 2015/01/05 19:39:48 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Guide a ball through a succession of levels while avoiding holes"
@@ -15,6 +15,7 @@ KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.7[video]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch \
@@ -31,14 +32,14 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin trailblazer || die "dogamesbin failed"
+	dogamesbin trailblazer
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins trail.dat || die "doins failed"
+	doins trail.dat
 	dodoc README
 
 	dodir "${GAMES_STATEDIR}" \
 		&& touch "${D}${GAMES_STATEDIR}/trail.time"
 
 	prepgamesdirs
-	fperms 660 "${GAMES_STATEDIR}/trail.time" || die
+	fperms 660 "${GAMES_STATEDIR}/trail.time"
 }

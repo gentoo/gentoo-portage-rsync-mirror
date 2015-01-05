@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-dateutil
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.63 2014/12/07 05:11:27 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.64 2015/01/05 19:31:24 radhermit Exp $
+
+*python-dateutil-2.4.0 (05 Jan 2015)
+
+  05 Jan 2015; Tim Harder <radhermit@gentoo.org> +python-dateutil-2.4.0.ebuild:
+  Version bump.
 
 *python-dateutil-2.3 (07 Dec 2014)
 
