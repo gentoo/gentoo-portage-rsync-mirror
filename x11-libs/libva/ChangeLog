@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.64 2014/11/03 10:25:21 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.65 2015/01/05 13:18:48 aballier Exp $
+
+*libva-1.5.0 (05 Jan 2015)
+
+  05 Jan 2015; Alexis Ballier <aballier@gentoo.org> +libva-1.5.0.ebuild:
+  version bump, bug #534378
 
   03 Nov 2014; Alexis Ballier <aballier@gentoo.org> libva-9999.ebuild:
   drop patch on live ebuild, it was merged upstream. not sure why this was even
