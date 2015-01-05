@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnuchess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.51 2015/01/04 18:00:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.52 2015/01/05 21:36:51 sping Exp $
+
+*gnuchess-6.2.1 (05 Jan 2015)
+
+  05 Jan 2015; Sebastian Pipping <sping@gentoo.org> +gnuchess-6.2.1.ebuild:
+  Bump to 6.2.1
 
 *gnuchess-6.2.0 (04 Jan 2015)
 

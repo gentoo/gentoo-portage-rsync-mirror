@@ -1,10 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.3-r1.ebuild,v 1.1 2014/10/24 23:03:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/pacman-4.0.3-r1.ebuild,v 1.2 2015/01/05 21:46:57 mgorny Exp $
 
 EAPI=4
 
-inherit autotools autotools-utils bash-completion-r1 eutils
+PYTHON_COMPAT=( python2_7 )
+inherit autotools autotools-utils bash-completion-r1 eutils python-any-r1
 
 DESCRIPTION="Archlinux's binary package manager"
 HOMEPAGE="http://archlinux.org/pacman/"
@@ -30,7 +31,7 @@ DEPEND="${COMMON_DEPEND}
 	app-crypt/gpgme
 	doc? ( app-doc/doxygen
 		app-text/asciidoc )
-	test? ( dev-lang/python )
+	test? ( ${PYTHON_DEPS} )
 	!<=app-shells/bash-completion-2.1-r90"
 
 RESTRICT="test"
