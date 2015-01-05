@@ -1,6 +1,13 @@
 # ChangeLog for app-text/pandoc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.34 2014/12/20 09:52:26 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.35 2015/01/05 05:04:03 gienah Exp $
+
+*pandoc-1.13.2-r1 (05 Jan 2015)
+
+  05 Jan 2015; Mark Wright <gienah@gentoo.org>
+  +files/pandoc-1.13.2-ghc-7.10.patch, +pandoc-1.13.2-r1.ebuild:
+  Patch pandoc 1.13.2 for ghc 7.10.1 RC1 and haddock-libary 1.2
+  https://github.com/jgm/pandoc/pull/1856
 
 *pandoc-1.13.2 (20 Dec 2014)
 

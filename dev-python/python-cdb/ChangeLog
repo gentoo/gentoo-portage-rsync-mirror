@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-cdb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.29 2011/04/03 11:47:30 arfrever Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cdb/ChangeLog,v 1.30 2015/01/05 05:24:49 idella4 Exp $
+
+*python-cdb-0.34-r1 (05 Jan 2015)
+
+  05 Jan 2015; Ian Delaney <idella4@gentoo.org> +python-cdb-0.34-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   03 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-cdb-0.34.ebuild:
@@ -100,4 +105,3 @@
 
   12 Jul 2003; Alastair Tse <liquidx@gentoo.org> python-cdb-0.32.ebuild:
   initial ebuild. contributed by M Stearn <mstearn@hotmail.com>
-
