@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/parsley
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/parsley/ChangeLog,v 1.1 2015/01/05 21:27:16 mrueg Exp $
+
+*parsley-1.2 (05 Jan 2015)
+
+  05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +parsley-1.2.ebuild:
+  Initial commit. Imported from torbrowser overlay. Original ebuild by Poncho.

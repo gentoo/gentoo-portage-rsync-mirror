@@ -4,10 +4,10 @@ DESCRIPTION=Maintains info about a physical person
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/User-Identity/
 IUSE=test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MA/MARKOV/User-Identity-0.94.tar.gz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=2af6c22693c11ff56156b28cf6ce413c
+_md5_=94831c077240a94ff64d8af8f4b563ed
