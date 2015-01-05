@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.539 2015/01/05 19:24:10 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.540 2015/01/05 22:01:59 jmbsvicetto Exp $
+
+*phpmyadmin-4.2.13.1 (05 Jan 2015)
+*phpmyadmin-4.1.14.8 (05 Jan 2015)
+*phpmyadmin-4.3.5 (05 Jan 2015)
+*phpmyadmin-4.0.10.7 (05 Jan 2015)
+
+  05 Jan 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phpmyadmin-4.0.10.7.ebuild, +phpmyadmin-4.1.14.8.ebuild,
+  +phpmyadmin-4.2.13.1.ebuild, +phpmyadmin-4.3.5.ebuild:
+  Security bump - fixes bug 531684. Add 4.3 series to the tree for testing.
 
   05 Jan 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -phpmyadmin-4.1.14.3.ebuild:
