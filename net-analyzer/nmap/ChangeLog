@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nmap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.332 2014/12/03 10:08:28 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.333 2015/01/05 07:42:36 jer Exp $
+
+*nmap-9999 (05 Jan 2015)
+
+  05 Jan 2015; Jeroen Roovers <jer@gentoo.org> +nmap-9999.ebuild:
+  Add live ebuild.
 
   03 Dec 2014; Jeroen Roovers <jer@gentoo.org> -nmap-6.01.ebuild,
   -nmap-6.25.ebuild, -nmap-6.25-r1.ebuild,

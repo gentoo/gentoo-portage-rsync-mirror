@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2015.01.02.ebuild,v 1.1 2015/01/02 19:45:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2015.01.04-r1.ebuild,v 1.1 2015/01/05 07:37:20 jer Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ src_prepare() {
 		sed -i -e "/__version__/s|'$|-gentoo_no_offensive_sites'|g" \
 			youtube_dl/version.py || die
 		local xxx=(
-			alphaporno anysex behindkink drtuber eporner eroprofile extremetube
+			alphaporno anysex behindkink drtuber empflix eporner eroprofile extremetube
 			fourtube foxgay goshgay hellporno hentaistigma hornbunny mofosex
 			motherless pornhd pornhub pornotube pornoxo redtube sexykarma sexu
 			sunporno slutload spankwire thisav tnaflix trutube tube8 vporn xbef

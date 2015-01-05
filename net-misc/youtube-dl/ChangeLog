@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.439 2015/01/04 10:52:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.441 2015/01/05 07:39:06 jer Exp $
+
+  05 Jan 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.01.02.ebuild:
+  Old.
+
+*youtube-dl-2015.01.04-r1 (05 Jan 2015)
+
+  05 Jan 2015; Jeroen Roovers <jer@gentoo.org> -youtube-dl-2015.01.04.ebuild,
+  +youtube-dl-2015.01.04-r1.ebuild:
+  Drop empflix with USE=-offensive (bug #534734 by kahrl).
 
 *youtube-dl-2015.01.04 (04 Jan 2015)
 

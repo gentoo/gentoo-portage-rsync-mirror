@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-lzo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-lzo/ChangeLog,v 1.7 2011/07/22 12:03:45 neurogeek Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-lzo/ChangeLog,v 1.8 2015/01/05 07:36:48 idella4 Exp $
+
+*python-lzo-1.08-r1 (05 Jan 2015)
+
+  05 Jan 2015; Ian Delaney <idella4@gentoo.org> +python-lzo-1.08-r1.ebuild,
+  -python-lzo-1.08.ebuild:
+  revbump; conversion -> distutils-r1, rm old
 
   22 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Changed herd to python
@@ -27,4 +33,3 @@
   14 Apr 2007; Daniel Black <dragonheart@gentoo.org>
   +files/lzo2compat.patch, +metadata.xml, +python-lzo-1.08.ebuild:
   inital ebuild thanks to request from Michael R. Lawrence in bug #158474
-
