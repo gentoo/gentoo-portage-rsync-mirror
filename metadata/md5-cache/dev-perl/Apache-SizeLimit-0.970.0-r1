@@ -4,10 +4,10 @@ DESCRIPTION=Graceful exit for large children
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Apache-SizeLimit/
 IUSE=test
-KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=alpha amd64 ~hppa ia64 ppc ppc64 sparc x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-perl/Linux-Pid !<www-apache/mod_perl-2.0.5 >=www-apache/mod_perl-2.0.5 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PH/PHRED/Apache-SizeLimit-0.97.tar.gz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=56ec8ae5739720a0e5e8ed4c315507f0
+_md5_=b27ed172189622cea1e4ff6f6960743e

@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.10 2014/05/15 16:33:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55-r2.ebuild,v 1.11 2015/01/05 19:20:01 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DATA_PV=1.5
@@ -21,6 +21,7 @@ DEPEND="virtual/opengl
 	media-libs/libsdl[sound,video]
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer[mod]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	mv ../tomatoes-1.5/* . || die "mv failed"
@@ -42,11 +43,11 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin tomatoes || die "dogamesbin failed"
+	dogamesbin tomatoes
 	dodoc README README-src
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r tomatoes.mpk music || die "doins data failed"
+	doins -r tomatoes.mpk music
 
 	doicon ${PN}.png
 	make_desktop_entry tomatoes "I Have No Tomatoes"
@@ -56,7 +57,7 @@ src_install() {
 	fperms 660 "${GAMES_STATEDIR}"/${PN}/hiscore.lst
 
 	insinto "${GAMES_SYSCONFDIR}"/${PN}
-	doins config.cfg || die "doins config.cfg failed"
+	doins config.cfg
 
 	prepgamesdirs
 }

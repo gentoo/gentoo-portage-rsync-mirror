@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-AIO
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.27 2014/08/23 00:13:25 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.28 2015/01/05 19:01:29 zlogene Exp $
+
+  05 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> IO-AIO-4.310.0.ebuild:
+  Mark stable
 
 *IO-AIO-4.180-r1 (23 Aug 2014)
 

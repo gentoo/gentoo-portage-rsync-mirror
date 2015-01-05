@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-SizeLimit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.20 2014/09/19 16:36:38 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SizeLimit/ChangeLog,v 1.21 2015/01/05 19:30:56 zlogene Exp $
+
+  05 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  Apache-SizeLimit-0.970.0-r1.ebuild:
+  Mark stable
 
   19 Sep 2014; Jeroen Roovers <jer@gentoo.org>
   Apache-SizeLimit-0.960.0-r1.ebuild:

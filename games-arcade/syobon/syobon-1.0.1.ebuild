@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/syobon-1.0.1.ebuild,v 1.6 2014/05/15 16:33:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/syobon-1.0.1.ebuild,v 1.7 2015/01/05 19:12:41 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 MY_P="${PN}_${PV}_src"
@@ -28,14 +28,14 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	emake GAMEDATA="${GAMES_DATADIR}/${PN}" || die
+	emake GAMEDATA="${GAMES_DATADIR}/${PN}"
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r BGM SE res || die
-	dodoc README.txt || die
+	doins -r BGM SE res
+	dodoc README.txt
 	prepgamesdirs
 }

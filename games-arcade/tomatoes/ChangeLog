@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/tomatoes
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.20 2014/05/15 16:33:42 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.21 2015/01/05 19:20:01 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> tomatoes-1.55-r2.ebuild:
+  EAPI 5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> tomatoes-1.55-r2.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

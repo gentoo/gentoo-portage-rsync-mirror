@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.538 2014/12/26 09:28:43 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.539 2015/01/05 19:24:10 jmbsvicetto Exp $
+
+  05 Jan 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -phpmyadmin-4.1.14.3.ebuild:
+  Drop old version.
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> phpmyadmin-4.0.10.6.ebuild,
   phpmyadmin-4.1.14.7.ebuild, phpmyadmin-4.2.13.ebuild:
