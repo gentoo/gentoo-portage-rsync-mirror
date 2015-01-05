@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sable/sable-1.0.ebuild,v 1.7 2009/11/21 19:22:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sable/sable-1.0.ebuild,v 1.8 2015/01/05 17:28:37 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A frantic 3D space shooter"
@@ -19,19 +19,19 @@ DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_compile() {
-	emake INSTALL_RESDIR="${GAMES_DATADIR}" || die "emake failed"
+	emake INSTALL_RESDIR="${GAMES_DATADIR}"
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r models sfx textures || die "doins failed"
+	doins -r models sfx textures
 	dodoc ChangeLog README
 
 	doicon "${DISTDIR}"/${PN}.png

@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.4 2011/06/24 18:51:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.5 2015/01/05 17:03:34 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="a DDR clone for linux written in Python"
@@ -31,13 +31,13 @@ src_install() {
 	local dir=${GAMES_DATADIR}/${PN}
 
 	insinto "${dir}"
-	doins *.py || die "doins failed"
+	doins *.py
 	cp -R CREDITS {sound,images,utils,themes} "${D}${dir}/" || die "cp failed"
 
 	insinto "${GAMES_SYSCONFDIR}"
 	newins pydance.posix.cfg pydance.cfg
 
-	games_make_wrapper pydance "python ./pydance.py" "${dir}"
+	games_make_wrapper pydance "python2 ./pydance.py" "${dir}"
 
 	dodoc BUGS CREDITS ChangeLog HACKING README TODO
 	dohtml -r docs/manual.html docs/images

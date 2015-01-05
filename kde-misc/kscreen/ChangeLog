@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kscreen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.14 2014/12/11 16:07:59 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.15 2015/01/05 17:19:56 mrueg Exp $
+
+  05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> kscreen-1.0.2.1.ebuild,
+  kscreen-1.0.71.ebuild:
+  Add missing gettext dependency. Fixes bug #534576
 
   11 Dec 2014; Agostino Sarubbo <ago@gentoo.org> kscreen-1.0.2.1.ebuild,
   kscreen-1.0.71.ebuild:

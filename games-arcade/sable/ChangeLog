@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/sable
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sable/ChangeLog,v 1.7 2009/11/21 19:22:55 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sable/ChangeLog,v 1.8 2015/01/05 17:28:37 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> sable-1.0.ebuild:
+  EAPI 5
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> sable-1.0.ebuild:
   x86 stable, bug #289065

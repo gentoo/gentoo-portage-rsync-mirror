@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/retrobattle/retrobattle-1.0.0.ebuild,v 1.4 2014/05/15 16:31:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/retrobattle/retrobattle-1.0.0.ebuild,v 1.5 2015/01/05 17:09:21 tupone Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils games
 
 MY_P="${PN}-src-${PV}"
@@ -19,7 +19,7 @@ RESTRICT="test"
 
 DEPEND="media-libs/libsdl[X,sound,video]
 	media-libs/sdl-mixer[wav]"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}/src
 
 src_prepare() {
@@ -28,10 +28,10 @@ src_prepare() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r "${WORKDIR}"/${MY_P}/data || die
+	doins -r "${WORKDIR}"/${MY_P}/data
 
 	# wrapper to pass datadir location
-	newgamesbin "${WORKDIR}"/${MY_P}/${PN} ${PN}.bin || die
+	newgamesbin "${WORKDIR}"/${MY_P}/${PN} ${PN}.bin
 	games_make_wrapper ${PN} "${PN}.bin \"${GAMES_DATADIR}/${PN}\""
 
 	make_desktop_entry ${PN}

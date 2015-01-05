@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=virtual/opengl media-libs/libsdl media-libs/sdl-image[png] media-libs/sdl-mixer
 DESCRIPTION=A frantic 3D space shooter
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.stanford.edu/~mcmartin/sable/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
@@ -9,4 +9,4 @@ RDEPEND=virtual/opengl media-libs/libsdl media-libs/sdl-image[png] media-libs/sd
 SLOT=0
 SRC_URI=http://www.stanford.edu/~mcmartin/sable/sable-1.0-src.tgz mirror://gentoo/sable.png
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=3c9f095232c338685de07d3212c387f2
+_md5_=3beb9959d4b5ba0ac399cc5f4a0729f6

@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ri-li
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ChangeLog,v 1.14 2014/05/15 16:31:42 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ChangeLog,v 1.15 2015/01/05 17:16:02 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> ri-li-2.0.1.ebuild:
+  EAPI 5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> ri-li-2.0.1.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

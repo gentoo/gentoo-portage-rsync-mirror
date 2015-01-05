@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.2.1.ebuild,v 1.7 2014/12/11 16:07:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.2.1.ebuild,v 1.8 2015/01/05 17:19:56 mrueg Exp $
 
 EAPI=5
 
@@ -19,11 +19,12 @@ SLOT="4"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="debug"
 
-DEPEND="
+RDEPEND="
 	>=dev-libs/qjson-0.8
 	>=x11-libs/libkscreen-1.0.2:4
 "
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
 
 RESTRICT="test"
 

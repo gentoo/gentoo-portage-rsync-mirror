@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/msgpack
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.21 2014/06/25 05:24:29 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.22 2015/01/05 17:02:54 aballier Exp $
+
+  05 Jan 2015; Alexis Ballier <aballier@gentoo.org> msgpack-0.4.2.ebuild:
+  keyword ~arm
 
   25 Jun 2014; Tim Harder <radhermit@gentoo.org> msgpack-0.4.2.ebuild:
   Fix HOMEPAGE and add pypi site.
