@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.9 2010/09/21 08:37:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdb/sdb-1.0.2.ebuild,v 1.10 2015/01/05 17:32:21 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="a 2D top-down action game; escape a facility full of walking death machines"
@@ -18,6 +18,7 @@ DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -35,14 +36,13 @@ src_prepare() {
 src_compile() {
 	emake \
 		-C src \
-		CXXFLAGS="${CXXFLAGS} $(sdl-config --cflags)" \
-		|| die "emake failed"
+		CXXFLAGS="${CXXFLAGS} $(sdl-config --cflags)"
 }
 
 src_install() {
-	dogamesbin src/sdb || die "dogamesbin failed"
+	dogamesbin src/sdb
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r levels models snd sprites || die "doins failed"
+	doins -r levels models snd sprites
 	newicon sprites/barrel.png ${PN}.png
 	make_desktop_entry sdb "Shotgun Debugger"
 	dodoc ChangeLog README

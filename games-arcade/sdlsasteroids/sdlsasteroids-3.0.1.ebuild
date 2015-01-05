@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.7 2014/05/15 16:32:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdlsasteroids/sdlsasteroids-3.0.1.ebuild,v 1.8 2015/01/05 17:38:22 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Rework of Sasteroids using SDL"
@@ -19,7 +19,7 @@ DEPEND="virtual/opengl
 	media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-ttf"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/SDLSasteroids-${PV}
 
 src_prepare() {
@@ -41,8 +41,7 @@ src_prepare() {
 src_compile() {
 	emake \
 		GAMEDIR="${GAMES_DATADIR}/${PN}" \
-		OPTS="${CXXFLAGS}" \
-		|| die "emake failed"
+		OPTS="${CXXFLAGS}"
 }
 
 src_install() {
@@ -51,7 +50,7 @@ src_install() {
 		GAMEDIR="${D}/${GAMES_DATADIR}/${PN}" \
 		BINDIR="${D}/${GAMES_BINDIR}" \
 		MANDIR="${D}/usr/share/man/" \
-		install || die "emake install failed"
+		install
 	dodoc ChangeLog README README.xast TODO description
 	prepgamesdirs
 }

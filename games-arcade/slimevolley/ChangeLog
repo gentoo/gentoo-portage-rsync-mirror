@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/slimevolley
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.11 2014/05/15 16:32:53 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/slimevolley/ChangeLog,v 1.12 2015/01/05 17:49:02 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> slimevolley-2.4.2.ebuild:
+  EAPI 5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> slimevolley-2.4.2.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

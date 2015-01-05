@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.364 2014/12/06 14:48:09 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.365 2015/01/05 17:56:32 zerochaos Exp $
+
+*pulseaudio-5.99.2 (05 Jan 2015)
+
+  05 Jan 2015;  <zero@gentoo.org> +pulseaudio-5.99.2.ebuild:
+  adding 5.99.2 release with bluetooth headset support with permission of leio.
+  tested without systemd, but should work either way.  Please add keywords
+  when/if comfortable
 
   06 Dec 2014; Ulrich Müller <ulm@gentoo.org> metadata.xml:
   Fix typo.

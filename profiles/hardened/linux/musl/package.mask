@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.6 2014/12/30 13:32:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.7 2015/01/05 17:46:10 mr_bones_ Exp $
 
 sys-libs/uclibc
 sys-libs/glibc
@@ -14,3 +14,6 @@ sys-libs/pam
 
 # bug #526048
 >app-misc/pax-utils-0.7
+
+# packages with a hard dep on sys-libs/glibc
+games-arcade/marbleblastgold-demo
