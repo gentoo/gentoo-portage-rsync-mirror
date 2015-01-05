@@ -34,7 +34,7 @@
  # -DNOMINMAX      : MIN/MAX macros defined in windows conflict with libstdc++
  CXXFLAGS += -DODBCVER=0x0300 -DNOMINMAX
 -else ifeq (0, $(shell test -e $(ODBCLIBDIR)/libodbc$(LIBLINKEXT); echo $$?))
-+else ifeq (unixodbc, $(GENTOO_ODBC)
++else ifeq (unixodbc, $(GENTOO_ODBC))
  SYSLIBS += -lodbc
  COMMONFLAGS += -DPOCO_UNIXODBC
 -else ifeq (0, $(shell test -e $(ODBCLIBDIR)/libiodbc$(LIBLINKEXT); echo $$?))

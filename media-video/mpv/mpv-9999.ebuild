@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.63 2015/01/03 12:22:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.64 2015/01/05 02:11:15 dlan Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio +cli -doc-pdf dvb +dvd dvdnav egl +enca encode
 +iconv jack -joystick jpeg ladspa lcms +libass libcaca libguess libmpv lirc lua
-luajit +mpg123 -openal +opengl oss -portaudio pulseaudio pvr samba -sdl selinux
+luajit +mpg123 -openal +opengl oss pulseaudio pvr samba -sdl selinux
 v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
@@ -98,7 +98,6 @@ RDEPEND="
 	)
 	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
-	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
 	pulseaudio? ( media-sound/pulseaudio )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
@@ -199,7 +198,6 @@ src_configure() {
 		$(use_enable oss oss-audio)
 		--disable-rsound	# media-sound/rsound is in pro-audio overlay only
 		$(use_enable pulseaudio pulse)
-		$(use_enable portaudio)
 		$(use_enable jack)
 		$(use_enable openal)
 		$(use_enable alsa)
