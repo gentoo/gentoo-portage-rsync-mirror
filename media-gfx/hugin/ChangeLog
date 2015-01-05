@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.156 2015/01/02 18:36:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.157 2015/01/05 10:17:27 pinkbyte Exp $
+
+  05 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> -hugin-2012.0.0.ebuild,
+  hugin-2013.0.0-r1.ebuild, -files/hugin-2011.4.0-boost148.patch,
+  -files/hugin-2011.4.0-gcc47.patch, -files/hugin-2012.0.0-boost.patch,
+  -files/hugin-2012.0.0-perl.patch:
+  Drop old
+
+  05 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> hugin-2012.0.0.ebuild,
+  hugin-2013.0.0-r1.ebuild:
+  Drop ppc stable keyword, wrt bug #528330
 
   02 Jan 2015; Markus Meier <maekke@gentoo.org> hugin-2014.0.0.ebuild,
   hugin-2014.0.0-r1.ebuild, +files/hugin-2014.0.0-ParseExp.patch:

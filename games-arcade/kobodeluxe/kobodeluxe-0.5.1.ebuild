@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.8 2009/06/14 00:30:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.9 2015/01/05 10:18:28 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_P="KoboDeluxe-${PV/_/}"
@@ -18,7 +18,7 @@ IUSE="opengl"
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image[png]
 	opengl? ( virtual/opengl )"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
@@ -43,14 +43,13 @@ src_prepare() {
 }
 
 src_configure() {
-	egamesconf $(use_enable opengl) || die
+	egamesconf $(use_enable opengl)
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	newicon icons/KDE/icons/32x32/kobodl.png ${PN}.png
 	make_desktop_entry kobodl "Kobo Deluxe"
-	dodoc ChangeLog README* TODO
 	prepgamesdirs
 	fperms 2775 "${GAMES_STATEDIR}"/${PN}
 }

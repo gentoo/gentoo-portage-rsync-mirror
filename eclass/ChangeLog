@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1499 2015/01/04 22:18:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1500 2015/01/05 10:26:31 hd_brummy Exp $
+
+  05 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  typo
 
   04 Jan 2015; Michał Górny <mgorny@gentoo.org> python-single-r1.eclass:
   Run pkg_setup() only in non-binary installs, as intended and documented a

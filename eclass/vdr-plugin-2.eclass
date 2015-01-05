@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.29 2015/01/04 21:16:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.30 2015/01/05 10:26:32 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -23,7 +23,7 @@
 
 # @ECLASS-VARIABLE: VDR_RCADDON_FILE
 # @DEFAULT_UNSET
-# @DESCRIPTION
+# @DESCRIPTION:
 # Installing rc-addon files is basically the same as for plugin config files
 # (see above), it's just using the $VDR_RCADDON_FILE variable instead.
 # The default value when $VDR_RCADDON_FILE is undefined is:
@@ -56,7 +56,7 @@
 # PO_SUBDIR="bla foo/bla"
 # @CODE
 
-# @ECLASS_VARIABLE: VDR_MAINTAINER_MODE
+# @ECLASS-VARIABLE: VDR_MAINTAINER_MODE
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # output from function dev_check if it is defined in ebuild or eclass,
@@ -70,25 +70,23 @@
 # VDR_MAINTAINER_MODE=1
 
 # @FUNCTION: fix_vdr_libsi_include
-# @DEFAULT_UNSET
 # @DESCRIPTION:
-# plugins failed on compile with wrong path of libsi includes,
+# Plugins failed on compile with wrong path of libsi includes,
 # fix this by 'function + space separated list of files'
 #
-# @Example:
+# Example:
 # @CODE
 # fix_vdr_libsi_include bla.c foo.c
 # @CODE
 
 # @FUNCTION: remove_i18n_include
-# @DEFAULT_UNSET
 # @DESCRIPTION:
-# compile will fail if plugin still use the old i18n language handling,
-# most parts are fixed by vdr-plugin-2.eclass internal functions itself
-# remove unneeded i18.n includes from files, if they are still wrong there
+# Compile will fail if plugin still use the old i18n language handling,
+# most parts are fixed by vdr-plugin-2.eclass internal functions itself.
+# Remove unneeded i18.n includes from files, if they are still wrong there,
 # fix this by 'function + space separated list of files"
 #
-# @Example:
+# Example:
 # @CODE
 # remove_i18n_include bla.n foo.n
 # @CODE

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2013.0.0-r1.ebuild,v 1.8 2014/12/22 10:05:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2013.0.0-r1.ebuild,v 1.9 2015/01/05 10:17:27 pinkbyte Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 SIFT"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 LANGS=" bg ca cs da de en_GB es eu fi fr hu it ja ko nl pl pt_BR ro ru sk sl sv uk zh_CN zh_TW"
 IUSE="lapack python sift debug $(echo ${LANGS//\ /\ linguas_})"

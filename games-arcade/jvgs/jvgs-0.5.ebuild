@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/jvgs-0.5.ebuild,v 1.4 2012/09/03 19:28:12 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/jvgs-0.5.ebuild,v 1.5 2015/01/05 10:05:55 tupone Exp $
 
-EAPI=2
+EAPI=5
 CMAKE_IN_SOURCE_BUILD=1
 inherit cmake-utils eutils games
 
@@ -40,10 +40,10 @@ src_compile() {
 
 src_install() {
 	exeinto "$(games_get_libdir)"
-	doexe src/${PN} || die
+	doexe src/${PN}
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r main.lua resources || die
+	doins -r main.lua resources
 
 	games_make_wrapper ${PN} "/$(games_get_libdir)/${PN}" \
 		"${GAMES_DATADIR}/${PN}"

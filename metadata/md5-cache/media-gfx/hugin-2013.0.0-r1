@@ -4,11 +4,11 @@ DESCRIPTION=GUI for the creation & processing of panoramic images
 EAPI=5
 HOMEPAGE=http://hugin.sf.net
 IUSE=lapack python sift debug linguas_bg linguas_ca linguas_cs linguas_da linguas_de linguas_en_GB linguas_es linguas_eu linguas_fi linguas_fr linguas_hu linguas_it linguas_ja linguas_ko linguas_nl linguas_pl linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv linguas_uk linguas_zh_CN linguas_zh_TW python_targets_python3_3 python_targets_python2_7 python_single_target_python3_3 python_single_target_python2_7
-KEYWORDS=amd64 ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 LICENSE=GPL-2 SIFT
 RDEPEND=!!dev-util/cocom app-arch/zip dev-cpp/tclap <dev-libs/boost-1.54.0:= dev-libs/zthread >=media-gfx/enblend-4.0 media-gfx/exiv2:= media-libs/freeglut media-libs/glew:= media-libs/lensfun >=media-libs/libpano13-2.9.18:0= media-libs/libpng:0= media-libs/openexr:= media-libs/tiff sys-libs/zlib virtual/jpeg x11-libs/wxGTK:2.8=[X,opengl,-odbc] lapack? ( virtual/lapack ) sift? ( media-gfx/autopano-sift-C ) media-libs/exiftool
 REQUIRED_USE=python? ( ^^ ( python_single_target_python3_3 python_single_target_python2_7 ) python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python2_7? ( python_targets_python2_7 ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/hugin/hugin-2013.0.0.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=235a664cb56f4a6d05240d8ec8cbca49
+_md5_=9a305eff1e8fdce1921303fc5e348526

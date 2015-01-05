@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/jvgs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/ChangeLog,v 1.4 2012/09/03 19:28:12 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jvgs/ChangeLog,v 1.5 2015/01/05 10:05:55 tupone Exp $
+
+  05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> jvgs-0.5.ebuild:
+  EAPI 5
 
   03 Sep 2012; Julian Ospald <hasufell@gentoo.org> jvgs-0.5.ebuild,
   +files/jvgs-0.5-flags.patch:
