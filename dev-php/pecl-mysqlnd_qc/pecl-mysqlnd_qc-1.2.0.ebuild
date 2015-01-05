@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_qc/pecl-mysqlnd_qc-1.2.0.ebuild,v 1.1 2014/10/02 03:47:20 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_qc/pecl-mysqlnd_qc-1.2.0.ebuild,v 1.2 2015/01/04 23:35:13 grknight Exp $
 
 EAPI=5
 
@@ -25,7 +25,11 @@ DEPEND="
 	memcached? ( dev-libs/libmemcached )
 	sqlite? ( dev-db/sqlite:3 )
 	php_targets_php5-4? ( dev-lang/php:5.4[mysqlnd] )
-	php_targets_php5-5? ( dev-lang/php:5.5[-libmysqlclient] )
+	php_targets_php5-5? ( || (
+				 dev-lang/php:5.5[-libmysqlclient,mysql]
+				 dev-lang/php:5.5[-libmysqlclient,mysqli]
+				)
+			    )
 "
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-mysqlnd_qc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_qc/ChangeLog,v 1.7 2014/10/09 20:29:41 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_qc/ChangeLog,v 1.8 2015/01/04 23:35:13 grknight Exp $
+
+  04 Jan 2015; Brian Evans <grknight@gentoo.org> pecl-mysqlnd_qc-1.2.0.ebuild:
+  Fix dependencies wrt bug 534616
 
 *pecl-mysqlnd_qc-1.2.0 (02 Oct 2014)
 
