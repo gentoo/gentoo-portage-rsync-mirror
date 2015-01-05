@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.13.ebuild,v 1.1 2014/08/04 10:44:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.15.3.ebuild,v 1.1 2015/01/05 16:43:57 tomka Exp $
 
 EAPI=5
 
@@ -63,7 +63,7 @@ src_install() {
 			webapp_serverowned -R "${MY_HTDOCSDIR}/${DIR}"
 	done
 
-	# In the old days we put a config.php directly and tried to 
+	# In the old days we put a config.php directly and tried to
 	# protect it with the following which did not work reliably.
 	# These days we only install the config.php-dist file.
 	# webapp_configfile "${MY_HTDOCSDIR}"/config.php
@@ -74,6 +74,8 @@ src_install() {
 			newconfd "${FILESDIR}"/ttrssd.confd-r1 ttrssd
 			insinto /etc/logrotate.d/
 			newins "${FILESDIR}"/ttrssd.logrotated ttrssd
+
+			elog "After upgrading, please restart ttrssd"
 	else
 			webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 	fi

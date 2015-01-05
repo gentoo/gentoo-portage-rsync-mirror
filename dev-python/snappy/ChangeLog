@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snappy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snappy/ChangeLog,v 1.9 2014/11/24 14:20:46 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snappy/ChangeLog,v 1.10 2015/01/05 16:50:13 aballier Exp $
+
+  05 Jan 2015; Alexis Ballier <aballier@gentoo.org> snappy-0.5-r2.ebuild:
+  keyword ~arm
 
 *snappy-0.5-r2 (24 Nov 2014)
 

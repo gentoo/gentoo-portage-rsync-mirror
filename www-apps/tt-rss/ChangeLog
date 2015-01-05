@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/tt-rss
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.35 2014/11/07 09:29:50 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.36 2015/01/05 16:43:57 tomka Exp $
+
+*tt-rss-1.15.3 (05 Jan 2015)
+
+  05 Jan 2015; Thomas Kahle <tomka@gentoo.org> +tt-rss-1.15.3.ebuild,
+  -tt-rss-1.13.ebuild:
+  bump to 1.15.3, remove 1.13
 
 *tt-rss-1.14 (07 Nov 2014)
 

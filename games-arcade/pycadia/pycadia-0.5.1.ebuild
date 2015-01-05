@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/pycadia-0.5.1.ebuild,v 1.16 2014/08/10 21:22:37 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/pycadia-0.5.1.ebuild,v 1.17 2015/01/05 16:43:55 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Pycadia. Home to vector gaming, python style"
@@ -24,18 +24,18 @@ src_unpack() {
 	{
 		echo "#!/bin/sh"
 		echo "cd ${GAMES_DATADIR}/${PN}"
-		echo "exec python ./pycadia.py \"\${@}\""
+		echo "exec python2 ./pycadia.py \"\${@}\""
 	} > "${T}/pycadia"
 }
 
 src_install() {
-	dogamesbin "${T}/pycadia" || die
+	dogamesbin "${T}/pycadia"
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r {glade,pixmaps,sounds} *.py pycadia.conf || die
+	doins -r {glade,pixmaps,sounds} *.py pycadia.conf
 
 	exeinto "${GAMES_DATADIR}/${PN}"
-	doexe pycadia.py spacewarpy.py vektoroids.py || die
+	doexe pycadia.py spacewarpy.py vektoroids.py
 
 	newicon pixmaps/pysteroids.png ${PN}.png
 	make_desktop_entry ${PN} Pycadia

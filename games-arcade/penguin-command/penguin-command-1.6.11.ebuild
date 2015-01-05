@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.11.ebuild,v 1.5 2014/05/15 16:30:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.11.ebuild,v 1.6 2015/01/05 16:35:00 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A clone of the classic Missile Command game"
@@ -17,10 +17,10 @@ IUSE=""
 DEPEND="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-mixer[mod]
 	media-libs/sdl-image[jpeg,png]"
+RDEPEND="${DEPEND}"
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	newicon data/gfx/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Penguin Command" ${PN}
 	prepgamesdirs
