@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/moleinvasion-0.4-r1.ebuild,v 1.5 2012/03/22 00:22:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/moleinvasion-0.4-r1.ebuild,v 1.6 2015/01/05 14:33:17 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Mole infested 2D platform game"
@@ -20,7 +20,7 @@ DEPEND="media-libs/libsdl[opengl,video]
 	media-libs/sdl-image[jpeg,png]
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-ttf"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P}/src
 
 src_prepare() {
@@ -37,7 +37,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-data || die "emake install failed"
+	emake DESTDIR="${D}" install install-data
 	newicon ../gfx/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Mole Invasion"
 	doman ../debian/*.6

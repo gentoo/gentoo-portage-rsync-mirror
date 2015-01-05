@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fast-stemmer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast-stemmer/ChangeLog,v 1.6 2014/05/21 01:55:08 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast-stemmer/ChangeLog,v 1.7 2015/01/05 14:48:16 mrueg Exp $
+
+  05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -fast-stemmer-1.0.2-r1.ebuild,
+  fast-stemmer-1.0.2-r2.ebuild:
+  Add ruby22 support. Remove old.
 
   21 May 2014; Manuel Rüger <mrueg@gentoo.org> fast-stemmer-1.0.2-r1.ebuild,
   fast-stemmer-1.0.2-r2.ebuild:
