@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/icebreaker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.18 2013/06/24 20:45:12 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/ChangeLog,v 1.19 2015/01/06 18:56:45 mr_bones_ Exp $
+
+  06 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> icebreaker-1.9.6.ebuild:
+  use epatch
 
   24 Jun 2013; Tupone Alfredo <tupone@gentoo.org> icebreaker-1.9.6.ebuild,
   +files/icebreaker-1.9.6-ovfl.patch:
@@ -88,4 +91,3 @@
   files/digest-icebreaker-1.2.1 :
 
   New game
-

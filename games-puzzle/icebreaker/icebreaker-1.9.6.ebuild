@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.6.ebuild,v 1.2 2013/06/24 20:45:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.6.ebuild,v 1.3 2015/01/06 18:56:45 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -18,10 +18,13 @@ RDEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${P}-ldflags.patch
-	"${FILESDIR}"/${P}-gentoo.patch
-	"${FILESDIR}"/${P}-parallell-install.patch
-	"${FILESDIR}"/${P}-ovfl.patch )
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-parallell-install.patch \
+		"${FILESDIR}"/${P}-ovfl.patch
+}
 
 src_compile() {
 	emake \

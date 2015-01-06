@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ippl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.26 2014/07/12 18:04:05 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.27 2015/01/06 18:40:04 jer Exp $
+
+  06 Jan 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
 *ippl-1.4.14-r4 (12 Jul 2014)
 

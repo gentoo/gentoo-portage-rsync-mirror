@@ -1,10 +1,10 @@
 DEFINED_PHASES=install prepare
 DESCRIPTION=netcat clone extended with twofish encryption
 EAPI=5
-HOMEPAGE=http://farm9.org/Cryptcat/
+HOMEPAGE=http://cryptcat.sourceforge.net/
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/cryptcat/cryptcat-unix-1.2.1.tar
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=016f824a64baeb1695b423aba6ea391f
+_md5_=81aefe81b542e6713aa01c96d0e4a09d
