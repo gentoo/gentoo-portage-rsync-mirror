@@ -21,6 +21,8 @@
   while it's running. That's right. With a 100% Common Lisp window manager there's no stopping the hacks. Just re-eval and GO!
 </longdescription>
 <use>
+  <flag name="doc">Include documentation</flag>
+  <flag name="emacs">Add support for GNU Emacs</flag>
   <flag name="clisp">Use CLISP for the runtime</flag>
   <flag name="ecl">Use SCL for the runtime</flag>
   <flag name="sbcl">Use SBCL for the runtime</flag>

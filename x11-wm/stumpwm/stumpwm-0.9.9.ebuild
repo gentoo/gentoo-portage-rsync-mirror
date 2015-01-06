@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/stumpwm-0.9.9.ebuild,v 1.3 2015/01/06 13:27:35 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/stumpwm-0.9.9.ebuild,v 1.4 2015/01/06 13:42:30 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc clisp ecl +sbcl emacs"
+IUSE="doc emacs clisp ecl +sbcl"
 
 RESTRICT="strip mirror"
 

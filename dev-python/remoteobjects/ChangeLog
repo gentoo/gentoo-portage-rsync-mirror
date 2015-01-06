@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/remoteobjects
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/ChangeLog,v 1.3 2011/09/21 08:46:37 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/ChangeLog,v 1.4 2015/01/06 13:32:56 idella4 Exp $
+
+  06 Jan 2015; Ian Delaney <idella4@gentoo.org> remoteobjects-99999999.ebuild:
+  conversion -> distutils-r1
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org>
   remoteobjects-99999999.ebuild:

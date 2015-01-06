@@ -1,14 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/remoteobjects-99999999.ebuild,v 1.3 2011/09/21 08:46:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/remoteobjects-99999999.ebuild,v 1.4 2015/01/06 13:32:56 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-DISTUTILS_SRC_TEST="nosetests"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 if [[ ${PV} == "99999999" ]] ; then
 	EGIT_REPO_URI="git://github.com/LegNeato/${PN}.git
@@ -22,17 +19,20 @@ HOMEPAGE="https://github.com/LegNeato/remoteobjects"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="test"
 
-RDEPEND="dev-python/simplejson
-	dev-python/httplib2"
+RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]
+	dev-python/httplib2[${PYTHON_USEDEP}]"
 DEPEND="${DEPEND}
-	dev-python/setuptools
-	test? ( dev-python/mox )"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	test? ( dev-python/mox[${PYTHON_USEDEP}] )"
 
-src_prepare() {
-	distutils_src_prepare
-
+python_prepare_all() {
 	# Disable failing tests.
 	sed -e "s/test_get_bad_encoding/_&/" -i tests/test_http.py
+	distutils-r1_python_prepare_all
+}
+
+pthon_test() {
+	nosetests || die "tests failed"
 }
