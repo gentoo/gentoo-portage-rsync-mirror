@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/htslib/htslib-1.1.ebuild,v 1.1 2015/01/06 11:57:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/htslib/htslib-1.1.ebuild,v 1.2 2015/01/06 12:14:13 jlec Exp $
 
 EAPI=5
 
@@ -35,12 +35,9 @@ src_install() {
 		prefix="${EPREFIX}/usr" \
 		install
 
-	rm "${ED}/usr/share/man/man1/libhts.so.1" || die
-
 	if ! use static-libs; then
 		find "${ED}" -type f -name "*.a" -delete || die
 	fi
 
 	dodoc README
 }
-

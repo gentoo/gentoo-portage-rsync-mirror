@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/automatictexplugin-12.5-r1.ebuild,v 1.1 2015/01/06 11:46:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/automatictexplugin-12.5-r1.ebuild,v 1.2 2015/01/06 12:18:44 mgorny Exp $
 
 EAPI=5
 
@@ -27,6 +27,8 @@ RDEPEND="|| ( app-editors/vim[python,${PYTHON_USEDEP}] app-editors/gvim[python,$
 	dev-tex/detex
 	virtual/tex-base
 	${PYTHON_DEPS}"
+
+REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
 src_prepare() {
 	python_fix_shebang .

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/paperwork
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/paperwork/ChangeLog,v 1.1 2014/09/30 11:45:41 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/paperwork/ChangeLog,v 1.2 2015/01/06 12:26:30 voyageur Exp $
+
+*paperwork-0.2.1 (06 Jan 2015)
+
+  06 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> +paperwork-0.2.1.ebuild:
+  Version bump, thanks mrueg in bug #533718
 
 *paperwork-0.2 (30 Sep 2014)
 
