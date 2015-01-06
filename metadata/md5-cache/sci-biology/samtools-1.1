@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=sys-libs/ncurses ~sci-libs/htslib-1.1 virtual/pkgconfig
+DESCRIPTION=Utilities for SAM (Sequence Alignment/Map), a format for large nucleotide sequence alignments
+EAPI=5
+HOMEPAGE=http://www.htslib.org/
+IUSE=examples python_targets_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos
+LICENSE=MIT
+RDEPEND=sys-libs/ncurses ~sci-libs/htslib-1.1 dev-lang/lua dev-lang/perl
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=mirror://sourceforge/samtools/samtools-1.1.tar.bz2
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=3039252cccf9c94811ce7a09a7379b37

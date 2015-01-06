@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/slimv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.28 2014/04/26 18:53:00 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.29 2015/01/06 12:44:11 mgorny Exp $
+
+*slimv-0.9.12-r1 (06 Jan 2015)
+
+  06 Jan 2015; Michał Górny <mgorny@gentoo.org> +slimv-0.9.12-r1.ebuild:
+  Convert to python-single-r1, enforce a match on Python version used by vim.
 
   26 Apr 2014; Agostino Sarubbo <ago@gentoo.org> slimv-0.9.12.ebuild:
   Stable for x86, wrt bug #502640
