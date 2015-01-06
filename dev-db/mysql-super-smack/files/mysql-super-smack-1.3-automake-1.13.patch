@@ -231,12 +231,13 @@ diff -aurwN a/m4/postgresql.m4 b/m4/postgresql.m4
 diff -aurwN a/src/Makefile.am b/src/Makefile.am
 --- a/src/Makefile.am	2014-06-20 14:37:35.266956252 -0400
 +++ b/src/Makefile.am	2014-06-20 15:12:40.278227315 -0400
-@@ -16,7 +16,7 @@
+@@ -16,7 +16,8 @@
  
  # Process this file with automake to create Makefile.in
  
 -INCLUDES = @MYSQL_INCLUDE@ @PGSQL_INCLUDE@ @ORACLE_INCLUDE@
 +AM_CPPFLAGS = @MYSQL_INCLUDE@ @PGSQL_INCLUDE@ @ORACLE_INCLUDE@
++BUILT_SOURCES = super-smack-yacc.hh
  
  noinst_PROGRAMS=test-dictionary test-client test_tcp_client
  bin_PROGRAMS=super-smack super-smack-gen-data

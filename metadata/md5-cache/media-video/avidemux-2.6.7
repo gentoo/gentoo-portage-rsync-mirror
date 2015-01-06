@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=~media-libs/avidemux-core-2.6.7:2.6[nls?,sdl?,vaapi?,vdpau?,video_cards_fglrx?,xv?] opengl? ( virtual/opengl:0 ) qt4? ( >=dev-qt/qtgui-4.8.3:4 ) vaapi? ( x11-libs/libva:0 ) video_cards_fglrx? ( x11-libs/xvba-video:0 ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=~media-libs/avidemux-core-2.6.7:2.6[nls?,sdl?,vaapi?,vdpau?,video_cards_fglrx?,xv?] opengl? ( virtual/opengl:0 ) qt4? ( >=dev-qt/qtgui-4.8.3:4 ) vaapi? ( x11-libs/libva:0 ) video_cards_fglrx? ( || ( >=x11-drivers/ati-drivers-14.12-r3 x11-libs/xvba-video:0 ) ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Video editor designed for simple cutting, filtering and encoding tasks
 EAPI=5
 HOMEPAGE=http://fixounet.free.fr/avidemux
@@ -7,8 +7,8 @@ IUSE=debug opengl nls qt4 sdl vaapi vdpau video_cards_fglrx xv linguas_ca lingua
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-1 GPL-2 MIT PSF-2 public-domain
 PDEPEND=~media-libs/avidemux-plugins-2.6.7:2.6[opengl?,qt4?]
-RDEPEND=~media-libs/avidemux-core-2.6.7:2.6[nls?,sdl?,vaapi?,vdpau?,video_cards_fglrx?,xv?] opengl? ( virtual/opengl:0 ) qt4? ( >=dev-qt/qtgui-4.8.3:4 ) vaapi? ( x11-libs/libva:0 ) video_cards_fglrx? ( x11-libs/xvba-video:0 )
+RDEPEND=~media-libs/avidemux-core-2.6.7:2.6[nls?,sdl?,vaapi?,vdpau?,video_cards_fglrx?,xv?] opengl? ( virtual/opengl:0 ) qt4? ( >=dev-qt/qtgui-4.8.3:4 ) vaapi? ( x11-libs/libva:0 ) video_cards_fglrx? ( || ( >=x11-drivers/ati-drivers-14.12-r3 x11-libs/xvba-video:0 ) )
 SLOT=2.6
 SRC_URI=mirror://sourceforge/avidemux/avidemux/2.6.7/avidemux_2.6.7.tar.gz
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=863d6b3785d8c2cf28d4791ef8e95f9d
+_md5_=a66687c8dc70c57ecee9e7c7b9406754

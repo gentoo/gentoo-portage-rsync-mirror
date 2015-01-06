@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.2_alpha.ebuild,v 1.2 2015/01/03 15:56:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.2_alpha-r1.ebuild,v 1.1 2015/01/06 19:50:52 blueness Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="-bufferevents nat-pmp scrypt seccomp selinux stats tor-hardening transparent-proxy test upnp web"
+IUSE="-bufferevents nat-pmp scrypt seccomp selinux stats systemd tor-hardening transparent-proxy test upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
@@ -56,6 +56,7 @@ src_configure() {
 		$(use_enable nat-pmp) \
 		$(use_enable scrypt libscrypt) \
 		$(use_enable seccomp) \
+		$(use_enable systemd) \
 		$(use_enable tor-hardening gcc-hardening) \
 		$(use_enable tor-hardening linker-hardening) \
 		$(use_enable transparent-proxy transparent) \

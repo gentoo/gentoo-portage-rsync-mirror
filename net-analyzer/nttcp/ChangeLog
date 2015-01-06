@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nttcp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.21 2014/07/21 15:26:31 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.23 2015/01/06 19:51:39 jer Exp $
+
+  06 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  files/nttcp-1.47-format-security.patch:
+  One more for portability.
+
+*nttcp-1.47-r3 (06 Jan 2015)
+
+  06 Jan 2015; Jeroen Roovers <jer@gentoo.org> -nttcp-1.47-r2.ebuild,
+  +nttcp-1.47-r3.ebuild, files/nttcp-1.47-format-security.patch:
+  Fix more format security warnings.
 
   21 Jul 2014; Jeroen Roovers <jer@gentoo.org>
   files/nttcp-1.47-format-security.patch:

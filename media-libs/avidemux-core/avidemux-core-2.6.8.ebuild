@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.8.ebuild,v 1.2 2014/08/10 21:07:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.8.ebuild,v 1.3 2015/01/06 19:39:11 mrueg Exp $
 
 EAPI="5"
 
@@ -36,8 +36,10 @@ DEPEND="
 	xv? ( x11-libs/libXv:0 )
 	vaapi? ( x11-libs/libva:0 )
 	vdpau? ( x11-libs/libvdpau:0 )
-	video_cards_fglrx? ( x11-libs/xvba-video:0 )
-"
+	video_cards_fglrx? (
+		|| ( >=x11-drivers/ati-drivers-14.12-r3
+			x11-libs/xvba-video:0 )
+		)"
 RDEPEND="
 	$DEPEND
 	nls? ( virtual/libintl:0 )

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.4.1.ebuild,v 1.1 2014/10/27 11:03:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.4.1.ebuild,v 1.2 2015/01/06 19:33:30 mrueg Exp $
 
 EAPI=5
 
@@ -52,7 +52,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 PDEPEND="video_cards_nvidia? ( >=x11-libs/libva-vdpau-driver-0.7.4-r1[${MULTILIB_USEDEP}] )
 	vdpau? ( >=x11-libs/libva-vdpau-driver-0.7.4-r1[${MULTILIB_USEDEP}] )
-	video_cards_fglrx? ( >=x11-libs/xvba-video-0.8.0-r1[${MULTILIB_USEDEP}] )
+	video_cards_fglrx? (
+		|| ( >=x11-drivers/ati-drivers-14.12-r3[${MULTILIB_USEDEP}]
+			>=x11-libs/xvba-video-0.8.0-r1[${MULTILIB_USEDEP}] )
+		)
 	video_cards_intel? ( >=x11-libs/libva-intel-driver-1.2.2-r1[${MULTILIB_USEDEP}] )
 	"
 
