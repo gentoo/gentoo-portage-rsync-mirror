@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/po-mode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.48 2014/11/01 19:59:56 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.49 2015/01/06 03:51:27 ulm Exp $
+
+*po-mode-0.19.4 (06 Jan 2015)
+
+  06 Jan 2015; Ulrich Müller <ulm@gentoo.org> +po-mode-0.19.4.ebuild:
+  Version bump.
 
 *po-mode-0.19.3 (01 Nov 2014)
 

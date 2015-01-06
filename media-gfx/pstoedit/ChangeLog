@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.90 2015/01/01 11:20:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.91 2015/01/06 03:47:01 mrueg Exp $
+
+  06 Jan 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/pstoedit-3.50-parallel.patch, -files/pstoedit-3.50-plugin-close.patch,
+  -files/pstoedit-3.50-swf.patch, -pstoedit-3.50-r1.ebuild,
+  -pstoedit-3.50.ebuild, -pstoedit-3.60.ebuild:
+  Remove old.
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pstoedit-3.62.ebuild:
   Stable for ppc64, wrt bug #530658
