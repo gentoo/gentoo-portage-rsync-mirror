@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-7.02.ebuild,v 1.1 2014/12/20 03:07:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-7.02.ebuild,v 1.2 2015/01/06 02:35:10 floppym Exp $
 
 EAPI="5"
 
@@ -11,9 +11,9 @@ inherit eutils linux-info python-any-r1
 
 DESCRIPTION="Free client for Cisco AnyConnect SSL VPN software"
 HOMEPAGE="http://www.infradead.org/openconnect.html"
-VPNC_REV=df5808b3
+VPNC_VER=20140806
 SRC_URI="ftp://ftp.infradead.org/pub/${PN}/${P}.tar.gz
-	http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/${VPNC_REV}:/vpnc-script -> vpnc-script-${VPNC_REV}.sh"
+	ftp://ftp.infradead.org/pub/vpnc-scripts/vpnc-scripts-${VPNC_VER}.tar.gz"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5"
@@ -79,10 +79,6 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${P}.tar.gz
-}
-
 src_configure() {
 	strip-linguas $ILINGUAS
 	echo ${LINGUAS} > po/LINGUAS
@@ -114,7 +110,7 @@ src_install() {
 	insinto /etc/openconnect
 	newconfd "${FILESDIR}"/openconnect.conf.in openconnect
 	exeinto /etc/openconnect
-	newexe "${DISTDIR}"/vpnc-script-${VPNC_REV}.sh openconnect.sh
+	newexe "${WORKDIR}"/vpnc-scripts-${VPNC_VER}/vpnc-script openconnect.sh
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/openconnect.logrotate openconnect
 	keepdir /var/log/openconnect
