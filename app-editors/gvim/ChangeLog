@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.450 2015/01/04 05:46:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.451 2015/01/06 00:19:52 radhermit Exp $
+
+  06 Jan 2015; Tim Harder <radhermit@gentoo.org> gvim-9999.ebuild:
+  Remove old EAPI specific EROOT fallback.
 
 *gvim-7.4.560 (04 Jan 2015)
 
