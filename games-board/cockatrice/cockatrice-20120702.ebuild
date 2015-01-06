@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.6 2014/03/01 22:24:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/cockatrice-20120702.ebuild,v 1.7 2015/01/05 23:07:31 mr_bones_ Exp $
 
-EAPI=3
+EAPI=5
 inherit cmake-utils eutils gnome2-utils games
 
 DESCRIPTION="An open-source multiplatform software for playing card games over a network"

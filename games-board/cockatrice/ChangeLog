@@ -1,6 +1,10 @@
 # ChangeLog for games-board/cockatrice
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.7 2014/11/25 23:08:51 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cockatrice/ChangeLog,v 1.8 2015/01/05 23:07:31 mr_bones_ Exp $
+
+  05 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  cockatrice-20120702.ebuild:
+  EAPI=5
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
