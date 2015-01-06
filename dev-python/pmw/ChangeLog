@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pmw
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.46 2014/11/25 09:57:01 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.47 2015/01/06 11:18:41 idella4 Exp $
+
+  06 Jan 2015; Ian Delaney <idella4@gentoo.org> pmw-2.0.0-r2.ebuild:
+  clean old impl
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> pmw-2.0.0-r2.ebuild:
   Support python 3.4
