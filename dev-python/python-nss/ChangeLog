@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-nss
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/ChangeLog,v 1.6 2012/02/22 02:48:23 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/ChangeLog,v 1.7 2015/01/05 23:47:47 idella4 Exp $
+
+*python-nss-0.12-r1 (05 Jan 2015)
+
+  05 Jan 2015; Ian Delaney <idella4@gentoo.org> +python-nss-0.12-r1.ebuild,
+  -python-nss-0.12.ebuild, -python-nss-0.8-r1.ebuild, -python-nss-0.8.ebuild:
+  revbump; conversion -> distutils-r1, rm old versions and disused patch
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-nss-0.12.ebuild,
   python-nss-0.8-r1.ebuild, python-nss-0.8.ebuild:
@@ -29,4 +35,3 @@
   30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> +python-nss-0.8.ebuild,
   +files/gentoo_lib_name.patch, +metadata.xml:
   Add dev-python/python-nss, thanks to slepnoga. Bug #305881
-

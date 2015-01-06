@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.57 2015/01/03 06:34:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.59 2015/01/05 23:48:38 floppym Exp $
+
+  05 Jan 2015; Mike Gilbert <floppym@gentoo.org> flexget-1.2.247.ebuild,
+  flexget-9999.ebuild:
+  Adjust bs4 blocker.
+
+  05 Jan 2015; Mike Gilbert <floppym@gentoo.org> flexget-1.2.247.ebuild,
+  flexget-9999.ebuild:
+  Allow newer versions of python-dateutil.
 
 *flexget-1.2.247 (03 Jan 2015)
 

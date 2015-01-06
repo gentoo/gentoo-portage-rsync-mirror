@@ -1,6 +1,20 @@
 # ChangeLog for media-video/flumotion
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.26 2014/01/08 06:04:33 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.28 2015/01/05 23:47:41 eva Exp $
+
+*flumotion-0.10.1 (05 Jan 2015)
+
+  05 Jan 2015; Gilles Dartiguelongue <eva@gentoo.org> +flumotion-0.10.1.ebuild:
+  Version bump, bug #391381.
+
+*flumotion-0.8.1-r1 (05 Jan 2015)
+
+  05 Jan 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +flumotion-0.8.1-r1.ebuild, +files/flumotion-init-3:
+  Bump to EAPI=5. Switch to python-r1, bug #528538. Fixes build with system
+  interpreter not being python2, bug #431522. Move /var/run/flumotion
+  management to init script, bug #450900. Unittests should now pass, bug
+  #330535.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> flumotion-0.8.1.ebuild:
   Inherit the user eclass for enewuser/etc...
