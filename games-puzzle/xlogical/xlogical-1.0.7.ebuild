@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.9 2013/07/21 11:11:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xlogical/xlogical-1.0.7.ebuild,v 1.10 2015/01/06 19:07:52 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools versionator eutils games
 
 MY_PV=$(replace_version_separator 2 '-' )
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="alt_gfx"
 
-RDEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-image[jpeg]
 	media-libs/sdl-mixer[mod]"
 DEPEND="${RDEPEND}
@@ -39,18 +39,19 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
+	mv configure.in configure.ac
 	eautoreconf
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r ${PN}.{properties,levels} music sound images || die
+	doins -r ${PN}.{properties,levels} music sound images
 	find "${D}" -name "Makefile*" -exec rm -f '{}' +
 
 	insinto "${GAMES_STATEDIR}"/${PN}
-	doins ${PN}.scores || die
+	doins ${PN}.scores
 	fperms 0660 "${GAMES_STATEDIR}"/${PN}/${PN}.scores
 
 	dodoc AUTHORS ChangeLog NEWS README TODO

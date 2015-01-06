@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.372 2015/01/06 18:37:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.373 2015/01/06 19:26:12 mrueg Exp $
+
+*ati-drivers-14.12-r3 (06 Jan 2015)
+
+  06 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +ati-drivers-14.12-r3.ebuild:
+  Proxy commit for Emil Karlson. Fixes bug #534710 and bug #534398.
 
   06 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -ati-drivers-14.12-r1.ebuild,
   -ati-drivers-14.6_beta1.ebuild, -ati-drivers-14.9.ebuild:
