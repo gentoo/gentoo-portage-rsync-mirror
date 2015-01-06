@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpress/vimpress-3.2.0.ebuild,v 1.3 2012/12/04 11:23:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpress/vimpress-3.2.0.ebuild,v 1.4 2015/01/06 13:12:40 mgorny Exp $
 
 EAPI=4
+PYTHON_COMPAT=( python2_7 )
 
-inherit vim-plugin
+inherit python-single-r1 vim-plugin
 
 DESCRIPTION="vim plugin: manage wordpress blogs from vim"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3510"
@@ -12,8 +13,9 @@ LICENSE="vim"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="|| ( app-editors/vim[python] app-editors/gvim[python] )
-	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
+RDEPEND="|| ( app-editors/vim[python,${PYTHON_USEDEP}] app-editors/gvim[python,${PYTHON_USEDEP}] )
+	${PYTHON_DEPS}
 	dev-python/markdown"
+REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
 VIM_PLUGIN_HELPFILES="${PN}.txt"
