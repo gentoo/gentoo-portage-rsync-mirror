@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.562 2014/12/31 18:27:16 alonbl Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.563 2015/01/06 17:54:26 k_f Exp $
+
+  06 Jan 2015; Kristian Fiskerstrand <k_f@gentoo.org> gnupg-2.1.1-r1.ebuild:
+  Gnupg 2.1 require the internal dirmngr to be used and provide this by default
+  so we make this a blocker
 
 *gnupg-2.0.26-r3 (31 Dec 2014)
 *gnupg-2.1.1-r1 (31 Dec 2014)
