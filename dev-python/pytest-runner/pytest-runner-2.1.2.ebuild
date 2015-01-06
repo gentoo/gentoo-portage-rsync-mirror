@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-runner/pytest-runner-2.1.2.ebuild,v 1.1 2014/12/06 11:37:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-runner/pytest-runner-2.1.2.ebuild,v 1.2 2015/01/06 16:01:54 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://pypi.python.org/pypi/pytest-runner"
 SRC_URI="mirror://pypi/p/${PN}/${P}.zip"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 IUSE=""
 

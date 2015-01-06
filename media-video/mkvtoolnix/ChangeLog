@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.211 2015/01/05 01:44:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.212 2015/01/06 16:21:49 radhermit Exp $
+
+  06 Jan 2015; Tim Harder <radhermit@gentoo.org> mkvtoolnix-7.5.0.ebuild:
+  Add build support for ruby-2.2 (bug #535738).
 
 *mkvtoolnix-7.5.0 (05 Jan 2015)
 

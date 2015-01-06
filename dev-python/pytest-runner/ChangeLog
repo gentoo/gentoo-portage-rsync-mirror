@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest-runner
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-runner/ChangeLog,v 1.9 2014/12/06 11:37:11 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-runner/ChangeLog,v 1.10 2015/01/06 16:01:54 nimiux Exp $
+
+  06 Jan 2015; Chema Alonso <nimiux@gentoo.org> pytest-runner-2.1.2.ebuild:
+  Stable for amd64 wrt bug #535358
 
 *pytest-runner-2.1.2 (06 Dec 2014)
 

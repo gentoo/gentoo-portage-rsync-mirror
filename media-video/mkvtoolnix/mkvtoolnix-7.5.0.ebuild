@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-7.5.0.ebuild,v 1.1 2015/01/05 01:44:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-7.5.0.ebuild,v 1.2 2015/01/06 16:21:49 radhermit Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -23,7 +23,7 @@ ruby_atom() {
 
 # hacks to avoid using the ruby eclasses since this requires something similar
 # to the python-any-r1 eclass for ruby which currently doesn't exist
-RUBY_IMPLS=( ruby21 ruby20 )
+RUBY_IMPLS=( ruby22 ruby21 ruby20 )
 RUBY_BDEPS="$(for ruby_impl in "${RUBY_IMPLS[@]}"; do
 	echo "( $(ruby_atom ${ruby_impl}) virtual/rubygems:${ruby_impl} )"; done)"
 
