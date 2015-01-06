@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/gnujump-1.0.8.ebuild,v 1.3 2014/09/12 16:22:38 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnujump/gnujump-1.0.8.ebuild,v 1.4 2015/01/06 10:49:25 tupone Exp $
 
 EAPI=5
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Xjump clone with added features"
 HOMEPAGE="http://gnujump.es.gnu.org"
-SRC_URI="ftp://ftp.gnu.org/gnu/gnujump/${P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

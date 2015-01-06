@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.540.0.ebuild,v 1.2 2014/11/19 19:32:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.540.0.ebuild,v 1.3 2015/01/06 10:42:09 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="A HTML development and delivery Perl Module"
 HOMEPAGE="http://www.masonhq.com/ ${HOMEPAGE}"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="modperl test"
 
 RDEPEND="!modperl? ( virtual/perl-CGI )
