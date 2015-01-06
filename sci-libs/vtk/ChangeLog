@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.123 2015/01/05 15:02:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.124 2015/01/06 09:45:16 aballier Exp $
+
+  06 Jan 2015; Alexis Ballier <aballier@gentoo.org> vtk-6.1.0-r1.ebuild:
+  keyword ~arm
 
 *vtk-6.1.0-r1 (05 Jan 2015)
 

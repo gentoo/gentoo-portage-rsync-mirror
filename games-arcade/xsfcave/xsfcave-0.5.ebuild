@@ -1,7 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/xsfcave-0.5.ebuild,v 1.5 2009/05/31 02:14:29 nyhm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/xsfcave-0.5.ebuild,v 1.6 2015/01/06 09:46:55 tupone Exp $
+EAPI=5
 inherit games
 
 DESCRIPTION="A X11 sfcave clone"
@@ -15,9 +15,9 @@ IUSE=""
 
 DEPEND="x11-libs/libXext
 	x11-libs/libSM"
+RDEPEND="${DEPEND}"
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog THANKS TODO
+	default
 	prepgamesdirs
 }

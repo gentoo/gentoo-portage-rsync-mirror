@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xsfcave
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/ChangeLog,v 1.6 2009/05/31 02:14:29 nyhm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/ChangeLog,v 1.7 2015/01/06 09:46:55 tupone Exp $
+
+  06 Jan 2015; Tupone Alfredo <tupone@gentoo.org> xsfcave-0.5.ebuild:
+  EAPI 5
 
   31 May 2009; Tristan Heaven <nyhm@gentoo.org> xsfcave-0.5.ebuild:
   Fix LICENSE: as-is -> public-domain

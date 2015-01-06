@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xscavenger/xscavenger-1.4.4.ebuild,v 1.9 2012/08/06 16:42:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xscavenger/xscavenger-1.4.4.ebuild,v 1.10 2015/01/06 09:38:29 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Lode-Runner-like arcade game"
@@ -37,12 +37,11 @@ src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
-		EXTRA_LDOPTIONS="${LDFLAGS}" \
-		|| die
+		EXTRA_LDOPTIONS="${LDFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc ../{CREDITS,DOC,README,TODO,changelog}
 	prepgamesdirs
 }

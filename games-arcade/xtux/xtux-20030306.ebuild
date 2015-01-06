@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.18 2010/10/12 04:46:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.19 2015/01/06 09:52:04 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Multiplayer Gauntlet-style arcade game"
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/libXpm"
-
+RDPENED="${DEPEND}"
 S=${WORKDIR}/${PN}
 
 src_prepare() {
@@ -34,16 +34,16 @@ src_prepare() {
 
 src_compile() {
 	# Not parallel-make friendly (bug #247332)
-	emake DATADIR="${GAMES_DATADIR}/xtux/data" common || die "emake failed"
-	emake DATADIR="${GAMES_DATADIR}/xtux/data" ggz    || die "emake failed"
-	emake DATADIR="${GAMES_DATADIR}/xtux/data" server || die "emake failed"
-	emake DATADIR="${GAMES_DATADIR}/xtux/data" client || die "emake failed"
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" common
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" ggz
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" server
+	emake DATADIR="${GAMES_DATADIR}/xtux/data" client
 }
 
 src_install () {
-	dogamesbin xtux tux_serv || die "dogamesbin failed"
+	dogamesbin xtux tux_serv
 	insinto "${GAMES_DATADIR}/xtux"
-	doins -r data/ || die "doins failed"
+	doins -r data/
 	dodoc AUTHORS CHANGELOG README README.GGZ doc/*
 	newicon data/images/icon.xpm ${PN}.xpm
 	make_desktop_entry xtux "Xtux"

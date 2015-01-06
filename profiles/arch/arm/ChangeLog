@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.335 2015/01/03 14:22:39 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.336 2015/01/06 09:44:58 aballier Exp $
+
+  06 Jan 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask vtk[kaapi] as xkaapi doesnt build here
 
   03 Jan 2015; Benda Xu <heroxbd@gentoo.org> package.use.mask:
   Mask anthy[kasumi] and scim-anthy[canna-2ch] use flags: not tested.
