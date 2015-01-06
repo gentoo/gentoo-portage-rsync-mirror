@@ -1,14 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-prctl/python-prctl-1.4.0.ebuild,v 1.1 2013/01/22 08:19:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-prctl/python-prctl-1.5.0-r1.ebuild,v 1.1 2015/01/06 01:03:48 idella4 Exp $
 
-EAPI=3
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-PYTHON_DEPEND="2:2.6"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
-
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Control process attributes through prctl"
 HOMEPAGE="http://github.com/seveas/python-prctl"
@@ -21,8 +18,6 @@ IUSE=""
 
 RDEPEND="sys-libs/libcap"
 DEPEND="${RDEPEND}"
-
-PYTHON_MODNAME="prctl.py"
 
 src_unpack() {
 	unpack ${A}
