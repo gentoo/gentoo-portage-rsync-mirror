@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/chrome-remote-desktop
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrome-remote-desktop/ChangeLog,v 1.1 2015/01/06 20:15:37 vapier Exp $
+
+*chrome-remote-desktop-40.0.2214.44 (06 Jan 2015)
+
+  06 Jan 2015; Mike Frysinger <vapier@gentoo.org>
+  +chrome-remote-desktop-40.0.2214.44.ebuild,
+  +files/chrome-remote-desktop.conf.d, +files/chrome-remote-desktop.rc,
+  +metadata.xml:
+  Initial ebuild.
