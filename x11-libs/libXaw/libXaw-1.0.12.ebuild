@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.12.ebuild,v 1.11 2014/06/18 21:04:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/libXaw-1.0.12.ebuild,v 1.12 2015/01/06 14:29:54 pacho Exp $
 
 EAPI=5
 
@@ -21,6 +21,11 @@ RDEPEND=">=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
 	>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
+
+PATCHES=(
+	# Fix build with gcc -Werror=format-security (from 'master')
+	"${FILESDIR}"/${P}-format-security.patch
+)
 
 src_configure() {
 	XORG_CONFIGURE_OPTIONS=(

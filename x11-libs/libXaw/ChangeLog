@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXaw
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.130 2014/06/18 21:04:57 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.131 2015/01/06 14:29:54 pacho Exp $
+
+  06 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/libXaw-1.0.12-format-security.patch, libXaw-1.0.12.ebuild:
+  Fix build with gcc -Werror=format-security, bug #512404
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXaw-1.0.11-r2.ebuild,
   libXaw-1.0.12.ebuild:
