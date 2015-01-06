@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.2-r1.ebuild,v 1.2 2014/05/15 16:25:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.3.ebuild,v 1.1 2015/01/06 09:27:01 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -10,7 +10,7 @@ REVISION="b177-r50edfd37"
 
 DESCRIPTION="Online multi-player platform 2D shooter"
 HOMEPAGE="http://www.teeworlds.com/"
-SRC_URI="http://www.teeworlds.com/files/${P}-source.tar.gz"
+SRC_URI="https://downloads.teeworlds.com/${P}-src.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	~dev-util/bam-0.4.0"
 
-S=${WORKDIR}/${P}-source
+S=${WORKDIR}/${P}-src
 
 pkg_setup() {
 	python-any-r1_pkg_setup
