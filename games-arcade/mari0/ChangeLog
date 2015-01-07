@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/mari0
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.9 2013/02/07 22:05:31 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/ChangeLog,v 1.10 2015/01/07 09:03:10 tupone Exp $
+
+  07 Jan 2015; Tupone Alfredo <tupone@gentoo.org> mari0-1.6.ebuild,
+  -files/mari0.svg:
+  Big file removed
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> mari0-1.6.ebuild:
   Move Creative Commons licenses to shorter names.

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.10 2013/02/07 22:05:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/mari0/mari0-1.6.ebuild,v 1.11 2015/01/07 09:03:10 tupone Exp $
 
 EAPI=4
 
@@ -10,7 +10,8 @@ MY_P=${P/-/_}
 
 DESCRIPTION="A mix from Nintendo's Super Mario Bros and Valve's Portal"
 HOMEPAGE="http://stabyourself.net/mari0/"
-SRC_URI="${P}.zip"
+SRC_URI="${P}.zip
+	mirror://gentoo/mari0.svg.gz"
 
 LICENSE="CC-BY-NC-SA-3.0"
 SLOT="0"
@@ -37,7 +38,7 @@ src_install() {
 	exeinto "${dir}"
 	doexe ${MY_P}.love
 
-	doicon -s scalable "${FILESDIR}"/${PN}.svg
+	doicon -s scalable ${PN}.svg
 	games_make_wrapper ${PN} "love ${MY_P}.love" "${dir}"
 	make_desktop_entry ${PN}
 
