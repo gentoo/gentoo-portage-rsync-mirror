@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.314 2013/10/20 20:53:56 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.315 2015/01/07 07:34:24 jer Exp $
+
+  07 Jan 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Update e-mail address.
 
   20 Oct 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add Daniel Campbell <dlcampbell@gmx.com> as maintainer

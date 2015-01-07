@@ -1,15 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtslib/rtslib-9999.ebuild,v 1.2 2012/08/09 04:09:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtslib/rtslib-9999.ebuild,v 1.3 2015/01/07 07:35:53 idella4 Exp $
 
-EAPI=4
+EAPI=5
 
 EGIT_REPO_URI="git://linux-iscsi.org/${PN}.git"
-PYTHON_DEPEND="2"
-RESTRICT_PYTHON_ABIS="3.* 2.5-jython"
-SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python2_7 )
 
-inherit eutils distutils git-2 python
+inherit distutils-r1 git-2
 
 DESCRIPTION="RTSLib Community Edition for target_core_mod/ConfigFS"
 HOMEPAGE="http://linux-iscsi.org/"
@@ -21,14 +19,14 @@ KEYWORDS=""
 IUSE=""
 
 DEPEND="
-	dev-python/configobj
-	dev-python/ipaddr
-	dev-python/netifaces
+	dev-python/configobj[${PYTHON_USEDEP}]
+	dev-python/ipaddr[${PYTHON_USEDEP}]
+	dev-python/netifaces[${PYTHON_USEDEP}]
 	"
 RDEPEND="${DEPEND}"
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 	keepdir /var/target/fabric
 	insinto /var/target/fabric
 	doins specs/*.spec

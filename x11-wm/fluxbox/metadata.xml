@@ -7,9 +7,8 @@
 	<name>Panagiotis Christopoulos</name>
 </maintainer>
 <maintainer>
-	<email>dlcampbell@gmx.com</email>
+	<email>contact@sporkbox.us</email>
 	<name>Daniel Campbell</name>
-	<description>Mantainer. Assign bugs to him</description>
 </maintainer>
 	<longdescription><![CDATA[
 		Fluxbox is yet another windowmanager for X. Originally based upon the
