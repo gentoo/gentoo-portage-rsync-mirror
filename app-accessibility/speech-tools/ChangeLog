@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/speech-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.85 2013/08/07 22:46:11 neurogeek Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.86 2015/01/07 10:06:47 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/speech-tools-2.1-underlinking.patch,
+  -files/speech-tools-1.2.96_beta-gcc42.patch,
+  -files/speech-tools-1.2.96_beta-gcc43-include.patch,
+  -files/speech-tools-1.2.96_beta-gcc44.patch,
+  -speech-tools-1.2.96_beta-r2.ebuild, -speech-tools-1.2.96_beta.ebuild,
+  -speech-tools-2.0.95_beta.ebuild, speech-tools-2.1-r2.ebuild:
+  Fix underlinking, bug #493204 by Jaakko Perttilä; drop old
 
   07 Aug 2013; <neurogeek@gentoo.org> speech-tools-2.1-r2.ebuild:
   Bumped rev on patchset and added a patch to fix ncurses[tinfo]. Closes

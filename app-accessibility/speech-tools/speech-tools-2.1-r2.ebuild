@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r2.ebuild,v 1.4 2013/08/07 22:46:11 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r2.ebuild,v 1.5 2015/01/07 10:06:47 pacho Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -19,18 +19,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nas X"
 
-PDEPEND="nas? ( media-libs/nas )
+RDEPEND="
+	nas? ( media-libs/nas )
 	X? ( x11-libs/libX11
 		x11-libs/libXt )
 	>=media-libs/alsa-lib-1.0.20-r1
 	!<app-accessibility/festival-1.96_beta
 	!sys-power/powerman
-	>=sys-libs/ncurses-5.6-r2"
-
-DEPEND="${PDEPEND}
-		virtual/pkgconfig"
-
-RDEPEND=${PDEPEND}
+	>=sys-libs/ncurses-5.6-r2
+"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig
+"
 
 S="${WORKDIR}/speech_tools"
 
@@ -42,6 +42,9 @@ src_prepare() {
 
 	#WRT bug #309983
 	sed -i -e "s:\(GCC_SYSTEM_OPTIONS =\).*:\1:" "${S}"/config/systems/sparc_SunOS5.mak
+
+	# Fix underlinking, bug #493204
+	epatch "${FILESDIR}"/${PN}-2.1-underlinking.patch
 }
 
 src_configure() {
@@ -53,12 +56,12 @@ src_configure() {
 	if ! use X; then
 		sed -i -e "s/-lX11 -lXt//" config/modules/esd_audio.mak
 	fi
-	econf || die
+	econf
 }
 
 src_compile() {
 	emake -j1 CC="$(tc-getCC)" CXX="$(tc-getCXX)" CXX_OTHER_FLAGS="${CXXFLAGS}" CC_OTHER_FLAGS="${CFLAGS}" \
-		LDFLAGS="${LDFLAGS}" || die "Compile failed"
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
