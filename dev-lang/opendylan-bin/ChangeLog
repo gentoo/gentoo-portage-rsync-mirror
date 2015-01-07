@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/opendylan-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan-bin/ChangeLog,v 1.7 2014/01/07 05:28:34 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan-bin/ChangeLog,v 1.8 2015/01/07 04:14:47 patrick Exp $
+
+*opendylan-bin-2014.1 (07 Jan 2015)
+
+  07 Jan 2015; Patrick Lauer <patrick@gentoo.org> +opendylan-bin-2014.1.ebuild:
+  Bump
 
 *opendylan-bin-2013.2 (07 Jan 2014)
 

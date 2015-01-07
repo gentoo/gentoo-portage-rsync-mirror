@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rtf2xml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.7 2012/05/10 16:01:35 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtf2xml/ChangeLog,v 1.8 2015/01/07 04:18:09 idella4 Exp $
+
+*rtf2xml-1.33-r1 (07 Jan 2015)
+
+  07 Jan 2015; Ian Delaney <idella4@gentoo.org> +rtf2xml-1.33-r1.ebuild,
+  -rtf2xml-1.33.ebuild:
+  revbump; conversion -> distutils-r1, rm old
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -rtf2xml-1.32.ebuild:
   Remove old
@@ -25,4 +31,3 @@
   28 May 2006; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
   +rtf2xml-1.32.ebuild:
   initial release, thanks to Andrew Ross work, #112960
-
