@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop-base
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.60 2015/01/02 12:09:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/ChangeLog,v 1.61 2015/01/07 19:34:26 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  -gnome-python-desktop-base-2.32.0.ebuild:
+  Drop old
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
   gnome-python-desktop-base-2.32.0-r1.ebuild:

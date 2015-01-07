@@ -1136,7 +1136,6 @@ app-text/gtkspell:vala - Enable bindings for dev-lang/vala
 app-text/hyperestraier:mecab - Enable app-text/mecab support for Estraier
 app-text/jmupdf:system-mupdf - Link against system version of app-text/mupdf
 app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search library (TeX related)
-app-text/libgxps:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
