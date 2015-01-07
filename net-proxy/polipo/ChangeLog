@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/polipo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.39 2014/01/08 06:26:54 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.40 2015/01/07 14:01:03 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> polipo-9999.ebuild:
   Inherit the user eclass for enewuser/etc...

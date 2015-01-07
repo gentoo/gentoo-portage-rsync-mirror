@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/adzapper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.69 2013/05/26 15:56:18 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/ChangeLog,v 1.70 2015/01/07 13:53:22 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -adzapper-20080508.ebuild,
+  -adzapper-20110915-r1.ebuild, metadata.xml:
+  Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   26 May 2013; Agostino Sarubbo <ago@gentoo.org> adzapper-20110915-r2.ebuild:
   Stable for x86, wrt bug #470568

@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/http-replicator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.45 2014/04/05 07:05:35 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.46 2015/01/07 13:58:21 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -http-replicator-3.0-r2.ebuild,
+  -http-replicator-3.0-r3.ebuild, -http-replicator-4.0_alpha2-r3.ebuild,
+  metadata.xml:
+  Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   05 Apr 2014; Pacho Ramos <pacho@gentoo.org> http-replicator-3.0-r4.ebuild:
   ppc stable, bug #499316

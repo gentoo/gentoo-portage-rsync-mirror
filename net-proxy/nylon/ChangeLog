@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/nylon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.18 2013/12/24 12:49:01 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.19 2015/01/07 13:59:56 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -nylon-1.21.ebuild:
+  Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nylon-1.21-r1.ebuild:
   Stable for x86, wrt bug #474288

@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/oops
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.28 2014/01/08 06:24:04 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.29 2015/01/07 14:00:17 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  -oops-1.5.24_pre20050503-r2.ebuild, metadata.xml:
+  Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   oops-1.5.24_pre20050503-r2.ebuild, oops-1.5.24_pre20050503-r4.ebuild,

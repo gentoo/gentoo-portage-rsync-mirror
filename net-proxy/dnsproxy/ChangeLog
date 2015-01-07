@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dnsproxy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/ChangeLog,v 1.15 2013/03/04 16:41:51 dastergon Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/ChangeLog,v 1.16 2015/01/07 13:56:51 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   04 Mar 2013; Pavlos Ratis <dastergon@gentoo.org> dnsproxy-1.16-r1.ebuild:
   added GPL-2 to LICENSE, see bug #426126
