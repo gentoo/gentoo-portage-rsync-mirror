@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/sshproxy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.17 2014/01/08 06:24:17 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.18 2015/01/07 14:03:58 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   sshproxy-0.6.0_beta2-r1.ebuild:

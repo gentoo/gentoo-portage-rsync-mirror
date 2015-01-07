@@ -5,7 +5,6 @@
     <email>eras@gentoo.org</email>
     <name>Eray Aslan</name>
   </maintainer>
-  <herd>net-proxy</herd>
   <longdescription>A full-featured web proxy cache</longdescription>
   <use>
     <flag name="ecap">Adds support for loadable content adaptation modules

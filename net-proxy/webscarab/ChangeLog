@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/webscarab
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.16 2012/03/25 07:25:05 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/ChangeLog,v 1.17 2015/01/07 14:04:58 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   25 Mar 2012; Tim Harder <radhermit@gentoo.org> webscarab-20070504.ebuild:
   Update HOMEPAGE (bug #387243).
@@ -73,4 +77,3 @@
   09 Apr 2005; Alin Nastac <mrness@gentoo.org> +files/webscarab.sh,
   +metadata.xml, +webscarab-20050311.ebuild:
   Initial import from bug #87126, thanks to Michael Zanetta <grimmlin@pentoo.ch>.
-

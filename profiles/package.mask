@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16268 2015/01/07 12:07:22 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16269 2015/01/07 14:13:30 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -593,13 +593,6 @@ media-gfx/phototonic
 >=media-sound/drumstick-1.0.0
 >=media-sound/kmetronome-1.0.0
 x11-misc/kaqaz
-
-# Sergey Popov <pinkbyte@gentoo.org> (04 Sep 2014)
-# Security mask, wrt bugs #488212, #498164, #500260,
-# #507802 and #518718
-<virtual/mysql-5.5
-<dev-db/mysql-5.5.39
-<dev-db/mariadb-5.5.39
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (03 Sep 2014)
 # Temporary mask until it is verified to work

@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squirm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.12 2012/12/17 09:32:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.13 2015/01/07 14:03:41 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -squirm-1.23.ebuild,
+  -squirm-1.26.ebuild, metadata.xml:
+  Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   17 Dec 2012; Agostino Sarubbo <ago@gentoo.org> squirm-1.26-r1.ebuild:
   Stable for ppc, wrt bug #441496

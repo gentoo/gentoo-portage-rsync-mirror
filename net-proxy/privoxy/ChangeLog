@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/privoxy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.94 2014/11/04 08:30:57 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.95 2015/01/07 14:01:53 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -privoxy-3.0.21-r2.ebuild,
+  -privoxy-3.0.21.ebuild, metadata.xml:
+  Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   04 Nov 2014; Jeroen Roovers <jer@gentoo.org>
   -files/privoxy-3.0.12-gentoo.patch, -files/privoxy-3.0.13_beta-gentoo.patch,

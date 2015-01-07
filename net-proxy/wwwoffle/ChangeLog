@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/wwwoffle
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.61 2013/03/31 10:26:44 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.62 2015/01/07 14:05:27 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -wwwoffle-2.9h.ebuild,
+  metadata.xml:
+  Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> wwwoffle-2.9i.ebuild:
   Stable for sparc, wrt bug #457462

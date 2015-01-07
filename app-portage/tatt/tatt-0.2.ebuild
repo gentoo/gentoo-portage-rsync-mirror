@@ -1,11 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-0.1.ebuild,v 1.3 2014/04/28 19:48:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-0.2.ebuild,v 1.2 2015/01/07 14:17:58 tomka Exp $
 
 EAPI=5
 
-#configobj does not support python-3
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
 inherit distutils-r1
 
@@ -19,11 +18,10 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+templates"
 
 RDEPEND="
-	${PYTHON_DEPS}
 	app-portage/eix
 	app-portage/gentoolkit
 	www-client/pybugz
-	dev-python/configobj"
+	dev-python/configobj[${PYTHON_USEDEP}]"
 DEPEND="
 	${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
@@ -34,4 +32,6 @@ python_install_all() {
 		insinto "/usr/share/${PN}"
 		doins -r templates || die
 	fi
+	doman tatt.1
+	doman tatt.5
 }

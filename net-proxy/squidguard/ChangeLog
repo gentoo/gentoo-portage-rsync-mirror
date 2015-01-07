@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squidguard
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.47 2014/08/10 20:35:44 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.48 2015/01/07 14:03:19 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-
+  dev@lists.gentoo.org/msg66357.html
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> squidguard-1.4-r4.ebuild,
   squidguard-1.5_beta.ebuild:

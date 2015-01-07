@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/tatt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.8 2014/12/23 15:51:50 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.10 2015/01/07 14:17:58 tomka Exp $
+
+  07 Jan 2015; Thomas Kahle <tomka@gentoo.org> tatt-0.2.ebuild:
+  Install manpages also in non-live ebuild
+
+*tatt-0.2 (07 Jan 2015)
+
+  07 Jan 2015; Thomas Kahle <tomka@gentoo.org> +tatt-0.2.ebuild,
+  -tatt-0.1.ebuild, tatt-9999.ebuild:
+  bump to 0.2, remove old, fix python stuff (bug #533762)
 
   23 Dec 2014; Justin Lecher <jlec@gentoo.org> tatt-9999.ebuild, metadata.xml:
   Move to git-r3; fix python eclass usage

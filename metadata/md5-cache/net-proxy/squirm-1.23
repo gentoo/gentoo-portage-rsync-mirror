@@ -1,8 +1,0 @@
-DEFINED_PHASES=install postinst unpack
-DESCRIPTION=A redirector for Squid
-HOMEPAGE=http://squirm.foote.com.au
-KEYWORDS=ppc x86
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=http://squirm.foote.com.au/squirm-1.23.tgz
-_md5_=46bce01e202526ef31ec85fc757957d3
