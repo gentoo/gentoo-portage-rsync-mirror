@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/OpenNI
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenNI/ChangeLog,v 1.1 2014/12/19 14:19:09 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenNI/ChangeLog,v 1.2 2015/01/07 11:06:24 aballier Exp $
+
+  07 Jan 2015; Alexis Ballier <aballier@gentoo.org> OpenNI-1.5.7.10.ebuild,
+  OpenNI-9999.ebuild:
+  add missing tinyxml dep, bug #535854
 
 *OpenNI-9999 (19 Dec 2014)
 *OpenNI-1.5.7.10 (19 Dec 2014)

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenNI/OpenNI-1.5.7.10.ebuild,v 1.1 2014/12/19 14:19:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenNI/OpenNI-1.5.7.10.ebuild,v 1.2 2015/01/07 11:06:24 aballier Exp $
 
 EAPI=5
 
@@ -31,6 +31,7 @@ RDEPEND="
 	virtual/libusb:1
 	virtual/libudev
 	virtual/jpeg:0
+	dev-libs/tinyxml
 	opengl? ( media-libs/freeglut !dev-libs/OpenNI2[opengl] )
 	java? ( >=virtual/jre-1.5 )
 "
