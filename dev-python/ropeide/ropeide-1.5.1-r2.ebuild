@@ -1,14 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ropeide/ropeide-1.5.1-r1.ebuild,v 1.4 2012/02/22 05:45:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ropeide/ropeide-1.5.1-r2.ebuild,v 1.1 2015/01/07 02:59:28 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2:2.5"
-PYTHON_USE_WITH="tk"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.* 2.7-pypy-* *-jython"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
+PYTHON_REQ_USE="tk"
 
 DESCRIPTION="Python refactoring IDE"
 HOMEPAGE="http://rope.sourceforge.net/ropeide.html http://pypi.python.org/pypi/ropeide"
@@ -19,13 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=">=dev-python/rope-0.8.4"
+DEPEND=">=dev-python/rope-0.8.4[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
-src_install() {
-	distutils_src_install
-
+python_install_all() {
 	if use doc; then
 		dodoc docs/*.txt || die "dodoc failed"
 	fi
+	distutils-r1_python_install_all
 }

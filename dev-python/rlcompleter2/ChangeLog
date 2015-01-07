@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rlcompleter2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/ChangeLog,v 1.13 2012/02/22 07:30:21 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/ChangeLog,v 1.14 2015/01/07 02:48:51 idella4 Exp $
+
+*rlcompleter2-0.98-r1 (07 Jan 2015)
+
+  07 Jan 2015; Ian Delaney <idella4@gentoo.org> +rlcompleter2-0.98-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> rlcompleter2-0.98.ebuild:
   Restricting jython properly
@@ -48,4 +53,3 @@
 
   29 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> rlcompleter2-0.95.ebuild:
   Initial import. #17595
-
