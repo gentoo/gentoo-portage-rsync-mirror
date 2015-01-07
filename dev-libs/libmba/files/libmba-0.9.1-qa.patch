@@ -75,8 +75,9 @@ Patch written by Kacper Kowalik <xarthisius.kk@gmail.com>
  
 -install: mktool
 -	-$(MKTOOL) -i $(ARNAME) $(libdir)
+-	-$(MKTOOL) -i -libname $(LIBNAME) -libvers $(LIBVERS) $(libdir)
 +install: install-ar
- 	-$(MKTOOL) -i -libname $(LIBNAME) -libvers $(LIBVERS) $(libdir)
++	$(MKTOOL) -i -libname $(LIBNAME) -libvers $(LIBVERS) $(libdir)
  	$(MKTOOL) -i $(HDRS) $(includedir)/mba
  	$(MKTOOL) -i docs/man/*.3m.gz $(mandir)/man3
 -	@-libdir=$(libdir) mandir="$(mandir)" MAN="$(MAN)" MANGZ="$(MANGZ)" $(MKTOOL) -m -v platform_specific_install
