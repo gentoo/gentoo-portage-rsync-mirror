@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.540 2015/01/05 22:01:59 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.541 2015/01/07 16:23:03 jmbsvicetto Exp $
+
+*phpmyadmin-4.0.10.8 (07 Jan 2015)
+
+  07 Jan 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phpmyadmin-4.0.10.8.ebuild, -phpmyadmin-4.0.10.6.ebuild,
+  -phpmyadmin-4.0.10.7.ebuild, -phpmyadmin-4.3.0_rc1.ebuild:
+  Add 4.0.10.8 release. Remove old.
 
 *phpmyadmin-4.2.13.1 (05 Jan 2015)
 *phpmyadmin-4.1.14.8 (05 Jan 2015)
