@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/systemrescuecd-x86
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/systemrescuecd-x86/ChangeLog,v 1.1 2015/01/06 23:57:06 mgorny Exp $
+
+*systemrescuecd-x86-4.4.1 (06 Jan 2015)
+
+  06 Jan 2015; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +systemrescuecd-x86-4.4.1.ebuild:
+  Introduce an ebuild to maintain a fresh copy of systemrescuecd-x86.
