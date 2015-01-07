@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/hardened-sources
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1194 2014/12/30 17:06:04 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.1197 2015/01/07 20:59:15 blueness Exp $
+
+*hardened-sources-3.18.1-r1 (07 Jan 2015)
+
+  07 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.18.1-r1.ebuild:
+  vanilla-3.18.1 + genpatches-3.18-2 + grsecurity-3.0-3.18.1-201501042021
+
+*hardened-sources-3.14.27-r3 (07 Jan 2015)
+
+  07 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.14.27-r3.ebuild:
+  vanilla-3.14.27 + genpatches-3.14-32 + grsecurity-3.0-3.14.27-201501042018
+
+*hardened-sources-3.2.66 (07 Jan 2015)
+
+  07 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  +hardened-sources-3.2.66.ebuild:
+  vanilla-3.2.66 + genpatches-3.2-16 + grsecurity-3.0-3.2.66-201501051839
 
   30 Dec 2014; Anthony G. Basile <blueness@gentoo.org>
   -hardened-sources-3.14.12-r2.ebuild, -hardened-sources-3.14.15.ebuild,
