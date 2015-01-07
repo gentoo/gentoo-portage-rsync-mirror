@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.97 2015/01/01 11:00:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.98 2015/01/07 07:06:08 graaff Exp $
+
+*railties-4.1.9 (07 Jan 2015)
+*railties-4.0.13 (07 Jan 2015)
+
+  07 Jan 2015; Hans de Graaff <graaff@gentoo.org> railties-4.0.12.ebuild,
+  +railties-4.0.13.ebuild, +railties-4.1.9.ebuild:
+  Version bumps.
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> railties-4.2.0.ebuild:
   Stable for ~ppc64, wrt bug #534186

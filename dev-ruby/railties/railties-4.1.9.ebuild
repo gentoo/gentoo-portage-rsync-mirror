@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-4.0.12.ebuild,v 1.2 2015/01/07 07:06:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-4.1.9.ebuild,v 1.1 2015/01/07 07:06:08 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -16,12 +16,12 @@ RUBY_FAKEGEM_BINWRAP=""
 inherit ruby-fakegem versionator
 
 DESCRIPTION="Tools for creating, working with, and running Rails applications"
-HOMEPAGE="https://github.com/rails/rails"
-SRC_URI="https://github.com/rails/rails/archive/v${PV}.tar.gz -> rails-${PV}.tgz"
+HOMEPAGE="http://github.com/rails/rails"
+SRC_URI="http://github.com/rails/rails/archive/v${PV}.tar.gz -> rails-${PV}.tgz"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 IUSE=""
 
 RUBY_S="rails-${PV}/${PN}"
@@ -41,6 +41,7 @@ ruby_add_rdepend "
 
 ruby_add_bdepend "
 	test? (
+		~dev-ruby/actionview-${PV}
 		dev-ruby/mocha:0.13
 	)"
 
