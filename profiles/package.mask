@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16267 2015/01/05 11:27:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16268 2015/01/07 12:07:22 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org) (7 Jan 2015)
+# pgtune is masked for removal 2015-03-08. It's dead upstream, has a
+# critical bug 530868, and doesn't use a real distribution
+# model. Adopt the package upstream to save it.
+# An online alternative lives at:
+#    http://pgtune.leopard.in.ua/
+dev-db/pgtune
 
 # Tony Vroon <chainsaw@gentoo.org> (5 Jan 2015)
 # Asterisk 13 is an LTS release but has not seen 

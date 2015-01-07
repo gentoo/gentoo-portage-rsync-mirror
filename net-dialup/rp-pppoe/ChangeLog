@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/rp-pppoe
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.106 2014/08/12 07:57:32 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.107 2015/01/07 12:14:00 pacho Exp $
+
+*rp-pppoe-3.11-r3 (07 Jan 2015)
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> +files/rp-pppoe-3.11-kmode.patch,
+  +rp-pppoe-3.11-r3.ebuild, -rp-pppoe-3.10-r1.ebuild, -rp-pppoe-3.11-r1.ebuild:
+  Don't hardcode ppp detection at some phases and try to autodetect on others,
+  fix kmode detection using ArchLinux approach (#364941), rename X USE flag to
+  'tk' (#349014), drop old
 
 *rp-pppoe-3.11-r2 (12 Aug 2014)
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.11-r1.ebuild,v 1.1 2014/02/22 09:27:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.11-r3.ebuild,v 1.1 2015/01/07 12:14:00 pacho Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic autotools readme.gentoo
 
-PPP_P="ppp-2.4.6"
+PPP_P="ppp-2.4.7"
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 HOMEPAGE="http://www.roaringpenguin.com/pppoe/"
@@ -16,13 +16,24 @@ SRC_URI="http://www.roaringpenguin.com/files/download/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="X"
+IUSE="tk"
 
-RDEPEND="net-dialup/ppp
-	X? ( dev-lang/tk )"
+RDEPEND="
+	net-dialup/ppp:=
+	tk? ( dev-lang/tk )
+"
 # see bug #230491
 DEPEND="|| ( <sys-kernel/linux-headers-2.6.24 >=sys-kernel/linux-headers-2.6.25 )
 	${RDEPEND}"
+
+DOC_CONTENTS="Use pppoe-setup to configure your dialup connection"
+
+pkg_setup() {
+	# This is needed in multiple phases
+	PPPD_VER=$(best_version net-dialup/ppp)
+	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
+	PPPD_VER=${PPPD_VER%%-*} #reduce it to ${PV}
+}
 
 src_prepare() {
 	# Patch to enable integration of pppoe-start and pppoe-stop with
@@ -37,6 +48,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-3.10-linux-headers.patch" #334197
 	epatch "${FILESDIR}/${PN}-3.10-posix-source-sigaction.patch"
 	epatch "${FILESDIR}/${PN}-3.11-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-3.11-kmode.patch" #364941
 
 	cd "${S}"/src || die
 	eautoreconf
@@ -46,15 +58,15 @@ src_configure() {
 	addpredict /dev/ppp
 
 	cd "${S}/src" || die
-	econf --enable-plugin=../../${PPP_P}
+	econf --enable-plugin=../../ppp-${PPPD_VER}
 }
 
 src_compile() {
 	cd "${S}/src" || die
 	emake
 
-	if use X; then
-		make -C "${S}/gui" || die "gui make failed"
+	if use tk; then
+		emake -C "${S}/gui" || die "gui make failed"
 	fi
 }
 
@@ -68,25 +80,20 @@ src_install () {
 		rm "${pppoe_plugin}" || die
 	fi
 
-	if use X; then
+	if use tk; then
 		emake -C "${S}/gui" \
 			DESTDIR="${D}" \
 			datadir=/usr/share/doc/${PF}/ \
 			install
 		dosym /usr/share/doc/${PF}/tkpppoe /usr/share/tkpppoe
 	fi
+
+	readme.gentoo_create_doc
 }
 
 pkg_preinst() {
 	# Use the rp-pppoe plugin that comes with net-dialup/pppd
-	local PPPD_VER=$(best_version net-dialup/ppp)
-	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
-	PPPD_VER=${PPPD_VER%%-*} #reduce it to ${PV}
 	if [ -n "${PPPD_VER}" ] && [ -f "${ROOT}/usr/lib/pppd/${PPPD_VER}/rp-pppoe.so" ] ; then
 		dosym /usr/lib/pppd/${PPPD_VER}/rp-pppoe.so /etc/ppp/plugins/rp-pppoe.so
 	fi
-}
-
-pkg_postinst() {
-	elog "Use pppoe-setup to configure your dialup connection."
 }
