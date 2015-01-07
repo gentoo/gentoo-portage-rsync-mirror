@@ -24,89 +24,89 @@ Index: config/icu-config-bottom
  
  	--cflags)
 -	    echo $ECHO_N "${CFLAGS} ${ECHO_C}"
-+	    printf "%s" "${CFLAGS}"
++	    printf "%s" "${CFLAGS} "
  	    ;;
  
  	--cc)
 -	    echo $ECHO_N "${CC} ${ECHO_C}"
-+	    printf "%s" "${CC}"
++	    printf "%s" "${CC} "
  	    ;;
  
  	--cxx)
 -	    echo $ECHO_N "${CXX} ${ECHO_C}"
-+	    printf "%s" "${CXX}"
++	    printf "%s" "${CXX} "
  	    ;;
  
  	--cxxflags)
 -	    echo $ECHO_N "${CXXFLAGS} ${ECHO_C}"
-+	    printf "%s" "${CXXFLAGS}"
++	    printf "%s" "${CXXFLAGS} "
  	    ;;
  
  	--cppflags)
  	    # Don't echo the -I. - it's unneeded.
 -	    echo $ECHO_N "${CPPFLAGS} ${ECHO_C}" | sed -e 's/-I. //'
-+	    printf "%s" "${CPPFLAGS}" | sed -e 's/-I. //'
++	    printf "%s" "${CPPFLAGS} " | sed -e 's/-I. //'
  	    ;;
  
  	--cppflags-searchpath)
 -	    echo $ECHO_N "-I${prefix}/include ${ECHO_C}"
-+	    printf "%s" "-I${prefix}/include"
++	    printf "%s" "-I${prefix}/include "
  	    ;;
  
  	--cppflags-dynamic)
 -	    echo $ECHO_N "${SHAREDLIBCPPFLAGS} ${ECHO_C}"
-+	    printf "%s" "${SHAREDLIBCPPFLAGS}"
++	    printf "%s" "${SHAREDLIBCPPFLAGS} "
  	    ;;
  
  	--cxxflags-dynamic)
 -	    echo $ECHO_N "${SHAREDLIBCXXFLAGS} ${ECHO_C}"
-+	    printf "%s" "${SHAREDLIBCXXFLAGS}"
++	    printf "%s" "${SHAREDLIBCXXFLAGS} "
  	    ;;
  
  	--cflags-dynamic)
 -	    echo $ECHO_N "${SHAREDLIBCFLAGS} ${ECHO_C}"
-+	    printf "%s" "${SHAREDLIBCFLAGS}"
++	    printf "%s" "${SHAREDLIBCFLAGS} "
  	    ;;
  
  	--ldflags-system)
 -	    echo $ECHO_N "${LIBS} ${ECHO_C}"
-+	    printf "%s" "${LIBS}"
++	    printf "%s" "${LIBS} "
  	    ;;
  
  	--ldflags)
 -	    echo $ECHO_N "${LDFLAGS} ${ICULIBS} ${ECHO_C}"
-+	    printf "%s" "${LDFLAGS} ${ICULIBS}"
++	    printf "%s" "${LDFLAGS} ${ICULIBS} "
  # $RPATH_LDFLAGS
  	    ;;
  
  	--ldflags-libsonly)
 -	    echo $ECHO_N "${ICULIBS_I18N} ${ICULIBS_COMMON} ${ICULIBS_DATA} ${ECHO_C}"
-+	    printf "%s" "${ICULIBS_I18N} ${ICULIBS_COMMON} ${ICULIBS_DATA}"
++	    printf "%s" "${ICULIBS_I18N} ${ICULIBS_COMMON} ${ICULIBS_DATA} "
  	    ;;
  
  	--ldflags-icuio)
 -	    echo $ECHO_N " ${ICULIBS_ICUIO} ${ECHO_C}"
-+	    printf "%s" " ${ICULIBS_ICUIO}"
++	    printf "%s" " ${ICULIBS_ICUIO} "
  	    ;;
  
  	--ldflags-obsolete)
 -	    echo $ECHO_N "${ICULIBS_OBSOLETE} ${ECHO_C}"
-+	    printf "%s" "${ICULIBS_OBSOLETE}"
++	    printf "%s" "${ICULIBS_OBSOLETE} "
  	    ;;
  
  	--ldflags-toolutil)
 -	    echo $ECHO_N " ${ICULIBS_TOOLUTIL} ${ECHO_C}"
-+	    printf "%s" " ${ICULIBS_TOOLUTIL}"
++	    printf "%s" " ${ICULIBS_TOOLUTIL} "
  	    ;;
  
  	--ldflags-layout)
 -	    echo $ECHO_N "${ICULIBS_LAYOUT} ${ICULIBS_LAYOUTEX} ${ECHO_C}"
-+	    printf "%s" "${ICULIBS_LAYOUT} ${ICULIBS_LAYOUTEX}"
++	    printf "%s" "${ICULIBS_LAYOUT} ${ICULIBS_LAYOUTEX} "
  	    ;;
  
  	--ldflags-searchpath)
 -	    echo $ECHO_N "-L${libdir} ${ECHO_C}"
-+	    printf "%s" "-L${libdir}"
++	    printf "%s" "-L${libdir} "
  	    ;;
  
  	--detect-prefix)
@@ -115,47 +115,47 @@ Index: config/icu-config-bottom
  
  	--shared-datadir)
 -	    echo $ECHO_N "${datadir} ${ECHO_C}"
-+	    printf "%s" "${datadir}"
++	    printf "%s" "${datadir} "
  	    ;;
  
          --incfile)
 -	    echo $ECHO_N "${pkglibdir}/Makefile.inc ${ECHO_C}"
-+	    printf "%s" "${pkglibdir}/Makefile.inc"
++	    printf "%s" "${pkglibdir}/Makefile.inc "
  	    ;;
  
  	--incpkgdatafile)
 -	    echo $ECHO_N "${pkglibdir}/pkgdata.inc ${ECHO_C}"
-+	    printf "%s" "${pkglibdir}/pkgdata.inc"
++	    printf "%s" "${pkglibdir}/pkgdata.inc "
  	    ;;
  
  	--icudata)
 -	    echo $ECHO_N "${ICUDATA_NAME} ${ECHO_C}"
-+	    printf "%s" "${ICUDATA_NAME}"
++	    printf "%s" "${ICUDATA_NAME} "
  	    ;;
  
  	--icudata-mode)
 -	    echo $ECHO_N "${PKGDATA_MODE} ${ECHO_C}"
-+	    printf "%s" "${PKGDATA_MODE}"
++	    printf "%s" "${PKGDATA_MODE} "
  	    ;;
  
  	--icudata-install-dir)
 -        echo $ECHO_N "${ICUPKGDATA_DIR} ${ECHO_C}"
-+        printf "%s" "${ICUPKGDATA_DIR}"
++        printf "%s" "${ICUPKGDATA_DIR} "
  	    ;;
  
  	--icudatadir)
 -	    echo $ECHO_N "${ICUDATA_DIR} ${ECHO_C}"
-+	    printf "%s" "${ICUDATA_DIR}"
++	    printf "%s" "${ICUDATA_DIR} "
  	    ;;
  
  	--shlib-c)
 -	    echo $ECHO_N "${SHLIB_c} ${ECHO_C}"
-+	    printf "%s" "${SHLIB_c}"
++	    printf "%s" "${SHLIB_c} "
  	    ;;
  
  	--shlib-cc)
 -	    echo $ECHO_N "${SHLIB_cc} ${ECHO_C}"
-+	    printf "%s" "${SHLIB_cc}"
++	    printf "%s" "${SHLIB_cc} "
  	    ;;
  
  	--version)
