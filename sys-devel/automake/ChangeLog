@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.217 2014/11/15 06:42:33 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.218 2015/01/07 21:26:13 polynomial-c Exp $
+
+*automake-1.15 (07 Jan 2015)
+
+  07 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> +automake-1.15.ebuild:
+  Version bump.
 
 *automake-1.4_p6-r2 (15 Nov 2014)
 
