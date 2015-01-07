@@ -1,11 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reverend/reverend-0.4.ebuild,v 1.3 2010/12/26 15:41:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reverend/reverend-0.4-r1.ebuild,v 1.1 2015/01/07 01:53:00 idella4 Exp $
 
-EAPI="2"
-SUPPORT_PYTHON_ABIS="1"
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT=( python2_7 pypy pypy3 )
+
+inherit distutils-r1
 
 MY_PN="Reverend"
 MY_P="${MY_PN}-${PV}"
@@ -21,17 +22,10 @@ IUSE="examples"
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS="README.txt changelog.txt"
-
-src_install() {
-	distutils_src_install
-
-	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins examples/*
-	fi
+python_install_all() {
+	use examples && local EXAMPLES=( examples/. )
+	distutils-r1_python_install_all
 }
