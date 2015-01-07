@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9666 2015/01/07 14:13:30 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9667 2015/01/07 16:36:16 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jan 2015; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Remove duplicate mask on sci-physics/camfr.
 
   07 Jan 2015; Brian Evans <grknight@gentoo.org> package.mask:
   Remove old mysql masks for versions less than 5.5 series
