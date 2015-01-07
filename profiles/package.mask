@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16270 2015/01/07 16:36:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16274 2015/01/07 19:30:10 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -220,11 +220,6 @@ media-libs/openh264
 net-analyzer/openvas-administrator
 
 # Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Doesn't work ok, upstream dead since 2007 (#321277).
-# Removal in a month.
-net-im/linpopup
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
 # Multiple pending bugs, #380435, #460508, #481150,
 # #481310, #481312, #530856. Removal in a month (#380435)
 app-office/teapot
@@ -301,23 +296,9 @@ sys-firmware/iwl2000-ucode
 sys-firmware/iwl5150-ucode
 
 # Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Unbuildable, dead since 2005 (#526184)
-media-gfx/truevision
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Dead for 4 years, relies on obsolete lcms, bundles
-# a lot of libs. Removal in a month (#526818)
-media-gfx/f-spot
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
 # Relies on old gnome-bluetooth and upstream is not going
 # to fix it anytime soon (#528916). Removal in a month.
 net-wireless/cinnamon-bluetooth
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Tends to crash a lot, upstream dead (#530126).
-# Removal in a month.
-app-misc/cdcollect
 
 # Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
 # No updates since 2009, doesn't build (#531110).
