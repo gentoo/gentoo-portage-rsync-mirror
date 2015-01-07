@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnome
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.222 2013/03/29 19:32:55 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.223 2015/01/07 20:01:30 pacho Exp $
+
+  07 Jan 2015; Pacho Ramos <pacho@gentoo.org> libgnome-2.32.1-r1.ebuild:
+  Update ebuild
 
   29 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -libgnome-2.32.1.ebuild:
   Clean up old revision.
@@ -813,4 +816,3 @@
 *libgnome-1.117.0 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org>   libgnome-1.117.0.ebuild :
   part of gnome2 . initial cvs commit
-
