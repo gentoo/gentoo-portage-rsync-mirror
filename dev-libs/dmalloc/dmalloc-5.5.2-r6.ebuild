@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r5.ebuild,v 1.1 2013/03/15 18:17:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.5.2-r6.ebuild,v 1.1 2015/01/07 15:14:35 jer Exp $
 
 EAPI=5
 inherit autotools eutils multilib toolchain-funcs
@@ -24,17 +24,24 @@ src_prepare() {
 	# - Use DESTDIR.
 	# - Fix SONAME and NEEDED.
 	epatch "${FILESDIR}"/${P}-Makefile.in.patch
+
 	# - Broken test, always returns false.
 	epatch "${FILESDIR}"/${P}-cxx.patch
 	epatch "${FILESDIR}"/${P}-ar.patch
+
 	# - Add threads support.
 	use threads && epatch "${FILESDIR}"/${P}-threads.patch
+
+	# strdup() strndup() macros
+	epatch "${FILESDIR}"/${P}-string-macros.patch
+
 	# Respect CFLAGS/LDFLAGS. #337429
-	sed -i Makefile.in \
+	sed -i \
 		-e '/libdmalloc/ s:$(CC):& $(CFLAGS) $(LDFLAGS):g' \
 		-e 's|ar cr|$(AR) cr|g' \
-		|| die "sed Makefile.in"
-	# - Run autoconf for -cxx.patch.
+		Makefile.in || die
+
+	# Run autoconf for -cxx.patch.
 	eautoconf
 }
 

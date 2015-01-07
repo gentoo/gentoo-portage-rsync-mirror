@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dmalloc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.68 2013/03/15 18:17:12 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.69 2015/01/07 15:14:35 jer Exp $
+
+*dmalloc-5.5.2-r6 (07 Jan 2015)
+
+  07 Jan 2015; Jeroen Roovers <jer@gentoo.org> -dmalloc-5.5.2-r5.ebuild,
+  +dmalloc-5.5.2-r6.ebuild, +files/dmalloc-5.5.2-string-macros.patch:
+  Undefine strdup and strndup macros (bug #534768 by Toralf Förster).
 
 *dmalloc-5.5.2-r5 (15 Mar 2013)
 
