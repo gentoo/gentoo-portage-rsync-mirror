@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.28.ebuild,v 1.3 2014/10/09 15:19:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.31-r1.ebuild,v 1.1 2015/01/07 14:31:30 tomka Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://ankisrs.net/download/mirror/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="latex +recording +sound"
 
 RDEPEND="${PYTHON_DEPS}
@@ -57,14 +57,8 @@ src_install() {
 	dodoc README README.development
 	python_domodule aqt anki
 	python_doscript anki/anki
-}
 
-pkg_preinst() {
-	if has_version "<app-misc/anki-2" ; then
-		elog "Anki 2 is a rewrite of Anki with many new features and"
-		elog "a new database format.  On the first run your decks are"
-		elog "converted to the new format and a backup of your Anki-1"
-		elog "decks is created.  Please read the following:"
-		elog "http://ankisrs.net/anki2.html"
-	fi
+	# Localization files go into the anki directory:
+	python_moduleinto anki
+	python_domodule locale
 }

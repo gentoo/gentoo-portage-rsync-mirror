@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-41.0.2243.0.ebuild,v 1.1 2014/12/11 12:54:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-41.0.2267.0.ebuild,v 1.1 2015/01/07 14:59:19 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -227,7 +227,6 @@ src_prepare() {
 		'third_party/libusb' \
 		'third_party/libvpx' \
 		'third_party/libvpx/source/libvpx/third_party/x86inc' \
-		'third_party/libwebm' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
 		'third_party/libyuv' \
@@ -241,6 +240,7 @@ src_prepare() {
 		'third_party/opus' \
 		'third_party/ots' \
 		'third_party/pdfium' \
+		'third_party/pdfium/third_party/bigint' \
 		'third_party/pdfium/third_party/logging.h' \
 		'third_party/pdfium/third_party/macros.h' \
 		'third_party/pdfium/third_party/numerics' \
