@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/mlterm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.103 2014/12/29 12:43:09 hattya Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.104 2015/01/08 12:25:15 hattya Exp $
+
+*mlterm-3.4.2 (08 Jan 2015)
+
+  08 Jan 2015; Akinori Hattori <hattya@gentoo.org> +mlterm-3.4.2.ebuild,
+  -mlterm-3.1.9.ebuild, -mlterm-3.3.8.ebuild:
+  new upstream release
 
 *mlterm-3.4.1 (29 Dec 2014)
 

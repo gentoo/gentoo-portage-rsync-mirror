@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16275 2015/01/08 10:28:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16276 2015/01/08 12:19:45 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1030,10 +1030,6 @@ net-wireless/madwifi-ng
 # 0.46 until https://bugzilla.gnome.org/682106 is fixed to prevent
 # bluetooth-sendto breakage.
 >=app-mobilephone/obexd-0.47
-
-# Eray Aslan <eras@gentoo.org> (24 Oct 2012)
-# Mask experimental software
-=mail-client/squirrelmail-1.4.23*
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Unmaintained, multiple vulnarabilities. #351626
