@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/rosetta-db
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-db/ChangeLog,v 1.3 2013/03/19 08:06:37 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-db/ChangeLog,v 1.4 2015/01/08 11:37:57 jlec Exp $
+
+  08 Jan 2015; Justin Lecher <jlec@gentoo.org> -rosetta-db-3.1.ebuild:
+  Drop old
 
 *rosetta-db-3.4 (19 Mar 2013)
 

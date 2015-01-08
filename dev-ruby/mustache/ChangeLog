@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.40 2015/01/04 14:57:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.41 2015/01/08 11:39:30 ago Exp $
+
+  08 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mustache-0.99.5.ebuild:
+  Stable for x86, wrt bug #503570
 
   04 Jan 2015; Hans de Graaff <graaff@gentoo.org> -mustache-0.99.4-r2.ebuild:
   Cleanup.

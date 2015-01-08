@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.16-r1.ebuild,v 1.7 2015/01/02 12:42:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.16-r1.ebuild,v 1.8 2015/01/08 11:31:30 ago Exp $
 
 EAPI=5
 # jruby: mkmf
@@ -17,7 +17,7 @@ DESCRIPTION="A Ruby interface to some LDAP libraries"
 HOMEPAGE="http://ruby-ldap.sourceforge.net/"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-macos"
 IUSE="ssl"
 DEPEND=">=net-nds/openldap-2
 	dev-libs/cyrus-sasl
