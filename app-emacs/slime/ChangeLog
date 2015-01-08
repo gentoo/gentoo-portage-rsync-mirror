@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/slime
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.74 2014/12/19 07:02:16 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.75 2015/01/08 04:04:52 gienah Exp $
+
+*slime-2.12 (08 Jan 2015)
+
+  08 Jan 2015; Mark Wright <gienah@gentoo.org> +slime-2.12.ebuild:
+  Bump slime to 2.12
 
 *slime-2.11 (19 Dec 2014)
 
