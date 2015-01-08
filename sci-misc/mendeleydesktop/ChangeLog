@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/mendeleydesktop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.17 2014/08/29 11:40:55 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.18 2015/01/08 15:54:10 jlec Exp $
+
+*mendeleydesktop-1.12.4 (08 Jan 2015)
+
+  08 Jan 2015; Justin Lecher <jlec@gentoo.org> -mendeleydesktop-1.11.ebuild,
+  +mendeleydesktop-1.12.4.ebuild, metadata.xml:
+  Import version bump from sci overlay and drop old, resolves #480346 & #529230
 
 *mendeleydesktop-1.12.1 (29 Aug 2014)
 
