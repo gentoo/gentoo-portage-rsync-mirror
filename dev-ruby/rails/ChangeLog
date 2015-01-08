@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.310 2015/01/07 07:06:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.311 2015/01/08 21:01:26 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> rails-4.2.0.ebuild:
+  add ~arm, bug #534186
 
 *rails-4.1.9 (07 Jan 2015)
 *rails-4.0.13 (07 Jan 2015)

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.79 2014/10/03 19:31:45 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.80 2015/01/08 21:09:15 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> thttpd-2.27.0.ebuild:
+  arm stable, bug #535694
 
   03 Oct 2014; Anthony G. Basile <blueness@gentoo.org> -thttpd-2.26.4-r2.ebuild:
   Remove older stable version

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/jquery-rails-4.0.3.ebuild,v 1.1 2015/01/06 07:25:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/jquery-rails-4.0.3.ebuild,v 1.2 2015/01/08 21:05:27 maekke Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.rubyonrails.org"
 
 LICENSE="MIT"
 SLOT="4"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 
 IUSE=""
 

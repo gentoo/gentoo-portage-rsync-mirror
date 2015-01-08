@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.27.0.ebuild,v 1.1 2014/10/03 19:30:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.27.0.ebuild,v 1.2 2015/01/08 21:09:15 maekke Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ else
 	MY_P="s${P}"
 	S="${WORKDIR}/${MY_P}"
 	SRC_URI="http://opensource.dyc.edu/pub/sthttpd/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~amd64 arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 fi
 
 DESCRIPTION="Fork of thttpd, a small, fast, multiplexing webserver"

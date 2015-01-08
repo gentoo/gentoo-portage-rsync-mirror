@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libbluedevil
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/ChangeLog,v 1.40 2014/12/22 18:45:58 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/ChangeLog,v 1.41 2015/01/08 21:12:16 mrueg Exp $
+
+  08 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -libbluedevil-1.9.4.ebuild:
+  Remove old.
 
 *libbluedevil-2.1 (22 Dec 2014)
 

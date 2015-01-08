@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.108 2014/08/29 17:03:47 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.109 2015/01/08 21:26:10 jer Exp $
+
+  08 Jan 2015; Jeroen Roovers <jer@gentoo.org> BerkeleyDB-0.540.0.ebuild:
+  Stable for HPPA (bug #535144).
 
   29 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -BerkeleyDB-0.510.0.ebuild:
   Drop old

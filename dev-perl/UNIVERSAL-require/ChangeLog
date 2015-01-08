@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/UNIVERSAL-require
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/ChangeLog,v 1.29 2014/08/22 18:28:32 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/ChangeLog,v 1.30 2015/01/08 21:09:12 zlogene Exp $
+
+  08 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  UNIVERSAL-require-0.160.0.ebuild:
+  Mark stable
 
 *UNIVERSAL-require-0.150.0-r1 (22 Aug 2014)
 

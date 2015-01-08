@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jquery-rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.39 2015/01/06 07:25:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.40 2015/01/08 21:05:27 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> jquery-rails-4.0.3.ebuild:
+  add ~arm, bug #534186
 
 *jquery-rails-4.0.3 (06 Jan 2015)
 

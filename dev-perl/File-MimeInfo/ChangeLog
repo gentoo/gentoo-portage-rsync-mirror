@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.88 2015/01/08 20:50:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.89 2015/01/08 21:28:14 jer Exp $
+
+  08 Jan 2015; Jeroen Roovers <jer@gentoo.org> File-MimeInfo-0.210.0.ebuild:
+  Stable for HPPA (bug #535176).
 
   08 Jan 2015; Markus Meier <maekke@gentoo.org> File-MimeInfo-0.210.0.ebuild:
   arm stable, bug #535176
