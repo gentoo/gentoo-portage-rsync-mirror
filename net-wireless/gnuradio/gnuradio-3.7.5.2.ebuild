@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.4.1.ebuild,v 1.4 2014/10/09 19:17:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.5.2.ebuild,v 1.1 2015/01/08 14:37:41 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,13 +14,11 @@ LICENSE="GPL-3"
 SLOT="0/${PV}"
 
 if [[ ${PV} == "9999" ]] ; then
-	#EGIT_REPO_URI="http://gnuradio.org/git/gnuradio.git"
-	EGIT_REPO_URI="git://anonscm.debian.org/users/bottoms/gnuradio.git"
-	EGIT_BRANCH="gr-vocoder-use-system-codecs"
+	EGIT_REPO_URI="http://gnuradio.org/git/gnuradio.git"
 	inherit git-r3
 	KEYWORDS=""
 else
-	SRC_URI="http://gnuradio.org/releases/${PN}/${P}.tar.gz"
+	SRC_URI="http://s3-dist.gnuradio.org/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 

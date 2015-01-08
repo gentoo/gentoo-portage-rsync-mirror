@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tsocks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.41 2015/01/07 14:04:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.42 2015/01/08 14:58:40 bircoph Exp $
+
+  08 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  Add myself to maintainers. Update to EAPI=5.
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-
