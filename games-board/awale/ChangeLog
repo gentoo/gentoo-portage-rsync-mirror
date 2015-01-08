@@ -1,6 +1,10 @@
 # ChangeLog for games-board/awale
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/awale/ChangeLog,v 1.8 2014/11/25 23:08:38 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/awale/ChangeLog,v 1.9 2015/01/08 09:28:07 tupone Exp $
+
+  08 Jan 2015; Tupone Alfredo <tupone@gentoo.org> awale-1.5.ebuild:
+  Build without automake-1.13 Bug #533964
+  Fix Upstream parallel compilation bug
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
