@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.15 2012/09/10 08:36:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.16 2015/01/08 08:58:44 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit toolchain-funcs eutils
 
 DESCRIPTION="very nice backgammon game for X"
@@ -36,12 +36,7 @@ src_compile() {
 	env PATH=".:${PATH}" emake \
 		EXTRA_LDOPTIONS="${LDFLAGS}" \
 		CDEBUGFLAGS="${CFLAGS}" \
-		CC=$(tc-getCC) \
-		|| die "emake failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+		CC=$(tc-getCC)
 }
 
 pkg_postinst() {

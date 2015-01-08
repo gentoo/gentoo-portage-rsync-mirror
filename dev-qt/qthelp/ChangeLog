@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qthelp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.26 2014/12/12 14:30:04 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.27 2015/01/08 08:38:40 jlec Exp $
+
+  08 Jan 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Adopt dependencies to work with latest patches, #528724
 
 *qthelp-5.4.0 (12 Dec 2014)
 

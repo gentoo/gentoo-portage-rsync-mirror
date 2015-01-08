@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.34.10.ebuild,v 1.3 2012/12/07 21:40:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.34.10.ebuild,v 1.4 2015/01/08 08:54:46 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils java-pkg-2 java-ant-2 games
 
 DESCRIPTION="an unofficial, online version of the Classic BattleTech board game"
@@ -37,14 +37,14 @@ src_prepare() {
 }
 
 src_compile() {
-	eant || die
+	eant
 }
 
 src_install() {
-	newgamesbin startup.sh ${PN} || die "newgamesbin failed"
+	newgamesbin startup.sh ${PN}
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data docs l10n lib mmconf *.jar readme* || die "doins failed"
-	dodoc HACKING readme.txt || die
+	doins -r data docs l10n lib mmconf *.jar readme*
+	dodoc HACKING readme.txt
 	make_desktop_entry ${PN} MegaMek /usr/share/pixmaps/${PN}.gif
 	newicon data/images/misc/megamek-icon.gif ${PN}.gif
 	prepgamesdirs

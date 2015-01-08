@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/qtiplot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.108 2014/11/12 23:17:41 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.109 2015/01/08 08:41:53 jlec Exp $
+
+*qtiplot-0.9.8.9-r3 (08 Jan 2015)
+
+  08 Jan 2015; Justin Lecher <jlec@gentoo.org> +qtiplot-0.9.8.9-r3.ebuild,
+  +files/qtiplot-0.9.8.9-PyQt4-4.11.3.patch:
+  Adopt dependencies to work with latest patches, #528724
 
   12 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   files/qtiplot-0.9.8.9-PyQt4-4.10.patch:
