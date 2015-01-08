@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.40 2015/01/07 14:01:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.41 2015/01/08 14:10:03 bircoph Exp $
+
+  08 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  Add myself to maintainers.
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-

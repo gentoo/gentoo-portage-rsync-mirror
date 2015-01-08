@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.365 2015/01/05 17:56:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.366 2015/01/08 14:05:50 leio Exp $
+
+*pulseaudio-5.0-r7 (08 Jan 2015)
+
+  08 Jan 2015; Mart Raudsepp <leio@gentoo.org> +pulseaudio-5.0-r7.ebuild,
+  +files/svolume-fix_param_loading_undefined_beh.patch:
+  Fix severely distorted sound on changing volume of stream in certain ways in
+  pulseaudio with orc-0.4.23, bug 534144
 
 *pulseaudio-5.99.2 (05 Jan 2015)
 
