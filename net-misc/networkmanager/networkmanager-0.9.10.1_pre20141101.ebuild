@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.9 2015/01/01 21:12:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.10.1_pre20141101.ebuild,v 1.10 2015/01/08 10:05:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -68,7 +68,7 @@ COMMON_DEPEND="
 	dhclient? ( =net-misc/dhcp-4*[client] )
 	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
-	ppp? ( >=net-dialup/ppp-2.4.5:=[ipv6] )
+	ppp? ( >=net-dialup/ppp-2.4.5:=[ipv6] net-dialup/rp-pppoe )
 	resolvconf? ( net-dns/openresolv )
 	systemd? ( >=sys-apps/systemd-183:0= )
 	teamd? ( >=net-misc/libteam-1.9 )

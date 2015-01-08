@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.220 2015/01/01 21:12:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.221 2015/01/08 10:05:07 pacho Exp $
+
+  08 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-0.9.10.1_pre20141101.ebuild:
+  net-dialup/rp-pppoe is needed by upstream to workaround a kernel problem
+  (#536002 by Malte Starostik)
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org>
   networkmanager-0.9.10.1_pre20141101.ebuild:
