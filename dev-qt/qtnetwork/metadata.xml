@@ -7,7 +7,7 @@
 		<flag name="networkmanager">Enable NetworkManager-based bearer plugin</flag>
 	</use>
 	<upstream>
-		<bugs-to>https://bugreports.qt-project.org/</bugs-to>
+		<bugs-to>https://bugreports.qt.io/</bugs-to>
 		<doc>http://qt-project.org/doc/</doc>
 	</upstream>
 </pkgmetadata>

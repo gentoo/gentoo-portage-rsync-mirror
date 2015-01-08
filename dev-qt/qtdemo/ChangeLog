@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtdemo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.13 2014/12/31 13:11:33 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.14 2015/01/08 22:27:05 pesa Exp $
+
+  08 Jan 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Update upstream bugtracker URL.
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org> qtdemo-4.8.5-r1.ebuild,
   qtdemo-4.8.6-r1.ebuild:

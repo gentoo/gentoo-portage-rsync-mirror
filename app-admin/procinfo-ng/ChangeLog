@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/procinfo-ng
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo-ng/ChangeLog,v 1.7 2014/11/06 08:25:06 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo-ng/ChangeLog,v 1.8 2015/01/08 22:04:19 jer Exp $
+
+  08 Jan 2015; Jeroen Roovers <jer@gentoo.org> procinfo-ng-2.0.304-r1.ebuild:
+  Stable for HPPA (bug #534804).
 
 *procinfo-ng-2.0.304-r1 (06 Nov 2014)
 
