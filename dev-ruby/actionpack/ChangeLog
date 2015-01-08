@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.301 2015/01/07 07:04:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.302 2015/01/08 20:55:34 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> actionpack-4.2.0.ebuild:
+  add ~arm, bug #534186
 
 *actionpack-4.1.9 (07 Jan 2015)
 *actionpack-4.0.13 (07 Jan 2015)

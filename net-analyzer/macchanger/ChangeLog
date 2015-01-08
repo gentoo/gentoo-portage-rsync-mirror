@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/macchanger
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.32 2014/07/13 13:23:17 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.33 2015/01/08 20:57:24 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> macchanger-1.7.0.ebuild:
+  arm stable, bug #535530
 
   13 Jul 2014; Jeroen Roovers <jer@gentoo.org> -macchanger-1.5.0-r2.ebuild,
   macchanger-1.7.0.ebuild:

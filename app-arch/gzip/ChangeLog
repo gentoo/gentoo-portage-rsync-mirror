@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/gzip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.125 2014/12/31 19:44:39 ottxor Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.126 2015/01/08 20:52:05 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> gzip-1.6.ebuild:
+  arm stable, bug #534810
 
   31 Dec 2014; Christoph Junghans <ottxor@gentoo.org>
   +files/gzip-1.4-asmv.patch, gzip-1.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-yaz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaz/ChangeLog,v 1.10 2015/01/05 08:03:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaz/ChangeLog,v 1.11 2015/01/08 20:48:44 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> pecl-yaz-1.1.6.ebuild:
+  arm stable, bug #534568
 
   05 Jan 2015; Jeroen Roovers <jer@gentoo.org> pecl-yaz-1.1.6.ebuild:
   Stable for HPPA (bug #534568).

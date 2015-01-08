@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.80 2014/06/30 04:37:50 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.81 2015/01/08 20:58:15 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> arping-2.14.ebuild:
+  arm stable, bug #535522
 
 *arping-2.14 (30 Jun 2014)
 

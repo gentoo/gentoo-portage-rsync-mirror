@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionview/ChangeLog,v 1.18 2015/01/07 07:04:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionview/ChangeLog,v 1.19 2015/01/08 20:59:24 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> actionview-4.2.0.ebuild:
+  add ~arm, bug #534186
 
 *actionview-4.1.9 (07 Jan 2015)
 

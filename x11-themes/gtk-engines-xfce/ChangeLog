@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.169 2014/12/26 16:13:10 tetromino Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.171 2015/01/08 20:45:35 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org>
+  gtk-engines-xfce-3.0.1-r301.ebuild:
+  arm stable, bug #525308
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org>
+  gtk-engines-xfce-3.0.1-r201.ebuild:
+  arm stable, bug #525308
 
   26 Dec 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   gtk-engines-xfce-3.0.1-r301.ebuild:

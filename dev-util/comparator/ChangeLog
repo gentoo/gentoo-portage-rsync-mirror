@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/comparator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.30 2014/10/13 17:56:14 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.31 2015/01/08 20:53:43 maekke Exp $
+
+  08 Jan 2015; Markus Meier <maekke@gentoo.org> comparator-2.10.ebuild:
+  arm stable, bug #535396
 
 *comparator-2.10 (13 Oct 2014)
 
