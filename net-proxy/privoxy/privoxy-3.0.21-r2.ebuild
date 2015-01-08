@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.21-r1.ebuild,v 1.3 2013/10/17 20:52:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.21-r2.ebuild,v 1.10 2015/01/08 09:41:45 pacho Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils toolchain-funcs autotools systemd user
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/ijbswa/${P%_*}-${PRIVOXY_STATUS}-src.tar.gz"
 
 IUSE="selinux threads zlib"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ppc ppc64 sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 
 DEPEND="dev-libs/libpcre
@@ -43,6 +43,7 @@ src_configure() {
 	econf \
 		$(use_enable zlib) \
 		$(use_enable threads pthread) \
+		$(usex zlib --enable-compression "") \
 		--enable-dynamic-pcre \
 		--with-user=privoxy \
 		--with-group=privoxy \
