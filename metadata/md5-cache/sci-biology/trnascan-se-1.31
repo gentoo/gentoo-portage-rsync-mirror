@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare test unpack
+DEPEND=dev-lang/perl:=[-build(-)]
+DESCRIPTION=tRNA detection in large-scale genome sequences
+EAPI=5
+HOMEPAGE=http://lowelab.ucsc.edu/tRNAscan-SE/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=http://lowelab.ucsc.edu/software/tRNAscan-SE.tar.gz -> trnascan-se-1.31.tar.gz
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=c5da66d64ecc718cc8cea7da75324f42

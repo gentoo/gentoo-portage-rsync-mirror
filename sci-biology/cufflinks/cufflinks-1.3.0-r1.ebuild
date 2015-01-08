@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cufflinks/cufflinks-1.3.0-r1.ebuild,v 1.2 2014/09/25 15:21:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cufflinks/cufflinks-1.3.0-r1.ebuild,v 1.3 2015/01/08 07:35:53 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	>=sci-biology/samtools-0.1.18
 	<sci-biology/samtools-1
-	dev-libs/boost:="
+	<dev-libs/boost-1.56:="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
