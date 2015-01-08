@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.97 2015/01/08 14:01:27 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.98 2015/01/08 16:10:40 bircoph Exp $
+
+*privoxy-3.0.22 (08 Jan 2015)
+
+  08 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> +privoxy-3.0.22.ebuild,
+  +files/privoxy-3.0.22-force.patch, metadata.xml:
+  Version bump. Provides security fix for bug 531292.
+  Add ipv6 USE flag, fixes bug 528072.
+  Add multiple USE flags for package fine-tuning.
 
   08 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Add myself to maintainers.

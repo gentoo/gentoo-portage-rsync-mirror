@@ -1,0 +1,24 @@
+--- project.h	2014/11/12 12:00:41	1.208
++++ project.h	2014/11/16 18:43:48	1.209
+@@ -1,7 +1,7 @@
+ #ifndef PROJECT_H_INCLUDED
+ #define PROJECT_H_INCLUDED
+ /** Version string. */
+-#define PROJECT_H_VERSION "$Id: privoxy-3.0.22-force.patch,v 1.1 2015/01/08 16:10:40 bircoph Exp $"
++#define PROJECT_H_VERSION "$Id: privoxy-3.0.22-force.patch,v 1.1 2015/01/08 16:10:40 bircoph Exp $"
+ /*********************************************************************
+  *
+  * File        :  $Source: /var/cvsroot/gentoo-x86/net-proxy/privoxy/files/privoxy-3.0.22-force.patch,v $
+@@ -1365,10 +1365,9 @@
+ /** Calculates the number of elements in an array, using sizeof. */
+ #define SZ(X)  (sizeof(X) / sizeof(*X))
+ 
+-#ifdef FEATURE_FORCE_LOAD
+-/** The force load URL prefix. */
++/** The force load URL prefix. Not behind an ifdef because
++  * it's always used for the show-status page. */
+ #define FORCE_PREFIX "/PRIVOXY-FORCE"
+-#endif /* def FEATURE_FORCE_LOAD */
+ 
+ #ifdef FEATURE_NO_GIFS
+ /** The MIME type for images ("image/png" or "image/gif"). */

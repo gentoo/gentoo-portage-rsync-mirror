@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/logtalk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.12 2015/01/08 15:55:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.13 2015/01/08 16:16:41 keri Exp $
+
+  08 Jan 2015; <keri@gentoo.org> metadata.xml:
+  miknix has stepped down as maintainer of logtalk
 
   08 Jan 2015; <keri@gentoo.org> -logtalk-2.34.1.ebuild,
   -logtalk-2.35.1.ebuild, -logtalk-2.37.1.ebuild, -logtalk-2.37.4.ebuild:

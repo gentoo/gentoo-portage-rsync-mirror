@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>prolog</herd>
-<maintainer>
-	<email>miknix@gentoo.org</email>
-	<name>Angelo Arrifano</name>
-</maintainer>
 <use>
 	<flag name='gnupl'>Support GNU Prolog back-end compiler</flag>
 	<flag name='qupl'>Support Qu-Prolog back-end compiler</flag>

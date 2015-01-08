@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.1_p1-r1.ebuild,v 1.3 2014/11/02 18:39:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.4_p1.ebuild,v 1.1 2015/01/08 16:17:52 zx2c4 Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DEPEND="dev-libs/openssl
 		dev-libs/libevent
 		app-misc/ca-certificates
 		net-mail/mailbase
+		net-libs/libasr
 		!mail-mta/courier
 		!mail-mta/esmtp
 		!mail-mta/exim
@@ -44,6 +45,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P/_}
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}"-5.4.4_p1-setgroups-header.patch
 	epatch_user
 	eautoreconf
 }
