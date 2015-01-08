@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.411 2014/12/14 20:35:02 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.412 2015/01/08 00:15:32 polynomial-c Exp $
+
+*freetype-2.5.5 (08 Jan 2015)
+
+  08 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> +freetype-2.5.5.ebuild:
+  Version bump.
 
 *freetype-2.5.4-r1 (14 Dec 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.1-r1.ebuild,v 1.1 2014/12/17 14:47:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.3.1-r1.ebuild,v 1.2 2015/01/08 00:15:53 remi Exp $
 
 EAPI=5
 
@@ -40,13 +40,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3.1-jstdhuff.patch
 	epatch "${FILESDIR}"/${PN}-1.3.1-overrun.patch
 
-	if [[ -x ./configure ]]; then
-		elibtoolize
-	else
-		eautoreconf
-	fi
-
-	epunt_cxx #424689
+	# generate a new ./configure compatible with non-bash shells, #533902
+	eautoreconf
 
 	java-pkg-opt-2_src_prepare
 }
