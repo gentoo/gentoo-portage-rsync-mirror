@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.1.4.ebuild,v 1.1 2014/10/20 14:50:25 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.1.4.ebuild,v 1.2 2015/01/08 03:53:23 gienah Exp $
 
 EAPI=5
-inherit eutils
+inherit eutils prefix
 
 DESCRIPTION="ASDF is Another System Definition Facility for Common Lisp"
 HOMEPAGE="http://common-lisp.net/project/asdf/"
@@ -11,7 +11,7 @@ SRC_URI="http://common-lisp.net/project/${PN}/archives/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux"
 IUSE="doc"
 
 SLOT="0/${PVR}"
@@ -43,5 +43,8 @@ src_install() {
 	fi
 
 	insinto /etc/common-lisp
-	doins "${FILESDIR}"/gentoo-init.lisp "${FILESDIR}"/source-registry.conf
+	cd "${T}"
+	cp "${FILESDIR}"/gentoo-init.lisp "${FILESDIR}"/source-registry.conf .
+	eprefixify gentoo-init.lisp source-registry.conf
+	doins gentoo-init.lisp source-registry.conf
 }
