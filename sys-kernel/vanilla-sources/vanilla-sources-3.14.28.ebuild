@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-3.14.27.ebuild,v 1.1 2014/12/16 19:24:48 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-3.14.28.ebuild,v 1.1 2015/01/08 19:05:44 mpagano Exp $
 
 EAPI="5"
 K_NOUSENAME="yes"
