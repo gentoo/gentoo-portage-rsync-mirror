@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxpanel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.62 2014/09/10 01:54:45 nullishzero Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.63 2015/01/08 16:46:27 mgorny Exp $
+
+  08 Jan 2015; Michał Górny <mgorny@gentoo.org> lxpanel-0.7.0-r1.ebuild:
+  Require USE=gtk on libfm, https://bugs.funtoo.org/browse/FL-1932.
 
 *lxpanel-0.7.0-r1 (10 Sep 2014)
 

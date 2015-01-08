@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.7.0-r1.ebuild,v 1.1 2014/09/10 01:54:45 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.7.0-r1.ebuild,v 1.2 2015/01/08 16:46:27 mgorny Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ IUSE="+alsa wifi"
 RESTRICT="test"  # bug 249598
 
 RDEPEND="x11-libs/gtk+:2
-	>=x11-libs/libfm-1.2.0
+	>=x11-libs/libfm-1.2.0[gtk]
 	x11-libs/libwnck:1
 	x11-libs/libXmu
 	x11-libs/libXpm
