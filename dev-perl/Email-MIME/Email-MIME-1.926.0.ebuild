@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.926.0.ebuild,v 1.1 2014/03/16 12:58:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/Email-MIME-1.926.0.ebuild,v 1.2 2015/01/08 21:52:56 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Easy MIME message parsing"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ppc ppc64 x86 ~sparc-solaris ~x86-solaris"
 IUSE="test"
 
 RDEPEND="

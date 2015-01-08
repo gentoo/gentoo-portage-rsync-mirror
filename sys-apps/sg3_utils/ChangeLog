@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.122 2015/01/08 21:03:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.123 2015/01/08 21:55:52 jer Exp $
+
+  08 Jan 2015; Jeroen Roovers <jer@gentoo.org> sg3_utils-1.40.ebuild:
+  Stable for HPPA (bug #535650).
 
   08 Jan 2015; Markus Meier <maekke@gentoo.org> sg3_utils-1.40.ebuild:
   arm stable, bug #535650

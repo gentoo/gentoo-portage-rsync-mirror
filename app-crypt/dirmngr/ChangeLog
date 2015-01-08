@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/dirmngr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.66 2014/04/28 13:22:02 alonbl Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.67 2015/01/08 22:00:44 jer Exp $
+
+  08 Jan 2015; Jeroen Roovers <jer@gentoo.org> dirmngr-1.1.1-r1.ebuild:
+  Stable for HPPA (bug #534826).
 
 *dirmngr-1.1.1-r1 (28 Apr 2014)
 

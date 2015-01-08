@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Geo-IP
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.88 2014/10/05 14:53:59 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.89 2015/01/08 21:37:48 jer Exp $
+
+  08 Jan 2015; Jeroen Roovers <jer@gentoo.org> Geo-IP-1.450.0.ebuild:
+  Stable for HPPA (bug #535182).
 
   05 Oct 2014; Anthony G. Basile <blueness@gentoo.org> Geo-IP-1.420.0.ebuild,
   Geo-IP-1.430.0.ebuild, Geo-IP-1.450.0.ebuild:

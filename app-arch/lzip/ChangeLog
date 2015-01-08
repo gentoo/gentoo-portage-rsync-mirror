@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.51 2014/09/22 06:40:10 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.52 2015/01/08 21:39:50 jer Exp $
+
+  08 Jan 2015; Jeroen Roovers <jer@gentoo.org> lzip-1.16.ebuild:
+  Stable for HPPA (bug #534812).
 
 *lzip-1.16 (22 Sep 2014)
 
