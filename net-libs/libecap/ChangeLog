@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.41 2015/01/07 13:52:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.44 2015/01/08 12:44:29 eras Exp $
+
+  08 Jan 2015; Eray Aslan <eras@gentoo.org> metadata.xml:
+  Add myself as maintainer
+
+  08 Jan 2015; Eray Aslan <eras@gentoo.org> -files/libecap-limits.patch,
+  -libecap-0.0.3.ebuild:
+  Remove old
+
+  08 Jan 2015; Eray Aslan <eras@gentoo.org> libecap-1.0.0.ebuild:
+  Add blocker to libecap:0.2 - bug #501658
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -libecap-0.0.2.ebuild,
   metadata.xml:

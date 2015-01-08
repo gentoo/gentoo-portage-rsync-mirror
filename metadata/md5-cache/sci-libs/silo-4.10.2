@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure prepare
+DEPEND=hdf5? ( sci-libs/hdf5 ) qt4? ( dev-qt/qtgui:4 )
+DESCRIPTION=A mesh and field I/O library and scientific database
+EAPI=5
+HOMEPAGE=https://wci.llnl.gov/simulation/computer-codes/silo
+IUSE=hdf5 +silex static-libs qt4 test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=hdf5? ( sci-libs/hdf5 ) qt4? ( dev-qt/qtgui:4 )
+REQUIRED_USE=silex? ( qt4 )
+SLOT=0
+SRC_URI=https://wci.llnl.gov/content/assets/docs/simulation/computer-codes/silo/silo-4.10.2/silo-4.10.2.tar.gz
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=722a276dad789fbd502d60cd676c47c4
