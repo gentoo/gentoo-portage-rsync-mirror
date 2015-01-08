@@ -24,7 +24,7 @@
 	<flag name="valgrind">Add support for memory debugging using <pkg>dev-util/valgrind</pkg></flag>
 </use>
 <upstream>
-	<bugs-to>https://bugreports.qt-project.org/</bugs-to>
+	<bugs-to>https://bugreports.qt.io/</bugs-to>
 	<doc>http://qt-project.org/doc/qtcreator/</doc>
 </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtwidgets
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.6 2014/12/12 14:30:05 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.7 2015/01/08 22:31:47 pesa Exp $
+
+  08 Jan 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Update upstream bugtracker URL.
 
 *qtwidgets-5.4.0 (12 Dec 2014)
 

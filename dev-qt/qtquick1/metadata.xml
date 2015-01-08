@@ -8,7 +8,7 @@
 		<flag name="xml">Build the XmlListModel import for QtQuick1 (requires QtXmlPatterns)</flag>
 	</use>
 	<upstream>
-		<bugs-to>https://bugreports.qt-project.org/</bugs-to>
+		<bugs-to>https://bugreports.qt.io/</bugs-to>
 		<doc>http://qt-project.org/doc/</doc>
 	</upstream>
 </pkgmetadata>

@@ -1,6 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.10 2015/01/05 16:12:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/pachi-1.0.ebuild,v 1.11 2015/01/08 22:57:49 mr_bones_ Exp $
+
 EAPI=5
 inherit autotools eutils games
 
@@ -16,14 +17,16 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
-	media-libs/sdl-mixer"
+DEPEND="media-libs/libsdl[joystick,sound,video]
+	media-libs/sdl-mixer[mod]"
 RDEPEND="${DEPEND}"
+
 S=${WORKDIR}/Pachi
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-autotools.patch
 	rm -f missing
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 

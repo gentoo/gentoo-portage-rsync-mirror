@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt-creator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.35 2014/11/07 01:59:17 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.36 2015/01/08 22:32:11 pesa Exp $
+
+  08 Jan 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Update upstream bugtracker URL.
 
   07 Nov 2014; Davide Pesavento <pesa@gentoo.org> qt-creator-2.8.1.ebuild,
   qt-creator-3.2.2.ebuild:

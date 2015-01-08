@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pachi
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/ChangeLog,v 1.12 2015/01/05 16:12:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/ChangeLog,v 1.13 2015/01/08 22:57:49 mr_bones_ Exp $
+
+  08 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> pachi-1.0.ebuild:
+  add use deps for bug #536062
 
   05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> pachi-1.0.ebuild:
   EAPI 5
@@ -41,4 +44,3 @@
 
   27 Sep 2003; Michael Sterrett <msterret@gentoo.org> pachi-20030927.ebuild:
   initial commit (bug 28983)
-
