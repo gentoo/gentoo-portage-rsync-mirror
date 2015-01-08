@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=virtual/perl-Digest-MD5 virtual/perl-File-Spec dev-perl/Parse-RecDescent test? ( dev-perl/Test-Warn dev-perl/File-Slurp ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Write Perl subroutines in other languages
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Inline/
+IUSE=test
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=virtual/perl-Digest-MD5 virtual/perl-File-Spec dev-perl/Parse-RecDescent dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/I/IN/INGY/Inline-0.78.tar.gz
+_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=67b062fa72edfd836f036d5cb243c1e1

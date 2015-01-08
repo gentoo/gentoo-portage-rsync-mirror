@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gkeys
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.4 2015/01/01 22:15:34 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.5 2015/01/08 19:36:24 dastergon Exp $
+
+*gkeys-0.1 (08 Jan 2015)
+
+  08 Jan 2015; Pavlos Ratis <dastergon@gentoo.org> +gkeys-0.1.ebuild:
+  initial release
 
   01 Jan 2015; Brian Dolbec <dolsen@gentoo.org> gkeys-9999.ebuild:
   Change default log location, set group, permissions.
@@ -16,4 +21,3 @@
   24 Dec 2014; Brian Dolbec <dolsen@gentoo.org> +gkeys-9999.ebuild,
   +metadata.xml:
   Initial live ebuild for gkeys.
-
