@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/openssl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.612 2014/10/22 23:46:29 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.613 2015/01/08 17:28:53 polynomial-c Exp $
+
+*openssl-1.0.1k (08 Jan 2015)
+*openssl-1.0.0p (08 Jan 2015)
+*openssl-0.9.8z_p4 (08 Jan 2015)
+
+  08 Jan 2015; Lars Wendler <polynomial-c@gentoo.org>
+  +openssl-0.9.8z_p4.ebuild, -openssl-1.0.0o.ebuild, +openssl-1.0.0p.ebuild,
+  -openssl-1.0.1i.ebuild, +openssl-1.0.1k.ebuild:
+  Security bump (bug #536042). Removed old.
 
   22 Oct 2014; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1j.ebuild:
   Mark arm64/m68k/s390/sh stable.
