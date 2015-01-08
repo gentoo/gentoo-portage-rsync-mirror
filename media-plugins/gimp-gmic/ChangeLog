@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/gimp-gmic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/ChangeLog,v 1.48 2014/12/08 03:23:48 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/ChangeLog,v 1.50 2015/01/08 04:53:37 radhermit Exp $
+
+*gimp-gmic-1.6.0.3 (08 Jan 2015)
+
+  08 Jan 2015; Tim Harder <radhermit@gentoo.org> +gimp-gmic-1.6.0.3.ebuild:
+  Version bump.
+
+  08 Jan 2015; Tim Harder <radhermit@gentoo.org> -gimp-gmic-1.5.8.6.ebuild,
+  -gimp-gmic-1.5.9.1.ebuild, -gimp-gmic-1.5.9.2-r1.ebuild,
+  -files/gmic-1.5.8.4-makefile.patch, -files/gmic-1.5.9.1-makefile.patch,
+  -files/gmic-1.5.9.2-makefile.patch:
+  Remove old.
 
 *gimp-gmic-1.6.0.2-r1 (08 Dec 2014)
 

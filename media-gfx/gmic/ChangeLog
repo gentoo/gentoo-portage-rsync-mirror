@@ -1,6 +1,20 @@
 # ChangeLog for media-gfx/gmic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.54 2014/12/03 08:04:56 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.57 2015/01/08 04:48:46 radhermit Exp $
+
+*gmic-1.6.0.3 (08 Jan 2015)
+
+  08 Jan 2015; Tim Harder <radhermit@gentoo.org> +gmic-1.6.0.3.ebuild:
+  Version bump.
+
+  08 Jan 2015; Tim Harder <radhermit@gentoo.org> -gmic-1.5.8.6.ebuild,
+  -gmic-1.5.9.1.ebuild, -gmic-1.5.9.2-r1.ebuild,
+  -files/gmic-1.5.8.2-ffmpeg.patch, -files/gmic-1.5.8.4-makefile.patch,
+  -files/gmic-1.5.9.1-makefile.patch, -files/gmic-1.5.9.2-makefile.patch:
+  Remove old.
+
+  08 Jan 2015; Tim Harder <radhermit@gentoo.org> gmic-1.6.0.2.ebuild:
+  Append to C++ flags instead of C preprocessor flags (fixes bug #533016).
 
 *gmic-1.6.0.2 (03 Dec 2014)
 

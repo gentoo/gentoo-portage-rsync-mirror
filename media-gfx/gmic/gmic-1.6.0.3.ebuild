@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.5.9.2-r1.ebuild,v 1.1 2014/06/16 07:46:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.6.0.3.ebuild,v 1.1 2015/01/08 04:48:46 radhermit Exp $
 
 EAPI=5
 
@@ -13,10 +13,9 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="CeCILL-2 FDL-1.3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ffmpeg fftw graphicsmagick jpeg opencv openexr png tiff X zlib"
+IUSE="ffmpeg fftw graphicsmagick jpeg opencv openexr openmp png tiff X zlib"
 
-RDEPEND="
-	ffmpeg? ( virtual/ffmpeg )
+DEPEND="
 	fftw? ( sci-libs/fftw:3.0[threads] )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	jpeg? ( virtual/jpeg )
@@ -32,15 +31,28 @@ RDEPEND="
 		x11-libs/libXext
 	)
 	zlib? ( sys-libs/zlib )"
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}
+	ffmpeg? ( media-video/ffmpeg:0 )
+"
 
 S=${WORKDIR}/${P}/src
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	epatch "${FILESDIR}"/${PN}-1.5.8.2-ffmpeg.patch
+pkg_pretend() {
+	if use openmp ; then
+		tc-has-openmp || die "Please switch to an openmp compatible compiler"
+	fi
 
-	for i in ffmpeg fftw jpeg opencv png tiff zlib ; do
+	if ! test-flag-CXX -std=c++11 ; then
+		die "You need at least GCC 4.7.x or Clang >= 3.3 for C++11-specific compiler flags"
+	fi
+}
+
+src_prepare() {
+	cp "${FILESDIR}"/${PN}-1.6.0.2-makefile.patch "${WORKDIR}" || die
+	edos2unix "${WORKDIR}"/${PN}-1.6.0.2-makefile.patch
+	epatch "${WORKDIR}"/${PN}-1.6.0.2-makefile.patch
+
+	for i in fftw jpeg opencv openmp png tiff zlib ; do
 		use $i || { sed -i -r "s/^(${i}_(CFLAGS|LIBS) =).*/\1/I" Makefile || die ; }
 	done
 
@@ -51,23 +63,17 @@ src_prepare() {
 		sed -i -r "s/^((X11|XSHM)_(CFLAGS|LIBS) =).*/\1/" Makefile || die
 
 		# disable display capabilities when X support is disabled
-		append-cppflags -Dcimg_display=0
+		append-cxxflags -Dcimg_display=0
 	fi
 }
 
 src_compile() {
-	emake AR="$(tc-getAR)" CC="$(tc-getCXX)" CFLAGS="${CXXFLAGS}" OPT_CFLAGS= DEBUG_CFLAGS= linux lib
+	emake AR="$(tc-getAR)" CC="$(tc-getCXX)" CFLAGS="${CXXFLAGS}" \
+		LIB="$(get_libdir)" OPT_CFLAGS= DEBUG_CFLAGS= linux lib
+	emake man bashcompletion
 }
 
 src_install() {
-	dobin gmic
-	newlib.so libgmic.so libgmic.so.1
-
-	insinto /usr/include
-	doins gmic.h
-
-	doman ../man/gmic.1.gz
+	emake DESTDIR="${D}" LIB="$(get_libdir)" install-bin install-lib install-man install-bash
 	dodoc ../README
-
-	newbashcomp ../resources/gmic_bashcompletion.sh ${PN}
 }
