@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.85 2015/01/01 17:33:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.86 2015/01/08 20:20:12 tupone Exp $
+
+  08 Jan 2015; Tupone Alfredo <tupone@gentoo.org> gnubg-1.04.000.ebuild:
+  no function called from autotools.eclass
 
   01 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/gnubg-20130203-build.patch, -gnubg-20130203.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gkeys
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.5 2015/01/08 19:36:24 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.6 2015/01/08 20:15:26 dastergon Exp $
+
+  08 Jan 2015; Pavlos Ratis <dastergon@gentoo.org> gkeys-0.1.ebuild:
+  add py-3.4 target
 
 *gkeys-0.1 (08 Jan 2015)
 

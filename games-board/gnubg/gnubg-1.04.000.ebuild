@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-1.04.000.ebuild,v 1.7 2015/01/01 11:30:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-1.04.000.ebuild,v 1.8 2015/01/08 20:20:12 tupone Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
-inherit autotools eutils python-single-r1 gnome2-utils games
+inherit eutils python-single-r1 gnome2-utils games
 
 DESCRIPTION="GNU BackGammon"
 HOMEPAGE="http://www.gnubg.org/"

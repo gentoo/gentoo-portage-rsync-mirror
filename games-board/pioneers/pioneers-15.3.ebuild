@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.3.ebuild,v 1.1 2014/10/28 05:56:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.3.ebuild,v 1.2 2015/01/08 20:15:52 tupone Exp $
 
 EAPI=5
-inherit autotools eutils gnome-games
+inherit eutils gnome-games
 
 DESCRIPTION="A clone of the popular board game The Settlers of Catan"
 HOMEPAGE="http://pio.sourceforge.net/"

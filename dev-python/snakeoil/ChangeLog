@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.73 2014/12/15 02:03:46 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.74 2015/01/08 20:07:28 dolsen Exp $
+
+  08 Jan 2015; Brian Dolbec <dolsen@gentoo.org> snakeoil-0.5.3.ebuild:
+  Add python-3.4 to the PYTHON_COMPAT list with Tim's blessing.
 
   15 Dec 2014; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop dolsen as a maintainer and update upstream metadata.
