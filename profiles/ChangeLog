@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9671 2015/01/09 06:15:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9672 2015/01/09 12:22:14 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jan 2015; Anthony G. Basile <blueness@gentoo.org> package.mask:
+  p.mask =dev-misc/i2pd-9999
 
   08 Jan 2015; Justin Lecher <jlec@gentoo.org> +updates/1Q-2015:
   Resolve file collision for sci-libs/Fiona between SLOTs
