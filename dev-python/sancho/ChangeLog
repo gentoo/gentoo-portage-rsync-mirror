@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sancho
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.47 2010/06/29 04:45:57 arfrever Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sancho/ChangeLog,v 1.48 2015/01/09 05:16:51 idella4 Exp $
+
+*sancho-2.4-r1 (09 Jan 2015)
+
+  09 Jan 2015; Ian Delaney <idella4@gentoo.org> +sancho-2.4-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   29 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   sancho-2.4.ebuild:
@@ -159,4 +164,3 @@
   +sancho-2.1.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>. Needed for
   pycrypto testcases.
-
