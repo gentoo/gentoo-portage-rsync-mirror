@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9670 2015/01/08 12:49:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9671 2015/01/09 06:15:28 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -31,7 +31,6 @@
   05 Jan 2015; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Mask Asterisk 13 branch.
 
->>>>>>> 1.9669
   01 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Remove obsolete dev-perl masks.
 
