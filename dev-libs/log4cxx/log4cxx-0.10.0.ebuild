@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.11 2015/01/09 14:30:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.12 2015/01/09 14:36:43 aballier Exp $
 
 EAPI=2
 inherit eutils
@@ -52,6 +52,7 @@ src_configure() {
 	econf \
 		--disable-doxygen \
 		--disable-html-docs \
+		--with-apr-util="${SYSROOT:-${EPREFIX}}/usr" \
 		${myconf}
 }
 

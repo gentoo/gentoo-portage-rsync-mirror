@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.3.6.ebuild,v 1.3 2012/12/07 18:01:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.3.6.ebuild,v 1.4 2015/01/09 14:32:09 keri Exp $
 
 EAPI=2
 
 MY_P="XSB${PV//./}"
 
-PATCHSET_VER="0"
+PATCHSET_VER="1"
 
 inherit eutils autotools java-pkg-opt-2
 
@@ -96,6 +96,7 @@ src_compile() {
 
 	if use curl ; then
 		emake -j1 curl || die "emake curl package failed"
+		emake -j1 sgml || die "emake sgml package failed"
 	fi
 
 	if use mysql ; then

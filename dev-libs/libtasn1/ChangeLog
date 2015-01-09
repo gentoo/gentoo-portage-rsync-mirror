@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.224 2015/01/02 12:36:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.225 2015/01/09 14:55:12 klausman Exp $
+
+  09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> libtasn1-4.2.ebuild:
+  Stable on alpha, bug 532560
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libtasn1-4.2.ebuild:
   Stable for sparc, wrt bug #532560
