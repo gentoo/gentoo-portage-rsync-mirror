@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vdpauinfo/vdpauinfo-0.9.ebuild,v 1.1 2014/12/30 07:16:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vdpauinfo/vdpauinfo-0.9-r1.ebuild,v 1.1 2015/01/09 19:21:16 radhermit Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11
-		x11-libs/libvdpau"
+		>=x11-libs/libvdpau-0.9"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig
 		x11-proto/xproto"
