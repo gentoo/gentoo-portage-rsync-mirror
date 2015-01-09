@@ -1,6 +1,6 @@
 # Copyright 2014-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-9999.ebuild,v 1.4 2015/01/01 22:15:34 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-9999.ebuild,v 1.5 2015/01/09 21:58:00 dolsen Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 	=dev-python/pyGPG-9999[${PYTHON_USEDEP}]
 	=dev-python/ssl-fetch-9999[${PYTHON_USEDEP}]
 	dev-python/snakeoil[${PYTHON_USEDEP}]
-	app-crypt/gentoo-keys
+	>=app-crypt/gentoo-keys-201501052117
 	"
 
 S="${WORKDIR}/$P/gkeys"
@@ -39,6 +39,7 @@ python_prepare_all() {
 	# copy these 2 into our subdir from the master level
 	cp ../LICENSE ./ || die "cp LICENSE failed"
 	cp ../README.md ./ || die "cp README.me failed"
+	cp -R ../py2man ./ || die "cp-R py2man failed"
 }
 
 python_install_all() {

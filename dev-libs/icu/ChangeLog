@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.290 2015/01/07 22:59:22 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.291 2015/01/09 21:56:23 remi Exp $
+
+*icu-53.1-r2 (09 Jan 2015)
+
+  09 Jan 2015; Rémi Cardona <remi@gentoo.org> +icu-53.1-r2.ebuild:
+  Revbump, see bug #528022.
 
   07 Jan 2015; Rémi Cardona <remi@gentoo.org> files/icu-remove-bashisms.patch:
   Update patch (add wrongly removed spaces), see bug #528022.
