@@ -1,6 +1,17 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.110 2015/01/09 13:41:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.113 2015/01/09 18:50:53 zlogene Exp $
+
+*MIME-Types-2.090.0 (09 Jan 2015)
+
+  09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> +MIME-Types-2.090.0.ebuild:
+  Version bump
+
+  09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> MIME-Types-2.040.0.ebuild:
+  Revert arm keyword
+
+  09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> MIME-Types-2.040.0.ebuild:
+  Stable for all wrt bug #535208
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> MIME-Types-2.040.0.ebuild:
   Stable for amd64, wrt bug #535208

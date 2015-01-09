@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.47 2015/01/09 15:40:44 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.48 2015/01/09 18:31:42 keri Exp $
+
+  09 Jan 2015; <keri@gentoo.org> xsb-3.3.6.ebuild, xsb-3.3.7.ebuild:
+  Do not compile xpath Prolog module without USE=curl
 
 *xsb-3.3.7 (09 Jan 2015)
 

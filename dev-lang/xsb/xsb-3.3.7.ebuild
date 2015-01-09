@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.3.7.ebuild,v 1.1 2015/01/09 15:40:44 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.3.7.ebuild,v 1.2 2015/01/09 18:31:42 keri Exp $
 
 EAPI=2
 
@@ -97,6 +97,9 @@ src_compile() {
 	if use curl ; then
 		emake -j1 curl || die "emake curl package failed"
 		emake -j1 sgml || die "emake sgml package failed"
+		if use xml ; then
+			emake -j1 xpath || die "emake xpath package failed"
+		fi
 	fi
 
 	if use mysql ; then
@@ -109,10 +112,6 @@ src_compile() {
 
 	if use pcre ; then
 		emake -j1 pcre || die "emake pcre package failed"
-	fi
-
-	if use xml ; then
-		emake -j1 xpath || die "emake xpath package failed"
 	fi
 }
 
@@ -146,13 +145,6 @@ src_install() {
 	insinto ${PACKAGES}/regmatch/cc
 	doins regmatch/cc/*.H || die
 
-	insinto ${PACKAGES}/sgml
-	doins sgml/*.xwam || die
-	insinto ${PACKAGES}/sgml/cc
-	doins sgml/cc/*.H || die
-	insinto ${PACKAGES}/sgml/cc/dtd
-	doins sgml/cc/dtd/* || die
-
 	insinto ${PACKAGES}/slx
 	doins slx/*.xwam || die
 
@@ -164,6 +156,18 @@ src_install() {
 	if use curl ; then
 		insinto ${PACKAGES}/curl
 		doins curl/*.xwam || die
+		insinto ${PACKAGES}/sgml
+		doins sgml/*.xwam || die
+		insinto ${PACKAGES}/sgml/cc
+		doins sgml/cc/*.H || die
+		insinto ${PACKAGES}/sgml/cc/dtd
+		doins sgml/cc/dtd/* || die
+		if use xml ; then
+			insinto ${PACKAGES}/xpath
+			doins xpath/*xwam || die
+			insinto ${PACKAGES}/xpath/cc
+			doins xpath/cc/*.H || die
+		fi
 	fi
 
 	if use mysql || use odbc ; then
@@ -191,13 +195,6 @@ src_install() {
 		doins pcre/*.xwam || die
 		insinto ${PACKAGES}/pcre/cc
 		doins pcre/cc/*.H || die
-	fi
-
-	if use xml ; then
-		insinto ${PACKAGES}/xpath
-		doins xpath/*xwam || die
-		insinto ${PACKAGES}/xpath/cc
-		doins xpath/cc/*.H || die
 	fi
 
 	if use examples ; then
