@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/xsb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.46 2015/01/09 14:32:09 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/ChangeLog,v 1.47 2015/01/09 15:40:44 keri Exp $
+
+*xsb-3.3.7 (09 Jan 2015)
+
+  09 Jan 2015; <keri@gentoo.org> +xsb-3.3.7.ebuild:
+  Version bump
 
   09 Jan 2015; <keri@gentoo.org> xsb-3.3.6.ebuild:
   Do not compile sgml Prolog module without USE=curl

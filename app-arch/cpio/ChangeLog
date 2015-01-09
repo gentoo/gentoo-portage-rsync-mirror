@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.132 2015/01/09 14:40:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.133 2015/01/09 15:48:30 chainsaw Exp $
+
+*cpio-2.11-r3 (09 Jan 2015)
+
+  09 Jan 2015; Tony Vroon <chainsaw@gentoo.org> -cpio-2.11-r2.ebuild,
+  +cpio-2.11-r3.ebuild:
+  Run eautoreconf at the appropriate moment, as per Jeroen Roovers in bug
+  #536112. Stable keywords transferred for alpha & x86.
 
   09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> cpio-2.11-r2.ebuild:
   Stable on alpha, bug 530512
