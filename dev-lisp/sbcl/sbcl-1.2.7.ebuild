@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.2.7.ebuild,v 1.1 2015/01/09 00:33:16 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.2.7.ebuild,v 1.2 2015/01/09 02:03:11 redlizard Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -31,7 +31,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x64-macos"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
 IUSE="debug doc source +threads +unicode pax_kernel zlib"
 
 CDEPEND=">=dev-lisp/asdf-3.1:="
@@ -39,7 +39,7 @@ DEPEND="${CDEPEND}
 		doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )
 		pax_kernel? ( sys-apps/paxctl sys-apps/elfix )"
 RDEPEND="${CDEPEND}
-		 elibc_glibc? ( >=sys-libs/glibc-2.6 )"
+		!prefix? ( elibc_glibc? ( >=sys-libs/glibc-2.6 ) )"
 
 # Disable warnings about executable stacks, as this won't be fixed soon by upstream
 QA_EXECSTACK="usr/bin/sbcl"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.213 2015/01/09 00:33:16 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.214 2015/01/09 02:03:11 redlizard Exp $
+
+  09 Jan 2015; redlizard <redlizard@gentoo.org> sbcl-1.2.7.ebuild:
+  Added prefix keywords and fixes.
 
 *sbcl-1.2.7 (09 Jan 2015)
 

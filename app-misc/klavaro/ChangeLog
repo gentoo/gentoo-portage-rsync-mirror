@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/klavaro
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.22 2014/09/26 19:10:05 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.23 2015/01/09 02:02:49 nixphoeni Exp $
+
+*klavaro-3.0.1 (09 Jan 2015)
+
+  09 Jan 2015; Joe Sapp <nixphoeni@gentoo.org> +klavaro-3.0.1.ebuild,
+  +files/klavaro-3.0.1-datadir.patch, +files/klavaro-3.0.1-out-of-source.patch,
+  +files/klavaro-3.0.1-static.patch, +files/klavaro-desktop-keywords.patch:
+  Version bump; fix install directory for .desktop and appdata files; fix
+  license
 
   26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/klavaro-3.0.0-static.patch:
