@@ -1,11 +1,11 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.59 2015/01/08 14:37:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.60 2015/01/09 17:56:48 zerochaos Exp $
 
 *gnuradio-3.7.6 (08 Jan 2015)
 *gnuradio-3.7.5.2 (08 Jan 2015)
 
-  08 Jan 2015;  <zero@gentoo.org> +gnuradio-3.7.5.2.ebuild,
+  08 Jan 2015;  Rick Farina <zerochaos@gentoo.org> +gnuradio-3.7.5.2.ebuild,
   +gnuradio-3.7.6.ebuild, -gnuradio-3.7.4.1.ebuild, -gnuradio-3.7.5.1.ebuild,
   gnuradio-9999.ebuild:
   version bumps

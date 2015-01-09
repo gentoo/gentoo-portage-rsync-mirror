@@ -1,8 +1,8 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.236 2015/01/03 02:11:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.237 2015/01/09 17:59:16 zerochaos Exp $
 
-  03 Jan 2015;  <zero@gentoo.org> libtool-2.4.3-r2.ebuild:
+  03 Jan 2015;  Rick Farina <zerochaos@gentoo.org> libtool-2.4.3-r2.ebuild:
   QA band-aid for bug 528178, please feel free to drop the dep on help2man when
   it's no longer required
 
