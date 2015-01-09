@@ -4,10 +4,10 @@ DESCRIPTION=Webmail for nuts!
 EAPI=5
 HOMEPAGE=http://www.squirrelmail.org/
 IUSE=ldap spell ssl filter mysql postgres nls vhosts
-KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/php[session] virtual/perl-DB_File ldap? ( net-nds/openldap ) spell? ( app-text/aspell ) filter? ( mail-filter/amavisd-new dev-php/PEAR-Log dev-php/PEAR-DB dev-php/PEAR-Net_SMTP ) postgres? ( dev-php/PEAR-DB ) mysql? ( dev-php/PEAR-DB ) >=app-admin/webapp-config-1.50.15
 SLOT=1.4.23_pre20140426
 SRC_URI=http://snapshots.squirrelmail.org/squirrelmail-20140426_0200-SVN.stable.tar.bz2 mirror://sourceforge/squirrelmail/squirrelmail-decode-1.2.tar.bz2 mirror://sourceforge/retruserdata/retrieveuserdata.0.9-1.4.0.tar.gz http://www.squirrelmail.org/plugins/compatibility-2.0.16-1.0.tar.gz ssl? ( http://www.squirrelmail.org/plugins/secure_login-1.4-1.2.8.tar.gz ) ssl? ( http://www.squirrelmail.org/plugins/show_ssl_link-2.2-1.2.8.tar.gz ) http://www.squirrelmail.org/plugins/admin_add.0.1-1.4.0.tar.gz filter? ( http://www.squirrelmail.org/plugins/amavisnewsql-0.8.0-1.4.tar.gz ) ldap? ( http://www.squirrelmail.org/plugins/ldapuserdata-0.4.tar.gz ) nls? ( mirror://sourceforge/squirrelmail/all_locales-1.4.18-20090526.tar.bz2 )
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=1d43d0b535b4dffac37fb18cfbaaa9cc
+_md5_=732c81ef88ca5f059749d19dea5166c9
