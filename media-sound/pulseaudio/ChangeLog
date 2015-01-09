@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.367 2015/01/09 16:45:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.368 2015/01/09 22:15:38 zerochaos Exp $
+
+*pulseaudio-5.99.2-r1 (09 Jan 2015)
+
+  09 Jan 2015; Rick Farina <zerochaos@gentoo.org> +pulseaudio-5.99.2-r1.ebuild,
+  -pulseaudio-5.99.2.ebuild, metadata.xml:
+  add optional native/ofono headset support and appropriate use flags and
+  postinst messages
 
 *pulseaudio-5.0-r7 (08 Jan 2015)
 

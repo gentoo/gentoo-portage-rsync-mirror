@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.99.2.ebuild,v 1.1 2015/01/05 17:56:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.99.2-r1.ebuild,v 1.1 2015/01/09 22:15:38 zerochaos Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -21,11 +21,14 @@ KEYWORDS=""
 
 # +alsa-plugin as discussed in bug #519530
 IUSE="+alsa +alsa-plugin +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib
-gnome gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
-system-wide tcpd test +udev +webrtc-aec +X xen zeroconf"
+	gnome gtk ipv6 jack libsamplerate lirc native-headset neon ofono-headset
+	+orc oss qt4 realtime ssl systemd system-wide tcpd test	+udev
+	+webrtc-aec +X xen zeroconf"
 
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
-REQUIRED_USE="bluetooth? ( dbus )"
+REQUIRED_USE="bluetooth? ( dbus )
+		ofono-headset? ( bluetooth )
+		native-headset? ( bluetooth )"
 
 # libpcre needed in some cases, bug #472228
 RDEPEND="
@@ -62,6 +65,7 @@ RDEPEND="
 	udev? ( >=virtual/udev-143[hwdb(+)] )
 	realtime? ( sys-auth/rtkit )
 	equalizer? ( sci-libs/fftw:3.0 )
+	ofono-headset? ( >=net-misc/ofono-1.13 )
 	orc? ( >=dev-lang/orc-0.4.9 )
 	ssl? ( dev-libs/openssl )
 	>=media-libs/speex-1.2_rc1
@@ -69,7 +73,7 @@ RDEPEND="
 	webrtc-aec? ( media-libs/webrtc-audio-processing )
 	xen? ( app-emulation/xen-tools )
 	systemd? ( sys-apps/systemd:0=[${MULTILIB_USEDEP}] )
-	dev-libs/json-c[${MULTILIB_USEDEP}]
+	>=dev-libs/json-c-0.11[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20131008-r1
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
 	dev-libs/libltdl:0
@@ -197,6 +201,8 @@ multilib_src_configure() {
 		$(use_enable ssl openssl)
 		$(use_enable webrtc-aec)
 		$(use_enable xen)
+		$(use_enable native-headset bluez5-native-headset)
+		$(use_enable ofono-headset bluez5-ofono-headset)
 		$(use_with caps)
 		$(use_with equalizer fftw)
 		--disable-adrian-aec
@@ -357,5 +363,15 @@ pkg_postinst() {
 		elog "You've enabled the 'equalizer' USE-flag but not the 'qt4' USE-flag."
 		elog "This will build the equalizer module, but the 'qpaeq' tool"
 		elog "which is required to set equalizer levels will not work."
+	fi
+
+	if use native-headset && use ofono-headset; then
+		elog "You have enabled both native and ofono headset profiles. The runtime decision"
+		elog "which to use is done via the 'headset' argument of module-bluetooth-discover."
+	fi
+
+	if use libsamplerate; then
+		elog "The libsamplerate based resamplers are now deprecated, because they offer no"
+		elog "particular advantage over speex. Upstream suggests disabling them."
 	fi
 }

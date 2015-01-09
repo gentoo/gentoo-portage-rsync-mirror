@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.336 2015/01/06 09:44:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.337 2015/01/09 22:11:08 pesa Exp $
+
+  09 Jan 2015; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Unmask Qt 4.8.6 since qtchooser has been keyworded.
 
   06 Jan 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask vtk[kaapi] as xkaapi doesnt build here

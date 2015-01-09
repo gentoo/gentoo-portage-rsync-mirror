@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/qtchooser-0_p20140613.ebuild,v 1.5 2014/12/30 17:42:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/qtchooser-0_p20150102.ebuild,v 1.1 2015/01/09 22:06:42 pesa Exp $
 
 EAPI=5
 

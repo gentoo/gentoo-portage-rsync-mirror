@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtchooser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.5 2014/12/30 17:42:23 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.6 2015/01/09 22:06:42 pesa Exp $
+
+*qtchooser-0_p20150102 (09 Jan 2015)
+
+  09 Jan 2015; Davide Pesavento <pesa@gentoo.org> +qtchooser-0_p20150102.ebuild,
+  -qtchooser-0_p20140613.ebuild:
+  New snapshot.
 
   30 Dec 2014; Markus Meier <maekke@gentoo.org> qtchooser-0_p20140613.ebuild:
   add ~arm, bug #529196
