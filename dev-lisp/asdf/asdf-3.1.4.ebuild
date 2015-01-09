@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.1.4.ebuild,v 1.2 2015/01/08 03:53:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/asdf-3.1.4.ebuild,v 1.3 2015/01/09 00:23:15 gienah Exp $
 
 EAPI=5
 inherit eutils prefix
@@ -11,7 +11,7 @@ SRC_URI="http://common-lisp.net/project/${PN}/archives/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x64-macos"
 IUSE="doc"
 
 SLOT="0/${PVR}"

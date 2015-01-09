@@ -1,6 +1,20 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.41 2015/01/08 14:10:03 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.43 2015/01/09 00:22:51 bircoph Exp $
+
+  09 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> -polipo-1.0.4.1-r2.ebuild,
+  -files/polipo-1.0.4.1-dns-timeout-fix.patch:
+  Remove vulnerable unstable version and related patch.
+
+*polipo-1.1.1 (09 Jan 2015)
+
+  09 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> +polipo-1.1.1.ebuild,
+  polipo-9999.ebuild, +files/polipo.crond-2, +files/polipo.initd-2:
+  Version bump.
+  Fix bugs 504030, 510056, 520598.
+  Provide security update for bug 385307.
+  Add init.d script multiplexing. Update crond file to support
+  multiplexing.
 
   08 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Add myself to maintainers.

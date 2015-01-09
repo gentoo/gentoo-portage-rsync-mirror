@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/XML-LibXSLT
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.105 2014/08/31 11:34:56 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.107 2015/01/09 00:27:32 zlogene Exp $
+
+  09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> XML-LibXSLT-1.870.0.ebuild:
+  Mark stable
+
+*XML-LibXSLT-1.920.0 (09 Jan 2015)
+
+  09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> +XML-LibXSLT-1.920.0.ebuild:
+  Version bump
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -XML-LibXSLT-1.770.0.ebuild,
   -XML-LibXSLT-1.790.0.ebuild:

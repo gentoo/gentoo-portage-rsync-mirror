@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/uiop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.13 2014/10/20 14:51:08 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.14 2015/01/09 00:25:59 gienah Exp $
+
+  09 Jan 2015; Mark Wright <gienah@gentoo.org> uiop-3.1.4.ebuild:
+  Thanks to redlizard and jcdx for testing, add ~amd64-linux ~x64-macos to
+  uiop-3.1.4 KEYWORDS.
 
 *uiop-3.1.4 (20 Oct 2014)
 
