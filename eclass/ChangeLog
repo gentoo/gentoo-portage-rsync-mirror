@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1501 2015/01/05 18:15:06 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1502 2015/01/08 23:26:56 polynomial-c Exp $
+
+  08 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> autotools.eclass:
+  Bump latest unstable automake version to 1.15.
 
   05 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
   better readable description

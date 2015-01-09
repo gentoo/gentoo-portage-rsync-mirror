@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 ) !app-admin/gamin !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 ) !app-admin/gamin !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=FAM, the File Alteration Monitor
 EAPI=5
 HOMEPAGE=http://oss.sgi.com/projects/fam/
@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 ) !app-admin/gamin
 SLOT=0
 SRC_URI=ftp://oss.sgi.com/projects/fam/download/stable/fam-2.7.0.tar.gz mirror://debian/pool/main/f/fam/fam_2.7.0-17.diff.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5fb8b9934ba5e2ec8c78df7a296a3f4a

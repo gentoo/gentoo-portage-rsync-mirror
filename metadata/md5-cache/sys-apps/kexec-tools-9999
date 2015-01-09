@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test unpack
-DEPEND=lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1 virtual/pkgconfig
+DEPEND=lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1 virtual/pkgconfig
 DESCRIPTION=Load another kernel from the currently executing Linux kernel
 EAPI=5
 HOMEPAGE=http://kernel.org/pub/linux/utils/kernel/kexec/
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
 REQUIRED_USE=lzma? ( zlib )
 SLOT=0
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=140426fc1b82d2c82c6011594b89ba8c

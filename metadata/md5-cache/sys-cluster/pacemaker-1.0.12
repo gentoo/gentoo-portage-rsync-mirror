@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup unpack
-DEPEND=app-text/docbook-xsl-stylesheets dev-libs/libxslt sys-cluster/cluster-glue sys-cluster/resource-agents heartbeat? ( >=sys-cluster/heartbeat-3.0.0 ) !heartbeat? ( sys-cluster/corosync ) smtp? ( net-libs/libesmtp ) snmp? ( net-analyzer/net-snmp ) !sys-cluster/crmsh !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 =dev-lang/python-2*
+DEPEND=app-text/docbook-xsl-stylesheets dev-libs/libxslt sys-cluster/cluster-glue sys-cluster/resource-agents heartbeat? ( >=sys-cluster/heartbeat-3.0.0 ) !heartbeat? ( sys-cluster/corosync ) smtp? ( net-libs/libesmtp ) snmp? ( net-analyzer/net-snmp ) !sys-cluster/crmsh !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 =dev-lang/python-2*
 DESCRIPTION=Pacemaker CRM
 EAPI=2
 HOMEPAGE=http://www.linux-ha.org/wiki/Pacemaker
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/docbook-xsl-stylesheets dev-libs/libxslt sys-cluster/cluster-glue sys-cluster/resource-agents heartbeat? ( >=sys-cluster/heartbeat-3.0.0 ) !heartbeat? ( sys-cluster/corosync ) smtp? ( net-libs/libesmtp ) snmp? ( net-analyzer/net-snmp ) !sys-cluster/crmsh !=dev-libs/glib-2.32* =dev-lang/python-2*
 SLOT=0
 SRC_URI=https://github.com/ClusterLabs/pacemaker-1.0/tarball/Pacemaker-1.0.12 -> pacemaker-1.0.12.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=71f47919453d647a6eaa143dac7523b1

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=x11-libs/libtinynotify:0= virtual/pkgconfig doc? ( dev-util/gtk-doc ) >=dev-util/gtk-doc-1.18 >=dev-vcs/git-1.8.2.1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=x11-libs/libtinynotify:0= virtual/pkgconfig doc? ( dev-util/gtk-doc ) >=dev-util/gtk-doc-1.18 >=dev-vcs/git-1.8.2.1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Common CLI routines for tinynotify-send & sw-notify-send
 EAPI=5
 HOMEPAGE=https://bitbucket.org/mgorny/tinynotify-send/
@@ -7,5 +7,5 @@ IUSE=doc static-libs
 LICENSE=BSD
 RDEPEND=x11-libs/libtinynotify:0=
 SLOT=0
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	git-r3	6ebae45064cb04482f3c702632dd9528	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c4b139c9fc29a1e9287a15b1c7810a15

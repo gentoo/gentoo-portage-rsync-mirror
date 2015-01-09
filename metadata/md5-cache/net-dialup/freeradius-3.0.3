@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile config configure install preinst prepare setup
-DEPEND=!net-dialup/cistronradius !net-dialup/gnuradius sys-devel/libtool dev-lang/perl sys-libs/gdbm python? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) ) readline? ( sys-libs/readline ) pcap? ( net-libs/libpcap ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) firebird? ( dev-db/firebird ) pam? ( virtual/pam ) ssl? ( dev-libs/openssl ) ldap? ( net-nds/openldap ) kerberos? ( virtual/krb5 ) sqlite? ( dev-db/sqlite:3 ) odbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) oracle? ( dev-db/oracle-instantclient-basic ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=!net-dialup/cistronradius !net-dialup/gnuradius sys-devel/libtool dev-lang/perl sys-libs/gdbm python? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) ) readline? ( sys-libs/readline ) pcap? ( net-libs/libpcap ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) firebird? ( dev-db/firebird ) pam? ( virtual/pam ) ssl? ( dev-libs/openssl ) ldap? ( net-nds/openldap ) kerberos? ( virtual/krb5 ) sqlite? ( dev-db/sqlite:3 ) odbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) oracle? ( dev-db/oracle-instantclient-basic ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Highly configurable free RADIUS server
 EAPI=5
 HOMEPAGE=http://www.freeradius.org/
@@ -10,5 +10,5 @@ REQUIRED_USE=bindist? ( !firebird )
 RESTRICT=test
 SLOT=0
 SRC_URI=ftp://ftp.freeradius.org/pub/radius/freeradius-server-3.0.3.tar.gz ftp://ftp.freeradius.org/pub/radius/old/freeradius-server-3.0.3.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=f3be2519c822c788bf32cbcbbb2bc9ad

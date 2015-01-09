@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A high-speed compression/decompression library by Google
 EAPI=5
 HOMEPAGE=https://code.google.com/p/snappy/
@@ -8,5 +8,5 @@ KEYWORDS=amd64 arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/dist/snappy-1.1.2.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-multilib	037c4046d25f29e78dd44dccabd5d66b	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-multilib	037c4046d25f29e78dd44dccabd5d66b	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=afb74f8ee45f90298296b204b2ad8843

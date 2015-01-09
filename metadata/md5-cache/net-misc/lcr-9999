@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure postinst prepare unpack
-DEPEND=media-libs/opencore-amr asterisk? ( net-misc/asterisk ) ssl? ( dev-libs/openssl ) gsm-bs? ( net-wireless/openbsc ) sip? ( net-libs/sofia-sip ) gsm-ms? ( net-wireless/osmocom-bb ) dev-vcs/git !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=media-libs/opencore-amr asterisk? ( net-misc/asterisk ) ssl? ( dev-libs/openssl ) gsm-bs? ( net-wireless/openbsc ) sip? ( net-libs/sofia-sip ) gsm-ms? ( net-wireless/osmocom-bb ) dev-vcs/git !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Linux Call Router
 EAPI=5
 HOMEPAGE=http://isdn.eversberg.eu/
@@ -7,5 +7,5 @@ IUSE=asterisk +ssl +gsm-bs +gsm-ms ss5 +sip gsmhr misdn
 LICENSE=GPL-2
 RDEPEND=media-libs/opencore-amr asterisk? ( net-misc/asterisk ) ssl? ( dev-libs/openssl ) gsm-bs? ( net-wireless/openbsc ) sip? ( net-libs/sofia-sip ) gsm-ms? ( net-wireless/osmocom-bb )
 SLOT=0
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1f61651f43f33cec058d2a94b2aca0ef

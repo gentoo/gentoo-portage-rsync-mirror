@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare setup
-DEPEND=>=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] libusb? ( virtual/libusb:1 ) udev? ( virtual/udev ) policykit? ( >=sys-auth/polkit-0.111 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig virtual/pkgconfig
+DEPEND=>=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] libusb? ( virtual/libusb:1 ) udev? ( virtual/udev ) policykit? ( >=sys-auth/polkit-0.111 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=PC/SC Architecture smartcard middleware library
 EAPI=5
 HOMEPAGE=http://pcsclite.alioth.debian.org/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_pyt
 REQUIRED_USE=^^ ( udev libusb )
 SLOT=0
 SRC_URI=http://alioth.debian.org/download.php/file/4115/pcsc-lite-1.8.12.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=5f5b3ef7c9ab32a1cc76c7743e23f795

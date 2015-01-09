@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm preinst prepare setup
-DEPEND=net-libs/libnetfilter_queue net-libs/libnfnetlink dbus? ( sys-apps/dbus ) zlib? ( sys-libs/zlib ) qt4? ( sys-auth/polkit-qt dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 || ( kde-base/kdesu x11-libs/gksu x11-misc/ktsuss ) ) virtual/pkgconfig sys-devel/libtool:2 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4 virtual/pkgconfig
+DEPEND=net-libs/libnetfilter_queue net-libs/libnfnetlink dbus? ( sys-apps/dbus ) zlib? ( sys-libs/zlib ) qt4? ( sys-auth/polkit-qt dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 || ( kde-base/kdesu x11-libs/gksu x11-misc/ktsuss ) ) virtual/pkgconfig sys-devel/libtool:2 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4 virtual/pkgconfig
 DESCRIPTION=Privacy oriented firewall application
 EAPI=5
 HOMEPAGE=https://sourceforge.net/projects/peerguardian/
@@ -10,5 +10,5 @@ RDEPEND=net-libs/libnetfilter_queue net-libs/libnfnetlink dbus? ( sys-apps/dbus 
 REQUIRED_USE=qt4? ( dbus )
 SLOT=0
 SRC_URI=mirror://sourceforge/peerguardian/pgl-2.2.2.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=75f028d5e387e56a5dd859142316c59c

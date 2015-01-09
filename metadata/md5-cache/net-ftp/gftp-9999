@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install preinst unpack
-DEPEND=dev-libs/glib:2 sys-libs/ncurses sys-libs/readline gtk? ( x11-libs/gtk+:2 ) ssl? ( dev-libs/openssl ) sys-devel/gettext >=dev-util/intltool-0.35.5 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/subversion net-misc/rsync
+DEPEND=dev-libs/glib:2 sys-libs/ncurses sys-libs/readline gtk? ( x11-libs/gtk+:2 ) ssl? ( dev-libs/openssl ) sys-devel/gettext >=dev-util/intltool-0.35.5 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/subversion net-misc/rsync
 DESCRIPTION=Gnome based FTP Client
 EAPI=1
 HOMEPAGE=http://www.gftp.org
@@ -7,5 +7,5 @@ IUSE=gtk ssl
 LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 sys-libs/ncurses sys-libs/readline gtk? ( x11-libs/gtk+:2 ) ssl? ( dev-libs/openssl )
 SLOT=0
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=353514a76743c521b27413ee4ce9b9e1

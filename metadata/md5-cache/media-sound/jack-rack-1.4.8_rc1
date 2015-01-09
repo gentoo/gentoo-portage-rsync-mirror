@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure prepare unpack
-DEPEND=>=x11-libs/gtk+-2.12:2 >=media-libs/ladspa-sdk-1.12 media-sound/jack-audio-connection-kit alsa? ( media-libs/alsa-lib ) lash? ( >=media-sound/lash-0.5 ) gnome? ( >=gnome-base/libgnomeui-2 ) virtual/libintl xml? ( dev-libs/libxml2 media-libs/liblrdf ) virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=x11-libs/gtk+-2.12:2 >=media-libs/ladspa-sdk-1.12 media-sound/jack-audio-connection-kit alsa? ( media-libs/alsa-lib ) lash? ( >=media-sound/lash-0.5 ) gnome? ( >=gnome-base/libgnomeui-2 ) virtual/libintl xml? ( dev-libs/libxml2 media-libs/liblrdf ) virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=JACK Rack is an effects rack for the JACK low latency audio API
 EAPI=4
 HOMEPAGE=http://jack-rack.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2.12:2 >=media-libs/ladspa-sdk-1.12 media-sound/jack-audio-connection-kit alsa? ( media-libs/alsa-lib ) lash? ( >=media-sound/lash-0.5 ) gnome? ( >=gnome-base/libgnomeui-2 ) virtual/libintl xml? ( dev-libs/libxml2 media-libs/liblrdf )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/j/jack-rack/jack-rack_1.4.8~rc1.orig.tar.gz mirror://debian/pool/main/j/jack-rack/jack-rack_1.4.8~rc1-1.debian.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f75942d86607024c1793c05beac33226

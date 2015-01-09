@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare
-DEPEND=x11-libs/libICE x11-libs/libSM x11-libs/libXrender x11-libs/libXmu >=media-libs/libpng-1.4 gif? ( >=media-libs/giflib-4.0.1 ) imlib? ( media-libs/imlib ) truetype? ( x11-libs/libXft ) emacs? ( virtual/emacs ) m17n-lib? ( dev-libs/m17n-lib ) mng? ( media-libs/libmng ) sys-devel/autoconf x11-proto/xextproto x11-libs/libxkbfile app-text/rman x11-misc/imake !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
+DEPEND=x11-libs/libICE x11-libs/libSM x11-libs/libXrender x11-libs/libXmu >=media-libs/libpng-1.4 gif? ( >=media-libs/giflib-4.0.1 ) imlib? ( media-libs/imlib ) truetype? ( x11-libs/libXft ) emacs? ( virtual/emacs ) m17n-lib? ( dev-libs/m17n-lib ) mng? ( media-libs/libmng ) sys-devel/autoconf x11-proto/xextproto x11-libs/libxkbfile app-text/rman x11-misc/imake !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
 DESCRIPTION=An X11 based presentation tool
 EAPI=4
 HOMEPAGE=http://member.wide.ad.jp/wg/mgp/
@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=x11-libs/libICE x11-libs/libSM x11-libs/libXrender x11-libs/libXmu >=media-libs/libpng-1.4 gif? ( >=media-libs/giflib-4.0.1 ) imlib? ( media-libs/imlib ) truetype? ( x11-libs/libXft ) emacs? ( virtual/emacs ) m17n-lib? ( dev-libs/m17n-lib ) mng? ( media-libs/libmng ) nls? ( sys-devel/gettext ) truetype? ( cjk? ( media-fonts/sazanami ) )
 SLOT=0
 SRC_URI=ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/magicpoint-1.13a.tar.gz ftp://ftp.mew.org/pub/MagicPoint/magicpoint-1.13a.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	f99a767f569b1f0731b3a1edd17c1d11	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	f99a767f569b1f0731b3a1edd17c1d11	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b7f0c17f3aef1eddff167643225d8b44

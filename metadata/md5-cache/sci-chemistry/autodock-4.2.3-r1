@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test
-DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 test? ( =dev-lang/python-2* )
+DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 test? ( =dev-lang/python-2* )
 DESCRIPTION=A suite of automated docking tools
 EAPI=3
 HOMEPAGE=http://autodock.scripps.edu/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=test? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=mirror://gentoo/autodocksuite/autodocksuite-4.2.3-src.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b285e290ca8915fc7fdebd9d60785fd7

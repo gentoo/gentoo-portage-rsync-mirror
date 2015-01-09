@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=>=dev-libs/check-0.9.4 >=dev-libs/glib-2.26 sys-apps/dbus >=x11-libs/gtk+-2.12:2 >=x11-libs/libgxim-0.3.1 >=x11-libs/libnotify-0.7 x11-libs/libX11 gconf? ( gnome-base/gconf ) gtk3? ( x11-libs/gtk+:3 ) qt4? ( dev-qt/qtcore:4 ) xfconf? ( xfce-base/xfconf ) virtual/pkgconfig dev-util/intltool doc? ( dev-util/gtk-doc ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=dev-libs/check-0.9.4 >=dev-libs/glib-2.26 sys-apps/dbus >=x11-libs/gtk+-2.12:2 >=x11-libs/libgxim-0.3.1 >=x11-libs/libnotify-0.7 x11-libs/libX11 gconf? ( gnome-base/gconf ) gtk3? ( x11-libs/gtk+:3 ) qt4? ( dev-qt/qtcore:4 ) xfconf? ( xfce-base/xfconf ) virtual/pkgconfig dev-util/intltool doc? ( dev-util/gtk-doc ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Delivery framework for general Input Method configuration
 EAPI=5
 HOMEPAGE=http://tagoh.github.com/imsettings/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/check-0.9.4 >=dev-libs/glib-2.26 sys-apps/dbus >=x11-libs/gtk
 RESTRICT=test
 SLOT=0
 SRC_URI=http://imsettings.googlecode.com/files/imsettings-1.5.0.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4170d5e50ed1cf2e00b8bf09f7641783

@@ -1,5 +1,5 @@
 DEFINED_PHASES=install prepare unpack
-DEPEND=x11-libs/gtk+:2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=app-arch/rpm2targz-9.0.0.3g
+DEPEND=x11-libs/gtk+:2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=app-arch/rpm2targz-9.0.0.3g
 DESCRIPTION=The xsri wallpaper setter from RedHat
 EAPI=5
 HOMEPAGE=http://fedoraproject.org
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2
 SLOT=0
 SRC_URI=http://download.fedoraproject.org/pub/fedora/linux/releases/15/Everything/source/SRPMS/xsri-2.1.0-17.fc12.src.rpm
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1ab7f44125d580a304be005366882e87

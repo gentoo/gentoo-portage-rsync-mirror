@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=>=media-video/vlc-1.1 x11-libs/libX11 !gtk? ( x11-libs/libXpm x11-libs/libSM x11-libs/libICE ) gtk? ( x11-libs/gtk+:2 ) !<media-video/vlc-1.2[nsplugin] virtual/pkgconfig >=net-misc/npapi-sdk-0.27 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
+DEPEND=>=media-video/vlc-1.1 x11-libs/libX11 !gtk? ( x11-libs/libXpm x11-libs/libSM x11-libs/libICE ) gtk? ( x11-libs/gtk+:2 ) !<media-video/vlc-1.2[nsplugin] virtual/pkgconfig >=net-misc/npapi-sdk-0.27 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
 DESCRIPTION=Mozilla plugin based on VLC
 EAPI=3
 HOMEPAGE=http://www.videolan.org/
@@ -7,5 +7,5 @@ IUSE=gtk
 LICENSE=LGPL-2.1
 RDEPEND=>=media-video/vlc-1.1 x11-libs/libX11 !gtk? ( x11-libs/libXpm x11-libs/libSM x11-libs/libICE ) gtk? ( x11-libs/gtk+:2 ) !<media-video/vlc-1.2[nsplugin]
 SLOT=0
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=affc01237afa384070fc5c246f5174e7

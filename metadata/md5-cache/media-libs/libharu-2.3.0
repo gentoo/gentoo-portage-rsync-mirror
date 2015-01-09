@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=png? ( media-libs/libpng ) zlib? ( sys-libs/zlib ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=png? ( media-libs/libpng ) zlib? ( sys-libs/zlib ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=C/C++ library for PDF generation
 EAPI=5
 HOMEPAGE=http://www.libharu.org/
@@ -9,5 +9,5 @@ LICENSE=ZLIB
 RDEPEND=png? ( media-libs/libpng ) zlib? ( sys-libs/zlib )
 SLOT=0/2.3.0
 SRC_URI=https://github.com/libharu/libharu/archive/RELEASE_2_3_0.tar.gz -> libharu-2.3.0.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8cc35c9a0e7be97f584b328c6587568a

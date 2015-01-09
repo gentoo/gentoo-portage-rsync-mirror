@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=net-libs/gssdp >=net-libs/gupnp-0.18 >=dev-libs/glib-2.16:2 introspection? ( >=dev-libs/gobject-introspection-0.10 ) python? ( >=dev-libs/gobject-introspection-0.10 >=dev-python/pygobject-2.16:2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) dev-util/gtk-doc-am sys-devel/gettext virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 app-arch/xz-utils
+DEPEND=net-libs/gssdp >=net-libs/gupnp-0.18 >=dev-libs/glib-2.16:2 introspection? ( >=dev-libs/gobject-introspection-0.10 ) python? ( >=dev-libs/gobject-introspection-0.10 >=dev-python/pygobject-2.16:2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) dev-util/gtk-doc-am sys-devel/gettext virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 app-arch/xz-utils
 DESCRIPTION=Library to handle UPnP IGD port mapping for GUPnP
 EAPI=5
 HOMEPAGE=http://gupnp.org
@@ -10,5 +10,5 @@ RDEPEND=net-libs/gssdp >=net-libs/gupnp-0.18 >=dev-libs/glib-2.16:2 introspectio
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gnome/sources/gupnp-igd/0.2/gupnp-igd-0.2.2.tar.xz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=812ce25734602e639f706b698a0b2e7c

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=guile? ( dev-scheme/guile ) octave? ( sci-mathematics/octave ) python? ( dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=guile? ( dev-scheme/guile ) octave? ( sci-mathematics/octave ) python? ( dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Non-linear optimization library
 EAPI=5
 HOMEPAGE=http://ab-initio.mit.edu/nlopt/
@@ -10,5 +10,5 @@ RDEPEND=guile? ( dev-scheme/guile ) octave? ( sci-mathematics/octave ) python? (
 REQUIRED_USE=python? ( || ( python_targets_python2_7 ) )
 SLOT=0
 SRC_URI=http://ab-initio.mit.edu/nlopt//nlopt-2.4.2.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=474dcbcffeef0ed5d41442add1f2225a

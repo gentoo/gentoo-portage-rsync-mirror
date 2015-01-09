@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare prerm setup test unpack
-DEPEND=sys-devel/flex virtual/yacc !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php? ( php_targets_php5-3? ( dev-lang/php:5.3 ) ) dev-lang/perl:=[-build(-)] python? ( =dev-lang/python-2* )
+DEPEND=sys-devel/flex virtual/yacc !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php? ( php_targets_php5-3? ( dev-lang/php:5.3 ) ) dev-lang/perl:=[-build(-)] python? ( =dev-lang/python-2* )
 DESCRIPTION=An Open Source library for Flash movie generation
 EAPI=5
 HOMEPAGE=http://ming.sourceforge.net/
@@ -11,5 +11,5 @@ REQUIRED_USE=php? ( || ( php_targets_php5-3 ) )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/ming/ming-0.4.4.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	php-ext-source-r2	39437168059a2166e012420b3ba12815	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-utils	3727db64c7b960903d5033280f108080	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	php-ext-source-r2	39437168059a2166e012420b3ba12815	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=65147a28fb27e1255e84fdd030c57b52

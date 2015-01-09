@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=!dev-php/eaccelerator !dev-php/pecl-apc virtual/httpd-php php_targets_php5-5? ( !dev-lang/php:5.5[opcache] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-4? ( dev-lang/php:5.4 ) php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-6? ( dev-lang/php:5.6 )
+DEPEND=!dev-php/eaccelerator !dev-php/pecl-apc virtual/httpd-php php_targets_php5-5? ( !dev-lang/php:5.5[opcache] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-4? ( dev-lang/php:5.4 ) php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-6? ( dev-lang/php:5.6 )
 DESCRIPTION=A fast and stable PHP opcode cacher
 EAPI=5
 HOMEPAGE=http://xcache.lighttpd.net/
@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( php_targets_php5-4 php_targets_php5-5 php_targets_php5-6 )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://xcache.lighttpd.net/pub/Releases/3.2.0/xcache-3.2.0.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=4b54dbf92eb25dd321768f53e04bd527

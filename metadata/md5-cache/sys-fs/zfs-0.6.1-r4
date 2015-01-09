@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test
-DEPEND=selinux? ( sys-libs/libselinux ) sys-apps/util-linux[static-libs?] sys-libs/zlib[static-libs(+)?] virtual/awk virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig virtual/pkgconfig
+DEPEND=selinux? ( sys-libs/libselinux ) sys-apps/util-linux[static-libs?] sys-libs/zlib[static-libs(+)?] virtual/awk virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=Userland utilities for ZFS Linux kernel module
 EAPI=4
 HOMEPAGE=http://zfsonlinux.org/
@@ -10,5 +10,5 @@ RDEPEND=selinux? ( sys-libs/libselinux ) sys-apps/util-linux[static-libs?] sys-l
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/zfsonlinux/zfs/archive/zfs-0.6.1.tar.gz
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	autotools-utils	3727db64c7b960903d5033280f108080	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	autotools-utils	3727db64c7b960903d5033280f108080	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=bb3a87062fc84d8392f8e5e76e36a082

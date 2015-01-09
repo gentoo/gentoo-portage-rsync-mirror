@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=media-libs/libsndfile sys-libs/zlib alsa? ( media-libs/alsa-lib ) audiofile? ( media-libs/audiofile ) flac? ( media-libs/flac ) gtk? ( >=x11-libs/gtk+-2.10:2 ) id3tag? ( media-libs/libid3tag ) jack? ( >=media-sound/jack-audio-connection-kit-0.80 ) mad? ( media-libs/libmad ) mikmod? ( media-libs/libmikmod:0 ) nas? ( media-libs/nas ) ogg? ( media-libs/libogg ) opengl? ( virtual/opengl ) vorbis? ( media-libs/libvorbis ) xosd? ( x11-libs/xosd ) virtual/pkgconfig doc? ( app-doc/doxygen ) nls? ( sys-devel/gettext ) oss? ( virtual/os-headers ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=media-libs/libsndfile sys-libs/zlib alsa? ( media-libs/alsa-lib ) audiofile? ( media-libs/audiofile ) flac? ( media-libs/flac ) gtk? ( >=x11-libs/gtk+-2.10:2 ) id3tag? ( media-libs/libid3tag ) jack? ( >=media-sound/jack-audio-connection-kit-0.80 ) mad? ( media-libs/libmad ) mikmod? ( media-libs/libmikmod:0 ) nas? ( media-libs/nas ) ogg? ( media-libs/libogg ) opengl? ( virtual/opengl ) vorbis? ( media-libs/libvorbis ) xosd? ( x11-libs/xosd ) virtual/pkgconfig doc? ( app-doc/doxygen ) nls? ( sys-devel/gettext ) oss? ( virtual/os-headers ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A heavily multi-threaded pluggable audio player
 EAPI=4
 HOMEPAGE=http://www.alsaplayer.org/
@@ -10,5 +10,5 @@ RDEPEND=media-libs/libsndfile sys-libs/zlib alsa? ( media-libs/alsa-lib ) audiof
 REQUIRED_USE=|| ( alsa jack nas oss )
 SLOT=0
 SRC_URI=http://www.alsaplayer.org/alsaplayer-0.99.81.tar.bz2
-_eclasses_=autotools	c118b9a8e93bfef124f2d7a2fe56a95e	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1505512139233a060c3f2eecf9863a73
