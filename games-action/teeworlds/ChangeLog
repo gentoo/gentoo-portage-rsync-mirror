@@ -1,6 +1,16 @@
 # ChangeLog for games-action/teeworlds
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.16 2015/01/06 09:27:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.17 2015/01/09 01:16:52 mr_bones_ Exp $
+
+  09 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/0.6.1/01-use-system-wavpack.patch,
+  -files/0.6.1/02-fixed-wavpack-sound-loading.patch,
+  -files/0.6.1/03-use-system-pnglite.patch,
+  -files/0.6.2/01-use-system-wavpack.patch,
+  -files/0.6.2/02-fixed-wavpack-sound-loading.patch,
+  -files/0.6.2/03-use-system-pnglite.patch, -files/0.6.2/04-dedicated.patch,
+  -files/0.6.2/05-cc-cflags.patch:
+  old
 
 *teeworlds-0.6.3 (06 Jan 2015)
 

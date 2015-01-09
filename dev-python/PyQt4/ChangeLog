@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.279 2014/12/31 12:53:58 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.280 2015/01/09 01:27:25 pesa Exp $
+
+  09 Jan 2015; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.3.ebuild:
+  Stop using deprecated python_parallel_foreach_impl.
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org> PyQt4-4.10.3-r2.ebuild,
   PyQt4-4.11.1.ebuild, PyQt4-4.11.2.ebuild:

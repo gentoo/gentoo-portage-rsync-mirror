@@ -1,18 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.3.ebuild,v 1.1 2014/11/15 03:12:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.3.ebuild,v 1.2 2015/01/09 01:27:25 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit eutils multibuild python-r1 qmake-utils
+inherit eutils multibuild multilib python-r1 qmake-utils
 
 DESCRIPTION="Python bindings for the Qt framework"
 HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/ https://pypi.python.org/pypi/PyQt4"
 
 MY_PN="PyQt-x11-gpl"
 if [[ ${PV} == *_pre* ]]; then
-	REVISION=adb94530c076
 	MY_P=${MY_PN}-${PV%_pre*}-snapshot-${REVISION}
 	SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${MY_P}.tar.xz"
 else
@@ -122,7 +121,7 @@ src_configure() {
 
 		eqmake4 -recursive ${PN}.pro
 	}
-	python_parallel_foreach_impl run_in_build_dir configuration
+	python_foreach_impl run_in_build_dir configuration
 }
 
 src_compile() {

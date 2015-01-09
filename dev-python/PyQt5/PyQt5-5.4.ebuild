@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.3.2.ebuild,v 1.4 2014/10/24 16:37:59 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.4.ebuild,v 1.1 2015/01/09 01:24:26 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/software/pyqt/intro/ https://pypi.
 MY_PN="PyQt-gpl"
 if [[ ${PV} == *_pre* ]]; then
 	MY_P=${MY_PN}-${PV%_pre*}-snapshot-${REVISION}
-	SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${MY_P}.tar.gz"
+	SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${MY_P}.tar.xz"
 else
 	MY_P=${MY_PN}-${PV}
 	SRC_URI="mirror://sourceforge/pyqt/${MY_P}.tar.gz"
@@ -23,7 +23,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-# TODO: bluetooth
+# TODO: bluetooth, webchannel, webengine
 IUSE="dbus debug declarative designer doc examples +gui help multimedia network opengl positioning
 	printsupport sensors serialport sql svg testlib webkit websockets widgets x11extras xmlpatterns"
 REQUIRED_USE="
@@ -41,7 +41,7 @@ QT_PV="5.3.2:5"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-python/sip-4.16:=[${PYTHON_USEDEP}]
+	>=dev-python/sip-4.16.4:=[${PYTHON_USEDEP}]
 	>=dev-qt/qtcore-${QT_PV}
 	>=dev-qt/qtxml-${QT_PV}
 	dbus? (
@@ -75,21 +75,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	if ! use dbus; then
-		sed -i -e '/^\s\+check_dbus(/d' configure.py || die
-	fi
-
-	epatch "${FILESDIR}"/${P}-add-dep-to-QtWebKitWidgets.patch
-	python_copy_sources
-
-	preparation() {
-		if [[ ${EPYTHON} == python3.* ]]; then
-			rm -fr pyuic/uic/port_v2
-		else
-			rm -fr pyuic/uic/port_v3
-		fi
-	}
-	python_foreach_impl run_in_build_dir preparation
+	# Avoid automagic dependency.
+	use dbus || rm -fr dbus
 }
 
 pyqt_use_enable() {
@@ -99,7 +86,8 @@ pyqt_use_enable() {
 src_configure() {
 	configuration() {
 		local myconf=(
-			"${PYTHON}" configure.py
+			"${PYTHON}"
+			"${S}"/configure.py
 			--confirm-license
 			--qmake="${EPREFIX}/usr/$(get_libdir)/qt5/bin/qmake"
 			--destdir="$(python_get_sitedir)"
@@ -108,6 +96,7 @@ src_configure() {
 			--qsci-api
 			$(use debug && echo --debug)
 			--enable=QtCore
+			--enable=QtXml
 			$(pyqt_use_enable dbus QtDBus)
 			$(pyqt_use_enable declarative QtQml)
 			$(pyqt_use_enable declarative QtQuick)
@@ -138,17 +127,9 @@ src_configure() {
 		echo "${myconf[@]}"
 		"${myconf[@]}" || die
 
-		# We need to specify the .pro file name when it doesn't follow
-		# the subdirs naming convention or recursive qmake won't work.
-		sed -i -e '/^SUBDIRS/ {
-			s:designer:designer/python.pro:
-			s:pylupdate:pylupdate/pylupdate5.pro:
-			s:pyrcc:pyrcc/pyrcc5.pro:
-			s:qmlscene:qmlscene/python.pro:
-			}' ${PN}.pro || die
 		eqmake5 -recursive ${PN}.pro
 	}
-	python_parallel_foreach_impl run_in_build_dir configuration
+	python_foreach_impl run_in_build_dir configuration
 }
 
 src_compile() {
@@ -158,9 +139,14 @@ src_compile() {
 src_install() {
 	installation() {
 		local tmp_root=${D%/}/tmp
+		emake INSTALL_ROOT="${tmp_root}" install
 
-		# INSTALL_ROOT is used by designer/Makefile, other Makefiles use DESTDIR.
-		emake DESTDIR="${tmp_root}" INSTALL_ROOT="${tmp_root}" install
+		local uic_dir=${tmp_root}$(python_get_sitedir)/${PN}/uic
+		if python_is_python3; then
+			rm -r "${uic_dir}"/port_v2 || die
+		else
+			rm -r "${uic_dir}"/port_v3 || die
+		fi
 
 		python_doexe "${tmp_root}${EPREFIX}"/usr/bin/pyuic5
 		rm "${tmp_root}${EPREFIX}"/usr/bin/pyuic5 || die
@@ -170,7 +156,7 @@ src_install() {
 	}
 	python_foreach_impl run_in_build_dir installation
 
-	dodoc NEWS
+	dodoc ChangeLog NEWS
 
 	if use doc; then
 		dodoc -r doc/html
