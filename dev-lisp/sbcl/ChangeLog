@@ -1,6 +1,15 @@
 # ChangeLog for dev-lisp/sbcl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.212 2014/12/22 10:43:49 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.213 2015/01/09 00:33:16 gienah Exp $
+
+*sbcl-1.2.7 (09 Jan 2015)
+
+  09 Jan 2015; Mark Wright <gienah@gentoo.org>
+  +files/bsd-sockets-test-1.2.7.patch, +files/sbcl-1.0.6-solaris.patch,
+  +sbcl-1.2.7.ebuild:
+  Bump sbcl to 1.2.7. Add Gentoo prefix support, thanks to Ruud Koolen
+  (redlizard) for helping and testing ~amd64-linux, and jcdx for testing
+  ~x64-macos.
 
   22 Dec 2014; Andrey Grozin <grozin@gentoo.org>
   +files/concurrency-test-1.2.6.patch:
