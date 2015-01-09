@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lambda-term
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lambda-term/ChangeLog,v 1.8 2014/10/29 09:37:42 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lambda-term/ChangeLog,v 1.9 2015/01/09 09:59:55 aballier Exp $
+
+*lambda-term-1.8 (09 Jan 2015)
+
+  09 Jan 2015; Alexis Ballier <aballier@gentoo.org> +lambda-term-1.8.ebuild:
+  version bump
 
 *lambda-term-1.7 (29 Oct 2014)
 
