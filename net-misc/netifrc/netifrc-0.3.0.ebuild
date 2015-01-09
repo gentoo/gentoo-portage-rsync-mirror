@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.9 2015/01/09 17:30:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.3.0.ebuild,v 1.1 2015/01/09 17:30:42 robbat2 Exp $
 
 EAPI=5
 

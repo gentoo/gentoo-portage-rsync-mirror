@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/netifrc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.37 2014/12/08 11:36:41 heroxbd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.38 2015/01/09 17:30:42 robbat2 Exp $
+
+*netifrc-0.3.0 (09 Jan 2015)
+
+  09 Jan 2015; Robin H. Johnson <robbat2@gentoo.org> +netifrc-0.3.0.ebuild,
+  netifrc-9999.ebuild:
+  Version bump. Now with experimental systemd support as written by our
+  GSOC2014 student: Rabi Shanker (rabisg). Many thanks to him for his work!
 
   08 Dec 2014; Benda Xu <heroxbd@gentoo.org> netifrc-0.2.4.ebuild:
   Prepend EPREFIX to get_udevdir.
