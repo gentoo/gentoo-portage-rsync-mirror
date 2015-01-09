@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.9.5.ebuild,v 1.1 2014/09/04 21:14:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.9.5.ebuild,v 1.2 2015/01/09 13:46:26 ago Exp $
 
 EAPI=5
 inherit eutils elisp-common
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/gtypist/${P}.tar.xz
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux"
 IUSE="nls emacs xemacs"
 
 DEPEND="

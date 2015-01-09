@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/knocker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.24 2014/07/12 19:06:20 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/ChangeLog,v 1.25 2015/01/09 13:49:18 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> knocker-0.7.1-r3.ebuild:
+  Stable for amd64, wrt bug #535528
 
 *knocker-0.7.1-r3 (12 Jul 2014)
 

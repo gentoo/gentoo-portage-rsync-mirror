@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.8.3.ebuild,v 1.1 2014/11/05 15:06:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.8.3.ebuild,v 1.2 2015/01/09 13:38:44 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_REQUIRED="never"
 inherit kde4-base
 
 if [[ ${KDE_BUILD_TYPE} != live ]]; then
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	SRC_URI="mirror://kde/unstable/networkmanager-qt/${PV}/src/${P}.tar.xz"
 else
 	KEYWORDS=""

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/slurm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.23 2014/07/29 10:52:55 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.24 2015/01/09 13:49:53 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> slurm-0.3.3-r2.ebuild:
+  Stable for amd64, wrt bug #535544
 
   29 Jul 2014; Jeroen Roovers <jer@gentoo.org> slurm-0.3.3-r1.ebuild:
   Use the newer patch in the older ebuild too (bug #518466 by Laurent

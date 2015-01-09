@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nttcp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.23 2015/01/06 19:51:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/ChangeLog,v 1.24 2015/01/09 13:48:06 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> nttcp-1.47-r3.ebuild:
+  Stable for amd64, wrt bug #535536
 
   06 Jan 2015; Jeroen Roovers <jer@gentoo.org>
   files/nttcp-1.47-format-security.patch:
@@ -80,4 +83,3 @@
 
   04 Mar 2004; <agriffis@gentoo.org> nttcp-1.47.ebuild:
   New package for nttcp (New TTCP)
-

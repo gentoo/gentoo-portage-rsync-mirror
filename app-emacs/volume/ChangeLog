@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/volume
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.12 2014/02/14 15:50:36 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.13 2015/01/09 13:45:41 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> volume-1.0-r1.ebuild:
+  Stable for amd64, wrt bug #534846
 
 *volume-1.0-r1 (14 Feb 2014)
 
@@ -49,4 +52,3 @@
   13 Mar 2006; Matthew Kennedy <mkennedy@gentoo.org>
   +files/50volume-gentoo.el, +metadata.xml, +volume-0.5.ebuild:
   Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>.
-

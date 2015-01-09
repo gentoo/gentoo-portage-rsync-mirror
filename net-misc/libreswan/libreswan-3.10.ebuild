@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/libreswan-3.10.ebuild,v 1.1 2014/09/08 02:24:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/libreswan-3.10.ebuild,v 1.2 2015/01/09 13:38:59 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils systemd toolchain-funcs
 
 if [[ ${PV} != 9999 ]]; then
 	SRC_URI="https://download.libreswan.org/${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ~ppc ~x86"
 else
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/libreswan/libreswan.git"

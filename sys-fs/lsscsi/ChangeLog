@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.90 2015/01/08 21:48:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.91 2015/01/09 13:41:19 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lsscsi-0.28.ebuild:
+  Stable for amd64, wrt bug #535678
 
   08 Jan 2015; Jeroen Roovers <jer@gentoo.org> lsscsi-0.28.ebuild:
   Stable for HPPA (bug #535678).

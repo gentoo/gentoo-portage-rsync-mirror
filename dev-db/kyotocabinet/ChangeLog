@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/kyotocabinet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.24 2014/05/15 21:56:36 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.25 2015/01/09 13:47:56 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> kyotocabinet-1.2.76-r1.ebuild:
+  Stable for amd64, wrt bug #534940
 
   15 May 2014; Jeroen Roovers <jer@gentoo.org>
   files/fix_configure-1.2.62.patch, files/kyotocabinet-1.2.76-flags.patch:

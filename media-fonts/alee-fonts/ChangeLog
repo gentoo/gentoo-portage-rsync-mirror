@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/alee-fonts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.44 2014/04/08 06:48:01 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.45 2015/01/09 13:47:36 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> alee-fonts-13.ebuild:
+  Stable for amd64, wrt bug #535436
 
 *alee-fonts-13 (08 Apr 2014)
 

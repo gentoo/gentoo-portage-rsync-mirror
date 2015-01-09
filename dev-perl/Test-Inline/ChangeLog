@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inline
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.82 2014/08/24 01:37:39 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.83 2015/01/09 13:42:44 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> Test-Inline-2.213.0-r1.ebuild:
+  Stable for amd64, wrt bug #535234
 
 *Test-Inline-2.213.0-r1 (24 Aug 2014)
 *Test-Inline-2.212.0-r1 (24 Aug 2014)

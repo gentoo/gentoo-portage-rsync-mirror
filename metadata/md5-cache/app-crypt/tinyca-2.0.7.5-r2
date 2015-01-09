@@ -4,10 +4,10 @@ DESCRIPTION=Simple Perl/Tk GUI to manage a small certification authority
 EAPI=5
 HOMEPAGE=http://tinyca.sm-zone.net/
 IUSE=linguas_en linguas_de linguas_cs linguas_es linguas_sv
-KEYWORDS=~amd64 ~ppc ~sparc ~x86
+KEYWORDS=amd64 ~ppc ~sparc ~x86
 LICENSE=Artistic
 RDEPEND=>=dev-libs/openssl-0.9.7e dev-perl/Locale-gettext >=virtual/perl-MIME-Base64-2.12 >=dev-perl/gtk2-perl-1.072
 SLOT=0
 SRC_URI=http://tinyca.sm-zone.net/tinyca2-0.7.5.tar.bz2
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=db717cdb37214f2045cf623b8d23d4a1
+_md5_=f721c73944af7dcb483fa7400f61517c

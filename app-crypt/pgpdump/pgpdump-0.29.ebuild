@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/pgpdump-0.29.ebuild,v 1.1 2014/08/03 19:17:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/pgpdump-0.29.ebuild,v 1.2 2015/01/09 13:45:01 ago Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.mew.org/~kazu/proj/pgpdump/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="sys-libs/zlib

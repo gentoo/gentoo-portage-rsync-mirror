@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/parmetis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmetis/ChangeLog,v 1.10 2015/01/04 15:16:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmetis/ChangeLog,v 1.11 2015/01/09 13:41:04 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> parmetis-3.2.0.ebuild:
+  Stable for amd64, wrt bug #534646
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> -parmetis-3.1.1.ebuild,
   parmetis-3.2.0.ebuild, metadata.xml:

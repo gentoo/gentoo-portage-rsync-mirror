@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/tinyca
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.24 2014/08/20 03:41:09 alonbl Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.25 2015/01/09 13:45:06 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> tinyca-2.0.7.5-r2.ebuild:
+  Stable for amd64, wrt bug #534832
 
 *tinyca-2.0.7.5-r2 (20 Aug 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-lv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.26 2014/07/15 23:17:49 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.27 2015/01/09 13:45:21 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> myspell-lv-1.0.0.ebuild:
+  Stable for amd64, wrt bug #534838
 
   15 Jul 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Add Maris Nartiss as proxied maintainer.

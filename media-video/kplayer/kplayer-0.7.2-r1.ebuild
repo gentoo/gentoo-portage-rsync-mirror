@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.2-r1.ebuild,v 1.2 2014/08/10 21:00:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.2-r1.ebuild,v 1.3 2015/01/09 13:48:42 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="${DEPEND}

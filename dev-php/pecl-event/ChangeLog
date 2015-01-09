@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-event
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/ChangeLog,v 1.6 2014/11/19 18:22:38 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/ChangeLog,v 1.7 2015/01/09 13:43:44 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pecl-event-1.11.1.ebuild:
+  Stable for amd64, wrt bug #535304
 
 *pecl-event-1.11.1 (19 Nov 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/dianara-1.2.4.ebuild,v 1.1 2014/10/27 20:17:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/dianara-1.2.4.ebuild,v 1.2 2015/01/09 13:38:24 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://nongnu/dianara/${MY_P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="

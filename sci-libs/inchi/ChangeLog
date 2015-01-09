@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/inchi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.7 2015/01/04 13:37:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/inchi/ChangeLog,v 1.8 2015/01/09 13:49:28 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> inchi-1.04.ebuild:
+  Stable for amd64, wrt bug #534610
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> -inchi-1.03.ebuild,
   inchi-1.04.ebuild, metadata.xml:

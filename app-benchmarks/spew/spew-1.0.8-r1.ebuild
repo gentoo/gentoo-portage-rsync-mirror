@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8-r1.ebuild,v 1.2 2014/11/19 13:40:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8-r1.ebuild,v 1.3 2015/01/09 13:44:46 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/spew/1.0.8/spew-1.0.8.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 IUSE="static"
 
 DEPEND="static? ( sys-libs/ncurses[-gpm] dev-libs/popt[static-libs] )

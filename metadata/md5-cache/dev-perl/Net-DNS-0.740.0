@@ -4,10 +4,10 @@ DESCRIPTION=Perl Net::DNS - Perl DNS Resolver Module
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Net-DNS/
 IUSE=ipv6 test
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Digest-MD5 dev-perl/Digest-HMAC virtual/perl-Digest-SHA dev-perl/Net-IP virtual/perl-MIME-Base64 ipv6? ( dev-perl/IO-Socket-INET6 ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/N/NL/NLNETLABS/Net-DNS-0.74.tar.gz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=7fb9c987830bc185e93d6f6863ef4940
+_md5_=fabf95c5c22f3d70261be8b0ee74e930

@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/mpt-status
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.11 2014/08/10 20:22:11 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mpt-status/ChangeLog,v 1.12 2015/01/09 13:40:44 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mpt-status-1.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #535664
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mpt-status-1.2.0.ebuild:
   QA: drop trailing '.' from DESCRIPTION

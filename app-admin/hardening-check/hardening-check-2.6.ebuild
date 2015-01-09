@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hardening-check/hardening-check-2.6.ebuild,v 1.1 2014/11/13 10:19:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hardening-check/hardening-check-2.6.ebuild,v 1.2 2015/01/09 13:44:01 ago Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Report the hardening characterists of a set of binaries"
 HOMEPAGE="https://wiki.debian.org/Hardening https://packages.debian.org/source/jessie/hardening-wrapper"
 SRC_URI="mirror://debian/pool/main/h/${MY_PN}/${MY_PN}_${PV}.tar.xz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 LICENSE="GPL-2+"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.51 2014/11/06 20:07:56 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.52 2015/01/09 13:41:49 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> IO-Tty-1.120.0.ebuild:
+  Stable for amd64, wrt bug #535202
 
 *IO-Tty-1.120.0 (06 Nov 2014)
 

@@ -4,11 +4,11 @@ DESCRIPTION=Implementation of IEEE 802.1ab (LLDP)
 EAPI=5
 HOMEPAGE=http://vincentbernat.github.com/lldpd/
 IUSE=cdp doc +dot1 +dot3 edp fdp graph jansson json-c +lldpmed seccomp sonmp snmp static-libs readline xml zsh-completion
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=ISC
 RDEPEND=>=dev-libs/libevent-2.0.5 snmp? ( net-analyzer/net-snmp[extensible(+)] ) xml? ( dev-libs/libxml2 ) jansson? ( dev-libs/jansson ) json-c? ( dev-libs/json-c ) seccomp? ( sys-libs/libseccomp ) zsh-completion? ( app-shells/zsh )
 REQUIRED_USE=graph? ( doc ) json-c? ( !jansson )
 SLOT=0
 SRC_URI=http://media.luffy.cx/files/lldpd/lldpd-0.7.11.tar.gz
 _eclasses_=autotools	ae13678d52af6816cb92f952594d882a	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=2b9cd20aab7a08350067ddbf4f4c9d71
+_md5_=49f1a3ba7fae23a1cbffbd1b9e9cb387

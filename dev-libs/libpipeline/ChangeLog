@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.66 2015/01/08 21:43:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.67 2015/01/09 13:39:39 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libpipeline-1.4.0.ebuild:
+  Stable for amd64, wrt bug #535118
 
   08 Jan 2015; Jeroen Roovers <jer@gentoo.org> libpipeline-1.4.0.ebuild:
   Stable for HPPA (bug #535118).

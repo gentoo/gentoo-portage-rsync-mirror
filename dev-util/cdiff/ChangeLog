@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cdiff
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.28 2014/11/14 07:10:58 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.29 2015/01/09 13:46:31 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cdiff-0.9.6.ebuild:
+  Stable for amd64, wrt bug #535392
 
 *cdiff-0.9.6 (14 Nov 2014)
 

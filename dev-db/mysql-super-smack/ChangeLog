@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-super-smack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/ChangeLog,v 1.24 2015/01/06 19:45:14 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/ChangeLog,v 1.25 2015/01/09 13:43:39 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  mysql-super-smack-1.3-r3.ebuild:
+  Stable for amd64, wrt bug #534772
 
   06 Jan 2015; Brian Evans <grknight@gentoo.org>
   files/mysql-super-smack-1.3-automake-1.13.patch,

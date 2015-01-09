@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.10.ebuild,v 1.1 2014/08/11 08:17:03 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beanstalkd/beanstalkd-1.10.ebuild,v 1.2 2015/01/09 13:45:56 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/kr/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~mips ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x64-macos ~x86-macos"
 
 RDEPEND=""
 DEPEND=""

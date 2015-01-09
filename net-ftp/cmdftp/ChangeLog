@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/cmdftp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/cmdftp/ChangeLog,v 1.8 2014/02/24 14:16:34 nimiux Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/cmdftp/ChangeLog,v 1.9 2015/01/09 13:38:19 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cmdftp-0.9.8.ebuild:
+  Stable for amd64, wrt bug #535564
 
   24 Feb 2014; Chema Alonso <nimiux@gentoo.org> cmdftp-0.9.7.ebuild:
   Stable for amd64 wrt bug #284943
@@ -29,4 +32,3 @@
 
   17 Aug 2007; <jsin@gentoo.org> +metadata.xml, +cmdftp-0.9.6.ebuild:
   Created new ebuild for package cmdftp, see bug #104018
-

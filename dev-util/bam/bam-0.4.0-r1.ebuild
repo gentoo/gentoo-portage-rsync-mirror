@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/bam-0.4.0-r1.ebuild,v 1.1 2014/12/25 15:28:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bam/bam-0.4.0-r1.ebuild,v 1.2 2015/01/09 13:42:49 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://github.com/downloads/matricks/${PN}/${P}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND="dev-lang/lua:="

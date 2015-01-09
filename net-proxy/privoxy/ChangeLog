@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.98 2015/01/08 16:10:40 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.99 2015/01/09 13:38:06 bircoph Exp $
+
+  09 Jan 2015; Andrew Savchenko <bircoph@gentoo.org>
+  files/privoxy-3.0.22-force.patch:
+  Fix bug 536082: remove patch chunk mangled by CVS, it is not needed
+  to fix build with --disable-force.
 
 *privoxy-3.0.22 (08 Jan 2015)
 

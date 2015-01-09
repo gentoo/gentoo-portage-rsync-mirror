@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Zip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.89 2014/08/22 14:01:01 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.90 2015/01/09 13:40:19 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> Archive-Zip-1.370.0.ebuild:
+  Stable for amd64, wrt bug #535140
 
 *Archive-Zip-1.300.0-r1 (22 Aug 2014)
 

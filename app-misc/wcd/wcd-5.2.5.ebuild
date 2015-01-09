@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.5.ebuild,v 1.1 2014/06/14 11:52:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/wcd-5.2.5.ebuild,v 1.2 2015/01/09 13:46:41 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://waterlan.home.xs4all.nl/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="nls unicode"
 
 CDEPEND="

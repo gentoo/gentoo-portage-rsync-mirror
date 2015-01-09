@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.142 2015/01/08 22:09:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.143 2015/01/09 13:43:09 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xlockmore-5.45.ebuild:
+  Stable for amd64, wrt bug #534742
 
   08 Jan 2015; Jeroen Roovers <jer@gentoo.org> xlockmore-5.45.ebuild:
   Stable for HPPA (bug #534742).

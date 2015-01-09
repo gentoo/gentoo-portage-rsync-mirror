@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/cgcode-1.0-r2.ebuild,v 1.4 2015/01/04 14:44:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/cgcode-1.0-r2.ebuild,v 1.5 2015/01/09 13:39:59 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fetk.org/codes/cgcode/index.html"
 SRC_URI="http://www.fetk.org/codes/download/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/utf8-string
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.28 2014/07/02 14:15:25 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.29 2015/01/09 13:49:33 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> utf8-string-0.3.8.ebuild:
+  Stable for amd64, wrt bug #535022
 
 *utf8-string-0.3.8 (02 Jul 2014)
 

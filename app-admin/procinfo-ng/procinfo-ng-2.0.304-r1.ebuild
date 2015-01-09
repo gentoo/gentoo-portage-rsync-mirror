@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo-ng/procinfo-ng-2.0.304-r1.ebuild,v 1.2 2015/01/08 22:04:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo-ng/procinfo-ng-2.0.304-r1.ebuild,v 1.3 2015/01/09 13:44:06 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~x86"
+KEYWORDS="amd64 hppa ~x86"
 IUSE=""
 
 RDEPEND="

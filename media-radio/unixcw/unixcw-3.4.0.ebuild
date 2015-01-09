@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-3.4.0.ebuild,v 1.1 2014/11/23 15:49:34 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/unixcw-3.4.0.ebuild,v 1.2 2015/01/09 13:48:26 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 IUSE="alsa ncurses pulseaudio suid qt4"
 
 RDEPEND="ncurses? ( sys-libs/ncurses )

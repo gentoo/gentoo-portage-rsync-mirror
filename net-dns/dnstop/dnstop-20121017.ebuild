@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/dnstop-20121017.ebuild,v 1.2 2014/08/10 20:42:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/dnstop-20121017.ebuild,v 1.3 2015/01/09 13:38:09 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dnstop.measurement-factory.com/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="ipv6"
 
 RDEPEND="sys-libs/ncurses

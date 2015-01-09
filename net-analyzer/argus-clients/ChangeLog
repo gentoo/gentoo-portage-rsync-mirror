@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/argus-clients
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.70 2014/10/12 09:18:28 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/ChangeLog,v 1.71 2015/01/09 13:48:54 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> argus-clients-3.0.8.ebuild:
+  Stable for amd64, wrt bug #535520
 
 *argus-clients-3.0.8 (12 Oct 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwatch/netwatch-1.3.0.1-r3.ebuild,v 1.1 2014/10/12 10:06:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwatch/netwatch-1.3.0.1-r3.ebuild,v 1.2 2015/01/09 13:47:51 ago Exp $
 
 EAPI=5
 inherit autotools eutils versionator
@@ -13,7 +13,7 @@ SRC_URI="http://www.slctech.org/~mackay/NETWATCH/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="sys-libs/ncurses"

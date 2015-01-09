@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liboping
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/ChangeLog,v 1.15 2015/01/06 00:11:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/ChangeLog,v 1.16 2015/01/09 13:38:49 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> liboping-1.7.0.ebuild:
+  Stable for amd64, wrt bug #535582
 
 *liboping-1.8.0 (06 Jan 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bin86
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.35 2014/06/12 12:33:06 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.36 2015/01/09 13:41:09 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> bin86-0.16.21.ebuild:
+  Stable for amd64, wrt bug #535672
 
   12 Jun 2014; Lars Wendler <polynomial-c@gentoo.org> bin86-0.16.21.ebuild:
   Removed unneeded patch from SRC_URI.

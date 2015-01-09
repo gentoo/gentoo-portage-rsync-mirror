@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gtypist
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.35 2014/09/04 21:14:10 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.36 2015/01/09 13:46:26 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gtypist-2.9.5.ebuild:
+  Stable for amd64, wrt bug #534876
 
 *gtypist-2.9.5 (04 Sep 2014)
 

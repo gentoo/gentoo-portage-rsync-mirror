@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ding-libs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ding-libs/ChangeLog,v 1.15 2014/06/27 08:54:58 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ding-libs/ChangeLog,v 1.16 2015/01/09 13:39:24 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ding-libs-0.4.0.ebuild:
+  Stable for amd64, wrt bug #535106
 
 *ding-libs-0.4.0 (27 Jun 2014)
 

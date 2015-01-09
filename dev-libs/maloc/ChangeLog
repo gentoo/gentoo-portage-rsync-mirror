@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/maloc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.26 2015/01/04 14:26:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.27 2015/01/09 13:40:04 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> maloc-1.5-r1.ebuild:
+  Stable for amd64, wrt bug #534622
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> -maloc-1.4.ebuild,
   -maloc-1.5.ebuild, maloc-1.5-r1.ebuild:
@@ -109,4 +112,3 @@
   20 Oct 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
   +maloc-0.1.2.ebuild:
   Initial import. Thanks to Markus Dittrich <markusle@gmail.com> for his work.
-

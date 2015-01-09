@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.71 2015/01/08 21:30:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.72 2015/01/09 13:42:24 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> NetAddr-IP-4.72.0.ebuild:
+  Stable for amd64, wrt bug #535214
 
   08 Jan 2015; Jeroen Roovers <jer@gentoo.org> NetAddr-IP-4.72.0.ebuild:
   Stable for HPPA (bug #535214).

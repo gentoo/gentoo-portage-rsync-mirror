@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/foremost
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.27 2014/08/31 00:37:43 ikelos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.28 2015/01/09 13:45:46 ago Exp $
+
+  09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> foremost-1.5.7-r2.ebuild:
+  Stable for amd64, wrt bug #534852
 
 *foremost-1.5.7-r2 (31 Aug 2014)
 
@@ -130,4 +133,3 @@
   27 Apr 2004; Martin Holzer <mholzer@gentoo.org> foremost-0.69.ebuild,
   metadata.xml:
   Initial ebuild. Submitted by Daniel Fullmer <lsmod@hotmail.com> in 47094
-

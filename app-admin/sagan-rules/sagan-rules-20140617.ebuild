@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/sagan-rules-20140617.ebuild,v 1.1 2014/12/05 19:23:34 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan-rules/sagan-rules-20140617.ebuild,v 1.2 2015/01/09 13:41:24 ago Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://sagan.quadrantsec.com/rules/sagan-rules-06172014.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+lognorm"
 
 DEPEND=""
