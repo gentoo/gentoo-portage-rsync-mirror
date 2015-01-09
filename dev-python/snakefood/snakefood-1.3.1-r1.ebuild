@@ -1,13 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakefood/snakefood-1.3.1.ebuild,v 1.2 2010/07/23 22:41:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakefood/snakefood-1.3.1-r1.ebuild,v 1.1 2015/01/09 10:36:01 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2:2.5"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Generate dependency graphs from Python code"
 HOMEPAGE="http://furius.ca/snakefood/"
@@ -20,5 +18,3 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-DOCS="CHANGES"
