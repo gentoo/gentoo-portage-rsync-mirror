@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/xca
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.46 2014/12/21 20:07:18 alonbl Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.47 2015/01/09 21:28:43 alonbl Exp $
+
+  09 Jan 2015; Alon Bar-Lev <alonbl@gentoo.org> +files/xca-1.1.0-ec.patch,
+  xca-1.1.0.ebuild:
+  Fix bindist issues, bug#534770
 
 *xca-1.1.0 (21 Dec 2014)
 

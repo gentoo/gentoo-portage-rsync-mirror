@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-1.1.0.ebuild,v 1.1 2014/12/21 20:07:18 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-1.1.0.ebuild,v 1.2 2015/01/09 21:28:43 alonbl Exp $
 
 EAPI="5"
 
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.0-desktop.patch
+	epatch "${FILESDIR}"/${P}-ec.patch
 }
 
 src_configure() {
