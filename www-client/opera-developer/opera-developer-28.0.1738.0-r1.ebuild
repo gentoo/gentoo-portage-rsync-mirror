@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-28.0.1738.0.ebuild,v 1.1 2015/01/08 20:58:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-28.0.1738.0-r1.ebuild,v 1.1 2015/01/09 11:50:48 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -34,7 +34,6 @@ RDEPEND="
 	net-print/cups
 	sys-apps/dbus
 	sys-libs/libcap
-	virtual/libudev
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -81,7 +80,5 @@ src_prepare() {
 src_install() {
 	mv * "${D}" || die
 	dosym ../$(get_libdir)/${PN}/${PN} /usr/bin/${PN}
-	dodir /usr/$(get_libdir)/${PN}/lib
-	dosym /usr/$(get_libdir)/libudev.so /usr/$(get_libdir)/${PN}/lib/libudev.so.0
 	fperms 4711 /usr/$(get_libdir)/${PN}/opera_sandbox
 }
