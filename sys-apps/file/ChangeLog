@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.298 2015/01/03 14:14:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.299 2015/01/09 16:43:39 zlogene Exp $
+
+  09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> file-5.22.ebuild:
+  amd64 stable wrt bug #532768
 
 *file-5.22 (03 Jan 2015)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/hexcurse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.12 2014/10/27 23:25:27 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexcurse/ChangeLog,v 1.13 2015/01/09 16:39:43 jer Exp $
+
+  09 Jan 2015; Jeroen Roovers <jer@gentoo.org> hexcurse-1.55.ebuild,
+  files/1.55-tinfo.patch:
+  Simplify library checks, drop virtual/pkgconfig (maybe bug #536128).
 
   27 Oct 2014; Jeroen Roovers <jer@gentoo.org> hexcurse-1.55.ebuild,
   files/1.55-gcc.patch, +files/1.55-tinfo.patch:
