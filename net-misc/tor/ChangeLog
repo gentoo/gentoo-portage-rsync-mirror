@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.462 2015/01/08 18:00:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.463 2015/01/09 20:43:14 blueness Exp $
+
+  09 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  tor-0.2.6.2_alpha-r1.ebuild:
+  Keyword ~mips and ~x86
 
   08 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
   tor-0.2.6.2_alpha-r1.ebuild:

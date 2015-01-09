@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.593 2014/12/30 18:06:04 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.594 2015/01/09 20:53:31 klausman Exp $
+
+  09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> mesa-10.2.8.ebuild:
+  Stable on alpha, bug 513736
 
   30 Dec 2014; Markus Meier <maekke@gentoo.org> mesa-10.2.8.ebuild:
   arm stable, bug #513736

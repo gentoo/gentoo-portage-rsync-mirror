@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/gwyddion
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.45 2013/01/23 10:21:53 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.46 2015/01/09 20:32:27 dilfridge Exp $
+
+*gwyddion-2.39 (09 Jan 2015)
+
+  09 Jan 2015; Andreas K. Huettel <dilfridge@gentoo.org> +gwyddion-2.39.ebuild:
+  Version bump, EAPI=5, python-single-r1, fixes build with Perl 5.20, bug
+  536150
 
 *gwyddion-2.30-r1 (23 Jan 2013)
 

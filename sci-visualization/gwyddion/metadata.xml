@@ -14,4 +14,9 @@
     Enable support for <pkg>x11-libs/gtksourceview</pkg>
   </flag>
   </use>
+  <use>
+    <flag name="fits">
+    Enable FITS image import via <pkg>sci-libs/cfitsio</pkg>
+  </flag>
+  </use>
 </pkgmetadata>
