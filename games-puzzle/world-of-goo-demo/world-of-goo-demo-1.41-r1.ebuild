@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/world-of-goo-demo-1.41-r1.ebuild,v 1.4 2014/05/15 16:55:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/world-of-goo-demo-1.41-r1.ebuild,v 1.5 2015/01/09 16:11:18 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A puzzle game with a strong emphasis on physics"
@@ -47,22 +47,22 @@ pkg_nofetch() {
 
 src_install() {
 	exeinto "${dir}"
-	doexe ${MY_PN%Demo}* || die
+	doexe ${MY_PN%Demo}*
 
-	games_make_wrapper ${PN} "${dir}"/${MY_PN%Demo} || die
+	games_make_wrapper ${PN} "${dir}"/${MY_PN%Demo}
 
 	insinto "${dir}"
-	doins -r icons properties res || die
-	newicon icons/scalable.svg ${PN}.svg || die
+	doins -r icons properties res
+	newicon icons/scalable.svg ${PN}.svg
 
 	if [[ ${PN} == *-demo ]] ; then
-		make_desktop_entry ${PN} "World of Goo (Demo)" || die
+		make_desktop_entry ${PN} "World of Goo (Demo)"
 	else
-		make_desktop_entry ${PN} "World of Goo" || die
+		make_desktop_entry ${PN} "World of Goo"
 	fi
 
-	dodoc linux-issues.txt || die
-	dohtml readme.html || die
+	dodoc linux-issues.txt
+	dohtml readme.html
 
 	prepgamesdirs
 }

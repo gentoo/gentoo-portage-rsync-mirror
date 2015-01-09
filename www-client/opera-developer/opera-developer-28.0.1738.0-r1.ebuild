@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-28.0.1738.0-r1.ebuild,v 1.1 2015/01/09 11:50:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-28.0.1738.0-r1.ebuild,v 1.2 2015/01/09 16:24:22 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -25,7 +25,6 @@ RDEPEND="
 	dev-libs/glib:2
 	dev-libs/nspr
 	dev-libs/nss
-	>=dev-libs/openssl-1.0.1:0
 	gnome-base/gconf:2
 	media-libs/alsa-lib
 	media-libs/fontconfig
@@ -33,7 +32,6 @@ RDEPEND="
 	net-misc/curl
 	net-print/cups
 	sys-apps/dbus
-	sys-libs/libcap
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
