@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-6.6.6.ebuild,v 1.1 2014/05/29 12:51:51 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-6.6.6.ebuild,v 1.2 2015/01/09 13:26:39 keri Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.swi-prolog.org/download/stable/src/pl-${PV}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="archive debug doc +gmp hardened java minimal odbc +readline ssl static-libs test zlib X"
 
 RDEPEND="sys-libs/ncurses
