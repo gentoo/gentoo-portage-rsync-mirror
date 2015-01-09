@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1469 2015/01/09 18:39:54 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1470 2015/01/09 20:17:05 mpagano Exp $
+
+*gentoo-sources-3.10.64 (09 Jan 2015)
+
+  09 Jan 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.10.64.ebuild:
+  BFQ upgrade to v7r7. Linux patch 3.10.64. Patch to add
+  DEVPTS_MULTIPLE_INSTANCES when GENTOO_LINUX_INIT_SYSTEMD is selected. See bug
+  #534216.
 
 *gentoo-sources-3.14.28 (09 Jan 2015)
 
