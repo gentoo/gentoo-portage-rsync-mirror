@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.3.0.ebuild,v 1.1 2015/01/09 17:30:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.3.0.ebuild,v 1.2 2015/01/09 22:53:15 vikraman Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]]; then
 	#EGIT_REPO_URI="git://github.com/gentoo/netifrc" # Alternate
 	inherit git-r3
 else
-	SRC_URI="http://dev.gentoo.org/~robbat2/dist/${P}.tar.bz2"
+	SRC_URI="http://dev.gentoo.org/~robbat2/distfiles/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 

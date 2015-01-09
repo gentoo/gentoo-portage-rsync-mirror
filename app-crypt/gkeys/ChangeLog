@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gkeys
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.7 2015/01/09 21:58:00 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.8 2015/01/09 22:31:56 dolsen Exp $
+
+  09 Jan 2015; Brian Dolbec <dolsen@gentoo.org> gkeys-0.1-r1.ebuild,
+  gkeys-9999.ebuild:
+  Fix copyright header, gnupg dep.
 
 *gkeys-0.1-r1 (09 Jan 2015)
 

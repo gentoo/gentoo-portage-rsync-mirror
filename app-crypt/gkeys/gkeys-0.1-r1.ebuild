@@ -1,6 +1,6 @@
-# Copyright 2014-2015 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-0.1-r1.ebuild,v 1.1 2015/01/09 21:58:00 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-0.1-r1.ebuild,v 1.2 2015/01/09 22:31:56 dolsen Exp $
 
 EAPI="5"
 
