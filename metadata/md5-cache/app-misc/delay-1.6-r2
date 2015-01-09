@@ -9,4 +9,4 @@ RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=http://onegeek.org/~tom/software/delay/dl/delay-1.6.tar.gz
 _eclasses_=autotools	ae13678d52af6816cb92f952594d882a	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=b6a302a66632ff1516824fec14b97f26
+_md5_=73ef6f5d4a2e26e96d2a250547f36364

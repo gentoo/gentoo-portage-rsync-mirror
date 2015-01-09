@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.264 2014/12/26 09:17:59 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.265 2015/01/09 14:17:44 klausman Exp $
+
+  09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> erlang-17.3.ebuild:
+  Stable on alpha, bug 499876
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> erlang-17.3.ebuild:
   Stable for sparc, wrt bug #499876

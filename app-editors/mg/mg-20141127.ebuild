@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20141127.ebuild,v 1.1 2014/12/06 14:34:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20141127.ebuild,v 1.2 2015/01/09 14:02:06 ulm Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 IUSE="livecd"
 
 RDEPEND="sys-libs/ncurses
-	!elibc_FreeBSD? ( dev-libs/libbsd )"
+	!elibc_FreeBSD? ( >=dev-libs/libbsd-0.7.0 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
