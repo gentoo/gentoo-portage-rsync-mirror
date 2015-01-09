@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.99 2015/01/09 13:38:06 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.100 2015/01/09 15:30:19 bircoph Exp $
+
+  09 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> privoxy-3.0.22.ebuild:
+  Cosmetics: move REQUIRED_USE to an upper part.
 
   09 Jan 2015; Andrew Savchenko <bircoph@gentoo.org>
   files/privoxy-3.0.22-force.patch:

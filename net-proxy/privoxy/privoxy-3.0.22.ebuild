@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.22.ebuild,v 1.1 2015/01/08 16:10:40 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.22.ebuild,v 1.2 2015/01/09 15:30:19 bircoph Exp $
 
 EAPI="5"
 
@@ -25,6 +25,8 @@ DEPEND="dev-libs/libpcre
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-privoxy )"
+
+REQUIRED_USE="toggle? ( editor )"
 
 S="${WORKDIR}/${P%_*}-${PRIVOXY_STATUS}"
 
@@ -65,8 +67,6 @@ src_configure() {
 		--sysconfdir=/etc/privoxy \
 		--docdir=/usr/share/doc/${PF}
 }
-
-REQUIRED_USE="toggle? ( editor )"
 
 src_install () {
 	default
