@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/uiop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.14 2015/01/09 00:25:59 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.15 2015/01/09 01:50:43 redlizard Exp $
+
+  09 Jan 2015; redlizard <redlizard@gentoo.org> uiop-3.1.4.ebuild:
+  Added prefix keywords.
 
   09 Jan 2015; Mark Wright <gienah@gentoo.org> uiop-3.1.4.ebuild:
   Thanks to redlizard and jcdx for testing, add ~amd64-linux ~x64-macos to

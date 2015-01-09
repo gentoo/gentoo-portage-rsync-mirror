@@ -1,6 +1,15 @@
 # ChangeLog for games-engines/exult
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.31 2014/05/15 16:41:45 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.33 2015/01/09 01:52:57 mr_bones_ Exp $
+
+*exult-9999 (09 Jan 2015)
+
+  09 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> +exult-9999.ebuild:
+  add live version of ebuild which is recommended for use by upstream.
+
+  09 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -exult-1.4.9_rc1.ebuild,
+  -files/exult-1.4.9_rc1-desktop.patch:
+  clean known-broken version that upstream has removed
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> exult-1.2.ebuild,
   exult-1.4.9_rc1.ebuild:
