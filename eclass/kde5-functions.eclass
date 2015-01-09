@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.3 2014/12/17 13:26:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.4 2015/01/09 18:26:26 mrueg Exp $
 
 # @ECLASS: kde5-functions.eclass
 # @MAINTAINER:
@@ -26,7 +26,7 @@ esac
 # @ECLASS-VARIABLE: FRAMEWORKS_MINIMAL
 # @DESCRIPTION:
 # Minimal Frameworks version to require for the package.
-: ${FRAMEWORKS_MINIMAL:=5.3.0}
+: ${FRAMEWORKS_MINIMAL:=5.6.0}
 
 # @ECLASS-VARIABLE: KDEBASE
 # @DESCRIPTION:

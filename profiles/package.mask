@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16278 2015/01/09 12:22:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16279 2015/01/09 18:21:59 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -550,6 +550,7 @@ kde-frameworks/kmediaplayer
 kde-frameworks/knewstuff
 kde-frameworks/knotifications
 kde-frameworks/knotifyconfig
+kde-frameworks/kpackage
 kde-frameworks/kparts
 kde-frameworks/kplotting
 kde-frameworks/kpty
@@ -563,6 +564,7 @@ kde-frameworks/kwallet
 kde-frameworks/kwidgetsaddons
 kde-frameworks/kwindowsystem
 kde-frameworks/kxmlgui
+kde-frameworks/networkmanager-qt
 kde-frameworks/plasma
 kde-frameworks/solid
 kde-frameworks/sonnet

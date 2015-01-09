@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare pretend setup test unpack
+DEPEND=dev-qt/qtgui:5 eps? ( dev-qt/qtprintsupport:5 ) openexr? ( media-libs/ilmbase:= media-libs/openexr:= ) >=sys-apps/sed-4 test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-libs/extra-cmake-modules-1.6.0 doc? ( >=kde-frameworks/kapidox-5.6 app-doc/doxygen ) test? ( >=dev-qt/qttest-5.3.0:5 ) >=dev-qt/qtcore-5.3.0:5 dev-util/desktop-file-utils app-arch/xz-utils
+DESCRIPTION=Framework providing additional format plugins for Qt's image I/O system
+EAPI=5
+HOMEPAGE=http://www.kde.org/
+IUSE=eps openexr test doc debug test
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2+
+RDEPEND=dev-qt/qtgui:5 eps? ( dev-qt/qtprintsupport:5 ) openexr? ( media-libs/ilmbase:= media-libs/openexr:= ) >=kde-frameworks/kf-env-3 >=dev-qt/qtcore-5.3.0:5
+SLOT=5/5.6
+SRC_URI=mirror://kde/stable/frameworks/5.6/kimageformats-5.6.0.tar.xz
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	kde5	a488263d3a8020761de6c098816e4ef7	kde5-functions	387824d97cb3ded6a9727b25d2f3c948	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=34c97a516f82e9a390f088958665fa84

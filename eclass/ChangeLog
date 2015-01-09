@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1502 2015/01/08 23:26:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1503 2015/01/09 18:26:26 mrueg Exp $
+
+  09 Jan 2015; Manuel Rüger <mrueg@gentoo.org> kde5-functions.eclass:
+  Sync kde5-functions.eclass with overlay.
 
   08 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> autotools.eclass:
   Bump latest unstable automake version to 1.15.

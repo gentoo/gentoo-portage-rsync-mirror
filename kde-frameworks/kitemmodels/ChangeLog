@@ -1,6 +1,12 @@
 # ChangeLog for kde-frameworks/kitemmodels
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kitemmodels/ChangeLog,v 1.5 2014/12/20 14:26:22 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kitemmodels/ChangeLog,v 1.6 2015/01/09 18:25:31 mrueg Exp $
+
+*kitemmodels-5.6.0 (09 Jan 2015)
+
+  09 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +kitemmodels-5.6.0.ebuild,
+  -kitemmodels-5.5.0.ebuild:
+  Version bump.
 
   20 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -kitemmodels-5.4.0.ebuild:
   Remove old.
