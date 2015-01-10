@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/pandoc-citeproc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pandoc-citeproc/ChangeLog,v 1.7 2015/01/02 10:33:11 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pandoc-citeproc/ChangeLog,v 1.8 2015/01/10 09:18:55 gienah Exp $
+
+  10 Jan 2015; Mark Wright <gienah@gentoo.org>
+  +files/pandoc-citeproc-0.6-ghc-7.10.patch, pandoc-citeproc-0.6.ebuild:
+  Patch pandoc-citeproc for ghc 7.10.1 RC1 https://github.com/jgm/pandoc-
+  citeproc/pull/99
 
   02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
   pandoc-citeproc-0.3.1.ebuild:
