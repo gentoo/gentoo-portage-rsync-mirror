@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gifsicle
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.53 2014/11/24 05:47:55 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.54 2015/01/10 22:58:19 radhermit Exp $
+
+*gifsicle-1.87 (10 Jan 2015)
+
+  10 Jan 2015; Tim Harder <radhermit@gentoo.org> +gifsicle-1.87.ebuild:
+  Version bump.
 
 *gifsicle-1.86 (24 Nov 2014)
 
