@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9673 2015/01/09 18:21:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9674 2015/01/10 06:46:51 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jan 2015; Tim Harder <radhermit@gentoo.org> package.mask:
+  Mask dev-libs/protobuf-c-1.1.0 until protobuf-2.6.0 is unmasked.
 
   09 Jan 2015; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Update kde-frameworks mask.

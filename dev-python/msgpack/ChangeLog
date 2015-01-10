@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/msgpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.22 2015/01/05 17:02:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.23 2015/01/10 06:58:07 radhermit Exp $
+
+*msgpack-0.4.4 (10 Jan 2015)
+
+  10 Jan 2015; Tim Harder <radhermit@gentoo.org> +msgpack-0.4.4.ebuild:
+  Version bump.
 
   05 Jan 2015; Alexis Ballier <aballier@gentoo.org> msgpack-0.4.2.ebuild:
   keyword ~arm
