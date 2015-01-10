@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/entangle-0.6.0.ebuild,v 1.1 2014/12/30 19:12:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entangle/entangle-0.6.0.ebuild,v 1.2 2015/01/10 10:56:06 mgorny Exp $
 
 EAPI=5
 
@@ -17,14 +17,14 @@ IUSE=""
 
 DEPEND=">=dev-libs/glib-2.26:2
 	>=x11-libs/gdk-pixbuf-2.12.0:2
-	>=x11-libs/gtk+-3.3.18:3
+	>=x11-libs/gtk+-3.3.18:3[introspection]
 	virtual/libgudev:=
 	>=dev-libs/dbus-glib-0.60
 	>=dev-libs/gobject-introspection-0.9.3
 	>=media-libs/libgphoto2-2.4.11:=
 	media-libs/lcms:2
 	>=dev-libs/libpeas-1.2.0[gtk]
-	>=media-libs/gexiv2-0.4
+	>=media-libs/gexiv2-0.4[introspection]
 	>=x11-libs/libXext-1.3.0
 	>=x11-themes/gnome-icon-theme-symbolic-3.0.0
 	>=media-libs/libraw-0.9.0"
@@ -40,10 +40,3 @@ G2CONF+="
 	--disable-static"
 
 DOCS=( AUTHORS ChangeLog NEWS README )
-
-src_prepare() {
-	gnome2_src_prepare
-
-	has_version '>=media-libs/libgphoto2-2.5.0' && \
-		epatch "${FILESDIR}"/${P}+libgphoto2-2.5.0.patch
-}

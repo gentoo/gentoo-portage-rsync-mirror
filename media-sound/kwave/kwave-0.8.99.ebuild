@@ -1,22 +1,22 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.10.ebuild,v 1.7 2015/01/10 10:52:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.99.ebuild,v 1.1 2015/01/10 10:52:08 johu Exp $
 
 EAPI=5
 
-KDE_LINGUAS="cs de fr"
+KDE_LINGUAS="cs de es fr"
 KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="A sound editor for KDE that can edit many types of audio files"
 HOMEPAGE="http://kwave.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-1.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}-2.tar.bz2"
 
 LICENSE="BSD GPL-2 LGPL-2
 	handbook? ( FDL-1.2 )"
 SLOT="4"
-KEYWORDS="amd64 x86"
-IUSE="alsa debug flac handbook mp3 opus oss phonon pulseaudio vorbis"
+KEYWORDS="~amd64 ~x86"
+IUSE="alsa debug flac mp3 opus oss phonon pulseaudio vorbis"
 
 RDEPEND="
 	media-libs/audiofile:=
@@ -49,8 +49,8 @@ DOCS=( AUTHORS CHANGES LICENSES README TODO )
 
 src_configure() {
 	local mycmakeargs=(
-		-DWITH_SAMPLERATE=ON
 		$(cmake-utils_use_with alsa)
+		$(cmake-utils_use_with handbook DOC)
 		$(cmake-utils_use_with flac)
 		$(cmake-utils_use_with mp3)
 		$(cmake-utils_use_with vorbis OGG_VORBIS)
