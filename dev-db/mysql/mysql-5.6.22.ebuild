@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.22.ebuild,v 1.1 2014/12/04 01:27:44 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.6.22.ebuild,v 1.2 2015/01/10 04:13:21 grknight Exp $
 
 EAPI="5"
 
@@ -90,6 +90,11 @@ multilib_src_test() {
 		# rpl.rpl_plugin_load
 		# fails due to included file not listed in expected result
 		# appears to be poor planning
+		#
+		# main.mysqlhotcopy_archive main.mysqlhotcopy_myisam
+		# fails due to bad cleanup of previous tests when run in parallel
+		# The tool is deprecated anyway
+		# Bug 532288
 		for t in \
 			binlog.binlog_mysqlbinlog_filter \
 			binlog.binlog_statement_insert_delayed \
@@ -102,6 +107,7 @@ multilib_src_test() {
 			perfschema.binlog_edge_mix \
 			perfschema.binlog_edge_stmt \
 			rpl.rpl_plugin_load \
+			main.mysqlhotcopy_archive main.mysqlhotcopy_myisam \
 		; do
 				mysql-multilib_disable_test  "$t" "False positives in Gentoo"
 		done

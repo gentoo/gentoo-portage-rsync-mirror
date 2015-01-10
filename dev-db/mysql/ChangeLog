@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.710 2015/01/07 14:00:55 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.711 2015/01/10 04:13:21 grknight Exp $
+
+  10 Jan 2015; Brian Evans <grknight@gentoo.org> mysql-5.6.22.ebuild:
+  Disable 2 tests for the deprecated mysqlhotcopy Bug 532288
 
   07 Jan 2015; Brian Evans <grknight@gentoo.org> -mysql-5.1.70.ebuild,
   -mysql-5.1.73-r1.ebuild, metadata.xml:
