@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.209 2015/01/04 18:28:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.210 2015/01/10 21:10:27 klausman Exp $
+
+  10 Jan 2015; Tobias Klausmann <klausman@gentoo.org> whois-5.1.5.ebuild:
+  Stable on alpha, bug 524264
 
 *whois-5.2.3 (04 Jan 2015)
 

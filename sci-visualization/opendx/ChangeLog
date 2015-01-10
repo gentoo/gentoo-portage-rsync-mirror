@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/opendx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.28 2012/10/24 19:45:22 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.29 2015/01/10 21:31:16 bircoph Exp $
+
+*opendx-4.4.4-r5 (10 Jan 2015)
+
+  10 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> +opendx-4.4.4-r5.ebuild:
+  Drop broken graphicsmagick support, see bug 458690.
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> opendx-4.4.4-r4.ebuild:
   Update dependency after package move from x11-libs/openmotif to

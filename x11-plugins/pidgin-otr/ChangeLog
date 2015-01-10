@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-otr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.31 2014/11/02 19:29:07 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.32 2015/01/10 21:14:15 mrueg Exp $
+
+  10 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pidgin-otr-4.0.0.ebuild:
+  Remove old.
 
 *pidgin-otr-4.0.1 (02 Nov 2014)
 
