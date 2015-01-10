@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/nm-applet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.124 2014/12/19 13:39:14 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.125 2015/01/10 14:54:29 pacho Exp $
+
+*nm-applet-1.0.0 (10 Jan 2015)
+
+  10 Jan 2015; Pacho Ramos <pacho@gentoo.org> +nm-applet-1.0.0.ebuild:
+  Version bump
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> nm-applet-0.9.10.0.ebuild:
   amd64 stable, bug 529964

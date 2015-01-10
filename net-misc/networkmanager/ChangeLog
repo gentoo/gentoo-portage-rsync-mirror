@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.221 2015/01/08 10:05:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.222 2015/01/10 14:51:52 pacho Exp $
+
+*networkmanager-1.0.0 (10 Jan 2015)
+
+  10 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/networkmanager-1.0.0-find-helpers.patch,
+  +files/networkmanager-1.0.0-lto-switch.patch, +networkmanager-1.0.0.ebuild:
+  Version bump
 
   08 Jan 2015; Pacho Ramos <pacho@gentoo.org>
   networkmanager-0.9.10.1_pre20141101.ebuild:
