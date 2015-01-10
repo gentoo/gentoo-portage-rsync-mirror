@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/physlock
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/physlock/ChangeLog,v 1.3 2013/08/17 01:03:08 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/physlock/ChangeLog,v 1.4 2015/01/10 07:03:14 radhermit Exp $
+
+*physlock-0.4.5 (10 Jan 2015)
+
+  10 Jan 2015; Tim Harder <radhermit@gentoo.org> +physlock-0.4.5.ebuild:
+  Version bump.
 
   17 Aug 2013; Anthony G. Basile <blueness@gentoo.org> physlock-0.4.3.ebuild,
   physlock-0.4.4.ebuild:
