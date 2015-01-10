@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/testoob
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.23 2013/08/03 09:45:51 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.24 2015/01/10 00:43:01 idella4 Exp $
+
+*testoob-1.15-r1 (10 Jan 2015)
+
+  10 Jan 2015; Ian Delaney <idella4@gentoo.org> +testoob-1.15-r1.ebuild:
+  revbump; conversion -> distutils-r1
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> testoob-1.15.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.
@@ -95,4 +100,3 @@
   04 Mar 2006; Lukasz Strzygowski <lucass@gentoo.org> +metadata.xml,
   +testoob-0.8.1.ebuild:
   Initial commit. Thanks to Chris Bainbridge in bug #122581.
-
