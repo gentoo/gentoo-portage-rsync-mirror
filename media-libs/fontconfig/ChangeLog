@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fontconfig
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.201 2014/12/31 17:06:09 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.202 2015/01/10 21:00:08 klausman Exp $
+
+  10 Jan 2015; Tobias Klausmann <klausman@gentoo.org>
+  fontconfig-2.11.1-r2.ebuild:
+  Stable on alpha, bug 520010
 
   31 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> fontconfig-2.11.1-r2.ebuild:
   x86 stable wrt bug #520010

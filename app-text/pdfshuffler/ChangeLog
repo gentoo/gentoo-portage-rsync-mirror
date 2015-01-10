@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pdfshuffler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/ChangeLog,v 1.19 2014/08/10 18:28:00 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfshuffler/ChangeLog,v 1.20 2015/01/10 20:52:17 grozin Exp $
+
+*pdfshuffler-0.6.0-r1 (10 Jan 2015)
+
+  10 Jan 2015; Andrey Grozin <grozin@gentoo.org> +pdfshuffler-0.6.0-r1.ebuild,
+  +files/pdfshuffler-PyPDF2.patch:
+  Can use PyPDF2 instead of pyPdf; ported to distutils-r1
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pdfshuffler-0.6.0.ebuild:
   QA: drop trailing '.' from DESCRIPTION

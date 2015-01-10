@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r4.ebuild,v 1.2 2014/11/02 08:31:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.23-r5.ebuild,v 1.1 2015/01/10 20:42:04 grobian Exp $
 
 EAPI="5"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r4"
+PATCHSET_REV="-r5"
 
 DESCRIPTION="A small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org/"
