@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/uclibc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.94 2014/10/21 01:15:17 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.95 2015/01/10 16:26:20 blueness Exp $
+
+*uclibc-0.9.33.2-r13 (10 Jan 2015)
+
+  10 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  +uclibc-0.9.33.2-r13.ebuild:
+  Adds patch for fallocate needed for >=sys-fs/e2fsprogs-1.42.10, bug #516988
 
 *uclibc-0.9.33.9999 (21 Oct 2014)
 
