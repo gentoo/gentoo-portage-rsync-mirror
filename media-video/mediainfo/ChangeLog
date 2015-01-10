@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mediainfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.79 2014/12/12 03:09:59 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.80 2015/01/10 01:13:10 radhermit Exp $
+
+*mediainfo-0.7.72 (10 Jan 2015)
+
+  10 Jan 2015; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.72.ebuild:
+  Version bump.
 
   12 Dec 2014; Tim Harder <radhermit@gentoo.org> -mediainfo-0.7.64.ebuild,
   -mediainfo-0.7.68.ebuild, -mediainfo-0.7.69.ebuild:
