@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/openttd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.148 2014/09/04 08:06:53 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.149 2015/01/10 05:38:19 mr_bones_ Exp $
+
+*openttd-1.4.4 (10 Jan 2015)
+
+  10 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/openttd-1.4.4-cflags.patch, +files/openttd-1.4.4-freetype.patch,
+  +openttd-1.4.4.ebuild:
+  version bump with patch updates from Poly-C on bug #526570
 
 *openttd-1.4.2 (04 Sep 2014)
 
