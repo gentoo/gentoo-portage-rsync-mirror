@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.104 2014/12/16 14:55:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.106 2015/01/10 13:53:08 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -142,6 +142,7 @@ dev-qt/qtsql abi_x86_32
 dev-qt/qtsvg abi_x86_32
 dev-qt/qtwebkit abi_x86_32
 dev-qt/qtxmlpatterns abi_x86_32
+dev-util/cunit abi_x86_32
 dev-util/pkgconfig abi_x86_32
 gnome-base/gconf abi_x86_32
 gnome-base/gnome-vfs abi_x86_32
@@ -503,6 +504,7 @@ x11-libs/pango abi_x86_32
 x11-libs/pangox-compat abi_x86_32
 x11-libs/pixman abi_x86_32
 x11-libs/xvba-video abi_x86_32
+x11-misc/virtualgl abi_x86_32
 x11-proto/compositeproto abi_x86_32
 x11-proto/damageproto abi_x86_32
 x11-proto/fixesproto abi_x86_32

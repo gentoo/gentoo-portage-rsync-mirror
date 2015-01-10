@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16280 2015/01/10 06:46:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16281 2015/01/10 13:44:28 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,27 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Jan 2015)
+# obsolete and vulnerable, bug #532086
+# removal in 30 days
+=x11-base/xorg-server-1.9*
+=x11-base/xorg-server-1.10*
+=x11-base/xorg-server-1.11*
+=x11-base/xorg-server-1.13*
+=x11-base/xorg-server-1.14*
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Jan 2015)
+# requires obsolete and vulnerable xorg-server, bug #532086
+# removal in 30 days
+x11-drivers/psb-firmware
+x11-drivers/xf86-input-citron
+x11-drivers/xf86-video-cyrix
+x11-drivers/xf86-video-impact
+x11-drivers/xf86-video-nsc
+x11-drivers/xf86-video-sunbw2
+x11-libs/libdrm-poulsbo
+x11-libs/xpsb-glx
 
 # Tim Harder <radhermit@gentoo.org> (10 Jan 2015)
 # Masked until protobuf-2.6.0 is unmasked

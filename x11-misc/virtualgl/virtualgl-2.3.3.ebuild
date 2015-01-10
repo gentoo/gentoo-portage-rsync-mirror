@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.3.ebuild,v 1.4 2014/07/18 17:35:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.3.ebuild,v 1.5 2015/01/10 13:50:26 pacho Exp $
 
 EAPI=5
 inherit cmake-multilib multilib systemd
@@ -19,11 +19,11 @@ KEYWORDS="amd64 x86"
 IUSE="ssl"
 
 RDEPEND="
-	ssl? ( dev-libs/openssl )
-	media-libs/libjpeg-turbo
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXv
+	ssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] )
+	media-libs/libjpeg-turbo[${MULTILIB_USEDEP}]
+	x11-libs/libX11[${MULTILIB_USEDEP}]
+	x11-libs/libXext[${MULTILIB_USEDEP}]
+	x11-libs/libXv[${MULTILIB_USEDEP}]
 	amd64? ( abi_x86_32? (
 		|| (
 			>=media-libs/libjpeg-turbo-1.3.0-r3[abi_x86_32]
@@ -45,8 +45,8 @@ RDEPEND="
 			app-emulation/emul-linux-x86-opengl[-abi_x86_32]
 		)
 	) )
-	virtual/glu
-	virtual/opengl
+	virtual/glu[${MULTILIB_USEDEP}]
+	virtual/opengl[${MULTILIB_USEDEP}]
 "
 DEPEND="${RDEPEND}"
 
