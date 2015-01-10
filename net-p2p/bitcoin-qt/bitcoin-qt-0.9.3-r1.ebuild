@@ -1,32 +1,39 @@
-# Copyright 2010-2014 Gentoo Foundation
+# Copyright 2010-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.8.6.ebuild,v 1.3 2014/07/30 14:27:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.9.3-r1.ebuild,v 1.1 2015/01/10 17:19:55 blueness Exp $
 
 EAPI=4
 
 DB_VER="4.8"
 
-LANGS="af_ZA ar bg bs ca ca_ES cs cy da de el_GR en eo es es_CL et eu_ES fa fa_IR fi fr fr_CA gu_IN he hi_IN hr hu it ja la lt lv_LV nb nl pl pt_BR pt_PT ro_RO ru sk sr sv th_TH tr uk zh_CN zh_TW"
-inherit db-use eutils fdo-mime gnome2-utils kde4-functions qt4-r2 versionator
+LANGS="ach af_ZA ar be_BY bg bs ca ca@valencia ca_ES cmn cs cy da de el_GR en eo es es_CL es_DO es_MX es_UY et eu_ES fa fa_IR fi fr fr_CA gl gu_IN he hi_IN hr hu id_ID it ja ka kk_KZ ko_KR ky la lt lv_LV mn ms_MY nb nl pam pl pt_BR pt_PT ro_RO ru sah sk sl_SI sq sr sv th_TH tr uk ur_PK uz@Cyrl vi vi_VN zh_HK zh_CN zh_TW"
+inherit autotools db-use eutils fdo-mime gnome2-utils kde4-functions qt4-r2 user versionator
 
 MyPV="${PV/_/}"
 MyPN="bitcoin"
 MyP="${MyPN}-${MyPV}"
+LJR_PV="${PV}.ljr20141002"
+LJR_PATCH="bitcoin-${LJR_PV}.patch"
 
 DESCRIPTION="An end-user Qt4 GUI for the Bitcoin crypto-currency"
 HOMEPAGE="http://bitcoin.org/"
 SRC_URI="https://github.com/${MyPN}/${MyPN}/archive/v${MyPV}.tar.gz -> ${MyPN}-v${PV}.tgz
-	1stclassmsg? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/1stclassmsg/0.8.2-1stclassmsg.patch.xz )
+	ljr? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/0.9.x/${LJR_PV}/${LJR_PATCH}.xz )
 "
 
 LICENSE="MIT ISC GPL-3 LGPL-2.1 public-domain || ( CC-BY-SA-3.0 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="$IUSE 1stclassmsg dbus ipv6 kde +qrcode upnp"
+IUSE="$IUSE 1stclassmsg dbus kde ljr ljr-antispam +qrcode test upnp"
 
+REQUIRED_USE="
+	1stclassmsg? ( ljr )
+	ljr-antispam? ( ljr )
+"
 RDEPEND="
 	>=dev-libs/boost-1.41.0[threads(+)]
 	dev-libs/openssl:0[-bindist]
+	dev-libs/protobuf
 	qrcode? (
 		media-gfx/qrencode
 	)
@@ -34,7 +41,7 @@ RDEPEND="
 		net-libs/miniupnpc
 	)
 	sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
-	<=dev-libs/leveldb-1.12.0[-snappy]
+	virtual/bitcoin-leveldb
 	dev-qt/qtgui:4
 	dbus? (
 		dev-qt/qtdbus:4
@@ -44,26 +51,27 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-DOCS="doc/README.md doc/release-notes.md"
-
 S="${WORKDIR}/${MyP}"
 
 src_prepare() {
-	use 1stclassmsg && epatch "${WORKDIR}/0.8.2-1stclassmsg.patch"
-	epatch "${FILESDIR}/0.8.2-sys_leveldb.patch"
+	epatch "${FILESDIR}/0.9-openssl-101k.patch"
+	if use ljr; then
+		epatch "${WORKDIR}/${LJR_PATCH}"
+		use ljr-antispam || epatch "${FILESDIR}/0.9.x-ljr_noblacklist.patch"
+	else
+		epatch "${FILESDIR}/0.9.0-sys_leveldb.patch"
+	fi
 	rm -r src/leveldb
-
-	cd src || die
 
 	local filt= yeslang= nolang=
 
 	for lan in $LANGS; do
-		if [ ! -e qt/locale/bitcoin_$lan.ts ]; then
+		if [ ! -e src/qt/locale/bitcoin_$lan.ts ]; then
 			ewarn "Language '$lan' no longer supported. Ebuild needs update."
 		fi
 	done
 
-	for ts in $(ls qt/locale/*.ts)
+	for ts in $(ls src/qt/locale/*.ts)
 	do
 		x="${ts/*bitcoin_/}"
 		x="${x/.ts/}"
@@ -76,48 +84,39 @@ src_prepare() {
 		fi
 	done
 	filt="bitcoin_\\(${filt:2}\\)\\.\(qm\|ts\)"
-	sed "/${filt}/d" -i 'qt/bitcoin.qrc'
+	sed "/${filt}/d" -i 'src/qt/bitcoin.qrc'
+	sed "s/locale\/${filt}/bitcoin.qrc/" -i 'src/qt/Makefile.am'
 	einfo "Languages -- Enabled:$yeslang -- Disabled:$nolang"
+
+	eautoreconf
 }
 
 src_configure() {
-	OPTS=()
-
-	use dbus && OPTS+=("USE_DBUS=1")
-	if use upnp; then
-		OPTS+=("USE_UPNP=1")
-	else
-		OPTS+=("USE_UPNP=-")
-	fi
-	use qrcode && OPTS+=("USE_QRCODE=1")
-	use 1stclassmsg && OPTS+=("FIRST_CLASS_MESSAGING=1")
-	use ipv6 || OPTS+=("USE_IPV6=-")
-
-	OPTS+=("USE_SYSTEM_LEVELDB=1")
-
-	OPTS+=("BDB_INCLUDE_PATH=$(db_includedir "${DB_VER}")")
-	OPTS+=("BDB_LIB_SUFFIX=-${DB_VER}")
-
-	if has_version '>=dev-libs/boost-1.52'; then
-		OPTS+=("LIBS+=-lboost_chrono\$\$BOOST_LIB_SUFFIX")
-	fi
-
-	eqmake4 "${PN}.pro" "${OPTS[@]}"
+	econf \
+		--disable-ccache \
+		$(use_with dbus qtdbus)  \
+		$(use_with upnp miniupnpc) $(use_enable upnp upnp-default) \
+		$(use_with qrcode qrencode)  \
+		$(use_enable test tests)  \
+		$(usex ljr $(use_enable 1stclassmsg first-class-messaging))  \
+		--with-system-leveldb  \
+		--without-cli --without-daemon \
+		--with-gui
 }
 
 src_test() {
-	cd src || die
-	emake -f makefile.unix "${OPTS[@]}" test_bitcoin
-	./test_bitcoin || die 'Tests failed'
+	emake check
 }
 
 src_install() {
-	qt4-r2_src_install
-	dobin ${PN}
+	emake DESTDIR="${D}" install
+
 	insinto /usr/share/pixmaps
 	newins "share/pixmaps/bitcoin.ico" "${PN}.ico"
 	make_desktop_entry "${PN} %u" "Bitcoin-Qt" "/usr/share/pixmaps/${PN}.ico" "Qt;Network;P2P;Office;Finance;" "MimeType=x-scheme-handler/bitcoin;\nTerminal=false"
 
+	dodoc doc/README.md doc/release-notes.md
+	dodoc doc/assets-attribution.md doc/tor.md
 	doman contrib/debian/manpages/bitcoin-qt.1
 
 	if use kde; then

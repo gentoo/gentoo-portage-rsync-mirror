@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/bitcoin-qt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.89 2014/11/21 23:44:07 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.90 2015/01/10 17:19:55 blueness Exp $
+
+*bitcoin-qt-0.8.6-r1 (10 Jan 2015)
+*bitcoin-qt-0.9.3-r1 (10 Jan 2015)
+
+  10 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.8.6-r1.ebuild, +bitcoin-qt-0.9.3-r1.ebuild,
+  +files/0.8-openssl-101k.patch, +files/0.9-openssl-101k.patch,
+  -bitcoin-qt-0.8.6.ebuild, -bitcoin-qt-0.9.2.1.ebuild,
+  -bitcoin-qt-0.9.3.ebuild:
+  Version bump for bug #536228
 
   21 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
   +files/9999-sys_libsecp256k1.patch, bitcoin-qt-9999.ebuild:

@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/bitcoind
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.93 2014/11/21 12:14:47 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.94 2015/01/10 17:02:08 blueness Exp $
+
+*bitcoind-0.8.6-r2 (10 Jan 2015)
+*bitcoind-0.9.3-r1 (10 Jan 2015)
+
+  10 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.8.6-r2.ebuild, +bitcoind-0.9.3-r1.ebuild,
+  +files/0.8-openssl-101k.patch, +files/0.9-openssl-101k.patch,
+  -bitcoind-0.8.6-r1.ebuild, -bitcoind-0.9.2.1.ebuild, -bitcoind-0.9.3.ebuild:
+  Version bump for bug #536228
 
   21 Nov 2014; Anthony G. Basile <blueness@gentoo.org>
   +files/9999-sys_libsecp256k1.patch, bitcoind-9999.ebuild:
