@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.9 2015/01/01 18:20:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/gltron-0.70-r1.ebuild,v 1.10 2015/01/10 19:46:47 mr_bones_ Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="3d tron, just like the movie"
@@ -22,7 +22,7 @@ DEPEND="virtual/opengl
 	media-libs/sdl-sound[vorbis,mikmod]
 	media-libs/smpeg
 	media-libs/libmikmod"
-RDEPEND="${DEPEND}"
+RDEPEND=${DEPEND}
 
 src_prepare() {
 	epatch \
@@ -31,8 +31,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-debian.patch
 	sed -i \
 		-e '/^gltron_LINK/s/$/ $(LDFLAGS)/' \
-		Makefile.in \
-		|| die 'sed failed'
+		Makefile.in || die
 }
 
 src_configure() {

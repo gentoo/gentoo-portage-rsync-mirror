@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/multi-term
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/multi-term/ChangeLog,v 1.1 2015/01/10 19:33:22 ulm Exp $
+
+*multi-term-1.2 (10 Jan 2015)
+
+  10 Jan 2015; Ulrich Müller <ulm@gentoo.org> +multi-term-1.2.ebuild,
+  +files/50multi-term-gentoo.el, +metadata.xml:
+  Initial import, bug 532884. Ebuild contributed by Michael Orlitzky
+  <mjo@gentoo.org>.
+
