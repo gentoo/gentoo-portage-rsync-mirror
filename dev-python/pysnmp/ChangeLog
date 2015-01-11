@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pysnmp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.63 2014/08/10 21:18:07 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.64 2015/01/11 06:36:10 idella4 Exp $
+
+  11 Jan 2015; Ian Delaney <idella4@gentoo.org> -pysnmp-4.1.16a.ebuild,
+  -pysnmp-4.1.16c.ebuild, -pysnmp-4.2.1.ebuild, -pysnmp-4.2.2.ebuild:
+  rm old, -3.4.4 still has revdeps
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pysnmp-3.4.4.ebuild:
   QA: drop trailing '.' from DESCRIPTION
