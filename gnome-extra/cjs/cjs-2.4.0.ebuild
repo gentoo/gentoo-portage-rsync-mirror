@@ -1,13 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/cjs-2.2.1.ebuild,v 1.3 2014/07/23 15:17:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/cjs-2.4.0.ebuild,v 1.1 2015/01/11 15:58:34 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit autotools gnome2 pax-utils python-any-r1 virtualx
+inherit autotools eutils gnome2 pax-utils virtualx
 
 DESCRIPTION="Linux Mint's fork of gjs for Cinnamon"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
@@ -15,30 +13,32 @@ SRC_URI="https://github.com/linuxmint/cjs/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT || ( MPL-1.1 LGPL-2+ GPL-2+ )"
 SLOT="0"
-IUSE="examples test"
-KEYWORDS="amd64 x86"
+IUSE="+cairo examples gtk test"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	>=dev-lang/spidermonkey-1.8.5:0
-	dev-libs/dbus-glib
-	>=dev-libs/glib-2.32:2
-	>=dev-libs/gobject-introspection-1.32
-	sys-libs/ncurses
+	dev-lang/spidermonkey:24
+	>=dev-libs/glib-2.36:2
+	>=dev-libs/gobject-introspection-1.39.3
 	sys-libs/readline:0
-	x11-libs/cairo[glib]
 	virtual/libffi
+	cairo? ( x11-libs/cairo[X,glib] )
+	gtk? ( x11-libs/gtk+:3 )
 "
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
+	gnome-base/gnome-common
 	sys-devel/gettext
 	virtual/pkgconfig
 	test? ( sys-apps/dbus )
 "
 
 # Large amount of tests are broken even in master.
-RESTRICT="test"
+#RESTRICT="test"
 
 src_prepare() {
+	# Disable broken unittests
+	epatch "${FILESDIR}"/${PN}-2.4.0-disable-unittest-*.patch
+
 	epatch_user
 	eautoreconf
 	gnome2_src_prepare
@@ -51,7 +51,9 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-systemtap \
 		--disable-dtrace \
-		--disable-coverage
+		--disable-coverage \
+		$(use_with cairo) \
+		$(use_with gtk)
 }
 
 src_test() {
