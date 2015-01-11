@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_wsgi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.52 2014/12/22 16:47:41 djc Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.54 2015/01/11 08:29:17 djc Exp $
+
+*mod_wsgi-4.4.5 (11 Jan 2015)
+
+  11 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> +mod_wsgi-4.4.5.ebuild:
+  Version bump mod_wsgi to 4.4.5
+
+  11 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Update remote-id to look at PyPI
 
 *mod_wsgi-4.4.2 (22 Dec 2014)
 

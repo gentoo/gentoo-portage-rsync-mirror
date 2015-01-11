@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chameleon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.28 2014/12/28 10:06:31 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.29 2015/01/11 08:13:30 idella4 Exp $
+
+*chameleon-2.19 (11 Jan 2015)
+
+  11 Jan 2015; Ian Delaney <idella4@gentoo.org> +chameleon-2.19.ebuild:
+  bump
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> chameleon-2.16.ebuild:
   Stable for x86, wrt bug #531866

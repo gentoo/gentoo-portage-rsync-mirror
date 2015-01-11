@@ -6,6 +6,6 @@
 		<name>Dirkjan Ochtman</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="google-code">modwsgi</remote-id>
+		<remote-id type="pypi">mod_wsgi</remote-id>
 	</upstream>
 </pkgmetadata>
