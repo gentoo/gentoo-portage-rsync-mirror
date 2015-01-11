@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.300 2015/01/11 11:13:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.301 2015/01/11 15:20:35 nativemad Exp $
+
+  11 Jan 2015; Andreas Schuerch <nativemad@gentoo.org> file-5.22.ebuild:
+  x86 stable, bug 532768
 
   11 Jan 2015; Jeroen Roovers <jer@gentoo.org> file-5.22.ebuild:
   Stable for HPPA (bug #532768).

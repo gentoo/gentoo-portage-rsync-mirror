@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/toluapp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/toluapp/ChangeLog,v 1.3 2014/08/10 20:42:23 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/toluapp/ChangeLog,v 1.4 2015/01/11 15:25:46 mrueg Exp $
+
+  11 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -toluapp-1.0.92.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> toluapp-1.0.92.ebuild,
   toluapp-1.0.93.ebuild:
