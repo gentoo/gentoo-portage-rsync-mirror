@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/byobu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.91 2014/09/30 15:45:19 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.92 2015/01/10 23:02:23 radhermit Exp $
+
+*byobu-5.88 (10 Jan 2015)
+
+  10 Jan 2015; Tim Harder <radhermit@gentoo.org> +byobu-5.88.ebuild:
+  Version bump.
 
   30 Sep 2014; Tim Harder <radhermit@gentoo.org> -byobu-5.73.ebuild,
   -byobu-5.74.ebuild, -byobu-5.76.ebuild, -byobu-5.77.ebuild,
