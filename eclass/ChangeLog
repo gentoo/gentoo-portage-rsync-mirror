@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1503 2015/01/09 18:26:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1504 2015/01/11 20:40:24 maksbotan Exp $
+
+  11 Jan 2015; Maxim Koltsov <maksbotan@gentoo.org> leechcraft.eclass:
+  Add fallback https EGIT_REPO_URI
 
   09 Jan 2015; Manuel Rüger <mrueg@gentoo.org> kde5-functions.eclass:
   Sync kde5-functions.eclass with overlay.

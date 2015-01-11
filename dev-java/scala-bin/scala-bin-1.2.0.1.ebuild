@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.8 2010/12/15 07:07:47 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.9 2015/01/11 20:42:54 monsieurp Exp $
 
 inherit java-pkg-2
 
@@ -20,13 +20,13 @@ src_compile() {
 
 	jars=/usr/share/${PN}/lib
 
-	sed -e "s§RUNTIME_SOURCES=.*§RUNTIME_SOURCES=\"/usr/share/${PF}/src\";§" \
-		-e "s§RUNTIME_CLASSES=.*§RUNTIME_CLASSES=\"${jars}/scala.jar\";§" \
-		-e "s§TOOLS_CLASSES=.*§TOOLS_CLASSES=\"${jars}/tools.jar\";§" \
-		-e "s§FJBG_CLASSES=.*§FJBG_CLASSES=\"${jars}/fjbg.jar\";§" \
-		-e "s§MSIL_CLASSES=.*§MSIL_CLASSES=\"${jars}/msil.jar\";§" \
-		< bin/.scala_wrapper \
-		> scala_wrapper
+sed -e "s#RUNTIME_SOURCES=.*#RUNTIME_SOURCES=\"/usr/share/${PF}/src\";#;
+				s#RUNTIME_CLASSES=.*#RUNTIME_CLASSES=\"${jars}/scala.jar\";#;
+				s#TOOLS_CLASSES=.*#TOOLS_CLASSES=\"${jars}/tools.jar\";#;
+				s#FJBG_CLASSES=.*#FJBG_CLASSES=\"${jars}/fjbg.jar\";#;
+				s#MSIL_CLASSES=.*#MSIL_CLASSES=\"${jars}/msil.jar\";#" \
+	< bin/.scala_wrapper \
+	> scala_wrapper
 
 :; }
 
@@ -45,11 +45,11 @@ src_install() {
 	java-pkg_dojar lib/*.jar
 
 	java-pkg_dohtml -r doc/api
-	cp -r examples ${D}/usr/share/doc/${PF}
+	cp -r examples "${D}"/usr/share/doc/${PF}
 	dodoc doc/*.pdf
 	dodoc README VERSION
 
 	dodir /usr/share/${PF}
-	cp -r src support ${D}/usr/share/${PF}
+	cp -r src support "${D}"/usr/share/${PF}
 
 }

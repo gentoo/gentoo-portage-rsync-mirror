@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/scala-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.11 2010/12/15 07:07:47 ali_bush Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.12 2015/01/11 20:42:54 monsieurp Exp $
+
+  11 Jan 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-1.2.0.1.ebuild:
+  Corrected sed warnings. Also corrected a bunch of QA warnings. Fix #533856.
 
   15 Dec 2010; Alistair Bush <ali_bush@gentoo.org> scala-bin-1.2.0.1.ebuild:
   Block dev-lang/scala
