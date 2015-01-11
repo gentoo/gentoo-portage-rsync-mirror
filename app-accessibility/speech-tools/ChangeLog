@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.86 2015/01/07 10:06:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.87 2015/01/11 19:36:13 nimiux Exp $
+
+  11 Jan 2015; Chema Alonso <nimiux@gentoo.org> speech-tools-2.1-r2.ebuild:
+  Stable for amd64 wrt bug #510600
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org>
   +files/speech-tools-2.1-underlinking.patch,
