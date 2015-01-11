@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.109 2015/01/09 13:46:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.110 2015/01/11 21:10:36 maekke Exp $
+
+  11 Jan 2015; Markus Meier <maekke@gentoo.org> devtodo-0.1.20-r3.ebuild:
+  arm stable, bug #534870
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> devtodo-0.1.20-r3.ebuild:
   Stable for amd64, wrt bug #534870

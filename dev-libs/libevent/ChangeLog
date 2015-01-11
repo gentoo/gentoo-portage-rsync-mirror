@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.288 2015/01/09 12:03:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.289 2015/01/11 21:07:09 maekke Exp $
+
+  11 Jan 2015; Markus Meier <maekke@gentoo.org> libevent-2.0.22.ebuild:
+  arm stable, bug #535774
 
   09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> libevent-2.0.22.ebuild:
   Stable on alpha, bug 535774

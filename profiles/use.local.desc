@@ -5435,6 +5435,7 @@ net-libs/ptlib:tts - Enable Text-To-Speech server support
 net-libs/ptlib:video - Enable video support
 net-libs/ptlib:vxml - Enable VoiceXML support
 net-libs/ptlib:wav - Enable WAVFILE support
+net-libs/qxmpp:opus - Enable Opus codec support via media-libs/opus
 net-libs/qxmpp:vpx - Enable VP8 codec support via media-libs/libvpx
 net-libs/rabbitmq-c:tools - Builds cli tools to interact with brokers
 net-libs/rest:gnome - Extract proxy information using net-libs/libsoup-gnome

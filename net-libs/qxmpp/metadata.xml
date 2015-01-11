@@ -7,6 +7,7 @@
 	<changelog>http://code.google.com/p/qxmpp/source/browse/CHANGELOG</changelog>
 </upstream>
 <use>
+	<flag name="opus">Enable Opus codec support via <pkg>media-libs/opus</pkg></flag>
 	<flag name="vpx">Enable VP8 codec support via <pkg>media-libs/libvpx</pkg></flag>
 </use>
 </pkgmetadata>

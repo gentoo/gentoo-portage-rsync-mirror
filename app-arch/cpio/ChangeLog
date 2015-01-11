@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.134 2015/01/09 16:34:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.135 2015/01/11 21:02:23 maekke Exp $
+
+  11 Jan 2015; Markus Meier <maekke@gentoo.org> cpio-2.11-r3.ebuild:
+  arm stable, bug #530512
 
   09 Jan 2015; Jeroen Roovers <jer@gentoo.org> cpio-2.11-r3.ebuild:
   Stable for HPPA (bug #530512).

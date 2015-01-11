@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/qxmpp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.43 2014/08/10 20:50:11 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.44 2015/01/11 21:28:50 maksbotan Exp $
+
+*qxmpp-0.8.2 (11 Jan 2015)
+
+  11 Jan 2015; Maxim Koltsov <maksbotan@gentoo.org> +qxmpp-0.8.2.ebuild,
+  metadata.xml:
+  Bump to 0.8.2, change SRC_URI and HOMEPAGE, add opus use flag.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> qxmpp-0.7.4.ebuild,
   qxmpp-0.7.5.ebuild, qxmpp-0.7.6-r1.ebuild, qxmpp-0.7.6.ebuild,

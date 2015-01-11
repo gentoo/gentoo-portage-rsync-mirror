@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/unionfs-fuse
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.9 2013/02/21 03:59:06 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.10 2015/01/11 21:01:52 sping Exp $
+
+*unionfs-fuse-9999 (11 Jan 2015)
+
+  11 Jan 2015; Sebastian Pipping <sping@gentoo.org> +unionfs-fuse-9999.ebuild:
+  Add live ebuild
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> unionfs-fuse-0.26.ebuild:
   Fix for prefix and add ~x86-linux keyword.

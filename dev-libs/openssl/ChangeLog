@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.619 2015/01/09 12:47:55 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.621 2015/01/11 21:13:07 maekke Exp $
+
+  11 Jan 2015; Markus Meier <maekke@gentoo.org> openssl-1.0.1k.ebuild:
+  arm stable, bug #536042
+
+  11 Jan 2015; Markus Meier <maekke@gentoo.org> openssl-0.9.8z_p4.ebuild:
+  arm stable, bug #536042
 
   09 Jan 2015; Andreas Schuerch <nativemad@gentoo.org>
   openssl-0.9.8z_p4.ebuild, openssl-1.0.1k.ebuild:

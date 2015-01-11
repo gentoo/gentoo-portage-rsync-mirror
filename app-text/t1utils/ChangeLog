@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.71 2014/03/09 12:13:04 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.72 2015/01/11 21:15:14 maekke Exp $
+
+  11 Jan 2015; Markus Meier <maekke@gentoo.org> t1utils-1.38.ebuild:
+  arm stable, bug #534912
 
 *t1utils-1.38 (09 Mar 2014)
 
