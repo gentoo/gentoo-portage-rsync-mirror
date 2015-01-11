@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/simgear
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.66 2014/08/12 22:43:01 reavertm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.67 2015/01/11 13:52:20 reavertm Exp $
+
+*simgear-3.2.0 (11 Jan 2015)
+
+  11 Jan 2015; Maciej Mrozowski <reavertm@gentoo.org> +simgear-3.2.0.ebuild:
+  Version bump.
 
   12 Aug 2014; Maciej Mrozowski <reavertm@gentoo.org> -simgear-2.10.0.ebuild,
   -simgear-2.12.1.ebuild, -simgear-2.8.0-r1.ebuild:
