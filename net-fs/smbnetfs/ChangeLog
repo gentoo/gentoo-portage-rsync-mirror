@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/smbnetfs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.8 2013/12/24 07:51:33 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.9 2015/01/11 18:25:28 slyfox Exp $
+
+*smbnetfs-0.6.0 (11 Jan 2015)
+
+  11 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> +smbnetfs-0.6.0.ebuild,
+  -smbnetfs-0.5.3a.ebuild:
+  Version bump.
 
   24 Dec 2013; Sergei Trofimovich <slyfox@gentoo.org> -files/smbnetfs-0.5.3-0001
   -configure.in-allow-user-to-explicitly-enable-disable.patch,
