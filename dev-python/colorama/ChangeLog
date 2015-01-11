@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/colorama
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.14 2015/01/09 13:44:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.15 2015/01/11 08:50:37 idella4 Exp $
+
+*colorama-0.3.3 (11 Jan 2015)
+
+  11 Jan 2015; Ian Delaney <idella4@gentoo.org> +colorama-0.3.3.ebuild,
+  -colorama-0.2.4-r1.ebuild, -colorama-0.2.7.ebuild, -colorama-0.3.1.ebuild:
+  bump, rm old
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> colorama-0.3.2.ebuild:
   Stable for amd64, wrt bug #535318
