@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.217 2015/01/01 20:53:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.218 2015/01/11 20:05:43 grobian Exp $
+
+  11 Jan 2015; Fabian Groffen <grobian@gentoo.org>
+  +files/clang-3.4-darwin_old_linker.patch, llvm-3.4.2.ebuild:
+  Add workaround for our older (Prefix/Darwin) toolchain
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> llvm-3.5.0.ebuild:
   arm stable, bug #530882

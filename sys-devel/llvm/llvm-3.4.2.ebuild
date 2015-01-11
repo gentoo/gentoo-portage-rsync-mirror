@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.5 2014/11/26 16:13:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.6 2015/01/11 20:05:43 grobian Exp $
 
 EAPI=5
 
@@ -180,6 +180,7 @@ src_prepare() {
 
 		epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
 		epatch "${FILESDIR}"/clang-3.4-darwin_build_fix.patch
+		epatch "${FILESDIR}"/clang-3.4-darwin_old_linker.patch
 		epatch "${FILESDIR}"/clang-3.4-darwin_prefix-include-paths.patch
 		eprefixify tools/clang/lib/Frontend/InitHeaderSearch.cpp
 	fi
