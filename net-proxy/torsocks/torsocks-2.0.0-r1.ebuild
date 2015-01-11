@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-2.0.0.ebuild,v 1.2 2015/01/04 13:26:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/torsocks-2.0.0-r1.ebuild,v 1.1 2015/01/11 17:08:50 blueness Exp $
 
 EAPI=5
 
@@ -29,6 +29,9 @@ src_prepare() {
 	# Disable tests requiring network access.
 	sed -i -e '/^\.\/test_dns$/d' tests/test_list || \
 		die "failed to disable network tests"
+
+	# Bug #533862
+	epatch "${FILESDIR}"/avoid-pie-static.patch
 
 	eautoreconf
 }

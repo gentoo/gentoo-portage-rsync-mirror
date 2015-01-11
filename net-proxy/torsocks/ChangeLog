@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/torsocks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.17 2015/01/04 13:26:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.18 2015/01/11 17:08:50 blueness Exp $
+
+*torsocks-2.0.0-r1 (11 Jan 2015)
+
+  11 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/avoid-pie-static.patch, +torsocks-2.0.0-r1.ebuild,
+  -torsocks-2.0.0.ebuild:
+  Avoid config test with -pie -static, bug #533862
 
   04 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
   -torsocks-2.0.0_rc2.ebuild, -torsocks-2.0.0_rc3.ebuild, torsocks-2.0.0.ebuild:
