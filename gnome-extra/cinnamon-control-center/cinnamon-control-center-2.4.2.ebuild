@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.2.10.ebuild,v 1.5 2014/11/03 16:11:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.4.2.ebuild,v 1.1 2015/01/11 18:35:29 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon-control-center/archive/${PV}.tar.
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+colord +cups input_devices_wacom socialweb"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 # False positives caused by nested configure scripts
 QA_CONFIGURE_OPTIONS=".*"
@@ -34,8 +34,8 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	>=media-libs/libcanberra-0.13[gtk3]
 	>=media-sound/pulseaudio-1.1[glib]
-	net-misc/modemmanager
-	>=net-misc/networkmanager-0.8.9[modemmanager]
+	>=net-misc/modemmanager-0.7
+	>=net-misc/networkmanager-0.9.8[modemmanager]
 	>=sys-auth/polkit-0.103
 	|| ( >=sys-power/upower-0.9.1:= sys-power/upower-pm-utils )
 	>=x11-libs/gdk-pixbuf-2.23.0:2
@@ -84,9 +84,9 @@ DEPEND="${COMMON_DEPEND}
 src_prepare() {
 	# make some panels optional
 	epatch "${FILESDIR}"/${PN}-2.2.5-optional.patch
-	# fix wrong nm-applet dependency
-	epatch "${FILESDIR}"/${PN}-2.2.5-nm-applet.patch
+
 	epatch_user
+
 	eautoreconf
 	gnome2_src_prepare
 }
