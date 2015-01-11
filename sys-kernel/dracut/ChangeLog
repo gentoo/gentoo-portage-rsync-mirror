@@ -1,6 +1,44 @@
 # ChangeLog for sys-kernel/dracut
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.182 2014/12/19 17:31:07 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.185 2015/01/11 14:30:10 aidecoe Exp $
+
+  11 Jan 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-040.ebuild,
+  -dracut-040-r1.ebuild:
+  Remove old revisions of 040.
+
+  11 Jan 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-036-r4.ebuild,
+  -dracut-037-r3.ebuild, -dracut-038-r2.ebuild,
+  -files/036-0001-NEWS-update-for-version-036.patch,
+  -files/037-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/038-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/036-0002-dracut-functions.sh-support-for-altern.patch,
+  -files/037-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/038-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/037-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  -files/038-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  -files/036-0003-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/037-0004-Install-dracut-install-into-libexec-di.patch,
+  -files/038-0004-Install-dracut-install-into-libexec-di.patch,
+  -files/036-0004-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  -files/036-0005-Install-dracut-install-into-libexec-di.patch,
+  -files/037-0005-modsign-do-not-hardcode-path-to-keyctl.patch,
+  -files/038-0005-modsign-do-not-hardcode-path-to-keyctl.patch,
+  -files/037-0006-98systemd-fixup-rootfs-generator-insta.patch,
+  -files/036-0006-dracut.sh-Fix-variable-name-typo.patch,
+  -files/036-0007-Added-missing-quotes.patch,
+  -files/037-0007-udev-rules-add-uaccess-rules.patch,
+  -files/036-0008-Add-legacy-flag-l-to-lz4-and-update-ma.patch,
+  -files/038-0008-dracut-functions.sh-fix-inst-functions.patch:
+  Remove old versions.
+
+*dracut-040-r3 (11 Jan 2015)
+
+  11 Jan 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-040-r3.ebuild,
+  +files/040-0007-Take-into-account-lib64-dirs-when-dete.patch:
+  Fix lsinitrd failure to detect version and modules - bug #533112.
+
+  Thanks to poncho <poncho@spahan.ch> and Jeroen Roovers <jer@gentoo.org> for
+  patch.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> dracut-034-r4.ebuild,
   dracut-036-r4.ebuild, dracut-037-r3.ebuild, dracut-038-r2.ebuild,

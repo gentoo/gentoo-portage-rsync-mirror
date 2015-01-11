@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r3.ebuild,v 1.2 2015/01/10 21:53:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r3.ebuild,v 1.3 2015/01/11 14:05:48 nativemad Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
 DESCRIPTION="X.Org X servers"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 
 SRC_URI="${SRC_URI} mirror://gentoo/${PN}-1.12-cve-2014-8091..8103.patches.tar.xz"
 

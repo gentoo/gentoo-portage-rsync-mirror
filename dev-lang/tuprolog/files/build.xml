@@ -38,6 +38,11 @@
 	<!-- build the jar file -->
 	<target depends="compile" name="jar">
 		<jar basedir="${build.dir}" jarfile="${dist.dir}/${jarfile}"/>
+		<jar basedir="${build.dir}" jarfile="${dist.dir}/2p.jar">
+			<manifest>
+				<attribute name="Main-Class" value="alice.tuprologx.ide.GUILauncher"/>
+			</manifest>
+		</jar>
 	</target>
 
 	<!-- generate javadocs -->

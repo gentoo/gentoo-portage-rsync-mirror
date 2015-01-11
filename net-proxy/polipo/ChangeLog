@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.43 2015/01/09 00:22:51 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.44 2015/01/11 14:12:43 nativemad Exp $
+
+  11 Jan 2015; Andreas Schuerch <nativemad@gentoo.org> polipo-1.1.1.ebuild:
+  x86 stable, see bug 385307
 
   09 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> -polipo-1.0.4.1-r2.ebuild,
   -files/polipo-1.0.4.1-dns-timeout-fix.patch:
