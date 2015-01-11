@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/apitrace
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.24 2014/12/07 19:26:06 mattst88 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.25 2015/01/11 19:14:30 radhermit Exp $
+
+*apitrace-6.0 (11 Jan 2015)
+
+  11 Jan 2015; Tim Harder <radhermit@gentoo.org> +apitrace-6.0.ebuild,
+  +files/apitrace-6.0-disable-multiarch.patch:
+  Version bump.
 
 *apitrace-5.0 (07 Dec 2014)
 
