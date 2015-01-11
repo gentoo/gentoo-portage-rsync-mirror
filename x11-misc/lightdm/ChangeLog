@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.102 2014/12/22 10:21:55 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.103 2015/01/11 11:54:54 hwoarang Exp $
+
+  11 Jan 2015; Markos Chandras <hwoarang@gentoo.org> lightdm-1.13.0.ebuild:
+  Amend fix from bug #524792 to lightdm-greeter as well
 
   22 Dec 2014; Markos Chandras <hwoarang@gentoo.org> lightdm-1.13.0.ebuild:
   Completely inherit our system-local-login configuration. Bug #524792 by

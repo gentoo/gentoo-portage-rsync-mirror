@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/bwping
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.19 2014/12/20 12:51:26 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.20 2015/01/11 11:42:41 hwoarang Exp $
+
+  11 Jan 2015; Markos Chandras <hwoarang@gentoo.org> bwping-1.7-r1.ebuild,
+  files/bwping-1.7-buildsystem-configurable-ipv6.patch:
+  Revert latest commit for bug #530420. We shouldn't care if we can't support
+  the ipv6 case. We only need know whether we can build the support for it. So
+  replace RUN with LINK. This may also fix bug #536184
 
   20 Dec 2014; Markos Chandras <hwoarang@gentoo.org> bwping-1.7-r1.ebuild:
   Make sure IPV6 is enabled in the kernel if the ipv6 useflag is set. Bug

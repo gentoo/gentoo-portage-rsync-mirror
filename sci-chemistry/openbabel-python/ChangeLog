@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/openbabel-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.18 2015/01/04 13:44:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.19 2015/01/11 11:54:19 jer Exp $
+
+  11 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  -files/openbabel-python-2.3.0-py3_iterator.patch,
+  -files/openbabel-python-2.3.0-swig.patch,
+  -files/openbabel-python-2.3.0-system_openbabel.patch,
+  -files/openbabel-python-2.3.0-wrap_OBInternalCoord.patch,
+  -files/openbabel-python-2.3.1-system_openbabel.patch:
+  Old.
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> -openbabel-python-2.3.0.ebuild,
   -openbabel-python-2.3.1.ebuild, openbabel-python-2.3.2.ebuild:

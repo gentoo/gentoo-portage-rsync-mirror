@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pg_top
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.11 2014/12/28 15:07:21 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.12 2015/01/11 11:36:17 jer Exp $
+
+  11 Jan 2015; Jeroen Roovers <jer@gentoo.org> files/pg_top-3.7.0.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #536164 by Reuben Martin).
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> pg_top-3.6.2-r1.ebuild,
   pg_top-3.7.0.ebuild:
