@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.10 2015/01/04 13:44:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.11 2015/01/11 14:36:40 jlec Exp $
 
 EAPI=5
 
@@ -31,6 +31,7 @@ S="${WORKDIR}"/openbabel-${PV}
 PATCHES=(
 	"${FILESDIR}"/${P}-testpybel.patch
 	"${FILESDIR}"/${P}-bindings_only.patch
+	"${FILESDIR}"/${P}-swig-3.0.3.patch
 	)
 
 src_prepare() {

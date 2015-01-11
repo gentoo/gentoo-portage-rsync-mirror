@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.22.ebuild,v 1.2 2015/01/09 15:30:19 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.22.ebuild,v 1.3 2015/01/11 14:59:33 nativemad Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ IUSE="+acl editor external-filters +fast-redirects +force graceful-termination
 +image-blocking ipv6 lfs png-images selinux +stats +threads toggle
 whitelists +zlib"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 
 DEPEND="dev-libs/libpcre
