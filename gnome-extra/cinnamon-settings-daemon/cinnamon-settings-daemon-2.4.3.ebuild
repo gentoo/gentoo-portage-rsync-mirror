@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.4.3.ebuild,v 1.1 2015/01/11 17:28:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-settings-daemon/cinnamon-settings-daemon-2.4.3.ebuild,v 1.2 2015/01/11 17:33:14 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -76,7 +76,7 @@ plugins/wacom/csd-wacom-device.c
 plugins/wacom/csd-wacom-osd-window.c
 plugins/wacom/org.cinnamon.settings-daemon.plugins.wacom.policy.in.in
 EOF
-	
+
 	epatch_user
 
 	eautoreconf
