@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/asymptote
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.110 2014/06/07 07:46:21 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.111 2015/01/11 16:27:22 grozin Exp $
+
+  11 Jan 2015; Andrey Grozin <grozin@gentoo.org> asymptote-2.32.ebuild,
+  +files/asymptote-2.32-ghostscript-9.15.patch:
+  Fixing bug #528632
 
   07 Jun 2014; Andrey Grozin <grozin@gentoo.org> asymptote-2.32.ebuild:
   Fixed #512590

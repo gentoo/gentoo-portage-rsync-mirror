@@ -1,12 +1,12 @@
 # ChangeLog for games-engines/love
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.18 2015/01/07 09:21:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.19 2015/01/11 16:22:41 tupone Exp $
 
   07 Jan 2015; Tupone Alfredo <tupone@gentoo.org> love-0.8.0.ebuild,
   +files/love-0.8.0-freetype2.patch:
   Fix build with freetype2 - EAPI 5
 
-  06 Jul 2014; MichaÅ GÃ³rny <mgorny@gentoo.org> love-0.7.2-r1.ebuild,
+  06 Jul 2014; Michał Górny <mgorny@gentoo.org> love-0.7.2-r1.ebuild,
   love-0.8.0.ebuild, love-9999.ebuild:
   Replace obsolete mirror://bitbucket with the real URI.
 
@@ -19,11 +19,11 @@
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> love-0.7.2-r1.ebuild:
   Stable for amd64, wrt bug #475630
 
-  21 Mar 2013; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  21 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   love-9999.ebuild:
   Copy autotools files to build directory before eautoreconf, bug #462588.
 
-  21 Mar 2013; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  21 Mar 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   love-0.7.2-r1.ebuild, love-0.8.0.ebuild:
   Add dependency on deprecated lua features, bug #462586.
 
@@ -46,7 +46,7 @@
 
 *love-0.7.2-r1 (21 May 2012)
 
-  21 May 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  21 May 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +love-0.7.2-r1.ebuild, -love-0.7.2.ebuild, love-0.8.0.ebuild,
   love-9999.ebuild:
   Allow slotting as suggested by Tobias Leupold in bug #416703. Implementation
@@ -54,26 +54,26 @@
 
 *love-0.8.0 (20 Apr 2012)
 
-  20 Apr 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  20 Apr 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +love-0.8.0.ebuild, love-9999.ebuild:
   Version bump, bug #412717.
 
-  17 Apr 2012; MichaÅ GÃ³rny <mgorny@gentoo.org> love-0.7.2.ebuild,
+  17 Apr 2012; Michał Górny <mgorny@gentoo.org> love-0.7.2.ebuild,
   love-9999.ebuild:
   Use mirror://bitbucket.
 
-  08 Mar 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  08 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   love-0.7.2.ebuild, love-9999.ebuild:
   Set correct dependencies, bug #407101.
 
 *love-9999 (05 Mar 2012)
 
-  05 Mar 2012; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  05 Mar 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +love-9999.ebuild:
   Add live ebuild, bug #406861.
 
 *love-0.7.2 (05 Nov 2011)
 
-  05 Nov 2011; ChÃ­-Thanh Christopher Nguyá»n <chithanh@gentoo.org>
+  05 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +love-0.7.2.ebuild:
   Initial commit, taken from the gamerlay overlay.

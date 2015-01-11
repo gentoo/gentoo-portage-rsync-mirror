@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/itext
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.102 2014/08/10 20:15:26 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.103 2015/01/11 16:11:57 ercpe Exp $
+
+*itext-5.5.4 (11 Jan 2015)
+
+  11 Jan 2015; Johann Schmitz <ercpe@gentoo.org> +itext-5.5.4.ebuild,
+  -files/2.0.8-site_xml.patch, -itext-5.2.0.ebuild:
+  Version bump of dev-java/itext (bug #475552). Dropped old, broken :5 version.
+  Removed unused patch file.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> itext-2.1.5-r2.ebuild,
   itext-5.2.0.ebuild:

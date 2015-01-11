@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/cjs-2.4.0.ebuild,v 1.1 2015/01/11 15:58:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cjs/cjs-2.4.1.ebuild,v 1.1 2015/01/11 16:06:39 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="
 	dev-lang/spidermonkey:24
 	>=dev-libs/glib-2.36:2
-	>=dev-libs/gobject-introspection-1.39.3
+	>=dev-libs/gobject-introspection-1.38
 	sys-libs/readline:0
 	virtual/libffi
 	cairo? ( x11-libs/cairo[X,glib] )
@@ -31,9 +31,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( sys-apps/dbus )
 "
-
-# Large amount of tests are broken even in master.
-#RESTRICT="test"
+# Cinnamon 2.2 does not work with this release.
+RDEPEND="${RDEPEND}
+	!<gnome-extra/cinnamon-2.4
+"
 
 src_prepare() {
 	# Disable broken unittests

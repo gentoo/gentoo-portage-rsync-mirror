@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.32.ebuild,v 1.2 2014/06/07 07:46:21 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.32.ebuild,v 1.3 2015/01/11 16:27:22 grozin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -52,6 +52,9 @@ src_prepare() {
 
 	# Bug #322473
 	epatch "${FILESDIR}/${P}-info.patch"
+
+	# Bug #528632 - fix from https://www.archlinux.org/packages/extra/x86_64/asymptote/
+	epatch "${FILESDIR}/${P}-ghostscript-9.15.patch"
 
 	eautoreconf
 }
