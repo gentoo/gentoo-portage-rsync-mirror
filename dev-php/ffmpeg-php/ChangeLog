@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/ffmpeg-php
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.14 2015/01/04 08:10:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ChangeLog,v 1.15 2015/01/11 03:16:55 grknight Exp $
+
+  11 Jan 2015; Brian Evans <grknight@gentoo.org> -ffmpeg-php-0.6.0-r2.ebuild,
+  -ffmpeg-php-0.6.0-r3.ebuild:
+  Drop old
 
   04 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ffmpeg-php-0.6.0-r3.ebuild:
   Stable for x86, wrt bug #534556
