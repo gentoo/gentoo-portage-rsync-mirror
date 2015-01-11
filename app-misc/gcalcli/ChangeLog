@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gcalcli
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/ChangeLog,v 1.6 2014/03/31 20:30:47 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/ChangeLog,v 1.7 2015/01/11 05:41:32 robbat2 Exp $
+
+*gcalcli-3.2 (11 Jan 2015)
+
+  11 Jan 2015; Robin H. Johnson <robbat2@gentoo.org> -gcalcli-2.4.2.ebuild,
+  +gcalcli-3.2.ebuild:
+  Version bump; also remove the old version as GCal no longer offers the old
+  API it uses, making it useless.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> gcalcli-2.4.2.ebuild:
   Add support for the new PyPy slotting.
