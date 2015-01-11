@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.39 2015/01/09 22:53:15 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.40 2015/01/11 06:03:13 floppym Exp $
+
+  11 Jan 2015; Mike Gilbert <floppym@gentoo.org> netifrc-0.3.0.ebuild,
+  netifrc-9999.ebuild:
+  Fix sed of systemd unit.
 
   09 Jan 2015; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
   netifrc-0.3.0.ebuild:

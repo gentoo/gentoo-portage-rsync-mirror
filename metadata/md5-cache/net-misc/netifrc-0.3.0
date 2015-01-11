@@ -9,4 +9,4 @@ RDEPEND=sys-apps/gentoo-functions
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~robbat2/distfiles/netifrc-0.3.0.tar.bz2
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=7a7c12d0f898ba65bfdebc819478c90d
+_md5_=20c6d43df948af121c6a4908aa711747
