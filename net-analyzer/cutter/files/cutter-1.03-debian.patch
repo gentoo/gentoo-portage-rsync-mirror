@@ -1,5 +1,5 @@
---- cutter-1.03.orig/Makefile
-+++ cutter-1.03/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -1,5 +1,5 @@
  cutter: cutter.c
 -	cc cutter.c -o cutter
@@ -7,8 +7,8 @@
  
  clean:
  	rm -f cutter.o cutter
---- cutter-1.03.orig/cutter.c
-+++ cutter-1.03/cutter.c
+--- a/cutter.c
++++ b/cutter.c
 @@ -57,6 +57,7 @@
  #include <arpa/inet.h>
  #include <net/if.h>
@@ -53,149 +53,8 @@
  	in_addr_t src1n, src2n, dst1n, dst2n;
  	char buff[1024], *p;
  	int found = 0;
---- cutter-1.03.orig/debian/compat
-+++ cutter-1.03/debian/compat
-@@ -0,0 +1 @@
-+4
---- cutter-1.03.orig/debian/dirs
-+++ cutter-1.03/debian/dirs
-@@ -0,0 +1 @@
-+usr/sbin
---- cutter-1.03.orig/debian/rules
-+++ cutter-1.03/debian/rules
-@@ -0,0 +1,79 @@
-+#!/usr/bin/make -f
-+# Sample debian/rules that uses debhelper.
-+# GNU copyright 1997 to 1999 by Joey Hess.
-+
-+# Uncomment this to turn on verbose mode.
-+#export DH_VERBOSE=1
-+
-+CFLAGS = -Wall -g
-+
-+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-+	CFLAGS += -O0
-+else
-+	CFLAGS += -O2
-+endif
-+ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
-+	INSTALL_PROGRAM += -s
-+endif
-+
-+configure: configure-stamp
-+configure-stamp:
-+	dh_testdir
-+	# Add here commands to configure the package.
-+
-+	touch configure-stamp
-+
-+
-+build: build-stamp
-+
-+build-stamp: configure-stamp 
-+	dh_testdir
-+
-+	# Add here commands to compile the package.
-+	$(MAKE) CFLAGS="$(CFLAGS)"
-+
-+	touch build-stamp
-+
-+clean:
-+	dh_testdir
-+	dh_testroot
-+	rm -f build-stamp configure-stamp
-+
-+	# Add here commands to clean up after the build process.
-+	-$(MAKE) clean
-+
-+	dh_clean 
-+
-+install: build
-+	dh_testdir
-+	dh_testroot
-+	dh_clean -k 
-+	dh_installdirs
-+
-+	dh_install cutter usr/sbin	
-+
-+
-+# Build architecture-independent files here.
-+binary-indep: build install
-+# We have nothing to do by default.
-+
-+# Build architecture-dependent files here.
-+binary-arch: build install
-+	dh_testdir
-+	dh_testroot
-+	dh_installchangelogs 
-+	dh_installdocs
-+	dh_installexamples
-+	dh_installman debian/cutter.8
-+	dh_link
-+	dh_strip
-+	dh_compress
-+	dh_fixperms
-+	dh_installdeb
-+	dh_shlibdeps
-+	dh_gencontrol
-+	dh_md5sums
-+	dh_builddeb
-+
-+binary: binary-indep binary-arch
-+.PHONY: build clean binary-indep binary-arch binary install configure
---- cutter-1.03.orig/debian/docs
-+++ cutter-1.03/debian/docs
-@@ -0,0 +1 @@
-+README
---- cutter-1.03.orig/debian/control
-+++ cutter-1.03/debian/control
-@@ -0,0 +1,14 @@
-+Source: cutter
-+Section: net
-+Priority: optional
-+Maintainer: Aurélien GÉRÔME <ag@roxor.cx>
-+Build-Depends: debhelper (>= 4.0.0)
-+Standards-Version: 3.7.2
-+
-+Package: cutter
-+Architecture: any
-+Depends: ${shlibs:Depends}
-+Description: disconnect routed IP connections
-+ Cutter will send packets to both ends of a TCP/IP connection to close
-+ the connection.  It is designed to be used on a Linux router to disconnect
-+ unwanted connections.
---- cutter-1.03.orig/debian/copyright
-+++ cutter-1.03/debian/copyright
-@@ -0,0 +1,27 @@
-+This package was debianized by Blars Blarson <blarson@blars.org> on
-+Sun, 26 Oct 2003 22:03:43 -0800.
-+
-+It was downloaded from http://www.lowth.com/cutter/
-+
-+Copyright Holder: 2003-2005 Chris Lowth <chris@lowth.com>
-+
-+License:
-+
-+   GNU GENERAL PUBLIC LICENSE Version 2, June 1991
-+
-+   This package is free software; you can redistribute it and/or modify
-+   it under the terms of the GNU General Public License as published by
-+   the Free Software Foundation; version 2 dated June, 1991.
-+
-+   This package is distributed in the hope that it will be useful,
-+   but WITHOUT ANY WARRANTY; without even the implied warranty of
-+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-+   GNU General Public License for more details.
-+
-+   You should have received a copy of the GNU General Public License
-+   along with this program; if not, write to the Free Software
-+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
-+   02110-1301  USA
-+
-+On Debian GNU/Linux systems, the complete text of the GNU General
-+Public License can be found in `/usr/share/common-licenses/GPL'.
---- cutter-1.03.orig/debian/cutter.8
-+++ cutter-1.03/debian/cutter.8
+--- a/debian/cutter.8
++++ b/debian/cutter.8
 @@ -0,0 +1,124 @@
 +.\"                                      Hey, EMACS: -*- nroff -*-
 +.TH CUTTER 8 "April, 2005"
@@ -321,42 +180,3 @@
 +Blars Blarson addapted the README and web page written by Chris Lowth
 +into this man page for debian package of cutter.  This man page may be
 +distribuated under the terms of the Gnu GPL version 2.
---- cutter-1.03.orig/debian/changelog
-+++ cutter-1.03/debian/changelog
-@@ -0,0 +1,36 @@
-+cutter (1.03-2) unstable; urgency=low
-+
-+  * Adopt the package (Closes: #316195).
-+  * Update the manpage cutter.8.
-+  * Remove an old manpage manpage.1 left alone in the build system.
-+
-+ -- Aurélien GÉRÔME <ag@roxor.cx>  Sat, 22 Jul 2006 20:00:30 +0200
-+
-+cutter (1.03-1) unstable; urgency=low
-+
-+  * QA Upload
-+  * New upstream release.
-+  * Move cutter.8 to debian/
-+  * Conforms with new standards version
-+  * Update debian/copyright (new FSF Address)
-+  * Pass CFLAGS to Makefile
-+  * Fix Manpage
-+	 + Most changes stripped from a patch  provided by Christian 
-+	   Aichinger, thanks.  (Closes: #372251)
-+
-+ -- Michael Ablassmeier <abi@debian.org>  Wed, 14 Jun 2006 09:37:08 +0200
-+
-+cutter (1.02-2) unstable; urgency=low
-+
-+  * Package is orphaned; set maintainer to QA group.
-+  * Fix parsing of /proc/net/ip_conntrack for 2.6 kernels, unbreaking the
-+    package for those; patch from Christian Aichinger. (Closes: #232058)
-+
-+ -- Steinar H. Gunderson <sesse@debian.org>  Fri,  9 Jun 2006 21:08:56 +0200
-+
-+cutter (1.02-1) unstable; urgency=low
-+
-+  * Initial Release  (Closes: #197698)
-+  * write manpage based on readme and authors web page
-+
-+ -- Blars Blarson <blarson@blars.org>  Sun, 26 Oct 2003 22:03:43 -0800

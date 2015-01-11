@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.41.0-r1.ebuild,v 1.4 2014/11/30 23:06:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.41.1-r1.ebuild,v 1.1 2015/01/11 12:44:58 eva Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="http://download.gna.org/${PN}/$(get_version_component_range 1-2)/${P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug nls opengl"
 
 RDEPEND="
@@ -39,10 +39,13 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# Get textoverlay working with gstreamermm 0.10.11
-	epatch "${FILESDIR}/${P}-textoverlay.patch"
+	epatch "${FILESDIR}"/${PN}-0.41.0-textoverlay.patch
 
 	# Prevent crash when generating keyframes with gstreamermm 0.10.11
-	epatch "${FILESDIR}/${P}-keyframe-generation.patch"
+	epatch "${FILESDIR}"/${PN}-0.41.0-keyframe-generation.patch
+
+	# Fix typing/editing subtitle, bug #536246
+	epatch "${FILESDIR}"/${PN}-0.41.0-subtitle-edition.patch
 
 	gnome2_src_prepare
 }
