@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16282 2015/01/10 21:32:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16283 2015/01/11 13:29:27 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,11 +43,11 @@ net-dialup/gtk-imonc
 =x11-base/xorg-server-1.10*
 =x11-base/xorg-server-1.11*
 =x11-base/xorg-server-1.13*
-=x11-base/xorg-server-1.14*
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Jan 2015)
 # requires obsolete and vulnerable xorg-server, bug #532086
 # removal in 30 days
+<net-misc/tigervnc-1.3.1
 x11-drivers/psb-firmware
 x11-drivers/xf86-input-citron
 x11-drivers/xf86-video-cyrix
