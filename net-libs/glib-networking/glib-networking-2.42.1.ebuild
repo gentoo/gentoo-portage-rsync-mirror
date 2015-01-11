@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.42.1.ebuild,v 1.1 2014/12/23 22:57:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.42.1.ebuild,v 1.2 2015/01/11 12:11:08 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,10 +22,10 @@ RDEPEND="
 	libproxy? ( >=net-libs/libproxy-0.4.11-r1:=[${MULTILIB_USEDEP}] )
 	smartcard? (
 		>=app-crypt/p11-kit-0.18.4[${MULTILIB_USEDEP}]
-		>=net-libs/gnutls-2.12.23-r6:=[pkcs11,${MULTILIB_USEDEP}] )
+		>=net-libs/gnutls-3:=[pkcs11,${MULTILIB_USEDEP}] )
 	ssl? (
 		app-misc/ca-certificates
-		>=net-libs/gnutls-2.12.23-r6:=[${MULTILIB_USEDEP}] )
+		>=net-libs/gnutls-3:=[${MULTILIB_USEDEP}] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0

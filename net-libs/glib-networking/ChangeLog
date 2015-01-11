@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/glib-networking
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.95 2014/12/23 22:57:32 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.96 2015/01/11 12:11:08 eva Exp $
+
+  11 Jan 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  glib-networking-2.42.1.ebuild:
+  Raise dependency on gnutls to >=3, bug #535702.
 
 *glib-networking-2.42.1 (23 Dec 2014)
 
