@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdockapp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.38 2013/02/02 12:11:28 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.39 2015/01/12 12:34:10 voyageur Exp $
+
+*libdockapp-0.6.4 (12 Jan 2015)
+
+  12 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +libdockapp-0.6.4.ebuild:
+  Version bump with new homepage, ebuild cleanup
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup up due #48914
