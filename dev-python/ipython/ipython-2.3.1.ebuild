@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.3.1.ebuild,v 1.2 2014/12/03 01:59:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.3.1.ebuild,v 1.3 2015/01/12 06:14:17 patrick Exp $
 
 EAPI=5
 
@@ -53,6 +53,8 @@ DEPEND="${CDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/mock[${PY2_USEDEP}]
 		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		dev-python/jinja[${PYTHON_USEDEP}]
 	)
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/numpydoc[${PYTHON_USEDEP}]
@@ -65,8 +67,8 @@ DEPEND="${CDEPEND}
 
 REQUIRED_USE="doc? ( matplotlib mongodb octave )"
 
-PATCHES=( ${FILESDIR}/2.1.0-substitute-files.patch
-	${FILESDIR}/2.1.0-disable-tests.patch )
+PATCHES=( "${FILESDIR}/2.1.0-substitute-files.patch"
+	"${FILESDIR}/2.1.0-disable-tests.patch" )
 
 DISTUTILS_IN_SOURCE_BUILD=1
 
