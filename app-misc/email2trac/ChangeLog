@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/email2trac
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/email2trac/ChangeLog,v 1.14 2012/10/01 22:55:38 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/email2trac/ChangeLog,v 1.15 2015/01/12 21:52:41 dlan Exp $
+
+*email2trac-2.8.4 (12 Jan 2015)
+*email2trac-2.6.2-r1 (12 Jan 2015)
+
+  12 Jan 2015; Yixun Lan <dlan@gentoo.org> -email2trac-2.6.0.ebuild,
+  -email2trac-2.6.2.ebuild, +email2trac-2.6.2-r1.ebuild,
+  +email2trac-2.8.4.ebuild, metadata.xml:
+  drop old, bump new, add Lukas Dzunko as maintainer, bug 528192 
 
   01 Oct 2012; Tim Harder <radhermit@gentoo.org> -email2trac-2.4.7.ebuild,
   -email2trac-2.5.0.ebuild:

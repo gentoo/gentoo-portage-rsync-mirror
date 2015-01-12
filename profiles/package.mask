@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16284 2015/01/12 20:00:25 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16285 2015/01/12 21:54:34 dlan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -354,7 +354,6 @@ dev-ml/obrowser
 
 # Patrick Lauer <patrick@gentoo.org> (24 Nov 2014)
 # Missing deps, uninstallable
-app-misc/email2trac
 www-apps/trac-downloads
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (21 Nov 2014)
