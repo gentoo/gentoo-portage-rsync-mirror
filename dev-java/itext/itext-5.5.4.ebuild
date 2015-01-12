@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-5.5.4.ebuild,v 1.1 2015/01/11 16:11:57 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-5.5.4.ebuild,v 1.2 2015/01/12 17:46:51 ercpe Exp $
 
 EAPI="5"
 
@@ -40,4 +40,9 @@ java_prepare() {
 	done
 
 	rm -v *.jar || die
+
+	mkdir target/classes/com/itextpdf/text/pdf/fonts -p || die
+	cp source/com/itextpdf/text/pdf/fonts/*{afm,html,txt} target/classes/com/itextpdf/text/pdf/fonts/ || die
+	mkdir target/classes/com/itextpdf/text/l10n/ -p || die
+	cp -r source/com/itextpdf/text/l10n/* target/classes/com/itextpdf/text/l10n/ || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.103 2015/01/11 16:11:57 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.104 2015/01/12 17:46:51 ercpe Exp $
+
+  12 Jan 2015; Johann Schmitz <ercpe@gentoo.org> itext-5.5.4.ebuild:
+  Added patch by Andreas Sturmlechner (bug 475552, c9). Also added files from
+  com/itextpdf/text/l10n/error/
 
 *itext-5.5.4 (11 Jan 2015)
 
