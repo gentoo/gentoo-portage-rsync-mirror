@@ -1,31 +1,31 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.9.0.ebuild,v 1.4 2012/06/07 15:28:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/gworkspace-0.9.3.ebuild,v 1.1 2015/01/12 14:10:31 voyageur Exp $
 
-EAPI=3
+EAPI=5
 inherit gnustep-2
 
 DESCRIPTION="A workspace manager for GNUstep"
 HOMEPAGE="http://www.gnustep.org/experience/GWorkspace.html"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/${P}.tar.gz"
 
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE=""
+IUSE="+gwmetadata"
 
-# GWMetadata compilation broken for now
-#DEPEND=">=gnustep-apps/systempreferences-1.0.1_p24791
-#	>=dev-db/sqlite-3.2.8"
-#RDEPEND="${DEPEND}"
+DEPEND="gwmetadata? ( >=gnustep-apps/systempreferences-1.0.1_p24791
+		>=dev-db/sqlite-3.2.8 )"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	local myconf=""
 	use kernel_linux && myconf="${myconf} --with-inotify"
+	use gwmetadata && myconf="${myconf} --enable-gwmetadata"
 
 	egnustep_env
-	econf --disable-gwmetadata ${myconf}
+	econf ${myconf}
 }
 
 src_install() {

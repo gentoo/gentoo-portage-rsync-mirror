@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/gworkspace
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.40 2013/04/04 09:15:00 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gworkspace/ChangeLog,v 1.41 2015/01/12 14:10:31 voyageur Exp $
+
+*gworkspace-0.9.3 (12 Jan 2015)
+
+  12 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  -gworkspace-0.9.0.ebuild, +gworkspace-0.9.3.ebuild:
+  Version bump
 
 *gworkspace-0.9.2 (04 Apr 2013)
 
