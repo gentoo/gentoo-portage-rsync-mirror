@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.97 2015/01/09 13:47:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.98 2015/01/12 08:09:10 jer Exp $
+
+  12 Jan 2015; Jeroen Roovers <jer@gentoo.org> wdiff-1.2.2.ebuild:
+  Stable for HPPA (bug #534914).
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> wdiff-1.2.2.ebuild:
   Stable for amd64, wrt bug #534914

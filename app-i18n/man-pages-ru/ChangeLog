@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.59 2015/01/10 21:20:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.60 2015/01/12 08:13:09 jer Exp $
+
+  12 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  man-pages-ru-3.56.2172.1866.20140202.ebuild:
+  Stable for HPPA (bug #534858).
 
   10 Jan 2015; Sergey Popov <pinkbyte@gentoo.org>
   man-pages-ru-3.56.2172.1866.20140202.ebuild:
