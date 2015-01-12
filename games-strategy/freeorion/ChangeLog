@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/freeorion
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.10 2013/10/07 08:08:35 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.11 2015/01/12 13:05:17 tomka Exp $
+
+*freeorion-0.4.4 (12 Jan 2015)
+
+  12 Jan 2015; Thomas Kahle <tomka@gentoo.org> +files/ogre-1.9-compat.patch,
+  +freeorion-0.4.4.ebuild, freeorion-0.4.3.ebuild:
+  bump, compatibility with ogre-1.9, make 0.4.3 depend on old ogre (bug #528480)
 
   07 Oct 2013; Thomas Kahle <tomka@gentoo.org> freeorion-0.4.3.ebuild:
   fix insecure runpaths (bug 485510, thanks hasufell)

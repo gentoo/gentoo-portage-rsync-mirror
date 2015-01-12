@@ -1,13 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.3.ebuild,v 1.6 2015/01/12 13:05:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.4.ebuild,v 1.1 2015/01/12 13:05:17 tomka Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 inherit cmake-utils python-any-r1 games
-
-myPN="FreeOrion"
 
 DESCRIPTION="A free turn-based space empire and galactic conquest game"
 HOMEPAGE="http://www.freeorion.org"
@@ -22,7 +20,7 @@ IUSE="cg"
 # The split version dev-games/gigi is not used anymore as of 0.4.3
 RDEPEND="
 	!dev-games/gigi
-	<dev-games/ogre-1.9[cg?,ois,opengl]
+	dev-games/ogre[cg?,ois,opengl]
 	dev-games/ois
 	>=dev-libs/boost-1.47[python]
 	media-libs/freealut
@@ -37,7 +35,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	virtual/pkgconfig"
 
-S="${WORKDIR}/${P}/${myPN}"
+# S="${WORKDIR}/${P}/${myPN}"
 CMAKE_USE_DIR="${S}"
 CMAKE_VERBOSE="1"
 
@@ -59,11 +57,13 @@ src_prepare() {
 			>> "${CMAKE_USE_DIR}"/ogre_plugins.cfg || die
 	fi
 
+	epatch "${FILESDIR}/ogre-1.9-compat.patch"
+
 	# parse subdir sets -O3
 	sed -e "s:-O3::" -i parse/CMakeLists.txt
 
 	# set revision for display in game -- update on bump!
-	sed -i -e 's/???/6281/' CMakeLists.txt
+	sed -i -e 's/???/7708/' CMakeLists.txt
 }
 
 src_configure() {
