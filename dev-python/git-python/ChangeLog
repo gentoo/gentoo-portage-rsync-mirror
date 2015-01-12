@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/git-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.13 2014/11/18 10:23:03 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.14 2015/01/12 07:16:29 idella4 Exp $
+
+*git-python-0.3.4 (12 Jan 2015)
+
+  12 Jan 2015; Ian Delaney <idella4@gentoo.org> +git-python-0.3.4.ebuild,
+  -git-python-0.1.7.ebuild, -git-python-0.3.2.1.ebuild,
+  -git-python-0.3.2.ebuild:
+  bump, rm old
 
 *git-python-0.3.2.1 (18 Nov 2014)
 

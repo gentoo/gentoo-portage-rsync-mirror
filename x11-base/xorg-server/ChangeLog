@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.809 2015/01/11 14:05:48 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.810 2015/01/12 07:26:28 jer Exp $
+
+  12 Jan 2015; Jeroen Roovers <jer@gentoo.org> xorg-server-1.15.2-r1.ebuild:
+  Stable for HPPA (bug #532086).
 
   11 Jan 2015; Andreas Schuerch <nativemad@gentoo.org>
   xorg-server-1.12.4-r3.ebuild, xorg-server-1.15.2-r1.ebuild:
