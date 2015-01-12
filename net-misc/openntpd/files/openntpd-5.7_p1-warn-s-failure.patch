@@ -1,0 +1,12 @@
+diff -u -r openntpd-5.7p1-orig/ntpd.c openntpd-5.7p1/ntpd.c
+--- openntpd-5.7p1-orig/ntpd.c	2015-01-09 18:58:14.498903138 -0800
++++ openntpd-5.7p1/ntpd.c	2015-01-09 19:00:59.917844614 -0800
+@@ -242,7 +242,7 @@
+ 			lconf.settime = 0;
+ 			timeout = INFTIM;
+ 			log_init(lconf.debug);
+-			log_debug("no reply received in time, skipping initial "
++			log_warnx("no reply received in time, skipping initial "
+ 			    "time setting");
+ 			if (!lconf.debug) {
+ 				if (daemon(1, 0))

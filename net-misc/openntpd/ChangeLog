@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.127 2015/01/12 16:27:39 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.129 2015/01/12 18:09:55 ottxor Exp $
+
+*openntpd-5.7_p1 (12 Jan 2015)
+
+  12 Jan 2015; Christoph Junghans <ottxor@gentoo.org>
+  +files/openntpd-5.7_p1-driftpath.patch,
+  +files/openntpd-5.7_p1-gentoopool.patch, +files/openntpd-5.7_p1-runpath.patch,
+  +files/openntpd-5.7_p1-signal.patch,
+  +files/openntpd-5.7_p1-warn-s-failure.patch, +openntpd-5.7_p1.ebuild:
+  version bump (bug #536032)
+
+  12 Jan 2015; Christoph Junghans <ottxor@gentoo.org>
+  -openntpd-20080406-r9.ebuild, openntpd-4.0_pre20080406.ebuild:
+  move stable keywords from 20080406-r9 to 4.0_pre20080406 in preparation of
+  version bump to 5.7_p1 (bug #536032)
 
 *openntpd-4.0_pre20080406 (12 Jan 2015)
 

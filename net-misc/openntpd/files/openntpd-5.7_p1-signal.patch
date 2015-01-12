@@ -1,0 +1,17 @@
+Only in openntpd-5.7p1: .ntpd.8.swp
+diff -u -r openntpd-5.7p1-orig/ntpd.8 openntpd-5.7p1/ntpd.8
+--- openntpd-5.7p1-orig/ntpd.8	2015-01-09 18:51:48.724711211 -0800
++++ openntpd-5.7p1/ntpd.8	2015-01-09 18:56:32.461471870 -0800
+@@ -126,7 +126,11 @@
+ .Pq engine
+ receives a
+ .Dv SIGINFO
+-signal, it writes its peer and sensor status to
++signal (or a
++.Dv SIGUSR1
++signal on systems without
++.Dv SIGINFO),
++it writes its peer and sensor status to
+ .Xr syslog 3 .
+ .Sh FILES
+ .Bl -tag -width "/var/db/ntpd.driftXXX" -compact
