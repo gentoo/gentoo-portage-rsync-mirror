@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pydot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.74 2014/03/31 21:08:05 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.75 2015/01/12 02:08:38 idella4 Exp $
+
+  12 Jan 2015; Ian Delaney <idella4@gentoo.org> -pydot-1.0.23.ebuild,
+  -pydot-1.0.25.ebuild, -pydot-1.0.28.ebuild, pydot-1.0.28-r2.ebuild:
+  corrections to PYTHON_COMPAT (drop pypy and old impl) and deps, rm old
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> pydot-1.0.28-r1.ebuild,
   pydot-1.0.28-r2.ebuild:
