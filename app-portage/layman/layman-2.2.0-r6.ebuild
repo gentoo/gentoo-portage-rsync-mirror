@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0-r5.ebuild,v 1.4 2014/11/23 16:33:01 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0-r6.ebuild,v 1.1 2015/01/12 01:13:30 twitch153 Exp $
 
 EAPI="5"
 
@@ -55,6 +55,7 @@ pkg_setup() {
 python_prepare_all()  {
 	distutils-r1_python_prepare_all
 	epatch "${FILESDIR}"/${P}-removes-doctest-remnants.patch
+	epatch "${FILESDIR}"/${P}-adds-kwargs-debug.patch
 	rm "${S}"/"${PN}"/tests/dtest.py
 	eprefixify etc/layman.cfg layman/config.py
 }
@@ -62,7 +63,7 @@ python_prepare_all()  {
 python_test() {
 	for suite in layman/tests/{dtest,external}.py ; do
 		PYTHONPATH="." "${PYTHON}" ${suite} \
-				|| die "test suite '${suite}' failed"
+		|| die "test suite '${suite}' failed"
 	done
 }
 
