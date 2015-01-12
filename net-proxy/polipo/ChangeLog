@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.44 2015/01/11 14:12:43 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.45 2015/01/12 10:38:00 ago Exp $
+
+  12 Jan 2015; Agostino Sarubbo <ago@gentoo.org> polipo-1.1.1.ebuild:
+  Stable for amd64, wrt bug #385307
 
   11 Jan 2015; Andreas Schuerch <nativemad@gentoo.org> polipo-1.1.1.ebuild:
   x86 stable, see bug 385307

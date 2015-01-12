@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.5.ebuild,v 1.1 2013/03/19 12:42:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.5.ebuild,v 1.2 2015/01/12 10:32:36 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs prefix
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/fluxbox/${P}.tar.lzma"
 HOMEPAGE="http://www.fluxbox.org"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	!!<=x11-misc/fbdesk-1.2.1

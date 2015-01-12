@@ -5,5 +5,5 @@ Comment[pl]=Dokowalny aplet CD playera
 Exec=wmcdplay
 Type=Application
 Encoding=UTF-8
-Terminal=0
-Categories=Application;Audio;
+Terminal=false
+Categories=AudioVideo;Audio;
