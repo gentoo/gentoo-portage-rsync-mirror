@@ -1,9 +1,6 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.444 2015/01/12 20:48:24 haubi Exp $
-
-  12 Jan 2015; Michael Haubenwallner <haubi@gentoo.org> aix/make.defaults:
-  libtool-2.4.4 supports --with-aix-soname=svr4, set EXTRA_ECONF for now
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.445 2015/01/12 21:26:32 haubi Exp $
 
   03 Jan 2015; Ruud Koolen <redlizard@gentoo.org>
   linux-standalone/amd64/make.defaults, linux-standalone/x86/make.defaults:

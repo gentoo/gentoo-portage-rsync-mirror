@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/make.defaults,v 1.6 2015/01/12 20:48:24 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/make.defaults,v 1.7 2015/01/12 21:26:32 haubi Exp $
 
 # System-wide defaults for all AIX profiles
 # This file should rarely need to be changed
@@ -18,6 +18,3 @@ DEFAULT_ABI="ppc"
 ABI="ppc"
 IUSE_IMPLICIT="abi_ppc_32"
 LIBDIR_ppc="lib"
-
-# libtool-2.4.4 supports --with-aix-soname=svr4
-EXTRA_ECONF="--with-aix-soname=svr4"
