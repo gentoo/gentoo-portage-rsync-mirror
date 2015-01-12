@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmcliphist
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.19 2014/04/07 19:37:15 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcliphist/ChangeLog,v 1.21 2015/01/12 13:39:22 voyageur Exp $
+
+  12 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> wmcliphist-2.1.ebuild:
+  Fix homepage, remove unused inherit
+
+*wmcliphist-2.1 (12 Jan 2015)
+
+  12 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> +wmcliphist-2.1.ebuild:
+  Version bump with new homepage
 
   07 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> wmcliphist-0.6-r1.ebuild,
   wmcliphist-1.0.ebuild:

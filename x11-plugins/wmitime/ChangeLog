@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmitime
-# Copyright 2002-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.15 2010/09/02 10:36:36 s4t4n Exp $
+# Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmitime/ChangeLog,v 1.16 2015/01/12 13:59:58 voyageur Exp $
+
+*wmitime-0.4 (12 Jan 2015)
+
+  12 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> +wmitime-0.4.ebuild:
+  Version bump with new homepage
 
   02 Sep 2010; Michele Noberasco <s4t4n@gentoo.org> makefile.diff:
   Honour Gentoo LDFLAGS. Closes bug #335607.

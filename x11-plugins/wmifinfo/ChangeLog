@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/wmifinfo
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.21 2014/08/10 20:06:57 slyfox Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/ChangeLog,v 1.23 2015/01/12 13:54:34 voyageur Exp $
+
+  12 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> wmifinfo-0.10.ebuild:
+  And fix homepage
+
+*wmifinfo-0.10 (12 Jan 2015)
+
+  12 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> +wmifinfo-0.10.ebuild:
+  Version bump with new homepage
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmifinfo-0.09.ebuild:
   QA: drop trailing '.' from DESCRIPTION
