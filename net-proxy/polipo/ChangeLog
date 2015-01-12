@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/polipo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.45 2015/01/12 10:38:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/polipo/ChangeLog,v 1.46 2015/01/12 16:16:12 bircoph Exp $
+
+  12 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> -polipo-1.0.4.1-r1.ebuild,
+  -files/polipo.crond, -files/polipo.initd:
+  Remove vulnerable version and related files. See bug 385307.
 
   12 Jan 2015; Agostino Sarubbo <ago@gentoo.org> polipo-1.1.1.ebuild:
   Stable for amd64, wrt bug #385307

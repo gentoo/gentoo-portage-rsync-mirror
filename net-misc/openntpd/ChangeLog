@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openntpd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.126 2014/11/02 09:10:58 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.127 2015/01/12 16:27:39 ottxor Exp $
+
+*openntpd-4.0_pre20080406 (12 Jan 2015)
+
+  12 Jan 2015; Christoph Junghans <ottxor@gentoo.org>
+  +openntpd-4.0_pre20080406.ebuild:
+  copy 20080406-r9 version to 4.0_pre20080406 to prepare version bump to 5.7_p1
+  (bug #536032)
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> openntpd-20080406-r9.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug
