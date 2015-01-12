@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/pecl-memcached-2.2.0.ebuild,v 1.1 2014/09/28 12:28:12 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/pecl-memcached-2.2.0.ebuild,v 1.2 2015/01/12 15:39:35 grknight Exp $
 
 EAPI="4"
 PHP_EXT_NAME="memcached"
@@ -22,7 +22,7 @@ IUSE="+session igbinary json sasl"
 DEPEND="|| ( >=dev-libs/libmemcached-1.0.14 >=dev-libs/libmemcached-1.0[sasl?] )
 		sys-libs/zlib
 		dev-lang/php[session?,json?]
-		igbinary? ( dev-php/igbinary[php_targets_php5-5?,php_targets_php5-4?,php_targets_php5-3?] )"
+		igbinary? ( dev-php/igbinary[php_targets_php5-5?,php_targets_php5-4?,php_targets_php5-6?] )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

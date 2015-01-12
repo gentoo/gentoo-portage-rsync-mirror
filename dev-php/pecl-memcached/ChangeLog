@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-memcached
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.15 2014/09/28 12:28:12 olemarkus Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.16 2015/01/12 15:39:35 grknight Exp $
+
+  12 Jan 2015; Brian Evans <grknight@gentoo.org> pecl-memcached-2.2.0.ebuild:
+  Correct igbinary conditional dependency
 
 *pecl-memcached-2.2.0 (28 Sep 2014)
 
