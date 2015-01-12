@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.20.ebuild,v 1.1 2014/05/26 06:46:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.22.ebuild,v 1.1 2015/01/12 04:02:53 prometheanfire Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic systemd user
@@ -15,11 +15,12 @@ SRC_URI="http://www.memcached.org/files/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="test slabs-reassign debug sasl" # hugetlbfs later
+IUSE="test slabs-reassign debug sasl selinux" # hugetlbfs later
 
 RDEPEND=">=dev-libs/libevent-1.4
 		 dev-lang/perl
-		 sasl? ( dev-libs/cyrus-sasl )"
+		 sasl? ( dev-libs/cyrus-sasl )
+		 selinux? ( sec-policy/selinux-memcached )"
 DEPEND="${RDEPEND}
 		test? ( virtual/perl-Test-Harness >=dev-perl/Cache-Memcached-1.24 )"
 
@@ -64,7 +65,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README.md doc/{CONTRIBUTORS,*.txt}
 
 	newconfd "${FILESDIR}/memcached.confd" memcached
-	newinitd "${FILESDIR}/memcached.init" memcached
+	newinitd "${FILESDIR}/memcached.init2" memcached
 	systemd_dounit "${FILESDIR}/memcached.service"
 }
 
