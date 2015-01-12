@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9679 2015/01/11 13:29:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9680 2015/01/12 20:00:25 mpagano Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jan 2015; Mike Pagano <mpagano@gentoo.org> package.mask:
+  Added Expiry to package.mask items
 
   11 Jan 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

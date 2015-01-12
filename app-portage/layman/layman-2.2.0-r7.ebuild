@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0-r6.ebuild,v 1.1 2015/01/12 01:13:30 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0-r7.ebuild,v 1.1 2015/01/12 19:35:22 twitch153 Exp $
 
 EAPI="5"
 
@@ -55,6 +55,7 @@ pkg_setup() {
 python_prepare_all()  {
 	distutils-r1_python_prepare_all
 	epatch "${FILESDIR}"/${P}-removes-doctest-remnants.patch
+	epatch "${FILESDIR}"/${P}-change-for-upstream-ssl-fetch.patch
 	epatch "${FILESDIR}"/${P}-adds-kwargs-debug.patch
 	rm "${S}"/"${PN}"/tests/dtest.py
 	eprefixify etc/layman.cfg layman/config.py

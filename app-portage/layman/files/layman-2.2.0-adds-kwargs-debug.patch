@@ -16,12 +16,13 @@ Subject: [PATCH] Adds kwargs-debug and modifies kwargs-info level to 5
             
 --- a/layman/remotedb.py
 +++ b/layman/remotedb.py
-@@ -120,6 +120,7 @@ class RemoteDB(DbBase):
+@@ -120,6 +120,6 @@ class RemoteDB(DbBase):
              'info':  self.output.info,
+             'debug': self.output.debug,
              'error': self.output.error,
 -            'kwargs-info': {'level': 2},
 +            'kwargs-info': {'level': 5},
-+            'kwargs-debug': {'level': 2},
+             'kwargs-debug': {'level': 2},
              'kwargs-error':{'level': None},
          }
 
