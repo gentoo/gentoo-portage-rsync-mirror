@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.80 2015/01/08 21:09:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.81 2015/01/12 22:54:24 nimiux Exp $
+
+  12 Jan 2015; Chema Alonso <nimiux@gentoo.org> thttpd-2.27.0.ebuild:
+  Stable for amd64 wrt bug #535694
 
   08 Jan 2015; Markus Meier <maekke@gentoo.org> thttpd-2.27.0.ebuild:
   arm stable, bug #535694
