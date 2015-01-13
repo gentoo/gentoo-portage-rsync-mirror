@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.13.ebuild,v 1.1 2014/10/21 17:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.2.4.ebuild,v 1.1 2015/01/13 05:12:43 prometheanfire Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
