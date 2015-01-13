@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/libtreadstone
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtreadstone/ChangeLog,v 1.1 2015/01/13 02:38:17 patrick Exp $
+
+*libtreadstone-0.1.0 (13 Jan 2015)
+
+  13 Jan 2015; Patrick Lauer <patrick@gentoo.org> +libtreadstone-0.1.0.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me. Dependency of dev-db/hyperdex

@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tornado
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.55 2014/12/24 07:29:32 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.56 2015/01/13 02:58:53 idella4 Exp $
+
+  13 Jan 2015; Ian Delaney <idella4@gentoo.org> -tornado-2.2.1.ebuild,
+  -tornado-2.4-r1.ebuild, -tornado-2.4.1.ebuild, -tornado-2.4.ebuild,
+  tornado-4.0.1.ebuild, tornado-4.0.2.ebuild:
+  clean old impl in 4.0.1; tidy deps, drop DISTUTILS_NO_PARALLEL_BUILD from
+  src_test, rm some old
 
   24 Dec 2014; Markus Meier <maekke@gentoo.org> tornado-4.0.1.ebuild:
   arm stable, bug #530486

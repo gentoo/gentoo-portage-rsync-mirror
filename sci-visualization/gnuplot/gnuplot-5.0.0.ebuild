@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0_rc3.ebuild,v 1.1 2014/12/28 23:34:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0.0.ebuild,v 1.1 2015/01/13 02:37:51 ottxor Exp $
 
 EAPI=5
 
