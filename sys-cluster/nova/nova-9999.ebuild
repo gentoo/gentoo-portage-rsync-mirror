@@ -1,15 +1,16 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.18 2014/09/22 02:15:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.19 2015/01/13 04:16:16 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 multilib user
+inherit distutils-r1 eutils git-2 linux-info multilib user
 
 DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python"
 HOMEPAGE="https://launchpad.net/nova"
 EGIT_REPO_URI="https://github.com/openstack/nova.git"
+EGIT_BRANCH="master"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -19,78 +20,120 @@ REQUIRED_USE="|| ( mysql postgres sqlite )
 			  compute? ( || ( kvm xen ) )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.8[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
-		app-admin/sudo
-		dev-python/mox[${PYTHON_USEDEP}]
-		dev-python/fixtures[${PYTHON_USEDEP}]"
+		app-admin/sudo"
 
-RDEPEND="sqlite? (
-			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
-			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
-			<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+RDEPEND="
+	sqlite? (
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+			)
 		)
-		mysql? (
-			dev-python/mysql-python
-			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
-			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
-			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
+	mysql? (
+		dev-python/mysql-python
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
 		)
-		postgres? (
-			dev-python/psycopg:2
-			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
-			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
-			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
+	postgres? (
+		dev-python/psycopg:2
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
 		)
-		>=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
-		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		>=dev-python/boto-2.12.0[${PYTHON_USEDEP}]
-		!~dev-python/boto-2.13.0[${PYTHON_USEDEP}]
-		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
-		dev-python/jinja[${PYTHON_USEDEP}]
-		>=dev-python/kombu-2.4.8[${PYTHON_USEDEP}]
-		>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
-		>=dev-python/routes-1.12.3-r1[${PYTHON_USEDEP}]
-		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
-		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
-		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
-		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-migrate-0.8.2[${PYTHON_USEDEP}]
-		!~dev-python/sqlalchemy-migrate-0.8.4[${PYTHON_USEDEP}]
-		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
-		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
-		>=dev-python/paramiko-1.9.0[${PYTHON_USEDEP}]
-		dev-python/pyasn1[${PYTHON_USEDEP}]
-		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
-		>=dev-python/python-cinderclient-1.0.6[${PYTHON_USEDEP}]
-		>=dev-python/python-neutronclient-2.3.4[${PYTHON_USEDEP}]
-		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
-		>=dev-python/python-glanceclient-0.9.0[${PYTHON_USEDEP}]
-		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
-		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
-		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
-		>=dev-python/websockify-0.5.1[${PYTHON_USEDEP}]
-		<dev-python/websockify-0.6[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		dev-python/oslo-rootwrap[${PYTHON_USEDEP}]
-		>=dev-python/pycadf-0.4.1[${PYTHON_USEDEP}]
-		>=dev-python/oslo-messaging-1.3.0[${PYTHON_USEDEP}]
-		dev-python/libvirt-python[${PYTHON_USEDEP}]
-		novncproxy? ( www-apps/novnc )
-		sys-apps/iproute2
-		net-misc/openvswitch
-		net-misc/rabbitmq-server
-		sys-fs/sysfsutils
-		sys-fs/multipath-tools
-		kvm? ( app-emulation/qemu )
-		xen? ( app-emulation/xen
-			   app-emulation/xen-tools )"
+	)
+	>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
+	>=dev-python/boto-2.32.1[${PYTHON_USEDEP}]
+	>=dev-python/decorator-3.4.0[${PYTHON_USEDEP}]
+	>=dev-python/eventlet-0.15.1[${PYTHON_USEDEP}]
+	dev-python/jinja[${PYTHON_USEDEP}]
+	>=dev-python/keystonemiddleware-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/kombu-2.5.0[${PYTHON_USEDEP}]
+	>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
+	>=dev-python/routes-1.12.3-r1[${PYTHON_USEDEP}]
+	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
+	>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
+	>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
+	>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
+	dev-python/paste[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-migrate-0.9.1[${PYTHON_USEDEP}]
+	!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]
+	>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
+	>=dev-python/suds-0.4[${PYTHON_USEDEP}]
+	>=dev-python/paramiko-1.13.0[${PYTHON_USEDEP}]
+	dev-python/posix_ipc[${PYTHON_USEDEP}]
+	dev-python/pyasn1[${PYTHON_USEDEP}]
+	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
+	>=dev-python/jsonschema-2.0.0[${PYTHON_USEDEP}]
+	<dev-python/jsonschema-3.0.0[${PYTHON_USEDEP}]
+	>=dev-python/python-cinderclient-1.1.0[${PYTHON_USEDEP}]
+	>=dev-python/python-neutronclient-2.3.6[${PYTHON_USEDEP}]
+	<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
+	>=dev-python/python-glanceclient-0.14.0[${PYTHON_USEDEP}]
+	>=dev-python/python-keystoneclient-0.10.0[${PYTHON_USEDEP}]
+	>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
+	>=dev-python/stevedore-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/websockify-0.6.0[${PYTHON_USEDEP}]
+	<dev-python/websockify-0.7.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-rootwrap-1.3.0[${PYTHON_USEDEP}]
+	>=dev-python/pycadf-0.6.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
+	!~dev-python/oslo-messaging-1.5.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-i18n-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/lockfile-0.8[${PYTHON_USEDEP}]
+	>=dev-python/simplejson-2.2.0[${PYTHON_USEDEP}]
+	>=dev-python/rfc3986-0.2.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-vmware-0.6.0[${PYTHON_USEDEP}]
+	dev-python/libvirt-python[${PYTHON_USEDEP}]
+	novncproxy? ( www-apps/novnc )
+	sys-apps/iproute2
+	net-misc/openvswitch
+	net-misc/rabbitmq-server
+	sys-fs/sysfsutils
+	sys-fs/multipath-tools
+	net-misc/bridge-utils
+	kvm? ( app-emulation/qemu )
+	xen? ( app-emulation/xen
+		   app-emulation/xen-tools )"
 
 PATCHES=(
 )
 
 pkg_setup() {
+	linux-info_pkg_setup
+	CONFIG_CHECK_MODULES="NBD VHOST_NET IP6TABLE_FILTER IP6_TABLES IPT_REJECT \
+	IPTABLE_MANGLE IPT_MASQUERADE IPTABLE_NAT IPTABLE_FILTER IP_TABLES \
+	NF_CONNTRACK_IPV4 NF_DEFRAG_IPV4 NF_NAT_IPV4 NF_NAT NF_CONNTRACK X_TABLES \
+	ISCSI_TCP SCSI_DH DM_MULTIPATH DM_SNAPSHOT"
+	if linux_config_exists; then
+		for module in ${CONFIG_CHECK_MODULES}; do
+			linux_chkconfig_present ${module} || ewarn "${module} needs to be enabled in kernel"
+		done
+	fi
 	enewgroup nova
 	enewuser nova -1 -1 /var/lib/nova nova
 }
@@ -109,8 +152,9 @@ python_install() {
 	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
 	use novncproxy && newinitd "${FILESDIR}/nova.initd" "nova-novncproxy"
 
-	diropts -m 0750 -o nova -g nova
+	diropts -m 0750 -o nova -g qemu
 	dodir /var/log/nova /var/lib/nova/instances
+	diropts -m 0750 -o nova -g nova
 
 	insinto /etc/nova
 	insopts -m 0640 -o nova -g nova

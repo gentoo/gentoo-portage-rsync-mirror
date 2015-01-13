@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/nova
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.81 2014/12/09 01:42:53 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.82 2015/01/13 04:16:16 prometheanfire Exp $
+
+  13 Jan 2015; Matthew Thode <prometheanfire@gentoo.org> -files/nova-confd,
+  -files/nova-initd, -files/nova.sudoersd, -nova-2014.2.ebuild,
+  nova-2014.2.1.ebuild, nova-2014.2.9999.ebuild, nova-9999.ebuild:
+  general cleanup and fixing bug 536340
 
 *nova-2014.2.1 (09 Dec 2014)
 
