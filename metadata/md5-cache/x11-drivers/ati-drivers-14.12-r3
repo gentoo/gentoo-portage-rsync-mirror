@@ -8,8 +8,8 @@ KEYWORDS=-* ~amd64 ~x86
 LICENSE=AMD GPL-2 QPL-1.0
 RDEPEND=<=x11-base/xorg-server-1.16.49[-minimal] >=app-admin/eselect-opengl-1.0.7 app-admin/eselect-opencl sys-power/acpid x11-apps/xauth x11-libs/libX11 x11-libs/libXext x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXrender virtual/glu !x11-libs/xvba-video abi_x86_32? ( || ( virtual/glu[abi_x86_32] app-emulation/emul-linux-x86-opengl ) || ( ( x11-libs/libX11[abi_x86_32] x11-libs/libXext[abi_x86_32] x11-libs/libXinerama[abi_x86_32] x11-libs/libXrandr[abi_x86_32] x11-libs/libXrender[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) ) qt4? ( x11-libs/libICE x11-libs/libSM x11-libs/libXcursor x11-libs/libXfixes x11-libs/libXxf86vm dev-qt/qtcore:4 dev-qt/qtgui:4[accessibility] ) !x11-drivers/ati-drivers:legacy kernel_linux? ( virtual/modutils )
 REQUIRED_USE=|| ( abi_x86_32 abi_x86_64 )
-RESTRICT=bindist test fetch
+RESTRICT=bindist test
 SLOT=1
 SRC_URI=mirror://gentoo/amd-catalyst-omega-14.12-linux-run-installers.zip http://developer.amd.com/wordpress/media/2012/10/xvba-sdk-0.74-404001.tar.gz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	linux-info	2b8c53f6065bdee2d757472215a3088f	linux-mod	101302d4b7b694ea9622bbffb187d0de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=b83c12aade1560d529cdb8fb34f15fb8
+_md5_=ab7a3e061e4f9481e6ffedbebe025966

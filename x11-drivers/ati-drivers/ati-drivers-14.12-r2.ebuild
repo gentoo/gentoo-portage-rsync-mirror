@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.12-r2.ebuild,v 1.1 2015/01/05 13:31:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.12-r2.ebuild,v 1.2 2015/01/12 23:41:50 chithanh Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="debug +modules qt4 static-libs pax_kernel"
 LICENSE="AMD GPL-2 QPL-1.0"
 KEYWORDS="-* ~amd64 ~x86"
 
-RESTRICT="bindist test fetch"
+RESTRICT="bindist test"
 
 RDEPEND="
 	<=x11-base/xorg-server-1.16.49[-minimal]

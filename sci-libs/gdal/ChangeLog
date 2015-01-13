@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.158 2015/01/05 16:30:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.159 2015/01/12 23:49:19 grozin Exp $
+
+  12 Jan 2015; Andrey Grozin <grozin@gentoo.org> gdal-1.11.1-r1.ebuild,
+  +files/gdal-1.11.1-swig-3.0.3.patch:
+  Fix #534168
 
   05 Jan 2015; Alexis Ballier <aballier@gentoo.org> gdal-1.11.1-r1.ebuild:
   keyword ~arm

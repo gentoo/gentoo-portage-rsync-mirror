@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.373 2015/01/06 19:26:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.374 2015/01/12 23:41:50 chithanh Exp $
+
+  12 Jan 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ati-drivers-14.12-r2.ebuild, ati-drivers-14.12-r3.ebuild:
+  Remove fetch restriction, bug #536382.
 
 *ati-drivers-14.12-r3 (06 Jan 2015)
 

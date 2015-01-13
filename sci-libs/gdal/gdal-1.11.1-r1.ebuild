@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.7 2015/01/05 16:30:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r1.ebuild,v 1.8 2015/01/12 23:49:19 grozin Exp $
 
 EAPI=5
 
@@ -118,6 +118,9 @@ src_prepare() {
 	sed \
 		-e 's:^ar:$(AR):g' \
 		-i ogr/ogrsf_frmts/sdts/install-libs.sh || die
+
+	# Fix swig-3.0.3 problem (bug #534168)
+	epatch "${FILESDIR}"/${PN}-1.11.1-swig-3.0.3.patch
 
 	tc-export AR RANLIB
 
