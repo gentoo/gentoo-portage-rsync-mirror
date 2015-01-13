@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvipdfmx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.78 2015/01/11 21:14:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/ChangeLog,v 1.79 2015/01/13 16:08:36 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> dvipdfmx-20110311-r1.ebuild:
+  Stable for HPPA (bug #534904).
 
   11 Jan 2015; Markus Meier <maekke@gentoo.org> dvipdfmx-20110311-r1.ebuild:
   arm stable, bug #534904

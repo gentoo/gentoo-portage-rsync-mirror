@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxdg-basedir
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.39 2015/01/09 13:39:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.40 2015/01/13 16:10:16 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> libxdg-basedir-1.2.0-r1.ebuild:
+  Stable for HPPA (bug #535122).
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libxdg-basedir-1.2.0-r1.ebuild:
   Stable for amd64, wrt bug #535122

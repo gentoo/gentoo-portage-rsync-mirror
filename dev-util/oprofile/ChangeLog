@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/oprofile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.100 2014/12/01 10:17:13 bircoph Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.101 2015/01/13 16:05:53 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> oprofile-0.9.9-r1.ebuild:
+  Stable for HPPA (bug #536166).
 
   01 Dec 2014; Andrew Savchenko <bircoph@gentoo.org> oprofile-1.0.0.ebuild:
   Update kernel dependecy data.
