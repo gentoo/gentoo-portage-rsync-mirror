@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.83 2015/01/09 13:49:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.84 2015/01/13 11:11:14 jer Exp $
+
+*arping-2.15 (13 Jan 2015)
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> +arping-2.15.ebuild:
+  Version bump.
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> arping-2.14.ebuild:
   Stable for amd64, wrt bug #535522
