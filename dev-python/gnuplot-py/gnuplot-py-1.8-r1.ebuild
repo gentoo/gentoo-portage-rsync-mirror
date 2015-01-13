@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.8-r1.ebuild,v 1.3 2014/06/27 15:12:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/gnuplot-py-1.8-r1.ebuild,v 1.4 2015/01/13 05:37:27 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 PYTHON_SINGLE_IMPL=true
 
-inherit distutils-r1 eutils
+inherit distutils-r1
 
 DESCRIPTION="A python wrapper for Gnuplot"
 HOMEPAGE="http://gnuplot-py.sourceforge.net/"
@@ -18,23 +18,16 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86
 IUSE="doc"
 
 DEPEND="
-	dev-python/numpy[${PYTHON_USEDEP}]
-"
+	dev-python/numpy[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
 	sci-visualization/gnuplot"
 
 DOCS=( ANNOUNCE.txt CREDITS.txt FAQ.txt NEWS.txt TODO.txt )
 
-src_prepare() {
-	distutils-r1_src_prepare
-	epatch "${FILESDIR}"/${PN}-1.7-mousesupport.patch
-}
+PATCHES=( "${FILESDIR}"/${PN}-1.7-mousesupport.patch )
 
-src_install() {
-	distutils-r1_src_install
-
-	if use doc; then
-		insinto /usr/share/doc/${PF}/html
-		doins -r doc/Gnuplot/*
-	fi
+python_install_all() {
+	use doc && local HTML_DOCS=( doc/Gnuplot/. )
+	distutils-r1_python_install_all
 }
+# testsuite does NOT run unattended, so left out here

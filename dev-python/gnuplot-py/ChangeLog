@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gnuplot-py
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.44 2014/06/27 15:12:20 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnuplot-py/ChangeLog,v 1.45 2015/01/13 05:37:27 idella4 Exp $
+
+  13 Jan 2015; Ian Delaney <idella4@gentoo.org> gnuplot-py-1.8-r1.ebuild:
+  tidy
 
 *gnuplot-py-1.8-r1 (27 Jun 2014)
 
@@ -161,4 +164,3 @@
 
   19 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnuplot-py-1.6.ebuild:
   new ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk> (#21113)
-
