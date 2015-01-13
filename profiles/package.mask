@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16285 2015/01/12 21:54:34 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16286 2015/01/13 08:57:53 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -360,11 +360,6 @@ www-apps/trac-downloads
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-41
-
-# Fabian Groffen <grobian@gentoo.org> (18 Nov 2014)
-# Mask Exim 4.85 release candidates
-=mail-mta/exim-4.85_rc3
-=mail-mta/exim-4.85_rc4
 
 # Markos Chandras <hwoarang@gentoo.org> (18 Nov 2014)
 # Mask latest development version for testing

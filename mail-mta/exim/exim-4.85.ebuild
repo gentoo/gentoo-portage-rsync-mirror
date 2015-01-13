@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.85_rc4.ebuild,v 1.2 2015/01/03 10:04:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.85.ebuild,v 1.1 2015/01/13 08:56:18 grobian Exp $
 
 EAPI="5"
 
@@ -497,7 +497,7 @@ pkg_postinst() {
 		einfo "configure DMARC, for usage see the documentation at "
 		einfo "experimental-spec.txt."
 	fi
-	use tpda && einfo "TPDA support is experimental"
+	use tpda && einfo "TPDA/EVENT support is experimental"
 	use proxy && einfo "proxy support is experimental"
 	if use dsn ; then
 		einfo "Starting from Exim 4.83, DSN support comes from upstream."
