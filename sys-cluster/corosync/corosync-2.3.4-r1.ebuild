@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.3.4.ebuild,v 1.1 2014/12/02 14:30:00 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/corosync-2.3.4-r1.ebuild,v 1.1 2015/01/13 04:49:06 xarthisius Exp $
 
 EAPI=4
 
@@ -64,7 +64,8 @@ src_install() {
 	newins "${FILESDIR}"/${PN}.logrotate ${PN}
 
 	keepdir /var/lib/corosync
-	use static-libs || rm -rf "${D}"/usr/$(get_libdir)/*.a || die
+	use static-libs || rm -rf "${D}"/usr/$(get_libdir)/*.{,l}a || die
+
 }
 
 pkg_postinst() {

@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/icinga2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.20 2014/12/28 16:05:49 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.21 2015/01/13 04:42:58 prometheanfire Exp $
+
+*icinga2-2.2.3 (13 Jan 2015)
+
+  13 Jan 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.2.3.ebuild,
+  -files/icinga2-2.1.0-create_var_cache.patch,
+  -files/icinga2-2.2.1-create_var_cache.patch, -icinga2-2.0.2.ebuild,
+  -icinga2-2.1.0-r3.ebuild, files/icinga2.initd, icinga2-2.2.1-r2.ebuild:
+  updating ebuild and fixing init file
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> icinga2-2.0.2.ebuild,
   icinga2-2.1.0-r3.ebuild, icinga2-2.2.1-r2.ebuild:

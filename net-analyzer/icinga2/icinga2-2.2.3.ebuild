@@ -1,11 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.0.2.ebuild,v 1.3 2014/12/28 16:05:49 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.3.ebuild,v 1.1 2015/01/13 04:42:58 prometheanfire Exp $
 
 EAPI=5
-inherit depend.apache eutils cmake-utils toolchain-funcs user versionator systemd
+PYTHON_COMPAT=( python2_7 )
+inherit depend.apache distutils-r1 eutils cmake-utils toolchain-funcs user versionator systemd
 
-DESCRIPTION="Nagios Fork - Check daemon, CGIs, docs, IDOutils. Reloaded"
+DESCRIPTION="Distributed, general purpose, network monitoring engine"
 HOMEPAGE="http://icinga.org/icinga2"
 #PV=$(replace_version_separator 3 '-')
 SRC_URI="http://github.com/Icinga/icinga2/archive/v${PV}.tar.gz -> ${P}.tar.gz"
@@ -14,13 +15,14 @@ SRC_URI="http://github.com/Icinga/icinga2/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+mysql postgres classicui +plugins"
+IUSE="+mysql postgres classicui nano-syntax +plugins +vim-syntax"
 
 DEPEND="dev-util/cmake
+		dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-libs/openssl
-		dev-libs/boost
+		>=dev-libs/boost-1.41
 		sys-devel/bison
-		sys-devel/flex
+		>=sys-devel/flex-2.5.35
 		mysql? ( virtual/mysql )
 		postgres? ( dev-db/postgresql )"
 
@@ -35,7 +37,13 @@ want_apache2
 pkg_setup() {
 	enewgroup icinga
 	enewgroup icingacmd
-	enewuser icinga -1 -1 /var/lib/icinga2 "icinga,icingacmd"
+	enewgroup nagios  # for plugins
+	enewuser icinga -1 -1 /var/lib/icinga2 "icinga,icingacmd,nagios"
+}
+
+src_prepare() {
+#	epatch "${FILESDIR}/${P}-create_var_cache.patch"
+	epatch_user
 }
 
 src_configure() {
@@ -52,6 +60,24 @@ src_configure() {
 		-DICINGA2_COMMAND_GROUP=icingacmd
 		-DINSTALL_SYSTEMD_SERVICE_AND_INITSCRIPT=yes
 	)
+	if use postgres; then
+		mycmakeargs+=(
+			-DICINGA2_WITH_PGSQL=ON
+		)
+	else
+		mycmakeargs+=(
+			-DICINGA2_WITH_PGSQL=OFF
+		)
+	fi
+	if use mysql; then
+		mycmakeargs+=(
+			-DICINGA2_WITH_MYSQL=ON
+		)
+	else
+		mycmakeargs+=(
+			-DICINGA2_WITH_MYSQL=OFF
+		)
+	fi
 	cmake-utils_src_configure
 }
 
@@ -77,30 +103,50 @@ src_install() {
 		dodoc ${DOCS}
 	fi
 
+	newinitd "${FILESDIR}"/icinga2.initd icinga2
+	newconfd "${FILESDIR}"/icinga2.confd icinga2
+
 	if use mysql ; then
 		docinto schema
-		newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_mysql/schema/mysql.sql mysql.sql
+		newdoc "${WORKDIR}"/icinga2-${PV}/lib/db_ido_mysql/schema/mysql.sql mysql.sql
 		docinto schema/upgrade
 		#newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_mysql/schema/upgrade/0.0.11.sql mysql-upgrade-1.12.0.sql
 	elif use postgres ; then
 		docinto schema
-		newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_pgsql/schema/pgsql.sql pgsql.sql
+		newdoc "${WORKDIR}"/icinga2-${PV}/lib/db_ido_pgsql/schema/pgsql.sql pgsql.sql
 		docinto schema/upgrade
 		#newdoc "${WORKDIR}"/icinga2-${PV}/components/db_ido_pgsql/schema/upgrade/0.0.11.sql pgsql-upgrade-1.12.0.sql
 	fi
 
 	keepdir /etc/icinga2
-	keepdir /var/lib/icinga
-	keepdir /var/lib/icinga/archives
-	keepdir /var/lib/icinga/rw
-	keepdir /var/lib/icinga/spool/checkresults
+	keepdir /var/lib/icinga2/api/zones
+	keepdir /var/lib/icinga2/api/repository
+	keepdir /var/lib/icinga2/api/log
+	keepdir /var/spool/icinga2/perfdata
 
-	#remove dirs that shouldn't be installed
 	rm -r "${D}var/run" || die "failed to remove  /var/run"
 	rm -r "${D}var/cache" || die "failed to remove /var/cache"
 
-	fowners icinga:icinga /var/lib/icinga || die "Failed chown of /var/lib/icinga"
-	fowners icinga:icinga /var/lib/icinga2 || die "Failed chown of /var/lib/icinga2"
+	fowners icinga:icinga /etc/icinga2
+	fowners icinga:icinga /var/lib/icinga2
+	fowners icinga:icinga /var/spool/icinga2
+	fowners icinga:icingacmd /var/log/icinga2
+
+	fperms ug+rwX,o-rwx /etc/icinga2
+	fperms ug+rwX,o-rwx /var/lib/icinga2
+	fperms ug+rwX,o-rwx /var/spool/icinga2
+	fperms ug+rwX,o-rwx /var/log/icinga2
+
+	if use vim-syntax; then
+		insinto /usr/share/vim/vimfiles
+		doins -r tools/syntax/vim/ftdetect
+		doins -r tools/syntax/vim/syntax
+	fi
+
+	if use nano-syntax; then
+		insinto /usr/share/nano
+		doins tools/syntax/nano/icinga2.nanorc
+	fi
 }
 
 pkg_postinst() {

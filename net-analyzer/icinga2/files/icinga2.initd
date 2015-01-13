@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 DAEMON="/usr/sbin/icinga2"
@@ -7,7 +7,7 @@ ICINGA2_CONFIG_FILE="/etc/icinga2/icinga2.conf"
 ICINGA2_RUN_DIR="/run/icinga2"
 ICINGA2_STATE_DIR="/var/cache/icinga2"
 ICINGA2_CMD_DIR="${ICINGA2_RUN_DIR}/cmd"
-ICINGA2_PID_FILE="${ICINGA2_RUN_DIR}/icinga2/icinga2.pid"
+ICINGA2_PID_FILE="${ICINGA2_RUN_DIR}/icinga2.pid"
 ICINGA2_DAEMON_ARGS="daemon -c $ICINGA2_CONFIG_FILE -e $ICINGA2_ERROR_LOG -d"
 
 depend() {
@@ -64,14 +64,3 @@ stop() {
         --progress
     eend $?
 }
-
-status() {
-    [ ! -f "$ICINGA2_PID_FILE" ] && return 1
-
-    if ps -p $(cat "$ICINGA2_PID_FILE") > /dev/null; then
-        eend 0
-    else
-        eend 1
-    fi
-}
-
