@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sbc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.32 2015/01/09 13:55:19 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.33 2015/01/13 10:20:09 ago Exp $
+
+  13 Jan 2015; Agostino Sarubbo <ago@gentoo.org> sbc-1.3.ebuild:
+  Stable for sparc, wrt bug #536034
 
   09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> sbc-1.3.ebuild:
   Stable on alpha, bug 536034

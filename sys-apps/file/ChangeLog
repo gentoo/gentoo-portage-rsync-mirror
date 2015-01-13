@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.302 2015/01/11 21:03:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.303 2015/01/13 10:19:55 ago Exp $
+
+  13 Jan 2015; Agostino Sarubbo <ago@gentoo.org> file-5.22.ebuild:
+  Stable for sparc, wrt bug #532768
 
   11 Jan 2015; Markus Meier <maekke@gentoo.org> file-5.22.ebuild:
   arm stable, bug #532768

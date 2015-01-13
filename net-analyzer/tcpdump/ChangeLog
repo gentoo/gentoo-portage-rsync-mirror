@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.206 2015/01/11 21:05:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.207 2015/01/13 10:20:14 ago Exp $
+
+  13 Jan 2015; Agostino Sarubbo <ago@gentoo.org> tcpdump-4.6.2-r1.ebuild:
+  Stable for sparc, wrt bug #534660
 
   11 Jan 2015; Markus Meier <maekke@gentoo.org> tcpdump-4.6.2-r1.ebuild:
   arm stable, bug #534660
