@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.9 2015/01/11 20:42:54 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.10 2015/01/12 23:17:43 monsieurp Exp $
 
 inherit java-pkg-2
 
 DESCRIPTION="The Scala Programming Language"
 HOMEPAGE="http://scala.epfl.ch/"
-SRC_URI="http://scala.epfl.ch/downloads/distrib/files/scala-1.2.0.1.tar.bz2"
+SRC_URI="http://scala.epfl.ch/downloads/distrib/files/scala-${PV}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 amd64"

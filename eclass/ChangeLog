@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1506 2015/01/12 21:24:40 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1507 2015/01/12 23:17:14 polynomial-c Exp $
+
+  12 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> autotools.eclass:
+  Attempt to fix bug #536428.
 
   12 Jan 2015; Michael Haubenwallner <haubi@gentoo.org>
   +ELT-patches/aixrtl/2.4.4-with-svr4:

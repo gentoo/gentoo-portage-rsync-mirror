@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.172 2015/01/12 14:21:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.173 2015/01/12 23:17:14 polynomial-c Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -222,7 +222,11 @@ eautoreconf() {
 	done
 	${rerun_aclocal} && eaclocal
 
-	eautoconf --force
+	if [[ ${WANT_AUTOCONF} = 2.1 ]] ; then
+		eautoconf
+	else
+		eautoconf --force
+	fi
 	eautoheader
 	[[ ${AT_NOEAUTOMAKE} != "yes" ]] && FROM_EAUTORECONF="yes" eautomake ${AM_OPTS}
 
