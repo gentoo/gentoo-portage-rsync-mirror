@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/IPC-Run-0.920.0-r1.ebuild,v 1.2 2015/01/09 13:41:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/IPC-Run-0.920.0-r1.ebuild,v 1.3 2015/01/13 17:37:27 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="system() and background procs w/ piping, redirs, ptys"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
 IUSE="test"
 
 RDEPEND=">=dev-perl/IO-Tty-1.08"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.47 2015/01/09 13:41:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.48 2015/01/13 17:37:27 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> IPC-Run-0.920.0-r1.ebuild:
+  Stable for HPPA (bug #535204).
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> IPC-Run-0.920.0-r1.ebuild:
   Stable for amd64, wrt bug #535204

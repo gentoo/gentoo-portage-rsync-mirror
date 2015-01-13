@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-pkgconfig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.69 2015/01/09 13:43:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.70 2015/01/13 17:33:59 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  extutils-pkgconfig-1.150.0.ebuild:
+  Stable for HPPA (bug #535262).
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
   extutils-pkgconfig-1.150.0.ebuild:

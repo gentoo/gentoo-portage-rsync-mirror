@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Socket6
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.56 2014/08/21 20:04:13 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.57 2015/01/13 17:31:25 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> Socket6-0.250.0.ebuild:
+  Stable for HPPA (bug #535222).
 
 *Socket6-0.230.0-r1 (21 Aug 2014)
 

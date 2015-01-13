@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Tree
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.80 2014/08/22 16:17:16 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.81 2015/01/13 17:34:43 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> HTML-Tree-5.30.0-r1.ebuild:
+  Stable for HPPA (bug #535192).
 
 *HTML-Tree-4.200.0-r1 (22 Aug 2014)
 *HTML-Tree-5.30.0-r1 (22 Aug 2014)
