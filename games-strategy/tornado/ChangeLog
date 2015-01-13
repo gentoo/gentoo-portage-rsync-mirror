@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/tornado
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/ChangeLog,v 1.15 2009/11/13 17:18:36 volkmar Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/ChangeLog,v 1.16 2015/01/13 22:29:52 mr_bones_ Exp $
+
+  13 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> tornado-1.4.ebuild:
+  EAPI=5
 
   13 Nov 2009; Mounir Lamouri <volkmar@gentoo.org> tornado-1.4.ebuild:
   Stable for ppc, bug 285851
@@ -49,4 +52,3 @@
   05 Sep 2003; Michael Sterrett <msterret@gentoo.org> tornado-1.2.1a.ebuild:
   initial commit. ebuild based off the one submitted by Jan Brinkmann via bug
   28030
-

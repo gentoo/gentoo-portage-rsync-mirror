@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.4.ebuild,v 1.3 2009/11/13 17:18:36 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/tornado/tornado-1.4.ebuild,v 1.4 2015/01/13 22:29:52 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Clone of a C64 game -  destroy the opponent's house"
@@ -28,7 +28,7 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin tornado || die "dogamesbin failed"
+	dogamesbin tornado
 	doman doc/man/tornado.6
 	dodoc AUTHOR CREDITS Changelog README TODO
 	insinto "${GAMES_STATEDIR}"

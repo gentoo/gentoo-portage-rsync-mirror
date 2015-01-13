@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.4.ebuild,v 1.4 2015/01/02 23:50:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.4.ebuild,v 1.5 2015/01/13 22:10:59 slyfox Exp $
 
 EAPI=5
 
@@ -269,6 +269,8 @@ relocate_ghc() {
 }
 
 pkg_setup() {
+	[[ ${MERGE_TYPE} == binary ]] && return
+
 	if use ghcbootstrap; then
 		ewarn "You requested ghc bootstrapping, this is usually only used"
 		ewarn "by Gentoo developers to make binary .tbz2 packages."
@@ -403,6 +405,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-7.8.3-linker-warn.patch
 		epatch "${FILESDIR}"/${PN}-7.8.3-pic-sparc.patch
 		epatch "${FILESDIR}"/${PN}-7.8.3-ppc32-fPIC.patch
+		epatch "${FILESDIR}"/${PN}-7.8.4-gold.patch
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix

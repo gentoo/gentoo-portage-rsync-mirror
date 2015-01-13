@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.273 2015/01/02 23:50:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.274 2015/01/13 22:10:59 slyfox Exp $
+
+  13 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.8.4-gold.patch, ghc-7.8.4.ebuild:
+  Backported gold linker support (bug #536426 and fix by Eric Siegel).
 
   02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
   -files/ghc-6.10.4-autoconf.patch, -files/ghc-6.10.4-disable-strip.patch,
