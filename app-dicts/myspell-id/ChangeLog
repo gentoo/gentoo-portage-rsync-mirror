@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-id
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-id/ChangeLog,v 1.23 2015/01/11 20:58:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-id/ChangeLog,v 1.24 2015/01/13 16:31:59 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> myspell-id-2.0.ebuild:
+  Stable for HPPA (bug #534836).
 
   11 Jan 2015; Markus Meier <maekke@gentoo.org> myspell-id-2.0.ebuild:
   arm stable, bug #534836
