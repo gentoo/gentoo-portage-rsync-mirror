@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4-r1.ebuild,v 1.1 2007/08/14 19:50:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/lsdldoom/lsdldoom-1.4.4.4-r1.ebuild,v 1.2 2015/01/13 02:30:30 patrick Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lbjhs.net/~jessh/lsdldoom/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc sparc x86"
+KEYWORDS="sparc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl
