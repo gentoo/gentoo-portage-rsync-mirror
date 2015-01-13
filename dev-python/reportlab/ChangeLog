@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.119 2015/01/13 02:55:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.121 2015/01/13 03:16:42 floppym Exp $
+
+  13 Jan 2015; Mike Gilbert <floppym@gentoo.org> reportlab-3.1.8-r2.ebuild:
+  Move forward stable keywords where possible.
+
+*reportlab-3.1.8-r2 (13 Jan 2015)
+
+  13 Jan 2015; Mike Gilbert <floppym@gentoo.org> +reportlab-3.1.8-r2.ebuild:
+  Sync deps with setup.py.
 
 *reportlab-3.1.44-r1 (13 Jan 2015)
 

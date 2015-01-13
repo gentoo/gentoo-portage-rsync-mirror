@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/swift
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.35 2014/11/18 19:27:57 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.36 2015/01/13 03:24:49 prometheanfire Exp $
+
+  13 Jan 2015; Matthew Thode <prometheanfire@gentoo.org>
+  -files/CVE-2013-2161.patch, -files/CVE-2014-0006-havana.diff,
+  -files/CVE-2014-0006-master.diff, -files/CVE-2014-3497-1.13.patch,
+  -swift-1.13.1-r1.ebuild, -swift-2.0.0.ebuild, -swift-2.1.0.ebuild,
+  -swift-2014.1.9999.ebuild:
+  removing old, vulnerable versions
 
 *swift-2.2.0 (18 Nov 2014)
 

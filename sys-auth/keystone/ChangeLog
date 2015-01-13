@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/keystone
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.83 2014/12/09 01:16:29 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.84 2015/01/13 03:17:54 prometheanfire Exp $
+
+  13 Jan 2015; Matthew Thode <prometheanfire@gentoo.org>
+  -keystone-2014.1.3.ebuild, -keystone-2014.1.9999.ebuild,
+  -keystone-2014.2.ebuild:
+  removing icehouse
 
 *keystone-2014.2.1 (09 Dec 2014)
 
