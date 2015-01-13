@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r4.ebuild,v 1.2 2015/01/09 13:49:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ippl-1.4.14-r5.ebuild,v 1.1 2015/01/13 18:23:12 jer Exp $
 
 EAPI=5
-
 inherit eutils toolchain-funcs user
 
 DESCRIPTION="A daemon which logs TCP/UDP/ICMP packets"
@@ -13,7 +12,6 @@ SRC_URI="http://pltplp.net/ippl/archive/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
-IUSE=""
 
 DEPEND="virtual/yacc
 	>=sys-devel/flex-2.5.4a-r4"
@@ -23,13 +21,17 @@ src_prepare() {
 		"${FILESDIR}"/ippl-1.4.14-noportresolve.patch \
 		"${FILESDIR}"/ippl-1.4.14-manpage.patch \
 		"${FILESDIR}"/ippl-1.4.14-privilege-drop.patch \
-		"${FILESDIR}"/ippl-1.4.14-includes.patch
+		"${FILESDIR}"/ippl-1.4.14-includes.patch \
+		"${FILESDIR}"/ippl-1.4.14-format-warnings.patch
+
 	sed -i Source/Makefile.in \
 		-e 's|^LDFLAGS=|&@LDFLAGS@|g' \
 		|| die
+
 	sed -i Makefile.in \
 		-e 's|make |$(MAKE) |g' \
 		|| die
+
 	# fix for bug #351287
 	sed -i -e '/lex.yy.c/s/ippl.l/& y.tab.c/' Source/Makefile.in \
 		|| die

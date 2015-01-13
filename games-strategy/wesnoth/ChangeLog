@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/wesnoth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.236 2013/12/31 07:29:23 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.237 2015/01/13 18:11:11 mr_bones_ Exp $
+
+*wesnoth-1.12 (13 Jan 2015)
+
+  13 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> +wesnoth-1.12.ebuild,
+  metadata.xml:
+  version bump (bug #530642)
 
   31 Dec 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/wesnoth-1.10.4-boost.patch, -wesnoth-1.10.4.ebuild,
