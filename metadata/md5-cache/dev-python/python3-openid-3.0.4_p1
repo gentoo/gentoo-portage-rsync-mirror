@@ -10,5 +10,5 @@ RDEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targ
 REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=https://github.com/necaris/python3-openid/archive/47a15d30b962a4316473ae9909b3405773d78181.tar.gz -> python3-openid-3.0.4_p1.tar.gz
-_eclasses_=distutils-r1	6d697abf6c0c1d32af2c025a6b75e775	eutils	f99a767f569b1f0731b3a1edd17c1d11	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	5e9a53457b774d41e731613823baeb37	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=distutils-r1	5cf77567a87c3a6f59d6a51848ebde98	eutils	f99a767f569b1f0731b3a1edd17c1d11	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=62ce38d36101020d0a9be25783d7c15f

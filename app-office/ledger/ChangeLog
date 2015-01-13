@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ledger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.30 2015/01/13 21:05:19 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.31 2015/01/13 21:34:51 yac Exp $
+
+  13 Jan 2015; Jan Matejka <yac@gentoo.org> ledger-3.1.ebuild:
+  fix distfile name
 
 *ledger-3.1 (13 Jan 2015)
 

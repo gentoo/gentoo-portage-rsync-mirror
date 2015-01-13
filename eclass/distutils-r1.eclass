@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.108 2014/12/28 10:56:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.109 2015/01/13 21:34:55 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -180,6 +180,31 @@ fi
 # on the sources directly, prepending setup.py arguments with
 # 'build --build-base ${BUILD_DIR}' to enforce keeping & using built
 # files in the specific root.
+
+# @ECLASS-VARIABLE: DISTUTILS_ALL_SUBPHASE_IMPLS
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# An array of patterns specifying which implementations can be used
+# for *_all() sub-phase functions. If undefined, defaults to '*'
+# (allowing any implementation). If multiple values are specified,
+# implementations matching any of the patterns will be accepted.
+#
+# If the restriction needs to apply conditionally to a USE flag,
+# the variable should be set conditionally as well (e.g. in an early
+# phase function or other convenient location).
+#
+# Please remember to add a matching || block to REQUIRED_USE,
+# to ensure that at least one implementation matching the patterns will
+# be enabled.
+#
+# Example:
+# @CODE
+# REQUIRED_USE="doc? ( || ( $(python_gen_useflags 'python2*') ) )"
+#
+# pkg_setup() {
+#     use doc && DISTUTILS_ALL_SUBPHASE_IMPLS=( 'python2*' )
+# }
+# @CODE
 
 # @ECLASS-VARIABLE: mydistutilsargs
 # @DEFAULT_UNSET
@@ -624,24 +649,30 @@ distutils-r1_run_phase() {
 # @USAGE: [<argv>...]
 # @INTERNAL
 # @DESCRIPTION:
-# Run the given command, restoring the best-implementation state.
+# Run the given command, restoring the state for a most preferred Python
+# implementation matching DISTUTILS_ALL_SUBPHASE_IMPLS.
 #
 # If in-source build is used, the command will be run in the copy
-# of sources made for the best Python interpreter.
+# of sources made for the selected Python interpreter.
 _distutils-r1_run_common_phase() {
 	local DISTUTILS_ORIG_BUILD_DIR=${BUILD_DIR}
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-		local _DISTUTILS_INITIAL_CWD=${PWD}
-		local MULTIBUILD_VARIANTS
-		_python_obtain_impls
+		local best_impl patterns=( "${DISTUTILS_ALL_SUBPHASE_IMPLS[@]-*}" )
+		_distutils_try_impl() {
+			local pattern
+			for pattern in "${patterns[@]}"; do
+				if [[ ${EPYTHON} == ${pattern} ]]; then
+					best_impl=${MULTIBUILD_VARIANT}
+				fi
+			done
+		}
+		python_foreach_impl _distutils_try_impl
 
-		multibuild_for_best_variant _python_multibuild_wrapper \
-			distutils-r1_run_phase "${@}"
-	else
-		# semi-hack, be careful.
-		_distutils-r1_run_foreach_impl "${@}"
+		local PYTHON_COMPAT=( "${best_impl}" )
 	fi
+
+	_distutils-r1_run_foreach_impl "${@}"
 }
 
 # @FUNCTION: _distutils-r1_run_foreach_impl

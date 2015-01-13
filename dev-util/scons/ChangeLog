@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.155 2014/10/11 16:12:26 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.156 2015/01/13 22:00:49 floppym Exp $
+
+  13 Jan 2015; Mike Gilbert <floppym@gentoo.org> scons-2.3.4.ebuild:
+  Keyword ~amd64-fbsd, tested by Yutah SATOH on bug 488434.
 
 *scons-2.3.4 (11 Oct 2014)
 

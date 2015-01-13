@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libmemcached
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.79 2015/01/01 11:23:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.80 2015/01/13 21:37:45 prometheanfire Exp $
+
+*libmemcached-1.0.18-r2 (13 Jan 2015)
+
+  13 Jan 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +libmemcached-1.0.18-r2.ebuild,
+  -files/libmemcached-0.28-removebogustest.patch,
+  -files/libmemcached-0.28-runtestsasuser.patch,
+  -files/libmemcached-0.39-runtestsasuser.patch, -libmemcached-0.50.ebuild:
+  fixing bug 536158
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libmemcached-1.0.18.ebuild:
   Stable for ppc64, wrt bug #530960

@@ -1,6 +1,15 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1507 2015/01/12 23:17:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1510 2015/01/13 21:35:29 mgorny Exp $
+
+  13 Jan 2015; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Deprecate python_export_best() verbosely.
+
+  13 Jan 2015; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Support restricting implementations for *_all() phases.
+
+  13 Jan 2015; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Support restricting accepted implementation list for python_setup.
 
   12 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> autotools.eclass:
   Attempt to fix bug #536428.
