@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.5 2014/12/17 15:19:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.6 2015/01/13 10:35:44 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps git-r3 multilib qt4-r2 user
@@ -25,7 +25,6 @@ GTK_COMMON_DEPEND="
 	x11-libs/gdk-pixbuf
 	x11-libs/pango
 	x11-misc/xdg-utils
-	virtual/freedesktop-icon-theme
 "
 CDEPEND="
 	>=dev-libs/glib-2.14:2
@@ -80,6 +79,9 @@ DEPEND="
 "
 RDEPEND="
 	${CDEPEND}
+	gtk3? ( virtual/freedesktop-icon-theme )
+	qt4? ( virtual/freedesktop-icon-theme )
+	qt5? ( virtual/freedesktop-icon-theme )
 	selinux? ( sec-policy/selinux-wireshark )
 "
 
