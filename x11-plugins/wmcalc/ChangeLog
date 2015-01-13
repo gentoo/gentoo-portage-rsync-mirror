@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmcalc
-# Copyright 2002-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.21 2012/02/15 09:44:32 voyageur Exp $
+# Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.22 2015/01/13 12:41:19 voyageur Exp $
+
+*wmcalc-0.5 (13 Jan 2015)
+
+  13 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> +wmcalc-0.5.ebuild:
+  Version bump with new homepage, ebuild cleanup
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmcalc-0.4.ebuild:
   Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
