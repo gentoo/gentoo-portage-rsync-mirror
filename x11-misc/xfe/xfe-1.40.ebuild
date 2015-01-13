@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.37.ebuild,v 1.2 2014/10/08 06:24:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.40.ebuild,v 1.1 2015/01/13 08:17:05 jer Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PLOCALES="
 	bs ca cs da de el es_AR es_CO es fr hu it ja nl no pl pt_BR pt_PT ru sv tr
 	zh_CN zh_TW
 "
-inherit autotools base l10n
+inherit autotools l10n
 
 DESCRIPTION="MS-Explorer-like minimalist file manager for X"
 HOMEPAGE="http://roland65.free.fr/xfe"
@@ -37,12 +37,7 @@ DEPEND="
 
 DOCS=( AUTHORS BUGS ChangeLog README TODO )
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-1.32.2-missing_Xlib_h.patch
-)
-
 src_prepare() {
-	base_src_prepare
 	cat >po/POTFILES.skip <<-EOF
 	src/icons.cpp
 	xfe.desktop.in.in
@@ -64,7 +59,6 @@ src_prepare() {
 
 	sed -i \
 		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
-		-e 's|freetype/config/ftheader.h|ft2build.h|' \
 		configure.ac || die
 
 	eautoreconf
@@ -72,8 +66,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--enable-minimalflags \
+		$(use_enable debug) \
 		$(use_enable nls) \
 		$(use_enable startup-notification sn) \
-		$(use_enable debug)
+		--enable-minimalflags
 }
