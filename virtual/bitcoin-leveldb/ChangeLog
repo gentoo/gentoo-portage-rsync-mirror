@@ -1,6 +1,9 @@
 # ChangeLog for virtual/bitcoin-leveldb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/ChangeLog,v 1.4 2014/11/13 18:10:57 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/ChangeLog,v 1.5 2015/01/13 11:46:19 blueness Exp $
+
+  13 Jan 2015; Anthony G. Basile <blueness@gentoo.org> bitcoin-leveldb-0.ebuild:
+  Stable on amd64, arm and x86, bug #536228
 
   13 Nov 2014; Anthony G. Basile <blueness@gentoo.org> bitcoin-leveldb-0.ebuild:
   Reorder dependency order

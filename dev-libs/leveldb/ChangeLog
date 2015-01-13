@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/leveldb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.24 2014/08/23 02:04:29 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.25 2015/01/13 11:42:13 blueness Exp $
+
+  13 Jan 2015; Anthony G. Basile <blueness@gentoo.org> leveldb-1.9.0-r6.ebuild:
+  Stable on amd64, arm and x86, bug #536228
 
   23 Aug 2014; Mike Gilbert <floppym@gentoo.org> leveldb-1.17.ebuild:
   Use a stable tarball.
