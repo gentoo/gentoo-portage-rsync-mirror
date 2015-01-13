@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cholmod
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.42 2014/03/04 19:52:00 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.43 2015/01/13 17:09:49 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> cholmod-2.1.2.ebuild:
+  Stable for HPPA (bug #534648).
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> cholmod-2.1.2.ebuild:
   Add ~mips keyword.

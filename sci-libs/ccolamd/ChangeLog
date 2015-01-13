@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.34 2014/03/04 19:45:44 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.35 2015/01/13 17:06:26 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> ccolamd-2.8.0.ebuild:
+  Stable for HPPA (bug #534642).
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org> ccolamd-2.8.0.ebuild:
   Add ~mips keyword.

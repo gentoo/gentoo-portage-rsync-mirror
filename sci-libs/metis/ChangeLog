@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/metis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.37 2015/01/04 15:13:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.38 2015/01/13 17:13:22 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> metis-4.0.3.ebuild:
+  Stable for HPPA (bug #534644).
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> metis-4.0.3.ebuild:
   Bump EAPI

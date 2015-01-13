@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/dbix-searchbuilder
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.92 2014/11/16 16:29:15 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.93 2015/01/13 17:16:06 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  dbix-searchbuilder-1.660.0.ebuild:
+  Stable for HPPA (bug #535258).
 
 *dbix-searchbuilder-1.660.0 (16 Nov 2014)
 
