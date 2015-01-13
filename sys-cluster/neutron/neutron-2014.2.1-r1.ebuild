@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.ebuild,v 1.4 2014/11/22 00:00:53 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.1-r1.ebuild,v 1.1 2015/01/13 03:59:07 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -37,6 +37,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/oslo-sphinx-2.2.0[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
+				!~dev-python/testtools-1.4.0[${PYTHON_USEDEP}]
 				>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
 				dev-python/configobj[${PYTHON_USEDEP}] )"
 
@@ -105,6 +106,7 @@ RDEPEND="
 	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
+	!~dev-python/oslo-messaging-1.5.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-rootwrap-1.3.0[${PYTHON_USEDEP}]
 	>=dev-python/python-novaclient-2.18.0[${PYTHON_USEDEP}]
 	dev-python/pyudev[${PYTHON_USEDEP}]
@@ -114,6 +116,7 @@ RDEPEND="
 	dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
 PATCHES=(
+	"${FILESDIR}/CVE-2014-8153-juno.patch"
 )
 
 pkg_setup() {
@@ -123,7 +126,7 @@ pkg_setup() {
 	NF_NAT_IPV4 NF_NAT NF_CONNTRACK IPTABLE_FILTER IP_TABLES X_TABLES"
 	if linux_config_exists; then
 		for module in ${CONFIG_CHECK_MODULES}; do
-			linux_chkconfig_present ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
+			linux_chkconfig_present ${module} || ewarn "${module} needs to be enabled in kernel"
 		done
 	fi
 	enewgroup neutron

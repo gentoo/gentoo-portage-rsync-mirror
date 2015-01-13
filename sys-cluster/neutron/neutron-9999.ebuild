@@ -1,91 +1,134 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.14 2014/08/10 20:20:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.15 2015/01/13 03:59:07 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 git-2 user
+inherit distutils-r1 git-2 linux-info user
 
 DESCRIPTION="A virtual network service for Openstack"
 HOMEPAGE="https://launchpad.net/neutron"
 EGIT_REPO_URI="https://github.com/openstack/neutron.git"
+EGIT_BRANCH="master"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+dhcp doc +l3 +metadata +openvswitch +server test sqlite mysql postgres"
+IUSE="dhcp doc l3 metadata openvswitch linuxbridge server test sqlite mysql postgres"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #the cliff dep is as below because it depends on pyparsing, which only has 2.7 OR 3.2, not both
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.8[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		app-admin/sudo
-		test? ( >=dev-python/hacking-0.8.0[${PYTHON_USEDEP}]
-				<dev-python/hacking-0.9[${PYTHON_USEDEP}]
-				>=dev-python/cliff-1.4.3[${PYTHON_USEDEP}]
+		test? ( >=dev-python/hacking-0.9.2[${PYTHON_USEDEP}]
+				<dev-python/hacking-0.10[${PYTHON_USEDEP}]
+				>=dev-python/cliff-1.7.0[${PYTHON_USEDEP}]
 				>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 				>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
 				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 				>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
+				dev-python/ordereddict[${PYTHON_USEDEP}]
+				>=dev-python/requests-mock-0.4.0[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-				<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
+				!~dev-python/sphinx-1.2.0[${PYTHON_USEDEP}]
+				<dev-python/sphinx-1.3[${PYTHON_USEDEP}]
+				>=dev-python/oslo-sphinx-2.2.0[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
+				!~dev-python/testtools-1.4.0[${PYTHON_USEDEP}]
 				>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
 				dev-python/configobj[${PYTHON_USEDEP}] )"
 
-RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
-		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
-		>=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
-		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
-		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
-		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
-		>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
-		>=dev-python/requests-1.1[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
-		dev-python/jsonrpclib[${PYTHON_USEDEP}]
-		dev-python/jinja[${PYTHON_USEDEP}]
-		>=dev-python/kombu-2.4.8[${PYTHON_USEDEP}]
-		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
-		>=dev-python/python-neutronclient-2.3.4[${PYTHON_USEDEP}]
-		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
-		sqlite? (
-			>=dev-python/sqlalchemy-0.8.0[sqlite,${PYTHON_USEDEP}]
-			!~dev-python/sqlalchemy-0.9.5[sqlite,${PYTHON_USEDEP}]
-	        <=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+RDEPEND="
+	dev-python/paste[${PYTHON_USEDEP}]
+	>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
+	>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
+	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
+	>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
+	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+	>=dev-python/eventlet-0.15.1[${PYTHON_USEDEP}]
+	>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
+	>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
+	>=dev-python/requests-1.2.1[${PYTHON_USEDEP}]
+	!~dev-python/requests-2.4.0[${PYTHON_USEDEP}]
+	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
+	dev-python/jsonrpclib[${PYTHON_USEDEP}]
+	dev-python/jinja[${PYTHON_USEDEP}]
+	>=dev-python/keystonemiddleware-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
+	>=dev-python/python-neutronclient-2.3.6[${PYTHON_USEDEP}]
+	<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
+	sqlite? (
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
+			)
 		)
-		mysql? (
-			dev-python/mysql-python
-			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
-			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
-			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
+	mysql? (
+		dev-python/mysql-python
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
 		)
-		postgres? (
-			dev-python/psycopg:2
-			>=dev-python/sqlalchemy-0.8.0[${PYTHON_USEDEP}]
-			!~dev-python/sqlalchemy-0.9.5[${PYTHON_USEDEP}]
-			<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
+	postgres? (
+		dev-python/psycopg:2
+		|| (
+			(
+				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
+			)
+			(
+				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+			)
 		)
-		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
-		>=dev-python/python-keystoneclient-0.7.0[${PYTHON_USEDEP}]
-		>=dev-python/alembic-0.4.1[${PYTHON_USEDEP}]
-		>=dev-python/six-1.5.2[${PYTHON_USEDEP}]
-		>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		dev-python/oslo-rootwrap[${PYTHON_USEDEP}]
-		>=dev-python/python-novaclient-2.17.0[${PYTHON_USEDEP}]
-		dev-python/pyudev[${PYTHON_USEDEP}]
-		sys-apps/iproute2
-		openvswitch? ( net-misc/openvswitch )
-		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
+	)
+	>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
+	>=dev-python/python-keystoneclient-0.10.0[${PYTHON_USEDEP}]
+	>=dev-python/alembic-0.6.4[${PYTHON_USEDEP}]
+	>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
+	>=dev-python/stevedore-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
+	!~dev-python/oslo-messaging-1.5.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-rootwrap-1.3.0[${PYTHON_USEDEP}]
+	>=dev-python/python-novaclient-2.18.0[${PYTHON_USEDEP}]
+	dev-python/pyudev[${PYTHON_USEDEP}]
+	sys-apps/iproute2
+	net-firewall/ipset
+	openvswitch? ( net-misc/openvswitch )
+	dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
-PATCHES=( "${FILESDIR}/sphinx_mapping.patch" )
+PATCHES=(
+)
 
 pkg_setup() {
+	linux-info_pkg_setup
+	CONFIG_CHECK_MODULES="8021Q IP6TABLE_FILTER IP6_TABLES IPT_REJECT \
+	IPTABLE_MANGLE IPT_MASQUERADE IPTABLE_NAT NF_CONNTRACK_IPV4 NF_DEFRAG_IPV4 \
+	NF_NAT_IPV4 NF_NAT NF_CONNTRACK IPTABLE_FILTER IP_TABLES X_TABLES"
+	if linux_config_exists; then
+		for module in ${CONFIG_CHECK_MODULES}; do
+			linux_chkconfig_present ${module} || ewarn "${module} needs to be enabled in kernel"
+		done
+	fi
 	enewgroup neutron
 	enewuser neutron -1 -1 /var/lib/neutron neutron
 }
@@ -122,39 +165,58 @@ python_test() {
 
 python_install() {
 	distutils-r1_python_install
-	newconfd "${FILESDIR}/neutron-confd" "neutron"
-	newinitd "${FILESDIR}/neutron-initd" "neutron"
-
-	use server && dosym /etc/init.d/neutron /etc/init.d/neutron-server
-	use dhcp && dosym /etc/init.d/neutron /etc/init.d/neutron-dhcp-agent
-	use l3 && dosym /etc/init.d/neutron /etc/init.d/neutron-l3-agent
-	use metadata && dosym /etc/init.d/neutron /etc/init.d/neutron-metadata-agent
-	use openvswitch && dosym /etc/init.d/neutron /etc/init.d/neutron-openvswitch-agent
-
-	diropts -m 750
-	dodir /var/log/neutron /var/log/neutron
-	fowners neutron:neutron /var/log/neutron
+	if use server; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-server"
+		newconfd "${FILESDIR}/neutron-server.confd" "neutron-server"
+		dosym /etc/neutron/plugin.ini /etc/neutron/plugins/ml2/ml2_conf.ini
+	fi
+	if use dhcp; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-dhcp-agent"
+		newconfd "${FILESDIR}/neutron-dhcp-agent.confd" "neutron-dhcp-agent"
+	fi
+	if use l3; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-l3-agent"
+		newconfd "${FILESDIR}/neutron-l3-agent.confd" "neutron-l3-agent"
+	fi
+	if use metadata; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-metadata-agent"
+		newconfd "${FILESDIR}/neutron-metadata-agent.confd" "neutron-metadata-agent"
+	fi
+	if use openvswitch; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-openvswitch-agent"
+		newconfd "${FILESDIR}/neutron-openvswitch-agent.confd" "neutron-openvswitch-agent"
+		newinitd "${FILESDIR}/neutron.initd" "neutron-ovs-cleanup"
+		newconfd "${FILESDIR}/neutron-openvswitch-agent.confd" "neutron-ovs-cleanup"
+	fi
+	if use linuxbridge; then
+		newinitd "${FILESDIR}/neutron.initd" "neutron-linuxbridge-agent"
+		newconfd "${FILESDIR}/neutron-linuxbridge-agent.confd" "neutron-linuxbridge-agent"
+	fi
+	diropts -m 755 -o neutron -g neutron
+	dodir /var/log/neutron /var/lib/neutron
 	keepdir /etc/neutron
 	insinto /etc/neutron
+	insopts -m 0640 -o neutron -g neutron
 
-	doins "etc/api-paste.ini"
-	doins "etc/dhcp_agent.ini"
-	doins "etc/l3_agent.ini"
-	doins "etc/policy.json"
-	doins "etc/neutron.conf"
+	doins etc/*
+	# stupid renames
+	rm "${D}etc/neutron/quantum"
+	insinto /etc/neutron
+	doins -r "etc/neutron/plugins"
+	insopts -m 0640 -o root -g root
 	doins "etc/rootwrap.conf"
-	insinto /etc
-	doins -r "etc/neutron/"
-
-	#remove the etc stuff from usr...
-	rm -R "${D}/usr/etc/"
+	doins -r "etc/neutron/rootwrap.d"
 
 	insinto "/usr/lib64/python2.7/site-packages/neutron/db/migration/alembic_migrations/"
 	doins -r "neutron/db/migration/alembic_migrations/versions"
 
 	#add sudoers definitions for user neutron
 	insinto /etc/sudoers.d/
-	doins "${FILESDIR}/neutron-sudoers"
+	insopts -m 0440 -o root -g root
+	newins "${FILESDIR}/neutron.sudoersd" neutron
+
+	#remove superfluous stuff 
+	rm -R "${D}/usr/etc/"
 }
 
 python_install_all() {
