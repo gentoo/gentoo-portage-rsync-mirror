@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/rackspace-monitoring-cli
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-monitoring-cli/ChangeLog,v 1.4 2014/08/10 21:20:41 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-monitoring-cli/ChangeLog,v 1.6 2015/01/13 21:31:08 prometheanfire Exp $
+
+  13 Jan 2015; Matthew Thode <prometheanfire@gentoo.org>
+  rackspace-monitoring-cli-0.6.2-r1.ebuild:
+  really fixing it this time
+
+*rackspace-monitoring-cli-0.6.2-r1 (13 Jan 2015)
+
+  13 Jan 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +rackspace-monitoring-cli-0.6.2-r1.ebuild:
+  fixing bug 534400
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   rackspace-monitoring-cli-0.5.2.ebuild, rackspace-monitoring-cli-0.6.2.ebuild:
