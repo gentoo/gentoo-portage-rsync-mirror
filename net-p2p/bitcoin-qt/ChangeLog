@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.90 2015/01/10 17:19:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.91 2015/01/13 20:04:38 blueness Exp $
+
+  13 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.8.6-r1.ebuild:
+  Stable on amd64, arm and x86, bug #536228
 
 *bitcoin-qt-0.8.6-r1 (10 Jan 2015)
 *bitcoin-qt-0.9.3-r1 (10 Jan 2015)

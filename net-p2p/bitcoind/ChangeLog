@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.94 2015/01/10 17:02:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.95 2015/01/13 20:03:00 blueness Exp $
+
+  13 Jan 2015; Anthony G. Basile <blueness@gentoo.org> bitcoind-0.8.6-r2.ebuild:
+  Stable on amd64, arm and x86, bug #536228
 
 *bitcoind-0.8.6-r2 (10 Jan 2015)
 *bitcoind-0.9.3-r1 (10 Jan 2015)
