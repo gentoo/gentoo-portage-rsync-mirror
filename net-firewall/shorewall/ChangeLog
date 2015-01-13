@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.269 2015/01/04 09:49:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.270 2015/01/13 15:53:24 jer Exp $
+
+  13 Jan 2015; Jeroen Roovers <jer@gentoo.org> shorewall-4.5.21.10-r1.ebuild:
+  Stable for HPPA (bug #535560).
 
 *shorewall-4.6.5.3 (04 Jan 2015)
 
