@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man-db
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.77 2014/12/22 10:16:44 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.78 2015/01/13 14:31:25 polynomial-c Exp $
+
+  13 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> man-db-2.6.6.ebuild,
+  man-db-2.6.7.1.ebuild, man-db-2.7.1.ebuild:
+  Fixed dependency on app-text/po4a as per bug #534224.
 
 *man-db-2.7.1 (22 Dec 2014)
 

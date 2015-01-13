@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.6.ebuild,v 1.12 2014/11/02 09:48:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.6.ebuild,v 1.13 2015/01/13 14:31:25 polynomial-c Exp $
 
 EAPI="4"
 
@@ -26,7 +26,7 @@ DEPEND="${CDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
 	nls? (
-		app-text/po4a
+		>=app-text/po4a-0.45
 		sys-devel/gettext
 	)"
 RDEPEND="${CDEPEND}
