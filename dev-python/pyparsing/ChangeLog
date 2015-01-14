@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparsing
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.106 2014/11/09 09:56:22 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.107 2015/01/14 07:37:16 idella4 Exp $
+
+  14 Jan 2015; Ian Delaney <idella4@gentoo.org> -pyparsing-2.0.2.ebuild,
+  pyparsing-2.0.3.ebuild:
+  tidy to install, rm old
 
 *pyparsing-2.0.3 (09 Nov 2014)
 

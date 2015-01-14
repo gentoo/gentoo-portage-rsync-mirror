@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-2.0.3.ebuild,v 1.1 2014/11/09 09:56:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/pyparsing-2.0.3.ebuild,v 1.2 2015/01/14 07:37:16 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -20,9 +20,10 @@ RDEPEND="!dev-python/pyparsing:py2 !dev-python/pyparsing:py3"
 
 python_install_all() {
 	local HTML_DOCS=( HowToUsePyparsing.html )
-	use doc && HTML_DOCS+=( htmldoc/ )
+	if use doc; then
+		HTML_DOCS+=( htmldoc/. )
+		dodoc docs/*.pdf
+	fi
 	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
-
-	use doc && dodoc docs/*.pdf
 }
