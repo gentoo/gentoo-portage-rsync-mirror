@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/graph-tool-2.2.35.ebuild,v 1.2 2014/10/14 02:52:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/graph-tool-2.2.36.ebuild,v 1.1 2015/01/14 03:43:42 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit check-reqs eutils toolchain-funcs python-r1
+inherit check-reqs toolchain-funcs python-r1
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.skewed.de/graph-tool"
@@ -46,7 +46,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 CHECKREQS_DISK_BUILD="6G"
 
 pkg_pretend() {
-	if use openmp ; then
+	if use openmp; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
 	fi
 	check-reqs_pkg_pretend

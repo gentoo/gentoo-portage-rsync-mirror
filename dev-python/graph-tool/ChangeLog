@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/graph-tool
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.19 2014/10/14 02:57:16 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.20 2015/01/14 03:43:42 idella4 Exp $
+
+*graph-tool-2.2.36 (14 Jan 2015)
+
+  14 Jan 2015; Ian Delaney <idella4@gentoo.org> +graph-tool-2.2.36.ebuild,
+  -graph-tool-2.2.31.ebuild, -graph-tool-2.2.35.ebuild, graph-tool-9999.ebuild:
+  bump; clean old impl, rm old
 
   14 Oct 2014; Ian Delaney <idella4@gentoo.org> graph-tool-2.2.35.ebuild,
   graph-tool-9999.ebuild:
