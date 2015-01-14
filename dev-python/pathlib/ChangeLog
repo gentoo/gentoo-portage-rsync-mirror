@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pathlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pathlib/ChangeLog,v 1.6 2014/12/11 16:58:32 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pathlib/ChangeLog,v 1.7 2015/01/14 03:09:09 idella4 Exp $
+
+  14 Jan 2015; Ian Delaney <idella4@gentoo.org> pathlib-1.0.1.ebuild:
+  clean old impl
 
   11 Dec 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Bring pathlib into the python herd.

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/translationstring
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.16 2014/12/08 04:05:53 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.17 2015/01/14 03:25:38 idella4 Exp $
+
+  14 Jan 2015; Ian Delaney <idella4@gentoo.org> -translationstring-0.3.ebuild,
+  -translationstring-0.4.ebuild, -translationstring-1.1-r1.ebuild,
+  -translationstring-1.1.ebuild, translationstring-1.3.ebuild:
+  re-add README.txt to DOCS, rm old
 
   08 Dec 2014; Ian Delaney <idella4@gentoo.org> translationstring-1.3.ebuild:
   clean old impl, add pypy3
