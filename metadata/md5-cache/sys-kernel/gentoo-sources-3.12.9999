@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
-DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync >=dev-vcs/git-1.8.2.1
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Full sources including the Gentoo patchset for the 3.12 kernel tree
 EAPI=5
 HOMEPAGE=http://dev.gentoo.org/~mpagano/genpatches
-IUSE=deblob experimental symlink build deblob
-LICENSE=GPL-2 !deblob? ( freedist )
+IUSE=deblob experimental symlink build
+LICENSE=GPL-2 freedist
 PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
 SLOT=3.12.9999
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.12.tar.xz
 _eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	git-r3	6ebae45064cb04482f3c702632dd9528	kernel-2	e0363401e3e385deca89bb9a22b528bb	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=6c591172f99f0ec1d5d90e18ef099cda
+_md5_=1e4e3d5da51294d0fe63f9057614d95a

@@ -1,6 +1,18 @@
 # ChangeLog for gnome-extra/synapse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.23 2014/01/19 15:20:08 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/ChangeLog,v 1.24 2015/01/14 13:21:19 pacho Exp $
+
+*synapse-0.2.10-r1 (14 Jan 2015)
+
+  14 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/synapse-0.2.10-check-null-exec.patch,
+  +files/synapse-0.2.10-fix-border-painting.patch,
+  +files/synapse-0.2.10-fix-check-desktop.patch,
+  +files/synapse-0.2.10-gnome-3.10.patch,
+  +files/synapse-0.2.10-libgee-0.8.patch, +files/synapse-0.2.10-zeitgeist.patch,
+  +synapse-0.2.10-r1.ebuild:
+  Apply opensuse and Arch patches to fix support for current gnome, newer vala
+  and newer libgee (#527854)
 
   19 Jan 2014; Justin Lecher <jlec@gentoo.org> synapse-0.2.10.ebuild:
   Set max version for vala
@@ -91,4 +103,3 @@
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> +synapse-0.2.4.ebuild,
   +metadata.xml:
   Initial commit. Ebuild by signals@gentoo.org.
-
