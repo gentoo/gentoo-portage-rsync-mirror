@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/rxvt-unicode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.266 2014/09/24 07:00:49 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.268 2015/01/14 14:49:39 jer Exp $
+
+  14 Jan 2015; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.21.ebuild:
+  Update LICENSE.
+
+*rxvt-unicode-9.21 (14 Jan 2015)
+
+  14 Jan 2015; Jeroen Roovers <jer@gentoo.org> +rxvt-unicode-9.21.ebuild,
+  +files/rxvt-unicode-9.21-xsubpp.patch:
+  Version bump (bug #536572).
 
   24 Sep 2014; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.20.ebuild:
   EAPI bump, depend on dev-lang/perl:= (bug #523582).
