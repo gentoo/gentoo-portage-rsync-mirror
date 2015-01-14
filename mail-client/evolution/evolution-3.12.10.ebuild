@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.4.ebuild,v 1.3 2014/07/23 15:18:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.10.ebuild,v 1.1 2015/01/14 10:16:00 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils flag-o-matic readme.gentoo gnome2 #autotools
+inherit eutils flag-o-matic readme.gentoo gnome2
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
 LICENSE="|| ( LGPL-2 LGPL-3 ) CC-BY-SA-3.0 FDL-1.3+ OPENLDAP"
 SLOT="2.0"
 IUSE="+bogofilter crypt highlight ldap map spamassassin spell ssl +weather"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -23,6 +23,8 @@ PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pi
 
 # glade-3 support is for maintainers only per configure.ac
 # pst is not mature enough and changes API/ABI frequently
+# FIXME: You need to have gnome-icon-theme or adwaita-icon-theme installed
+# (last one not yet in the tree)
 COMMON_DEPEND="
 	>=app-crypt/gcr-3.4
 	>=dev-libs/glib-2.36:2
@@ -47,11 +49,8 @@ COMMON_DEPEND="
 	x11-libs/libSM
 	x11-libs/libICE
 
-	crypt? ( || (
-		( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
-		=app-crypt/gnupg-1.4* ) )
+	crypt? ( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
 	map? (
-		>=app-misc/geoclue-0.12.0:0
 		>=media-libs/libchamplain-0.12:0.12[gtk]
 		>=media-libs/clutter-1.0.0:1.0
 		>=media-libs/clutter-gtk-0.90:1.0
@@ -93,14 +92,12 @@ x-scheme-handler/https=firefox.desktop
 file from /usr/share/applications if you use a different browser)."
 
 src_prepare() {
-	# Reason?
+	# Fix relink issues in src_install
 	ELTCONF="--reverse-deps"
-
-	#eautoreconf # See https://bugzilla.gnome.org/701904
 
 	gnome2_src_prepare
 
-	# Fix compilation flags crazyness
+	# Fix compilation flags crazyness, upstream bug #653157
 	sed -e 's/\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
 		-i configure || die "CPPFLAGS sed failed"
 }

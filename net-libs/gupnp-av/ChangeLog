@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gupnp-av
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.45 2014/12/15 15:36:34 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.46 2015/01/14 10:28:24 pacho Exp $
+
+*gupnp-av-0.12.7 (14 Jan 2015)
+
+  14 Jan 2015; Pacho Ramos <pacho@gentoo.org> +gupnp-av-0.12.7.ebuild:
+  Version bump
 
   15 Dec 2014; Pacho Ramos <pacho@gentoo.org> -gupnp-av-0.12.5.ebuild,
   gupnp-av-0.12.6.ebuild:
