@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.30 2015/01/13 03:21:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.32 2015/01/14 00:47:04 idella4 Exp $
+
+*cryptography-0.7.1-r1 (14 Jan 2015)
+
+  14 Jan 2015; Ian Delaney <idella4@gentoo.org> +cryptography-0.7.1-r1.ebuild,
+  +cryptography-0.7.ebuild, +files/0.7-setup.patch, -cryptography-0.7.1.ebuild:
+  revbump; re-add pypy support, update and tidy deps, patch (from upstream) to
+  correct their own oversight in setup.py re use of enum34, ebuild cross checked
+  and tested by Arfrever.
 
 *cryptography-0.7.1 (13 Jan 2015)
 
