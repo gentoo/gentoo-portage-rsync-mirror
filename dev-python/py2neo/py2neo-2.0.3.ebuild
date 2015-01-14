@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/py2neo-2.0.2.ebuild,v 1.1 2014/12/25 08:53:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/py2neo-2.0.3.ebuild,v 1.1 2015/01/14 04:53:52 idella4 Exp $
 
 EAPI=5
 
