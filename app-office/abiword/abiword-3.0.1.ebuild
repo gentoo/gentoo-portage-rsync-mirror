@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.9 2014/03/01 22:15:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.1.ebuild,v 1.1 2015/01/14 11:38:16 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="calendar collab cups eds +goffice grammar +introspection latex map math ots +plugins readline redland spell wordperfect wmf thesaurus"
 
 # You need 'plugins' enabled if want to enable the extra plugins
@@ -71,15 +71,6 @@ src_prepare() {
 	sed '/readme\.txt\|abw/d' \
 		-i user/wp/Makefile.am user/wp/Makefile.in || die
 
-	# http://bugzilla.abisource.com/show_bug.cgi?id=13532
-	epatch "${FILESDIR}/${PN}-3.0.0-eds-3.6.patch"
-
-	# http://bugzilla.abisource.com/show_bug.cgi?id=13564
-	epatch "${FILESDIR}/${PN}-3.0.0-fix-crash.patch"
-
-	# http://bugzilla.abisource.com/show_bug.cgi?id=13589
-	epatch "${FILESDIR}/${PN}-3.0.0-libgcrypt_1_6_0-1.patch"
-
 	gnome2_src_prepare
 }
 
@@ -92,8 +83,7 @@ src_configure() {
 			loadbindings mswrite garble pdb applix opendocument sdw xslfo"
 
 		# Plugins depending on librsvg
-		# But doesn't build: http://bugzilla.abisource.com/show_bug.cgi?id=13563
-		#plugins="${plugins} svg"
+		plugins="${plugins} svg"
 
 		# Plugins not depending on anything
 		plugins="${plugins} gimp bmp freetranslation iscii s5 babelfish opml eml
