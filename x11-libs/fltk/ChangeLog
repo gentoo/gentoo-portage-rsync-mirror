@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.245 2014/12/03 23:43:18 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.246 2015/01/14 09:21:32 jer Exp $
+
+  14 Jan 2015; Jeroen Roovers <jer@gentoo.org> fltk-1.3.3-r2.ebuild:
+  Add USE=pdf dependencies (bug #536566).
 
   03 Dec 2014; Jeroen Roovers <jer@gentoo.org> -fltk-1.3.3.ebuild:
   Old.

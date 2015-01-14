@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.3-r2.ebuild,v 1.1 2014/12/03 23:41:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.3-r2.ebuild,v 1.2 2015/01/14 09:21:32 jer Exp $
 
 EAPI=5
 
@@ -31,7 +31,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	doc? (
 		app-doc/doxygen
-		pdf? ( dev-texlive/texlive-latex )
+		pdf? (
+			dev-texlive/texlive-fontutils
+			dev-texlive/texlive-latex
+			dev-texlive/texlive-latexextra
+		)
 	)
 	xinerama? ( x11-proto/xineramaproto )"
 
@@ -98,15 +102,13 @@ src_configure() {
 src_compile() {
 	default
 	if use doc; then
-		cd "${S}"/documentation
-		emake html
+		emake -C documentation html
 		if use pdf; then
-			emake pdf
+			emake -C documentation pdf
 		fi
 	fi
 	if use games; then
-		cd "${S}"/test
-		emake blocks checkers sudoku
+		emake -C test blocks checkers sudoku
 	fi
 }
 

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=SeaMonkey
 Comment=SeaMonkey Suite
-Exec=seamonkey %U
+Exec=seamonkey %u
 Icon=seamonkey
 Terminal=false
 Type=Application

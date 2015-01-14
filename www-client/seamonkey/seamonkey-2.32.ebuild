@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.31-r1.ebuild,v 1.4 2015/01/14 09:01:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.32.ebuild,v 1.1 2015/01/14 09:01:55 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -30,8 +30,8 @@ MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT="enabled"
 inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v5.34 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
-PATCHFF="firefox-34.0-patches-0.1"
-PATCH="${PN}-2.30-patches-01"
+PATCHFF="firefox-35.0-patches-0.1"
+PATCH="${PN}-2.32-patches-01"
 EMVER="1.7.2"
 
 DESCRIPTION="Seamonkey Web Browser"
@@ -40,11 +40,11 @@ HOMEPAGE="http://www.seamonkey-project.org"
 if [[ ${PV} == *_pre* ]] ; then
 	# pre-releases. No need for arch teams to change KEYWORDS here.
 
-	KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86"
+	KEYWORDS=""
 else
 	# This is where arch teams should change the KEYWORDS.
 
-	KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
 fi
 
 SLOT="0"
