@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.2.0.ebuild,v 1.1 2014/12/27 21:02:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.2.0.ebuild,v 1.2 2015/01/14 06:45:24 graaff Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ SRC_URI="mirror://ruby/2.2/${MY_P}.tar.xz
 
 LICENSE="|| ( Ruby-BSD BSD-2 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="berkdb debug doc examples gdbm ipv6 jemalloc +rdoc rubytests socks5 ssl xemacs ncurses +readline sse2"
+IUSE="berkdb debug doc examples gdbm ipv6 jemalloc +rdoc rubytests socks5 ssl xemacs ncurses +readline"
 
 RDEPEND="
 	berkdb? ( sys-libs/db )
@@ -58,9 +58,7 @@ PDEPEND="
 	xemacs? ( app-xemacs/ruby-modes )"
 
 src_prepare() {
-	if use sse2 ; then
-		excluded_patches="012_no_forced_sse2.patch"
-	fi
+	excluded_patches="012_no_forced_sse2.patch"
 
 	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" \
 		epatch "${WORKDIR}/patches"

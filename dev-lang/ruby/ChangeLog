@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.696 2015/01/01 14:46:11 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.697 2015/01/14 06:45:24 graaff Exp $
+
+  14 Jan 2015; Hans de Graaff <graaff@gentoo.org> ruby-2.2.0.ebuild:
+  The broken sse2 detection code is gone, so skip this patch unconditionally
+  for now, fixing bug 535804.
 
   01 Jan 2015; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2014,
   ChangeLog: Split ChangeLog

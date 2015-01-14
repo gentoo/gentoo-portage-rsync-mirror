@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/log4cpp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.20 2014/08/10 20:38:10 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.21 2015/01/14 06:48:11 pinkbyte Exp $
+
+*log4cpp-1.1 (14 Jan 2015)
+
+  14 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> +log4cpp-1.1.ebuild,
+  +files/log4cpp-1.1-automake-1.13.patch, +files/log4cpp-1.1-cmath-fix.patch:
+  Version bump, wrt bug #454712. Migrate to autotools-multilib eclass, build
+  tests only when they are requested, build static lib conditionally. Fix
+  building with Automake 1.13, wrt bug #467666
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> log4cpp-1.0.ebuild:
   QA: drop trailing '.' from DESCRIPTION
