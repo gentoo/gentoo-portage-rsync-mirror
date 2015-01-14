@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.4.ebuild,v 1.10 2014/10/08 01:25:40 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/pear-1.9.4.ebuild,v 1.11 2015/01/14 16:16:01 grknight Exp $
 
 EAPI=5
 
@@ -32,8 +32,8 @@ pkg_postinst() {
 	# Update PEAR/PECL channels as needed, add new ones to the list if needed
 	elog "Updating PEAR/PECL channels"
 	local pearchans="pear.php.net pecl.php.net components.ez.no
-	pear.propelorm.org pear.phing.info	pear.symfony-project.com pear.phpunit.de
-	pear.php-baustelle.de pear.phpontrax.com pear.agavi.org"
+	pear.propelorm.org pear.phing.info	pear.symfony-project.com
+	pear.phpontrax.com pear.agavi.org"
 
 	for chan in ${pearchans} ; do
 		pear channel-discover ${chan}
