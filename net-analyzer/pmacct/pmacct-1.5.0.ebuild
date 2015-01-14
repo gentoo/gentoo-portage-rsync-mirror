@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-1.5.0_rc3.ebuild,v 1.5 2014/12/28 16:11:25 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-1.5.0.ebuild,v 1.1 2015/01/14 14:27:31 jer Exp $
 
 EAPI=5
-inherit autotools eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="A network tool to gather IP traffic information"
 HOMEPAGE="http://www.pmacct.net/"
@@ -11,7 +11,7 @@ SRC_URI="http://www.pmacct.net/${P/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="64bit debug geoip ipv6 mongodb mysql postgres sqlite threads ulog"
 
 RDEPEND="
@@ -33,11 +33,6 @@ DOCS=(
 	CONFIG-KEYS ChangeLog FAQS KNOWN-BUGS QUICKSTART README TODO TOOLS UPGRADE
 	docs/INTERNALS docs/PLUGINS docs/SIGNALS
 )
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-mongodb.patch
-	eautoreconf
-}
 
 src_configure() {
 	tc-export CC AR RANLIB
