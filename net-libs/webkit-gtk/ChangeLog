@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.304 2014/12/31 00:38:04 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.305 2015/01/14 22:21:12 pacho Exp $
+
+*webkit-gtk-2.4.8 (14 Jan 2015)
+*webkit-gtk-2.4.8-r200 (14 Jan 2015)
+
+  14 Jan 2015; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-2.4.8-r200.ebuild,
+  +webkit-gtk-2.4.8.ebuild:
+  Version bump
 
   31 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> webkit-gtk-2.6.4.ebuild:
   Drop gles2 & wayland support following up current upstream status, bug
