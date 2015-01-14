@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-3.12.35.ebuild,v 1.1 2014/12/12 09:27:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-3.12.36.ebuild,v 1.1 2015/01/14 16:58:11 mpagano Exp $
 
 EAPI="5"
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
 K_SECURITY_UNSUPPORTED="1"
-K_DEBLOB_AVAILABLE="1"
+K_DEBLOB_AVAILABLE="0"
 ETYPE="sources"
 inherit kernel-2
 detect_version

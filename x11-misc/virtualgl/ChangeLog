@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/virtualgl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.23 2015/01/10 13:50:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.24 2015/01/14 16:55:15 bircoph Exp $
+
+  14 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> virtualgl-2.3.3.ebuild,
+  -files/vgl.initd-r1:
+  Remove license files (bug 536284). Remove unused init.d file.
 
   10 Jan 2015; Pacho Ramos <pacho@gentoo.org> virtualgl-2.3.3.ebuild:
   Fix deps (#504134 by Matthew Schultz and Eternal Sorrow)
