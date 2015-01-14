@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rackspace-monitoring
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-monitoring/ChangeLog,v 1.4 2014/08/10 21:20:35 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-monitoring/ChangeLog,v 1.5 2015/01/14 01:52:05 prometheanfire Exp $
+
+*rackspace-monitoring-0.6.5 (14 Jan 2015)
+
+  14 Jan 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +rackspace-monitoring-0.6.5.ebuild, -rackspace-monitoring-0.6.2.ebuild:
+  bumping
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   rackspace-monitoring-0.6.2.ebuild:

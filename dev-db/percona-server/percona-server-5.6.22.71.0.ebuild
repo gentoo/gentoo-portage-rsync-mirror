@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/percona-server-5.6.21.69.0.ebuild,v 1.1 2014/10/21 18:13:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/percona-server-5.6.22.71.0.ebuild,v 1.1 2015/01/14 01:55:07 grknight Exp $
 
 EAPI="5"
-MY_EXTRAS_VER="20141021-1750Z"
+MY_EXTRAS_VER="20150113-1853Z"
 
 inherit toolchain-funcs mysql-multilib
 # only to make repoman happy. it is really set in the eclass
