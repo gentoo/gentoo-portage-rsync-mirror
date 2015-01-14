@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.189 2014/11/11 10:48:13 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.190 2015/01/14 18:29:42 mrueg Exp $
+
+  14 Jan 2015; Manuel Rüger <mrueg@gentoo.org> polkit-0.112-r2.ebuild:
+  Add dep on kde-plasma/polkit-kde-agent as suggested by Elias Probst. Fixes bug
+  #536550.
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> polkit-0.112-r2.ebuild:
   Stable for ia64, wrt bug #525252

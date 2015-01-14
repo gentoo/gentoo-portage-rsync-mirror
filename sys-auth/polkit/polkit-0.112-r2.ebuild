@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.15 2014/11/11 10:48:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r2.ebuild,v 1.16 2015/01/14 18:29:42 mrueg Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -41,7 +41,10 @@ PDEPEND="
 		>=gnome-extra/polkit-gnome-0.105
 		lxde-base/lxpolkit
 		) )
-	kde? ( sys-auth/polkit-kde-agent )
+	kde? ( || ( 
+		kde-plasma/polkit-kde-agent
+		sys-auth/polkit-kde-agent
+		) )
 	!systemd? ( sys-auth/consolekit[policykit] )"
 
 QA_MULTILIB_PATHS="
