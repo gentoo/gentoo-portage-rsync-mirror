@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/msgpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.23 2015/01/10 06:58:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.24 2015/01/14 04:17:12 idella4 Exp $
+
+  14 Jan 2015; Ian Delaney <idella4@gentoo.org> -msgpack-0.2.4.ebuild,
+  -msgpack-0.3.0.ebuild, -msgpack-0.4.0.ebuild, -msgpack-0.4.1.ebuild,
+  msgpack-0.4.2.ebuild:
+  clean old impl, rm old
 
 *msgpack-0.4.4 (10 Jan 2015)
 
