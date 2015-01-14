@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.290 2015/01/13 10:20:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.291 2015/01/14 13:51:27 ago Exp $
+
+  14 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libevent-2.0.22.ebuild:
+  Stable for ppc64, wrt bug #535774
 
   13 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libevent-2.0.22.ebuild:
   Stable for sparc, wrt bug #535774
