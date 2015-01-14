@@ -1,63 +1,71 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/magick-rotation-1.6.2.ebuild,v 1.3 2013/01/24 09:07:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/magick-rotation/magick-rotation-1.6.2-r1.ebuild,v 1.2 2015/01/14 05:39:20 pinkbyte Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
-
-inherit eutils python toolchain-funcs user versionator
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="xml"
+inherit eutils python-single-r1 toolchain-funcs udev user versionator
 
 MY_PV=$(get_version_component_range 1-2)
 
-DESCRIPTION="application that rotate tablet pc's screen automatically, depending on orientation"
+DESCRIPTION="Application that rotates tablet pc's screen automatically, depending on orientation"
 HOMEPAGE="https://launchpad.net/magick-rotation"
 SRC_URI="http://launchpad.net/magick-rotation/trunk/${MY_PV}/+download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
-IUSE=""
 
-DEPEND="x11-libs/libXrandr
-	x11-libs/libX11"
+DEPEND="${PYTHON_DEPS}
+	x11-libs/libX11
+	x11-libs/libXrandr"
 
 RDEPEND="${DEPEND}
-	dev-python/pygobject
-	dev-python/py-notify
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/pygtk:2[${PYTHON_USEDEP}]
+	dev-python/py-notify[${PYTHON_USEDEP}]
 	x11-apps/xinput"
 
-# there are not tests in package, default 'make check' does wrong things, bug #453672
+# there are no tests in package, default 'make check' does wrong things, bug #453672
 RESTRICT="test"
 
 pkg_setup() {
-	python_pkg_setup
+	python-single-r1_pkg_setup
 	enewgroup magick
 }
 
 src_prepare() {
 	# Remove unneeded files
 	rm -r apt_* installer_gtk.py MAGICK-INSTALL gset_addkeyval.py MagickIcons/MagickSplash.png MagickUninstall || die 'removing unneeded files failed'
+
+	# Fix Python shebangs
+	python_fix_shebang "${S}"
+
+	epatch_user
 }
 
 src_compile() {
+	my_compile() {
+		echo $(tc-getCC) $*
+		$(tc-getCC) $* || die 'compilation failed'
+	}
+
 	local suffix=
 	if use amd64; then
 		suffix=64
 	else
 		suffix=32
 	fi
-	tc-export_build_env
-	echo "$(tc-getCC) $CFLAGS $LDFLAGS check.c -lX11 -lXrandr -o checkmagick${suffix}"
-	$(tc-getCC) $CFLAGS $LDFLAGS check.c -lX11 -lXrandr -o "checkmagick${suffix}" || die 'compilation failed'
+	my_compile "${CFLAGS} ${LDFLAGS} check.c -lX11 -lXrandr -o checkmagick${suffix}"
 }
 
 src_install() {
 	#TODO: add installation of GNOME Shell 3.2 extension
 	dobin	checkmagick*
 
-	insinto	/lib/udev/rules.d
-	doins	62-magick.rules
+	udev_dorules 62-magick.rules
 
 	insinto	/usr/share/${PN}
 	doins	*.py
@@ -79,8 +87,6 @@ pkg_postinst() {
 		elog "  [\e[1m$(has_version ${1} && echo I || echo ' ')\e[0m] ${1} (${2})"
 	}
 
-	python_mod_optimize /usr/share/${PN}
-
 	elog
 	elog "In order to use Magick Rotation with an on-screen keyboard and handwriting,"
 	elog "the following additional package may also be installed for use at run-time:"
@@ -90,8 +96,4 @@ pkg_postinst() {
 
 	ewarn "in order to use Magick Rotation you have to be in the 'magick' group."
 	ewarn "Just run 'gpasswd -a <USER> magick', then have <USER> re-login."
-}
-
-pkg_postrm() {
-	python_mod_cleanup /usr/share/${PN}
 }
