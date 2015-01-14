@@ -1,8 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.38 2015/01/13 02:29:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.39 2015/01/14 11:10:30 pacho Exp $
 
 # This file requires >=portage-2.1.1
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jan 2015)
+# Missing keywords
+app-misc/workrave mate
 
 # Patrick Lauer <patrick@gentoo.org> (13 Jan 2015)
 # Dependencies lack keywords
