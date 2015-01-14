@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/gst-rtsp-server-0.10.8-r1.ebuild,v 1.1 2015/01/10 14:15:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/gst-rtsp-server-0.10.8-r1.ebuild,v 1.2 2015/01/14 12:56:19 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils gstreamer python-r1
+inherit eutils gstreamer python-r1 vala
 
 DESCRIPTION="A GStreamer based RTSP server"
 HOMEPAGE="http://people.freedesktop.org/~wtay/"
@@ -33,7 +33,7 @@ RDEPEND="
 
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
 	python? ( dev-python/gst-python:0.10[${PYTHON_USEDEP}] )
-	vala? ( dev-lang/vala )
+	vala? ( $(vala_depend) )
 "
 DEPEND="${RDEPEND}
 	>=dev-libs/check-0.9.2
@@ -57,6 +57,8 @@ src_prepare() {
 	sed -e 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' \
 		 -i Makefile.am Makefile.in \
 		|| die
+
+	use vala && vala_src_prepare
 }
 
 multilib_src_configure() {
