@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/osc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.36 2014/10/12 08:47:46 scarabeus Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.37 2015/01/14 23:46:12 yac Exp $
+
+*osc-0.150.1 (15 Jan 2015)
+
+  15 Jan 2015; Jan Matejka <yac@gentoo.org> +osc-0.150.1.ebuild:
+  Version bump
 
   12 Oct 2014; Tomáš Chvátal <scarabeus@gentoo.org> -osc-0.146.0.ebuild,
   osc-0.148.2.ebuild:
