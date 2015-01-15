@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.501 2015/01/07 14:02:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.503 2015/01/15 13:34:21 eras Exp $
+
+  15 Jan 2015; Eray Aslan <eras@gentoo.org> -squid-3.4.8.ebuild,
+  -squid-3.4.9.ebuild:
+  Remove old
+
+*squid-3.4.11 (15 Jan 2015)
+
+  15 Jan 2015; Eray Aslan <eras@gentoo.org> +squid-3.4.11.ebuild:
+  Version bump
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-

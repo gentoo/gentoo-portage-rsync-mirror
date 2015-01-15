@@ -1,11 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.32 2015/01/10 13:53:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.33 2015/01/15 13:35:29 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
 # Unmask abi_x86_32 on stable. Keep this list in sync
 # with ../package.use.stable.mask!
+app-accessibility/at-spi2-atk -abi_x86_32
+app-accessibility/at-spi2-core -abi_x86_32
 app-accessibility/flite -abi_x86_32
 app-admin/fam -abi_x86_32
 app-admin/gamin -abi_x86_32
@@ -81,6 +83,7 @@ dev-libs/libffi -abi_x86_32
 dev-libs/libgamin -abi_x86_32
 dev-libs/libgcrypt -abi_x86_32
 dev-libs/libgpg-error -abi_x86_32
+dev-libs/libgusb -abi_x86_32
 dev-libs/libiconv -abi_x86_32
 dev-libs/libnl -abi_x86_32
 dev-libs/libnsfb -abi_x86_32
@@ -361,6 +364,7 @@ net-libs/libnice -abi_x86_32
 net-libs/libpcap -abi_x86_32
 net-libs/libproxy -abi_x86_32
 net-libs/libsoup -abi_x86_32
+net-libs/libsoup-gnome -abi_x86_32
 net-libs/libssh -abi_x86_32
 net-libs/libssh2 -abi_x86_32
 net-libs/libtirpc -abi_x86_32
@@ -368,6 +372,7 @@ net-libs/libvncserver -abi_x86_32
 net-libs/nacl -abi_x86_32
 net-libs/neon -abi_x86_32
 net-libs/polarssl -abi_x86_32
+net-libs/rest -abi_x86_32
 net-misc/curl -abi_x86_32
 net-nds/openldap -abi_x86_32
 net-print/cups -abi_x86_32
@@ -482,6 +487,7 @@ x11-libs/pango -abi_x86_32
 x11-libs/pangox-compat -abi_x86_32
 x11-libs/pixman -abi_x86_32
 x11-libs/xvba-video -abi_x86_32
+x11-misc/colord -abi_x86_32
 x11-misc/virtualgl -abi_x86_32
 x11-proto/compositeproto -abi_x86_32
 x11-proto/damageproto -abi_x86_32

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.9.ebuild,v 1.2 2014/11/21 10:04:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.11.ebuild,v 1.1 2015/01/15 13:32:31 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -31,7 +31,6 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	esi? ( dev-libs/expat dev-libs/libxml2 )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4
-	sys-devel/libtool
 	dev-lang/perl
 	sys-devel/libtool"
 DEPEND="${COMMON_DEPEND}
