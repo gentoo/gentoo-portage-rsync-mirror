@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.25 2014/10/06 18:38:36 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.26 2015/01/15 19:57:26 slyfox Exp $
+
+  15 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> cvsps-3.13-r1.ebuild:
+  Don't clobber MAKEOPTS on paludis (bug #536680 by cmuelle8).
 
   06 Oct 2014; Fabian Groffen <grobian@gentoo.org> cvsps-3.13-r1.ebuild:
   Fix out of Prefix, bug #521708
