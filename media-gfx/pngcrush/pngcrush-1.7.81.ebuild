@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.81.ebuild,v 1.1 2014/11/27 07:49:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.81.ebuild,v 1.2 2015/01/15 05:32:20 radhermit Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="system-libs? ( mirror://sourceforge/pmt/${P}-nolib.tar.xz )
 
 LICENSE="pngcrush"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+system-libs"
 
 RDEPEND="
