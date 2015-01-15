@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.59 2014/08/11 22:25:31 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.60 2015/01/15 07:48:10 patrick Exp $
+
+  15 Jan 2015; Patrick Lauer <patrick@gentoo.org> werkzeug-0.9.6.ebuild:
+  Stabilize for x86 and amd64 #527558
 
   11 Aug 2014; Anthony G. Basile <blueness@gentoo.org> werkzeug-0.9.4.ebuild,
   werkzeug-0.9.6.ebuild:
