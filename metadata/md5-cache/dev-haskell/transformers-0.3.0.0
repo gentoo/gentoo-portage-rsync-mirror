@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/ghc-6.8.2
 SLOT=0
 SRC_URI=mirror://hackage/packages/archive/transformers/0.3.0.0/transformers-0.3.0.0.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	f398638b447d3821846f2e2abbc33c1b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	f398638b447d3821846f2e2abbc33c1b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=5645d9189d29d29b8efc68a0062cf257

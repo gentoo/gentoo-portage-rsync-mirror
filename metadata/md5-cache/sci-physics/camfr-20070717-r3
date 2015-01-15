@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/blitz >=dev-libs/boost-1.48[python] dev-python/imaging[tk] dev-python/matplotlib sci-libs/scipy virtual/lapack virtual/fortran =dev-lang/python-2* =dev-lang/python-2*[tk]
 SLOT=0
 SRC_URI=mirror://sourceforge/camfr/camfr-20070717.tgz
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	f99a767f569b1f0731b3a1edd17c1d11	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=94b6008ce7e003304af8293dc2501433

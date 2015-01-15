@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXext
 SLOT=0
 SRC_URI=http://www.digitalkaos.net/linux/wmnet/download/wmnet-1.06.tar.gz mirror://gentoo/wmnet-1.06-misc.patch.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8d2b6cdf7cde2f4ab993c30f782eb4cb

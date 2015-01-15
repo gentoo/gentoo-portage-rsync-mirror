@@ -10,5 +10,5 @@ RDEPEND=alsa? ( media-libs/alsa-lib ) amr? ( media-libs/opencore-amr ) bluray? (
 REQUIRED_USE=bindist? ( encode? ( !faac !aacplus ) !openssl ) libv4l? ( v4l ) fftools_cws2fws? ( zlib ) test? ( encode )
 SLOT=0
 SRC_URI=http://ffmpeg.org/releases/ffmpeg-1.0.10.tar.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=f4346f0f79cee7ca4407bbf193c582bd

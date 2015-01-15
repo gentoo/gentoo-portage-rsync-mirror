@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxml2 sys-libs/zlib aac? ( media-libs/faac media-libs/faad2 ) aften? ( media-libs/aften[cxx] ) alsa? ( media-libs/alsa-lib ) amr? ( media-libs/opencore-amr ) gtk? ( x11-libs/gtk+:2 ) jack? ( media-libs/libsamplerate media-sound/jack-audio-connection-kit ) mp3? ( media-sound/lame ) pulseaudio? ( media-sound/pulseaudio ) qt4? ( >=dev-qt/qtgui-4.6:4 opengl? ( virtual/opengl >=dev-qt/qtopengl-4.6:4 ) ) sdl? ( media-libs/libsdl ) truetype? ( media-libs/freetype:2 media-libs/fontconfig ) vorbis? ( media-libs/libvorbis ) vpx? ( media-libs/libvpx ) x264? ( media-libs/x264:= ) xv? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXv ) xvid? ( media-libs/xvid )
 SLOT=2
 SRC_URI=mirror://sourceforge/avidemux/avidemux_2.5.6.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=77ca736c5489bd99ab332a8ea1309a22

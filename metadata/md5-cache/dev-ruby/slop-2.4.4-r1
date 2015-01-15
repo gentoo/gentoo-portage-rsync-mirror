@@ -10,5 +10,5 @@ RDEPEND=ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-la
 REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 )
 SLOT=0
 SRC_URI=https://github.com/injekt/slop/tarball/v2.4.4 -> slop-2.4.4.tgz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	d4f8591e9b20b106327e9d143eb13da5	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	d4f8591e9b20b106327e9d143eb13da5	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=597562dcb7f4fc6716349885b6a7770f

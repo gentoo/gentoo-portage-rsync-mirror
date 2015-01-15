@@ -8,5 +8,5 @@ RDEPEND=dev-lang/perl =www-servers/apache-2* >=app-admin/webapp-config-1.50.15
 RESTRICT=fetch
 SLOT=8.0.010
 SRC_URI=WebMO.8.0.010.tar.gz
-_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=04a6df6a2603cb83e3b531704f847674

@@ -11,5 +11,5 @@ RDEPEND=dev-cpp/cairomm dev-cpp/glibmm:2 dev-cpp/gtkmm:2.4 dev-cpp/libgnomecanva
 RESTRICT=strip
 SLOT=0
 SRC_URI=x86? ( https://softwareupdate.vmware.com/cds/vmw-desktop/player/6.0.2/1744117/linux/core/VMware-Player-6.0.2-1744117.i386.bundle.tar ) amd64? ( https://softwareupdate.vmware.com/cds/vmw-desktop/player/6.0.2/1744117/linux/core/VMware-Player-6.0.2-1744117.x86_64.bundle.tar )
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	vmware-bundle	23c070352c2722510704dae8063293e0
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	vmware-bundle	23c070352c2722510704dae8063293e0
 _md5_=aa7faae05a0d0de719d90f23572228d4

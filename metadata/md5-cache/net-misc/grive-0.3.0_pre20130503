@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/boost:= dev-libs/expat dev-libs/json-c:= dev-libs/libgcrypt:0= dev-libs/yajl dev-qt/qtcore:4 dev-qt/qtgui:4 net-misc/curl sys-devel/binutils sys-libs/glibc sys-libs/zlib
 SLOT=0
 SRC_URI=https://github.com/grive/grive/archive/27817e835fe115ebbda5410ec904aa49a2ad01f1.tar.gz -> grive-0.3.0_pre20130503.tar.gz
-_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=b2d9f139f6ebfa78cd9f352ed4b58633

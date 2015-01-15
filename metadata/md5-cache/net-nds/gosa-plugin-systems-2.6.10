@@ -7,5 +7,5 @@ LICENSE=GPL-3
 RDEPEND=~net-nds/gosa-core-2.6.10
 SLOT=0
 SRC_URI=ftp://oss.gonicus.de/pub/gosa/gosa-plugin-systems-2.6.10.tar.bz2 http://oss.gonicus.de/pub/gosa/gosa-plugin-systems-2.6.10.tar.bz2 ftp://oss.gonicus.de/pub/gosa/archive/gosa-plugin-systems-2.6.10.tar.bz2 http://oss.gonicus.de/pub/gosa/archive/gosa-plugin-systems-2.6.10.tar.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cd4fead6e95a69cd0deef18cbcca8a03

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=X? ( x11-apps/xdpyinfo )
 SLOT=0
 SRC_URI=mirror://sourceforge/project/spacenav/spacenav%20daemon/spacenavd%200.5/spacenavd-0.5.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=61bce20958cdaaaf6db47309da6f423f

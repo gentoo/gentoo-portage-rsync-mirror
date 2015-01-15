@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/pygobject:2 dev-python/pygtk:2 dev-python/fuse-python x11-libs/gtk+:2 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://xyne.archlinux.ca/projects/obtheme/archives/obtheme-2011.04.04.48155.tar.xz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=3283187242f7b813a2d4ae535770f1de

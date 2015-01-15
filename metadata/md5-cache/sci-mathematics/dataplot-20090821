@@ -9,5 +9,5 @@ LICENSE=public-domain
 RDEPEND=media-libs/plotutils opengl? ( virtual/opengl ) gd? ( media-libs/gd[png,jpeg] ) X? ( x11-misc/xdg-utils ) virtual/fortran
 SLOT=0
 SRC_URI=ftp://ftp.nist.gov/pub/dataplot/unix/dpsrc_2009_08_21.tar.gz ftp://ftp.nist.gov/pub/dataplot/unix/dplib.2009_07_15.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	f99a767f569b1f0731b3a1edd17c1d11	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=40759bd27b07fba54702e89d486f14aa

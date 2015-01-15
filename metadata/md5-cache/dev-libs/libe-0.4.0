@@ -9,5 +9,5 @@ RDEPEND=>=dev-libs/libpo6-0.4.0
 RESTRICT=test
 SLOT=0
 SRC_URI=http://hyperdex.org/src/libe-0.4.0.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=191fa7c3cc493cedc8a38fc2cb6f730b

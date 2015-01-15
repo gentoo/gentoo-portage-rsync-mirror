@@ -9,5 +9,5 @@ PDEPEND=>=app-shells/gentoo-bashcomp-20140911
 RDEPEND=>=app-shells/bash-4.3_p30-r1 sys-apps/miscfiles !app-admin/eselect-bashcomp
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~mgorny/dist/bash-completion-2.1_p20141224.tar.xz http://dev.gentoo.org/~mgorny/dist/bashcomp-2.0.1.tar.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=3da738a754ce525da725800fddf4784e

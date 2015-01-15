@@ -7,5 +7,5 @@ KEYWORDS=alpha ~amd64 ppc ppc64 sparc x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=mirror://gentoo/canna-2ch-20030827.tar.gz
-_eclasses_=cannadic	c9aaf1d68e1882312c78ffcf8ab0e689	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cannadic	c9aaf1d68e1882312c78ffcf8ab0e689	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=7b669c66f97514192a154cdd51157c39

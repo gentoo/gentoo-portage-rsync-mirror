@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=postgres? ( dev-python/psycopg:0 ) mysql? ( >=dev-python/mysql-python-0.9.2 ) =dev-lang/python-2* =dev-lang/python-2*[sqlite?]
 SLOT=0
 SRC_URI=mirror://sourceforge/adodb/adodb-220.zip
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=8ad96886e1420f2b65bbbdb4c2fe0c19

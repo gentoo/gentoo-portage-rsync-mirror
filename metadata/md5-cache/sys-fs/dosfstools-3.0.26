@@ -7,5 +7,5 @@ LICENSE=GPL-3
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.daniel-baumann.ch/files/software/dosfstools/dosfstools-3.0.26.tar.xz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=49251aca70ef13fcca3d88a4b6dbf19f

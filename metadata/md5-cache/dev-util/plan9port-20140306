@@ -9,5 +9,5 @@ LICENSE=9base BSD-4 MIT LGPL-2.1 BigelowHolmes
 RDEPEND=X? ( x11-apps/xauth )
 SLOT=0
 SRC_URI=http://plan9port.googlecode.com/files/plan9port-20140306.tgz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=03a6749aa932e67b678c9a09bacbd299

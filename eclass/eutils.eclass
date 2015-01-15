@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.441 2014/12/30 07:24:52 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.442 2015/01/14 22:50:02 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1578,7 +1578,7 @@ prune_libtool_files() {
 		fi
 
 		[[ ${f} != ${archivefile} ]] || die 'regex sanity check failed'
-		local reason pkgconfig_scanned
+		local reason= pkgconfig_scanned=
 		local snotlink=$(sed -n -e 's:^shouldnotlink=::p' "${f}")
 
 		if [[ ${snotlink} == yes ]]; then

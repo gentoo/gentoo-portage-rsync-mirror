@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.6.0 dev-perl/TimeDate >=sys-libs/ncurses-5.2-r7 bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) selinux? ( sys-libs/libselinux ) zlib? ( >=sys-libs/zlib-1.1.4 )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/d/dpkg/dpkg_1.17.22.tar.xz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cfc35b9478d7ffb54575ea5b60966cb8

@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=sys-fs/fuse
 SLOT=0
 SRC_URI=http://fuse4bsd.creo.hu/downloads/fuse4bsd-0.3.0.tar.gz mirror://gentoo/freebsd-sbin-6.2.tar.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6046ff8cf591451614ff4f9778bfb66b

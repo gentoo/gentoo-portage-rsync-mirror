@@ -9,5 +9,5 @@ LICENSE=HPND
 RDEPEND=dev-python/numpy dev-python/reportlab mysql? ( dev-python/mysql-python ) postgres? ( dev-python/psycopg ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://www.biopython.org/DIST/biopython-1.59.tar.gz
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5c5ec35de9cce9d28756129764e2a6cd

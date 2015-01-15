@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/ada >=app-admin/eselect-gnat-0.7
 SLOT=0
 SRC_URI=mirror://sourceforge/booch95/bc-20051222.tgz mirror://sourceforge/booch95/bc-html-20051222.zip
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnat	2395d33f9259e627b1fb6f2719f4d235	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnat	2395d33f9259e627b1fb6f2719f4d235	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=1c395bbf11ae0ec2b6e44fe9ea5ed7a8

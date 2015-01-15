@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/tcl-8.2 >=dev-tcltk/tcllib-1.2 xml? ( >=dev-libs/libxml2-2.6.9 ) expat? ( dev-libs/expat )
 SLOT=0
 SRC_URI=mirror://sourceforge/tclxml/tclxml-3.0.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b95a9876f77d7ff0d6cfe5d0972a58fa

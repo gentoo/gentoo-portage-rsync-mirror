@@ -11,5 +11,5 @@ RDEPEND=app-admin/eselect-qtgraphicssystem ~dev-qt/qtcore-4.8.6[aqua=,debug=,gli
 REQUIRED_USE=gtkstyle? ( glib )
 SLOT=4
 SRC_URI=http://download.qt-project.org/archive/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tar.gz http://dev.gentoo.org/~pesa/patches/qtgui-systemtrayicon-plugin-system.patch
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	qt4-build-multilib	fbb29c13887c9662473e61726a9f0270	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	qt4-build-multilib	fbb29c13887c9662473e61726a9f0270	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=050df15ab5ca00842af90b5eecaaa580

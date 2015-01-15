@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=dev-db/postgresql:9.1 !iodbc? ( dev-db/unixODBC ) iodbc? ( dev-db/libiodbc ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=mirror://postgresql/odbc/versions/src/psqlodbc-09.01.0200.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=1a9428c73ed9f40ff846573bd6e0469f

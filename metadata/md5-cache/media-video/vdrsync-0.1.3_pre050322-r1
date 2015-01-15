@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8.0 media-fonts/corefonts dvdr? ( >=media-libs/gd-2.0.15 >=dev-perl/GD-2.0.7 >=dev-perl/GDTextUtil-0.86 >=media-video/dvdauthor-0.6.8 )
 SLOT=0
 SRC_URI=http://vdrsync.vdr-portal.de/releases/vdrsync-050322.tgz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cf5041da408eb63d4fec67fa19961cb6

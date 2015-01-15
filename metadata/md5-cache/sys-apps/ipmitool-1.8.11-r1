@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-libs/openssl
 SLOT=0
 SRC_URI=mirror://sourceforge/ipmitool/ipmitool-1.8.11.tar.gz https://launchpad.net/ubuntu/+archive/primary/+files/ipmitool_1.8.11-5ubuntu1.diff.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=bcabf1800007d2edde37bd12f976b6dc

@@ -9,5 +9,5 @@ LICENSE=free-noncomm
 RDEPEND=media-libs/libpng x11-libs/libX11 x11-libs/libXt motif? ( >=x11-libs/motif-2.3:0 ) tk? ( dev-lang/tk ) virtual/fortran
 SLOT=0
 SRC_URI=ftp://ftp.astro.caltech.edu/pub/pgplot/pgplot522.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=c37fbe7e5e77a6f9cda4532becb7a1fe

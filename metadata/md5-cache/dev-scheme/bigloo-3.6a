@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/boehm-gc-7.1[threads?] emacs? ( virtual/emacs ) gmp? ( dev-li
 REQUIRED_USE=bglpkg? ( web ) openpgp? ( crypto ) packrat? ( srfi1 ) srfi27? ( x86? ( gmp ) )
 SLOT=0
 SRC_URI=ftp://ftp-sop.inria.fr/indes/fp/Bigloo/bigloo3.6a.tar.gz
-_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=7e39d73b7b6b463e73337a24866ca48a

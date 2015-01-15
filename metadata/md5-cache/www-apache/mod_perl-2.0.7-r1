@@ -10,5 +10,5 @@ PDEPEND=>=dev-perl/Apache-Reload-0.11 >=dev-perl/Apache-SizeLimit-0.95
 RDEPEND=<www-servers/apache-2.4 >=dev-perl/Apache-Test-1.360 >=virtual/perl-CGI-3.08 dev-lang/perl www-servers/apache || ( www-servers/apache[-threads] dev-lang/perl[ithreads] ) =www-servers/apache-2* dev-lang/perl:=[-build(-)]
 SLOT=1
 SRC_URI=mirror://apache/perl/mod_perl-2.0.7.tar.gz
-_eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=5b898e205c7414e94333ddbd58cd612e

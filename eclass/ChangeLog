@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1510 2015/01/13 21:35:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1511 2015/01/14 22:50:01 mgorny Exp $
+
+  14 Jan 2015; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  prune_libtool_files: properly reset variables for following loop iterations.
 
   13 Jan 2015; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Deprecate python_export_best() verbosely.

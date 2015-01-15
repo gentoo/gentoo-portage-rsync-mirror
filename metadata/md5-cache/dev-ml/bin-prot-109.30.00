@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1-with-linking-exception
 RDEPEND=>=dev-ml/type-conv-109.28.00:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/109.30.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.30.00/individual/bin_prot-109.30.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/bin_prot-109.30.00.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9323815638276c8f1db15933aa7dd890

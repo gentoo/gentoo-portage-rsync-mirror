@@ -8,5 +8,5 @@ LICENSE=xc-radley
 RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/xc-4.3.2.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=3713b89bf686e98f79efd7b298fbf15d

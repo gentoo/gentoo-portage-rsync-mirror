@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses app-arch/bzip2 sys-libs/zlib >=virtual/ffmpeg-0.10.3 a5
 REQUIRED_USE=bindist? ( !faac ) dvdnav? ( dvd ) libass? ( truetype ) truetype? ( iconv ) ggi? ( X ) xinerama? ( X ) dga? ( X ) opengl? ( || ( X aqua ) ) osdmenu? ( || ( X aqua ) ) vdpau? ( X ) vidix? ( X ) xscreensaver? ( X ) xv? ( X ) xvmc? ( xv )
 SLOT=0
 SRC_URI=mirror://mplayer/releases/MPlayer-1.1.1.tar.xz !truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=36bda06d214e7c920faa40ec832d20be

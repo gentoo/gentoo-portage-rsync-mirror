@@ -7,5 +7,5 @@ LICENSE=CPL-1.0 EPL-1.0
 RDEPEND=!app-shells/pdksh
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~floppym/distfiles/INIT.2014-06-06.tgz http://dev.gentoo.org/~floppym/distfiles/ast-base.2014-06-06.tgz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=9a09eefb664361d032e2a39b4384524c

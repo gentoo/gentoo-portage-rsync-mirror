@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-libs/openssl !<net-dns/dnssec-tools-1.13
 SLOT=0
 SRC_URI=http://www.dnssec-tools.org/download/dnsval-1.14.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6df079a1343690b12bda8dd69c0b74e0

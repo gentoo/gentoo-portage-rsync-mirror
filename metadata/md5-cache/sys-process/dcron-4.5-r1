@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-process/cronbase-0.3.2 !sys-process/vixie-cron !sys-process/bcron !sys-process/cronie !sys-process/fcron
 SLOT=0
 SRC_URI=http://www.jimpryor.net/linux/releases/dcron-4.5.tar.gz
-_eclasses_=cron	18adefe7a7b2f043ca5b63e912835970	eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=cron	18adefe7a7b2f043ca5b63e912835970	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=6f6d01108797214ba30c9fa2b5bc40d5

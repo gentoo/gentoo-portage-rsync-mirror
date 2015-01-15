@@ -9,5 +9,5 @@ LICENSE=cctbx-2.0
 RDEPEND=>=dev-libs/boost-1.48[python] sci-libs/clipper sci-libs/fftw !minimal? ( sci-chemistry/cns sci-chemistry/shelx ) virtual/fortran =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://cci.lbl.gov/cctbx_build/results/2010_03_29_2334/cctbx_bundle.tar.gz -> cctbx-2010.03.29.2334.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=cbdc72d301f160e56cc4b042faaf3b1b

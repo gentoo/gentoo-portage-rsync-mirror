@@ -8,5 +8,5 @@ LICENSE=PDB
 RDEPEND=!<app-text/html-xml-utils-5.3
 SLOT=0
 SRC_URI=http://sw-tools.pdb.org/apps/PDB_EXTRACT/pdb-extract-v3.004-prod-src.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=0ff9c5125136b70bf679251a983245c9

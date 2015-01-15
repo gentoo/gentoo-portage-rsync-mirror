@@ -11,5 +11,5 @@ REQUIRED_USE=apulse? ( !pulseaudio )
 RESTRICT=mirror bindist strip
 SLOT=0
 SRC_URI=http://download.skype.com/linux/skype-4.3.0.37.tar.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=b8d74ab7ae533684f6bda3499fe00dce

@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=sys-libs/ncurses readline? ( >=sys-libs/readline-5.0 ) X? ( x11-libs/libXaw x11-libs/libXt x11-libs/libX11 sci-visualization/xgraph )
 SLOT=0
 SRC_URI=mirror://sourceforge/ngspice/ngspice-24.tar.gz mirror://sourceforge/ngspice/ngspice24-manual.pdf.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=15d2529224b3e5f940027bad7d4da0d3

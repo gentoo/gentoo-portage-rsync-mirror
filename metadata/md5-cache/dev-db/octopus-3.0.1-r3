@@ -10,5 +10,5 @@ RDEPEND=>=virtual/jre-1.5 >=dev-java/xerces-2.7 >=dev-java/log4j-1.2.8 =dev-java
 RESTRICT=test
 SLOT=3.0
 SRC_URI=http://download.forge.objectweb.org/octopus/octopus-3.0-1.src.tar.gz mirror://gentoo/octopus-xmls-3.0.1.tar.bz2
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-ant-2	5f5bada6517ed26bc25083134e42b146	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=1bffaba1c5f1aebdb126c7a39aecfae2

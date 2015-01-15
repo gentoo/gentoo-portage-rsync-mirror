@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-ml/sexplib:= dev-ml/textutils:= dev-ml/pa_ounit:= dev-ml/core:= dev-ml/fieldslib:= dev-ml/comparelib:= dev-ml/camlp4:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/112.01.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/112.01.00/individual/core_bench-112.01.00.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	f99a767f569b1f0731b3a1edd17c1d11	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=bdf59f6eb61f064d86c530683c0a4752

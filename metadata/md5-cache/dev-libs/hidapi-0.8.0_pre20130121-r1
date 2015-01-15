@@ -9,5 +9,5 @@ LICENSE=|| ( BSD GPL-3 HIDAPI )
 RDEPEND=virtual/libusb:1 virtual/udev:0
 SLOT=0
 SRC_URI=http://public.callutheran.edu/~abarker/hidapi-0.8.0_pre20130121.tar.xz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=a00ba3c11b9347b784c43316b61edb27

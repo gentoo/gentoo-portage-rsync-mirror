@@ -6,5 +6,5 @@ KEYWORDS=~x86
 LICENSE=intel-psb
 SLOT=0
 SRC_URI=http://adamwill.fedorapeople.org/poulsbo/src/psb-firmware-0.30-3.fc11.src.rpm
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=0f855f280256885d8e0964d73f38be4c

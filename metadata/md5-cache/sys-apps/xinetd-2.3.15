@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 ) rpc? ( net-libs/libtirpc ) perl? ( dev-lang/perl )
 SLOT=0
 SRC_URI=http://www.xinetd.org/xinetd-2.3.15.tar.gz
-_eclasses_=eutils	f99a767f569b1f0731b3a1edd17c1d11	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=048b4bae522cc64a7cab8031667cf9d9

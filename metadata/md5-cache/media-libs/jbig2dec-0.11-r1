@@ -10,5 +10,5 @@ RDEPEND=png? ( media-libs/libpng:0= )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://ghostscript.com/~giles/jbig2/jbig2dec/jbig2dec-0.11.tar.gz test? ( http://jbig2dec.sourceforge.net/ubc/jb2streams.zip )
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	f99a767f569b1f0731b3a1edd17c1d11	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=fb91c7ee4a965c420772ff5a143d554a
