@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.623 2015/01/14 13:50:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.624 2015/01/15 20:30:22 polynomial-c Exp $
+
+*openssl-1.0.1l (15 Jan 2015)
+*openssl-1.0.0q (15 Jan 2015)
+*openssl-0.9.8z_p5 (15 Jan 2015)
+
+  15 Jan 2015; Lars Wendler <polynomial-c@gentoo.org>
+  +openssl-0.9.8z_p5.ebuild, -openssl-1.0.0p.ebuild, +openssl-1.0.0q.ebuild,
+  +openssl-1.0.1l.ebuild:
+  Version bump. Removed old.
 
   14 Jan 2015; Agostino Sarubbo <ago@gentoo.org> openssl-1.0.1k.ebuild:
   Stable for ppc64, wrt bug #536042
