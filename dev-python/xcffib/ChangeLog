@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xcffib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xcffib/ChangeLog,v 1.3 2014/12/19 01:19:33 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xcffib/ChangeLog,v 1.4 2015/01/15 05:29:13 radhermit Exp $
+
+*xcffib-0.1.10 (15 Jan 2015)
+
+  15 Jan 2015; Tim Harder <radhermit@gentoo.org> +xcffib-0.1.10.ebuild:
+  Version bump.
 
   19 Dec 2014; Ian Delaney <idella4@gentoo.org> xcffib-0.1.8.ebuild:
   add missed dep, fixes Bug #529056

@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/epson-inkjet-printer-escpr/epson-inkjet-printer-escpr-1.4.4.ebuild,v 1.2 2015/01/15 04:50:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/epson-inkjet-printer-escpr/epson-inkjet-printer-escpr-1.4.4.ebuild,v 1.4 2015/01/15 05:29:29 floppym Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Epson Inkjet Printer Driver (ESC/P-R)"
 HOMEPAGE="http://www.epson.com/"
@@ -18,11 +18,15 @@ IUSE=""
 DEPEND="net-print/cups"
 RDEPEND="${DEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}/1.4.4-warnings.patch"
+}
+
 src_configure() {
-	econf --disable-static
+	econf --disable-shared
 }
 
 src_install() {
 	default
-	prune_libtool_files --all
+	rm -r "${ED%/}/usr/$(get_libdir)" || die
 }
