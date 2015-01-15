@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.6.0.ebuild,v 1.1 2015/01/13 02:48:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.6.0-r1.ebuild,v 1.1 2015/01/15 06:41:51 patrick Exp $
 EAPI=5
 
 # Tests fail, again
 RESTRICT="test"
 
 PYTHON_COMPAT=( python2_7)
-inherit eutils python-r1 autotools
+inherit eutils python-single-r1 autotools
 
 DESCRIPTION="A searchable distributed Key-Value Store"
 
@@ -40,6 +40,7 @@ src_prepare() {
 	cp "${WORKDIR}/"*.m4 m4/
 	sed -i -e 's~json/json.h~json-c/json.h~' configure.ac common/datatype_document.cc daemon/index_document.cc || die "Blergh!"
 	eautoreconf
+	use python && python-single-r1_pkg_setup
 }
 src_configure() {
 	econf --disable-static \
