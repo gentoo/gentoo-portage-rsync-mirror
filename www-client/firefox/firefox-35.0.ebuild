@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-35.0.ebuild,v 1.1 2015/01/13 03:26:56 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-35.0.ebuild,v 1.2 2015/01/15 01:55:10 anarchy Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -90,6 +90,8 @@ else
 fi
 
 QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/firefox"
+
+BUILD_OBJ_DIR="${S}/ff"
 
 pkg_setup() {
 	moz_pkgsetup
@@ -229,6 +231,8 @@ src_configure() {
 		echo "mk_add_options PROFILE_GEN_SCRIPT='\$(PYTHON) \$(OBJDIR)/_profile/pgo/profileserver.py'" >> "${S}"/.mozconfig
 	fi
 
+	echo "mk_add_options MOZ_OBJDIR=${BUILD_OBJ_DIR}" >> "${S}"/.mozconfig
+
 	# Finalize and report settings
 	mozconfig_final
 
@@ -278,33 +282,30 @@ src_install() {
 	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	DICTPATH="\"${EPREFIX}/usr/share/myspell\""
 
-	# MOZ_BUILD_ROOT, and hence OBJ_DIR change depending on arch, compiler, pgo, etc.
-	local obj_dir="$(echo */config.log)"
-	obj_dir="${obj_dir%/*}"
-	cd "${S}/${obj_dir}" || die
+	cd "${BUILD_OBJ_DIR}" || die
 
 	# Pax mark xpcshell for hardened support, only used for startupcache creation.
-	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
+	pax-mark m "${BUILD_OBJ_DIR}"/dist/bin/xpcshell
 
 	# Add our default prefs for firefox
 	cp "${FILESDIR}"/gentoo-default-prefs.js-1 \
-		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
+		"${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
 		|| die
 
 	# Set default path to search for dictionaries.
 	echo "pref(\"spellchecker.dictionary_path\", ${DICTPATH});" \
-		>> "${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
+		>> "${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
 		|| die
 
 	echo "pref(\"extensions.autoDisableScopes\", 3);" >> \
-		"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
+		"${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
 		|| die
 
 	local plugin
 	use gmp-autoupdate || for plugin in \
 	gmp-gmpopenh264 ; do
 		echo "pref(\"media.${plugin}.autoupdate\", false);" >> \
-			"${S}/${obj_dir}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
+			"${BUILD_OBJ_DIR}/dist/bin/browser/defaults/preferences/all-gentoo.js" \
 			|| die
 	done
 
