@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/psmark
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/psmark/ChangeLog,v 1.5 2014/08/10 10:58:06 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/psmark/ChangeLog,v 1.6 2015/01/15 14:21:17 mrueg Exp $
+
+  15 Jan 2015; Manuel Rüger <mrueg@gentoo.org> psmark-2.1.ebuild:
+  EAPI5. Keyword ~amd64.
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> psmark-2.1.ebuild:
   Fix description for more repoman happy
