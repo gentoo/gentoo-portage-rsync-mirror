@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/eyeD3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.83 2014/11/21 12:55:03 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.84 2015/01/15 10:49:35 armin76 Exp $
+
+  15 Jan 2015; Raúl Porcel <armin76@gentoo.org> eyeD3-0.7.4-r2.ebuild:
+  ia64/sparc stable wrt #523136
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> eyeD3-0.7.4-r2.ebuild:
   Stable on alpha, bug 523136
