@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1178 2015/01/14 20:01:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1179 2015/01/15 03:04:37 floppym Exp $
+
+*chromium-39.0.2171.99 (15 Jan 2015)
+
+  15 Jan 2015; Mike Gilbert <floppym@gentoo.org> +chromium-39.0.2171.99.ebuild:
+  Stable channel bump.
 
 *chromium-41.0.2272.3 (14 Jan 2015)
 
