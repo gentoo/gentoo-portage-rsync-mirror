@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1426 2014/12/24 07:27:36 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1427 2015/01/15 09:48:44 armin76 Exp $
+
+  15 Jan 2015; Raúl Porcel <armin76@gentoo.org> portage-2.2.14.ebuild:
+  alpha/arm64/ia64/m68k/s390/sh/sparc stable wrt #531594
 
   24 Dec 2014; Markus Meier <maekke@gentoo.org> portage-2.2.14.ebuild:
   arm stable, bug #531594
