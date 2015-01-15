@@ -1,23 +1,19 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.65.ebuild,v 1.1 2014/11/12 08:30:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-1.0.67.ebuild,v 1.1 2015/01/15 19:25:36 jer Exp $
 
 EAPI=5
 inherit eutils
 
 DESCRIPTION="Debian/Ubuntu bootstrap scripts"
 HOMEPAGE="http://packages.qa.debian.org/d/debootstrap.html"
-SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV}.tar.xz
+SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz
 	mirror://gentoo/devices.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
 
-DEPEND="
-	app-arch/xz-utils
-"
 RDEPEND="
 	app-arch/dpkg
 	net-misc/wget
@@ -27,7 +23,7 @@ RDEPEND="
 DOCS=( TODO debian/changelog )
 
 src_unpack() {
-	unpack ${PN}_${PV}.tar.xz
+	unpack ${PN}_${PV}.tar.gz
 	cp "${DISTDIR}"/devices.tar.gz "${S}"
 }
 

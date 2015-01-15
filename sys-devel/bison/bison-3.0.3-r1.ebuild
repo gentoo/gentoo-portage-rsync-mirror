@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-3.0.3.ebuild,v 1.2 2015/01/15 12:25:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-3.0.3-r1.ebuild,v 1.1 2015/01/15 19:30:43 polynomial-c Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ src_configure() {
 	use static && append-ldflags -static
 
 	econf \
-		--docdir="${EPREFIX}"/usr/share/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable nls)
 }
 
