@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16286 2015/01/13 08:57:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16287 2015/01/15 00:02:10 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (14 Jan 2015)
+# No upstream anymore, segfaults on amd64
+# masked for removal on 20150213
+games-action/cylindrix
 
 # Sergey Popov <pinkbyte@gentoo.org> (11 Jan 2015)
 # Upstream support is discontinued(last release in 2005)
