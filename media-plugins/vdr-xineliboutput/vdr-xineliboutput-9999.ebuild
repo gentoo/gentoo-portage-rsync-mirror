@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.17 2014/07/06 16:40:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.18 2015/01/15 18:52:25 hd_brummy Exp $
 
 EAPI=5
 GENTOO_VDR_CONDITIONAL=yes
 
-inherit vdr-plugin-2 cvs toolchain-funcs eutils
+inherit vdr-plugin-2 cvs toolchain-funcs
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
@@ -26,7 +26,8 @@ COMMON_DEPEND="
 	)
 
 	xine? (
-		|| ( <media-libs/xine-lib-1.2 ( >=media-libs/xine-lib-1.2 virtual/ffmpeg ) )
+		( >=media-libs/xine-lib-1.2
+			virtual/ffmpeg )
 		fbcon? ( jpeg? ( virtual/jpeg ) )
 		X? (
 			x11-libs/libX11

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.5 2014/07/06 16:40:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.6 2015/01/15 18:52:25 hd_brummy Exp $
 
 EAPI=5
 
@@ -25,7 +25,8 @@ COMMON_DEPEND="
 	)
 
 	xine? (
-		|| ( <media-libs/xine-lib-1.2 ( >=media-libs/xine-lib-1.2 virtual/ffmpeg ) )
+		( >=media-libs/xine-lib-1.2
+			virtual/ffmpeg )
 		fbcon? ( jpeg? ( virtual/jpeg ) )
 		X? (
 			x11-libs/libX11
@@ -62,6 +63,15 @@ pkg_setup() {
 	if use xine; then
 		XINE_PLUGIN_DIR=$(pkg-config --variable=plugindir libxine)
 		[ -z "${XINE_PLUGIN_DIR}" ] && die "Could not find xine plugin dir"
+	fi
+}
+
+src_prepare() {
+	vdr-plugin-2_src_prepare
+
+	if has_version ">=media-video/vdr-2.1.2"; then
+		sed -e "s#VideoDirectory#cVideoDirectory::Name\(\)#" \
+		-i config.c menu.c tools/udp_pes_scheduler.c
 	fi
 }
 
