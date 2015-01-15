@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.1.ebuild,v 1.1 2014/12/09 12:46:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.1.ebuild,v 1.2 2015/01/15 15:56:15 mrueg Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ fi
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 SLOT="4"
-IUSE="debug"
+IUSE="debug minimal"
 
 DEPEND="
 	>=sys-auth/polkit-qt-0.103.0
@@ -34,3 +34,8 @@ RDEPEND="${DEPEND}
 if [[ ${KDE_BUILD_TYPE} != live ]] ; then
 	S=${WORKDIR}/${MY_P}
 fi
+
+src_prepare() {
+	# Coinstallability with kde-plasma/polkit-kde-agent
+	use minimal && rm -rf po
+}

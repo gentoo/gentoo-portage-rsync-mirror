@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-kde-agent
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.17 2014/12/09 12:46:07 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.18 2015/01/15 15:56:15 mrueg Exp $
+
+  15 Jan 2015; Manuel Rüger <mrueg@gentoo.org> polkit-kde-agent-0.99.1.ebuild:
+  Add minimal useflag for coninstability of kde-plasma/polkit-kde-agent.
 
 *polkit-kde-agent-0.99.1 (09 Dec 2014)
 
