@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/openrc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.317 2014/12/05 21:00:53 williamh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.319 2015/01/15 16:23:55 williamh Exp $
+
+  15 Jan 2015; William Hubbs <williamh@gentoo.org> -openrc-0.13.1.ebuild,
+  -openrc-0.13.2.ebuild, -openrc-0.13.3.ebuild, -openrc-0.13.4.ebuild,
+  -openrc-0.13.5.ebuild, -openrc-0.13.6.ebuild:
+  Remove broken 0.13.x versions. Bug #531600 was a memory management issue that
+  was present in most of this series; it was fixed in 0.13.7, so everyone should
+  run this version.
+
+*openrc-0.13.7 (15 Jan 2015)
+
+  15 Jan 2015; William Hubbs <williamh@gentoo.org> +openrc-0.13.7.ebuild:
+  version bump
 
   05 Dec 2014; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Change reference from git.mk to gitver.mk to match upstream

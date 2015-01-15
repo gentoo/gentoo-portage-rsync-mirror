@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.13.4.ebuild,v 1.2 2014/11/14 19:27:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.13.7.ebuild,v 1.1 2015/01/15 16:18:28 williamh Exp $
 
 EAPI=5
 
@@ -144,7 +144,8 @@ src_install() {
 	newpamd "${FILESDIR}"/start-stop-daemon.pam start-stop-daemon
 
 	# install documentation
-	dodoc README README.busybox README.history 	FEATURE-REMOVAL-SCHEDULE
+	dodoc ChangeLog README README.busybox README.history	\
+		FEATURE-REMOVAL-SCHEDULE
 	if use newnet; then
 		dodoc README.newnet
 	fi
