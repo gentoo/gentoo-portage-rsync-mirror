@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r4.ebuild,v 1.7 2015/01/12 16:24:25 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.8.8-r4.ebuild,v 1.8 2015/01/15 10:28:25 armin76 Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/docbook2x/${P}.tar.gz"
 HOMEPAGE="http://docbook2x.sourceforge.net/"
 
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-linux ~x86-solaris"
 IUSE="test"
 LICENSE="MIT"
 

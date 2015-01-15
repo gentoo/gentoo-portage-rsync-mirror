@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/calculator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.45 2014/11/11 21:13:18 mabi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.46 2015/01/15 10:14:34 armin76 Exp $
+
+  15 Jan 2015; Raúl Porcel <armin76@gentoo.org> calculator-1.6.43.ebuild:
+  sparc/x86 stable wrt #518162
 
 *calculator-1.7.49 (11 Nov 2014)
 
