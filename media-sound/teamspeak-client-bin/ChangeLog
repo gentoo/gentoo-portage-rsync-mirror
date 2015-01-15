@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/teamspeak-client-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.37 2014/11/14 01:39:45 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.38 2015/01/15 16:41:50 mrueg Exp $
+
+*teamspeak-client-bin-3.0.16 (15 Jan 2015)
+
+  15 Jan 2015; Manuel Rüger <mrueg@gentoo.org>
+  +teamspeak-client-bin-3.0.16.ebuild, -teamspeak-client-bin-3.0.11.1.ebuild,
+  -teamspeak-client-bin-3.0.12.ebuild, -teamspeak-client-bin-3.0.13.ebuild,
+  metadata.xml:
+  Proxy commit for Karol Herbst. Add him as proxied maintainer. Version bump.
+  Remove old. Fixes bug #504604.
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Maintainer needed.
