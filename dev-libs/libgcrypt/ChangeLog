@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.227 2014/10/27 01:47:48 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.228 2015/01/15 11:36:12 armin76 Exp $
+
+  15 Jan 2015; Raúl Porcel <armin76@gentoo.org> libgcrypt-1.5.4-r1.ebuild:
+  alpha/ia64/sparc stable wrt #524308
 
   27 Oct 2014; Mike Frysinger <vapier@gentoo.org> libgcrypt-1.5.4-r1.ebuild:
   Mark arm64/m68k/s390/sh stable.

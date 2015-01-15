@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.3.1.ebuild,v 1.5 2014/08/11 07:07:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.3.1.ebuild,v 1.6 2015/01/15 11:51:11 jlec Exp $
 
 EAPI=5
 
@@ -24,12 +24,9 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/cython[${PYTHON_USEDEP}]
 	mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )"
-DISTUTILS_NO_PARALLEL_BUILD=1
 
 pkg_setup() {
-	if use mpi ; then
-		export CC=mpicc
-	fi
+	use mpi && export CC=mpicc
 }
 
 python_prepare_all() {
