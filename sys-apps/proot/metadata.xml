@@ -14,7 +14,7 @@
 	<upstream>
 		<remote-id type="github">cedric-vincent/PRoot</remote-id>
 		<maintainer>
-			<email>cedric.vincent@gmail.com</email>
+			<email>gentoo@reproducible.io</email>
 			<name>Cédric Vincent</name>
 		</maintainer>
 	</upstream>
