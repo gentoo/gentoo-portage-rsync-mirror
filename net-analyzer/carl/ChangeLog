@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/carl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.17 2014/12/28 18:41:17 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/carl/ChangeLog,v 1.19 2015/01/15 08:25:16 klausman Exp $
+
+  15 Jan 2015; Tobias Klausmann <klausman@gentoo.org> carl-0.9-r1.ebuild:
+  Stable on alpha, bug 536676
+
+  15 Jan 2015; Tobias Klausmann <klausman@gentoo.org> carl-0.9-r1.ebuild:
+  Stable on amd64, bug 536676
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> carl-0.9-r1.ebuild:
   Drop PYTHON_MODNAME, bug 533838.
