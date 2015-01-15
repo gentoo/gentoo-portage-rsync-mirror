@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.688 2015/01/14 13:50:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.689 2015/01/15 08:39:32 ago Exp $
+
+  15 Jan 2015; Agostino Sarubbo <ago@gentoo.org> wireshark-1.12.3.ebuild:
+  Stable for ppc, wrt bug #536034
 
   14 Jan 2015; Agostino Sarubbo <ago@gentoo.org> wireshark-1.12.3.ebuild:
   Stable for ppc64, wrt bug #536034

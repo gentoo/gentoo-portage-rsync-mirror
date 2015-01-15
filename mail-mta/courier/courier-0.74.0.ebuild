@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.74.0.ebuild,v 1.3 2014/12/28 15:55:52 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.74.0.ebuild,v 1.4 2015/01/15 08:46:07 nativemad Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies:
 # ~arm ~s390 ~ppc64 ~alpha ~hppa ~ia64 ~ppc ~sparc ~x86
-KEYWORDS="~amd64 ~hppa"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite \
 	fam web webmail gnutls"
 

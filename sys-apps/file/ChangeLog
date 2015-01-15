@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.304 2015/01/14 13:50:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.305 2015/01/15 08:39:26 ago Exp $
+
+  15 Jan 2015; Agostino Sarubbo <ago@gentoo.org> file-5.22.ebuild:
+  Stable for ppc, wrt bug #532768
 
   14 Jan 2015; Agostino Sarubbo <ago@gentoo.org> file-5.22.ebuild:
   Stable for ppc64, wrt bug #532768

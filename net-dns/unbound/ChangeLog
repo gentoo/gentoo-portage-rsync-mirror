@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.84 2014/12/21 07:17:57 zx2c4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.85 2015/01/15 08:39:46 ago Exp $
+
+  15 Jan 2015; Agostino Sarubbo <ago@gentoo.org> unbound-1.4.22-r1.ebuild:
+  Stable for ppc, wrt bug #536226
 
 *unbound-1.5.1-r1 (21 Dec 2014)
 
