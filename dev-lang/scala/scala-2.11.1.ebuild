@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.1.ebuild,v 1.2 2014/10/06 05:51:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.1.ebuild,v 1.3 2015/01/15 12:36:21 gienah Exp $
 
 EAPI="5"
 
@@ -180,10 +180,9 @@ src_install() {
 	doexe $(find bin/ -type f ! -iname '*.bat')
 	dodir "${SCALADIR}/lib"
 	insinto "${SCALADIR}/lib"
-	local maj_min=$(get_version_component_range 2)
 	pushd lib || die
 	for j in *.jar; do
-		local i="${j%${maj_min}*}"
+		local i="$(echo "${j}" | sed -e "s@[_-][0-9.-]*\.jar@.jar@")"
 		newins "${j}" "${i}"
 		java-pkg_regjar "${ED}${SCALADIR}/lib/${i}"
 	done
