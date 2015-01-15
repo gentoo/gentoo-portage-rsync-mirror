@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.5.1.ebuild,v 1.1 2013/02/02 09:10:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.5.1.ebuild,v 1.2 2015/01/15 11:27:27 armin76 Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mariomotta.it/vdklib/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="doc debug"
 
 RDEPEND="x11-libs/gtk+:2"

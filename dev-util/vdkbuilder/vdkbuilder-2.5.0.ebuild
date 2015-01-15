@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.5.0.ebuild,v 1.3 2014/08/10 21:29:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.5.0.ebuild,v 1.4 2015/01/15 11:26:00 armin76 Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS=" ~amd64 ~ppc ~x86"
 IUSE="nls debug"
 
 RDEPEND=">=dev-libs/vdk-2.5.0"
