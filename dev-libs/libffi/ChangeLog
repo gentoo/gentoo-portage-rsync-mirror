@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.197 2014/12/31 03:12:14 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.198 2015/01/16 12:42:02 klausman Exp $
+
+  16 Jan 2015; Tobias Klausmann <klausman@gentoo.org>
+  +files/libffi-3.2.1-complex_alpha.patch, libffi-3.2.1.ebuild:
+  Update src/alpha/osf.S to match ffi.h
 
   31 Dec 2014; Mike Frysinger <vapier@gentoo.org>
   +files/libffi-3.2.1-o-tmpfile-eacces.patch, libffi-3.2.1.ebuild:

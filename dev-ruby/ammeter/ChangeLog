@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ammeter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.16 2014/12/28 09:34:00 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ammeter/ChangeLog,v 1.17 2015/01/16 12:58:27 graaff Exp $
+
+*ammeter-1.1.2 (16 Jan 2015)
+
+  16 Jan 2015; Hans de Graaff <graaff@gentoo.org> +ammeter-1.1.2.ebuild:
+  Version bump.
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> ammeter-0.2.9-r1.ebuild:
   Lock to rspec:2.

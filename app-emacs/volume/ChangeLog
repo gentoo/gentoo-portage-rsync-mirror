@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/volume
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.13 2015/01/09 13:45:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.14 2015/01/16 12:34:19 armin76 Exp $
+
+  16 Jan 2015; Raúl Porcel <armin76@gentoo.org> volume-1.0-r1.ebuild:
+  sparc/x86 stable wrt #534846
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> volume-1.0-r1.ebuild:
   Stable for amd64, wrt bug #534846
