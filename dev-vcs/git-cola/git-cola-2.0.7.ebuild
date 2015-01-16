@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.7.ebuild,v 1.2 2015/01/16 09:38:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.7.ebuild,v 1.3 2015/01/16 10:41:45 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 DISTUTILS_SINGLE_IMPL=true
 
 inherit distutils-r1 readme.gentoo virtualx
@@ -18,6 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
+REQUIRED_USE="doc? ( python_targets_python2_7 )"
+
 RDEPEND="
 	dev-python/jsonpickle[${PYTHON_USEDEP}]
 	dev-python/pyinotify[${PYTHON_USEDEP}]
@@ -27,7 +29,10 @@ DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 	sys-devel/gettext
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	doc? (
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		dev-python/sphinxtogithub[$(python_gen_usedep 'python2*')]
+		)
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		sys-apps/net-tools
@@ -76,8 +81,8 @@ python_compile_all() {
 
 python_test() {
 	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" \
-		VIRTUALX_COMMAND="nosetests --verbose --with-doctest \
-		--with-id --exclude=jsonpickle --exclude=json" \
+		VIRTUALX_COMMAND="nosetests --verbose \
+		--with-id --with-doctest --exclude=sphinxtogithub" \
 		virtualmake
 }
 
