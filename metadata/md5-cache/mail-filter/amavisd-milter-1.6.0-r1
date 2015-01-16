@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=|| ( mail-filter/libmilter mail-mta/sendmail ) mail-filter/amavisd-new
+DESCRIPTION=sendmail milter for amavisd-new
+EAPI=5
+HOMEPAGE=http://amavisd-milter.sourceforge.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=|| ( mail-filter/libmilter mail-mta/sendmail ) mail-filter/amavisd-new
+SLOT=0
+SRC_URI=mirror://sourceforge/amavisd-milter/amavisd-milter-1.6.0.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=6b3c17ec4281ff2576f5e18f95b70390

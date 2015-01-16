@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=>=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1
+DEPEND=>=sys-libs/readline-4.1
 DESCRIPTION=A UNIX Shell with a simplified Scheme syntax
-EAPI=2
+EAPI=5
 HOMEPAGE=http://slon.ttk.ru/esh/
 IUSE=debug
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=>=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1
+RDEPEND=>=sys-libs/readline-4.1
 SLOT=0
 SRC_URI=http://slon.ttk.ru/esh/esh-0.8.5.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2d268d53f01ccfa4fb1fe4accb1f7d5b
+_md5_=bcff117284d55fbc000255e065e86d51
