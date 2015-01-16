@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json_pure/json_pure-1.8.2.ebuild,v 1.1 2015/01/10 22:12:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json_pure/json_pure-1.8.2.ebuild,v 1.2 2015/01/16 05:02:41 mrueg Exp $
 
 EAPI=5
 
@@ -22,6 +22,10 @@ ruby_add_bdepend "test? (
 	dev-ruby/sdoc
 	dev-ruby/permutation
 )"
+
+all_ruby_prepare() {
+	sed -i -e 's/`git ls-files`/""/' Rakefile || die
+}
 
 each_ruby_configure() {
 	${RUBY} -Cext/json/ext/generator extconf.rb || die
