@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.624 2015/01/15 20:30:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.625 2015/01/16 08:08:05 ago Exp $
+
+  16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> openssl-1.0.1k.ebuild:
+  Stable for ia64, wrt bug #536042
 
 *openssl-1.0.1l (15 Jan 2015)
 *openssl-1.0.0q (15 Jan 2015)

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.138 2015/01/14 08:31:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.139 2015/01/16 08:08:14 ago Exp $
+
+  16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cpio-2.11-r3.ebuild:
+  Stable for ia64, wrt bug #530512
 
   14 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> cpio-2.11-r3.ebuild:
   Stable on ppc/ppc64/s390, wrt bug #530512

@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.813 2015/01/15 08:40:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.814 2015/01/16 08:08:28 ago Exp $
+
+  16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.12.4-r3.ebuild,
+  xorg-server-1.15.2-r1.ebuild:
+  Stable for ia64, wrt bug #532086
 
   15 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.12.4-r3.ebuild,
   xorg-server-1.15.2-r1.ebuild:
