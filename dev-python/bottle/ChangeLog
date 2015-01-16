@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bottle
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.42 2014/12/09 09:02:42 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.43 2015/01/16 11:54:50 armin76 Exp $
+
+  16 Jan 2015; Raúl Porcel <armin76@gentoo.org> bottle-0.12.7.ebuild:
+  alpha/ia64/sparc stable wrt #530406
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> bottle-0.12.7.ebuild:
   Stable for HPPA (bug #530406).

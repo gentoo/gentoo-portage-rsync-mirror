@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.115 2014/12/07 20:30:28 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.116 2015/01/16 11:52:34 armin76 Exp $
+
+  16 Jan 2015; Raúl Porcel <armin76@gentoo.org> nettle-2.7.1-r1.ebuild:
+  alpha/arm64/ia64/s390/sparc stable wrt #525160
 
   07 Dec 2014; Markus Meier <maekke@gentoo.org> nettle-2.7.1-r1.ebuild:
   arm stable, bug #525160
