@@ -1,10 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.5-r1.ebuild,v 1.1 2014/08/10 07:13:51 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.1.0.ebuild,v 1.1 2015/01/16 09:38:51 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=true
 
 inherit distutils-r1 readme.gentoo virtualx
@@ -27,9 +28,13 @@ DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto
 	sys-devel/gettext
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	doc? (
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		dev-python/sphinxtogithub[${PYTHON_USEDEP}]
+		)
 	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/sphinxtogithub[${PYTHON_USEDEP}]
 		sys-apps/net-tools
 		)"
 
@@ -74,6 +79,13 @@ python_compile_all() {
 	fi
 }
 
+python_test() {
+	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" \
+		VIRTUALX_COMMAND="nosetests --verbose --with-doctest \
+		--with-id --exclude=jsonpickle --exclude=json" \
+		virtualmake
+}
+
 src_install() {
 	distutils-r1_src_install
 }
@@ -86,8 +98,8 @@ python_install_all() {
 		prefix="${EPREFIX}/usr" \
 		install
 
-	python_fix_shebang "${D}/usr/share/git-cola/bin/git-xbase"
-	python_optimize "${D}/usr/share/git-cola/lib/cola"
+	python_fix_shebang "${ED}/usr/share/git-cola/bin/git-xbase"
+	python_optimize "${ED}/usr/share/git-cola/lib/cola"
 
 	if ! use doc ; then
 		HTML_DOCS=( "${FILESDIR}"/index.html )
@@ -96,11 +108,4 @@ python_install_all() {
 	distutils-r1_python_install_all
 	readme.gentoo_create_doc
 	docompress /usr/share/doc/${PF}/git-cola.txt
-}
-
-python_test() {
-	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" \
-		VIRTUALX_COMMAND="nosetests --verbose --with-doctest \
-		--with-id --exclude=jsonpickle --exclude=json" \
-		virtualmake
 }

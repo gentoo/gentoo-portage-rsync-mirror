@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.7.ebuild,v 1.1 2014/10/01 12:38:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-2.0.7.ebuild,v 1.2 2015/01/16 09:38:51 jlec Exp $
 
 EAPI=5
 
@@ -74,6 +74,13 @@ python_compile_all() {
 	fi
 }
 
+python_test() {
+	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" \
+		VIRTUALX_COMMAND="nosetests --verbose --with-doctest \
+		--with-id --exclude=jsonpickle --exclude=json" \
+		virtualmake
+}
+
 src_install() {
 	distutils-r1_src_install
 }
@@ -96,11 +103,4 @@ python_install_all() {
 	distutils-r1_python_install_all
 	readme.gentoo_create_doc
 	docompress /usr/share/doc/${PF}/git-cola.txt
-}
-
-python_test() {
-	PYTHONPATH="${S}:${S}/build/lib:${PYTHONPATH}" LC_ALL="C" \
-		VIRTUALX_COMMAND="nosetests --verbose --with-doctest \
-		--with-id --exclude=jsonpickle --exclude=json" \
-		virtualmake
 }

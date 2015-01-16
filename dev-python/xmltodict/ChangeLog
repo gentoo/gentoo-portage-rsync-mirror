@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/xmltodict
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmltodict/ChangeLog,v 1.9 2014/04/25 05:09:43 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmltodict/ChangeLog,v 1.10 2015/01/16 09:33:54 idella4 Exp $
+
+  16 Jan 2015; Ian Delaney <idella4@gentoo.org> -xmltodict-0.8.3.ebuild,
+  -xmltodict-0.8.7.ebuild:
+  rm old
 
 *xmltodict-0.9.0 (25 Apr 2014)
 

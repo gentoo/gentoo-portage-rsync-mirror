@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp3splt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.47 2014/10/11 16:42:56 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.48 2015/01/16 09:48:22 armin76 Exp $
+
+  16 Jan 2015; Raúl Porcel <armin76@gentoo.org> libmp3splt-0.9.1a.ebuild:
+  sparc stable wrt #514880
 
   11 Oct 2014; Tobias Klausmann <klausman@gentoo.org> libmp3splt-0.9.1a.ebuild:
   Stable on alpha, bug 514880
