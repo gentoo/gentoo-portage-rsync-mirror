@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cmake
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.300 2014/09/26 21:07:08 mattst88 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.301 2015/01/16 20:35:46 johu Exp $
+
+*cmake-3.1.0 (16 Jan 2015)
+
+  16 Jan 2015; Johannes Huber <johu@gentoo.org> +cmake-3.1.0.ebuild,
+  +files/cmake-3.1.0-FindPythonInterp.patch,
+  +files/cmake-3.1.0-darwin-isysroot.patch:
+  Version bump by Eugene Shalygin <eugene.shalygin@gmail.com>, bug #535928.
+  Builds again with doc use flag, bug #535768.
 
   26 Sep 2014; Matt Turner <mattst88@gentoo.org> cmake-2.8.12.2-r1.ebuild:
   alpha stable, bug 517016.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.4.0.ebuild,v 1.1 2014/02/05 17:16:43 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.4.0.ebuild,v 1.2 2015/01/16 21:00:17 johu Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-qt/qtscript:4
 "
 DEPEND="${RDEPEND}
-	doc? ( || ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] ) )
+	doc? ( >=app-doc/doxygen-1.7.6.1[dot] )
 	test? ( dev-qt/qttest:4 )
 "
 
