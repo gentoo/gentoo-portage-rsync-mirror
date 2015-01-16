@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.43 2015/01/13 09:58:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.44 2015/01/16 15:18:40 ago Exp $
+
+  16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mustache-0.99.5.ebuild:
+  Stable for sparc, wrt bug #503570
 
   13 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mustache-0.99.5.ebuild:
   Stable for ppc64, wrt bug #503570

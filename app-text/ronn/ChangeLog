@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ronn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.36 2015/01/13 09:58:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.37 2015/01/16 15:18:36 ago Exp $
+
+  16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ronn-0.7.3-r2.ebuild:
+  Stable for sparc, wrt bug #503570
 
   13 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ronn-0.7.3-r2.ebuild:
   Stable for ppc64, wrt bug #503570
