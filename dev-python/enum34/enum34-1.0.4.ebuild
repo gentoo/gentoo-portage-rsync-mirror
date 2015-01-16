@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/enum34-1.0.4.ebuild,v 1.4 2015/01/01 20:53:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/enum34-1.0.4.ebuild,v 1.5 2015/01/16 21:02:53 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3} pypy pypy3 )  # Do NOT add python3_4—see DESCRIPTION
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE="doc"
 
 DEPEND=""

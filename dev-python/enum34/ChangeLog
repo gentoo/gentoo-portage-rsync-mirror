@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enum34
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.8 2015/01/01 20:53:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.9 2015/01/16 21:02:53 jer Exp $
+
+  16 Jan 2015; Jeroen Roovers <jer@gentoo.org> enum34-1.0.4.ebuild:
+  Marked ~hppa (bug #533430).
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> enum34-1.0.4.ebuild:
   add ~arm, bug #533430
