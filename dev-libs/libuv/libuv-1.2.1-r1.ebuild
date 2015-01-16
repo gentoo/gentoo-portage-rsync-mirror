@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-1.2.1.ebuild,v 1.1 2015/01/16 04:16:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-1.2.1-r1.ebuild,v 1.1 2015/01/16 15:47:31 hasufell Exp $
 
 EAPI=5
 
 inherit eutils autotools multilib-minimal
 
 DESCRIPTION="A new platform layer for Node"
-HOMEPAGE="https://github.com/joyent/libuv"
+HOMEPAGE="https://github.com/libuv/libuv"
 SRC_URI="https://github.com/libuv/libuv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD BSD-2 ISC MIT"
@@ -15,15 +15,18 @@ SLOT="0/1"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
-DEPEND="virtual/pkgconfig"
+DEPEND="
+	sys-devel/libtool
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	echo "m4_define([UV_EXTRA_AUTOMAKE_FLAGS], [serial-tests])" \
 		> m4/libuv-extra-automake-flags.m4 || die
 
 	sed -i \
-		-e '/libuv_la_CFLAGS/s#-g##' \
-		Makefile.am || die "fixing CFLAGS failed!"
+		-e '/CC_CHECK_CFLAGS_APPEND(\[-g\])/d' \
+		configure.ac || die "fixing CFLAGS failed!"
 
 	eautoreconf
 }

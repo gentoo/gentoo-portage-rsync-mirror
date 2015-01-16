@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera-developer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/ChangeLog,v 1.26 2015/01/09 16:24:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/ChangeLog,v 1.27 2015/01/16 15:44:03 jer Exp $
+
+*opera-developer-28.0.1745.0 (16 Jan 2015)
+
+  16 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  +opera-developer-28.0.1745.0.ebuild:
+  Version bump.
 
   09 Jan 2015; Jeroen Roovers <jer@gentoo.org>
   opera-developer-28.0.1738.0-r1.ebuild:

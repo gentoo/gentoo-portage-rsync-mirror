@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.29 2015/01/16 04:16:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.31 2015/01/16 15:47:31 hasufell Exp $
+
+*libuv-1.2.1-r1 (16 Jan 2015)
+
+  16 Jan 2015; Julian Ospald <hasufell@gentoo.org> +libuv-1.2.1-r1.ebuild:
+  version bump
+
+  16 Jan 2015; Julian Ospald <hasufell@gentoo.org> -libuv-1.2.1.ebuild:
+  rm unreviewed ebuild
 
 *libuv-1.2.1 (16 Jan 2015)
 
