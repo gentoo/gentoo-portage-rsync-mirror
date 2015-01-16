@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.16 2015/01/16 22:56:46 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-2014.7.1.ebuild,v 1.1 2015/01/16 22:56:46 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -75,9 +75,17 @@ DOCS=(README.rst AUTHORS)
 
 REQUIRED_USE="|| ( raet zeromq )"
 
+PATCHES=(
+	"${FILESDIR}/${P}-remove-pydsl-includes-test.patch"
+)
+
 python_prepare() {
 	# this test fails because it trys to "pip install distribute"
 	rm tests/unit/{modules,states}/zcbuildout_test.py
+
+	# these tests fail because they depend on features that are only
+	# in git versions of SaltTesting
+	rm tests/unit/{templates/jinja,modules/hashutil}_test.py
 }
 
 python_install_all() {
