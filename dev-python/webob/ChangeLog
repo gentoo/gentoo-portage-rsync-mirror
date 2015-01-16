@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.98 2015/01/02 12:26:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.99 2015/01/16 13:17:01 idella4 Exp $
+
+  16 Jan 2015; Ian Delaney <idella4@gentoo.org> -webob-1.2.3-r1.ebuild,
+  -webob-1.2.3.ebuild, -webob-1.3.1.ebuild:
+  rm old
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> webob-1.4.ebuild:
   Stable for sparc, wrt bug #530620
