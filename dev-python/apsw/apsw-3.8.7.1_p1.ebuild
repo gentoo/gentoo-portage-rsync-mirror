@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.8.7.1_p1.ebuild,v 1.2 2014/12/01 05:50:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.8.7.1_p1.ebuild,v 1.3 2015/01/16 03:43:30 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/rogerbinns/apsw/archive/${MY_PV}.tar.gz -> ${P}.tar.
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc64 x86"
 IUSE="doc"
 
 RDEPEND=">=dev-db/sqlite-${PV%_p*}"

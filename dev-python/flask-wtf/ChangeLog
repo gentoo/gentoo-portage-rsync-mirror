@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-wtf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-wtf/ChangeLog,v 1.18 2014/12/21 10:42:54 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-wtf/ChangeLog,v 1.19 2015/01/16 03:43:49 patrick Exp $
+
+  16 Jan 2015; Patrick Lauer <patrick@gentoo.org> flask-wtf-0.10.3.ebuild:
+  Stable on amd64 and x86 for 527558
 
   21 Dec 2014; Ian Delaney <idella4@gentoo.org> -flask-wtf-0.10.0.ebuild,
   -flask-wtf-0.10.1.ebuild, -flask-wtf-0.9.3.ebuild, -flask-wtf-0.9.4.ebuild,

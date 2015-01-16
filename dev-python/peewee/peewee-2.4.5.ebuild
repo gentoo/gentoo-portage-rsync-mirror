@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/peewee-2.4.5.ebuild,v 1.1 2014/12/25 08:35:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/peewee-2.4.5.ebuild,v 1.2 2015/01/16 03:38:36 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/coleifer/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples test"
 
 RDEPEND=""

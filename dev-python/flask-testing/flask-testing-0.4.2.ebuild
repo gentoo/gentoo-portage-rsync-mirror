@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/flask-testing-0.4.2.ebuild,v 1.1 2014/07/31 06:12:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/flask-testing-0.4.2.ebuild,v 1.2 2015/01/16 03:47:13 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 # Testsuite fails with concurrent threads
 DISTUTILS_NO_PARALLEL_BUILD=1
