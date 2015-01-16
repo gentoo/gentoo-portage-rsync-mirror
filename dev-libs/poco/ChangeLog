@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.33 2015/01/08 20:40:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.34 2015/01/16 16:23:09 tommy Exp $
+
+  16 Jan 2015; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -poco-1.3.3_p1.ebuild, -poco-1.3.6_p2.ebuild, -poco-1.4.3_p1.ebuild,
+  -poco-1.4.5-r1.ebuild, -poco-1.4.6_p1.ebuild:
+  Remove old versions
 
   08 Jan 2015; Markus Meier <maekke@gentoo.org> poco-1.4.6_p4.ebuild:
   arm stable, bug #508720
