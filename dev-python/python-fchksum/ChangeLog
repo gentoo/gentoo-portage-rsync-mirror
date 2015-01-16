@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-fchksum
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.40 2014/03/15 15:16:53 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.41 2015/01/16 07:42:27 jer Exp $
+
+  16 Jan 2015; Jeroen Roovers <jer@gentoo.org> python-fchksum-1.7.1-r1.ebuild:
+  Stable for HPPA (bug #535362).
 
 *python-fchksum-1.7.1-r1 (15 Mar 2014)
 
