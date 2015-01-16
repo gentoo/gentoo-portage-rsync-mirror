@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.7.5.ebuild,v 1.1 2015/01/10 22:00:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/temple-0.7.5.ebuild,v 1.2 2015/01/16 05:00:04 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -21,6 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/bacon
+	dev-ruby/erubis
 	>=dev-ruby/tilt-2.0.1 )"
 
 each_ruby_test() {
