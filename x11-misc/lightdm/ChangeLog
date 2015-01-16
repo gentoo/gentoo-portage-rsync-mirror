@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.104 2015/01/12 19:49:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.105 2015/01/16 19:37:50 hwoarang Exp $
+
+  16 Jan 2015; Markos Chandras <hwoarang@gentoo.org> files/Xsession:
+  Drop quotes from exec arguments. Bug #533456
 
   12 Jan 2015; Markos Chandras <hwoarang@gentoo.org> files/Xsession:
   Pass Xsession arguments to xinitrc.d/80-dbus. Bug #533456. Thanks to Joakim

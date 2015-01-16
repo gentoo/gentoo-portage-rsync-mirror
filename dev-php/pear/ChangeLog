@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pear
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.42 2015/01/14 16:16:01 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.43 2015/01/16 19:40:38 grknight Exp $
+
+*pear-1.9.5 (16 Dec 2015)
+
+  16 Dec 2015; Brian Evans <grknight@gentoo.org> +pear-1.9.5.ebuild:
+  Version bump
 
   14 Jan 2015; Brian Evans <grknight@gentoo.org> pear-1.9.4.ebuild:
   Remove defunct pear.phpunit.de and pear.php-baustelle.de from channel

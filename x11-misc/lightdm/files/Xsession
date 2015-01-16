@@ -71,4 +71,4 @@ fi
 
 echo "X session wrapper complete, running session $@"
 
-exec "$command"
+exec $command
