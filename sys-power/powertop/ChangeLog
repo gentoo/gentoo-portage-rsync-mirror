@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.106 2014/11/24 21:24:59 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.107 2015/01/16 08:54:36 armin76 Exp $
+
+  16 Jan 2015; Raúl Porcel <armin76@gentoo.org> powertop-2.6.ebuild:
+  sparc/x86 stable wrt #520616
 
 *powertop-2.7 (24 Nov 2014)
 

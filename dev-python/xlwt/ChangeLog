@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/xlwt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.27 2014/03/31 20:57:39 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.28 2015/01/16 08:42:58 idella4 Exp $
+
+  16 Jan 2015; Ian Delaney <idella4@gentoo.org> -xlwt-0.7.2.ebuild,
+  -xlwt-0.7.4-r1.ebuild:
+  rm old
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> xlwt-0.7.4-r1.ebuild,
   xlwt-0.7.5.ebuild:

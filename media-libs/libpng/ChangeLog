@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.486 2015/01/16 08:08:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.487 2015/01/16 08:46:41 klausman Exp $
+
+  16 Jan 2015; Tobias Klausmann <klausman@gentoo.org> libpng-1.5.21.ebuild:
+  Revert accidental alpha stabilization from bug 533358
 
   16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libpng-1.6.16.ebuild:
   Stable for ia64, wrt bug #533358
