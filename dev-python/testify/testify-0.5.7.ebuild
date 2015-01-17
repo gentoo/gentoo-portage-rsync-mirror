@@ -1,12 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.5.6.ebuild,v 1.1 2014/10/27 08:55:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testify/testify-0.5.7.ebuild,v 1.1 2015/01/17 07:03:15 idella4 Exp $
 
 EAPI=5
 
 # Still appears to no support >=py3.3
 PYTHON_COMPAT=( python2_7 pypy )
-RESTRICT="test" 	# basically still very broken
 
 inherit distutils-r1 vcs-snapshot
 
@@ -29,10 +28,18 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 python_prepare_all() {
 	# Correct typo in setup.py
 	sed -e 's:mock,:mock:' -i setup.py || die
+	# Correct use of local importing in test_ file
+	sed -e s':from .test_runner_subdir:from test.test_runner_subdir:' \
+		-e s':from .test_runner_bucketing:from test.test_runner_bucketing:' \
+		-i test/test_runner_test.py || die
+
 	distutils-r1_python_prepare_all
 }
 
 python_test() {
-	# https://github.com/Yelp/Testify/issues/283
-	 "${PYTHON}" bin/${PN} test || die
+	PYTHONPATH="${PYTHONPATH}:${S}"
+	for test in test/*_test.py;
+	do
+		"${PYTHON}" $test || die "test $test failed under ${EPYTHON}"
+	done
 }
