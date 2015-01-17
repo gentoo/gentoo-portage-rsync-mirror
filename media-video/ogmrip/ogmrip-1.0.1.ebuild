@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-1.0.1.ebuild,v 1.1 2014/08/22 16:33:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-1.0.1.ebuild,v 1.2 2015/01/17 22:30:15 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG=no
+
 inherit gnome2
 
 DESCRIPTION="Graphical frontend and libraries for ripping DVDs and encoding to AVI/OGM/MKV/MP4"
@@ -13,9 +14,10 @@ SRC_URI="mirror://sourceforge/ogmrip/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="aac dbus debug doc dts gtk libnotify matroska mp3 mp4 nls ogm spell srt static-libs theora vorbis x264 xvid"
+IUSE="aac dbus debug dts gtk libnotify matroska mp3 mp4 nls ogm spell srt static-libs theora vorbis x264 xvid"
 
-COMMON_DEPEND=">=dev-libs/glib-2.16:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.16:2
 	>=app-i18n/enca-1.9
 	dev-libs/libxml2
 	media-libs/libdvdread
@@ -42,41 +44,40 @@ COMMON_DEPEND=">=dev-libs/glib-2.16:2
 		)
 		media-libs/libpng )
 	theora? ( media-libs/libtheora )
-	vorbis? ( media-sound/vorbis-tools )"
+	vorbis? ( media-sound/vorbis-tools )
+"
 RDEPEND="${COMMON_DEPEND}
-	gnome-base/gvfs"
+	gnome-base/gvfs
+"
 DEPEND="${COMMON_DEPEND}
+	dev-util/gtk-doc-am
 	nls? ( sys-devel/gettext
 		dev-util/intltool )
-	gtk? ( doc? ( dev-util/gtk-doc ) )
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
-pkg_setup() {
-	DOCS="AUTHORS ChangeLog README TODO"
+src_configure() {
+	gnome2_src_configure \
+		$(use_enable debug maintainer-mode) \
+		$(use_enable gtk gtk-support) \
+		$(use_enable dbus dbus-support) \
+		$(use_enable spell enchant-support) \
+		$(use_enable ogm ogm-support) \
+		$(use_enable matroska mkv-support) \
+		$(use_enable mp4 mp4-support) \
+		$(use_enable xvid xvid-support) \
+		$(use_enable x264 x264-support) \
+		$(use_enable theora theora-support) \
+		$(use_enable vorbis vorbis-support) \
+		$(use_enable mp3 mp3-support) \
+		$(use_enable aac aac-support) \
+		$(use_enable srt srt-support) \
+		$(use_enable static-libs static) \
+		$(use_enable libnotify libnotify-support) \
+		$(use_enable nls) \
+		--with-html-dir=/usr/share/doc/${PF}/html
+}
 
-	G2CONF=""
-	if use gtk; then
-		G2CONF="$(use_enable doc gtk-doc)"
-	fi
-
-	G2CONF="
-		${G2CONF}
-		$(use_enable debug maintainer-mode)
-		$(use_enable gtk gtk-support)
-		$(use_enable dbus dbus-support)
-		$(use_enable spell enchant-support)
-		$(use_enable ogm ogm-support)
-		$(use_enable matroska mkv-support)
-		$(use_enable mp4 mp4-support)
-		$(use_enable xvid xvid-support)
-		$(use_enable x264 x264-support)
-		$(use_enable theora theora-support)
-		$(use_enable vorbis vorbis-support)
-		$(use_enable mp3 mp3-support)
-		$(use_enable aac aac-support)
-		$(use_enable srt srt-support)
-		$(use_enable static-libs static)
-		$(use_enable libnotify libnotify-support)
-		$(use_enable nls)
-		--with-html-dir=/usr/share/doc/${PF}/html"
+src_install() {
+	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_install #528670
 }
