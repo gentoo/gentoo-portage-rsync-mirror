@@ -1225,6 +1225,7 @@ dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glib
 dev-cpp/libcmis:man - Build and install man pages.
 dev-cpp/pficommon:fcgi - Build FCGI feature
 dev-cpp/pficommon:mprpc - Build MessagePack RPC feature
+dev-cpp/websocketpp:boost - Use dev-libs/boost instead of C++11
 dev-cpp/xsd:ace - Enable support for serializing to/from an ACE CDR stream
 dev-db/cppdb:mysql_internal - Don't build a separate mysql loadable module but rather build it into the cppdb library itself
 dev-db/cppdb:odbc_internal - Don't build a separate postgresql loadable module but rather build it into the cppdb library itself
