@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/imapclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imapclient/ChangeLog,v 1.4 2014/12/12 11:52:02 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imapclient/ChangeLog,v 1.5 2015/01/17 01:36:17 idella4 Exp $
+
+*imapclient-0.12 (17 Jan 2015)
+
+  17 Jan 2015; Ian Delaney <idella4@gentoo.org> +files/0.12-tests.patch,
+  +imapclient-0.12.ebuild, -files/imapclient-0.10.2-system-six.patch,
+  -files/imapclient-0.11-system-six.patch, -imapclient-0.10.2.ebuild,
+  -imapclient-0.11.ebuild:
+  bump; add patch for tests to import six from the system, rm disused patches
+  and old
 
   12 Dec 2014; Ian Delaney <idella4@gentoo.org> imapclient-0.11.ebuild:
   drop py3.2 add py3.4, tidy deps fix test phase, fixes Bug #530524 by pacho2

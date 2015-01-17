@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/apitrace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.25 2015/01/11 19:14:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.26 2015/01/17 01:36:26 radhermit Exp $
+
+*apitrace-6.1 (17 Jan 2015)
+
+  17 Jan 2015; Tim Harder <radhermit@gentoo.org> +apitrace-6.1.ebuild:
+  Version bump.
 
 *apitrace-6.0 (11 Jan 2015)
 
