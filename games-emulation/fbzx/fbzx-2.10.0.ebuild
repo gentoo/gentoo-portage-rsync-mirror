@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-2.10.0.ebuild,v 1.4 2012/10/30 11:11:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-2.10.0.ebuild,v 1.5 2015/01/17 15:44:15 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A Sinclair Spectrum emulator, designed to work at full screen using the FrameBuffer"
@@ -28,9 +28,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin fbzx || die "dogamesbin failed"
+	dogamesbin fbzx
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r keymap.bmp spectrum-roms || die "doins failed"
+	doins -r keymap.bmp spectrum-roms
 	dodoc AMSTRAD CAPABILITIES FAQ PORTING README* TODO VERSIONS
 	doicon fbzx.svg
 	make_desktop_entry fbzx FBZX

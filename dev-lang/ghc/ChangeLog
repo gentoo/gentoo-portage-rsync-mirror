@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.275 2015/01/17 14:44:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.276 2015/01/17 15:41:39 slyfox Exp $
+
+  17 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.8.4.ebuild:
+  Regenerate .cmm parser against ia64-CLOSUREs patch.
 
   17 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
   +files/ghc-7.8.4-ia64-CLOSUREs.patch, ghc-7.8.4.ebuild:

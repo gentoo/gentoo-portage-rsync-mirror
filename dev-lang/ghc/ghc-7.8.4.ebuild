@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.4.ebuild,v 1.6 2015/01/17 14:44:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.4.ebuild,v 1.7 2015/01/17 15:41:39 slyfox Exp $
 
 EAPI=5
 
@@ -63,6 +63,7 @@ SRC_URI="!binary? ( http://downloads.haskell.org/~ghc/${PV/_rc/-rc}/${GHC_P}-src
 S="${WORKDIR}"/${GHC_P}
 
 [[ -n $arch_binaries ]] && SRC_URI+=" !ghcbootstrap? ( $arch_binaries )"
+SRC_URI+=" http://dev.gentoo.org/~slyfox/distfiles/${P}-ia64-CLOSUREs-regenerated.patch.gz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
@@ -402,6 +403,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-7.6.3-preserve-inplace-xattr.patch
 		# fix threaded runtime on ia64
 		epatch "${FILESDIR}"/${PN}-7.8.4-ia64-CLOSUREs.patch
+		epatch "${WORKDIR}"/${PN}-7.8.4-ia64-CLOSUREs-regenerated.patch
 
 		# upstream backports
 		epatch "${FILESDIR}"/${PN}-7.8.3-linker-warn.patch

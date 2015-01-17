@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fbzx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.30 2013/01/30 22:26:56 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.31 2015/01/17 15:44:15 tupone Exp $
+
+  17 Jan 2015; Tupone Alfredo <tupone@gentoo.org> fbzx-2.10.0.ebuild:
+  EAPI 5
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -fbzx-2.4.1.ebuild,
   -files/fbzx-2.4.1-build.patch:
