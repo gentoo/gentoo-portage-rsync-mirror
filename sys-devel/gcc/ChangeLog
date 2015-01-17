@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1036 2015/01/05 23:25:09 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1037 2015/01/17 18:04:55 jer Exp $
+
+  17 Jan 2015; Jeroen Roovers <jer@gentoo.org> gcc-4.9.0.ebuild,
+  gcc-4.9.1.ebuild, gcc-4.9.2.ebuild:
+  Marked ~hppa (bug #536874).
 
   05 Jan 2015; Magnus Granberg <zorry@gentoo.org> gcc-4.9.2.ebuild:
   Update piepatchset to 0.6.2 fix #528968 #528690

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.104 2015/01/17 12:59:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.105 2015/01/17 18:16:17 zlogene Exp $
+
+  17 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> perl-tk-804.32.0-r1.ebuild:
+  Stable for all wrt bug #536798
 
   17 Jan 2015; Jeroen Roovers <jer@gentoo.org> perl-tk-804.32.0-r1.ebuild:
   Stable for HPPA (bug #536798).
