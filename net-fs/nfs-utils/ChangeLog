@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.263 2015/01/17 03:08:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.264 2015/01/17 11:24:47 patrick Exp $
+
+  17 Jan 2015; Patrick Lauer <patrick@gentoo.org> nfs-utils-1.3.1-r1.ebuild:
+  Fix libevent depend to avoid compile failures #536812
 
   17 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> nfs-utils-1.3.1-r1.ebuild:
   amd64 stable wrt bug #530418

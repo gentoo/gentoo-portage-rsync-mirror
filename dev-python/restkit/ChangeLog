@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/restkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.19 2015/01/16 13:52:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.20 2015/01/17 11:28:04 idella4 Exp $
+
+*restkit-4.2.1-r1 (17 Jan 2015)
+
+  17 Jan 2015; Ian Delaney <idella4@gentoo.org>
+  +files/restkit-exclude-tests.patch, +restkit-4.2.1-r1.ebuild:
+  re-add for arch ppc
 
   16 Jan 2015; Ian Delaney <idella4@gentoo.org> +files/setup.patch,
   -files/restkit-exclude-tests.patch, -restkit-4.2.1-r1.ebuild,
