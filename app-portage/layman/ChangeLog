@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.223 2015/01/12 19:35:22 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.224 2015/01/17 09:52:50 patrick Exp $
+
+  17 Jan 2015; Patrick Lauer <patrick@gentoo.org> layman-2.2.0-r7.ebuild:
+  Fix #525896, tests now actually run and fail
 
 *layman-2.2.0-r7 (12 Jan 2015)
 

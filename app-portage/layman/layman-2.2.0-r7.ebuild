@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0-r7.ebuild,v 1.1 2015/01/12 19:35:22 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.2.0-r7.ebuild,v 1.2 2015/01/17 09:52:50 patrick Exp $
 
 EAPI="5"
 
@@ -62,7 +62,7 @@ python_prepare_all()  {
 }
 
 python_test() {
-	for suite in layman/tests/{dtest,external}.py ; do
+	for suite in layman/tests/external.py ; do
 		PYTHONPATH="." "${PYTHON}" ${suite} \
 		|| die "test suite '${suite}' failed"
 	done
