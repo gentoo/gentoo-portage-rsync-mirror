@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.151 2015/01/15 08:39:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.152 2015/01/17 20:02:35 maekke Exp $
+
+  17 Jan 2015; Markus Meier <maekke@gentoo.org> strongswan-5.2.2.ebuild:
+  arm stable, bug #536226
 
   15 Jan 2015; Agostino Sarubbo <ago@gentoo.org> strongswan-5.2.2.ebuild:
   Stable for ppc, wrt bug #536226

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.338 2015/01/17 19:58:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.339 2015/01/17 20:03:08 maekke Exp $
+
+  17 Jan 2015; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask net-misc/strongswan[strongswan_plugins_unbound] for bug
+  #536226
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask net-im/gajim[jingle,gnome,kde] for bug #533404

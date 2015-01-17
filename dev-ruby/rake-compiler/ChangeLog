@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake-compiler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.89 2014/12/28 11:40:05 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.90 2015/01/17 20:09:28 mrueg Exp $
+
+  17 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -rake-compiler-0.9.3.ebuild:
+  Remove old.
 
 *rake-compiler-0.9.4 (28 Dec 2014)
 
