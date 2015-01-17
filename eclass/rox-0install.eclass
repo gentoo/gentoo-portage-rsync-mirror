@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox-0install.eclass,v 1.4 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox-0install.eclass,v 1.5 2015/01/17 20:54:25 mrueg Exp $
 
+# @DEAD
 # ROX-0install eclass Version 1
 
 # Created by Jim Ramsay (lack@gentoo.org) to ease installation of ROX desktop

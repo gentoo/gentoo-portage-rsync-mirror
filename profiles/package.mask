@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16288 2015/01/15 16:39:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16290 2015/01/17 20:56:54 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,56 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Manuel Rüger <mrueg@gentoo.org> (17 Jan 2015)
+# Unmaintained. Old eclasses, EAPIs and various bugs.
+# See bug #533642
+# Removal in 30 days.
+rox-base/mime-editor
+rox-base/oroborox
+rox-base/pager
+rox-base/rox
+rox-base/rox-autostart
+rox-base/rox-clib
+rox-base/rox-launch
+rox-base/rox-lib
+rox-base/rox-session
+rox-base/systemtrayn
+rox-base/tasklist
+rox-base/tasktray
+rox-base/thumbs
+rox-base/traylib
+rox-base/volume
+rox-base/xdg-menu
+rox-base/zeroinstall-injector
+rox-extra/archive
+rox-extra/clock
+rox-extra/contacts
+rox-extra/diff
+rox-extra/edit
+rox-extra/fetch
+rox-extra/find
+rox-extra/gnome-thumbnailer
+rox-extra/lithium
+rox-extra/magickthumbnail
+rox-extra/memo
+rox-extra/mp3ogg2wav
+rox-extra/musicbox
+rox-extra/picky
+rox-extra/resolution
+rox-extra/reticker
+rox-extra/ripper
+rox-extra/rox-tail
+rox-extra/rox-wifi
+rox-extra/rox-xplanet
+rox-extra/roxcd
+rox-extra/roxdao
+rox-extra/roxget
+rox-extra/roxiso
+rox-extra/songer
+rox-extra/videothumbnail
+rox-extra/wallpaper
+rox-extra/weather
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Jan 2015)
 # No upstream anymore, segfaults on amd64

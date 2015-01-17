@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.36 2012/05/02 18:31:42 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.37 2015/01/17 20:54:25 mrueg Exp $
 
+# @DEAD
 # ROX eclass Version 3
 
 # This eclass was created by Sergey Kuleshov (svyatogor@gentoo.org) and
