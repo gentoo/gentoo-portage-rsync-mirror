@@ -4,10 +4,10 @@ DESCRIPTION=C++ Runtime from PathScale, FreeBSD and NetBSD
 EAPI=5
 HOMEPAGE=https://github.com/pathscale/libcxxrt http://www.pathscale.com/node/265
 IUSE=libunwind static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_ppc_32 abi_ppc_64 abi_s390_32 abi_s390_64
-KEYWORDS=~amd64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~mips ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=BSD-2
 RDEPEND=libunwind? ( >=sys-libs/libunwind-1.0.1-r1[static-libs?] )
 SLOT=0
 SRC_URI=mirror://gentoo/libcxxrt-0.0_p20131222.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=849c093ae6af38553ade200560e38cba
+_md5_=251956c5d32ac81c68a4400b048b131d

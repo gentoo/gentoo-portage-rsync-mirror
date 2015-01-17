@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libcxx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.40 2014/06/18 20:50:24 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/ChangeLog,v 1.41 2015/01/17 19:10:41 blueness Exp $
+
+  17 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  libcxx-0.0_p20130725.ebuild, libcxx-0.0_p20131222.ebuild,
+  libcxx-0.0_p20140322.ebuild, libcxx-9999.ebuild:
+  Keyword ~mips, bug #536692
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libcxx-0.0_p20130725.ebuild,
   libcxx-0.0_p20131222.ebuild, libcxx-0.0_p20140322.ebuild, libcxx-9999.ebuild:
