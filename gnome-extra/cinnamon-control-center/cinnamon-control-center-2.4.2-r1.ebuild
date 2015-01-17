@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.4.2-r1.ebuild,v 1.1 2015/01/17 15:39:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.4.2-r1.ebuild,v 1.2 2015/01/17 22:43:05 ulm Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -85,7 +85,7 @@ src_prepare() {
 	# make some panels optional
 	epatch "${FILESDIR}"/${PN}-2.2.5-optional.patch
 
-        # Fix NM version checking, bug #536850
+	# Fix NM version checking, bug #536850
 	epatch "${FILESDIR}"/${PN}-2.4.2-networkmanager-version.patch
 
 	epatch_user
