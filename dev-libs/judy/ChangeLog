@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.37 2015/01/14 11:12:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.38 2015/01/17 12:30:41 jer Exp $
+
+  17 Jan 2015; Jeroen Roovers <jer@gentoo.org> judy-1.0.5.ebuild:
+  Stable for HPPA (bug #525296).
 
   14 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> judy-1.0.5.ebuild:
   Add ~s390 keyword
