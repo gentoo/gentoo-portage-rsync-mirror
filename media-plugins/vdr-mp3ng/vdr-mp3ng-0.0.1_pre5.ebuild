@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre5.ebuild,v 1.3 2014/11/08 18:13:01 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre5.ebuild,v 1.4 2015/01/17 21:22:44 hd_brummy Exp $
 
 EAPI=5
 
@@ -46,7 +46,7 @@ src_prepare() {
 		-e "s:HAVE_IMLIB2:#HAVE_IMLIB2:" \
 		-e "s:#HAVE_MAGICK:HAVE_MAGICK:"
 
-	has_version ">=media-video/vdr-1.3.37" && epatch "${FILESDIR}/${PN}-001_pre4-1.3.37.diff"
+	has_version ">=media-video/vdr-1.3.37" && epatch "${FILESDIR}/${PN}-0.0.1_pre4-1.3.37.diff"
 	has_version ">=media-gfx/imagemagick-6.4" && epatch "${FILESDIR}/imagemagick-6.4.x.diff"
 
 	sed -i mp3ng.c -e "s:RegisterI18n:// RegisterI18n:"
