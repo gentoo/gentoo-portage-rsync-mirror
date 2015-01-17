@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.4.ebuild,v 1.5 2015/01/13 22:10:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.4.ebuild,v 1.6 2015/01/17 14:44:56 slyfox Exp $
 
 EAPI=5
 
@@ -400,6 +400,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-7.8.3-prim-lm.patch
 		# bug 518734
 		epatch "${FILESDIR}"/${PN}-7.6.3-preserve-inplace-xattr.patch
+		# fix threaded runtime on ia64
+		epatch "${FILESDIR}"/${PN}-7.8.4-ia64-CLOSUREs.patch
 
 		# upstream backports
 		epatch "${FILESDIR}"/${PN}-7.8.3-linker-warn.patch
