@@ -7,8 +7,8 @@
 		<name>Johannes Huber</name>
 	</maintainer>
 	<use>
+		<flag name="hatchet">Enable support for the synchronisation through Hatchet</flag>
 		<flag name="telepathy">Enable support for the real-time communication framework telepathy</flag>
-		<flag name="twitter">Enable twitter support</flag>
 	</use>
 </pkgmetadata>
 
