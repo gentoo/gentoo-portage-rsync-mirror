@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/rdiscount
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.40 2015/01/16 15:18:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.43 2015/01/17 19:53:53 mrueg Exp $
+
+  17 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -rdiscount-1.6.8-r1.ebuild:
+  Remove old.
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> rdiscount-1.6.8-r2.ebuild:
+  Stable for ia64, wrt bug #503570
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> rdiscount-1.6.8-r2.ebuild:
+  Stable for alpha, wrt bug #503570
 
   16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> rdiscount-1.6.8-r2.ebuild:
   Stable for sparc, wrt bug #503570

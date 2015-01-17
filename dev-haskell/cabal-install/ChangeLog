@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cabal-install
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.24 2014/12/30 08:47:02 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.25 2015/01/17 19:46:23 slyfox Exp $
+
+  17 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  cabal-install-1.18.0.3-r1.ebuild:
+  stable on ppc/ppc64 (bug #536358 by Michael Orlitzky)
 
   30 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org>
   cabal-install-1.20.0.3-r2.ebuild:

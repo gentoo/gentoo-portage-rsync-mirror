@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.337 2015/01/09 22:11:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.338 2015/01/17 19:58:19 maekke Exp $
+
+  17 Jan 2015; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask net-im/gajim[jingle,gnome,kde] for bug #533404
 
   09 Jan 2015; Davide Pesavento <pesa@gentoo.org> package.mask:
   Unmask Qt 4.8.6 since qtchooser has been keyworded.
