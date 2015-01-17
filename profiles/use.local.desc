@@ -2564,7 +2564,6 @@ dev-util/kdevplatform:konsole - Enable kde-base/konsole integration
 dev-util/kdevplatform:reviewboard - Enable reviewboard support
 dev-util/ltrace:unwind - Use sys-libs/libunwind for frame unwinding support
 dev-util/lttng-tools:ust - Support LTTng-UST (Userspace Tracing)
-dev-util/meld:highlight - Enable source code highlighting via dev-python/pygtksourceview
 dev-util/metro:ccache - Enable support for ccache
 dev-util/metro:git - Enable support for git snapshots
 dev-util/metro:threads - Enable support for pbzip2 tarball packing/unpacking

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gngeo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.22 2012/09/04 05:07:50 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.23 2015/01/17 16:28:18 tupone Exp $
+
+  17 Jan 2015; Tupone Alfredo <tupone@gentoo.org> gngeo-0.7.ebuild:
+  EAPI 5
 
   04 Sep 2012; Alfredo Tupone <tupone@gentoo.org> gngeo-0.7.ebuild,
   +files/gngeo-0.7-zlib.patch:

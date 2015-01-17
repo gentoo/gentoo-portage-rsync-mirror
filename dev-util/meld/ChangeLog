@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.193 2015/01/14 10:31:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.194 2015/01/17 16:29:53 slyfox Exp $
+
+  17 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
+  Repoman says: unused local USE-description: 'highlight'
 
   14 Jan 2015; Pacho Ramos <pacho@gentoo.org> -meld-1.8.5.ebuild,
   -meld-3.12.1.ebuild:
