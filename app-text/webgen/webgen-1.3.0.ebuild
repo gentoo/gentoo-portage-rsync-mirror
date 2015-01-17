@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/webgen-1.0.0.ebuild,v 1.2 2014/06/17 10:02:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/webgen/webgen-1.3.0.ebuild,v 1.1 2015/01/17 15:19:28 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_DOCDIR="htmldoc/rdoc"
 RUBY_FAKEGEM_EXTRADOC="AUTHORS THANKS"
@@ -16,12 +16,14 @@ HOMEPAGE="http://webgen.gettalong.org"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="builder highlight markdown"
 
 ruby_add_bdepend "doc? ( dev-ruby/rdoc )
 	test? ( dev-ruby/kramdown
-		dev-ruby/rdiscount )"
+		dev-ruby/minitest:5
+		dev-ruby/rdiscount
+		>=dev-ruby/sass-3.2:0 )"
 
 ruby_add_rdepend ">=dev-ruby/cmdparse-2.0.0
 	dev-ruby/systemu

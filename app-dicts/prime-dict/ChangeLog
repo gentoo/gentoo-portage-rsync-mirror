@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/prime-dict
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.48 2014/11/03 15:04:34 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/prime-dict/ChangeLog,v 1.49 2015/01/17 15:23:12 mrueg Exp $
+
+*prime-dict-1.0.0-r2 (17 Jan 2015)
+
+  17 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +prime-dict-1.0.0-r2.ebuild:
+  Update EAPI, add ruby20, ruby21 targets.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> prime-dict-1.0.0-r1.ebuild:
   Drop jruby.
