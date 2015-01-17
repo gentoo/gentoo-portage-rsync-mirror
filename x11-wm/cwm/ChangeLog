@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/cwm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.46 2014/03/13 18:48:10 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.47 2015/01/17 00:55:38 xmw Exp $
+
+  17 Jan 2015; Michael Weber <xmw@gentoo.org> cwm-9999.ebuild:
+  add eutils.eclass for make_session_desktop
 
 *cwm-5.5 (13 Mar 2014)
 
