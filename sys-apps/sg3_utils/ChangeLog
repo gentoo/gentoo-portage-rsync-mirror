@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.125 2015/01/16 12:06:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.126 2015/01/17 14:03:50 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> sg3_utils-1.40.ebuild:
+  Stable for ppc, wrt bug #535650
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> sg3_utils-1.40.ebuild:
   alpha/ia64/s390/sh/sparc/x86 stable wrt #535650

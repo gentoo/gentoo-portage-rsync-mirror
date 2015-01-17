@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.11 2013/03/02 21:14:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.12 2015/01/17 14:12:00 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2 games
 
 DESCRIPTION="Creates and manages configuration files for DOSBox"
@@ -26,7 +26,7 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin bin/dboxfe || die
+	dogamesbin bin/dboxfe
 	dodoc TODO ChangeLog
 	newicon res/default.png ${PN}.png
 	make_desktop_entry dboxfe "DosBoxFE"

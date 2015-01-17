@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.7 2011/09/21 10:44:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.8 2015/01/17 14:04:36 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Laserdisc Arcade Game Emulator"
@@ -19,6 +19,7 @@ DEPEND="media-libs/libogg
 	media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	media-libs/glew"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/v_1_0/src
 
@@ -73,23 +74,21 @@ src_compile() {
 
 	emake \
 		CXX=$(tc-getCXX) \
-		DFLAGS="${CXXFLAGS} ${archflags}" \
-		|| die "src build failed"
+		DFLAGS="${CXXFLAGS} ${archflags}"
 	cd vldp2
 	emake \
 		-f Makefile.linux \
 		CC=$(tc-getCC) \
-		DFLAGS="${CFLAGS} ${archflags}" \
-		|| die "vldp2 build failed"
+		DFLAGS="${CFLAGS} ${archflags}"
 }
 
 src_install() {
 	cd ..
-	newgamesbin daphne.bin daphne || die "newgamesbin failed"
+	newgamesbin daphne.bin daphne
 	exeinto "$(games_get_libdir)"/${PN}
-	doexe libvldp2.so || die "doexe failed"
+	doexe libvldp2.so
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r pics roms sound || die "doins failed"
+	doins -r pics roms sound
 	dodoc doc/*.{ini,txt}
 	dohtml -r doc/*
 	prepgamesdirs

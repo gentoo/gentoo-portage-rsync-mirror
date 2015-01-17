@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.63 2015/01/01 05:10:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.64 2015/01/17 14:17:17 tupone Exp $
+
+  17 Jan 2015; Tupone Alfredo <tupone@gentoo.org> dosbox-0.74.ebuild:
+  EAPI 5
 
   01 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> dosbox-9999.ebuild:
   EAPI=5

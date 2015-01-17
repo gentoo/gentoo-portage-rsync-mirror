@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.74.ebuild,v 1.15 2013/04/02 15:35:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.74.ebuild,v 1.16 2015/01/17 14:17:17 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="DOS emulator"
@@ -21,12 +21,12 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/libsdl[joystick,video,X]
 	media-libs/sdl-net
 	media-libs/sdl-sound"
+RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-gcc46.patch )
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		$(use_enable alsa alsa-midi) \
 		$(use_enable !hardened dynamic-core) \
 		$(use_enable !hardened dynamic-x86) \
@@ -35,8 +35,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README THANKS
+	default
 	make_desktop_entry dosbox DOSBox /usr/share/pixmaps/dosbox.ico
 	doicon src/dosbox.ico
 	prepgamesdirs

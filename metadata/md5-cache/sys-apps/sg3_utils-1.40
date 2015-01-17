@@ -4,10 +4,10 @@ DESCRIPTION=Apps for querying the sg SCSI interface
 EAPI=4
 HOMEPAGE=http://sg.danny.cz/sg/
 IUSE=static-libs
-KEYWORDS=alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86
 LICENSE=GPL-2
 PDEPEND=>=sys-apps/rescan-scsi-bus-1.24
 SLOT=0
 SRC_URI=http://sg.danny.cz/sg/p/sg3_utils-1.40.tgz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6e026864678933278e1bb6827bd956b6
+_md5_=1aaacae00392b0e799d3ca8fa5f5f7da
