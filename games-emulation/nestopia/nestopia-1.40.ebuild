@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.9 2014/05/15 16:38:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.10 2015/01/17 16:39:55 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic games
 
 MY_PV="${PV//./}"
@@ -39,11 +39,11 @@ src_prepare() {
 }
 
 src_install() {
-	newgamesbin nst ${PN}.bin || die "dobin failed"
-	dogamesbin ${PN} || die "dobin failed"
+	newgamesbin nst ${PN}.bin
+	dogamesbin ${PN}
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins NstDatabase.xml nstcontrols || die "doins failed"
+	doins NstDatabase.xml nstcontrols
 
 	make_desktop_entry "${PN}" "Nestopia"
 

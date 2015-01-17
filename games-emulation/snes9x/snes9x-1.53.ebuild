@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.12 2013/04/06 20:32:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.13 2015/01/17 16:48:55 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
@@ -68,7 +68,6 @@ src_configure() {
 	if use gtk; then
 		cd ../gtk
 		egamesconf \
-			--disable-dependency-tracking \
 			--datadir=/usr/share \
 			$(use_enable nls) \
 			$(use_with opengl) \
@@ -88,18 +87,18 @@ src_configure() {
 src_compile() {
 	games_src_compile
 	if use gtk; then
-		emake -C ../gtk || die
+		emake -C ../gtk
 	fi
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 
 	dohtml {.,..}/docs/*.html
 	dodoc ../docs/{snes9x.conf.default,{changes,control-inputs,controls,snapshots}.txt}
 
 	if use gtk; then
-		emake -C ../gtk DESTDIR="${D}" install || die
+		emake -C ../gtk DESTDIR="${D}" install
 		dodoc ../gtk/{AUTHORS,doc/README}
 	fi
 

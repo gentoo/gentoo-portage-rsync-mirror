@@ -1,7 +1,7 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.25.ebuild,v 1.4 2012/04/25 16:25:16 jlec Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.25.ebuild,v 1.5 2015/01/17 16:34:14 tupone Exp $
+EAPI=5
 inherit autotools games
 
 DESCRIPTION="ROM management tools and library"
@@ -14,10 +14,9 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/expat"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# Make sure the system expat is used
 	sed -i \
 		-e 's/#ifdef.*SYSEXPAT/#if 1/' \
@@ -39,16 +38,13 @@ src_unpack() {
 	AT_M4DIR="config" eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
-		--includedir=/usr/include || die
-	emake || die "emake failed"
+		--includedir=/usr/include
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	default
 	dohtml DOCS/mamory.html
 	prepgamesdirs
 }
