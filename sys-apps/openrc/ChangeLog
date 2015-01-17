@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.320 2015/01/16 20:56:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.321 2015/01/17 04:35:51 zlogene Exp $
+
+  17 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> openrc-0.13.7.ebuild:
+  amd64 stable
 
   16 Jan 2015; Jeroen Roovers <jer@gentoo.org> openrc-0.13.7.ebuild:
   Stable for HPPA (bug #530120).
