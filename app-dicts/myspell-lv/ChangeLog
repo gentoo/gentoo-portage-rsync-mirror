@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-lv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.29 2015/01/13 16:34:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.30 2015/01/17 13:47:17 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> myspell-lv-1.0.0.ebuild:
+  Stable for ppc, wrt bug #534838
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> myspell-lv-1.0.0.ebuild:
   Stable for HPPA (bug #534838).

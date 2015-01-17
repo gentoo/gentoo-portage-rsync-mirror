@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/advancescan-1.16.ebuild,v 1.3 2013/02/25 11:40:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancescan/advancescan-1.16.ebuild,v 1.4 2015/01/17 13:47:03 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="A command line rom manager for MAME, MESS, AdvanceMAME, AdvanceMESS and Raine"
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND="dev-libs/expat
 	sys-libs/zlib"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	rm -rf expat
@@ -24,7 +25,7 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin advscan advdiff || die
+	dogamesbin advscan advdiff
 	dodoc AUTHORS HISTORY README doc/*.txt advscan.rc.linux
 	doman doc/{advscan,advdiff}.1
 	dohtml doc/*.html

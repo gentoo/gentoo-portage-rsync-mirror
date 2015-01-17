@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-2.2.1.ebuild,v 1.4 2012/01/10 20:39:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-2.2.1.ebuild,v 1.5 2015/01/17 13:51:01 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 DESCRIPTION="Atari 800 emulator"
@@ -63,16 +63,16 @@ src_configure() {
 }
 
 src_compile() {
-	emake -C src || die "emake failed"
+	emake -C src
 }
 
 src_install () {
-	dogamesbin src/atari800 || die "dogamesbin failed"
+	dogamesbin src/atari800
 	newman src/atari800.man atari800.6
 	dodoc README.1ST DOC/*
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins "${WORKDIR}/"*.ROM || die "doins failed (ROM)"
+	doins "${WORKDIR}/"*.ROM
 	insinto "${GAMES_SYSCONFDIR}"
-	doins "${T}"/atari800.cfg || die "doins failed (cfg)"
+	doins "${T}"/atari800.cfg
 	prepgamesdirs
 }

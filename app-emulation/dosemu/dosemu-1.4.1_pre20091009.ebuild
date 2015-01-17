@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20091009.ebuild,v 1.4 2013/06/11 19:40:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20091009.ebuild,v 1.5 2015/01/17 13:37:45 slyfox Exp $
 
 inherit eutils flag-o-matic
 
@@ -60,5 +60,5 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	# Don't remove COPYING, see bug #137286
-	dodoc BUGS ChangeLog COPYING NEWS README THANKS || die
+	dodoc BUGS ChangeLog COPYING NEWS README THANKS || die #nowarn
 }

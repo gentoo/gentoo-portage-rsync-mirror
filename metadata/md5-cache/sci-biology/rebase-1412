@@ -4,10 +4,10 @@ DESCRIPTION=A restriction enzyme database
 EAPI=5
 HOMEPAGE=http://rebase.neb.com
 IUSE=emboss minimal
-KEYWORDS=amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris
+KEYWORDS=amd64 ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris ~x86-solaris
 LICENSE=public-domain
 RDEPEND=emboss? ( >=sci-biology/emboss-5.0.0 )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/rebase-1412.tar.xz
-_md5_=c11188235fe3e6fb92531c2a8e7d8d69
+_md5_=bbd46439d3b79b9bd9f0ea9a6d58a957

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/diction
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.44 2015/01/09 13:47:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.45 2015/01/17 13:41:44 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> diction-1.13.ebuild:
+  Stable for ppc, wrt bug #534900
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> diction-1.13.ebuild:
   Stable for amd64, wrt bug #534900

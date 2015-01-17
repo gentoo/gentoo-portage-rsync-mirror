@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.97 2015/01/13 17:36:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.98 2015/01/17 13:49:59 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> Clone-0.360.0.ebuild:
+  Stable for ppc, wrt bug #535154
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> Clone-0.360.0.ebuild:
   Stable for HPPA (bug #535154).

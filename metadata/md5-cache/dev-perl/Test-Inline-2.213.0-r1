@@ -4,10 +4,10 @@ DESCRIPTION=Inline test suite support for Perl
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Test-Inline/
 IUSE=test
-KEYWORDS=amd64 hppa ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=amd64 hppa ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=>=dev-perl/Algorithm-Dependency-1.02 >=dev-perl/Config-Tiny-2.00 >=dev-perl/File-Find-Rule-0.26 >=dev-perl/File-Flat-1.00 dev-perl/File-Remove >=dev-perl/File-Slurp-9999.04 >=virtual/perl-File-Spec-0.80 dev-perl/File-chmod >=dev-perl/Params-Util-0.05 >=dev-perl/Pod-Tests-0.18 virtual/perl-Test-Simple dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AD/ADAMK/Test-Inline-2.213.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=0ab846bb20805d18810b06db61fa6688
+_md5_=97818a18d1dcd0971c845262f82351f0

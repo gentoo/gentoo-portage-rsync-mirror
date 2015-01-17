@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-ro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.35 2015/01/13 16:33:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.36 2015/01/17 13:43:46 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> myspell-ro-3.3.10.ebuild:
+  Stable for ppc, wrt bug #534840
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> myspell-ro-3.3.10.ebuild:
   Stable for HPPA (bug #534840).

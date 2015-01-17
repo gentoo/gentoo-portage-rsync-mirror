@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.95 2015/01/16 12:09:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.96 2015/01/17 13:36:37 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> openresolv-3.6.1.ebuild:
+  Stable for ppc, wrt bug #535556
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> openresolv-3.6.1.ebuild:
   alpha/ia64/s390/sh/sparc/x86 stable wrt #535556

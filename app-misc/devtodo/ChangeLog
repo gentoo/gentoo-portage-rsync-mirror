@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.111 2015/01/13 15:59:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.112 2015/01/17 14:00:16 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> devtodo-0.1.20-r3.ebuild:
+  Stable for ppc, wrt bug #534870
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> devtodo-0.1.20-r3.ebuild:
   Stable for HPPA (bug #534870).

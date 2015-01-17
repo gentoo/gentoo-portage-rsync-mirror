@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.52 2015/01/09 13:46:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.53 2015/01/17 14:00:38 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gcal-3.6.3.ebuild:
+  Stable for ppc, wrt bug #534872
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gcal-3.6.3.ebuild:
   Stable for amd64, wrt bug #534872

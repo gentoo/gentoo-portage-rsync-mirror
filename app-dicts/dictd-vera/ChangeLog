@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/dictd-vera
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.31 2015/01/09 13:45:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.32 2015/01/17 13:43:02 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dictd-vera-1.22.ebuild:
+  Stable for ppc, wrt bug #534834
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dictd-vera-1.22.ebuild:
   Stable for amd64, wrt bug #534834

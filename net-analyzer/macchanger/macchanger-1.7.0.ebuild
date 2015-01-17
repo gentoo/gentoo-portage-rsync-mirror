@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.7.0.ebuild,v 1.4 2015/01/09 13:49:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/macchanger-1.7.0.ebuild,v 1.5 2015/01/17 13:57:07 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ OUI_FILE="OUI.list-${OUI_DATE}"
 HOMEPAGE="https://github.com/alobbs/macchanger"
 SRC_URI="https://github.com/alobbs/macchanger/releases/download/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="amd64 arm ~ppc ~sparc ~x86"
+KEYWORDS="amd64 arm ppc ~sparc ~x86"
 SLOT="0"
 
 src_configure() {

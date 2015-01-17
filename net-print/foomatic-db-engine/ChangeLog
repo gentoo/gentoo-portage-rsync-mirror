@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.86 2015/01/13 15:58:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.87 2015/01/17 13:55:54 ago Exp $
+
+  17 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  foomatic-db-engine-4.0.11.ebuild:
+  Stable for ppc, wrt bug #535630
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org>
   foomatic-db-engine-4.0.11.ebuild:
