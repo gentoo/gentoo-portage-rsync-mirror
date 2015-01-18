@@ -8,6 +8,7 @@
  </maintainer>
  <use>
   <flag name="curl">Support YouTube and external media sources (e.g. internet radio)</flag>
+  <flag name="flac">Enable FLAC metadata/artwork support</flag>
   <flag name="id3tag">Use <pkg>media-libs/libid3tag</pkg> for reading files' metadata rather than taglib</flag>
   <flag name="inotify">Enable inotify filesystem monitoring support</flag>
   <flag name="lastfm">Enable last.fm support</flag>
@@ -15,6 +16,6 @@
   <flag name="magic">Use libmagic to determine file types</flag>
   <flag name="mysql">Use <pkg>dev-db/mysql</pkg> as backend rather than SQLite3</flag>
   <flag name="taglib">Use <pkg>media-libs/taglib</pkg> for reading files' metadata rather than id3lib</flag>
-  <flag name="thumbnail">Enables video thumbnails generation through<pkg>media-video/ffmpegthumbnailer</pkg></flag>
+  <flag name="thumbnail">Enables video thumbnails generation through <pkg>media-video/ffmpegthumbnailer</pkg></flag>
  </use>
 </pkgmetadata>

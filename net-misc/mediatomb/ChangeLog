@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mediatomb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.61 2014/12/12 14:20:09 thev00d00 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.62 2015/01/18 18:54:09 thev00d00 Exp $
+
+*mediatomb-0.12.2_pre20150118 (18 Jan 2015)
+
+  18 Jan 2015; Ian Whyman <thev00d00@gentoo.org>
+  +mediatomb-0.12.2_pre20150118.ebuild, -mediatomb-0.12.2_pre20141212.ebuild,
+  metadata.xml:
+  Version bump, fix metadata #534052, drop ppc
 
   12 Dec 2014; Ian Whyman <thev00d00@gentoo.org>
   mediatomb-0.12.2_pre20141212.ebuild:

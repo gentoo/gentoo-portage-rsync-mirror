@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-18-r2.ebuild,v 1.3 2014/10/30 09:13:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-18-r2.ebuild,v 1.4 2015/01/18 18:34:30 floppym Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RESTRICT="test"
 RDEPEND="!sys-apps/module-init-tools
 	!sys-apps/modutils
 	!<sys-apps/openrc-0.13
-	!<sys-apps/systemd-217
+	!<sys-apps/systemd-216-r3
 	lzma? ( >=app-arch/xz-utils-5.0.4-r1 )
 	python? ( ${PYTHON_DEPS} )
 	zlib? ( >=sys-libs/zlib-1.2.6 )" #427130

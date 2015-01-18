@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.2_pre20141212.ebuild,v 1.2 2014/12/12 14:20:09 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.2_pre20150118.ebuild,v 1.1 2015/01/18 18:54:09 thev00d00 Exp $
 
 EAPI=5
 inherit autotools eutils linux-info systemd user vcs-snapshot
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/v00d00/${PN}/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 
 IUSE="curl debug +exif +ffmpeg flac id3tag +inotify +javascript lastfm
 		+magic +mp4 mysql +sqlite +taglib thumbnail +zlib"
