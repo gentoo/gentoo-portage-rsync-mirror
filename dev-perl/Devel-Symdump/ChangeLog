@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.86 2015/01/17 11:22:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.87 2015/01/18 02:46:08 zlogene Exp $
+
+  18 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Devel-Symdump-2.120.0.ebuild:
+  Stable for all
 
   17 Jan 2015; Jeroen Roovers <jer@gentoo.org> Devel-Symdump-2.120.0.ebuild:
   Stable for HPPA (bug #536792).

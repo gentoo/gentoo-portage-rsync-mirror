@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-CPU
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.38 2015/01/17 19:56:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.39 2015/01/18 02:39:25 zlogene Exp $
+
+  18 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Sys-CPU-0.610.0.ebuild:
+  Stable for all
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> Sys-CPU-0.610.0.ebuild:
   arm stable, bug #535228
