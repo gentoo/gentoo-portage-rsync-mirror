@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/psych/psych-2.0.8.ebuild,v 1.1 2014/12/05 07:20:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/psych/psych-2.0.10.ebuild,v 1.1 2015/01/18 03:06:39 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"

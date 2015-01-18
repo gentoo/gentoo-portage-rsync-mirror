@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/textpow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/textpow/ChangeLog,v 1.15 2014/08/05 16:00:33 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/textpow/ChangeLog,v 1.16 2015/01/18 03:05:38 mrueg Exp $
+
+*textpow-1.4.0 (18 Jan 2015)
+
+  18 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +textpow-1.4.0.ebuild:
+  Version bump
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> textpow-1.3.1-r1.ebuild:
   Remove trailing '.' from DESCRIPTION.

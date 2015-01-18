@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.262 2015/01/17 14:36:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.263 2015/01/18 03:21:03 patrick Exp $
+
+  18 Jan 2015; Patrick Lauer <patrick@gentoo.org> setuptools-12.0.1.ebuild:
+  Disable test phase that never passes #534058 etc.
 
 *setuptools-12.0.1 (17 Jan 2015)
 

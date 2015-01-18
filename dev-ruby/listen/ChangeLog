@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/listen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.40 2014/12/31 11:28:08 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.41 2015/01/18 03:15:58 mrueg Exp $
+
+*listen-2.8.5 (18 Jan 2015)
+
+  18 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +listen-2.8.5.ebuild:
+  Version bump.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> listen-0.7.3-r1.ebuild:
   Stable for x86, wrt bug #523188

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/set-scalar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.60 2015/01/17 20:03:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.61 2015/01/18 03:18:13 zlogene Exp $
+
+  18 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> -set-scalar-1.260.0-r1.ebuild,
+  set-scalar-1.280.0.ebuild:
+  Stable for all; Drop old.
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> set-scalar-1.280.0.ebuild:
   arm stable, bug #535268

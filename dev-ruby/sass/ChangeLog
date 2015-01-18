@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sass
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.71 2014/12/31 11:28:00 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.72 2015/01/18 03:10:07 mrueg Exp $
+
+*sass-3.4.10 (18 Jan 2015)
+
+  18 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +sass-3.4.10.ebuild:
+  Version bump.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> sass-3.2.19.ebuild:
   Stable for x86, wrt bug #523188

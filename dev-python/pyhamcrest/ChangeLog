@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyhamcrest
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyhamcrest/ChangeLog,v 1.2 2014/10/11 21:14:04 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyhamcrest/ChangeLog,v 1.3 2015/01/18 03:25:29 alunduil Exp $
+
+*pyhamcrest-1.8.1-r1 (18 Jan 2015)
+
+  18 Jan 2015; Alex Brandt <alunduil@gentoo.org> +pyhamcrest-1.8.1-r1.ebuild:
+  add setuptools dependence  Bug #531874 indicated there was a missing build
+  dependence on setuptools.
 
   11 Oct 2014; Alex Brandt <alunduil@gentoo.org> pyhamcrest-1.8.1.ebuild:
   generalize dependence on six
@@ -10,4 +16,3 @@
   11 Oct 2014; Alex Brandt <alunduil@gentoo.org> +pyhamcrest-1.8.1.ebuild,
   +metadata.xml:
   add ebuild written by me
-
