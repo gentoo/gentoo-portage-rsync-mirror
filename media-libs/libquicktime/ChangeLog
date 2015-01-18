@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libquicktime
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.198 2014/12/09 10:06:49 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.199 2015/01/18 19:53:42 thev00d00 Exp $
+
+  18 Jan 2015; Ian Whyman <thev00d00@gentoo.org> libquicktime-1.2.4-r1.ebuild:
+  Extend ffmpeg sed to a couple more files, fixes #509300
 
   09 Dec 2014; Jeroen Roovers <jer@gentoo.org> libquicktime-1.2.4-r1.ebuild:
   Stable for HPPA (bug #526014).
