@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netctl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/ChangeLog,v 1.24 2014/10/24 23:06:13 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/ChangeLog,v 1.25 2015/01/18 19:30:25 hwoarang Exp $
+
+*netctl-1.10 (18 Jan 2015)
+
+  18 Jan 2015; Markos Chandras <hwoarang@gentoo.org> +netctl-1.10.ebuild:
+  Version bump
 
   24 Oct 2014; Michał Górny <mgorny@gentoo.org> netctl-1.9.ebuild:
   Add missing aliases for completions, bug #526310.

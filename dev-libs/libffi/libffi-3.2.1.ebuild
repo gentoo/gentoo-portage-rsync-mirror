@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.2.1.ebuild,v 1.3 2015/01/16 12:42:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.2.1.ebuild,v 1.4 2015/01/18 19:01:31 grobian Exp $
 
 EAPI=5
 inherit eutils libtool multilib multilib-minimal toolchain-funcs
@@ -40,6 +40,7 @@ src_prepare() {
 	sed -i -e 's:@toolexeclibdir@:$(libdir):g' Makefile.in || die #462814
 	epatch "${FILESDIR}"/${PN}-3.2.1-o-tmpfile-eacces.patch #529044
 	epatch "${FILESDIR}"/${PN}-3.2.1-complex_alpha.patch
+	epatch "${FILESDIR}"/${PN}-3.1-darwin-x32.patch
 	epatch_user
 	elibtoolize
 }
