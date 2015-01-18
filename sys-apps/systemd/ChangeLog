@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.338 2015/01/17 20:51:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.339 2015/01/18 13:25:44 mgorny Exp $
+
+  18 Jan 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Describe USE=curl, bug #536934. Thanks to Elias Probst for the description.
 
 *systemd-218-r2 (17 Jan 2015)
 
