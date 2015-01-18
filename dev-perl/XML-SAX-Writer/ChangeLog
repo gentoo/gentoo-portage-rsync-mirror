@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX-Writer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.54 2015/01/17 19:58:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Writer/ChangeLog,v 1.55 2015/01/18 03:32:50 zlogene Exp $
+
+  18 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> XML-SAX-Writer-0.540.0.ebuild:
+  Stable for all
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> XML-SAX-Writer-0.540.0.ebuild:
   arm stable, bug #535252
