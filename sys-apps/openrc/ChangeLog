@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.321 2015/01/17 04:35:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.323 2015/01/18 16:18:13 williamh Exp $
+
+  18 Jan 2015; William Hubbs <williamh@gentoo.org> -openrc-0.13.7.ebuild:
+  remove broken version
+
+*openrc-0.13.8 (18 Jan 2015)
+
+  18 Jan 2015; William Hubbs <williamh@gentoo.org> +openrc-0.13.8.ebuild:
+  version bump to fix interaction with kmod
 
   17 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> openrc-0.13.7.ebuild:
   amd64 stable
