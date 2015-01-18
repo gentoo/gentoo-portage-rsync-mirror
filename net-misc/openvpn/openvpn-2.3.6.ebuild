@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.6.ebuild,v 1.10 2014/12/26 09:18:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.6.ebuild,v 1.11 2015/01/18 12:39:12 djc Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ DEPEND="
 		!polarssl? ( >=dev-libs/openssl-0.9.7 ) polarssl? ( >=net-libs/polarssl-1.2.10 )
 	)
 	lzo? ( >=dev-libs/lzo-1.07 )
-	pkcs11? ( >=dev-libs/pkcs11-helper-1.05 )"
+	pkcs11? ( >=dev-libs/pkcs11-helper-1.11 )"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-openvpn )
 "

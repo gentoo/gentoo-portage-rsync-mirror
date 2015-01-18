@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/trac
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.147 2014/12/31 16:25:35 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.148 2015/01/18 12:36:22 djc Exp $
+
+*trac-1.0.3 (18 Jan 2015)
+
+  18 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> +trac-1.0.3.ebuild:
+  Version bump trac to 1.0.3
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> trac-1.0.2.ebuild:
   Stable for ppc, wrt bug #533372

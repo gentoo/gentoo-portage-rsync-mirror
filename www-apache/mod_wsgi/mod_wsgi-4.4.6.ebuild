@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-4.4.5.ebuild,v 1.1 2015/01/11 08:29:17 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-4.4.6.ebuild,v 1.1 2015/01/18 12:43:51 djc Exp $
 
 EAPI="5"
 

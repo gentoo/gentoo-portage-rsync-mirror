@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1180 2015/01/16 00:51:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1181 2015/01/18 12:51:41 phajdan.jr Exp $
+
+  18 Jan 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-40.0.2214.85.ebuild, chromium-41.0.2272.3.ebuild:
+  Require at least gcc-4.8, bug #535730 by Anton Kochkov.
 
 *chromium-40.0.2214.85 (16 Jan 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-41.0.2272.3.ebuild,v 1.1 2015/01/14 20:01:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-41.0.2272.3.ebuild,v 1.2 2015/01/18 12:51:41 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -147,6 +147,13 @@ For other desktop environments, try one of the following:
 - x11-themes/gnome-icon-theme
 - x11-themes/tango-icon-theme
 "
+
+pkg_pretend() {
+	if [[ $(tc-getCC)$ == *gcc* ]] && \
+		[[ $(gcc-major-version)$(gcc-minor-version) -lt 48 ]]; then
+		die 'At least gcc 4.8 is required, see bugs: #535730, #525374, #518668.'
+	fi
+}
 
 pkg_setup() {
 	if [[ "${SLOT}" == "0" ]]; then
