@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.238 2015/01/18 10:07:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.239 2015/01/18 20:27:52 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (17 Jan 2015)
 # Unkeyworded deps, bug #536226
@@ -263,10 +263,7 @@ media-libs/libjpeg-turbo java
 net-dns/libidn java
 net-misc/tigervnc java
 net-print/cups java
-=sys-devel/gettext-0.18.1.1-r1 java
-=sys-devel/gettext-0.18.1.1-r3 java
-=sys-devel/gettext-0.18.2 java
-=sys-devel/gettext-0.18.3.2 java
+sys-devel/gettext java
 sys-libs/db java
 =www-client/seamonkey-2.0.14-r1 java
 

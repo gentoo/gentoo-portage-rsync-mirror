@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.191 2015/01/16 07:44:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.192 2015/01/18 20:20:21 maekke Exp $
+
+  18 Jan 2015; Markus Meier <maekke@gentoo.org> pytz-2014.10.ebuild:
+  arm stable, bug #535364
 
   16 Jan 2015; Jeroen Roovers <jer@gentoo.org> pytz-2014.10.ebuild:
   Stable for HPPA (bug #535364).
