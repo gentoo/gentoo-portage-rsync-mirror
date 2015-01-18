@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.20 2010/12/29 03:02:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/frotz-2.43.ebuild,v 1.21 2015/01/18 15:41:51 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Curses based interpreter for Z-code based text games"
@@ -16,6 +16,7 @@ IUSE="alsa oss"
 
 DEPEND="sys-libs/ncurses
 	alsa? ( oss? ( media-libs/alsa-oss ) )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -30,11 +31,11 @@ src_prepare() {
 src_compile() {
 	local OPTS="CONFIG_DIR=${GAMES_SYSCONFDIR}"
 	use oss && OPTS="${OPTS} SOUND_DEFS=-DOSS_SOUND SOUND_DEV=/dev/dsp"
-	emake ${OPTS} all || die "emake failed"
+	emake ${OPTS} all
 }
 
 src_install () {
-	dogamesbin {d,}frotz || die "dogamesbin failed"
+	dogamesbin {d,}frotz
 	doman doc/*.6
 	dodoc AUTHORS BUGS ChangeLog HOW_TO_PLAY README TODO \
 		doc/{frotz.conf-big,frotz.conf-small}

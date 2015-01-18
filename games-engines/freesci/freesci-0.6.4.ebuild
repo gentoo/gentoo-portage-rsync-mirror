@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.4.ebuild,v 1.5 2009/08/01 06:51:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.4.ebuild,v 1.6 2015/01/18 15:39:18 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Sierra script interpreter for your old Sierra adventures"
@@ -22,6 +22,7 @@ DEPEND="media-libs/alsa-lib
 	)
 	ggi? ( media-libs/libggi )
 	sdl? ( media-libs/libsdl )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -33,19 +34,16 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--with-Wall \
 		--without-directfb \
 		$(use_with X x) \
 		$(use_with ggi) \
-		$(use_with sdl) \
-		|| die
+		$(use_with sdl)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	doicon desktop/${PN}.png
 	make_desktop_entry ${PN} FreeSCI
-	dodoc AUTHORS ChangeLog NEWS README README.Unix THANKS TODO
 	prepgamesdirs
 }

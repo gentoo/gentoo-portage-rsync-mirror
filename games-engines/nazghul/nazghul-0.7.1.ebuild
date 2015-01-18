@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/nazghul-0.7.1.ebuild,v 1.4 2014/05/15 16:42:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/nazghul-0.7.1.ebuild,v 1.5 2015/01/18 15:44:48 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A computer role-playing game (CRPG) engine with game called HaximA"
@@ -18,6 +18,7 @@ DEPEND="media-libs/libpng
 	>=media-libs/libsdl-1.2.3[X,sound,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[midi,vorbis,wav]"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	ecvs_clean
@@ -29,10 +30,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-
-	dodoc AUTHORS ChangeLog NEWS README \
-		doc/{GAME_RULES,GHULSCRIPT,MAP_HACKERS_GUIDE,USERS_GUIDE}
+	default
+	dodoc doc/{GAME_RULES,GHULSCRIPT,MAP_HACKERS_GUIDE,USERS_GUIDE}
 
 	dohtml -a html,gif -r doc/*
 
