@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.181 2014/12/28 10:12:50 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.182 2015/01/18 17:35:20 graaff Exp $
+
+  18 Jan 2015; Hans de Graaff <graaff@gentoo.org> rspec-3.1.0.ebuild:
+  Add alpha and sparc keywords missing due to using an old ebuild as template.
 
 *rspec-3.1.0 (28 Dec 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-EndOfScope/B-Hooks-EndOfScope-0.120.0-r1.ebuild,v 1.1 2014/08/23 03:35:21 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-EndOfScope/B-Hooks-EndOfScope-0.120.0-r1.ebuild,v 1.2 2015/01/18 17:48:10 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Execute code after a scope finished compilation"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~ppc-aix ~x64-macos"
+KEYWORDS="amd64 ~arm ppc x86 ~ppc-aix ~x64-macos"
 IUSE=""
 
 RDEPEND="
