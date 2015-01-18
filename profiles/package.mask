@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16291 2015/01/18 04:44:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16292 2015/01/18 05:57:28 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -419,10 +419,6 @@ www-apps/trac-downloads
 # Markos Chandras <hwoarang@gentoo.org> (18 Nov 2014)
 # Mask latest development version for testing
 =x11-misc/lightdm-1.13*
-
-# Eray Aslan <eras@gentoo.org> (11 Nov 2014)
-# Mask beta releases
-=net-proxy/squid-3.5*
 
 # Samuli Suominen <ssuominen@gentoo.org> (05 Nov 2014)
 # ConsoleKit2 from github by Eric Koegel, auth of xfce4-power-manager

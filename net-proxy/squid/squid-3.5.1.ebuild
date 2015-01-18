@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.5.0.4.ebuild,v 1.1 2014/12/21 13:50:49 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.5.1.ebuild,v 1.1 2015/01/18 05:55:02 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -64,9 +64,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.3.4-gentoo.patch"
 	sed -i -e 's:/usr/local/squid/etc:/etc/squid:' \
 		INSTALL QUICKSTART \
-		helpers/basic_auth/MSNT/README.html \
-		helpers/basic_auth/MSNT/confload.cc \
-		helpers/basic_auth/MSNT/msntauth.conf.default \
 		scripts/fileno-to-pathname.pl \
 		scripts/check_cache.pl \
 		tools/cachemgr.cgi.8 \
@@ -81,8 +78,6 @@ src_prepare() {
 		src/log/access_log.cc || die
 	sed -i -e 's:/usr/local/squid/logs:/var/log/squid:' \
 		src/log/access_log.cc || die
-	sed -i -e 's:/usr/local/squid/bin:/usr/bin:' \
-		helpers/basic_auth/MSNT/README.html || die
 	sed -i -e 's:/usr/local/squid/libexec:/usr/libexec/squid:' \
 		helpers/external_acl/unix_group/ext_unix_group_acl.8 \
 		helpers/external_acl/session/ext_session_acl.8 \
@@ -107,7 +102,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local basic_modules="MSNT,MSNT-multi-domain,NCSA,POP3,getpwnam"
+	local basic_modules="MSNT-multi-domain,NCSA,POP3,getpwnam"
 	use samba && basic_modules+=",SMB"
 	use ldap && basic_modules+=",LDAP"
 	use pam && basic_modules+=",PAM"
@@ -222,7 +217,6 @@ src_install() {
 
 	dodoc CONTRIBUTORS CREDITS ChangeLog INSTALL QUICKSTART README SPONSORS doc/*.txt
 	newdoc helpers/negotiate_auth/kerberos/README README.kerberos
-	newdoc helpers/basic_auth/MSNT/README.html README-MSNT.html
 	newdoc helpers/basic_auth/RADIUS/README README.RADIUS
 	newdoc helpers/external_acl/kerberos_ldap_group/README README.kerberos_ldap_group
 	newdoc tools/purge/README README.purge

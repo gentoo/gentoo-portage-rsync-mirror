@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gmpy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.50 2014/12/06 16:53:58 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.51 2015/01/18 05:33:37 idella4 Exp $
+
+*gmpy-2.0.5 (18 Jan 2015)
+
+  18 Jan 2015; Ian Delaney <idella4@gentoo.org> +gmpy-2.0.5.ebuild,
+  -gmpy-1.16.ebuild, -gmpy-2.0.0.ebuild:
+  bump, expand test phase, rm old
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gmpy-2.0.3.ebuild:
   Stable for ia64, wrt bug #526460
