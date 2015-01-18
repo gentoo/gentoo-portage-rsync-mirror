@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1415 2015/01/11 21:13:04 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1416 2015/01/18 15:07:55 mpagano Exp $
+
+*git-sources-3.19_rc5 (18 Jan 2015)
+
+  18 Jan 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-3.19_rc5.ebuild:
+  Version bump
 
 *git-sources-3.19_rc4 (11 Jan 2015)
 
