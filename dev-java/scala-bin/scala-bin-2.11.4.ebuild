@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-2.11.4.ebuild,v 1.1 2015/01/18 01:05:53 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-2.11.4.ebuild,v 1.2 2015/01/18 21:39:44 monsieurp Exp $
 EAPI=5
 
 inherit java-utils-2
@@ -17,9 +17,10 @@ DEPEND=""
 RDEPEND=">=virtual/jre-1.6
 !dev-lang/scala"
 
+JAVA_PKG_IUSE='doc'
 S=${WORKDIR}/scala-${PV}
 
-src_prepare() {
+java_prepare() {
 	ebegin 'Cleaning .bat files'
 	rm -f bin/*.bat
 	eend $?
@@ -67,7 +68,9 @@ src_install() {
 	doman man/man1/*.1
 	eend $?
 
-	ebegin 'Installing documentation'
-	java-pkg_dohtml -r doc/tools
-	eend $?
+	if use doc; then
+		ebegin 'Installing documentation'
+		java-pkg_dohtml -r doc/tools
+		eend $?
+	fi
 }
