@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-0.7.0.ebuild,v 1.2 2015/01/01 13:25:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-0.7.0.ebuild,v 1.3 2015/01/18 11:04:01 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,9 +36,9 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	use vala && vala_src_prepare
-	gnome2_src_prepare
-	epatch "${FILESDIR}/${P}-qt5.patch"
+	epatch "${FILESDIR}/${P}-qt5.patch" #523122
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_configure() {

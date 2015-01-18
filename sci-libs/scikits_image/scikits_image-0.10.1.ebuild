@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.10.1.ebuild,v 1.1 2014/10/26 18:07:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.10.1.ebuild,v 1.2 2015/01/18 11:30:55 jlec Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc freeimage gtk pyamg qt4 test"
 
 RDEPEND="
+	dev-python/six[${PYTHON_USEDEP}]
 	sci-libs/scipy[sparse,${PYTHON_USEDEP}]
 	freeimage? ( media-libs/freeimage )
 	gtk? ( dev-python/pygtk[$(python_gen_usedep 'python2*')] )
@@ -34,7 +35,8 @@ DEPEND="
 		dev-python/matplotlib[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/coverage[${PYTHON_USEDEP}]
-		sci-libs/scipy[sparse,${PYTHON_USEDEP}] )"
+		sci-libs/scipy[sparse,${PYTHON_USEDEP}]
+		)"
 
 S="${WORKDIR}/${MYP}"
 
