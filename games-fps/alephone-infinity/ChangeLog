@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alephone-infinity
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.9 2013/07/29 19:37:47 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/ChangeLog,v 1.10 2015/01/18 16:32:45 tupone Exp $
+
+  18 Jan 2015; Tupone Alfredo <tupone@gentoo.org>
+  alephone-infinity-20080622.ebuild:
+  EAPI 5
 
   29 Jul 2013; Tupone Alfredo <tupone@gentoo.org>
   alephone-infinity-20080622.ebuild:

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/blackshades-20070723.ebuild,v 1.5 2010/05/23 18:42:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/blackshades-20070723.ebuild,v 1.6 2015/01/18 16:39:57 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="you control a psychic bodyguard, and try to protect the VIP"
@@ -22,6 +22,7 @@ DEPEND="virtual/opengl
 	media-libs/openal
 	media-libs/freealut
 	media-libs/libsdl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
@@ -41,14 +42,14 @@ src_prepare() {
 }
 
 src_compile() {
-	emake bindir || die "emake bindir failed"
-	emake || die "emake failed"
+	emake bindir
+	emake
 }
 
 src_install() {
-	newgamesbin objs/blackshades ${PN} || die "newgamesbin failed"
+	newgamesbin objs/blackshades ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r Data || die "doins failed"
+	doins -r Data
 	dodoc IF_THIS_IS_A_README_YOU_HAVE_WON Readme TODO uDevGame_Readme
 	make_desktop_entry ${PN} "Black Shades"
 	prepgamesdirs

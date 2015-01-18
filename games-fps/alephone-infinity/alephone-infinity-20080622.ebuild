@@ -1,7 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/alephone-infinity-20080622.ebuild,v 1.5 2013/07/29 19:37:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone-infinity/alephone-infinity-20080622.ebuild,v 1.6 2015/01/18 16:32:45 tupone Exp $
 
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Aleph One - Marathon Infinity"
@@ -22,7 +23,7 @@ S=${WORKDIR}/Marathon\ Infinity
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r * || die "doins failed"
+	doins -r *
 
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry "alephone.sh infinity" "Aleph One - Marathon Infinity"
