@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.164 2014/08/12 04:47:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.165 2015/01/18 18:14:36 grobian Exp $
 
 EAPI="5"
 
@@ -142,6 +142,7 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
 	dev-lang/swig
 	dev-util/gperf
+	sys-apps/lsb-release
 	X? ( x11-proto/xineramaproto )
 	dev-util/cmake
 	x86? ( dev-lang/nasm )
@@ -190,15 +191,6 @@ src_prepare() {
 	# Disable internal func checks as our USE/DEPEND
 	# stuff handles this just fine already #408395
 	export ac_cv_lib_avcodec_ff_vdpau_vc1_decode_picture=yes
-
-	local squish #290564
-	use altivec && squish="-DSQUISH_USE_ALTIVEC=1 -maltivec"
-	use sse && squish="-DSQUISH_USE_SSE=1 -msse"
-	use sse2 && squish="-DSQUISH_USE_SSE=2 -msse2"
-	sed -i \
-		-e '/^CXXFLAGS/{s:-D[^=]*=.::;s:-m[[:alnum:]]*::}' \
-		-e "1iCXXFLAGS += ${squish}" \
-		lib/libsquish/Makefile.in || die
 
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.
@@ -302,9 +294,9 @@ src_install() {
 		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Bold.ttf
 
 	python_domodule tools/EventClients/lib/python/xbmcclient.py
-	python_newscript "tools/EventClients/Clients/XBMC Send/xbmc-send.py" xbmc-send
+	python_newscript "tools/EventClients/Clients/Kodi Send/kodi-send.py" kodi-send
 }
 
 pkg_postinst() {
-	elog "Visit http://wiki.xbmc.org/?title=XBMC_Online_Manual"
+	elog "Visit http://kodi.wiki/?title=XBMC_Online_Manual"
 }

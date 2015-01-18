@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.340 2015/01/18 14:19:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.341 2015/01/18 18:29:38 floppym Exp $
+
+  18 Jan 2015; Mike Gilbert <floppym@gentoo.org> systemd-216-r3.ebuild:
+  Move stable keywords forward.
 
 *systemd-216-r3 (18 Jan 2015)
 

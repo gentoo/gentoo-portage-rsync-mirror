@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-syck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-syck/ChangeLog,v 1.13 2015/01/18 08:44:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-syck/ChangeLog,v 1.14 2015/01/18 18:20:24 grknight Exp $
+
+  18 Jan 2015; Brian Evans <grknight@gentoo.org> -pecl-syck-0.9.3-r2.ebuild:
+  Drop old
 
   18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pecl-syck-0.9.3-r3.ebuild:
   Stable for ppc64, wrt bug #534566
