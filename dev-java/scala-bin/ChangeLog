@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/scala-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.13 2015/01/12 23:17:43 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.14 2015/01/18 01:05:53 monsieurp Exp $
+
+*scala-bin-2.11.4 (18 Jan 2015)
+
+  18 Jan 2015; Patrice Clement <monsieurp@gentoo.org> +scala-bin-2.11.4.ebuild:
+  Version bump to 2.11.4.
 
   12 Jan 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-1.2.0.1.ebuild:
   Make use of ${PV} variable instead of full version number.
