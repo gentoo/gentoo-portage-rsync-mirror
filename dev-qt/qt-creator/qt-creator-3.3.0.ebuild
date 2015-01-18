@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.3 2015/01/18 04:56:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.3.0.ebuild,v 1.1 2015/01/18 04:56:40 pesa Exp $
 
 EAPI=5
 
@@ -27,37 +27,52 @@ else
 fi
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 
-# TODO: qbs:qbsprojectmanager, winrt (both require qt5)
-QTC_PLUGINS=(android autotools:autotoolsprojectmanager baremetal bazaar
-	clang:clangcodemodel clearcase cmake:cmakeprojectmanager cvs git
-	ios mercurial perforce python:pythoneditor qnx subversion valgrind)
-IUSE="debug doc examples test ${QTC_PLUGINS[@]%:*}"
+QTC_PLUGINS=('android:android|qmakeandroidsupport' autotools:autotoolsprojectmanager baremetal
+	bazaar clang:clangcodemodel clearcase cmake:cmakeprojectmanager cvs git ios mercurial
+	perforce python:pythoneditor qbs:qbsprojectmanager qnx subversion valgrind winrt)
+IUSE="debug doc test ${QTC_PLUGINS[@]%:*}"
 
 # minimum Qt version required
-QT_PV="4.8.5:4"
+QT_PV="5.3.2:5"
 
 CDEPEND="
 	=dev-libs/botan-1.10*[threads]
 	>=dev-qt/designer-${QT_PV}
-	>=dev-qt/qtcore-${QT_PV}[ssl]
-	>=dev-qt/qtdeclarative-${QT_PV}[accessibility]
-	>=dev-qt/qtgui-${QT_PV}[accessibility]
-	>=dev-qt/qthelp-${QT_PV}[doc?]
+	>=dev-qt/qtconcurrent-${QT_PV}
+	>=dev-qt/qtcore-${QT_PV}
+	>=dev-qt/qtdeclarative-${QT_PV}
+	>=dev-qt/qtgui-${QT_PV}
+	>=dev-qt/qthelp-${QT_PV}
+	>=dev-qt/qtnetwork-${QT_PV}[ssl]
+	>=dev-qt/qtprintsupport-${QT_PV}
+	>=dev-qt/qtquick1-${QT_PV}
+	>=dev-qt/qtquickcontrols-${QT_PV}
 	>=dev-qt/qtscript-${QT_PV}
 	>=dev-qt/qtsql-${QT_PV}
-	>=dev-qt/qtsvg-${QT_PV}[accessibility]
+	>=dev-qt/qtsvg-${QT_PV}
+	>=dev-qt/qtwidgets-${QT_PV}
+	>=dev-qt/qtx11extras-${QT_PV}
+	>=dev-qt/qtxml-${QT_PV}
 	clang? ( >=sys-devel/clang-3.2:= )
+	qbs? ( >=dev-util/qbs-1.3.3[qt5] )
 "
 DEPEND="${CDEPEND}
+	>=dev-qt/linguist-tools-${QT_PV}
 	virtual/pkgconfig
+	doc? ( >=dev-qt/qdoc-${QT_PV} )
 	test? ( >=dev-qt/qttest-${QT_PV} )
 "
 RDEPEND="${CDEPEND}
 	>=sys-devel/gdb-7.2[client(+),python]
-	examples? ( >=dev-qt/qtdemo-${QT_PV} )
 "
+for x in ${PLOCALES}; do
+	# qt translations must be installed for qt-creator translations to work
+	RDEPEND+=" linguas_${x}? ( >=dev-qt/qttranslations-${QT_PV} )"
+done
+unset x
+
 PDEPEND="
 	autotools? ( sys-devel/autoconf )
 	bazaar? ( dev-vcs/bzr )
@@ -74,7 +89,7 @@ src_prepare() {
 	for plugin in "${QTC_PLUGINS[@]#[+-]}"; do
 		if ! use ${plugin%:*}; then
 			einfo "Disabling ${plugin%:*} plugin"
-			sed -i -re "/(^\s+|SUBDIRS\s*\+=\s*)${plugin#*:}\>/d" \
+			sed -i -re "/(^\s+|SUBDIRS\s*\+=\s*)(${plugin#*:})\>/d" \
 				src/plugins/plugins.pro \
 				|| die "failed to disable ${plugin%:*} plugin"
 		fi
@@ -89,11 +104,10 @@ src_prepare() {
 }
 
 src_configure() {
-	EQMAKE4_EXCLUDE="share/qtcreator/templates/*
-			tests/*"
-	eqmake4 IDE_LIBRARY_BASENAME="$(get_libdir)" \
+	eqmake5 IDE_LIBRARY_BASENAME="$(get_libdir)" \
 		IDE_PACKAGE_MODE=1 \
 		LLVM_INSTALL_DIR="${EPREFIX}/usr" \
+		QBS_INSTALL_DIR="${EPREFIX}/usr" \
 		TEST=$(use test && echo 1 || echo 0) \
 		USE_SYSTEM_BOTAN=1
 }
@@ -102,8 +116,7 @@ src_test() {
 	echo ">>> Test phase [QTest]: ${CATEGORY}/${PF}"
 	cd tests/auto || die
 
-	EQMAKE4_EXCLUDE="valgrind/*"
-	eqmake4 IDE_LIBRARY_BASENAME="$(get_libdir)"
+	eqmake5 IDE_LIBRARY_BASENAME="$(get_libdir)"
 
 	default
 }
@@ -116,9 +129,10 @@ src_install() {
 	# install documentation
 	if use doc; then
 		emake docs
-		insinto /usr/share/doc/${PF}
+		# don't use ${PF} or the doc will not be found
+		insinto /usr/share/doc/qtcreator
 		doins share/doc/qtcreator/qtcreator{,-dev}.qch
-		docompress -x /usr/share/doc/${PF}/qtcreator{,-dev}.qch
+		docompress -x /usr/share/doc/qtcreator/qtcreator{,-dev}.qch
 	fi
 
 	# install desktop file

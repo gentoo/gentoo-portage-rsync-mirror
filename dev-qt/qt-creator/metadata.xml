@@ -20,8 +20,10 @@
 	<flag name="mercurial">Add support for <pkg>dev-vcs/mercurial</pkg> version control system</flag>
 	<flag name="perforce">Add support for Perforce version control system (requires manual installation of Perforce client)</flag>
 	<flag name="python">Enable Python source code editor</flag>
+	<flag name="qbs">Enable QBS project manager plugin</flag>
 	<flag name="qnx">Build plugin for QNX/Blackberry devices</flag>
 	<flag name="valgrind">Add support for memory debugging using <pkg>dev-util/valgrind</pkg></flag>
+	<flag name="winrt">Build plugin for WinRT devices</flag>
 </use>
 <upstream>
 	<bugs-to>https://bugreports.qt.io/</bugs-to>
