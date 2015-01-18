@@ -1,7 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.29.1.ebuild,v 1.8 2013/03/09 21:07:33 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.18.3.ebuild,v 1.1 2015/01/18 07:44:14 kumba Exp $
 
+# EAPI Version
 EAPI="5"
 
 # INCLUDED:
@@ -10,15 +11,14 @@ EAPI="5"
 # 3) Generic Fixes
 # 4) Patch for the IOC3 Metadriver (IP27, IP30)
 # 5) Patch for IP30 Support
-# 6) Patch for IP28 Graphics Support (SolidImpact)
-# 7) Experimental patches (if needed)
+# 6) Experimental patches (if needed)
 
 #//------------------------------------------------------------------------------
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20090324"			# Date of diff between kernel.org and lmo GIT
-GENPATCHREV="3"				# Tarball revision for patches
+GITDATE="20150118"			# Date of diff between kernel.org and lmo GIT
+GENPATCHREV="1"				# Tarball revision for patches
 
 # Directories
 S="${WORKDIR}/linux-${OKV}-${GITDATE}"
@@ -36,24 +36,25 @@ inherit kernel-2 eutils
 detect_version
 
 # Version Data
-F_KV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+F_KV="${PVR}"
+BASE_KV="$(get_version_component_range 1-2).0"
 [[ "${EXTRAVERSION}" = -rc* ]] && KVE="${EXTRAVERSION}"
 
 # Portage Vars
 HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
 KEYWORDS="-* ~mips"
-IUSE="cobalt ip27 ip28 ip30 ip32r10k impactdebug"
-DEPEND=">=sys-devel/gcc-4.1.1"
+IUSE="cobalt ip27 ip28 ip30 ip32r10k"
+DEPEND=">=sys-devel/gcc-4.6.0"
 RDEPEND=""
 
 # Machine Support Control Variables
-DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
+DO_IP22="test"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
 DO_IP27="yes"				# 		   IP27 support		(SGI Origin)
-DO_IP28="yes"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
+DO_IP28="test"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
 DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
 DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
-DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
+DO_CBLT="test"				# 		   Cobalt Support	(Cobalt Microsystems)
 
 # Machine Stable Version Variables
 SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
@@ -65,11 +66,11 @@ SV_CBLT=""				# 	    DO_CBLT == "no", 			   Cobalt
 
 DESCRIPTION="Linux-Mips GIT sources for MIPS-based machines, dated ${GITDATE}"
 SRC_URI="${KERNEL_URI}
-	 mirror://gentoo/mipsgit-${F_KV}${KVE}-${GITDATE}.diff.bz2
-	 mirror://gentoo/${PN}-${F_KV}-patches-v${GENPATCHREV}.tar.bz2"
+	 mirror://gentoo/mipsgit-${BASE_KV}${KVE}-${GITDATE}.diff.xz
+	 mirror://gentoo/${PN}-${BASE_KV}-patches-v${GENPATCHREV}.tar.xz"
 
 UNIPATCH_STRICTORDER="1"
-UNIPATCH_LIST="${DISTDIR}/mipsgit-${F_KV}${KVE}-${GITDATE}.diff.bz2"
+UNIPATCH_LIST="${DISTDIR}/mipsgit-${BASE_KV}${KVE}-${GITDATE}.diff.xz"
 
 #//------------------------------------------------------------------------------
 
@@ -149,11 +150,11 @@ load_eblit_funcs() {
 	# version and reference it here.
 	eblit-include err_disabled_mach v1
 	eblit-include err_only_one_mach_allowed v1
-	eblit-include show_ip22_info v1
-	eblit-include show_ip27_info v1
+	eblit-include show_ip22_info v3
+	eblit-include show_ip27_info v2
 	eblit-include show_ip28_info v1
-	eblit-include show_ip30_info v1
-	eblit-include show_ip32_info v1
+	eblit-include show_ip30_info v3
+	eblit-include show_ip32_info v3
 	eblit-include show_cobalt_info v1
 
 	# This makes sure pkg_setup & pkg_postinst gets into any binpkg.
@@ -170,6 +171,6 @@ pkg_setup() {
 	pkg_setup
 }
 
-src_unpack() { eblit-run src_unpack v2 ; }
+src_unpack() { eblit-run src_unpack v4 ; }
 
 #//------------------------------------------------------------------------------

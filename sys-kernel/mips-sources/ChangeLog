@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/mips-sources
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.151 2013/07/29 09:59:34 kumba Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.152 2015/01/18 07:44:14 kumba Exp $
+
+*mips-sources-3.18.3 (18 Jan 2015)
+
+  18 Jan 2015; Joshua Kinard <kumba@gentoo.org> -mips-sources-2.6.29.1.ebuild,
+  -mips-sources-3.9.11.ebuild, -mips-sources-3.10.4.ebuild,
+  +mips-sources-3.18.3.ebuild, -files/eblits/show_ip22_info-v1.eblit,
+  -files/eblits/show_ip27_info-v1.eblit, +files/eblits/show_ip27_info-v2.eblit,
+  -files/eblits/show_ip30_info-v1.eblit, -files/eblits/show_ip30_info-v2.eblit,
+  +files/eblits/show_ip30_info-v3.eblit, -files/eblits/show_ip32_info-v1.eblit,
+  -files/eblits/src_unpack-v2.eblit, -files/eblits/src_unpack-v3.eblit,
+  +files/eblits/src_unpack-v4.eblit, metadata.xml:
+  Update to 3.18.3, and all older ebuilds and associated eblits removed. Octane
+  (IP30) support returns in this release, with some caveats. Origin/Onyx2
+  (IP27) support has been fixed up, and other hardware is known to work, with
+  the exception of IP22, IP28, and Cobalt, which have not been tested in some
+  time.
 
 *mips-sources-3.10.4 (29 Jul 2013)
 
