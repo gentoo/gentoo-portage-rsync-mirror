@@ -1,6 +1,19 @@
 # ChangeLog for app-text/evince
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.280 2014/12/27 16:19:23 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.281 2015/01/18 11:35:29 pacho Exp $
+
+*evince-3.14.1-r1 (18 Jan 2015)
+
+  18 Jan 2015; Pacho Ramos <pacho@gentoo.org> +evince-3.14.1-r1.ebuild,
+  +files/evince-3.14.1-critical-warning.patch,
+  +files/evince-3.14.1-disable-toggle-find.patch,
+  +files/evince-3.14.1-gnome-desktop.patch,
+  +files/evince-3.14.1-incorrect-resolution.patch,
+  +files/evince-3.14.1-scroll-search.patch,
+  +files/evince-3.14.1-show-correct.patch,
+  +files/evince-3.14.1-thumbnail-size.patch:
+  Apply multiple upstream patches, tests are no longer provided in 3.14 cycle as
+  they were broken, drop old
 
   27 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> evince-3.14.1.ebuild:
   Add missing dependency for eautoreconf, bug #533682.

@@ -1,0 +1,23 @@
+From 1820802ff261d1ca05acd3c3153918c0fd1c686f Mon Sep 17 00:00:00 2001
+From: Sebastian Keller <sebastian-keller@gmx.de>
+Date: Sat, 29 Nov 2014 03:46:27 +0100
+Subject: thumbnailer: Use correct maximum size for thumbnail images
+
+https://bugzilla.gnome.org/show_bug.cgi?id=740877
+
+diff --git a/thumbnailer/evince-thumbnailer.c b/thumbnailer/evince-thumbnailer.c
+index 1649252..998447d 100644
+--- a/thumbnailer/evince-thumbnailer.c
++++ b/thumbnailer/evince-thumbnailer.c
+@@ -177,7 +177,7 @@ evince_thumbnail_pngenc_get (EvDocument *document, const char *thumbnail, int si
+ 	
+ 	ev_document_get_page_size (document, 0, &width, &height);
+ 
+-	rc = ev_render_context_new (page, 0, size / width);
++	rc = ev_render_context_new (page, 0, size / MAX (height, width));
+ 	pixbuf = ev_document_get_thumbnail (document, rc);
+ 	g_object_unref (rc);
+ 	g_object_unref (page);
+-- 
+cgit v0.10.1
+

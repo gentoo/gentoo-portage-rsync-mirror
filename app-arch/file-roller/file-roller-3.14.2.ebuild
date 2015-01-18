@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.14.2.ebuild,v 1.1 2014/12/14 22:31:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.14.2.ebuild,v 1.3 2015/01/18 11:41:17 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -28,8 +28,6 @@ RDEPEND="
 	sys-apps/file
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	x11-libs/libICE
-	x11-libs/libSM
 	x11-libs/pango
 	nautilus? ( >=gnome-base/nautilus-3 )
 	packagekit? ( app-admin/packagekit-base )
@@ -82,7 +80,6 @@ src_configure() {
 		--disable-debug \
 		--enable-magic \
 		--enable-libarchive \
-		--with-smclient=xsmp \
 		$(use_enable nautilus nautilus-actions) \
 		$(use_enable packagekit) \
 		ITSTOOL=$(type -P true)

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare prerm setup unpack
-DEPEND=>=dev-lang/perl-5.6.1 >=dev-libs/gmp-5:= sys-libs/ncurses:=[unicode] !ghcmakebinary? ( virtual/libffi:= ) !kernel_Darwin? ( >=sys-devel/gcc-2.95.3 ) kernel_linux? ( >=sys-devel/binutils-2.17 ) kernel_SunOS? ( >=sys-devel/binutils-2.17 ) ghcbootstrap? ( >=dev-haskell/alex-2.3 >=dev-haskell/happy-1.18 doc? ( app-text/docbook-xml-dtd:4.2 app-text/docbook-xml-dtd:4.5 app-text/docbook-xsl-stylesheets >=dev-libs/libxslt-1.1.2 ) ) !ghcbootstrap? ( !prefix? ( elibc_glibc? ( >=sys-libs/glibc-2.17 ) ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=dev-lang/perl-5.6.1 >=dev-libs/gmp-5:= sys-libs/ncurses:=[unicode] !ghcmakebinary? ( virtual/libffi:= ) !kernel_Darwin? ( >=sys-devel/gcc-2.95.3 ) kernel_linux? ( >=sys-devel/binutils-2.17 ) kernel_SunOS? ( >=sys-devel/binutils-2.17 ) ghcbootstrap? ( doc? ( app-text/docbook-xml-dtd:4.2 app-text/docbook-xml-dtd:4.5 app-text/docbook-xsl-stylesheets >=dev-libs/libxslt-1.1.2 ) ) !ghcbootstrap? ( !prefix? ( elibc_glibc? ( >=sys-libs/glibc-2.17 ) ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=The Glasgow Haskell Compiler
 EAPI=5
 HOMEPAGE=http://www.haskell.org/ghc/
@@ -12,4 +12,4 @@ REQUIRED_USE=?? ( ghcbootstrap binary )
 SLOT=0/7.8.3
 SRC_URI=!binary? ( http://www.haskell.org/ghc/dist/7.8.3/ghc-7.8.3-src.tar.xz ) !ghcbootstrap? ( amd64? ( http://code.haskell.org/~slyfox/ghc-amd64/ghc-bin-7.8.3-amd64.tbz2 ) x86? ( http://code.haskell.org/~slyfox/ghc-x86/ghc-bin-7.8.3-x86.tbz2 ) )
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	ghc-package	29f14cf665461bc19b8724d1842b0b3a	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=4618a65a3b73b4cc00f217531296e9a6
+_md5_=f38338f656417877e377c488e10a7664

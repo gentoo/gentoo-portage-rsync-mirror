@@ -1,0 +1,23 @@
+From bfa59b72ed0c86192ca9b1f0882ca5119aa7fe12 Mon Sep 17 00:00:00 2001
+From: Carlos Garcia Campos <carlosgc@gnome.org>
+Date: Sun, 19 Oct 2014 15:24:18 +0200
+Subject: Disable toggle-find action for documents not supporting find
+
+https://bugzilla.gnome.org/show_bug.cgi?id=738262
+
+diff --git a/shell/ev-window.c b/shell/ev-window.c
+index c4f1f5d..4de4732 100644
+--- a/shell/ev-window.c
++++ b/shell/ev-window.c
+@@ -502,6 +502,8 @@ ev_window_update_actions_sensitivity (EvWindow *ev_window)
+ 				      can_get_text && !recent_view_mode);
+ 	ev_window_set_action_enabled (ev_window, "find", can_find &&
+ 				      !recent_view_mode);
++	ev_window_set_action_enabled (ev_window, "toggle-find", can_find &&
++				      !recent_view_mode);
+ 	ev_window_set_action_enabled (ev_window, "rotate-left", has_pages &&
+ 				      !recent_view_mode);
+ 	ev_window_set_action_enabled (ev_window, "rotate-right", has_pages &&
+-- 
+cgit v0.10.1
+

@@ -1,0 +1,33 @@
+From 8875003da7f78a6fbba36fcc70d6ed2d372da7a6 Mon Sep 17 00:00:00 2001
+From: Carlos Garcia Campos <carlosgc@gnome.org>
+Date: Sun, 19 Oct 2014 16:01:38 +0200
+Subject: Fix runtime critical warning when starting in fullscreen mode
+
+The problem is that when running fullscreen mode we call
+ev_window_update_links_model() to update the page action widget of the
+fullscreen toolbar, but when running directly in fullscreen mode, this
+can happen before the links have been loaded in the sidebar. Since
+ev_window_update_links_model() is also called automatically when the
+links model property changes, we can simply return early in
+ev_window_update_links_model() when the model is NULL and it will be
+called again with a valid model when the links job finishes.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=737864
+
+diff --git a/shell/ev-window.c b/shell/ev-window.c
+index 4de4732..e7f6a96 100644
+--- a/shell/ev-window.c
++++ b/shell/ev-window.c
+@@ -4024,6 +4024,9 @@ ev_window_update_links_model (EvWindow *window)
+ 		      "model", &model,
+ 		      NULL);
+ 
++	if (!model)
++		return;
++
+ 	page_selector = ev_toolbar_get_page_selector (EV_TOOLBAR (window->priv->toolbar));
+ 	ev_page_action_widget_update_links_model (EV_PAGE_ACTION_WIDGET (page_selector), model);
+ 	if (window->priv->fs_toolbar) {
+-- 
+cgit v0.10.1
+

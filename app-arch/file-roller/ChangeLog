@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/file-roller
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.341 2014/12/14 22:31:48 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.343 2015/01/18 11:41:17 pacho Exp $
+
+  18 Jan 2015; Pacho Ramos <pacho@gentoo.org> file-roller-3.14.2.ebuild:
+  Also drop now unneeded dependencies due to previous change
+  (https://git.gnome.org/browse/file-
+  roller/commit/?h=gnome-3-14&id=a235afe4a8f849b5e6ab1d4dd0b64a774fea8226 )
+
+  18 Jan 2015; Pacho Ramos <pacho@gentoo.org> file-roller-3.14.2.ebuild:
+  with-smclient is no longer an available option
 
 *file-roller-3.14.2 (14 Dec 2014)
 

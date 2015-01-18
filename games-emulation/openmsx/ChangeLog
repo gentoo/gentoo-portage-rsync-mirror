@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.50 2015/01/17 16:43:57 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.51 2015/01/18 11:32:28 tupone Exp $
+
+  18 Jan 2015; Tupone Alfredo <tupone@gentoo.org> openmsx-0.9.1.ebuild,
+  +files/openmsx-0.9.1-verbose.patch:
+  Verbose build. Bug #444276 by Agostino Sarubbo
 
   17 Jan 2015; Tupone Alfredo <tupone@gentoo.org> openmsx-0.9.1.ebuild:
   EAPI 5

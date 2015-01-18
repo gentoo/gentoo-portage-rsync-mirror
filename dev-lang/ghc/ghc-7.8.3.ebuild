@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.11 2015/01/02 23:50:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.8.3.ebuild,v 1.12 2015/01/18 11:50:59 slyfox Exp $
 
 EAPI=5
 
@@ -86,8 +86,7 @@ RDEPEND="
 
 # similar for glibc. we have bootstrapped binaries against glibc-2.17
 DEPEND="${RDEPEND}
-	ghcbootstrap? ( >=dev-haskell/alex-2.3
-		>=dev-haskell/happy-1.18
+	ghcbootstrap? (
 		doc? ( app-text/docbook-xml-dtd:4.2
 			app-text/docbook-xml-dtd:4.5
 			app-text/docbook-xsl-stylesheets
