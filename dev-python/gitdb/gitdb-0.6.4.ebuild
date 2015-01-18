@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gitdb/gitdb-0.6.1.ebuild,v 1.1 2015/01/06 10:57:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gitdb/gitdb-0.6.4.ebuild,v 1.1 2015/01/18 08:06:46 idella4 Exp $
 
 EAPI=5
 
@@ -20,5 +20,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-vcs/git
-		>=dev-python/smmap-0.8.3[${PYTHON_USEDEP}]"
+		>=dev-python/smmap-0.8.5[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
+# Testsuite appears to require files from a git repo
+
+python_compile() {
+	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	distutils-r1_python_compile
+}
