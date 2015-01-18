@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gnome-session
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.345 2014/12/22 21:25:39 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.346 2015/01/18 13:41:37 pacho Exp $
+
+*gnome-session-3.14.0-r1 (18 Jan 2015)
+
+  18 Jan 2015; Pacho Ramos <pacho@gentoo.org> +files/defaults.list-r3,
+  +files/gnome-session-3.14.0-validate-autostart.patch,
+  +gnome-session-3.14.0-r1.ebuild:
+  Patch from 3.14 branch to fix crash when autostart conditions are wrong, use
+  new location for defaults list (#534790), update that list to fit new names
+  for .desktop files in 3.14 cycle.
 
 *gnome-session-3.14.0 (22 Dec 2014)
 
