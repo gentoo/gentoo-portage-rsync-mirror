@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-nbxmpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nbxmpp/ChangeLog,v 1.15 2015/01/17 19:48:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nbxmpp/ChangeLog,v 1.16 2015/01/18 08:38:09 ago Exp $
+
+  18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> python-nbxmpp-0.5.1.ebuild:
+  Stable for ppc64, wrt bug #533402
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> python-nbxmpp-0.5.1.ebuild:
   arm stable, bug #533402

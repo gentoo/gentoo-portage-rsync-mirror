@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.22.ebuild,v 1.3 2015/01/17 13:43:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/dictd-vera-1.22.ebuild,v 1.4 2015/01/18 08:38:26 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/vera/vera-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="FDL-1.3"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc ~x86"
 
 DEPEND=">=app-text/dictd-1.5.5"
 RDEPEND="${DEPEND}"

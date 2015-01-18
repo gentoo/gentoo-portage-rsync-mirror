@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.55 2015/01/17 14:03:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.56 2015/01/18 08:48:41 ago Exp $
+
+  18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lzip-1.16.ebuild:
+  Stable for ppc64, wrt bug #534812
 
   17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lzip-1.16.ebuild:
   Stable for ppc, wrt bug #534812

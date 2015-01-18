@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ccrtp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.35 2015/01/17 13:46:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.36 2015/01/18 08:40:45 ago Exp $
+
+  18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ccrtp-2.0.9.ebuild:
+  Stable for ppc64, wrt bug #535572
 
   17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ccrtp-2.0.9.ebuild:
   Stable for ppc, wrt bug #535572

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.175 2015/01/17 19:55:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.176 2015/01/18 08:42:55 ago Exp $
+
+  18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> Net-DNS-0.740.0.ebuild:
+  Stable for ppc64, wrt bug #535210
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> Net-DNS-0.740.0.ebuild:
   arm stable, bug #535210
