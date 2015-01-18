@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1512 2015/01/17 20:54:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1513 2015/01/18 01:49:43 pesa Exp $
+
+  18 Jan 2015; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass,
+  qt4-build-multilib.eclass, qt5-build.eclass:
+  Update SRC_URIs
 
   17 Jan 2015; Manuel Rüger <mrueg@gentoo.org> rox-0install.eclass,
   rox.eclass:

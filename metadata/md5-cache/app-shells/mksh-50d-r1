@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst test
+DEPEND=static? ( dev-libs/klibc )
+DESCRIPTION=MirBSD KSH Shell
+EAPI=5
+HOMEPAGE=http://mirbsd.de/mksh
+IUSE=static
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+SLOT=0
+SRC_URI=http://www.mirbsd.org/MirOS/dist/mir/mksh/mksh-R50d.tgz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=2e8d3a80ea492acc8b49bdfc33ffd7c8

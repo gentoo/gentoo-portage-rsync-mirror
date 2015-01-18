@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.12 2014/12/12 17:30:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.13 2015/01/18 01:49:43 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -51,14 +51,14 @@ case ${PV} in
 		# development releases
 		QT5_BUILD_TYPE="release"
 		MY_P=${QT5_MODULE}-opensource-src-${PV/_/-}
-		SRC_URI="http://download.qt-project.org/development_releases/qt/${PV%.*}/${PV/_/-}/submodules/${MY_P}.tar.xz"
+		SRC_URI="http://download.qt.io/development_releases/qt/${PV%.*}/${PV/_/-}/submodules/${MY_P}.tar.xz"
 		S=${WORKDIR}/${MY_P}
 		;;
 	*)
 		# official stable releases
 		QT5_BUILD_TYPE="release"
 		MY_P=${QT5_MODULE}-opensource-src-${PV}
-		SRC_URI="http://download.qt-project.org/archive/qt/${PV%.*}/${PV}/submodules/${MY_P}.tar.xz"
+		SRC_URI="http://download.qt.io/official_releases/qt/${PV%.*}/${PV}/submodules/${MY_P}.tar.xz"
 		S=${WORKDIR}/${MY_P}
 		;;
 esac
@@ -579,9 +579,9 @@ qt5_base_configure() {
 		# and cause problems on hardened, so turn them off
 		-no-pch
 
-		# reduced relocations cause major breakage on at least arm and ppc, so we
-		# don't specify anything and let configure figure out if they are supported,
-		# see also https://bugreports.qt-project.org/browse/QTBUG-36129
+		# reduced relocations cause major breakage on at least arm and ppc, so
+		# don't specify anything and let the configure figure out if they are
+		# supported; see also https://bugreports.qt.io/browse/QTBUG-36129
 		#-reduce-relocations
 
 		# let configure automatically detect if GNU gold is available
