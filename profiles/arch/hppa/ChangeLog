@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.231 2014/12/24 16:55:57 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.232 2015/01/18 14:14:22 jer Exp $
+
+  18 Jan 2015; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=vaapi (bug #536956).
 
   24 Dec 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask, use.mask:
   Generally mask USE=clang.

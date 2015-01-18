@@ -1,6 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.86 2014/12/24 16:55:57 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.87 2015/01/18 14:14:22 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (18 Jan 2015)
+# No video acceleration is available so video decoding acceleration will not
+# work either (bug #536956)
+vaapi
 
 # Jeroen Roovers <jer@gentoo.org> (24 Dec 2014)
 # sys-devel/clang has not been ported to HPPA
