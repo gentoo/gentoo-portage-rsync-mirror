@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.237 2015/01/17 20:03:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.238 2015/01/18 10:07:26 pacho Exp $
 
 # Markus Meier <maekke@gentoo.org> (17 Jan 2015)
 # Unkeyworded deps, bug #536226
@@ -447,7 +447,7 @@ dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox ladspa
-media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack dvd
+media-plugins/gst-plugins-meta aac dts dv lame libvisual modplug taglib vcd wavpack dvd
 
 # projectm not keyworded, bug #314969
 media-video/vlc projectm chromaprint opencv

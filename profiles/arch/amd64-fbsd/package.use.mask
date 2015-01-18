@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.24 2014/12/26 18:24:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.25 2015/01/18 10:07:26 pacho Exp $
 
 # Michael Palimaka <kensington@gentoo.org) (26 Dec 2014)
 # Unkeyworded media-libs/opencv
@@ -16,6 +16,7 @@ net-misc/openssh sctp
 >=app-misc/geoclue-2.1 modemmanager
 >=x11-libs/gtk+-3.12 cloudprint
 >=app-crypt/libsecret-0.16 test
+media-plugins/gst-plugins-meta modplug vaapi
 
 # Lars Wendler <polynomial-c@gentoo.org> (09 May 2014)
 # Masked kde USE flag until bug #509892 is fixed

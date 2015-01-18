@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.157 2015/01/10 14:50:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.158 2015/01/18 10:07:26 pacho Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (10 Jan 2014)
 # Missing keywords
@@ -286,4 +286,4 @@ dev-java/icu4j test
 dev-lisp/clisp hyperspec pari svm
 
 # missing keywords
-media-plugins/gst-plugins-meta dts dv lame libvisual mms taglib vcd wavpack
+media-plugins/gst-plugins-meta dts dv lame libvisual modplug mms taglib vcd wavpack

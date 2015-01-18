@@ -1,8 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.144 2014/12/23 23:47:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.145 2015/01/18 10:07:27 pacho Exp $
 
 # This file requires >=portage-2.1.1
+
+# Pacho Ramos <pacho@gentoo.org> (18 Jan 2015)
+# Missing keywords
+media-plugins/gst-plugins-meta vaapi
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
 # New dependencies for wayland support in Gnome 3.14
