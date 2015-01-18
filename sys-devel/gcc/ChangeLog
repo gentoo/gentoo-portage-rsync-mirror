@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1037 2015/01/17 18:04:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1038 2015/01/18 12:01:18 ago Exp $
+
+  18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gcc-4.9.2.ebuild:
+  Add ~amd64, wrt bug #536874
 
   17 Jan 2015; Jeroen Roovers <jer@gentoo.org> gcc-4.9.0.ebuild,
   gcc-4.9.1.ebuild, gcc-4.9.2.ebuild:
