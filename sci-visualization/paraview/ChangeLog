@@ -1,6 +1,15 @@
 # ChangeLog for sci-visualization/paraview
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.85 2014/12/31 12:36:59 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.86 2015/01/19 18:12:00 tamiko Exp $
+
+*paraview-4.2.0-r1 (19 Jan 2015)
+*paraview-4.1.0-r2 (19 Jan 2015)
+*paraview-4.0.1-r2 (19 Jan 2015)
+
+  19 Jan 2015; Matthias Maier <tamiko@gentoo.org> +paraview-4.0.1-r2.ebuild,
+  +paraview-4.1.0-r2.ebuild, +paraview-4.2.0-r1.ebuild,
+  -paraview-4.0.1-r1.ebuild, -paraview-4.1.0-r1.ebuild, -paraview-4.2.0.ebuild:
+  do not set global PYTHONPATH environment variable, bug #499272
 
   31 Dec 2014; Matthias Maier <tamiko@gentoo.org>
   +files/paraview-4.2.0-vtk-freetype.patch, paraview-4.2.0.ebuild:

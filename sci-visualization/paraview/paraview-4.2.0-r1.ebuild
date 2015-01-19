@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.5 2014/12/21 23:03:05 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.2.0-r1.ebuild,v 1.1 2015/01/19 18:12:00 tamiko Exp $
 
 EAPI=5
 
@@ -81,7 +81,7 @@ DEPEND="${RDEPEND}
 	boost? ( >=dev-libs/boost-1.40.0[mpi?,${PYTHON_USEDEP}] )
 	doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_P%-source}
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	python-single-r1_pkg_setup
@@ -91,12 +91,11 @@ pkg_setup() {
 src_prepare() {
 	# see patch headers for description
 	epatch "${FILESDIR}"/${PN}-4.0.1-xdmf-cstring.patch \
-		"${FILESDIR}"/${PN}-4.0.1-removesqlite.patch \
+		"${FILESDIR}"/${P}-removesqlite.patch \
 		"${FILESDIR}"/${PN}-4.0.1-gcc-4.7.patch \
-		"${FILESDIR}"/${PN}-4.0.1-vtk-cg-path.patch \
-		"${FILESDIR}"/${PN}-4.0.1-Protobuf.patch \
-		"${FILESDIR}"/${P}-glxext-legacy.patch \
-		"${FILESDIR}"/${P}-no-fatal-warnings.patch
+		"${FILESDIR}"/${P}-Protobuf.patch \
+		"${FILESDIR}"/${PN}-4.1.0-no-fatal-warnings.patch \
+		"${FILESDIR}"/${P}-vtk-freetype.patch
 
 	# lib64 fixes
 	sed -i \
@@ -277,10 +276,8 @@ src_install() {
 
 	# set up the environment
 	echo "LDPATH=${EPREFIX}/usr/${PVLIBDIR}" > "${T}"/40${PN}
-	echo "PYTHONPATH="${EPREFIX}"/usr/${PVLIBDIR}:/usr/${PVLIBDIR}/site-packages" >> "${T}"/40${PN}
-	doenvd "${T}"/40${PN}
 
-	newicon "${S}"/Applications/ParaView/pvIcon.png paraview.png
+	newicon "${S}"/Applications/ParaView/pvIcon-32x32.png paraview.png
 	make_desktop_entry paraview "Paraview" paraview
 
 	use python && python_optimize "${D}"/usr/$(get_libdir)/${PN}-${MAJOR_PV}
@@ -289,11 +286,17 @@ src_install() {
 pkg_postinst() {
 	# with Qt4.5 there seem to be issues reading data files
 	# under certain locales. Setting LC_ALL=C should fix these.
-	echo
+	elog ""
 	elog "If you experience data corruption during parsing of"
 	elog "data files with paraview please try setting your"
 	elog "locale to LC_ALL=C."
 	elog "If you plan to use paraview component from an existing shell"
 	elog "you should run env-update and . /etc/profile first"
-	echo
+	elog ""
+	elog "paraview no longer exports bundled python modules in PYTHONPATH"
+	elog "globally due to clashes of bundled packages with system-wide"
+	elog "site-packages. If you want to use paraview's python modules"
+	elog "export"
+	elog "  PYTHONPATH=${EPREFIX}/usr/${PVLIBDIR}:${EPREFIX}/usr/${PVLIBDIR}/site-packages"
+	elog "as needed."
 }
