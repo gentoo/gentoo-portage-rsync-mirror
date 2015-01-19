@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmldiff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.23 2012/08/27 15:18:13 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.24 2015/01/18 23:19:53 mgorny Exp $
+
+*xmldiff-0.6.10-r1 (18 Jan 2015)
+
+  18 Jan 2015; Michał Górny <mgorny@gentoo.org> +xmldiff-0.6.10-r1.ebuild:
+  Convert to distutils-r1.
 
   27 Aug 2012; Mike Gilbert <floppym@gentoo.org> xmldiff-0.6.10.ebuild,
   xmldiff-0.6.9-r1.ebuild, xmldiff-0.6.9.ebuild:

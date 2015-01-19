@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wklej
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.27 2011/03/30 21:29:02 aidecoe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.28 2015/01/18 23:14:57 mgorny Exp $
+
+*wklej-0.2.1-r1 (18 Jan 2015)
+
+  18 Jan 2015; Michał Górny <mgorny@gentoo.org> +wklej-0.2.1-r1.ebuild:
+  Convert to python-single-r1.
 
   30 Mar 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
   aidecoe has taken over the maintenance.
@@ -68,4 +73,3 @@
   +wklej-0.1.5.ebuild:
   Version bump (thanks to Antoni <awaria at chopin.edu.pl> and Paweł <pkilian
   at wklej.org> for working on ebuild
-
