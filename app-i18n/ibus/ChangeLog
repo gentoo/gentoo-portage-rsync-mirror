@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.155 2015/01/02 10:10:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.156 2015/01/19 09:36:21 pacho Exp $
+
+  19 Jan 2015; Pacho Ramos <pacho@gentoo.org> ibus-1.5.9-r1.ebuild:
+  eautoreconf is needed (#536022 by OGINO Masanori), USE vala needs USE
+  introspection (#534220 by Andrew Savchenko)
 
   02 Jan 2015; Ben de Groot <yngwin@gentoo.org> ibus-1.5.9-r1.ebuild:
   Do not depend on gconf unconditionally

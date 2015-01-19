@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.9-r1.ebuild,v 1.2 2015/01/02 10:10:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.9-r1.ebuild,v 1.3 2015/01/19 09:36:21 pacho Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ VALA_USE_DEPEND="vapigen"
 # Valac is needed when building from git for the engine
 UPSTREAM_VER=0
 
-inherit bash-completion-r1 eutils gnome2-utils multilib python-single-r1 readme.gentoo vala virtualx
+inherit autotools bash-completion-r1 eutils gnome2-utils multilib python-single-r1 readme.gentoo vala virtualx
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -20,8 +20,10 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="deprecated gconf gtk +gtk3 +introspection nls +python test +vala wayland +X"
-REQUIRED_USE="|| ( gtk gtk3 X )
+REQUIRED_USE="
+	|| ( gtk gtk3 X )
 	deprecated? ( python )
+	vala? ( introspection )
 	python? (
 		${PYTHON_REQUIRED_USE}
 		|| ( deprecated ( gtk3 introspection ) ) )" #342903
@@ -112,6 +114,8 @@ src_prepare() {
 	sed -e 's/dconf update/:/' \
 		-i data/dconf/Makefile.{am,in} || die
 	use vala && vala_src_prepare
+
+	eautoreconf
 }
 
 src_configure() {
