@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.324 2015/01/19 14:36:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.325 2015/01/19 15:02:19 blueness Exp $
+
+  19 Jan 2015; Anthony G. Basile <blueness@gentoo.org> openrc-0.13.8.ebuild:
+  Stable on arm.  Bug #530120.
 
   19 Jan 2015; Anthony G. Basile <blueness@gentoo.org> openrc-0.13.8.ebuild:
   Stable on ppc, ppc64 and x86.  Bug #530120

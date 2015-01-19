@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.265 2015/01/19 14:41:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.266 2015/01/19 15:06:51 blueness Exp $
+
+  19 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  nfs-utils-1.3.1-r1.ebuild:
+  Stable on arm.  Bug #530418.
 
   19 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
   nfs-utils-1.3.1-r1.ebuild:
