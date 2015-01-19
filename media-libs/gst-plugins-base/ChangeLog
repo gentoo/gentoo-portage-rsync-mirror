@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/gst-plugins-base
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.259 2014/12/24 18:43:16 leio Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.261 2015/01/19 11:17:34 pacho Exp $
+
+*gst-plugins-base-0.10.36-r2 (19 Jan 2015)
+
+  19 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +gst-plugins-base-0.10.36-r2.ebuild, gst-plugins-base-0.10.36-r1.ebuild:
+  Revbump with the fix for the hang
+
+  19 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gst-plugins-base-0.10.36-gcc-4.9.patch,
+  +files/gst-plugins-base-0.10.36-resync-ringbuffer.patch,
+  -gst-plugins-base-0.10.36.ebuild, gst-plugins-base-0.10.36-r1.ebuild,
+  gst-plugins-base-1.2.4-r1.ebuild:
+  Fix compilation with gcc-4.9 (#529962 by Martin Väth and Stephan Hartmann),
+  fix hang during gapless transition (#520090 by Georg Rudoy), drop old
 
 *gst-plugins-base-1.4.5 (24 Dec 2014)
 

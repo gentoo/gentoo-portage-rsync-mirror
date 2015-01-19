@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/nanomsg-0.5.ebuild,v 1.1 2014/11/16 10:01:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/nanomsg-0.5.ebuild,v 1.2 2015/01/19 11:22:22 pinkbyte Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.nanomsg.org/${P}-beta.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~x86"
 IUSE=""
 
 DEPEND=""

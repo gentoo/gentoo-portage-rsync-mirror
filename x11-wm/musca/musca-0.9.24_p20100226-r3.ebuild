@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24_p20100226-r3.ebuild,v 1.2 2014/11/10 12:46:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/musca-0.9.24_p20100226-r3.ebuild,v 1.3 2015/01/19 11:03:01 jer Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils savedconfig toolchain-funcs
 
 DESCRIPTION="A simple dynamic window manager for X, with features nicked from
 ratpoison and dwm"
-HOMEPAGE="http://aerosuidae.net/musca.html"
+HOMEPAGE="https://launchpad.net/musca"
 SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-3"

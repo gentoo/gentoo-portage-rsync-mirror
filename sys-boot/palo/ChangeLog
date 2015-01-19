@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/palo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.48 2014/12/15 19:52:16 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.49 2015/01/19 11:16:07 jer Exp $
+
+  19 Jan 2015; Jeroen Roovers <jer@gentoo.org> palo-1.95.ebuild:
+  Stable for HPPA too.
 
 *palo-1.95 (15 Dec 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/musca
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.25 2014/12/02 10:12:42 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.26 2015/01/19 11:03:01 jer Exp $
+
+  19 Jan 2015; Jeroen Roovers <jer@gentoo.org>
+  musca-0.9.24_p20100226-r3.ebuild:
+  Use development homepage instead of defunct website.
 
   02 Dec 2014; Jeroen Roovers <jer@gentoo.org>
   -musca-0.9.24_p20100226-r2.ebuild:
