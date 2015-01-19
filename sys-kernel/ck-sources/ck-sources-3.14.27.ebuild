@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.12.34.ebuild,v 1.1 2014/12/12 08:04:13 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.14.27.ebuild,v 1.1 2015/01/19 06:23:22 dlan Exp $
 
 EAPI="5"
 ETYPE="sources"
@@ -13,7 +13,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 K_WANT_GENPATCHES="base extras experimental"
 K_EXP_GENPATCHES_PULL="1"
 K_EXP_GENPATCHES_NOUSE="1"
-K_GENPATCHES_VER="35"
+K_GENPATCHES_VER="32"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -32,8 +32,8 @@ XTRA_INCP_MAX=""
 
 #--
 
-CK_VERSION="2"
-BFS_VERSION="444"
+CK_VERSION="1"
+BFS_VERSION="447"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
 BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
@@ -56,7 +56,7 @@ if [ -n "${XTRA_INCP_MIN}" ]; then
 	done
 fi
 
-#-- CK needs sometimes to patch itself... (3.7)--------------------------------
+#-- CK needs sometimes to patch itself... (3.7/3.13)---------------------------
 
 CK_INCP_URI=""
 CK_INCP_LIST=""

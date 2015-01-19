@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.4.104.ebuild,v 1.1 2014/11/21 07:21:37 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.4.105.ebuild,v 1.1 2015/01/19 06:23:22 dlan Exp $
 
 EAPI="5"
 ETYPE="sources"
@@ -11,7 +11,7 @@ HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="87"
+K_GENPATCHES_VER="88"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
