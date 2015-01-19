@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.13.0.ebuild,v 1.3 2015/01/11 11:54:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.13.0.ebuild,v 1.4 2015/01/19 19:54:56 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo systemd versionator
@@ -14,12 +14,12 @@ SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.xz
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="+gtk +introspection kde qt4"
+IUSE="+gtk +introspection kde qt4 +gnome"
 REQUIRED_USE="|| ( gtk kde )"
 
 COMMON_DEPEND=">=dev-libs/glib-2.32.3:2
 	dev-libs/libxml2
-	sys-apps/accountsservice
+	gnome? ( sys-apps/accountsservice )
 	virtual/pam
 	x11-libs/libX11
 	>=x11-libs/libxklavier-5
@@ -34,7 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/gtk-doc-am
 	dev-util/intltool
-	gnome-base/gnome-common
+	gnome? ( gnome-base/gnome-common )
 	sys-devel/gettext
 	virtual/pkgconfig"
 PDEPEND="gtk? ( x11-misc/lightdm-gtk-greeter )

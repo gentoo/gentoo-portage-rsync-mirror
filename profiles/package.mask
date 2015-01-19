@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16294 2015/01/19 15:32:02 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16295 2015/01/19 19:59:37 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (19 Jan 2015)
+# virtual/ruby-rdoc is a no-op in that it always pulls in
+# dev-ruby/rdoc, and nothing in the tree depends on it anymore. This
+# also fixes part of bug 421497.
+# Removal in 30 days.
+virtual/ruby-rdoc
 
 # Manuel Rüger <mrueg@gentoo.org> (18 Jan 2015)
 # Ruby 1.9 only packages, do not build with later rubies

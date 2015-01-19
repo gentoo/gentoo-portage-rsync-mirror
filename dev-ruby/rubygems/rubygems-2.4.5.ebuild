@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.4.5.ebuild,v 1.1 2014/12/27 21:02:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.4.5.ebuild,v 1.2 2015/01/19 19:56:14 graaff Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ PDEPEND="server? ( >=dev-ruby/builder-2.1 )"
 ruby_add_bdepend "
 	test? (
 		>=dev-ruby/minitest-4:0
-		virtual/ruby-rdoc
+		dev-ruby/rdoc
 	)"
 
 all_ruby_prepare() {

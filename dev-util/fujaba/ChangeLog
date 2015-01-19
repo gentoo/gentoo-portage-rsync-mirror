@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fujaba
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.14 2008/01/10 22:40:32 caster Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.15 2015/01/19 19:41:29 monsieurp Exp $
+
+  19 Jan 2015; Patrice Clement <monsieurp@gentoo.org> fujaba-4.2.0.ebuild:
+  Fix bug 536924: HOMEPAGE update, EAPI bump to v5, package cleanup.
 
   10 Jan 2008; Vlastimil Babka <caster@gentoo.org> fujaba-4.2.0.ebuild:
   Restrict junit dependency.
@@ -47,4 +50,3 @@
   metadata.xml:
   Initial Import. Thanks to Dennis Nienhuser <fragfred@gmx.de> for the initial
   submission. Closes #38352
-
