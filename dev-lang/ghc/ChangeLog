@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.277 2015/01/18 11:50:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.278 2015/01/19 09:02:02 slyfox Exp $
+
+  19 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.8.4.ebuild:
+  added ia64 binary
 
   18 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.4.2.ebuild,
   ghc-7.6.3-r1.ebuild, ghc-7.8.3.ebuild, ghc-7.8.4.ebuild:
