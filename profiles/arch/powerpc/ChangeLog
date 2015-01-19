@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.303 2014/12/24 18:02:27 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.304 2015/01/19 16:12:25 floppym Exp $
+
+  19 Jan 2015; Mike Gilbert <floppym@gentoo.org> use.stable.mask:
+  Remove python3_4 mask.
 
   24 Dec 2014; Matthias Maier <tamiko@gentoo.org> ppc64/package.use.mask:
   mask clang use flag for app-doc/doxygen

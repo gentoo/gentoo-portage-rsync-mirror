@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configargparse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configargparse/ChangeLog,v 1.1 2015/01/04 04:46:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configargparse/ChangeLog,v 1.2 2015/01/19 16:15:22 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
 *configargparse-0.9.3 (04 Jan 2015)
 

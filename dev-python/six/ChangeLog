@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.56 2015/01/13 15:56:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.57 2015/01/19 16:09:17 floppym Exp $
+
+  19 Jan 2015; Mike Gilbert <floppym@gentoo.org> six-1.3.0.ebuild:
+  Add python3.4.
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> six-1.8.0.ebuild:
   Stable for HPPA (bug #534366).

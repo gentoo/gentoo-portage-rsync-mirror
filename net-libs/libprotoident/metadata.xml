@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>radhermit@gentoo.org</email>
-		<name>Tim Harder</name>
-	</maintainer>
 	<use>
 		<flag name="tools">Build and install command-line tools</flag>
 	</use>

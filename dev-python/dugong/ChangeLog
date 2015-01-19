@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dugong
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.10 2014/11/29 22:47:16 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dugong/ChangeLog,v 1.11 2015/01/19 16:16:38 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
 *dugong-3.4 (29 Nov 2014)
 

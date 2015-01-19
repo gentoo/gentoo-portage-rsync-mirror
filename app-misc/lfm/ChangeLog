@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lfm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lfm/ChangeLog,v 1.4 2014/12/27 15:56:14 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lfm/ChangeLog,v 1.6 2015/01/19 16:13:36 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> -lfm-2.3.ebuild:
+  Remove old.
 
 *lfm-2.3-r1 (27 Dec 2014)
 

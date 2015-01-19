@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/canlock
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/ChangeLog,v 1.8 2013/07/11 19:03:44 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/ChangeLog,v 1.9 2015/01/19 16:08:37 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
   11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> canlock-2b.ebuild:
   ppc stable, bug 476430
