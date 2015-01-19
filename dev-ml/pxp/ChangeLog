@@ -1,6 +1,14 @@
 # ChangeLog for dev-ml/pxp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.37 2014/11/28 17:57:23 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.39 2015/01/19 10:14:15 aballier Exp $
+
+  19 Jan 2015; Alexis Ballier <aballier@gentoo.org> -pxp-1.2.3.ebuild:
+  remove old
+
+*pxp-1.2.7 (19 Jan 2015)
+
+  19 Jan 2015; Alexis Ballier <aballier@gentoo.org> +pxp-1.2.7.ebuild:
+  version bump
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> pxp-1.2.4.ebuild:
   update deps for ocaml 4.02

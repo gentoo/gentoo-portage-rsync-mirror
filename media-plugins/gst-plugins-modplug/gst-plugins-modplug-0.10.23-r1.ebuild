@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/gst-plugins-modplug-0.10.23-r1.ebuild,v 1.6 2014/08/21 10:43:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/gst-plugins-modplug-0.10.23-r1.ebuild,v 1.7 2015/01/19 10:24:03 pacho Exp $
 
 EAPI="5"
 
@@ -12,3 +12,8 @@ IUSE=""
 
 RDEPEND=">=media-libs/libmodplug-0.8.8.4-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	# modplug: Specify directory when including stdafx.h, bug #532558
+	epatch "${FILESDIR}"/${PN}-0.10.23-include-header.patch
+}

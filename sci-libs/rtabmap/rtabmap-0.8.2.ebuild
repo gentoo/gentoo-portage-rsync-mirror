@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rtabmap/rtabmap-0.8.0.ebuild,v 1.1 2014/12/19 15:09:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rtabmap/rtabmap-0.8.2.ebuild,v 1.1 2015/01/19 10:04:03 aballier Exp $
 
 EAPI=5
 
@@ -40,8 +40,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-PATCHES=( "${FILESDIR}/cmakeinstall.patch" )
 
 src_configure() {
 	use openni2 || sed -e 's/OpenNI2)/DiSaBlEd)/' -i CMakeLists.txt || die
