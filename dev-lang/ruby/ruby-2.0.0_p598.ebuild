@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p598.ebuild,v 1.10 2014/12/06 16:51:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p598.ebuild,v 1.11 2015/01/19 20:07:18 graaff Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 PDEPEND="
-	virtual/rubygems:ruby20
+	virtual/rubygems[ruby_targets_ruby20]
 	>=dev-ruby/json-1.7.7[ruby_targets_ruby20]
 	>=dev-ruby/rake-0.9.6[ruby_targets_ruby20]
 	rdoc? ( >=dev-ruby/rdoc-4.0.0[ruby_targets_ruby20] )

@@ -1,6 +1,14 @@
 # ChangeLog for app-office/ledger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.31 2015/01/13 21:34:51 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.33 2015/01/19 20:30:38 yac Exp $
+
+  19 Jan 2015; Jan Matejka <yac@gentoo.org> ledger-3.1.ebuild:
+  Fix things  1. download tar.gz instead of zip (which was missing unzip in
+  DEPEND)  2. Depend on boost properly to ensure rebuilds on boost slot changes
+  3. put utfcpp only in DEPEND
+
+  19 Jan 2015; Jan Matejka <yac@gentoo.org> ledger-3.1.ebuild:
+  Add missing dependency on dev-libs/utfcpp
 
   13 Jan 2015; Jan Matejka <yac@gentoo.org> ledger-3.1.ebuild:
   fix distfile name

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.697 2015/01/14 06:45:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.698 2015/01/19 20:07:18 graaff Exp $
+
+  19 Jan 2015; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p551.ebuild,
+  ruby-2.0.0_p598.ebuild, ruby-2.1.5.ebuild, ruby-2.2.0.ebuild:
+  Change the virtual/rubygems dependency to refer to the RUBY_TARGET in
+  preparation of removing the version-specific slots.
 
   14 Jan 2015; Hans de Graaff <graaff@gentoo.org> ruby-2.2.0.ebuild:
   The broken sse2 detection code is gone, so skip this patch unconditionally

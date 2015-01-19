@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p551.ebuild,v 1.10 2014/12/06 16:51:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p551.ebuild,v 1.11 2015/01/19 20:07:18 graaff Exp $
 
 EAPI=4
 
@@ -58,7 +58,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 PDEPEND="
-	virtual/rubygems:ruby19
+	virtual/rubygems[ruby_targets_ruby19]
 	rdoc? ( >=dev-ruby/rdoc-3.9.4[ruby_targets_ruby19] )
 	xemacs? ( app-xemacs/ruby-modes )"
 
