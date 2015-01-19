@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/cliapp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.12 2014/12/26 17:55:15 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.14 2015/01/19 13:17:54 ago Exp $
+
+  19 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cliapp-1.20130808.ebuild,
+  cliapp-1.20140315.ebuild:
+  Add ~ppc64, wrt bug #530672
+
+  19 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cliapp-1.20130808.ebuild,
+  cliapp-1.20140315.ebuild:
+  Add ~ppc, wrt bug #530672
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> cliapp-1.20140315.ebuild:
   add ~arm, bug #530672
