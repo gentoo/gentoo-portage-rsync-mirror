@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-viewer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.29 2014/09/21 15:25:47 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.30 2015/01/19 17:38:32 tamiko Exp $
+
+*virt-viewer-2.0 (19 Jan 2015)
+
+  19 Jan 2015; Matthias Maier <tamiko@gentoo.org> +virt-viewer-2.0.ebuild,
+  virt-viewer-0.6.0.ebuild, virt-viewer-1.0.ebuild:
+  version bump; fix file collision in >=0.6.0, bug #515488, patch by Christian
+  Ruppert (idl0r)
 
 *virt-viewer-1.0 (21 Sep 2014)
 

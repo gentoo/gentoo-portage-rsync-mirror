@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-1.0.ebuild,v 1.1 2014/09/21 15:25:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-1.0.ebuild,v 1.2 2015/01/19 17:38:32 tamiko Exp $
 
 EAPI=5
-inherit eutils gnome2
+inherit eutils gnome2 fdo-mime
 
 DESCRIPTION="Graphical console client for connecting to virtual machines"
 HOMEPAGE="http://virt-manager.org/"
@@ -29,7 +29,7 @@ REQUIRED_USE="|| ( spice vnc )"
 
 pkg_setup() {
 	G2CONF="$(use_with vnc gtk-vnc) $(use_with spice spice-gtk)"
-	G2CONF="${G2CONF} --with-gtk=3.0 --without-ovirt"
+	G2CONF="${G2CONF} --with-gtk=3.0 --without-ovirt --disable-update-mimedb"
 }
 
 src_prepare() {
@@ -42,4 +42,8 @@ src_test() {
 
 src_install() {
 	default
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
 }

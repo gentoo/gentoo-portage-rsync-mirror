@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-0.6.0.ebuild,v 1.3 2015/01/19 17:38:32 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-2.0.ebuild,v 1.1 2015/01/19 17:38:32 tamiko Exp $
 
 EAPI=5
 inherit eutils gnome2 fdo-mime
@@ -33,7 +33,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix-c99-compat.patch"
 	epatch_user
 }
 
