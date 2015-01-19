@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.106 2015/01/19 19:54:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.107 2015/01/19 20:33:44 hwoarang Exp $
+
+*lightdm-1.13.1 (19 Jan 2015)
+
+  19 Jan 2015; Markos Chandras <hwoarang@gentoo.org> +lightdm-1.13.1.ebuild,
+  -lightdm-1.8.5.ebuild, metadata.xml:
+  bump to 1.13.1. Drop 1.8.5
 
   19 Jan 2015; Markos Chandras <hwoarang@gentoo.org> lightdm-1.13.0.ebuild:
   Drop unconditional dependency on accountservice. Patch by Harvey Mittens. Bug
