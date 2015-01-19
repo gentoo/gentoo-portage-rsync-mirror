@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/rest-0.7.92-r1.ebuild,v 1.1 2014/11/22 20:46:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/rest-0.7.92-r1.ebuild,v 1.2 2015/01/19 10:41:51 jer Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Librest"
 LICENSE="LGPL-2.1"
 SLOT="0.7"
 IUSE="+gnome +introspection test"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # Coverage testing should not be enabled
 RDEPEND="

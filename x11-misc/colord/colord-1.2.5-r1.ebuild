@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.5-r1.ebuild,v 1.1 2014/11/22 22:28:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.5-r1.ebuild,v 1.2 2015/01/19 10:42:27 jer Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0/2" # subslot = libcolord soname version
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 # We prefer policykit enabled by default, bug #448058
 IUSE="examples extra-print-profiles +gusb +introspection +policykit scanner systemd +udev vala"

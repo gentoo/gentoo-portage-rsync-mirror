@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.755 2015/01/05 14:16:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.756 2015/01/19 10:44:02 jer Exp $
+
+  19 Jan 2015; Jeroen Roovers <jer@gentoo.org> gtk+-2.24.25-r1.ebuild,
+  gtk+-3.12.2-r2.ebuild:
+  Stable for HPPA (bug #536694).
 
   05 Jan 2015; Pacho Ramos <pacho@gentoo.org>
   -files/gtk+-3.3.18-fallback-theme.patch,

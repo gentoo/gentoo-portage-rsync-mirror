@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-atk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.63 2014/12/29 07:42:42 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.64 2015/01/19 10:38:50 jer Exp $
+
+  19 Jan 2015; Jeroen Roovers <jer@gentoo.org> at-spi2-atk-2.12.1-r1.ebuild:
+  Stable for HPPA (bug #536694).
 
   29 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
   -at-spi2-atk-2.10.2.ebuild, at-spi2-atk-2.12.1.ebuild,

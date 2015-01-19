@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.369 2015/01/10 11:09:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.370 2015/01/19 10:40:23 jer Exp $
+
+  19 Jan 2015; Jeroen Roovers <jer@gentoo.org> pulseaudio-5.0-r7.ebuild:
+  Stable for HPPA (bug #536694).
 
   10 Jan 2015; Michał Górny <mgorny@gentoo.org> pulseaudio-5.0-r7.ebuild:
   Call gnome2_environment_reset to fix sandbox access violations, bug #534582.

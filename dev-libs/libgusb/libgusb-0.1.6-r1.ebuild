@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.6-r1.ebuild,v 1.1 2014/11/22 21:45:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.1.6-r1.ebuild,v 1.2 2015/01/19 10:39:20 jer Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
@@ -14,7 +14,7 @@ SRC_URI="http://people.freedesktop.org/~hughsient/releases/${P}.tar.xz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+introspection static-libs vala"
 REQUIRED_USE="vala? ( introspection )"
 
