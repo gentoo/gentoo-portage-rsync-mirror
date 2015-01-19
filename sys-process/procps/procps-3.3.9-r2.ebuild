@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9-r2.ebuild,v 1.7 2015/01/02 12:16:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9-r2.ebuild,v 1.8 2015/01/19 13:56:11 blueness Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${PN}-ng/${PN}-ng-${PV}.tar.xz/
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="+ncurses nls selinux static-libs systemd test unicode"
 
 RDEPEND="!<sys-apps/sysvinit-2.88-r6
