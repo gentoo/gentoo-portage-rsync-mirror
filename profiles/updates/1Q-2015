@@ -8,3 +8,4 @@ slotmove sys-firmware/iwl7260-ucode 0 7
 slotmove sys-firmware/iwl7260-ucode 1 8
 slotmove sys-firmware/iwl7260-ucode 2 9
 slotmove sys-firmware/iwl7260-ucode 3 10
+slotmove dev-ruby/tilt 2.0.1 2
