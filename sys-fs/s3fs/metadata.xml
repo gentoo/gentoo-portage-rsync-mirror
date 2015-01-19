@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>radhermit@gentoo.org</email>
-		<name>Tim Harder</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">s3fs is a utility to mount Amazon S3 as a filesystem over FUSE</longdescription>
 	<upstream>

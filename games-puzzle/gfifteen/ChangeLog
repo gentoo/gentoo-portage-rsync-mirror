@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gfifteen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gfifteen/ChangeLog,v 1.9 2012/08/02 21:24:09 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gfifteen/ChangeLog,v 1.10 2015/01/19 16:35:46 mr_bones_ Exp $
+
+  19 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> gfifteen-1.0.3.ebuild:
+  make it compile against newer gtk+:3 (bug #536994); EAPI=5
 
   02 Aug 2012; Markos Chandras <hwoarang@gentoo.org> gfifteen-1.0.3.ebuild:
   Stable on amd64 wrt bug #426778

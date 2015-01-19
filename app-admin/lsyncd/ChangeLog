@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lsyncd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.36 2014/01/23 00:46:27 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.37 2015/01/19 16:52:05 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
   23 Jan 2014; Tim Harder <radhermit@gentoo.org> -lsyncd-2.0.5.ebuild,
   -lsyncd-2.0.7.ebuild, -lsyncd-2.1.4.ebuild, -files/lsyncd-2.0.7-lua51.patch,

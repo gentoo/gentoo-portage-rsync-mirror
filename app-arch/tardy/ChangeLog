@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tardy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.25 2014/10/23 03:31:38 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.26 2015/01/19 16:37:48 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
   23 Oct 2014; Tim Harder <radhermit@gentoo.org> -tardy-1.12.ebuild,
   -tardy-1.25.ebuild, -tardy-1.27.ebuild, -files/tardy-1.12-gcc43.patch,

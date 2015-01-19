@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nut
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.77 2014/09/21 10:11:42 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/ChangeLog,v 1.78 2015/01/19 16:32:15 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
 *nut-20.1 (21 Sep 2014)
 

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9692 2015/01/19 15:32:02 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9693 2015/01/19 16:42:31 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jan 2015; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  downgrade amd64-fbsd profiles to dev state; there are too many keywording
+  bugs and nobody really processing them...
 
   19 Jan 2015; Brian Evans <grknight@gentoo.org> package.mask:
   Remove dev-php/suhosin from mask

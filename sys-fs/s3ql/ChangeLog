@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/s3ql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.41 2014/11/24 00:07:42 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.42 2015/01/19 16:44:52 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
 *s3ql-2.12 (24 Nov 2014)
 
