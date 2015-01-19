@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.5.1.ebuild,v 1.1 2014/12/08 18:39:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.5.1-r2.ebuild,v 1.1 2015/01/19 14:08:32 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -63,6 +63,7 @@ src_prepare() {
 	# [23109:0] error: Could not open autotrust file for writing,
 	# /etc/dnssec/root-anchors.txt: Permission denied
 	epatch "${FILESDIR}"/${PN}-1.4.12-gentoo.patch
+	epatch "${FILESDIR}"/0001-fix-fail-to-start-on-Linux-LTS-3.14.X-ignore.patch
 
 	# required for the python part
 	multilib_copy_sources

@@ -1,6 +1,18 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.85 2015/01/15 08:39:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.87 2015/01/19 14:09:55 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> -unbound-1.4.21-r1.ebuild,
+  -unbound-1.4.21-r2.ebuild, -unbound-1.5.0.ebuild, -unbound-1.5.0-r1.ebuild,
+  -unbound-1.5.1.ebuild:
+  Remove old.
+
+*unbound-1.5.1-r2 (19 Jan 2015)
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> -unbound-1.5.1-r1.ebuild,
+  +unbound-1.5.1-r2.ebuild, -files/unbound-1.5.1-pmtudisc.patch,
+  +files/0001-fix-fail-to-start-on-Linux-LTS-3.14.X-ignore.patch:
+  Use upstream patch for 3.14 LTS issue.
 
   15 Jan 2015; Agostino Sarubbo <ago@gentoo.org> unbound-1.4.22-r1.ebuild:
   Stable for ppc, wrt bug #536226

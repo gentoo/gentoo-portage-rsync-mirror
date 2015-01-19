@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.376 2015/01/18 20:24:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.377 2015/01/19 14:04:02 blueness Exp $
+
+  19 Jan 2015; Anthony G. Basile <blueness@gentoo.org> busybox-1.23.0.ebuild:
+  Stable on ppc, ppc64 and x86.  Bug #530688.
 
   18 Jan 2015; Markus Meier <maekke@gentoo.org> busybox-1.23.0.ebuild:
   arm stable, bug #530688
