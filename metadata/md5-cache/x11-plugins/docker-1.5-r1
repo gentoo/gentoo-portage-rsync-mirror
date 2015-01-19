@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install unpack
-DEPEND=>=dev-libs/glib-2.0.4 x11-libs/libX11 !app-emulation/docker virtual/pkgconfig
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=>=dev-libs/glib-2.0.4 x11-libs/libX11 virtual/pkgconfig
 DESCRIPTION=Openbox app which acts as a system tray for KDE and GNOME2
+EAPI=5
 HOMEPAGE=http://icculus.org/openbox/2/docker/
-KEYWORDS=alpha amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2.0.4 x11-libs/libX11 !app-emulation/docker
+RDEPEND=>=dev-libs/glib-2.0.4 x11-libs/libX11
 SLOT=0
 SRC_URI=http://icculus.org/openbox/2/docker/docker-1.5.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6fdc740cae837d156ab9c2219acd4eca
+_md5_=fa0bb7c79c1d2068e23b33b2e93e79eb

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.5.ebuild,v 1.18 2012/05/05 05:12:02 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/docker-1.5.ebuild,v 1.19 2015/01/19 19:31:07 voyageur Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,8 @@ HOMEPAGE="http://icculus.org/openbox/2/docker/"
 SRC_URI="http://icculus.org/openbox/2/${PN}/${P}.tar.gz"
 
 RDEPEND=">=dev-libs/glib-2.0.4
-	x11-libs/libX11"
+	x11-libs/libX11
+	!app-emulation/docker"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/docker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/ChangeLog,v 1.23 2013/10/19 15:15:47 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/docker/ChangeLog,v 1.24 2015/01/19 19:31:07 voyageur Exp $
+
+*docker-1.5-r1 (19 Jan 2015)
+
+  19 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> docker-1.5.ebuild,
+  +docker-1.5-r1.ebuild, +files/docker-1.5-makefile_rename.patch, metadata.xml:
+  Move under desktop-dock, block app-emulation/docker in current stable, clean
+  ebuild and rename binary
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal
