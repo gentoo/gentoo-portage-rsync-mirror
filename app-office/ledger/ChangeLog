@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ledger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.33 2015/01/19 20:30:38 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.34 2015/01/19 22:20:32 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
   19 Jan 2015; Jan Matejka <yac@gentoo.org> ledger-3.1.ebuild:
   Fix things  1. download tar.gz instead of zip (which was missing unzip in
