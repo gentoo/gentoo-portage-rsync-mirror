@@ -14,6 +14,7 @@
 	<flag name='mac4lin'>Change default icons to mac4lin icon set</flag>
 	<flag name='ncurses'>Installs a ncurses UI</flag>
 	<flag name='pm-utils'>Installs the pm-utils hooks for suspend/resume and
-		requires <pkg>sys-power/pm-utils</pkg></flag>
+	requires <pkg>sys-power/pm-utils</pkg></flag>
+	<flag name='gnome-shell'>Install gnome-shell extension</flag>
 </use>
 </pkgmetadata>

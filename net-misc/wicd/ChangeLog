@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wicd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.150 2014/08/02 18:18:19 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.151 2015/01/19 12:32:36 tomka Exp $
+
+*wicd-1.7.3 (19 Jan 2015)
+
+  19 Jan 2015; Thomas Kahle <tomka@gentoo.org>
+  +files/wicd-1.7.3-add-missing-gnome-shell-extension.patch, +wicd-1.7.3.ebuild,
+  -files/wicd-1.7.1_pre20111210-fix-config-reading.patch,
+  -wicd-1.7.2.4-r2.ebuild, metadata.xml:
+  bump to 1.7.3, remove old
 
   02 Aug 2014; Agostino Sarubbo <ago@gentoo.org> wicd-1.7.2.4-r3.ebuild:
   Stable for ppc64, wrt bug #509752
