@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ijson
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ijson/ChangeLog,v 1.7 2014/10/18 02:57:57 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ijson/ChangeLog,v 1.8 2015/01/19 15:52:27 radhermit Exp $
+
+  19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
   18 Oct 2014; Tim Harder <radhermit@gentoo.org> ijson-2.0.ebuild:
   Add setuptools dep.
