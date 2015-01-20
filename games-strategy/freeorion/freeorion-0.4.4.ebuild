@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.4.ebuild,v 1.1 2015/01/12 13:05:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.4.ebuild,v 1.2 2015/01/20 08:27:24 tomka Exp $
 
 EAPI=5
 
@@ -9,7 +9,8 @@ inherit cmake-utils python-any-r1 games
 
 DESCRIPTION="A free turn-based space empire and galactic conquest game"
 HOMEPAGE="http://www.freeorion.org"
-SRC_URI="http://dev.gentoo.org/~tomka/files/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~tomka/files/${P}.tar.bz2
+		 http://dev.gentoo.org/~tomka/files/${P}-ogre-1.9-compat.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 CC-BY-SA-3.0"
 SLOT="0"
@@ -35,7 +36,6 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	virtual/pkgconfig"
 
-# S="${WORKDIR}/${P}/${myPN}"
 CMAKE_USE_DIR="${S}"
 CMAKE_VERBOSE="1"
 
@@ -57,7 +57,7 @@ src_prepare() {
 			>> "${CMAKE_USE_DIR}"/ogre_plugins.cfg || die
 	fi
 
-	epatch "${FILESDIR}/ogre-1.9-compat.patch"
+	epatch "${WORKDIR}/${P}-ogre-1.9-compat.patch"
 
 	# parse subdir sets -O3
 	sed -e "s:-O3::" -i parse/CMakeLists.txt
@@ -89,7 +89,7 @@ src_install() {
 	dogamesbin "${CMAKE_BUILD_DIR}"/${PN}{ca,d} || die
 	newgamesbin "${CMAKE_BUILD_DIR}"/${PN} ${PN}.bin || die
 	games_make_wrapper ${PN} \
-		"${GAMES_BINDIR}/${PN}.bin --resource-dir ./default" \
+		"${GAMES_BINDIR}/${PN}.bin --resource-dir ${GAMES_DATADIR}/${PN}/default" \
 		"${GAMES_DATADIR}/${PN}"
 
 	# lib
