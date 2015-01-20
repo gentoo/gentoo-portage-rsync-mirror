@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/rex-client
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/rex-client/ChangeLog,v 1.3 2014/11/10 08:54:12 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/rex-client/ChangeLog,v 1.4 2015/01/20 09:59:54 pacho Exp $
+
+  20 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #213900
 
   10 Nov 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove empty herd tag from metadata.xml, cleanup

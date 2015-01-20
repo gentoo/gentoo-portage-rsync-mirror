@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/prefix-chain-setup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/prefix-chain-setup/ChangeLog,v 1.4 2011/04/21 03:08:28 darkside Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/prefix-chain-setup/ChangeLog,v 1.5 2015/01/20 10:00:23 pacho Exp $
+
+  20 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #213900
 
   21 Apr 2011; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   update metadata
@@ -38,4 +41,3 @@
   26 Mar 2009; <mduft@gentoo.org> +., +files, +files/prefix-chain-setup.in,
   +prefix-chain-setup-0.2.ebuild:
   initially added prefix-chain setup helper
-
