@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgit2-glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.22 2015/01/20 07:20:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.23 2015/01/20 10:35:32 pacho Exp $
+
+  20 Jan 2015; Pacho Ramos <pacho@gentoo.org> libgit2-glib-0.0.24.ebuild,
+  libgit2-glib-0.22.0.ebuild:
+  Add a reference to upstream bug report and make the dependency of 0.0.24
+  stricter
 
 *libgit2-glib-0.22.0 (20 Jan 2015)
 

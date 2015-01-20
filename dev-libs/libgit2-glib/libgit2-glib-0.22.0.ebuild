@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.22.0.ebuild,v 1.1 2015/01/20 07:20:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.22.0.ebuild,v 1.2 2015/01/20 10:35:32 pacho Exp $
 
 EAPI=5
 
@@ -37,7 +37,9 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.22.0-automagic-ssh.patch" # make libgit2[ssh] dep non-magic
+	# Make libgit2[ssh] dep non-magic, upstream bug #743236
+	epatch "${FILESDIR}/${PN}-0.22.0-automagic-ssh.patch"
+
 	eautoreconf
 	use vala && vala_src_prepare
 	gnome2_src_prepare

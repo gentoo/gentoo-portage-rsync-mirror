@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.24.ebuild,v 1.3 2014/12/22 23:20:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.24.ebuild,v 1.4 2015/01/20 10:35:32 pacho Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="python ssh +vala"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
-	>=dev-libs/libgit2-0.21.0:=
+	=dev-libs/libgit2-0.21*:=
 	>=dev-libs/glib-2.28.0:2
 	>=dev-libs/gobject-introspection-0.10.1
 	python? (
