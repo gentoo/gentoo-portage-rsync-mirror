@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.87 2015/01/11 19:36:13 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.88 2015/01/20 02:01:02 teiresias Exp $
+
+*speech-tools-2.1-r3 (20 Jan 2015)
+
+  20 Jan 2015; Christopher Brannon <teiresias@gentoo.org>
+  +speech-tools-2.1-r3.ebuild:
+  Remove unnecessary bcat tool (see bug #418301).
 
   11 Jan 2015; Chema Alonso <nimiux@gentoo.org> speech-tools-2.1-r2.ebuild:
   Stable for amd64 wrt bug #510600
