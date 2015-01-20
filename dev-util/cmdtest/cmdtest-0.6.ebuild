@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/cmdtest-0.6.ebuild,v 1.5 2015/01/19 13:17:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/cmdtest-0.6.ebuild,v 1.7 2015/01/20 08:45:24 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://code.liw.fi/debian/pool/main/c/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 
 DEPEND="
 	${PYTHON_DEPS}

@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/CoverageTestRunner
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/CoverageTestRunner/ChangeLog,v 1.8 2015/01/19 13:17:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/CoverageTestRunner/ChangeLog,v 1.10 2015/01/20 08:45:16 ago Exp $
+
+  20 Jan 2015; Agostino Sarubbo <ago@gentoo.org> CoverageTestRunner-1.10.ebuild,
+  CoverageTestRunner-1.9-r1.ebuild:
+  Add ~ia64, wrt bug #530672
+
+  20 Jan 2015; Agostino Sarubbo <ago@gentoo.org> CoverageTestRunner-1.10.ebuild,
+  CoverageTestRunner-1.9-r1.ebuild:
+  Add ~alpha, wrt bug #530672
 
   19 Jan 2015; Agostino Sarubbo <ago@gentoo.org> CoverageTestRunner-1.10.ebuild,
   CoverageTestRunner-1.9-r1.ebuild:

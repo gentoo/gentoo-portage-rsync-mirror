@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/cliapp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.14 2015/01/19 13:17:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.16 2015/01/20 08:45:19 ago Exp $
+
+  20 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cliapp-1.20130808.ebuild,
+  cliapp-1.20140315.ebuild:
+  Add ~ia64, wrt bug #530672
+
+  20 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cliapp-1.20130808.ebuild,
+  cliapp-1.20140315.ebuild:
+  Add ~alpha, wrt bug #530672
 
   19 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cliapp-1.20130808.ebuild,
   cliapp-1.20140315.ebuild:
