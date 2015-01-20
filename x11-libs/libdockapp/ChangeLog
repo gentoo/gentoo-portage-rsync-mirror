@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libdockapp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.39 2015/01/12 12:34:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.40 2015/01/20 16:23:29 voyageur Exp $
+
+  20 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> libdockapp-0.6.4.ebuild:
+  Force X USE-flag for correct font handling, bug #536492 by Toralf Förster
+  <toralf.foerster@gmx.de>
 
 *libdockapp-0.6.4 (12 Jan 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.57 2015/01/11 12:01:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.58 2015/01/20 16:17:46 jer Exp $
+
+  20 Jan 2015; Jeroen Roovers <jer@gentoo.org> motif-2.3.4-r3.ebuild:
+  Stable for HPPA (bug #537004).
 
   11 Jan 2015; Ulrich Müller <ulm@gentoo.org> motif-2.3.4-r3.ebuild:
   Fix failure in cleanup, /usr/share/Xm is only created with USE=examples.

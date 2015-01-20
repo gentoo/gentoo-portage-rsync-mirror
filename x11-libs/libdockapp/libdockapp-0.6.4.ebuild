@@ -1,11 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.4.ebuild,v 1.1 2015/01/12 12:34:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.4.ebuild,v 1.2 2015/01/20 16:23:29 voyageur Exp $
 
 EAPI=5
 inherit autotools font
-
-IUSE=""
 
 DESCRIPTION="Window Maker Dock Applet Library"
 HOMEPAGE="http://windowmaker.org/dockapps/?name=wmclock"
@@ -15,6 +13,9 @@ SRC_URI="http://dev.gentoo.org/~voyageur/distfiles/${P}.tar.gz"
 LICENSE="MIT public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+# Required for font eclass
+IUSE="+X"
+REQUIRED_USE="X"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
