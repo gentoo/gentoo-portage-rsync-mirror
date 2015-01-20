@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.63 2015/01/16 16:12:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.64 2015/01/20 04:02:26 williamh Exp $
+
+  20 Jan 2015; William Hubbs <williamh@gentoo.org> go-9999.ebuild:
+  Add a dependency on dev-lang/go-bootstrap for #536960. For now, we can build
+  our own bootstrap compiler, so we dont
 
 *go-1.4.1 (16 Jan 2015)
 
