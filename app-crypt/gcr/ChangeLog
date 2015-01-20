@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gcr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.46 2014/12/15 23:00:59 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.47 2015/01/20 11:23:26 pacho Exp $
+
+  20 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gcr-3.14.0-race-building.patch, -gcr-3.10.1.ebuild, gcr-3.14.0.ebuild:
+  Fix race building gdbus-codegen header and source, drop old
 
 *gcr-3.14.0 (15 Dec 2014)
 

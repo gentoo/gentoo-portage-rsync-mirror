@@ -1,14 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.14.0.ebuild,v 1.1 2014/12/15 23:00:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.14.0.ebuild,v 1.2 2015/01/20 11:23:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.20"
 VALA_USE_DEPEND="vapigen"
 PYTHON_COMPAT=( python2_7 )
 
-inherit gnome2 python-any-r1 vala virtualx
+inherit autotools eutils gnome2 python-any-r1 vala virtualx
 
 DESCRIPTION="Libraries for cryptographic UIs and accessing PKCS#11 modules"
 HOMEPAGE="https://developer.gnome.org/gcr/"
@@ -52,11 +51,15 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix race building gdbus-codegen header and source (from '3.14')
+	epatch "${FILESDIR}"/${P}-race-building.patch
+
 	# Disable stupid flag changes
 	sed -e 's/CFLAGS="$CFLAGS -g"//' \
 		-e 's/CFLAGS="$CFLAGS -O0"//' \
 		-i configure.ac configure || die
 
+	eautoreconf
 	use vala && vala_src_prepare
 	gnome2_src_prepare
 }
