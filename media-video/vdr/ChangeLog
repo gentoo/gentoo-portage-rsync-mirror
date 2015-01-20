@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.185 2015/01/04 01:19:02 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.186 2015/01/20 03:19:46 hd_brummy Exp $
+
+*vdr-2.0.6-r2 (20 Jan 2015)
+
+  20 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-2.0.6-r2.ebuild,
+  +files/vdr-2.0.6-r2_gentoo.patch, +files/vdr-2.0.6_systemd_argsdir.patch,
+  +files/vdr-2.0.6_systemd_argsdir_vanilla.patch:
+  added better systemd support, backported from vdr-2.1.7, based on patch by
+  Lucian Muresan
 
   04 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-2.0.4.ebuild,
   vdr-2.0.5.ebuild, vdr-2.0.6-r1.ebuild:
