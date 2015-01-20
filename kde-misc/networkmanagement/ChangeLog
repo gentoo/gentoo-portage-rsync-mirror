@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/networkmanagement
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.47 2014/08/14 17:30:07 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/ChangeLog,v 1.48 2015/01/20 22:26:06 johu Exp $
+
+*networkmanagement-0.9.0.11-r1 (20 Jan 2015)
+
+  20 Jan 2015; Johannes Huber <johu@gentoo.org>
+  +files/networkmanagement-0.9.0.11-openconnect7.patch,
+  +networkmanagement-0.9.0.11-r1.ebuild:
+  Revision bump adds upstream patch to fix build with openconnect-7, bug
+  #532382.
 
   14 Aug 2014; Johannes Huber <johu@gentoo.org>
   -networkmanagement-0.9.0.10.ebuild:

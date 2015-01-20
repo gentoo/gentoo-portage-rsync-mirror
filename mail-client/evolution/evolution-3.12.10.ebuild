@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.10.ebuild,v 1.1 2015/01/14 10:16:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.10.ebuild,v 1.2 2015/01/20 22:20:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -39,6 +39,7 @@ COMMON_DEPEND="
 	>=gnome-extra/gtkhtml-4.5.2:4.0
 	dev-libs/atk
 	>=dev-libs/dbus-glib-0.6
+	dev-libs/libical:=
 	>=dev-libs/libxml2-2.7.3:2
 	>=net-libs/libsoup-2.42:2.4
 	>=x11-misc/shared-mime-info-0.22

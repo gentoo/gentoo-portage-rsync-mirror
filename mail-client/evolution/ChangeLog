@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.436 2015/01/14 10:16:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.437 2015/01/20 22:20:43 pacho Exp $
+
+  20 Jan 2015; Pacho Ramos <pacho@gentoo.org> evolution-3.12.10.ebuild:
+  Evolution (not only eds) also checks and links to libical (#537158 by Anton
+  Gubarkov)
 
 *evolution-3.12.10 (14 Jan 2015)
 

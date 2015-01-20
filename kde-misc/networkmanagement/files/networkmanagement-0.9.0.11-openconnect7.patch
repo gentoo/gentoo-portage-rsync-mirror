@@ -1,0 +1,367 @@
+From: Jan Grulich <jgrulich@redhat.com>
+Date: Thu, 11 Dec 2014 09:47:14 +0000
+Subject: Backport openconnect fixes from plasma-nm
+X-Git-Url: http://quickgit.kde.org/?p=networkmanagement.git&a=commitdiff&h=5e09186846e190427010a879ff25077db62a8ede
+---
+Backport openconnect fixes from plasma-nm
+Fixes OpenConnect NEWGROUP handling and build against OpenConnect > 7.0
+---
+
+
+--- a/vpnplugins/openconnect/CMakeLists.txt
++++ b/vpnplugins/openconnect/CMakeLists.txt
+@@ -18,6 +18,7 @@
+         include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/ui)
+         include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs)
+         include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../libs/internals)
++        include_directories(${OPENCONNECT_INCLUDE_DIRS})
+ 
+         set(openconnect_SRCS
+         openconnectui.cpp
+
+--- a/vpnplugins/openconnect/openconnectauth.cpp
++++ b/vpnplugins/openconnect/openconnectauth.cpp
+@@ -71,6 +71,7 @@
+     OpenconnectAuthWorkerThread *worker;
+     QList<VPNHost> hosts;
+     bool userQuit;
++    bool formGroupChanged;
+     int cancelPipes[2];
+     QList<QPair<QString, int> > serverLog;
+ 
+@@ -100,7 +101,7 @@
+     d->ui.btnConnect->setIcon(KIcon("network-connect"));
+     d->ui.viewServerLog->setChecked(false);
+ 
+-    d->worker = new OpenconnectAuthWorkerThread(&d->mutex, &d->workerWaiting, &d->userQuit, d->cancelPipes[0]);
++    d->worker = new OpenconnectAuthWorkerThread(&d->mutex, &d->workerWaiting, &d->userQuit, &d->formGroupChanged, d->cancelPipes[0]);
+ 
+     // gets the pointer to struct openconnect_info (defined in openconnect.h), which contains data that OpenConnect needs,
+     // and which needs to be populated with settings we get from NM, like host, certificate or private key
+@@ -149,7 +150,7 @@
+     }
+     if (!dataMap[NM_OPENCONNECT_KEY_CACERT].isEmpty()) {
+         QByteArray crt = dataMap[NM_OPENCONNECT_KEY_CACERT].toAscii();
+-        openconnect_set_cafile(d->vpninfo, strdup(crt.data()));
++        openconnect_set_cafile(d->vpninfo, OC3DUP(crt.data()));
+     }
+     if (dataMap[NM_OPENCONNECT_KEY_CSD_ENABLE] == "yes") {
+         char *wrapper;
+@@ -162,12 +163,12 @@
+     }
+     if (!dataMap[NM_OPENCONNECT_KEY_PROXY].isEmpty()) {
+         QByteArray proxy = dataMap[NM_OPENCONNECT_KEY_PROXY].toAscii();
+-        openconnect_set_http_proxy(d->vpninfo, strdup(proxy.data()));
++        openconnect_set_http_proxy(d->vpninfo, OC3DUP(proxy.data()));
+     }
+     if (!dataMap[NM_OPENCONNECT_KEY_USERCERT].isEmpty()) {
+         QByteArray crt = dataMap[NM_OPENCONNECT_KEY_USERCERT].toAscii();
+         QByteArray key = dataMap[NM_OPENCONNECT_KEY_PRIVKEY].toAscii();
+-        openconnect_set_client_cert (d->vpninfo, strdup(crt.data()), strdup(key.data()));
++        openconnect_set_client_cert (d->vpninfo, OC3DUP(crt.data()), OC3DUP(key.data()));
+ 
+         if (!crt.isEmpty() && dataMap[NM_OPENCONNECT_KEY_PEM_PASSPHRASE_FSID] == "yes") {
+             openconnect_passphrase_from_fsid(d->vpninfo);
+@@ -261,10 +262,10 @@
+     const VPNHost &host = d->hosts.at(i);
+     if (openconnect_parse_url(d->vpninfo, host.address.toAscii().data())) {
+         kWarning() << "Failed to parse server URL" << host.address;
+-        openconnect_set_hostname(d->vpninfo, strdup(host.address.toAscii().data()));
++        openconnect_set_hostname(d->vpninfo, OC3DUP(host.address.toAscii().data()));
+     }
+     if (!openconnect_get_urlpath(d->vpninfo) && !host.group.isEmpty())
+-        openconnect_set_urlpath(d->vpninfo, strdup(host.group.toAscii().data()));
++        openconnect_set_urlpath(d->vpninfo, OC3DUP(host.group.toAscii().data()));
+     d->secrets["lasthost"] = host.name;
+     addFormInfo(QLatin1String("dialog-information"), i18n("Contacting host, please wait..."));
+     d->worker->start();
+@@ -284,9 +285,13 @@
+     secretData.insert(QLatin1String(NM_OPENCONNECT_KEY_COOKIE), QLatin1String(openconnect_get_cookie(d->vpninfo)));
+     openconnect_clear_cookie(d->vpninfo);
+ 
++#if OPENCONNECT_CHECK_VER(5,0)
++    const char *fingerprint = openconnect_get_peer_cert_hash(d->vpninfo);
++#else
+     OPENCONNECT_X509 *cert = openconnect_get_peer_cert(d->vpninfo);
+     char fingerprint[41];
+     openconnect_get_cert_sha1(d->vpninfo, cert, fingerprint);
++#endif
+     secretData.insert(QLatin1String(NM_OPENCONNECT_KEY_GWCERT), QLatin1String(fingerprint));
+     secretData.insert(QLatin1String("certsigs"), d->certificateFingerprints.join("\t"));
+     secretData.insert(QLatin1String("autoconnect"), d->ui.chkAutoconnect->isChecked() ? "yes" : "no");
+@@ -434,14 +439,12 @@
+                     cmb->setCurrentIndex(i);
+                     if (sopt == AUTHGROUP_OPT(form) &&
+                         i != AUTHGROUP_SELECTION(form)) {
+-                        // XXX: Immediately return OC_FORM_RESULT_NEWGROUP to
+-                        //      change group
++                        QTimer::singleShot(0, this, SLOT(formGroupChanged()));
+                     }
+                 }
+             }
+             if (sopt == AUTHGROUP_OPT(form)) {
+-                // TODO: Hook up signal when the KComboBox entry changes, to
+-                //       return OC_FORM_RESULT_NEWGROUP
++                connect(cmb, SIGNAL(currentIndexChanged(int)), this, SLOT(formGroupChanged()));
+             }
+             widget = qobject_cast<QWidget*>(cmb);
+         }
+@@ -529,6 +532,15 @@
+     d->mutex.unlock();
+ }
+ 
++void OpenconnectAuthWidget::formGroupChanged()
++{
++    Q_D(OpenconnectAuthWidget);
++
++    d->formGroupChanged = true;
++    formLoginClicked();
++}
++
++
+ // Writes the user input from the form into the oc_auth_form structs we got from
+ // libopenconnect, and wakes the worker thread up to try to log in and obtain a
+ // cookie with this data
+@@ -548,14 +560,14 @@
+             if (opt->type == OC_FORM_OPT_PASSWORD || opt->type == OC_FORM_OPT_TEXT) {
+                 KLineEdit *le = qobject_cast<KLineEdit*>(widget);
+                 QByteArray text = le->text().toAscii();
+-                opt->value = strdup(text.data());
++                openconnect_set_option_value(opt, text.data());
+                 if (opt->type == OC_FORM_OPT_TEXT) {
+                     d->secrets.insert(key,le->text());
+                 }
+             } else if (opt->type == OC_FORM_OPT_SELECT) {
+                 KComboBox *cbo = qobject_cast<KComboBox*>(widget);
+                 QByteArray text = cbo->itemData(cbo->currentIndex()).toString().toAscii();
+-                opt->value = strdup(text.data());
++                openconnect_set_option_value(opt, text.data());
+                 d->secrets.insert(key,cbo->itemData(cbo->currentIndex()).toString());
+             }
+         }
+
+--- a/vpnplugins/openconnect/openconnectauth.h
++++ b/vpnplugins/openconnect/openconnectauth.h
+@@ -64,6 +64,7 @@
+     void updateLog(const QString &, const int &);
+     void logLevelChanged(int);
+     void formLoginClicked();
++    void formGroupChanged();
+     void workerFinished(const int&);
+     void viewServerLogToggled(bool);
+     void passwordModeToggled(bool);
+
+--- a/vpnplugins/openconnect/openconnectauthworkerthread.cpp
++++ b/vpnplugins/openconnect/openconnectauthworkerthread.cpp
+@@ -43,6 +43,20 @@
+ class OpenconnectAuthStaticWrapper
+ {
+ public:
++#if OPENCONNECT_CHECK_VER(5,0)
++    static int writeNewConfig(void *obj, const char *str, int num)
++    {
++        if (obj)
++            return static_cast<OpenconnectAuthWorkerThread*>(obj)->writeNewConfig(str, num);
++        return -1;
++    }
++    static int validatePeerCert(void *obj, const char *str)
++    {
++        if (obj)
++            return static_cast<OpenconnectAuthWorkerThread*>(obj)->validatePeerCert(NULL, str);
++        return -1;
++    }
++#else
+     static int writeNewConfig(void *obj, char *str, int num)
+     {
+         if (obj)
+@@ -55,7 +69,8 @@
+             return static_cast<OpenconnectAuthWorkerThread*>(obj)->validatePeerCert(cert, str);
+         return -1;
+     }
+-    static int processAuthForm(void *obj, struct oc_auth_form *form)
++#endif
++        static int processAuthForm(void *obj, struct oc_auth_form *form)
+     {
+         if (obj)
+             return static_cast<OpenconnectAuthWorkerThread*>(obj)->processAuthFormP(form);
+@@ -72,15 +87,15 @@
+     }
+ };
+ 
+-OpenconnectAuthWorkerThread::OpenconnectAuthWorkerThread(QMutex *mutex, QWaitCondition *waitForUserInput, bool *userDecidedToQuit, int cancelFd)
+-: QThread(), m_mutex(mutex), m_waitForUserInput(waitForUserInput), m_userDecidedToQuit(userDecidedToQuit)
+-{
+-    m_openconnectInfo = openconnect_vpninfo_new((char*)"OpenConnect VPN Agent (NetworkManager - running on KDE)",
+-                                         OpenconnectAuthStaticWrapper::validatePeerCert,
+-                                         OpenconnectAuthStaticWrapper::writeNewConfig,
+-                                         OpenconnectAuthStaticWrapper::processAuthForm,
+-                                         OpenconnectAuthStaticWrapper::writeProgress,
+-                                         this);
++OpenconnectAuthWorkerThread::OpenconnectAuthWorkerThread(QMutex *mutex, QWaitCondition *waitForUserInput, bool *userDecidedToQuit, bool *formGroupChanged, int cancelFd)
++        : QThread(), m_mutex(mutex), m_waitForUserInput(waitForUserInput), m_userDecidedToQuit(userDecidedToQuit), m_formGroupChanged(formGroupChanged)
++{
++    m_openconnectInfo = openconnect_vpninfo_new((char*)"OpenConnect VPN Agent (PlasmaNM - running on KDE)",
++                                                OpenconnectAuthStaticWrapper::validatePeerCert,
++                                                OpenconnectAuthStaticWrapper::writeNewConfig,
++                                                OpenconnectAuthStaticWrapper::processAuthForm,
++                                                OpenconnectAuthStaticWrapper::writeProgress,
++                                                this);
+ #if OPENCONNECT_CHECK_VER(1,4)
+     openconnect_set_cancel_fd(m_openconnectInfo, cancelFd);
+ #else
+@@ -108,7 +123,7 @@
+     return m_openconnectInfo;
+ }
+ 
+-int OpenconnectAuthWorkerThread::writeNewConfig(char *buf, int buflen)
++int OpenconnectAuthWorkerThread::writeNewConfig(const char *buf, int buflen)
+ {
+     Q_UNUSED(buflen)
+     if (*m_userDecidedToQuit)
+@@ -116,32 +131,39 @@
+     emit writeNewConfig(QString(QByteArray(buf).toBase64()));
+     return 0;
+ }
++
+ #if !OPENCONNECT_CHECK_VER(1,5)
+ static char *openconnect_get_cert_details(struct openconnect_info *vpninfo,
+                                           OPENCONNECT_X509 *cert)
+ {
+-        Q_UNUSED(vpninfo)
+-
+-        BIO *bp = BIO_new(BIO_s_mem());
+-        BUF_MEM *certinfo;
+-        char zero = 0;
+-        char *ret;
+-
+-        X509_print_ex(bp, cert, 0, 0);
+-        BIO_write(bp, &zero, 1);
+-        BIO_get_mem_ptr(bp, &certinfo);
+-
+-        ret = strdup(certinfo->data);
+-        BIO_free(bp);
+-
+-        return ret;
+-}
+-#endif
+-
+-int OpenconnectAuthWorkerThread::validatePeerCert(OPENCONNECT_X509 *cert, const char *reason)
+-{
+-    if (*m_userDecidedToQuit)
+-        return -EINVAL;
++    Q_UNUSED(vpninfo)
++
++    BIO *bp = BIO_new(BIO_s_mem());
++    BUF_MEM *certinfo;
++    char zero = 0;
++    char *ret;
++
++    X509_print_ex(bp, cert, 0, 0);
++    BIO_write(bp, &zero, 1);
++    BIO_get_mem_ptr(bp, &certinfo);
++
++    ret = strdup(certinfo->data);
++    BIO_free(bp);
++
++    return ret;
++}
++#endif
++
++int OpenconnectAuthWorkerThread::validatePeerCert(void *cert, const char *reason)
++{
++    if (*m_userDecidedToQuit)
++        return -EINVAL;
++
++#if OPENCONNECT_CHECK_VER(5,0)
++    (void)cert;
++    const char *fingerprint = openconnect_get_peer_cert_hash(m_openconnectInfo);
++    char *details = openconnect_get_peer_cert_details(m_openconnectInfo);
++#else
+     char fingerprint[41];
+     int ret = 0;
+ 
+@@ -150,7 +172,7 @@
+         return ret;
+ 
+     char *details = openconnect_get_cert_details(m_openconnectInfo, cert);
+-
++#endif
+     bool accepted = false;
+     m_mutex->lock();
+     QString qFingerprint(fingerprint);
+@@ -159,7 +181,7 @@
+     emit validatePeerCert(qFingerprint, qCertinfo, qReason, &accepted);
+     m_waitForUserInput->wait(m_mutex);
+     m_mutex->unlock();
+-    ::free(details);
++    openconnect_free_cert_info(m_openconnectInfo, details);
+     if (*m_userDecidedToQuit)
+         return -EINVAL;
+ 
+@@ -176,14 +198,15 @@
+         return -1;
+ 
+     m_mutex->lock();
++    *m_formGroupChanged = false;
+     emit processAuthForm(form);
+     m_waitForUserInput->wait(m_mutex);
+     m_mutex->unlock();
+     if (*m_userDecidedToQuit)
+         return OC_FORM_RESULT_CANCELLED;
+ 
+-    // TODO : If group changed, return OC_FORM_RESULT_NEWGROUP
+-
++    if (*m_formGroupChanged)
++        return OC_FORM_RESULT_NEWGROUP;
+     return OC_FORM_RESULT_OK;
+ }
+ 
+
+--- a/vpnplugins/openconnect/openconnectauthworkerthread.h
++++ b/vpnplugins/openconnect/openconnectauthworkerthread.h
+@@ -59,6 +59,18 @@
+ #define OC_FORM_RESULT_NEWGROUP 2
+ #endif
+ 
++#if OPENCONNECT_CHECK_VER(4,0)
++#define OC3DUP(x)			(x)
++#else
++#define openconnect_set_option_value(opt, val) do { \
++		struct oc_form_opt *_o = (opt);				\
++		free(_o->value); _o->value = strdup(val);		\
++	} while (0)
++#define openconnect_free_cert_info(v, x) ::free(x)
++#define OC3DUP(x)			strdup(x)
++#endif
++
++
+ #include <QThread>
+ 
+ class QMutex;
+@@ -70,7 +82,7 @@
+     Q_OBJECT
+     friend class OpenconnectAuthStaticWrapper;
+ public:
+-    OpenconnectAuthWorkerThread(QMutex *, QWaitCondition *, bool *, int);
++    OpenconnectAuthWorkerThread(QMutex *, QWaitCondition *, bool *, bool *, int);
+     ~OpenconnectAuthWorkerThread();
+     struct openconnect_info* getOpenconnectInfo();
+ 
+@@ -85,14 +97,15 @@
+     void run();
+ 
+ private:
+-    int writeNewConfig(char *, int);
+-    int validatePeerCert(OPENCONNECT_X509 *, const char *);
++    int writeNewConfig(const char *, int);
++    int validatePeerCert(void *, const char *);
+     int processAuthFormP(struct oc_auth_form *);
+     void writeProgress(int level, const char *, va_list);
+ 
+     QMutex *m_mutex;
+     QWaitCondition *m_waitForUserInput;
+     bool *m_userDecidedToQuit;
++    bool *m_formGroupChanged;
+     struct openconnect_info *m_openconnectInfo;
+ };
+ 
