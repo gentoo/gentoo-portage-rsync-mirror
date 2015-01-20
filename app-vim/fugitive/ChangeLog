@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/fugitive
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/ChangeLog,v 1.9 2014/06/25 00:34:47 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/ChangeLog,v 1.11 2015/01/20 13:22:42 radhermit Exp $
+
+  20 Jan 2015; Tim Harder <radhermit@gentoo.org> fugitive-2.1.ebuild:
+  Stabilize for amd64/x86 (bug #534930).
+
+*fugitive-2.2 (20 Jan 2015)
+
+  20 Jan 2015; Tim Harder <radhermit@gentoo.org> +fugitive-2.2.ebuild:
+  Version bump.
 
   25 Jun 2014; Tim Harder <radhermit@gentoo.org> -fugitive-2.0_beta.ebuild:
   Remove old.
