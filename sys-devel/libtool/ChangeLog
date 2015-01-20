@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.238 2015/01/17 12:37:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.239 2015/01/19 23:32:05 polynomial-c Exp $
+
+*libtool-2.4.5 (19 Jan 2015)
+
+  19 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> +libtool-2.4.5.ebuild:
+  Version bump.
 
   17 Jan 2015; Jeroen Roovers <jer@gentoo.org> libtool-2.4.4.ebuild:
   Stable for HPPA (bug #536696).
