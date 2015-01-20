@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.12.ebuild,v 1.1 2015/01/13 18:11:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.12.ebuild,v 1.2 2015/01/20 01:25:36 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
@@ -62,6 +62,7 @@ src_prepare() {
 		done
 		echo "$langs" > po/LINGUAS || die
 	fi
+	epatch "${FILESDIR}/${P}-cmake.patch"
 }
 
 src_configure() {
