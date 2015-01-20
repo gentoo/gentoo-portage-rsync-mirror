@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/translationstring-1.3.ebuild,v 1.3 2015/01/14 03:25:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/translationstring-1.3.ebuild,v 1.4 2015/01/20 06:02:51 idella4 Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
 # Include COPYRIGHT.txt because the license seems to require it.
-DOCS=( COPYRIGHT.txt README.txt )
+DOCS=( COPYRIGHT.txt README.rst )
 
 python_test() {
 	esetup.py test || die
