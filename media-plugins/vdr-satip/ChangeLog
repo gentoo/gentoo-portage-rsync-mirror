@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/vdr-satip
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-satip/ChangeLog,v 1.1 2015/01/20 11:40:00 hd_brummy Exp $
+
+*vdr-satip-1.0.2 (20 Jan 2015)
+
+  20 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-satip-1.0.2.ebuild,
+  +metadata.xml:
+  initial commit, get from overlay vdr-devel
+

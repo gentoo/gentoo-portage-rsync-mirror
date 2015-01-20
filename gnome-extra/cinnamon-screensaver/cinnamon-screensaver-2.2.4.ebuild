@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/cinnamon-screensaver-2.2.4.ebuild,v 1.3 2014/07/23 15:17:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/cinnamon-screensaver-2.2.4.ebuild,v 1.4 2015/01/20 11:52:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -39,6 +39,7 @@ COMMON_DEPEND="
 "
 # our cinnamon-1.8 ebuilds installed a cinnamon-screensaver.desktop hack
 RDEPEND="
+	=gnome-extra/cinnamon-2.2*
 	!~gnome-extra/cinnamon-1.8.8.1
 	!systemd? ( sys-auth/consolekit )
 "
