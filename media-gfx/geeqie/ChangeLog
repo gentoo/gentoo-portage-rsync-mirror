@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/geeqie
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.28 2014/10/28 09:14:56 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.29 2015/01/20 15:57:50 voyageur Exp $
+
+  20 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> geeqie-1.2-r1.ebuild:
+  Take advantage of EAPI5, setting rdepend on media-gfx/exiv2:= as suggested by
+  pacho in bug #536946
 
 *geeqie-1.2-r1 (28 Oct 2014)
 

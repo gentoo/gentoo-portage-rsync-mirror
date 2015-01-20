@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.2-r1.ebuild,v 1.1 2014/10/28 09:14:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.2-r1.ebuild,v 1.2 2015/01/20 15:57:50 voyageur Exp $
 
 EAPI=5
 inherit autotools base eutils
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/gtk+:2
 	lcms? ( media-libs/lcms:2 )
 	lirc? ( app-misc/lirc )
 	lua? ( >=dev-lang/lua-5.1 )
-	xmp? ( >=media-gfx/exiv2-0.17[xmp] )
+	xmp? ( >=media-gfx/exiv2-0.17:=[xmp] )
 	!xmp? ( exif? ( >=media-gfx/exiv2-0.17 ) )
 	tiff? ( media-libs/tiff:0 )"
 DEPEND="${RDEPEND}
