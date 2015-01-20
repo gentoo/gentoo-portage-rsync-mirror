@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/suacomp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.16 2014/08/10 20:13:05 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.17 2015/01/20 10:03:28 pacho Exp $
+
+  20 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #213900
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> suacomp-0.6.13.ebuild,
   suacomp-0.6.14.ebuild, suacomp-9999.ebuild:

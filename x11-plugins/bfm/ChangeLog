@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/bfm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.18 2014/08/10 20:01:11 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.19 2015/01/20 10:02:25 voyageur Exp $
+
+*bfm-0.6.4-r2 (20 Jan 2015)
+
+  20 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> +bfm-0.6.4-r2.ebuild,
+  +files/bfm-0.6.4-makefile.patch:
+  Fix underlinking (merged in patch with other Makefile modifications), bug
+  #369465
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bfm-0.6.4-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

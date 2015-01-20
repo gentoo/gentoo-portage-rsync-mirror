@@ -2,14 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>mduft@gentoo.org</email>
-<name>Markus Duft</name>
+	<email>haubi@gentoo.org</email>
+	<name>Michael Haubenwallner</name>
 </maintainer>
-<maintainer>
-<email>haubi@gentoo.org</email>
-<name>Michael Haubenwallner</name>
-</maintainer>
-<longdescription lang="en">
-</longdescription>
 </pkgmetadata>
 

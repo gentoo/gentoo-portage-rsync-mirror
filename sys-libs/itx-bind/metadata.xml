@@ -2,12 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>mduft@gentoo.org</email>
-<name>Markus Duft</name>
-</maintainer>
-<maintainer>
-<email>haubi@gentoo.org</email>
-<name>Michael Haubenwallner</name>
+	<email>haubi@gentoo.org</email>
+	<name>Michael Haubenwallner</name>
 </maintainer>
 <longdescription lang="en">
 		bind library based on the interix' host bind library. the host library

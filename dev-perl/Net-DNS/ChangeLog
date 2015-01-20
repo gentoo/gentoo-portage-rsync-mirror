@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.176 2015/01/18 08:42:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.177 2015/01/20 10:08:24 chainsaw Exp $
+
+*Net-DNS-0.810.0 (20 Jan 2015)
+
+  20 Jan 2015; Tony Vroon <chainsaw@gentoo.org> +Net-DNS-0.810.0.ebuild:
+  Version bump in an attempt to address intermittent "zone file representation
+  not defined for TSIG" errors in a LINX DNS update script occurring with
+  0.740.0; herd commit approval from Andreas "dilfridge" Huettel.
 
   18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> Net-DNS-0.740.0.ebuild:
   Stable for ppc64, wrt bug #535210
