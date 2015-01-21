@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.3 2015/01/21 04:59:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.4 2015/01/21 05:33:56 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils games
@@ -62,6 +62,10 @@ pkg_postinst() {
 	elog "In order to play you need copy GEODATA, GEOGRAPH, MAPS, ROUTES, SOUND,"
 	elog "TERRAIN, UFOGRAPH, UFOINTRO, UNITS folders from original X-COM game to"
 	elog "${GAMES_DATADIR}/${PN}/data"
+	echo
+	elog "If you need or want text in some language other than english, download:"
+	elog "http://openxcom.org/translations/latest.zip and uncompress it in"
+	elog "${GAMES_DATADIR}/${PN}/data/Language"
 }
 
 pkg_postrm() {
