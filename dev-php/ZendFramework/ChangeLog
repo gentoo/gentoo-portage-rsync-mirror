@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/ZendFramework
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.25 2015/01/21 10:20:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.26 2015/01/21 21:14:14 grknight Exp $
+
+  21 Jan 2015; Brian Evans <grknight@gentoo.org> -ZendFramework-1.11.12.ebuild:
+  Drop old for security bug
 
   21 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ZendFramework-1.12.9.ebuild:
   Stable for x86, wrt bug #523198
