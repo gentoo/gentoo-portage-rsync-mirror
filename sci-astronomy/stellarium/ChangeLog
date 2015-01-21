@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/stellarium
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.124 2014/10/25 07:42:32 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.125 2015/01/21 15:38:37 mr_bones_ Exp $
+
+*stellarium-0.13.2 (21 Jan 2015)
+
+  21 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +stellarium-0.13.2.ebuild:
+  version bump
 
 *stellarium-0.13.1 (25 Oct 2014)
 
