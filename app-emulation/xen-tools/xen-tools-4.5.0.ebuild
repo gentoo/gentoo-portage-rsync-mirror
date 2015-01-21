@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.5.0_rc4.ebuild,v 1.1 2014/12/19 06:47:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.5.0.ebuild,v 1.1 2015/01/21 02:37:00 dlan Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS=""
+	KEYWORDS="~arm ~arm64 ~amd64 -x86"
 	UPSTREAM_VER=
 	# xen-tools's gentoo patches tarball
 	GENTOO_VER=3
@@ -81,8 +81,8 @@ DEPEND="${COMMON_DEPEND}
 	api? ( dev-libs/libxml2
 		net-misc/curl )
 	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )
-	arm? ( >=sys-apps/dtc-1.4.0 )
-	!arm? ( sys-devel/bin86
+	!amd64? ( >=sys-apps/dtc-1.4.0 )
+	amd64? ( sys-devel/bin86
 		system-seabios? ( sys-firmware/seabios )
 		sys-firmware/ipxe
 		sys-devel/dev86
@@ -146,6 +146,8 @@ pkg_setup() {
 			export XEN_TARGET_ARCH="x86_64"
 		elif use arm; then
 			export XEN_TARGET_ARCH="arm32"
+		elif use arm64; then
+			export XEN_TARGET_ARCH="arm64"
 		else
 			die "Unsupported architecture!"
 		fi
