@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.2 2014/06/15 04:12:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.3 2015/01/21 04:59:24 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils games
@@ -18,7 +18,7 @@ RDEPEND=">=dev-cpp/yaml-cpp-0.5.1
 	media-libs/libsdl[opengl,video]
 	media-libs/sdl-gfx
 	media-libs/sdl-image[png]
-	media-libs/sdl-mixer"
+	media-libs/sdl-mixer[flac,mikmod,vorbis]"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 

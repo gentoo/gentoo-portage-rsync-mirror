@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/django-setuptest
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-setuptest/ChangeLog,v 1.7 2014/09/17 13:22:35 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-setuptest/ChangeLog,v 1.8 2015/01/21 04:35:47 idella4 Exp $
+
+*django-setuptest-0.1.6 (21 Jan 2015)
+
+  21 Jan 2015; Ian Delaney <idella4@gentoo.org> +django-setuptest-0.1.6.ebuild,
+  -django-setuptest-0.1.2-r1.ebuild, -django-setuptest-0.1.4.ebuild,
+  -django-setuptest-0.1.5.ebuild:
+  bump, rm old
 
 *django-setuptest-0.1.5 (17 Sep 2014)
 
