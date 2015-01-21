@@ -11,8 +11,6 @@
 	</maintainer>
 	<use>
 		<flag name='clock'>Enable clock screen</flag>
-		<flag name='fftw'>Build the visualizer plugin that pulls in
-			<pkg>sci-libs/fftw</pkg></flag>
 		<flag name='outputs'>Enable outputs screen</flag>
 		<flag name='visualizer'>Enable visualizer screen with sound wave/frequency
 			spectrum modes</flag>
