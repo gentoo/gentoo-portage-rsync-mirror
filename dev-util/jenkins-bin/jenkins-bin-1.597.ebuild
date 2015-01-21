@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.594.ebuild,v 1.1 2014/12/18 16:36:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.597.ebuild,v 1.1 2015/01/21 04:03:46 mrueg Exp $
 
 EAPI=5
 

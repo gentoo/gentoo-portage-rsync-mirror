@@ -1,10 +1,15 @@
 # ChangeLog for dev-python/pycallgraph
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycallgraph/ChangeLog,v 1.1 2014/10/12 03:47:10 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycallgraph/ChangeLog,v 1.2 2015/01/21 04:27:06 alunduil Exp $
+
+  21 Jan 2015; Alex Brandt <alunduil@gentoo.org> pycallgraph-1.0.1.ebuild:
+  drop doc USE requirement for sphinx dependence  bug #537098 pointed out that
+  the sphinx dependency is required regardless of the doc USE flag being set.  I
+  also found that the pyyaml dependence was required independently by the doc
+  and examples USE flags.
 
 *pycallgraph-1.0.1 (12 Oct 2014)
 
   12 Oct 2014; Alex Brandt <alunduil@gentoo.org> +pycallgraph-1.0.1.ebuild,
   +files/python3.3-tests.patch, +metadata.xml:
   add ebuild written by me
-

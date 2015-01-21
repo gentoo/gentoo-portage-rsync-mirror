@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycallgraph/pycallgraph-1.0.1.ebuild,v 1.1 2014/10/12 03:47:10 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycallgraph/pycallgraph-1.0.1.ebuild,v 1.2 2015/01/21 04:27:06 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -19,10 +19,9 @@ IUSE="doc examples test"
 CDEPEND="media-gfx/graphviz"
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	doc? (
-		dev-python/pyyaml[${PYTHON_USEDEP}]
-		dev-python/sphinx[${PYTHON_USEDEP}]
-	)
+	dev-python/sphinx[${PYTHON_USEDEP}]
+	doc? ( dev-python/pyyaml[${PYTHON_USEDEP}] )
+	examples? ( dev-python/pyyaml[${PYTHON_USEDEP}] )
 	test? (
 		${CDEPEND}
 		dev-python/pytest[${PYTHON_USEDEP}]
