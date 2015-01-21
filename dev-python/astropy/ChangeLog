@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/astropy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.22 2014/11/27 18:50:23 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astropy/ChangeLog,v 1.23 2015/01/21 22:31:36 xarthisius Exp $
+
+*astropy-0.4.4 (21 Jan 2015)
+
+  21 Jan 2015; Kacper Kowalik <xarthisius@gentoo.org> +astropy-0.4.4.ebuild:
+  Version bump
 
   27 Nov 2014; Kacper Kowalik <xarthisius@gentoo.org> astropy-0.4.ebuild:
   Pass --offline to setup.py during all phases. Fixes bug #527196 by Juergen
