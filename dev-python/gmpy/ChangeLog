@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.51 2015/01/18 05:33:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.52 2015/01/21 03:37:27 idella4 Exp $
+
+  21 Jan 2015; Ian Delaney <idella4@gentoo.org> gmpy-2.0.5.ebuild:
+  fix duplication of running tests, noted by Arfrever
 
 *gmpy-2.0.5 (18 Jan 2015)
 
