@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/twitter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.49 2014/12/28 08:50:48 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.50 2015/01/21 05:04:06 mrueg Exp $
+
+  21 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -twitter-4.8.1.ebuild:
+  Remove masked slot.
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> twitter-5.13.0.ebuild:
   Use eclass rspec invocation to use the rspec-2 wrapper.
