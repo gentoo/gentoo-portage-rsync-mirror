@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.11-r1.ebuild,v 1.6 2014/08/07 19:05:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-1.0.11-r1.ebuild,v 1.7 2015/01/21 11:41:25 pacho Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=yes
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 
-inherit eutils autotools-multilib
+inherit eutils autotools-multilib gnome2-utils
 
 DESCRIPTION="C-based libraries for the Dirac video codec"
 HOMEPAGE="http://www.diracvideo.org/"
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am"
 
 src_prepare() {
+	gnome2_environment_reset #534582
+
 	# from upstream, drop at next release
 	epatch "${FILESDIR}"/${P}-darwin-compile.patch
 

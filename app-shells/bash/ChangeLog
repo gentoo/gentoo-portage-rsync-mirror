@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.427 2015/01/01 07:27:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.428 2015/01/21 11:54:51 polynomial-c Exp $
+
+*bash-4.3_p33-r1 (21 Jan 2015)
+
+  21 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -bash-4.3_p30.ebuild,
+  -bash-4.3_p30-r1.ebuild, +bash-4.3_p33-r1.ebuild,
+  +files/bash-4.3-arrayfunc.patch,
+  +files/bash-4.3-mapfile-improper-array-name-validation.patch,
+  -files/bash-4.3-term-cleanup.patch:
+  Added fixes from upstream. Removed old.
 
 *bash-4.3_p33 (01 Jan 2015)
 

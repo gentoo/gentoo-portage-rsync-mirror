@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p30-r1.ebuild,v 1.1 2014/11/09 20:41:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.3_p33-r1.ebuild,v 1.1 2015/01/21 11:54:51 polynomial-c Exp $
 
 EAPI="4"
 
@@ -86,7 +86,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.3-compat-lvl.patch
 	epatch "${FILESDIR}"/${PN}-4.3-parse-time-keyword.patch
 	epatch "${FILESDIR}"/${PN}-4.3-append-process-segfault.patch
-	epatch "${FILESDIR}"/${PN}-4.3-term-cleanup.patch
+	epatch "${FILESDIR}"/${PN}-4.3-mapfile-improper-array-name-validation.patch
+	epatch "${FILESDIR}"/${PN}-4.3-arrayfunc.patch
 
 	epatch_user
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/schroedinger
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.71 2014/08/07 19:05:57 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.72 2015/01/21 11:41:25 pacho Exp $
+
+  21 Jan 2015; Pacho Ramos <pacho@gentoo.org> schroedinger-1.0.11-r1.ebuild:
+  Fix sandbox violations, #534582
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org> schroedinger-1.0.11-r1.ebuild:
   Stable for HPPA (bug #512012).
