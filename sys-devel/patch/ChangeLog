@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/patch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.66 2014/01/18 03:17:14 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.67 2015/01/21 07:32:08 polynomial-c Exp $
+
+*patch-2.7.2 (21 Jan 2015)
+
+  21 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -patch-2.5.9.ebuild,
+  -patch-2.5.9-r1.ebuild, -patch-2.7.1-r2.ebuild, +patch-2.7.2.ebuild,
+  -files/patch-2.5.9-cr-stripping.patch,
+  -files/patch-2.7.1-Fix-removing-empty-directories-automake.patch:
+  Security bump (bug #536614). Removed old.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> patch-2.6.1.ebuild,
   patch-2.7.1-r2.ebuild, patch-2.7.1-r3.ebuild:
