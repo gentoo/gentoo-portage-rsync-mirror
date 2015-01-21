@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.8.0.ebuild,v 1.3 2014/11/03 15:05:03 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/uhd-3.8.0.ebuild,v 1.4 2015/01/21 12:09:21 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
-inherit versionator python-single-r1 cmake-utils multilib
+inherit versionator python-single-r1 gnome2-utils cmake-utils multilib
 
 DESCRIPTION="Universal Software Radio Peripheral (USRP) Hardware Driver"
 HOMEPAGE="http://code.ettus.com/redmine/ettus/projects/uhd/wiki"
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 src_prepare() {
+	gnome2_environment_reset #534582
+
 	#this may not be needed in 3.4.3 and above, please verify
 	sed -i 's#SET(PKG_LIB_DIR ${PKG_DATA_DIR})#SET(PKG_LIB_DIR ${LIBRARY_DIR}/uhd)#g' CMakeLists.txt || die
 }
