@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.9 2011/11/12 10:36:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.10 2015/01/21 09:59:33 voyageur Exp $
 EAPI=3
 
 inherit autotools eutils flag-o-matic
@@ -23,6 +23,7 @@ KEYWORDS="alpha amd64 hppa ~mips ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-interix ~am
 DEPEND="
 	media-libs/fontconfig
 	>=x11-libs/libXft-2.1.0
+	x11-libs/libXpm
 	x11-libs/libXt
 	x11-libs/libXv
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
@@ -123,7 +124,6 @@ src_configure() {
 	replace-flags "-O3" "-O2"
 
 	# image format types
-	# xpm is provided by X itself
 	myconf="--enable-xpm $(use_enable png) $(use_enable jpeg) $(use_enable gif) $(use_enable tiff)"
 
 	# non required X capabilities

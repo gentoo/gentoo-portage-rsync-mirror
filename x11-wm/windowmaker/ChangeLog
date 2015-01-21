@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/windowmaker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.149 2014/09/03 21:30:00 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.150 2015/01/21 09:59:33 voyageur Exp $
+
+  21 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  windowmaker-0.92.0-r11.ebuild, -windowmaker-0.95.3-r1.ebuild,
+  -windowmaker-0.95.4.ebuild, -windowmaker-0.95.4-r1.ebuild,
+  -windowmaker-0.95.5.ebuild, windowmaker-0.95.5-r1.ebuild,
+  windowmaker-0.95.6.ebuild:
+  Fix libXpm dependency (conditional in latest package), bug #533912 by Toralf
+  Förster <toralf.foerster@gmx.de>. Also remove some versions
 
   03 Sep 2014; Bernard Cafarelli <voyageur@gentoo.org>
   windowmaker-0.95.6.ebuild, metadata.xml:

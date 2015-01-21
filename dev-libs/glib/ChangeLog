@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.635 2015/01/02 12:08:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.636 2015/01/21 09:44:49 pacho Exp $
+
+  21 Jan 2015; Pacho Ramos <pacho@gentoo.org> -files/glib-2.12.12-fbsd.patch,
+  -files/glib-2.36.4-znodelete.patch,
+  -files/glib-2.37.x-external-gdbus-codegen.patch,
+  -files/glib-2.38.2-configure.patch, -files/glib-2.38.2-sigaction.patch,
+  -glib-2.38.2-r1.ebuild, -glib-2.40.0-r1.ebuild, glib-2.42.1.ebuild:
+  Ensure dconf is present (#498436, #498474#c6), drop old
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> glib-2.40.2.ebuild:
   Stable for alpha, wrt bug #529964
