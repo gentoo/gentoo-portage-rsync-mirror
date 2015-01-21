@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bgpq3/bgpq3-0.1.19.ebuild,v 1.1 2013/11/10 15:33:19 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bgpq3/bgpq3-0.1.22.ebuild,v 1.1 2015/01/21 17:38:43 pinkbyte Exp $
 
 EAPI=5
 
@@ -15,11 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 
 src_prepare() {
-	# Respect CFLAGS and LDFLAGS
+	# Respect CFLAGS
 	sed -i \
 		-e '/^CFLAGS=/s/-g //' \
 		-e '/^CFLAGS=/s/ -O0//' \
-		-e '/^LDADD/s/@LDFLAGS@ @LDFLAGS@/@LDFLAGS@/' \
 		Makefile.in || die 'sed on Makefile.in failed'
 
 	epatch_user
