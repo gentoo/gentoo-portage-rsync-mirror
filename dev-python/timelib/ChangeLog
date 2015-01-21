@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/timelib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/ChangeLog,v 1.13 2014/11/25 12:56:19 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/timelib/ChangeLog,v 1.14 2015/01/21 06:27:09 idella4 Exp $
+
+  21 Jan 2015; Ian Delaney <idella4@gentoo.org> -timelib-0.2.2.ebuild,
+  -timelib-0.2.3.ebuild, -timelib-0.2.4.ebuild:
+  rm old
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> timelib-0.2.4-r1.ebuild:
   Support python 3.4
