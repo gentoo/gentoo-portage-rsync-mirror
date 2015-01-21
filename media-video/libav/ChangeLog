@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.237 2015/01/08 08:48:34 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.238 2015/01/20 23:10:49 lu_zero Exp $
+
+*libav-11.2 (20 Jan 2015)
+
+  20 Jan 2015; Luca Barbato <lu_zero@gentoo.org> +libav-11.2.ebuild:
+  New point release
 
   08 Jan 2015; Andreas Schuerch <nativemad@gentoo.org> libav-9.17.ebuild:
   x86 stable, see bug 531832
