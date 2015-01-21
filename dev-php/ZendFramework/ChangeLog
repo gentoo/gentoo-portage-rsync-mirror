@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/ZendFramework
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.23 2015/01/20 07:38:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.25 2015/01/21 10:20:22 ago Exp $
+
+  21 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ZendFramework-1.12.9.ebuild:
+  Stable for x86, wrt bug #523198
+
+  21 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ZendFramework-1.12.9.ebuild:
+  Stable for amd64, wrt bug #523198
 
   20 Jan 2015; Jeroen Roovers <jer@gentoo.org> ZendFramework-1.12.9.ebuild:
   Stable for HPPA (bug #523198).

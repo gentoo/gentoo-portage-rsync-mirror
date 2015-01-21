@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.9.7.1.ebuild,v 1.3 2014/07/23 15:14:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.10.1.ebuild,v 1.1 2015/01/21 10:13:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
 VALA_MIN_API_VERSION="0.22"
 VALA_USE_DEPEND="vapigen"
 
@@ -14,7 +15,8 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Folks"
 
 LICENSE="LGPL-2.1+"
 SLOT="0/25" # subslot = libfolks soname version
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
+
 # TODO: --enable-profiling
 # Vala isn't really optional, https://bugzilla.gnome.org/show_bug.cgi?id=701099
 IUSE="bluetooth eds socialweb +telepathy test tracker utils zeitgeist"
@@ -56,15 +58,11 @@ DEPEND="${COMMON_DEPEND}
 	test? ( sys-apps/dbus
 		bluetooth? (
 			>=gnome-extra/evolution-data-server-3.9.1
-			>=dev-libs/glib-2.39.2 ) )
+			>=dev-libs/glib-2.39.2:2 ) )
 	!<dev-lang/vala-0.22.1:0.22
 "
 
 src_prepare() {
-	# Allow building against tracker-1.0
-	sed -e 's/\(TRACKER_SPARQL_MAJOR\)=0.16/\1=1.0/' \
-		-i configure{.ac,} || die
-
 	vala_src_prepare
 	gnome2_src_prepare
 }
