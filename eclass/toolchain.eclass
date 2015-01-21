@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.647 2014/11/15 08:45:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.648 2015/01/21 21:59:31 blueness Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -594,6 +594,15 @@ toolchain_src_prepare() {
 			while read f ; do
 				einfo "  ${f%%...}"
 			done
+	fi
+
+	# We don't need fixed header files.  This is a gcc hack for dealing with broken
+	# (ie non-ansi compliant) header files on old unix systems.  On modern systems,
+	# these "fixed" headers are known to break things.  We just stub them out.
+	if tc_version_is_at_least 4.0; then
+		echo : > "${S}"/fixincludes/fixinc.in || die
+	else
+		echo : > "${S}"/gcc/fixinc/fixincl.sh || die
 	fi
 }
 
@@ -1598,9 +1607,6 @@ toolchain_src_test() {
 toolchain_src_install() {
 	cd "${WORKDIR}"/build
 
-	# Do allow symlinks in private gcc include dir as this can break the build
-	find gcc/include*/ -type l -delete
-
 	# Copy over the info pages.  We disabled their generation earlier, but the
 	# build system only expects to install out of the build dir, not the source.  #464008
 	mkdir -p gcc/doc
@@ -1610,13 +1616,6 @@ toolchain_src_install() {
 			cp "${x}" gcc/doc/ || die
 		fi
 	done
-
-	# Remove generated headers, as they can cause things to break
-	# (ncurses, openssl, etc).
-	while read x ; do
-		grep -q 'It has been auto-edited by fixincludes from' "${x}" \
-			&& rm -f "${x}"
-	done < <(find gcc/include*/ -name '*.h')
 
 	# Do the 'make install' from the build directory
 	S="${WORKDIR}"/build emake -j1 DESTDIR="${D}" install || die
