@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r1.ebuild,v 1.2 2015/01/03 23:34:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r2.ebuild,v 1.1 2015/01/21 08:32:51 mgorny Exp $
 
 EAPI=5
 
@@ -37,14 +37,18 @@ RDEPEND=">=app-admin/eselect-1.2.4
 S=${WORKDIR}
 
 pkg_pretend() {
-	if grep -q -s "Section.*Files" \
-		"${EROOT%/}"/etc/X11/xorg.conf
-	then
-		ewarn 'Your /etc/X11/xorg.conf seems to contain Section "Files". This is'
-		ewarn 'known to break eselect-opengl-1.3*. If you need a custom Files setup,'
-		ewarn 'please downgrade to <eselect-opengl-1.3. We are sorry for the issues,'
-		ewarn 'we are working on a more permanent solution.'
-	fi
+	local f
+	for f in "${EROOT%/}"/etc/X11/xorg.conf{,.d/*}; do
+		if [[ ${f} != *20opengl.conf ]]; then
+			if grep -q -r -s "Section.*Files" "${f}"
+			then
+				ewarn "Your ${f} file seems to contain Section 'Files'. This is known to break"
+				ewarn 'eselect-opengl-1.3*. If you need a custom Files setup, please downgrade'
+				ewarn 'to <eselect-opengl-1.3. We are sorry for the issues, we are working'
+				ewarn 'on a more permanent solution.'
+			fi
+		fi
+	done
 }
 
 pkg_preinst() {
@@ -53,6 +57,11 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	# delete broken symlinks
+	find "${EROOT}"/usr/lib*/opengl -xtype l -delete
+	# delete empty leftover directories (they confuse eselect)
+	find "${EROOT}"/usr/lib*/opengl -depth -type d -empty -exec rmdir -v {} +
+
 	if [[ -n "${OLD_IMPL}" && "${OLD_IMPL}" != '(none)' ]] ; then
 		eselect opengl set "${OLD_IMPL}"
 	fi
