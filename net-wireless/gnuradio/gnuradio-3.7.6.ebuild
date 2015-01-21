@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.6.ebuild,v 1.1 2015/01/08 14:37:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-3.7.6.ebuild,v 1.2 2015/01/21 12:32:44 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 CMAKE_BUILD_TYPE="None"
-inherit cmake-utils fdo-mime python-single-r1
+inherit cmake-utils fdo-mime gnome2-utils python-single-r1
 
 DESCRIPTION="Toolkit that provides signal processing blocks to implement software radios"
 HOMEPAGE="http://gnuradio.org/"
@@ -107,6 +107,8 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	gnome2_environment_reset #534582
+
 	# Useless UI element would require qt3support, bug #365019
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
 	#epatch "${FILESDIR}"/${PN}-3.6.1-automagic-audio.patch
