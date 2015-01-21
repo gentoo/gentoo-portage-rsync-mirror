@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.11 2010/03/04 00:52:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.12 2015/01/21 07:28:07 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="An enhanced version of the Roguelike game Angband"
@@ -25,7 +25,10 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-tk85.patch \
-		"${FILESDIR}"/${P}-rng.patch
+		"${FILESDIR}"/${P}-rng.patch \
+		"${FILESDIR}"/${P}-configure.patch \
+		"${FILESDIR}"/${P}-makefile.patch
+	mv configure.in configure.ac || die
 	eautoreconf
 }
 
@@ -39,19 +42,16 @@ src_configure() {
 
 src_install() {
 	# Keep some important dirs we want to chmod later
-	keepdir "${GAMES_DATADIR}"/${PN}/lib/apex \
-		"${GAMES_DATADIR}"/${PN}/lib/user \
-		"${GAMES_DATADIR}"/${PN}/lib/save
+	keepdir "${GAMES_DATADIR}"/${PN}/lib/{apex,user,save,bone,info,xtra/help,xtra/music}
 
 	# Install the basic files but remove unneeded crap
-	emake DESTDIR="${D}/${GAMES_DATADIR}"/${PN}/ installbase \
-		|| die "emake installbase failed"
+	emake DESTDIR="${D}/${GAMES_DATADIR}"/${PN}/ installbase
 	rm "${D}${GAMES_DATADIR}"/${PN}/{angdos.cfg,readme,z_faq.txt,z_update.txt}
 
 	# Install everything else and fix the permissions
-	dogamesbin zangband || die "dogamesbin failed"
-	dodoc readme z_faq.txt z_update.txt || die "dodoc failed"
-	find "${D}${GAMES_DATADIR}/zangband/lib" -type f -exec chmod a-x \{\} \;
+	dogamesbin zangband
+	dodoc readme z_faq.txt z_update.txt
+	find "${D}${GAMES_DATADIR}/zangband/lib" -type f -exec chmod a-x \{\} +
 
 	prepgamesdirs
 	# All users in the games group need write permissions to
