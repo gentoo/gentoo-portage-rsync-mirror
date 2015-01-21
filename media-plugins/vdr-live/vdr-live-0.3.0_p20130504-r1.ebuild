@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0_p20130504-r1.ebuild,v 1.1 2014/01/24 05:04:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0_p20130504-r1.ebuild,v 1.2 2015/01/21 13:01:35 hd_brummy Exp $
 
 EAPI=5
 
@@ -50,6 +50,13 @@ make_live_cert() {
 	install -m0400 "${base}.key" "${ROOT}${keydir}/live-key.pem"
 	install -m0444 "${base}.crt" "${ROOT}${keydir}/live.pem"
 	chown vdr:vdr "${ROOT}"/etc/vdr/plugins/live/live{,-key}.pem
+}
+
+src_configure() {
+	vdr-plugin-2_src_configure
+
+	# tmp. disabeled gcc -std=c++11, due massiv compile errors
+	filter-flags -std=c++11
 }
 
 src_prepare() {

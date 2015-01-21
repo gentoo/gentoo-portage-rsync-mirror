@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-live
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.44 2014/01/24 05:04:56 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/ChangeLog,v 1.45 2015/01/21 13:01:35 hd_brummy Exp $
+
+  21 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-live-0.3.0_p20130504-r1.ebuild:
+  disabled -std=c++11 due massive compile errors
 
 *vdr-live-0.3.0_p20130504-r1 (24 Jan 2014)
 
