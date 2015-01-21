@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.6.1.ebuild,v 1.18 2013/08/10 20:12:57 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.9.1.ebuild,v 1.1 2015/01/21 15:25:13 tamiko Exp $
 
 EAPI=4
+PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4} )
 
-inherit eutils fdo-mime flag-o-matic python qt4-r2 toolchain-funcs
+inherit eutils fdo-mime flag-o-matic python-any-r1 qt4-r2 toolchain-funcs
 
 DESCRIPTION="Documentation system for most programming languages"
 HOMEPAGE="http://www.doxygen.org/"
@@ -13,8 +14,8 @@ SRC_URI="http://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
-IUSE="debug doc dot qt4 latex elibc_FreeBSD"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+IUSE="clang debug doc dot doxysearch qt4 latex sqlite"
 
 #missing SerbianCyrilic, JapaneseEn, KoreanEn, Chinesetraditional
 
@@ -24,24 +25,29 @@ for X in "${LANGS[@]}" ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-RDEPEND="qt4? ( dev-qt/qtgui:4 )
-	latex? ( app-text/texlive[extra] )
+RDEPEND="app-text/ghostscript-gpl
 	dev-lang/perl
-	virtual/libiconv
 	media-libs/libpng
-	app-text/ghostscript-gpl
+	virtual/libiconv
+	clang? ( sys-devel/clang )
 	dot? (
 		media-gfx/graphviz
 		media-libs/freetype
-	)"
+	)
+	doxysearch? ( =dev-libs/xapian-1.2* )
+	latex? ( app-text/texlive[extra] )
+	qt4? ( dev-qt/qtgui:4 )
+	sqlite? ( dev-db/sqlite:3 )
+	"
 
 DEPEND="sys-apps/sed
 	sys-devel/flex
 	sys-devel/bison
-	doc? ( =dev-lang/python-2* )
+	doc? ( ${PYTHON_DEPS} )
 	${RDEPEND}"
 
-RESTRICT="mirror"
+# src_test() defaults to make -C testing but there is no such directory (bug #504448)
+RESTRICT="mirror test"
 EPATCH_SUFFIX="patch"
 
 get_langs() {
@@ -74,10 +80,7 @@ get_langs() {
 
 pkg_setup() {
 	tc-export CC CXX
-	if use doc; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use doc && python-any-r1_pkg_setup
 }
 
 src_prepare() {
@@ -96,7 +99,7 @@ src_prepare() {
 		|| die
 
 	# Ensure we link to -liconv
-	if use elibc_FreeBSD; then
+	if use elibc_FreeBSD && has_version dev-libs/libiconv || use elibc_uclibc; then
 		for pro in */*.pro.in */*/*.pro.in; do
 		echo "unix:LIBS += -liconv" >> "${pro}"
 		done
@@ -106,12 +109,8 @@ src_prepare() {
 	sed -i -e '/addJob("ps"/ s/"ps"/"eps"/g' src/dot.cpp || die
 
 	# prefix search tools patch, plus OSX fixes
-	epatch "${FILESDIR}"/${PN}-1.5.6-prefix-misc-alt.patch
-
-	# fix final DESTDIR issue
-	sed -i.orig -e "s:\$(INSTALL):\$(DESTDIR)/\$(INSTALL):g" \
-		-e "s/all: Makefile.doxywizard/all:/g" \
-		addon/doxywizard/Makefile.in || die
+	epatch "${FILESDIR}"/${PN}-1.8.1-prefix-misc-alt.patch
+	epatch "${FILESDIR}"/${P}-empty-line-sigsegv.patch #454348
 
 	# fix pdf doc
 	sed -i.orig -e "s:g_kowal:g kowal:" \
@@ -142,19 +141,29 @@ src_configure() {
 		my_conf="${my_conf} --release "
 	fi
 
+	use clang && my_conf="${my_conf} --with-libclang"
+
+	use doxysearch  && my_conf="${my_conf} --with-doxysearch"
+
 	use qt4 && my_conf="${my_conf} --with-doxywizard"
+
+	use sqlite && my_conf="${my_conf} --with-sqlite3"
+
+	# On non GNU userland (e.g. BSD), configure script picks up make and bails
+	# out because it is not GNU make, so we force the right value.
+	use userland_GNU || my_conf="${my_conf} --make ${MAKE} --install install"
 
 	export LINK="${QMAKE_LINK}"
 	export LINK_SHLIB="${QMAKE_CXX}"
+
+	./configure --prefix "${EPREFIX}/usr" ${my_conf} \
+			|| die
 
 	if use qt4 ; then
 		pushd addon/doxywizard &> /dev/null
 		eqmake4 doxywizard.pro -o Makefile.doxywizard
 		popd &> /dev/null
 	fi
-
-	./configure --prefix "${EPREFIX}/usr" ${my_conf} \
-			|| die
 }
 
 src_compile() {
@@ -201,7 +210,7 @@ src_install() {
 			"Development"
 	fi
 
-	dodoc INSTALL LANGUAGE.HOWTO README
+	dodoc LANGUAGE.HOWTO README.md
 
 	# pdf and html manuals
 	if use doc; then
