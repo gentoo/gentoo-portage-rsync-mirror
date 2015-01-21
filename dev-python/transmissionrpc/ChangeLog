@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/transmissionrpc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.12 2014/11/28 12:54:04 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.13 2015/01/21 06:36:32 idella4 Exp $
+
+  21 Jan 2015; Ian Delaney <idella4@gentoo.org> -transmissionrpc-0.10.ebuild,
+  -transmissionrpc-0.8.ebuild, -transmissionrpc-0.9.ebuild:
+  rm old
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> transmissionrpc-0.11.ebuild,
   transmissionrpc-9999.ebuild:

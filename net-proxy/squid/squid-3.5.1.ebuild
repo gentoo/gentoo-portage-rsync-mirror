@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.5.1.ebuild,v 1.1 2015/01/18 05:55:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.5.1.ebuild,v 1.2 2015/01/21 06:49:51 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -25,7 +25,7 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
 	qos? ( net-libs/libnetfilter_conntrack )
-	ssl? ( dev-libs/openssl dev-libs/nettle net-libs/gnutls )
+	ssl? ( dev-libs/openssl dev-libs/nettle >=net-libs/gnutls-3.1.5 )
 	sasl? ( dev-libs/cyrus-sasl )
 	ecap? ( net-libs/libecap:1 )
 	esi? ( dev-libs/expat dev-libs/libxml2 )
@@ -165,7 +165,6 @@ src_configure() {
 		--enable-removal-policies="lru,heap" \
 		--enable-storeio="${storeio_modules}" \
 		--enable-disk-io \
-		--enable-auth \
 		--enable-auth-basic="${basic_modules}" \
 		--enable-auth-digest="${digest_modules}" \
 		--enable-auth-ntlm="${ntlm_modules}" \
