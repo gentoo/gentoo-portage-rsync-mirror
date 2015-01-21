@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.1.ebuild,v 1.1 2015/01/21 09:26:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.5.1.ebuild,v 1.2 2015/01/21 14:59:19 voyageur Exp $
 
 EAPI=5
 
@@ -389,9 +389,9 @@ multilib_src_install() {
 			dohtml -r "${S}"/docs/_build/html/
 		else
 			if ! use clang; then
-				rm "${WORKDIR}"/${P}-manpages/clang.1 || die
+				rm "${WORKDIR}"/${PN}-3.5.0-manpages/clang.1 || die
 			fi
-			doman "${WORKDIR}"/${P}-manpages/*.1
+			doman "${WORKDIR}"/${PN}-3.5.0-manpages/*.1
 		fi
 
 		# Symlink the gold plugin.
