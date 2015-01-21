@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-TCP
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/ChangeLog,v 1.15 2015/01/13 17:27:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-TCP/ChangeLog,v 1.16 2015/01/21 16:04:25 zlogene Exp $
+
+  21 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Test-TCP-2.60.0.ebuild:
+  Stable for all wer bug #535238
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> Test-TCP-2.60.0.ebuild:
   Stable for HPPA (bug #535238).
