@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.3-r1.ebuild,v 1.4 2014/12/31 12:37:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.3-r1.ebuild,v 1.5 2015/01/21 20:08:50 johu Exp $
 
 EAPI=5
 
@@ -124,9 +124,10 @@ PDEPEND="
 		$(add_kdebase_dep nepomuk-core)
 		$(add_kdebase_dep nepomuk-widgets)
 	)
-	policykit? (
+	policykit? ( || (
 		>=sys-auth/polkit-kde-agent-0.99
-	)
+		kde-plasma/polkit-kde-agent
+	) )
 "
 
 PATCHES=(
