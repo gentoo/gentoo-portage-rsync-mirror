@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.6 2014/06/24 07:54:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.7 2015/01/22 03:58:58 naota Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby20"
 
 inherit ruby-ng eutils
 
@@ -36,6 +36,7 @@ ruby_add_rdepend "dev-ruby/addressable
 	dev-ruby/delayer
 	dev-ruby/json
 	dev-ruby/memoize
+	>=dev-ruby/moneta-0.7
 	>=dev-ruby/oauth-0.4.7
 	dev-ruby/rcairo
 	>=dev-ruby/ruby-gettext-3.0.1
@@ -58,7 +59,13 @@ each_ruby_install() {
 	insinto /usr/share/mikutter
 	doins -r core plugin
 	exeinto /usr/bin
-	doexe "${FILESDIR}"/mikutter
+	#if use ruby_targets_ruby21; then
+	#	sed -e 's/ruby19/ruby21/' "${FILESDIR}"/mikutter
+	if use ruby_targets_ruby20; then
+		sed -e 's/ruby19/ruby20/' "${FILESDIR}"/mikutter
+	else
+		die
+	fi | newexe - mikutter
 	dodoc README
 	make_desktop_entry mikutter Mikutter \
 		/usr/share/mikutter/core/skin/data/icon.png
