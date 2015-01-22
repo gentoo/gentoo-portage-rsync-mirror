@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.139 2014/01/25 10:24:50 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.140 2015/01/22 13:01:32 ulm Exp $
+
+  22 Jan 2015; Ulrich Müller <ulm@gentoo.org> cscope-15.8a.ebuild:
+  Add missing quotes to emake argument, bug 537136.
 
   25 Jan 2014; Ulrich Müller <ulm@gentoo.org> -cscope-15.7a-r1.ebuild,
   -cscope-15.8.ebuild, cscope-15.8a.ebuild:
