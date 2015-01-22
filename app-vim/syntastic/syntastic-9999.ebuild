@@ -1,11 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/syntastic/syntastic-9999.ebuild,v 1.1 2013/07/24 08:12:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/syntastic/syntastic-9999.ebuild,v 1.2 2015/01/22 05:36:28 radhermit Exp $
 
 EAPI=5
-inherit vim-plugin git-2
+inherit vim-plugin
 
-EGIT_REPO_URI="git://github.com/scrooloose/syntastic.git"
+if [[ ${PV} == "9999" ]] ; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/scrooloose/syntastic.git"
+else
+	SRC_URI="https://github.com/scrooloose/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 DESCRIPTION="vim plugin: syntax checking using external tools"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2736 https://github.com/scrooloose/syntastic/"
