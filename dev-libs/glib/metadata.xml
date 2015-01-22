@@ -3,6 +3,8 @@
 <pkgmetadata>
   <herd>gnome</herd>
   <use>
+	<flag name="dbus">Enable dependencies required by glib libraries
+		using dbus service to manage settings saving</flag>
   	<flag name="mime">Pull in shared MIME database that many glib-based
 		applications require at runtime to detect or open files. Warning:
 		do not disable this flag unless installing on a headless server.</flag>

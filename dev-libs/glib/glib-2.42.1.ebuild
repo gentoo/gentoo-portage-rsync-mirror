@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.42.1.ebuild,v 1.3 2015/01/22 04:16:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.42.1.ebuild,v 1.4 2015/01/22 11:39:13 pacho Exp $
+
+# Until bug #537330 glib is a reverse dependency of pkgconfig and, then
+# adding new dependencies end up making stage3 to grow. Every addition needs
+# then to be think very closely.
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -22,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2+"
 SLOT="2"
-IUSE="fam kernel_linux +mime selinux static-libs systemtap test utils xattr"
+IUSE="dbus fam kernel_linux +mime selinux static-libs systemtap test utils xattr"
 REQUIRED_USE="
 	utils? ( ${PYTHON_REQUIRED_USE} )
 	test? ( ${PYTHON_REQUIRED_USE} )
@@ -68,10 +72,11 @@ DEPEND="${RDEPEND}
 # different g-i and glib major versions
 
 PDEPEND="!<gnome-base/gvfs-1.6.4-r990
+	dbus? ( gnome-base/dconf )
 	mime? ( x11-misc/shared-mime-info )
 "
 # shared-mime-info needed for gio/xdgmime, bug #409481
-# dconf needed, bug #498436
+# dconf is needed to be able to save settings, bug #498436
 # Earlier versions of gvfs do not work with glib
 
 pkg_setup() {
