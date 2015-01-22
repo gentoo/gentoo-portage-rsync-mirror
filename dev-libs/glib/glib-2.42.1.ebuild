@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.42.1.ebuild,v 1.2 2015/01/21 09:44:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.42.1.ebuild,v 1.3 2015/01/22 04:16:28 patrick Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -68,7 +68,6 @@ DEPEND="${RDEPEND}
 # different g-i and glib major versions
 
 PDEPEND="!<gnome-base/gvfs-1.6.4-r990
-	gnome-base/dconf
 	mime? ( x11-misc/shared-mime-info )
 "
 # shared-mime-info needed for gio/xdgmime, bug #409481
