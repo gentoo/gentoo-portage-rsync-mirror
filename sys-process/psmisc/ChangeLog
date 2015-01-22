@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.164 2015/01/02 12:28:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.165 2015/01/22 11:05:02 polynomial-c Exp $
+
+*psmisc-22.21-r1 (22 Jan 2015)
+
+  22 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -psmisc-22.21.ebuild,
+  +psmisc-22.21-r1.ebuild:
+  Upstream re-released latest source tarball. Committed straight to stable
+  where -r0 ebuild was already stable.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> psmisc-22.21.ebuild:
   Stable for sparc, wrt bug #530662
