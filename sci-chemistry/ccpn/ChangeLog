@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.157 2015/01/22 16:25:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.158 2015/01/22 16:32:53 jlec Exp $
+
+  22 Jan 2015; Justin Lecher <jlec@gentoo.org> -files/2.1.3_1-dynamics.patch,
+  -files/2.1.3_1-impl-dec.patch, -files/2.1.3_1-parallel.patch,
+  -files/2.2.1-parallel.patch, -files/2.2.2-parallel.patch,
+  -files/ccpn-2.4.0_p140425-lxml.patch:
+  Drop obsolete patches
 
 *ccpn-2.4.1_p150122 (22 Jan 2015)
 

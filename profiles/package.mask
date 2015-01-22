@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16297 2015/01/22 12:07:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16298 2015/01/22 16:47:40 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Julian Ospald <hasufell@gentoo.org> (22 Jan 2015)
+# Masked for removal in 30 days, wrt #537260.
+games-rpg/morrowind-data
 
 # Mikle Kolyada <zlogene@gentoo.org> (22 Jan 2015)
 # Unclear license (bug 253443). 

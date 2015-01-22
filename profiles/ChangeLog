@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9696 2015/01/22 12:07:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9697 2015/01/22 16:47:40 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jan 2015; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask games-rpg/morrowind-data for removal wrt #537260
 
   22 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Mask dev-perl/IP-Country for removal.
