@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/lilo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.82 2014/09/26 13:24:00 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.83 2015/01/22 10:45:46 chainsaw Exp $
+
+*lilo-24.1 (22 Jan 2015)
+
+  22 Jan 2015; Tony Vroon <chainsaw@gentoo.org> +lilo-24.1.ebuild,
+  +files/lilo-24.1-novga.patch:
+  Avoid interactive password configurations, based on a report and initial
+  patch by Andrew Savchenko in bug #497288. New upstream release, closes bug
+  #536942 by Joshua Kinard.
 
   26 Sep 2014; Agostino Sarubbo <ago@gentoo.org> lilo-24.0-r1.ebuild:
   Stable for x86, wrt bug #521966

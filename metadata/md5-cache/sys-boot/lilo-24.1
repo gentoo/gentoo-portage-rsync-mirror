@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=>=sys-devel/bin86-0.15.5
+DESCRIPTION=Standard Linux boot loader
+EAPI=5
+HOMEPAGE=https://alioth.debian.org/projects/lilo/
+IUSE=static minimal pxeserial device-mapper
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=BSD GPL-2
+RDEPEND=device-mapper? ( >=sys-fs/lvm2-2.02.45 )
+SLOT=0
+SRC_URI=http://lilo.alioth.debian.org/ftp/sources/lilo-24.1.tar.gz mirror://gentoo/dolilo-0.6.tar.bz2
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=630691734efd801e6c50ec1709d4c261

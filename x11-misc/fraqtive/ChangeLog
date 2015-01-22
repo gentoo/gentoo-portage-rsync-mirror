@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/fraqtive
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.14 2014/07/01 23:53:09 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/ChangeLog,v 1.15 2015/01/22 10:50:04 jer Exp $
+
+*fraqtive-0.4.7 (22 Jan 2015)
+
+  22 Jan 2015; Jeroen Roovers <jer@gentoo.org> +fraqtive-0.4.7.ebuild:
+  Version bump.
 
   01 Jul 2014; Jeroen Roovers <jer@gentoo.org> -fraqtive-0.4.5.ebuild,
   fraqtive-0.4.6.ebuild:
