@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16296 2015/01/21 05:08:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16297 2015/01/22 12:07:36 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mikle Kolyada <zlogene@gentoo.org> (22 Jan 2015)
+# Unclear license (bug 253443). 
+# No one uses it anymore. You can
+# use dev-perl/Geo-IP instead.
+dev-perl/IP-Country
 
 # Hans de Graaff <graaff@gentoo.org> (19 Jan 2015)
 # virtual/ruby-rdoc is a no-op in that it always pulls in
