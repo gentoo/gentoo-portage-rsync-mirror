@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Header/PEAR-HTTP_Header-1.2.1-r1.ebuild,v 1.1 2014/11/06 17:24:00 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Header/PEAR-HTTP_Header-1.2.1-r1.ebuild,v 1.2 2015/01/22 14:31:06 grknight Exp $
 
 EAPI=5
 
@@ -12,3 +12,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND="dev-php/PEAR-HTTP"
+
+src_prepare() {
+	# Don't install the LICENSE
+	sed -i 's~<file baseinstalldir="/" md5sum="b4641eee2eca1a10d4562345a782b4ba" name="LICENSE" role="doc" />~~' \
+		"${WORKDIR}"/package.xml || die
+}
