@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.377 2015/01/19 14:04:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.378 2015/01/22 22:57:14 williamh Exp $
+
+*busybox-1.23.0-r1 (22 Jan 2015)
+
+  22 Jan 2015; William Hubbs <williamh@gentoo.org> +busybox-1.23.0-r1.ebuild,
+  files/mdev.initd:
+  In consultation with blueness, and per user requests, revert to using
+  alyesconfig. Also, fix the shebang path in the mdev init script.
 
   19 Jan 2015; Anthony G. Basile <blueness@gentoo.org> busybox-1.23.0.ebuild:
   Stable on ppc, ppc64 and x86.  Bug #530688.
