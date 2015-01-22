@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r2.ebuild,v 1.1 2015/01/21 08:32:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r2.ebuild,v 1.2 2015/01/22 06:44:52 mgorny Exp $
 
 EAPI=5
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -57,10 +57,12 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	# delete broken symlinks
-	find "${EROOT}"/usr/lib*/opengl -xtype l -delete
-	# delete empty leftover directories (they confuse eselect)
-	find "${EROOT}"/usr/lib*/opengl -depth -type d -empty -exec rmdir -v {} +
+	if path_exists "${EROOT}"/usr/lib*/opengl; then
+		# delete broken symlinks
+		find "${EROOT}"/usr/lib*/opengl -xtype l -delete
+		# delete empty leftover directories (they confuse eselect)
+		find "${EROOT}"/usr/lib*/opengl -depth -type d -empty -exec rmdir -v {} +
+	fi
 
 	if [[ -n "${OLD_IMPL}" && "${OLD_IMPL}" != '(none)' ]] ; then
 		eselect opengl set "${OLD_IMPL}"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/inform
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.19 2014/12/12 03:30:47 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.20 2015/01/22 06:56:44 mr_bones_ Exp $
+
+  22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -inform-6.32.1.ebuild:
+  old
 
 *inform-6.33.1_p2 (12 Dec 2014)
 

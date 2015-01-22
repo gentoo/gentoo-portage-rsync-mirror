@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nasm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.118 2014/12/31 04:23:49 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.119 2015/01/22 06:57:42 mr_bones_ Exp $
+
+  22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -nasm-2.11.05.ebuild:
+  old
 
 *nasm-2.11.06 (31 Dec 2014)
 
