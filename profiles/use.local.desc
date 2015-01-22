@@ -6320,8 +6320,6 @@ sci-chemistry/openbabel:swig - Use swig to rebuild language bindings.
 sci-chemistry/pdb2pqr:opal - Add web interface via opal
 sci-chemistry/pdb2pqr:pdb2pka - Install experimental pdb2pka interface
 sci-chemistry/pymol:apbs - Install the apbs plugin
-sci-chemistry/pymol:numpy - Compile numpy support
-sci-chemistry/pymol:vmd - Enable vmd module for trajectories
 sci-chemistry/pymol:web - Install Pymodule needed for web app support
 sci-chemistry/raster3d:gd - libgd support for PNG and JPEG output
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments

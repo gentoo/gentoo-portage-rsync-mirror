@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.20.0.ebuild,v 1.9 2014/10/11 11:57:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.20.0.ebuild,v 1.10 2015/01/22 09:29:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1+"
 SLOT="0"
 
 # TODO: coverage ?
-IUSE="test +X"
+IUSE="test X"
 
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
 

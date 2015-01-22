@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.75 2015/01/21 07:45:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.76 2015/01/22 09:29:31 pacho Exp $
+
+  22 Jan 2015; Pacho Ramos <pacho@gentoo.org> dconf-0.20.0.ebuild,
+  dconf-0.22.0.ebuild:
+  We don't really need to default to +X as people will have it enabled globally
+  wither via profiles or via make.conf
 
   21 Jan 2015; Jeroen Roovers <jer@gentoo.org> dconf-0.22.0.ebuild:
   Marked ~hppa (bug #498474).

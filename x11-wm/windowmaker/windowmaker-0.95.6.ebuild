@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.6.ebuild,v 1.3 2015/01/21 09:59:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.6.ebuild,v 1.4 2015/01/22 09:24:32 voyageur Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -45,6 +45,8 @@ src_prepare() {
 	done;
 
 	epatch "${FILESDIR}"/${PN}-0.95.3-fix_underlinking.patch
+	epatch "${FILESDIR}"/${P}-webp_detection.patch
+
 	eautoreconf
 }
 

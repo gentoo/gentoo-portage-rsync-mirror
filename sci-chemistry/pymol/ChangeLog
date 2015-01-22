@@ -1,6 +1,23 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.125 2015/01/22 08:14:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.126 2015/01/22 09:06:49 jlec Exp $
+
+  22 Jan 2015; Justin Lecher <jlec@gentoo.org> -pymol-1.5.0.3-r1.ebuild,
+  -pymol-1.5.0.3-r2.ebuild, -pymol-1.6.0_rc1.ebuild, -pymol-1.6.0.0.ebuild,
+  -pymol-1.6.0.0-r1.ebuild, -pymol-1.6.0.0-r2.ebuild, -pymol-1.7.0.0.ebuild,
+  -pymol-1.7.0.4.ebuild, -pymol-1.7.0.4-r1.ebuild, -pymol-1.7.1.1.ebuild,
+  -pymol-1.7.1.3.ebuild, -pymol-1.7.2.0.ebuild, -pymol-1.7.2.1.ebuild,
+  -pymol-1.7.3.0.ebuild, -pymol-1.7.3.1.ebuild, -pymol-1.7.3.2.ebuild,
+  -pymol-1.7.3.4.ebuild, -files/pymol-1.5.0.1-data-path.patch,
+  -files/pymol-1.5.0.1-flags.patch, -files/pymol-1.5.0.1-setup.py.patch,
+  -files/pymol-1.5.0.1-vmd.patch, -files/pymol-1.5.0.1-web.patch,
+  -files/pymol-1.5.0.3-prefix.patch, -files/pymol-1.5.0.3-web.patch,
+  -files/pymol-1.6.0.0-bg_rgb.patch, -files/pymol-1.6.0.0-labels.patch,
+  -files/pymol-1.6.0.0-stereo.patch,
+  -files/pymol-1.7.0.4-fix-broken-label-scaling-on-Linux.patch,
+  -files/pymol-9999-listing.patch, -files/1.2.1/nosplash-gentoo.patch,
+  -files/pymol-9999-options.patch, metadata.xml:
+  Drop old
 
   22 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> pymol-1.5.0.3-r1.ebuild:
   Drop to ~ppc, wrt bug #507142
