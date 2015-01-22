@@ -1,9 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.633 2014/12/25 18:52:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.634 2015/01/22 18:01:45 grknight Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Brian Evans <grknight@gentoo.org> (22 Jan 2015)
+# PHP module split into dev-php/ming-php which is still ~arch
+<media-libs/ming-0.4.5 php
 
 # Michał Górny <mgorny@gentoo.org> (25 Dec 2014)
 # Requires non-keyworded >=libevent-2.1, bug #533540.
@@ -717,10 +721,6 @@ dev-python/kaa-base tls
 # Serkan Kaba <serkan@gentoo.org> (20 Jul 2008)
 # Java is not supported in most of the arches enchant is keyworded
 app-text/enchant zemberek
-
-# Peter Alfredsen <loki_val@gentoo.org> (25 Jun 2008)
-# Php module fails to build due to newer autotools.
->=media-libs/ming-0.4.0_beta5 php
 
 dev-java/sun-jdk nsplugin
 dev-java/sun-jre-bin nsplugin

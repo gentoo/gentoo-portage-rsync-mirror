@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.758 2014/12/25 18:52:50 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.759 2015/01/22 18:01:45 grknight Exp $
+
+  22 Jan 2015; Brian Evans <grknight@gentoo.org> package.use.mask:
+  Change media-libs/ming USE=php mask to allow for new dev-php/ming-php package
 
   25 Dec 2014; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Mask USE=ssl on www-servers/pshs for it requires non-keyworded libevent-2.1.
