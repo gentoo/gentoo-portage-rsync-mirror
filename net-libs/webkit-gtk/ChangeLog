@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.305 2015/01/14 22:21:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.306 2015/01/21 23:23:46 pacho Exp $
+
+  21 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/webkit-gtk-2.4.8-wayland-webkit2.patch,
+  -files/webkit-gtk-2.2.4-unittests-build.patch,
+  -files/webkit-gtk-2.2.5-sparc64-build.patch,
+  -files/webkit-gtk-2.4.6-gstreamer-check.patch, -webkit-gtk-2.2.6-r1.ebuild,
+  -webkit-gtk-2.2.6-r201.ebuild, -webkit-gtk-2.4.4-r1.ebuild,
+  -webkit-gtk-2.4.4-r201.ebuild, webkit-gtk-2.4.8-r200.ebuild,
+  webkit-gtk-2.4.8.ebuild:
+  Fix building with x11+wayland (#536898 by Reinis Danne and Denis Lisov), drop
+  old
 
 *webkit-gtk-2.4.8 (14 Jan 2015)
 *webkit-gtk-2.4.8-r200 (14 Jan 2015)

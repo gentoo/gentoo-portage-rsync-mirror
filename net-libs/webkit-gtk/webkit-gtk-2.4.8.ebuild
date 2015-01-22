@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.8.ebuild,v 1.1 2015/01/14 22:21:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.8.ebuild,v 1.2 2015/01/21 23:23:46 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -191,6 +191,10 @@ src_prepare() {
 	# Fix building with --disable-accelerated-compositing, bug #525072
 	# https://bugs.webkit.org/show_bug.cgi?id=137640
 	epatch "${FILESDIR}"/${PN}-2.4.7-disable-accelerated-compositing.patch
+
+	# Fix building with x11+wayland, bug #536898
+	# https://bugs.webkit.org/show_bug.cgi?id=140241
+	epatch "${FILESDIR}"/${PN}-2.4.8-wayland-webkit2.patch
 
 	AT_M4DIR=Source/autotools eautoreconf
 

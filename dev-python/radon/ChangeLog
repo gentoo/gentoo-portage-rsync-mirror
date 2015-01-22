@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/radon
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/radon/ChangeLog,v 1.1 2015/01/21 23:09:00 alunduil Exp $
+
+*radon-1.2 (21 Jan 2015)
+
+  21 Jan 2015; Alex Brandt <alunduil@gentoo.org> +metadata.xml,
+  +radon-1.2.ebuild:
+  add radon ebuild written by me
