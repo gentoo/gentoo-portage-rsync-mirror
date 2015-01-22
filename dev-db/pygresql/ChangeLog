@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.76 2015/01/13 16:51:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.77 2015/01/22 02:55:41 patrick Exp $
+
+*pygresql-4.1.1-r2 (22 Jan 2015)
+
+  22 Jan 2015; Patrick Lauer <patrick@gentoo.org> +pygresql-4.1.1-r2.ebuild:
+  Update pygresql for more postgresql slots
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> pygresql-4.1.1-r1.ebuild:
   Stable for HPPA (bug #534946).
