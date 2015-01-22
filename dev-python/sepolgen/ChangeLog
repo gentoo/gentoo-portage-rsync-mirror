@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sepolgen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.46 2014/12/06 23:32:02 perfinion Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.47 2015/01/22 08:44:19 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> sepolgen-1.2.1-r1.ebuild:
+  Stable for amd64, wrt bug #535374
 
 *sepolgen-1.2.2_rc7 (06 Dec 2014)
 *sepolgen-1.2.1-r1 (06 Dec 2014)

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.5.5.ebuild,v 1.1 2014/11/27 10:13:48 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/free42-1.5.5.ebuild,v 1.2 2015/01/22 08:45:19 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="alsa"
 
 DEPEND="dev-libs/atk

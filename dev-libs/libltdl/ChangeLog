@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libltdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.5 2015/01/19 23:30:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.6 2015/01/22 08:40:03 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libltdl-2.4.4.ebuild:
+  Stable for amd64, wrt bug #536696
 
 *libltdl-2.4.5 (19 Jan 2015)
 

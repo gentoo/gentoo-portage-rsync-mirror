@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/herqq
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.15 2014/06/23 06:24:48 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.16 2015/01/22 08:45:44 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> herqq-1.0.0-r2.ebuild:
+  Stable for amd64, wrt bug #535456
 
 *herqq-1.0.0-r2 (23 Jun 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.24 2014/10/31 04:06:24 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argh/ChangeLog,v 1.25 2015/01/22 08:42:27 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> argh-0.26.1.ebuild:
+  Stable for amd64, wrt bug #535310
 
 *argh-0.26.1 (31 Oct 2014)
 

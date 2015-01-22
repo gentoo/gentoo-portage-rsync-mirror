@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.54 2015/01/19 10:45:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.55 2015/01/22 08:41:20 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libotr-4.1.0.ebuild:
+  Stable for amd64, wrt bug #536254
 
   19 Jan 2015; Jeroen Roovers <jer@gentoo.org> libotr-4.1.0.ebuild:
   Stable for HPPA (bug #536254).

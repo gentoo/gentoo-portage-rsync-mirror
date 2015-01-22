@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/dragonhunt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.10 2015/01/02 08:02:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.11 2015/01/22 08:42:37 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dragonhunt-3.56-r1.ebuild:
+  Stable for amd64, wrt bug #534290
 
   02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   dragonhunt-3.56-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.2-r1.ebuild,v 1.2 2015/01/20 15:57:50 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.2-r1.ebuild,v 1.3 2015/01/22 08:42:58 ago Exp $
 
 EAPI=5
 inherit autotools base eutils
@@ -11,7 +11,7 @@ SRC_URI="https://gitorious.org/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="doc exif jpeg lcms lirc lua tiff xmp"
 
 RDEPEND="x11-libs/gtk+:2

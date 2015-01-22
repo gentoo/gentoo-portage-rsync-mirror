@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/lib3ds-2.0.0_rc1.ebuild,v 1.7 2013/09/26 18:56:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/lib3ds-2.0.0_rc1.ebuild,v 1.8 2015/01/22 08:35:00 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils
@@ -27,9 +27,4 @@ DEPEND="${RDEPEND}
 src_prepare() {
 #	epatch "${FILESDIR}"/${P}-underlinking.patch
 	epatch "${FILESDIR}"/${P}-underlinking-no-autoreconf.patch
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog README
 }

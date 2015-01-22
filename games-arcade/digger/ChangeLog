@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/digger
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/ChangeLog,v 1.14 2014/05/03 18:44:09 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/ChangeLog,v 1.15 2015/01/22 08:40:55 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> digger-20140423.ebuild:
+  Stable for amd64, wrt bug #535706
 
   03 May 2014; Ulrich Müller <ulm@gentoo.org> digger-20020314.ebuild:
   Change LICENSE of old version to all-rights-reserved, bug 113798.

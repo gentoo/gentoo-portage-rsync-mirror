@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-2.8.ebuild,v 1.1 2014/05/19 07:38:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-2.8.ebuild,v 1.2 2015/01/22 08:44:09 ago Exp $
 
 EAPI=5
 # Appears to be written only for py2
@@ -16,7 +16,7 @@ SRC_URI="http://quixote.ca/releases/${MY_P}.tar.gz"
 
 LICENSE="CNRI-QUIXOTE-2.4"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc test"
 
 DEPEND="doc? ( dev-python/docutils[${PYTHON_USEDEP}] )

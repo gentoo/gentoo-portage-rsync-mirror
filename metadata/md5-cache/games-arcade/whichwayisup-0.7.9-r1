@@ -4,11 +4,11 @@ DESCRIPTION=A traditional and challenging 2D platformer game with a slight rotat
 EAPI=5
 HOMEPAGE=http://hectigo.net/puskutraktori/whichwayisup/
 IUSE=python_targets_python2_7
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 LICENSE=GPL-2 CC-BY-3.0
 RDEPEND=dev-python/pygame[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] games-misc/games-envd
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://hectigo.net/puskutraktori/whichwayisup/whichwayisup_b079.zip
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=f424663c2118b1f2a7e30287e59e7992
+_md5_=8312fbbffb3772dc9fa7118939e47b8e

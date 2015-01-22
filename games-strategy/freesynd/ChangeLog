@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freesynd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/ChangeLog,v 1.4 2014/11/25 23:21:05 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/ChangeLog,v 1.5 2015/01/22 08:45:20 mr_bones_ Exp $
+
+  22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/freesynd-0.7-cmake.patch, -freesynd-0.7.ebuild:
+  old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

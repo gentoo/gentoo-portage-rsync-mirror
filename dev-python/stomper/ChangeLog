@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stomper
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.23 2014/10/15 12:18:47 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.24 2015/01/22 08:44:24 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> stomper-0.3.0.ebuild:
+  Stable for amd64, wrt bug #535378
 
 *stomper-0.3.0 (15 Oct 2014)
 

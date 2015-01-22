@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20141203.ebuild,v 1.1 2014/12/08 01:42:24 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20141203.ebuild,v 1.2 2015/01/22 08:42:32 ago Exp $
 
 EAPI=5
 inherit linux-info readme.gentoo systemd
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/evgeni/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="libconfig"
 
 DEPEND="libconfig? ( dev-libs/libconfig )"

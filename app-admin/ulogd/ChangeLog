@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.94 2014/12/28 14:40:24 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.95 2015/01/22 08:41:37 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ulogd-2.0.4.ebuild:
+  Stable for amd64, wrt bug #534240
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> ulogd-2.0.3.ebuild,
   ulogd-2.0.4.ebuild:

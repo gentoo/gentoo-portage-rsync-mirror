@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-20.1.ebuild,v 1.1 2014/09/21 10:11:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nut/nut-20.1.ebuild,v 1.2 2015/01/22 08:44:39 ago Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~x86"
 
 src_compile() {
 	emake \

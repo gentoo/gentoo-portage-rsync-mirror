@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/kdevelop-pg-qt-1.0.0-r2.ebuild,v 1.1 2014/04/29 11:32:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/kdevelop-pg-qt-1.0.0-r2.ebuild,v 1.2 2015/01/22 08:44:49 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ if [[ $PV == *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 
 DESCRIPTION="A LL(1) parser generator used mainly by KDevelop language plugins"

@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.82 2013/11/03 10:06:07 tomjbe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.83 2015/01/22 08:43:49 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> geda-1.8.2.ebuild:
+  Stable for amd64, wrt bug #535872
 
   03 Nov 2013; Thomas Beierlein <tomjbe@gentoo.org> geda-1.8.2.ebuild:
   Fix missing library (bug #489112). Thanks for reporting mgorny

@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/ski
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.17 2015/01/01 00:09:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.18 2015/01/22 08:40:45 ago Exp $
+
+  22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ski-6.8.ebuild:
+  Stable for amd64, wrt bug #534164
 
   01 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> ski-6.8.ebuild:
   punt 2_6
