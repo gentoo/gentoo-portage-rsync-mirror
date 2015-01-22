@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/smpeg2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/ChangeLog,v 1.4 2014/06/18 19:57:01 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/ChangeLog,v 1.5 2015/01/22 08:24:50 mr_bones_ Exp $
+
+  22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -smpeg2-2.0.0-r1.ebuild,
+  smpeg2-2.0.0-r2.ebuild:
+  old
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> smpeg2-2.0.0-r2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

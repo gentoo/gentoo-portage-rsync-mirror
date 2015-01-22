@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.124 2014/12/04 13:35:08 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.125 2015/01/22 08:14:25 pinkbyte Exp $
+
+  22 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> pymol-1.5.0.3-r1.ebuild:
+  Drop to ~ppc, wrt bug #507142
 
   04 Dec 2014; Patrick Lauer <patrick@gentoo.org> pymol-1.7.4.0.ebuild:
   Remove unneeded blank line on last line

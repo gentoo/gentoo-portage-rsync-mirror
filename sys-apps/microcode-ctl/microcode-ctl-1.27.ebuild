@@ -1,20 +1,22 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.17-r2.ebuild,v 1.5 2013/09/15 18:00:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.27.ebuild,v 1.1 2015/01/22 08:28:00 polynomial-c Exp $
+
+EAPI="5"
 
 inherit linux-info toolchain-funcs
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="Intel processor microcode update utility"
-HOMEPAGE="http://www.urbanmyth.org/microcode"
-SRC_URI="http://www.urbanmyth.org/microcode/${MY_P}.tar.gz"
+HOMEPAGE="https://fedorahosted.org/microcode_ctl/"
+SRC_URI="https://fedorahosted.org/released/${PN/-/_}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="selinux"
 
-DEPEND="selinux? ( sec-policy/selinux-cpucontrol )"
+DEPEND=""
 RDEPEND=">=sys-apps/microcode-data-20090330
 	selinux? ( sec-policy/selinux-cpucontrol )"
 
@@ -23,12 +25,11 @@ S=${WORKDIR}/${MY_P}
 src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS} ${CPPFLAGS} ${LDFLAGS}" \
-		|| die "compile problem"
+		CFLAGS="${CFLAGS} ${CPPFLAGS} ${LDFLAGS}"
 }
 
 src_install() {
-	dosbin microcode_ctl || die "dosbin"
+	dosbin microcode_ctl
 	doman microcode_ctl.8
 	dodoc Changelog README
 

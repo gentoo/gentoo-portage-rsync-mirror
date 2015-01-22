@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/microcode-ctl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.38 2014/11/02 09:49:37 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/ChangeLog,v 1.39 2015/01/22 08:28:00 polynomial-c Exp $
+
+*microcode-ctl-1.27 (22 Jan 2015)
+
+  22 Jan 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -microcode-ctl-1.17-r2.ebuild, +microcode-ctl-1.27.ebuild:
+  Version bump (bug #537316). Removed old.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> microcode-ctl-1.23.ebuild,
   microcode-ctl-1.26.ebuild:

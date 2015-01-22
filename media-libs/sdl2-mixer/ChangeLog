@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl2-mixer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-mixer/ChangeLog,v 1.5 2014/11/29 08:36:16 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-mixer/ChangeLog,v 1.6 2015/01/22 08:19:18 mr_bones_ Exp $
+
+  22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -sdl2-mixer-2.0.0.ebuild:
+  old
 
   29 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org>
   +files/sdl2-mixer-2.0.0-Fix-compiling-against-libmodplug-0.8.8.5.patch,
