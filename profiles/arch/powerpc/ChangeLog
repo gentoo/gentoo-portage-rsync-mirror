@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.304 2015/01/19 16:12:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.305 2015/01/22 07:44:50 pinkbyte Exp $
+
+  22 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Unmask Qt 4.8.6 since qtchooser has been keyworded
 
   19 Jan 2015; Mike Gilbert <floppym@gentoo.org> use.stable.mask:
   Remove python3_4 mask.
