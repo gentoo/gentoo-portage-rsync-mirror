@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/epm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.38 2015/01/22 08:40:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.39 2015/01/23 07:50:21 jer Exp $
+
+  23 Jan 2015; Jeroen Roovers <jer@gentoo.org> epm-1.40.ebuild:
+  Stable for HPPA (bug #537220).
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> epm-1.40.ebuild:
   Stable for amd64, wrt bug #537220

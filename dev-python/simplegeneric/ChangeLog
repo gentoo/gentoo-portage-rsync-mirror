@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simplegeneric
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.19 2014/08/14 23:24:34 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.20 2015/01/23 07:53:46 idella4 Exp $
+
+  23 Jan 2015; Ian Delaney <idella4@gentoo.org> -simplegeneric-0.8.1.ebuild,
+  -simplegeneric-0.8.ebuild:
+  rm old
 
   14 Aug 2014; Anthony G. Basile <blueness@gentoo.org>
   simplegeneric-0.8.1-r1.ebuild, simplegeneric-0.8.1.ebuild,

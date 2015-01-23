@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.89 2015/01/20 12:08:33 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.90 2015/01/23 07:55:27 jer Exp $
+
+  23 Jan 2015; Jeroen Roovers <jer@gentoo.org> speech-tools-2.1-r2.ebuild:
+  Stable for HPPA (bug #510600).
 
   20 Jan 2015; Christopher Brannon <teiresias@gentoo.org>
   speech-tools-2.1-r3.ebuild:
