@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1514 2015/01/21 22:01:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1515 2015/01/23 22:48:10 monsieurp Exp $
+
+  23 Jan 2015; Patrice Clement <monsieurp@gentoo.org> java-ant-2.eclass:
+  Sanitise find arguments when using JAVA_PKG_BSFIX_NAME option. Fix #231956.
 
   21 Jan 2015; Anthony Basile <blueness@gentoo.org> toolchain.eclass:
   Stub out fixed includes, bug #536878.
