@@ -1,5 +1,5 @@
---- a/BPGame.cpp	2010-03-11 00:15:34.000000000 +0000
-+++ b/BPGame.cpp	2010-04-02 04:17:02.640735675 +0100
+--- a/BPGame.cpp
++++ b/BPGame.cpp
 @@ -1294,8 +1294,10 @@ void BPGame::LoadSettings() {
  	Secret1 = Secret2 = Secret3 = Secret4 = false;
  	NumUnlockedGames = 0;
