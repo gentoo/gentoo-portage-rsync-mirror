@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/foolscap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.50 2014/11/01 17:37:08 nimiux Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.51 2015/01/23 01:24:21 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -foolscap-0.6.0.ebuild,
+  -foolscap-0.6.1.ebuild, -foolscap-0.6.3.ebuild:
+  Remove old.
 
   01 Nov 2014; Chema Alonso <nimiux@gentoo.org> foolscap-0.6.4-r1.ebuild:
   Stable for amd64 wrt bug #518242

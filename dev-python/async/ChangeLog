@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/async
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/async/ChangeLog,v 1.4 2014/11/18 10:11:08 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/async/ChangeLog,v 1.5 2015/01/23 01:20:35 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -async-0.6.1-r1.ebuild,
+  -async-0.6.1.ebuild:
+  Remove old.
 
 *async-0.6.2 (18 Nov 2014)
 
