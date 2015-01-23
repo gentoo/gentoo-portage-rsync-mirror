@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.3 2014/11/26 01:00:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.4 2015/01/23 00:34:07 patrick Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.freerdp.com/"
 LICENSE="Apache-2.0"
 SLOT="0/1.2"
 IUSE="alsa +client cups debug doc ffmpeg gstreamer jpeg
-	pulseaudio server smartcard sse2 test usb X xinerama xv"
+	pulseaudio server smartcard sse2 test usb wayland X xinerama xv"
 
 RDEPEND="
 	dev-libs/openssl
@@ -79,6 +79,10 @@ DEPEND="${RDEPEND}
 
 DOCS=( README )
 
+src_prepare() {
+	sed -i -e 's/list(REMOVE_DUPLICATES CHANNEL_STATIC_CLIENT_ENTRIES)//' channels/client/CMakeLists.txt || die
+}
+
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with alsa ALSA)
@@ -98,6 +102,8 @@ src_configure() {
 		$(cmake-utils_use_with xinerama XINERAMA)
 		$(cmake-utils_use_with xv XV)
 		$(cmake-utils_use_build test TESTING)
+		$(cmake-utils_use_with wayland WAYLAND)
+		-DWITH_XKBFILE=OFF
 	)
 	cmake-utils_src_configure
 }
