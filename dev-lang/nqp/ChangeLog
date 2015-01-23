@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.57 2014/12/20 09:01:39 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.58 2015/01/23 03:50:21 patrick Exp $
+
+  23 Jan 2015; Patrick Lauer <patrick@gentoo.org> nqp-2014.12.ebuild:
+  Work around weird build system failure with libffi, add missing dep on libffi
 
 *nqp-2014.12 (20 Dec 2014)
 

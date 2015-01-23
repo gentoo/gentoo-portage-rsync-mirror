@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.12.ebuild,v 1.1 2014/12/20 09:01:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2014.12.ebuild,v 1.2 2015/01/23 03:50:21 patrick Exp $
 
 EAPI=5
 
 # still not working
 RESTRICT="test"
 
-inherit eutils multilib
+inherit eutils multilib versionator
 
 GITCRAP=64e7d41
 PARROT_VERSION="6.7.0"
@@ -24,7 +24,8 @@ REQUIRED_USE="|| ( parrot java moar )"
 
 RDEPEND="parrot? ( >=dev-lang/parrot-${PARROT_VERSION}:=[unicode] )
 	java? ( >=virtual/jre-1.7 )
-	moar? ( =dev-lang/moarvm-${PV} )"
+	moar? ( =dev-lang/moarvm-${PV} )
+	dev-libs/libffi"
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.7 )
 	dev-lang/perl"
@@ -44,6 +45,10 @@ src_configure() {
 	# more dirty hack to allow building with newer gcc
 	sed -i -e 's/-Werror=implicit-function-declaration//' Makefile || die
 	sed -i -e 's/-Werror=nested-externs//' Makefile || die
+
+	# horrible hackery, but we need to know where libffi hides its headers ...
+	libffi_path=$(echo /usr/lib64/libffi-*)
+	sed -i -e "s:/usr/lib64/libffi-3.1:${libffi_path}:" Makefile || die
 }
 
 src_compile() {
