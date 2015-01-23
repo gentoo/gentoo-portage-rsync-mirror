@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/oracle-jdk-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.82 2014/12/31 16:30:33 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.84 2015/01/23 17:46:52 ercpe Exp $
+
+*oracle-jdk-bin-1.8.0.31 (23 Jan 2015)
+
+  23 Jan 2015; Johann Schmitz <ercpe@gentoo.org>
+  +oracle-jdk-bin-1.8.0.31.ebuild:
+  Version bump of oracle-jdk-bin:8 wrt bug #537214
+
+*oracle-jdk-bin-1.7.0.76 (23 Jan 2015)
+
+  23 Jan 2015; Johann Schmitz <ercpe@gentoo.org>
+  +oracle-jdk-bin-1.7.0.76.ebuild:
+  Version bump of oracle-jdk-bin:7 wrt bug #537214
 
   31 Dec 2014; Fabian Groffen <grobian@gentoo.org>
   oracle-jdk-bin-1.8.0.25.ebuild:

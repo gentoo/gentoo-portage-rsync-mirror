@@ -1,0 +1,12 @@
+DEFINED_PHASES=install nofetch
+DEPEND=app-arch/unzip:0
+DESCRIPTION=Oracle's documentation bundle (including API) for Java SE
+EAPI=5
+HOMEPAGE=http://download.oracle.com/javase/8/docs/
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=oracle-java-documentation-8
+RESTRICT=fetch
+SLOT=1.8
+SRC_URI=jdk-8u31-docs-all.zip
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=c04fd2011b85289c65bd855fe19e8023
