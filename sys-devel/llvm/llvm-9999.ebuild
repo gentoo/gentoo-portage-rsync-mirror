@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.96 2014/12/31 10:37:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.97 2015/01/23 13:22:11 voyageur Exp $
 
 EAPI=5
 
@@ -146,6 +146,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-3.5-gcc-4.9.patch
 	epatch "${FILESDIR}"/${PN}-3.6-gentoo-install.patch
+	# Make ocaml warnings non-fatal, bug #537308
+	sed -e "/RUN/s/-warn-error A//" -i test/Bindings/Ocaml/*ml  || die
 
 	if use clang; then
 		# Automatically select active system GCC's libraries, bugs #406163 and #417913
