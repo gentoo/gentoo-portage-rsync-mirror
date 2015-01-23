@@ -1,0 +1,66 @@
+From 17953b5893f7c9835f0dd2a704ba04e0371d2cbd Mon Sep 17 00:00:00 2001
+From: Andreas Gruenbacher <agruen@gnu.org>
+Date: Wed, 21 Jan 2015 12:01:08 +0000
+Subject: For renames and copies, make sure that both file names are valid
+
+* src/patch.c (main): Allow there_is_another_patch() to set the
+skip_rest_of_patch flag.
+* src/pch.c (intuit_diff_type): For renames and copies, also check the "other"
+file name.
+(pch_copy, pch_rename): Now that both names are checked in intuit_diff_type(),
+we know they are defined here.
+---
+diff --git a/src/patch.c b/src/patch.c
+index 441732e..cb4dbb2 100644
+--- a/src/patch.c
++++ b/src/patch.c
+@@ -196,6 +196,9 @@ main (int argc, char **argv)
+       bool mismatch = false;
+       char const *outname = NULL;
+ 
++      if (skip_rest_of_patch)
++	somefailed = true;
++
+       if (have_git_diff != pch_git_diff ())
+ 	{
+ 	  if (have_git_diff)
+diff --git a/src/pch.c b/src/pch.c
+index 33facd9..bb39576 100644
+--- a/src/pch.c
++++ b/src/pch.c
+@@ -978,6 +978,16 @@ intuit_diff_type (bool need_header, mode_t *p_file_type)
+ 	  }
+       }
+ 
++    if ((pch_rename () || pch_copy ())
++	&& ! inname
++	&& ! ((i == OLD || i == NEW) &&
++	      p_name[! reverse] &&
++	      name_is_valid (p_name[! reverse])))
++      {
++	say ("Cannot %s file without two valid file names\n", pch_rename () ? "rename" : "copy");
++	skip_rest_of_patch = true;
++      }
++
+     if (i == NONE)
+       {
+ 	if (inname)
+@@ -2178,14 +2188,12 @@ pch_name (enum nametype type)
+ 
+ bool pch_copy (void)
+ {
+-  return p_copy[OLD] && p_copy[NEW]
+-	 && p_name[OLD] && p_name[NEW];
++  return p_copy[OLD] && p_copy[NEW];
+ }
+ 
+ bool pch_rename (void)
+ {
+-  return p_rename[OLD] && p_rename[NEW]
+-	 && p_name[OLD] && p_name[NEW];
++  return p_rename[OLD] && p_rename[NEW];
+ }
+ 
+ /* Return the specified line position in the old file of the old context. */
+--
+cgit v0.9.0.2
