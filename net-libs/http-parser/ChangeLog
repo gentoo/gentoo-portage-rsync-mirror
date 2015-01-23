@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/http-parser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.11 2014/12/31 15:55:41 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.12 2015/01/23 00:25:43 mrueg Exp $
+
+*http-parser-2.4.1 (23 Jan 2015)
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> +http-parser-2.4.1.ebuild,
+  metadata.xml:
+  Proxy commit for Johan Bergström. Version bump. Add him as proxied maintainer.
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org> -http-parser-2.1.ebuild:
   Remove old.

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>bugs@bergstroem.nu</email>
+		<name>Johan Bergström</name>
+		<description>Proxied Maintainer</description>
 	</maintainer>
 </pkgmetadata>
