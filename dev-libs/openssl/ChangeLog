@@ -1,13 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.627 2015/01/23 15:30:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.628 2015/01/23 15:33:05 polynomial-c Exp $
 
 *openssl-1.0.2-r1 (23 Jan 2015)
 
   23 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -openssl-1.0.2.ebuild,
   +openssl-1.0.2-r1.ebuild, metadata.xml:
   Removed "ssl2" USE flag again. Broke ABI and caused some packages to fail
-  like cmake (bug #537452) and mozilla packages.
+  like curl (bug #537452) and mozilla packages.
 
 *openssl-1.0.2 (23 Jan 2015)
 
