@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.20.5.ebuild,v 1.1 2014/12/29 15:15:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.20.6.ebuild,v 1.1 2015/01/23 08:08:46 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -15,10 +15,10 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND="
+	>x11-libs/gtk+-3.12:3
 	dev-libs/glib:2
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+:3
 	x11-libs/pango
 "
 DEPEND="
