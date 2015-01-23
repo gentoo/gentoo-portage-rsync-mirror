@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-musicbrainz
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.15 2014/03/31 20:53:00 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.16 2015/01/23 02:02:43 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -python-musicbrainz-0.7.3.ebuild,
+  -python-musicbrainz-0.7.4.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org>
   python-musicbrainz-0.7.4-r1.ebuild:

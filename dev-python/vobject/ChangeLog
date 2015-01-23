@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vobject
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.19 2014/03/31 20:37:20 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.20 2015/01/23 02:06:21 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -vobject-0.8.1c.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> vobject-0.8.1c-r1.ebuild:
   Add support for the new PyPy slotting.

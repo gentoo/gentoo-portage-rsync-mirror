@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mygpoclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/ChangeLog,v 1.7 2014/03/31 21:16:54 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/ChangeLog,v 1.8 2015/01/23 02:04:58 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -mygpoclient-1.5.ebuild,
+  -mygpoclient-1.6.ebuild, -mygpoclient-1.7.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> mygpoclient-1.7-r1.ebuild:
   Add support for the new PyPy slotting.
