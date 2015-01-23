@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/buzhug-1.8-r1.ebuild,v 1.1 2014/12/13 11:34:11 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/buzhug-1.8-r1.ebuild,v 1.2 2015/01/23 05:19:15 mrueg Exp $
 
-EAPI="5"
+EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
@@ -17,8 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="app-arch/unzip"
-RDEPEND="test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+DEPEND="app-arch/unzip
+	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 python_test() {
 	nosetests || die "Tests fail with ${EPYTHON}"

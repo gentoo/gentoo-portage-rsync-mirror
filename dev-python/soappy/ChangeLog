@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soappy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.62 2014/10/14 15:07:56 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.63 2015/01/23 05:07:03 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -soappy-0.12.0.ebuild,
+  -soappy-0.12.5-r1.ebuild, -soappy-0.12.5.ebuild:
+  Remove old.
 
   14 Oct 2014; Tobias Klausmann <klausman@gentoo.org> soappy-0.12.22.ebuild:
   Keyworded on alpha, bug 516442

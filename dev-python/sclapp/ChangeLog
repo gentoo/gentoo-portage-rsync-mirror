@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sclapp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sclapp/ChangeLog,v 1.8 2014/09/18 17:36:15 sping Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sclapp/ChangeLog,v 1.9 2015/01/23 05:12:13 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -sclapp-0.5.3.ebuild:
+  Remove old.
 
   18 Sep 2014; Sebastian Pipping <sping@gentoo.org> sclapp-0.5.3.ebuild:
   dev-python/sclapp: Fix homepage URL

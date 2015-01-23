@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/storm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.16 2014/08/10 21:22:57 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.17 2015/01/23 05:06:04 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -storm-0.18.ebuild,
+  -storm-0.19.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> storm-0.18.ebuild,
   storm-0.19.ebuild, storm-0.20.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/buzhug
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.8 2014/12/13 11:34:11 monsieurp Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/buzhug/ChangeLog,v 1.9 2015/01/23 05:19:15 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> buzhug-1.8-r1.ebuild:
+  Move test? use conditional to DEPEND.
 
 *buzhug-1.8-r1 (13 Dec 2014)
 

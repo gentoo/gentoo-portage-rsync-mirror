@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/apse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.16 2014/08/10 21:06:55 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.17 2015/01/23 05:17:03 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -apse-0.2-r1.ebuild,
+  -apse-0.2-r2.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> apse-0.2-r1.ebuild,
   apse-0.2-r2.ebuild, apse-0.2-r3.ebuild:

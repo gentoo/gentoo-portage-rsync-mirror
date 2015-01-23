@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/crcmod
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.8 2014/11/30 11:29:07 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crcmod/ChangeLog,v 1.9 2015/01/23 05:17:56 mrueg Exp $
+
+  23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -crcmod-1.7-r1.ebuild:
+  Remove old.
 
 *crcmod-1.7-r2 (30 Nov 2014)
 
