@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.7.2-r1.ebuild,v 1.1 2015/01/23 19:02:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.7.3.ebuild,v 1.1 2015/01/23 19:33:40 polynomial-c Exp $
 
 EAPI=4
 
@@ -18,11 +18,6 @@ IUSE="static test xattr"
 RDEPEND="xattr? ( sys-apps/attr )"
 DEPEND="${RDEPEND}
 	test? ( sys-apps/ed )"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-valid_filenames_on_renames_and_copies.patch \
-		"${FILESDIR}"/${P}-fix_for_CVE-2015-1196_fix.patch
-}
 
 src_configure() {
 	use static && append-ldflags -static
