@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ZMQ-LibZMQ3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ3/ChangeLog,v 1.1 2014/12/02 10:38:36 mschiff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ3/ChangeLog,v 1.2 2015/01/23 08:34:08 jer Exp $
+
+  23 Jan 2015; Jeroen Roovers <jer@gentoo.org> ZMQ-LibZMQ3-1.19.0.ebuild:
+  Marked ~hppa (bug #531512).
 
 *ZMQ-LibZMQ3-1.19.0 (02 Dec 2014)
 
