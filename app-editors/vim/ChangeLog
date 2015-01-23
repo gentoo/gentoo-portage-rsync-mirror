@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.486 2015/01/06 00:18:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.487 2015/01/22 23:17:27 radhermit Exp $
+
+  22 Jan 2015; Tim Harder <radhermit@gentoo.org> vim-9999.ebuild:
+  Add ruby:2.2 and drop ruby:1.9 support.
 
   06 Jan 2015; Tim Harder <radhermit@gentoo.org> vim-9999.ebuild:
   Sync KEYWORDS and remove old EAPI specific EROOT fallback.
