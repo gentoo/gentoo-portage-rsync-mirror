@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/unixcw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.22 2015/01/17 14:02:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.23 2015/01/23 14:08:20 tomjbe Exp $
+
+*unixcw-3.4.1 (23 Jan 2015)
+
+  23 Jan 2015; Thomas Beierlein <tomjbe@gentoo.org> +unixcw-3.4.1.ebuild:
+  Version bump
 
   17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> unixcw-3.4.0.ebuild:
   Stable for ppc, wrt bug #535484
