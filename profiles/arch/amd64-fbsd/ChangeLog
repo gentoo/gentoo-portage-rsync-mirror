@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.58 2014/12/27 21:01:08 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.59 2015/01/23 11:09:41 polynomial-c Exp $
+
+  23 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
+  Mask sctp useflag for openssl until keywords are there
 
   27 Dec 2014; Hans de Graaff <graaff@gentoo.org> use.mask:
   dev-libs/malloc is not keyworded, mask associated USE flag.

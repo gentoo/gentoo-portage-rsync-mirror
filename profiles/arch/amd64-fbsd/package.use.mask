@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.25 2015/01/18 10:07:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.26 2015/01/23 11:09:41 polynomial-c Exp $
 
 # Michael Palimaka <kensington@gentoo.org) (26 Dec 2014)
 # Unkeyworded media-libs/opencv
@@ -8,7 +8,9 @@ media-plugins/frei0r-plugins facedetect
 media-video/vlc opencv
 
 # Patrick Lauer <patrick@gentoo.org> (17 Nov 2014)
+# Lars Wendler <polynomial-c@gentoo.org> (23 Jan 2015)
 # Missing keywords
+dev-libs/openssl sctp
 net-misc/openssh sctp
 
 # Pacho Ramos <pacho@gentoo.org> (01 Jun 2014)

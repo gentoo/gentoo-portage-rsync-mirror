@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2_beta3.ebuild,v 1.1 2014/09/26 06:05:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2.ebuild,v 1.1 2015/01/23 11:19:23 polynomial-c Exp $
 
 EAPI="4"
 
@@ -15,8 +15,8 @@ SRC_URI="mirror://openssl/source/${MY_P}.tar.gz
 
 LICENSE="openssl"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
-IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test +tls-heartbeat vanilla zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+IUSE="bindist gmp kerberos rfc3779 sctp sse2 ssl2 static-libs test +tls-heartbeat vanilla zlib"
 
 # The blocks are temporary just to make sure people upgrade to a
 # version that lack runtime version checking.  We'll drop them in
@@ -33,6 +33,7 @@ RDEPEND="gmp? ( >=dev-libs/gmp-5.1.3-r1[static-libs(+)?,${MULTILIB_USEDEP}] )
 DEPEND="${RDEPEND}
 	sys-apps/diffutils
 	>=dev-lang/perl-5
+	sctp? ( net-misc/lksctp-tools )
 	test? ( sys-devel/bc )"
 PDEPEND="app-misc/ca-certificates"
 
@@ -58,8 +59,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-1.0.0a-ldflags.patch #327421
 		epatch "${FILESDIR}"/${PN}-1.0.0d-windres.patch #373743
 		epatch "${FILESDIR}"/${PN}-1.0.2-parallel-build.patch
-		epatch "${FILESDIR}"/${PN}-1.0.2_beta2-ipv6.patch
-		epatch "${FILESDIR}"/${PN}-1.0.1e-s_client-verify.patch #472584
+		epatch "${FILESDIR}"/${PN}-1.0.2-ipv6.patch
+		epatch "${FILESDIR}"/${PN}-1.0.2-s_client-verify.patch #472584
 
 		epatch_user #332661
 	fi
@@ -143,7 +144,9 @@ multilib_src_configure() {
 	echoit \
 	./${config} \
 		${sslout} \
+		$(use sctp && echo "sctp") \
 		$(use sse2 || echo "no-sse2") \
+		$(use ssl2 || echo "no-ssl2") \
 		enable-camellia \
 		$(use_ssl !bindist ec) \
 		${ec_nistp_64_gcc_128} \

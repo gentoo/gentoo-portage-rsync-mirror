@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.9.18.ebuild,v 1.3 2014/01/14 13:52:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.9.18.ebuild,v 1.4 2015/01/23 11:25:31 jlec Exp $
 
 EAPI=5
 
@@ -41,6 +41,7 @@ src_prepare() {
 		-e "s:-funroll-loops::g" \
 		-i configure.ac || die
 
+	ln -s config/m4 . || die
 	AT_M4DIR="config/m4" eautoreconf
 }
 

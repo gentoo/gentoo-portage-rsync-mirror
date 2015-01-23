@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.3.ebuild,v 1.1 2014/12/19 15:02:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.3.ebuild,v 1.2 2015/01/23 11:23:00 jlec Exp $
 
 EAPI=5
 
-inherit autotools eutils flag-o-matic multilib toolchain-funcs versionator multilib-minimal
+inherit autotools eutils flag-o-matic multilib multilib-minimal toolchain-funcs versionator
 
 MY_P="${PN}${PV}"
 

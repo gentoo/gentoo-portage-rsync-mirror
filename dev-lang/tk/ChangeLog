@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.208 2014/12/20 09:03:03 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.209 2015/01/23 11:26:53 jlec Exp $
+
+  23 Jan 2015; Justin Lecher <jlec@gentoo.org> tk-8.6.3.ebuild:
+  Add multilib support, #537400; thanks Martin Gysel (bearsh) for preparing the
+  patch
 
 *tk-8.6.3 (20 Dec 2014)
 *tk-8.5.17 (20 Dec 2014)
