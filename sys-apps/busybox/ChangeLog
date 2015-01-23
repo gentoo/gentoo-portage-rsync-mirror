@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.378 2015/01/22 22:57:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.380 2015/01/23 01:35:08 williamh Exp $
+
+  23 Jan 2015; William Hubbs <williamh@gentoo.org> -busybox-1.23.0.ebuild:
+  remove broken 1.23.0 version
+
+  23 Jan 2015; William Hubbs <williamh@gentoo.org> busybox-9999.ebuild:
+  sync live ebuild
 
 *busybox-1.23.0-r1 (22 Jan 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.4 2015/01/23 00:34:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.5 2015/01/23 01:50:19 floppym Exp $
 
 EAPI="5"
 
@@ -64,6 +64,7 @@ RDEPEND="
 		)
 	)
 	smartcard? ( sys-apps/pcsc-lite )
+	wayland? ( dev-libs/wayland )
 	X? (
 		x11-libs/libX11
 		x11-libs/libxkbfile
@@ -78,10 +79,7 @@ DEPEND="${RDEPEND}
 "
 
 DOCS=( README )
-
-src_prepare() {
-	sed -i -e 's/list(REMOVE_DUPLICATES CHANNEL_STATIC_CLIENT_ENTRIES)//' channels/client/CMakeLists.txt || die
-}
+PATCHES=( "${FILESDIR}/freerdp-cmake-3.1.patch" )
 
 src_configure() {
 	local mycmakeargs=(
@@ -103,7 +101,6 @@ src_configure() {
 		$(cmake-utils_use_with xv XV)
 		$(cmake-utils_use_build test TESTING)
 		$(cmake-utils_use_with wayland WAYLAND)
-		-DWITH_XKBFILE=OFF
 	)
 	cmake-utils_src_configure
 }
