@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-1.0.0.ebuild,v 1.1 2015/01/10 14:51:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-1.0.0.ebuild,v 1.2 2015/01/23 09:33:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -72,6 +72,7 @@ RDEPEND="${COMMON_DEPEND}
 	wifi? ( >=net-wireless/wpa_supplicant-0.7.3-r3[dbus] )
 "
 DEPEND="${COMMON_DEPEND}
+	dev-util/gdbus-codegen
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
