@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.7.ebuild,v 1.1 2014/09/03 16:10:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.8.ebuild,v 1.1 2015/01/23 21:06:01 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.5"
@@ -106,5 +106,10 @@ multilib_src_install() {
 	dobin config/nspr-config
 
 	# Remove stupid files in /usr/bin
-	rm "${ED}"/usr/bin/prerr.properties || die "failed to cleanup unneeded files"
+	rm "${ED}"/usr/bin/prerr.properties || die
+
+	# This is used only to generate prerr.c and prerr.h at build time.
+	# No other projects use it, and we don't want to depend on perl.
+	# Talked to upstream and they agreed w/punting.
+	rm "${ED}"/usr/bin/compile-et.pl || die
 }
