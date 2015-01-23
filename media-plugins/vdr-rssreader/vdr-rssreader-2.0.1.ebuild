@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-2.0.1.ebuild,v 1.1 2015/01/18 21:28:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-2.0.1.ebuild,v 1.2 2015/01/23 15:25:27 hd_brummy Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND=">=media-video/vdr-2.0.0
 
 RDEPEND="${DEPEND}"
 
-PATCHES=("${FILESDIR}/${P}-gentoo.diff")
+PATCHES=("${FILESDIR}/${PN}-2.0.0-gentoo.diff")
 
 src_install() {
 	vdr-plugin-2_src_install
