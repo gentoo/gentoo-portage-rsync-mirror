@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/mira
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.28 2015/01/23 11:25:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/ChangeLog,v 1.29 2015/01/23 11:48:13 jlec Exp $
+
+*mira-4.0.2 (23 Jan 2015)
+
+  23 Jan 2015; Justin Lecher <jlec@gentoo.org> +mira-4.0.2.ebuild:
+  Version BUmp, thanks Martin Mokrejš for the work
 
   23 Jan 2015; Justin Lecher <jlec@gentoo.org> mira-3.9.18.ebuild:
   Add workaroung for m4 dir location, #536172
