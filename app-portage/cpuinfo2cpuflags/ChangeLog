@@ -1,0 +1,9 @@
+# ChangeLog for app-portage/cpuinfo2cpuflags
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/ChangeLog,v 1.1 2015/01/23 23:09:54 mgorny Exp $
+
+*cpuinfo2cpuflags-1 (23 Jan 2015)
+
+  23 Jan 2015; Michał Górny <mgorny@gentoo.org> +cpuinfo2cpuflags-1.ebuild,
+  +metadata.xml:
+  Initial version.
