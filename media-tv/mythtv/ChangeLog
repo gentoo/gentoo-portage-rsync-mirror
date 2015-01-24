@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/mythtv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.424 2014/12/12 09:36:12 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.425 2015/01/24 15:08:08 rich0 Exp $
+
+*mythtv-0.27.4_p20150124 (24 Jan 2015)
+
+  24 Jan 2015; Richard Freeman <rich0@gentoo.org>
+  +mythtv-0.27.4_p20150124.ebuild:
+  Patch update.
 
   12 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   USE='vaapi' is now global, removing it's description from metadata
