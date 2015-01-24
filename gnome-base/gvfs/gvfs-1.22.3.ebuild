@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.20.2.ebuild,v 1.10 2014/10/11 12:08:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.22.3.ebuild,v 1.1 2015/01/24 13:30:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,13 +14,14 @@ HOMEPAGE="https://git.gnome.org/browse/gvfs"
 LICENSE="LGPL-2+"
 SLOT="0"
 
-IUSE="afp archive avahi bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks"
+IUSE="afp archive bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks zeroconf"
 REQUIRED_USE="
 	cdda? ( udev )
+	mtp? ( udev )
 	udisks? ( udev )
 	systemd? ( udisks )
 "
-KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
 # Can use libgphoto-2.5.0 as well. Automagic detection.
 RDEPEND="
@@ -30,7 +31,6 @@ RDEPEND="
 	net-misc/openssh
 	afp? ( >=dev-libs/libgcrypt-1.2.2:0= )
 	archive? ( app-arch/libarchive:= )
-	avahi? ( >=net-dns/avahi-0.6 )
 	bluray? ( media-libs/libbluray )
 	fuse? ( >=sys-fs/fuse-2.8.0 )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 )
@@ -49,6 +49,7 @@ RDEPEND="
 		virtual/libgudev:=
 		virtual/libudev:= )
 	udisks? ( >=sys-fs/udisks-1.97:2 )
+	zeroconf? ( >=net-dns/avahi-0.6 )
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
@@ -72,6 +73,8 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
+	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
+
 	if ! use udev; then
 		sed -e 's/gvfsd-burn/ /' \
 			-e 's/burn.mount.in/ /' \
@@ -88,7 +91,8 @@ src_configure() {
 	# --enable-documentation installs man pages
 	# --disable-obexftp, upstream bug #729945
 	gnome2_src_configure \
-		--disable-bash-completion \
+		--enable-bash-completion \
+		--with-bash-completion-dir="$(get_bashcompdir)" \
 		--disable-gdu \
 		--disable-hal \
 		--disable-obexftp \
@@ -96,7 +100,6 @@ src_configure() {
 		--enable-documentation \
 		$(use_enable afp) \
 		$(use_enable archive) \
-		$(use_enable avahi) \
 		$(use_enable bluray) \
 		$(use_enable cdda) \
 		$(use_enable fuse) \
@@ -111,11 +114,6 @@ src_configure() {
 		$(use_enable libsecret keyring) \
 		$(use_enable samba) \
 		$(use_enable systemd libsystemd-login) \
-		$(use_enable udisks udisks2)
-}
-
-src_install() {
-	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
-	gnome2_src_install
-	dobashcomp programs/completion/gvfs
+		$(use_enable udisks udisks2) \
+		$(use_enable zeroconf avahi)
 }
