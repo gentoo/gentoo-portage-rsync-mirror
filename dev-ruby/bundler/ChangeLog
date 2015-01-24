@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.71 2015/01/05 18:38:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.72 2015/01/24 09:51:59 graaff Exp $
+
+  24 Jan 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.3.ebuild:
+  Drop ruby21 to create stable candidate.
 
   05 Jan 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.4.ebuild:
   Restrict tests since they require a network connection, fixing bug 527350.

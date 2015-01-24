@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/coffee-script
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script/ChangeLog,v 1.9 2014/08/05 16:00:25 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script/ChangeLog,v 1.11 2015/01/24 09:50:43 ago Exp $
+
+  24 Jan 2015; Agostino Sarubbo <ago@gentoo.org> coffee-script-2.2.0-r1.ebuild:
+  Stable for x86, wrt bug #508540
+
+  24 Jan 2015; Agostino Sarubbo <ago@gentoo.org> coffee-script-2.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #508540
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> coffee-script-2.2.0-r1.ebuild,
   coffee-script-2.2.0-r2.ebuild, coffee-script-2.3.0.ebuild:
