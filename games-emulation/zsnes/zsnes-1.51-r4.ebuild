@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.8 2014/10/13 10:56:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.9 2015/01/24 07:11:54 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic toolchain-funcs multilib pax-utils games
@@ -46,6 +46,7 @@ src_prepare() {
 	# Fix compability with libpng15 wrt #378735
 	# Fix buffer overwrite #257963
 	# Fix gcc47 compile #419635
+	# Fix stack alignment issue #503138
 	epatch \
 		"${FILESDIR}"/${P}-libpng.patch \
 		"${FILESDIR}"/${P}-archopt-july-23-update.patch \
@@ -56,6 +57,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-libpng15.patch \
 		"${FILESDIR}"/${P}-buffer.patch \
 		"${FILESDIR}"/${P}-gcc47.patch \
+		"${FILESDIR}"/${P}-stack-align.patch \
 		"${FILESDIR}"/${P}-cross-compile.patch
 
 	# The sdl detection logic uses AC_PROG_PATH instead of
@@ -70,8 +72,7 @@ src_prepare() {
 		-e '/^CFLAGS=.*local/s:-pipe.*:-Wall -I.":' \
 		-e '/^LDFLAGS=.*local/d' \
 		-e '/\w*CFLAGS=.*fomit/s:-O3.*$STRIP::' \
-		configure.in \
-		|| die "sed failed"
+		configure.in || die
 	eautoreconf
 }
 

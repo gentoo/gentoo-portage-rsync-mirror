@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/zsnes
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.61 2014/10/13 10:56:12 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.62 2015/01/24 07:11:54 mr_bones_ Exp $
+
+  24 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/zsnes-1.51-stack-align.patch, zsnes-1.51-r4.ebuild:
+  Fix stack alignment issue #503138 with patch from nvinson
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> zsnes-1.51-r4.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.

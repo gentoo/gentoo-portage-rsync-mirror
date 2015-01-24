@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.7 2015/01/05 17:46:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.8 2015/01/24 07:15:28 mr_bones_ Exp $
 
 sys-libs/uclibc
 sys-libs/glibc
@@ -16,4 +16,16 @@ sys-libs/pam
 >app-misc/pax-utils-0.7
 
 # packages with a hard dep on sys-libs/glibc
+games-action/descent3
+games-action/descent3-demo
+games-action/lugaru
+games-action/lugaru-demo
+games-action/shadowgrounds-bin
+games-action/shadowgrounds-survivor-bin
+games-action/trine-bin
 games-arcade/marbleblastgold-demo
+games-puzzle/world-of-goo
+games-puzzle/world-of-goo-demo
+games-strategy/defcon-demo
+games-strategy/knights-demo
+games-strategy/majesty-demo
