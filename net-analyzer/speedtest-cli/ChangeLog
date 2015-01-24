@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/speedtest-cli
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/speedtest-cli/ChangeLog,v 1.4 2014/11/28 13:19:43 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/speedtest-cli/ChangeLog,v 1.5 2015/01/24 14:12:18 ago Exp $
+
+  24 Jan 2015; Agostino Sarubbo <ago@gentoo.org> speedtest-cli-0.2.5.ebuild:
+  Add ~ppc and ~ppc64
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> speedtest-cli-0.2.5.ebuild:
   Support python 3.4

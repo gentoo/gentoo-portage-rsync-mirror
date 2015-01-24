@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.3.ebuild,v 1.2 2015/01/23 11:26:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.3.ebuild,v 1.3 2015/01/24 14:29:05 jlec Exp $
 
 EAPI=5
 
@@ -19,15 +19,15 @@ IUSE="debug +threads truetype aqua xscreensaver"
 
 RDEPEND="
 	!aqua? (
-		media-libs/fontconfig[${MULTILIB_USEDEP}]
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXt[${MULTILIB_USEDEP}]
-		truetype? ( x11-libs/libXft[${MULTILIB_USEDEP}] )
-		xscreensaver? ( x11-libs/libXScrnSaver[${MULTILIB_USEDEP}] )
+		>=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]
+		truetype? ( >=x11-libs/libXft-2.3.1-r1[${MULTILIB_USEDEP}] )
+		xscreensaver? ( >=x11-libs/libXScrnSaver-1.2.2-r1[${MULTILIB_USEDEP}] )
 	)
 	~dev-lang/tcl-${PV}[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	!aqua? ( x11-proto/xproto[${MULTILIB_USEDEP}] )"
+	!aqua? ( >=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )"
 
 # Not bumped to 8.6
 #RESTRICT=test

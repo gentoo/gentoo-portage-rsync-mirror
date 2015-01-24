@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.209 2015/01/23 11:26:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.210 2015/01/24 14:29:05 jlec Exp $
+
+  24 Jan 2015; Justin Lecher <jlec@gentoo.org> tk-8.6.3.ebuild:
+  Add minimal dep versions for multilib support, #537400
 
   23 Jan 2015; Justin Lecher <jlec@gentoo.org> tk-8.6.3.ebuild:
   Add multilib support, #537400; thanks Martin Gysel (bearsh) for preparing the
