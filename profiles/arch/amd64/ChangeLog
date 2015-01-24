@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.298 2014/12/14 09:07:59 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.299 2015/01/24 17:04:18 mgorny Exp $
+
+  24 Jan 2015; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.use.stable.mask, package.use.stable.mask:
+  Apply stable-masks to mysql packages, sync no-emul-linux-x86 profile.
 
   14 Dec 2014; Michał Górny <mgorny@gentoo.org> package.use:
   Enable multilib by default on ati- and nvidia-drivers, bug #532492.

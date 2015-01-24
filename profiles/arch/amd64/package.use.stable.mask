@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.107 2015/01/15 13:35:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.108 2015/01/24 17:04:18 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -64,8 +64,12 @@ dev-cpp/gtkmm abi_x86_32
 dev-cpp/libglademm abi_x86_32
 dev-cpp/pangomm abi_x86_32
 dev-db/libiodbc abi_x86_32
+dev-db/mariadb abi_x86_32
+dev-db/mariadb-galera abi_x86_32
 dev-db/myodbc abi_x86_32
 dev-db/mysql abi_x86_32
+dev-db/mysql-cluster abi_x86_32
+dev-db/percona-server abi_x86_32
 dev-db/sqlite abi_x86_32
 dev-db/unixODBC abi_x86_32
 dev-games/physfs abi_x86_32
@@ -461,6 +465,7 @@ virtual/libgudev abi_x86_32
 virtual/libiconv abi_x86_32
 virtual/libudev abi_x86_32
 virtual/libusb abi_x86_32
+virtual/mysql abi_x86_32
 virtual/opengl abi_x86_32
 virtual/pam abi_x86_32
 virtual/pkgconfig abi_x86_32
