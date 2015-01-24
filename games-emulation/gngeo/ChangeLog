@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/gngeo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.23 2015/01/17 16:28:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.24 2015/01/24 05:58:44 mr_bones_ Exp $
+
+*gngeo-0.8 (24 Jan 2015)
+
+  24 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gngeo-0.8-concurrentMake.patch, +files/gngeo-0.8-execstacks.patch,
+  +files/gngeo-0.8-zlib.patch, +gngeo-0.8.ebuild:
+  version bump
 
   17 Jan 2015; Tupone Alfredo <tupone@gentoo.org> gngeo-0.7.ebuild:
   EAPI 5
@@ -91,4 +98,3 @@
 
   29 Jul 2003; Michael Sterrett <msterret@gentoo.org> gngeo-0.5.9a.ebuild:
   Initial ebuild supplied by Paolo and tidied (bug 24702)
-
