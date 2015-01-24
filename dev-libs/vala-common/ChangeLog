@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/vala-common
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.56 2014/12/21 12:23:17 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/ChangeLog,v 1.57 2015/01/24 12:58:19 pacho Exp $
+
+*vala-common-0.26.2 (24 Jan 2015)
+
+  24 Jan 2015; Pacho Ramos <pacho@gentoo.org> +vala-common-0.26.2.ebuild,
+  -vala-common-0.22.1.ebuild:
+  Version bump, drop old
 
 *vala-common-0.26.1 (21 Dec 2014)
 

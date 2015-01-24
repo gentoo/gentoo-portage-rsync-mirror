@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/latexila
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.32 2014/07/23 15:13:15 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.33 2015/01/24 12:45:15 pacho Exp $
+
+*latexila-3.14.3 (24 Jan 2015)
+
+  24 Jan 2015; Pacho Ramos <pacho@gentoo.org> +latexila-3.14.3.ebuild,
+  -latexila-2.10.1.ebuild:
+  Version bump, drop old
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org> latexila-2.12.1.ebuild:
   Stable for x86, wrt bug #512012
