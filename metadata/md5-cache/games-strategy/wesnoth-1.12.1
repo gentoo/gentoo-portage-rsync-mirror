@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
+DEPEND=>=media-libs/libsdl-1.2.7:0[joystick,video,X] media-libs/sdl-net !dedicated? ( >=media-libs/sdl-ttf-2.0.8 >=media-libs/sdl-mixer-1.2[vorbis] >=media-libs/sdl-image-1.2[jpeg,png] fribidi? ( dev-libs/fribidi ) dbus? ( sys-apps/dbus ) sys-libs/zlib x11-libs/pango dev-lang/lua media-libs/fontconfig ) >=dev-libs/boost-1.48[nls,threads] virtual/libintl virtual/pkgconfig sys-devel/gettext sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Battle for Wesnoth - A fantasy turn-based strategy game
+EAPI=5
+HOMEPAGE=http://www.wesnoth.org/
+IUSE=dbus dedicated doc fribidi nls server
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=>=media-libs/libsdl-1.2.7:0[joystick,video,X] media-libs/sdl-net !dedicated? ( >=media-libs/sdl-ttf-2.0.8 >=media-libs/sdl-mixer-1.2[vorbis] >=media-libs/sdl-image-1.2[jpeg,png] fribidi? ( dev-libs/fribidi ) dbus? ( sys-apps/dbus ) sys-libs/zlib x11-libs/pango dev-lang/lua media-libs/fontconfig ) >=dev-libs/boost-1.48[nls,threads] virtual/libintl games-misc/games-envd
+SLOT=0
+SRC_URI=mirror://sourceforge/wesnoth/wesnoth-1.12.1.tar.bz2
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_md5_=b69fe8cd07c3bc7df9ab92a2b4da95de
