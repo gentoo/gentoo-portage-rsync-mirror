@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.74 2015/01/24 10:11:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.75 2015/01/24 10:34:02 graaff Exp $
+
+  24 Jan 2015; Hans de Graaff <graaff@gentoo.org> -bundler-1.3.5.ebuild:
+  Cleanup vulnerable version for bug 523798.
 
   24 Jan 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.3.ebuild:
   Stable for x86, wrt bug #523798

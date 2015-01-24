@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.8.ebuild,v 1.10 2014/10/11 12:31:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.8.ebuild,v 1.11 2015/01/24 10:42:08 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit eutils flag-o-matic gnome2 multilib libtool multilib-minimal
 

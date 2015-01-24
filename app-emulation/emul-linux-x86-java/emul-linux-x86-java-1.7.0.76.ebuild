@@ -1,16 +1,16 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.7.0.76.ebuild,v 1.1 2015/01/23 17:54:04 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.7.0.76.ebuild,v 1.2 2015/01/24 10:46:06 ercpe Exp $
 
 EAPI="5"
 
 inherit java-vm-2 eutils prefix versionator
 
-# This URIs need to be updated when bumping!
-JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html"
-
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
+
+# This URIs need to be updated when bumping!
+JRE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html#jre-${MY_PV}-oth-JPR"
 
 X86_AT="jre-${MY_PV}-linux-i586.tar.gz"
 
