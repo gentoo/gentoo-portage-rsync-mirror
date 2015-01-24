@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.186 2015/01/21 02:46:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.187 2015/01/24 05:05:19 idella4 Exp $
+
+  24 Jan 2015; Ian Delaney <idella4@gentoo.org> +files/xen-4.5-efi.patch,
+  xen-4.5.0.ebuild:
+  add patch to update for IUSE efi, prepared by D. Mannarino from bug #534570,
+  fixes said bug
 
 *xen-4.5.0 (21 Jan 2015)
 *xen-4.4.1-r5 (21 Jan 2015)

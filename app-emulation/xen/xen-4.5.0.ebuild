@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0.ebuild,v 1.1 2015/01/21 02:46:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0.ebuild,v 1.2 2015/01/24 05:05:19 idella4 Exp $
 
 EAPI=5
 
@@ -98,7 +98,7 @@ src_prepare() {
 	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't	drop"
 
 	if use efi; then
-		epatch "${FILESDIR}"/${PN}-4.4-efi.patch
+		epatch "${FILESDIR}"/${PN}-4.5-efi.patch
 		export EFI_VENDOR="gentoo"
 		export EFI_MOUNTPOINT="boot"
 	fi
