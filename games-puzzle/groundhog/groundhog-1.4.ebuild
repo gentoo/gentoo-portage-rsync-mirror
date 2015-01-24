@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.25 2012/07/29 20:49:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.26 2015/01/24 08:39:46 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools games
 
 DEB_VER="9"
@@ -27,23 +27,21 @@ src_prepare() {
 	epatch groundhog_${PV}-${DEB_VER}.diff
 	cd "${S}"
 	sed -e "s:groundhog-1.4/::" -i \
-		debian/patches/sv.po.patch \
-		|| die "sed failed"
-	epatch $(sed -e 's:^:debian/patches/:' debian/patches/series)
-	epatch "${FILESDIR}"/${P}-flags.patch
+		debian/patches/sv.po.patch || die
+	epatch \
+		$(sed -e 's:^:debian/patches/:' debian/patches/series) \
+		"${FILESDIR}"/${P}-flags.patch
 	mv configure.in configure.ac || die
 	AT_M4DIR="m4" eautoreconf
 	sed -i 's:$(localedir):/usr/share/locale:' \
-		$(find . -name 'Makefile.in*') \
-		|| die "sed failed"
+		$(find . -name 'Makefile.in*') || die
 }
 
 src_configure() {
-	egamesconf $(use_enable nls) || die
+	egamesconf $(use_enable nls)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README NEWS AUTHORS TODO
+	default
 	prepgamesdirs
 }
