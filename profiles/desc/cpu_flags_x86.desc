@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cpu_flags_x86.desc,v 1.1 2015/01/23 20:25:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/cpu_flags_x86.desc,v 1.2 2015/01/24 09:02:55 mgorny Exp $
 
 # WARNING! PLEASE DO NOT USE THOSE FLAGS BEFORE WE COMMIT A NEWS
 # ITEM FOR IT!
@@ -27,3 +27,4 @@ sse4_1 - Enable SSE4.1 instruction support
 sse4_2 - Enable SSE4.2 instruction support
 sse4a - Enable SSE4a instruction support
 ssse3 - Use the SSSE3 instruction set (NOT sse3/pni)
+xop - Enable the XOP instruction set
