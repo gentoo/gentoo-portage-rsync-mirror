@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.133 2015/01/18 08:43:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.134 2015/01/24 11:28:46 zlogene Exp $
+
+  24 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> -Net-SSLeay-1.550.ebuild,
+  -Net-SSLeay-1.558.ebuild, -Net-SSLeay-1.640.0.ebuild,
+  Net-SSLeay-1.650.0.ebuild:
+  Stable for all; Drop old.
 
   18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> Net-SSLeay-1.650.0.ebuild:
   Stable for ppc64, wrt bug #535212

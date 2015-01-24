@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.62 2015/01/22 18:21:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.63 2015/01/24 11:19:18 zlogene Exp $
+
+  24 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  IO-Socket-INET6-2.720.0.ebuild:
+  Stable for all
 
   22 Jan 2015; Markus Meier <maekke@gentoo.org> IO-Socket-INET6-2.720.0.ebuild:
   arm stable, bug #535198

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/fujaba
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.15 2015/01/19 19:41:29 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/ChangeLog,v 1.16 2015/01/24 11:30:47 monsieurp Exp $
+
+  24 Jan 2015; Patrice Clement <monsieurp@gentoo.org> fujaba-4.2.0.ebuild:
+  Fix dependencies. Tidy up launcher/jar installation java-pkg_* functions.
 
   19 Jan 2015; Patrice Clement <monsieurp@gentoo.org> fujaba-4.2.0.ebuild:
   Fix bug 536924: HOMEPAGE update, EAPI bump to v5, package cleanup.
