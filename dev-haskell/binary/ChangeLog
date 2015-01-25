@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.50 2015/01/02 10:07:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.51 2015/01/25 21:30:47 qnikst Exp $
+
+  25 Jan 2015; Alexander Vershilov <qnikst@gentoo.org> -binary-0.7.2.1.ebuild,
+  -binary-0.7.2.2.ebuild, binary-0.7.2.3.ebuild:
+  dev-haskell/binary: update binary for ghc-7.10, drop old
 
   02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> binary-0.7.1.0.ebuild:
   Mark as bundled with ghc-7.8.4: bug #534176 by Dennis Schridde.

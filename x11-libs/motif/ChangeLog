@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.59 2015/01/22 08:45:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.60 2015/01/25 21:07:20 maekke Exp $
+
+  25 Jan 2015; Markus Meier <maekke@gentoo.org> motif-2.3.4-r3.ebuild:
+  arm stable, bug #537004
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> motif-2.3.4-r3.ebuild:
   Stable for amd64, wrt bug #537004

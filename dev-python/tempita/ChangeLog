@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.42 2015/01/23 07:56:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.43 2015/01/25 21:19:50 maekke Exp $
+
+  25 Jan 2015; Markus Meier <maekke@gentoo.org> tempita-0.5.3.ebuild:
+  arm stable, bug #537200
 
   23 Jan 2015; Jeroen Roovers <jer@gentoo.org> tempita-0.5.3.ebuild:
   Stable for HPPA (bug #537200).

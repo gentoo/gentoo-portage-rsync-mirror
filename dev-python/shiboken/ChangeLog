@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shiboken
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.55 2014/09/20 23:58:11 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.56 2015/01/25 21:11:39 maekke Exp $
+
+  25 Jan 2015; Markus Meier <maekke@gentoo.org> shiboken-1.2.2.ebuild:
+  arm stable, bug #530538
 
   20 Sep 2014; Davide Pesavento <pesa@gentoo.org> shiboken-1.2.2.ebuild:
   Add missing PYTHON_DEPS and PYTHON_REQUIRED_USE.

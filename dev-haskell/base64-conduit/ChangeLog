@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/base64-conduit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base64-conduit/ChangeLog,v 1.3 2014/07/25 09:16:42 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base64-conduit/ChangeLog,v 1.4 2015/01/25 21:15:04 qnikst Exp $
+
+*base64-conduit-1.0.0.1 (25 Jan 2015)
+
+  25 Jan 2015; Alexander Vershilov <qnikst@gentoo.org>
+  +base64-conduit-1.0.0.1.ebuild:
+  dev-haskell/base64-conduit: bump to 1.0.0.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   base64-conduit-1.0.0.ebuild:

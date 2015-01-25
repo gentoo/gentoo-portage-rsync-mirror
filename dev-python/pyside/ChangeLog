@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.63 2014/09/21 00:42:17 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.64 2015/01/25 21:12:13 maekke Exp $
+
+  25 Jan 2015; Markus Meier <maekke@gentoo.org> pyside-1.2.2.ebuild:
+  arm stable, bug #530538
 
   21 Sep 2014; Davide Pesavento <pesa@gentoo.org> pyside-1.2.2.ebuild:
   Add missing PYTHON_DEPS and PYTHON_REQUIRED_USE. Drop deprecated python

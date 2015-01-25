@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.44 2015/01/08 12:44:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.45 2015/01/25 21:08:17 maekke Exp $
+
+  25 Jan 2015; Markus Meier <maekke@gentoo.org> libecap-1.0.0.ebuild:
+  arm stable, bug #495854
 
   08 Jan 2015; Eray Aslan <eras@gentoo.org> metadata.xml:
   Add myself as maintainer

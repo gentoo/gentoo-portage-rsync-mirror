@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1-r4.ebuild,v 1.1 2014/12/26 11:28:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-2012.1-r4.ebuild,v 1.2 2015/01/25 21:09:04 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/download/${P}-src.tgz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc static-libs"
 
 DOCS=( Announce.txt File_id.diz README.txt REGISTER.txt )
