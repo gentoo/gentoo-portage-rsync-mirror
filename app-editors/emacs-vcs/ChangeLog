@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.180 2015/01/03 12:17:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.181 2015/01/25 20:17:23 ulm Exp $
+
+  25 Jan 2015; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Update flag description.
 
 *emacs-vcs-25.0.50_pre20141231 (03 Jan 2015)
 
