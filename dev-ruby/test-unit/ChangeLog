@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-unit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.105 2014/12/28 06:54:32 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.106 2015/01/25 10:38:40 graaff Exp $
+
+*test-unit-3.0.9 (25 Jan 2015)
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> +test-unit-3.0.9.ebuild:
+  Version bump.
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> test-unit-2.5.5-r2.ebuild:
   Drop jruby.
