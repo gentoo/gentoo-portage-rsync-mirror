@@ -1,12 +1,12 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.383 2014/12/24 17:36:24 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.384 2015/01/25 13:48:25 leio Exp $
 
 *gstreamer-1.4.5 (24 Dec 2014)
 
   24 Dec 2014; Mart Raudsepp <leio@gentoo.org> +gstreamer-1.4.5.ebuild:
   Version bump. Update description. Upstream changes since 1.2.x include:
-  * New GstDeviceMonitor for device proving (e.g list audio/video devices);
+  * New GstDeviceMonitor for device probing (e.g list audio/video devices);
   * QoS handling capability and buffer pool support improvements;
   * Negotiation related performance improvements;
   * much much more as this is a many months overdue next stable cycle upgrade

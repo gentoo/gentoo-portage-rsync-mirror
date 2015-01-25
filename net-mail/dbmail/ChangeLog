@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dbmail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.72 2015/01/24 12:00:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/ChangeLog,v 1.73 2015/01/25 13:43:30 lordvan Exp $
+
+*dbmail-3.2.3 (25 Jan 2015)
+
+  25 Jan 2015; Thomas Raschbacher <lordvan@gentoo.org> +dbmail-3.2.3.ebuild:
+  new version - bugfix release (Segfault on CONDSTORE)
 
   24 Jan 2015; Pacho Ramos <pacho@gentoo.org> -dbmail-3.1.13.ebuild,
   -dbmail-3.1.17.ebuild:
