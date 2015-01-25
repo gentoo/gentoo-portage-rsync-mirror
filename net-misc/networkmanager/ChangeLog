@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.224 2015/01/25 12:52:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.225 2015/01/25 13:15:23 pacho Exp $
+
+  25 Jan 2015; Pacho Ramos <pacho@gentoo.org> networkmanager-1.0.0.ebuild:
+  Add bug reference
 
   25 Jan 2015; Rémi Cardona <remi@gentoo.org> networkmanager-1.0.0.ebuild,
   +files/networkmanager-1.0.0-remove-bashisms.patch:

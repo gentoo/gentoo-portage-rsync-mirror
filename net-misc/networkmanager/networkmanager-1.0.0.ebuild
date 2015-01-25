@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-1.0.0.ebuild,v 1.3 2015/01/25 12:52:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-1.0.0.ebuild,v 1.4 2015/01/25 13:15:23 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -126,7 +126,7 @@ src_prepare() {
 	# Fix lto configure switch, upstream bug #742575 (from 1.0 branch)
 	epatch "${FILESDIR}"/${PN}-1.0.0-lto-switch.patch
 
-	# Fix build with /bin/sh != bash, see bug #536540
+	# Fix build with /bin/sh != bash, see bug #536540, upstream bug #743480
 	epatch "${FILESDIR}/${PN}-1.0.0-remove-bashisms.patch"
 
 	# Force use of /run, avoid eautoreconf, upstream bug #737139

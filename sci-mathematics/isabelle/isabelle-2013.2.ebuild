@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013-r1.ebuild,v 1.2 2015/01/25 13:08:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.2.ebuild,v 1.1 2015/01/25 13:08:28 gienah Exp $
 
 EAPI="5"
 
@@ -10,23 +10,30 @@ MY_PN="Isabelle"
 MY_PV=$(replace_all_version_separators '-')
 MY_P="${MY_PN}${MY_PV}"
 
-JEDIT_PV="20130104"
+JEDIT_PV="20131106"
 JEDIT_PN="jedit_build"
 JEDIT_P="${JEDIT_PN}-${JEDIT_PV}"
 JEDIT_IC_PN="${JEDIT_PN}-isabelle-component"
 JEDIT_IC_P="${JEDIT_IC_PN}-${JEDIT_PV}"
 
-JFREECHART_PV="1.0.14"
+JFREECHART_PV="1.0.14-1"
 JFREECHART_PN="jfreechart"
 JFREECHART_P="${JFREECHART_PN}-${JFREECHART_PV}"
 JFREECHART_IC_PN="${JFREECHART_PN}-isabelle-component"
 JFREECHART_IC_P="${JFREECHART_IC_PN}-${JFREECHART_PV}"
 
+POLYML_PV="5.5.1-1"
+POLYML_PN="polyml"
+POLYML_P="${POLYML_PN}-${POLYML_PV}"
+POLYML_IC_PN="${POLYML_PN}-isabelle-component"
+POLYML_IC_P="${POLYML_IC_PN}-${POLYML_PV}"
+
 DESCRIPTION="Isabelle is a generic proof assistant"
 HOMEPAGE="http://www.cl.cam.ac.uk/research/hvg/Isabelle/index.html"
-SRC_URI="http://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/${MY_P}.tar.gz
+SRC_URI="http://isabelle.in.tum.de/dist/${MY_P}.tar.gz
 		http://isabelle.in.tum.de/components/${JEDIT_P}.tar.gz -> ${JEDIT_IC_P}.tar.gz
-		http://isabelle.in.tum.de/components/${JFREECHART_P}.tar.gz -> ${JFREECHART_IC_P}.tar.gz"
+		http://isabelle.in.tum.de/dist/contrib/${JFREECHART_P}.tar.gz -> ${JFREECHART_IC_P}.tar.gz
+		http://dev.gentoo.org/~gienah/snapshots/${POLYML_IC_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
@@ -42,8 +49,9 @@ DEPEND=">=app-shells/bash-3.0
 	>=dev-java/jfreechart-1.0.14:1.0
 	>=dev-java/itext-2.1.5:0
 	dev-java/xml-xmlbeans:1
+	dev-java/xz-java:0
 	>=dev-lang/ghc-7.6.3
-	>=dev-lang/polyml-5.5.0:=[-portable]
+	>=dev-lang/polyml-5.5.1:=[-portable]
 	>=dev-lang/perl-5.8.8-r2
 	dev-lang/swi-prolog
 	virtual/jdk:1.7
@@ -51,7 +59,7 @@ DEPEND=">=app-shells/bash-3.0
 		virtual/latex-base
 		dev-tex/rail
 	)
-	>=dev-lang/scala-2.10.2 <dev-lang/scala-2.11.1
+	>=dev-lang/scala-2.11.1
 	ledit? (
 		app-misc/ledit
 	)
@@ -73,13 +81,24 @@ JFREECHART_S="${WORKDIR}/${JFREECHART_P}"
 TARGETDIR="/usr/share/Isabelle"${MY_PV}
 LIBDIR="/usr/"$(get_libdir)"/Isabelle"${MY_PV}
 
-LIBRARY_PKGS="scala,itext,jcommon-1.0,jfreechart-1.0,xml-xmlbeans-1"
+# Notes on QA warnings: * Class files not found via DEPEND in package.env
+# Stuff with $ in the name appear to be spurious:
+# isabelle/Markup_Tree$$anonfun$results$1$1.class
+# scala/tools/nsc/backend/jvm/GenJVM$BytecodeGenerator$$anonfun$computeLocalVarsIndex$1.class
+# It wants javafx, I am unsure how to fix this. I test isabelle with the Sun JDK:
+# javafx/application/Platform.class               javafx
+# Presumably the user can provide the jEdit plugins if they are necessary:
+# marker/MarkerSetsPlugin.class                   http://plugins.jedit.org/plugins/?MarkerSets
+# projectviewer/gui/OptionPaneBase.class          http://plugins.jedit.org/plugins/?ProjectViewer
+
+LIBRARY_PKGS="ant-core,itext,jcommon-1.0,jfreechart-1.0,scala,xml-xmlbeans-1,xz-java"
 
 src_unpack() {
 	unpack "${MY_P}.tar.gz"
 	pushd "${S}/contrib" || die
 	unpack ${JEDIT_IC_P}.tar.gz
 	unpack ${JFREECHART_IC_P}.tar.gz
+	unpack ${POLYML_IC_P}.tar.gz
 }
 
 pkg_setup() {
@@ -90,7 +109,7 @@ src_prepare() {
 	java-pkg-2_src_prepare
 	java-pkg_getjars ${LIBRARY_PKGS}
 	epatch "${FILESDIR}/${PN}-2013-gentoo-settings.patch"
-	epatch "${FILESDIR}/${PN}-2013-classpath.patch"
+	epatch "${FILESDIR}/${PN}-2013.2-classpath.patch"
 	polymlver=$(poly -v | cut -d' ' -f2)
 	polymlarch=$(poly -v | cut -d' ' -f9 | cut -d'-' -f1)
 	sed -e "s@5.5.0@${polymlver}@g" \
@@ -113,7 +132,7 @@ src_prepare() {
 	# this example fails to compile with swi-prolog 6.5.2, so patch it so that
 	# Isabelle will build, then reverse the patch so that the user can see the
 	# original code.
-	epatch "${FILESDIR}/${PN}-2013-HOL-Predicate_Compile_Examples.patch"
+	epatch "${FILESDIR}/${PN}-2013.2-HOL-Predicate_Compile_Examples.patch"
 	cat <<- EOF >> "${S}/etc/settings"
 
 		ISABELLE_GHC="${ROOT}usr/bin/ghc"
@@ -127,13 +146,14 @@ src_prepare() {
 		#bundled components
 		contrib/${JEDIT_P}
 		contrib/${JFREECHART_P}
+		contrib/${POLYML_P}
 	EOF
 	if use ledit && ! use readline; then
 		epatch "${FILESDIR}/${PN}-2012-reverse-line-editor-order.patch"
 	fi
-	rm -f "${S}/contrib/jfreechart-1.0.14/lib/iText-2.1.5.jar" \
-		"${S}/contrib/jfreechart-1.0.14/lib/jfreechart-1.0.14.jar" \
-		"${S}/contrib/jfreechart-1.0.14/lib/jcommon-1.0.18.jar" \
+	rm -f "${S}/contrib/jfreechart-1.0.14-1/lib/iText-2.1.5.jar" \
+		"${S}/contrib/jfreechart-1.0.14-1/lib/jfreechart-1.0.14.jar" \
+		"${S}/contrib/jfreechart-1.0.14-1/lib/jcommon-1.0.18.jar" \
 		"${S}/lib/classes/ext/scala-actors.jar" \
 		"${S}/lib/classes/ext/scala-compiler.jar" \
 		"${S}/lib/classes/ext/scala-library.jar" \
@@ -145,7 +165,7 @@ src_prepare() {
 src_compile() {
 	einfo "Building Isabelle. This may take some time."
 	./bin/isabelle build -a -b -s -v || die "isabelle build failed"
-	epatch --reverse "${FILESDIR}/${PN}-2013-HOL-Predicate_Compile_Examples.patch"
+	epatch --reverse "${FILESDIR}/${PN}-2013.2-HOL-Predicate_Compile_Examples.patch"
 	if use graphbrowsing
 	then
 		rm -f "${S}/lib/browser/GraphBrowser.jar" \
@@ -159,9 +179,6 @@ src_compile() {
 }
 
 src_install() {
-	exeinto ${TARGETDIR}/bin
-	doexe bin/isabelle-process bin/isabelle
-
 	insinto ${TARGETDIR}
 	doins -r src
 	doins -r lib
@@ -177,42 +194,51 @@ src_install() {
 		# the src/Doc directory stuff in the isabelle package.
 		doins -r src/Doc
 		for i in "./src/Doc/Classes/document/build" \
-		"./src/Doc/Codegen/document/build" \
-		"./src/Doc/Functions/document/build" \
-		"./src/Doc/HOL/document/build" \
-		"./src/Doc/Intro/document/build" \
-		"./src/Doc/IsarImplementation/document/build" \
-		"./src/Doc/IsarRef/document/build" \
-		"./src/Doc/IsarRef/document/showsymbols" \
-		"./src/Doc/LaTeXsugar/document/build" \
-		"./src/Doc/Locales/document/build" \
-		"./src/Doc/Logics/document/build" \
-		"./src/Doc/Main/document/build" \
-		"./src/Doc/Nitpick/document/build" \
-		"./src/Doc/ProgProve/document/build" \
-		"./src/Doc/Ref/document/build" \
-		"./src/Doc/Sledgehammer/document/build" \
-		"./src/Doc/System/document/build" \
-		"./src/Doc/Tutorial/document/build" \
-		"./src/Doc/Tutorial/document/isa-index" \
-		"./src/Doc/ZF/document/build" \
-		"./src/Doc/fixbookmarks" \
-		"./src/Doc/prepare_document" \
-		"./src/Doc/sedindex"
+			"./src/Doc/Codegen/document/build" \
+			"./src/Doc/Datatypes/document/build" \
+			"./src/Doc/fixbookmarks" \
+			"./src/Doc/Functions/document/build" \
+			"./src/Doc/Intro/document/build" \
+			"./src/Doc/IsarImplementation/document/build" \
+			"./src/Doc/IsarRef/document/build" \
+			"./src/Doc/IsarRef/document/showsymbols" \
+			"./src/Doc/JEdit/document/build" \
+			"./src/Doc/LaTeXsugar/document/build" \
+			"./src/Doc/Locales/document/build" \
+			"./src/Doc/Logics/document/build" \
+			"./src/Doc/Main/document/build" \
+			"./src/Doc/Nitpick/document/build" \
+			"./src/Doc/prepare_document" \
+			"./src/Doc/ProgProve/document/build" \
+			"./src/Doc/sedindex" \
+			"./src/Doc/Sledgehammer/document/build" \
+			"./src/Doc/System/document/build" \
+			"./src/Doc/Tutorial/document/build" \
+			"./src/Doc/Tutorial/document/isa-index" \
+			"./src/Doc/ZF/document/build"
 		do
 			exeinto $(dirname "${TARGETDIR}/${i}")
 			doexe ${i}
 		done
 	fi
 
-	for i in "./Isabelle " \
-		"./bin/isabelle" \
+	for i in "./bin/isabelle" \
 		"./bin/isabelle-process" \
+		"./bin/isabelle_scala_script" \
+		"./lib/browser/build" \
+		"./lib/scripts/feeder" \
+		"./lib/scripts/getsettings" \
+		"./lib/scripts/polyml-version" \
+		"./lib/scripts/process" \
+		"./lib/scripts/run-polyml" \
+		"./lib/scripts/run-polyml-5.5.1" \
+		"./lib/scripts/run-smlnj" \
+		"./lib/scripts/unsymbolize" \
+		"./lib/scripts/update_sub_sup" \
+		"./lib/scripts/yxml" \
 		"./lib/Tools/browser" \
 		"./lib/Tools/build" \
-		"./lib/Tools/build_dialog" \
 		"./lib/Tools/components" \
-		"./lib/Tools/dimacs2hol" \
 		"./lib/Tools/display" \
 		"./lib/Tools/doc" \
 		"./lib/Tools/document" \
@@ -225,57 +251,43 @@ src_install() {
 		"./lib/Tools/keywords" \
 		"./lib/Tools/latex" \
 		"./lib/Tools/logo" \
-		"./lib/Tools/make" \
-		"./lib/Tools/mkdir" \
-		"./lib/Tools/mkproject" \
 		"./lib/Tools/mkroot" \
 		"./lib/Tools/options" \
-		"./lib/Tools/print" \
 		"./lib/Tools/scala" \
 		"./lib/Tools/scalac" \
 		"./lib/Tools/tty" \
 		"./lib/Tools/unsymbolize" \
-		"./lib/Tools/usedir" \
+		"./lib/Tools/update_sub_sup" \
 		"./lib/Tools/version" \
 		"./lib/Tools/yxml" \
-		"./lib/browser/build" \
-		"./lib/scripts/feeder" \
-		"./lib/scripts/getsettings" \
-		"./lib/scripts/keywords" \
-		"./lib/scripts/polyml-version" \
-		"./lib/scripts/process" \
-		"./lib/scripts/run-polyml" \
-		"./lib/scripts/run-smlnj" \
-		"./lib/scripts/unsymbolize" \
-		"./lib/scripts/yxml" \
 		"./src/HOL/IMP/export.sh" \
 		"./src/HOL/Library/Sum_of_Squares/neos_csdp_client" \
 		"./src/HOL/Mirabelle/lib/Tools/mirabelle" \
 		"./src/HOL/Mutabelle/lib/Tools/mutabelle" \
 		"./src/HOL/SPARK/Examples/README" \
-		"./src/HOL/TPTP/TPTP_Parser/make_mlyacclib" \
-		"./src/HOL/TPTP/TPTP_Parser/make_tptp_parser" \
+		"./src/HOL/Tools/ATP/scripts/dummy_atp" \
+		"./src/HOL/Tools/ATP/scripts/remote_atp" \
+		"./src/HOL/Tools/Sledgehammer/MaSh/src/compareStats.py" \
+		"./src/HOL/Tools/Sledgehammer/MaSh/src/mash.py" \
+		"./src/HOL/Tools/Sledgehammer/MaSh/src/server.py" \
+		"./src/HOL/Tools/SMT/lib/scripts/remote_smt" \
 		"./src/HOL/TPTP/lib/Tools/tptp_graph" \
 		"./src/HOL/TPTP/lib/Tools/tptp_isabelle" \
 		"./src/HOL/TPTP/lib/Tools/tptp_isabelle_hot" \
 		"./src/HOL/TPTP/lib/Tools/tptp_nitpick" \
 		"./src/HOL/TPTP/lib/Tools/tptp_refute" \
 		"./src/HOL/TPTP/lib/Tools/tptp_sledgehammer" \
-		"./src/HOL/Tools/ATP/scripts/dummy_atp" \
-		"./src/HOL/Tools/ATP/scripts/remote_atp" \
-		"./src/HOL/Tools/Predicate_Compile/lib/scripts/swipl_version" \
-		"./src/HOL/Tools/SMT/lib/scripts/remote_smt" \
-		"./src/HOL/Tools/Sledgehammer/MaSh/src/compareStats.py" \
-		"./src/HOL/Tools/Sledgehammer/MaSh/src/mash.py" \
+		"./src/HOL/TPTP/TPTP_Parser/make_mlyacclib" \
+		"./src/HOL/TPTP/TPTP_Parser/make_tptp_parser" \
 		"./src/Pure/build" \
 		"./src/Pure/build-jars" \
 		"./src/Tools/Code/lib/Tools/codegen" \
 		"./src/Tools/Graphview/lib/Tools/graphview" \
+		"./src/Tools/jEdit/lib/Tools/jedit" \
 		"./src/Tools/Metis/fix_metis_license" \
 		"./src/Tools/Metis/make_metis" \
 		"./src/Tools/Metis/scripts/mlpp" \
-		"./src/Tools/WWW_Find/lib/Tools/wwwfind" \
-		"./src/Tools/jEdit/lib/Tools/jedit"
+		"./src/Tools/WWW_Find/lib/Tools/wwwfind"
 	do
 		exeinto $(dirname "${TARGETDIR}/${i}")
 		doexe ${i}
@@ -291,28 +303,38 @@ src_install() {
 
 	bin/isabelle install -d ${TARGETDIR} "${ED}usr/bin" \
 		|| die "isabelle install failed"
-	newicon lib/icons/isabelle.xpm "${PN}.xpm"
+	newicon lib/icons/"${PN}.xpm" "${PN}.xpm"
+	newicon lib/icons/"${PN}-mini.xpm" "${PN}-mini.xpm"
 	dodoc ANNOUNCE CONTRIBUTORS COPYRIGHT NEWS README
 
 	java-pkg_regjar \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20130104/contrib/Highlight.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20130104/contrib/ErrorList.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20130104/contrib/Console.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20130104/contrib/cobra.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20130104/contrib/js.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20130104/contrib/jedit-5.0.0-patched/jedit.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20130104/contrib/jedit-5.0.0-patched/jars/QuickNotepad.jar" \
-		"${ED}${TARGETDIR}/contrib/jfreechart-1.0.14/jfreechart-1.0.14-demo.jar" \
-		"${ED}${TARGETDIR}/lib/classes/ext/Graphview.jar" \
-		"${ED}${TARGETDIR}/lib/classes/ext/Pure.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/Console.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/ErrorList.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/Highlight.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/idea-icons.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/jedit-5.1.0-patched/jars/QuickNotepad.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/jedit-5.1.0-patched/jedit.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/jsr305-2.0.0.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/MacOSX.jar" \
+		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/SideKick.jar" \
+		"${ED}${TARGETDIR}/contrib/jfreechart-1.0.14-1/jfreechart-1.0.14-demo.jar" \
+		"${ED}${TARGETDIR}/lib/browser/GraphBrowser.jar" \
+		"${ED}${TARGETDIR}/lib/classes/Graphview.jar" \
+		"${ED}${TARGETDIR}/lib/classes/Pure.jar" \
+		"${ED}${TARGETDIR}/lib/classes/scala-actors.jar" \
+		"${ED}${TARGETDIR}/lib/classes/scala-compiler.jar" \
+		"${ED}${TARGETDIR}/lib/classes/scala-library.jar" \
+		"${ED}${TARGETDIR}/lib/classes/scala-reflect.jar" \
+		"${ED}${TARGETDIR}/lib/classes/scala-swing.jar" \
 		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/Console.jar" \
 		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/ErrorList.jar" \
 		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/Highlight.jar" \
+		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/idea-icons.jar" \
 		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/Isabelle-jEdit.jar" \
+		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/jsr305-2.0.0.jar" \
+		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/MacOSX.jar" \
 		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/QuickNotepad.jar" \
 		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/SideKick.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/cobra.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/js.jar" \
 		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jedit.jar"
 }
 
