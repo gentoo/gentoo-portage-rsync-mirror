@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.3 2015/01/18 04:56:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.4 2015/01/25 15:06:13 pesa Exp $
 
 EAPI=5
 
 PLOCALES="cs de fr ja pl ru sl zh_CN zh_TW"
 
-inherit eutils l10n multilib qmake-utils
+inherit eutils l10n multilib qmake-utils virtualx
 
 DESCRIPTION="Lightweight IDE for C++/QML development centering around Qt"
 HOMEPAGE="http://qt-project.org/wiki/Category:Tools::QtCreator"
@@ -29,16 +29,15 @@ fi
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
-# TODO: qbs:qbsprojectmanager, winrt (both require qt5)
 QTC_PLUGINS=(android autotools:autotoolsprojectmanager baremetal bazaar
 	clang:clangcodemodel clearcase cmake:cmakeprojectmanager cvs git
 	ios mercurial perforce python:pythoneditor qnx subversion valgrind)
-IUSE="debug doc examples test ${QTC_PLUGINS[@]%:*}"
+IUSE="debug doc test ${QTC_PLUGINS[@]%:*}"
 
 # minimum Qt version required
 QT_PV="4.8.5:4"
 
-CDEPEND="
+RDEPEND="
 	=dev-libs/botan-1.10*[threads]
 	>=dev-qt/designer-${QT_PV}
 	>=dev-qt/qtcore-${QT_PV}[ssl]
@@ -48,15 +47,12 @@ CDEPEND="
 	>=dev-qt/qtscript-${QT_PV}
 	>=dev-qt/qtsql-${QT_PV}
 	>=dev-qt/qtsvg-${QT_PV}[accessibility]
+	>=sys-devel/gdb-7.4[client(+),python]
 	clang? ( >=sys-devel/clang-3.2:= )
 "
-DEPEND="${CDEPEND}
+DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( >=dev-qt/qttest-${QT_PV} )
-"
-RDEPEND="${CDEPEND}
-	>=sys-devel/gdb-7.2[client(+),python]
-	examples? ( >=dev-qt/qtdemo-${QT_PV} )
 "
 PDEPEND="
 	autotools? ( sys-devel/autoconf )
@@ -74,11 +70,16 @@ src_prepare() {
 	for plugin in "${QTC_PLUGINS[@]#[+-]}"; do
 		if ! use ${plugin%:*}; then
 			einfo "Disabling ${plugin%:*} plugin"
-			sed -i -re "/(^\s+|SUBDIRS\s*\+=\s*)${plugin#*:}\>/d" \
-				src/plugins/plugins.pro \
-				|| die "failed to disable ${plugin%:*} plugin"
+			sed -i -re "/(^\s+|SUBDIRS\s*\+=\s*)(${plugin#*:})\>/d" \
+				src/plugins/plugins.pro || die "failed to disable ${plugin%:*} plugin"
 		fi
 	done
+
+	# disable broken or unreliable tests
+	sed -i -e '/lexer/d' tests/auto/cplusplus/cplusplus.pro || die
+	sed -i -e '/dumpers\.pro/d' tests/auto/debugger/debugger.pro || die
+	sed -i -e '/CONFIG -=/ s/$/ testcase/' tests/auto/extensionsystem/pluginmanager/correctplugins1/plugin?/plugin?.pro || die
+	sed -i -e '/parsertests\.pro/d' tests/auto/valgrind/memcheck/memcheck.pro || die
 
 	# fix translations
 	sed -i -e "/^LANGUAGES =/ s:=.*:= $(l10n_get_locales):" \
@@ -94,18 +95,13 @@ src_configure() {
 	eqmake4 IDE_LIBRARY_BASENAME="$(get_libdir)" \
 		IDE_PACKAGE_MODE=1 \
 		LLVM_INSTALL_DIR="${EPREFIX}/usr" \
-		TEST=$(use test && echo 1 || echo 0) \
+		$(use test && echo BUILD_TESTS=1) \
 		USE_SYSTEM_BOTAN=1
 }
 
 src_test() {
-	echo ">>> Test phase [QTest]: ${CATEGORY}/${PF}"
 	cd tests/auto || die
-
-	EQMAKE4_EXCLUDE="valgrind/*"
-	eqmake4 IDE_LIBRARY_BASENAME="$(get_libdir)"
-
-	default
+	VIRTUALX_COMMAND=default virtualmake
 }
 
 src_install() {

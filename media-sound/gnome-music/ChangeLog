@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/gnome-music
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/ChangeLog,v 1.22 2015/01/19 13:12:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/ChangeLog,v 1.23 2015/01/25 15:07:47 pacho Exp $
+
+*gnome-music-3.14.3-r1 (25 Jan 2015)
+
+  25 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-music-3.14.3-music-dir.patch, +gnome-music-3.14.3-r1.ebuild,
+  -gnome-music-3.14.2.ebuild, -gnome-music-3.14.3.ebuild:
+  Fix call for music directory, upstream bug #743484 (thanks to foser for
+  reporting the bug and the fix); drop old
 
 *gnome-music-3.14.3 (19 Jan 2015)
 

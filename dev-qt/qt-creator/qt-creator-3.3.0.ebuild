@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.3.0.ebuild,v 1.1 2015/01/18 04:56:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.3.0.ebuild,v 1.2 2015/01/25 15:06:13 pesa Exp $
 
 EAPI=5
 
 PLOCALES="cs de fr ja pl ru sl zh_CN zh_TW"
 
-inherit eutils l10n multilib qmake-utils
+inherit eutils l10n multilib qmake-utils virtualx
 
 DESCRIPTION="Lightweight IDE for C++/QML development centering around Qt"
 HOMEPAGE="http://qt-project.org/wiki/Category:Tools::QtCreator"
@@ -37,7 +37,7 @@ IUSE="debug doc test ${QTC_PLUGINS[@]%:*}"
 # minimum Qt version required
 QT_PV="5.3.2:5"
 
-CDEPEND="
+RDEPEND="
 	=dev-libs/botan-1.10*[threads]
 	>=dev-qt/designer-${QT_PV}
 	>=dev-qt/qtconcurrent-${QT_PV}
@@ -55,17 +55,15 @@ CDEPEND="
 	>=dev-qt/qtwidgets-${QT_PV}
 	>=dev-qt/qtx11extras-${QT_PV}
 	>=dev-qt/qtxml-${QT_PV}
+	>=sys-devel/gdb-7.4[client(+),python]
 	clang? ( >=sys-devel/clang-3.2:= )
 	qbs? ( >=dev-util/qbs-1.3.3[qt5] )
 "
-DEPEND="${CDEPEND}
+DEPEND="${RDEPEND}
 	>=dev-qt/linguist-tools-${QT_PV}
 	virtual/pkgconfig
 	doc? ( >=dev-qt/qdoc-${QT_PV} )
 	test? ( >=dev-qt/qttest-${QT_PV} )
-"
-RDEPEND="${CDEPEND}
-	>=sys-devel/gdb-7.2[client(+),python]
 "
 for x in ${PLOCALES}; do
 	# qt translations must be installed for qt-creator translations to work
@@ -90,10 +88,15 @@ src_prepare() {
 		if ! use ${plugin%:*}; then
 			einfo "Disabling ${plugin%:*} plugin"
 			sed -i -re "/(^\s+|SUBDIRS\s*\+=\s*)(${plugin#*:})\>/d" \
-				src/plugins/plugins.pro \
-				|| die "failed to disable ${plugin%:*} plugin"
+				src/plugins/plugins.pro || die "failed to disable ${plugin%:*} plugin"
 		fi
 	done
+
+	# disable broken or unreliable tests
+	sed -i -e '/lexer/d' tests/auto/cplusplus/cplusplus.pro || die
+	sed -i -e '/dumpers\.pro/d' tests/auto/debugger/debugger.pro || die
+	sed -i -e '/CONFIG -=/ s/$/ testcase/' tests/auto/extensionsystem/pluginmanager/correctplugins1/plugin?/plugin?.pro || die
+	sed -i -e '/parsertests\.pro/d' tests/auto/valgrind/memcheck/memcheck.pro || die
 
 	# fix translations
 	sed -i -e "/^LANGUAGES =/ s:=.*:= $(l10n_get_locales):" \
@@ -108,17 +111,13 @@ src_configure() {
 		IDE_PACKAGE_MODE=1 \
 		LLVM_INSTALL_DIR="${EPREFIX}/usr" \
 		QBS_INSTALL_DIR="${EPREFIX}/usr" \
-		TEST=$(use test && echo 1 || echo 0) \
+		$(use test && echo BUILD_TESTS=1) \
 		USE_SYSTEM_BOTAN=1
 }
 
 src_test() {
-	echo ">>> Test phase [QTest]: ${CATEGORY}/${PF}"
 	cd tests/auto || die
-
-	eqmake5 IDE_LIBRARY_BASENAME="$(get_libdir)"
-
-	default
+	VIRTUALX_COMMAND=default virtualmake
 }
 
 src_install() {

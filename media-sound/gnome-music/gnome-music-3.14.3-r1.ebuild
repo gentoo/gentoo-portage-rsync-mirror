@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.14.2.ebuild,v 1.1 2014/12/22 23:38:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.14.3-r1.ebuild,v 1.1 2015/01/25 15:07:47 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -29,6 +29,8 @@ COMMON_DEPEND="
 	media-libs/libmediaart:1.0
 	>=x11-libs/gtk+-3.13.2:3[introspection]
 "
+# xdg-user-dirs-update needs to be there to create needed dirs
+# https://bugzilla.gnome.org/show_bug.cgi?id=731613
 RDEPEND="${COMMON_DEPEND}
 	app-misc/tracker[introspection(+)]
 	|| (
@@ -41,11 +43,18 @@ RDEPEND="${COMMON_DEPEND}
 	media-libs/gst-plugins-base:1.0[introspection]
 	media-plugins/gst-plugins-meta:1.0
 	media-plugins/grilo-plugins:0.2[tracker]
+	x11-misc/xdg-user-dirs
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.26
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	# Fix call for music directory, upstream bug #743484
+	epatch "${FILESDIR}"/${PN}-3.14.3-music-dir.patch
+	gnome2_src_prepare
+}
 
 src_configure() {
 	gnome2_src_configure ITSTOOL="$(type -P true)"

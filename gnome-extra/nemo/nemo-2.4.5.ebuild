@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.2.2.ebuild,v 1.3 2014/07/23 15:18:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.4.5.ebuild,v 1.1 2015/01/25 15:18:30 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils gnome2 python-any-r1 virtualx
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/linuxmint/nemo/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2+ LGPL-2+ FDL-1.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="exif +introspection +l10n packagekit tracker xmp"
 
 COMMON_DEPEND="
@@ -64,7 +64,7 @@ PDEPEND=">=gnome-base/gvfs-0.1.2"
 
 src_prepare() {
 	epatch_user
-	eautoreconf # no configure in tarball
+	eautoreconf
 	gnome2_src_prepare
 }
 
@@ -79,16 +79,11 @@ src_configure() {
 }
 
 src_test() {
-	if ! [[ -f "${EROOT}usr/share/glib-2.0/schemas/org.nemo.gschema.xml" ]]; then
-		ewarn "Skipping tests because Nemo gsettings schema are not installed."
-		ewarn "To run the tests, a version of ${CATEGORY}/${PN} needs to be"
-		ewarn "already installed."
-		return
-	fi
+	# FIXME: this should be handled at eclass level
+	"${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/libnemo-private" || die
+
 	gnome2_environment_reset
 	unset DBUS_SESSION_BUS_ADDRESS
-	export GSETTINGS_BACKEND="memory"
 	cd src # we don't care about translation tests
-	Xemake check
-	unset GSETTINGS_BACKEND
+	GSETTINGS_SCHEMA_DIR="${S}/libnemo-private" GSETTINGS_BACKEND="memory" Xemake check
 }
