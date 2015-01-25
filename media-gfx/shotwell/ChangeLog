@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/shotwell
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.78 2014/12/05 10:31:27 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.79 2015/01/25 18:29:44 jlec Exp $
+
+*shotwell-0.20.2-r1 (25 Jan 2015)
+
+  25 Jan 2015; Justin Lecher <jlec@gentoo.org> +shotwell-0.20.2-r1.ebuild:
+  Fix vala version to 0.26, #537020
 
   05 Dec 2014; Justin Lecher <jlec@gentoo.org> -shotwell-0.15.1.ebuild,
   -shotwell-0.18.0.ebuild, -shotwell-0.18.1.ebuild, -shotwell-0.20.0.ebuild,
