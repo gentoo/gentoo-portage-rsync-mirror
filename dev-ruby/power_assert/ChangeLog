@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/power_assert
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/power_assert/ChangeLog,v 1.1 2015/01/25 07:28:30 graaff Exp $
+
+*power_assert-0.2.2 (25 Jan 2015)
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> +power_assert-0.2.2.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/test-unit.
+
