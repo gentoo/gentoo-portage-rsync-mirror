@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/socat
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.144 2014/10/27 08:51:51 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.145 2015/01/25 08:12:28 jer Exp $
+
+*socat-1.7.3.0 (25 Jan 2015)
+
+  25 Jan 2015; Jeroen Roovers <jer@gentoo.org> +socat-1.7.3.0.ebuild:
+  Version bump (bug #537592).
 
   27 Oct 2014; Jeroen Roovers <jer@gentoo.org> socat-1.7.2.4-r1.ebuild,
   +files/socat-1.7.2.4-linux-3.17.patch:

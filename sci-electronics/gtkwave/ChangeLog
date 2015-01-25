@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gtkwave
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.88 2014/05/23 05:23:12 tomjbe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.89 2015/01/25 08:30:31 tomjbe Exp $
+
+*gtkwave-3.3.64 (25 Jan 2015)
+
+  25 Jan 2015; Thomas Beierlein <tomjbe@gentoo.org> -gtkwave-3.3.46.ebuild,
+  +gtkwave-3.3.64.ebuild:
+  Version bump
 
 *gtkwave-3.3.59 (23 May 2014)
 

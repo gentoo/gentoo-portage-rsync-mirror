@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.46.ebuild,v 1.1 2013/05/06 06:56:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.64.ebuild,v 1.1 2015/01/25 08:30:31 tomjbe Exp $
 
 EAPI="4"
 
@@ -53,7 +53,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	dodoc ANALOG_README.TXT ChangeLog README SYSTEMVERILOG_README.TXT
+	dodoc ChangeLog README
 	if use doc ; then
 		insinto /usr/share/doc/${PF}
 		doins "doc/${PN}.odt"
