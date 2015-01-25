@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/jekyll-2.5.3.ebuild,v 1.1 2014/12/22 23:08:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/jekyll/jekyll-2.5.3.ebuild,v 1.2 2015/01/25 09:13:52 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -22,7 +22,7 @@ IUSE="test"
 ruby_add_rdepend "dev-ruby/classifier-reborn
 	dev-ruby/colorator
 	>=dev-ruby/kramdown-1.3
-	>=dev-ruby/liquid-2.6.1
+	>=dev-ruby/liquid-2.6.1:0
 	>=dev-ruby/mercenary-0.3.3
 	>=dev-ruby/pygments_rb-0.6.0
 	>=dev-ruby/redcarpet-3.1

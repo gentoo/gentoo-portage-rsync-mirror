@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bcat
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.26 2014/11/16 18:15:20 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.27 2015/01/25 09:25:47 graaff Exp $
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> bcat-0.6.2.ebuild,
+  bcat-0.6.2-r1.ebuild, bcat-0.6.2-r2.ebuild:
+  Update blocker on speech-tools now that there are fixed version which no
+  longer collide, bug 418301.
 
   16 Nov 2014; Agostino Sarubbo <ago@gentoo.org> bcat-0.6.2.ebuild:
   Stable for ppc64, wrt bug #493780
