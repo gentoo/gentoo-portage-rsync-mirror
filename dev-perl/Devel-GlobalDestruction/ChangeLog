@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.31 2014/11/22 19:57:32 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.32 2015/01/25 11:22:02 zlogene Exp $
+
+  25 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  Devel-GlobalDestruction-0.50.0-r1.ebuild:
+  Drop prefix
 
   22 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   Devel-GlobalDestruction-0.120.0.ebuild:
