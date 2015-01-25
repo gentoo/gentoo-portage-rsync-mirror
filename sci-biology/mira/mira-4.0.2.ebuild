@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-4.0.2.ebuild,v 1.1 2015/01/23 11:48:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-4.0.2.ebuild,v 1.2 2015/01/25 17:04:35 jlec Exp $
 
 EAPI=5
 
@@ -39,7 +39,8 @@ DOCS=( AUTHORS GETTING_STARTED NEWS README HELP_WANTED THANKS )
 src_prepare() {
 	find -name 'configure*' -or -name 'Makefile*' | xargs sed -i 's/flex++/flex -+/' || die
 	epatch \
-		"${FILESDIR}"/${PN}-3.4.0.2-boost-1.50.patch
+		"${FILESDIR}"/${PN}-3.4.0.2-boost-1.50.patch \
+		"${FILESDIR}"/${P}-cout.patch
 
 	sed \
 		-e "s:-O[23]::g" \
