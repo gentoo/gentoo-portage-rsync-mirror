@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1-r2.ebuild,v 1.1 2015/01/01 23:31:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.2_rc1-r2.ebuild,v 1.2 2015/01/24 23:18:13 mgorny Exp $
 
 EAPI=5
 
@@ -61,6 +61,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.2_rc1-python.patch"
 	# for net-libs/libgssglue
 	epatch "${FILESDIR}/${PN}-3.2_rc1-gssapi.patch"
+	epatch_user
 
 	# Bugs #120001, #167844 and probably more. See patch for description.
 	use hardened && epatch "${FILESDIR}/distcc-hardened.patch"

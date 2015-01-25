@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.239 2015/01/01 23:31:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.240 2015/01/24 23:18:13 mgorny Exp $
+
+  24 Jan 2015; Michał Górny <mgorny@gentoo.org> distcc-3.1-r10.ebuild,
+  distcc-3.2_rc1-r2.ebuild:
+  Add missing epatch_user.
 
 *distcc-3.2_rc1-r2 (01 Jan 2015)
 
