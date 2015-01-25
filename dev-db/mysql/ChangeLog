@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.716 2015/01/24 20:43:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.718 2015/01/25 10:19:08 ago Exp $
+
+  25 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.22.ebuild:
+  Stable for sparc, wrt bug #525296
+
+  25 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.22.ebuild:
+  Stable for x86, wrt bug #525296
 
   24 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.22.ebuild:
   Stable for ppc, wrt bug #525296

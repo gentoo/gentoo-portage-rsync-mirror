@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1042 2015/01/24 15:40:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1043 2015/01/25 10:20:47 ago Exp $
+
+  25 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gcc-4.9.2.ebuild:
+  Add ~alpha, wrt bug #536874
 
   24 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gcc-4.9.2.ebuild:
   Add ~ia64, wrt bug #536874
