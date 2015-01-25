@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.23 2015/01/01 21:28:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.24 2015/01/25 05:06:09 idella4 Exp $
+
+*pbr-0.8.2-r1 (25 Jan 2015)
+
+  25 Jan 2015; Ian Delaney <idella4@gentoo.org> +pbr-0.8.2-r1.ebuild,
+  pbr-0.8.0.ebuild:
+  revbump; minor tidy, exclude tests found to require installed state of package
+  (which pass once installed), remove un-needed run by flake8 in test phase
 
   01 Jan 2015; Markus Meier <maekke@gentoo.org> pbr-0.8.2.ebuild:
   arm stable, bug #530600
