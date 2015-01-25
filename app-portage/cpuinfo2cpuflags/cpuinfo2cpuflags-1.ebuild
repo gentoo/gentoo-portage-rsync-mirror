@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/cpuinfo2cpuflags-1.ebuild,v 1.1 2015/01/23 23:09:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/cpuinfo2cpuflags-1.ebuild,v 1.2 2015/01/25 22:53:07 mgorny Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND=${PYTHON_DEPS}
 REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
 src_install() {
-	python_foreach_impl python_doscript *.py
+	python_foreach_impl python_newscript "${PN}-x86"{.py,}
 }
 
 pkg_postinst() {

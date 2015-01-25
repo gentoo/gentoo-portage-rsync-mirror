@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9704 2015/01/25 15:52:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9705 2015/01/25 22:39:23 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jan 2015; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
+  Drop berlios.de mirrors (bug #494678).
 
   25 Jan 2015; Justin Lecher <jlec@gentoo.org> license_groups:
   Drop Mendeley-EULA and add Mendeley-terms to EULA group, #536686
