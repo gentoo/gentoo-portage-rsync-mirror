@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/colored
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/colored/ChangeLog,v 1.5 2014/10/30 13:50:18 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/colored/ChangeLog,v 1.6 2015/01/25 09:50:32 graaff Exp $
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> colored-1.2.ebuild:
+  Install documentation. Add ruby22. Fix HOMEPAGE.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> colored-1.2.ebuild:
   Drop jruby target.

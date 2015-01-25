@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/vcr
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vcr/ChangeLog,v 1.1 2015/01/25 09:39:27 graaff Exp $
+
+*vcr-2.9.3 (25 Jan 2015)
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> +vcr-2.9.3.ebuild,
+  +metadata.xml:
+  Initial import. New test dependency for www-apps/nanoc.
+

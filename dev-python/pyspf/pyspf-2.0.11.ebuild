@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.9.ebuild,v 1.1 2014/05/03 05:58:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/pyspf-2.0.11.ebuild,v 1.1 2015/01/25 09:31:11 idella4 Exp $
 
 EAPI="5"
 
@@ -19,8 +19,8 @@ IUSE="ipv6 test"
 
 # >=python-3.3 comes with the built-in ipaddress module
 RDEPEND="dev-python/authres[${PYTHON_USEDEP}]
-	$(python_gen_cond_dep 'dev-python/ipaddr[${PYTHON_USEDEP}]' 'python2*')
-	$(python_gen_cond_dep 'dev-python/pydns:2[${PYTHON_USEDEP}]' 'python2*')
+	$(python_gen_cond_dep '>=dev-python/ipaddr-2.1.10[${PYTHON_USEDEP}]' python2_7)
+	$(python_gen_cond_dep 'dev-python/pydns:2[${PYTHON_USEDEP}]' python2_7)
 	$(python_gen_cond_dep 'dev-python/pydns:3[${PYTHON_USEDEP}]' 'python3*')"
 
 DEPEND="test? ( ${RDEPEND}

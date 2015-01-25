@@ -1,6 +1,20 @@
 # ChangeLog for www-apps/nanoc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.13 2014/08/10 20:14:14 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.17 2015/01/25 09:54:24 graaff Exp $
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> -nanoc-3.6.4.ebuild:
+  Cleanup.
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> nanoc-3.7.5.ebuild:
+  Fix HOMEPAGE.
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> nanoc-3.7.5.ebuild:
+  Drop trailing '.' from DESCRIPTION.
+
+*nanoc-3.7.5 (25 Jan 2015)
+
+  25 Jan 2015; Hans de Graaff <graaff@gentoo.org> +nanoc-3.7.5.ebuild:
+  Version bump. Add ruby21.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> nanoc-3.6.4.ebuild,
   nanoc-3.6.5.ebuild:
