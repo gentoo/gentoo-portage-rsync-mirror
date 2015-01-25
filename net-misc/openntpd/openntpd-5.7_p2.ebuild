@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-5.7_p1.ebuild,v 1.1 2015/01/12 18:09:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-5.7_p2.ebuild,v 1.1 2015/01/25 00:54:30 ottxor Exp $
 
 EAPI=5
 
-inherit eutils systemd user
+inherit autotools eutils systemd user
 
 DESCRIPTION="Lightweight NTP server ported from OpenBSD"
 HOMEPAGE="http://www.openntpd.org/"
@@ -43,11 +43,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-runpath.patch"
-	epatch "${FILESDIR}/${P}-driftpath.patch"
-	epatch "${FILESDIR}/${P}-signal.patch"
-	epatch "${FILESDIR}/${P}-gentoopool.patch"
-	epatch "${FILESDIR}/${P}-warn-s-failure.patch"
+	epatch "${FILESDIR}/${PN}-5.7_p1-runpath.patch"
+	epatch "${FILESDIR}/${PN}-5.7_p1-driftpath.patch"
+	epatch "${FILESDIR}/${PN}-5.7_p1-gentoopool.patch"
+	epatch "${FILESDIR}/${P}-adjtimex.patch"
+	epatch "${FILESDIR}/${P}-proctitle.patch"
+	#Due to last patch
+	eautoreconf
 }
 
 src_configure() {

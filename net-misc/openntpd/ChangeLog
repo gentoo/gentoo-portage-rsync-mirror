@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.129 2015/01/12 18:09:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.130 2015/01/25 00:54:30 ottxor Exp $
+
+*openntpd-5.7_p2 (25 Jan 2015)
+
+  25 Jan 2015; Christoph Junghans <ottxor@gentoo.org>
+  +files/openntpd-5.7_p2-adjtimex.patch, +files/openntpd-5.7_p2-proctitle.patch,
+  +openntpd-5.7_p2.ebuild, -files/openntpd-5.7_p1-signal.patch,
+  -files/openntpd-5.7_p1-warn-s-failure.patch, -openntpd-5.7_p1.ebuild:
+  version bump (bug #537292, thx to Paul)
 
 *openntpd-5.7_p1 (12 Jan 2015)
 
