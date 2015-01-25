@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.308 2015/01/25 11:14:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.309 2015/01/25 11:59:10 pacho Exp $
+
+  25 Jan 2015; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.4.7-r200.ebuild,
+  -webkit-gtk-2.4.7.ebuild, webkit-gtk-2.4.8-r200.ebuild,
+  webkit-gtk-2.4.8.ebuild:
+  gir-nvidia-hangs.patch was not really working and, also, upstream supposedly
+  fixed the bug in a different way also in 2.4.8 (not only 2.6.x)
 
   25 Jan 2015; Agostino Sarubbo <ago@gentoo.org> webkit-gtk-2.4.8-r200.ebuild,
   webkit-gtk-2.4.8.ebuild:

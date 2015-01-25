@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9700 2015/01/24 09:02:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9701 2015/01/25 11:54:12 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +arch/arm/armv7a/package.use.mask, arch/arm/package.use.mask:
+  Unmask webkit-gtk[jit] only on arm7 profiles (#523400)
 
   24 Jan 2015; Michał Górny <mgorny@gentoo.org> desc/cpu_flags_x86.desc:
   Add XOP as used by media-video/ffmpeg.

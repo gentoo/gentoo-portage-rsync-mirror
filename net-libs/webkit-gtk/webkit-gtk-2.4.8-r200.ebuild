@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.8-r200.ebuild,v 1.4 2015/01/25 11:14:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.8-r200.ebuild,v 1.5 2015/01/25 11:59:10 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -164,7 +164,8 @@ src_prepare() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=463960
 	# http://osdyson.org/issues/161
 	# https://bugs.webkit.org/show_bug.cgi?id=125651
-	epatch "${FILESDIR}"/${PN}-2.2.5-gir-nvidia-hangs.patch
+#	FIXME: it doesn't really work for us
+#	epatch "${FILESDIR}"/${PN}-2.2.5-gir-nvidia-hangs.patch
 
 	# Debian patches to fix support for some arches
 	# https://bugs.webkit.org/show_bug.cgi?id=129540

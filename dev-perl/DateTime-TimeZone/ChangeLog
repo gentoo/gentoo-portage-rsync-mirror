@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.247 2015/01/25 11:24:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.248 2015/01/25 11:41:56 zlogene Exp $
+
+  25 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  DateTime-TimeZone-1.810.0.ebuild:
+  Add ~amd64-linux keyword
 
   25 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   DateTime-TimeZone-1.810.0.ebuild:
