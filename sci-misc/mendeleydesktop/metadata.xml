@@ -5,6 +5,10 @@
     <email>miknix@gentoo.org</email>
     <name>Angelo Arrifano</name>
   </maintainer>
+  <maintainer>
+    <email>xmw@gentoo.org</email>
+    <name>Michael Weber</name>
+  </maintainer>
   <longdescription>
 Mendeley(TM) is a free reference manager and academic social network that can 
 help you organize your research, collaborate with others online, and discover 

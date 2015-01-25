@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.240 2015/01/25 11:54:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.241 2015/01/25 15:42:06 pacho Exp $
 
 # Markus Meier <maekke@gentoo.org> (17 Jan 2015)
 # Unkeyworded deps, bug #536226
@@ -269,7 +269,7 @@ sys-libs/db java
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)
 # remove mask if/when media-gfx/argyllcms is keywored here.
-x11-misc/colord extra-print-profiles
+x11-misc/colord argyllcms extra-print-profiles
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires app-office/unoconv, which requires virtual/ooo, which is not

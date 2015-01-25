@@ -7654,9 +7654,9 @@ x11-misc/bmpanel:libev - Use the libev event loop interface
 x11-misc/bmpanel:libevent - Use the libevent event loop interface
 x11-misc/bumblebee:bbswitch - Add dependency on sys-kernel/bbswitch for PM feature
 x11-misc/cdm:consolekit - Enable native consolekit support
+x11-misc/colord:argyllcms - Enable ArgyllCMS sensor
 x11-misc/colord:extra-print-profiles - Generate extra print profiles. Warning: significant build time and memory requirements.
 x11-misc/colord:gusb - Enable dev-libs/libgusb support, needed for colorimeter drivers
-x11-misc/colord:vala - Generate bindings for dev-lang/vala
 x11-misc/compton:drm - Enable VSync with DRM_IOCTL_WAIT_VBLANK
 x11-misc/compton:opengl - Enable VSync with SGI_swap_control OpenGL extension
 x11-misc/dmenu:xft - Enable unofficial x11-libs/libXft support

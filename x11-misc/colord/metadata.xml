@@ -3,10 +3,10 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
+		<flag name="argyllcms">Enable ArgyllCMS sensor</flag>
 		<flag name="extra-print-profiles">Generate extra print profiles.
 			Warning: significant build time and memory requirements.</flag>
 		<flag name="gusb">Enable <pkg>dev-libs/libgusb</pkg> support, needed for
 			colorimeter drivers</flag>
-		<flag name="vala">Generate bindings for <pkg>dev-lang/vala</pkg></flag>
 	</use>
 </pkgmetadata>

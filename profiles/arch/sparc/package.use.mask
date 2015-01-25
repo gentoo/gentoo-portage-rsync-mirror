@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.183 2015/01/18 10:07:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.184 2015/01/25 15:42:06 pacho Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (10 Jan 2014)
 # Missing keywords
@@ -126,7 +126,7 @@ net-misc/modemmanager qmi qmi-newest
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)
 # remove mask if/when media-gfx/argyllcms is keywored here.
-x11-misc/colord extra-print-profiles
+x11-misc/colord argyllcms extra-print-profiles
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # requires firefox, which is not keyworded on sparc
