@@ -1,27 +1,32 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-3.2.0.ebuild,v 1.1 2014/04/06 01:47:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/shogun-3.2.0.ebuild,v 1.2 2015/01/25 17:41:02 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3} )
-inherit cmake-utils multilib versionator toolchain-funcs python-single-r1
+PYTHON_COMPAT=( python2_7 python{3,4} )
+
+inherit cmake-utils multilib python-single-r1 toolchain-funcs versionator
 
 MYPV=$(get_version_component_range 1-2)
 MYPD=${PN}-data-0.8
 
 DESCRIPTION="Large Scale Machine Learning Toolbox"
 HOMEPAGE="http://shogun-toolbox.org/"
-SRC_URI="ftp://shogun-toolbox.org/shogun/releases/${MYPV}/sources/${P}.tar.bz2
+SRC_URI="
+	ftp://shogun-toolbox.org/shogun/releases/${MYPV}/sources/${P}.tar.bz2
 	test? ( ftp://shogun-toolbox.org/shogun/data/${MYPD}.tar.bz2 )
 	examples? ( ftp://shogun-toolbox.org/shogun/data/${MYPD}.tar.bz2 )"
 
 LICENSE="GPL-3 free-noncomm"
 SLOT="0/16"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-
 IUSE="doc examples lua mono octave python R ruby static-libs test"
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+	test? ( python )
+	"
 
 RDEPEND="
 	app-arch/bzip2:=
@@ -62,12 +67,19 @@ DEPEND="${RDEPEND}
 	python? ( >=dev-lang/swig-2.0.4 test? ( sci-libs/scipy ) )
 	R? ( >=dev-lang/swig-2.0.4 )
 	ruby? ( >=dev-lang/swig-2.0.4 )
-	test? ( dev-python/jinja )"
+	test? (
+		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-cpp/gmock
+		)"
 
 # javamodular needs jblas (painful to package properly)
 # permodular work in progress (as 3.2.0)
 # could actually support multiple pythons, multiple rubys
 # feel free to do work for it
+
+PATCHES=(
+	"${FILESDIR}"/${P}-atlas.patch
+)
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
@@ -88,6 +100,7 @@ src_configure() {
 		-DENABLE_COVERAGE=OFF
 		-DJavaModular=OFF
 		-DPerlModular=OFF
+		-DLIB_INSTALL_DIR=$(get_libdir)
 		$(cmake-utils_use lua LuaModular)
 		$(cmake-utils_use mono CSharpModular)
 		$(cmake-utils_use octave OctaveModular)

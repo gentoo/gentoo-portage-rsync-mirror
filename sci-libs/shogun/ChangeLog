@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/shogun
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/ChangeLog,v 1.8 2014/04/06 01:47:16 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shogun/ChangeLog,v 1.9 2015/01/25 17:41:02 jlec Exp $
+
+  25 Jan 2015; Justin Lecher <jlec@gentoo.org> shogun-3.2.0.ebuild,
+  +files/shogun-3.2.0-atlas.patch, metadata.xml:
+  Fix buildproblems with atlas detection, #507304; be multilib friendly,
+  #531034; do not fetch gmock for tests, #528566
 
 *shogun-3.2.0 (06 Apr 2014)
 
