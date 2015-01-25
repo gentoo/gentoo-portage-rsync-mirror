@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chef
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.27 2014/12/14 10:29:27 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/ChangeLog,v 1.28 2015/01/25 12:13:42 pacho Exp $
+
+  25 Jan 2015; Pacho Ramos <pacho@gentoo.org> -chef-10.24.0.ebuild:
+  Drop old
 
 *chef-10.24.0-r1 (14 Dec 2014)
 

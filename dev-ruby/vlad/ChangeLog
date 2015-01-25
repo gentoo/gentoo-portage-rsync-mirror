@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/vlad
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/ChangeLog,v 1.29 2014/08/05 16:01:02 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/ChangeLog,v 1.30 2015/01/25 12:09:30 mrueg Exp $
+
+  25 Jan 2015; Manuel Rüger <mrueg@gentoo.org> vlad-2.6.3.ebuild:
+  Add ruby 2.2 target.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> vlad-2.6.3.ebuild:
   Remove trailing '.' from DESCRIPTION.
