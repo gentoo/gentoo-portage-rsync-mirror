@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/parrot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.89 2014/12/16 08:54:24 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.90 2015/01/26 04:15:41 patrick Exp $
+
+  26 Jan 2015; Patrick Lauer <patrick@gentoo.org> parrot-6.11.0.ebuild:
+  Add libffi dep
 
 *parrot-6.11.0 (16 Dec 2014)
 
