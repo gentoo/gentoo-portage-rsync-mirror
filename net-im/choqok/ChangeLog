@@ -1,6 +1,12 @@
 # ChangeLog for net-im/choqok
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.42 2014/08/05 18:34:12 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.43 2015/01/26 19:15:31 johu Exp $
+
+*choqok-1.5 (26 Jan 2015)
+
+  26 Jan 2015; Johannes Huber <johu@gentoo.org> +choqok-1.5.ebuild,
+  metadata.xml:
+  Version bump, bug #537828.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> choqok-1.4.ebuild:
   Remove trailing '.' from DESCRIPTION.

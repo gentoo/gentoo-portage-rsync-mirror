@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.305 2015/01/22 07:44:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.306 2015/01/26 19:14:24 johu Exp $
+
+  26 Jan 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Expand package.use.mask for telepathy use flag.
 
   22 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Unmask Qt 4.8.6 since qtchooser has been keyworded

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.228 2015/01/25 15:42:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.229 2015/01/26 19:14:24 johu Exp $
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
 # New dependencies for wayland support in Gnome 3.14
@@ -172,6 +172,7 @@ app-emulation/qemu seccomp
 # Mask telepathy, no stable net-libs/telepathy-qt, bug #441456
 kde-base/krdc telepathy
 kde-base/krfb telepathy
+net-im/choqok telepathy
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc
