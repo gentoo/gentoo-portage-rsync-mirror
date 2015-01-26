@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.228 2014/12/15 05:50:48 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.230 2015/01/26 13:53:45 dlan Exp $
 
 EAPI="5"
 
@@ -223,9 +223,6 @@ src_prepare() {
 		sed -i 's/ifndef __FAST_MATH__/if 0/g' configure.ac || die
 	fi
 
-	# _FORTIFY_SOURCE is set to 2 by default on Gentoo, remove redefine warnings.
-	sed -i '/_FORTIFY_SOURCE.*, 2,/d' configure.ac || die
-
 	# Bootstrap when we are on a git checkout.
 	if [[ "${PV%9999}" != "${PV}" ]] ; then
 		./bootstrap
@@ -439,6 +436,11 @@ src_configure() {
 		--disable-wasapi
 
 		# ^ We don't have these disabled libraries in the Portage tree yet.
+
+	# _FORTIFY_SOURCE is set to 2 in config.h, which is also the default value on Gentoo.
+	# Other values of _FORTIFY_SOURCE may break the build (bug 523144), so definition should not be removed from config.h.
+	# To prevent redefinition warnings, we undefine _FORTIFY_SOURCE at the very start of config.h file
+	sed -i '1i#undef _FORTIFY_SOURCE' "${S}"/config.h || die
 }
 
 src_test() {

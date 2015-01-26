@@ -1,6 +1,15 @@
 # ChangeLog for media-video/vlc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.923 2014/12/18 13:41:39 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.925 2015/01/26 13:53:45 dlan Exp $
+
+  26 Jan 2015; Yixun Lan <dlan@gentoo.org> vlc-2.1.2.ebuild, vlc-2.1.4.ebuild,
+  vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:
+   Unquoted Variable warning
+
+  26 Jan 2015; Yixun Lan <dlan@gentoo.org> vlc-2.1.2.ebuild, vlc-2.1.4.ebuild,
+  vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:
+  Fix possible lack of _FORTIFY_SOURCE definition, bug 523144. proxy for
+  maintainer
 
   18 Dec 2014; Michael Palimaka <kensington@gentoo.org> vlc-2.1.9999.ebuild:
   Don't try to reference USE flag that doesn't exist, again.
