@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparseconfig/suitesparseconfig-4.2.1.ebuild,v 1.7 2015/01/18 08:45:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparseconfig/suitesparseconfig-4.2.1.ebuild,v 1.8 2015/01/26 10:32:34 ago Exp $
 
 EAPI=5
 
@@ -12,5 +12,5 @@ SRC_URI="http://dev.gentoo.org/~bicatali/distfiles/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~mips ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha amd64 ~arm hppa ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="static-libs"

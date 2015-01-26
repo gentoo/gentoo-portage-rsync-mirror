@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/gzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.130 2015/01/18 08:48:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.131 2015/01/26 10:38:30 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gzip-1.6.ebuild:
+  Stable for x86, wrt bug #534810
 
   18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gzip-1.6.ebuild:
   Stable for ppc64, wrt bug #534810

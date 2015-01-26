@@ -1,0 +1,12 @@
+DEFINED_PHASES=install prepare
+DEPEND=sys-libs/ncurses sci-libs/fftw:2.1 virtual/pkgconfig
+DESCRIPTION=Transfer sound from gramophone records to CD
+EAPI=5
+HOMEPAGE=http://www.opensourcepartners.nl/~costar/gramofile
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/ncurses sci-libs/fftw:2.1
+SLOT=0
+SRC_URI=mirror://debian/pool/main/g/gramofile/gramofile_1.6.orig.tar.gz mirror://debian/pool/main/g/gramofile/gramofile_1.6-9.diff.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=0e7fb81a50cb8bee991437b96131c531

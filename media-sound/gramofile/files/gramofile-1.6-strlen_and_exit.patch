@@ -1,6 +1,5 @@
-diff -ur gramofile-1.6.orig/bplaysrc/Makefile gramofile-1.6/bplaysrc/Makefile
---- gramofile-1.6.orig/bplaysrc/Makefile	2009-05-12 22:39:32.000000000 +0300
-+++ gramofile-1.6/bplaysrc/Makefile	2009-05-12 22:45:53.000000000 +0300
+--- a/bplaysrc/Makefile
++++ b/bplaysrc/Makefile
 @@ -6,13 +6,12 @@
          ../clrscr.o ../secshms.o
  #SRCS = bplay.c sndfunc.o shmbuf.c
@@ -17,9 +16,8 @@ diff -ur gramofile-1.6.orig/bplaysrc/Makefile gramofile-1.6/bplaysrc/Makefile
  LIBS = -lncurses
  
  # For FreeBSD (and maybe others), use these:
-diff -ur gramofile-1.6.orig/gramofile.c gramofile-1.6/gramofile.c
---- gramofile-1.6.orig/gramofile.c	2009-05-12 22:39:32.000000000 +0300
-+++ gramofile-1.6/gramofile.c	2009-05-12 22:41:25.000000000 +0300
+--- a/gramofile.c
++++ b/gramofile.c
 @@ -11,6 +11,7 @@
  #include "splashscr.h"
  #include <signal.h>
@@ -28,9 +26,8 @@ diff -ur gramofile-1.6.orig/gramofile.c gramofile-1.6/gramofile.c
  #include <string.h>
  #ifndef OLD_CURSES
  #include <ncurses.h>
-diff -ur gramofile-1.6.orig/Makefile gramofile-1.6/Makefile
---- gramofile-1.6.orig/Makefile	2009-05-12 22:39:32.000000000 +0300
-+++ gramofile-1.6/Makefile	2009-05-12 22:45:28.000000000 +0300
+--- a/Makefile
++++ b/Makefile
 @@ -14,13 +14,12 @@
  OBJS = $(SRCS:.c=.o)
  SHELL = /bin/sh
@@ -47,9 +44,8 @@ diff -ur gramofile-1.6.orig/Makefile gramofile-1.6/Makefile
  DEPS = $(OBJS) makebplay
  LIBS = -lncurses -lrfftw -lfftw -lm
  COPY_A = -a
-diff -ur gramofile-1.6.orig/signpr_cmf3.c gramofile-1.6/signpr_cmf3.c
---- gramofile-1.6.orig/signpr_cmf3.c	2009-05-12 22:39:32.000000000 +0300
-+++ gramofile-1.6/signpr_cmf3.c	2009-05-12 22:41:09.000000000 +0300
+--- a/signpr_cmf3.c
++++ b/signpr_cmf3.c
 @@ -34,6 +34,7 @@
  #include <stdlib.h>
  #include <stdio.h>

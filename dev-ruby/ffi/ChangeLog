@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.91 2015/01/22 08:46:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.92 2015/01/26 10:31:38 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ffi-1.9.6-r1.ebuild:
+  Stable for x86, wrt bug #537072
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ffi-1.9.6-r1.ebuild:
   Stable for amd64, wrt bug #537072

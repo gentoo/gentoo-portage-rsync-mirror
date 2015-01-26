@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.83 2015/01/22 08:43:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.84 2015/01/26 10:34:39 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> geda-1.8.2.ebuild:
+  Stable for x86, wrt bug #535872
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> geda-1.8.2.ebuild:
   Stable for amd64, wrt bug #535872

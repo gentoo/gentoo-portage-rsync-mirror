@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/suitesparseconfig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparseconfig/ChangeLog,v 1.9 2015/01/18 08:45:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/suitesparseconfig/ChangeLog,v 1.10 2015/01/26 10:32:34 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> suitesparseconfig-4.2.1.ebuild:
+  Stable for x86, wrt bug #534624
 
   18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> suitesparseconfig-4.2.1.ebuild:
   Stable for ppc64, wrt bug #534624

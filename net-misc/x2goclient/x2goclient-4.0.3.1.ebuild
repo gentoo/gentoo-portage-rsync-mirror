@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-4.0.3.1.ebuild,v 1.2 2015/01/09 13:47:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-4.0.3.1.ebuild,v 1.3 2015/01/26 10:40:58 ago Exp $
 
 EAPI=5
 inherit eutils nsplugins qt4-r2
@@ -11,7 +11,7 @@ SRC_URI="http://code.x2go.org/releases/source/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ldap nsplugin"
 
 DEPEND=">=net-libs/libssh-0.6.0_rc1

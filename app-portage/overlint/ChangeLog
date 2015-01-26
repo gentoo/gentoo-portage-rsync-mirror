@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/overlint
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.17 2015/01/11 21:11:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/overlint/ChangeLog,v 1.18 2015/01/26 10:41:55 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> overlint-0.5.3.ebuild:
+  Stable for x86, wrt bug #534896
 
   11 Jan 2015; Markus Meier <maekke@gentoo.org> overlint-0.5.3.ebuild:
   arm stable, bug #534896
