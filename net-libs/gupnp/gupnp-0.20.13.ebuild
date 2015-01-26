@@ -1,16 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12.ebuild,v 1.1 2014/05/31 15:38:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.13.ebuild,v 1.1 2015/01/26 12:40:47 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.14"
 VALA_USE_DEPEND="vapigen"
 # FIXME: Claims to works with python3 but appears to be wishful thinking
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
-inherit gnome2 python-r1 vala
+inherit gnome2 multilib-minimal python-r1 vala
 
 DESCRIPTION="An object-oriented framework for creating UPnP devs and control points"
 HOMEPAGE="https://wiki.gnome.org/Projects/GUPnP"
@@ -20,30 +19,29 @@ SLOT="0/4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="connman +introspection kernel_linux networkmanager"
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
+	?? ( connman networkmanager )"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=net-libs/gssdp-0.13.0:0=[introspection?]
-	>=net-libs/libsoup-2.28.2:2.4[introspection?]
-	>=dev-libs/glib-2.28.0:2
-	dev-libs/libxml2
+	>=net-libs/gssdp-0.14.7:0=[introspection?,${MULTILIB_USEDEP}]
+	>=net-libs/libsoup-2.48.0:2.4[introspection?,${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
+	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]
 	|| (
-		>=sys-apps/util-linux-2.16
-		<sys-libs/e2fsprogs-libs-1.41.8 )
+		>=sys-apps/util-linux-2.24.1-r3[${MULTILIB_USEDEP}]
+		<sys-libs/e2fsprogs-libs-1.41.8[${MULTILIB_USEDEP}] )
 	introspection? (
 			>=dev-libs/gobject-introspection-0.6.4
 			$(vala_depend) )
-	connman? (
-		>=dev-libs/glib-2.28:2
-		>=net-misc/connman-0.80 )
-	networkmanager? ( >=dev-libs/glib-2.26:2 )
+	connman? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
+	networkmanager? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	!net-libs/gupnp-vala
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1
 	sys-devel/gettext
-	virtual/pkgconfig
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
 "
 
 src_prepare() {
@@ -51,19 +49,28 @@ src_prepare() {
 	gnome2_src_prepare
 }
 
-src_configure() {
+multilib_src_configure() {
 	local backend=unix
 	use kernel_linux && backend=linux
 	use connman && backend=connman
 	use networkmanager && backend=network-manager
 
+	ECONF_SOURCE=${S} \
 	gnome2_src_configure \
-		$(use_enable introspection) \
+		$(multilib_native_use_enable introspection) \
 		--disable-static \
 		--with-context-manager=${backend}
+
+	if multilib_is_native_abi; then
+		ln -s "${S}"/doc/html doc/html || die
+	fi
 }
 
-src_install() {
+multilib_src_install() {
 	gnome2_src_install
+}
+
+multilib_src_install_all() {
+	einstalldocs
 	python_parallel_foreach_impl python_doscript tools/gupnp-binding-tool
 }
