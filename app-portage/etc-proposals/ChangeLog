@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/etc-proposals
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.18 2012/03/04 04:30:05 dolsen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.19 2015/01/26 07:40:55 dolsen Exp $
+
+*etc-proposals-1.4.3-r3 (26 Jan 2015)
+
+  26 Jan 2015; Brian Dolbec <dolsen@gentoo.org> +etc-proposals-1.4.3-r3.ebuild:
+  Bump EAPI, update SRC_URI and HOMEPAGE.
 
   04 Mar 2012; Brian Dolbec <brian.dolbec@gmail.com> metadata.xml:
   Update metadata.xml. Take over as maintainer.
