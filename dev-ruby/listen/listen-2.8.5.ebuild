@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-2.8.5.ebuild,v 1.1 2015/01/18 03:15:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-2.8.5.ebuild,v 1.2 2015/01/26 19:41:22 graaff Exp $
 
 EAPI=5
 
@@ -23,6 +23,9 @@ LICENSE="MIT"
 SLOT="2"
 KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE=""
+
+# Block on other packages trying to install a /usr/bin/listen
+RDEPEND+="!!media-sound/listen !!media-radio/ax25"
 
 ruby_add_rdepend ">=dev-ruby/rb-inotify-0.9.0
 	>=dev-ruby/celluloid-0.15.2"

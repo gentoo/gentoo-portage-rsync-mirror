@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16300 2015/01/26 15:46:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16301 2015/01/26 19:38:23 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Johannes Huber <johu@gentoo.org> (26 Jan 2015)
+# Masked for removal in 30 days, bug #537746.
+# Superseded by kde-base/kdebase-kioslaves ages ago.
+kde-misc/kio-ftps
 
 # Mike Gilbert <floppym@gentoo.org> (26 Jan 2015)
 # Dev channel releases are only for people who are developers or want more
