@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ski-6.8.ebuild,v 1.3 2015/01/22 08:40:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ski-6.8.ebuild,v 1.4 2015/01/26 09:47:19 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +12,7 @@ SRC_URI="http://www.catb.org/~esr/ski/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=""

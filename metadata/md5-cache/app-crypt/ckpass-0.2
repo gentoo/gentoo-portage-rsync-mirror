@@ -1,5 +1,5 @@
-DEFINED_PHASES=install
-DEPEND=>=dev-libs/libkpass-6
+DEFINED_PHASES=prepare
+DEPEND=>=dev-libs/libkpass-6 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=An ncurses based password database client that is compatible with KeePass 1.x format databases
 EAPI=5
 HOMEPAGE=http://ckpass.sourceforge.net/
@@ -8,4 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/libkpass-6
 SLOT=0
 SRC_URI=mirror://sourceforge/ckpass/ckpass-0.2.tar.gz
-_md5_=785331b22ccb803f0f4853cc65beb965
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=80f0e15b686b003486dfa76d5576ca73

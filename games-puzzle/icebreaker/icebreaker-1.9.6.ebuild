@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.6.ebuild,v 1.4 2015/01/22 08:42:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/icebreaker/icebreaker-1.9.6.ebuild,v 1.5 2015/01/26 09:51:40 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://www.mattdm.org/${PN}/1.9.x/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[video]

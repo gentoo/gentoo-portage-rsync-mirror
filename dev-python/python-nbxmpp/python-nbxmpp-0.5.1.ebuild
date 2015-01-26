@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nbxmpp/python-nbxmpp-0.5.1.ebuild,v 1.7 2015/01/18 08:38:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nbxmpp/python-nbxmpp-0.5.1.ebuild,v 1.8 2015/01/26 09:58:38 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://python-nbxmpp.gajim.org/downloads/${TAG} -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha amd64 arm ppc ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 S="${WORKDIR}"/nbxmpp-${PV}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/uulib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.32 2015/01/18 08:37:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.33 2015/01/26 09:56:00 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> uulib-0.9.16.ebuild:
+  Stable for x86, wrt bug #535024
 
   18 Jan 2015; Agostino Sarubbo <ago@gentoo.org> uulib-0.9.16.ebuild:
   Stable for ppc64, wrt bug #535024

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.76 2015/01/22 18:34:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.77 2015/01/26 09:37:24 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r2.ebuild:
+  Stable for x86, wrt bug #536794
 
   22 Jan 2015; Markus Meier <maekke@gentoo.org> protobuf-2.5.0-r2.ebuild:
   arm stable, bug #536794

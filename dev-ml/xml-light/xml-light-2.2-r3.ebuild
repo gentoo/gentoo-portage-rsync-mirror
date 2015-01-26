@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/xml-light-2.2-r3.ebuild,v 1.2 2015/01/09 13:40:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/xml-light/xml-light-2.2-r3.ebuild,v 1.3 2015/01/26 09:39:12 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://tech.motion-twin.com/zip/${P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc +ocamlopt"
 
 RDEPEND="dev-lang/ocaml:=[ocamlopt?]"

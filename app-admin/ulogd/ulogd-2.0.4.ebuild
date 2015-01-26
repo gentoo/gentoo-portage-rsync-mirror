@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.7 2015/01/22 08:41:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.4.ebuild,v 1.8 2015/01/26 09:57:47 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.netfilter.org/pub/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc x86"
 IUSE="dbi doc json mysql nfacct +nfct +nflog pcap postgres sqlite"
 
 RDEPEND="net-firewall/iptables

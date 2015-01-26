@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.114 2015/01/16 04:37:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.115 2015/01/26 09:38:18 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pyro-4.25.ebuild:
+  Stable for x86, wrt bug #535356
 
   16 Jan 2015; Ian Delaney <idella4@gentoo.org> -pyro-4.17-r1.ebuild,
   -pyro-4.22.ebuild, -pyro-4.24.ebuild, pyro-4.25.ebuild:

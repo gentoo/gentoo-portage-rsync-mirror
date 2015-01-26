@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20140423.ebuild,v 1.2 2015/01/22 08:40:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/digger/digger-20140423.ebuild,v 1.3 2015/01/26 09:51:23 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="https://gitorious.org/digger/digger/archive/8d5769c59d68b37a5b30aa7a9cb
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 DEPEND="media-libs/libsdl[X,video]
 	x11-libs/libX11"

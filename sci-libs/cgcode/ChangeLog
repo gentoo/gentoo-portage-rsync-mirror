@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cgcode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/ChangeLog,v 1.11 2015/01/09 13:39:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cgcode/ChangeLog,v 1.12 2015/01/26 09:58:58 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cgcode-1.0-r2.ebuild:
+  Stable for x86, wrt bug #534628
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cgcode-1.0-r2.ebuild:
   Stable for amd64, wrt bug #534628

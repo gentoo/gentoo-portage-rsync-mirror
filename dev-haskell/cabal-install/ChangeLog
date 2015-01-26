@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cabal-install
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.26 2015/01/22 08:43:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.27 2015/01/26 09:56:35 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  cabal-install-1.18.0.3-r1.ebuild:
+  Stable for x86, wrt bug #536358
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
   cabal-install-1.18.0.3-r1.ebuild:

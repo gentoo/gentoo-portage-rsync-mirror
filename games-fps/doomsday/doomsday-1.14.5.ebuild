@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.14.5.ebuild,v 1.3 2015/01/22 08:42:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.14.5.ebuild,v 1.4 2015/01/26 09:48:46 ago Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/deng/Doomsday%20Engine/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated fluidsynth openal snowberry +doom demo freedoom heretic hexen resources tools"
 # we need python at build time, so
 # snowberry? ( ${PYTHON_REQUIRED_USE} )

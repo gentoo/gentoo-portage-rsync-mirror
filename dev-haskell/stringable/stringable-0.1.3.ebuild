@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stringable/stringable-0.1.3.ebuild,v 1.2 2015/01/22 08:46:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stringable/stringable-0.1.3.ebuild,v 1.3 2015/01/26 09:54:51 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/system-filepath-0.4.7:=[profile?]

@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.445 2015/01/12 21:26:32 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.446 2015/01/26 09:56:12 haubi Exp $
+
+  26 Jan 2015; Michael Haubenwallner <haubi@gentoo.org> linux/profile.bashrc:
+  Do not elog but einfo 'old host glibc (gnu89-inline)' message, bug#537660.
 
   03 Jan 2015; Ruud Koolen <redlizard@gentoo.org>
   linux-standalone/amd64/make.defaults, linux-standalone/x86/make.defaults:

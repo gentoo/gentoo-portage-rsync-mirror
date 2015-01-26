@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9-r1.ebuild,v 1.2 2015/01/22 08:41:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/whichwayisup/whichwayisup-0.7.9-r1.ebuild,v 1.3 2015/01/26 09:48:27 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://hectigo.net/puskutraktori/whichwayisup/${MY_P}.zip"
 
 LICENSE="GPL-2 CC-BY-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-python/pygame[${PYTHON_USEDEP}]

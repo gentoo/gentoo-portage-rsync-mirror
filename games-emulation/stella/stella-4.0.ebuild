@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-4.0.ebuild,v 1.3 2015/01/22 08:45:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-4.0.ebuild,v 1.4 2015/01/26 09:51:57 ago Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/stella/${P}-src.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="joystick"
 
 DEPEND="media-libs/libsdl2[joystick?,opengl,video]

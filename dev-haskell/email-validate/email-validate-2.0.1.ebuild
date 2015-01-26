@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/email-validate/email-validate-2.0.1.ebuild,v 1.2 2015/01/22 08:39:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/email-validate/email-validate-2.0.1.ebuild,v 1.3 2015/01/26 09:53:24 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/attoparsec-0.10.0:=[profile?]

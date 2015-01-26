@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.52 2015/01/22 08:44:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.53 2015/01/26 09:45:20 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> po-mode-0.19.3.ebuild:
+  Stable for x86, wrt bug #534844
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> po-mode-0.19.3.ebuild:
   Stable for amd64, wrt bug #534844

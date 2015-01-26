@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/zlib-bindings
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib-bindings/ChangeLog,v 1.7 2015/01/09 13:49:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib-bindings/ChangeLog,v 1.8 2015/01/26 09:56:18 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> zlib-bindings-0.1.1.5.ebuild:
+  Stable for x86, wrt bug #535026
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> zlib-bindings-0.1.1.5.ebuild:
   Stable for amd64, wrt bug #535026

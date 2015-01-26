@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.69 2015/01/22 08:45:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.70 2015/01/26 09:52:15 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xboard-4.8.0.ebuild:
+  Stable for x86, wrt bug #536644
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> xboard-4.8.0.ebuild:
   Stable for amd64, wrt bug #536644

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/grantlee
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.30 2015/01/22 08:39:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/ChangeLog,v 1.31 2015/01/26 10:01:04 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> grantlee-0.4.0.ebuild:
+  Stable for x86, wrt bug #535108
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> grantlee-0.4.0.ebuild:
   Stable for amd64, wrt bug #535108

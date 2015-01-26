@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnstop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.44 2015/01/09 13:38:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.45 2015/01/26 09:56:54 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dnstop-20121017.ebuild:
+  Stable for x86, wrt bug #535554
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dnstop-20121017.ebuild:
   Stable for amd64, wrt bug #535554
