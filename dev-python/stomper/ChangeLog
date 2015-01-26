@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/stomper
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.25 2015/01/26 10:27:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.26 2015/01/26 11:11:27 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -stomper-0.2.7.ebuild,
+  -stomper-0.2.8.ebuild:
+  Remove old.
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> stomper-0.3.0.ebuild:
   Stable for x86, wrt bug #535378

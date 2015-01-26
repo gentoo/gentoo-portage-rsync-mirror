@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/notify-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.49 2014/03/04 20:48:47 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.50 2015/01/26 11:20:40 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -notify-python-0.1.1-r2.ebuild:
+  Remove old.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   notify-python-0.1.1-r3.ebuild:

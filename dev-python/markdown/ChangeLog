@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.64 2015/01/02 12:24:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.65 2015/01/26 11:18:34 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -markdown-2.1.1.ebuild,
+  -markdown-2.3.1.ebuild:
+  Remove old.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> markdown-2.5.1.ebuild:
   Stable for sparc, wrt bug #530534

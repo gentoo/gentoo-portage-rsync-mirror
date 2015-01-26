@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nltk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.17 2014/12/22 10:17:58 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nltk/ChangeLog,v 1.18 2015/01/26 11:19:49 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -nltk-2.0.1.ebuild,
+  -nltk-2.0.1_rc1.ebuild:
+  Remove old.
 
 *nltk-3.0.0 (22 Dec 2014)
 

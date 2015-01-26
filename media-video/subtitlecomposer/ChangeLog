@@ -1,6 +1,14 @@
 # ChangeLog for media-video/subtitlecomposer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.25 2015/01/26 10:11:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.26 2015/01/26 11:09:47 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/subtitlecomposer-0.5.3-gcc45.patch,
+  -files/subtitlecomposer-0.5.3-gold-gstreamer.patch,
+  -files/subtitlecomposer-0.5.3-gold-xine.patch,
+  -files/subtitlecomposer-linkage-patch.patch,
+  -subtitlecomposer-0.5.3-r2.ebuild:
+  Remove old.
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> subtitlecomposer-0.5.6.ebuild:
   Stable for x86, wrt bug #535518
