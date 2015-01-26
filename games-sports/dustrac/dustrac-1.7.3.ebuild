@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/dustrac-1.7.3.ebuild,v 1.1 2014/08/24 16:24:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/dustrac-1.7.3.ebuild,v 1.2 2015/01/26 22:10:14 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils gnome2-utils cmake-utils games
 
 DESCRIPTION="Tile-based, cross-platform 2D racing game"
@@ -26,8 +25,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-cmake.patch \
-		"${FILESDIR}"/${PN}-1.6.3-desktopfile.patch
+	epatch \
+		"${FILESDIR}"/${P}-cmake.patch \
+		"${FILESDIR}"/${P}-desktopfile.patch
 }
 
 src_configure() {
