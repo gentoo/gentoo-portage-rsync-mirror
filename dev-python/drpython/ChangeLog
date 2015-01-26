@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/drpython
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.20 2014/05/04 11:41:05 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.21 2015/01/26 15:30:13 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -drpython-3.11.3.ebuild:
+  Remove old.
 
 *drpython-3.11.4 (04 May 2014)
 

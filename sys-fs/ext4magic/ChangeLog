@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ext4magic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.14 2014/10/10 11:00:32 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext4magic/ChangeLog,v 1.15 2015/01/26 15:18:07 pinkbyte Exp $
+
+  26 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> -ext4magic-0.3.0.ebuild,
+  -ext4magic-0.3.1-r1.ebuild:
+  Drop old
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> ext4magic-0.3.2.ebuild:
   Stable for x86, wrt bug #523466
