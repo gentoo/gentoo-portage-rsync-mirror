@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/cpuinfo2cpuflags
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/ChangeLog,v 1.2 2015/01/25 22:53:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/ChangeLog,v 1.4 2015/01/26 09:21:59 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cpuinfo2cpuflags-1.ebuild:
+  Stable for x86, wrt bug #537492
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cpuinfo2cpuflags-1.ebuild:
+  Stable for amd64, wrt bug #537492
 
   25 Jan 2015; Michał Górny <mgorny@gentoo.org> cpuinfo2cpuflags-1.ebuild:
   Drop .py suffix from filename, to make people happier. Not worth a release,

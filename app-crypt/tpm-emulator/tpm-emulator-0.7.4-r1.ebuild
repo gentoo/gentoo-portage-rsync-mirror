@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.7.4-r1.ebuild,v 1.2 2013/05/10 06:27:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.7.4-r1.ebuild,v 1.3 2015/01/26 09:26:38 alonbl Exp $
 
-EAPI=2
+EAPI=5
 inherit user linux-mod cmake-utils udev
 
 MY_P=${P/-/_}
 DESCRIPTION="Emulator driver for tpm"
-HOMEPAGE="https://developer.berlios.de/projects/tpm-emulator"
-SRC_URI="mirror://berlios/tpm-emulator/${MY_P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/tpm-emulator.berlios/"
+SRC_URI="mirror://sourceforge/tpm-emulator/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
