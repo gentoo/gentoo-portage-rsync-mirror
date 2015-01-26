@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/miniupnpc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.16 2014/03/31 21:08:18 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.17 2015/01/26 17:27:00 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -miniupnpc-1.6.20120509.ebuild,
+  -miniupnpc-1.6.ebuild, -miniupnpc-1.7-r1.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> miniupnpc-1.8.ebuild:
   Add support for the new PyPy slotting.

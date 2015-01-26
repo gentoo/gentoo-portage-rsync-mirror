@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/astng
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.80 2014/12/31 16:18:54 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.81 2015/01/26 17:23:53 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -astng-0.21.1.ebuild,
+  -files/astng-0.23.1-file-open.patch:
+  Remove old.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> astng-0.24.3.ebuild:
   Stable for ppc, wrt bug #532490

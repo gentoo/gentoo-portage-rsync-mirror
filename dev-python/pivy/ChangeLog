@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pivy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.9 2013/04/27 12:02:32 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.10 2015/01/26 17:22:09 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pivy-0.5_alpha20110303.ebuild:
+  Remove old.
 
 *pivy-9999 (27 Apr 2013)
 *pivy-0.5_alpha20110303-r1 (27 Apr 2013)
@@ -38,4 +41,3 @@
   03 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   +pivy-0.5_alpha20110303.ebuild, +metadata.xml:
   New package, bug 291979. Imported with cleanups from sci overlay.
-
