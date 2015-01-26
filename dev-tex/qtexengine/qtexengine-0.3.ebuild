@@ -1,15 +1,16 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/qtexengine-0.3.ebuild,v 1.4 2013/03/02 20:18:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/qtexengine-0.3.ebuild,v 1.5 2015/01/25 23:53:10 pesa Exp $
 
-EAPI=4
-inherit eutils qt4-r2
+EAPI=5
+
+inherit qt4-r2
 
 MY_PN=QTeXEngine
 
 DESCRIPTION="TeX support for Qt"
 HOMEPAGE="http://soft.proindependent.com/qtexengine/"
-SRC_URI="mirror://berlios/qtiplot/${MY_PN}-${PV}-opensource.zip"
+SRC_URI="mirror://sourceforge/qtiplot.berlios/${MY_PN}-${PV}-opensource.zip"
 
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
@@ -37,8 +38,7 @@ src_test() {
 
 src_install() {
 	dolib.so lib${MY_PN}.so*
-	insinto /usr/include
-	doins src/${MY_PN}.h
+	doheader src/${MY_PN}.h
 	dodoc CHANGES.txt
-	dohtml -r ./doc/html/*
+	dodoc -r doc/html
 }

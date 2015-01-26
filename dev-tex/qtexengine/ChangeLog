@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/qtexengine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/ChangeLog,v 1.8 2013/03/02 20:18:33 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/qtexengine/ChangeLog,v 1.9 2015/01/25 23:53:10 pesa Exp $
+
+  25 Jan 2015; Davide Pesavento <pesa@gentoo.org> qtexengine-0.3.ebuild:
+  Switch to sourceforge (bug 537724). Switch to EAPI=5.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qtexengine-0.3.ebuild:
   Move Qt dependencies to the new category
