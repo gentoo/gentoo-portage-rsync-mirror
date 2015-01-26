@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.30 2015/01/25 18:20:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.31 2015/01/26 02:28:10 pesa Exp $
+
+  26 Jan 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Restore correct indentation... again.
 
 *qthelp-4.8.6-r2 (25 Jan 2015)
 
