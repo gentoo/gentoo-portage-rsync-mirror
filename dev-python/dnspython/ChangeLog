@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dnspython
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.92 2014/10/11 06:27:33 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.93 2015/01/26 14:27:05 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -dnspython-1.10.0-r1.ebuild,
+  -dnspython-1.10.0.ebuild, -dnspython-1.9.4.ebuild:
+  Remove old.
 
   11 Oct 2014; Ian Delaney <idella4@gentoo.org> dnspython-1.12.0.ebuild:
   tidy / fix to test phase, prompt from Arfrever

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/anjuta
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.183 2014/12/22 22:04:11 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.184 2015/01/26 14:15:08 pacho Exp $
+
+*anjuta-3.14.1 (26 Jan 2015)
+
+  26 Jan 2015; Pacho Ramos <pacho@gentoo.org> +anjuta-3.14.1.ebuild,
+  metadata.xml:
+  Version bump
 
 *anjuta-3.14.0 (22 Dec 2014)
 

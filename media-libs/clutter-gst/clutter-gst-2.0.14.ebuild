@@ -1,20 +1,20 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.10.ebuild,v 1.4 2014/03/09 12:01:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.14.ebuild,v 1.1 2015/01/26 14:23:00 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
-CLUTTER_LA_PUNT="yes"
+GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_{6,7} )
 
-# inherit clutter after gnome2 so that defaults aren't overriden
-# inherit gnome.org in the end so we use gnome mirrors and get the xz tarball
-inherit gnome2 clutter gnome.org python-any-r1
+inherit gnome2 python-any-r1
 
+HOMEPAGE="http://www.clutter-project.org/"
 DESCRIPTION="GStreamer integration library for Clutter"
 
+LICENSE="LGPL-2.1+"
 SLOT="2.0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples +introspection"
 
 # FIXME: Support for gstreamer-basevideo-0.10 (HW decoder support) is automagic
@@ -29,7 +29,7 @@ COMMON_DEPEND="
 "
 # uses goom from gst-plugins-good
 RDEPEND="${COMMON_DEPEND}
-	media-libs/gst-plugins-good:1.0
+	>=media-libs/gst-plugins-good-1.2.0:1.0
 "
 DEPEND="${COMMON_DEPEND}
 	${PYTHON_DEPS}
@@ -38,9 +38,6 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	DOCS="AUTHORS NEWS README"
-	EXAMPLES="examples/{*.c,*.png,README}"
-
 	# Make doc parallel installable
 	cd "${S}"/doc/reference
 	sed -e "s/\(DOC_MODULE.*=\).*/\1${PN}-${SLOT}/" \
@@ -68,5 +65,14 @@ src_compile() {
 	# Clutter tries to access dri without userpriv, upstream bug #661873
 	# Massive failure of a hack, see bug 360219, bug 360073, bug 363917
 	unset DISPLAY
-	default
+	gnome2_src_compile
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use examples; then
+		insinto /usr/share/doc/"${PF}"/examples
+		doins examples/{*.c,*.png,README}
+	fi
 }

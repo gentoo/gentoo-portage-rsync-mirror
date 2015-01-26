@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.486 2014/12/06 16:40:26 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.487 2015/01/26 14:07:16 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -eix-0.25.5.ebuild,
+  -eix-0.29.3.ebuild, -eix-0.30.3.ebuild:
+  Remove old. As requested in bug #537710.
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> eix-0.30.4.ebuild:
   Stable for ia64, wrt bug #529510

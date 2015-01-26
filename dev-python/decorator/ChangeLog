@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.70 2014/12/29 16:03:27 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.71 2015/01/26 14:30:06 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -decorator-3.3.1.ebuild:
+  Remove old.
 
   29 Dec 2014; Jeroen Roovers <jer@gentoo.org> decorator-3.4.0-r1.ebuild:
   Stable for HPPA (bug #530600).

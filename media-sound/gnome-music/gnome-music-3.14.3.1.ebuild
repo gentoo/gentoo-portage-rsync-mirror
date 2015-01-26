@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.14.3-r1.ebuild,v 1.1 2015/01/25 15:07:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.14.3.1.ebuild,v 1.1 2015/01/26 14:28:27 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -49,12 +49,6 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.26
 	virtual/pkgconfig
 "
-
-src_prepare() {
-	# Fix call for music directory, upstream bug #743484
-	epatch "${FILESDIR}"/${PN}-3.14.3-music-dir.patch
-	gnome2_src_prepare
-}
 
 src_configure() {
 	gnome2_src_configure ITSTOOL="$(type -P true)"

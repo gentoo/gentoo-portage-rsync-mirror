@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/uutf/uutf-0.9.4.ebuild,v 1.1 2015/01/26 13:54:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/uutf/uutf-0.9.4.ebuild,v 1.2 2015/01/26 14:01:18 aballier Exp $
 
 EAPI="5"
 
@@ -18,8 +18,6 @@ IUSE="utftrip +ocamlopt doc"
 RDEPEND=">=dev-lang/ocaml-3.12:=[ocamlopt?]
 	utftrip? ( dev-ml/cmdliner:= )"
 DEPEND="${RDEPEND}"
-# https://github.com/dbuenzli/uutf/issues/3
-RESTRICT="test"
 
 src_compile() {
 	ocaml pkg/build.ml \
@@ -31,7 +29,7 @@ src_compile() {
 
 src_test() {
 	if use ocamlopt ; then
-		ocamlbuild tests.otarget || die
+		ocamlbuild -use-ocamlfind tests.otarget || die
 		cd _build/test || die
 		./test.native || die
 	else

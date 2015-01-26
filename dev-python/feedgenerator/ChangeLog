@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/feedgenerator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedgenerator/ChangeLog,v 1.8 2014/11/24 17:17:31 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedgenerator/ChangeLog,v 1.9 2015/01/26 14:31:07 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -feedgenerator-1.2.1.ebuild,
+  -feedgenerator-1.5.ebuild:
+  Remove old.
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> feedgenerator-1.7.ebuild:
   Support python 3.4
