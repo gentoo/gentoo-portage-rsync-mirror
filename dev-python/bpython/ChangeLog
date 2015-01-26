@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.44 2015/01/26 11:17:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.45 2015/01/26 13:18:53 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Drop unused USE description.
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -bpython-0.12.ebuild,
   -bpython-0.13.ebuild:

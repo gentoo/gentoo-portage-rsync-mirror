@@ -9,7 +9,4 @@
 	<longdescription>Syntax highlighting and autocompletion
 	  for the python interpreter
 	</longdescription>
-	<use>
-	  <flag name='urwid'>Backend based on <pkg>dev-python/urwid</pkg></flag>
-	</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fpconst
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.50 2014/03/31 20:52:34 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.51 2015/01/26 13:15:47 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -fpconst-0.7.3.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> fpconst-0.7.3-r1.ebuild:
   Add support for the new PyPy slotting.

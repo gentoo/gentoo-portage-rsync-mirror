@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ropemacs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ropemacs/ChangeLog,v 1.3 2014/05/13 16:40:20 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ropemacs/ChangeLog,v 1.4 2015/01/26 13:13:01 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/ropemacs-0.6-ropemode-dir.patch, -ropemacs-0.6.ebuild:
+  Remove old.
 
 *ropemacs-0.7 (13 May 2014)
 
@@ -16,4 +20,3 @@
   +files/ropemacs-0.6-ropemode-dir.patch, +metadata.xml:
   Initial import. Ebuild contributed by Yang Zhang <zyangmath@gmail.com> in
   bug 338553.
-

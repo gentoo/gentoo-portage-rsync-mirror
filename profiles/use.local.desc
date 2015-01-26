@@ -2174,7 +2174,6 @@ dev-python/amqplib:extras - Install extra tools to generate initial Python mod f
 dev-python/anyvc:bazaar - Add support for Bazaar
 dev-python/anyvc:mercurial - Add support for Mercurial
 dev-python/bokeh:chaco - Enable interface for implementing qplot and ggplot like functionality using chaco
-dev-python/bpython:urwid - Backend based on dev-python/urwid
 dev-python/celery:redis - Enables redis support
 dev-python/celery:sqs - Enables Amazon SQS transport module for celery
 dev-python/celery:yaml - Enable support of yaml as a configuration file format
@@ -7603,7 +7602,6 @@ x11-libs/cairo:opengl - Use Mesa backend for acceleration
 x11-libs/cairo:openvg - Use OpenVG for backend acceleration
 x11-libs/cairo:valgrind - Built-in support to mark memory regions
 x11-libs/cairo:xlib-xcb - Use XCB renderer backend for acceleration over xlib
-x11-libs/colord-gtk:vala - Generate bindings for dev-lang/vala
 x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/glamor:gles - Build glamor based on gles2
 x11-libs/gtk+:cloudprint - Enable printing via Google Cloud Print.

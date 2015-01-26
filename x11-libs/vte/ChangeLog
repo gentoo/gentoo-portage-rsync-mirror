@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/vte
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.399 2014/12/15 23:30:21 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.400 2015/01/26 13:17:41 pacho Exp $
+
+*vte-0.38.3 (26 Jan 2015)
+
+  26 Jan 2015; Pacho Ramos <pacho@gentoo.org> +vte-0.38.3.ebuild,
+  -vte-0.36.2.ebuild:
+  Version bump, drop old
 
   15 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> vte-0.38.2.ebuild:
   Fix bad edit, DEPEND -> RDEPEND.

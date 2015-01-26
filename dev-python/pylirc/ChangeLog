@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylirc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.21 2014/03/05 15:39:28 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.22 2015/01/26 13:18:20 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pylirc-0.0.5.ebuild:
+  Remove old.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> pylirc-0.0.5-r1.ebuild:
   Stable for ppc, wrt bug #495618

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ansi-wl-pprint-0.6.7.1.ebuild,v 1.1 2014/02/21 19:37:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-wl-pprint/ansi-wl-pprint-0.6.7.1.ebuild,v 1.2 2015/01/26 13:06:49 qnikst Exp $
 
 EAPI=5
 
@@ -19,10 +19,10 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="example"
 
 RDEPEND=">=dev-haskell/ansi-terminal-0.4.0:=[profile?] <dev-haskell/ansi-terminal-0.7:=[profile?]
-	>=dev-lang/ghc-6.10.4:=
+	>=dev-lang/ghc-7.4.1:=
 "
 DEPEND="${RDEPEND}
-	>=dev-haskell/cabal-1.6.0.3
+	>=dev-haskell/cabal-1.2
 "
 
 src_configure() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libQGLViewer/libQGLViewer-2.5.4.ebuild,v 1.1 2014/11/07 10:08:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libQGLViewer/libQGLViewer-2.6.1.ebuild,v 1.1 2015/01/26 13:21:01 aballier Exp $
 
 EAPI="5"
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~arm"
 IUSE="designer examples"
 
 DEPEND="virtual/opengl
+	virtual/glu
 	dev-qt/qtopengl:4
 	dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
