@@ -6,6 +6,6 @@
 		<name>Johannes Huber</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">nvie/gitflow</remote-id>
+		<remote-id type="github">petervanderdoes/gitflow</remote-id>
 	</upstream>
 </pkgmetadata>

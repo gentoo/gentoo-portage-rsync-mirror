@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-libs/glib-2:2 media-libs/alsa-lib >=media-libs/freetype-2 x11-libs/cairo >=x11-libs/gdk-pixbuf-2 x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango virtual/pkgconfig doc? ( app-text/xmlto ) nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=dev-libs/glib-2:2 media-libs/alsa-lib >=media-libs/freetype-2.5.1 x11-libs/cairo >=x11-libs/gdk-pixbuf-2 x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango virtual/pkgconfig doc? ( app-text/xmlto ) nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=WYSIWYG score editor for GTK+
 EAPI=5
 HOMEPAGE=http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/nted.xhtml
 IUSE=doc debug nls
 KEYWORDS=amd64 x86
 LICENSE=GPL-2 FDL-1.2 NTED_FONT
-RDEPEND=>=dev-libs/glib-2:2 media-libs/alsa-lib >=media-libs/freetype-2 x11-libs/cairo >=x11-libs/gdk-pixbuf-2 x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango
+RDEPEND=>=dev-libs/glib-2:2 media-libs/alsa-lib >=media-libs/freetype-2.5.1 x11-libs/cairo >=x11-libs/gdk-pixbuf-2 x11-libs/gtk+:2 x11-libs/libX11 x11-libs/pango
 SLOT=0
 SRC_URI=http://vsr.informatik.tu-chemnitz.de/staff/jan/nted/sources/nted-1.10.18.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=765e55dc8a1c45a2d0b3579d23208892
+_md5_=89ce7977d611b8da5426b214ab2a5734

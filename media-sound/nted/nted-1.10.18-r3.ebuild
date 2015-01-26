@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18-r3.ebuild,v 1.5 2014/07/04 19:52:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18-r3.ebuild,v 1.6 2015/01/26 21:13:02 pacho Exp $
 
 EAPI=5
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -20,7 +20,7 @@ IUSE="doc debug nls"
 RDEPEND="
 	>=dev-libs/glib-2:2
 	media-libs/alsa-lib
-	>=media-libs/freetype-2
+	>=media-libs/freetype-2.5.1
 	x11-libs/cairo
 	>=x11-libs/gdk-pixbuf-2
 	x11-libs/gtk+:2

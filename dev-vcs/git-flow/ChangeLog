@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/git-flow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-flow/ChangeLog,v 1.3 2014/08/15 19:58:26 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-flow/ChangeLog,v 1.4 2015/01/26 21:06:09 johu Exp $
+
+*git-flow-1.8.0 (26 Jan 2015)
+
+  26 Jan 2015; Johannes Huber <johu@gentoo.org>
+  +files/git-flow-1.8.0-unbundle-shflags.patch, +git-flow-1.8.0.ebuild,
+  metadata.xml:
+  Version bump, switch to active fork project, bug #537870. Thanks to Jochen
+  Radmacher <jradmacher@gmx.de>.
 
   15 Aug 2014; Johannes Huber <johu@gentoo.org> git-flow-0.4.1.ebuild:
   amd64 stable, bug #518412

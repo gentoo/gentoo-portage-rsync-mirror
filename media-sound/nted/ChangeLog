@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/nted
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.43 2014/12/31 15:57:21 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.44 2015/01/26 21:13:02 pacho Exp $
+
+  26 Jan 2015; Pacho Ramos <pacho@gentoo.org> nted-1.10.18-r3.ebuild:
+  Raise freetype dep (#516456)
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org> -nted-1.10.18-r1.ebuild:
   Remove old.
