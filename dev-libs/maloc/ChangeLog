@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/maloc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.29 2015/01/26 10:32:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/ChangeLog,v 1.30 2015/01/26 11:40:54 jlec Exp $
+
+  26 Jan 2015; Justin Lecher <jlec@gentoo.org> -maloc-0.2.1-r3.ebuild:
+  Drop old
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> maloc-1.5-r1.ebuild:
   Stable for x86, wrt bug #534622

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.278 2015/01/02 12:10:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.279 2015/01/26 11:39:25 pacho Exp $
+
+*libgphoto2-2.5.7 (26 Jan 2015)
+
+  26 Jan 2015; Pacho Ramos <pacho@gentoo.org> +libgphoto2-2.5.7.ebuild,
+  -files/libgphoto2-2.4.7-respect-bonjour.patch, -libgphoto2-2.5.3.1.ebuild,
+  -libgphoto2-2.5.4-r2.ebuild, -libgphoto2-2.5.4.ebuild:
+  Version bump, drop .la files (upstream confirmed they are not needed:
+  https://sourceforge.net/p/gphoto/bugs/1004/ ), drop old.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libgphoto2-2.5.5.1-r1.ebuild:
   Stable for alpha, wrt bug #529964

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cachefilesd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.16 2015/01/26 10:00:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.17 2015/01/26 11:41:42 jlec Exp $
+
+  26 Jan 2015; Justin Lecher <jlec@gentoo.org> -cachefilesd-0.10.5-r2.ebuild,
+  -cachefilesd-0.10.5-r3.ebuild:
+  Drop old
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cachefilesd-0.10.5-r4.ebuild:
   Stable for x86, wrt bug #535676
