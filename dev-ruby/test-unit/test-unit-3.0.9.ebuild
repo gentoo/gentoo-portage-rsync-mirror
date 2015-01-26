@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-3.0.9.ebuild,v 1.1 2015/01/25 10:38:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-3.0.9.ebuild,v 1.2 2015/01/26 08:35:14 jer Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -22,7 +22,7 @@ HOMEPAGE="https://rubygems.org/gems/test-unit"
 
 LICENSE="|| ( Ruby GPL-2 ) PSF-2"
 SLOT="2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE="doc test"
 
 # power_assert does not work with ruby19 but is not needed for backward

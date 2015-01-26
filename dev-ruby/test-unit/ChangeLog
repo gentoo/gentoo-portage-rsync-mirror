@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.106 2015/01/25 10:38:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.107 2015/01/26 08:35:14 jer Exp $
+
+  26 Jan 2015; Jeroen Roovers <jer@gentoo.org> test-unit-3.0.9.ebuild:
+  Marked ~hppa (bug #537838).
 
 *test-unit-3.0.9 (25 Jan 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/power_assert/power_assert-0.2.2.ebuild,v 1.1 2015/01/25 07:28:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/power_assert/power_assert-0.2.2.ebuild,v 1.2 2015/01/26 08:34:39 jer Exp $
 
 EAPI=5
 USE_RUBY="ruby20 ruby21 ruby22"
@@ -14,7 +14,7 @@ DESCRIPTION="Shows each value of variables and method calls in the expression"
 HOMEPAGE="https://github.com/k-tsj/power_assert"
 LICENSE="|| ( Ruby BSD-2 )"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 SLOT="0"
 IUSE=""
 
