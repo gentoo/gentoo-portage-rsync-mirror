@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.12.1-r1.ebuild,v 1.1 2014/07/30 04:02:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.14.2.ebuild,v 1.1 2015/01/26 12:18:12 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="http://launchpad.net/${PN}/${MY_PV}/${PV}/+download/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 COMMON_DEPEND="

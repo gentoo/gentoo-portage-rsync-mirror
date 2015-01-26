@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.13 2013/01/08 21:32:50 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.14 2015/01/26 12:31:03 idella4 Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils flag-o-matic toolchain-funcs git-2 prefix
 
 IUSE="nls xinerama bidi +truetype +imlib +slit +toolbar vim-syntax"
@@ -12,29 +12,32 @@ DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
 EGIT_REPO_URI="git://git.fluxbox.org/fluxbox.git"
 SRC_URI=""
 HOMEPAGE="http://www.fluxbox.org"
-
-RDEPEND="x11-libs/libXpm
-	x11-libs/libXrandr
-	x11-libs/libXext
-	x11-libs/libXft
-	x11-libs/libXrender
-	|| ( x11-misc/gxmessage x11-apps/xmessage )
-	xinerama? ( x11-libs/libXinerama )
-	truetype? ( media-libs/freetype )
-	bidi? ( >=dev-libs/fribidi-0.19.2 )
-	imlib? ( >=media-libs/imlib2-1.2.0[X] )
-	vim-syntax? ( app-vim/fluxbox-syntax )
-	!!<x11-themes/fluxbox-styles-fluxmod-20040809-r1
-	!!<=x11-misc/fluxconf-0.9.9
-	!!<=x11-misc/fbdesk-1.2.1"
-DEPEND="bidi? ( virtual/pkgconfig )
-	nls? ( sys-devel/gettext )
-	x11-proto/xextproto
-	${RDEPEND}"
-
 SLOT="0"
 LICENSE="MIT"
 KEYWORDS=""
+
+RDEPEND="
+	!!<=x11-misc/fbdesk-1.2.1
+	!!<=x11-misc/fluxconf-0.9.9
+	!!<x11-themes/fluxbox-styles-fluxmod-20040809-r1
+	bidi? ( >=dev-libs/fribidi-0.19.2 )
+	imlib? ( >=media-libs/imlib2-1.2.0[X] )
+	truetype? ( media-libs/freetype )
+	vim-syntax? ( app-vim/fluxbox-syntax )
+	x11-libs/libXext
+	x11-libs/libXft
+	x11-libs/libXpm
+	x11-libs/libXrandr
+	x11-libs/libXrender
+	xinerama? ( x11-libs/libXinerama )
+	|| ( x11-misc/gxmessage x11-apps/xmessage )
+"
+DEPEND="
+	${RDEPEND}
+	bidi? ( virtual/pkgconfig )
+	nls? ( sys-devel/gettext )
+	x11-proto/xextproto
+"
 
 src_prepare() {
 	./autogen.sh
@@ -44,6 +47,8 @@ src_prepare() {
 	# things with style ebuilds.
 	epatch "${FILESDIR}/gentoo_style_location-1.1.x.patch"
 	eprefixify util/fluxbox-generate_menu.in
+
+	epatch "${FILESDIR}"/osx-has-otool.patch
 
 	# Add in the Gentoo -r number to fluxbox -version output.
 	if [[ "${PR}" == "r0" ]] ; then
@@ -59,17 +64,17 @@ src_prepare() {
 src_configure() {
 	use bidi && append-cppflags "$($(tc-getPKG_CONFIG) --cflags fribidi)"
 
-	econf \
-		$(use_enable nls) \
-		$(use_enable xinerama) \
-		$(use_enable truetype xft) \
+	econf ${myconf} \
+		$(use_enable bidi fribidi ) \
 		$(use_enable imlib imlib2) \
+		$(use_enable nls) \
 		$(use_enable slit ) \
 		$(use_enable toolbar ) \
-		$(use_enable bidi fribidi ) \
+		$(use_enable toolbar systray ) \
+		$(use_enable truetype xft) \
+		$(use_enable xinerama) \
 		--sysconfdir="${EPREFIX}"/etc/X11/${PN} \
-		--with-style="${EPREFIX}"/usr/share/fluxbox/styles/Emerge \
-		${myconf}
+		--with-style="${EPREFIX}"/usr/share/fluxbox/styles/Emerge
 }
 
 src_compile() {
@@ -77,29 +82,30 @@ src_compile() {
 
 	ebegin "Creating a menu file (may take a while)"
 	mkdir -p "${T}/home/.fluxbox" || die "mkdir home failed"
+	# Call fluxbox-generate_menu through bash since it lacks +x
+	# chmod 744 may be an equal fix
 	MENUFILENAME="${S}/data/menu" MENUTITLE="Fluxbox ${PV}" \
 		CHECKINIT="no. go away." HOME="${T}/home" \
-		"${S}/util/fluxbox-generate_menu" -is -ds \
+		bash "${S}/util/fluxbox-generate_menu" -is -ds \
 		|| die "menu generation failed"
 	eend $?
 }
 
 src_install() {
-	dodir /usr/share/fluxbox
 	emake DESTDIR="${D}" STRIP="" install
 	dodoc README* AUTHORS TODO* ChangeLog NEWS
 
-	dodir /usr/share/xsessions
+	# Install the generated menu
+	insinto /usr/share/fluxbox
+	doins data/menu
+
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}"/${PN}.desktop
 
 	exeinto /etc/X11/Sessions
 	newexe "${FILESDIR}"/${PN}.xsession fluxbox
 
-	dodir /usr/share/fluxbox/menu.d
-
 	# Styles menu framework
-	dodir /usr/share/fluxbox/menu.d/styles
 	insinto /usr/share/fluxbox/menu.d/styles
 	doins "${FILESDIR}"/styles-menu-fluxbox
 	doins "${FILESDIR}"/styles-menu-commonbox

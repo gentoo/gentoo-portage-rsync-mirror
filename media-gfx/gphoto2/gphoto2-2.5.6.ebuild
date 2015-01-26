@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.5.3.ebuild,v 1.11 2014/05/17 15:31:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.5.6.ebuild,v 1.1 2015/01/26 12:12:39 pacho Exp $
 
 EAPI="5"
 inherit autotools
@@ -11,14 +11,13 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib exif ncurses nls readline"
 
 # aalib -> needs libjpeg
-# raise libgphoto to get a proper .pc
 RDEPEND="
 	dev-libs/popt
-	>=media-libs/libgphoto2-2.5.2[exif?]
+	>=media-libs/libgphoto2-2.5.6[exif?]
 	aalib? (
 		media-libs/aalib
 		virtual/jpeg:0 )

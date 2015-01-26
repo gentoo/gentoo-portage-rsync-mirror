@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.323 2015/01/26 10:18:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.324 2015/01/26 12:31:03 idella4 Exp $
+
+  26 Jan 2015; Ian Delaney <idella4@gentoo.org> -fluxbox-1.3.6.ebuild,
+  files/1.3.5-generate_menu-printf-fix.patch, fluxbox-1.3.5-r1.ebuild,
+  fluxbox-9999.ebuild:
+  update patch with final form from upstream, add missed addition from bug
+  537356 to -1.3.5-r1, full update to live ebuild from patch from same bug,
+  remove broken 1.3.6 ebuild, fixes Bugs 537356, 536370 by maintainers
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> fluxbox-1.3.5.ebuild:
   Stable for x86, wrt bug #536086
