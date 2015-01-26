@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nast
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.13 2014/07/13 14:28:50 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.14 2015/01/26 00:11:22 jer Exp $
+
+  26 Jan 2015; Jeroen Roovers <jer@gentoo.org> nast-0.2.0-r1.ebuild:
+  "New" HOMEPAGE/SRC_URI (bug #537768).
 
   13 Jul 2014; Jeroen Roovers <jer@gentoo.org> -nast-0.2.0.ebuild,
   nast-0.2.0-r1.ebuild, +files/nast-0.2.0-gentoo.patch:

@@ -1,14 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/nast-0.2.0-r1.ebuild,v 1.3 2014/07/13 14:28:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/nast-0.2.0-r1.ebuild,v 1.4 2015/01/26 00:11:22 jer Exp $
 
 EAPI=5
-
 inherit autotools eutils
 
 DESCRIPTION="NAST - Network Analyzer Sniffer Tool"
-HOMEPAGE="http://nast.berlios.de/"
-SRC_URI="mirror://berlios/nast/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/nast.berlios/"
+SRC_URI="mirror://sourceforge/${PN}.berlios/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 x86"
