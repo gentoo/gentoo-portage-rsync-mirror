@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/packETH
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.24 2015/01/09 13:39:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/packETH/ChangeLog,v 1.25 2015/01/26 10:16:06 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> packETH-1.7.3.ebuild:
+  Stable for x86, wrt bug #535608
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> packETH-1.7.3.ebuild:
   Stable for amd64, wrt bug #535608

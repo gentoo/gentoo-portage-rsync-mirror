@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/ms-sys
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.18 2015/01/23 13:55:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/ms-sys/ChangeLog,v 1.19 2015/01/26 10:09:01 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ms-sys-2.4.0.ebuild:
+  Stable for x86, wrt bug #535666
 
 *ms-sys-2.5.0 (23 Jan 2015)
 

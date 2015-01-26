@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3-r3.ebuild,v 1.6 2015/01/09 13:43:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-super-smack/mysql-super-smack-1.3-r3.ebuild,v 1.7 2015/01/26 10:30:05 ago Exp $
 
 EAPI=5
 WANT_AUTOMAKE="1.13"
@@ -17,7 +17,7 @@ SRC_URI="http://vegan.net/tony/supersmack/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="+mysql postgres"
 REQUIRED_USE="|| ( mysql postgres )"
 

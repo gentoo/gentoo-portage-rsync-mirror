@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.24 2015/01/22 08:47:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.25 2015/01/26 10:28:13 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> tox-1.8.1.ebuild:
+  Stable for x86, wrt bug #535380
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> tox-1.8.1.ebuild:
   Stable for amd64, wrt bug #535380

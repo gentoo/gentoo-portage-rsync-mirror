@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ippl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.29 2015/01/13 18:23:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ippl/ChangeLog,v 1.30 2015/01/26 10:14:22 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ippl-1.4.14-r5.ebuild:
+  Stable for x86, wrt bug #535526
 
 *ippl-1.4.14-r5 (13 Jan 2015)
 

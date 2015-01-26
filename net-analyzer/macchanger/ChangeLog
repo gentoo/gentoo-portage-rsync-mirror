@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/macchanger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.35 2015/01/17 13:57:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.36 2015/01/26 10:30:40 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> macchanger-1.7.0.ebuild:
+  Stable for x86, wrt bug #535530
 
   17 Jan 2015; Agostino Sarubbo <ago@gentoo.org> macchanger-1.7.0.ebuild:
   Stable for ppc, wrt bug #535530

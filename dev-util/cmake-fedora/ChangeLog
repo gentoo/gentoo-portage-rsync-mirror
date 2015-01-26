@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake-fedora
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake-fedora/ChangeLog,v 1.6 2015/01/09 13:46:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake-fedora/ChangeLog,v 1.7 2015/01/26 10:12:01 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cmake-fedora-1.3.0.ebuild:
+  Stable for x86, wrt bug #535394
 
   09 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cmake-fedora-1.3.0.ebuild:
   Stable for amd64, wrt bug #535394

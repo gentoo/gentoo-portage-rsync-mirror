@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-base
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.32 2015/01/22 08:43:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-base/ChangeLog,v 1.33 2015/01/26 10:25:12 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> kaa-base-0.6.0-r1.ebuild:
+  Stable for x86, wrt bug #535336
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> kaa-base-0.6.0-r1.ebuild:
   Stable for amd64, wrt bug #535336

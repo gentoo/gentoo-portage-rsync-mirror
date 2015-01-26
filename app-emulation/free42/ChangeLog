@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/free42
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.29 2015/01/22 08:45:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/free42/ChangeLog,v 1.30 2015/01/26 10:16:41 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> free42-1.5.5.ebuild:
+  Stable for x86, wrt bug #534848
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> free42-1.5.5.ebuild:
   Stable for amd64, wrt bug #534848

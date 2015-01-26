@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gavl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.28 2014/12/31 15:58:37 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.29 2015/01/26 10:09:54 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gavl-1.4.0-r1.ebuild:
+  Stable for x86, wrt bug #526044
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gavl-1.4.0-r1.ebuild:
   Stable for ppc, wrt bug #526044

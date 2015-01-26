@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.193 2015/01/22 08:43:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.194 2015/01/26 10:26:42 ago Exp $
+
+  26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pytz-2014.10.ebuild:
+  Stable for x86, wrt bug #535364
 
   22 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pytz-2014.10.ebuild:
   Stable for amd64, wrt bug #535364

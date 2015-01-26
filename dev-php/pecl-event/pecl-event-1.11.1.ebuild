@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/pecl-event-1.11.1.ebuild,v 1.2 2015/01/09 13:43:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/pecl-event-1.11.1.ebuild,v 1.3 2015/01/26 10:30:58 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ USE_PHP="php5-4 php5-5 php5-6"
 
 inherit php-ext-pecl-r2 confutils eutils
 
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 LICENSE="PHP-3.01"
 
 DESCRIPTION="PHP wrapper for libevent2"
