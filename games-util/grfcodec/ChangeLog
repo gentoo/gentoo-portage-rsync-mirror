@@ -1,6 +1,9 @@
 # ChangeLog for games-util/grfcodec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.23 2014/10/27 15:58:42 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.24 2015/01/26 22:37:06 mr_bones_ Exp $
+
+  26 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -grfcodec-6.0.0.ebuild:
+  old
 
   27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> grfcodec-6.0.4.ebuild:
   Stable for ppc64, wrt bug #521526

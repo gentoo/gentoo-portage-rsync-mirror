@@ -1,6 +1,10 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.42 2015/01/26 09:50:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.43 2015/01/26 22:36:31 mr_bones_ Exp $
+
+  26 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -cyphesis-0.6.0.ebuild,
+  -files/cyphesis-0.6.0-gentoo.patch, -files/cyphesis-0.6.0-makefile.patch:
+  old
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cyphesis-0.6.2.ebuild:
   Stable for x86, wrt bug #534294
