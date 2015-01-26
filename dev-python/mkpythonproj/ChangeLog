@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mkpythonproj
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mkpythonproj/ChangeLog,v 1.6 2014/08/13 03:20:05 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mkpythonproj/ChangeLog,v 1.7 2015/01/26 15:36:53 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/mkpythonproj_licenses.patch, -mkpythonproj-1.7.ebuild,
+  -mkpythonproj-1.8.ebuild:
+  Remove old.
 
 *mkpythonproj-1.9 (13 Aug 2014)
 
