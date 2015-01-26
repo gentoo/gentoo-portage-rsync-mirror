@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1417 2015/01/26 11:40:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1418 2015/01/26 18:32:56 mpagano Exp $
+
+  26 Jan 2015; Mike Pagano <mpagano@gentoo.org> git-sources-3.19_rc1.ebuild,
+  git-sources-3.19_rc2.ebuild, git-sources-3.19_rc3.ebuild,
+  git-sources-3.19_rc4.ebuild, git-sources-3.19_rc5.ebuild,
+  git-sources-3.19_rc6.ebuild:
+  Limit patch version to <2.7.3. See bug #537852 
 
 *git-sources-3.19_rc6 (26 Jan 2015)
 
