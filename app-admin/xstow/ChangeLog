@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/xstow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.18 2014/06/27 08:39:09 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.19 2015/01/26 18:20:44 jer Exp $
+
+  26 Jan 2015; Jeroen Roovers <jer@gentoo.org> xstow-1.0.1.ebuild,
+  +files/xstow-1.0.1-ncurses.patch:
+  Fix --with-curses (bug #537886).
 
   27 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org> xstow-1.0.1.ebuild:
   Move econf to src_configure, drop static use flag. Bug #515396.

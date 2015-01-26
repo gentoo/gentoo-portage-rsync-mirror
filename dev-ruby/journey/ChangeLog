@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/journey
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.12 2014/08/12 18:53:02 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/journey/ChangeLog,v 1.13 2015/01/26 18:24:13 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> journey-1.0.4-r1.ebuild:
+  Add ruby22 target.
 
   12 Aug 2014; Anthony G. Basile <blueness@gentoo.org> journey-1.0.4-r1.ebuild:
   Keyword ~ppc and ~ppc64, bug #519170

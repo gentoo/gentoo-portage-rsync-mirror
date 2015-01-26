@@ -1,0 +1,27 @@
+--- a/configure.ac
++++ b/configure.ac
+@@ -91,11 +91,12 @@
+ 			AC_MSG_RESULT(disabled)
+ 			support_curses=0
+ 		else
++			AC_MSG_RESULT(enabled)
+ 			support_curses=1
+ 		fi
+ 	],
+-	[
+-		AC_MSG_RESULT(enabled)
++	[])
++if test $support_curses -eq 1; then
+ 		AC_CHECK_HEADER([curses.h],
+ 				[
+ 				  # test which libraray to use
+@@ -154,8 +155,7 @@
+ 				[
+ 				  support_curses=0
+ 				])
+-	])
+-
++fi
+ 
+ NO_STL_SSTREAM=0
+ NO_STL_STRSTREAM=0

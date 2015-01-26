@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/arel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.47 2014/11/26 06:52:22 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.48 2015/01/26 18:23:05 mrueg Exp $
+
+  26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> arel-4.0.2.ebuild:
+  Add ruby22 target to slot 4.0.
 
   26 Nov 2014; Hans de Graaff <graaff@gentoo.org> -arel-4.0.1.ebuild,
   -arel-5.0.0.ebuild:
