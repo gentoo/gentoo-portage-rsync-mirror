@@ -1,6 +1,17 @@
 # ChangeLog for games-strategy/liquidwar6
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.10 2014/11/25 23:21:48 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.11 2015/01/26 17:41:27 mr_bones_ Exp $
+
+  26 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/liquidwar6-0.4.3681-ldconfig.patch,
+  +files/liquidwar6-0.4.3681-paths.patch,
+  -files/liquidwar6-0.0.13_beta-ldconfig.patch,
+  -files/liquidwar6-0.0.13_beta-libpng-1.6.patch,
+  -files/liquidwar6-0.0.13_beta-paths.patch,
+  -files/liquidwar6-0.2.3551-ldconfig.patch,
+  -files/liquidwar6-0.2.3551-paths.patch, -liquidwar6-0.0.13_beta.ebuild,
+  -liquidwar6-0.2.3551.ebuild, liquidwar6-0.4.3681.ebuild:
+  clean old; tidy patching
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

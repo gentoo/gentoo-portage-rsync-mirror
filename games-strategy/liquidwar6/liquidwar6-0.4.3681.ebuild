@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.4.3681.ebuild,v 1.6 2014/11/06 05:55:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/liquidwar6-0.4.3681.ebuild,v 1.7 2015/01/26 17:41:27 mr_bones_ Exp $
 
 EAPI=5
 
@@ -65,8 +65,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.2.3551-{ldconfig,paths}.patch \
-		"${FILESDIR}"/${PN}-0.4.3681-check-headers.patch
+	epatch \
+		"${FILESDIR}"/${P}-{ldconfig,paths}.patch \
+		"${FILESDIR}"/${P}-check-headers.patch
 
 	sed -i \
 		-e 's/-Werror//' \

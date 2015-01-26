@@ -4,8 +4,6 @@ Date:   Wed Jan 8 17:23:56 2014 +0100
 
     respect datarootdir
 
-diff --git a/data/icon/Makefile.am b/data/icon/Makefile.am
-index 0bca199..ae5cf79 100644
 --- a/data/icon/Makefile.am
 +++ b/data/icon/Makefile.am
 @@ -19,6 +19,6 @@
@@ -16,8 +14,6 @@ index 0bca199..ae5cf79 100644
 +pkgdatadir = $(datarootdir)/pixmaps
  EXTRA_DIST = $(pkgdata_DATA) liquidwar6.ico liquidwar6.icns
  
-diff --git a/pkg/Makefile.am b/pkg/Makefile.am
-index 6fc2957..ac86bb8 100644
 --- a/pkg/Makefile.am
 +++ b/pkg/Makefile.am
 @@ -19,7 +19,7 @@
