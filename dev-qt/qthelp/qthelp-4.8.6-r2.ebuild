@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r2.ebuild,v 1.1 2015/01/25 18:20:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r2.ebuild,v 1.2 2015/01/26 02:49:28 pesa Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	use compat && PATCHES+=("${FILESDIR}/${P}-fix-compat.patch")
+	use compat && PATCHES+=("${FILESDIR}/${PN}-4.8.6-fix-compat.patch")
 
 	qt4-build-multilib_src_prepare
 
