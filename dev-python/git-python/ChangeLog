@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/git-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.15 2015/01/18 09:25:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.16 2015/01/26 05:21:13 idella4 Exp $
+
+  26 Jan 2015; Ian Delaney <idella4@gentoo.org> git-python-0.3.5.ebuild:
+  update version border of dev-python/gitdb, fixes bug #537502 by ercpe
 
 *git-python-0.3.5 (18 Jan 2015)
 
