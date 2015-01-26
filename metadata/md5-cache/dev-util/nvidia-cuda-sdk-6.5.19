@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile install prepare setup test unpack
-DEPEND=~dev-util/nvidia-cuda-toolkit-6.5.19 media-libs/freeglut examples? ( media-libs/freeimage media-libs/glew virtual/mpi >=x11-drivers/nvidia-drivers-343.22[uvm] )
+DEPEND=~dev-util/nvidia-cuda-toolkit-6.5.19 media-libs/freeglut examples? ( media-libs/freeimage media-libs/glew virtual/mpi >=x11-drivers/nvidia-drivers-340.32[uvm] x86? ( <x11-drivers/nvidia-drivers-346.35[uvm] ) )
 DESCRIPTION=NVIDIA CUDA Software Development Kit
 EAPI=5
 HOMEPAGE=http://developer.nvidia.com/cuda
 IUSE=debug +doc +examples opencl +cuda
 KEYWORDS=-* ~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=CUDPP
-RDEPEND=~dev-util/nvidia-cuda-toolkit-6.5.19 media-libs/freeglut examples? ( media-libs/freeimage media-libs/glew virtual/mpi >=x11-drivers/nvidia-drivers-343.22[uvm] )
+RDEPEND=~dev-util/nvidia-cuda-toolkit-6.5.19 media-libs/freeglut examples? ( media-libs/freeimage media-libs/glew virtual/mpi >=x11-drivers/nvidia-drivers-340.32[uvm] x86? ( <x11-drivers/nvidia-drivers-346.35[uvm] ) )
 RESTRICT=test
 SLOT=0
 SRC_URI=amd64? ( http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_6.5.19_linux_64.run ) x86? ( http://developer.download.nvidia.com/compute/cuda/6_5/rel/installers/cuda_6.5.19_linux_32.run )
 _eclasses_=cuda	2ba75c44d72d2b0b1fe31e2e2dc42d0e	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=447891be531dfddf0a8bf79f731cf896
+_md5_=5bfbd3e764a38f165cc587579514eded

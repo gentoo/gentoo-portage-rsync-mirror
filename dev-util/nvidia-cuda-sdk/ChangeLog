@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.59 2014/12/26 18:08:45 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.60 2015/01/26 07:12:37 jlec Exp $
+
+  26 Jan 2015; Justin Lecher <jlec@gentoo.org> nvidia-cuda-sdk-6.5.14.ebuild,
+  nvidia-cuda-sdk-6.5.19.ebuild:
+  Restrict nvidia-drivers dependency for x86 to <346.35 because of missing uvm
+  support, #534156
 
   26 Dec 2014; Justin Lecher <jlec@gentoo.org> -nvidia-cuda-sdk-5.5.22.ebuild,
   -nvidia-cuda-sdk-6.0.37.ebuild, nvidia-cuda-sdk-6.5.14.ebuild:

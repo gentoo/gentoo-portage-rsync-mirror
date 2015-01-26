@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.5.14.ebuild,v 1.8 2014/12/26 13:15:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.5.14.ebuild,v 1.9 2015/01/26 07:10:26 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,9 @@ RDEPEND="${DEPEND}
 		sys-libs/ncurses[tinfo]
 		)
 	eclipse? ( >=virtual/jre-1.6 )
-	profiler? ( >=virtual/jre-1.6 )"
+	profiler? ( >=virtual/jre-1.6 )
+	x86? ( <x11-drivers/nvidia-drivers-346.35[uvm] )
+	"
 
 S="${WORKDIR}"
 
