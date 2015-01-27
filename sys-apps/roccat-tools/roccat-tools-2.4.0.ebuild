@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-1.6.0.ebuild,v 1.2 2014/07/24 17:46:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-2.4.0.ebuild,v 1.1 2015/01/27 01:14:23 idella4 Exp $
 
 EAPI=5
 
@@ -23,18 +23,18 @@ IUSE_INPUT_DEVICES="
 	input_devices_roccat_konepuremilitary
 	input_devices_roccat_konepureoptical
 	input_devices_roccat_konextd
+	input_devices_roccat_konextdoptical
 	input_devices_roccat_kovaplus
 	input_devices_roccat_lua
 	input_devices_roccat_pyra
 	input_devices_roccat_savu
 	input_devices_roccat_ryos
+	input_devices_roccat_tyon
 "
 IUSE="${IUSE_INPUT_DEVICES}"
 
-REQUIRED_USE="input_devices_roccat_konextd? ( input_devices_roccat_koneplus )"
-
 RDEPEND="
-	dev-libs/libgaminggear
+	>=dev-libs/libgaminggear-0.5
 	x11-libs/gtk+:2
 	x11-libs/libnotify
 	media-libs/libcanberra
