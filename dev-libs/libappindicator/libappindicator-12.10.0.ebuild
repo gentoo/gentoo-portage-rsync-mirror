@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0.ebuild,v 1.3 2013/05/12 14:40:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0.ebuild,v 1.4 2015/01/27 12:17:48 pacho Exp $
 
-EAPI=4
+EAPI=5
 VALA_MIN_API_VERSION="0.16"
 VALA_USE_DEPEND="vapigen"
 
@@ -17,17 +17,23 @@ SLOT="3"
 KEYWORDS="~amd64 ~x86"
 IUSE="+introspection"
 
-RDEPEND=">=dev-libs/dbus-glib-0.98
-	>=dev-libs/glib-2.26
+RDEPEND="
+	>=dev-libs/dbus-glib-0.98
+	>=dev-libs/glib-2.26:2
 	>=dev-libs/libdbusmenu-0.6.2:3[gtk]
 	>=dev-libs/libindicator-12.10.0:3
 	>=x11-libs/gtk+-3.2:3
-	introspection? ( >=dev-libs/gobject-introspection-1 )"
+	introspection? ( >=dev-libs/gobject-introspection-1 )
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	introspection? ( $(vala_depend) )"
+	introspection? ( $(vala_depend) )
+"
 
 src_prepare() {
+	# Don't use -Werror
+	sed -i -e 's/ -Werror//' {src,tests}/Makefile.{am,in} || die
+
 	# Disable MONO for now because of http://bugs.gentoo.org/382491
 	sed -i -e '/^MONO_REQUIRED_VERSION/s:=.*:=9999:' configure || die
 	use introspection && vala_src_prepare

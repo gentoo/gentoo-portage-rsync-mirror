@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.14.ebuild,v 1.3 2014/07/23 15:17:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.4.6.ebuild,v 1.1 2015/01/27 12:07:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
-inherit autotools eutils gnome2 multilib pax-utils python-single-r1
+inherit autotools eutils flag-o-matic gnome2 multilib pax-utils python-single-r1
 
 DESCRIPTION="A fork of GNOME Shell with layout similar to GNOME 2"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE="+l10n +networkmanager" #+bluetooth
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
 	app-misc/ca-certificates
@@ -36,15 +36,14 @@ COMMON_DEPEND="
 	dev-libs/libxml2:2
 	gnome-base/gconf:2[introspection]
 	gnome-base/librsvg
-	>=gnome-extra/cinnamon-desktop-1.0:0=[introspection]
+	>=gnome-extra/cinnamon-desktop-2.4:0=[introspection]
 	gnome-extra/cinnamon-menus[introspection]
-	>=gnome-extra/cjs-1.9.0
+	>=gnome-extra/cjs-2.4
 	>=media-libs/clutter-1.7.5:1.0[introspection]
 	media-libs/cogl:1.0=[introspection]
 	>=gnome-base/gsettings-desktop-schemas-2.91.91
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0
-	media-libs/libcanberra
 	media-sound/pulseaudio:0=[glib]
 	net-libs/libsoup:2.4[introspection]
 	>=sys-auth/polkit-0.100[introspection]
@@ -54,7 +53,7 @@ COMMON_DEPEND="
 	>=x11-libs/startup-notification-0.11
 	x11-libs/libX11
 	>=x11-libs/libXfixes-5.0
-	>=x11-wm/muffin-1.9.1[introspection]
+	>=x11-wm/muffin-2.4[introspection]
 	${PYTHON_DEPS}
 	networkmanager? (
 		gnome-base/libgnome-keyring
@@ -76,25 +75,22 @@ COMMON_DEPEND="
 # 10. pygobject needed for menu editor
 # 11. nemo - default file manager, tightly integrated with cinnamon
 # TODO(lxnay): fix error: libgnome-desktop/gnome-rr-labeler.h: No such file or directory
-# note: needs gksu, not gksu-polkit, due to extensive use of --message/-m arg
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/libgnomekbd-2.91.4[introspection]
 	|| ( sys-power/upower[introspection] sys-power/upower-pm-utils[introspection] )
 
-	gnome-extra/cinnamon-session
-
-	gnome-extra/cinnamon-settings-daemon
+	>=gnome-extra/cinnamon-session-2.4
+	>=gnome-extra/cinnamon-settings-daemon-2.4
 
 	>=sys-apps/accountsservice-0.6.14[introspection]
 
 	>=app-accessibility/caribou-0.3
 
-	x11-libs/gksu
 	x11-misc/xdg-utils
 
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/gconf-python:2
+	dev-python/gconf-python:2[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pexpect[${PYTHON_USEDEP}]
 	dev-python/pycairo[${PYTHON_USEDEP}]
@@ -106,11 +102,11 @@ RDEPEND="${COMMON_DEPEND}
 	x11-themes/gnome-themes-standard[gtk]
 	x11-themes/gnome-icon-theme-symbolic
 
-	gnome-extra/nemo
-	gnome-extra/cinnamon-control-center
-	gnome-extra/cinnamon-screensaver
+	>=gnome-extra/nemo-2.4
+	>=gnome-extra/cinnamon-control-center-2.4
+	>=gnome-extra/cinnamon-screensaver-2.4
 
-	l10n? ( >=gnome-extra/cinnamon-translations-2.2 )
+	l10n? ( >=gnome-extra/cinnamon-translations-2.4 )
 	networkmanager? (
 		gnome-extra/nm-applet
 		net-misc/mobile-broadband-provider-info
@@ -136,27 +132,39 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix GNOME 3.8 support
-	epatch "${FILESDIR}/background.patch"
+	# Fix backgrounds path as cinnamon doesn't provide them
+	# https://github.com/linuxmint/Cinnamon/issues/3575
+	epatch "${FILESDIR}"/${PN}-2.4.5-background.patch
 
 	# Fix automagic gnome-bluetooth dep, bug #398145
-	epatch "${FILESDIR}/${PN}-2.2.6-automagic-gnome-bluetooth.patch"
+	epatch "${FILESDIR}"/${PN}-2.2.6-automagic-gnome-bluetooth.patch
 
 	# Optional NetworkManager, bug #488684
-	epatch "${FILESDIR}/${PN}-2.2.6-optional-networkmanager.patch"
+	epatch "${FILESDIR}"/${PN}-2.4.5-optional-networkmanager.patch
+
+	# Use wheel group instead of sudo (from Fedora/Arch)
+	# https://github.com/linuxmint/Cinnamon/issues/3576
+	epatch "${FILESDIR}"/${PN}-2.4.5-set-wheel.patch
+
+	# Fix GNOME 3.14 support (from Fedora/Arch)
+	# https://github.com/linuxmint/Cinnamon/issues/3577
+	epatch "${FILESDIR}"/${PN}-2.4.5-gnome-3.14.patch
+
+	# Use pkexec instead of gksu (from Arch)
+	# https://github.com/linuxmint/Cinnamon/issues/3565
+	sed -i 's/gksu/pkexec/' files/usr/bin/cinnamon-settings-users || die
+
+	# Add polkit agent to required components (from Fedora/Arch), bug #523958
+	# https://github.com/linuxmint/Cinnamon/issues/3579
+	sed -i 's/RequiredComponents=\(.*\)$/RequiredComponents=\1polkit-gnome-authentication-agent-1;/' \
+		files/usr/share/cinnamon-session/sessions/cinnamon*.session || die
 
 	# Gentoo uses /usr/$(get_libdir), not /usr/lib even for python
 	sed -e "s:/usr/lib/:/usr/$(get_libdir)/:" \
 		-e 's:"/usr/lib":"/usr/'"$(get_libdir)"'":' \
 		-i files/usr/share/polkit-1/actions/org.cinnamon.settings-users.policy \
-		-i files/usr/lib/cinnamon-settings-users/cinnamon-settings-users.py \
-		-i files/usr/lib/cinnamon-screensaver-lock-dialog/cinnamon-screensaver-lock-dialog.py \
-		-i files/usr/lib/cinnamon-settings/cinnamon-settings.py \
-		-i files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py \
-		-i files/usr/lib/cinnamon-settings/data/spices/applet-detail.html \
-		-i files/usr/lib/cinnamon-settings/bin/*.py \
-		-i files/usr/lib/cinnamon-desktop-editor/cinnamon-desktop-editor.py \
-		-i files/usr/lib/cinnamon-menu-editor/cme/*.py \
+		-i files/usr/lib/*/*.py \
+		-i files/usr/lib/*/*/*.py \
 		-i files/usr/bin/* || die "sed failed"
 	if [[ "$(get_libdir)" != lib ]]; then
 		mv files/usr/lib "files/usr/$(get_libdir)" || die "mv failed"
@@ -166,34 +174,43 @@ src_prepare() {
 		rm -rv files/usr/share/cinnamon/applets/network@cinnamon.org || die
 	fi
 
+	epatch_user
+
+	python_fix_shebang .
+
 	eautoreconf
 	gnome2_src_prepare
 }
 
 src_configure() {
-	# Don't error out on warnings
+	# https://bugs.gentoo.org/show_bug.cgi?id=536374
+	# https://github.com/linuxmint/Cinnamon/issues/3843
+	append-ldflags $(no-as-needed)
+
 	gnome2_src_configure \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--disable-rpath \
 		--disable-jhbuild-wrapper-script \
 		$(use_enable networkmanager) \
 		--with-ca-certificates="${EPREFIX}/etc/ssl/certs/ca-certificates.crt" \
 		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins" \
 		--without-bluetooth
-		#$(use_with bluetooth)
 }
 
 src_install() {
 	gnome2_src_install
-	python_optimize "${ED}usr/$(get_libdir)/cinnamon-"{desktop-editor,json-makepot,launcher,looking-glass,menu-editor,screensaver-lock-dialog,settings,settings-users}
-	# Fix broken shebangs
-	sed -e "s%#!.*python%#!${PYTHON}%" \
-		-i "${ED}usr/bin/cinnamon-"{desktop-editor,json-makepot,launcher,looking-glass,menu-editor,screensaver-lock-dialog,settings,settings-users} \
-		-i "${ED}usr/$(get_libdir)/cinnamon-settings/cinnamon-settings.py" || die
+	python_optimize "${ED}"usr/$(get_libdir)/cinnamon-*
 
 	# Required for gnome-shell on hardened/PaX, bug #398941
 	pax-mark mr "${ED}usr/bin/cinnamon"
 
 	# Doesn't exist on Gentoo, causing this to be a dead symlink
 	rm -f "${ED}etc/xdg/menus/cinnamon-applications-merged" || die
+
+	# Ensure authentication-agent is started, bug #523958
+	# https://github.com/linuxmint/Cinnamon/issues/3579
+	insinto /etc/xdg/autostart/
+	doins "${FILESDIR}"/polkit-cinnamon-authentication-agent-1.desktop
 }
 
 pkg_postinst() {

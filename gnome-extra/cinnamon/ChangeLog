@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.53 2015/01/11 22:46:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.54 2015/01/27 12:07:13 pacho Exp $
+
+*cinnamon-2.4.6 (27 Jan 2015)
+
+  27 Jan 2015; Pacho Ramos <pacho@gentoo.org> +cinnamon-2.4.6.ebuild,
+  -cinnamon-2.2.14.ebuild, -cinnamon-2.4.5.ebuild:
+  Version bump, as-needed doesn't work ok for this (#536374 , upstream bug
+  https://github.com/linuxmint/Cinnamon/issues/3843 ), drop old.
 
 *cinnamon-2.4.5 (11 Jan 2015)
 

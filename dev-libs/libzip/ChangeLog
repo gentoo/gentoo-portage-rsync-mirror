@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.79 2015/01/01 11:20:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzip/ChangeLog,v 1.80 2015/01/27 12:25:22 kensington Exp $
+
+  27 Jan 2015; Michael Palimaka <kensington@gentoo.org>
+  -files/libzip-0.10_rc1-fix_headers.patch, -libzip-0.11.1.ebuild:
+  Remove old.
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libzip-0.11.2.ebuild:
   Stable for ppc64, wrt bug #530660
