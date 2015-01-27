@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/yandex-disk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yandex-disk/ChangeLog,v 1.2 2014/12/02 09:40:06 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yandex-disk/ChangeLog,v 1.3 2015/01/27 12:36:56 zlogene Exp $
+
+  27 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  yandex-disk-0.1.5.758_p1.ebuild:
+  Mark stable
 
 *yandex-disk-0.1.5.758_p1 (02 Dec 2014)
 
@@ -15,4 +19,3 @@
   Initial commit, wrt bug #483110. Thanks to Dmitry Suloev <SuloevDmitry AT
   gmail.com> for initial ebuild. Package will be maintained by Vladimir Romanov
   <blueboar AT gentoo.org> through proxy maintainers
-
