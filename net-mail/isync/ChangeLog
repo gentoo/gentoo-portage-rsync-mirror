@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/isync
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.25 2014/06/20 07:53:36 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.26 2015/01/26 23:50:05 radhermit Exp $
+
+*isync-1.1.2 (26 Jan 2015)
+
+  26 Jan 2015; Tim Harder <radhermit@gentoo.org> +isync-1.1.2.ebuild:
+  Version bump.
 
 *isync-1.1.1 (20 Jun 2014)
 
