@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.4.1.ebuild,v 1.1 2015/01/26 06:02:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-1.4.1.ebuild,v 1.2 2015/01/27 22:50:34 vapier Exp $
 
 EAPI=5
 
@@ -21,11 +21,11 @@ IUSE="doc examples test"
 
 RDEPEND="
 	>=dev-python/logilab-common-0.53.0[${PYTHON_USEDEP}]
-	>=dev-python/astroid-1.3[${PYTHON_USEDEP}]
+	>=dev-python/astroid-1.3.3[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( "${RDEPEND}" )"
+	test? ( ${RDEPEND} )"
 
 # Usual. Requ'd for impl specific failures in test phase
 DISTUTILS_IN_SOURCE_BUILD=1
