@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.4.2.ebuild,v 1.1 2015/01/11 18:35:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/cinnamon-control-center-2.4.2-r2.ebuild,v 1.1 2015/01/27 09:32:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/linuxmint/cinnamon-control-center/archive/${PV}.tar.
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+colord +cups input_devices_wacom socialweb"
+IUSE="+colord +cups input_devices_wacom"
 KEYWORDS="~amd64 ~x86"
 
 # False positives caused by nested configure scripts
@@ -49,8 +49,6 @@ COMMON_DEPEND="
 		>=dev-libs/libwacom-0.7
 		>=x11-libs/gtk+-3.8:3
 		>=x11-libs/libXi-1.2 )
-	socialweb? ( net-libs/libsocialweb )
-
 "
 # <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
 # libgnomekbd needed only for gkbd-keyboard-display tool
@@ -85,6 +83,9 @@ src_prepare() {
 	# make some panels optional
 	epatch "${FILESDIR}"/${PN}-2.2.5-optional.patch
 
+	# Fix NM version checking, bug #536850
+	epatch "${FILESDIR}"/${PN}-2.4.2-networkmanager-version.patch
+
 	epatch_user
 
 	eautoreconf
@@ -97,8 +98,8 @@ src_configure() {
 		--disable-update-mimedb \
 		--disable-static \
 		--enable-documentation \
+		--without-libsocialweb \
 		$(use_enable colord color) \
 		$(use_enable cups) \
-		$(use_with socialweb libsocialweb) \
 		$(use_enable input_devices_wacom wacom)
 }
