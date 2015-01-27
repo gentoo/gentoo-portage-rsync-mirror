@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.310 2015/01/26 20:42:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.311 2015/01/27 09:30:36 pacho Exp $
+
+  27 Jan 2015; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.8-r200.ebuild,
+  webkit-gtk-2.4.8.ebuild:
+  Stop running the nvidia_check as looks to be no longer needed (thanks a lot to
+  nE0sIghT, Casey Webster and others for testing)
 
 *webkit-gtk-2.6.5 (26 Jan 2015)
 

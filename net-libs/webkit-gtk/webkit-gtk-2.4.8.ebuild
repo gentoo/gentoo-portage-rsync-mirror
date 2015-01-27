@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.8.ebuild,v 1.5 2015/01/25 11:59:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.8.ebuild,v 1.6 2015/01/27 09:30:36 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -102,7 +102,7 @@ S="${WORKDIR}/${MY_P}"
 CHECKREQS_DISK_BUILD="18G" # and even this might not be enough, bug #417307
 
 pkg_pretend() {
-	nvidia_check || die #463960
+	#nvidia_check || die #463960
 
 	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		einfo "Checking for sufficient disk space to build ${PN} with debugging CFLAGS"
@@ -115,7 +115,7 @@ pkg_pretend() {
 }
 
 pkg_setup() {
-	nvidia_check || die #463960
+	#nvidia_check || die #463960
 
 	# Check whether any of the debugging flags is enabled
 	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
@@ -300,19 +300,19 @@ src_install() {
 	pax-mark m "${ED}usr/libexec/WebKitPluginProcess"
 }
 
-nvidia_check() {
-	if [[ ${MERGE_TYPE} != "binary" ]] &&
-	   use introspection &&
-	   has_version 'x11-drivers/nvidia-drivers' &&
-	   [[ $(eselect opengl show 2> /dev/null) = "nvidia" ]]
-	then
-		eerror "${PN} freezes while compiling if x11-drivers/nvidia-drivers is"
-		eerror "used as the system OpenGL library. We are very sorry about that."
-		eerror "You should temporarily select Mesa as the system OpenGL library:"
-		eerror " # eselect opengl set xorg-x11"
-		eerror " and then run emerge again."
-		eerror "See https://bugs.gentoo.org/463960 for more details."
-		eerror
-		return 1
-	fi
-}
+#nvidia_check() {
+#	if [[ ${MERGE_TYPE} != "binary" ]] &&
+#	   use introspection &&
+#	   has_version 'x11-drivers/nvidia-drivers' &&
+#	   [[ $(eselect opengl show 2> /dev/null) = "nvidia" ]]
+#	then
+#		eerror "${PN} freezes while compiling if x11-drivers/nvidia-drivers is"
+#		eerror "used as the system OpenGL library. We are very sorry about that."
+#		eerror "You should temporarily select Mesa as the system OpenGL library:"
+#		eerror " # eselect opengl set xorg-x11"
+#		eerror " and then run emerge again."
+#		eerror "See https://bugs.gentoo.org/463960 for more details."
+#		eerror
+#		return 1
+#	fi
+#}
