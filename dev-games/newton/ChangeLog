@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/newton
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/ChangeLog,v 1.9 2014/05/12 13:20:15 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/ChangeLog,v 1.10 2015/01/27 08:01:44 mr_bones_ Exp $
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/newton-1.53-glut.patch, -newton-1.53.ebuild, -newton-2.00.ebuild:
+  old
 
   12 May 2014; Michael Palimaka <kensington@gentoo.org> newton-1.53.ebuild:
   Specify protocol in HOMEPAGE.
