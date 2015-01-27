@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/mirrorselect
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.149 2014/09/24 09:33:24 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.150 2015/01/27 04:24:32 dolsen Exp $
+
+  27 Jan 2015; Brian Dolbec <dolsen@gentoo.org> mirrorselect-2.2.2.ebuild,
+  +mirrorselect-2.2.2-r1.ebuild,
+  +files/mirrorselect-2.2.2-Update-for-ssl-fetch-api-change.patch:
+  Bump with patch for ssl-fetch api change, adjust deps for stable 2.2.2
+  version.
+
+*mirrorselect-2.2.2-r1 (27 Jan 2015)
 
   24 Sep 2014; Agostino Sarubbo <ago@gentoo.org> mirrorselect-2.2.2.ebuild:
   Stable for x86, wrt bug #513278
