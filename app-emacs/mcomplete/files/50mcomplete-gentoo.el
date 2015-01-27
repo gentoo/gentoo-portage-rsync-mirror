@@ -1,8 +1,4 @@
-
-;;; mcomplete site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
-
 (autoload 'mcomplete-mode "mcomplete"
   "Toggle minibuffer completion with prefix and substring matching." t)
 (autoload 'turn-on-mcomplete-mode "mcomplete"

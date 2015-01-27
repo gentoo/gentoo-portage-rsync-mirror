@@ -4,11 +4,11 @@ DESCRIPTION=Universal network configuration daemon for laptops, desktops, server
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Projects/NetworkManager
 IUSE=bluetooth connection-sharing consolekit +dhclient dhcpcd gnutls +introspection kernel_linux +nss +modemmanager ncurses +ppp resolvconf selinux systemd teamd test vala +wext +wifi zeroconf test
-KEYWORDS=amd64 arm x86
+KEYWORDS=amd64 arm ~ppc ~ppc64 x86
 LICENSE=GPL-2+
 RDEPEND=>=sys-apps/dbus-1.2 >=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.32:2 >=dev-libs/libnl-3.2.8:3= >=sys-auth/polkit-0.106 net-libs/libndp >=net-libs/libsoup-2.26:2.4= >=net-misc/iputils-20121221-r1 sys-libs/readline >=virtual/libgudev-165:= bluetooth? ( >=net-wireless/bluez-5 ) connection-sharing? ( net-dns/dnsmasq[dhcp] net-firewall/iptables ) gnutls? ( dev-libs/libgcrypt:0= net-libs/gnutls:= ) modemmanager? ( >=net-misc/modemmanager-0.7.991 ) ncurses? ( >=dev-libs/newt-0.52.15 ) nss? ( >=dev-libs/nss-3.11:= ) dhclient? ( =net-misc/dhcp-4*[client] ) dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 ) introspection? ( >=dev-libs/gobject-introspection-0.10.3 ) ppp? ( >=net-dialup/ppp-2.4.5:=[ipv6] net-dialup/rp-pppoe ) resolvconf? ( net-dns/openresolv ) systemd? ( >=sys-apps/systemd-183:0= ) teamd? ( >=net-misc/libteam-1.9 ) zeroconf? ( net-dns/avahi:=[autoipd] ) || ( sys-power/upower sys-power/upower-pm-utils >=sys-apps/systemd-183 ) consolekit? ( sys-auth/consolekit ) wifi? ( >=net-wireless/wpa_supplicant-0.7.3-r3[dbus] )
 REQUIRED_USE=modemmanager? ( ppp ) ^^ ( nss gnutls ) ^^ ( dhclient dhcpcd )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/gnome/NetworkManager-0.9.10.1_pre20141101.tar.xz
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	29582087e5f16ca16b1c6815c2ae2b65	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	udev	da001465a2e939c93f7ae16947ce3438	user	f54e098dd38ba1c0847a13e685b87747	vala	a41415fe361172827ed11b6a32ee38fb	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=c1e08600496923853aa81d0ee4ad1a26
+_md5_=7ba43ac88661588d354da1e388b36216

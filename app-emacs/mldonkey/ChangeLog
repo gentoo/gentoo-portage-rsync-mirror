@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mldonkey
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.24 2011/11/11 22:14:23 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.25 2015/01/27 18:53:16 ulm Exp $
+
+  27 Jan 2015; Ulrich Müller <ulm@gentoo.org> mldonkey-0.0.4b-r1.ebuild:
+  Update HOMEPAGE, bug 537928. Specify LICENSE more precisely.
 
   11 Nov 2011; Ulrich Mueller <ulm@gentoo.org> +files/50mldonkey-gentoo.el,
   -files/51mldonkey-gentoo.el, mldonkey-0.0.4b-r1.ebuild:

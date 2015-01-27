@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/libteam
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libteam/ChangeLog,v 1.6 2014/12/05 10:15:56 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libteam/ChangeLog,v 1.7 2015/01/27 18:52:48 blueness Exp $
+
+  27 Jan 2015; Anthony G. Basile <blueness@gentoo.org> libteam-1.0.ebuild,
+  libteam-1.11.ebuild, libteam-1.14.ebuild:
+  Keyword ~ppc ~ppc64, bug #523468
 
   05 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libteam-1.11.ebuild:
   Stable for x86, wrt bug #529970

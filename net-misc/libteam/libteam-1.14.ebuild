@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libteam/libteam-1.14.ebuild,v 1.1 2014/11/23 05:37:07 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libteam/libteam-1.14.ebuild,v 1.2 2015/01/27 18:52:48 blueness Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://libteam.org/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dbus debug examples static-libs +syslog zmq"
 
 DEPEND=">=dev-libs/jansson-2.4
