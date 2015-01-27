@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.164 2014/12/27 12:20:52 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.165 2015/01/27 14:10:33 jer Exp $
+
+  27 Jan 2015; Jeroen Roovers <jer@gentoo.org> mtr-0.86.ebuild, metadata.xml:
+  Stable for HPPA (bug #537936).
 
   27 Dec 2014; Jeroen Roovers <jer@gentoo.org> mtr-9999.ebuild:
   Inherit fcaps.eclass, drop USE=suid by Kevin Korb (bug #483080).
