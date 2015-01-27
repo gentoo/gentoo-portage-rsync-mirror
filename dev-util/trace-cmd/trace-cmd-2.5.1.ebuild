@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/trace-cmd/trace-cmd-2.5.1.ebuild,v 1.1 2015/01/27 02:56:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/trace-cmd/trace-cmd-2.5.1.ebuild,v 1.2 2015/01/27 03:13:47 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
 
-inherit toolchain-funcs python-single-r1
+inherit eutils toolchain-funcs linux-info python-single-r1
 
 DESCRIPTION="User-space front-end for Ftrace"
 HOMEPAGE="https://git.kernel.org/cgit/linux/kernel/git/rostedt/trace-cmd.git"
@@ -31,13 +31,23 @@ DEPEND="${RDEPEND}
 	gtk? ( virtual/pkgconfig )
 	doc? ( app-text/asciidoc )"
 
+CONFIG_CHECK="
+	~TRACING
+	~FTRACE
+	~BLK_DEV_IO_TRACE"
+
+pkg_setup() {
+	linux-info_pkg_setup
+	python-single-r1_pkg_setup
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	epatch_user
 }
 
 src_configure() {
-	MAKEOPTS+=" V=1 prefix=/usr libdir=$(get_libdir) CC=$(tc-getCC) AR=$(tc-getAR)"
+	MAKEOPTS+=" prefix=/usr libdir=$(get_libdir) CC=$(tc-getCC) AR=$(tc-getAR)"
 
 	if use python; then
 		MAKEOPTS+=" PYTHON_VERS=${EPYTHON//python/python-}"
