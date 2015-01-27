@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.487 2015/01/22 23:17:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.488 2015/01/26 23:26:21 radhermit Exp $
+
+*vim-7.4.591 (26 Jan 2015)
+
+  26 Jan 2015; Tim Harder <radhermit@gentoo.org> +vim-7.4.591.ebuild:
+  Version bump.
 
   22 Jan 2015; Tim Harder <radhermit@gentoo.org> vim-9999.ebuild:
   Add ruby:2.2 and drop ruby:1.9 support.
