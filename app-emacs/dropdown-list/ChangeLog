@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/dropdown-list
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dropdown-list/ChangeLog,v 1.4 2014/02/15 00:46:01 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dropdown-list/ChangeLog,v 1.5 2015/01/27 18:02:45 ulm Exp $
+
+  27 Jan 2015; Ulrich Müller <ulm@gentoo.org> dropdown-list-20120329.ebuild:
+  Update HOMEPAGE, bug 537928.
 
 *dropdown-list-20120329 (15 Feb 2014)
 

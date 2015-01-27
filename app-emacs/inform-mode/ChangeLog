@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/inform-mode
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/ChangeLog,v 1.13 2007/12/14 20:21:00 ulm Exp $
+# Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/inform-mode/ChangeLog,v 1.15 2015/01/27 18:28:15 ulm Exp $
+
+*inform-mode-1.6.2 (27 Jan 2015)
+
+  27 Jan 2015; Ulrich Müller <ulm@gentoo.org> +inform-mode-1.6.2.ebuild:
+  Version bump.
+
+  27 Jan 2015; Ulrich Müller <ulm@gentoo.org> inform-mode-1.5.8.ebuild:
+  Update HOMEPAGE, bug 537928. Update ebuild to EAPI 5. Specify LICENSE more
+  precisely.
 
   14 Dec 2007; Ulrich Mueller <ulm@gentoo.org> inform-mode-1.5.8.ebuild:
   Stable on amd64, bug #195512.
@@ -29,12 +38,12 @@
   Stable on sparc.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *inform-mode-1.5.8 (18 Nov 2002)
 
   18 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   inform-mode-1.5.8.ebuild, files/digest-inform-mode-1.5.8,
-  files/50inform-mode-gentoo.el : 
+  files/50inform-mode-gentoo.el :
 
   Initial import. Ebuild contributed by Marshall T. Vandegrift
   <vandem2@rpi.edu> of bug #10422 fame.

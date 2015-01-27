@@ -2,11 +2,11 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=>=virtual/emacs-23
 DESCRIPTION=A folding-editor-like Emacs minor mode
 EAPI=5
-HOMEPAGE=http://www.emacswiki.org/cgi-bin/wiki/FoldingMode
+HOMEPAGE=http://www.emacswiki.org/emacs/FoldingMode
 KEYWORDS=alpha amd64 x86
 LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=mirror://gentoo/folding-2012.0226.1623.el.bz2
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e3c5d81001862fe60313cc0f256278cf
+_md5_=68179cb33228a469ca118e11d5c34408

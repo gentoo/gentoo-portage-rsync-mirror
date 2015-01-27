@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-jabber
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.32 2014/06/07 11:09:56 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.33 2015/01/27 18:04:31 ulm Exp $
+
+  27 Jan 2015; Ulrich Müller <ulm@gentoo.org> emacs-jabber-0.8.92.ebuild:
+  Update HOMEPAGE, bug 537928.
 
   07 Jun 2014; Ulrich Müller <ulm@gentoo.org> emacs-jabber-0.8.92.ebuild:
   Remove redundant NEED_EMACS assignment.
