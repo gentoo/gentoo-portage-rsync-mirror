@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/gkeys-gen-9999.ebuild,v 1.4 2015/01/09 22:35:13 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/gkeys-gen-9999.ebuild,v 1.5 2015/01/27 01:47:20 dolsen Exp $
 
 EAPI="5"
 
@@ -39,6 +39,7 @@ python_prepare_all() {
 	# copy these 2 into our subdir from the master level
 	cp ../LICENSE ./ || die "cp LICENSE failed"
 	cp ../README.md ./ || die "cp README.me failed"
+	cp -R ../py2man ./ || die "cp-R py2man failed"
 }
 
 pkg_postinst() {

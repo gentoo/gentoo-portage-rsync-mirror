@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gkeys-gen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/ChangeLog,v 1.6 2015/01/09 22:35:13 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/ChangeLog,v 1.7 2015/01/27 01:47:20 dolsen Exp $
+
+  27 Jan 2015; Brian Dolbec <dolsen@gentoo.org> gkeys-gen-9999.ebuild:
+  Add missed line to copy the py2man code where it was import-able.
 
   09 Jan 2015; Brian Dolbec <dolsen@gentoo.org> gkeys-gen-9999.ebuild:
   Fix copyright header, adjust gnupg dep.

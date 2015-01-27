@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.3-r3.ebuild,v 1.1 2015/01/26 07:40:55 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/etc-proposals-1.4.3-r3.ebuild,v 1.2 2015/01/27 01:39:05 dolsen Exp $
 
 EAPI="5"
 PYTHON_COMPAT=(python2_7)
@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="a set of tools for updating gentoo config files"
 HOMEPAGE="http://sourceforge.net/projects/etc-proposals.berlios/"
-SRC_URI="http://sourceforge.net/projects/${PN}.berlios/files/${P}.tar.gz/download"
+SRC_URI="mirror://sourceforge/${PN}.berlios/${P}.tar.gz"
 
 IUSE="gtk qt4"
 LICENSE="GPL-2"
@@ -22,8 +22,11 @@ RDEPEND="${DEPEND}"
 
 python_install_all() {
 	distutils-r1_python_install_all
-	dosbin "${D}"/usr/bin/etc-proposals
-	rm -rf "${D}"/usr/bin
+
+	dodir /usr/sbin
+	einfo "Moving /usr/bin/etc-proposals to /usr/sbin/etc-proposals"
+	mv "${ED%/}/usr/bin/etc-proposals" "${ED%/}/usr/sbin/etc-proposals" || die
+	rmdir "${ED%/}/usr/bin" || die
 
 	# Bug 308725: Filter out the "PreferedFrontends" based on USE Flags:
 	use qt4 || sed -i -e '/^PreferedFrontends=/ s/qt4,//' "${D}"/etc/etc-proposals.conf
