@@ -2,11 +2,11 @@ DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=app-emacs/color-moccur >=virtual/emacs-23
 DESCRIPTION=An improved interface to color-moccur for editing
 EAPI=5
-HOMEPAGE=http://www.bookshelf.jp/ http://www.emacswiki.org/cgi-bin/wiki/SearchBuffers
+HOMEPAGE=http://www.bookshelf.jp/ http://www.emacswiki.org/emacs/SearchBuffers
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3+
 RDEPEND=app-emacs/color-moccur >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ulm/distfiles/moccur-edit-2.16.el.bz2
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=adc5af98942047bc0850d61915ca94cd
+_md5_=ddefff874875f55da6ccb4eb7f619d94

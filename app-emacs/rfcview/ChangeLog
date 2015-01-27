@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rfcview
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.14 2014/04/19 12:50:25 ulm Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.15 2015/01/27 19:29:07 ulm Exp $
+
+  27 Jan 2015; Ulrich Müller <ulm@gentoo.org> rfcview-0.13.ebuild:
+  Update HOMEPAGE, bug 537928.
 
   19 Apr 2014; Ulrich Müller <ulm@gentoo.org> -rfcview-0.5.ebuild:
   Remove old.
