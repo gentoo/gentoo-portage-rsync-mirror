@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.2.0.ebuild,v 1.2 2015/01/27 10:13:17 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.1.3.ebuild,v 1.1 2015/01/27 10:13:17 tamiko Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ PYTHON_REQ_USE="ncurses,readline"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python-r1 \
 	user udev fcaps readme.gentoo pax-utils
 
-BACKPORTS=
+BACKPORTS=""
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
@@ -258,10 +258,11 @@ src_prepare() {
 	use nls || rm -f po/*.po
 
 	epatch "${FILESDIR}"/qemu-1.7.0-cflags.patch
-
+	epatch "${FILESDIR}"/${PN}-2.1.1-readlink-self.patch
+	epatch "${FILESDIR}"/${PN}-2.1.2-vnc-sanitize-bits.patch #527088
 	[[ -n ${BACKPORTS} ]] && \
-		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
-			epatch
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" \
+			EPATCH_SOURCE="${WORKDIR}/patches" epatch
 
 	# Fix ld and objcopy being called directly
 	tc-export AR LD OBJCOPY

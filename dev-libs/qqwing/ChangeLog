@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qqwing
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qqwing/ChangeLog,v 1.2 2014/12/30 19:52:45 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qqwing/ChangeLog,v 1.3 2015/01/27 10:08:06 pacho Exp $
+
+  27 Jan 2015; Pacho Ramos <pacho@gentoo.org> qqwing-1.3.3.ebuild:
+  x86 keyword, bug #533344
 
   30 Dec 2014; Markus Meier <maekke@gentoo.org> qqwing-1.3.3.ebuild:
   add ~arm, bug #533344
@@ -10,4 +13,3 @@
   22 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> +qqwing-1.3.3.ebuild,
   +files/qqwing-1.3.0-autotools.patch, +metadata.xml:
   Initial ebuild. Required by >=games-puzzle/gnome-sudoku-3.14.
-

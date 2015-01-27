@@ -2,12 +2,12 @@ DEFINED_PHASES=compile configure install prepare test
 DEPEND=!net-dialup/radiusclient !net-dialup/freeradius-client !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=RadiusClient NextGeneration - library for RADIUS clients accompanied with several client utilities
 EAPI=5
-HOMEPAGE=http://developer.berlios.de/projects/radiusclient-ng/
+HOMEPAGE=http://sourceforge.net/projects/radiusclient-ng.berlios/
 IUSE=static-libs
 KEYWORDS=amd64 ~ppc ~sparc x86
 LICENSE=BSD
 RDEPEND=!net-dialup/radiusclient !net-dialup/freeradius-client
 SLOT=0
-SRC_URI=mirror://berlios/radiusclient-ng/radiusclient-ng-0.5.6.tar.gz
+SRC_URI=mirror://sourceforge/radiusclient-ng.berlios/radiusclient-ng-0.5.6.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=5ceaf96b34c61395b683615cadf3259d
+_md5_=45386b12165f0f82042b159a4c897cc3
