@@ -1,7 +1,7 @@
-Allow to fully disable LTO.
+Allow to fully disable LTO
 
---- ./src/ld/InputFiles.cpp.lto	2014-04-05 00:42:29.000000000 +0200
-+++ ./src/ld/InputFiles.cpp	2014-08-29 09:01:04.000000000 +0200
+--- ld64-236.3/src/ld/InputFiles.cpp
++++ ld64-236.3/src/ld/InputFiles.cpp
 @@ -59,7 +59,9 @@
  #include "macho_relocatable_file.h"
  #include "macho_dylib_file.h"
@@ -56,9 +56,9 @@ Allow to fully disable LTO.
  
  	// error handling
  	if ( ((fat_header*)p)->magic == OSSwapBigToHostInt32(FAT_MAGIC) ) {
---- ./src/ld/ld.cpp.lto	2014-04-05 00:42:29.000000000 +0200
-+++ ./src/ld/ld.cpp	2014-08-29 09:00:29.000000000 +0200
-@@ -83,7 +83,9 @@
+--- ld64-236.3/src/ld/ld.cpp
++++ ld64-236.3/src/ld/ld.cpp
+@@ -91,7 +91,9 @@
  #include "parsers/archive_file.h"
  #include "parsers/macho_relocatable_file.h"
  #include "parsers/macho_dylib_file.h"
@@ -68,9 +68,9 @@ Allow to fully disable LTO.
  #include "parsers/opaque_section_file.h"
  
  
---- ./src/ld/Options.cpp.lto	2014-04-05 00:42:29.000000000 +0200
-+++ ./src/ld/Options.cpp	2014-08-29 09:00:29.000000000 +0200
-@@ -42,10 +42,13 @@
+--- ld64-236.3/src/ld/Options.cpp
++++ ld64-236.3/src/ld/Options.cpp
+@@ -41,10 +41,13 @@
  #include "MachOFileAbstraction.hpp"
  #include "Snapshot.h"
  
@@ -84,7 +84,7 @@ Allow to fully disable LTO.
  
  // magic to place command line in crash reports
  const int crashreporterBufferSize = 2000;
-@@ -3082,10 +3086,12 @@
+@@ -3179,9 +3182,11 @@
  			fprintf(stderr, "configured to support archs: %s\n", ALL_SUPPORTED_ARCHS);
  			 // if only -v specified, exit cleanly
  			 if ( argc == 2 ) {
@@ -92,14 +92,13 @@ Allow to fully disable LTO.
  				const char* ltoVers = lto::version();
  				if ( ltoVers != NULL )
  					fprintf(stderr, "LTO support using: %s\n", ltoVers);
- 				exit(0);
 +#endif
+ 				exit(0);
  			}
  		}
- 		else if ( strcmp(argv[i], "-syslibroot") == 0 ) {
---- ./src/ld/parsers/archive_file.cpp.lto	2014-04-05 00:42:29.000000000 +0200
-+++ ./src/ld/parsers/archive_file.cpp	2014-08-29 09:00:29.000000000 +0200
-@@ -39,7 +39,9 @@
+--- ld64-236.3/src/ld/parsers/archive_file.cpp
++++ ld64-236.3/src/ld/parsers/archive_file.cpp
+@@ -45,7 +45,9 @@
  #include "Architectures.hpp"
  
  #include "macho_relocatable_file.h"
@@ -109,7 +108,7 @@ Allow to fully disable LTO.
  #include "archive_file.h"
  
  
-@@ -91,8 +93,10 @@
+@@ -97,8 +99,10 @@
  private:
  	static bool										validMachOFile(const uint8_t* fileContent, uint64_t fileLength, 
  																	const mach_o::relocatable::ParserOptions& opts);
@@ -120,7 +119,7 @@ Allow to fully disable LTO.
  	static cpu_type_t								architecture();
  
  	class Entry : ar_hdr
-@@ -232,11 +236,13 @@
+@@ -242,11 +246,13 @@
  	return mach_o::relocatable::isObjectFile(fileContent, fileLength, opts);
  }
  
@@ -134,7 +133,7 @@ Allow to fully disable LTO.
  
  
  
-@@ -257,7 +263,11 @@
+@@ -267,7 +273,11 @@
  		if ( (p==start) && ((strcmp(memberName, SYMDEF_SORTED) == 0) || (strcmp(memberName, SYMDEF) == 0)) )
  			continue;
  		// archive is valid if first .o file is valid
@@ -147,7 +146,7 @@ Allow to fully disable LTO.
  	}	
  	// empty archive
  	return true;
-@@ -378,6 +388,7 @@
+@@ -388,6 +398,7 @@
  			_instantiatedEntries[member] = state;
  			return _instantiatedEntries[member];
  		}
@@ -155,7 +154,7 @@ Allow to fully disable LTO.
  		// see if member is llvm bitcode file
  		result = lto::parse(member->content(), member->contentSize(), 
  								mPath, member->modificationTime(), ordinal, 
-@@ -387,6 +398,7 @@
+@@ -397,6 +408,7 @@
  			_instantiatedEntries[member] = state;
  			return _instantiatedEntries[member];
  		}
@@ -163,8 +162,8 @@ Allow to fully disable LTO.
  			
  		throwf("archive member '%s' with length %d is not mach-o or llvm bitcode", memberName, member->contentSize());
  	}
---- ./src/ld/Resolver.cpp.lto	2014-04-05 00:42:29.000000000 +0200
-+++ ./src/ld/Resolver.cpp	2014-08-29 09:00:29.000000000 +0200
+--- ld64-236.3/src/ld/Resolver.cpp
++++ ld64-236.3/src/ld/Resolver.cpp
 @@ -56,7 +56,9 @@
  #include "InputFiles.h"
  #include "SymbolTable.h"
@@ -175,7 +174,7 @@ Allow to fully disable LTO.
  
  
  namespace ld {
-@@ -1436,6 +1438,7 @@
+@@ -1438,6 +1440,7 @@
  
  void Resolver::linkTimeOptimize()
  {
@@ -183,7 +182,7 @@ Allow to fully disable LTO.
  	// only do work here if some llvm obj files where loaded
  	if ( ! _haveLLVMObjs )
  		return;
-@@ -1533,6 +1536,9 @@
+@@ -1535,6 +1538,9 @@
  		// check new code does not override some dylib
  		this->checkDylibSymbolCollisions();
  	}
@@ -193,8 +192,8 @@ Allow to fully disable LTO.
  }
  
  
---- ./src/other/ObjectDump.cpp.lto	2014-04-05 00:42:29.000000000 +0200
-+++ ./src/other/ObjectDump.cpp	2014-08-29 09:01:34.000000000 +0200
+--- ld64-236.3/src/other/ObjectDump.cpp
++++ ld64-236.3/src/other/ObjectDump.cpp
 @@ -33,7 +33,9 @@
  
  #include "MachOFileAbstraction.hpp"
@@ -205,7 +204,7 @@ Allow to fully disable LTO.
  
  static bool			sDumpContent= true;
  static bool			sDumpStabs	= false;
-@@ -1245,10 +1247,12 @@
+@@ -1249,10 +1251,12 @@
  	if ( objResult != NULL )
  		return objResult;
  

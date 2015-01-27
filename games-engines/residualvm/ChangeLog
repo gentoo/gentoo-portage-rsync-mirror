@@ -1,6 +1,15 @@
 # ChangeLog for games-engines/residualvm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/ChangeLog,v 1.6 2014/11/25 23:10:21 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/ChangeLog,v 1.8 2015/01/27 07:19:03 mr_bones_ Exp $
+
+*residualvm-0.2.1 (27 Jan 2015)
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> +residualvm-0.2.1.ebuild:
+  version bump
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/residualvm-0.1.0-EE.patch, -residualvm-0.1.0.ebuild, metadata.xml:
+  old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

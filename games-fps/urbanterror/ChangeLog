@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/urbanterror
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.51 2014/11/25 23:12:41 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.52 2015/01/27 07:25:19 mr_bones_ Exp $
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/urbanterror-4.1.1-build.patch, -files/urbanterror-4.1.1-minizip.patch,
+  -urbanterror-4.1.1.ebuild:
+  old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

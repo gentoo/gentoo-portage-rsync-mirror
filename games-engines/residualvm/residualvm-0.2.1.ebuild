@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/residualvm-0.1.0.ebuild,v 1.3 2014/05/15 16:43:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/residualvm/residualvm-0.2.1.ebuild,v 1.1 2015/01/27 07:19:03 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs gnome2-utils games
@@ -24,10 +24,6 @@ RDEPEND="
 	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-EE.patch
-}
 
 src_configure() {
 	# not an autotools script
@@ -73,7 +69,7 @@ src_install() {
 	domenu dists/${PN}.desktop
 
 	doman dists/${PN}.6
-	dodoc AUTHORS README KNOWN_BUGS TODO
+	dodoc AUTHORS README.md KNOWN_BUGS TODO
 
 	prepgamesdirs
 }

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.36 2015/01/27 06:59:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.37 2015/01/27 07:13:36 grobian Exp $
+
+  27 Jan 2015; Fabian Groffen <grobian@gentoo.org> files/ld64-236.3-nolto.patch:
+  Small fix for nolto patch to exit properly on -v, by Michael Weiser
 
 *binutils-apple-6.1 (27 Jan 2015)
 *binutils-apple-5.1 (27 Jan 2015)

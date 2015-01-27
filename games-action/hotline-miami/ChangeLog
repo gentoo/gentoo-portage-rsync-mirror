@@ -1,6 +1,10 @@
 # ChangeLog for games-action/hotline-miami
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/hotline-miami/ChangeLog,v 1.5 2014/11/25 23:03:34 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/hotline-miami/ChangeLog,v 1.6 2015/01/27 07:31:01 mr_bones_ Exp $
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -hotline-miami-1.0.9a.ebuild:
+  old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

@@ -1,6 +1,9 @@
 # ChangeLog for games-action/lugaru
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/ChangeLog,v 1.5 2014/06/25 13:46:12 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/ChangeLog,v 1.6 2015/01/27 07:27:51 mr_bones_ Exp $
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -lugaru-1.0c.ebuild:
+  old
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> lugaru-1.0c-r1.ebuild:
   Update multilib dependencies to use the lowest known EAPI 5 or multilib

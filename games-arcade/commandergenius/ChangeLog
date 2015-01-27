@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/commandergenius
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/ChangeLog,v 1.13 2014/11/25 23:06:39 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/ChangeLog,v 1.14 2015/01/27 07:29:09 mr_bones_ Exp $
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -commandergenius-1.7.2.0.ebuild, -commandergenius-1.7.3.0.ebuild:
+  old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
