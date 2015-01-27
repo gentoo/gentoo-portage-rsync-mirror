@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.77 2015/01/26 10:54:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.79 2015/01/27 20:21:50 xmw Exp $
+
+  27 Jan 2015; Michael Weber <xmw@gentoo.org> when-1.1.33.ebuild:
+  Reset to the last stable state
+
+*when-1.1.33 (27 Jan 2015)
+
+  27 Jan 2015; Michael Weber <xmw@gentoo.org> +when-1.1.33.ebuild,
+  -when-1.1.31.ebuild:
+  Drop correct ebuild, re-add new as unstable.
 
   26 Jan 2015; Justin Lecher <jlec@gentoo.org> -when-1.1.33.ebuild:
   Drop old

@@ -7,5 +7,5 @@ KEYWORDS=amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-maco
 LICENSE=Artistic
 RDEPEND=dev-lang/perl
 SLOT=0
-SRC_URI=http://www.lightandmatter.com/when/when.tar.gz -> when-1.1.31.tar.gz
-_md5_=a54d3a9a588f51674c673544fe49db41
+SRC_URI=http://www.lightandmatter.com/when/when.tar.gz -> when-1.1.33.tar.gz
+_md5_=622c37522766b6768d0cd3253e87182f
