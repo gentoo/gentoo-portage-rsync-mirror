@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-crossfire
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ChangeLog,v 1.7 2010/04/18 05:10:17 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ChangeLog,v 1.8 2015/01/27 07:50:14 mr_bones_ Exp $
+
+  27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -ut2004-crossfire-1.93.ebuild:
+  old
 
 *ut2004-crossfire-1.95 (18 Apr 2010)
 
@@ -39,4 +43,3 @@
   +ut2004-crossfire-1.5.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com> and edited by me.
   Closing bug #131630.
-

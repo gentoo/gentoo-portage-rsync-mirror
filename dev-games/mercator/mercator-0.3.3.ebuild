@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.3.3.ebuild,v 1.4 2014/10/12 08:50:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.3.3.ebuild,v 1.5 2015/01/27 07:57:32 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils
 
 DESCRIPTION="WorldForge library primarily aimed at terrain"
-HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/mercator"
+HOMEPAGE="http://www.worldforge.org/index.php/components/mercator/"
 SRC_URI="mirror://sourceforge/worldforge/${P}.tar.gz"
 
 LICENSE="GPL-2"
