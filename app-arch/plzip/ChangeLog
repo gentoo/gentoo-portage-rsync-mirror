@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/plzip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/plzip/ChangeLog,v 1.1 2014/02/27 10:55:49 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/plzip/ChangeLog,v 1.2 2015/01/27 15:29:21 mgorny Exp $
+
+*plzip-1.3 (27 Jan 2015)
+
+  27 Jan 2015; Michał Górny <mgorny@gentoo.org> +plzip-1.3.ebuild:
+  Version bump.
 
 *plzip-1.1 (27 Feb 2014)
 

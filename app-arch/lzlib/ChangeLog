@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/lzlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzlib/ChangeLog,v 1.1 2014/02/27 10:55:45 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzlib/ChangeLog,v 1.2 2015/01/27 15:29:15 mgorny Exp $
+
+*lzlib-1.6 (27 Jan 2015)
+
+  27 Jan 2015; Michał Górny <mgorny@gentoo.org> +lzlib-1.6.ebuild:
+  Version bump.
 
 *lzlib-1.5 (27 Feb 2014)
 
