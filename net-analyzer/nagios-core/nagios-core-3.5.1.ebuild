@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.5.1.ebuild,v 1.8 2014/09/19 10:30:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.5.1.ebuild,v 1.9 2015/01/27 14:58:15 pchrist Exp $
 
 EAPI=5
 
@@ -95,6 +95,7 @@ src_install() {
 	if ! use web ; then
 		sed -i -e 's/cd $(SRC_CGI) && $(MAKE) $@/# line removed due missing web use flag/' \
 			-e 's/cd $(SRC_HTM) && $(MAKE) $@/# line removed due missing web use flag/' \
+			-e 's/$(MAKE) install-exfoliation/# line removed due missing web use flag/' \
 			Makefile
 	fi
 
@@ -103,7 +104,9 @@ src_install() {
 	emake DESTDIR="${D}" install
 	emake DESTDIR="${D}" install-config
 	emake DESTDIR="${D}" install-commandmode
-	emake DESTDIR="${D}" install-classicui
+	if use web; then
+		emake DESTDIR="${D}" install-classicui
+	fi
 
 	newinitd "${FILESDIR}"/nagios3 nagios
 	newconfd "${FILESDIR}"/conf.d nagios
