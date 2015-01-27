@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/trace-cmd
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/trace-cmd/ChangeLog,v 1.1 2015/01/27 02:56:08 chutzpah Exp $
+
+*trace-cmd-2.5.1 (27 Jan 2015)
+
+  27 Jan 2015; Patrick McLean <chutzpah@gentoo.org> +trace-cmd-2.5.1.ebuild,
+  +files/trace-cmd-2.5.1-makefile.patch, +metadata.xml:
+  Initial version.
+
