@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/libvirt-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.28 2014/12/24 15:09:19 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/ChangeLog,v 1.29 2015/01/27 10:41:17 tamiko Exp $
+
+*libvirt-python-1.2.12 (27 Jan 2015)
+
+  27 Jan 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-python-1.2.12.ebuild:
+  version bump
 
   24 Dec 2014; Matthias Maier <tamiko@gentoo.org> -libvirt-python-1.2.9.ebuild:
   drop old

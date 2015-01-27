@@ -1,6 +1,22 @@
 # ChangeLog for app-emulation/libvirt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.411 2014/12/24 15:05:04 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.413 2015/01/27 10:55:18 tamiko Exp $
+
+*libvirt-1.2.10-r4 (27 Jan 2015)
+
+  27 Jan 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.10-r4.ebuild:
+  apply security fix for 1.2.10 (CVE-2015-0236)
+
+*libvirt-1.2.12 (27 Jan 2015)
+*libvirt-1.2.11-r3 (27 Jan 2015)
+
+  27 Jan 2015; Matthias Maier <tamiko@gentoo.org> +libvirt-1.2.11-r3.ebuild,
+  +libvirt-1.2.12.ebuild, -files/libvirt-1.2.10-cve-2014-7823.patch,
+  -files/libvirt-1.2.10-cve-2014-8131-part2.patch,
+  -files/libvirt-1.2.10-cve-2014-8131.patch, -libvirt-1.2.11-r2.ebuild,
+  libvirt-1.2.10-r3.ebuild, libvirt-9999.ebuild:
+  version bump; cleanup; apply security fix for 1.2.11 and drop vulnerable
+  (CVE-2015-0236)
 
   24 Dec 2014; Matthias Maier <tamiko@gentoo.org> -libvirt-1.2.10-r2.ebuild:
   drop vulnerable, bug #533286, CVE-2014-8135, CVE-2014-8136

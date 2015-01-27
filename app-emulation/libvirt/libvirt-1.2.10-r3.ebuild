@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.10-r3.ebuild,v 1.3 2014/12/24 13:19:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.10-r3.ebuild,v 1.4 2015/01/27 10:42:52 tamiko Exp $
 
 EAPI=5
 
@@ -21,14 +21,13 @@ if [[ ${PV} = *9999* ]]; then
 else
 	# Versions with 4 numbers are stable updates:
 	if [[ ${PV} =~ ^[0-9]+(\.[0-9]+){3} ]]; then
-		SRC_URI="http://libvirt.org/sources/stable_updates/${MY_P}.tar.gz
-		${BACKPORTS:+
-			http://dev.gentoo.org/~tamiko/distfiles/${P}-${BACKPORTS}.tar.xz}"
+		SRC_URI="http://libvirt.org/sources/stable_updates/${MY_P}.tar.gz"
 	else
-		SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
-		${BACKPORTS:+
-			http://dev.gentoo.org/~tamiko/distfiles/${P}-${BACKPORTS}.tar.xz}"
+		SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz"
 	fi
+	SRC_URI+=" ${BACKPORTS:+
+		http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz
+		http://dev.gentoo.org/~tamiko/distfiles/${P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="amd64 x86"
 	SLOT="0/${PV}"
 fi
