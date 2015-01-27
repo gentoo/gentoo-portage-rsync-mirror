@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/readme
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/readme/ChangeLog,v 1.1 2015/01/27 05:25:22 radhermit Exp $
+
+*readme-0.4.1 (27 Jan 2015)
+
+  27 Jan 2015; Tim Harder <radhermit@gentoo.org> +readme-0.4.1.ebuild,
+  +metadata.xml:
+  Initial import.
+
