@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/librevenge >=dev-libs/boost-1.47 virtual/pkgconfig doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=C++ Library that parses the file format of Aldus/Adobe PageMaker documents.
+EAPI=5
+HOMEPAGE=https://wiki.documentfoundation.org/DLP/Libraries/libpagemaker
+IUSE=debug doc tools static-libs
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=MPL-2.0
+RDEPEND=dev-libs/librevenge >=dev-libs/boost-1.47
+SLOT=0
+SRC_URI=http://dev-www.libreoffice.org/src/libpagemaker/libpagemaker-0.0.2.tar.xz
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=11b5a21c91ffaf30229f583f77d60b0a

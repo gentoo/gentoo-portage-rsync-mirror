@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-2.2.2-r1.ebuild,v 1.1 2015/01/27 04:24:32 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-2.2.2-r2.ebuild,v 1.1 2015/01/27 20:32:50 dolsen Exp $
 
 EAPI="5"
 
@@ -27,7 +27,10 @@ RDEPEND="
 	>=dev-python/ssl-fetch-0.3[${PYTHON_USEDEP}]
 	"
 
-PATCHES=( "${FILESDIR}/mirrorselect-2.2.2-Update-for-ssl-fetch-api-change.patch" )
+PATCHES=(
+	"${FILESDIR}/mirrorselect-2.2.2-Update-for-ssl-fetch-api-change.patch"
+	"${FILESDIR}/mirrorselect-2.2.2-Add-outputmodefunctionassignment.patch"
+)
 
 python_prepare_all()  {
 	python_setup
