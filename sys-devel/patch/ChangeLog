@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.70 2015/01/23 19:36:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.71 2015/01/27 19:52:33 jer Exp $
+
+  27 Jan 2015; Jeroen Roovers <jer@gentoo.org> patch-2.7.3.ebuild:
+  Stable for HPPA (bug #536614).
 
   23 Jan 2015; Lars Wendler <polynomial-c@gentoo.org>
   -files/patch-2.7.2-fix_for_CVE-2015-1196_fix.patch,

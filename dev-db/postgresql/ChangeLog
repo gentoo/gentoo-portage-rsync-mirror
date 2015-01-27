@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.406 2014/12/28 18:07:22 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.407 2015/01/27 19:55:48 jer Exp $
+
+  27 Jan 2015; Jeroen Roovers <jer@gentoo.org> postgresql-9.0.18-r3.ebuild,
+  postgresql-9.1.14-r3.ebuild, postgresql-9.2.9-r3.ebuild,
+  postgresql-9.3.5-r3.ebuild, postgresql-9.4.0-r1.ebuild:
+  Stable for HPPA (bug #537972).
 
 *postgresql-9.4.0-r1 (28 Dec 2014)
 *postgresql-9.3.5-r3 (28 Dec 2014)

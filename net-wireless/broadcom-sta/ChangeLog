@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/broadcom-sta
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.63 2014/12/15 06:25:39 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.64 2015/01/27 19:40:43 mattst88 Exp $
+
+*broadcom-sta-6.30.223.248-r3 (27 Jan 2015)
+
+  27 Jan 2015; Matt Turner <mattst88@gentoo.org>
+  +broadcom-sta-6.30.223.248-r3.ebuild,
+  +files/broadcom-sta-6.30.223.248-r3-Wno-date-time.patch,
+  +files/broadcom-sta-6.30.223.248-r3-linux-3.15-3.18.patch, metadata.xml:
+  Take over maintainership and add patches for Linux 3.18, bug 523326.
 
 *broadcom-sta-6.30.223.248-r2 (15 Dec 2014)
 
