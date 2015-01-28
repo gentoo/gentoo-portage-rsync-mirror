@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdnav
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.84 2014/08/29 17:39:54 beandog Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.85 2015/01/28 16:33:47 lu_zero Exp $
+
+*libdvdnav-5.0.3 (28 Jan 2015)
+
+  28 Jan 2015; Luca Barbato <lu_zero@gentoo.org> +libdvdnav-5.0.3.ebuild:
+  New version
 
 *libdvdnav-5.0.1 (29 Aug 2014)
 
