@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.3.99.ebuild,v 1.1 2015/01/28 16:30:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.3.99.ebuild,v 1.2 2015/01/28 18:20:13 lu_zero Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools-multilib
 
 DESCRIPTION="A portable abstraction library for DVD decryption"
 HOMEPAGE="http://www.videolan.org/developers/libdvdcss.html"
-SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
+SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.2"

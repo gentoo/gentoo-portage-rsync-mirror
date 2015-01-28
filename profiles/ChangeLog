@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9709 2015/01/28 17:55:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9710 2015/01/28 18:27:30 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jan 2015; Anthony G. Basile <blueness@gentoo.org> package.mask:
+  p.mask =net-misc/tor-0.2.6.2_alpha-r1, bug #536196.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> desc/cpu_flags_x86.desc:
   Remove the warning since the news item has been committed.
