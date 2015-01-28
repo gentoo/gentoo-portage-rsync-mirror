@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.10 2014/08/14 07:15:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.11 2015/01/28 08:49:52 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="tk?"
 
-inherit cmake-utils fdo-mime multilib python-single-r1 subversion
+inherit cmake-utils fdo-mime flag-o-matic multilib python-single-r1 subversion
 
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
@@ -28,28 +28,44 @@ REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 	tk? ( scripts )"
 
+# osg
+# couple of third_party libs bundled
 COMMON_DEPEND="
 	${PYTHON_DEPS}
+	app-text/libmspub
 	dev-libs/boost
 	dev-libs/hyphen
+	dev-libs/librevenge
 	dev-libs/libxml2
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
+	dev-qt/linguist:5
+	dev-qt/linguist-tools:5
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtnetwork:5
+	dev-qt/qtopengl:5
+	dev-qt/qtprintsupport:5
+	dev-qt/qtquickcontrols:5
+	dev-qt/qtwebkit:5
+	dev-qt/qtwidgets:5
+	dev-qt/qtxml:5
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
+	media-libs/libcdr
+	media-libs/libpagemaker
 	media-libs/libpng:0
+	media-libs/libvisio
 	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib[minizip]
 	virtual/jpeg
-	cairo? ( x11-libs/cairo[X,svg] )
+	cairo? ( >=x11-libs/cairo-1.10.0[X,svg] )
 	!cairo? ( media-libs/libart_lgpl )
 	hunspell? ( app-text/hunspell )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	osg? ( dev-games/openscenegraph )
 	pdf? ( app-text/podofo )
-	poppler? ( app-text/poppler )
+	poppler? ( >=app-text/poppler-0.19.0 )
 	scripts? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 	tk? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 "
@@ -63,6 +79,7 @@ PATCHES=(
 	)
 
 src_prepare() {
+	rm -r codegen/cheetah || die
 	cat > cmake/modules/FindZLIB.cmake <<- EOF
 	find_package(PkgConfig)
 	pkg_check_modules(ZLIB minizip zlib)
@@ -79,6 +96,8 @@ src_prepare() {
 	sed \
 		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \
 		-i resources/templates/CMakeLists.txt || die
+
+	use amd64 && append-flags -fPIC
 
 	cmake-utils_src_prepare
 	subversion_src_prepare
@@ -133,8 +152,8 @@ src_install() {
 		rm "${ED}"/usr/share/scribus/scripts/{FontSample,CalendarWizard}.py || die
 	fi
 
-	python_fix_shebang "${ED}"/usr/share/scribus/scripts
-	python_optimize "${ED}"/usr/share/scribus/scripts
+	use scripts && python_fix_shebang "${ED}"/usr/share/scribus/scripts
+	use scripts && python_optimize "${ED}"/usr/share/scribus/scripts
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die

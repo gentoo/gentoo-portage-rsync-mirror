@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.9 2014/08/14 07:15:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.10 2015/01/28 08:51:40 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS=""
 IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
-IUSE_LINGUAS=" af ar bg br ca cs_CZ cy da_DK de de_1901 de_CH el en_AU en_GB en_US es_ES et eu fi fr gl hu id it ja ko lt_LT nb_NO nl pl_PL pt pt_BR ru sa sk_SK sl sq sr sv th_TH tr uk zh_CN zh_TW"
+IUSE_LINGUAS=" af ar bg br ca cs_CZ cy da_DK de de_1901 de_CH el en_AU en_GB en_US eo es_ES et eu fi fr gl hu id it ja ko lt_LT nb_NO nl pl_PL pt pt_BR ru sa sk_SK sl sq sr sv th_TH tr uk zh_CN zh_TW"
 IUSE+=" ${IUSE_LINGUAS// / linguas_}"
 
 REQUIRED_USE="
@@ -134,7 +134,12 @@ src_install() {
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die
-	docompress -x /usr/share/doc/${PF}/en
+	cat >> "${T}"/COPYING <<- EOF
+	${PN} is licensed under the "${LICENSE}".
+	Please visit http://www.gnu.org/licenses/gpl-2.0.html for the complete license text.
+	EOF
+	dodoc "${T}"/COPYING
+	docompress -x /usr/share/doc/${PF}/en /usr/share/doc/${PF}/{AUTHORS,TRANSLATION,LINKS,COPYING}
 	doicon resources/icons/scribus.png
 	domenu scribus.desktop
 }
