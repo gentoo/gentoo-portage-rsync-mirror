@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.8_p1.ebuild,v 1.2 2014/04/06 15:12:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.9_pre4.ebuild,v 1.1 2015/01/28 01:36:17 radhermit Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.6-mint.patch
-	epatch "${FILESDIR}"/${P}-parallel.patch
+	epatch "${FILESDIR}"/${PN}-2.8.8_p1-parallel.patch
 }
 
 src_configure() {
