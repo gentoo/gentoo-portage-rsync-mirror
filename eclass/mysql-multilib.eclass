@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.11 2014/11/26 00:34:41 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.12 2015/01/28 13:48:58 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -184,20 +184,30 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="+community cluster debug embedded extraengine jemalloc latin1 max-idx-128 minimal
+IUSE="+community cluster debug embedded extraengine jemalloc latin1 minimal
 	+perl profiling selinux ssl systemtap static static-libs tcmalloc test"
 
+### Begin readline/libedit
+### If the world was perfect, we would use external libedit on both to have a similar experience
+### However libedit does not seem to support UTF-8 keyboard input
+
 # This probably could be simplified, but the syntax would have to be just right
-if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
-        mysql_check_version_range "5.5.37 to 10.0.13.99" ; then
-	IUSE="bindist ${IUSE}"
-elif [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
-	mysql_check_version_range "5.5.37 to 5.6.11.99" ; then
-	IUSE="bindist ${IUSE}"
-elif [[ ${PN} == "mysql-cluster" ]] && \
-	mysql_check_version_range "7.2 to 7.2.99.99"  ; then
+#if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
+#	mysql_check_version_range "5.5.37 to 10.0.13.99" ; then
+#	IUSE="bindist ${IUSE}"
+#elif [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
+#	mysql_check_version_range "5.5.37 to 5.6.11.99" ; then
+#	IUSE="bindist ${IUSE}"
+#elif [[ ${PN} == "mysql-cluster" ]] && \
+#	mysql_check_version_range "7.2 to 7.2.99.99"  ; then
+#	IUSE="bindist ${IUSE}"
+#fi
+
+if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 	IUSE="bindist ${IUSE}"
 fi
+
+### End readline/libedit
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 	IUSE="${IUSE} oqgraph pam sphinx tokudb"
@@ -209,6 +219,9 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 	# MariaDB 10.1 introduces InnoDB/XtraDB compression with external libraries
 	# Choices are bzip2, lz4, lzma, lzo.  bzip2 and lzma enabled by default as they are system libraries
 	mysql_version_is_at_least "10.1.1" && IUSE="${IUSE} innodb-lz4 innodb-lzo"
+
+	# 10.1.2 introduces a cracklib password checker
+	mysql_version_is_at_least "10.1.1" && IUSE="${IUSE} cracklib"
 fi
 
 if [[ -n "${WSREP_REVISION}" ]]; then
@@ -250,20 +263,30 @@ DEPEND="
 	systemtap? ( >=dev-util/systemtap-1.3:0= )
 "
 
+### Begin readline/libedit
+### If the world was perfect, we would use external libedit on both to have a similar experience
+### However libedit does not seem to support UTF-8 keyboard input
+
 # dev-db/mysql-5.6.12+ only works with dev-libs/libedit
 # mariadb 10.0.14 fixes libedit detection. changed to follow mysql
 # This probably could be simplified
-if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
-	mysql_version_is_at_least "5.6.12" ; then
-	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
-elif [[ ${PN} == "mysql-cluster" ]] && mysql_version_is_at_least "7.3"; then
-	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
-elif [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
-	mysql_version_is_at_least "10.0.14" ; then
-	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
-else
+#if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
+#	mysql_version_is_at_least "5.6.12" ; then
+#	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
+#elif [[ ${PN} == "mysql-cluster" ]] && mysql_version_is_at_least "7.3"; then
+#	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
+#elif [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
+#	mysql_version_is_at_least "10.0.14" ; then
+#	DEPEND="${DEPEND} dev-libs/libedit:0=[${MULTILIB_USEDEP}]"
+#else
+#	DEPEND="${DEPEND} !bindist? ( >=sys-libs/readline-4.1:0=[${MULTILIB_USEDEP}] )"
+#fi
+
+if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 	DEPEND="${DEPEND} !bindist? ( >=sys-libs/readline-4.1:0=[${MULTILIB_USEDEP}] )"
 fi
+
+### End readline/libedit
 
 if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] ; then
 	mysql_version_is_at_least "5.7.5" && DEPEND="${DEPEND} >=dev-libs/boost-1.56.0:0="
@@ -288,6 +311,8 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 		innodb-lz4? ( app-arch/lz4 )
 		innodb-lzo? ( dev-libs/lzo )
 		"
+
+	mysql_version_is_at_least "10.1.2" && DEPEND="${DEPEND} cracklib? ( sys-libs/cracklib:0= )"
 fi
 
 [[ ${PN} == "percona-server" ]] && DEPEND="${DEPEND} !minimal? ( pam? ( virtual/pam:0= ) )"
@@ -514,7 +539,8 @@ multilib_src_configure() {
 		)
 	fi
 
-	mycmakeargs+=( -DWITH_EDITLINE=system )
+	### TODO: make this system but issues with UTF-8 prevent it
+	mycmakeargs+=( -DWITH_EDITLINE=bundled )
 
 	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 		mycmakeargs+=(
