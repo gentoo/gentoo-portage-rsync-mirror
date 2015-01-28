@@ -1,27 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.4.1.ebuild,v 1.1 2015/01/28 12:23:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.4.1.ebuild,v 1.2 2015/01/28 12:36:02 jlec Exp $
 
 EAPI=5
 
-inherit qmake-utils versionator
-
-# The upstream version numbering is bad, so we have to remove a dot in the
-# minor version number
-MAJOR="$(get_major_version)"
-MINOR_1="$(($(get_version_component_range 2)/10))"
-MINOR_2="$(($(get_version_component_range 2)%10))"
-if [ ${MINOR_2} -eq "0" ] ; then
-	MY_P="${PN}-${MAJOR}.${MINOR_1}"
-else
-	MY_P="${PN}-${MAJOR}.${MINOR_1}.${MINOR_2}"
-fi
-
-MY_P="${P}"
+inherit eutils qmake-utils readme.gentoo
 
 DESCRIPTION="A nice LaTeX-IDE"
 HOMEPAGE="http://www.xm1math.net/texmaker/"
-SRC_URI="http://www.xm1math.net/texmaker/${MY_P}.tar.bz2"
+SRC_URI="http://www.xm1math.net/texmaker/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,8 +16,6 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="qt4 qt5"
 
 REQUIRED_USE="^^ ( qt4 qt5 )"
-
-S="${WORKDIR}/${MY_P}"
 
 COMMON_DEPEND="
 	app-text/hunspell
@@ -51,16 +36,17 @@ COMMON_DEPEND="
 		dev-qt/qtcore:5
 		dev-qt/qtnetwork:5
 		dev-qt/qtscript:5
-		dev-qt/qtwebkit:5
+		dev-qt/qtwebkit:5[printsupport]
+		dev-qt/qtwidgets:5
 		dev-qt/qtxml:5
 		)
 "
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
-	app-i18n/ibus-qt
 	app-text/psutils
 	app-text/ghostscript-gpl
-	media-libs/netpbm"
+	media-libs/netpbm
+	qt4? ( app-i18n/ibus-qt )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
@@ -84,6 +70,9 @@ src_prepare() {
 		-e '/^#include/s:hunspell/::g' \
 		-e '/^#include/s:singleapp/::g' \
 		-i *.cpp *.h || die
+
+	DOC_CONTENTS="A user manual with many screenshots is available at:
+	${EPREFIX}/usr/share/${PN}/usermanual_en.html"
 }
 
 src_configure() {
@@ -100,14 +89,8 @@ src_configure() {
 	fi
 }
 
-src_install(){
+src_install() {
 	emake INSTALL_ROOT="${D}" install
-	dodoc -r ${DOCS[@]}
-	docinto html
-	dodoc -r ${HTML_DOCS[@]}
-}
-
-pkg_postinst() {
-	elog "A user manual with many screenshots is available at:"
-	elog "${EPREFIX}/usr/share/${PN}/usermanual_en.html"
+	einstalldocs
+	readme.gentoo_src_install
 }

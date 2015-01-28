@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.142 2015/01/28 12:23:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.143 2015/01/28 12:36:02 jlec Exp $
+
+  28 Jan 2015; Justin Lecher <jlec@gentoo.org> texmaker-4.4.1.ebuild:
+  Import changes by Ben de Groot
 
 *texmaker-4.4.1 (28 Jan 2015)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cov-core
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.13 2014/12/30 10:23:30 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.14 2015/01/28 12:46:42 idella4 Exp $
+
+*cov-core-1.15.0 (28 Jan 2015)
+
+  28 Jan 2015; Ian Delaney <idella4@gentoo.org> +cov-core-1.15.0.ebuild:
+  bump
 
   30 Dec 2014; Jeroen Roovers <jer@gentoo.org> cov-core-1.7.ebuild:
   Stable for HPPA (bug #530600).
