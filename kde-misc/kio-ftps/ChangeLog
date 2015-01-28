@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kio-ftps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.5 2014/03/20 22:13:40 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.7 2015/01/28 21:16:40 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> kio-ftps-0.2.ebuild:
+  Update HOMEPAGE and SRC_URI, thanks to PhobosK <phobosk@fastmail.fm>, 
+  bug #537746.
 
   20 Mar 2014; Johannes Huber <johu@gentoo.org> kio-ftps-0.2.ebuild:
   Bump to EAPI 5.

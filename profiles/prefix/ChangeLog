@@ -1,6 +1,16 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.446 2015/01/26 09:56:12 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.447 2015/01/28 21:14:41 floppym Exp $
+
+  28 Jan 2015; Mike Gilbert <floppym@gentoo.org>
+  darwin/macos/10.4/x86/make.defaults, darwin/macos/10.5/x64/make.defaults,
+  darwin/macos/10.5/x86/make.defaults, darwin/macos/10.6/x64/make.defaults,
+  darwin/macos/10.6/x86/make.defaults, darwin/macos/10.7/x64/make.defaults,
+  darwin/macos/10.7/x86/make.defaults, darwin/macos/10.8/x64/make.defaults,
+  darwin/macos/10.8/x86/make.defaults, darwin/macos/10.9/x64/make.defaults,
+  darwin/macos/10.9/x86/make.defaults, darwin/macos/10.10/x64/make.defaults,
+  darwin/macos/10.10/x86/make.defaults:
+  Set CPU_FLAGS_X86 to a reasonable default.
 
   26 Jan 2015; Michael Haubenwallner <haubi@gentoo.org> linux/profile.bashrc:
   Do not elog but einfo 'old host glibc (gnu89-inline)' message, bug#537660.
