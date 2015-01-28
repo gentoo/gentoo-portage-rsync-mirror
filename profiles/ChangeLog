@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9708 2015/01/28 00:56:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9709 2015/01/28 17:55:33 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> desc/cpu_flags_x86.desc:
+  Remove the warning since the news item has been committed.
 
   28 Jan 2015; Johannes Huber <johu@gentoo.org> package.mask:
   Mask >=app-crypt/qca-2.1.

@@ -1272,7 +1272,6 @@ dev-db/mariadb-galera:embedded - Build embedded server (libmysqld)
 dev-db/mariadb-galera:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/mariadb-galera:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/mariadb-galera:latin1 - Use LATIN1 encoding instead of UTF8
-dev-db/mariadb-galera:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mariadb-galera:minimal - Install client programs only, no server
 dev-db/mariadb-galera:oqgraph - Add support for the Open Query GRAPH engine
 dev-db/mariadb-galera:profiling - Add support for statement profiling (requires USE=community).
@@ -1315,7 +1314,6 @@ dev-db/percona-server:embedded - Build embedded server (libmysqld)
 dev-db/percona-server:extraengine - Add support for alternative storage engines (Archive, CSV, Blackhole, Federated(X), Partition)
 dev-db/percona-server:jemalloc - Use dev-libs/jemalloc for allocations.
 dev-db/percona-server:latin1 - Use LATIN1 encoding instead of UTF8
-dev-db/percona-server:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/percona-server:minimal - Install client programs only, no server
 dev-db/percona-server:profiling - Add support for statement profiling (requires USE=community).
 dev-db/percona-server:systemtap - Build support for profiling and tracing using dev-util/systemtap

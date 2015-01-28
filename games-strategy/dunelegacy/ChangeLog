@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/dunelegacy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/ChangeLog,v 1.14 2014/11/25 23:20:54 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dunelegacy/ChangeLog,v 1.15 2015/01/28 17:44:27 mr_bones_ Exp $
+
+  28 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -dunelegacy-0.96.2.ebuild, -files/dunelegacy-0.96.2-build.patch:
+  old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
