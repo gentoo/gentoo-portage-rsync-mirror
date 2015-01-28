@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.4-r1.ebuild,v 1.10 2014/06/08 10:59:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.4-r1.ebuild,v 1.11 2015/01/28 13:06:34 ulm Exp $
 
 EAPI=5
 
@@ -44,17 +44,17 @@ src_install() {
 		local i
 		domenu emacs.desktop emacsclient.desktop || die
 
-		pushd icons
-		newicon sink.png emacs-sink.png || die
-		newicon emacs_48.png emacs.png || die
-		newicon emacs22_48.png emacs22.png || die
+		pushd icons || die
+		newicon sink.png emacs-sink.png
+		newicon emacs_48.png emacs.png
+		newicon emacs22_48.png emacs22.png
 		for i in 16 24 32 48 128; do
-			insinto /usr/share/icons/hicolor/${i}x${i}/apps
-			newins emacs_${i}.png emacs.png
-			[[ ${i} -ne 128 ]] && newins emacs22_${i}.png emacs22.png
+			newicon -s ${i} emacs_${i}.png emacs.png
 		done
-		insinto /usr/share/icons/hicolor/scalable/apps
-		doins emacs.svg
+		for i in 16 24 32 48; do
+			newicon -s ${i} emacs22_${i}.png emacs22.png
+		done
+		doicon -s scalable emacs.svg
 		popd
 
 		gnome2_icon_savelist
@@ -132,7 +132,6 @@ pkg_postinst() {
 		fdo-mime_desktop_database_update
 		gnome2_icon_cache_update
 	fi
-
 	readme.gentoo_print_elog
 }
 

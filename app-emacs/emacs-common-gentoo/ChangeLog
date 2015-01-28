@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.109 2014/06/08 11:44:50 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.110 2015/01/28 13:06:34 ulm Exp $
+
+  28 Jan 2015; Ulrich Müller <ulm@gentoo.org>
+  emacs-common-gentoo-1.4-r1.ebuild:
+  Use doicon/newicon helper functions.
 
   08 Jun 2014; Ulrich Müller <ulm@gentoo.org> -emacs-common-gentoo-1.4.ebuild:
   Remove old.
