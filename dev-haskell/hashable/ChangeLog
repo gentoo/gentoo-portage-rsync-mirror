@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hashable
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.27 2014/12/23 04:05:23 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.28 2015/01/28 20:51:18 qnikst Exp $
+
+  28 Jan 2015; Alexander Vershilov <qnikst@gentoo.org> -hashable-1.1.2.2.ebuild,
+  -hashable-1.1.2.3.ebuild, -hashable-1.2.0.10.ebuild, -hashable-1.2.0.5.ebuild,
+  -hashable-1.2.2.0.ebuild, -hashable-1.2.3.0.ebuild:
+  dev-haskell/hashable: drop old
 
 *hashable-1.2.3.1 (23 Dec 2014)
 

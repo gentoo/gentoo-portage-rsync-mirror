@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.300 2015/01/28 19:21:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.301 2015/01/28 20:56:51 floppym Exp $
+
+  28 Jan 2015; Mike Gilbert <floppym@gentoo.org> make.defaults:
+  Set CPU_FLAGS_X86 to a reasonable default.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> use.mask:
   Mask CPU_FLAGS_X86 for non-x86 arches.
