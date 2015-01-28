@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.47 2014/11/20 01:58:03 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.48 2015/01/28 00:37:00 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask app-crypt/qca[botan].
 
   20 Nov 2014; Davide Pesavento <pesa@gentoo.org> +package.mask:
   Move Qt 4.8.6 mask from global package.mask to arch profiles.

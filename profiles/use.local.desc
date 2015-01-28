@@ -383,6 +383,15 @@ app-crypt/ophcrack-tables:xpfast - Installs the fast XP ophcrack tables
 app-crypt/ophcrack-tables:xpsmall - Installs the small free XP ophcrack tables
 app-crypt/p11-kit:asn1 - Enable ASN.1 certificate support
 app-crypt/p11-kit:trust - Build the trust policy module
+app-crypt/qca:botan - Enable botan plugin
+app-crypt/qca:gcrypt - Enable gcrypt plugin
+app-crypt/qca:gpg - Enable GnuPG plugin
+app-crypt/qca:logger - Enable logger plugin
+app-crypt/qca:nss - Enable NSS plugin
+app-crypt/qca:openssl - Enable OpenSSL plugin
+app-crypt/qca:pkcs11 - Enable PKCS#11 plugin
+app-crypt/qca:sasl - Enable SASL plugin
+app-crypt/qca:softstore - Enable softstore plugin
 app-crypt/seahorse:ldap - Enable seahorse to manipulate GPG keys on a LDAP server.
 app-crypt/shishi:3des - Enable 3DES encryption/checksum type.
 app-crypt/shishi:aes - Enable AES encryption/checksum types.

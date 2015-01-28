@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16301 2015/01/26 19:38:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16302 2015/01/28 00:56:23 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Johannes Huber <johu@gentoo.org> (28 Jan 2015)
+# Masked until reverse dependencies fixed.
+>=app-crypt/qca-2.1
 
 # Johannes Huber <johu@gentoo.org> (26 Jan 2015)
 # Masked for removal in 30 days, bug #537746.

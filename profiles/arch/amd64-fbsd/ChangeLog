@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.59 2015/01/23 11:09:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.60 2015/01/28 00:32:57 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask app-crypt/qca[botan,pkcs11].
 
   23 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
   Mask sctp useflag for openssl until keywords are there

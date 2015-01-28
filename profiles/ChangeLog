@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9707 2015/01/26 19:38:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9708 2015/01/28 00:56:23 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> package.mask:
+  Mask >=app-crypt/qca-2.1.
 
   26 Jan 2015; Johannes Huber <johu@gentoo.org> package.mask:
   Mask kde-misc/kio-ftps for removal.
