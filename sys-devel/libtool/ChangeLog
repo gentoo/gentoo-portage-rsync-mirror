@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.242 2015/01/26 09:40:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.243 2015/01/28 10:19:31 ago Exp $
+
+  28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.4.ebuild:
+  Stable for ppc, wrt bug #536696
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.4.ebuild:
   Stable for x86, wrt bug #536696
