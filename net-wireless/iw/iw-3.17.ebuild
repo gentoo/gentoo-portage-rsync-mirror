@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.17.ebuild,v 1.4 2015/01/26 10:40:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.17.ebuild,v 1.5 2015/01/28 10:36:21 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://www.kernel.org/pub/software/network/${PN}/${P}.tar.xz"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-libs/libnl"

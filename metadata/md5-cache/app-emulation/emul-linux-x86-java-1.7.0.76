@@ -4,11 +4,11 @@ DESCRIPTION=Oracle's Java SE Runtime Environment (32bit)
 EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IUSE=+X alsa nsplugin pax_kernel
-KEYWORDS=-* ~amd64
+KEYWORDS=-* amd64
 LICENSE=Oracle-BCLA-JavaSE
 RDEPEND=|| ( ( X? ( x11-libs/libXext[abi_x86_32(-)] x11-libs/libXi[abi_x86_32(-)] x11-libs/libXrender[abi_x86_32(-)] x11-libs/libXtst[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] ) alsa? ( >=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)] ) ) ( X? ( app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) alsa? ( app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] ) ) ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
 SLOT=1.7
 SRC_URI=jre-7u76-linux-i586.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	834752b84da3c4deea95f5b186aada54	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=73432aaa9ac34e4c4a0f40b3b84ffef5
+_md5_=e765386fceca80f9924bd7f53197d651

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/metis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.40 2015/01/26 10:33:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.41 2015/01/28 10:35:01 ago Exp $
+
+  28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> metis-4.0.3.ebuild:
+  Stable for ppc, wrt bug #534644
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> metis-4.0.3.ebuild:
   Stable for x86, wrt bug #534644
