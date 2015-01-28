@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.117 2015/01/28 06:20:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.118 2015/01/28 06:45:53 graaff Exp $
+
+*facter-2.4.0 (28 Jan 2015)
+
+  28 Jan 2015; Hans de Graaff <graaff@gentoo.org> +facter-2.4.0.ebuild:
+  Version bump.
 
   28 Jan 2015; Hans de Graaff <graaff@gentoo.org> -facter-2.0.2.ebuild,
   -facter-2.1.0.ebuild:

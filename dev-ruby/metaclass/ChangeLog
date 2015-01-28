@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/metaclass
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.35 2014/11/03 15:10:54 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/metaclass/ChangeLog,v 1.36 2015/01/28 06:35:56 graaff Exp $
+
+  28 Jan 2015; Hans de Graaff <graaff@gentoo.org> metaclass-0.0.4.ebuild:
+  Add ruby22.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> metaclass-0.0.1-r1.ebuild,
   metaclass-0.0.4.ebuild:
