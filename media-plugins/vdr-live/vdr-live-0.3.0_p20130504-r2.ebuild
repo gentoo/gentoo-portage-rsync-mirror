@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0_p20130504-r1.ebuild,v 1.3 2015/01/28 14:56:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0_p20130504-r2.ebuild,v 1.1 2015/01/28 14:56:35 hd_brummy Exp $
 
 EAPI=5
 
@@ -24,8 +24,8 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}"
 
-VDR_CONFD_FILE="${FILESDIR}/confd-0.2"
-VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.2.sh"
+VDR_CONFD_FILE="${FILESDIR}/confd-0.3"
+VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.3.sh"
 
 KEEP_I18NOBJECT="yes"
 
@@ -58,6 +58,9 @@ src_configure() {
 }
 
 src_prepare() {
+	# new Makefile handling ToDp
+#	cp "${FILESDIR}/live.mk" "${S}/Makefile"
+
 	# remove untranslated language files
 	rm "${S}"/po/{ca_ES,da_DK,el_GR,et_EE,hr_HR,hu_HU,nl_NL,nn_NO,pt_PT,ro_RO,ru_RU,sl_SI,sv_SE,tr_TR}.po
 
