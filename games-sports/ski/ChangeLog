@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/ski
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.20 2015/01/28 10:21:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ski/ChangeLog,v 1.21 2015/01/28 17:12:48 mr_bones_ Exp $
+
+  28 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -ski-6.7.ebuild:
+  old
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ski-6.8.ebuild:
   Stable for ppc, wrt bug #534164
