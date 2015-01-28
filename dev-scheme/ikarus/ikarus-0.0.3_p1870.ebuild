@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3_p1870.ebuild,v 1.1 2010/04/27 17:00:00 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ikarus/ikarus-0.0.3_p1870.ebuild,v 1.2 2015/01/28 20:01:18 mgorny Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 KEYWORDS="-* ~x86"
-IUSE="sse2 doc"
+IUSE="cpu_flags_x86_sse2 doc"
 
 RDEPEND=">=dev-libs/gmp-4.2.2"
 DEPEND="${RDEPEND}"
@@ -35,7 +35,7 @@ src_prepare() {
 }
 
 src_compile() {
-	if use !sse2; then \
+	if use !cpu_flags_x86_sse2; then \
 		eerror "You must have a processor who supports \
 		SSE2 instructions" && die
 	fi
