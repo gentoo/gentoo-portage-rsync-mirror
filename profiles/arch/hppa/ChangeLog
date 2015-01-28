@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.232 2015/01/18 14:14:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.233 2015/01/28 00:24:32 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask app-crypt/qca[botan].
 
   18 Jan 2015; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=vaapi (bug #536956).

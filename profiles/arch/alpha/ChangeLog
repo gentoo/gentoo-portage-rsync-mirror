@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.212 2015/01/19 16:12:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.213 2015/01/28 00:19:25 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask app-crypt/qca[botan].
 
   19 Jan 2015; Mike Gilbert <floppym@gentoo.org> use.stable.mask:
   Remove python3_4 mask.

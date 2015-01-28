@@ -1,8 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.151 2014/12/24 16:55:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.152 2015/01/28 00:24:32 johu Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Johannes Huber <johu@gentoo.org> (28 Jan 2015)
+# # Missing keyword on dev-libs/botan
+app-crypt/qca botan
 
 # Jeroen Roovers <jer@gentoo.org> (13 Aug 2014)
 # Needs dev-libs/protobuf{-c} which has not been ported to HPPA (bug #531068)
