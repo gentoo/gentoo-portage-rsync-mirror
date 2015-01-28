@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-9999.ebuild,v 1.2 2013/11/11 18:28:34 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-9999.ebuild,v 1.3 2015/01/28 19:31:45 mgorny Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ inherit enlightenment
 DESCRIPTION="Enlightenment's data types library (list, hash, etc) in C"
 
 LICENSE="LGPL-2.1"
-IUSE="altivec debug default-mempool mmx sse sse2 static-libs test valgrind"
+IUSE="altivec debug default-mempool cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 static-libs test valgrind"
 
 MEMPOOLS=(
 	@buddy
@@ -54,9 +54,9 @@ src_configure() {
 		$(use debug || echo " --with-internal-maximum-log-level=2")
 		$(use_enable default-mempool)
 		$(use_enable doc)
-		$(use_enable mmx cpu-mmx)
-		$(use_enable sse cpu-sse)
-		$(use_enable sse2 cpu-sse2)
+		$(use_enable cpu_flags_x86_mmx cpu-mmx)
+		$(use_enable cpu_flags_x86_sse cpu-sse)
+		$(use_enable cpu_flags_x86_sse2 cpu-sse2)
 		$(use test && echo " --disable-amalgamation")
 		$(use_enable test e17)
 		$(use_enable test tests)

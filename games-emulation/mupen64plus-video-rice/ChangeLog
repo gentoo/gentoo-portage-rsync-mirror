@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64plus-video-rice
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-video-rice/ChangeLog,v 1.4 2014/08/15 10:20:47 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-video-rice/ChangeLog,v 1.5 2015/01/28 19:54:06 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org>
+  mupen64plus-video-rice-2.0-r1.ebuild, mupen64plus-video-rice-2.0.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *mupen64plus-video-rice-2.0-r1 (15 Aug 2014)
 

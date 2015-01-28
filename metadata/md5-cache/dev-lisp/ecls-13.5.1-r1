@@ -3,7 +3,7 @@ DEPEND=dev-libs/gmp virtual/libffi >=dev-libs/boehm-gc-7.1[threads?] >=dev-lisp/
 DESCRIPTION=ECL is an embeddable Common Lisp implementation
 EAPI=5
 HOMEPAGE=http://ecls.sourceforge.net/
-IUSE=debug emacs gengc precisegc sse +threads +unicode X
+IUSE=debug emacs gengc precisegc cpu_flags_x86_sse +threads +unicode X
 KEYWORDS=amd64 ~ppc ~sparc ~x86
 LICENSE=BSD LGPL-2
 RDEPEND=dev-libs/gmp virtual/libffi >=dev-libs/boehm-gc-7.1[threads?] >=dev-lisp/asdf-2.33-r3:=
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0/13.5.1
 SRC_URI=mirror://sourceforge/ecls/ecl-13.5.1.tgz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6afd18ec29776d040b163292107bd290
+_md5_=052aff351203c50fc307b06aac6605ca

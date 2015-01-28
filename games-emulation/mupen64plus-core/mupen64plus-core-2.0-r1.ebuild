@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-core/mupen64plus-core-2.0-r1.ebuild,v 1.1 2014/08/15 10:17:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-core/mupen64plus-core-2.0-r1.ebuild,v 1.2 2015/01/28 19:57:32 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/mupen64plus/${PN}/releases/download/${PV}/${MY_P}.ta
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0/2"
 KEYWORDS="~amd64 ~x86"
-IUSE="lirc new-dynarec +osd sse"
+IUSE="lirc new-dynarec +osd cpu_flags_x86_sse"
 
 RDEPEND="media-libs/libpng:0=
 	media-libs/libsdl:0=[joystick,opengl,video]
@@ -84,7 +84,7 @@ src_compile() {
 		SDL_LDLIBS="$($(tc-getPKG_CONFIG) --libs sdl)"
 
 		OSD=$(usex osd 1 0)
-		NO_ASM=$(usex sse 0 1)
+		NO_ASM=$(usex cpu_flags_x86_sse 0 1)
 		LIRC=$(usex lirc 1 0)
 		# (it does not build)
 		# DEBUGGER=$(usex debug 1 0)

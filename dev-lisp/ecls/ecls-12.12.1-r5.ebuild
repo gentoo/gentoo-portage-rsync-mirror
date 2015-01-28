@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-12.12.1-r5.ebuild,v 1.2 2014/08/10 20:41:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-12.12.1-r5.ebuild,v 1.3 2015/01/28 19:40:42 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib
@@ -15,7 +15,7 @@ RESTRICT="mirror"
 LICENSE="BSD LGPL-2"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug emacs gengc precisegc sse +threads +unicode X"
+IUSE="debug emacs gengc precisegc cpu_flags_x86_sse +threads +unicode X"
 
 CDEPEND="dev-libs/gmp
 		virtual/libffi
@@ -52,7 +52,7 @@ src_configure() {
 		$(use_enable gengc) \
 		$(use_enable precisegc) \
 		$(use_with debug debug-cflags) \
-		$(use_with sse) \
+		$(use_with cpu_flags_x86_sse sse) \
 		$(use_enable threads) \
 		$(use_with threads __thread) \
 		$(use_enable unicode) \

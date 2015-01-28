@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/eina
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.21 2013/11/11 18:28:34 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/ChangeLog,v 1.22 2015/01/28 19:31:45 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> eina-1.7.9.ebuild,
+  eina-9999.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *eina-1.7.9 (11 Nov 2013)
 

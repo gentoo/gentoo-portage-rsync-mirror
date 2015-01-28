@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cmucl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.43 2014/02/06 12:57:26 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.44 2015/01/28 19:40:59 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> cmucl-20a.ebuild,
+  cmucl-20b_p001.ebuild, cmucl-20d-r3.ebuild, cmucl-20e.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *cmucl-20e (06 Feb 2014)
 

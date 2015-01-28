@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20b_p001.ebuild,v 1.4 2012/10/24 19:07:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20b_p001.ebuild,v 1.5 2015/01/28 19:40:59 mgorny Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs
@@ -15,7 +15,7 @@ SRC_URI="http://common-lisp.net/project/cmucl/downloads/release/${MY_PV}/cmucl-s
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="X source sse2"
+IUSE="X source cpu_flags_x86_sse2"
 
 RDEPEND="x11-libs/motif"
 DEPEND="${RDEPEND}
@@ -51,7 +51,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local cmufpu=$(glo_usev sse2 sse2 x87)
+	local cmufpu=$(glo_usev cpu_flags_x86_sse2 sse2 x87)
 	local cmuopts="$(glo_usev !X -u) -f ${cmufpu}"
 	local buildimage="bin/lisp -core lib/cmucl/lib/lisp-${cmufpu}.core -noinit -nositeinit -batch"
 	env CC="$(tc-getCC)" src/tools/build.sh -v "-gentoo-${PR}" -C "" -o "${buildimage}" ${cmuopts} || die "Cannot build the compiler"

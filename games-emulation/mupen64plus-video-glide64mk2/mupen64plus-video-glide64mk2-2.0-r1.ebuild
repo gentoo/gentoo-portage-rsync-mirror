@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-video-glide64mk2/mupen64plus-video-glide64mk2-2.0-r1.ebuild,v 1.1 2014/08/15 10:20:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-video-glide64mk2/mupen64plus-video-glide64mk2-2.0-r1.ebuild,v 1.2 2015/01/28 19:54:45 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/mupen64plus/${PN}/releases/download/${PV}/${MY_P}.ta
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="hires sse"
+IUSE="hires cpu_flags_x86_sse"
 
 RDEPEND=">=games-emulation/mupen64plus-core-2.0-r1:0=
 	media-libs/libpng:0=
@@ -68,7 +68,7 @@ src_compile() {
 		SDL_CFLAGS="$($(tc-getPKG_CONFIG) --cflags sdl)"
 		SDL_LDLIBS="$($(tc-getPKG_CONFIG) --libs sdl)"
 
-		NO_ASM=$(usex sse 0 1)
+		NO_ASM=$(usex cpu_flags_x86_sse 0 1)
 		HIRES=$(usex hires 1 0)
 	)
 

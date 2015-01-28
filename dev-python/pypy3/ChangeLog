@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/ChangeLog,v 1.6 2014/12/23 09:40:38 alicef Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy3/ChangeLog,v 1.7 2015/01/28 19:47:10 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> pypy3-2.4.0.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   23 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> metadata.xml:
   Update email and removed proxy-maintainers herd

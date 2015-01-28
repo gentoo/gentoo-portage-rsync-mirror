@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.10 2013/03/02 21:14:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.11 2015/01/28 19:59:10 mgorny Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://mupen64plus.googlecode.com/files/${MY_P}.tar.gz mirror://gentoo/
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="+gtk libsamplerate lirc qt4 sse"
+IUSE="+gtk libsamplerate lirc qt4 cpu_flags_x86_sse"
 
 # GTK+ is currently required by plugins even if no GUI support is enabled
 RDEPEND="virtual/opengl
@@ -83,7 +83,7 @@ get_opts() {
 
 	use libsamplerate || echo -n "NO_RESAMP=1 "
 	use lirc && echo -n "LIRC=1 "
-	use sse || echo -n "NO_ASM=1 "
+	use cpu_flags_x86_sse || echo -n "NO_ASM=1 "
 
 	echo -n GUI=
 	if use gtk; then
@@ -97,7 +97,7 @@ get_opts() {
 
 src_compile() {
 	tc-export CC CXX
-	use x86 && use sse && append-flags -fomit-frame-pointer
+	use x86 && use cpu_flags_x86_sse && append-flags -fomit-frame-pointer
 	emake $(get_opts) DBGSYM=1 CC="${CC}" CXX="${CXX}" LD="${CC}" all || die "make failed"
 }
 

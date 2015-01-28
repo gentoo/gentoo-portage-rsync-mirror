@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.3.1-r2.ebuild,v 1.3 2014/11/05 21:18:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.3.1-r2.ebuild,v 1.4 2015/01/28 19:46:12 mgorny Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ SRC_URI="https://www.bitbucket.org/pypy/pypy/downloads/pypy-${PV}-src.tar.bz2
 		) )
 	)
 	x86? (
-		sse2? (
+		cpu_flags_x86_sse2? (
 			jit? ( shadowstack? (
 				${BINHOST}/${P}-x86+bzip2+jit+ncurses+shadowstack+sse2.tar.xz
 					-> ${P}-r1-x86+bzip2+jit+ncurses+shadowstack+sse2.tar.xz
@@ -41,7 +41,7 @@ SRC_URI="https://www.bitbucket.org/pypy/pypy/downloads/pypy-${PV}-src.tar.bz2
 					-> ${P}-r1-x86+bzip2+ncurses+sse2.tar.xz
 			) )
 		)
-		!sse2? (
+		!cpu_flags_x86_sse2? (
 			!jit? ( !shadowstack? (
 				${BINHOST}/${P}-x86+bzip2+ncurses.tar.xz
 					-> ${P}-r1-x86+bzip2+ncurses.tar.xz
@@ -51,12 +51,12 @@ SRC_URI="https://www.bitbucket.org/pypy/pypy/downloads/pypy-${PV}-src.tar.bz2
 
 # Supported variants
 REQUIRED_USE="!jit? ( !shadowstack )
-	x86? ( !sse2? ( !jit !shadowstack ) )"
+	x86? ( !cpu_flags_x86_sse2? ( !jit !shadowstack ) )"
 
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc gdbm +jit shadowstack sqlite sse2 test tk"
+IUSE="doc gdbm +jit shadowstack sqlite cpu_flags_x86_sse2 test tk"
 
 # yep, world would be easier if people started filling subslots...
 RDEPEND="

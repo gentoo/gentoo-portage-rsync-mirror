@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1-r2.ebuild,v 1.4 2014/11/05 21:18:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.3.1-r2.ebuild,v 1.5 2015/01/28 19:47:38 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://bitbucket.org/${PN}/${PN}/get/release-${PV}.tar.bz2 -> ${P}-src
 LICENSE="MIT"
 SLOT="0/$(get_version_component_range 1-2 ${PV})"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="bzip2 doc gdbm +jit low-memory ncurses sandbox shadowstack sqlite sse2 tk"
+IUSE="bzip2 doc gdbm +jit low-memory ncurses sandbox shadowstack sqlite cpu_flags_x86_sse2 tk"
 
 RDEPEND=">=sys-libs/zlib-1.1.3:0=
 	virtual/libffi:0=
@@ -113,7 +113,7 @@ src_compile() {
 		# the modern values...
 
 		if use x86; then
-			if use sse2; then
+			if use cpu_flags_x86_sse2; then
 				jit_backend+=x86
 			else
 				jit_backend+=x86-without-sse2

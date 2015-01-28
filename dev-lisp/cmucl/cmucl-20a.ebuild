@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20a.ebuild,v 1.6 2012/10/24 19:07:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20a.ebuild,v 1.7 2015/01/28 19:40:59 mgorny Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ RESTRICT="mirror"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="X source sse2"
+IUSE="X source cpu_flags_x86_sse2"
 
 RDEPEND=">=x11-libs/motif-2.3:0"
 DEPEND="${RDEPEND}
@@ -34,7 +34,7 @@ src_prepare() {
 
 src_compile() {
 	local cfpu="sse2"
-	if ! use sse2; then
+	if ! use cpu_flags_x86_sse2; then
 		cfpu="x87"
 	fi
 

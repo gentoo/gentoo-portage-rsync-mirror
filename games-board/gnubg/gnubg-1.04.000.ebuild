@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-1.04.000.ebuild,v 1.8 2015/01/08 20:20:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-1.04.000.ebuild,v 1.9 2015/01/28 19:59:49 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -13,7 +13,7 @@ SRC_URI="http://gnubg.org/media/sources/${PN}-release-${PV}-sources.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
-IUSE="avx gtk opengl python sqlite3 sse sse2 threads"
+IUSE="cpu_flags_x86_avx gtk opengl python sqlite3 cpu_flags_x86_sse cpu_flags_x86_sse2 threads"
 
 RDEPEND="dev-libs/glib:2
 	media-libs/freetype:2
@@ -64,9 +64,9 @@ src_configure() {
 	if use gtk || use opengl ; then
 		gtk_arg=--with-gtk
 	fi
-	use sse  && simd=sse
-	use sse2 && simd=sse2
-	use avx  && simd=avx
+	use cpu_flags_x86_sse  && simd=sse
+	use cpu_flags_x86_sse2 && simd=sse2
+	use cpu_flags_x86_avx  && simd=avx
 	egamesconf \
 		--localedir=/usr/share/locale \
 		--docdir=/usr/share/doc/${PF}/html \

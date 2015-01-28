@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64plus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.24 2014/08/15 10:22:34 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.25 2015/01/28 19:59:10 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> mupen64plus-1.5-r1.ebuild,
+  mupen64plus-1.5-r2.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   15 Aug 2014; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove games team maintainership following the Council decision.

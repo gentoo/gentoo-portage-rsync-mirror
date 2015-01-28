@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r3.ebuild,v 1.11 2015/01/17 16:54:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r3.ebuild,v 1.12 2015/01/28 19:53:22 mgorny Exp $
 
 EAPI=5
 inherit eutils flag-o-matic autotools games
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/vba/VisualBoyAdvance-src-${PV}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
-IUSE="gtk mmx nls"
+IUSE="gtk cpu_flags_x86_mmx nls"
 
 RDEPEND="media-libs/libpng
 	media-libs/libsdl
@@ -26,7 +26,7 @@ RDEPEND="media-libs/libpng
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	mmx? ( dev-lang/nasm )
+	cpu_flags_x86_mmx? ( dev-lang/nasm )
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/VisualBoyAdvance-${PV}
@@ -67,7 +67,7 @@ src_configure() {
 
 	# Removed --enable-c-core as it *should* determine this based on arch
 	egamesconf \
-		$(use_with mmx) \
+		$(use_with cpu_flags_x86_mmx mmx) \
 		$(use_enable gtk gtk 2.4) \
 		$(use_enable nls)
 }

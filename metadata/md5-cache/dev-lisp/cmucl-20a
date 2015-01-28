@@ -3,7 +3,7 @@ DEPEND=>=x11-libs/motif-2.3:0 sys-devel/bc
 DESCRIPTION=CMU Common Lisp is an implementation of ANSI Common Lisp
 EAPI=3
 HOMEPAGE=http://www.cons.org/cmucl/
-IUSE=X source sse2
+IUSE=X source cpu_flags_x86_sse2
 KEYWORDS=~x86
 LICENSE=public-domain
 PDEPEND=dev-lisp/gentoo-init
@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=http://common-lisp.net/project/cmucl/downloads/release/20a/cmucl-src-20a.tar.bz2 http://common-lisp.net/project/cmucl/downloads/release/20a/cmucl-20a-x86-linux.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=059d4955aa94837041f3d2356768aeb5
+_md5_=e41d4ebb7d3fc6e73acc0fba09134fb4
