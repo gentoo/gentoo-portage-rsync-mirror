@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.165 2015/01/22 11:05:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.166 2015/01/28 19:22:59 polynomial-c Exp $
+
+*psmisc-22.21-r2 (28 Jan 2015)
+
+  28 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> -psmisc-22.21-r1.ebuild,
+  +psmisc-22.21-r2.ebuild, +files/psmisc-22.21-fuser_typo_fix.patch:
+  Revbump to fix a typo in fuser which leads to -M option being enabled all the
+  time. Committed straight to stable.
 
 *psmisc-22.21-r1 (22 Jan 2015)
 

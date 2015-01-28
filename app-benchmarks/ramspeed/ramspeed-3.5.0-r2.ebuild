@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0-r2.ebuild,v 1.3 2014/10/10 11:03:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ramspeed-3.5.0-r2.ebuild,v 1.4 2015/01/28 19:02:25 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.alasir.com/software/${PN}/${MY_P}.tar.gz"
 LICENSE="Alasir"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="sse pic"
+IUSE="cpu_flags_x86_sse pic"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -45,7 +45,7 @@ src_configure(){
 
 	use x86 && obj+=( ${arch_prefix}{cpuinfo/cpuinfo_main,cpuinfo/cpuinfo_ext}.o )
 
-	if use sse; then
+	if use cpu_flags_x86_sse; then
 		use x86 && append-flags "-DLINUX -DI386_ASM"
 		use amd64 && append-flags "-DLINUX -DAMD64_ASM"
 		obj+=( ${arch_prefix}{mmxmark,mmxmem,ssemark,ssemem}.o )

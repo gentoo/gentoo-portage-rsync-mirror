@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.215 2014/12/27 19:35:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.216 2015/01/28 19:21:45 mgorny Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -79,6 +79,25 @@ fma4
 xop
 svga
 nvram
+cpu_flags_x86_3dnow
+cpu_flags_x86_3dnowext
+cpu_flags_x86_aes
+cpu_flags_x86_avx
+cpu_flags_x86_avx2
+cpu_flags_x86_fma3
+cpu_flags_x86_fma4
+cpu_flags_x86_mmx
+cpu_flags_x86_mmxext
+cpu_flags_x86_padlock
+cpu_flags_x86_popcnt
+cpu_flags_x86_sse
+cpu_flags_x86_sse2
+cpu_flags_x86_sse3
+cpu_flags_x86_sse4_1
+cpu_flags_x86_sse4_2
+cpu_flags_x86_sse4a
+cpu_flags_x86_ssse3
+cpu_flags_x86_xop
 
 # ppc arch specific USE flags
 altivec

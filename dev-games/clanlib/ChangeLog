@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/clanlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.65 2014/09/12 19:12:38 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.66 2015/01/28 19:17:39 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> clanlib-2.3.6.ebuild,
+  clanlib-2.3.7.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   12 Sep 2014; Tupone Alfredo <tupone@gentoo.org> clanlib-2.3.7.ebuild,
   +files/clanlib-2.3.7-doc.patch:

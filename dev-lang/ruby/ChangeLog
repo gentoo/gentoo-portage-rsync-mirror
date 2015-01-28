@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.698 2015/01/19 20:07:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.699 2015/01/28 19:26:41 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> ruby-2.0.0_p598.ebuild,
+  ruby-2.1.5.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   19 Jan 2015; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p551.ebuild,
   ruby-2.0.0_p598.ebuild, ruby-2.1.5.ebuild, ruby-2.2.0.ebuild:

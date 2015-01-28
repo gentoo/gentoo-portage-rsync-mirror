@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdisaster
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.29 2012/09/26 11:11:08 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.30 2015/01/28 19:05:58 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> dvdisaster-0.72.2.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   26 Sep 2012; Samuli Suominen <ssuominen@gentoo.org> dvdisaster-0.72.4.ebuild:
   ppc stable wrt #428050
@@ -118,4 +121,3 @@
   17 Jun 2006; Lars Weiler <pylon@gentoo.org> +files/dvd-rom-0.66.patch,
   +metadata.xml, +dvdisaster-0.66.ebuild:
   Initial import; thanks to all contributors in bug #81290.
-

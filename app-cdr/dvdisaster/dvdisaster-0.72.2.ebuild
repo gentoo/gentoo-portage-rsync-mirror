@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.2.ebuild,v 1.7 2012/05/03 07:51:48 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.2.ebuild,v 1.8 2015/01/28 19:05:58 mgorny Exp $
 
 EAPI=4
 inherit eutils gnome2-utils versionator
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 SLOT="0"
-IUSE="debug linguas_cs linguas_de linguas_it linguas_ru sse2"
+IUSE="debug linguas_cs linguas_de linguas_it linguas_ru cpu_flags_x86_sse2"
 
 RDEPEND=">=x11-libs/gtk+-2.6:2
 	media-libs/libpng
@@ -34,7 +34,7 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	if use sse2; then
+	if use cpu_flags_x86_sse2; then
 		myconf+=" --with-sse2=yes"
 	else
 		myconf+=" --with-sse2=no"

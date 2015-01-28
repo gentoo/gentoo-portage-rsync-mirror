@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.21-r1.ebuild,v 1.1 2015/01/22 11:05:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/psmisc-22.21-r2.ebuild,v 1.1 2015/01/28 19:22:59 polynomial-c Exp $
 
 EAPI="4"
 
@@ -23,6 +23,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fuser_typo_fix.patch"
+}
 
 src_configure() {
 	econf \

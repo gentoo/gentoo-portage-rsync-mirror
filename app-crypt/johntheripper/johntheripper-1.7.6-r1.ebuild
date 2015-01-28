@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.14 2012/04/07 06:38:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.6-r1.ebuild,v 1.15 2015/01/28 19:13:24 mgorny Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # This package can't be marked stable for ppc or ppc64 before bug 327211 is closed.
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="custom-cflags -minimal mmx openmp sse2"
+IUSE="custom-cflags -minimal cpu_flags_x86_mmx openmp cpu_flags_x86_sse2"
 #Remove AltiVec USE flag. Appears to be an upstream issue.
 #IUSE="altivec custom-cflags -minimal mmx openmp sse2"
 #IUSE="altivec custom-cflags -minimal mmx -mpi sse2"
@@ -58,9 +58,9 @@ get_target() {
 	elif use sparc; then
 		echo "linux-sparc"
 	elif use x86; then
-		if use sse2; then
+		if use cpu_flags_x86_sse2; then
 			echo "linux-x86-sse2"
-		elif use mmx; then
+		elif use cpu_flags_x86_mmx; then
 			echo "linux-x86-mmx"
 		else
 			echo "linux-x86-any"
@@ -74,7 +74,7 @@ get_target() {
 	#	fi
 		# for Tiger this can be macosx-ppc64
 	elif use x86-macos; then
-		if use sse2; then
+		if use cpu_flags_x86_sse2; then
 			echo "macosx-x86-sse2"
 		else
 			echo "macosx-x86"

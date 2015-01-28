@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install
+DEFINED_PHASES=compile configure install prepare
 DEPEND=>=sys-libs/ncurses-5.7-r7 nls? ( virtual/libintl ) selinux? ( sys-libs/libselinux ) >=sys-devel/libtool-2.2.6b nls? ( sys-devel/gettext )
 DESCRIPTION=A set of tools that use the proc filesystem
 EAPI=4
@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/ncurses-5.7-r7 nls? ( virtual/libintl ) selinux? ( sys-libs/l
 SLOT=0
 SRC_URI=mirror://sourceforge/psmisc/psmisc-22.21.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e3af7c04e3f8b37a1025bb13edf13ee6
+_md5_=ea72bfdc851eaf2d55e8b132f80517e5

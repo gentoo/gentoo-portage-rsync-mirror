@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/johntheripper
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.165 2014/09/17 12:54:50 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.166 2015/01/28 19:13:24 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> johntheripper-1.7.6-r1.ebuild,
+  johntheripper-1.7.8.ebuild, johntheripper-1.7.9-r1.ebuild,
+  johntheripper-1.7.9-r2.ebuild, johntheripper-1.7.9-r3.ebuild,
+  johntheripper-1.7.9-r4.ebuild, johntheripper-1.7.9-r5.ebuild,
+  johntheripper-1.7.9-r6.ebuild, johntheripper-1.7.9-r7.ebuild,
+  johntheripper-1.7.9-r8.ebuild, johntheripper-1.7.9-r9.ebuild,
+  johntheripper-1.7.9.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   17 Sep 2014; Justin Lecher <jlec@gentoo.org> johntheripper-1.7.9-r9.ebuild:
   Drop gpu specific compiler flags
