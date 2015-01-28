@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.8.ebuild,v 1.9 2014/08/20 12:14:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.8.ebuild,v 1.10 2015/01/28 22:58:32 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://polarssl.org/download/${P}-gpl.tgz"
 LICENSE="GPL-2"
 SLOT="0/7"
 KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="doc havege programs sse2 static-libs test threads zlib"
+IUSE="doc havege programs cpu_flags_x86_sse2 static-libs test threads zlib"
 
 RDEPEND="
 	programs? ( dev-libs/openssl:0 )
@@ -31,7 +31,7 @@ enable_polarssl_option() {
 }
 
 src_prepare() {
-	use sse2 && enable_polarssl_option POLARSSL_HAVE_SSE2
+	use cpu_flags_x86_sse2 && enable_polarssl_option POLARSSL_HAVE_SSE2
 	use zlib && enable_polarssl_option POLARSSL_ZLIB_SUPPORT
 	use havege && enable_polarssl_option POLARSSL_HAVEGE_C
 	use threads && enable_polarssl_option POLARSSL_THREADING_C

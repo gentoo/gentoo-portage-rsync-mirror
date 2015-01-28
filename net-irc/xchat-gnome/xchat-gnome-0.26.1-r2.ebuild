@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.12 2013/02/02 23:02:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.13 2015/01/28 22:59:31 mgorny Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ HOMEPAGE="http://live.gnome.org/Xchat-Gnome"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
-IUSE="dbus libnotify mmx nls perl python spell ssl tcl"
+IUSE="dbus libnotify cpu_flags_x86_mmx nls perl python spell ssl tcl"
 
 RDEPEND=">=dev-libs/glib-2.18:2
 	>=gnome-base/libgnome-2.16.0
@@ -54,7 +54,7 @@ pkg_setup() {
 		$(use_enable perl)
 		$(use_enable python)
 		$(use_enable tcl tcl /usr/$(get_libdir))
-		$(use_enable mmx)
+		$(use_enable cpu_flags_x86_mmx mmx)
 		$(use_enable dbus)
 		$(use_enable nls)
 		$(use_enable libnotify notification)"

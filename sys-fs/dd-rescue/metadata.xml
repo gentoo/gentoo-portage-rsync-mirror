@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<use>
- <flag name='sse4_2'>Use the SSE4.2 instruction set</flag>
-</use>
 </pkgmetadata>

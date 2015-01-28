@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.118 2014/12/28 14:55:07 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.119 2015/01/28 22:40:16 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> -calligra-2.8.6.ebuild,
+  calligra-2.7.5.ebuild, calligra-2.8.5.ebuild, calligra-2.8.7.ebuild,
+  calligra-9999.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1.
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> calligra-2.7.5.ebuild,
   calligra-2.8.5.ebuild, calligra-2.8.6.ebuild, calligra-2.8.7.ebuild,

@@ -3,11 +3,11 @@ DEPEND=|| ( >=sys-apps/util-linux-2.12r[crypt,loop-aes] app-crypt/loop-aes-loset
 DESCRIPTION=Linux kernel module to encrypt local file systems and disk partitions with AES cipher
 EAPI=5
 HOMEPAGE=http://loop-aes.sourceforge.net/loop-AES.README
-IUSE=aes-ni extra-ciphers keyscrub padlock kernel_linux
+IUSE=cpu_flags_x86_aes extra-ciphers keyscrub cpu_flags_x86_padlock kernel_linux
 KEYWORDS=~amd64 arm ~hppa ~ppc ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=kernel_linux? ( virtual/modutils )
 SLOT=0
 SRC_URI=mirror://sourceforge/loop-aes/loop-AES-v3.7b.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	linux-info	2b8c53f6065bdee2d757472215a3088f	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=b4522b1624bf6d0fbeb6172427b82ac2
+_md5_=0670ffefa0f53168d55a4dfe9408e00c

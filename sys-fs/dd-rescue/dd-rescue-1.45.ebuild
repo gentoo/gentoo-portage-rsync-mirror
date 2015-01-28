@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/dd-rescue-1.45.ebuild,v 1.1 2014/06/01 01:53:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/dd-rescue-1.45.ebuild,v 1.2 2015/01/28 22:34:03 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.garloff.de/kurt/linux/ddrescue/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="avx2 lzo sse4_2 static xattr"
+IUSE="cpu_flags_x86_avx2 lzo cpu_flags_x86_sse4_2 static xattr"
 
 RDEPEND="lzo? ( dev-libs/lzo )
 	xattr? ( sys-apps/attr )"
@@ -54,8 +54,8 @@ _emake() {
 	emake \
 		MACH="${arch}" \
 		OS="${os}" \
-		HAVE_SSE42=$(usex sse4_2 1 0) \
-		HAVE_AVX2=$(usex avx2 1 0) \
+		HAVE_SSE42=$(usex cpu_flags_x86_sse4_2 1 0) \
+		HAVE_AVX2=$(usex cpu_flags_x86_avx2 1 0) \
 		RPM_OPT_FLAGS="${CFLAGS} ${CPPFLAGS}" \
 		CFLAGS_OPT='$(CFLAGS)' \
 		LDFLAGS="${LDFLAGS} -Wl,-rpath,${EPREFIX}/usr/$(get_libdir)/${PN}" \

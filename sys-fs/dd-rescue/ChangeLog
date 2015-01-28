@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/dd-rescue
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.38 2014/10/17 19:52:51 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/ChangeLog,v 1.39 2015/01/28 22:34:03 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> dd-rescue-1.45.ebuild,
+  dd-rescue-1.46.ebuild, metadata.xml:
+  Switch to CPU_FLAGS_X86.
 
 *dd-rescue-1.46 (17 Oct 2014)
 

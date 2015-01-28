@@ -3,12 +3,10 @@
 <pkgmetadata>
 	<herd>crypto</herd>
 	<use>
-		<flag name='aes-ni'>Enable support for Intel's AES instruction
-			set</flag>
 		<flag name='extra-ciphers'>Enable extra ciphers</flag>
 		<flag name='keyscrub'>Protects the encryption key in memory but takes
 			more cpu resources</flag>
-		<flag name='padlock'>Use VIA padlock instructions, detected at run time,
-			code still works on non-padlock processors</flag>
+		<flag name='cpu_flags_x86_padlock'>Use VIA padlock instructions,
+			detected at run time, code still works on non-padlock processors</flag>
 	</use>
 </pkgmetadata>

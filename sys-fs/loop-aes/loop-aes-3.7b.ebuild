@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7b.ebuild,v 1.3 2015/01/01 21:23:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7b.ebuild,v 1.4 2015/01/28 22:34:55 mgorny Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 arm ~hppa ~ppc ~sparc ~x86"
-IUSE="aes-ni extra-ciphers keyscrub padlock"
+IUSE="cpu_flags_x86_aes extra-ciphers keyscrub cpu_flags_x86_padlock"
 
 DEPEND="|| ( >=sys-apps/util-linux-2.12r[crypt,loop-aes] app-crypt/loop-aes-losetup )"
 RDEPEND=""
@@ -34,9 +34,9 @@ pkg_setup() {
 		LINUX_SOURCE=\"${KERNEL_DIR}\" \
 		KBUILD_OUTPUT=\"${KBUILD_OUTPUT}\" \
 		USE_KBUILD=y MODINST=n RUNDM=n"
-	use aes-ni && BUILD_PARAMS="${BUILD_PARAMS} INTELAES=y"
+	use cpu_flags_x86_aes && BUILD_PARAMS="${BUILD_PARAMS} INTELAES=y"
 	use keyscrub && BUILD_PARAMS="${BUILD_PARAMS} KEYSCRUB=y"
-	use padlock && BUILD_PARAMS="${BUILD_PARAMS} PADLOCK=y"
+	use cpu_flags_x86_padlock && BUILD_PARAMS="${BUILD_PARAMS} PADLOCK=y"
 
 	if use extra-ciphers; then
 		MODULE_NAMES="${MODULE_NAMES}

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.59 2015/01/26 11:05:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.60 2015/01/28 22:57:44 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> skrooge-1.9.0.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1.
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -skrooge-1.8.0.ebuild:
   Remove old.
