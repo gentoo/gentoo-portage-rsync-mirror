@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.9.1-r1.ebuild,v 1.3 2014/12/05 10:16:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.9.1-r1.ebuild,v 1.4 2015/01/28 21:59:38 mgorny Exp $
 
 # google-breakpad
 # TODO: fribidi, libvorbis static
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/MegaGlest/megaglest-source/releases/download/${PV}/m
 LICENSE="GPL-3 BitstreamVera"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="debug +editor fribidi sse sse2 sse3 static +streflop +tools +unicode wxuniversal +model-viewer videos"
+IUSE="debug +editor fribidi cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 static +streflop +tools +unicode wxuniversal +model-viewer videos"
 
 RDEPEND="
 	>=dev-lang/lua-5.1
@@ -75,11 +75,11 @@ src_prepare() {
 }
 
 src_configure() {
-	if use sse3; then
+	if use cpu_flags_x86_sse3; then
 		SSE=3
-	elif use sse2; then
+	elif use cpu_flags_x86_sse2; then
 		SSE=2
-	elif use sse; then
+	elif use cpu_flags_x86_sse; then
 		SSE=1
 	else
 		SSE=0

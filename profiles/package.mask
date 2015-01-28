@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16303 2015/01/28 18:27:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16304 2015/01/28 21:34:58 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -37,11 +37,6 @@
 # Johannes Huber <johu@gentoo.org> (28 Jan 2015)
 # Masked until reverse dependencies fixed.
 >=app-crypt/qca-2.1
-
-# Johannes Huber <johu@gentoo.org> (26 Jan 2015)
-# Masked for removal in 30 days, bug #537746.
-# Superseded by kde-base/kdebase-kioslaves ages ago.
-kde-misc/kio-ftps
 
 # Mike Gilbert <floppym@gentoo.org> (26 Jan 2015)
 # Dev channel releases are only for people who are developers or want more

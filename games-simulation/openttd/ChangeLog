@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.150 2015/01/26 18:10:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.151 2015/01/28 21:59:13 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> openttd-1.4.4.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   26 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/openttd-1.4.2-cflags.patch, -openttd-1.4.2.ebuild:
