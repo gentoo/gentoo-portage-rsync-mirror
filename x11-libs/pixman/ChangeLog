@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pixman
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.188 2014/10/22 17:15:49 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.189 2015/01/28 22:21:55 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> pixman-0.32.4.ebuild,
+  pixman-0.32.6.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *pixman-0.32.6 (22 Oct 2014)
 

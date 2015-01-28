@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.12.5-r2.ebuild,v 1.7 2014/12/31 12:37:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.12.5-r2.ebuild,v 1.8 2015/01/28 22:13:11 mgorny Exp $
 
 EAPI=5
 
@@ -16,9 +16,9 @@ DESCRIPTION="KDE libraries needed by all KDE programs"
 
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
-IUSE="3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos lzma
-mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev +udisks
-+upower zeroconf"
+IUSE="cpu_flags_x86_3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos
+lzma cpu_flags_x86_mmx nls openexr +policykit semantic-desktop spell
+cpu_flags_x86_sse cpu_flags_x86_sse2 ssl +udev +udisks +upower zeroconf"
 
 REQUIRED_USE="
 	udisks? ( udev )
@@ -193,11 +193,11 @@ src_configure() {
 		-DKAUTH_BACKEND=POLKITQT-1
 		-DBUILD_libkactivities=OFF
 		$(cmake-utils_use_build handbook doc)
-		$(cmake-utils_use_has 3dnow X86_3DNOW)
+		$(cmake-utils_use_has cpu_flags_x86_3dnow X86_3DNOW)
 		$(cmake-utils_use_has altivec PPC_ALTIVEC)
-		$(cmake-utils_use_has mmx X86_MMX)
-		$(cmake-utils_use_has sse X86_SSE)
-		$(cmake-utils_use_has sse2 X86_SSE2)
+		$(cmake-utils_use_has cpu_flags_x86_mmx X86_MMX)
+		$(cmake-utils_use_has cpu_flags_x86_sse X86_SSE)
+		$(cmake-utils_use_has cpu_flags_x86_sse2 X86_SSE2)
 		$(cmake-utils_use_with acl)
 		$(cmake-utils_use_with alsa)
 		$(cmake-utils_use_with bzip2 BZip2)

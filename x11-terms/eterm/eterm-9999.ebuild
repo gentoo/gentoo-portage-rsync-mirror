@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.20 2012/08/23 04:06:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.21 2015/01/28 22:23:57 mgorny Exp $
 
 EAPI="3"
 inherit eutils autotools
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.eterm.org/"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="escreen minimal mmx sse2 unicode +utempter"
+IUSE="escreen minimal cpu_flags_x86_mmx cpu_flags_x86_sse2 unicode +utempter"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXmu
@@ -63,8 +63,8 @@ src_configure() {
 		$(use_enable escreen) \
 		--with-imlib \
 		--enable-trans \
-		$(use_enable mmx) \
-		$(use_enable sse2) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
 		$(use_enable unicode multi-charset) \
 		$(use_enable utempter utmp) \
 		--with-delete=execute \

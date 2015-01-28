@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libast
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.33 2010/11/26 05:22:15 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.34 2015/01/28 22:21:05 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> libast-0.7.ebuild,
+  libast-9999.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   26 Nov 2010; Mike Frysinger <vapier@gentoo.org> libast-0.7.ebuild,
   libast-9999.ebuild:

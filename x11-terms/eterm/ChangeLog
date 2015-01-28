@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/eterm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.76 2012/11/05 08:04:53 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.77 2015/01/28 22:23:57 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> eterm-0.9.5.ebuild,
+  eterm-0.9.6.ebuild, eterm-9999.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   05 Nov 2012; Mike Frysinger <vapier@gentoo.org>
   +files/eterm-0.9.6-asm-gnu-stack.patch, eterm-0.9.6.ebuild:

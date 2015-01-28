@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.294 2015/01/27 10:37:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.295 2015/01/28 22:30:26 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> adobe-flash-11.2.202.440.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   27 Jan 2015; Jeroen Roovers <jer@gentoo.org>
   -adobe-flash-11.2.202.438.ebuild:

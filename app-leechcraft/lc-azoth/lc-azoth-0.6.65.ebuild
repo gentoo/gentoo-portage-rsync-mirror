@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-0.6.65.ebuild,v 1.1 2014/04/10 17:50:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-0.6.65.ebuild,v 1.2 2015/01/28 22:29:09 johu Exp $
 
 EAPI="5"
 
@@ -32,13 +32,19 @@ COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 			~app-leechcraft/lc-xtazy-${PV}
 			dev-qt/qtdbus:4
 		)
-		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
+		crypt? ( app-crypt/qca:2[qt4(+)] )"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen[dot] )"
 RDEPEND="${COMMON_DEPEND}
 	astrality? (
 		net-im/telepathy-mission-control
 		net-voip/telepathy-haze
+	)
+	crypt? (
+		|| (
+			app-crypt/qca-gnupg:2
+			app-crypt/qca:2[gpg]
+		)
 	)
 	latex? (
 		|| (

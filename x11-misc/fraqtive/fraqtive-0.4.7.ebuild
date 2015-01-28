@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.7.ebuild,v 1.1 2015/01/22 10:50:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fraqtive/fraqtive-0.4.7.ebuild,v 1.2 2015/01/28 22:22:41 mgorny Exp $
 
 EAPI=5
 inherit eutils gnome2-utils qmake-utils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="qt5 sse2"
+IUSE="qt5 cpu_flags_x86_sse2"
 
 RDEPEND="
 	!qt5? (
@@ -37,7 +37,7 @@ src_configure() {
 	sed -i -e "s|-lGLU|$( ${PKG_CONFIG} --libs glu )|g" src/src.pro || die
 	local conf="release"
 
-	if use sse2; then
+	if use cpu_flags_x86_sse2; then
 		conf="$conf sse2"
 	else
 		conf="$conf no-sse2"

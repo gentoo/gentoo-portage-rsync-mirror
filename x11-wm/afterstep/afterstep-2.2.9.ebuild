@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.20 2011/12/23 07:54:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.9.ebuild,v 1.21 2015/01/28 22:25:35 mgorny Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="alsa debug dbus gif gtk jpeg mmx nls png svg tiff xinerama"
+IUSE="alsa debug dbus gif gtk jpeg cpu_flags_x86_mmx nls png svg tiff xinerama"
 
 RDEPEND="
 	media-libs/freetype
@@ -89,7 +89,7 @@ src_configure() {
 
 	LDCONFIG=/bin/true econf \
 		$(use_enable alsa) \
-		$(use_enable mmx mmx-optimization) \
+		$(use_enable cpu_flags_x86_mmx mmx-optimization) \
 		$(use_enable nls i18n) \
 		$(use_enable xinerama) \
 		$(use_with dbus dbus1) \

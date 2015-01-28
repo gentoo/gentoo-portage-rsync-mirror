@@ -3,7 +3,7 @@ DEPEND=app-crypt/qca:2 >=app-misc/strigi-0.7.7 app-text/docbook-xml-dtd:4.2 app-
 DESCRIPTION=KDE libraries needed by all KDE programs
 EAPI=5
 HOMEPAGE=http://www.kde.org/
-IUSE=3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos lzma mmx nls openexr +policykit semantic-desktop spell sse sse2 ssl +udev +udisks +upower zeroconf opengl test +handbook aqua
+IUSE=cpu_flags_x86_3dnow acl alsa altivec +bzip2 debug doc fam jpeg2k kerberos lzma cpu_flags_x86_mmx nls openexr +policykit semantic-desktop spell cpu_flags_x86_sse cpu_flags_x86_sse2 ssl +udev +udisks +upower zeroconf opengl test +handbook aqua
 KEYWORDS=amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=LGPL-2.1
 PDEPEND=>=kde-base/katepart-4.12.5:4[aqua=] || ( >=kde-base/kfmclient-4.12.5:4[aqua=] x11-misc/xdg-utils ) handbook? ( >=kde-base/khelpcenter-4.12.5:4[aqua=] ) policykit? ( >=sys-auth/polkit-kde-agent-0.99 ) semantic-desktop? ( >=kde-base/nepomuk-core-4.12.5:4[aqua=] >=kde-base/nepomuk-widgets-4.12.5:4[aqua=] )
@@ -13,4 +13,4 @@ RESTRICT=test
 SLOT=4/4.12
 SRC_URI=mirror://kde/stable/4.12.5/src/kdelibs-4.12.5.tar.xz
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	kde4-base	deaaf624bd641762a3432753e86f1a6a	kde4-functions	492237eb2823bdc02bc769530501f0ea	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=e8b7f337281fafd0baf396bd77af13a2
+_md5_=a260d5b29b700dd0a10523cf386860ed

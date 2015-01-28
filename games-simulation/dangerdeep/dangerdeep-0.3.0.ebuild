@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.12 2013/02/07 22:15:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/dangerdeep/dangerdeep-0.3.0.ebuild,v 1.13 2015/01/28 22:02:12 mgorny Exp $
 
 EAPI=2
 inherit eutils scons-utils games
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2 CC-BY-NC-ND-2.0"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE="sse debug"
+IUSE="cpu_flags_x86_sse debug"
 
 RDEPEND="virtual/opengl
 	virtual/glu
@@ -37,7 +37,7 @@ src_prepare() {
 src_compile() {
 	local sse=-1
 
-	if use sse ; then
+	if use cpu_flags_x86_sse ; then
 		use amd64 && sse=3 || sse=1
 	fi
 

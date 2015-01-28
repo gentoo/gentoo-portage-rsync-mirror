@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-azoth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.24 2014/12/06 18:16:22 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.25 2015/01/28 22:29:09 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> lc-azoth-0.6.60.ebuild,
+  lc-azoth-0.6.65.ebuild, lc-azoth-0.6.70.ebuild, lc-azoth-9999.ebuild:
+  Adjust dependencies to handle merged plugins in >=app-crypt/qca-2.1.
 
   06 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org> lc-azoth-0.6.70.ebuild,
   lc-azoth-9999.ebuild, metadata.xml:

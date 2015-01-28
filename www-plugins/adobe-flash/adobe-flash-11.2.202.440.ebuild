@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.440.ebuild,v 1.2 2015/01/27 10:31:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.440.ebuild,v 1.3 2015/01/28 22:30:26 mgorny Exp $
 
 EAPI=5
 inherit nsplugins toolchain-funcs versionator multilib multilib-minimal
@@ -25,9 +25,10 @@ SRC_URI="
 	)
 	abi_x86_64? ( ${AF_64_URI} )
 "
-IUSE="debug kde selinux sse2"
+IUSE="debug kde selinux cpu_flags_x86_sse2"
 REQUIRED_USE="
-	sse2 debug? ( abi_x86_32 )
+	cpu_flags_x86_sse2
+	debug? ( abi_x86_32 )
 	|| ( abi_x86_64 abi_x86_32 )
 "
 SLOT="0"
