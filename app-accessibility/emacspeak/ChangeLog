@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/emacspeak
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.59 2014/12/31 16:21:52 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.60 2015/01/28 00:00:35 teiresias Exp $
+
+  27 Jan 2015; Christopher Brannon <teiresias@gentoo.org>
+  -emacspeak-39.0-r1.ebuild, emacspeak-9999.ebuild:
+  Remove old version, and make emacspeak-9999 up-to-date.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> emacspeak-39.0-r2.ebuild:
   Stable for ppc, wrt bug #532738

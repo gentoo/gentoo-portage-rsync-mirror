@@ -1,17 +1,20 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.8 2013/12/12 17:45:37 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.9 2015/01/28 00:00:35 teiresias Exp $
 
 EAPI=5
 
-inherit eutils
+NEED_EMACS=24
+FORCE_PRINT_ELOG=1
+DISABLE_AUTOFORMATTING=1
+inherit eutils readme.gentoo elisp
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="http://${PN}.googlecode.com/svn/trunk"
 	inherit subversion
 else
 	SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="amd64 ppc x86"
 fi
 
 DESCRIPTION="the emacspeak audio desktop"
@@ -20,11 +23,18 @@ LICENSE="BSD GPL-2"
 SLOT="0"
 IUSE="+espeak"
 
-DEPEND=">=virtual/emacs-22
-	espeak? ( app-accessibility/espeak )"
+	DEPEND="espeak? ( app-accessibility/espeak )"
 
 RDEPEND="${DEPEND}
 	>=dev-tcltk/tclx-8.4"
+
+DOC_CONTENTS='
+As of version 39.0 and later, the /usr/bin/emacspeak
+shell script has been removed downstream in Gentoo.
+You should launch emacspeak by another method, for instance
+by adding the following to your ~/.emacs file:
+(load "/usr/share/emacs/site-lisp/emacspeak/lisp/emacspeak-setup.el")
+'
 
 src_prepare() {
 	# Allow user patches to be applied without modifying the ebuild
@@ -67,12 +77,5 @@ src_install() {
 	cd "${D}/usr/share/emacs/site-lisp/${PN}"
 	rm -rf README etc/NEWS* etc/FAQ etc/COPYRIGHT install-guide \
 		user-guide || die
-}
-
-pkg_postinst() {
-	elog "As of version 39.0 and later, the /usr/bin/emacspeak"
-	elog "shell script has been removed downstream in Gentoo."
-	elog "You should launch emacspeak by another method, for instance"
-	elog " by adding the following to your ~/.emacs file:"
-	elog '(load "/usr/share/emacs/site-lisp/emacspeak/lisp/emacspeak-setup.el")'
+	readme.gentoo_create_doc
 }
