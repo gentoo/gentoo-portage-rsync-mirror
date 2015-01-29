@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.5.2.ebuild,v 1.6 2014/08/10 21:28:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.5.2.ebuild,v 1.7 2015/01/29 20:38:34 johu Exp $
 
 EAPI=5
 
@@ -30,6 +30,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kapptemplate)
+	$(add_kdebase_dep kdebase-kioslaves)
 	dev-qt/qtdeclarative:4[webkit]
 	cxx? ( >=sys-devel/gdb-7.0[python] )
 "

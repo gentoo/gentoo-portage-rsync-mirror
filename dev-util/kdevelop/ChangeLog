@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.260 2014/12/26 13:06:36 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.261 2015/01/29 20:38:34 johu Exp $
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org> kdevelop-4.5.2.ebuild,
+  kdevelop-4.6.0.ebuild, kdevelop-4.7.0.ebuild:
+  Add missing RDEPEND on kde-base/kdebase-kioslaves for man page plugin support,
+  bug #523764.
 
 *kdevelop-4.7.0 (26 Dec 2014)
 

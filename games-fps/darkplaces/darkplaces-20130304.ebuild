@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20130304.ebuild,v 1.1 2013/05/13 06:11:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/darkplaces-20130304.ebuild,v 1.2 2015/01/29 20:32:46 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit unpacker eutils flag-o-matic games
 
 # Latest versions are in http://icculus.org/twilight/darkplaces/files/
@@ -121,13 +121,13 @@ src_compile() {
 
 	# Only compile a maximum of 1 client
 	if use sdl ; then
-		emake ${opts} "sdl-${type}" || die
+		emake ${opts} "sdl-${type}"
 	elif opengl_client ; then
-		emake ${opts} "cl-${type}" || die
+		emake ${opts} "cl-${type}"
 	fi
 
 	if use dedicated ; then
-		emake ${opts} "sv-${type}" || die
+		emake ${opts} "sv-${type}"
 	fi
 }
 
@@ -138,8 +138,8 @@ src_install() {
 		use sdl && type=sdl
 
 		# darkplaces executable is needed, even just for demo
-		newgamesbin "${PN}-${type}" ${PN} || die
-		newicon darkplaces72x72.png ${PN}.png || die
+		newgamesbin "${PN}-${type}" ${PN}
+		newicon darkplaces72x72.png ${PN}.png
 
 		if use demo ; then
 			# Install command-line for demo, even if not desktop entry
@@ -155,14 +155,14 @@ src_install() {
 	fi
 
 	if use dedicated ; then
-		newgamesbin ${PN}-dedicated ${PN}-ded || die
+		newgamesbin ${PN}-dedicated ${PN}-ded
 	fi
 
 	dodoc *.txt ChangeLog todo "${WORKDIR}"/*.txt
 
 	if use lights ; then
 		insinto "${dir}"/id1
-		doins -r "${WORKDIR}"/{cubemaps,maps} || die
+		doins -r "${WORKDIR}"/{cubemaps,maps}
 		if use demo ; then
 			# Set up symlinks, for the demo levels to include the lights
 			local d

@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/cereal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.20 2014/10/21 22:19:46 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.21 2015/01/29 20:31:31 qnikst Exp $
+
+*cereal-0.4.1.1 (29 Jan 2015)
+
+  29 Jan 2015; Alexander Vershilov <qnikst@gentoo.org> +cereal-0.4.1.1.ebuild,
+  -cereal-0.4.1.0.ebuild:
+  dev-haskell/cereal: new version, drop old
 
 *cereal-0.4.1.0 (21 Oct 2014)
 
