@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2.ebuild,v 1.3 2014/03/04 19:58:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2.ebuild,v 1.4 2015/01/29 01:52:06 johu Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
 	kde? ( $(add_kdebase_dep kactivities) )
 	opera? (
-		app-crypt/qca:2
+		app-crypt/qca:2[qt4(+)]
 		dev-libs/qoauth
 	)
 	semantic-desktop? (

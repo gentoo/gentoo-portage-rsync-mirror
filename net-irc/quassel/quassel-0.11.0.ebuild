@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.11.0.ebuild,v 1.4 2014/12/31 12:42:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.11.0.ebuild,v 1.5 2015/01/29 01:35:36 johu Exp $
 
 EAPI=5
 
@@ -27,8 +27,8 @@ SERVER_RDEPEND="
 	!qt5? (
 		dev-qt/qtscript:4
 		crypt? (
-			app-crypt/qca:2
-			app-crypt/qca-ossl
+			app-crypt/qca:2[qt4(+)]
+			|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
 		)
 		postgres? ( dev-qt/qtsql:4[postgres] )
 		!postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )

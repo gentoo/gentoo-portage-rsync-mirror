@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.05-r1.ebuild,v 1.1 2013/07/28 17:57:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.05-r1.ebuild,v 1.2 2015/01/29 01:47:10 johu Exp $
 
 EAPI=5
 
@@ -15,15 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+upekbsapi"
 
-RDEPEND="app-crypt/qca
-	app-crypt/qca-ossl
+DEPEND="app-crypt/qca:2[qt4(+)]
+	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
 	sys-auth/libfprint
 	sys-auth/polkit-qt
 	sys-libs/pam
 	x11-libs/libfakekey
 	dev-qt/qtcore:4
 	!sys-auth/thinkfinger"
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 QA_SONAME="/usr/lib/libbsapi.so.* /usr/lib64/libbsapi.so.*"
 QA_PRESTRIPPED="/usr/lib/libbsapi.so.* /usr/lib64/libbsapi.so.*"

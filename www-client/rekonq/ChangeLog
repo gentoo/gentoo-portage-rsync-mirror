@@ -1,6 +1,10 @@
 # ChangeLog for www-client/rekonq
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.89 2014/12/12 15:41:32 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.90 2015/01/29 01:52:06 johu Exp $
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org> rekonq-2.4.2-r1.ebuild,
+  rekonq-2.4.2.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1.
 
   12 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> rekonq-2.4.2-r1.ebuild:
   amd64 stable wrt bug #517344

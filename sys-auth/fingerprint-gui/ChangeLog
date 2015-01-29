@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/fingerprint-gui
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/ChangeLog,v 1.8 2013/07/28 17:57:14 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/ChangeLog,v 1.9 2015/01/29 01:47:10 johu Exp $
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org> fingerprint-gui-1.05-r1.ebuild,
+  fingerprint-gui-1.05.ebuild:
+  Adjust dependencies to handle merged plugins in >=app-crypt/qca-2.1.
 
 *fingerprint-gui-1.05-r1 (28 Jul 2013)
 
