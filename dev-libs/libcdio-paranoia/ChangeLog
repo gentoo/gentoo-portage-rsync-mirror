@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libcdio-paranoia
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.24 2014/06/18 19:12:09 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.25 2015/01/29 06:59:42 polynomial-c Exp $
+
+*libcdio-paranoia-0.93_p1 (29 Jan 2015)
+
+  29 Jan 2015; Lars Wendler <polynomial-c@gentoo.org>
+  +libcdio-paranoia-0.93_p1.ebuild:
+  Version bump (bug #524356).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org>
   libcdio-paranoia-0.90_p1-r1.ebuild:

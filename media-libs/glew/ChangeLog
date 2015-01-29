@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/glew
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.106 2014/09/26 23:39:58 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.107 2015/01/29 06:43:19 radhermit Exp $
+
+*glew-1.12.0 (29 Jan 2015)
+
+  29 Jan 2015; Tim Harder <radhermit@gentoo.org> +glew-1.12.0.ebuild:
+  Version bump.
 
 *glew-1.11.0 (26 Sep 2014)
 
