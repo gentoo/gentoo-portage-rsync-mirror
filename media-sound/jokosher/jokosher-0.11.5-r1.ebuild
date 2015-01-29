@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.5-r1.ebuild,v 1.1 2014/12/02 21:39:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.5-r1.ebuild,v 1.2 2015/01/29 10:51:30 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gnome"
 
 # NOTE: setuptools are a runtime requirement as the app
