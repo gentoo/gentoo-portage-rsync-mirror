@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.11.ebuild,v 1.2 2014/06/09 09:56:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.12.2.ebuild,v 1.1 2015/01/29 10:02:44 tomka Exp $
 
 EAPI=5
 
@@ -11,12 +11,12 @@ MYP="Normaliz${MYPV}"
 
 DESCRIPTION="Tool for computations in affine monoids and more"
 HOMEPAGE="http://www.mathematik.uni-osnabrueck.de/normaliz/"
-SRC_URI="http://www.mathematik.uni-osnabrueck.de/${PN}/${MYP}/${MYP}.zip"
+SRC_URI="http://www.mathematik.uni-osnabrueck.de/${PN}/Normaliz${PV}/Normaliz${PV}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="extras openmp"
+IUSE="doc extras openmp"
 
 RDEPEND="dev-libs/gmp[cxx]"
 DEPEND="${RDEPEND}
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MYP}
 
 src_prepare () {
-	epatch "${FILESDIR}/${PN}-${MYPV}-respect-flags.patch"
+	epatch "${FILESDIR}/${PN}-2.12.1-respect-flags.patch"
 
 	# Respect users AR tool (Bug 474532)
 	sed -e "s:ar -cr:$(tc-getAR) -cr:" -i source/libnormaliz/Makefile || die
@@ -45,8 +45,10 @@ src_compile(){
 
 src_install() {
 	dobin source/normaliz
-	dodoc doc/"Normaliz_${MYPV}.pdf"
-	dodoc doc/"NmzIntegrate_1.2.pdf"
+	if use doc ; then
+		dodoc doc/"Normaliz.pdf"
+		dodoc doc/"NmzIntegrate.pdf"
+	fi
 	if use extras; then
 		elog "You have selected to install extras which consist of Macaulay2"
 		elog "and Singular packages. These have been installed into "

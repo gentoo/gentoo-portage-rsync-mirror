@@ -1,6 +1,17 @@
 # ChangeLog for games-strategy/gwp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/ChangeLog,v 1.11 2014/12/02 16:09:07 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/ChangeLog,v 1.14 2015/01/29 10:15:35 pacho Exp $
+
+  29 Jan 2015; Pacho Ramos <pacho@gentoo.org> -gwp-0.4.0-r2.ebuild:
+  drop old
+
+  29 Jan 2015; Pacho Ramos <pacho@gentoo.org> gwp-0.4.0-r2.ebuild,
+  gwp-0.4.0-r3.ebuild:
+  x86 stable, bug #531450
+
+  29 Jan 2015; Pacho Ramos <pacho@gentoo.org> gwp-0.4.0-r2.ebuild,
+  gwp-0.4.0-r3.ebuild:
+  amd64 stable, bug #531450
 
 *gwp-0.4.0-r3 (02 Dec 2014)
 

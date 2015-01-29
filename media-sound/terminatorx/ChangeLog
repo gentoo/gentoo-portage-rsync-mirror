@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/terminatorx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.35 2012/05/05 09:02:12 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.36 2015/01/29 10:28:47 pacho Exp $
+
+*terminatorx-3.84-r1 (29 Jan 2015)
+
+  29 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/terminatorx-3.84-new-zlib.patch, +terminatorx-3.84-r1.ebuild,
+  -terminatorx-3.83.ebuild, -terminatorx-3.84.ebuild:
+  Use gnome2.eclass properly, fix compilation with current zlib (#413623), drop
+  old
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> terminatorx-3.82.ebuild,
   terminatorx-3.83.ebuild, terminatorx-3.84.ebuild:
@@ -133,4 +141,3 @@
   
   Submitted by Dietrich Heise <dietrich@pegestorf.de>
   Thanks Dietrich
-

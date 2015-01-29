@@ -1,6 +1,11 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.60 2015/01/28 22:57:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.61 2015/01/29 10:01:42 kensington Exp $
+
+*skrooge-1.10.0 (29 Jan 2015)
+
+  29 Jan 2015; Michael Palimaka <kensington@gentoo.org> +skrooge-1.10.0.ebuild:
+  Version bump wrt bug #536376.
 
   28 Jan 2015; Johannes Huber <johu@gentoo.org> skrooge-1.9.0.ebuild:
   Adjust use dependencies to handle >=app-crypt/qca-2.1.

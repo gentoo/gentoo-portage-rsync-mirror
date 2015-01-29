@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.83.ebuild,v 1.2 2012/05/05 09:02:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.84-r1.ebuild,v 1.1 2015/01/29 10:28:47 pacho Exp $
 
-EAPI=2
+EAPI=5
+GCONF_DEBUG="no"
 
 inherit gnome2 eutils
 
@@ -14,9 +15,10 @@ SRC_URI="http://www.terminatorx.org/dist/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="alsa mad vorbis sox"
+IUSE="alsa debug mad vorbis sox"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+RDEPEND="
+	alsa? ( media-libs/alsa-lib )
 	mad? ( media-sound/madplay )
 	vorbis? ( media-libs/libvorbis )
 	sox? ( media-sound/sox
@@ -30,25 +32,34 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/ladspa-sdk
 	media-libs/ladspa-cmt
 	app-text/scrollkeeper
-	media-libs/liblrdf"
+	media-libs/liblrdf
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	x11-proto/xproto
 	x11-proto/inputproto
-	x11-proto/xf86dgaproto"
+	x11-proto/xf86dgaproto
+"
 
 S=${WORKDIR}/${MY_P}
 
+src_prepare() {
+	# Patch from debian to compile with recent zlib
+	epatch "${FILESDIR}"/${PN}-3.84-new-zlib.patch
+	gnome2_src_prepare
+}
+
 src_configure() {
-	econf \
+	gnome2_src_configure \
 		$(use_enable alsa) \
+		$(use_enable debug) \
 		$(use_enable mad) \
 		$(use_enable vorbis) \
 		$(use_enable sox)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	gnome2_src_install
 	newicon gnome-support/terminatorX-app.png terminatorX.png
 	make_desktop_entry terminatorX terminatorX terminatorX AudioVideo
 }
