@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.113 2014/12/02 16:17:07 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.114 2015/01/29 18:02:34 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> x264-0.0.20130731.ebuild,
+  x264-0.0.20130912.ebuild, x264-0.0.20140308.ebuild, x264-9999.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   02 Dec 2014; Tim Harder <radhermit@gentoo.org> x264-0.0.20130912.ebuild,
   x264-0.0.20140308.ebuild, +files/x264-0.0.20130912-cflags.patch,

@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/waffle-1.3.0-r1.ebuild,v 1.5 2014/07/26 09:08:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/waffle-1.5.1.ebuild,v 1.1 2015/01/29 18:21:10 mattst88 Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://people.freedesktop.org/~chadversary/waffle"
+EGIT_REPO_URI="git://github.com/waffle-gl/waffle.git"
 
 if [[ ${PV} = 9999* ]]; then
 	GIT_ECLASS="git-2"

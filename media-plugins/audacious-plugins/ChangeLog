@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.280 2014/11/07 23:36:23 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.281 2015/01/29 18:15:52 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org>
+  audacious-plugins-2.4.4-r1.ebuild, audacious-plugins-2.5.4.ebuild:
+  Convert to CPU_FLAGS_X86.
 
 *audacious-plugins-2.4.4-r1 (07 Nov 2014)
 

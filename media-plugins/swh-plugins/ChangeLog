@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/swh-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.53 2014/12/16 12:45:24 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.54 2015/01/29 18:15:52 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> swh-plugins-0.4.15-r2.ebuild,
+  swh-plugins-0.4.15-r3.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   16 Dec 2014; Pacho Ramos <pacho@gentoo.org> swh-plugins-0.4.15-r3.ebuild:
   amd64/x86 stable, bug #525768

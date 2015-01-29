@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130912.ebuild,v 1.3 2014/12/02 16:17:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130912.ebuild,v 1.4 2015/01/29 18:02:34 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SONAME="138"
 SLOT="0/${SONAME}"
 
 LICENSE="GPL-2"
-IUSE="10bit +interlaced pic static-libs sse +threads"
+IUSE="10bit +interlaced pic static-libs cpu_flags_x86_sse +threads"
 
 ASM_DEP=">=dev-lang/yasm-1.2.0"
 DEPEND="abi_x86_32? ( ${ASM_DEP} )
@@ -48,7 +48,7 @@ multilib_src_configure() {
 	fi
 
 	# Upstream uses this, see the cflags patch
-	use sse && append-flags "-msse" "-mfpmath=sse"
+	use cpu_flags_x86_sse && append-flags "-msse" "-mfpmath=sse"
 
 	"${S}/configure" \
 		--prefix="${EPREFIX}"/usr \
