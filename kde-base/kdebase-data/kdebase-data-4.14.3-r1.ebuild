@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.14.3.ebuild,v 1.4 2015/01/29 19:50:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.14.3-r1.ebuild,v 1.1 2015/01/29 19:50:30 johu Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit kde4-meta
 
 DESCRIPTION="Icons, localization data and various .desktop files from kdebase"
 IUSE="+wallpapers"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	wallpapers? ( $(add_kdebase_dep kde-wallpapers) )
@@ -27,6 +27,8 @@ KMEXTRACTONLY="
 	config-runtime.h.cmake
 	kde4
 "
+
+PATCHES=( "${FILESDIR}/${P}-lithuania-euro.patch" )
 
 src_configure() {
 	# Remove remnants of hicolor-icon-theme

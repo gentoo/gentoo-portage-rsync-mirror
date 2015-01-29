@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdebase-data
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.340 2014/12/11 15:45:01 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.341 2015/01/29 19:50:30 johu Exp $
+
+*kdebase-data-4.14.3-r1 (29 Jan 2015)
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org>
+  +files/kdebase-data-4.14.3-lithuania-euro.patch,
+  +kdebase-data-4.14.3-r1.ebuild, kdebase-data-4.12.5.ebuild,
+  kdebase-data-4.14.3.ebuild:
+  Revision bump. Upstream patchs add lithuania to euro zone, spotted by Andreas
+  Sturmlechner <andreas.sturmlechner@gmail.com>, bug #534280.
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -kdebase-data-4.14.2.ebuild:
   Remove KDE SC 4.14.2
