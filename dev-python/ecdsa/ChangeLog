@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ecdsa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.30 2014/12/27 19:35:01 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.31 2015/01/29 12:44:57 idella4 Exp $
+
+*ecdsa-0.11-r2 (29 Jan 2015)
+
+  29 Jan 2015; Ian Delaney <idella4@gentoo.org> +ecdsa-0.11-r2.ebuild:
+  revbump; add pypy pypy3 support and test phase
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> ecdsa-0.11-r1.ebuild:
   Stable for amd64, wrt bug #531396
