@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ksirk-4.14.3.ebuild,v 1.2 2014/12/11 13:05:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ksirk-4.14.3.ebuild,v 1.3 2015/01/28 23:49:30 johu Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	app-crypt/qca:2
+	app-crypt/qca:2[qt4(+)]
 	$(add_kdebase_dep libkdegames)
 	sys-libs/zlib
 "

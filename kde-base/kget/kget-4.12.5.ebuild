@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.12.5.ebuild,v 1.5 2014/05/08 07:33:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.12.5.ebuild,v 1.6 2015/01/28 23:33:48 johu Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug bittorrent mms semantic-desktop sqlite webkit"
 
 RDEPEND="
-	app-crypt/qca:2
+	app-crypt/qca:2[qt4(+)]
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
 	$(add_kdebase_dep libkonq)
 	$(add_kdebase_dep libkworkspace '' 4.11)

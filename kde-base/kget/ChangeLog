@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kget
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.345 2014/12/11 15:45:03 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.346 2015/01/28 23:33:48 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> kget-4.12.5.ebuild,
+  kget-4.14.3.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1.
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -kget-4.14.2.ebuild:
   Remove KDE SC 4.14.2

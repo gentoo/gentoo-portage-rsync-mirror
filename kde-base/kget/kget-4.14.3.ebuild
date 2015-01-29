@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.14.3.ebuild,v 1.2 2014/12/11 13:05:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.14.3.ebuild,v 1.3 2015/01/28 23:33:48 johu Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug bittorrent gpg mms nepomuk sqlite webkit"
 
 RDEPEND="
-	app-crypt/qca:2
+	app-crypt/qca:2[qt4(+)]
 	$(add_kdebase_dep kdelibs 'nepomuk?')
 	$(add_kdebase_dep libkonq)
 	$(add_kdebase_dep libkworkspace '' 4.11)

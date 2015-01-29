@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.14.3.ebuild,v 1.2 2014/12/11 13:05:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.14.3.ebuild,v 1.3 2015/01/28 23:54:33 johu Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND="
 	media-libs/qimageblitz
 	sys-libs/zlib
 	chm? ( dev-libs/chmlib )
-	crypt? ( app-crypt/qca:2 )
+	crypt? ( app-crypt/qca:2[qt4(+)] )
 	djvu? ( app-text/djvu )
 	dpi? ( x11-libs/libkscreen:4 )
 	ebook? ( app-text/ebook-tools )

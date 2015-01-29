@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okteta
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.227 2014/12/11 15:45:08 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.228 2015/01/28 23:57:16 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> okteta-4.12.5.ebuild,
+  okteta-4.14.3.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1.
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -okteta-4.14.2.ebuild:
   Remove KDE SC 4.14.2

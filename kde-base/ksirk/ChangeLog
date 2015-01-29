@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksirk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.219 2014/12/11 15:45:06 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.220 2015/01/28 23:49:30 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> ksirk-4.12.5.ebuild,
+  ksirk-4.14.3.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1.
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -ksirk-4.14.2.ebuild:
   Remove KDE SC 4.14.2
