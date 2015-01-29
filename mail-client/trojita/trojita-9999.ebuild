@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.24 2014/04/29 16:44:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.25 2015/01/29 15:22:13 kensington Exp $
 
 EAPI=5
 
-QT_REQUIRED="4.8.0"
+QT4_REQUIRED="4.8.0"
 EGIT_REPO_URI="git://anongit.kde.org/${PN}.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
 
@@ -23,20 +23,36 @@ fi
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-IUSE="debug +password test +zlib"
+IUSE="debug +password qt5 test +zlib"
 for MY_LANG in ${MY_LANGS} ; do
 	IUSE="${IUSE} linguas_${MY_LANG}"
 done
 
 RDEPEND="
-	>=dev-qt/qtbearer-${QT_REQUIRED}:4
-	>=dev-qt/qtgui-${QT_REQUIRED}:4
-	>=dev-qt/qtsql-${QT_REQUIRED}:4[sqlite]
-	>=dev-qt/qtwebkit-${QT_REQUIRED}:4
+	qt5? (
+		dev-qt/linguist-tools:5
+		dev-qt/qtgui:5
+		dev-qt/qtnetwork:5
+		dev-qt/qtsql:5[sqlite]
+		dev-qt/qtwebkit:5
+		dev-qt/qtwidgets:5
+	)
+	!qt5? (
+		>=dev-qt/qtbearer-${QT4_REQUIRED}:4
+		>=dev-qt/qtgui-${QT4_REQUIRED}:4
+		>=dev-qt/qtsql-${QT4_REQUIRED}:4[sqlite]
+		>=dev-qt/qtwebkit-${QT4_REQUIRED}:4
+	)
 "
 DEPEND="${RDEPEND}
-	password? ( dev-libs/qtkeychain[qt4] )
-	test? ( >=dev-qt/qttest-${QT_REQUIRED}:4 )
+	password? (
+		qt5?	( dev-libs/qtkeychain[qt5] )
+		!qt5?	( dev-libs/qtkeychain[qt4] )
+	)
+	test? (
+		qt5?	( dev-qt/qttest:5 )
+		!qt5?	( >=dev-qt/qttest-${QT4_REQUIRED}:4 )
+	)
 	zlib? (
 		virtual/pkgconfig
 		sys-libs/zlib
@@ -47,6 +63,7 @@ DOCS="README LICENSE"
 
 src_configure() {
 	local mycmakeargs=(
+		$(cmake-utils_use_with qt5 QT5)
 		$(cmake-utils_use_with password QTKEYCHAIN_PLUGIN)
 		$(cmake-utils_use_with test TESTS)
 		$(cmake-utils_use_with zlib ZLIB)
