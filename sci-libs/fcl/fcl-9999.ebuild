@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fcl/fcl-9999.ebuild,v 1.2 2014/12/01 09:06:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fcl/fcl-9999.ebuild,v 1.3 2015/01/29 21:31:05 mgorny Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DESCRIPTION="The Flexible Collision Library"
 HOMEPAGE="http://gamma.cs.unc.edu/FCL/"
 LICENSE="BSD"
 SLOT="0"
-IUSE="sse"
+IUSE="cpu_flags_x86_sse"
 
 RDEPEND="
 	sci-libs/octomap
@@ -41,7 +41,7 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		"-DFCL_USE_SSE=$(usex sse TRUE FALSE)"
+		"-DFCL_USE_SSE=$(usex cpu_flags_x86_sse TRUE FALSE)"
 	)
 	cmake-utils_src_configure
 }

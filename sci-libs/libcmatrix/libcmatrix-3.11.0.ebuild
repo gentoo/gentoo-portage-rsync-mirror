@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.11.0.ebuild,v 1.7 2013/05/20 16:28:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/libcmatrix-3.11.0.ebuild,v 1.8 2015/01/29 21:31:07 mgorny Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.gz"
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="sse threads"
+IUSE="cpu_flags_x86_sse threads"
 
 RDEPEND="sci-libs/minuit"
 DEPEND="${RDEPEND}"
@@ -43,7 +43,7 @@ src_configure() {
 		--with-minuit \
 		--without-atlas \
 		--with-sysroot="${EROOT}" \
-		$(use_with sse) \
+		$(use_with cpu_flags_x86_sse sse) \
 		$(use_with threads)
 }
 

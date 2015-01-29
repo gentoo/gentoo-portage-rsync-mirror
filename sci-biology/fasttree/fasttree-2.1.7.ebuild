@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/fasttree-2.1.7.ebuild,v 1.1 2013/12/20 09:20:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/fasttree-2.1.7.ebuild,v 1.2 2015/01/29 21:21:10 mgorny Exp $
 
 EAPI=5
 
@@ -17,9 +17,9 @@ SRC_URI="
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="double-precision openmp sse3"
+IUSE="double-precision openmp cpu_flags_x86_sse3"
 
-REQUIRED_USE="?? ( double-precision sse3 )"
+REQUIRED_USE="?? ( double-precision cpu_flags_x86_sse3 )"
 
 DOCS=( README )
 
@@ -38,7 +38,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DVERSION="${PV}"
-		$(cmake-utils_use_has sse3)
+		$(cmake-utils_use_has cpu_flags_x86_sse3 sse3)
 		$(cmake-utils_use_use openmp)
 		$(cmake-utils_use_use double-precision double)
 	)

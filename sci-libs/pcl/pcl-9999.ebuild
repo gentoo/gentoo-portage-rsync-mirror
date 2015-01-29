@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-9999.ebuild,v 1.4 2014/12/19 14:29:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pcl/pcl-9999.ebuild,v 1.5 2015/01/29 21:31:12 mgorny Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://pointclouds.org/"
 DESCRIPTION="2D/3D image and point cloud processing"
 LICENSE="BSD"
 SLOT="0"
-IUSE="cuda doc opengl openni openni2 pcap png +qhull qt4 usb vtk sse test tutorials"
+IUSE="cuda doc opengl openni openni2 pcap png +qhull qt4 usb vtk cpu_flags_x86_sse test tutorials"
 
 RDEPEND="
 	>=sci-libs/flann-1.7.1
@@ -70,7 +70,7 @@ src_configure() {
 		"-DBUILD_OPENNI=$(usex openni TRUE FALSE)"
 		"-DWITH_OPENNI2=$(usex openni2 TRUE FALSE)"
 		"-DBUILD_OPENNI2=$(usex openni2 TRUE FALSE)"
-		"-DPCL_ENABLE_SSE=$(usex sse TRUE FALSE)"
+		"-DPCL_ENABLE_SSE=$(usex cpu_flags_x86_sse TRUE FALSE)"
 		"-DWITH_DOCS=$(usex doc TRUE FALSE)"
 		"-DWITH_TUTORIALS=$(usex tutorials TRUE FALSE)"
 		"-DBUILD_TESTS=$(usex test TRUE FALSE)"

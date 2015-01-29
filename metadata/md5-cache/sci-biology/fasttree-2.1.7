@@ -3,11 +3,11 @@ DEPEND=sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/finduti
 DESCRIPTION=Fast inference of approximately-maximum-likelihood phylogenetic trees
 EAPI=5
 HOMEPAGE=http://www.microbesonline.org/fasttree/
-IUSE=double-precision openmp sse3
+IUSE=double-precision openmp cpu_flags_x86_sse3
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-REQUIRED_USE=?? ( double-precision sse3 )
+REQUIRED_USE=?? ( double-precision cpu_flags_x86_sse3 )
 SLOT=0
 SRC_URI=http://www.microbesonline.org/fasttree/FastTree-2.1.7.c http://www.microbesonline.org/fasttree/FastTreeUPGMA.c -> FastTreeUPGMA-2.1.7.c http://www.microbesonline.org/fasttree/MOTreeComparison.tar.gz -> MOTreeComparison-2.1.7.tar.gz
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=3910d2ac7e64146871a256f52607f0fa
+_md5_=760938cce1018b256eea0e8c931ee05c

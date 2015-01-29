@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.3-r2.ebuild,v 1.1 2014/01/06 09:50:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.3-r2.ebuild,v 1.2 2015/01/29 21:23:12 mgorny Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="+glsl python sse2"
+IUSE="+glsl python cpu_flags_x86_sse2"
 
 RDEPEND="
 	>=sci-chemistry/openbabel-2.2.3
@@ -47,7 +47,7 @@ src_configure() {
 		-DQT_MKSPECS_DIR="${EPREFIX}/usr/share/qt4/mkspecs"
 		-DQT_MKSPECS_RELATIVE=share/qt4/mkspecs
 		$(cmake-utils_use_enable glsl)
-		$(cmake-utils_use_with sse2 SSE2)
+		$(cmake-utils_use_with cpu_flags_x86_sse2 SSE2)
 		$(cmake-utils_use_enable python)
 	)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/avogadro
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.48 2014/01/06 09:50:11 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.49 2015/01/29 21:23:12 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> avogadro-1.0.3-r2.ebuild,
+  avogadro-1.1.0.ebuild:
+  Convert to CPU_FLAGS_X86.
 
 *avogadro-1.0.3-r2 (06 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/fasttree
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/ChangeLog,v 1.4 2013/12/20 09:20:44 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/ChangeLog,v 1.5 2015/01/29 21:21:10 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> fasttree-2.1.7.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *fasttree-2.1.7 (20 Dec 2013)
 
@@ -21,4 +24,3 @@
   10 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
   +fasttree-2.0.1.ebuild:
   New package, ebuild written by me
-

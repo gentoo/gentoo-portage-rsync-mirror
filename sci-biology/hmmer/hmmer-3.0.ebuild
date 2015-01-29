@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.7 2014/10/19 03:59:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-3.0.ebuild,v 1.8 2015/01/29 21:21:18 mgorny Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://selab.janelia.org/pub/software/hmmer3/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="+sse mpi +threads gsl static-libs"
+IUSE="+cpu_flags_x86_sse mpi +threads gsl static-libs"
 KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 DEPEND="
@@ -28,7 +28,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_enable mpi) \
 		$(use_enable threads) \
 		$(use_with gsl)

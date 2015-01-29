@@ -3,11 +3,11 @@ DEPEND=mpi? ( virtual/mpi ) gsl? ( >=sci-libs/gsl-1.12 )
 DESCRIPTION=Sequence analysis using profile hidden Markov models
 EAPI=4
 HOMEPAGE=http://hmmer.janelia.org/
-IUSE=+sse mpi +threads gsl static-libs
+IUSE=+cpu_flags_x86_sse mpi +threads gsl static-libs
 KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-3
 RDEPEND=mpi? ( virtual/mpi ) gsl? ( >=sci-libs/gsl-1.12 )
 SLOT=0
 SRC_URI=ftp://selab.janelia.org/pub/software/hmmer3/3.0/hmmer-3.0.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e6f7a848fcf555c5685116d29329bfc1
+_md5_=27d179229c3cc96c9bff1f771b5d2a52

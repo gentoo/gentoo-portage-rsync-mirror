@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.7 2013/09/05 19:44:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/shrimp-2.2.3.ebuild,v 1.8 2015/01/29 21:21:30 mgorny Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://compbio.cs.toronto.edu/shrimp/releases/SHRiMP_${MY_PV}.src.tar.g
 LICENSE="shrimp"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="custom-cflags +sse2"
+IUSE="custom-cflags +cpu_flags_x86_sse2"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/SHRiMP_${MY_PV}
 
 pkg_pretend() {
-	use sse2 || die "This package needs sse2 support in your CPU"
+	use cpu_flags_x86_sse2 || die "This package needs sse2 support in your CPU"
 }
 
 pkg_setup() {

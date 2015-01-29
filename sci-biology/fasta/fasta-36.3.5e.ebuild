@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-36.3.5e.ebuild,v 1.1 2013/05/11 15:39:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-36.3.5e.ebuild,v 1.2 2015/01/29 21:20:44 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://faculty.virginia.edu/wrpearson/${PN}/${PN}36/${P}.tar.gz"
 LICENSE="fasta"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
-IUSE="debug sse2 test"
+IUSE="debug cpu_flags_x86_sse2 test"
 
 DEPEND="test? ( app-shells/tcsh )"
 RDEPEND=""
@@ -34,7 +34,7 @@ src_prepare() {
 		use amd64 && ALT="64"
 	fi
 
-	if use sse2 ; then
+	if use cpu_flags_x86_sse2 ; then
 		ALT="${ALT}_sse2"
 		append-flags -msse2
 		[[ $(tc-getCC) == *icc* ]] || append-flags -ffast-math

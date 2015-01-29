@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-biology</herd>
-  <use>
-    <flag name="sse3">Enable optimization for SSE3 capable chips</flag>
-  </use>
 </pkgmetadata>
