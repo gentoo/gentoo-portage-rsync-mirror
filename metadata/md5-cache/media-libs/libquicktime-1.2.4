@@ -3,7 +3,7 @@ DEPEND=virtual/libintl aac? ( media-libs/faad2 encode? ( media-libs/faac ) ) als
 DESCRIPTION=An enchanced version of the quicktime4linux library
 EAPI=4
 HOMEPAGE=http://libquicktime.sourceforge.net/
-IUSE=aac alsa doc dv encode ffmpeg gtk jpeg lame mmx opengl png schroedinger static-libs vorbis X x264
+IUSE=aac alsa doc dv encode ffmpeg gtk jpeg lame cpu_flags_x86_mmx opengl png schroedinger static-libs vorbis X x264
 KEYWORDS=alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=LGPL-2.1
 RDEPEND=virtual/libintl aac? ( media-libs/faad2 encode? ( media-libs/faac ) ) alsa? ( >=media-libs/alsa-lib-1.0.20 ) dv? ( media-libs/libdv ) ffmpeg? ( virtual/ffmpeg ) gtk? ( x11-libs/gtk+:2 ) jpeg? ( virtual/jpeg ) lame? ( media-sound/lame ) opengl? ( virtual/opengl ) png? ( media-libs/libpng:0 ) schroedinger? ( >=media-libs/schroedinger-1.0.10 ) vorbis? ( media-libs/libogg media-libs/libvorbis ) X? ( x11-libs/libX11 x11-libs/libXaw x11-libs/libXext x11-libs/libXt x11-libs/libXv ) x264? ( media-libs/x264 )
@@ -11,4 +11,4 @@ REQUIRED_USE=opengl? ( X )
 SLOT=0
 SRC_URI=mirror://sourceforge/libquicktime/libquicktime-1.2.4.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=a34f3c58bcc98e54c3df5235d5b4407a
+_md5_=324b33e12e2d2d771e26432cfd0a647f

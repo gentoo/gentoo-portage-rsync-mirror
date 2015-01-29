@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/speex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.115 2014/08/10 21:12:16 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.116 2015/01/29 18:00:48 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> speex-1.2_rc1-r1.ebuild,
+  speex-1.2_rc1-r2.ebuild, speex-1.2_rc1.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> speex-1.2_rc1-r1.ebuild,
   speex-1.2_rc1-r2.ebuild, speex-1.2_rc1.ebuild:

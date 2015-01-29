@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.30 2011/11/28 03:26:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.31 2015/01/29 17:37:02 mgorny Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/fame/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
-IUSE="mmx static-libs"
+IUSE="cpu_flags_x86_mmx static-libs"
 
 PATCHES=( "${FILESDIR}"/${P}-gcc43.patch )
 
@@ -31,7 +31,7 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
-		$(use_enable mmx)
+		$(use_enable cpu_flags_x86_mmx mmx)
 	)
 	autotools-utils_src_configure
 }

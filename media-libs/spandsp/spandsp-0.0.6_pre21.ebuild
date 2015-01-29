@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre21.ebuild,v 1.4 2014/08/10 21:12:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6_pre21.ebuild,v 1.5 2015/01/29 17:59:02 mgorny Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.soft-switch.org/downloads/spandsp/${P/_}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="doc fixed-point mmx sse sse2 sse3 static-libs"
+IUSE="doc fixed-point cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 static-libs"
 
 RDEPEND="media-libs/tiff"
 DEPEND="${RDEPEND}
@@ -32,9 +32,9 @@ src_configure() {
 		--disable-dependency-tracking \
 		$(use_enable doc) \
 		$(use_enable fixed-point) \
-		$(use_enable mmx) \
-		$(use_enable sse2) \
-		$(use_enable sse3) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
+		$(use_enable cpu_flags_x86_sse3 sse3) \
 		$(use_enable static-libs static)
 }
 

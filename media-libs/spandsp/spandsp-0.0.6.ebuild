@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6.ebuild,v 1.2 2014/11/24 16:31:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/spandsp-0.0.6.ebuild,v 1.3 2015/01/29 17:59:02 mgorny Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.soft-switch.org/downloads/spandsp/${P/_}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
-IUSE="doc fixed-point mmx sse sse2 sse3 ssse3 sse4a avx static-libs"
+IUSE="doc fixed-point cpu_flags_x86_mmx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3 cpu_flags_x86_sse4a cpu_flags_x86_avx static-libs"
 
 RDEPEND="media-libs/tiff
 	 virtual/jpeg"
@@ -33,13 +33,13 @@ src_configure() {
 		--disable-dependency-tracking \
 		$(use_enable doc) \
 		$(use_enable fixed-point) \
-		$(use_enable mmx) \
-		$(use_enable sse) \
-		$(use_enable sse2) \
-		$(use_enable sse3) \
-		$(use_enable ssse3) \
-		$(use_enable sse4a) \
-		$(use_enable avx) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
+		$(use_enable cpu_flags_x86_sse sse) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
+		$(use_enable cpu_flags_x86_sse3 sse3) \
+		$(use_enable cpu_flags_x86_ssse3 ssse3) \
+		$(use_enable cpu_flags_x86_sse4a sse4a) \
+		$(use_enable cpu_flags_x86_avx avx) \
 		$(use_enable static-libs static)
 }
 

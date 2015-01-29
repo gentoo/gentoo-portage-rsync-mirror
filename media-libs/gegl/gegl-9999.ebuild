@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.7 2013/05/01 00:46:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.8 2015/01/29 17:33:00 mgorny Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
 KEYWORDS=""
 
-IUSE="cairo debug ffmpeg introspection jpeg jpeg2k lensfun mmx openexr png raw sdl sse svg umfpack vala"
+IUSE="cairo debug ffmpeg introspection jpeg jpeg2k lensfun cpu_flags_x86_mmx openexr png raw sdl cpu_flags_x86_sse svg umfpack vala"
 
 RDEPEND=">=media-libs/babl-0.1.10[introspection?]
 	>=dev-libs/glib-2.28:2
@@ -90,8 +90,8 @@ src_configure() {
 		--without-libspiro \
 		--disable-docs --disable-workshop \
 		--with-pango --with-gdk-pixbuf \
-		$(use_enable mmx) \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_enable debug) \
 		$(use_with cairo) \
 		$(use_with cairo pangocairo) \

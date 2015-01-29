@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/libsbsms-2.0.2.ebuild,v 1.1 2014/10/10 04:29:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/libsbsms-2.0.2.ebuild,v 1.2 2015/01/29 17:41:44 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sbsms/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
-IUSE="sse static-libs"
+IUSE="cpu_flags_x86_sse static-libs"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cflags.patch
@@ -24,7 +24,7 @@ src_configure() {
 	econf \
 		--enable-shared \
 		$(use_enable static-libs static) \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		--disable-multithreaded
 		# threaded version causes segfaults
 }

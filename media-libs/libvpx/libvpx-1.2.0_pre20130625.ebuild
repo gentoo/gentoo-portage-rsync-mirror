@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.2.0_pre20130625.ebuild,v 1.5 2014/02/20 01:03:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.2.0_pre20130625.ebuild,v 1.6 2015/01/29 17:49:43 mgorny Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal eutils
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.webmproject.org"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="altivec doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs test +threads"
+IUSE="altivec doc cpu_flags_x86_mmx postproc cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3 cpu_flags_x86_sse4_1 static-libs test +threads"
 
 RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 DEPEND="abi_x86_32? ( dev-lang/yasm )
@@ -42,8 +42,8 @@ DEPEND="abi_x86_32? ( dev-lang/yasm )
 "
 
 REQUIRED_USE="
-	sse2? ( mmx )
-	ssse3? ( sse2 )
+	cpu_flags_x86_sse2? ( cpu_flags_x86_mmx )
+	cpu_flags_x86_ssse3? ( cpu_flags_x86_sse2 )
 	"
 
 src_prepare() {
@@ -90,13 +90,13 @@ multilib_src_configure() {
 		--enable-shared \
 		--extra-cflags="${CFLAGS}" \
 		$(use_enable altivec) \
-		$(use_enable mmx) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
 		$(use_enable postproc) \
-		$(use_enable sse) \
-		$(use_enable sse2) \
-		$(use_enable sse3) \
-		$(use_enable sse4_1) \
-		$(use_enable ssse3) \
+		$(use_enable cpu_flags_x86_sse sse) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
+		$(use_enable cpu_flags_x86_sse3 sse3) \
+		$(use_enable cpu_flags_x86_sse4_1 sse4_1) \
+		$(use_enable cpu_flags_x86_ssse3 ssse3) \
 		$(use_enable static-libs static) \
 		$(use_enable test unit-tests) \
 		$(use_enable threads multithread) \

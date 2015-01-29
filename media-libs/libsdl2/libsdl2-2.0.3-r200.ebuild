@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.3-r200.ebuild,v 1.5 2014/12/26 17:51:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.3-r200.ebuild,v 1.6 2015/01/29 17:42:14 mgorny Exp $
 
 # TODO: convert FusionSound #484250
 
@@ -16,7 +16,7 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm x86"
 
-IUSE="3dnow alsa altivec custom-cflags dbus fusionsound gles haptic +joystick mmx nas opengl oss pulseaudio +sound sse sse2 static-libs +threads tslib udev +video wayland X xinerama xscreensaver"
+IUSE="cpu_flags_x86_3dnow alsa altivec custom-cflags dbus fusionsound gles haptic +joystick cpu_flags_x86_mmx nas opengl oss pulseaudio +sound cpu_flags_x86_sse cpu_flags_x86_sse2 static-libs +threads tslib udev +video wayland X xinerama xscreensaver"
 REQUIRED_USE="
 	alsa? ( sound )
 	fusionsound? ( sound )
@@ -92,11 +92,11 @@ multilib_src_configure() {
 		--enable-cpuinfo \
 		--enable-atomic \
 		--enable-assembly \
-		$(use_enable sse ssemath) \
-		$(use_enable mmx) \
-		$(use_enable 3dnow) \
-		$(use_enable sse) \
-		$(use_enable sse2) \
+		$(use_enable cpu_flags_x86_sse ssemath) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
+		$(use_enable cpu_flags_x86_3dnow 3dnow) \
+		$(use_enable cpu_flags_x86_sse sse) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
 		$(use_enable altivec) \
 		$(use_enable oss) \
 		$(use_enable alsa) \

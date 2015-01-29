@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r9.ebuild,v 1.16 2013/07/24 03:21:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r9.ebuild,v 1.17 2015/01/29 17:58:23 mgorny Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs autotools flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
-IUSE="X debug mmx opengl static-libs"
+IUSE="X debug cpu_flags_x86_mmx opengl static-libs"
 
 DEPEND=">=media-libs/libsdl-1.2.0
 	opengl? (
@@ -62,7 +62,7 @@ src_configure() {
 		$(use_enable debug assertions) \
 		$(use_with X x) \
 		$(use_enable opengl opengl-player) \
-		$(use_enable mmx)
+		$(use_enable cpu_flags_x86_mmx mmx)
 }
 
 src_install() {

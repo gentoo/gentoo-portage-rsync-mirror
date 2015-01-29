@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplayfp/libsidplayfp-1.1.0.ebuild,v 1.4 2014/01/28 14:06:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplayfp/libsidplayfp-1.1.0.ebuild,v 1.5 2015/01/29 17:42:48 mgorny Exp $
 
 EAPI=5
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sidplay-residfp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa x86"
-IUSE="mmx static-libs"
+IUSE="cpu_flags_x86_mmx static-libs"
 
 DOCS=( AUTHORS NEWS README TODO )
 
@@ -24,7 +24,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(use_enable static-libs static) \
-		$(use_enable mmx)
+		$(use_enable cpu_flags_x86_mmx mmx)
 }
 
 src_install() {

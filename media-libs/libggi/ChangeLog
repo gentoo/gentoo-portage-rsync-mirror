@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.55 2012/05/09 13:25:31 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.56 2015/01/29 17:37:56 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> libggi-2.2.2.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> libggi-2.2.2.ebuild:
   keyword ~amd64-fbsd

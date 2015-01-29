@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.3 2015/01/02 09:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.4 2015/01/29 17:52:51 mgorny Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="doc jbig jpeg jpeg2k png rle sse2 static-libs svga tiff X xml zlib"
+IUSE="doc jbig jpeg jpeg2k png rle cpu_flags_x86_sse2 static-libs svga tiff X xml zlib"
 
 RDEPEND="jbig? ( media-libs/jbigkit )
 	jpeg? ( virtual/jpeg:0 )
@@ -131,7 +131,7 @@ src_configure() {
 	STATICLIB_TOO = $(usex static-libs Y N)
 
 	# The var is called SSE, but the code is actually SSE2.
-	WANT_SSE = $(usex sse2 Y N)
+	WANT_SSE = $(usex cpu_flags_x86_sse2 Y N)
 
 	# Gentoo build options
 	TIFFLIB = $(netpbm_config tiff)

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.112 2014/08/21 09:58:36 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.113 2015/01/29 17:51:44 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> mlt-0.8.2.ebuild,
+  mlt-0.8.8.ebuild, mlt-0.9.0.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   21 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mlt-0.9.0.ebuild:
   Stable for amd64, wrt bug #517978

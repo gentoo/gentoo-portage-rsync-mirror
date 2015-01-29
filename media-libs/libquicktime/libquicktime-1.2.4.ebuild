@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4.ebuild,v 1.12 2013/08/06 22:32:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4.ebuild,v 1.13 2015/01/29 17:40:48 mgorny Exp $
 
 EAPI=4
 inherit libtool eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="aac alsa doc dv encode ffmpeg gtk jpeg lame mmx opengl png schroedinger static-libs vorbis X x264"
+IUSE="aac alsa doc dv encode ffmpeg gtk jpeg lame cpu_flags_x86_mmx opengl png schroedinger static-libs vorbis X x264"
 
 RDEPEND="virtual/libintl
 	aac? (
@@ -60,7 +60,7 @@ src_configure() {
 	econf \
 		--enable-gpl \
 		$(use_enable static-libs static) \
-		$(use_enable mmx asm) \
+		$(use_enable cpu_flags_x86_mmx asm) \
 		$(use_with doc doxygen) \
 		$(use vorbis || echo --without-vorbis) \
 		$(use_with lame) \

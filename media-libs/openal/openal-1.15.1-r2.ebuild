@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r2.ebuild,v 1.11 2014/10/13 07:25:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r2.ebuild,v 1.12 2015/01/29 17:54:16 mgorny Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -14,7 +14,7 @@ SRC_URI="http://kcat.strangesoft.net/openal-releases/${MY_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
-IUSE="alsa coreaudio debug neon oss portaudio pulseaudio sse"
+IUSE="alsa coreaudio debug neon oss portaudio pulseaudio cpu_flags_x86_sse"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121-r1[${MULTILIB_USEDEP}] )
@@ -40,7 +40,7 @@ src_configure() {
 			$(cmake-utils_use oss)
 			$(cmake-utils_use portaudio)
 			$(cmake-utils_use pulseaudio)
-			$(cmake-utils_use sse)
+			$(cmake-utils_use cpu_flags_x86_sse sse)
 			-DEXAMPLES=OFF
 		)
 

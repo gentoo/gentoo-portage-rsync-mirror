@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-gfx/sdl2-gfx-1.0.1.ebuild,v 1.1 2014/08/24 23:33:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-gfx/sdl2-gfx-1.0.1.ebuild,v 1.2 2015/01/29 17:55:36 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -13,7 +13,7 @@ SRC_URI="http://www.ferzkopp.net/Software/SDL2_gfx/${MY_P}.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc mmx static-libs"
+IUSE="doc cpu_flags_x86_mmx static-libs"
 
 DEPEND=">=media-libs/libsdl2-2.0.1-r1[video,${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}"
@@ -30,7 +30,7 @@ src_prepare() {
 
 multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
-		$(use_enable mmx) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
 		$(use_enable static-libs static)
 }
 

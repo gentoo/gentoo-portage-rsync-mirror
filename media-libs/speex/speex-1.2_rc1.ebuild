@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1.ebuild,v 1.12 2014/08/10 21:12:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.2_rc1.ebuild,v 1.13 2015/01/29 18:00:48 mgorny Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -14,7 +14,7 @@ SRC_URI="http://downloads.xiph.org/releases/speex/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="ogg sse static-libs"
+IUSE="ogg cpu_flags_x86_sse static-libs"
 
 RDEPEND="ogg? ( media-libs/libogg )"
 DEPEND="${RDEPEND}
@@ -38,7 +38,7 @@ src_configure() {
 	econf \
 		$(use_enable static-libs static) \
 		--disable-dependency-tracking \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_enable ogg)
 }
 

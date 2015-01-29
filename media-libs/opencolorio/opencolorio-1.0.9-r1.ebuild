@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.9-r1.ebuild,v 1.2 2014/05/01 08:00:52 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.9-r1.ebuild,v 1.3 2015/01/29 17:54:18 mgorny Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="https://github.com/imageworks/OpenColorIO/archive/v${PV}.tar.gz \
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc opengl pdf python sse2 test"
+IUSE="doc opengl pdf python cpu_flags_x86_sse2 test"
 
 RDEPEND="opengl? (
 		media-libs/lcms:2
@@ -81,7 +81,7 @@ src_configure() {
 		$(cmake-utils_use opengl OCIO_BUILD_APPS)
 		$(cmake-utils_use pdf OCIO_BUILD_PDF_DOCS)
 		$(cmake-utils_use python OCIO_BUILD_PYGLUE)
-		$(cmake-utils_use sse2 OCIO_USE_SSE)
+		$(cmake-utils_use cpu_flags_x86_sse2 OCIO_USE_SSE)
 		$(cmake-utils_use test OCIO_BUILD_TESTS)
 	)
 	cmake-utils_src_configure

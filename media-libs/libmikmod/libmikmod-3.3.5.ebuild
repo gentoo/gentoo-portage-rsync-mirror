@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.5.ebuild,v 1.8 2014/08/13 09:21:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.5.ebuild,v 1.9 2015/01/29 17:39:01 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mikmod/${P}.tar.gz"
 LICENSE="LGPL-2+ LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="+alsa altivec coreaudio debug nas openal oss pulseaudio sse2 static-libs +threads"
+IUSE="+alsa altivec coreaudio debug nas openal oss pulseaudio cpu_flags_x86_sse2 static-libs +threads"
 
 REQUIRED_USE="|| ( alsa oss coreaudio )"
 
@@ -32,7 +32,7 @@ multilib_src_configure() {
 		mysimd="$(use_enable altivec simd)"
 	fi
 	if use amd64 || use x86 || use x86-fbsd || use x86-freebsd || use amd64-linux || use x86-linux || use x86-macos; then
-		mysimd="$(use_enable sse2 simd)"
+		mysimd="$(use_enable cpu_flags_x86_sse2 simd)"
 	fi
 
 	# sdl, sdl2: missing multilib supported ebuilds, temporarily disabled

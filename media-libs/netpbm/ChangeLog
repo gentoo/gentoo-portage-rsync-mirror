@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.277 2015/01/02 09:13:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.278 2015/01/29 17:52:51 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> netpbm-10.66.00.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   02 Jan 2015; Mike Frysinger <vapier@gentoo.org> netpbm-10.66.00.ebuild:
   Do not run jbig-roundtrip test when USE=-jbig #532350 by eroen.

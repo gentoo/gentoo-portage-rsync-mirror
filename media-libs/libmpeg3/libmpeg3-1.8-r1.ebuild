@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.8-r1.ebuild,v 1.10 2014/08/03 18:33:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.8-r1.ebuild,v 1.11 2015/01/29 17:39:36 mgorny Exp $
 
 EAPI=5
 
@@ -14,13 +14,13 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sh sparc x86"
-IUSE="mmx"
+IUSE="cpu_flags_x86_mmx"
 
 RDEPEND="sys-libs/zlib
 	virtual/jpeg
 	media-libs/a52dec"
 DEPEND="${RDEPEND}
-	mmx? ( dev-lang/nasm )"
+	cpu_flags_x86_mmx? ( dev-lang/nasm )"
 
 src_prepare() {
 	epatch "${WORKDIR}"/${PN}-1.7-mpeg3split.patch
@@ -42,7 +42,7 @@ multilib_src_configure() {
 	#  Stubs for deCSS which can't be distributed in source form
 
 	ECONF_SOURCE="${S}" econf \
-		$(use_enable mmx) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
 		--disable-css
 }
 

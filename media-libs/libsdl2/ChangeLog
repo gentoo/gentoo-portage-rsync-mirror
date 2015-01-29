@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.30 2015/01/22 08:22:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.31 2015/01/29 17:42:14 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> libsdl2-2.0.3-r200.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -libsdl2-2.0.3-r100.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.15 2013/10/29 16:48:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.16 2015/01/29 17:35:22 mgorny Exp $
 
 EAPI=5
 inherit eutils autotools
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="examples gif jpeg mmx nls png static-libs svg tiff truetype"
+IUSE="examples gif jpeg cpu_flags_x86_mmx nls png static-libs svg tiff truetype"
 
 RDEPEND="
 	x11-libs/libSM
@@ -61,7 +61,7 @@ src_configure() {
 	econf \
 		$(use_enable static-libs staticlibs) \
 		$(use_enable nls i18n) \
-		$(use_enable mmx mmx-optimization) \
+		$(use_enable cpu_flags_x86_mmx mmx-optimization) \
 		$(use_with png) \
 		$(use_with jpeg) \
 		$(use_with gif) \

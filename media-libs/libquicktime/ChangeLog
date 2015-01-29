@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.199 2015/01/18 19:53:42 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.200 2015/01/29 17:40:48 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> libquicktime-1.2.4-r1.ebuild,
+  libquicktime-1.2.4.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   18 Jan 2015; Ian Whyman <thev00d00@gentoo.org> libquicktime-1.2.4-r1.ebuild:
   Extend ffmpeg sed to a couple more files, fixes #509300

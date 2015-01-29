@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libfame
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.66 2014/01/26 12:14:55 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.67 2015/01/29 17:37:03 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> libfame-0.9.1-r1.ebuild,
+  libfame-0.9.1-r2.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libfame-0.9.1-r2.ebuild:
   Stable for sparc, wrt bug #495730

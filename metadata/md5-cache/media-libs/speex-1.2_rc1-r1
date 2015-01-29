@@ -3,11 +3,11 @@ DEPEND=ogg? ( media-libs/libogg:= ) virtual/pkgconfig !<sys-devel/gettext-0.18.1
 DESCRIPTION=Audio compression format designed for speech
 EAPI=5
 HOMEPAGE=http://www.speex.org/
-IUSE=ogg sse static-libs
+IUSE=ogg cpu_flags_x86_sse static-libs
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris
 LICENSE=BSD
 RDEPEND=ogg? ( media-libs/libogg:= )
 SLOT=0
 SRC_URI=http://downloads.xiph.org/releases/speex/speex-1.2rc1.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=df1e457ba35a0211ab2b0e4b5c080794
+_md5_=f961763325fb8552edcf8095e0f26392

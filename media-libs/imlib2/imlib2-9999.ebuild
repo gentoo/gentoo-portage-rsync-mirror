@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.21 2014/07/03 20:26:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.22 2015/01/29 17:33:53 mgorny Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ inherit enlightenment toolchain-funcs multilib-minimal
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/"
 
-IUSE="bzip2 gif jpeg mmx mp3 png static-libs tiff X zlib"
+IUSE="bzip2 gif jpeg cpu_flags_x86_mmx mp3 png static-libs tiff X zlib"
 
 RDEPEND="=media-libs/freetype-2*[${MULTILIB_USEDEP}]
 	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
@@ -40,9 +40,9 @@ DEPEND="${RDEPEND}
 multilib_src_configure() {
 	# imlib2 has diff configure options for x86/amd64 mmx
 	if [[ $(tc-arch) == amd64 ]]; then
-		E_ECONF+=( $(use_enable mmx amd64) --disable-mmx )
+		E_ECONF+=( $(use_enable cpu_flags_x86_mmx amd64) --disable-mmx )
 	else
-		E_ECONF+=( --disable-amd64 $(use_enable mmx) )
+		E_ECONF+=( --disable-amd64 $(use_enable cpu_flags_x86_mmx mmx) )
 	fi
 
 	[[ $(gcc-major-version) -ge 4 ]] && E_ECONF+=( --enable-visibility-hiding )

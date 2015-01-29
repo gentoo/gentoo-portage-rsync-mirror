@@ -3729,9 +3729,6 @@ media-libs/libsdl2:sound - Control audio support (disable at your own risk)
 media-libs/libsdl2:tslib - Build with tslib support for touchscreen devices
 media-libs/libsdl2:video - Control video support (disable at your own risk)
 media-libs/libvpx:postproc - Enable additional post processing filters
-media-libs/libvpx:sse3 - Enable optimization for SSE3 capable chips
-media-libs/libvpx:sse4_1 - Enable optimization for SSE4_1 capable processors (Intel Core 2 Penryn and later chips)
-media-libs/libvpx:ssse3 - faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-libs/libwebp:experimental - Build with -DWEBP_EXPERIMENTAL_FEATURES
 media-libs/libwebp:swap-16bit-csp - Enable byte swapping for 16 bit colorspace
 media-libs/lilv:dyn-manifest - Add LV2 Dynamic Manifest support. See http://lv2plug.in/ns/ext/dynmanifest/

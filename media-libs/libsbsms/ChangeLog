@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsbsms
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/ChangeLog,v 1.9 2014/10/10 04:29:01 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsbsms/ChangeLog,v 1.10 2015/01/29 17:41:44 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> libsbsms-2.0.0.ebuild,
+  libsbsms-2.0.1.ebuild, libsbsms-2.0.2.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *libsbsms-2.0.2 (10 Oct 2014)
 
