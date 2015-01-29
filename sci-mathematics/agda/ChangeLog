@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/agda
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.28 2014/12/14 10:24:58 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.29 2015/01/29 03:38:57 patrick Exp $
+
+  29 Jan 2015; Patrick Lauer <patrick@gentoo.org> -agda-2.3.0.1-r1.ebuild,
+  -agda-2.3.0.1.ebuild, -agda-2.3.2-r2.ebuild, -agda-2.3.2.ebuild:
+  Drop old with now unsatisfied dep on dev-haskell/hashtables
 
 *agda-2.4.2.2-r1 (14 Dec 2014)
 
