@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libechonest
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/ChangeLog,v 1.30 2014/04/08 16:19:15 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/ChangeLog,v 1.31 2015/01/29 22:10:39 johu Exp $
+
+*libechonest-2.3.0 (29 Jan 2015)
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org> +libechonest-2.3.0.ebuild:
+  Version bump.
 
   08 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
   libechonest-2.2.0-r1.ebuild:

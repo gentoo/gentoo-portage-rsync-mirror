@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9715 2015/01/29 11:31:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9716 2015/01/29 22:10:18 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> desc/cpu_flags_x86.desc:
+  Fix USE=mmxext description. Thanks to Doug Freed for figuring out what it
+  actually is.
 
   29 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
   Mask live dev-util/radare2 ebuild.
