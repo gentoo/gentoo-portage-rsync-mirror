@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/avidemux-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.25 2015/01/06 19:39:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.26 2015/01/29 17:24:24 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> avidemux-core-2.6.2-r1.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   06 Jan 2015; Manuel Rüger <mrueg@gentoo.org> avidemux-core-2.6.5.ebuild,
   avidemux-core-2.6.7.ebuild, avidemux-core-2.6.8.ebuild,

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.4.ebuild,v 1.4 2014/08/10 21:07:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.4.ebuild,v 1.5 2015/01/29 17:25:10 mgorny Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${PV}/${MY_P}.tar.gz"
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
 KEYWORDS="~amd64 ~x86"
-IUSE="aften a52 alsa amr debug dts faac faad fontconfig fribidi jack lame libsamplerate mmx opengl oss qt4 vorbis truetype twolame xvid x264 vpx"
+IUSE="aften a52 alsa amr debug dts faac faad fontconfig fribidi jack lame libsamplerate cpu_flags_x86_mmx opengl oss qt4 vorbis truetype twolame xvid x264 vpx"
 
 DEPEND="
 	=media-video/avidemux-${PV}[opengl?,qt4?]

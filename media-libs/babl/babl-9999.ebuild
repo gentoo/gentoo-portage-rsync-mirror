@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-9999.ebuild,v 1.2 2013/04/30 20:37:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-9999.ebuild,v 1.3 2015/01/29 17:27:42 mgorny Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gegl.org/babl/"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="altivec +introspection sse mmx vala"
+IUSE="altivec +introspection cpu_flags_x86_sse cpu_flags_x86_mmx vala"
 
 RDEPEND="introspection? ( >=dev-libs/gobject-introspection-0.10 )"
 DEPEND="${RDEPEND}
@@ -43,8 +43,8 @@ src_configure() {
 		--disable-maintainer-mode \
 		$(use_enable altivec) \
 		$(use_enable introspection) \
-		$(use_enable mmx) \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_with vala)
 }
 

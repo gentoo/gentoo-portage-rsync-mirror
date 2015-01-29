@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r2.ebuild,v 1.2 2015/01/02 14:37:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r2.ebuild,v 1.3 2015/01/29 17:28:34 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/openil/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~mips ppc ~ppc64 x86"
-IUSE="allegro gif glut jpeg jpeg2k mng nvtt openexr opengl png sdl sse sse2 sse3 static-libs tiff xpm X"
+IUSE="allegro gif glut jpeg jpeg2k mng nvtt openexr opengl png sdl cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 static-libs tiff xpm X"
 
 RDEPEND="allegro? ( media-libs/allegro:0 )
 	gif? ( media-libs/giflib )
@@ -48,9 +48,9 @@ src_configure() {
 		--disable-lcms \
 		--enable-ILU \
 		--enable-ILUT \
-		$(use_enable sse) \
-		$(use_enable sse2) \
-		$(use_enable sse3) \
+		$(use_enable cpu_flags_x86_sse sse) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
+		$(use_enable cpu_flags_x86_sse3 sse3) \
 		$(use_enable openexr exr) \
 		$(use_enable gif) \
 		$(use_enable jpeg) \

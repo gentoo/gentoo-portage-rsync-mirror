@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/luminance-hdr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.31 2014/08/10 21:15:38 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.32 2015/01/29 17:21:03 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> luminance-hdr-2.3.0.ebuild,
+  luminance-hdr-2.3.1.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   luminance-hdr-2.3.0.ebuild, luminance-hdr-2.3.1.ebuild:

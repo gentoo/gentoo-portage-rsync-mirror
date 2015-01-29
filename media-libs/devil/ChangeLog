@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/devil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.64 2015/01/22 08:28:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.65 2015/01/29 17:28:34 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> devil-1.7.8-r2.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -devil-1.7.8-r1.ebuild:
   old

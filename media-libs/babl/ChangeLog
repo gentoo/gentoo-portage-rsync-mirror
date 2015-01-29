@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/babl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.62 2014/04/23 21:13:40 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.63 2015/01/29 17:27:42 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> babl-0.1.10-r1.ebuild,
+  babl-9999.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   23 Apr 2014; Pacho Ramos <pacho@gentoo.org> -babl-0.1.10.ebuild,
   -babl-0.1.4-r2.ebuild, -babl-0.1.4.ebuild, -babl-0.1.6.ebuild,

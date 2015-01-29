@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngquant/pngquant-1.8.3.ebuild,v 1.3 2013/04/08 14:49:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngquant/pngquant-1.8.3.ebuild,v 1.4 2015/01/29 17:23:15 mgorny Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://pngquant.org/${P}-src.tar.bz2"
 LICENSE="HPND rwpng"
 SLOT=0
 KEYWORDS="~amd64 ~x86"
-IUSE="debug openmp sse2"
+IUSE="debug openmp cpu_flags_x86_sse2"
 
 RDEPEND="media-libs/libpng:0=
 	sys-libs/zlib:="
@@ -31,7 +31,7 @@ src_prepare() {
 
 src_compile() {
 	use debug || append-cflags -DNDEBUG
-	use sse2 && append-cflags -DUSE_SSE=1
+	use cpu_flags_x86_sse2 && append-cflags -DUSE_SSE=1
 
 	local openmp
 	if use openmp && tc-has-openmp; then

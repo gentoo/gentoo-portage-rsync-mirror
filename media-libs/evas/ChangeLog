@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/evas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.31 2014/03/11 09:17:31 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/ChangeLog,v 1.32 2015/01/29 17:30:44 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> evas-1.7.8.ebuild,
+  evas-1.7.9.ebuild, evas-9999.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   11 Mar 2014; Lars Wendler <polynomial-c@gentoo.org> evas-1.7.9.ebuild:
   Fixed compilation with >=freetype-2.5.1 (bug #493586).

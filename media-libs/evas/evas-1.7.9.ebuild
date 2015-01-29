@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9.ebuild,v 1.2 2014/03/11 09:17:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9.ebuild,v 1.3 2015/01/29 17:30:44 mgorny Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ DESCRIPTION="hardware-accelerated retained canvas API"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Evas"
 
 LICENSE="BSD-2"
-IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 static-libs tga tiff wayland X xcb xpm"
+IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg cpu_flags_x86_mmx opengl +png +ppm +psd cpu_flags_x86_sse cpu_flags_x86_sse3 static-libs tga tiff wayland X xcb xpm"
 
 RDEPEND=">=dev-libs/eina-1.7.9
 	>=media-libs/freetype-2.3.9
@@ -113,12 +113,12 @@ src_configure() {
 		$(use_enable gif image-loader-gif)
 		$(use_enable ico image-loader-ico)
 		$(use_enable jpeg image-loader-jpeg)
-		$(use_enable mmx cpu-mmx)
+		$(use_enable cpu_flags_x86_mmx cpu-mmx)
 		$(use_enable png image-loader-png)
 		$(use_enable ppm image-loader-pmaps)
 		$(use_enable psd image-loader-psd)
-		$(use_enable sse cpu-sse)
-		$(use_enable sse3 cpu-sse3)
+		$(use_enable cpu_flags_x86_sse cpu-sse)
+		$(use_enable cpu_flags_x86_sse3 cpu-sse3)
 		--disable-image-loader-svg
 		$(use_enable tga image-loader-tga)
 		$(use_enable tiff image-loader-tiff)

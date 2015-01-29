@@ -3,9 +3,9 @@ DEPEND=introspection? ( >=dev-libs/gobject-introspection-0.10 ) >=sys-devel/libt
 DESCRIPTION=A dynamic, any to any, pixel format conversion library
 EAPI=4
 HOMEPAGE=http://www.gegl.org/babl/
-IUSE=altivec +introspection sse mmx vala
+IUSE=altivec +introspection cpu_flags_x86_sse cpu_flags_x86_mmx vala
 LICENSE=LGPL-3
 RDEPEND=introspection? ( >=dev-libs/gobject-introspection-0.10 )
 SLOT=0
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vala	a41415fe361172827ed11b6a32ee38fb
-_md5_=a56ec76f8e807004afd96b4282a06f34
+_md5_=2c2b3131b3e5c80ea735b9deb96799dd

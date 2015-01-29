@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.0.ebuild,v 1.7 2014/08/10 21:15:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.0.ebuild,v 1.8 2015/01/29 17:21:03 mgorny Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 LANGS=" cs de es fi fr hi hu id it pl ro ru sk tr zh"
-IUSE="sse2 ${LANGS// / linguas_} openmp"
+IUSE="cpu_flags_x86_sse2 ${LANGS// / linguas_} openmp"
 
 DEPEND="
 	>=media-gfx/exiv2-0.14
@@ -38,7 +38,7 @@ DOCS=( AUTHORS BUGS Changelog README TODO )
 S=${WORKDIR}/${MY_P}
 
 pkg_pretend() {
-	if use sse2 ; then
+	if use cpu_flags_x86_sse2 ; then
 		append-flags -msse2
 	else
 		eerror "This package requires a CPU supporting the SSE2 instruction set."

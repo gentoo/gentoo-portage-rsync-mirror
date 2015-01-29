@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72b-r2.ebuild,v 1.1 2014/12/22 15:46:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.72b-r2.ebuild,v 1.2 2015/01/29 17:14:08 mgorny Exp $
 
 ## BUNDLED-DEPS:
 # extern/cuew
@@ -49,7 +49,7 @@ fi
 SLOT="0"
 LICENSE="|| ( GPL-2 BL )"
 KEYWORDS="~amd64 ~x86"
-IUSE="+boost +bullet collada colorio cycles +dds debug doc +elbeem ffmpeg fftw +game-engine jack jpeg2k ndof nls openal openimageio +opennl openmp +openexr player redcode sdl sndfile sse sse2 tiff"
+IUSE="+boost +bullet collada colorio cycles +dds debug doc +elbeem ffmpeg fftw +game-engine jack jpeg2k ndof nls openal openimageio +opennl openmp +openexr player redcode sdl sndfile cpu_flags_x86_sse cpu_flags_x86_sse2 tiff"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	player? ( game-engine )
 	redcode? ( jpeg2k ffmpeg )
@@ -185,8 +185,8 @@ src_configure() {
 		$(cmake-utils_use_with redcode IMAGE_REDCODE)
 		$(cmake-utils_use_with sdl SDL)
 		$(cmake-utils_use_with sndfile CODEC_SNDFILE)
-		$(cmake-utils_use_with sse RAYOPTIMIZATION)
-		$(cmake-utils_use_with sse2 SSE2)
+		$(cmake-utils_use_with cpu_flags_x86_sse RAYOPTIMIZATION)
+		$(cmake-utils_use_with cpu_flags_x86_sse2 SSE2)
 		$(cmake-utils_use_with bullet BULLET)
 		$(cmake-utils_use_with tiff IMAGE_TIFF)
 		$(cmake-utils_use_with colorio OPENCOLORIO)

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.54 2014/09/20 00:24:16 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.55 2015/01/29 17:21:06 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -18,7 +18,7 @@ SLOT="2"
 KEYWORDS=""
 
 LANGS="am ar ast az be bg br ca ca@valencia cs csb da de dz el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko lt lv mk ml ms my nb nds ne nl nn oc pa pl pt pt_BR ro ru rw si sk sl sr sr@latin sv ta te th tr tt uk vi xh yi zh_CN zh_HK zh_TW"
-IUSE="alsa aalib altivec aqua bzip2 curl dbus debug doc exif gnome openexr postscript jpeg jpeg2k lcms mmx mng pdf png python smp sse svg tiff udev webkit wmf xpm"
+IUSE="alsa aalib altivec aqua bzip2 curl dbus debug doc exif gnome openexr postscript jpeg jpeg2k lcms cpu_flags_x86_mmx mng pdf png python smp cpu_flags_x86_sse svg tiff udev webkit wmf xpm"
 
 for lang in ${LANGS}; do
 	IUSE+=" linguas_${lang}"
@@ -96,12 +96,12 @@ pkg_setup() {
 		$(use_with webkit) \
 		$(use_with jpeg2k libjasper) \
 		$(use_with postscript gs) \
-		$(use_enable mmx) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
 		$(use_with mng libmng) \
 		$(use_with pdf poppler) \
 		$(use_enable python) \
 		$(use_enable smp mp) \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_with svg librsvg) \
 		$(use_with tiff libtiff) \
 		$(use_with udev gudev) \
