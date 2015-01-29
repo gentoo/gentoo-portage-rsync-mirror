@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r2.ebuild,v 1.12 2013/09/26 17:32:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r2.ebuild,v 1.13 2015/01/29 22:57:00 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.fftw.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="3.0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="altivec avx doc fma fortran mpi neon openmp quad sse sse2 static-libs test threads zbus"
+IUSE="altivec cpu_flags_x86_avx doc cpu_flags_x86_fma3 cpu_flags_x86_fma4 fortran mpi neon openmp quad cpu_flags_x86_sse cpu_flags_x86_sse2 static-libs test threads zbus"
 
 # there is no abi_x86_32 port of virtual/mpi right now
 REQUIRED_USE="amd64? ( abi_x86_32? ( !mpi !quad ) )"
@@ -70,7 +70,7 @@ src_configure() {
 		local x=${MULTIBUILD_VARIANT}
 
 		myeconfargs=(
-			$(use_enable fma)
+			$(use_enable "cpu_flags_x86_fma$(usex cpu_flags_x86_fma3 3 4)" fma)
 			$(use_enable fortran)
 			$(use_enable zbus mips-zbus-timer)
 			$(use_enable threads)
@@ -81,15 +81,15 @@ src_configure() {
 			myeconfargs+=(
 				--enable-single
 				$(use_enable altivec)
-				$(use_enable avx)
-				$(use_enable sse)
+				$(use_enable cpu_flags_x86_avx avx)
+				$(use_enable cpu_flags_x86_sse sse)
 				$(use_enable mpi)
 				$(use_enable neon)
 			)
 		elif [[ $x == double ]]; then
 			myeconfargs+=(
-				$(use_enable avx)
-				$(use_enable sse2)
+				$(use_enable cpu_flags_x86_avx avx)
+				$(use_enable cpu_flags_x86_sse2 sse2)
 				$(use_enable mpi)
 			)
 		elif [[ $x == longdouble ]]; then

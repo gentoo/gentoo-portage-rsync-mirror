@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.29 2015/01/29 00:27:02 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.30 2015/01/29 22:44:23 johu Exp $
 
 EAPI=5
 
@@ -25,17 +25,11 @@ IUSE="debug +hatchet jabber kde qt5 telepathy"
 
 REQUIRED_USE="telepathy? ( kde )"
 
-# TODO
-# qt5 use flag needs some work:
-# - deps with missing qt4/qt5 use flags
-# - does not build with in-tree only deps
 DEPEND="
 	dev-cpp/lucene++
 	dev-cpp/sparsehash
 	dev-libs/boost
 	dev-libs/quazip
-	>=media-libs/libechonest-2.2.0:=
-	media-libs/liblastfm
 	>=media-libs/taglib-1.8.0
 	>=net-libs/gnutls-3.2
 	x11-libs/libX11
@@ -54,6 +48,8 @@ DEPEND="
 		dev-qt/qtsvg:4
 		dev-qt/qtwebkit:4
 		media-libs/phonon[qt4]
+		>=media-libs/libechonest-2.3.0:=[qt4]
+		media-libs/liblastfm[qt4]
 		telepathy? ( net-libs/telepathy-qt[qt4] )
 	)
 	qt5? (
@@ -66,6 +62,8 @@ DEPEND="
 		dev-qt/qtwidgets:5
 		kde-frameworks/attica:5
 		media-libs/phonon[qt5]
+		>=media-libs/libechonest-2.3.0:=[qt5]
+		media-libs/liblastfm[qt5]
 		telepathy? ( net-libs/telepathy-qt[qt5] )
 	)
 "
