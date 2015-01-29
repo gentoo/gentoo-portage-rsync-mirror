@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ptlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.55 2014/08/04 18:46:43 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.56 2015/01/29 13:18:00 k_f Exp $
+
+  29 Jan 2015; Kristian Fiskerstrand <k_f@gentoo.org> -ptlib-2.10.9.ebuild,
+  -ptlib-2.6.7-r1.ebuild:
+  Security cleanup c.f bug #461842
 
   04 Aug 2014; Raúl Porcel <armin76@gentoo.org> ptlib-2.10.10.ebuild,
   ptlib-2.10.11.ebuild, +files/ptlib-2.10.10-respect_cflags_cxxflags.patch:
