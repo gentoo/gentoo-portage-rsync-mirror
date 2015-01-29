@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.5.1.ebuild,v 1.3 2014/11/13 10:03:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.5.1.ebuild,v 1.4 2015/01/29 01:20:50 johu Exp $
 
 EAPI=5
 
@@ -22,10 +22,10 @@ IUSE="+crypt debug"
 DEPEND="
 	$(add_kdebase_dep kdepimlibs)
 	media-libs/phonon[qt4]
-	crypt? ( app-crypt/qca:2 )
+	crypt? ( app-crypt/qca:2[qt4(+)] )
 "
 RDEPEND="${DEPEND}
-	crypt? ( app-crypt/qca-ossl:2 )
+	crypt? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
 "
 
 src_configure() {

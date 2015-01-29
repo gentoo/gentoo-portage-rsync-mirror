@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.15.ebuild,v 1.4 2014/07/04 20:10:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.15.ebuild,v 1.5 2015/01/29 01:08:31 johu Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RESTRICT="test"
 RDEPEND="app-arch/unzip
 	>=dev-qt/qtgui-4.7:4[qt3support]
 	>=dev-qt/qt3support-4.7:4
-	>=app-crypt/qca-2.0.2:2
+	>=app-crypt/qca-2.0.2:2[qt4(+)]
 	x11-libs/libX11
 	dbus? ( >=dev-qt/qtdbus-4.7:4 )
 	spell? ( >=app-text/enchant-1.3.0 )
@@ -37,10 +37,10 @@ DEPEND="${RDEPEND}
 	sys-devel/qconf
 	doc? ( app-doc/doxygen )"
 
-PDEPEND="crypt? ( app-crypt/qca-gnupg:2 )
+PDEPEND="crypt? ( || ( app-crypt/qca-gnupg:2 app-crypt/qca:2[gpg] ) )
 	jingle? ( net-im/psimedia
-		app-crypt/qca-ossl:2 )
-	ssl? ( app-crypt/qca-ossl:2 )"
+		|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
+	ssl? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )"
 
 DOC_CONTENTS='Psi+ support(USE="extras") was removed from ebuild since 0.15'
 FORCE_PRINT_ELOG=1

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1-r1.ebuild,v 1.2 2014/12/31 13:35:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1-r1.ebuild,v 1.3 2015/01/29 01:18:10 johu Exp $
 
 EAPI=5
 
@@ -33,19 +33,19 @@ CDEPEND="
 	aspell? ( app-text/aspell )
 	awn? ( >=dev-qt/qtdbus-${QT_PV} )
 	ayatana? ( >=dev-libs/libindicate-qt-0.2.2 )
-	crypt? ( app-crypt/qca:2 )
+	crypt? ( app-crypt/qca:2[qt4(+)] )
 	dbus? ( >=dev-qt/qtdbus-${QT_PV} )
 	debug? ( >=dev-qt/qtdeclarative-${QT_PV} )
 	histman? ( >=dev-qt/qtsql-${QT_PV} )
 	hunspell? ( app-text/hunspell )
 	jabber? (
-		app-crypt/qca:2
+		app-crypt/qca:2[qt4(+)]
 		>=net-libs/jreen-1.1.0
 	)
 	kde? ( kde-base/kdelibs:4 )
 	kinetic? ( >=dev-qt/qtdeclarative-${QT_PV} )
 	multimedia? ( >=dev-qt/qtmultimedia-${QT_PV} )
-	oscar? ( app-crypt/qca:2 )
+	oscar? ( app-crypt/qca:2[qt4(+)] )
 	otr? (
 		>=net-libs/libotr-3.2.0
 		<net-libs/libotr-4.0.0
@@ -70,8 +70,8 @@ DEPEND="${CDEPEND}
 	kde? ( dev-util/automoc )
 "
 RDEPEND="${CDEPEND}
-	jabber? ( app-crypt/qca-gnupg:2 )
-	oscar? ( app-crypt/qca-ossl:2 )
+	jabber? ( || ( app-crypt/qca-gnupg:2 app-crypt/qca:2[gpg] ) )
+	oscar? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
 "
 
 DOCS=( AUTHORS ChangeLog )

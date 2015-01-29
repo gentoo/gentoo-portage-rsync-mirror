@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.21 2014/07/04 20:10:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.22 2015/01/29 01:08:31 johu Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	>=dev-qt/qtgui-4.7:4
-	>=app-crypt/qca-2.0.2:2
+	>=app-crypt/qca-2.0.2:2[qt4(+)]
 	x11-libs/libX11
 	dbus? ( >=dev-qt/qtdbus-4.7:4 )
 	whiteboarding? ( dev-qt/qtsvg:4 )
@@ -54,12 +54,12 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 PDEPEND="
-	crypt? ( app-crypt/qca-gnupg:2 )
+	crypt? ( || ( app-crypt/qca-gnupg:2 app-crypt/qca:2[gpg] ) )
 	jingle? (
 		net-im/psimedia
-		app-crypt/qca-ossl:2
+		|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
 	)
-	ssl? ( app-crypt/qca-ossl:2 )
+	ssl? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
 "
 RESTRICT="test"
 

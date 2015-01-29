@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.5 2014/12/31 13:35:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.6 2015/01/29 01:18:10 johu Exp $
 
 EAPI=5
 
@@ -42,19 +42,19 @@ CDEPEND="
 
 	telepathy? ( >=net-libs/telepathy-qt-0.3 )
 	jabber? (
-		app-crypt/qca:2
+		app-crypt/qca:2[qt4(+)]
 		>=net-libs/jreen-1.2.0
 	)
 	jingle? ( dev-qt/qt-mobility[multimedia] )
-	oscar? ( app-crypt/qca:2 )
+	oscar? ( app-crypt/qca:2[qt4(+)] )
 	purple? ( net-im/pidgin )
 	vkontakte? ( >=dev-qt/qtwebkit-${QT_PV} )
 
 	aspell? ( app-text/aspell )
 	awn? ( >=dev-qt/qtdbus-${QT_PV} )
-	crypt? ( app-crypt/qca:2 )
+	crypt? ( app-crypt/qca:2[qt4(+)] )
 	dbus? ( >=dev-qt/qtdbus-${QT_PV} )
-	espionage? ( app-crypt/qca:2 )
+	espionage? ( app-crypt/qca:2[qt4(+)] )
 	histman? ( >=dev-qt/qtsql-${QT_PV} )
 	ayatana? ( >=dev-libs/libindicate-qt-0.2.2 )
 	hunspell? ( app-text/hunspell )
@@ -88,8 +88,8 @@ DEPEND="${CDEPEND}
 	kde? ( dev-util/automoc )
 "
 RDEPEND="${CDEPEND}
-	jabber? ( app-crypt/qca-gnupg:2 )
-	oscar? ( app-crypt/qca-ossl:2 )
+	jabber? ( || ( app-crypt/qca-gnupg:2 app-crypt/qca:2[gpg] ) )
+	oscar? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
 	|| ( kde-apps/oxygen-icons kde-base/oxygen-icons )
 "
 

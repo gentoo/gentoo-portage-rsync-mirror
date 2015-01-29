@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbdplus/libbdplus-9999.ebuild,v 1.2 2015/01/29 01:23:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbdplus/libbdplus-0.1.2.ebuild,v 1.1 2015/01/29 01:23:36 radhermit Exp $
 
 EAPI=5
 
