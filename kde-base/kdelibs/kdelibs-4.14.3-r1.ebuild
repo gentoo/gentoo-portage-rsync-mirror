@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.3-r1.ebuild,v 1.6 2015/01/28 22:13:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.3-r1.ebuild,v 1.7 2015/01/28 23:14:33 johu Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ COMMONDEPEND="
 		)
 	)
 	bzip2? ( app-arch/bzip2 )
-	crypt? ( app-crypt/qca:2 )
+	crypt? ( app-crypt/qca:2[qt4(+)] )
 	fam? ( virtual/fam )
 	jpeg2k? ( media-libs/jasper )
 	kerberos? ( virtual/krb5 )

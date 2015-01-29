@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.12.5-r2.ebuild,v 1.8 2015/01/28 22:13:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.12.5-r2.ebuild,v 1.9 2015/01/28 23:14:33 johu Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ REQUIRED_USE="
 RESTRICT="test"
 
 COMMONDEPEND="
-	app-crypt/qca:2
+	app-crypt/qca:2[qt4(+)]
 	>=app-misc/strigi-0.7.7
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets

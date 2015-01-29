@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/yatebts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.3 2014/07/27 21:44:56 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.4 2015/01/28 23:02:21 mgorny Exp $
+
+  28 Jan 2015; Michał Górny <mgorny@gentoo.org> yatebts-4.0.0.ebuild,
+  yatebts-9999.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   27 Jul 2014; Rick Farina <zerochaos@gentoo.org> yatebts-4.0.0.ebuild,
   yatebts-9999.ebuild:

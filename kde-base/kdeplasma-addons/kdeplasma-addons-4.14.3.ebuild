@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.14.3.ebuild,v 1.2 2014/12/11 13:05:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.14.3.ebuild,v 1.3 2015/01/28 23:25:42 johu Exp $
 
 EAPI=5
 
@@ -17,8 +17,7 @@ RESTRICT=test
 
 # krunner is only needed to generate dbus interface for lancelot
 COMMON_DEPEND="
-	app-crypt/qca:2
-	app-crypt/qca-ossl:2
+	app-crypt/qca:2[qt4(+)]
 	$(add_kdebase_dep kdelibs 'nepomuk?')
 	$(add_kdebase_dep krunner '' 4.11)
 	$(add_kdebase_dep plasma-workspace 'nepomuk?' 4.11)
@@ -39,6 +38,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-cpp/eigen:2
 "
 RDEPEND="${COMMON_DEPEND}
+	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
 "
 
 src_configure() {

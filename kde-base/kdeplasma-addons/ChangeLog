@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeplasma-addons
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.269 2014/12/11 15:45:02 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.270 2015/01/28 23:25:42 johu Exp $
+
+  28 Jan 2015; Johannes Huber <johu@gentoo.org> kdeplasma-addons-4.12.5.ebuild,
+  kdeplasma-addons-4.14.3.ebuild:
+  Adjust dependencies to handle merged plugins in >=app-crypt/qca-2.1.
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -kdeplasma-addons-4.14.2.ebuild:
   Remove KDE SC 4.14.2

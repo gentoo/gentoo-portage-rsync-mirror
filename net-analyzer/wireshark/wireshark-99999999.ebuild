@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.7 2015/01/20 08:17:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.8 2015/01/28 23:04:20 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils fcaps git-r3 multilib qt4-r2 user
@@ -14,7 +14,7 @@ SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos lua +netlink +pcap
-	portaudio +qt4 qt5 sbc selinux smi sse4_2 ssl zlib
+	portaudio +qt4 qt5 sbc selinux smi cpu_flags_x86_sse4_2 ssl zlib
 "
 REQUIRED_USE="
 	ssl? ( crypt )
@@ -160,7 +160,7 @@ src_configure() {
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
 		$(usex netlink --with-libnl=3 --without-libnl) \
-		$(usex sse4_2 --enable-sse4_2 '') \
+		$(usex cpu_flags_x86_sse4_2 --enable-sse4_2 '') \
 		--disable-profile-build \
 		--disable-usr-local \
 		--disable-warnings-as-errors \
