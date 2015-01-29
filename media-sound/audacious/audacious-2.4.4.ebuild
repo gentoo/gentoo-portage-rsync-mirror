@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.4.4.ebuild,v 1.12 2014/11/07 23:37:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.4.4.ebuild,v 1.13 2015/01/29 18:52:25 mgorny Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
-IUSE="altivec chardet nls session sse2"
+IUSE="altivec chardet nls session cpu_flags_x86_sse2"
 
 RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/glib-2.16
@@ -44,7 +44,7 @@ src_compile() {
 		$(use_enable chardet) \
 		$(use_enable nls) \
 		$(use_enable session sm) \
-		$(use_enable sse2) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
 		|| die
 
 	emake || die "make failed"

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/qxmpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.44 2015/01/11 21:28:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qxmpp/ChangeLog,v 1.45 2015/01/29 18:39:53 pinkbyte Exp $
+
+  29 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> qxmpp-9999.ebuild,
+  metadata.xml:
+  Adjust remaining obsolete HOMEPAGE links and metadata
 
 *qxmpp-0.8.2 (11 Jan 2015)
 

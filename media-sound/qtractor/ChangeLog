@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qtractor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.60 2014/12/03 16:53:15 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/ChangeLog,v 1.61 2015/01/29 18:56:04 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> qtractor-0.6.3.ebuild,
+  qtractor-0.6.4.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *qtractor-0.6.4 (03 Dec 2014)
 

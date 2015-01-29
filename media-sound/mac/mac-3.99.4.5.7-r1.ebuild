@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.7 2014/06/10 19:48:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7-r1.ebuild,v 1.8 2015/01/29 18:54:47 mgorny Exp $
 
 EAPI=5
 
@@ -17,11 +17,11 @@ SRC_URI="http://etree.org/shnutils/shntool/support/formats/ape/unix/${MY_PV}-${P
 LICENSE="mac"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
-IUSE="mmx static-libs"
+IUSE="cpu_flags_x86_mmx static-libs"
 
 RDEPEND=""
 DEPEND="sys-apps/sed
-	mmx? ( dev-lang/yasm )"
+	cpu_flags_x86_mmx? ( dev-lang/yasm )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -33,13 +33,13 @@ src_prepare() {
 
 pkg_setup() {
 	append-cppflags -DSHNTOOL
-	use mmx && append-ldflags -Wl,-z,noexecstack
+	use cpu_flags_x86_mmx && append-ldflags -Wl,-z,noexecstack
 }
 
 src_configure() {
 	econf \
 		$(use_enable static-libs static) \
-		$(use_enable mmx assembly)
+		$(use_enable cpu_flags_x86_mmx assembly)
 }
 
 src_install() {

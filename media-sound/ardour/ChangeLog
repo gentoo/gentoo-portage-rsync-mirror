@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.138 2015/01/03 14:37:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.139 2015/01/29 18:52:23 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> ardour-2.8.14-r1.ebuild,
+  ardour-2.8.16.ebuild, ardour-3.5.308-r1.ebuild, ardour-3.5.357.ebuild,
+  ardour-3.5.380.ebuild, ardour-3.5.403.ebuild, ardour-9999.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> ardour-3.5.308-r1.ebuild,
   ardour-3.5.357.ebuild, ardour-3.5.380.ebuild, ardour-3.5.403.ebuild,

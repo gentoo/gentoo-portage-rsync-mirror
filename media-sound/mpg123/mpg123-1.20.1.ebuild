@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.20.1.ebuild,v 1.1 2014/06/22 04:24:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.20.1.ebuild,v 1.2 2015/01/29 18:56:09 mgorny Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs libtool multilib-minimal
@@ -12,7 +12,7 @@ SRC_URI="http://www.mpg123.org/download/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
-IUSE="3dnow 3dnowext alsa altivec coreaudio int-quality ipv6 jack mmx nas oss portaudio pulseaudio sdl sse"
+IUSE="cpu_flags_x86_3dnow cpu_flags_x86_3dnowext alsa altivec coreaudio int-quality ipv6 jack cpu_flags_x86_mmx nas oss portaudio pulseaudio sdl cpu_flags_x86_sse"
 
 # No MULTILIB_USEDEP here since we only build libmpg123 for non native ABIs.
 RDEPEND="app-admin/eselect-mpg123
@@ -51,7 +51,7 @@ multilib_src_configure() {
 	use altivec && _cpu=altivec
 
 	if [[ $(tc-arch) == amd64 || ${ARCH} == x64-* ]]; then
-		use sse && _cpu=x86-64
+		use cpu_flags_x86_sse && _cpu=x86-64
 	elif use x86 && gcc-specs-pie ; then
 		# Don't use any mmx, 3dnow, sse and 3dnowext #bug 164504
 		_cpu=generic_fpu
@@ -59,10 +59,10 @@ multilib_src_configure() {
 		# ASM doesn't work quite as expected with the Darwin linker
 		_cpu=generic_fpu
 	else
-		use mmx && _cpu=mmx
-		use 3dnow && _cpu=3dnow
-		use sse && _cpu=x86
-		use 3dnowext && _cpu=x86
+		use cpu_flags_x86_mmx && _cpu=mmx
+		use cpu_flags_x86_3dnow && _cpu=3dnow
+		use cpu_flags_x86_sse && _cpu=x86
+		use cpu_flags_x86_3dnowext && _cpu=x86
 	fi
 
 	local myconf=""

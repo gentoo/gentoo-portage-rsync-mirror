@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.14-r1.ebuild,v 1.4 2013/03/18 12:34:30 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.14-r1.ebuild,v 1.5 2015/01/29 18:52:23 mgorny Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs scons-utils
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE="altivec curl debug nls lv2 sse"
+IUSE="altivec curl debug nls lv2 cpu_flags_x86_sse"
 
 RDEPEND="media-libs/aubio
 	media-libs/liblo
@@ -61,7 +61,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local FPU_OPTIMIZATION=$($(use altivec || use sse) && echo 1 || echo 0)
+	local FPU_OPTIMIZATION=$($(use altivec || use cpu_flags_x86_sse) && echo 1 || echo 0)
 	tc-export CC CXX
 	mkdir -p "${D}"
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.163 2014/11/02 18:02:05 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.164 2015/01/29 18:52:33 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org>
+  jack-audio-connection-kit-0.121.3-r1.ebuild,
+  jack-audio-connection-kit-0.121.3.ebuild,
+  jack-audio-connection-kit-0.124.1.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *jack-audio-connection-kit-0.124.1 (02 Nov 2014)
 

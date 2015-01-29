@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacious
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.299 2014/11/07 23:37:15 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.300 2015/01/29 18:52:25 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> audacious-2.4.4.ebuild,
+  audacious-2.5.4.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *audacious-2.4.4 (07 Nov 2014)
 

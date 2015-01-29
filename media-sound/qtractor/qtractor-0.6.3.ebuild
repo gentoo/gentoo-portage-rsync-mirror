@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.6.3.ebuild,v 1.2 2014/12/03 16:49:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.6.3.ebuild,v 1.3 2015/01/29 18:56:04 mgorny Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="debug dssi libsamplerate mad osc rubberband vorbis sse zlib"
+IUSE="debug dssi libsamplerate mad osc rubberband vorbis cpu_flags_x86_sse zlib"
 
 RDEPEND=">=dev-qt/qtcore-4.2:4
 	>=dev-qt/qtgui-4.7:4
@@ -47,7 +47,7 @@ src_configure() {
 		$(use_enable dssi) \
 		--enable-lilv \
 		$(use_enable rubberband librubberband) \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_enable zlib libz) \
 		$(use_enable debug)
 	eqmake4 qtractor.pro -o qtractor.mak

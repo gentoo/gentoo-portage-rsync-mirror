@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.124.1.ebuild,v 1.1 2014/11/02 18:02:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.124.1.ebuild,v 1.2 2015/01/29 18:52:33 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.jackaudio.org/downloads/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd"
-IUSE="3dnow altivec alsa coreaudio doc debug examples oss sse cpudetection pam"
+IUSE="cpu_flags_x86_3dnow altivec alsa coreaudio doc debug examples oss cpu_flags_x86_sse cpudetection pam"
 
 # readline: only used for jack_transport -> useless for non native ABIs
 # libsndfile: ditto for jackrec
@@ -43,7 +43,7 @@ multilib_src_configure() {
 	local myconf=""
 
 	# CPU Detection (dynsimd) uses asm routines which requires 3dnow, mmx and sse.
-	if use cpudetection && use 3dnow && use sse ; then
+	if use cpudetection && use cpu_flags_x86_3dnow && use cpu_flags_x86_sse ; then
 		einfo "Enabling cpudetection (dynsimd). Adding -mmmx, -msse, -m3dnow and -O2 to CFLAGS."
 		myconf="${myconf} --enable-dynsimd"
 		append-flags -mmmx -msse -m3dnow -O2
@@ -58,7 +58,7 @@ multilib_src_configure() {
 		$(use_enable debug) \
 		$(use_enable oss) \
 		--disable-portaudio \
-		$(use_enable sse) \
+		$(use_enable cpu_flags_x86_sse sse) \
 		--with-html-dir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
 		--libdir=/usr/$(get_libdir) \

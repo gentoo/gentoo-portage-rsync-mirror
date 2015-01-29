@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=sys-apps/sed mmx? ( dev-lang/yasm )
+DEPEND=sys-apps/sed cpu_flags_x86_mmx? ( dev-lang/yasm )
 DESCRIPTION=Monkey's Audio Codecs
 EAPI=5
 HOMEPAGE=http://etree.org/shnutils/shntool/
-IUSE=mmx static-libs
+IUSE=cpu_flags_x86_mmx static-libs
 KEYWORDS=alpha amd64 ppc x86
 LICENSE=mac
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://etree.org/shnutils/shntool/support/formats/ape/unix/3.99-u4-b5-s7/mac-3.99-u4-b5-s7.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=7d584255d9e0a5ef30add05c78027770
+_md5_=3ba187231c96c4530a399f66527050a3

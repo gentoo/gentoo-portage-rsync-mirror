@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=sys-libs/ncurses-5.2 sndfile? ( >=media-libs/libsndfile-1.0.2 ) virtual/pkgconfig mmx? ( dev-lang/nasm ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=sys-libs/ncurses-5.2 sndfile? ( >=media-libs/libsndfile-1.0.2 ) virtual/pkgconfig cpu_flags_x86_mmx? ( dev-lang/nasm ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=LAME Ain't an MP3 Encoder
 EAPI=4
 HOMEPAGE=http://lame.sourceforge.net/
-IUSE=debug mmx mp3rtp sndfile static-libs
+IUSE=debug cpu_flags_x86_mmx mp3rtp sndfile static-libs
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2.1
 RDEPEND=>=sys-libs/ncurses-5.2 sndfile? ( >=media-libs/libsndfile-1.0.2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/lame/lame-3.99.3.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=7918629b32c876bcae93f0ade0a71614
+_md5_=1be8b4e3f37df7f34805064c4fd0b6e7
