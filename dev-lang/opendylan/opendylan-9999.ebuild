@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.8 2014/01/08 09:00:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.9 2015/01/29 05:41:37 patrick Exp $
 EAPI=4
 
 inherit autotools git-2
@@ -29,10 +29,15 @@ src_prepare() {
 	elibtoolize && eaclocal || die "Fail"
 	automake --foreign --add-missing # this one dies wrongfully
 	eautoconf || die "Fail"
+
+	# quick hack
+	sed -i -e 's:/usr/local:/usr:' admin/builds/fdmake.pl || die
 }
 
 src_configure() {
-	if has_version =dev-lang/opendylan-bin-2013.2; then
+	if has_version =dev-lang/opendylan-bin-2014.1; then
+		PATH=/opt/opendylan-2014.1/bin/:$PATH
+	elif has_version =dev-lang/opendylan-bin-2013.2; then
 		PATH=/opt/opendylan-2013.2/bin/:$PATH
 	elif has_version =dev-lang/opendylan-bin-2013.1; then
 		PATH=/opt/opendylan-2013.1/bin/:$PATH
@@ -48,7 +53,7 @@ src_configure() {
 
 src_compile() {
 	ulimit -s 32000 # this is naughty build system
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {

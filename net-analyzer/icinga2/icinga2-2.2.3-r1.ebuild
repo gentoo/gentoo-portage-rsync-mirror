@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.3.ebuild,v 1.1 2015/01/13 04:42:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.2.3-r1.ebuild,v 1.1 2015/01/29 05:51:25 prometheanfire Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 )
-inherit depend.apache distutils-r1 eutils cmake-utils toolchain-funcs user versionator systemd
+inherit depend.apache eutils cmake-utils toolchain-funcs user versionator systemd
 
 DESCRIPTION="Distributed, general purpose, network monitoring engine"
 HOMEPAGE="http://icinga.org/icinga2"
@@ -18,7 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+mysql postgres classicui nano-syntax +plugins +vim-syntax"
 
 DEPEND="dev-util/cmake
-		dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-libs/openssl
 		>=dev-libs/boost-1.41
 		sys-devel/bison

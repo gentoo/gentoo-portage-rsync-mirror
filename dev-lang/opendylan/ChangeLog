@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/opendylan
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.19 2015/01/07 05:38:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/ChangeLog,v 1.20 2015/01/29 05:41:37 patrick Exp $
+
+  29 Jan 2015; Patrick Lauer <patrick@gentoo.org> opendylan-9999.ebuild:
+  Small fixes to live ebuild
 
 *opendylan-2014.1 (07 Jan 2015)
 

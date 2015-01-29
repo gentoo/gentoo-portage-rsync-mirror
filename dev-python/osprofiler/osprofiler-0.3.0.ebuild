@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/osprofiler/osprofiler-0.3.0.ebuild,v 1.2 2014/11/28 10:57:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/osprofiler/osprofiler-0.3.0.ebuild,v 1.3 2015/01/29 05:46:14 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -18,6 +18,7 @@ IUSE=""
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/pbr-0.8.0[${PYTHON_USEDEP}]
 "
 RDEPEND="
 	>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
