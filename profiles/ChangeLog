@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9714 2015/01/29 01:56:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9715 2015/01/29 11:31:55 slyfox Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> package.mask:
+  Mask live dev-util/radare2 ebuild.
 
   29 Jan 2015; Johannes Huber <johu@gentoo.org> package.mask:
   Unmask >=app-crypt/qca-2.1.

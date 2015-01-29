@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.138 2015/01/28 13:31:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.139 2015/01/29 11:46:47 jlec Exp $
+
+  29 Jan 2015; Justin Lecher <jlec@gentoo.org> qwt-6.1.2-r1.ebuild:
+  Make sure at least one qt version is selected, #538108
 
 *qwt-6.1.2-r1 (28 Jan 2015)
 

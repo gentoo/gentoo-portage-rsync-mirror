@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16306 2015/01/29 01:56:11 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16307 2015/01/29 11:31:55 slyfox Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergei Trofimovich <slyfox@gentoo.org> (29 Jan 2015)
+# Mask live ebuild
+=dev-util/radare2-9999
 
 # Anthony G. Basile <blueness@gentoo.org> (28 Jan 2015)
 # Its broken and we're waiting for fixes from upstream, bug #536196

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.2-r1.ebuild,v 1.1 2015/01/28 13:31:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.2-r1.ebuild,v 1.2 2015/01/29 11:46:47 jlec Exp $
 
 EAPI=5
 
@@ -16,6 +16,8 @@ LICENSE="qwt mathml? ( LGPL-2.1 Nokia-Qt-LGPL-Exception-1.1 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 SLOT="6"
 IUSE="doc examples mathml opengl qt4 qt5 static-libs svg"
+
+REQUIRED_USE="|| ( qt4 qt5 )"
 
 DEPEND="
 	!<x11-libs/qwt-5.2.3
