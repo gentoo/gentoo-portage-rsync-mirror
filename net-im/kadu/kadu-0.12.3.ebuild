@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.7 2014/12/31 13:34:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.12.3.ebuild,v 1.8 2015/01/29 00:42:13 johu Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ REQUIRED_USE="
 	)
 "
 COMMON_DEPEND="
-	>=app-crypt/qca-2.0.0-r2
+	app-crypt/qca:2[qt4(+)]
 	x11-libs/libX11
 	x11-libs/libXfixes
 	x11-libs/libXScrnSaver
@@ -56,7 +56,7 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto
 "
 RDEPEND="${COMMON_DEPEND}
-	app-crypt/qca-ossl:2
+	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
 	>=dev-qt/qtsvg-4.7.0:4
 	speech? ( app-accessibility/powiedz )
 "

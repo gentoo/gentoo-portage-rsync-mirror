@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oneclickftp/oneclickftp-0.5.1.ebuild,v 1.3 2013/03/02 22:51:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oneclickftp/oneclickftp-0.5.1.ebuild,v 1.4 2015/01/29 00:31:57 johu Exp $
 
 EAPI=2
 inherit eutils qt4-r2
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=app-crypt/qca-2
+DEPEND="
+	|| ( app-crypt/qca:2 app-crypt/qca:2[qt4] )
 	dev-qt/qtgui:4"
 
 PATCHES=(
