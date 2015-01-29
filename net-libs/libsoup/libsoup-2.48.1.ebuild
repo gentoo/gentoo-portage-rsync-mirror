@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.48.1.ebuild,v 1.1 2014/12/23 23:00:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.48.1.ebuild,v 1.2 2015/01/29 11:19:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -39,6 +39,10 @@ DEPEND="${RDEPEND}
 #		dev-lang/php[apache2,xmlrpc]
 #		net-misc/curl
 #		net-libs/glib-networking[ssl])"
+
+# They hang for some unknown reason, bug #537836, also bug #326957 is pending
+RESTRICT="test"
+
 RDEPEND="${RDEPEND}
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r8

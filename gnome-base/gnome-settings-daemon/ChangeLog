@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.151 2014/12/27 01:51:40 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.152 2015/01/29 11:14:16 pacho Exp $
+
+  29 Jan 2015; Pacho Ramos <pacho@gentoo.org>
+  gnome-settings-daemon-3.14.2.ebuild:
+  rekeyword on ppc* (#523468)
 
   27 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-settings-daemon-3.12.3.ebuild, gnome-settings-daemon-3.14.2.ebuild:
