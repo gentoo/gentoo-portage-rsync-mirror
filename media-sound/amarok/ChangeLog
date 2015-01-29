@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.474 2014/12/13 01:39:45 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.475 2015/01/29 00:09:40 johu Exp $
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org> -amarok-2.8.0-r1.ebuild,
+  -amarok-2.8.0-r2.ebuild, amarok-2.8.0-r3.ebuild, amarok-2.8.0.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1. Remove old.
 
   13 Dec 2014; Manuel Rüger <mrueg@gentoo.org> amarok-2.8.0-r3.ebuild:
   Add support for kde applications dependency.

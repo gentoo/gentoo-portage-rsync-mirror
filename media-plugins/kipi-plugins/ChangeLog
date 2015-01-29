@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.173 2014/12/21 20:57:33 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.174 2015/01/29 00:01:15 johu Exp $
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org> kipi-plugins-3.5.0.ebuild,
+  kipi-plugins-4.4.0.ebuild, kipi-plugins-4.6.0.ebuild:
+  Adjust use dependencies to handle >=app-crypt/qca-2.1.
 
 *kipi-plugins-4.6.0 (21 Dec 2014)
 

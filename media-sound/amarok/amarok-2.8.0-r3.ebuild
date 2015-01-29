@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r3.ebuild,v 1.4 2014/12/13 01:39:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r3.ebuild,v 1.5 2015/01/29 00:09:40 johu Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ fi
 
 # ipod requires gdk enabled and also gtk compiled in libgpod
 COMMONDEPEND="
-	app-crypt/qca:2
+	app-crypt/qca:2[qt4(+)]
 	$(add_kdebase_dep kdelibs 'nepomuk?,opengl?' 4.8.4)
 	|| ( kde-apps/kdebase-kioslaves:4
 		$(add_kdebase_dep kdebase-kioslaves) )

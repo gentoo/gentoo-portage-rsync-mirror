@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.3.ebuild,v 1.3 2014/09/30 17:22:50 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.3.ebuild,v 1.4 2015/01/29 00:16:40 johu Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ REQUIRED_USE="
 
 # qca dep is temporary for bug #489850
 COMMON_DEPEND="
-	app-crypt/qca:2
+	app-crypt/qca:2[qt4(+)]
 	>=dev-qt/qtgui-4.5:4
 	dbus? ( >=dev-qt/qtdbus-4.5:4 )
 	>=dev-qt/qtopengl-4.5:4

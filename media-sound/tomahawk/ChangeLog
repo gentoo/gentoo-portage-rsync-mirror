@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tomahawk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.42 2015/01/16 23:34:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.43 2015/01/29 00:27:02 johu Exp $
+
+  29 Jan 2015; Johannes Huber <johu@gentoo.org> tomahawk-0.8.2.ebuild,
+  tomahawk-9999.ebuild:
+  Adjust dependencies to handle merged plugins in >=app-crypt/qca-2.1.
 
 *tomahawk-0.8.2 (16 Jan 2015)
 

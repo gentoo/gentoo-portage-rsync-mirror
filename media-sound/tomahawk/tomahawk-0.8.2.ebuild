@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.8.2.ebuild,v 1.1 2015/01/16 23:34:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.8.2.ebuild,v 1.2 2015/01/29 00:27:02 johu Exp $
 
 EAPI=5
 
@@ -30,7 +30,6 @@ REQUIRED_USE="telepathy? ( kde )"
 # - deps with missing qt4/qt5 use flags
 # - does not build with in-tree only deps
 DEPEND="
-	app-crypt/qca:2
 	dev-cpp/lucene++
 	dev-cpp/sparsehash
 	dev-libs/boost
@@ -43,6 +42,7 @@ DEPEND="
 	hatchet? ( dev-cpp/websocketpp )
 	jabber? ( net-libs/jreen )
 	!qt5? (
+		app-crypt/qca:2[qt4(+)]
 		>=dev-libs/libattica-0.4.0
 		dev-libs/qjson
 		dev-libs/qtkeychain[qt4]
@@ -57,6 +57,7 @@ DEPEND="
 		telepathy? ( net-libs/telepathy-qt[qt4] )
 	)
 	qt5? (
+		app-crypt/qca:2[qt5(+)]
 		dev-libs/qtkeychain[qt5]
 		dev-qt/designer:5
 		dev-qt/qtcore:5
@@ -69,7 +70,7 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}
-	app-crypt/qca-ossl
+	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
 "
 
 DOCS=( AUTHORS ChangeLog README.md )
