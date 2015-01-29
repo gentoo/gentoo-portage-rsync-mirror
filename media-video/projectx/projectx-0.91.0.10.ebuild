@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.10.ebuild,v 1.5 2015/01/01 11:25:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.91.0.10.ebuild,v 1.6 2015/01/29 19:16:42 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="http://dev.gentoo.org/~billie/distfiles/${P}.tar.xz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
-IUSE="X mmx sse"
+IUSE="X cpu_flags_x86_mmx cpu_flags_x86_sse"
 
 COMMON_DEP="dev-java/commons-net
 	X? ( =dev-java/browserlauncher2-1* )"
@@ -93,8 +93,8 @@ java_prepare() {
 src_compile() {
 	local IDCT="idct-mjpeg"  # default IDCT implementation
 	if use x86 || use amd64; then
-		use mmx && IDCT="idct-mjpeg-mmx"
-		use sse && IDCT="idct-mjpeg-sse"
+		use cpu_flags_x86_mmx && IDCT="idct-mjpeg-mmx"
+		use cpu_flags_x86_sse && IDCT="idct-mjpeg-sse"
 	fi
 
 	eant build $(use_doc) -Dmanifest.mainclass=$(mainclass)

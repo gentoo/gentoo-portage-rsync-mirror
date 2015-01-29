@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.5 2014/12/09 10:07:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.6 2015/01/29 19:15:57 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
-IUSE="dv gtk mmx png quicktime sdl sdlgfx static-libs v4l"
+IUSE="dv gtk cpu_flags_x86_mmx png quicktime sdl sdlgfx static-libs v4l"
 REQUIRED_USE="sdlgfx? ( sdl )"
 
 RDEPEND=">=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
@@ -27,7 +27,7 @@ RDEPEND=">=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
 	)"
 
 DEPEND="${RDEPEND}
-	mmx? ( dev-lang/nasm )
+	cpu_flags_x86_mmx? ( dev-lang/nasm )
 	>=sys-apps/sed-4
 	virtual/awk
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
@@ -59,7 +59,7 @@ multilib_src_configure() {
 
 	local myconf=(
 		--enable-compile-warnings
-		$(use_enable mmx simd-accel)
+		$(use_enable cpu_flags_x86_mmx simd-accel)
 		$(use_enable static-libs static)
 		--enable-largefile
 

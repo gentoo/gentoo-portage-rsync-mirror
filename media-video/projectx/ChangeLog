@@ -1,6 +1,10 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.89 2015/01/01 11:25:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.90 2015/01/29 19:16:42 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> projectx-0.91.0.08.ebuild,
+  projectx-0.91.0.10.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> projectx-0.91.0.10.ebuild:
   Stable for ppc64, wrt bug #531314

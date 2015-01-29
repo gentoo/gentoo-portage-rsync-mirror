@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dirac
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.52 2015/01/26 10:09:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.53 2015/01/29 19:15:56 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> dirac-1.0.2-r1.ebuild,
+  dirac-1.0.2.ebuild:
+  Switch to CPU_FLAGS_X86.
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dirac-1.0.2-r1.ebuild:
   Stable for x86, wrt bug #526026

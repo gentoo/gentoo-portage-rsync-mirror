@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r1.ebuild,v 1.10 2014/06/10 21:06:49 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r1.ebuild,v 1.11 2015/01/29 19:15:57 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd"
-IUSE="dga dv gtk mmx png quicktime sdl sdlgfx static-libs v4l"
+IUSE="dga dv gtk cpu_flags_x86_mmx png quicktime sdl sdlgfx static-libs v4l"
 REQUIRED_USE="sdlgfx? ( sdl )"
 
 RDEPEND="virtual/jpeg
@@ -29,7 +29,7 @@ RDEPEND="virtual/jpeg
 	)"
 
 DEPEND="${RDEPEND}
-	mmx? ( dev-lang/nasm )
+	cpu_flags_x86_mmx? ( dev-lang/nasm )
 	>=sys-apps/sed-4
 	virtual/awk
 	virtual/pkgconfig"
@@ -52,7 +52,7 @@ src_configure() {
 
 	econf \
 		--enable-compile-warnings \
-		$(use_enable mmx simd-accel) \
+		$(use_enable cpu_flags_x86_mmx simd-accel) \
 		$(use_enable static-libs static) \
 		--enable-largefile \
 		$(use_with quicktime libquicktime) \

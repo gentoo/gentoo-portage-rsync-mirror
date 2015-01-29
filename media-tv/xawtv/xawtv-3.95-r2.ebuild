@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r2.ebuild,v 1.10 2013/08/06 08:09:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r2.ebuild,v 1.11 2015/01/29 19:07:44 mgorny Exp $
 
 EAPI=1
 
@@ -8,7 +8,7 @@ inherit eutils font autotools flag-o-matic
 
 PATCHLEVEL="4"
 
-IUSE="aalib alsa dv lirc mmx motif nls opengl quicktime X xv zvbi xext"
+IUSE="aalib alsa dv lirc cpu_flags_x86_mmx motif nls opengl quicktime X xv zvbi xext"
 
 MY_FONT=tv-fonts-1.1
 DESCRIPTION="Small suite of video4linux related software"
@@ -89,7 +89,7 @@ src_compile() {
 		$(use_enable xext xfree-ext) \
 		$(use_enable xv xvideo) \
 		$(use_enable dv)  \
-		$(use_enable mmx) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
 		$(use_enable motif) \
 		$(use_enable quicktime) \
 		$(use_enable alsa) \

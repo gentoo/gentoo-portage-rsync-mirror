@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2-r1.ebuild,v 1.4 2014/08/10 20:57:26 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.6.2-r1.ebuild,v 1.5 2015/01/29 19:13:34 mgorny Exp $
 
 EAPI="5"
 
@@ -17,13 +17,13 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
 KEYWORDS="~amd64 ~x86"
-IUSE="aften a52 alsa amr debug dts fontconfig jack lame libsamplerate mmx oss nls qt4 sdl vorbis truetype xvid x264 xv"
+IUSE="aften a52 alsa amr debug dts fontconfig jack lame libsamplerate cpu_flags_x86_mmx oss nls qt4 sdl vorbis truetype xvid x264 xv"
 
 # TODO: Figure out which dependencies can be moved out of avidemux-core into here.
-RDEPEND="=media-libs/avidemux-core-${PV}-r1[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?]
+RDEPEND="=media-libs/avidemux-core-${PV}-r1[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,cpu_flags_x86_mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?]
 	qt4? ( >=dev-qt/qtgui-4.8.3:4 )"
 DEPEND="$RDEPEND"
-PDEPEND="=media-libs/avidemux-plugins-${PV}-r2[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?]"
+PDEPEND="=media-libs/avidemux-plugins-${PV}-r2[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,cpu_flags_x86_mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?]"
 
 S="${WORKDIR}/${MY_P}"
 

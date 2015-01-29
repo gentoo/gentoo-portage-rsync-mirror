@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.69 2014/07/10 17:59:35 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.70 2015/01/29 19:14:51 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> cinelerra-20120707.ebuild,
+  cinelerra-20140710.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *cinelerra-20140710 (10 Jul 2014)
 
