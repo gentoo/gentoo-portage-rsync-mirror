@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.5 2015/01/23 01:50:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.2.0_beta1_pre20141115.ebuild,v 1.6 2015/01/29 21:48:34 floppym Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.freerdp.com/"
 LICENSE="Apache-2.0"
 SLOT="0/1.2"
 IUSE="alsa +client cups debug doc ffmpeg gstreamer jpeg
-	pulseaudio server smartcard sse2 test usb wayland X xinerama xv"
+	pulseaudio server smartcard cpu_flags_x86_sse2 test usb wayland X xinerama xv"
 
 RDEPEND="
 	dev-libs/openssl
@@ -94,7 +94,7 @@ src_configure() {
 		$(cmake-utils_use_with pulseaudio PULSE)
 		$(cmake-utils_use_with server SERVER)
 		$(cmake-utils_use_with smartcard PCSC)
-		$(cmake-utils_use_with sse2 SSE2)
+		$(cmake-utils_use_with cpu_flags_x86_sse2 SSE2)
 		$(cmake-utils_use usb CHANNEL_URBDRC)
 		$(cmake-utils_use_with X X11)
 		$(cmake-utils_use_with xinerama XINERAMA)

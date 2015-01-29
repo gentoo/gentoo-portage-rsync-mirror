@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gretl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.46 2014/05/28 17:35:31 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/ChangeLog,v 1.47 2015/01/29 21:32:07 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> gretl-1.9.14.ebuild,
+  gretl-1.9.90.ebuild:
+  Switch to CPU_FLAGS_X86.
 
 *gretl-1.9.90 (28 May 2014)
 

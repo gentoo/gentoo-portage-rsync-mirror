@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.14.ebuild,v 1.2 2014/03/27 03:38:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.14.ebuild,v 1.3 2015/01/29 21:32:07 mgorny Exp $
 
 EAPI=5
 
@@ -15,8 +15,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="accessibility avx emacs gnome gtk nls odbc openmp python
-	readline sse2 R static-libs"
+IUSE="accessibility cpu_flags_x86_avx emacs gnome gtk nls odbc openmp python
+	readline cpu_flags_x86_sse2 R static-libs"
 
 CDEPEND="
 	dev-libs/glib:2
@@ -63,14 +63,14 @@ src_configure() {
 		--disable-rpath \
 		--enable-shared \
 		--with-mpfr \
-		$(use_enable avx) \
+		$(use_enable cpu_flags_x86_avx avx) \
 		$(use_enable gtk gui) \
 		$(use_enable gtk gtk3) \
 		$(use_enable gtk xdg) \
 		$(use_enable gtk xdg-utils) \
 		$(use_enable nls) \
 		$(use_enable openmp) \
-		$(use_enable sse2) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
 		$(use_enable static-libs static) \
 		$(use_with accessibility audio) \
 		$(use_with odbc) \
