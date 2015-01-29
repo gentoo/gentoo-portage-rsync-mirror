@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.216 2015/01/28 19:21:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.217 2015/01/29 16:47:20 chithanh Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -175,6 +175,7 @@ video_cards_exynos
 video_cards_freedreno
 video_cards_omap
 video_cards_omapfb
+video_cards_tegra
 
 # linux-only drivers
 video_cards_qxl
