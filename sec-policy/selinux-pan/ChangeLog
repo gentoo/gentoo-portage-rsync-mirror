@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20141203-r3 (29 Jan 2015)
+
+  29 Jan 2015; Jason Zaman <perfinion@gentoo.org>
+  +selinux-pan-2.20141203-r3.ebuild, selinux-pan-2.20141203-r2.ebuild:
+  Release of 2.20141203-r3, stable 2.20141203-r2
+
   21 Dec 2014; Sven Vermeulen <swift@gentoo.org>
   -selinux-pan-2.20140311-r1.ebuild, -selinux-pan-2.20140311-r2.ebuild,
   -selinux-pan-2.20140311-r3.ebuild, -selinux-pan-2.20140311-r4.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-qemu/selinux-qemu-2.20141203-r2.ebuild,v 1.1 2014/12/21 13:56:03 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-qemu/selinux-qemu-2.20141203-r2.ebuild,v 1.2 2015/01/29 09:52:14 perfinion Exp $
 EAPI="5"
 
 IUSE=""
@@ -13,7 +13,7 @@ DESCRIPTION="SELinux policy for qemu"
 if [[ $PV == 9999* ]] ; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 DEPEND="${DEPEND}
 	sec-policy/selinux-virt
