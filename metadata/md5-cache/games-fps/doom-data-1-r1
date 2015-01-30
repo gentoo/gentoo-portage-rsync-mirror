@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=doomsday? ( games-fps/doomsday ) !<=games-fps/freedoom-0.4.1
 DESCRIPTION=collection of doom wad files from id
+EAPI=5
 HOMEPAGE=http://www.idsoftware.com/
 IUSE=doomsday
 KEYWORDS=amd64 arm sparc x86
@@ -9,4 +10,4 @@ RDEPEND=doomsday? ( games-fps/doomsday ) !<=games-fps/freedoom-0.4.1 games-misc/
 SLOT=0
 SRC_URI=mirror://gentoo/doom1.wad.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=688bdf95566344655baf077633a8c2a3
+_md5_=6103a72acfc719e4ba09d665f33e491e

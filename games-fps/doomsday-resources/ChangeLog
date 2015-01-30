@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday-resources
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.9 2014/05/01 18:36:45 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/ChangeLog,v 1.10 2015/01/30 20:23:14 tupone Exp $
+
+  30 Jan 2015; Tupone Alfredo <tupone@gentoo.org>
+  doomsday-resources-1.01-r1.ebuild:
+  EAPI 5
 
   01 May 2014; Ulrich Müller <ulm@gentoo.org>
   doomsday-resources-1.01-r1.ebuild:

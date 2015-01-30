@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01-r1.ebuild,v 1.4 2014/05/01 18:36:45 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01-r1.ebuild,v 1.5 2015/01/30 20:23:14 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Improved models & textures for doomsday"
@@ -21,11 +21,11 @@ S=${WORKDIR}
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/doomsday/data/jdoom/auto
-	doins data/jDoom/* *.pk3 || die "doins failed"
+	doins data/jDoom/* *.pk3
 
 	# The definitions file cannot be auto-loaded
 	insinto "${GAMES_DATADIR}"/doomsday/defs/jdoom
-	doins defs/jDoom/* || die "doins failed"
+	doins defs/jDoom/*
 
 	dodoc *.txt docs/*
 	prepgamesdirs

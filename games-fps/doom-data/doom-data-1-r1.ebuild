@@ -1,7 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1-r1.ebuild,v 1.5 2015/01/12 03:47:09 patrick Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/doom-data-1-r1.ebuild,v 1.6 2015/01/30 20:09:32 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="collection of doom wad files from id"
@@ -15,12 +15,13 @@ IUSE="doomsday"
 
 DEPEND="doomsday? ( games-fps/doomsday )
 	!<=games-fps/freedoom-0.4.1"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/doom-data
-	doins *.wad || die
+	doins *.wad
 	if use doomsday; then
 		# Make wrapper for doomsday
 		games_make_wrapper doomsday-demo "jdoom -file \
