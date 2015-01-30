@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=caps? ( sys-libs/libcap ) libedit? ( dev-libs/libedit ) readline? ( >=sys-libs/readline-4.1-r4 ) sys-apps/texinfo virtual/pkgconfig
+DESCRIPTION=NTP client and server programs
+EAPI=5
+HOMEPAGE=http://chrony.tuxfamily.org/
+IUSE=caps ipv6 libedit readline +rtc selinux
+LICENSE=GPL-2
+RDEPEND=caps? ( sys-libs/libcap ) libedit? ( dev-libs/libedit ) readline? ( >=sys-libs/readline-4.1-r4 ) selinux? ( sec-policy/selinux-chronyd )
+REQUIRED_USE=?? ( libedit readline )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://download.tuxfamily.org/chrony/chrony-2.0-pre1.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=0ced1ef1955d8fd79cbd15449efc5d84

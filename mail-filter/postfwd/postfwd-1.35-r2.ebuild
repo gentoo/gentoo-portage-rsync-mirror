@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postfwd/postfwd-1.35-r1.ebuild,v 1.1 2014/11/30 16:37:18 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postfwd/postfwd-1.35-r2.ebuild,v 1.1 2015/01/30 12:14:01 mschiff Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils user
 
