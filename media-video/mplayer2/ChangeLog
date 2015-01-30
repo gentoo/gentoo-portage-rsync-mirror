@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.138 2015/01/02 12:32:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.139 2015/01/30 17:27:26 mgorny Exp $
+
+  30 Jan 2015; Michał Górny <mgorny@gentoo.org> mplayer2-2.0_p20130126.ebuild,
+  mplayer2-2.0_p20130428-r1.ebuild, mplayer2-2.0_p20131009.ebuild,
+  mplayer2-9999.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mplayer2-2.0_p20131009.ebuild:
   Stable for sparc, wrt bug #531798

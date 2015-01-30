@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130126.ebuild,v 1.18 2014/01/29 22:58:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20130126.ebuild,v 1.19 2015/01/30 17:27:26 mgorny Exp $
 
 EAPI=4
 
@@ -35,9 +35,9 @@ pulseaudio pvr quvi radio +rar +rtc samba sdl selinux +speex tga
 "
 IUSE+=" symlink"
 
-CPU_FEATURES="3dnow 3dnowext altivec +mmx mmxext +shm sse sse2 ssse3"
+CPU_FEATURES="cpu_flags_x86_3dnow:3dnow cpu_flags_x86_3dnowext:3dnowext altivec +cpu_flags_x86_mmx:mmx cpu_flags_x86_mmxext:mmxext +shm cpu_flags_x86_sse:sse cpu_flags_x86_sse2:sse2 cpu_flags_x86_ssse3:ssse3"
 for x in ${CPU_FEATURES}; do
-	IUSE+=" ${x}"
+	IUSE+=" ${x%:*}"
 done
 
 REQUIRED_USE="
@@ -340,7 +340,7 @@ src_configure() {
 	use cpudetection && myconf+=" --enable-runtime-cpudetection"
 
 	for i in ${CPU_FEATURES//+/}; do
-		myconf+=" $(use_enable ${i})"
+		myconf+=" $(use_enable ${i%:*} ${i#*:})"
 	done
 
 	use debug && myconf+=" --enable-debug=3"

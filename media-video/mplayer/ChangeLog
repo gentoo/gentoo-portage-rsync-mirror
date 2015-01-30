@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.931 2014/12/15 14:42:24 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.932 2015/01/30 17:15:57 mgorny Exp $
+
+  30 Jan 2015; Michał Górny <mgorny@gentoo.org> metadata.xml,
+  mplayer-1.1.1-r1.ebuild, mplayer-1.2_pre20130729.ebuild,
+  mplayer-1.2_pre20141011.ebuild, mplayer-9999.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   15 Dec 2014; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   update for recent upstream changes on internal dvd libs, bug #528706 by Dan

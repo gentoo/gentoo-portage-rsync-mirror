@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20141011.ebuild,v 1.4 2014/12/15 14:33:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20141011.ebuild,v 1.5 2015/01/30 17:15:57 mgorny Exp $
 
 EAPI=5
 
@@ -10,13 +10,13 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
-IUSE="3dnow 3dnowext a52 aalib +alsa altivec aqua bidi bindist bl bluray
+IUSE="cpu_flags_x86_3dnow cpu_flags_x86_3dnowext a52 aalib +alsa altivec aqua bidi bindist bl bluray
 bs2b cddb +cdio cdparanoia cpudetection debug dga
 directfb doc dts dv dvb +dvd +dvdnav +enca +encode faac faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
-+libass libcaca libmpeg2 lirc live lzo mad md5sum +mmx mmxext mng mp3 nas
++libass libcaca libmpeg2 lirc live lzo mad md5sum +cpu_flags_x86_mmx cpu_flags_x86_mmxext mng mp3 nas
 +network nut openal opengl +osdmenu oss png pnm pulseaudio pvr
-radio rar rtc rtmp samba selinux +shm sdl speex sse sse2 ssse3
+radio rar rtc rtmp samba selinux +shm sdl speex cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_ssse3
 tga theora tremor +truetype toolame twolame +unicode v4l vdpau vidix
 vorbis +X x264 xanim xinerama +xscreensaver +xv xvid xvmc zoran"
 
@@ -468,7 +468,12 @@ src_configure() {
 	# Platform specific flags, hardcoded on amd64 (see below)
 	use cpudetection && myconf+=" --enable-runtime-cpudetection"
 
-	uses="3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3"
+	uses="3dnow 3dnowext mmx mmxext sse sse2 ssse3"
+	for i in ${uses}; do
+		myconf+=" $(use_enable cpu_flags_x86_${i} ${i})"
+	done
+
+	uses="altivec shm"
 	for i in ${uses}; do
 		myconf+=" $(use_enable ${i})"
 	done

@@ -6,7 +6,6 @@
     <email>media-video@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
     <flag name="bindist">Enforces license compatibility constraints via REQUIRED_USE.</flag>
     <flag name="bl">Blinkenlights video output</flag>
     <flag name="bluray">Enable playback of Blu-ray filesystems</flag>
@@ -20,7 +19,6 @@
     <flag name="libmpeg2">Build support for mpeg2 over media-libs/libmpeg2 rather than using ffmpeg.</flag>
     <flag name="live">Enables live.com streaming media support</flag>
     <flag name="md5sum">Enables md5sum video output</flag>
-    <flag name="mmxext">Enables mmx2 support</flag>
     <flag name="mng">MNG input support</flag>
     <flag name="network">Enables network streaming support</flag>
     <flag name="nut">Enables support for the NUT container format</flag>
@@ -32,7 +30,6 @@
     <flag name="rtc">Enables usage of the linux real time clock. The alternative is software emulation of rtc</flag>
     <flag name="rtmp">Enables RTMPDump Streaming Media support</flag>
     <flag name="shm">Enable support for shm</flag>
-    <flag name="ssse3">faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
     <flag name="tga">Enables Targa video output</flag>
     <flag name="toolame">Enable toolame MPEG-2 encoding</flag>
     <flag name="tremor">Enable internal support for Vorbis</flag>
