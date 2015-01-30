@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/posix-spawn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/ChangeLog,v 1.9 2014/08/01 13:48:05 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/ChangeLog,v 1.10 2015/01/30 07:06:00 graaff Exp $
+
+  30 Jan 2015; Hans de Graaff <graaff@gentoo.org> posix-spawn-0.3.9.ebuild:
+  Add ruby22.
 
 *posix-spawn-0.3.9 (01 Aug 2014)
 

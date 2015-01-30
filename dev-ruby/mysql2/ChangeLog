@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.31 2014/12/02 12:34:14 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.32 2015/01/30 07:04:20 graaff Exp $
+
+  30 Jan 2015; Hans de Graaff <graaff@gentoo.org> mysql2-0.3.17.ebuild:
+  Add ruby22.
 
   02 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -mysql2-0.3.15.ebuild,
   -mysql2-0.3.16.ebuild:

@@ -1,11 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/posix-spawn-0.3.9.ebuild,v 1.1 2014/08/01 13:48:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/posix-spawn/posix-spawn-0.3.9.ebuild,v 1.2 2015/01/30 07:06:00 graaff Exp $
 
 EAPI=5
 
-# jruby → should be supported but does not work with "rake compile"
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 KEYWORDS="~amd64"
 
 RUBY_FAKEGEM_TASK_DOC=""
