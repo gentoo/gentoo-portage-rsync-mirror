@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.16.ebuild,v 1.1 2012/12/11 00:47:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.16.ebuild,v 1.2 2015/01/29 23:05:55 mgorny Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://crd.lbl.gov/~dhbailey/mpdist/${P}.tar.gz"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc fma fortran qd static-libs"
+IUSE="doc cpu_flags_x86_fma3 cpu_flags_x86_fma4 fortran qd static-libs"
 
 DEPEND="qd? ( sci-libs/qd[fortran=] )"
 RDEPEND="${DEPEND}"
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}"
 src_configure() {
 	local myeconfargs=(
 		--docdir="${EPREFIX}/usr/share/doc/${PF}"
-		$(use_enable fma)
+		$(use_enable "cpu_flags_x86_fma$(usex cpu_flags_x86_fma3 3 4)" fma)
 		$(use_enable fortran)
 		$(use_enable qd)
 	)

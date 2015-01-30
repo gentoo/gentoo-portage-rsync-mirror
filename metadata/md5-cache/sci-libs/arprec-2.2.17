@@ -3,11 +3,11 @@ DEPEND=qd? ( sci-libs/qd:0=[fortran=] ) fortran? ( virtual/fortran ) !<sys-devel
 DESCRIPTION=Arbitrary precision float arithmetics and functions
 EAPI=5
 HOMEPAGE=http://crd.lbl.gov/~dhbailey/mpdist/
-IUSE=doc fma fortran qd static-libs
+IUSE=doc cpu_flags_x86_fma3 cpu_flags_x86_fma4 fortran qd static-libs
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=qd? ( sci-libs/qd:0=[fortran=] ) fortran? ( virtual/fortran )
 SLOT=0
 SRC_URI=http://crd.lbl.gov/~dhbailey/mpdist/arprec-2.2.17.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=c7cb065fda4deefe56b4eb9835a7d00a
+_md5_=fcce1c1ffac7135f0aeb4dcdb1dcb7c2

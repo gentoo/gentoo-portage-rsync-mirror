@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/arprec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.18 2014/04/05 23:39:34 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.19 2015/01/29 23:05:55 mgorny Exp $
+
+  29 Jan 2015; Michał Górny <mgorny@gentoo.org> arprec-2.2.16.ebuild,
+  arprec-2.2.17.ebuild, metadata.xml:
+  Switch to CPU_FLAGS_X86.
 
 *arprec-2.2.17 (05 Apr 2014)
 

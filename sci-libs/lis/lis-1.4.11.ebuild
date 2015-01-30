@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/lis-1.4.11.ebuild,v 1.1 2013/07/22 20:40:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/lis-1.4.11.ebuild,v 1.2 2015/01/29 23:02:59 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.ssisc.org/lis/dl/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc fma fortran mpi openmp quad saamg sse2 static-libs"
+IUSE="doc cpu_flags_x86_fma3 cpu_flags_x86_fma4 fortran mpi openmp quad saamg cpu_flags_x86_sse2 static-libs"
 
 RDEPEND="mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}"
@@ -37,8 +37,8 @@ src_configure() {
 		$(use_enable fortran)
 		$(use_enable openmp omp)
 		$(use_enable quad)
-		$(use_enable fma)
-		$(use_enable sse2)
+		$(use_enable "cpu_flags_x86_fma$(usex cpu_flags_x86_fma3 3 4)" fma)
+		$(use_enable cpu_flags_x86_sse2 sse2)
 		$(use_enable saamg)
 		$(use_enable mpi)
 	)
