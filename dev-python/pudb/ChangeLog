@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pudb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/ChangeLog,v 1.23 2014/04/03 01:55:26 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/ChangeLog,v 1.24 2015/01/30 03:22:00 patrick Exp $
+
+*pudb-2015.1 (30 Jan 2015)
+
+  30 Jan 2015; Patrick Lauer <patrick@gentoo.org> +pudb-2015.1.ebuild:
+  Bump #538016
 
   03 Apr 2014; Tim Harder <radhermit@gentoo.org> pudb-2014.1.ebuild:
   Add python3_4 support.
