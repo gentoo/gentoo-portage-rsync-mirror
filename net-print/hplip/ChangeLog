@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.316 2015/01/30 11:34:05 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.317 2015/01/30 12:48:55 billie Exp $
+
+  30 Jan 2015; Daniel Pielmeier <billie@gentoo.org> hplip-3.14.1.ebuild,
+  hplip-3.14.10.ebuild:
+  Add message about unsupported binary plugins.
 
   30 Jan 2015; Daniel Pielmeier <billie@gentoo.org> -hplip-3.14.6.ebuild:
   Remove old.

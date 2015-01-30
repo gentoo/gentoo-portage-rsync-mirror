@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/jenkins-webapi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jenkins-webapi/ChangeLog,v 1.1 2015/01/29 09:19:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jenkins-webapi/ChangeLog,v 1.2 2015/01/30 12:35:50 idella4 Exp $
+
+*jenkins-webapi-0.4.0-r1 (30 Jan 2015)
+
+  30 Jan 2015; Ian Delaney <idella4@gentoo.org> +jenkins-webapi-0.4.0-r1.ebuild,
+  -jenkins-webapi-0.4.0.ebuild:
+  revbump; update current release with updated tarball of same name stored in
+  separate location supplying a working test phase and doc build, remove
+  0.4.0.ebuild to ensure no confusion from disparate tarballs
 
 *jenkins-webapi-0.4.0 (29 Jan 2015)
 *jenkins-webapi-0.3.2 (29 Jan 2015)

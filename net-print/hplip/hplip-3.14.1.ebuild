@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.1.ebuild,v 1.11 2015/01/03 20:03:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.1.ebuild,v 1.12 2015/01/30 12:48:55 billie Exp $
 
 EAPI=5
 
@@ -258,5 +258,10 @@ pkg_postinst() {
 		elog "https://wiki.gentoo.org/wiki/Printing"
 		elog
 		elog "Any user who wants to print must be in the lp group."
+		elog
+		elog "Please note: Printers requiring a binary plugin are currently"
+		elog "not supported. All bugs regarding the plugin are most likely"
+		elog "closed. A bug about including the plugin package to gentoo is"
+		elog "available here: https://bugs.gentoo.org/352439"
 	fi
 }
