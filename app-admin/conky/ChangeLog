@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.224 2015/01/26 07:51:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.225 2015/01/30 10:45:56 billie Exp $
+
+  30 Jan 2015; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0-r3.ebuild:
+  Update doc URL in elog as suggested by a3li. Fixes bug #534458.
 
   26 Jan 2015; Jeroen Roovers <jer@gentoo.org>
   files/conky-1.9.0-diskio-dmmajor.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r3.ebuild,v 1.11 2014/10/28 20:54:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r3.ebuild,v 1.12 2015/01/30 10:45:56 billie Exp $
 
 EAPI=5
 
@@ -139,7 +139,7 @@ pkg_postinst() {
 		elog "There are pretty html docs available at the conky homepage"
 		elog "or in ${ROOT%/}/usr/share/doc/${PF}/html."
 		elog
-		elog "Also see http://www.gentoo.org/doc/en/conky-howto.xml"
+		elog "Also see https://wiki.gentoo.org/wiki/Conky/HOWTO"
 		elog
 	fi
 }
