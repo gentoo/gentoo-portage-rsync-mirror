@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdbusmenu-qt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.38 2014/10/15 13:48:57 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.39 2015/01/30 20:40:55 johu Exp $
+
+  30 Jan 2015; Johannes Huber <johu@gentoo.org>
+  libdbusmenu-qt-0.9.3_pre20140619.ebuild:
+  Shorten pkg setup.
 
   15 Oct 2014; Michael Palimaka <kensington@gentoo.org>
   +files/libdbusmenu-qt-0.9.3_pre20140619-optionaltests.patch:

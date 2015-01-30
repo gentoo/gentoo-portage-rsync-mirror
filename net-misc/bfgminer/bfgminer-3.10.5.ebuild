@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.10.5.ebuild,v 1.3 2014/07/23 16:54:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.10.5.ebuild,v 1.4 2015/01/30 20:53:36 blueness Exp $
 
 EAPI=5
 
@@ -80,14 +80,7 @@ RDEPEND="${DEPEND}
 	opencl? (
 		|| (
 			virtual/opencl
-			virtual/opencl-sdk
-			dev-util/ati-stream-sdk
-			dev-util/ati-stream-sdk-bin
-			dev-util/amdstream
-			dev-util/amd-app-sdk
-			dev-util/amd-app-sdk-bin
 			dev-util/nvidia-cuda-sdk[opencl]
-			dev-util/intel-opencl-sdk
 		)
 	)
 "

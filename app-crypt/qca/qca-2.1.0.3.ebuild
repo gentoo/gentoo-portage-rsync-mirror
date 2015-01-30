@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.2 2015/01/29 03:32:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.3 2015/01/30 21:00:35 johu Exp $
 
 EAPI=5
 
@@ -60,14 +60,7 @@ qca_plugin_use() {
 }
 
 pkg_setup() {
-	MULTIBUILD_VARIANTS=()
-	if use qt4; then
-		MULTIBUILD_VARIANTS+=(qt4)
-	fi
-
-	if use qt5; then
-		MULTIBUILD_VARIANTS+=(qt5)
-	fi
+	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
 }
 
 src_configure() {
