@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/efitools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/efitools/ChangeLog,v 1.7 2014/03/15 19:48:06 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/efitools/ChangeLog,v 1.8 2015/01/30 09:21:05 pinkbyte Exp $
+
+  30 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> efitools-1.4.1.ebuild,
+  efitools-1.4.1-r1.ebuild, efitools-1.4.1-r2.ebuild, efitools-1.4.2.ebuild,
+  efitools-1.4.2-r1.ebuild:
+  QA: Fix HOMEPAGE, wrt bug #501148
 
   15 Mar 2014; Mike Frysinger <vapier@gentoo.org> efitools-1.4.2-r1.ebuild:
   Require a recent version of gnu-efi #487580 by Frank Krömmelbein.

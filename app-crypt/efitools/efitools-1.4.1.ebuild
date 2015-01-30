@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/efitools/efitools-1.4.1.ebuild,v 1.2 2013/09/10 03:42:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/efitools/efitools-1.4.1.ebuild,v 1.3 2015/01/30 09:21:05 pinkbyte Exp $
 
 EAPI="4"
 
 DESCRIPTION="Tools for manipulating UEFI secure boot platforms"
-HOMEPAGE="git://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git"
+HOMEPAGE="https://git.kernel.org/cgit/linux/kernel/git/jejb/efitools.git"
 SRC_URI="https://build.opensuse.org/package/rawsourcefile/home:jejb1:UEFI/efitools/efitools-${PV}.tar.gz"
 
 LICENSE="GPL-2"
