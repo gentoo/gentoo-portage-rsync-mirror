@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/hashtables-1.1.2.1.ebuild,v 1.6 2014/02/02 11:13:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/hashtables-1.1.2.1.ebuild,v 1.7 2015/01/30 18:00:07 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 sparc x86"
-IUSE="bounds-checking debug portable sse4_1 +unsafe-tricks"
+IUSE="bounds-checking debug portable cpu_flags_x86_sse4_1 +unsafe-tricks"
 
 RDEPEND="dev-haskell/primitive:=[profile?]
 	>=dev-haskell/vector-0.7:=[profile?] <dev-haskell/vector-0.12:=[profile?]
@@ -33,6 +33,6 @@ src_configure() {
 		$(cabal_flag bounds-checking bounds-checking) \
 		$(cabal_flag debug debug) \
 		$(cabal_flag portable portable) \
-		$(cabal_flag sse4_1 sse41) \
+		$(cabal_flag cpu_flags_x86_sse4_1 sse41) \
 		$(cabal_flag unsafe-tricks unsafe-tricks)
 }

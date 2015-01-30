@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/hashable-1.2.3.1.ebuild,v 1.1 2014/12/23 04:05:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/hashable-1.2.3.1.ebuild,v 1.2 2015/01/30 17:55:27 mgorny Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+gmp +sse2 sse4_1"
+IUSE="+gmp +cpu_flags_x86_sse2 cpu_flags_x86_sse4_1"
 
 RDEPEND=">=dev-haskell/text-0.11.0.5:=[profile?]
 	>=dev-lang/ghc-7.4.1:=
@@ -36,6 +36,6 @@ DEPEND="${RDEPEND}
 src_configure() {
 	haskell-cabal_src_configure \
 		$(cabal_flag gmp integer-gmp) \
-		$(cabal_flag sse2 sse2) \
-		$(cabal_flag sse4_1 sse41)
+		$(cabal_flag cpu_flags_x86_sse2 sse2) \
+		$(cabal_flag cpu_flags_x86_sse4_1 sse41)
 }

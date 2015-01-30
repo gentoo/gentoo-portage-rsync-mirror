@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-3.1.1.ebuild,v 1.1 2014/08/22 17:43:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-3.1.1.ebuild,v 1.2 2015/01/30 17:34:58 mgorny Exp $
 
 EAPI=5
 inherit multilib versionator
@@ -12,7 +12,7 @@ SRC_URI="mirror://nongnu/${PN}/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-_IUSE_INSTRUCTION_SETS="3dnow avx sse sse2 sse3 sse4"
+_IUSE_INSTRUCTION_SETS="cpu_flags_x86_3dnow cpu_flags_x86_avx cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_sse4_1"
 IUSE="${_IUSE_INSTRUCTION_SETS} audacious forcefpu jack openmp plugdouble threads"
 
 _GTK_DEPEND=">=dev-libs/glib-2.4.7:2
@@ -40,12 +40,12 @@ src_configure() {
 		$(use_enable threads pthread) \
 		$(use_enable forcefpu) \
 		--disable-force3dnow \
-		$(use_enable 3dnow) \
-		$(use_enable sse) \
-		$(use_enable sse2) \
-		$(use_enable sse3) \
-		$(use_enable sse4) \
-		$(use_enable avx) \
+		$(use_enable cpu_flags_x86_3dnow 3dnow) \
+		$(use_enable cpu_flags_x86_sse sse) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
+		$(use_enable cpu_flags_x86_sse3 sse3) \
+		$(use_enable cpu_flags_x86_sse4_1 sse4) \
+		$(use_enable cpu_flags_x86_avx avx) \
 		--disable-fma \
 		--disable-fma4 \
 		$(use_enable openmp omp) \

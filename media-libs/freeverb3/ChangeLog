@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeverb3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.43 2014/11/07 23:19:18 sping Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.44 2015/01/30 17:34:58 mgorny Exp $
+
+  30 Jan 2015; Michał Górny <mgorny@gentoo.org> freeverb3-2.5.13-r2.ebuild,
+  freeverb3-2.6.6.ebuild, freeverb3-3.1.1.ebuild, metadata.xml:
+  Convert to CPU_FLAGS_X86.
 
   07 Nov 2014; Sebastian Pipping <sping@gentoo.org> -freeverb3-3.0.0.ebuild,
   -freeverb3-3.0.2.ebuild, -freeverb3-3.1.0.ebuild:
@@ -232,4 +236,3 @@
   +freeverb3-2.3.0.ebuild:
   Initial commit. Ebuild by proxied maintainer Sebastian Pipping, based on
   the one in gentoojp overlay. See bug 158991.
-

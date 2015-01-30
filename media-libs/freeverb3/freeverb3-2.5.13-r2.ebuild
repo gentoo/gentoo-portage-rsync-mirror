@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.5.13-r2.ebuild,v 1.4 2011/06/20 00:41:22 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.5.13-r2.ebuild,v 1.5 2015/01/30 17:34:58 mgorny Exp $
 
 EAPI=2
 inherit eutils autotools versionator
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="audacious jack plugdouble sse sse2 sse3 sse4 3dnow forcefpu"
+IUSE="audacious jack plugdouble cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_sse4_1 cpu_flags_x86_3dnow forcefpu"
 
 RDEPEND=">=sci-libs/fftw-3.0.1
 	audacious? ( <media-sound/audacious-2.5
@@ -40,11 +40,11 @@ src_configure() {
 		$(use_enable audacious) \
 		$(use_enable jack) \
 		$(use_enable plugdouble) \
-		$(use_enable 3dnow) \
-		$(use_enable sse) \
-		$(use_enable sse2) \
-		$(use_enable sse3) \
-		$(use_enable sse4) \
+		$(use_enable cpu_flags_x86_3dnow 3dnow) \
+		$(use_enable cpu_flags_x86_sse sse) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
+		$(use_enable cpu_flags_x86_sse3 sse3) \
+		$(use_enable cpu_flags_x86_sse4_1 sse4) \
 		$(use_enable forcefpu) \
 		|| die "econf failed"
 }
