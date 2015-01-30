@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.7_p20131113.ebuild,v 1.2 2014/11/12 20:31:56 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/porticron-0.7_p20131113.ebuild,v 1.3 2015/01/30 08:21:57 pinkbyte Exp $
 
 EAPI="5"
 
@@ -15,7 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND="net-dns/bind-tools"
+RDEPEND="
+	app-portage/gentoolkit
+	net-dns/bind-tools
+"
 DEPEND=""
 
 src_install() {
