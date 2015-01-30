@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/compass
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/ChangeLog,v 1.5 2014/10/07 12:33:51 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/compass/ChangeLog,v 1.6 2015/01/30 06:51:07 graaff Exp $
+
+*compass-1.0.3 (30 Jan 2015)
+
+  30 Jan 2015; Hans de Graaff <graaff@gentoo.org> +compass-1.0.3.ebuild:
+  Version bump.
 
 *compass-1.0.1-r1 (07 Oct 2014)
 
