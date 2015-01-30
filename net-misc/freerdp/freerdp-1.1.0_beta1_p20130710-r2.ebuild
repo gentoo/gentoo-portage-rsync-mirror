@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710-r2.ebuild,v 1.4 2015/01/29 21:48:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710-r2.ebuild,v 1.6 2015/01/30 19:52:27 floppym Exp $
 
 EAPI="5"
 
