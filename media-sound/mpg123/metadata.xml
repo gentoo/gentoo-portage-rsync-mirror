@@ -9,7 +9,6 @@
     </maintainer>
   </upstream>
   <use>
-    <flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
     <flag name="int-quality">Use rounding instead of fast truncation for integer output, where possible</flag>
   </use>
 </pkgmetadata>
