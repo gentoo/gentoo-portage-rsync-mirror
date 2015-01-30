@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r3.ebuild,v 1.10 2014/10/08 12:08:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r3.ebuild,v 1.11 2015/01/30 05:32:17 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib
@@ -12,7 +12,7 @@ SRC_URI="https://www.bitbucket.org/france/${PN}-tcforge/downloads/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-IUSE="3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl sse sse2 theora truetype v4l vorbis X x264 xml xvid"
+IUSE="cpu_flags_x86_3dnow a52 aac alsa altivec dv dvd +iconv imagemagick jpeg lzo mjpeg cpu_flags_x86_mmx mp3 mpeg nuv ogg oss pic postproc quicktime sdl cpu_flags_x86_sse cpu_flags_x86_sse2 theora truetype v4l vorbis X x264 xml xvid"
 
 RDEPEND="
 	>=virtual/ffmpeg-0.10
@@ -49,9 +49,9 @@ DEPEND="
 	"
 
 REQUIRED_USE="
-	sse? ( mmx )
-	sse2? ( mmx sse )
-	3dnow? ( mmx )
+	cpu_flags_x86_sse? ( cpu_flags_x86_mmx )
+	cpu_flags_x86_sse2? ( cpu_flags_x86_mmx cpu_flags_x86_sse )
+	cpu_flags_x86_3dnow? ( cpu_flags_x86_mmx )
 	nuv? ( lzo )
 	"
 
@@ -75,10 +75,10 @@ src_configure() {
 	use x86 && myconf="$(use_enable !pic x86-textrels)" #271476
 
 	econf \
-		$(use_enable mmx) \
-		$(use_enable 3dnow) \
-		$(use_enable sse) \
-		$(use_enable sse2) \
+		$(use_enable cpu_flags_x86_mmx mmx) \
+		$(use_enable cpu_flags_x86_3dnow 3dnow) \
+		$(use_enable cpu_flags_x86_sse sse) \
+		$(use_enable cpu_flags_x86_sse2 sse2) \
 		$(use_enable altivec) \
 		$(use_enable v4l libv4l2) \
 		$(use_enable v4l libv4lconvert) \
