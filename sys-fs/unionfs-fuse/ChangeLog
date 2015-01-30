@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/unionfs-fuse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.10 2015/01/11 21:01:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs-fuse/ChangeLog,v 1.11 2015/01/30 18:37:06 sping Exp $
+
+*unionfs-fuse-1.0 (30 Jan 2015)
+
+  30 Jan 2015; Sebastian Pipping <sping@gentoo.org> +unionfs-fuse-1.0.ebuild:
+  Bump to 1.0
 
 *unionfs-fuse-9999 (11 Jan 2015)
 
