@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.9.ebuild,v 1.3 2014/10/22 14:00:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblastfm/liblastfm-1.0.9.ebuild,v 1.4 2015/01/30 21:24:53 johu Exp $
 
 EAPI=5
 
@@ -49,13 +49,7 @@ RDEPEND="${COMMON_DEPEND}
 RESTRICT="test"
 
 pkg_setup() {
-	MULTIBUILD_VARIANTS=()
-	if use qt4; then
-		MULTIBUILD_VARIANTS+=(qt4)
-	fi
-	if use qt5; then
-		MULTIBUILD_VARIANTS+=(qt5)
-	fi
+	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
 }
 
 src_configure() {

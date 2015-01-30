@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qtkeychain/qtkeychain-0.4.0.ebuild,v 1.1 2014/09/19 17:55:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qtkeychain/qtkeychain-0.4.0.ebuild,v 1.2 2015/01/30 21:06:07 johu Exp $
 
 EAPI=5
 
@@ -34,13 +34,7 @@ DEPEND="${RDEPEND}
 DOCS=( ChangeLog ReadMe.txt )
 
 pkg_setup() {
-	MULTIBUILD_VARIANTS=()
-	if use qt4; then
-		MULTIBUILD_VARIANTS+=(qt4)
-	fi
-	if use qt5; then
-		MULTIBUILD_VARIANTS+=(qt5)
-	fi
+	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
 }
 
 src_configure() {
@@ -61,10 +55,10 @@ src_compile() {
 	multibuild_foreach_variant cmake-utils_src_compile
 }
 
-src_install() {
-	multibuild_foreach_variant cmake-utils_src_install
-}
-
 src_test() {
 	multibuild_foreach_variant cmake-utils_src_test
+}
+
+src_install() {
+	multibuild_foreach_variant cmake-utils_src_install
 }
