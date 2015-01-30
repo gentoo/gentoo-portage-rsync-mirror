@@ -3,11 +3,11 @@ DEPEND=>=virtual/ffmpeg-0.10.2-r1
 DESCRIPTION=Video post processing library
 EAPI=4
 HOMEPAGE=https://github.com/dwbuiten/postproc
-IUSE=pic static-libs 3dnow altivec mmx mmxext
+IUSE=pic static-libs cpu_flags_x86_3dnow altivec cpu_flags_x86_mmx cpu_flags_x86_mmxext
 KEYWORDS=alpha amd64 arm ~hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=>=virtual/ffmpeg-0.10.2-r1 !<media-video/libav-0.8.2-r2 !media-video/ffmpeg:0
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~lu_zero/distfiles/libpostproc-0.8.0.20121125.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=7fc6abf9594725e83a1b14810d997962
+_md5_=71ceb1a93146fa55acf6f7529888e4e8

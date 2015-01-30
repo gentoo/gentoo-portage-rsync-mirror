@@ -1,6 +1,12 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.238 2015/01/20 23:10:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.239 2015/01/30 16:57:31 mgorny Exp $
+
+  30 Jan 2015; Michał Górny <mgorny@gentoo.org> libav-10.5.ebuild,
+  libav-10.9999.ebuild, libav-11.1.ebuild, libav-11.2.ebuild,
+  libav-11.9999.ebuild, libav-11.ebuild, libav-9.14.ebuild, libav-9.17.ebuild,
+  libav-9999.ebuild, metadata.xml:
+  Convert to CPU_FLAGS_X86.
 
 *libav-11.2 (20 Jan 2015)
 

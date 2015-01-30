@@ -1,6 +1,10 @@
 # ChangeLog for lxqt-base/lxqt-meta
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.5 2014/11/08 17:54:51 jauhien Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.6 2015/01/30 16:32:19 kensington Exp $
+
+  30 Jan 2015; Michael Palimaka <kensington@gentoo.org>
+  lxqt-meta-0.7.0-r1.ebuild, lxqt-meta-0.8.0.ebuild:
+  Update SRC_URI by Michael Vetter <g.bluehut@gmail.com> wrt bug #537032.
 
 *lxqt-meta-0.8.0 (08 Nov 2014)
 

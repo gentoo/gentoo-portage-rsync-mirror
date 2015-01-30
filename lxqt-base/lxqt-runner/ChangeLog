@@ -1,6 +1,10 @@
 # ChangeLog for lxqt-base/lxqt-runner
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-runner/ChangeLog,v 1.6 2014/11/08 17:32:20 jauhien Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-runner/ChangeLog,v 1.7 2015/01/30 16:32:19 kensington Exp $
+
+  30 Jan 2015; Michael Palimaka <kensington@gentoo.org>
+  lxqt-runner-0.7.0-r1.ebuild, lxqt-runner-0.8.0.ebuild:
+  Update SRC_URI by Michael Vetter <g.bluehut@gmail.com> wrt bug #537032.
 
 *lxqt-runner-0.8.0 (08 Nov 2014)
 
