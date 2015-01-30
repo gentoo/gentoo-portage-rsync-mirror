@@ -1,6 +1,11 @@
 # ChangeLog for the default/linux/uclibc profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/ChangeLog,v 1.5 2015/01/28 21:39:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/ChangeLog,v 1.6 2015/01/30 22:06:52 blueness Exp $
+
+  30 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  uclibc/amd64/make.defaults, uclibc/x86/make.defaults:
+  Unhide the CPU_FLAGS_X86 USE_EXPANDs, mirror change from
+  arch/{amd64,x86}/make.defaults.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> amd64/use.mask, x86/use.mask:
   Unmask CPU_FLAGS_X86.

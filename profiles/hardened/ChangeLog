@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.76 2015/01/28 21:41:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.77 2015/01/30 22:04:37 blueness Exp $
+
+  30 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/x86/make.defaults:
+  musl: unhide the CPU_FLAGS_X86 USE_EXPANDs, mirror change from
+  arch/{amd64,x86}/make.defaults.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> linux/musl/amd64/use.mask,
   linux/musl/x86/use.mask:

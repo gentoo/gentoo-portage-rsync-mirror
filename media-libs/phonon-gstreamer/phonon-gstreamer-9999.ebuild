@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.21 2014/09/09 17:19:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.22 2015/01/30 22:07:32 johu Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ inherit cmake-utils multibuild ${git_eclass}
 
 DESCRIPTION="Phonon GStreamer backend"
 HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-gstreamer"
-[[ ${PV} == *9999 ]] || SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/${MY_P}.tar.xz"
+[[ ${PV} == *9999 ]] || SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/src/${MY_P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 if [[ ${PV} == *9999 ]]; then
@@ -55,13 +55,7 @@ DEPEND="${RDEPEND}
 [[ ${PV} == 9999 ]] || S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	MULTIBUILD_VARIANTS=()
-	if use qt4; then
-		MULTIBUILD_VARIANTS+=(qt4)
-	fi
-	if use qt5; then
-		MULTIBUILD_VARIANTS+=(qt5)
-	fi
+	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
 }
 
 src_configure() {
@@ -83,10 +77,10 @@ src_compile() {
 	multibuild_foreach_variant cmake-utils_src_compile
 }
 
-src_install() {
-	multibuild_foreach_variant cmake-utils_src_install
-}
-
 src_test() {
 	multibuild_foreach_variant cmake-utils_src_test
+}
+
+src_install() {
+	multibuild_foreach_variant cmake-utils_src_install
 }

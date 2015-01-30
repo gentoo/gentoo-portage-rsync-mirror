@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.5.ebuild,v 1.1 2014/09/15 16:41:59 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.5.ebuild,v 1.2 2015/01/30 22:24:22 johu Exp $
 
 EAPI=5
 
@@ -52,13 +52,7 @@ RESTRICT="test"
 
 pkg_setup() {
 	python-any-r1_pkg_setup
-	MULTIBUILD_VARIANTS=()
-	if use qt4; then
-		MULTIBUILD_VARIANTS+=(qt4)
-	fi
-	if use qt5; then
-		MULTIBUILD_VARIANTS+=(qt5)
-	fi
+	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
 }
 
 src_configure() {
@@ -86,10 +80,6 @@ src_compile() {
 	multibuild_foreach_variant cmake-utils_src_compile
 }
 
-src_install() {
-	multibuild_foreach_variant cmake-utils_src_install
-}
-
 src_test() {
 	mytest() {
 		pushd "${BUILD_DIR}" > /dev/null
@@ -98,4 +88,8 @@ src_test() {
 	}
 
 	multibuild_foreach_variant mytest
+}
+
+src_install() {
+	multibuild_foreach_variant cmake-utils_src_install
 }

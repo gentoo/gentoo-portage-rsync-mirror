@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/phonon-gstreamer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.60 2014/12/11 12:17:14 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/ChangeLog,v 1.61 2015/01/30 22:07:32 johu Exp $
+
+*phonon-gstreamer-4.8.2 (30 Jan 2015)
+
+  30 Jan 2015; Johannes Huber <johu@gentoo.org> +phonon-gstreamer-4.8.2.ebuild,
+  -phonon-gstreamer-4.8.0.ebuild, -phonon-gstreamer-4.8.1.ebuild,
+  phonon-gstreamer-9999.ebuild:
+  Version bump, remove old.
 
 *phonon-gstreamer-4.8.1 (11 Dec 2014)
 

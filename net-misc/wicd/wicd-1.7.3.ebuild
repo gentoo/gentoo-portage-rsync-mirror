@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.3.ebuild,v 1.1 2015/01/19 12:32:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.3.ebuild,v 1.2 2015/01/30 22:05:10 tomka Exp $
 
 EAPI=5
 
@@ -65,6 +65,8 @@ src_prepare() {
 	# Upstream bug https://bugs.launchpad.net/wicd/+bug/1412413
 	# Creates files -> give -p
 	epatch -p1 "${FILESDIR}"/${P}-add-missing-gnome-shell-extension.patch
+	# If LANG is undefined, build can fail (bug 537202)
+	epatch "${FILESDIR}"/${P}-undefined-LANG.patch
 	# get rid of opts variable to fix bug 381885
 	sed -i "/opts/d" "in/init=gentoo=wicd.in" || die
 	# Need to ensure that generated scripts use Python 2 at run time.
@@ -98,7 +100,7 @@ src_configure() {
 	use ncurses || myconf="${myconf} --no-install-ncurses"
 	use pm-utils || myconf="${myconf} --no-install-pmutils"
 	use gnome-shell || myconf="${myconf} --no-install-gnome-shell-extensions"
-	python_export_best
+	python_setup
 	"${EPYTHON}" ./setup.py configure --no-install-docs \
 		--resume=/usr/share/wicd/scripts/ \
 		--suspend=/usr/share/wicd/scripts/ \
