@@ -1,6 +1,11 @@
 # ChangeLog for the default/linux profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/ChangeLog,v 1.6 2015/01/05 19:05:23 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/ChangeLog,v 1.7 2015/01/30 21:59:36 blueness Exp $
+
+  30 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
+  uclibc/amd64/make.defaults, uclibc/x86/make.defaults:
+  Unhide the CPU_FLAGS_X86 USE_EXPANDs, mirror change from
+  arch/{amd64,x86}/make.defaults.
 
   05 Jan 2015; William Hubbs <williamh@gentoo.org> packages:
   Add iproute2 to system set for bug #189149

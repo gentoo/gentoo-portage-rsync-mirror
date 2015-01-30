@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.188 2015/01/28 21:33:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.189 2015/01/30 21:48:00 mgorny Exp $
+
+  30 Jan 2015; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Hide CPU_FLAGS_X86 everywhere but on amd64 & x86.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Update package.use.* entries for CPU_FLAGS_X86. Keep duplicate with old flags

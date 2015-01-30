@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.120 2015/01/28 18:59:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.121 2015/01/30 21:48:00 mgorny Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -20,7 +20,7 @@ USE_EXPAND="ABI_MIPS ABI_PPC ABI_S390 ABI_X86 ALSA_CARDS APACHE2_MODULES APACHE2
 
 # USE_EXPAND variables whose contents are not shown in package manager
 # output. Changes need discussion on gentoo-dev.
-USE_EXPAND_HIDDEN="USERLAND KERNEL ELIBC CROSSCOMPILE_OPTS ABI_MIPS ABI_PPC ABI_S390 ABI_X86"
+USE_EXPAND_HIDDEN="USERLAND KERNEL ELIBC CROSSCOMPILE_OPTS ABI_MIPS ABI_PPC ABI_S390 ABI_X86 CPU_FLAGS_X86"
 
 CONFIG_PROTECT="/etc"
 CONFIG_PROTECT_MASK="/etc/env.d /etc/gconf"
