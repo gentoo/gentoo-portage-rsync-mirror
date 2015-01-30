@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/sdlmess-0.149.ebuild,v 1.2 2014/05/15 16:40:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/sdlmess-0.149.ebuild,v 1.3 2015/01/30 18:25:58 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -25,8 +25,8 @@ fi
 
 LICENSE="XMAME"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="X alsa debug opengl"
+KEYWORDS="~amd64 ~x86"
+IUSE="X debug opengl"
 REQUIRED_USE="debug? ( X )"
 
 RDEPEND=">=dev-lang/lua-5.2
@@ -37,7 +37,7 @@ RDEPEND=">=dev-lang/lua-5.2
 	media-libs/sdl-ttf
 	sys-libs/zlib
 	virtual/jpeg
-	alsa? ( media-libs/alsa-lib )
+	media-libs/portmidi
 	debug? (
 		x11-libs/gtk+:2
 		gnome-base/gconf
@@ -96,12 +96,13 @@ src_prepare() {
 		"${FILESDIR}"/${P}-debugger-linking.patch
 
 	# Don't compile zlib and expat
-	einfo "Disabling embedded libraries: expat, flac, jpeg, zlib, lua"
+	einfo "Disabling embedded libraries: expat, flac, jpeg, lua, portmidi, zlib"
 	disable_feature BUILD_EXPAT
 	disable_feature BUILD_FLAC
 	disable_feature BUILD_JPEG
-	disable_feature BUILD_ZLIB
 	disable_feature BUILD_LUA
+	disable_feature BUILD_MIDILIB
+	disable_feature BUILD_ZLIB
 
 	if use amd64; then
 		einfo "Enabling 64-bit support"
@@ -124,11 +125,6 @@ src_prepare() {
 	if ! use opengl ; then
 		einfo "Disabling opengl support"
 		enable_feature NO_OPENGL src/osd/sdl/sdl.mak
-	fi
-
-	if ! use alsa ; then
-		einfo "Disabling alsa midi support"
-		enable_feature NO_USE_MIDI src/osd/sdl/sdl.mak
 	fi
 
 	if ! use X ; then

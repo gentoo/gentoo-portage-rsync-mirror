@@ -5646,6 +5646,7 @@ net-misc/dahdi:flash - Support (short) flash on FXS
 net-misc/dahdi-tools:ppp - Enables PPP/DAHDIRAS support
 net-misc/dhcp:client - Install the dhclient program
 net-misc/dhcp:server - Install the dhcpd and dhcrelay programs
+net-misc/dhcpcd:embedded - Embed the definitions of dhcp options in the dhcpcd executable
 net-misc/dhcpcd-ui:gtk3 - Add support for x11-libs/gtk+ (The GIMP Toolkit)
 net-misc/directvnc:dmalloc - Enable debugging with the dmalloc library
 net-misc/directvnc:mouse - Adds mouse support

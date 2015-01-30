@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/sdlmess
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/ChangeLog,v 1.5 2014/05/15 16:40:37 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/ChangeLog,v 1.6 2015/01/30 18:25:58 mr_bones_ Exp $
+
+  30 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> sdlmess-0.148_p1.ebuild,
+  sdlmess-0.149.ebuild:
+  remove alsa use flag (bug #514600); use system portmidi lib; drop ppc until
+  portmidi is keyworded
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> sdlmess-0.148_p1.ebuild,
   sdlmess-0.149.ebuild:
