@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.925 2015/01/26 13:53:45 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.926 2015/01/30 05:25:45 mgorny Exp $
+
+  30 Jan 2015; Michał Górny <mgorny@gentoo.org> vlc-2.1.2.ebuild,
+  vlc-2.1.4.ebuild, vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild, vlc-2.2.9999.ebuild,
+  vlc-9999.ebuild:
+  Convert to CPU_FLAGS_X86.
 
   26 Jan 2015; Yixun Lan <dlan@gentoo.org> vlc-2.1.2.ebuild, vlc-2.1.4.ebuild,
   vlc-2.1.5.ebuild, vlc-2.1.9999.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:

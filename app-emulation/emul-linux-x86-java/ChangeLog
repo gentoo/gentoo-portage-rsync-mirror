@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.148 2015/01/28 10:41:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.149 2015/01/30 05:23:36 ercpe Exp $
+
+  30 Jan 2015; Johann Schmitz <ercpe@gentoo.org>
+  -emul-linux-x86-java-1.7.0.71.ebuild, -emul-linux-x86-java-1.7.0.72.ebuild:
+  Removed vulnerable versions (#537214)
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
   emul-linux-x86-java-1.7.0.76.ebuild:
