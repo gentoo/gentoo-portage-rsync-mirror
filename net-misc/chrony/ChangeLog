@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/chrony
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.148 2014/11/05 11:24:29 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.149 2015/01/30 11:26:16 jer Exp $
+
+*chrony-1.31-r1 (30 Jan 2015)
+
+  30 Jan 2015; Jeroen Roovers <jer@gentoo.org> +chrony-1.31-r1.ebuild:
+  Fix configure logic with regard to readline/libedit (bug #538190 by Brian
+  Evans).
 
   05 Nov 2014; Jeroen Roovers <jer@gentoo.org> -chrony-1.30-r1.ebuild,
   -files/chronyd.service, -files/chronyd.service-r1:
