@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/columnize
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.36 2014/12/07 12:24:09 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.37 2015/01/31 17:23:48 graaff Exp $
+
+  31 Jan 2015; Hans de Graaff <graaff@gentoo.org> columnize-0.9.0.ebuild:
+  Add ruby22.
 
 *columnize-0.9.0 (07 Dec 2014)
 

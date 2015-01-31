@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/creole
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/creole/ChangeLog,v 1.1 2014/05/30 01:46:15 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/creole/ChangeLog,v 1.2 2015/01/31 17:29:28 graaff Exp $
+
+  31 Jan 2015; Hans de Graaff <graaff@gentoo.org> creole-0.5.0.ebuild:
+  Add ruby22.
 
 *creole-0.5.0 (30 May 2014)
 

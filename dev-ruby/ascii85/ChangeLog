@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ascii85
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.26 2014/10/29 21:03:45 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.27 2015/01/31 17:09:27 graaff Exp $
+
+  31 Jan 2015; Hans de Graaff <graaff@gentoo.org> ascii85-1.0.2-r2.ebuild:
+  Add ruby22.
 
   29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -ascii85-1.0.2-r1.ebuild,
   ascii85-1.0.2-r2.ebuild:
