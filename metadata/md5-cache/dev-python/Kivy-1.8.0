@@ -10,5 +10,5 @@ RDEPEND=dev-python/cython garden? ( dev-python/kivy-garden ) gstreamer? ( dev-py
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=mirror://pypi/K/Kivy/Kivy-1.8.0.tar.gz
-_eclasses_=distutils-r1	5cf77567a87c3a6f59d6a51848ebde98	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils-r1	f810ae4ac7e5c3db4ff72db46e3c40d1	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=fa3d62b98f778b6cb71b9c0bd17f0b38

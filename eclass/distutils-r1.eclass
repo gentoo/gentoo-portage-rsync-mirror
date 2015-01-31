@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.109 2015/01/13 21:34:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.110 2015/01/31 02:49:39 patrick Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -754,11 +754,18 @@ distutils-r1_src_compile() {
 	fi
 }
 
+_clean_egg_info() {
+	# Work around for setuptools test behavior (bug 534058).
+	# https://bitbucket.org/pypa/setuptools/issue/292
+	rm -rf "${BUILD_DIR}"/lib/*.egg-info
+}
+
 distutils-r1_src_test() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	if declare -f python_test >/dev/null; then
 		_distutils-r1_run_foreach_impl python_test
+		_distutils-r1_run_foreach_impl _clean_egg_info
 	fi
 
 	if declare -f python_test_all >/dev/null; then

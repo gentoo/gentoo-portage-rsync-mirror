@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.6 2012/03/04 15:44:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.7 2015/01/31 02:33:23 patrick Exp $
 
 EAPI="3"
 
@@ -29,9 +29,9 @@ KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 IUSE="lto test"
 
 RDEPEND="sys-devel/binutils-config
-	lto? ( sys-devel/llvm )
-	test? ( >=dev-lang/perl-5.8.8 )"
+	lto? ( sys-devel/llvm )"
 DEPEND="${RDEPEND}
+	test? ( >=dev-lang/perl-5.8.8 )
 	>=sys-devel/gcc-apple-4.2.1"
 
 export CTARGET=${CTARGET:-${CHOST}}
@@ -184,7 +184,7 @@ src_configure() {
 		LTO=0
 	fi
 	append-cppflags -DNDEBUG
-	append-cppflags -I${WORKDIR}/libunwind/include
+	append-cppflags -I"${WORKDIR}"/libunwind/include
 }
 
 compile_libunwind() {

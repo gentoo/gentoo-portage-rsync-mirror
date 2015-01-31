@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.ebuild,v 1.8 2012/08/10 09:19:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-3.2.ebuild,v 1.9 2015/01/31 02:33:23 patrick Exp $
 
 EAPI="3"
 
@@ -25,9 +25,9 @@ KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 IUSE="test"
 SLOT="0"
 
-DEPEND="sys-devel/binutils-config
+RDEPEND="sys-devel/binutils-config"
+DEPEND="${RDEPEND}
 	test? ( >=dev-lang/perl-5.8.8 )"
-RDEPEND="${DEPEND}"
 
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then

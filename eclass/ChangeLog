@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1517 2015/01/29 09:59:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1518 2015/01/31 02:49:39 patrick Exp $
+
+  31 Jan 2015; Patrick Lauer <patrick@gentoo.org> distutils-r1.eclass:
+  Fix for setuptools failures #534058 etc.
 
   29 Jan 2015; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
   Drop support for eapi0 and 1 (#530046)
