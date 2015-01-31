@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1484 2015/01/31 00:21:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1485 2015/01/31 00:44:09 mpagano Exp $
+
+  31 Jan 2015; Michael Pagano <mpagano@gentoo.org>
+  -gentoo-sources-3.17.7.ebuild, gentoo-sources-3.17.8-r1.ebuild:
+  Auto stabilize last version of 3.17.X. Remove old
 
   31 Jan 2015; Markos Chandras <hwoarang@gentoo.org>
   gentoo-sources-3.10.63.ebuild, gentoo-sources-3.12.35.ebuild,
