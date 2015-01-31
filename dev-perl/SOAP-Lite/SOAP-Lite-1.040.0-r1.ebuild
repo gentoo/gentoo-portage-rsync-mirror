@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-1.040.0-r1.ebuild,v 1.1 2014/08/21 19:02:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-1.040.0-r1.ebuild,v 1.2 2015/01/31 21:06:36 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Simple and lightweight interface to the SOAP protocol (sic) both on
 IUSE="jabber ssl"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-linux ~x86-linux"
 
 myconf="${myconf} --noprompt"
 
