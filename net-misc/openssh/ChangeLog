@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/openssh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.542 2014/12/31 07:40:01 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.543 2015/01/31 18:05:34 polynomial-c Exp $
+
+  31 Jan 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -openssh-6.6_p1-r1.ebuild, -openssh-6.6.1_p1-r4.ebuild,
+  -openssh-6.7_p1-r1.ebuild, -openssh-6.7_p1-r2.ebuild,
+  -files/openssh-5.9_p1-sshd-gssapi-multihomed.patch,
+  -files/openssh-6.3_p1-x509-glue.patch,
+  -files/openssh-6.5_p1-hpn-cipher-align.patch,
+  -files/openssh-6.6_p1-openssl-ignore-status.patch,
+  -files/openssh-6.6.1_p1.patch, -files/openssh-6.6_p1-x509-glue.patch,
+  -files/openssh-6.6_p1-x509-hpn14v4-glue-p2.patch:
+  Removed old (and vulnerable) versions.
 
   31 Dec 2014; Mike Frysinger <vapier@gentoo.org> openssh-6.7_p1.ebuild:
   Mark arm64/m68k/s390/sh stable.
