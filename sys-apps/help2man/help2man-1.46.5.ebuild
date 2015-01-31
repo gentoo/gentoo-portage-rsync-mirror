@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.46.3.ebuild,v 1.1 2014/09/22 22:15:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.46.5.ebuild,v 1.1 2015/01/31 10:16:02 polynomial-c Exp $
 
 EAPI=4
 inherit eutils
@@ -24,7 +24,6 @@ DOCS="debian/changelog NEWS README THANKS" #385753
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.36.4-respect-LDFLAGS.patch \
 		"${FILESDIR}"/${PN}-1.46.1-linguas.patch
 }
 
