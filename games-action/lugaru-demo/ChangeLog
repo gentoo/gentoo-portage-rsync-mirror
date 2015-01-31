@@ -1,6 +1,9 @@
 # ChangeLog for games-action/lugaru-demo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.15 2014/06/25 13:46:13 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.16 2015/01/31 17:50:43 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lugaru-demo-1.0c.ebuild:
+  Stable for amd64, wrt bug #537030
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> lugaru-demo-1.0c.ebuild:
   Update multilib dependencies to use the lowest known EAPI 5 or multilib

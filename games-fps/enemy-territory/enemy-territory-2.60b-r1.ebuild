@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b-r1.ebuild,v 1.3 2014/09/17 21:41:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b-r1.ebuild,v 1.4 2015/01/31 17:50:58 ago Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -18,7 +18,7 @@ SRC_URI="mirror://3dgamers/wolfensteinet/et-linux-2.60.x86.run
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE="dedicated"
 RESTRICT="mirror strip"
 

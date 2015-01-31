@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.53 2014/09/17 21:41:22 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.54 2015/01/31 17:50:58 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
+  enemy-territory-2.60b-r1.ebuild:
+  Stable for amd64, wrt bug #535888
 
   17 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
   enemy-territory-2.60b-r1.ebuild:

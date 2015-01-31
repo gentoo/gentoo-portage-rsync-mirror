@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/curb-0.8.6.ebuild,v 1.1 2014/07/23 05:24:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/curb-0.8.6.ebuild,v 1.2 2015/01/31 17:42:19 graaff Exp $
 
 EAPI=5
-# No longer compatible with ruby 1.8
-USE_RUBY="ruby19 ruby20 ruby21"
+
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rake"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
@@ -28,7 +28,7 @@ all_ruby_prepare() {
 
 	# avoid tests making outside network connections
 	rm tests/bug_postfields_crash.rb || die
-	sed -e '/test_easy_http_verbs_must_respond_to_str/askip "needs network"' \
+	sed -e '/test_easy_http_verbs_must_respond_to_str/,/^  end/ s:^:#:' \
 		-i tests/tc_curl_easy.rb || die
 }
 

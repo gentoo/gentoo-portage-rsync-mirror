@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.3.2.ebuild,v 1.1 2015/01/31 08:03:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.3.2.ebuild,v 1.2 2015/01/31 17:43:01 jer Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 	libmount? ( sys-apps/util-linux )
 	nfsdcld? ( >=dev-db/sqlite-3.3 )
 	nfsv4? (
-		<=dev-libs/libevent-2.1
+		dev-libs/libevent
 		>=net-libs/libnfsidmap-0.21-r1
 		kerberos? (
 			>=net-libs/libtirpc-0.2.4-r1[kerberos]

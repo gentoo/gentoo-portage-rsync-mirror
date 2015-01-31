@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1409.ebuild,v 1.2 2014/07/08 17:34:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1409.ebuild,v 1.3 2015/01/31 17:50:28 ago Exp $
 
 EAPI=5
 inherit eutils unpacker multilib games
@@ -13,7 +13,7 @@ SRC_URI="http://treefort.icculus.org/postal2/Postal2STP-FreeMP-linux.tar.bz2
 
 LICENSE="postal2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 RESTRICT="mirror strip"
 

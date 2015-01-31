@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/glxquake-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/ChangeLog,v 1.10 2014/07/07 19:17:50 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/ChangeLog,v 1.11 2015/01/31 17:51:13 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> glxquake-bin-0-r2.ebuild:
+  Stable for amd64, wrt bug #535900
 
 *glxquake-bin-0-r2 (07 Jul 2014)
 
