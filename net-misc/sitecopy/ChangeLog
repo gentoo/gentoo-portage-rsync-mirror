@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/sitecopy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.56 2013/01/15 21:22:22 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.57 2015/01/31 00:21:27 idella4 Exp $
+
+*sitecopy-0.16.6-r1 (31 Jan 2015)
+
+  31 Jan 2015; Ian Delaney <idella4@gentoo.org>
+  +files/sitecopy-0.16.6-01-remote-dynamic-rc.patch,
+  +files/sitecopy-0.16.6-02-french-po-fix.patch,
+  +files/sitecopy-0.16.6-03-wrong-memory-397155.patch,
+  +files/sitecopy-0.16.6-06-sftpdriver.c-fix-for-new-openssh.patch,
+  +files/sitecopy-0.16.6-10-bts410703-preserve-storage-files-sigint.patch,
+  +files/sitecopy-0.16.6-20-bts549721-add-compatibility-for-neon-0.29.0.patch,
+  +files/sitecopy-0.16.6-30-bts320586-manpage-document-sftp.patch,
+  +sitecopy-0.16.6-r1.ebuild, -sitecopy-0.16.6_p3.ebuild:
+  bump subsequent to bug #500070, new patches to match, bump EAPI, removed
+  -0.16.6_p3, all wrt bug #500070
 
   15 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata
