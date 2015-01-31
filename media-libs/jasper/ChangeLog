@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.120 2015/01/25 21:19:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.121 2015/01/31 10:32:10 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> jasper-1.900.1-r9.ebuild:
+  Stable for ppc, wrt bug #537530
 
   25 Jan 2015; Markus Meier <maekke@gentoo.org> jasper-1.900.1-r9.ebuild:
   arm stable, bug #537530

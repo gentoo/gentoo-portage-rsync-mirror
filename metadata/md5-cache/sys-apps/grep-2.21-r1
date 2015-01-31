@@ -4,10 +4,10 @@ DESCRIPTION=GNU regular expression matcher
 EAPI=4
 HOMEPAGE=http://www.gnu.org/software/grep/
 IUSE=nls pcre static
-KEYWORDS=alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-3
 RDEPEND=!static? ( pcre? ( >=dev-libs/libpcre-7.8-r1 ) ) nls? ( virtual/libintl ) virtual/libiconv
 SLOT=0
 SRC_URI=mirror://gnu/grep/grep-2.21.tar.xz mirror://gentoo/grep-2.21.tar.xz http://dev.gentoo.org/~polynomial-c/grep-2.21-heap_buffer_overrun.patch
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=52ab16ddb098e246599a978db4ae1ae8
+_md5_=ec981e81e173c3f1f5a4fbd25b80eb1c
