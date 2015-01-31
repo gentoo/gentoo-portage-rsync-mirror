@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake1-killer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-killer/ChangeLog,v 1.6 2014/04/10 08:00:09 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-killer/ChangeLog,v 1.7 2015/01/31 06:52:37 tupone Exp $
+
+  31 Jan 2015; Tupone Alfredo <tupone@gentoo.org> quake1-killer-2.2z.ebuild:
+  EAPI 5
 
   10 Apr 2014; Ulrich Müller <ulm@gentoo.org> quake1-killer-2.2z.ebuild:
   Fix LICENSE, see killer.txt in zipball, bug 506852.

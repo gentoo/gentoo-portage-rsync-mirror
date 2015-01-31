@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.10 2013/02/25 02:43:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.11 2015/01/31 06:45:53 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="Port of ID's doom to SDL and OpenGL"
@@ -21,6 +21,7 @@ DEPEND="media-libs/libsdl[joystick,video]
 	!<games-fps/lsdldoom-1.5
 	virtual/opengl
 	virtual/glu"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	ebegin "Detecting NVidia GL/prboom bug"
@@ -49,7 +50,6 @@ src_configure() {
 	# will append -march=i686 and crap ... let the user's CFLAGS
 	# handle this ...
 	egamesconf \
-		--disable-dependency-tracking \
 		--enable-gl \
 		--disable-i386-asm \
 		--disable-cpu-opt \
@@ -57,9 +57,10 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
+	emake DESTDIR="${D}" install
 	doman doc/*.{5,6}
-	dodoc AUTHORS NEWS README TODO doc/README.* doc/*.txt
+	dodoc doc/README.* doc/*.txt
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "PrBoom"
 	prepgamesdirs

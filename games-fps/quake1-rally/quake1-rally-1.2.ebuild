@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-rally/quake1-rally-1.2.ebuild,v 1.7 2014/05/10 19:53:43 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-rally/quake1-rally-1.2.ebuild,v 1.8 2015/01/31 06:55:25 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="TC which turns Quake into a Rally racing game"
@@ -33,6 +33,6 @@ src_unpack() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}/quake1"
-	doins -r * || die "doins"
+	doins -r *
 	prepgamesdirs
 }

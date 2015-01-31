@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-teamfortress/quake1-teamfortress-2.9.ebuild,v 1.4 2014/04/10 08:05:05 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-teamfortress/quake1-teamfortress-2.9.ebuild,v 1.5 2015/01/31 06:57:36 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="The classic Team Fortress Quake World mod"
@@ -32,6 +32,6 @@ src_unpack() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}/quake1"
-	doins -r * || die
+	doins -r *
 	prepgamesdirs
 }

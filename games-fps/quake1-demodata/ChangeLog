@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake1-demodata
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.9 2010/07/15 09:00:24 fauli Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-demodata/ChangeLog,v 1.10 2015/01/31 06:50:32 tupone Exp $
+
+  31 Jan 2015; Tupone Alfredo <tupone@gentoo.org> quake1-demodata-1.06.ebuild:
+  EAPI 5
 
   15 Jul 2010; Christian Faulhammer <fauli@gentoo.org>
   quake1-demodata-1.06.ebuild:

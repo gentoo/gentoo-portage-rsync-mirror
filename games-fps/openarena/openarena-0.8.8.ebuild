@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.8.ebuild,v 1.3 2012/07/04 03:16:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.8.ebuild,v 1.4 2015/01/31 06:38:58 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic versionator games
 
 DESCRIPTION="Open-source replacement for Quake 3 Arena"
@@ -58,18 +58,17 @@ src_compile() {
 		DEFAULT_BASEDIR="${DIR}" \
 		BR="${BUILD_DIR}" \
 		${myopts} \
-		OPTIMIZE= \
-		|| die "emake failed"
+		OPTIMIZE=
 }
 
 src_install() {
 	cd "${MY_S}"/"${BUILD_DIR}"
-	newgamesbin openarena-smp.* "${PN}" || die "binary install failed"
-	newgamesbin oa_ded.* "${PN}-ded" || die "dedicated binary not found"
+	newgamesbin openarena-smp.* "${PN}"
+	newgamesbin oa_ded.* "${PN}-ded"
 	cd "${S}"
 
 	insinto "${DIR}"
-	doins -r baseoa missionpack || die "doins -r failed"
+	doins -r baseoa missionpack
 
 	dodoc CHANGES CREDITS LINUXNOTES README
 	newicon "${MY_S}"/misc/quake3.png ${PN}.png
