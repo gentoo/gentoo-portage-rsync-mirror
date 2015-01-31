@@ -3,9 +3,6 @@
 <pkgmetadata>
 	<herd>haskell</herd>
 	<longdescription>
-		Cryptographic numbers: functions and algorithms
+		Tests running from simple KATs file (different formats/helper supported)
 	</longdescription>
-	<use>
-		<flag name="integer-gmp">use integer-gmp library</flag>
-	</use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-teamarena
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/ChangeLog,v 1.11 2014/08/12 12:00:40 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/ChangeLog,v 1.12 2015/01/31 20:29:16 tupone Exp $
+
+  31 Jan 2015; Tupone Alfredo <tupone@gentoo.org>
+  quake3-teamarena-1.32b.ebuild:
+  EAPI 5
 
   12 Aug 2014; Mike Frysinger <vapier@gentoo.org> quake3-teamarena-1.32b.ebuild:
   Add ia64 love #509216 by Émeric Maschino.

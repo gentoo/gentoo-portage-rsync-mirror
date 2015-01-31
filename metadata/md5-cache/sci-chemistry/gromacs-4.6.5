@@ -3,7 +3,7 @@ DEPEND=X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) blas? ( virtual/bla
 DESCRIPTION=The ultimate molecular dynamics simulation package
 EAPI=5
 HOMEPAGE=http://www.gromacs.org/
-IUSE=X blas cuda doc -double-precision +fftw gsl lapack mkl mpi +offensive openmm openmp +single-precision test +threads zsh-completion sse2 sse4_1 avx128fma avx256
+IUSE=X blas cuda doc -double-precision +fftw gsl lapack mkl mpi +offensive openmm openmp +single-precision test +threads zsh-completion cpu_flags_x86_sse2 cpu_flags_x86_sse4_1 cpu_flags_x86_fma4 cpu_flags_x86_avx
 KEYWORDS=~alpha amd64 arm ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos
 LICENSE=LGPL-2.1 UoI-NCSA !mkl? ( !fftw? ( BSD ) !blas? ( BSD ) !lapack? ( BSD ) ) cuda? ( LGPL-3 ) threads? ( BSD )
 RDEPEND=X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE ) blas? ( virtual/blas ) cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 ) fftw? ( sci-libs/fftw:3.0 ) gsl? ( sci-libs/gsl ) lapack? ( virtual/lapack ) mkl? ( sci-libs/mkl ) mpi? ( virtual/mpi ) openmm? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 sci-libs/openmm[cuda,opencl] )
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( single-precision double-precision ) cuda? ( single-precision )
 SLOT=0/4.6.5
 SRC_URI=ftp://ftp.gromacs.org/pub/gromacs/gromacs-4.6.5.tar.gz doc? ( ftp://ftp.gromacs.org/pub/manual/manual-4.6.5.pdf -> gromacs-manual-4.6.5.pdf ) test? ( http://gromacs.googlecode.com/files/regressiontests-4.6.5.tar.gz )
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	0e29eadbd656185bce30d2449ab48035	cuda	2ba75c44d72d2b0b1fe31e2e2dc42d0e	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=aed58c671fc4f9475a1afaf004cad5ab
+_md5_=9cd2cb4a99a8733d065fae342615e938

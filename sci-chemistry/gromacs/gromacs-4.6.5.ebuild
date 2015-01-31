@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.5.ebuild,v 1.5 2014/03/26 21:42:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.6.5.ebuild,v 1.6 2015/01/31 20:23:56 ottxor Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ else
 	LIVE_DEPEND=""
 fi
 
-ACCE_IUSE="sse2 sse4_1 avx128fma avx256"
+ACCE_IUSE="cpu_flags_x86_sse2 cpu_flags_x86_sse4_1 cpu_flags_x86_fma4 cpu_flags_x86_avx"
 
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 HOMEPAGE="http://www.gromacs.org/"
@@ -128,10 +128,10 @@ src_configure() {
 
 	#go from slowest to fastest acceleration
 	local acce="None"
-	use sse2 && acce="SSE2"
-	use sse4_1 && acce="SSE4.1"
-	use avx128fma && acce="AVX_128_FMA"
-	use avx256 && acce="AVX_256"
+	use cpu_flags_x86_sse2 && acce="SSE2"
+	use cpu_flags_x86_sse4_1 && acce="SSE4.1"
+	use cpu_flags_x86_fma4 && acce="AVX_128_FMA"
+	use cpu_flags_x86_avx && acce="AVX_256"
 
 	#to create man pages, build tree binaries are executed (bug #398437)
 	[[ ${CHOST} = *-darwin* ]] && \

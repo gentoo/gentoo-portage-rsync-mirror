@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.19 2014/08/12 11:33:36 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.20 2015/01/31 20:23:11 tupone Exp $
+EAPI=5
 CDROM_OPTIONAL="yes"
 inherit eutils unpacker cdrom games
 
@@ -25,12 +25,12 @@ src_unpack() {
 src_install() {
 	ebegin "Copying files from linux client ..."
 	insinto "${GAMES_DATADIR}"/quake3/baseq3
-	doins baseq3/*.pk3 || die "baseq3"
+	doins baseq3/*.pk3
 	eend 0
 
 	if use cdinstall ; then
 		einfo "Copying files from CD ..."
-		doins "${CDROM_ROOT}/${CDROM_MATCH}" || die "cdrom pak0"
+		doins "${CDROM_ROOT}/${CDROM_MATCH}"
 		eend 0
 	fi
 

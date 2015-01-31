@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.12 2014/08/12 12:00:40 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.13 2015/01/31 20:29:16 tupone Exp $
+EAPI=5
 CDROM_OPTIONAL="yes"
 inherit eutils unpacker cdrom games
 
@@ -17,6 +17,7 @@ IUSE=""
 RDEPEND="|| (
 	games-fps/quake3
 	games-fps/quake3-bin )"
+DEPEND=""
 
 S=${WORKDIR}
 
@@ -28,12 +29,11 @@ src_unpack() {
 src_install() {
 	einfo "Copying Team Arena files from linux client ..."
 	insinto "${GAMES_DATADIR}"/quake3/missionpack
-	doins missionpack/*.pk3 || die "missionpack"
+	doins missionpack/*.pk3
 
 	if use cdinstall ; then
 		einfo "Copying files from CD ..."
-		newins "${CDROM_ROOT}/Setup/missionpack/PAK0.PK3" pak0.pk3 \
-			|| die "pak0"
+		newins "${CDROM_ROOT}/Setup/missionpack/PAK0.PK3" pak0.pk3
 		eend 0
 	fi
 

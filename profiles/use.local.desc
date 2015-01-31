@@ -1438,6 +1438,7 @@ dev-haskell/contravariant:tagged - You can disable the use of the `tagged` packa
 dev-haskell/cpu:executable - build 'cpuid' tool
 dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/crypto-conduit:conduit11 - Use conduit >= 1.1.
+dev-haskell/crypto-numbers:integer-gmp - use integer-gmp library
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/dav:network-uri - Get Network.URI from the network-uri package.
@@ -6268,11 +6269,6 @@ sci-chemistry/gamess:neo - Enable NEO for nuclear basis support
 sci-chemistry/gamess:pax_kernel - Make this package work on PAX kernels
 sci-chemistry/gamess:qmmm-tinker - Enable tinker qmmm code
 sci-chemistry/ghemical:openbabel - Use sci-chemistry/openbabel for file conversions
-sci-chemistry/gromacs:avx128fma - Enable 128bit avx with fma (e.g. AMD BullDozer)
-sci-chemistry/gromacs:avx256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
-sci-chemistry/gromacs:avx2_256 - Enable 256bit avx2 (e.g. Intel Haswell)
-sci-chemistry/gromacs:avx_128_fma - Enable 128bit avx with fma (e.g. AMD BullDozer)
-sci-chemistry/gromacs:avx_256 - Enable 256bit avx (e.g. Intel Sandy Bridge)
 sci-chemistry/gromacs:boost - Enable external boost library
 sci-chemistry/gromacs:cuda - Enable cuda non-bonded kernels
 sci-chemistry/gromacs:double-precision - More precise calculations at the expense of speed
@@ -6281,7 +6277,6 @@ sci-chemistry/gromacs:mkl - Use sci-libs/mkl for fft, blas, lapack routines
 sci-chemistry/gromacs:offensive - Enable gromacs partly offensive quotes
 sci-chemistry/gromacs:openmm - Add acceleration through sci-libs/openmm
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs (default)
-sci-chemistry/gromacs:sse4_1 - Enable sse4.1 acceleration
 sci-chemistry/gromacs:tng - Enable new trajectory format - tng
 sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/icm:32bit - Automatically generated description for 32bit
