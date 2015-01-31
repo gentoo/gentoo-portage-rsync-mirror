@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.156 2015/01/25 21:13:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.157 2015/01/31 07:05:41 vapier Exp $
+
+  31 Jan 2015; Mike Frysinger <vapier@gentoo.org> ipython-2.3.1.ebuild:
+  Add mips love.
 
   25 Jan 2015; Markus Meier <maekke@gentoo.org> ipython-2.2.0.ebuild:
   arm stable, bug #530324
