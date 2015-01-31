@@ -3708,7 +3708,6 @@ media-libs/libomxil-bellagio:clocksrc - enable clock component
 media-libs/libomxil-bellagio:videoscheduler - enable xvideosink video scheduler
 media-libs/libpagemaker:tools - Build build tools
 media-libs/libpng:apng - support unofficial APNG (Animated PNG) spec
-media-libs/libpostproc:mmxext - Enable mmx2 support.
 media-libs/libpostproc:pic - Force shared libraries to be built as PIC (this is slower).
 media-libs/libquicktime:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec)
 media-libs/libraw:demosaic - Enable support for external interpolation algorithms
@@ -4339,7 +4338,6 @@ media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/ffdiaporama:openclipart - Support openslipart database
 media-video/ffdiaporama:texturemate - Install extra backgrounds
-media-video/ffmpeg:3dnowext - Enable manually-optimised routines using the AMD 3DNow!Ex SIMD instruction set, present in modern AMD CPUs. (Check for 3dnowext in /proc/cpuinfo to know whether your CPU supports it).
 media-video/ffmpeg:aacplus - AAC+ encoding via media-libs/libaacplus.
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/ffmpeg:amrenc - Enables Adaptive Multi-Rate Audio encoding support with media-libs/vo-amrwbenc.
@@ -4347,8 +4345,6 @@ media-video/ffmpeg:armv5te - Enables optimizations for armv5te processors.
 media-video/ffmpeg:armv6 - Enables optimizations for armv6 processors.
 media-video/ffmpeg:armv6t2 - Enables optimizations for armv6t2 processors.
 media-video/ffmpeg:armvfp - Enables VFP optimizations for ARM processors.
-media-video/ffmpeg:avx - Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)
-media-video/ffmpeg:avx2 - Adds support for Advanced Vector Extensions 2 instructions (Intel Haswell and later chips)
 media-video/ffmpeg:bindist - Enforces license compatibility constraints via REQUIRED_USE.
 media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
 media-video/ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
@@ -4359,8 +4355,6 @@ media-video/ffmpeg:dirac - Enable Dirac video support (an advanced royalty-free 
 media-video/ffmpeg:faac - Use external faac library for AAC encoding
 media-video/ffmpeg:fdk - Use external fdk-aac library for AAC encoding
 media-video/ffmpeg:flite - Adds a text-to-speech filter based on app-accessibility/flite.
-media-video/ffmpeg:fma3 - Enables FMA3 optimizations: AMD processors starting with Piledriver architecture and Intel Haswell based processors or later.
-media-video/ffmpeg:fma4 - Enables FMA4 optimizations: AMD processors starting with Bulldozer architecture.
 media-video/ffmpeg:frei0r - Enable frei0r wrapping in libavfilter
 media-video/ffmpeg:fribidi - Enables fribidi support in the drawtext filter.
 media-video/ffmpeg:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.
@@ -4372,7 +4366,6 @@ media-video/ffmpeg:mips32r2 - Enables MIPS32R2 optimizations.
 media-video/ffmpeg:mipsdspr1 - Enables MIPS DSP ASE R1 optimizations.
 media-video/ffmpeg:mipsdspr2 - Enables MIPS DSP ASE R2 optimizations.
 media-video/ffmpeg:mipsfpu - Enables floating point MIPS optimizations.
-media-video/ffmpeg:mmxext - Enables mmx2 support
 media-video/ffmpeg:network - Enables network streaming support
 media-video/ffmpeg:openssl - Enables dev-libs/openssl support. Adds support for encrypted network protocols (TLS/HTTPS).
 media-video/ffmpeg:opus - Adds (decoding) support for the Opus codec via media-libs/opus.
@@ -4380,10 +4373,7 @@ media-video/ffmpeg:pic - Force shared libraries to be built as PIC (this is slow
 media-video/ffmpeg:quvi - Adds support for playing media from Internet services using the quvi project.
 media-video/ffmpeg:rtmp - Enable Real Time Messaging Protocol using librtmp
 media-video/ffmpeg:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
-media-video/ffmpeg:sse4 - Enables SSE4 optimizations: Intel Core microarchitecture and AMD K10 or later.
-media-video/ffmpeg:sse4_2 - Enables SSE4.2 optimizations: Nehalem-based Intel Core i7 or later.
 media-video/ffmpeg:ssh - Enable SSH/sftp support via net-libs/libssh.
-media-video/ffmpeg:ssse3 - Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-video/ffmpeg:twolame - Enables MP2 encoding via media-sound/twolame as an alternative to the internal encoder.
 media-video/ffmpeg:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/ffmpeg:vpx - Enables vp8 codec support using libvpx: Decoding vp8 does not require this to be enabled but libvpx can also be used for decoding; encoding vp8 requires this useflag to be enabled though.
@@ -4474,7 +4464,6 @@ media-video/mplayer:vidix - Support for vidix video output
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
-media-video/mplayer2:3dnowext - Enable 3dnowext cpu instructions
 media-video/mplayer2:bluray - Enable playback of Blu-ray filesystems
 media-video/mplayer2:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mplayer2:cdio - Use libcdio for CD support (instead of cdparanoia)
@@ -4483,7 +4472,6 @@ media-video/mplayer2:dvdnav - Use forked libdvdnav, navigate menus in GUIs
 media-video/mplayer2:enca - Enables support for charset discovery and conversion
 media-video/mplayer2:faad - Use external faad library for AAC decoding
 media-video/mplayer2:md5sum - Enables md5sum video output
-media-video/mplayer2:mmxext - Enables mmx2 support
 media-video/mplayer2:mng - MNG input support
 media-video/mplayer2:mp3 - Enable support for mp3 decoding over media-sound/mpg123 instead of relying on ffmpeg support.
 media-video/mplayer2:network - Enables network streaming support
@@ -4496,7 +4484,6 @@ media-video/mplayer2:radio - Enable V4L2 radio interface and support
 media-video/mplayer2:rar - Enable Unique RAR File Library
 media-video/mplayer2:rtc - Enables usage of the linux real time clock. The alternative is software emulation of rtc
 media-video/mplayer2:shm - Enable support for shm
-media-video/mplayer2:ssse3 - Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)
 media-video/mplayer2:symlink - Copy all binaries and configuration into locations occupied by media-video/mplayer and thus act like drop-in replacement.
 media-video/mplayer2:tga - Enables Targa video output
 media-video/mplayer2:xanim - Enables support for xanim based codecs

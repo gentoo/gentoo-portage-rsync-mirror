@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_dotfile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/ChangeLog,v 1.14 2013/05/20 08:25:37 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/ChangeLog,v 1.15 2015/01/31 01:53:32 patrick Exp $
+
+  31 Jan 2015; Patrick Lauer <patrick@gentoo.org> pam_dotfile-0.7-r1.ebuild:
+  Remove redundant want_autoconf=latest
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> pam_dotfile-0.7-r2.ebuild:
   Stable for x86, wrt bug #464478

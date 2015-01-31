@@ -22,7 +22,6 @@
 	4) Возможность сборки с разделяемыми библиотеками ffmpeg.
 </longdescription>
 <use>
-	<flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
 	<flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
@@ -31,7 +30,6 @@
 	<flag name="enca">Enables support for charset discovery and conversion</flag>
 	<flag name="faad">Use external faad library for AAC decoding</flag>
 	<flag name="md5sum">Enables md5sum video output</flag>
-	<flag name="mmxext">Enables mmx2 support</flag>
 	<flag name="mng">MNG input support</flag>
 	<flag name="mp3">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support.</flag>
 	<flag name="network">Enables network streaming support</flag>
@@ -44,7 +42,6 @@
 	<flag name="rar">Enable Unique RAR File Library</flag>
 	<flag name="rtc">Enables usage of the linux real time clock. The alternative is software emulation of rtc</flag>
 	<flag name="shm">Enable support for shm</flag>
-	<flag name="ssse3">Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
 	<flag name="symlink">Copy all binaries and configuration into locations occupied by <pkg>media-video/mplayer</pkg> and thus act like drop-in replacement.</flag>
 	<flag name="tga">Enables Targa video output</flag>
 	<flag name="xanim">Enables support for xanim based codecs</flag>

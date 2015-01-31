@@ -1,11 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.1_p6.ebuild,v 1.3 2012/05/21 18:43:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.1_p6.ebuild,v 1.4 2015/01/31 01:41:00 patrick Exp $
 
 EAPI=3
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 
 inherit autotools eutils
 
@@ -22,6 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 DEPEND=""
+RDEPEND=""
 S=${WORKDIR}/${PN}
 
 src_prepare() {

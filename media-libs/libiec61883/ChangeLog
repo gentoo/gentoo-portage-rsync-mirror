@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libiec61883
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.45 2014/09/15 08:21:25 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.46 2015/01/31 01:50:29 patrick Exp $
+
+  31 Jan 2015; Patrick Lauer <patrick@gentoo.org> libiec61883-1.1.0.ebuild:
+  Remove redundant want_autoconf=latest
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libiec61883-1.2.0-r1.ebuild:
   Stable for sparc, wrt bug #512012

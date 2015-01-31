@@ -1,9 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-184.ebuild,v 1.2 2007/11/07 17:52:53 armin76 Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-184.ebuild,v 1.3 2015/01/31 01:54:58 patrick Exp $
 
 inherit eutils pam autotools
 

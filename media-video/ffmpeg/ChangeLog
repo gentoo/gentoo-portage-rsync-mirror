@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.823 2015/01/30 16:40:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.824 2015/01/31 01:34:48 patrick Exp $
+
+  31 Jan 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneded useflag description from metadata.xml
 
   30 Jan 2015; Michał Górny <mgorny@gentoo.org> ffmpeg-0.10.15.ebuild,
   ffmpeg-1.0.10.ebuild, ffmpeg-1.2.11.ebuild, ffmpeg-1.2.6-r1.ebuild,
