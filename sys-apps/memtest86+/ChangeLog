@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/memtest86+
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.68 2014/08/31 03:18:41 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.69 2015/01/31 22:57:46 bircoph Exp $
+
+*memtest86+-5.01 (31 Jan 2015)
+
+  31 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> +memtest86+-5.01.ebuild,
+  +files/memtest86+-5.01-gcc-473.patch,
+  +files/memtest86+-5.01-hardcoded_cc.patch:
+  Version bump, wrt bug 486564.
+  Fix build with gcc 4.7.3 by Alexander (necheffa.misc@gmail.com),
+  add QA_CFLAGS_IGNORED, since we don't allow user to tamper with
+  CFLAGS here.
 
 *memtest86+-4.20-r2 (31 Aug 2014)
 
