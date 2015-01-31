@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16310 2015/01/31 13:27:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16311 2015/01/31 13:32:03 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -937,10 +937,6 @@ lxde-base/lxpolkit
 www-client/google-chrome:beta
 www-client/google-chrome:stable
 www-client/google-chrome:unstable
-
-# Eray Aslan <eras@gentoo.org> (18 Jan 2014)
-# Mask experimental software
-=mail-mta/postfix-2.12*
 
 # Alexis Ballier <aballier@gentoo.org> (18 Jan 2014)
 # Rev. deps fail to build

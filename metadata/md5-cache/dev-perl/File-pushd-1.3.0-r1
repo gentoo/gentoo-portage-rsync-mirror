@@ -3,10 +3,10 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=Change directory temporarily for a limited scope
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/File-pushd/
-KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd
 LICENSE=Apache-2.0
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DA/DAGOLDEN/File-pushd-1.003.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	4e599aab78ebadca09ce51369fa9019d	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=e1dc6556a4c91a6684b2995046c254e6
+_md5_=18b3400fad15ae7f323b4be06bde2957
