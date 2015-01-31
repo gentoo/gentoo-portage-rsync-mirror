@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/lldpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.26 2015/01/26 09:42:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lldpd/ChangeLog,v 1.27 2015/01/31 08:05:54 chutzpah Exp $
+
+*lldpd-0.7.13 (31 Jan 2015)
+
+  31 Jan 2015; Patrick McLean <chutzpah@gentoo.org> +lldpd-0.7.13.ebuild,
+  -files/lldpd-0.7.9-dont-fork-after-making-pidfile.patch,
+  -files/lldpd-0.7.9-seccomp-add-syscalls.patch, -files/lldpd-initd-3,
+  -lldpd-0.7.9-r3.ebuild, metadata.xml:
+  Version bump, clean out old version.
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lldpd-0.7.11-r3.ebuild:
   Stable for x86, wrt bug #535606

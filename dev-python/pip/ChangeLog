@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.53 2015/01/13 02:54:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.54 2015/01/31 08:19:19 radhermit Exp $
+
+*pip-6.0.7 (31 Jan 2015)
+
+  31 Jan 2015; Tim Harder <radhermit@gentoo.org> +pip-6.0.7.ebuild:
+  Version bump.
 
   13 Jan 2015; Mike Gilbert <floppym@gentoo.org> pip-6.0.6.ebuild:
   Add ~sparc keyword.
