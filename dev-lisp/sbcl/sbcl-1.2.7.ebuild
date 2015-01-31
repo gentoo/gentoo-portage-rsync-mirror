@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.2.7.ebuild,v 1.2 2015/01/09 02:03:11 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.2.7.ebuild,v 1.3 2015/01/31 04:35:14 gienah Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -11,10 +11,13 @@ BV_AMD64=1.2.7
 BV_PPC=1.2.7
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
+BV_ARM=1.2.7
 BV_PPC_MACOS=1.0.47
 BV_X86_MACOS=1.1.6
 BV_X64_MACOS=1.1.8
+BV_SPARC_SOLARIS=1.0.23
 BV_X86_SOLARIS=1.2.7
+BV_X64_SOLARIS=1.2.7
 
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
@@ -24,10 +27,13 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-powerpc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
 	alpha? ( mirror://sourceforge/sbcl/${PN}-${BV_ALPHA}-alpha-linux-binary.tar.bz2 )
+	arm? ( mirror://sourceforge/sbcl/${PN}-${BV_ARM}-armhf-linux-binary.tar.bz2 )
 	ppc-macos? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC_MACOS}-powerpc-darwin-binary.tar.bz2 )
 	x86-macos? ( mirror://sourceforge/sbcl/${PN}-${BV_X86_MACOS}-x86-darwin-binary.tar.bz2 )
 	x64-macos? ( mirror://sourceforge/sbcl/${PN}-${BV_X64_MACOS}-x86-64-darwin-binary.tar.bz2 )
-	x86-solaris? ( mirror://sourceforge/sbcl/${PN}-${BV_X86_SOLARIS}-x86-solaris-binary.tar.bz2 )"
+	sparc-solaris? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC_SOLARIS}-sparc-solaris-binary.tar.bz2 )
+	x86-solaris? ( mirror://sourceforge/sbcl/${PN}-${BV_X86_SOLARIS}-x86-solaris-binary.tar.bz2 )
+	x64-solaris? ( mirror://sourceforge/sbcl/${PN}-${BV_X64_SOLARIS}-x86-64-solaris-binary.tar.bz2 )"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
@@ -94,12 +100,21 @@ src_prepare() {
 	epatch "${FILESDIR}"/bsd-sockets-test-${PV}.patch
 
 	epatch "${FILESDIR}"/${PN}-1.0.6-solaris.patch
+	epatch "${FILESDIR}"/${PN}-1.2.7-verbose-build.patch
 
 	# To make the hardened compiler NOT compile with -fPIE -pie
 	if gcc-specs-pie ; then
 		einfo "Disabling PIE..."
 		epatch "${FILESDIR}"/${PN}-1.1.17-gentoo-fix_nopie_for_hardened_toolchain.patch
 	fi
+
+	# bug #526194
+	sed -e "s@CFLAGS =@CFLAGS = ${CFLAGS}@" \
+		-e "s@LINKFLAGS =@LINKFLAGS = ${LDFLAGS}@" \
+		-i src/runtime/GNUmakefile || die
+
+	sed -e "s@SBCL_PREFIX=\"/usr/local\"@SBCL_PREFIX=\"${EPREFIX}/usr\"@" \
+		-i make-config.sh || die
 
 	cp "${EPREFIX}"/usr/share/common-lisp/source/asdf/build/asdf.lisp contrib/asdf/ || die
 
