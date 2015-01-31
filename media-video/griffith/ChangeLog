@@ -1,6 +1,11 @@
 # ChangeLog for media-video/griffith
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.66 2014/10/04 11:33:14 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.67 2015/01/31 12:45:11 hwoarang Exp $
+
+  31 Jan 2015; Markos Chandras <hwoarang@gentoo.org> -griffith-9999.ebuild,
+  griffith-0.13.ebuild:
+  Update HOMEPAGE and host artwork tarball ourselves. Drop 9999 ebuild since
+  upstream is gone
 
   04 Oct 2014; Markos Chandras <hwoarang@gentoo.org> griffith-9999.ebuild:
   depend on libglade. Bug #295291

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/u2ps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/u2ps/ChangeLog,v 1.4 2014/05/10 10:10:16 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/u2ps/ChangeLog,v 1.5 2015/01/31 13:00:34 hwoarang Exp $
+
+  31 Jan 2015; Markos Chandras <hwoarang@gentoo.org> -u2ps-0.8.1.ebuild,
+  -u2ps-0.8.2.ebuild, -u2ps-0.8.3.ebuild, u2ps-0.8.4.ebuild:
+  Drop old. Update dead links. Bug #537714
 
 *u2ps-0.8.4 (10 May 2014)
 

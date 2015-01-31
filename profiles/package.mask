@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16308 2015/01/30 20:09:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16309 2015/01/31 12:59:53 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -48,7 +48,7 @@
 games-rpg/morrowind-data
 
 # Mikle Kolyada <zlogene@gentoo.org> (22 Jan 2015)
-# Unclear license (bug 253443). 
+# Unclear license (bug 253443).
 # No one uses it anymore. You can
 # use dev-perl/Geo-IP instead.
 dev-perl/IP-Country
@@ -169,9 +169,9 @@ x11-libs/xpsb-glx
 dev-db/pgtune
 
 # Tony Vroon <chainsaw@gentoo.org> (5 Jan 2015)
-# Asterisk 13 is an LTS release but has not seen 
-# sufficient releases to be considered ready for 
-# production usage. You are welcome to have a go 
+# Asterisk 13 is an LTS release but has not seen
+# sufficient releases to be considered ready for
+# production usage. You are welcome to have a go
 # but please be careful.
 =net-misc/asterisk-13*
 
@@ -512,6 +512,7 @@ www-apps/trac-downloads
 # agreed on #gentoo-dev by mgorny, patrick and others
 =media-video/mpv-0.6*
 =media-video/mpv-0.7*
+=media-video/smplayer-14.9.0.6690*
 
 # Davide Pesavento <pesa@gentoo.org> (11 Sep 2014)
 # Mask Qt 5.3.x for wider testing to ensure that it does
