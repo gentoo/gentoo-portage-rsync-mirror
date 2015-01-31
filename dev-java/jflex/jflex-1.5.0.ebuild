@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.5.0.ebuild,v 1.1 2014/03/08 16:17:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.5.0.ebuild,v 1.2 2015/01/31 19:42:17 monsieurp Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ DEPEND=">=virtual/jdk-1.5
 IUSE="${JAVA_PKG_IUSE} source vim-syntax"
 
 java_prepare() {
-	cp "${FILESDIR}"/${P}-build.xml build.xml || die
+	cp "${FILESDIR}"/"${P}"-build.xml "${S}"/build.xml
 }
 
 # TODO: Try to avoid using bundled jar (See bug #498874)
@@ -40,17 +40,17 @@ java_prepare() {
 EANT_GENTOO_CLASSPATH="ant-core"
 EANT_GENTOO_CLASSPATH_EXTRA="lib/${P}.jar"
 JAVA_ANT_REWRITE_CLASSPATH="true"
-ANT_TASKS="javacup"
+WANT_ANT_TASKS="javacup"
 
 src_compile() {
 	java-pkg-2_src_compile
 
 	# Compile another time, using our generated jar; for sanity.
-	cp target/${P}.jar ${EANT_GENTOO_CLASSPATH_EXTRA}
+	cp build/${P}.jar ${EANT_GENTOO_CLASSPATH_EXTRA}
 	java-pkg-2_src_compile
 }
 
-# EANT_TEST_GENTOO_CLASSPATH doesn't support EANT_GENTOO_CLASSPATH_EXTRA yet. 
+# EANT_TEST_GENTOO_CLASSPATH doesn't support EANT_GENTOO_CLASSPATH_EXTRA yet.
 RESTRICT="test"
 
 src_test() {
@@ -58,14 +58,14 @@ src_test() {
 }
 
 src_install() {
-	java-pkg_newjar target/${P}.jar
+	java-pkg_newjar build/${P}.jar ${PN}.jar
 	java-pkg_dolauncher "${PN}" --main jflex.Main
 	java-pkg_register-ant-task
 
 	if use doc ; then
-		dodoc doc/manual.pdf doc/manual.ps.gz src/changelog
+		dodoc doc/manual.pdf changelog.md
 		dohtml -r doc/*
-		java-pkg_dojavadoc target/site/apidocs
+		java-pkg_dojavadoc javadoc
 	fi
 
 	use examples && java-pkg_doexamples examples
