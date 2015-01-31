@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scapy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.40 2014/12/23 12:30:19 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scapy/ChangeLog,v 1.41 2015/01/31 13:15:15 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> scapy-2.2.0-r2.ebuild:
+  Stable for amd64, wrt bug #533260
 
 *scapy-2.3.1 (23 Dec 2014)
 
@@ -180,4 +183,3 @@
   19 Nov 2005; Andrea Barisani <lcars@gentoo.org> :
   Initial import, slightly modified version of <marc@noctambuls.net> ebuild, 
   bug #112727.
-

@@ -1,6 +1,14 @@
 # ChangeLog for media-video/smplayer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.152 2014/10/07 19:51:37 sping Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.153 2015/01/31 13:07:57 yngwin Exp $
+
+*smplayer-14.9.0.6690 (31 Jan 2015)
+
+  31 Jan 2015; Ben de Groot <yngwin@gentoo.org>
+  +files/smplayer-14.9.0.6690-zero-bidi.patch, +smplayer-14.9.0.6690.ebuild,
+  metadata.xml:
+  Version bump adding mpv support (bug #538002). Implement Qt5 support (bug
+  #523114). Remove mplayer2 option (dead project). Update bidi patch.
 
 *smplayer-14.9.0-r1 (07 Oct 2014)
 

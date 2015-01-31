@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/acovea
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.20 2014/07/01 07:54:17 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.21 2015/01/31 13:16:00 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> acovea-5.1.1-r1.ebuild:
+  Stable for amd64, wrt bug #534820
 
 *acovea-5.1.1-r1 (01 Jul 2014)
 

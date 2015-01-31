@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9727 2015/01/30 20:09:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9729 2015/01/31 13:27:58 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jan 2015; Eray Aslan <eras@gentoo.org> package.mask:
+  Mask mail-mta/postfix-3.0 experimental release
+
+  31 Jan 2015; Ben de Groot <yngwin@gentoo.org> desc/linguas.desc, package.mask:
+  Add media-video/smplayer-14.9.0.6690 to mpv-0.6/libav-10 mask. Add sq_AL
+  locale.
 
   30 Jan 2015; Tim Harder <radhermit@gentoo.org> package.mask:
   Remove old app-vim/cvscommand and app-vim/svncommand masks.

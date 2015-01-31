@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.123 2015/01/27 11:57:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.124 2015/01/31 13:16:10 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> paramiko-1.15.1-r1.ebuild:
+  Stable for amd64, wrt bug #531126
 
 *paramiko-1.15.2 (27 Jan 2015)
 

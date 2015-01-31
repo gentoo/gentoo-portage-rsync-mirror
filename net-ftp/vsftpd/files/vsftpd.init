@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.8 2013/04/20 16:51:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/files/vsftpd.init,v 1.9 2015/01/31 13:07:47 hwoarang Exp $
 
 VSFTPD_NAME=${SVCNAME##*.}
 if [ -n "${VSFTPD_NAME}" -a "${SVCNAME}" != "vsftpd" ]; then
@@ -35,13 +35,17 @@ start() {
 
 stop() {
 	ebegin "Stopping ${SVCNAME}"
+	local retval=0
 	if [ -f ${VSFTPD_PID} ]; then
-		start-stop-daemon --stop --pidfile ${VSFTPD_PID}
+		start-stop-daemon --stop --pidfile ${VSFTPD_PID} || retval=1
+		pkill --full ${VSFTPD_CONF}
 	else
-		ewarn "Couldn't found ${VSFTPD_PID} trying to stop over the process name ${SVCNAME}"
-		start-stop-daemon --stop --name ${SVCNAME}
+		ewarn "Couldn't find ${VSFTPD_PID} trying to stop using the config filename ${VSFTPD_CONF}"
+		pgrep --full ${VSFTPD_CONF} > ${VSFTPD_PID}
+		start-stop-daemon --stop --pidfile ${VSFTPD_PID} || retval=1
+		pkill --full ${VSFTPD_CONF}
 	fi
-	eend $?
+	eend ${retval}
 }
 
 # vim: ts=4

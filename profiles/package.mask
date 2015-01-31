@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16309 2015/01/31 12:59:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16310 2015/01/31 13:27:58 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (31 Jan 2015)
+# Mask experimental software
+=mail-mta/postfix-3.0*
 
 # Sergei Trofimovich <slyfox@gentoo.org> (29 Jan 2015)
 # Mask live ebuild

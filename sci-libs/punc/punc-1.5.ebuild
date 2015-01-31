@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.10 2015/01/04 15:32:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.11 2015/01/31 13:17:55 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.fetk.org/codes/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc mpi static-libs"
 
 RDEPEND="

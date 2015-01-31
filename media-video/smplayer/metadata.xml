@@ -8,5 +8,8 @@
       Enable the option to shutdown your computer after finishing the playlist.
       This requires <pkg>dev-qt/qtdbus</pkg> as dependency.
     </flag>
+	<flag name='streaming'>Support for streaming video sites through
+      <pkg>net-misc/youtube-dl</pkg> (MPV only).
+    </flag>
   </use>
 </pkgmetadata>

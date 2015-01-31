@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/punc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.20 2015/01/04 15:32:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.21 2015/01/31 13:17:55 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> punc-1.5.ebuild:
+  Stable for amd64, wrt bug #534652
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> punc-1.5.ebuild:
   Bump EAPI
@@ -85,4 +88,3 @@
   +files/0.2_p1-configure.patch, +files/0.2_p1-underlinking.patch,
   +punc-0.2_p1.ebuild, +metadata.xml:
   New addition
-

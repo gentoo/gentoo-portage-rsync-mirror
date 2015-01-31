@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vifm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.48 2014/11/26 16:15:34 nimiux Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.49 2015/01/31 13:14:22 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> vifm-0.7.8.ebuild:
+  Stable for amd64, wrt bug #533696
 
   26 Nov 2014; Chema Alonso <nimiux@gentoo.org> vifm-0.7.8.ebuild,
   +files/vifm-0.7.8-fix-ncurses-tinfo.patch:
