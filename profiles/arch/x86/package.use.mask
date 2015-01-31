@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.146 2015/01/28 21:33:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.147 2015/01/31 11:30:51 jer Exp $
 
 # This file requires >=portage-2.1.1
+
+# Jeroen Roovers <jer@gentoo.org> (31 Jan 2015)
+# >x11-drivers/nvidia-drivers-346 on x86 has no UVM support (bug #534156)
+>x11-drivers/nvidia-drivers-346 uvm
 
 # Pacho Ramos <pacho@gentoo.org> (18 Jan 2015)
 # Missing keywords

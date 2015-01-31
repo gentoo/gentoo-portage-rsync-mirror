@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.16.6.ebuild,v 1.1 2014/10/14 21:10:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.17.4.ebuild,v 1.1 2015/01/31 11:08:08 polynomial-c Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
 NSPR_VER="4.10.6-r1"
 RTM_NAME="NSS_${PV//./_}_RTM"
 # Rev of https://git.fedorahosted.org/cgit/nss-pem.git
-PEM_GIT_REV="3ade37c5c4ca5a6094e3f4b2e4591405db1867dd"
+PEM_GIT_REV="015ae754dd9f6fbcd7e52030ec9732eb27fc06a8"
 PEM_P="${PN}-pem-${PEM_GIT_REV}"
 
 DESCRIPTION="Mozilla's Network Security Services library that implements PKI support"
@@ -49,7 +49,7 @@ src_unpack() {
 
 src_prepare() {
 	# Custom changes for gentoo
-	epatch "${FILESDIR}/${PN}-3.15-gentoo-fixups.patch"
+	epatch "${FILESDIR}/${PN}-3.17.1-gentoo-fixups.patch"
 	epatch "${FILESDIR}/${PN}-3.15-gentoo-fixup-warnings.patch"
 	use cacert && epatch "${DISTDIR}/${PN}-3.14.1-add_spi+cacerts_ca_certs.patch"
 	use nss-pem && epatch "${FILESDIR}/${PN}-3.15.4-enable-pem.patch"
