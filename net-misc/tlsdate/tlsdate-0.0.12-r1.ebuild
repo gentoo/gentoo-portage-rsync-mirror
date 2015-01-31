@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/tlsdate-0.0.12-r1.ebuild,v 1.1 2015/01/03 00:29:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/tlsdate-0.0.12-r1.ebuild,v 1.2 2015/01/31 14:10:59 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/ioerror/tlsdate/tarball/${P} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="dbus +seccomp static-libs"
 
 DEPEND="dev-libs/openssl

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-memcached
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.16 2015/01/12 15:39:35 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcached/ChangeLog,v 1.17 2015/01/31 14:10:42 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pecl-memcached-2.1.0-r3.ebuild:
+  Stable for amd64, wrt bug #502770
 
   12 Jan 2015; Brian Evans <grknight@gentoo.org> pecl-memcached-2.2.0.ebuild:
   Correct igbinary conditional dependency

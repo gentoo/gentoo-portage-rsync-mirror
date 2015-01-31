@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.63 2015/01/04 13:40:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.64 2015/01/31 14:10:51 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> openbabel-2.3.2.ebuild:
+  Stable for amd64, wrt bug #534612
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> -openbabel-2.3.0.ebuild,
   -openbabel-2.3.1.ebuild, openbabel-2.3.2.ebuild, metadata.xml:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Table/LaTeX-Table-1.0.6.ebuild,v 1.3 2014/11/11 12:09:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Table/LaTeX-Table-1.0.6.ebuild,v 1.4 2015/01/31 14:04:44 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl extension for the automatic generation of LaTeX tables"
 
 LICENSE="|| ( GPL-1+ Artistic )"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="test"
 
 RDEPEND="

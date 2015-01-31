@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/colamd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.37 2015/01/13 17:06:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.38 2015/01/31 14:11:37 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> colamd-2.8.0.ebuild:
+  Stable for amd64, wrt bug #534636
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> colamd-2.8.0.ebuild:
   Stable for HPPA (bug #534636).

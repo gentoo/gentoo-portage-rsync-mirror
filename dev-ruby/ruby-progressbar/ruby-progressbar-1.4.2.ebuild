@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-1.4.2.ebuild,v 1.5 2015/01/27 07:42:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ruby-progressbar-1.4.2.ebuild,v 1.6 2015/01/31 14:09:19 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="https://github.com/jfelchner/ruby-progressbar"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 IUSE="test"
 

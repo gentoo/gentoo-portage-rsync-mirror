@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/camd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.28 2015/01/13 17:09:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.29 2015/01/31 14:09:05 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> camd-2.3.1.ebuild:
+  Stable for amd64, wrt bug #534640
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> camd-2.3.1.ebuild:
   Stable for HPPA (bug #534640).

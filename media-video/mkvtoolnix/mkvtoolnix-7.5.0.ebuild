@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-7.5.0.ebuild,v 1.3 2015/01/19 20:26:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-7.5.0.ebuild,v 1.4 2015/01/31 14:27:20 yngwin Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -41,6 +41,7 @@ RDEPEND="
 	qt5? (
 		dev-qt/qtcore:5
 		dev-qt/qtgui:5
+		dev-qt/qtwidgets:5
 	)
 	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER}[X] )
 "
@@ -78,9 +79,17 @@ src_prepare() {
 src_configure() {
 	local myconf
 
+	if use qt5 ; then
+		# ac/qt5.m4 finds default Qt version set by qtchooser, bug #532600
+		myconf+="--with-moc=/usr/$(get_libdir)/qt5/bin/moc
+		--with-uic=/usr/$(get_libdir)/qt5/bin/uic
+		--with-rcc=/usr/$(get_libdir)/qt5/bin/rcc
+		--with-mkvtoolnix-gui"
+	fi
+
 	if use wxwidgets ; then
 		need-wxwidgets unicode
-		myconf="--with-wx-config=${WX_CONFIG}"
+		myconf+="--with-wx-config=${WX_CONFIG}"
 	fi
 
 	econf \

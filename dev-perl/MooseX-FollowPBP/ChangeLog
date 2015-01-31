@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooseX-FollowPBP
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-FollowPBP/ChangeLog,v 1.3 2014/11/29 10:00:51 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-FollowPBP/ChangeLog,v 1.4 2015/01/31 14:20:56 zlogene Exp $
+
+  31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
+  MooseX-FollowPBP-0.50.0.ebuild:
+  Add ~x86-fbsd keyword
 
   29 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   MooseX-FollowPBP-0.50.0.ebuild:

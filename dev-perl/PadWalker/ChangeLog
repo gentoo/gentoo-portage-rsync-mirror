@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PadWalker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.49 2014/11/21 12:12:47 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PadWalker/ChangeLog,v 1.50 2015/01/31 14:18:19 zlogene Exp $
+
+  31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> PadWalker-1.960.0-r1.ebuild:
+  Add ~x86-fbsd keyword
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org>
   PadWalker-1.960.0-r1.ebuild:

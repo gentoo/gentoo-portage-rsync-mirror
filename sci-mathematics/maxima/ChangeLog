@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.116 2014/12/25 16:00:06 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.117 2015/01/31 14:12:30 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> maxima-5.34.1.ebuild:
+  Stable for amd64, wrt bug #406773
 
 *maxima-5.35.1-r1 (25 Dec 2014)
 
