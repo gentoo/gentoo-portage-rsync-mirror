@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.17 2011/10/26 18:00:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.18 2015/01/31 20:42:27 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 FILE_STEM="QuDos-${PV}-src"
@@ -160,31 +160,27 @@ src_compile() {
 		WITH_DATADIR=YES \
 		WITH_LIBDIR=YES \
 		BUILD_DEBUG_DIR=release \
-		BUILD_RELEASE_DIR=release \
-		|| die "emake failed"
+		BUILD_RELEASE_DIR=release
 }
 
 src_install() {
 	if default_client ; then
-		newgamesbin ${MY_PN}/QuDos ${PN} \
-			|| die "newgamesbin QuDos failed"
+		newgamesbin ${MY_PN}/QuDos ${PN}
 		# Change from gif to png in next version?
-		newicon docs/q2_orig/quake2.gif ${PN}.gif \
-			|| die "newicon failed"
+		newicon docs/q2_orig/quake2.gif ${PN}.gif
 		make_desktop_entry ${PN} "QuDos" ${PN}.gif
 	fi
 
 	if use dedicated ; then
-		newgamesbin ${MY_PN}/QuDos-ded ${PN}-ded \
-			|| die "newgamesbin QuDos-ded failed"
+		newgamesbin ${MY_PN}/QuDos-ded ${PN}-ded
 	fi
 
 	insinto "$(games_get_libdir)"/${PN}
-	doins -r ${MY_PN}/* || die "doins libs failed"
+	doins -r ${MY_PN}/*
 	rm "${D}/$(games_get_libdir)"/${PN}/QuDos
 
 	insinto "$(games_get_libdir)"/${PN}/baseq2
-	newins "${DISTDIR}/${PK3_FILE}" qudos.pk3 || die "doins ${PK3_FILE} failed"
+	newins "${DISTDIR}/${PK3_FILE}" qudos.pk3
 
 	dodoc $(find docs -name \*.txt) docs/q2_orig/README*
 
