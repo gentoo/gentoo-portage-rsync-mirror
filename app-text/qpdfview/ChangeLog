@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdfview
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.62 2014/12/30 19:51:06 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.63 2015/01/31 14:49:39 yngwin Exp $
+
+  31 Jan 2015; Ben de Groot <yngwin@gentoo.org> qpdfview-0.4.13.ebuild:
+  Point directly to lrelease of used Qt version (bug #532962)
 
   30 Dec 2014; Markus Meier <maekke@gentoo.org> qpdfview-0.4.12.ebuild:
   arm stable, bug #533504

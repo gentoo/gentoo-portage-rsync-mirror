@@ -11,4 +11,4 @@ REQUIRED_USE=^^ ( qt4 qt5 ) ?? ( fitz pdf )
 SLOT=0
 SRC_URI=https://launchpad.net/qpdfview/trunk/0.4.13/+download/qpdfview-0.4.13.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	9e0174de733aecba0a7e66b2b01841d2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=98ebb141208ec05c99a4d3d9a87a668a
+_md5_=398bd71285a5b7fcdc2de2d35f5b9b3e

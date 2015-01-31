@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.13.ebuild,v 1.1 2014/12/25 10:59:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.13.ebuild,v 1.2 2015/01/31 14:49:39 yngwin Exp $
 
 EAPI=5
 
@@ -46,7 +46,10 @@ DOCS=( CHANGES CONTRIBUTORS README TODO )
 
 src_prepare() {
 	prepare_locale() {
-		lrelease "translations/${PN}_${1}.ts" || die "preparing ${1} locale failed"
+		local _lrel
+		use qt4 && _lrel="${EPREFIX}/usr/$(get_libdir)/qt4/bin/lrelease"
+		use qt5 && _lrel="${EPREFIX}/usr/$(get_libdir)/qt5/bin/lrelease"
+		${_lrel} "translations/${PN}_${1}.ts" || die "preparing ${1} locale failed"
 	}
 
 	rm_help() {
