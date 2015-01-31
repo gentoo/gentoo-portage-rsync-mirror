@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-apple
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.30 2014/11/23 15:37:36 redlizard Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.31 2015/01/31 16:15:23 grobian Exp $
+
+  31 Jan 2015; Fabian Groffen <grobian@gentoo.org>
+  files/gcc-apple-4.2.1_p5666-darwin14.patch, gcc-apple-4.2.1_p5666-r2.ebuild:
+  Update darwin14 patch with much better approach by Michael Weisner, not
+  revbumping because darwin14 bootstrapping should be broken anyway
 
   23 Nov 2014; redlizard <redlizard@gentoo.org> gcc-apple-4.2.1_p5666-r2.ebuild:
   Change the portage-2.2.14 dependency to a blocker, as the upgrade needs to

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netctl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/ChangeLog,v 1.25 2015/01/18 19:30:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/ChangeLog,v 1.26 2015/01/31 16:14:31 hwoarang Exp $
+
+  31 Jan 2015; Markos Chandras <hwoarang@gentoo.org> -netctl-1.6.ebuild,
+  -netctl-1.7.ebuild, -netctl-1.8.ebuild, netctl-1.9.ebuild:
+  amd64/x86 stable. bug #519280. remove old
 
 *netctl-1.10 (18 Jan 2015)
 
