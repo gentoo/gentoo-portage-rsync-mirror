@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.6 2015/01/11 20:05:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.2.ebuild,v 1.7 2015/01/31 16:42:19 grobian Exp $
 
 EAPI=5
 
@@ -452,7 +452,8 @@ multilib_src_install() {
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		eval $(grep PACKAGE_VERSION= configure)
 		[[ -n ${PACKAGE_VERSION} ]] && libpv=${PACKAGE_VERSION}
-		for lib in lib{EnhancedDisassembly,LLVM-${libpv},LTO,profile_rt,clang}.dylib LLVMHello.dylib clang/${libpv}/lib/darwin/libclang_rt.asan_osx_dynamic.dylib; do
+		libpvminor=${libpv%.[0-9]*}
+		for lib in lib{EnhancedDisassembly,LLVM-${libpv},LTO,profile_rt,clang}.dylib LLVMHello.dylib clang/${libpv}/lib/darwin/libclang_rt.asan_{osx,iossim}_dynamic.dylib; do
 			# libEnhancedDisassembly is Darwin10 only, so non-fatal
 			# + omit clang libs if not enabled
 			[[ -f ${ED}/usr/lib/${lib} ]] || continue
@@ -465,7 +466,7 @@ multilib_src_install() {
 		done
 		for f in "${ED}"/usr/bin/* "${ED}"/usr/lib/lib*.dylib "${ED}"/usr/lib/clang/${libpv}/lib/darwin/*.dylib ; do
 			# omit clang libs if not enabled
-			[[ -f ${ED}/usr/lib/${lib} ]] || continue
+			[[ -f "${f}" ]] || continue
 
 			scanmacho -BF'%n#f' "${f}" | tr ',' '\n' | \
 			while read odylib ; do
@@ -476,6 +477,9 @@ multilib_src_install() {
 						;;
 					*/libLLVM-${libpv}.dylib)
 						ndylib="${EPREFIX}"/usr/lib/libLLVM-${libpv}.dylib
+						;;
+					*/libLLVM-${libpvminor}.dylib)
+						ndylib="${EPREFIX}"/usr/lib/libLLVM-${libpvminor}.dylib
 						;;
 					*/libLTO.dylib)
 						ndylib="${EPREFIX}"/usr/lib/libLTO.dylib

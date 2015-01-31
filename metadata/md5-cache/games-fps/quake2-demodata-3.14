@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install postinst preinst setup unpack
+DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=app-arch/unzip
 DESCRIPTION=Demo data for Quake 2
+EAPI=5
 HOMEPAGE=http://en.wikipedia.org/wiki/Quake_II
 IUSE=symlink
 KEYWORDS=~alpha ~amd64 ppc sparc x86 ~x86-fbsd
@@ -9,4 +10,4 @@ RDEPEND=games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://idsoftware/quake2/q2-314-demo-x86.exe
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c8564f09584a7b4b908be85767d9efe5
+_md5_=f1a534508c67db8259a6482dbffb1183

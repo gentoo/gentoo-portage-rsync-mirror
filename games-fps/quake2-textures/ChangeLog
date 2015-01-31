@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-textures
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/ChangeLog,v 1.4 2014/04/24 19:05:50 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/ChangeLog,v 1.5 2015/01/31 16:35:13 tupone Exp $
+
+  31 Jan 2015; Tupone Alfredo <tupone@gentoo.org>
+  quake2-textures-0_beta8.ebuild:
+  EAPI 5
 
   24 Apr 2014; Ulrich Müller <ulm@gentoo.org> quake2-textures-0_beta8.ebuild:
   Update HOMEPAGE and SRC_URI. Fix LICENSE, add mirror and bindist

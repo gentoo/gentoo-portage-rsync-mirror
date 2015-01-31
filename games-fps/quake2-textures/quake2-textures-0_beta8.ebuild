@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/quake2-textures-0_beta8.ebuild,v 1.4 2014/04/24 19:05:50 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/quake2-textures-0_beta8.ebuild,v 1.5 2015/01/31 16:35:13 tupone Exp $
+EAPI=5
 inherit eutils versionator games
 
 MY_PV=$(get_version_component_range 2-2)
@@ -25,7 +25,7 @@ dir=${GAMES_DATADIR}/quake2
 
 src_install() {
 	insinto "${dir}"/baseq2
-	doins *.pak || die "doins *.pak failed"
+	doins *.pak
 
 	dodoc README
 

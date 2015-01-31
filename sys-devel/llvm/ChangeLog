@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.222 2015/01/25 23:45:06 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.223 2015/01/31 16:42:19 grobian Exp $
+
+  31 Jan 2015; Fabian Groffen <grobian@gentoo.org> llvm-3.4.2.ebuild,
+  llvm-3.5.0.ebuild, llvm-3.5.1.ebuild, llvm-9999.ebuild:
+  Update install_name patching, by Michael Weiser, bug #536716
 
   25 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
   Update ocaml tests path for live ebuild, bug #537504

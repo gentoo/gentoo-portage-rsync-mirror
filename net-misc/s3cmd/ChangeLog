@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/s3cmd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.24 2014/10/13 20:57:39 robbat2 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.25 2015/01/31 16:57:08 darkside Exp $
+
+  31 Jan 2015; Jeremy Olexa <darkside@gentoo.org> s3cmd-1.5.0_rc1.ebuild:
+  Add Gentoo Prefix mods and keyword, bug 537050
 
 *s3cmd-1.5.0_rc1 (13 Oct 2014)
 

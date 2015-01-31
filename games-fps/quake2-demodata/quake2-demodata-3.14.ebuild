@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.8 2013/03/29 16:13:55 hasufell Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.9 2015/01/31 16:33:00 tupone Exp $
+EAPI=5
 inherit unpacker eutils versionator games
 
 MY_PV=$(delete_all_version_separators)
@@ -59,7 +59,7 @@ src_unpack() {
 
 src_install() {
 	insinto "${dir}"/demo
-	doins -r Install/Data/baseq2/{pak0.pak,players} || die "doins pak players failed"
+	doins -r Install/Data/baseq2/{pak0.pak,players}
 
 	dodoc Install/Data/DOCS/*.txt
 

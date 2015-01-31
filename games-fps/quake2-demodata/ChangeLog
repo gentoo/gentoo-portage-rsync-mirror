@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake2-demodata
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.7 2013/03/29 16:13:55 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.8 2015/01/31 16:33:00 tupone Exp $
+
+  31 Jan 2015; Tupone Alfredo <tupone@gentoo.org> quake2-demodata-3.14.ebuild:
+  EAPI 5
 
   29 Mar 2013; Julian Ospald <hasufell@gentoo.org> quake2-demodata-3.14.ebuild:
   use unpack_zip from unpacker.eclass instead of unzip
