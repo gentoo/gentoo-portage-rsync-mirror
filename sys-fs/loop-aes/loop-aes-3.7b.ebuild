@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7b.ebuild,v 1.4 2015/01/28 22:34:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7b.ebuild,v 1.5 2015/01/31 11:45:24 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 arm ~hppa ~ppc ~sparc ~x86"
 IUSE="cpu_flags_x86_aes extra-ciphers keyscrub cpu_flags_x86_padlock"
 
 DEPEND="|| ( >=sys-apps/util-linux-2.12r[crypt,loop-aes] app-crypt/loop-aes-losetup )"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.605 2015/01/27 21:33:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.606 2015/01/31 11:32:58 jer Exp $
+
+  31 Jan 2015; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-346.35.ebuild:
+  Stable for AMD64 x86 too.
 
 *nvidia-drivers-340.76 (27 Jan 2015)
 

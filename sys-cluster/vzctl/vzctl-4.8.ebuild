@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.8.ebuild,v 1.1 2014/10/17 10:21:02 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-4.8.ebuild,v 1.2 2015/01/31 11:44:38 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc64 -amd64-fbsd -x86-fbsd -sparc-fbsd"
+KEYWORDS="amd64 ~ppc64 ~x86 -amd64-fbsd -sparc-fbsd -x86-fbsd"
 IUSE="+ploop  +vzmigrate"
 
 RDEPEND="net-firewall/iptables

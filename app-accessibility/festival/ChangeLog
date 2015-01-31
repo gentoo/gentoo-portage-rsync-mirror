@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.114 2015/01/23 07:55:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.115 2015/01/31 11:44:23 ago Exp $
+
+  31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> festival-2.1-r1.ebuild:
+  Stable for amd64, wrt bug #510598
 
   23 Jan 2015; Jeroen Roovers <jer@gentoo.org> festival-2.1-r1.ebuild:
   Stable for HPPA (bug #510598).

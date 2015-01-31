@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.3.5.ebuild,v 1.1 2013/10/20 08:47:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.3.5.ebuild,v 1.2 2015/01/31 11:45:29 ago Exp $
 
 EAPI=5
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="http://github.com/fernandotcl/udisks-glue/tarball/release-${PV} -> ${P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100.2
