@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r4.ebuild,v 1.3 2014/12/30 22:22:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r4.ebuild,v 1.4 2015/02/01 09:24:17 pinkbyte Exp $
 
 EAPI=5
 inherit autotools eutils multilib toolchain-funcs
@@ -21,10 +21,10 @@ RESTRICT="test"
 IUSE="hardened +png +truetype gpm fbcondecor"
 
 DESCRIPTION="Framebuffer splash utilities"
-HOMEPAGE="http://fbsplash.berlios.de"
+HOMEPAGE="http://sourceforge.net/projects/fbsplash.berlios/"
 SRC_URI="
-	mirror://berlios/fbsplash/${PN}-lite-${PV}.tar.bz2
-	mirror://berlios/fbsplash/${GENTOOSPLASH}.tar.bz2
+	mirror://sourceforge/fbsplash.berlios/${PN}-lite-${PV}.tar.bz2
+	mirror://sourceforge/fbsplash.berlios/${GENTOOSPLASH}.tar.bz2
 	mirror://gentoo/${MISCSPLASH}.tar.bz2
 	mirror://sourceforge/libpng/libpng-${V_PNG}.tar.bz2
 	ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v${V_JPEG}.tar.gz

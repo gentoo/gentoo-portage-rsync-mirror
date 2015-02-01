@@ -1,6 +1,20 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.226 2015/02/01 08:55:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.228 2015/02/01 09:24:17 pinkbyte Exp $
+
+  01 Feb 2015; Sergey Popov <pinkbyte@gentoo.org>
+  splashutils-1.5.4.4-r1.ebuild, splashutils-1.5.4.4-r4.ebuild,
+  splashutils-1.5.4.4-r5.ebuild:
+  Correct SRC_URI and HOMEPAGE, wrt bug #537752
+
+*splashutils-1.5.4.4-r5 (01 Feb 2015)
+
+  01 Feb 2015; Sergey Popov <pinkbyte@gentoo.org>
+  +splashutils-1.5.4.4-r5.ebuild, files/splashutils-1.5.4.4-ft25.patch,
+  +files/splashutils-1.5.4.4-sys-queue.patch:
+  Revision bump: correct freetype 2.5 patch, wrt bug #506124. Add support for
+  user patches, add include for queue.h kernel header explicitly, prune
+  unnecessary libtool files
 
   01 Feb 2015; Sergey Popov <pinkbyte@gentoo.org>
   -splashutils-1.5.4.4-r2.ebuild, -splashutils-1.5.4.4-r3.ebuild,

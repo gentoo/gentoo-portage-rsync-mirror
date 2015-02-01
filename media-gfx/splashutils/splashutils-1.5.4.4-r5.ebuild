@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r1.ebuild,v 1.13 2015/02/01 09:24:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r5.ebuild,v 1.2 2015/02/01 09:24:17 pinkbyte Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit autotools eutils multilib toolchain-funcs
 
 MISCSPLASH="miscsplashutils-0.1.8"
@@ -30,24 +29,33 @@ SRC_URI="
 	mirror://sourceforge/libpng/libpng-${V_PNG}.tar.bz2
 	ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v${V_JPEG}.tar.gz
 	mirror://sourceforge/freetype/freetype-${V_FT}.tar.bz2
-	http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2"
+	http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2
+"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
-RDEPEND="gpm? ( sys-libs/gpm[static-libs] )
-	truetype? ( >=media-libs/freetype-2[static-libs]
-		|| ( <app-arch/bzip2-1.0.6-r3 app-arch/bzip2[static-libs] )
-		|| ( <sys-libs/zlib-1.2.5.1-r2 sys-libs/zlib[static-libs] ) )
-	png? ( >=media-libs/libpng-1.4.3[static-libs] )
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+
+RDEPEND="
+	gpm? ( sys-libs/gpm[static-libs(+)] )
+	truetype? (
+		>=media-libs/freetype-2[static-libs]
+		app-arch/bzip2[static-libs(+)]
+		sys-libs/zlib[static-libs(+)]
+	)
+	png? (
+		>=media-libs/libpng-1.4.3[static-libs]
+		sys-libs/zlib[static-libs(+)]
+	)
 	virtual/jpeg:0[static-libs]
-	>=sys-apps/baselayout-1.9.4-r5
 	app-arch/cpio
 	media-gfx/fbgrab
 	!sys-apps/lcdsplash"
+
 DEPEND="${RDEPEND}
 	>=dev-libs/klibc-1.5
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 S="${WORKDIR}/${P/_/-}"
 SG="${WORKDIR}/${GENTOOSPLASH}"
@@ -64,6 +72,7 @@ pkg_setup() {
 
 src_prepare() {
 	mv "${WORKDIR}"/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} "${S}/libs"
+
 	# We need to delete the Makefile and let it be rebuilt when splashutils
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
@@ -71,16 +80,20 @@ src_prepare() {
 
 	cd "${SG}"
 	epatch "${FILESDIR}/splashutils-1.5.4.4-gentoo-typo-fix.patch"
+	epatch "${FILESDIR}/splashutils-1.5.4.4-sys-queue.patch"
 
 	if use truetype ; then
 		cd "${SM}"
 		epatch "${FILESDIR}/splashutils-1.5.4.4-freetype-bz2.patch"
+		cd "${WORKDIR}"
+		epatch "${FILESDIR}/splashutils-1.5.4.4-ft25.patch"
 	fi
 
 	cd "${S}"
 	ln -sf "${S}/src" "${WORKDIR}/core"
 
 	epatch "${FILESDIR}/${P}-bzip2.patch"
+	epatch "${FILESDIR}/${P}-multi-keyboard.patch"
 
 	if ! tc-is-cross-compiler && \
 	   has_version "sys-devel/gcc:$(gcc-version)[vanilla]" ; then
@@ -102,13 +115,14 @@ src_prepare() {
 	fi
 
 	rm -f m4/*
+	epatch_user
 	eautoreconf
 }
 
 src_configure() {
 	tc-export CC
 	cd "${SM}"
-	emake CC="${CC}" LIB=$(get_libdir) STRIP=true || die "failed to build miscsplashutils"
+	emake CC="${CC}" LIB=$(get_libdir) STRIP=true
 
 	cd "${S}"
 	econf \
@@ -123,26 +137,24 @@ src_configure() {
 		--with-jpeg-src=${JPEGSRC} \
 		--with-lpng-src=${LPNGSRC} \
 		--with-zlib-src=${ZLIBSRC} \
-		--with-essential-libdir=/$(get_libdir) || die "failed to configure splashutils"
+		--with-essential-libdir=/$(get_libdir)
 }
 
 src_compile() {
-	emake CC="${CC}" STRIP="true" || die "failed to build splashutils"
+	emake CC="${CC}" STRIP="true"
 
-	if has_version ">=sys-apps/baselayout-1.13.99"; then
-		cd "${SG}"
-		emake LIB=$(get_libdir) || die "failed to build the splash plugin"
-	fi
+	cd "${SG}"
+	emake LIB=$(get_libdir)
 }
 
 src_install() {
 	local LIB=$(get_libdir)
 
 	cd "${SM}"
-	make DESTDIR="${D}" LIB=${LIB} install || die
+	emake DESTDIR="${D}" LIB=${LIB} install
 
 	cd "${S}"
-	make DESTDIR="${D}" STRIP="true" install || die
+	emake DESTDIR="${D}" STRIP="true" install
 
 	mv "${D}"/usr/${LIB}/libfbsplash.so* "${D}"/${LIB}/
 	gen_usr_ldscript libfbsplash.so
@@ -162,12 +174,9 @@ src_install() {
 	insinto /etc/splash
 	doins "${SM}"/fbtruetype/luxisri.ttf
 
-	if has_version ">=sys-apps/baselayout-1.13.99"; then
-		cd "${SG}"
-		make DESTDIR="${D}" LIB=${LIB} install || die "failed to install the splash plugin"
-	else
-		cp "${SG}"/splash-functions-bl1.sh "${D}"/sbin/
-	fi
+	cd "${SG}"
+	make DESTDIR="${D}" LIB=${LIB} install
+	prune_libtool_files
 
 	sed -i -e "s#/lib/splash#/${LIB}/splash#" "${D}"/sbin/splash-functions.sh
 	keepdir /${LIB}/splash/{tmp,cache,bin,sys}
@@ -224,13 +233,4 @@ pkg_postinst() {
 		elog "  media-gfx/splash-themes-livecd"
 		elog "  media-gfx/splash-themes-gentoo"
 	fi
-
-	elog "Please note that the 'fbsplash' kernel patch has now been renamed to"
-	elog "'fbcondecor'.  Accordingly, the old 'splash' initscript is now called"
-	elog "'fbcondecor'.  Make sure you update your system.  See:"
-	elog "    http://dev.gentoo.org/~spock/projects/fbcondecor/#history"
-	elog "for further info about the name changes."
-	elog ""
-	elog "Also note that splash_util has now been split into splash_util, fbsplashd"
-	elog "and fbcondecor_ctl."
 }
