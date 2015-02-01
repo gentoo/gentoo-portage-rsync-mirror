@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.211 2015/01/05 09:15:14 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.212 2015/02/01 16:29:03 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -docutils-0.8.1.ebuild,
+  -docutils-0.9.1.ebuild, -docutils-0.9.ebuild:
+  Remove old.
 
   05 Jan 2015; Yixun Lan <dlan@gentoo.org> docutils-0.12.ebuild:
   keyword ~arm64, test on board

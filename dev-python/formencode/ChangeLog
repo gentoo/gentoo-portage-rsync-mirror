@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/formencode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.32 2014/03/31 20:49:51 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.33 2015/02/01 16:30:56 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -formencode-1.2.6.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> formencode-1.2.6-r1.ebuild:
   Add support for the new PyPy slotting.

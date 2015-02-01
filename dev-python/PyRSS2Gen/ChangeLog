@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyRSS2Gen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyRSS2Gen/ChangeLog,v 1.8 2014/09/30 17:52:39 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyRSS2Gen/ChangeLog,v 1.9 2015/02/01 16:23:57 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -PyRSS2Gen-1.0.0.ebuild:
+  Remove old.
 
   30 Sep 2014; Mike Gilbert <floppym@gentoo.org> PyRSS2Gen-1.1.ebuild:
   Cleanup PYTHON_COMPAT, add 3.4.

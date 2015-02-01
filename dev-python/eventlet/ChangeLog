@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/eventlet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.9 2014/10/19 03:26:20 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.10 2015/02/01 16:30:37 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -eventlet-0.12.1-r1.ebuild,
+  -eventlet-0.9.16.ebuild:
+  Remove old.
 
   19 Oct 2014; Ian Delaney <idella4@gentoo.org> eventlet-0.15.2.ebuild:
   update HOMEPAGE

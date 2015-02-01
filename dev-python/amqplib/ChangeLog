@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/amqplib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.9 2015/01/01 23:08:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/amqplib/ChangeLog,v 1.10 2015/02/01 16:24:55 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -amqplib-0.6.1.ebuild,
+  -amqplib-1.0.2.ebuild:
+  Remove old.
 
   01 Jan 2015; Michał Górny <mgorny@gentoo.org> amqplib-0.6.1-r1.ebuild,
   amqplib-1.0.2-r1.ebuild:

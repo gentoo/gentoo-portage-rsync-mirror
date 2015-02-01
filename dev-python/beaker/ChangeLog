@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beaker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.60 2014/12/20 09:30:58 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.61 2015/02/01 16:25:42 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -beaker-1.6.4.ebuild:
+  Remove old.
 
   20 Dec 2014; Ian Delaney <idella4@gentoo.org> -beaker-1.5.4-r1.ebuild,
   -beaker-1.6.2.ebuild, -beaker-1.6.3.ebuild, beaker-1.6.4-r1.ebuild:
