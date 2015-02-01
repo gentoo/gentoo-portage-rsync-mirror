@@ -1,6 +1,24 @@
 # ChangeLog for media-gfx/splashutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.225 2014/12/30 22:22:01 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.226 2015/02/01 08:55:01 pinkbyte Exp $
+
+  01 Feb 2015; Sergey Popov <pinkbyte@gentoo.org>
+  -splashutils-1.5.4.4-r2.ebuild, -splashutils-1.5.4.4-r3.ebuild,
+  -files/splashutils-openrc-0.4.3-runlevel-fix.patch,
+  -files/splashutils-openrc-0.4-fix.patch,
+  -files/splashutils-1.5.4.3-daemon-exit-signal.patch,
+  -files/splashutils-1.5.4.3-fix_rc_var.patch,
+  -files/splashutils-1.5.4.3-libjpeg.patch,
+  -files/splashutils-1.5.4.3-libpng15_compat.patch,
+  -files/splashutils-1.5.4.3-makefile.patch,
+  -files/splashutils-1.5.4.3-nondefault-runlevel.patch,
+  -files/splashutils-1.5.4.3-openrc-effects.patch,
+  -files/splashutils-1.5.4.3-openrc-umount-fix.patch,
+  -files/splashutils-1.5.4.3-splash-functions.patch,
+  -files/splashutils-1.5.4.3-splash_geninitramfs.patch,
+  -files/splashutils-1.5.4.3-splash_util.patch,
+  -files/initrd.splash-cmp-str-instead-of-int.patch:
+  Drop old
 
   30 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   splashutils-1.5.4.4-r1.ebuild, splashutils-1.5.4.4-r2.ebuild,
