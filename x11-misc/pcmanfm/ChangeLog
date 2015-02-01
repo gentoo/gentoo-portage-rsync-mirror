@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pcmanfm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.101 2014/10/18 20:32:05 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.102 2015/02/01 13:00:58 hwoarang Exp $
+
+  01 Feb 2015; Markos Chandras <hwoarang@gentoo.org> pcmanfm-1.1.2.ebuild,
+  pcmanfm-1.2.2.ebuild, pcmanfm-1.2.3.ebuild, pcmanfm-9999.ebuild:
+  Bring the virtual/freedesktop-icon-theme dependency back. Bug #538424
 
 *pcmanfm-1.2.3 (18 Oct 2014)
 
