@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.18.3.ebuild,v 1.1 2015/01/18 07:44:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-3.18.5.ebuild,v 1.1 2015/02/01 08:12:56 kumba Exp $
 
 # EAPI Version
 EAPI="5"
@@ -17,8 +17,8 @@ EAPI="5"
 
 # Version Data
 OKV=${PV/_/-}
-GITDATE="20150118"			# Date of diff between kernel.org and lmo GIT
-GENPATCHREV="1"				# Tarball revision for patches
+GITDATE="20150130"			# Date of diff between kernel.org and lmo GIT
+GENPATCHREV="2"				# Tarball revision for patches
 
 # Directories
 S="${WORKDIR}/linux-${OKV}-${GITDATE}"
