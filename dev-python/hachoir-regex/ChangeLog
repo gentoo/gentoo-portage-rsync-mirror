@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/hachoir-regex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.9 2014/12/27 14:18:02 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.10 2015/02/01 16:32:37 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -hachoir-regex-1.0.5.ebuild:
+  Remove old.
 
 *hachoir-regex-1.0.5-r1 (27 Dec 2014)
 

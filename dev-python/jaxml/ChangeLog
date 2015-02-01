@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jaxml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.24 2014/04/28 19:44:47 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.25 2015/02/01 16:36:05 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -jaxml-3.02.ebuild:
+  Remove old.
 
   28 Apr 2014; Sébastien Fabbro <bicatali@gentoo.org> jaxml-3.02-r1.ebuild:
   Keyword ~amd64-linux ~x86-linux

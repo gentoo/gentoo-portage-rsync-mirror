@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mocker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.12 2014/12/28 19:26:07 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mocker/ChangeLog,v 1.13 2015/02/01 16:39:17 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -mocker-1.1.ebuild:
+  Remove old.
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> mocker-1.1.1-r1.ebuild:
   python-r1 cleanup.

@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/darktable
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.61 2014/12/24 18:15:21 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.63 2015/02/01 16:43:34 radhermit Exp $
+
+  01 Feb 2015; Tim Harder <radhermit@gentoo.org> darktable-9999.ebuild:
+  Sync sse3 changes to live ebuild.
+
+*darktable-1.6.2 (01 Feb 2015)
+
+  01 Feb 2015; Tim Harder <radhermit@gentoo.org> +darktable-1.6.2.ebuild:
+  Version bump. Force SSE3 support to be enabled as it's required.
 
 *darktable-1.6.1 (24 Dec 2014)
 

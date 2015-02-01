@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/iso8601
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.26 2014/12/24 07:26:32 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.27 2015/02/01 16:38:45 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -iso8601-0.1.4-r1.ebuild,
+  -iso8601-0.1.4.ebuild, -iso8601-0.1.8.ebuild:
+  Remove old.
 
   24 Dec 2014; Markus Meier <maekke@gentoo.org> iso8601-0.1.10.ebuild:
   arm stable, bug #530294
