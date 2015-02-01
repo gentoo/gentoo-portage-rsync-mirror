@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1-r1.ebuild,v 1.3 2014/10/09 15:26:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1-r1.ebuild,v 1.4 2015/02/01 19:15:27 tupone Exp $
 
 EAPI=5
 inherit eutils check-reqs gnome2-utils flag-o-matic games
@@ -16,7 +16,8 @@ DESCRIPTION="Multiplayer FPS based on the QFusion engine (evolved from Quake 2)"
 HOMEPAGE="http://www.warsow.net/"
 SRC_URI="http://www.warsow.eu/${ENGINE_P}.tar.gz
 	http://www.warsow.eu/warsow_${DATA_PV}_unified.tar.gz
-	mirror://gentoo/warsow.png"
+	mirror://gentoo/warsow.png
+	mirror://gentoo/${P}-build.patch.gz"
 
 # ZLIB: bundled angelscript
 LICENSE="GPL-2 ZLIB warsow"
@@ -77,7 +78,7 @@ src_prepare() {
 	find . -type f -exec sed -i 's/\r$//' '{}' + || die
 
 	cd "${S}"/.. || die
-	epatch "${FILESDIR}"/${P}-build.patch \
+	epatch "${WORKDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-pic.patch \
 		"${FILESDIR}"/${P}-openal.patch
 	epatch_user
