@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r1.ebuild,v 1.9 2014/08/05 12:47:08 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.55-r1.ebuild,v 1.10 2015/02/01 01:46:12 gienah Exp $
 
 EAPI=3
 inherit multilib eutils flag-o-matic pax-utils
@@ -84,6 +84,14 @@ src_prepare() {
 		einfo "Disabling PIE..."
 		epatch "${FILESDIR}"/gentoo-fix_nopie_for_hardened_toolchain.patch
 	fi
+
+	# bug #463882, patch from upstream https://bugs.launchpad.net/sbcl/+bug/1095036
+	epatch "${FILESDIR}"/${P}-newglibc.patch
+
+	# bug #526194
+	sed -e "s@CFLAGS =@CFLAGS = ${CFLAGS}@" \
+		-e "s@LINKFLAGS =@LINKFLAGS = ${LDFLAGS}@" \
+		-i src/runtime/GNUmakefile || die
 
 	use source && sed 's%"$(BUILD_ROOT)%$(MODULE).lisp "$(BUILD_ROOT)%' -i contrib/vanilla-module.mk
 

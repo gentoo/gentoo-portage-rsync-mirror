@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.215 2015/01/31 04:35:14 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.216 2015/02/01 01:46:12 gienah Exp $
+
+  01 Feb 2015; Mark Wright <gienah@gentoo.org>
+  +files/sbcl-1.0.55-newglibc.patch, sbcl-1.0.55-r1.ebuild:
+  Fix Bug 463882 - dev-lisp/sbcl-1.0.55-r1 - x86-64-linux-os.c:93:1: error:
+  REG_RAX undeclared (first use in this function). Thanks to Bernardo Costa for
+  reporting, Coacher for supplying the pointer to the patch from upstream that
+  is applied to fix the problem, Juergen Rose and Guenther Brunthaler for
+  supplying build logs, Vasiliy, Nuno Silva, patrick, blueboar, jer, pchrist and
+  tomwij for helping. Apply fix for Bug 526194 - dev-lisp/sbcl-1.2.4 does not
+  respect CFLAGS and LDFLAGS to sbcl-1.0.55-r1
 
   31 Jan 2015; Mark Wright <gienah@gentoo.org>
   +files/sbcl-1.2.7-verbose-build.patch, sbcl-1.2.7.ebuild:
