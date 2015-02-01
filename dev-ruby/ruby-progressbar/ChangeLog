@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.69 2015/01/31 14:09:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.70 2015/02/01 13:49:30 ago Exp $
+
+  01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ruby-progressbar-1.4.2.ebuild:
+  Stable for x86, wrt bug #534306
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ruby-progressbar-1.4.2.ebuild:
   Stable for amd64, wrt bug #534306

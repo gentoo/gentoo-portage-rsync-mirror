@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.8.ebuild,v 1.3 2015/01/31 13:14:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/vifm-0.7.8.ebuild,v 1.4 2015/02/01 13:47:36 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/vifm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~s390 ~x86"
+KEYWORDS="amd64 ~ppc ~s390 x86"
 IUSE="X developer +extended-keys gtk +magic vim vim-syntax"
 
 DEPEND="

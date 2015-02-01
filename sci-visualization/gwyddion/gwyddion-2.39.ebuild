@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.39.ebuild,v 1.2 2015/01/31 14:11:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.39.ebuild,v 1.3 2015/02/01 13:48:27 zlogene Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://gwyddion.net/download/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc fits fftw gnome kde nls opengl perl python ruby sourceview xml X"
 
 RDEPEND="

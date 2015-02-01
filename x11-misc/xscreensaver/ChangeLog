@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.388 2015/01/31 17:09:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.389 2015/02/01 13:43:02 ago Exp $
+
+  01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xscreensaver-5.32.ebuild:
+  Stable for x86, wrt bug #533752
 
   31 Jan 2015; Jeroen Roovers <jer@gentoo.org> xscreensaver-5.32.ebuild:
   Depend on virtual/glu by stephen.smith3141 (bug #538362).

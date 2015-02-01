@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.15 2015/01/28 20:58:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.16 2015/02/01 13:40:43 mgorny Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -35,8 +35,8 @@ LIBDIR_amd64_fbsd="lib"
 MULTILIB_STRICT_DIRS="/lib32 /usr/lib32 /usr/kde/*/lib32 /usr/qt/*/lib32 /usr/X11R6/lib32"
 SYMLINK_LIB="no"
 
-# Unmask multilib ABIs use expands.
-USE_EXPAND_HIDDEN="-ABI_X86"
+# Unhide the x86-specific USE_EXPANDs.
+USE_EXPAND_HIDDEN="-ABI_X86 -CPU_FLAGS_X86"
 
 # Michał Górny <mgorny@gentoo.org> (01 Jul 2014)
 # Default to abi_x86_64 for packages that don't have it forced.

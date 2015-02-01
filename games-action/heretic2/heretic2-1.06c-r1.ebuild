@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c-r1.ebuild,v 1.2 2014/06/25 13:46:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c-r1.ebuild,v 1.3 2015/02/01 13:41:32 zlogene Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://lokigames/${PN}/${P/%?/b}-unified-x86.run
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/${PN}/base/*.so"

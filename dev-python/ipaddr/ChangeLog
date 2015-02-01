@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipaddr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipaddr/ChangeLog,v 1.19 2015/01/31 11:44:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipaddr/ChangeLog,v 1.20 2015/02/01 13:41:51 ago Exp $
+
+  01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ipaddr-2.1.11.ebuild:
+  Stable for x86, wrt bug #530526
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ipaddr-2.1.11.ebuild:
   Stable for amd64, wrt bug #530526

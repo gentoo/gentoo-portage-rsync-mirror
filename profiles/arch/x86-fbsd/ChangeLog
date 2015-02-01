@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.49 2015/01/28 21:33:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.50 2015/02/01 13:40:43 mgorny Exp $
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Unhide CPU_FLAGS_X86 on {amd64,x86}-fbsd profiles, bug #538322 by Yuta SATOH.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> use.mask:
   Unmask CPU_FLAGS_X86.
