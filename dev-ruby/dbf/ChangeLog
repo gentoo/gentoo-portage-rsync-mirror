@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/dbf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.7 2014/10/30 13:52:31 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbf/ChangeLog,v 1.8 2015/02/01 11:18:02 graaff Exp $
+
+*dbf-2.0.8 (01 Feb 2015)
+
+  01 Feb 2015; Hans de Graaff <graaff@gentoo.org> +dbf-2.0.8.ebuild:
+  Version bump.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> dbf-2.0.7-r1.ebuild,
   dbf-2.0.7.ebuild:

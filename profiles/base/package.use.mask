@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.634 2015/01/22 18:01:45 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.635 2015/02/01 11:04:30 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -146,10 +146,6 @@ dev-java/jboss-logging doc
 # http://mate-desktop.org/blog/2014-03-11-mate-desktop-singing-the-bluez
 mate-base/mate bluetooth
 mate-extra/mate-user-share bluetooth
-
-# Tim Harder <radhermit@gentoo.org> (26 Apr 2014)
-# Masked until qt5 is in the tree
->=media-video/mkvtoolnix-6.9.0 qt5
 
 # Pacho Ramos <pacho@gentoo.org> (26 Apr 2014)
 # Depends on long time obsolete goi, bug #508742

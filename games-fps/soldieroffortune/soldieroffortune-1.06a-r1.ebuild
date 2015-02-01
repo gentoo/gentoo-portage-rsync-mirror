@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a-r1.ebuild,v 1.2 2015/01/31 17:50:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a-r1.ebuild,v 1.3 2015/02/01 11:26:54 zlogene Exp $
 
 EAPI=5
 inherit eutils unpacker cdrom games
@@ -11,7 +11,7 @@ SRC_URI="mirror://lokigames/sof/sof-${PV}-cdrom-x86.run"
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 RESTRICT="strip"
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0c.ebuild,v 1.6 2015/01/31 17:50:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0c.ebuild,v 1.7 2015/02/01 11:25:13 zlogene Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://cdn.wolfire.com/games/lugaru/lugaru-linux-x86-${PV}.bin"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="mirror bindist strip"
 
