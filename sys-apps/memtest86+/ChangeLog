@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.69 2015/01/31 22:57:46 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.70 2015/01/31 23:10:02 bircoph Exp $
+
+  31 Jan 2015; Andrew Savchenko <bircoph@gentoo.org> memtest86+-4.20-r1.ebuild,
+  memtest86+-4.20-r2.ebuild, memtest86+-5.01.ebuild:
+  Fix bug 533224 (only elog message was wrong).
 
 *memtest86+-5.01 (31 Jan 2015)
 

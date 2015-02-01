@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.20-r1.ebuild,v 1.3 2012/09/12 12:53:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.20-r1.ebuild,v 1.4 2015/01/31 23:10:02 bircoph Exp $
 
 EAPI=4
 
@@ -76,7 +76,7 @@ pkg_postinst() {
 	elog "You may wish to update your bootloader configs"
 	elog "by adding these lines:"
 	elog " - For grub2 just run grub-mkconfig, a configuration file is installed"
-	elog "   as /etc/grub/39_${PN}"
+	elog "   as /etc/grub.d/39_${PN}"
 	elog " - For grub legacy: (replace '?' with correct numbers for your boot partition)"
 	elog "    > title=${PN}"
 	elog "    > root (hd?,?)"
