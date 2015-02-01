@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pastedeploy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.28 2014/12/23 12:48:24 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pastedeploy/ChangeLog,v 1.29 2015/02/01 17:29:16 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pastedeploy-1.5.0.ebuild:
+  Remove old.
 
   23 Dec 2014; Markus Meier <maekke@gentoo.org> pastedeploy-1.5.2.ebuild:
   arm stable, bug #531124

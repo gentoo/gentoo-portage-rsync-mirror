@@ -1,10 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r2.ebuild,v 1.5 2014/04/06 10:39:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.1-r2.ebuild,v 1.6 2015/02/01 17:30:14 mr_bones_ Exp $
 
 EAPI=5
-
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite"
 
 inherit fdo-mime gnome2-utils distutils-r1 games
@@ -26,7 +25,7 @@ DEPEND="dev-python/librsvg-python
 	gstreamer? ( dev-python/gst-python:0.10[${PYTHON_USEDEP}] )
 	dev-python/gconf-python
 	x11-themes/gnome-icon-theme"
-RDEPEND="${DEPEND}"
+RDEPEND=${DEPEND}
 
 PATCHES=( "${FILESDIR}"/${P}-python.patch )
 
