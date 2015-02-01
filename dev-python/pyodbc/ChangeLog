@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyodbc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.9 2014/11/30 16:33:00 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.10 2015/02/01 21:38:09 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/pyodbc-3.0.3-py25-compat.patch, -pyodbc-2.1.11.ebuild,
+  -pyodbc-2.1.8.ebuild, -pyodbc-3.0.3.ebuild, -pyodbc-3.0.6.ebuild:
+  Remove old.
 
 *pyodbc-3.0.7-r1 (30 Nov 2014)
 

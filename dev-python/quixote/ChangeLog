@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/quixote
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.43 2015/01/28 10:33:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.44 2015/02/01 21:47:42 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -quixote-2.7.ebuild:
+  Remove old.
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> quixote-2.8.ebuild:
   Stable for ppc, wrt bug #535370

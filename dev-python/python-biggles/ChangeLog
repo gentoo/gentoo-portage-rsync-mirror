@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-biggles
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.24 2014/03/03 23:47:41 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.25 2015/02/01 21:42:43 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -python-biggles-1.6.6.ebuild:
+  Remove old.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> python-biggles-1.6.6-r1.ebuild:
   amd64 stable, bug #495628

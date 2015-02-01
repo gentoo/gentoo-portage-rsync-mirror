@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pynotifier
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.26 2014/08/10 21:17:10 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pynotifier/ChangeLog,v 1.27 2015/02/01 21:36:14 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pynotifier-0.7.0-r1.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   pynotifier-0.7.0-r1.ebuild, pynotifier-0.7.0-r2.ebuild:

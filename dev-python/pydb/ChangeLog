@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.7 2011/12/27 18:00:54 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.8 2015/02/01 21:32:56 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pydb-1.26.ebuild:
+  Remove old.
 
   27 Dec 2011; Maxim Koltsov <maksbotan@gentoo.org> pydb-1.26-r1.ebuild:
   Simplify PYTHON_DEPEND. Don't install *.pyc and *.pyo files. Use
@@ -31,4 +34,3 @@
   15 Mar 2009; Andrey Grozin <grozin@gentoo.org> +metadata.xml,
   +pydb-1.25.ebuild:
   Initial import
-

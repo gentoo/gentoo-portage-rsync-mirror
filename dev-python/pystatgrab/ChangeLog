@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pystatgrab
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.14 2014/12/17 05:47:57 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystatgrab/ChangeLog,v 1.15 2015/02/01 21:40:11 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pystatgrab-0.5.ebuild:
+  Remove old.
 
   17 Dec 2014; Ian Delaney <idella4@gentoo.org> pystatgrab-0.6.ebuild:
   correct version border in dep, fixes Bug #528944

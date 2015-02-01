@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-debian
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/ChangeLog,v 1.7 2014/04/02 23:45:28 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/ChangeLog,v 1.8 2015/02/01 21:43:40 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -python-debian-0.1.21.ebuild:
+  Remove old.
 
   02 Apr 2014; Mike Gilbert <floppym@gentoo.org> python-debian-0.1.21_p2.ebuild:
   Add python3.4.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/routes
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.22 2014/11/25 11:24:05 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/ChangeLog,v 1.23 2015/02/01 21:48:25 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -routes-1.12.3.ebuild,
+  -routes-1.13.ebuild:
+  Remove old.
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> routes-2.0.ebuild:
   Support python 3.4
