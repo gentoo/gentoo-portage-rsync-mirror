@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.121 2015/01/30 21:48:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.122 2015/02/01 20:02:47 mgorny Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -138,3 +138,8 @@ UNINSTALL_IGNORE="/lib/modules/*"
 # Andreas K. Hüttel <dilfridge@gentoo.org> (23 Aug 2013)
 # Make emerge messages default to English as per Council decision
 LC_MESSAGES=C
+
+# Michał Górny <mgorny@gentoo.org> (01 Feb 2015)
+# Move the current Gentoo preference (libav over ffmpeg)
+# from virtual/ffmpeg into USE flags.
+USE="${USE} libav"
