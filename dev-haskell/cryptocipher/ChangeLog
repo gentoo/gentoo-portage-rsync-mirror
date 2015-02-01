@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cryptocipher
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptocipher/ChangeLog,v 1.5 2014/07/25 09:16:38 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cryptocipher/ChangeLog,v 1.6 2015/02/01 22:16:59 qnikst Exp $
+
+  01 Feb 2015; Alexander Vershilov <qnikst@gentoo.org>
+  -cryptocipher-0.6.1.ebuild:
+  dev-haskell/cryptocipher: drop old
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> cryptocipher-0.5.2.ebuild,
   cryptocipher-0.6.1.ebuild, cryptocipher-0.6.2.ebuild:
