@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/extra-cmake-modules
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/extra-cmake-modules/ChangeLog,v 1.8 2015/01/11 19:03:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/extra-cmake-modules/ChangeLog,v 1.9 2015/02/01 18:00:50 kensington Exp $
+
+  01 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  extra-cmake-modules-1.6.1.ebuild:
+  Add ~x86 keyword.
 
 *extra-cmake-modules-1.6.1 (11 Jan 2015)
 
