@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.8.2.ebuild,v 1.1 2012/12/05 15:27:40 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.8.2.ebuild,v 1.2 2015/02/01 18:19:07 neurogeek Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
-RDEPEND=">=dev-libs/libevent-1.4
+RDEPEND="<dev-libs/libevent-2.1
 	>=dev-libs/glib-2.16
 	>=dev-lang/lua-5.1"
 DEPEND="${RDEPEND}

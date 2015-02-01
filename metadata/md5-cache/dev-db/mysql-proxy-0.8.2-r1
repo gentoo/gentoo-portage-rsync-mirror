@@ -1,14 +1,13 @@
-DEFINED_PHASES=configure install postinst
-DEPEND=<dev-libs/libevent-2.1 >=dev-libs/glib-2.16 >=dev-lang/lua-5.1 >=virtual/mysql-5.0 virtual/pkgconfig
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=>=dev-libs/libevent-2.1 >=dev-libs/glib-2.16 >=dev-lang/lua-5.1 >=virtual/mysql-5.0 virtual/pkgconfig
 DESCRIPTION=A Proxy for the MySQL Client/Server protocol
-EAPI=2
+EAPI=5
 HOMEPAGE=http://forge.mysql.com/wiki/MySQL_Proxy
 IUSE=examples
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=<dev-libs/libevent-2.1 >=dev-libs/glib-2.16 >=dev-lang/lua-5.1
-RESTRICT=test
+RDEPEND=>=dev-libs/libevent-2.1 >=dev-libs/glib-2.16 >=dev-lang/lua-5.1
 SLOT=0
 SRC_URI=mirror://mysql/Downloads/MySQL-Proxy/mysql-proxy-0.8.2.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=862c7237fa9153202a8ebad61342318d
+_md5_=2eb4c3361173f45ce24991f3608b1d5d
