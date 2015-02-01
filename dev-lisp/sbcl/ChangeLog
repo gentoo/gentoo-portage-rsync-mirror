@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.216 2015/02/01 01:46:12 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.217 2015/02/01 06:34:48 gienah Exp $
+
+  01 Feb 2015; Mark Wright <gienah@gentoo.org> sbcl-1.1.18.ebuild,
+  sbcl-1.2.2.ebuild, sbcl-1.2.4.ebuild:
+  Applied my fix from sbcl-1.2.7 to all the remaining ebuilds to fix Bug 526194
+  - dev-lisp/sbcl-1.2.4 does not respect CFLAGS and LDFLAGS
 
   01 Feb 2015; Mark Wright <gienah@gentoo.org>
   +files/sbcl-1.0.55-newglibc.patch, sbcl-1.0.55-r1.ebuild:
