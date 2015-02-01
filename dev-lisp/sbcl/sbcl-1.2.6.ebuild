@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.2.6.ebuild,v 1.1 2014/12/20 15:37:16 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.2.6.ebuild,v 1.2 2015/02/01 07:39:07 gienah Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -90,6 +90,11 @@ src_prepare() {
 		einfo "Disabling PIE..."
 		epatch "${FILESDIR}"/${PN}-1.1.17-gentoo-fix_nopie_for_hardened_toolchain.patch
 	fi
+
+	# bug #526194
+	sed -e "s@CFLAGS =@CFLAGS = ${CFLAGS}@" \
+		-e "s@LINKFLAGS =@LINKFLAGS = ${LDFLAGS}@" \
+		-i src/runtime/GNUmakefile || die
 
 	cp /usr/share/common-lisp/source/asdf/build/asdf.lisp contrib/asdf/ || die
 

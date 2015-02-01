@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.70 2015/01/31 23:00:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.71 2015/02/01 08:00:41 fordfrog Exp $
+
+  01 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> commons-lang-3.3.2.ebuild:
+  added restrict as suggested by James Le Cuirot <chewi@aura-online.co.uk>
 
 *commons-lang-3.3.2 (31 Jan 2015)
 
