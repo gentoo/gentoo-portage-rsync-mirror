@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/marisa/marisa-0.2.4.ebuild,v 1.2 2014/11/29 10:42:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/marisa/marisa-0.2.4.ebuild,v 1.3 2015/02/01 12:26:01 mgorny Exp $
 
 EAPI=5
 
@@ -16,59 +16,69 @@ SRC_URI="https://marisa-trie.googlecode.com/files/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="python doc static-libs sse2 sse3 ssse3 sse4.1 sse4.2 sse4 sse4a popcnt"
+IUSE="python doc static-libs cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_ssse3 cpu_flags_x86_sse4_1 cpu_flags_x86_sse4_2 cpu_flags_x86_sse4a cpu_flags_x86_popcnt"
 
 DEPEND="python? ( dev-lang/swig ${PYTHON_DEPS} )"
 RDEPEND="python? ( ${PYTHON_DEPS} )"
 
+# implied by --enable switches
+REQUIRED_USE="
+	cpu_flags_x86_popcnt? ( cpu_flags_x86_sse3 )
+	cpu_flags_x86_sse4a? ( cpu_flags_x86_popcnt cpu_flags_x86_sse3 )
+	cpu_flags_x86_sse4_2? ( cpu_flags_x86_popcnt cpu_flags_x86_sse4_1 )
+	cpu_flags_x86_sse4_1? ( cpu_flags_x86_ssse3 )
+	cpu_flags_x86_ssse3? ( cpu_flags_x86_sse3 )
+	cpu_flags_x86_sse3? ( cpu_flags_x86_sse2 )
+"
+
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python.patch"
 	if use python; then
-		pushd bindings/python
-		ln -sf ../marisa-swig.i marisa-swig.i
-		ln -sf ../marisa-swig.h marisa-swig.h
-		ln -sf ../marisa-swig.cxx marisa-swig.cxx
+		pushd bindings/python || die
+		ln -sf ../marisa-swig.i marisa-swig.i || die
+		ln -sf ../marisa-swig.h marisa-swig.h || die
+		ln -sf ../marisa-swig.cxx marisa-swig.cxx || die
 		distutils-r1_src_prepare
-		popd
+		popd || die
 	fi
 }
 
 src_configure() {
 	local myeconfargs=(
 		$(use_enable static-libs static)
-		$(use_enable sse2)
-		$(use_enable sse3)
-		$(use_enable ssse3)
-		$(use_enable sse4.1)
-		$(use_enable sse4.2)
-		$(use_enable sse4)
-		$(use_enable sse4a)
-		$(use_enable popcnt)
+		$(use_enable cpu_flags_x86_sse2 sse2)
+		$(use_enable cpu_flags_x86_sse3 sse3)
+		$(use_enable cpu_flags_x86_ssse3 ssse3)
+		$(use_enable cpu_flags_x86_sse4_1 sse4.1)
+		$(use_enable cpu_flags_x86_sse4_2 sse4.2)
+		# sse4 is just an alias to sse4.2
+		$(use_enable cpu_flags_x86_sse4a sse4a)
+		$(use_enable cpu_flags_x86_popcnt popcnt)
 	)
 	econf "${myeconfargs[@]}"
 
 	if use python; then
-		pushd bindings/python
+		pushd bindings/python || die
 		distutils-r1_src_prepare
-		popd
+		popd || die
 	fi
 }
 
 src_compile() {
 	default
 	if use python; then
-		pushd bindings/python
+		pushd bindings/python || die
 		distutils-r1_src_compile
-		popd
+		popd || die
 	fi
 }
 
 src_install() {
 	default
 	if use python; then
-		pushd bindings/python
+		pushd bindings/python || die
 		distutils-r1_src_install
-		popd
+		popd || die
 	fi
 	use doc && dohtml docs/readme.en.html
 	prune_libtool_files

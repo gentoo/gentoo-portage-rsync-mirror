@@ -39,7 +39,6 @@
 		<flag name='modminer'>Enable support for mining with ModMiner FPGAs</flag>
 		<flag name='nanofury'>Enable support for mining with NanoFury USB sticks</flag>
 		<flag name='opencl'>Enable support for mining with OpenCL-capable devices (GPUs)</flag>
-		<flag name='padlock'>Enable support for mining with VIA Padlock CPUs</flag>
 		<flag name='proxy'>Enable support for virtual proxy device</flag>
 		<flag name='proxy_getwork'>Enable proxy support for getwork protocol (often used with Block Erupter Blades)</flag>
 		<flag name='proxy_stratum'>Enable proxy support for stratum protocol</flag>
@@ -47,8 +46,6 @@
 		<flag name='screen'>Provide start-bfgminer.sh script to launch BFGMiner in app-misc/screen</flag>
 		<flag name='scrypt'>Enable support for scrypt mining algorithm</flag>
 		<flag name='sha256d'>Enable support for SHA256d mining algorithm</flag>
-		<flag name='sse2_4way'>Enable support for CPU SSE2 4way mining algorithm</flag>
-		<flag name='sse4'>Enable support for CPU SSE4 mining algorithm</flag>
 		<flag name='twinfury'>Enable support for mining with Twinfury USB sticks</flag>
 		<flag name='udev-broad-rules'>Enable broader udev rules that may match non-mining devices</flag>
 		<flag name='x6500'>Enable support for mining with X6500 FPGAs</flag>

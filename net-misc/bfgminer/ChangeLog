@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.74 2015/01/30 20:53:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.76 2015/02/01 12:29:25 mgorny Exp $
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> -bfgminer-2.5.0.ebuild,
+  metadata.xml:
+  Drop old. Fixes CPU_FLAGS_X86 incompat, bug #538266.
+
+  01 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> bfgminer-3.10.5.ebuild:
+  x86 stable wrt bug #516646
 
   30 Jan 2015; Anthony G. Basile <blueness@gentoo.org> bfgminer-2.5.0.ebuild,
   bfgminer-3.10.5.ebuild, bfgminer-3.10.8.ebuild, bfgminer-4.10.1.ebuild,
