@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtprintsupport
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtprintsupport/ChangeLog,v 1.6 2015/01/08 22:31:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtprintsupport/ChangeLog,v 1.7 2015/02/01 10:37:48 yngwin Exp $
+
+  01 Feb 2015; Ben de Groot <yngwin@gentoo.org> qtprintsupport-5.4.0.ebuild:
+  Workaround for bug #532140: force rebuild when opengl useflag is toggled in
+  qtgui and qtwidgets.
 
   08 Jan 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Update upstream bugtracker URL.

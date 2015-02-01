@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.217 2015/01/29 16:47:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.218 2015/02/01 10:48:41 yngwin Exp $
 
 # CURL_SSL=winssl is for prefix/windows/winnt only
 curl_ssl_winssl
@@ -384,11 +384,6 @@ sbcl
 # Mask systemd flag globally, unmasked on arches on which systemd
 # is keyworded.
 systemd
-
-# Michael Palimaka <kensington@gentoo.org> (1 May 2013)
-# Mask until Qt 5 is in portage. (The flag is here already
-# to permit the neccessary package preparation.)
-qt5
 
 # Pacho Ramos <pacho@gentoo.org> (28 Sep 2013)
 # This USE flag is available after long dicussion in
