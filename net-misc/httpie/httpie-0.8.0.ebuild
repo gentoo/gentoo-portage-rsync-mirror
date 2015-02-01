@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/httpie-0.8.0.ebuild,v 1.3 2014/11/28 13:57:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/httpie-0.8.0.ebuild,v 1.4 2015/02/01 20:35:37 vikraman Exp $
 
 EAPI=5
 

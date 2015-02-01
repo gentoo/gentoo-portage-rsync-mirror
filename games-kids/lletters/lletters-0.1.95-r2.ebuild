@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r2.ebuild,v 1.9 2012/05/03 03:26:38 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/lletters-0.1.95-r2.ebuild,v 1.10 2015/02/01 20:45:15 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 PATCH_LEVEL=3
@@ -37,8 +37,7 @@ src_configure() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog CREDITS NEWS README* TODO
+	default
 	newdoc debian/changelog ChangeLog.debian
 	doicon debian/${PN}.xpm
 	make_desktop_entry ${PN} "Linux Letters and Numbers" ${PN}
