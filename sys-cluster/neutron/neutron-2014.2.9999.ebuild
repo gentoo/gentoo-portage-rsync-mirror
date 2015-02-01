@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.9999.ebuild,v 1.6 2015/01/13 03:59:07 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.9999.ebuild,v 1.7 2015/02/01 05:54:46 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -22,25 +22,25 @@ REQUIRED_USE="|| ( mysql postgres sqlite )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.8[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
-		app-admin/sudo
-		test? ( >=dev-python/hacking-0.9.2[${PYTHON_USEDEP}]
-				<dev-python/hacking-0.10[${PYTHON_USEDEP}]
-				>=dev-python/cliff-1.7.0[${PYTHON_USEDEP}]
-				>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
-				>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
-				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
-				>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
-				dev-python/ordereddict[${PYTHON_USEDEP}]
-				>=dev-python/requests-mock-0.4.0[${PYTHON_USEDEP}]
-				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-				!~dev-python/sphinx-1.2.0[${PYTHON_USEDEP}]
-				<dev-python/sphinx-1.3[${PYTHON_USEDEP}]
-				>=dev-python/oslo-sphinx-2.2.0[${PYTHON_USEDEP}]
-				>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
-				>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
-				!~dev-python/testtools-1.4.0[${PYTHON_USEDEP}]
-				>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
-				dev-python/configobj[${PYTHON_USEDEP}] )"
+		test? (
+			>=dev-python/hacking-0.9.2[${PYTHON_USEDEP}]
+			<dev-python/hacking-0.10[${PYTHON_USEDEP}]
+			>=dev-python/cliff-1.7.0[${PYTHON_USEDEP}]
+			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
+			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
+			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
+			>=dev-python/subunit-0.0.18[${PYTHON_USEDEP}]
+			dev-python/ordereddict[${PYTHON_USEDEP}]
+			>=dev-python/requests-mock-0.4.0[${PYTHON_USEDEP}]
+			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+			!~dev-python/sphinx-1.2.0[${PYTHON_USEDEP}]
+			<dev-python/sphinx-1.3[${PYTHON_USEDEP}]
+			>=dev-python/oslo-sphinx-2.2.0[${PYTHON_USEDEP}]
+			>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
+			>=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
+			!~dev-python/testtools-1.4.0[${PYTHON_USEDEP}]
+			>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
+		)"
 
 RDEPEND="
 	dev-python/paste[${PYTHON_USEDEP}]
@@ -50,6 +50,7 @@ RDEPEND="
 	>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.15.1[${PYTHON_USEDEP}]
+	<dev-python/eventlet-0.16.0[${PYTHON_USEDEP}]
 	>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 	>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
 	>=dev-python/requests-1.2.1[${PYTHON_USEDEP}]
@@ -62,42 +63,18 @@ RDEPEND="
 	>=dev-python/python-neutronclient-2.3.6[${PYTHON_USEDEP}]
 	<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
 	sqlite? (
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
 	)
 	mysql? (
 		dev-python/mysql-python
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
 	postgres? (
 		dev-python/psycopg:2
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
 	>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 	>=dev-python/python-keystoneclient-0.10.0[${PYTHON_USEDEP}]
@@ -106,10 +83,13 @@ RDEPEND="
 	>=dev-python/stevedore-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-db-1.1.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
 	!~dev-python/oslo-messaging-1.5.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-messaging-1.6.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-rootwrap-1.3.0[${PYTHON_USEDEP}]
 	>=dev-python/python-novaclient-2.18.0[${PYTHON_USEDEP}]
+	app-admin/sudo
 	dev-python/pyudev[${PYTHON_USEDEP}]
 	sys-apps/iproute2
 	net-firewall/ipset
