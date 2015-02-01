@@ -1,5 +1,5 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.87 2015/01/18 14:14:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.88 2015/02/01 14:20:53 yngwin Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (18 Jan 2015)
@@ -219,7 +219,7 @@ beagle
 dmi
 
 # 2006/03/07 Donnie Berkholz <dberkholz@gentoo.org>
-# Modular X: mask for architectures lacking direct rendering      
+# Modular X: mask for architectures lacking direct rendering
 dri
 
 # 2006/02/05 Donnie Berkholz <dberkholz@gentoo.org>
@@ -328,7 +328,7 @@ ibm
 djbfft
 
 # Added because of xmms-plugin.eclass.  Please test out
-# media-sound/beep-media-player and remove if   
+# media-sound/beep-media-player and remove if
 bmp
 freetts
 3dfx
@@ -354,3 +354,7 @@ d3d
 wayland
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Ben de Groot <yngwin@gentoo.org> (01 Feb 2015)
+# please remove when keyworded
+qt5

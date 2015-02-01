@@ -278,3 +278,7 @@ glusterfs
 
 # need to test ceph and friends #519618
 rbd
+
+# Ben de Groot <yngwin@gentoo.org> (01 Feb 2015)
+# please remove when keyworded
+qt5

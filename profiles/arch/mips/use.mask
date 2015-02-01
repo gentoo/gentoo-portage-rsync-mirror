@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.80 2014/12/28 11:59:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.81 2015/02/01 14:20:53 yngwin Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -384,3 +384,7 @@ unwind
 
 # sys-libs/libseccomp has not been ported to this arch yet #524148
 seccomp
+
+# Ben de Groot <yngwin@gentoo.org> (01 Feb 2015)
+# please remove when keyworded
+qt5

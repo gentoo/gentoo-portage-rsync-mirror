@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.73 2015/01/31 10:31:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.74 2015/02/01 14:14:49 polynomial-c Exp $
+
+*patch-2.7.4 (01 Feb 2015)
+
+  01 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> -patch-2.7.1-r3.ebuild,
+  -patch-2.7.2.ebuild, +patch-2.7.4.ebuild,
+  -files/patch-2.7.1-Fix-removing-empty-directories.patch,
+  -files/patch-2.7.1-dry-run-mode-create-temp-files-in-temp-dir.patch,
+  -files/patch-2.7.1-initialize_data_structures_early_enough.patch,
+  -files/patch-2.7.1-prevent_depend_on_autotools.patch:
+  Version bump (bug #538426). Removed old.
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> patch-2.7.3.ebuild:
   Stable for ppc, wrt bug #536614

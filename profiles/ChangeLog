@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9733 2015/02/01 11:04:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9734 2015/02/01 14:20:53 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2015; Ben de Groot <yngwin@gentoo.org> arch/alpha/ChangeLog,
+  arch/alpha/package.mask, arch/alpha/use.mask, arch/arm/ChangeLog,
+  arch/arm/package.mask, arch/arm/use.mask, arch/hppa/ChangeLog,
+  +arch/hppa/package.mask, arch/hppa/use.mask, arch/ia64/ChangeLog,
+  arch/ia64/package.mask, arch/ia64/use.mask, arch/mips/ChangeLog,
+  arch/mips/package.mask, arch/mips/use.mask, arch/powerpc/ChangeLog,
+  arch/powerpc/package.mask, arch/powerpc/use.mask:
+  Add Qt5 mask to relevant arches until keyworded
 
   01 Feb 2015; Ben de Groot <yngwin@gentoo.org> base/package.use.mask:
   Unmask qt5 useflag on mkvtoolnix

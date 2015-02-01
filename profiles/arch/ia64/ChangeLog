@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.220 2014/12/23 22:51:21 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.221 2015/02/01 14:20:53 yngwin Exp $
+
+  01 Feb 2015; Ben de Groot <yngwin@gentoo.org> package.mask, use.mask:
+  Add Qt5 mask until keyworded
 
   23 Dec 2014; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
   Add package.use.mask entry for clutter, bug #533420.
