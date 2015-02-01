@@ -503,7 +503,8 @@ app-emacs/wikipedia-mode:outline-magic - Enable support for outline-mode extensi
 app-emulation/aranym:fullmmu - Enable full 68040 MMU emulation
 app-emulation/aranym:lilo - Enable Linux-m68k loader
 app-emulation/aranym:usbhost - Enable NatFeat USB
-app-emulation/bochs:avx - Enable support for Advanced Vector Extensions (AVX)
+app-emulation/bochs:3dnow - Enable support for emulating 3DNow! instructions (incomplete)
+app-emulation/bochs:avx - Enable support for emulating Advanced Vector Extensions (AVX)
 app-emulation/bochs:debugger - Enable debugger (slows down emulation)
 app-emulation/bochs:gdb - Enable support for the remote GDB stub
 app-emulation/bochs:x86-64 - Enable support for emulation of 64-bit CPUs

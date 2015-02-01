@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.161 2014/12/17 16:40:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.162 2015/02/01 12:01:06 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -18,25 +18,18 @@ inherit eutils multiprocessing unpacker
 PERL_EXPF="src_unpack src_prepare src_configure src_compile src_test src_install"
 
 case "${EAPI:-0}" in
-	4|5)
+	5)
 		[[ ${CATEGORY} == "perl-core" ]] && \
 			PERL_EXPF+=" pkg_postinst pkg_postrm"
 
 		case "${GENTOO_DEPEND_ON_PERL:-yes}" in
 		yes)
-			case "${EAPI:-0}" in
-			5)
-				case "${GENTOO_DEPEND_ON_PERL_SUBSLOT:-yes}" in
-				yes)
-					DEPEND="dev-lang/perl:=[-build(-)]"
-					;;
-				*)
-					DEPEND="dev-lang/perl[-build(-)]"
-					;;
-				esac
+			case "${GENTOO_DEPEND_ON_PERL_SUBSLOT:-yes}" in
+			yes)
+				DEPEND="dev-lang/perl:=[-build(-)]"
 				;;
 			*)
-				DEPEND="|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )"
+				DEPEND="dev-lang/perl[-build(-)]"
 				;;
 			esac
 			RDEPEND="${DEPEND}"
@@ -45,20 +38,6 @@ case "${EAPI:-0}" in
 		;;
 	*)
 		die "EAPI=${EAPI} is not supported by perl-module.eclass"
-		;;
-esac
-
-case "${EAPI:-0}" in
-	5)
-		;;
-	*)
-		ewarn
-		ewarn "******************************************************************"
-		ewarn "${EBUILD}:"
-		ewarn "Support for EAPI=${EAPI:-0} in perl-module.eclass will be removed"
-		ewarn "on 1/Feb/2015. Please fix your overlay ebuilds to use EAPI=5."
-		ewarn "******************************************************************"
-		ewarn
 		;;
 esac
 

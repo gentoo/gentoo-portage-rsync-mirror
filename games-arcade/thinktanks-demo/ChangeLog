@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/thinktanks-demo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.12 2015/01/31 17:51:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.13 2015/02/01 11:34:43 zlogene Exp $
+
+  01 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> thinktanks-demo-1.1-r2.ebuild:
+  x86 stable wrt bug #535896
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> thinktanks-demo-1.1-r2.ebuild:
   Stable for amd64, wrt bug #535896

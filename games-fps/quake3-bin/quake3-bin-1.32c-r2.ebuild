@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r2.ebuild,v 1.2 2015/01/31 17:50:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r2.ebuild,v 1.3 2015/02/01 11:37:10 zlogene Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -12,7 +12,7 @@ SRC_URI="mirror://idsoftware/quake3/linux/linuxq3apoint-1.32b-3.x86.run
 
 LICENSE="Q3AEULA GPL-2" #gpl for init script bug #425942
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="cdinstall dedicated teamarena"
 RESTRICT="strip"
 

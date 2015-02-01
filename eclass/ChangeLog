@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1519 2015/01/31 10:16:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1520 2015/02/01 12:01:06 dilfridge Exp $
+
+  01 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Drop support for EAPI=4
 
   31 Jan 2015; Jeroen Roovers <jer@gentoo.org> intel-sdp.eclass:
   Spelling.

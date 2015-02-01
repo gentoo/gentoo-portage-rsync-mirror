@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/bochs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.90 2012/11/07 14:17:25 lu_zero Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.91 2015/02/01 11:58:58 mgorny Exp $
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Localize and update USE=3dnow,avx for the flags refer to emulated CPU, not the
+  host.
 
 *bochs-2.6 (07 Nov 2012)
 
