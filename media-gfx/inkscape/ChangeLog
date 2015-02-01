@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.221 2015/01/26 15:27:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.223 2015/02/01 21:12:58 radhermit Exp $
+
+  01 Feb 2015; Tim Harder <radhermit@gentoo.org> -inkscape-0.91_pre3-r2.ebuild,
+  -inkscape-0.91_pre4.ebuild, -files/inkscape-0.91_pre3-poppler-0.29.patch:
+  Remove old.
+
+*inkscape-0.91 (01 Feb 2015)
+
+  01 Feb 2015; Tim Harder <radhermit@gentoo.org> +inkscape-0.91.ebuild:
+  Version bump.
 
 *inkscape-0.91_pre4 (26 Jan 2015)
 

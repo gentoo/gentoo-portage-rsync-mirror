@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pgasync
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pgasync/ChangeLog,v 1.1 2015/01/07 11:21:07 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pgasync/ChangeLog,v 1.2 2015/02/01 21:23:18 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pgasync-2.01.ebuild:
+  Remove old.
 
 *pgasync-2.01-r1 (07 Jan 2015)
 *pgasync-2.01 (07 Jan 2015)
@@ -9,4 +12,3 @@
   +pgasync-2.01-r1.ebuild, +metadata.xml:
   Moved package from dev-db/pgasync to dev-python/pgasync. Bump
   distutils inherit, and add AMD64 keyword.
-

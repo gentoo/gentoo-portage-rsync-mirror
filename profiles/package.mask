@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16316 2015/02/01 15:37:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16317 2015/02/01 21:13:54 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -295,10 +295,6 @@ net-wireless/mate-bluetooth
 x11-libs/libmatewnck
 x11-misc/mate-menu-editor
 x11-wm/mate-window-manager
-
-# Tim Harder <radhermit@gentoo.org> (14 Dec 2014)
-# Mask pre-releases
-=media-gfx/inkscape-0.91_pre*
 
 # Michał Górny <mgorny@gentoo.org> (12 Dec 2014)
 # No longer used by any package in the tree, and unlikely to be ever
