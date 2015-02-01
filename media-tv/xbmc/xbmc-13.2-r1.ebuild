@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.167 2015/02/01 22:59:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-13.2-r1.ebuild,v 1.1 2015/02/01 22:59:56 mgorny Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ PYTHON_REQ_USE="sqlite"
 
 inherit eutils python-single-r1 multiprocessing autotools
 
-CODENAME="Helix"
+CODENAME="Gotham"
 case ${PV} in
 9999)
 	EGIT_REPO_URI="git://github.com/xbmc/xbmc.git"
@@ -33,10 +33,7 @@ case ${PV} in
 		http://mirrors.xbmc.org/releases/source/${MY_P}-generated-addons.tar.xz"
 	KEYWORDS="~amd64 ~x86"
 
-	S=${WORKDIR}/${PN}-
-	[[ ${PV} == *_p* ]] \
-		&& S+=${PV/_p/-${CODENAME}_r} \
-		|| S+=${MY_PV}
+	S=${WORKDIR}/${MY_P}-${CODENAME}
 	;;
 esac
 
@@ -45,7 +42,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick libav midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl cpu_flags_x86_sse cpu_flags_x86_sse2 sftp test udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
+IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick libav midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl cpu_flags_x86_sse cpu_flags_x86_sse2 sftp udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
 REQUIRED_USE="
 	pvr? ( mysql )
 	rsxs? ( X )
@@ -145,12 +142,10 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
 	dev-lang/swig
 	dev-util/gperf
-	sys-apps/lsb-release
 	X? ( x11-proto/xineramaproto )
 	dev-util/cmake
 	x86? ( dev-lang/nasm )
-	java? ( virtual/jre )
-	test? ( dev-cpp/gtest )"
+	java? ( virtual/jre )"
 # Force java for latest git version to avoid having to hand maintain the
 # generated addons package.  #488118
 [[ ${PV} == "9999" ]] && DEPEND+=" virtual/jre"
@@ -194,6 +189,15 @@ src_prepare() {
 	# Disable internal func checks as our USE/DEPEND
 	# stuff handles this just fine already #408395
 	export ac_cv_lib_avcodec_ff_vdpau_vc1_decode_picture=yes
+
+	local squish #290564
+	use altivec && squish="-DSQUISH_USE_ALTIVEC=1 -maltivec"
+	use cpu_flags_x86_sse && squish="-DSQUISH_USE_SSE=1 -msse"
+	use cpu_flags_x86_sse2 && squish="-DSQUISH_USE_SSE=2 -msse2"
+	sed -i \
+		-e '/^CXXFLAGS/{s:-D[^=]*=.::;s:-m[[:alnum:]]*::}' \
+		-e "1iCXXFLAGS += ${squish}" \
+		lib/libsquish/Makefile.in || die
 
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.
@@ -252,7 +256,6 @@ src_configure() {
 		$(use_enable sdl) \
 		$(use_enable sftp ssh) \
 		$(use_enable usb libusb) \
-		$(use_enable test gtest) \
 		$(use_enable upnp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
@@ -297,9 +300,9 @@ src_install() {
 		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Bold.ttf
 
 	python_domodule tools/EventClients/lib/python/xbmcclient.py
-	python_newscript "tools/EventClients/Clients/Kodi Send/kodi-send.py" kodi-send
+	python_newscript "tools/EventClients/Clients/XBMC Send/xbmc-send.py" xbmc-send
 }
 
 pkg_postinst() {
-	elog "Visit http://kodi.wiki/?title=XBMC_Online_Manual"
+	elog "Visit http://wiki.xbmc.org/?title=XBMC_Online_Manual"
 }

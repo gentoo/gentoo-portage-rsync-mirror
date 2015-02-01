@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/celluloid-io
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid-io/ChangeLog,v 1.4 2014/11/03 06:48:02 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid-io/ChangeLog,v 1.5 2015/02/01 22:59:08 mrueg Exp $
+
+*celluloid-io-0.16.2 (01 Feb 2015)
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> +celluloid-io-0.16.2.ebuild:
+  Version bump.
 
 *celluloid-io-0.16.1 (03 Nov 2014)
 

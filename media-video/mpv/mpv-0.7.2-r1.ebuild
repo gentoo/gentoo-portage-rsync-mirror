@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.65 2015/02/01 22:34:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.7.2-r1.ebuild,v 1.1 2015/02/01 22:34:52 mgorny Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ PYTHON_REQ_USE='threads(+)'
 inherit eutils python-any-r1 waf-utils pax-utils fdo-mime gnome2-utils
 [[ ${PV} == *9999* ]] && inherit git-r3
 
-WAF_V="1.8.4"
+WAF_V="1.8.1"
 
 DESCRIPTION="Video player based on MPlayer/mplayer2"
 HOMEPAGE="http://mpv.io/"
@@ -26,8 +26,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio +cli -doc-pdf dvb +dvd dvdnav egl +enca encode
 +iconv jack -joystick jpeg ladspa lcms +libass libav libcaca libguess libmpv
-lirc lua luajit +mpg123 -openal +opengl oss pulseaudio pvr samba -sdl selinux
-v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
+lirc lua luajit +mpg123 -openal +opengl oss -portaudio postproc pulseaudio pvr
+samba -sdl selinux v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver
++xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
@@ -96,6 +97,11 @@ RDEPEND="
 	)
 	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
+	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
+	postproc? (
+		libav? ( >=media-libs/libpostproc-10.20140517:0= )
+		!libav? ( >=media-video/ffmpeg-2.1.4:0= )
+	)
 	pulseaudio? ( media-sound/pulseaudio )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
@@ -188,6 +194,7 @@ src_configure() {
 		--disable-vapoursynth-lazy
 		--enable-libavfilter
 		--enable-libavdevice
+		$(use_enable postproc libpostproc)
 		$(usex luajit '--lua=luajit' '')
 
 		# audio outputs
@@ -196,6 +203,7 @@ src_configure() {
 		$(use_enable oss oss-audio)
 		--disable-rsound	# media-sound/rsound is in pro-audio overlay only
 		$(use_enable pulseaudio pulse)
+		$(use_enable portaudio)
 		$(use_enable jack)
 		$(use_enable openal)
 		$(use_enable alsa)
@@ -229,6 +237,7 @@ src_configure() {
 		$(use_enable v4l tv-v4l2)
 		$(use_enable v4l libv4l2)
 		$(use_enable pvr)
+		$(use_enable dvb)
 		$(use_enable dvb dvbin)
 	)
 	waf-utils_src_configure "${mywafargs[@]}"

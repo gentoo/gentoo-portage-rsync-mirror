@@ -1,9 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.635 2015/02/01 11:04:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.637 2015/02/01 22:58:57 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michał Górny <mgorny@gentoo.org> (01 Feb 2015)
+# The required libav version is masked.
+app-text/unpaper libav
+media-tv/xbmc libav
 
 # Brian Evans <grknight@gentoo.org> (22 Jan 2015)
 # PHP module split into dev-php/ming-php which is still ~arch

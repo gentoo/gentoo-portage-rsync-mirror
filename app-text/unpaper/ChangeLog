@@ -1,6 +1,13 @@
 # ChangeLog for app-text/unpaper
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.13 2014/10/26 23:07:48 flameeyes Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.14 2015/02/01 22:44:15 mgorny Exp $
+
+*unpaper-6.1-r1 (01 Feb 2015)
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> +unpaper-6.1-r1.ebuild,
+  unpaper-9999.ebuild:
+  Introduce USE=libav to control the preferred implementation. Add subslot op to
+  force rebuilds on ABI change.
 
 *unpaper-6.1 (26 Oct 2014)
 
