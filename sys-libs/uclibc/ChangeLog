@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.95 2015/01/10 16:26:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.96 2015/02/01 04:09:56 blueness Exp $
+
+*uclibc-0.9.33.2-r14 (01 Feb 2015)
+
+  01 Feb 2015; Anthony G. Basile <blueness@gentoo.org>
+  +uclibc-0.9.33.2-r14.ebuild, uclibc-0.9.33.2-r13.ebuild:
+  Backport fix to allow immediate values as 6th syscall arg in i386, bug #538396
 
 *uclibc-0.9.33.2-r13 (10 Jan 2015)
 

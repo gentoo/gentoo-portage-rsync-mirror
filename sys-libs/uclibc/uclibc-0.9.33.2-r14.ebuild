@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.33.2-r13.ebuild,v 1.2 2015/02/01 04:09:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.33.2-r14.ebuild,v 1.1 2015/02/01 04:09:56 blueness Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs savedconfig
 if [[ ${PV} == "9999" ]] ; then
@@ -20,10 +20,10 @@ MY_P=uClibc-${PV}
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 if [[ ${PV} != "9999" ]] ; then
-	PATCH_VER="15"
+	PATCH_VER="16"
 	SRC_URI="http://uclibc.org/downloads/${MY_P}.tar.bz2
 		${PATCH_VER:+mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2}"
-	KEYWORDS="-* ~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc"
+	KEYWORDS="-* ~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86"
 fi
 
 LICENSE="LGPL-2"
