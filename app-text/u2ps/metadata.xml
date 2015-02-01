@@ -5,9 +5,6 @@
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
 </maintainer>
-<use>
-    <flag name='fonts'>Install a more complete set of unicode fonts</flag>
-</use>
 <longdescription lang="en">
 </longdescription>
 </pkgmetadata>
