@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16313 2015/02/01 11:01:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16315 2015/02/01 15:26:16 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -513,116 +513,6 @@ www-apps/trac-downloads
 =media-video/mpv-0.6*
 =media-video/mpv-0.7*
 =media-video/smplayer-14.9.0.6690*
-
-# Davide Pesavento <pesa@gentoo.org> (11 Sep 2014)
-# Mask Qt 5.3.x for wider testing to ensure that it does
-# not break or conflict with other packages (bug #454132)
-=dev-qt/assistant-5.3.2*
-=dev-qt/designer-5.3.2*
-=dev-qt/linguist-5.3.2*
-=dev-qt/linguist-tools-5.3.2*
-=dev-qt/pixeltool-5.3.2*
-=dev-qt/qdbus-5.3.2*
-=dev-qt/qdbusviewer-5.3.2*
-=dev-qt/qdoc-5.3.2*
-=dev-qt/qtconcurrent-5.3.2*
-=dev-qt/qtcore-5.3.2*
-=dev-qt/qtdbus-5.3.2*
-=dev-qt/qtdeclarative-5.3.2*
-=dev-qt/qtdiag-5.3.2*
-=dev-qt/qtgraphicaleffects-5.3.2*
-=dev-qt/qtgui-5.3.2*
-=dev-qt/qthelp-5.3.2*
-=dev-qt/qtimageformats-5.3.2*
-=dev-qt/qtmultimedia-5.3.2*
-=dev-qt/qtnetwork-5.3.2*
-=dev-qt/qtopengl-5.3.2*
-=dev-qt/qtpaths-5.3.2*
-=dev-qt/qtpositioning-5.3.2*
-=dev-qt/qtprintsupport-5.3.2*
-=dev-qt/qtquick1-5.3.2*
-=dev-qt/qtquickcontrols-5.3.2*
-=dev-qt/qtscript-5.3.2*
-=dev-qt/qtsensors-5.3.2*
-=dev-qt/qtserialport-5.3.2*
-=dev-qt/qtsql-5.3.2*
-=dev-qt/qtsvg-5.3.2*
-=dev-qt/qttest-5.3.2*
-=dev-qt/qttranslations-5.3.2*
-=dev-qt/qtwebkit-5.3.2*
-=dev-qt/qtwebsockets-5.3.2*
-=dev-qt/qtwidgets-5.3.2*
-=dev-qt/qtx11extras-5.3.2*
-=dev-qt/qtxml-5.3.2*
-=dev-qt/qtxmlpatterns-5.3.2*
-kde-frameworks/attica
-kde-frameworks/frameworkintegration
-kde-frameworks/kactivities
-kde-frameworks/kapidox
-kde-frameworks/karchive
-kde-frameworks/kauth
-kde-frameworks/kbookmarks
-kde-frameworks/kcmutils
-kde-frameworks/kcodecs
-kde-frameworks/kcompletion
-kde-frameworks/kconfig
-kde-frameworks/kconfigwidgets
-kde-frameworks/kcoreaddons
-kde-frameworks/kcrash
-kde-frameworks/kdbusaddons
-kde-frameworks/kdeclarative
-kde-frameworks/kded
-kde-frameworks/kdelibs4support
-kde-frameworks/kdesignerplugin
-kde-frameworks/kdesu
-kde-frameworks/kdewebkit
-kde-frameworks/kdnssd
-kde-frameworks/kdoctools
-kde-frameworks/kemoticons
-kde-frameworks/kglobalaccel
-kde-frameworks/kguiaddons
-kde-frameworks/khtml
-kde-frameworks/ki18n
-kde-frameworks/kiconthemes
-kde-frameworks/kidletime
-kde-frameworks/kimageformats
-kde-frameworks/kinit
-kde-frameworks/kio
-kde-frameworks/kitemmodels
-kde-frameworks/kitemviews
-kde-frameworks/kjobwidgets
-kde-frameworks/kjs
-kde-frameworks/kjsembed
-kde-frameworks/kmediaplayer
-kde-frameworks/knewstuff
-kde-frameworks/knotifications
-kde-frameworks/knotifyconfig
-kde-frameworks/kpackage
-kde-frameworks/kparts
-kde-frameworks/kplotting
-kde-frameworks/kpty
-kde-frameworks/kross
-kde-frameworks/krunner
-kde-frameworks/kservice
-kde-frameworks/ktexteditor
-kde-frameworks/ktextwidgets
-kde-frameworks/kunitconversion
-kde-frameworks/kwallet
-kde-frameworks/kwidgetsaddons
-kde-frameworks/kwindowsystem
-kde-frameworks/kxmlgui
-kde-frameworks/networkmanager-qt
-kde-frameworks/plasma
-kde-frameworks/solid
-kde-frameworks/sonnet
-kde-frameworks/threadweaver
->=kde-misc/about-distro-2.0.0
-dev-libs/grantlee:5
->=media-gfx/photoqt-1.1
->=media-sound/drumstick-1.0.0
->=media-sound/kmetronome-1.0.0
->=media-sound/teamspeak-client-bin-3.0.16
-www-client/otter
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (03 Sep 2014)
 # Temporary mask until it is verified to work

@@ -1,21 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.50_pre20141031.ebuild,v 1.3 2014/11/13 12:55:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-25.0.50_pre20150131.ebuild,v 1.1 2015/02/01 15:15:06 ulm Exp $
 
 EAPI=5
 
 inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
 if [[ ${PV##*.} = 9999 ]]; then
-	EBZR_PROJECT="emacs"
-	EBZR_BRANCH="trunk"
-	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
-	# "Nosmart" is much faster for initial branching.
-	EBZR_INITIAL_URI="nosmart+${EBZR_REPO_URI}"
-	EBZR_UNPACK_DIR="${WORKDIR}/emacs"
-	EBZR_WORKDIR_CHECKOUT="t"	#434746
-	inherit bzr
-	S="${EBZR_UNPACK_DIR}"
+	inherit git-r3
+	EGIT_REPO_URI="git://git.sv.gnu.org/emacs.git"
+	EGIT_BRANCH="master"
+	EGIT_CHECKOUT_DIR="${WORKDIR}/emacs"
+	S="${EGIT_CHECKOUT_DIR}"
 else
 	SRC_URI="http://dev.gentoo.org/~ulm/distfiles/emacs-${PV}.tar.xz
 		mirror://gnu-alpha/emacs/pretest/emacs-${PV}.tar.xz"
@@ -107,8 +103,8 @@ src_prepare() {
 		FULL_VERSION=$(sed -n 's/^AC_INIT([^,]*,[ \t]*\([^ \t,)]*\).*/\1/p' \
 			configure.ac)
 		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
-		einfo "Emacs branch: ${EBZR_BRANCH}"
-		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
+		einfo "Emacs branch: ${EGIT_BRANCH}"
+		einfo "Commit: ${EGIT_VERSION}"
 		einfo "Emacs version number: ${FULL_VERSION}"
 		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
@@ -203,7 +199,7 @@ src_configure() {
 	# in variable "system-configuration-options".
 	myconf+=" GENTOO_PACKAGE=${CATEGORY}/${PF}"
 	if [[ ${PV##*.} = 9999 ]]; then
-		myconf+=" EBZR_BRANCH=${EBZR_BRANCH} EBZR_REVNO=${EBZR_REVNO}"
+		myconf+=" EGIT_BRANCH=${EGIT_BRANCH} EGIT_VERSION=${EGIT_VERSION}"
 	fi
 
 	econf \
@@ -295,7 +291,7 @@ src_install () {
 	EOF
 	elisp-site-file-install "${T}/${SITEFILE}" || die
 
-	dodoc README BUGS
+	dodoc README BUGS CONTRIBUTE
 
 	if use aqua; then
 		dodir /Applications/Gentoo
