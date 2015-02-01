@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mab
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mab/ChangeLog,v 1.8 2014/10/30 13:57:39 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mab/ChangeLog,v 1.9 2015/02/01 15:48:38 graaff Exp $
+
+  01 Feb 2015; Hans de Graaff <graaff@gentoo.org> mab-0.0.3.ebuild:
+  Add ruby22.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> mab-0.0.3.ebuild:
   Drop jruby target.

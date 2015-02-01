@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/litc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/litc/ChangeLog,v 1.10 2014/11/21 12:25:03 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/litc/ChangeLog,v 1.11 2015/02/01 15:42:04 graaff Exp $
+
+  01 Feb 2015; Hans de Graaff <graaff@gentoo.org> litc-1.0.3-r1.ebuild:
+  Add ruby21.
 
   21 Nov 2014; Manuel Rüger <mrueg@gentoo.org> litc-1.0.3-r1.ebuild:
   Fix building docs.

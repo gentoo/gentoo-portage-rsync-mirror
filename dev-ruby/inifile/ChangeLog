@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/inifile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/inifile/ChangeLog,v 1.11 2014/11/03 15:07:44 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/inifile/ChangeLog,v 1.12 2015/02/01 15:33:30 graaff Exp $
+
+  01 Feb 2015; Hans de Graaff <graaff@gentoo.org> inifile-3.0.0.ebuild:
+  Add ruby22.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> inifile-2.0.2-r1.ebuild,
   inifile-3.0.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kamerka
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/ChangeLog,v 1.14 2015/02/01 13:45:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kamerka/ChangeLog,v 1.15 2015/02/01 15:40:31 kensington Exp $
+
+  01 Feb 2015; Michael Palimaka <kensington@gentoo.org> -kamerka-0.8.5.ebuild:
+  Remove old.
 
   01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kamerka-0.10.ebuild:
   Stable for x86, wrt bug #535514

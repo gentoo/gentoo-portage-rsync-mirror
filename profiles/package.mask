@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16315 2015/02/01 15:26:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16316 2015/02/01 15:37:57 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -442,31 +442,6 @@ www-apps/trac-downloads
 # making this the new official release
 # Masked for testing
 >=sys-auth/consolekit-0.9.2
-
-# Jauhien Piatlicki <jauhien@gentoo.org> (30 Oct 2014)
-# Mask LXQt-0.8.0 release for testing
-# and until Qt5 is unmasked (bug #525410).
-=app-admin/lxqt-admin-0.8.0*
-=dev-libs/libqtxdg-1.0.0*
-=lxqt-base/liblxqt-0.8.0*
-=lxqt-base/liblxqt-mount-0.8.0*
-=lxqt-base/libsysstat-0.2.0*
-=lxqt-base/lxqt-about-0.8.0*
-=lxqt-base/lxqt-common-0.8.0*
-=lxqt-base/lxqt-config-0.8.0*
-=lxqt-base/lxqt-globalkeys-0.8.0*
-=lxqt-base/lxqt-meta-0.8.0*
-=lxqt-base/lxqt-notificationd-0.8.0*
-=lxqt-base/lxqt-panel-0.8.0*
-=lxqt-base/lxqt-policykit-0.8.0*
-=lxqt-base/lxqt-powermanagement-0.8.0*
-=lxqt-base/lxqt-qtplugin-0.8.0*
-=lxqt-base/lxqt-runner-0.8.0*
-=lxqt-base/lxqt-session-0.8.0*
-=media-gfx/lximage-qt-0.3.0*
-=net-misc/lxqt-openssh-askpass-0.8.0*
-=x11-misc/obconf-qt-0.1.0_p20141029
-=x11-misc/pcmanfm-qt-0.8.0*
 
 # Markos Chandras <18 Oct 2014>
 # Not quite ready yet. Reverse deps seem to be broken
