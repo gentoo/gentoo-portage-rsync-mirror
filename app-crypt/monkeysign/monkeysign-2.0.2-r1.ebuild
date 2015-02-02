@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/monkeysign-2.0.2.ebuild,v 1.1 2014/12/06 12:14:37 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/monkeysign-2.0.2-r1.ebuild,v 1.1 2015/02/02 22:25:45 k_f Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -33,6 +33,7 @@ RDEPEND="app-crypt/gnupg
 
 PATCHES=("${FILESDIR}/${PN}-1.1-basename.patch"
 	 "${FILESDIR}/${PN}-2.0.0-rst2s5.patch"
+	 "${FILESDIR}/${P}-smtplib.patch"
 	)
 
 python_test()

@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/monkeysign
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/ChangeLog,v 1.7 2014/12/06 12:14:37 k_f Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/ChangeLog,v 1.8 2015/02/02 22:25:45 k_f Exp $
+
+*monkeysign-2.0.2-r1 (02 Feb 2015)
+
+  02 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org>
+  +files/monkeysign-2.0.2-smtplib.patch, +monkeysign-2.0.2-r1.ebuild,
+  -files/monkeysign-1.1-rst2s5.patch,
+  -files/monkeysign-1.2-test-no-emit-version.patch, -monkeysign-1.1-r2.ebuild,
+  -monkeysign-2.0.0.ebuild, -monkeysign-2.0.2.ebuild:
+  Fix NameError: Global name 'SMTPException' is not defined. The patch is
+  already submitted and included upstream.
 
 *monkeysign-2.0.2 (06 Dec 2014)
 
