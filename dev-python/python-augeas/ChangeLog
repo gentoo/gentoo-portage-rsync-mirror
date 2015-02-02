@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-augeas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/ChangeLog,v 1.10 2014/12/28 19:28:15 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/ChangeLog,v 1.11 2015/02/02 01:45:42 mrueg Exp $
+
+  02 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -python-augeas-0.4.0.ebuild:
+  Remove old.
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> python-augeas-0.4.1.ebuild,
   python-augeas-0.4.2_pre131218.ebuild:
