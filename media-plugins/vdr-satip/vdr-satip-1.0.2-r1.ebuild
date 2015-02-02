@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-satip/vdr-satip-1.0.2.ebuild,v 1.1 2015/01/20 11:40:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-satip/vdr-satip-1.0.2-r1.ebuild,v 1.1 2015/02/02 20:51:30 hd_brummy Exp $
 
 EAPI=5
 
