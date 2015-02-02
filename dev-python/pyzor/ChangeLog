@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.71 2015/01/26 13:53:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.72 2015/02/02 07:55:34 idella4 Exp $
+
+*pyzor-1.0.0 (02 Feb 2015)
+
+  02 Feb 2015; Ian Delaney <idella4@gentoo.org> +pyzor-1.0.0.ebuild,
+  metadata.xml:
+  bump; update HOMEPAGE, change SRC_URI to acquire tarball @ new repo @ github,
+  drop keywords to allow support by gevent, add IUSE gevent for backend support,
+  IUSE doc for doc build and all that goes with it, minor tidying
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pyzor-0.5.0-r1.ebuild:
   Remove old.

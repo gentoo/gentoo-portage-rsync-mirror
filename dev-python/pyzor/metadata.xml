@@ -6,5 +6,6 @@
 	<flag name='pyzord'>enable support for pyzord</flag>
 	<flag name='mysql'>Enables mysql support</flag>
 	<flag name='redis'>Enables redis support</flag>
+	<flag name='gevent'>Enable support for the gevent based handler</flag>
 </use>
 </pkgmetadata>

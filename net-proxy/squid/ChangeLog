@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.505 2015/01/21 06:49:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.507 2015/02/02 07:36:58 eras Exp $
+
+  02 Feb 2015; Eray Aslan <eras@gentoo.org> squid-3.4.11.ebuild,
+  squid-3.5.1.ebuild:
+  Depend on dev-libs/libltdl instead of sys-devel/libtool
+
+  02 Feb 2015; Eray Aslan <eras@gentoo.org> squid-3.3.13-r1.ebuild:
+  Fix libtool dependency - bug #537630
 
   21 Jan 2015; Eray Aslan <eras@gentoo.org> squid-3.5.1.ebuild:
   Fix gnutls dependency - bug #537076

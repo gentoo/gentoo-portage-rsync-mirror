@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.48 2015/02/01 13:48:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.49 2015/02/02 07:52:57 jlec Exp $
+
+  02 Feb 2015; Justin Lecher <jlec@gentoo.org> -gwyddion-2.29.ebuild,
+  -gwyddion-2.30.ebuild, -gwyddion-2.30-r1.ebuild:
+  Drop old
 
   01 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> gwyddion-2.39.ebuild:
   x86 stable wrt bug #536800
