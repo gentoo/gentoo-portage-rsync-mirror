@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-218-r2.ebuild,v 1.1 2015/01/17 20:51:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-218-r2.ebuild,v 1.3 2015/02/02 21:23:09 floppym Exp $
 
 EAPI=5
 
@@ -354,10 +354,10 @@ multilib_src_install_all() {
 
 	# If we install these symlinks, there is no way for the sysadmin to remove them
 	# permanently.
-	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service
-	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service
-	rm -f "${D}"/etc/systemd/system/multi-user.target.wants/systemd-timesyncd.service
-	rm -rf "${D}"/etc/systemd/system/network-online.target.wants
+	rm "${D}"/etc/systemd/system/multi-user.target.wants/systemd-networkd.service || die
+	rm "${D}"/etc/systemd/system/multi-user.target.wants/systemd-resolved.service || die
+	rm -r "${D}"/etc/systemd/system/network-online.target.wants || die
+	rm -r "${D}"/etc/systemd/system/sysinit.target.wants || die
 }
 
 migrate_locale() {
