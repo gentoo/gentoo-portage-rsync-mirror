@@ -1,0 +1,20 @@
+--- a/src/gui/image/qimage_conversions.cpp
++++ b/src/gui/image/qimage_conversions.cpp
+@@ -2252,7 +2252,7 @@
+         convert_ARGB_to_ARGB_PM,
+ #else
+         0,
+-        0
++        0,
+ #endif
+         0, 0, 0, 0
+     }, // Format_RGBA8888
+@@ -2281,7 +2281,7 @@
+ #else
+         0,
+         0,
+-        0
++        0,
+ #endif
+         0, 0, 0, 0
+     }, // Format_RGBA8888_Premultiplied
