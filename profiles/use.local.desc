@@ -5654,7 +5654,6 @@ net-misc/hylafaxplus:html - Convert faxes into html email
 net-misc/hylafaxplus:jbig - JBIG Fax Compression Support
 net-misc/hylafaxplus:mgetty - Receive faxes via serial port connections
 net-misc/hylafaxplus:pam - hfaxd authentication via PAM
-net-misc/i2pd:aesni - Enable support for the AES-NI instruction set
 net-misc/i2pd:i2p-hardening - Compile with hardening on vanilla compilers/linkers
 net-misc/i2pd:library - Build the libi2pd library
 net-misc/icecast:kate - Add karaoke and text encapsulation support for Ogg files

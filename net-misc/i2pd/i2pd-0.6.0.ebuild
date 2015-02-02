@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/i2pd/i2pd-0.6.0.ebuild,v 1.1 2015/01/08 22:44:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/i2pd/i2pd-0.6.0.ebuild,v 1.2 2015/02/02 17:06:04 mgorny Exp $
 
 EAPI=5
 inherit eutils systemd user cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/PrivacySolutions/${PN}/archive/${PV}.tar.gz -> ${P}.
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aesni i2p-hardening static"
+IUSE="cpu_flags_x86_aes i2p-hardening static"
 
 RDEPEND="!static? ( >=dev-libs/boost-1.46[threads] )
 	!static? ( dev-libs/crypto++ )"
@@ -29,7 +29,7 @@ CMAKE_USE_DIR="${S}/build"
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use_with aesni AESNI)
+		$(cmake-utils_use_with cpu_flags_x86_aes AESNI)
 		$(cmake-utils_use_with i2p-hardening HARDENING)
 		$(cmake-utils_use_with static STATIC)
 		-DWITH_LIBRARY=OFF

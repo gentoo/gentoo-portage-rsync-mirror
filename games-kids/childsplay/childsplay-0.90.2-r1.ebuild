@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.90.2-r1.ebuild,v 1.1 2015/02/01 17:19:16 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/childsplay-0.90.2-r1.ebuild,v 1.2 2015/02/02 17:17:54 tupone Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/childsplay/${P}.tgz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="${PYTHON_DEPS}

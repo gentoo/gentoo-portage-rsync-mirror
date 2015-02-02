@@ -1,6 +1,15 @@
 # ChangeLog for games-kids/tuxmathscrabble
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.19 2011/03/04 12:58:07 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.21 2015/02/02 17:28:20 tupone Exp $
+
+  02 Feb 2015; Tupone Alfredo <tupone@gentoo.org> -tuxmathscrabble-7.4.ebuild,
+  tuxmathscrabble-7.4-r1.ebuild:
+  Stabilizing like previous ebuild
+
+*tuxmathscrabble-7.4-r1 (02 Feb 2015)
+
+  02 Feb 2015; Tupone Alfredo <tupone@gentoo.org> +tuxmathscrabble-7.4-r1.ebuild:
+  Port to python-single-r1 class
 
   04 Mar 2011; Brent Baude <ranger@gentoo.org> tuxmathscrabble-7.4.ebuild:
   stable ppc, bug 353821
