@@ -1,10 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.0-r2.ebuild,v 1.3 2014/06/24 22:17:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/netsurf-3.2-r1.ebuild,v 1.1 2015/02/02 16:54:29 xmw Exp $
 
 EAPI=5
-NETSURF_COMPONENT_TYPE=binary
 
+NETSURF_COMPONENT_TYPE=binary
+NETSURF_BUILDSYSTEM=buildsystem-1.2
 inherit netsurf
 
 DESCRIPTION="a free, open source web browser"
@@ -28,34 +29,34 @@ REQUIRED_USE="|| ( fbcon gtk )
 
 RDEPEND="dev-libs/libxml2
 	net-misc/curl
-	>=dev-libs/libcss-0.2.0[${MULTILIB_USEDEP}]
-	>=net-libs/libhubbub-0.2.0[${MULTILIB_USEDEP}]
-	bmp? ( >=media-libs/libnsbmp-0.1.0[${MULTILIB_USEDEP}] )
-	fbcon? ( >=dev-libs/libnsfb-0.1.0[${MULTILIB_USEDEP}]
+	>=dev-libs/libcss-0.4.0[${MULTILIB_USEDEP}]
+	>=net-libs/libhubbub-0.3.0-r1[${MULTILIB_USEDEP}]
+	bmp? ( >=media-libs/libnsbmp-0.1.1[${MULTILIB_USEDEP}] )
+	fbcon? ( >=dev-libs/libnsfb-0.1.2[${MULTILIB_USEDEP}]
 		truetype? ( media-fonts/dejavu
 			>=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}] )
 	)
-	gif? ( >=media-libs/libnsgif-0.1.0[${MULTILIB_USEDEP}] )
+	gif? ( >=media-libs/libnsgif-0.1.1[${MULTILIB_USEDEP}] )
 	gtk? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
 		gnome-base/libglade:2.0
-		>=media-libs/lcms-1.19-r1:0[${MULTILIB_USEDEP}]
 		>=x11-libs/gtk+-2.24.23:2[${MULTILIB_USEDEP}] )
 	gstreamer? ( media-libs/gstreamer:0.10 )
-	javascript? ( dev-libs/nsgenbind )
+	javascript? ( >=dev-libs/nsgenbind-0.1.1[${MULTILIB_USEDEP}] )
 	jpeg? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
 	mng? ( >=media-libs/libmng-1.0.10-r2[${MULTILIB_USEDEP}] )
 	pdf-writer? ( media-libs/libharu )
 	png? ( >=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}] )
-	svg? ( svgtiny? ( >=media-libs/libsvgtiny-0.1.0[${MULTILIB_USEDEP}] )
+	svg? ( svgtiny? ( >=media-libs/libsvgtiny-0.1.2[${MULTILIB_USEDEP}] )
 		!svgtiny? ( gnome-base/librsvg:2 ) )
 	webp? ( >=media-libs/libwebp-0.3.0[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	javascript? ( dev-libs/nsgenbind )
-	rosprite? ( >=media-libs/librosprite-0.1.0[${MULTILIB_USEDEP}] )"
+	javascript? ( >=dev-libs/nsgenbind-0.1.1[${MULTILIB_USEDEP}] )
+	rosprite? ( >=media-libs/librosprite-0.1.1[${MULTILIB_USEDEP}] )"
 
 PATCHES=( "${FILESDIR}"/${P}-CFLAGS.patch
-	"${FILESDIR}"/${P}-framebuffer-pkgconfig.patch
-	"${FILESDIR}"/${PN}-2.9-conditionally-include-image-headers.patch )
+	"${FILESDIR}"/${PN}-3.0-framebuffer-pkgconfig.patch
+	"${FILESDIR}"/${P}-conditionally-include-image-headers.patch
+	"${FILESDIR}"/${P}-glibc2.20.patch )
 DOCS=( fb.modes README Docs/USING-Framebuffer
 	Docs/ideas/{cache,css-engine,render-library}.txt )
 

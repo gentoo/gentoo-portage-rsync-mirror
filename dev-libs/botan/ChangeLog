@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/botan
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.87 2014/11/29 10:09:32 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.88 2015/02/02 16:38:58 jer Exp $
+
+  02 Feb 2015; Jeroen Roovers <jer@gentoo.org> botan-1.10.1.ebuild,
+  botan-1.10.3.ebuild, botan-1.10.3-r1.ebuild, botan-1.10.5.ebuild,
+  botan-1.11.4.ebuild, botan-1.11.8.ebuild:
+  Marked ~hppa (bug #538550).
 
   29 Nov 2014; Pacho Ramos <pacho@gentoo.org> botan-1.10.5.ebuild,
   botan-1.11.4.ebuild, botan-1.11.8.ebuild:

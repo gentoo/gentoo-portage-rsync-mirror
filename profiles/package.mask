@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16321 2015/02/02 13:11:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16322 2015/02/02 16:58:04 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -238,7 +238,7 @@ games-mud/mcl
 # Andreas K. Huettel <dilfridge@gentoo.org> (30 Dec 2014)
 # media-libs/lcms:0 is unmaintained and has unspecified severe security
 # issues, bug 526642. Its reverse dependencies will be removed in 30days.
-www-client/netsurf
+<www-client/netsurf-3.2-r1
 media-gfx/photoprint
 media-gfx/rawstudio
 sci-libs/libecwj2

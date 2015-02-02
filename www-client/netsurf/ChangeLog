@@ -1,6 +1,16 @@
 # ChangeLog for www-client/netsurf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/ChangeLog,v 1.15 2014/11/15 15:01:58 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/ChangeLog,v 1.17 2015/02/02 16:56:07 xmw Exp $
+
+  02 Feb 2015; Michael Weber <xmw@gentoo.org> -netsurf-2.9.ebuild,
+  -netsurf-3.0-r1.ebuild, -netsurf-3.0-r2.ebuild, -netsurf-3.0.ebuild,
+  -netsurf-3.2.ebuild:
+  Drop versions depending on lcms:0 (bug 526800)
+
+*netsurf-3.2-r1 (02 Feb 2015)
+
+  02 Feb 2015; Michael Weber <xmw@gentoo.org> +netsurf-3.2-r1.ebuild:
+  Drop depenendency on lcms:0 (bug 526800)
 
 *netsurf-3.2 (15 Nov 2014)
 

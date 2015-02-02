@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9748 2015/02/02 13:11:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9749 2015/02/02 16:58:04 xmw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Feb 2015; Michael Weber <xmw@gentoo.org> package.mask:
+  Adjust mask of netsurf to affected versions
 
   02 Feb 2015; Michał Górny <mgorny@gentoo.org> package.mask:
   Temporarily mask bumps of ffmpeg rev-deps for improvements.
