@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1-r1.ebuild,v 1.3 2014/07/16 14:15:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-5.0.1-r1.ebuild,v 1.4 2015/02/02 10:05:08 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -11,7 +11,7 @@ DESCRIPTION="Network traffic analyzer with web interface"
 HOMEPAGE="http://www.ntop.org/products/ntop/"
 SRC_URI="mirror://sourceforge/ntop/ntop/Stable/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="snmp ssl"

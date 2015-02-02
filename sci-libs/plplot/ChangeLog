@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/plplot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.59 2014/06/27 19:26:10 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.60 2015/02/02 10:13:30 jlec Exp $
+
+  02 Feb 2015; Justin Lecher <jlec@gentoo.org> plplot-5.10.0-r1.ebuild,
+  +files/plplot-5.10.0-cmake.patch, metadata.xml:
+  Backport fix for cmake-3.10, #537670
 
   27 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org> -plplot-5.10.0.ebuild,
   plplot-5.10.0-r1.ebuild:

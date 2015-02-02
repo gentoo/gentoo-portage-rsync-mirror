@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang='en'>
+  <herd>sci</herd>
+  <longdescription lang="en">
   PLplot is a library of functions that are useful for making scientific
   plots. It can be used from within compiled languages such as C, C++,
   FORTRAN and Java, as well as interactively from interpreted languages such
@@ -15,13 +15,13 @@
   support for extended characters inculding the Greek alphabet and a host of
   mathematical symbols.
 </longdescription>
-<use>
-  <flag name="ada">Add bindings for the ADA programming language</flag>
-  <flag name="dynamic">Build with dynamic drivers</flag>
-  <flag name="octave">Add bindings for
+  <use>
+    <flag name="ada">Add bindings for the ADA programming language</flag>
+    <flag name="dynamic">Build with dynamic drivers</flag>
+    <flag name="octave">Add bindings for
   <pkg>sci-mathematics/octave</pkg></flag>
-  <flag name="pdl">Add bindings for <pkg>dev-perl/PDL</pkg></flag>
-  <flag name="qhull">Add bindings for <pkg>media-libs/qhull</pkg></flag>
-  <flag name="shapefile">Enable support for ESRI shapefiles</flag>
-</use>
+    <flag name="pdl">Add bindings for <pkg>dev-perl/PDL</pkg></flag>
+    <flag name="qhull">Add bindings for <pkg>media-libs/qhull</pkg></flag>
+    <flag name="shapefile">Enable support for ESRI shapefiles</flag>
+  </use>
 </pkgmetadata>

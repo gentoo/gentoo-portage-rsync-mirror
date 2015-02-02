@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/scala-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.15 2015/01/18 21:39:44 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.16 2015/02/02 10:22:05 monsieurp Exp $
+
+  02 Feb 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-2.11.4.ebuild:
+  Add forgotten `doc' USE flag to IUSE flags. Fix bug 538480.
 
   18 Jan 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-2.11.4.ebuild:
   Use java_prepare() instead of src_prepare. Add `doc' USE flag.

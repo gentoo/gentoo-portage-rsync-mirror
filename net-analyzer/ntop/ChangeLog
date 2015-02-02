@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ntop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.120 2014/07/16 14:15:44 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.121 2015/02/02 10:05:08 jer Exp $
+
+  02 Feb 2015; Jeroen Roovers <jer@gentoo.org> ntop-4.0.3.ebuild,
+  ntop-4.1.0.ebuild, ntop-5.0.1-r1.ebuild:
+  Fix LICENSE.
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> ntop-5.0.1-r1.ebuild,
   +files/ntop-5.0.1-INCS.patch, +files/ntop-5.0.1-includes.patch:

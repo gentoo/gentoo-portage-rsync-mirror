@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.6.1.ebuild,v 1.1 2014/08/18 20:09:47 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.8.0.ebuild,v 1.1 2015/02/02 10:10:54 djc Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
