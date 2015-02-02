@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.108 2015/01/21 13:11:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.109 2015/02/01 23:40:44 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/pycurl-7.19.0-linking.patch, -pycurl-7.19.0.ebuild:
+  Remove old.
 
   21 Jan 2015; Raúl Porcel <armin76@gentoo.org> pycurl-7.19.3.1-r2.ebuild:
   alpha/ia64/sparc/x86 stable wrt #530290

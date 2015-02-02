@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-memcached
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.35 2014/03/31 20:48:53 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/ChangeLog,v 1.36 2015/02/01 23:47:18 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -python-memcached-1.47.ebuild,
+  -python-memcached-1.48-r1.ebuild, -python-memcached-1.48.ebuild,
+  -python-memcached-1.50.ebuild, -python-memcached-1.51.ebuild,
+  -python-memcached-1.52.ebuild, -python-memcached-1.53.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> python-memcached-1.48-r1.ebuild,
   python-memcached-1.53-r1.ebuild:

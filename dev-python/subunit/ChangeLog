@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.59 2015/01/04 18:07:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.60 2015/02/01 23:59:24 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -subunit-0.0.8.ebuild,
+  -subunit-0.0.9.ebuild:
+  Remove old.
 
 *subunit-0.0.21-r1 (04 Jan 2015)
 

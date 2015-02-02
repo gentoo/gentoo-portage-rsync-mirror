@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlitecachec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/ChangeLog,v 1.8 2014/03/31 20:59:45 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/ChangeLog,v 1.9 2015/02/01 23:34:38 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -sqlitecachec-1.1.4.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> sqlitecachec-1.1.4-r1.ebuild:
   Add support for the new PyPy slotting.

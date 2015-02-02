@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-wpactrl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.19 2014/01/19 10:21:03 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.20 2015/02/01 23:44:54 mrueg Exp $
+
+  01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -python-wpactrl-20081102.ebuild:
+  Remove old.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   python-wpactrl-20081102-r1.ebuild:

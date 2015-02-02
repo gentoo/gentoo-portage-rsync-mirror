@@ -2223,7 +2223,6 @@ dev-python/pandas:html - Enable HTML i/o via dev-python/beautifulsoup
 dev-python/paste:flup - enable support for flup (and therefore for various wgsi servers and middleware)
 dev-python/paste:openid - enable OpenID support
 dev-python/pillow:webp - Enable support for webp image format.
-dev-python/psycopg:mxdatetime - Enable support for MX DateTime and use it instead of Python's built-in datetime module
 dev-python/py-amqp:extras - Install extra tools to generate initial Python mod from an AMQP XML file
 dev-python/pyhamcrest:numpy - Enable optional dependence on dev-python/numpy
 dev-python/pylons:genshi - Add optional genshi support
