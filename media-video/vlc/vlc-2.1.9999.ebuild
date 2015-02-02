@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.31 2015/01/30 05:25:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.32 2015/02/01 23:27:53 mgorny Exp $
 
 EAPI="5"
 
@@ -44,7 +44,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug dirac
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
-	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
+	growl httpd ieee1394 ios-vout jack kate kde libass libav libcaca libnotify
 	libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library cpu_flags_x86_mmx modplug mp3 mpeg
@@ -64,8 +64,14 @@ RDEPEND="
 		aalib? ( media-libs/aalib:0 )
 		alsa? ( >=media-libs/alsa-lib-1.0.24:0 )
 		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
-		avcodec? ( virtual/ffmpeg:0 )
-		avformat? ( virtual/ffmpeg:0 )
+		avcodec? (
+			!libav? ( media-video/ffmpeg:0= )
+			libav? ( media-video/libav:0= )
+		)
+		avformat? (
+			!libav? ( media-video/ffmpeg:0= )
+			libav? ( media-video/libav:0= )
+		)
 		bidi? ( >=dev-libs/fribidi-0.10.4:0 )
 		bluray? ( >=media-libs/libbluray-0.2.1:0 )
 		cddb? ( >=media-libs/libcddb-1.2.0:0 )
@@ -115,7 +121,10 @@ RDEPEND="
 		opengl? ( virtual/opengl:0 >=x11-libs/libX11-1.3.99.901:0 )
 		opus? ( >=media-libs/opus-1.0.3:0 )
 		png? ( media-libs/libpng:0= sys-libs/zlib:0 )
-		postproc? ( || ( >=media-video/ffmpeg-1.2:0 media-libs/libpostproc:0 ) )
+		postproc? (
+			!libav? ( >=media-video/ffmpeg-1.2:0= )
+			libav? ( media-libs/libpostproc:0= )
+		)
 		projectm? ( media-libs/libprojectm:0 media-fonts/dejavu:0 )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22:0 )
 		qt4? ( >=dev-qt/qtgui-4.6.0:4 >=dev-qt/qtcore-4.6.0:4 )
@@ -130,7 +139,10 @@ RDEPEND="
 		skins? ( x11-libs/libXext:0 x11-libs/libXpm:0 x11-libs/libXinerama:0 )
 		speex? ( media-libs/speex:0 )
 		svg? ( >=gnome-base/librsvg-2.9.0:2 )
-		swscale? ( virtual/ffmpeg:0 )
+		swscale? (
+			!libav? ( media-video/ffmpeg:0= )
+			libav? ( media-video/libav:0= )
+		)
 		taglib? ( >=media-libs/taglib-1.6.1:0 sys-libs/zlib:0 )
 		theora? ( >=media-libs/libtheora-1.0_beta3:0 )
 		tremor? ( media-libs/tremor:0 )
@@ -140,7 +152,10 @@ RDEPEND="
 		udev? ( >=virtual/udev-142:0 )
 		upnp? ( net-libs/libupnp:0 )
 		v4l? ( media-libs/libv4l:0 )
-		vaapi? ( x11-libs/libva:0[X] virtual/ffmpeg[vaapi] )
+		vaapi? (
+			!libav? ( media-video/ffmpeg:0=[vaapi] )
+			libav? ( media-video/libav:0=[vaapi] )
+		)
 		vcdx? ( >=dev-libs/libcdio-0.78.2:0 >=media-video/vcdimager-0.7.22:0 )
 		vdpau? ( >=x11-libs/libvdpau-0.6:0 !<media-video/libav-10_beta1 )
 		vnc? ( >=net-libs/libvncserver-0.9.9:0 )

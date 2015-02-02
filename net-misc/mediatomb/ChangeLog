@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.62 2015/01/18 18:54:09 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.63 2015/02/01 23:27:52 mgorny Exp $
+
+*mediatomb-0.12.2_pre20150118-r1 (01 Feb 2015)
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  +mediatomb-0.12.2_pre20150118-r1.ebuild:
+  Introduce USE=libav to control the preferred implementation. Add subslot op to
+  force rebuilds on ABI change.
 
 *mediatomb-0.12.2_pre20150118 (18 Jan 2015)
 

@@ -1,6 +1,13 @@
 # ChangeLog for media-video/handbrake
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.27 2014/12/13 12:15:56 thev00d00 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.28 2015/02/01 23:18:38 mgorny Exp $
+
+*handbrake-0.10.0-r1 (01 Feb 2015)
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> +handbrake-0.10.0-r1.ebuild,
+  handbrake-9999.ebuild:
+  Introduce USE=libav to control the preferred implementation. Add subslot op to
+  force rebuilds on ABI change.
 
   13 Dec 2014; Ian Whyman <thev00d00@gentoo.org> handbrake-0.10.0.ebuild,
   handbrake-9999.ebuild:

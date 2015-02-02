@@ -1,6 +1,12 @@
 # ChangeLog for media-video/makemkv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.47 2014/10/20 14:39:06 mattm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.48 2015/02/01 23:11:48 mgorny Exp $
+
+*makemkv-1.8.13-r1 (01 Feb 2015)
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> +makemkv-1.8.13-r1.ebuild:
+  Introduce USE=libav to control the preferred implementation. Add subslot op to
+  force rebuilds on ABI change.
 
   20 Oct 2014; Matthew Marlowe <mattm@gentoo.org>
   +files/makemkv-1.8.13-makefile.linux.patch:

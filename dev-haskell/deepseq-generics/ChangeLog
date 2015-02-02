@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/deepseq-generics
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq-generics/ChangeLog,v 1.1 2014/12/13 13:54:23 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/deepseq-generics/ChangeLog,v 1.2 2015/02/01 23:15:36 qnikst Exp $
+
+*deepseq-generics-0.1.1.2 (01 Feb 2015)
+
+  01 Feb 2015; Alexander Vershilov <qnikst@gentoo.org>
+  +deepseq-generics-0.1.1.2.ebuild, -deepseq-generics-0.1.1.1.ebuild:
+  dev-haskell/deepseq-generics: update
 
 *deepseq-generics-0.1.1.1 (13 Dec 2014)
 

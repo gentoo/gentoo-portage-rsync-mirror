@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9744 2015/02/01 22:58:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9746 2015/02/01 23:25:57 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> base/package.use.mask:
+  Mask net-misc/mediatomb[libav] since it requires masked libav.
+
+  01 Feb 2015; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask >=media-video/handbrake-0.10 since it requires libav or ffmpeg versions
+  that are both masked.
 
   01 Feb 2015; Michał Górny <mgorny@gentoo.org> base/package.use.mask:
   Mask media-tv/xbmc[libav] since USE=vdpau requires masked libav. Sad we can't
