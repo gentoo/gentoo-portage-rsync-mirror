@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.7 2014/08/04 23:46:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-6.1.0.ebuild,v 1.8 2015/02/02 20:16:43 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -48,7 +48,7 @@ src_prepare() {
 src_configure() {
 	# These are needed for both build and install.
 	export BERKELEYDB_DIR="${EPREFIX}/usr"
-	export BERKELEYDB_INCDIR="${EPREFIX}$(db_includedir ${DB_VER})"
+	export BERKELEYDB_INCDIR="$(db_includedir ${DB_VER})"
 	export BERKELEYDB_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 	export YES_I_HAVE_THE_RIGHT_TO_USE_THIS_BERKELEY_DB_VERSION=1
 }

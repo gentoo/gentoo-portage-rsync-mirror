@@ -247,7 +247,3 @@ numa
 
 # toolkit for nvidia binary drivers
 cg
-
-# Ben de Groot <yngwin@gentoo.org> (01 Feb 2015)
-# please remove when keyworded
-qt5
