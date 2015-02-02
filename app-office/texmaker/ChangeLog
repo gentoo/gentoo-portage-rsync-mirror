@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.143 2015/01/28 12:36:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.144 2015/02/02 08:41:08 jlec Exp $
+
+  02 Feb 2015; Justin Lecher <jlec@gentoo.org> texmaker-4.4.1.ebuild:
+  Avoid sandbox violations on install with USE=qt4, #538246
 
   28 Jan 2015; Justin Lecher <jlec@gentoo.org> texmaker-4.4.1.ebuild:
   Import changes by Ben de Groot
