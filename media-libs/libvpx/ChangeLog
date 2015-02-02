@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.114 2015/02/02 14:27:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.115 2015/02/02 14:33:55 mgorny Exp $
+
+  02 Feb 2015; Michał Górny <mgorny@gentoo.org> libvpx-1.3.0.ebuild,
+  libvpx-9999.ebuild:
+  Bug #498364: disable USE=sse implicitly without sse2 rather than forcing non-
+  SSE2 users to enable SSE2.
 
   02 Feb 2015; Jeroen Roovers <jer@gentoo.org> libvpx-1.1.0.ebuild,
   libvpx-1.2.0_pre20130625.ebuild, libvpx-1.3.0.ebuild, libvpx-9999.ebuild:

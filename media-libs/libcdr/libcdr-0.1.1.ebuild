@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.1.1.ebuild,v 1.1 2014/12/27 15:38:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-0.1.1.ebuild,v 1.2 2015/02/02 14:46:34 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libcdr"
 
 LICENSE="MPL-2.0"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~arm ~x86"
+[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE="doc static-libs"
 
 RDEPEND="

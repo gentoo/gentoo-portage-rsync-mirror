@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Validate-Domain
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-Domain/ChangeLog,v 1.4 2015/01/13 06:58:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Validate-Domain/ChangeLog,v 1.5 2015/02/02 14:40:18 jer Exp $
+
+  02 Feb 2015; Jeroen Roovers <jer@gentoo.org>
+  Data-Validate-Domain-0.100.0.ebuild:
+  Marked ~hppa (bug #538496).
 
   13 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   Data-Validate-Domain-0.100.0.ebuild:

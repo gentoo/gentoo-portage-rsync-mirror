@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcdr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.35 2014/12/27 15:38:21 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.36 2015/02/02 14:46:34 jer Exp $
+
+  02 Feb 2015; Jeroen Roovers <jer@gentoo.org> libcdr-0.1.1.ebuild:
+  Marked ~hppa (bug #538520).
 
 *libcdr-0.1.1 (27 Dec 2014)
 

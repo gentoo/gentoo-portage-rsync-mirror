@@ -4,10 +4,10 @@ DESCRIPTION=Lightweight IPv4 and IPv6 validation module
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Data-Validate-IP/
 IUSE=test
-KEYWORDS=amd64
+KEYWORDS=amd64 ~hppa
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Exporter >=dev-perl/NetAddr-IP-4 virtual/perl-Scalar-List-Utils dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DR/DROLSKY/Data-Validate-IP-0.24.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=5d2584535240eda58f8240551a7a38a1
+_md5_=e9837d555bc6d3e8283829a7b57a916f

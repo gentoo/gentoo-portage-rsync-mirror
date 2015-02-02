@@ -3,10 +3,10 @@ DEPEND=dev-perl/Class-Accessor dev-perl/Config-Tiny dev-perl/Math-Calc-Units dev
 DESCRIPTION=Modules to streamline Nagios, Icinga, Shinken, etc. plugins
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Monitoring-Plugin/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/N/NI/NIERLEIN/Monitoring-Plugin-0.38.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=fb46206e53c0881772e1f1d0b468cccd
+_md5_=578b8a39832c2986859474c4d05961bf

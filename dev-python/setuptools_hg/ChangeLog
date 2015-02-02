@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools_hg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools_hg/ChangeLog,v 1.7 2014/11/25 11:28:53 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools_hg/ChangeLog,v 1.8 2015/02/02 14:47:20 mrueg Exp $
+
+  02 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -setuptools_hg-0.4.ebuild:
+  Remove old.
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> setuptools_hg-0.4-r1.ebuild:
   Support python 3.4

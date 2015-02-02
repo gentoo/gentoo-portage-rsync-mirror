@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.223 2015/02/01 21:12:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.224 2015/02/02 14:46:59 jer Exp $
+
+  02 Feb 2015; Jeroen Roovers <jer@gentoo.org> inkscape-0.91.ebuild:
+  Marked ~hppa (bug #538520).
 
   01 Feb 2015; Tim Harder <radhermit@gentoo.org> -inkscape-0.91_pre3-r2.ebuild,
   -inkscape-0.91_pre4.ebuild, -files/inkscape-0.91_pre3-poppler-0.29.patch:

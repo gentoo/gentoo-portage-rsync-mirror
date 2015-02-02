@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.33 2015/01/23 01:15:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.34 2015/02/02 14:48:08 mrueg Exp $
+
+  02 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -basemap-1.0.6.ebuild:
+  Remove old.
 
   23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -basemap-1.0.3.ebuild,
   -basemap-1.0.4.ebuild, -basemap-1.0.5.ebuild:

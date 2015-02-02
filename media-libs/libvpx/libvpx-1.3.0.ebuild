@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.16 2015/02/02 14:27:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.17 2015/02/02 14:33:55 mgorny Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs multilib-minimal
@@ -42,7 +42,6 @@ DEPEND="abi_x86_32? ( dev-lang/yasm )
 "
 
 REQUIRED_USE="
-	cpu_flags_x86_sse? ( cpu_flags_x86_sse2 )
 	cpu_flags_x86_sse2? ( cpu_flags_x86_mmx )
 	cpu_flags_x86_ssse3? ( cpu_flags_x86_sse2 )
 "
@@ -84,6 +83,7 @@ multilib_src_configure() {
 		myconf+=" --disable-examples --disable-install-docs --disable-docs"
 	fi
 
+	# #498364: sse doesn't work without sse2 enabled,
 	"${S}/configure" \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -96,7 +96,7 @@ multilib_src_configure() {
 		$(use_enable cpu_flags_x86_avx2 avx2) \
 		$(use_enable cpu_flags_x86_mmx mmx) \
 		$(use_enable postproc) \
-		$(use_enable cpu_flags_x86_sse sse) \
+		$(use sse2 && use_enable cpu_flags_x86_sse sse) \
 		$(use_enable cpu_flags_x86_sse2 sse2) \
 		$(use_enable cpu_flags_x86_sse3 sse3) \
 		$(use_enable cpu_flags_x86_sse4_1 sse4_1) \

@@ -1,20 +1,24 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.2.ebuild,v 1.1 2013/08/08 21:48:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/matio/matio-1.5.2.ebuild,v 1.2 2015/02/02 14:49:00 jlec Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
+
 inherit autotools-utils eutils
 
 DESCRIPTION="Library for reading and writing matlab files"
 HOMEPAGE="http://sourceforge.net/projects/matio/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 SLOT="0"
-LICENSE="LGPL-2.1"
+LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples hdf5 sparse static-libs"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RDEPEND="sys-libs/zlib
+
+RDEPEND="
+	sys-libs/zlib
 	hdf5? ( sci-libs/hdf5 )"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
@@ -36,11 +40,11 @@ src_compile() {
 }
 
 src_install() {
+	use doc && DOCS=( "${BUILD_DIR}"/documentation/matio_user_guide.pdf )
 	autotools-utils_src_install
-	use doc && dodoc "${WORKDIR}"/${P}_build/documentation/matio_user_guide.pdf
 	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins test/test*
+		docinto examples
+		dodoc test/test*
 		insinto /usr/share/${PN}
 		doins share/test*
 	fi

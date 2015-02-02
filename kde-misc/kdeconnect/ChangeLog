@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdeconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.12 2015/01/28 13:46:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.13 2015/02/02 14:44:04 kensington Exp $
+
+  02 Feb 2015; Michael Palimaka <kensington@gentoo.org> kdeconnect-0.7.3.ebuild:
+  Drop net-dns/avahi dependency which is no longer needed wrt bug #538166.
 
   28 Jan 2015; Michael Palimaka <kensington@gentoo.org> kdeconnect-0.7.3.ebuild:
   Adjust app-crypt/qca dependencies to handle merged plugins wrt bug #537640.
