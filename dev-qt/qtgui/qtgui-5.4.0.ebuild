@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-5.4.0.ebuild,v 1.2 2015/02/02 19:00:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-5.4.0.ebuild,v 1.3 2015/02/02 19:11:43 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="The GUI module and platform plugins for the Qt5 framework"
 if [[ ${QT5_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
 # TODO: directfb, linuxfb, offscreen (auto-depends on X11)

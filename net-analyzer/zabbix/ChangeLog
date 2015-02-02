@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/zabbix
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.175 2014/12/28 16:12:30 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.176 2015/02/02 19:29:17 mattm Exp $
+
+*zabbix-2.0.14 (02 Feb 2015)
+*zabbix-2.4.3 (02 Feb 2015)
+*zabbix-2.2.8 (02 Feb 2015)
+
+  02 Feb 2015; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.14.ebuild,
+  +zabbix-2.2.8.ebuild, +zabbix-2.4.3.ebuild:
+  Bumping Zabbix 2.0.14, 2.2.8, and 2.4.3 to accomodate security bug 534606.
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   zabbix-2.0.12-r1.ebuild, zabbix-2.0.13.ebuild, zabbix-2.2.5.ebuild,
