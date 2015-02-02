@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.270 2015/02/02 13:47:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.271 2015/02/02 17:45:44 robbat2 Exp $
+
+*nfs-utils-1.3.2-r3 (02 Feb 2015)
+*nfs-utils-1.3.1-r2 (02 Feb 2015)
+
+  02 Feb 2015; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nfsmount.initd-1.3.1, +nfs-utils-1.3.1-r2.ebuild,
+  +nfs-utils-1.3.2-r3.ebuild:
+  Avoid breaking anybody with nfsmount in their runlevels; but they should
+  really read the news item and update their systems; migration hand-holding
+  script will be removed not sooner than August 1st; reviewed by radhermit,
+  williamh, zero_chaos.
 
 *nfs-utils-1.3.2-r2 (02 Feb 2015)
 
