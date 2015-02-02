@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r5.ebuild,v 1.4 2014/12/31 16:20:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r5.ebuild,v 1.5 2015/02/02 11:50:13 jlec Exp $
 
 EAPI=5
 
@@ -65,6 +65,8 @@ src_prepare() {
 	# old debian patches from 1.11
 	# DO NOT APPLY patch 0009... It breaks
 	epatch "${WORKDIR}"/patches/000{1..8}*patch
+
+	epatch "${FILESDIR}"/${P}-unistd.h.patch
 
 	sed -i.orig \
 		-e '/^nullmailer_send_LDADD/s, =, = ../lib/cli++/libcli++.a,' \

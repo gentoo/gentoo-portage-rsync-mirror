@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.91 2015/01/05 12:46:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.92 2015/02/02 11:50:13 jlec Exp $
+
+  02 Feb 2015; Justin Lecher <jlec@gentoo.org> nullmailer-1.13-r5.ebuild,
+  +files/nullmailer-1.13-unistd.h.patch:
+  Import header in portable way, #538482
 
   05 Jan 2015; Justin Lecher <jlec@gentoo.org> -nullmailer-1.13-r4.ebuild:
   Drop old, obsoletes #521552 & #532588

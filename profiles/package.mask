@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16319 2015/02/01 23:14:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16320 2015/02/02 11:38:04 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -411,12 +411,6 @@ net-wireless/cinnamon-bluetooth
 # No updates since 2009, doesn't build (#531110).
 # Removal in a month.
 net-wireless/ussp-push
-
-# Alexis Ballier <aballier@gentoo.org> (01 Dec 2014)
-# Does not build with any recent ocaml compiler.
-# Unmaintained upstream.
-# Removal after 01 Jan 2015
-dev-ml/obrowser
 
 # Richard Yao <ryao@gentoo.org> (29 Nov 2014)
 # Depends on media-libs/lcms:0, which has unspecified security vulnerabilities.
