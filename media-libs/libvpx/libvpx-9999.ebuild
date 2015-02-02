@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.49 2015/01/29 17:49:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.50 2015/02/02 14:27:33 jer Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
@@ -45,7 +45,7 @@ REQUIRED_USE="
 	cpu_flags_x86_sse? ( cpu_flags_x86_sse2 )
 	cpu_flags_x86_sse2? ( cpu_flags_x86_mmx )
 	cpu_flags_x86_ssse3? ( cpu_flags_x86_sse2 )
-	"
+"
 
 multilib_src_configure() {
 	unset CODECS #357487

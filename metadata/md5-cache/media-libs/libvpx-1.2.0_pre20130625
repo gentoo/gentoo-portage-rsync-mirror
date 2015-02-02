@@ -11,4 +11,4 @@ REQUIRED_USE=cpu_flags_x86_sse2? ( cpu_flags_x86_mmx ) cpu_flags_x86_ssse3? ( cp
 SLOT=0
 SRC_URI=mirror://gentoo/libvpx-1.2.0_pre20130625.tar.bz2 test? ( mirror://gentoo/libvpx-testdata-1.2.0.tar.bz2 )
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=984adc0a1378ae391d25b31c520ebfb1
+_md5_=b844fa219704b31e52c72fdfdb6eecec

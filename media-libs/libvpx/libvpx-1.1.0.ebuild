@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.31 2015/01/29 17:49:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.32 2015/02/02 14:27:33 jer Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs base flag-o-matic
@@ -36,7 +36,7 @@ DEPEND="amd64? ( dev-lang/yasm )
 
 REQUIRED_USE="
 	cpu_flags_x86_sse2? ( cpu_flags_x86_mmx )
-	"
+"
 
 PATCHES=(
 	"${FILESDIR}/${P}-chost.patch"
