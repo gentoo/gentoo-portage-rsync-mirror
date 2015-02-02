@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.14.ebuild,v 1.1 2012/11/29 19:04:49 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.17-r1.ebuild,v 1.1 2015/02/02 08:09:51 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
 
-inherit eutils java-pkg-opt-2 python flag-o-matic toolchain-funcs
+inherit eutils java-pkg-opt-2 python-r1 flag-o-matic toolchain-funcs
 
 DESCRIPTION="Library for Support Vector Machines"
 HOMEPAGE="http://www.csie.ntu.edu.tw/~cjlin/libsvm/"
@@ -29,11 +29,10 @@ pkg_setup() {
 			die "Need an OpenMP capable compiler"
 		else
 			append-ldflags -fopenmp
-			append-cxxflags -fopenmp
+			append-flags -fopenmp
 		fi
-		append-cxxflags -DOPENMP
+		append-flags -DOPENMP
 	fi
-	use python && python_pkg_setup
 }
 
 src_prepare() {
@@ -49,7 +48,7 @@ src_prepare() {
 			-e "s/JAVAC_FLAGS =/JAVAC_FLAGS=${JAVAC_FLAGS}/g" \
 			java/Makefile || die "Failed to fix java makefile"
 	fi
-	tc-export CXX
+	tc-export CXX CC
 }
 
 src_compile() {
@@ -78,10 +77,11 @@ src_install() {
 
 	if use python ; then
 		installation() {
-			insinto $(python_get_sitedir)
-			doins python/*.py
+			touch python/__init__.py || die
+			python_moduleinto libsvm
+			python_domodule python/*.py
 		}
-		python_execute_function installation
+		python_foreach_impl installation
 		newdoc python/README README.python
 	fi
 
