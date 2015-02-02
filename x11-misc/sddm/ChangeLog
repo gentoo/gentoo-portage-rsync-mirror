@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sddm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.15 2015/01/08 12:04:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sddm/ChangeLog,v 1.16 2015/02/02 19:33:50 zlogene Exp $
+
+  02 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> sddm-0.11.0.ebuild:
+  Add ~arm keyword
 
 *sddm-0.11.0 (08 Jan 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.11.02.1.ebuild,v 1.5 2014/11/23 14:20:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2014.11.02.1.ebuild,v 1.6 2015/02/02 19:38:12 jer Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ src_prepare() {
 			youtube_dl/version.py || die
 		local xxx=(
 			anysex behindkink drtuber eporner extremetube fourtube goshgay
-			hentaistigma hornbunny mofosex motherless pornhd pornhub pornotube
+			hentaistigma hornbunny keezmovies mofosex motherless pornhd pornhub pornotube
 			pornoxo redtube sexykarma sunporno slutload spankwire thisav
 			trutube tube8 vporn xbef xhamster xnxx xtube xvideos youjizz
 			youporn
