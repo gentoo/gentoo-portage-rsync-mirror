@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.316 2014/12/31 17:37:49 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.317 2015/02/02 16:26:17 sping Exp $
+
+*wxGTK-3.0.2.0-r1 (02 Feb 2015)
+
+  02 Feb 2015; Sebastian Pipping <sping@gentoo.org> +wxGTK-3.0.2.0-r1.ebuild:
+  Stop 3.0.2 from pretending to be 3.0.1 (bug #536004)
 
 *wxGTK-3.0.2.0 (31 Dec 2014)
 
