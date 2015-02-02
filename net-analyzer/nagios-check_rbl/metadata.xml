@@ -7,6 +7,10 @@
       <description>Maintainer. Assign bugs to him.</description>
   </maintainer>
   <maintainer>
+    <email>mjo@gentoo.org</email>
+    <name>Michael Orlitzky</name>
+  </maintainer>
+  <maintainer>
       <email>creffett@gentoo.org</email>
       <name>Chris Reffett</name>
       <description>Proxy maintainer. CC him on bugs.</description>
