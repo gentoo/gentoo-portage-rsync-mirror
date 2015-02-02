@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.22.0.ebuild,v 1.3 2015/01/22 09:29:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.22.0.ebuild,v 1.4 2015/02/02 22:52:20 blueness Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SLOT="0"
 # TODO: coverage ?
 IUSE="test X"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
 
 RDEPEND="
 	>=dev-libs/glib-2.39.1:2
