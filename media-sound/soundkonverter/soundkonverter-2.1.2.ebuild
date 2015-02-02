@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-2.1.1.ebuild,v 1.2 2014/12/31 13:20:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-2.1.2.ebuild,v 1.1 2015/02/02 15:16:09 kensington Exp $
 
 EAPI=5
 
@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 "
 
 pkg_postinst() {
+	kde4-base_pkg_postinst
+
 	elog "soundKonverter optionally supports many different audio formats."
 	elog "You will need to install the appropriate encoding packages for the"
 	elog "formats you require. For a full listing, consult the README file"
