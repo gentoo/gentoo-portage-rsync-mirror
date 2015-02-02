@@ -1,14 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.152 2015/01/28 00:24:32 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.153 2015/02/02 15:41:21 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
-# Johannes Huber <johu@gentoo.org> (28 Jan 2015)
-# # Missing keyword on dev-libs/botan
-app-crypt/qca botan
+# Jeroen Roovers <jer@gentoo.org> (2 Feb 2015)
+# dev-python/gevent requires dev-python/greenlet which has not been ported to
+# HPPA (bug #538510)
+dev-python/pyzor gevent
 
-# Jeroen Roovers <jer@gentoo.org> (13 Aug 2014)
+# Jeroen Roovers <jer@gentoo.org> (29 Nov 2014)
 # Needs dev-libs/protobuf{-c} which has not been ported to HPPA (bug #531068)
 net-dns/unbound dnstap
 

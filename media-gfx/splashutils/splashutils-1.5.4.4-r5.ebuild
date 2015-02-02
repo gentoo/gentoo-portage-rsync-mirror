@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r5.ebuild,v 1.2 2015/02/01 09:24:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r5.ebuild,v 1.4 2015/02/02 15:38:01 pinkbyte Exp $
 
 EAPI=5
 inherit autotools eutils multilib toolchain-funcs
@@ -34,7 +34,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 RDEPEND="
 	gpm? ( sys-libs/gpm[static-libs(+)] )
@@ -197,7 +197,7 @@ pkg_postinst() {
 		elog "devfs or a static /dev tree might work, but are generally discouraged and"
 		elog "not supported. If you decide to switch to udev, you might want to have a"
 		elog "look at 'The Gentoo udev Guide', which can be found at"
-		elog "  http://www.gentoo.org/doc/en/udev-guide.xml"
+		elog "  http://wiki.gentoo.org/wiki/Udev"
 		elog ""
 	fi
 

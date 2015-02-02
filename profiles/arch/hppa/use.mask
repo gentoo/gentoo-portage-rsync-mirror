@@ -1,6 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.88 2015/02/01 14:20:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.89 2015/02/02 15:51:38 jer Exp $
+
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Ben de Groot <yngwin@gentoo.org> (01 Feb 2015)
+# please remove when keyworded
+qt5
 
 # Jeroen Roovers <jer@gentoo.org> (18 Jan 2015)
 # No video acceleration is available so video decoding acceleration will not
@@ -354,7 +359,3 @@ d3d
 wayland
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Ben de Groot <yngwin@gentoo.org> (01 Feb 2015)
-# please remove when keyworded
-qt5
