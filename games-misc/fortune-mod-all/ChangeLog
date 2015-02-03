@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-all
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/ChangeLog,v 1.16 2012/11/04 17:51:47 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/ChangeLog,v 1.17 2015/02/03 20:43:26 tupone Exp $
+
+  03 Feb 2015; Tupone Alfredo <tupone@gentoo.org> fortune-mod-all-1.ebuild:
+  EAPI 5
 
   04 Nov 2012; Ulrich Müller <ulm@gentoo.org> fortune-mod-all-1.ebuild:
   Change LICENSE to "metapackage".

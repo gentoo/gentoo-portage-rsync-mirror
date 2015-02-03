@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r2.ebuild,v 1.12 2012/03/03 11:44:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r2.ebuild,v 1.13 2015/02/03 20:34:53 tupone Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="The notorious fortune program"
@@ -15,6 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE="offensive elibc_glibc"
 
 DEPEND="app-text/recode"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch \
@@ -48,10 +49,10 @@ src_prepare() {
 src_compile() {
 	local myrex=
 	[[ ${CHOST} == *-interix* ]] && myrex="REGEXDEFS=-DNO_REGEX"
-	emake prefix="${EPREFIX}" CC="$(tc-getCC)" $myrex || die "emake failed"
+	emake prefix="${EPREFIX}" CC="$(tc-getCC)" $myrex
 }
 
 src_install() {
-	emake prefix="${ED}" install || die "emake install failed"
+	emake prefix="${ED}" install
 	dodoc ChangeLog INDEX Notes Offensive README TODO cookie-files
 }

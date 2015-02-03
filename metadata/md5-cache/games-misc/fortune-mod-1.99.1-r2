@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=app-text/recode
 DESCRIPTION=The notorious fortune program
-EAPI=3
+EAPI=5
 HOMEPAGE=http://www.redellipse.net/code/fortune
 IUSE=offensive elibc_glibc
 KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
@@ -10,4 +10,4 @@ RDEPEND=app-text/recode
 SLOT=0
 SRC_URI=http://www.redellipse.net/code/downloads/fortune-mod-1.99.1.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=7bfe352937902f1cb77d4e78ea8c6a97
+_md5_=80ad3803174a2e4cb55fcac854c9fca8
