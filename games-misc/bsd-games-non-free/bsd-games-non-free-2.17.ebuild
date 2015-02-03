@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.7 2010/09/21 10:56:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.17.ebuild,v 1.8 2015/02/03 20:22:06 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 DESCRIPTION="collection of games from NetBSD"
@@ -39,7 +39,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake OPTIMIZE="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake OPTIMIZE="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 build_game() {
@@ -66,6 +66,5 @@ src_install() {
 	# extra docs
 	build_game rogue && { docinto rogue ; dodoc rogue/{CHANGES,USD.doc/rogue.me}; }
 
-	prepalldocs
 	prepgamesdirs
 }

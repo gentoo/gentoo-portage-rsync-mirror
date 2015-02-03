@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/asr-manpages-1.3_rc6.ebuild,v 1.8 2013/04/20 22:09:16 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/asr-manpages/asr-manpages-1.3_rc6.ebuild,v 1.9 2015/02/03 20:18:08 tupone Exp $
+EAPI=5
 inherit eutils
 
 MY_R="6"
@@ -20,12 +20,11 @@ RDEPEND="virtual/man"
 
 S=${WORKDIR}/${MY_P/_/-}.orig
 
-src_unpack() {
-	unpack ${A}
-	epatch "${MY_P}-${MY_R}.diff"
+src_prepare() {
+	epatch ../"${MY_P}-${MY_R}.diff"
+	rm -rf debian
 }
 
 src_install() {
-	rm -rf debian
-	doman * || die
+	doman *
 }
