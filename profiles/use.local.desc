@@ -272,19 +272,9 @@ app-arch/libarchive:nettle - Use dev-libs/nettle as crypto backend
 app-arch/libarchive:zlib - Allow accessing gzip-compressed archives through sys-libs/zlib. This only affects libarchive's native support: bsdtar will keep using gunzip as a filter if that's not built-in. It's also needed for supporting extraction of ZIP files.
 app-arch/libzpaq:jit - Enable just-in-time compilation for faster compression (requires SSE2)
 app-arch/lz4:valgrind - Enable usage of dev-util/valgrind in tests
-app-arch/mate-file-archiver:caja - Enable engrampa to integrate with mate-base/mate-file-manager by providing entries in its context menu
 app-arch/p7zip:rar - Enable support for non-free rar decoder
 app-arch/pbzip2:symlink - Install symlinks which override app-arch/bzip2 implementation
 app-arch/rar:all_sfx - Install all SFX (Self-Extracting) files rather than just the native format (allows creation of Windows EXEs on Linux ELF systems)
-app-arch/rpm5:augeas - Add support for configuration files changing (app-admin/augeas)
-app-arch/rpm5:keyutils - Enable for the keyring ccache using keyutils.
-app-arch/rpm5:magic - Add magic file support (sys-apps/file)
-app-arch/rpm5:nss - Build support for ssl/crypto handling using dev-libs/nss
-app-arch/rpm5:openssl - Build support for ssl/crypto handling using dev-libs/openssl
-app-arch/rpm5:pkcs11 - Build token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
-app-arch/rpm5:uuid - Enable server side UUID generation (via dev-libs/ossp-uuid)
-app-arch/rpm5:webdav-neon - Include support for net-libs/neon
-app-arch/rpm5:xar - Build support for xar archives using app-arch/xar
 app-arch/tar:minimal - just install `tar`
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
@@ -1008,7 +998,6 @@ app-office/gnucash:quotes - Enable Online Stock Quote retrieval
 app-office/gnumeric:libgda - Enable database support through gnome-extra/libgda.
 app-office/gnumeric:perl - Enable perl plugin loader.
 app-office/gnumeric:python - Enable python plugin loader.
-app-office/imposter:iksemel - Enable external dev-libs/iksemel parsing support
 app-office/kmymoney:hbci - Enable HBCI support using net-libs/aqbanking
 app-office/kmymoney:quotes - Enable Online Stock Quote retrieval
 app-office/libreoffice:coinmp - Use sci-libs/coinor-mp as alternative solver
@@ -1150,11 +1139,6 @@ app-text/lcdf-typetools:kpathsea - Enable integration with kpathsea search libra
 app-text/liblangtag:introspection - Use dev-libs/gobject-introspection for introspection
 app-text/libwpd:tools - Build miscellaneous tools
 app-text/lodgeit:vim - Install a vim plugin allowing to paste and download from within vim
-app-text/mate-document-viewer:caja - Enable property page extension in mate-base/mate-file-manager
-app-text/mate-document-viewer:dvi - Enable build-in DVI viewer
-app-text/mate-document-viewer:ps - Enable build-in postscript viewer
-app-text/mate-document-viewer:t1lib - Enable the Type-1 fonts for the build-in DVI viewer (media-libs/t1lib)
-app-text/mate-document-viewer:xps - Enable XPS viewer using app-text/libxps
 app-text/mathtex:png - Generate png images by default instead of gif
 app-text/mupdf:openssl - Use dev-libs/openssl crypto backend
 app-text/pandoc:embed_data_files - Embed data files in binary for relocatable executable.
@@ -3413,19 +3397,12 @@ mate-base/caja:unique - Enable single instance support using dev-libs/libunique.
 mate-base/mate:base - Install base MATE Desktop applications that are recommended for the most common usage; for example, this installs the file manager. Disable this and other USE flags if you want a more minimal MATE Desktop.
 mate-base/mate:extras - Install additional MATE Desktop applications that are recommended for extended usage of the MATE Desktop as upstream sees it; for example, this installs MATE Desktop's office related applications. Disable this if you plan to use your own non-MATE Desktop alternatives or a custom mixture of MATE and non-MATE packages.
 mate-base/mate:themes - Install MATE Desktop's themes; if you use other themes, you can disable this to spare some space and time.
-mate-base/mate-file-manager:mate - Install x11-themes/mate-icon-theme which is needed when this package is used in the MATE desktop environment.
-mate-base/mate-file-manager:unique - Enable single instance support using dev-libs/libunique.
-mate-base/mate-keyring:gpg-agent - Include GPG agent in mate-keyring.
-mate-base/mate-keyring:ssh-agent - Include SSH agent in mate-keyring.
 mate-extra/caja-extensions:gajim - Add an extension to support net-im/gajim.
 mate-extra/caja-extensions:image-converter - Add image conversion support.
 mate-extra/caja-extensions:mail - Add an extension to support e-mail functionality.
 mate-extra/caja-extensions:open-terminal - Add an extension to support an open terminal.
 mate-extra/caja-extensions:pidgin - Add an extension to support net-im/pidgin
 mate-extra/caja-extensions:share - Add an extension to support sharing files.
-mate-extra/mate-file-manager-sendto:gajim - Enables support for net-im/gajim
-mate-extra/mate-file-manager-sendto:mail - Enables support for mailto using gnome-extra/evolution-data-server
-mate-extra/mate-file-manager-sendto:pidgin - Enables support for net-im/pidgin
 mate-extra/mate-media:twolame - Bring in twolame gstreamer support
 mate-extra/mate-power-manager:applet - Enable building of the MATE applet.
 mate-extra/mate-power-manager:man - Build power manager's man page.
@@ -5386,14 +5363,6 @@ net-libs/ortp:ntp-timestamp - Turn on NTP timestamping on received packet
 net-libs/ortp:srtp - Add support for Secure RTP
 net-libs/ortp:zrtp - Add support for ZRTP key negotiation
 net-libs/phodav:spice - Install the spice-webdavd guest agent
-net-libs/pjsip:cli - Installs pjsua, a simple command-line SIP client
-net-libs/pjsip:epoll - epoll system call support
-net-libs/pjsip:ext-sound - External sound device support
-net-libs/pjsip:g711 - Builds the G711 codec
-net-libs/pjsip:g722 - Builds the G722 codec
-net-libs/pjsip:g7221 - Builds the G7221 codec
-net-libs/pjsip:ilbc - Builds the ilbc codec
-net-libs/pjsip:l16 - Builds the L16 codec
 net-libs/polarssl:havege - Enable the HAVEGE random generator. Warning: the HAVEGE random generator is not suitable for virtualized environments
 net-libs/polarssl:programs - Build PolarSSL programs
 net-libs/ptlib:asn - Enable ASN decoding/encoding support
@@ -6095,7 +6064,6 @@ net-voip/linphone:gsm-nonstandard - Support non-standard GSM frequencies
 net-voip/linphone:sqlite - Turn on compilation of message storage
 net-voip/linphone:tools - Compile tools
 net-voip/linphone:video - Enable video support (display/capture)
-net-voip/sflphone:doxygen - Support for building documentation with doxygen
 net-voip/telepathy-gabble:plugins - Enable plugin loader
 net-voip/yate:amrnb - use AMR-NB
 net-voip/yate:dahdi - Enable Dahdi driver
@@ -6691,13 +6659,6 @@ sys-apps/kexec-tools:booke - Include support for Book-E memory management
 sys-apps/kexec-tools:lzma - Enables support for LZMA compressed kernel images
 sys-apps/kexec-tools:xen - Enable extended xen support
 sys-apps/kmod:tools - Install module loading/unloading tools.
-sys-apps/kmscon:drm - Enable Linux DRM for backend
-sys-apps/kmscon:fbdev - Enable Linux FBDev for backend
-sys-apps/kmscon:gles2 - Enable GLES2 for backend
-sys-apps/kmscon:multiseat - Enable multiseat support via systemd
-sys-apps/kmscon:optimizations - Enable optimizations
-sys-apps/kmscon:pango - Enable pango font rendering
-sys-apps/kmscon:pixman - Enable pixman font rendering
 sys-apps/lm_sensors:sensord - Enable sensord - a daemon that can be used to periodically log sensor readings from hardware health-monitoring chips
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/memtest86+:floppy - Install a script to create floppy disks containing memtest86+ binaries.
