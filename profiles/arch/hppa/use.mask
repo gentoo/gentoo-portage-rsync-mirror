@@ -1,11 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.89 2015/02/02 15:51:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.90 2015/02/03 12:07:38 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
-# Ben de Groot <yngwin@gentoo.org> (01 Feb 2015)
-# please remove when keyworded
-qt5
+# Jeroen Roovers <jer@gentoo.org> (3 Feb 2015)
+# app-misc/geoclue has not been tested on HPPA
+geoclue
+
+# Jeroen Roovers <jer@gentoo.org> (3 Feb 2015)
+# net-misc/connman has not been tested on HPPA
+connman
 
 # Jeroen Roovers <jer@gentoo.org> (18 Jan 2015)
 # No video acceleration is available so video decoding acceleration will not

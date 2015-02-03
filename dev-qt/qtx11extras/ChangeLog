@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtx11extras
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtx11extras/ChangeLog,v 1.8 2015/02/02 19:28:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtx11extras/ChangeLog,v 1.9 2015/02/03 12:06:19 jer Exp $
+
+  03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtx11extras-5.4.0.ebuild:
+  Marked ~hppa too.
 
   02 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> qtx11extras-5.4.0.ebuild:
   Add ~arm keyword
