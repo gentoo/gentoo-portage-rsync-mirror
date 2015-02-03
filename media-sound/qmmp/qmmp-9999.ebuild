@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.31 2015/01/11 11:00:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-9999.ebuild,v 1.32 2015/02/03 10:23:02 kensington Exp $
 
 EAPI="5"
 
@@ -26,7 +26,7 @@ libsamplerate lyrics +mad midi mms modplug mplayer mpris musepack notifier opus 
 projectm pulseaudio scrobbler sndfile stereo tray udisks +vorbis wavpack"
 
 RDEPEND="media-libs/taglib
-	dev-qt/qtgui
+	dev-qt/qtgui:4
 	alsa? ( media-libs/alsa-lib )
 	bs2b? ( media-libs/libbs2b )
 	cdda? ( dev-libs/libcdio-paranoia )
