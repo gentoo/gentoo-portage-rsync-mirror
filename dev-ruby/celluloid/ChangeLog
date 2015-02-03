@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/celluloid
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.14 2014/11/02 11:05:58 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.15 2015/02/03 22:04:41 mrueg Exp $
+
+  03 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -celluloid-0.15.2-r3.ebuild:
+  Remove old.
 
 *celluloid-0.16.0 (02 Nov 2014)
 
