@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.13.1.ebuild,v 1.1 2015/01/25 15:37:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.13.3.ebuild,v 1.1 2015/02/03 12:35:27 jlec Exp $
 
 EAPI=5
 
@@ -66,9 +66,6 @@ src_prepare() {
 		-e "s:lib/mendeleydesktop:$(get_libdir)/mendeleydesktop:g" \
 		-e "s:MENDELEY_BASE_PATH + \"/lib/\":MENDELEY_BASE_PATH + \"/$(get_libdir)/\":g" \
 		bin/mendeleydesktop || die "failed to patch library path"
-
-	# patch for python3
-	epatch "${FILESDIR}/mendeleydesktop-fix-python3.patch"
 }
 
 src_install() {
