@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.36 2015/01/07 07:15:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.37 2015/02/03 04:43:52 yngwin Exp $
+
+*ser2net-2.10.0 (03 Feb 2015)
+
+  03 Feb 2015; Ben de Groot <yngwin@gentoo.org> +ser2net-2.10.0.ebuild:
+  version bump (bug #535866)
 
   07 Jan 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add proxy-maint.
