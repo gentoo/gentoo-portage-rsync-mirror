@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.44 2015/02/03 02:26:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.45 2015/02/03 05:45:53 idella4 Exp $
+
+*bottle-0.11.7 (03 Feb 2015)
+
+  03 Feb 2015; Ian Delaney <idella4@gentoo.org> +bottle-0.11.7.ebuild:
+  re-add 0.11.7 stop gap for sake of stable ppc keywords not yet done in #530406
 
 *bottle-0.12.8 (03 Feb 2015)
 
