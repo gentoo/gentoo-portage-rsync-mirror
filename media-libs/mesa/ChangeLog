@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.597 2015/01/13 22:49:58 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.599 2015/02/03 21:46:15 mattst88 Exp $
+
+  03 Feb 2015; Matt Turner <mattst88@gentoo.org> -mesa-10.3.5-r1.ebuild,
+  -mesa-10.4.2.ebuild:
+  Remove old.
+
+*mesa-10.4.3 (03 Feb 2015)
+
+  03 Feb 2015; Matt Turner <mattst88@gentoo.org>
+  +files/mesa-10.3.7-dont-use-clrsb.patch, +mesa-10.4.3.ebuild,
+  mesa-10.3.7.ebuild:
+  Version bump to 10.4.3. Fix bugs 536916 and 538086.
 
   13 Jan 2015; Matt Turner <mattst88@gentoo.org> mesa-10.4.2.ebuild:
   Drop usage of --with-opencl-libdir, bug 536458.

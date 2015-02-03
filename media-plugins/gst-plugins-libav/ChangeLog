@@ -1,6 +1,18 @@
 # ChangeLog for media-plugins/gst-plugins-libav
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.52 2014/10/11 13:16:29 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.53 2015/02/03 21:40:51 pacho Exp $
+
+*gst-plugins-libav-1.4.5 (03 Feb 2015)
+
+  03 Feb 2015; Pacho Ramos <pacho@gentoo.org> +gst-plugins-libav-1.4.5.ebuild,
+  -files/gst-plugins-libav-1.1.0_pre20130128-coma.patch,
+  -files/gst-plugins-libav-1.1.0_pre20130128-compat.patch,
+  -files/gst-plugins-libav-1.1.0_pre20130128-ffmpeg2.patch,
+  -files/gst-plugins-libav-1.1.0_pre20130128-gbr-color.patch,
+  -files/gst-plugins-libav-1.2.0-ffmpeg2.patch,
+  -gst-plugins-libav-1.1.0_pre20130128-r1.ebuild,
+  -gst-plugins-libav-1.2.0-r1.ebuild:
+  Version bump
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org> gst-plugins-libav-1.2.4.ebuild:
   arm stable, bug #512012

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16327 2015/02/03 21:31:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16328 2015/02/03 21:37:38 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -512,6 +512,7 @@ sys-fs/rdiff-backup-fs
 # and package.use.mask entries in base/package.use.mask.
 =media-video/libav-10*
 =media-video/libav-11*
+>=media-plugins/gst-plugins-libav-1.4
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280
