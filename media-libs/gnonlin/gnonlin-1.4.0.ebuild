@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-1.2.0.ebuild,v 1.2 2014/08/10 21:08:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-1.4.0.ebuild,v 1.1 2015/02/03 17:08:17 pacho Exp $
 
 EAPI="5"
-
 inherit gst-plugins10
 
 DESCRIPTION="Gnonlin is a set of GStreamer elements to ease the creation of non-linear multimedia editors"
@@ -15,16 +14,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="
-	>=dev-libs/glib-2.34:2
-	>=media-libs/gstreamer-1.2:1.0
-	>=media-libs/gst-plugins-base-1.2:1.0
+	>=dev-libs/glib-2.32:2
+	>=media-libs/gstreamer-1.4.0:1.0
+	>=media-libs/gst-plugins-base-1.4.0:1.0
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/gtk-doc-am-1.13
 	test? (
 		dev-libs/check
-		>=media-libs/gst-plugins-good-1.2:1.0 )
+		>=media-libs/gst-plugins-good-1.4.0:1.0 )
 " # videomixer
 
 src_configure() {
@@ -37,5 +36,5 @@ src_compile() {
 
 src_install() {
 	default
-	prune_libtool_files --all
+	prune_libtool_files --modules
 }
