@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.88 2015/01/02 12:10:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.89 2015/02/03 18:49:20 pacho Exp $
+
+*libnice-0.1.10 (03 Feb 2015)
+
+  03 Feb 2015; Pacho Ramos <pacho@gentoo.org> +libnice-0.1.10.ebuild,
+  -libnice-0.1.7.ebuild:
+  Version bump, drop old
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libnice-0.1.8.ebuild:
   Stable for alpha, wrt bug #529964

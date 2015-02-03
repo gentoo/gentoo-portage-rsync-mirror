@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.7-r100.ebuild,v 1.10 2014/10/11 13:17:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/gst-plugins-libnice-0.1.10.ebuild,v 1.1 2015/02/03 18:53:38 pacho Exp $
 
 EAPI=5
 inherit eutils multilib-minimal toolchain-funcs
@@ -11,8 +11,8 @@ MY_P=libnice-${PV}
 SRC_URI="http://nice.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 LGPL-2.1 )"
-SLOT="1.0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+SLOT="0.10"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="
@@ -36,8 +36,10 @@ multilib_src_configure() {
 	ECONF_SOURCE=${S} \
 	econf \
 		--disable-static \
-		--without-gstreamer-0.10 \
-		--with-gstreamer \
+		--disable-static-plugins \
+		--with-gstreamer-0.10 \
+		--without-gstreamer \
+		--disable-introspection \
 		--disable-gupnp
 }
 

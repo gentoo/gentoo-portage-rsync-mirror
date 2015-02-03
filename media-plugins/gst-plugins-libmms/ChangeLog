@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-libmms
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.115 2014/09/15 08:22:19 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.116 2015/02/03 18:39:59 pacho Exp $
+
+*gst-plugins-libmms-1.4.5 (03 Feb 2015)
+
+  03 Feb 2015; Pacho Ramos <pacho@gentoo.org> +gst-plugins-libmms-1.4.5.ebuild,
+  -gst-plugins-libmms-0.10.23.ebuild, -gst-plugins-libmms-1.2.3.ebuild,
+  -gst-plugins-libmms-1.2.4.ebuild:
+  Version bump, drop old
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-libmms-0.10.23-r1.ebuild, gst-plugins-libmms-1.2.4-r1.ebuild:
