@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.14.0.ebuild,v 1.1 2014/12/23 22:05:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-screenshot/gnome-screenshot-3.14.0-r1.ebuild,v 1.1 2015/02/03 11:03:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome2 readme.gentoo
 
 DESCRIPTION="Screenshot utility for GNOME"
-HOMEPAGE="https://live.gnome.org/GnomeUtils"
+HOMEPAGE="https://git.gnome.org/browse/gnome-screenshot"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-fr
 
 # libcanberra 0.26-r2 is needed for gtk+:3 fixes
 COMMON_DEPEND="
-	>=dev-libs/glib-2.35.1:2
+	>=dev-libs/glib-2.35.1:2[dbus]
 	>=media-libs/libcanberra-0.26-r2[gtk3]
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
@@ -39,6 +39,12 @@ DEPEND="${COMMON_DEPEND}
 DOC_CONTENTS="${P} saves screenshots in ~/Pictures/ and defaults to
 	non-interactive mode when launched from a terminal. If you want to choose
 	where to save the screenshot, run 'gnome-screenshot --interactive'"
+
+src_prepare() {
+	# filename-builder: use dash for time format separator (from 'master')
+	epatch "${FILESDIR}"/${PN}-3.14.0-use-dash.patch
+	gnome2_src_prepare
+}
 
 src_install() {
 	gnome2_src_install
