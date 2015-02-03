@@ -1,16 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-7.4-r1.ebuild,v 1.2 2015/02/02 17:28:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/tuxmathscrabble-0.7.4.ebuild,v 1.1 2015/02/03 16:57:03 tupone Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1 multilib games
 
 MY_PN=TuxMathScrabble
-MY_P=${PN}-0.${PV}
 DESCRIPTION="math-version of the popular board game for children 4-10"
 HOMEPAGE="http://www.asymptopia.org/"
-SRC_URI="mirror://gentoo/${MY_P}.zip"
+SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,8 +23,6 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	dev-python/pygame[${PYTHON_USEDEP}]"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-
-S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	python-single-r1_pkg_setup
