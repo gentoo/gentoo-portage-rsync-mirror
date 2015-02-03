@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icu4j
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.65 2014/10/25 06:29:18 ercpe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.66 2015/02/03 15:36:47 fordfrog Exp $
+
+  03 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> icu4j-4.4.2.ebuild,
+  +files/icu4j-4.4.2-add-jdk8-to-check.patch:
+  fixed compilation with jdk8
 
 *icu4j-54.1.1 (25 Oct 2014)
 
