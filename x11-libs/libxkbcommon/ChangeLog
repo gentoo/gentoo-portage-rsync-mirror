@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbcommon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.10 2014/10/26 14:45:09 remi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.11 2015/02/03 10:58:41 jer Exp $
+
+  03 Feb 2015; Jeroen Roovers <jer@gentoo.org> libxkbcommon-0.5.0.ebuild:
+  Marked ~hppa too.
 
 *libxkbcommon-0.5.0 (26 Oct 2014)
 

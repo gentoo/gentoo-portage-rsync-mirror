@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-9999.ebuild,v 1.21 2015/02/03 10:56:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.17.5.ebuild,v 1.1 2015/02/03 10:56:23 yngwin Exp $
 
 EAPI=5
 PLOCALES="ar bg cs de el_GR es fa fi fr gl hi hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ tr uk vi zh_CN zh_TW"
@@ -23,25 +23,15 @@ HOMEPAGE="https://quiterss.org"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="debug phonon +qt4 qt5"
-REQUIRED_USE="^^ ( qt4 qt5 )"
+IUSE="debug phonon"
 
 RDEPEND="
-	qt4? ( dev-qt/qtcore:4
-		dev-qt/qtgui:4
-		dev-qt/qtsingleapplication[X,qt4]
-		dev-qt/qtsql:4[sqlite]
-		dev-qt/qtwebkit:4
-		phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) ) )
-	qt5? ( dev-qt/qtcore:5
-		dev-qt/qtgui:5
-		dev-qt/qtmultimedia:5
-		dev-qt/qtprintsupport:5
-		dev-qt/qtsingleapplication[X,qt5]
-		dev-qt/qtsql:5[sqlite]
-		dev-qt/qtwebkit:5
-		dev-qt/qtwidgets:5
-		dev-qt/qtxml:5 )
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsingleapplication[X,qt4]
+	dev-qt/qtsql:4[sqlite]
+	dev-qt/qtwebkit:4
+	phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) )
 	dev-db/sqlite:3"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -60,9 +50,8 @@ src_prepare() {
 }
 
 src_configure() {
-	use qt4 && eqmake4 PREFIX="${EPREFIX}/usr" SYSTEMQTSA=1 \
+	eqmake4 PREFIX="${EPREFIX}/usr" SYSTEMQTSA=1 \
 		$(usex phonon '' 'DISABLE_PHONON=1')
-	use qt5 && eqmake5 PREFIX="${EPREFIX}/usr" SYSTEMQTSA=1
 }
 
 src_install() {

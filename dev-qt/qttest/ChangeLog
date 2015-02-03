@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qttest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.22 2015/02/02 19:24:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.23 2015/02/03 10:59:40 jer Exp $
+
+  03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qttest-5.4.0.ebuild:
+  Marked ~hppa too.
 
   02 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> qttest-5.4.0.ebuild:
   Add ~arm keyword
