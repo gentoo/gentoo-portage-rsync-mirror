@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-SSH-AuthorizedKeysFile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH-AuthorizedKeysFile/ChangeLog,v 1.15 2014/08/23 02:12:05 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH-AuthorizedKeysFile/ChangeLog,v 1.16 2015/02/03 17:44:04 robbat2 Exp $
+
+*Net-SSH-AuthorizedKeysFile-0.170.0 (03 Feb 2015)
+
+  03 Feb 2015; Robin H. Johnson <robbat2@gentoo.org>
+  +Net-SSH-AuthorizedKeysFile-0.170.0.ebuild:
+  Commit direct to stable, modifies a single regex to add match for Ed25519
+  keytype; needed for production gitolite.
 
 *Net-SSH-AuthorizedKeysFile-0.160.0-r1 (23 Aug 2014)
 

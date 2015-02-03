@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1138 2015/01/21 20:51:21 mrueg Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1140 2015/02/03 17:54:50 radhermit Exp $
 
 -->
 <herds>
@@ -1505,10 +1505,6 @@
     <name>Robin H. Johnson</name>
   </maintainer>
   <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
-  </maintainer>
-  <maintainer>
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
@@ -1589,10 +1585,6 @@
   <maintainer>
     <email>jer@gentoo.org</email>
     <name>Jeroen Roovers</name>
-  </maintainer>
-  <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
   </maintainer>
 </herd>
 <herd>
@@ -1773,10 +1765,6 @@
     <email>vapier@gentoo.org</email>
     <role>help with portmap/nfs-utils/etc...</role>
   </maintainer>
-  <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
-  </maintainer>
 </herd>
 <herd>
   <name>prolog</name>
@@ -1862,10 +1850,6 @@
     <name>George Shapovalov</name>
     <role>initiator of the herd, maintain some of the packages (see individual metadata)</role>
   </maintainer>
-  <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
-  </maintainer>
 </herd>
 <herd>
   <name>netmon</name>
@@ -1878,10 +1862,6 @@
   <maintainer>
     <email>jer@gentoo.org</email>
     <name>Jeroen Roovers</name>
-  </maintainer>
-  <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
   </maintainer>
   <maintainer>
     <email>zerochaos@gentoo.org</email>
@@ -1903,10 +1883,6 @@
   <maintainer>
     <email>jdhore@gentoo.org</email>
     <name>Jeff Horelick</name>
-  </maintainer>
-  <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
   </maintainer>
 </herd>
 <herd>
@@ -1956,10 +1932,6 @@
   </maintainer>
   <maintainer>
     <email>jlec@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
   </maintainer>
   <maintainer>
     <email>heroxbd@gentoo.org</email>
@@ -2062,10 +2034,6 @@
   <name>net-news</name>
   <email>net-news@gentoo.org</email>
   <description>Herd for NNTP related packages in net-news</description>
-  <maintainer>
-    <email>radhermit@gentoo.org</email>
-    <name>Tim Harder</name>
-  </maintainer>
 </herd>
 <herd>
   <name>benchmarks</name>
@@ -2258,10 +2226,6 @@
     <maintainer>
         <email>aballier@gentoo.org</email>
         <name>Alexis Ballier</name>
-    </maintainer>
-    <maintainer>
-        <email>radhermit@gentoo.org</email>
-        <name>Tim Harder</name>
     </maintainer>
 </herd>
 <herd>

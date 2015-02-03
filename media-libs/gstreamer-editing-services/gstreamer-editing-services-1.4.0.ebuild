@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/gstreamer-editing-services-1.2.0.ebuild,v 1.2 2014/04/06 15:03:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/gstreamer-editing-services-1.4.0.ebuild,v 1.1 2015/02/03 17:48:19 pacho Exp $
 
 EAPI="5"
-
 inherit eutils
 
 DESCRIPTION="SDK for making video editors and more"
@@ -20,8 +19,8 @@ IUSE="+introspection"
 COMMON_DEPEND="
 	>=dev-libs/glib-2.34:2
 	dev-libs/libxml2:2
-	>=media-libs/gstreamer-1.2:1.0[introspection?]
-	>=media-libs/gst-plugins-base-1.2:1.0[introspection?]
+	>=media-libs/gstreamer-1.4:1.0[introspection?]
+	>=media-libs/gst-plugins-base-1.4:1.0[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 "
 RDEPEND="${COMMON_DEPEND}
@@ -40,13 +39,15 @@ src_prepare() {
 
 src_configure() {
 	# gtk is only used for examples
+	# GST_INSPECT true due bug #508096
 	econf \
+		GST_INSPECT=$(type -P true) \
 		$(use_enable introspection) \
 		--disable-examples \
 		--disable-gtk-doc \
 		--without-gtk \
-        --with-package-name="GStreamer editing services ebuild for Gentoo" \
-        --with-package-origin="http://packages.gentoo.org/package/media-libs/gstreamer-editing-services"
+	        --with-package-name="GStreamer editing services ebuild for Gentoo" \
+        	--with-package-origin="http://packages.gentoo.org/package/media-libs/gstreamer-editing-services"
 }
 
 src_install() {

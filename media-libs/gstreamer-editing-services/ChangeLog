@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gstreamer-editing-services
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/ChangeLog,v 1.3 2014/05/31 14:15:41 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/ChangeLog,v 1.4 2015/02/03 17:48:19 pacho Exp $
+
+*gstreamer-editing-services-1.4.0 (03 Feb 2015)
+
+  03 Feb 2015; Pacho Ramos <pacho@gentoo.org>
+  +gstreamer-editing-services-1.4.0.ebuild,
+  -gstreamer-editing-services-1.2.0.ebuild:
+  Version bump, drop old
 
 *gstreamer-editing-services-1.2.1 (31 May 2014)
 

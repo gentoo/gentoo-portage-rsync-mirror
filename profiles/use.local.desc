@@ -3643,6 +3643,7 @@ media-libs/grilo:network - Enable network access for media discovery using net-l
 media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
 media-libs/grilo:vala - Generate bindings for dev-lang/vala
 media-libs/gst-plugins-bad:egl - Enable EGL support
+media-libs/gst-plugins-bad:gles2 - Enable GLES2 support
 media-libs/gst-plugins-base:ivorbis - Enable integer based vorbis decoder.
 media-libs/gst-plugins-base:pango - Enable pango GStreamer plugin
 media-libs/gstreamer:orc - Disable some PaX memory protections to allow plugins that use dev-lang/orc for runtime optimization to be used on hardened PaX systems
@@ -3847,7 +3848,6 @@ media-plugins/grilo-plugins:thetvdb - Build support for thetvdb.com
 media-plugins/grilo-plugins:tracker - Build support for content discovery using the app-misc/tracker indexer
 media-plugins/grilo-plugins:vimeo - Build support for Vimeo content discovery using net-libs/libsoup and dev-libs/libgcrypt
 media-plugins/grilo-plugins:youtube - Build support for YouTube content discovery using dev-libs/libgdata
-media-plugins/gst-plugins-a52dec:orc - Use dev-lang/orc for runtime detection of CPU MMX/MMXEXT/3dNow! capabilities to pass down to a52dec library.
 media-plugins/gst-plugins-gl:libvisual - Enable visualization effects via media-libs/libvisual
 media-plugins/gst-plugins-meta:http - Enable http streaming via net-libs/libsoup
 media-plugins/gst-plugins-meta:libvisual - Enable visualization effects via media-libs/libvisual

@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.639 2015/02/02 20:37:38 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.640 2015/02/03 17:47:39 kensington Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michael Palimaka <kensington@gentoo.org> (03 Feb 2015)
+# Requires unreleased version of dev-libs/soprano
+app-office/akonadi-server qt5
 
 # Brian Evans <grknight@gentoo.org> (02 Feb 2015)
 # Masked for dev-php/PEAR-MDB2_Driver_sqlite last rites Bug 538584

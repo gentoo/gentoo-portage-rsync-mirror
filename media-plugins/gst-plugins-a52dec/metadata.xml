@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gstreamer</herd>
-<use>
-	<flag name="orc">Use <pkg>dev-lang/orc</pkg> for runtime detection of CPU
-		MMX/MMXEXT/3dNow! capabilities to pass down to a52dec library.</flag>
-</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.764 2015/02/01 20:02:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.765 2015/02/03 17:47:39 kensington Exp $
+
+  03 Feb 2015; Michael Palimaka <kensington@gentoo.org> package.use.mask:
+  Mask app-office/akonadi-server[qt5] due to unsatisfied dependencies.
 
   01 Feb 2015; Michał Górny <mgorny@gentoo.org> make.defaults:
   Set USE=libav to default to libav.
