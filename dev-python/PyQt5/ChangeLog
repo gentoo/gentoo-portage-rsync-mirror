@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/ChangeLog,v 1.5 2015/01/09 01:24:26 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/ChangeLog,v 1.6 2015/02/03 07:49:55 zlogene Exp $
+
+  03 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> PyQt5-5.4.ebuild:
+  Add ~arm keyword
 
 *PyQt5-5.4 (09 Jan 2015)
 
