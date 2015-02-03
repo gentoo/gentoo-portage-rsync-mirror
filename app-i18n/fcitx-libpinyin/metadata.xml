@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>cjk</herd>
+  <use>
+    <flag name='dictmanager'>
+      Enable dictionary manager. Requires <pkg>dev-qt/qtwebkit</pkg>.
+    </flag>
+  </use>
 </pkgmetadata>

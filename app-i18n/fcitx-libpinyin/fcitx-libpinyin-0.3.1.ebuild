@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-libpinyin/fcitx-libpinyin-0.3.1.ebuild,v 1.2 2014/03/08 12:03:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-libpinyin/fcitx-libpinyin-0.3.1.ebuild,v 1.3 2015/02/03 07:16:06 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils gnome2-utils
@@ -12,14 +12,23 @@ SRC_URI="http://download.fcitx-im.org/${PN}/${P}_dict.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
-IUSE=""
+IUSE="dictmanager"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8
 	app-i18n/libpinyin
-	dev-libs/glib:2"
+	dev-libs/glib:2
+	dictmanager? ( >=app-i18n/fcitx-4.2.8[qt4]
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+		dev-qt/qtwebkit:4 )"
 DEPEND="${RDEPEND}
 	virtual/libintl
 	virtual/pkgconfig"
+
+src_configure() {
+	local mycmakeargs="$(cmake-utils_use_enable dictmanager QT)"
+	cmake-utils_src_configure
+}
 
 pkg_postinst() {
 	gnome2_icon_cache_update
