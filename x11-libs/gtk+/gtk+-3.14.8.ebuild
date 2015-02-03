@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.6.ebuild,v 1.4 2015/01/02 11:53:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.8.ebuild,v 1.1 2015/02/03 14:17:46 pacho Exp $
 
 EAPI="5"
-GCONF_DEBUG="no"
+GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
 inherit autotools eutils flag-o-matic gnome2 multilib virtualx multilib-minimal
@@ -18,7 +18,7 @@ SLOT="3"
 #  * http://mail.gnome.org/archives/gtk-devel-list/2010-November/msg00099.html
 # I tried this and got it all compiling, but the end result is unusable as it
 # horribly mixes up the backends -- grobian
-IUSE="aqua cloudprint colord cups debug examples +introspection test vim-syntax wayland X xinerama"
+IUSE="aqua cloudprint colord cups examples +introspection test vim-syntax wayland X xinerama"
 REQUIRED_USE="
 	|| ( aqua wayland X )
 	xinerama? ( X )
@@ -114,7 +114,7 @@ strip_builddir() {
 }
 
 src_prepare() {
-	# see bug #525928
+	# https://bugzilla.gnome.org/show_bug.cgi?id=738835
 	epatch "${FILESDIR}"/${PN}-non-bash-support.patch
 
 	# -O3 and company cause random crashes in applications. Bug #133469
@@ -140,7 +140,6 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	# Passing --disable-debug is not recommended for production use
 	# need libdir here to avoid a double slash in a path that libtool doesn't
 	# grok so well during install (// between $EPREFIX and usr ...)
 	ECONF_SOURCE=${S} \
@@ -149,7 +148,6 @@ multilib_src_configure() {
 		$(use_enable cloudprint) \
 		$(use_enable colord) \
 		$(use_enable cups cups auto) \
-		$(usex debug --enable-debug=yes "") \
 		$(multilib_native_use_enable introspection) \
 		$(use_enable wayland wayland-backend) \
 		$(use_enable X x11-backend) \
