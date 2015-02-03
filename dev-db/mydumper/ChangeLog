@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mydumper
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/ChangeLog,v 1.7 2014/09/30 03:39:07 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/ChangeLog,v 1.8 2015/02/03 06:48:01 yngwin Exp $
+
+  03 Feb 2015; Ben de Groot <yngwin@gentoo.org> -mydumper-0.5.2.ebuild:
+  remove old (bug #514100)
 
 *mydumper-0.6.2 (30 Sep 2014)
 

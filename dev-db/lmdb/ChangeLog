@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/lmdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.22 2015/01/02 12:30:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.23 2015/02/03 06:54:51 eras Exp $
+
+  03 Feb 2015; Eray Aslan <eras@gentoo.org> -lmdb-0.9.10.ebuild,
+  -lmdb-0.9.11.ebuild, -lmdb-0.9.13.ebuild:
+  Remove old
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lmdb-0.9.14.ebuild:
   Stable for sparc, wrt bug #531430

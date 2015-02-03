@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-3.0_pre20150129.ebuild,v 1.1 2015/01/31 13:29:21 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-3.1_pre20150201.ebuild,v 1.2 2015/02/03 06:44:22 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -308,21 +308,5 @@ pkg_postinst() {
 		ewarn "and then run /usr/bin/newaliases. Postfix will not"
 		ewarn "work correctly without it."
 		ewarn
-	fi
-
-	if [[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 9 ]]; then
-		elog "If you are using old style postfix instances by symlinking"
-		elog "startup scripts in ${ROOT}etc/init.d, please consider"
-		elog "upgrading your config for postmulti support. For more info:"
-		elog "http://www.postfix.org/MULTI_INSTANCE_README.html"
-		if ! use berkdb; then
-			ewarn "\nPostfix is installed without BerkeleyDB support."
-			ewarn "Please turn on berkdb USE flag if you need hash or"
-			ewarn "btree table lookups.\n"
-		fi
-		ewarn "Postfix daemons now live under /usr/libexec/postfix"
-		ewarn "Please adjust your main.cf accordingly by running"
-		ewarn "etc-update/dispatch-conf or similar and accepting the new"
-		ewarn "daemon_directory setting."
 	fi
 }
