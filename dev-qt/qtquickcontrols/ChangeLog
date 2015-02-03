@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtquickcontrols
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquickcontrols/ChangeLog,v 1.8 2015/02/02 19:21:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquickcontrols/ChangeLog,v 1.9 2015/02/03 11:59:01 jer Exp $
+
+  03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtquickcontrols-5.4.0.ebuild:
+  Marked ~hppa too.
 
   02 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> qtquickcontrols-5.4.0.ebuild:
   Add ~arm keyword

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtpaths
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtpaths/ChangeLog,v 1.6 2015/02/02 19:18:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtpaths/ChangeLog,v 1.7 2015/02/03 11:48:41 jer Exp $
+
+  03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtpaths-5.4.0.ebuild:
+  Marked ~hppa too.
 
   02 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> qtpaths-5.4.0.ebuild:
   Add ~arm keyword

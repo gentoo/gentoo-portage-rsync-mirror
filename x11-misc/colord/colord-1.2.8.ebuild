@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.8.ebuild,v 1.1 2015/01/25 15:42:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.2.8.ebuild,v 1.2 2015/02/03 11:58:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GNOME2_LA_PUNT="yes"
 VALA_USE_DEPEND="vapigen"
 VALA_MIN_API_VERSION="0.18"
 
-inherit bash-completion-r1 check-reqs eutils gnome2 multilib-minimal user systemd udev vala
+inherit autotools bash-completion-r1 check-reqs eutils gnome2 multilib-minimal user systemd udev vala
 
 DESCRIPTION="System service to accurately color manage input and output devices"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
@@ -77,8 +77,11 @@ pkg_setup() {
 
 src_prepare() {
 	# Adapt to Gentoo paths
-	sed -i -e 's/spotread/argyll-spotread/' src/sensors/cd-sensor-argyll.c || die
+	sed -i -e 's/spotread/argyll-spotread/' \
+		src/sensors/cd-sensor-argyll.c \
+		configure.ac || die
 
+	eautoreconf
 	use vala && vala_src_prepare
 	gnome2_src_prepare
 }
