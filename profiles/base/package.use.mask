@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.640 2015/02/03 17:47:39 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.641 2015/02/03 21:31:07 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -12,12 +12,6 @@ app-office/akonadi-server qt5
 # Brian Evans <grknight@gentoo.org> (02 Feb 2015)
 # Masked for dev-php/PEAR-MDB2_Driver_sqlite last rites Bug 538584
 dev-php/PHPonTrax sqlite
-
-# Michał Górny <mgorny@gentoo.org> (01 Feb 2015)
-# The required libav version is masked.
-app-text/unpaper libav
-media-tv/xbmc libav
-net-misc/mediatomb libav
 
 # Brian Evans <grknight@gentoo.org> (22 Jan 2015)
 # PHP module split into dev-php/ming-php which is still ~arch

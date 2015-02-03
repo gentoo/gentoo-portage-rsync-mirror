@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/csu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.7 2011/09/04 13:20:29 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.8 2015/02/03 21:04:09 grobian Exp $
+
+*csu-85 (03 Feb 2015)
+
+  03 Feb 2015; Fabian Groffen <grobian@gentoo.org> +csu-85.ebuild,
+  +files/csu-85-darwin8.patch, csu-79.ebuild:
+  Version bump to version from Darwin14, based on ebuild and patch by Michael
+  Weiser, bug #538602
 
   04 Sep 2011; Fabian Groffen <grobian@gentoo.org> csu-79.ebuild:
   Fix build on case-sensitive volumes, bug #381779
@@ -28,4 +35,3 @@
 
   15 Nov 2004; Kito <kito@gentoo.org> +csu-46.ebuild:
   initial import. added ~ppc-macos
-
