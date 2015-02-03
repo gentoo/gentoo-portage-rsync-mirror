@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.13.2.ebuild,v 1.2 2015/02/02 04:15:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.13.2.ebuild,v 1.3 2015/02/02 23:52:28 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-utils eutils flag-o-matic gnome2-utils
@@ -34,6 +34,7 @@ RDEPEND="
 	virtual/opengl
 	sound? ( dev-qt/qtmultimedia:5[widgets] )"
 DEPEND="${RDEPEND}
+	dev-qt/qttest:5
 	dev-qt/qtconcurrent:5
 	nls? ( dev-qt/linguist-tools:5 )"
 DOCS=( AUTHORS ChangeLog README )
