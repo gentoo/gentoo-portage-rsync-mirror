@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16325 2015/02/03 13:23:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16326 2015/02/03 15:05:59 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -214,62 +214,6 @@ dev-db/pgtune
 # but please be careful.
 =net-misc/asterisk-13*
 
-# Michael Sterrett <mr_bones_@gentoo.org> (03 Jan 2015)
-# Uses net-libs/adns which is on the chopping block. (bug #513320)
-# masked for removal on 20150203
-games-server/tetrix
-
-# Hanno Boeck <hanno@gentoo.org> (03 Jan 2015)
-# dead upstream, masked for removal
-app-emulation/wine-doors
-
-# Hanno Boeck <hanno@gentoo.org> (03 Jan 2015)
-# Was a dependency of taxbird which has been replaced by
-# geierlein. As this requires yearly changes it's unlikely
-# it has any use for anyone. Masked for removal.
-dev-libs/libgeier
-
-# Michael Sterrett <mr_bones_@gentoo.org> (03 Jan 2015)
-# GGZ is dead (bug #404349)
-# masked for removal on 20150203
-dev-games/ggz-client-libs
-dev-games/libggz
-games-board/ggz-gtk-client
-games-board/ggz-gtk-games
-games-board/ggz-sdl-games
-games-board/ggz-txt-client
-
-# Michael Sterrett <mr_bones_@gentoo.org> (02 Jan 2015)
-# No upstream; no longer maintained; segfaults.
-# Use games-board/teg instead.
-# masked for removal on 20150202
-games-board/xfrisk
-
-# Michael Sterrett <mr_bones_@gentoo.org> (01 Jan 2015)
-# Crazy amount of patches and no upstream anymore.
-# Use games-mud/tintin instead.
-# masked for removal on 20150201
-games-mud/mcl
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (30 Dec 2014)
-# media-libs/lcms:0 is unmaintained and has unspecified severe security
-# issues, bug 526642. Its reverse dependencies will be removed in 30days.
-<www-client/netsurf-3.2-r1
-media-gfx/photoprint
-media-gfx/rawstudio
-sci-libs/libecwj2
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (30 Dec 2014)
-# Upstream dead since 2005, does not build, bug 515780
-# Masked for removal in 30 days
-app-office/imposter
-
-# Ian Delaney <idella4@gentoo.org> (29 Dec 2014)
-# Initial maintainer left, added as a support to kombu however
-# appears to have never been used. Has no revdeps.
-# Removal in 30 days.
-dev-python/cl
-
 # Aaron W. Swenson <titanofold@gentoo.org> (28 Dec 2014)
 # Split ebuilds are no longer maintained. Migrate to the unified
 # ebuilds invoking the following, substituting SLOT for the desired
@@ -280,62 +224,10 @@ dev-db/postgresql-docs
 dev-db/postgresql-base
 dev-db/postgresql-server
 
-# Mike Gilbert <floppym@gentoo.org> (25 Dec 2014)
-# Deprecated PIL imports, bug 471552.
-# Removal in 30 days.
-sci-physics/camfr
-
-# Michael Orlitzky <mjo@gentoo.org> (24 Dec 2014)
-# Masked for removal in 30 days (bug #531954). All current versions of
-# nagios block it, and it has unresolved LICENSE issues (bug #320241).
-net-analyzer/nagios-imagepack
-
 # Sergey Popov <pinkbyte@gentoo.org> (24 Dec 2014)
 # Mask new version of Boost - it's known to cause breakages
 ~dev-util/boost-build-1.57.0
 ~dev-libs/boost-1.57.0
-
-# Ian Delaney <idella4@gentoo.org> (24 Dec 2014)
-# Have little evidence of usage and have no upstream development / support
-# for years. They do not support python 3. testoob is a testing framework
-# which are more than adequately stocked under dev-python. orm was broken
-# prior to conversion and was not highlighted as a qa violation by repoman.
-# For removal in 30 days.
-dev-python/testoob
-dev-python/orm
-
-# Markos Chandras <hwoarang@gentoo.org> (23 Dec 2014)
-# Homepage returns 404 which probably suggests upstream has vanished.
-# Superseded by app-text/dos2unix. Bug #533222
-app-misc/fixdos
-
-# Matthias Maier <tamiko@gentoo.org> (20 Dec 2014)
-# Remove obsolete mate 1.6* packages. These are superseded by various mate
-# 1.8* packages
-# Mask for removal in 30 days
-app-arch/mate-file-archiver
-app-editors/mate-text-editor
-app-text/mate-document-viewer
-app-text/mate-doc-utils
-mate-base/libmatekeyring
-mate-base/mate-file-manager
-mate-base/mate-keyring
-mate-extra/mate-character-map
-mate-extra/mate-file-manager-image-converter
-mate-extra/mate-file-manager-open-terminal
-mate-extra/mate-file-manager-sendto
-mate-extra/mate-file-manager-share
-media-gfx/mate-image-viewer
-net-wireless/mate-bluetooth
-x11-libs/libmatewnck
-x11-misc/mate-menu-editor
-x11-wm/mate-window-manager
-
-# Michał Górny <mgorny@gentoo.org> (12 Dec 2014)
-# No longer used by any package in the tree, and unlikely to be ever
-# needed again for its main use is updating package code. Bug #532394.
-# Removal in 30 days.
-net-zope/zope-fixers
 
 # Jeroen Roovers <jer@gentoo.org> (12 Dec 2014)
 # The 96 and 173 branches are no longer supported and remain vulnerable to
@@ -347,11 +239,6 @@ net-zope/zope-fixers
 # Security mask, wrt bug #529728
 <app-antivirus/clamav-0.98.5
 
-# Matt Turner <mattst88@gentoo.org> (08 Dec 2014)
-# Various bugs (466506, 490798, 493532, 498928, 498936), no maintainer,
-# hasn't built in a year. Removal in a month.
-sys-apps/kmscon
-
 # Ian Stakenvicius <axs@gentoo.org> (03 Dec 2014)
 # masked for testing
 media-libs/openh264
@@ -360,92 +247,6 @@ media-libs/openh264
 # Not supported by upstream anymore
 # Revdeps broken, #531392
 net-analyzer/openvas-administrator
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Multiple pending bugs, #380435, #460508, #481150,
-# #481310, #481312, #530856. Removal in a month (#380435)
-app-office/teapot
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Multiple problems and security issues (#425634).
-# Removal in a month.
-net-irc/bitchx
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Upstream dead for a long time, use sys-power/cpupower
-# instead. Removal in a month.
-sys-power/cpufrequtils
-x11-plugins/gkrellm-cpufreq
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Dead since 2004, fails to build (#488028). Relying
-# on deprecated gnome2 libs, you can use volti, volwheel,
-# volumeicon and other mixers in the tree. Removal in a month.
-media-sound/gnome-alsamixer
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Fails to build, use sys-devel/autoconf-archive instead.
-# Removal in a month (#514062)
-sys-devel/ac-archive
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Fails to install (#514276), removal in a month.
-net-misc/emirror
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Dead for ages and with pending unresolved bugs.
-# Removal in a month (#514918).
-net-wireless/wimax
-net-wireless/wimax-tools
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Unmaintained, fails to build (#515922).
-# Removal in a month.
-rox-extra/clock
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Unmaintained and hardmasked for ages (#518890).
-# Removal in a month.
-app-arch/rpm5
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Dead and unmaintained for ages, you should use polkit
-# directly (#520966). Removal in a month.
-app-admin/gksu-polkit
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Dead for ages, too outdated (#521726). Removal in a month.
-sys-apps/uhinv
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Completely broken currently, hard to update and fix (#522732).
-# Removal in a month.
-net-libs/pjsip
-net-voip/sflphone
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Not buildable, broken and dead for ages (#523250).
-# Removal in a month.
-net-im/ekg
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Not maintained by anybody, use sys-kernel/linux-firmware
-# instead as it's maintained and updated (#523784).
-# Removal in a month.
-sys-firmware/iwl2030-ucode
-sys-firmware/iwl5000-ucode
-sys-firmware/iwl2000-ucode
-sys-firmware/iwl5150-ucode
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# Relies on old gnome-bluetooth and upstream is not going
-# to fix it anytime soon (#528916). Removal in a month.
-net-wireless/cinnamon-bluetooth
-
-# Pacho Ramos <pacho@gentoo.org> (01 Dec 2014)
-# No updates since 2009, doesn't build (#531110).
-# Removal in a month.
-net-wireless/ussp-push
 
 # Richard Yao <ryao@gentoo.org> (29 Nov 2014)
 # Depends on media-libs/lcms:0, which has unspecified security vulnerabilities.

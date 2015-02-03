@@ -1,9 +1,0 @@
-diff -Naurp ekg-1.8rc1-orig/src/ui-gtk-chanview-tabs.c ekg-1.8rc1/src/ui-gtk-chanview-tabs.c
---- ekg-1.8rc1-orig/src/ui-gtk-chanview-tabs.c	2008-09-13 22:33:25.000000000 +0200
-+++ ekg-1.8rc1/src/ui-gtk-chanview-tabs.c	2008-09-13 22:33:48.000000000 +0200
-@@ -1,4 +1,5 @@
- /* file included in chanview.c */
-+GtkWidget *gtkutil_button(GtkWidget *box, char *stock, char *tip, void *callback, void *userdata, char *labeltext);
- 
- typedef struct {
- 	GtkWidget *outer;	/* outer box */
