@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.4.5.ebuild,v 1.1 2015/02/03 17:41:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.4.5.ebuild,v 1.2 2015/02/03 18:19:01 pacho Exp $
 
 EAPI="5"
 GST_ORG_MODULE="gst-plugins-bad"
@@ -15,7 +15,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x8
 
 IUSE="X egl gles2 +introspection opengl +orc vnc wayland"
 REQUIRED_USE="
-	^^ ( egl gles2 )
+	egl? ( !gles2 )
+	gles2? ( !egl )
 	opengl? ( X )
 	wayland? ( egl )
 "
