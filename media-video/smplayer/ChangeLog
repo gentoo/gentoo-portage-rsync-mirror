@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.154 2015/02/01 12:14:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.155 2015/02/04 13:45:13 yngwin Exp $
+
+  04 Feb 2015; Ben de Groot <yngwin@gentoo.org> smplayer-14.9.0.6690.ebuild:
+  Drop keywords on arches that do not have mpv-0.7.3 keyworded (bug #538804)
 
   01 Feb 2015; Jeroen Roovers <jer@gentoo.org> smplayer-14.9.0-r1.ebuild:
   Stable for HPPA (bug #538346).
