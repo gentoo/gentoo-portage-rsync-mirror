@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16328 2015/02/03 21:37:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16329 2015/02/04 08:07:54 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -289,14 +289,8 @@ www-apps/trac-downloads
 # Requires masked libav-10
 # If you use media-video/ffmpeg, it's absolutely safe to unmask this package.
 # Sorry for the inconvenience!
-#
-# Developers: Please DO NOT REMOVE this mask, which was discussed and
-# agreed on #gentoo-dev by mgorny, patrick and others
 =app-text/unpaper-6.1-r1
 =media-tv/xbmc-13.2-r1
-=media-video/mpv-0.6*
-=media-video/mpv-0.7*
-=media-video/smplayer-14.9.0.6690*
 =net-misc/mediatomb-0.12.2_pre20150118-r1
 >=media-video/handbrake-0.10.0
 

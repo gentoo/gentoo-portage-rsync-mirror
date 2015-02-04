@@ -1,9 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.641 2015/02/03 21:31:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.642 2015/02/04 08:07:55 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Ben de Groot <yngwin@gentoo.org> (04 Feb 2015)
+# Requires hard-masked version of libav.
+# Besides, upstream recommends using ffmpeg. See
+# https://github.com/mpv-player/mpv/wiki/FFmpeg-versus-Libav
+>=media-video/mpv-0.6.0 libav
 
 # Michael Palimaka <kensington@gentoo.org> (03 Feb 2015)
 # Requires unreleased version of dev-libs/soprano

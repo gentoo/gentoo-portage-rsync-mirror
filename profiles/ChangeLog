@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9755 2015/02/03 21:37:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9756 2015/02/04 08:07:54 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Feb 2015; Ben de Groot <yngwin@gentoo.org> base/package.use.mask,
+  package.mask:
+  Unmask mpv-0.7.3 and smplayer-14.9.0.6690 after masking libav useflag on
+  newer mpv.
 
   03 Feb 2015; Pacho Ramos <pacho@gentoo.org> package.mask:
   Prepare for gst-libav bump
