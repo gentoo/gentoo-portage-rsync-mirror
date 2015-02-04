@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.83.38_p1-r1.ebuild,v 1.2 2015/02/04 15:15:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.94.2_p2.ebuild,v 1.1 2015/02/04 15:15:36 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -13,7 +13,7 @@ inherit chromium multilib unpacker toolchain-funcs
 DESCRIPTION="A new browser for our friends"
 HOMEPAGE="http://vivaldi.com/"
 SRC_URI="
-	amd64? ( ${HOMEPAGE}download/${PN^}_TP_${PV/_p*}-${PV/*_p}_amd64.deb )
+	amd64? ( ${HOMEPAGE}download/${PN^}_TP${PV/*_p}_${PV/_p*}_amd64.deb )
 "
 
 LICENSE="Vivaldi"
@@ -58,7 +58,7 @@ RDEPEND="
 
 QA_PREBUILT="*"
 S=${WORKDIR}
-VIVALDI_HOME="opt/${PN}"
+VIVALDI_HOME="opt/${PN}-unstable"
 
 src_unpack() {
 	unpack_deb ${A}
@@ -66,12 +66,12 @@ src_unpack() {
 
 src_prepare() {
 	sed -i \
-		-e 's|vivaldi-stable|vivaldi|g' \
-		usr/share/applications/${PN}.desktop \
-		usr/share/xfce4/helpers/${PN}.desktop || die
+		-e 's|vivaldi-unstable|vivaldi|g' \
+		usr/share/applications/${PN}-unstable.desktop \
+		usr/share/xfce4/helpers/${PN}-unstable.desktop || die
 
-	mv usr/share/doc/${PN}-stable usr/share/doc/${PF} || die
-	rm usr/bin/${PN}-stable || die
+	mv usr/share/doc/${PN}-unstable usr/share/doc/${PF} || die
+	rm usr/bin/${PN}-unstable || die
 	rm _gpgbuilder || die
 
 	pushd "${VIVALDI_HOME}/locales" > /dev/null || die
