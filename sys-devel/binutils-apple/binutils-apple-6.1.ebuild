@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-6.1.ebuild,v 1.2 2015/01/31 02:33:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-6.1.ebuild,v 1.3 2015/02/04 17:33:20 grobian Exp $
 
 EAPI="3"
 
@@ -73,6 +73,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/ld64-241.9-register-names.patch
 	epatch "${FILESDIR}"/ld64-241.9-get-comm-align.patch
 	epatch "${FILESDIR}"/ld64-241.9-cc_md5.patch
+	epatch "${FILESDIR}"/ld64-241.9-lto-noremarks.patch
 
 	# We used to use our own copy of lto.h, which doesn't require llvm
 	# build-env. Current versions of llvm provide
@@ -99,7 +100,7 @@ src_prepare() {
 
 	# mimic OS X Leopard-style Availability.h macros for libunwind.h on
 	# older systems
-	[[ ${CHOST#*-darwin} -le 8 ]] && \
+	[[ ${CHOST} == *darwin* && ${CHOST#*-darwin} -le 8 ]] && \
 		echo "#define __OSX_AVAILABLE_STARTING(x,y)  " > include/Availability.h
 
 	local VER_STR="\"@(#)PROGRAM:ld  PROJECT:${LD64} (Gentoo ${PN}-${PVR})\\n\""
@@ -198,11 +199,11 @@ src_configure() {
 	append-cppflags -DNDEBUG
 
 	# Block API and thus snapshots supported on >= 10.6
-	[ ${CHOST#*-darwin} -ge 10 ] && \
+	[[ ${CHOST} == *darwin* && ${CHOST#*-darwin} -ge 10 ]] && \
 		append-cppflags -DSUPPORT_SNAPSHOTS
 
 	CCTOOLS_OFLAG=
-	if [ ${CHOST#*-darwin} -le 8 ] ; then
+	if [[ ${CHOST} == *darwin* && ${CHOST#*-darwin} -le 8 ]] ; then
 		# cctools expect to use UNIX03 struct member names.
 		# This is default on > 10.4. Activate it on <= 10.4 by defining
 		# __DARWIN_UNIX03 explicitly.

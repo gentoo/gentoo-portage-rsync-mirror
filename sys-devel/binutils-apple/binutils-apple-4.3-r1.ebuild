@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3-r1.ebuild,v 1.2 2015/02/04 02:55:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3-r1.ebuild,v 1.3 2015/02/04 17:39:58 grobian Exp $
 
 EAPI="3"
 
@@ -91,7 +91,7 @@ src_prepare() {
 
 	# mimic OS X Leopard-style Availability.h macros for libunwind.h on
 	# older systems
-	[[ ${CHOST#*-darwin} -le 8 ]] && \
+	[[ ${CHOST} == *darwin* && ${CHOST#*-darwin} -le 8 ]] && \
 		echo "#define __OSX_AVAILABLE_STARTING(x,y)  " > include/Availability.h
 
 	local VER_STR="\"@(#)PROGRAM:ld  PROJECT:${LD64} (Gentoo ${PN}-${PVR})\\n\""
@@ -175,7 +175,7 @@ src_configure() {
 	append-cppflags -DNDEBUG
 
 	CCTOOLS_OFLAG=
-	if [ ${CHOST#*-darwin} -le 8 ] ; then
+	if [[ ${CHOST} == *darwin* && ${CHOST#*-darwin} -le 8 ]] ; then
 		# cctools expect to use UNIX03 struct member names.
 		# This is default on > 10.4. Activate it on <= 10.4 by defining
 		# __DARWIN_UNIX03 explicitly.

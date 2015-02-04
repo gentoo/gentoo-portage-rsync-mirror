@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.16.ebuild,v 1.1 2014/05/27 15:18:34 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.16.ebuild,v 1.2 2015/02/04 17:44:36 chithanh Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE_INPUT_DEVICES="
 	input_devices_hyperpen
 	input_devices_joystick
 	input_devices_keyboard
+	input_devices_libinput
 	input_devices_mouse
 	input_devices_mutouch
 	input_devices_penmount
@@ -94,6 +95,7 @@ PDEPEND="
 	input_devices_hyperpen?    ( x11-drivers/xf86-input-hyperpen )
 	input_devices_joystick?    ( x11-drivers/xf86-input-joystick )
 	input_devices_keyboard?    ( x11-drivers/xf86-input-keyboard )
+	input_devices_libinput?    ( x11-drivers/xf86-input-libinput )
 	input_devices_mouse?       ( x11-drivers/xf86-input-mouse )
 	input_devices_mutouch?     ( x11-drivers/xf86-input-mutouch )
 	input_devices_penmount?    ( x11-drivers/xf86-input-penmount )

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.87 2015/01/26 10:35:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.88 2015/02/04 17:51:57 perfinion Exp $
+
+*libsemanage-2.4 (04 Feb 2015)
+
+  04 Feb 2015; Jason Zaman <perfinion@gentoo.org> +libsemanage-2.4.ebuild:
+  Version bump
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libsemanage-2.3-r4.ebuild:
   Stable for x86, wrt bug #535684

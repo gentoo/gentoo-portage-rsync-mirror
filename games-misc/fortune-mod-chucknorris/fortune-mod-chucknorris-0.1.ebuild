@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-chucknorris/fortune-mod-chucknorris-0.1.ebuild,v 1.9 2010/12/12 18:20:17 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-chucknorris/fortune-mod-chucknorris-0.1.ebuild,v 1.10 2015/02/04 17:41:21 tupone Exp $
+EAPI=5
 DESCRIPTION="Chuck Norris Facts"
 HOMEPAGE="http://www.k-lug.org/~kessler/projects.html"
 SRC_URI="http://www.k-lug.org/~kessler/chucknorris.tar.gz"
@@ -17,5 +17,5 @@ S=${WORKDIR}/${PN/mod-/}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins chucknorris chucknorris.dat || die
+	doins chucknorris chucknorris.dat
 }

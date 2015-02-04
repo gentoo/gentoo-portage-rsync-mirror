@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/fslsfonts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fslsfonts/ChangeLog,v 1.42 2012/08/26 16:18:18 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fslsfonts/ChangeLog,v 1.43 2015/02/04 17:55:33 chithanh Exp $
+
+*fslsfonts-1.0.5 (04 Feb 2015)
+
+  04 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +fslsfonts-1.0.5.ebuild, -fslsfonts-1.0.3.ebuild:
+  Version bump. Remove old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> fslsfonts-1.0.4.ebuild:
   s390/sh/sparc stable wrt #419473
@@ -158,4 +164,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +fslsfonts-0.99.0.ebuild:
   Initial commit for modular X.
-

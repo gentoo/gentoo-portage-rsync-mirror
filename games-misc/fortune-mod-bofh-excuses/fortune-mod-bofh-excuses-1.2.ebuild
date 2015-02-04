@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-bofh-excuses/fortune-mod-bofh-excuses-1.2.ebuild,v 1.13 2010/12/12 18:28:14 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-bofh-excuses/fortune-mod-bofh-excuses-1.2.ebuild,v 1.14 2015/02/04 17:37:42 tupone Exp $
+EAPI=5
 DESCRIPTION="Excuses from Bastard Operator from Hell"
 HOMEPAGE="http://www.stlim.net/staticpages/index.php?page=20020814005536450"
 SRC_URI="http://www.stlim.net/downloads/fortune-bofh-excuses-${PV}.tar.gz"
@@ -17,5 +17,5 @@ S=${WORKDIR}/${PN/mod-/}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins bofh-excuses.dat bofh-excuses || die
+	doins bofh-excuses.dat bofh-excuses
 }

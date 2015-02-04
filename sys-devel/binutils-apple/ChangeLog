@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.40 2015/02/04 02:55:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.42 2015/02/04 17:39:58 grobian Exp $
+
+  04 Feb 2015; Fabian Groffen <grobian@gentoo.org> binutils-apple-4.2-r1.ebuild,
+  binutils-apple-4.2.ebuild, binutils-apple-4.3-r1.ebuild,
+  binutils-apple-4.3.ebuild, binutils-apple-5.1.ebuild:
+  Guard Darwin version checks for Darwin CHOSTs only
+
+  04 Feb 2015; Fabian Groffen <grobian@gentoo.org>
+  +files/ld64-241.9-lto-noremarks.patch, binutils-apple-6.1.ebuild:
+  Add patch to silence when LTO is in use by Michael Weiser, bug #538604
 
   04 Feb 2015; Patrick Lauer <patrick@gentoo.org> binutils-apple-4.2-r1.ebuild,
   binutils-apple-4.3-r1.ebuild:

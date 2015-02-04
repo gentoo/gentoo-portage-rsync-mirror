@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9756 2015/02/04 08:07:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9757 2015/02/04 17:57:14 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Feb 2015; Jeroen Roovers <jer@gentoo.org> license_groups:
+  Add Vivaldi license to EULA group.
 
   04 Feb 2015; Ben de Groot <yngwin@gentoo.org> base/package.use.mask,
   package.mask:
