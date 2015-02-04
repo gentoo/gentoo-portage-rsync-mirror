@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.20 2014/09/14 09:21:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.21 2015/02/04 14:37:08 mgorny Exp $
 
 EAPI=5
 
@@ -15,8 +15,8 @@ HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libvisio"
 LICENSE="|| ( GPL-2+ LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="doc static-libs"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
+IUSE="doc static-libs test"
 
 RDEPEND="
 	dev-libs/icu:=
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
+	test? ( dev-util/cppunit )
 "
 
 src_prepare() {
@@ -43,7 +44,8 @@ src_configure() {
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable static-libs static) \
 		--disable-werror \
-		$(use_with doc docs)
+		$(use_with doc docs) \
+		$(use_enable test tests)
 }
 
 src_install() {

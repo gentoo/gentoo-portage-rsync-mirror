@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=dev-libs/icu:= dev-libs/librevenge dev-libs/libxml2 sys-libs/zlib >=dev-libs/boost-1.46 dev-util/gperf sys-devel/libtool virtual/pkgconfig doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
+DEPEND=dev-libs/icu:= dev-libs/librevenge dev-libs/libxml2 sys-libs/zlib >=dev-libs/boost-1.46 dev-util/gperf sys-devel/libtool virtual/pkgconfig doc? ( app-doc/doxygen ) test? ( dev-util/cppunit ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
 DESCRIPTION=Library parsing the visio documents
 EAPI=5
 HOMEPAGE=https://wiki.documentfoundation.org/DLP/Libraries/libvisio
-IUSE=doc static-libs
+IUSE=doc static-libs test
 LICENSE=|| ( GPL-2+ LGPL-2.1 MPL-1.1 )
 RDEPEND=dev-libs/icu:= dev-libs/librevenge dev-libs/libxml2 sys-libs/zlib
 SLOT=0
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=96666d9f9d14b502cd6b675da926e91b
+_md5_=f08e5a491e5ebf26acec612226ad1083

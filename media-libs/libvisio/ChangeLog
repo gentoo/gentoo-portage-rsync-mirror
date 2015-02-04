@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.60 2015/02/04 09:15:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.61 2015/02/04 14:37:08 mgorny Exp $
+
+  04 Feb 2015; Michał Górny <mgorny@gentoo.org> libvisio-9999.ebuild:
+  Forward-port changes to -9999.
 
 *libvisio-0.1.1 (04 Feb 2015)
 
