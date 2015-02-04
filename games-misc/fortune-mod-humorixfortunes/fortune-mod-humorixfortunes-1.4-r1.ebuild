@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-humorixfortunes/fortune-mod-humorixfortunes-1.4-r1.ebuild,v 1.15 2013/01/12 08:35:31 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-humorixfortunes/fortune-mod-humorixfortunes-1.4-r1.ebuild,v 1.16 2015/02/04 21:53:10 tupone Exp $
+EAPI=5
 MY_P=${P/fortune-mod-/}
 DESCRIPTION="Extra fortune cookies for fortune"
 HOMEPAGE="http://i-want-a-website.com/about-linux/downloads.shtml"
@@ -18,6 +18,6 @@ S=${WORKDIR}/${MY_P}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins humorix-misc humorix-misc.dat || die
-	doins humorix-stories humorix-stories.dat || die
+	doins humorix-misc humorix-misc.dat
+	doins humorix-stories humorix-stories.dat
 }

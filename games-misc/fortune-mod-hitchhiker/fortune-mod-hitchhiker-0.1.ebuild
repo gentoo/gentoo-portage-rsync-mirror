@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-hitchhiker/fortune-mod-hitchhiker-0.1.ebuild,v 1.15 2010/12/12 17:14:07 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-hitchhiker/fortune-mod-hitchhiker-0.1.ebuild,v 1.16 2015/02/04 21:49:57 tupone Exp $
+EAPI=5
 MY_P=${PN/-mod/}
 DESCRIPTION="Quotes from Hitchhikers Guide to the Galaxy"
 HOMEPAGE="http://www.splitbrain.org/projects/fortunes/hg2g"
@@ -19,5 +19,5 @@ S=${WORKDIR}/${MY_P}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins hitchhiker hitchhiker.dat || die
+	doins hitchhiker hitchhiker.dat
 }

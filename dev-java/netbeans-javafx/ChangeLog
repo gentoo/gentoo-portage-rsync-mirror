@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/netbeans-javafx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/ChangeLog,v 1.14 2014/12/07 17:57:27 fordfrog Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/ChangeLog,v 1.16 2015/02/04 21:55:26 fordfrog Exp $
+
+  04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  -netbeans-javafx-7.1.1.ebuild, -netbeans-javafx-7.1.2.ebuild,
+  -netbeans-javafx-7.3.ebuild, -netbeans-javafx-7.4.ebuild,
+  -netbeans-javafx-8.0.ebuild:
+  removed obsolete ebuilds
+
+  04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-javafx-8.0.2.ebuild:
+  restricted compilation to jdk7
 
 *netbeans-javafx-8.0.2 (07 Dec 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-8.0.2.ebuild,v 1.1 2014/12/07 17:58:43 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-8.0.2.ebuild,v 1.2 2015/02/04 21:39:33 fordfrog Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -26,7 +26,7 @@ CDEPEND="dev-java/javahelp:0
 	>=dev-java/jna-3.4:0
 	>=dev-java/osgi-core-api-5:0
 	dev-java/swing-layout:1[source]"
-DEPEND=">=virtual/jdk-1.7
+DEPEND="virtual/jdk:1.7
 	app-arch/unzip
 	${CDEPEND}"
 RDEPEND=">=virtual/jdk-1.7

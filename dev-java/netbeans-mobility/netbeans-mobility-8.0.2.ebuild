@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/netbeans-mobility-8.0.2.ebuild,v 1.1 2014/12/07 17:57:58 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/netbeans-mobility-8.0.2.ebuild,v 1.2 2015/02/04 21:38:57 fordfrog Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -23,7 +23,7 @@ CDEPEND="~dev-java/netbeans-apisupport-${PV}
 	~dev-java/netbeans-java-${PV}
 	~dev-java/netbeans-platform-${PV}
 	~dev-java/netbeans-websvccommon-${PV}"
-DEPEND=">=virtual/jdk-1.7
+DEPEND="virtual/jdk:1.7
 	app-arch/unzip
 	${CDEPEND}
 	dev-java/javahelp:0"

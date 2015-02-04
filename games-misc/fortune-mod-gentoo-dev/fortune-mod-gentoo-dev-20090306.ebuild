@@ -1,7 +1,7 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/fortune-mod-gentoo-dev-20090306.ebuild,v 1.5 2014/02/01 23:26:49 vapier Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/fortune-mod-gentoo-dev-20090306.ebuild,v 1.6 2015/02/04 21:45:06 tupone Exp $
+EAPI=5
 DESCRIPTION="Fortune database of #gentoo-dev quotes"
 HOMEPAGE="http://www.gentoo.org/"
 MY_PN="fortune-gentoo-dev"
@@ -22,11 +22,7 @@ DEPEND="dev-lang/perl
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	emake || die "emake failed"
-}
-
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	default
 	use offensive || rm -f "${D}"/usr/share/fortune/off/*
 }

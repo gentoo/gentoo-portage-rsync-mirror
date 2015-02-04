@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/netbeans-apisupport
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/ChangeLog,v 1.21 2014/12/07 17:54:16 fordfrog Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/ChangeLog,v 1.23 2015/02/04 21:53:22 fordfrog Exp $
+
+  04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  -netbeans-apisupport-7.0.1.ebuild, -netbeans-apisupport-7.1.1.ebuild,
+  -netbeans-apisupport-7.1.2.ebuild, -netbeans-apisupport-7.3.ebuild,
+  -netbeans-apisupport-7.4.ebuild, -netbeans-apisupport-8.0.ebuild:
+  removed obsolete ebuilds
+
+  04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-apisupport-8.0.2.ebuild:
+  restricted compilation to jdk7
 
 *netbeans-apisupport-8.0.2 (07 Dec 2014)
 
