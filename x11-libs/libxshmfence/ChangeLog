@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libxshmfence
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/ChangeLog,v 1.17 2014/06/18 21:11:40 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxshmfence/ChangeLog,v 1.18 2015/02/04 18:08:19 chithanh Exp $
+
+*libxshmfence-1.2 (04 Feb 2015)
+
+  04 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libxshmfence-1.2.ebuild:
+  Version bump.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libxshmfence-1.1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

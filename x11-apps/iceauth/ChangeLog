@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/iceauth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.74 2013/10/08 05:02:37 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/iceauth/ChangeLog,v 1.75 2015/02/04 18:20:35 chithanh Exp $
+
+*iceauth-1.0.7 (04 Feb 2015)
+
+  04 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +iceauth-1.0.7.ebuild, -iceauth-1.0.4.ebuild, -iceauth-1.0.5.ebuild:
+  Version bump. Remove old.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> iceauth-1.0.6.ebuild:
   Stable for x86, wrt bug #475480
