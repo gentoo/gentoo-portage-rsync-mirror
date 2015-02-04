@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/fortune-mod-dubya-20050118.ebuild,v 1.10 2013/01/12 08:41:24 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dubya/fortune-mod-dubya-20050118.ebuild,v 1.11 2015/02/04 21:16:56 tupone Exp $
+EAPI=5
 DESCRIPTION="Quotes from George W. Bush"
 HOMEPAGE="http://dubya.seiler.us/"
 SRC_URI="http://seiler.us/wiki/images/8/8c/Dubya-${PV}.tar.gz"
@@ -17,5 +17,5 @@ S=${WORKDIR}/${PN/fortune-mod-/}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins dubya dubya.dat || die
+	doins dubya dubya.dat
 }

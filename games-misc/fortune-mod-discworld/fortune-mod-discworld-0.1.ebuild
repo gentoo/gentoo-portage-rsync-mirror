@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-discworld/fortune-mod-discworld-0.1.ebuild,v 1.6 2010/12/12 17:48:51 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-discworld/fortune-mod-discworld-0.1.ebuild,v 1.7 2015/02/04 21:14:35 tupone Exp $
+EAPI=5
 MY_P=${PN/-mod/}
 DESCRIPTION="Quotes from Discworld novels"
 HOMEPAGE="http://www.splitbrain.org/projects/fortunes/discworld"
@@ -19,5 +19,5 @@ S=${WORKDIR}/${MY_P}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins discworld discworld.dat || die
+	doins discworld discworld.dat
 }

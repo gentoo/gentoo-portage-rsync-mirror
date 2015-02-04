@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-firefly/fortune-mod-firefly-2.1.1.ebuild,v 1.9 2013/01/12 08:46:03 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-firefly/fortune-mod-firefly-2.1.1.ebuild,v 1.10 2015/02/04 21:23:15 tupone Exp $
+EAPI=5
 DESCRIPTION="Quotes from FireFly"
 HOMEPAGE="http://www.daughtersoftiresias.org/progs/firefly/"
 SRC_URI="http://www.daughtersoftiresias.org/progs/firefly/${P/mod-}.tar.bz2"
@@ -17,5 +17,5 @@ S=${WORKDIR}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins firefly firefly.dat || die "doins failed"
+	doins firefly firefly.dat
 }
