@@ -26,5 +26,6 @@
 		Allow concurrent installation of <pkg>sys-boot/grub:0</pkg> and
 		<pkg>sys-boot/grub:2</pkg> by renaming all programs.
 	</flag>
+	<flag name="themes">Build and install GRUB themes (starfield)</flag>
   </use>
 </pkgmetadata>

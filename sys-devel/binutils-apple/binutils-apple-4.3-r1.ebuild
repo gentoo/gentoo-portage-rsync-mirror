@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3-r1.ebuild,v 1.1 2015/02/03 21:12:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3-r1.ebuild,v 1.2 2015/02/04 02:55:23 patrick Exp $
 
 EAPI="3"
 
@@ -26,9 +26,9 @@ KEYWORDS="~x64-macos ~x86-macos"
 IUSE="lto test"
 
 RDEPEND="sys-devel/binutils-config
-	lto? ( sys-devel/llvm )
-	test? ( >=dev-lang/perl-5.8.8 )"
+	lto? ( sys-devel/llvm )"
 DEPEND="${RDEPEND}
+	test? ( >=dev-lang/perl-5.8.8 )
 	|| ( >=sys-devel/gcc-apple-4.2.1 sys-devel/llvm )"
 
 export CTARGET=${CTARGET:-${CHOST}}

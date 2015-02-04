@@ -6800,6 +6800,7 @@ sys-boot/grub:efiemu - Build and install the efiemu runtimes
 sys-boot/grub:libzfs - Enable support for sys-fs/zfs
 sys-boot/grub:mount - Build and install the grub-mount utility
 sys-boot/grub:multislot - Allow concurrent installation of sys-boot/grub:0 and sys-boot/grub:2 by renaming all programs.
+sys-boot/grub:themes - Build and install GRUB themes (starfield)
 sys-boot/lilo:device-mapper - Enable support for device-mapper from sys-fs/lvm2
 sys-boot/lilo:minimal - Do not install the dolilo helper script
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
