@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-latex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.30 2014/08/25 16:20:27 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-latex/ChangeLog,v 1.31 2015/02/04 20:34:09 mrueg Exp $
+
+  04 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pidgin-latex-1.4.4.ebuild:
+  Remove old. Drop stable keyword for ppc. See bug #518754.
 
   25 Aug 2014; Manuel Rüger <mrueg@gentoo.org> pidgin-latex-1.5.0.ebuild:
   Mark amd64 stable. Bug #518754.

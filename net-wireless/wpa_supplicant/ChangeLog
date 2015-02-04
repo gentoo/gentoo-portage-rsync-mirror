@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wpa_supplicant
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.221 2014/11/02 09:40:03 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.222 2015/02/04 20:56:56 floppym Exp $
+
+*wpa_supplicant-2.3-r2 (04 Feb 2015)
+
+  04 Feb 2015; Mike Gilbert <floppym@gentoo.org> +wpa_supplicant-2.3-r2.ebuild:
+  Exclude wpa_supplicant.service when USE=-dbus, bug 538600.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> wpa_supplicant-2.2-r1.ebuild,
   wpa_supplicant-2.3-r1.ebuild, wpa_supplicant-2.3.ebuild:

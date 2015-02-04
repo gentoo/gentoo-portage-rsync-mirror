@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/quickplot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.21 2014/10/05 15:46:24 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.22 2015/02/04 20:37:37 mrueg Exp $
+
+  04 Feb 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/quickplot-0.8.13-gcc43.patch,
+  -files/quickplot-0.8.13-libsigc++-2.2.patch,
+  -files/quickplot-0.8.13-linking.patch, -files/quickplot-0.8.15-linking.patch,
+  -quickplot-0.10.2.ebuild, -quickplot-0.10.3.ebuild, -quickplot-0.10.4.ebuild,
+  -quickplot-0.8.13-r1.ebuild:
+  Remove old. Drop stable keyword for ppc and x86. See bug #518164.
 
   05 Oct 2014; Manuel Rüger <mrueg@gentoo.org> quickplot-0.10.6.ebuild:
   Mark stable on amd64. Bug #518164
