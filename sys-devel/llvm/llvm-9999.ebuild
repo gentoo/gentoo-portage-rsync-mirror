@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.101 2015/01/31 19:48:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.102 2015/02/04 10:55:25 mgorny Exp $
 
 EAPI=5
 
@@ -153,7 +153,7 @@ src_prepare() {
 		# Automatically select active system GCC's libraries, bugs #406163 and #417913
 		epatch "${FILESDIR}"/clang-3.5-gentoo-runtime-gcc-detection-v3.patch
 
-		epatch "${FILESDIR}"/clang-3.5-gentoo-install.patch
+		epatch "${FILESDIR}"/clang-3.6-gentoo-install.patch
 	fi
 
 	if use prefix && use clang; then
