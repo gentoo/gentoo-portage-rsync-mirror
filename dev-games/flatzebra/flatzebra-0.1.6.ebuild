@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.6.ebuild,v 1.4 2012/10/17 03:28:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.6.ebuild,v 1.5 2015/02/04 22:52:13 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
+inherit eutils
 
 DESCRIPTION="A generic game engine for 2D double-buffering animation"
 HOMEPAGE="http://perso.b2b2c.ca/sarrazip/dev"
@@ -22,21 +23,14 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	sed -i \
 		-e '/^doc_DATA =/s/^/NOTHANKS/' \
-		Makefile.in \
-		|| die "sed failed"
+		Makefile.in || die
 }
 
 src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable static-libs static)
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS NEWS README THANKS TODO
-	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
-	fi
+	default
+	use static-libs || prune_libtool_files
 }
