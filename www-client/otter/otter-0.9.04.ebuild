@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-0.9.04.ebuild,v 1.1 2015/01/20 17:41:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-0.9.04.ebuild,v 1.2 2015/02/04 12:37:20 jer Exp $
 
 EAPI=5
 WANT_CMAKE="always"
@@ -18,6 +18,7 @@ DEPEND="
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
+	dev-qt/qtmultimedia:5
 	dev-qt/qtnetwork:5
 	dev-qt/qtprintsupport:5
 	dev-qt/qtscript:5
