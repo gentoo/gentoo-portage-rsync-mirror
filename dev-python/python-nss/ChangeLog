@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-nss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/ChangeLog,v 1.7 2015/01/05 23:47:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/ChangeLog,v 1.8 2015/02/04 09:16:17 idella4 Exp $
+
+*python-nss-0.16.0 (04 Feb 2015)
+
+  04 Feb 2015; Ian Delaney <idella4@gentoo.org> +python-nss-0.16.0.ebuild:
+  bump; test phase added with exclusions made for unviable tests in the suite,
+  fixes bug #534050 by sping
 
 *python-nss-0.12-r1 (05 Jan 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.599 2015/02/03 21:46:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.600 2015/02/04 09:10:13 pacho Exp $
+
+  04 Feb 2015; Pacho Ramos <pacho@gentoo.org> mesa-10.2.8.ebuild:
+  ia64 stable, bug #513736 by Émeric Maschino
 
   03 Feb 2015; Matt Turner <mattst88@gentoo.org> -mesa-10.3.5-r1.ebuild,
   -mesa-10.4.2.ebuild:

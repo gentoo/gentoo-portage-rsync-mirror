@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.273 2015/01/29 16:51:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.274 2015/02/04 09:09:13 pacho Exp $
+
+  04 Feb 2015; Pacho Ramos <pacho@gentoo.org> libdrm-2.4.58.ebuild:
+  ia64 stable, bug #513736 by Émeric Maschino
 
 *libdrm-2.4.59 (29 Jan 2015)
 
