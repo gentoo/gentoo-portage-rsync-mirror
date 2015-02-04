@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.8.6-r1.ebuild,v 1.2 2014/10/27 16:57:11 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.8.6-r1.ebuild,v 1.3 2015/02/04 19:36:16 hd_brummy Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs confutils
@@ -11,7 +11,7 @@ SRC_URI="http://noad.net23.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+ffmpeg imagemagick libmpeg2"
 
 RDEPEND="
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="|| ( ffmpeg libmpeg2 )"
 
 src_prepare() {
-	sed -i -e 's:2001:6419:' svdrpc.cpp main.cpp || die
+	sed -i -e 's:2001:6419:' svdrpc.cpp main.cpp
 
 	# tested libav-9, ffmepg-2.2.9
 	epatch "${FILESDIR}/patches-0.8.x/${P}-libav9.diff"

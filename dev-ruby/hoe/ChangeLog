@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.176 2015/01/08 11:28:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.177 2015/02/04 19:58:09 mrueg Exp $
+
+*hoe-3.13.1 (04 Feb 2015)
+
+  04 Feb 2015; Manuel Rüger <mrueg@gentoo.org> +hoe-3.13.1.ebuild:
+  Version bump.
 
   08 Jan 2015; Agostino Sarubbo <ago@gentoo.org> hoe-3.13.0.ebuild:
   Stable for ppc64, wrt bug #532572

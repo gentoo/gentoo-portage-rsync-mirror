@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1-r1.ebuild,v 1.7 2014/11/26 00:08:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1-r2.ebuild,v 1.1 2015/02/04 19:58:49 grknight Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ PHP_EXT_OPTIONAL_USE="php"
 PHP_EXT_NAME="php_mapscript"
 PHP_EXT_S="${WORKDIR}/${MY_P}/mapscript/php/"
 PHP_EXT_SKIP_PHPIZE="no"
-USE_PHP="php5-3"
+USE_PHP="php5-4 php5-5"
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,6 +32,8 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="bidi cairo gdal geos mysql opengl perl php postgis proj python threads tiff xml xslt" # ruby php tcl
+
+REQUIRED_USE="php? ( ^^ ( php_targets_php5-4 php_targets_php5-5 ) )"
 
 RDEPEND="
 	!${CATEGORY}/${PN}:${PV}
@@ -117,7 +119,9 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}/6.0.0_rc1-ldflags.patch" \
 		"${FILESDIR}/6.0.0_rc1-bool.patch" \
-		"${FILESDIR}/6.0.0_rc1-php_ldflags.patch"
+		"${FILESDIR}/6.0.0_rc1-php_ldflags.patch" \
+		"${FILESDIR}/6.1.0-php-5.4.patch"
+
 	eautoreconf
 }
 
@@ -135,7 +139,10 @@ src_configure() {
 	fi
 
 	# some scripts require configure time options so place it here
-	use php && myopts+=" --with-php=${EPREFIX}/usr/$(get_libdir)/php5.3/include/php/"
+	if use php ; then
+		use php_targets_php5-4 && myopts+=" --with-php=${EPREFIX}/usr/$(get_libdir)/php5.4/include/php/"
+		use php_targets_php5-5 && myopts+=" --with-php=${EPREFIX}/usr/$(get_libdir)/php5.5/include/php/"
+	fi
 
 	# sde is ESRI package that you have to buy first
 	# oraclespatial needs oracle server for testing/usage
@@ -174,7 +181,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	default
 	use python && _enter_build_dir "${S}/mapscript/python" "distutils_src_compile"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_prep"
 	use perl && _enter_build_dir "${S}/mapscript/perl" "perl-module_src_compile"
