@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.6.2.ebuild,v 1.1 2015/02/01 16:40:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.6.2.ebuild,v 1.2 2015/02/04 16:04:45 radhermit Exp $
 
 EAPI=5
 
@@ -19,6 +19,9 @@ LANGS=" cs da de el es fr it ja nl pl pt_BR pt_PT ru sq sv uk"
 IUSE="colord cpu_flags_x86_sse3 doc flickr geo gphoto2 graphicsmagick jpeg2k kde libsecret
 nls opencl openmp openexr pax_kernel +rawspeed +slideshow +squish web-services webp
 ${LANGS// / linguas_}"
+
+# sse3 support is required to build darktable
+REQUIRED_USE="cpu_flags_x86_sse3"
 
 CDEPEND="
 	dev-db/sqlite:3
@@ -65,10 +68,6 @@ DEPEND="${CDEPEND}
 pkg_pretend() {
 	if use openmp ; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
-	fi
-
-	if ! use cpu_flags_x86_sse3 ; then
-		eerror "This package requires a CPU supporting the SSE3 instruction set." && die
 	fi
 }
 

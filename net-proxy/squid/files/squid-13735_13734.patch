@@ -1,0 +1,41 @@
+=== modified file 'src/auth/digest/Config.cc'
+--- src/auth/digest/Config.cc	2015-01-13 09:13:49 +0000
++++ src/auth/digest/Config.cc	2015-01-20 10:36:06 +0000
+@@ -1006,12 +1006,7 @@
+         debugs(29, 2, "Username for the nonce does not equal the username for the request");
+         nonce = NULL;
+     }
+-    /* check for stale nonce */
+-    if (authDigestNonceIsStale(nonce)) {
+-        debugs(29, 3, "The received nonce is stale from " << username);
+-        digest_request->setDenyMessage("Stale nonce");
+-        nonce = NULL;
+-    }
++
+     if (!nonce) {
+         /* we couldn't find a matching nonce! */
+         debugs(29, 2, "Unexpected or invalid nonce received from " << username);
+
+=== modified file 'src/auth/digest/UserRequest.cc'
+--- src/auth/digest/UserRequest.cc	2015-01-18 04:24:51 +0000
++++ src/auth/digest/UserRequest.cc	2015-01-20 10:36:06 +0000
+@@ -173,10 +173,14 @@
+     }
+ 
+     /* check for stale nonce */
+-    if (!authDigestNonceIsValid(digest_request->nonce, digest_request->nc)) {
+-        debugs(29, 3, "user '" << auth_user->username() << "' validated OK but nonce stale");
+-        auth_user->credentials(Auth::Handshake);
+-        digest_request->setDenyMessage("Stale nonce");
++    /* check Auth::Pending to avoid loop */
++
++    if (!authDigestNonceIsValid(digest_request->nonce, digest_request->nc) && user()->credentials() != Auth::Pending) {
++        debugs(29, 3, auth_user->username() << "' validated OK but nonce stale: " << digest_request->nonceb64);
++        /* Pending prevent banner and makes a ldap control */
++        auth_user->credentials(Auth::Pending);
++        nonce->flags.valid = false;
++        authDigestNoncePurge(nonce);
+         return;
+     }
+ 
+

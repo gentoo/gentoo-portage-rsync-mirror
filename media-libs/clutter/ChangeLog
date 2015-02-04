@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/clutter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.91 2014/12/23 22:53:28 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.92 2015/02/04 16:09:34 chithanh Exp $
+
+  04 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  clutter-1.18.4.ebuild, clutter-1.20.0.ebuild:
+  Adjust dependency on libinput, bug #536868
 
 *clutter-1.20.0 (23 Dec 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.20.0.ebuild,v 1.1 2014/12/23 22:53:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.20.0.ebuild,v 1.2 2015/02/04 16:09:34 chithanh Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -24,6 +24,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 # XXX: uprof needed for profiling
 # >=libX11-1.3.1 needed for X Generic Event support
 # do not depend on tslib, it does not build and is disable by default upstream
+# <dev-libs/libinput-0.8 due to Gnome bugzilla #742829
 RDEPEND="
 	>=dev-libs/glib-2.37.3:2
 	>=dev-libs/atk-2.5.3[introspection?]
@@ -37,6 +38,7 @@ RDEPEND="
 
 	egl? (
 		>=dev-libs/libinput-0.4
+		<dev-libs/libinput-0.8
 		media-libs/cogl[gles2,kms]
 		>=virtual/libgudev-136
 		x11-libs/libxkbcommon

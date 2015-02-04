@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.63 2015/02/01 16:43:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.64 2015/02/04 16:04:45 radhermit Exp $
+
+  04 Feb 2015; Tim Harder <radhermit@gentoo.org> darktable-1.6.2.ebuild,
+  darktable-9999.ebuild:
+  Move sse3 check to REQUIRED_USE.
 
   01 Feb 2015; Tim Harder <radhermit@gentoo.org> darktable-9999.ebuild:
   Sync sse3 changes to live ebuild.
