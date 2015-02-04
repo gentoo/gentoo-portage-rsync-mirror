@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/elogviewer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.52 2015/01/27 06:08:33 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.53 2015/02/03 23:18:03 dolsen Exp $
+
+*elogviewer-2.3 (03 Feb 2015)
+
+  03 Feb 2015; Brian Dolbec <dolsen@gentoo.org> -elogviewer-0.6.2-r2.ebuild,
+  elogviewer-2.1-r1.ebuild, elogviewer-2.1-r2.ebuild, +elogviewer-2.3.ebuild:
+  New version, drop old ebuild, drop no longer (gentoo) supported python
+  versions from the 2.1 ebuilds.
 
 *elogviewer-2.1-r2 (27 Jan 2015)
 

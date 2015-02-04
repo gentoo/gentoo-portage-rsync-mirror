@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/spandsp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.36 2015/01/29 21:33:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/spandsp/ChangeLog,v 1.37 2015/02/03 23:14:04 mgorny Exp $
+
+  03 Feb 2015; Michał Górny <mgorny@gentoo.org> spandsp-0.0.6.ebuild:
+  Remove unused CPU flags that only implicitly enable other flags and cause the
+  build to fail. Add proper REQUIRED_USE for implicitly enabled instruction
+  sets. Bug #538710, fixes https://bugs.funtoo.org/browse/FL-2069.
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove unused flag descriptions (replaced by global CPU_FLAGS_X86).
