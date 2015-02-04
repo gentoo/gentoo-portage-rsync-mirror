@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gimp-gmic
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/ChangeLog,v 1.50 2015/01/08 04:53:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/ChangeLog,v 1.51 2015/02/04 17:22:19 radhermit Exp $
+
+  04 Feb 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
 *gimp-gmic-1.6.0.3 (08 Jan 2015)
 

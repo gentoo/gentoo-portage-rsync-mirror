@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.64 2015/02/04 16:04:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.65 2015/02/04 17:18:29 radhermit Exp $
+
+  04 Feb 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself from metadata.
 
   04 Feb 2015; Tim Harder <radhermit@gentoo.org> darktable-1.6.2.ebuild,
   darktable-9999.ebuild:
