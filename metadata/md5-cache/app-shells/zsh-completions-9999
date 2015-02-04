@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/zsh-users/zsh-completions
 LICENSE=BSD
 RDEPEND=app-shells/zsh
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	6ebae45064cb04482f3c702632dd9528	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=792d455de991e0fc6c4a8fab27597109

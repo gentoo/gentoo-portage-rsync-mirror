@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.12 2014/09/14 08:48:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/libcdr-9999.ebuild,v 1.13 2015/02/04 09:41:31 mgorny Exp $
 
 EAPI=5
 
@@ -24,6 +24,7 @@ RDEPEND="
 	sys-libs/zlib
 "
 DEPEND="${RDEPEND}
+	dev-libs/boost
 	sys-devel/libtool
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
