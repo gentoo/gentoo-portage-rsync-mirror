@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.4.5.ebuild,v 1.3 2015/02/04 12:01:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.4.5.ebuild,v 1.4 2015/02/04 13:02:18 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic multilib-minimal
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=743984
 	epatch "${FILESDIR}/${PN}-1.4.5-libav9.patch"
 }
 
