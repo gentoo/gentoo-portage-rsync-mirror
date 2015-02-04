@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.ebuild,v 1.3 2014/10/16 14:59:06 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.4.ebuild,v 1.1 2015/02/04 05:10:12 jsbronder Exp $
 
 EAPI=5
 
@@ -59,7 +59,8 @@ RDEPEND="
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec
 	dev-libs/libevent
-	>=sys-apps/hwloc-1.7.2
+	>=sys-apps/hwloc-1.9.1
+	sys-libs/zlib
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 	openmpi_fabrics_ofed? ( sys-infiniband/ofed )
@@ -123,7 +124,7 @@ src_configure() {
 	econf "${myconf[@]}" \
 		$(use_enable cxx mpi-cxx) \
 		$(use_with cma) \
-		$(use_with cuda cuda "$EPREFIX"/opt/cuda) \
+		$(use_with cuda cuda "${EPREFIX}"/opt/cuda) \
 		$(use_enable romio io-romio) \
 		$(use_enable heterogeneous) \
 		$(use_enable ipv6) \
@@ -143,16 +144,20 @@ src_configure() {
 
 src_install () {
 	emake DESTDIR="${D}" install
+
 	# From USE=vt see #359917
 	rm "${ED}"/usr/share/libtool &> /dev/null
+
 	# Avoid collisions with libevent
 	rm -rf "${ED}"/usr/include/event2 &> /dev/null
+
+	# Remove la files, no static libs are installed and we have pkg-config
+	find "${ED}"/usr/$(get_libdir)/ -type f -name '*.la' -delete
+
 	dodoc README AUTHORS NEWS VERSION || die
 }
 
 src_test() {
 	# Doesn't work with the default src_test as the dry run (-n) fails.
-
-	# Do not override malloc during build.  Works around #462602
 	emake -j1 check
 }
