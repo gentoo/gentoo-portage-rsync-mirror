@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/netbeans-nb-7.2.ebuild,v 1.3 2012/12/09 19:35:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/netbeans-nb-7.2.ebuild,v 1.4 2015/02/04 22:05:33 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -144,6 +144,6 @@ pkg_postinst() {
 		einfo "id_dsa_gentoo"
 		einfo "If on NetBeans startup key will not be handled by keychain yet, you will be asked"
 		einfo "for key password (only this time and never again). You can find more information"
-		einfo "about keychain at http://www.gentoo.org/doc/en/keychain-guide.xml"
+		einfo "about keychain at https://wiki.gentoo.org/wiki/Keychain"
 	fi
 }

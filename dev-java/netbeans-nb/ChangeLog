@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-nb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.25 2015/02/04 21:56:00 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.26 2015/02/04 22:05:33 fordfrog Exp $
+
+  04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> netbeans-nb-7.2.ebuild,
+  netbeans-nb-8.0.2.ebuild:
+  fixed keychain link
 
   04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> -netbeans-nb-7.0.1.ebuild,
   -netbeans-nb-7.1.1.ebuild, -netbeans-nb-7.1.2.ebuild,
