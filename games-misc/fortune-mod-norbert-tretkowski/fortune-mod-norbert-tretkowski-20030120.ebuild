@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-norbert-tretkowski/fortune-mod-norbert-tretkowski-20030120.ebuild,v 1.9 2010/12/12 16:36:37 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-norbert-tretkowski/fortune-mod-norbert-tretkowski-20030120.ebuild,v 1.10 2015/02/05 06:06:52 tupone Exp $
+EAPI=5
 MY_P=fortune-mod-norbert.tretkowski-${PV}
 DESCRIPTION="Quotes from Norbert Tretkowski"
 HOMEPAGE="http://fortune-mod-fvl.sourceforge.net/"
@@ -18,5 +18,5 @@ S=${WORKDIR}/${MY_P}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins norbert.tretkowski norbert.tretkowski.dat || die
+	doins norbert.tretkowski norbert.tretkowski.dat
 }

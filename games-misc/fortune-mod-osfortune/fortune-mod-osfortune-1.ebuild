@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-osfortune/fortune-mod-osfortune-1.ebuild,v 1.16 2010/12/12 16:34:03 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-osfortune/fortune-mod-osfortune-1.ebuild,v 1.17 2015/02/05 06:11:27 tupone Exp $
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Open sources fortune file"
@@ -14,16 +14,16 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE=""
 
 DEPEND="games-misc/fortune-mod"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	epatch "${FILESDIR}"/spelling.patch
 	strfile osfortune || die
 }
 
 src_install() {
 	insinto /usr/share/fortune
-	doins osfortune osfortune.dat || die
+	doins osfortune osfortune.dat
 }

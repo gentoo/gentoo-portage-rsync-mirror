@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/fortune-mod-kernelcookies-9.ebuild,v 1.4 2010/12/12 16:47:32 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-kernelcookies/fortune-mod-kernelcookies-9.ebuild,v 1.5 2015/02/05 06:05:05 tupone Exp $
+EAPI=5
 inherit eutils
 
 DESCRIPTION="A collection of funny lines from the Linux kernel"
@@ -14,12 +14,11 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE="offensive"
 
 DEPEND="games-misc/fortune-mod"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/kernelcookies-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# bug #64985
 	if ! use offensive ; then
 		rm -f *.dat
@@ -30,5 +29,5 @@ src_unpack() {
 
 src_install() {
 	insinto /usr/share/fortune
-	doins kernelcookies.dat kernelcookies || die
+	doins kernelcookies.dat kernelcookies
 }

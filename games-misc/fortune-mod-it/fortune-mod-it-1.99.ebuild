@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-it/fortune-mod-it-1.99.ebuild,v 1.10 2010/12/12 17:06:40 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-it/fortune-mod-it-1.99.ebuild,v 1.11 2015/02/05 06:02:53 tupone Exp $
+EAPI=5
 DESCRIPTION="Database of the Italian cookies for the fortune program"
 HOMEPAGE="http://www.fortune-it.net/"
 SRC_URI="http://www.fortune-it.net/download/fortune-it-${PVR}.tar.gz"
@@ -15,9 +15,8 @@ DEPEND="games-misc/fortune-mod"
 
 S=${WORKDIR}/fortune-it-${PVR}
 
-src_unpack() {
-	unpack ${A}
-	use offensive || rm -f "${S}"/testi/*-o
+src_prepare() {
+	use offensive || rm -f testi/*-o
 }
 
 src_compile() {
@@ -29,6 +28,6 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/fortune
-	doins testi/* || die "cp failed"
+	doins testi/*
 	dodoc README
 }
