@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cloog
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.27 2014/12/26 11:28:20 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.28 2015/02/05 11:52:17 blueness Exp $
+
+*cloog-0.18.3 (05 Feb 2015)
+
+  05 Feb 2015; Anthony G. Basile <blueness@gentoo.org> +cloog-0.18.3.ebuild,
+  cloog-9999.ebuild:
+  Add 0.18.3 which depends on =dev-libs/isl-0.14:0/14.  We skip 0.18.2 doesn't
+  build against any versions of isl and is skipped in their update log.
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> cloog-0.18.1.ebuild:
   Stable for sparc, wrt bug #516152

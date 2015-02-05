@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9757 2015/02/04 17:57:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9758 2015/02/05 11:47:25 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Feb 2015; Anthony G. Basile <blueness@gentoo.org> package.mask:
+  Mask >=dev-libs/cloog-0.18.3 which depends on >=dev-libs/isl-0.14:0/14, also
+  masked.
 
   04 Feb 2015; Jeroen Roovers <jer@gentoo.org> license_groups:
   Add Vivaldi license to EULA group.

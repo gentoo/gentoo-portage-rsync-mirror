@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.508 2015/02/04 16:10:18 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.509 2015/02/05 11:35:34 jer Exp $
+
+  05 Feb 2015; Jeroen Roovers <jer@gentoo.org> squid-3.4.11-r1.ebuild:
+  Stable for HPPA (bug #538132).
 
 *squid-3.4.11-r1 (04 Feb 2015)
 *squid-3.5.1-r1 (04 Feb 2015)

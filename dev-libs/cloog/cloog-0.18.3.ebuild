@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-9999.ebuild,v 1.4 2015/02/05 11:52:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.3.ebuild,v 1.1 2015/02/05 11:52:17 blueness Exp $
 
 EAPI="5"
 

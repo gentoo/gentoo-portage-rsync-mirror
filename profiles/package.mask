@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16331 2015/02/05 04:34:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16332 2015/02/05 11:47:25 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (05 Feb 2015)
+# Depends on >=dev-libs/isl-0.14:0/14 currently masked.
+>=dev-libs/cloog-0.18.3
 
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Feb 2015)
 # No upstream anymore; nothing in the tree uses it.
