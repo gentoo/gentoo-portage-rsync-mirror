@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.3.ebuild,v 1.1 2015/02/05 11:52:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.3.ebuild,v 1.2 2015/02/05 12:33:39 blueness Exp $
 
 EAPI="5"
 
@@ -46,6 +46,12 @@ multilib_src_configure() {
 		--with-isl=system \
 		--with-osl=no \
 		$(use_enable static-libs static)
+}
+
+# The default src_test() fails, so we'll just run these directly
+multilib_src_test () {
+	echo ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	emake -j1 check
 }
 
 multilib_src_install_all() {
