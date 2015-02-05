@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.56 2015/01/31 13:16:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.57 2015/02/05 18:49:27 hwoarang Exp $
+
+  05 Feb 2015; Markos Chandras <hwoarang@gentoo.org> lxc-1.0.6-r1.ebuild,
+  lxc-1.0.7.ebuild:
+  Add missing use_enable seccomp. Bug #538834
 
   31 Jan 2015; Markos Chandras <hwoarang@gentoo.org> -lxc-1.0.4.ebuild,
   -lxc-1.0.6.ebuild:
