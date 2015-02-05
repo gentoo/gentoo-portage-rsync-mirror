@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-libinput
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-libinput/ChangeLog,v 1.1 2015/02/04 16:51:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-libinput/ChangeLog,v 1.2 2015/02/05 11:26:31 jer Exp $
+
+  05 Feb 2015; Jeroen Roovers <jer@gentoo.org>
+  xf86-input-libinput-0.6.0.ebuild:
+  Marked ~hppa (bug #538828).
 
 *xf86-input-libinput-0.6.0 (04 Feb 2015)
 

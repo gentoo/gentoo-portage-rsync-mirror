@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.381 2015/02/02 17:00:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.382 2015/02/05 11:29:41 jer Exp $
+
+  05 Feb 2015; Jeroen Roovers <jer@gentoo.org> busybox-1.23.1.ebuild:
+  Stable for HPPA (bug #537978).
 
 *busybox-1.23.1 (02 Feb 2015)
 
