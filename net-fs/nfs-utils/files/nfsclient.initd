@@ -1,25 +1,21 @@
 #!/sbin/runscript
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsclient.initd,v 1.4 2015/02/03 19:28:36 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfsclient.initd,v 1.5 2015/02/05 04:32:41 williamh Exp $
 
 [ -e /etc/conf.d/nfs ] && . /etc/conf.d/nfs
 
 depend() {
 	local opts myneed=""
 	if [ -e /etc/fstab ] ; then
-		fstabinfo -t nfs4 -q && myneed="$myneed rpc.idmapd"
-		fstabinfo -t nfs -q && myneed="$myneed rpc.statd"
-
 		for opts in $(fstabinfo -o -t nfs,nfs4) ; do
 			case $opts in
 				*sec=krb*|*sec=spkm*) myneed="$myneed rpc.gssd" ;;
 			esac
 		done
 	fi
-	before netmount
 	config /etc/fstab
-	need portmap ${myneed}
+	need portmap rpc.statd rpc.idmapd ${myneed}
 	use ypbind dns
 }
 
