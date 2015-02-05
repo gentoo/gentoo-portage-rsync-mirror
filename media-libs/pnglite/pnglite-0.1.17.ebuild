@@ -1,9 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/pnglite-0.1.17.ebuild,v 1.4 2011/09/27 10:47:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/pnglite-0.1.17.ebuild,v 1.5 2015/02/05 18:04:46 mr_bones_ Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Small and simple library for loading and writing PNG images"
@@ -23,32 +22,31 @@ S=${WORKDIR}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-include-stdio.patch
-	sed -ie "s:\"../zlib/zlib.h\":<zlib.h>:" pnglite.c || die "sed failed"
+	sed -ie "s:\"../zlib/zlib.h\":<zlib.h>:" pnglite.c || die
 }
 
 src_compile() {
 	tc-export CC
 	if use static-libs; then
-		emake ${PN}.o || die "make failed"
-		$(tc-getAR) -cvq lib${PN}.a ${PN}.o || die "ar failed"
-		rm ${PN}.o || die "rm failed"
+		emake ${PN}.o
+		$(tc-getAR) -cvq lib${PN}.a ${PN}.o || die
+		rm ${PN}.o || die
 	fi
 
 	append-flags -fPIC
-	emake ${PN}.o || die "make failed"
+	emake ${PN}.o
 	$(tc-getCC) ${LDFLAGS} -shared -Wl,-soname,lib${PN}.so.0 \
-		-o lib${PN}.so.0 ${PN}.o -lz || die "creating so file failed"
+		-o lib${PN}.so.0 ${PN}.o -lz || die
 }
 
 src_install() {
 	insinto /usr/include
 	doins ${PN}.h
 
-	dolib.so lib${PN}.so.0 || die "dolib failed"
+	dolib.so lib${PN}.so.0
 	if use static-libs; then
-		dolib.a lib${PN}.a || die "dolib failed"
+		dolib.a lib${PN}.a
 	fi
 
-	dosym lib${PN}.so.0 /usr/$(get_libdir)/lib${PN}.so \
-		|| die "dosym failed"
+	dosym lib${PN}.so.0 /usr/$(get_libdir)/lib${PN}.so
 }

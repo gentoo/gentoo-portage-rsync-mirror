@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pnglite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/ChangeLog,v 1.6 2012/06/16 08:16:37 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/ChangeLog,v 1.7 2015/02/05 18:04:46 mr_bones_ Exp $
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> pnglite-0.1.17.ebuild:
+  EAPI=5
 
   16 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   graphics@ can maintain this
@@ -22,4 +25,3 @@
   24 Mar 2010; Mounir Lamouri <volkmar@gentoo.org> +pnglite-0.1.17.ebuild,
   +files/pnglite-0.1.17-include-stdio.patch, +metadata.xml:
   Initial commit. Package required for teeworlds, bug 206287
-

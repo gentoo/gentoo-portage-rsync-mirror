@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/visualvm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visualvm/ChangeLog,v 1.6 2014/08/10 21:29:54 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visualvm/ChangeLog,v 1.7 2015/02/05 18:05:25 fordfrog Exp $
+
+*visualvm-1.3.8 (05 Feb 2015)
+
+  05 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> -visualvm-1.3.3-r1.ebuild,
+  -visualvm-1.3.3-r2.ebuild, -visualvm-1.3.3-r8.ebuild,
+  -visualvm-1.3.3-r9.ebuild, +visualvm-1.3.8.ebuild,
+  +files/org-netbeans-modules-profiler-kit.xml,
+  +files/org-netbeans-modules-profiler-nbimpl.xml,
+  +files/org-netbeans-modules-profiler-options.xml,
+  +files/org-netbeans-modules-profiler-oql-language.xml, +files/visualvm.conf,
+  +files/visualvm.sh:
+  version bump, removed obsolete broken ebuilds
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> visualvm-1.3.3-r1.ebuild,
   visualvm-1.3.3-r2.ebuild, visualvm-1.3.3-r8.ebuild, visualvm-1.3.3-r9.ebuild:

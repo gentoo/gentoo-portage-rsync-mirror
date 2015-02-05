@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=sys-libs/zlib app-arch/unzip
 DESCRIPTION=Small and simple library for loading and writing PNG images
-EAPI=2
+EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/pnglite/
 IUSE=static-libs
 KEYWORDS=~amd64 ~x86
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/pnglite/pnglite-0.1.17.zip
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=d77319c2bc9584223a32a978a96ae7c2
+_md5_=42a24be6c65418cbcb22d35dc05e1923
