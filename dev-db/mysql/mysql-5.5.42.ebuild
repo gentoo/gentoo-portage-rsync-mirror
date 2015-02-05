@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.5.41.ebuild,v 1.1 2014/12/04 01:27:44 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.5.42.ebuild,v 1.1 2015/02/05 16:03:20 grknight Exp $
 
 EAPI="5"
 
-MY_EXTRAS_VER="20141203-2105Z"
+MY_EXTRAS_VER="20150127-1351Z"
 MY_PV="${PV//_alpha_pre/-m}"
 MY_PV="${MY_PV//_/-}"
 
@@ -83,10 +83,15 @@ src_test() {
 		#
 		# main.mysql_client_test:
 		# segfaults at random under Portage only, suspect resource limits.
+		#
+		# main.mysqlhotcopy_archive main.mysqlhotcopy_myisam
+		# fails due to bad cleanup of previous tests when run in parallel
+		# The tool is deprecated anyway
+		# Bug 532288
 
 		for t in main.mysql_client_test \
 			binlog.binlog_statement_insert_delayed main.information_schema \
-			main.mysqld--help-notwin ; do
+			main.mysqld--help-notwin main.mysqlhotcopy_archive main.mysqlhotcopy_myisam ; do
 				mysql-v2_disable_test  "$t" "False positives in Gentoo"
 		done
 

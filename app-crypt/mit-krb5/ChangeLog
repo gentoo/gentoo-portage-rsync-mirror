@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/mit-krb5
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.441 2014/11/24 08:53:32 eras Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.442 2015/02/05 16:24:40 eras Exp $
+
+*mit-krb5-1.13-r1 (05 Feb 2015)
+
+  05 Feb 2015; Eray Aslan <eras@gentoo.org> +files/2015-001-patch-r113.patch,
+  +files/mit-krb5-CVE-2014-5353.patch, +files/mit-krb5-CVE-2014-5354.patch,
+  +mit-krb5-1.13-r1.ebuild:
+  Security bump - bugs #533734 #538842
 
   24 Nov 2014; Eray Aslan <eras@gentoo.org> -mit-krb5-1.12.2.ebuild:
   Remove old
