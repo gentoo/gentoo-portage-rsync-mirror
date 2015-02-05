@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libva-intel-driver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.37 2015/01/05 13:20:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/ChangeLog,v 1.39 2015/02/05 10:41:08 aballier Exp $
+
+  05 Feb 2015; Alexis Ballier <aballier@gentoo.org>
+  -libva-intel-driver-1.3.2.ebuild, -libva-intel-driver-1.4.0.ebuild:
+  remove old
+
+  05 Feb 2015; Alexis Ballier <aballier@gentoo.org>
+  libva-intel-driver-1.5.0.ebuild, +files/nox.patch:
+  backport fix from upstream to build with USE=-X, bug #538706
 
 *libva-intel-driver-1.5.0 (05 Jan 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.5.0.ebuild,v 1.1 2015/01/05 13:20:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-intel-driver/libva-intel-driver-1.5.0.ebuild,v 1.2 2015/02/05 10:40:04 aballier Exp $
 
 EAPI=5
 
@@ -41,6 +41,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS=( AUTHORS NEWS README )
+PATCHES=( "${FILESDIR}/nox.patch" )
 
 src_prepare() {
 	sed -e 's/intel-gen4asm/\0diSaBlEd/g' -i configure.ac || die
