@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/cob
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.11 2015/01/03 19:31:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.12 2015/02/05 21:58:17 mr_bones_ Exp $
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> cob-0.9.ebuild:
+  use epatch; add libsdl use deps
 
   03 Jan 2015; Tupone Alfredo <tupone@gentoo.org> cob-0.9.ebuild:
   EAPI 5
@@ -35,4 +38,3 @@
 
   12 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> cob-0.9.ebuild:
   initial commit; ebuild supplied by flash3001 via bug 33223
-
