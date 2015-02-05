@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=The strongest chess engine in the world
+EAPI=5
+HOMEPAGE=http://stockfishchess.org/
+IUSE=cpu_flags_x86_avx2 cpu_flags_x86_popcnt cpu_flags_x86_sse
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=https://stockfish.s3.amazonaws.com/stockfish-6-src.zip
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=06c295765e7fdbefb48d64f5ab3dd787

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/insaneodyssey
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/ChangeLog,v 1.7 2015/01/04 15:26:51 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/ChangeLog,v 1.8 2015/02/05 20:30:54 mr_bones_ Exp $
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  insaneodyssey-000311.ebuild:
+  add libsdl use deps; tidy
 
   04 Jan 2015; Tupone Alfredo <tupone@gentoo.org> insaneodyssey-000311.ebuild:
   EAPI 5
@@ -25,4 +29,3 @@
   insaneodyssey-000311.ebuild, metadata.xml,
   files/insaneodyssey-000311-datafiles.patch:
   initial commit - ebuild and patch from Alexandru Toma via bug #52697
-

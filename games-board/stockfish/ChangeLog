@@ -1,0 +1,9 @@
+# ChangeLog for games-board/stockfish
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/stockfish/ChangeLog,v 1.1 2015/02/05 20:09:33 yngwin Exp $
+
+*stockfish-6 (05 Feb 2015)
+
+  05 Feb 2015; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +stockfish-6.ebuild:
+  Initial commit (bug #318337)

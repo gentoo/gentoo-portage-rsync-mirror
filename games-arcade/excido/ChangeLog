@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/excido
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/ChangeLog,v 1.21 2015/01/04 14:52:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/ChangeLog,v 1.22 2015/02/05 20:10:33 mr_bones_ Exp $
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> excido-0.1.5c-r2.ebuild:
+  use epatch; tidy
 
   04 Jan 2015; Tupone Alfredo <tupone@gentoo.org> excido-0.1.5c-r2.ebuild:
   EAPI 5
@@ -82,4 +85,3 @@
 
   24 Aug 2003; Michael Sterrett <msterret@gentoo.org> excido-0.1.2.ebuild:
   initial commit (bug 27205)
-

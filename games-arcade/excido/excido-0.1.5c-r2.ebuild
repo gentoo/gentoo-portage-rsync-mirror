@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r2.ebuild,v 1.5 2015/01/04 14:52:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r2.ebuild,v 1.6 2015/02/05 20:10:33 mr_bones_ Exp $
 
 EAPI=5
-inherit games
+inherit eutils games
 
 DESCRIPTION="A fast paced action game"
 HOMEPAGE="http://icculus.org/excido/"
@@ -21,8 +21,13 @@ DEPEND="dev-games/physfs
 	media-libs/sdl-image[png]
 	media-libs/openal
 	media-libs/freealut"
-RDEPEND="${DEPEND}"
-PATCHES=( "${FILESDIR}"/${P}-freealut.patch "${FILESDIR}"/${P}-build.patch )
+RDEPEND=${DEPEND}
+
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-freealut.patch \
+		"${FILESDIR}"/${P}-build.patch
+}
 
 src_compile() {
 	emake DATADIR="${GAMES_DATADIR}"/${PN}/

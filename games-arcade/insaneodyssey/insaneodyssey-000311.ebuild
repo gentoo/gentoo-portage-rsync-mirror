@@ -1,6 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.7 2015/01/04 15:26:51 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.8 2015/02/05 20:30:54 mr_bones_ Exp $
+
 EAPI=5
 inherit eutils games
 
@@ -15,10 +16,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer
 	media-libs/sdl-image"
-RDEPEND="${DEPEND}"
+RDEPEND=${DEPEND}
+
 S=${WORKDIR}/${PN}
 
 src_prepare() {
@@ -27,12 +29,12 @@ src_prepare() {
 	# Modify data load code and paths to game data
 	sed -e "s:/usr/share/games:${GAMES_DATADIR}:" \
 		"${FILESDIR}"/${P}-datafiles.patch > "${T}"/datafiles.patch \
-		|| die "sed datafiles.patch failed"
+		|| die
 		epatch "${T}"/datafiles.patch
 	sed -i \
 		-e "/lvl/s:^:${GAMES_DATADIR}/${PN}/:" \
 		-e "s:night:${GAMES_DATADIR}/${PN}/night:" \
-		levels.dat || die "sed levels.dat failed"
+		levels.dat || die
 	sed -i \
 		-e "s:tiles.dat:${GAMES_DATADIR}/${PN}/tiles.dat:" \
 		-e "s:sprites.dat:${GAMES_DATADIR}/${PN}/sprites.dat:" \
@@ -40,10 +42,10 @@ src_prepare() {
 		-e "s:IO_T:${GAMES_DATADIR}/${PN}/IO_T:" \
 		-e "s:tiles.att:${GAMES_DATADIR}/${PN}/tiles.att:" \
 		-e "s:shot:${GAMES_DATADIR}/${PN}/shot:" \
-		io.cpp || die "sed io.cpp failed"
+		io.cpp || die
 	sed -i \
 		-e 's:\[32:[100:' \
-		io.h || die "sed io.h failed"
+		io.h || die
 }
 
 src_install() {
