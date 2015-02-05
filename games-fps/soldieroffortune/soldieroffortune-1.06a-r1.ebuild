@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a-r1.ebuild,v 1.3 2015/02/01 11:26:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a-r1.ebuild,v 1.4 2015/02/05 03:19:28 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils unpacker cdrom games
+inherit check-reqs eutils unpacker cdrom games
 
 DESCRIPTION="First-person shooter based on the mercenary trade"
 HOMEPAGE="http://www.lokigames.com/products/sof/"
@@ -38,17 +38,18 @@ S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${ED}/${dir}
 
+CHECKREQS_DISK_BUILD="1450M"
+CHECKREQS_DISK_USR="725M"
+
 pkg_pretend() {
-	ewarn "The installed game takes about 725MB of space!"
+	check-reqs_pkg_pretend
 }
 
 src_unpack() {
 	cdrom_get_cds sof.xpm
 	unpack_makeself
-	tar xzf "${CDROM_ROOT}"/paks.tar.gz -C "${T}" \
-		|| die "uncompressing data"
-	tar xzf "${CDROM_ROOT}"/binaries.tar.gz -C "${T}" \
-		|| die "uncompressing binaries"
+	tar xzf "${CDROM_ROOT}"/paks.tar.gz -C "${T}" || die
+	tar xzf "${CDROM_ROOT}"/binaries.tar.gz -C "${T}" || die
 }
 
 src_install() {
@@ -62,7 +63,7 @@ src_install() {
 	cd "${S}"
 	export _POSIX2_VERSION=199209
 	loki_patch --verify patch.dat
-	loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching"
+	loki_patch patch.dat "${Ddir}" >& /dev/null || die
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
