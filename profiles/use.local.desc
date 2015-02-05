@@ -1658,6 +1658,7 @@ dev-lang/erlang:hipe - HIgh Performance Erlang extension
 dev-lang/erlang:kpoll - Enable kernel polling support
 dev-lang/erlang:sctp - Support for Stream Control Transmission Protocol
 dev-lang/fpc:ide - Build and install the Free Pascal Compiler IDE
+dev-lang/gdl:eigen - Build matrix manipulation with dev-cpp/eigen
 dev-lang/gdl:grib - Add support for the meteorological GRIB format with sci-libs/grib_api
 dev-lang/gdl:gshhs - Add support for projection adn continent maps with sci-geosciences/gshhs-data
 dev-lang/gdl:hdf - Add support for the Hierarchical Data Format v.4

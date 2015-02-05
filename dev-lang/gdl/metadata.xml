@@ -8,7 +8,7 @@
   Information Solutions.
 </longdescription>
 <use>
-  <flag name='hdf'>Build matrix manipulation with <pkg>dev-cpp/eigen</pkg></flag>
+  <flag name='eigen'>Build matrix manipulation with <pkg>dev-cpp/eigen</pkg></flag>
   <flag name='hdf'>Add support for the Hierarchical Data Format v.4</flag>
   <flag name='gshhs'>Add support for projection adn continent maps with <pkg>sci-geosciences/gshhs-data</pkg></flag>
 

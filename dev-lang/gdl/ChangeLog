@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gdl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.45 2014/06/27 17:41:30 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.46 2015/02/05 14:59:03 mgorny Exp $
+
+  05 Feb 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Fix USE=eigen description.
 
   27 Jun 2014; Sébastien Fabbro <bicatali@gentoo.org> gdl-0.9.4.ebuild:
   Using sub-slots
