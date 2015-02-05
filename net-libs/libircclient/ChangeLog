@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libircclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.20 2014/03/13 06:41:52 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.21 2015/02/05 05:55:28 mr_bones_ Exp $
+
+*libircclient-1.8 (05 Feb 2015)
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/libircclient-1.8-build.patch, +files/libircclient-1.8-include.patch,
+  +files/libircclient-1.8-shared.patch, +files/libircclient-1.8-static.patch,
+  +libircclient-1.8.ebuild:
+  version bump
 
 *libircclient-1.7 (13 Mar 2014)
 
