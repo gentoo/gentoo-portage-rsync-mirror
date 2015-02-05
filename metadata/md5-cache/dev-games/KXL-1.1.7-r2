@@ -1,12 +1,12 @@
-DEFINED_PHASES=install prepare
+DEFINED_PHASES=configure install prepare
 DEPEND=x11-libs/libX11 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Development Library for making games for X
-EAPI=2
+EAPI=5
 HOMEPAGE=http://kxl.orz.hm/
+IUSE=static-libs
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=x11-libs/libX11
 SLOT=0
 SRC_URI=http://kxl.hn.org/download/KXL-1.1.7.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=da8d04610c7f7e7a40f676df26938775
+_md5_=ae8e9c55ff472285dfdd7039e280a720

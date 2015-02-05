@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/KXL
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.19 2011/03/04 01:29:59 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.20 2015/02/04 23:04:36 mr_bones_ Exp $
+
+  04 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> KXL-1.1.7-r2.ebuild:
+  EAPI=5
 
   04 Mar 2011; Brent Baude <ranger@gentoo.org> KXL-1.1.7-r2.ebuild:
   stable ppc, bug 343453
