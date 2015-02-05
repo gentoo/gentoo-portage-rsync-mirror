@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-thomas-ogrisegg/fortune-mod-thomas-ogrisegg-20030120.ebuild,v 1.9 2010/12/11 16:23:18 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-thomas-ogrisegg/fortune-mod-thomas-ogrisegg-20030120.ebuild,v 1.10 2015/02/05 17:45:52 tupone Exp $
+EAPI=5
 MY_P=fortune-mod-thomas.ogrisegg-${PV}
 DESCRIPTION="Quotes from Thomas Ogrisegg"
 HOMEPAGE="http://fortune-mod-fvl.sourceforge.net/"
@@ -18,5 +18,5 @@ S=${WORKDIR}/${MY_P}
 
 src_install() {
 	insinto /usr/share/fortune
-	doins thomas.ogrisegg thomas.ogrisegg.dat || die
+	doins thomas.ogrisegg thomas.ogrisegg.dat
 }

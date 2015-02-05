@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-zx-error
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-zx-error/ChangeLog,v 1.8 2010/12/11 16:19:10 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-zx-error/ChangeLog,v 1.9 2015/02/05 17:49:19 tupone Exp $
+
+  05 Feb 2015; Tupone Alfredo <tupone@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  EAPI 5
 
   11 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   fortune-mod-zx-error-1.0.ebuild:

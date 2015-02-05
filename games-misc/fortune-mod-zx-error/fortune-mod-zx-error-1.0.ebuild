@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-zx-error/fortune-mod-zx-error-1.0.ebuild,v 1.9 2010/12/11 16:19:10 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-zx-error/fortune-mod-zx-error-1.0.ebuild,v 1.10 2015/02/05 17:49:19 tupone Exp $
+EAPI=5
 MY_P="fortunes-zx-error-${PV}"
 DESCRIPTION="Sinclair ZX Spectrum BASIC error Fortunes"
 HOMEPAGE="http://korpus.juls.savba.sk/~garabik/software/fortunes-zx-error.html"
@@ -18,7 +18,7 @@ S=${WORKDIR}/${MY_P}
 
 src_install() {
 	insinto /usr/share/fortune
-	newins zx/error zx-error || die
-	newins zx/error.dat zx-error.dat || die
+	newins zx/error zx-error
+	newins zx/error.dat zx-error.dat
 	dodoc README
 }

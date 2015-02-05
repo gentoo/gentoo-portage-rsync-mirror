@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-slackware
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.13 2010/12/12 09:43:02 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.14 2015/02/05 17:34:48 tupone Exp $
+
+  05 Feb 2015; Tupone Alfredo <tupone@gentoo.org>
+  fortune-mod-slackware-1.15.ebuild:
+  EAPI 5
 
   12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   fortune-mod-slackware-1.15.ebuild:

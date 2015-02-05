@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.15.ebuild,v 1.9 2010/12/12 09:43:02 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/fortune-mod-slackware-1.15.ebuild,v 1.10 2015/02/05 17:34:48 tupone Exp $
+EAPI=5
 # this ebuild now uses the offensive flag since AOLS
 # is not exactly 'G' rated :)
 
@@ -28,13 +28,12 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	# get rid of md5 checks and extraneous files and backups
 	rm -f index.* *.md5 *~
 }
 
 src_install() {
 	insinto /usr/share/fortune
-	doins * || die "doins failed"
+	doins *
 }

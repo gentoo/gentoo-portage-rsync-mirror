@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod-smac
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/ChangeLog,v 1.10 2013/01/12 09:12:33 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-smac/ChangeLog,v 1.11 2015/02/05 17:36:33 tupone Exp $
+
+  05 Feb 2015; Tupone Alfredo <tupone@gentoo.org> fortune-mod-smac-0.1.ebuild:
+  EAPI 5
 
   12 Jan 2013; Ulrich Müller <ulm@gentoo.org> fortune-mod-smac-0.1.ebuild:
   Update LICENSE, bug 450450.
