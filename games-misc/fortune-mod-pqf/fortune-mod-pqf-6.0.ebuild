@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-pqf/fortune-mod-pqf-6.0.ebuild,v 1.9 2010/12/12 09:53:50 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-pqf/fortune-mod-pqf-6.0.ebuild,v 1.10 2015/02/05 17:27:58 tupone Exp $
+EAPI=5
 DESCRIPTION="Fortune database of Terry Pratchett's Discworld related quotes"
 HOMEPAGE="http://www.lspace.org/"
 SRC_URI="http://www.ie.lspace.org/ftp-lspace/words/pqf/pqf-${PV}"
@@ -12,10 +12,11 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE=""
 
 DEPEND="games-misc/fortune-mod"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
-src_unpack() {
+src_prepare() {
 	cp "${DISTDIR}"/${A} "${S}"/pqf-${PV}
 }
 
@@ -27,5 +28,5 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/fortune
-	doins pqf pqf.dat || die
+	doins pqf pqf.dat
 }

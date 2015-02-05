@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/tellico
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.130 2014/12/12 15:44:33 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.131 2015/02/05 17:29:38 kensington Exp $
+
+  05 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/tellico-2.3.9-build.patch, tellico-2.3.9.ebuild:
+  Add patch to prevent potential build failure wrt bug #538478.
 
   12 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> tellico-2.3.9.ebuild:
   amd64 stable wrt bug #517344

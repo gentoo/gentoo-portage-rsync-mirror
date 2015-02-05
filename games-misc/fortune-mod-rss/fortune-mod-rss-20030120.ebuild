@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-rss/fortune-mod-rss-20030120.ebuild,v 1.9 2010/12/12 09:51:41 grobian Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-rss/fortune-mod-rss-20030120.ebuild,v 1.10 2015/02/05 17:30:04 tupone Exp $
+EAPI=5
 DESCRIPTION="Fortune database of Robin S. Socha quotes"
 HOMEPAGE="http://fortune-mod-fvl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/fortune-mod-fvl/${P}.tar.gz"
@@ -15,5 +15,5 @@ RDEPEND="games-misc/fortune-mod"
 
 src_install() {
 	insinto /usr/share/fortune
-	doins rss rss.dat || die
+	doins rss rss.dat
 }

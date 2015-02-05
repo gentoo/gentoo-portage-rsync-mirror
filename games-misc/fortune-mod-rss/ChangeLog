@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-rss
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-rss/ChangeLog,v 1.10 2010/12/12 09:51:41 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-rss/ChangeLog,v 1.11 2015/02/05 17:30:04 tupone Exp $
+
+  05 Feb 2015; Tupone Alfredo <tupone@gentoo.org>
+  fortune-mod-rss-20030120.ebuild:
+  EAPI 5
 
   12 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   fortune-mod-rss-20030120.ebuild:
