@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.27 2015/02/04 02:50:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.28 2015/02/05 22:53:10 floppym Exp $
 
 EAPI=5
 
@@ -38,16 +38,16 @@ fi
 
 DEJAVU=dejavu-sans-ttf-2.34
 UNIFONT=unifont-7.0.06
-SRC_URI+=" mirror://gnu/unifont/${UNIFONT}/${UNIFONT}.pcf.gz
+SRC_URI+=" fonts? ( mirror://gnu/unifont/${UNIFONT}/${UNIFONT}.pcf.gz )
 	themes? ( mirror://sourceforge/dejavu/${DEJAVU}.zip )"
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 
 # Includes licenses for dejavu and unifont
-LICENSE="GPL-3 truetype? ( BitstreamVera GPL-2-with-font-exception )"
+LICENSE="GPL-3 fonts? ( GPL-2-with-font-exception ) themes? ( BitstreamVera )"
 SLOT="2"
-IUSE="debug device-mapper doc efiemu mount +multislot nls static sdl test +themes truetype libzfs"
+IUSE="debug device-mapper doc efiemu +fonts mount +multislot nls static sdl test +themes truetype libzfs"
 
 GRUB_ALL_PLATFORMS=(
 	# everywhere:
@@ -62,6 +62,13 @@ GRUB_ALL_PLATFORMS=(
 	efi-64
 )
 IUSE+=" ${GRUB_ALL_PLATFORMS[@]/#/grub_platforms_}"
+
+REQUIRED_USE="
+	grub_platforms_coreboot? ( fonts )
+	grub_platforms_qemu? ( fonts )
+	grub_platforms_ieee1275? ( fonts )
+	grub_platforms_loongson? ( fonts )
+"
 
 # os-prober: Used on runtime to detect other OSes
 # xorriso (dev-libs/libisoburn): Used on runtime for mkrescue
@@ -81,11 +88,11 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	app-misc/pax-utils
-	media-libs/freetype:2
 	sys-devel/flex
 	sys-devel/bison
 	sys-apps/help2man
 	sys-apps/texinfo
+	fonts? ( media-libs/freetype:2 )
 	grub_platforms_xen? ( app-emulation/xen-tools )
 	static? (
 		app-arch/xz-utils[static-libs(+)]
@@ -99,7 +106,7 @@ DEPEND="${RDEPEND}
 		dev-libs/libisoburn
 		app-emulation/qemu
 	)
-	truetype? ( app-arch/unzip )
+	themes? ( app-arch/unzip )
 "
 RDEPEND+="
 	kernel_linux? (
@@ -177,7 +184,7 @@ src_prepare() {
 
 setup_fonts() {
 	ln -s "${WORKDIR}/${UNIFONT}.pcf" unifont.pcf || die
-	if use truetype; then
+	if use themes; then
 		ln -s "${WORKDIR}/${DEJAVU}/ttf/DejaVuSans.ttf" DejaVuSans.ttf || die
 	fi
 }
