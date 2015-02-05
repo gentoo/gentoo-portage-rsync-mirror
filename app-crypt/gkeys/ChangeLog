@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gkeys
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.9 2015/01/13 06:19:41 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/ChangeLog,v 1.10 2015/02/05 14:26:09 mgorny Exp $
+
+  05 Feb 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Remove invalid herd reference.
 
   12 Jan 2015; <steev@gentoo.org> gkeys-0.1-r1.ebuild:
   Add ~arm keyword
