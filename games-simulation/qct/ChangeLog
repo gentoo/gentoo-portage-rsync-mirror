@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/qct
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/ChangeLog,v 1.12 2015/01/28 10:22:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/qct/ChangeLog,v 1.13 2015/02/05 03:55:59 mr_bones_ Exp $
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> -qct-0.7.ebuild:
+  old
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> qct-0.7-r1.ebuild:
   Stable for ppc, wrt bug #534170

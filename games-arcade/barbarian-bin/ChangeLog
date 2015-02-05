@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/barbarian-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.12 2015/02/01 11:40:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.13 2015/02/05 03:48:53 mr_bones_ Exp $
+
+  05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -barbarian-bin-1.01.ebuild:
+  old
 
   01 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> barbarian-bin-1.01-r1.ebuild:
   x86 stable wrt bug #535894

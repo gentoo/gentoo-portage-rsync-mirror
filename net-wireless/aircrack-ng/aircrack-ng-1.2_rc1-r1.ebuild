@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_rc1.ebuild,v 1.5 2014/11/10 13:44:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.2_rc1-r1.ebuild,v 1.1 2015/02/05 03:46:03 zerochaos Exp $
 
 EAPI="5"
 
@@ -29,14 +29,14 @@ SLOT="0"
 
 IUSE="+airdrop-ng +airgraph-ng kernel_linux kernel_FreeBSD +netlink +pcre +sqlite +unstable"
 
-DEPEND="dev-libs/openssl
+DEPEND="net-libs/libpcap
+	dev-libs/openssl
 	netlink? ( dev-libs/libnl:3 )
 	pcre? ( dev-libs/libpcre )
 	airdrop-ng? ( ${PYTHON_DEPS} )
 	airgraph-ng? ( ${PYTHON_DEPS} )
 	sqlite? ( >=dev-db/sqlite-3.4 )
-	unstable? ( net-libs/libpcap
-			sys-libs/zlib )"
+	unstable? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	kernel_linux? (
 		net-wireless/iw
