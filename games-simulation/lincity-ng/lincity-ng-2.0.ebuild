@@ -1,18 +1,19 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.10 2014/05/15 17:00:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.11 2015/02/05 08:16:11 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils multiprocessing games
 
 DESCRIPTION="city/country simulation game for X and opengl"
-HOMEPAGE="http://lincity-ng.berlios.de/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://sourceforge.net/projects/lincity-ng.berlios/"
+SRC_URI="mirror://sourceforge/lincity-ng.berlios/${P}.tar.bz2"
 
 LICENSE="GPL-2 BitstreamVera"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
+RESTRICT=mirror
 
 RDEPEND="virtual/opengl
 	sys-libs/zlib
@@ -43,6 +44,5 @@ src_install() {
 		 install \
 		 || die "jam install failed"
 	rm -f "${D}"/usr/share/doc/${PF}/COPYING*
-	prepalldocs
 	prepgamesdirs
 }
