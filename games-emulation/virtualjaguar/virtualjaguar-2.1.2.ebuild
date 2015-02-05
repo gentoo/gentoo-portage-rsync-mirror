@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-2.1.2.ebuild,v 1.1 2014/10/15 03:50:52 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils qt4-r2 games
+inherit qt4-r2 games
 
 DESCRIPTION="an Atari Jaguar emulator"
 HOMEPAGE="http://www.icculus.org/virtualjaguar/"
@@ -18,8 +18,8 @@ RDEPEND="media-libs/libsdl[joystick,opengl,sound,video]
 	sys-libs/zlib
 	virtual/opengl
 	dev-qt/qtcore:4
-	dev-qt/qtgui:4
-	dev-qt/qtopengl:4
+	dev-qt/qtgui:4[-egl]
+	dev-qt/qtopengl:4[-egl]
 	dev-libs/libcdio"
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.4"
@@ -30,6 +30,10 @@ src_prepare() {
 	eqmake4 virtualjaguar.pro -o makefile-qt
 }
 
+src_configure() {
+	return
+}
+
 src_compile() {
 	emake -j1 libs
 	emake
@@ -37,6 +41,8 @@ src_compile() {
 
 src_install() {
 	dogamesbin ${PN}
+	newicon "res/vj-icon.png" "${PN}.png"
+	domenu "${S}/${PN}.desktop"
 	dodoc README docs/{TODO,WHATSNEW}
 	doman docs/virtualjaguar.1
 	prepgamesdirs
