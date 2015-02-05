@@ -1,6 +1,12 @@
 # ChangeLog for media-video/coriander
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.22 2012/05/05 08:58:55 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/coriander/ChangeLog,v 1.23 2015/02/05 16:40:00 pacho Exp $
+
+*coriander-2.0.2 (05 Feb 2015)
+
+  05 Feb 2015; Pacho Ramos <pacho@gentoo.org> +coriander-2.0.2.ebuild,
+  -coriander-2.0.0.ebuild:
+  Version bump, drop old
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> coriander-2.0.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -129,4 +135,3 @@
 
   09 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> coriander-1.0.0_pre3.ebuild:
   provides v4l compatibility for Apple iSight under linux 
-
