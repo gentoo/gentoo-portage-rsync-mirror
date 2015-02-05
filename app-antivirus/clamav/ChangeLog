@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.500 2015/01/28 15:51:57 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.501 2015/02/05 15:17:10 lordvan Exp $
+
+  05 Feb 2015; Thomas Raschbacher <lordvan@gentoo.org> -clamav-0.98.ebuild,
+  -clamav-0.98.1.ebuild, -clamav-0.98.1-r1.ebuild, -clamav-0.98.3.ebuild,
+  -clamav-0.98.4.ebuild:
+  removed old vulnerable versions (bug #529728)
 
 *clamav-0.98.6 (28 Jan 2015)
 
