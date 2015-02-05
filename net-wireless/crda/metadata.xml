@@ -9,8 +9,5 @@
 		<email>zerochaos@gentoo.org</email>
 		<name>Rick Farina</name>
 	</maintainer>
-	<longdescription lang="en">
-		Central Regulatory Domain Agent
-	</longdescription>
 </pkgmetadata>
 
