@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=virtual/ffmpeg opengl? ( virtual/opengl virtual/glu ) vaapi? ( x11-libs/libva ) vdpau? ( x11-libs/libvdpau ) virtual/pkgconfig
+DEPEND=virtual/ffmpeg x11-libs/libX11 opengl? ( virtual/opengl virtual/glu ) vaapi? ( x11-libs/libva ) vdpau? ( x11-libs/libvdpau ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Standalone programs showing off various HW acceleration APIs
 EAPI=2
 HOMEPAGE=http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/
 IUSE=opengl vaapi vdpau
 KEYWORDS=~amd64
 LICENSE=GPL-2
-RDEPEND=virtual/ffmpeg opengl? ( virtual/opengl virtual/glu ) vaapi? ( x11-libs/libva ) vdpau? ( x11-libs/libvdpau )
+RDEPEND=virtual/ffmpeg x11-libs/libX11 opengl? ( virtual/opengl virtual/glu ) vaapi? ( x11-libs/libva ) vdpau? ( x11-libs/libvdpau )
 SLOT=0
 SRC_URI=http://www.splitted-desktop.com/~gbeauchesne/hwdecode-demos/hwdecode-demos-0.9.5.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=5fb706bfd5ddf11950e8dbb0628c9bd5
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=8d2049d515edd97a31c8c7d03bbf9f1f

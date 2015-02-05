@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-1.0.1.ebuild,v 1.3 2015/01/26 18:20:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-1.0.1.ebuild,v 1.4 2015/02/05 10:28:40 jer Exp $
 
 EAPI=5
 
@@ -28,8 +28,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" \
-		install || die "emake install failed."
+	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}/html" install
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	# create new STOWDIR

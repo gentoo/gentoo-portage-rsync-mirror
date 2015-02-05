@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/xstow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.19 2015/01/26 18:20:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.20 2015/02/05 10:28:40 jer Exp $
+
+  05 Feb 2015; Jeroen Roovers <jer@gentoo.org> xstow-1.0.1.ebuild,
+  files/xstow-1.0.1-ncurses.patch:
+  Fix linker calls (bug #538702 by Toralf Förster).
 
   26 Jan 2015; Jeroen Roovers <jer@gentoo.org> xstow-1.0.1.ebuild,
   +files/xstow-1.0.1-ncurses.patch:

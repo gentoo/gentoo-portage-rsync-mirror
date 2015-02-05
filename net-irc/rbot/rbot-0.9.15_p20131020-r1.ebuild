@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15_p20131020-r1.ebuild,v 1.1 2015/01/25 09:24:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15_p20131020-r1.ebuild,v 1.2 2015/02/05 10:21:25 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -13,7 +13,7 @@ SRC_URI="http://dev.a3li.li/gentoo/distfiles/${P}.tar.gz"
 
 LICENSE="|| ( feh GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="spell aspell timezone translator shorturl nls dict figlet
 	fortune cal host toilet"
 ILINGUAS="zh_CN zh_TW ru nl de fi fr it ja"

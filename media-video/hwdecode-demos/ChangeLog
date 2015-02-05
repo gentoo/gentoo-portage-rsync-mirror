@@ -1,6 +1,12 @@
 # ChangeLog for media-video/hwdecode-demos
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/ChangeLog,v 1.10 2014/12/12 10:35:38 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/hwdecode-demos/ChangeLog,v 1.11 2015/02/05 10:12:13 aballier Exp $
+
+  05 Feb 2015; Alexis Ballier <aballier@gentoo.org>
+  hwdecode-demos-0.9.5.ebuild, +files/avutil.patch, +files/dl.patch,
+  +files/vaapi.patch:
+  grab more patches from upstream to build with latest toolchain, libva &
+  ffmpeg, bug #538194. Add missing libX11 dep, bug #514306
 
   12 Dec 2014; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   USE='vaapi' is now global, removing it's description from metadata
