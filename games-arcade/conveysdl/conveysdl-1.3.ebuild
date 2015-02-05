@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.8 2015/01/03 19:38:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.9 2015/02/05 22:11:29 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs games
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer"
-RDEPEND="${DEPEND}"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}
 
@@ -24,13 +24,11 @@ src_prepare() {
 	# Incomplete readme
 	sed -i \
 		-e 's:I k:use -nosound to disable sound\n\nI k:' \
-		readme \
-		|| die "sed failed"
+		readme || die
 
 	sed -i \
 		-e 's:SDL_Mi:SDL_mi:' \
-		main.c \
-		|| die "sed failed"
+		main.c || die
 
 	epatch \
 		"${FILESDIR}"/${P}-arrays.patch \
