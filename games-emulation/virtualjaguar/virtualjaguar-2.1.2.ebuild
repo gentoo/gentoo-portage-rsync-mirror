@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 src_configure() {
-	return
+	:
 }
 
 src_compile() {
