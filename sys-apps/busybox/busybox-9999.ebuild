@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.17 2015/02/02 17:00:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-9999.ebuild,v 1.18 2015/02/06 06:08:29 williamh Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -115,6 +115,7 @@ src_configure() {
 	busybox_config_option n BUILD_LIBBUSYBOX
 	busybox_config_option n FEATURE_CLEAN_UP
 	busybox_config_option n MONOTONIC_SYSCALL
+	busybox_config_option n START_STOP_DAEMON
 	busybox_config_option n USE_PORTABLE_CODE
 	busybox_config_option n WERROR
 
