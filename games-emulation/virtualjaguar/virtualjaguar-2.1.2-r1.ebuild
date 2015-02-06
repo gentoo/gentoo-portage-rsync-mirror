@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-2.1.2.ebuild,v 1.3 2015/02/06 19:22:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-2.1.2-r1.ebuild,v 1.1 2015/02/06 19:43:12 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils qt4-r2 gnome2-utils games
+inherit eutils versionator qt4-r2 gnome2-utils toolchain-funcs games
 
 DESCRIPTION="an Atari Jaguar emulator"
 HOMEPAGE="http://www.icculus.org/virtualjaguar/"
@@ -19,12 +19,20 @@ RDEPEND="media-libs/libsdl[joystick,opengl,sound,video]
 	virtual/opengl
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtopengl:4
+	dev-qt/qtopengl:4[-egl]
 	dev-libs/libcdio"
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.4"
 
 S=${WORKDIR}/${PN}
+
+pkg_pretend() {
+	local ver=4.4
+
+	if ! version_is_at_least ${ver} $(gcc-version); then
+		die "${PN} needs at least gcc ${ver} selected to compile."
+	fi
+}
 
 src_prepare() {
 	sed -i \
