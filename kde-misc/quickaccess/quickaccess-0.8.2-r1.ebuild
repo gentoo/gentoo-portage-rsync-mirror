@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.2-r1.ebuild,v 1.2 2014/05/05 22:50:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.2-r1.ebuild,v 1.3 2015/02/06 16:28:56 kensington Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug"
 
-RDEPEND="
+DEPEND="$(add_kdebase_dep libkonq)"
+RDEPEND="${DEPEND}
 	$(add_kdebase_dep plasma-workspace)
 "
 

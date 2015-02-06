@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.6.ebuild,v 1.1 2015/02/06 11:56:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-2.6.ebuild,v 1.2 2015/02/06 16:30:04 hd_brummy Exp $
 
 EAPI=5
 
@@ -78,27 +78,29 @@ VDRSUDOENTRY="vdr ALL=NOPASSWD:/usr/share/vdr/bin/vdrshutdown-really.sh"
 
 pkg_postinst() {
 	if [[ $previous_less_than_0_5_4 = 0 ]] ; then
-		einfo "\nVDR use now default the --cachedir parameter to store the epg.file"
-		einfo "Please do not override this with the EPGFILE variable\n"
+		elog "\nVDR use now default the --cachedir parameter to store the epg.file"
+		elog "Please do not override this with the EPGFILE variable\n"
 
-		einfo "svdrp port 2001 support removed\n"
+		elog "svdrp port 2001 support removed\n"
 
-		einfo "--rcu support removed, use media-plugin/vdr-rcu\n"
+		elog "--rcu support removed, use media-plugin/vdr-rcu\n"
 	fi
 
 	if [[ $previous_less_than_2_6 = 0 ]]; then
-		einfo "${CATEGORY}/${PN} supports now a init script"
-		einfo "to start a X server"
-		einfo "Please refert for detailed info to"
-		einfo "${CATGORY}/${PN} README.x11-setup\n"
+		elog "${CATEGORY}/${PN} supports now a init script"
+		elog "to start a X server"
+		elog "Please refer for detailed info to"
+		elog "${CATGORY}/${PN} README.x11-setup\n"
 	fi
 
-	einfo "nvram wakeup is optional."
-	einfo "To make use of it emerge sys-power/nvram-wakeup.\n"
+	if use nvram; then
+		elog "nvram wakeup is optional."
+		elog "To make use of it emerge sys-power/nvram-wakeup.\n"
+	fi
 
-	einfo "Plugins which should be used are now set via its"
-	einfo "own config-file called /etc/conf.d/vdr.plugins"
-	einfo "or enabled via the frontend eselect vdr-plugin.\n"
+	elog "Plugins which should be used are now set via its"
+	elog "own config-file called /etc/conf.d/vdr.plugins"
+	elog "or enabled via the frontend eselect vdr-plugin.\n"
 
 	if [[ -f "${ROOT}"/etc/conf.d/vdr.dvdswitch ]] &&
 		grep -q ^DVDSWITCH_BURNSPEED= "${ROOT}"/etc/conf.d/vdr.dvdswitch
@@ -108,9 +110,9 @@ pkg_postinst() {
 		ewarn "VDR_DVDBURNSPEED in /etc/conf.d/vdr.cd-dvd"
 	fi
 
-	einfo "systemd is supported by ${CATEGORY}/${PN}"
-	einfo "Please read for detailed info on this"
-	einfo "${CATEGORY}/${PN} README.systemd"
+	elog "systemd is supported by ${CATEGORY}/${PN}"
+	elog "Please read for detailed info on this"
+	elog "${CATEGORY}/${PN} README.systemd"
 }
 
 pkg_config() {
