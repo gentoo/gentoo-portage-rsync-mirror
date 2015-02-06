@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/warzone2100
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.87 2014/10/29 12:49:58 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.88 2015/02/06 17:25:45 mr_bones_ Exp $
+
+*warzone2100-3.1.2 (06 Feb 2015)
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/warzone2100-3.1.2-openGL.patch, +files/warzone2100-3.1.2-pkgconf.patch,
+  +warzone2100-3.1.2.ebuild, -files/warzone2100-3.1.1-openGL.patch,
+  -files/warzone2100-3.1.1-pkgconf.patch, -warzone2100-3.1.1.ebuild:
+  version bump; clean old
 
   29 Oct 2014; Alfredo Tupone <tupone@gentoo.org> warzone2100-3.1.1.ebuild,
   +files/warzone2100-3.1.1-openGL.patch:
