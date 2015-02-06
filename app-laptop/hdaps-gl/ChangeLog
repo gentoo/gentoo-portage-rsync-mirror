@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/hdaps-gl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdaps-gl/ChangeLog,v 1.6 2011/10/12 09:45:32 chainsaw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdaps-gl/ChangeLog,v 1.7 2015/02/06 20:31:23 hanno Exp $
+
+  06 Feb 2015;  <hanno@gentoo.org> metadata.xml:
+  reassign hdaps-gl to maintainer-needed
 
   12 Oct 2011; Tony Vroon <chainsaw@gentoo.org> hdaps-gl-0.0.5.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
@@ -25,4 +28,3 @@
   +files/hdaps-gl-0.0.5-as-needed.diff, +metadata.xml,
   +hdaps-gl-0.0.5.ebuild:
   Initial commit of hdaps-gl, tool for thinkpad hdaps enabled laptops.
-
