@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/squeezeslave
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.13 2012/11/24 12:30:53 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/ChangeLog,v 1.14 2015/02/06 14:24:50 aballier Exp $
+
+  06 Feb 2015; Alexis Ballier <aballier@gentoo.org>
+  squeezeslave-1.1_p381.ebuild, +files/squeezeslave-1.1_p381-ffmpeg2.patch:
+  fix build with ffmpeg2, patch by Rick Moritz in bug #481062 with some extra
+  changes by me for ffmpeg 2.4+
 
   24 Nov 2012; Tim Harder <radhermit@gentoo.org> -squeezeslave-1.1_p312.ebuild,
   -squeezeslave-1.1_p350.ebuild, -files/squeezeslave-1.1_p309-ffmpeg.patch,
