@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.8 2014/04/10 06:30:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.9 2015/02/06 10:02:22 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils gnome2-utils games
@@ -19,7 +19,7 @@ DEPEND="virtual/opengl
 	media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	media-libs/sdl-image"
-RDEPEND="${DEPEND}"
+RDEPEND=${DEPEND}
 
 src_prepare() {
 	epatch \

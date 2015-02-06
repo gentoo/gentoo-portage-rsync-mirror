@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/lolcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/lolcat/ChangeLog,v 1.8 2015/01/27 07:47:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/lolcat/ChangeLog,v 1.9 2015/02/06 10:12:08 mr_bones_ Exp $
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> lolcat-42.1.0.ebuild,
+  metadata.xml:
+  whitespace
 
   27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -lolcat-42.0.99-r1.ebuild:

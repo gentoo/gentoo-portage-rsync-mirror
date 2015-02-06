@@ -10,4 +10,4 @@ RDEPEND=>=media-libs/libmpeg2-0.5.1 media-video/ffmpeg dev-qt/qtgui:4 dev-qt/qtd
 SLOT=0
 SRC_URI=mirror://sourceforge/k9copy/backlite-1.0.3.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	9e0174de733aecba0a7e66b2b01841d2	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e130c6fab95869c8a253c7a19ff6f9e4
+_md5_=fb8e8a1d12d69093d8c548daa8c0a171
