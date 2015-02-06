@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-2.1.2.ebuild,v 1.1 2014/10/15 03:50:52 mr_bones_ Exp $
 
 EAPI=5
-inherit qt4-r2 games
+inherit eutils qt4-r2 games
 
 DESCRIPTION="an Atari Jaguar emulator"
 HOMEPAGE="http://www.icculus.org/virtualjaguar/"
