@@ -1,6 +1,11 @@
 # ChangeLog for games-server/pvpgn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.25 2014/12/28 15:47:46 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.26 2015/02/06 10:39:22 mr_bones_ Exp $
+
+*pvpgn-1.8.5-r1 (06 Feb 2015)
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +pvpgn-1.8.5-r1.ebuild:
+  EAPI=5; bump support version
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> pvpgn-1.8.5.ebuild:
   Rename virtual/postgresql to dev-db/postgresql
@@ -68,4 +73,3 @@
   Version bump. Original ebuild and patch by Anatoly Shipitsin
   <norguhtar@gmail.com> and updated by Wai Ling <simotsa@gmail.com> and
   myself. Closing bug #107761.
-
