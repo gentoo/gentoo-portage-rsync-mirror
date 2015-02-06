@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.379 2015/01/02 22:20:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.380 2015/02/06 12:34:37 pacho Exp $
+
+*gedit-3.14.3 (06 Feb 2015)
+
+  06 Feb 2015; Pacho Ramos <pacho@gentoo.org> +gedit-3.14.3.ebuild,
+  -gedit-3.12.2.ebuild:
+  Version bump, drop old
 
   02 Jan 2015; Michał Górny <mgorny@gentoo.org> gedit-3.12.2-r1.ebuild,
   gedit-3.14.2.ebuild:

@@ -3001,7 +3001,6 @@ gnome-extra/libgda:mdb - Enable support for Microsoft Access database using app-
 gnome-extra/libgda:reports - Install tools for generating graphical reports
 gnome-extra/libgda:sourceview - Enable support for x11-libs/gtksourceview
 gnome-extra/libgsf:gtk - Enable use of gdk in thumbnailer
-gnome-extra/libgsf:introspection - Use dev-libs/gobject-introspection for introspection
 gnome-extra/nemo:l10n - Pull in gnome-extra/cinnamon-translations for localization support
 gnome-extra/nemo:packagekit - Use packagekit to search for programs to open unknown file types
 gnome-extra/nemo:tracker - Add support for app-misc/tracker search
