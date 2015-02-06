@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.382 2015/02/05 11:29:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.383 2015/02/06 05:58:29 williamh Exp $
+
+*busybox-1.23.1-r1 (06 Feb 2015)
+
+  06 Feb 2015; William Hubbs <williamh@gentoo.org> +busybox-1.23.1-r1.ebuild:
+  Disable start-stop-daemon for bug #468914
 
   05 Feb 2015; Jeroen Roovers <jer@gentoo.org> busybox-1.23.1.ebuild:
   Stable for HPPA (bug #537978).

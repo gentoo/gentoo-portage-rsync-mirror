@@ -1,6 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/pydance-songs-20040410.ebuild,v 1.9 2015/01/05 17:05:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/pydance-songs-20040410.ebuild,v 1.10 2015/02/06 05:49:14 mr_bones_ Exp $
+
 EAPI=5
 inherit games
 
@@ -10,16 +11,13 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
-
-RDEPEND="games-arcade/pydance"
 
 S=${WORKDIR}
 
 src_install() {
 	insinto "${GAMES_DATADIR}/pydance/songs"
-	cd "${S}"
 	doins *
 	prepgamesdirs
 }
