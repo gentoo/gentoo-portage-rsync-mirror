@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdauthor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.51 2013/04/10 14:16:02 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.52 2015/02/06 10:09:20 aballier Exp $
+
+  06 Feb 2015; Alexis Ballier <aballier@gentoo.org> dvdauthor-0.7.1.ebuild,
+  +files/dvdauthor-0.7.1-glibc220.patch:
+  fix build with glibc 2.20, patch from upstream, bug #529162
 
   10 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> dvdauthor-0.7.1.ebuild:
   Fix building with USE="graphicsmagick" wrt #459976 by Erik Zeek, Andrew John

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.10 2014/12/31 12:45:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/backlite-1.0.3-r1.ebuild,v 1.11 2015/02/06 10:15:21 aballier Exp $
 
 EAPI=5
 
@@ -34,7 +34,8 @@ src_prepare() {
 	sed -i -e '/^MimeTypes=.*/d' \
 		-e '/^Encoding=.*/d' *.desktop || die
 	epatch "${FILESDIR}/${P}-ffmpeg-0.11.patch" \
-		"${FILESDIR}/${P}-includepaths.patch"
+		"${FILESDIR}/${P}-includepaths.patch" \
+		"${FILESDIR}/${P}-ffmpeg2.patch"
 }
 
 src_configure() {
