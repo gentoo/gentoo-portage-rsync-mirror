@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.6.6.1.ebuild,v 1.2 2015/02/05 11:36:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.6.6.1.ebuild,v 1.3 2015/02/06 12:06:46 zlogene Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ DESCRIPTION+=' a high-level tool for configuring Netfilter'
 HOMEPAGE="http://www.shorewall.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86"
 IUSE="doc +init +ipv4 ipv6 lite4 lite6"
 
 MY_PV=${PV/_rc/-RC}
@@ -57,7 +57,7 @@ MY_P_DOCS=${MY_PN_DOCS/#S/s}-${MY_PV}
 MY_URL_PREFIX=
 MY_URL_SUFFIX=
 if [[ ${MY_PV} = *-Beta* ]] || [[ ${MY_PV} = *-RC* ]]; then
-	KEYWORDS="hppa"
+	KEYWORDS="amd64 hppa x86"
 	MY_URL_PREFIX='development/'
 
 	_tmp_last_index=$(($(get_last_version_component_index ${MY_PV})+1))
