@@ -1,7 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.15 2013/11/14 22:02:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.16 2015/02/06 08:16:24 mr_bones_ Exp $
 
+EAPI=5
 inherit toolchain-funcs games
 
 DESCRIPTION="Classic Hunt the Wumpus Adventure Game"
@@ -16,6 +17,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="sys-apps/less"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}
 
@@ -32,13 +34,13 @@ src_compile() {
 	[ -z "${PAGER}" ] && PAGER=/usr/bin/less
 	$(tc-getCC) ${LDFLAGS} -Dlint -D_PATH_PAGER=\"${PAGER}\" \
 		-D_PATH_WUMPINFO=\""${GAMES_DATADIR}"/${PN}/wump.info\" ${CFLAGS} \
-		-o wump wump.c || die "compile failed"
+		-o wump wump.c || die
 }
 
 src_install() {
-	dogamesbin wump || die "dogamesbin failed"
+	dogamesbin wump
 	doman wump.6
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins wump.info || die "doins failed"
+	doins wump.info
 	prepgamesdirs
 }
