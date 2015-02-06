@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.6 2014/12/31 13:38:15 tupone Exp $
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.7 2015/02/06 10:55:11 mr_bones_ Exp $
+
+EAPI=5
 inherit eutils unpacker games
 
 MY_PV=${PV/./}
@@ -29,13 +30,13 @@ S=${WORKDIR}
 src_unpack() {
 	unpack_zip ${A}
 
-	unarj e DESCENT1.SOW || die "unarj DESCENT1.SOW failed"
+	unarj e DESCENT1.SOW || die
 	mv descent.pig{,1}
-	unarj e DESCENT2.SOW || die "unarj DESCENT2.SOW failed"
+	unarj e DESCENT2.SOW || die
 	mv descent.pig{,2}
 
 	# From the sows, big porkie pies shall grow
-	cat descent.pig{1,2} > descent.pig || die "cat descent.pig failed"
+	cat descent.pig{1,2} > descent.pig || die
 
 	rm *{1,2} *.{bat,exe,EXE,SOW,ubn}
 }

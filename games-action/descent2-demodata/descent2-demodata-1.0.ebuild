@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.9 2014/12/31 13:58:01 tupone Exp $
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-demodata/descent2-demodata-1.0.ebuild,v 1.10 2015/02/06 10:57:02 mr_bones_ Exp $
+
+EAPI=5
 inherit eutils games
 
 MY_PN="d2demo"
@@ -37,17 +38,17 @@ src_unpack() {
 
 	# This is much more fun than simply downloading
 	# http://www.icculus.org/d2x/data/d2shar10.tar.gz
-	unarj e D2_1.SOW || die "unarj D2_1.SOW failed"
+	unarj e D2_1.SOW || die
 	mv ${MY_PN}.ham{,1}
-	unarj e D2_2.SOW || die "unarj D2_2.SOW failed"
+	unarj e D2_2.SOW || die
 	mv ${MY_PN}.ham{,2}
 	mv ${MY_PN}.pig{,2}
-	unarj e D2_3.SOW || die "unarj D2_3.SOW failed"
+	unarj e D2_3.SOW || die
 	mv ${MY_PN}.pig{,3}
 
 	# From the sows, big porkie pies shall grow
-	cat ${MY_PN}.ham{1,2} > ${MY_PN}.ham || die "cat ham failed"
-	cat ${MY_PN}.pig{2,3} > ${MY_PN}.pig || die "cat pig failed"
+	cat ${MY_PN}.ham{1,2} > ${MY_PN}.ham || die
+	cat ${MY_PN}.pig{2,3} > ${MY_PN}.pig || die
 
 	rm *{1,2,3} *.{386,bat,ubn} eregcard.ini
 	mkdir controls
