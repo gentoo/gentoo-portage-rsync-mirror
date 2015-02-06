@@ -1,7 +1,7 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/sex-1.0.ebuild,v 1.19 2010/01/03 12:09:26 fauli Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/sex-1.0.ebuild,v 1.20 2015/02/06 21:54:10 tupone Exp $
+EAPI=5
 inherit games
 
 DESCRIPTION="Spouts silly mad-lib-style porn-like text"
@@ -13,17 +13,16 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	rm -f "${S}"/Makefile
+src_prepare() {
+	rm -f Makefile
 }
 
 src_compile() {
-	emake sex || die "emake failed"
+	emake sex
 }
 
 src_install() {
-	dogamesbin sex || die "dogamesbin failed"
+	dogamesbin sex
 	doman sex.6
 	dodoc README
 	prepgamesdirs

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20090924.ebuild,v 1.8 2010/06/14 16:53:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wtf/wtf-20090924.ebuild,v 1.9 2015/02/06 21:58:14 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils prefix
 
 DESCRIPTION="translates acronyms for you"
@@ -27,9 +27,9 @@ src_compile() {
 }
 
 src_install() {
-	dobin wtf || die "dogamesbin failed"
+	dobin wtf
 	doman wtf.6
 	insinto /usr/share/misc
-	doins acronyms* || die "doins failed"
+	doins acronyms*
 	dodoc README
 }

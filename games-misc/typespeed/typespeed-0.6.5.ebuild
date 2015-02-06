@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.5.ebuild,v 1.6 2012/05/24 01:44:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.5.ebuild,v 1.7 2015/02/06 21:56:18 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools games
 
 DESCRIPTION="Test your typing speed, and get your fingers CPS"
@@ -35,7 +35,6 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--localedir=/usr/share/locale \
 		--docdir=/usr/share/doc/${PF} \
 		--with-highscoredir="${GAMES_STATEDIR}" \
@@ -43,7 +42,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS BUGS ChangeLog NEWS TODO doc/README
+	default
+	dodoc doc/README
 	prepgamesdirs
 }

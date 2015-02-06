@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/typespeed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.26 2012/05/24 01:44:43 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.27 2015/02/06 21:56:18 tupone Exp $
+
+  06 Feb 2015; Tupone Alfredo <tupone@gentoo.org> typespeed-0.6.5.ebuild:
+  EAPI 5
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> typespeed-0.6.5.ebuild:
   Fix local gettext desync issues #417265 by hendrik.

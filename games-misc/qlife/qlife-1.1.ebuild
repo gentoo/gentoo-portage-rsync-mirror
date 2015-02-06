@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-1.1.ebuild,v 1.5 2013/03/02 21:17:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-1.1.ebuild,v 1.6 2015/02/06 21:45:24 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2 games
 
 MY_PN=${PN/ql/QL}
@@ -17,6 +17,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-qt/qtgui:4"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}/sources
 
@@ -25,7 +26,7 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin ${MY_PN} || die
+	dogamesbin ${MY_PN}
 	newicon data/egg.png ${PN}.png
 	make_desktop_entry ${MY_PN} ${MY_PN}
 	prepgamesdirs

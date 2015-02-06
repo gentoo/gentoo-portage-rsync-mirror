@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/robotfindskitten
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.12 2013/01/22 21:01:21 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/robotfindskitten/ChangeLog,v 1.13 2015/02/06 21:50:13 tupone Exp $
+
+  06 Feb 2015; Tupone Alfredo <tupone@gentoo.org>
+  robotfindskitten-1.7320508.406.ebuild:
+  EAPI 5
 
   22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -robotfindskitten-1.4142135.349.ebuild:
