@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/scummvm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.140 2014/12/31 20:59:53 calchan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.141 2015/02/06 13:44:14 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> scummvm-1.7.0-r2.ebuild:
+  Stable for amd64, wrt bug #539002
 
 *scummvm-1.7.0-r2 (31 Dec 2014)
 

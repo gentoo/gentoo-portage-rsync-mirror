@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pnglite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/ChangeLog,v 1.7 2015/02/05 18:04:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pnglite/ChangeLog,v 1.8 2015/02/06 13:41:24 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pnglite-0.1.17.ebuild:
+  Stable for amd64, wrt bug #538950
 
   05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> pnglite-0.1.17.ebuild:
   EAPI=5

@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/nibbles
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/ChangeLog,v 1.17 2015/02/05 22:41:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/ChangeLog,v 1.18 2015/02/06 13:44:19 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> nibbles-0.0.4.ebuild:
+  Stable for amd64, wrt bug #539004
 
   05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> nibbles-0.0.4.ebuild:
   tidy

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.9 2015/02/05 22:11:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.10 2015/02/06 13:43:44 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs games
@@ -11,7 +11,7 @@ SRC_URI="http://www.cloudsprinter.com/software/conveysdl/${P/-/.}.tar"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl[sound,video]

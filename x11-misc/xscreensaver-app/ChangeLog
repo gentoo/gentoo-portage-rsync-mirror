@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver-app
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.13 2015/02/05 19:03:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.14 2015/02/06 13:42:09 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xscreensaver-app-2.3-r2.ebuild:
+  Stable for amd64, wrt bug #538954
 
   05 Feb 2015; Jeroen Roovers <jer@gentoo.org> xscreensaver-app-2.3-r2.ebuild:
   Add DEPEND on virtual/pkgconfig.

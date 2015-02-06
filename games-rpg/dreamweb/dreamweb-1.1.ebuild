@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dreamweb/dreamweb-1.1.ebuild,v 1.1 2014/12/30 06:49:33 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dreamweb/dreamweb-1.1.ebuild,v 1.2 2015/02/06 13:41:59 ago Exp $
 
 EAPI=5
 inherit unpacker eutils games
@@ -21,7 +21,7 @@ SRC_URI="doc? ( mirror://sourceforge/scummvm/${PN}-manuals-en-highres.zip )
 
 LICENSE="Dreamweb"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc linguas_de linguas_en linguas_en_GB linguas_en_US linguas_es linguas_fr linguas_it"
 
 RDEPEND=">=games-engines/scummvm-1.7[flac]"
