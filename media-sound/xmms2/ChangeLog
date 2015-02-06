@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.37 2014/08/10 21:13:03 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.38 2015/02/06 14:09:08 aballier Exp $
+
+  06 Feb 2015; Alexis Ballier <aballier@gentoo.org> xmms2-0.8-r2.ebuild,
+  +files/xmms2-0.8-ffmpeg2.patch:
+  quick patch to fix build with ffmpeg2; bug #536232
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.7-r2.ebuild,
   xmms2-0.7-r3.ebuild, xmms2-0.8-r1.ebuild, xmms2-0.8-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/squeezeslave-1.1_p381.ebuild,v 1.1 2012/11/24 12:29:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/squeezeslave-1.1_p381.ebuild,v 1.2 2015/02/06 14:24:50 aballier Exp $
 
 EAPI="5"
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1_p350-tremor-headers.patch
+	epatch "${FILESDIR}"/${PN}-1.1_p381-ffmpeg2.patch
 }
 
 src_compile() {
