@@ -1,7 +1,7 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/xcruiser-0.30.ebuild,v 1.7 2012/11/11 02:38:04 mr_bones_ Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/xcruiser-0.30.ebuild,v 1.8 2015/02/06 22:01:36 tupone Exp $
+EAPI=5
 inherit toolchain-funcs
 
 DESCRIPTION="Fly about 3D-formed file system"
@@ -23,11 +23,11 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	xmkmf -a
-	emake CC=$(tc-getCC) CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake CC=$(tc-getCC) CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin xcruiser || die "dobin failed"
+	dobin xcruiser
 	dodoc CHANGES README README.jp TODO
 	newman xcruiser.man xcruiser.1
 }

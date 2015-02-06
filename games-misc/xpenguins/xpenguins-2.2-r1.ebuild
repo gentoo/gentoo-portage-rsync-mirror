@@ -1,7 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/xpenguins-2.2-r1.ebuild,v 1.5 2007/03/10 09:06:35 nyhm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xpenguins/xpenguins-2.2-r1.ebuild,v 1.6 2015/02/06 22:03:31 tupone Exp $
+EAPI=5
 inherit games
 
 THEMES_VERSION="1.0"
@@ -20,9 +20,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r ../themes/ || die "doins failed"
+	doins -r ../themes/
 	prepgamesdirs
 }

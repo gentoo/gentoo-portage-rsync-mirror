@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgame-gtk2/xgame-gtk2-2.0.2.ebuild,v 1.5 2007/01/26 18:37:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgame-gtk2/xgame-gtk2-2.0.2.ebuild,v 1.6 2015/02/06 22:12:31 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="Run games in a separate X session"
@@ -17,7 +18,7 @@ RDEPEND="dev-lang/perl
 	>=dev-perl/gtk2-perl-1.040"
 
 src_install() {
-	dogamesbin xgame-gtk2 || die "dogamesbin failed"
+	dogamesbin xgame-gtk2
 	dodoc README
 	prepgamesdirs
 }

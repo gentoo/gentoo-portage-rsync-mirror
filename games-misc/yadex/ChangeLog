@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/yadex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/ChangeLog,v 1.9 2009/08/05 02:53:29 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/ChangeLog,v 1.10 2015/02/06 22:15:03 tupone Exp $
+
+  06 Feb 2015; Tupone Alfredo <tupone@gentoo.org> yadex-1.7.0.ebuild:
+  EAPI 5
 
   05 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> yadex-1.7.0.ebuild,
   +files/yadex-1.7.0-elif.patch:

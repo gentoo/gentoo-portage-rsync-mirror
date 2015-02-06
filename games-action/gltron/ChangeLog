@@ -1,6 +1,12 @@
 # ChangeLog for games-action/gltron
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.18 2015/01/10 19:46:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/gltron/ChangeLog,v 1.19 2015/02/06 22:03:22 mr_bones_ Exp $
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gltron-0.70-gcc49.patch, files/gltron-0.70-configure.patch,
+  files/gltron-0.70-debian.patch, files/gltron-0.70-prototypes.patch,
+  gltron-0.70-r1.ebuild:
+  add patch from Martin Väth to build with newer toolchaing (bug #537336)
 
   10 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> gltron-0.70-r1.ebuild:
   EAPI=5

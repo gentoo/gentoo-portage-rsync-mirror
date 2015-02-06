@@ -1,6 +1,9 @@
 # ChangeLog for games-util/xgame-gtk2
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgame-gtk2/ChangeLog,v 1.4 2006/01/03 23:14:23 metalgod Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgame-gtk2/ChangeLog,v 1.5 2015/02/06 22:12:31 mr_bones_ Exp $
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> xgame-gtk2-2.0.2.ebuild:
+  EAPI=5
 
   03 Jan 2006; Luis Medinas <metalgod@gentoo.org> xgame-gtk2-2.0.2.ebuild:
   Added ~amd64 keyword.
@@ -17,4 +20,3 @@
   04 Jan 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
   +xgame-gtk2-2.0.2.ebuild:
   Initial import. Ebuild submitted by Nexu <nexu@pingzero.com> in bug #66715
-

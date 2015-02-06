@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/xcruiser
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/ChangeLog,v 1.7 2012/11/11 02:38:04 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/xcruiser/ChangeLog,v 1.8 2015/02/06 22:01:36 tupone Exp $
+
+  06 Feb 2015; Tupone Alfredo <tupone@gentoo.org> xcruiser-0.30.ebuild:
+  EAPI 5
 
   11 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> xcruiser-0.30.ebuild:
   respect more flags with patch from hasufell (bug #442396)
