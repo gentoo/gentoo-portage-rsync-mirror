@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libavc1394
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.52 2014/06/18 20:50:22 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.53 2015/02/06 18:57:32 jer Exp $
+
+  06 Feb 2015; Jeroen Roovers <jer@gentoo.org> libavc1394-0.5.3.ebuild,
+  libavc1394-0.5.4-r1.ebuild, libavc1394-0.5.4.ebuild:
+  Drop old website (bug #539142 by Elton Carvalho).
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libavc1394-0.5.4-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
