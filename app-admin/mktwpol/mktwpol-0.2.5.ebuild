@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/mktwpol-0.2.3.ebuild,v 1.1 2014/02/15 22:15:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/mktwpol-0.2.5.ebuild,v 1.1 2015/02/06 11:54:51 nimiux Exp $
 
 EAPI=5
 
@@ -30,5 +30,17 @@ pkg_postinst() {
 	elog
 	elog "Maintenance of tripwire as packages are added and/or deleted ..."
 	elog " - Run: \`mktwpol.sh -u\` to update tripwire policy and database"
+	elog
+	elog "Mktwpol is packaged with multiple policy-rules-generating files."
+	elog "The default \"rules file\" is installed in /etc/tripwire"
+	elog "Alternatives are installed in /usr/share/doc/${P}"
+	elog "To use an alternative \"rules file\" ..."
+	elog "copy it to /etc/tripwire, uncompress it, and \`touch\` it ..."
+	elog
+	elog "\`cp /usr/share/doc/${P}/mktwpol*.rules.bz2 /etc/tripwire\`"
+	elog "\`bunzip2 /etc/tripwire/mktwpol*.rules.bz2\`"
+	elog
+	elog "mktwpol.sh uses the rules file with the most recent date."
+	elog "Use \`touch\` to choose between multiple rules files."
 	elog
 }
