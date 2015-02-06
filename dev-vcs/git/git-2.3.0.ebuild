@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.2.1.ebuild,v 1.2 2014/12/31 08:44:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-2.3.0.ebuild,v 1.1 2015/02/06 16:58:57 polynomial-c Exp $
 
 EAPI=5
 
@@ -125,24 +125,24 @@ exportmakeopts() {
 	local myopts
 
 	if use blksha1 ; then
-		myopts="${myopts} BLK_SHA1=YesPlease"
+		myopts+=" BLK_SHA1=YesPlease"
 	elif use ppcsha1 ; then
-		myopts="${myopts} PPC_SHA1=YesPlease"
+		myopts+=" PPC_SHA1=YesPlease"
 	fi
 
 	if use curl ; then
-		use webdav || myopts="${myopts} NO_EXPAT=YesPlease"
+		use webdav || myopts+=" NO_EXPAT=YesPlease"
 	else
-		myopts="${myopts} NO_CURL=YesPlease"
+		myopts+=" NO_CURL=YesPlease"
 	fi
 
 	# broken assumptions, because of broken build system ...
-	myopts="${myopts} NO_FINK=YesPlease NO_DARWIN_PORTS=YesPlease"
-	myopts="${myopts} INSTALL=install TAR=tar"
-	myopts="${myopts} SHELL_PATH=${EPREFIX}/bin/sh"
-	myopts="${myopts} SANE_TOOL_PATH="
-	myopts="${myopts} OLD_ICONV="
-	myopts="${myopts} NO_EXTERNAL_GREP="
+	myopts+=" NO_FINK=YesPlease NO_DARWIN_PORTS=YesPlease"
+	myopts+=" INSTALL=install TAR=tar"
+	myopts+=" SHELL_PATH=${EPREFIX}/bin/sh"
+	myopts+=" SANE_TOOL_PATH="
+	myopts+=" OLD_ICONV="
+	myopts+=" NO_EXTERNAL_GREP="
 
 	# For svn-fe
 	extlibs="-lz -lssl ${S}/xdiff/lib.a $(usex threads -lpthread '')"
@@ -151,53 +151,53 @@ exportmakeopts() {
 	sed -i -e '/\/usr\/local/s/BASIC_/#BASIC_/' Makefile
 
 	use iconv \
-		|| myopts="${myopts} NO_ICONV=YesPlease"
+		|| myopts+=" NO_ICONV=YesPlease"
 	use nls \
-		|| myopts="${myopts} NO_GETTEXT=YesPlease"
+		|| myopts+=" NO_GETTEXT=YesPlease"
 	use tk \
-		|| myopts="${myopts} NO_TCLTK=YesPlease"
+		|| myopts+=" NO_TCLTK=YesPlease"
 	use pcre \
-		&& myopts="${myopts} USE_LIBPCRE=yes" \
-		&& extlibs="${extlibs} -lpcre"
+		&& myopts+=" USE_LIBPCRE=yes" \
+		&& extlibs+=" -lpcre"
 	use perl \
-		&& myopts="${myopts} INSTALLDIRS=vendor" \
-		|| myopts="${myopts} NO_PERL=YesPlease"
+		&& myopts+=" INSTALLDIRS=vendor" \
+		|| myopts+=" NO_PERL=YesPlease"
 	use python \
-		|| myopts="${myopts} NO_PYTHON=YesPlease"
+		|| myopts+=" NO_PYTHON=YesPlease"
 	use subversion \
-		|| myopts="${myopts} NO_SVN_TESTS=YesPlease"
+		|| myopts+=" NO_SVN_TESTS=YesPlease"
 	use threads \
-		&& myopts="${myopts} THREADED_DELTA_SEARCH=YesPlease" \
-		|| myopts="${myopts} NO_PTHREADS=YesPlease"
+		&& myopts+=" THREADED_DELTA_SEARCH=YesPlease" \
+		|| myopts+=" NO_PTHREADS=YesPlease"
 	use cvs \
-		|| myopts="${myopts} NO_CVS=YesPlease"
+		|| myopts+=" NO_CVS=YesPlease"
 # Disabled until ~m68k-mint can be keyworded again
 #	if [[ ${CHOST} == *-mint* ]] ; then
-#		myopts="${myopts} NO_MMAP=YesPlease"
-#		myopts="${myopts} NO_IPV6=YesPlease"
-#		myopts="${myopts} NO_STRLCPY=YesPlease"
-#		myopts="${myopts} NO_MEMMEM=YesPlease"
-#		myopts="${myopts} NO_MKDTEMP=YesPlease"
-#		myopts="${myopts} NO_MKSTEMPS=YesPlease"
+#		myopts+=" NO_MMAP=YesPlease"
+#		myopts+=" NO_IPV6=YesPlease"
+#		myopts+=" NO_STRLCPY=YesPlease"
+#		myopts+=" NO_MEMMEM=YesPlease"
+#		myopts+=" NO_MKDTEMP=YesPlease"
+#		myopts+=" NO_MKSTEMPS=YesPlease"
 #	fi
 	if [[ ${CHOST} == ia64-*-hpux* ]]; then
-		myopts="${myopts} NO_NSEC=YesPlease"
+		myopts+=" NO_NSEC=YesPlease"
 	fi
 	if [[ ${CHOST} == *-*-aix* ]]; then
-		myopts="${myopts} NO_FNMATCH_CASEFOLD=YesPlease"
+		myopts+=" NO_FNMATCH_CASEFOLD=YesPlease"
 	fi
 	if [[ ${CHOST} == *-solaris* ]]; then
-		myopts="${myopts} NEEDS_LIBICONV=YesPlease"
+		myopts+=" NEEDS_LIBICONV=YesPlease"
 	fi
 
 	has_version '>=app-text/asciidoc-8.0' \
-		&& myopts="${myopts} ASCIIDOC8=YesPlease"
-	myopts="${myopts} ASCIIDOC_NO_ROFF=YesPlease"
+		&& myopts+=" ASCIIDOC8=YesPlease"
+	myopts+=" ASCIIDOC_NO_ROFF=YesPlease"
 
 	# Bug 290465:
 	# builtin-fetch-pack.c:816: error: 'struct stat' has no member named 'st_mtim'
 	[[ "${CHOST}" == *-uclibc* ]] && \
-		myopts="${myopts} NO_NSEC=YesPlease"
+		myopts+=" NO_NSEC=YesPlease"
 
 	export MY_MAKEOPTS="${myopts}"
 	export EXTLIBS="${extlibs}"
@@ -222,7 +222,7 @@ src_unpack() {
 
 src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-2.0.0-r2-optional-cvs.patch
+	epatch "${FILESDIR}"/git-2.2.2-optional-cvs.patch
 
 	# install mediawiki perl modules also in vendor_dir
 	# hack, needs better upstream solution
