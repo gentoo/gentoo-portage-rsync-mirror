@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/eigen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.87 2014/10/29 09:34:32 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.88 2015/02/06 18:19:16 kensington Exp $
+
+*eigen-3.2.4 (06 Feb 2015)
+
+  06 Feb 2015; Michael Palimaka <kensington@gentoo.org> +eigen-3.2.4.ebuild:
+  Version bump wrt bug #491796.
 
   29 Oct 2014; Agostino Sarubbo <ago@gentoo.org> eigen-3.1.3.ebuild:
   Stable for sparc, wrt bug #511392
