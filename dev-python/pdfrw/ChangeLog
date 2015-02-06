@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pdfrw
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pdfrw/ChangeLog,v 1.7 2014/10/14 14:57:41 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pdfrw/ChangeLog,v 1.8 2015/02/06 19:17:53 jer Exp $
+
+  06 Feb 2015; Jeroen Roovers <jer@gentoo.org> pdfrw-0.1.ebuild:
+  Marked ~hppa (bug #538802).
 
   14 Oct 2014; Tobias Klausmann <klausman@gentoo.org> pdfrw-0.1.ebuild:
   Keyworded on alpha, bug 515222

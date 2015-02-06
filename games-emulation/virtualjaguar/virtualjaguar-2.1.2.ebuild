@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-2.1.2.ebuild,v 1.1 2014/10/15 03:50:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/virtualjaguar-2.1.2.ebuild,v 1.3 2015/02/06 19:22:00 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils qt4-r2 games
+inherit eutils qt4-r2 gnome2-utils games
 
 DESCRIPTION="an Atari Jaguar emulator"
 HOMEPAGE="http://www.icculus.org/virtualjaguar/"
@@ -27,6 +27,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}
 
 src_prepare() {
+	sed -i \
+		-e '/^Categories/s/$/;/' \
+		virtualjaguar.desktop || die
 	eqmake4 virtualjaguar.pro -o makefile-qt
 }
 
@@ -39,7 +42,14 @@ src_install() {
 	dogamesbin ${PN}
 	dodoc README docs/{TODO,WHATSNEW}
 	doman docs/virtualjaguar.1
+	domenu virtualjaguar.desktop
+	newicon -s 128 res/vj-icon.png ${PN}.png
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {
@@ -49,4 +59,9 @@ pkg_postinst() {
 	elog
 	elog "The ROM extension supported by ${PN} is .j64, "
 	elog ".jag files will be interpreted as Jaguar Server executables."
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/virtualjaguar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.18 2014/12/21 14:22:14 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.20 2015/02/06 19:22:00 mr_bones_ Exp $
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  virtualjaguar-2.1.2.ebuild:
+  ws
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  virtualjaguar-2.1.2.ebuild:
+  install desktop entry and icon
 
   21 Dec 2014; Michał Górny <mgorny@gentoo.org> -virtualjaguar-1.0.7.ebuild,
   virtualjaguar-1.0.7-r1.ebuild:
