@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/lucidlife/lucidlife-0.9.2.ebuild,v 1.6 2012/05/03 03:29:41 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/lucidlife/lucidlife-0.9.2.ebuild,v 1.7 2015/02/06 21:28:20 tupone Exp $
 
-EAPI=2
+EAPI=5
 
 inherit autotools eutils games
 
@@ -32,9 +32,9 @@ src_install() {
 	emake install \
 		desktopdir=/usr/share/applications \
 		pixmapdir=/usr/share/pixmaps \
-		DESTDIR="${D}" || die "install failed"
+		DESTDIR="${D}"
 
 	prepgamesdirs
 
-	dodoc AUTHORS ChangeLog NEWS README TODO || die
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

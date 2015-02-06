@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.9.0-r1.ebuild,v 1.1 2014/11/05 19:37:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.9.0-r1.ebuild,v 1.2 2015/02/06 21:01:28 mr_bones_ Exp $
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
@@ -30,7 +30,6 @@ REQUIRED_USE="threads? ( ^^ ( boost poco tbb ) )
 RESTRICT="test" #139905
 
 RDEPEND="
-	dev-libs/tinyxml
 	media-libs/freetype:2
 	virtual/opengl
 	virtual/glu
@@ -49,6 +48,7 @@ RDEPEND="
 		poco? ( dev-libs/poco )
 		tbb? ( dev-cpp/tbb )
 	)
+	tools? ( dev-libs/tinyxml[stl] )
 	zip? ( sys-libs/zlib dev-libs/zziplib )"
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
@@ -63,6 +63,9 @@ src_prepare() {
 	sed -i \
 		-e '/CONFIGURATIONS/s:CONFIGURATIONS Release.*::' \
 		CMake/Utils/OgreConfigTargets.cmake || die
+
+	# make sure we're not using the included tinyxml
+	rm -f Tools/XMLConverter/{include,src}/tiny*.*
 
 	# Fix some path issues
 	epatch "${FILESDIR}/${P}-remove_resource_path_to_bindir.patch" \

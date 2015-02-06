@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/virtualjaguar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.21 2015/02/06 19:43:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.22 2015/02/06 21:09:24 mr_bones_ Exp $
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  virtualjaguar-2.1.2-r1.ebuild:
+  move eqmake4 to src_configure
 
 *virtualjaguar-2.1.2-r1 (06 Feb 2015)
 
