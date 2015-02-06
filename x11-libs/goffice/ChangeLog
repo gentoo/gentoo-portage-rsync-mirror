@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.163 2015/01/24 12:31:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.164 2015/02/06 12:40:53 pacho Exp $
+
+*goffice-0.10.20 (06 Feb 2015)
+
+  06 Feb 2015; Pacho Ramos <pacho@gentoo.org> +goffice-0.10.20.ebuild:
+  Version bump
 
 *goffice-0.10.19 (24 Jan 2015)
 
