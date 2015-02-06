@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.5 2015/01/05 17:03:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.6 2015/02/06 05:37:42 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -17,14 +17,14 @@ IUSE=""
 DEPEND="dev-python/pygame
 	media-libs/libvorbis
 	media-libs/sdl-mixer"
+RDEPEND=${DEPEND}
 PDEPEND="games-arcade/pydance-songs"
 
 src_prepare() {
 	sed -i \
 		-e "s:1\.0\.1:1.0.2:" \
 		-e "s:/etc/:${GAMES_SYSCONFDIR}/:" \
-		pydance.py constants.py docs/man/pydance.6 \
-		|| die "sed failed"
+		pydance.py constants.py docs/man/pydance.6 || die
 }
 
 src_install() {
@@ -32,7 +32,7 @@ src_install() {
 
 	insinto "${dir}"
 	doins *.py
-	cp -R CREDITS {sound,images,utils,themes} "${D}${dir}/" || die "cp failed"
+	cp -R CREDITS {sound,images,utils,themes} "${D}${dir}/" || die
 
 	insinto "${GAMES_SYSCONFDIR}"
 	newins pydance.posix.cfg pydance.cfg
