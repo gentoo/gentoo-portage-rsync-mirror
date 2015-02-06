@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.6.ebuild,v 1.4 2012/02/20 17:57:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/stormbaancoureur-2.1.6.ebuild,v 1.5 2015/02/06 22:41:48 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Simulated obstacle course for automobiles"
@@ -20,6 +20,7 @@ DEPEND="virtual/opengl
 	>=dev-games/ode-0.8
 	>=media-libs/plib-1.8.4
 	media-libs/alsa-lib"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${P}/src-${PN}
 
@@ -29,9 +30,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r images/ models/ sounds/ shaders/ || die
+	doins -r images/ models/ sounds/ shaders/
 	dodoc JOYSTICKS README TODO
 	make_desktop_entry ${PN} "Stormbaan Coureur"
 	prepgamesdirs

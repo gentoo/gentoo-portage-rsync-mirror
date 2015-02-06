@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/stormbaancoureur
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/ChangeLog,v 1.20 2012/05/17 06:14:09 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/stormbaancoureur/ChangeLog,v 1.21 2015/02/06 22:41:48 mr_bones_ Exp $
+
+  06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  stormbaancoureur-2.1.6.ebuild:
+  EAPI=5
 
   17 May 2012; Michael Sterrett <mr_bones_@gentoo.org>
   files/stormbaancoureur-2.1.6-gentoo.patch:
@@ -105,4 +109,3 @@
   24 Aug 2007; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +stormbaancoureur-1.5.2.ebuild:
   package renamed from sturmbahnfahrer
-

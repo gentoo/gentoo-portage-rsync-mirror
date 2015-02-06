@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.12 2012/07/21 16:23:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/monkey-bubble-0.4.0.ebuild,v 1.13 2015/02/06 22:44:25 mr_bones_ Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils gnome2
 
 DESCRIPTION="A Puzzle Bobble clone"
@@ -34,10 +34,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-noesound.patch \
 		"${FILESDIR}"/${P}-glib-single-include.patch
 	# bug 260895
-	sed -i \
-		-e 's/ -Werror//' \
-		$(find . -name Makefile.am) \
-		|| die "sed failed"
+	sed -i -e 's/ -Werror//' $(find . -name Makefile.am) || die
 	AT_NOELIBTOOLIZE=yes eautoreconf
 	gnome2_src_prepare
 }
