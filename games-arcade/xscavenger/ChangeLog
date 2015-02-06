@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/xscavenger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xscavenger/ChangeLog,v 1.9 2015/01/06 09:38:29 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xscavenger/ChangeLog,v 1.10 2015/02/06 13:42:44 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xscavenger-1.4.4.ebuild:
+  Stable for amd64, wrt bug #538962
 
   06 Jan 2015; Tupone Alfredo <tupone@gentoo.org> xscavenger-1.4.4.ebuild:
   EAPI 5
@@ -35,4 +38,3 @@
   07 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +files/1.4.4-gentoo.patch, +xscavenger-1.4.4.ebuild:
   Initial commit - ebuild and patch supplied by Elias Kunnas via bug #58371
-

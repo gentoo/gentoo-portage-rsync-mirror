@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/xzip
 # Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.12 2015/02/06 11:17:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.13 2015/02/06 13:42:29 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xzip-1.8.2-r2.ebuild:
+  Stable for amd64, wrt bug #539082
 
   06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> xzip-1.8.2-r2.ebuild:
   need RDEPEND

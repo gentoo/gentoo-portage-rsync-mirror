@@ -1,6 +1,10 @@
 # ChangeLog for games-action/orbital-eunuchs-sniper
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.13 2015/02/06 10:00:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.14 2015/02/06 13:41:19 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  orbital-eunuchs-sniper-1.30.ebuild:
+  Stable for amd64, wrt bug #539042
 
   06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   orbital-eunuchs-sniper-1.30.ebuild:

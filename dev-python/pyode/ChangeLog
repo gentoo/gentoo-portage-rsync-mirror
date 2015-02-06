@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.22 2015/02/05 04:07:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.23 2015/02/06 13:40:29 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  pyode-1.2.0_p20100322-r1.ebuild:
+  Stable for amd64, wrt bug #538880
 
   05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   pyode-1.2.0_p20100322-r1.ebuild:

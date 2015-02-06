@@ -3,10 +3,10 @@ DEPEND=>=dev-lang/lua-5.1 media-libs/libsdl[joystick,video] media-libs/libvorbis
 DESCRIPTION=Fast 2D tank arcade game with multiplayer and split-screen modes
 EAPI=5
 HOMEPAGE=http://btanks.sourceforge.net/
-KEYWORDS=~amd64 x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/lua-5.1 media-libs/libsdl[joystick,video] media-libs/libvorbis virtual/opengl dev-libs/expat media-libs/smpeg media-libs/sdl-image[jpeg,png] media-libs/sdl-gfx games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/btanks/btanks-0.9.8083.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=4a68e391c9d190c5c40c299ef8d29984
+_md5_=bb6ca280fcd9a871fa766c440fde3c04

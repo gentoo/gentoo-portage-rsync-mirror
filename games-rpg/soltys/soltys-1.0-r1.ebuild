@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/soltys/soltys-1.0-r1.ebuild,v 1.1 2014/12/30 05:43:42 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/soltys/soltys-1.0-r1.ebuild,v 1.2 2015/02/06 13:41:54 ago Exp $
 
 EAPI=5
 inherit unpacker eutils games
@@ -15,7 +15,7 @@ SRC_URI="linguas_en? ( mirror://sourceforge/scummvm/${PN}-en-v${PV}.zip )
 
 LICENSE="Soltys"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="linguas_en linguas_es linguas_pl"
 
 RDEPEND=">=games-engines/scummvm-1.5"

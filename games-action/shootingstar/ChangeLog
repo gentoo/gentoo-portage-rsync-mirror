@@ -1,6 +1,9 @@
 # ChangeLog for games-action/shootingstar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.9 2015/02/06 10:02:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.10 2015/02/06 13:41:29 ago Exp $
+
+  06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> shootingstar-1.2.0.ebuild:
+  Stable for amd64, wrt bug #539046
 
   06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   shootingstar-1.2.0.ebuild:
