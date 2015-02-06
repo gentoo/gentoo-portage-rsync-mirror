@@ -18,8 +18,8 @@ RDEPEND="media-libs/libsdl[joystick,opengl,sound,video]
 	sys-libs/zlib
 	virtual/opengl
 	dev-qt/qtcore:4
-	dev-qt/qtgui:4
-	dev-qt/qtopengl:4
+	dev-qt/qtgui:4[-egl]
+	dev-qt/qtopengl:4[-egl]
 	dev-libs/libcdio"
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.4"
@@ -30,6 +30,10 @@ src_prepare() {
 	eqmake4 virtualjaguar.pro -o makefile-qt
 }
 
+src_configure() {
+	:
+}
+
 src_compile() {
 	emake -j1 libs
 	emake
@@ -37,6 +41,8 @@ src_compile() {
 
 src_install() {
 	dogamesbin ${PN}
+	newicon "res/vj-icon.png" "${PN}.png"
+	domenu "${S}/${PN}.desktop"
 	dodoc README docs/{TODO,WHATSNEW}
 	doman docs/virtualjaguar.1
 	prepgamesdirs
