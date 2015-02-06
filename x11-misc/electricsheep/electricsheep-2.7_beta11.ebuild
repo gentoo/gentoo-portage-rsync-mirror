@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.11 2014/01/21 02:19:38 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.12 2015/02/06 15:52:12 aballier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic autotools
@@ -37,7 +37,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-gnome.patch \
 		"${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${PN}-ffmpeg.patch \
-		"${FILESDIR}"/${P}-ffmpeg1.patch
+		"${FILESDIR}"/${P}-ffmpeg1.patch \
+		"${FILESDIR}"/${P}-ffmpeg2.patch
 	eautoreconf
 }
 

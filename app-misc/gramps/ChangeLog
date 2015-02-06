@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gramps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.167 2014/12/02 21:15:14 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.169 2015/02/06 15:47:12 pacho Exp $
+
+  06 Feb 2015; Pacho Ramos <pacho@gentoo.org> -gramps-3.4.4.ebuild,
+  -gramps-3.4.5.ebuild:
+  Drop old
+
+  06 Feb 2015; Pacho Ramos <pacho@gentoo.org> gramps-3.4.5-r1.ebuild:
+  amd64/x86 stable, bug #531482
 
 *gramps-3.4.5-r1 (02 Dec 2014)
 
