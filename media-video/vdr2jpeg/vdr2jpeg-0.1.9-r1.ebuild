@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.9-r1.ebuild,v 1.1 2014/05/18 10:17:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.9-r1.ebuild,v 1.2 2015/02/06 20:25:39 hd_brummy Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/ffmpeg"

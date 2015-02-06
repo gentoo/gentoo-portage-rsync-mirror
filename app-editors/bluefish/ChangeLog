@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.93 2015/01/03 09:43:08 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.94 2015/02/06 20:28:47 hanno Exp $
+
+  06 Feb 2015; <hanno@gentoo.org> metadata.xml:
+  Reassign to maintainer-needed.
 
 *bluefish-2.2.6 (03 Jan 2015)
 
