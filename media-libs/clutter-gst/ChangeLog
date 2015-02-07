@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/clutter-gst
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.59 2015/01/26 14:23:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.60 2015/02/07 12:23:15 pacho Exp $
+
+  07 Feb 2015; Pacho Ramos <pacho@gentoo.org> -clutter-gst-1.6.0-r1.ebuild,
+  -files/clutter-gst-1.6.0-GL_TEXTURE_2D.patch,
+  -files/clutter-gst-1.6.0-doc-fixes.patch,
+  -files/clutter-gst-1.6.0-glint.patch, -files/clutter-gst-1.6.0-gluint.patch:
+  Drop old
 
 *clutter-gst-2.0.14 (26 Jan 2015)
 

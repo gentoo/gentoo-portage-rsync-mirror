@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter-gtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.59 2014/12/19 13:39:50 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.60 2015/02/07 12:24:19 pacho Exp $
+
+  07 Feb 2015; Pacho Ramos <pacho@gentoo.org> -clutter-gtk-1.5.2.ebuild:
+  Drop old
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> clutter-gtk-1.6.0.ebuild:
   amd64 stable, bug 529964
