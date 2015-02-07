@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r7.ebuild,v 1.5 2015/02/05 22:53:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r7.ebuild,v 1.6 2015/02/07 20:38:02 floppym Exp $
 
 EAPI=5
 
@@ -104,7 +104,10 @@ DEPEND="${RDEPEND}
 		dev-libs/libisoburn
 		app-emulation/qemu
 	)
-	themes? ( app-arch/unzip )
+	themes? (
+		app-arch/unzip
+		media-libs/freetype:2
+	)
 "
 RDEPEND+="
 	kernel_linux? (

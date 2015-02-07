@@ -28,5 +28,6 @@
 		<pkg>sys-boot/grub:2</pkg> by renaming all programs.
 	</flag>
 	<flag name="themes">Build and install GRUB themes (starfield)</flag>
+	<flag name="truetype">Build and install grub-mkfont conversion utility</flag>
   </use>
 </pkgmetadata>
