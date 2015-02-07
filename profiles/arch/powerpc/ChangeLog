@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.309 2015/02/01 14:57:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.310 2015/02/07 10:42:37 hwoarang Exp $
+
+  07 Feb 2015; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Mask app-emulation/lxc cgmanager. Bug #539208
 
   01 Feb 2015; Michael Palimaka <kensington@gentoo.org> package.mask:
   Fix invalid atom.

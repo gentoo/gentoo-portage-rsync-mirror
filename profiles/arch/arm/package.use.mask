@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.241 2015/01/25 15:42:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.242 2015/02/07 10:41:19 hwoarang Exp $
+
+# Markos Chandras <hwoarang@gentoo.org> (07 Feb 2015)
+# app-admin/cgmanager misses ARM keyword. Bug #539208
+app-emulation/lxc cgmanager
 
 # Markus Meier <maekke@gentoo.org> (17 Jan 2015)
 # Unkeyworded deps, bug #536226
