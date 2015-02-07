@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.258 2014/11/08 18:24:47 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.260 2015/02/07 01:00:51 williamh Exp $
+
+  07 Feb 2015; William Hubbs <williamh@gentoo.org> files/dhcpd.init5:
+  typo fix
+
+  07 Feb 2015; William Hubbs <williamh@gentoo.org> files/dhcpd.init5:
+  Fix dhcpd init script if you are running dhcpd in a chroot with
+  >=openrc-0.13.9. This should be backward compatible as well, thanks to poly-c
+  for pointing it out.
 
 *dhcp-4.3.1 (08 Nov 2014)
 
