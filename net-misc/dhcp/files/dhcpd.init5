@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init5,v 1.4 2015/02/07 01:00:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init5,v 1.5 2015/02/07 07:51:39 polynomial-c Exp $
 
 extra_commands="configtest"
 
@@ -9,7 +9,7 @@ extra_commands="configtest"
 
 depend() {
 	need net
-	use logger dns 
+	use logger dns #@slapd@
 }
 
 get_var() {

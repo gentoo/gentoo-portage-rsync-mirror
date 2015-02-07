@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.2.0.ebuild,v 1.1 2014/05/22 08:48:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.3.6.ebuild,v 1.1 2015/02/07 07:56:16 jlec Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	${PYTHON_DEPS}
+	dev-python/Numdifftools[${PYTHON_USEDEP}]
 	dev-python/matplotlib[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/wxpython:${WX_GTK_VER}[${PYTHON_USEDEP}]
@@ -30,7 +31,7 @@ RDEPEND="
 	sci-chemistry/pymol[${PYTHON_USEDEP}]
 	sci-chemistry/vmd
 	>=sci-libs/bmrblib-1.0.3[${PYTHON_USEDEP}]
-	>=sci-libs/minfx-1.0.5[${PYTHON_USEDEP}]
+	>=sci-libs/minfx-1.0.11[${PYTHON_USEDEP}]
 	sci-libs/scipy[${PYTHON_USEDEP}]
 	sci-visualization/grace
 	sci-visualization/opendx
@@ -43,10 +44,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	local png
-	rm -rf minfx bmrblib || die
-	epatch \
-		"${FILESDIR}"/${PN}-3.0.1-gentoo.patch
+	rm -rf minfx bmrblib extern/numdifftools || die
 	tc-export CC
 }
 
@@ -60,7 +58,7 @@ src_test() {
 }
 
 src_install() {
-	dodoc README docs/{CHANGES,COMMITTERS,JOBS,relax.pdf,prompt_screenshot.txt}
+	dodoc README docs/{CHANGES,COMMITTERS,JOBS,relax.pdf}
 
 	python_moduleinto ${PN}
 	python_domodule *
