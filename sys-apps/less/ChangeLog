@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/less
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.191 2014/12/15 09:35:47 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.192 2015/02/07 08:32:42 polynomial-c Exp $
+
+*less-474 (07 Feb 2015)
+
+  07 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> -less-470.ebuild,
+  +less-474.ebuild:
+  Version bump. Removed old.
 
 *less-471 (15 Dec 2014)
 

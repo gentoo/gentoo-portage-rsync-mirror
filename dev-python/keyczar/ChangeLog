@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/keyczar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/keyczar/ChangeLog,v 1.1 2014/02/22 22:16:23 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/keyczar/ChangeLog,v 1.2 2015/02/07 08:36:28 idella4 Exp $
+
+*keyczar-0.715 (07 Feb 2015)
+
+  07 Feb 2015; Ian Delaney <idella4@gentoo.org> +keyczar-0.715.ebuild:
+  bump
 
 *keyczar-0.71c (22 Feb 2014)
 
   22 Feb 2014; Tim Harder <radhermit@gentoo.org> +keyczar-0.71c.ebuild,
   +metadata.xml:
   Initial import (bug #345313).
-
