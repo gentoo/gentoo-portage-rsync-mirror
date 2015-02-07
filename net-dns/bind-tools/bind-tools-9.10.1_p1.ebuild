@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.10.1_p1.ebuild,v 1.1 2014/12/11 07:05:51 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.10.1_p1.ebuild,v 1.2 2015/02/07 12:34:32 idl0r Exp $
 
 EAPI="5"
 
@@ -67,6 +67,7 @@ src_configure() {
 		--localstatedir=/var \
 		--without-python \
 		--disable-seccomp \
+		--without-libjson \
 		$(use_enable ipv6) \
 		$(use_with idn) \
 		$(use_with ssl openssl "${EPREFIX}"/usr) \

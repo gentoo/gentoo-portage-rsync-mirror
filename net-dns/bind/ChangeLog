@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.525 2014/12/28 16:17:11 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.526 2015/02/07 12:31:55 idl0r Exp $
+
+  07 Feb 2015; Christian Ruppert <idl0r@gentoo.org> bind-9.10.1_p1.ebuild,
+  metadata.xml:
+  Fix json-c automagic, bug 525362
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> bind-9.9.5-r3.ebuild,
   bind-9.10.1_p1.ebuild:
