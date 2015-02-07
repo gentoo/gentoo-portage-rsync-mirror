@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/grabcartoons
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.11 2014/11/11 23:28:53 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/ChangeLog,v 1.12 2015/02/07 11:34:12 tamiko Exp $
+
+  07 Feb 2015; Matthias Maier <tamiko@gentoo.org>
+  grabcartoons-2.8.4_p20141112.ebuild, grabcartoons-9999.ebuild:
+  update homepage
 
 *grabcartoons-9999 (11 Nov 2014)
 *grabcartoons-2.8.4_p20141112 (11 Nov 2014)

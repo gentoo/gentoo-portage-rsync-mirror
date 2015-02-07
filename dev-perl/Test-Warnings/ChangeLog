@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warnings
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.17 2015/01/30 11:39:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warnings/ChangeLog,v 1.18 2015/02/07 11:37:44 jer Exp $
+
+  07 Feb 2015; Jeroen Roovers <jer@gentoo.org> Test-Warnings-0.16.0.ebuild:
+  Stable for HPPA (bug #529342).
 
   30 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Test-Warnings-0.16.0.ebuild:
   Add more prefix keywords

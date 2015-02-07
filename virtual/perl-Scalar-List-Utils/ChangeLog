@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Scalar-List-Utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.75 2014/07/21 19:28:39 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.76 2015/02/07 11:36:42 jer Exp $
+
+  07 Feb 2015; Jeroen Roovers <jer@gentoo.org>
+  perl-Scalar-List-Utils-1.350.0.ebuild:
+  Stable for HPPA (bug #529342).
 
 *perl-Scalar-List-Utils-1.270.0-r2 (21 Jul 2014)
 

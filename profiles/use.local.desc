@@ -2713,6 +2713,10 @@ games-board/pioneers:help - Enable gnome ingame help via scrollkeeper
 games-board/pysolfc:extra-cardsets - Install extra cardsets
 games-board/pysolfc:sound - Enable sound support using dev-python/pygame
 games-board/spider:athena - Enable athena widgets
+games-board/stockfish:armv7 - Build for armv7; enables PIE
+games-board/stockfish:general-32 - Generic unoptimized 32-bits build
+games-board/stockfish:general-64 - Generic unoptimized 64-bits build
+games-board/stockfish:optimize - Enable upstream -O3 optimizations (default enabled)
 games-board/xboard:default-font - Install the default font that xboard uses
 games-board/xboard:zippy - Enable experimental zippy client
 games-emulation/generator:sdlaudio - Enable SDL Audio

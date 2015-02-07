@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cgmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cgmanager/ChangeLog,v 1.1 2015/02/07 10:29:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cgmanager/ChangeLog,v 1.2 2015/02/07 11:43:21 hwoarang Exp $
+
+  07 Feb 2015; Markos Chandras <hwoarang@gentoo.org> cgmanager-0.35.ebuild:
+  Use correct license (LGPL-2.1)
 
 *cgmanager-0.35 (07 Feb 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/freedesktop-icon-theme
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/freedesktop-icon-theme/ChangeLog,v 1.10 2014/12/04 12:42:45 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/freedesktop-icon-theme/ChangeLog,v 1.11 2015/02/07 11:57:35 pacho Exp $
+
+  07 Feb 2015; Pacho Ramos <pacho@gentoo.org> freedesktop-icon-theme-0.ebuild:
+  x11-themes/mate-icon-theme also provides the icons
 
   04 Dec 2014; Manuel Rüger <mrueg@gentoo.org> freedesktop-icon-theme-0.ebuild:
   Add dependency on kde-apps/oxygen-icons.

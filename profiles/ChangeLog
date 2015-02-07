@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9762 2015/02/07 11:24:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9763 2015/02/07 11:51:07 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Feb 2015; Ben de Groot <yngwin@gentoo.org> base/package.use.mask:
+  p.use.mask armv7 on games-board/stockfish
 
   07 Feb 2015; Markos Chandras <hwoarang@gentoo.org> license_groups:
   Drop the GPL-2.1 from the license_groups. It has been removed from the tree

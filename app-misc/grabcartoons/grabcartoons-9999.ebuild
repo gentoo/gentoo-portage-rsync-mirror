@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/grabcartoons-9999.ebuild,v 1.1 2014/11/11 23:28:53 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/grabcartoons-9999.ebuild,v 1.2 2015/02/07 11:34:12 tamiko Exp $
 
 EAPI=5
 
 inherit eutils git-r3
 
 DESCRIPTION="Comic-summarizing utility"
-HOMEPAGE="http://grabcartoons.sourceforge.net/ https://github.com/zzamboni/grabcartoons"
+HOMEPAGE="http://zzamboni.org/grabcartoons"
 
 EGIT_REPO_URI="https://github.com/zzamboni/grabcartoons.git"
 
