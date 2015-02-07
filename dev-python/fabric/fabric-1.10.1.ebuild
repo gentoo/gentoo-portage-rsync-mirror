@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.10.0-r1.ebuild,v 1.2 2015/02/07 06:20:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/fabric-1.10.1.ebuild,v 1.1 2015/02/07 06:20:19 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -20,7 +20,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND="
-	>=dev-python/paramiko-1.10[${PYTHON_USEDEP}]"
+	>=dev-python/paramiko-1.10[${PYTHON_USEDEP}]
+"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
@@ -50,11 +51,6 @@ python_compile_all() {
 	if use doc; then
 		sphinx-build -b html -c sites/docs/ sites/docs/ sites/docs/html || die
 	fi
-}
-
-src_test() {
-	local DISTUTILS_NO_PARALLEL_BUILD=1
-	distutils-r1_src_test
 }
 
 python_test() {

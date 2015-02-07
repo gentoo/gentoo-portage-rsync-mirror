@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/mazesofmonad
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/mazesofmonad/ChangeLog,v 1.6 2014/11/25 23:16:19 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/mazesofmonad/ChangeLog,v 1.7 2015/02/07 06:23:14 mr_bones_ Exp $
+
+  07 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  mazesofmonad-1.0.9-r2.ebuild:
+  ws
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
