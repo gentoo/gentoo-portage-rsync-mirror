@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elasticsearch-py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elasticsearch-py/ChangeLog,v 1.1 2015/01/22 14:54:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elasticsearch-py/ChangeLog,v 1.2 2015/02/07 10:00:13 idella4 Exp $
+
+  07 Feb 2015; Ian Delaney <idella4@gentoo.org> elasticsearch-py-1.3.0.ebuild:
+  drop old impl
 
 *elasticsearch-py-1.3.0 (22 Jan 2015)
 
