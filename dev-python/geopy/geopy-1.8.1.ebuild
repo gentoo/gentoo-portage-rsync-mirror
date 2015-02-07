@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.6.1.ebuild,v 1.1 2014/12/24 10:32:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.8.1.ebuild,v 1.1 2015/02/07 07:29:44 idella4 Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]
 		dev-python/pylint[${PYTHON_USEDEP}] )
-	 doc? ( $(python_gen_cond_dep 'dev-python/sphinx[${PYTHON_USEDEP}]' python2_7)
+	doc? ( $(python_gen_cond_dep 'dev-python/sphinx[${PYTHON_USEDEP}]' python2_7)
 		>=dev-python/python-docs-2.7.6-r1:2.7 )"
 
 python_prepare_all() {
@@ -38,14 +38,16 @@ python_prepare_all() {
 
 	distutils-r1_python_prepare_all
 
-	# purge test folder to avoid file collisions
+	# prevent install of test folder to avoid file collisions
 	sed -e "s:find_packages():find_packages(exclude=['test','test.*']):" -i setup.py || die
 }
 
 python_test() {
-	# intermittent fails or errors caused by an apparent race condition. suite is fine
-	# test test_geocode attempts to connect the network and is excluded here
-	nosetests -e test_geocode || die "Tests failed under ${EPYTHON}"
+	# Ignore rogue class IGNFranceTestCase demanding elements beyond a normal testsuite
+	# i.e. "You should provide an api key and a username with a password"
+	# Cannot decipher how to skip or exclude this "context=IGNFranceTestCase"
+	# It appears it MAY stem from nose rather than geopy's suite
+	nosetests --verbose || die "Tests failed under ${EPYTHON}"
 }
 
 python_compile_all() {
