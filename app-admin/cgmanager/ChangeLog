@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/cgmanager
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cgmanager/ChangeLog,v 1.1 2015/02/07 10:29:22 hwoarang Exp $
+
+*cgmanager-0.35 (07 Feb 2015)
+
+  07 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +cgmanager-0.35.ebuild,
+  +files/cgmanager.initd, +files/cgproxy.initd, +metadata.xml:
+  Initial commit of cgmanager. Thanks to Fabian Henze and Yixun Lan on bug
+  #524846

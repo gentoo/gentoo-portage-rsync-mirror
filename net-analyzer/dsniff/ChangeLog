@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/dsniff
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.57 2014/03/14 19:23:53 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.58 2015/02/07 10:16:17 jer Exp $
+
+*dsniff-2.4_beta1-r7 (07 Feb 2015)
+
+  07 Feb 2015; Jeroen Roovers <jer@gentoo.org> +dsniff-2.4_beta1-r7.ebuild,
+  +files/2.4_beta1-macof-size-calculation.patch:
+  Add macof IPv4 packet size calculation fix by Jan Starke (bug #538462).
 
 *dsniff-2.4_beta1-r6 (14 Mar 2014)
 
