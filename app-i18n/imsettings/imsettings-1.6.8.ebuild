@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.5.0.ebuild,v 1.3 2015/02/07 13:41:34 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.6.8.ebuild,v 1.1 2015/02/07 13:39:09 naota Exp $
 
 EAPI=5
 
 inherit eutils autotools
 
 DESCRIPTION="Delivery framework for general Input Method configuration"
-HOMEPAGE="http://tagoh.github.com/imsettings/"
+HOMEPAGE="http://tagoh.bitbucket.org/imsettings/"
 SRC_URI="https://bitbucket.org/tagoh/imsettings/downloads/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
@@ -19,10 +19,10 @@ IUSE="doc gconf gtk3 qt4 static-libs xfconf"
 RESTRICT="test"
 
 RDEPEND=">=dev-libs/check-0.9.4
-	>=dev-libs/glib-2.26
+	>=dev-libs/glib-2.32
 	sys-apps/dbus
 	>=x11-libs/gtk+-2.12:2
-	>=x11-libs/libgxim-0.4.0
+	>=x11-libs/libgxim-0.5.0
 	>=x11-libs/libnotify-0.7
 	x11-libs/libX11
 	gconf? ( gnome-base/gconf )
@@ -47,13 +47,11 @@ src_prepare() {
 		sed -i -e 's:gtk+-3.0:dIsAbLe&:' configure || die
 	fi
 	if ! use qt4; then
-		sed -i -e 's:QtCore:dIsAbLe&:' configure || die
+		sed -i -e 's:use_qt="yes":use_qt="no":' configure || die
 	fi
 	if ! use xfconf; then
 		sed -i -e 's:libxfconf-0:dIsAbLe&:' configure || die
 	fi
-	epatch "${FILESDIR}"/${P}-gir-scanner.patch
-	eautoreconf
 }
 
 src_configure() {
