@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-53.1-r1.ebuild,v 1.1 2015/01/07 07:40:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-54.1-r1.ebuild,v 1.1 2015/02/07 17:47:06 dilfridge Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs autotools multilib-minimal
+inherit eutils flag-o-matic toolchain-funcs autotools multilib-minimal
 
 DESCRIPTION="International Components for Unicode"
 HOMEPAGE="http://www.icu-project.org/"
@@ -12,7 +12,7 @@ SRC_URI="http://download.icu-project.org/files/icu4c/${PV/_/}/icu4c-${PV//./_}-s
 
 LICENSE="BSD"
 
-SLOT="0/53"
+SLOT="0/54a"
 
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="debug doc examples static-libs"
@@ -25,22 +25,16 @@ DEPEND="
 
 S="${WORKDIR}/${PN}/source"
 
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/icu-config
+)
+
 src_prepare() {
 	local variable
 
-	epatch "${FILESDIR}/icu-fix-tests-depending-on-date.patch"
 	epatch "${FILESDIR}/${PN}-remove-bashisms.patch"
+	epatch "${FILESDIR}/${P}-CVE-2014-9654.patch"
 	epatch_user
-
-	# Do not hardcode flags in icu-config and icu-*.pc files.
-	# https://ssl.icu-project.org/trac/ticket/6102
-	for variable in CFLAGS CPPFLAGS CXXFLAGS FFLAGS LDFLAGS; do
-		sed \
-			-e "/^${variable} =.*/s: *@${variable}@\( *$\)\?::" \
-			-i config/icu.pc.in \
-			-i config/Makefile.inc.in \
-			|| die
-	done
 
 	# Disable renaming as it is stupind thing to do
 	sed -i \
@@ -56,10 +50,14 @@ src_prepare() {
 	sed -i \
 		-e 's:icudefs.mk:icudefs.mk Doxyfile:' \
 		configure.ac || die
+
 	eautoreconf
 }
 
 src_configure() {
+	# Do _not_ use C++11 yet, make sure to force GNU C++ 98 standard.
+	append-cxxflags -std=gnu++98
+
 	if tc-is-cross-compiler; then
 		mkdir "${WORKDIR}"/host || die
 		pushd "${WORKDIR}"/host >/dev/null || die

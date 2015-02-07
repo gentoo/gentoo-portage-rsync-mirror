@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.292 2015/02/01 17:00:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.293 2015/02/07 17:47:06 dilfridge Exp $
+
+*icu-54.1-r1 (07 Feb 2015)
+*icu-53.1-r3 (07 Feb 2015)
+
+  07 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> -icu-53.1-r1.ebuild,
+  +icu-53.1-r3.ebuild, +icu-54.1-r1.ebuild,
+  +files/icu-54.1-CVE-2014-9654.patch:
+  Backport patch for CVE-2014-9654, bug 539108. Unfortunately this does bad
+  things to a header file, so forcing a rebuild by mangling subslots...
 
 *icu-54.1 (01 Feb 2015)
 

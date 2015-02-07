@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.261 2015/02/07 07:51:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.262 2015/02/07 17:43:26 williamh Exp $
+
+*dhcp-4.3.1-r1 (07 Feb 2015)
+
+  07 Feb 2015; William Hubbs <williamh@gentoo.org> +dhcp-4.3.1-r1.ebuild:
+  rev bump to make sure ~ gets the init script fixes
 
   07 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> files/dhcpd.init5:
   Re-added the possibility to depend on slapd in the init script.
