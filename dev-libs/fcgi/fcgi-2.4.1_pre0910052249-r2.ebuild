@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.1_pre0910052249-r1.ebuild,v 1.1 2012/10/29 15:00:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/fcgi-2.4.1_pre0910052249-r2.ebuild,v 1.1 2015/02/07 00:02:27 rafaelmartins Exp $
 
 EAPI="4"
 
@@ -26,6 +26,7 @@ src_prepare() {
 	epatch "${FILESDIR}/fcgi-2.4.0-html-updates.patch"
 	epatch "${FILESDIR}"/fcgi-2.4.1_pre0311112127-gcc44.patch
 	epatch "${FILESDIR}"/${P}-link.patch
+	epatch "${FILESDIR}"/${P}-poll.patch
 
 	eautoreconf
 }

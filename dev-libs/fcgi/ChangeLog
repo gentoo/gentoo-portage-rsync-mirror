@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/fcgi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.59 2013/05/16 01:40:54 rafaelmartins Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.60 2015/02/07 00:02:27 rafaelmartins Exp $
+
+*fcgi-2.4.1_pre0910052249-r2 (07 Feb 2015)
+
+  07 Feb 2015; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +fcgi-2.4.1_pre0910052249-r2.ebuild,
+  +files/fcgi-2.4.1_pre0910052249-poll.patch,
+  -fcgi-2.4.1_pre0910052249-r1.ebuild:
+  Fixed DoS vulnerability. bug #539164
 
   16 May 2013; Rafael G. Martins <rafaelmartins@gentoo.org> metadata.xml:
   New maintainer
