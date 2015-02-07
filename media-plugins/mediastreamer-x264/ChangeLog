@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mediastreamer-x264
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.26 2014/11/12 14:22:07 bircoph Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.27 2015/02/07 20:19:47 mgorny Exp $
+
+*mediastreamer-x264-1.4.2-r1 (07 Feb 2015)
+
+  07 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  +mediastreamer-x264-1.4.2-r1.ebuild:
+  Replace the virtual with USE=libav.
 
   12 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Add myself to maintainers

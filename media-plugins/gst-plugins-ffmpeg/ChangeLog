@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.189 2014/10/11 13:10:50 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.190 2015/02/07 20:15:26 mgorny Exp $
+
+*gst-plugins-ffmpeg-0.10.13_p201211-r3 (07 Feb 2015)
+
+  07 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  +gst-plugins-ffmpeg-0.10.13_p201211-r3.ebuild:
+  Replace the virtual with USE=libav.
 
   11 Oct 2014; Markus Meier <maekke@gentoo.org>
   gst-plugins-ffmpeg-0.10.13_p201211-r2.ebuild:

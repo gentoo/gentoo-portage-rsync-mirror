@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mediastreamer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.77 2014/11/12 13:59:03 bircoph Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.78 2015/02/07 20:13:52 mgorny Exp $
+
+*mediastreamer-2.9.0-r1 (07 Feb 2015)
+
+  07 Feb 2015; Michał Górny <mgorny@gentoo.org> +mediastreamer-2.9.0-r1.ebuild:
+  Replace the virtual with USE=libav.
 
   12 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Update e-mail :/.
