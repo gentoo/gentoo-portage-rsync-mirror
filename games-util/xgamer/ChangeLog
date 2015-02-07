@@ -1,6 +1,9 @@
 # ChangeLog for games-util/xgamer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.13 2014/11/27 23:43:35 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.14 2015/02/07 13:30:13 ago Exp $
+
+  07 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xgamer-0.6.2.ebuild:
+  Stable for amd64, wrt bug #539188
 
   27 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> xgamer-0.6.2.ebuild:
   Remove call to perl-module_pkg_postinst, does not do anything outside

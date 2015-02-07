@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/vdrift
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.25 2014/09/01 01:08:14 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/ChangeLog,v 1.26 2015/02/07 13:30:23 ago Exp $
+
+  07 Feb 2015; Agostino Sarubbo <ago@gentoo.org> vdrift-20120722.ebuild:
+  Stable for amd64, wrt bug #539192
 
   01 Sep 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/vdrift-20090615-ldflags.patch, -vdrift-20090615.ebuild:

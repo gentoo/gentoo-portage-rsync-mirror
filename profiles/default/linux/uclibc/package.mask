@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/package.mask,v 1.4 2015/01/16 11:40:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/package.mask,v 1.5 2015/02/07 13:13:44 blueness Exp $
 
 sys-libs/musl
 sys-libs/glibc
@@ -27,6 +27,3 @@ games-fps/quake3-bin
 games-fps/quake3-demo
 games-fps/rtcwmp-demo
 games-fps/soldieroffortune
-
-# Broken due to fallocate64(), bug #516988
->sys-fs/e2fsprogs-1.42.7

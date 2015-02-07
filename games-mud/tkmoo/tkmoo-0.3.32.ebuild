@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.14 2014/12/02 23:35:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.15 2015/02/07 13:30:38 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -13,7 +13,7 @@ SRC_URI="http://www.awns.com/tkMOO-light/Source/${MY_P}.tar.gz"
 
 LICENSE="tkMOO"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.3.3

@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/scramble
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.10 2014/06/16 06:16:17 mr_bones_ Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.11 2015/02/07 13:29:58 ago Exp $
+
+  07 Feb 2015; Agostino Sarubbo <ago@gentoo.org> scramble-0.9.5.ebuild:
+  Stable for amd64, wrt bug #539182
 
   16 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org> scramble-0.9.5.ebuild:
   EAPI=5; fix build (bug #513412)
