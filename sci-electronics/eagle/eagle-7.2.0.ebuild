@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-7.2.0.ebuild,v 1.1 2014/12/01 19:49:33 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-7.2.0.ebuild,v 1.2 2015/02/07 14:06:42 idl0r Exp $
 
 EAPI="5"
 
@@ -21,8 +21,6 @@ RDEPEND="
 	sys-libs/glibc
 	|| (
 		(
-			|| ( virtual/jpeg:62[abi_x86_32(-)]  media-libs/jpeg:62[abi_x86_32(-)] )
-			>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
 			>=dev-libs/openssl-0.9.8z_p1-r2:0.9.8[abi_x86_32(-)]
 			>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
 			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
