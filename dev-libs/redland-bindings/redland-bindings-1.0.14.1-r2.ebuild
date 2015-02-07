@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.14.1-r1.ebuild,v 1.1 2014/11/30 15:48:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.14.1-r2.ebuild,v 1.1 2015/02/07 09:22:33 zlogene Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="lua perl python php ruby"
 
 RDEPEND=">=dev-libs/redland-1.0.14
 	lua? ( >=dev-lang/lua-5.1 )
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	php? ( dev-lang/php )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( dev-lang/ruby dev-ruby/log4r )"

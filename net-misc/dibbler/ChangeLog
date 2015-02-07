@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dibbler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.29 2014/11/14 14:15:00 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.30 2015/02/07 09:01:55 jer Exp $
+
+  07 Feb 2015; Jeroen Roovers <jer@gentoo.org> dibbler-1.0.0.ebuild:
+  Stable for HPPA (bug #539110).
 
 *dibbler-1.0.0 (14 Nov 2014)
 

@@ -112,7 +112,6 @@ net-print
 net-proxy
 net-voip
 net-wireless
-net-zope
 perl-core
 rox-base
 rox-extra
