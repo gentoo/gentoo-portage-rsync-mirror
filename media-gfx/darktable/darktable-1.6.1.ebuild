@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.6.1.ebuild,v 1.1 2014/12/24 18:15:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.6.1.ebuild,v 1.2 2015/02/07 02:38:12 radhermit Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ RDEPEND="${CDEPEND}
 	x11-themes/gtk-engines:2
 	kde? ( kde-base/kwalletd )"
 DEPEND="${CDEPEND}
+	dev-util/intltool
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 

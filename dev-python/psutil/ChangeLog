@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psutil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.44 2015/01/10 07:26:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.45 2015/02/07 02:50:43 radhermit Exp $
+
+*psutil-2.2.1 (07 Feb 2015)
+
+  07 Feb 2015; Tim Harder <radhermit@gentoo.org> +psutil-2.2.1.ebuild:
+  Version bump.
 
 *psutil-2.2.0 (10 Jan 2015)
 

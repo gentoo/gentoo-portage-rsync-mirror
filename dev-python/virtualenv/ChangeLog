@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.137 2015/02/02 13:38:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.138 2015/02/07 02:46:31 radhermit Exp $
+
+*virtualenv-12.0.7 (07 Feb 2015)
+
+  07 Feb 2015; Tim Harder <radhermit@gentoo.org> +virtualenv-12.0.7.ebuild:
+  Version bump.
 
   02 Feb 2015; Ian Delaney <idella4@gentoo.org> virtualenv-12.0.6.ebuild:
   update HOMEPAGE, expand comment re RESTRICT slightly
