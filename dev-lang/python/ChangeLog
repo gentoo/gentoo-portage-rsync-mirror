@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.810 2015/01/09 11:56:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.812 2015/02/07 21:24:15 floppym Exp $
+
+*python-2.7.9-r2 (07 Feb 2015)
+
+  07 Feb 2015; Mike Gilbert <floppym@gentoo.org> +python-2.7.9-r2.ebuild:
+  Drop 61_all_process_data.patch, fixes musl build, bug 539210.
+
+  07 Feb 2015; Mike Gilbert <floppym@gentoo.org> -python-2.7.7.ebuild,
+  -python-2.7.8.ebuild:
+  Remove old.
 
   09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> python-2.7.9-r1.ebuild:
   Stable on alpha, bug 532232
