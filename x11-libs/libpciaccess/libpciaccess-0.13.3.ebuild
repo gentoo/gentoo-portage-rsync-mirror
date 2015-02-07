@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.13.1-r1.ebuild,v 1.2 2013/02/27 05:56:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/libpciaccess-0.13.3.ebuild,v 1.1 2015/02/07 16:43:02 chithanh Exp $
 
 EAPI=5
 
@@ -12,11 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="minimal zlib"
 
 DEPEND="!<x11-base/xorg-server-1.5
-	zlib? (
-		sys-libs/zlib
-		amd64? ( abi_x86_32? (
-			app-emulation/emul-linux-x86-baselibs[development] ) )
-	)"
+	zlib? (	>=sys-libs/zlib-1.2.8-r1:=[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
 	sys-apps/hwids"
 
@@ -29,15 +25,11 @@ pkg_setup() {
 	)
 }
 
-src_install() {
-	xorg-2_src_install
+multilib_src_install() {
+	default
 
-	if ! use minimal; then
-		scanpci_install() {
-			${BASH} "${BUILD_DIR}/libtool" --mode=install "$(type -P install)" -c "${BUILD_DIR}/scanpci/scanpci" "${ED}"/usr/bin || die
-		}
-
+	if multilib_is_native_abi; then
 		dodir /usr/bin
-		multilib_foreach_abi scanpci_install
+		${BASH} libtool --mode=install "$(type -P install)" -c scanpci/scanpci "${ED}"/usr/bin || die
 	fi
 }

@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libpciaccess
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.100 2014/06/18 21:02:11 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.101 2015/02/07 16:43:02 chithanh Exp $
+
+*libpciaccess-0.13.3 (07 Feb 2015)
+
+  07 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libpciaccess-0.13.3.ebuild,
+  -files/libpciaccess-0.13-fix-out-bwl-macros.patch,
+  -libpciaccess-0.12.1.ebuild, -libpciaccess-0.13.1-r1.ebuild,
+  -libpciaccess-0.13.1.ebuild, -libpciaccess-0.13.ebuild:
+  Version bump. Remove old.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libpciaccess-0.13.2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
