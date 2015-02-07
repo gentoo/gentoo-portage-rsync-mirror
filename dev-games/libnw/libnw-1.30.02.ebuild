@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.02.ebuild,v 1.5 2011/07/13 14:30:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.02.ebuild,v 1.6 2015/02/07 04:05:15 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit toolchain-funcs
 
 DESCRIPTION="Tools and libraries for NWN file manipulation"
@@ -22,12 +22,11 @@ src_prepare() {
 	sed -i \
 		-e '/^CC =/d' \
 		-e '/^CXX =/d' \
-		$(find . -name Makefile.in) \
-		|| die "sed failed"
+		$(find . -name Makefile.in) || die
 	tc-export CC CXX
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README README.tech TODO
+	DOCS="AUTHORS ChangeLog NEWS README README.tech TODO" \
+		default
 }
