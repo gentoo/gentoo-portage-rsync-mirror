@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/stockfish/stockfish-6-r1.ebuild,v 1.1 2015/02/07 11:54:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/stockfish/stockfish-6-r1.ebuild,v 1.2 2015/02/07 16:00:50 yngwin Exp $
 
 EAPI=5
 if [[ ${PV} == *9999* ]]; then
@@ -22,7 +22,8 @@ SLOT="0"
 IUSE="armv7 cpu_flags_x86_avx2 cpu_flags_x86_popcnt cpu_flags_x86_sse debug
 	general-32 general-64 +optimize"
 
-DEPEND=""
+DEPEND="|| ( app-arch/unzip
+	app-arch/zip )"
 RDEPEND=""
 
 src_prepare() {
