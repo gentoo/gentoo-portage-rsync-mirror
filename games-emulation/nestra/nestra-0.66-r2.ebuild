@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r2.ebuild,v 1.4 2014/10/13 10:40:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r2.ebuild,v 1.5 2015/02/07 04:51:03 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs flag-o-matic multilib games
@@ -41,8 +41,7 @@ src_prepare() {
 		-e 's:-O2 ::' \
 		-e "s:gcc:$(tc-getCC) ${CFLAGS}:" \
 		-e "s:ld:$(tc-getLD) -m elf_i386 $(raw-ldflags):" \
-		Makefile \
-		|| die "sed failed"
+		Makefile || die
 }
 
 src_compile() {

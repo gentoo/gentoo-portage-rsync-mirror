@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/nestra
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.17 2014/10/13 10:40:46 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.18 2015/02/07 04:51:03 mr_bones_ Exp $
+
+  07 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> nestra-0.66-r2.ebuild:
+  tidy
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> nestra-0.66-r2.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.

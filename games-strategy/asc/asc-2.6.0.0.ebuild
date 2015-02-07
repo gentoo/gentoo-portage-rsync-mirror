@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.6.0.0.ebuild,v 1.1 2014/06/04 21:15:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-2.6.0.0.ebuild,v 1.2 2015/02/07 04:46:18 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER=2.8
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/asc-hq/${P}.tar.bz2
 	http://www.asc-hq.org/music/time_to_strike.ogg
 	http://www.asc-hq.org/music/machine_wars.ogg"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -29,7 +29,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/xvid
 	dev-libs/expat
 	media-libs/freetype
-	dev-lang/lua
+	dev-lang/lua:0
 	x11-libs/wxGTK:2.8[X]
 	dev-libs/libsigc++:1.2"
 
