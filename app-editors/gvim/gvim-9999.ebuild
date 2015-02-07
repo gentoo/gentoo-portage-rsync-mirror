@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.26 2015/01/22 23:18:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.28 2015/02/07 02:25:09 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE=threads
-inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 prefix python-single-r1
+inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 prefix python-r1
 
 if [[ ${PV} == 9999* ]] ; then
 	inherit mercurial
@@ -27,8 +27,12 @@ SLOT="0"
 LICENSE="vim"
 IUSE="acl aqua cscope debug gnome gtk lua luajit motif neXt netbeans nls perl python racket ruby selinux session tcl"
 REQUIRED_USE="
-	python? ( ${PYTHON_REQUIRED_USE} )
 	luajit? ( lua )
+	python? (
+		|| ( $(python_gen_useflags '*') )
+		?? ( $(python_gen_useflags 'python2*') )
+		?? ( $(python_gen_useflags 'python3*') )
+	)
 "
 
 RDEPEND="
@@ -83,8 +87,6 @@ pkg_setup() {
 	# Gnome sandbox silliness. bug #114475.
 	mkdir -p "${T}"/home
 	export HOME="${T}"/home
-
-	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -197,13 +199,17 @@ src_configure() {
 	)
 
 	if use python ; then
-		if [[ ${EPYTHON} == python3* ]] ; then
-			myconf+=( --enable-python3interp )
-			export vi_cv_path_python3="${PYTHON}"
-		else
-			myconf+=( --enable-pythoninterp )
-			export vi_cv_path_python="${PYTHON}"
-		fi
+		py_add_interp() {
+			local v
+
+			[[ ${EPYTHON} == python3* ]] && v=3
+			myconf+=(
+				--enable-python${v}interp
+				vi_cv_path_python${v}="${PYTHON}"
+			)
+		}
+
+		python_foreach_impl py_add_interp
 	else
 		myconf+=(
 			--disable-pythoninterp

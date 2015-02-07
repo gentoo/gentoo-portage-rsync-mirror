@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/UNIVERSAL-can
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-can/ChangeLog,v 1.19 2014/08/22 21:12:56 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-can/ChangeLog,v 1.20 2015/02/07 02:27:15 zlogene Exp $
+
+  07 Feb 2015; Mikle Kolyada <zlogene@gentoo.org>
+  UNIVERSAL-can-1.201.401.240.ebuild:
+  Mark stable
 
 *UNIVERSAL-can-1.201.207.260-r1 (22 Aug 2014)
 
