@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/guile-gtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.46 2014/08/06 12:10:04 creffett Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.47 2015/02/07 18:22:22 ottxor Exp $
+
+  07 Feb 2015; Christoph Junghans <ottxor@gentoo.org> guile-gtk-2.1-r1.ebuild,
+  guile-gtk-2.1-r2.ebuild:
+  use mirror://gnu in SRC_URI
 
   06 Aug 2014; Chris Reffett <creffett@gentoo.org> -guile-gtk-2.1.ebuild:
   [QA] Drop old

@@ -8,6 +8,6 @@ KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-3
 RDEPEND=dev-scheme/guile[deprecated(+)] x11-libs/gtk+:2 gnome-base/libglade:2.0 >=x11-libs/gtkglarea-1.90:2
 SLOT=0
-SRC_URI=ftp://ftp.gnu.org/gnu/guile-gtk/guile-gtk-2.1.tar.gz
+SRC_URI=mirror://gnu/guile-gtk/guile-gtk-2.1.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=37d1342bb7988aef5833794541dac214
+_md5_=58c23a47d34a188ffcd274c1e08c3385

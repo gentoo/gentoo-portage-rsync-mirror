@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1-r1.ebuild,v 1.6 2013/01/31 23:09:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.1-r1.ebuild,v 1.7 2015/02/07 18:22:22 ottxor Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools eutils virtualx
 
 DESCRIPTION="GTK+ bindings for guile"
 HOMEPAGE="http://www.gnu.org/software/guile-gtk/"
-SRC_URI="ftp://ftp.gnu.org/gnu/guile-gtk/${P}.tar.gz"
+SRC_URI="mirror://gnu/guile-gtk/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
