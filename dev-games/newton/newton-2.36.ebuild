@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-2.36.ebuild,v 1.1 2012/07/10 19:04:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/newton/newton-2.36.ebuild,v 1.2 2015/02/07 03:55:12 mr_bones_ Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils toolchain-funcs cmake-utils unpacker
 
 MY_P="${PN}-dynamics-${PV}"
