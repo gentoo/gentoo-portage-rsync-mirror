@@ -1,10 +1,10 @@
 # ChangeLog for sci-misc/mendeleydesktop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.21 2015/02/03 12:35:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.22 2015/02/07 11:07:44 jlec Exp $
 
-  03 Feb 2015; Justin Lecher <jlec@gentoo.org> -mendeleydesktop-1.13.1.ebuild,
-  +mendeleydesktop-1.13.3.ebuild:
-  Version BUmp
+  07 Feb 2015; Justin Lecher <jlec@gentoo.org> mendeleydesktop-1.13.3.ebuild,
+  metadata.xml:
+  Add missing python dependency and compatibility handling, #539152
 
 *mendeleydesktop-1.13.3 (03 Feb 2015)
 

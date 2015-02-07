@@ -1,10 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.13.3.ebuild,v 1.1 2015/02/03 12:35:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.13.3.ebuild,v 1.2 2015/02/07 11:07:44 jlec Exp $
 
 EAPI=5
 
-inherit eutils fdo-mime multilib
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils fdo-mime multilib python-single-r1
 
 MY_P_AMD64="${P}-linux-x86_64"
 MY_P_X86="${P}-linux-i486"
@@ -21,15 +23,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RESTRICT="fetch"
 
 DEPEND=""
-RDEPEND="
+RDEPEND="${PYTHON_DEPS}
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
 	dev-qt/qtwebkit:4
-	dev-qt/qtxmlpatterns:4"
+	dev-qt/qtxmlpatterns:4
+	x11-libs/libX11
+	"
 
 QA_PREBUILT="/opt/mendeleydesktop/.*"
 
@@ -84,6 +90,7 @@ src_install() {
 	dodoc share/doc/${PN}/Readme.txt
 
 	# install binary
+	python_fix_shebang bin/${PN}
 	into /opt/${PN}
 	dobin bin/*
 
