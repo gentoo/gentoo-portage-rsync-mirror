@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83-r1.ebuild,v 1.2 2012/02/25 03:32:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.83-r1.ebuild,v 1.3 2015/02/08 08:32:34 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,9 +16,7 @@ RPMREV="3"
 MY_P="${PN/lib}-${PV}"
 
 DESCRIPTION="Red Hat Hardware detection tools"
-#SRC_URI="mirror://fedora/development/source/SRPMS/${MY_P}-${RPMREV}.src.rpm"
-#Workaround to get this file on the Gentoo Mirrors for now. -darkside
-SRC_URI="http://fedora.mirror.iweb.ca/releases/test/9-Beta/Fedora/source/SRPMS/kudzu-1.2.83-3.src.rpm"
+SRC_URI="mirror://gentoo/${MY_P}-${RPMREV}.src.rpm"
 HOMEPAGE="http://rhlinux.redhat.com/kudzu/"
 
 LICENSE="GPL-2"

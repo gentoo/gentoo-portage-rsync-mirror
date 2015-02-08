@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.148 2015/01/05 09:13:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.149 2015/02/08 08:58:27 idella4 Exp $
+
+*pygments-2.0.2 (08 Feb 2015)
+
+  08 Feb 2015; Ian Delaney <idella4@gentoo.org> +pygments-2.0.2.ebuild,
+  -pygments-1.6_p20140324.ebuild:
+  bump; reset SRC_URI to pypi for this version, drop unused resource hungry dep
+  from test phase, update test phase, rm 1 old
 
   05 Jan 2015; Yixun Lan <dlan@gentoo.org> pygments-2.0.1.ebuild:
   keyword ~arm64, test on board

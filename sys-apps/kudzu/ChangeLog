@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kudzu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.36 2012/07/31 14:52:41 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.37 2015/02/08 08:32:34 mgorny Exp $
+
+  08 Feb 2015; Michał Górny <mgorny@gentoo.org> kudzu-1.2.83-r1.ebuild:
+  Just use gentoo mirrors to get rid of this non-sense repoman failure.
 
   31 Jul 2012; Michael Palimaka <kensington@gentoo.org> -kudzu-1.2.83.ebuild:
   Remove old.
