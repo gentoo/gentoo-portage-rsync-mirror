@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/method_source
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.24 2014/11/03 15:44:28 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.25 2015/02/08 06:40:46 graaff Exp $
+
+  08 Feb 2015; Hans de Graaff <graaff@gentoo.org>
+  method_source-0.8.2-r3.ebuild:
+  Add ruby22.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> method_source-0.8.2-r2.ebuild,
   method_source-0.8.2-r3.ebuild:
