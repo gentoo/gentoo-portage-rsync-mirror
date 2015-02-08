@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for perl-core/Filter-Simple
 EAPI=5
-KEYWORDS=~x86 ~amd64
+KEYWORDS=amd64 ~x86
 RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/Filter-Simple-0.910.0 ) !<perl-core/Filter-Simple-0.910.0 !>perl-core/Filter-Simple-0.910.0-r999
 SLOT=0
-_md5_=e9b548056205327b31d68e5dcfe3c12e
+_md5_=16f47cf82ae11d43f06229e30d1ad571

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16332 2015/02/05 11:47:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16333 2015/02/08 12:03:32 hanno Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hanno Boeck <hanno@gentoo.org> (08 Feb 2150)
+# Dead upstream, will be removed in 30 days if nobody
+# complains.
+app-portage/portage-mod_jabber
+
+# Hanno Boeck <hanno@gentoo.org> (08 Feb 2150)
+# Dead upstream, will be removed in 30 days if nobody
+# complains.
+media-sound/moodbar
 
 # Anthony G. Basile <blueness@gentoo.org> (05 Feb 2015)
 # Depends on >=dev-libs/isl-0.14:0/14 currently masked.

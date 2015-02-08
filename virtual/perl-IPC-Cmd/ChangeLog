@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IPC-Cmd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.61 2014/11/08 15:46:12 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.62 2015/02/08 12:13:01 zlogene Exp $
+
+  08 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> perl-IPC-Cmd-0.920.0.ebuild:
+  amd64 stable wrt bug #536790
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-IPC-Cmd-0.780.0.ebuild, perl-IPC-Cmd-0.800.0-r1.ebuild:

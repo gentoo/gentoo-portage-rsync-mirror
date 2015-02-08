@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-CoreList
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.105 2015/01/24 17:32:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.106 2015/02/08 12:23:06 zlogene Exp $
+
+  08 Feb 2015; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Module-CoreList-5.20.1.ebuild:
+  amd64 stable wrt bug #536790
 
 *perl-Module-CoreList-5.201.501.200 (24 Jan 2015)
 

@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for I18N-LangTags
 EAPI=5
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd
+KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd
 RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/I18N-LangTags-0.400.0 ) !<perl-core/I18N-LangTags-0.400.0 !>perl-core/I18N-LangTags-0.400.0-r999
 SLOT=0
-_md5_=aaf6787d07dbd27ac2b8a562687aca51
+_md5_=0ba4b93d385de72ffa19952738457ec1

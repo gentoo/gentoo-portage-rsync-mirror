@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-IO-Compress
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/ChangeLog,v 1.73 2014/07/20 12:45:35 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/ChangeLog,v 1.74 2015/02/08 12:09:54 zlogene Exp $
+
+  08 Feb 2015; Mikle Kolyada <zlogene@gentoo.org>
+  perl-IO-Compress-2.64.0.ebuild:
+  amd64 stable wrt bug #536790
 
 *perl-IO-Compress-2.64.0 (20 Jul 2014)
 *perl-IO-Compress-2.60.0-r1 (20 Jul 2014)
