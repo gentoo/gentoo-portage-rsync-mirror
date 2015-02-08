@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for threads
 EAPI=5
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 RDEPEND=|| ( =dev-lang/perl-5.20*[ithreads] ~perl-core/threads-1.930.0 ) !<perl-core/threads-1.930.0 !>perl-core/threads-1.930.0-r999
 SLOT=0
-_md5_=637638cb0d20b7c563e39153b9a133fb
+_md5_=c917cad8f7b15744ebf9931c4e10c37c

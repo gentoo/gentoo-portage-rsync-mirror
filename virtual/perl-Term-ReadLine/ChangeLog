@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Term-ReadLine
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ReadLine/ChangeLog,v 1.1 2014/10/14 22:16:58 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ReadLine/ChangeLog,v 1.2 2015/02/08 12:40:27 zlogene Exp $
+
+  08 Feb 2015; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Term-ReadLine-1.140.0.ebuild:
+  amd64 stable wrt bug #536790
 
 *perl-Term-ReadLine-1.140.0 (14 Oct 2014)
 *perl-Term-ReadLine-1.120.0 (14 Oct 2014)
@@ -9,4 +13,3 @@
   +perl-Term-ReadLine-1.120.0.ebuild, +perl-Term-ReadLine-1.140.0.ebuild,
   +metadata.xml:
   New virtual, bug 525134
-
