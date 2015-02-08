@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1-r2.ebuild,v 1.2 2015/02/07 13:29:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/airtraf-1.1-r3.ebuild,v 1.1 2015/02/08 07:52:52 jer Exp $
 
 EAPI=5
 
@@ -25,7 +25,9 @@ DEPEND="
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}.patch \
-		"${FILESDIR}"/${P}-off-by-one.patch
+		"${FILESDIR}"/${P}-off-by-one.patch \
+		"${FILESDIR}"/${P}-fprintf-format.patch
+
 	sed -i \
 		-e '/^LIBS/s|=.*|= $(shell $(PKG_CONFIG) --libs panel)|' \
 		src/libncurses/Makefile || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a-r1.ebuild,v 1.4 2015/02/05 03:19:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a-r1.ebuild,v 1.5 2015/02/08 07:41:43 mr_bones_ Exp $
 
 EAPI=5
 inherit check-reqs eutils unpacker cdrom games
@@ -37,6 +37,7 @@ S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${ED}/${dir}
+unpackDir=${T}/unpack
 
 CHECKREQS_DISK_BUILD="1450M"
 CHECKREQS_DISK_USR="725M"
@@ -48,8 +49,9 @@ pkg_pretend() {
 src_unpack() {
 	cdrom_get_cds sof.xpm
 	unpack_makeself
-	tar xzf "${CDROM_ROOT}"/paks.tar.gz -C "${T}" || die
-	tar xzf "${CDROM_ROOT}"/binaries.tar.gz -C "${T}" || die
+	mkdir ${unpackDir} || die
+	tar xzf "${CDROM_ROOT}"/paks.tar.gz -C "${unpackDir}" || die
+	tar xzf "${CDROM_ROOT}"/binaries.tar.gz -C "${unpackDir}" || die
 }
 
 src_install() {
@@ -57,7 +59,7 @@ src_install() {
 	exeinto "${dir}"
 	doexe "${CDROM_ROOT}"/bin/x86/glibc-2.1/sof
 	insinto "${dir}"
-	doins -r "${T}"/*
+	doins -r "${unpackDir}"/*
 	doins "${CDROM_ROOT}"/{README,kver.pub,sof.xpm}
 
 	cd "${S}"
@@ -68,12 +70,12 @@ src_install() {
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
-	find "${Ddir}" -exec touch '{}' \;
+	find "${Ddir}" -exec touch '{}' +
 
 	games_make_wrapper sof ./sof "${dir}" "${dir}"
 
 	# fix buffer overflow
-	sed -i -e 's/^exec/i \
+	sed -i -e '/^exec/i \
 export MESA_EXTENSION_MAX_YEAR=2003 \
 export __GL_ExtensionStringVersion=17700' \
 		"${ED}/${GAMES_BINDIR}/sof" || die
