@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-10.0.16.ebuild,v 1.1 2015/01/28 13:51:27 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/mariadb-10.0.16.ebuild,v 1.2 2015/02/08 20:35:57 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20141215-0144Z"
@@ -82,6 +82,12 @@ multilib_src_test() {
 			main.mysqld--help \
 			funcs_1.is_triggers funcs_1.is_tables_mysql funcs_1.is_columns_mysql ; do
 				mysql-multilib_disable_test  "$t" "False positives in Gentoo"
+		done
+
+		for t in rpl.rpl_heartbeat_ssl rpl.rpl_ssl rpl.rpl_ssl1 main.ssl_cipher \
+			main.ssl_8k_key main.openssl_6975 main.openssl_1 main.ssl main.ssl_compress \
+			main.ssl_connect; do
+			mysql-multilib_disable_test "$t" "Disabled due to expired certificate"
 		done
 
 		# Run mysql tests

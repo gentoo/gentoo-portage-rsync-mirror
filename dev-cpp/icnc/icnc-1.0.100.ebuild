@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/icnc/icnc-1.0.100.ebuild,v 1.1 2014/12/08 19:03:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/icnc/icnc-1.0.100.ebuild,v 1.2 2015/02/08 20:41:08 ottxor Exp $
 
 EAPI=5
 
@@ -32,6 +32,7 @@ RDEPEND="
 	"
 DEPEND="
 	${RDEPEND}
+	doc? ( app-doc/doxygen )
 	test? ( ${PYTHON_DEPS} )
 	"
 
@@ -64,7 +65,7 @@ src_install() {
 		insinto /usr/share/doc/${P}/html
 		doins -r "${ED}"/usr/doc/api/*
 	fi
-	rm -r "${ED}"/usr/doc/api || die
+	rm -fr "${ED}"/usr/doc/api
 	rmdir "${ED}"/usr/doc || die
 	if use examples ; then
 		insinto /usr/share/${PN}/examples

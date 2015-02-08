@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare pretend setup test unpack
+DEPEND=dev-libs/extra-cmake-modules media-gfx/fontforge >=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-util/desktop-file-utils app-arch/xz-utils X? ( x11-apps/mkfontdir media-fonts/encodings )
+DESCRIPTION=Desktop/GUI font family for integrated use with the KDE desktop
+EAPI=5
+HOMEPAGE=https://projects.kde.org/projects/kde/workspace/oxygen-fonts
+IUSE=debug X
+KEYWORDS=~amd64 ~x86
+LICENSE=OFL-1.1
+RDEPEND=!media-fonts/oxygen-fonts
+SLOT=5
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	font	37271e0911f39dd15a28adcaf94f6956	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	kde5	a488263d3a8020761de6c098816e4ef7	kde5-functions	387824d97cb3ded6a9727b25d2f3c948	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=8943dd62e6f5c7288902e0d6c386ced4

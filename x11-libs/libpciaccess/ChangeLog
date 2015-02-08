@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.101 2015/02/07 16:43:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.102 2015/02/08 20:35:28 chithanh Exp $
+
+  08 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libpciaccess-0.13.3.ebuild:
+  Restore accidentally dropped s390 keyword.
 
 *libpciaccess-0.13.3 (07 Feb 2015)
 

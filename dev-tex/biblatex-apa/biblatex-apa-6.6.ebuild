@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex-apa/biblatex-apa-6.6.ebuild,v 1.1 2014/11/12 14:39:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex-apa/biblatex-apa-6.6.ebuild,v 1.2 2015/02/08 20:40:23 mrueg Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
 RDEPEND="dev-texlive/texlive-bibtexextra
-	dev-tex/biblatex-apa"
+	dev-tex/biblatex"
 DEPEND="${RDEPEND}"
 
 TEXMF=/usr/share/texmf-site
