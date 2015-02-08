@@ -6891,7 +6891,6 @@ sys-cluster/openmpi:romio - Build the ROMIO MPI-IO component
 sys-cluster/openmpi:vt - Enable bundled VampirTrace support
 sys-cluster/openstack-meta:cinder - Installs Openstack Cinder
 sys-cluster/openstack-meta:glance - Installs Openstack Glance
-sys-cluster/openstack-meta:horizon - Installs Openstack Horizon
 sys-cluster/openstack-meta:keystone - Installs Openstack Keystone
 sys-cluster/openstack-meta:neutron - Installs Openstack Neutron
 sys-cluster/openstack-meta:nova - Installs Openstack Nova
