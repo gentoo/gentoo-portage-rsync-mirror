@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.31 2014/11/15 21:23:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.32 2015/02/08 15:00:18 kensington Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -13,11 +13,6 @@ dev-python/pyudev python_targets_python3_4
 # Pulls in sci-libs/vtk with a lot of new dependencies; stabilizing
 # that will take some more time
 media-libs/opencv vtk
-
-# Michael Palimaka <kensington@gentoo.org> (09 Oct 2014)
-# Requires net-libs/libotr-4.0.0 which just came out of
-# hard mask.
->=kde-base/kopete-4.12.0 otr
 
 # Mikle Kolyada <zlogene@gentoo.org> (16 Aug 2014)
 # Not yet stabilized dependency, need more testing

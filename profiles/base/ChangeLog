@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.766 2015/02/04 17:40:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.767 2015/02/08 15:00:18 kensington Exp $
+
+  08 Feb 2015; Michael Palimaka <kensington@gentoo.org> package.use.stable.mask:
+  Unmask kde-base/kopete[otr] since libotr-4 is now stable.
 
   04 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask input_devices_libinput flag for bug #538828.
