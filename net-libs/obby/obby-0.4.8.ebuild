@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/obby-0.4.8.ebuild,v 1.6 2014/06/22 18:44:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/obby-0.4.8.ebuild,v 1.7 2015/02/08 17:22:40 mgorny Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE="avahi ipv6 nls static-libs"
 
 RDEPEND="net-libs/net6
 		dev-libs/libsigc++:2
-		avahi? ( net-dns/avahi )"
+		avahi? ( net-dns/avahi[dbus] )"
 DEPEND="${RDEPEND}
 		nls? ( sys-devel/gettext )"
 DOCS=( AUTHORS ChangeLog NEWS README TODO )

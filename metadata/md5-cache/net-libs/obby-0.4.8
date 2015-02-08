@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install
-DEPEND=net-libs/net6 dev-libs/libsigc++:2 avahi? ( net-dns/avahi ) nls? ( sys-devel/gettext )
+DEPEND=net-libs/net6 dev-libs/libsigc++:2 avahi? ( net-dns/avahi[dbus] ) nls? ( sys-devel/gettext )
 DESCRIPTION=Library for collaborative text editing
 EAPI=4
 HOMEPAGE=http://gobby.0x539.de/
 IUSE=avahi ipv6 nls static-libs
 KEYWORDS=amd64 ~arm ppc x86
 LICENSE=GPL-2
-RDEPEND=net-libs/net6 dev-libs/libsigc++:2 avahi? ( net-dns/avahi )
+RDEPEND=net-libs/net6 dev-libs/libsigc++:2 avahi? ( net-dns/avahi[dbus] )
 SLOT=0
 SRC_URI=http://releases.0x539.de/obby/obby-0.4.8.tar.gz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6fb9226a78247cce0995f1ff28703a03
+_md5_=6a0636b46d2294101df1a9216ca79743

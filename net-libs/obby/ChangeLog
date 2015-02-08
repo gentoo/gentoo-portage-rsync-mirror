@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/obby
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.40 2014/06/22 18:44:10 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/obby/ChangeLog,v 1.41 2015/02/08 17:22:40 mgorny Exp $
+
+  08 Feb 2015; Michał Górny <mgorny@gentoo.org> obby-0.4.8.ebuild:
+  Depend on avahi[dbus] for libavahi-client, bug #473740 by Michael Mair-
+  Keimberger.
 
   22 Jun 2014; Markus Meier <maekke@gentoo.org> obby-0.4.8.ebuild:
   add ~arm, bug #511566
@@ -168,4 +172,3 @@
   11 Jun 2005; Gustavo Felisberto <humpback@gentoo.org>; +metadata.xml,
   +obby-0.1.0.ebuild:
   Initial import. Ebuild done by upstream developers. Dep for gobby.
-
