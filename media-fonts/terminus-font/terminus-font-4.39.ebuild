@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.39.ebuild,v 1.2 2014/09/09 18:56:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.39.ebuild,v 1.3 2015/02/08 19:39:17 floppym Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ DEPEND="app-arch/gzip
 RDEPEND=""
 
 FONTDIR=/usr/share/fonts/terminus
+FONT_CONF=( 75-yes-terminus.conf )
 DOCS="README README-BG AUTHORS CHANGES"
 
 REQUIRED_USE="X? ( pcf )"
