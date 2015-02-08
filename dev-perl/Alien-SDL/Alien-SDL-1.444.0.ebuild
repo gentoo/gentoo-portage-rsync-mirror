@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.444.0.ebuild,v 1.3 2014/09/27 20:23:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.444.0.ebuild,v 1.4 2015/02/08 14:11:03 civil Exp $
 
 EAPI=5
 
@@ -32,6 +32,7 @@ DEPEND=${RDEPEND}
 
 src_prepare() {
 	tc-export CC
+	epatch "${FILESDIR}"/${P}-fix-build-option.patch
 	perl-module_src_prepare
 }
 

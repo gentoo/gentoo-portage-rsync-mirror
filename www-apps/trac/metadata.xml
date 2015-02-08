@@ -8,5 +8,7 @@
   </maintainer>
   <use>
     <flag name="i18n">Enable support for i18n with dev-python/Babel</flag>
+    <flag name="highlight">Enable syntax highlighting</flag>
+    <flag name="restructuredtext">Enable support for reStructuredText for wiki formatting</flag>
   </use>
 </pkgmetadata>
