@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moodbar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.11 2012/05/05 08:38:38 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.12 2015/02/08 16:12:02 kensington Exp $
+
+  08 Feb 2015; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Add KDE herd.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> moodbar-0.1.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -40,4 +43,3 @@
 
   27 Oct 2006; Hanno Boeck <hanno@gentoo.org> +moodbar-0.1.1.ebuild:
   Initial commit of moodbar tool for Amarok.
-

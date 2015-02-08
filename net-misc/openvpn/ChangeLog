@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.318 2015/01/18 12:39:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.319 2015/02/08 16:22:58 djc Exp $
+
+*openvpn-2.3.6-r1 (08 Feb 2015)
+
+  08 Feb 2015; Dirkjan Ochtman <djc@gentoo.org> +files/2.3.6-null-cipher.patch,
+  +openvpn-2.3.6-r1.ebuild:
+  Fix support for null ciphers (bug 531700; thanks to gentoo@nephros.org)
 
   18 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> openvpn-2.3.6.ebuild:
   Fix minimum version of libpkcs11-helper dependency (fixes bug 536332)

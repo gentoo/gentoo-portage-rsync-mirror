@@ -12,5 +12,6 @@
 	</maintainer>
 	<use>
 		<flag name="flash">Install Chrome's native Pepper Flash</flag>
+		<flag name="widevine">Install the Widevine DRM library</flag>
 	</use>
 </pkgmetadata>

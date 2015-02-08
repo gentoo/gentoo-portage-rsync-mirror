@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.70 2015/01/29 19:14:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.71 2015/02/08 16:21:49 aballier Exp $
+
+  08 Feb 2015; Alexis Ballier <aballier@gentoo.org> cinelerra-20140710.ebuild,
+  +files/cinelerra-pngtoh.patch:
+  Fix build with gcc 4.9, patch by Bernd Feige in bug #526118
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> cinelerra-20120707.ebuild,
   cinelerra-20140710.ebuild:

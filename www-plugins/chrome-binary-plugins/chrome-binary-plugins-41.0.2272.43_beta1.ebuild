@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-41.0.2272.43_beta1.ebuild,v 1.1 2015/02/06 15:29:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-41.0.2272.43_beta1.ebuild,v 1.2 2015/02/08 16:05:41 zx2c4 Exp $
 
 EAPI=5
 
@@ -46,7 +46,7 @@ KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="google-chrome"
-IUSE="+flash"
+IUSE="+flash +widevine"
 RESTRICT="bindist mirror strip"
 
 for x in 0 beta stable unstable; do
@@ -75,6 +75,12 @@ src_install() {
 	local version flapper
 
 	insinto /usr/$(get_libdir)/chromium-browser/
+
+	if use widevine; then
+		doins libwidevinecdm.so
+		strings ./chrome | grep -C 1 " (version:" | tail -1 > widevine.version
+		doins widevine.version
+	fi
 
 	if use flash; then
 		doins -r PepperFlash
