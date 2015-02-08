@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.12 2015/01/28 13:48:58 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.13 2015/02/08 22:03:56 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -212,8 +212,7 @@ fi
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then
 	IUSE="${IUSE} oqgraph pam sphinx tokudb"
 	# 5.5.33 and 10.0.5 add TokuDB. Authors strongly recommend jemalloc or perfomance suffers
-	mysql_version_is_at_least "10.0.5" && IUSE="${IUSE} odbc xml" && \
-		REQUIRED_USE="odbc? ( extraengine !minimal ) xml? ( extraengine !minimal )"
+	mysql_version_is_at_least "10.0.5" && IUSE="${IUSE} odbc xml"
 	REQUIRED_USE="${REQUIRED_USE} minimal? ( !oqgraph !sphinx ) tokudb? ( jemalloc )"
 
 	# MariaDB 10.1 introduces InnoDB/XtraDB compression with external libraries
@@ -239,7 +238,7 @@ fi
 
 REQUIRED_USE="
 	${REQUIRED_USE} tcmalloc? ( !jemalloc ) jemalloc? ( !tcmalloc )
-	 minimal? ( !cluster !extraengine !embedded ) static? ( !ssl )"
+	 minimal? ( !extraengine !embedded ) static? ( !ssl )"
 
 #
 # DEPENDENCIES:
@@ -254,6 +253,7 @@ DEPEND="
 		sys-process/procps:0=
 		dev-libs/libaio:0=
 	)
+	sys-libs/ncurses
 	>=sys-apps/sed-4
 	>=sys-apps/texinfo-4.7-r1
 	>=sys-libs/zlib-1.2.3:0=[${MULTILIB_USEDEP},static-libs?]
@@ -300,8 +300,10 @@ if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
 		perl? ( !dev-db/mytop )"
 	if mysql_version_is_at_least "10.0.5" ; then
 		DEPEND="${DEPEND}
-			odbc? ( dev-db/unixODBC:0= )
-			xml? ( dev-libs/libxml2:2= )
+			extraengine? (
+				odbc? ( dev-db/unixODBC:0= )
+				xml? ( dev-libs/libxml2:2= )
+			)
 			"
 	fi
 	mysql_version_is_at_least "10.0.7" && DEPEND="${DEPEND} oqgraph? ( dev-libs/judy:0= )"
@@ -375,10 +377,12 @@ if [[ ${PN} == "mysql-cluster" ]] ; then
 fi
 
 # compile-time-only
+# ncurses only needs multilib for compile time due to a binary that will be not installed
 DEPEND="${DEPEND}
 	virtual/yacc
 	static? ( sys-libs/ncurses[static-libs] )
 	>=dev-util/cmake-2.8.9
+	sys-libs/ncurses[${MULTILIB_USEDEP}]
 "
 
 # For other stuff to bring us in
@@ -431,9 +435,9 @@ mysql-multilib_pkg_setup() {
 	enewuser mysql 60 -1 /dev/null mysql || die "problem adding 'mysql' user"
 
 	if use cluster && [[ "${PN}" != "mysql-cluster" ]]; then
-		ewarn "Upstream has noted that the NDB cluster support in the 5.0 and"
-		ewarn "5.1 series should NOT be put into production. In the near"
-		ewarn "future, it will be disabled from building."
+		ewarn "The NDB cluster support is no longer built."
+		ewarn "Please use dev-db/mysql-cluster for NDB."
+		ewarn "In the near future, the USE flag will be removed."
 	fi
 
 	if [[ ${PN} == "mysql-cluster" ]] ; then

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1522 2015/02/05 23:28:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1523 2015/02/08 22:03:56 grknight Exp $
+
+  08 Feb 2015; Brian Evans <grknight@gentoo.org> mysql-multilib.eclass:
+  Fix dependency on ncurses for bug 539354 and restructure to remove user
+  confusion with the xml flag for mariadb
 
   05 Feb 2015; Anthony G. Basile <blueness@gentoo.org> toolchain.eclass:
   Restore the old way of dealing with fixed includes for bsd, bug #536878.

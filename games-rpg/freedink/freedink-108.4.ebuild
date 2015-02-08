@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/freedink-108.4.ebuild,v 1.1 2014/11/12 16:01:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink/freedink-108.4.ebuild,v 1.2 2015/02/08 22:01:59 mr_bones_ Exp $
 
 EAPI=5
-
 inherit games
 
 DESCRIPTION="Dink Smallwood is an adventure/role-playing game, similar to Zelda (2D top view)"
@@ -13,7 +12,7 @@ SRC_URI="mirror://gnu/freedink/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls"
+IUSE=""
 
 DEPEND="
 	>=media-libs/fontconfig-2.4
@@ -27,7 +26,7 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-libs/check
 	virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
+	sys-devel/gettext"
 
 src_prepare() {
 	sed -i \
@@ -38,8 +37,7 @@ src_prepare() {
 src_configure() {
 	egamesconf \
 		--disable-embedded-resources \
-		--localedir="/usr/share/locale" \
-		$(use_enable nls)
+		--localedir="/usr/share/locale"
 }
 
 src_install() {
