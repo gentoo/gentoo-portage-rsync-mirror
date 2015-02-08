@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0.ebuild,v 1.1 2015/02/08 09:53:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0.ebuild,v 1.2 2015/02/08 10:06:47 hwoarang Exp $
 
 EAPI="5"
 
@@ -47,7 +47,7 @@ CONFIG_CHECK="~CGROUPS ~CGROUP_DEVICE
 
 	~NETLINK_DIAG ~PACKET_DIAG
 	~INET_UDP_DIAG ~INET_TCP_DIAG
-	~UNIX_DIAG
+	~UNIX_DIAG ~CHECKPOINT_RESTORE
 
 	~DEVPTS_MULTIPLE_INSTANCES
 	~CGROUP_FREEZER
@@ -78,7 +78,8 @@ ERROR_NETLINK_DIAG="CONFIG_NETLINK_DIAG:  needed for lxc-checkpoint"
 ERROR_PACKET_DIAG="CONFIG_PACKET_DIAG:  needed for lxc-checkpoint"
 ERROR_INET_UDP_DIAG="CONFIG_INET_UDP_DIAG:  needed for lxc-checkpoint"
 ERROR_INET_TCP_DIAG="CONFIG_INET_TCP_DIAG:  needed for lxc-checkpoint"
-ERROR_UNIX_DIAG="UNIX_DIAG:  needed for lxc-checkpoint"
+ERROR_UNIX_DIAG="CONFIG_UNIX_DIAG:  needed for lxc-checkpoint"
+ERROR_CHECKPOINT_RESTORE="CONFIG_CHECKPOINT_RESTORE:  needed for lxc-checkpoint"
 
 ERROR_POSIX_MQUEUE="CONFIG_POSIX_MQUEUE:  needed for lxc-execute command"
 
