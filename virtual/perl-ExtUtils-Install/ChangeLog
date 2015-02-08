@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Install
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.52 2014/11/08 14:25:24 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.53 2015/02/08 12:00:50 zlogene Exp $
+
+  08 Feb 2015; Mikle Kolyada <zlogene@gentoo.org>
+  perl-ExtUtils-Install-1.670.0.ebuild:
+  amd64 stable wrt bug #536790
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-ExtUtils-Install-1.540.0.ebuild,

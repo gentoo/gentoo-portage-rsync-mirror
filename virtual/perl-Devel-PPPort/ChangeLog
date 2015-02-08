@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Devel-PPPort
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.13 2014/11/08 15:05:40 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.14 2015/02/08 11:50:57 zlogene Exp $
+
+  08 Feb 2015; Mikle Kolyada <zlogene@gentoo.org>
+  perl-Devel-PPPort-3.210.0.ebuild:
+  amd64 stable wrt bug #536790
 
 *perl-Devel-PPPort-3.200.0-r4 (08 Nov 2014)
 

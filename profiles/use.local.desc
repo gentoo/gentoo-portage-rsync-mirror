@@ -4651,7 +4651,7 @@ net-analyzer/linkchecker:login - login form submission
 net-analyzer/linkchecker:nagios - Install nagios cli plugin
 net-analyzer/linkchecker:sqlite - Mozilla Bookmark parsing
 net-analyzer/linkchecker:syntax-check - HTML/CSS syntax checks
-net-analyzer/metasploit:development - Install dependancies needed for metasploit and exploit development
+net-analyzer/metasploit:development - Install dependencies needed for metasploit and exploit development
 net-analyzer/metasploit:lorcon - Enable lorcon for raw packet injection
 net-analyzer/metasploit:oracle - Enable restricted oracle modules which have additional deps
 net-analyzer/metasploit:pcap - Enable libpcap for packet sniffing

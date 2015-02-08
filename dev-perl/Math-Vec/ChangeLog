@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Vec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Vec/ChangeLog,v 1.9 2014/08/23 21:59:57 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Vec/ChangeLog,v 1.10 2015/02/08 11:47:52 hanno Exp $
+
+  08 Feb 2015;  <hanno@gentoo.org> metadata.xml:
+  Remove myself as maintainer from Math-Vec, goes to perl herd
 
 *Math-Vec-1.10.0-r1 (23 Aug 2014)
 
