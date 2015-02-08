@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-26.0.1656.60.ebuild,v 1.1 2014/12/17 14:45:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-27.0.1689.66.ebuild,v 1.1 2015/02/08 08:18:45 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
-	af az be bg bn ca cs da de el en_GB en_US es_419 es fi fr_CA fr fy gd hi hr
-	hu id it ja kk ko lt lv me mk ms nb nl nn pa pl pt_BR pt_PT ro ru sk sr sv
-	sw ta te th tl tr uk uz vi zh_CN zh_TW zu
+	af az be bg bn ca cs da de el en_GB en_US es_419 es fil fi fr_CA fr fy gd
+	hi hr hu id it ja kk ko lt lv me mk ms nb nl nn pa pl pt_BR pt_PT ro ru sk
+	sr sv sw ta te th tr uk uz vi zh_CN zh_TW zu
 "
 inherit chromium multilib unpacker
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.25 2015/02/07 08:15:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.26 2015/02/08 08:12:07 idella4 Exp $
+
+*jsonpickle-0.4.0-r1 (08 Feb 2015)
+
+  08 Feb 2015; Ian Delaney <idella4@gentoo.org> +jsonpickle-0.4.0-r1.ebuild:
+  re-add -0.4.0-r1 stable
 
 *jsonpickle-0.9.0 (07 Feb 2015)
 

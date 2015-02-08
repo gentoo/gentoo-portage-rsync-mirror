@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.85 2015/01/26 09:51:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.86 2015/02/08 08:14:44 mr_bones_ Exp $
+
+  08 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> -stella-3.7.5.ebuild,
+  -stella-3.9.ebuild:
+  old
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> stella-4.0.ebuild:
   Stable for x86, wrt bug #535956
