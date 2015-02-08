@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.58 2015/01/29 05:39:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.59 2015/02/08 01:51:56 prometheanfire Exp $
+
+*glance-2014.2.2 (08 Feb 2015)
+
+  08 Feb 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +glance-2014.2.2.ebuild,
+  -files/0001-Prevent-file-swift-config-and-filesystem-schemes.patch,
+  -files/0001-To-prevent-client-use-v2-patch-api-to-handle-file-an.patch,
+  -files/glance-CVE-2014-9623.patch, -glance-9999.ebuild,
+  glance-2014.2.9999.ebuild:
+  bumping :D
 
 *glance-2014.2.1-r2 (29 Jan 2015)
 

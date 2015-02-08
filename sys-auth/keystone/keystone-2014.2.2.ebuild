@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.2.ebuild,v 1.2 2015/02/08 01:26:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.2.ebuild,v 1.3 2015/02/08 01:59:11 prometheanfire Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
-#todo, seperate out rdepend via use flags
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+DEPEND="
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/pbr-0.6[${PYTHON_USEDEP}]
 	!~dev-python/pbr-0.7[${PYTHON_USEDEP}]
 	<dev-python/pbr-1.0[${PYTHON_USEDEP}]
@@ -60,8 +60,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/lockfile-0.8[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-1.0.0[${PYTHON_USEDEP}]
 	)"
-RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
+RDEPEND="
+	>=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.15.1[${PYTHON_USEDEP}]
+	<dev-python/eventlet-0.16.0[${PYTHON_USEDEP}]
 	>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 	>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
 	>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
@@ -70,45 +72,20 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 	>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
 	sqlite? (
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
 	)
 	mysql? (
 		dev-python/mysql-python
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
 	postgres? (
 		dev-python/psycopg:2
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
-	>=dev-python/sqlalchemy-migrate-0.9.1[${PYTHON_USEDEP}]
-	!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]
+	~dev-python/sqlalchemy-migrate-0.9.1[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
 	>=dev-python/python-keystoneclient-0.10.0[${PYTHON_USEDEP}]
@@ -116,7 +93,9 @@ RDEPEND=">=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
 	!~dev-python/oslo-messaging-1.5.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-messaging-1.6.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-db-1.1.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-i18n-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-serialization-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-1.0.0[${PYTHON_USEDEP}]
