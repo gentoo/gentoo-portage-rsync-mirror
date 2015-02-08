@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-if
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-if/ChangeLog,v 1.10 2014/11/08 17:12:34 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-if/ChangeLog,v 1.11 2015/02/07 23:01:45 zlogene Exp $
+
+  07 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> perl-if-0.60.200-r2.ebuild:
+  Add stable arm keyword, needed for bugzilla dev-perl/DateTime-TimeZone
+  stabilization
 
 *perl-if-0.60.200-r2 (08 Nov 2014)
 
