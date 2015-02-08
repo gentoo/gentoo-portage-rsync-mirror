@@ -1,21 +1,23 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.8.1.ebuild,v 1.4 2013/06/25 16:56:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.12.0.ebuild,v 1.1 2015/02/08 18:07:26 dilfridge Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A collection of multi-dimensional data structure and indexing algorithm"
 HOMEPAGE="http://code.google.com/p/multidimalgorithm/"
-SRC_URI="http://multidimalgorithm.googlecode.com/files/${P/-/_}.tar.bz2"
+SRC_URI="http://kohei.us/files/${PN}/src/${P/-/_}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+#KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+# temporarily
+KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-libs/boost"
+DEPEND="dev-libs/boost:="
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P/-/_}

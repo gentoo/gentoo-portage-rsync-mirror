@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libixion
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.13 2014/12/28 18:40:14 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.14 2015/02/08 18:20:40 dilfridge Exp $
+
+  08 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> libixion-0.5.0.ebuild,
+  libixion-0.7.0.ebuild, libixion-9999.ebuild:
+  Update live ebuild and improve dependencies, thanks to Andreas Sturmlechner
 
   28 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> libixion-9999.ebuild:
   Minor updates to ebuild

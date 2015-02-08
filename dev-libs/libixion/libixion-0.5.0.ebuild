@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-0.5.0.ebuild,v 1.6 2013/10/27 12:05:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-0.5.0.ebuild,v 1.7 2015/02/08 18:20:40 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="static-libs"
 
 RDEPEND="dev-libs/boost:="
 DEPEND="${RDEPEND}
-	>=dev-util/mdds-0.7.1:=
+	<dev-util/mdds-0.12.0:=
 "
 
 src_prepare() {
