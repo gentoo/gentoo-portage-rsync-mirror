@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.5.0.ebuild,v 1.2 2015/02/03 10:58:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.5.0.ebuild,v 1.3 2015/02/08 09:26:24 pacho Exp $
 
 EAPI=5
 XORG_EAUTORECONF="yes"
@@ -18,7 +18,7 @@ fi
 inherit xorg-2 ${GIT_ECLASS}
 
 DESCRIPTION="X.Org xkbcommon library"
-KEYWORDS="~amd64 ~arm ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~x86"
 IUSE="X doc test"
 
 DEPEND="sys-devel/bison

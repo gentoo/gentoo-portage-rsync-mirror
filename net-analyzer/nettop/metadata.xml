@@ -2,5 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<longdescription>top like program for network activity</longdescription>
 </pkgmetadata>
