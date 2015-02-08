@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.15 2014/01/04 22:30:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.16 2015/02/08 10:37:53 aballier Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/DirectFB-${PV}
 	vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	cddb? ( media-libs/libcddb )
-	ffmpeg? ( >=virtual/ffmpeg-0.6.90 )"
+	ffmpeg? ( >=virtual/ffmpeg-9 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-apps/sed"
@@ -37,7 +37,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ffmpeg-0.10.patch \
 		"${FILESDIR}"/${P}-libavformat54.patch \
 		"${FILESDIR}"/${P}-libav-0.8.1.patch \
-		"${FILESDIR}"/${P}-libav-9.patch
+		"${FILESDIR}"/${P}-libav-9.patch \
+		"${FILESDIR}"/${P}-ffmpeg2.patch \
+		"${FILESDIR}"/${P}-segfault.patch
 
 	sed -i -e 's:-O3 -ffast-math -pipe::' configure.in || die
 
