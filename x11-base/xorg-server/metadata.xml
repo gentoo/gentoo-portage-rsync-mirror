@@ -9,6 +9,7 @@
 	<flag name='tslib'>Build with tslib support for touchscreen devices</flag>
 	<flag name='unwind'>Enable libunwind usage for backtraces</flag>
 	<flag name='xnest'>Build the Xnest server</flag>
+	<flag name='xephyr'>Build the Xephyr server</flag>
 	<flag name='xorg'>Build the Xorg X server (HIGHLY RECOMMENDED)</flag>
 	<flag name='xvfb'>Build the Xvfb server</flag>
 </use>
