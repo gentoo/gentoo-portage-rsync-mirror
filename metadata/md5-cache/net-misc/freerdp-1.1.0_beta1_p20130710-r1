@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-libs/openssl sys-libs/zlib alsa? ( media-libs/alsa-lib ) cups? ( net-print/cups ) client? ( X? ( x11-libs/libXcursor x11-libs/libXext x11-libs/libXi x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) ) ) directfb? ( dev-libs/DirectFB ) ffmpeg? ( virtual/ffmpeg ) gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 x11-libs/libXrandr ) jpeg? ( virtual/jpeg ) pulseaudio? ( media-sound/pulseaudio ) server? ( X? ( x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes xinerama? ( x11-libs/libXinerama ) ) ) smartcard? ( sys-apps/pcsc-lite ) X? ( x11-libs/libX11 x11-libs/libxkbfile ) client? ( X? ( doc? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) ) ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-libs/openssl sys-libs/zlib alsa? ( media-libs/alsa-lib ) cups? ( net-print/cups ) client? ( X? ( x11-libs/libXcursor x11-libs/libXext x11-libs/libXi x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) ) ) directfb? ( dev-libs/DirectFB ) ffmpeg? ( virtual/ffmpeg ) gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 x11-libs/libXrandr ) jpeg? ( virtual/jpeg ) pulseaudio? ( media-sound/pulseaudio ) server? ( X? ( x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes xinerama? ( x11-libs/libXinerama ) ) ) smartcard? ( sys-apps/pcsc-lite ) X? ( x11-libs/libX11 x11-libs/libxkbfile ) <dev-util/cmake-3.1 client? ( X? ( doc? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) ) ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Free implementation of the Remote Desktop Protocol
 EAPI=5
 HOMEPAGE=http://www.freerdp.com/
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl sys-libs/zlib alsa? ( media-libs/alsa-lib ) cups? ( net
 SLOT=0
 SRC_URI=https://github.com/FreeRDP/FreeRDP/archive/780d451afad21a22d2af6bd030ee71311856f038.tar.gz -> freerdp-1.1.0_beta1_p20130710.tar.gz
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=88a419e6c31d8ba93c2c39c927ed3b67
+_md5_=fc25cd1e2bd2c9e46cc0906af04a3a0f

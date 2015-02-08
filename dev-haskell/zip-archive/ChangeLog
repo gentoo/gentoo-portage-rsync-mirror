@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/zip-archive
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/ChangeLog,v 1.43 2014/12/14 08:19:37 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zip-archive/ChangeLog,v 1.44 2015/02/08 19:22:31 qnikst Exp $
+
+*zip-archive-0.2.3.7 (08 Feb 2015)
+
+  08 Feb 2015; Alexander Vershilov <qnikst@gentoo.org>
+  +zip-archive-0.2.3.7.ebuild, -zip-archive-0.2.2.1.ebuild,
+  -zip-archive-0.2.3.2.ebuild, -zip-archive-0.2.3.5.ebuild:
+  update
 
 *zip-archive-0.2.3.5 (14 Dec 2014)
 

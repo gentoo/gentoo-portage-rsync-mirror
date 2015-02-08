@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710-r2.ebuild,v 1.6 2015/01/30 19:52:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710-r2.ebuild,v 1.7 2015/02/08 19:03:41 floppym Exp $
 
 EAPI="5"
 
@@ -72,6 +72,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
+	<dev-util/cmake-3.1
 	virtual/pkgconfig
 	client? ( X? ( doc? (
 		app-text/docbook-xml-dtd:4.1.2

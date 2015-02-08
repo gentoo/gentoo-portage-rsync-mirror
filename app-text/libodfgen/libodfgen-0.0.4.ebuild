@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.4.ebuild,v 1.4 2014/12/30 15:07:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/libodfgen-0.0.4.ebuild,v 1.5 2015/02/08 19:13:52 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	app-text/libetonyek
+	=app-text/libetonyek-0.0*
 	app-text/libwpd:0.9
 	app-text/libwpg:0.2
 "

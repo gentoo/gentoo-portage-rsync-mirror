@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.157 2015/01/31 07:05:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.158 2015/02/08 19:05:16 xarthisius Exp $
+
+*ipython-2.4.0 (08 Feb 2015)
+
+  08 Feb 2015; Kacper Kowalik <xarthisius@gentoo.org> +ipython-2.4.0.ebuild:
+  Version bump, allow to use node.js for nbconvert instead of app-text/pandoc
 
   31 Jan 2015; Mike Frysinger <vapier@gentoo.org> ipython-2.3.1.ebuild:
   Add mips love.
