@@ -15,6 +15,7 @@
     <flag name="kvm">qemu-kvm hypervisor support</flag>
     <flag name="network">Installs the initscripts for the nova network service</flag>
     <flag name="novncproxy">Installs the initscripts for the nova novncproxy service</flag>
+    <flag name="openvswitch">Installs openvswitch for the neutron openvswitch support</flag>
     <flag name="xen">xen hypervisor support</flag>
   </use>
 </pkgmetadata>

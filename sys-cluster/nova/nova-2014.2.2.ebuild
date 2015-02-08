@@ -1,21 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.19 2015/01/13 04:16:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.2.2.ebuild,v 1.1 2015/02/08 02:44:24 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 linux-info multilib user
+inherit distutils-r1 eutils linux-info multilib user
 
 DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python"
 HOMEPAGE="https://launchpad.net/nova"
-EGIT_REPO_URI="https://github.com/openstack/nova.git"
-EGIT_BRANCH="master"
+SRC_URI="http://launchpad.net/${PN}/juno/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
-IUSE="+compute +kvm +network +novncproxy sqlite mysql postgres xen"
+KEYWORDS="~amd64 ~x86"
+IUSE="+compute +kvm +network +novncproxy openvswitch sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
 			  compute? ( || ( kvm xen ) )"
 
@@ -26,47 +25,25 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 RDEPEND="
 	sqlite? (
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[sqlite,${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[sqlite,${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
 	)
 	mysql? (
 		dev-python/mysql-python
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
 	postgres? (
 		dev-python/psycopg:2
-		|| (
-			(
-				>=dev-python/sqlalchemy-0.8.4[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.8.99[${PYTHON_USEDEP}]
-			)
-			(
-				>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
-				<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
-			)
-		)
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
 	)
 	>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 	>=dev-python/boto-2.32.1[${PYTHON_USEDEP}]
+	<dev-python/boto-2.35.0[${PYTHON_USEDEP}]
 	>=dev-python/decorator-3.4.0[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.15.1[${PYTHON_USEDEP}]
+	<dev-python/eventlet-0.16.0[${PYTHON_USEDEP}]
 	dev-python/jinja[${PYTHON_USEDEP}]
 	>=dev-python/keystonemiddleware-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/kombu-2.5.0[${PYTHON_USEDEP}]
@@ -77,8 +54,7 @@ RDEPEND="
 	>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 	>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
-	>=dev-python/sqlalchemy-migrate-0.9.1[${PYTHON_USEDEP}]
-	!~dev-python/sqlalchemy-migrate-0.9.2[${PYTHON_USEDEP}]
+	~dev-python/sqlalchemy-migrate-0.9.1[${PYTHON_USEDEP}]
 	>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
 	>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 	>=dev-python/paramiko-1.13.0[${PYTHON_USEDEP}]
@@ -99,19 +75,22 @@ RDEPEND="
 	<dev-python/websockify-0.7.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-db-1.0.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-db-1.1.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-rootwrap-1.3.0[${PYTHON_USEDEP}]
 	>=dev-python/pycadf-0.6.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
 	!~dev-python/oslo-messaging-1.5.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-messaging-1.6.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-i18n-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/lockfile-0.8[${PYTHON_USEDEP}]
 	>=dev-python/simplejson-2.2.0[${PYTHON_USEDEP}]
 	>=dev-python/rfc3986-0.2.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-vmware-0.6.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-vmware-0.9.0[${PYTHON_USEDEP}]
 	dev-python/libvirt-python[${PYTHON_USEDEP}]
 	novncproxy? ( www-apps/novnc )
 	sys-apps/iproute2
-	net-misc/openvswitch
+	openvswitch? ( net-misc/openvswitch )
 	net-misc/rabbitmq-server
 	sys-fs/sysfsutils
 	sys-fs/multipath-tools
