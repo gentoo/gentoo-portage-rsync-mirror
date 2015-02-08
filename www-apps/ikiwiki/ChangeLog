@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ikiwiki
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.24 2014/12/12 13:06:42 alicef Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.25 2015/02/08 16:00:34 alicef Exp $
+
+*ikiwiki-3.20150107 (08 Feb 2015)
+
+  08 Feb 2015; Alice Ferrazzi <alicef@gentoo.org> +ikiwiki-3.20150107.ebuild:
+  Version bump.
 
   12 Dec 2014; Alice Ferrazzi <alicef@gentoo.org> metadata.xml:
   Update email and removed proxy-maintainers herd
