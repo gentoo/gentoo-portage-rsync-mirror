@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.6.ebuild,v 1.6 2014/06/24 23:34:13 mr_bones_ Exp $
 
@@ -20,7 +20,7 @@ RDEPEND="sys-libs/zlib
 	!dedicated? (
 		media-libs/speex
 		virtual/jpeg:0
-		media-libs/libsdl
+		media-libs/libsdl[X]
 		virtual/opengl
 		virtual/glu
 		openal? ( media-libs/openal )
