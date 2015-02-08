@@ -1,14 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-9-r2.ebuild,v 1.1 2015/02/01 22:28:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ffmpeg-9-r2.ebuild,v 1.2 2015/02/08 18:43:29 mgorny Exp $
 
 EAPI=5
 
 inherit multilib-build
 
-DESCRIPTION="Virtual package for FFmpeg implementation"
+DESCRIPTION="Virtual package for FFmpeg executable implementation"
 HOMEPAGE=""
 SRC_URI=""
+
+# Please note that this virtual is only suited for packages that call
+# ffmpeg/avconv or one of the remaining executables. If your package
+# links to one of the libraries, you need to use the following
+# dependency instead (adding IUSE=libav):
+#	libav? ( media-video/libav:0= )
+#	!libav? ( media-video/ffmpeg:0= )
 
 LICENSE=""
 SLOT="0"

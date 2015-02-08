@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.21.ebuild,v 1.1 2015/02/07 01:12:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.21.ebuild,v 1.2 2015/02/08 18:52:15 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils gnome2-utils games
@@ -22,7 +22,7 @@ COMMON_DEPS="media-libs/sdl-ttf
 	sys-libs/zlib
 	net-misc/curl
 	|| ( >=dev-libs/xerces-c-3[icu] >=dev-libs/xerces-c-3[-icu,-iconv] )
-	net-libs/enet:0
+	net-libs/enet
 	nls? ( virtual/libintl )"
 DEPEND="${COMMON_DEPS}
 	sys-devel/gettext"

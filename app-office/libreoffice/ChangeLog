@@ -1,6 +1,23 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.607 2015/01/04 14:41:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.610 2015/02/08 18:59:16 dilfridge Exp $
+
+  08 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.4.9999.ebuild, libreoffice-9999.ebuild:
+  Drop ppc in future versions, acked by blueness
+
+*libreoffice-9999 (08 Feb 2015)
+*libreoffice-4.4.9999 (08 Feb 2015)
+
+  08 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-4.4.9999.ebuild, +libreoffice-9999.ebuild,
+  -libreoffice-9999-r2.ebuild:
+  Add new stable branch live ebuild, sanitize master live ebuild PVR
+
+  08 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.2.9999.ebuild, libreoffice-4.3.9999.ebuild,
+  libreoffice-9999-r2.ebuild, +files/libreoffice-4.4-system-pyuno.patch:
+  Update live ebuilds for LibreOffice 4.4, thanks Andreas Sturmlechner
 
   04 Jan 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-4.3.5.2.ebuild, libreoffice-4.3.9999.ebuild,

@@ -20,5 +20,6 @@
 		<flag name="mercurial">Support <pkg>dev-vcs/mercurial</pkg> based overlays</flag>
 		<flag name="squashfs">Support mounting squashfs image overlays locally read-only</flag>
 		<flag name="subversion">Support <pkg>dev-vcs/subversion</pkg> based overlays</flag>
+		<flag name="sync-plugin-portage">Install the <pkg>sys-apps/portage</pkg> sync module</flag>
 	</use>
 </pkgmetadata>

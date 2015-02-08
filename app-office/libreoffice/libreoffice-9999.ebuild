@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.236 2014/12/29 20:05:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.26 2015/02/08 18:59:16 dilfridge Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ BRANDING="${PN}-branding-gentoo-0.8.tar.xz"
 # PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base multiprocessing autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
+inherit base multiprocessing autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils python-single-r1 multilib toolchain-funcs flag-o-matic ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite"
@@ -61,7 +61,6 @@ unset DEV_URI
 ADDONS_SRC+=" ${ADDONS_URI}/d62650a6f908e85643e557a236ea989c-vigra1.6.0.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz" # modifies source code
 ADDONS_SRC+=" collada? ( ${ADDONS_URI}/4b87018f7fff1d054939d19920b751a0-collada2gltf-master-cb1d97788a.tar.bz2 )"
-ADDONS_SRC+=" collada? ( ${ADDONS_URI}/OpenCOLLADA-master-6509aa13af.tar.bz2 )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" libreoffice_extensions_wiki-publisher? ( ${ADDONS_URI}/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip )" # no release for 8 years, should we package it?
 ADDONS_SRC+=" libreoffice_extensions_scripting-javascript? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )" # Does not build with 1.6 rhino at all
@@ -74,7 +73,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding coinmp collada +cups dbus debug eds firebird gltf gnome gstreamer
-+gtk gtk3 jemalloc kde mysql odk opengl postgres telepathy test vlc"
++gtk gtk3 jemalloc kde mysql odk postgres telepathy test vlc"
 
 LO_EXTS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -91,10 +90,8 @@ unset lo_xt
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 
-# FIXME: collada? ( media-libs/opencollada )
-#        how to configure system-collada?
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	app-arch/zip
@@ -107,16 +104,16 @@ COMMON_DEPEND="
 	>=app-text/libetonyek-0.1.1
 	app-text/liblangtag
 	>=app-text/libmspub-0.1.0
-	>=app-text/libmwaw-0.3.1
+	>=app-text/libmwaw-0.3.4
 	>=app-text/libodfgen-0.1.0
 	app-text/libwpd:0.10[tools]
 	app-text/libwpg:0.3
 	>=app-text/libwps-0.3.0
 	>=app-text/poppler-0.16:=[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
-	dev-cpp/libcmis:0.4
+	=dev-cpp/libcmis-0.5*
 	dev-db/unixODBC
-	>=dev-libs/boost-1.46:=
+	>=dev-libs/boost-1.55:=
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
@@ -136,6 +133,7 @@ COMMON_DEPEND="
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.1.0
 	>=media-libs/libfreehand-0.1.0
+	media-libs/libpagemaker
 	>=media-libs/libvisio-0.1.0
 	>=net-misc/curl-7.21.4
 	net-libs/neon
@@ -146,8 +144,11 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	virtual/glu
+	virtual/opengl
 	bluetooth? ( net-wireless/bluez )
 	coinmp? ( sci-libs/coinor-mp )
+	collada? ( >=media-libs/opencollada-1.2.2_p20150207 )
 	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
@@ -174,10 +175,6 @@ COMMON_DEPEND="
 		dev-java/tomcat-servlet-api:3.0
 	)
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
-	opengl? (
-		virtual/glu
-		virtual/opengl
-	)
 	postgres? ( >=dev-db/postgresql-9.0[kerberos] )
 	telepathy? (
 		dev-libs/glib:2
@@ -245,7 +242,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	# not upstreamable stuff
-	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
+	"${FILESDIR}/${PN}-4.4-system-pyuno.patch"
 )
 
 REQUIRED_USE="
@@ -340,6 +337,11 @@ src_prepare() {
 	export PYTHON_CFLAGS=$(python_get_CFLAGS)
 	export PYTHON_LIBS=$(python_get_LIBS)
 
+	if use collada; then
+		export OPENCOLLADA_CFLAGS="-I/usr/include/opencollada/COLLADABaseUtils -I/usr/include/opencollada/COLLADAFramework -I/usr/include/opencollada/COLLADASaxFrameworkLoader -I/usr/include/opencollada/GeneratedSaxParser"
+		export OPENCOLLADA_LIBS="-L /usr/$(get_libdir)/opencollada -lOpenCOLLADABaseUtils -lOpenCOLLADAFramework -lOpenCOLLADASaxFrameworkLoader -lGeneratedSaxParser"
+	fi
+
 	# patchset
 	if [[ -n ${PATCHSET} ]]; then
 		EPATCH_FORCE="yes" \
@@ -359,7 +361,7 @@ src_prepare() {
 		-e "s:%eprefix%:${EPREFIX}:g" \
 		-e "s:%libdir%:$(get_libdir):g" \
 		-i pyuno/source/module/uno.py \
-		-i scripting/source/pyprov/officehelper.py || die
+		-i pyuno/source/officehelper.py || die
 	# sed in the tests
 	sed -i \
 		-e 's#all : build unitcheck#all : build#g' \
@@ -441,7 +443,6 @@ src_configure() {
 	# --enable-extension-integration: enable any extension integration support
 	# --without-{fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
 	# --disable-report-builder: too much java packages pulled in without pkgs
-	# FIXME: $(use_with collada system-opencollada)
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
 		--with-system-headers \
@@ -499,17 +500,17 @@ src_configure() {
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
-		$(use_enable gstreamer) \
+		$(use_enable gstreamer gstreamer-1-0) \
 		$(use_enable gtk) \
 		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mariadb-connector) \
 		$(use_enable odk) \
-		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable telepathy) \
 		$(use_enable vlc) \
 		$(use_with coinmp system-coinmp) \
+		$(use_with collada system-opencollada) \
 		$(use_with gltf system-libgltf) \
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
@@ -567,9 +568,6 @@ src_install() {
 		echo "CONFIG_PROTECT=/usr/$(get_libdir)/${PN}/program/sofficerc" > "${ED}"/etc/env.d/99${PN}
 	fi
 
-	# symlink the nsplugin to proper location
-	# use gtk && inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
-
 	# Hack for offlinehelp, this needs fixing upstream at some point.
 	# It is broken because we send --without-help
 	# https://bugs.freedesktop.org/show_bug.cgi?id=46506
@@ -578,6 +576,10 @@ src_install() {
 
 	# Remove desktop files for support to old installs that can't parse mime
 	rm -rf "${ED}"/usr/share/mimelnk/
+
+	# FIXME: Hack add missing file
+	insinto /usr/$(get_libdir)/${PN}/program
+	doins "${S}"/instdir/program/libsaxlo.so
 
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
 	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin

@@ -1,26 +1,24 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.40 2015/02/08 18:50:41 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.3.0.ebuild,v 1.1 2015/02/08 18:50:41 dolsen Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 PYTHON_REQ_USE="xml(+)"
 
-inherit eutils distutils-r1 git-2 linux-info prefix
+inherit eutils distutils-r1 linux-info prefix
 
 DESCRIPTION="Tool to manage Gentoo overlays"
 HOMEPAGE="http://layman.sourceforge.net"
-SRC_URI=""
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/layman.git"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="bazaar cvs darcs +git gpg g-sorcery mercurial squashfs subversion sync-plugin-portage test"
 
-DEPEND="test? ( dev-vcs/subversion )
-	app-text/asciidoc"
+DEPEND="test? ( dev-vcs/subversion )"
 
 RDEPEND="
 	bazaar? ( dev-vcs/bzr )
@@ -36,9 +34,9 @@ RDEPEND="
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)
 	)
-	gpg? ( =dev-python/pyGPG-9999 )
 	sync-plugin-portage?  ( >=sys-apps/portage-2.2.16[${PYTHON_USEDEP}] )
 	!sync-plugin-portage? ( sys-apps/portage[${PYTHON_USEDEP}] )
+	gpg? ( dev-python/pyGPG )
 	>=dev-python/ssl-fetch-0.2[${PYTHON_USEDEP}]
 	"
 
@@ -59,19 +57,15 @@ pkg_setup() {
 python_prepare_all()  {
 	esetup.py setup_plugins
 	distutils-r1_python_prepare_all
+	#rm "${S}"/"${PN}"/tests/dtest.py
 	eprefixify etc/layman.cfg layman/config.py
 }
 
 python_test() {
-	for suite in layman/tests/{dtest,external}.py ; do
+	for suite in layman/tests/external.py ; do
 		PYTHONPATH="." "${PYTHON}" ${suite} \
-				|| die "test suite '${suite}' failed"
+		|| die "test suite '${suite}' failed"
 	done
-}
-
-python_compile_all() {
-	# override MAKEOPTS to prevent build failure
-	emake -j1 -C doc
 }
 
 python_install_all() {

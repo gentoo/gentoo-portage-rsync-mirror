@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.11 2015/01/04 14:41:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.3.9999.ebuild,v 1.12 2015/02/08 18:53:59 dilfridge Exp $
 
 EAPI=5
 
@@ -114,7 +114,7 @@ COMMON_DEPEND="
 	>=app-text/libwps-0.3.0
 	>=app-text/poppler-0.16:=[xpdf-headers(+),cxx]
 	>=dev-cpp/clucene-2.3.3.4-r2
-	dev-cpp/libcmis:0.4
+	=dev-cpp/libcmis-0.4*
 	dev-db/unixODBC
 	>=dev-libs/boost-1.46:=
 	dev-libs/expat

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.32 2015/02/04 09:37:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.33 2015/02/08 18:33:27 dilfridge Exp $
+
+  08 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> liborcus-0.5.1.ebuild,
+  liborcus-0.7.0.ebuild, liborcus-9999.ebuild:
+  Improve dependencies, thanks to Andreas Sturmlechner
 
   04 Feb 2015; Michał Górny <mgorny@gentoo.org> liborcus-0.7.0.ebuild,
   liborcus-9999.ebuild:
