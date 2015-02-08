@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.601 2015/02/08 19:11:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.602 2015/02/08 20:07:10 chithanh Exp $
+
+*mesa-10.3.7-r1 (08 Feb 2015)
+*mesa-10.3.7-r2 (08 Feb 2015)
+
+  08 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +mesa-10.3.7-r1.ebuild, +mesa-10.3.7-r2.ebuild, -mesa-10.3.7.ebuild:
+  Add ebuild which works with old eselect-opengl for stabilization in bug
+  #530652.
 
 *mesa-10.4.4 (08 Feb 2015)
 
