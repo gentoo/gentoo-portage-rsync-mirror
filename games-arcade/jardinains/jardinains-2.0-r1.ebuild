@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0-r1.ebuild,v 1.2 2014/06/26 19:09:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jardinains/jardinains-2.0-r1.ebuild,v 1.3 2015/02/08 09:38:40 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -35,8 +35,6 @@ RDEPEND="sys-libs/libstdc++-v3:5
 dir=${GAMES_PREFIX_OPT}/${PN}
 QA_PREBUILT="${dir:1}/${PN}"
 
-PATCHES=( "${FILESDIR}"/strings-pt.patch )
-
 src_unpack() {
 	unpack JN2_1_FREE_LIN.tar.gz
 	cd "${WORKDIR}"
@@ -46,6 +44,7 @@ src_unpack() {
 src_prepare() {
 	# clean Mac fork files (bug #295782)
 	find . -type f -name "._*" -exec rm -f '{}' +
+	epatch "${FILESDIR}"/strings-pt.patch
 }
 
 src_install() {

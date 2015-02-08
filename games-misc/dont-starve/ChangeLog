@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/dont-starve
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/dont-starve/ChangeLog,v 1.5 2015/01/27 07:48:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/dont-starve/ChangeLog,v 1.6 2015/02/08 09:34:52 ago Exp $
+
+  08 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dont-starve-2.ebuild:
+  Stable for amd64, wrt bug #539312
 
   27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -dont-starve-1.ebuild:
   old
