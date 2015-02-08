@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.6.ebuild,v 1.7 2015/02/08 18:16:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/worldofpadman-1.6.ebuild,v 1.8 2015/02/08 22:43:35 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/zlib
 	!dedicated? (
 		media-libs/speex
 		virtual/jpeg:0
-		media-libs/libsdl[opengl,video]
+		media-libs/libsdl[opengl,video,X]
 		virtual/opengl
 		virtual/glu
 		openal? ( media-libs/openal )

@@ -1,0 +1,51 @@
+From 1964870db4ad1e4334e8fc5050795469dc1fb05e Mon Sep 17 00:00:00 2001
+From: Giuseppe Bilotta <giuseppe.bilotta@gmail.com>
+Date: Tue, 9 Sep 2014 21:34:45 +0200
+Subject: [PATCH] Fallback DPI detection on X11
+
+When the Xft.dpi setting is not found, and if only one screen is
+available, fall back to detecting the screen DPI from the reported
+resolution and monitor size.
+
+Change-Id: I1481d94b5dc4072c1f8da4659a221dfc7971080b
+Reviewed-on: https://gerrit.libreoffice.org/11377
+Reviewed-by: Chris Sherlock <chris.sherlock79@gmail.com>
+Tested-by: Chris Sherlock <chris.sherlock79@gmail.com>
+---
+ vcl/unx/generic/app/saldisp.cxx | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+
+diff --git a/vcl/unx/generic/app/saldisp.cxx b/vcl/unx/generic/app/saldisp.cxx
+index 7c97a24..ee6aad7 100644
+--- a/vcl/unx/generic/app/saldisp.cxx
++++ b/vcl/unx/generic/app/saldisp.cxx
+@@ -569,7 +569,25 @@ void SalDisplay::Init()
+     }
+     if( bExactResolution == false )
+     {
+-        aResolution_ = Pair( 96, 96 );
++        /*  if Xft.dpi is not set, try and find the DPI from the
++         *  reported screen sizes and resolution. If there are multiple
++         *  screens, just fall back to the default 96x96
++         */
++        long xDPI = 96;
++        long yDPI = 96;
++        if (m_aScreens.size() == 1) {
++            xDPI = (long)round(DisplayWidth(pDisp_, 0)*25.4/DisplayWidthMM(pDisp_, 0));
++            yDPI = (long)round(DisplayHeight(pDisp_, 0)*25.4/DisplayHeightMM(pDisp_, 0));
++            // if either is invalid set it equal to the other
++            if (!sal_ValidDPI(xDPI) && sal_ValidDPI(yDPI))
++                xDPI = yDPI;
++            if (!sal_ValidDPI(yDPI) && sal_ValidDPI(xDPI))
++                yDPI = xDPI;
++            // if both are invalid, reset them to the default
++            if (!sal_ValidDPI(xDPI) && !sal_ValidDPI(yDPI))
++                xDPI = yDPI = 96;
++        }
++        aResolution_ = Pair( xDPI, yDPI );
+     }
+ 
+     nMaxRequestSize_    = XExtendedMaxRequestSize( pDisp_ ) * 4;
+-- 
+2.3.0
+

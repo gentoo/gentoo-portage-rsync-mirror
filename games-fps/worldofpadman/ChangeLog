@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/worldofpadman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/ChangeLog,v 1.16 2015/02/08 18:16:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/worldofpadman/ChangeLog,v 1.17 2015/02/08 22:43:35 mr_bones_ Exp $
+
+  08 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> worldofpadman-1.6.ebuild:
+  add X use dep for libsdl per testing from Michael Mair-Keimberger on bug
+  #459360
 
   08 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> worldofpadman-1.6.ebuild:
   Add libsdl usd deps - might fix bug #459360; use usex
