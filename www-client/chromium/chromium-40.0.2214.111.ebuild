@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-40.0.2214.111.ebuild,v 1.1 2015/02/07 17:41:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-40.0.2214.111.ebuild,v 1.2 2015/02/08 00:47:26 rich0 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -18,7 +18,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE="bindist cups gnome gnome-keyring kerberos neon pic pulseaudio selinux +tcmalloc"
 RESTRICT="!bindist? ( bindist )"
 
