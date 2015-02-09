@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.37 2014/09/23 17:53:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.38 2015/02/09 21:55:27 slyfox Exp $
 
 EAPI=5
 
@@ -40,24 +40,19 @@ DEPEND="${RDEPEND}
 	app-text/xmlto
 "
 
+if [[ ${PV} = 9999 ]]; then
+DEPEND+="
+	sys-devel/autoconf
+	sys-devel/automake
+	sys-devel/libtool
+"
+fi
+
 src_prepare() {
 	epatch_user
+	[[ ${PV} = 9999 ]] && ./autogen.sh
 }
 
 src_compile() {
-	emake \
-		AR="$(tc-getAR)" \
-		CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		BUILD_VERBOSE=1
-}
-
-src_install() {
-	emake install \
-		DESTDIR="${D}" \
-		prefix=/usr \
-		bindir=/sbin \
-		libdir=/usr/$(get_libdir) \
-		mandir=/usr/share/man
+	emake V=1
 }

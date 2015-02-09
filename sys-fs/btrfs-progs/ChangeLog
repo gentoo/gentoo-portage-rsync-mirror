@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.95 2015/01/29 18:55:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.96 2015/02/09 21:55:27 slyfox Exp $
+
+  09 Feb 2015; Sergei Trofimovich <slyfox@gentoo.org> btrfs-progs-9999.ebuild:
+  Run upstream ./autogen.sh (bug #539434 by Helmut Jarausch).
 
 *btrfs-progs-3.18.2 (29 Jan 2015)
 
