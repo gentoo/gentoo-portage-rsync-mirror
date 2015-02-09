@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/logue
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.15 2015/01/01 17:48:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.16 2015/02/09 02:38:01 mrueg Exp $
+
+*logue-1.0.2-r1 (09 Feb 2015)
+
+  09 Feb 2015; Manuel Rüger <mrueg@gentoo.org> +logue-1.0.2-r1.ebuild,
+  -logue-1.0.2.ebuild:
+  Add ruby20, ruby21 support. Use correct slot of dev-ruby/rainbow. Drop sparc
+  keyword. Remove old.
 
 *logue-1.0.2 (01 Jan 2015)
 

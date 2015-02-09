@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ssl-fetch-9999.ebuild,v 1.5 2014/06/16 05:59:26 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssl-fetch/ssl-fetch-9999.ebuild,v 1.6 2015/02/09 02:51:38 mrueg Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ inherit distutils-r1 git-2
 
 EGIT_REPO_URI="git://github.com/dol-sen/ssl-fetch.git"
 
-DESCRIPTION="A small convinience library for fetching files securely"
+DESCRIPTION="A small convenience library for fetching files securely"
 HOMEPAGE="https://github.com/dol-sen/ssl-fetch"
 SRC_URI=""
 
