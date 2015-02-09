@@ -8,4 +8,4 @@ RDEPEND=!www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:
 RESTRICT=bindist mirror strip
 SLOT=unstable
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=0042c2998240cc6da8ec3da5a8250927
+_md5_=bc9989808ef7759015df0984de732ea6

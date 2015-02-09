@@ -1,6 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.242 2015/02/07 10:41:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.243 2015/02/09 10:38:52 zx2c4 Exp $
+
+# Jason A. Donenfeld <zx2c4@gentoo.org> (09 Feb 2015)
+# Google does not distribute the widevine plugin for ARM. It must be extracted from a Chromebook,
+# and this kind of reverse engineering work likely violates many agreements, so we mask the flag.
+www-client/chromium widevine
 
 # Markos Chandras <hwoarang@gentoo.org> (07 Feb 2015)
 # app-admin/cgmanager misses ARM keyword. Bug #539208
