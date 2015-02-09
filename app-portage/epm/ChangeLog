@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/epm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.42 2015/01/28 10:24:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/epm/ChangeLog,v 1.43 2015/02/09 12:02:28 pinkbyte Exp $
+
+  09 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> epm-1.40.ebuild:
+  Stable on s390, wrt bug #537220
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> epm-1.40.ebuild:
   Stable for ppc, wrt bug #537220

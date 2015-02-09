@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.33 2015/02/08 12:58:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.35 2015/02/09 12:27:41 blueness Exp $
+
+  09 Feb 2015; Anthony G. Basile <blueness@gentoo.org> ecdsa-0.10.ebuild,
+  ecdsa-0.11-r1.ebuild, ecdsa-0.11-r2.ebuild, ecdsa-0.13.ebuild:
+  Keyword ppc, ppc64.  Bug #490374.
+
+  09 Feb 2015; Anthony G. Basile <blueness@gentoo.org> -ecdsa-0.8-r1.ebuild,
+  -ecdsa-0.9.ebuild:
+  Remove older unstable versions
 
 *ecdsa-0.13 (08 Feb 2015)
 
