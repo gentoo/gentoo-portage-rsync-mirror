@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1197 2015/02/09 10:39:40 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1198 2015/02/09 19:50:51 phajdan.jr Exp $
+
+*chromium-42.0.2292.0 (09 Feb 2015)
+
+  09 Feb 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-42.0.2292.0.ebuild:
+  Dev channel bump.
 
   09 Feb 2015; Jason A. Donenfeld <zx2c4@gentoo.org>
   chromium-40.0.2214.111.ebuild, chromium-40.0.2214.91.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.139 2015/02/09 15:47:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.140 2015/02/09 19:34:02 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -92,7 +92,7 @@ IUSE="cxx multislot multitarget nls static-libs test vanilla"
 if version_is_at_least 2.19 ; then
 	IUSE+=" zlib"
 fi
-if ! version_is_at_least 2.23.90 || [[ ${BTYPE} != "rel" ]] || use multislot ; then
+if ! version_is_at_least 2.23.90 || [[ ${BTYPE} != "rel" ]] || is_cross || use multislot ; then
 	SLOT="${BVER}"
 else
 	SLOT="0"

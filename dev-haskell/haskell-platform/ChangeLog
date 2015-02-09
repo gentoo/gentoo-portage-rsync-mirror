@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haskell-platform
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.15 2014/11/15 18:24:28 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-platform/ChangeLog,v 1.16 2015/02/09 19:32:24 qnikst Exp $
+
+  09 Feb 2015; Alexander Vershilov <qnikst@gentoo.org>
+  -haskell-platform-2011.2.0.1-r2.ebuild, -haskell-platform-2011.4.0.0.ebuild,
+  -haskell-platform-2012.2.0.0.ebuild:
+  cleanup
 
 *haskell-platform-2014.2.0.0 (15 Nov 2014)
 

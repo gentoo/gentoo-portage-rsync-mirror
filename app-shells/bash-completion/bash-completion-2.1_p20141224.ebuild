@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1_p20141224.ebuild,v 1.1 2014/12/23 23:53:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1_p20141224.ebuild,v 1.2 2015/02/09 19:52:52 amadio Exp $
 
 EAPI=5
 
@@ -49,7 +49,7 @@ src_install() {
 	# work-around race conditions, bug #526996
 	mkdir -p "${ED}"/usr/share/bash-completion/{completions,helpers} || die
 
-	emake DESTDIR="${D}" profiledir=/etc/bash/bashrc.d install
+	emake DESTDIR="${D}" profiledir="${EPREFIX}"/etc/bash/bashrc.d install
 
 	local file
 	for file in "${STRIP_COMPLETIONS[@]}"; do
