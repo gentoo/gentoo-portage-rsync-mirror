@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/vimcalc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcalc/ChangeLog,v 1.5 2015/01/06 13:04:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimcalc/ChangeLog,v 1.7 2015/02/09 01:08:25 radhermit Exp $
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org> vimcalc-1.3-r2.ebuild:
+  Fix test file removal.
+
+*vimcalc-1.3-r2 (09 Feb 2015)
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org> +vimcalc-1.3-r2.ebuild:
+  Run tests and don't install test file (bug #535790).
 
 *vimcalc-1.3-r1 (06 Jan 2015)
 

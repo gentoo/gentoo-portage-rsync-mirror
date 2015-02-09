@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/weston
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.13 2014/09/27 23:00:35 mattst88 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.15 2015/02/09 01:23:59 chithanh Exp $
+
+  09 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -weston-1.2.0.ebuild, metadata.xml:
+  Drop version that repoman complains about.
+
+*weston-1.6.1 (09 Feb 2015)
+
+  09 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +weston-1.6.1.ebuild:
+  Version bump. Shut up repoman warning.
 
   27 Sep 2014; Matt Turner <mattst88@gentoo.org> weston-1.6.0.ebuild:
   Depend on wayland-1.6.0, bug 523872.
