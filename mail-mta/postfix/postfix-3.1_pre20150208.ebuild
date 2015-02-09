@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-3.0.0_rc1.ebuild,v 1.2 2015/02/03 06:44:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-3.1_pre20150208.ebuild,v 1.1 2015/02/09 16:39:27 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
 
-MY_PV="${PV/_rc/-RC}"
+MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
 VDA_PV="2.10.0"
 VDA_P="${PN}-vda-v13-${VDA_PV}"
 RC_VER="2.7"
@@ -24,7 +24,7 @@ IUSE="+berkdb cdb doc dovecot-sasl +eai hardened ldap ldap-bind lmdb memcached m
 
 DEPEND=">=dev-libs/libpcre-3.4
 	dev-lang/perl
-	berkdb? ( >=sys-libs/db-3.2 )
+	berkdb? ( >=sys-libs/db-3.2:* )
 	cdb? ( || ( >=dev-db/tinycdb-0.76 >=dev-db/cdb-0.75-r1 ) )
 	eai? ( dev-libs/icu )
 	ldap? ( net-nds/openldap )
@@ -32,10 +32,10 @@ DEPEND=">=dev-libs/libpcre-3.4
 	lmdb? ( >=dev-db/lmdb-0.9.11 )
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:* )
 	sasl? (  >=dev-libs/cyrus-sasl-2 )
 	sqlite? ( dev-db/sqlite:3 )
-	ssl? ( >=dev-libs/openssl-0.9.6g )"
+	ssl? ( >=dev-libs/openssl-0.9.6g:* )"
 
 RDEPEND="${DEPEND}
 	dovecot-sasl? ( net-mail/dovecot )
@@ -192,7 +192,7 @@ src_configure() {
 	sed -i -e "/^RANLIB/s/ranlib/$(tc-getRANLIB)/g" "${S}"/makedefs
 	sed -i -e "/^AR/s/ar/$(tc-getAR)/g" "${S}"/makedefs
 
-	emake makefiles shared=yes dynamicmaps=no \
+	emake makefiles shared=yes dynamicmaps=no pie=yes \
 		shlib_directory="/usr/$(get_libdir)/postfix/MAIL_VERSION" \
 		DEBUG="" CC="$(tc-getCC)" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
 		AUXLIBS_CDB="${AUXLIBS_CDB}" AUXLIBS_LDAP="${AUXLIBS_LDAP}" \
