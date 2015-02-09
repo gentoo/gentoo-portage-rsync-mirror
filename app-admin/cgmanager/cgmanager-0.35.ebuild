@@ -5,7 +5,7 @@
 EAPI="5"
 
 DESCRIPTION="Control Group manager daemon"
-HOMEPAGE="https://linuxcontainers.org/cgmanager"
+HOMEPAGE="https://linuxcontainers.org/cgmanager/introduction/"
 SRC_URI="https://linuxcontainers.org/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
