@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyGPG
 # Copyright 2012-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/ChangeLog,v 1.7 2015/01/13 06:15:13 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/ChangeLog,v 1.8 2015/02/09 11:43:04 jer Exp $
+
+  09 Feb 2015; Jeroen Roovers <jer@gentoo.org> pyGPG-0.1.ebuild:
+  Marked ~hppa (bug #539366).
 
   12 Jan 2015; Steev Klimaszewski <steev@gentoo.org> pyGPG-0.1.ebuild:
   Add ~arm keyword
