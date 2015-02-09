@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1035 2015/01/05 13:39:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1037 2015/02/09 15:42:13 vapier Exp $
+
+*glibc-2.21 (09 Feb 2015)
+
+  09 Feb 2015; Mike Frysinger <vapier@gentoo.org> +glibc-2.21.ebuild:
+  Version bump.
+
+  09 Feb 2015; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_configure.eblit:
+  Disable -Werror when building.
 
   05 Jan 2015; Anthony G. Basile <blueness@gentoo.org> glibc-9999.ebuild:
   Depend on sys-apps/gentoo-functions, bug #504116#c1

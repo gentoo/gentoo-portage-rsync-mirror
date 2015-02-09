@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_configure.eblit,v 1.3 2014/12/31 08:20:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_configure.eblit,v 1.4 2015/02/09 15:39:48 vapier Exp $
 
 dump_toolchain_settings() {
 	echo
@@ -101,6 +101,7 @@ glibc_do_configure() {
 
 	myconf+=(
 		--without-cvs
+		--disable-werror
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
 		--host=${CTARGET_OPT:-${CTARGET}}
@@ -213,6 +214,7 @@ toolchain-glibc_headers_configure() {
 		--disable-sanity-checks
 		--enable-hacker-mode
 		--without-cvs
+		--disable-werror
 		--enable-bind-now
 		--build=${CBUILD_OPT:-${CBUILD}}
 		--host=${CTARGET_OPT:-${CTARGET}}

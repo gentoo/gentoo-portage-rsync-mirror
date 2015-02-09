@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/owncloud
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.61 2014/12/10 10:15:14 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.62 2015/02/09 16:00:14 voyageur Exp $
+
+*owncloud-8.0.0 (09 Feb 2015)
+
+  09 Feb 2015; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-7.0.3.ebuild,
+  +owncloud-8.0.0.ebuild:
+  Version bump, with smaller core tarball (some applications are not included
+  by default anymore)
 
 *owncloud-7.0.4 (10 Dec 2014)
 
