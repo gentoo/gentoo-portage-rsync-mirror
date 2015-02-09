@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/avrdude
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.60 2014/11/24 07:08:46 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.62 2015/02/09 10:26:01 aballier Exp $
+
+  09 Feb 2015; Alexis Ballier <aballier@gentoo.org> avrdude-6.1.ebuild:
+  fix cross-compilation
+
+  09 Feb 2015; Alexis Ballier <aballier@gentoo.org> avrdude-6.1.ebuild:
+  add dep on libusb:0, bug #536476
 
 *avrdude-6.1 (24 Nov 2014)
 

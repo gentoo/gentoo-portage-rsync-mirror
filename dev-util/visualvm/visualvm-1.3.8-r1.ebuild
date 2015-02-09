@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visualvm/visualvm-1.3.8.ebuild,v 1.1 2015/02/05 18:05:25 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visualvm/visualvm-1.3.8-r1.ebuild,v 1.1 2015/02/09 10:03:20 fordfrog Exp $
 
 EAPI="5"
 
@@ -16,9 +16,9 @@ KEYWORDS="~amd64"
 IUSE=""
 
 COMMON_DEP="
-	>=virtual/jdk-1.7
+	|| ( virtual/jdk:1.7 virtual/jdk:1.8 )
 	dev-java/netbeans-platform:8.0
-	dev-java/netbeans-platform:8.0"
+	dev-java/netbeans-profiler:8.0"
 RDEPEND="${COMMON_DEP}"
 DEPEND="${COMMON_DEP}
 	dev-java/netbeans-harness:8.0"
