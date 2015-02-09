@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/automatictexplugin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.50 2015/01/06 12:18:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.51 2015/02/09 00:30:54 radhermit Exp $
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org>
+  automatictexplugin-12.5-r1.ebuild:
+  Stabilize for amd64/x86.
 
   06 Jan 2015; Michał Górny <mgorny@gentoo.org>
   automatictexplugin-12.5-r1.ebuild:

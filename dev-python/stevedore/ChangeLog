@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stevedore
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.23 2014/11/18 21:38:40 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.24 2015/02/09 00:03:24 radhermit Exp $
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org> stevedore-1.1.0.ebuild:
+  Add pypi site to HOMEPAGE.
 
 *stevedore-1.1.0 (18 Nov 2014)
 
