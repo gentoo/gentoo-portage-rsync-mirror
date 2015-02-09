@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/tm-align
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/ChangeLog,v 1.6 2013/05/12 09:39:11 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/ChangeLog,v 1.7 2015/02/09 12:49:24 blueness Exp $
+
+  09 Feb 2015; Anthony G. Basile <blueness@gentoo.org> tm-align-20120707.ebuild,
+  tm-align-20130511.ebuild:
+  Keyword ~ppc64, bug #452010.
 
 *tm-align-20130511 (12 May 2013)
 

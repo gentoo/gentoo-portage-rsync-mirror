@@ -1,11 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.9.ebuild,v 1.2 2014/12/15 15:44:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.11.ebuild,v 1.1 2015/02/09 12:57:44 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 python3_4 pypy pypy2_0 )
-VALA_MIN_API_VERSION="0.22" # upstream bug #741557
+VALA_MIN_API_VERSION="0.22"
 VALA_USE_DEPEND="vapigen"
 
 inherit db-use flag-o-matic gnome2 python-any-r1 vala virtualx
@@ -57,7 +58,8 @@ DEPEND="${RDEPEND}
 	>=gnome-base/gnome-common-3.5.5
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-	vala? ( $(vala_depend) )"
+	vala? ( $(vala_depend) )
+"
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2
 

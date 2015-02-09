@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/wcalc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/ChangeLog,v 1.16 2012/05/23 13:10:22 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/wcalc/ChangeLog,v 1.17 2015/02/09 12:45:32 blueness Exp $
+
+  09 Feb 2015; Anthony G. Basile <blueness@gentoo.org> wcalc-2.2.1.ebuild,
+  wcalc-2.4.ebuild:
+  Keyword ~ppc64, bug #459192.
 
   23 May 2012; Kacper Kowalik <xarthisius@gentoo.org> wcalc-2.2.1.ebuild,
   wcalc-2.4.ebuild:
@@ -76,4 +80,3 @@
   wcalc-1.7.ebuild:
   Initial ebuild by the <the@weird-birds.org> and olivier.fisette@sympatico.ca,
   bug #27043
-

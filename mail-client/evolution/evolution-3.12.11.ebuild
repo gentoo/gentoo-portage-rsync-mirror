@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.9.ebuild,v 1.1 2014/12/09 19:41:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.12.11.ebuild,v 1.1 2015/02/09 12:58:44 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -39,6 +39,7 @@ COMMON_DEPEND="
 	>=gnome-extra/gtkhtml-4.5.2:4.0
 	dev-libs/atk
 	>=dev-libs/dbus-glib-0.6
+	dev-libs/libical:=
 	>=dev-libs/libxml2-2.7.3:2
 	>=net-libs/libsoup-2.42:2.4
 	>=x11-misc/shared-mime-info-0.22
@@ -49,9 +50,7 @@ COMMON_DEPEND="
 	x11-libs/libSM
 	x11-libs/libICE
 
-	crypt? ( || (
-		( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
-		=app-crypt/gnupg-1.4* ) )
+	crypt? ( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
 	map? (
 		>=media-libs/libchamplain-0.12:0.12[gtk]
 		>=media-libs/clutter-1.0.0:1.0

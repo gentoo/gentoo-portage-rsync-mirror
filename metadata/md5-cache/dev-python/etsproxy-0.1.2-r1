@@ -4,11 +4,11 @@ DESCRIPTION=Enthought Tool Suite: Proxy modules for backwards compatibility
 EAPI=5
 HOMEPAGE=http://pypi.python.org/pypi/etsproxy
 IUSE=python_targets_python2_7
-KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=!<dev-python/apptools-4 !<dev-python/blockcanvas-4 !<dev-python/chaco-4 !<dev-python/codetools-4 !<dev-python/enable-4 !<dev-python/enthoughtbase-4 !<dev-python/envisagecore-4 !<dev-python/envisageplugins-4 !<dev-python/etsdevtools-4 !<dev-python/etsprojecttools-4 !<dev-python/graphcanvas-4 !<sci-visualization/mayavi-4 !<dev-python/scimath-4 !<dev-python/traits-4 !<dev-python/traitsbackendwx-4 !<dev-python/traitsbackendqt-4 !<dev-python/traitsgui-4 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://www.enthought.com/repo/ets/etsproxy-0.1.2.tar.gz
 _eclasses_=distutils-r1	f810ae4ac7e5c3db4ff72db46e3c40d1	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=f3e4825317bc7e8c596aa3345b122728
+_md5_=9ffad778b46948133bde33dce765fd3b

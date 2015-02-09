@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.124 2015/01/31 13:16:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.125 2015/02/09 12:31:16 blueness Exp $
+
+  09 Feb 2015; Anthony G. Basile <blueness@gentoo.org> paramiko-1.10.1.ebuild,
+  paramiko-1.12.2.ebuild, paramiko-1.13.0.ebuild, paramiko-1.15.1-r1.ebuild,
+  paramiko-1.15.2.ebuild:
+  Keyword ppc, ppc64.  Bug #490374.
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> paramiko-1.15.1-r1.ebuild:
   Stable for amd64, wrt bug #531126
