@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.222 2015/02/04 20:56:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.223 2015/02/09 16:10:13 zerochaos Exp $
+
+  09 Feb 2015; Rick Farina <zerochaos@gentoo.org> -wpa_supplicant-2.3-r1.ebuild,
+  wpa_supplicant-2.3-r2.ebuild:
+  readding keywords that were removed for review purposes of new ebuild style
 
 *wpa_supplicant-2.3-r2 (04 Feb 2015)
 
