@@ -8,7 +8,7 @@ https://sourceforge.net/p/oprofile/bugs/275/
  
  	/* These family does not exist in the past.*/
 -	if (family < 0x0f || family == 0x13)
-+	if (family < 0x0f && family != 0x6 || family == 0x13)
++	if ((family < 0x0f && family != 0x06) || family == 0x13)
  		return ret;
  
  	switch (family) {

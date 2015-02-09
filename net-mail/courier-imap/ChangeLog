@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/courier-imap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.225 2014/11/21 10:06:11 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.226 2015/02/09 17:01:23 mrueg Exp $
+
+*courier-imap-4.16.0 (09 Feb 2015)
+
+  09 Feb 2015; Manuel Rüger <mrueg@gentoo.org> +courier-imap-4.16.0.ebuild,
+  metadata.xml:
+  Version bump. Proxy commit for David Heidelberg (okias). Fixes bug #537396.
+  Fix metadata. Drop many arches due to new dependency on net-libs/courier-
+  unicode. Rekeywording in bug #532520.
 
   21 Nov 2014; Mike Frysinger <vapier@gentoo.org> courier-imap-4.15-r1.ebuild:
   Drop MAKEOPTS=-j1 workaround now that eautoreconf is fixed #529404.
