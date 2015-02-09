@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.124 2015/01/06 09:45:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.125 2015/02/09 07:55:31 jlec Exp $
+
+  09 Feb 2015; Justin Lecher <jlec@gentoo.org> +files/vtk-6.1.0-memset.patch,
+  vtk-6.1.0-r1.ebuild:
+  Fix link problems due to fatal warnings, #534096 & #538782
 
   06 Jan 2015; Alexis Ballier <aballier@gentoo.org> vtk-6.1.0-r1.ebuild:
   keyword ~arm

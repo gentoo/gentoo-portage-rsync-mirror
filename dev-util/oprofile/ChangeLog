@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.105 2015/01/28 10:19:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.106 2015/02/09 07:55:30 jer Exp $
+
+*oprofile-1.0.0-r1 (09 Feb 2015)
+
+  09 Feb 2015; Jeroen Roovers <jer@gentoo.org> -oprofile-1.0.0.ebuild,
+  +oprofile-1.0.0-r1.ebuild, +files/oprofile-1.0.0-opjitconv-open.patch:
+  Fix opjitconv open() flag (bug #538788).
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> oprofile-0.9.9-r1.ebuild:
   Stable for ppc, wrt bug #536166

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.2 2015/01/06 09:45:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.3 2015/02/09 07:55:31 jlec Exp $
 
 EAPI=5
 
@@ -123,6 +123,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-netcdf.patch
 	"${FILESDIR}"/${P}-web.patch
 	"${FILESDIR}"/${P}-glext.patch
+	"${FILESDIR}"/${P}-memset.patch
 	)
 
 RESTRICT=test
