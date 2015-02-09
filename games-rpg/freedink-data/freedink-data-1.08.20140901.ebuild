@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink-data/freedink-data-1.08.20140901.ebuild,v 1.1 2014/11/12 16:00:08 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedink-data/freedink-data-1.08.20140901.ebuild,v 1.2 2015/02/09 08:18:06 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ LICENSE="ZLIB
 	OAL-1.0.1
 	public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 src_install() {

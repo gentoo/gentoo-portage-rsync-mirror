@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.34.10.ebuild,v 1.4 2015/01/08 08:54:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/megamek/megamek-0.34.10.ebuild,v 1.5 2015/02/09 08:18:01 ago Exp $
 
 EAPI=5
 inherit eutils java-pkg-2 java-ant-2 games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/MegaMek-v${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.5

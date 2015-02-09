@@ -3,10 +3,10 @@ DESCRIPTION=GTK+ based utility to parse the contents of elogs created by Portage
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/elogviewer/
 IUSE=python_targets_python2_7
-KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~x86-fbsd
+KEYWORDS=amd64 ~ppc ~sparc ~x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=>=sys-apps/portage-2.1 >=dev-python/pygtk-2.0
 SLOT=0
 SRC_URI=mirror://sourceforge/elogviewer/elogviewer-0.6.2.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=f6f35add61245e859c450dca68831fac
+_md5_=b6ce809181cbc33e2cd77511c35befdf
