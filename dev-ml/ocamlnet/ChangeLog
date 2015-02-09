@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlnet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.84 2014/11/28 17:10:46 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.85 2015/02/09 14:37:04 aballier Exp $
+
+*ocamlnet-4.0.1 (09 Feb 2015)
+
+  09 Feb 2015; Alexis Ballier <aballier@gentoo.org> +ocamlnet-4.0.1.ebuild:
+  version bump
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> ocamlnet-3.7.7.ebuild:
   update deps for ocaml 4.02

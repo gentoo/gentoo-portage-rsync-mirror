@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.361 2014/12/28 10:47:51 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.362 2015/02/09 14:36:40 mrueg Exp $
+
+  09 Feb 2015; Manuel Rüger <mrueg@gentoo.org> pidgin-2.10.10.ebuild,
+  pidgin-2.10.11.ebuild:
+  Add missing slot operator for dev-lang/perl
 
   28 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -pidgin-2.10.9-r1.ebuild,
   -files/pidgin-2.10.9-python3_fix1.patch,
