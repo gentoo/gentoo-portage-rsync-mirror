@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/phc-intel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.21 2015/01/19 07:47:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/ChangeLog,v 1.22 2015/02/09 13:47:45 xmw Exp $
+
+  09 Feb 2015; Michael Weber <xmw@gentoo.org> phc-intel-0.3.2.12.16.ebuild:
+  checked with kernel 3.18
 
   19 Jan 2015; Michael Weber <xmw@gentoo.org> phc-intel-0.3.2.12.16.ebuild:
   Allow kernel 3.17 (bug 533392).

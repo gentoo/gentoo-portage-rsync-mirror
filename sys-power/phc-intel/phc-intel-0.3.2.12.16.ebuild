@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.16.ebuild,v 1.2 2015/01/19 07:47:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.16.ebuild,v 1.3 2015/02/09 13:47:45 xmw Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ pkg_setup() {
 		eerror "Please use a previous version of ${PN} or a newer kernel."
 		die
 	fi
-	if kernel_is gt 3 17 ; then
+	if kernel_is gt 3 18 ; then
 		eerror "Your kernel version is not yet supported by this version of ${PN}."
 		eerror "Please use a newer version of ${PN} or an older kernel."
 		die
