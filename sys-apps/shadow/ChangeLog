@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.295 2014/12/09 01:50:57 heroxbd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.296 2015/02/09 20:34:28 vapier Exp $
+
+  09 Feb 2015; Mike Frysinger <vapier@gentoo.org> shadow-4.2.1.ebuild:
+  Use -delete with find, and fix prefix handling in a few places.
 
   09 Dec 2014; Benda Xu <heroxbd@gentoo.org> shadow-4.2.1.ebuild:
   Prefix support: trivial D -> ED and ROOT -> EROOT.

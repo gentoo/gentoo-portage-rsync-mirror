@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.2.1.ebuild,v 1.2 2014/12/09 01:50:57 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.2.1.ebuild,v 1.3 2015/02/09 20:34:28 vapier Exp $
 
 EAPI=4
 
@@ -101,7 +101,7 @@ src_install() {
 	doins "${FILESDIR}"/default/useradd
 
 	# move passwd to / to help recover broke systems #64441
-	mv "${ED}"/usr/bin/passwd "${ED}"/bin/
+	mv "${ED}"/usr/bin/passwd "${ED}"/bin/ || die
 	dosym /bin/passwd /usr/bin/passwd
 
 	cd "${S}"
@@ -158,7 +158,7 @@ src_install() {
 		# and/or don't apply when using pam
 		find "${ED}"/usr/share/man \
 			'(' -name 'limits.5*' -o -name 'suauth.5*' ')' \
-			-exec rm {} +
+			-delete
 
 		# Remove pam.d files provided by pambase.
 		rm "${ED}"/etc/pam.d/{login,passwd,su} || die
@@ -167,7 +167,7 @@ src_install() {
 	# Remove manpages that are handled by other packages
 	find "${ED}"/usr/share/man \
 		'(' -name id.1 -o -name passwd.5 -o -name getspnam.3 ')' \
-		-exec rm {} +
+		-delete
 
 	cd "${S}"
 	dodoc ChangeLog NEWS TODO
@@ -184,8 +184,8 @@ pkg_preinst() {
 pkg_postinst() {
 	# Enable shadow groups.
 	if [ ! -f "${EROOT}"/etc/gshadow ] ; then
-		if grpck -r -R "${ROOT}" 2>/dev/null ; then
-			grpconv -R "${ROOT}"
+		if grpck -r -R "${EROOT}" 2>/dev/null ; then
+			grpconv -R "${EROOT}"
 		else
 			ewarn "Running 'grpck' returned errors.  Please run it by hand, and then"
 			ewarn "run 'grpconv' afterwards!"

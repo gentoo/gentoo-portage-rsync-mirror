@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.25.ebuild,v 1.11 2014/07/12 18:57:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.25.ebuild,v 1.12 2015/02/09 20:49:42 k_f Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ COMMON_DEPEND_LIBS="
 	readline? ( sys-libs/readline )
 	smartcard? ( usb? ( virtual/libusb:0 ) )
 	ldap? ( net-nds/openldap )"
-COMMON_DEPEND_BINS="|| ( app-crypt/pinentry app-crypt/pinentry-qt )"
+COMMON_DEPEND_BINS="app-crypt/pinentry"
 
 # Existence of executables is checked during configuration.
 DEPEND="${COMMON_DEPEND_LIBS}
