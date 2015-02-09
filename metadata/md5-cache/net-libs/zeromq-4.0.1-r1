@@ -4,10 +4,10 @@ DESCRIPTION=ZeroMQ is a brokerless kernel
 EAPI=5
 HOMEPAGE=http://www.zeromq.org/
 IUSE=elibc_glibc pgm static-libs test
-KEYWORDS=~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=LGPL-3
 RDEPEND=dev-libs/libsodium pgm? ( =net-libs/openpgm-5.1.118 )
 SLOT=0
 SRC_URI=http://download.zeromq.org/zeromq-4.0.1.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=602db7f3cfdba181271ad098b5950fcd
+_md5_=b094489452218684308678fcc2b1f077
