@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.4.0.ebuild,v 1.1 2015/02/08 19:05:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.4.0.ebuild,v 1.2 2015/02/08 23:24:05 xarthisius Exp $
 
 EAPI=5
 
@@ -131,7 +131,7 @@ pkg_postinst() {
 	elog "To enable sympyprinting, it's required to emerge sympy"
 	elog "To enable cythonmagic, it's required to emerge cython"
 	if use nbconvert; then
-		if [[ -z $(best_version app-text/pandoc) ]] ; then
+		if ! has_version app-text/pandoc ; then
 			einfo "Node.js will be used to convert notebooks to other formats"
 			einfo "like HTML. Support for that is still experimental. If you"
 			einfo "encounter any problems, please use app-text/pandoc instead."
