@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20130515.ebuild,v 1.4 2014/05/22 17:24:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/grimrock/grimrock-20130515.ebuild,v 1.5 2015/02/09 22:57:54 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils multilib gnome2-utils unpacker games
 
 TIMESTAMP="${PV:0:4}-${PV:4:2}-${PV:6:2}"
@@ -14,7 +13,7 @@ SRC_URI="LegendOfGrimrock-Linux-${TIMESTAMP}.sh"
 
 SLOT="0"
 LICENSE="all-rights-reserved"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="fetch bindist splitdebug"
 
