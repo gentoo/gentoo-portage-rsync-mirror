@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/cfengine-syntax
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.16 2014/10/19 23:06:30 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.18 2015/02/09 00:36:11 radhermit Exp $
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org>
+  -cfengine-syntax-20050105.ebuild, -cfengine-syntax-20140713.ebuild:
+  Remove old.
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org>
+  cfengine-syntax-20141019.ebuild:
+  Stabilize for all.
 
 *cfengine-syntax-20141019 (19 Oct 2014)
 

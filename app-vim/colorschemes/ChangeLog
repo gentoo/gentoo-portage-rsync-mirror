@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/colorschemes
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.83 2014/10/22 05:44:25 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.85 2015/02/09 00:38:16 radhermit Exp $
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org> -colorschemes-20130124.ebuild:
+  Remove old.
+
+  09 Feb 2015; Tim Harder <radhermit@gentoo.org>
+  colorschemes-20140623-r1.ebuild:
+  Stabilize for all.
 
 *colorschemes-20140623-r1 (22 Oct 2014)
 
