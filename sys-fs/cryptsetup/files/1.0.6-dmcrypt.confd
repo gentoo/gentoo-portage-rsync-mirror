@@ -93,6 +93,6 @@
 #post_mount='chown root:root ${mount_point}; chmod 1777 ${mount_point}'
 
 ## Loopback file example
-#mount='crypt-loop-home'
+#target='crypt-loop-home'
 #source='/dev/loop0'
 #loop_file='/mnt/crypt/home'
