@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.4.4.ebuild,v 1.1 2015/02/08 19:11:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.4.4.ebuild,v 1.2 2015/02/10 09:47:52 chithanh Exp $
 
 EAPI=5
 
@@ -80,7 +80,7 @@ REQUIRED_USE="
 	video_cards_radeon? ( || ( classic gallium ) )
 	video_cards_r100?   ( classic )
 	video_cards_r200?   ( classic )
-	video_cards_r300?   ( gallium )
+	video_cards_r300?   ( gallium llvm )
 	video_cards_r600?   ( gallium )
 	video_cards_radeonsi?   ( gallium llvm )
 	video_cards_vmware? ( gallium )
@@ -127,6 +127,10 @@ RDEPEND="
 	opencl? (
 				app-admin/eselect-opencl
 				dev-libs/libclc
+				|| (
+					>=dev-libs/elfutils-0.155-r1:=[${MULTILIB_USEDEP}]
+					>=dev-libs/libelf-0.8.13-r2:=[${MULTILIB_USEDEP}]
+				)
 			)
 	openmax? ( >=media-libs/libomxil-bellagio-0.9.3:=[${MULTILIB_USEDEP}] )
 	vaapi? ( >=x11-libs/libva-0.35.0:=[${MULTILIB_USEDEP}] )
@@ -209,6 +213,8 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 		epatch
 	fi
+
+	epatch "${FILESDIR}"/${PN}-10.3.7-dont-use-clrsb.patch
 
 	# fix for hardened pax_kernel, bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch

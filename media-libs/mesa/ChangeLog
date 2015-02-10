@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.602 2015/02/08 20:07:10 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.603 2015/02/10 09:47:52 chithanh Exp $
+
+  10 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-10.4.4.ebuild:
+  Re-apply build and dependency fixes which were mistakenly dropped, bug
+  #538086.
 
 *mesa-10.3.7-r1 (08 Feb 2015)
 *mesa-10.3.7-r2 (08 Feb 2015)
