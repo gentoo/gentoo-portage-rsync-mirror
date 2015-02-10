@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9769 2015/02/10 02:50:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9771 2015/02/10 05:59:41 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2015; Patrick Lauer <patrick@gentoo.org> base/package.use.mask,
+  package.mask:
+  Re-mask media-video/handbrake-0.10.0-r1 until ffmpeg catches up
+
+  10 Feb 2015; Patrick Lauer <patrick@gentoo.org> base/package.use.mask,
+  package.mask:
+  Re-mask media-plugins/gst-plugins-libav until ffmpeg catches up
 
   10 Feb 2015; Patrick Lauer <patrick@gentoo.org> base/package.use.mask,
   package.mask:
