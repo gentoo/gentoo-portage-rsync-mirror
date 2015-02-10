@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1528 2015/02/10 18:14:23 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1529 2015/02/10 20:41:56 johu Exp $
+
+  10 Feb 2015; Johannes Huber <johu@gentoo.org> kde4-functions.eclass:
+  Support for kde-apps category, remove function moved to cmake-utils. Some
+  minor improvements.
 
   10 Feb 2015; Brian Evans <grknight@gentoo.org> mysql-multilib.eclass:
   Always build NDB with mysql-cluster for libndbclient
