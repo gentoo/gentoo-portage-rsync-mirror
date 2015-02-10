@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.4.0.ebuild,v 1.1 2015/02/09 17:02:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.4.0.ebuild,v 1.2 2015/02/09 23:50:16 polynomial-c Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ DEPEND="${COMMON_DEPEND}
 MULTILIB_WRAPPED_HEADERS=( /usr/include/jconfig.h )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.3.1-overrun.patch
+	epatch "${FILESDIR}"/${PN}-1.2.0-x32.patch #420239
 
 	# generate a new ./configure compatible with non-bash shells, #533902
 	eautoreconf

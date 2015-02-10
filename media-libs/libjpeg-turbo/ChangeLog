@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libjpeg-turbo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.102 2015/02/09 17:02:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/ChangeLog,v 1.103 2015/02/09 23:50:16 polynomial-c Exp $
+
+  09 Feb 2015; Lars Wendler <polynomial-c@gentoo.org>
+  libjpeg-turbo-1.4.0.ebuild:
+  Fixed application of wrong patch (bug #539496).
 
 *libjpeg-turbo-1.4.0 (09 Feb 2015)
 
