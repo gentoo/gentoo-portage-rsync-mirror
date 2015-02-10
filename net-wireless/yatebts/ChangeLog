@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/yatebts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.4 2015/01/28 23:02:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.5 2015/02/10 16:20:12 zerochaos Exp $
+
+  10 Feb 2015; Rick Farina <zerochaos@gentoo.org> yatebts-4.0.0.ebuild,
+  yatebts-9999.ebuild:
+  add missing dep on bladerf per depcheck
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> yatebts-4.0.0.ebuild,
   yatebts-9999.ebuild:

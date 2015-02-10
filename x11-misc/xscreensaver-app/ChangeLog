@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver-app
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.15 2015/02/10 10:04:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver-app/ChangeLog,v 1.16 2015/02/10 16:20:36 jer Exp $
+
+  10 Feb 2015; Jeroen Roovers <jer@gentoo.org> -xscreensaver-app-2.3.ebuild:
+  Old.
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xscreensaver-app-2.3-r2.ebuild:
   Stable for x86, wrt bug #538954
