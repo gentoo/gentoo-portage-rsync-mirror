@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1494 2015/02/09 14:03:13 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1495 2015/02/09 23:07:49 mpagano Exp $
+
+*gentoo-sources-3.12.37 (09 Feb 2015)
+
+  09 Feb 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.12.37.ebuild:
+  Linux patches 3.12.36 and 3.12.37. Add DEVPTS_MULTIPLE_INSTANCES when
+  GENTOO_LINUX_INIT_SYSTEMD is selected. See bug #534216.
 
 *gentoo-sources-3.19.0 (09 Feb 2015)
 
