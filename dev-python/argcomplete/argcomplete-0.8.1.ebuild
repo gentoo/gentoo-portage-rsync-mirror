@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/argcomplete-0.8.1.ebuild,v 1.1 2014/12/01 13:52:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argcomplete/argcomplete-0.8.1.ebuild,v 1.2 2015/02/10 12:41:32 grobian Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ python_install_all() {
 	sed \
 		-e "/complete /d" \
 		-i argcomplete/bash_completion.d/python-argcomplete.sh || die
-	insinto $(get_bashhelpersdir)
+	insinto "$(_bash-completion-r1_get_bashhelpersdir)"
 	doins argcomplete/bash_completion.d/python-argcomplete.sh
 	distutils-r1_python_install_all
 }

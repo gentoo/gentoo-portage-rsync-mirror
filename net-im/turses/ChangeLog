@@ -1,6 +1,9 @@
 # ChangeLog for net-im/turses
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/turses/ChangeLog,v 1.9 2014/10/14 01:54:06 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/turses/ChangeLog,v 1.10 2015/02/10 12:33:33 dastergon Exp $
+
+  10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
+  Drop myself from metadata
 
   14 Oct 2014; Ian Delaney <idella4@gentoo.org> -turses-0.2.13.ebuild:
   remove old
