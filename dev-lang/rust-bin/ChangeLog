@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/rust-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/ChangeLog,v 1.1 2014/10/18 12:50:48 jauhien Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/ChangeLog,v 1.2 2015/02/10 11:54:53 jauhien Exp $
+
+*rust-bin-1.0.0_alpha (10 Feb 2015)
+
+  10 Feb 2015; Jauhien Piatlicki <jauhien@gentoo.org>
+  +rust-bin-1.0.0_alpha.ebuild, -files/rust-bin-0.12.0-no-ldconfig.patch,
+  -rust-bin-0.12.0.ebuild, -rust-bin-999.ebuild:
+  version bump, move live ebuild to rust overlay
 
 *rust-bin-999 (18 Oct 2014)
 *rust-bin-0.12.0 (18 Oct 2014)

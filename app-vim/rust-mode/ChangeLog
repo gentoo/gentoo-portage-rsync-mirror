@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/rust-mode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/rust-mode/ChangeLog,v 1.2 2014/10/18 12:43:35 jauhien Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/rust-mode/ChangeLog,v 1.3 2015/02/10 11:59:52 jauhien Exp $
+
+*rust-mode-1.0.0_alpha (10 Feb 2015)
+
+  10 Feb 2015; Jauhien Piatlicki <jauhien@gentoo.org>
+  +rust-mode-1.0.0_alpha.ebuild, -rust-mode-0.11.0.ebuild,
+  -rust-mode-0.12.0.ebuild, -rust-mode-9999.ebuild:
+  version bump, move live ebuild to rust overlay
 
 *rust-mode-9999 (18 Oct 2014)
 

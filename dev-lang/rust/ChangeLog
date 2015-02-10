@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/rust
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.10 2015/01/12 18:07:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.11 2015/02/10 11:35:29 jauhien Exp $
+
+*rust-1.0.0_alpha (10 Feb 2015)
+
+  10 Feb 2015; Jauhien Piatlicki <jauhien@gentoo.org>
+  +files/rust-0.13.0-no-ldconfig.patch, +rust-1.0.0_alpha.ebuild,
+  -files/50rust-mode-gentoo.el, -files/rust-0.11.0-libdir.patch,
+  -files/rust-0.11.0-stage0.patch, -files/rust-0.12.0-libdir.patch,
+  -files/rust-0.12.0-no-ldconfig.patch, -files/rust-0.12.0-stage0.patch,
+  -rust-0.11.0-r2.ebuild, -rust-0.12.0.ebuild, -rust-999-r1.ebuild,
+  -rust-9999-r3.ebuild:
+  version bump, remove old versions, move all live stuff to the rust overlay
 
   12 Jan 2015; William Hubbs <williamh@gentoo.org> metadata.xml:
   add myself as a maintainer

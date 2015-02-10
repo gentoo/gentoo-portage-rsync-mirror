@@ -1,17 +1,17 @@
 Remove ldconfig(1) execution to prevent the installation script from accessing
 outside of a sandbox.
 
-diff --git a/src/etc/install.sh b/src/etc/install.sh
-index c949743..7c3daa5 100644
---- a/src/etc/install.sh
-+++ b/src/etc/install.sh
-@@ -466,17 +466,6 @@ while read p; do
- # The manifest lists all files to install
- done < "${CFG_SRC_DIR}/${CFG_LIBDIR_RELATIVE}/rustlib/manifest.in"
-
+diff --git a/install-template.sh b/install-template.sh
+index 11bf392..bc579f5 100644
+--- a/src/rust-installer/install-template.sh
++++ b/src/rust-installer/install-template.sh
+@@ -697,17 +697,6 @@ done
+ # Drop the version number into the manifest dir
+ echo "$TEMPLATE_RUST_INSTALLER_VERSION" > "${ABS_LIBDIR}/${TEMPLATE_REL_MANIFEST_DIR}/rust-installer-version"
+ 
 -# Run ldconfig to make dynamic libraries available to the linker
--if [ "$CFG_OSTYPE" = "Linux" ]
--    then
+-if [ "$CFG_OSTYPE" = "unknown-linux-gnu" -a ! -n "$CFG_DISABLE_LDCONFIG" ]; then
+-    msg "running ldconfig"
 -    ldconfig
 -    if [ $? -ne 0 ]
 -    then

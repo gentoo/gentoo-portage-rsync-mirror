@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-999-r1.ebuild,v 1.4 2014/11/30 12:45:15 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_alpha.ebuild,v 1.1 2015/02/10 11:35:29 jauhien Exp $
 
 EAPI="5"
 
@@ -8,17 +8,19 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils python-any-r1
 
-MY_P=${PN}-nightly
-
+MY_PV="rustc-1.0.0-alpha"
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
-MY_SRC_URI="http://static.rust-lang.org/dist/${MY_P}.tar.gz"
+
+SRC_URI="http://static.rust-lang.org/dist/${MY_PV}-src.tar.gz
+	x86?   ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-01-07-9e4e524-linux-i386-d8b73fc9aa3ad72ce1408a41e35d78dba10eb4d4.tar.bz2 )
+	amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-01-07-9e4e524-linux-x86_64-697880d3640e981bbbf23284363e8e9a158b588d.tar.bz2 )"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
-SLOT="nightly"
-KEYWORDS=""
+SLOT="1.0"
+KEYWORDS="~amd64 ~x86"
 
-IUSE="clang debug emacs libcxx +system-llvm vim-syntax zsh-completion"
+IUSE="clang debug libcxx +system-llvm"
 REQUIRED_USE="libcxx? ( clang )"
 
 CDEPEND="libcxx? ( sys-libs/libcxx )
@@ -28,39 +30,32 @@ CDEPEND="libcxx? ( sys-libs/libcxx )
 DEPEND="${CDEPEND}
 	${PYTHON_DEPS}
 	>=dev-lang/perl-5.0
-	net-misc/wget
 	clang? ( sys-devel/clang )
-	system-llvm? ( >=sys-devel/llvm-3.5.0[multitarget(-)] )
+	system-llvm? ( >=sys-devel/llvm-3.6.0[multitarget(-)] )
 "
 RDEPEND="${CDEPEND}
-	emacs? ( >=app-emacs/rust-mode-${PV} )
-	vim-syntax? ( >=app-vim/rust-mode-${PV} )
-	zsh-completion? ( >=app-shells/rust-zshcomp-${PV} )
 "
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_PV}
 
 src_unpack() {
-	wget "${MY_SRC_URI}" || die
-	unpack ./"${PN}-nightly.tar.gz"
-
-	use amd64 && BUILD_TRIPLE=x86_64-unknown-linux-gnu
-	use x86 && BUILD_TRIPLE=i686-unknown-linux-gnu
-	export CFG_SRC_DIR="${S}" && \
-		cd ${S} && \
-		mkdir -p "${S}/dl" && \
-		mkdir -p "${S}/${BUILD_TRIPLE}/stage0/bin" && \
-		python2 "${S}/src/etc/get-snapshot.py" ${BUILD_TRIPLE} || die
+	unpack "${MY_PV}-src.tar.gz" || die
+	mkdir "${MY_PV}/dl" || die
+	cp "${DISTDIR}/rust-stage0"* "${MY_PV}/dl/" || die
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.12.0-no-ldconfig.patch"
+	epatch "${FILESDIR}/${PN}-0.13.0-no-ldconfig.patch"
 
 	local postfix="gentoo-${SLOT}"
 	sed -i -e "s/CFG_FILENAME_EXTRA=.*/CFG_FILENAME_EXTRA=${postfix}/" mk/main.mk || die
 }
 
 src_configure() {
+	use amd64 && ARCH_POSTFIX="x86_64"
+	use x86 && ARCH_POSTFIX="i686"
+	LOCAL_RUST_PATH="${WORKDIR}/rust-1.0.0-alpha-${ARCH_POSTFIX}-unknown-linux-gnu/bin"
+
 	local system_llvm
 	use system-llvm && system_llvm="--llvm-root=${EPREFIX}/usr"
 
@@ -92,7 +87,17 @@ src_install() {
 
 	mv "${D}/usr/bin/rustc" "${D}/usr/bin/rustc-${PV}" || die
 	mv "${D}/usr/bin/rustdoc" "${D}/usr/bin/rustdoc-${PV}" || die
-	mv "${D}/usr/bin/rust-lldb" "${D}/usr/bin/rust-lldb-${PV}" || die
+	mv "${D}/usr/bin/rust-gdb" "${D}/usr/bin/rust-gdb-${PV}" || die
+
+	dodoc COPYRIGHT LICENSE-APACHE LICENSE-MIT
+
+	rm "${D}/usr/share/doc/rust" -rf
+
+	# le kludge that fixes https://github.com/Heather/gentoo-rust/issues/41
+	mv "${D}/usr/lib/rust-${PV}/rust-${PV}/rustlib"/* "${D}/usr/lib/rust-${PV}/rustlib/"
+	rmdir "${D}/usr/lib/rust-${PV}/rust-${PV}/rustlib"
+	mv "${D}/usr/lib/rust-${PV}/rust-${PV}/"/* "${D}/usr/lib/rust-${PV}/"
+	rmdir "${D}/usr/lib/rust-${PV}/rust-${PV}/"
 
 	cat <<-EOF > "${T}"/50${P}
 	LDPATH="/usr/lib/${P}"
@@ -112,10 +117,20 @@ pkg_postinst() {
 	elog "For more information see 'eselect rust help'"
 	elog "and http://wiki.gentoo.org/wiki/Project:Eselect/User_guide"
 
-	elog "Rust installs a helper script for calling LLDB now,"
-	elog "for your convenience it is installed under /usr/bin/rust-lldb-${PV},"
-	elog "but note, that there is no LLDB ebuild in the tree currently,"
-	elog "so you are on your own if you want to use it."
+	elog "Rust installs a helper script for calling GDB now,"
+	elog "for your convenience it is installed under /usr/bin/rust-gdb-${PV}."
+
+	if has_version app-editors/emacs || has_version app-editors/emacs-vcs; then
+		elog "install app-emacs/rust-mode to get emacs support for rust."
+	fi
+
+	if has_version app-editors/gvim || has_version app-editors/vim; then
+		elog "install app-vim/rust-mode to get vim support for rust."
+	fi
+
+	if has_version 'app-shells/zsh'; then
+		elog "install app-shells/rust-zshcomp to get zsh completion for rust."
+	fi
 }
 
 pkg_postrm() {

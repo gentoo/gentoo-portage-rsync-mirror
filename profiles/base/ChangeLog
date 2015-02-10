@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.767 2015/02/08 15:00:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.768 2015/02/10 11:33:36 jauhien Exp $
+
+  10 Feb 2015; Jauhien Piatlicki <jauhien@gentoo.org> package.use.mask:
+  mask system-llvm for dev-lang/rust
 
   08 Feb 2015; Michael Palimaka <kensington@gentoo.org> package.use.stable.mask:
   Unmask kde-base/kopete[otr] since libotr-4 is now stable.

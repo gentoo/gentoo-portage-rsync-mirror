@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=libcxx? ( sys-libs/libcxx ) >=app-admin/eselect-rust-0.2_pre20141128 !dev-lang/rust:0 || ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/perl-5.0 clang? ( sys-devel/clang ) system-llvm? ( >=sys-devel/llvm-3.6.0[multitarget(-)] )
+DESCRIPTION=Systems programming language from Mozilla
+EAPI=5
+HOMEPAGE=http://www.rust-lang.org/
+IUSE=clang debug libcxx +system-llvm
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA
+RDEPEND=libcxx? ( sys-libs/libcxx ) >=app-admin/eselect-rust-0.2_pre20141128 !dev-lang/rust:0
+REQUIRED_USE=libcxx? ( clang )
+SLOT=1.0
+SRC_URI=http://static.rust-lang.org/dist/rustc-1.0.0-alpha-src.tar.gz x86? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-01-07-9e4e524-linux-i386-d8b73fc9aa3ad72ce1408a41e35d78dba10eb4d4.tar.bz2 ) amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-01-07-9e4e524-linux-x86_64-697880d3640e981bbbf23284363e8e9a158b588d.tar.bz2 )
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=5dbff7bbd6f13a5e397e7e9dfffbbe23
