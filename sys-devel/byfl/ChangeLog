@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/byfl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.8 2015/02/03 20:57:33 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.10 2015/02/10 21:18:46 ottxor Exp $
+
+  10 Feb 2015; Christoph Junghans <ottxor@gentoo.org> -byfl-1.0.ebuild,
+  byfl-1.1.ebuild:
+  remove old
+
+  10 Feb 2015; Christoph Junghans <ottxor@gentoo.org> byfl-1.1.ebuild,
+  byfl-9999.ebuild:
+  fixed deps
 
 *byfl-1.1 (03 Feb 2015)
 

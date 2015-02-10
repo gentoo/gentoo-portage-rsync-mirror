@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.7.0.ebuild,v 1.2 2015/01/29 20:38:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-4.7.1.ebuild,v 1.1 2015/02/10 21:18:52 johu Exp $
 
 EAPI=5
 
 KDE_LINGUAS="bs ca ca@valencia da de el en_GB es et fi fr gl hu it kk nb nds nl
-pl pt pt_BR ru sk sl sv th uk zh_CN zh_TW"
+pl pt pt_BR ru sk sl sv th tr uk zh_CN zh_TW"
 VIRTUALX_REQUIRED="test"
 EGIT_BRANCH="4.7"
 inherit kde4-base
@@ -30,7 +30,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kapptemplate)
-	$(add_kdebase_dep kdebase-kioslaves)
+	|| ( $(add_kdeapps_dep kdebase-kioslaves) $(add_kdebase_dep kdebase-kioslaves) )
 	cxx? ( >=sys-devel/gdb-7.0[python] )
 "
 RESTRICT="test"
