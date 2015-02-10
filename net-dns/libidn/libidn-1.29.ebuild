@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.29.ebuild,v 1.11 2014/11/10 19:28:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.29.ebuild,v 1.12 2015/02/10 07:09:44 jer Exp $
 
 EAPI=5
 inherit elisp-common java-pkg-opt-2 mono-env multilib-minimal
@@ -66,6 +66,11 @@ multilib_src_compile() {
 	if multilib_is_native_abi && use emacs; then
 		elisp-compile "${S}"/src/*.el || die
 	fi
+}
+
+multilib_src_test() {
+	# only run libidn specific tests and not gnulib tests (bug #539356)
+	emake -C tests check
 }
 
 multilib_src_install() {

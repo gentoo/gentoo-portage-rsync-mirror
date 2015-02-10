@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1526 2015/02/10 00:46:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1527 2015/02/10 07:22:00 jlec Exp $
+
+  10 Feb 2015; Justin Lecher <jlec@gentoo.org> toolchain.eclass:
+  Revert unreviewed commit which breaks the tree
 
   10 Feb 2015; Anthony G. Basile <blueness@gentoo.org> toolchain.eclass:
   Remove halcy0n from the gentoo_urls for toolchain.eclass, per his

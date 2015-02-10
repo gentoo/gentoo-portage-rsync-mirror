@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/libidn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.216 2014/11/10 19:28:32 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.217 2015/02/10 07:09:44 jer Exp $
+
+  10 Feb 2015; Jeroen Roovers <jer@gentoo.org> -libidn-1.28.ebuild,
+  libidn-1.29.ebuild:
+  Only run specific tests, not the included gnulib tests (bug #539356).
 
   10 Nov 2014; Fabian Groffen <grobian@gentoo.org> libidn-1.29.ebuild:
   Marked ~m68k-mint, bug #528626

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.652 2015/02/10 00:46:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.653 2015/02/10 07:22:00 jlec Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -155,7 +155,7 @@ fi
 IUSE+=" ${IUSE_DEF[*]}"
 
 # Support upgrade paths here or people get pissed
-if ! tc_version_is_at_least 4.6 || is_crosscompile || use multislot ; then
+if use multislot ; then
 	SLOT="${GCC_CONFIG_VER}"
 else
 	SLOT="${GCC_BRANCH_VER}"
