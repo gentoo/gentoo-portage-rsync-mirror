@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1046 2015/02/05 17:52:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1047 2015/02/10 01:03:45 blueness Exp $
+
+  10 Feb 2015; Anthony G. Basile <blueness@gentoo.org> gcc-4.8.4.ebuild,
+  gcc-4.9.2.ebuild:
+  Forward port msgfmt link fix from 4.7.4 to 4.8.4 and 4.9.2, bug #372377
 
   05 Feb 2015; Anthony G. Basile <blueness@gentoo.org> gcc-4.9.2.ebuild:
   Add ~mips, bug #536874
