@@ -1,6 +1,11 @@
-# ChangeLog for app-admin/lxqt-admin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-admin/ChangeLog,v 1.1 2015/02/10 13:18:56 yngwin Exp $
+# ChangeLog for lxqt-base/lxqt-admin
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-admin/ChangeLog,v 1.2 2015/02/10 17:08:33 yngwin Exp $
+
+*lxqt-admin-0.9.0 (10 Feb 2015)
+
+  10 Feb 2015; Ben de Groot <yngwin@gentoo.org> +lxqt-admin-0.9.0.ebuild:
+  LXQt 0.9.0 version bump
 
 *lxqt-admin-0.8.0 (08 Nov 2014)
 

@@ -4,6 +4,8 @@
   <herd>lxqt</herd>
   <use>
     <flag name="admin">Install <pkg>app-admin/lxqt-admin</pkg></flag>
+    <flag name="filemanager">Install <pkg>x11-misc/pcmanfm-qt</pkg>
+    file manager</flag>
     <flag name="icons">Install <pkg>lxde-base/lxde-icon-theme</pkg>
     icon theme (pulls in <pkg>x11-libs/gtk+</pkg>)</flag>
     <flag name="lightdm">Install <pkg>x11-misc/lightdm</pkg>

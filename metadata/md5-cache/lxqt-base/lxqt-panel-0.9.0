@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=dev-libs/libqtxdg-1.0.0 dev-qt/linguist-tools:5 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 dev-qt/qtxml:5 kde-frameworks/kguiaddons:5 kde-frameworks/kwindowsystem:5 >=lxde-base/menu-cache-0.3.3 ~lxqt-base/liblxqt-0.9.0 ~lxqt-base/liblxqt-mount-0.9.0 ~lxqt-base/lxqt-globalkeys-0.9.0 x11-libs/libX11 cpuload? ( sys-libs/libstatgrab ) networkmonitor? ( sys-libs/libstatgrab ) sensors? ( sys-apps/lm_sensors ) sysstat? ( =lxqt-base/libsysstat-0.3* ) volume? ( alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=LXQt desktop panel and plugins
+EAPI=5
+HOMEPAGE=http://lxqt.org/
+IUSE=+alsa +clock colorpicker cpuload +desktopswitch dom +kbindicator +mainmenu +mount networkmonitor pulseaudio +quicklaunch screensaver sensors +showdesktop sysstat +taskbar +tray +volume worldclock
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 LGPL-2.1+
+RDEPEND=>=dev-libs/libqtxdg-1.0.0 dev-qt/linguist-tools:5 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 dev-qt/qtxml:5 kde-frameworks/kguiaddons:5 kde-frameworks/kwindowsystem:5 >=lxde-base/menu-cache-0.3.3 ~lxqt-base/liblxqt-0.9.0 ~lxqt-base/liblxqt-mount-0.9.0 ~lxqt-base/lxqt-globalkeys-0.9.0 x11-libs/libX11 cpuload? ( sys-libs/libstatgrab ) networkmonitor? ( sys-libs/libstatgrab ) sensors? ( sys-apps/lm_sensors ) sysstat? ( =lxqt-base/libsysstat-0.3* ) volume? ( alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio ) ) dev-qt/qtsvg:5 >=lxde-base/lxmenu-data-0.1.2
+REQUIRED_USE=volume? ( || ( alsa pulseaudio ) )
+SLOT=0
+SRC_URI=http://downloads.lxqt.org/lxqt/0.9.0/lxqt-panel-0.9.0.tar.xz
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=a35ad4b4b41ff042f0042677c668b443
