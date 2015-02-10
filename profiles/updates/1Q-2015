@@ -10,3 +10,5 @@ slotmove sys-firmware/iwl7260-ucode 2 9
 slotmove sys-firmware/iwl7260-ucode 3 10
 slotmove dev-ruby/tilt 2.0.1 2
 move app-vim/zencoding-vim app-vim/emmet
+move app-admin/lxqt-admin lxqt-base/lxqt-admin
+move net-misc/lxqt-openssh-askpass lxqt-base/lxqt-openssh-askpass
