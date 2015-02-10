@@ -17,9 +17,9 @@ KEYWORDS="amd64 ~arm hppa ~mips ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux
 IUSE="gnutls polarssl ssl"
 
 DEPEND="ssl? (
-		gnutls? ( net-libs/gnutls )
-		polarssl? ( !gnutls? ( >=net-libs/polarssl-0.14.0 ) )
-		!gnutls? ( !polarssl? ( dev-libs/openssl ) )
+		gnutls? ( net-libs/gnutls[${MULTILIB_USEDEP}] )
+		polarssl? ( !gnutls? ( >=net-libs/polarssl-0.14.0[${MULTILIB_USEDEP}] ) )
+		!gnutls? ( !polarssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] ) )
 	)
 	sys-libs/zlib"
 RDEPEND="${DEPEND}"
@@ -60,7 +60,7 @@ multilib_src_compile() {
 	fi
 	#fix multilib-script support. Bug #327449
 	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile
-	if ! multilib_build_binaries; then
+	if ! multilib_is_native_abi; then
 		cd librtmp
 	fi
 	emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
