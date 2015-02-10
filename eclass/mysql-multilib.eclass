@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.13 2015/02/08 22:03:56 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.14 2015/02/10 18:14:23 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -393,6 +393,9 @@ PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )
 # my_config.h includes ABI specific data
 MULTILIB_WRAPPED_HEADERS=( /usr/include/mysql/my_config.h /usr/include/mysql/private/embedded_priv.h )
 
+[[ ${PN} == "mysql-cluster" ]] && \
+	MULTILIB_WRAPPED_HEADERS+=( /usr/include/mysql/storage/ndb/ndb_types.h )
+
 [[ ${PN} == "mariadb" ]] && mysql_version_is_at_least "10.1.1" && \
 	MULTILIB_WRAPPED_HEADERS+=( /usr/include/mysql/mysql_version.h )
 
@@ -561,6 +564,11 @@ multilib_src_configure() {
 	else
 		configure_cmake_minimal
 	fi
+
+	# Always build NDB with mysql-cluster for libndbclient
+	[[ ${PN} == "mysql-cluster" ]] && mycmakeargs+=(
+		-DWITH_NDBCLUSTER=1 -DWITH_PARTITION_STORAGE_ENGINE=1
+		-DWITHOUT_PARTITION_STORAGE_ENGINE=0 )
 
 	# Bug #114895, bug #110149
 	filter-flags "-O" "-O[01]"

@@ -1,15 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/mysql-cluster-7.2.17.ebuild,v 1.4 2014/10/06 17:37:46 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/mysql-cluster-7.2.19.ebuild,v 1.1 2015/02/10 18:15:07 grknight Exp $
 
 EAPI=4
-MY_EXTRAS_VER="none"
+MY_EXTRAS_VER="20150210-1758Z"
 BUILD="cmake"
-
-# PBXT
-#PBXT_VERSION='1.0.11-6-pre-ga'
-# XtraDB
-#PERCONA_VER='5.1.45-10' XTRADB_VER='1.0.6-10'
 
 inherit toolchain-funcs java-pkg-opt-2 mysql-v2
 # only to make repoman happy. it is really set in the eclass

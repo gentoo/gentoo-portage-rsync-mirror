@@ -1,17 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/mysql-cluster-7.3.6.ebuild,v 1.3 2014/10/02 02:38:28 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/mysql-cluster-7.3.8.ebuild,v 1.1 2015/02/10 18:15:07 grknight Exp $
 
-EAPI=4
-MY_EXTRAS_VER="none"
-BUILD="cmake"
+EAPI=5
+MY_EXTRAS_VER="20150210-1758Z"
 
-# PBXT
-#PBXT_VERSION='1.0.11-6-pre-ga'
-# XtraDB
-#PERCONA_VER='5.1.45-10' XTRADB_VER='1.0.6-10'
-
-inherit toolchain-funcs java-pkg-opt-2 mysql-v2
+inherit toolchain-funcs java-pkg-opt-2 mysql-multilib
 # only to make repoman happy. it is really set in the eclass
 IUSE="$IUSE"
 
@@ -20,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 
 # When MY_EXTRAS is bumped, the index should be revised to exclude these.
 # This is often broken still
-#EPATCH_EXCLUDE='02040_all_embedded-library-shared-5.1.43.patch '
+#EPATCH_EXCLUDE=''
 
 DEPEND="|| ( >=sys-devel/gcc-3.4.6 >=sys-devel/gcc-apple-4.0 )"
 RDEPEND="!media-sound/amarok[embedded]"
@@ -34,7 +28,12 @@ RDEPEND="!media-sound/amarok[embedded]"
 # FEATURES='test userpriv -usersandbox' \
 # ebuild mysql-cluster-X.X.XX.ebuild \
 # digest clean package
-src_test() {
+multilib_src_test() {
+
+	if ! multilib_is_native_abi ; then
+		einfo "Server tests not available on non-native abi".
+		return 0;
+	fi
 
 	local TESTDIR="${CMAKE_BUILD_DIR}/mysql-test"
 	local retstatus_unit
@@ -61,9 +60,13 @@ src_test() {
 
 		# Ensure that parallel runs don't die
 		export MTR_BUILD_THREAD="$((${RANDOM} % 100))"
+		# Enable parallel testing, auto will try to detect number of cores
+		# You may set this by hand.
+		# The default maximum is 8 unless MTR_MAX_PARALLEL is increased
+		export MTR_PARALLEL="${MTR_PARALLEL:-auto}"
 
 		# create directories because mysqladmin might right out of order
-		mkdir -p "${S}"/mysql-test/var-tests{,/log}
+		mkdir -p "${T}"/var-tests{,/log}
 
 		# These are failing in MySQL 5.5/5.6 for now and are believed to be
 		# false positives:
@@ -79,9 +82,6 @@ src_test() {
 		# main.mysql_client_test:
 		# segfaults at random under Portage only, suspect resource limits.
 		#
-		# main.mysql_tzinfo_to_sql_symlink
-		# fails due to missing mysql_test/std_data/zoneinfo/GMT file from archive
-		#
 		for t in \
 			binlog.binlog_mysqlbinlog_filter \
 			binlog.binlog_statement_insert_delayed \
@@ -91,26 +91,24 @@ src_test() {
 			main.information_schema \
 			main.mysqld--help-notwinfuncs_1.is_triggers \
 			main.mysql_client_test \
-			main.mysql_tzinfo_to_sql_symlink \
 			mysqld--help-notwin \
 			perfschema.binlog_edge_mix \
 			perfschema.binlog_edge_stmt \
 		; do
-				mysql-v2_disable_test  "$t" "False positives in Gentoo"
+				mysql-multilib_disable_test  "$t" "False positives in Gentoo"
 		done
 		# ndb.ndbinfo, ndb_binlog.ndb_binlog_index: latin1/utf8
 		for t in \
 			ndb.ndbinfo \
 			ndb_binlog.ndb_binlog_index ; do
-				mysql-v2_disable_test  "$t" "False positives in Gentoo (NDB)"
+				mysql-multilib_disable_test  "$t" "False positives in Gentoo (NDB)"
 		done
 
 		# Run mysql tests
 		pushd "${TESTDIR}"
 
 		# run mysql-test tests
-		perl mysql-test-run.pl --force --vardir="${S}/mysql-test/var-tests" \
-			--parallel=auto
+		perl mysql-test-run.pl --force --vardir="${T}/var-tests"
 		retstatus_tests=$?
 		[[ $retstatus_tests -eq 0 ]] || eerror "tests failed"
 		has usersandbox $FEATURES && eerror "Some tests may fail with FEATURES=usersandbox"
@@ -129,8 +127,6 @@ src_test() {
 		[[ -z "$failures" ]] || die "Test failures: $failures"
 		einfo "Tests successfully completed"
 
-		# Cleanup data files after tests
-		rm -r "${S}/mysql-test/var-tests" || die "Cleanup failed"
 	else
 
 		einfo "Skipping server tests due to minimal build."
