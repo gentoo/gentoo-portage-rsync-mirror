@@ -1,6 +1,15 @@
 # ChangeLog for app-text/multitail
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.124 2014/10/29 10:00:52 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.125 2015/02/10 08:19:01 jlec Exp $
+
+*multitail-6.3 (10 Feb 2015)
+
+  10 Feb 2015; Justin Lecher <jlec@gentoo.org>
+  +files/multitail-6.3-as-needed.patch, +multitail-6.3.ebuild,
+  -files/5.2.2-as-needed.patch, -files/5.2.6-buffer-overflow.patch,
+  -files/multitail-5.2.12-as-needed.patch,
+  -files/multitail-5.2.13-as-needed.patch, multitail-6.2.1.ebuild:
+  Version Bump; use src_compile to build; drop old patches
 
   29 Oct 2014; Justin Lecher <jlec@gentoo.org> -multitail-5.2.13.ebuild:
   Drop old

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-6.2.1.ebuild,v 1.8 2015/02/10 08:19:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-6.3.ebuild,v 1.1 2015/02/10 08:19:01 jlec Exp $
 
 EAPI=5
 
@@ -12,16 +12,18 @@ SRC_URI="http://www.vanheusden.com/multitail/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="debug examples unicode"
 
-RDEPEND="sys-libs/ncurses[unicode?]"
+RDEPEND="
+	sys-libs/ncurses[unicode?]
+	"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 RESTRICT="test" # bug #492270
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-6.0-as-needed.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	sed \
 		-e '/gcc/d' \
@@ -29,6 +31,10 @@ src_prepare() {
 		-e 's:make clean::g' \
 		-e "/^DESTDIR/s:=.*$:=${EROOT}:g" \
 		-i Makefile || die
+
+	sed \
+		-e "s:/usr/bin/xclip:${EPREFIX}/usr/bin/xclip:g" \
+		-i xclip.c ${PN}.conf || die
 
 	tc-export CC PKG_CONFIG
 
@@ -45,11 +51,17 @@ src_install () {
 	insinto /etc
 	doins multitail.conf
 
-	dodoc Changes readme.txt thanks.txt
+	DOCS=( readme.txt thanks.txt )
+	HTML_DOCS=( manual.html )
+	einstalldocs
+
 	doman multitail.1
 
-	dohtml manual.html
+	use examples && \
+		docinto examples && \
+		dodoc colors-example.{pl,sh} convert-{geoip,simple}.pl
+}
 
-	docinto examples
-	use examples && dodoc colors-example.{pl,sh} convert-{geoip,simple}.pl
+pkg_postinst() {
+	optfeature "send a buffer to the X clipboard" x11-misc/xclip
 }
