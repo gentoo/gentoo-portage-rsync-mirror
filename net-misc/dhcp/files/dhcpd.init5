@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init5,v 1.5 2015/02/07 07:51:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init5,v 1.6 2015/02/10 00:27:08 polynomial-c Exp $
 
 extra_commands="configtest"
 
@@ -92,7 +92,7 @@ start() {
 		-user dhcp -group dhcp \
 		${chroot:+-chroot} ${chroot} ${DHCPD_IFACE}
 	eend $? \
-		&& save_options dhcpcd_chroot "${chroot}" \
+		&& save_options dhcpd_chroot "${chroot}" \
 		&& save_options pidfile "${pidfile}"
 }
 

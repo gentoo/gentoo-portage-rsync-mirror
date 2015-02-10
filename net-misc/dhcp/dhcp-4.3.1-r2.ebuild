@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.3.1-r1.ebuild,v 1.1 2015/02/07 17:43:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.3.1-r2.ebuild,v 1.1 2015/02/10 00:27:08 polynomial-c Exp $
 
 EAPI="4"
 

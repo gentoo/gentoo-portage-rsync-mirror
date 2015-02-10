@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.262 2015/02/07 17:43:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.263 2015/02/10 00:27:08 polynomial-c Exp $
+
+*dhcp-4.3.1-r2 (10 Feb 2015)
+
+  10 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> -dhcp-4.3.1.ebuild,
+  -dhcp-4.3.1-r1.ebuild, +dhcp-4.3.1-r2.ebuild, files/dhcpd.init5:
+  Revbump to fix a typo which slipped in with the latest init script fix.
+  Removed old.
 
 *dhcp-4.3.1-r1 (07 Feb 2015)
 
