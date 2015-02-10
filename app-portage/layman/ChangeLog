@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.225 2015/02/08 18:50:41 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.226 2015/02/10 04:53:54 dolsen Exp $
+
+  10 Feb 2015; Brian Dolbec <dolsen@gentoo.org> layman-2.3.0.ebuild:
+  Add ssl-fetch to DEPEND due to needing to import setup.py in the prepare
+  phase.
 
 *layman-2.3.0 (08 Feb 2015)
 

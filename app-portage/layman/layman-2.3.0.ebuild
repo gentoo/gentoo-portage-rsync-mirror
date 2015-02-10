@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.3.0.ebuild,v 1.1 2015/02/08 18:50:41 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.3.0.ebuild,v 1.2 2015/02/10 04:53:54 dolsen Exp $
 
 EAPI="5"
 
@@ -18,7 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="bazaar cvs darcs +git gpg g-sorcery mercurial squashfs subversion sync-plugin-portage test"
 
-DEPEND="test? ( dev-vcs/subversion )"
+DEPEND="test? ( dev-vcs/subversion )
+	>=dev-python/ssl-fetch-0.2[${PYTHON_USEDEP}]
+"
 
 RDEPEND="
 	bazaar? ( dev-vcs/bzr )
