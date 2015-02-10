@@ -1,6 +1,22 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.820 2015/02/09 03:08:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.821 2015/02/10 13:43:53 chithanh Exp $
+
+  10 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/xdm.initd-10, -files/xorg-cve-2011-4028+4029.patch,
+  -files/xorg-server-1.11-disable-tests-without-ddx.patch,
+  -files/xorg-server-1.11-dix-pointerrootwin-send-focusin.patch,
+  -files/xorg-server-1.11-dix-send-focus-events.patch,
+  -files/xorg-server-1.11-log-format-fix.patch,
+  -files/xorg-server-1.13-ia64-asm.patch,
+  -files/xorg-server-1.9-cve-2013-1940.patch,
+  -files/xorg-server-1.9-cve-2013-4396.patch,
+  -files/xorg-server-1.9-nouveau-default.patch,
+  -files/xorg-server-glapi_c.patch, -xorg-server-1.10.6-r3.ebuild,
+  -xorg-server-1.11.4-r3.ebuild, -xorg-server-1.13.4-r1.ebuild,
+  -xorg-server-1.14.5.ebuild, -xorg-server-1.14.7.ebuild,
+  -xorg-server-1.9.5-r3.ebuild:
+  Drop obsolete and vulnerable versions, bug #532086.
 
   09 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.17.0.ebuild:

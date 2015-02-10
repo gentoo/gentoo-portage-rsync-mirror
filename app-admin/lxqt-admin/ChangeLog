@@ -1,9 +1,0 @@
-# ChangeLog for app-admin/lxqt-admin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lxqt-admin/ChangeLog,v 1.1 2014/11/08 17:41:50 jauhien Exp $
-
-*lxqt-admin-0.8.0 (08 Nov 2014)
-
-  08 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> +lxqt-admin-0.8.0.ebuild,
-  +metadata.xml:
-  initial import from the Qt overlay
