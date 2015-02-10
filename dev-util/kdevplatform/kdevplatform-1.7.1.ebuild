@@ -1,16 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.7.0.ebuild,v 1.1 2014/12/26 12:57:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.7.1.ebuild,v 1.1 2015/02/10 19:49:06 johu Exp $
 
 EAPI=5
 
 DECLARATIVE_REQUIRED="always"
 KMNAME="kdevelop"
 KDE_LINGUAS="bs ca ca@valencia da de el en_GB es et fi fr gl it kk nb nl pl pt
-pt_BR ru sk sl sv th uk zh_CN zh_TW"
+pt_BR ru sk sl sv th tr uk zh_CN zh_TW"
 VIRTUALDBUS_TEST="true"
 VIRTUALX_REQUIRED="test"
 EGIT_REPONAME="${PN}"
+EGIT_BRANCH="1.7"
 inherit kde4-base
 
 DESCRIPTION="KDE development support libraries and apps"
