@@ -40,5 +40,8 @@
       Place the '~' character vertically centered on the line instead of to the
       top.
     </flag>
+	<flag name="pcf-unicode-only">
+      Remove non-unicode PCF fonts that could be problematic. See bug #520222.
+    </flag>
   </use>
 </pkgmetadata>
