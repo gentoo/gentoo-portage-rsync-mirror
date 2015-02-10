@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf-firmware/bladerf-firmware-1.8.0.ebuild,v 1.1 2015/02/10 15:56:30 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf-firmware/bladerf-firmware-1.8.0.ebuild,v 1.2 2015/02/10 16:37:45 zerochaos Exp $
 
 EAPI=5
 
@@ -25,4 +25,10 @@ S="${DISTDIR}"
 src_install() {
 	insinto /usr/share/Nuand/bladeRF/
 	doins bladeRF_fw_v${PV}.img
+}
+
+pkg_postinst() {
+	elog "Please remember you have to actually flash this onto"
+	elog "your bladerf with the following command:"
+	elog "bladeRF-cli -f /usr/share/Nuand/bladeRF/bladeRF_fw_v${PV}.img"
 }

@@ -1,4 +1,4 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=install postinst
 DESCRIPTION=bladeRF FX3 firmware images
 EAPI=5
 HOMEPAGE=http://nuand.com/fx3.php
@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://nuand.com/fx3/bladeRF_fw_v1.8.0.img
-_md5_=c22b554d2f6f167527079376f6924c7d
+_md5_=42fa23c526b7bf8c6b7bebba48794388
