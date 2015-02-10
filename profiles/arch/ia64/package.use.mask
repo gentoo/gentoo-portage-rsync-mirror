@@ -1,10 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.159 2015/01/25 15:42:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.160 2015/02/10 02:44:40 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (10 Feb 2015)
+# Missing keywords for media-libs/x265
+media-video/libav x265
 
 # Pacho Ramos <pacho@gentoo.org> (10 Jan 2014)
 # Missing keywords
-net-misc/networkmanager teamd  
+net-misc/networkmanager teamd
 
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2014)
 # New dependencies for wayland support in Gnome 3.14

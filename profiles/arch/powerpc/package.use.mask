@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.230 2015/02/07 10:42:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.231 2015/02/10 02:45:07 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (10 Feb 2015)
+# Missing keywords for media-libs/x265
+media-video/libav x265
 
 # Markos Chandras <hwoarang@gentoo.org> (07 Feb 2015)
 # app-admin/cgmanager misses PPC/PPC64 keywords. Bug #539208

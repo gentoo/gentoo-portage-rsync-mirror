@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.311 2015/02/08 17:20:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.312 2015/02/10 02:45:07 patrick Exp $
+
+  10 Feb 2015; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Mask media-libs/libav[x265] until keywords catch up
 
   08 Feb 2015; Michael Palimaka <kensington@gentoo.org>
   ppc64/package.use.stable.mask:

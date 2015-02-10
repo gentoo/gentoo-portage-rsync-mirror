@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9768 2015/02/09 16:41:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9769 2015/02/10 02:50:19 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2015; Patrick Lauer <patrick@gentoo.org> base/package.use.mask,
+  package.mask:
+  Remove libav masks after discussion with lu_zero
 
   09 Feb 2015; Eray Aslan <eras@gentoo.org> package.mask:
   Unmask mail-mta/postfix-3.0.0 official release
