@@ -1,15 +1,16 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.7.0.ebuild,v 1.1 2014/12/26 13:00:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/kdevelop-php-1.7.1.ebuild,v 1.1 2015/02/10 21:46:16 johu Exp $
 
 EAPI=5
 
-KDE_LINGUAS="bs ca ca@valencia da de el en_GB es et fi fr gl it kk nb nds nl pl
-pt pt_BR ru sl sv uk zh_CN zh_TW"
+KDE_LINGUAS="bs ca ca@valencia da de el en_GB es et fi fr gl it kk nl pl pt
+pt_BR ru sk sl sv tr uk zh_CN zh_TW"
 VIRTUALX_REQUIRED=test
 KDEBASE="kdevelop"
 KMNAME="kdev-php"
 EGIT_REPONAME="${KMNAME}"
+EGIT_BRANCH="1.7"
 inherit kde4-base
 
 DESCRIPTION="PHP plugin for KDevelop 4"
@@ -24,6 +25,7 @@ RESTRICT="test"
 
 DEPEND="
 	>=dev-util/kdevelop-pg-qt-1.0.0
+	<=dev-util/kdevelop-pg-qt-5
 "
 RDEPEND="
 	dev-util/kdevelop:${SLOT}
