@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.88 2015/02/03 21:07:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.89 2015/02/10 12:23:02 dastergon Exp $
+
+  10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
+  Drop myself from metadata
 
 *denyhosts-2.9 (03 Feb 2015)
 

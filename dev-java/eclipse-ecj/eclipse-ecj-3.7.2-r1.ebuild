@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.7.2-r1.ebuild,v 1.3 2014/06/04 10:46:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.7.2-r1.ebuild,v 1.4 2015/02/10 12:04:59 fordfrog Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ COMMON_DEP="
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.4"
 DEPEND="${COMMON_DEP}
-	>=virtual/jdk-1.6
+	|| ( virtual/jdk:1.7 virtual/jdk:1.6 )
 	app-arch/unzip
 	userland_GNU? ( sys-apps/findutils )"
 PDEPEND="

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.97 2015/02/10 12:00:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.98 2015/02/10 12:04:59 fordfrog Exp $
+
+  10 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> eclipse-ecj-3.7.1.ebuild,
+  eclipse-ecj-3.7.2-r1.ebuild:
+  slot 3.7 fails to compile with jdk 8
 
   10 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> -eclipse-ecj-3.6.ebuild,
   -eclipse-ecj-3.7.2.ebuild, -eclipse-ecj-4.2.ebuild:

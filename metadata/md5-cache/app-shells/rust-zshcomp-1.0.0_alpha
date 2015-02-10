@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install
+DEPEND=app-shells/zsh
+DESCRIPTION=Rust zsh completions
+EAPI=5
+HOMEPAGE=http://www.rust-lang.org/
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( MIT Apache-2.0 )
+RDEPEND=app-shells/zsh
+SLOT=0
+SRC_URI=http://static.rust-lang.org/dist/rustc-1.0.0-alpha-src.tar.gz
+_md5_=42063f511a159339f1b816542b3c6122

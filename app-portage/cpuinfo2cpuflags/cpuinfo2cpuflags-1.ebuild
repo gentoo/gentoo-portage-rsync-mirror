@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/cpuinfo2cpuflags-1.ebuild,v 1.4 2015/01/26 09:21:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/cpuinfo2cpuflags-1.ebuild,v 1.5 2015/02/10 12:16:49 jlec Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://bitbucket.org/mgorny/cpuinfo2cpuflags/downloads/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=${PYTHON_DEPS}

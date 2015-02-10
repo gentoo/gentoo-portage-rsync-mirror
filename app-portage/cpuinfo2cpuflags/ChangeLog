@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/cpuinfo2cpuflags
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/ChangeLog,v 1.4 2015/01/26 09:21:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cpuinfo2cpuflags/ChangeLog,v 1.5 2015/02/10 12:16:49 jlec Exp $
+
+  10 Feb 2015; Justin Lecher <jlec@gentoo.org> cpuinfo2cpuflags-1.ebuild,
+  metadata.xml:
+  Add prefix love
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cpuinfo2cpuflags-1.ebuild:
   Stable for x86, wrt bug #537492

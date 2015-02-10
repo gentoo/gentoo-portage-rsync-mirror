@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>dastergon@gentoo.org</email>
-	<name>Pavlos Ratis</name>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='camelcase'>Enable indexing for camelCase sentences and words</flag>

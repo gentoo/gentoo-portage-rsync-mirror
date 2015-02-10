@@ -3,8 +3,4 @@
 <pkgmetadata>
 	<herd>kde</herd>
 	<herd>proxy-maintainers</herd>
-	<maintainer>
-		<email>dastergon@gentoo.org</email>
-		<name>Pavlos Ratis</name>
-	</maintainer>
 </pkgmetadata>

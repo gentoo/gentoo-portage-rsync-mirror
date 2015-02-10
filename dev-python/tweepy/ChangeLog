@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tweepy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/ChangeLog,v 1.10 2014/12/09 07:30:42 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tweepy/ChangeLog,v 1.11 2015/02/10 12:25:37 dastergon Exp $
+
+  10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
+  Drop myself from metadata
 
 *tweepy-2.3 (09 Dec 2014)
 
