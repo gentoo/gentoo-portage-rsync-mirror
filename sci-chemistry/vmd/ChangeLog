@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/vmd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.59 2014/08/21 12:18:02 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.60 2015/02/10 02:23:22 patrick Exp $
+
+  10 Feb 2015; Patrick Lauer <patrick@gentoo.org> -vmd-1.9.1-r1.ebuild:
+  Remove version with unsatisfiable dependencies
 
 *vmd-1.9.1-r3 (21 Aug 2014)
 

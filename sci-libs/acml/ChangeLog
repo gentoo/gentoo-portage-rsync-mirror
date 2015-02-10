@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/acml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.45 2012/10/16 20:48:56 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.46 2015/02/10 02:27:37 patrick Exp $
+
+  10 Feb 2015; Patrick Lauer <patrick@gentoo.org> acml-4.1.0-r1.ebuild:
+  Fix gcc slot to match toolchain changes
 
   16 Oct 2012; Justin Lecher <jlec@gentoo.org> -acml-3.6.0-r1.ebuild,
   acml-3.6.1-r1.ebuild, acml-4.0.1.ebuild, acml-4.1.0-r1.ebuild, metadata.xml:
