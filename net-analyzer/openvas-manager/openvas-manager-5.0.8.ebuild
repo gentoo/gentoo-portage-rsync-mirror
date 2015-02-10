@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-5.0.8.ebuild,v 1.1 2015/02/03 09:08:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/openvas-manager-5.0.8.ebuild,v 1.2 2015/02/10 08:51:41 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE=""
 
 RDEPEND="
-	~net-analyzer/openvas-libraries-7.0.6
+	~net-analyzer/openvas-libraries-7.0.7
 	>=dev-db/sqlite-3
 	!net-analyzer/openvas-administrator"
 DEPEND="${RDEPEND}

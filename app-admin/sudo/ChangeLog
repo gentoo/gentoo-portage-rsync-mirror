@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/sudo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.377 2014/11/02 08:54:56 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.378 2015/02/10 08:48:37 polynomial-c Exp $
+
+*sudo-1.8.12 (10 Feb 2015)
+
+  10 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> -sudo-1.8.6_p7.ebuild,
+  +sudo-1.8.12.ebuild:
+  Security bump (bug #539532). Removed old.
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.11_p1.ebuild:
   Stable for alpha, wrt bug #524752
