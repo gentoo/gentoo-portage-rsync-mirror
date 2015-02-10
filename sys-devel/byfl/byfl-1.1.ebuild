@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-1.1.ebuild,v 1.2 2015/02/10 21:04:46 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-1.1.ebuild,v 1.3 2015/02/10 22:07:53 ottxor Exp $
 
 EAPI=5
 
@@ -24,16 +24,17 @@ HOMEPAGE="https://github.com/losalamos/Byfl"
 
 SLOT="0"
 LICENSE="BSD"
-IUSE=""
+IUSE="hdf5"
 
 RDEPEND="~sys-devel/dragonegg-${LLVM_VERSION}
 	~sys-devel/clang-${LLVM_VERSION}
 	~sys-devel/llvm-${LLVM_VERSION}
 	dev-lang/perl:=
-	dev-perl/Switch"
+	dev-perl/Switch
+	hdf5? ( sci-libs/hdf5 )"
 DEPEND="${RDEPEND}"
 
 src_configure() {
 	append-cxxflags -std=c++11
-	autotools-utils_src_configure
+	autotools-utils_src_configure H5CXX=$(usex hdf5 h5c++ no)
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/byfl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.10 2015/02/10 21:18:46 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.11 2015/02/10 22:07:53 ottxor Exp $
+
+  10 Feb 2015; Christoph Junghans <ottxor@gentoo.org> byfl-1.1.ebuild,
+  byfl-9999.ebuild:
+  Added hdf5 support
 
   10 Feb 2015; Christoph Junghans <ottxor@gentoo.org> -byfl-1.0.ebuild,
   byfl-1.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.2 2014/11/13 04:34:05 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.3 2015/02/10 22:21:26 johu Exp $
 
 # @ECLASS: kde5.eclass
 # @MAINTAINER:
@@ -196,24 +196,25 @@ _calculate_src_uri() {
 	DEPEND+=" app-arch/xz-utils"
 
 	case ${CATEGORY} in
-		kde-frameworks)
-			case ${PV} in 
-				5.0.0|5.1.0|5.2.0|5.3.0)
-				SRC_URI="mirror://kde/stable/frameworks/${PV}/${_kmname}-${PV}.tar.xz" ;;
+		kde-apps)
+			case ${PV} in
+				??.?.[6-9]? | ??.??.[6-9]? )
+					SRC_URI="mirror://kde/unstable/applications/${PV}/src/${_kmname}-${PV}.tar.xz"
+					RESTRICT+=" mirror"
+					;;
 				*)
-				SRC_URI="mirror://kde/stable/frameworks/${PV%.*}/${_kmname}-${PV}.tar.xz" ;;
+					SRC_URI="mirror://kde/stable/applications/${PV}/src/${_kmname}-${PV}.tar.xz" ;;
 			esac
 			;;
-		kde-base)
+		kde-frameworks)
+			SRC_URI="mirror://kde/stable/frameworks/${PV%.*}/${_kmname}-${PV}.tar.xz" ;;
+		kde-plasma)
 			case ${PV} in
 				5.?.[6-9]? )
 					# Plasma 5 beta releases
 					SRC_URI="mirror://kde/unstable/plasma/${PV}/${_kmname}-${PV}.tar.xz"
 					RESTRICT+=" mirror"
 					;;
-				5.1.0.1)
-					# Plasma 5 stable releases
-					SRC_URI="mirror://kde/stable/plasma/5.1.0/${_kmname}-${PV}.tar.xz" ;;
 				*)
 					# Plasma 5 stable releases
 					SRC_URI="mirror://kde/stable/plasma/${PV}/${_kmname}-${PV}.tar.xz" ;;

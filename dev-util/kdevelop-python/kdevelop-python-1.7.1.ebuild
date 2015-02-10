@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/kdevelop-python-1.7.0.ebuild,v 1.1 2014/12/26 13:04:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/kdevelop-python-1.7.1.ebuild,v 1.1 2015/02/10 22:11:29 johu Exp $
 
 EAPI=5
 
 KDEBASE="kdevelop"
 KMNAME="kdev-python"
-KDE_LINGUAS="ca de en_GB es et fi fr nl pl pt pt_BR sk sl sv uk"
+KDE_LINGUAS="ca de en_GB es et fi fr it nl pl pt pt_BR sk sl sv tr uk"
 PYTHON_COMPAT=( python2_7 )
 EGIT_BRANCH="1.7"
 MY_P="${KMNAME}-${PV}"

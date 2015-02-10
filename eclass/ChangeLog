@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1529 2015/02/10 20:41:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1530 2015/02/10 22:21:26 johu Exp $
+
+  10 Feb 2015; Johannes Huber <johu@gentoo.org> kde5.eclass:
+  Sync SRC_URI calculation with kde overlay, fixes bug #539668.
 
   10 Feb 2015; Johannes Huber <johu@gentoo.org> kde4-functions.eclass:
   Support for kde-apps category, remove function moved to cmake-utils. Some
