@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1524 2015/02/09 12:53:37 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1526 2015/02/10 00:46:32 blueness Exp $
+
+  10 Feb 2015; Anthony G. Basile <blueness@gentoo.org> toolchain.eclass:
+  Remove halcy0n from the gentoo_urls for toolchain.eclass, per his
+  instructions.
+
+  10 Feb 2015; Anthony G. Basile <blueness@gentoo.org> toolchain.eclass:
+  Add my devspace to the gentoo_urls for toolchain.eclass
 
   09 Feb 2015; Michael Haubenwallner <haubi@gentoo.org>
   +ELT-patches/aixrtl/2.0.0-fpic-c, +ELT-patches/aixrtl/2.0.0-fpic-cxx:
