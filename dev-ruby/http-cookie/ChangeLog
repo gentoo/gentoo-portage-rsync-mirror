@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/http-cookie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-cookie/ChangeLog,v 1.4 2015/02/05 10:21:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-cookie/ChangeLog,v 1.5 2015/02/10 09:27:18 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> http-cookie-1.0.2.ebuild:
+  Add ~ppc, wrt bug #522056
 
   05 Feb 2015; Agostino Sarubbo <ago@gentoo.org> http-cookie-1.0.2.ebuild:
   Add ~x86, wrt bug #522056

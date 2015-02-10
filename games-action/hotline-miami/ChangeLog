@@ -1,6 +1,10 @@
 # ChangeLog for games-action/hotline-miami
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/hotline-miami/ChangeLog,v 1.6 2015/01/27 07:31:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/hotline-miami/ChangeLog,v 1.7 2015/02/10 09:15:27 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  hotline-miami-1.0.9a_p20140221.ebuild:
+  Stable for amd64, wrt bug #539526
 
   27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -hotline-miami-1.0.9a.ebuild:

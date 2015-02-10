@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/splice/splice-20121120.ebuild,v 1.4 2013/06/02 18:50:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/splice/splice-20121120.ebuild,v 1.5 2015/02/10 09:15:53 ago Exp $
 
 # TODO: unbundle mono? (seems hardcoded)
 #       icon
@@ -15,7 +15,7 @@ SRC_URI="splice-linux-1353389454.tar.gz"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 RESTRICT="bindist fetch splitdebug"
 

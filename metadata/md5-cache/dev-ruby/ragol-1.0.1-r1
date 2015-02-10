@@ -4,11 +4,11 @@ DESCRIPTION=Another implementation of an option processor
 EAPI=5
 HOMEPAGE=https://github.com/jpace/ragol
 IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 doc test test
-KEYWORDS=~amd64 ~hppa ~ppc ~x86
+KEYWORDS=~amd64 ~hppa ~ppc ~sparc ~x86
 LICENSE=MIT
 RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/logue-1.0.0[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/logue-1.0.0[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/logue-1.0.0[ruby_targets_ruby21] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] )
 REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 )
 SLOT=0
 SRC_URI=https://github.com/jpace/ragol/archive/v1.0.1.tar.gz -> ragol-git-1.0.1.tgz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	d4f8591e9b20b106327e9d143eb13da5	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=378ae259afd28f8162f2add0f7f21376
+_md5_=c5cfbc9ec8deb14a790e8e1c0d7855c3

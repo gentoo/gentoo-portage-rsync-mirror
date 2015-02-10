@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/rbot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.60 2015/02/05 10:21:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.61 2015/02/10 09:27:21 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  rbot-0.9.15_p20131020-r1.ebuild:
+  Add ~ppc, wrt bug #522056
 
   05 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   rbot-0.9.15_p20131020-r1.ebuild:

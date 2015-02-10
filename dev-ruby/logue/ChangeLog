@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/logue
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.16 2015/02/09 02:38:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.17 2015/02/10 09:23:14 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> logue-1.0.2-r1.ebuild:
+  Add ~sparc, wrt bug #539472
 
 *logue-1.0.2-r1 (09 Feb 2015)
 
