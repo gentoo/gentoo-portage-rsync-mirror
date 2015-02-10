@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.15.0-r1.ebuild,v 1.2 2015/02/10 09:15:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.15.0-r1.ebuild,v 1.3 2015/02/10 10:07:53 ago Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user systemd
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.t
 	 mirror://gentoo/gentoo-asterisk-patchset-3.14.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE_VOICEMAIL_STORAGE="
 	+voicemail_storage_file

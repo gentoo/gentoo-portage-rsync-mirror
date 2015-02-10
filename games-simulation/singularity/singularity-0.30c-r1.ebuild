@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30c-r1.ebuild,v 1.5 2015/02/06 13:44:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30c-r1.ebuild,v 1.6 2015/02/10 10:04:21 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://endgame-singularity.googlecode.com/files/${P}-src.tar.gz
 
 LICENSE="GPL-2 CC-BY-SA-2.5"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+music"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

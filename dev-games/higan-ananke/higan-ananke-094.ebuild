@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/higan-ananke/higan-ananke-094.ebuild,v 1.2 2015/02/06 13:41:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/higan-ananke/higan-ananke-094.ebuild,v 1.3 2015/02/10 10:07:34 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://byuu.org/files/${MY_P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}/ananke

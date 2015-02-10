@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gtkatlantic
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.25 2015/02/06 13:43:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.26 2015/02/10 10:02:55 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gtkatlantic-0.5.0.ebuild:
+  Stable for x86, wrt bug #538844
 
   06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gtkatlantic-0.5.0.ebuild:
   Stable for amd64, wrt bug #538844

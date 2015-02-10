@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.6.ebuild,v 1.2 2015/02/07 13:30:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2.2.6.ebuild,v 1.3 2015/02/10 10:12:23 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.bennewitz.com/bluefish/stable/source/${MY_P}.tar.bz2"
 HOMEPAGE="http://bluefish.openoffice.nl/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 SLOT="0"
 IUSE="nls python spell"
 

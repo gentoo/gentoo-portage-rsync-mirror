@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/cenon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.21 2015/02/01 16:44:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.22 2015/02/10 10:01:47 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> cenon-4.0.2-r1.ebuild:
+  Stable for x86, wrt bug #535416
 
   01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> cenon-4.0.2-r1.ebuild:
   Stable for amd64, wrt bug #535416

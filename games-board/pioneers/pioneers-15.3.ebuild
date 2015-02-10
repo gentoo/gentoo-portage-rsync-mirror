@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.3.ebuild,v 1.3 2015/02/09 08:17:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.3.ebuild,v 1.4 2015/02/10 10:14:05 ago Exp $
 
 EAPI=5
 inherit eutils gnome-games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pio/${P}.tar.gz"
 
 LICENSE="GPL-2 CC-BY-SA-4.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated help nls"
 
 # dev-util/gob only for autoreconf

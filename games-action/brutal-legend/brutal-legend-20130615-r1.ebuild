@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/brutal-legend-20130615-r1.ebuild,v 1.2 2015/02/08 09:34:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/brutal-legend/brutal-legend-20130615-r1.ebuild,v 1.3 2015/02/10 10:13:14 ago Exp $
 
 # TODO: unbundle libsdl-2
 
@@ -15,7 +15,7 @@ SRC_URI="BrutalLegend-Linux-${TIMESTAMP}-setup.bin"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="bindist fetch splitdebug"
 

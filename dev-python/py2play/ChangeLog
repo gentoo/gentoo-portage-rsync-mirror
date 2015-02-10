@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py2play
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.27 2015/02/06 13:41:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2play/ChangeLog,v 1.28 2015/02/10 10:08:10 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> py2play-0.1.10-r1.ebuild:
+  Stable for x86, wrt bug #539060
 
   06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> py2play-0.1.10-r1.ebuild:
   Stable for amd64, wrt bug #539060

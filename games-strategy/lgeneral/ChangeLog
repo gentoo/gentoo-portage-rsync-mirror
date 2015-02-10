@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/lgeneral
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.47 2015/02/06 13:42:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.48 2015/02/10 10:09:02 ago Exp $
+
+  10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> lgeneral-1.2.4.ebuild:
+  Stable for x86, wrt bug #539066
 
   06 Feb 2015; Agostino Sarubbo <ago@gentoo.org> lgeneral-1.2.4.ebuild:
   Stable for amd64, wrt bug #539066
