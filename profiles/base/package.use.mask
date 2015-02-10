@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.644 2015/02/10 11:33:36 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.645 2015/02/10 15:52:31 yngwin Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -12,12 +12,6 @@ dev-lang/rust system-llvm
 # Ben de Groot <yngwin@gentoo.org> (07 Feb 2015)
 # Mask for all arches, can be unmasked on arm once keyworded there
 games-board/stockfish armv7
-
-# Ben de Groot <yngwin@gentoo.org> (04 Feb 2015)
-# Requires hard-masked version of libav.
-# Besides, upstream recommends using ffmpeg. See
-# https://github.com/mpv-player/mpv/wiki/FFmpeg-versus-Libav
->=media-video/mpv-0.6.0 libav
 
 # Michael Palimaka <kensington@gentoo.org> (03 Feb 2015)
 # Requires unreleased version of dev-libs/soprano
@@ -68,12 +62,6 @@ dev-libs/DirectFB swfdec
 # Tim Harder <radhermit@gentoo.org> (10 Oct 2014)
 # Masked since skype isn't stable
 net-im/bitlbee skype
-
-# Jauhien Piatlicki <jauhien@gentoo.org> (5 Oct 2014)
-# Masked because of bug 524390: privilege escalation
-# until upstream fixes this security issue.
-# Use at your own risk
-lxqt-base/lxqt-meta sddm
 
 # Sergey Popov <pinkbyte@gentoo.org> (01 Oct 2014)
 # Mask multislot USE flag for packages, where it breaks

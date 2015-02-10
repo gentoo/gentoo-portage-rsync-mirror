@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.35.ebuild,v 1.9 2012/05/03 03:41:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.35.ebuild,v 1.10 2015/02/10 15:41:53 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Launch opengl games with custom graphic settings"
@@ -21,17 +21,15 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	sed -i \
 		-e "s:/etc:${GAMES_SYSCONFDIR}:" \
-		src/gamepick.h \
-		|| die "sed failed"
+		src/gamepick.h || die
 
 	sed -i \
 		-e 's/-O2//' \
-		src/Makefile.in \
-		|| die "sed failed"
+		src/Makefile.in || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
 	dodir "${GAMES_SYSCONFDIR}"
 	touch "${D}/${GAMES_SYSCONFDIR}"/${PN}.conf
@@ -39,6 +37,5 @@ src_install() {
 	newicon gamepick-48x48.xpm ${PN}.xpm
 	make_desktop_entry ${PN} ${PN}
 
-	dodoc AUTHORS ChangeLog README
 	prepgamesdirs
 }
