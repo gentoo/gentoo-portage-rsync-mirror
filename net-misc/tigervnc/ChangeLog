@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.197 2015/01/25 11:24:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.198 2015/02/10 10:37:07 chithanh Exp $
+
+  10 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/1.1.0-export_missing_symbol.patch, -files/1.1.0-gethomedir.patch,
+  -files/1.1.0-xorg-1.12_fix.patch, -files/CVE-2014-0011.patch,
+  -tigervnc-1.2.0.ebuild, -tigervnc-1.2.80_p5065-r1.ebuild,
+  -tigervnc-1.2.80_p5065.ebuild, -tigervnc-1.3.1.ebuild, metadata.xml:
+  Drop versions which depend on vulnerable xorg-server, bug #532086.
 
   25 Jan 2015; Agostino Sarubbo <ago@gentoo.org> tigervnc-1.3.1-r1.ebuild:
   Stable for ppc64, wrt bug #500372
