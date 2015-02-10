@@ -21,7 +21,7 @@ DEPEND="ssl? (
 		polarssl? ( !gnutls? ( >=net-libs/polarssl-0.14.0[${MULTILIB_USEDEP}] ) )
 		!gnutls? ( !polarssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] ) )
 	)
-	sys-libs/zlib"
+	sys-libs/zlib[${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
