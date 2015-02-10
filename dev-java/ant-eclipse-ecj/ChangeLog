@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.46 2014/11/29 13:35:52 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.47 2015/02/10 18:51:46 fordfrog Exp $
+
+  10 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  -ant-eclipse-ecj-4.2.ebuild:
+  removed obsolete ebuild
 
   29 Nov 2014; Agostino Sarubbo <ago@gentoo.org> ant-eclipse-ecj-4.4.1.ebuild:
   Stable for ppc64, wrt bug #519590
