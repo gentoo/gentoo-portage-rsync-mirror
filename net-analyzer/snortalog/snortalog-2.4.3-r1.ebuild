@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.3.ebuild,v 1.1 2014/07/17 13:24:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.3-r1.ebuild,v 1.1 2015/02/11 16:51:48 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -27,6 +27,8 @@ RDEPEND="
 S=${WORKDIR}
 
 src_prepare() {
+	edos2unix $(find conf/ modules/ -type f) ${PN}.* CHANGES
+
 	# fix paths, erroneous can access message
 	sed -i \
 		-e "s:\(modules/\):/usr/lib/snortalog/${PV}/\1:g" \

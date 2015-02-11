@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vdr/eselect-vdr-0.0.3.ebuild,v 1.3 2011/10/20 21:04:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vdr/eselect-vdr-0.0.3.ebuild,v 1.4 2015/02/11 16:56:56 hd_brummy Exp $
+
+EAPI=5
 
 DESCRIPTION="Manages the VDR plugins"
 HOMEPAGE="http://www.gentoo.org/"

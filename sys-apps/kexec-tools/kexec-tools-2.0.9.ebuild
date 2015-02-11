@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-2.0.4-r3.ebuild,v 1.1 2013/12/28 20:16:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-2.0.9.ebuild,v 1.1 2015/02/11 16:56:21 jlec Exp $
 
 EAPI=5
 
@@ -25,10 +25,9 @@ RDEPEND="${DEPEND}"
 CONFIG_CHECK="~KEXEC"
 
 PATCHES=(
-		"${FILESDIR}"/${PN}-2.0.0-respect-LDFLAGS.patch
-		"${FILESDIR}"/${P}-disable-kexec-test.patch
-		"${FILESDIR}"/${P}-out-of-source.patch
-	)
+	"${FILESDIR}"/${PN}-2.0.4-disable-kexec-test.patch
+	"${FILESDIR}"/${PN}-2.0.4-out-of-source.patch
+)
 
 pkg_setup() {
 	# GNU Make's $(COMPILE.S) passes ASFLAGS to $(CCAS), CCAS=$(CC)
@@ -55,8 +54,8 @@ src_install() {
 
 	dodoc "${FILESDIR}"/README.Gentoo
 
-	newinitd "${FILESDIR}"/kexec.init-${PV}-r2 kexec
-	newconfd "${FILESDIR}"/kexec.conf-${PV} kexec
+	newinitd "${FILESDIR}"/kexec.init-2.0.4-r2 kexec
+	newconfd "${FILESDIR}"/kexec.conf-2.0.4 kexec
 
 	insinto /etc
 	doins "${FILESDIR}"/kexec.conf
