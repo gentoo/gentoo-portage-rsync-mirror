@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/plasma-network-status
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-network-status/ChangeLog,v 1.7 2015/02/10 12:29:14 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-network-status/ChangeLog,v 1.8 2015/02/11 12:46:09 kensington Exp $
+
+  11 Feb 2015; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Remove proxy-maintainers herd.
 
   10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   Drop myself from metadata
