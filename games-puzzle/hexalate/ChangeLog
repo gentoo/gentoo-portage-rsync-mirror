@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/hexalate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hexalate/ChangeLog,v 1.7 2015/02/10 10:17:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hexalate/ChangeLog,v 1.8 2015/02/11 21:00:15 mr_bones_ Exp $
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> -hexalate-1.0.1.ebuild:
+  old
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> hexalate-1.0.3.ebuild:
   Stable for x86, wrt bug #539538

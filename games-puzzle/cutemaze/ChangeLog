@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/cutemaze
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cutemaze/ChangeLog,v 1.4 2013/03/02 21:18:46 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cutemaze/ChangeLog,v 1.5 2015/02/11 20:56:06 mr_bones_ Exp $
+
+*cutemaze-1.1.1 (11 Feb 2015)
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +cutemaze-1.1.1.ebuild,
+  cutemaze-1.1.0.ebuild:
+  version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> cutemaze-1.1.0.ebuild:
   Move Qt dependencies to the new category
