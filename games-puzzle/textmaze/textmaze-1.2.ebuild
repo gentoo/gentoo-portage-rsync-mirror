@@ -1,13 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/textmaze/textmaze-1.2.ebuild,v 1.5 2009/11/16 14:50:25 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/textmaze/textmaze-1.2.ebuild,v 1.6 2015/02/11 06:26:35 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 MY_P=${PN}_v${PV}
 DESCRIPTION="An ncurses-based maze solving game written in Perl"
-HOMEPAGE="http://freshmeat.net/projects/textmaze/"
+HOMEPAGE="http://robobunny.com/projects/textmaze/html/"
 SRC_URI="http://www.robobunny.com/projects/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -22,12 +22,11 @@ S=${WORKDIR}/TextMaze
 src_prepare() {
 	sed -i \
 		-e "s#/usr/local/bin/perl#/usr/bin/perl#" \
-		textmaze \
-		|| die "sed failed"
+		textmaze || die
 }
 
 src_install() {
-	dogamesbin textmaze || die "dogamesbin failed"
+	dogamesbin textmaze
 	dodoc CHANGES README
 	prepgamesdirs
 }

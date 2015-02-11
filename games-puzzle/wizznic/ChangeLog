@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/wizznic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/ChangeLog,v 1.4 2014/05/15 16:54:28 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wizznic/ChangeLog,v 1.5 2015/02/11 06:09:34 mr_bones_ Exp $
+
+*wizznic-306 (11 Feb 2015)
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +wizznic-306.ebuild:
+  version bump
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> wizznic-0.9.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
@@ -17,4 +22,3 @@
   29 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org> +wizznic-0.9.ebuild,
   +metadata.xml:
   initial commit
-
