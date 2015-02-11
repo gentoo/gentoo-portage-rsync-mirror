@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.155 2015/02/04 13:45:13 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.156 2015/02/11 14:23:59 yngwin Exp $
+
+*smplayer-14.9.0.6690-r1 (11 Feb 2015)
+
+  11 Feb 2015; Ben de Groot <yngwin@gentoo.org> +smplayer-14.9.0.6690-r1.ebuild:
+  Add helper function to find lrelease. Add linguist-tools:5 dep.
 
   04 Feb 2015; Ben de Groot <yngwin@gentoo.org> smplayer-14.9.0.6690.ebuild:
   Drop keywords on arches that do not have mpv-0.7.3 keyworded (bug #538804)
