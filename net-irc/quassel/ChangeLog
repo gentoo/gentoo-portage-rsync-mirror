@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.186 2015/02/02 02:52:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.187 2015/02/11 21:14:37 johu Exp $
+
+  11 Feb 2015; Johannes Huber <johu@gentoo.org> quassel-9999.ebuild:
+  Restore crypt + kde for qt5 build.
 
   02 Feb 2015; Patrick Lauer <patrick@gentoo.org> files/quasselcore.conf:
   Fix typo in quasselcore.conf #538240
