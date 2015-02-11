@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/yatebts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.6 2015/02/11 15:31:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.7 2015/02/11 17:33:29 zerochaos Exp $
+
+*yatebts-4.0.0-r1 (11 Feb 2015)
+
+  11 Feb 2015; Rick Farina <zerochaos@gentoo.org>
+  +files/yatebts-bladeRF-transceiver_revert_init_order.patch,
+  +files/yatebts-sgsnggsn-inetutils-hostname-fix.diff, +yatebts-4.0.0-r1.ebuild:
+  bumping for some patches taken from suse thanks to roox, this seems to make
+  yate much happier
 
   11 Feb 2015; Rick Farina <zerochaos@gentoo.org> yatebts-4.0.0.ebuild,
   yatebts-9999.ebuild:
