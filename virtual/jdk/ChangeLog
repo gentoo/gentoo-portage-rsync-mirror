@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.62 2014/05/30 11:20:17 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.63 2015/02/11 08:49:39 fordfrog Exp $
+
+  11 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> -jdk-1.5.0-r1.ebuild:
+  removed slot 1.5 per bug #292001
 
   30 May 2014; Tom Wijsman <TomWij@gentoo.org> jdk-1.5.0-r1.ebuild,
   jdk-1.6.0-r2.ebuild, jdk-1.7.0.ebuild, jdk-1.8.0.ebuild:

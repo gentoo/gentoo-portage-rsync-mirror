@@ -1,7 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for Java Development Kit (JDK)
-EAPI=5
-KEYWORDS=~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
-RDEPEND=|| ( =dev-java/apple-jdk-bin-1.5.0* dev-java/gcj-jdk )
-SLOT=1.5
-_md5_=8358bce11f03d4ea60973898c5a73e93
