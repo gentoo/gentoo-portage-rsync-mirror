@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.14.2.ebuild,v 1.1 2014/12/23 22:03:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.14.2.ebuild,v 1.2 2015/02/11 09:58:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Photos"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="

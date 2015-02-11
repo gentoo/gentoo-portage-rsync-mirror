@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.242 2014/05/16 19:06:15 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.243 2015/02/11 09:46:15 fordfrog Exp $
+
+  11 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  -sun-jre-bin-1.6.0.43.ebuild:
+  removed obsolete ebuild
 
   16 May 2014; Sven Vermeulen <swift@gentoo.org> sun-jre-bin-1.6.0.43.ebuild,
   sun-jre-bin-1.6.0.45.ebuild:

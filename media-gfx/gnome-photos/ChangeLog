@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gnome-photos
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/ChangeLog,v 1.13 2014/12/23 22:03:58 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/ChangeLog,v 1.14 2015/02/11 09:58:43 pacho Exp $
+
+  11 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnome-photos-3.14.2.ebuild:
+  x86 keyword, bug #537036
 
 *gnome-photos-3.14.2 (23 Dec 2014)
 

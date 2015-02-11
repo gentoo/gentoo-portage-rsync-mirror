@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16345 2015/02/10 17:15:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16346 2015/02/11 09:50:53 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (11 Feb 2015)
+# Potentially destructive to @world, bug #539746.
+>=sys-apps/portage-2.2.16
 
 # Patrick Lauer <patrick@gentoo.org (10 Feb 2015)
 # Depends on versions of ffmpeg that are still missing keywords

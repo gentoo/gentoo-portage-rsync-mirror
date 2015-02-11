@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.14.2.ebuild,v 1.1 2015/02/03 14:22:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.14.2.ebuild,v 1.2 2015/02/11 09:40:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -43,7 +43,7 @@ RDEPEND="
 	>=media-libs/clutter-gtk-1.5.5:1.0
 	x11-libs/mx:1.0
 
-	>=media-libs/grilo-0.2.10:0.2[playlist]
+	>=media-libs/grilo-0.2.11:0.2[playlist]
 	media-plugins/grilo-plugins:0.2
 	>=media-libs/gstreamer-1.3.1:1.0
 	>=media-libs/gst-plugins-base-1.4.2:1.0[X,introspection?,pango]
