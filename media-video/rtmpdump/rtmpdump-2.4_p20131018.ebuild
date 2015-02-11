@@ -17,11 +17,11 @@ KEYWORDS="amd64 ~arm hppa ~mips ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux
 IUSE="gnutls polarssl ssl"
 
 DEPEND="ssl? (
-		gnutls? ( net-libs/gnutls[${MULTILIB_USEDEP}] )
-		polarssl? ( !gnutls? ( >=net-libs/polarssl-0.14.0[${MULTILIB_USEDEP}] ) )
-		!gnutls? ( !polarssl? ( dev-libs/openssl[${MULTILIB_USEDEP}] ) )
+		gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}] )
+		polarssl? ( !gnutls? ( >=net-libs/polarssl-1.3.4[${MULTILIB_USEDEP}] ) )
+		!gnutls? ( !polarssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] ) )
 	)
-	sys-libs/zlib[${MULTILIB_USEDEP}]"
+	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
