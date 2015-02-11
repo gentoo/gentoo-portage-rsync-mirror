@@ -1,6 +1,17 @@
 # ChangeLog for sys-infiniband/opensm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/ChangeLog,v 1.6 2014/04/16 08:22:28 alexxy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/ChangeLog,v 1.7 2015/02/11 04:45:41 bircoph Exp $
+
+*opensm-3.3.17-r1 (11 Feb 2015)
+
+  11 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> -opensm-3.3.17.ebuild,
+  +opensm-3.3.17-r1.ebuild, +files/opensm-3.3.17-norpm.patch,
+  +files/opensm-3.3.17-sldd.patch, +files/opensm.conf.d, files/opensm.init.d,
+  +files/sldd.conf.d, +files/sldd.init.d, metadata.xml:
+  Use OSM_OPTIONS in both conf.d and init.d, wrt bug 387623.
+  Disable rpm calls, this fixes sandbox violation if rpm is
+  installed, wrt bug 531980.
+  Add option to install sldd daemon, wrt bug 533676.
 
 *opensm-3.3.17 (16 Apr 2014)
 
