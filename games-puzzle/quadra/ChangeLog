@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/quadra
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.23 2012/07/27 07:54:37 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.24 2015/02/11 21:31:37 mr_bones_ Exp $
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> quadra-1.2.0.ebuild:
+  EAPI=5
 
   27 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org> quadra-1.2.0.ebuild:
   add bc dep (bug #428270)
