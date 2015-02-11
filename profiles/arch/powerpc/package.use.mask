@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.231 2015/02/10 02:45:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.232 2015/02/11 10:05:36 pacho Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (10 Feb 2015)
 # Missing keywords for media-libs/x265
@@ -121,7 +121,7 @@ net-im/telepathy-connection-managers sipe
 
 # Pacho Ramos <pacho@gentoo.org> (31 Oct 2013)
 # Missing keywords, bug #478254
-gnome-base/gnome classic
+gnome-base/gnome classic extras
 
 # Mark Wright <gienah@gentoo.org> (26 Oct 2013)
 # template-haskell not yet available
@@ -343,7 +343,3 @@ net-im/pidgin zephyr
 # Masked Parallel LCD devices for bug #180683
 # app-misc/lcd4linux
 app-misc/lcd4linux lcd_devices_hd44780
-
-# Tobias Scherbaum <dertobi123@gentoo.org> (1 Feb 2008)
-# Mask mono flag for gnome as tomboy is segfaulting.
-gnome-base/gnome mono

@@ -1,6 +1,19 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.821 2015/02/10 13:43:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.822 2015/02/11 10:20:17 chithanh Exp $
+
+*xorg-server-1.15.2-r2 (11 Feb 2015)
+*xorg-server-1.16.4-r1 (11 Feb 2015)
+*xorg-server-1.17.1 (11 Feb 2015)
+*xorg-server-1.16.4 (11 Feb 2015)
+*xorg-server-1.12.4-r4 (11 Feb 2015)
+
+  11 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xorg-server-1.17-cve-2015-0255-0.patch,
+  +files/xorg-server-1.17-cve-2015-0255-1.patch, +xorg-server-1.12.4-r4.ebuild,
+  +xorg-server-1.15.2-r2.ebuild, +xorg-server-1.16.4-r1.ebuild,
+  +xorg-server-1.16.4.ebuild, +xorg-server-1.17.1.ebuild:
+  Add patches/new versions for security bug #539692.
 
   10 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -files/xdm.initd-10, -files/xorg-cve-2011-4028+4029.patch,

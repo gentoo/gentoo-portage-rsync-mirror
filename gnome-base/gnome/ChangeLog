@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.483 2015/01/11 10:54:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.484 2015/02/11 10:07:17 pacho Exp $
+
+  11 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnome-3.14.0.ebuild:
+  Rekeyword
 
   11 Jan 2015; Gilles Dartiguelongue <eva@gentoo.org> gnome-3.14.0.ebuild:
   Re-add ~arm keyword since keywording of dependencies allow it.

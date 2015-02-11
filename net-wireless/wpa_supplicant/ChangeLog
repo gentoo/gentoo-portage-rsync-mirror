@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.223 2015/02/09 16:10:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.224 2015/02/11 10:11:17 gurligebis Exp $
+
+  11 Feb 2015; <gurligebis@gentoo.org> wpa_supplicant-2.3-r2.ebuild:
+  Fixing config generation with broken sed command, fixing bug #539598
 
   09 Feb 2015; Rick Farina <zerochaos@gentoo.org> -wpa_supplicant-2.3-r1.ebuild,
   wpa_supplicant-2.3-r2.ebuild:

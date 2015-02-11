@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3-r2.ebuild,v 1.2 2015/02/09 16:10:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3-r2.ebuild,v 1.3 2015/02/11 10:11:17 gurligebis Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ Kconfig_style_config() {
 
 		if [ ! $setting = n ]; then
 			#first remove any leading "# " if $2 is not n
-			sed -i "/^# *$CONFIG_PARAM/s/^# *//" .config || echo "Kconfig_style_config error uncommenting $CONFIG_PARAM"
+			sed -i "/^# *$CONFIG_PARAM=/s/^# *//" .config || echo "Kconfig_style_config error uncommenting $CONFIG_PARAM"
 			#set item = $setting (defaulting to y)
 			sed -i "/^$CONFIG_PARAM/s/=.*/=$setting/" .config || echo "Kconfig_style_config error setting $CONFIG_PARAM=$setting"
 		else

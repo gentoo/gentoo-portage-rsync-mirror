@@ -26,8 +26,8 @@
 	</longdescription>
   <use>
     <flag name="pgm">
-			0MQ is build with 'Pragmatic General Multicast' (RFC 3208) support
-			using the excellent OpenPGM implementation.
+Build PGM (Pragmatic General Multicast)extention, a protocol for reliable 
+multicast transport of data over IP networks.
 		</flag>
   </use>
 </pkgmetadata>

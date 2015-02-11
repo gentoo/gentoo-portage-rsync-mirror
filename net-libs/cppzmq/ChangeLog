@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/cppzmq
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cppzmq/ChangeLog,v 1.4 2014/08/30 18:34:00 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cppzmq/ChangeLog,v 1.5 2015/02/11 10:19:47 jlec Exp $
+
+  11 Feb 2015; Justin Lecher <jlec@gentoo.org> -cppzmq-0_pre130717.ebuild:
+  Drop old
 
   30 Aug 2014; Rick Farina <zerochaos@gentoo.org> cppzmq-0_pre130717-r1.ebuild,
   cppzmq-0_pre130717.ebuild:

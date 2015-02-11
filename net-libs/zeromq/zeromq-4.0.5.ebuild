@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.4-r1.ebuild,v 1.3 2015/02/09 13:02:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.5.ebuild,v 1.1 2015/02/11 10:26:47 jlec Exp $
 
 EAPI=5
 
@@ -13,12 +13,12 @@ HOMEPAGE="http://www.zeromq.org/"
 SRC_URI="http://download.zeromq.org/${P}.tar.gz"
 
 LICENSE="LGPL-3"
-SLOT="0"
+SLOT="0/4.0.0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="pgm static-libs test"
 
 RDEPEND="
-	dev-libs/libsodium
+	dev-libs/libsodium:=
 	pgm? ( =net-libs/openpgm-5.2.122 )"
 DEPEND="${RDEPEND}
 	sys-apps/util-linux

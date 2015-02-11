@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.63 2015/02/09 13:02:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.64 2015/02/11 10:26:47 jlec Exp $
+
+*zeromq-4.0.5 (11 Feb 2015)
+
+  11 Feb 2015; Justin Lecher <jlec@gentoo.org> +zeromq-4.0.5.ebuild,
+  -zeromq-3.2.4-r1.ebuild, -zeromq-4.0.1-r1.ebuild, -zeromq-4.0.1.ebuild,
+  -zeromq-4.0.4-r1.ebuild, metadata.xml:
+  Version Bump, #539440; drop old, fixes two security problems, #523850; Add
+  SLOT operators, #511526; improve USE description, #507948
 
   09 Feb 2015; Anthony G. Basile <blueness@gentoo.org> zeromq-4.0.1-r1.ebuild,
   zeromq-4.0.4-r1.ebuild:

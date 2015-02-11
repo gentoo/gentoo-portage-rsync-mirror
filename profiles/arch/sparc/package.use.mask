@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.185 2015/02/10 02:45:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.186 2015/02/11 10:05:36 pacho Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (10 Feb 2015)
 # Missing keywords for media-libs/x265
@@ -78,7 +78,7 @@ net-misc/openssh hpn
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jan 2014)  
 # Missing keywords, bug #478254
-gnome-base/gnome classic
+gnome-base/gnome classic extras
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jan 2014)  
 sys-kernel/dracut -dracut_modules_systemd 

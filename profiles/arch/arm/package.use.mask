@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.243 2015/02/09 10:38:52 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.244 2015/02/11 10:05:36 pacho Exp $
 
 # Jason A. Donenfeld <zx2c4@gentoo.org> (09 Feb 2015)
 # Google does not distribute the widevine plugin for ARM. It must be extracted from a Chromebook,
@@ -154,7 +154,7 @@ net-im/telepathy-connection-managers sipe
 
 # Pacho Ramos <pacho@gentoo.org> (31 Oct 2013)
 # Missing keywords, bug #478254
-gnome-base/gnome classic
+gnome-base/gnome classic extras
 
 # Benda Xu <heroxbd@gentoo.org> (31 Oct 2013)
 # Missing keywords from dev-ml/lablgtk, bug #487722
