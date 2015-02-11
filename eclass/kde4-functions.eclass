@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.74 2015/02/11 03:25:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.75 2015/02/11 04:29:06 patrick Exp $
 
 # @ECLASS: kde4-functions.eclass
 # @MAINTAINER:
@@ -333,7 +333,7 @@ add_kdebase_dep() {
 
 	# depend on the last sane released version where the normal >=${PV} dep
 	# is not possible
-	elif [[ ${CATEGORY} == kde-apps || ${PV} > 4.14.3 || ${PV} == *9999 ]]; then
+	elif [[ ${CATEGORY} == kde-apps || ${PV} == *9999 ]]; then
 		ver=4.14.3
 	else
 		ver=${PV}
