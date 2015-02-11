@@ -25,7 +25,7 @@ DEPEND="ssl? (
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if ! use ssl && ( use gnutls || use polarssl ) ; then
+	if ! use ssl && { use gnutls || use polarssl; }; then
 		ewarn "USE='gnutls polarssl' are ignored without USE='ssl'."
 		ewarn "Please review the local USE flags for this package."
 	fi
@@ -53,7 +53,7 @@ multilib_src_compile() {
 		fi
 	fi
 	#fix multilib-script support. Bug #327449
-	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile
+	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile || die
 	if ! multilib_is_native_abi; then
 		cd librtmp || die
 	fi
@@ -62,11 +62,11 @@ multilib_src_compile() {
 }
 
 multilib_src_install() {
-	mkdir -p "${ED}"/${DESTTREE}/$(get_libdir)
+	mkdir -p "${ED}"/${DESTTREE}/$(get_libdir) || die
 	if multilib_is_native_abi; then
 		dodoc README ChangeLog rtmpdump.1.html rtmpgw.8.html
 	else
-		cd librtmp
+		cd librtmp || die
 	fi
 	emake DESTDIR="${ED}" prefix="${DESTTREE}" mandir="${DESTTREE}/share/man" \
 		CRYPTO="${crypto}" install
