@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-pango
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-pango/ChangeLog,v 1.4 2012/05/05 08:02:40 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-pango/ChangeLog,v 1.5 2015/02/11 22:42:53 mr_bones_ Exp $
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> sdl-pango-0.1.2.ebuild:
+  EAPI=5
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> sdl-pango-0.1.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

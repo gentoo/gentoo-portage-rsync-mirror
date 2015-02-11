@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-pango/sdl-pango-0.1.2.ebuild,v 1.7 2012/05/05 08:02:40 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-pango/sdl-pango-0.1.2.ebuild,v 1.8 2015/02/11 22:42:53 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="connect the text rendering engine of GNOME to SDL"
@@ -32,15 +32,12 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
+		prune_libtool_files
 	fi
 }

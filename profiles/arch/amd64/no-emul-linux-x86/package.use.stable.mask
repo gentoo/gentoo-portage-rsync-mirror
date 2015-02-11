@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.35 2015/02/06 18:51:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.36 2015/02/11 22:33:04 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -350,6 +350,7 @@ media-video/dirac -abi_x86_32
 media-video/ffmpeg -abi_x86_32
 media-video/libav -abi_x86_32
 media-video/mjpegtools -abi_x86_32
+media-video/rtmpdump -abi_x86_32
 media-video/vcdimager -abi_x86_32
 net-dialup/capi4k-utils -abi_x86_32
 net-dns/avahi -abi_x86_32

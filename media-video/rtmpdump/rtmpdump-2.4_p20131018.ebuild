@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.4_p20131018.ebuild,v 1.9 2014/07/04 19:29:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.4_p20131018.ebuild,v 1.10 2015/02/11 22:34:21 mgorny Exp $
 
 EAPI="4"
 
@@ -17,15 +17,15 @@ KEYWORDS="amd64 ~arm hppa ~mips ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux
 IUSE="gnutls polarssl ssl"
 
 DEPEND="ssl? (
-		gnutls? ( net-libs/gnutls )
-		polarssl? ( !gnutls? ( >=net-libs/polarssl-0.14.0 ) )
-		!gnutls? ( !polarssl? ( dev-libs/openssl ) )
-	)
-	sys-libs/zlib"
+		gnutls? ( >=net-libs/gnutls-2.12.23-r6[${MULTILIB_USEDEP}] )
+		polarssl? ( !gnutls? ( >=net-libs/polarssl-1.3.4[${MULTILIB_USEDEP}] ) )
+		!gnutls? ( !polarssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] ) )
+		>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
+	)"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if ! use ssl && ( use gnutls || use polarssl ) ; then
+	if ! use ssl && { use gnutls || use polarssl; }; then
 		ewarn "USE='gnutls polarssl' are ignored without USE='ssl'."
 		ewarn "Please review the local USE flags for this package."
 	fi
@@ -33,7 +33,7 @@ pkg_setup() {
 
 src_unpack() {
 	mkdir -p "${S}" || die "Can't create source directory"
-	cd "${S}"
+	cd "${S}" || die
 	unpack ${A}
 }
 
@@ -59,20 +59,20 @@ multilib_src_compile() {
 		fi
 	fi
 	#fix multilib-script support. Bug #327449
-	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile
-	if ! multilib_build_binaries; then
-		cd librtmp
+	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile || die
+	if ! multilib_is_native_abi; then
+		cd librtmp || die
 	fi
 	emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		OPT="${CFLAGS}" XLDFLAGS="${LDFLAGS}" CRYPTO="${crypto}" SYS=posix
 }
 
 multilib_src_install() {
-	mkdir -p "${ED}"/${DESTTREE}/$(get_libdir)
+	mkdir -p "${ED}"/${DESTTREE}/$(get_libdir) || die
 	if multilib_is_native_abi; then
 		dodoc README ChangeLog rtmpdump.1.html rtmpgw.8.html
 	else
-		cd librtmp
+		cd librtmp || die
 	fi
 	emake DESTDIR="${ED}" prefix="${DESTTREE}" mandir="${DESTTREE}/share/man" \
 	CRYPTO="${crypto}" install
