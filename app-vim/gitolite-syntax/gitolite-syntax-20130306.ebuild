@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitolite-syntax/gitolite-syntax-20130306.ebuild,v 1.1 2014/12/28 23:01:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitolite-syntax/gitolite-syntax-20130306.ebuild,v 1.2 2015/02/11 03:39:05 patrick Exp $
 
 EAPI=4
 
@@ -18,6 +18,6 @@ VIM_PLUGIN_HELPTEXT="Vim Syntax highlight for gitolite configuration file gitoli
 
 S=$WORKDIR/gitolite.vim-$GIT_COMMITSH
 
-src_compile() { 
-	: 
+src_compile() {
+	:
 }

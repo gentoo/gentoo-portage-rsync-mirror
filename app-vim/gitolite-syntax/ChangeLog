@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gitolite-syntax
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitolite-syntax/ChangeLog,v 1.10 2014/12/28 23:01:36 robbat2 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitolite-syntax/ChangeLog,v 1.11 2015/02/11 03:39:05 patrick Exp $
+
+  11 Feb 2015; Patrick Lauer <patrick@gentoo.org>
+  gitolite-syntax-20130306.ebuild:
+  Whitespace
 
 *gitolite-syntax-20130306 (28 Dec 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.14.3-r1.ebuild,v 1.1 2015/02/06 17:04:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.14.3-r1.ebuild,v 1.2 2015/02/11 03:35:17 patrick Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ COMMONDEPEND="
 	dev-libs/libpcre
 	>=dev-qt/qtgui-4.4.0:4[mng]
 	media-libs/phonon[qt4]
-	media-libs/qimageblitz	
+	media-libs/qimageblitz
 	!aqua? (
 		x11-libs/libX11
 		x11-libs/libXScrnSaver

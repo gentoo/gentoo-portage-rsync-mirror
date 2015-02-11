@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904-r2.ebuild,v 1.1 2015/01/02 18:17:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904-r2.ebuild,v 1.2 2015/02/11 03:41:40 patrick Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="doc +qt4 qt5 X"
 REQUIRED_USE="|| ( qt4 qt5 )"
 
 DEPEND="
-	qt4? ( 
+	qt4? (
 		dev-qt/qtcore:4
 		X? ( dev-qt/qtgui:4 )
 	)

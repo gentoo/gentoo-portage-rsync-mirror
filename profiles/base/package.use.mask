@@ -1,9 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.645 2015/02/10 15:52:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.646 2015/02/11 03:52:30 bircoph Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Andrew Savchenko <bircoph@gentoo.org> (11 Feb 2015)
+# Cluster code is still under development, only base functionality
+# is implemented. Masking for testing and evaluation.
+app-admin/clsync cluster mhash
 
 # Jauhien Piatlicki <jauhien@gentoo.org> (10 Feb 2015)
 # Mask until sys-devel/llvm-3.6 is in the tree

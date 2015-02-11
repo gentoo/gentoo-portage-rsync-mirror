@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=virtual/pkgconfig doc? ( ~app-doc/clsync-docs-0.4 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Control and monitoring library for clsync
+EAPI=5
+HOMEPAGE=http://ut.mephi.ru/oss/clsync https://github.com/xaionaro/clsync
+IUSE=debug doc extra-hardened hardened static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3+
+REQUIRED_USE=extra-hardened? ( hardened )
+SLOT=0
+SRC_URI=https://github.com/xaionaro/clsync/archive/v0.4.tar.gz -> clsync-0.4.tar.gz
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=2e3e1f073742a65bd83fdbc04f316552

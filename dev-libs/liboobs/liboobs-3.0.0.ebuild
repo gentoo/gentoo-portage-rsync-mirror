@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-3.0.0.ebuild,v 1.9 2014/12/02 22:34:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/liboobs-3.0.0.ebuild,v 1.10 2015/02/11 03:40:58 patrick Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
-"	
+"
 
 src_configure() {
 	gnome2_src_configure \
