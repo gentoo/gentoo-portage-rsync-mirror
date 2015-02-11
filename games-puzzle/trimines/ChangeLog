@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/trimines
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/trimines/ChangeLog,v 1.8 2014/04/16 16:51:53 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/trimines/ChangeLog,v 1.9 2015/02/11 06:35:24 mr_bones_ Exp $
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> trimines-1.3.0.ebuild:
+  EAPI=5
 
   16 Apr 2014; Ulrich Müller <ulm@gentoo.org> trimines-1.3.0.ebuild:
   Fix LICENSE, add mirror and bindist restrictions, bug 505726.
@@ -32,4 +35,3 @@
   30 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +trimines-1.2.1.ebuild:
   initial commit - ebuild submitted by Cristiano Chiucchiolo via bug #131605
-

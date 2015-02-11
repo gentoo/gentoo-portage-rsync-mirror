@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/pysms
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/pysms/ChangeLog,v 1.6 2014/04/09 07:16:31 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/pysms/ChangeLog,v 1.7 2015/02/11 06:57:09 idella4 Exp $
+
+*pysms-0.9.4-r1 (11 Feb 2015)
+
+  11 Feb 2015; Ian Delaney <idella4@gentoo.org> +pysms-0.9.4-r1.ebuild,
+  -pysms-0.9.4.ebuild:
+  revbump, conversion -> distutils-r1, rm old
 
   09 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   [QA] Dissolve the mobile-phone herd to maintainer-needed because it is empty

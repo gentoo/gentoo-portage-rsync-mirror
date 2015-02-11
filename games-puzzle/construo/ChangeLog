@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/construo
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.17 2011/06/20 19:10:05 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/construo/ChangeLog,v 1.18 2015/02/11 06:34:32 mr_bones_ Exp $
+
+  11 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> construo-0.2.2.ebuild:
+  EAPI=5
 
   20 Jun 2011; Tupone Alfredo <tupone@gentoo.org>
   files/construo-0.2.2-lGLU.patch:
@@ -51,4 +54,3 @@
 
   02 Aug 2003; Michael Sterrett <msterret@gentoo.org> construo-0.2.2.ebuild:
   initial commit. ebuild supplied by Rob Cakebread (modified) via bug 25708.
-
