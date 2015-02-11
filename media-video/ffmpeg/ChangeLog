@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.825 2015/01/31 23:54:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.826 2015/02/11 13:45:17 aballier Exp $
+
+  11 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.12.ebuild:
+  forward port keywords after masking optional useflags, bug #510340
 
   31 Jan 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneded useflag description from metadata.xml

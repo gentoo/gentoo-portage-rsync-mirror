@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9778 2015/02/11 10:05:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9780 2015/02/11 13:48:35 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Feb 2015; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask latest ffmpeg
+
+  11 Feb 2015; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask latest gst-libav
 
   11 Feb 2015; Pacho Ramos <pacho@gentoo.org> arch/arm/package.use.mask,
   arch/ia64/package.use.mask, arch/powerpc/package.use.mask,
