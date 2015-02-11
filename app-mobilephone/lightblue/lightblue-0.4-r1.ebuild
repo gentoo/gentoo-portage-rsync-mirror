@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/lightblue/lightblue-0.4-r1.ebuild,v 1.1 2015/02/11 06:22:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/lightblue/lightblue-0.4-r1.ebuild,v 1.2 2015/02/11 09:21:53 patrick Exp $
 
 EAPI=5
 
@@ -23,4 +23,3 @@ python_install_all() {
 	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
 }
-
