@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.81 2015/02/01 14:20:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.82 2015/02/11 16:09:47 vapier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -324,10 +324,6 @@ ladspa
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # Dropping app-arch/rpm keywords, mask rpm USE accordingly
 rpm
-
-# Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
-# We don't care much about bluetooth
-bluetooth
 
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have net-libs/libsmi keyworded

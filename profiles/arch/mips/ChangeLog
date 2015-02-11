@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.156 2015/02/01 15:02:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.157 2015/02/11 16:09:47 vapier Exp $
+
+  11 Feb 2015; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Stop masking USE=bluetooth since it works on mips.
 
   01 Feb 2015; Michael Palimaka <kensington@gentoo.org> package.mask:
   Fix invalid atom.
