@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211-r3.ebuild,v 1.1 2015/02/07 20:15:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13_p201211-r3.ebuild,v 1.2 2015/02/11 14:45:46 pacho Exp $
 
 EAPI=5
 
@@ -25,19 +25,21 @@ IUSE="libav +orc"
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=media-libs/gstreamer-0.10.36-r2:0.10[${MULTILIB_USEDEP}]
+RDEPEND="
+	>=media-libs/gstreamer-0.10.36-r2:0.10[${MULTILIB_USEDEP}]
 	>=media-libs/gst-plugins-base-0.10.36:0.10[${MULTILIB_USEDEP}]
 
 	!libav? ( >=media-video/ffmpeg-1.2.6-r1:0=[${MULTILIB_USEDEP}] )
-	libav? ( >=media-video/libav-9.12:0=[${MULTILIB_USEDEP}]
+	libav? (
+		>=media-video/libav-9.12:0=[${MULTILIB_USEDEP}]
+		<media-video/libav-10:0=[${MULTILIB_USEDEP}]
 		>=media-libs/libpostproc-10.20140517-r1:0=[${MULTILIB_USEDEP}] )
-	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )"
+	orc? ( >=dev-lang/orc-0.4.17[${MULTILIB_USEDEP}] )
+	abi_x86_32? ( !app-emulation/emul-linux-x86-gstplugins[-abi_x86_32(-)] )
+"
 DEPEND="${RDEPEND}
-	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
-RDEPEND="${RDEPEND}
-	abi_x86_32? (
-		!app-emulation/emul-linux-x86-gstplugins[-abi_x86_32(-)]
-	)"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]
+"
 
 src_prepare() {
 	sed -e 's/sleep 15//' -i configure.ac configure || die
@@ -72,12 +74,4 @@ multilib_src_configure() {
 multilib_src_install_all() {
 	einstalldocs
 	prune_libtool_files --modules
-}
-
-pkg_postinst() {
-	if ! use libav; then
-		elog "Please note that upstream uses media-video/libav"
-		elog "rather than media-video/ffmpeg. If you encounter any"
-		elog "issues try to move from ffmpeg to libav."
-	fi
 }
