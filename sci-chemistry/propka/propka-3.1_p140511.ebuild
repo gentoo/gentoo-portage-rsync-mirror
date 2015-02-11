@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/propka/propka-3.1_p140511.ebuild,v 1.3 2014/06/30 04:42:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/propka/propka-3.1_p140511.ebuild,v 1.4 2015/02/11 17:03:13 jlec Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+
+RESTRICT="mirror bindist"
 
 python_prepare_all() {
 	sed -e "/exclude/s:scripts:\', \'Tests:g" \
