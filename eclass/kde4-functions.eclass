@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.72 2015/02/10 20:41:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-functions.eclass,v 1.74 2015/02/11 03:25:52 patrick Exp $
 
 # @ECLASS: kde4-functions.eclass
 # @MAINTAINER:
@@ -325,7 +325,7 @@ add_kdebase_dep() {
 		ver=${3}
 	elif [[ -n ${KDE_OVERRIDE_MINIMAL} ]]; then
 		ver=${KDE_OVERRIDE_MINIMAL}
-	elif [[ ${KDEBASE} != kde-base ]]; then
+	elif [[ -n ${KDE_MINIMAL} ]]; then
 		ver=${KDE_MINIMAL}
 	# if building live version depend on the final release since there will
 	# not be any more major development. this solves dep errors as not all

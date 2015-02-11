@@ -623,7 +623,10 @@ app-emulation/spice:smartcard - Enable smartcard remoting using app-emulation/li
 app-emulation/spice-vdagent:consolekit - Use sys-auth/consolekit to determine the master vdagentd in case of multiple running vdagentds (highly recommended)
 app-emulation/uae:scsi - Enable the uaescsi.device
 app-emulation/vice:ethernet - Enable ethernet emulation
+app-emulation/vice:fullscreen - Enable the ability to run fullscreen
+app-emulation/vice:gtk3 - Use GTK+3 instead of GTK+2
 app-emulation/vice:memmap - Enable extra monitor features
+app-emulation/vice:vte - Enable support for x11-libs/vte in the GTK+ interface
 app-emulation/vice:xrandr - Enable support for the X xrandr extension
 app-emulation/virt-manager:policykit - Enables sys-auth/polkit authentication support, required when using app-emulation/libvirt with PolicyKit authentication
 app-emulation/virt-manager:sasl - Depend on the proper libraries needed to connect to SASL-enabled libvirtd instances (e.g. Kerberos-protected instances).
