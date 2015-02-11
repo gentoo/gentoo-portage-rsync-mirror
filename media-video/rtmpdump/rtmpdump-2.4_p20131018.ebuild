@@ -61,7 +61,7 @@ multilib_src_compile() {
 	#fix multilib-script support. Bug #327449
 	sed -i "/^libdir/s:lib$:$(get_libdir)$:" librtmp/Makefile
 	if ! multilib_is_native_abi; then
-		cd librtmp
+		cd librtmp || die
 	fi
 	emake CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		OPT="${CFLAGS}" XLDFLAGS="${LDFLAGS}" CRYPTO="${crypto}" SYS=posix
