@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/xdsi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/ChangeLog,v 1.7 2013/06/19 04:25:13 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/ChangeLog,v 1.8 2015/02/11 15:56:56 jlec Exp $
+
+  11 Feb 2015; Justin Lecher <jlec@gentoo.org> xdsi-0.92-r1.ebuild:
+  Add RESTRICT="mirror bindist", #470790
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry

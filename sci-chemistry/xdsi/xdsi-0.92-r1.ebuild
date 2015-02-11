@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/xdsi-0.92-r1.ebuild,v 1.3 2013/05/20 17:09:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdsi/xdsi-0.92-r1.ebuild,v 1.4 2015/02/11 15:56:56 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils
 
@@ -27,6 +27,8 @@ RDEPEND="
 # Need to clarified for licensing
 # sci-chemistry/xdsstat-bin
 DEPEND=""
+
+RESTRICT="mirror bindist"
 
 S="${WORKDIR}"
 

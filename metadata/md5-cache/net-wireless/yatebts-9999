@@ -3,9 +3,9 @@ DEPEND=virtual/pkgconfig >=net-voip/yate-5.4.0[gsm] bladerf? ( net-wireless/blad
 DESCRIPTION=The Yate GSM base station
 EAPI=5
 HOMEPAGE=http://www.yatebts.com/
-IUSE=rad1 usrp1 uhd bladerf cpu_flags_x86_sse3 cpu_flags_x86_sse4_1
+IUSE=rad1 usrp1 uhd +bladerf cpu_flags_x86_sse3 cpu_flags_x86_sse4_1
 LICENSE=GPL-2
 RDEPEND=>=net-voip/yate-5.4.0[gsm] bladerf? ( net-wireless/bladerf:= ) uhd? ( net-wireless/uhd ) virtual/libusb:1
 SLOT=0
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=438b52936160b04bd14fe37213ee72d6
+_md5_=63a3aad6bd67d4a9a56d3206ef037cc0
