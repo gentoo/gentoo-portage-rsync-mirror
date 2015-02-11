@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-2.2.0-r2.ebuild,v 1.1 2014/09/15 19:09:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-2.2.0-r2.ebuild,v 1.2 2015/02/11 10:42:44 jlec Exp $
 
 EAPI=5
 
@@ -41,5 +41,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Due to file collisions we move the makecert tool to makecert-${PN}"
+	elog "Due to file collisions we moved the makecert tool to makecert-${PN}."
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.138 2015/01/22 06:44:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.139 2015/02/11 10:55:10 chithanh Exp $
+
+  11 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  eselect-opengl-1.2.7.ebuild, eselect-opengl-1.3.1-r2.ebuild:
+  Update list of blockers for new mesa release.
 
   22 Jan 2015; Michał Górny <mgorny@gentoo.org> eselect-opengl-1.3.1-r2.ebuild:
   Avoid error messages when /usr/lib*/opengl does not exist, bug #537224.
