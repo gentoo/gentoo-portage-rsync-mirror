@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.64 2014/11/29 12:32:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.65 2015/02/12 00:57:47 blueness Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ HOMEPAGE="https://github.com/gentoo/eudev"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="doc gudev +hwdb +kmod introspection +keymap +modutils +rule-generator selinux static-libs test"
+IUSE="doc gudev +hwdb +kmod introspection selinux static-libs test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	gudev? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
@@ -36,16 +36,17 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 DEPEND="${COMMON_DEPEND}
-	keymap? ( dev-util/gperf )
+	dev-util/gperf
 	virtual/os-headers
 	virtual/pkgconfig
 	>=sys-devel/make-3.82-r4
 	>=sys-kernel/linux-headers-${KV_min}
-	doc? ( >=dev-util/gtk-doc-1.18 )
-	app-text/docbook-xml-dtd:4.2
-	app-text/docbook-xml-dtd:4.5
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
+	doc? ( >=dev-util/gtk-doc-1.18
+		app-text/docbook-xml-dtd:4.2
+		app-text/docbook-xml-dtd:4.5
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt
+	)
 	>=dev-util/intltool-0.50
 	test? ( app-text/tree dev-lang/perl )"
 
@@ -56,10 +57,7 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/systemd"
 
 PDEPEND=">=sys-fs/udev-init-scripts-26
-	hwdb? ( >=sys-apps/hwids-20140304[udev] )
-	keymap? ( >=sys-apps/hwids-20140304[udev] )"
-
-REQUIRED_USE="keymap? ( hwdb )"
+	hwdb? ( >=sys-apps/hwids-20140304[udev] )"
 
 # The multilib-build.eclass doesn't handle situation where the installed headers
 # are different in ABIs. In this case, we install libgudev headers in native
@@ -67,21 +65,16 @@ REQUIRED_USE="keymap? ( hwdb )"
 multilib_check_headers() { :; }
 
 pkg_pretend() {
-	if ! use rule-generator; then
-		ewarn
-		ewarn "As of 2013-01-29, ${P} provides the new interface renaming functionality,"
-		ewarn "as described in the URL below:"
-		ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
-		ewarn
-		ewarn "This functionality is enabled BY DEFAULT because eudev has no means of synchronizing"
-		ewarn "between the default or user-modified choice of sys-fs/udev.  If you wish to disable"
-		ewarn "this new iface naming, please be sure that /etc/udev/rules.d/80-net-name-slot.rules"
-		ewarn "exists:"
-		ewarn "\ttouch /etc/udev/rules.d/80-net-name-slot.rules"
-		ewarn
-		ewarn "We are working on a better solution for the next beta release."
-		ewarn
-	fi
+	ewarn
+	ewarn "As of 2013-01-29, ${P} provides the new interface renaming functionality,"
+	ewarn "as described in the URL below:"
+	ewarn "http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames"
+	ewarn
+	ewarn "This functionality is enabled BY DEFAULT because eudev has no means of synchronizing"
+	ewarn "between the default or user-modified choice of sys-fs/udev.  If you wish to disable"
+	ewarn "this new iface naming, please be sure that /etc/udev/rules.d/80-net-name-slot.rules"
+	ewarn "exists: touch /etc/udev/rules.d/80-net-name-slot.rules"
+	ewarn
 }
 
 pkg_setup() {
@@ -146,23 +139,17 @@ multilib_src_configure() {
 			--with-rootlibdir=/$(get_libdir)
 			$(use_enable doc gtk-doc)
 			$(use_enable introspection)
-			$(use_enable keymap)
-			$(use_enable kmod libkmod)
-			$(usex kmod --enable-modules $(use_enable modutils modules))
+			$(use_enable kmod)
 			$(use_enable static-libs static)
 			$(use_enable selinux)
-			$(use_enable rule-generator)
 		)
 	else
 		econf_args+=(
 			--disable-static
 			--disable-gtk-doc
 			--disable-introspection
-			--disable-keymap
-			--disable-libkmod
-			--disable-modules
+			--disable-kmod
 			--disable-selinux
-			--disable-rule-generator
 		)
 	fi
 	ECONF_SOURCE="${S}" econf "${econf_args[@]}"
@@ -204,8 +191,6 @@ multilib_src_test() {
 multilib_src_install_all() {
 	prune_libtool_files --all
 	rm -rf "${ED}"/usr/share/doc/${PF}/LICENSE.*
-
-	use rule-generator && doinitd "${FILESDIR}"/udev-postmount
 
 	# drop distributed hwdb files, they override sys-apps/hwids
 	rm -f "${ED}"/etc/udev/hwdb.d/*.hwdb
@@ -262,15 +247,6 @@ pkg_postinst() {
 	ewarn "You need to restart eudev as soon as possible to make the"
 	ewarn "upgrade go into effect:"
 	ewarn "\t/etc/init.d/udev --nodeps restart"
-
-	if use rule-generator && \
-	[[ -x $(type -P rc-update) ]] && rc-update show | grep udev-postmount | grep -qsv 'boot\|default\|sysinit'; then
-		ewarn
-		ewarn "Please add the udev-postmount init script to your default runlevel"
-		ewarn "to ensure the legacy rule-generator functionality works as reliably"
-		ewarn "as possible."
-		ewarn "\trc-update add udev-postmount default"
-	fi
 
 	elog
 	elog "For more information on eudev on Gentoo, writing udev rules, and"
