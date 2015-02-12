@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gpgme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gpgme/ChangeLog,v 1.1 2015/02/12 01:19:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gpgme/ChangeLog,v 1.2 2015/02/12 05:22:58 patrick Exp $
+
+  12 Feb 2015; Patrick Lauer <patrick@gentoo.org> gpgme-2.0.8.ebuild:
+  Whitespace
 
 *gpgme-2.0.8 (12 Feb 2015)
 
