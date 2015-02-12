@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vchkuser/vchkuser-0.4.ebuild,v 1.1 2010/10/04 12:40:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vchkuser/vchkuser-0.4.ebuild,v 1.2 2015/02/12 14:19:15 vapier Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://github.com/hollow/vchkuser/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND="net-mail/vpopmail
