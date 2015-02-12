@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.6.2.ebuild,v 1.3 2014/12/19 13:41:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/telepathy-farstream-0.6.2.ebuild,v 1.4 2015/02/12 11:47:36 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="
 	>=dev-libs/dbus-glib-0.60
 	media-libs/gstreamer:1.0[introspection?]
 	>=net-libs/telepathy-glib-0.21[introspection?]
-	net-libs/farstream:0.2[introspection?]
+	net-libs/farstream:0.2=[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )
 "
 DEPEND="${RDEPEND}

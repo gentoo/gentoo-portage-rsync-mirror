@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.5 2014/12/19 13:41:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.12.7.ebuild,v 1.6 2015/02/12 11:46:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -43,7 +43,7 @@ COMMON_DEPEND="
 	media-libs/clutter-gst:2.0
 	>=media-libs/cogl-1.14:1.0=
 
-	net-libs/farstream:0.2
+	net-libs/farstream:0.2=
 	>=net-libs/telepathy-farstream-0.6.0:=
 	>=net-libs/telepathy-glib-0.23.2
 	>=net-im/telepathy-logger-0.8.0:=
