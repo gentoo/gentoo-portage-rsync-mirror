@@ -1,6 +1,19 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.79 2015/01/15 18:52:25 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.81 2015/02/12 10:13:15 hd_brummy Exp $
+
+  12 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> files/confd-2.0.0:
+  typo docu conffile
+
+*vdr-xineliboutput-2.0.0_p20130821 (12 Feb 2015)
+
+  12 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-xineliboutput-2.0.0_p20130821.ebuild, vdr-xineliboutput-9999.ebuild,
+  -files/vdr-xineliboutput-1.0.4_p20090810-compile-fix.diff,
+  -files/vdr-xineliboutput-1.0.5-ldflags.patch, +files/confd-2.0.0,
+  -files/vdr-xineliboutput-9999-build-system.patch, +files/vdr-frontend:
+  new snapshot 20130821; compile fix vdr-2.1.10; cleanup; initsciptvdr-fronted
+  to start sxfb
 
   15 Jan 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-xineliboutput-1.1.0.ebuild, vdr-xineliboutput-9999.ebuild:

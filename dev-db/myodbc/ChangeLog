@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/myodbc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.40 2014/11/15 16:23:59 nimiux Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.41 2015/02/12 10:29:50 pacho Exp $
+
+  12 Feb 2015; Pacho Ramos <pacho@gentoo.org> myodbc-5.2.7-r1.ebuild:
+  amd64 stable, bug #525298
 
   15 Nov 2014; Chema Alonso <nimiux@gentoo.org> myodbc-5.2.7.ebuild:
   Stable for amd64 wrt bug #513646

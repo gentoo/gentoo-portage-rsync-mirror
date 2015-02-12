@@ -1,22 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.19 2015/02/12 10:11:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-2.0.0_p20130821.ebuild,v 1.1 2015/02/12 10:11:33 hd_brummy Exp $
 
 EAPI=5
+
+inherit vdr-plugin-2
+
 GENTOO_VDR_CONDITIONAL=yes
 
-inherit vdr-plugin-2 cvs toolchain-funcs
-
-DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
+DESCRIPTION="VDR Plugin: Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
-
-ECVS_SERVER="xineliboutput.cvs.sourceforge.net:/cvsroot/xineliboutput"
-ECVS_MODULE="${PN}"
+SRC_URI="http://vdr.websitec.de/download/${PN}/xineliboutput-2.0.0_p20130821.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS=""
-IUSE="bluray caps cec dbus fbcon jpeg libextractor nls opengl +vdr vdpau +X +xine xinerama"
+KEYWORDS="~amd64 ~x86"
+IUSE="bluray caps dbus fbcon jpeg libextractor nls opengl +vdr vdpau +X +xine xinerama"
 
 COMMON_DEPEND="
 	vdr? (
@@ -40,9 +39,7 @@ COMMON_DEPEND="
 			bluray? ( media-libs/libbluray )
 			opengl? ( virtual/opengl )
 		)
-	)
-
-	cec? ( dev-libs/libcec )"
+	)"
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
@@ -56,14 +53,11 @@ DEPEND="${COMMON_DEPEND}
 	)"
 RDEPEND="${COMMON_DEPEND}"
 
-S=${WORKDIR}/${PN}
+REQUIRED_USE=" || ( vdr xine )"
+
 VDR_CONFD_FILE="${FILESDIR}/confd-2.0.0"
 
 pkg_setup() {
-	if ! use vdr && ! use xine; then
-		die "You either need at least one of these flags: vdr xine"
-	fi
-
 	vdr-plugin-2_pkg_setup
 
 	if use xine; then
@@ -73,13 +67,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Allow user patches to be applied without modifyfing the ebuild
-	epatch_user
-
 	vdr-plugin-2_src_prepare
 
-	# UINT64_C is needed by ffmpeg headers
-	append-cxxflags -D__STDC_CONSTANT_MACROS
+	if has_version ">=media-video/vdr-2.1.10"; then
+		sed -e "s:pm = RenderPixmaps():pm = dynamic_cast<cPixmapMemory *>(RenderPixmaps()):"\
+			-e "s:delete pm;:DestroyPixmap(pm);:"\
+			-i osd.c
+	fi
 }
 
 src_configure() {
@@ -112,9 +106,11 @@ src_configure() {
 		$(use_enable nls i18n) \
 		$(use_enable bluray libbluray) \
 		$(use_enable opengl) \
-		$(use_enable cec libcec) \
 		${myconf} \
 		|| die
+
+	# UINT64_C is needed by ffmpeg headers
+	append-cxxflags -D__STDC_CONSTANT_MACROS
 }
 
 src_install() {
