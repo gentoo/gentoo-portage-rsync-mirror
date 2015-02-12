@@ -11,14 +11,14 @@ MOD_DIR="osp"
 inherit games games-mods
 
 HOMEPAGE="http://www.orangesmoothie.org/"
-SRC_URI="http://www.sunflow.com/orangesmoothie/downloads/osp-Quake3-${PV}_full.zip"
+SRC_URI="http://osp.dget.cc/orangesmoothie/downloads/osp-Quake3-${PV}_full.zip"
 
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 src_prepare() {
-	cd ${MOD_DIR}
-	rm -f VoodooStats-ReadMe.txt *.exe
-	rm -rf voodoo
+	cd ${MOD_DIR} || die
+	rm -f VoodooStats-ReadMe.txt *.exe || die
+	rm -rf voodoo || die
 }
