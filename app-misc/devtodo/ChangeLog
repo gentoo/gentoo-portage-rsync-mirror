@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.115 2015/02/12 13:43:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.116 2015/02/12 14:42:21 jlec Exp $
+
+  12 Feb 2015; Justin Lecher <jlec@gentoo.org> -devtodo-0.1.20-r2.ebuild:
+  Drop old
 
   12 Feb 2015; Raúl Porcel <armin76@gentoo.org> devtodo-0.1.20-r3.ebuild:
   alpha/ia64/sparc stable wrt #534870

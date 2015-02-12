@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.43 2015/01/13 17:09:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.44 2015/02/12 14:47:37 jlec Exp $
+
+  12 Feb 2015; Justin Lecher <jlec@gentoo.org> cholmod-1.6.0-r1.ebuild:
+  Add missing dependency, #539812
 
   13 Jan 2015; Jeroen Roovers <jer@gentoo.org> cholmod-2.1.2.ebuild:
   Stable for HPPA (bug #534648).
