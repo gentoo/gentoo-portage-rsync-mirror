@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/libkpeople-0.2.2.ebuild,v 1.1 2014/04/26 00:28:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/libkpeople-0.2.2.ebuild,v 1.2 2015/02/12 22:06:09 johu Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ else
 fi
 
 DESCRIPTION="KDE contact person abstraction library"
-HOMEPAGE="https://projects.kde.org/projects/playground/network/libkpeople"
+HOMEPAGE="https://projects.kde.org/projects/playground/network/kpeople"
 
 LICENSE="LGPL-2.1"
 SLOT="4"

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libkpeople
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/ChangeLog,v 1.8 2014/09/16 17:03:24 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/ChangeLog,v 1.9 2015/02/12 22:06:09 johu Exp $
+
+  12 Feb 2015; Johannes Huber <johu@gentoo.org> libkpeople-0.2.2.ebuild,
+  libkpeople-0.3.0.ebuild:
+  Update HOMEPAGE
 
 *libkpeople-0.3.0 (16 Sep 2014)
 
