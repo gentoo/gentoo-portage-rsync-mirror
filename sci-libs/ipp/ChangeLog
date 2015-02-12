@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/ipp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.19 2014/09/15 18:05:40 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.20 2015/02/12 09:21:16 jlec Exp $
+
+*ipp-8.2.1.164 (12 Feb 2015)
+
+  12 Feb 2015; Justin Lecher <jlec@gentoo.org> +ipp-8.2.1.164.ebuild:
+  Version Bump
 
 *ipp-8.2.0.090 (15 Sep 2014)
 
