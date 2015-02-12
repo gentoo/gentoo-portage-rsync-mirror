@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16356 2015/02/12 17:24:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16357 2015/02/12 17:55:58 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -309,6 +309,7 @@ www-apps/trac-downloads
 # or switch to an open protocol instead
 # Masked for removal in 30 days
 net-im/amsn
+net-im/emesene
 x11-themes/amsn-skins
 
 # Christian Faulhammer <fauli@gentoo.org> (02 Sep 2014)

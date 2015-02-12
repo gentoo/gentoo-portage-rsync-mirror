@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9785 2015/02/12 17:24:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9786 2015/02/12 17:55:58 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Feb 2015; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Add net-im/emesene to the MSN clients that need to be removed. See #525100
 
   12 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-yaepg masked for removal ~12/mar/2015, dead on upstream
