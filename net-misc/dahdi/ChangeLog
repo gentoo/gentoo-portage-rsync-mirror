@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.68 2015/01/16 09:49:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.69 2015/02/12 16:09:35 chainsaw Exp $
+
+*dahdi-2.10.0.1-r1 (12 Feb 2015)
+
+  12 Feb 2015; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.6.2.ebuild,
+  -dahdi-2.7.0.1.ebuild, -dahdi-2.8.0.1.ebuild, -dahdi-2.9.0.ebuild,
+  -dahdi-2.9.0-r1.ebuild, -dahdi-2.10.0.ebuild, +dahdi-2.10.0.1-r1.ebuild:
+  Scavenge upstream commit as identified by Erich Seifert in bug #539594 to
+  allow building against 3.19 kernels.
 
   16 Jan 2015; Agostino Sarubbo <ago@gentoo.org> dahdi-2.10.0.1.ebuild:
   Stable for x86, wrt bug #533104
