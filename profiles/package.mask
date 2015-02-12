@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16354 2015/02/12 06:43:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16355 2015/02/12 13:07:34 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -56,7 +56,7 @@ app-crypt/pinentry-qt
 # https://lists.torproject.org/pipermail/tor-dev/2015-February/008244.html
 net-misc/vidalia
 
-# Hanno Boeck <hanno@gentoo.org> (08 Feb 2150)
+# Hanno Boeck <hanno@gentoo.org> (08 Feb 2015)
 # Dead upstream, will be removed in 30 days if nobody
 # complains.
 app-portage/portage-mod_jabber

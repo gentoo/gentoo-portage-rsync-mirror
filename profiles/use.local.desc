@@ -5294,8 +5294,6 @@ net-libs/gnutls:dane - Build libgnutls-dane, implementing DNS-based Authenticati
 net-libs/gnutls:nettle - Use dev-libs/nettle as crypto backend
 net-libs/gnutls:pkcs11 - Add support for PKCS#11 through app-crypt/p11-kit
 net-libs/gtk-vnc:gtk3 - Build the gtk3 gtk-vnc library and other gtk3 assets
-net-libs/gtk-vnc:introspection - Use dev-libs/gobject-introspection for introspection
-net-libs/gtk-vnc:vala - Enable bindings for dev-lang/vala
 net-libs/h323plus:aec - Enable acoustic echo cancellation
 net-libs/h323plus:sound - Enable audio codecs
 net-libs/h323plus:video - Enable video codecs

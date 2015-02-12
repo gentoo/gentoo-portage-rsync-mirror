@@ -1,6 +1,11 @@
 # ChangeLog for app-office/geierlein
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/geierlein/ChangeLog,v 1.10 2015/01/18 19:34:00 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/geierlein/ChangeLog,v 1.11 2015/02/12 13:17:17 hanno Exp $
+
+*geierlein-0.7.3 (12 Feb 2015)
+
+  12 Feb 2015; <hanno@gentoo.org> +geierlein-0.7.3.ebuild:
+  Bump.
 
 *geierlein-0.7.1 (18 Jan 2015)
 
