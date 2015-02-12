@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.1_pre5456.ebuild,v 1.2 2014/10/07 22:17:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.5.1_pre5456.ebuild,v 1.3 2015/02/12 08:46:29 aballier Exp $
 
 EAPI=4
 
@@ -69,7 +69,8 @@ my_use() {
 
 src_prepare() {
 	epatch	"${FILESDIR}"/110_all_implicitdecls.patch \
-			"${FILESDIR}"/${PN}-0.5.1-build-fixes.patch
+			"${FILESDIR}"/${PN}-0.5.1-build-fixes.patch \
+			"${FILESDIR}"/ffmpeg25.patch
 	sed -i -e "s:\(--disable-.*\)=\*):\1):" configure || die
 }
 

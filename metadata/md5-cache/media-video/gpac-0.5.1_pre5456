@@ -10,4 +10,4 @@ RDEPEND=a52? ( media-libs/a52dec ) aac? ( >=media-libs/faad2-2.0 ) alsa? ( media
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~lu_zero/gpac/gpac-0.5.1_pre5456.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=68afe13bf05077da3e07516966011a24
+_md5_=93e681963dc4d99413f958bc32eeafc8
