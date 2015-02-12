@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/soundconverter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.37 2015/02/03 20:24:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.38 2015/02/12 11:19:04 pacho Exp $
+
+*soundconverter-2.1.5 (12 Feb 2015)
+
+  12 Feb 2015; Pacho Ramos <pacho@gentoo.org> +soundconverter-2.1.5.ebuild:
+  Version bump
 
 *soundconverter-2.1.4 (03 Feb 2015)
 
