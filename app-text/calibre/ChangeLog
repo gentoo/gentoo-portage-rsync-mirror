@@ -1,6 +1,14 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.341 2015/02/10 08:52:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.342 2015/02/12 07:26:43 yngwin Exp $
+
+  12 Feb 2015; Ben de Groot <yngwin@gentoo.org> -calibre-1.2.ebuild,
+  -calibre-1.25.ebuild, -calibre-1.29.ebuild, -calibre-1.43.ebuild,
+  -calibre-1.48.ebuild, -calibre-2.12.0.ebuild, -calibre-2.7.0.ebuild,
+  -calibre-2.9.0.ebuild, calibre-1.48-r1.ebuild, calibre-2.18.0.ebuild,
+  calibre-2.19.0.ebuild:
+  Set correct qmake location (bug #539838). Make repoman happy by removing
+  unknown dependency. Clean up old versions.
 
 *calibre-2.19.0 (10 Feb 2015)
 

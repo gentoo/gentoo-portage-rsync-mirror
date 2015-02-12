@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.19.0.ebuild,v 1.1 2015/02/10 08:52:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.19.0.ebuild,v 1.2 2015/02/12 07:26:43 yngwin Exp $
 
 EAPI=5
 
@@ -142,7 +142,7 @@ src_install() {
 	cp "${T}"/{kbuildsycoca,update-mime-database}
 	chmod +x "${T}"/{kbuildsycoca,update-mime-database}
 
-	export QMAKE="/usr/lib/qt5/bin/qmake"
+	export QMAKE="${EPREFIX}/usr/$(get_libdir)/qt5/bin/qmake"
 
 	# Unset DISPLAY in order to prevent xdg-mime from triggering a sandbox
 	# violation with kbuildsycoca as in bug #287067, comment #13.
