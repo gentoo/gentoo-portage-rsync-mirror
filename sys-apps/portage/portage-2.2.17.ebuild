@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.16.ebuild,v 1.1 2015/02/08 18:06:12 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.17.ebuild,v 1.1 2015/02/12 05:34:22 dolsen Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
-IUSE="build doc epydoc +ipc linguas_ru selinux xattr"
+IUSE="build cvs doc epydoc git +ipc linguas_ru selinux subversion xattr"
 
 DEPEND="!build? ( ${PYTHON_DEPS//bzip2(+)/ssl(+),bzip2(+)} )
 	dev-lang/python-exec:2
@@ -41,11 +41,14 @@ RDEPEND="
 		app-shells/bash:0[readline]
 		>=app-admin/eselect-1.2
 	)
+	cvs? ( dev-vcs/cvs )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
 	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
 	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
+	git? ( dev-vcs/git )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( >=sys-libs/libselinux-2.0.94[python,${PYTHON_USEDEP}] )
+	subversion? ( dev-vcs/subversion )
 	xattr? ( kernel_linux? (
 		>=sys-apps/install-xattr-0.3
 		$(python_gen_cond_dep 'dev-python/pyxattr[${PYTHON_USEDEP}]' \
@@ -78,6 +81,7 @@ SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)"
 
 python_prepare_all() {
+	esetup.py select_plugins
 	distutils-r1_python_prepare_all
 
 	if ! use ipc ; then
@@ -349,4 +353,9 @@ pkg_postinst() {
 				-exec chown -R portage:portage {} +
 		fi
 	fi
+
+	einfo "The portage build now has USE flag enabled sync modules."
+	einfo "The rsync and webrsync modules are installed by default."
+	einfo "Enable the cvs, git and subversion USE flags to install "
+	einfo "those sync modules as needed."
 }

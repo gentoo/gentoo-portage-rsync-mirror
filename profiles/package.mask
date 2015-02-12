@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16351 2015/02/12 02:37:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16353 2015/02/12 05:48:32 dolsen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,8 +32,7 @@
 
 # Michał Górny <mgorny@gentoo.org> (11 Feb 2015)
 # Potentially destructive to @world, bug #539746.
->=sys-apps/portage-2.2.16
-=app-portage/layman-2.3.0
+=sys-apps/portage-2.2.16
 
 # Manuel Rüger <mrueg@gentoo.org> (10 Feb 2015)
 # Breaks build for cups-filters-1.0.61
@@ -283,11 +282,6 @@ www-apps/trac-downloads
 # Reverse dependencies need to be tested and fixed, bug #521406.
 >=dev-libs/protobuf-2.6.0
 
-# Brian Dolbec <dolsen@gentoo.org> (25 Sep 2014)
-# Mask new setup.py based release due to regressions
-# A new fixed version is being released soon
-=sys-apps/portage-2.2.13
-
 # Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
 # Causes undefined references few layers down (in mediastreamer),
 # someone needs to investigate.
@@ -309,11 +303,6 @@ x11-themes/amsn-skins
 # website not working anymore and will stay like this,
 # tool is useless. See bug 504734
 app-admin/hwreport
-
-# Brian Dolbec <dolsen@gentoo.org> (1 sept 2014)
-# Mask NON-MAINTAINER commit, due lack of testing portage team, releng
-# Mask for review
-=sys-apps/portage-2.2.12-r1
 
 # Sergey Popov <pinkbyte@gentoo.org> (28 Aug 2014)
 # Security mask, wrt bug #519650

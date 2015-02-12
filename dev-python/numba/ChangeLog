@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numba
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.12 2014/12/25 18:59:55 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.13 2015/02/12 05:50:40 patrick Exp $
+
+*numba-0.17.0 (12 Feb 2015)
+
+  12 Feb 2015; Patrick Lauer <patrick@gentoo.org> +numba-0.17.0.ebuild:
+  Bump
 
   25 Dec 2014; Mike Gilbert <floppym@gentoo.org> numba-0.16.0.ebuild:
   Don't depend on enum34 for python3.4.
