@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.9.20131130-r1.ebuild,v 1.3 2014/12/09 09:56:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.9.20131130-r1.ebuild,v 1.4 2015/02/12 10:47:26 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/quvi/${P}.tar.xz"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~mips ~x86"
+KEYWORDS="amd64 ~arm hppa ~mips ~x86"
 IUSE="offensive"
 
 RDEPEND=">=dev-lua/LuaBitOp-1.0.1-r1[${MULTILIB_USEDEP}]

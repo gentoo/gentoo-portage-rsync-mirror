@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.36 2015/02/11 22:33:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.45 2015/02/12 10:56:49 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -184,6 +184,7 @@ media-libs/libaacs -abi_x86_32
 media-libs/libao -abi_x86_32
 media-libs/libart_lgpl -abi_x86_32
 media-libs/libass -abi_x86_32
+media-libs/libbluray -abi_x86_32
 media-libs/libbs2b -abi_x86_32
 media-libs/libcaca -abi_x86_32
 media-libs/libcddb -abi_x86_32
@@ -197,10 +198,12 @@ media-libs/libexif -abi_x86_32
 media-libs/libfame -abi_x86_32
 media-libs/libgii -abi_x86_32
 media-libs/libgphoto2 -abi_x86_32
+media-libs/libharu -abi_x86_32
 media-libs/libid3tag -abi_x86_32
 media-libs/libiec61883 -abi_x86_32
 media-libs/libjpeg-turbo -abi_x86_32
 media-libs/libmad -abi_x86_32
+media-libs/libmetalink -abi_x86_32
 media-libs/libmikmod -abi_x86_32
 media-libs/libmimic -abi_x86_32
 media-libs/libmms -abi_x86_32
@@ -213,6 +216,9 @@ media-libs/libofa -abi_x86_32
 media-libs/libogg -abi_x86_32
 media-libs/libpng -abi_x86_32
 media-libs/libpostproc -abi_x86_32
+media-libs/libquicktime -abi_x86_32
+media-libs/libquvi -abi_x86_32
+media-libs/libquvi-scripts -abi_x86_32
 media-libs/libraw -abi_x86_32
 media-libs/libreplaygain -abi_x86_32
 media-libs/librosprite -abi_x86_32
@@ -222,8 +228,10 @@ media-libs/libsdl2 -abi_x86_32
 media-libs/libshout -abi_x86_32
 media-libs/libsidplay -abi_x86_32
 media-libs/libsndfile -abi_x86_32
+media-libs/libsoundtouch -abi_x86_32
 media-libs/libsvgtiny -abi_x86_32
 media-libs/libtheora -abi_x86_32
+media-libs/libtimidity -abi_x86_32
 media-libs/libv4l -abi_x86_32
 media-libs/libvisual -abi_x86_32
 media-libs/libvorbis -abi_x86_32
@@ -240,6 +248,7 @@ media-libs/oyranos -abi_x86_32
 media-libs/phonon -abi_x86_32
 media-libs/portaudio -abi_x86_32
 media-libs/schroedinger -abi_x86_32
+media-libs/sdl-gfx -abi_x86_32
 media-libs/sdl-image -abi_x86_32
 media-libs/sdl-mixer -abi_x86_32
 media-libs/sdl-net -abi_x86_32
@@ -256,6 +265,7 @@ media-libs/vo-amrwbenc -abi_x86_32
 media-libs/webrtc-audio-processing -abi_x86_32
 media-libs/x264 -abi_x86_32
 media-libs/xvid -abi_x86_32
+media-libs/zvbi -abi_x86_32
 media-plugins/alsa-plugins -abi_x86_32
 media-plugins/alsaequal -abi_x86_32
 media-plugins/caps-plugins -abi_x86_32

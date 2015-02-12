@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-15.0.2.164.ebuild,v 1.1 2015/02/12 08:14:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-15.0.2.164.ebuild,v 1.2 2015/02/12 10:43:08 jlec Exp $
 
 EAPI=5
 
@@ -31,5 +31,8 @@ src_install() {
 	if ! use linguas_ja; then
 		find "${S}" -type d -name ja_JP -exec rm -rf '{}' + || die
 	fi
+
+	rm opt/intel/composerxe-2015_update2.2.164/documentation/en_US/third-party-programs.txt || die
+
 	intel-sdp_src_install
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-3.14.1.ebuild,v 1.1 2014/12/24 00:26:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/gitg-3.14.1.ebuild,v 1.2 2015/02/12 10:33:55 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="
 	>=dev-libs/glib-2.38:2
 	>=dev-libs/gobject-introspection-0.10.1
 	dev-libs/libgit2[threads]
-	>=dev-libs/libgit2-glib-0.0.20
+	>=dev-libs/libgit2-glib-0.22.0
 	>=dev-libs/libpeas-1.5.0[gtk]
 	>=gnome-base/gsettings-desktop-schemas-0.1.1
 	>=net-libs/webkit-gtk-2.2:4[introspection]
@@ -43,7 +43,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	dev-libs/libgit2-glib[vala]
+	>=dev-libs/libgit2-glib-0.22.0[vala]
 	gnome-base/gnome-common
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
@@ -51,6 +51,10 @@ DEPEND="${RDEPEND}
 	$(vala_depend)"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-libgit2-glib-0.22.0.patch
+)
 
 pkg_setup() {
 	use python && [[ ${MERGE_TYPE} != binary ]] && python_setup
@@ -61,6 +65,9 @@ src_prepare() {
 		-e '/CFLAGS/s:-g::g' \
 		-e '/CFLAGS/s:-O0::g' \
 		-i configure.ac || die
+
+	epatch "${PATCHES[@]}"
+
 	eautoreconf
 	gnome2_src_prepare
 	vala_src_prepare
