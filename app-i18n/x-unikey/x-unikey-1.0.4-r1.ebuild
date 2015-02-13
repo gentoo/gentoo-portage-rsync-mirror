@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r1.ebuild,v 1.6 2012/10/09 13:31:13 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r1.ebuild,v 1.7 2015/02/13 04:33:28 naota Exp $
 
 EAPI="1"
 
@@ -21,6 +21,7 @@ RDEPEND="x11-libs/libX11
 	gtk? ( >=x11-libs/gtk+-2.2:2 )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	dev-libs/glib
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 

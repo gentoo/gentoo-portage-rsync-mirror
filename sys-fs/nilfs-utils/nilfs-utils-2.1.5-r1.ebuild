@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.5-r1.ebuild,v 1.7 2014/03/19 16:15:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/nilfs-utils-2.1.5-r1.ebuild,v 1.8 2015/02/13 04:50:46 naota Exp $
 
 EAPI=5
 
 inherit multilib linux-info
 
 DESCRIPTION="A New Implementation of a Log-structured File System for Linux"
-HOMEPAGE="http://www.nilfs.org/"
-SRC_URI="http://www.nilfs.org/download/${P}.tar.bz2"
+HOMEPAGE="http://nilfs.sourceforge.net/"
+SRC_URI="http://nilfs.sourceforge.net/download/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"

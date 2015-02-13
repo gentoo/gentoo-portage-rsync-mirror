@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm setup unpack
-DEPEND=x11-libs/libX11 x11-libs/libSM x11-libs/libICE gtk? ( >=x11-libs/gtk+-2.2:2 ) nls? ( virtual/libintl ) virtual/pkgconfig nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
+DEPEND=x11-libs/libX11 x11-libs/libSM x11-libs/libICE gtk? ( >=x11-libs/gtk+-2.2:2 ) nls? ( virtual/libintl ) dev-libs/glib virtual/pkgconfig nls? ( sys-devel/gettext ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
 DESCRIPTION=Vietnamese X Input Method
 EAPI=1
 HOMEPAGE=http://www.unikey.org/
@@ -10,4 +10,4 @@ RDEPEND=x11-libs/libX11 x11-libs/libSM x11-libs/libICE gtk? ( >=x11-libs/gtk+-2.
 SLOT=0
 SRC_URI=mirror://sourceforge/unikey/x-unikey-1.0.4.tar.bz2
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=2b7405c65d75ac666b961860725edc24
+_md5_=c1588684db56316c0b06dcdbeacd9bc5

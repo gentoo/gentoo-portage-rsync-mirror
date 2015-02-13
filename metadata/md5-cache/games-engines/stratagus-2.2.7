@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
 DEPEND=dev-db/sqlite:3 >=dev-lang/lua-5 dev-lua/toluapp media-libs/libpng:0 virtual/opengl x11-libs/libX11 media-libs/libsdl[sound,opengl,video] sys-libs/zlib bzip2? ( app-arch/bzip2 ) mikmod? ( media-libs/libmikmod ) mng? ( media-libs/libmng ) vorbis? ( media-libs/libogg media-libs/libvorbis theora? ( media-libs/libtheora ) ) doc? ( app-doc/doxygen ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A realtime strategy game engine
-EAPI=4
+EAPI=5
 HOMEPAGE=http://stratagus.sourceforge.net/
 IUSE=bzip2 debug doc mikmod mng theora vorbis
 KEYWORDS=~amd64 ~x86
@@ -11,4 +11,4 @@ REQUIRED_USE=theora? ( vorbis )
 SLOT=0
 SRC_URI=http://launchpad.net/stratagus/trunk/2.2.7/+download/stratagus_2.2.7.orig.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=0b881f55a787f9e2a13f70ffa60d0ac2
+_md5_=30751a011142162a6bfe1514c6b0af1a

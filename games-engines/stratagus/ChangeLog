@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/stratagus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.29 2014/11/25 23:10:40 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.30 2015/02/13 04:55:59 mr_bones_ Exp $
+
+  13 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> stratagus-2.2.7.ebuild:
+  EAPI=5
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
