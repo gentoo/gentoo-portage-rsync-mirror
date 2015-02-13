@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>proxy-maintainers</herd>
   <maintainer>
-    <email>igsi@itesten.com</email>
+    <email>igor@itesten.com</email>
     <name>Igor Testen</name>
     <description>Proxy maintainer, assign bugs</description>
   </maintainer>
