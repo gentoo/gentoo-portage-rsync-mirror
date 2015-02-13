@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/debhelper
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.115 2015/01/04 10:50:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debhelper/ChangeLog,v 1.117 2015/02/13 21:13:03 jer Exp $
+
+  13 Feb 2015; Jeroen Roovers <jer@gentoo.org> debhelper-9.20150101.ebuild:
+  Stable for HPPA (bug #539646).
+
+  13 Feb 2015; Jeroen Roovers <jer@gentoo.org> debhelper-9.20150101.ebuild:
+  Set sub-SLOT dependency on dev-lang/perl.
 
 *debhelper-9.20150101 (04 Jan 2015)
 
