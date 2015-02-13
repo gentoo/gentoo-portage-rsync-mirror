@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.9 2013/11/14 22:02:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.10 2015/02/13 19:50:08 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Create as many words as you can before the time runs out"
@@ -34,10 +34,10 @@ src_prepare() {
 }
 
 src_install() {
-	newgamesbin ag ${PN} || die "newgamesbin failed"
+	newgamesbin ag ${PN}
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins wordlist.txt || die "doins failed"
-	doins -r images/ audio/ || die "doins failed"
+	doins wordlist.txt
+	doins -r images/ audio/
 	dodoc readme
 	prepgamesdirs
 }

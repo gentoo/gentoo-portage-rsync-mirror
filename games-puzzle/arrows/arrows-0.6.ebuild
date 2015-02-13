@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/arrows/arrows-0.6.ebuild,v 1.10 2012/05/04 04:45:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/arrows/arrows-0.6.ebuild,v 1.11 2015/02/13 19:53:33 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 DESCRIPTION="simple maze-like game where you navigate around and destroy arrows"
@@ -36,13 +36,13 @@ src_prepare() {
 
 src_compile() {
 	make clean || die "make clean failed"
-	emake CCOPTS="${CFLAGS}" || die "emake failed"
+	emake CCOPTS="${CFLAGS}"
 }
 
 src_install() {
-	dogamesbin arrows || die "dogamesbin failed"
+	dogamesbin arrows
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins arrfl* || die "doins failed"
+	doins arrfl*
 	dodoc README
 	prepgamesdirs
 }
