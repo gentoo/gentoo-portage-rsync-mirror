@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
-DEPEND=media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-ttf media-libs/sdl-net zlib? ( sys-libs/zlib ) dev-libs/libxslt test? ( =app-text/docbook-xml-dtd-4.2* dev-libs/libxml2 )
+DEPEND=media-libs/libsdl[sound,video] media-libs/sdl-mixer media-libs/sdl-ttf media-libs/sdl-net zlib? ( sys-libs/zlib ) dev-libs/libxslt test? ( =app-text/docbook-xml-dtd-4.2* dev-libs/libxml2 )
 DESCRIPTION=Tactical war game in the tradition of Battle Isle
-EAPI=2
+EAPI=5
 HOMEPAGE=http://crimson.seul.org/
 IUSE=test zlib
 KEYWORDS=amd64 ppc sparc x86
 LICENSE=GPL-2
-RDEPEND=media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-ttf media-libs/sdl-net zlib? ( sys-libs/zlib ) games-misc/games-envd
+RDEPEND=media-libs/libsdl[sound,video] media-libs/sdl-mixer media-libs/sdl-ttf media-libs/sdl-net zlib? ( sys-libs/zlib ) games-misc/games-envd
 SLOT=0
 SRC_URI=http://crimson.seul.org/files/crimson-0.5.3.tar.bz2
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=f3ed15f754b794d9bc1283b56c9830b0
+_md5_=ade4288e100f9d87696c89b4584388bc

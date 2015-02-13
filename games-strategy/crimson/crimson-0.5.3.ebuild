@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.5.3.ebuild,v 1.4 2009/11/13 17:16:29 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.5.3.ebuild,v 1.5 2015/02/13 22:11:14 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Tactical war game in the tradition of Battle Isle"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="test zlib"
 
-RDEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf
 	media-libs/sdl-net
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--enable-sound \
 		--enable-network \
 		$(use_with zlib) \
@@ -42,7 +41,7 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		pixmapsdir="/usr/share/pixmaps" \
-		install || die "emake install failed"
+		install
 	dodoc NEWS README* THANKS TODO
 	rm -rf "${D}/${GAMES_DATADIR}/applications"
 	make_desktop_entry crimson "Crimson Fields"
