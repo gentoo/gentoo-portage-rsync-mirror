@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.9.38.1.ebuild,v 1.1 2015/02/13 08:31:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.9.38.1.ebuild,v 1.2 2015/02/13 17:24:51 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic games
@@ -50,6 +50,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# very sensitive code (bug #539992)
+	strip-flags
+	append-flags -fomit-frame-pointer -fwrapv
 	egamesconf \
 		$(use_enable alsa) \
 		$(use_enable altivec) \
