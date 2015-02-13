@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/biniax2/biniax2-1.30.ebuild,v 1.4 2012/09/05 00:10:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/biniax2/biniax2-1.30.ebuild,v 1.5 2015/02/13 20:07:50 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Logic game with arcade and tactics modes"
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="media-libs/libsdl
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[mod]"
-
+RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 src_prepare() {
@@ -32,9 +32,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r data/* || die
+	doins -r data/*
 	doicon "${FILESDIR}"/${PN}.xpm
 	make_desktop_entry ${PN} Biniax-2
 	prepgamesdirs

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/braincurses-0.5b.ebuild,v 1.8 2010/01/14 22:33:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/braincurses/braincurses-0.5b.ebuild,v 1.9 2015/02/13 20:13:31 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="An ncurses-based mastermind clone"
@@ -15,7 +15,7 @@ KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE=""
 
 DEPEND=""
-
+RDEPEND=""
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-as-needed.patch
@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin braincurses || die "dogamesbin failed"
+	dogamesbin braincurses
 	dodoc README THANKS Changelog
 	prepgamesdirs
 }
