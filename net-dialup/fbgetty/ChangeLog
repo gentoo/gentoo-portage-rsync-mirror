@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/fbgetty
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fbgetty/ChangeLog,v 1.10 2014/12/04 07:44:46 pinkbyte Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fbgetty/ChangeLog,v 1.11 2015/02/13 11:46:52 pinkbyte Exp $
+
+  13 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> fbgetty-0.1.698-r1.ebuild:
+  Stable on amd64 and x86, wrt bug #535546
 
 *fbgetty-0.1.698-r1 (04 Dec 2014)
 

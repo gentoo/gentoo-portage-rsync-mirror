@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer-editing-services
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/ChangeLog,v 1.4 2015/02/03 17:48:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/ChangeLog,v 1.5 2015/02/13 11:46:27 pacho Exp $
+
+  13 Feb 2015; Pacho Ramos <pacho@gentoo.org>
+  gstreamer-editing-services-1.4.0.ebuild:
+  Prevent sandbox violations, bug #538888
 
 *gstreamer-editing-services-1.4.0 (03 Feb 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.2.7.ebuild,v 1.1 2015/02/12 11:45:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.2.7.ebuild,v 1.2 2015/02/13 11:36:41 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -57,6 +57,14 @@ src_configure() {
 		$(use_enable introspection) \
 		$(use_enable upnp gupnp) \
 		--with-plugins=${plugins}
+}
+
+src_compile() {
+	# Prevent sandbox violations, bug #539224
+	# https://bugzilla.gnome.org/show_bug.cgi?id=744135
+	# https://bugzilla.gnome.org/show_bug.cgi?id=744134
+	addpredict /dev/video0
+	gnome2_src_compile
 }
 
 src_test() {

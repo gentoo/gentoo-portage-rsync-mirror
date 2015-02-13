@@ -1,9 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/gstreamer-editing-services-1.4.0.ebuild,v 1.1 2015/02/03 17:48:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer-editing-services/gstreamer-editing-services-1.4.0.ebuild,v 1.2 2015/02/13 11:46:27 pacho Exp $
 
 EAPI="5"
-inherit eutils
+GCONF_DEBUG="no"
+
+inherit gnome2
 
 DESCRIPTION="SDK for making video editors and more"
 HOMEPAGE="http://wiki.pitivi.org/wiki/GES"
@@ -35,22 +37,23 @@ src_prepare() {
 	# FIXME: disable failing check
 	sed -e 's|\(tcase_add_test (.* test_project_load_xges);\)|/*\1*/|' \
 		-i "${S}"/tests/check/ges/project.c || die
+	gnome2_src_prepare
 }
 
 src_configure() {
 	# gtk is only used for examples
-	# GST_INSPECT true due bug #508096
-	econf \
-		GST_INSPECT=$(type -P true) \
+	gnome2_src_configure \
 		$(use_enable introspection) \
 		--disable-examples \
-		--disable-gtk-doc \
 		--without-gtk \
 	        --with-package-name="GStreamer editing services ebuild for Gentoo" \
         	--with-package-origin="http://packages.gentoo.org/package/media-libs/gstreamer-editing-services"
 }
 
-src_install() {
-	default
-	prune_libtool_files
+src_compile() {
+	# Prevent sandbox violations, bug #538888
+	# https://bugzilla.gnome.org/show_bug.cgi?id=744135
+	# https://bugzilla.gnome.org/show_bug.cgi?id=744134
+	addpredict /dev/video0
+	gnome2_src_compile
 }
