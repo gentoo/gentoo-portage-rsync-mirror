@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.109 2015/02/01 14:23:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.110 2015/02/13 20:35:13 alonbl Exp $
+
+*loop-aes-3.7c (13 Feb 2015)
+
+  13 Feb 2015; Alon Bar-Lev <alonbl@gentoo.org> +loop-aes-3.7c.ebuild:
+  Version bump
 
   01 Feb 2015; Alon Bar-Lev <alonbl@gentoo.org> loop-aes-3.7b.ebuild:
   Cleanup obsolete dependency
