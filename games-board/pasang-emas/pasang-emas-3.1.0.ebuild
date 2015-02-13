@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/pasang-emas-3.1.0.ebuild,v 1.5 2014/07/20 16:00:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/pasang-emas-3.1.0.ebuild,v 1.6 2015/02/13 21:57:58 mr_bones_ Exp $
 
-EAPI=4
-inherit eutils games
+EAPI=5
+inherit eutils gnome2-utils games
 
 DESCRIPTION="A traditional game of Brunei"
 HOMEPAGE="http://pasang-emas.sourceforge.net/"
@@ -19,9 +19,9 @@ IUSE="extras nls"
 
 RDEPEND="app-text/gnome-doc-utils
 	>=x11-libs/gtk+-2.18.2:2
-	virtual/libintl
-	app-text/scrollkeeper"
+	virtual/libintl"
 DEPEND="${RDEPEND}
+	app-text/rarian
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
@@ -29,8 +29,8 @@ src_prepare() {
 	sed -i \
 		-e '/Encoding/d' \
 		-e '/Icon/s:\.png::' \
-		data/pasang-emas.desktop.in \
-		|| die
+		data/pasang-emas.desktop.in || die
+	gnome2_omf_fix
 }
 
 src_configure() {
@@ -42,7 +42,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	if use extras; then
 		insinto "${GAMES_DATADIR}/${PN}"/themes
 		doins -r \
@@ -52,4 +52,18 @@ src_install() {
 	fi
 	use nls || rm -rf "${D}"usr/share/locale
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	gnome2_scrollkeeper_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	gnome2_scrollkeeper_update
+}
+
+pkg_postrm() {
+	gnome2_scrollkeeper_update
 }

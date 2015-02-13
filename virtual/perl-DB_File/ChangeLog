@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-DB_File
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.69 2015/02/13 10:26:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.70 2015/02/13 21:59:19 jer Exp $
+
+  13 Feb 2015; Jeroen Roovers <jer@gentoo.org> perl-DB_File-1.831.0.ebuild:
+  Stable for HPPA (bug #536790).
 
   13 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-DB_File-1.831.0.ebuild:
   Stable for x86, wrt bug #536790

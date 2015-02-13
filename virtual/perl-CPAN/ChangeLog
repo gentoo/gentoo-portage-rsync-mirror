@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CPAN
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/ChangeLog,v 1.25 2015/02/13 10:26:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/ChangeLog,v 1.26 2015/02/13 21:55:55 jer Exp $
+
+  13 Feb 2015; Jeroen Roovers <jer@gentoo.org> perl-CPAN-2.0.5.ebuild:
+  Stable for HPPA (bug #536790).
 
   13 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-CPAN-2.0.5.ebuild:
   Stable for x86, wrt bug #536790

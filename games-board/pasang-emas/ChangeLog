@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pasang-emas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/ChangeLog,v 1.10 2014/07/20 16:00:34 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pasang-emas/ChangeLog,v 1.11 2015/02/13 21:57:58 mr_bones_ Exp $
+
+  13 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> pasang-emas-3.1.0.ebuild:
+  EAPI=5; use gnome2-utils; app-text/rarian instead of app-text/scrollkeeper
 
   20 Jul 2014; Tupone Alfredo <tupone@gentoo.org> pasang-emas-3.1.0.ebuild,
   files/pasang-emas-3.1.0-build.patch:

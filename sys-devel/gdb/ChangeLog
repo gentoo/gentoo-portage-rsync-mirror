@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gdb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.283 2014/11/11 10:52:58 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.285 2015/02/13 21:51:02 vapier Exp $
+
+  13 Feb 2015; Mike Frysinger <vapier@gentoo.org> gdb-7.8.1.ebuild,
+  gdb-9999.ebuild:
+  Put deps behind USE=server and USE=client as appropriate #539832 by
+  tschwinger.
+
+  13 Feb 2015; Mike Frysinger <vapier@gentoo.org> gdb-7.8.1.ebuild,
+  gdb-9999.ebuild:
+  Reject USE="-client -server" builds.
 
   11 Nov 2014; Agostino Sarubbo <ago@gentoo.org> gdb-7.7.1.ebuild:
   Stable for ia64, wrt bug #526376
