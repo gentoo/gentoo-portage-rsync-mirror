@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.32 2015/02/08 15:00:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.33 2015/02/12 23:56:21 dilfridge Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (12 Feb 2015)
+# Pulls in way too many unstable sci packages
+app-office/libreoffice coinmp
 
 # Mike Gilbert <floppym@gentoo.org> (15 Nov 2014)
 # Awaiting PyQt4 stabilization (bug 523322).

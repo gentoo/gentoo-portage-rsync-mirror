@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.769 2015/02/11 03:52:30 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.770 2015/02/12 23:56:21 dilfridge Exp $
+
+  12 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  package.use.stable.mask:
+  Stablemask coinmp feature of LibreOffice
 
   11 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> package.use.mask:
   Mask cluster code for evaluation and testing.
