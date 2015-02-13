@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1429 2015/02/12 05:34:22 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1430 2015/02/13 17:47:58 dolsen Exp $
+
+  13 Feb 2015; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
+  Update ebuild back to automagic, undeclared vcs deps. Fix typo in bug # for
+  2.2.16 release.
 
 *portage-2.2.17 (12 Feb 2015)
 
@@ -14,7 +18,7 @@
 
   08 Feb 2015; Brian Dolbec <dolsen@gentoo.org> +portage-2.2.16.ebuild:
   Version bump. First release with the new plug-in sync system. Fixes bugs
-  583512, 538314, 537298, 534722, 536926, 536392, 492932, 142579, 282927,
+  538512, 538314, 537298, 534722, 536926, 536392, 492932, 142579, 282927,
   535850, 533036, 463266, 533884, 531656, 531724, 534070, 532670, 532784,
   532594, 525718, 532224, 504116, 412471, 531690, 531854, 522032.
 

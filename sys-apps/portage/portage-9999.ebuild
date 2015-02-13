@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.109 2015/02/12 05:34:22 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.110 2015/02/13 17:47:58 dolsen Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
 KEYWORDS=""
 SLOT="0"
-IUSE="build cvs doc epydoc git +ipc linguas_ru selinux subversion xattr"
+IUSE="build doc epydoc +ipc linguas_ru selinux xattr"
 
 DEPEND="!build? ( ${PYTHON_DEPS//bzip2(+)/ssl(+),bzip2(+)} )
 	dev-lang/python-exec:2
@@ -41,14 +41,11 @@ RDEPEND="
 		app-shells/bash:0[readline]
 		>=app-admin/eselect-1.2
 	)
-	cvs? ( dev-vcs/cvs )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
 	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
 	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
-	git? ( dev-vcs/git )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( >=sys-libs/libselinux-2.0.94[python,${PYTHON_USEDEP}] )
-	subversion? ( dev-vcs/subversion )
 	xattr? ( kernel_linux? (
 		>=sys-apps/install-xattr-0.3
 		$(python_gen_cond_dep 'dev-python/pyxattr[${PYTHON_USEDEP}]' \
@@ -80,7 +77,6 @@ EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git
 	https://github.com/gentoo/portage.git"
 
 python_prepare_all() {
-	esetup.py select_plugins
 	distutils-r1_python_prepare_all
 
 	if ! use ipc ; then
