@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.521 2015/02/01 20:02:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.522 2015/02/13 15:19:39 mgorny Exp $
 
 # Keep them sorted
 
@@ -128,7 +128,6 @@ gsl - Use the GNU scientific library for calculations
 gsm - Add support for the gsm lossy speech compression codec
 gstreamer - Add support for media-libs/gstreamer (Streaming media)
 gtk - Add support for x11-libs/gtk+ (The GIMP Toolkit)
-gtkhtml - Add support for gnome-extra/gtkhtml
 guile - Add support for the guile Scheme interpreter
 gzip - Compress files with Lempel-Ziv coding (LZ77)
 handbook - Enable handbooks generation for KDE4.
@@ -246,7 +245,6 @@ odbc - Add ODBC Support (Open DataBase Connectivity)
 offensive - Enable potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX (Open Financial eXchange) data files
 ogg - Add support for the Ogg container format (commonly used by Vorbis, Theora and flac)
-old-linux - Add support for linux-2.4 and older
 openal - Add support for the Open Audio Library
 openexr - Support for the OpenEXR graphics file format
 opengl - Add support for OpenGL (3D graphics)
@@ -392,7 +390,6 @@ xmpp - Enable support for Extensible Messaging and Presence Protocol (XMPP) form
 xosd - Sends display using the X On Screen Display library
 xpm - Add support for XPM graphics format
 xscreensaver - Add support for XScreenSaver extension
-xsl - Check/Support flag for XSL library (version 1)
 xv - Add in optional support for the Xvideo extension (an X API for video playback)
 xvid - Add support for xvid.org's open-source mpeg-4 codec
 yahoo - Enable Yahoo Messenger IM protocol support
