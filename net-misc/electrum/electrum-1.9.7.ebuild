@@ -32,7 +32,7 @@ RDEPEND="
 	>=dev-python/ecdsa-0.9[${PYTHON_USEDEP}]
 	dev-python/slowaes[${PYTHON_USEDEP}]
 	gtk? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
-	qrcode? ( media-gfx/zbar[python,${PYTHON_USEDEP}] )
+	qrcode? ( media-gfx/zbar[python,v4l,${PYTHON_USEDEP}] )
 	qt4? (
 		 webkit? ( dev-python/PyQt4[webkit] )
 		 dev-python/PyQt4[${PYTHON_USEDEP}]
