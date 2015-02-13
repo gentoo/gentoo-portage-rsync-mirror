@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/yatebts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.7 2015/02/11 17:33:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/ChangeLog,v 1.8 2015/02/13 14:15:36 zerochaos Exp $
+
+  13 Feb 2015; Rick Farina <zerochaos@gentoo.org> yatebts-9999.ebuild:
+  9999 needs yate 9999 as well
 
 *yatebts-4.0.0-r1 (11 Feb 2015)
 

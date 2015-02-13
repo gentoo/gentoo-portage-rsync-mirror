@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-9999.ebuild,v 1.6 2015/02/11 15:31:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-9999.ebuild,v 1.7 2015/02/13 14:15:36 zerochaos Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE="rad1 usrp1 uhd +bladerf cpu_flags_x86_sse3 cpu_flags_x86_sse4_1"
 
 RDEPEND="
-	>=net-voip/yate-5.4.0[gsm]
+	=net-voip/yate-${PV}[gsm]
 	bladerf? ( net-wireless/bladerf:= )
 	uhd? ( net-wireless/uhd )
 	virtual/libusb:1"
@@ -33,9 +33,6 @@ fi
 
 src_prepare() {
 	#we need more patches or configure flags because things install in really wrong places per FHS
-
-	#this prevents build failure, but does not actually pass QA checks
-	epatch "${FILESDIR}"/${PN}-4.0.0-dont-mess-with-cflags.patch
 	eautoreconf
 }
 

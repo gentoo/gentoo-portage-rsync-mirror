@@ -1,6 +1,16 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.659 2015/02/10 21:19:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.660 2015/02/13 14:23:59 pacho Exp $
+
+*cups-2.0.2-r1 (13 Feb 2015)
+
+  13 Feb 2015; Pacho Ramos <pacho@gentoo.org> +cups-2.0.2-r1.ebuild,
+  +files/cups-2.0.2-rename-systemd-service-files.patch,
+  +files/cups-2.0.2-systemd-socket.patch:
+  Fix cups starting (socket and ports handling) on systemd with Fedora approach
+  (that also improves the way errors in cups are reported when occur) as
+  currently starting is not working properly leading to the printers being not
+  accessible for other machines in the network.
 
 *cups-2.0.2 (10 Feb 2015)
 

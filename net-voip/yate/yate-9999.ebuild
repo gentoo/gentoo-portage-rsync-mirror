@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.8 2015/01/28 23:02:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-9999.ebuild,v 1.9 2015/02/13 14:30:20 zerochaos Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ else
 fi
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 IUSE="doc cpu_flags_x86_sse2 sctp dahdi zaptel wpcard tdmcard wanpipe +ilbc +ilbc-webrtc +isac-float isac-fixed postgres mysql +gsm +speex h323 spandsp +ssl qt4 +zlib amrnb"
 
 RDEPEND="
@@ -41,7 +41,6 @@ DEPEND="doc? ( || ( app-doc/doxygen dev-util/kdoc ) )
 	${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/dont-mess-with-cflags.patch
 	eautoreconf
 	./yate-config.sh || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-5.4.0.ebuild,v 1.5 2015/01/28 23:02:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/yate-5.4.0.ebuild,v 1.6 2015/02/13 14:30:20 zerochaos Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ else
 fi
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/${PV}"
 IUSE="doc cpu_flags_x86_sse2 sctp dahdi zaptel wpcard tdmcard wanpipe +ilbc +ilbc-webrtc +isac-float isac-fixed postgres mysql +gsm +speex h323 spandsp +ssl qt4 +zlib amrnb"
 
 RDEPEND="
