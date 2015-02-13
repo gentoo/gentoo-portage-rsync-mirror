@@ -1,5 +1,5 @@
---- configure.ac.orig	2013-01-25 13:30:36.167253683 -0500
-+++ configure.ac	2013-01-25 13:32:16.993678869 -0500
+--- configure.ac.orig
++++ configure.ac
 @@ -90,21 +90,6 @@
  
  dnl -fno-unit-at-a-time

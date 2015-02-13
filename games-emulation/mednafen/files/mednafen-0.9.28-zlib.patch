@@ -1,6 +1,5 @@
-diff -ru mednafen.orig/src/Makefile.am mednafen/src/Makefile.am
---- mednafen.orig/src/Makefile.am	2013-01-12 08:41:03.000000000 -0500
-+++ mednafen/src/Makefile.am	2013-01-25 13:17:44.351619447 -0500
+--- mednafen.orig/src/Makefile.am
++++ mednafen/src/Makefile.am
 @@ -5,7 +5,7 @@
  
  bin_PROGRAMS	=	mednafen
@@ -10,15 +9,13 @@ diff -ru mednafen.orig/src/Makefile.am mednafen/src/Makefile.am
  mednafen_DEPENDENCIES	=	trio/libtrio.a drivers/libmdfnsdl.a sexyal/libsexyal.a
  
  SUBDIRS			+=	sexyal drivers
-diff -ru mednafen.orig/src/compress/Makefile.am.inc mednafen/src/compress/Makefile.am.inc
---- mednafen.orig/src/compress/Makefile.am.inc	2010-12-18 04:03:19.000000000 -0500
-+++ mednafen/src/compress/Makefile.am.inc	2013-01-25 13:17:19.289508092 -0500
+--- mednafen.orig/src/compress/Makefile.am.inc
++++ mednafen/src/compress/Makefile.am.inc
 @@ -1 +1 @@
 -mednafen_SOURCES	+=	compress/minilzo.c compress/quicklz.c compress/blz.cpp compress/ioapi.c compress/unzip.c
 +mednafen_SOURCES	+=	compress/minilzo.c compress/quicklz.c compress/blz.cpp compress/ioapi.c
-diff -ru mednafen.orig/src/file.cpp mednafen/src/file.cpp
---- mednafen.orig/src/file.cpp	2012-02-03 17:04:45.000000000 -0500
-+++ mednafen/src/file.cpp	2013-01-25 13:17:09.527854217 -0500
+--- mednafen.orig/src/file.cpp
++++ mednafen/src/file.cpp
 @@ -33,7 +33,7 @@
  
  
