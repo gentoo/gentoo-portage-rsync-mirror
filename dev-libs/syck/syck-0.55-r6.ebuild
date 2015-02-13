@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r5.ebuild,v 1.1 2014/11/29 22:43:11 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/syck-0.55-r6.ebuild,v 1.1 2015/02/13 06:08:23 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="python? 2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+EAPI=5
 
-inherit distutils eutils flag-o-matic
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1 flag-o-matic
 
 DESCRIPTION="Syck is an extension for reading and writing YAML swiftly in popular scripting languages"
 HOMEPAGE="http://whytheluckystiff.net/syck/"
@@ -22,12 +22,8 @@ DEPEND="python? ( !dev-python/pysyck )"
 RDEPEND="${DEPEND}"
 PDEPEND="php? ( dev-php/pecl-syck
 		    !=dev-libs/syck-0.55-r1 )"
-
-DISTUTILS_SETUP_FILES=("ext/python|setup.py")
-PYTHON_MODNAME="yaml2xml.py ydump.py ypath.py"
-
 pkg_setup() {
-	use python && python_pkg_setup
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -41,18 +37,19 @@ src_configure() {
 
 src_compile() {
 	emake
-	use python && distutils_src_compile
+	if use python; then
+		pushd ext/python > /dev/null
+		distutils-r1_src_compile
+		popd > /dev/null
+	fi
 }
 
 src_install() {
 	emake DESTDIR=${D} install
-	use python && distutils_src_install
-}
-
-pkg_postinst() {
-	use python && distutils_pkg_postinst
-}
-
-pkg_postrm() {
-	use python && distutils_pkg_postrm
+	if use python; then
+		pushd ext/python > /dev/null
+		distutils-r1_src_install
+		popd > /dev/null
+	fi
+	distutils-r1_python_install_all
 }

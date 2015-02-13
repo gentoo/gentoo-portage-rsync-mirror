@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.32.ebuild,v 1.2 2015/02/13 06:24:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.33.ebuild,v 1.1 2015/02/13 06:24:43 mr_bones_ Exp $
 
 EAPI=5
 inherit games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="joystick opengl"
 
-RDEPEND="media-libs/libsdl[joystick?]
+RDEPEND="media-libs/libsdl[joystick?,opengl?]
 	app-arch/libarchive
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}

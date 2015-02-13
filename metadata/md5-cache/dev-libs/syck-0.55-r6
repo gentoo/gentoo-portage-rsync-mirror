@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=python? ( !dev-python/pysyck ) >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
+DESCRIPTION=Syck is an extension for reading and writing YAML swiftly in popular scripting languages
+EAPI=5
+HOMEPAGE=http://whytheluckystiff.net/syck/
+IUSE=php python python_targets_python2_7
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-macos
+LICENSE=BSD
+PDEPEND=php? ( dev-php/pecl-syck !=dev-libs/syck-0.55-r1 )
+RDEPEND=python? ( !dev-python/pysyck ) >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
+REQUIRED_USE=python_targets_python2_7
+SLOT=0
+SRC_URI=http://rubyforge.org/frs/download.php/4492/syck-0.55.tar.gz
+_eclasses_=distutils-r1	f810ae4ac7e5c3db4ff72db46e3c40d1	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=d82575b3c0a60c1581f7d0b1b95a7f37
