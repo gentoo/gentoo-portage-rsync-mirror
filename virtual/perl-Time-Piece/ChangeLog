@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Time-Piece
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.33 2015/02/08 12:50:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.34 2015/02/13 10:27:55 ago Exp $
+
+  13 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Time-Piece-1.270.0.ebuild:
+  Stable for x86, wrt bug #536790
 
   08 Feb 2015; Mikle Kolyada <zlogene@gentoo.org>
   perl-Time-Piece-1.270.0.ebuild:
