@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/epoch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/ChangeLog,v 1.12 2015/02/13 11:00:11 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/ChangeLog,v 1.13 2015/02/13 11:08:35 amynka Exp $
+
+  13 Feb 2015;  <amy@gentoo.org> epoch-1.2.0.ebuild, epoch-1.2.1.ebuild:
+  Arch keywords change for 1.2.0
 
   13 Feb 2015;  <amy@gentoo.org> epoch-1.2.1.ebuild:
   Arch Keywords change
