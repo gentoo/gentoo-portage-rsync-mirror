@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-Sender
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.31 2014/10/12 16:36:52 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/ChangeLog,v 1.32 2015/02/14 15:19:42 zlogene Exp $
+
+*Mail-Sender-0.8.23 (14 Feb 2015)
+
+  14 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> +Mail-Sender-0.8.23.ebuild:
+  Version bump
 
   12 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Mail-Sender-0.8.21.ebuild:
   Drop old.
