@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.9.1-r1.ebuild,v 1.1 2015/02/13 19:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.9.1-r1.ebuild,v 1.2 2015/02/14 03:34:24 zerochaos Exp $
 
 EAPI=5
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="readline"
 
-DEPEND="readline? ( sys-libs/readline ) 
+DEPEND="readline? ( sys-libs/readline )
 	>=sys-libs/ncurses-5.2-r3"
 RDEPEND=${DEPEND}
 
