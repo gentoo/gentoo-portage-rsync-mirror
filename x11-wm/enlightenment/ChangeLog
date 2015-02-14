@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/enlightenment
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.201 2014/12/27 17:03:42 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.202 2015/02/14 04:44:44 vapier Exp $
+
+*enlightenment-1.0.15 (14 Feb 2015)
+
+  14 Feb 2015; Mike Frysinger <vapier@gentoo.org> +enlightenment-1.0.15.ebuild:
+  Version bump #532398 by Andrew Savchenko.
 
   27 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   enlightenment-0.17.6.ebuild:

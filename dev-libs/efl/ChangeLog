@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/efl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.23 2014/12/28 14:28:23 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.24 2015/02/14 04:35:08 vapier Exp $
+
+  14 Feb 2015; Mike Frysinger <vapier@gentoo.org> efl-1.10.1.ebuild,
+  efl-1.11.2.ebuild, efl-1.12.2.ebuild, efl-1.8.5.ebuild, efl-1.8.6.ebuild,
+  efl-1.9.4.ebuild, efl-1.9.5.ebuild:
+  Rename USE=jp2k to the standard USE=jpeg2k #539690 by jannis.
 
   28 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   -files/efl-1.12.2-lauch_via_logind_or_root_privilege.patch, efl-1.12.2.ebuild:

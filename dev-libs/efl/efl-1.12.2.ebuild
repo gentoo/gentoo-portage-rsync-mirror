@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.12.2.ebuild,v 1.3 2014/12/28 14:28:23 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.12.2.ebuild,v 1.4 2015/02/14 04:35:08 vapier Exp $
 
 EAPI="5"
 
@@ -26,8 +26,7 @@ DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 KEYWORDS="~amd64 ~arm ~x86"
-
-IUSE="+bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jp2k neon oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl sound systemd tga tiff tslib v4l2 wayland webp X xim xine xpm"
+IUSE="+bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jpeg2k neon oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl sound systemd tga tiff tslib v4l2 wayland webp X xim xine xpm"
 
 REQUIRED_USE="
 	pulseaudio?	( sound )
@@ -55,7 +54,7 @@ RDEPEND="
 	)
 	harfbuzz? ( media-libs/harfbuzz )
 	ibus? ( app-i18n/ibus )
-	jp2k? ( media-libs/openjpeg )
+	jpeg2k? ( media-libs/openjpeg )
 	!oldlua? ( >=dev-lang/luajit-2.0.0 )
 	oldlua? ( dev-lang/lua )
 	physics? ( >=sci-physics/bullet-2.80 )
@@ -221,7 +220,7 @@ src_configure() {
 	$(use_enable harfbuzz)
 	$(use_enable ico image-loader-ico)
 	$(use_enable ibus)
-	$(use_enable jp2k image-loader-jp2k)
+	$(use_enable jpeg2k image-loader-jp2k)
 	$(use_enable neon)
 	$(use_enable nls)
 	$(use_enable oldlua lua-old)

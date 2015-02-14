@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.8.5.ebuild,v 1.8 2014/05/15 18:06:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.8.5.ebuild,v 1.9 2015/02/14 04:35:08 vapier Exp $
 
 EAPI="5"
 
@@ -20,8 +20,7 @@ DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
 KEYWORDS="amd64 ~arm x86"
-
-IUSE="+bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jp2k +jpeg opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl sound systemd tga tiff tslib v4l2 wayland webp X xcb xim xine xpm"
+IUSE="+bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus +jpeg jpeg2k opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl sound systemd tga tiff tslib v4l2 wayland webp X xcb xim xine xpm"
 
 REQUIRED_USE="
 	X?		( !xcb )
@@ -50,8 +49,8 @@ RDEPEND="
 	)
 	harfbuzz? ( media-libs/harfbuzz )
 	ibus? ( app-i18n/ibus )
-	jp2k? ( media-libs/openjpeg )
 	jpeg? ( virtual/jpeg )
+	jpeg2k? ( media-libs/openjpeg )
 	physics? ( sci-physics/bullet )
 	pixman? ( x11-libs/pixman )
 	png? ( media-libs/libpng:0= )
@@ -224,8 +223,8 @@ src_configure() {
 	$(use_enable harfbuzz)
 	$(use_enable ico image-loader-ico)
 	$(use_enable ibus)
-	$(use_enable jp2k image-loader-jp2k)
 	$(use_enable jpeg image-loader-jpeg)
+	$(use_enable jpeg2k image-loader-jp2k)
 	$(use_enable nls)
 	$(use_enable physics)
 	$(use_enable pixman)
