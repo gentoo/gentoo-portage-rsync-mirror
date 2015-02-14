@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-4.3.1.ebuild,v 1.1 2014/10/10 14:45:39 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/phpunit-4.3.1.ebuild,v 1.2 2015/02/14 13:51:38 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://phar.phpunit.de/${PHPUNIT_PHAR}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa ~x86"
 IUSE=""
 
 DEPEND="dev-lang/php[phar,xml]"
