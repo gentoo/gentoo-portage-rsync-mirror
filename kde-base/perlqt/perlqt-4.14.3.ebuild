@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.14.3.ebuild,v 1.3 2014/12/11 13:05:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.14.3.ebuild,v 1.4 2015/02/14 14:35:02 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ VIRTUALX_REQUIRED="test"
 inherit kde4-base
 
 DESCRIPTION="Qt Perl bindings"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug phonon qimageblitz qscintilla qwt webkit"
 
 RDEPEND="

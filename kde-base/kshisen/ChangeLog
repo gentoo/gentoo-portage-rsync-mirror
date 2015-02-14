@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.320 2014/12/11 15:45:06 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.321 2015/02/14 14:35:08 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kshisen-4.14.3.ebuild:
+  Stable for x86 wrt bug #517344
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -kshisen-4.14.2.ebuild:
   Remove KDE SC 4.14.2

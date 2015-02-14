@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.14.3-r1.ebuild,v 1.1 2014/12/02 13:06:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-4.14.3-r1.ebuild,v 1.2 2015/02/14 14:35:03 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ USE_RUBY="ruby20"
 inherit kde4-base ruby-ng
 
 DESCRIPTION="KDE Ruby bindings"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="akonadi debug kate nepomuk okular"
 HOMEPAGE="http://techbase.kde.org/Development/Languages/Ruby"
 

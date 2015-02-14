@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.230 2015/01/21 10:24:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.231 2015/02/14 14:35:09 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kwalletd-4.14.3.ebuild:
+  Stable for x86 wrt bug #517344
 
   21 Jan 2015; Agostino Sarubbo <ago@gentoo.org> kwalletd-4.14.3-r1.ebuild:
   Stable for amd64, wrt bug #496768

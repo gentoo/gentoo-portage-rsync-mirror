@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vmware</herd>
+	<maintainer>
+		<email>floppym@gentoo.org</email>
+		<name>Mike Gilbert</name>
+	</maintainer>
 	<longdescription>
 		The Open Virtual Machine Tools (open-vm-tools) are the open source
 		implementation of VMware Tools. They are a set of guest operating system

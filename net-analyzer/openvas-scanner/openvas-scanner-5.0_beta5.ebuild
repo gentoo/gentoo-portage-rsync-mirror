@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-5.0_beta5.ebuild,v 1.1 2015/02/03 09:08:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-5.0_beta5.ebuild,v 1.2 2015/02/14 14:33:46 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE=""
 
 RDEPEND="
 	>=dev-libs/glib-2.16:2
-	~net-analyzer/openvas-libraries-8_beta5
+	>=net-analyzer/openvas-libraries-8_beta5
 	!net-analyzer/openvas-plugins
 	!net-analyzer/openvas-server"
 DEPEND="${RDEPEND}

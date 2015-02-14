@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ffmpegthumbs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.175 2014/12/11 15:44:58 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.176 2015/02/14 14:35:10 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ffmpegthumbs-4.14.3.ebuild:
+  Stable for x86 wrt bug #517344
 
   11 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -ffmpegthumbs-4.14.2.ebuild:
   Remove KDE SC 4.14.2

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.452 2015/02/11 03:35:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.453 2015/02/14 14:35:10 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kopete-4.14.3.ebuild:
+  Stable for x86 wrt bug #517344
 
   11 Feb 2015; Patrick Lauer <patrick@gentoo.org> kopete-4.14.3-r1.ebuild:
   Whitespace

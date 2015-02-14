@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calligra-l10n
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.54 2015/01/28 22:54:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/ChangeLog,v 1.55 2015/02/14 14:38:06 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> calligra-l10n-2.8.5.ebuild:
+  Stable for x86, wrt bug #517344
 
   28 Jan 2015; Johannes Huber <johu@gentoo.org> -calligra-l10n-2.8.6.ebuild,
   calligra-l10n-2.8.5.ebuild:

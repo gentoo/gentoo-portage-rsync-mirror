@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.220 2015/01/28 23:49:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.221 2015/02/14 14:34:59 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ksirk-4.14.3.ebuild:
+  Stable for x86 wrt bug #517344
 
   28 Jan 2015; Johannes Huber <johu@gentoo.org> ksirk-4.12.5.ebuild,
   ksirk-4.14.3.ebuild:

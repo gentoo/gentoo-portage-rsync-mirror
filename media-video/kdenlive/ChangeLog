@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.94 2014/12/12 15:42:34 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.95 2015/02/14 14:38:35 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kdenlive-0.9.8.ebuild:
+  Stable for x86, wrt bug #517344
 
   12 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> kdenlive-0.9.8.ebuild:
   amd64 stable wrt bug #517344

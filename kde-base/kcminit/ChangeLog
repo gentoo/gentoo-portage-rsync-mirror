@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.304 2014/12/11 11:46:53 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.305 2015/02/14 14:35:13 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kcminit-4.11.14.ebuild:
+  Stable for x86 wrt bug #517344
 
   11 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> kcminit-4.11.14.ebuild:
   amd64 stable wrt bug #517344

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2-r1.ebuild,v 1.5 2015/01/29 01:52:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-2.4.2-r1.ebuild,v 1.6 2015/02/14 14:38:44 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://rekonq.kde.org/"
 
 LICENSE="GPL-3"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug kde nepomuk opera"
 
 DEPEND="
