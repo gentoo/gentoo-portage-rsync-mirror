@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.58 2015/01/05 08:13:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.59 2015/02/14 07:46:06 jer Exp $
+
+*netselect-0.3-r4 (14 Feb 2015)
+
+  14 Feb 2015; Jeroen Roovers <jer@gentoo.org> +netselect-0.3-r4.ebuild,
+  files/netselect-0.3-bsd.patch:
+  Readd removed include by James Taylor (bug #540032).
 
   05 Jan 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.
