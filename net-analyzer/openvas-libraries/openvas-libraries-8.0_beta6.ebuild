@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta5.ebuild,v 1.2 2015/02/14 14:20:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta6.ebuild,v 1.1 2015/02/14 18:22:34 jlec Exp $
 
 EAPI=5
 
 inherit cmake-utils
 
-DL_ID=1866
+DL_ID=1922
 
 DESCRIPTION="A remote security scanner for Linux (openvas-libraries)"
 HOMEPAGE="http://www.openvas.org/"
@@ -21,6 +21,7 @@ RDEPEND="
 	app-crypt/gpgme
 	>=dev-libs/glib-2.16
 	>=dev-libs/hiredis-0.10.1
+	dev-libs/libgcrypt:0
 	dev-libs/libksba
 	!net-analyzer/openvas-libnasl
 	=net-libs/gnutls-2*
@@ -40,7 +41,8 @@ DOCS=( ChangeLog CHANGES README )
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-7.0.4-libssh.patch
-	"${FILESDIR}"/${PN}-8.0_beta3-underlinking.patch
+#	"${FILESDIR}"/${PN}-8.0_beta3-underlinking.patch
+	"${FILESDIR}"/${P}-include.patch
 	)
 
 src_prepare() {
