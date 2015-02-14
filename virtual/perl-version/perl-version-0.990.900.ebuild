@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/perl-version-0.990.900.ebuild,v 1.5 2015/02/14 15:39:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/perl-version-0.990.900.ebuild,v 1.6 2015/02/14 22:54:33 dilfridge Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~
 IUSE=""
 
 RDEPEND="
-	|| ( =dev-lang/perl-5.20.1* ~perl-core/${PN#perl-}-${PV} )
+	|| ( =dev-lang/perl-5.20.2* =dev-lang/perl-5.20.1* ~perl-core/${PN#perl-}-${PV} )
 	!<perl-core/${PN#perl-}-${PV}
 	!>perl-core/${PN#perl-}-${PV}-r999
 "
