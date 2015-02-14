@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.3.ebuild,v 1.4 2015/02/10 10:14:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.3.ebuild,v 1.5 2015/02/14 01:05:35 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome-games
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.26:2
 		>=x11-libs/gtk+-3.4:3
 		>=x11-libs/libnotify-0.7.4
 		help? (
-			>=app-text/scrollkeeper-0.3.8
+			app-text/rarian
 			>=gnome-base/libgnome-2.10
 		)
 	)
@@ -44,6 +44,6 @@ src_configure() {
 
 src_install() {
 	DOCS='AUTHORS ChangeLog README TODO NEWS' \
-	gnome2_src_install scrollkeeper_localstate_dir="${ED%/}"/var/lib/scrollkeeper/
+		gnome2_src_install scrollkeeper_localstate_dir="${ED%/}"/var/lib/scrollkeeper/
 	prepgamesdirs
 }

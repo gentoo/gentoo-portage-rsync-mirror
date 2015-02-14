@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/vcard
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vcard/ChangeLog,v 1.1 2015/02/14 01:06:06 mjo Exp $
+
+*vcard-0.2.12 (14 Feb 2015)
+
+  14 Feb 2015; Michael Orlitzky <mjo@gentoo.org> +metadata.xml,
+  +vcard-0.2.12.ebuild:
+  New package dev-ruby/vcard fixing bug #539346.

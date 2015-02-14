@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/awl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/awl/ChangeLog,v 1.8 2014/10/30 03:51:16 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/awl/ChangeLog,v 1.9 2015/02/14 01:14:25 mjo Exp $
+
+*awl-0.55 (14 Feb 2015)
+
+  14 Feb 2015; Michael Orlitzky <mjo@gentoo.org> +awl-0.55.ebuild:
+  Version bump to fix bug #530488.
 
   30 Oct 2014; Brian Evans <grknight@gentoo.org> -awl-0.51-r1.ebuild,
   -awl-0.51.ebuild, -awl-0.52.ebuild, -awl-0.53.ebuild:
