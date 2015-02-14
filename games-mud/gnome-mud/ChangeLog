@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gnome-mud
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.32 2014/12/02 18:43:42 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.33 2015/02/14 02:45:03 mr_bones_ Exp $
+
+  14 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> gnome-mud-0.11.2.ebuild:
+  use app-text/rarian instead of app-text/scrollkeeper
 
   02 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> gnome-mud-0.11.2.ebuild:
   restore previous style

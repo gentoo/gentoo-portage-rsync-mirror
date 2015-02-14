@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.3.12.ebuild,v 1.3 2014/11/25 13:06:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/sass-3.4.12.ebuild,v 1.1 2015/02/14 02:47:09 mrueg Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE=""
 
 ruby_add_bdepend "doc? ( >=dev-ruby/yard-0.5.3 )"
 
-ruby_add_rdepend ">=dev-ruby/listen-1.3.1:1 !!<dev-ruby/haml-3.1 !!<dev-ruby/sass-3.2.19-r1"
+ruby_add_rdepend ">=dev-ruby/listen-1.3.1 !!<dev-ruby/haml-3.1 !!<dev-ruby/sass-3.2.19-r1:0 !!<dev-ruby/sass-3.3.14-r1:3.3"
 
 # tests could use `less` if we had it
 

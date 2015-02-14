@@ -1,14 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/msgpack-0.5.8.ebuild,v 1.2 2014/08/02 01:41:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/msgpack-0.5.11.ebuild,v 1.1 2015/02/14 02:38:46 mrueg Exp $
 
 EAPI=5
 
-# jruby → uses a binary extension
 USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
-RUBY_FAKEGEM_RECIPE_TEST="rspec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
 inherit multilib ruby-fakegem
@@ -25,6 +24,9 @@ ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 all_ruby_prepare() {
 	sed -i -e '/bundler/I s:^:#:' Rakefile || die
+
+	# Remove jruby-specific specs that are run also for other rubies.
+	rm -rf spec/jruby || die
 }
 
 each_ruby_configure() {

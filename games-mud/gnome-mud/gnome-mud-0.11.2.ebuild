@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.11.2.ebuild,v 1.10 2014/12/02 18:43:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.11.2.ebuild,v 1.11 2015/02/14 02:45:03 mr_bones_ Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.23
 	>=sys-devel/gettext-0.11.5
-	app-text/scrollkeeper"
+	app-text/rarian"
 
 src_configure() {
 	gnome2_src_configure \

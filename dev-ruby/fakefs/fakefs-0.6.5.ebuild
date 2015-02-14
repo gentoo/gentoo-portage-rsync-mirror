@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.6.4.ebuild,v 1.1 2015/01/18 03:21:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/fakefs-0.6.5.ebuild,v 1.1 2015/02/14 02:35:37 mrueg Exp $
 
 EAPI=5
 

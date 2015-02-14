@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )
+DESCRIPTION=TuxOnIce + Gentoo patchset sources
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~mpagano/genpatches/ http://tuxonice.nigelcunningham.com.au/ https://github.com/NigelCunningham/tuxonice-kernel
+IUSE=symlink build
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 freedist
+PDEPEND=!build? ( virtual/dev-manager )
+RDEPEND=>=sys-apps/tuxonice-userui-1.0 || ( >=sys-power/hibernate-script-2.0 sys-power/pm-utils ) !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=3.4.106
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.4.tar.xz mirror://gentoo/genpatches-3.4-89.base.tar.xz mirror://gentoo/genpatches-3.4-89.extras.tar.xz http://tuxonice.nigelcunningham.com.au/downloads/all/tuxonice-for-linux-3.4.106-2015-02-10.patch.bz2
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	kernel-2	eade3d03e6975648587258fdf959c900	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=3f933747b6beb72093ddc052724ce4eb
