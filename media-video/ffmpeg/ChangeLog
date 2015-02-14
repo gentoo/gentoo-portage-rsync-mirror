@@ -1,6 +1,16 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.826 2015/02/11 13:45:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.828 2015/02/14 20:58:53 aballier Exp $
+
+*ffmpeg-2.5.4 (14 Feb 2015)
+
+  14 Feb 2015; Alexis Ballier <aballier@gentoo.org> +ffmpeg-2.5.4.ebuild:
+  version bump
+
+*ffmpeg-1.2.12 (14 Feb 2015)
+
+  14 Feb 2015; Alexis Ballier <aballier@gentoo.org> +ffmpeg-1.2.12.ebuild:
+  bump for the 1.2 branch
 
   11 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.12.ebuild:
   forward port keywords after masking optional useflags, bug #510340
