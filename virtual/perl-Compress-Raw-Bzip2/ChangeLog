@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Compress-Raw-Bzip2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/ChangeLog,v 1.75 2015/02/13 21:58:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/ChangeLog,v 1.76 2015/02/14 15:37:30 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-Compress-Raw-Bzip2-2.64.0.ebuild:
+  Stable for ppc, wrt bug #536790
 
   13 Feb 2015; Jeroen Roovers <jer@gentoo.org>
   perl-Compress-Raw-Bzip2-2.64.0.ebuild:

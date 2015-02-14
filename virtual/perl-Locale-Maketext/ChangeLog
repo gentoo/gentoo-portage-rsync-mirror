@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Locale-Maketext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Locale-Maketext/ChangeLog,v 1.6 2015/02/13 22:08:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Locale-Maketext/ChangeLog,v 1.7 2015/02/14 15:38:19 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-Locale-Maketext-1.250.0.ebuild:
+  Stable for ppc, wrt bug #536790
 
   13 Feb 2015; Jeroen Roovers <jer@gentoo.org>
   perl-Locale-Maketext-1.250.0.ebuild:

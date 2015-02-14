@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.347 2015/01/30 16:59:58 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.348 2015/02/14 15:46:26 billie Exp $
+
+  14 Feb 2015; Daniel Pielmeier <billie@gentoo.org>
+  -cdrtools-3.01_alpha25.ebuild:
+  Remove old.
 
 *cdrtools-3.01_alpha27 (30 Jan 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Socket
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.23 2015/02/13 22:16:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.24 2015/02/14 15:38:58 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Socket-2.13.0.ebuild:
+  Stable for ppc, wrt bug #536790
 
   13 Feb 2015; Jeroen Roovers <jer@gentoo.org> perl-Socket-2.13.0.ebuild:
   Stable for HPPA (bug #536790).

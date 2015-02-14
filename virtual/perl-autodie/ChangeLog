@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-autodie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-autodie/ChangeLog,v 1.7 2015/02/13 10:27:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-autodie/ChangeLog,v 1.8 2015/02/14 15:39:23 ago Exp $
+
+  14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-autodie-2.230.0.ebuild:
+  Stable for ppc, wrt bug #536790
 
   13 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-autodie-2.230.0.ebuild:
   Stable for x86, wrt bug #536790
