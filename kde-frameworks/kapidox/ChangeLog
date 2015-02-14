@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/kapidox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kapidox/ChangeLog,v 1.8 2015/01/09 18:25:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kapidox/ChangeLog,v 1.9 2015/02/14 22:09:55 johu Exp $
+
+*kapidox-5.7.0 (14 Feb 2015)
+
+  14 Feb 2015; Johannes Huber <johu@gentoo.org> +kapidox-5.7.0.ebuild:
+  Version bump KDE Frameworks 5.7.0
 
 *kapidox-5.6.0 (09 Jan 2015)
 
