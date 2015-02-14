@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.6 2015/01/31 12:45:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.13.ebuild,v 1.7 2015/02/14 11:30:10 hwoarang Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ ARTWORK_PV="0.9.4"
 DESCRIPTION="Movie collection manager"
 HOMEPAGE="http://www.griffith.cc/"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz
-	http://dev.gentoo.org/~hwoarang/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
+	http://dev.gentoo.org/~hwoarang/distfiles/${PN}-extra-artwork-${ARTWORK_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"

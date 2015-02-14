@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.67 2015/01/31 12:45:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.68 2015/02/14 11:30:10 hwoarang Exp $
+
+  14 Feb 2015; Markos Chandras <hwoarang@gentoo.org> griffith-0.13.ebuild:
+  Fix URL for artwork files
 
   31 Jan 2015; Markos Chandras <hwoarang@gentoo.org> -griffith-9999.ebuild,
   griffith-0.13.ebuild:

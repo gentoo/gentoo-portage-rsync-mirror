@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pinentry
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.153 2014/11/19 21:52:31 k_f Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.154 2015/02/14 11:18:33 jer Exp $
+
+  14 Feb 2015; Jeroen Roovers <jer@gentoo.org> pinentry-0.9.0.ebuild:
+  Stable for HPPA (bug #540002).
 
 *pinentry-0.9.0 (19 Nov 2014)
 
