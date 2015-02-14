@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.296 2015/02/09 20:34:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.297 2015/02/14 05:40:45 vapier Exp $
+
+*shadow-4.2.1-r1 (14 Feb 2015)
+
+  14 Feb 2015; Mike Frysinger <vapier@gentoo.org> +shadow-4.2.1-r1.ebuild:
+  Add a note above every login.defs option that is ignored when USE=pam is
+  active #522992 by Massimo Burcheri.  Enable CREATE_HOME by default (useradd -m
+  option) #531186 by Michał Górny.  Respect LINGUAS when installing man pages
+  #538310 by Alex Efros.  Do not install /etc/securetty and disable CONSOLE
+  checking by default #539508.
 
   09 Feb 2015; Mike Frysinger <vapier@gentoo.org> shadow-4.2.1.ebuild:
   Use -delete with find, and fix prefix handling in a few places.
