@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile prepare unpack
-DEPEND=dev-libs/lzo:2= sys-libs/zlib:0= sys-fs/e2fsprogs:0= sys-apps/acl app-text/asciidoc app-text/docbook-xml-dtd:4.5 app-text/xmlto sys-devel/autoconf sys-devel/automake sys-devel/libtool >=dev-vcs/git-1.8.2.1
+DEPEND=dev-libs/lzo:2= sys-libs/zlib:0= sys-fs/e2fsprogs:0= sys-apps/acl app-text/asciidoc app-text/docbook-xml-dtd:4.5 app-text/xmlto sys-devel/gnuconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Btrfs filesystem utilities
 EAPI=5
 HOMEPAGE=https://btrfs.wiki.kernel.org
@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/lzo:2= sys-libs/zlib:0= sys-fs/e2fsprogs:0=
 RESTRICT=test
 SLOT=0/0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=db7cef23f3cda0b5f38d53b3bccb336f
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=b80a7d4d35b19a6bada8989d3f3d5a65

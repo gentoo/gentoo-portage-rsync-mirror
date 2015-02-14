@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2014j.ebuild,v 1.2 2015/02/14 02:07:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2015a.ebuild,v 1.2 2015/02/14 02:27:33 floppym Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.iana.org/time-zones/repository/releases/tzdata${data_ver}.ta
 
 LICENSE="BSD public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="nls right_timezone elibc_FreeBSD elibc_glibc"
 
 RDEPEND="!sys-libs/glibc[vanilla(+)]"
@@ -40,7 +40,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2014h-makefile.patch
+	epatch "${FILESDIR}"/${PN}-2015a-makefile.patch
 	tc-is-cross-compiler && cp -pR "${S}" "${S}"-native
 }
 
@@ -139,9 +139,12 @@ pkg_config() {
 		elog "Your ${etc_lt} has been reset to Factory; enjoy!"
 		tz="Factory"
 	fi
-	einfo "Updating ${etc_lt} with ${EROOT}usr/share/zoneinfo/${tz}"
-	[[ -L ${etc_lt} ]] && rm -f "${etc_lt}"
-	cp -f "${EROOT}"/usr/share/zoneinfo/"${tz}" "${etc_lt}"
+	if [[ -L ${etc_lt} ]]; then
+		einfo "Skipping symlinked ${etc_lt}"
+	else
+		einfo "Updating ${etc_lt} with ${EROOT}usr/share/zoneinfo/${tz}"
+		cp -f "${EROOT}"/usr/share/zoneinfo/"${tz}" "${etc_lt}"
+	fi
 }
 
 pkg_postinst() {

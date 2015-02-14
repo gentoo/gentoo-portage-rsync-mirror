@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/davical-1.1.3.1.ebuild,v 1.1 2014/11/14 19:29:54 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/davical-1.1.3.1-r1.ebuild,v 1.1 2015/02/14 02:13:24 mjo Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="app-admin/pwgen
 	dev-perl/DBI
 	dev-perl/DBD-Pg
 	dev-perl/yaml
-	>=dev-php/awl-0.51
+	>=dev-php/awl-0.55
 	virtual/httpd-php"
 DEPEND="${RDEPEND}
 doc? ( dev-php/PEAR-PhpDocumentor )"

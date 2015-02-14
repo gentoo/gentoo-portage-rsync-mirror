@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.38 2015/02/09 21:55:27 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.39 2015/02/14 02:21:33 floppym Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ ${PV} != 9999 ]]; then
 	SRC_URI="https://www.kernel.org/pub/linux/kernel/people/kdave/${PN}/${PN}-${MY_PV}.tar.xz"
 	S="${WORKDIR}"/${PN}-${MY_PV}
 else
-	inherit git-r3
+	inherit autotools git-r3
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git
 		https://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git"
 fi
@@ -40,17 +40,19 @@ DEPEND="${RDEPEND}
 	app-text/xmlto
 "
 
-if [[ ${PV} = 9999 ]]; then
-DEPEND+="
-	sys-devel/autoconf
-	sys-devel/automake
-	sys-devel/libtool
-"
+if [[ ${PV} == 9999 ]]; then
+	DEPEND+=" sys-devel/gnuconfig"
 fi
 
 src_prepare() {
 	epatch_user
-	[[ ${PV} = 9999 ]] && ./autogen.sh
+	if [[ ${PV} == 9999 ]]; then
+		eautoreconf
+		mkdir config || die
+		ln -s "${EPREFIX}"/usr/share/automake-${WANT_AUTOMAKE}/install-sh config/install-sh || die
+		ln -s "${EPREFIX}"/usr/share/gnuconfig/config.guess config/config.guess || die
+		ln -s "${EPREFIX}"/usr/share/gnuconfig/config.sub config/config.sub || die
+	fi
 }
 
 src_compile() {
