@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta5.ebuild,v 1.1 2015/02/03 08:52:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta5.ebuild,v 1.2 2015/02/14 14:20:14 jlec Exp $
 
 EAPI=5
 
@@ -22,17 +22,17 @@ RDEPEND="
 	>=dev-libs/glib-2.16
 	>=dev-libs/hiredis-0.10.1
 	dev-libs/libksba
+	!net-analyzer/openvas-libnasl
 	=net-libs/gnutls-2*
 	net-libs/libpcap
-	net-analyzer/net-snmp
-	!net-analyzer/openvas-libnasl
 	>=net-libs/libssh-0.5.0
+	net-analyzer/net-snmp
 	ldap? (	net-nds/openldap )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	dev-util/cmake"
+	"
 
 S="${WORKDIR}"/${P/_beta/+beta}
 

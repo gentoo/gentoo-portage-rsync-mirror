@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7.0.6.ebuild,v 1.1 2014/12/01 17:01:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7.0.6.ebuild,v 1.2 2015/02/14 14:11:33 jlec Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE="+pdf"
 
 DEPEND="
 	~net-analyzer/openvas-libraries-7.0.6
-	~net-analyzer/openvas-scanner-4.0.5
+	~net-analyzer/openvas-scanner-4.0.4
 	~net-analyzer/openvas-manager-5.0.7
 	~net-analyzer/openvas-cli-1.3.1
 	net-analyzer/openvas-tools

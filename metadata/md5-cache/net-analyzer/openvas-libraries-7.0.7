@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-libs/glib-2.12 =net-libs/gnutls-2* net-libs/libpcap app-crypt/gpgme !net-analyzer/openvas-libnasl net-libs/libssh ldap? ( net-nds/openldap ) sys-devel/bison sys-devel/flex virtual/pkgconfig dev-util/cmake sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=app-crypt/gpgme >=dev-libs/glib-2.12 =net-libs/gnutls-2* !net-analyzer/openvas-libnasl net-libs/libpcap net-libs/libssh ldap? ( net-nds/openldap ) sys-devel/bison sys-devel/flex virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=A remote security scanner for Linux (openvas-libraries)
 EAPI=5
 HOMEPAGE=http://www.openvas.org/
 IUSE=ldap
 KEYWORDS=~amd64 ~arm ~ppc ~x86
 LICENSE=GPL-2
-RDEPEND=>=dev-libs/glib-2.12 =net-libs/gnutls-2* net-libs/libpcap app-crypt/gpgme !net-analyzer/openvas-libnasl net-libs/libssh ldap? ( net-nds/openldap )
+RDEPEND=app-crypt/gpgme >=dev-libs/glib-2.12 =net-libs/gnutls-2* !net-analyzer/openvas-libnasl net-libs/libpcap net-libs/libssh ldap? ( net-nds/openldap )
 SLOT=0
 SRC_URI=http://wald.intevation.org/frs/download.php/1907/openvas-libraries-7.0.7.tar.gz
 _eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e70c3cce08c0a830011fbaad40fc5a59
+_md5_=e0957675ed90659ac040793fde4db4c0

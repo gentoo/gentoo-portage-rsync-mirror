@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-cli/openvas-cli-1.4_beta5.ebuild,v 1.1 2015/02/03 10:26:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-cli/openvas-cli-1.4_beta5.ebuild,v 1.2 2015/02/14 14:22:53 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
-	>=net-analyzer/openvas-libraries-8.0_beta4
+	>=net-analyzer/openvas-libraries-8.0_beta5
 	!net-analyzer/openvas-client"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

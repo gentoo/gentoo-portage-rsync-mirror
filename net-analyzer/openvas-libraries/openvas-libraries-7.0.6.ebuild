@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-7.0.6.ebuild,v 1.2 2015/01/25 16:36:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-7.0.6.ebuild,v 1.3 2015/02/14 14:20:14 jlec Exp $
 
 EAPI=5
 
@@ -18,18 +18,18 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="ldap"
 
 RDEPEND="
+	app-crypt/gpgme
 	>=dev-libs/glib-2.12
+	!net-analyzer/openvas-libnasl
 	=net-libs/gnutls-2*
 	net-libs/libpcap
-	app-crypt/gpgme
-	!net-analyzer/openvas-libnasl
 	net-libs/libssh
 	ldap? (	net-nds/openldap )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	dev-util/cmake"
+	"
 
 DOCS="ChangeLog CHANGES README"
 

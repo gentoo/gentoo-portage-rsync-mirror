@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-8_beta4.ebuild,v 1.1 2014/12/01 17:01:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/openvas-7.0.7.ebuild,v 1.1 2015/02/14 14:07:33 jlec Exp $
 
 EAPI=5
 
@@ -11,16 +11,15 @@ HOMEPAGE="http://www.openvas.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+pdf"
 
 DEPEND="
-	>=net-analyzer/openvas-libraries-8_beta4
-	>=net-analyzer/openvas-scanner-5_beta4
-	>=net-analyzer/openvas-manager-6_beta4
-	>=net-analyzer/openvas-cli-1.4_beta4
+	~net-analyzer/openvas-libraries-7.0.7
+	~net-analyzer/openvas-scanner-4.0.5
+	~net-analyzer/openvas-manager-5.0.8
+	~net-analyzer/openvas-cli-1.3.1
 	net-analyzer/openvas-tools
-	>=net-analyzer/greenbone-security-assistant-6_beta4
 	pdf? (
 		app-text/htmldoc
 		dev-texlive/texlive-latexextra
@@ -41,4 +40,5 @@ pkg_postinst() {
 	optfeature "ovaldi (OVAL) — an OVAL Interpreter" app-forensics/ovaldi
 	optfeature "portbunny — a Linux-kernel-based portscanner" net-analyzer/portbunny
 	optfeature "w3af — a web application attack and audit framework" net-analyzer/w3af
+	optfeature "The Greenbone Security Assistant as alternative to the plain scanner" net-analyzer/greenbone-security-assistant
 }
