@@ -80,5 +80,14 @@
       system but could reduce slightly the overhead on single-user
       non-networked systems.
     </flag>
+    <flag name="nullok">
+      Enable the nullok option with the pam_unix module. This allows
+      people to login with blank passwords.
+    </flag>
+    <flag name="securetty">
+      Enable pam_securetty module in the login stack. Not generally
+      relevant anymore as the login stack only refers to local logins
+      and local terminals imply secure access in the first place.
+    </flag>
   </use>
 </pkgmetadata>
