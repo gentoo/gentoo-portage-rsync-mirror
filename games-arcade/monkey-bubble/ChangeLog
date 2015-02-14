@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monkey-bubble
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.32 2015/02/06 22:44:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.33 2015/02/13 23:57:05 mr_bones_ Exp $
+
+  13 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  files/monkey-bubble-0.4.0-asneeded.patch, monkey-bubble-0.4.0.ebuild:
+  use app-text/rarian instead of app-text/scrollkeeper
 
   06 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   monkey-bubble-0.4.0.ebuild:
