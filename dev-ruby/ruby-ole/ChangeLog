@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-ole
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ole/ChangeLog,v 1.1 2015/02/14 18:58:36 mjo Exp $
+
+*ruby-ole-1.2.11.8 (14 Feb 2015)
+
+  14 Feb 2015; Michael Orlitzky <mjo@gentoo.org> +metadata.xml,
+  +ruby-ole-1.2.11.8.ebuild:
+  New package dev-ruby/ruby-ole to access OLE documents with Ruby. Bug #539618.

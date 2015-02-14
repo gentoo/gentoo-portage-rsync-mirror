@@ -15,16 +15,3 @@ index c691100..d78ffa6 100644
  set (OPENVAS_SYSCONF_DIR "${SYSCONFDIR}/openvas")
  
  set (OPENVAS_NVT_DIR     "${OPENVAS_STATE_DIR}/plugins")
-diff --git a/tools/greenbone-nvt-sync b/tools/greenbone-nvt-sync
-index 50bce8c..d773e4c 100755
---- a/tools/greenbone-nvt-sync
-+++ b/tools/greenbone-nvt-sync
-@@ -78,7 +78,7 @@ SELFTEST_FAIL=0
- PORT=24
- 
- # Directory where pidfiles are located
--PIDFILEDIR="/var/run"
-+PIDFILEDIR="/run"
- 
- # If ENABLED is set to 0, the sync script will not perform a synchronization.
- ENABLED=1

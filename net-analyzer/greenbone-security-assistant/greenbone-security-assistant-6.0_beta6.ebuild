@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/greenbone-security-assistant-6.0_beta3.ebuild,v 1.1 2014/10/22 08:19:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/greenbone-security-assistant-6.0_beta6.ebuild,v 1.1 2015/02/14 18:33:30 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit cmake-utils systemd
 
 MY_PN=gsad
 
-DL_ID=1775
+DL_ID=1934
 
 DESCRIPTION="Greenbone Security Assistant for openvas"
 HOMEPAGE="http://www.openvas.org/"
@@ -20,8 +20,9 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
-	>=net-analyzer/openvas-libraries-8.0_beta3
+	dev-libs/libgcrypt
 	dev-libs/libxslt
+	>=net-analyzer/openvas-libraries-8.0_beta6
 	net-libs/libmicrohttpd[messages]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
