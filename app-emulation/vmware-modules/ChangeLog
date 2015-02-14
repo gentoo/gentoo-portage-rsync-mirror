@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-modules
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.123 2014/10/16 21:48:57 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.124 2015/02/14 08:37:35 jer Exp $
+
+  14 Feb 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove short <longdescription>.
 
 *vmware-modules-279.3 (16 Oct 2014)
 
