@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16359 2015/02/13 10:08:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16360 2015/02/14 19:50:16 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -49,11 +49,6 @@ app-office/openerp-web
 # Michał Górny <mgorny@gentoo.org> (11 Feb 2015)
 # Potentially destructive to @world, bug #539746.
 =sys-apps/portage-2.2.16
-
-# Manuel Rüger <mrueg@gentoo.org> (10 Feb 2015)
-# Breaks build for cups-filters-1.0.61
-# See bug #539492
-=app-text/poppler-0.31.0
 
 # Kristian Fiskerstrand <k_f@gentoo.org> (09 Feb 2015)
 # Dead upstream, will be removed in 30 days.

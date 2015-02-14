@@ -21,7 +21,7 @@ rc-service openvassd create_cache
 # Start the OpenVAS Scanner
 rc-service openvassd start or systemctl start openvassd.service
 
-# Initialize the Database (This is going to take some time, pehaps time to get coffee?)
+# Initialize the Database (This is going to take some time, perhaps time to get coffee?)
 openvasmd --rebuild --progress -v
 
 # Create an admin user and note down the initial password
