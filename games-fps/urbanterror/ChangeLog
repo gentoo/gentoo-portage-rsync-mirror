@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/urbanterror
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.52 2015/01/27 07:25:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.53 2015/02/14 21:37:12 anarchy Exp $
+
+*urbanterror-4.2.023 (14 Feb 2015)
+
+  14 Feb 2015;  <anarchy@gentoo.org> +urbanterror-4.2.023.ebuild, metadata.xml:
+  Misc bug fixes upstream, last 4.2.xxx release. Add support for hardened users.
 
   27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/urbanterror-4.1.1-build.patch, -files/urbanterror-4.1.1-minizip.patch,

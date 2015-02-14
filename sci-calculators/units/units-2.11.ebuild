@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.11.ebuild,v 1.8 2015/01/02 14:53:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/units-2.11.ebuild,v 1.9 2015/02/14 21:50:20 blueness Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="FDL-1.3 GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ~ppc ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="+units_cur"
 
 DEPEND="
