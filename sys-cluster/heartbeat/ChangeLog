@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.105 2014/06/16 09:55:59 ultrabug Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.106 2015/02/14 10:21:16 jer Exp $
+
+  14 Feb 2015; Jeroen Roovers <jer@gentoo.org> heartbeat-3.0.5-r2.ebuild:
+  Stable for HPPA (bug #536640).
 
 *heartbeat-3.0.5-r2 (16 Jun 2014)
 
