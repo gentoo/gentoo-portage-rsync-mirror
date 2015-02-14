@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/core_kernel-112.06.02.ebuild,v 1.1 2015/01/29 11:18:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/core_kernel-112.06.02.ebuild,v 1.2 2015/02/14 11:43:28 aballier Exp $
 
 EAPI="5"
 
@@ -29,6 +29,7 @@ RDEPEND="
 	>=dev-ml/pipebang-109.15.00:=
 	>=dev-ml/sexplib-109.20.00:=
 	>=dev-ml/variantslib-109.15.00:=
+	dev-ml/custom_printf:=
 	dev-ml/pa_test:=
 	dev-ml/enumerate:=
 	dev-ml/pa_bench:=

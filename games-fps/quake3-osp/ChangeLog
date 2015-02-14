@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-osp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.10 2009/10/10 17:28:02 nyhm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.11 2015/02/14 11:54:13 mgorny Exp $
+
+  14 Feb 2015; Michał Górny <mgorny@gentoo.org> quake3-osp-1.03a-r1.ebuild:
+  Fix SRC_URI, add missing ||die. Bug #460312 with PR by Michael Mair-
+  Keimberger.
 
   10 Oct 2009; Tristan Heaven <nyhm@gentoo.org> quake3-osp-1.03a-r1.ebuild:
   Stable on amd64/x86
