@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1038 2015/02/09 16:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1039 2015/02/15 05:28:39 vapier Exp $
+
+  15 Feb 2015; Mike Frysinger <vapier@gentoo.org> glibc-2.21.ebuild:
+  Add fix from upstream for memcpy on x86 systems #539820 by Matt Turner.
 
   09 Feb 2015; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_configure.eblit:
