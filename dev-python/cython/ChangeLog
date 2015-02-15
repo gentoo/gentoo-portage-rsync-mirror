@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.142 2015/01/03 00:06:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.143 2015/02/15 06:12:01 patrick Exp $
+
+*cython-0.22 (15 Feb 2015)
+
+  15 Feb 2015; Patrick Lauer <patrick@gentoo.org> +cython-0.22.ebuild:
+  Bump
 
   03 Jan 2015; Ian Delaney <idella4@gentoo.org> cython-0.19.1-r1.ebuild,
   cython-0.21.1.ebuild, cython-0.21.ebuild:

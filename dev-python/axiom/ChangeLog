@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.49 2015/01/11 07:12:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.50 2015/02/15 06:28:33 patrick Exp $
+
+*axiom-0.7.3 (15 Feb 2015)
+
+  15 Feb 2015; Patrick Lauer <patrick@gentoo.org> +axiom-0.7.3.ebuild:
+  Bump
 
 *axiom-0.7.2 (11 Jan 2015)
 
