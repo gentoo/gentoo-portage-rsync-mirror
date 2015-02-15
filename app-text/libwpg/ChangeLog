@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libwpg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.32 2014/11/21 11:43:31 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.34 2015/02/15 14:58:52 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libwpg-0.3.0.ebuild:
+  Stable for x86, wrt bug #534684
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libwpg-0.3.0.ebuild:
+  Stable for amd64, wrt bug #534684
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> libwpg-0.3.0.ebuild:
   Keyworded on alpha, bug 520692

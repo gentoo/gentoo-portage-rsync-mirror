@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libetonyek
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/ChangeLog,v 1.8 2014/10/10 20:16:49 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/ChangeLog,v 1.10 2015/02/15 14:58:37 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libetonyek-0.1.1.ebuild:
+  Stable for x86, wrt bug #534684
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libetonyek-0.1.1.ebuild:
+  Stable for amd64, wrt bug #534684
 
   10 Oct 2014; Markus Meier <maekke@gentoo.org> libetonyek-0.1.1.ebuild:
   add ~arm, bug #520692

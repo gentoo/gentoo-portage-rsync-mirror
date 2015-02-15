@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xmonad-log-applet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmonad-log-applet/ChangeLog,v 1.5 2014/11/13 13:04:49 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmonad-log-applet/ChangeLog,v 1.6 2015/02/15 14:35:25 slyfox Exp $
+
+  15 Feb 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  xmonad-log-applet-2.0.0-r301.ebuild:
+  Drop wrong call to 'ghc-package_pkg_postinst'.
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -xmonad-log-applet-2.0.0-r200.ebuild, -xmonad-log-applet-2.0.0-r300.ebuild:

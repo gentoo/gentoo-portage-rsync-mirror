@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.40 2015/01/31 14:11:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.41 2015/02/15 14:59:57 pacho Exp $
+
+  15 Feb 2015; Pacho Ramos <pacho@gentoo.org> amd-2.3.1.ebuild:
+  ppc/ppc64 stable, bug #534626
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> amd-2.3.1.ebuild:
   Stable for amd64, wrt bug #534626

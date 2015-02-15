@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/glm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glm/ChangeLog,v 1.6 2015/02/04 09:32:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glm/ChangeLog,v 1.8 2015/02/15 14:59:07 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> glm-0.9.6.1.ebuild:
+  Stable for x86, wrt bug #534684
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> glm-0.9.6.1.ebuild:
+  Stable for amd64, wrt bug #534684
 
 *glm-0.9.6.1 (04 Feb 2015)
 

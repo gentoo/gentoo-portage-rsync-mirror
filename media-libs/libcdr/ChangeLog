@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libcdr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.37 2015/02/04 09:41:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.40 2015/02/15 14:59:10 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libcdr-0.1.1.ebuild:
+  Stable for x86, wrt bug #534684
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libcdr-0.1.1.ebuild:
+  Stable for amd64, wrt bug #534684
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libcdr-0.0.16.ebuild,
+  libcdr-0.1.0.ebuild, libcdr-0.1.1.ebuild, libcdr-9999.ebuild:
+  Move KEYWORDS to another line because of bug #399061
 
   04 Feb 2015; Michał Górny <mgorny@gentoo.org> libcdr-0.1.0.ebuild,
   libcdr-0.1.1.ebuild, libcdr-9999.ebuild:

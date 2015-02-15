@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-0.0.2.ebuild,v 1.1 2014/12/27 16:11:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-0.0.2.ebuild,v 1.3 2015/02/15 14:59:04 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://sf.net/projects/libwpd/files/${PN}/${P}/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~x86 ~x86-fbsd"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~mips x86 ~x86-fbsd"
 fi
 
 LICENSE="|| ( MPL-2.0 LGPL-2.1 )"

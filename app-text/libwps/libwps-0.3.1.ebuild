@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.3.1.ebuild,v 1.1 2015/01/02 14:23:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.3.1.ebuild,v 1.3 2015/02/15 14:58:55 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="|| ( LGPL-2.1 MPL-2.0 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~x86"
+KEYWORDS="~alpha amd64 ~arm x86"
 IUSE="doc debug static-libs"
 
 RDEPEND="
