@@ -1,18 +1,18 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-saa716x/v4l-dvb-saa716x-0.0.1_p20130802.ebuild,v 1.1 2013/10/03 14:06:50 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-saa716x/v4l-dvb-saa716x-0.0.1_p20141109.ebuild,v 1.1 2015/02/15 16:26:36 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit linux-info linux-mod
 
 DESCRIPTION="driver for saa716x based dvb cards like Technotrend S2-6400 or Technisat Skystar 2 eXpress HD"
-HOMEPAGE="http://powarman.dyndns.org/hgwebdir.cgi/v4l-dvb-saa716x/"
+HOMEPAGE="https://bitbucket.org/powARman/v4l-dvb-saa716x/overview"
 
-HG_REVISION="0dab24906ff0"
-HG_REVISION_DATE="20130802"
+HG_REVISION="d7e98fc59230"
+HG_REVISION_DATE="20141109"
 
-SRC_URI="http://powarman.dyndns.org/hgwebdir.cgi/v4l-dvb-saa716x/archive/${HG_REVISION}.tar.gz
+SRC_URI="https://bitbucket.org/powARman/v4l-dvb-saa716x/get/${HG_REVISION}.tar.gz
 -> v4l-dvb-saa716x-0.0.1_p${HG_REVISION_DATE}.tar.gz"
 
 LICENSE="GPL-2"
@@ -24,7 +24,7 @@ DEPEND=""
 RDEPEND="${DEPEND}
 	firmware? ( sys-firmware/tt-s2-6400-firmware )"
 
-S="${WORKDIR}/v4l-dvb-saa716x-${HG_REVISION}"
+S="${WORKDIR}/powARman-v4l-dvb-saa716x-${HG_REVISION}"
 
 BUILD_TARGETS="modules"
 MODULE_NAMES="saa716x_ff(misc:${ROOT}/usr/src/linux:${S}/linux/drivers/media/common/saa716x)
