@@ -11,7 +11,7 @@ MY_PV="$(get_version_component_range 1-2)"
 MY_DATE="April2012"
 
 DESCRIPTION="NVIDIA's C graphics compiler toolkit"
-HOMEPAGE="http://developer.nvidia.com/object/cg_toolkit.html"
+HOMEPAGE="http://developer.nvidia.com/cg_toolkit"
 SRC_URI="
 	abi_x86_32? (
 		http://developer.download.nvidia.com/cg/Cg_${MY_PV}/Cg-${MY_PV}_${MY_DATE}_x86.tgz
