@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r3.ebuild,v 1.13 2014/02/06 12:19:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r3.ebuild,v 1.14 2015/02/15 02:18:59 vapier Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -118,14 +118,6 @@ src_prepare() {
 	rm -rf libltdl
 	sed -i -e '/libltdl/d' configure.ac || die
 	sed -i -e 's/AC_LIBLTDL_CONVENIENCE/AC_LIBLTDL_INSTALLABLE/' configure.ac || die
-
-	# Update this file from our local libtool which is much newer than the
-	# bundled one. This allows MAKEOPTS=-j2 to work on FreeBSD.
-	if has_version ">=sys-devel/libtool-2" ; then
-		cp "${EPREFIX}"/usr/share/libtool/config/install-sh config || die
-	else
-		cp "${EPREFIX}"/usr/share/libtool/install-sh config || die
-	fi
 
 	# no nls, no gettext, no iconv macro, so disable it
 	use nls || { sed -i -e '/^AM_ICONV/d' configure.ac || die; }

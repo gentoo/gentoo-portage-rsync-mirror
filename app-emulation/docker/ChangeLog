@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.37 2015/02/11 04:12:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.38 2015/02/15 02:08:25 patrick Exp $
+
+  15 Feb 2015; Patrick Lauer <patrick@gentoo.org> docker-1.3.3-r1.ebuild,
+  docker-1.4.1.ebuild, docker-1.5.0.ebuild:
+  Make kernel checks nonfatal to allow building (binpkgs etc.)
 
 *docker-1.5.0 (11 Feb 2015)
 

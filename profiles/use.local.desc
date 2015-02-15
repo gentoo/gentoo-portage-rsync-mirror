@@ -1829,7 +1829,6 @@ dev-libs/efl:glib - Enable dev-libs/glib support.
 dev-libs/efl:harfbuzz - Enable complex text shaping and layout support.
 dev-libs/efl:ibus - Enable Intelligent Input Bus.
 dev-libs/efl:ico - Enable Ico image loader.
-dev-libs/efl:jp2k - Enable JPEG 2000 image loader.
 dev-libs/efl:oldlua - USE dev-lang/lua instead of dev-lang/luajit
 dev-libs/efl:physics - Enable Bullet physics effects and support.
 dev-libs/efl:pixman - Enable PixMan for software rendering.
