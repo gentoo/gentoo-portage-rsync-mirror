@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p5.ebuild,v 1.2 2014/11/28 19:11:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p5.ebuild,v 1.3 2015/02/15 06:46:47 gienah Exp $
 
 EAPI="5"
 
@@ -37,9 +37,11 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -e 's@\($(INSTALLLIB)\) revision@\1@' \
-		-i "${S}/Makefile.build" \
-		|| die "Could not edit Makefile.build to remove install revision"
+	epatch "${FILESDIR}/${PN}-8.4_p5-do-not-install-revision.patch"
+	# Fix generation of the index_urls.txt file with Gentoo dev-tex/hevea versions.
+	# http://lists.gforge.inria.fr/pipermail/coq-commits/2014-October/013582.html
+	epatch "${FILESDIR}/${P}-hevea.patch"
+	epatch "${FILESDIR}/${PN}-8.4_p5-no-clean-before-test.patch"
 }
 
 src_configure() {
@@ -89,8 +91,12 @@ src_compile() {
 	emake STRIP="true" -j1 world VERBOSE=1
 }
 
+src_test() {
+	emake STRIP="true" check VERBOSE=1
+}
+
 src_install() {
-	emake STRIP="true" COQINSTALLPREFIX="${D}" install
+	emake STRIP="true" COQINSTALLPREFIX="${D}" install VERBOSE=1
 	dodoc README CREDITS CHANGES
 
 	use gtk && make_desktop_entry "coqide" "Coq IDE" "${EPREFIX}/usr/share/coq/coq.png"

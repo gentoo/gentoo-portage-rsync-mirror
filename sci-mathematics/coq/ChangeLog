@@ -1,6 +1,16 @@
 # ChangeLog for sci-mathematics/coq
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.84 2014/11/28 19:11:10 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.85 2015/02/15 06:46:47 gienah Exp $
+
+  15 Feb 2015; Mark Wright <gienah@gentoo.org>
+  +files/coq-8.4_p5-do-not-install-revision.patch,
+  +files/coq-8.4_p5-hevea.patch, +files/coq-8.4_p5-no-clean-before-test.patch,
+  coq-8.4_p5.ebuild:
+  Fix generation of /usr/share/doc/coq-8.4_p5/html/refman/index_urls.txt, patch
+  from upstream: http://lists.gforge.inria.fr/pipermail/coq-
+  commits/2014-October/013582.html. Replace sed to avoid installing revision
+  with patch. Patch Makefile.build to avoid deleting html/refman/index_urls.txt
+  in the test phase and then failing to install with FEATURES=test and USE=doc
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> coq-8.4_p5.ebuild:
   update deps for ocaml 4.02

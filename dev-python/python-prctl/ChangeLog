@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-prctl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-prctl/ChangeLog,v 1.5 2015/01/06 01:03:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-prctl/ChangeLog,v 1.6 2015/02/15 06:34:24 patrick Exp $
+
+*python-prctl-1.6.0 (15 Feb 2015)
+
+  15 Feb 2015; Patrick Lauer <patrick@gentoo.org> +python-prctl-1.6.0.ebuild:
+  Bump
 
 *python-prctl-1.5.0-r1 (06 Jan 2015)
 
