@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.1.4.ebuild,v 1.4 2014/12/28 15:18:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.1.4.ebuild,v 1.5 2015/02/15 09:01:19 patrick Exp $
 
 EAPI="4"
 
@@ -25,8 +25,6 @@ DEPEND="|| (
 			dev-db/postgresql:9.2[server]
 			dev-db/postgresql:9.1[server]
 			dev-db/postgresql:9.0[server]
-			dev-db/postgresql:8.4[server]
-			dev-db/postgresql:8.3[server]
 		)
 		dev-db/postgresql[threads]
 		perl? ( dev-perl/DBD-Pg )
