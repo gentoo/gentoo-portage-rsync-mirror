@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.59 2015/02/08 10:06:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.60 2015/02/15 15:38:19 hwoarang Exp $
+
+*lxc-1.1.0-r1 (15 Feb 2015)
+
+  15 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +files/lxc_at.service.2,
+  +lxc-1.1.0-r1.ebuild:
+  Since 1.1.0, guests are started in daemon mode so adapt the systemd service
+  file. Also add missing Delegate=yes to facilitate systemd containers. Bug
+  #540076 by Joachim Herb
 
   08 Feb 2015; Markos Chandras <hwoarang@gentoo.org> lxc-1.1.0.ebuild:
   Add another kernel config check for CHECKPOINT_RESTORE
