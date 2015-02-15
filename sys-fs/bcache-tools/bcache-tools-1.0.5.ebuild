@@ -6,7 +6,7 @@ EAPI=5
 
 inherit toolchain-funcs udev
 
-DESCRIPTION="Tools for bachefs"
+DESCRIPTION="Tools for bcachefs"
 HOMEPAGE="http://bcache.evilpiepirate.org/"
 SRC_URI="https://github.com/g2p/bcache-tools/archive/v${PV}.tar.gz -> ${P}.tgz"
 
