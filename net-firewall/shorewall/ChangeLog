@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.276 2015/02/08 16:34:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.277 2015/02/15 11:26:04 hwoarang Exp $
+
+  15 Feb 2015; Markos Chandras <hwoarang@gentoo.org> shorewall-4.6.6.2.ebuild:
+  Version bump. Bug #539278
 
 *shorewall-4.6.6.2 (08 Feb 2015)
 
