@@ -20,7 +20,8 @@ S="${WORKDIR}/pidof"
 
 PATCHES=( "${FILESDIR}/${P}-gfbsd.patch"
 	"${FILESDIR}/${P}-firstarg.patch"
-	"${FILESDIR}/${P}-pname.patch" )
+	"${FILESDIR}/${P}-pname.patch"
+	"${FILESDIR}/${P}-fbsd10.patch" )
 
 src_install() {
 	into /
