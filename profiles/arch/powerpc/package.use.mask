@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.233 2015/02/11 13:42:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.234 2015/02/15 21:24:33 dilfridge Exp $
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (15 Feb 2015)
+# There's no keyworded office implementation anymore.
+gnome-extra/sushi office
 
 # Alexis Ballier <aballier@gentoo.org> (11 Feb 2015)
 # Missing ffmpeg deps, bug #510340

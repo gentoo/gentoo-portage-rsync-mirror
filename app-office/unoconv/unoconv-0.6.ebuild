@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/unoconv-0.6.ebuild,v 1.8 2014/04/17 05:18:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/unoconv/unoconv-0.6.ebuild,v 1.9 2015/02/15 21:21:49 dilfridge Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ SLOT="0"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == 9999* ]] || \
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
