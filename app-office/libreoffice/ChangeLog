@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.613 2015/02/15 14:58:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.614 2015/02/15 16:44:40 dilfridge Exp $
+
+  15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.3.9999.ebuild, libreoffice-4.4.9999.ebuild:
+  Sync with overlay: relaxed l10n version deps, drop ppc
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libreoffice-4.3.5.2.ebuild:
   Stable for x86, wrt bug #534684

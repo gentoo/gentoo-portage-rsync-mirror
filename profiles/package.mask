@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16362 2015/02/15 15:13:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16363 2015/02/15 16:58:46 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
+# Mask old virtuals based on the slot-per-version idea for removal,
+# bug 421497.
+<virtual/rubygems-9
+<virtual/ruby-ssl-6
+<virtual/ruby-threads-6
+
 
 # Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
 # Masked for removal due to licensing issues, bug 539778
