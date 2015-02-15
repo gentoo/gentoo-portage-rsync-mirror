@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.219 2015/02/07 16:45:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.220 2015/02/15 15:07:39 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> firefox-bin-31.4.0.ebuild:
+  Stable for x86, wrt bug #536564
 
   07 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> firefox-bin-31.4.0.ebuild:
   amd64 stable wrt bug #536564

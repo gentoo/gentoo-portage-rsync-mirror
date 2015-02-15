@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.380 2015/02/08 10:13:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.381 2015/02/15 15:07:35 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> firefox-31.4.0.ebuild:
+  Stable for x86, wrt bug #536564
 
   08 Feb 2015; Jeroen Roovers <jer@gentoo.org> firefox-31.4.0.ebuild:
   Stable for HPPA (bug #536564).
