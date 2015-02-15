@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.5.ebuild,v 1.1 2015/01/28 16:50:48 zx2c4 Exp $
 
-EAPI=4
+EAPI=5
 
 inherit bash-completion-r1 elisp-common
 
