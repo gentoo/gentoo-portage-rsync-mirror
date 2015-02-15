@@ -1,6 +1,10 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.64 2015/02/04 19:36:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.65 2015/02/15 10:22:48 aballier Exp $
+
+  15 Feb 2015; Alexis Ballier <aballier@gentoo.org> noad-0.8.6-r1.ebuild,
+  +files/patches-0.8.x/noad-0.8.6-ffmpeg25.patch:
+  fix build with ffmpeg 2.5, bug #540090
 
   04 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> noad-0.8.6-r1.ebuild:
   stable amd64 x86, wrt bug 538810

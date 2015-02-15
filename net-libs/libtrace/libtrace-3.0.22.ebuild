@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.20.ebuild,v 1.1 2014/07/09 13:32:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtrace/libtrace-3.0.22.ebuild,v 1.1 2015/02/15 10:06:49 jer Exp $
 
 EAPI=5
 
@@ -27,10 +27,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autoconf-1.13.patch
-	epatch "${FILESDIR}"/${P}-libwandio-linking.patch
-	epatch "${FILESDIR}"/${P}-no-examples.patch
-	epatch "${FILESDIR}"/${P}-tinfo.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.0.20-autoconf-1.13.patch \
+		"${FILESDIR}"/${PN}-3.0.20-no-examples.patch \
+		"${FILESDIR}"/${PN}-3.0.20-tinfo.patch
 
 	eautoreconf
 }
