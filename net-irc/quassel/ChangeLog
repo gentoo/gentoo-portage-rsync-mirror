@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.187 2015/02/11 21:14:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.188 2015/02/15 22:05:48 johu Exp $
+
+  15 Feb 2015; Johannes Huber <johu@gentoo.org> quassel-9999.ebuild:
+  Update dependencies for Qt5 based kde support.
 
   11 Feb 2015; Johannes Huber <johu@gentoo.org> quassel-9999.ebuild:
   Restore crypt + kde for qt5 build.

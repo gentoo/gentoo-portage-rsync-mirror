@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.77 2015/02/11 21:14:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.78 2015/02/15 22:05:48 johu Exp $
 
 EAPI=5
 
@@ -48,6 +48,8 @@ GUI_RDEPEND="
 		kde? (
 			kde-frameworks/kconfigwidgets:5
 			kde-frameworks/kcoreaddons:5
+			kde-frameworks/knotifications:5
+			kde-frameworks/knotifyconfig:5
 			kde-frameworks/ktextwidgets:5
 			kde-frameworks/kxmlgui:5
 			kde-frameworks/sonnet:5
