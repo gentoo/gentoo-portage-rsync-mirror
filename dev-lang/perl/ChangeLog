@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.466 2015/02/14 15:37:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.467 2015/02/14 23:04:02 dilfridge Exp $
+
+*perl-5.20.2 (14 Feb 2015)
+
+  14 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> +perl-5.20.2.ebuild:
+  Version bump
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-5.20.1-r4.ebuild:
   Stable for ppc, wrt bug #536790
