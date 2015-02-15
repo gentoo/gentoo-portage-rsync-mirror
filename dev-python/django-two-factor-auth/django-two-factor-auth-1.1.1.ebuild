@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-two-factor-auth/django-two-factor-auth-1.1.1.ebuild,v 1.1 2015/02/15 08:23:57 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-two-factor-auth/django-two-factor-auth-1.1.1.ebuild,v 1.2 2015/02/15 12:57:57 ercpe Exp $
 
 EAPI=5
 
@@ -38,5 +38,5 @@ python_prepare_all() {
 }
 
 python_test() {
-	emake test || die
+	emake test
 }

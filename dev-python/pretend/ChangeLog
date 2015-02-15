@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pretend
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.15 2014/12/24 07:27:00 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.16 2015/02/15 12:59:41 pacho Exp $
+
+  15 Feb 2015; Pacho Ramos <pacho@gentoo.org> pretend-1.0.8.ebuild:
+  amd64/ppc/ppc64/x86 stable, bug #530294
 
   24 Dec 2014; Markus Meier <maekke@gentoo.org> pretend-1.0.8.ebuild:
   arm stable, bug #530294
