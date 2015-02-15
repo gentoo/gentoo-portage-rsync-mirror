@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.167 2015/02/01 22:59:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.170 2015/02/15 18:24:02 vapier Exp $
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick libav midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl cpu_flags_x86_sse cpu_flags_x86_sse2 sftp test udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
+IUSE="airplay alsa avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick libav midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba +sdl sftp test udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
 REQUIRED_USE="
 	pvr? ( mysql )
 	rsxs? ( X )
@@ -145,7 +145,6 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
 	dev-lang/swig
 	dev-util/gperf
-	sys-apps/lsb-release
 	X? ( x11-proto/xineramaproto )
 	dev-util/cmake
 	x86? ( dev-lang/nasm )
@@ -224,7 +223,6 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--disable-ccache \
 		--disable-optimizations \
-		--enable-external-libraries \
 		$(usex libav "--enable-libav-compat" "") \
 		$(use_enable airplay) \
 		$(use_enable avahi) \
@@ -236,7 +234,6 @@ src_configure() {
 		$(use_enable fishbmc) \
 		$(use_enable gles) \
 		$(use_enable goom) \
-		--disable-hal \
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
 		$(use_enable mysql) \

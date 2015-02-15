@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/i3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.59 2014/12/23 17:31:15 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.60 2015/02/15 18:13:13 ultrabug Exp $
+
+  15 Feb 2015; Ultrabug <ultrabug@gentoo.org> i3-9999.ebuild:
+  i3 git repo moved to github
 
   23 Dec 2014; Kacper Kowalik <xarthisius@gentoo.org> -i3-4.6.ebuild,
   -i3-4.7.2-r1.ebuild, -i3-4.7.2.ebuild, -i3-4.7.ebuild:

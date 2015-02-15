@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/options
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/options/ChangeLog,v 1.4 2015/01/01 13:19:02 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/options/ChangeLog,v 1.5 2015/02/15 18:20:35 slyfox Exp $
+
+  15 Feb 2015; Sergei Trofimovich <slyfox@gentoo.org> options-1.2-r1.ebuild:
+  keyword on ~alpha/~ia64/~ppc/~ppc64 (bug #538486)
 
 *options-1.2.1 (01 Jan 2015)
 

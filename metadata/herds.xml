@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1140 2015/02/03 17:54:50 radhermit Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1141 2015/02/15 18:09:19 yngwin Exp $
 
 -->
 <herds>
@@ -803,6 +803,10 @@
     <email>radhermit@gentoo.org</email>
     <name>Tim Harder</name>
   </maintainer>
+  <maintainer>
+    <email>yngwin@gentoo.org</email>
+    <name>Ben de Groot</name>
+  </maintainer>
 </herd>
 <herd>
   <name>sci</name>
@@ -1112,7 +1116,7 @@
   <maintainer>
     <email>twitch153@gentoo.org</email>
     <name>Devan Franchini</name>
-  </maintainer> 
+  </maintainer>
 </herd>
 <herd>
   <name>leechcraft</name>
@@ -1816,7 +1820,7 @@
   <maintainer>
      <email>zlogene@gentoo.org</email>
      <name>Mikle Kolyada</name>
-  </maintainer>	
+  </maintainer>
 </herd>
 <herd>
   <name>ia64</name>
@@ -2361,13 +2365,17 @@
     <email>mrueg@gentoo.org</email>
     <name>Manuel Rüger</name>
   </maintainer>
-</herd> 
+  <maintainer>
+    <email>yngwin@gentoo.org</email>
+    <name>Ben de Groot</name>
+  </maintainer>
+</herd>
 <herd>
   <name>eselect</name>
   <email>eselect@gentoo.org</email>
   <description>Gentoo eselect project</description>
   <maintainingproject>/proj/en/eselect/index.xml</maintainingproject>
-</herd> 
+</herd>
 </herds>
 
 <!--
