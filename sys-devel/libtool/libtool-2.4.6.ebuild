@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.3-r2.ebuild,v 1.2 2015/01/03 02:11:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4.6.ebuild,v 1.1 2015/02/15 22:38:29 polynomial-c Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ if [[ ${PV} == "9999" ]] ; then
 		http://git.savannah.gnu.org/r/${PN}.git"
 	inherit git-2
 else
-	SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
+	SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
@@ -30,8 +30,7 @@ RDEPEND="sys-devel/gnuconfig
 	>=sys-devel/automake-1.13
 	dev-libs/libltdl:0"
 DEPEND="${RDEPEND}
-	app-arch/xz-utils
-	sys-apps/help2man"
+	app-arch/xz-utils"
 [[ ${PV} == "9999" ]] && DEPEND+=" sys-apps/help2man"
 
 src_unpack() {
@@ -48,8 +47,6 @@ src_prepare() {
 	use vanilla && return 0
 
 	epatch "${FILESDIR}"/${PN}-2.4.3-use-linux-version-in-fbsd.patch #109105
-	epatch "${FILESDIR}"/${PN}-2.4.3-no-clean-gnulib.patch #527200
-	epatch "${FILESDIR}"/${PN}-2.4.3-test-cmdline_wrap.patch #384731
 	pushd libltdl >/dev/null
 	AT_NOELIBTOOLIZE=yes eautoreconf
 	popd >/dev/null

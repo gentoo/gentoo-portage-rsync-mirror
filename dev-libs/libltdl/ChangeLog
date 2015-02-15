@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libltdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.9 2015/01/28 10:19:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.10 2015/02/15 22:37:24 polynomial-c Exp $
+
+*libltdl-2.4.6 (15 Feb 2015)
+
+  15 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> -libltdl-2.4.3.ebuild,
+  +libltdl-2.4.6.ebuild:
+  Version bump. Removed old.
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libltdl-2.4.4.ebuild:
   Stable for ppc, wrt bug #536696

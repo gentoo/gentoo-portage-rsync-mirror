@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/libltdl-2.4.3.ebuild,v 1.1 2014/11/03 05:31:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/libltdl-2.4.6.ebuild,v 1.1 2015/02/15 22:37:24 polynomial-c Exp $
 
 EAPI="4"
 
@@ -10,11 +10,11 @@ MY_P="libtool-${PV}"
 
 DESCRIPTION="A shared library tool for developers"
 HOMEPAGE="http://www.gnu.org/software/libtool/"
-SRC_URI="mirror://gnu/libtool/${MY_P}.tar.xz"
+SRC_URI="mirror://gnu/libtool/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="static-libs"
 # libltdl doesn't have a testsuite.
 RESTRICT="test"

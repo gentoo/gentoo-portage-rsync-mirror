@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r8.ebuild,v 1.5 2014/10/15 09:05:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r8.ebuild,v 1.6 2015/02/15 22:58:03 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools flag-o-matic multilib toolchain-funcs eutils multilib-minimal
@@ -69,6 +69,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-sdl-config.patch \
 		"${FILESDIR}"/${P}-resizing.patch \
 		"${FILESDIR}"/${P}-joystick.patch \
+		"${FILESDIR}"/${P}-bsd-joystick.patch \
 		"${FILESDIR}"/${P}-gamma.patch \
 		"${FILESDIR}"/${P}-const-xdata32.patch \
 		"${FILESDIR}"/${P}-caca.patch
