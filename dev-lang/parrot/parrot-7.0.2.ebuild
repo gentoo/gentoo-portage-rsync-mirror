@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-6.2.0-r1.ebuild,v 1.1 2014/10/10 08:24:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-7.0.2.ebuild,v 1.1 2015/02/15 08:23:59 patrick Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ RESTRICT="test"
 
 DESCRIPTION="Virtual machine designed to efficiently compile and execute bytecode for dynamic languages"
 HOMEPAGE="http://www.parrot.org/"
-SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/devel/${PV}/${P}.tar.gz"
+SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/all/${PV}/${P}.tar.gz"
 
 LICENSE="Artistic-2"
 SLOT="0/${PV}"
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64
 IUSE="opengl nls doc examples gdbm gmp ssl +unicode pcre"
 
 RDEPEND="sys-libs/readline
+	dev-libs/libffi
 	opengl? ( media-libs/freeglut )
 	nls? ( sys-devel/gettext )
 	unicode? ( >=dev-libs/icu-2.6:= )
@@ -68,6 +69,7 @@ src_test() {
 src_install() {
 	emake -j1 install-dev DESTDIR="${D}" DOC_DIR="${EPREFIX}/usr/share/doc/${PF}" || die
 	dodoc CREDITS DONORS.pod PBC_COMPAT PLATFORMS RESPONSIBLE_PARTIES TODO || die
+	dosym /usr/bin/parrot-ops2c /usr/bin/ops2c || die
 	if use examples; then
 		insinto "/usr/share/doc/${PF}/examples"
 		doins -r examples/* || die

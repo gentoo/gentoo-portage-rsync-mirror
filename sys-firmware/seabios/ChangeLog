@@ -1,6 +1,14 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.37 2015/02/15 07:07:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.38 2015/02/15 08:02:48 vapier Exp $
+
+*seabios-1.7.5-r1 (15 Feb 2015)
+
+  15 Feb 2015; Mike Frysinger <vapier@gentoo.org> +files/seavgabios/README,
+  +files/seavgabios/config.vga-cirrus, +files/seavgabios/config.vga-isavga,
+  +files/seavgabios/config.vga-qxl, +files/seavgabios/config.vga-stdvga,
+  +files/seavgabios/config.vga-vmware, +seabios-1.7.5-r1.ebuild, metadata.xml:
+  Add USE=seavgabios support #523134 by Brad Laue.
 
   15 Feb 2015; Mike Frysinger <vapier@gentoo.org> seabios-1.7.5.ebuild:
   Avoid downloading files that are not used (e.g. no source tarball for
