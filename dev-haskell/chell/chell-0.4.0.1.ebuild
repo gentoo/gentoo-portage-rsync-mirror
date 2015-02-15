@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chell/chell-0.4.0.1.ebuild,v 1.2 2015/02/15 18:20:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chell/chell-0.4.0.1.ebuild,v 1.3 2015/02/15 18:53:06 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+color-output"
 
 RDEPEND=">=dev-haskell/options-1.0:=[profile?] <dev-haskell/options-2.0:=[profile?]
