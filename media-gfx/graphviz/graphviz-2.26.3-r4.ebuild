@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r4.ebuild,v 1.15 2015/02/15 02:18:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.26.3-r4.ebuild,v 1.16 2015/02/15 04:21:58 vapier Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -107,6 +107,7 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-libtool.patch \
+		"${FILESDIR}"/${P}-libtool-configure.patch \
 		"${FILESDIR}"/${P}-automake-1.11.2.patch
 
 	# ToDo: Do the same thing for examples and/or
@@ -118,9 +119,9 @@ src_prepare() {
 	fi
 
 	# This is an old version of libtool
+	# use the ./configure option to exclude its use, and
+	# delete the dir since we don't need to eautoreconf it
 	rm -rf libltdl
-	sed -i -e '/libltdl/d' configure.ac || die
-	sed -i -e 's/AC_LIBLTDL_CONVENIENCE/AC_LIBLTDL_INSTALLABLE/' configure.ac || die
 
 	# no nls, no gettext, no iconv macro, so disable it
 	use nls || { sed -i -e '/^AM_ICONV/d' configure.ac || die; }
@@ -139,7 +140,7 @@ src_prepare() {
 
 src_configure() {
 	# libtool file collision, bug 276609
-	local myconf="--disable-ltdl-install"
+	local myconf="--without-included-ltdl --disable-ltdl-install"
 
 	# Core functionality:
 	# All of X, cairo-output, gtk need the pango+cairo functionality
