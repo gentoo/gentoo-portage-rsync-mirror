@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16360 2015/02/14 19:50:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16361 2015/02/15 02:44:13 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (15 Feb 2015)
+# Dead upstream, does not fetch
+app-text/pyrpub
 
 # Matthew Thode <prometheanfire@gentoo.org> (12 Feb 2015)
 # Dead upstream and no deps
