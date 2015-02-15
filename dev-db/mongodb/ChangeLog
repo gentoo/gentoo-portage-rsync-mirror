@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.103 2015/01/14 09:26:02 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.104 2015/02/15 12:12:00 pacho Exp $
+
+  15 Feb 2015; Pacho Ramos <pacho@gentoo.org> mongodb-2.6.7.ebuild:
+  amd64 stable, bug #539324
 
 *mongodb-2.6.7 (14 Jan 2015)
 

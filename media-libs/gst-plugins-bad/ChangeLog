@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.163 2015/02/03 18:19:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.164 2015/02/15 12:29:15 pacho Exp $
+
+  15 Feb 2015; Pacho Ramos <pacho@gentoo.org> gst-plugins-bad-1.4.5.ebuild:
+  gles2 also collides with opengl (#525936)
 
   03 Feb 2015; Pacho Ramos <pacho@gentoo.org> gst-plugins-bad-1.4.5.ebuild:
   Rework the REQUIRED_USE to express egl and gles2 cannot be combined
