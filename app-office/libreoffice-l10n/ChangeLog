@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.131 2015/02/15 17:45:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.132 2015/02/15 19:51:14 dilfridge Exp $
+
+  15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-l10n-4.4.0.3.ebuild:
+  Restore keywords
 
   15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-l10n-4.2.8.2.ebuild:

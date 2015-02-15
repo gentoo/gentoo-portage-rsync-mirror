@@ -1016,9 +1016,7 @@ app-office/libreoffice:gtk3 - Enable highly experimental gtk3 frontend
 app-office/libreoffice:jemalloc - Use dev-libs/jemalloc for allocations
 app-office/libreoffice:odk - Build the Office Development Kit
 app-office/libreoffice:telepathy - Enable document colaboration features using telepathy communication framework.
-app-office/libreoffice:vba - Enable support for VBA compatibility and ActiveX embedding
 app-office/libreoffice:vlc - Use media-video/vlc for video embedding
-app-office/libreoffice:webdav - Adds support for HTTP content adding via net-libs/neon
 app-office/libreoffice-l10n:linguas_ca_valencia - Catalan locale (Valencia)
 app-office/libreoffice-l10n:linguas_kmr_Latn - kmr_Latn localization
 app-office/libreoffice-l10n:linguas_sid - sid localization
