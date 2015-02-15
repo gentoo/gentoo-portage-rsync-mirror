@@ -7,7 +7,7 @@ EAPI=4
 inherit bash-completion-r1 elisp-common
 
 DESCRIPTION="Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git"
-HOMEPAGE="http://zx2c4.com/projects/password-store/"
+HOMEPAGE="http://www.passwordstore.org/"
 SRC_URI="http://git.zx2c4.com/password-store/snapshot/password-store-${PV}.tar.xz"
 
 SLOT="0"
