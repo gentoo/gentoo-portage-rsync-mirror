@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tinyxml2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/ChangeLog,v 1.14 2014/12/12 03:13:40 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml2/ChangeLog,v 1.15 2015/02/15 19:08:55 zlogene Exp $
+
+  15 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> tinyxml2-2.2.0.ebuild:
+  Add ~arm keyword
 
   12 Dec 2014; Tim Harder <radhermit@gentoo.org> -tinyxml2-2.0.2.ebuild,
   -tinyxml2-2.1.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppcheck
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.59 2014/12/28 08:47:36 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.60 2015/02/15 19:11:30 zlogene Exp $
+
+  15 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> cppcheck-1.67.ebuild:
+  Add ~arm keyword
 
 *cppcheck-1.67 (28 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.222 2015/02/15 18:24:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.223 2015/02/15 19:30:30 vapier Exp $
+
+  15 Feb 2015; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Switch to libsdl2 to match upstream #536602 by hal.
 
   15 Feb 2015; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Drop lsb-release dep as the code already handles /etc/os-release.
