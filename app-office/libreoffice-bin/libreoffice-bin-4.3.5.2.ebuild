@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.3.5.2.ebuild,v 1.1 2015/02/14 16:37:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.3.5.2.ebuild,v 1.2 2015/02/14 23:37:35 dilfridge Exp $
 
 EAPI=5
 
@@ -64,6 +64,7 @@ BIN_COMMON_DEPEND="
 	dev-libs/boost:0/1.55.0
 	dev-libs/icu:0/54a
 	=media-gfx/graphite2-1.2*
+	media-libs/glew:0/1.10
 	media-libs/harfbuzz:0/0.9.18[icu]
 	media-libs/libpng:0/16
 	>=sys-libs/glibc-2.19-r1
