@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-2.1.2.ebuild,v 1.2 2015/02/15 01:28:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-2.2.0.ebuild,v 1.1 2015/02/15 01:28:57 vapier Exp $
 
 EAPI=5
 
@@ -12,14 +12,14 @@ BACKPORTS=
 MY_PN="qemu"
 MY_P="${MY_PN}-${PV}"
 
-if [[ ${PV} = *9999* ]]; then
+if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
 	inherit git-2
 else
 	SRC_URI="http://wiki.qemu.org/download/${MY_P}.tar.bz2
 		${BACKPORTS:+
 			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
 DESCRIPTION="QEMU Guest Agent (qemu-ga) for use when running inside a VM"
