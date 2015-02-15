@@ -19,4 +19,8 @@
  <flag name='webserver'>Enable internal webserver</flag>
  <flag name='xrandr'>Support X randr extension</flag>
 </use>
+<upstream>
+ <bugs-to>http://trac.kodi.tv/</bugs-to>
+ <remote-id type="github">xbmc/xbmc</remote-id>
+</upstream>
 </pkgmetadata>
