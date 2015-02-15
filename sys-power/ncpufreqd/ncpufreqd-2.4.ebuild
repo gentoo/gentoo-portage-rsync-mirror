@@ -7,8 +7,8 @@ EAPI="5"
 inherit cmake-utils
 
 DESCRIPTION="Daemon controlling CPU speed and temperature"
-HOMEPAGE="http://projects.simpledesigns.com.pl/project/ncpufreqd/"
-SRC_URI="http://projects.simpledesigns.com.pl/get/${P}.tar.bz2"
+HOMEPAGE="https://bitbucket.org/nelchael/ncpufreqd"
+SRC_URI="https://bitbucket.org/nelchael/${PN}/get/${P}.tar.bz2"
 LICENSE="ZLIB"
 
 SLOT="0"
