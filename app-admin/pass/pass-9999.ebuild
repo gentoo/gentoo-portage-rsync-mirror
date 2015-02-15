@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-9999.ebuild,v 1.20 2014/11/21 09:54:15 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
 inherit bash-completion-r1 git-2 elisp-common
 
 DESCRIPTION="Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git"
-HOMEPAGE="http://zx2c4.com/projects/password-store/"
+HOMEPAGE="http://www.passwordstore.org/"
 EGIT_REPO_URI="http://git.zx2c4.com/password-store"
 
 SLOT="0"
