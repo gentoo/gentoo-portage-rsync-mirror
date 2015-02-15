@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Exporter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Exporter/ChangeLog,v 1.24 2015/02/14 22:51:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Exporter/ChangeLog,v 1.25 2015/02/15 10:48:37 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Exporter-5.710.0.ebuild:
+  Stable for ppc64, wrt bug #536790
 
   14 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   perl-Exporter-5.710.0.ebuild:

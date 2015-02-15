@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-if/perl-if-0.60.300.ebuild,v 1.6 2015/02/14 15:39:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-if/perl-if-0.60.300.ebuild,v 1.7 2015/02/15 10:50:21 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc x86 ~amd64-fbsd"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 x86 ~amd64-fbsd"
 IUSE=""
 
 DEPEND=""

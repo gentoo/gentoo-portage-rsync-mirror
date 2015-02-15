@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-MakeMaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.88 2015/02/14 15:37:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.89 2015/02/15 10:48:46 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-ExtUtils-MakeMaker-6.980.0.ebuild:
+  Stable for ppc64, wrt bug #536790
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-ExtUtils-MakeMaker-6.980.0.ebuild:

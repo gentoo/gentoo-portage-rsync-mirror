@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/perl-Thread-Queue-3.50.0.ebuild,v 1.5 2015/02/14 15:39:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/perl-Thread-Queue-3.50.0.ebuild,v 1.6 2015/02/15 10:50:08 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="amd64 hppa ppc x86"
+KEYWORDS="amd64 hppa ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="

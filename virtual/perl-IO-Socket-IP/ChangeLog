@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-IO-Socket-IP
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Socket-IP/ChangeLog,v 1.5 2015/02/14 15:38:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Socket-IP/ChangeLog,v 1.6 2015/02/15 10:49:07 ago Exp $
+
+  15 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-IO-Socket-IP-0.290.0.ebuild:
+  Stable for ppc64, wrt bug #536790
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-IO-Socket-IP-0.290.0.ebuild:
