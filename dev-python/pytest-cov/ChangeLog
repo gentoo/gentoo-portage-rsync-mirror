@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest-cov
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/ChangeLog,v 1.13 2015/01/28 13:25:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest-cov/ChangeLog,v 1.14 2015/02/15 13:16:36 pacho Exp $
+
+  15 Feb 2015; Pacho Ramos <pacho@gentoo.org> pytest-cov-1.8.1.ebuild:
+  amd64/ppc/ppc64/x86 stable, bug #530486
 
 *pytest-cov-1.8.1 (28 Jan 2015)
 

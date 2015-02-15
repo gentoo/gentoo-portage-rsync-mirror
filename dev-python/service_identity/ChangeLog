@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/service_identity
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/service_identity/ChangeLog,v 1.4 2014/12/24 07:28:59 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/service_identity/ChangeLog,v 1.5 2015/02/15 13:17:13 pacho Exp $
+
+  15 Feb 2015; Pacho Ramos <pacho@gentoo.org> service_identity-14.0.0.ebuild:
+  amd64/ppc/ppc64/x86 stable, bug #530486
 
   24 Dec 2014; Markus Meier <maekke@gentoo.org> service_identity-14.0.0.ebuild:
   arm stable, bug #530486
