@@ -1,12 +1,13 @@
-DEFINED_PHASES=compile install test unpack
-DEPEND=doc? ( dev-php/PEAR-PhpDocumentor ) test? ( dev-php/phpunit ) >=dev-vcs/git-1.8.2.1
+DEFINED_PHASES=compile install test
+DEPEND=doc? ( dev-php/PEAR-PhpDocumentor ) test? ( dev-php/phpunit )
 DESCRIPTION=Andrew McMillan's Web Libraries
 EAPI=5
 HOMEPAGE=https://gitlab.com/davical-project/awl
 IUSE=doc test
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-lang/php[pdo,postgres,xml]
+RDEPEND=dev-lang/php:*[pdo,postgres,xml]
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=7b40e7a5e39052ca316815cd0e2b7294
+SRC_URI=https://gitlab.com/davical-project/awl/repository/archive.tar.gz?ref=r0.55 -> awl-0.55.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=98759cc1aff9f8c9bdf9d1ab808136c8
