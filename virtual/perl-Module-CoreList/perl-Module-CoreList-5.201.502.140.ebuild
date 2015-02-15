@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/perl-Module-CoreList-5.201.502.140.ebuild,v 1.2 2015/02/15 03:00:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/perl-Module-CoreList-5.201.502.140.ebuild,v 1.3 2015/02/15 03:02:57 zerochaos Exp $
 
 EAPI=5
 
@@ -18,4 +18,3 @@ RDEPEND="
 	!<perl-core/${PN#perl-}-${PV}
 	!>perl-core/${PN#perl-}-${PV}-r999
 "
-

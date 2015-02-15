@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/iojs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/ChangeLog,v 1.4 2015/02/15 02:25:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/ChangeLog,v 1.5 2015/02/15 03:05:57 patrick Exp $
+
+  15 Feb 2015; Patrick Lauer <patrick@gentoo.org> iojs-1.2.0.ebuild:
+  Force openssl sanity #540106
 
 *iojs-1.2.0 (15 Feb 2015)
 

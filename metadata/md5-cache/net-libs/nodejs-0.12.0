@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-libs/openssl >=net-libs/http-parser-2.3 =dev-libs/libuv-1.1.0
+DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-libs/openssl[-bindist] >=net-libs/http-parser-2.3 =dev-libs/libuv-1.1.0
 DESCRIPTION=Evented IO for V8 Javascript
 EAPI=5
 HOMEPAGE=http://nodejs.org/
 IUSE=+npm
 KEYWORDS=~amd64 ~arm ~x86 ~x64-macos
 LICENSE=Apache-1.1 Apache-2.0 BSD BSD-2 MIT
-RDEPEND=dev-libs/openssl
+RDEPEND=dev-libs/openssl[-bindist]
 RESTRICT=test
 SLOT=0
 SRC_URI=http://nodejs.org/dist/v0.12.0/node-v0.12.0.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=8da2c751fc7bad11bee796bba0d2ee26
+_md5_=73351f733d10dd8c880696868965db70
