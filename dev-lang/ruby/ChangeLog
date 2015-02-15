@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.699 2015/01/28 19:26:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.700 2015/02/15 09:57:00 graaff Exp $
+
+*ruby-2.2.0-r1 (15 Feb 2015)
+
+  15 Feb 2015; Hans de Graaff <graaff@gentoo.org> -ruby-2.2.0.ebuild,
+  +ruby-2.2.0-r1.ebuild:
+  Revision bump to also unbundle the gems that get installed as gems, fixing
+  bug 539700.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> ruby-2.0.0_p598.ebuild,
   ruby-2.1.5.ebuild:

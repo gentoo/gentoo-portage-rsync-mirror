@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.2.0.ebuild,v 1.3 2015/01/19 20:07:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.2.0-r1.ebuild,v 1.1 2015/02/15 09:57:00 graaff Exp $
 
 EAPI=5
 
@@ -50,7 +50,15 @@ RDEPEND="
 	!<dev-ruby/rubygems-1.8.10-r1"
 
 DEPEND="${RDEPEND}"
+
+BUNDLED_GEMS="
+	>=dev-ruby/minitest-5.4.3[ruby_targets_ruby22]
+	>=dev-ruby/power_assert-0.2.2[ruby_targets_ruby22]
+	>=dev-ruby/test-unit-3.0.8[ruby_targets_ruby22]
+"
+
 PDEPEND="
+	${BUNDLED_GEMS}
 	virtual/rubygems[ruby_targets_ruby22]
 	>=dev-ruby/json-1.8.1[ruby_targets_ruby22]
 	>=dev-ruby/rake-0.9.6[ruby_targets_ruby22]
@@ -58,9 +66,7 @@ PDEPEND="
 	xemacs? ( app-xemacs/ruby-modes )"
 
 src_prepare() {
-	excluded_patches="012_no_forced_sse2.patch"
-
-	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" \
 		epatch "${WORKDIR}/patches"
 
 	# We can no longer unbundle all of rake because rubygems now depends
@@ -71,6 +77,10 @@ src_prepare() {
 	rm -r \
 		{bin,lib}/rake lib/rake.rb man/rake.1 \
 		bin/gem || die "removal failed"
+	# Remove bundled gems that we will install via PDEPEND, bug
+	# 539700. Use explicit version numbers to ensure rm fails when they
+	# change so we can update dependencies accordingly.
+	rm gems/{minitest-5.4.3,power_assert-0.2.2,test-unit-3.0.8}.gem || die
 
 	# Fix a hardcoded lib path in configure script
 	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \

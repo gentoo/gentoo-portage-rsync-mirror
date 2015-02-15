@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/files/sec.init.d,v 1.1 2006/12/16 22:29:51 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/files/sec.init.d,v 1.2 2015/02/15 09:59:01 jer Exp $
 
 depend() {
 	use logger
@@ -18,8 +18,8 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting sec"
-	start-stop-daemon --start --quiet --exec /usr/bin/sec.pl \
-		-- -pid=/var/run/sec.pid \
+	start-stop-daemon --start --quiet --exec /usr/bin/sec \
+		-- -pid=/run/sec.pid \
 		-detach -log=/var/log/sec.log \
 		-conf=/etc/sec.conf \
 		${INPUT_FILES} \
@@ -30,7 +30,7 @@ start() {
 
 stop() {
 	ebegin "Stopping sec"
-	start-stop-daemon --stop --quiet --pidfile /var/run/sec.pid
+	start-stop-daemon --stop --quiet --pidfile /run/sec.pid
 	eend $?
 }
 

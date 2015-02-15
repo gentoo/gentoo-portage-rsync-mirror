@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.108 2015/01/27 19:24:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.110 2015/02/15 09:51:19 graaff Exp $
+
+  15 Feb 2015; Hans de Graaff <graaff@gentoo.org> test-unit-3.0.9-r1.ebuild:
+  Add keywords from dev-lang/ruby since this code was already bundled there.
+
+  15 Feb 2015; Hans de Graaff <graaff@gentoo.org> -test-unit-3.0.9.ebuild:
+  Remove broken version.
 
 *test-unit-3.0.9-r1 (27 Jan 2015)
 

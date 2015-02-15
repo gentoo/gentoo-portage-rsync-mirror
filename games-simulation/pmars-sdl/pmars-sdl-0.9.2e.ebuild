@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.14 2011/01/12 17:46:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.15 2015/02/15 09:35:24 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit toolchain-funcs games
 
 MY_PN="${PN/-sdl/}"
@@ -10,8 +10,8 @@ MY_PV="${PV/e/-5}"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Portable redcode simulator's sdl port for core war"
-HOMEPAGE="http://www.cs.helsinki.fi/u/jpihlaja/cw/pmars-sdl"
-SRC_URI="http://www.cs.helsinki.fi/u/jpihlaja/cw/pmars-sdl/${MY_P}.tar.gz"
+HOMEPAGE="http://corewar.co.uk/pihlaja/pmars-sdl/"
+SRC_URI="http://corewar.co.uk/pihlaja/pmars-sdl/${MY_P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
@@ -64,7 +64,7 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin src/${MY_PN} || die
+	dogamesbin src/${MY_PN}
 	doman doc/${MY_PN}.6
 
 	dodoc AUTHORS CONTRIB ChangeLog README doc/redcode.ref

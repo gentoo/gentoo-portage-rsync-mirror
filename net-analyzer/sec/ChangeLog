@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sec
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.30 2015/01/26 10:15:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sec/ChangeLog,v 1.31 2015/02/15 09:59:01 jer Exp $
+
+*sec-2.7.7 (15 Feb 2015)
+*sec-2.7.6-r1 (15 Feb 2015)
+
+  15 Feb 2015; Jeroen Roovers <jer@gentoo.org> -sec-2.7.5.ebuild,
+  -sec-2.7.6.ebuild, +sec-2.7.6-r1.ebuild, +sec-2.7.7.ebuild, files/sec.init.d:
+  Version bump. Fix sec.pl -> sec in init.d script, /var/run -> /run.
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> sec-2.7.6.ebuild:
   Stable for x86, wrt bug #535540
