@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.5.ebuild,v 1.3 2014/09/13 17:07:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.5.ebuild,v 1.4 2015/02/15 07:07:42 vapier Exp $
 
 EAPI=5
 
@@ -20,11 +20,9 @@ if [[ ${PV} = *9999* || ! -z "${EGIT_COMMIT}" ]]; then
 	inherit git-2
 else
 	KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
-	SRC_URI="http://code.coreboot.org/p/seabios/downloads/get/${P}.tar.gz
-	http://code.coreboot.org/p/seabios/downloads/get/bios.bin-${PV}.gz
-	http://dev.gentoo.org/~cardoe/distfiles/${P}.tar.gz
-	http://dev.gentoo.org/~cardoe/distfiles/bios.bin-${PV}.gz
-	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
+	SRC_URI="!binary? ( http://code.coreboot.org/p/seabios/downloads/get/${P}.tar.gz )
+		binary? ( http://code.coreboot.org/p/seabios/downloads/get/bios.bin-${PV}.gz )
+		${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
 fi
 
 DESCRIPTION="Open Source implementation of a 16-bit x86 BIOS"
@@ -66,13 +64,22 @@ pkg_setup() {
 	use binary || python-any-r1_pkg_setup
 }
 
+src_unpack() {
+	default
+
+	# This simplifies the logic between binary & source builds.
+	mkdir -p "${S}"
+}
+
 src_prepare() {
+	use binary && return
+
 	if [[ -z "${EGIT_COMMIT}" ]]; then
 		sed -e "s/VERSION=.*/VERSION=${PV}/" \
-			-i "${S}/Makefile"
+			-i Makefile || die
 	else
 		sed -e "s/VERSION=.*/VERSION=${PV}_pre${EGIT_COMMIT}/" \
-			-i "${S}/Makefile"
+			-i Makefile || die
 	fi
 
 	epatch_user

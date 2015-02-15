@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsodium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.21 2015/02/09 13:01:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.22 2015/02/15 07:09:51 jer Exp $
+
+  15 Feb 2015; Jeroen Roovers <jer@gentoo.org> libsodium-1.0.2.ebuild:
+  Stable for HPPA (bug #539750).
 
   09 Feb 2015; Anthony G. Basile <blueness@gentoo.org> libsodium-1.0.1.ebuild,
   libsodium-1.0.2.ebuild:
