@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install postinst postrm prepare unpack
 DEPEND=dev-vcs/git
 DESCRIPTION=Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git
-EAPI=4
-HOMEPAGE=http://zx2c4.com/projects/password-store/
+EAPI=5
+HOMEPAGE=http://www.passwordstore.org/
 IUSE=+git X zsh-completion fish-completion emacs dmenu importers elibc_Darwin
 LICENSE=GPL-2
 RDEPEND=app-crypt/gnupg app-admin/pwgen >=app-text/tree-1.7.0 git? ( dev-vcs/git ) X? ( x11-misc/xclip ) elibc_Darwin? ( app-misc/getopt ) zsh-completion? ( app-shells/gentoo-zsh-completions ) fish-completion? ( app-shells/fish ) dmenu? ( x11-misc/dmenu x11-misc/xdotool ) emacs? ( virtual/emacs )
 SLOT=0
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=5f0c865176cf6ab726f99a0def2b8aee
+_md5_=b671fe63ad806b291da45e5307c420da

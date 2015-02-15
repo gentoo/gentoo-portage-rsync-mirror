@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pass
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.31 2015/01/28 16:50:48 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.32 2015/02/15 14:17:49 mgorny Exp $
+
+  15 Feb 2015; Michał Górny <mgorny@gentoo.org> pass-1.6.5.ebuild,
+  pass-9999.ebuild:
+  Fix HOMEPAGE, bump EAPI. Bug #520718 with PR by Michael Mair-Keimberger.
 
 *pass-1.6.5 (28 Jan 2015)
 

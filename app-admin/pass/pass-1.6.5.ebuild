@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.5.ebuild,v 1.1 2015/01/28 16:50:48 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.6.5.ebuild,v 1.2 2015/02/15 14:17:49 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 inherit bash-completion-r1 elisp-common
 
 DESCRIPTION="Stores, retrieves, generates, and synchronizes passwords securely using gpg, pwgen, and git"
-HOMEPAGE="http://zx2c4.com/projects/password-store/"
+HOMEPAGE="http://www.passwordstore.org/"
 SRC_URI="http://git.zx2c4.com/password-store/snapshot/password-store-${PV}.tar.xz"
 
 SLOT="0"
