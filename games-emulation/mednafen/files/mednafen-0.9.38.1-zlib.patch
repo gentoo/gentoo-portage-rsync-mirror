@@ -1,10 +1,10 @@
---- mednafen.orig/include/mednafen/compress/Makefile.am.inc
-+++ mednafen/include/mednafen/compress/Makefile.am.inc
+--- mednafen.orig/src/compress/Makefile.am.inc
++++ mednafen/src/compress/Makefile.am.inc
 @@ -1 +1 @@
 -mednafen_SOURCES	+=	compress/minilzo.c compress/ioapi.c compress/unzip.c compress/GZFileStream.cpp compress/ZLInflateFilter.cpp
 +mednafen_SOURCES	+=	compress/minilzo.c compress/ioapi.c compress/GZFileStream.cpp compress/ZLInflateFilter.cpp
---- mednafen.orig/include/mednafen/file.cpp
-+++ mednafen/include/mednafen/file.cpp
+--- mednafen.orig/src/file.cpp
++++ mednafen/src/file.cpp
 @@ -29,7 +29,7 @@
  #include <errno.h>
  #include <trio/trio.h>
@@ -14,8 +14,8 @@
  
  #include "file.h"
  #include "general.h"
---- mednafen.orig/include/mednafen/Makefile.am
-+++ mednafen/include/mednafen/Makefile.am
+--- mednafen.orig/src/Makefile.am
++++ mednafen/src/Makefile.am
 @@ -6,7 +6,7 @@
  bin_PROGRAMS	=	mednafen
  

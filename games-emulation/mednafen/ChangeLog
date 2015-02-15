@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.51 2015/02/13 17:24:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.52 2015/02/15 20:44:42 mr_bones_ Exp $
+
+  15 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  files/mednafen-0.9.38.1-zlib.patch:
+  change patch to avoid symlinks which break patch-2.7.4 (bug #540158)
 
   13 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> mednafen-0.9.38.1.ebuild:
   add some required flags (bug #539992)
