@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.928 2015/02/02 06:03:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.929 2015/02/16 02:16:22 dlan Exp $
+
+  15 Feb 2015; Yixun Lan <dlan@gentoo.org> vlc-2.1.2.ebuild, vlc-2.1.4.ebuild,
+  vlc-2.1.5.ebuild, vlc-2.1.5-r1.ebuild, vlc-2.1.9999.ebuild,
+  vlc-2.2.9999.ebuild, vlc-9999.ebuild:
+  add epatch_user, fix deps, proxy for maintainer
+  1) corrected dependency on ffmpeg: avcodec interface from ffmpeg-2.5 is not
+  supported by vlc-2.1. Fixes bug 539856 reported by b1254633. 2) fix missng
+  on libva while enable USE=vaapi
 
   02 Feb 2015; Michał Górny <mgorny@gentoo.org> vlc-2.1.5-r1.ebuild:
   Re-add missing dep on libva, reported by Arfrever.

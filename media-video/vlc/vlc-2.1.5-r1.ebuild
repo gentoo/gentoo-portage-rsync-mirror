@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.5-r1.ebuild,v 1.2 2015/02/02 06:03:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.5-r1.ebuild,v 1.3 2015/02/16 02:16:22 dlan Exp $
 
 EAPI="5"
 
@@ -65,7 +65,7 @@ RDEPEND="
 		alsa? ( >=media-libs/alsa-lib-1.0.24:0 )
 		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
 		avcodec? (
-			!libav? ( media-video/ffmpeg:0= )
+			!libav? ( <media-video/ffmpeg-2.5:0= )
 			libav? ( media-video/libav:0= )
 		)
 		avformat? (
@@ -258,6 +258,8 @@ src_prepare() {
 
 	# Disable a bogus check
 	sed -i "s:libavcodec < 56:libavcodec < 57:g" configure.ac || die
+
+	epatch_user
 
 	eautoreconf
 

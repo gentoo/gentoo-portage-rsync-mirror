@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.32 2015/02/01 23:27:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.33 2015/02/16 02:16:22 dlan Exp $
 
 EAPI="5"
 
@@ -65,7 +65,7 @@ RDEPEND="
 		alsa? ( >=media-libs/alsa-lib-1.0.24:0 )
 		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
 		avcodec? (
-			!libav? ( media-video/ffmpeg:0= )
+			!libav? ( <media-video/ffmpeg-2.5:0= )
 			libav? ( media-video/libav:0= )
 		)
 		avformat? (
@@ -153,6 +153,7 @@ RDEPEND="
 		upnp? ( net-libs/libupnp:0 )
 		v4l? ( media-libs/libv4l:0 )
 		vaapi? (
+			x11-libs/libva:0[X]
 			!libav? ( media-video/ffmpeg:0=[vaapi] )
 			libav? ( media-video/libav:0=[vaapi] )
 		)
@@ -254,6 +255,8 @@ src_prepare() {
 	if ! use dbus ; then
 		sed -i 's/ --started-from-file//' share/vlc.desktop.in || die
 	fi
+
+	epatch_user
 
 	eautoreconf
 
