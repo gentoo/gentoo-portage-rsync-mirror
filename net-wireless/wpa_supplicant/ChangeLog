@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.224 2015/02/11 10:11:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.226 2015/02/16 22:00:35 floppym Exp $
+
+  16 Feb 2015; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  wpa_supplicant-2.3-r2.ebuild:
+  Make it 'hs2-0' to avoid the 'reserved' underscore character.
+
+  16 Feb 2015; Mike Gilbert <floppym@gentoo.org> metadata.xml,
+  wpa_supplicant-2.3-r2.ebuild:
+  Replace hs2.0 with hs2_0 to comply with PMS requirements.
 
   11 Feb 2015; <gurligebis@gentoo.org> wpa_supplicant-2.3-r2.ebuild:
   Fixing config generation with broken sed command, fixing bug #539598

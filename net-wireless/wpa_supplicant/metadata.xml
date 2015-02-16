@@ -13,7 +13,7 @@
 		<flag name='ap'>Add support for access point mode</flag>
 		<flag name='eap-sim'>Add support for EAP-SIM authentication algorithm</flag>
 		<flag name='fasteap'>Add support for FAST-EAP authentication algorithm</flag>
-		<flag name='hs2.0'>Add support for 802.11u and Passpoint for HotSpot 2.0</flag>
+		<flag name='hs2-0'>Add support for 802.11u and Passpoint for HotSpot 2.0</flag>
 		<flag name='p2p'>Add support for Wi-Fi Direct mode</flag>
 		<flag name='ps3'>Add support for ps3 hypervisor driven gelic wifi</flag>
 		<flag name='tdls'>Add support for Tunneled Direct Link Setup (802.11z)</flag>

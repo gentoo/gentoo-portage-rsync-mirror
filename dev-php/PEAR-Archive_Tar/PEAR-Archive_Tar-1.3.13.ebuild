@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/PEAR-Archive_Tar-1.3.13.ebuild,v 1.1 2015/01/14 20:12:53 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/PEAR-Archive_Tar-1.3.13.ebuild,v 1.2 2015/02/16 21:48:02 grknight Exp $
 
 EAPI="5"
 
@@ -14,10 +14,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
-DEPEND="dev-lang/php[pcre(+)]
+DEPEND="dev-lang/php:*[pcre(+)]
 		>=dev-php/PEAR-PEAR-1.8.1
 "
-RDEPEND="${DEPEND}"
+RDEPEND="dev-lang/php:*[bzip2,posix,zlib]
+	${DEPEND}"
 PDEPEND="dev-php/pear"
 HOMEPAGE="http://pear.php.net/package/Archive_Tar"
 
