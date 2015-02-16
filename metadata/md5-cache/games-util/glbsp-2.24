@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=fltk? ( x11-libs/fltk:1 )
 DESCRIPTION=A node builder specially designed for OpenGL ports of the DOOM game engine
-EAPI=2
+EAPI=5
 HOMEPAGE=http://glbsp.sourceforge.net/
 IUSE=fltk
 KEYWORDS=~amd64 ~ppc x86
@@ -10,4 +10,4 @@ RDEPEND=fltk? ( x11-libs/fltk:1 )
 SLOT=0
 SRC_URI=mirror://sourceforge/glbsp/glbsp_src_224.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=8a934f33f2a23d9b45d453a29fd8edec
+_md5_=4dfd592664835efd4c3fe9ad4c89fbea
