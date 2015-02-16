@@ -1,6 +1,12 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.60 2015/02/16 10:27:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.61 2015/02/16 18:04:36 grknight Exp $
+
+*mysql-5.5-r1 (16 Feb 2015)
+
+  16 Feb 2015; Brian Evans <grknight@gentoo.org> +mysql-5.5-r1.ebuild,
+  -mysql-5.5.ebuild:
+  Revbump the older virtual down to ~arch
 
   16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6-r2.ebuild:
   Stable for alpha, wrt bug #525296

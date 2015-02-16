@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.346 2015/02/07 20:38:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.347 2015/02/16 18:06:05 zlogene Exp $
+
+  16 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> grub-0.97-r14.ebuild:
+  x86 stable wrt bug #525566
 
   07 Feb 2015; Mike Gilbert <floppym@gentoo.org> grub-2.02_beta2-r7.ebuild,
   grub-9999-r1.ebuild, metadata.xml:
