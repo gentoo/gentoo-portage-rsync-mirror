@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.605 2015/02/10 19:49:17 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.606 2015/02/16 16:27:39 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mesa-10.2.8.ebuild:
+  Stable for sparc, wrt bug #513736
 
   10 Feb 2015; Matt Turner <mattst88@gentoo.org> mesa-10.4.4.ebuild:
   Remove opencl-libdir once again.
