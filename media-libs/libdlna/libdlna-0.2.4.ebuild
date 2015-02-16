@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.4.ebuild,v 1.6 2014/08/10 21:08:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.4.ebuild,v 1.7 2015/02/16 19:03:10 jer Exp $
 
-EAPI=4
-inherit eutils multilib
+EAPI=5
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A reference open-source implementation of DLNA (Digital Living Network Alliance) standards"
 HOMEPAGE="http://libdlna.geexbox.org"
@@ -12,13 +12,14 @@ SRC_URI="http://libdlna.geexbox.org/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ~amd64-linux"
-IUSE=""
 
 DEPEND=">=virtual/ffmpeg-0.6.90"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-libav9.patch"
+	epatch "${FILESDIR}"/${P}-libav9.patch
+
+	tc-export CC
 }
 
 src_configure() {
@@ -28,15 +29,10 @@ src_configure() {
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		--disable-static \
-		|| die "./configure failed"
+		|| die
 }
 
 src_compile() {
 	# not parallel safe, error "cannot find -ldlna"
 	emake -j1
 }
-
-#src_install() {
-#	emake DESTDIR="${D}" install || die "emake install failed."
-#	dodoc README AUTHORS ChangeLog || die
-#}
