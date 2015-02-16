@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-9999.ebuild,v 1.8 2015/02/13 14:31:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/yatebts/yatebts-9999.ebuild,v 1.9 2015/02/16 16:44:06 zerochaos Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ fi
 
 src_prepare() {
 	#we need more patches or configure flags because things install in really wrong places per FHS
+	epatch "${FILESDIR}"/${PN}-sgsnggsn-inetutils-hostname-fix.diff
 	eautoreconf
 }
 
