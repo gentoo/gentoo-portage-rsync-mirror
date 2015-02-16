@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Devel-PPPort
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.18 2015/02/15 10:48:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.19 2015/02/16 09:20:40 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-Devel-PPPort-3.210.0.ebuild:
+  Stable for sparc, wrt bug #536790
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-Devel-PPPort-3.210.0.ebuild:

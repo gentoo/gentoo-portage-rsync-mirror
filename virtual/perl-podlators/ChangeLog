@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-podlators
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-podlators/ChangeLog,v 1.21 2014/11/01 17:52:01 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-podlators/ChangeLog,v 1.22 2015/02/16 09:22:46 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-podlators-2.5.3.ebuild:
+  Stable for sparc, wrt bug #536790
 
   01 Nov 2014; Agostino Sarubbo <ago@gentoo.org> perl-podlators-2.5.3.ebuild:
   Stable for ppc, wrt bug #525678

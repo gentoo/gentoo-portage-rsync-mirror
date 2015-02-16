@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Math-BigInt-FastCalc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.55 2015/02/15 10:49:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/ChangeLog,v 1.56 2015/02/16 09:21:33 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-Math-BigInt-FastCalc-0.310.0.ebuild:
+  Stable for sparc, wrt bug #536790
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-Math-BigInt-FastCalc-0.310.0.ebuild:

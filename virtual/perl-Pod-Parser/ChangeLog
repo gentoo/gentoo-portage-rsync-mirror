@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Pod-Parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Parser/ChangeLog,v 1.16 2015/02/15 10:49:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Parser/ChangeLog,v 1.17 2015/02/16 09:22:02 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Parser-1.620.0.ebuild:
+  Stable for sparc, wrt bug #536790
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Parser-1.620.0.ebuild:
   Stable for ppc64, wrt bug #536790

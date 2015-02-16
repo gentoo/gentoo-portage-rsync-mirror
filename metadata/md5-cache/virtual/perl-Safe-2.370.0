@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Safe
 EAPI=5
-KEYWORDS=~alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~sparc x86
+KEYWORDS=~alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86
 RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/Safe-2.370.0 ) !<perl-core/Safe-2.370.0 !>perl-core/Safe-2.370.0-r999
 SLOT=0
-_md5_=a3db62a66925da9c3ba7c3077edd1ccd
+_md5_=5894c65e78589f373ee9c71c69d959db

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.99 2015/02/15 10:48:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.100 2015/02/16 09:21:07 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-File-Temp-0.230.400-r2.ebuild:
+  Stable for sparc, wrt bug #536790
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-File-Temp-0.230.400-r2.ebuild:

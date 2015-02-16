@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Sys-Syslog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.77 2015/02/15 10:49:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.78 2015/02/16 09:22:13 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-Sys-Syslog-0.330.0-r1.ebuild:
+  Stable for sparc, wrt bug #536790
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-Sys-Syslog-0.330.0-r1.ebuild:
