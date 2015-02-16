@@ -39,7 +39,6 @@ RDEPEND="
 	media-libs/glu
 	media-libs/mesa
 	media-libs/freeglut
-
 	amd64? ( abi_x86_32? (
 		|| (
 			(
