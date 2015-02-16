@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
 RDEPEND=sys-libs/libnih[dbus] sys-apps/dbus
 SLOT=0
-SRC_URI=https://linuxcontainers.org/downloads/cgmanager/cgmanager-0.35.tar.gz
-_md5_=d6f987c4d2b524901e15326fcfc2a1fc
+SRC_URI=https://linuxcontainers.org/downloads/cgmanager/cgmanager-0.36.tar.gz
+_md5_=98fcd1eb53d0a184abe6077150cb3228

@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/cgmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cgmanager/ChangeLog,v 1.4 2015/02/14 19:37:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cgmanager/ChangeLog,v 1.5 2015/02/16 11:02:06 hwoarang Exp $
+
+*cgmanager-0.36-r1 (16 Feb 2015)
+
+  16 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +cgmanager-0.36-r1.ebuild,
+  -cgmanager-0.35.ebuild, -cgmanager-0.36.ebuild, files/cgmanager.initd,
+  files/cgproxy.initd:
+  Revbump to fix openrc init scripts. Bug (#540202) and patch by Nico Baggus
 
 *cgmanager-0.36 (14 Feb 2015)
 
