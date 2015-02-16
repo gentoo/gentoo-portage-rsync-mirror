@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.3-r2.ebuild,v 1.2 2015/01/14 09:21:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.3-r3.ebuild,v 1.1 2015/02/16 13:21:27 jer Exp $
 
 EAPI=5
 
@@ -50,14 +50,12 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.3.2-conf-tests.patch \
 		"${FILESDIR}"/${PN}-1.3.2-jpeg-9a.patch \
 		"${FILESDIR}"/${PN}-1.3.3-visibility.patch \
-		"${FILESDIR}"/${PN}-1.3.3-fl_open_display.patch
+		"${FILESDIR}"/${PN}-1.3.3-fl_open_display.patch \
+		"${FILESDIR}"/${PN}-1.3.3-fltk-config.patch \
+		"${FILESDIR}"/${PN}-1.3.3-xutf8-visibility.patch
 
 	sed -i \
 		-e 's:@HLINKS@::g' FL/Makefile.in || die
-	sed -i \
-		-e '/C\(XX\)\?FLAGS=/s:@C\(XX\)\?FLAGS@::' \
-		-e '/^LDFLAGS=/d' \
-		"${S}/fltk-config.in" || die
 	# some fixes introduced because slotting
 	sed -i \
 		-e '/RANLIB/s:$(libdir)/\(.*LIBNAME)\):$(libdir)/`basename \1`:g' \
