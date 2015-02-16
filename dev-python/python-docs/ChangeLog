@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.199 2015/02/01 23:49:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.200 2015/02/16 13:55:32 pacho Exp $
+
+  16 Feb 2015; Pacho Ramos <pacho@gentoo.org> python-docs-2.7.8.ebuild:
+  amd64/ppc/ppc64/x86 stable, bug #540278
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -python-docs-2.7.4.ebuild,
   -python-docs-2.7.5.ebuild, -python-docs-2.7.6.ebuild,

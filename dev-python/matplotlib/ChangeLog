@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.179 2015/01/25 21:14:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.180 2015/02/16 13:46:58 pacho Exp $
+
+  16 Feb 2015; Pacho Ramos <pacho@gentoo.org> matplotlib-1.4.2.ebuild:
+  amd64/ppc/x86 stable, bug #530324
 
   25 Jan 2015; Markus Meier <maekke@gentoo.org> matplotlib-1.4.2.ebuild:
   arm stable, bug #530538
