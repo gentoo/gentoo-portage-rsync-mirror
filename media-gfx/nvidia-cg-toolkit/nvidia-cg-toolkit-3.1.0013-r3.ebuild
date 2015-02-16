@@ -51,16 +51,15 @@ RDEPEND="
 		)
 		|| (
 			(
-				(
-					>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
-					>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
-					>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-					>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-					>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
-					>=x11-libs/libXmu-1.1.1-r1[abi_x86_32(-)]
-					>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
-				)
-				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+				>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+				>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+				>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
+				>=x11-libs/libXmu-1.1.1-r1[abi_x86_32(-)]
+				>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
+			)
+			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 		)
 	) )
 	x86? ( virtual/libstdc++:3.3 )"
