@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.25 2015/01/29 19:12:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-11.0.ebuild,v 1.26 2015/02/16 01:05:11 vapier Exp $
 
 EAPI="4"
 
@@ -96,6 +96,7 @@ COMMON_DEPEND="virtual/glu
 	xrandr? ( x11-libs/libXrandr )
 	x11-libs/libXrender"
 RDEPEND="${COMMON_DEPEND}
+	!media-tv/kodi
 	udisks? ( sys-fs/udisks:0 )
 	upower? ( || ( sys-power/upower sys-power/upower-pm-utils ) )"
 DEPEND="${COMMON_DEPEND}
