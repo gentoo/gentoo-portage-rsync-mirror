@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.14.0-r1.ebuild,v 1.1 2014/11/14 20:34:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.14.0-r1.ebuild,v 1.2 2015/02/16 10:36:25 pacho Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SRC_URI="
 LICENSE="BSD LGPL-2"
 SLOT="0"
 IUSE="doc sparse test"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 CDEPEND="
 	dev-python/numpy[lapack,${PYTHON_USEDEP}]
