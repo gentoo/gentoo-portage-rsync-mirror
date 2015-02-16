@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fmdrv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/ChangeLog,v 1.10 2013/02/02 18:52:06 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/ChangeLog,v 1.11 2015/02/16 19:34:57 jer Exp $
+
+  16 Feb 2015; Jeroen Roovers <jer@gentoo.org> fmdrv-1.0.7.ebuild,
+  +files/fmdrv-1.0.7-ioperm.patch:
+  Remove the real real big bad hack (possibly bug #540304).
 
   02 Feb 2013; Ulrich Müller <ulm@gentoo.org> fmdrv-1.0.7.ebuild:
   Fix LICENSE, see README.html, bug 453184.

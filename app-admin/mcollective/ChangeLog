@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/mcollective
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.29 2014/12/13 15:29:58 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.30 2015/02/16 19:41:45 prometheanfire Exp $
+
+*mcollective-2.8.0 (16 Feb 2015)
+
+  16 Feb 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +mcollective-2.8.0.ebuild:
+  bup
 
   13 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> -mcollective-2.5.2.ebuild:
   Security cleanup
