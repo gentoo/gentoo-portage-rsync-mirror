@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.14 2015/02/10 18:14:23 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.15 2015/02/16 17:25:14 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -66,7 +66,8 @@ MYSQL_PV_MAJOR="$(get_version_component_range 1-2 ${PV})"
 # Cluster is a special case...
 if [[ "${PN}" == "mysql-cluster" ]]; then
 	case $PV in
-		7.2*|7.3*) MYSQL_PV_MAJOR=5.5 ;;
+		7.2*) MYSQL_PV_MAJOR=5.5 ;;
+		7.3*) MYSQL_PV_MAJOR=5.6 ;;
 	esac
 fi
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dropbox
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.60 2014/10/18 02:09:07 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.61 2015/02/16 17:17:44 swift Exp $
+
+*dropbox-2.10.41-r1 (16 Feb 2015)
+
+  16 Feb 2015; Sven Vermeulen <swift@gentoo.org> +dropbox-2.10.41-r1.ebuild:
+  Fix bug #529344 (add selinux-dropbox dependency when USE="selinux")
 
 *dropbox-2.10.41 (18 Oct 2014)
 
