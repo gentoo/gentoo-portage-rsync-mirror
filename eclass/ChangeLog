@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1535 2015/02/13 01:32:01 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1536 2015/02/16 14:37:50 grknight Exp $
+
+  16 Feb 2015; Brian Evans <grknight@gentoo.org> mysql-v2.eclass:
+  Silence repoman warnings by providing slots on openssl and readline
 
   13 Feb 2015; Mike Pagano <mpagano@gentoo.org> ChangeLog:
   Handle cpu optimization patch for different gcc versions
