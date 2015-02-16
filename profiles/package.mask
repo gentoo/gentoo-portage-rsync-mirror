@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16363 2015/02/15 16:58:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16364 2015/02/16 14:28:22 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Brian Evans <grknight@gentoo.org> (16 Feb 2015)
+# Mask MySQL and MariaDB 5.5 series for security bug 537216
+# Please make sure mysql_upgrade has been run before moving to 5.6
+# Not removing until roughly Dec 2015 as an upgrade path must
+# exist or else the server may crash if the admin has not done
+# proper maintenance prior to updating
+=virtual/mysql-5.5
+=dev-db/mysql-5.5*
+=dev-db/mariadb-5.5*
 
 # Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
 # Mask old virtuals based on the slot-per-version idea for removal,

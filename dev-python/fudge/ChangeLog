@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fudge
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/ChangeLog,v 1.14 2015/01/26 15:31:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/ChangeLog,v 1.15 2015/02/16 14:01:12 pacho Exp $
+
+  16 Feb 2015; Pacho Ramos <pacho@gentoo.org> fudge-0.9.6-r1.ebuild:
+  amd64/x86 stable, bug #530324
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -fudge-0.9.6.ebuild:
   Remove old.
