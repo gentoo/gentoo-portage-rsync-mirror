@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.5-r3.ebuild,v 1.3 2014/12/21 11:41:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.5-r3.ebuild,v 1.4 2015/02/16 06:49:43 dlan Exp $
 
 EAPI=5
 
@@ -147,7 +147,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "Official Xen Guide and the unoffical wiki page:"
-	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog " https://wiki.gentoo.org/wiki/Xen"
 	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
 	use pae && ewarn "This is a PAE build of Xen. It will *only* boot PAE kernels!"

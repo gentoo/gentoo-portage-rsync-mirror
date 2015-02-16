@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1-r5.ebuild,v 1.1 2015/01/21 02:37:00 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.5.0-r1.ebuild,v 1.1 2015/02/16 06:57:16 dlan Exp $
 
 EAPI=5
 
@@ -16,16 +16,16 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=4
+	KEYWORDS="~arm ~arm64 ~amd64 -x86"
+	UPSTREAM_VER=0
 	# xen-tools's gentoo patches tarball
 	GENTOO_VER=3
 	# xen-tools's gentoo patches version which apply to this specific ebuild
-	GENTOO_GPV=2
+	GENTOO_GPV=0
 	# xen-tools ovmf's patches
 	OVMF_VER=0
 
-	SEABIOS_VER=1.7.3.1
+	SEABIOS_VER=1.7.5
 	OVMF_PV=20131208
 
 	[[ -n ${UPSTREAM_VER} ]] && \
@@ -81,8 +81,8 @@ DEPEND="${COMMON_DEPEND}
 	api? ( dev-libs/libxml2
 		net-misc/curl )
 	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )
-	arm? ( >=sys-apps/dtc-1.4.0 )
-	!arm? ( sys-devel/bin86
+	!amd64? ( >=sys-apps/dtc-1.4.0 )
+	amd64? ( sys-devel/bin86
 		system-seabios? ( sys-firmware/seabios )
 		sys-firmware/ipxe
 		sys-devel/dev86
@@ -146,6 +146,8 @@ pkg_setup() {
 			export XEN_TARGET_ARCH="x86_64"
 		elif use arm; then
 			export XEN_TARGET_ARCH="arm32"
+		elif use arm64; then
+			export XEN_TARGET_ARCH="arm64"
 		else
 			die "Unsupported architecture!"
 		fi
@@ -244,7 +246,7 @@ src_prepare() {
 
 	# xencommons, Bug #492332, sed lighter weight than patching
 	sed -e 's:\$QEMU_XEN -xen-domid:test -e "\$QEMU_XEN" \&\& &:' \
-		-i tools/hotplug/Linux/init.d/xencommons || die
+		-i tools/hotplug/Linux/init.d/xencommons.in || die
 
 	# respect multilib, usr/lib/libcacard.so.0.0.0
 	sed -e "/^libdir=/s/\/lib/\/$(get_libdir)/" \
@@ -255,28 +257,26 @@ src_prepare() {
 		sed -i -e "/x86_emulator/d" tools/tests/Makefile || die
 	fi
 
-	# Bug 477884, 518136
-	if [[ "${ARCH}" == 'amd64' ]]; then
-		sed -i -e "/LIBEXEC =/s|/lib/xen/bin|/$(get_libdir)/xen/bin|" config/StdGNU.mk || die
-	fi
+	# use /var instead of /var/lib, consistat with previous ebuild
+	sed -i -e   "/XEN_LOCK_DIR=/s/\$localstatedir/\/var/g" \
+		m4/paths.m4 configure tools/configure || die
+	# use /run instead of /var/run
+	sed -i -e   "/XEN_RUN_DIR=/s/\$localstatedir//g" \
+		m4/paths.m4 configure tools/configure || die
 
-	# fix QA warning, create /var/run/, /var/lock dynamically
-	sed -i -e "/\$(INSTALL_DIR) \$(DESTDIR)\$(XEN_RUN_DIR)/d" \
-		tools/libxl/Makefile || die
-
-	sed -i -e "/\/var\/run\//d" \
-		tools/xenstore/Makefile \
-		tools/pygrub/Makefile || die
-
-	sed -i -e "/\/var\/lock\/subsys/d" \
-		tools/Makefile || die
+	# uncomment lines in xl.conf
+	sed -e 's:^#autoballoon=:autoballoon=:' \
+		-e 's:^#lockfile=:lockfile=:' \
+		-e 's:^#vif.default.script=:vif.default.script=:' \
+		-i tools/examples/xl.conf  || die
 
 	epatch_user
 }
 
 src_configure() {
-	local myconf="--prefix=/usr \
-		--libdir=/usr/$(get_libdir) \
+	local myconf="--prefix=${PREFIX}/usr \
+		--libdir=${PREFIX}/usr/$(get_libdir) \
+		--libexecdir=${PREFIX}/usr/libexec \
 		--disable-werror \
 		--disable-xen \
 		--enable-tools \
@@ -287,10 +287,9 @@ src_configure() {
 		$(use_enable ovmf) \
 		$(use_enable ocaml ocamltools) \
 		"
-	# disable qemu-traditional for arm, fail to build
-	use arm || myconf+=" --enable-qemu-traditional"
 	use system-seabios && myconf+=" --with-system-seabios=/usr/share/seabios/bios.bin"
 	use qemu || myconf+=" --with-system-qemu"
+	use amd64 && myconf+=" --enable-qemu-traditional"
 	econf ${myconf}
 }
 
@@ -330,12 +329,6 @@ src_install() {
 	# Remove RedHat-specific stuff
 	rm -rf "${D}"tmp || die
 
-	# uncomment lines in xl.conf
-	sed -e 's:^#autoballoon=1:autoballoon=1:' \
-		-e 's:^#lockfile="/var/lock/xl":lockfile="/var/lock/xl":' \
-		-e 's:^#vifscript="vif-bridge":vifscript="vif-bridge":' \
-		-i tools/examples/xl.conf  || die
-
 	if use doc; then
 		emake DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" install-docs
 
@@ -369,9 +362,6 @@ src_install() {
 	if ! use static-libs; then
 		rm -f "${D}"usr/$(get_libdir)/*.a "${D}"usr/$(get_libdir)/ocaml/*/*.a
 	fi
-
-	# xend expects these to exist
-	keepdir /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
 
 	# for xendomains
 	keepdir /etc/xen/auto

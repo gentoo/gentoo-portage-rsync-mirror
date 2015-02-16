@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.3-r3.ebuild,v 1.2 2014/12/21 11:36:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.3-r3.ebuild,v 1.3 2015/02/16 06:49:43 dlan Exp $
 
 EAPI=5
 
@@ -144,7 +144,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "Official Xen Guide and the unoffical wiki page:"
-	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog " https://wiki.gentoo.org/wiki/Xen"
 	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
 	use efi && einfo "The efi executable is installed in boot/efi/gentoo"

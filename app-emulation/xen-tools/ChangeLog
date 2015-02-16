@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.269 2015/01/21 02:37:00 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.270 2015/02/16 06:57:16 dlan Exp $
+
+*xen-tools-4.5.0-r1 (15 Feb 2015)
+*xen-tools-4.4.1-r6 (15 Feb 2015)
+*xen-tools-4.3.3-r4 (15 Feb 2015)
+
+  15 Feb 2015; Yixun Lan <dlan@gentoo.org> -xen-tools-4.3.3-r2.ebuild,
+  +xen-tools-4.3.3-r4.ebuild, -xen-tools-4.4.1-r4.ebuild,
+  -xen-tools-4.4.1-r5.ebuild, +xen-tools-4.4.1-r6.ebuild,
+  -xen-tools-4.5.0.ebuild, +xen-tools-4.5.0-r1.ebuild:
+  minor revision bump, also drop old
 
 *xen-tools-4.5.0 (21 Jan 2015)
 *xen-tools-4.4.1-r5 (21 Jan 2015)

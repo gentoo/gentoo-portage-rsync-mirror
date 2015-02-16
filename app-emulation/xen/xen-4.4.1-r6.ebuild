@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0.ebuild,v 1.2 2015/01/24 05:05:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.4.1-r6.ebuild,v 1.1 2015/02/16 06:49:43 dlan Exp $
 
 EAPI=5
 
@@ -14,8 +14,8 @@ if [[ $PV == *9999 ]]; then
 	EGIT_REPO_URI="git://xenbits.xen.org/${PN}.git"
 	live_eclass="git-2"
 else
-	KEYWORDS="~arm ~arm64 ~amd64"
-	UPSTREAM_VER=
+	KEYWORDS="~amd64 ~arm -x86"
+	UPSTREAM_VER=5
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
@@ -63,8 +63,6 @@ pkg_setup() {
 			export XEN_TARGET_ARCH="x86_64"
 		elif use arm; then
 			export XEN_TARGET_ARCH="arm32"
-		elif use arm64; then
-			export XEN_TARGET_ARCH="arm64"
 		else
 			die "Unsupported architecture!"
 		fi
@@ -98,7 +96,7 @@ src_prepare() {
 	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't	drop"
 
 	if use efi; then
-		epatch "${FILESDIR}"/${PN}-4.5-efi.patch
+		epatch "${FILESDIR}"/${PN}-4.4-efi.patch
 		export EFI_VENDOR="gentoo"
 		export EFI_MOUNTPOINT="boot"
 	fi
@@ -157,7 +155,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "Official Xen Guide and the unoffical wiki page:"
-	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog " https://wiki.gentoo.org/wiki/Xen"
 	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
 	use efi && einfo "The efi executable is installed in boot/efi/gentoo"
