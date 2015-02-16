@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-7.0.ebuild,v 1.1 2014/09/11 05:20:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-7.2.ebuild,v 1.1 2015/02/16 21:05:23 polynomial-c Exp $
 
 EAPI=5
 
@@ -28,6 +28,8 @@ DEPEND="
 	dev-lang/perl"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gb18030-test.patch
+
 	sed \
 		-e '/^LDFLAGS/s|=|+=|' \
 		-e '/CFLAGS_OS \+=/d' \

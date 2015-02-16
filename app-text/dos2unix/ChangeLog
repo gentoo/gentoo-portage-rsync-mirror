@@ -1,6 +1,19 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.152 2015/01/15 10:47:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.154 2015/02/16 21:06:47 polynomial-c Exp $
+
+  16 Feb 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -files/dos2unix-5.2-makefile.patch,
+  -files/dos2unix-5.3.1-fix_debug_build.patch,
+  -files/dos2unix-6.0.4-pod-encoding.patch:
+  Removed unused patches.
+
+*dos2unix-7.2 (16 Feb 2015)
+
+  16 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> -dos2unix-6.0.3.ebuild,
+  -dos2unix-7.0.ebuild, +dos2unix-7.2.ebuild,
+  +files/dos2unix-7.2-gb18030-test.patch:
+  Version bump. Removed old.
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> dos2unix-6.0.6.ebuild:
   ia64/s390/sh/sparc/x86 stable wrt #522520

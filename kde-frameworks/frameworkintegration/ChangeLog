@@ -1,6 +1,10 @@
 # ChangeLog for kde-frameworks/frameworkintegration
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/ChangeLog,v 1.9 2015/02/14 22:09:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/frameworkintegration/ChangeLog,v 1.10 2015/02/16 21:23:56 johu Exp $
+
+  16 Feb 2015; Johannes Huber <johu@gentoo.org>
+  frameworkintegration-5.7.0.ebuild:
+  Fix used plasma dependency function name.
 
 *frameworkintegration-5.7.0 (14 Feb 2015)
 
