@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql-cluster
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/ChangeLog,v 1.7 2015/02/10 18:15:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/ChangeLog,v 1.8 2015/02/16 17:33:31 grknight Exp $
+
+  16 Feb 2015; Brian Evans <grknight@gentoo.org> +files/my.cnf-5.6:
+  Add in configuration file for 7.3
 
 *mysql-cluster-7.2.19 (10 Feb 2015)
 *mysql-cluster-7.3.8 (10 Feb 2015)

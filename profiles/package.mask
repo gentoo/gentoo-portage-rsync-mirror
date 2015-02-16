@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16365 2015/02/16 17:01:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16366 2015/02/16 17:31:54 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,6 +47,7 @@ games-strategy/dark-oberon
 =virtual/mysql-5.5
 =dev-db/mysql-5.5*
 =dev-db/mariadb-5.5*
+=dev-db/mysql-cluster-7.2*
 
 # Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
 # Mask old virtuals based on the slot-per-version idea for removal,
