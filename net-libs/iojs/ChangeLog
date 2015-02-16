@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/iojs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/ChangeLog,v 1.7 2015/02/16 11:28:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/ChangeLog,v 1.8 2015/02/16 11:48:45 vapier Exp $
+
+  16 Feb 2015; Mike Frysinger <vapier@gentoo.org> iojs-1.2.0.ebuild:
+  Clean up src_configure: use proper arrays to hold flags, and use $ARCH rather
+  than $CHOST matching to look up the target arch.
 
   16 Feb 2015; Mike Frysinger <vapier@gentoo.org>
   +files/iojs-1.2.0-pkgconfig.patch, iojs-1.2.0.ebuild:
