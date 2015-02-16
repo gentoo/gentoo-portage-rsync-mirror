@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dfbsee
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.13 2012/05/05 08:58:55 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dfbsee/ChangeLog,v 1.14 2015/02/16 07:56:56 vapier Exp $
+
+  16 Feb 2015; Mike Frysinger <vapier@gentoo.org> dfbsee-0.7.4-r1.ebuild:
+  Rewrite ebuild to use EAPI=4 so we can depend on DirectFB[png] as pointed out
+  by Toralf Förster #314757 by Diego Elio Pettenò.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> dfbsee-0.7.4-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

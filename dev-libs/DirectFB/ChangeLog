@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.141 2015/01/28 19:30:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.142 2015/02/16 07:58:33 vapier Exp $
+
+  16 Feb 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/DirectFB-1.7.6-cle266.patch, DirectFB-1.7.6.ebuild:
+  Add fix by Jonathan Horowitz for building the cle266 driver #527986 by Toralf
+  Förster.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> DirectFB-1.4.9-r1.ebuild,
   DirectFB-1.6.3-r1.ebuild, DirectFB-1.7.1.ebuild, DirectFB-1.7.5.ebuild,
