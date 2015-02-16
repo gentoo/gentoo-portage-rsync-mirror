@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.8.0.ebuild,v 1.1 2015/01/18 09:50:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.8.0.ebuild,v 1.2 2015/02/15 23:03:02 mr_bones_ Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 inherit eutils toolchain-funcs cmake-utils python-single-r1 games
 
 DESCRIPTION="Atari ST emulator"
@@ -18,8 +18,8 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	media-libs/libsdl[X,sound,video]
-	sys-libs/readline
-	media-libs/libpng
+	sys-libs/readline:0
+	media-libs/libpng:0
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/higan-ananke
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/higan-ananke/ChangeLog,v 1.7 2015/02/10 10:07:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/higan-ananke/ChangeLog,v 1.8 2015/02/15 23:26:11 mr_bones_ Exp $
+
+  15 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> -higan-ananke-092.ebuild:
+  old
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> higan-ananke-094.ebuild:
   Stable for x86, wrt bug #539052
