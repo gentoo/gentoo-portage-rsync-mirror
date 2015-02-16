@@ -2241,7 +2241,6 @@ dev-python/pyside:X - Build QtGui and QtTest modules
 dev-python/pyside:declarative - Build QtDeclarative module
 dev-python/pyside:designer - Build QtDesigner and QtUiTools modules
 dev-python/pyside:help - Build QtHelp module
-dev-python/pyside:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
 dev-python/pyside:multimedia - Build QtMultimedia module
 dev-python/pyside:opengl - Build QtOpenGL module
 dev-python/pyside:phonon - Build phonon module
