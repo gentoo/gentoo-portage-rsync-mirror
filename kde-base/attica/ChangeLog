@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/attica
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.192 2015/02/14 14:35:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.193 2015/02/16 08:31:47 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> attica-4.14.3.ebuild:
+  Stable for ppc wrt bug #517344
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> attica-4.14.3.ebuild:
   Stable for x86 wrt bug #517344

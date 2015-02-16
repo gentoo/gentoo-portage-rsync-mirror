@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.14.3-r1.ebuild,v 1.2 2015/02/14 14:35:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokeqt/smokeqt-4.14.3-r1.ebuild,v 1.3 2015/02/16 08:31:45 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ KDE_REQUIRED="never"
 inherit kde4-base
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine - Qt bindings"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug +phonon qimageblitz qscintilla qwt webkit xmlpatterns"
 HOMEPAGE="http://techbase.kde.org/Development/Languages/Smoke"
 

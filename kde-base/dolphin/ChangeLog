@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.264 2015/02/14 14:34:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.265 2015/02/16 08:31:50 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dolphin-4.14.3.ebuild:
+  Stable for ppc wrt bug #517344
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dolphin-4.14.3.ebuild:
   Stable for x86 wrt bug #517344
