@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.7.1.ebuild,v 1.2 2015/01/13 14:31:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.7.1.ebuild,v 1.3 2015/02/16 09:34:44 haubi Exp $
 
 EAPI="4"
 
@@ -47,6 +47,7 @@ src_configure() {
 	export ac_cv_lib_z_gzopen=$(usex zlib)
 	econf \
 		--docdir='$(datarootdir)'/doc/${PF} \
+		--with-systemdtmpfilesdir="${EPREFIX}"/usr/lib/tmpfiles.d \
 		--enable-setuid \
 		--with-sections="1 1p 8 2 3 3p 4 5 6 7 9 0p tcl n l p o 1x 2x 3x 4x 5x 6x 7x 8x" \
 		$(use_enable nls) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/files/eblits/src_unpack-v4.eblit,v 1.1 2015/01/18 07:44:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/files/eblits/src_unpack-v5.eblit,v 1.1 2015/02/16 09:48:49 kumba Exp $
 
 # Eblit to handle src_unpack.
 
@@ -44,9 +44,10 @@ eblit-mips-sources-src_unpack() {
 
 	# Rename the source tree to match the linux-mips git checkout date and
 	# machine type.
-	local v="${F_KV}${EXTRAVERSION}-${GITDATE}"
+	local fkv="${F_KV%-*}"
+	local v="${fkv}-${GITDATE}"
 	for x in {ip27,ip28,ip30,cobalt}; do use ${x} && v="${v}.${x}" && break; done
-	mv "${WORKDIR}/linux-${F_KV}${EXTRAVERSION}" "${WORKDIR}/linux-${v}" || die
+	mv "${WORKDIR}/linux-${fkv/_/-}" "${WORKDIR}/linux-${v}" || die
 	S="${WORKDIR}/linux-${v}"
 
 	# Now go into the kernel source and patch it.

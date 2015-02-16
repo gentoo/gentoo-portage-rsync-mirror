@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.154 2015/02/01 08:12:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.155 2015/02/16 09:48:49 kumba Exp $
+
+*mips-sources-3.19 (16 Feb 2015)
+
+  16 Feb 2015; Joshua Kinard <kumba@gentoo.org> -mips-sources-3.18.5.ebuild,
+  +mips-sources-3.19.ebuild, -files/eblits/show_ip27_info-v2.eblit,
+  +files/eblits/show_ip27_info-v3.eblit, -files/eblits/src_unpack-v4.eblit,
+  +files/eblits/src_unpack-v5.eblit:
+  Update to 3.19.0 and linux-mips-git 20150215. Update IP27 show_info to warn
+  of random BUG() under heavy disk I/O.
 
 *mips-sources-3.18.5 (01 Feb 2015)
 
