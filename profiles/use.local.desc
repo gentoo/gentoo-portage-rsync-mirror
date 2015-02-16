@@ -738,6 +738,8 @@ app-i18n/ibus:introspection - Use dev-libs/gobject-introspection for introspecti
 app-i18n/ibus:vala - Enable support for dev-lang/vala
 app-i18n/ibus-anthy:deprecated - Install deprecated pygtk2 library
 app-i18n/ibus-handwrite:zinnia - Build with app-i18n/zinnia engine.
+app-i18n/ibus-libpinyin:boost - Compile against dev-libs/boost libraries
+app-i18n/ibus-libpinyin:opencc - Enable support for app-i18n/opencc
 app-i18n/ibus-m17n:gtk - Build the preference interfaces, based on x11-libs/gtk+ (GTK+ 2).
 app-i18n/ibus-pinyin:boost - Compile against dev-libs/boost libraries
 app-i18n/ibus-pinyin:opencc - Enable support for app-i18n/opencc
