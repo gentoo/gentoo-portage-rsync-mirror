@@ -1,20 +1,23 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/android-tools-0_p20130218.ebuild,v 1.2 2014/12/06 05:16:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/android-tools-0_p20130218.ebuild,v 1.3 2015/02/16 10:10:08 vapier Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
-KEYWORDS="~amd64 ~x86 ~arm-linux ~x86-linux"
+MY_VERSION="${PV##*_p}"
+GIT_SHA1="e89e09dd2b9b42184973e3ade291186a2737bced"
+
 DESCRIPTION="Android platform tools (adb and fastboot)"
 HOMEPAGE="https://android.googlesource.com/platform/system/core.git/"
-MY_VERSION="${PV##*_p}"
 SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/android-tools_4.2.2+git${MY_VERSION}.orig.tar.xz
-https://launchpad.net/ubuntu/+archive/primary/+files/android-tools_4.2.2+git${MY_VERSION}-3ubuntu36.debian.tar.gz
-https://github.com/android/platform_system_core/commit/e89e09dd2b9b42184973e3ade291186a2737bced.patch -> ${PN}-e89e09dd2b9b42184973e3ade291186a2737bced.patch"
+	https://launchpad.net/ubuntu/+archive/primary/+files/android-tools_4.2.2+git${MY_VERSION}-3ubuntu36.debian.tar.gz
+	https://github.com/android/platform_system_core/commit/${GIT_SHA1}.patch -> ${PN}-${GIT_SHA1}.patch"
+
 # The entire source code is Apache-2.0, except for fastboot which is BSD.
 LICENSE="Apache-2.0 BSD"
 SLOT="0"
+KEYWORDS="~amd64 ~x86 ~arm-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="sys-libs/zlib:=
@@ -25,10 +28,9 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	# Apply patch for bug #500480.
-	pushd core || die
-	epatch "${DISTDIR}"/${PN}-e89e09dd2b9b42184973e3ade291186a2737bced.patch
-	popd
+	pushd core >/dev/null || die
+	epatch "${DISTDIR}"/${PN}-${GIT_SHA1}.patch #500480
+	popd >/dev/null
 	epatch ../debian/patches/*.patch
 	mv ../debian/makefiles/adb.mk core/adb/Makefile || die
 	mv ../debian/makefiles/fastboot.mk core/fastboot/Makefile || die
@@ -45,15 +47,10 @@ src_prepare() {
 }
 
 src_compile() {
-	pushd core/adb || die
-	emake adb || die
-	popd
-	pushd core/fastboot || die
-	emake fastboot || die
+	emake -C core/adb adb
+	emake -C core/fastboot fastboot
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe core/adb/adb
-	doexe core/fastboot/fastboot
+	dobin core/adb/adb core/fastboot/fastboot
 }

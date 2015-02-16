@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.114 2015/02/09 11:58:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.115 2015/02/16 10:21:05 ago Exp $
+
+  16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> hexchat-2.10.2.ebuild:
+  Stable for sparc, wrt bug #538228
 
   09 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> hexchat-2.10.2.ebuild:
   Stable on amd64 and x86, wrt bug #538228

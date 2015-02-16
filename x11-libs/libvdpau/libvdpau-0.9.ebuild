@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.9.ebuild,v 1.1 2014/12/30 07:12:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.9.ebuild,v 1.2 2015/02/16 10:13:30 nativemad Exp $
 
 EAPI=5
 VIRTUALX_REQUIRED="test"
@@ -12,7 +12,7 @@ SRC_URI="http://people.freedesktop.org/~aplattner/vdpau/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="doc dri"
 
 RDEPEND=">=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
