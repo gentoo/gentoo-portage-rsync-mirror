@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.171 2015/02/15 19:30:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.172 2015/02/16 00:45:18 vapier Exp $
 
 EAPI="5"
 
@@ -40,8 +40,8 @@ case ${PV} in
 	;;
 esac
 
-DESCRIPTION="XBMC is a free and open source media-player and entertainment hub"
-HOMEPAGE="http://xbmc.org/"
+DESCRIPTION="Kodi is a free and open source media-player and entertainment hub"
+HOMEPAGE="http://kodi.tv/ http://kodi.wiki/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -186,7 +186,7 @@ src_prepare() {
 	# stuff handles this just fine already #408395
 	export ac_cv_lib_avcodec_ff_vdpau_vc1_decode_picture=yes
 
-	# Fix XBMC's final version string showing as "exported"
+	# Fix the final version string showing as "exported"
 	# instead of the SVN revision number.
 	export HAVE_GIT=no GIT_REV=${EGIT_VERSION:-exported}
 
@@ -253,8 +253,8 @@ src_install() {
 	default
 	rm "${ED}"/usr/share/doc/*/{LICENSE.GPL,copying.txt}*
 
-	domenu tools/Linux/xbmc.desktop
-	newicon media/icon48x48.png xbmc.png
+	domenu tools/Linux/kodi.desktop
+	newicon media/icon48x48.png kodi.png
 
 	# Remove optional addons (platform specific and disabled by USE flag).
 	local disabled_addons=(
@@ -264,30 +264,24 @@ src_install() {
 	use fishbmc  || disabled_addons+=( visualization.fishbmc )
 	use projectm || disabled_addons+=( visualization.{milkdrop,projectm} )
 	use rsxs     || disabled_addons+=( screensaver.rsxs.{euphoria,plasma,solarwinds} )
-	rm -rf "${disabled_addons[@]/#/${ED}/usr/share/xbmc/addons/}"
+	rm -rf "${disabled_addons[@]/#/${ED}/usr/share/kodi/addons/}"
 
-	# Punt simplejson bundle, we use the system one anyway.
-	rm -rf "${ED}"/usr/share/xbmc/addons/script.module.simplejson/lib
 	# Remove fonconfig settings that are used only on MacOSX.
 	# Can't be patched upstream because they just find all files and install
 	# them into same structure like they have in git.
-	rm -rf "${ED}"/usr/share/xbmc/system/players/dvdplayer/etc
+	rm -rf "${ED}"/usr/share/kodi/system/players/dvdplayer/etc
 
 	# Replace bundled fonts with system ones
 	# teletext.ttf: unknown
 	# bold-caps.ttf: unknown
 	# roboto: roboto-bold, roboto-regular
 	# arial.ttf: font mashed from droid/roboto, not removed wrt bug#460514
-	rm -rf "${ED}"/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-*
+	rm -rf "${ED}"/usr/share/kodi/addons/skin.confluence/fonts/Roboto-*
 	dosym /usr/share/fonts/roboto/Roboto-Regular.ttf \
-		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Regular.ttf
+		/usr/share/kodi/addons/skin.confluence/fonts/Roboto-Regular.ttf
 	dosym /usr/share/fonts/roboto/Roboto-Bold.ttf \
-		/usr/share/xbmc/addons/skin.confluence/fonts/Roboto-Bold.ttf
+		/usr/share/kodi/addons/skin.confluence/fonts/Roboto-Bold.ttf
 
 	python_domodule tools/EventClients/lib/python/xbmcclient.py
 	python_newscript "tools/EventClients/Clients/Kodi Send/kodi-send.py" kodi-send
-}
-
-pkg_postinst() {
-	elog "Visit http://kodi.wiki/?title=XBMC_Online_Manual"
 }

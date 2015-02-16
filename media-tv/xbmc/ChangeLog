@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.223 2015/02/15 19:30:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.224 2015/02/16 00:45:18 vapier Exp $
+
+  16 Feb 2015; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Update xbmc to kodi in various names #526992 by Rafal Kupiec.
 
   15 Feb 2015; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Switch to libsdl2 to match upstream #536602 by hal.
