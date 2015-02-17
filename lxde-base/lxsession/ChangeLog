@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.60 2014/07/24 11:19:04 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.61 2015/02/17 21:00:56 maekke Exp $
+
+  17 Feb 2015; Markus Meier <maekke@gentoo.org> lxsession-0.4.9.2-r3.ebuild:
+  arm stable, bug #527856
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove description for USE="upower" which is now a global USE flag.
