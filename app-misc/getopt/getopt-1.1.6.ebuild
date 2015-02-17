@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.6.ebuild,v 1.1 2015/02/16 05:47:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/getopt/getopt-1.1.6.ebuild,v 1.2 2015/02/17 14:49:52 haubi Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ src_compile() {
 		has_version sys-libs/glibc || libintl="-lintl"
 	fi
 
+	[[ ${CHOST} == *-aix* ]] && libcgetopt=0
 	[[ ${CHOST} == *-irix* ]] && libcgetopt=0
 	[[ ${CHOST} == *-interix* ]] && libcgetopt=0
 

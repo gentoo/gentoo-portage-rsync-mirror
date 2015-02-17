@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rlwrap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.36 2014/12/31 16:11:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.37 2015/02/17 14:52:42 haubi Exp $
+
+  17 Feb 2015; Michael Haubenwallner <haubi@gentoo.org> rlwrap-0.42.ebuild:
+  Add ~ppc-aix keyword.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> rlwrap-0.42.ebuild:
   Stable for ppc, wrt bug #531424
