@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.20 2014/12/15 02:06:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.21 2015/02/17 00:04:50 radhermit Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 if [[ ${PV} == *9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/pkgcore/pkgcore.git"
+	EGIT_REPO_URI="https://github.com/pkgcore/pkgcore.git"
 	inherit git-r3
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"

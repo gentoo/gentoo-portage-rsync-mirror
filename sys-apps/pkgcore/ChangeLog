@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.179 2014/12/15 02:06:05 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.180 2015/02/17 00:04:50 radhermit Exp $
+
+  17 Feb 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Use https git repo.
 
   15 Dec 2014; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild,
   metadata.xml:

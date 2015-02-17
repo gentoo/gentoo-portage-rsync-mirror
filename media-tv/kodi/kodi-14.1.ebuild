@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-14.1.ebuild,v 1.1 2015/02/16 07:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-14.1.ebuild,v 1.2 2015/02/17 00:05:03 vapier Exp $
 
 EAPI="5"
 
@@ -22,8 +22,7 @@ case ${PV} in
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="http://mirrors.kodi.tv/releases/source/${MY_PV}-${CODENAME}.tar.gz -> ${P}.tar.gz
 		http://mirrors.kodi.tv/releases/source/${MY_P}-generated-addons.tar.xz"
-	# ffmpeg system build is broken #526992
-	#KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~x86"
 
 	S=${WORKDIR}/xbmc-${PV}-${CODENAME}
 	;;
@@ -81,7 +80,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/tiff
 	pulseaudio? ( media-sound/pulseaudio )
 	media-sound/wavpack
-	>=media-video/ffmpeg-2.4:0=[encode]
+	>=media-video/ffmpeg-2.4:=[encode]
 	rtmp? ( media-video/rtmpdump )
 	avahi? ( net-dns/avahi )
 	nfs? ( net-fs/libnfs )
@@ -144,6 +143,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9999-nomythtv.patch
 	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
+	epatch "${FILESDIR}"/${PN}-14.0-dvddemux-ffmpeg.patch #526992#36
 	# The mythtv patch touches configure.ac, so force a regen
 	rm -f configure
 
