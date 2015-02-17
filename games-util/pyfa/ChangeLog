@@ -1,6 +1,14 @@
 # ChangeLog for games-util/pyfa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.29 2014/06/29 00:16:34 tetromino Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.30 2015/02/17 22:37:12 tetromino Exp $
+
+*pyfa-1.8.1 (17 Feb 2015)
+
+  17 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.2.0.ebuild,
+  -pyfa-1.2.1.ebuild, +pyfa-1.8.1.ebuild, pyfa-9999.ebuild:
+  Very late version bump for Proteus (bug #519416, tthanks to Hedin Ejdesgaard
+  Møller, Stefan Reimer et al); fix missing dep (bug #505192, thanks to Nick
+  Wallingford) and new readme location (bug #533094, thanks to Martin McCourt).
 
 *pyfa-1.2.1 (28 Jun 2014)
 

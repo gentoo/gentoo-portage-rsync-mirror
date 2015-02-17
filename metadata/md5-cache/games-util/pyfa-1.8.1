@@ -1,11 +1,13 @@
-DEFINED_PHASES=install postinst postrm preinst prepare unpack
-DEPEND=app-arch/unzip >=sys-apps/sed-4 dev-vcs/git
+DEFINED_PHASES=install postinst postrm preinst prepare
+DEPEND=app-arch/unzip >=sys-apps/sed-4
 DESCRIPTION=Python Fitting Assistant - a ship fitting application for EVE Online
 EAPI=5
 HOMEPAGE=https://github.com/DarkFenX/Pyfa
 IUSE=+graph python_targets_python2_7
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-3+ LGPL-2.1+ CC-BY-2.5 free-noncomm
 RDEPEND=dev-python/python-dateutil[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/sqlalchemy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/wxpython:2.8[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] graph? ( dev-python/matplotlib[wxwidgets,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite,threads] ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e6af8a34a72495addfaace309d3c5958
+SRC_URI=https://github.com/DarkFenX/Pyfa/archive/v1.8.1.tar.gz -> pyfa-1.8.1.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=697a4b54e7c3102e37aa12e40a81bbfb

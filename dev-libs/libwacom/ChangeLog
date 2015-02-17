@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libwacom
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.23 2014/10/25 10:21:40 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.24 2015/02/17 22:52:04 tetromino Exp $
+
+*libwacom-0.11 (17 Feb 2015)
+
+  17 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libwacom-0.11.ebuild:
+  Version bump, adds support for cintiq companion (bug #540204, thanks to
+  Chandler Paul).
 
 *libwacom-0.10 (25 Oct 2014)
 
