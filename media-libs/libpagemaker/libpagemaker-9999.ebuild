@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpagemaker/libpagemaker-9999.ebuild,v 1.1 2015/01/27 20:34:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpagemaker/libpagemaker-9999.ebuild,v 1.2 2015/02/17 10:00:22 jlec Exp $
 
 EAPI=5
 
@@ -20,9 +20,9 @@ IUSE="debug doc tools static-libs"
 
 RDEPEND="
 	dev-libs/librevenge
-	>=dev-libs/boost-1.47
 	"
 DEPEND="${RDEPEND}
+	>=dev-libs/boost-1.47
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
 "

@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xvkbd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.34 2014/09/18 18:24:52 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/ChangeLog,v 1.35 2015/02/17 09:45:45 jer Exp $
+
+*xvkbd-3.6 (17 Feb 2015)
+
+  17 Feb 2015; Jeroen Roovers <jer@gentoo.org> +xvkbd-3.6.ebuild,
+  +files/xvkbd-3.6-last_altgr_mask.patch:
+  Version bump.
 
 *xvkbd-3.5-r1 (18 Sep 2014)
 
