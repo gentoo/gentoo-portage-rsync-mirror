@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.31 2015/02/13 21:51:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.32 2015/02/17 10:44:28 vapier Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -28,7 +28,7 @@ case ${PV} in
 	;;
 *.*.50.*)
 	# weekly snapshots
-	SRC_URI="ftp://sourceware.org/pub/gdb/snapshots/current/gdb-weekly-${PV}.tar.bz2"
+	SRC_URI="ftp://sourceware.org/pub/gdb/snapshots/current/gdb-weekly-${PV}.tar.xz"
 	;;
 9999*)
 	# live git tree

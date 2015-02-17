@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.17.3-r1.ebuild,v 1.6 2014/05/17 07:32:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/recoll-1.17.3-r1.ebuild,v 1.7 2015/02/17 10:40:40 kensington Exp $
 
 EAPI="4"
 
@@ -115,7 +115,9 @@ src_configure() {
 		$(use_with inotify) \
 		$(use_enable session x11mon) \
 		${qtconf}
-	cd qtgui && eqmake4 ${PN}.pro && cd ..
+	if use qt4; then
+		cd qtgui && eqmake4 ${PN}.pro && cd ..
+	fi
 }
 
 src_compile() {

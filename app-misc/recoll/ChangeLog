@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/recoll
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.24 2015/02/10 12:02:46 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.26 2015/02/17 10:40:40 kensington Exp $
+
+  17 Feb 2015; Michael Palimaka <kensington@gentoo.org> recoll-1.17.3-r1.ebuild:
+  Avoid build failure with USE="-qt4" wrt bug #472220.
+
+  17 Feb 2015; Michael Palimaka <kensington@gentoo.org> -recoll-1.16.2.ebuild,
+  -recoll-1.17.3.ebuild, -recoll-1.18.1.ebuild, -recoll-1.18.2.ebuild:
+  Remove old.
 
   10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   Drop myself from metadata, add maintainer-needed
