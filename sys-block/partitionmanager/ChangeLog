@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/partitionmanager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/ChangeLog,v 1.26 2014/10/10 10:58:00 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/ChangeLog,v 1.27 2015/02/17 10:20:19 kensington Exp $
+
+*partitionmanager-1.1.1 (17 Feb 2015)
+
+  17 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  +partitionmanager-1.1.1.ebuild, -partitionmanager-1.0.3_p20130623.ebuild:
+  Version bump by Andreas Sturmlechner <andreas.sturmlechner@gmail.com>. Remove
+  old.
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> partitionmanager-1.1.0.ebuild:
   Stable for x86, wrt bug #524292

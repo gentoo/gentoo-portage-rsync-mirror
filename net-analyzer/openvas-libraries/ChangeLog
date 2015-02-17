@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/openvas-libraries
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.35 2015/02/14 19:13:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.36 2015/02/17 10:11:30 jlec Exp $
+
+*openvas-libraries-8.0_beta6-r1 (17 Feb 2015)
+*openvas-libraries-7.0.7-r1 (17 Feb 2015)
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org>
+  +openvas-libraries-7.0.7-r1.ebuild, +openvas-libraries-8.0_beta6-r1.ebuild,
+  -files/openvas-libraries-8.0_beta3-underlinking.patch,
+  -openvas-libraries-7.0.7.ebuild, -openvas-libraries-8.0_beta6.ebuild:
+  Fix LDAP configure logic, #540216
 
   14 Feb 2015; Justin Lecher <jlec@gentoo.org>
   files/openvas-libraries-8.0_beta6-include.patch:

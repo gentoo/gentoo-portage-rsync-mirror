@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-7.0.7.ebuild,v 1.2 2015/02/14 14:20:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-7.0.7-r1.ebuild,v 1.1 2015/02/17 10:11:30 jlec Exp $
 
 EAPI=5
 
@@ -20,8 +20,9 @@ IUSE="ldap"
 RDEPEND="
 	app-crypt/gpgme
 	>=dev-libs/glib-2.12
-	=net-libs/gnutls-2*
+	dev-libs/libksba
 	!net-analyzer/openvas-libnasl
+	=net-libs/gnutls-2*
 	net-libs/libpcap
 	net-libs/libssh
 	ldap? (	net-nds/openldap )"
@@ -51,7 +52,7 @@ src_configure() {
 	local mycmakeargs=(
 		"-DLOCALSTATEDIR=${EPREFIX}/var"
 		"-DSYSCONFDIR=${EPREFIX}/etc"
-		$(cmake-utils_use_build ldap WITH_LDAP)
+		$(usex ldap -DBUILD_WITHOUT_LDAP=0 -DBUILD_WITHOUT_LDAP=1)
 	)
 	cmake-utils_src_configure
 }

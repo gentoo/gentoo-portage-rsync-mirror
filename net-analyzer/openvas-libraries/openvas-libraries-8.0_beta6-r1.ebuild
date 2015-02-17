@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta6.ebuild,v 1.1 2015/02/14 18:22:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta6-r1.ebuild,v 1.1 2015/02/17 10:11:30 jlec Exp $
 
 EAPI=5
 
@@ -41,7 +41,6 @@ DOCS=( ChangeLog CHANGES README )
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-7.0.4-libssh.patch
-#	"${FILESDIR}"/${PN}-8.0_beta3-underlinking.patch
 	"${FILESDIR}"/${P}-include.patch
 	)
 
@@ -56,7 +55,7 @@ src_configure() {
 	local mycmakeargs=(
 		"-DLOCALSTATEDIR=${EPREFIX}/var"
 		"-DSYSCONFDIR=${EPREFIX}/etc"
-		$(cmake-utils_use_build ldap WITH_LDAP)
+		$(usex ldap -DBUILD_WITHOUT_LDAP=0 -DBUILD_WITHOUT_LDAP=1)
 	)
 	cmake-utils_src_configure
 }
