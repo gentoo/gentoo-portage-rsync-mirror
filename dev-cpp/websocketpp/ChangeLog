@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/websocketpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/websocketpp/ChangeLog,v 1.1 2015/01/16 23:24:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/websocketpp/ChangeLog,v 1.2 2015/02/17 20:09:11 johu Exp $
+
+*websocketpp-0.5.0 (17 Feb 2015)
+
+  17 Feb 2015; Johannes Huber <johu@gentoo.org> +websocketpp-0.5.0.ebuild:
+  Version bump.
 
 *websocketpp-0.4.0 (16 Jan 2015)
 
@@ -8,4 +13,3 @@
   +metadata.xml:
   New package. Initial ebuild by Uwe L. Korn <uwelk@xhochy.com>. Modified by
   me. Bug #528764.
-

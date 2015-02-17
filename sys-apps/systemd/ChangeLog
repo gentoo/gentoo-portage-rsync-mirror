@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.348 2015/02/17 12:37:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.349 2015/02/17 20:15:02 pacho Exp $
+
+  17 Feb 2015; Pacho Ramos <pacho@gentoo.org> systemd-218-r3.ebuild,
+  systemd-9999.ebuild:
+  Enable by default lz4 compression for journald as it performs far better.
 
   17 Feb 2015; Pacho Ramos <pacho@gentoo.org> -systemd-216-r2.ebuild,
   -systemd-217-r4.ebuild, -systemd-218-r1.ebuild, -systemd-218-r2.ebuild:

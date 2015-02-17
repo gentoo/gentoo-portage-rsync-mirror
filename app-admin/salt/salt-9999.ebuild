@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.16 2015/01/16 22:56:46 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-9999.ebuild,v 1.17 2015/02/17 20:07:03 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -45,7 +45,7 @@ RDEPEND="sys-apps/pciutils
 	)
 	zeromq? (
 		>=dev-python/pyzmq-2.2.0[${PYTHON_USEDEP}]
-		dev-python/m2crypto[${PYTHON_USEDEP}]
+		>=dev-python/m2crypto-0.22.3[${PYTHON_USEDEP}]
 		dev-python/pycrypto[${PYTHON_USEDEP}]
 	)
 	api? (
@@ -67,7 +67,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/pip[${PYTHON_USEDEP}]
 		dev-python/virtualenv[${PYTHON_USEDEP}]
 		dev-python/timelib[${PYTHON_USEDEP}]
-		>=dev-python/SaltTesting-2014.8.5[${PYTHON_USEDEP}]
+		>=dev-python/SaltTesting-2015.2.16[${PYTHON_USEDEP}]
 		${RDEPEND}
 	)"
 
@@ -99,5 +99,6 @@ python_test() {
 
 	# using ${T} for the TMPDIR makes some tests needs paths that exceed PATH_MAX
 	USE_SETUPTOOLS=1 SHELL="/bin/bash" TMPDIR="/tmp" \
-		./tests/runtests.py --unit-tests --no-report --verbose || die "testing failed"
+		${EPYTHON} tests/runtests.py \
+		--unit-tests --no-report --verbose || die "testing failed"
 }
