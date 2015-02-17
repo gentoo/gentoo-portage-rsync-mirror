@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/xauth-1.0.9-r1.ebuild,v 1.2 2015/02/17 13:51:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/xauth-1.0.9-r2.ebuild,v 1.1 2015/02/17 13:51:46 chithanh Exp $
 
 EAPI=4
 
@@ -17,7 +17,6 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXmu"
 DEPEND="${RDEPEND}"
 
-RESTRICT="test"
 # Tests dependend on dev-util/cmdtest awaiting keywording, bug #511202.
 #	test? ( dev-util/cmdtest )
 

@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xauth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.101 2014/11/28 15:35:15 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.102 2015/02/17 13:51:46 chithanh Exp $
+
+*xauth-1.0.9-r2 (17 Feb 2015)
+
+  17 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xauth-1.0.9-r2.ebuild, xauth-1.0.9-r1.ebuild:
+  Restrict tests so 1.0.9-r1 can go stable, bug #511202.
 
 *xauth-1.0.9-r1 (28 Nov 2014)
 
