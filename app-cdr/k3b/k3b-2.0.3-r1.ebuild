@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3-r1.ebuild,v 1.3 2014/12/12 21:16:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.3-r1.ebuild,v 1.4 2015/02/17 03:51:19 vapier Exp $
 
 EAPI=5
 
@@ -61,7 +61,7 @@ RDEPEND="${CDEPEND}
 DOCS+=( ChangeLog )
 
 PATCHES=(
-	"${FILESDIR}/${PN}-2.0.2-ffmpeg2.patch"
+	"${FILESDIR}/${PN}-2.0.3-libav-10.patch" #509332
 )
 
 REQUIRED_USE="
