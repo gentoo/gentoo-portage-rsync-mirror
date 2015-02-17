@@ -23,6 +23,7 @@ S="${WORKDIR}/share/mk"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-9.1-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-add-nossp-cflags.patch"
 	use userland_GNU && epatch "${FILESDIR}/${PN}-9.1-gnu.patch"
 }
 
