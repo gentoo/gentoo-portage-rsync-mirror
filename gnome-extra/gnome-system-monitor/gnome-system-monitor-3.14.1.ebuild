@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.14.1.ebuild,v 1.1 2014/12/22 23:30:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.14.1.ebuild,v 1.2 2015/02/17 02:43:18 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -27,6 +27,7 @@ RDEPEND="
 	systemd? ( >=sys-apps/systemd-38:0= )
 	X? ( >=x11-libs/libwnck-2.91.0:3 )
 "
+#eautoreconf requires gnome-base/gnome-common
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.20
 	>=dev-util/intltool-0.41.0

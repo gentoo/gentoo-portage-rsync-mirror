@@ -290,6 +290,25 @@ Index: transcode-1.1.7/export/aud_aux.c
 ===================================================================
 --- transcode-1.1.7.orig/export/aud_aux.c
 +++ transcode-1.1.7/export/aud_aux.c
+@@ -326,10 +326,18 @@ static int tc_audio_init_ffmpeg(vob_t *vob, int o_codec)
+ 
+     switch (o_codec) {
+       case   0x50:
++#if LIBAVCODEC_VERSION_MAJOR < 55
+         codeid = CODEC_ID_MP2;
++#else
++        codeid = AV_CODEC_ID_MP2;
++#endif
+         break;
+       case 0x2000:
++#if LIBAVCODEC_VERSION_MAJOR < 55
+         codeid = CODEC_ID_AC3;
++#else
++        codeid = AV_CODEC_ID_AC3;
++#endif
+         break;
+       default:
+         tc_warn("cannot init ffmpeg with %x", o_codec);
 @@ -346,7 +346,7 @@ static int tc_audio_init_ffmpeg(vob_t *v
  
      //-- set parameters (bitrate, channels and sample-rate) --
@@ -308,6 +327,20 @@ Index: transcode-1.1.7/export/aud_aux.c
      TC_UNLOCK_LIBAVCODEC;
      if (ret < 0) {
          tc_warn("tc_audio_init_ffmpeg: could not open %s codec !",
+@@ -371,7 +371,12 @@ static int tc_audio_init_ffmpeg(vob_t *vob, int o_codec)
+     TC_UNLOCK_LIBAVCODEC;
+     if (ret < 0) {
+         tc_warn("tc_audio_init_ffmpeg: could not open %s codec !",
+-                (codeid == CODEC_ID_MP2) ?"mpa" :"ac3");
++#if LIBAVCODEC_VERSION_MAJOR < 55
++                (codeid == CODEC_ID_MP2)
++#else
++                (codeid == AV_CODEC_ID_MP2)
++#endif
++                ?"mpa" :"ac3");
+         return(TC_EXPORT_ERROR);
+     }
+ 
 Index: transcode-1.1.7/import/import_ffmpeg.c
 ===================================================================
 --- transcode-1.1.7.orig/import/import_ffmpeg.c
