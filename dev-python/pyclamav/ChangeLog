@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyclamav
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/ChangeLog,v 1.26 2012/03/13 02:54:16 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyclamav/ChangeLog,v 1.27 2015/02/17 08:50:08 idella4 Exp $
+
+*pyclamav-0.4.1-r2 (17 Feb 2015)
+
+  17 Feb 2015; Ian Delaney <idella4@gentoo.org> +pyclamav-0.4.1-r2.ebuild:
+  revbump; convert -> distutils-r1, rm old
 
   13 Mar 2012; Mike Gilbert <floppym@gentoo.org> pyclamav-0.4.1-r1.ebuild:
   Restrict Python 3. Patch by Arfrever.
@@ -101,4 +106,3 @@
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> +pyclamav-0.1.ebuild:
   Initial commit, bug #52089.
-

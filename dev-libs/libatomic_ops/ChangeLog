@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.46 2015/02/13 19:17:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.47 2015/02/17 08:45:36 jer Exp $
+
+  17 Feb 2015; Jeroen Roovers <jer@gentoo.org> libatomic_ops-7.4.2.ebuild:
+  Stable for HPPA (bug #538126).
 
 *libatomic_ops-7.4.2 (13 Feb 2015)
 
