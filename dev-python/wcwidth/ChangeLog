@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/wcwidth
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wcwidth/ChangeLog,v 1.1 2015/02/17 13:21:16 jlec Exp $
+
+*wcwidth-0.1.4 (17 Feb 2015)
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org> +metadata.xml,
+  +wcwidth-0.1.4.ebuild:
+  New addition

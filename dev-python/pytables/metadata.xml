@@ -11,9 +11,6 @@
   from Pyrex sources, makes it a fast, yet extremely easy to use tool
   for interactively save and retrieve large amounts of data.
 </longdescription>
-  <use>
-    <flag name="contrib">Install user-contributed files</flag>
-  </use>
   <upstream>
     <remote-id type="pypi">tables</remote-id>
   </upstream>

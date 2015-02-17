@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-perl/ExtUtils-CChecker-0.60.0 virtual/perl-ExtUtils-CBuilder virtual/perl-Module-Build virtual/perl-Scalar-List-Utils virtual/perl-XSLoader test? ( virtual/perl-Test-Simple ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Address-family independent name resolving functions
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Socket-GetAddrInfo/
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=virtual/perl-Exporter virtual/perl-Socket dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/P/PE/PEVANS/Socket-GetAddrInfo-0.22.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=64e3c05a0580982486e6807043690f27

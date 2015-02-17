@@ -2251,7 +2251,6 @@ dev-python/pyside:sql - Build QtSql module
 dev-python/pyside:svg - Build QtSvg module
 dev-python/pyside:webkit - Build QtWebKit module
 dev-python/pyside:xmlpatterns - Build QtXmlPatterns module
-dev-python/pytables:contrib - Install user-contributed files
 dev-python/python-stdnum:vies - Enable VIES
 dev-python/pyudev:pygobject - Install PyGobject binding
 dev-python/pyudev:pyqt4 - Install PyQt4 binding
