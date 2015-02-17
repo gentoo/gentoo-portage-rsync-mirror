@@ -1,8 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.9.3-r1.ebuild,v 1.5 2014/02/23 16:09:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.9.3-r1.ebuild,v 1.6 2015/02/17 00:39:59 vapier Exp $
 
 EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Command line tool for extracting videos from various websites"
 HOMEPAGE="http://cclive.sourceforge.net/"
@@ -21,6 +23,10 @@ RDEPEND=">=media-libs/libquvi-0.4.0
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-iostream.patch #527658
+}
 
 src_configure() {
 	econf --disable-ccl
