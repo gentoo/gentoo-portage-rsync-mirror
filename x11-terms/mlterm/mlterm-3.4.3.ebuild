@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.4.1.ebuild,v 1.1 2014/12/29 12:43:09 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.4.3.ebuild,v 1.1 2015/02/17 12:39:06 hattya Exp $
 
 EAPI="5"
 
@@ -89,6 +89,10 @@ src_configure() {
 
 	addpredict /dev/ptmx
 	autotools-utils_src_configure
+}
+
+src_test() {
+	:
 }
 
 src_install () {

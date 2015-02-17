@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/blessings
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blessings/ChangeLog,v 1.1 2015/02/17 12:36:20 jlec Exp $
+
+*blessings-1.6 (17 Feb 2015)
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org> +blessings-1.6.ebuild,
+  +metadata.xml:
+  New addition
