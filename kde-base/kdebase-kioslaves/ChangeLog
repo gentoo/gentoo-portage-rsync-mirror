@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.379 2015/02/16 08:31:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.380 2015/02/17 11:06:39 ago Exp $
+
+  17 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  kdebase-kioslaves-4.14.3.ebuild:
+  Stable for ppc64 wrt bug #517344
 
   16 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   kdebase-kioslaves-4.14.3.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/bcrypt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.7 2014/06/06 08:06:30 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.8 2015/02/17 11:14:53 jlec Exp $
+
+*bcrypt-1.1.0 (17 Feb 2015)
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org> +bcrypt-1.1.0.ebuild,
+  metadata.xml:
+  Version Bump
 
   06 Jun 2014; Sergey Popov <pinkbyte@gentoo.org> bcrypt-1.0.2-r1.ebuild:
   Stable on amd64 and x86, wrt bug #509828

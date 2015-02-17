@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.183 2015/02/16 08:31:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.184 2015/02/17 11:06:39 ago Exp $
+
+  17 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rocs-4.14.3.ebuild:
+  Stable for ppc64 wrt bug #517344
 
   16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rocs-4.14.3.ebuild:
   Stable for ppc wrt bug #517344
