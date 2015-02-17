@@ -1,7 +1,7 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Time-HiRes
 EAPI=5
-KEYWORDS=~alpha amd64 ~arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
+KEYWORDS=~alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
 RDEPEND=|| ( =dev-lang/perl-5.20* ~perl-core/Time-HiRes-1.972.600 ) !<perl-core/Time-HiRes-1.972.600 !>perl-core/Time-HiRes-1.972.600-r999
 SLOT=0
-_md5_=ef37f97d85fa19de760809f9ec7597d9
+_md5_=253b414bf3ee8618cbfb2f70a373a7f4

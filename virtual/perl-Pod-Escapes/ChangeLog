@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Pod-Escapes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Escapes/ChangeLog,v 1.29 2015/02/17 08:13:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Escapes/ChangeLog,v 1.30 2015/02/17 21:40:05 maekke Exp $
+
+  17 Feb 2015; Markus Meier <maekke@gentoo.org> perl-Pod-Escapes-1.60.0.ebuild:
+  arm stable, bug #536790
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Escapes-1.60.0.ebuild:
   Stable for ia64, wrt bug #536790
