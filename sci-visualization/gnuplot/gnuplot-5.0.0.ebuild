@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0.0.ebuild,v 1.1 2015/01/13 02:37:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-5.0.0.ebuild,v 1.2 2015/02/17 12:07:24 jlec Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RDEPEND="
 	cairo? (
 		x11-libs/cairo
 		x11-libs/pango )
-	gd? ( >=media-libs/gd-2.0.35-r3[png] )
+	gd? ( >=media-libs/gd-2.0.35-r3:=[png] )
 	ggi? ( media-libs/libggi )
 	latex? (
 		virtual/latex-base

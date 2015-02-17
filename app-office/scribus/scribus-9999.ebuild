@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.11 2015/01/28 08:49:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.12 2015/02/17 12:05:45 jlec Exp $
 
 EAPI=5
 
@@ -65,7 +65,7 @@ COMMON_DEPEND="
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	osg? ( dev-games/openscenegraph )
 	pdf? ( app-text/podofo )
-	poppler? ( >=app-text/poppler-0.19.0 )
+	poppler? ( >=app-text/poppler-0.19.0:= )
 	scripts? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 	tk? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 "

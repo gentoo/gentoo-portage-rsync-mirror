@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.78 2015/01/21 05:29:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.79 2015/02/17 12:26:54 jlec Exp $
+
+*urwid-1.3.0 (17 Feb 2015)
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org> +urwid-1.3.0.ebuild,
+  metadata.xml:
+  Version Bump
 
   21 Jan 2015; Ian Delaney <idella4@gentoo.org> -urwid-0.9.9.1.ebuild,
   -urwid-1.0.2.ebuild, -urwid-1.1.0.ebuild, -urwid-1.1.1-r1.ebuild,

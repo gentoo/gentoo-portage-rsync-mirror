@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sh/ChangeLog,v 1.7 2014/11/27 15:04:10 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sh/ChangeLog,v 1.8 2015/02/17 12:01:17 jlec Exp $
+
+*sh-1.11 (17 Feb 2015)
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org> +sh-1.11.ebuild:
+  Version Bump
 
   27 Nov 2014; Pacho Ramos <pacho@gentoo.org> sh-1.09.ebuild:
   Support python 3.4

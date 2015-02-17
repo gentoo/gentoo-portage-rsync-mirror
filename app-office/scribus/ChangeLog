@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.198 2015/01/28 08:51:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.199 2015/02/17 12:05:45 jlec Exp $
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org> scribus-9999.ebuild:
+  Use subslots for deps
 
   28 Jan 2015; Justin Lecher <jlec@gentoo.org> scribus-1.4.9999.ebuild:
   Fix 1.5 live ebuild to latest HEAD Changes

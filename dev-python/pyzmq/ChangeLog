@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.66 2015/02/12 02:32:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.67 2015/02/17 12:04:29 jlec Exp $
+
+  17 Feb 2015; Justin Lecher <jlec@gentoo.org> pyzmq-14.5.0.ebuild:
+  Use subslot for dependencies
 
 *pyzmq-2.2.0.1-r1 (12 Feb 2015)
 
