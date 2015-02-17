@@ -5990,6 +5990,7 @@ net-p2p/ppcoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/ppcoind:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/primecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/primecoind:logrotate - Use app-admin/logrotate for rotating logs
+net-p2p/qbittorrent:webui - Enable the Web UI
 net-p2p/retroshare:cli - Enables the CLI version of RetroShare
 net-p2p/retroshare:feedreader - Enables the Feedreader plugin
 net-p2p/retroshare:links-cloud - Enables LinkClouds plugin

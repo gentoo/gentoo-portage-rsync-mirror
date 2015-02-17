@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qbittorrent
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.237 2014/12/05 17:16:42 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.238 2015/02/17 19:15:20 yngwin Exp $
+
+  17 Feb 2015; Ben de Groot <yngwin@gentoo.org> metadata.xml,
+  qbittorrent-9999.ebuild:
+  Update live ebuild. Implement Qt5 support (bug #515692).
 
 *qbittorrent-3.0.11-r2 (05 Dec 2014)
 

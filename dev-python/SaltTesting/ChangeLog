@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/SaltTesting
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/SaltTesting/ChangeLog,v 1.5 2015/01/16 22:19:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/SaltTesting/ChangeLog,v 1.6 2015/02/17 19:05:50 chutzpah Exp $
+
+*SaltTesting-2015.2.16 (17 Feb 2015)
+
+  17 Feb 2015; Patrick McLean <chutzpah@gentoo.org>
+  +SaltTesting-2015.2.16.ebuild, -SaltTesting-0.5.2.ebuild,
+  -SaltTesting-0.5.3.ebuild, -SaltTesting-2014.4.24.ebuild:
+  Version bump, remove old.
 
 *SaltTesting-2014.8.5 (16 Jan 2015)
 
