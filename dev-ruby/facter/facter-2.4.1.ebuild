@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-2.4.1.ebuild,v 1.1 2015/02/11 07:51:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-2.4.1.ebuild,v 1.3 2015/02/17 06:57:07 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20"
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_EXTRADOC="README.md"
@@ -30,7 +30,7 @@ CDEPEND="
 RDEPEND+=" ${CDEPEND}"
 DEPEND+=" test? ( ${CDEPEND} )"
 
-ruby_add_bdepend "test? ( dev-ruby/mocha:1.0 )"
+ruby_add_bdepend "test? ( dev-ruby/mocha:0.13 )"
 
 all_ruby_prepare() {
 	# Provide explicit path since /sbin is not in the default PATH on
@@ -38,7 +38,7 @@ all_ruby_prepare() {
 	sed -i -e 's:arp -an:/sbin/arp -an:' lib/facter/util/ec2.rb spec/unit/util/ec2_spec.rb || die
 
 	# Ensure the correct version of mocha is used without using bundler.
-	sed -i -e '1igem "mocha", "~>1.0"' spec/spec_helper.rb || die
+	sed -i -e '1igem "mocha", "~>0.13"' spec/spec_helper.rb || die
 
 	# Avoid because tests try to access outside stuff, e.g. /sys/block
 	sed -i -e '/should load facts on the facter search path only once/,/^  end/ s:^:#:' spec/unit/util/loader_spec.rb || die

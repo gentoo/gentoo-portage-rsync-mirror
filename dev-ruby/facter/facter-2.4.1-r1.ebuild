@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-2.3.0.ebuild,v 1.2 2014/12/26 09:56:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-2.4.1-r1.ebuild,v 1.1 2015/02/17 06:45:10 graaff Exp $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ HOMEPAGE="http://www.puppetlabs.com/puppet/related-projects/facter/"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="+dmi +pciutils +virt"
-#KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 CDEPEND="
@@ -31,9 +30,7 @@ CDEPEND="
 RDEPEND+=" ${CDEPEND}"
 DEPEND+=" test? ( ${CDEPEND} )"
 
-#RUBY_PATCHES=( ${P}-fix-proc-self-status.patch )
-
-ruby_add_bdepend "test? ( >=dev-ruby/mocha-0.10.5:0.10 )"
+ruby_add_bdepend "test? ( dev-ruby/mocha:1.0 )"
 
 all_ruby_prepare() {
 	# Provide explicit path since /sbin is not in the default PATH on
@@ -41,7 +38,7 @@ all_ruby_prepare() {
 	sed -i -e 's:arp -an:/sbin/arp -an:' lib/facter/util/ec2.rb spec/unit/util/ec2_spec.rb || die
 
 	# Ensure the correct version of mocha is used without using bundler.
-	sed -i -e '1igem "mocha", "~>0.10.5"' spec/spec_helper.rb || die
+	sed -i -e '1igem "mocha", "~>1.0"' spec/spec_helper.rb || die
 
 	# Avoid because tests try to access outside stuff, e.g. /sys/block
 	sed -i -e '/should load facts on the facter search path only once/,/^  end/ s:^:#:' spec/unit/util/loader_spec.rb || die
