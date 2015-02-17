@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.3.0-r2.ebuild,v 1.1 2015/02/16 02:33:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.3.0-r2.ebuild,v 1.2 2015/02/17 00:00:19 tetromino Exp $
 
 EAPI="5"
 
@@ -23,7 +23,11 @@ DEPEND="kmod? ( sys-apps/kmod )
 	!static-libs? ( ${LIB_DEPEND//static-libs(+),} )
 	udev? ( >=virtual/libudev-208[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}
-	sys-apps/hwids"
+	sys-apps/hwids
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140508-r14
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="${DEPEND}
 	kmod? ( virtual/pkgconfig )"
 
