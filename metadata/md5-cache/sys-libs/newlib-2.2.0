@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare setup
+DESCRIPTION=Newlib is a C library intended for use on embedded systems
+EAPI=4
+HOMEPAGE=http://sourceware.org/newlib/
+IUSE=nls threads unicode crosscompile_opts_headers-only
+KEYWORDS=-* ~arm ~hppa ~m68k ~mips ~ppc ~ppc64 ~sh ~sparc ~x86
+LICENSE=NEWLIB LIBGLOSS GPL-2
+RESTRICT=strip
+SLOT=0
+SRC_URI=ftp://sourceware.org/pub/newlib/newlib-2.2.0.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=6ed47c5ee7548aac8186b5ffbda4487b
