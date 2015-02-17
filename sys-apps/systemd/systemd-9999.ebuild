@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.157 2015/02/08 17:21:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.158 2015/02/17 01:46:00 floppym Exp $
 
 EAPI=5
 
@@ -26,8 +26,9 @@ LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gudev http
-	idn introspection kdbus +kmod lz4 lzma pam policykit python qrcode +seccomp
-	selinux ssl sysv-utils terminal test vanilla xkb"
+	idn importd introspection kdbus +kmod lz4 lzma nat pam policykit python
+	qrcode +seccomp selinux ssl sysv-utils terminal test vanilla xkb"
+REQUIRED_USE="importd? ( curl gcrypt lzma )"
 
 MINKV="3.8"
 
@@ -46,10 +47,15 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.25:0=
 		ssl? ( >=net-libs/gnutls-3.1.4:0= )
 	)
 	idn? ( net-dns/libidn:0= )
+	importd? (
+		app-arch/bzip2:0=
+		sys-libs/zlib:0=
+	)
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1:0= )
 	kmod? ( >=sys-apps/kmod-15:0= )
 	lz4? ( >=app-arch/lz4-0_p119:0=[${MULTILIB_USEDEP}] )
 	lzma? ( >=app-arch/xz-utils-5.0.5-r1:0=[${MULTILIB_USEDEP}] )
+	nat? ( net-firewall/iptables:0= )
 	pam? ( virtual/pam:= )
 	python? ( ${PYTHON_DEPS} )
 	qrcode? ( media-gfx/qrencode:0= )
@@ -93,6 +99,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
+	terminal? ( media-fonts/unifont )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
 #if LIVE
@@ -213,11 +220,15 @@ multilib_src_configure() {
 		$(multilib_native_use_enable http microhttpd)
 		$(usex http $(multilib_native_use_enable ssl gnutls) --disable-gnutls)
 		$(multilib_native_use_enable idn libidn)
+		$(multilib_native_use_enable importd)
+		$(multilib_native_use_enable importd bzip2)
+		$(multilib_native_use_enable importd zlib)
 		$(multilib_native_use_enable introspection)
 		$(use_enable kdbus)
 		$(multilib_native_use_enable kmod)
 		$(use_enable lz4)
 		$(use_enable lzma xz)
+		$(multilib_native_use_enable nat libiptc)
 		$(multilib_native_use_enable pam)
 		$(multilib_native_use_enable policykit polkit)
 		$(multilib_native_use_with python)
@@ -241,7 +252,6 @@ multilib_src_configure() {
 		--with-dbuspolicydir="${EPREFIX}/etc/dbus-1/system.d"
 		--with-dbussessionservicedir="${EPREFIX}/usr/share/dbus-1/services"
 		--with-dbussystemservicedir="${EPREFIX}/usr/share/dbus-1/system-services"
-		--with-dbusinterfacedir="${EPREFIX}/usr/share/dbus-1/interfaces"
 
 		--with-ntp-servers="0.gentoo.pool.ntp.org 1.gentoo.pool.ntp.org 2.gentoo.pool.ntp.org 3.gentoo.pool.ntp.org"
 	)
