@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.130 2015/02/04 21:46:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.131 2015/02/17 01:17:41 jsbronder Exp $
+
+*openmpi-1.8.4-r2 (17 Feb 2015)
+
+  17 Feb 2015; Justin Bronder <jsbronder@gentoo.org> +openmpi-1.8.4-r2.ebuild,
+  metadata.xml:
+  Add numa USE flag. As xarthisius points out, this is probably desireable as
+  it allows locking processes to CPUs.
 
 *openmpi-1.8.4-r1 (04 Feb 2015)
 *openmpi-1.8.3-r1 (04 Feb 2015)

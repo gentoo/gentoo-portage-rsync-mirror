@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r1.ebuild,v 1.12 2015/01/30 05:32:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r1.ebuild,v 1.13 2015/02/17 01:19:00 vapier Exp $
 
 EAPI=4
 inherit eutils libtool multilib
 
 DESCRIPTION="A suite of utilities for transcoding video and audio codecs in different containers"
-HOMEPAGE="http://tcforge.berlios.de/"
+HOMEPAGE="http://www.transcoding.org/ https://bitbucket.org/france/transcode-tcforge"
 SRC_URI="https://www.bitbucket.org/france/${PN}-tcforge/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"

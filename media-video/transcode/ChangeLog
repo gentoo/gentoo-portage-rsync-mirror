@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.324 2015/01/30 05:32:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.325 2015/02/17 01:19:00 vapier Exp $
+
+  17 Feb 2015; Mike Frysinger <vapier@gentoo.org> transcode-1.1.7-r1.ebuild,
+  transcode-1.1.7-r2.ebuild, transcode-1.1.7-r3.ebuild:
+  Update HOMEPAGE now that berlios is dead.
 
   30 Jan 2015; Michał Górny <mgorny@gentoo.org> transcode-1.1.7-r1.ebuild,
   transcode-1.1.7-r2.ebuild, transcode-1.1.7-r3.ebuild:
