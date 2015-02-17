@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r6.ebuild,v 1.12 2014/11/10 19:15:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r6.ebuild,v 1.13 2015/02/17 08:19:30 ulm Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="sys-libs/ncurses
 		jpeg? ( virtual/jpeg:0= )
 		png? ( >=media-libs/libpng-1.4:0= )
 		svg? ( >=gnome-base/librsvg-2.0 )
-		tiff? ( media-libs/tiff )
+		tiff? ( media-libs/tiff:0 )
 		xpm? ( x11-libs/libXpm )
 		imagemagick? ( >=media-gfx/imagemagick-6.6.2 )
 		xft? (

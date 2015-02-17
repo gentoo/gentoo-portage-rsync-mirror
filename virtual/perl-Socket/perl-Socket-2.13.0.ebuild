@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/perl-Socket-2.13.0.ebuild,v 1.9 2015/02/16 09:22:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/perl-Socket-2.13.0.ebuild,v 1.10 2015/02/17 08:13:35 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="

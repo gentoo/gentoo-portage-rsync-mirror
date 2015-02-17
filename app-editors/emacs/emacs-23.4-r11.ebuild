@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r11.ebuild,v 1.14 2014/11/10 20:52:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r11.ebuild,v 1.15 2015/02/17 08:19:30 ulm Exp $
 
 EAPI=5
 WANT_AUTOMAKE="none"
@@ -36,7 +36,7 @@ RDEPEND="sys-libs/ncurses
 		jpeg? ( virtual/jpeg:0= )
 		png? ( >=media-libs/libpng-1.4:0= )
 		svg? ( >=gnome-base/librsvg-2.0 )
-		tiff? ( media-libs/tiff )
+		tiff? ( media-libs/tiff:0 )
 		xpm? ( x11-libs/libXpm )
 		xft? (
 			media-libs/fontconfig
