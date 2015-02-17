@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.298 2015/02/16 10:20:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.299 2015/02/17 21:10:53 maekke Exp $
+
+  17 Feb 2015; Markus Meier <maekke@gentoo.org> icu-54.1-r1.ebuild:
+  arm stable, bug #539108
 
   16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> icu-54.1-r1.ebuild:
   Stable for sparc, wrt bug #539108

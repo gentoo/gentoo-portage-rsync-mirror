@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/boost:= sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=C++ port of Java Lucene library, a high-performance, full-featured text search engine
+EAPI=5
+HOMEPAGE=https://github.com/luceneplusplus/LucenePlusPlus
+IUSE=debug
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( LGPL-3 Apache-2.0 )
+RDEPEND=dev-libs/boost:=
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/luceneplusplus/LucenePlusPlus/archive/rel_3.0.7.tar.gz -> lucene++-3.0.7.tar.gz
+_eclasses_=cmake-utils	0e29eadbd656185bce30d2449ab48035	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=0b85b1f6312026e3aa6ad4483bc6dedf

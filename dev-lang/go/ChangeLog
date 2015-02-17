@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.66 2015/02/10 10:12:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.67 2015/02/17 21:03:49 maekke Exp $
+
+  17 Feb 2015; Markus Meier <maekke@gentoo.org> go-1.4.1.ebuild:
+  arm stable, bug #539280
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> go-1.4.1.ebuild:
   Stable for x86, wrt bug #539280
