@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.261 2015/02/17 12:07:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.262 2015/02/17 17:35:51 haubi Exp $
+
+  17 Feb 2015; Michael Haubenwallner <haubi@gentoo.org> gnuplot-4.6.6.ebuild,
+  gnuplot-5.0.0.ebuild:
+  Add ~ppc-aix keyword.
 
   17 Feb 2015; Justin Lecher <jlec@gentoo.org> gnuplot-5.0.0.ebuild,
   metadata.xml:

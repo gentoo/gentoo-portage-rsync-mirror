@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chardet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.48 2015/01/26 14:12:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.49 2015/02/17 17:56:49 djc Exp $
+
+*chardet-2.3.0 (17 Feb 2015)
+
+  17 Feb 2015; Dirkjan Ochtman <djc@gentoo.org> +chardet-2.3.0.ebuild:
+  Version bump chardet to 2.3.0 (fixes bug 540332)
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -chardet-2.0.1-r1.ebuild,
   -chardet-2.0.1.ebuild:
