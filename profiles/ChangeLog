@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9795 2015/02/16 18:03:23 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9796 2015/02/17 18:42:01 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Feb 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask virtual/ruby-threads for removal.
 
   16 Feb 2015; Brian Evans <grknight@gentoo.org> package.mask:
   Remove the masks added by me today and revbump the old virtual back down to
