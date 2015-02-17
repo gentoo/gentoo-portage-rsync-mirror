@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01-r2.ebuild,v 1.10 2014/01/26 12:11:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01-r2.ebuild,v 1.11 2015/02/17 15:03:26 haubi Exp $
 
 EAPI="3"
 
@@ -32,6 +32,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-6.14.00-debian-dircolors.patch # bug #120792
 	epatch "${FILESDIR}"/${PN}-6.14-makefile.patch # bug #151951
 	epatch "${FILESDIR}"/${PN}-6.14-use-ncurses.patch
+	epatch "${FILESDIR}"/${PN}-6.18.01-aix.patch
 
 	# fix dependency on ncurses[tinfo], #459484
 	sed \

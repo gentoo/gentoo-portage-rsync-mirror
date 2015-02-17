@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/tcsh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.135 2014/01/26 12:11:23 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.136 2015/02/17 15:03:26 haubi Exp $
+
+  17 Feb 2015; Michael Haubenwallner <haubi@gentoo.org> tcsh-6.18.01-r2.ebuild,
+  +files/tcsh-6.18.01-aix.patch:
+  Add AIX patch for now until upstream (bug#366) knows better.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tcsh-6.18.01-r2.ebuild:
   Stable for sparc, wrt bug #495350
