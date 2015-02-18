@@ -1,6 +1,41 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.185 2015/01/11 14:30:10 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.186 2015/02/18 17:02:17 aidecoe Exp $
+
+*dracut-041 (17 Feb 2015)
+
+  17 Feb 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-041.ebuild,
+  +files/041-0001-dracut-functions.sh-support-for-altern.patch,
+  +files/041-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/041-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/041-0004-Install-dracut-install-into-libexec-di.patch,
+  +files/041-0005-Take-into-account-lib64-dirs-when-dete.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - fixed the shutdown loop
+  - fixed gzip compression for versions, which do not have --rsyncable
+  - fixed ifcfg generation for persistent interface names
+  - multipath:
+    * new option to turn off multipath "rd.multipath=0" completly
+    * preload scsi dh modules
+    * start multipathd via systemd service
+  - do not fail, if user pressed ESC during media check
+  - fixed systemd-journal by symlinking /var/log to /run/initramfs/log
+  - initrd-release moved to /usr/lib
+  - lots of iSCSI fixes
+  - new "rd.timeout" to specify the systemd JobTimeoutSec for devices
+  - if $initrd/etc/cmdline.d/* has a "root=" and the kernel cmdline does not,
+    generate a mount unit for it
+  - increased the initqueue timeout for non systemd initramfs to 180s
+  - $initrd/etc/cmdline.d/ hostonly files are now generated for NFS
+  - make use of systemd-hibernate-resume, if available
+  - fixed ldconfig parsing for hwcap output
+  - network: add support for comma separated autoconf options like
+    ip=eth0:auto6,dhcp
+  - new parameter "rd.live.overlay.size" to specify the overlay for live images
+  - added cache tools for dm-cache setups
 
   11 Jan 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-040.ebuild,
   -dracut-040-r1.ebuild:

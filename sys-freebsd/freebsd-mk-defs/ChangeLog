@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.58 2013/11/09 09:17:03 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.59 2015/02/18 17:09:17 mgorny Exp $
+
+  18 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  +files/freebsd-mk-defs-add-nossp-cflags.patch, freebsd-mk-defs-9.1.ebuild,
+  freebsd-mk-defs-9.2.ebuild:
+  Fix SIGABRT failure when compiled with SSP-enabled gcc, bug #511698, patch by
+  Yuta SATOH
 
 *freebsd-mk-defs-9.2 (09 Nov 2013)
 

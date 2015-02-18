@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.28.ebuild,v 1.1 2014/11/14 12:40:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.28.ebuild,v 1.2 2015/02/18 17:19:38 voyageur Exp $
 
 EAPI=5
 inherit autotools eutils multilib readme.gentoo
@@ -17,11 +17,12 @@ IUSE="elibc_glibc"
 
 RDEPEND="elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) )
 	media-libs/freetype:2
-	>=media-libs/libpng-1.2.8
+	>=media-libs/libpng-1.2.8:*
 	>=sys-libs/zlib-1.2.3
-	virtual/jpeg"
+	virtual/jpeg:*"
 
 DEPEND="${RDEPEND}
+		x11-libs/libfontenc
 		x11-misc/gccmakedep
 		x11-misc/imake
 		x11-proto/inputproto"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-9.1.ebuild,v 1.1 2013/01/27 21:26:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-9.1.ebuild,v 1.2 2015/02/18 17:09:17 mgorny Exp $
 
 EAPI=3
 
@@ -23,6 +23,7 @@ S="${WORKDIR}/share/mk"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-9.1-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-add-nossp-cflags.patch"
 	use userland_GNU && epatch "${FILESDIR}/${PN}-9.1-gnu.patch"
 }
 

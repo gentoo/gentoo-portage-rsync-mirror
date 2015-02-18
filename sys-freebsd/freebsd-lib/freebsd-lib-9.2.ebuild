@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2.ebuild,v 1.2 2014/03/24 17:49:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.2.ebuild,v 1.3 2015/02/18 17:09:17 mgorny Exp $
 
 EAPI=5
 
@@ -94,6 +94,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-9.0-netware.patch"
 	"${FILESDIR}/${PN}-9.0-bluetooth.patch"
 	"${FILESDIR}/${PN}-9.1-.eh_frame_hdr-fix.patch"
+	"${FILESDIR}/${PN}-add-nossp-cflags.patch"
 	)
 
 # Here we disable and remove source which we don't need or want

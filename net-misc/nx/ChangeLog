@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.89 2014/11/14 12:40:56 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.90 2015/02/18 17:19:38 voyageur Exp $
+
+  18 Feb 2015; Bernard Cafarelli <voyageur@gentoo.org> -nx-3.5.0.24.ebuild,
+  -nx-3.5.0.27.ebuild, nx-3.5.0.28.ebuild, -files/nx-3.5.0.27-jpeg-9a.patch:
+  Missing build dependency on x11-libs/libfontenc, thanks everyone in bug
+  #536058. Remove some versions
 
 *nx-3.5.0.28 (14 Nov 2014)
 
