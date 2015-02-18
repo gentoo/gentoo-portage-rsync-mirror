@@ -8,7 +8,7 @@ inherit cmake-utils
 
 DESCRIPTION="Daemon controlling CPU speed and temperature"
 HOMEPAGE="https://bitbucket.org/nelchael/ncpufreqd"
-SRC_URI="https://bitbucket.org/nelchael/${PN}/get/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~mgorny/dist/${P}.tar.xz"
 LICENSE="ZLIB"
 
 SLOT="0"
@@ -16,7 +16,8 @@ KEYWORDS="amd64 x86"
 
 IUSE=""
 
-DEPEND="virtual/logger"
+DEPEND="virtual/logger
+	app-arch/xz-utils"
 RDEPEND="${DEPEND}"
 
 src_install() {
