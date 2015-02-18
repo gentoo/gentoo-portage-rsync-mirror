@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsodium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.22 2015/02/15 07:09:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.23 2015/02/18 21:13:10 pacho Exp $
+
+  18 Feb 2015; Pacho Ramos <pacho@gentoo.org> libsodium-1.0.2.ebuild:
+  --disable-pie needed on x86 (#512734)
 
   15 Feb 2015; Jeroen Roovers <jer@gentoo.org> libsodium-1.0.2.ebuild:
   Stable for HPPA (bug #539750).

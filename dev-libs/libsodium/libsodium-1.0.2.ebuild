@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/libsodium-1.0.2.ebuild,v 1.3 2015/02/15 07:09:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/libsodium-1.0.2.ebuild,v 1.4 2015/02/18 21:13:10 pacho Exp $
 
 EAPI=5
 
@@ -16,11 +16,17 @@ KEYWORDS="~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+asm minimal static-libs +urandom"
 
 src_configure() {
+	local myconf
+
+	# --disable-pie needed on x86, bug #512734
+	use x86 && myconf="${myconf} --disable-pie"
+
 	econf \
 		$(use_enable asm) \
 		$(use_enable minimal) \
 		$(use_enable !urandom blocking-random) \
-		$(use_enable static-libs static)
+		$(use_enable static-libs static) \
+		${myconf}
 }
 
 src_install() {
