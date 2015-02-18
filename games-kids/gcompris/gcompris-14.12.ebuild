@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-14.12.ebuild,v 1.1 2015/01/19 05:50:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-14.12.ebuild,v 1.2 2015/02/18 08:25:46 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -53,9 +53,7 @@ pkg_setup() {
 src_prepare() {
 	# Drop DEPRECATED flags, bug #387817
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
-		src/gcompris/Makefile.am src/gcompris/Makefile.in \
-		src/goocanvas/src/Makefile.am src/goocanvas/src/Makefile.in \
-		|| die
+		src/gcompris/Makefile.am || die
 
 	epatch "${FILESDIR}"/${P}-build.patch
 	cp /usr/share/gettext/config.rpath .
@@ -84,13 +82,8 @@ src_configure() {
 		--enable-py-build-only
 }
 
-src_compile() {
-	emake -j1
-}
-
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	prune_libtool_files --modules
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	prepgamesdirs
 }
