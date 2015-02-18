@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.183 2015/02/18 11:54:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.184 2015/02/18 14:28:33 aballier Exp $
 
 EAPI="5"
 
@@ -100,10 +100,13 @@ IUSE="
 	${FFMPEG_ENCODER_FLAG_MAP[@]%:*}
 "
 
-ARM_CPU_FEATURES="armv5te armv6 armv6t2 neon armvfp:vfp"
-MIPS_CPU_FEATURES="mips32r2 mipsdspr1 mipsdspr2 mipsfpu"
-PPC_CPU_FEATURES="altivec"
-X86_CPU_FEATURES=( 3dnow:amd3dnow 3dnowext:amd3dnowext avx:avx avx2:avx2 fma3:fma3 fma4:fma4 mmx:mmx mmxext:mmxext sse:sse sse2:sse2 sse3:sse3 ssse3:ssse3 sse4_1:sse4 sse4_2:sse42 xop:xop )
+# Strings for CPU features in the useflag[:configure_option] form
+# if :configure_option isn't set, it will use 'useflag' as configure option
+ARM_CPU_FEATURES=( armv5te armv6 armv6t2 neon armvfp:vfp )
+MIPS_CPU_FEATURES=( mips32r2 mipsdspr1 mipsdspr2 mipsfpu )
+PPC_CPU_FEATURES=( altivec )
+X86_CPU_FEATURES_RAW=( 3dnow:amd3dnow 3dnowext:amd3dnowext avx:avx avx2:avx2 fma3:fma3 fma4:fma4 mmx:mmx mmxext:mmxext sse:sse sse2:sse2 sse3:sse3 ssse3:ssse3 sse4_1:sse4 sse4_2:sse42 xop:xop )
+X86_CPU_FEATURES=( ${X86_CPU_FEATURES_RAW[@]/#/cpu_flags_x86_} )
 X86_CPU_REQUIRED_USE="
 	cpu_flags_x86_avx2? ( cpu_flags_x86_avx )
 	cpu_flags_x86_fma4? ( cpu_flags_x86_avx )
@@ -121,21 +124,28 @@ X86_CPU_REQUIRED_USE="
 	cpu_flags_x86_3dnow?  ( cpu_flags_x86_mmx )
 "
 
-# String for CPU features in the useflag[:configure_option] form
-# if :configure_option isn't set, it will use 'useflag' as configure option
-CPU_FEATURES="
-	${ARM_CPU_FEATURES}
-	${MIPS_CPU_FEATURES}
-	${PPC_CPU_FEATURES}
-	${X86_CPU_FEATURES[@]/#/cpu_flags_x86_}
+IUSE="${IUSE}
+	${ARM_CPU_FEATURES[@]%:*}
+	${MIPS_CPU_FEATURES[@]%:*}
+	${PPC_CPU_FEATURES[@]%:*}
+	${X86_CPU_FEATURES[@]%:*}
 "
+
 CPU_REQUIRED_USE="
 	${X86_CPU_REQUIRED_USE}
 "
 
-for i in ${CPU_FEATURES}; do
-	IUSE="${IUSE} ${i%:*}"
-done
+# "$(tc-arch):XXX" form where XXX_CPU_FEATURES are the cpu features that apply to
+# $(tc-arch).
+CPU_FEATURES_MAP="
+	arm:ARM
+	arm64:ARM
+	mips:MIPS
+	ppc:PPC
+	ppc64:PPC
+	x86:X86
+	amd64:X86
+"
 
 FFTOOLS="aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
 
@@ -335,8 +345,13 @@ multilib_src_configure() {
 	fi
 
 	# CPU features
-	for i in ${CPU_FEATURES}; do
-		use ${i%:*} || myconf+=( --disable-${i#*:} )
+	for i in ${CPU_FEATURES_MAP} ; do
+		if [ "$(tc-arch)" = "${i%:*}" ] ; then
+			local var="${i#*:}_CPU_FEATURES[@]"
+			for j in ${!var} ; do
+				use ${j%:*} || myconf+=( --disable-${j#*:} )
+			done
+		fi
 	done
 
 	if use pic ; then
