@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/tlsdate-0.0.12-r2.ebuild,v 1.1 2015/02/14 04:54:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/tlsdate-0.0.12-r2.ebuild,v 1.2 2015/02/18 10:07:39 ago Exp $
 
 EAPI="4"
 
@@ -38,6 +38,10 @@ src_configure() {
 		--without-polarssl \
 		--with-unpriv-user=tlsdate \
 		--with-unpriv-group=tlsdate
+}
+
+src_compile() {
+	emake V=1
 }
 
 src_install() {
