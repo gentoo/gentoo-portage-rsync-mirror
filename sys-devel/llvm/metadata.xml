@@ -18,6 +18,7 @@
 		<flag name='clang'>Build the clang C/C++ compiler</flag>
 		<flag name='cmake'>Enable cmake support (experimental)</flag>
 		<flag name='doc'>Build and install the HTML documentation and regenerate the man pages</flag>
+		<flag name='go'>Build the <pkg>dev-lang/go</pkg> bindings</flag>
 		<flag name='gold'>Build the gold linker plugin</flag>
 		<flag name='llvm-gcc'>Build LLVM with <pkg>sys-devel/llvm-gcc</pkg></flag>
 		<flag name='multitarget'>Build all host targets (default: host only)</flag>
