@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-1.0.1.ebuild,v 1.6 2014/05/15 16:51:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-1.0.1.ebuild,v 1.7 2015/02/18 21:54:23 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DATA_PV="1.0.0"
@@ -41,17 +41,15 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--datadir="${GAMES_DATADIR}/${PN}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	default
 	insinto "${GAMES_DATADIR}/${PN}"
 	cd "${WORKDIR}"/fillets-ng-data-${DATA_PV} || die
 	rm -f COPYING
-	doins -r * || die "doins failed"
+	doins -r *
 	newicon images/icon.png ${PN}.png
 	make_desktop_entry fillets "Fish Fillets NG"
 	prepgamesdirs

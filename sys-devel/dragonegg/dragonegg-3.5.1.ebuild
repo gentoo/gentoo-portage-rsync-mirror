@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.5.1.ebuild,v 1.1 2015/01/21 09:26:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-3.5.1.ebuild,v 1.2 2015/02/18 21:33:18 voyageur Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -15,11 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="test"
 
-DEPEND=">=sys-devel/gcc-4.5
+DEPEND=">=sys-devel/gcc-4.5:*
 	=sys-devel/llvm-${PV}*"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}.src
+
+pkg_pretend() {
+	# Bug #511640: gcc 4.9 removed a required header
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		[[ $(gcc-version) > 4.8 || $(gcc-version) < 4.5 ]] && \
+			die 'The active compiler needs to be gcc 4.[5-8])'
+	fi
+}
 
 src_compile() {
 	# GCC: compiler to use plugin with

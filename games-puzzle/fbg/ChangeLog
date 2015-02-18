@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/fbg
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/ChangeLog,v 1.9 2008/02/29 19:28:25 carlo Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/ChangeLog,v 1.10 2015/02/18 21:45:09 tupone Exp $
+
+  18 Feb 2015; Tupone Alfredo <tupone@gentoo.org> fbg-0.9-r1.ebuild:
+  EAPI 5
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> ChangeLog:
   Remove icon extension from desktop entry to match Icon Theme Specification.

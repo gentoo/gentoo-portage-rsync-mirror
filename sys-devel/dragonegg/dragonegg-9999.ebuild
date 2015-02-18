@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-9999.ebuild,v 1.7 2014/09/17 23:13:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dragonegg/dragonegg-9999.ebuild,v 1.8 2015/02/18 21:33:18 voyageur Exp $
 
 EAPI=5
 inherit git-r3 multilib toolchain-funcs
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND=">=sys-devel/gcc-4.5
+DEPEND=">=sys-devel/gcc-4.5:*
 	~sys-devel/llvm-${PV}"
 RDEPEND="${DEPEND}"
 

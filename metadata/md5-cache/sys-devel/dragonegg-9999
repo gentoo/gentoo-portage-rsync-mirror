@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install postinst test unpack
-DEPEND=>=sys-devel/gcc-4.5 ~sys-devel/llvm-9999 >=dev-vcs/git-1.8.2.1
+DEPEND=>=sys-devel/gcc-4.5:* ~sys-devel/llvm-9999 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=GCC plugin that uses LLVM for optimization and code generation
 EAPI=5
 HOMEPAGE=http://dragonegg.llvm.org/
 LICENSE=GPL-2
-RDEPEND=>=sys-devel/gcc-4.5 ~sys-devel/llvm-9999
+RDEPEND=>=sys-devel/gcc-4.5:* ~sys-devel/llvm-9999
 SLOT=0
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=75cc329d35c5fa31b6d690bfa74df71a
+_md5_=02870bf6b956d9d976e9c9362248a450

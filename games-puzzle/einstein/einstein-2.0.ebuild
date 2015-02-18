@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.11 2014/05/15 16:50:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/einstein-2.0.ebuild,v 1.12 2015/02/18 21:33:41 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A puzzle game inspired by Albert Einstein"
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-mixer
 	media-libs/sdl-ttf"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}*.patch
@@ -33,9 +34,9 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin "${PN}" || die
+	dogamesbin "${PN}"
 	insinto "${GAMES_DATADIR}/${PN}/res"
-	doins einstein.res || die
+	doins einstein.res
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "Einstein Puzzle"
 	prepgamesdirs

@@ -1,7 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.11 2008/02/29 19:28:25 carlo Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fbg/fbg-0.9-r1.ebuild,v 1.12 2015/02/18 21:45:09 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A Tetris clone written in OpenGL"
@@ -19,10 +19,9 @@ DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/libmikmod
 	x11-libs/libXt"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/FBGDATADIR=/s:\".*\":\"${GAMES_DATADIR}/${PN}\":" \
 		-e '/^datadir=/d' \
@@ -30,16 +29,14 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
-	egamesconf --disable-fbglaunch || die
-	emake || die "emake failed"
+src_configure() {
+	egamesconf --disable-fbglaunch
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	newicon startfbg/icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Falling Block Game" ${PN}
-	dodoc AUTHORS ChangeLog README TODO
 	rm -rf "${D}/${GAMES_PREFIX}"/doc
 	prepgamesdirs
 }
