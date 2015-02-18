@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyifp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/ChangeLog,v 1.7 2011/01/01 21:21:14 arfrever Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyifp/ChangeLog,v 1.8 2015/02/18 01:46:57 idella4 Exp $
+
+*pyifp-0.2.2-r1 (18 Feb 2015)
+
+  18 Feb 2015; Ian Delaney <idella4@gentoo.org> +pyifp-0.2.2-r1.ebuild,
+  -pyifp-0.2.2.ebuild:
+  revbump; convert -> distutils-r1, rm old
 
   01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyifp-0.2.2.ebuild:
@@ -27,4 +33,3 @@
   24 Jan 2006; Patrick McLean <chutzpah@gentoo.org>
   +files/pyifp-0.2.2-setup-fix.patch, +metadata.xml, +pyifp-0.2.2.ebuild:
   Initial version.
-

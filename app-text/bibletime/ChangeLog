@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibletime
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.72 2014/10/15 04:04:26 creffett Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.73 2015/02/18 01:47:11 creffett Exp $
+
+  18 Feb 2015;  <creffett@gentoo.org> -bibletime-2.10.0.ebuild,
+  bibletime-2.10.1.ebuild:
+  Drop old version with qt5 handling problems
 
 *bibletime-2.10.1 (15 Oct 2014)
 
