@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-2.1.1.ebuild,v 1.7 2014/05/15 16:50:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-2.1.1.ebuild,v 1.8 2015/02/18 20:37:41 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils gnome2-utils versionator games
 
 MY_P=${PN}-$(get_version_component_range 1).~-$(get_version_component_range 2-3)
@@ -20,6 +20,7 @@ DEPEND="sys-libs/zlib
 	media-libs/sdl-mixer
 	music? ( media-libs/sdl-mixer[mod] )
 	media-libs/sdl-image"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -31,8 +32,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	default
 	prepgamesdirs
 }
 
