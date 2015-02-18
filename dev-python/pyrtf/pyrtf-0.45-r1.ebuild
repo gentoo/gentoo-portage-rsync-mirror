@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/pyrtf-0.45.ebuild,v 1.7 2014/08/10 21:17:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/pyrtf-0.45-r1.ebuild,v 1.1 2015/02/18 06:23:11 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1
 
 MY_PN="PyRTF"
 MY_P="${MY_PN}-${PV}"
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/$PN/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
@@ -26,4 +26,6 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
-PYTHON_MODNAME="${MY_PN}"
+pkg_setup() {
+	python-single-r1_pkg_setup
+}

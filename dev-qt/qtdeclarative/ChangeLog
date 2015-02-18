@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtdeclarative
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdeclarative/ChangeLog,v 1.23 2015/02/03 11:39:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdeclarative/ChangeLog,v 1.24 2015/02/18 06:30:45 jer Exp $
+
+  18 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtdeclarative-5.4.0.ebuild,
+  +files/qtdeclarative-5.4.0-stack-direction.patch:
+  Add stack size calculation fix for HPPA (bug #538674).
 
   03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtdeclarative-5.4.0.ebuild:
   Marked ~hppa too.

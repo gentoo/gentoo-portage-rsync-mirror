@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyrtf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.7 2014/08/10 21:17:43 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrtf/ChangeLog,v 1.8 2015/02/18 06:23:11 idella4 Exp $
+
+*pyrtf-0.45-r1 (18 Feb 2015)
+
+  18 Feb 2015; Ian Delaney <idella4@gentoo.org> +pyrtf-0.45-r1.ebuild,
+  -pyrtf-0.45.ebuild:
+  revbump; convert -> distutils-r1, rm old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pyrtf-0.45.ebuild:
   QA: drop trailing '.' from DESCRIPTION

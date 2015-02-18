@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdeclarative/qtdeclarative-5.4.0.ebuild,v 1.3 2015/02/03 11:39:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdeclarative/qtdeclarative-5.4.0.ebuild,v 1.4 2015/02/18 06:30:45 jer Exp $
 
 EAPI=5
 
@@ -27,6 +27,10 @@ DEPEND="
 	xml? ( >=dev-qt/qtxmlpatterns-${PV}:5[debug=] )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-stack-direction.patch"
+)
 
 src_prepare() {
 	use localstorage || sed -i -e '/localstorage/d' \
