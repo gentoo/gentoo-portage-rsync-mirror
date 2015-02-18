@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/dark-oberon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/ChangeLog,v 1.4 2010/09/16 12:20:32 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/ChangeLog,v 1.5 2015/02/18 19:11:30 mr_bones_ Exp $
+
+  18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  dark-oberon-1.0.2_rc1.ebuild:
+  EAPI=5
 
   16 Sep 2010; Tupone Alfredo <tupone@gentoo.org>
   dark-oberon-1.0.2_rc1.ebuild, +files/dark-oberon-1.0.2_rc1-ldflags.patch:
@@ -20,4 +24,3 @@
   +files/dark-oberon-1.0.2_rc1-gentoo.patch, +metadata.xml,
   +dark-oberon-1.0.2_rc1.ebuild:
   New ebuild. Bug #96781 by Christoph Brill (egore)
-

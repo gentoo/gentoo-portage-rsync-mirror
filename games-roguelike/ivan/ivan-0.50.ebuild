@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.10 2009/09/24 23:03:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.11 2015/02/18 19:14:15 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Rogue-like game with SDL graphics"
@@ -14,12 +14,15 @@ SLOT="0"
 KEYWORDS="~ppc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="media-libs/libsdl"
+DEPEND="media-libs/libsdl[video]"
+RDEPEND=${DEPEND}
 
-PATCHES=(
-	"${FILESDIR}"/${P}-gcc41.patch
-	"${FILESDIR}"/${P}-install.patch
-	"${FILESDIR}"/${P}-gcc43.patch )
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-install.patch \
+		"${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_configure() {
 	replace-flags -O? -O0 #bug #113627
@@ -27,8 +30,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog LICENSING NEWS README
+	default
 	keepdir "${GAMES_STATEDIR}/ivan/Bones"
 	prepgamesdirs
 	fperms g+w "${GAMES_STATEDIR}/ivan/Bones"

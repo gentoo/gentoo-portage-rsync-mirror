@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/ivan
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ChangeLog,v 1.12 2008/06/17 01:47:44 mr_bones_ Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ChangeLog,v 1.13 2015/02/18 19:14:15 mr_bones_ Exp $
+
+  18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> ivan-0.50.ebuild:
+  EAPI=5
 
   17 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/ivan-0.50-gcc43.patch, ivan-0.50.ebuild:
@@ -38,4 +41,3 @@
 
   08 Aug 2003; Michael Sterrett <msterret@gentoo.org> ivan-0.430.ebuild:
   initial commit.  ebuild supplied by Rob Cakebread (modified) bug 26225
-

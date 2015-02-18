@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine+
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.56 2014/03/09 03:44:16 rhill Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.57 2015/02/18 19:08:02 rhill Exp $
+
+  18 Feb 2015; Ryan Hill <rhill@gentoo.org> nicotine+-1.2.16.ebuild:
+  Add dependency on librsvg (bug #523292).
 
   09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
   Change my email.

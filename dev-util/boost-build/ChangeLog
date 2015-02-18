@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.136 2015/01/02 13:45:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.137 2015/02/18 19:29:52 pinkbyte Exp $
+
+*boost-build-1.57.0 (18 Feb 2015)
+
+  18 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> +boost-build-1.57.0.ebuild:
+  Version bump, wrt bug #528204
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> boost-build-1.55.0.ebuild:
   Stable for x86, wrt bug #525286

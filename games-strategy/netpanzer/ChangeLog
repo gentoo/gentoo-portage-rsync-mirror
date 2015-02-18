@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/netpanzer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.34 2012/10/16 12:21:34 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.35 2015/02/18 19:08:13 mr_bones_ Exp $
+
+  18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> netpanzer-0.8.2.ebuild:
+  EAPI=5; drop amd64 keyword since it just segfaults there; tidy
 
   16 Oct 2012; Alfredo Tupone <tupone@gentoo.org> netpanzer-0.8.2.ebuild,
   +files/netpanzer-0.8.2-gcc47.patch:
@@ -150,4 +153,3 @@
 
   21 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> netpanzer-0.1.1.ebuild:
   initial commit; ebuild supplied by Matze Braun via bug 31054
-

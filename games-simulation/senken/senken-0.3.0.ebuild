@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.11 2014/10/30 15:31:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/senken-0.3.0.ebuild,v 1.12 2015/02/18 19:10:31 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
 
 DESCRIPTION="city simulation game"
-HOMEPAGE="http://www.contrib.andrew.cmu.edu/~tmartin/senken/"
+HOMEPAGE="http://savannah.nongnu.org/projects/senken/"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
