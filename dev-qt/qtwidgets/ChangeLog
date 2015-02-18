@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtwidgets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.10 2015/02/03 11:04:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.11 2015/02/18 18:21:53 pesa Exp $
+
+  18 Feb 2015; Davide Pesavento <pesa@gentoo.org>
+  -files/qtwidgets-5.3.1-prefer-qpa.patch:
+  Drop unused patch.
 
   03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtwidgets-5.4.0.ebuild:
   Marked ~hppa too.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r1.ebuild,v 1.2 2015/01/02 17:23:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r1.ebuild,v 1.3 2015/02/18 18:19:22 pesa Exp $
 
 EAPI=5
 
@@ -28,13 +28,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}/${PN}
 
 pkg_setup() {
-	MULTIBUILD_VARIANTS=()
-	if use qt4 ; then
-		MULTIBUILD_VARIANTS+=( qt4 )
-	fi
-	if use qt5 ; then
-		MULTIBUILD_VARIANTS+=( qt5 )
-	fi
+	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
 }
 
 src_prepare() {
@@ -49,10 +43,10 @@ src_prepare() {
 
 src_configure() {
 	myconfigure() {
-		if [[ ${MULTIBUILD_VARIANT} = qt4 ]] ; then
+		if [[ ${MULTIBUILD_VARIANT} == qt4 ]]; then
 			eqmake4
 		fi
-		if [[ ${MULTIBUILD_VARIANT} = qt5 ]] ; then
+		if [[ ${MULTIBUILD_VARIANT} == qt5 ]]; then
 			eqmake5
 		fi
 	}
@@ -69,7 +63,7 @@ src_install() {
 	use doc && dodoc -r doc/html
 
 	myinstall() {
-		if [[ ${MULTIBUILD_VARIANT} = qt4 ]] ; then
+		if [[ ${MULTIBUILD_VARIANT} == qt4 ]]; then
 			insinto /usr/include/qt4/QtSolutions
 			doins src/QtLockedFile src/${PN}.h
 
@@ -77,7 +71,7 @@ src_install() {
 			doins "${FILESDIR}"/${PN}.prf
 		fi
 
-		if [[ ${MULTIBUILD_VARIANT} = qt5 ]] ; then
+		if [[ ${MULTIBUILD_VARIANT} == qt5 ]]; then
 			insinto /usr/include/qt5/QtSolutions
 			doins src/QtLockedFile src/${PN}.h
 
