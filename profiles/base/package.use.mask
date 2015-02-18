@@ -1,9 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.646 2015/02/11 03:52:30 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.647 2015/02/18 07:41:38 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (18 Feb 2015)
+# Experimental backend, plus it requires openvg support in mesa which is
+# now disabled in >=mesa-10.4 (bug #536434)
+x11-libs/cairo openvg
 
 # Andrew Savchenko <bircoph@gentoo.org> (11 Feb 2015)
 # Cluster code is still under development, only base functionality
