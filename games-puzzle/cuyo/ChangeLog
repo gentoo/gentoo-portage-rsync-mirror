@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/cuyo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.26 2015/02/18 20:37:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/ChangeLog,v 1.27 2015/02/18 22:11:03 mr_bones_ Exp $
+
+*cuyo-2.1.2 (18 Feb 2015)
+
+  18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +cuyo-2.1.2.ebuild,
+  +files/cuyo-2.1.2-gcc44.patch, +files/cuyo-2.1.2-gentoo.patch,
+  files/cuyo-2.1.1-gcc44.patch, files/cuyo-2.1.1-gentoo.patch:
+  version bump (bug #395389) with work from kensington
 
   18 Feb 2015; Tupone Alfredo <tupone@gentoo.org> cuyo-2.1.1.ebuild:
   EAPI 5

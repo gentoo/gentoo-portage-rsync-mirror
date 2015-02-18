@@ -1,6 +1,5 @@
-diff -ru cuyo-2.~-1.1.orig/icons/Makefile.am cuyo-2.~-1.1/icons/Makefile.am
---- cuyo-2.~-1.1.orig/icons/Makefile.am	2007-12-20 12:22:32.000000000 -0500
-+++ cuyo-2.~-1.1/icons/Makefile.am	2009-12-30 13:44:39.111042770 -0500
+--- cuyo-2.~-1.1.orig/icons/Makefile.am
++++ cuyo-2.~-1.1/icons/Makefile.am
 @@ -1,4 +1,4 @@
 -desktopdir = $(datadir)/applications
 +desktopdir = /usr/share/applications
@@ -16,9 +15,8 @@ diff -ru cuyo-2.~-1.1.orig/icons/Makefile.am cuyo-2.~-1.1/icons/Makefile.am
  icons_DATA = cuyo-32x32.png cuyo-64x64.png
  
  install-iconsDATA:
-diff -ru cuyo-2.~-1.1.orig/icons/cuyo.desktop cuyo-2.~-1.1/icons/cuyo.desktop
---- cuyo-2.~-1.1.orig/icons/cuyo.desktop	2007-12-20 12:22:32.000000000 -0500
-+++ cuyo-2.~-1.1/icons/cuyo.desktop	2009-12-30 13:45:15.823781932 -0500
+--- cuyo-2.~-1.1.orig/icons/cuyo.desktop
++++ cuyo-2.~-1.1/icons/cuyo.desktop
 @@ -3,9 +3,8 @@
  Icon=cuyo
  Type=Application
