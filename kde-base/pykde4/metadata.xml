@@ -5,6 +5,5 @@
 	<use>
 		<flag name="akonadi">Compile bindings for Akonadi</flag>
 		<flag name="nepomuk">Compile bindings for Nepomuk</flag>
-		<flag name="semantic-desktop">Enables Nepomuk and Soprano python language bindings</flag>
 	</use>
 </pkgmetadata>

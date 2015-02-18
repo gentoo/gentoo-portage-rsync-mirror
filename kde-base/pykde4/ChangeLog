@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.311 2015/02/17 11:06:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.312 2015/02/18 05:28:36 mgorny Exp $
+
+  18 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  -files/pykde4-4.10.1-arm-sip.patch, -pykde4-4.12.5.ebuild, metadata.xml:
+  Remove old version. python-exec:0 can be removed now.
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pykde4-4.14.3.ebuild:
   Stable for ppc64 wrt bug #517344

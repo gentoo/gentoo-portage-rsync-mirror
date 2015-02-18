@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9796 2015/02/17 18:42:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9797 2015/02/18 05:17:33 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Feb 2015; Ben de Groot <yngwin@gentoo.org> targets/desktop/package.use:
+  Enable sensible defaults on dev-python/PyQt5 for desktop users (bug #540046)
 
   17 Feb 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask virtual/ruby-threads for removal.

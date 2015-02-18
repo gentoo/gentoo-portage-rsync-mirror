@@ -3185,7 +3185,6 @@ kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system throug
 kde-base/poxml:extras - Build po2xml and swappo tools
 kde-base/pykde4:akonadi - Compile bindings for Akonadi
 kde-base/pykde4:nepomuk - Compile bindings for Nepomuk
-kde-base/pykde4:semantic-desktop - Enables Nepomuk and Soprano python language bindings
 kde-base/qtruby:declarative - Compile bindings for dev-qt/qtdeclarative.
 kde-base/qtruby:phonon - Compile bindings for Phonon.
 kde-base/qtruby:qscintilla - Compile bindings for x11-libs/qscintilla.
