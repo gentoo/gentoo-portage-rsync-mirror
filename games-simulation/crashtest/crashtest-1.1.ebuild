@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.5 2014/04/10 06:33:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crashtest/crashtest-1.1.ebuild,v 1.6 2015/02/18 19:42:07 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils flag-o-matic games
@@ -31,14 +31,12 @@ src_prepare() {
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		-e "s:@GENTOO_BINDIR@:${GAMES_BINDIR}:" \
-		Makefile ${PN}.cxx \
-		|| die "sed failed"
+		Makefile ${PN}.cxx || die
 	append-flags -DHAVE_ISNANF
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README
+	default
 	make_desktop_entry ${PN} Crashtest
 	prepgamesdirs
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/love
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.19 2015/01/11 16:22:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.20 2015/02/18 19:43:24 mr_bones_ Exp $
+
+  18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> love-0.7.2-r1.ebuild,
+  love-0.8.0.ebuild:
+  avoid inheriting base
 
   07 Jan 2015; Tupone Alfredo <tupone@gentoo.org> love-0.8.0.ebuild,
   +files/love-0.8.0-freetype2.patch:

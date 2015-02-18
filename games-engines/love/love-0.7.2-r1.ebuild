@@ -1,10 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2-r1.ebuild,v 1.6 2014/07/06 13:20:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2-r1.ebuild,v 1.7 2015/02/18 19:43:24 mr_bones_ Exp $
 
-EAPI=3
-
-inherit base games
+EAPI=5
+inherit games
 
 DESCRIPTION="A framework for 2D games in Lua"
 HOMEPAGE="http://love2d.org/"
@@ -31,10 +30,9 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-HEAD
 
-DOCS=( "readme.txt" "changes.txt" )
-
 src_install() {
-	base_src_install
+	DOCS="readme.txt changes.txt" \
+		default
 	if [[ "${SLOT}" != "0" ]]; then
 		mv "${ED}${GAMES_BINDIR}"/${PN} \
 			"${ED}${GAMES_BINDIR}"/${PN}-${SLOT} || die

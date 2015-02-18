@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/colorcode-0.7.2.ebuild,v 1.4 2013/03/02 21:18:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/colorcode/colorcode-0.7.2.ebuild,v 1.5 2015/02/18 19:52:11 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2 games
 
 MY_PN=ColorCode
@@ -16,6 +16,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-qt/qtgui:4"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
@@ -29,7 +30,7 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin ${PN} || die
+	dogamesbin ${PN}
 	newicon img/cc64.png ${PN}.png
 	make_desktop_entry ${PN} ${MY_PN}
 	prepgamesdirs

@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.11 2015/01/07 09:21:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.8.0.ebuild,v 1.12 2015/02/18 19:43:24 mr_bones_ Exp $
 
 EAPI=5
-
-inherit base games
+inherit games
 
 if [[ ${PV} == 9999* ]]; then
 	inherit autotools mercurial
@@ -28,7 +27,7 @@ RDEPEND="dev-games/physfs
 	media-libs/devil[mng,png,tiff]
 	media-libs/freetype
 	media-libs/libmodplug
-	media-libs/libsdl[joystick,opengl]
+	media-libs/libsdl[joystick,opengl,video]
 	media-libs/libvorbis
 	media-libs/openal
 	media-sound/mpg123
@@ -36,8 +35,6 @@ RDEPEND="dev-games/physfs
 DEPEND="${RDEPEND}
 	media-libs/libmng
 	media-libs/tiff"
-
-DOCS=( "readme.md" "changes.txt" )
 
 src_prepare() {
 	if [[ ${PV} == 9999* ]]; then
@@ -49,7 +46,8 @@ src_prepare() {
 }
 
 src_install() {
-	default
+	DOCS="readme.md changes.txt" \
+		default
 	if [[ "${SLOT}" != "0" ]]; then
 		mv "${ED}${GAMES_BINDIR}"/${PN} \
 			"${ED}${GAMES_BINDIR}"/${PN}-${SLOT} || die

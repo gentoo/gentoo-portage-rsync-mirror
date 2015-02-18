@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-1.1.1.ebuild,v 1.5 2014/06/08 11:07:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-1.1.1.ebuild,v 1.6 2015/02/18 19:37:33 mr_bones_ Exp $
 
 EAPI=5
 inherit flag-o-matic eutils qt4-r2 games
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="dedicated"
 
 RDEPEND="dev-db/sqlite:3
-	dev-libs/boost[threads(+)]
+	dev-libs/boost:=[threads(+)]
 	dev-libs/protobuf
 	dev-libs/libgcrypt:0
 	dev-libs/tinyxml[stl]
