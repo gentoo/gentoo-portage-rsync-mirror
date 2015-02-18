@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.39 2015/02/02 19:30:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.40 2015/02/18 18:31:41 pesa Exp $
+
+  18 Feb 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.2.2.ebuild,
+  qt-creator-3.3.0.ebuild:
+  Add Ukrainian translation (bug 538824).
 
   02 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> qt-creator-3.3.0.ebuild:
   Add ~arm keyword

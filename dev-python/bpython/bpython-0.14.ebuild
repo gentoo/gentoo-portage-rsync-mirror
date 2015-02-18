@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.14.ebuild,v 1.1 2015/02/17 13:39:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.14.ebuild,v 1.2 2015/02/18 18:32:34 grozin Exp $
 
 EAPI=5
 
@@ -43,7 +43,9 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS CHANGELOG sample.theme light.theme )
 
-PATCHES=( "${FILESDIR}"/${PN}-desktop.patch )
+# Upstream patch
+# https://github.com/bpython/bpython/commit/43e70389badc48be2986a606f8f7b3f2aa29d59b
+PATCHES=( "${FILESDIR}"/${P}.patch )
 
 # Req'd for clean build by each impl
 DISTUTILS_IN_SOURCE_BUILD=1
