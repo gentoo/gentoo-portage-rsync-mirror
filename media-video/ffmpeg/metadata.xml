@@ -26,6 +26,7 @@
 	<flag name="frei0r">Enable frei0r wrapping in libavfilter</flag>
 	<flag name="fribidi">Enables fribidi support in the drawtext filter.</flag>
 	<flag name="gme">Enables support for <pkg>media-libs/game-music-emu</pkg> for playing various video game music formats.</flag>
+	<flag name="gpl">Build GPL code. Should be enabled unless you require LGPL binaries.</flag>
 	<flag name="hardcoded-tables">Use pre-calculated tables rather than calculating them on the fly.</flag>
 	<flag name="iec61883"> Support for FireWire DV/HDV input device using <pkg>media-libs/libiec61883</pkg>.</flag>
 	<flag name="libsoxr">Enables audio resampling through <pkg>media-libs/soxr</pkg>.</flag>
@@ -38,6 +39,7 @@
 	<flag name="openssl">Enables <pkg>dev-libs/openssl</pkg> support. Adds support for encrypted network protocols (TLS/HTTPS).</flag>
 	<flag name="opus">Adds (decoding) support for the Opus codec via <pkg>media-libs/opus</pkg>.</flag>
 	<flag name="pic">Force shared libraries to be built as PIC (this is slower)</flag>
+	<flag name="postproc">Build and install libpostproc.</flag>
 	<flag name="quvi">Adds support for playing media from Internet services using the quvi project.</flag>
 	<flag name="rtmp">Enable Real Time Messaging Protocol using librtmp</flag>
 	<flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>

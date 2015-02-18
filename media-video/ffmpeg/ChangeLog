@@ -1,6 +1,17 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.829 2015/02/18 09:58:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.832 2015/02/18 10:47:35 aballier Exp $
+
+  18 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  zvbi requires gpl too
+
+  18 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  Do not enable old xlib based x11grab when xcb is used. xcb based grabber is
+  LGPL.
+
+  18 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  Add gpl & postproc useflags so that ffmpeg can be built in LGPL mode.
 
   18 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   add required use for x86 cpu flags

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-AllUtils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/ChangeLog,v 1.21 2015/02/07 11:38:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-AllUtils/ChangeLog,v 1.22 2015/02/18 10:50:22 zlogene Exp $
+
+  18 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> List-AllUtils-0.90.0.ebuild:
+  Stable for all
 
   07 Feb 2015; Jeroen Roovers <jer@gentoo.org> List-AllUtils-0.90.0.ebuild:
   Stable for HPPA (bug #529342).
