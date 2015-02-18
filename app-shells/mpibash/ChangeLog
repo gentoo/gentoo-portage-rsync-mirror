@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/mpibash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mpibash/ChangeLog,v 1.1 2015/02/13 23:26:09 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mpibash/ChangeLog,v 1.3 2015/02/17 23:21:14 ottxor Exp $
+
+*mpibash-1.2 (17 Feb 2015)
+
+  17 Feb 2015; Christoph Junghans <ottxor@gentoo.org> +mpibash-1.2.ebuild:
+  version bump
+
+*mpibash-9999 (17 Feb 2015)
+
+  17 Feb 2015; Christoph Junghans <ottxor@gentoo.org> +mpibash-9999.ebuild:
+  added live version
 
 *mpibash-1.1 (13 Feb 2015)
 
