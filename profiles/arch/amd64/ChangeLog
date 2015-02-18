@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.305 2015/02/13 00:01:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.306 2015/02/18 11:02:57 chithanh Exp $
+
+  18 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.stable.mask:
+  Mask multilib for x11-libs/xcb-util*
 
   13 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   package.use.stable.mask:

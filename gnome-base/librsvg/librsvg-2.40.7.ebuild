@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.2-r1.ebuild,v 1.13 2014/10/11 12:14:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.7.ebuild,v 1.1 2015/02/18 11:27:27 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/LibRsvg"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+introspection vala tools"
 REQUIRED_USE="
 	vala? ( introspection )
@@ -41,10 +41,12 @@ DEPEND="${RDEPEND}
 # >=gtk-doc-am-1.13, gobject-introspection-common, vala-common needed by eautoreconf
 
 src_prepare() {
-	# https://bugzilla.gnome.org/show_bug.cgi?id=712693
-	epatch "${FILESDIR}/${PN}-2.40.1-gtk-optional.patch"
+	# https://bugzilla.gnome.org/show_bug.cgi?id=653323
+	epatch "${FILESDIR}/${PN}-2.40.7-gtk-optional.patch"
+
 	# https://bugzilla.gnome.org/show_bug.cgi?id=731826
-	epatch "${FILESDIR}/${P}-vala-out-of-source.patch"
+	epatch "${FILESDIR}/${PN}-2.40.2-vala-out-of-source.patch"
+
 	eautoreconf
 
 	use vala && vala_src_prepare

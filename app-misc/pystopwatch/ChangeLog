@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pystopwatch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/ChangeLog,v 1.7 2014/12/27 16:34:30 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pystopwatch/ChangeLog,v 1.8 2015/02/18 11:20:59 pacho Exp $
+
+  18 Feb 2015; Pacho Ramos <pacho@gentoo.org>
+  -pystopwatch-2012.02.17.84795.ebuild, pystopwatch-2012.12.24.1-r1.ebuild:
+  librsvg is needed (#496230), drop old
 
 *pystopwatch-2012.12.24.1-r1 (27 Dec 2014)
 
