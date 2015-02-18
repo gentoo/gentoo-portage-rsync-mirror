@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.181 2015/02/18 10:47:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.183 2015/02/18 11:54:07 aballier Exp $
 
 EAPI="5"
 
@@ -57,15 +57,48 @@ LICENSE="
 if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
+
+# Options to use as use_enable in the foo[:bar] form.
+# This will feed configure with $(use_enable foo bar)
+# or $(use_enable foo foo) if no :bar is set.
+# foo is added to IUSE.
+FFMPEG_FLAG_MAP=(
+		+bzip2:bzlib cpudetection:runtime-cpudetect debug doc gnutls +gpl
+		+hardcoded-tables +iconv lzma +network openssl +postproc
+		samba:libsmbclient sdl:ffplay vaapi vdpau X:xlib xcb:libxcb
+		xcb:libxcb-shm xcb:libxcb-xfixes +zlib
+		# libavdevice options
+		cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal
+		opengl
+		# indevs
+		libv4l:libv4l2 pulseaudio:libpulse
+		# decoders
+		amr:libopencore-amrwb amr:libopencore-amrnb fdk:libfdk-aac
+		jpeg2k:libopenjpeg bluray:libbluray celt:libcelt gme:libgme gsm:libgsm
+		modplug:libmodplug opus:libopus quvi:libquvi rtmp:librtmp ssh:libssh
+		schroedinger:libschroedinger speex:libspeex vorbis:libvorbis vpx:libvpx
+		zvbi:libzvbi
+		# libavfilter options
+		bs2b:libbs2b flite:libflite frei0r fribidi:libfribidi fontconfig ladspa
+		libass truetype:libfreetype
+		# libswresample options
+		libsoxr
+		# Threads; we only support pthread for now but ffmpeg supports more
+		+threads:pthreads
+)
+
+# Same as above but for encoders, i.e. they do something only with USE=encode.
+FFMPEG_ENCODER_FLAG_MAP=(
+	aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame
+	aacplus:libaacplus faac:libfaac theora:libtheora twolame:libtwolame
+	wavpack:libwavpack webp:libwebp x264:libx264 x265:libx265 xvid:libxvid
+)
+
 IUSE="
-	aac aacplus alsa amr amrenc bindist bluray bs2b +bzip2 cdio celt
-	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
-	fribidi gme	gnutls +gpl gsm +hardcoded-tables +iconv iec61883 ieee1394 jack
-	jpeg2k ladspa libass libcaca libsoxr libv4l lzma modplug mp3 +network
-	openal opengl openssl opus oss pic +postproc pulseaudio quvi rtmp samba schroedinger
-	sdl speex ssh static-libs test theora threads truetype twolame v4l vaapi
-	vdpau vorbis vpx wavpack webp X x264 x265 xcb xvid +zlib zvbi
-	"
+	alsa bindist +encode examples jack oss pic static-libs test v4l
+	${FFMPEG_FLAG_MAP[@]%:*}
+	${FFMPEG_ENCODER_FLAG_MAP[@]%:*}
+"
 
 ARM_CPU_FEATURES="armv5te armv6 armv6t2 neon armvfp:vfp"
 MIPS_CPU_FEATURES="mips32r2 mipsdspr1 mipsdspr2 mipsfpu"
@@ -228,7 +261,6 @@ GPL_REQUIRED_USE="
 		X? ( !xcb? ( gpl ) )
 	)
 "
-# faac is license-incompatible with ffmpeg
 REQUIRED_USE="
 	bindist? (
 		encode? ( !faac !aacplus )
@@ -256,24 +288,13 @@ src_prepare() {
 multilib_src_configure() {
 	local myconf=( ${EXTRA_FFMPEG_CONF} )
 
-	# options to use as use_enable in the foo[:bar] form.
-	# This will feed configure with $(use_enable foo bar)
-	# or $(use_enable foo foo) if no :bar is set.
-	local ffuse=(
-		bzip2:bzlib cpudetection:runtime-cpudetect debug doc
-		gnutls gpl hardcoded-tables iconv lzma network openssl postproc samba:libsmbclient
-		sdl:ffplay vaapi vdpau X:xlib xcb:libxcb xcb:libxcb-shm xcb:libxcb-xfixes zlib
-	)
+	local ffuse=( "${FFMPEG_FLAG_MAP[@]}" )
 	use openssl && use gpl && myconf+=( --enable-nonfree )
 	use samba && myconf+=( --enable-version3 )
 
 	# Encoders
-	if use encode
-	then
-		ffuse+=( aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame )
-		for i in aacplus faac theora twolame wavpack webp x264 x265 xvid; do
-			ffuse+=( ${i}:lib${i} )
-		done
+	if use encode ; then
+		ffuse+=( "${FFMPEG_ENCODER_FLAG_MAP[@]}" )
 
 		# Licensing.
 		if use aac || use amrenc ; then
@@ -286,15 +307,11 @@ multilib_src_configure() {
 		myconf+=( --disable-encoders )
 	fi
 
-	# libavdevice options
-	ffuse+=( cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal opengl )
-
 	# Indevs
 	use v4l || myconf+=( --disable-indev=v4l2 --disable-outdev=v4l2 )
 	for i in alsa oss jack ; do
 		use ${i} || myconf+=( --disable-indev=${i} )
 	done
-	ffuse+=( libv4l:libv4l2 pulseaudio:libpulse )
 	use xcb || ffuse+=( X:x11grab )
 
 	# Outdevs
@@ -302,24 +319,11 @@ multilib_src_configure() {
 		use ${i} || myconf+=( --disable-outdev=${i} )
 	done
 
-	# libavfilter options
-	ffuse+=( bs2b:libbs2b flite:libflite frei0r fribidi:libfribidi fontconfig ladspa libass truetype:libfreetype )
-
-	# libswresample options
-	ffuse+=( libsoxr )
-
-	# Threads; we only support pthread for now but ffmpeg supports more
-	ffuse+=( threads:pthreads )
-
 	# Decoders
-	ffuse+=( amr:libopencore-amrwb amr:libopencore-amrnb fdk:libfdk-aac jpeg2k:libopenjpeg )
 	use amr && myconf+=( --enable-version3 )
-	for i in bluray celt gme gsm modplug opus quvi rtmp ssh schroedinger speex vorbis vpx zvbi; do
-		ffuse+=( ${i}:lib${i} )
-	done
 	use fdk && use gpl && myconf+=( --enable-nonfree )
 
-	for i in "${ffuse[@]}" ; do
+	for i in "${ffuse[@]#+}" ; do
 		myconf+=( $(use_enable ${i%:*} ${i#*:}) )
 	done
 
@@ -334,6 +338,7 @@ multilib_src_configure() {
 	for i in ${CPU_FEATURES}; do
 		use ${i%:*} || myconf+=( --disable-${i#*:} )
 	done
+
 	if use pic ; then
 		myconf+=( --enable-pic )
 		# disable asm code if PIC is required

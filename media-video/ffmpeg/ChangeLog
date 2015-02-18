@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.832 2015/02/18 10:47:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.834 2015/02/18 11:54:07 aballier Exp $
+
+  18 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  drop old & useless comment
+
+  18 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  factorize filling IUSE and the map useflag -> configure option.
 
   18 Feb 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   zvbi requires gpl too
