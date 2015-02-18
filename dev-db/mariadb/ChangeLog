@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.94 2015/02/17 21:07:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.95 2015/02/18 08:50:05 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mariadb-10.0.16.ebuild:
+  Stable for ppc64, wrt bug #537262
 
   17 Feb 2015; Markus Meier <maekke@gentoo.org> mariadb-10.0.16.ebuild:
   arm stable, bug #537262

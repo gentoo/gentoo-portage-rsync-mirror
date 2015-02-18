@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Build
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.97 2015/02/17 21:35:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.98 2015/02/18 08:37:59 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-Module-Build-0.420.500-r1.ebuild:
+  Stable for alpha, wrt bug #536790
 
   17 Feb 2015; Markus Meier <maekke@gentoo.org>
   perl-Module-Build-0.420.500-r1.ebuild:

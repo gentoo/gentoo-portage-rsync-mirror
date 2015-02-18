@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-threads-shared
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads-shared/ChangeLog,v 1.35 2015/02/17 08:14:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads-shared/ChangeLog,v 1.36 2015/02/18 08:39:04 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-threads-shared-1.460.0.ebuild:
+  Stable for alpha, wrt bug #536790
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-threads-shared-1.460.0.ebuild:

@@ -1,0 +1,152 @@
+From fe1b2b92075f1a5849900cdbfa4089b10946c689 Mon Sep 17 00:00:00 2001
+From: Uli Schlachter <psychon@znc.in>
+Date: Fri, 5 Dec 2014 14:43:26 +0100
+Subject: [PATCH] tor-scan-converter: Correctly align 64bit types
+
+On 32bit SPARC the scan converter was causing a SIGBUS due to an unaligned
+memory access while accessing an int64_t. This memory accessing was to struct
+quorem's rem member.
+
+This crash occurred because the tor-scan-converter contains its own
+implementation of a memory pool. This implementation only guarantees an
+alignment of sizeof(void *), which is less than what a 64 bit type requires on
+32bit platforms. This 4 byte alignment is guaranteed, because struct _pool_chunk
+(which is the struct that is used for managing free space) contains elements of
+that size and so the size of that struct is a multiple of this size as well.
+
+This problem was introduced with commit 03c3d4b7c15.
+
+To fix this problem, this commit introduces a int64_t member to struct
+_pool_chunk that marks the beginning of the free data space. Thanks to this, the
+compiler ensures proper alignment and sizeof(struct _pool_chunk) becomes a
+multiple of 8.
+
+However, previously the end of the struct marked the beginning of the data and
+sizeof() was used for correctly calculating offsets to the data section. So,
+just adding such a member would work, but would also waste some memory. To avoid
+this, this commit also changes the rest of the pool implementation to
+accommodate.
+
+Reported-by: Nicolas Setton <setton@adacore.com>
+Signed-off-by: Uli Schlachter <psychon@znc.in>
+Reviewed-by: Bryce Harrington <bryce@osg.samsung.com>
+---
+ src/cairo-tor-scan-converter.c | 38 +++++++++++++++++++++++---------------
+ 1 file changed, 23 insertions(+), 15 deletions(-)
+
+diff --git a/src/cairo-tor-scan-converter.c b/src/cairo-tor-scan-converter.c
+index 4adcafb..bd90266 100644
+--- a/src/cairo-tor-scan-converter.c
++++ b/src/cairo-tor-scan-converter.c
+@@ -277,9 +277,14 @@ struct _pool_chunk {
+      * chunk in the pool header. */
+     struct _pool_chunk *prev_chunk;
+ 
+-    /* Actual data starts here.	 Well aligned for pointers. */
++    /* Actual data starts here. Well aligned even for 64 bit types. */
++    int64_t data;
+ };
+ 
++/* The int64_t data member of _pool_chunk just exists to enforce alignment,
++ * it shouldn't be included in the allocated size for the struct. */
++#define SIZEOF_POOL_CHUNK (sizeof(struct _pool_chunk) - sizeof(int64_t))
++
+ /* A memory pool.  This is supposed to be embedded on the stack or
+  * within some other structure.	 It may optionally be followed by an
+  * embedded array from which requests are fulfilled until
+@@ -299,8 +304,11 @@ struct pool {
+ 
+     /* Header for the sentinel chunk.  Directly following the pool
+      * struct should be some space for embedded elements from which
+-     * the sentinel chunk allocates from. */
+-    struct _pool_chunk sentinel[1];
++     * the sentinel chunk allocates from. This is expressed as a char
++     * array so that the 'int64_t data' member of _pool_chunk isn't
++     * included. This way embedding struct pool in other structs works
++     * without wasting space. */
++    char sentinel[SIZEOF_POOL_CHUNK];
+ };
+ 
+ /* A polygon edge. */
+@@ -475,7 +483,7 @@ _pool_chunk_create(struct pool *pool, size_t size)
+ {
+     struct _pool_chunk *p;
+ 
+-    p = malloc(size + sizeof(struct _pool_chunk));
++    p = malloc(SIZEOF_POOL_CHUNK + size);
+     if (unlikely (NULL == p))
+ 	longjmp (*pool->jmp, _cairo_error (CAIRO_STATUS_NO_MEMORY));
+ 
+@@ -489,10 +497,10 @@ pool_init(struct pool *pool,
+ 	  size_t embedded_capacity)
+ {
+     pool->jmp = jmp;
+-    pool->current = pool->sentinel;
++    pool->current = (void*) pool->sentinel;
+     pool->first_free = NULL;
+     pool->default_capacity = default_capacity;
+-    _pool_chunk_init(pool->sentinel, NULL, embedded_capacity);
++    _pool_chunk_init(pool->current, NULL, embedded_capacity);
+ }
+ 
+ static void
+@@ -502,7 +510,7 @@ pool_fini(struct pool *pool)
+     do {
+ 	while (NULL != p) {
+ 	    struct _pool_chunk *prev = p->prev_chunk;
+-	    if (p != pool->sentinel)
++	    if (p != (void *) pool->sentinel)
+ 		free(p);
+ 	    p = prev;
+ 	}
+@@ -542,14 +550,14 @@ _pool_alloc_from_new_chunk(
+ 	chunk = _pool_chunk_create (pool, capacity);
+     pool->current = chunk;
+ 
+-    obj = ((unsigned char*)chunk + sizeof(*chunk) + chunk->size);
++    obj = ((unsigned char*)&chunk->data + chunk->size);
+     chunk->size += size;
+     return obj;
+ }
+ 
+ /* Allocate size bytes from the pool.  The first allocated address
+- * returned from a pool is aligned to sizeof(void*).  Subsequent
+- * addresses will maintain alignment as long as multiples of void* are
++ * returned from a pool is aligned to 8 bytes.  Subsequent
++ * addresses will maintain alignment as long as multiples of 8 are
+  * allocated.  Returns the address of a new memory area or %NULL on
+  * allocation failures.	 The pool retains ownership of the returned
+  * memory. */
+@@ -559,7 +567,7 @@ pool_alloc (struct pool *pool, size_t size)
+     struct _pool_chunk *chunk = pool->current;
+ 
+     if (size <= chunk->capacity - chunk->size) {
+-	void *obj = ((unsigned char*)chunk + sizeof(*chunk) + chunk->size);
++	void *obj = ((unsigned char*)&chunk->data + chunk->size);
+ 	chunk->size += size;
+ 	return obj;
+     } else {
+@@ -573,16 +581,16 @@ pool_reset (struct pool *pool)
+ {
+     /* Transfer all used chunks to the chunk free list. */
+     struct _pool_chunk *chunk = pool->current;
+-    if (chunk != pool->sentinel) {
+-	while (chunk->prev_chunk != pool->sentinel) {
++    if (chunk != (void *) pool->sentinel) {
++	while (chunk->prev_chunk != (void *) pool->sentinel) {
+ 	    chunk = chunk->prev_chunk;
+ 	}
+ 	chunk->prev_chunk = pool->first_free;
+ 	pool->first_free = pool->current;
+     }
+     /* Reset the sentinel as the current chunk. */
+-    pool->current = pool->sentinel;
+-    pool->sentinel->size = 0;
++    pool->current = (void *) pool->sentinel;
++    pool->current->size = 0;
+ }
+ 
+ /* Rewinds the cell list's cursor to the beginning.  After rewinding
+-- 
+2.3.0
+

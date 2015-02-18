@@ -1,6 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.25.ebuild,v 1.5 2015/01/17 16:34:14 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.25.ebuild,v 1.6 2015/02/18 08:33:58 mr_bones_ Exp $
+
 EAPI=5
 inherit autotools games
 
@@ -20,20 +21,17 @@ src_prepare() {
 	# Make sure the system expat is used
 	sed -i \
 		-e 's/#ifdef.*SYSEXPAT/#if 1/' \
-		mamory/amlxml.c mamory/amlxml.h \
-		|| die "sed amlxml failed"
+		mamory/amlxml.c mamory/amlxml.h || die
 
 	# Remove hardcoded CFLAGS options
 	sed -i \
 		-e '/AC_ARG_ENABLE(debug,/ {N;N;N;d}' \
-		configure.ac \
-		|| die "sed configure.ac failed"
+		configure.ac || die
 
 	# Make it possible for eautoreconf to fix fPIC etc.
 	sed -i \
 		-e '/libcommon_la_LDFLAGS= -static/d' \
-		common/Makefile.am \
-		|| die "sed Makefile.am failed"
+		common/Makefile.am || die
 
 	AT_M4DIR="config" eautoreconf
 }

@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Devel-PPPort
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.21 2015/02/17 21:23:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Devel-PPPort/ChangeLog,v 1.22 2015/02/18 08:37:05 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  perl-Devel-PPPort-3.210.0.ebuild:
+  Stable for alpha, wrt bug #536790
 
   17 Feb 2015; Markus Meier <maekke@gentoo.org>
   perl-Devel-PPPort-3.210.0.ebuild:

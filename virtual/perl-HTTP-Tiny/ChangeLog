@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-HTTP-Tiny
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-HTTP-Tiny/ChangeLog,v 1.8 2015/02/17 08:12:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-HTTP-Tiny/ChangeLog,v 1.9 2015/02/18 08:37:36 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-HTTP-Tiny-0.43.0.ebuild:
+  Stable for alpha, wrt bug #536790
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-HTTP-Tiny-0.43.0.ebuild:
   Stable for ia64, wrt bug #536790

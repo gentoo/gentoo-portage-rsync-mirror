@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.16-r2.ebuild,v 1.8 2014/07/26 08:57:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.14.0.ebuild,v 1.1 2015/02/18 08:44:20 tetromino Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-IUSE="X aqua debug directfb drm gallium gles2 +glib legacy-drivers opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb"
+IUSE="X aqua debug directfb drm gallium gles2 +glib opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb"
 # gtk-doc regeneration doesn't seem to work with out-of-source builds
 #[[ ${PV} == *9999* ]] && IUSE="${IUSE} doc" # API docs are provided in tarball, no need to regenerate
 
@@ -37,13 +37,13 @@ RDEPEND=">=dev-libs/lzo-2.06-r1[${MULTILIB_USEDEP}]
 	glib? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	opengl? ( || ( >=media-libs/mesa-9.1.6[egl,${MULTILIB_USEDEP}] media-libs/opengl-apple ) )
 	openvg? ( >=media-libs/mesa-9.1.6[openvg,${MULTILIB_USEDEP}] )
-	qt4? ( >=dev-qt/qtgui-4.8:4 )
+	qt4? ( >=dev-qt/qtgui-4.8:4[${MULTILIB_USEDEP}] )
 	X? (
 		>=x11-libs/libXrender-0.9.8[${MULTILIB_USEDEP}]
 		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
 		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
 		drm? (
-			>=virtual/libudev-208[${MULTILIB_USEDEP}]
+			>=virtual/libudev-208:=[${MULTILIB_USEDEP}]
 			gallium? ( >=media-libs/mesa-9.1.6[gallium,${MULTILIB_USEDEP}] )
 		)
 	)
@@ -86,9 +86,17 @@ MULTILIB_WRAPPED_HEADERS=(
 )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.8.8-interix.patch
-	use legacy-drivers && epatch "${FILESDIR}"/${PN}-1.10.0-buggy_gradients.patch
+	epatch "${FILESDIR}"/${PN}-1.12.18-disable-test-suite.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
+
+	# fixed in 1.14.1
+	epatch "${FILESDIR}"/${P}-align-64bit-types.patch
+
+	# tests and perf tools require X, bug #483574
+	if ! use X; then
+		sed -e '/^SUBDIRS/ s#boilerplate test perf# #' -i Makefile.am || die
+	fi
+
 	epatch_user
 
 	# Slightly messed build system YAY
@@ -98,8 +106,6 @@ src_prepare() {
 		touch ChangeLog
 	fi
 
-	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
-	# upgraded to an eautoreconf for the above interix patch.
 	eautoreconf
 }
 
@@ -152,11 +158,6 @@ multilib_src_configure() {
 		--enable-png \
 		--enable-ps \
 		${myopts}
-}
-
-multilib_src_install() {
-	# parallel make install fails
-	emake -j1 DESTDIR="${D}" install
 }
 
 multilib_src_install_all() {

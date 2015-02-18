@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Pod-Parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Parser/ChangeLog,v 1.19 2015/02/17 21:40:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Parser/ChangeLog,v 1.20 2015/02/18 08:38:21 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Pod-Parser-1.620.0.ebuild:
+  Stable for alpha, wrt bug #536790
 
   17 Feb 2015; Markus Meier <maekke@gentoo.org> perl-Pod-Parser-1.620.0.ebuild:
   arm stable, bug #536790

@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.397 2015/01/31 14:12:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.398 2015/02/18 08:44:20 tetromino Exp $
+
+*cairo-1.14.0 (18 Feb 2015)
+
+  18 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cairo-1.12.14-r4.ebuild, -cairo-1.12.16-r2.ebuild, -cairo-1.12.16-r3.ebuild,
+  +cairo-1.14.0.ebuild, -files/cairo-1.12.10-xlib-corruption.patch,
+  -files/cairo-1.12.10-xshm-corruption.patch,
+  -files/cairo-1.12.12-disable-test-suite.patch,
+  -files/cairo-1.12.14-libpng16.patch,
+  +files/cairo-1.14.0-align-64bit-types.patch:
+  Version bump, now with high-dpi support, better downscaling, and support for
+  jbig2 in pdf (bug #531668, thanks to Manuel Rüger). Punt old.
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.16-r4.ebuild:
   Stable for amd64, wrt bug #525300
