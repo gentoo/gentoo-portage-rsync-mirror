@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipt_netflow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.21 2015/01/09 20:50:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.22 2015/02/18 09:54:35 pinkbyte Exp $
+
+*ipt_netflow-2.1 (18 Feb 2015)
+
+  18 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> +ipt_netflow-2.1.ebuild:
+  Version bump
 
 *ipt_netflow-2.0.1_p20150109 (09 Jan 2015)
 

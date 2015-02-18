@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.244 2015/02/15 22:38:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.245 2015/02/18 09:58:42 polynomial-c Exp $
+
+  18 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> -libtool-2.4-r1.ebuild,
+  -libtool-2.4-r4.ebuild, libtool-2.4.6.ebuild,
+  -files/libtool-2.4-openmp.patch:
+  Switch back to xz compressed tarball. Removed old versions.
 
 *libtool-2.4.6 (15 Feb 2015)
 

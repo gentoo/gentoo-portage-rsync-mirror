@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.177 2015/01/30 16:40:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.178 2015/02/18 09:58:05 aballier Exp $
 
 EAPI="5"
 
@@ -53,6 +53,22 @@ ARM_CPU_FEATURES="armv5te armv6 armv6t2 neon armvfp:vfp"
 MIPS_CPU_FEATURES="mips32r2 mipsdspr1 mipsdspr2 mipsfpu"
 PPC_CPU_FEATURES="altivec"
 X86_CPU_FEATURES=( 3dnow:amd3dnow 3dnowext:amd3dnowext avx:avx avx2:avx2 fma3:fma3 fma4:fma4 mmx:mmx mmxext:mmxext sse:sse sse2:sse2 sse3:sse3 ssse3:ssse3 sse4_1:sse4 sse4_2:sse42 xop:xop )
+X86_CPU_REQUIRED_USE="
+	cpu_flags_x86_avx2? ( cpu_flags_x86_avx )
+	cpu_flags_x86_fma4? ( cpu_flags_x86_avx )
+	cpu_flags_x86_fma3? ( cpu_flags_x86_avx )
+	cpu_flags_x86_xop?  ( cpu_flags_x86_avx )
+	cpu_flags_x86_avx?  ( cpu_flags_x86_sse4_2 )
+	cpu_flags_x86_sse4_2?  ( cpu_flags_x86_sse4_1 )
+	cpu_flags_x86_sse4_1?  ( cpu_flags_x86_ssse3 )
+	cpu_flags_x86_ssse3?  ( cpu_flags_x86_sse3 )
+	cpu_flags_x86_sse3?  ( cpu_flags_x86_sse2 )
+	cpu_flags_x86_sse2?  ( cpu_flags_x86_sse )
+	cpu_flags_x86_sse?  ( cpu_flags_x86_mmxext )
+	cpu_flags_x86_mmxext?  ( cpu_flags_x86_mmx )
+	cpu_flags_x86_3dnowext?  ( cpu_flags_x86_3dnow )
+	cpu_flags_x86_3dnow?  ( cpu_flags_x86_mmx )
+"
 
 # String for CPU features in the useflag[:configure_option] form
 # if :configure_option isn't set, it will use 'useflag' as configure option
@@ -61,6 +77,9 @@ CPU_FEATURES="
 	${MIPS_CPU_FEATURES}
 	${PPC_CPU_FEATURES}
 	${X86_CPU_FEATURES[@]/#/cpu_flags_x86_}
+"
+CPU_REQUIRED_USE="
+	${X86_CPU_REQUIRED_USE}
 "
 
 for i in ${CPU_FEATURES}; do
@@ -181,7 +200,8 @@ RDEPEND="${RDEPEND}
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
 	libv4l? ( v4l )
 	fftools_cws2fws? ( zlib )
-	test? ( encode )"
+	test? ( encode )
+	${CPU_REQUIRED_USE}"
 
 S=${WORKDIR}/${P/_/-}
 

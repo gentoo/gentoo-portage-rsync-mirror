@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/freesynd-0.7.1.ebuild,v 1.2 2014/05/15 17:04:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/freesynd-0.7.1.ebuild,v 1.3 2015/02/18 09:56:25 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils cmake-utils gnome2-utils games
 
 DESCRIPTION="A cross-platform reimplementation of engine for the classic Bullfrog game, Syndicate"
@@ -21,7 +20,7 @@ RDEPEND="media-libs/libogg
 	media-libs/libvorbis
 	media-libs/sdl-mixer[mp3,vorbis]
 	media-libs/sdl-image[png]"
-DEPEND="${RDEPEND}"
+DEPEND=${RDEPEND}
 
 CMAKE_IN_SOURCE_BUILD=1
 

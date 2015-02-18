@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libltdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.10 2015/02/15 22:37:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.11 2015/02/18 09:58:09 polynomial-c Exp $
+
+  18 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> libltdl-2.4.6.ebuild:
+  Switch back to xz compressed tarball.
 
 *libltdl-2.4.6 (15 Feb 2015)
 
