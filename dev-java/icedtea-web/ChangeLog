@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-web
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.47 2014/11/02 11:07:03 caster Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.48 2015/02/18 16:56:34 mgorny Exp $
+
+  18 Feb 2015; Michał Górny <mgorny@gentoo.org> files/README.gentoo:
+  Fix typos in README.gentoo, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/20 by Elias Probst.
 
   02 Nov 2014; Vlastimil Babka <caster@gentoo.org> -icedtea-web-1.5.1.ebuild,
   icedtea-web-1.5.1-r1.ebuild:

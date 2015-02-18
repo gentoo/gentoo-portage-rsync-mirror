@@ -3,8 +3,9 @@
 <pkgmetadata>
 	<herd>qt</herd>
 	<use>
-		<flag name="connman">Enable ConnMan-based bearer plugin</flag>
-		<flag name="networkmanager">Enable NetworkManager-based bearer plugin</flag>
+		<flag name="connman">Enable <pkg>net-misc/connman</pkg>-based bearer plugin</flag>
+		<flag name="networkmanager">Enable <pkg>net-misc/networkmanager</pkg>-based
+			bearer plugin</flag>
 	</use>
 	<upstream>
 		<bugs-to>https://bugreports.qt.io/</bugs-to>

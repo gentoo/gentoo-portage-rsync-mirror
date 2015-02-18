@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtnetwork
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.9 2015/02/03 10:56:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.10 2015/02/18 16:47:01 pesa Exp $
+
+  18 Feb 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Sync metadata
 
   03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtnetwork-5.4.0.ebuild:
   Marked ~hppa too.
