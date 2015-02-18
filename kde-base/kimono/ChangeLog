@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimono
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.137 2015/02/16 08:31:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.138 2015/02/18 16:26:50 mgorny Exp $
+
+  18 Feb 2015; Michał Górny <mgorny@gentoo.org> -kimono-4.12.5.ebuild:
+  Remove KDE SC 4.12
 
   16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kimono-4.14.3.ebuild:
   Stable for ppc wrt bug #517344

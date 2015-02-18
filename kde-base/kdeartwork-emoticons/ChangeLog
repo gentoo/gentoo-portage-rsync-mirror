@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-emoticons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/ChangeLog,v 1.302 2015/02/17 11:06:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-emoticons/ChangeLog,v 1.303 2015/02/18 16:26:47 mgorny Exp $
+
+  18 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  -kdeartwork-emoticons-4.12.5.ebuild:
+  Remove KDE SC 4.12
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   kdeartwork-emoticons-4.14.3.ebuild:
