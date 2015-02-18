@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.2.2.ebuild,v 1.1 2014/10/14 19:01:57 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.2.2.ebuild,v 1.2 2015/02/18 15:06:08 creffett Exp $
 
 # TODO: waf-utils.eclass ?
 
@@ -15,26 +15,26 @@ SRC_URI="mirror://sourceforge/gnomesword/${P}.tar.gz"
 LICENSE="GPL-2 FDL-1.1 LGPL-2 MIT MPL-1.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="dbus debug webkit"
+IUSE="dbus debug"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	>=app-text/sword-1.7.3
-	>=dev-libs/glib-2
-	dev-libs/libxml2
-	gnome-base/gconf
+	>=dev-libs/glib-2[${PYTHON_USEDEP}]
+	dev-libs/libxml2[${PYTHON_USEDEP}]
+	gnome-base/gconf[${PYTHON_USEDEP}]
 	gnome-extra/gtkhtml:4.0
 	>=gnome-extra/libgsf-1.14
+	net-libs/webkit-gtk:3
 	x11-libs/gtk+:3
 	dbus? ( dev-libs/dbus-glib )
-	webkit? ( net-libs/webkit-gtk:3 )
 "
 DEPEND="${RDEPEND}
 	app-text/docbook2X
-	app-text/gnome-doc-utils
+	app-text/gnome-doc-utils[${PYTHON_USEDEP}]
 	app-text/rarian
-	dev-libs/libxslt
+	dev-libs/libxslt[${PYTHON_USEDEP}]
 	dev-util/intltool
 	virtual/pkgconfig
 	sys-devel/gettext
@@ -55,9 +55,6 @@ src_configure() {
 	append-cppflags -DNO_SWORD_SET_RENDER_NOTE_NUMBERS=1
 
 	tc-export AR CC CPP CXX RANLIB
-
-	local backend=gtkhtml
-	use webkit && backend=webkit
 
 	CCFLAGS="${CFLAGS}" \
 	LINKFLAGS="${LDFLAGS}" \

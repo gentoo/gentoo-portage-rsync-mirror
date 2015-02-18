@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.6.0_rc3.ebuild,v 1.1 2015/02/18 13:26:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.6.0_rc3.ebuild,v 1.3 2015/02/18 15:11:21 voyageur Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.6.0_}/${P/_}.src.tar.xz
 LICENSE="UoI-NCSA"
 SLOT="0/3.5"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="clang debug doc go gold libedit +libffi multitarget ncurses ocaml python
+IUSE="clang debug doc gold libedit +libffi multitarget ncurses ocaml python
 	+static-analyzer test xml video_cards_radeon
 	kernel_Darwin kernel_FreeBSD"
 
@@ -34,7 +34,6 @@ COMMON_DEPEND="
 		)
 		xml? ( dev-libs/libxml2:2= )
 	)
-	go? ( >=dev-lang/go-1.2 )
 	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
 	libedit? ( dev-libs/libedit:0=[${MULTILIB_USEDEP}] )
 	libffi? ( >=virtual/libffi-3.0.13-r1:0=[${MULTILIB_USEDEP}] )
@@ -231,7 +230,6 @@ multilib_src_configure() {
 	if multilib_is_native_abi; then
 		use gold && conf_flags+=( --with-binutils-include="${EPREFIX}"/usr/include/ )
 		# extra commas don't hurt
-		use go && bindings+=',go'
 		use ocaml && bindings+=',ocaml'
 	fi
 
@@ -393,9 +391,9 @@ multilib_src_install() {
 			dohtml -r "${S}"/docs/_build/html/
 		else
 			if ! use clang; then
-				rm "${WORKDIR}"/${PN}-3.5.0-manpages/clang.1 || die
+				rm "${WORKDIR}"/${P/_rc*}-manpages/clang.1 || die
 			fi
-			doman "${WORKDIR}"/${PN}-3.5.0-manpages/*.1
+			doman "${WORKDIR}"/${P/_rc*}-manpages/*.1
 		fi
 
 		# Symlink the gold plugin.

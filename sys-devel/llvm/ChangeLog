@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.227 2015/02/18 13:26:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.229 2015/02/18 15:11:21 voyageur Exp $
+
+  18 Feb 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.6.0_rc3.ebuild:
+  Remove forgotten patch line
+
+  18 Feb 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.6.0_rc3.ebuild,
+  metadata.xml:
+  go bindings do not integrate with autoconf build system, disable for now
 
 *llvm-3.6.0_rc3 (18 Feb 2015)
 

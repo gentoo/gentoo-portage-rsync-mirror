@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/pyGPG-0.1.ebuild,v 1.4 2015/02/18 13:36:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/pyGPG-0.1.ebuild,v 1.5 2015/02/18 15:17:56 kumba Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~amd64 ~arm ~hppa ~s390 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~s390 ~x86"
 
 DEPEND=""
 RDEPEND="${DEPEND}
