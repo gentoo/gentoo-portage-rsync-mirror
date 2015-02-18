@@ -3119,7 +3119,6 @@ kde-base/kopete:highlight - Allows you to specify highlights on specific events.
 kde-base/kopete:history - Enables saving chat history.
 kde-base/kopete:latex - Embed latex formatted text into messages.
 kde-base/kopete:meanwhile - Enable the Sametime protocol handler.
-kde-base/kopete:msn - Enable "Windows live messenger" protocol support.
 kde-base/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
 kde-base/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
 kde-base/kopete:pipes - Send messages to external pipe.

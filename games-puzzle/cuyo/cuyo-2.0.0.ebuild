@@ -1,16 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-2.1.2.ebuild,v 1.1 2015/02/18 22:11:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-2.0.0.ebuild,v 1.1 2015/02/18 22:31:39 mr_bones_ Exp $
 
 EAPI=5
-inherit autotools eutils gnome2-utils versionator games
+inherit autotools eutils gnome2-utils games
 
-MY_P=${PN}-$(get_version_component_range 1).~-$(get_version_component_range 2-3)
 DESCRIPTION="highly addictive and remotely related to tetris"
 HOMEPAGE="http://www.karimmi.de/cuyo/"
-SRC_URI="http://savannah.nongnu.org/download/cuyo/${MY_P}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/cuyo/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+music"
@@ -24,15 +23,8 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-S=${WORKDIR}/${MY_P}
-
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-gentoo.patch
-	sed -i \
-		-e '/^[[:space:]]*$/d' \
-		icons/cuyo.desktop || die
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 	eautoreconf
 }
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.17 2014/05/15 16:53:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.18 2015/02/18 22:57:46 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="A falling block game similar to Blockout"
@@ -20,14 +20,14 @@ DEPEND="virtual/opengl
 	media-libs/libsdl[sound,opengl,video]
 	media-libs/sdl-mixer[mod]
 	media-libs/sdl-image[png]"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${P/s/S}
 
 src_prepare() {
 	sed -i \
 		-e 's:DATA_DIR:"'${GAMES_DATADIR}'\/'${PN/s/S}\/'":g' \
-		game/main.cpp \
-		|| die "sed main.cpp failed"
+		game/main.cpp || die
 
 	sed -i \
 		-e 's:png12:png:g' \
@@ -45,14 +45,11 @@ src_prepare() {
 }
 
 src_configure() {
-	egamesconf \
-		--disable-dependency-tracking \
-		--disable-optimize
+	egamesconf --disable-optimize
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	DOCS="TODO.txt" default
 	rm -f "${D}/${GAMES_BINDIR}"/Packer
-	dodoc TODO.txt
 	prepgamesdirs
 }

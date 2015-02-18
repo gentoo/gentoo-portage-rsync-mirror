@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/shaaft
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.15 2014/05/15 16:53:42 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.16 2015/02/18 22:57:46 mr_bones_ Exp $
+
+  18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> shaaft-0.5.0.ebuild:
+  EAPI=5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> shaaft-0.5.0.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to
