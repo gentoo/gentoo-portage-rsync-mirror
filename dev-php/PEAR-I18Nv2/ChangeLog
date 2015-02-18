@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-I18Nv2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18Nv2/ChangeLog,v 1.24 2014/08/10 20:50:36 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-I18Nv2/ChangeLog,v 1.25 2015/02/18 02:29:51 grknight Exp $
+
+*PEAR-I18Nv2-0.11.4-r2 (18 Feb 2015)
+
+  18 Feb 2015; Brian Evans <grknight@gentoo.org> +PEAR-I18Nv2-0.11.4-r2.ebuild:
+  EAPI revbump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   PEAR-I18Nv2-0.11.4-r1.ebuild:

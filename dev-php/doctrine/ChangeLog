@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/doctrine
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/doctrine/ChangeLog,v 1.4 2014/10/30 04:27:21 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/doctrine/ChangeLog,v 1.5 2015/02/18 02:11:25 grknight Exp $
+
+*doctrine-2.4.6 (18 Feb 2015)
+
+  18 Feb 2015; Brian Evans <grknight@gentoo.org> +doctrine-2.4.6.ebuild,
+  doctrine-1.2.5.ebuild:
+  Add new slot for dev-php/doctrine and fix repoman warnings
 
 *doctrine-1.2.5 (30 Oct 2014)
 
