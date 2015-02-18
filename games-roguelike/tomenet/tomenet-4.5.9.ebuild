@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-4.5.5.ebuild,v 1.5 2015/02/18 09:13:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/tomenet-4.5.9.ebuild,v 1.1 2015/02/18 09:13:13 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils toolchain-funcs games
 
 DESCRIPTION="A MMORPG based on the works of J.R.R. Tolkien"
-HOMEPAGE="http://www.tomenet.net/"
-SRC_URI="http://www.tomenet.net/downloads/${P}.tar.bz2"
+HOMEPAGE="http://www.tomenet.eu/"
+SRC_URI="http://www.tomenet.eu/downloads/${P}.tar.bz2"
 
 LICENSE="Moria"
 SLOT="0"

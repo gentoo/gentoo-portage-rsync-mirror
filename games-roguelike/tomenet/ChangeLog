@@ -1,6 +1,13 @@
 # ChangeLog for games-roguelike/tomenet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.22 2014/10/27 16:19:22 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.23 2015/02/18 09:13:13 mr_bones_ Exp $
+
+*tomenet-4.5.9 (18 Feb 2015)
+
+  18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/tomenet-4.5.9-makefile.patch, +tomenet-4.5.9.ebuild,
+  tomenet-4.5.5.ebuild:
+  version bump
 
   27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> tomenet-4.5.5.ebuild:
   tidy
