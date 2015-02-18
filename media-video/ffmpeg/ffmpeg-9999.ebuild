@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.184 2015/02/18 14:28:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.185 2015/02/18 14:36:26 aballier Exp $
 
 EAPI="5"
 
@@ -147,11 +147,8 @@ CPU_FEATURES_MAP="
 	amd64:X86
 "
 
-FFTOOLS="aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
-
-for i in ${FFTOOLS}; do
-	IUSE="${IUSE} +fftools_$i"
-done
+FFTOOLS=( aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher )
+IUSE="${IUSE} ${FFTOOLS[@]/#/+fftools_}"
 
 RDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
@@ -419,7 +416,7 @@ multilib_src_compile() {
 	emake V=1
 
 	if multilib_is_native_abi; then
-		for i in ${FFTOOLS} ; do
+		for i in "${FFTOOLS[@]}" ; do
 			if use fftools_${i} ; then
 				emake V=1 tools/${i}
 			fi
@@ -431,7 +428,7 @@ multilib_src_install() {
 	emake V=1 DESTDIR="${D}" install install-man
 
 	if multilib_is_native_abi; then
-		for i in ${FFTOOLS} ; do
+		for i in "${FFTOOLS[@]}" ; do
 			if use fftools_${i} ; then
 				dobin tools/${i}
 			fi
