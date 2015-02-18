@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.95 2015/02/17 19:53:46 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.96 2015/02/18 03:35:21 perfinion Exp $
+
+  18 Feb 2015; Jason Zaman <perfinion@gentoo.org> setools-3.3.8-r7.ebuild:
+  re-add keywords to -r7
 
 *setools-3.3.8-r7 (17 Feb 2015)
 
