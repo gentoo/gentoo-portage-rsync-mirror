@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.227 2015/02/08 21:06:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.228 2015/02/18 12:27:58 pacho Exp $
+
+  18 Feb 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml,
+  networkmanager-1.0.0.ebuild:
+  Don't install empty /var/run (#539400 by Jan Vesely)
 
   08 Feb 2015; Markus Meier <maekke@gentoo.org> networkmanager-1.0.0.ebuild:
   arm stable, bug #536694

@@ -6,4 +6,4 @@ HOMEPAGE=http://dev.gentoo.org/~blueness/install-xattr/
 LICENSE=GPL-3
 SLOT=0
 _eclasses_=git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=1e97d530d9fc0b414f860a10ad8b5f11
+_md5_=06552e13476690b80e5f256cf0f55cce

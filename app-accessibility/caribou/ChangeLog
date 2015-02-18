@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/caribou
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.36 2014/12/19 13:33:11 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.37 2015/02/18 12:19:28 pacho Exp $
+
+*caribou-0.4.17 (18 Feb 2015)
+
+  18 Feb 2015; Pacho Ramos <pacho@gentoo.org> +caribou-0.4.17.ebuild,
+  -caribou-0.4.13.ebuild, -caribou-0.4.15.ebuild:
+  Version bump, drop old
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> caribou-0.4.16.ebuild:
   amd64 stable, bug 529964

@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.140 2015/01/02 12:08:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.141 2015/02/18 12:24:41 pacho Exp $
+
+*gobject-introspection-1.42.0-r1 (18 Feb 2015)
+
+  18 Feb 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gobject-introspection-1.42.0-cpp-flags.patch,
+  +gobject-introspection-1.42.0-r1.ebuild, -gobject-introspection-1.38.0.ebuild,
+  -gobject-introspection-1.40.0-r1.ebuild, -gobject-introspection-1.42.0.ebuild:
+  Scanner: don't pass certain debug level flags to cpp (from 'master'), drop old
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org>
   gobject-introspection-1.40.0-r2.ebuild:

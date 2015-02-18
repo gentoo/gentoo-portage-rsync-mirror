@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-9999.ebuild,v 1.5 2014/10/13 02:29:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-9999.ebuild,v 1.6 2015/02/18 12:26:22 blueness Exp $
 
 EAPI=5
 DESCRIPTION="Wrapper to coreutil's install to preserve Filesystem Extended Attributes"
@@ -27,14 +27,14 @@ src_prepare() {
 
 src_compile() {
 	if [[ ${PV} == "9999" ]] ; then
-		cd "${WORKDIR}/${P}/misc/${PN}"
+		cd "${WORKDIR}/${P}/misc/${PN}" || die
 	fi
 	default
 }
 
 src_install() {
 	if [[ ${PV} == "9999" ]] ; then
-		cd "${WORKDIR}/${P}/misc/${PN}"
+		cd "${WORKDIR}/${P}/misc/${PN}" || die
 	fi
 	default
 }
