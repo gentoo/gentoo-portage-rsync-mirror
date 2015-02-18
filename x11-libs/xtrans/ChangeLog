@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xtrans
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.116 2014/10/23 13:48:38 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xtrans/ChangeLog,v 1.117 2015/02/18 15:58:25 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xtrans-1.3.5.ebuild:
+  Stable for amd64, wrt bug #530652
 
 *xtrans-1.3.5 (23 Oct 2014)
 

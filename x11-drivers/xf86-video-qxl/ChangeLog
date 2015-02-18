@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-qxl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.26 2014/11/04 16:31:32 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.27 2015/02/18 15:57:29 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xf86-video-qxl-0.1.3.ebuild:
+  Stable for amd64, wrt bug #530652
 
 *xf86-video-qxl-0.1.3 (04 Nov 2014)
 

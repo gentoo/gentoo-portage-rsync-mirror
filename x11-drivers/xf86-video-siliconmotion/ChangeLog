@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-siliconmotion
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-siliconmotion/ChangeLog,v 1.66 2014/05/27 12:41:33 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-siliconmotion/ChangeLog,v 1.67 2015/02/18 15:57:33 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-siliconmotion-1.7.7-r1.ebuild:
+  Stable for amd64, wrt bug #530652
 
 *xf86-video-siliconmotion-1.7.7-r1 (27 May 2014)
 

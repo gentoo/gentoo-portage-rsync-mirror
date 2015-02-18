@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-image
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.23 2014/10/23 19:50:01 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.24 2015/02/18 15:58:17 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xcb-util-image-0.4.0.ebuild:
+  Stable for amd64, wrt bug #530652
 
   23 Oct 2014; Michał Górny <mgorny@gentoo.org> xcb-util-image-0.4.0.ebuild:
   Update dependencies.

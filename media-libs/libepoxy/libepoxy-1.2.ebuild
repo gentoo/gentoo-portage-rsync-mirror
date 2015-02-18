@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/libepoxy-1.2.ebuild,v 1.5 2014/07/24 10:24:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/libepoxy-1.2.ebuild,v 1.6 2015/02/18 15:56:06 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ if [[ ${PV} = 9999* ]]; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~x86"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~x86"
 	SRC_URI="https://github.com/anholt/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 fi
 

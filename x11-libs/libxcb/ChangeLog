@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.148 2014/12/30 00:29:26 remi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.149 2015/02/18 15:57:54 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libxcb-1.11-r1.ebuild:
+  Stable for amd64, wrt bug #530652
 
 *libxcb-1.11-r1 (30 Dec 2014)
 

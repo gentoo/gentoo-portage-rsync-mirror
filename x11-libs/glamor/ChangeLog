@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/glamor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.38 2014/11/15 06:53:45 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.39 2015/02/18 15:57:38 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> glamor-0.6.0-r1.ebuild:
+  Stable for amd64, wrt bug #530652
 
   15 Nov 2014; Mike Frysinger <vapier@gentoo.org> glamor-0.6.0-r1.ebuild,
   glamor-0.6.0.ebuild:

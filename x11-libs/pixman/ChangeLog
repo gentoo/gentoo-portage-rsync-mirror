@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.189 2015/01/28 22:21:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.190 2015/02/18 15:58:10 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pixman-0.32.6.ebuild:
+  Stable for amd64, wrt bug #530652
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> pixman-0.32.4.ebuild,
   pixman-0.32.6.ebuild:

@@ -1,5 +1,8 @@
 # ChangeLog for x11-misc/util-macros
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.142 2014/06/15 00:46:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.143 2015/02/18 15:58:29 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> util-macros-1.19.0.ebuild:
+  Stable for amd64, wrt bug #530652
 
   15 Jun 2014; Mike Frysinger <vapier@gentoo.org> util-macros-1.18.0.ebuild,
   util-macros-1.19.0.ebuild:

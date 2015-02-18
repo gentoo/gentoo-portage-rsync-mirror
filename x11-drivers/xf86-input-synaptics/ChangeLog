@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.109 2015/02/04 17:22:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.110 2015/02/18 15:57:09 ago Exp $
+
+  18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  xf86-input-synaptics-1.8.1.ebuild:
+  Stable for amd64, wrt bug #530652
 
 *xf86-input-synaptics-1.7.8 (04 Feb 2015)
 
