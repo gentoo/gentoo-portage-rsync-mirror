@@ -1,6 +1,10 @@
 # ChangeLog for games-server/crossfire-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.32 2015/02/19 03:17:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.33 2015/02/19 03:56:18 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  crossfire-server-1.71.0.ebuild:
+  no need for static plug-ins (bug #457514)
 
 *crossfire-server-1.71.0 (19 Feb 2015)
 

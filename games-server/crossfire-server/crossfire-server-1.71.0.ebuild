@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.71.0.ebuild,v 1.1 2015/02/19 03:17:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.71.0.ebuild,v 1.2 2015/02/19 03:56:18 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -30,6 +30,10 @@ src_prepare() {
 	ln -s "${WORKDIR}/arch" "${S}/lib" || die
 }
 
+src_configure() {
+	egamesconf --disable-static
+}
+
 src_compile() {
 	# work around the collect.pl locking
 	emake -j1 -C lib
@@ -41,5 +45,6 @@ src_install() {
 	keepdir "${GAMES_STATEDIR}"/crossfire/{account,datafiles,maps,players,template-maps,unique-items}
 	insinto "${GAMES_DATADIR}/crossfire"
 	doins -r "${WORKDIR}/maps"
+	prune_libtool_files --modules
 	prepgamesdirs
 }
