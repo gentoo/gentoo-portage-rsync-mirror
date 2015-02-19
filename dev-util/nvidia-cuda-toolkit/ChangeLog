@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.101 2015/02/15 06:50:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.102 2015/02/19 07:22:26 jlec Exp $
+
+*nvidia-cuda-toolkit-6.5.19-r1 (19 Feb 2015)
+
+  19 Feb 2015; Justin Lecher <jlec@gentoo.org>
+  +nvidia-cuda-toolkit-6.5.19-r1.ebuild:
+  Create convinience symlink lib32 -> lib
 
   15 Feb 2015; Mike Frysinger <vapier@gentoo.org>
   nvidia-cuda-toolkit-5.5.22.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.63 2014/11/11 10:46:47 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.64 2015/02/19 07:22:22 graaff Exp $
+
+  19 Feb 2015; Hans de Graaff <graaff@gentoo.org> rdtool-0.6.38-r1.ebuild:
+  Add ruby22.
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> rdtool-0.6.38-r1.ebuild,
   rdtool-0.6.38.ebuild:

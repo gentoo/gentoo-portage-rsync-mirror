@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Kivy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/ChangeLog,v 1.5 2015/01/01 21:23:06 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/ChangeLog,v 1.6 2015/02/19 07:30:03 slis Exp $
+
+  19 Feb 2015; Sławek Lis <slis@gentoo.org> +files/cython-0.22.patch,
+  Kivy-1.8.0.ebuild:
+  Attempt to fix problem with cython-0.22 (#540402)
 
   01 Jan 2015; Sławek Lis <slis@gentoo.org> +files/cython-fixes.patch,
   Kivy-1.8.0.ebuild:

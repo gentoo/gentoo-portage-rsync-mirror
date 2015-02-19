@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.9 2015/02/19 01:06:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-1.0.ebuild,v 1.10 2015/02/19 07:08:21 patrick Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs games
@@ -34,7 +34,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ldflags.patch \
 		"${FILESDIR}"/${P}-zlib.patch \
 		"${FILESDIR}"/${P}-underlink.patch \
-		"${FILESDIR}"/${P}-system-lmpeg2.patch \
+		"${FILESDIR}"/${P}-system-lmpeg2.patch
 
 	sed -i "/m_appdir =/s:\.:${GAMES_DATADIR}/${PN}:" \
 		io/homedir.cpp || die

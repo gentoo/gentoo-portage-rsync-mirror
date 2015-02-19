@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/patron
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.33 2014/08/15 14:03:18 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.34 2015/02/19 07:19:01 graaff Exp $
+
+  19 Feb 2015; Hans de Graaff <graaff@gentoo.org> patron-0.4.18-r2.ebuild:
+  Add ruby22.
 
   15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> patron-0.4.18-r1.ebuild,
   patron-0.4.18-r2.ebuild:

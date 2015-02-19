@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/Kivy-1.8.0.ebuild,v 1.5 2015/01/01 21:23:06 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/Kivy-1.8.0.ebuild,v 1.6 2015/02/19 07:30:03 slis Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ IUSE="cairo camera doc examples garden gstreamer spell"
 
 DEPEND="dev-python/cython
 	garden? ( dev-python/kivy-garden )
-	gstreamer? ( dev-python/gst-python )
+	gstreamer? ( dev-python/gst-python:1.0 )
 	cairo? ( dev-python/pycairo )
 	spell? ( dev-python/pyenchant )
 	dev-python/pygame
@@ -32,6 +32,9 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	sed -e '/data_files=/d' -i "${S}/setup.py"
 	epatch "${FILESDIR}/cython-fixes.patch"
+	if has_version '>=dev-python/cython-0.22' ; then
+	    epatch "${FILESDIR}/cython-0.22.patch"
+	fi
 }
 
 src_install() {

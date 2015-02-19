@@ -9,4 +9,4 @@ RDEPEND=media-libs/libogg media-libs/libvorbis sys-libs/zlib media-libs/libsdl[j
 SLOT=0
 SRC_URI=http://www.daphne-emu.com/download/daphne-1.0-src.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=5e9284fc4279a266d2c76585285e7bfa
+_md5_=3db46a42ab78284229eb8a58aedcb56d
