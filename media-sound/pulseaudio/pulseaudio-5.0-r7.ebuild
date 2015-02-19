@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r7.ebuild,v 1.4 2015/02/08 21:03:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.0-r7.ebuild,v 1.5 2015/02/19 18:33:55 mgorny Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic gnome2-utils linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -24,7 +24,8 @@ gnome gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
 system-wide tcpd test +udev +webrtc-aec +X xen zeroconf"
 
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
-REQUIRED_USE="bluetooth? ( dbus )"
+REQUIRED_USE="bluetooth? ( dbus )
+	udev? ( || ( alsa oss ) )"
 
 # libpcre needed in some cases, bug #472228
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.77 2015/02/19 17:26:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.78 2015/02/19 18:39:07 radhermit Exp $
+
+  19 Feb 2015; Tim Harder <radhermit@gentoo.org> snakeoil-0.5.3.ebuild:
+  Bump to EAPI 5 and drop py26 and py32 support.
 
   19 Feb 2015; Tim Harder <radhermit@gentoo.org> snakeoil-9999.ebuild:
   Bump to EAPI 5.

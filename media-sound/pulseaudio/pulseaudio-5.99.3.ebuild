@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.99.3.ebuild,v 1.1 2015/01/22 20:34:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-5.99.3.ebuild,v 1.2 2015/02/19 18:33:55 mgorny Exp $
 
 EAPI="5"
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -28,7 +28,8 @@ IUSE="+alsa +alsa-plugin +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
 REQUIRED_USE="bluetooth? ( dbus )
 		ofono-headset? ( bluetooth )
-		native-headset? ( bluetooth )"
+		native-headset? ( bluetooth )
+		udev? ( || ( alsa oss ) )"
 
 # libpcre needed in some cases, bug #472228
 RDEPEND="

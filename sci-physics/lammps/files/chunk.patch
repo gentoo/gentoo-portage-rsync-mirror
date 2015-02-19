@@ -1,0 +1,21 @@
+--- lammps-13Feb15/src/fix_ave_chunk.cpp	2015-02-13 09:53:48.000000000 -0700
++++ lammps-13Feb15-new/src/fix_ave_chunk.cpp	2015-02-19 09:16:22.000000000 -0700
+@@ -11,6 +11,9 @@
+    See the README file in the top-level LAMMPS directory.
+ ------------------------------------------------------------------------- */
+ 
++#include <unistd.h>
++#include <sys/types.h>
++
+ #include "string.h"
+ #include "fix_ave_chunk.h"
+ #include "atom.h"
+@@ -930,7 +933,7 @@
+ 
+     fflush(fp);
+     if (overwrite) {
+-      long fileend = ftell(fp);
++      off_t fileend = ftell(fp);
+       ftruncate(fileno(fp),fileend);
+     }
+   }
