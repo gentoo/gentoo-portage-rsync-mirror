@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/nvi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.96 2014/01/26 12:20:13 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.97 2015/02/19 02:45:24 neurogeek Exp $
+
+*nvi-1.81.6-r5 (18 Feb 2015)
+
+  18 Feb 2015; Jesus Rivero <neurogeek@gentoo.org> +nvi-1.81.6-r5.ebuild,
+  +files/nvi-1.81.6-strlen-macro-renaming.patch:
+  Added patch to avoid collision with perl macros. closes bug #523820. Thanks
+  to Karl Hakimian for the patch.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nvi-1.81.6-r4.ebuild:
   Stable for sparc, wrt bug #496600
