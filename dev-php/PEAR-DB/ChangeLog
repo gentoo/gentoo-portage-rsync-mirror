@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-DB
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.76 2014/08/10 20:45:56 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.77 2015/02/19 17:50:14 grknight Exp $
+
+*PEAR-DB-1.8.2 (19 Feb 2015)
+
+  19 Feb 2015; Brian Evans <grknight@gentoo.org> +PEAR-DB-1.8.2.ebuild:
+  Version bump
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> PEAR-DB-1.7.14.ebuild:
   QA: drop trailing '.' from DESCRIPTION
