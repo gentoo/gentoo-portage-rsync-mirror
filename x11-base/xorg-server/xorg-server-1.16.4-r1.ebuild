@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.16.4-r1.ebuild,v 1.1 2015/02/11 10:20:17 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.16.4-r1.ebuild,v 1.2 2015/02/19 15:50:39 chithanh Exp $
 
 EAPI=5
 
@@ -212,20 +212,6 @@ src_install() {
 pkg_postinst() {
 	# sets up libGL and DRI2 symlinks if needed (ie, on a fresh install)
 	eselect opengl set xorg-x11 --use-old
-
-	if [[ ${PV} != 9999 && $(get_version_component_range 2 ${REPLACING_VERSIONS}) != $(get_version_component_range 2 ${PV}) ]]; then
-		elog "You should consider reading upgrade guide for this release:"
-		elog "  http://www.gentoo.org/proj/en/desktop/x/x11/xorg-server-$(get_version_component_range 1-2)-upgrade-guide.xml"
-		echo
-		ewarn "You must rebuild all drivers if upgrading from <xorg-server-$(get_version_component_range 1-2)"
-		ewarn "because the ABI changed. If you cannot start X because"
-		ewarn "of module version mismatch errors, this is your problem."
-
-		echo
-		ewarn "You can rebuild all installed packages in the x11-drivers"
-		ewarn "category using this command:"
-		ewarn "	emerge @x11-module-rebuild"
-	fi
 }
 
 pkg_postrm() {
