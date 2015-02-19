@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.4.2.ebuild,v 1.3 2014/12/26 13:01:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/seqan-1.4.2.ebuild,v 1.4 2015/02/19 22:03:53 jlec Exp $
 
 EAPI=5
 
@@ -23,8 +23,6 @@ RDEPEND="${PYTHON_DEPS}
 	sci-biology/samtools"
 DEPEND="${RDEPEND}"
 
-#S="${WORKDIR}"/${P}/cmake
-
 PATCHES=(
 	"${FILESDIR}"/${P}-shared.patch
 	"${FILESDIR}"/${P}-include.patch
@@ -32,9 +30,11 @@ PATCHES=(
 
 pkg_pretend() {
 	[[ ${MERGE_TYPE} = "binary" ]] && return 0
-	if ! echo "#include <smmintrin.h>" | gcc -E - 2>&1 > /dev/null; then
-		ewarn "Need at least SSE4.1 support"
-		die "Missing SSE4.1 support"
+	if use amd64; then
+		if ! echo "#include <smmintrin.h>" | gcc -E - 2>&1 > /dev/null; then
+			ewarn "Need at least SSE4.1 support"
+			die "Missing SSE4.1 support"
+		fi
 	fi
 }
 
@@ -51,7 +51,7 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
-		-DZLIB_INCLUDE_DIRS="${EPREFIX}"/usr/include
+		-DBoost_NO_BOOST_CMAKE=ON
 	)
 	cmake-utils_src_configure
 }
