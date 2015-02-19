@@ -4539,12 +4539,15 @@ media-video/vdr:graphtft - support for grapftft plugin up from vdr-graphtft-0.1.
 media-video/vdr:html - Install HTML documentation
 media-video/vdr:jumpingseconds - skip seconds in played records
 media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
+media-video/vdr:kbd - enable keyboard support as remote device
 media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)
 media-video/vdr:menuorg - Enables support for the menuorg-plugin
+media-video/vdr:menuselection - adds support for menu hotkeys of double digits
 media-video/vdr:naludump - Removes NALU fill data from h.264-Streams of TS files
 media-video/vdr:permashift - permanent timeshift by recording live TV on hard disk, need plugin vdr-permashift
 media-video/vdr:permashift_v1 - permanent timeshift by recording live TV on RAM, need plugin >=vdr-permashift-1
 media-video/vdr:pinplugin - Support for pin plugin
+media-video/vdr:resumereset - rreset resume of EOF
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:setup - Enable support for the plugin vdr-setup
 media-video/vdr:ttxtsubs - support for ttxtsubs plugin

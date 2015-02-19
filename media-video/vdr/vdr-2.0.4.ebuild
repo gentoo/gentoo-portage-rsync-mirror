@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.4.ebuild,v 1.3 2015/01/04 01:19:02 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.4.ebuild,v 1.4 2015/02/19 19:38:49 hd_brummy Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ LICENSE="GPL-2"
 REQUIRED_USE="setup? ( !menuorg )
 	menuorg? ( !setup )"
 
-COMMON_DEPEND="virtual/jpeg
+COMMON_DEPEND="virtual/jpeg:*
 	sys-libs/libcap
 	>=media-libs/fontconfig-2.4.2
 	>=media-libs/freetype-2

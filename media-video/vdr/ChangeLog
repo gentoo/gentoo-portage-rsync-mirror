@@ -1,6 +1,16 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.188 2015/02/03 20:28:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.190 2015/02/19 19:47:44 hd_brummy Exp $
+
+  19 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-2.2.0.ebuild:
+  fixed previous_less
+
+*vdr-2.2.0 (19 Feb 2015)
+
+  19 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-2.0.4.ebuild,
+  vdr-2.0.5.ebuild, vdr-2.0.6-r1.ebuild, vdr-2.0.6-r2.ebuild, vdr-2.0.7.ebuild,
+  +vdr-2.2.0.ebuild, +files/vdr-2.2.0_gentoo.patch, metadata.xml:
+  BUMP, 15 YEARS ANNIVERSARY EDITON; minor fixes on virtual/jpeg
 
   03 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-2.0.6-r1.ebuild:
   stable amd64 x86

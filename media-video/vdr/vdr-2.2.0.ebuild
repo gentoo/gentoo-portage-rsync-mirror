@@ -1,42 +1,37 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.6-r1.ebuild,v 1.4 2015/02/19 19:38:49 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.2.0.ebuild,v 1.2 2015/02/19 19:47:44 hd_brummy Exp $
 
 EAPI=5
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 # Switches supported by extensions-patch
-EXT_PATCH_FLAGS="alternatechannel ddepgentry dvlvidprefer graphtft
-	jumpplay jumpingseconds mainmenuhooks menuorg naludump permashift permashift_v1
-	pinplugin rotor ttxtsubs vasarajanauloja wareagleicon yaepg"
+EXT_PATCH_FLAGS="alternatechannel graphtft naludump permashift_v1 pinplugin
+				mainmenuhooks menuorg menuselection resumereset ttxtsubs"
 
 # names of the use-flags
 EXT_PATCH_FLAGS_RENAMED=""
 
 # names ext-patch uses internally, here only used for maintainer checks
-EXT_PATCH_FLAGS_RENAMED_EXT_NAME=""
+EXT_PATCH_FLAGS_RENAMED_EXT_NAME="bidi no_kbd sdnotify"
 
-IUSE="bidi debug html vanilla ${EXT_PATCH_FLAGS} ${EXT_PATCH_FLAGS_RENAMED}"
+IUSE="bidi debug +kbd html systemd vanilla ${EXT_PATCH_FLAGS} ${EXT_PATCH_FLAGS_RENAMED}"
 
 MY_PV="${PV%_p*}"
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 
-EXT_P="extpng-${P}-gentoo-edition-v6"
+EXT_P="extpng-${P}-gentoo-edition-v1"
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
 HOMEPAGE="http://www.tvdr.de/"
 SRC_URI="ftp://ftp.tvdr.de/vdr/${MY_P}.tar.bz2
 	http://dev.gentoo.org/~hd_brummy/distfiles/${EXT_P}.patch.bz2"
 
-KEYWORDS="amd64 ~arm ~ppc x86"
+KEYWORDS="~arm ~amd64 ~ppc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
-
-REQUIRED_USE="
-	permashift? ( !permashift_v1 )
-	permashift_v1? ( !permashift )"
 
 COMMON_DEPEND="virtual/jpeg:*
 	sys-libs/libcap
@@ -49,15 +44,17 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	dev-lang/perl
-	>=media-tv/gentoo-vdr-scripts-2.5_rc1
+	>=media-tv/gentoo-vdr-scripts-2.7
 	media-fonts/corefonts
-	bidi? ( dev-libs/fribidi )"
+	bidi? ( dev-libs/fribidi )
+	systemd? ( sys-apps/systemd )"
 
 CONF_DIR=/etc/vdr
 CAP_FILE=${S}/capabilities.sh
 CAPS="# Capabilities of the vdr-executable for use by startscript etc."
 
 pkg_setup() {
+
 	use debug && append-flags -g
 
 	PLUGIN_LIBDIR="/usr/$(get_libdir)/vdr/plugins"
@@ -105,6 +102,15 @@ lang_po() {
 	LING_PO=$( ls ${S}/po | sed -e "s:.po::g" | cut -d_ -f1 | tr \\\012 ' ' )
 }
 
+src_configure() {
+	# support languages, written from right to left
+	export "BIDI=$(usex bidi 1 0)"
+	# systemd notification support
+	export "SDNOTIFY=$(usex systemd 1 0)"
+	# with/without keyboard
+	export "USE_KBD=$(usex kbd 1 0)"
+}
+
 src_prepare() {
 	# apply maintainace-patches
 	ebegin "Changing paths for gentoo"
@@ -150,13 +156,9 @@ src_prepare() {
 		# PLUGINLIBDIR (plugin Makefile old) = LIBDIR (plugin Makefile new)
 		LIBDIR			= ${PLUGIN_LIBDIR}
 		PCDIR			= /usr/$(get_libdir)/pkgconfig
+
 	EOT
 	eend 0
-
-	# support languages, written from right to left
-	BUILD_PARAMS+=" BIDI=$(usex bidi 1 0)"
-
-	epatch "${FILESDIR}/${PN}-2.0.6_gentoo.patch"
 
 	if ! use vanilla; then
 
@@ -166,14 +168,13 @@ src_prepare() {
 		# This allows us to start even if some plugin does not exist
 		# or is not loadable.
 		enable_patch PLUGINMISSING
-		enable_patch CHANNELBIND
 
 		if [[ -n ${VDR_MAINTAINER_MODE} ]]; then
 			einfo "Doing maintainer checks:"
 
 			# we do not support these patches
 			# (or have them already hard enabled)
-			local IGNORE_PATCHES="pluginmissing  channelbind"
+			local IGNORE_PATCHES="pluginmissing"
 
 			extensions_all_defines > "${T}"/new.IUSE
 			echo $EXT_PATCH_FLAGS $EXT_PATCH_FLAGS_RENAMED_EXT_NAME \
@@ -210,6 +211,14 @@ src_prepare() {
 		eend $? "make depend failed"
 	fi
 
+	epatch "${FILESDIR}/${P}_gentoo.patch"
+
+	# fix some makefile issues
+	sed -e "s:ifndef NO_KBD:ifeq (\$(USE_KBD),1):" \
+		-e "s:ifdef BIDI:ifeq (\$(BIDI),1):" \
+		-e "s:ifdef SDNOTIFY:ifeq (\$(SDNOTIFY),1):" \
+		-i "${S}"/Makefile
+
 	epatch_user
 
 	add_cap CAP_UTF8
@@ -238,22 +247,22 @@ src_prepare() {
 }
 
 src_install() {
-#	# trick makefile not to create a videodir by supplying it with an existing
-#	# directory
-	emake \
+	# trick makefile not to create a videodir by supplying it with an existing
+	# directory
+	einstall \
 	VIDEODIR="/" \
 	DESTDIR="${D}" install || die "emake install failed"
 
 	keepdir "${PLUGIN_LIBDIR}"
 
+	# backup for plugins they don't be able to create this dir
 	keepdir "${CONF_DIR}"/plugins
-	keepdir "${CONF_DIR}"/themes
 
 	if use html; then
 		dohtml *.html
 	fi
 
-	dodoc MANUAL INSTALL README* HISTORY CONTRIBUTORS
+	nonfatal dodoc MANUAL INSTALL README* HISTORY CONTRIBUTORS
 
 	insinto /usr/share/vdr
 	doins "${CAP_FILE}"
@@ -266,7 +275,20 @@ src_install() {
 	chown -R vdr:vdr "${D}/${CONF_DIR}"
 }
 
+pkg_preinstall() {
+
+	has_version "<${CATEGORY}/${PN}-2.2.0"
+	previous_less_than_2_2_0=$
+}
+
 pkg_postinst() {
+
+	if [[ $previous_less_than_2_2_0 = 0 ]] ; then
+		elog "\n\t---- 15 YEARS ANNIVERSARY EDITON ----\n"
+		elog "\tA lot of thanks to Klaus Schmiedinger"
+		elog "\tfor this nice piece of Software...\n"
+	fi
+
 	elog "It is a good idea to run vdrplugin-rebuild now."
 
 	elog "To get nice symbols in OSD we recommend to install"
