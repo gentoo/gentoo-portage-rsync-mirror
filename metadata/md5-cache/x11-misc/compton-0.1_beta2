@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile install setup
-DEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) app-text/asciidoc virtual/pkgconfig x11-proto/xproto drm? ( x11-libs/libdrm )
+DEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) app-text/asciidoc virtual/pkgconfig x11-proto/xproto drm? ( x11-libs/libdrm )
 DESCRIPTION=A compositor for X, and a fork of xcompmgr-dana
 EAPI=5
 HOMEPAGE=http://github.com/chjj/compton
 IUSE=dbus +drm opengl +pcre xinerama python_targets_python3_3 python_targets_python3_4
 KEYWORDS=amd64 x86
 LICENSE=MIT
-RDEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) dev-lang/python-exec:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) x11-apps/xprop x11-apps/xwininfo
+RDEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-libs/libconfig x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender dbus? ( sys-apps/dbus ) opengl? ( virtual/opengl ) pcre? ( dev-libs/libpcre:3 ) xinerama? ( x11-libs/libXinerama ) x11-apps/xprop x11-apps/xwininfo
 REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=https://github.com/chjj/compton/archive/v0.1_beta2.tar.gz -> compton-0.1_beta2.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	236a8d81f730332749bd484d8b53ee91	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	673c1d39012d7917ff62f5c49d13e8a5	python-utils-r1	fc5507804010df241e0d221c6ca37a0a	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5dae5868c212a7700bfaf8e252f87751

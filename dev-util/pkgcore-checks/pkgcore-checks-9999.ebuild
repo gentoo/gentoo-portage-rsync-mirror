@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.6 2014/12/21 00:16:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.7 2015/02/19 17:30:25 radhermit Exp $
 
-EAPI=4
+EAPI=5
 PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 

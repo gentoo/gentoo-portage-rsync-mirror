@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.45 2015/02/12 10:56:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.46 2015/02/19 17:29:32 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -254,6 +254,11 @@ media-libs/sdl-mixer -abi_x86_32
 media-libs/sdl-net -abi_x86_32
 media-libs/sdl-sound -abi_x86_32
 media-libs/sdl-ttf -abi_x86_32
+media-libs/sdl2-gfx -abi_x86_32
+media-libs/sdl2-image -abi_x86_32
+media-libs/sdl2-mixer -abi_x86_32
+media-libs/sdl2-net -abi_x86_32
+media-libs/sdl2-ttf -abi_x86_32
 media-libs/smpeg -abi_x86_32
 media-libs/soxr -abi_x86_32
 media-libs/speex -abi_x86_32

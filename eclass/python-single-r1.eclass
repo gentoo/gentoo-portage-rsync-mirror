@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.31 2015/01/04 22:18:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.32 2015/02/19 17:22:25 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -219,9 +219,9 @@ _python_single_set_globals() {
 	# 3) use whichever python-exec slot installed in EAPI 5. For EAPI 4,
 	# just fix :2 since := deps are not supported.
 	if [[ ${_PYTHON_WANT_PYTHON_EXEC2} == 0 ]]; then
-		PYTHON_DEPS+="dev-lang/python-exec:0[${PYTHON_USEDEP}]"
+		die "python-exec:0 is no longer supported, please fix your ebuild to work with python-exec:2"
 	elif [[ ${EAPI} != 4 ]]; then
-		PYTHON_DEPS+="dev-lang/python-exec:=[${PYTHON_USEDEP}]"
+		PYTHON_DEPS+=">=dev-lang/python-exec-2:=[${PYTHON_USEDEP}]"
 	else
 		PYTHON_DEPS+="dev-lang/python-exec:2[${PYTHON_USEDEP}]"
 	fi

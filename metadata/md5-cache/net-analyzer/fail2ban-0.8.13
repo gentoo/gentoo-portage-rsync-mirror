@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup test unpack
-DEPEND=>=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] virtual/pkgconfig
+DEPEND=>=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] virtual/pkgconfig
 DESCRIPTION=scans log files and bans IPs that show malicious signs
 EAPI=5
 HOMEPAGE=http://www.fail2ban.org/
 IUSE=selinux python_targets_python2_7
 KEYWORDS=amd64 hppa ppc ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=net-misc/whois virtual/mta virtual/logger net-firewall/iptables selinux? ( sec-policy/selinux-fail2ban ) >=dev-lang/python-2.7.5-r2:2.7 dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
+RDEPEND=net-misc/whois virtual/mta virtual/logger net-firewall/iptables selinux? ( sec-policy/selinux-fail2ban ) >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=https://github.com/fail2ban/fail2ban/tarball/0.8.13 -> fail2ban-0.8.13.tar.gz
-_eclasses_=distutils-r1	f810ae4ac7e5c3db4ff72db46e3c40d1	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	ed2ee20dc74a34be60f5b1b500e92a5b	python-utils-r1	7d5f4ad9ba85664d8c5f56041a70f4c3	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=distutils-r1	b541066a590cd16e650ec8aac9cc9bcb	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	d71b7a0c6b4975ff6446fca318c3ac2e	python-utils-r1	fc5507804010df241e0d221c6ca37a0a	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=6df8fe9b588c2d95f5dffb95ca7b07a1

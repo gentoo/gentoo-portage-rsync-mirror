@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.76 2015/02/17 00:03:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.77 2015/02/19 17:26:11 radhermit Exp $
+
+  19 Feb 2015; Tim Harder <radhermit@gentoo.org> snakeoil-9999.ebuild:
+  Bump to EAPI 5.
 
   17 Feb 2015; Tim Harder <radhermit@gentoo.org> snakeoil-9999.ebuild:
   Drop py3.2 support and use https git repo.

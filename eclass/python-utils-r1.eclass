@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.75 2015/01/02 00:15:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.76 2015/02/19 17:22:25 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -635,21 +635,14 @@ python_newexe() {
 	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
 	[[ ${#} -eq 2 ]] || die "Usage: ${FUNCNAME} <path> <new-name>"
 
-	local d=${python_scriptroot:-${DESTTREE}/bin}
-	local wrapd=${d}
+	local wrapd=${python_scriptroot:-${DESTTREE}/bin}
 
 	local f=${1}
-	local barefn=${2}
-	local newfn
+	local newfn=${2}
 
-	if _python_want_python_exec2; then
-		local PYTHON_SCRIPTDIR
-		python_export PYTHON_SCRIPTDIR
-		d=${PYTHON_SCRIPTDIR#${EPREFIX}}
-		newfn=${barefn}
-	else
-		newfn=${barefn}-${EPYTHON}
-	fi
+	local PYTHON_SCRIPTDIR d
+	python_export PYTHON_SCRIPTDIR
+	d=${PYTHON_SCRIPTDIR#${EPREFIX}}
 
 	(
 		dodir "${wrapd}"
@@ -658,7 +651,7 @@ python_newexe() {
 	)
 
 	# install the wrapper
-	_python_ln_rel "${ED%/}"$(_python_get_wrapper_path) \
+	_python_ln_rel "${ED%/}"/usr/lib/python-exec/python-exec2 \
 		"${ED%/}/${wrapd}/${barefn}" || die
 
 	# don't use this at home, just call python_doscript() instead
@@ -1097,40 +1090,6 @@ python_fix_shebang() {
 			fi
 		fi
 	done
-}
-
-# @FUNCTION: _python_want_python_exec2
-# @INTERNAL
-# @DESCRIPTION:
-# Check whether we should be using python-exec:2.
-_python_want_python_exec2() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	# EAPI 4 lacks slot operators, so just fix it on python-exec:2.
-	[[ ${EAPI} == 4 ]] && return 0
-
-	# Check if we cached the result, or someone put an override.
-	if [[ ! ${_PYTHON_WANT_PYTHON_EXEC2+1} ]]; then
-		has_version 'dev-lang/python-exec:2'
-		_PYTHON_WANT_PYTHON_EXEC2=$(( ! ${?} ))
-	fi
-
-	# Non-zero means 'yes', zero means 'no'.
-	[[ ${_PYTHON_WANT_PYTHON_EXEC2} != 0 ]]
-}
-
-# @FUNCTION: _python_get_wrapper_path
-# @INTERNAL
-# @DESCRIPTION:
-# Output path to proper python-exec slot.
-_python_get_wrapper_path() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	if _python_want_python_exec2; then
-		echo /usr/lib/python-exec/python-exec2
-	else
-		echo /usr/bin/python-exec
-	fi
 }
 
 # @FUNCTION: python_export_utf8_locale

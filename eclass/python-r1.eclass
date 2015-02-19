@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.84 2015/01/13 21:35:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.85 2015/02/19 17:22:25 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -208,9 +208,9 @@ _python_set_globals() {
 	# 3) use whichever python-exec slot installed in EAPI 5. For EAPI 4,
 	# just fix :2 since := deps are not supported.
 	if [[ ${_PYTHON_WANT_PYTHON_EXEC2} == 0 ]]; then
-		PYTHON_DEPS+="dev-lang/python-exec:0[${PYTHON_USEDEP}]"
+		die "python-exec:0 is no longer supported, please fix your ebuild to work with python-exec:2"
 	elif [[ ${EAPI} != 4 ]]; then
-		PYTHON_DEPS+="dev-lang/python-exec:=[${PYTHON_USEDEP}]"
+		PYTHON_DEPS+=">=dev-lang/python-exec-2:=[${PYTHON_USEDEP}]"
 	else
 		PYTHON_DEPS+="dev-lang/python-exec:2[${PYTHON_USEDEP}]"
 	fi
@@ -831,26 +831,16 @@ python_replicate_script() {
 	_python_replicate_script() {
 		local _PYTHON_FIX_SHEBANG_QUIET=1
 
-		if _python_want_python_exec2; then
-			local PYTHON_SCRIPTDIR
-			python_export PYTHON_SCRIPTDIR
+		local PYTHON_SCRIPTDIR
+		python_export PYTHON_SCRIPTDIR
 
-			(
-				exeinto "${PYTHON_SCRIPTDIR#${EPREFIX}}"
-				doexe "${files[@]}"
-			)
+		(
+			exeinto "${PYTHON_SCRIPTDIR#${EPREFIX}}"
+			doexe "${files[@]}"
+		)
 
-			python_fix_shebang -q \
-				"${files[@]/*\//${D%/}/${PYTHON_SCRIPTDIR}/}"
-		else
-			local f
-			for f in "${files[@]}"; do
-				cp -p "${f}" "${f}-${EPYTHON}" || die
-			done
-
-			python_fix_shebang -q \
-				"${files[@]/%/-${EPYTHON}}"
-		fi
+		python_fix_shebang -q \
+			"${files[@]/*\//${D%/}/${PYTHON_SCRIPTDIR}/}"
 	}
 
 	local files=( "${@}" )
@@ -859,7 +849,7 @@ python_replicate_script() {
 	# install the wrappers
 	local f
 	for f; do
-		_python_ln_rel "${ED%/}$(_python_get_wrapper_path)" "${f}" || die
+		_python_ln_rel "${ED%/}/usr/lib/python-exec/python-exec2" "${f}" || die
 	done
 }
 

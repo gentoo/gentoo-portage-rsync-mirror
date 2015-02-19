@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgcore-checks
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.56 2014/12/21 00:16:50 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.57 2015/02/19 17:30:25 radhermit Exp $
+
+  19 Feb 2015; Tim Harder <radhermit@gentoo.org> pkgcore-checks-9999.ebuild:
+  Bump to EAPI 5.
 
   21 Dec 2014; Tim Harder <radhermit@gentoo.org> pkgcore-checks-9999.ebuild:
   Don't regen plugins in the pkgcore.plugins namespace.

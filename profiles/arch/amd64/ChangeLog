@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.306 2015/02/18 11:02:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.307 2015/02/19 17:29:32 mgorny Exp $
+
+  19 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.use.stable.mask, package.use.stable.mask:
+  Add abi_x86_32 stable masks for SDL2 packages.
 
   18 Feb 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.stable.mask:
