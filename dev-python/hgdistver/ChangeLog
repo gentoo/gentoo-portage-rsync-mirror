@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/hgdistver
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hgdistver/ChangeLog,v 1.19 2014/12/06 16:43:23 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hgdistver/ChangeLog,v 1.20 2015/02/19 18:30:53 mrueg Exp $
+
+  19 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -hgdistver-0.16-r1.ebuild,
+  -hgdistver-0.16.ebuild, -hgdistver-0.18.ebuild:
+  Remove old.
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> hgdistver-0.22.ebuild:
   Stable for ia64, wrt bug #530472

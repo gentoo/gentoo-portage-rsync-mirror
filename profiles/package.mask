@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16373 2015/02/19 11:53:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16374 2015/02/19 18:27:36 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -168,13 +168,6 @@ games-rpg/morrowind-data
 # No one uses it anymore. You can
 # use dev-perl/Geo-IP instead.
 dev-perl/IP-Country
-
-# Hans de Graaff <graaff@gentoo.org> (19 Jan 2015)
-# virtual/ruby-rdoc is a no-op in that it always pulls in
-# dev-ruby/rdoc, and nothing in the tree depends on it anymore. This
-# also fixes part of bug 421497.
-# Removal in 30 days.
-virtual/ruby-rdoc
 
 # Manuel Rüger <mrueg@gentoo.org> (17 Jan 2015)
 # Unmaintained. Old eclasses, EAPIs and various bugs.

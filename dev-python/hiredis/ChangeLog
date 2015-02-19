@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/hiredis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hiredis/ChangeLog,v 1.6 2014/11/24 21:19:10 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hiredis/ChangeLog,v 1.7 2015/02/19 18:20:35 mrueg Exp $
+
+  19 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -hiredis-0.1.1-r1.ebuild,
+  -hiredis-0.1.1.ebuild:
+  Remove old.
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> hiredis-0.1.1-r2.ebuild:
   Support python 3.4
