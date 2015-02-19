@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kglobalaccel/kglobalaccel-5.7.0.ebuild,v 1.2 2015/02/17 12:08:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kglobalaccel/kglobalaccel-5.7.0.ebuild,v 1.3 2015/02/19 08:03:16 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ RDEPEND="
 	$(add_frameworks_dep kcrash)
 	$(add_frameworks_dep kdbusaddons)
 	$(add_frameworks_dep ki18n)
-	$(add_frameworks_dep kwindowsystem)
+	$(add_frameworks_dep kwindowsystem X)
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
