@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/varnish
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.82 2014/10/17 11:30:40 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.83 2015/02/19 12:16:33 blueness Exp $
+
+*varnish-4.0.3 (19 Feb 2015)
+
+  19 Feb 2015; Anthony G. Basile <blueness@gentoo.org> +varnish-4.0.3.ebuild:
+  Version bump
 
 *varnish-3.0.6 (17 Oct 2014)
 
