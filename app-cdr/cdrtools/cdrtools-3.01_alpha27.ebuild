@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha27.ebuild,v 1.2 2015/02/18 15:33:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha27.ebuild,v 1.3 2015/02/19 03:08:59 floppym Exp $
 
 EAPI=5
 
@@ -15,10 +15,10 @@ SRC_URI="mirror://sourceforge/${PN}/$([[ -z ${PV/*_alpha*} ]] && echo 'alpha')/$
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
-IUSE="acl nls unicode"
+IUSE="acl caps nls unicode"
 
 RDEPEND="acl? ( virtual/acl )
-	filecaps? ( sys-libs/libcap )
+	caps? ( sys-libs/libcap )
 	nls? ( virtual/libintl )
 	!app-cdr/cdrkit"
 DEPEND="${RDEPEND}
@@ -129,6 +129,9 @@ ac_cv_sizeof() {
 }
 
 src_configure() {
+	use acl || export ac_cv_header_sys_acl_h="no"
+	use caps || export ac_cv_lib_cap_cap_get_proc="no"
+
 	# skip obsolete configure script
 	if tc-is-cross-compiler ; then
 		# Cache known values for targets. #486680
@@ -216,14 +219,6 @@ src_compile() {
 			ewarn "Your compiler does not support the options required to build"
 			ewarn "cdrtools with unicode in USE. unicode flag will be ignored."
 		fi
-	fi
-
-	if ! use filecaps; then
-		CFLAGS="${CFLAGS} -DNO_LINUX_CAPS"
-	fi
-
-	if ! use acl; then
-		CFLAGS="${CFLAGS} -DNO_ACL"
 	fi
 
 	# If not built with -j1, "sometimes" cdda2wav will not be built.
