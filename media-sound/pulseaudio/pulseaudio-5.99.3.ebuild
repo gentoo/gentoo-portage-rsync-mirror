@@ -28,7 +28,8 @@ IUSE="+alsa +alsa-plugin +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
 REQUIRED_USE="bluetooth? ( dbus )
 		ofono-headset? ( bluetooth )
-		native-headset? ( bluetooth )"
+		native-headset? ( bluetooth )
+		udev? ( || ( alsa oss ) )"
 
 # libpcre needed in some cases, bug #472228
 RDEPEND="
