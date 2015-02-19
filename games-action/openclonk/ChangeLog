@@ -1,6 +1,12 @@
 # ChangeLog for games-action/openclonk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.23 2015/02/10 10:06:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.24 2015/02/19 01:43:16 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/openclonk-5.3.3-jpeg9.patch,
+  -files/openclonk-5.3.3-xrandr-primary-output.patch,
+  -openclonk-5.3.3-r1.ebuild:
+  old
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> openclonk-5.5.1.ebuild:
   Stable for x86, wrt bug #539024

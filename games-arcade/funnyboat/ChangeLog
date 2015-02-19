@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/funnyboat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.19 2015/02/10 10:10:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.20 2015/02/19 01:40:37 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> -funnyboat-1.5.ebuild:
+  old
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> funnyboat-1.5-r1.ebuild:
   Stable for x86, wrt bug #539180

@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/virtualjaguar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.24 2015/02/10 10:10:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/virtualjaguar/ChangeLog,v 1.25 2015/02/19 01:52:35 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/1.0.7-cdintf_linux.patch, -files/virtualjaguar-1.0.7-array.patch,
+  -files/virtualjaguar-1.0.7-gcc43.patch,
+  -files/virtualjaguar-1.0.7-makefile.patch, -virtualjaguar-1.0.7-r1.ebuild:
+  old
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> virtualjaguar-2.1.2-r1.ebuild:
   Stable for x86, wrt bug #539144

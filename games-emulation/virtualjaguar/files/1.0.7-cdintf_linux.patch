@@ -1,9 +1,0 @@
---- src/cdintf_linux.cpp	2004-10-06 21:44:14.000000000 -0400
-+++ src/cdintf_linux.cpp.fix	2004-11-06 23:09:53.217375640 -0500
-@@ -217,5 +217,5 @@
- {
- 	WriteLog("CDINTF: GetTrackInfo unimplemented!\n");
- 	return 0xFF;
--
-+}
- #endif
