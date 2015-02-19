@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.349 2015/02/17 20:15:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.350 2015/02/19 02:25:58 floppym Exp $
+
+*systemd-219 (19 Feb 2015)
+
+  19 Feb 2015; Mike Gilbert <floppym@gentoo.org> +systemd-219.ebuild:
+  Version bump.
 
   17 Feb 2015; Pacho Ramos <pacho@gentoo.org> systemd-218-r3.ebuild,
   systemd-9999.ebuild:
