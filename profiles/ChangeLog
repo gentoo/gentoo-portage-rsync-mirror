@@ -1,10 +1,13 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9801 2015/02/19 08:07:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9802 2015/02/19 11:53:31 mrueg Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Feb 2015; Manuel Rüger <mrueg@gentoo.org> package.mask:
+  Cleanup old masks.
 
   19 Feb 2015; Ian Delaney <idella4@gentoo.org> package.mask:
   Mask old abadonned defunct packages X 6 in python herd for removal in 30 days

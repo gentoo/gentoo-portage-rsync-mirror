@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.68 2015/02/03 06:37:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.69 2015/02/19 11:52:17 mrueg Exp $
+
+  19 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -ruby_parser-2.3.1-r1.ebuild:
+  Remove masked slot 0
 
   03 Feb 2015; Hans de Graaff <graaff@gentoo.org> ruby_parser-3.6.4.ebuild:
   Add ruby22.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16372 2015/02/19 08:07:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16373 2015/02/19 11:53:31 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -175,15 +175,6 @@ dev-perl/IP-Country
 # also fixes part of bug 421497.
 # Removal in 30 days.
 virtual/ruby-rdoc
-
-# Manuel Rüger <mrueg@gentoo.org> (18 Jan 2015)
-# Ruby 1.9 only packages, do not build with later rubies
-# Removal in 30 days.
-dev-ruby/flickr
-dev-ruby/gemcutter
-dev-ruby/ruby_parser:0
-dev-ruby/drydock
-dev-ruby/net-dns
 
 # Manuel Rüger <mrueg@gentoo.org> (17 Jan 2015)
 # Unmaintained. Old eclasses, EAPIs and various bugs.
