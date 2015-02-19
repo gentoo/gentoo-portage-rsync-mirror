@@ -1,12 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-3.4.4.ebuild,v 1.5 2014/08/10 21:18:07 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-3.4.4-r1.ebuild,v 1.1 2015/02/19 14:13:13 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1
 
 DESCRIPTION="SNMP framework in Python. Not a wrapper"
 HOMEPAGE="http://pysnmp.sf.net/ http://pypi.python.org/pypi/pysnmp"
@@ -19,12 +20,15 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="CHANGES COMPATIBILITY README"
 
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
+
 src_install(){
-	distutils_src_install
+	distutils-r1_src_install
 
 	dohtml -r docs/
 	insinto /usr/share/doc/${PF}

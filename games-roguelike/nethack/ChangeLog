@@ -1,6 +1,13 @@
 # ChangeLog for games-roguelike/nethack
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.35 2014/03/21 05:11:09 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.36 2015/02/19 14:11:41 swift Exp $
+
+*nethack-3.4.3-r2 (19 Feb 2015)
+
+  19 Feb 2015; Sven Vermeulen <swift@gentoo.org> +nethack-3.4.3-r2.ebuild,
+  metadata.xml:
+  Fix bug #538092 - Move to proxy maintenance by Luis Ressel, fix to remove
+  security vulnerability CVE-2006-1390
 
   21 Mar 2014; Jeroen Roovers <jer@gentoo.org> nethack-3.4.3-r1.ebuild:
   Fix building against sys-libs/ncurses[tinfo]. Respect LDFLAGS.
