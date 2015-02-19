@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.7.0.ebuild,v 1.5 2014/10/27 16:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.7.0.ebuild,v 1.6 2015/02/19 06:22:02 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER=2.8
@@ -29,24 +29,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	rm -rf *.bat dists/win32
-
-	sed -ri \
-		-e '/^(CC|CXX)\b/d' \
-		Makefile || die
-
-	local boost_ver=$(best_version ">=dev-libs/boost-1.32")
-
-	boost_ver=${boost_ver/*boost-/}
-	boost_ver=${boost_ver%.*}
-	boost_ver=${boost_ver/./_}
-
-	einfo "Using boost version ${boost_ver}"
-	append-cxxflags \
-        -I/usr/include/boost-${boost_ver}
-	append-ldflags \
-        -L/usr/$(get_libdir)/boost-${boost_ver}
-	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
-	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
+	sed -ri -e '/^(CC|CXX)\b/d' Makefile || die
 }
 
 src_configure() {
@@ -61,8 +44,7 @@ src_configure() {
 		$(use_enable iconv freetype) \
 		$(use_enable mad) \
 		$(use_enable png) \
-		$(use_enable vorbis) \
-		|| die
+		$(use_enable vorbis) || die
 }
 
 src_install() {
