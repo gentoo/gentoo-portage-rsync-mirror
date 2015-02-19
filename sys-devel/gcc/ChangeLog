@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1047 2015/02/10 01:03:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1048 2015/02/19 21:12:20 zorry Exp $
+
+  19 Feb 2015; Magnus Granberg <zorry@gentoo.org> gcc-4.8.4.ebuild,
+  gcc-4.9.2.ebuild:
+  Bump gentoo gcc patchset for 4.8.4 and 4.9.2 to fix mips bug #516548
 
   10 Feb 2015; Anthony G. Basile <blueness@gentoo.org> gcc-4.8.4.ebuild,
   gcc-4.9.2.ebuild:
