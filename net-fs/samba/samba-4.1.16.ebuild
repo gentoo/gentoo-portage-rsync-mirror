@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.14.ebuild,v 1.4 2015/01/03 19:54:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.16.ebuild,v 1.1 2015/02/19 09:43:23 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -29,7 +29,7 @@ CDEPEND="${PYTHON_DEPS}
 	>=app-crypt/heimdal-1.5[-ssl]
 	dev-libs/iniparser
 	dev-libs/popt
-	sys-libs/readline
+	sys-libs/readline:=
 	virtual/libiconv
 	dev-python/subunit[${PYTHON_USEDEP}]
 	sys-apps/attr
@@ -68,7 +68,6 @@ S="${WORKDIR}/${MY_P}"
 
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 
-# sys-apps/dmapi is an automagic dependency (see bug #474492)
 PATCHES=(
 	"${FILESDIR}/${PN}-4.1.14-named.conf.dlz.patch"
 	"${FILESDIR}/${PN}-4.0.19-automagic_aio_fix.patch"

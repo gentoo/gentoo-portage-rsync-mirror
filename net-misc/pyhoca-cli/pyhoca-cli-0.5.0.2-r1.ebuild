@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pyhoca-cli/pyhoca-cli-0.5.0.1.ebuild,v 1.2 2014/11/27 14:26:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pyhoca-cli/pyhoca-cli-0.5.0.2-r1.ebuild,v 1.1 2015/02/19 09:36:37 voyageur Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 
 python_install() {
 	distutils-r1_python_install
-	python_doexe ${PN}
+	python_doscript ${PN}
 }
 
 python_install_all() {

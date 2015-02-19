@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/cdw
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.58 2013/01/18 16:57:02 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.60 2015/02/19 09:59:26 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> cdw-0.8.0.ebuild:
+  tidy
+
+*cdw-0.8.0 (19 Feb 2015)
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +cdw-0.8.0.ebuild,
+  cdw-9999.ebuild:
+  EAPI=5; version bump
 
   18 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -cdw-0.6.0.ebuild,
   -cdw-0.7.0.ebuild, -files/cdw-0.6.0-asneeded.patch,
