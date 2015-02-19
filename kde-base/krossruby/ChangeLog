@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krossruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.194 2015/02/18 16:26:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.195 2015/02/19 06:52:51 kensington Exp $
+
+  19 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  -krossruby-4.14.3.ebuild, krossruby-4.14.3-r1.ebuild:
+  Stable for amd64. Remove old.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -krossruby-4.12.5.ebuild:
   Remove KDE SC 4.12
