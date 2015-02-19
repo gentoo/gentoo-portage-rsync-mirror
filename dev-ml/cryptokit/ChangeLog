@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/cryptokit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/ChangeLog,v 1.27 2015/01/07 11:31:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/ChangeLog,v 1.28 2015/02/19 09:03:28 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> cryptokit-1.10.ebuild:
+  Stable for amd64, wrt bug #535128
 
 *cryptokit-1.10 (07 Jan 2015)
 

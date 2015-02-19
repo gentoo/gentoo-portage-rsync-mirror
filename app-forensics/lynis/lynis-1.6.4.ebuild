@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.6.4.ebuild,v 1.1 2014/11/16 13:23:33 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.6.4.ebuild,v 1.2 2015/02/19 09:04:18 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://cisofy.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=""

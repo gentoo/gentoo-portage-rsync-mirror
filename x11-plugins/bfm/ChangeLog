@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/bfm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.19 2015/01/20 10:02:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/bfm/ChangeLog,v 1.20 2015/02/19 09:07:48 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> bfm-0.6.4-r2.ebuild:
+  Stable for amd64, wrt bug #538054
 
 *bfm-0.6.4-r2 (20 Jan 2015)
 

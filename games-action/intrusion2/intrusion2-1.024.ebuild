@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/intrusion2/intrusion2-1.024.ebuild,v 1.3 2014/06/25 13:46:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/intrusion2/intrusion2-1.024.ebuild,v 1.4 2015/02/19 09:05:13 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="intrusion2-${USELESS_ID}-bin"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 RESTRICT="bindist fetch"
 

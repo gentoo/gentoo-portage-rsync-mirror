@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/amoebax
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/ChangeLog,v 1.10 2014/07/07 17:58:32 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/amoebax/ChangeLog,v 1.11 2015/02/19 09:05:47 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> amoebax-0.2.1.ebuild:
+  Stable for amd64, wrt bug #539718
 
 *amoebax-0.2.1 (07 Jul 2014)
 

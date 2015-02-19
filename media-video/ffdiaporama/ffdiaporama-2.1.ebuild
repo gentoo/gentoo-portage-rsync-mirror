@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.1.ebuild,v 1.4 2015/02/15 19:56:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.1.ebuild,v 1.5 2015/02/19 09:07:03 ago Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2
 	openclipart? ( CC0-1.0 )
 	texturemate? ( CC-BY-3.0 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="libav openclipart texturemate"
 
 RDEPEND="

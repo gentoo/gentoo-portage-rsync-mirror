@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/bubble-chains
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/ChangeLog,v 1.9 2014/06/20 07:57:20 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bubble-chains/ChangeLog,v 1.10 2015/02/19 09:06:12 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> bubble-chains-0.1.1.ebuild:
+  Stable for amd64, wrt bug #539726
 
   20 Jun 2014; Michael Sterrett <mr_bones_@gentoo.org>
   bubble-chains-0.1.1.ebuild:

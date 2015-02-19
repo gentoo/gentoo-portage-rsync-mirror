@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.2.6.ebuild,v 1.1 2015/01/04 03:50:03 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/xdebug-client-2.2.6.ebuild,v 1.2 2015/02/19 09:05:08 ago Exp $
 
 EAPI=5
 
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~x86"
 
 MY_PV="${PV/_/}"
 MY_PV="${MY_PV/rc/RC}"

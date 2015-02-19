@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/awesomenauts-2013.5.21.3.ebuild,v 1.3 2014/06/25 13:46:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/awesomenauts-2013.5.21.3.ebuild,v 1.4 2015/02/19 09:06:02 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="Awesomenauts-Linux-${PV//./-}.bin"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE="bundled-libs"
 RESTRICT="bindist fetch bundled-libs? ( splitdebug )"
 

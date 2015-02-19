@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/regex-tdfa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-tdfa/ChangeLog,v 1.3 2014/07/25 08:59:05 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/regex-tdfa/ChangeLog,v 1.4 2015/02/19 09:04:48 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> regex-tdfa-1.2.0.ebuild:
+  Stable for amd64, wrt bug #535006
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

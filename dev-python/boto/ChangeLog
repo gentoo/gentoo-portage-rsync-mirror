@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.102 2015/01/10 06:17:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.103 2015/02/19 09:08:29 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> boto-2.35.1.ebuild:
+  Stable for amd64, wrt bug #535316
 
   10 Jan 2015; Tim Harder <radhermit@gentoo.org> boto-2.35.1.ebuild:
   Add python3_3 and python3_4 to PYTHON_COMPAT and update test functionality.

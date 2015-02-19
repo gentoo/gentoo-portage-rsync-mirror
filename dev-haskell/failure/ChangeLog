@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/failure
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/failure/ChangeLog,v 1.6 2014/07/25 09:16:33 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/failure/ChangeLog,v 1.7 2015/02/19 09:04:53 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> failure-0.2.0.3.ebuild:
+  Stable for amd64, wrt bug #534966
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> failure-0.2.0.1.ebuild:
   Drop trailing '.' from description.

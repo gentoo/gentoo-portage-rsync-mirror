@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.7.0-r2.ebuild,v 1.6 2014/05/15 17:07:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.7.0-r2.ebuild,v 1.7 2015/02/19 09:29:18 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils multilib toolchain-funcs games
 
 DESCRIPTION="The Ur-Quan Masters: Port of Star Control 2"
@@ -51,54 +51,50 @@ src_prepare() {
 
 	# Take out the read so we can be non-interactive.
 	sed -i \
-		-e '/read CHOICE/d' build/unix/menu_functions \
-		|| die "sed menu_functions failed"
+		-e '/read CHOICE/d' build/unix/menu_functions || die
 
 	# respect CFLAGS
 	sed -i \
-		-e "s/-O3//" build/unix/build.config \
-		|| die "sed build.config failed"
+		-e "s/-O3//" build/unix/build.config || die
 
 	sed -i \
-		-e "s:@INSTALL_LIBDIR@:$(games_get_libdir)/:g" build/unix/uqm-wrapper.in \
-		|| die "sed uqm-wrapper.in failed"
+		-e "s:@INSTALL_LIBDIR@:$(games_get_libdir)/:g" \
+		build/unix/uqm-wrapper.in || die
 
 	# respect CC
 	sed -i \
 		-e "s/PROG_gcc_FILE=\"gcc\"/PROG_gcc_FILE=\"$(tc-getCC)\"/" \
-		build/unix/config_proginfo_build \
-		|| die "sed config_proginfo_build failed"
+		build/unix/config_proginfo_build || die
 }
 
 src_compile() {
-	MAKE_VERBOSE=1 ./build.sh uqm || die "build failed"
+	MAKE_VERBOSE=1 ./build.sh uqm || die
 }
 
 src_install() {
 	# Using the included install scripts seems quite painful.
 	# This manual install is totally fragile but maybe they'll
 	# use a sane build system for the next release.
-	newgamesbin uqm-wrapper uqm || die "newgamesbin failed"
+	newgamesbin uqm-wrapper uqm
 	exeinto "$(games_get_libdir)"/${PN}
-	doexe uqm || die "doexe failed"
+	doexe uqm
 
 	insinto "${GAMES_DATADIR}"/${PN}/content/packages
-	doins "${DISTDIR}"/${P}-content.uqm || die "doins failed"
-	echo ${P} > "${D}${GAMES_DATADIR}"/${PN}/content/version \
-		|| die "creating version file failed"
+	doins "${DISTDIR}"/${P}-content.uqm
+	echo ${P} > "${D}${GAMES_DATADIR}"/${PN}/content/version || die
 
 	insinto "${GAMES_DATADIR}"/${PN}/content/addons
 	if use music; then
-		doins "${DISTDIR}"/${P}-3domusic.uqm || die "doins failed"
+		doins "${DISTDIR}"/${P}-3domusic.uqm
 	fi
 
 	if use voice; then
-		doins "${DISTDIR}"/${P}-voice.uqm || die "doins failed"
+		doins "${DISTDIR}"/${P}-voice.uqm
 	fi
 
 	if use remix; then
 		insinto "${GAMES_DATADIR}"/${PN}/content/addons
-		doins "${DISTDIR}"/${PN}-remix-disc{1,2,3}.uqm || die "doins failed"
+		doins "${DISTDIR}"/${PN}-remix-disc{1,2,3}.uqm
 	fi
 
 	dodoc AUTHORS ChangeLog Contributing README WhatsNew doc/users/manual.txt

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gottet/gottet-1.0.6.ebuild,v 1.1 2014/05/18 19:36:54 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gottet/gottet-1.0.6.ebuild,v 1.2 2015/02/19 09:05:18 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://gottcode.org/${PN}/${P}-src.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-qt/qtcore:4

@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/tetrinet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/ChangeLog,v 1.12 2014/11/10 08:43:21 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/ChangeLog,v 1.13 2015/02/19 09:04:58 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> tetrinet-0.11.ebuild:
+  Stable for amd64, wrt bug #539704
 
   10 Nov 2014; Jeroen Roovers <jer@gentoo.org> tetrinet-0.11.ebuild,
   files/tetrinet-0.11-build.patch, files/tetrinet-0.11-no-ipv6.patch:
@@ -41,4 +44,3 @@
 
   17 Sep 2003; Michael Sterrett <msterret@gentoo.org> tetrinet-0.10.ebuild:
   Added for vapier so he can try it out. Initial commit.
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/kedpm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.18 2014/12/15 05:18:32 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kedpm/ChangeLog,v 1.19 2015/02/19 09:04:28 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kedpm-0.4.0-r2.ebuild:
+  Stable for amd64, wrt bug #539612
 
 *kedpm-0.4.0-r2 (15 Dec 2014)
 

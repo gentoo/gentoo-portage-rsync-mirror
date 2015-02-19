@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/epoch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/ChangeLog,v 1.14 2015/02/13 14:55:06 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/epoch/ChangeLog,v 1.15 2015/02/19 09:07:43 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> epoch-1.2.1.ebuild:
+  Stable for amd64, wrt bug #539748
 
 *epoch-1.2.2 (13 Feb 2015)
 

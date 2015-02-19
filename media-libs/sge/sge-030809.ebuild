@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.12 2008/07/27 08:17:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sge/sge-030809.ebuild,v 1.13 2015/02/19 09:21:35 mr_bones_ Exp $
 
-inherit eutils multilib
+EAPI=5
+inherit eutils multilib toolchain-funcs
 
 MY_P="sge${PV}"
 DESCRIPTION="Graphics extensions library for SDL"
@@ -20,37 +21,36 @@ DEPEND="media-libs/libsdl
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-freetype.patch \
 		"${FILESDIR}"/${P}-cmap.patch
-	sed -i "s:\$(PREFIX)/lib:\$(PREFIX)/$(get_libdir):" Makefile \
-		|| die "sed failed"
+	sed -i "s:\$(PREFIX)/lib:\$(PREFIX)/$(get_libdir):" Makefile || die
+	sed -i \
+		-e '/^CC=/d' \
+		-e '/^CXX=/d' \
+		-e '/^AR=/d' \
+		Makefile.conf || die
+	tc-export CC CXX AR
+	# make sure the header gets regenerated everytime
+	rm -f sge_config.h
 }
 
 src_compile() {
-	# make sure the header gets regenerated everytime
-	rm -f sge_config.h
-
-	yesno() { use $1 && echo y || echo n ; }
 	emake \
-		USE_IMG=$(yesno image) \
-		USE_FT=$(yesno truetype) \
-		|| die "emake failed"
+		USE_IMG=$(usex image y n) \
+		USE_FT=$(usex truetype y n)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc README Todo WhatsNew
+	DOCS="README Todo WhatsNew" \
+		default
 
 	use doc && dohtml docs/*
 
 	if use examples ; then
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die "doins failed"
+		doins -r examples
 	fi
 }

@@ -4,10 +4,10 @@ DESCRIPTION=Replaces/Enhances Text.Regex
 EAPI=5
 HOMEPAGE=http://hackage.haskell.org/package/regex-tdfa
 IUSE=doc hscolour profile
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=BSD
 RDEPEND=dev-haskell/mtl:=[profile?] dev-haskell/parsec:=[profile?] >=dev-haskell/regex-base-0.93.1:=[profile?] >=dev-lang/ghc-7.4.1:=
 SLOT=0/1.2.0
 SRC_URI=mirror://hackage/packages/archive/regex-tdfa/1.2.0/regex-tdfa-1.2.0.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	f398638b447d3821846f2e2abbc33c1b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=38b813183991a92c7446eae9906773fb
+_md5_=419f41f6a776cd6667487bf1ae251e4f

@@ -1,12 +1,12 @@
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install prepare
 DEPEND=media-libs/libsdl image? ( media-libs/sdl-image ) truetype? ( >=media-libs/freetype-2 )
 DESCRIPTION=Graphics extensions library for SDL
+EAPI=5
 HOMEPAGE=http://www.etek.chalmers.se/~e8cal1/sge/
 IUSE=doc examples image truetype
 KEYWORDS=amd64 ~ia64 ppc x86 ~x86-fbsd
 LICENSE=LGPL-2.1
-RDEPEND=media-libs/libsdl image? ( media-libs/sdl-image ) truetype? ( >=media-libs/freetype-2 )
 SLOT=0
 SRC_URI=http://www.etek.chalmers.se/~e8cal1/sge/files/sge030809.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=cc3223d3d592d1a651c1022a38a6c83e
+_md5_=118d3d14cfdfa058aff4154b6b436ccb

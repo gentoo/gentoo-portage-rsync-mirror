@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.103 2015/02/18 08:25:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.104 2015/02/19 09:03:33 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gcompris-14.12.ebuild:
+  Stable for amd64, wrt bug #540436
 
   18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> gcompris-14.12.ebuild:
   remove some cruft

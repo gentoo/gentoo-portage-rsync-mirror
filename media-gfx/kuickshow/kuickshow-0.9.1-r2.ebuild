@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/kuickshow-0.9.1-r2.ebuild,v 1.1 2014/03/21 20:58:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/kuickshow-0.9.1-r2.ebuild,v 1.2 2015/02/19 09:05:31 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://kde/stable/${KDE_VERSION}/src/extragear/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug +handbook"
 
 DEPEND="media-libs/imlib

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.7.ebuild,v 1.3 2015/02/13 04:55:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.7.ebuild,v 1.4 2015/02/19 09:03:38 ago Exp $
 
 EAPI=5
 inherit cmake-utils eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/stratagus/trunk/${PV}/+download/stratagus_${PV}.or
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="bzip2 debug doc mikmod mng theora vorbis"
 
 RDEPEND="dev-db/sqlite:3

@@ -4,11 +4,11 @@ DESCRIPTION=Modules for OCaml application-level Internet protocols
 EAPI=5
 HOMEPAGE=http://projects.camlcity.org/projects/ocamlnet.html
 IUSE=cryptokit gtk ssl tk httpd +ocamlopt +pcre zip
-KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
+KEYWORDS=amd64 ~ppc ~x86 ~x86-fbsd
 LICENSE=ZLIB GPL-2+
 RDEPEND=>=dev-ml/findlib-1.0 pcre? ( >=dev-ml/pcre-ocaml-5:= ) >=dev-lang/ocaml-3.10.2:=[ocamlopt?] tk? ( || ( dev-ml/labltk:= <dev-lang/ocaml-4.02[tk] ) ) cryptokit? ( dev-ml/cryptokit:= ) gtk? ( >=dev-ml/lablgtk-2:= ) ssl? ( >=dev-ml/ocaml-ssl-0.4:= ) zip? ( dev-ml/camlzip:= )
 RESTRICT=installsources
 SLOT=0/3.7.7
 SRC_URI=http://download.camlcity.org/download/ocamlnet-3.7.7.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=8e0872f8cdee0925a64e46bdc921f061
+_md5_=17dffb58d0a062abb7db6964a63b9f2f

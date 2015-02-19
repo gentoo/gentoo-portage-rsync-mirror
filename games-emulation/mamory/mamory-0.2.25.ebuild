@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.25.ebuild,v 1.6 2015/02/18 08:33:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.25.ebuild,v 1.7 2015/02/19 09:03:02 ago Exp $
 
 EAPI=5
 inherit autotools games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/expat"

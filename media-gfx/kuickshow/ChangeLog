@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kuickshow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/ChangeLog,v 1.14 2014/03/21 20:58:06 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kuickshow/ChangeLog,v 1.15 2015/02/19 09:05:31 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kuickshow-0.9.1-r2.ebuild:
+  Stable for amd64, wrt bug #538080
 
 *kuickshow-0.9.1-r2 (21 Mar 2014)
 

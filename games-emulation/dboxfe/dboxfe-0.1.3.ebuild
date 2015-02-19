@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.13 2015/02/18 08:42:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/dboxfe-0.1.3.ebuild,v 1.14 2015/02/19 09:03:48 ago Exp $
 
 EAPI=5
 inherit eutils qt4-r2 games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dboxfe.berlios/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="dev-qt/qtgui:4

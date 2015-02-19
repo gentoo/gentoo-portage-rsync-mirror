@@ -1,6 +1,10 @@
 # ChangeLog for games-action/awesomenauts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.4 2014/11/25 23:02:58 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.5 2015/02/19 09:06:02 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  awesomenauts-2013.5.21.3.ebuild:
+  Stable for amd64, wrt bug #539722
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

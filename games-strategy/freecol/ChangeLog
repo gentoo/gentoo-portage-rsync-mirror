@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freecol
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.43 2013/02/05 00:20:46 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.44 2015/02/19 09:07:18 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> freecol-0.10.7.ebuild:
+  Stable for amd64, wrt bug #540126
 
 *freecol-0.10.7 (05 Feb 2013)
 
@@ -199,4 +202,3 @@
   09 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +freecol-0.3.0.ebuild:
   initial commit - ebuild submitted by lwillems via bug #64608
-

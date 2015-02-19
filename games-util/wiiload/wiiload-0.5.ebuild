@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/wiiload/wiiload-0.5.ebuild,v 1.3 2011/04/15 21:49:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/wiiload/wiiload-0.5.ebuild,v 1.4 2015/02/19 09:07:47 mr_bones_ Exp $
 
+EAPI=5
 inherit toolchain-funcs
 
 DESCRIPTION="load homebrew apps over the network to your Wii"
@@ -18,5 +19,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin wiiload || die
+	dobin wiiload
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.9.0-r1.ebuild,v 1.1 2014/02/09 13:37:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.9.0-r1.ebuild,v 1.2 2015/02/19 09:04:33 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://qcomicbook.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND="dev-qt/qtgui:4

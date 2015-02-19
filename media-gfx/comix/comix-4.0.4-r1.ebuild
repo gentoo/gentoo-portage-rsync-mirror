@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-4.0.4-r1.ebuild,v 1.2 2014/08/10 21:13:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/comix-4.0.4-r1.ebuild,v 1.3 2015/02/19 09:07:08 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="rar"
 
 DEPEND="${PYTHON_DEPS}
