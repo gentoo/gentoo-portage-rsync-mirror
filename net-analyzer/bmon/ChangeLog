@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/bmon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.58 2014/08/15 19:23:50 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.59 2015/02/19 19:16:19 jer Exp $
+
+*bmon-3.6 (19 Feb 2015)
+
+  19 Feb 2015; Jeroen Roovers <jer@gentoo.org> +bmon-3.6.ebuild:
+  Version bump.
 
   15 Aug 2014; Jeroen Roovers <jer@gentoo.org> -bmon-2.1.1_pre1.ebuild,
   -files/bmon-2.1.0-gcc4.diff, -files/bmon-2.1.0-libnl-1.0.patch,
