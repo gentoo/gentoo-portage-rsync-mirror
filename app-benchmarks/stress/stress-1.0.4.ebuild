@@ -2,16 +2,16 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-1.0.4.ebuild,v 1.5 2014/08/05 07:59:56 patrick Exp $
 
-EAPI=4
+EAPI=5
 
 inherit flag-o-matic
 
 MY_P=${PN}-${PV/_/}
 DESCRIPTION="Imposes stressful loads on different aspects of the system"
-HOMEPAGE="http://weather.ou.edu/~apw/projects/stress"
-SRC_URI="http://weather.ou.edu/~apw/projects/stress/${MY_P}.tar.gz"
+HOMEPAGE="http://people.seas.harvard.edu/~apw/stress"
+SRC_URI="http://people.seas.harvard.edu/~apw/stress/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="static"
