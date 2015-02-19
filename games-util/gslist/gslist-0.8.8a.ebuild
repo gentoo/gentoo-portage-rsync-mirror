@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.8a.ebuild,v 1.3 2010/05/22 15:22:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.8a.ebuild,v 1.4 2015/02/19 10:06:50 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A GameSpy server browser"
@@ -26,11 +26,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake SQL=0 $(use web || echo GSWEB=0) || die "emake failed"
+	emake SQL=0 $(use web || echo GSWEB=0)
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	dodoc ${PN}.txt
 	prepgamesdirs
 }

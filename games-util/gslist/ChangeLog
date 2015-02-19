@@ -1,6 +1,9 @@
 # ChangeLog for games-util/gslist
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/ChangeLog,v 1.8 2010/05/22 15:22:27 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/ChangeLog,v 1.9 2015/02/19 10:06:50 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> gslist-0.8.8a.ebuild:
+  EAPI=5
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> gslist-0.8.8a.ebuild:
   stable amd64, bug 303833
@@ -35,4 +38,3 @@
   04 Jan 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/gslist-0.8.2-build.patch, +metadata.xml, +gslist-0.8.2.ebuild:
   Initial commit, bug #111319
-
