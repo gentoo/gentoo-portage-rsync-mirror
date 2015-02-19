@@ -1,41 +1,62 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.6.1.ebuild,v 1.4 2014/10/27 14:33:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/xrdp-0.8.0-r1.ebuild,v 1.1 2015/02/19 16:58:37 mgorny Exp $
 
 EAPI=5
 
 inherit autotools eutils pam systemd
 
-MY_P="${PN}-v${PV}"
-
 DESCRIPTION="An open source Remote Desktop Protocol server"
 HOMEPAGE="http://www.xrdp.org/"
-SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
+# mirrored from https://github.com/neutrinolabs/xrdp/releases
+SRC_URI="http://dev.gentoo.org/~mgorny/dist/${P}.tar.xz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug kerberos pam"
+IUSE="debug fuse kerberos jpeg pam pulseaudio"
 
 RDEPEND="dev-libs/openssl:0=
 	x11-libs/libX11:0=
 	x11-libs/libXfixes:0=
+	x11-libs/libXrandr:0=
+	fuse? ( sys-fs/fuse:0= )
+	jpeg? ( virtual/jpeg:0= )
 	kerberos? ( virtual/krb5:0= )
-	pam? ( virtual/pam:0= )"
-DEPEND="${RDEPEND}"
+	pam? ( virtual/pam:0= )
+	pulseaudio? ( media-sound/pulseaudio:0= )"
+DEPEND="${RDEPEND}
+	app-arch/xz-utils"
 RDEPEND="${RDEPEND}
 	|| (
 		net-misc/tigervnc:0=[server,xorgmodule]
 		net-misc/x11rdp:0=
 	)"
 
-S=${WORKDIR}/${MY_P}
+# does not work with gentoo version of freerdp
+#	neutrinordp? ( net-misc/freerdp:0= )
+# incompatible with current ffmpeg/libav (surprising, isn't it?)
+#	xrdpvr? ( virtual/ffmpeg:0= )
 
 src_prepare() {
 	epatch_user
 
+	# #540630: crypt() unchecked for NULL return
+	epatch "${FILESDIR}"/${P}-crypt-null-return.patch
+
+	# don't let USE=debug adjust CFLAGS
+	sed -i -e 's:-g -O0::' configure.ac || die
 	# disallow root login by default
 	sed -i -e '/^AllowRootLogin/s/1/0/' sesman/sesman.ini || die
+	# Fedora files, not included here
+	sed -i -e '/EnvironmentFile=/d' instfiles/*.service || die
+	# reorder so that X11rdp comes last again since it's not supported
+	sed -i -e '/^\[xrdp1\]$/,/^$/{wxrdp.ini.tmp
+		;d}' xrdp/xrdp.ini || die
+	# move newline to the beginning
+	sed -i -e 'x' xrdp.ini.tmp || die
+	cat xrdp.ini.tmp >> xrdp/xrdp.ini || die
+	rm -f xrdp.ini.tmp || die
 
 	eautoreconf
 	# part of ./bootstrap
@@ -58,10 +79,22 @@ src_configure() {
 		# pam_userpass is not in Gentoo at the moment
 		#--disable-pamuserpass
 
+		# -- jpeg support --
+		$(usex jpeg --enable-jpeg '')
+		# the package supports explicit linking against libjpeg-turbo
+		# (no need for -ljpeg compat)
+		$(use jpeg && has_version 'media-libs/libjpeg-turbo:0' && echo --enable-tjpeg)
+
+		# -- sound support --
+		$(usex pulseaudio '--enable-simplesound --enable-loadpulsemodules' '')
+
 		# -- others --
 		$(usex debug --enable-xrdpdebug '')
+		$(usex fuse --enable-fuse '')
+		# $(usex neutrinordp --enable-neutrinordp '')
+		# $(usex xrdpvr --enable-xrdpvr '')
 
-		# --enable-freerdp1 does not work with 1.1 in gentoo
+		"$(systemd_with_unitdir)"
 	)
 
 	econf "${myconf[@]}"
@@ -71,13 +104,16 @@ src_install() {
 	default
 	prune_libtool_files --all
 
-	# use our pam.d file
+	# use our pam.d file since upstream's incompatible with Gentoo
 	use pam && newpamd "${FILESDIR}"/xrdp-sesman.pamd xrdp-sesman
 	# and our startwm.sh
 	exeinto /etc/xrdp
 	doexe "${FILESDIR}"/startwm.sh
 
-	# package empty /etc/xrdp/rsakeys.ini rather than bundled keys :)
+	# Fedora stuff
+	rm -r "${ED}"/etc/default || die
+
+	# own /etc/xrdp/rsakeys.ini
 	: > rsakeys.ini
 	insinto /etc/xrdp
 	doins rsakeys.ini

@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/xrdp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.12 2014/10/27 14:33:09 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xrdp/ChangeLog,v 1.13 2015/02/19 16:58:37 mgorny Exp $
+
+*xrdp-0.8.0-r1 (19 Feb 2015)
+
+  19 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  +files/xrdp-0.8.0-crypt-null-return.patch, +xrdp-0.8.0-r1.ebuild,
+  -xrdp-0.6.1.ebuild, -xrdp-0.8.0.ebuild:
+  Patch out crypt() NULL return check vulnerability, bug #540630. Remove old.
 
   27 Oct 2014; Michał Górny <mgorny@gentoo.org> xrdp-0.6.1.ebuild,
   xrdp-0.8.0.ebuild:
