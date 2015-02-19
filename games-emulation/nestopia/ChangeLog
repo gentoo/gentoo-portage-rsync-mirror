@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/nestopia
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/ChangeLog,v 1.9 2015/01/17 16:39:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/ChangeLog,v 1.10 2015/02/19 05:19:53 mr_bones_ Exp $
+
+*nestopia-1.46.2 (19 Feb 2015)
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +nestopia-1.46.2.ebuild:
+  switch to nestopia UE (bug #531716)
 
   17 Jan 2015; Tupone Alfredo <tupone@gentoo.org> nestopia-1.40.ebuild:
   EAPI 5
@@ -35,4 +40,3 @@
   +files/nestopia, +metadata.xml:
   Initial commit - files submitted by Michał Ziąbkowski and Jared via bug
   #254479
-
