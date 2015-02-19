@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/libFS-1.0.6.ebuild,v 1.2 2015/02/18 15:57:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/libFS-1.0.6.ebuild,v 1.3 2015/02/19 08:53:08 ago Exp $
 
 EAPI=5
 inherit xorg-2
 
 DESCRIPTION="X.Org FS library"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="ipv6"
 
 RDEPEND="x11-libs/xtrans

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/weston
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.16 2015/02/18 15:56:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/weston/ChangeLog,v 1.17 2015/02/19 08:51:18 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> weston-1.6.1.ebuild:
+  Stable for x86, wrt bug #530652
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> weston-1.6.1.ebuild:
   Stable for amd64, wrt bug #530652

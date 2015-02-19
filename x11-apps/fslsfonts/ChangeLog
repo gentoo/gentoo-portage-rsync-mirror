@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/fslsfonts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fslsfonts/ChangeLog,v 1.44 2015/02/18 15:56:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fslsfonts/ChangeLog,v 1.45 2015/02/19 08:51:35 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> fslsfonts-1.0.5.ebuild:
+  Stable for x86, wrt bug #530652
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> fslsfonts-1.0.5.ebuild:
   Stable for amd64, wrt bug #530652

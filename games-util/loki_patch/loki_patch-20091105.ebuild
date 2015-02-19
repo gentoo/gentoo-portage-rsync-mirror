@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20091105.ebuild,v 1.4 2012/05/03 03:41:15 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/loki_patch-20091105.ebuild,v 1.5 2015/02/19 08:53:38 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="Loki Software binary patch tool"
@@ -41,12 +41,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake -C loki_setupdb || die "emake loki_setupdb failed"
-	emake -C loki_patch || die "emake loki_patch failed"
+	emake -C loki_setupdb
+	emake -C loki_patch
 }
 
 src_install() {
 	cd ${PN}
-	dobin loki_patch make_patch || die "dobin failed"
+	dobin loki_patch make_patch
 	dodoc CHANGES NOTES README TODO
 }

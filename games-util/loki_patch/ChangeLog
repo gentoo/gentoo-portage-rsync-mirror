@@ -1,6 +1,10 @@
 # ChangeLog for games-util/loki_patch
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.13 2012/05/03 03:41:15 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_patch/ChangeLog,v 1.14 2015/02/19 08:53:38 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  loki_patch-20091105.ebuild:
+  EAPI=5
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> loki_patch-20091105.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -63,4 +67,3 @@
   +loki_patch-20040916.ebuild:
   Initial import. Ebuild submitted by Alex Linke <incubation.11@freenet.de> to
   bug #63649. Closing bug #63649.
-

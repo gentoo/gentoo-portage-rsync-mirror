@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.7.ebuild,v 1.6 2015/02/18 23:15:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.7.ebuild,v 1.7 2015/02/19 08:51:42 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{3_3,3_4} )
 inherit python-single-r1 xorg-2
 
 DESCRIPTION="Intel GPU userland tools"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="python video_cards_nouveau"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 RESTRICT="test"
