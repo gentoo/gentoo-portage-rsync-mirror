@@ -1,11 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-3.1.0013-r3.ebuild,v 1.4 2015/02/19 21:44:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-3.1.0013-r4.ebuild,v 1.1 2015/02/19 21:44:15 jlec Exp $
 
 EAPI=5
 
 MULTILIB_COMPAT=( abi_x86_{32,64} )
-inherit multilib multilib-minimal prefix versionator
+
+inherit eutils multilib multilib-minimal prefix versionator
 
 MY_PV="$(get_version_component_range 1-2)"
 MY_DATE="April2012"
@@ -22,13 +23,15 @@ SRC_URI="
 
 LICENSE="NVIDIA-r1"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples multilib"
 
 REQUIRED_USE="amd64? ( multilib? ( abi_x86_32 ) )"
+
 RESTRICT="strip"
 
 RDEPEND="
+	media-libs/glu
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11
@@ -36,39 +39,38 @@ RDEPEND="
 	x11-libs/libXi
 	x11-libs/libXmu
 	x11-libs/libXt
-	media-libs/glu
-	media-libs/mesa
-	media-libs/freeglut
-	amd64? ( abi_x86_32? (
-		|| (
-			(
-				>=media-libs/glu-9.0.0-r1[abi_x86_32(-)]
-				>=media-libs/mesa-9.1.6[abi_x86_32(-)]
-				>=media-libs/freeglut-2.8.1[abi_x86_32(-)]
+	virtual/opengl
+	amd64? (
+		abi_x86_32? (
+			|| (
+				(
+					>=media-libs/freeglut-2.8.1[abi_x86_32(-)]
+					>=media-libs/glu-9.0.0-r1[abi_x86_32(-)]
+					>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+				)
+				app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
 			)
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-		)
-		|| (
-			(
-				>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
-				>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
-				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-				>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
-				>=x11-libs/libXmu-1.1.1-r1[abi_x86_32(-)]
-				>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
+			|| (
+				(
+					>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+					>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+					>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+					>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+					>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
+					>=x11-libs/libXmu-1.1.1-r1[abi_x86_32(-)]
+					>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
+				)
+				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 			)
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
 		)
-	) )
-	x86? ( virtual/libstdc++:3.3 )"
+	)"
 DEPEND=""
 
 S=${WORKDIR}
 
 DEST=/opt/${PN}
 
-QA_PREBUILT="${DEST}/*"
+QA_PREBUILT="${DEST}/.* /usr/share/.*"
 
 src_unpack() {
 	multilib_src_unpack() {
@@ -129,12 +131,13 @@ multilib_src_install() {
 		insinto ${DEST}
 		dodoc usr/local/Cg/README
 		if use doc; then
-			dodoc usr/local/Cg/docs/*.{txt,pdf}
-			dohtml -r usr/local/Cg/docs/html/*
+			DOCS=( usr/local/Cg/docs/*.{txt,pdf} )
+			HTML_DOCS=( usr/local/Cg/docs/html/. )
+			einstalldocs
 		fi
 		if use examples; then
-			insinto /usr/share/${PN}
-			doins -r usr/local/Cg/examples
+			dodir /usr/share/${PN}
+			mv usr/local/Cg/examples "${ED}"/usr/share/${PN}/
 		fi
 	fi
 }

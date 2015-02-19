@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.724 2015/02/16 18:01:28 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.725 2015/02/19 21:51:43 grknight Exp $
+
+  19 Feb 2015; Brian Evans <grknight@gentoo.org> mysql-5.6.22.ebuild:
+  Update stable 5.6.22 patches to include the configure fix for openssl-1.0.2
+  detection
 
   16 Feb 2015; Brian Evans <grknight@gentoo.org> -mysql-5.5.40.ebuild:
   Drop security vulnerable version

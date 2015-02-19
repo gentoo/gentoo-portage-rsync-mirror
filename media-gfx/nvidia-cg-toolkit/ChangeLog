@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.63 2014/12/28 12:11:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.64 2015/02/19 21:44:15 jlec Exp $
+
+*nvidia-cg-toolkit-3.1.0013-r4 (19 Feb 2015)
+
+  19 Feb 2015; Justin Lecher <jlec@gentoo.org>
+  +nvidia-cg-toolkit-3.1.0013-r4.ebuild, metadata.xml,
+  nvidia-cg-toolkit-3.1.0013-r2.ebuild, nvidia-cg-toolkit-3.1.0013-r3.ebuild:
+  Merge PR, thanks mm1ke for preperation, fixes #518144 & #466832; correct
+  QA_PREBUILT for USE=examples; make exmaples executable; drop unnecessary deps
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   nvidia-cg-toolkit-3.1.0013-r3.ebuild:
