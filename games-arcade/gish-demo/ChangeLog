@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gish-demo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.15 2014/06/26 18:38:03 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.16 2015/02/19 10:39:56 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gish-demo-1.6.ebuild:
+  Stable for amd64, wrt bug #540610
 
 *gish-demo-1.6 (26 Jun 2014)
 

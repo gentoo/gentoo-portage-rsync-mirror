@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/freesynd-0.7.1.ebuild,v 1.3 2015/02/18 09:56:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freesynd/freesynd-0.7.1.ebuild,v 1.4 2015/02/19 10:40:32 ago Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug devtools"
 
 RDEPEND="media-libs/libogg

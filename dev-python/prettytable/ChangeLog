@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/prettytable
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.12 2014/11/24 15:16:16 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.13 2015/02/19 10:39:51 ago Exp $
+
+  19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> prettytable-0.7.1-r1.ebuild:
+  Stable for amd64, wrt bug #540512
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> prettytable-0.7.1-r1.ebuild:
   Support python 3.4
