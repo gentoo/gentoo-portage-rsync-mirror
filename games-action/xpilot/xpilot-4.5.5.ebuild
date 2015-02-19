@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.5.ebuild,v 1.4 2015/01/02 11:54:54 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot/xpilot-4.5.5.ebuild,v 1.5 2015/02/19 00:46:13 mr_bones_ Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A multi-player 2D client/server space game"
@@ -28,12 +28,15 @@ src_prepare() {
 		-e '/^INSTMAN/s:=.*:=/usr/share/man/man6:' \
 		-e "/^INSTLIB/s:=.*:=${GAMES_DATADIR}/${PN}:" \
 		-e "/^INSTBIN/s:=.*:=${GAMES_BINDIR}:" \
-		Local.config \
-		|| die "sed failed"
+		Local.config || die
+	# work with glibc-2.20
+	sed -i \
+		-e 's/getline/lgetline/' \
+		src/client/textinterface.c || die
 }
 
 src_compile() {
-	xmkmf || die "xmkmf failed"
+	xmkmf || die
 	emake Makefiles
 	emake includes
 	emake depend
