@@ -7,7 +7,7 @@ EAPI="3"
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="small and fast portage helper tools written in C"
-HOMEPAGE="http://www.gentoo.org/"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Q_applets"
 SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"

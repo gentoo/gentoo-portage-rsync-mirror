@@ -7,7 +7,7 @@ EAPI="4"
 inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="small and fast portage helper tools written in C"
-HOMEPAGE="http://www.gentoo.org/doc/en/portage-utils.xml"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Q_applets"
 SRC_URI="mirror://gentoo/${P}.tar.xz
 	http://dev.gentoo.org/~vapier/dist/${P}.tar.xz"
 
