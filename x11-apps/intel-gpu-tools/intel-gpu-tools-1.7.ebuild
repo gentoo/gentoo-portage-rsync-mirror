@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.7.ebuild,v 1.5 2015/02/18 15:56:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.7.ebuild,v 1.6 2015/02/18 23:15:49 vapier Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ RESTRICT="test"
 
 DEPEND="dev-libs/glib:2
 	>=x11-libs/cairo-1.12.0
-	>=x11-libs/libdrm-2.4.47[video_cards_intel,video_cards_nouveau?]
+	>=x11-libs/libdrm-2.4.52[video_cards_intel,video_cards_nouveau?]
 	>=x11-libs/libpciaccess-0.10
 	python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}"
