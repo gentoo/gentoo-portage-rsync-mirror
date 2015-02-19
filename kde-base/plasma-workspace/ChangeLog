@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.294 2015/02/18 16:26:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.295 2015/02/19 07:43:18 kensington Exp $
+
+  19 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  -plasma-workspace-4.11.9-r1.ebuild:
+  Remove KDE Workspace 4.11.9
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -plasma-workspace-4.11.9.ebuild:
   Remove KDE SC 4.12

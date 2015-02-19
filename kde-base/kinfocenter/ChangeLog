@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kinfocenter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.224 2015/02/17 11:06:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.225 2015/02/19 07:43:17 kensington Exp $
+
+  19 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  -kinfocenter-4.11.9.ebuild:
+  Remove KDE Workspace 4.11.9
 
   17 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kinfocenter-4.11.14.ebuild:
   Stable for ppc64 wrt bug #517344

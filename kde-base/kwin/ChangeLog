@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.400 2015/02/19 07:02:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.401 2015/02/19 07:43:18 kensington Exp $
+
+  19 Feb 2015; Michael Palimaka <kensington@gentoo.org> -kwin-4.11.9.ebuild:
+  Remove KDE Workspace 4.11.9
 
   19 Feb 2015; Michael Palimaka <kensington@gentoo.org>
   -files/kwin-4.11.10-hidewindow.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.11.ebuild,v 1.4 2015/01/09 08:34:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.11.ebuild,v 1.5 2015/02/19 07:34:27 pinkbyte Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ RUBY_OPTIONAL=yes
 
 PYTHON_COMPAT=(python2_7 python3_{3,4})
 
-inherit base autotools  autotools-utils eutils perl-app ruby-ng python-single-r1
+inherit autotools-utils eutils perl-app ruby-ng python-single-r1
 
 DESCRIPTION="Library for reading and writing Windows Registry 'hive' binary files"
 HOMEPAGE="http://libguestfs.org"
@@ -67,7 +67,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	base_src_prepare
+	epatch_user
 }
 
 src_configure() {
