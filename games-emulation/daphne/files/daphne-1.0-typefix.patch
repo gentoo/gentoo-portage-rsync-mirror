@@ -1,3 +1,5 @@
+amd64 does not like int pointers
+
 diff -ruN v_1_0.orig/src/ldp-in/ldv1000.cpp v_1_0/src/ldp-in/ldv1000.cpp
 --- v_1_0.orig/src/ldp-in/ldv1000.cpp	2008-01-29 18:04:34.000000000 +0100
 +++ v_1_0/src/ldp-in/ldv1000.cpp	2008-09-19 14:29:40.000000000 +0200

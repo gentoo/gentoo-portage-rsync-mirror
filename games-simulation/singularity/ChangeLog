@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/singularity
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.28 2015/02/10 10:04:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.29 2015/02/19 01:27:34 mr_bones_ Exp $
+
+  19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -singularity-0.30c.ebuild:
+  old
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> singularity-0.30c-r1.ebuild:
   Stable for x86, wrt bug #538900
