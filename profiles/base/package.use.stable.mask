@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.34 2015/02/20 08:47:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.35 2015/02/20 10:38:30 pacho Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Pacho Ramos <pacho@gentoo.org>
+# dev-libs/libappindicator isn't going to be stabilized
+x11-misc/redshift appindicator
 
 # Ben de Groot <yngwin@gentoo.org>
 # Mask experimental feature on stable. This also needs not yet stable mupdf.
