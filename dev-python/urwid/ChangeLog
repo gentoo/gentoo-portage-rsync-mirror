@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.79 2015/02/17 12:26:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.81 2015/02/20 21:27:06 radhermit Exp $
+
+  20 Feb 2015; Tim Harder <radhermit@gentoo.org> -urwid-1.2.1.ebuild:
+  Remove old.
+
+  20 Feb 2015; Tim Harder <radhermit@gentoo.org> urwid-1.3.0.ebuild:
+  Drop twisted-core test dep as it's py27 only and one of a set of various
+  choices for event loops which only get their tests run if installed and
+  importable.
 
 *urwid-1.3.0 (17 Feb 2015)
 
