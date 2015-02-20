@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-8.0.18.ebuild,v 1.1 2015/02/20 07:25:43 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-8.0.18.ebuild,v 1.2 2015/02/20 11:56:20 fordfrog Exp $
 
-EAPI=4
+EAPI="5"
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -48,7 +48,7 @@ pkg_setup() {
 }
 
 java_prepare() {
-	find -name '*.jar' -type f -exec rm -frv {} + || die
+	find -name '*.jar' -type f -delete -print || die
 
 	epatch "${FILESDIR}/${P}-build.xml.patch"
 

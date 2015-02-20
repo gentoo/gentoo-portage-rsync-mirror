@@ -1,35 +1,34 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdynd/libdynd-0.6.2.ebuild,v 1.1 2014/06/10 20:35:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdynd/libdynd-0.6.6.ebuild,v 1.1 2015/02/20 11:58:03 jlec Exp $
 
 EAPI=5
 
 inherit cmake-utils multilib cuda
 
 # change each release, to avoid git in tree dependency
-DYND_GIT_SHA1=d230bee7000da1c2b1ab171389df70050fa76e71
+DYND_GIT_SHA1=09fb7e5eccadbe1ec49ff4b05fec724939331e6d
 
 DESCRIPTION="C++ dynamic multi-dimensionnal array library with Python exposure"
 HOMEPAGE="https://github.com/ContinuumIO/libdynd"
 SRC_URI="https://github.com/ContinuumIO/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
-
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="cuda doc fftw test"
 
-IUSE="cuda doc test"
-
-RDEPEND="dev-libs/c-blosc:0=
-	cuda? ( x11-drivers/nvidia-drivers dev-util/nvidia-cuda-toolkit )"
+RDEPEND="
+	dev-libs/c-blosc:0=
+	cuda? ( x11-drivers/nvidia-drivers dev-util/nvidia-cuda-toolkit )
+	fftw? ( sci-libs/fftw:3.0 )
+	"
 DEPEND="${RDEPEND}"
 
 DOCS=( README.md )
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.6.0-dont-install-test.patch
-	"${FILESDIR}"/${PN}-0.6.0-respect-libdir.patch
-	"${FILESDIR}"/${PN}-0.6.2-out-of-git-versioning.patch
 )
 
 src_prepare() {

@@ -1,6 +1,11 @@
 # ChangeLog for lxqt-base/lxqt-common
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/ChangeLog,v 1.6 2015/02/10 17:08:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/ChangeLog,v 1.7 2015/02/20 11:44:27 yngwin Exp $
+
+*lxqt-common-0.9.1 (20 Feb 2015)
+
+  20 Feb 2015; Ben de Groot <yngwin@gentoo.org> +lxqt-common-0.9.1.ebuild:
+  version bump (bug #540264)
 
 *lxqt-common-0.9.0 (10 Feb 2015)
 
