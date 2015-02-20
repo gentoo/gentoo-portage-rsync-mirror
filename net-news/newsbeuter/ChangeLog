@@ -1,6 +1,11 @@
 # ChangeLog for net-news/newsbeuter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.54 2014/03/29 06:08:40 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.55 2015/02/20 03:33:21 radhermit Exp $
+
+*newsbeuter-2.9 (20 Feb 2015)
+
+  20 Feb 2015; Tim Harder <radhermit@gentoo.org> +newsbeuter-2.9.ebuild:
+  Version bump.
 
   29 Mar 2014; Agostino Sarubbo <ago@gentoo.org> newsbeuter-2.8.ebuild:
   Stable for x86, wrt bug #503922
