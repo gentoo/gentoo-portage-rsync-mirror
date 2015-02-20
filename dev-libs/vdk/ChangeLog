@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vdk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.33 2015/01/15 11:27:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.34 2015/02/20 09:25:54 zlogene Exp $
+
+  20 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> -vdk-2.4.1.ebuild,
+  vdk-2.5.1.ebuild:
+  ppc/x86 stable wrt bug #526746
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> vdk-2.4.1.ebuild,
   vdk-2.5.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/calculator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.46 2015/01/15 10:14:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.47 2015/02/20 09:21:01 zlogene Exp $
+
+  20 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> -calculator-1.6.36.ebuild,
+  calculator-1.6.43.ebuild:
+  ppc/ppc64 stable wrt bug #518162
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> calculator-1.6.43.ebuild:
   sparc/x86 stable wrt #518162
