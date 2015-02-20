@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/specimen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.21 2012/05/05 08:52:46 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.22 2015/02/20 15:09:07 yngwin Exp $
+
+*specimen-0.5.2_rc3-r1 (20 Feb 2015)
+
+  20 Feb 2015; Ben de Groot <yngwin@gentoo.org>
+  +files/specimen-0.5.2_rc3-underlinking.patch, +specimen-0.5.2_rc3-r1.ebuild,
+  -specimen-0.5.2_rc3.ebuild:
+  Update to EAPI=5 (bug #540800) and fix underlinking with patch by Ted Tanberry
+  (bug #499718)
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> specimen-0.5.2_rc3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -83,4 +91,3 @@
 
   29 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> :
   New ebuild donated by mikael soderholm <gnarlie@ihku.org>, closing bug #55340.
-

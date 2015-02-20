@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3.ebuild,v 1.7 2012/05/05 08:52:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/specimen-0.5.2_rc3-r1.ebuild,v 1.1 2015/02/20 15:09:07 yngwin Exp $
 
-EAPI=1
-inherit eutils
+EAPI=5
+inherit autotools eutils
 
 MY_P=${P/_/-}
 
@@ -30,20 +30,18 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -e "s:-Werror::" -e "s:-O3:${CFLAGS}:" -i configure
-	epatch "${FILESDIR}/${P}-jackmidi.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-jackmidi.patch" \
+		"${FILESDIR}/${P}-underlinking.patch"
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable lash)
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	default
 	dodoc AUTHORS BUGS ChangeLog NEWS PROFILE \
 		README ROADMAP TODO STYLE TODO WISHLIST
 	doicon pixmaps/${PN}.png

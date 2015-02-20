@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/textutils/textutils-112.01.00.ebuild,v 1.1 2014/12/01 13:32:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/textutils/textutils-112.17.00.ebuild,v 1.1 2015/02/20 15:22:36 aballier Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ inherit oasis
 
 DESCRIPTION="Text output utilities"
 HOMEPAGE="https://ocaml.janestreet.com/"
-SRC_URI="http://ocaml.janestreet.com/ocaml-core/${PV%.*}.00/individual/${P}.tar.gz"
+SRC_URI="http://ocaml.janestreet.com/ocaml-core/${PV%.*}/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0/${PV}"
