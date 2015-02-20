@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.1.5-r1.ebuild,v 1.5 2012/05/04 04:45:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/gtkballs-3.1.5-r1.ebuild,v 1.6 2015/02/20 20:54:11 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="An entertaining game based on the old DOS game lines"
@@ -32,8 +32,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog AUTHORS README* TODO NEWS || die "dodoc failed"
+	default
 	newicon gnome-gtkballs.png ${PN}.png
 	make_desktop_entry gtkballs "GTK Balls"
 	prepgamesdirs

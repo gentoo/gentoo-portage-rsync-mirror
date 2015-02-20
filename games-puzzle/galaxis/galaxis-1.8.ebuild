@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/galaxis-1.8.ebuild,v 1.2 2010/11/30 21:07:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/galaxis-1.8.ebuild,v 1.3 2015/02/20 20:35:31 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 DESCRIPTION="A UNIX-hosted, curses-based clone of the nifty little Macintosh freeware game Galaxis"
@@ -15,11 +15,12 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.3"
+RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_install() {
-	dogamesbin galaxis || die "dogamesbin failed"
+	dogamesbin galaxis
 	doman galaxis.6
 	dodoc README
 	prepgamesdirs

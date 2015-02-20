@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnudoku
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/ChangeLog,v 1.13 2012/05/04 04:45:29 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/ChangeLog,v 1.14 2015/02/20 20:50:55 tupone Exp $
+
+  20 Feb 2015; Tupone Alfredo <tupone@gentoo.org> gnudoku-0.93.ebuild:
+  EAPI 5
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gnudoku-0.93.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

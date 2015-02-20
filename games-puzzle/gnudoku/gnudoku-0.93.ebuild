@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/gnudoku-0.93.ebuild,v 1.9 2012/05/04 04:45:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnudoku/gnudoku-0.93.ebuild,v 1.10 2015/02/20 20:50:55 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_PN="GNUDoku"
@@ -32,7 +32,7 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin GNUDoku || die "dogamesbin failed"
+	dogamesbin GNUDoku
 	newicon GNUDoku.png ${PN}.png
 	make_desktop_entry ${MY_PN} ${MY_PN}
 	dodoc ALGORITHM Changelog README TODO

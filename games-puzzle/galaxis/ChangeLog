@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/galaxis
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/ChangeLog,v 1.14 2010/11/30 21:07:55 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/galaxis/ChangeLog,v 1.15 2015/02/20 20:35:31 tupone Exp $
+
+  20 Feb 2015; Tupone Alfredo <tupone@gentoo.org> galaxis-1.8.ebuild:
+  EAPI 5
 
   30 Nov 2010; Markus Meier <maekke@gentoo.org> galaxis-1.8.ebuild:
   amd64/x86 stable, bug #347123

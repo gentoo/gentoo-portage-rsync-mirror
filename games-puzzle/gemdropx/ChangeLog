@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gemdropx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemdropx/ChangeLog,v 1.10 2012/09/04 22:12:24 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemdropx/ChangeLog,v 1.11 2015/02/20 20:40:08 tupone Exp $
+
+  20 Feb 2015; Tupone Alfredo <tupone@gentoo.org> gemdropx-0.9-r1.ebuild:
+  EAPI 5
 
   04 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> gemdropx-0.9-r1.ebuild:
   any mod support will do
