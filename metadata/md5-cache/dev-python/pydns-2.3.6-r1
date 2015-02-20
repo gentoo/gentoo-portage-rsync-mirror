@@ -4,7 +4,7 @@ DESCRIPTION=Python module for DNS (Domain Name Service)
 EAPI=5
 HOMEPAGE=http://pydns.sourceforge.net/ http://pypi.python.org/pypi/pydns
 IUSE=examples python_targets_python2_7 python_targets_pypy
-KEYWORDS=~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86
+KEYWORDS=amd64 ~hppa ~ia64 ~ppc ~sparc ~x86
 LICENSE=CNRI
 RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy? ( virtual/pypy:0= ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_pypy(-)?,-python_single_target_python2_7(-),-python_single_target_pypy(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_pypy )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=2
 SRC_URI=http://downloads.sourceforge.net/project/pydns/pydns/pydns-2.3.6/pydns-2.3.6.tar.gz
 _eclasses_=distutils-r1	b541066a590cd16e650ec8aac9cc9bcb	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	1f5159558051ec8ee1debc3dab9078b8	python-utils-r1	be48ea958600bf248522bd17f1210702	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=b77bf9192aa3837fbeb4d1069b72700b
+_md5_=338f9baf7e59336f59dd5e62f6c9813d

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/rbldnsd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.29 2014/10/04 17:58:35 mjo Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.30 2015/02/20 06:41:36 patrick Exp $
+
+  20 Feb 2015; Patrick Lauer <patrick@gentoo.org> rbldnsd-0.997a-r1.ebuild:
+  Stable for amd64 #533610
 
 *rbldnsd-0.997a-r1 (04 Oct 2014)
 

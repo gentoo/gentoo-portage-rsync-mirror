@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-femon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.36 2014/08/31 11:13:36 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.37 2015/02/20 06:40:04 hd_brummy Exp $
+
+*vdr-femon-2.1.1 (20 Feb 2015)
+
+  20 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-femon-2.1.1.ebuild:
+  bump, taken from vdr-devel overlay to fullfill vdr-2.2.0 depend
 
   31 Aug 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-femon-1.6.7.ebuild,
   -vdr-femon-2.0.0.ebuild, -vdr-femon-2.0.2.ebuild, -vdr-femon-2.0.3.ebuild,

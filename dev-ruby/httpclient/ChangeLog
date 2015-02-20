@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/httpclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.59 2015/02/01 15:30:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.61 2015/02/20 06:55:19 graaff Exp $
+
+  20 Feb 2015; Hans de Graaff <graaff@gentoo.org> httpclient-2.5.3.2.ebuild:
+  Create stable candidate.
+
+  20 Feb 2015; Hans de Graaff <graaff@gentoo.org>
+  -httpclient-2.3.4.1-r1.ebuild:
+  Cleanup.
 
   01 Feb 2015; Hans de Graaff <graaff@gentoo.org> httpclient-2.5.3.3.ebuild:
   Add ruby22.
