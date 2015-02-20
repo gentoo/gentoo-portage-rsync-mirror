@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.42 2014/12/27 19:28:06 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.43 2015/02/20 12:09:50 voyageur Exp $
+
+*gnustep-back-cairo-0.24.0-r1 (20 Feb 2015)
+
+  20 Feb 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-back-cairo-0.24.0-r1.ebuild,
+  +files/gnustep-back-cairo-0.24.0-cairo-scrolling.patch,
+  +files/gnustep-back-cairo-0.24.0-format-security.patch:
+  Fix compilation with format-security, bug #536120 by ago. Also fix a
+  scrolling bug with >=cairo-1.14
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   gnustep-back-cairo-0.24.0.ebuild:
