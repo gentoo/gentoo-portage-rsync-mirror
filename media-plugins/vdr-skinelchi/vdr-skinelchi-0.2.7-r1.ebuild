@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.2.7-r1.ebuild,v 1.1 2013/01/28 18:38:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/vdr-skinelchi-0.2.7-r1.ebuild,v 1.2 2015/02/20 13:43:23 hd_brummy Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ inherit vdr-plugin-2
 
 MY_P=${P/_pre/pre}
 
-DESCRIPTION="Video Disk Recorder - Skin Plugin"
+DESCRIPTION="VDR Skin Plugin: skinelchi"
 HOMEPAGE="http://firefly.vdr-developer.org/skinelchi"
 SRC_URI="http://firefly.vdr-developer.org/skinelchi/${P}.tar.bz2"
 

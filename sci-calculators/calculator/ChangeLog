@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/calculator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.47 2015/02/20 09:21:01 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.48 2015/02/20 13:38:28 jlec Exp $
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> -calculator-1.7.45.ebuild,
+  -calculator-1.7.47.ebuild, metadata.xml:
+  Drop old
 
   20 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> -calculator-1.6.36.ebuild,
   calculator-1.6.43.ebuild:

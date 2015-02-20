@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvguide/vdr-tvguide-1.2.2.ebuild,v 1.1 2014/05/15 18:49:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvguide/vdr-tvguide-1.2.2.ebuild,v 1.2 2015/02/20 13:50:17 hd_brummy Exp $
 
 EAPI=5
 
@@ -10,8 +10,7 @@ VERSION="1701"
 
 inherit vdr-plugin-2
 
-DESCRIPTION="highly customizable 2D EPG viewer plugin for the Video Disc
-Recorder"
+DESCRIPTION="VDR Plugin: highly customizable 2D EPG viewer"
 HOMEPAGE="http://projects.vdr-developer.org/projects/plg-tvguide"
 SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 

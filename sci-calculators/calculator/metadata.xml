@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<maintainer>
-  <email>mabi@gentoo.org</email>
-  <name>Matti Bickel</name>
-</maintainer>
-<longdescription>
+  <herd>sci</herd>
+  <maintainer>
+    <email>mabi@gentoo.org</email>
+    <name>Matti Bickel</name>
+  </maintainer>
+  <longdescription>
   The FOX Calculator is a simple desktop calculator geared toward the
   programmer for the FOX Toolkit. It supports not only a full
   complement scientific functions, but also common operations that

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/vdr-skinnopacity-1.1.1.ebuild,v 1.1 2014/04/15 17:39:21 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/vdr-skinnopacity-1.1.1.ebuild,v 1.2 2015/02/20 13:45:48 hd_brummy Exp $
 
 EAPI=5
 
@@ -9,8 +9,8 @@ VERSION="1671"
 
 inherit vdr-plugin-2
 
-DESCRIPTION="highly customizable native true color skin for the Video Disc
-Recorder"
+DESCRIPTION="VDR Skin Plugin: highly customizable native true color skin for
+the Video Disc Recorder"
 HOMEPAGE="http://projects.vdr-developer.org/projects/skin-nopacity/"
 SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 
