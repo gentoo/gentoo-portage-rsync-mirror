@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.2.0.ebuild,v 1.3 2015/02/19 20:04:40 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.2.0.ebuild,v 1.4 2015/02/20 09:53:47 hd_brummy Exp $
 
 EAPI=5
 
@@ -275,19 +275,11 @@ src_install() {
 	chown -R vdr:vdr "${D}/${CONF_DIR}"
 }
 
-pkg_preinstall() {
-
-	has_version "<${CATEGORY}/${PN}-2.2.0"
-	previous_less_than_2_2_0=$
-}
-
 pkg_postinst() {
 
-	if [[ $previous_less_than_2_2_0 = 0 ]] ; then
-		elog "\n\t---- 15 YEARS ANNIVERSARY EDITON ----\n"
-		elog "\tA lot of thanks to Klaus Schmidinger"
-		elog "\tfor this nice piece of Software...\n"
-	fi
+	elog "\n\t---- 15 YEARS ANNIVERSARY EDITON ----\n"
+	elog "\tA lot of thanks to Klaus Schmidinger"
+	elog "\tfor this nice piece of Software...\n"
 
 	elog "It is a good idea to run vdrplugin-rebuild now."
 

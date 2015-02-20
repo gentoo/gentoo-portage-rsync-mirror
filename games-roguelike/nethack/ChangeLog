@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.36 2015/02/19 14:11:41 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.38 2015/02/20 09:42:15 ulm Exp $
+
+  20 Feb 2015; Ulrich Müller <ulm@gentoo.org> nethack-3.4.3-r2.ebuild:
+  [QA] Mask package, see bug 125902 comment #102. (Double masked by removing
+  KEYWORDS, since nethack users will have the package unmasked.)
 
 *nethack-3.4.3-r2 (19 Feb 2015)
 

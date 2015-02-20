@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/tora
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.111 2014/12/29 02:28:25 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.112 2015/02/20 09:54:23 pinkbyte Exp $
+
+  20 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> -tora-2.1.3-r3.ebuild,
+  -files/tora-2.1.3-desktop.patch, -files/tora-2.1.3-ext-loki.patch,
+  -files/tora-2.1.3-gcc-4.7.patch:
+  Drop old and broken version, bug #522180
 
   29 Dec 2014; Patrick Lauer <patrick@gentoo.org> tora-3.0.0_pre20140929.ebuild:
   Fix postgresql dependency
