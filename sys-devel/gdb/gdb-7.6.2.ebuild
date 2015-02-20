@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.2.ebuild,v 1.12 2014/08/01 09:46:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.2.ebuild,v 1.13 2015/02/20 15:42:58 vapier Exp $
 
 EAPI="3"
 
@@ -71,7 +71,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	[[ -n ${RPM} ]] && rpm_spec_epatch "${WORKDIR}"/gdb.spec
-	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
+	! use vanilla && [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	strip-linguas -u bfd/po opcodes/po
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		# make sure we have a python-config that matches our install,

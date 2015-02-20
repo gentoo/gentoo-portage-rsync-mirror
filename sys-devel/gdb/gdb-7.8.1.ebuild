@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.8.1.ebuild,v 1.3 2015/02/13 21:51:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.8.1.ebuild,v 1.4 2015/02/20 15:42:58 vapier Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -84,7 +84,7 @@ pkg_setup() {
 
 src_prepare() {
 	[[ -n ${RPM} ]] && rpm_spec_epatch "${WORKDIR}"/gdb.spec
-	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
+	! use vanilla && [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	epatch_user
 	strip-linguas -u bfd/po opcodes/po
 }

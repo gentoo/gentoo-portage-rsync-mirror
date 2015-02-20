@@ -1,6 +1,16 @@
 # ChangeLog for dev-ml/sexplib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.33 2014/12/22 09:33:35 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.35 2015/02/20 15:34:20 aballier Exp $
+
+  20 Feb 2015; Alexis Ballier <aballier@gentoo.org> -sexplib-109.20.00.ebuild,
+  -sexplib-109.60.00.ebuild, -sexplib-110.01.00.ebuild,
+  -sexplib-112.01.00.ebuild, -sexplib-112.06.00.ebuild:
+  remove old
+
+*sexplib-112.17.00 (20 Feb 2015)
+
+  20 Feb 2015; Alexis Ballier <aballier@gentoo.org> +sexplib-112.17.00.ebuild:
+  version bump
 
 *sexplib-112.06.00 (22 Dec 2014)
 

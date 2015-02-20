@@ -1,6 +1,19 @@
 # ChangeLog for dev-ml/pa_ounit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_ounit/ChangeLog,v 1.19 2014/11/28 17:43:22 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_ounit/ChangeLog,v 1.22 2015/02/20 15:40:16 aballier Exp $
+
+  20 Feb 2015; Alexis Ballier <aballier@gentoo.org> pa_ounit-112.17.00.ebuild:
+  fix deps
+
+  20 Feb 2015; Alexis Ballier <aballier@gentoo.org> -pa_ounit-109.34.00.ebuild,
+  -pa_ounit-109.36.00.ebuild, -pa_ounit-109.53.02.ebuild,
+  -pa_ounit-111.28.00.ebuild:
+  remove old
+
+*pa_ounit-112.17.00 (20 Feb 2015)
+
+  20 Feb 2015; Alexis Ballier <aballier@gentoo.org> +pa_ounit-112.17.00.ebuild:
+  version bump
 
   28 Nov 2014; Alexis Ballier <aballier@gentoo.org> pa_ounit-111.28.00.ebuild:
   update deps for ocaml 4.02

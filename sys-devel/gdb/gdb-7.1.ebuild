@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.1.ebuild,v 1.4 2013/02/09 04:38:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.1.ebuild,v 1.5 2015/02/20 15:42:58 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
+	! use vanilla && [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	strip-linguas -u bfd/po opcodes/po
 }
 

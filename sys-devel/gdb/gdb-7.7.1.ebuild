@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.7.1.ebuild,v 1.11 2014/11/11 10:52:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.7.1.ebuild,v 1.12 2015/02/20 15:42:58 vapier Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -77,7 +77,7 @@ pkg_setup() {
 
 src_prepare() {
 	[[ -n ${RPM} ]] && rpm_spec_epatch "${WORKDIR}"/gdb.spec
-	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
+	! use vanilla && [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	epatch_user
 	strip-linguas -u bfd/po opcodes/po
 	if [[ ${CHOST} == *-darwin* ]] ; then
