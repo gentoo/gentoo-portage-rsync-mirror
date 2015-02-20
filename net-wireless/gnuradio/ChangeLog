@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnuradio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.62 2015/02/17 16:07:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/ChangeLog,v 1.63 2015/02/20 18:35:04 zerochaos Exp $
+
+  20 Feb 2015; Rick Farina <zerochaos@gentoo.org> gnuradio-3.7.6.1.ebuild,
+  gnuradio-9999.ebuild:
+  workaround for bug #540658, adjust dep for non-broken version of qwt:6
 
 *gnuradio-3.7.6.1 (17 Feb 2015)
 

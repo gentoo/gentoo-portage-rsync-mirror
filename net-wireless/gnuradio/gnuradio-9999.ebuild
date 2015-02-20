@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.28 2015/01/21 12:32:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.29 2015/02/20 18:35:04 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -72,7 +72,7 @@ RDEPEND="${PYTHON_DEPS}
 		>=dev-python/pyqwt-5.2:5[${PYTHON_USEDEP}]
 		>=dev-qt/qtcore-4.4:4
 		>=dev-qt/qtgui-4.4:4
-		x11-libs/qwt:6
+		<x11-libs/qwt-6.1.2-r1:6
 	)
 	sdl? ( >=media-libs/libsdl-1.2.0 )
 	uhd? ( >=net-wireless/uhd-3.4.3-r1:=[${PYTHON_USEDEP}] )

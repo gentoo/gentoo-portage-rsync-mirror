@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-mga
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.126 2014/04/19 17:47:26 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.127 2015/02/20 18:56:11 mattst88 Exp $
+
+*xf86-video-mga-1.6.4 (20 Feb 2015)
+
+  20 Feb 2015; Matt Turner <mattst88@gentoo.org> +xf86-video-mga-1.6.4.ebuild:
+  Version bump to 1.6.4, bug 540664.
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xf86-video-mga-1.6.3.ebuild:
   Stable for sparc, wrt bug #500368

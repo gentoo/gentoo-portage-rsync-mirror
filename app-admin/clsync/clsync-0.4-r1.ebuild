@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/clsync/clsync-0.4.ebuild,v 1.1 2015/02/11 03:39:24 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/clsync/clsync-0.4-r1.ebuild,v 1.1 2015/02/20 18:36:49 bircoph Exp $
 
 EAPI=5
 
@@ -54,7 +54,9 @@ src_prepare() {
 		"${FILESDIR}/${P}-handler_path.patch" \
 		"${FILESDIR}/${P}-hl_locks.patch" \
 		"${FILESDIR}/${P}-unset_env.patch" \
-		"${FILESDIR}/${P}-unused-deps.patch"
+		"${FILESDIR}/${P}-unused-deps.patch" \
+		"${FILESDIR}/${P}-retries-arg.patch" \
+		"${FILESDIR}/${P}-strtol.patch"
 	eautoreconf
 }
 
