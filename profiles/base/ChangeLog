@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.771 2015/02/18 07:41:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.772 2015/02/20 01:33:38 zmedico Exp $
+
+  20 Feb 2015; Zac Medico <zmedico@gentoo.org> make.defaults:
+  Use UNINSTALL_IGNORE to protect /var/{run,lock} symlinks for bug 519620.
 
   18 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask cairo[openvg], experimental backend, no longer supported with
