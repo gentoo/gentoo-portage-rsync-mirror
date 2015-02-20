@@ -1,6 +1,17 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.38 2015/02/20 09:42:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.40 2015/02/20 16:29:51 swift Exp $
+
+  20 Feb 2015; Sven Vermeulen <swift@gentoo.org> -nethack-3.4.3-r1.ebuild,
+  -nethack-3.4.3-r2.ebuild:
+  Dropping vulnerable nethack (-r1) and older ebuild (-r2) that did not comply
+  with the policy on gamestats
+
+*nethack-3.4.3-r3 (20 Feb 2015)
+
+  20 Feb 2015; Sven Vermeulen <swift@gentoo.org> +nethack-3.4.3-r3.ebuild:
+  Update ebuild to reflect QA policy on games and gamestats, with thanks to Luis
+  "aranea" Ressel
 
   20 Feb 2015; Ulrich Müller <ulm@gentoo.org> nethack-3.4.3-r2.ebuild:
   [QA] Mask package, see bug 125902 comment #102. (Double masked by removing

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.372 2015/01/02 12:17:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.373 2015/02/20 16:05:58 zlogene Exp $
+
+  20 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> db-4.8.30-r2.ebuild:
+  ia64 stable wrt bug #525282
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> db-4.8.30-r2.ebuild:
   Stable for sparc, wrt bug #525282

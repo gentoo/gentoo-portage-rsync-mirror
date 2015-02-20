@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.159 2015/02/17 20:15:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.160 2015/02/20 16:13:22 floppym Exp $
 
 EAPI=5
 
@@ -99,7 +99,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
-	terminal? ( media-fonts/unifont )
+	terminal? ( media-fonts/unifont[utils(+)] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
 #if LIVE
