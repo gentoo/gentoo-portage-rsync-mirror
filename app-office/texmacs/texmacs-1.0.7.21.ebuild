@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.21.ebuild,v 1.6 2014/08/10 17:35:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.21.ebuild,v 1.7 2015/02/20 08:42:56 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ KEYWORDS="~alpha amd64 ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	app-text/ghostscript-gpl
-	dev-scheme/guile[deprecated]
+	dev-scheme/guile:12[deprecated]
 	media-libs/freetype
 	x11-apps/xmodmap
 	x11-libs/libXext

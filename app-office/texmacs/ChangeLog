@@ -1,6 +1,20 @@
 # ChangeLog for app-office/texmacs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.119 2014/10/20 14:49:18 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.121 2015/02/20 08:54:35 jlec Exp $
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> texmacs-1.99.2-r1.ebuild:
+  Rename configure.in
+
+*texmacs-1.99.2-r1 (20 Feb 2015)
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org>
+  +files/texmacs-1.99.2-desktop.patch, +files/texmacs-1.99.2-norpath.patch,
+  +files/texmacs-1.99.2-underlinking.patch, +texmacs-1.99.2-r1.ebuild,
+  -texmacs-1.0.7.2-r1.ebuild, texmacs-1.0.7.21.ebuild, texmacs-1.99.1.ebuild,
+  texmacs-1.99.2.ebuild:
+  Bump to EAPI=5, drop rpath due to security implications, fix desktop file, do
+  not double install desktop files, fix underlinking, #540600; drop old fixes
+  #464228 and #486908
 
 *texmacs-1.99.2 (20 Oct 2014)
 

@@ -3,7 +3,10 @@
 <pkgmetadata>
   <herd>qt</herd>
   <use>
-    <flag name='fitz'>Use experimental fitz rendering instead of poppler</flag>
+    <flag name='fitz'>
+      Use experimental fitz rendering, provided by <pkg>app-text/mupdf</pkg>,
+      instead of poppler
+    </flag>
     <flag name='synctex'>Add support for searching TeX sources</flag>
   </use>
 </pkgmetadata>

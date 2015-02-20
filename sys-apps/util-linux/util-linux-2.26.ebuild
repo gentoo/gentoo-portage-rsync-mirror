@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.26.ebuild,v 1.1 2015/02/19 17:51:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.26.ebuild,v 1.2 2015/02/20 09:01:07 polynomial-c Exp $
 
 EAPI="4"
 
@@ -147,7 +147,7 @@ multilib_src_install() {
 		emake DESTDIR="${D}" install-usrlib_execLTLIBRARIES \
 			install-pkgconfigDATA install-uuidincHEADERS \
 			install-nodist_blkidincHEADERS install-nodist_mountincHEADERS \
-			install-nodist_smartcolsincHEADERS
+			install-nodist_smartcolsincHEADERS install-nodist_fdiskincHEADERS
 	fi
 
 	if multilib_is_native_abi; then

@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.33 2015/02/12 23:56:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.34 2015/02/20 08:47:25 yngwin Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Ben de Groot <yngwin@gentoo.org>
+# Mask experimental feature on stable. This also needs not yet stable mupdf.
+app-text/qpdfview fitz
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (12 Feb 2015)
 # Pulls in way too many unstable sci packages
@@ -67,7 +71,7 @@ app-emulation/qemu glusterfs
 
 # Ian Delaney <idella4@gentoo.org> (09 Dec 2013)
 # subsequent to the total inaction of the maintainer of
-# ocaml to honour / respond in any way to 
+# ocaml to honour / respond in any way to
 # Bug #486076, ocaml masked to allow xen to once again
 # become a stabilisable package
 app-emulation/xen-tools ocaml

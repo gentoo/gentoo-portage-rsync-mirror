@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.489 2015/02/19 17:51:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.490 2015/02/20 09:01:07 polynomial-c Exp $
+
+  20 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> util-linux-2.26.ebuild,
+  util-linux-9999.ebuild:
+  Fix header files mismatch between ABIs (bug #540702).
 
 *util-linux-2.26 (19 Feb 2015)
 

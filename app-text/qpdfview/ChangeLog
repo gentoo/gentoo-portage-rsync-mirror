@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.64 2015/02/10 06:26:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.65 2015/02/20 08:39:29 yngwin Exp $
+
+  20 Feb 2015; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Improve USE=fitz description (bug #540450)
 
   10 Feb 2015; Ben de Groot <yngwin@gentoo.org> qpdfview-0.4.13.ebuild:
   Up minimal qtcore:4 version for lrelease fix (bug #532962 comment#11)

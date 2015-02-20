@@ -1,8 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.53-r2.ebuild,v 1.1 2014/12/28 22:24:40 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/webapp-config-1.53-r2.ebuild,v 1.2 2015/02/20 08:51:20 patrick Exp $
 
 EAPI="5"
+
+RESTRICT="test"
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 

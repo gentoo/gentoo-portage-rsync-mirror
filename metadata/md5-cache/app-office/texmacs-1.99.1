@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install postinst postrm prepare
-DEPEND=dev-scheme/guile[deprecated] virtual/latex-base app-text/ghostscript-gpl media-libs/freetype x11-libs/libXext x11-apps/xmodmap qt4? ( dev-qt/qtgui:4 ) imlib? ( media-libs/imlib2 ) jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) ) svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) ) netpbm? ( media-libs/netpbm ) spell? ( app-text/aspell ) x11-proto/xproto !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
+DEPEND=app-text/ghostscript-gpl dev-scheme/guile:12[deprecated] media-libs/freetype x11-apps/xmodmap x11-libs/libXext virtual/latex-base imlib? ( media-libs/imlib2 ) jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) ) netpbm? ( media-libs/netpbm ) qt4? ( dev-qt/qtgui:4 ) spell? ( app-text/aspell ) svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) ) x11-proto/xproto !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-apps/sed-4
 DESCRIPTION=Wysiwyg text processor with high-quality maths
 EAPI=4
 HOMEPAGE=http://www.texmacs.org/
 IUSE=imlib jpeg netpbm pdf qt4 svg spell
 KEYWORDS=alpha ~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux
 LICENSE=GPL-3
-RDEPEND=dev-scheme/guile[deprecated] virtual/latex-base app-text/ghostscript-gpl media-libs/freetype x11-libs/libXext x11-apps/xmodmap qt4? ( dev-qt/qtgui:4 ) imlib? ( media-libs/imlib2 ) jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) ) svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) ) netpbm? ( media-libs/netpbm ) spell? ( app-text/aspell )
+RDEPEND=app-text/ghostscript-gpl dev-scheme/guile:12[deprecated] media-libs/freetype x11-apps/xmodmap x11-libs/libXext virtual/latex-base imlib? ( media-libs/imlib2 ) jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) ) netpbm? ( media-libs/netpbm ) qt4? ( dev-qt/qtgui:4 ) spell? ( app-text/aspell ) svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
 SLOT=0
 SRC_URI=ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/TeXmacs-1.99.1-src.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=69d8bdc7dc83e36f71d8725ef1dd2c2b
+_md5_=13b5cdec02f85c16d20cfff1a3dce4c8

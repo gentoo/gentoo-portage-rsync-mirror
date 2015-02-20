@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.99.1.ebuild,v 1.4 2015/02/20 08:42:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.99.2-r1.ebuild,v 1.2 2015/02/20 08:54:35 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils fdo-mime gnome2-utils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="imlib jpeg netpbm pdf qt4 svg spell"
-KEYWORDS="alpha ~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	app-text/ghostscript-gpl
@@ -36,26 +36,36 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-src_prepare() {
+PATCHES=(
 	# respect LDFLAGS, bug #338459
-	epatch "${FILESDIR}"/${PN}-plugins-1.patch
+	"${FILESDIR}"/${PN}-plugins-1.patch
 
 	# dont update mime and desktop databases and icon cache
-	epatch "${FILESDIR}"/${PN}-updates.patch
+	"${FILESDIR}"/${PN}-updates.patch
+
+	# underlinking 540600
+	"${FILESDIR}"/${P}-underlinking.patch
+
+	# scanelf: rpath_security_checks(): Security problem NULL DT_RUNPATH
+	"${FILESDIR}"/${P}-norpath.patch
+
+	"${FILESDIR}"/${P}-desktop.patch
+)
+
+src_prepare() {
+	epatch ${PATCHES[@]}
+
+	mv configure.{in,ac} || die
 
 	eautoreconf
 }
 
 src_configure() {
-	econf --enable-optimize="${CXXFLAGS}" \
+	econf \
+		--enable-optimize="${CXXFLAGS}" \
 		$(use_with imlib imlib2) \
 		$(use_enable qt4 qt) \
 		$(use_enable pdf pdf-renderer)
-}
-
-src_install() {
-	default
-	domenu "${FILESDIR}"/TeXmacs.desktop
 }
 
 pkg_postinst() {

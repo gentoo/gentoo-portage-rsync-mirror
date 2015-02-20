@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.99.2.ebuild,v 1.1 2014/10/20 14:49:18 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.99.2.ebuild,v 1.2 2015/02/20 08:42:56 jlec Exp $
 
 EAPI=4
 
@@ -17,18 +17,20 @@ SLOT="0"
 IUSE="imlib jpeg netpbm pdf qt4 svg spell"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 
-RDEPEND="dev-scheme/guile[deprecated]
-	virtual/latex-base
+RDEPEND="
 	app-text/ghostscript-gpl
+	dev-scheme/guile:12[deprecated]
 	media-libs/freetype
-	x11-libs/libXext
 	x11-apps/xmodmap
-	qt4? ( dev-qt/qtgui:4 )
+	x11-libs/libXext
+	virtual/latex-base
 	imlib? ( media-libs/imlib2 )
 	jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) )
-	svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
 	netpbm? ( media-libs/netpbm )
-	spell? ( app-text/aspell )"
+	qt4? ( dev-qt/qtgui:4 )
+	spell? ( app-text/aspell )
+	svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
+"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
