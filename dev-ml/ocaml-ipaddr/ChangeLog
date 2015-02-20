@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocaml-ipaddr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ipaddr/ChangeLog,v 1.1 2014/12/01 09:59:25 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ipaddr/ChangeLog,v 1.2 2015/02/20 17:50:30 aballier Exp $
+
+*ocaml-ipaddr-2.6.1 (20 Feb 2015)
+
+  20 Feb 2015; Alexis Ballier <aballier@gentoo.org> +ocaml-ipaddr-2.6.1.ebuild:
+  version bump
 
 *ocaml-ipaddr-2.5.0 (01 Dec 2014)
 
