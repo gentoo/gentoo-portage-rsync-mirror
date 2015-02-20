@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0-r1.ebuild,v 1.5 2015/02/19 08:53:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0-r1.ebuild,v 1.6 2015/02/20 11:17:53 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ inherit xorg-2 autotools-utils toolchain-funcs
 DESCRIPTION="OpenGL based 2D rendering acceleration library"
 SRC_URI="${XORG_BASE_INDIVIDUAL_URI}/${XORG_MODULE}${PN}-egl-${PV}.tar.bz2"
 
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="gles xv"
 
 RDEPEND=">=x11-base/xorg-server-1.10

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.51 2015/02/19 08:51:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.52 2015/02/20 11:16:32 ago Exp $
+
+  20 Feb 2015; Agostino Sarubbo <ago@gentoo.org> wayland-1.6.1.ebuild:
+  Stable for ppc, wrt bug #530652
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> wayland-1.6.1.ebuild:
   Stable for x86, wrt bug #530652

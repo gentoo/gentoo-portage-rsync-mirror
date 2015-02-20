@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/storm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.17 2015/01/23 05:06:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.18 2015/02/20 11:30:34 idella4 Exp $
+
+*storm-0.20-r1 (20 Feb 2015)
+
+  20 Feb 2015; Ian Delaney <idella4@gentoo.org> +storm-0.20-r1.ebuild,
+  -storm-0.20.ebuild:
+  revbump; convert -> distutils-r1, rm old
 
   23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -storm-0.18.ebuild,
   -storm-0.19.ebuild:

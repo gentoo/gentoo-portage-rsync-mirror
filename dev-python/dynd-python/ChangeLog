@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dynd-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dynd-python/ChangeLog,v 1.4 2014/10/29 15:39:21 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dynd-python/ChangeLog,v 1.5 2015/02/20 11:29:47 jlec Exp $
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> -dynd-python-0.6.0.ebuild,
+  -dynd-python-0.6.2.ebuild:
+  Drop old
 
 *dynd-python-0.6.5 (29 Oct 2014)
 

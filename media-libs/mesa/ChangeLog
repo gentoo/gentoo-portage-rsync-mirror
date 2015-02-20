@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.608 2015/02/19 08:51:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.609 2015/02/20 11:16:40 ago Exp $
+
+  20 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mesa-10.3.7-r1.ebuild:
+  Stable for ppc, wrt bug #530652
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mesa-10.3.7-r1.ebuild:
   Stable for x86, wrt bug #530652

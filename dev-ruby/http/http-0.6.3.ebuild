@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/http-0.6.3.ebuild,v 1.3 2015/02/20 07:02:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http/http-0.6.3.ebuild,v 1.5 2015/02/20 11:23:08 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/tarcieri/http"
 
 LICENSE="MIT"
 SLOT="0.6"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/http_parser_rb-0.6.0 =dev-ruby/http_parser_rb-0.6*"

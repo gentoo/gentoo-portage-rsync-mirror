@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rest-client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.26 2015/02/20 06:45:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.28 2015/02/20 11:23:28 ago Exp $
+
+  20 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rest-client-1.7.3.ebuild:
+  Stable for x86, wrt bug #540254
+
+  20 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rest-client-1.7.3.ebuild:
+  Stable for amd64, wrt bug #540254
 
 *rest-client-1.7.3-r1 (20 Feb 2015)
 

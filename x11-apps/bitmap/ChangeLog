@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/bitmap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.70 2015/02/19 08:51:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/bitmap/ChangeLog,v 1.71 2015/02/20 11:16:46 ago Exp $
+
+  20 Feb 2015; Agostino Sarubbo <ago@gentoo.org> bitmap-1.0.8.ebuild:
+  Stable for ppc, wrt bug #530652
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> bitmap-1.0.8.ebuild:
   Stable for x86, wrt bug #530652
