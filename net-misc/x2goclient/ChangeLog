@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/x2goclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.37 2015/02/19 14:05:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.38 2015/02/20 12:57:37 voyageur Exp $
+
+  20 Feb 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goclient-4.0.2.0.ebuild, x2goclient-4.0.3.1.ebuild,
+  x2goclient-4.0.3.2.ebuild:
+  Add missing x11-libs/libXpm dep, thanks Stefan Junker <code@stefanjunker.de>
+  in bug #538114
 
 *x2goclient-4.0.3.2 (19 Feb 2015)
 

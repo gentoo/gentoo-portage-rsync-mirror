@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-dvbhddevice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvbhddevice/ChangeLog,v 1.6 2015/02/11 15:43:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvbhddevice/ChangeLog,v 1.7 2015/02/20 12:46:49 hd_brummy Exp $
+
+*vdr-dvbhddevice-2.1.6_p20141116-r1 (20 Feb 2015)
+
+  20 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-dvbhddevice-2.1.6_p20141116-r1.ebuild:
+  new snapshot 2014/11/16
 
 *vdr-dvbhddevice-2.1.3_p20140115-r1 (11 Feb 2015)
 

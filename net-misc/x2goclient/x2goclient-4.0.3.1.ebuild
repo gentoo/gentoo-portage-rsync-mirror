@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-4.0.3.1.ebuild,v 1.3 2015/01/26 10:40:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-4.0.3.1.ebuild,v 1.4 2015/02/20 12:57:37 voyageur Exp $
 
 EAPI=5
 inherit eutils nsplugins qt4-r2
@@ -19,6 +19,7 @@ DEPEND=">=net-libs/libssh-0.6.0_rc1
 	dev-qt/qtcore:4[ssl]
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
+	x11-libs/libXpm
 	ldap? ( net-nds/openldap )"
 RDEPEND="${DEPEND}
 	net-misc/nx"

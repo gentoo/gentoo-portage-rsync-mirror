@@ -11,24 +11,23 @@
 		<flag name="bidi">fribid support, for languages, written from right to left</flag>
 		<flag name="ddepgentry">remove duplicate EPG entries</flag>
 		<flag name="dvlvidprefer">controls video-dir choice on recording</flag>
-		<flag name="graphtft">support for grapftft plugin up from vdr-graphtft-0.1.7</flag>
+		<flag name="graphtft">support for <pkg>media-plugins/vdr-grapftft</pkg>plugin up from vdr-graphtft-0.1.7</flag>
 		<flag name="html">Install HTML documentation</flag>
 		<flag name="jumpplay">Enables automatic jumping over cut marks while watching a recording</flag>
 		<flag name="jumpingseconds">skip seconds in played records</flag>
 		<flag name="kbd">enable keyboard support as remote device</flag>
 		<flag name="mainmenuhooks">Allows to replace main menu entries by some special plugins (like epgsearch, extrecmenu, ...)</flag>
-		<flag name="menuorg">Enables support for the menuorg-plugin</flag>
+		<flag name="menuorg">Enables support for the <pkg>media-plugins/vdr-menuorg</pkg></flag>
 		<flag name="menuselection">adds support for menu hotkeys of double digits</flag>
 		<flag name="naludump">Removes NALU fill data from h.264-Streams of TS files</flag>
-		<flag name="permashift">permanent timeshift by recording live TV on hard disk, need plugin vdr-permashift</flag>
-		<flag name="permashift_v1">permanent timeshift by recording live TV on RAM, need plugin >=vdr-permashift-1</flag>
-		<flag name="pinplugin">Support for pin plugin</flag>
+		<flag name="permashift">permanent timeshift by recording live TV on hard disk, need plugin <pkg>media-plugins/vdr-vdr-permashift</pkg></flag>
+		<flag name="permashift_v1">permanent timeshift by recording live TV on RAM, need plugin >=mediaplugins/vdr-permashift-1</flag>
+		<flag name="pinplugin">Support for <pkg>media-plugins/vdr-pin</pkg></flag>
 		<flag name="resumereset">rreset resume of EOF</flag>
-		<flag name="rotor">Enable support for plugin vdr-rotor for dish-positioner.</flag>
-		<flag name="setup">Enable support for the plugin vdr-setup</flag>
-		<flag name="ttxtsubs">support for ttxtsubs plugin</flag>
+		<flag name="rotor">Enable support for plugin <pkg>media-plugins/vdr-rotor</pkg> for dish-positioner.</flag>
+		<flag name="ttxtsubs">support for <pkg>media-pugins/vdr-ttxtsubs</pkg></flag>
 		<flag name="vasarajanauloja">replacement for the liemikuutio patch, adds some nice must haves features</flag>
 		<flag name="wareagleicon">Replace original icon set in menu</flag>
-		<flag name="yaepg">Enables support for the plugin vdr-yaepg</flag>
+		<flag name="yaepg">Enables support for the <pkg>media-plugins/vdr-yaepg</pkg></flag>
 	</use>
 </pkgmetadata>
