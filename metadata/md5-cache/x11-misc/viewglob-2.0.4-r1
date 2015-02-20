@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst prepare test
+DEPEND=dev-libs/glib:2 x11-libs/gtk+:2 || ( app-shells/bash:* app-shells/zsh ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=Graphical display of directories and globs referenced at the shell prompt
+EAPI=5
+HOMEPAGE=http://viewglob.sourceforge.net/
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/glib:2 x11-libs/gtk+:2 || ( app-shells/bash:* app-shells/zsh )
+SLOT=0
+SRC_URI=mirror://sourceforge/viewglob/viewglob-2.0.4.tar.gz
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=b8a8c9b1730d69a251d977e6f4d71e62

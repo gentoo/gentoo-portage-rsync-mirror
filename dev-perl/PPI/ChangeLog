@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PPI
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.49 2014/12/07 19:19:16 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.50 2015/02/20 14:35:22 zlogene Exp $
+
+*PPI-1.220 (20 Feb 2015)
+
+  20 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> +PPI-1.220.ebuild:
+  Version bump
 
   07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> PPI-1.215.0-r1.ebuild:
   Add ~ppc64 keyword

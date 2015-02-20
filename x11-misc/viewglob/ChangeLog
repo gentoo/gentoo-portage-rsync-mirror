@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/viewglob
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.18 2012/05/05 04:53:54 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.20 2015/02/20 14:56:42 jlec Exp $
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> viewglob-2.0.4-r1.ebuild,
+  viewglob-2.0.4.ebuild:
+  fix SLOT operators
+
+*viewglob-2.0.4-r1 (20 Feb 2015)
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> +files/README.gentoo,
+  +files/viewglob-2.0.4-underlinking.patch, +viewglob-2.0.4-r1.ebuild,
+  metadata.xml:
+  Bump to EAPI=5 and fix underlinking problem, #512478 & #540802
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> viewglob-2.0.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -61,4 +72,3 @@
   +viewglob-2.0.2.ebuild:
   Initial import, resolves bug 63484. Thanks to Stephen Bach
   <sjbach@users.sourceforge.net> for the submission.
-

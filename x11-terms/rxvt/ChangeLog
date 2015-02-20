@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.70 2014/08/30 12:07:41 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.71 2015/02/20 14:41:26 mrueg Exp $
+
+  20 Feb 2015; Manuel Rüger <mrueg@gentoo.org> rxvt-2.7.10-r4.ebuild:
+  Bump EAPI.
 
   30 Aug 2014; Michał Górny <mgorny@gentoo.org> rxvt-2.7.10-r4.ebuild:
   Replace einstall with emake install, bug #521694.

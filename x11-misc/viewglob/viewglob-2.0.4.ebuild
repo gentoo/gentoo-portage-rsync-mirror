@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.9 2012/05/05 04:53:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/viewglob-2.0.4.ebuild,v 1.10 2015/02/20 14:56:42 jlec Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="
-	dev-libs/glib
+	dev-libs/glib:2
 	x11-libs/gtk+:2
 	|| ( app-shells/bash app-shells/zsh )"
 DEPEND="${RDEPEND}

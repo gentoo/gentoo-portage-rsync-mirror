@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r1.ebuild,v 1.13 2015/02/15 06:46:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-4.1.0-r2.ebuild,v 1.1 2015/02/20 14:46:15 jlec Exp $
 
-EAPI=1
+EAPI=5
 
 inherit eutils fortran-2 multilib toolchain-funcs versionator
 
@@ -36,9 +36,10 @@ CDEPEND="
 	gfortran? ( =sys-devel/gcc-4.2* )
 	!gfortran? ( !ifc? ( =sys-devel/gcc-4.2* ) )"
 
-DEPEND="test? (	${CDEPEND} )
+DEPEND="
 	app-admin/eselect-blas
-	app-admin/eselect-lapack"
+	app-admin/eselect-lapack
+	test? (	${CDEPEND} )"
 
 RDEPEND="${CDEPEND}
 	app-admin/eselect-blas
@@ -68,7 +69,6 @@ get_fcomp() {
 }
 
 pkg_setup() {
-
 	if use test; then
 		# work around incomplete fortran eclass
 		if use gfortran &&
@@ -111,8 +111,7 @@ src_test() {
 				ACMLDIR="${S}"/${fdir} \
 				F77=$(tc-getFC) \
 				CC="$(tc-getCC)" \
-				CPLUSPLUS="$(tc-getCXX)" \
-				|| die "emake test in ${fdir}/examples/${d} failed"
+				CPLUSPLUS="$(tc-getCXX)"
 			emake clean
 		done
 	done
@@ -163,7 +162,7 @@ src_install() {
 				"${FILESDIR}"/${x}.pc.in > ${x}.pc \
 				|| die "sed ${x}.pc failed"
 			insinto ${acmldir}/lib
-			doins ${x}.pc || die "doins ${x}.pc failed"
+			doins ${x}.pc
 
 			# eselect files
 			cat > eselect.${prof}.${x} <<-EOF
@@ -177,7 +176,7 @@ src_install() {
 	done
 
 	echo "LDPATH=${instdir}/${ACML_DEFAULT_DIR}/lib" > 35acml
-	doenvd "${S}"/35acml || die "doenvd failed"
+	doenvd "${S}"/35acml
 	use doc || rm -rf "${S}"/Doc/acml.pdf "${S}"/Doc/html
 	cp -pPR "${S}"/Doc "${D}"${instdir} || die "copy doc failed"
 }
