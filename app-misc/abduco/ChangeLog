@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/abduco
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abduco/ChangeLog,v 1.4 2014/11/24 21:28:52 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abduco/ChangeLog,v 1.5 2015/02/20 00:24:17 xmw Exp $
+
+*abduco-0.3 (20 Feb 2015)
+
+  20 Feb 2015; Michael Weber <xmw@gentoo.org> +abduco-0.3.ebuild,
+  -abduco-0.1.ebuild:
+  Version bump bu lorem_ipsum
 
 *abduco-0.2 (24 Nov 2014)
 
