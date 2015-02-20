@@ -13,14 +13,18 @@ SRC_URI="http://delta.affinix.com/download/${PN}/${PV%.*}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
-IUSE="aqua debug doc examples gpg"
+IUSE="aqua debug doc examples gpg logger openssl pkcs11 sasl"
 RESTRICT="test"
 
 DEPEND="dev-qt/qtcore:4[debug?]"
 RDEPEND="${DEPEND}
 	!<app-crypt/qca-1.0-r3:0"
 
-PDEPEND="gpg? ( app-crypt/qca-gnupg )"
+PDEPEND="gpg? ( app-crypt/qca-gnupg )
+	logger? ( app-crypt/qca-logger )
+	openssl? ( app-crypt/qca-ossl )
+	pkcs11? ( app-crypt/qca-pkcs11 )
+	sasl? ( app-crypt/qca-sasl )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.2-pcfilespath.patch \
