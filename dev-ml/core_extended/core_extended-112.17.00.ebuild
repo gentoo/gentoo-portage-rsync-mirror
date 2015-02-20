@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-109.35.00.ebuild,v 1.1 2013/08/01 14:52:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_extended/core_extended-112.17.00.ebuild,v 1.1 2015/02/20 17:28:26 aballier Exp $
 
 EAPI="5"
 
@@ -11,16 +11,14 @@ inherit oasis
 
 DESCRIPTION="Jane Street's alternative to the standard library"
 HOMEPAGE="http://www.janestreet.com/ocaml"
-SRC_URI="http://ocaml.janestreet.com/ocaml-core/${PV}/individual/${P}.tar.gz
-	http://dev.gentoo.org/~aballier/distfiles/${P}.tar.gz"
+SRC_URI="http://ocaml.janestreet.com/ocaml-core/${PV%.*}/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="dev-ml/pcre-ocaml:=
-	dev-ml/res:=
+RDEPEND="
 	>=dev-ml/core-${PV}:=
 	>=dev-ml/sexplib-109.20.00:=
 	>=dev-ml/bin-prot-109.15.00:=
@@ -30,6 +28,10 @@ RDEPEND="dev-ml/pcre-ocaml:=
 	>=dev-ml/custom_printf-109.27.00:=
 	>=dev-ml/pipebang-109.15.00:=
 	>=dev-ml/textutils-109.35.00:=
+	dev-ml/pa_test:=
+	dev-ml/re2:=
+	dev-ml/pa_bench:=
+	dev-ml/camlp4:=
 	"
 DEPEND="${RDEPEND}
 	test? ( >=dev-ml/ounit-1.1.0 )"

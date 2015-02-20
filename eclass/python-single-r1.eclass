@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.34 2015/02/20 08:14:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.35 2015/02/20 17:02:56 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -378,6 +378,8 @@ python_gen_cond_dep() {
 # the Python build environment up for it.
 python_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	_python_check_EAPI
 
 	unset EPYTHON
 

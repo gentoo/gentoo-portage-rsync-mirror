@@ -10,5 +10,5 @@ RDEPEND=xen? ( >=app-emulation/xen-3.0 ) kvm? ( app-emulation/qemu ) lxc? ( app-
 REQUIRED_USE=|| ( kvm xen lxc )
 SLOT=0
 SRC_URI=http://downloads.ganeti.org/releases/2.10/ganeti-2.10.5.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	283b336169057c267cd9b9a0eb3bf431	python-utils-r1	b0cdacd7e86a4d61e0e7929439bebe21	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	b5d0bd7779944ddbcb9942199d4b5a8f	python-utils-r1	c19e9fbc2958a6fd61860fce01a260a5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=337f731fa6aa168522dba5ec60ed64e0

@@ -10,5 +10,5 @@ RDEPEND=bazaar? ( dev-vcs/bzr ) cvs? ( dev-vcs/cvs ) darcs? ( dev-vcs/darcs ) gi
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/layman/layman-2.0.0.tar.gz
-_eclasses_=distutils-r1	d62534a5300e7050d568c41835fac382	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	prefix	21058c21ca48453d771df15500873ede	python-r1	61526d0c353cee48350927bde616febe	python-utils-r1	b0cdacd7e86a4d61e0e7929439bebe21	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=distutils-r1	d62534a5300e7050d568c41835fac382	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	prefix	21058c21ca48453d771df15500873ede	python-r1	4ca7afed31b0164839c70c1c20096342	python-utils-r1	c19e9fbc2958a6fd61860fce01a260a5	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=79205e38630815eb6654fe35ddc0e06c
