@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/numactl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.38 2014/11/12 14:56:05 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.39 2015/02/20 02:47:47 ottxor Exp $
+
+*numactl-2.0.10-r1 (20 Feb 2015)
+
+  20 Feb 2015; Christoph Junghans <ottxor@gentoo.org> +numactl-2.0.10-r1.ebuild:
+  added multilib support (bug #540034)
 
   12 Nov 2014; Justin Lecher <jlec@gentoo.org> numactl-2.0.10.ebuild,
   metadata.xml:
