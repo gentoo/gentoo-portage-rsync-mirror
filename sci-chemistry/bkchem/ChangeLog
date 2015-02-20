@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/bkchem
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bkchem/ChangeLog,v 1.6 2010/08/12 07:47:56 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bkchem/ChangeLog,v 1.7 2015/02/20 10:28:32 jlec Exp $
+
+*bkchem-0.14.0_pre2-r1 (20 Feb 2015)
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> +bkchem-0.14.0_pre2-r1.ebuild,
+  +files/bkchem-0.14.0_pre2-nolauncher.patch, -bkchem-0.14.0_pre1-r2.ebuild,
+  -bkchem-0.14.0_pre2.ebuild, metadata.xml:
+  Drop old; move to EAPI=5 and new pythen eclasses
 
 *bkchem-0.14.0_pre2 (12 Aug 2010)
 
@@ -31,4 +38,3 @@
   17 Jun 2010; Justin Lecher <jlec@gentoo.org> +bkchem-0.14.0_pre1.ebuild,
   +metadata.xml:
   New addition imported from sci oerlay, #95178
-

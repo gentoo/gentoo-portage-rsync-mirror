@@ -8,5 +8,5 @@ RDEPEND=|| ( games-fps/unreal-tournament games-fps/unreal-tournament-goty ) game
 RESTRICT=bindist
 SLOT=0
 SRC_URI=mirror://gentoo/sf_180_server_files.tar.gz mirror://gentoo/unreal-tournament-strikeforce-1.81.tar.bz2 mirror://gentoo/sf180lnx.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=c0804e05e656d4fe9dca5610e56ac13f

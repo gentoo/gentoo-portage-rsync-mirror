@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jsonschema
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/ChangeLog,v 1.14 2015/02/19 10:40:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/ChangeLog,v 1.15 2015/02/20 10:09:53 pacho Exp $
+
+  20 Feb 2015; Pacho Ramos <pacho@gentoo.org> jsonschema-2.3.0.ebuild:
+  x86 stable, bug #540532
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> jsonschema-2.3.0.ebuild:
   Stable for amd64, wrt bug #540532

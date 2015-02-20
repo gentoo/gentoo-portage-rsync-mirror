@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=x11-libs/libX11 x11-libs/libXpm media-libs/libsdl media-libs/sdl-mixer games-misc/games-envd
 SLOT=0
 SRC_URI=http://www.donhopkins.com/home/micropolis/micropolis-activity-source.tgz http://rmdir.de/~michael/micropolis_git.patch
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	bc8839608d26ccd57ca4f2f01c67460f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=458d10d58d7154c78ba3033d45b7868f
