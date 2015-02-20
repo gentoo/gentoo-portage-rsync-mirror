@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.9.0.ebuild,v 1.1 2015/02/10 17:12:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.9.0.ebuild,v 1.2 2015/02/20 08:17:19 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -24,6 +24,7 @@ IUSE="+alsa +clock colorpicker cpuload +desktopswitch dom +kbindicator +mainmenu
 REQUIRED_USE="volume? ( || ( alsa pulseaudio ) )"
 
 DEPEND="
+	dev-libs/glib:2
 	>=dev-libs/libqtxdg-1.0.0
 	dev-qt/linguist-tools:5
 	dev-qt/qtcore:5
@@ -39,6 +40,9 @@ DEPEND="
 	~lxqt-base/liblxqt-mount-${PV}
 	~lxqt-base/lxqt-globalkeys-${PV}
 	x11-libs/libX11
+	x11-libs/libXcomposite
+	x11-libs/libXdamage
+	x11-libs/libXrender
 	cpuload? ( sys-libs/libstatgrab )
 	networkmonitor? ( sys-libs/libstatgrab )
 	sensors? ( sys-apps/lm_sensors )

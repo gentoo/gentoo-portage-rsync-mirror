@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.77 2015/02/19 18:52:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.78 2015/02/20 08:18:05 patrick Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -635,14 +635,21 @@ python_newexe() {
 	[[ ${EPYTHON} ]] || die 'No Python implementation set (EPYTHON is null).'
 	[[ ${#} -eq 2 ]] || die "Usage: ${FUNCNAME} <path> <new-name>"
 
-	local wrapd=${python_scriptroot:-${DESTTREE}/bin}
+	local d=${python_scriptroot:-${DESTTREE}/bin}
+	local wrapd=${d}
 
 	local f=${1}
-	local newfn=${2}
+	local barefn=${2}
+	local newfn
 
-	local PYTHON_SCRIPTDIR d
-	python_export PYTHON_SCRIPTDIR
-	d=${PYTHON_SCRIPTDIR#${EPREFIX}}
+	if _python_want_python_exec2; then
+		local PYTHON_SCRIPTDIR
+		python_export PYTHON_SCRIPTDIR
+		d=${PYTHON_SCRIPTDIR#${EPREFIX}}
+		newfn=${barefn}
+	else
+		newfn=${barefn}-${EPYTHON}
+	fi
 
 	(
 		dodir "${wrapd}"
@@ -651,7 +658,7 @@ python_newexe() {
 	)
 
 	# install the wrapper
-	_python_ln_rel "${ED%/}"/usr/lib/python-exec/python-exec2 \
+	_python_ln_rel "${ED%/}"$(_python_get_wrapper_path) \
 		"${ED%/}/${wrapd}/${barefn}" || die
 
 	# don't use this at home, just call python_doscript() instead
@@ -1092,6 +1099,40 @@ python_fix_shebang() {
 	done
 }
 
+# @FUNCTION: _python_want_python_exec2
+# @INTERNAL
+# @DESCRIPTION:
+# Check whether we should be using python-exec:2.
+_python_want_python_exec2() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	# EAPI 4 lacks slot operators, so just fix it on python-exec:2.
+	[[ ${EAPI} == 4 ]] && return 0
+
+	# Check if we cached the result, or someone put an override.
+	if [[ ! ${_PYTHON_WANT_PYTHON_EXEC2+1} ]]; then
+		has_version 'dev-lang/python-exec:2'
+		_PYTHON_WANT_PYTHON_EXEC2=$(( ! ${?} ))
+	fi
+
+	# Non-zero means 'yes', zero means 'no'.
+	[[ ${_PYTHON_WANT_PYTHON_EXEC2} != 0 ]]
+}
+
+# @FUNCTION: _python_get_wrapper_path
+# @INTERNAL
+# @DESCRIPTION:
+# Output path to proper python-exec slot.
+_python_get_wrapper_path() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	if _python_want_python_exec2; then
+		echo /usr/lib/python-exec/python-exec2
+	else
+		echo /usr/bin/python-exec
+	fi
+}
+
 # @FUNCTION: python_export_utf8_locale
 # @RETURN: 0 on success, 1 on failure.
 # @DESCRIPTION:
@@ -1125,22 +1166,6 @@ python_export_utf8_locale() {
 	fi  
 
 	return 0
-}
-
-# @FUNCTION: _python_check_EAPI
-# @INTERNAL
-# @DESCRIPTION:
-# Check whether the ebuild is not using deprecated EAPI 4. Output
-# a QA warning if it does.
-_python_check_EAPI() {
-	if [[ ${EAPI} == 4 && ! ${_PYTHON_WARNED_EAPI} ]]; then
-		eqawarn "This package is using still using EAPI=4. This results in package"
-		eqawarn "dependencies violating PMS and causing issues for package managers."
-		eqawarn "For this reason, using EAPI=4 in new Python packages will be banned"
-		eqawarn "on 2015-03-20 (2 years and 6 months after approving EAPI 5)."
-
-		_PYTHON_WARNED_EAPI=1
-	fi
 }
 
 # -- python.eclass functions --

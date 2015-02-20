@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.111 2015/02/19 17:22:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.112 2015/02/20 08:18:05 patrick Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -393,7 +393,7 @@ _distutils-r1_create_setup_cfg() {
 			root = ${D}
 		_EOF_
 
-		if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
+		if [[ ! ${DISTUTILS_SINGLE_IMPL} ]] && _python_want_python_exec2; then
 			cat >> "${HOME}"/.pydistutils.cfg <<-_EOF_ || die
 				install-scripts = $(python_get_scriptdir)
 			_EOF_
@@ -444,7 +444,11 @@ _distutils-r1_wrap_scripts() {
 	local bindir=${2}
 
 	local PYTHON_SCRIPTDIR
-	python_export PYTHON_SCRIPTDIR
+	if _python_want_python_exec2; then
+		python_export PYTHON_SCRIPTDIR
+	else
+		PYTHON_SCRIPTDIR=${bindir}
+	fi
 
 	local f python_files=() non_python_files=()
 
@@ -458,7 +462,7 @@ _distutils-r1_wrap_scripts() {
 			if [[ ${shebang} == '#!'*${EPYTHON}* ]]; then
 				debug-print "${FUNCNAME}: matching shebang: ${shebang}"
 				python_files+=( "${f}" )
-			else
+			elif _python_want_python_exec2; then
 				debug-print "${FUNCNAME}: non-matching shebang: ${shebang}"
 				non_python_files+=( "${f}" )
 			fi
@@ -469,11 +473,18 @@ _distutils-r1_wrap_scripts() {
 		for f in "${python_files[@]}"; do
 			local basename=${f##*/}
 
+			if ! _python_want_python_exec2; then
+				local newf=${f%/*}/${basename}-${EPYTHON}
+				debug-print "${FUNCNAME}: renaming ${f#${path}/} to ${newf#${path}/}"
+				mv "${f}" "${newf}" || die
+			fi
+
 			debug-print "${FUNCNAME}: installing wrapper at ${bindir}/${basename}"
-			_python_ln_rel "${path}${EPREFIX}"/usr/lib/python-exec/python-exec2 \
+			_python_ln_rel "${path}${EPREFIX}"$(_python_get_wrapper_path) \
 				"${path}${bindir}/${basename}" || die
 		done
 
+		# (non-empty only with python-exec:2)
 		for f in "${non_python_files[@]}"; do
 			local basename=${f##*/}
 
@@ -533,11 +544,15 @@ distutils-r1_python_install() {
 			case "${a}" in
 				--install-scripts=*)
 					scriptdir=${a#--install-scripts=}
-					unset "${arg_var}"
+					if _python_want_python_exec2; then
+						unset "${arg_var}"
+					fi
 					;;
 				--install-scripts)
 					scriptdir=${!1}
-					unset "${arg_var}" "${1}"
+					if _python_want_python_exec2; then
+						unset "${arg_var}" "${1}"
+					fi
 					shift
 					;;
 			esac

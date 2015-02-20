@@ -1,5 +1,5 @@
---- acovea-gtk-1.0.1/src/main_window.cc	2005-10-10 04:48:29.000000000 +0000
-+++ acovea-gtk-1.0.1/src/main_window.cc	2006-03-03 10:23:13.000000000 +0000
+--- a/src/main_window.cc
++++ b/src/main_window.cc
 @@ -488,7 +488,7 @@
  {
      Glib::RefPtr<Gtk::TextBuffer> buffer = main_window_output->get_buffer();

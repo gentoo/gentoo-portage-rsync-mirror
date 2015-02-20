@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea-gtk/acovea-gtk-1.0.1.ebuild,v 1.1 2009/04/23 22:06:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea-gtk/acovea-gtk-1.0.1.ebuild,v 1.2 2015/02/20 08:19:21 jer Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Analysis of Compiler Options via Evolutionary Algorithm GUI"
 HOMEPAGE="http://www.coyotegulch.com/products/acovea/"
@@ -21,12 +21,14 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	use unicode && epatch "${FILESDIR}"/${P}-unicode.patch
-	epatch "${FILESDIR}"/${P}-{libsigc,gcc4.3}.patch
+	epatch "${FILESDIR}"/${P}-{libbrahe,libsigc,gcc4.3}.patch
+
+	eautorerconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installation failed"
+	DOCS=( ChangeLog NEWS README )
+	default
 	make_desktop_entry "${PN}" Acovea-gtk \
 		/usr/share/acovea-gtk/pixmaps/acovea_icon_064.png System
-	dodoc ChangeLog NEWS README || die "no docs sorry!"
 }

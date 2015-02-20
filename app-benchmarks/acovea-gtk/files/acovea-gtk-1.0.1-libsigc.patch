@@ -1,6 +1,5 @@
-diff -uarN src/about_box_glade.cc src.new/about_box_glade.cc
---- src/about_box_glade.cc	2009-03-18 19:22:34.000000000 +0100
-+++ src.new/about_box_glade.cc	2009-03-18 19:23:08.000000000 +0100
+--- a/src/about_box_glade.cc
++++ b/src/about_box_glade.cc
 @@ -1530,8 +1530,8 @@
     hbuttonbox1->show();
     vbox3->show();
@@ -12,9 +11,8 @@ diff -uarN src/about_box_glade.cc src.new/about_box_glade.cc
  }
  
  about_box_glade::~about_box_glade()
-diff -uarN src/main_window_glade.cc src.new/main_window_glade.cc
---- src/main_window_glade.cc	2009-03-18 19:22:34.000000000 +0100
-+++ src.new/main_window_glade.cc	2009-03-18 19:23:08.000000000 +0100
+--- a/src/main_window_glade.cc
++++ b/src/main_window_glade.cc
 @@ -998,19 +998,19 @@
     main_status->show();
     vbox1->show();
@@ -48,9 +46,8 @@ diff -uarN src/main_window_glade.cc src.new/main_window_glade.cc
  }
  
  main_window_glade::~main_window_glade()
-diff -uarN src/settings_window_glade.cc src.new/settings_window_glade.cc
---- src/settings_window_glade.cc	2009-03-18 19:22:34.000000000 +0100
-+++ src.new/settings_window_glade.cc	2009-03-18 19:23:08.000000000 +0100
+--- a/src/settings_window_glade.cc
++++ b/src/settings_window_glade.cc
 @@ -391,11 +391,11 @@
     hbuttonbox3->show();
     vbox6->show();
@@ -68,9 +65,8 @@ diff -uarN src/settings_window_glade.cc src.new/settings_window_glade.cc
  }
  
  settings_window_glade::~settings_window_glade()
-diff -uarN src/about_box_glade.cc src.new/about_box_glade.cc
---- src/about_box_glade.cc	2009-03-18 18:08:58.000000000 +0100
-+++ src.new/about_box_glade.cc	2009-03-18 18:12:50.000000000 +0100
+--- a/src/about_box_glade.cc
++++ b/src/about_box_glade.cc
 @@ -14,8 +14,7 @@
  #endif //
  #include "config.h"
@@ -80,9 +76,8 @@ diff -uarN src/about_box_glade.cc src.new/about_box_glade.cc
  #define GMM_GTKMM_22_24(a,b) b
  #else //gtkmm 2.2
  #define GMM_GTKMM_22_24(a,b) a
-diff -uarN src/main_window_glade.cc src.new/main_window_glade.cc
---- src/main_window_glade.cc	2009-03-18 18:08:58.000000000 +0100
-+++ src.new/main_window_glade.cc	2009-03-18 18:12:53.000000000 +0100
+--- a/src/main_window_glade.cc
++++ b/src/main_window_glade.cc
 @@ -14,8 +14,7 @@
  #endif //
  #include "config.h"
@@ -92,9 +87,8 @@ diff -uarN src/main_window_glade.cc src.new/main_window_glade.cc
  #define GMM_GTKMM_22_24(a,b) b
  #else //gtkmm 2.2
  #define GMM_GTKMM_22_24(a,b) a
-diff -uarN src/settings_window_glade.cc src.new/settings_window_glade.cc
---- src/settings_window_glade.cc	2009-03-18 18:08:58.000000000 +0100
-+++ src.new/settings_window_glade.cc	2009-03-18 18:12:56.000000000 +0100
+--- a/src/settings_window_glade.cc
++++ b/src/settings_window_glade.cc
 @@ -14,8 +14,7 @@
  #endif //
  #include "config.h"
