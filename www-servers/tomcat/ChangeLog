@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.340 2015/02/10 12:17:43 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.341 2015/02/20 07:25:43 fordfrog Exp $
+
+*tomcat-8.0.18 (20 Feb 2015)
+
+  20 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.18.ebuild,
+  +files/tomcat-8.0.18-build.xml.patch:
+  version bump (per bug #540696, ebuild by William L. Thomson Jr.
+  <wlt@obsidian-studios.com>)
 
 *tomcat-6.0.43 (10 Feb 2015)
 
