@@ -1,10 +1,13 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9806 2015/02/20 10:38:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9807 2015/02/20 13:13:57 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-setup masked for removal ~20/Mar/2015
 
   20 Feb 2015; Pacho Ramos <pacho@gentoo.org> base/package.use.stable.mask:
   use.stable.mask because dev-libs/libappindicator isn't going to be stabilized

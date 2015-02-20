@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.224 2015/02/11 13:41:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.225 2015/02/20 13:03:24 armin76 Exp $
+
+  20 Feb 2015; Raúl Porcel <armin76@gentoo.org> use.stable.mask:
+  Add mkl to use.stable.mkl since mkl is not stable
 
   11 Feb 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   Mask ffmpeg useflags with unkeyworded deps, bug #510340

@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.81 2014/08/13 09:33:19 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.82 2015/02/20 13:08:25 armin76 Exp $
+
+  20 Feb 2015; Raúl Porcel <armin76@gentoo.org> cifs-utils-6.1-r1.ebuild:
+  s390/sh/sparc stable wrt #486312
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> cifs-utils-6.1-r1.ebuild:
   Stable for ppc, wrt bug #486312

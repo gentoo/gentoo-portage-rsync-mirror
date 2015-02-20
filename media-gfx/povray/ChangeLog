@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.156 2014/08/13 09:22:52 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.157 2015/02/20 13:06:11 armin76 Exp $
+
+  20 Feb 2015; Raúl Porcel <armin76@gentoo.org> povray-3.7.0.0.ebuild:
+  ia64/sparc stable wrt #497970
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> povray-3.7.0.0.ebuild:
   Stable for ppc, wrt bug #497970

@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/unifont
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.55 2014/11/25 00:31:53 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.56 2015/02/20 13:21:14 armin76 Exp $
+
+  20 Feb 2015; Raúl Porcel <armin76@gentoo.org> unifont-6.3.20140204.ebuild,
+  unifont-7.0.01.ebuild, unifont-7.0.03.ebuild, unifont-7.0.05.ebuild,
+  unifont-7.0.06.ebuild:
+  Add ~s390/~sh/~sparc wrt #500844
 
 *unifont-7.0.06 (25 Nov 2014)
 
