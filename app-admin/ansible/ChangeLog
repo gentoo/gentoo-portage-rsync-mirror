@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.58 2015/01/31 16:49:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.60 2015/02/20 07:49:00 jlec Exp $
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> -ansible-1.6.10.ebuild,
+  -ansible-1.7.2.ebuild, -ansible-1.8.1-r1.ebuild, -ansible-1.8.2.ebuild:
+  Drop old fixes security issue
+
+*ansible-1.8.4 (20 Feb 2015)
+
+  20 Feb 2015; Justin Lecher <jlec@gentoo.org> +ansible-1.8.4.ebuild:
+  Version Bump
 
   31 Jan 2015; Jeremy Olexa <darkside@gentoo.org> ansible-1.8.2.ebuild:
   add ~x64-macos, bug 535970
