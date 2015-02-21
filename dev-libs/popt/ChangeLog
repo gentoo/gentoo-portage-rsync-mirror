@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.109 2015/01/16 10:05:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.110 2015/02/21 14:17:38 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> popt-1.16-r2.ebuild:
+  Stable for ppc, wrt bug #525972
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> popt-1.16-r2.ebuild:
   alpha/ia64/sparc stable wrt #525984

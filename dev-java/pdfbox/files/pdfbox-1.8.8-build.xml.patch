@@ -1,0 +1,11 @@
+--- build.xml.orig	2015-02-21 14:23:45.700488598 +0100
++++ build.xml	2015-02-21 14:23:51.968504982 +0100
+@@ -28,7 +28,7 @@
+     <property name="tool.dir" value="tools" />
+     <property name="bin.dir" value="bin" />
+ 
+-    <property name="project.version" value="1.8.7" />
++    <property name="project.version" value="1.8.8" />
+ 
+     <!-- pdfbox -->
+     <property name="pdfbox.project.name" value="pdfbox"/>

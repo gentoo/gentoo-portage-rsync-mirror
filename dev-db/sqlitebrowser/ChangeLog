@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/sqlitebrowser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.18 2014/09/29 07:30:52 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/ChangeLog,v 1.19 2015/02/21 14:03:56 jlec Exp $
+
+*sqlitebrowser-3.5.1 (21 Feb 2015)
+
+  21 Feb 2015; Justin Lecher <jlec@gentoo.org> +sqlitebrowser-3.5.1.ebuild,
+  -files/sqlitebrowser-2.0_beta1-gold.patch,
+  -files/sqlitebrowser-2.0_beta1-qt-4.7.0.patch,
+  -sqlitebrowser-2.0_beta1-r2.ebuild:
+  Drop old; Version BUmp
 
   29 Sep 2014; Justin Lecher <jlec@gentoo.org> sqlitebrowser-3.3.1.ebuild:
   qcustomplot pkg move

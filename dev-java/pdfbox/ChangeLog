@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/pdfbox
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.28 2014/11/16 13:51:34 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.29 2015/02/21 14:29:15 monsieurp Exp $
+
+*pdfbox-1.8.8 (21 Feb 2015)
+
+  21 Feb 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/pdfbox-1.8.8-build.xml.patch, +pdfbox-1.8.8.ebuild:
+  Version bump. Fix bug #430054.
 
   16 Nov 2014; Manuel Rüger <mrueg@gentoo.org> pdfbox-0.7.3-r3.ebuild:
   Fix HOMEPAGE. See bug #501500.

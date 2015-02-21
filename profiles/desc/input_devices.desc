@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/input_devices.desc,v 1.12 2015/02/04 17:40:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/input_devices.desc,v 1.13 2015/02/21 14:22:50 hwoarang Exp $
 
 # This file contains descriptions of INPUT_DEVICES USE_EXPAND flags.
 
@@ -44,7 +44,7 @@ roccat_kovaplus - INPUT_DEVICES setting to build driver for Roccat Kova[+] input
 roccat_lua - INPUT_DEVICES setting to build driver for Roccat Lua input devices
 roccat_pyra - INPUT_DEVICES setting to build driver for Roccat Pyra input devices
 roccat_savu - INPUT_DEVICES setting to build driver for Roccat Savu input devices
-roccat_ryos - INPUT_DEVICES setting to build driver for Roccat Ryos input devices
+roccat_ryosmk - INPUT_DEVICES setting to build driver for Roccat RyosMK Pro input devices
 roccat_tyon - INPUT_DEVICES setting to build driver for Roccat Tyon input devices
 spaceorb - INPUT_DEVICES setting to build driver for spaceorb input devices
 summa - INPUT_DEVICES setting to build driver for summa input devices

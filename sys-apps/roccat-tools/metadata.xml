@@ -7,4 +7,7 @@
 <name>Dmitry Pisklov</name>
 <description>Proxy maintainer. Assign bugs to him</description>
 </maintainer>
+<use>
+       <flag name="lua">Build support for Lua scripting for RyosMKPro ripple effects</flag>
+</use>
 </pkgmetadata>
