@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1499 2015/02/11 15:49:36 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1502 2015/02/21 01:19:09 mpagano Exp $
+
+  21 Feb 2015; Mike Pagano <mpagano@gentoo.org> gentoo-sources-3.14.33.ebuild:
+  Auto stabilize 3.14 branch.
+
+  21 Feb 2015; Mike Pagano <mpagano@gentoo.org> gentoo-sources-3.10.69.ebuild:
+  Auto stabilization of the 3.10 branch.
+
+*gentoo-sources-3.12.38 (21 Feb 2015)
+
+  21 Feb 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.12.38.ebuild:
+  Linux patch 3.12.38
 
   11 Feb 2015; Mike Pagano <mpagano@gentoo.org> gentoo-sources-3.10.69.ebuild:
   Fix genpatches version for 3.10.69
