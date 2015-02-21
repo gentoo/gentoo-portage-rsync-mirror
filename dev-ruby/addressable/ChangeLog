@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.49 2015/02/20 11:23:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.50 2015/02/20 23:15:59 mrueg Exp $
+
+  20 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -addressable-2.3.5.ebuild:
+  Remove old.
 
   20 Feb 2015; Agostino Sarubbo <ago@gentoo.org> addressable-2.3.6.ebuild:
   Stable for x86, wrt bug #540254
