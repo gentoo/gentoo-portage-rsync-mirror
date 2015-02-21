@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdynd/libdynd-0.6.5.ebuild,v 1.1 2014/10/29 15:41:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdynd/libdynd-0.6.5.ebuild,v 1.2 2015/02/21 10:39:16 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/ContinuumIO/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="cuda doc fftw test"
 
 RDEPEND="

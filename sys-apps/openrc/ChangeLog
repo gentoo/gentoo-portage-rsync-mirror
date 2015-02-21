@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.331 2015/02/20 17:42:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.332 2015/02/21 10:45:39 jer Exp $
+
+  21 Feb 2015; Jeroen Roovers <jer@gentoo.org> openrc-0.13.11.ebuild:
+  Stable for HPPA (bug #540706).
 
   20 Feb 2015; Anthony G. Basile <blueness@gentoo.org> openrc-0.13.11.ebuild:
   Stable on ppc, ppc64 and arm.  Bug #540706

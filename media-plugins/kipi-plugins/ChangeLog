@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.175 2015/02/14 14:38:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.177 2015/02/21 10:39:41 kensington Exp $
+
+  21 Feb 2015; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Remove unused local USE description.
+
+*kipi-plugins-4.7.0 (21 Feb 2015)
+
+  21 Feb 2015; Michael Palimaka <kensington@gentoo.org>
+  +kipi-plugins-4.7.0.ebuild, -kipi-plugins-3.5.0.ebuild:
+  Version bump wrt bug #538622. Remove old.
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kipi-plugins-4.4.0.ebuild:
   Stable for x86, wrt bug #517344

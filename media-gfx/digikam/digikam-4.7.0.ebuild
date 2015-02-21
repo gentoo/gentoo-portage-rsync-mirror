@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.5.0.ebuild,v 1.5 2014/01/26 11:39:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.7.0.ebuild,v 1.1 2015/02/21 10:43:45 kensington Exp $
 
 EAPI=5
 
@@ -9,7 +9,6 @@ hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt nb nds ne nl nn nso oc 
 rw se sk sl sq sr sr@Latn ss sv ta te tg th tr tt uk uz uz@cyrillic ven vi wa xh zh_CN zh_HK zh_TW zu"
 
 KDE_HANDBOOK="optional"
-CMAKE_MIN_VERSION="2.8"
 KDE_MINIMAL="4.10"
 
 KDE_DOC_DIRS="doc-digikam doc-showfoto"
@@ -21,42 +20,56 @@ MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Digital photo management application for KDE"
 HOMEPAGE="http://www.digikam.org/"
-SRC_URI="mirror://kde/stable/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PN}/${MY_P}-1.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
+IUSE="addressbook debug doc gphoto2 mysql semantic-desktop +thumbnails video"
 
 CDEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
-	$(add_kdebase_dep kdebase-kioslaves)
-	kde-base/libkdcraw:4=
-	kde-base/libkexiv2:4=
-	$(add_kdebase_dep libkipi)
-	kde-base/marble:4=[plasma]
+	|| (
+		(	kde-apps/kdebase-kioslaves:4
+			kde-apps/libkdcraw:4=
+			kde-apps/libkexiv2:4=
+			kde-apps/libkipi:4
+			kde-apps/marble:4=[plasma] )
+		( 	$(add_kdebase_dep kdebase-kioslaves)
+			kde-base/libkdcraw:4=
+			kde-base/libkexiv2:4=
+			$(add_kdebase_dep libkipi)
+			kde-base/marble:4=[plasma] )
+	)
+	dev-qt/qtgui:4
 	media-libs/jasper
 	media-libs/lcms:2
-	media-libs/lensfun
-	>=media-libs/libkface-3.3.0
-	media-libs/libkgeomap
+	>=media-libs/lensfun-0.2.6
+	|| ( >=kde-apps/libkface-14.12.0:4 >=media-libs/libkface-4.6.0 )
+	>=media-libs/libkgeomap-4.6.0:=
 	media-libs/liblqr
 	>=media-libs/libpgf-6.12.27
 	media-libs/libpng:0=
-	media-libs/tiff
+	>=media-libs/opencv-2.4.9
+	media-libs/phonon[qt4]
+	>=media-libs/tiff-3.8.2
 	virtual/jpeg
-	dev-qt/qtgui:4[qt3support]
+	x11-libs/libX11
 	|| ( dev-qt/qtsql:4[mysql] dev-qt/qtsql:4[sqlite] )
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	gphoto2? ( media-libs/libgphoto2:= )
 	mysql? ( virtual/mysql )
+	semantic-desktop? (
+		$(add_kdebase_dep baloo "" 4.12.0)
+	)
 "
 RDEPEND="${CDEPEND}
-	$(add_kdebase_dep kreadconfig)
+	|| ( kde-apps/kreadconfig:4 $(add_kdebase_dep kreadconfig) )
 	media-plugins/kipi-plugins
 	video? (
 		|| (
+			kde-apps/ffmpegthumbs:4
+			kde-apps/mplayerthumbs:4
 			$(add_kdebase_dep mplayerthumbs)
 			$(add_kdebase_dep ffmpegthumbs)
 		)
@@ -103,25 +116,20 @@ src_prepare() {
 }
 
 src_configure() {
-	local backend
-
-	use semantic-desktop && backend="Nepomuk" || backend="None"
 	# LQR = only allows to choose between bundled/external
 	local mycmakeargs=(
 		-DENABLE_LCMS2=ON
-		-DFORCED_UNBUNDLE=ON
 		-DWITH_LQR=ON
 		-DWITH_LENSFUN=ON
-		-DGWENVIEW_SEMANTICINFO_BACKEND=${backend}
-		$(cmake-utils_use_with addressbook KdepimLibs)
+		$(cmake-utils_use_enable addressbook KDEPIMLIBSSUPPORT)
 		-DWITH_MarbleWidget=ON
 		$(cmake-utils_use_enable gphoto2 GPHOTO2)
 		$(cmake-utils_use_with gphoto2)
-		$(cmake-utils_use_with semantic-desktop Soprano)
-		$(cmake-utils_use_enable themedesigner)
 		$(cmake-utils_use_enable thumbnails THUMBS_DB)
 		$(cmake-utils_use_enable mysql INTERNALMYSQL)
+		$(cmake-utils_use_enable mysql MYSQLSUPPORT)
 		$(cmake-utils_use_enable debug DEBUG_MESSAGES)
+		$(cmake-utils_use_enable semantic-desktop BALOOSUPPORT)
 	)
 
 	kde4-base_src_configure

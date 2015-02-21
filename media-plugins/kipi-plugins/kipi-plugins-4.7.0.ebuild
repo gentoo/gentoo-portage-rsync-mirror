@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.5.0.ebuild,v 1.7 2015/01/29 00:01:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.7.0.ebuild,v 1.1 2015/02/21 10:38:08 kensington Exp $
+
+#
+# TODO: complete packaging of qtsoap and qtkoauth, see dilfridge overlay for work in progress
+#
 
 EAPI=5
 
@@ -8,10 +12,10 @@ OPENGL_REQUIRED="optional"
 
 KDE_MINIMAL="4.10"
 
-KDE_LINGUAS="ar az be bg bn br bs ca cs csb cy da de el en_GB eo es et eu fa fi fo fr fy ga
-gl ha he hi hr hsb hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt nb nds ne nl nn
-nso oc pa pl pt pt_BR ro ru rw se sk sl sq sr ss sv ta te tg th tr tt uk uz ven vi wa xh
-zh_CN zh_HK zh_TW zu"
+KDE_LINGUAS="af ar az be bg bn br bs ca cs csb cy da de el en_GB eo es et eu fa
+fi fo fr fy ga gl ha he hi hr hsb hu id is it ja ka kk km ko ku lb lo lt lv mi
+mk mn ms mt nb nds ne nl nn nso oc pa pl pt pt_BR ro ru rw se sk sl sq sr ss sv
+ta te tg th tr tt uk uz ven vi wa xh zh_CN zh_HK zh_TW zu"
 
 KDE_HANDBOOK="optional"
 
@@ -22,23 +26,25 @@ MY_P="digikam-${MY_PV}"
 
 DESCRIPTION="Plugins for the KDE Image Plugin Interface"
 HOMEPAGE="http://www.digikam.org/"
-SRC_URI="mirror://kde/stable/digikam/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/digikam/${MY_P}-1.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner upnp videoslideshow vkontakte"
+IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki panorama redeyes scanner upnp videoslideshow vkontakte"
 
 COMMONDEPEND="
-	$(add_kdebase_dep libkipi)
-	kde-base/libkdcraw:4=
-	kde-base/libkexiv2:4=
+	|| ( kde-apps/libkipi:4 $(add_kdebase_dep libkipi) )
+	|| ( kde-apps/libkdcraw:4= kde-base/libkdcraw:4= )
+	|| ( kde-apps/libkexiv2:4= kde-base/libkexiv2:4= )
 	dev-libs/expat
+	dev-libs/kqoauth
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/qjson
-	gpssync?	( media-libs/libkgeomap )
+	dev-qt/qtxmlpatterns:4
+	gpssync?	( >=media-libs/libkgeomap-4.6.0 )
 	media-libs/libpng:0=
 	media-libs/tiff
 	virtual/jpeg
@@ -49,14 +55,18 @@ COMMONDEPEND="
 			  x11-libs/gtk+:2
 			)
 	mediawiki?	( >=net-libs/libmediawiki-3.0.0 )
-	redeyes?	( media-libs/opencv )
+	opengl?		(
+				media-libs/phonon[qt4]
+				x11-libs/libXrandr
+			)
+	redeyes?	( >=media-libs/opencv-2.4.9 )
 	scanner? 	(
-			  $(add_kdebase_dep libksane)
+			|| ( kde-apps/libksane:4 $(add_kdebase_dep libksane) )
 			  media-gfx/sane-backends
 			)
 	upnp?		( media-libs/herqq )
 	videoslideshow?	(
-			  media-libs/qt-gstreamer
+			  >=media-libs/qt-gstreamer-0.9.0
 			  || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 			)
 	vkontakte?	( net-libs/libkvkontakte )
@@ -72,7 +82,6 @@ RDEPEND="${COMMONDEPEND}
 	cdr? 		( app-cdr/k3b )
 	expoblending? 	( media-gfx/hugin )
 	imagemagick? 	( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )
-	mjpeg? 		( media-video/mjpegtools )
 	panorama?	(
 			  media-gfx/enblend
 			  >=media-gfx/hugin-2011.0.0
@@ -85,8 +94,7 @@ RESTRICT=test
 # bug 420203
 
 PATCHES=(
-	"${FILESDIR}/${PN}-3.0.0-options.patch"
-	"${FILESDIR}/${PN}-3.4.0-staticar.patch"
+	"${FILESDIR}/${PN}-4.6.0-options.patch"
 )
 
 src_prepare() {
@@ -102,6 +110,10 @@ src_prepare() {
 	echo "find_package(Msgfmt REQUIRED)" >> CMakeLists.txt || die
 	echo "find_package(Gettext REQUIRED)" >> CMakeLists.txt || die
 	echo "add_subdirectory( po )" >> CMakeLists.txt
+
+	if ! use redeyes ; then
+		sed -i -e "/DETECT_OPENCV/d" CMakeLists.txt || die
+	fi
 
 	kde4-base_src_prepare
 }
@@ -121,11 +133,12 @@ src_configure() {
 		$(cmake-utils_use_with calendar KdepimLibs)
 		$(cmake-utils_use_with gpssync KGeoMap)
 		$(cmake-utils_use_with mediawiki Mediawiki)
-		$(cmake-utils_use_with redeyes OpenCV)
+		$(cmake-utils_use_find_package redeyes OpenCV)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with scanner KSane)
 		$(cmake-utils_use_with upnp Hupnp)
+		$(cmake-utils_use_with vkontakte LibKVkontakte)
 		$(cmake-utils_use_with videoslideshow QtGStreamer)
 		$(cmake-utils_use_enable expoblending)
 		$(cmake-utils_use_enable panorama)
