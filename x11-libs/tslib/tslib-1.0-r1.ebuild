@@ -6,7 +6,7 @@ inherit eutils toolchain-funcs autotools
 
 PATCH_VER=4
 DESCRIPTION="Touchscreen Access Library"
-HOMEPAGE="http://tslib.berlios.de/"
+HOMEPAGE="https://github.com/kergoth/tslib"
 SRC_URI="mirror://berlios/${PN}/${PN}-${PV}.tar.bz2
 	mirror://gentoo/${PN}-${PV}-patches-${PATCH_VER}.tar.bz2"
 
