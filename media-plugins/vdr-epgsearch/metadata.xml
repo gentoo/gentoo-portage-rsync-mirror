@@ -9,6 +9,9 @@
 <longdescription lang="en">
 </longdescription>
 <use>
+	<flag name="conflictcheckonly">ToDo</flag>
+	<flag name="epgsearchonly">ToDo</flag>
+	<flag name="quicksearch">ToDo</flag>
 	<flag name="tre">Add support for unlimited fuzzy searching with help of <pkg>dev-libs/tre</pkg> library</flag>
 </use>
 </pkgmetadata>

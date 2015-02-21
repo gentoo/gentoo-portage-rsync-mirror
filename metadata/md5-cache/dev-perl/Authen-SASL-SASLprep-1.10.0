@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-perl/Unicode-Stringprep-1 >=virtual/perl-Module-Build-0.350.0 test? ( virtual/perl-Test-Simple dev-perl/Test-NoWarnings ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=A Stringprep Profile for User Names and Passwords (RFC 4013)
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Authen-SASL-SASLprep/
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=>=dev-perl/Unicode-Stringprep-1 dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/C/CF/CFAERBER/Authen-SASL-SASLprep-1.01.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=1d705139a0254d5ef133d3417284056a

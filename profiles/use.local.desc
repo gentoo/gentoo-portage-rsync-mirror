@@ -3890,6 +3890,9 @@ media-plugins/mythplugins:mythweather - Adds weather information within MythTV
 media-plugins/mythplugins:mythzoneminder - Adds support for zoneminder (requires a server with the appropriate mythtv daemon somewhere on the network).
 media-plugins/mythplugins:raw - Allows MythGallery to view photos saved in RAW format
 media-plugins/vdr-burn:dvdarchive - DMH DVD - Archive
+media-plugins/vdr-epgsearch:conflictcheckonly - ToDo
+media-plugins/vdr-epgsearch:epgsearchonly - ToDo
+media-plugins/vdr-epgsearch:quicksearch - ToDo
 media-plugins/vdr-epgsearch:tre - Add support for unlimited fuzzy searching with help of dev-libs/tre library
 media-plugins/vdr-graphtft:graphtft-fe - Install external x11 remote frontend
 media-plugins/vdr-graphtft:theme_avp - graphTFT Alien vs. Predato theme
