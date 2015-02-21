@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-2.1.0-r2.ebuild,v 1.3 2013/07/20 11:11:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-3.0.0.ebuild,v 1.1 2015/02/21 22:55:37 tetromino Exp $
 
 EAPI="5"
 
 CMAKE_MIN_VERSION="2.8.5"
-PYTHON_COMPAT=( python2_6 python2_7 )
-PLOCALES="de fr no pl sl sv"
+PYTHON_COMPAT=( python2_7 )
+PLOCALES="no sl sv"
 
 inherit bash-completion-r1 cmake-utils eutils fdo-mime l10n python-single-r1
 
@@ -16,12 +16,13 @@ SRC_URI="mirror://sourceforge/cdemu/cdemu-client-${PV}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="+cdemu-daemon"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	cdemu-daemon? ( app-cdr/cdemu-daemon:0/5 )"
+	cdemu-daemon? ( app-cdr/cdemu-daemon:0/7 )"
 DEPEND="${RDEPEND}
 	dev-util/desktop-file-utils
 	>=dev-util/intltool-0.21
@@ -35,13 +36,7 @@ pkg_setup() {
 
 src_prepare() {
 	python_fix_shebang src/cdemu
-	epatch "${FILESDIR}/${PN}-2.1.0-bash-completion-dir.patch"
-	# build system doesn't respect LINGUAS :/
-	l10n_find_plocales_changes po "" ".po"
-	rm_po() {
-		rm po/$1.po || die
-	}
-	l10n_for_each_disabled_locale_do rm_po
+	epatch "${FILESDIR}/${PN}-3.0.0-bash-completion-dir.patch"
 }
 
 src_configure() {
@@ -51,6 +46,17 @@ src_configure() {
 		-DGENTOO_BASHCOMPDIR="$(get_bashcompdir)"
 	)
 	cmake-utils_src_configure
+}
+
+src_install() {
+	cmake-utils_src_install
+	# Build system doesn't respect LINGUAS, and changing list of installed
+	# translations requires error-prone editing of CMakeLists.txt
+	rm_po() {
+		rm -r "${ED}"/usr/share/locale/$1 || die
+		ls "${ED}"/usr/share/locale/* &> /dev/null || rmdir "${ED}"/usr/share/locale || die
+	}
+	l10n_for_each_disabled_locale_do rm_po
 }
 
 pkg_postinst() {

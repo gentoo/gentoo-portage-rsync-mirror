@@ -1,6 +1,14 @@
 # ChangeLog for app-cdr/cdemu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.48 2014/01/26 11:38:06 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.49 2015/02/21 22:55:37 tetromino Exp $
+
+*cdemu-3.0.0 (21 Feb 2015)
+
+  21 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cdemu-2.1.0-r2.ebuild, cdemu-2.1.1.ebuild, +cdemu-3.0.0.ebuild,
+  +files/cdemu-3.0.0-bash-completion-dir.patch:
+  Version bump, adds image writing (bug #518590, thanks to Rafał Mużyło).
+  Add REQUIRED_USE (bug #521834, thanks to Karl Lindén). Drop old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cdemu-2.1.1.ebuild:
   Stable for x86, wrt bug #494802

@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/gcdemu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.34 2014/04/26 08:14:02 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.35 2015/02/21 22:55:56 tetromino Exp $
+
+*gcdemu-3.0.0 (21 Feb 2015)
+
+  21 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org> gcdemu-2.1.1.ebuild,
+  +gcdemu-3.0.0.ebuild:
+  Version bump, adds image writing (bug #518590, thanks to Rafał Mużyło).
+  Add REQUIRED_USE (bug #521834, thanks to Karl Lindén).
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gcdemu-2.1.0.ebuild,
   gcdemu-2.1.1.ebuild:

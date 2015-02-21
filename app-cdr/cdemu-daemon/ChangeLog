@@ -1,6 +1,15 @@
 # ChangeLog for app-cdr/cdemu-daemon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/ChangeLog,v 1.10 2014/01/26 11:38:03 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/ChangeLog,v 1.11 2015/02/21 22:55:25 tetromino Exp $
+
+*cdemu-daemon-3.0.2 (21 Feb 2015)
+
+  21 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cdemu-daemon-2.1.0.ebuild, cdemu-daemon-2.1.1.ebuild,
+  +cdemu-daemon-3.0.2.ebuild,
+  -files/cdemu-daemon-2.1.0-DISABLE_DEPRECATED.patch:
+  Version bump, adds image writing (bug #518590, thanks to Rafał Mużyło).
+  Drop old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cdemu-daemon-2.1.1.ebuild:
   Stable for x86, wrt bug #494802

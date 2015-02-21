@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-2.1.0.ebuild,v 1.4 2013/10/08 16:51:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-3.0.3.ebuild,v 1.1 2015/02/21 22:55:05 tetromino Exp $
 
 EAPI="5"
 
@@ -13,13 +13,13 @@ HOMEPAGE="http://cdemu.org"
 SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
-SLOT="0/8" # subslot = libmirage soname version
-KEYWORDS="amd64 ~hppa x86"
+SLOT="0/10" # subslot = libmirage soname version
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc +introspection"
 
 RDEPEND=">=app-arch/bzip2-1:=
 	>=app-arch/xz-utils-5:=
-	>=dev-libs/glib-2.24:2
+	>=dev-libs/glib-2.28:2
 	>=media-libs/libsamplerate-0.1:=
 	>=media-libs/libsndfile-1.0:=
 	sys-libs/zlib:=
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 src_prepare() {
-	PATCHES=( "${FILESDIR}/${P}-DISABLE_DEPRECATED.patch" )
 	cmake-utils_src_prepare
 }
 

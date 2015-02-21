@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.31 2015/02/21 22:14:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.32 2015/02/21 22:42:15 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -47,7 +47,6 @@ RDEPEND="${PYTHON_DEPS}
 	dev-libs/boost:0=[${PYTHON_USEDEP}]
 	!<=dev-libs/boost-1.52.0-r6:0/1.52
 	dev-python/numpy[${PYTHON_USEDEP}]
-	>=dev-util/cppunit-1.9.14
 	sci-libs/fftw:3.0=
 	alsa? (
 		media-libs/alsa-lib[${PYTHON_USEDEP}]
@@ -98,6 +97,7 @@ DEPEND="${RDEPEND}
 	)
 	grc? ( x11-misc/xdg-utils )
 	oss? ( virtual/os-headers )
+	test? ( >=dev-util/cppunit-1.9.14 )
 	zeromq? ( net-libs/cppzmq )
 "
 

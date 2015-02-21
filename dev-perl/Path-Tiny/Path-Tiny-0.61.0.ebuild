@@ -1,25 +1,30 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Tiny/Path-Tiny-0.5.0.ebuild,v 1.2 2013/04/16 17:19:50 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Tiny/Path-Tiny-0.61.0.ebuild,v 1.1 2015/02/21 22:44:43 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=DAGOLDEN
-MODULE_VERSION=0.005
+MODULE_VERSION=0.061
 inherit perl-module
 
 DESCRIPTION="File path utility"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="test"
 
 RDEPEND="
-	dev-perl/Unicode-UTF8
+	>=dev-perl/Unicode-UTF8-0.580.0
+	virtual/perl-Carp
+	>=virtual/perl-Digest-1.30.0
+	>=virtual/perl-Digest-SHA-5.450.0
+	virtual/perl-Exporter
 	>=virtual/perl-File-Path-2.70.0
-	>=virtual/perl-File-Temp-0.180.0
 	>=virtual/perl-File-Spec-3.400.0
+	>=virtual/perl-File-Temp-0.190.0
+	virtual/perl-if
 "
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-MakeMaker-6.300.0

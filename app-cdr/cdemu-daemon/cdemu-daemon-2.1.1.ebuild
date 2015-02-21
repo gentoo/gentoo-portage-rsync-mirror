@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/cdemu-daemon-2.1.1.ebuild,v 1.3 2014/01/26 11:38:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu-daemon/cdemu-daemon-2.1.1.ebuild,v 1.4 2015/02/21 22:55:25 tetromino Exp $
 
 EAPI="5"
 
@@ -19,6 +19,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.32:2
 	>=dev-libs/libmirage-${PV}:=
+	<dev-libs/libmirage-3
 	>=media-libs/libao-0.8.0:=
 	sys-apps/dbus
 	>=sys-fs/vhba-20130607"
