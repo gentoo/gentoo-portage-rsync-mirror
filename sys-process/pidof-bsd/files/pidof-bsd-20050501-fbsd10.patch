@@ -1,3 +1,8 @@
+share/mk/bsd.compat.mk has been removed from FreeBSD 10.0.
+An old style NOMAN is not supported anymore.
+
+https://bugs.gentoo.org/show_bug.cgi?id=483044
+
 diff --git a/Makefile b/Makefile
 index d2d760b..446bd6f 100644
 --- a/Makefile
