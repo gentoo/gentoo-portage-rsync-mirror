@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.19 2015/02/12 10:11:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.20 2015/02/21 02:14:47 hd_brummy Exp $
 
 EAPI=5
 GENTOO_VDR_CONDITIONAL=yes
@@ -28,7 +28,7 @@ COMMON_DEPEND="
 	xine? (
 		( >=media-libs/xine-lib-1.2
 			virtual/ffmpeg )
-		fbcon? ( jpeg? ( virtual/jpeg ) )
+		fbcon? ( jpeg? ( virtual/jpeg:* ) )
 		X? (
 			x11-libs/libX11
 			x11-libs/libXext
@@ -36,7 +36,7 @@ COMMON_DEPEND="
 			xinerama? ( x11-libs/libXinerama )
 			dbus? ( dev-libs/dbus-glib dev-libs/glib:2 )
 			vdpau? ( x11-libs/libvdpau >=media-libs/xine-lib-1.2 )
-			jpeg? ( virtual/jpeg )
+			jpeg? ( virtual/jpeg:* )
 			bluray? ( media-libs/libbluray )
 			opengl? ( virtual/opengl )
 		)

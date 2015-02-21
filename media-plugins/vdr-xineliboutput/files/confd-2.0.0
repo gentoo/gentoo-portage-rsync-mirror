@@ -40,7 +40,7 @@ _EXTRAOPTS="--local=none --remote=37890"
 #
 # init script --> vdr-frontend
 #
-# DEBUG: do we need sxfb support? feedback please!
+# DEBUG REQUEST: do we need sxfb support? feedback please!
 #
 # sxfe start parameter
 #	allowed values: see README
