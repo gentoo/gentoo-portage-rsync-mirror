@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/guava-18.0.ebuild,v 1.2 2014/11/28 14:50:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/guava-18.0.ebuild,v 1.3 2015/02/21 19:12:22 fordfrog Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc source"
@@ -20,9 +20,9 @@ COMMON_DEP="
 	dev-java/jsr305:0
 	java-virtuals/jdk-with-com-sun:0"
 RDEPEND="${COMMON_DEP}
-	>=virtual/jre-1.6"
+	|| ( virtual/jre:1.7 virtual/jre:1.6 )"
 DEPEND="${COMMON_DEP}
 	app-arch/unzip
-	>=virtual/jdk-1.7" # http://code.google.com/p/guava-libraries/issues/detail?id=635
+	virtual/jdk:1.7" # http://code.google.com/p/guava-libraries/issues/detail?id=635
 
 JAVA_GENTOO_CLASSPATH="jsr305,javax-inject"
