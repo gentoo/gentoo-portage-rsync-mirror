@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.141 2015/02/15 08:48:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.142 2015/02/21 18:51:01 vapier Exp $
+
+  21 Feb 2015; Mike Frysinger <vapier@gentoo.org> pambase-20150213.ebuild:
+  Fix typo in SRC_URI after typo fix
 
   15 Feb 2015; Mike Frysinger <vapier@gentoo.org> pambase-20150213.ebuild:
   Fix typo in SRC_URI #540104 by Patrick Lauer.

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.26 2015/02/21 18:18:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.27 2015/02/21 18:34:07 vapier Exp $
+
+*leveldb-1.18 (21 Feb 2015)
+
+  21 Feb 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/leveldb-1.18-mips.patch, +leveldb-1.18.ebuild:
+  Version bump. Move libmemenv.a behind USE=static-libs. Add arm64/mips support.
 
   21 Feb 2015; Mike Frysinger <vapier@gentoo.org> leveldb-1.10.0-r1.ebuild,
   leveldb-1.11.0-r1.ebuild, leveldb-1.12.0-r1.ebuild, leveldb-1.13.0-r1.ebuild,

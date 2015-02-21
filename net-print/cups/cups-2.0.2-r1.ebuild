@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.2-r1.ebuild,v 1.1 2015/02/13 14:23:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-2.0.2-r1.ebuild,v 1.2 2015/02/21 18:57:19 slyfox Exp $
 
 EAPI=5
 
@@ -99,6 +99,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	"${FILESDIR}/${PN}-2.0.2-rename-systemd-service-files.patch"
 	"${FILESDIR}/${PN}-2.0.2-systemd-socket.patch"
+	"${FILESDIR}/${PN}-2.0.1-xinetd-installation-fix.patch"
 )
 
 MULTILIB_CHOST_TOOLS=(
