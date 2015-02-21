@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.36 2014/09/16 19:23:43 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.37 2015/02/21 10:18:07 jer Exp $
+
+  21 Feb 2015; Jeroen Roovers <jer@gentoo.org> files/surf-9999-gentoo.patch:
+  Fix patch (bug #540874 by Justin Keogh).
 
 *surf-0.6-r2 (16 Sep 2014)
 
