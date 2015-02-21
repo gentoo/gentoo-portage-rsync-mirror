@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.188 2015/01/26 10:39:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.191 2015/02/21 20:29:18 radhermit Exp $
+
+  21 Feb 2015; Tim Harder <radhermit@gentoo.org> usbutils-008-r1.ebuild:
+  Add missing slotdep for libudev.
+
+  21 Feb 2015; Tim Harder <radhermit@gentoo.org> usbutils-008-r1.ebuild:
+  Use correct virtual libudev dep.
+
+*usbutils-008-r1 (21 Feb 2015)
+
+  21 Feb 2015; Tim Harder <radhermit@gentoo.org> +usbutils-008-r1.ebuild:
+  Add missing udev dep (bug #536310) and drop unused zlib dep (bug #540932).
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> usbutils-008.ebuild:
   Stable for x86, wrt bug #535656
