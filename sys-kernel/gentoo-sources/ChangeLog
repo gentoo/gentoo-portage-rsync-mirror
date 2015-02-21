@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1503 2015/02/21 11:04:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1504 2015/02/21 13:31:16 zlogene Exp $
+
+  21 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> gentoo-sources-3.18.7.ebuild:
+  x86 stable wrt bug #540866
 
   21 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> gentoo-sources-3.18.7.ebuild:
   amd64 stable wrt bug #540866
