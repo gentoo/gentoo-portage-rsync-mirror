@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16376 2015/02/20 19:40:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16377 2015/02/21 05:45:14 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (21 Feb 2015)
+# Duplicates media-fonts/culmus[ancient] (bug #486814).
+# Masked for removal in 30 days.
+media-fonts/culmus-ancient
 
 # Joerg BOrnkessel <hd_brummy@gentoo.org> (20 Feb 2015)
 # masked for removal around 20/Mar/2015

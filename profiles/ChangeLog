@@ -1,10 +1,14 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9808 2015/02/20 19:40:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9809 2015/02/21 05:45:14 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Last-rite media-fonts/culmus-ancient which duplicates
+  media-fonts/culmus[ancient]
 
   20 Feb 2015; Sven Vermeulen <swift@gentoo.org> package.mask:
   Removing nethack from p.mask, bug #125902 is resolved

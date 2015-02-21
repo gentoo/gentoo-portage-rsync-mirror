@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/vlgothic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.60 2012/02/01 10:31:17 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.61 2015/02/21 05:36:31 yngwin Exp $
+
+*vlgothic-20141206 (21 Feb 2015)
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> +vlgothic-20141206.ebuild,
+  metadata.xml:
+  version bump
 
   01 Feb 2012; Samuli Suominen <ssuominen@gentoo.org> vlgothic-20110722.ebuild:
   ppc64 stable wrt #389223
@@ -291,4 +297,3 @@
 
   09 Oct 2006; MATSUU Takuto <matsuu@gentoo.org> +vlgothic-20060930.ebuild:
   Initial import.
-
