@@ -1,9 +1,12 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.185 2015/02/21 08:48:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.186 2015/02/21 13:34:10 ulm Exp $
 
-  21 Feb 2015; Ulrich Müller <ulm@gentoo.org>
-  emacs-vcs-25.0.50_pre20150131.ebuild, emacs-vcs-25.0.9999-r1.ebuild:
+*emacs-vcs-24.4.90-r1 (21 Feb 2015)
+
+  21 Feb 2015; Ulrich Müller <ulm@gentoo.org> -emacs-vcs-24.4.90.ebuild,
+  +emacs-vcs-24.4.90-r1.ebuild, emacs-vcs-25.0.50_pre20150131.ebuild,
+  emacs-vcs-25.0.9999-r1.ebuild:
   Follow QA policy for game state directory, bug 537580.
 
 *emacs-vcs-24.4.90 (17 Feb 2015)
