@@ -1,6 +1,11 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.30 2015/02/17 22:37:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.31 2015/02/21 17:03:07 tetromino Exp $
+
+*pyfa-1.9.0 (21 Feb 2015)
+
+  21 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org> +pyfa-1.9.0.ebuild:
+  Version bump for Tiamat.
 
 *pyfa-1.8.1 (17 Feb 2015)
 

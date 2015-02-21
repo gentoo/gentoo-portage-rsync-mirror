@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urwvn-fonts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.32 2011/05/25 16:50:24 flameeyes Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/ChangeLog,v 1.33 2015/02/21 17:24:15 yngwin Exp $
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> urwvn-fonts-3.05.ebuild:
+  Add Aladdin license for URW Garamond (bug #434262). Bump to EAPI=5. Tighten up
+  formatting.
 
   25 May 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -urwvn-fonts-3.04.ebuild:
@@ -118,4 +122,3 @@
 
   20 Nov 2004; <pclouds@gentoo.org> +metadata.xml, +urwvn-fonts-2.0.ebuild:
   Initial ebuild for urwvn
-

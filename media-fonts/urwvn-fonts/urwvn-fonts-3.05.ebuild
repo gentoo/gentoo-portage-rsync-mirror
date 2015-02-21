@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.05.ebuild,v 1.6 2010/07/20 16:14:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.05.ebuild,v 1.7 2015/02/21 17:24:15 yngwin Exp $
 
+EAPI=5
 inherit font
 
 MY_P=${P/_/-}
@@ -13,18 +14,14 @@ DESCRIPTION="fonts gpl'd by Han The Thanh, based on URW++ fonts with Vietnamese 
 HOMEPAGE="http://vntex.sf.net"
 SRC_URI="mirror://sourceforge/project/vntex/urwvn-ttf/${MY_P}-ttf.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 Aladdin" # see bug #434262
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
-
 S="${WORKDIR}/${MY_P}-ttf"
 FONT_SUFFIX="ttf"
 FONT_S=${S}
-
 FONT_CONF=( "${FILESDIR}/65-urwvn.conf" )
 
 pkg_postinst() {
