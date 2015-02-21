@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.33.ebuild,v 1.1 2015/02/13 06:24:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.33.ebuild,v 1.2 2015/02/21 08:00:01 mr_bones_ Exp $
 
 EAPI=5
-inherit games
+inherit eutils games
 
 DESCRIPTION="A Linux/SDL-Port of the famous DGen MegaDrive/Genesis-Emulator"
 HOMEPAGE="http://dgen.sourceforge.net/"
@@ -19,6 +19,11 @@ RDEPEND="media-libs/libsdl[joystick?,opengl?]
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
+
+src_prepare() {
+	# fix building with USE=-joystick
+	epatch "${FILESDIR}"/${P}-joystick.patch
+}
 
 src_configure() {
 	egamesconf \

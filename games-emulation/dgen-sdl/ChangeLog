@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dgen-sdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/ChangeLog,v 1.24 2015/02/19 01:48:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/ChangeLog,v 1.25 2015/02/21 08:00:01 mr_bones_ Exp $
+
+  21 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/dgen-sdl-1.33-joystick.patch, dgen-sdl-1.33.ebuild:
+  fix building with USE=-joystick (bug #540764)
 
   19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> -dgen-sdl-1.32.ebuild:
   old
