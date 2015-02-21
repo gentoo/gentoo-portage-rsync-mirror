@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.314 2015/02/15 21:24:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.315 2015/02/21 11:37:26 mgorny Exp $
+
+  21 Feb 2015; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Mask non-keyworded qca plugin flags for old qca version, part of
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/27 /
+  https://bugs.funtoo.org/browse/FL-2119.
 
   15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
   Mask office useflag of gnome-extra/sushi, there is no ppc-keyworded office

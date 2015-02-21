@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.101 2015/02/02 16:39:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.103 2015/02/21 11:49:42 jer Exp $
+
+  21 Feb 2015; Jeroen Roovers <jer@gentoo.org> qca-2.0.3-r1.ebuild:
+  Drop HPPA.
+
+*qca-2.0.3-r1 (21 Feb 2015)
+
+  21 Feb 2015; Michał Górny <mgorny@gentoo.org> +qca-2.0.3-r1.ebuild:
+  Add USE flags for plugins that were integrated in the newer qca version. The
+  USE flags pull the plugins implicitly making it easier to create useful deps
+  on qca with plugins. Patch prepared by Roman Kuzmitsky (damex).
 
   02 Feb 2015; Jeroen Roovers <jer@gentoo.org> qca-2.1.0.3.ebuild:
   Marked ~hppa (bug #538550).
