@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/wqy-zenhei
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/ChangeLog,v 1.12 2013/02/05 00:53:54 heroxbd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/ChangeLog,v 1.13 2015/02/21 06:39:36 yngwin Exp $
+
+*wqy-zenhei-0.9.46 (21 Feb 2015)
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> +files/44-wqy-zenhei.conf.patch,
+  +wqy-zenhei-0.9.46.ebuild:
+  Version bump. Fix fontconfig warning with patch contributed by Kévin Bernard-
+  Allies in bug #490412.
 
   05 Feb 2013; Benda Xu <heroxbd@gentoo.org> wqy-zenhei-0.9.45.ebuild:
   keyword ~arm

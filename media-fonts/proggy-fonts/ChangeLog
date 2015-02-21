@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/proggy-fonts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/proggy-fonts/ChangeLog,v 1.10 2010/06/11 21:23:00 yngwin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/proggy-fonts/ChangeLog,v 1.11 2015/02/21 06:46:41 yngwin Exp $
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> proggy-fonts-1.ebuild:
+  Use Gentoo mirrors since upstream vanished
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer
@@ -33,4 +36,3 @@
 
   24 Mar 2008; Ben de Groot <yngwin@gentoo.org> +proggy-fonts-1.ebuild:
   Initial import. Ebuild by me. Fixes bug 109415.
-
