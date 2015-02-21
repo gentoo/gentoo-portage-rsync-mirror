@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=2.6.34_p7
 SRC_URI=mirror://kernel/linux/kernel/v2.6/linux-2.6.34.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.34.N/deblob-2.6.34 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.34.N/deblob-check -> deblob-check-2.6.34 ) http://pf.natalenko.name/sources/2.6.34/patch-2.6.34-pf7.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	kernel-2	eade3d03e6975648587258fdf959c900	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	5246a4c7caf51377bb4741aea87a6f72	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	kernel-2	eade3d03e6975648587258fdf959c900	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=c07848061e38da1f5001fafcbe74863a

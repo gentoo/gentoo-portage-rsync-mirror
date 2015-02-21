@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.46 2015/02/19 17:29:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.47 2015/02/21 08:20:35 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -508,6 +508,12 @@ x11-libs/motif -abi_x86_32
 x11-libs/pango -abi_x86_32
 x11-libs/pangox-compat -abi_x86_32
 x11-libs/pixman -abi_x86_32
+x11-libs/xcb-util -abi_x86_32
+x11-libs/xcb-util-cursor -abi_x86_32
+x11-libs/xcb-util-image -abi_x86_32
+x11-libs/xcb-util-keysyms -abi_x86_32
+x11-libs/xcb-util-renderutil -abi_x86_32
+x11-libs/xcb-util-wm -abi_x86_32
 x11-libs/xvba-video -abi_x86_32
 x11-misc/colord -abi_x86_32
 x11-misc/virtualgl -abi_x86_32

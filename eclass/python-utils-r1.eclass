@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.80 2015/02/20 17:57:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.81 2015/02/21 08:07:30 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -1134,7 +1134,7 @@ python_export_utf8_locale() {
 # a QA warning if it does.
 _python_check_EAPI() {
 	if [[ ${EAPI} == 4 && ! ${_PYTHON_WARNED_EAPI} ]]; then
-		eqawarn "This package is using still using EAPI=4. This results in package"
+		eqawarn "This package is still using EAPI=4. This results in package"
 		eqawarn "dependencies violating PMS and causing issues for package managers."
 		eqawarn "For this reason, using EAPI=4 in new Python packages will be banned"
 		eqawarn "on 2015-03-20 (2 years and 6 months after approving EAPI 5)."

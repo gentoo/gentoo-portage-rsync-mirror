@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 dbus? ( >=dev-libs/dbus-glib-0.98 ) gtk? ( x11-libs/gtk+
 REQUIRED_USE=plugins? ( python? ( ^^ ( python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7 ) python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python3_4? ( python_targets_python3_4 ) python_single_target_python2_7? ( python_targets_python2_7 ) ) )
 SLOT=0
 SRC_URI=http://dl.hexchat.org/hexchat/hexchat-2.10.0.tar.xz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	5246a4c7caf51377bb4741aea87a6f72	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=0a8d81faa9e5bad28acd76c72b25ef5d

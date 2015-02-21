@@ -1,6 +1,7 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20071115.ebuild,v 1.6 2015/01/17 13:54:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/caps/caps-20071115.ebuild,v 1.7 2015/02/21 08:03:51 mr_bones_ Exp $
+
 EAPI=5
 inherit eutils multilib
 
@@ -21,6 +22,8 @@ DEPEND="app-arch/unzip"
 RDEPEND=""
 
 S=${WORKDIR}
+
+QA_PREBUILT="usr/lib*/libcapsimage.so* usr/bin/ipfinfo"
 
 src_install() {
 	insinto /usr/include/caps
