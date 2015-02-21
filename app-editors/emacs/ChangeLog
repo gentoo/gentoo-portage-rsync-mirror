@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.654 2015/02/17 08:19:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.655 2015/02/21 08:47:49 ulm Exp $
+
+*emacs-24.4-r3 (21 Feb 2015)
+*emacs-23.4-r12 (21 Feb 2015)
+
+  21 Feb 2015; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r11.ebuild,
+  +emacs-23.4-r12.ebuild, emacs-24.3-r6.ebuild, emacs-24.4-r1.ebuild,
+  -emacs-24.4-r2.ebuild, +emacs-24.4-r3.ebuild:
+  Follow QA policy for game state directory, bug 537580.
 
   17 Feb 2015; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r11.ebuild,
   emacs-24.3-r6.ebuild, emacs-24.4-r1.ebuild, emacs-24.4-r2.ebuild:

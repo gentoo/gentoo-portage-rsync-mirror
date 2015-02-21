@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/aria2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.100 2014/08/29 07:14:55 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.101 2015/02/21 09:01:08 mgorny Exp $
+
+*aria2-1.18.9 (21 Feb 2015)
+
+  21 Feb 2015; Michał Górny <mgorny@gentoo.org> +aria2-1.18.9.ebuild:
+  Version bump. Bugfixes, adler32 checksum support via --checksum and Metalink
+  files, SSLv3 disabled by default and --min-tls-version to select minimal
+  SSL/TLS version. --bt-force-encryption to require full BitTorrent encryption.
 
   29 Aug 2014; Michał Górny <mgorny@gentoo.org> aria2-1.18.7.ebuild:
   Version bump for a number of bugfixes.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/xauth-1.0.9-r1.ebuild,v 1.5 2015/02/20 11:17:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/xauth-1.0.9-r1.ebuild,v 1.6 2015/02/21 08:55:24 ago Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools-utils xorg-2
 
 DESCRIPTION="X authority file utility"
 
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="ipv6"
 
 RDEPEND="x11-libs/libX11

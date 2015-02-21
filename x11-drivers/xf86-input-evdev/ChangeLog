@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.232 2015/02/20 11:17:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.233 2015/02/21 08:55:46 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xf86-input-evdev-2.9.1.ebuild:
+  Stable for ppc64, wrt bug #530652
 
   20 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xf86-input-evdev-2.9.1.ebuild:
   Stable for ppc, wrt bug #530652
