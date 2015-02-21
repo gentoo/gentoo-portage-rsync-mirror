@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.6.ebuild,v 1.1 2014/09/27 14:51:00 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/xastir-2.0.6.ebuild,v 1.2 2015/02/21 17:42:14 tomjbe Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic toolchain-funcs
@@ -21,13 +21,13 @@ DEPEND=">=x11-libs/motif-2.3:0
 	x11-apps/xfontsel
 	dev-libs/libpcre
 	net-misc/curl
-	sys-libs/db
+	sys-libs/db:4.8
 	sci-libs/shapelib
 	!graphicsmagick? ( media-gfx/imagemagick[-hdri,-q32] )
 	graphicsmagick? ( media-gfx/graphicsmagick[-q32] )
 	geotiff? ( sci-libs/proj
 		sci-libs/libgeotiff
-		media-libs/tiff )
+		media-libs/tiff:0 )
 	gdal? ( sci-libs/gdal )
 	festival? ( app-accessibility/festival )"
 RDEPEND="${DEPEND}"

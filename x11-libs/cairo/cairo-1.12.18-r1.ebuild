@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.14.0.ebuild,v 1.1 2015/02/18 08:44:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.18-r1.ebuild,v 1.1 2015/02/21 18:00:22 mgorny Exp $
 
 EAPI=5
 
@@ -81,16 +81,12 @@ REQUIRED_USE="
 "
 
 MULTILIB_WRAPPED_HEADERS=(
-	/usr/include/cairo/cairo-features.h
 	/usr/include/cairo/cairo-directfb.h
 )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.12.18-disable-test-suite.patch
 	epatch "${FILESDIR}"/${PN}-respect-fontconfig.patch
-
-	# fixed in 1.14.1
-	epatch "${FILESDIR}"/${P}-align-64bit-types.patch
 
 	# tests and perf tools require X, bug #483574
 	if ! use X; then

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.6.ebuild,v 1.4 2014/12/28 10:12:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.6.ebuild,v 1.5 2015/02/21 17:34:00 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ CDEPEND="
 	dev-libs/libevent
 	>=dev-libs/libgcrypt-1.2.3:0
 	sys-apps/coreutils
-	>=sys-libs/db-4.2.52
+	>=sys-libs/db-4.2.52:=
 	sys-libs/tdb
 	acl? (
 		sys-apps/attr
@@ -36,7 +36,7 @@ CDEPEND="
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	tracker? ( app-misc/tracker )
 	utils? ( ${PYTHON_DEPS} )
