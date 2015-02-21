@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/storm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.18 2015/02/20 11:30:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.19 2015/02/21 09:21:42 idella4 Exp $
+
+  21 Feb 2015; Ian Delaney <idella4@gentoo.org>
+  -files/storm-0.20-exclude-tests.patch, storm-0.20-r1.ebuild:
+  correction to sed statement, rm disused patch, tx marienz for the prompt
 
 *storm-0.20-r1 (20 Feb 2015)
 

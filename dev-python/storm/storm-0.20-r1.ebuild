@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.20-r1.ebuild,v 1.1 2015/02/20 11:30:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.20-r1.ebuild,v 1.2 2015/02/21 09:21:42 idella4 Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ pkg_setup() {
 }
 
 python_prepare_all() {
-	sed -e "s:find_packages():find_packages(exclude=['test','test.*']):" \
+	sed -e "s:find_packages():find_packages(exclude=['tests','tests.*']):" \
 		-i setup.py || die
 
 	# delete rogue errors in setting exceptions
