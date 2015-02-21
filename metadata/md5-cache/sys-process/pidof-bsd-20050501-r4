@@ -8,4 +8,4 @@ RDEPEND=!sys-process/psmisc
 SLOT=0
 SRC_URI=mirror://gentoo/pidof-bsd-20050501.tar.gz
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=e5fa742e1e7a089e513b2281d055ee98
+_md5_=086a22342da0628a21e827e832359457

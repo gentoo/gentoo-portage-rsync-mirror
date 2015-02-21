@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.181 2015/01/15 08:46:07 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.182 2015/02/21 16:04:58 hanno Exp $
+
+*courier-0.74.1-r1 (21 Feb 2015)
+
+  21 Feb 2015; <hanno@gentoo.org> +courier-0.74.1-r1.ebuild,
+  +files/courier-0.74.1-fix-implicit-declaration-warning.diff,
+  +files/courier-0.74.1-fix-testsuite.diff:
+  Fix compiler warning, testsuite, dodoc issue and /var/run.
 
   15 Jan 2015; Andreas Schuerch <nativemad@gentoo.org> courier-0.74.0.ebuild,
   courier-0.74.1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/pidof-bsd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.10 2012/05/24 13:10:40 ryao Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.11 2015/02/21 16:10:24 mgorny Exp $
+
+  21 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  +files/pidof-bsd-20050501-fbsd10.patch, pidof-bsd-20050501-r4.ebuild:
+  Fix build failure on FreeBSD 10.0, https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/31 by nigoro.
 
 *pidof-bsd-20050501-r4 (24 May 2012)
 
@@ -50,4 +55,3 @@
   +files/pidof-bsd-20050501-gfbsd.patch, +metadata.xml,
   +pidof-bsd-20050501-r1.ebuild:
   Initial import in portage, from gentoo-alt overlay.
-

@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/cronyx-fonts
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/ChangeLog,v 1.19 2007/07/22 07:52:58 dirtyepic Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cronyx-fonts/ChangeLog,v 1.20 2015/02/21 16:15:03 yngwin Exp $
+
+*cronyx-fonts-2.3.8 (21 Feb 2015)
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> +cronyx-fonts-2.3.8.ebuild:
+  Version bump, which adds unicode support (bug #212544), and uses font.eclass
+  (bug #304621). Ebuild contributed by Ryan Hill. EAPI bumped to 5.
 
   22 Jul 2007; Ryan Hill <dirtyepic@gentoo.org>
   -cronyx-fonts-2.3.1-r1.ebuild, cronyx-fonts-2.3.1-r2.ebuild:
@@ -83,4 +89,3 @@
   +cronyx-fonts-2.3.1.ebuild:
   Initial import. Ebuild submitted by Alexey Spiridonov <lesha@netman.ru>,
   closing bug #23958
-
