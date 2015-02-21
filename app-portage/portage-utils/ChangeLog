@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.158 2015/02/20 01:37:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.159 2015/02/21 15:47:17 mgorny Exp $
+
+  21 Feb 2015; Michał Górny <mgorny@gentoo.org> portage-utils-0.10.ebuild,
+  portage-utils-0.11.ebuild, portage-utils-0.20.ebuild,
+  portage-utils-0.21.ebuild, portage-utils-0.3.1.ebuild,
+  portage-utils-0.30.ebuild, portage-utils-0.4.ebuild,
+  portage-utils-0.40.ebuild, portage-utils-0.41.ebuild,
+  portage-utils-0.5.ebuild, portage-utils-0.50.ebuild,
+  portage-utils-0.51.ebuild, portage-utils-0.52.ebuild,
+  portage-utils-0.6.ebuild, portage-utils-0.8.ebuild, portage-utils-0.9.ebuild:
+  Replace HOMEPAGE with something semi-meaningful, https://github.com/gentoo
+  /gentoo-portage-rsync-mirror/pull/26 by Michael Mair-Keimberger.
 
   20 Feb 2015; Mike Frysinger <vapier@gentoo.org> portage-utils-0.53.ebuild:
   Use wiki for HOMEPAGE #534468 by Alex Legler.

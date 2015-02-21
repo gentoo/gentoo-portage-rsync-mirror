@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ncpufreqd-2.4.ebuild,v 1.6 2013/03/11 19:47:09 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ncpufreqd-2.4.ebuild,v 1.7 2015/02/21 15:58:14 mgorny Exp $
 
 EAPI="5"
 
 inherit cmake-utils
 
 DESCRIPTION="Daemon controlling CPU speed and temperature"
-HOMEPAGE="http://projects.simpledesigns.com.pl/project/ncpufreqd/"
-SRC_URI="http://projects.simpledesigns.com.pl/get/${P}.tar.bz2"
+HOMEPAGE="https://bitbucket.org/nelchael/ncpufreqd"
+SRC_URI="http://dev.gentoo.org/~mgorny/dist/${P}.tar.xz"
 LICENSE="ZLIB"
 
 SLOT="0"
@@ -16,7 +16,8 @@ KEYWORDS="amd64 x86"
 
 IUSE=""
 
-DEPEND="virtual/logger"
+DEPEND="virtual/logger
+	app-arch/xz-utils"
 RDEPEND="${DEPEND}"
 
 src_install() {

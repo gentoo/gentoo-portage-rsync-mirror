@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.5.ebuild,v 1.2 2011/05/22 02:15:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.5.ebuild,v 1.3 2015/02/21 15:47:17 mgorny Exp $
 
 EAPI="3"
 
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="small and fast portage helper tools written in C"
-HOMEPAGE="http://www.gentoo.org/"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Q_applets"
 SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"

@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=virtual/logger sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=virtual/logger app-arch/xz-utils sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Daemon controlling CPU speed and temperature
 EAPI=5
-HOMEPAGE=http://projects.simpledesigns.com.pl/project/ncpufreqd/
+HOMEPAGE=https://bitbucket.org/nelchael/ncpufreqd
 KEYWORDS=amd64 x86
 LICENSE=ZLIB
-RDEPEND=virtual/logger
+RDEPEND=virtual/logger app-arch/xz-utils
 SLOT=0
-SRC_URI=http://projects.simpledesigns.com.pl/get/ncpufreqd-2.4.tar.bz2
+SRC_URI=http://dev.gentoo.org/~mgorny/dist/ncpufreqd-2.4.tar.xz
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6bf48f785961881d88f3db084445b057
+_md5_=606a5c754f68e475d14087eef2e9fc63

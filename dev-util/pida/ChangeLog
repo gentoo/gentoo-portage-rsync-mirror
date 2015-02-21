@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pida
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.32 2014/07/06 12:52:10 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pida/ChangeLog,v 1.33 2015/02/21 15:38:41 idella4 Exp $
+
+*pida-0.6.2-r1 (21 Feb 2015)
+
+  21 Feb 2015; Ian Delaney <idella4@gentoo.org> +pida-0.6.2-r1.ebuild,
+  -pida-0.6.2.ebuild:
+  revbump; convert -> distutils-r1, rm old
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> pida-0.6.2.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-
