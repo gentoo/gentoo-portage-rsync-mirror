@@ -2,14 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-17.1.ebuild,v 1.5 2014/03/10 10:58:31 ssuominen Exp $
 
-EAPI=4
+EAPI="5"
 
 inherit autotools-utils eutils user
 
 DESCRIPTION="A IRC server written from scratch"
 HOMEPAGE="http://ngircd.barton.de/"
-SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.gz
-	ftp://ngircd.barton.de/pub/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ngircd.barton.de/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

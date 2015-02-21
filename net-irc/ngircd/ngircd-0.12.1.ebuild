@@ -6,8 +6,7 @@ inherit eutils user
 
 DESCRIPTION="A IRC server written from scratch"
 HOMEPAGE="http://ngircd.barton.de/"
-SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.gz
-	ftp://ngircd.barton.de/pub/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ngircd.barton.de/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
