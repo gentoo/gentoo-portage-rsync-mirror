@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pioneers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.47 2015/02/14 01:05:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.48 2015/02/21 12:24:37 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pioneers-15.3.ebuild:
+  Stable for ppc, wrt bug #539382
 
   14 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> pioneers-15.3.ebuild:
   use app-text/rarian instead of app-text/scrollkeeper

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogviewer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.56 2015/02/10 10:15:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/ChangeLog,v 1.57 2015/02/21 12:25:40 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> elogviewer-0.6.2-r3.ebuild:
+  Stable for ppc, wrt bug #539404
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> elogviewer-0.6.2-r3.ebuild:
   Stable for x86, wrt bug #539404

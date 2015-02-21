@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-HTTP
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.48 2015/02/14 13:50:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP/ChangeLog,v 1.49 2015/02/21 12:09:21 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-HTTP-1.4.1-r2.ebuild:
+  Stable for ppc, wrt bug #535272
 
   14 Feb 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-HTTP-1.4.1-r2.ebuild:
   Stable for amd64, wrt bug #535272

@@ -3,10 +3,10 @@ DEPEND=dev-lang/php:* >=dev-php/pear-1.8.1
 DESCRIPTION=Adds indentation and linebreaks, replace entities, formats comments and makes XML easier to read
 EAPI=5
 HOMEPAGE=http://pear.php.net/XML_Beautifier
-KEYWORDS=~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc ~x86
 LICENSE=PHP-2.02
 RDEPEND=dev-php/PEAR-XML_Util dev-php/PEAR-XML_Parser dev-lang/php:* >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/XML_Beautifier-1.2.2.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	6199074ba0005674c2291a5a8d0274e2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=532579c72ae752fc2f408da8f0efcaca
+_md5_=29d56716216992d13dec0f735cd74023

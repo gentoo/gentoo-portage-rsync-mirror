@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/rocksndiamonds
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.48 2015/02/10 10:06:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.49 2015/02/21 12:21:25 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rocksndiamonds-3.3.1.2.ebuild:
+  Stable for ppc, wrt bug #538996
 
   10 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rocksndiamonds-3.3.1.2.ebuild:
   Stable for x86, wrt bug #538996

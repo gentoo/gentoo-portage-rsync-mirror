@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/etc-proposals
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.22 2015/02/01 13:51:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/etc-proposals/ChangeLog,v 1.23 2015/02/21 12:17:34 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> etc-proposals-1.4.3-r3.ebuild:
+  Stable for ppc, wrt bug #537840
 
   01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> etc-proposals-1.4.3-r3.ebuild:
   Stable for x86, wrt bug #537840

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.119 2015/02/19 09:03:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.120 2015/02/21 12:19:01 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> boehm-gc-7.4.2.ebuild:
+  Stable for ppc, wrt bug #538126
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> boehm-gc-7.4.2.ebuild:
   Stable for amd64, wrt bug #538126

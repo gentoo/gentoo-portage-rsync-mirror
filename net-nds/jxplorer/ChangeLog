@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.39 2015/02/19 09:03:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.40 2015/02/21 12:16:07 ago Exp $
+
+  21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> jxplorer-3.3.1.ebuild:
+  Stable for ppc, wrt bug #535620
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> jxplorer-3.3.1.ebuild:
   Stable for amd64, wrt bug #535620

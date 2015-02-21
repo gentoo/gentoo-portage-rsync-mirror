@@ -4,11 +4,11 @@ DESCRIPTION=a set of tools for updating gentoo config files
 EAPI=5
 HOMEPAGE=http://sourceforge.net/projects/etc-proposals.berlios/
 IUSE=gtk qt4 python_targets_python2_7
-KEYWORDS=amd64 ~ppc ~sparc x86
+KEYWORDS=amd64 ppc ~sparc x86
 LICENSE=GPL-2
 RDEPEND=gtk? ( >=dev-python/pygtk-2.10 ) qt4? ( >=dev-python/PyQt4-4.1.1[X] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/etc-proposals.berlios/etc-proposals-1.4.3.tar.gz
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=6bdd9f449611d954e8e3e9140c11f1c0
+_md5_=7367d1f93267ee0fc038bf8f43892ece
