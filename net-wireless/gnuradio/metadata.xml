@@ -6,7 +6,6 @@
 		<flag name='analog'>enable analog signal processing blocks</flag>
 		<flag name='atsc'>enable ATSC (HDTV) transmitter and receiver blocks</flag>
 		<flag name='audio'>enable blocks to connect to audio sources (mic-in) and sinks (speaker-out) ports on a computer</flag>
-		<flag name='ctrlport'>enable ControlPort rpc</flag>
 		<flag name='channels'>enable channel mode blocks</flag>
 		<flag name='digital'>enable digital signal processing blocks</flag>
 		<flag name='dtv'>enable digital tv signal processing blocks</flag>

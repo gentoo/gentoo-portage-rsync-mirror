@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXp/ChangeLog,v 1.55 2014/06/18 21:09:32 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXp/ChangeLog,v 1.56 2015/02/21 22:08:10 mattst88 Exp $
+
+*libXp-1.0.3 (21 Feb 2015)
+
+  21 Feb 2015; Matt Turner <mattst88@gentoo.org> +libXp-1.0.3.ebuild:
+  Version bump to 1.0.3, straight to stable. Fixes bug 485652.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXp-1.0.2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

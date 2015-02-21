@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.30 2015/02/21 04:18:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnuradio/gnuradio-9999.ebuild,v 1.31 2015/02/21 22:14:24 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -22,7 +22,7 @@ else
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
-IUSE="+audio +alsa atsc +analog +digital channels +ctrlport doc dtv examples fcd fec +filter grc jack log noaa oss pager performance-counters portaudio +qt4 sdl test trellis uhd vocoder +utils wavelet wxwidgets zeromq"
+IUSE="+audio +alsa atsc +analog +digital channels doc dtv examples fcd fec +filter grc jack log noaa oss pager performance-counters portaudio +qt4 sdl test trellis uhd vocoder +utils wavelet wxwidgets zeromq"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 		audio? ( || ( alsa oss jack portaudio ) )
@@ -52,7 +52,6 @@ RDEPEND="${PYTHON_DEPS}
 	alsa? (
 		media-libs/alsa-lib[${PYTHON_USEDEP}]
 	)
-	ctrlport? ( dev-libs/Ice[python,${PYTHON_USEDEP}] )
 	fcd? ( virtual/libusb:1 )
 	filter? ( sci-libs/scipy )
 	grc? (
@@ -86,8 +85,7 @@ RDEPEND="${PYTHON_DEPS}
 		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/wxpython:2.8[${PYTHON_USEDEP}]
 	)
-	zeromq? ( >=net-libs/zeromq-2.1.11
-		net-libs/cppzmq )
+	zeromq? ( >=net-libs/zeromq-2.1.11 )
 	"
 
 DEPEND="${RDEPEND}
@@ -98,12 +96,9 @@ DEPEND="${RDEPEND}
 		>=app-doc/doxygen-1.5.7.1
 		dev-python/sphinx[${PYTHON_USEDEP}]
 	)
-	grc? (
-		x11-misc/xdg-utils
-	)
-	oss? (
-		virtual/os-headers
-	)
+	grc? ( x11-misc/xdg-utils )
+	oss? ( virtual/os-headers )
+	zeromq? ( net-libs/cppzmq )
 "
 
 src_prepare() {
@@ -113,7 +108,6 @@ src_prepare() {
 	sed -i '/qPixmapFromMimeSource/d' "${S}"/gr-qtgui/lib/spectrumdisplayform.ui || die
 	#epatch "${FILESDIR}"/${PN}-3.6.1-automagic-audio.patch
 	#epatch "${FILESDIR}/${P}-build-type-nonfatal.patch"
-	epatch "${FILESDIR}"/gnuradio-qwt-with-qt5-support.patch
 }
 
 src_configure() {
@@ -133,7 +127,6 @@ src_configure() {
 		$(cmake-utils_use_enable analog GR_ANALOG) \
 		$(cmake-utils_use_enable atsc GR_ATSC) \
 		$(cmake-utils_use_enable channels GR_CHANNELS) \
-		$(cmake-utils_use_enable ctrlport GR_CTRLPORT) \
 		$(cmake-utils_use_enable digital GR_DIGITAL) \
 		$(cmake-utils_use_enable doc DOXYGEN) \
 		$(cmake-utils_use_enable doc SPHINX) \
