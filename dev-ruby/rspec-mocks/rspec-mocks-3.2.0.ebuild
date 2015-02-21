@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/rspec-mocks-3.2.0.ebuild,v 1.1 2015/02/15 07:12:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/rspec-mocks-3.2.0.ebuild,v 1.2 2015/02/21 09:38:20 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
@@ -51,4 +51,13 @@ all_ruby_prepare() {
 	# be defined. We can revisit this later so we can move on with
 	# rspec-3 introduction for now.
 	rm spec/rspec/mocks/and_yield_spec.rb || die
+}
+
+each_ruby_prepare() {
+	case ${RUBY} in
+		*ruby22)
+			# The rubygems version bundled with ruby 2.2 causes warnings.
+			sed -i -e '/a library that issues no warnings when loaded/,/^  end/ s:^:#:' spec/rspec/mocks_spec.rb || die
+			;;
+	esac
 }

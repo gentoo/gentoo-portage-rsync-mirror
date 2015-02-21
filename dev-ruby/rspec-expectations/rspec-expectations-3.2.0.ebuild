@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-3.2.0.ebuild,v 1.1 2015/02/15 07:12:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-3.2.0.ebuild,v 1.2 2015/02/21 09:37:48 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
@@ -50,4 +50,13 @@ all_ruby_prepare() {
 
 	# Avoid a weird, and failing, test testing already installed code.
 	sed -e '/has an up-to-date caller_filter file/,/end/ s:^:#:' -i spec/rspec/expectations_spec.rb || die
+}
+
+each_ruby_prepare() {
+	case ${RUBY} in
+		*ruby22)
+			# The rubygems version bundled with ruby 2.2 causes warnings.
+			sed -i -e '/a library that issues no warnings when loaded/,/^  end/ s:^:#:' spec/rspec/expectations_spec.rb || die
+			;;
+	esac
 }

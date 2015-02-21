@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-3.2.0.ebuild,v 1.1 2015/02/15 07:12:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-3.2.0.ebuild,v 1.2 2015/02/21 09:37:16 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC="none"
@@ -24,17 +24,19 @@ SRC_URI="https://github.com/rspec/${PN}/archive/v${PV}.tar.gz -> ${P}-git.tgz"
 LICENSE="MIT"
 SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE=""
+IUSE="highlight"
 
 SUBVERSION="$(get_version_component_range 1-2)"
 
 ruby_add_rdepend "
 	=dev-ruby/rspec-support-${SUBVERSION}*
 	!!<dev-ruby/rspec-core-2.14.8-r4
+	highlight? ( >=dev-ruby/coderay-1.0.9 )
 "
 
 ruby_add_bdepend "test? (
 		>=dev-ruby/nokogiri-1.5.2
+		>=dev-ruby/coderay-1.0.9
 		dev-ruby/syntax
 		>=dev-ruby/zentest-4.6.2
 		>=dev-ruby/rspec-expectations-3.0.0:3
@@ -43,7 +45,7 @@ ruby_add_bdepend "test? (
 
 # Skip yard for ruby21 for now since we don't support ruby21 eselected
 # yet and we can't bootstrap otherwise.
-USE_RUBY=${USE_RUBY/ruby21/} ruby_add_bdepend "doc? ( dev-ruby/yard )"
+USE_RUBY=${USE_RUBY/ruby21 ruby22/} ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 all_ruby_prepare() {
 	# Don't set up bundler: it doesn't understand our setup.
@@ -62,11 +64,18 @@ all_ruby_prepare() {
 
 	# Avoid aruba dependency so that we don't end up in dependency hell.
 	sed -i -e '/ArubaLoader/,/^end/ s:^:#:' -e '/Aruba/ s:^:#:' spec/spec_helper.rb || die
-	rm spec/integration/{filtering,order}_spec.rb || die
+	rm spec/integration/{filtering,order}_spec.rb spec/support/aruba_support.rb || die
 }
 
 each_ruby_prepare() {
 	sed -i -e 's:ruby -e:'${RUBY}' -e:' spec/rspec/core_spec.rb || die
+
+	case ${RUBY} in
+		*ruby22)
+			# The rubygems version bundled with ruby 2.2 causes warnings.
+			sed -i -e '/a library that issues no warnings when loaded/,/^  end/ s:^:#:' spec/rspec/core_spec.rb || die
+			;;
+	esac
 }
 
 all_ruby_compile() {

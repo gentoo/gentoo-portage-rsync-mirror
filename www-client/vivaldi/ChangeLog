@@ -1,6 +1,11 @@
 # ChangeLog for www-client/vivaldi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/ChangeLog,v 1.4 2015/02/13 08:10:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/ChangeLog,v 1.5 2015/02/21 09:41:28 jer Exp $
+
+*vivaldi-1.0.94.2_p2-r2 (21 Feb 2015)
+
+  21 Feb 2015; Jeroen Roovers <jer@gentoo.org> +vivaldi-1.0.94.2_p2-r2.ebuild:
+  Install application icons where they are expected (bug #540550 by Uros).
 
 *vivaldi-1.0.94.2_p2-r1 (13 Feb 2015)
 

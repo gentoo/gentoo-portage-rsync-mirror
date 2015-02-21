@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.99.2-r1.ebuild,v 1.1 2014/12/07 07:32:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.99.2-r1.ebuild,v 1.2 2015/02/21 09:37:16 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC="none"
@@ -38,7 +38,7 @@ ruby_add_bdepend "test? (
 
 # Skip yard for ruby21 for now since we don't support ruby21 eselected
 # yet and we can't bootstrap otherwise.
-USE_RUBY=${USE_RUBY/ruby21/} ruby_add_bdepend "doc? ( dev-ruby/yard )"
+USE_RUBY=${USE_RUBY/ruby21 ruby22/} ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 all_ruby_prepare() {
 	# Don't set up bundler: it doesn't understand our setup.

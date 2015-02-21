@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.1.0-r2.ebuild,v 1.4 2014/08/13 18:39:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/coderay-1.1.0-r2.ebuild,v 1.5 2015/02/21 09:32:05 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 jruby"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 # The test target also contains test:exe but that requires
 # shoulda-context which we do not have packaged yet.
@@ -28,9 +28,8 @@ IUSE=""
 
 # Redcloth is optional but automagically tested, so we add this
 # dependency to ensure that we get at least a version that works: bug
-# 330621. We use this convoluted way because redcloth isn't available
-# yet for jruby.
-USE_RUBY="${USE_RUBY/jruby/}" ruby_add_bdepend "test? ( >=dev-ruby/redcloth-4.2.2 )"
+# 330621.
+ruby_add_bdepend "test? ( >=dev-ruby/redcloth-4.2.2 )"
 
 all_ruby_prepare() {
 	sed -i -e "/[Bb]undler/d" Rakefile || die

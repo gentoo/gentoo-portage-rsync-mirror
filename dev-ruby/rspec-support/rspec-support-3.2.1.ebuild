@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-support/rspec-support-3.2.1.ebuild,v 1.1 2015/02/15 07:12:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-support/rspec-support-3.2.1.ebuild,v 1.2 2015/02/21 09:34:22 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
@@ -31,4 +31,13 @@ all_ruby_prepare() {
 	# Remove spec that, by following symlinks, tries to scan pretty much
 	# the whole filesystem.
 	rm spec/rspec/support/caller_filter_spec.rb || die
+}
+
+each_ruby_prepare() {
+	case ${RUBY} in
+		*ruby22)
+			# The rubygems version bundled with ruby 2.2 causes warnings.
+			rm spec/rspec/support_spec.rb spec/rspec/support/spec/shell_out_spec.rb || die
+			;;
+	esac
 }

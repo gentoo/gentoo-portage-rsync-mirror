@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.92 2015/02/15 07:12:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.93 2015/02/21 09:38:20 graaff Exp $
+
+  21 Feb 2015; Hans de Graaff <graaff@gentoo.org> rspec-mocks-2.99.2.ebuild,
+  rspec-mocks-3.2.0.ebuild:
+  Add ruby22.
 
 *rspec-mocks-3.2.0 (15 Feb 2015)
 
