@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/inconsolata
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.8 2011/11/04 11:24:10 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/inconsolata/ChangeLog,v 1.9 2015/02/21 16:53:00 yngwin Exp $
+
+*inconsolata-20140821 (21 Feb 2015)
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> +inconsolata-20140821.ebuild:
+  version bump (bug #517438)
 
   04 Nov 2011; Naohiro Aota <naota@gentoo.org> inconsolata-20090222.ebuild:
   Add ~x86-fbsd
@@ -37,4 +42,3 @@
   +inconsolata-1.ebuild:
   Initial commit. Ebuild by me. Mirror restricted because upstream does not
   include the license.
-

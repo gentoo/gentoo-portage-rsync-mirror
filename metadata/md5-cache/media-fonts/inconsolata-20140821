@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
+DESCRIPTION=A beautiful sans-serif monotype font designed for code listings
+EAPI=5
+HOMEPAGE=http://www.google.com/fonts/specimen/Inconsolata https://code.google.com/p/googlefontdirectory/source/browse/ofl/inconsolata/?name=default
+IUSE=X
+KEYWORDS=~amd64 ~x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos
+LICENSE=OFL-1.1
+RESTRICT=binchecks strip test
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~yngwin/distfiles/inconsolata-20140821.tar.xz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=de8ef748db42323852aea44af17d9ed1
