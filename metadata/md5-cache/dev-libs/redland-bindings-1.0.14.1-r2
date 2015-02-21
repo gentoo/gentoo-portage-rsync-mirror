@@ -4,10 +4,10 @@ DESCRIPTION=Language bindings for Redland
 EAPI=5
 HOMEPAGE=http://librdf.org/bindings/
 IUSE=lua perl python php ruby python_targets_python2_7
-KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux ~ppc-macos
+KEYWORDS=~alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86 ~x86-linux ~ppc-macos
 LICENSE=Apache-2.0 GPL-2 LGPL-2.1
 RDEPEND=>=dev-libs/redland-1.0.14 lua? ( >=dev-lang/lua-5.1 ) perl? ( dev-lang/perl:= ) php? ( dev-lang/php ) python? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) ruby? ( dev-lang/ruby dev-ruby/log4r )
 SLOT=0
 SRC_URI=http://download.librdf.org/source/redland-bindings-1.0.14.1.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=370a026fd1c720b69f7ea03395993e58
+_md5_=dc94709588393b7b52cfdf1425da6dc7
