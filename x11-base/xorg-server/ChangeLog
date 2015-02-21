@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.827 2015/02/21 08:55:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.828 2015/02/21 19:53:01 mattst88 Exp $
+
+  21 Feb 2015; Matt Turner <mattst88@gentoo.org> xorg-server-1.17.0.ebuild,
+  xorg-server-1.17.1.ebuild:
+  Increase xinit dependency, bug 536756.
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.12.4-r4.ebuild,
   xorg-server-1.15.2-r2.ebuild, xorg-server-1.16.4.ebuild:

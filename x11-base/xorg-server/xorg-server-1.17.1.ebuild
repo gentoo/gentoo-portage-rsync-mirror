@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.17.1.ebuild,v 1.1 2015/02/11 10:20:17 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.17.1.ebuild,v 1.2 2015/02/21 19:53:01 mattst88 Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ CDEPEND=">=app-admin/eselect-opengl-1.3.0
 		>=dev-libs/wayland-1.3.0
 		media-libs/libepoxy
 	)
-	>=x11-apps/xinit-1.3
+	>=x11-apps/xinit-1.3.3-r1
 	systemd? (
 		sys-apps/dbus
 		sys-apps/systemd

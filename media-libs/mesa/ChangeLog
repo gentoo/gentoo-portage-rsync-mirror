@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.611 2015/02/21 08:55:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.613 2015/02/21 19:43:54 mattst88 Exp $
+
+  21 Feb 2015; Matt Turner <mattst88@gentoo.org> mesa-10.0.4.ebuild,
+  mesa-10.2.8.ebuild:
+  Require llvm for opencl, bug 516790.
+
+  21 Feb 2015; Matt Turner <mattst88@gentoo.org> mesa-10.0.4.ebuild:
+  Bump llvm requirement from 3.2 to 3.3, bug 506180.
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mesa-10.3.7-r1.ebuild:
   Stable for ppc64, wrt bug #530652
