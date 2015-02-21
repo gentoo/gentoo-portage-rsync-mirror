@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libinput
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/ChangeLog,v 1.5 2015/02/05 11:26:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/ChangeLog,v 1.7 2015/02/21 21:29:19 mattst88 Exp $
+
+  21 Feb 2015; Matt Turner <mattst88@gentoo.org> libinput-0.7.0.ebuild,
+  libinput-0.8.0.ebuild, libinput-0.9.0.ebuild:
+  Added ~mips, bug 538828.
+
+  21 Feb 2015; Matt Turner <mattst88@gentoo.org> libinput-0.7.0.ebuild,
+  libinput-0.8.0.ebuild, libinput-0.9.0.ebuild:
+  Restrict tests, since they require privileged access to /dev/uinput. Bug
+  539270.
 
   05 Feb 2015; Jeroen Roovers <jer@gentoo.org> libinput-0.9.0.ebuild:
   Marked ~hppa (bug #533420).

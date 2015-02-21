@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/vhba
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.48 2014/07/30 19:33:11 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.49 2015/02/21 21:18:25 tetromino Exp $
+
+*vhba-20140928 (21 Feb 2015)
+
+  21 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +vhba-20140928.ebuild:
+  Version bump (bug #518590, thanks to Rafał Mużyło and Andrey
+  Aleksandrovich); fixes hang on hardened kernels.
 
   30 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> vhba-20130607.ebuild:
   Use shorter get_udevdir() instead of the longer deprecated udev_get_udevdir()

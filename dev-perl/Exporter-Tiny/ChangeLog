@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Exporter-Tiny
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Tiny/ChangeLog,v 1.1 2015/02/21 21:06:01 dilfridge Exp $
+
+*Exporter-Tiny-0.42.0 (21 Feb 2015)
+
+  21 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Exporter-Tiny-0.42.0.ebuild, +metadata.xml:
+  New package, dependency of dev-perl/MongoDB
+

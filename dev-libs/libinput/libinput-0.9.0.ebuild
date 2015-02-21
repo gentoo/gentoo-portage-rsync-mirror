@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.9.0.ebuild,v 1.2 2015/02/05 11:26:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.9.0.ebuild,v 1.4 2015/02/21 21:29:19 mattst88 Exp $
 
 EAPI="5"
 
@@ -13,8 +13,9 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 # License appears to be a variant of libtiff
 LICENSE="libtiff"
 SLOT="0/7"
-KEYWORDS="~amd64 ~arm ~hppa"
-IUSE="test"
+KEYWORDS="~amd64 ~arm ~hppa ~mips"
+IUSE=""
+RESTRICT="test"
 
 RDEPEND="
 	>=dev-libs/libevdev-0.4
@@ -23,9 +24,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	test? ( >=dev-libs/check-0.9.10 )
 "
-# tests can even use: dev-util/valgrind
 
 src_configure() {
 	# Doc handling in kinda strange but everything
@@ -40,7 +39,7 @@ src_configure() {
 	econf \
 		--disable-documentation \
 		--disable-event-gui \
-		$(use_enable test tests)
+		--disable-tests
 }
 
 src_install() {

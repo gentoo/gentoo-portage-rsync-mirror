@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.343 2015/01/02 12:14:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.344 2015/02/21 21:11:57 hwoarang Exp $
+
+*lighttpd-1.4.35-r2 (21 Feb 2015)
+
+  21 Feb 2015; Markos Chandras <hwoarang@gentoo.org> +lighttpd-1.4.35-r2.ebuild,
+  files/lighttpd.logrotate-r1, files/lighttpd.service:
+  Fix logrotate script for systemd. Thanks to Karsten Kretschmer
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.35-r1.ebuild:
   Stable for sparc, wrt bug #516842
