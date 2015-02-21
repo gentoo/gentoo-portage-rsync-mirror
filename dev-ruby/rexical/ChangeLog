@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.51 2014/11/18 17:02:51 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.52 2015/02/21 07:14:33 graaff Exp $
+
+  21 Feb 2015; Hans de Graaff <graaff@gentoo.org> rexical-1.0.5-r3.ebuild:
+  Add ruby22.
 
   18 Nov 2014; Hans de Graaff <graaff@gentoo.org> rexical-1.0.5-r3.ebuild:
   Fix building with newer hoe versions, rubyforge is dead.

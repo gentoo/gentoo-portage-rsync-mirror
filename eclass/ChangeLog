@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1545 2015/02/20 17:57:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1546 2015/02/21 07:20:22 yngwin Exp $
+
+  21 Feb 2015; Ben de Groot <yngwin@gentoo.org> font.eclass:
+  Apply patch from Ryan Hill to font.eclass to support multiple FONT_S
+  directories (bug #338634)
 
   20 Feb 2015; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
   python-r1.eclass, python-single-r1.eclass, python-utils-r1.eclass:

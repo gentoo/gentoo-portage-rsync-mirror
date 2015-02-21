@@ -8,5 +8,5 @@ LICENSE=public-domain
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=mirror://sourceforge/xfonts/lfpfonts-var-src-0.84.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	37271e0911f39dd15a28adcaf94f6956	font-ebdftopcf	cfc12172831c46e51665e6ec2d3e918a	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	font-ebdftopcf	cfc12172831c46e51665e6ec2d3e918a	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=e4f68b59408ef3c2e5c9132415059b12

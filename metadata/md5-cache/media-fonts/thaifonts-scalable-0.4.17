@@ -8,5 +8,5 @@ KEYWORDS=amd64 x86
 LICENSE=|| ( GPL-2-with-font-exception GPL-3-with-font-exception )
 SLOT=0
 SRC_URI=ftp://linux.thai.net/pub/thailinux/software/thai-ttf/thai-ttf-0.4.17.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	37271e0911f39dd15a28adcaf94f6956	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=abc3b5d07c9399d128ddd8a14ad1c3e1
