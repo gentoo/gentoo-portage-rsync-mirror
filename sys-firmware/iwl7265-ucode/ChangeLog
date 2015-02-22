@@ -1,0 +1,12 @@
+# ChangeLog for sys-firmware/iwl7265-ucode
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7265-ucode/ChangeLog,v 1.1 2015/02/22 04:06:56 prometheanfire Exp $
+
+*iwl7265-ucode-0.8.24.22 (22 Feb 2015)
+*iwl7265-ucode-0.10.13.23 (22 Feb 2015)
+*iwl7265-ucode-0.9.228.25 (22 Feb 2015)
+
+  22 Feb 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +iwl7265-ucode-0.10.13.23.ebuild, +iwl7265-ucode-0.8.24.22.ebuild,
+  +iwl7265-ucode-0.9.228.25.ebuild, +metadata.xml:
+  initial add of iwl7265-ucode ebuilds / package
