@@ -175,6 +175,7 @@ x86-fbsd	default/bsd/fbsd/x86/9.2			dev
 
 # Hardened Profiles
 amd64		hardened/linux/amd64					stable
+amd64		hardened/linux/amd64/no-emul-linux-x86			dev
 amd64		hardened/linux/amd64/selinux				stable
 amd64		hardened/linux/amd64/no-multilib			stable
 amd64		hardened/linux/amd64/no-multilib/selinux		stable
