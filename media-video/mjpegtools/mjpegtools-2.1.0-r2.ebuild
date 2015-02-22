@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.7 2015/02/12 10:37:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.8 2015/02/22 14:55:15 billie Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd"
-IUSE="dv gtk cpu_flags_x86_mmx png quicktime sdl sdlgfx static-libs v4l"
+IUSE="dv gtk cpu_flags_x86_mmx png quicktime sdl sdlgfx static-libs"
 REQUIRED_USE="sdlgfx? ( sdl )"
 
 RDEPEND=">=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
@@ -38,13 +38,6 @@ RDEPEND="${RDEPEND}
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)]
 	)"
 
-pkg_pretend() {
-	if has_version ">=sys-kernel/linux-headers-2.6.38" && use v4l; then
-		ewarn "Current versions of mjpegtools only support V4L1 which is not available"
-		ewarn "for kernel versions 2.6.38 and above. V4L1 will be disabled."
-	fi
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-pic.patch
 	# https://sourceforge.net/p/mjpeg/bugs/139/
@@ -66,7 +59,7 @@ multilib_src_configure() {
 		$(use_with quicktime libquicktime)
 		$(use_with dv libdv)
 		$(use_with sdl libsdl)
-		$(use_with v4l)
+		--without-v4l
 		$(use_with sdl x)
 
 		# used by tools only

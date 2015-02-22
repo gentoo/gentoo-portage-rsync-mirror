@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.12 2010/02/08 20:16:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.13 2015/02/22 14:47:04 mgorny Exp $
 
 inherit eutils toolchain-funcs autotools
 
 PATCH_VER=4
 DESCRIPTION="Touchscreen Access Library"
-HOMEPAGE="http://tslib.berlios.de/"
-SRC_URI="mirror://berlios/${PN}/${PN}-${PV}.tar.bz2
+HOMEPAGE="https://github.com/kergoth/tslib"
+SRC_URI="http://dev.gentoo.org/~mgorny/dist/${P}.tar.bz2
 	mirror://gentoo/${PN}-${PV}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
