@@ -25,7 +25,7 @@ DEPEND="
 	dev-qt/qtgui:4
 	sys-apps/file"
 RDEPEND="${DEPEND}
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+	app-crypt/qca:2[openssl]
 "
 
 S=${WORKDIR}/${MY_P}

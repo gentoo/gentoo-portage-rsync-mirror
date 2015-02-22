@@ -25,7 +25,7 @@ DEPEND="
 	crypt? ( app-crypt/qca:2[qt4(+)] )
 "
 RDEPEND="${DEPEND}
-	crypt? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
+	crypt? ( app-crypt/qca:2[openssl] )
 "
 
 src_configure() {

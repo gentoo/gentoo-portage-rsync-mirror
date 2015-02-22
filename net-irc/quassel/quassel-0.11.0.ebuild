@@ -26,10 +26,7 @@ SERVER_RDEPEND="
 	)
 	!qt5? (
 		dev-qt/qtscript:4
-		crypt? (
-			app-crypt/qca:2[qt4(+)]
-			|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
-		)
+		crypt? ( app-crypt/qca:2[openssl,qt4(+)] )
 		postgres? ( dev-qt/qtsql:4[postgres] )
 		!postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
 	)

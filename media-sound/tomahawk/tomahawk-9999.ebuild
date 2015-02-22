@@ -68,7 +68,7 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+	app-crypt/qca:2[openssl]
 "
 
 DOCS=( AUTHORS ChangeLog README.md )

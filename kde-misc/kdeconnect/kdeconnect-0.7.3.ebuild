@@ -33,7 +33,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep plasma-workspace)
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+	app-crypt/qca:2[openssl]
 "
 
 [[ ${KDE_BUILD_TYPE} != live ]] && S=${WORKDIR}/${MY_P}

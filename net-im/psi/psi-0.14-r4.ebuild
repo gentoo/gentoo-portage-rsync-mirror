@@ -44,10 +44,10 @@ DEPEND="${RDEPEND}
 	sys-devel/qconf
 	doc? ( app-doc/doxygen )"
 
-PDEPEND="crypt? ( || ( app-crypt/qca-gnupg:2 app-crypt/qca:2[gpg] ) )
+PDEPEND="crypt? ( app-crypt/qca:2[gpg] )
 	jingle? ( net-im/psimedia
-		|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
-	ssl? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )"
+		app-crypt/qca:2[openssl] )
+	ssl? ( app-crypt/qca:2[openssl] )"
 
 S=${WORKDIR}/${MY_P}
 
