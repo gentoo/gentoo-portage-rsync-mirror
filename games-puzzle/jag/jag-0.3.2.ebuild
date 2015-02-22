@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.7 2014/05/15 16:52:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/jag-0.3.2.ebuild,v 1.8 2015/02/22 09:20:25 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils qt4-r2 games
 
 DESCRIPTION="Arcade 2D Puzzle Game"

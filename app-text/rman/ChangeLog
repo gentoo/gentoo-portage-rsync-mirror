@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.40 2015/02/20 14:09:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.41 2015/02/22 09:05:51 jer Exp $
+
+  22 Feb 2015; Jeroen Roovers <jer@gentoo.org> rman-3.2-r1.ebuild:
+  Stable for HPPA (bug #540792).
 
 *rman-3.2-r1 (20 Feb 2015)
 

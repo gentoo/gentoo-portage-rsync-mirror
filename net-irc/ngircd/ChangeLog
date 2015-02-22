@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ngircd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.60 2014/08/10 20:53:35 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.61 2015/02/22 09:16:18 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> ngircd-0.12.1.ebuild,
+  ngircd-13.ebuild, ngircd-17.1.ebuild, ngircd-18.ebuild, ngircd-20.3.ebuild:
+  Remove berlios SRC_URI, bump EAPI. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/34 by Michael Mair-Keimberger.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ngircd-0.12.1.ebuild,
   ngircd-13.ebuild:
