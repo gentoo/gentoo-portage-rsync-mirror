@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airtraf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.25 2015/02/21 12:24:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.26 2015/02/22 08:26:58 jer Exp $
+
+  22 Feb 2015; Jeroen Roovers <jer@gentoo.org> -airtraf-1.1.ebuild:
+  Old.
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> airtraf-1.1-r3.ebuild:
   Stable for ppc, wrt bug #539202

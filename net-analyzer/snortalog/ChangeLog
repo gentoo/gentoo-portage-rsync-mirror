@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortalog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.27 2015/02/11 16:51:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/ChangeLog,v 1.28 2015/02/22 08:18:27 jer Exp $
+
+  22 Feb 2015; Jeroen Roovers <jer@gentoo.org> snortalog-2.4.3-r1.ebuild:
+  Depend on dev-lang/perl[ithreads] by OKUMURA N. Shin-ya (bug #540910).
 
 *snortalog-2.4.3-r1 (11 Feb 2015)
 
