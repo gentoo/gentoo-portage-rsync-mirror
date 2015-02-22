@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.69 2015/01/29 17:58:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.70 2015/02/22 07:38:58 mr_bones_ Exp $
+
+  22 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> smpeg-0.4.4-r10.ebuild:
+  use prune_libtool_files
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> smpeg-0.4.4-r10.ebuild,
   smpeg-0.4.4-r9.ebuild:

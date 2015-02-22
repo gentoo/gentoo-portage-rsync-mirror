@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca-logger
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.12 2012/06/14 07:03:19 yngwin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.13 2015/02/22 07:43:46 jer Exp $
+
+  22 Feb 2015; Jeroen Roovers <jer@gentoo.org> qca-logger-2.0.0_beta2.ebuild:
+  Stable for HPPA (bug #540976).
 
   14 Jun 2012; Ben de Groot <yngwin@gentoo.org> qca-logger-2.0.0_beta2.ebuild:
   Destabling to ~ia64 because last available stable qt will be masked pending

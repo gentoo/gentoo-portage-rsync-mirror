@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/smpeg2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/ChangeLog,v 1.6 2015/01/29 17:58:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/ChangeLog,v 1.7 2015/02/22 07:51:44 mr_bones_ Exp $
+
+*smpeg2-2.0.0-r3 (22 Feb 2015)
+
+  22 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> +smpeg2-2.0.0-r3.ebuild,
+  files/smpeg2-2.0.0-smpeg2-config.patch:
+  add the patch from smpeg to work around bug #538876; rev bump to push out
+  diffs
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> smpeg2-2.0.0-r2.ebuild:
   Switch to CPU_FLAGS_X86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r10.ebuild,v 1.8 2015/01/29 17:58:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r10.ebuild,v 1.9 2015/02/22 07:38:58 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs autotools flag-o-matic multilib-minimal
@@ -71,5 +71,5 @@ multilib_src_configure() {
 }
 
 multilib_src_install_all() {
-	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
+	use static-libs || prune_libtool_files
 }

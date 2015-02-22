@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/qca-logger-2.0.0_beta2.ebuild,v 1.12 2012/06/14 07:03:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/qca-logger-2.0.0_beta2.ebuild,v 1.13 2015/02/22 07:43:46 jer Exp $
 
 EAPI="2"
 inherit eutils qt4-r2
@@ -14,7 +14,7 @@ SRC_URI="http://delta.affinix.com/download/qca/${QCA_VER}/plugins/${MY_P}.tar.bz
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~ia64 ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND=">=app-crypt/qca-${QCA_VER}[debug?]"
