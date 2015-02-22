@@ -1,25 +1,34 @@
-From 1964870db4ad1e4334e8fc5050795469dc1fb05e Mon Sep 17 00:00:00 2001
-From: Giuseppe Bilotta <giuseppe.bilotta@gmail.com>
-Date: Tue, 9 Sep 2014 21:34:45 +0200
-Subject: [PATCH] Fallback DPI detection on X11
+Merged upstream commits for bug 523822:
 
-When the Xft.dpi setting is not found, and if only one screen is
-available, fall back to detecting the screen DPI from the reported
-resolution and monitor size.
+a2d4bd6864e108a11d6ca2b69de5ebce265102dc "Refactor DPI settings validity check"
+1964870db4ad1e4334e8fc5050795469dc1fb05e "[PATCH] Fallback DPI detection on X11"
 
-Change-Id: I1481d94b5dc4072c1f8da4659a221dfc7971080b
-Reviewed-on: https://gerrit.libreoffice.org/11377
-Reviewed-by: Chris Sherlock <chris.sherlock79@gmail.com>
-Tested-by: Chris Sherlock <chris.sherlock79@gmail.com>
----
- vcl/unx/generic/app/saldisp.cxx | 20 +++++++++++++++++++-
- 1 file changed, 19 insertions(+), 1 deletion(-)
-
-diff --git a/vcl/unx/generic/app/saldisp.cxx b/vcl/unx/generic/app/saldisp.cxx
-index 7c97a24..ee6aad7 100644
---- a/vcl/unx/generic/app/saldisp.cxx
+diff -u b/vcl/unx/generic/app/saldisp.cxx b/vcl/unx/generic/app/saldisp.cxx
+--- b/vcl/unx/generic/app/saldisp.cxx
 +++ b/vcl/unx/generic/app/saldisp.cxx
-@@ -569,7 +569,25 @@ void SalDisplay::Init()
+@@ -120,6 +120,12 @@
+     return nBits;
+ }
+ 
++// check if the resolution is sane
++static bool sal_ValidDPI(long nDPI)
++{
++    return (nDPI >= 50) && (nDPI <= 500);
++}
++
+ static bool sal_GetVisualInfo( Display *pDisplay, XID nVID, XVisualInfo &rVI )
+ {
+     int         nInfos;
+@@ -555,7 +561,7 @@
+         const OString aValStr( pValStr );
+         const long nDPI = (long) aValStr.toDouble();
+         // guard against insane resolution
+-        if( (nDPI >= 50) && (nDPI <= 500) )
++        if( sal_ValidDPI(nDPI) )
+         {
+             aResolution_ = Pair( nDPI, nDPI );
+             bExactResolution = true;
+@@ -569,7 +575,25 @@
      }
      if( bExactResolution == false )
      {
@@ -46,6 +55,3 @@ index 7c97a24..ee6aad7 100644
      }
  
      nMaxRequestSize_    = XExtendedMaxRequestSize( pDisp_ ) * 4;
--- 
-2.3.0
-
