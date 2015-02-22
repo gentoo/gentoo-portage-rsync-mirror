@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/openpam
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.26 2014/08/10 20:22:19 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.27 2015/02/22 10:03:44 mgorny Exp $
+
+*openpam-20140912 (22 Feb 2015)
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> +openpam-20140912.ebuild,
+  -openpam-20071221.ebuild, -openpam-20111218.ebuild,
+  -openpam-20120526-r1.ebuild, -openpam-20120526.ebuild,
+  -openpam-20130907.ebuild:
+  Version bump for security bug #512498. Remove old. https://github.com/gentoo
+  /gentoo-portage-rsync-mirror/pull/35 by nigoro.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> openpam-20071221.ebuild,
   openpam-20111218.ebuild, openpam-20120526-r1.ebuild, openpam-20120526.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/gargoyle
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.25 2013/02/02 12:04:35 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.26 2015/02/22 10:20:34 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> gargoyle-2011.1.ebuild:
+  Fix libertine-ttf dependency after pkgmove to media-fonts/libertine.
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup up due #48914

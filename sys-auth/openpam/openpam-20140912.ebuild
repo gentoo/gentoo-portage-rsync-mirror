@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20120526-r1.ebuild,v 1.2 2014/08/10 20:22:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20140912.ebuild,v 1.1 2015/02/22 10:03:44 mgorny Exp $
 
 EAPI="5"
 
@@ -25,15 +25,15 @@ PDEPEND="sys-auth/pambase
 	vim-syntax? ( app-vim/pam-syntax )"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-20071221-gentoo.patch"
-	"${FILESDIR}/${PN}-20050201-nbsd.patch"
+	"${FILESDIR}/${PN}-20130907-gentoo.patch"
+	"${FILESDIR}/${PN}-20130907-nbsd.patch"
+	"${FILESDIR}/${PN}-20130907-module-dir.patch"
 	)
 
 DOCS=( CREDITS HISTORY RELNOTES README )
 
 src_prepare() {
 	sed -i -e 's:-Werror::' "${S}/configure.ac"
-	mkdir "${S}/m4" # Otherwise aclocal fails since ACLOCAL_AMFLAGS is set in Makefile.am
 
 	autotools-multilib_src_prepare
 }

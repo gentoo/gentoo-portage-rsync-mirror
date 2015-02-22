@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.175 2015/02/15 17:46:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.176 2015/02/22 10:15:42 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> libreoffice-bin-4.3.5.2.ebuild:
+  Fix libertine-ttf dependency after pkgmove to media-fonts/libertine.
 
   15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-bin-4.2.8.2.ebuild:
