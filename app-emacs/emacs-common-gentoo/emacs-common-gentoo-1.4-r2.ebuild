@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.4-r2.ebuild,v 1.1 2015/02/21 08:46:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.4-r2.ebuild,v 1.2 2015/02/22 15:07:48 ulm Exp $
 
 EAPI=5
 
@@ -106,6 +106,18 @@ pkg_preinst() {
 			chgrp gamestat "${ED}${f}" || die
 			chmod g+w "${ED}${f}" || die
 		done
+
+		if [[ -d ${EROOT}/var/games && -z $(find "${EROOT}"/var/games \
+				-maxdepth 0 -uid 0 -gid 0 -perm 755 -print) ]]; then
+			chown 0:0 "${EROOT}"/var/games || die
+			chmod 755 "${EROOT}"/var/games || die
+		fi
+		if has 1.4-r1 ${REPLACING_VERSIONS} \
+				&& [[ -d ${EROOT}/var/games/emacs ]]; then
+			elog "Updating owner and permissions of score file directory."
+			chown 0:gamestat "${EROOT}"/var/games/emacs || die
+			chmod 775 "${EROOT}"/var/games/emacs || die
+		fi
 	fi
 
 	if [[ -e ${EROOT}${SITELISP}/site-start.el ]]; then
@@ -125,19 +137,10 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	if use games; then
-		# update permissions of shared score dir #537580
-		chown 0:0 "${EROOT}"/var/games
-		chmod 755 "${EROOT}"/var/games
-		chown 0:gamestat "${EROOT}"/var/games/emacs
-		chmod 775 "${EROOT}"/var/games/emacs
-	fi
-
 	if use X; then
 		fdo-mime_desktop_database_update
 		gnome2_icon_cache_update
 	fi
-
 	readme.gentoo_print_elog
 }
 
