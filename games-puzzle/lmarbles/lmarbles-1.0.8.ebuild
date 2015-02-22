@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/lmarbles-1.0.8.ebuild,v 1.5 2010/08/04 21:11:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lmarbles/lmarbles-1.0.8.ebuild,v 1.6 2015/02/22 10:00:00 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils games
 
 DESCRIPTION="puzzle game inspired by Atomix and written in SDL"
@@ -16,15 +16,17 @@ IUSE=""
 
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
+	mv configure.{in,ac}
+	rm *.m4
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	default
 	newicon lmarbles48.gif ${PN}.gif
 	make_desktop_entry lmarbles LMarbles /usr/share/pixmaps/${PN}.gif
 	dohtml src/manual/*
