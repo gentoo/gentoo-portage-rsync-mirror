@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r4.ebuild,v 1.10 2011/08/07 11:58:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5-r4.ebuild,v 1.11 2015/02/22 16:00:51 fordfrog Exp $
 
-EAPI="1"
+EAPI=5
 inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Java based Database Explorer"

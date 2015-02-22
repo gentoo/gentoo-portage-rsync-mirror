@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/jxtray
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.34 2011/08/07 11:58:24 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.35 2015/02/22 16:00:51 fordfrog Exp $
+
+  22 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> jxtray-0.5-r4.ebuild:
+  switched to eapi 5 (bug #540810)
 
   07 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> jxtray-0.5-r4.ebuild:
   Dropped ppc/ppc64 wrt #326091
