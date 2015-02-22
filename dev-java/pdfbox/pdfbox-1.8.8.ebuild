@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-1.8.8.ebuild,v 1.1 2015/02/21 14:29:15 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-1.8.8.ebuild,v 1.2 2015/02/22 12:01:04 fordfrog Exp $
 EAPI=5
 
 JAVA_PKG_IUSE="doc source test"
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 CDEPEND=">=dev-java/bcprov-1.50
-	>=dev-java/bcmail-1.45
+	dev-java/bcmail:1.45
 	>=dev-java/commons-logging-1.1.1:0
 	dev-java/icu4j:4
 	dev-java/junit:4"
@@ -45,7 +45,7 @@ src_unpack() {
 }
 
 java_prepare() {
-	# Correct version number in build.xml. 
+	# Correct version number in build.xml.
 	# Silly typo from upstream (version mismatch) but as a result,
 	# the generated jar bears version 1.8.7 instead of 1.8.8 :[
 	epatch "${FILESDIR}"/${P}-build.xml.patch
@@ -54,7 +54,7 @@ java_prepare() {
 }
 
 src_test() {
-	# For some reason that I have YET to figure out, 
+	# For some reason that I have YET to figure out,
 	# running the junit tests delete the jar file (!?)
 	# (well I guess everything inside target/*)
 
@@ -67,7 +67,7 @@ src_test() {
 }
 
 src_install() {
-	java-pkg_newjar ${P}.jar ${PN}.jar
+	java-pkg_newjar target/${P}.jar ${PN}.jar
 
 	if use doc; then
 		java-pkg_dojavadoc target/site/apidocs

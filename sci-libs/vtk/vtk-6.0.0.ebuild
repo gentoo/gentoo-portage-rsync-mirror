@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.10 2014/12/28 16:53:38 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.11 2015/02/22 11:51:52 jlec Exp $
 
 EAPI=5
 
@@ -38,15 +38,15 @@ RDEPEND="
 	dev-libs/expat
 	dev-libs/libxml2:2
 	media-libs/freetype
-	media-libs/libpng
+	media-libs/libpng:0
 	media-libs/mesa
 	media-libs/libtheora
-	media-libs/tiff
+	media-libs/tiff:0
 	sci-libs/exodusii
 	sci-libs/hdf5:=
 	sci-libs/netcdf-cxx:3
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	virtual/opengl
 	>=x11-libs/gl2ps-1.3.8
 	x11-libs/libX11
@@ -60,12 +60,12 @@ RDEPEND="
 		sci-libs/vtkdata
 	)
 	ffmpeg? ( virtual/ffmpeg )
-	java? ( >=virtual/jre-1.5 )
+	java? ( >=virtual/jre-1.5:* )
 	mpi? ( virtual/mpi[cxx,romio] )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	offscreen? ( media-libs/mesa[osmesa] )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:= )
 	python? (
 		${PYTHON_DEPS}
 		dev-python/sip[${PYTHON_USEDEP}]
@@ -254,8 +254,8 @@ src_configure() {
 		mycmakeargs+=(
 #			-DR_LIBRARY_BLAS=$($(tc-getPKG_CONFIG) --libs blas)
 #			-DR_LIBRARY_LAPACK=$($(tc-getPKG_CONFIG) --libs lapack)
-			-DR_LIBRARY_BLAS=/usr/lib64/R/lib/libR.so
-			-DR_LIBRARY_LAPACK=/usr/lib64/R/lib/libR.so
+			-DR_LIBRARY_BLAS=/usr/$(get_libdir)/R/lib/libR.so
+			-DR_LIBRARY_LAPACK=/usr/$(get_libdir)/R/lib/libR.so
 		)
 	fi
 

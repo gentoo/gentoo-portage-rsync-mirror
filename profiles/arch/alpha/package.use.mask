@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.179 2015/02/21 11:37:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.180 2015/02/22 11:49:53 mgorny Exp $
+
+# Michał Górny <mgorny@gentoo.org> (22 Feb 2015)
+# Dependency not keyworded for some reason.
+media-libs/gegl umfpack
 
 # Michał Górny <mgorny@gentoo.org> (21 Feb 2015)
 # The external QCA plugins are not keyworded on this arch. Since

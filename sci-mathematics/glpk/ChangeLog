@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/glpk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.72 2014/09/01 16:41:18 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.73 2015/02/22 11:51:39 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> glpk-4.54.ebuild:
+  Drop ~alpha because of a number of non-keyworded deps.
 
   01 Sep 2014; Michał Górny <mgorny@gentoo.org> glpk-4.54.ebuild:
   Remove := subslot operator from || () block since it is meaningless and

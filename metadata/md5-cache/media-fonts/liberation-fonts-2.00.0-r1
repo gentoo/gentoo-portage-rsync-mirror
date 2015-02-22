@@ -9,4 +9,4 @@ LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=!fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-ttf-2.00.0.tar.gz ) fontforge? ( https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-2.00.0.tar.gz )
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=b871776d1a2e34e204bea593817fc9b6
+_md5_=3c835761e2fb204ae9762b165dcdfe00

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci-mathematics</herd>
-<longdescription lang='en'>
+  <herd>sci-mathematics</herd>
+  <longdescription lang="en">
   MPFI is intended to be a portable library written in C for arbitrary
   precision interval arithmetic with intervals represented using MPFR
   reliable floating-point numbers. It is based on the GNU MP library

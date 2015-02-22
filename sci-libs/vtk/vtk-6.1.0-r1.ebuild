@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.3 2015/02/09 07:55:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.4 2015/02/22 11:51:52 jlec Exp $
 
 EAPI=5
 
@@ -50,15 +50,15 @@ RDEPEND="
 	dev-libs/jsoncpp
 	dev-libs/libxml2:2
 	>=media-libs/freetype-2.5.4
-	media-libs/libpng
+	media-libs/libpng:0
 	media-libs/mesa
 	media-libs/libtheora
-	media-libs/tiff
+	media-libs/tiff:0
 	sci-libs/exodusii
 	sci-libs/hdf5:=
 	sci-libs/netcdf-cxx:3
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	virtual/opengl
 	>=x11-libs/gl2ps-1.3.8
 	x11-libs/libX11
@@ -73,7 +73,7 @@ RDEPEND="
 	)
 	ffmpeg? ( virtual/ffmpeg )
 	gdal? ( sci-libs/gdal )
-	java? ( >=virtual/jre-1.5 )
+	java? ( >=virtual/jre-1.5:* )
 	kaapi? ( <sci-libs/xkaapi-3 )
 	mpi? (
 		virtual/mpi[cxx,romio]
@@ -81,7 +81,7 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	offscreen? ( media-libs/mesa[osmesa] )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:= )
 	python? (
 		${PYTHON_DEPS}
 		dev-python/sip[${PYTHON_USEDEP}]

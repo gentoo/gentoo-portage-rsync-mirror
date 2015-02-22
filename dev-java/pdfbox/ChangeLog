@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.29 2015/02/21 14:29:15 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.30 2015/02/22 12:01:04 fordfrog Exp $
+
+  22 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> pdfbox-1.8.8.ebuild:
+  fixed installation of jar file (bug #540998)
 
 *pdfbox-1.8.8 (21 Feb 2015)
 
