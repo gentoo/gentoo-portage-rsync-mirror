@@ -7,8 +7,8 @@ EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="An enhanced (world's fastest) tar, as well as enhanced mt/rmt"
-HOMEPAGE="http://cdrecord.berlios.de/old/private/star.html"
-SRC_URI="ftp://ftp.berlios.de/pub/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://s-tar.sourceforge.net/"
+SRC_URI="mirror://sourceforge/s-tar/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
