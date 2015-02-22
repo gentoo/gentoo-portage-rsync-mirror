@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.14 2015/01/28 22:29:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.15 2015/02/22 18:30:30 mgorny Exp $
 
 EAPI="5"
 
@@ -42,12 +42,7 @@ RDEPEND="${COMMON_DEPEND}
 		net-im/telepathy-mission-control
 		net-voip/telepathy-haze
 	)
-	crypt? (
-		|| (
-			app-crypt/qca-gnupg:2
-			app-crypt/qca:2[gpg]
-		)
-	)
+	crypt? ( app-crypt/qca:2[gpg] )
 	latex? (
 		|| (
 			media-gfx/imagemagick
