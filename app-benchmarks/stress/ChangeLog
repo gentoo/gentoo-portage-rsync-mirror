@@ -1,6 +1,15 @@
 # ChangeLog for app-benchmarks/stress
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.49 2014/08/05 07:59:56 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.50 2015/02/22 12:43:47 mgorny Exp $
+
+*stress-1.0.4-r1 (22 Feb 2015)
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> +stress-1.0.4-r1.ebuild,
+  stress-0.18.6.ebuild, stress-1.0.0.ebuild, stress-1.0.1.ebuild,
+  stress-1.0.3.ebuild, stress-1.0.4.ebuild:
+  Fix HOMEPAGE, bug #538356. Revbump for 1.0.4 was re-released with GPL-3
+  license. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/29 by
+  mm1ke.
 
   05 Aug 2014; Patrick Lauer <patrick@gentoo.org> stress-0.18.6.ebuild,
   stress-1.0.0.ebuild, stress-1.0.1.ebuild, stress-1.0.3.ebuild,
