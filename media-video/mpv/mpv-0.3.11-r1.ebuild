@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.11-r1.ebuild,v 1.1 2015/02/01 22:34:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.3.11-r1.ebuild,v 1.2 2015/02/22 06:16:18 yngwin Exp $
 
 EAPI=5
 
@@ -88,7 +88,7 @@ RDEPEND+="
 	libguess? ( >=app-i18n/libguess-1.0 )
 	lirc? ( app-misc/lirc )
 	lua? (
-		!luajit? ( >=dev-lang/lua-5.1 )
+		!luajit? ( >=dev-lang/lua-5.1:= )
 		luajit? ( dev-lang/luajit:2 )
 	)
 	mpg123? ( >=media-sound/mpg123-1.14.0 )

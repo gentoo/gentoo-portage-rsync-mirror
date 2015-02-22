@@ -1,11 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.66 2015/02/22 06:16:18 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.8.0.ebuild,v 1.1 2015/02/22 06:16:18 yngwin Exp $
 
 EAPI=5
-
 EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
-
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE='threads(+)'
 
@@ -14,17 +12,17 @@ inherit eutils python-any-r1 waf-utils pax-utils fdo-mime gnome2-utils
 
 WAF_V="1.8.4"
 
-DESCRIPTION="Video player based on MPlayer/mplayer2"
+DESCRIPTION="Free, open source, and cross-platform media player (fork of MPlayer/mplayer2)"
 HOMEPAGE="http://mpv.io/"
 SRC_URI="http://ftp.waf.io/pub/release/waf-${WAF_V}"
 [[ ${PV} == *9999* ]] || \
 SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ BSD"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa bluray bs2b cdio +cli -doc-pdf dvb +dvd dvdnav egl +enca encode
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux"
+IUSE="+alsa bluray bs2b cdio +cli doc-pdf dvb +dvd dvdnav egl +enca encode
 +iconv jack -joystick jpeg ladspa lcms +libass libav libcaca libguess libmpv
 lirc lua luajit +mpg123 -openal +opengl oss pulseaudio pvr samba -sdl selinux
 v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
@@ -131,7 +129,7 @@ pkg_setup() {
 
 	einfo "For additional format support you need to enable the support on your"
 	einfo "libavcodec/libavformat provider:"
-	einfo "    media-video/libav or media-video/ffmpeg"
+	einfo "    media-video/ffmpeg or media-video/libav"
 
 	python-any-r1_pkg_setup
 }
@@ -229,6 +227,7 @@ src_configure() {
 		$(use_enable v4l tv-v4l2)
 		$(use_enable v4l libv4l2)
 		$(use_enable pvr)
+		$(use_enable dvb)
 		$(use_enable dvb dvbin)
 	)
 	waf-utils_src_configure "${mywafargs[@]}"
