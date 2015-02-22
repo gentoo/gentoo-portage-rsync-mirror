@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qmtest
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.13 2014/04/14 00:40:48 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.14 2015/02/22 01:51:09 idella4 Exp $
+
+*qmtest-2.4.1-r1 (22 Feb 2015)
+
+  22 Feb 2015; Ian Delaney <idella4@gentoo.org> +qmtest-2.4.1-r1.ebuild:
+  revbump; convert -> distutils-r1
 
   14 Apr 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   [QA] No maintainer was listed, thus checked metadata.xml patchsets and added
