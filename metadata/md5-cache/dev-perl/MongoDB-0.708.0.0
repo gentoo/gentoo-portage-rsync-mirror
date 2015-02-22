@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-perl/Authen-SCRAM virtual/perl-Carp dev-perl/Moose >=dev-perl/DateTime-0.780.0 virtual/perl-Digest-MD5 virtual/perl-Encode >=virtual/perl-Exporter-5.570.0 virtual/perl-IO virtual/perl-MIME-Base64 dev-perl/Safe-Isa virtual/perl-Scalar-List-Utils dev-perl/Syntax-Keyword-Junction dev-perl/Throwable dev-perl/Tie-IxHash virtual/perl-Time-HiRes dev-perl/Try-Tiny virtual/perl-XSLoader dev-perl/boolean virtual/perl-if dev-perl/namespace-clean >=dev-perl/Config-AutoConf-0.220.0 virtual/perl-ExtUtils-MakeMaker >=dev-perl/Path-Tiny-0.52.0 test? ( virtual/perl-Data-Dumper dev-perl/DateTime-Tiny virtual/perl-File-Spec virtual/perl-File-Temp dev-perl/JSON >=dev-perl/Test-Deep-0.111.0 dev-perl/Test-Fatal >=virtual/perl-Test-Simple-0.960.0 dev-perl/Test-Warn virtual/perl-bignum virtual/perl-threads ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Official MongoDB Driver for Perl
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/MongoDB/
+IUSE=test
+LICENSE=Apache-2.0
+RDEPEND=dev-perl/Authen-SCRAM virtual/perl-Carp dev-perl/Moose >=dev-perl/DateTime-0.780.0 virtual/perl-Digest-MD5 virtual/perl-Encode >=virtual/perl-Exporter-5.570.0 virtual/perl-IO virtual/perl-MIME-Base64 dev-perl/Safe-Isa virtual/perl-Scalar-List-Utils dev-perl/Syntax-Keyword-Junction dev-perl/Throwable dev-perl/Tie-IxHash virtual/perl-Time-HiRes dev-perl/Try-Tiny virtual/perl-XSLoader dev-perl/boolean virtual/perl-if dev-perl/namespace-clean dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/M/MO/MONGODB/MongoDB-v0.708.0.0.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=fdcbc6696a196a66fb35148564afb36a

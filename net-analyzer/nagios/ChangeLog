@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagios
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.120 2014/12/26 09:23:17 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.121 2015/02/21 23:22:49 mjo Exp $
+
+*nagios-4.0.8-r1 (21 Feb 2015)
+
+  21 Feb 2015; Michael Orlitzky <mjo@gentoo.org> +nagios-4.0.8-r1.ebuild,
+  metadata.xml:
+  Add myself as a maintainer and revbump to accept net-analyzer/monitoring-
+  plugins.
 
   26 Dec 2014; Agostino Sarubbo <ago@gentoo.org> nagios-3.5.1.ebuild:
   Stable for alpha/ppc/ppc64/sparc, wrt bug #501200

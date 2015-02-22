@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/gimp-gmic-1.6.0.4.ebuild,v 1.1 2015/02/07 21:35:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gimp-gmic/gimp-gmic-1.6.0.4.ebuild,v 1.2 2015/02/21 23:29:47 radhermit Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="G'MIC GIMP plugin"
-HOMEPAGE="http://gmic.sourceforge.net/gimp.shtml"
+HOMEPAGE="http://gmic.eu/"
 SRC_URI="mirror://sourceforge/gmic/gmic_${PV}.tar.gz"
 
 LICENSE="CeCILL-2"

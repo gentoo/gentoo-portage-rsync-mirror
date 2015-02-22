@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.6.0.4.ebuild,v 1.1 2015/02/07 21:34:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.6.0.4.ebuild,v 1.2 2015/02/21 23:28:59 radhermit Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs bash-completion-r1 flag-o-matic
 
 DESCRIPTION="GREYC's Magic Image Converter"
-HOMEPAGE="http://gmic.sourceforge.net/"
+HOMEPAGE="http://gmic.eu/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="CeCILL-2 FDL-1.3"

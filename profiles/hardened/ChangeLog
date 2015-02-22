@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.77 2015/01/30 22:04:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.78 2015/02/21 23:29:59 blueness Exp $
+
+  21 Feb 2015; Anthony G. Basile <blueness@gentoo.org>
+  +linux/amd64/no-emul-linux-x86/eapi, +linux/amd64/no-emul-linux-x86/parent:
+  Add hardened/linux/amd64/no-emul-linux-x86 profile
 
   30 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
   linux/musl/amd64/make.defaults, linux/musl/x86/make.defaults:
