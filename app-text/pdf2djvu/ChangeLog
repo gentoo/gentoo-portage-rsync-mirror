@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pdf2djvu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.21 2013/09/12 21:16:00 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.22 2015/02/22 22:23:43 dilfridge Exp $
+
+*pdf2djvu-0.7.19 (22 Feb 2015)
+
+  22 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  pdf2djvu-0.7.16.ebuild, pdf2djvu-0.7.17.ebuild, +pdf2djvu-0.7.19.ebuild:
+  Version bump, restrict poppler version on old
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> pdf2djvu-0.7.17.ebuild:
   Minor cleanup: call python-single-r1_pkg_setup only if USE=test is used. Add

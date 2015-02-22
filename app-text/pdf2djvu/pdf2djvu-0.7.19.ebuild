@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.17.ebuild,v 1.4 2015/02/22 22:23:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/pdf2djvu-0.7.19.ebuild,v 1.1 2015/02/22 22:23:43 dilfridge Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit python-single-r1 toolchain-funcs
 
 DESCRIPTION="A tool to create DjVu files from PDF files"
 HOMEPAGE="http://code.google.com/p/pdf2djvu/"
-SRC_URI="http://pdf2djvu.googlecode.com/files/${PN}_${PV}.tar.gz"
+SRC_URI="https://bitbucket.org/jwilk/${PN}/downloads/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +19,7 @@ IUSE="+graphicsmagick nls openmp test"
 
 RDEPEND="
 	>=app-text/djvu-3.5.21:=
-	<app-text/poppler-0.31.0:=
+	>=app-text/poppler-0.16.7:=
 	dev-libs/libxml2:=
 	dev-libs/libxslt:=
 	graphicsmagick? ( media-gfx/graphicsmagick:= )
