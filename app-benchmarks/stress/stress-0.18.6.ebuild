@@ -7,7 +7,7 @@ inherit flag-o-matic
 MY_P="${PN}-${PV/_/}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Imposes stressful loads on different aspects of the system"
-HOMEPAGE="http://weather.ou.edu/~apw/projects/stress"
+HOMEPAGE="http://people.seas.harvard.edu/~apw/stress"
 SRC_URI="http://weather.ou.edu/~apw/projects/stress/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
