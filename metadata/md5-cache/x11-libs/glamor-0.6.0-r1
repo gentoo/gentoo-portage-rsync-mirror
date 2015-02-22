@@ -4,10 +4,10 @@ DESCRIPTION=OpenGL based 2D rendering acceleration library
 EAPI=5
 HOMEPAGE=http://xorg.freedesktop.org/
 IUSE=gles xv static-libs
-KEYWORDS=~alpha amd64 ~ia64 ppc ppc64 ~sparc x86
+KEYWORDS=~alpha amd64 ia64 ppc ppc64 ~sparc x86
 LICENSE=MIT
 RDEPEND=>=x11-base/xorg-server-1.10 >=media-libs/mesa-10[egl,gbm] gles? ( || ( media-libs/mesa[gles2] media-libs/mesa[gles] ) ) >=x11-libs/pixman-0.21.8 x11-base/xorg-server:= x11-base/xorg-server[-minimal] x11-libs/libdrm
 SLOT=0
 SRC_URI=http://xorg.freedesktop.org/releases/individual/driver/glamor-egl-0.6.0.tar.bz2
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	xorg-2	69479ff7a35a30e863a475568d29b9be
-_md5_=c27d7da3f61b304f624066cdd9440421
+_md5_=126282e65ebbc4363dddce18f2a9b830
