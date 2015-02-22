@@ -7,8 +7,8 @@ EAPI=5
 inherit autotools
 
 DESCRIPTION="graphical tool for management of active NX sessions on FreeNX server"
-HOMEPAGE="http://developer.berlios.de/projects/nxsadmin/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/nxsadmin.berlios/"
+SRC_URI="mirror://sourceforge/${PN}.berlios/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
