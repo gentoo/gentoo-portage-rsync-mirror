@@ -22,7 +22,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
-	>=media-fonts/libertine-ttf-5
+	>=media-fonts/libertine-5
 	media-fonts/liberation-fonts
 	media-libs/freetype:2
 	media-libs/libpng:0
