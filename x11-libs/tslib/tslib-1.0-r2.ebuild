@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs autotools
 PATCH_VER="5"
 DESCRIPTION="Touchscreen Access Library"
 HOMEPAGE="https://github.com/kergoth/tslib"
-SRC_URI="http://github.com/kergoth/${PN}/archive/${PV}.tar.gz
+SRC_URI="http://dev.gentoo.org/~mgorny/dist/${P}.tar.bz2
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
