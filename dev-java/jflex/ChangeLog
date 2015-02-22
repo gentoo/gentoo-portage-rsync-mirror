@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jflex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.18 2015/01/31 19:42:17 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.19 2015/02/22 18:55:39 monsieurp Exp $
+
+  22 Feb 2015; Patrice Clement <monsieurp@gentoo.org> jflex-1.4.3.ebuild,
+  jflex-1.5.0.ebuild, jflex-1.5.1.ebuild, jflex-1.6.0.ebuild:
+  Fix package collisions and bug #504774.
 
   31 Jan 2015; Patrice Clement <monsieurp@gentoo.org>
   files/jflex-1.5.0-build.xml, jflex-1.5.0.ebuild:

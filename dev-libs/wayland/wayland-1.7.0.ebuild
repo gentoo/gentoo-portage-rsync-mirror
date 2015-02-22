@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.7.0.ebuild,v 1.1 2015/02/21 20:51:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.7.0.ebuild,v 1.2 2015/02/22 18:38:07 mattst88 Exp $
 
 EAPI=5
 
@@ -30,7 +30,12 @@ IUSE="doc static-libs"
 RDEPEND=">=dev-libs/expat-2.1.0-r3:=[${MULTILIB_USEDEP}]
 	>=virtual/libffi-3.0.13-r1:=[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )
+	doc? (
+		>=app-doc/doxygen-1.6[dot]
+		app-text/xmlto
+		>=media-gfx/graphviz-2.26.0
+		sys-apps/grep[pcre]
+	)
 	virtual/pkgconfig"
 
 src_configure() {

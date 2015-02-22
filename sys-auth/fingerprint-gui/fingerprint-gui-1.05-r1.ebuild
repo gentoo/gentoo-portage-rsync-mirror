@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.05-r1.ebuild,v 1.2 2015/01/29 01:47:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/fingerprint-gui-1.05-r1.ebuild,v 1.3 2015/02/22 18:41:23 mgorny Exp $
 
 EAPI=5
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+upekbsapi"
 
-DEPEND="app-crypt/qca:2[qt4(+)]
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+DEPEND="app-crypt/qca:2[openssl,qt4(+)]
 	sys-auth/libfprint
 	sys-auth/polkit-qt
 	sys-libs/pam

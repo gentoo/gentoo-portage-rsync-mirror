@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/pauker
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.29 2010/02/09 21:23:47 josejx Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/ChangeLog,v 1.30 2015/02/22 20:57:34 tupone Exp $
+
+  22 Feb 2015; Tupone Alfredo <tupone@gentoo.org> pauker-1.8.ebuild:
+  EAPI 5
 
   09 Feb 2010; Joseph Jezak <josejx@gentoo.org> pauker-1.8.ebuild:
   Marked ppc stable for bug #295517.

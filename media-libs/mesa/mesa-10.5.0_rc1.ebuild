@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.5.0_rc1.ebuild,v 1.1 2015/02/21 07:46:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.5.0_rc1.ebuild,v 1.2 2015/02/22 18:35:46 mattst88 Exp $
 
 EAPI=5
 
@@ -156,7 +156,7 @@ DEPEND="${RDEPEND}
 	)
 	sys-devel/bison
 	sys-devel/flex
-	>=dev-python/mako-0.7.3
+	$(python_gen_any_dep ">=dev-python/mako-0.7.3[\${PYTHON_USEDEP}]")
 	sys-devel/gettext
 	virtual/pkgconfig
 	>=x11-proto/dri2proto-2.8-r1:=[${MULTILIB_USEDEP}]

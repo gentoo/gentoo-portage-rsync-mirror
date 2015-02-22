@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.274 2015/02/18 16:26:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.275 2015/02/22 18:41:23 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> kdeplasma-addons-4.14.3.ebuild:
+  Update dependency on QCA plugins to use USE flags on app-crypt/qca:2
+  unconditionally, to provide a single sane path for dependency resolution. Bug
+  #541066.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -kdeplasma-addons-4.12.5.ebuild:
   Remove KDE SC 4.12

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2-r1.ebuild,v 1.5 2012/09/28 12:36:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2-r1.ebuild,v 1.6 2015/02/22 20:45:33 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="a game like Deflektor (C 64) or Mindbender (Amiga)"
@@ -41,14 +41,13 @@ src_compile() {
 		EXTRA_LDFLAGS="${LDFLAGS}" \
 		RO_GAME_DIR="${GAMES_DATADIR}"/${PN} \
 		RW_GAME_DIR="${GAMES_STATEDIR}"/${PN} \
-		TARGET=$(use sdl && echo sdl || echo x11) \
-		|| die "emake failed"
+		TARGET=$(use sdl && echo sdl || echo x11)
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r graphics levels music sounds || die "doins failed"
+	doins -r graphics levels music sounds
 	doicon "${FILESDIR}"/${PN}.xpm
 	make_desktop_entry ${PN} "Mirror Magic II"
 	dodoc CHANGES CREDITS README TODO

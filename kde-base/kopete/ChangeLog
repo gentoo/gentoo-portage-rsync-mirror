@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.457 2015/02/18 22:36:15 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.458 2015/02/22 18:41:23 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> kopete-4.14.3-r1.ebuild,
+  kopete-4.14.3.ebuild:
+  Update dependency on QCA plugins to use USE flags on app-crypt/qca:2
+  unconditionally, to provide a single sane path for dependency resolution. Bug
+  #541066.
 
   18 Feb 2015; Johannes Huber <johu@gentoo.org> metadata.xml:
   Cleanup metadata.xml

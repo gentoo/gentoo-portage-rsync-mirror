@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/kdeconnect-0.8.ebuild,v 1.1 2015/02/21 08:03:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/kdeconnect-0.8.ebuild,v 1.2 2015/02/22 18:41:23 mgorny Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	$(add_kdebase_dep plasma-workspace)
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+	app-crypt/qca:2[openssl]
 "
 DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext

@@ -1,7 +1,7 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.9 2011/06/21 12:42:28 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.10 2015/02/22 20:50:03 tupone Exp $
+EAPI=5
 
 inherit autotools eutils games
 
@@ -19,6 +19,7 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-net
 	media-libs/sdl-ttf
 	opengl? ( virtual/opengl )"
+RDEPEND="${DEPEND}"
 
 dir=${GAMES_DATADIR}/${PN}
 
@@ -78,10 +79,9 @@ src_install() {
 	# Remove makefiles before installation
 	rm -f src/*/Makefile* src/*/*/Makefile* || die "removing makefiles"
 	insinto "${dir}"
-	doins -r src/{gui,images,sounds,textures,maps,*.lua} \
-		|| die "copying data files"
-	dodoc README TODO ChangeLog AUTHORS || die "dodoc failed"
-	dogamesbin src/mures || die "dogamesbin failed"
+	doins -r src/{gui,images,sounds,textures,maps,*.lua}
+	dodoc README TODO ChangeLog AUTHORS
+	dogamesbin src/mures
 
 	prepgamesdirs
 }

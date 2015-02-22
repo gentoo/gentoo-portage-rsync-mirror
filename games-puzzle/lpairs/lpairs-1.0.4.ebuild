@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.4.ebuild,v 1.6 2009/04/14 09:50:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/lpairs/lpairs-1.0.4.ebuild,v 1.7 2015/02/22 20:09:50 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A classical memory game"
@@ -34,8 +34,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README AUTHORS TODO ChangeLog
+	default
 	doicon lpairs.png
 	make_desktop_entry lpairs LPairs
 	prepgamesdirs

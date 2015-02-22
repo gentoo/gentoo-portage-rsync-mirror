@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.13 2015/01/28 23:06:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.1.ebuild,v 1.14 2015/02/22 18:32:01 mgorny Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ DEPEND="${COMMON_DEPEND}
 	test? ( dev-qt/qttest:4 )
 "
 RDEPEND="${COMMON_DEPEND}
-	|| ( app-crypt/qca-ossl:2[debug?] app-crypt/qca:2[debug?,openssl] )
+	app-crypt/qca:2[openssl]
 "
 
 S=${WORKDIR}/${P}-src

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1-r1.ebuild,v 1.3 2015/01/29 01:18:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.1-r1.ebuild,v 1.4 2015/02/22 18:41:22 mgorny Exp $
 
 EAPI=5
 
@@ -70,8 +70,8 @@ DEPEND="${CDEPEND}
 	kde? ( dev-util/automoc )
 "
 RDEPEND="${CDEPEND}
-	jabber? ( || ( app-crypt/qca-gnupg:2 app-crypt/qca:2[gpg] ) )
-	oscar? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
+	jabber? ( app-crypt/qca:2[gpg] )
+	oscar? ( app-crypt/qca:2[openssl] )
 "
 
 DOCS=( AUTHORS ChangeLog )

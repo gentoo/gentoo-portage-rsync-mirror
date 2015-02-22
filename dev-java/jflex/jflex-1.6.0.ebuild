@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.6.0.ebuild,v 1.1 2015/01/18 21:16:24 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/jflex-1.6.0.ebuild,v 1.2 2015/02/22 18:55:39 monsieurp Exp $
 
 EAPI="5"
 
@@ -69,7 +69,7 @@ src_test() {
 
 src_install() {
 	java-pkg_newjar build/${P}.jar ${PN}.jar
-	java-pkg_dolauncher "${PN}" --main jflex.Main
+	java-pkg_dolauncher "${PN}-${SLOT}" --main jflex.Main
 	java-pkg_register-ant-task
 
 	if use doc ; then

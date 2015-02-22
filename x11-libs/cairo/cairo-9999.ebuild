@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.56 2015/02/21 18:58:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.57 2015/02/22 19:02:54 mattst88 Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
-IUSE="X aqua debug directfb drm gallium gles2 +glib opengl openvg qt4 static-libs +svg valgrind xcb xlib-xcb"
+IUSE="X aqua debug directfb gles2 +glib opengl qt4 static-libs +svg valgrind xcb xlib-xcb"
 # gtk-doc regeneration doesn't seem to work with out-of-source builds
 #[[ ${PV} == *9999* ]] && IUSE="${IUSE} doc" # API docs are provided in tarball, no need to regenerate
 
@@ -36,16 +36,11 @@ RDEPEND=">=dev-libs/lzo-2.06-r1[${MULTILIB_USEDEP}]
 	gles2? ( >=media-libs/mesa-9.1.6[gles2,${MULTILIB_USEDEP}] )
 	glib? ( >=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}] )
 	opengl? ( || ( >=media-libs/mesa-9.1.6[egl,${MULTILIB_USEDEP}] media-libs/opengl-apple ) )
-	openvg? ( >=media-libs/mesa-9.1.6[openvg,${MULTILIB_USEDEP}] )
 	qt4? ( >=dev-qt/qtgui-4.8:4[${MULTILIB_USEDEP}] )
 	X? (
 		>=x11-libs/libXrender-0.9.8[${MULTILIB_USEDEP}]
 		>=x11-libs/libXext-1.3.2[${MULTILIB_USEDEP}]
 		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
-		drm? (
-			>=virtual/libudev-208:=[${MULTILIB_USEDEP}]
-			gallium? ( >=media-libs/mesa-9.1.6[gallium,${MULTILIB_USEDEP}] )
-		)
 	)
 	xcb? (
 		>=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}]
@@ -59,10 +54,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2
 	X? (
 		>=x11-proto/renderproto-0.11.1-r1[${MULTILIB_USEDEP}]
-		drm? (
-			>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
-			>=x11-proto/xextproto-7.2.1-r1[${MULTILIB_USEDEP}]
-		)
 	)"
 #[[ ${PV} == *9999* ]] && DEPEND="${DEPEND}
 #	doc? (
@@ -70,13 +61,8 @@ DEPEND="${RDEPEND}
 #		~app-text/docbook-xml-dtd-4.2
 #	)"
 
-# drm module requires X
-# for gallium we need to enable drm
 REQUIRED_USE="
-	drm? ( X )
-	gallium? ( drm )
 	gles2? ( !opengl )
-	openvg? ( || ( gles2 opengl ) )
 	xlib-xcb? ( xcb )
 "
 
@@ -135,12 +121,9 @@ multilib_src_configure() {
 		$(use_enable aqua quartz) \
 		$(use_enable aqua quartz-image) \
 		$(use_enable debug test-surfaces) \
-		$(use_enable drm) \
 		$(use_enable directfb) \
-		$(use_enable gallium) \
 		$(use_enable gles2 glesv2) \
 		$(use_enable glib gobject) \
-		$(use_enable openvg vg) \
 		$(use_enable opengl gl) \
 		$(use_enable qt4 qt) \
 		$(use_enable static-libs static) \
@@ -153,6 +136,9 @@ multilib_src_configure() {
 		--enable-pdf \
 		--enable-png \
 		--enable-ps \
+		--disable-drm \
+		--disable-gallium \
+		--disable-vg \
 		${myopts}
 }
 

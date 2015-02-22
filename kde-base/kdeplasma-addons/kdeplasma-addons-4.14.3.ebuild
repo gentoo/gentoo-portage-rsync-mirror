@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.14.3.ebuild,v 1.6 2015/02/17 11:06:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.14.3.ebuild,v 1.7 2015/02/22 18:41:23 mgorny Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-cpp/eigen:2
 "
 RDEPEND="${COMMON_DEPEND}
-	|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
+	app-crypt/qca:2[openssl]
 "
 
 src_configure() {

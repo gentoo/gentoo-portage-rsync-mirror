@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.6 2015/01/29 01:35:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.7 2015/02/22 18:41:23 mgorny Exp $
 
 EAPI=5
 
@@ -20,10 +20,7 @@ IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslo
 
 SERVER_RDEPEND="
 	dev-qt/qtscript:4
-	crypt? (
-		app-crypt/qca:2[qt4(+)]
-		|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
-	)
+	crypt? ( app-crypt/qca:2[openssl,qt4(+)] )
 	!postgres? ( dev-qt/qtsql:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
 	postgres? ( dev-qt/qtsql:4[postgres] )
 	syslog? ( virtual/logger )

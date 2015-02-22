@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qoauth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.22 2015/01/28 23:06:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.23 2015/02/22 18:32:01 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> qoauth-1.0.1.ebuild:
+  Update dependency on QCA plugins to use USE flags on app-crypt/qca:2
+  unconditionally, to provide a single sane path for dependency resolution. Bug
+  #541066.
 
   28 Jan 2015; Johannes Huber <johu@gentoo.org> qoauth-1.0.1.ebuild:
   Adjust dependencies to handle merged plugins in >=app-crypt/qca-2.1.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-14.10.2.ebuild,v 1.1 2014/10/13 13:58:48 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-15.02.ebuild,v 1.1 2015/02/22 19:17:29 grozin Exp $
 
 EAPI=4
 
