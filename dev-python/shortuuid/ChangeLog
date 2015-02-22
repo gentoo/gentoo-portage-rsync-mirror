@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shortuuid
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shortuuid/ChangeLog,v 1.3 2014/11/27 15:05:17 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shortuuid/ChangeLog,v 1.4 2015/02/22 11:09:34 pacho Exp $
+
+  22 Feb 2015; Pacho Ramos <pacho@gentoo.org> shortuuid-0.4.2.ebuild:
+  amd64/x86 stable, bug #540518
 
   27 Nov 2014; Pacho Ramos <pacho@gentoo.org> shortuuid-0.4.2.ebuild:
   Support python 3.4

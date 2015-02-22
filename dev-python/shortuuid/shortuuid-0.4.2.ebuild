@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shortuuid/shortuuid-0.4.2.ebuild,v 1.3 2014/11/27 15:05:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shortuuid/shortuuid-0.4.2.ebuild,v 1.4 2015/02/22 11:09:34 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

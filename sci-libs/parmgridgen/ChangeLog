@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/parmgridgen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmgridgen/ChangeLog,v 1.3 2014/04/16 22:12:03 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmgridgen/ChangeLog,v 1.4 2015/02/22 11:02:10 pacho Exp $
+
+  22 Feb 2015; Pacho Ramos <pacho@gentoo.org> parmgridgen-1.0.ebuild:
+  amd64/x86 stable, bug #540494
 
   16 Apr 2014; Ulrich Müller <ulm@gentoo.org> parmgridgen-1.0.ebuild:
   Fix LICENSE, add mirror and bindist restrictions, bug 470796.
@@ -31,4 +34,3 @@
   +parmgridgen-1.0.ebuild, +files/parmgridgen-1.0-autotools.patch,
   +metadata.xml:
   New ebuild for bug 232491.
-

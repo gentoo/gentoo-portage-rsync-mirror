@@ -3,11 +3,11 @@ DEPEND=virtual/mpi !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.1
 DESCRIPTION=Software for parallel (mpi) generating coarse grids
 EAPI=2
 HOMEPAGE=http://www-users.cs.umn.edu/~moulitsa/software.html
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=all-rights-reserved
 RDEPEND=virtual/mpi
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://www-users.cs.umn.edu/~moulitsa/download/ParMGridGen-1.0.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=943ec671e673860a626f34f01785d723
+_md5_=b8932edfe44573428b35f135a8c2f03b

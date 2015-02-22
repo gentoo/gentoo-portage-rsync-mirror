@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Perl-Critic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.93 2014/12/07 19:19:16 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/ChangeLog,v 1.94 2015/02/22 11:20:00 zlogene Exp $
+
+*Perl-Critic-1.123 (22 Feb 2015)
+
+  22 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> +Perl-Critic-1.123.ebuild:
+  Version bump
 
   07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> Perl-Critic-1.118.0-r1.ebuild:
   Add ~ppc64 keyword

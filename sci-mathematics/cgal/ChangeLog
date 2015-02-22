@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/cgal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.25 2014/01/06 14:11:39 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.26 2015/02/22 11:15:16 pacho Exp $
+
+  22 Feb 2015; Pacho Ramos <pacho@gentoo.org> cgal-4.3.ebuild:
+  amd64/x86 stable, bug #540522
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> -cgal-4.0.2.ebuild,
   -cgal-4.1.ebuild, -cgal-4.2.ebuild, cgal-4.3.ebuild, metadata.xml:

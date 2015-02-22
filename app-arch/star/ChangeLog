@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/star
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.112 2014/05/14 15:00:40 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.113 2015/02/22 11:23:01 jlec Exp $
+
+  22 Feb 2015; Justin Lecher <jlec@gentoo.org> star-1.5.2.ebuild:
+  Move ebuild from berlios.de to sf.net, #537816; thanks mm1ke for the patch
 
   14 May 2014; Justin Lecher <jlec@gentoo.org> -star-1.5.1-r1.ebuild,
   -star-1.5.1-r2.ebuild:
