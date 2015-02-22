@@ -9,11 +9,11 @@ inherit flag-o-matic
 MY_P=${PN}-${PV/_/}
 DESCRIPTION="Imposes stressful loads on different aspects of the system"
 HOMEPAGE="http://people.seas.harvard.edu/~apw/stress"
-SRC_URI="http://weather.ou.edu/~apw/projects/stress/${MY_P}.tar.gz"
+SRC_URI="http://people.seas.harvard.edu/~apw/stress/${MY_P}.tar.gz -> ${MY_P}-r1.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static"
 
 S=${WORKDIR}/${MY_P}
