@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/tomenet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.24 2015/02/19 04:13:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tomenet/ChangeLog,v 1.25 2015/02/22 08:58:17 mr_bones_ Exp $
+
+  22 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  files/tomenet-4.5.9-makefile.patch:
+  use pkg-config to get ncurses libs (bug #540614)
 
   19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/tomenet-4.5.5-makefile.patch, -tomenet-4.5.5.ebuild:

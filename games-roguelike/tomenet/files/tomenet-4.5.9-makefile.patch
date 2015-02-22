@@ -54,6 +54,15 @@
  ##
  ## Without SDL
  #CFLAGS = -g -pipe -Wall -DUSE_X11 -I${X11BASE}/include -D_XOPEN_SOURCE -D_BSD_SOURCE -DMEXP=19937
+@@ -257,7 +270,7 @@
+ #
+ ## With SDL
+ CFLAGS = -g -pipe -Wall -DUSE_X11 -DUSE_GCU -I${X11BASE}/include -D_XOPEN_SOURCE -D_BSD_SOURCE -DMEXP=19937 -DSOUND_SDL `sdl-config --cflags` -D_DEFAULT_SOURCE -DACC32
+-LIBS = -L${X11BASE}/lib -L/usr/pkg/lib -lX11 -lncurses -lcrypt -lm `sdl-config --libs` -lSDL_mixer
++LIBS = -L${X11BASE}/lib -L/usr/pkg/lib -lX11 $(shell ${PKG_CONFIG} --libs ncurses) -lcrypt -lm $(shell sdl-config --libs) -lSDL_mixer
+ ##
+ ## Without SDL
+ #CFLAGS = -g -pipe -Wall -DUSE_X11 -DUSE_GCU -I${X11BASE}/include -D_XOPEN_SOURCE -D_BSD_SOURCE -DMEXP=19937
 @@ -357,9 +370,6 @@
  # Compile a client with 'test client' version/tag
  tomenet.test: CFLAGS += -DTEST_CLIENT -O0
