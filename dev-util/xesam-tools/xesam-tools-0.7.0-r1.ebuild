@@ -1,14 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/xesam-tools-0.7.0.ebuild,v 1.4 2011/10/24 05:44:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/xesam-tools-0.7.0-r1.ebuild,v 1.1 2015/02/22 07:01:00 idella4 Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="xml"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="xml"
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1
 
 DESCRIPTION="Development tools and examples for the Xesam desktop search API"
 HOMEPAGE="http://xesam.org/people/kamstrup/xesam-tools"
@@ -16,18 +16,20 @@ SRC_URI="http://xesam.org/people/kamstrup/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="examples"
 
 DEPEND=""
-RDEPEND="dev-python/dbus-python
-	dev-python/pygobject:2
-	dev-python/pygtk"
+RDEPEND="dev-python/dbus-python[${PYTHON_USEDEP}]
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	dev-python/pygtk[${PYTHON_USEDEP}]"
 
-PYTHON_MODNAME="xesam"
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
 
 src_install() {
-	distutils_src_install
+	distutils-r1_src_install
 
 	insinto "/usr/share/doc/${PF}"
 	doins -r samples

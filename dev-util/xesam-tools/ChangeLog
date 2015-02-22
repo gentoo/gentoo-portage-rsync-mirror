@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/xesam-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/ChangeLog,v 1.7 2013/02/05 18:24:05 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xesam-tools/ChangeLog,v 1.8 2015/02/22 07:01:00 idella4 Exp $
+
+*xesam-tools-0.7.0-r1 (22 Feb 2015)
+
+  22 Feb 2015; Ian Delaney <idella4@gentoo.org> +xesam-tools-0.7.0-r1.ebuild,
+  -xesam-tools-0.7.0.ebuild:
+  revbump; convert -> distutils-r1, add keyword amd64, rm old
 
   05 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup after talking with Ford_Prefect

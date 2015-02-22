@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/balsa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.18 2015/02/21 16:36:48 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.19 2015/02/22 06:46:41 tomjbe Exp $
+
+  22 Feb 2015; Thomas Beierlein <tomjbe@gentoo.org> -balsa-4.0.ebuild:
+  Drop revision with old EAPI=1 (bug #540804)
 
 *balsa-4.0-r1 (21 Feb 2015)
 
