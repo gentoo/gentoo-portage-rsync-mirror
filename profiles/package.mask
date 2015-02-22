@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16379 2015/02/21 07:17:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16380 2015/02/22 03:29:17 alunduil Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alex Brandt <alunduil@gentoo.org> (21 Feb 2015)
+# Upstream renamed to docker-compose for all future releases
+app-emulation/fig
 
 # Ben de Groot <yngwin@gentoo.org> (21 Feb 2015)
 # Duplicates media-fonts/culmus[ancient] (bug #486814).

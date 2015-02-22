@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.829 2015/02/22 02:48:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.830 2015/02/22 03:17:15 mattst88 Exp $
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org> xorg-server-1.17.1.ebuild:
+  Require at least libdrm 2.4.46 for modesetting.
 
   22 Feb 2015; Matt Turner <mattst88@gentoo.org> xorg-server-1.17.1.ebuild:
   Add proper dependencies for IUSE=xephyr, bug 528230.
