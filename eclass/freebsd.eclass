@@ -147,8 +147,7 @@ freebsd_src_unpack() {
 
 	# Starting from FreeBSD 9.2, its install command supports the -l option and
 	# they now use it. Emulate it if we are on a system that does not have it.
-	version_compare ${RV} 9.1
-	if [[ $? -eq 3 ]] && ! has_version '>=sys-freebsd/freebsd-ubin-9.2_beta1' ; then
+	if version_is_at_least 9.2 ${RV} && ! has_version '>=sys-freebsd/freebsd-ubin-9.2_beta1' ; then
 		export INSTALL_LINK="ln -f"
 		export INSTALL_SYMLINK="ln -fs"
 	fi
