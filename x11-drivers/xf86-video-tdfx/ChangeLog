@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-video-tdfx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.76 2013/10/08 05:06:44 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.78 2015/02/22 21:32:59 mattst88 Exp $
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org>
+  -files/xf86-video-tdfx-1.4.5-remove-mibstore_h.patch,
+  -xf86-video-tdfx-1.4.4-r1.ebuild, -xf86-video-tdfx-1.4.5-r1.ebuild,
+  -xf86-video-tdfx-1.4.5.ebuild:
+  Drop old.
+
+*xf86-video-tdfx-1.4.6 (22 Feb 2015)
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org> +xf86-video-tdfx-1.4.6.ebuild:
+  Version bump to 1.4.6, straight to stable. Fixes bug 541028.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-tdfx-1.4.5-r1.ebuild:
