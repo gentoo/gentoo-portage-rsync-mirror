@@ -1,14 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.6 2014/09/08 20:54:18 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/gsmartcontrol-0.8.7.ebuild,v 1.7 2015/02/22 16:38:45 mgorny Exp $
 
 EAPI=4
 inherit gnome2-utils
 
 DESCRIPTION="Hard disk drive health inspection tool"
 HOMEPAGE="http://gsmartcontrol.sourceforge.net/home/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2
-	http://artificialtime.com/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 GPL-3 ) Boost-1.0 BSD Unlicense ZLIB"
 SLOT="0"
@@ -34,9 +33,9 @@ src_configure() {
 
 src_install() {
 	default
-	rm -f "${ED}"/usr/share/doc/${PF}/LICENSE_*
+	rm -f "${ED}"/usr/share/doc/${PF}/LICENSE_* || die
 }
 
-pkg_preinst() {	gnome2_icon_savelist; }
+pkg_preinst() { gnome2_icon_savelist; }
 pkg_postinst() { gnome2_icon_cache_update; }
 pkg_postrm() { gnome2_icon_cache_update; }

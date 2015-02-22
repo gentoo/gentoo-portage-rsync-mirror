@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gsmartcontrol
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/ChangeLog,v 1.5 2014/09/08 20:54:18 nimiux Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gsmartcontrol/ChangeLog,v 1.6 2015/02/22 16:38:45 mgorny Exp $
+
+  22 Feb 2015; Michał Górny <mgorny@gentoo.org> gsmartcontrol-0.8.7.ebuild:
+  Update SRC_URI, add missing ||die, fix whitespace. Bug #537800.
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/43 by mm1ke.
 
   08 Sep 2014; Chema Alonso <nimiux@gentoo.org> gsmartcontrol-0.8.7.ebuild:
   Stable for amd64 wrt bug #517290
