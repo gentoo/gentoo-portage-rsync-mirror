@@ -7,8 +7,8 @@ inherit eutils
 IUSE=""
 
 DESCRIPTION="Ares Plugin for giFT"
-HOMEPAGE="http://gift-ares.berlios.de/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://sourceforge.net/projects/gift-ares.berlios/"
+SRC_URI="mirror://sourceforge/${PN}.berlios/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
