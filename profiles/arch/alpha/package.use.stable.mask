@@ -18,6 +18,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (22 Feb 2015)
+# Dependency not stabilized for some reason.
+media-libs/gegl umfpack
+
 # Pacho Ramos <pacho@gentoo.org> (02 Jul 2014)
 # Mask due Gnome3 not going to be stabilized on this arch
 dev-util/geany-plugins devhelp markdown webkit
