@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.3.ebuild,v 1.13 2015/01/28 10:35:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.3.ebuild,v 1.14 2015/02/22 00:50:27 mattst88 Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www-users.cs.umn.edu/~karypis/metis/metis/"
 SRC_URI="http://glaros.dtc.umn.edu/gkhome/fetch/sw/${PN}/OLD/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~mips ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm hppa ~mips ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 LICENSE="free-noncomm"
 IUSE="doc static-libs"
 

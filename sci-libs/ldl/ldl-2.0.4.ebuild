@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ldl-2.0.4.ebuild,v 1.1 2012/01/20 05:53:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ldl-2.0.4.ebuild,v 1.2 2015/02/22 00:46:04 mattst88 Exp $
 
 EAPI=4
 

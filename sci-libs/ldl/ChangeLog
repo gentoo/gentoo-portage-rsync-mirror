@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ldl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.7 2013/06/24 22:56:41 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ldl/ChangeLog,v 1.8 2015/02/22 00:46:04 mattst88 Exp $
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org> ldl-2.0.4.ebuild,
+  ldl-2.1.0.ebuild:
+  Drop alpha keyword.
 
   24 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -ldl-2.0.3-r1.ebuild,
   ldl-2.1.0.ebuild:

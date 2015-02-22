@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.203 2015/01/27 14:58:15 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.204 2015/02/22 00:44:02 mjo Exp $
+
+*nagios-core-4.0.8-r2 (22 Feb 2015)
+
+  22 Feb 2015; Michael Orlitzky <mjo@gentoo.org> +nagios-core-4.0.8-r2.ebuild,
+  metadata.xml:
+  Add myself as a maintainer, fix apache module dep, and fix libltdl/libtool
+  dep.
 
   27 Jan 2015; Panagiotis Christopoulos <pchrist@gentoo.org>
   nagios-core-3.5.1.ebuild:

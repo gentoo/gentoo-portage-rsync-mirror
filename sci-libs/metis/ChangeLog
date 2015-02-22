@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/metis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.41 2015/01/28 10:35:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.42 2015/02/22 00:50:27 mattst88 Exp $
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org> metis-4.0.1-r1.ebuild,
+  metis-4.0.3.ebuild, metis-5.1.0-r1.ebuild:
+  Drop alpha keyword.
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> metis-4.0.3.ebuild:
   Stable for ppc, wrt bug #534644

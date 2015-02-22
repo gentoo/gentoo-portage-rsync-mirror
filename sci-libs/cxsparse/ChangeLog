@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cxsparse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.27 2014/08/10 20:25:06 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.28 2015/02/22 00:47:15 mattst88 Exp $
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org> cxsparse-2.2.1.ebuild,
+  cxsparse-2.2.6.ebuild, cxsparse-3.1.1.ebuild, cxsparse-3.1.2.ebuild:
+  Drop alpha keyword.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cxsparse-2.2.1.ebuild,
   cxsparse-2.2.6.ebuild:

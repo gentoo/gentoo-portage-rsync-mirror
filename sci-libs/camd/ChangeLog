@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/camd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.29 2015/01/31 14:09:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/ChangeLog,v 1.30 2015/02/22 00:51:37 mattst88 Exp $
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org> camd-2.2.0.ebuild,
+  camd-2.3.1.ebuild:
+  Drop alpha keyword.
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> camd-2.3.1.ebuild:
   Stable for amd64, wrt bug #534640
