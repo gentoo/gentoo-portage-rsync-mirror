@@ -1,7 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/penguzzle-1.0-r1.ebuild,v 1.2 2007/04/23 11:46:53 nyhm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/penguzzle-1.0-r1.ebuild,v 1.3 2015/02/22 21:03:36 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Tcl/Tk variant of the well-known 15-puzzle game"
@@ -19,10 +19,7 @@ DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${PN}${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s:~/puzz/images:${GAMES_DATADIR}/${PN}:" \
 		lib/init \
@@ -37,12 +34,12 @@ src_unpack() {
 
 src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins images/img0.gif || die "doins img0.gif failed"
+	doins images/img0.gif
 
 	insinto "$(games_get_libdir)"/${PN}
-	doins lib/init || die "doins init failed"
+	doins lib/init
 
-	dogamesbin bin/${PN} || die "dogamesbin failed"
+	dogamesbin bin/${PN}
 
 	dodoc README
 	prepgamesdirs

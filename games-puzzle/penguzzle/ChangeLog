@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/penguzzle
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/ChangeLog,v 1.7 2007/04/04 19:09:49 nyhm Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/ChangeLog,v 1.8 2015/02/22 21:03:36 tupone Exp $
+
+  22 Feb 2015; Tupone Alfredo <tupone@gentoo.org> penguzzle-1.0-r1.ebuild:
+  EAPI 5
 
 *penguzzle-1.0-r1 (04 Apr 2007)
 

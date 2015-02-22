@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.9 2012/12/08 07:32:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.10 2015/02/22 21:13:05 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic scons-utils toolchain-funcs games
 
 DESCRIPTION="free Lemmings clone"
@@ -21,6 +21,7 @@ DEPEND="media-libs/libsdl[joystick,opengl?,video]
 	opengl? ( virtual/opengl )
 	media-libs/libpng
 	dev-libs/boost"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# how do I hate boost? Let me count the ways...
@@ -49,8 +50,7 @@ src_compile() {
 		CXX="$(tc-getCXX)" \
 		CCFLAGS="${CXXFLAGS}" \
 		LINKFLAGS="${LDFLAGS}" \
-		$(use_scons opengl with_opengl) \
-		|| die
+		$(use_scons opengl with_opengl)
 }
 
 src_install() {
@@ -58,8 +58,7 @@ src_install() {
 		DESTDIR="${D}" \
 		PREFIX="/usr" \
 		DATADIR="${GAMES_DATADIR}/${PN}" \
-		BINDIR="${GAMES_BINDIR}" \
-		|| die
+		BINDIR="${GAMES_BINDIR}"
 	doman doc/man/pingus.6
 	doicon data/images/icons/pingus.svg
 	make_desktop_entry ${PN} Pingus
