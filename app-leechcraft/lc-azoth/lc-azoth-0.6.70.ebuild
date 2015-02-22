@@ -40,12 +40,7 @@ RDEPEND="${COMMON_DEPEND}
 		net-im/telepathy-mission-control
 		net-voip/telepathy-haze
 	)
-	crypt? (
-		|| (
-			app-crypt/qca-gnupg:2
-			app-crypt/qca:2[gpg]
-		)
-	)
+	crypt? ( app-crypt/qca:2[gpg] )
 	latex? (
 		|| (
 			media-gfx/imagemagick

@@ -24,10 +24,7 @@ IUSE="ayatana crypt dbus debug kde monolithic phonon postgres +server +ssl syslo
 
 SERVER_RDEPEND="
 	>=dev-qt/qtscript-${QT_MINIMAL}:4
-	crypt? (
-		app-crypt/qca:2[qt4(+)]
-		|| ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] )
-	)
+	crypt? ( app-crypt/qca:2[openssl,qt4(+)] )
 	!postgres? ( >=dev-qt/qtsql-${QT_MINIMAL}:4[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
 	postgres? ( >=dev-qt/qtsql-${QT_MINIMAL}:4[postgres] )
 	syslog? ( virtual/logger )

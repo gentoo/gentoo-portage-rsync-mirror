@@ -21,7 +21,7 @@ DEPEND="${COMMON_DEPEND}
 	test? ( dev-qt/qttest:4 )
 "
 RDEPEND="${COMMON_DEPEND}
-	|| ( app-crypt/qca-ossl:2[debug?] app-crypt/qca:2[debug?,openssl] )
+	app-crypt/qca:2[openssl]
 "
 
 S=${WORKDIR}/${P}-src

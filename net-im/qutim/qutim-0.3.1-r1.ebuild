@@ -70,8 +70,8 @@ DEPEND="${CDEPEND}
 	kde? ( dev-util/automoc )
 "
 RDEPEND="${CDEPEND}
-	jabber? ( || ( app-crypt/qca-gnupg:2 app-crypt/qca:2[gpg] ) )
-	oscar? ( || ( app-crypt/qca-ossl:2 app-crypt/qca:2[openssl] ) )
+	jabber? ( app-crypt/qca:2[gpg] )
+	oscar? ( app-crypt/qca:2[openssl] )
 "
 
 DOCS=( AUTHORS ChangeLog )
