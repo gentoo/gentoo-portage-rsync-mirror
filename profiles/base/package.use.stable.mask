@@ -1,9 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.35 2015/02/20 10:38:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.36 2015/02/22 10:51:22 pacho Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Pacho Ramos <pacho@gentoo.org>
+# sci-visualization/paraview is not ready for stabilization yet
+# See bug #541012
+sci-libs/openfoam paraview
 
 # Pacho Ramos <pacho@gentoo.org>
 # dev-libs/libappindicator isn't going to be stabilized

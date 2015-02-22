@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/namespace-autoclean
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-autoclean/ChangeLog,v 1.21 2015/02/21 23:42:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-autoclean/ChangeLog,v 1.22 2015/02/22 10:58:24 dilfridge Exp $
+
+  22 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  namespace-autoclean-0.240.0.ebuild:
+  Set correct build target, bug 540972
 
 *namespace-autoclean-0.240.0 (21 Feb 2015)
 

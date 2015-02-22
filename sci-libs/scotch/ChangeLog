@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scotch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.18 2014/03/18 20:39:01 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.19 2015/02/22 10:59:53 pacho Exp $
+
+  22 Feb 2015; Pacho Ramos <pacho@gentoo.org> scotch-6.0.0.ebuild:
+  amd64/x86 stable, bug #540494
 
   18 Mar 2014; Sébastien Fabbro <bicatali@gentoo.org> scotch-6.0.0.ebuild:
   Fixed possible underlinking, bug #502588

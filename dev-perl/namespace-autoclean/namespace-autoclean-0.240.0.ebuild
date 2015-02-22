@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-autoclean/namespace-autoclean-0.240.0.ebuild,v 1.1 2015/02/21 23:42:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-autoclean/namespace-autoclean-0.240.0.ebuild,v 1.2 2015/02/22 10:58:24 dilfridge Exp $
 
 EAPI=5
 
@@ -33,3 +33,4 @@ DEPEND="${RDEPEND}
 "
 
 SRC_TEST=do
+mytargets=install

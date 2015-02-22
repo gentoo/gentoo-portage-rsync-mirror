@@ -1,10 +1,13 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9814 2015/02/22 06:43:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9815 2015/02/22 10:51:22 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Feb 2015; Pacho Ramos <pacho@gentoo.org> base/package.use.stable.mask:
+  use.stable.mask openfoam[paraview] until bug #541012 is solved
 
   22 Feb 2015; Ben de Groot <yngwin@gentoo.org> updates/1Q-2015:
   Move media-fonts/libertine-ttf to media-fonts/libertine
