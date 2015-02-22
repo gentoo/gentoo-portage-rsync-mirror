@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.6.2.ebuild,v 1.13 2014/06/18 21:04:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.6.2.ebuild,v 1.14 2015/02/22 02:21:24 mattst88 Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ DESCRIPTION="X.Org X11 library"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="ipv6 test"
 
-RDEPEND=">=x11-libs/libxcb-1.9.1[${MULTILIB_USEDEP}]
+RDEPEND=">=x11-libs/libxcb-1.9.3[${MULTILIB_USEDEP}]
 	x11-libs/xtrans
 	>=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}]
 	>=x11-proto/xf86bigfontproto-1.2.0-r1[${MULTILIB_USEDEP}]

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.221 2014/06/18 21:04:40 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.222 2015/02/22 02:21:24 mattst88 Exp $
+
+  22 Feb 2015; Matt Turner <mattst88@gentoo.org> libX11-1.6.2.ebuild:
+  Require >=libxcb-1.9.3, bug 493252.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libX11-1.6.2.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
