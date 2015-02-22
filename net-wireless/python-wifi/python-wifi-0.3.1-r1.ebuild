@@ -12,9 +12,8 @@ inherit distutils
 
 DESCRIPTION="Provides r/w access to a wireless network card's capabilities using the Linux Wireless Extensions"
 HOMEPAGE="http://pypi.python.org/pypi/python-wifi"
-SRC_URI="
-	mirror://pypi/packages/source/p/${PN}/${P}.tar.gz
-	mirror://berlios/${PN/-}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
+	mirror://sourceforge/${PN}.berlios/${P}.tar.bz2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
