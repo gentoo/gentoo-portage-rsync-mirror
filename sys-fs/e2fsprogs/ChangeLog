@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.305 2015/02/16 18:13:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.306 2015/02/22 17:18:20 vapier Exp $
+
+  22 Feb 2015; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.42.10.ebuild,
+  e2fsprogs-1.42.11.ebuild, e2fsprogs-1.42.12.ebuild:
+  Drop /etc/mtab test logic from pkg_preinst too #516972#2 by Arfrever Frehtes
+  Taifersar Arahesis.
 
   16 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> e2fsprogs-1.42.12.ebuild:
   alpha/ia64 stable wrt bug #538930

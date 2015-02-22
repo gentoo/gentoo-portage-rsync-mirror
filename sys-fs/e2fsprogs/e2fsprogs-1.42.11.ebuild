@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.11.ebuild,v 1.5 2014/08/05 09:32:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.11.ebuild,v 1.6 2015/02/22 17:18:20 vapier Exp $
 
 EAPI=4
 
@@ -92,14 +92,6 @@ src_compile() {
 	if use elibc_FreeBSD ; then
 		cp "${FILESDIR}"/fsck_ext2fs.c .
 		emake V=1 fsck_ext2fs
-	fi
-}
-
-pkg_preinst() {
-	if [[ -r ${EROOT}/etc/mtab ]] ; then
-		if [[ $(<"${EROOT}"/etc/mtab) == "${PN} crap for src_test" ]] ; then
-			rm -f "${EROOT}"/etc/mtab
-		fi
 	fi
 }
 
