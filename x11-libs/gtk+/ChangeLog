@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.761 2015/02/18 12:05:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.763 2015/02/22 00:22:31 remi Exp $
+
+  22 Feb 2015; Rémi Cardona <remi@gentoo.org>
+  files/gtk+-non-bash-support.patch:
+  Tweak non-bash patch.
+
+  22 Feb 2015; Rémi Cardona <remi@gentoo.org>
+  files/gtk+-non-bash-support.patch:
+  Update non-bash patch for 3.14.8, see bug #540952.
 
 *gtk+-2.24.26 (18 Feb 2015)
 

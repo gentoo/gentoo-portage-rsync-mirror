@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.9.0.ebuild,v 1.4 2015/02/21 21:29:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/libinput-0.9.0.ebuild,v 1.5 2015/02/22 00:27:07 mattst88 Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 # License appears to be a variant of libtiff
 LICENSE="libtiff"
 SLOT="0/7"
-KEYWORDS="~amd64 ~arm ~hppa ~mips"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips"
 IUSE=""
 RESTRICT="test"
 
