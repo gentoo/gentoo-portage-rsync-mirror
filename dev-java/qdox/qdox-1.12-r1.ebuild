@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.8 2015/02/23 08:33:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.9 2015/02/23 12:21:28 monsieurp Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ CDEPEND="dev-java/ant-core:0"
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip:0
 	dev-java/byaccj:0
-	>=dev-java/jflex-1.4.3:1.4
+	>=dev-java/jflex-1.4.3:0
 	dev-java/jmock:1.0
 	test? ( dev-java/junit:0 )
 	${CDEPEND}"
