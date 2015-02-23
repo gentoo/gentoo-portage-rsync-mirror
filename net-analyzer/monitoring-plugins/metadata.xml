@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <herd>proxy-maintainers</herd>
+  <maintainer>
+      <email>hydrapolic@gmail.com</email>
+      <name>Tomas Mozes</name>
+      <description>Primary maintainer. Assign bugs to him.</description>
+  </maintainer>
   <maintainer>
       <email>mjo@gentoo.org</email>
       <name>Michael Orlitzky</name>
+      <description>Secondary maintainer. Please CC on bugs.</description>
   </maintainer>
   <use>
     <flag name='dns'>
