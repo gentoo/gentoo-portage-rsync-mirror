@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7265-ucode/iwl7265-ucode-0.8.24.22.ebuild,v 1.1 2015/02/22 04:06:56 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7265-ucode/iwl7265-ucode-0.8.24.22.ebuild,v 1.2 2015/02/23 03:34:53 prometheanfire Exp $
 
 EAPI=5
 inherit linux-info versionator
@@ -16,7 +16,7 @@ DV_PATCH="0"
 
 DESCRIPTION="Firmware for Intel (R) Dual Band Wireless-AC ${DEV_N}"
 HOMEPAGE="http://wireless.kernel.org/en/users/Drivers/iwlwifi"
-SRC_URI="http://wireless.kernel.org/en/users/Drivers/iwlwifi?action=AttachFile&do=get&target=${MY_PN}-${MY_PV}.tgz -> ${P}.tgz"
+SRC_URI="https://wireless.wiki.kernel.org/_media/en/users/drivers/${MY_PN}-${MY_PV}.tgz -> ${P}.tgz"
 
 LICENSE="ipw3945"
 SLOT="${vc[2]}"
