@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.298 2015/02/13 01:30:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.299 2015/02/23 12:42:40 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -374,6 +374,8 @@ detect_version() {
 		if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
 			if [[ ${KV_MAJOR}${KV_PATCH} -eq 30 ]]; then
 				OKV="2.6.39"
+			elif [[ ${KV_MAJOR}${KV_PATCH} -eq 40 ]]; then
+				OKV="3.19"
 			else
 				KV_PATCH_ARR=(${KV_PATCH//\./ })
 				OKV="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"
@@ -392,6 +394,8 @@ detect_version() {
 		if [[ ${RELEASETYPE} == -rc-git ]]; then
 			if [[ ${KV_MAJOR}${KV_PATCH} -eq 30 ]]; then
 				OKV="2.6.39"
+			elif [[ ${KV_MAJOR}${KV_PATCH} -eq 40 ]]; then
+				OKV="2.19"
 			else
 				KV_PATCH_ARR=(${KV_PATCH//\./ })
 				OKV="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"
