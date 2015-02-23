@@ -10,7 +10,7 @@ inherit python-single-r1 user systemd toolchain-funcs autotools eutils
 
 DESCRIPTION="the legendary remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://www.fetchmail.info/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
@@ -26,6 +26,7 @@ RDEPEND="hesiod? ( net-dns/hesiod )
 	socks? ( net-proxy/dante )
 	tk? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	sys-devel/flex
 	nls? ( sys-devel/gettext )"
 
