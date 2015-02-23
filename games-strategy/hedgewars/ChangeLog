@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.65 2015/02/17 17:13:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.66 2015/02/23 17:05:17 mr_bones_ Exp $
+
+  23 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -hedgewars-0.9.19.3.ebuild:
+  old
 
 *hedgewars-0.9.21.1 (17 Feb 2015)
 
