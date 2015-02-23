@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=dev-libs/gmp:0 virtual/libffi libatomic? ( dev-libs/libatomic_ops ) >=dev-libs/boehm-gc-7.1[threads?] >=dev-lisp/asdf-2.33-r3:= app-text/texi2html emacs? ( virtual/emacs >=app-admin/eselect-emacs-1.12 )
+DESCRIPTION=ECL is an embeddable Common Lisp implementation
+EAPI=5
+HOMEPAGE=http://ecls.sourceforge.net/
+IUSE=debug emacs gengc precisegc cpu_flags_x86_sse +threads +unicode +libatomic X
+KEYWORDS=~amd64 ~ppc ~sparc ~x86
+LICENSE=BSD LGPL-2
+RDEPEND=dev-libs/gmp:0 virtual/libffi libatomic? ( dev-libs/libatomic_ops ) >=dev-libs/boehm-gc-7.1[threads?] >=dev-lisp/asdf-2.33-r3:=
+RESTRICT=test
+SLOT=0/15.2.21
+SRC_URI=mirror://sourceforge/ecls/ecl-15.2.21.tgz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=cccf4359ac7f14453527f17ca3149702

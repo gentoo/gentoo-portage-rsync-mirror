@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.24.ebuild,v 1.1 2015/01/15 21:01:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.17.ebuild,v 1.1 2015/02/23 22:43:37 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,14 +11,8 @@ inherit python-single-r1 waf-utils multilib linux-info systemd
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
-if [ "${PV}" = "4.9999" ]; then
-	EGIT_REPO_URI="git://git.samba.org/samba.git"
-	KEYWORDS=""
-	inherit git-2
-else
-	SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~hppa ~x86"
-fi
+SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
+KEYWORDS="~amd64 ~hppa ~x86"
 
 DESCRIPTION="Samba Suite Version 4"
 HOMEPAGE="http://www.samba.org/"
@@ -27,7 +21,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="acl addns ads aio avahi client cluster cups dmapi fam gnutls iprint
-ldap quota selinux swat syslog test winbind"
+ldap quota selinux syslog systemd test winbind"
 
 # sys-apps/attr is an automagic dependency (see bug #489748)
 # sys-libs/pam is an automagic dependency (see bug #489770)
@@ -35,13 +29,14 @@ CDEPEND="${PYTHON_DEPS}
 	>=app-crypt/heimdal-1.5[-ssl]
 	dev-libs/iniparser
 	dev-libs/popt
-	sys-libs/readline
+	sys-libs/readline:=
 	virtual/libiconv
 	dev-python/subunit[${PYTHON_USEDEP}]
 	sys-apps/attr
 	sys-libs/libcap
-	>=sys-libs/ldb-1.1.16
-	>=sys-libs/tdb-1.2.11[python,${PYTHON_USEDEP}]
+	>=sys-libs/ntdb-1.0[python,${PYTHON_USEDEP}]
+	>=sys-libs/ldb-1.1.17
+	>=sys-libs/tdb-1.2.12[python,${PYTHON_USEDEP}]
 	>=sys-libs/talloc-2.0.8[python,${PYTHON_USEDEP}]
 	>=sys-libs/tevent-0.9.18
 	sys-libs/zlib
@@ -55,7 +50,8 @@ CDEPEND="${PYTHON_DEPS}
 	fam? ( virtual/fam )
 	gnutls? ( dev-libs/libgcrypt:0
 		>=net-libs/gnutls-1.4.0 )
-	ldap? ( net-nds/openldap )"
+	ldap? ( net-nds/openldap )
+	systemd? ( sys-apps/systemd:0= )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
@@ -72,10 +68,11 @@ S="${WORKDIR}/${MY_P}"
 
 CONFDIR="${FILESDIR}/$(get_version_component_range 1-2)"
 
-# sys-apps/dmapi is an automagic dependency (see bug #474492)
 PATCHES=(
-	"${FILESDIR}/named.conf.dlz.patch"
+	"${FILESDIR}/${PN}-4.1.14-named.conf.dlz.patch"
 	"${FILESDIR}/${PN}-4.0.19-automagic_aio_fix.patch"
+	# support libsystemd (instead of libsystemd-daemon), bug #526362
+	"${FILESDIR}/${PN}-4.1.14-libsystemd.patch"
 )
 
 WAF_BINARY="${S}/buildtools/bin/waf"
@@ -111,7 +108,6 @@ src_configure() {
 		--disable-rpath-install \
 		--nopyc \
 		--nopyo \
-		--disable-ntdb \
 		--bundled-libraries=NONE \
 		--builtin-libraries=NONE \
 		$(use_with addns dnsupdate) \
@@ -130,7 +126,7 @@ src_configure() {
 		--with-pam_smbpass \
 		$(use_with quota quotas) \
 		$(use_with syslog) \
-		$(use_with swat) \
+		$(use_with systemd) \
 		$(use_with winbind)
 		"
 	use "ads" && myconf+=" --with-shared-modules=idmap_ad"
@@ -160,6 +156,7 @@ src_install() {
 	systemd_dounit "${FILESDIR}"/smbd.{service,socket}
 	systemd_newunit "${FILESDIR}"/smbd_at.service 'smbd@.service'
 	systemd_dounit "${FILESDIR}"/winbindd.service
+	systemd_dounit "${FILESDIR}"/samba.service
 }
 
 src_test() {
@@ -167,8 +164,6 @@ src_test() {
 }
 
 pkg_postinst() {
-	elog "This is is the first stable release of Samba 4.0"
-
 	ewarn "Be aware the this release contains the best of all of Samba's"
 	ewarn "technology parts, both a file server (that you can reasonably expect"
 	ewarn "to upgrade existing Samba 3.x releases to) and the AD domain"
