@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.450 2015/02/18 09:17:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.451 2015/02/23 11:36:52 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13-r1.ebuild:
+  Stable for ia64, wrt bug #538842
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.13-r1.ebuild:
   Stable for ppc, wrt bug #538842

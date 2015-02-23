@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.180 2015/02/22 11:49:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.181 2015/02/23 11:48:45 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (22 Feb 2015)
 # Dependency not keyworded for some reason.
@@ -28,6 +28,7 @@ net-misc/networkmanager teamd
 # New dependencies for wayland support in Gnome 3.14
 # See bug #533420.
 media-libs/clutter egl
+x11-wm/mutter kms
 
 # Mark Wright <gienah@gentoo.org> (14-23 Dec 2014)
 # test dependencies need keywording

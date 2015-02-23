@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/mutter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.51 2014/12/30 11:37:02 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.52 2015/02/23 11:49:13 pacho Exp $
+
+  23 Feb 2015; Pacho Ramos <pacho@gentoo.org> mutter-3.14.3.ebuild:
+  Rekeyword
 
   30 Dec 2014; Pacho Ramos <pacho@gentoo.org> mutter-3.14.3.ebuild:
   libXi-1.7.4 or newer needed to prevent bug #525218 (by Yuriy, Damien Granger,

@@ -3,11 +3,11 @@ DEPEND=>=dev-libs/libevdev-0.4 >=sys-libs/mtdev-1.1 virtual/libudev virtual/pkgc
 DESCRIPTION=Library to handle input devices in Wayland
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/libinput/
-KEYWORDS=~alpha ~amd64 ~arm ~mips
+KEYWORDS=~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~x86
 LICENSE=libtiff
 RDEPEND=>=dev-libs/libevdev-0.4 >=sys-libs/mtdev-1.1 virtual/libudev
 RESTRICT=test
 SLOT=0/5
 SRC_URI=http://www.freedesktop.org/software/libinput/libinput-0.7.0.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=344c696f1f37485e337cb729f78bfa54
+_md5_=650e82ed09a857e3326adae0356119f9

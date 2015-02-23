@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.390 2015/02/16 10:21:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.391 2015/02/23 11:37:02 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> busybox-1.23.1.ebuild:
+  Stable for ia64, wrt bug #537978
 
   16 Feb 2015; Agostino Sarubbo <ago@gentoo.org> busybox-1.23.1.ebuild:
   Stable for sparc, wrt bug #537978

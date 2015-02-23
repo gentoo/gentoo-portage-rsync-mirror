@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.422 2015/02/18 09:15:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.423 2015/02/23 11:35:48 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> freetype-2.5.5.ebuild:
+  Stable for ia64, wrt bug #539796
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> freetype-2.5.5.ebuild:
   Stable for ppc, wrt bug #539796

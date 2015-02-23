@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.201 2015/02/18 09:16:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.202 2015/02/23 11:36:24 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.29.ebuild:
+  Stable for ia64, wrt bug #535948
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.29.ebuild:
   Stable for ppc, wrt bug #535948

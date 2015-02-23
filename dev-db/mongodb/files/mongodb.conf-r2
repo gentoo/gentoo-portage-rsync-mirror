@@ -15,8 +15,8 @@ systemLog:
 net:
     port: 27017
     bindIp: 127.0.0.1
-    ssl:
-        mode: disabled
+#    ssl:
+#        mode: disabled
 
 #security:
     #keyFile:
