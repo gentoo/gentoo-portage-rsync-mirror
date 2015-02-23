@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.59 2015/02/21 14:17:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.60 2015/02/23 17:51:26 djc Exp $
+
+*mod_wsgi-4.4.9 (23 Feb 2015)
+
+  23 Feb 2015; Dirkjan Ochtman <djc@gentoo.org> +mod_wsgi-4.4.9.ebuild:
+  Version bump mod_wsgi to 4.4.9
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mod_wsgi-4.3.0.ebuild:
   Stable for ppc, wrt bug #533312
