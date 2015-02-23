@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/globalid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/globalid/ChangeLog,v 1.5 2015/02/06 06:55:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/globalid/ChangeLog,v 1.7 2015/02/23 06:40:34 graaff Exp $
+
+*globalid-0.3.3 (23 Feb 2015)
+
+  23 Feb 2015; Hans de Graaff <graaff@gentoo.org> +globalid-0.3.3.ebuild:
+  Version bump.
+
+  23 Feb 2015; Hans de Graaff <graaff@gentoo.org> -globalid-0.2.3.ebuild,
+  -globalid-0.3.0.ebuild:
+  Cleanup.
 
 *globalid-0.3.2 (06 Feb 2015)
 
