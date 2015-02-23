@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.26-r2.ebuild,v 1.9 2014/10/23 19:56:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.26-r2.ebuild,v 1.10 2015/02/23 20:09:54 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -10,7 +10,7 @@ inherit python-single-r1 user systemd toolchain-funcs autotools eutils
 
 DESCRIPTION="the legendary remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://www.fetchmail.info/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
@@ -26,6 +26,7 @@ RDEPEND="hesiod? ( net-dns/hesiod )
 	socks? ( net-proxy/dante )
 	tk? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	sys-devel/flex
 	nls? ( sys-devel/gettext )"
 

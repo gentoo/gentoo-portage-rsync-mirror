@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.61 2015/02/17 15:15:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.62 2015/02/23 20:18:38 hwoarang Exp $
+
+*lxc-1.1.0-r3 (23 Feb 2015)
+
+  23 Feb 2015; Markos Chandras <hwoarang@gentoo.org>
+  +files/lxc-1.1.0-fix-gentoo-template.patch, +lxc-1.1.0-r3.ebuild:
+  Switch default lxcpath to /var/lib/lxc. /etc/lxc was far too strange. Add
+  patch to fix gentoo template stage3 detection code
 
 *lxc-1.1.0-r2 (17 Feb 2015)
 

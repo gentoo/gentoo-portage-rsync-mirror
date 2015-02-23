@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/fetchmail
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.272 2014/10/23 19:56:28 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.273 2015/02/23 20:09:54 mgorny Exp $
+
+  23 Feb 2015; Michał Górny <mgorny@gentoo.org> fetchmail-6.3.26-r2.ebuild:
+  Update SRC_URI. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/49
+  by mm1ke.
 
   23 Oct 2014; Mike Frysinger <vapier@gentoo.org> fetchmail-6.3.26-r2.ebuild:
   Update HOMEPAGE.

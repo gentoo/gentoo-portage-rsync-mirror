@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/gradm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.222 2014/08/31 12:44:53 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.224 2015/02/23 20:07:38 blueness Exp $
+
+  23 Feb 2015; Anthony G. Basile <blueness@gentoo.org>
+  -gradm-3.0.201407222118.ebuild, gradm-3.0.201408301734.ebuild:
+  Stable on amd64 and x86, remove older stable.
+
+*gradm-3.1.201502222102 (23 Feb 2015)
+
+  23 Feb 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/respect-gentoo-env-r3.patch, +gradm-3.1.201502222102.ebuild:
+  Version bump to grsec 3.1
 
 *gradm-3.0.201408301734 (31 Aug 2014)
 

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/rename
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.22 2014/10/16 19:14:08 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/ChangeLog,v 1.23 2015/02/23 20:29:27 mgorny Exp $
+
+*rename-1.3-r1 (23 Feb 2015)
+
+  23 Feb 2015; Michał Górny <mgorny@gentoo.org> +rename-1.3-r1.ebuild,
+  rename-1.3.ebuild:
+  Fix SRC_URI, bug #537804. Bump EAPI. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/52 by mm1ke.
 
   16 Oct 2014; Mike Frysinger <vapier@gentoo.org> rename-1.3.ebuild:
   Update HOMEPAGE #524206 by headcrabextra.
