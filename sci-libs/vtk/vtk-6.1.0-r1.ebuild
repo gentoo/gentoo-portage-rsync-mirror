@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.4 2015/02/22 11:51:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.5 2015/02/23 08:16:14 jlec Exp $
 
 EAPI=5
 
@@ -316,8 +316,8 @@ src_configure() {
 		mycmakeargs+=(
 #			-DR_LIBRARY_BLAS=$($(tc-getPKG_CONFIG) --libs blas)
 #			-DR_LIBRARY_LAPACK=$($(tc-getPKG_CONFIG) --libs lapack)
-			-DR_LIBRARY_BLAS=/usr/lib64/R/lib/libR.so
-			-DR_LIBRARY_LAPACK=/usr/lib64/R/lib/libR.so
+			-DR_LIBRARY_BLAS=/usr/$(get_libdir)/R/lib/libR.so
+			-DR_LIBRARY_LAPACK=/usr/$(get_libdir)/R/lib/libR.so
 		)
 	fi
 

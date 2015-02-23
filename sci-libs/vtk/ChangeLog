@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.126 2015/02/22 11:51:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.127 2015/02/23 08:16:14 jlec Exp $
+
+  23 Feb 2015; Justin Lecher <jlec@gentoo.org> vtk-6.1.0-r1.ebuild,
+  vtk-6.1.0.ebuild:
+  Fix libdir detection in all versions, #513680
 
   22 Feb 2015; Justin Lecher <jlec@gentoo.org> vtk-6.0.0.ebuild,
   vtk-6.1.0-r1.ebuild, vtk-6.1.0.ebuild:
