@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1552 2015/02/23 12:42:40 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1553 2015/02/23 21:13:35 blueness Exp $
+
+  23 Feb 2015; Anthony G. Basile <blueness@gentoo.org> +bitcoincore.eclass:
+  Initial commit of bitcoincore.eclass
 
   23 Feb 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Add support for 4.0 kernels

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/bitcoin-leveldb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/ChangeLog,v 1.5 2015/01/13 11:46:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/ChangeLog,v 1.6 2015/02/23 21:19:25 blueness Exp $
+
+  23 Feb 2015; Anthony G. Basile <blueness@gentoo.org> bitcoin-leveldb-0.ebuild:
+  Update the providers
 
   13 Jan 2015; Anthony G. Basile <blueness@gentoo.org> bitcoin-leveldb-0.ebuild:
   Stable on amd64, arm and x86, bug #536228

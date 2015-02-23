@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/bitcoin-leveldb-0.ebuild,v 1.4 2015/01/13 11:46:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/bitcoin-leveldb-0.ebuild,v 1.5 2015/02/23 21:19:25 blueness Exp $
 
 EAPI=5
 
@@ -20,7 +20,8 @@ RDEPEND="
 		=dev-libs/leveldb-1.11.0-r1[-snappy]
 		=dev-libs/leveldb-1.12.0-r1[-snappy]
 		=dev-libs/leveldb-1.13.0-r1[-snappy]
-		=dev-libs/leveldb-1.14.0[-snappy]
+		=dev-libs/leveldb-1.14.0-r1[-snappy]
 		=dev-libs/leveldb-1.15.0-r1[-snappy]
 		=dev-libs/leveldb-1.17[-snappy]
+		=dev-libs/leveldb-1.18[-snappy]
 	)"
