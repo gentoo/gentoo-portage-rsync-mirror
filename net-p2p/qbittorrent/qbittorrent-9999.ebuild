@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.19 2015/02/17 19:15:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.20 2015/02/23 19:02:33 hwoarang Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -40,7 +40,7 @@ CDEPEND="
 		dev-qt/qtnetwork:5
 		dev-qt/qtxml:5
 		dbus? ( dev-qt/qtdbus:5 )
-		X? ( dev-qt/qtgui:4
+		X? ( dev-qt/qtgui:5
 			dev-qt/qtwidgets:5 )
 		)
 "
