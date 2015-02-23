@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-7.0.5-r1.ebuild,v 1.3 2015/01/31 14:12:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-7.0.5-r1.ebuild,v 1.4 2015/02/23 15:05:30 tomjbe Exp $
 
 EAPI="5"
 
-inherit eutils multilib qt4-r2 systemd user
+inherit eutils multilib qt4-r2 systemd user libtool
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
@@ -149,6 +149,12 @@ src_prepare() {
 	if use bacula-clientonly; then
 		sed -i -e 's/bacula/root/' platforms/systemd/bacula.conf.in || die
 	fi
+
+	# fix bundled libtool (bug 466696)
+	# But first move directory with M4 macros out of the way.
+	# It is only needed by i autoconf and gives errors during elibtoolize.
+	mv autoconf/libtool autoconf/libtool1 || die
+	elibtoolize
 }
 
 src_configure() {

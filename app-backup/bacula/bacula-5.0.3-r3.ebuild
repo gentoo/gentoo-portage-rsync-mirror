@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.0.3-r3.ebuild,v 1.22 2014/12/28 14:42:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.0.3-r3.ebuild,v 1.23 2015/02/23 15:05:30 tomjbe Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
 PYTHON_USE_WITH="threads"
 PYTHON_USE_WITH_OPT="python"
 
-inherit eutils multilib python qt4-r2 user
+inherit eutils multilib python qt4-r2 user libtool
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
@@ -142,6 +142,12 @@ src_prepare() {
 
 	# fix CVE-2012-4430
 	epatch "${FILESDIR}"/${PV}/${P}-cve.patch
+
+	# fix bundled libtool (bug 466696)
+	# But first move directory with M4 macros out of the way.
+	# It is only needed by i autoconf and gives errors during elibtoolize.
+	mv autoconf/libtool autoconf/libtool1 || die
+	elibtoolize
 }
 
 src_configure() {

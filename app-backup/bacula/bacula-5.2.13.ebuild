@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13.ebuild,v 1.10 2014/12/28 14:42:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13.ebuild,v 1.11 2015/02/23 15:05:30 tomjbe Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
 PYTHON_USE_WITH="threads"
 PYTHON_USE_WITH_OPT="python"
 
-inherit eutils multilib python qt4-r2 user
+inherit eutils multilib python qt4-r2 user libtool
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
@@ -146,6 +146,12 @@ src_prepare() {
 
 	# fix file not found error during make depend
 	epatch "${FILESDIR}"/5.2.12/${PN}-5.2.12-depend.patch
+
+	# fix bundled libtool (bug 466696)
+	# But first move directory with M4 macros out of the way.
+	# It is only needed by i autoconf and gives errors during elibtoolize.
+	mv autoconf/libtool autoconf/libtool1 || die
+	elibtoolize
 }
 
 src_configure() {
