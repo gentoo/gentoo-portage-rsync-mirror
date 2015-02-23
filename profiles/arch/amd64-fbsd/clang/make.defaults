@@ -6,3 +6,6 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS="-stdlib=libc++ ${CFLAGS}"
 FFLAGS="${CFLAGS}"
 FCFLAGS="${CFLAGS}"
+
+# sys-devel/clang require static-analyzer, bug 539858
+BOOTSTRAP_USE="${BOOTSTRAP_USE} static-analyzer"
