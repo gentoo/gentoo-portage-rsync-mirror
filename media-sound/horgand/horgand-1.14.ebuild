@@ -6,8 +6,8 @@ EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Opensource software organ"
-HOMEPAGE="http://horgand.berlios.de"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/horgand.berlios/"
+SRC_URI="mirror://sourceforge/${PN}.berlios/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
