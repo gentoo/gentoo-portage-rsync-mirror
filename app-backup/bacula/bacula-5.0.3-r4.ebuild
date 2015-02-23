@@ -1,24 +1,35 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-7.0.2.ebuild,v 1.3 2014/12/28 14:42:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.0.3-r4.ebuild,v 1.1 2015/02/23 14:37:31 tomjbe Exp $
 
 EAPI="5"
 
-inherit eutils multilib qt4-r2 systemd user
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="threads"
+
+inherit eutils multilib python-single-r1 qt4-r2 user
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
+#DOC_VER="${MY_PV}"
 
 DESCRIPTION="Featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
+
+#DOC_SRC_URI="mirror://sourceforge/bacula/${PN}-docs-${DOC_VER}.tar.bz2"
 SRC_URI="mirror://sourceforge/bacula/${MY_P}.tar.gz"
+#		doc? ( ${DOC_SRC_URI} )
 
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="acl bacula-clientonly bacula-nodir bacula-nosd examples ipv6 logwatch mysql postgres qt4 readline +sqlite3 ssl static tcpd vim-syntax X"
+IUSE="acl bacula-clientonly bacula-nodir bacula-nosd ipv6 logwatch mysql postgres python qt4 readline +sqlite3 ssl static tcpd vim-syntax X"
 
+# maintainer comment:
+# postgresql-base should have USE=threads (see bug 326333) but fails to build
+# atm with it (see bug #300964)
 DEPEND="
+	>=sys-libs/zlib-1.1.4
 	dev-libs/gmp
 	!bacula-clientonly? (
 		postgres? ( dev-db/postgresql[threads] )
@@ -36,17 +47,17 @@ DEPEND="
 	static? (
 		acl? ( virtual/acl[static-libs] )
 		sys-libs/zlib[static-libs]
-		dev-libs/lzo[static-libs]
 		sys-libs/ncurses[static-libs]
 		ssl? ( dev-libs/openssl[static-libs] )
 	)
 	!static? (
 		acl? ( virtual/acl )
 		sys-libs/zlib
-		dev-libs/lzo
 		sys-libs/ncurses
 		ssl? ( dev-libs/openssl )
-	)"
+	)
+	python? ( ${PYTHON_DEPS} )
+	"
 RDEPEND="${DEPEND}
 	!bacula-clientonly? (
 		!bacula-nosd? (
@@ -57,7 +68,8 @@ RDEPEND="${DEPEND}
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
 REQUIRED_USE="|| ( ^^ ( mysql postgres sqlite3 ) bacula-clientonly )
-				static? ( bacula-clientonly )"
+				static? ( bacula-clientonly )
+				python? ( ${PYTHON_REQUIRED_USE} )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -91,6 +103,8 @@ pkg_setup() {
 			einfo
 		fi
 	fi
+
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
@@ -106,45 +120,28 @@ src_prepare() {
 	done
 	popd >&/dev/null || die
 
-	# bug 466688 drop deprecated categories from Desktop file
-	sed -i -e 's/Application;//' scripts/bat.desktop.in || die
-
-	# bug 466690 Use CXXFLAGS instead of CFLAGS
-	sed -i -e 's/@CFLAGS@/@CXXFLAGS@/' autoconf/Make.common.in || die
-
 	# drop automatic install of unneeded documentation (for bug 356499)
-	epatch "${FILESDIR}"/5.2.3/${PN}-5.2.3-doc.patch
+	epatch "${FILESDIR}"/${PV}/${P}-doc.patch
 
 	# bug #310087
-	epatch "${FILESDIR}"/5.2.3/${PN}-5.2.3-as-needed.patch
+	epatch "${FILESDIR}"/${PV}/${P}-as-needed.patch
 
 	# bug #311161
-	epatch "${FILESDIR}"/5.2.3/${PN}-5.2.3-lib-search-path.patch
+	epatch "${FILESDIR}"/${PV}/${P}-lib-search-path.patch
 
 	# stop build for errors in subdirs
-	epatch "${FILESDIR}"/5.2.3/${PN}-5.2.3-Makefile.patch
+	epatch "${FILESDIR}"/${PV}/${P}-Makefile.patch
 
 	# bat needs to respect LDFLAGS
-	epatch "${FILESDIR}"/5.2.3/${PN}-5.2.3-ldflags.patch
+	epatch "${FILESDIR}"/${PV}/${P}-ldflags.patch
 
 	# bug #328701
-	epatch "${FILESDIR}"/5.2.3/${PN}-5.2.3-openssl-1.patch
+	epatch "${FILESDIR}"/${PV}/${P}-openssl-1.patch
 
-	epatch "${FILESDIR}"/${PV}/${PN}-${PV}-fix-static.patch
+	epatch "${FILESDIR}"/${PV}/${P}-fix-static.patch
 
-	# do not strip binaries
-	sed -i -e "s/strip /# strip /" src/filed/Makefile.in || die
-	sed -i -e "s/strip /# strip /" src/console/Makefile.in || die
-
-	# fix file not found error during make depend
-	epatch "${FILESDIR}"/${PV}/${PN}-${PV}-depend.patch
-
-	# Fix systemd unit files:
-	# bug 497748
-	sed -i -e '/Requires/d' platforms/systemd/*.service.in || die
-	sed -i -e '/StandardOutput/d' platforms/systemd/*.service.in || die
-	# bug 504370
-	sed -i -e '/Alias=bacula-dir/d' platforms/systemd/bacula-dir.service.in || die
+	# fix CVE-2012-4430
+	epatch "${FILESDIR}"/${PV}/${P}-cve.patch
 }
 
 src_configure() {
@@ -175,7 +172,9 @@ src_configure() {
 	fi
 
 	myconf="${myconf} \
+		--disable-tray-monitor \
 		$(use_with X x) \
+		$(use_with python) \
 		$(use_enable !readline conio) \
 		$(use_enable readline) \
 		$(use_with readline readline /usr) \
@@ -192,9 +191,7 @@ src_configure() {
 		--sysconfdir=/etc/bacula \
 		--with-subsys-dir=/var/lock/subsys \
 		--with-working-dir=/var/lib/bacula \
-		--with-logdir=/var/lib/bacula \
 		--with-scriptdir=/usr/libexec/bacula \
-		--with-systemd=$(systemd_get_unitdir) \
 		--with-dir-user=bacula \
 		--with-dir-group=bacula \
 		--with-sd-user=root \
@@ -222,9 +219,9 @@ src_install() {
 	emake DESTDIR="${D}" install
 	doicon scripts/bacula.png
 
-	# install bat icon and desktop file when enabled
-	# (for some reason ./configure doesn't pick this up)
+	# install bat when enabled (for some reason ./configure doesn't pick this up)
 	if use qt4 && ! use static ; then
+		dosbin "${S}"/src/qt-console/.libs/bat
 		doicon src/qt-console/images/bat_icon.png
 		domenu scripts/bat.desktop
 	fi
@@ -269,6 +266,7 @@ src_install() {
 		fi
 	fi
 
+	rm -vf "${D}"/usr/share/man/man1/bacula-bwxconsole.1*
 	if ! use qt4; then
 		rm -vf "${D}"/usr/share/man/man1/bat.1*
 	fi
@@ -299,12 +297,6 @@ src_install() {
 
 	# documentation
 	dodoc ChangeLog ReleaseNotes SUPPORT technotes
-
-	# install examples (bug #457504)
-	if use examples; then
-		docinto examples/
-		dodoc -r examples/*
-	fi
 
 	# vim-files
 	if use vim-syntax; then
@@ -353,9 +345,6 @@ src_install() {
 		newconfd "${T}/${script}".confd "${script}"
 	done
 
-	systemd_dounit "${S}"/platforms/systemd/bacula-{dir,fd,sd}.service
-	systemd_dotmpfilesd "${S}"/platforms/systemd/bacula.conf
-
 	# make sure the working directory exists
 	diropts -m0750
 	keepdir /var/lib/bacula
@@ -377,13 +366,6 @@ pkg_postinst() {
 		einfo "  /usr/libexec/bacula/create_${mydbtype}_database"
 		einfo "  /usr/libexec/bacula/make_${mydbtype}_tables"
 		einfo "  /usr/libexec/bacula/grant_${mydbtype}_privileges"
-		einfo
-	fi
-
-	if use sqlite3; then
-		einfo
-		einfo "Be aware that Bacula does not officially support SQLite database anymore."
-		einfo "Best use it only for a client-only installation. See Bug #445540."
 		einfo
 	fi
 

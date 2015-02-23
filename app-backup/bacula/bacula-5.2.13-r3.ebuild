@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13-r2.ebuild,v 1.4 2014/12/28 14:42:00 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13-r3.ebuild,v 1.1 2015/02/23 14:37:31 tomjbe Exp $
 
-EAPI="4"
-PYTHON_DEPEND="python? 2"
-PYTHON_USE_WITH="threads"
-PYTHON_USE_WITH_OPT="python"
+EAPI="5"
 
-inherit eutils multilib python qt4-r2 systemd user
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="threads"
+
+inherit eutils multilib python-single-r1 qt4-r2 systemd user
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
@@ -49,7 +49,9 @@ DEPEND="
 		dev-libs/lzo
 		sys-libs/ncurses
 		ssl? ( dev-libs/openssl )
-	)"
+	)
+	python? ( ${PYTHON_DEPS} )
+	"
 RDEPEND="${DEPEND}
 	!bacula-clientonly? (
 		!bacula-nosd? (
@@ -60,7 +62,8 @@ RDEPEND="${DEPEND}
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
 REQUIRED_USE="|| ( ^^ ( mysql postgres sqlite3 ) bacula-clientonly )
-				static? ( bacula-clientonly )"
+				static? ( bacula-clientonly )
+				python? ( ${PYTHON_REQUIRED_USE} )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -95,10 +98,7 @@ pkg_setup() {
 		fi
 	fi
 
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
