@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3-r1.ebuild,v 1.8 2015/01/02 12:21:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.3-r1.ebuild,v 1.9 2015/02/23 16:12:48 floppym Exp $
 
 EAPI=4
 
@@ -20,9 +20,13 @@ RDEPEND="dev-libs/openssl:0
 	dev-libs/libnl:3
 	net-wireless/wireless-regdb"
 DEPEND="${RDEPEND}
-	dev-python/m2crypto
-	=dev-lang/python-2*
+	${PYTHON_DEPS}
+	$(python_gen_any_dep 'dev-python/m2crypto[${PYTHON_USEDEP}]')
 	virtual/pkgconfig"
+
+python_check_deps() {
+	has_version "dev-python/m2crypto[${PYTHON_USEDEP}]"
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-missing-include.patch
