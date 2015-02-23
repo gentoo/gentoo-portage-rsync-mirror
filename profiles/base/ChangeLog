@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.772 2015/02/20 01:33:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.773 2015/02/23 10:14:16 aballier Exp $
+
+  23 Feb 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  drop use mask on long gone x264-encoder versions
 
   20 Feb 2015; Zac Medico <zmedico@gentoo.org> make.defaults:
   Use UNINSTALL_IGNORE to protect /var/{run,lock} symlinks for bug 519620.
