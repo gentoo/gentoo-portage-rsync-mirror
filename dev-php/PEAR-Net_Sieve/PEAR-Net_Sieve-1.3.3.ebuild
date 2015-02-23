@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/PEAR-Net_Sieve-1.3.3.ebuild,v 1.4 2015/02/21 12:10:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/PEAR-Net_Sieve-1.3.3.ebuild,v 1.5 2015/02/23 11:13:01 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Provides an API to talk to the timsieved server that comes with Cyr
 
 LICENSE="BSD BSD-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="sasl"
 
 RDEPEND=">=dev-php/PEAR-Net_Socket-1.0.6-r1

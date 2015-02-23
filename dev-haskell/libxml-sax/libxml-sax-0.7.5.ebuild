@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libxml-sax/libxml-sax-0.7.5.ebuild,v 1.5 2015/01/28 10:25:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libxml-sax/libxml-sax-0.7.5.ebuild,v 1.6 2015/02/23 11:01:54 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/text-0.7:=[profile?]

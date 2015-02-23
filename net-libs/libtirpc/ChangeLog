@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.47 2015/02/21 11:58:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.48 2015/02/23 11:08:08 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libtirpc-0.2.5.ebuild:
+  Stable for ppc64, wrt bug #525268
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libtirpc-0.2.5.ebuild:
   Stable for ppc, wrt bug #525268

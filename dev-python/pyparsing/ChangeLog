@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.112 2015/01/28 10:31:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.113 2015/02/23 11:04:03 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pyparsing-2.0.3.ebuild:
+  Stable for ppc64, wrt bug #535354
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pyparsing-2.0.3.ebuild:
   Stable for ppc, wrt bug #535354

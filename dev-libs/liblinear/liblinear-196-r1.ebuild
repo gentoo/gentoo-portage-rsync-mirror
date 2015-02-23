@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/liblinear-196-r1.ebuild,v 1.8 2015/01/28 10:26:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/liblinear-196-r1.ebuild,v 1.9 2015/02/23 11:02:29 ago Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/cjlin1/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 
 src_prepare() {
 	sed -i \

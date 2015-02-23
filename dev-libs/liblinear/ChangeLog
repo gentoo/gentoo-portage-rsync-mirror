@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblinear
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.24 2015/01/28 10:26:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinear/ChangeLog,v 1.25 2015/02/23 11:02:29 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> liblinear-196-r1.ebuild:
+  Stable for ppc64, wrt bug #536512
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> liblinear-196-r1.ebuild:
   Stable for ppc, wrt bug #536512

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/xdebug-client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.75 2015/02/21 12:19:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug-client/ChangeLog,v 1.76 2015/02/23 11:17:20 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xdebug-client-2.2.6.ebuild:
+  Stable for ppc64, wrt bug #538554
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xdebug-client-2.2.6.ebuild:
   Stable for ppc, wrt bug #538554

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.326 2015/01/28 10:29:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.327 2015/02/23 11:03:07 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> fluxbox-1.3.5.ebuild:
+  Stable for ppc64, wrt bug #536086
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> fluxbox-1.3.5.ebuild:
   Stable for ppc, wrt bug #536086

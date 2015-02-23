@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.7.ebuild,v 1.5 2015/02/21 12:16:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/usbredir-0.7.ebuild,v 1.6 2015/02/23 11:15:36 ago Exp $
 
 EAPI=5
 inherit eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://spice-space.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sparc x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/libusb-1.0.19"
