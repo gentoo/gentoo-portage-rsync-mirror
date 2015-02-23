@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jflex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.19 2015/02/22 18:55:39 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.20 2015/02/23 10:37:47 monsieurp Exp $
+
+*jflex-1.4.3-r1 (23 Feb 2015)
+
+  23 Feb 2015; Patrice Clement <monsieurp@gentoo.org> +jflex-1.4.3-r1.ebuild,
+  jflex-1.4.3.ebuild:
+  Revert previous change (EAPI + SLOT) and revbump the package instead.
 
   22 Feb 2015; Patrice Clement <monsieurp@gentoo.org> jflex-1.4.3.ebuild,
   jflex-1.5.0.ebuild, jflex-1.5.1.ebuild, jflex-1.6.0.ebuild:

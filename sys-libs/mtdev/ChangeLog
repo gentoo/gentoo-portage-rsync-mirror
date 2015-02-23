@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/mtdev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.44 2015/02/22 13:21:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.45 2015/02/23 10:44:11 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mtdev-1.1.5.ebuild:
+  Stable for sparc, wrt bug #530652
 
   22 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mtdev-1.1.5.ebuild:
   Stable for ia64, wrt bug #530652

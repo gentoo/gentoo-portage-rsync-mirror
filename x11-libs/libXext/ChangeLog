@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.139 2015/02/22 13:22:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.140 2015/02/23 10:45:22 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libXext-1.3.3.ebuild:
+  Stable for sparc, wrt bug #530652
 
   22 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libXext-1.3.3.ebuild:
   Stable for ia64, wrt bug #530652

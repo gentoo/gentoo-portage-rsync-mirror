@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.57 2015/02/22 18:38:07 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.58 2015/02/23 10:44:01 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> wayland-1.6.1.ebuild:
+  Stable for sparc, wrt bug #530652
 
   22 Feb 2015; Matt Turner <mattst88@gentoo.org> wayland-1.7.0.ebuild:
   Add missing dependencies for USE=doc, bug 540966.

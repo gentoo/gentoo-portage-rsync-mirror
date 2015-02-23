@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcalc/xcalc-1.0.6.ebuild,v 1.5 2015/02/21 08:55:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcalc/xcalc-1.0.6.ebuild,v 1.6 2015/02/23 10:44:33 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit xorg-2
 
 DESCRIPTION="scientific calculator for X"
 
-KEYWORDS="amd64 ~arm ~hppa ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~hppa ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="x11-libs/libXaw

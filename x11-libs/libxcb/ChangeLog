@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.155 2015/02/23 01:55:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.156 2015/02/23 10:45:20 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libxcb-1.11-r1.ebuild:
+  Stable for sparc, wrt bug #530652
 
   23 Feb 2015; Matt Turner <mattst88@gentoo.org> libxcb-1.11-r1.ebuild:
   Add docs USE flag and add proper dependency, bug 534122.

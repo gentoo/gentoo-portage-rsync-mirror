@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.258 2015/02/04 09:12:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.260 2015/02/23 10:48:33 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gettext-0.19.3.ebuild:
+  Stable for ppc64, wrt bug #528242
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gettext-0.19.3.ebuild:
+  Stable for ppc, wrt bug #528242
 
   04 Feb 2015; Pacho Ramos <pacho@gentoo.org> gettext-0.19.3.ebuild:
   ia64 stable, bug #528242 by Émeric Maschino

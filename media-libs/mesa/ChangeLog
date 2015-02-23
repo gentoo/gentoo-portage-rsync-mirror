@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.615 2015/02/22 18:35:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.616 2015/02/23 10:44:09 ago Exp $
+
+  23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mesa-10.3.7-r1.ebuild:
+  Stable for sparc, wrt bug #530652
 
   22 Feb 2015; Matt Turner <mattst88@gentoo.org> mesa-10.5.0_rc1.ebuild:
   Add missing PYTHON_USEDEP to mako dependency, bug 540968.

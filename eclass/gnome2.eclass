@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.128 2015/01/29 09:59:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.130 2015/02/23 10:59:44 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -13,7 +13,17 @@
 inherit eutils fdo-mime libtool gnome.org gnome2-utils
 
 case "${EAPI:-0}" in
-	2|3|4|5)
+	2|3)
+		eqawarn
+		eqawarn "${CATEGORY}/${PF}: EAPI 2/3 support is now deprecated."
+		eqawarn "If you are the package maintainer, please"
+		eqawarn "update this package to a newer EAPI."
+		eqawarn "Support for EAPIs 2 and 3 for gnome2.eclass will be dropped"
+		eqawarn "in a month (around 23rd March)."
+		eqawarn
+		EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_postrm
+		;;
+	4|5)
 		EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_postrm
 		;;
 	*) die "EAPI=${EAPI} is not supported" ;;
@@ -40,12 +50,6 @@ fi
 # @DESCRIPTION:
 # Extra options passed to elibtoolize
 ELTCONF=${ELTCONF:-""}
-
-# @ECLASS-VARIABLE: USE_EINSTALL
-# @DEFAULT_UNSET
-# @DESCRIPTION:
-# Should we use EINSTALL instead of DESTDIR. DEPRECATED
-USE_EINSTALL=${USE_EINSTALL:-""}
 
 # @ECLASS-VARIABLE: DOCS
 # @DEFAULT_UNSET
@@ -190,17 +194,8 @@ gnome2_src_install() {
 	# we must delay gconf schema installation due to sandbox
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 
-	if [[ -z "${USE_EINSTALL}" || "${USE_EINSTALL}" = "0" ]]; then
-		debug-print "Installing with 'make install'"
-		emake DESTDIR="${D}" "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" install || die "install failed"
-	else
-		debug-print "Installing with 'einstall'"
-		eqawarn
-		eqawarn "Support for USE_EINSTALL will be dropped in a month,"
-		eqawarn "please stop using it (#482082)"
-		eqawarn
-		einstall "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" || die "einstall failed"
-	fi
+	debug-print "Installing with 'make install'"
+	emake DESTDIR="${D}" "scrollkeeper_localstate_dir=${ED}${sk_tmp_dir} " "$@" install || die "install failed"
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
