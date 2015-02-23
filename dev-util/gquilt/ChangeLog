@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gquilt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.21 2012/12/02 13:25:45 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/ChangeLog,v 1.22 2015/02/23 07:50:39 idella4 Exp $
+
+*gquilt-0.25-r1 (23 Feb 2015)
+
+  23 Feb 2015; Ian Delaney <idella4@gentoo.org> +gquilt-0.25-r1.ebuild,
+  -gquilt-0.25.ebuild:
+  revbump; convert -> distutils-r1, rm old, fixes Bug #540916, endorsed in said
+  bug
 
   02 Dec 2012; Julian Ospald <hasufell@gentoo.org> gquilt-0.25.ebuild,
   +files/gquilt-0.25-desktopfile.patch:
