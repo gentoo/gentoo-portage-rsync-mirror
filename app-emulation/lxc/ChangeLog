@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.62 2015/02/23 20:18:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.63 2015/02/23 20:36:27 hwoarang Exp $
+
+  23 Feb 2015; Markos Chandras <hwoarang@gentoo.org> lxc-1.0.6-r1.ebuild,
+  lxc-1.0.7.ebuild, lxc-1.1.0-r2.ebuild, lxc-1.1.0-r3.ebuild:
+  Silence repoman warnings
 
 *lxc-1.1.0-r3 (23 Feb 2015)
 

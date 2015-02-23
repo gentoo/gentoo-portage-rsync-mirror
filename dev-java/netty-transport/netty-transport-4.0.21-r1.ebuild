@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-transport/netty-transport-4.0.21-r1.ebuild,v 1.1 2014/11/20 08:30:11 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-transport/netty-transport-4.0.21-r1.ebuild,v 1.2 2015/02/23 20:42:38 zmedico Exp $
 
 EAPI="5"
 
@@ -21,10 +21,10 @@ KEYWORDS="~amd64 ~x86"
 CDEPEND="dev-java/${MY_PN}-buffer:0
 	dev-java/${MY_PN}-common:0"
 
-RDEPEND=">=virtual/jre-1.6
+RDEPEND=">=virtual/jre-1.7
 	${CDEPEND}"
 
-DEPEND=">=virtual/jdk-1.6
+DEPEND=">=virtual/jdk-1.7
 	${CDEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${MY_P}.Final/${PN/${MY_PN}-}"

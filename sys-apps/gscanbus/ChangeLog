@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gscanbus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.17 2012/05/04 09:17:29 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gscanbus/ChangeLog,v 1.18 2015/02/23 20:34:18 mgorny Exp $
+
+  23 Feb 2015; Michał Górny <mgorny@gentoo.org> gscanbus-0.8.ebuild:
+  Fix HOMEPAGE & SRC_URI, bug #537798. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/53 by mm1ke.
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> gscanbus-0.8.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-common/netty-common-4.0.21.ebuild,v 1.1 2014/07/15 07:50:55 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-common/netty-common-4.0.21.ebuild,v 1.2 2015/02/23 20:36:09 zmedico Exp $
 
 EAPI="5"
 
@@ -22,9 +22,9 @@ CDEPEND="dev-java/commons-logging:0
 	dev-java/javassist:3
 	dev-java/log4j:0
 	dev-java/slf4j-api:0"
-RDEPEND=">=virtual/jre-1.6
+RDEPEND=">=virtual/jre-1.7
 		${CDEPEND}"
-DEPEND=">=virtual/jdk-1.6
+DEPEND=">=virtual/jdk-1.7
 		${CDEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${MY_P}.Final/${PN/${MY_PN}-}"

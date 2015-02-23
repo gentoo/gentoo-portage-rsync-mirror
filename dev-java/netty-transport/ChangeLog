@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netty-transport
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-transport/ChangeLog,v 1.6 2014/11/20 08:30:11 ercpe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netty-transport/ChangeLog,v 1.7 2015/02/23 20:42:38 zmedico Exp $
+
+  23 Feb 2015; Zac Medico <zmedico@gentoo.org> netty-transport-4.0.21-r1.ebuild:
+  Increase netty-transport-4.0.21-r1 java dep to 1.7 for bug 531708.
 
 *netty-transport-4.0.21-r1 (20 Nov 2014)
 

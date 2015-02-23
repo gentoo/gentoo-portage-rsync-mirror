@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0-r2.ebuild,v 1.1 2015/02/17 15:15:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0-r2.ebuild,v 1.2 2015/02/23 20:36:27 hwoarang Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ IUSE="cgmanager doc examples lua python seccomp"
 RDEPEND="net-libs/gnutls
 	sys-libs/libcap
 	cgmanager? ( app-admin/cgmanager )
-	lua? ( >=dev-lang/lua-5.1 )
+	lua? ( >=dev-lang/lua-5.1:= )
 	python? ( ${PYTHON_DEPS} )
 	seccomp? ( sys-libs/libseccomp )"
 

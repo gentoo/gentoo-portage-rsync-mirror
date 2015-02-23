@@ -2,11 +2,11 @@ DEFINED_PHASES=install prepare
 DEPEND=dev-cpp/gtkmm:2.4 dev-util/intltool !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=graphical tool for management of active NX sessions on FreeNX server
 EAPI=5
-HOMEPAGE=http://developer.berlios.de/projects/nxsadmin/
+HOMEPAGE=http://sourceforge.net/projects/nxsadmin.berlios/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=dev-cpp/gtkmm:2.4 net-misc/nxserver-freenx
 SLOT=0
-SRC_URI=mirror://berlios/nxsadmin/nxsadmin-0.2.1.tar.gz
+SRC_URI=mirror://sourceforge/nxsadmin.berlios/nxsadmin-0.2.1.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=efbf22d6125e9be08d6e9da8d2eec51b
+_md5_=f5554cf4a549535c5200230e76806e6d
