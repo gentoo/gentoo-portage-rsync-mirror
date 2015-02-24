@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.125 2015/02/24 10:57:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.126 2015/02/24 11:24:41 jlec Exp $
+
+  24 Feb 2015; Justin Lecher <jlec@gentoo.org> -jasper-1.900.1-r8.ebuild:
+  Drop vulnerable version
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> jasper-1.900.1-r9.ebuild:
   Stable for alpha, wrt bug #537530
