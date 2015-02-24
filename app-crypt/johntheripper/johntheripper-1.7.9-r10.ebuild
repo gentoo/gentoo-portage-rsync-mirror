@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r5.ebuild,v 1.6 2015/01/28 19:13:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.9-r10.ebuild,v 1.1 2015/02/24 02:47:19 zerochaos Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils flag-o-matic toolchain-funcs pax-utils multilib
+inherit cuda eutils flag-o-matic toolchain-funcs pax-utils multilib
 
 MY_PN="john"
 MY_P="${MY_PN}-${PV}"
@@ -19,19 +19,23 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 #Remove AltiVec USE flag. Appears to be an upstream issue.
-IUSE="cuda custom-cflags -minimal cpu_flags_x86_mmx mpi opencl openmp cpu_flags_x86_sse2"
+IUSE="cuda custom-cflags -minimal cpu_flags_x86_mmx mozilla mpi opencl openmp cpu_flags_x86_sse2"
 REQUIRED_USE="openmp? ( !minimal )
 	mpi? ( !minimal )
 	cuda? ( !minimal )
-	opencl? ( !minimal )"
+	opencl? ( !minimal )
+	mozilla? ( !minimal )"
 
-RDEPEND="!minimal? ( >=dev-libs/openssl-0.9.7:0 )
+DEPEND="sys-libs/zlib
+	!minimal? ( >=dev-libs/openssl-0.9.7:0 )
 	mpi? ( virtual/mpi )
-	cuda? ( x11-drivers/nvidia-drivers dev-util/nvidia-cuda-toolkit )
-	opencl? ( virtual/opencl )"
-DEPEND="${RDEPEND}"
+	cuda? ( x11-drivers/nvidia-drivers
+		dev-util/nvidia-cuda-toolkit:= )
+	opencl? ( virtual/opencl )
+	mozilla? ( dev-libs/nss dev-libs/nspr )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -124,7 +128,7 @@ get_john_objs() {
 }
 
 pkg_setup() {
-	if use openmp ; then
+	if use openmp && [[ ${MERGE_TYPE} != binary ]]; then
 		tc-has-openmp || die "Please switch to an openmp compatible compiler"
 	fi
 }
@@ -141,6 +145,8 @@ src_prepare() {
 
 		# fix typo in jumbo patch
 		sed -i 's:All15:All5:' run/john.conf || die
+		# fix compile on ppc (only needed for jumbo-7)
+		epatch "${FILESDIR}/${P}-ppc-compile-fix.patch"
 	fi
 
 	cd src
@@ -154,6 +160,17 @@ src_prepare() {
 		sed -i 's#/usr/local#/opt#g' Makefile || die
 	fi
 	sed -i 's#JOHN_OBJS = \\#JOHN_COMMON_OBJS = \\#g' Makefile || die
+
+	if use cuda; then
+		cuda_src_prepare
+		sed \
+			-e "/^NVCC_FLAGS/s:-arch sm_10:${NVCCFLAGS}:g" \
+			-i Makefile || die
+	fi
+
+	if use mozilla; then
+		sed -i -e '/HAVE_NSS =/s/^#*//' -e 's/NSS_override//' Makefile || die
+	fi
 }
 
 src_compile() {
@@ -184,7 +201,7 @@ src_compile() {
 
 	emake -C src/ \
 		CPP="${CPP}" CC="${CC}" AS="${AS}" LD="${LD}" \
-		CFLAGS="-c -Wall -include \\\"${S}\\\"/config.gentoo ${CFLAGS} ${OMP} ${GPUCFLAGS}" \
+		CFLAGS="-c -Wall -include ../config.gentoo ${CFLAGS} ${OMP} ${GPUCFLAGS}" \
 		LDFLAGS="${LDFLAGS} ${GPULDFLAGS}" \
 		OPT_NORMAL="" \
 		OMPFLAGS="${OMP}" \
@@ -218,10 +235,17 @@ src_install() {
 
 	# jumbo-patch additions
 	if ! use minimal; then
-		dosym john /usr/sbin/undrop
+		for s in \
+			keychain2john keepass2john pwsafe2john hccap2john \
+			racf2john zip2john rar2john pdf2john ssh2john undrop \
+			; do
+			dosym john /usr/sbin/$s
+		done
+		use mozilla && dosym john /usr/sbin/mozilla2john
 		dosbin run/calc_stat
 		dosbin run/genmkvpwd
 		dosbin run/mkvcalcproba
+		dosbin run/raw2dyna
 		dosbin run/tgtsnarf
 		insinto /etc/john
 		doins run/genincstats.rb run/stats
