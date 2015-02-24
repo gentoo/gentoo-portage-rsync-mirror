@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16384 2015/02/23 19:13:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16385 2015/02/24 18:01:59 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (24 Feb 2015)
+# Does not work with Emacs 24 or later. Last visible upstream
+# activity in 2010. Use app-emacs/wgrep as replacement.
+# Masked for removal in 30 days, bug 541234.
+app-emacs/grep-edit
 
 # Hans de Graaff <graaff@gentoo.org> (23 Feb 2015)
 # Mask chef and its dependencies for removal in 60 days.

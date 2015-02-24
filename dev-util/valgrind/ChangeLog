@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valgrind
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.179 2014/11/26 18:48:03 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.180 2015/02/24 18:06:33 blueness Exp $
+
+  24 Feb 2015; Anthony G. Basile <blueness@gentoo.org> -valgrind-3.10.0.ebuild,
+  -valgrind-3.8.1-r1.ebuild, valgrind-3.10.1.ebuild:
+  Add epatch_user and remove older unstable versions
 
   26 Nov 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg signature

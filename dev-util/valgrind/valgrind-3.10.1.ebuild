@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.10.1.ebuild,v 1.1 2014/11/26 18:43:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.10.1.ebuild,v 1.2 2015/02/24 18:06:33 blueness Exp $
 
 EAPI="4"
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -39,6 +39,9 @@ src_prepare() {
 
 	# glibc 2.19 fix
 	epatch "${FILESDIR}"/${PN}-3.9.0-glibc-2.19.patch
+
+	# Allow users to test their own patches
+	epatch_user
 
 	# Regenerate autotools files
 	eautoreconf
