@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.5.1.ebuild,v 1.1 2015/01/21 06:30:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/angband-3.5.1.ebuild,v 1.2 2015/02/24 09:34:40 ago Exp $
 
 EAPI=5
 inherit eutils versionator games
@@ -14,7 +14,7 @@ SRC_URI="http://rephial.org/downloads/${MAJOR_PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="ncurses sdl +sound X"
 
 RDEPEND="X? ( x11-libs/libX11 )

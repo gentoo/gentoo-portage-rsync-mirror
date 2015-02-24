@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.23 2015/02/23 19:48:27 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.24 2015/02/24 09:39:03 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> fossil-20150119112900.ebuild:
+  Stable for amd64, wrt bug #539468
 
   23 Feb 2015; Andreas Schuerch <nativemad@gentoo.org>
   fossil-20150119112900.ebuild:

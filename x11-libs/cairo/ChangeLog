@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.402 2015/02/23 05:44:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.403 2015/02/24 09:34:14 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.18-r1.ebuild:
+  Stable for amd64, wrt bug #540676
 
   23 Feb 2015; Matt Turner <mattst88@gentoo.org> cairo-9999.ebuild:
   Drop the qt4 USE flag, like the previous commit.
