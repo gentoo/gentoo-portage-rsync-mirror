@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.41 2015/02/18 19:05:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.42 2015/02/24 17:54:24 pesa Exp $
+
+*qt-creator-3.3.1 (24 Feb 2015)
+
+  24 Feb 2015; Davide Pesavento <pesa@gentoo.org> +qt-creator-3.3.1.ebuild,
+  -qt-creator-3.3.0.ebuild:
+  Version bump.
 
   18 Feb 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.3.0.ebuild:
   The quickwidgets module is needed too. Fixes bug 540192.
