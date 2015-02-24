@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-mount
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mount/ChangeLog,v 1.5 2014/02/23 20:21:56 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mount/ChangeLog,v 1.6 2015/02/24 22:42:08 hd_brummy Exp $
+
+  24 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-mount-0.0.2.ebuild:
+  compile fix vdr-2.1.2, wrt bug 541018, thx to T.Foerster for reporting this
 
   23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-mount-0.0.2.ebuild:
   eapi=5; converted to vdr-plugin-2.eclass

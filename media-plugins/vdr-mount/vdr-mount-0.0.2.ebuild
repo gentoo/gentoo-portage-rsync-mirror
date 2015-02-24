@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mount/vdr-mount-0.0.2.ebuild,v 1.5 2014/02/23 20:21:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mount/vdr-mount-0.0.2.ebuild,v 1.6 2015/02/24 22:42:08 hd_brummy Exp $
 
 EAPI=5
 
@@ -18,3 +18,12 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.2.6"
 
 PATCHES=("${FILESDIR}/${P}-makefile-fix.diff")
+
+src_prepare() {
+	vdr-plugin-2_src_prepare
+
+	if has_version ">=media-video/vdr-2.1.2"; then
+		sed -e "s#VideoDirectory#cVideoDirectory::Name\(\)#" \
+			-i MediumItem.C
+	fi
+}
