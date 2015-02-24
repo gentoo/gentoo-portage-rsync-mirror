@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20150206.ebuild,v 1.1 2015/02/23 10:30:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20150206.ebuild,v 1.2 2015/02/24 00:35:18 patrick Exp $
 
 EAPI=5
 inherit savedconfig
@@ -12,7 +12,8 @@ if [[ ${PV} == 99999999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	#KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="" # missing distfiles
 fi
 
 DESCRIPTION="Linux firmware files"

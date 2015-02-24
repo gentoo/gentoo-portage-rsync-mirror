@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.119 2015/02/23 10:30:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.120 2015/02/24 00:35:18 patrick Exp $
+
+  24 Feb 2015; Patrick Lauer <patrick@gentoo.org>
+  linux-firmware-20150206.ebuild:
+  Remove keywords until distfile URI works #541160
 
 *linux-firmware-20150206 (23 Feb 2015)
 
