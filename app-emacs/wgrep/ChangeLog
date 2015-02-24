@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/wgrep
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wgrep/ChangeLog,v 1.1 2015/02/24 17:29:04 ulm Exp $
+
+*wgrep-2.1.10 (24 Feb 2015)
+
+  24 Feb 2015; Ulrich Müller <ulm@gentoo.org> +wgrep-2.1.10.ebuild,
+  +files/50wgrep-gentoo.el, +metadata.xml:
+  Initial import. Ebuild contributed by me.
+
