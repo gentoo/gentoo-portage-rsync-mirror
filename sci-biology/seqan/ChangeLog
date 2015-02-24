@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/seqan
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/ChangeLog,v 1.8 2015/02/19 22:03:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/ChangeLog,v 1.9 2015/02/24 16:47:47 jlec Exp $
+
+*seqan-2.0.0 (24 Feb 2015)
+
+  24 Feb 2015; Justin Lecher <jlec@gentoo.org> +files/seqan-2.0.0-zlib.patch,
+  +seqan-2.0.0.ebuild:
+  Version Bump, #540692
 
   19 Feb 2015; Justin Lecher <jlec@gentoo.org> seqan-1.4.2.ebuild:
   Prefix love, #540690; thanks  Michael Schubert for the patch
