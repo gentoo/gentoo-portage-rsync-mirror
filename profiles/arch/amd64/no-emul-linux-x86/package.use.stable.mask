@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.47 2015/02/21 08:20:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.use.stable.mask,v 1.48 2015/02/24 14:33:56 pacho Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -74,6 +74,7 @@ dev-libs/gmp -abi_x86_32
 dev-libs/icu -abi_x86_32
 dev-libs/isl -abi_x86_32
 dev-libs/json-c -abi_x86_32
+dev-libs/json-glib -abi_x86_32
 dev-libs/libIDL -abi_x86_32
 dev-libs/libRocket -abi_x86_32
 dev-libs/libcdio -abi_x86_32
@@ -167,6 +168,7 @@ media-libs/gst-plugins-bad -abi_x86_32
 media-libs/gst-plugins-base -abi_x86_32
 media-libs/gst-plugins-good -abi_x86_32
 media-libs/gst-plugins-ugly -abi_x86_32
+media-libs/gst-rtsp-server -abi_x86_32
 media-libs/gstreamer -abi_x86_32
 media-libs/harfbuzz -abi_x86_32
 media-libs/ilmbase -abi_x86_32

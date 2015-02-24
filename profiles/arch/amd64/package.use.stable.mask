@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.123 2015/02/21 21:03:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.124 2015/02/24 14:33:56 pacho Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -106,6 +106,7 @@ dev-libs/gmp abi_x86_32
 dev-libs/icu abi_x86_32
 dev-libs/isl abi_x86_32
 dev-libs/json-c abi_x86_32
+dev-libs/json-glib abi_x86_32
 dev-libs/libIDL abi_x86_32
 dev-libs/libRocket abi_x86_32
 dev-libs/libcdio abi_x86_32
@@ -199,6 +200,7 @@ media-libs/gst-plugins-bad abi_x86_32
 media-libs/gst-plugins-base abi_x86_32
 media-libs/gst-plugins-good abi_x86_32
 media-libs/gst-plugins-ugly abi_x86_32
+media-libs/gst-rtsp-server abi_x86_32
 media-libs/gstreamer abi_x86_32
 media-libs/harfbuzz abi_x86_32
 media-libs/ilmbase abi_x86_32
