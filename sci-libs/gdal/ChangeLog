@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.159 2015/01/12 23:49:19 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.160 2015/02/24 00:05:14 xmw Exp $
+
+*gdal-1.11.1-r2 (24 Feb 2015)
+
+  24 Feb 2015; Michael Weber <xmw@gentoo.org>
+  +files/gdal-1.11.1-poppler-0.31.0-support.patch, +gdal-1.11.1-r2.ebuild:
+  Add fix for bug 540132 by Greg Turner.
 
   12 Jan 2015; Andrey Grozin <grozin@gentoo.org> gdal-1.11.1-r1.ebuild,
   +files/gdal-1.11.1-swig-3.0.3.patch:

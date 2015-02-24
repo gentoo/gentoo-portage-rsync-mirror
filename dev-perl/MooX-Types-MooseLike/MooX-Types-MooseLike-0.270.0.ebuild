@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/MooX-Types-MooseLike-0.180.0.ebuild,v 1.1 2013/02/10 08:51:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/MooX-Types-MooseLike-0.270.0.ebuild,v 1.1 2015/02/24 00:16:50 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=MATEU
-MODULE_VERSION=0.18
+MODULE_VERSION=0.27
 inherit perl-module
 
 DESCRIPTION="Some Moosish types and a type builder"
@@ -20,6 +20,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	test? (
+		dev-perl/Set-Object
 		>=dev-perl/Test-Fatal-0.3.0
 		>=virtual/perl-Test-Simple-0.960.0
 	)

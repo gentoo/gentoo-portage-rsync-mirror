@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/MooX-Types-MooseLike
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/ChangeLog,v 1.5 2014/10/19 15:40:00 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/ChangeLog,v 1.6 2015/02/24 00:16:50 dilfridge Exp $
+
+*MooX-Types-MooseLike-0.270.0 (24 Feb 2015)
+
+  24 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -MooX-Types-MooseLike-0.180.0.ebuild, -MooX-Types-MooseLike-0.210.0.ebuild,
+  +MooX-Types-MooseLike-0.270.0.ebuild:
+  Version bump; remove old
 
   19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
   -MooX-Types-MooseLike-0.160.0.ebuild:

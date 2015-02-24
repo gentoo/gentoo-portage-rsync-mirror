@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.97 2015/02/23 21:31:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.98 2015/02/24 00:30:29 patrick Exp $
+
+  24 Feb 2015; Patrick Lauer <patrick@gentoo.org> bitcoind-0.10.0.ebuild:
+  Disable censoring by default
 
 *bitcoind-0.9.4 (23 Feb 2015)
 *bitcoind-0.10.0 (23 Feb 2015)
