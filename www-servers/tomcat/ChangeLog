@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.342 2015/02/20 11:56:20 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.343 2015/02/24 21:06:23 fordfrog Exp $
+
+*tomcat-8.0.20 (24 Feb 2015)
+
+  24 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.20.ebuild,
+  +files/tomcat-8.0.20-build.xml.patch:
+  version bump
 
   20 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> tomcat-8.0.18.ebuild:
   changed to eapi 5, simplified find command
