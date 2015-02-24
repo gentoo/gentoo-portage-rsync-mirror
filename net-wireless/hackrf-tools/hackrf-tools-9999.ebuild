@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/hackrf-tools-9999.ebuild,v 1.8 2014/08/28 20:16:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hackrf-tools/hackrf-tools-9999.ebuild,v 1.9 2015/02/24 04:30:04 zerochaos Exp $
 
 EAPI=5
 
@@ -25,8 +25,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/libusb:1
-	=net-libs/libhackrf-${PV}:="
+DEPEND="=net-libs/libhackrf-${PV}:="
 RDEPEND="${DEPEND}"
 
 src_install() {
