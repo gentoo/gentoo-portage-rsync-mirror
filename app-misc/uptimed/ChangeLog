@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.108 2015/01/02 12:39:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.109 2015/02/24 09:11:49 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.18.ebuild:
+  Stable for alpha, wrt bug #533278
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.18.ebuild:
   Stable for sparc, wrt bug #533278

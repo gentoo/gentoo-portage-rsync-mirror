@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.125 2015/01/02 12:26:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.126 2015/02/24 09:10:13 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.14-r1.ebuild:
+  Stable for alpha, wrt bug #530648
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.14-r1.ebuild:
   Stable for sparc, wrt bug #530648

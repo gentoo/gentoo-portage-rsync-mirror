@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.167 2015/01/27 23:41:40 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.168 2015/02/24 09:05:32 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> brltty-5.2.ebuild:
+  Stable for alpha, wrt bug #534800
 
   27 Jan 2015; Christopher Brannon <teiresias@gentoo.org>
   -brltty-4.5-r3.ebuild, -brltty-5.0-r2.ebuild, -brltty-5.1.ebuild,

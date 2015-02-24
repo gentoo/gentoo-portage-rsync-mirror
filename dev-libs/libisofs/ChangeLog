@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.174 2015/01/01 11:24:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.175 2015/02/24 09:17:24 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libisofs-1.3.8.ebuild:
+  Stable for alpha, wrt bug #531310
 
   01 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libisofs-1.3.8.ebuild:
   Stable for ppc64, wrt bug #531310

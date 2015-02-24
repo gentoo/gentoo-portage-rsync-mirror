@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/re2c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.83 2015/02/23 11:05:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.84 2015/02/24 09:14:05 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> re2c-0.13.7.5.ebuild:
+  Stable for alpha, wrt bug #535406
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> re2c-0.13.7.5.ebuild:
   Stable for ppc64, wrt bug #535406
