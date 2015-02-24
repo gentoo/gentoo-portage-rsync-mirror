@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.5.ebuild,v 1.10 2015/02/24 10:57:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.5.ebuild,v 1.11 2015/02/24 12:26:29 yngwin Exp $
 
 EAPI=5
 inherit autotools-multilib flag-o-matic multilib toolchain-funcs
@@ -25,7 +25,7 @@ REQUIRED_USE="harfbuzz? ( auto-hinter )"
 CDEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
 	harfbuzz? ( >=media-libs/harfbuzz-0.9.19[truetype,${MULTILIB_USEDEP}] )
-	png? ( >=media-libs/libpng-1.2.51[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.2.51:=[${MULTILIB_USEDEP}] )
 	utils? (
 		X? (
 			>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]

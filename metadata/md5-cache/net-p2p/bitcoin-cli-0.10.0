@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=virtual/bitcoin-leveldb >=dev-libs/boost-1.52.0[threads(+)]
 SLOT=0
 SRC_URI=https://github.com/bitcoin/bitcoin/archive/047a89831760ff124740fe9f58411d57ee087078.tar.gz -> bitcoin-v0.10.0.tgz http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/0.10.x/0.10.0.ljr20150220/bitcoin-0.10.0.ljr20150220.patches.txz -> bitcoin-0.10.0.ljr20150220.patches.tar.xz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	bitcoincore	ad014e13c2c073682e77e394efcffbb8	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	bitcoincore	99571e9e5366191ddce4986d32471f9b	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=c783a22f5ce278e87ac0ca1f12e088bc

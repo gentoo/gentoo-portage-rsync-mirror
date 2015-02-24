@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bitcoincore.eclass,v 1.1 2015/02/23 21:13:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bitcoincore.eclass,v 1.2 2015/02/24 12:14:26 blueness Exp $
 #
 # @ECLASS: bitcoincore.eclass
 # @MAINTAINER:
@@ -180,8 +180,8 @@ bitcoincore_pkg_pretend() {
 		"Replace By Fee policy is enabled: Your node will preferentially mine and relay transactions paying the highest fee, regardless of receive order." \
 		"Replace By Fee policy is disabled: Your node will only accept the first transaction seen consuming a conflicting input, regardless of fee offered by later ones."
 	bitcoincore_policymsg spamfilter \
-		"Enhanced spam filter policy is enabled: Notorious spammers will not be assisted by your node. This may impact your ability to use some spammy services (see link for a list)." \
-		"Enhanced spam filter policy is DISABLED: Your node will not be checking for notorious spammers, and may assist them. Set BITCOIN_POLICY=spamfilter to enable."
+		"Enhanced spam filter is enabled: A blacklist (seen as controversial by some) will be used by your node. This may impact your ability to use some services (see link for a list)." \
+		"Enhanced spam filter is disabled: Your node will not be checking for notorious spammers, and may assist them."
 	$bitcoincore_policymsg_flag && einfo "For more information on any of the above, see ${LJR_PATCH_DESC}"
 }
 

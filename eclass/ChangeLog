@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1553 2015/02/23 21:13:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1554 2015/02/24 12:14:26 blueness Exp $
+
+  24 Feb 2015; Anthony G. Basile <blueness@gentoo.org> bitcoincore.eclass:
+  bitcoincore.eclass: update spamfilter message, bug #541192.
 
   23 Feb 2015; Anthony G. Basile <blueness@gentoo.org> +bitcoincore.eclass:
   Initial commit of bitcoincore.eclass
