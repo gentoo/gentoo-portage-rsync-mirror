@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-keystoneclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.40 2014/12/24 00:25:19 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.41 2015/02/24 04:48:08 alunduil Exp $
+
+*python-keystoneclient-1.1.0 (24 Feb 2015)
+
+  24 Feb 2015; Alex Brandt <alunduil@gentoo.org>
+  +python-keystoneclient-1.1.0.ebuild:
+  add version 1.1.0
 
 *python-keystoneclient-1.0.0 (24 Dec 2014)
 
