@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0_alpha.ebuild,v 1.1 2015/02/10 11:54:53 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0_alpha2.ebuild,v 1.1 2015/02/24 13:57:25 jauhien Exp $
 
 EAPI="5"
 
 inherit eutils
 
-MY_PV="1.0.0-alpha"
+MY_PV="1.0.0-alpha.2"
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
 SRC_URI="amd64? ( http://static.rust-lang.org/dist/rust-${MY_PV}-x86_64-unknown-linux-gnu.tar.gz )
