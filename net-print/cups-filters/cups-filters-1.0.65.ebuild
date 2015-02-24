@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.65.ebuild,v 1.1 2015/02/14 19:48:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.65.ebuild,v 1.2 2015/02/24 16:15:32 mgorny Exp $
 
 EAPI=5
 
@@ -107,6 +107,7 @@ src_install() {
 
 	if ! use foomatic ; then
 		# this needs an upstream solution / configure switch
+		rm -v "${ED}/usr/bin/foomatic-rip" || die
 		rm -v "${ED}/usr/libexec/cups/filter/foomatic-rip" || die
 		rm -v "${ED}/usr/share/man/man1/foomatic-rip.1" || die
 	fi

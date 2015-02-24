@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.182 2015/02/22 11:20:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.183 2015/02/24 16:19:16 xarthisius Exp $
+
+*matplotlib-1.4.3 (24 Feb 2015)
+
+  24 Feb 2015; Kacper Kowalik <xarthisius@gentoo.org> +matplotlib-1.4.3.ebuild,
+  matplotlib-1.4.2.ebuild, matplotlib-9999.ebuild:
+  Version bump, append -DNDEBUG to cppflags
 
   22 Feb 2015; Michał Górny <mgorny@gentoo.org> matplotlib-1.4.2.ebuild:
   Restore arm, that one got ipython right.

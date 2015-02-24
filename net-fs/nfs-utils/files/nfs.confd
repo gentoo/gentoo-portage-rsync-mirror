@@ -7,7 +7,7 @@
 # For NFSv4 users, you'll want to add "rpc.idmapd" here.
 NFS_NEEDED_SERVICES=""
 
-# Number of servers to be started up by default
+# Options to pass to rpc.nfsd
 OPTS_RPC_NFSD="8"
 
 # Options to pass to rpc.mountd

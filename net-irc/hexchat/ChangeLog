@@ -1,6 +1,18 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.119 2015/02/24 10:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.120 2015/02/24 16:26:18 hasufell Exp $
+
+  24 Feb 2015; Julian Ospald <hasufell@gentoo.org> -hexchat-2.9.5-r1.ebuild,
+  -hexchat-2.9.6.1.ebuild, -hexchat-2.9.6.1-r1.ebuild,
+  -hexchat-2.9.6.1-r2.ebuild, -hexchat-2.10.0-r1.ebuild,
+  -hexchat-2.10.1.ebuild, -files/hexchat-2.9.1-input-box.patch,
+  -files/hexchat-2.9.5-cflags.patch,
+  -files/hexchat-2.9.5-fix_leftclick_opens_menu.patch,
+  -files/hexchat-2.9.5-gettextize.patch, -files/hexchat-2.9.5-gobject.patch,
+  -files/hexchat-2.9.6.1-sasl.patch, -files/hexchat-2.9.6.1-xdcc.patch,
+  -files/hexchat-2.10.0-plugins.patch, -files/hexchat-2.10.0-pofiles.patch,
+  metadata.xml:
+  cleanup old wrt #538228
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> hexchat-2.10.2.ebuild:
   Stable for alpha, wrt bug #538228

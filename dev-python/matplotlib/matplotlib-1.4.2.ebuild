@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.2.ebuild,v 1.7 2015/02/22 11:20:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.2.ebuild,v 1.8 2015/02/24 16:19:16 xarthisius Exp $
 
 EAPI=5
 
@@ -149,6 +149,7 @@ python_prepare_all() {
 
 python_configure_all() {
 	append-flags -fno-strict-aliasing
+	append-cppflags -DNDEBUG  # or get old trying to do triangulation
 }
 
 python_configure() {

@@ -13,11 +13,6 @@
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 	<use>
-		<flag name='fastscroll'>Make scrolling of large text buffers
-			faster by
-			circumventing some of pango's overhead</flag>
-		<flag name='gtkspell'>Use <pkg>app-text/gtkspell</pkg> for spell
-			checking instead of static method (needs spell)</flag>
 		<flag name='ntlm'>Enable NTLM authentication</flag>
 		<flag name='libcanberra'>Enable sound event support using
 			<pkg>media-libs/libcanberra</pkg></flag>
@@ -31,8 +26,6 @@
 			)</flag>
 		<flag name='plugin-sysinfo'>Build SysInfo plugin (needs plugins)
 		</flag>
-		<flag name='sexy'>Use <pkg>x11-libs/libsexy</pkg> for spell
-			checking instead of static method (needs spell)</flag>
 		<flag name='theme-manager'>Build the theme manager (mono)</flag>
 	</use>
 	<upstream>
