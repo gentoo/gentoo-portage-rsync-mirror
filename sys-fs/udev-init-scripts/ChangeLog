@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.110 2015/01/19 15:01:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.111 2015/02/24 15:39:54 vapier Exp $
+
+  24 Feb 2015; Mike Frysinger <vapier@gentoo.org> udev-init-scripts-27.ebuild:
+  Mark arm64/m68k/ia64/s390/sh stable.
 
   19 Jan 2015; Anthony G. Basile <blueness@gentoo.org>
   udev-init-scripts-27.ebuild:
