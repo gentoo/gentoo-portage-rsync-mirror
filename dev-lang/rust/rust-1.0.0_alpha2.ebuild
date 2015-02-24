@@ -1,30 +1,30 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_alpha.ebuild,v 1.1 2015/02/10 11:35:29 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_alpha2.ebuild,v 1.1 2015/02/24 14:02:34 jauhien Exp $
 
-EAPI="5"
+EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils python-any-r1
 
-MY_PV="rustc-1.0.0-alpha"
+MY_PV="rustc-1.0.0-alpha.2"
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
 
 SRC_URI="http://static.rust-lang.org/dist/${MY_PV}-src.tar.gz
-	x86?   ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-01-07-9e4e524-linux-i386-d8b73fc9aa3ad72ce1408a41e35d78dba10eb4d4.tar.bz2 )
-	amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-01-07-9e4e524-linux-x86_64-697880d3640e981bbbf23284363e8e9a158b588d.tar.bz2 )"
+	x86?   ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-02-17-f1bb6c2-linux-i386-191ed5ec4f17e32d36abeade55a1c6085e51245c.tar.bz2 )
+	amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-02-17-f1bb6c2-linux-x86_64-acec86045632f4f3f085c072ba696f889906dffe.tar.bz2 )"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
 SLOT="1.0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="clang debug libcxx +system-llvm"
+IUSE="clang debug doc libcxx +system-llvm"
 REQUIRED_USE="libcxx? ( clang )"
 
 CDEPEND="libcxx? ( sys-libs/libcxx )
-	>=app-admin/eselect-rust-0.2_pre20141128
+	>=app-admin/eselect-rust-0.2_pre20150206
 	!dev-lang/rust:0
 "
 DEPEND="${CDEPEND}
@@ -45,24 +45,19 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.13.0-no-ldconfig.patch"
-
 	local postfix="gentoo-${SLOT}"
 	sed -i -e "s/CFG_FILENAME_EXTRA=.*/CFG_FILENAME_EXTRA=${postfix}/" mk/main.mk || die
 }
 
 src_configure() {
-	use amd64 && ARCH_POSTFIX="x86_64"
-	use x86 && ARCH_POSTFIX="i686"
-	LOCAL_RUST_PATH="${WORKDIR}/rust-1.0.0-alpha-${ARCH_POSTFIX}-unknown-linux-gnu/bin"
-
-	local system_llvm
-	use system-llvm && system_llvm="--llvm-root=${EPREFIX}/usr"
+	export CFG_DISABLE_LDCONFIG="notempty"
 
 	"${ECONF_SOURCE:-.}"/configure \
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/lib/${P}" \
 		--mandir="${EPREFIX}/usr/share/${P}/man" \
+		--disable-manage-submodules \
+		--disable-verify-install \
 		$(use_enable clang) \
 		$(use_enable debug) \
 		$(use_enable debug llvm-assertions) \
@@ -70,11 +65,9 @@ src_configure() {
 		$(use_enable !debug optimize-cxx) \
 		$(use_enable !debug optimize-llvm) \
 		$(use_enable !debug optimize-tests) \
+		$(use_enable doc docs) \
 		$(use_enable libcxx libcpp) \
-		${system_llvm} \
-		--disable-manage-submodules \
-		--disable-verify-install \
-		--disable-docs \
+		$(usex system-llvm "--llvm-root=${EPREFIX}/usr" " ") \
 		|| die
 }
 
@@ -98,6 +91,9 @@ src_install() {
 	rmdir "${D}/usr/lib/rust-${PV}/rust-${PV}/rustlib"
 	mv "${D}/usr/lib/rust-${PV}/rust-${PV}/"/* "${D}/usr/lib/rust-${PV}/"
 	rmdir "${D}/usr/lib/rust-${PV}/rust-${PV}/"
+
+	mv "${D}/usr/share/doc/rust"/* "${D}/usr/share/doc/rust-${PV}/"
+	rmdir "${D}/usr/share/doc/rust/"
 
 	cat <<-EOF > "${T}"/50${P}
 	LDPATH="/usr/lib/${P}"

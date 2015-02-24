@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/rust
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.11 2015/02/10 11:35:29 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.12 2015/02/24 14:02:34 jauhien Exp $
+
+*rust-1.0.0_alpha2 (24 Feb 2015)
+
+  24 Feb 2015; Jauhien Piatlicki <jauhien@gentoo.org> +rust-1.0.0_alpha2.ebuild,
+  -files/rust-0.13.0-no-ldconfig.patch, -rust-1.0.0_alpha.ebuild:
+  version bump, sync with rust overlay
 
 *rust-1.0.0_alpha (10 Feb 2015)
 
