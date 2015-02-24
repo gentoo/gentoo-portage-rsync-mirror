@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.152 2015/02/23 11:36:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.153 2015/02/24 10:57:26 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> socat-1.7.3.0.ebuild:
+  Stable for alpha, wrt bug #537592
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> socat-1.7.3.0.ebuild:
   Stable for ia64, wrt bug #537592

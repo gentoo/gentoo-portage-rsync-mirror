@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.68 2015/02/23 11:37:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.69 2015/02/24 10:56:40 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  fcgi-2.4.1_pre0910052249-r2.ebuild:
+  Stable for alpha, wrt bug #539164
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   fcgi-2.4.1_pre0910052249-r2.ebuild:

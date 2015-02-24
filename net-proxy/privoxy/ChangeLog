@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.112 2015/02/18 08:50:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.113 2015/02/24 10:57:40 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.23.ebuild:
+  Stable for alpha, wrt bug #537884
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.23.ebuild:
   Stable for ppc64, wrt bug #537884
