@@ -10,4 +10,4 @@ RDEPEND=app-misc/mime-types nls? ( virtual/libintl ) tokyocabinet? ( dev-db/toky
 SLOT=0
 SRC_URI=ftp://ftp.mutt.org/mutt/devel/mutt-1.5.22.tar.gz mirror://gentoo/mutt-1.5.22-gentoo-patches-r2.tar.bz2 http://dev.gentoo.org/~grobian/distfiles/mutt-1.5.22-gentoo-patches-r2.tar.bz2
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=00413aa0cf6c06404642284c088b4fbb
+_md5_=2e9bfc915a02b8df92813e0a0e3d8542

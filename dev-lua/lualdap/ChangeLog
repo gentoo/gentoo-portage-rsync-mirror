@@ -1,0 +1,12 @@
+# ChangeLog for dev-lua/lualdap
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lualdap/ChangeLog,v 1.1 2015/02/24 10:05:41 chainsaw Exp $
+
+*lualdap-1.1.0 (24 Feb 2015)
+
+  24 Feb 2015; Tony Vroon <chainsaw@gentoo.org> +lualdap-1.1.0.ebuild,
+  +files/lualdap-1.1.0-destdir.patch, +files/lualdap-1.1.0-lua-5.1.patch,
+  +files/lualdap-1.1.0-openldap-2.3.patch, +metadata.xml:
+  Initial commit. Ebuild and all patches by Dennis "devurandom" Schridde in bug
+  #418311.
+

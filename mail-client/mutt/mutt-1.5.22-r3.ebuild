@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r3.ebuild,v 1.11 2014/11/02 08:31:58 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r3.ebuild,v 1.12 2015/02/24 10:15:47 grobian Exp $
 
 EAPI="5"
 
@@ -247,6 +247,6 @@ pkg_postinst() {
 	echo
 	elog "If you are new to mutt you may want to take a look at"
 	elog "the Gentoo QuickStart Guide to Mutt E-Mail:"
-	elog "   http://www.gentoo.org/doc/en/guide-to-mutt.xml"
+	elog "   https://wiki.gentoo.org/wiki/Mutt"
 	echo
 }

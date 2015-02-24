@@ -1,0 +1,15 @@
+--- lualdap-1.1.0/Makefile.orig	2012-05-31 01:14:53.773987493 +0200
++++ lualdap-1.1.0/Makefile	2012-05-31 01:15:46.539987507 +0200
+@@ -20,9 +20,9 @@
+ 	$(CC) -c $(CFLAGS) -o $@ $(COMPAT_DIR)/compat-5.1.c
+ 
+ install: src/$(LIBNAME)
+-	mkdir -p $(LUA_LIBDIR)
+-	cp src/$(LIBNAME) $(LUA_LIBDIR)
+-	cd $(LUA_LIBDIR); ln -f -s $(LIBNAME) $T.so
++	mkdir -p $(DESTDIR)$(LUA_LIBDIR)
++	cp src/$(LIBNAME) $(DESTDIR)$(LUA_LIBDIR)
++	cd $(DESTDIR)$(LUA_LIBDIR); ln -f -s $(LIBNAME) $T.so
+ 
+ clean:
+ 	rm -f $(OBJS) src/$(LIBNAME)

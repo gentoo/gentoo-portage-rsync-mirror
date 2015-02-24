@@ -1,0 +1,26 @@
+--- lualdap-1.1.0/src/lualdap.c.orig	2012-05-31 02:16:27.677987500 +0200
++++ lualdap-1.1.0/src/lualdap.c	2012-05-31 02:19:57.963987490 +0200
+@@ -887,7 +887,11 @@
+ 		return 0;
+ 
+ 	/* define methods */
++#if LUA_VERSION_NUM >= 501
++	luaL_register (L, NULL, methods);
++#else
+ 	luaL_openlib (L, NULL, methods, 0);
++#endif
+ 
+ 	/* define metamethods */
+ 	lua_pushliteral (L, "__gc");
+@@ -993,7 +997,11 @@
+ 	};
+ 
+ 	lualdap_createmeta (L);
++#if LUA_VERSION_NUM >= 501
++	luaL_register (L, LUALDAP_TABLENAME, lualdap);
++#else
+ 	luaL_openlib (L, LUALDAP_TABLENAME, lualdap, 0);
++#endif
+ 	set_info (L);
+ 
+ 	return 1;
