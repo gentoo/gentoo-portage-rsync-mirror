@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.116 2013/12/25 09:38:03 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.117 2015/02/24 07:08:21 graaff Exp $
+
+*fxruby-1.6.29 (24 Feb 2015)
+
+  24 Feb 2015; Hans de Graaff <graaff@gentoo.org> +fxruby-1.6.29.ebuild:
+  Version bump. Add ruby20, ruby21.
 
   25 Dec 2013; Patrick Lauer <patrick@gentoo.org> fxruby-1.6.25.ebuild,
   fxruby-1.6.28.ebuild:
