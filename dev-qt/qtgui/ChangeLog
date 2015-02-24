@@ -1,6 +1,13 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.56 2015/02/24 18:48:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.58 2015/02/24 20:27:17 pesa Exp $
+
+  24 Feb 2015; Davide Pesavento <pesa@gentoo.org>
+  -files/qtgui-5.4.0-bigendian.patch:
+  Delete unused patch.
+
+  24 Feb 2015; Michael Palimaka <kensington@gentoo.org> qtgui-5.4.1.ebuild:
+  Remove failing patch that was applied upstream.
 
 *qtgui-5.4.1 (24 Feb 2015)
 
