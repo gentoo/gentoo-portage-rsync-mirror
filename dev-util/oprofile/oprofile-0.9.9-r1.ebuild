@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.9-r1.ebuild,v 1.7 2015/02/23 11:00:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.9-r1.ebuild,v 1.8 2015/02/24 08:48:53 ago Exp $
 
 EAPI="5"
 inherit autotools eutils linux-info multilib user java-pkg-opt-2
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 ~sparc x86"
 IUSE="java pch qt4"
 
 DEPEND=">=dev-libs/popt-1.7-r1

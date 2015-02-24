@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.46 2015/02/21 14:17:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.47 2015/02/24 08:55:03 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ctdb-1.13-r1.ebuild:
+  Stable for alpha, wrt bug #525972
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ctdb-1.13-r1.ebuild:
   Stable for ppc, wrt bug #525972

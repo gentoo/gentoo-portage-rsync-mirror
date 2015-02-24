@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ceph
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.62 2014/11/05 07:04:12 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.63 2015/02/24 08:54:59 pinkbyte Exp $
+
+  24 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> files/ceph.logrotate:
+  QA: do not pollute cron output in logrotate script in cases, when no
+  daemons, but only ceph client is used
 
 *ceph-0.80.7 (05 Nov 2014)
 

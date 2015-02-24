@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.34 2015/02/01 13:51:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.35 2015/02/24 08:48:36 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> leptonica-1.71-r1.ebuild:
+  Stable for alpha, wrt bug #524542
 
   01 Feb 2015; Agostino Sarubbo <ago@gentoo.org> leptonica-1.71-r1.ebuild:
   Stable for x86, wrt bug #524542

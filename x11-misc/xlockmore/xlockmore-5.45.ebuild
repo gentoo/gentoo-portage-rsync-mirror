@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.45.ebuild,v 1.6 2015/01/26 09:44:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.45.ebuild,v 1.7 2015/02/24 08:48:19 ago Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic pam
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.tux.org/pub/tux/bagleyd/${PN}/${P}/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 ~sparc x86"
 IUSE="crypt debug gtk imagemagick motif nas opengl pam truetype xinerama xlockrc"
 
 REQUIRED_USE="

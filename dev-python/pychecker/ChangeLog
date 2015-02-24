@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.66 2015/02/23 11:15:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.67 2015/02/24 08:56:45 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pychecker-0.8.19-r1.ebuild:
+  Stable for alpha, wrt bug #537246
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pychecker-0.8.19-r1.ebuild:
   Stable for ppc64, wrt bug #537246

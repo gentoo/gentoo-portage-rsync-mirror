@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-1.0.18.ebuild,v 1.8 2015/01/26 10:29:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-1.0.18.ebuild,v 1.9 2015/02/24 08:58:01 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://launchpad.net/${PN}/1.0/${PV}/+download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86 ~sparc-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~sh ~sparc x86 ~sparc-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug hsieh +libevent sasl static-libs"
 
 DEPEND="net-misc/memcached

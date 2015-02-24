@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4-r1.ebuild,v 1.10 2015/02/23 11:08:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.4-r1.ebuild,v 1.11 2015/02/24 08:56:23 ago Exp $
 
 EAPI=5
 inherit libtool eutils multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="aac alsa doc dv encode ffmpeg gtk jpeg lame cpu_flags_x86_mmx opengl png schroedinger static-libs vorbis X x264"
 
 RDEPEND=">=virtual/libintl-0-r1[${MULTILIB_USEDEP}]

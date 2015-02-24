@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/geoipupdate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.36 2015/01/02 12:42:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.37 2015/02/24 08:58:34 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> geoipupdate-2.1.0.ebuild:
+  Stable for alpha, wrt bug #533668
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> geoipupdate-2.1.0.ebuild:
   Stable for sparc, wrt bug #533668

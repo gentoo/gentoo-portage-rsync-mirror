@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.61 2015/02/15 12:31:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.62 2015/02/24 08:44:42 ago Exp $
+
+  24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> six-1.8.0.ebuild:
+  Stable for alpha, wrt bug #534366
 
   15 Feb 2015; Pacho Ramos <pacho@gentoo.org> six-1.8.0.ebuild:
   ppc64 stable, bug #534366

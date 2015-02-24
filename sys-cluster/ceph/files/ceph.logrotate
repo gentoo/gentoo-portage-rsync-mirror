@@ -9,12 +9,12 @@
     compress
     sharedscripts
     prerotate
-	for dmn in $(cd /run/ceph && ls *.asok); do
+	for dmn in $(cd /run/ceph && ls *.asok 2>/dev/null); do
 		ceph --admin-daemon /run/ceph/${dmn} log flush 2>/dev/null >&1
 	done
     endscript
     postrotate
-	for dmn in $(cd /run/ceph && ls *.asok); do
+	for dmn in $(cd /run/ceph && ls *.asok 2>/dev/null); do
 		ceph --admin-daemon /run/ceph/${dmn} log reopen 2>/dev/null >&1
         done
     endscript
