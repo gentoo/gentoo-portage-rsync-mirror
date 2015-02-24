@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtpositioning
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtpositioning/ChangeLog,v 1.6 2015/02/03 11:51:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtpositioning/ChangeLog,v 1.7 2015/02/24 18:47:47 pesa Exp $
+
+*qtpositioning-5.4.1 (24 Feb 2015)
+
+  24 Feb 2015; Davide Pesavento <pesa@gentoo.org> +qtpositioning-5.4.1.ebuild,
+  -qtpositioning-5.4.0.ebuild:
+  Version bump.
 
   03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtpositioning-5.4.0.ebuild:
   Marked ~hppa too.

@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtopengl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.23 2015/02/03 11:31:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.24 2015/02/24 18:49:41 pesa Exp $
+
+*qtopengl-5.4.1 (24 Feb 2015)
+
+  24 Feb 2015; Davide Pesavento <pesa@gentoo.org> +qtopengl-5.4.1.ebuild,
+  -qtopengl-5.4.0.ebuild:
+  Version bump.
 
   03 Feb 2015; Jeroen Roovers <jer@gentoo.org> qtopengl-5.4.0.ebuild:
   Marked ~hppa too.
