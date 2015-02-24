@@ -23,8 +23,8 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} plugindir=/usr/$(get_libdir)/giFT install || die "Ares plugin failed to install"
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	make DESTDIR="${D}" plugindir="/usr/$(get_libdir)/giFT" install || die "Ares plugin failed to install"
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
 
 pkg_postinst() {
