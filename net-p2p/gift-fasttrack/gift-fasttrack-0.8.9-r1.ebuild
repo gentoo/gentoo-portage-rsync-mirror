@@ -22,7 +22,7 @@ DEPEND="virtual/pkgconfig
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	make DESTDIR=${D} \
+	make DESTDIR="${D}" \
 		giftconfdir=/etc/giFT \
 		plugindir=/usr/$(get_libdir)/giFT \
 		libgiftincdir=/usr/include/libgift \
