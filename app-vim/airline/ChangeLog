@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/airline
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/airline/ChangeLog,v 1.4 2013/10/10 23:24:56 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/airline/ChangeLog,v 1.5 2015/02/24 02:12:11 radhermit Exp $
+
+*airline-0.7 (24 Feb 2015)
+
+  24 Feb 2015; Tim Harder <radhermit@gentoo.org> +airline-0.7.ebuild,
+  airline-9999.ebuild:
+  Version bump (bug #541194) and use https git repo uri.
 
 *airline-0.6 (10 Oct 2013)
 

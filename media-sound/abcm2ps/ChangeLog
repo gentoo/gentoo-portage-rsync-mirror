@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/abcm2ps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/ChangeLog,v 1.96 2014/12/07 17:46:17 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/ChangeLog,v 1.98 2015/02/24 02:29:51 radhermit Exp $
+
+  24 Feb 2015; Tim Harder <radhermit@gentoo.org> -abcm2ps-7.7.1.ebuild,
+  -abcm2ps-7.7.2.ebuild, -abcm2ps-7.8.0.ebuild, -abcm2ps-7.8.1.ebuild,
+  -abcm2ps-7.8.3.ebuild, -abcm2ps-8.0.2.ebuild, -abcm2ps-8.0.4.ebuild,
+  -abcm2ps-8.3.1.ebuild, -abcm2ps-8.3.2.ebuild:
+  Remove old.
+
+*abcm2ps-8.5.2 (24 Feb 2015)
+
+  24 Feb 2015; Tim Harder <radhermit@gentoo.org> +abcm2ps-8.5.2.ebuild:
+  Version bump.
 
 *abcm2ps-8.3.4 (07 Dec 2014)
 
