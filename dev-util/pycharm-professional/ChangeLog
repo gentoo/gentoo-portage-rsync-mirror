@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pycharm-professional
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pycharm-professional/ChangeLog,v 1.1 2014/09/14 16:15:22 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pycharm-professional/ChangeLog,v 1.2 2015/02/24 13:10:40 xmw Exp $
+
+*pycharm-professional-4.0.4 (24 Feb 2015)
+
+  24 Feb 2015; Michael Weber <xmw@gentoo.org>
+  +pycharm-professional-4.0.4.ebuild:
+  Version bump (bug 531236).
 
 *pycharm-professional-3.4.1 (14 Sep 2014)
 
