@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-Twitter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Twitter/ChangeLog,v 1.47 2014/10/16 10:54:23 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Twitter/ChangeLog,v 1.48 2015/02/23 23:45:13 dilfridge Exp $
+
+*Net-Twitter-4.10.80 (23 Feb 2015)
+
+  23 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Net-Twitter-4.10.80.ebuild:
+  Version bump
 
   16 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Net-Twitter-3.180.40.ebuild:
   Drop old.
