@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.42.0-r1.ebuild,v 1.1 2015/02/18 12:24:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.42.0-r1.ebuild,v 1.2 2015/02/25 17:10:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -62,8 +62,8 @@ src_configure() {
 	# To prevent crosscompiling problems, bug #414105
 	gnome2_src_configure \
 		--disable-static \
-		CC=$(tc-getCC) \
-		YACC=$(type -p yacc) \
+		CC="$(tc-getCC)" \
+		YACC="$(type -p yacc)" \
 		$(use_with cairo) \
 		$(use_enable doctool)
 }

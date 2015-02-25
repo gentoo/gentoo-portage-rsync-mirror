@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/xcffib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xcffib/ChangeLog,v 1.4 2015/01/15 05:29:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xcffib/ChangeLog,v 1.5 2015/02/25 17:30:19 radhermit Exp $
+
+*xcffib-0.2.0 (25 Feb 2015)
+
+  25 Feb 2015; Tim Harder <radhermit@gentoo.org> +xcffib-0.2.0.ebuild:
+  Version bump.
 
 *xcffib-0.1.10 (15 Jan 2015)
 
