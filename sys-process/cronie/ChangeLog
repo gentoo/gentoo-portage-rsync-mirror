@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.62 2015/01/16 11:44:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.63 2015/02/25 11:20:54 zlogene Exp $
+
+  25 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> cronie-1.4.12.ebuild:
+  alpha/ia64/sparc stable wrt bug #533276
 
   16 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> cronie-1.4.12.ebuild:
   Stable on ppc/ppc64/x86, wrt bug #533276

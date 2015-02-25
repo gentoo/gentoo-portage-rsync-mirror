@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.519 2015/02/25 10:11:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.520 2015/02/25 11:04:26 eras Exp $
+
+*squid-3.4.12 (25 Feb 2015)
+
+  25 Feb 2015; Eray Aslan <eras@gentoo.org> +squid-3.4.12.ebuild,
+  squid-3.4.11-r1.ebuild, squid-3.5.1-r1.ebuild, squid-3.5.2.ebuild:
+  Version bump.  Remove NETFILTER_TPROXY kernel check - no longer in the kernel
+  - bug #539150
 
   25 Feb 2015; Eray Aslan <eras@gentoo.org> -files/squid-12683_12681.patch,
   -squid-3.3.13-r1.ebuild, -squid-3.4.10.ebuild, -squid-3.4.11.ebuild,

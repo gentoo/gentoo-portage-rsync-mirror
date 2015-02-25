@@ -1,19 +1,19 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.5.2.ebuild,v 1.2 2015/02/25 11:04:26 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.12.ebuild,v 1.1 2015/02/25 11:04:26 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
-SRC_URI="http://www.squid-cache.org/Versions/v3/3.5/${P}.tar.xz"
+SRC_URI="http://www.squid-cache.org/Versions/v3/3.4/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux logrotate test \
-	ecap esi ssl-crtd \
+	ecap esi icap-client ssl-crtd \
 	mysql postgres sqlite \
 	qos tproxy \
 	+htcp +wccp +wccpv2 \
@@ -25,14 +25,14 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
 	qos? ( net-libs/libnetfilter_conntrack )
-	ssl? ( dev-libs/openssl:* dev-libs/nettle >=net-libs/gnutls-3.1.5 )
+	ssl? ( dev-libs/openssl dev-libs/nettle )
 	sasl? ( dev-libs/cyrus-sasl )
-	ecap? ( net-libs/libecap:1 )
+	ecap? ( net-libs/libecap:0.2 )
 	esi? ( dev-libs/expat dev-libs/libxml2 )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
-	>=sys-libs/db-4:*
+	>=sys-libs/db-4
 	dev-lang/perl
-	dev-libs/libltdl:0"
+	dev-libs/libltdl"
 DEPEND="${COMMON_DEPEND}
 	ecap? ( virtual/pkgconfig )
 	sys-apps/ed
@@ -62,9 +62,11 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.3.4-gentoo.patch"
-	epatch "${FILESDIR}/${PN}-13934_13933.patch"
 	sed -i -e 's:/usr/local/squid/etc:/etc/squid:' \
 		INSTALL QUICKSTART \
+		helpers/basic_auth/MSNT/README.html \
+		helpers/basic_auth/MSNT/confload.cc \
+		helpers/basic_auth/MSNT/msntauth.conf.default \
 		scripts/fileno-to-pathname.pl \
 		scripts/check_cache.pl \
 		tools/cachemgr.cgi.8 \
@@ -79,6 +81,8 @@ src_prepare() {
 		src/log/access_log.cc || die
 	sed -i -e 's:/usr/local/squid/logs:/var/log/squid:' \
 		src/log/access_log.cc || die
+	sed -i -e 's:/usr/local/squid/bin:/usr/bin:' \
+		helpers/basic_auth/MSNT/README.html || die
 	sed -i -e 's:/usr/local/squid/libexec:/usr/libexec/squid:' \
 		helpers/external_acl/unix_group/ext_unix_group_acl.8 \
 		helpers/external_acl/session/ext_session_acl.8 \
@@ -103,7 +107,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local basic_modules="MSNT-multi-domain,NCSA,POP3,getpwnam"
+	local basic_modules="MSNT,MSNT-multi-domain,NCSA,POP3,getpwnam"
 	use samba && basic_modules+=",SMB"
 	use ldap && basic_modules+=",LDAP"
 	use pam && basic_modules+=",PAM"
@@ -117,15 +121,13 @@ src_configure() {
 	local digest_modules="file"
 	use ldap && digest_modules+=",LDAP,eDirectory"
 
-	local negotiate_modules="none"
-	local myconf="--without-mit-krb5 --without-heimdal-krb5"
+	local negotiate_modules myconf
 	if use kerberos ; then
 		negotiate_modules="kerberos,wrapper"
-		if has_version app-crypt/heimdal ; then
-			myconf="--without-mit-krb5 --with-heimdal-krb5"
-		else
-			myconf="--with-mit-krb5 --without-heimdal-krb5"
-		fi
+		myconf="--with-krb5-config=yes"
+	else
+		negotiate_modules="none"
+		myconf="--with-krb5-config=no"
 	fi
 
 	local ntlm_modules="none"
@@ -136,6 +138,7 @@ src_configure() {
 	use ldap && ext_helpers+=",LDAP_group,eDirectory_userip"
 	use ldap && use kerberos && ext_helpers+=",kerberos_ldap_group"
 
+	# uclibc does not have aio support - needed for coss (#61175)
 	local storeio_modules="aufs,diskd,rock,ufs"
 
 	local transparent
@@ -166,6 +169,7 @@ src_configure() {
 		--enable-removal-policies="lru,heap" \
 		--enable-storeio="${storeio_modules}" \
 		--enable-disk-io \
+		--enable-auth \
 		--enable-auth-basic="${basic_modules}" \
 		--enable-auth-digest="${digest_modules}" \
 		--enable-auth-ntlm="${ntlm_modules}" \
@@ -184,10 +188,10 @@ src_configure() {
 		$(use_with caps libcap) \
 		$(use_enable ipv6) \
 		$(use_enable snmp) \
-		$(use_with ssl openssl) \
+		$(use_enable ssl) \
 		$(use_with ssl nettle) \
-		$(use_with ssl gnutls) \
 		$(use_enable ssl-crtd) \
+		$(use_enable icap-client) \
 		$(use_enable ecap) \
 		$(use_enable esi) \
 		$(use_enable htcp) \
@@ -217,6 +221,8 @@ src_install() {
 
 	dodoc CONTRIBUTORS CREDITS ChangeLog INSTALL QUICKSTART README SPONSORS doc/*.txt
 	newdoc helpers/negotiate_auth/kerberos/README README.kerberos
+	newdoc helpers/basic_auth/MSNT-multi-domain/README.txt README.MSNT-multi-domain
+	newdoc helpers/basic_auth/LDAP/README README.LDAP
 	newdoc helpers/basic_auth/RADIUS/README README.RADIUS
 	newdoc helpers/external_acl/kerberos_ldap_group/README README.kerberos_ldap_group
 	newdoc tools/purge/README README.purge
@@ -240,9 +246,9 @@ src_install() {
 
 pkg_postinst() {
 	if [[ $(get_version_component_range 1 ${REPLACING_VERSIONS}) -lt 3 ]] || \
-		[[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 5 ]]; then
+		[[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 4 ]]; then
 		elog "Please read the release notes at:"
-		elog "  http://www.squid-cache.org/Versions/v3/3.5/RELEASENOTES.html"
+		elog "  http://www.squid-cache.org/Versions/v3/3.4/RELEASENOTES.html"
 		echo
 	fi
 }

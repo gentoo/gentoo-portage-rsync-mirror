@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffdiaporama
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.24 2015/02/19 09:07:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.25 2015/02/25 11:04:16 pacho Exp $
+
+  25 Feb 2015; Pacho Ramos <pacho@gentoo.org> ffdiaporama-2.1.ebuild:
+  x86 stable, bug #521050
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ffdiaporama-2.1.ebuild:
   Stable for amd64, wrt bug #521050
