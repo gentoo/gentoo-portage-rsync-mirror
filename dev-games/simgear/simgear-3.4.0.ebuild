@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-3.0.0.ebuild,v 1.4 2015/02/25 00:29:43 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-3.4.0.ebuild,v 1.1 2015/02/25 00:29:43 reavertm Exp $
 
 EAPI=5
 
@@ -11,17 +11,16 @@ HOMEPAGE="http://www.simgear.org/"
 SRC_URI="http://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE="debug jpeg subversion test"
+IUSE="debug subversion test"
 
 COMMON_DEPEND="
 	dev-libs/expat
-	>=dev-games/openscenegraph-3.0.1
+	>=dev-games/openscenegraph-3.2.0
 	media-libs/openal
 	sys-libs/zlib
 	virtual/opengl
-	jpeg? ( virtual/jpeg:62 )
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.44
@@ -34,12 +33,12 @@ DOCS=(AUTHORS ChangeLog NEWS README Thanks)
 
 src_configure() {
 	local mycmakeargs=(
+		-ENABLE_PKGUTIL=OFF
 		-DENABLE_RTI=OFF
 		-DENABLE_SOUND=ON
 		-DSIMGEAR_HEADLESS=OFF
 		-DSIMGEAR_SHARED=ON
 		-DSYSTEM_EXPAT=ON
-		$(cmake-utils_use jpeg JPEG_FACTORY)
 		$(cmake-utils_use_enable test TESTS)
 	)
 	cmake-utils_src_configure
