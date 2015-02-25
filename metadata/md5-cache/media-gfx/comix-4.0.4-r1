@@ -4,10 +4,10 @@ DESCRIPTION=A GTK image viewer specifically designed to handle comic books
 EAPI=5
 HOMEPAGE=http://comix.sourceforge.net
 IUSE=rar linguas_ca linguas_cs linguas_es linguas_fr linguas_hr linguas_hu linguas_id linguas_ja linguas_ko linguas_pl linguas_pt_BR linguas_ru linguas_sv linguas_zh_CN linguas_zh_TW python_targets_python2_7
-KEYWORDS=amd64 ppc ~x86 ~x86-fbsd
+KEYWORDS=amd64 ppc x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] virtual/python-imaging[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] >=dev-python/pygtk-2.12[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] rar? ( || ( app-arch/unrar app-arch/rar ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/comix/comix-4.0.4.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=df1e96a654dd2b7d3a563548c1e50d39
+_md5_=9e81eaa1257a9dcd8648feaef76a7ee2
