@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.148 2015/02/23 11:44:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.149 2015/02/25 16:07:02 grozin Exp $
 
 # This file requires >=portage-2.1.1
+
+# Andrey Grozin <grozin@gentoo.org> (23 Feb 2015)
+# Does not compile with this flag
+=dev-lisp/ecls-15.2.21 cpu_flags_x86_sse
 
 # Jeroen Roovers <jer@gentoo.org> (31 Jan 2015)
 # >x11-drivers/nvidia-drivers-346 on x86 has no UVM support (bug #534156)

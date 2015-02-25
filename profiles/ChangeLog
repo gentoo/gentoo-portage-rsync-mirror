@@ -1,10 +1,14 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9824 2015/02/24 18:01:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9825 2015/02/25 16:07:01 grozin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Feb 2015; Andrey Grozin <grozin@gentoo.org> base/package.use.mask,
+  arch/amd64/package.use.mask, arch/x86/package.use.mask:
+  dev-lisp/ecls-15.2.21 does not compile with CPU_FLAGS_X86=sse
 
   24 Feb 2015; Ulrich Müller <ulm@gentoo.org> package.mask:
   Mask app-emacs/grep-edit for removal.

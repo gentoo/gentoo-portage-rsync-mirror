@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.700 2015/02/15 09:57:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.701 2015/02/25 16:26:02 graaff Exp $
+
+*ruby-2.0.0_p643 (25 Feb 2015)
+
+  25 Feb 2015; Hans de Graaff <graaff@gentoo.org> +ruby-2.0.0_p643.ebuild:
+  Version bump. Ruby 2.0.0 is now in maintenance mode with a scheduled EOL of
+  2016-02-24.
 
 *ruby-2.2.0-r1 (15 Feb 2015)
 
