@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.0.0-r1.ebuild,v 1.2 2015/02/25 00:31:34 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.4.0.ebuild,v 1.1 2015/02/25 00:31:34 reavertm Exp $
 
 EAPI=5
 
@@ -13,16 +13,19 @@ SRC_URI="mirror://flightgear/Source/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="dbus debug examples jpeg +jsbsim oldfdm test +udev +utils vim-syntax +yasim"
+IUSE="dbus debug examples +jsbsim oldfdm qt5 test +udev +utils vim-syntax +yasim"
 
 COMMON_DEPEND="
 	dev-db/sqlite:3
-	>=dev-games/openscenegraph-3.0.1[png]
-	~dev-games/simgear-${PV}[jpeg?]
+	>=dev-games/openscenegraph-3.2.0[png]
+	~dev-games/simgear-${PV}
 	media-libs/openal
+	media-libs/speex
+	media-sound/gsm
 	sys-libs/zlib
 	x11-libs/libX11
 	dbus? ( >=sys-apps/dbus-1.6.18-r1 )
+	qt5? ( >=dev-qt/qtgui-5.4.0:5 )
 	udev? ( virtual/udev )
 	utils? (
 		media-libs/freeglut
@@ -30,12 +33,9 @@ COMMON_DEPEND="
 		virtual/opengl
 	)
 "
-# Some entries below are just buildsystem bugs (jpeg) or
-# deps unconditionally inherited from static version of simgear
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.44
 	>=media-libs/plib-1.8.5
-	jpeg? ( virtual/jpeg )
 "
 RDEPEND="${COMMON_DEPEND}
 	~games-simulation/${PN}-data-${PV}
@@ -46,18 +46,23 @@ DOCS=(AUTHORS ChangeLog NEWS README Thanks)
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_INSTALL_PREFIX=${GAMES_PREFIX}
-		-DENABLE_FGADMIN=OFF
+		-DENABLE_FLITE=OFF
 		-DENABLE_PROFILE=OFF
 		-DENABLE_RTI=OFF
 		-DFG_DATA_DIR="${GAMES_DATADIR}"/${PN}
 		-DSIMGEAR_SHARED=ON
 		-DSP_FDMS=OFF
+		-DSYSTEM_FLITE=ON
+		-DSYSTEM_HTS_ENGINE=ON
+		-DSYSTEM_SPEEX=ON
+		-DSYSTEM_GSM=ON
 		-DSYSTEM_SQLITE=ON
 		$(cmake-utils_use_use dbus)
-		$(cmake-utils_use jpeg JPEG_FACTORY)
 		$(cmake-utils_use_enable jsbsim)
+		$(cmake-utils_use jsbsim JSBSIM_TERRAIN)
 		$(cmake-utils_use_enable oldfdm LARCSIM)
 		$(cmake-utils_use_enable oldfdm UIUC_MODEL)
+		$(cmake-utils_use_enable qt5 QT)
 		$(cmake-utils_use test LOGGING)
 		$(cmake-utils_use_enable test TESTS)
 		$(cmake-utils_use udev EVENT_INPUT)
@@ -115,4 +120,10 @@ src_install() {
 	fi
 
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	if use qt5; then
+		einfo "To use launcher, run fgfs with '--launcher' parameter"
+	fi
 }
