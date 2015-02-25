@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdl-jewels/sdl-jewels-1.1.1.ebuild,v 1.4 2011/01/15 14:42:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sdl-jewels/sdl-jewels-1.1.1.ebuild,v 1.5 2015/02/25 12:32:04 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Swap and match 3 or more jewels in a line in order to score points"
@@ -17,6 +17,7 @@ RESTRICT="test"
 
 DEPEND="media-libs/libsdl[opengl,video]
 	virtual/opengl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/SDL_jewels-${PV}
 
@@ -30,10 +31,10 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin gljewel || die
+	dogamesbin gljewel
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data/* || die
+	doins -r data/*
 
 	dodoc ChangeLog README
 
