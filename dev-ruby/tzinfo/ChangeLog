@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.138 2014/11/10 15:58:14 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.139 2015/02/25 19:32:06 graaff Exp $
+
+  25 Feb 2015; Hans de Graaff <graaff@gentoo.org> tzinfo-1.2.2.ebuild:
+  Add ruby22.
 
   10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> tzinfo-0.3.37-r1.ebuild,
   tzinfo-0.3.37.ebuild, tzinfo-0.3.38.ebuild:
