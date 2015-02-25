@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/crypt++
 # Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/ChangeLog,v 1.22 2015/01/27 17:57:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crypt++/ChangeLog,v 1.23 2015/02/25 06:49:31 ulm Exp $
+
+  25 Feb 2015; Ulrich Müller <ulm@gentoo.org> crypt++-2.92.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   27 Jan 2015; Ulrich Müller <ulm@gentoo.org> crypt++-2.92.ebuild:
   Update HOMEPAGE, bug 537928.

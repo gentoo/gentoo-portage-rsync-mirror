@@ -1,6 +1,7 @@
-DEFINED_PHASES=compile install postinst postrm setup unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=>=virtual/emacs-23
 DESCRIPTION=Handle all sorts of compressed and encrypted files
+EAPI=5
 HOMEPAGE=http://www.emacswiki.org/emacs/CryptPlusPlus
 KEYWORDS=amd64 ~ppc ~sparc x86
 LICENSE=GPL-2
@@ -8,4 +9,4 @@ RDEPEND=>=virtual/emacs-23
 SLOT=0
 SRC_URI=mirror://debian/pool/main/c/crypt++el/crypt++el_2.92.orig.tar.gz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
-_md5_=ac3d08a2557b31c2b067da23cc026f5a
+_md5_=8eb0b5202604cdfc595bd84d609e58f4
