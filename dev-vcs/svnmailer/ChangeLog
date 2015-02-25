@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/svnmailer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/ChangeLog,v 1.5 2014/03/24 16:19:07 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svnmailer/ChangeLog,v 1.6 2015/02/25 06:12:47 idella4 Exp $
+
+*svnmailer-1.0.9-r1 (25 Feb 2015)
+
+  25 Feb 2015; Ian Delaney <idella4@gentoo.org> +svnmailer-1.0.9-r1.ebuild,
+  -svnmailer-1.0.9.ebuild:
+  revbump; convert -> distutils-r1, rm old
 
   24 Mar 2014; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Drop maintainership
