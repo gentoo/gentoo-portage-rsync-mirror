@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/procmail-lib-20081108.ebuild,v 1.8 2015/02/25 05:44:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail-lib/procmail-lib-20091202.ebuild,v 1.1 2015/02/25 05:44:53 robbat2 Exp $
 
 MY_PV="${PV:0:4}.${PV:4}"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://nongnu/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
