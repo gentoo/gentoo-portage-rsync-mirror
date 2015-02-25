@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ooofbtools-2.31.ebuild,v 1.2 2015/02/19 10:40:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ooofbtools-2.31.ebuild,v 1.3 2015/02/25 15:54:19 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/fbtools/files/release/${MY_PN}-${PV}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/libxml2"

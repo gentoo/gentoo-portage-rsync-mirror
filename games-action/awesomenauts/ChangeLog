@@ -1,6 +1,10 @@
 # ChangeLog for games-action/awesomenauts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.5 2015/02/19 09:06:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/awesomenauts/ChangeLog,v 1.6 2015/02/25 15:49:26 ago Exp $
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  awesomenauts-2013.5.21.3.ebuild:
+  Stable for x86, wrt bug #539722
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   awesomenauts-2013.5.21.3.ebuild:

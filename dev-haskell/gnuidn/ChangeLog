@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gnuidn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gnuidn/ChangeLog,v 1.4 2015/02/19 09:05:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gnuidn/ChangeLog,v 1.5 2015/02/25 15:32:48 ago Exp $
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gnuidn-0.2.1.ebuild:
+  Stable for x86, wrt bug #534976
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gnuidn-0.2.1.ebuild:
   Stable for amd64, wrt bug #534976

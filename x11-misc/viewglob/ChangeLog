@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/viewglob
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.22 2015/02/24 09:34:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/viewglob/ChangeLog,v 1.23 2015/02/25 15:58:59 ago Exp $
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> viewglob-2.0.4-r1.ebuild:
+  Stable for x86, wrt bug #540802
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> viewglob-2.0.4-r1.ebuild:
   Stable for amd64, wrt bug #540802

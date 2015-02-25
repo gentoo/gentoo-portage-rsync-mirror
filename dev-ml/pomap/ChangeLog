@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.41 2015/02/21 12:08:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.42 2015/02/25 15:35:56 ago Exp $
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pomap-3.0.5.ebuild:
+  Stable for x86, wrt bug #535134
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pomap-3.0.5.ebuild:
   Stable for ppc, wrt bug #535134

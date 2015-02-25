@@ -4,10 +4,10 @@ DESCRIPTION=A lightweight implementation of a subset of Hspec's API
 EAPI=5
 HOMEPAGE=http://hackage.haskell.org/package/nanospec
 IUSE=doc hscolour profile test
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=MIT
 RDEPEND=>=dev-lang/ghc-7.4.1:=
 SLOT=0/0.2.0
 SRC_URI=mirror://hackage/packages/archive/nanospec/0.2.0/nanospec-0.2.0.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	f398638b447d3821846f2e2abbc33c1b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=13814bd2b8e2ee1a7142e10671945534
+_md5_=e84455ee5b5af5093268881ce72c4f32

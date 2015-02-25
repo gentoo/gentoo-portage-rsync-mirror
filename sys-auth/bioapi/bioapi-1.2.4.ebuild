@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.4.ebuild,v 1.2 2015/02/19 09:03:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.4.ebuild,v 1.3 2015/02/25 15:42:17 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://bioapi-linux.googlecode.com/files/${PN}_${PV}.tar.gz"
 
 LICENSE="bioapi"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 S=${WORKDIR}/bioapi-linux

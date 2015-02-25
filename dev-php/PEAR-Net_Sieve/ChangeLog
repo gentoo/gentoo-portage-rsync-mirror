@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.80 2015/02/24 09:16:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.81 2015/02/25 15:37:55 ago Exp $
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_Sieve-1.3.3.ebuild:
+  Stable for x86, wrt bug #535282
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_Sieve-1.3.3.ebuild:
   Stable for alpha, wrt bug #535282

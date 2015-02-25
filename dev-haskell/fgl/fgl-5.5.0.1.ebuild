@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/fgl-5.5.0.1.ebuild,v 1.5 2015/02/24 09:04:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/fgl-5.5.0.1.ebuild,v 1.6 2015/02/25 15:32:14 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-haskell/mtl:=[profile?]

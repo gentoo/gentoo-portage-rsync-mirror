@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/s25rttr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/ChangeLog,v 1.8 2015/02/19 10:40:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/ChangeLog,v 1.9 2015/02/25 15:56:39 ago Exp $
+
+  25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> s25rttr-0.8.1.ebuild:
+  Stable for x86, wrt bug #540598
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> s25rttr-0.8.1.ebuild:
   Stable for amd64, wrt bug #540598

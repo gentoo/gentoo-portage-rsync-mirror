@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<herd>graphics</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <herd>graphics</herd>
+  <longdescription lang="en">
   Haru PDF library is a ANSI/C library for generating PDF files.
   It supports the following features:
    1. Generating PDF files with lines, text, images.
