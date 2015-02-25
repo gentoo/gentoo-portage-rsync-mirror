@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/mozc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.11 2014/06/05 01:40:06 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.12 2015/02/25 07:27:12 naota Exp $
+
+*mozc-2.16.2037.102 (25 Feb 2015)
+
+  25 Feb 2015; Naohiro Aota <naota@gentoo.org> +mozc-2.16.2037.102.ebuild:
+  Version bump
 
   05 Jun 2014; Naohiro Aota <naota@gentoo.org>
   +files/mozc-1.13.1651.102-gtk-renderer.patch, mozc-1.13.1651.102.ebuild:

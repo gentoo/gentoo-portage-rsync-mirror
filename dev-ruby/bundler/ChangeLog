@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.75 2015/01/24 10:34:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.77 2015/02/25 07:15:40 graaff Exp $
+
+  25 Feb 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.13.ebuild:
+  Restrict tests since they use the network.
+
+*bundler-1.7.13 (25 Feb 2015)
+
+  25 Feb 2015; Hans de Graaff <graaff@gentoo.org> +bundler-1.7.13.ebuild:
+  Version bump.
 
   24 Jan 2015; Hans de Graaff <graaff@gentoo.org> -bundler-1.3.5.ebuild:
   Cleanup vulnerable version for bug 523798.
