@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.14.1-r1.ebuild,v 1.1 2015/01/18 11:35:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.14.1-r1.ebuild,v 1.2 2015/02/25 11:55:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -46,6 +46,7 @@ COMMON_DEPEND="
 	xps? ( >=app-text/libgxps-0.2.1:= )
 "
 RDEPEND="${COMMON_DEPEND}
+	gnome-base/gvfs
 	gnome-base/librsvg
 	|| (
 		>=x11-themes/adwaita-icon-theme-2.17.1
