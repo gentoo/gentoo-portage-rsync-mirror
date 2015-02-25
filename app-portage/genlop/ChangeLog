@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/genlop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.94 2015/01/02 22:32:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.95 2015/02/25 21:12:42 fuzzyray Exp $
+
+*genlop-0.30.10-r1 (25 Feb 2015)
+
+  25 Feb 2015; Paul Varner <fuzzyray@gentoo.org> +genlop-0.30.10-r1.ebuild,
+  -files/genlop-0.30.8-compiling-category.patch,
+  -files/genlop-0.30.8-version.patch, +files/genlop-0.30.10-sync.patch:
+  Revision bump to fix genlop -r with new portage sync code (Bug 540050).
+  Remove uneeded patches.
 
   02 Jan 2015; Michał Górny <mgorny@gentoo.org> -genlop-0.30.8-r2.ebuild,
   -genlop-0.30.9.ebuild:

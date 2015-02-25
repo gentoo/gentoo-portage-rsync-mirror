@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/pingus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.45 2015/02/22 21:13:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/ChangeLog,v 1.46 2015/02/25 21:13:24 mr_bones_ Exp $
+
+  25 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> pingus-0.7.6.ebuild:
+  tidy boost stuff; add slot dep for libpng
 
   22 Feb 2015; Tupone Alfredo <tupone@gentoo.org> pingus-0.7.6.ebuild:
   EAPI 5

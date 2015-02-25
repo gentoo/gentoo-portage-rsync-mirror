@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.10 2015/02/22 21:13:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.7.6.ebuild,v 1.11 2015/02/25 21:13:24 mr_bones_ Exp $
 
 EAPI=5
-inherit eutils flag-o-matic scons-utils toolchain-funcs games
+inherit eutils scons-utils toolchain-funcs games
 
 DESCRIPTION="free Lemmings clone"
 HOMEPAGE="http://pingus.seul.org/"
@@ -14,31 +14,17 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="opengl music"
 
-DEPEND="media-libs/libsdl[joystick,opengl?,video]
+RDEPEND="media-libs/libsdl[joystick,opengl?,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer
 	music? ( media-libs/sdl-mixer[mod] )
 	opengl? ( virtual/opengl )
-	media-libs/libpng
+	media-libs/libpng:0=
 	dev-libs/boost"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
-	# how do I hate boost? Let me count the ways...
-	local boost_ver=$(best_version ">=dev-libs/boost-1.36")
-
-	boost_ver=${boost_ver/*boost-/}
-	boost_ver=${boost_ver%.*}
-	boost_ver=${boost_ver/./_}
-
-	einfo "Using boost version ${boost_ver}"
-	append-cxxflags \
-		-I/usr/include/boost-${boost_ver}
-	append-ldflags \
-		-L/usr/$(get_libdir)/boost-${boost_ver}
-	export BOOST_INCLUDEDIR="/usr/include/boost-${boost_ver}"
-	export BOOST_LIBRARYDIR="/usr/$(get_libdir)/boost-${boost_ver}"
-
 	strip-flags
 	epatch \
 		"${FILESDIR}"/${P}-noopengl.patch \
