@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.69 2015/02/24 10:56:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.70 2015/02/25 04:40:44 rafaelmartins Exp $
+
+  25 Feb 2015; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -fcgi-2.4.1_pre0910052249.ebuild:
+  Removing vulnerable ebuild. bug #539164
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   fcgi-2.4.1_pre0910052249-r2.ebuild:
