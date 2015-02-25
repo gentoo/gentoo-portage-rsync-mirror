@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.6 2010/10/19 07:48:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/twindistress-1.1.0.ebuild,v 1.7 2015/02/25 22:15:46 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_P="twind-${PV}"
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-mixer
 	media-libs/sdl-image[png]"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -34,10 +35,10 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin twind || die "dogamesbin failed"
+	dogamesbin twind
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r graphics music sound || die "doins failed"
+	doins -r graphics music sound
 
 	doicon graphics/twind.png
 	make_desktop_entry twind "Twin Distress"

@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.351 2015/02/25 22:00:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.352 2015/02/25 22:21:33 vapier Exp $
+
+  25 Feb 2015; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha27.ebuild:
+  Enable verbose building so we can see the exact compile/link lines.
 
   25 Feb 2015; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha24.ebuild,
   cdrtools-3.01_alpha27.ebuild:

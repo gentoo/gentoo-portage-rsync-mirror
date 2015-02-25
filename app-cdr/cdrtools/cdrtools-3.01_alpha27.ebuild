@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha27.ebuild,v 1.4 2015/02/25 22:00:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha27.ebuild,v 1.5 2015/02/25 22:21:33 vapier Exp $
 
 EAPI=5
 
@@ -64,6 +64,11 @@ src_prepare() {
 	sed -i -e "s|include\t\t.*rules.lib||" \
 		$(find ./ -type f -exec grep -l '^include.\+rules\.lib' '{}' '+') \
 		|| die "sed rules"
+
+	# Enable verbose build.
+	sed -i -e '/@echo.*==>.*;/s:@echo[^;]*;:&set -x;:' \
+		RULES/*.rul RULES/rules.prg RULES/rules.inc \
+		|| die "sed verbose rules"
 
 	# Respect CC/CXX variables.
 	cd "${S}"/RULES

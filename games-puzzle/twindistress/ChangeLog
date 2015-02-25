@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/twindistress
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/ChangeLog,v 1.12 2010/10/19 07:48:33 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/twindistress/ChangeLog,v 1.13 2015/02/25 22:15:46 tupone Exp $
+
+  25 Feb 2015; Tupone Alfredo <tupone@gentoo.org> twindistress-1.1.0.ebuild:
+  EAPI 5
 
   19 Oct 2010; Michael Sterrett <mr_bones_@gentoo.org>
   twindistress-1.1.0.ebuild, +files/twindistress-1.1.0-warnings.patch:
