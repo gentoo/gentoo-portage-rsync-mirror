@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/go-etcd/go-etcd-0_p20141013.ebuild,v 1.1 2014/10/16 00:13:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/go-etcd/go-etcd-0_p20141013-r1.ebuild,v 1.1 2015/02/24 23:42:49 zmedico Exp $
 
 EAPI=5
 
@@ -9,11 +9,11 @@ DESCRIPTION="Go client library for etcd"
 GO_PN=github.com/coreos/${PN}
 HOMEPAGE="https://${GO_PN}"
 EGIT_COMMIT="25e2c63be8e8ab405014a78879e0992ae5ff55e8"
-SRC_URI="https://${GO_PN}/archive/${EGIT_COMMIT}.zip -> ${P}.zip"
+SRC_URI="https://${GO_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
-DEPEND=">=dev-lang/go-1.3"
+DEPEND=">=dev-lang/go-1.4"
 RDEPEND=""
 S=${WORKDIR}
 
@@ -27,7 +27,7 @@ src_compile() {
 	# Create a filtered GOROOT tree out of symlinks,
 	# excluding go-etcd, for bug #503324.
 	cp -sR /usr/lib/go goroot || die
-	rm -rf goroot/src/pkg/${GO_PN} || die
+	rm -rf goroot/src/${GO_PN} || die
 	rm -rf goroot/pkg/linux_${ARCH}/${GO_PN} || die
 	GOROOT=${WORKDIR}/goroot GOPATH=${WORKDIR} \
 		go install -x ${GO_PN}/etcd || die
@@ -36,7 +36,7 @@ src_compile() {
 src_install() {
 	insinto /usr/lib/go
 	doins -r pkg
-	insinto /usr/lib/go/src/pkg
+	insinto /usr/lib/go/src
 	find src/${GO_PN} -name .gitignore -delete
 	doins -r src/*
 }

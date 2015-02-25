@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/go-fuse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.7 2014/10/19 08:02:14 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.9 2015/02/24 23:43:26 zmedico Exp $
+
+*go-fuse-0_p20140812-r1 (24 Feb 2015)
+
+  24 Feb 2015; Zac Medico <zmedico@gentoo.org> +go-fuse-0_p20140812-r1.ebuild,
+  -go-fuse-0_p20140812.ebuild:
+  Bumb revision for bug 541284, for anyone who may have it installed in the
+  wrong place.
+
+  24 Feb 2015; Zac Medico <zmedico@gentoo.org> go-fuse-0_p20140812.ebuild:
+  Install in src instead of src/pkg for go-1.4. Thanks to William Hubbs
+  <williamh@gentoo.org> for the fix (bug 541284).
 
   19 Oct 2014; Zac Medico <zmedico@gentoo.org> go-fuse-0_p20140812.ebuild:
   Use tar.gz instead of zip, so there's no need for app-arch/unzip in DEPEND.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-0_p20140812.ebuild,v 1.2 2014/10/19 08:02:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/go-fuse-0_p20140812-r1.ebuild,v 1.1 2015/02/24 23:43:26 zmedico Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ src_compile() {
 	# Create a filtered GOROOT tree out of symlinks,
 	# excluding go-fuse, for bug #503324.
 	cp -sR /usr/lib/go goroot || die
-	rm -rf goroot/src/pkg/${GO_PN} || die
+	rm -rf goroot/src/${GO_PN} || die
 	rm -rf goroot/pkg/linux_${ARCH}/${GO_PN} || die
 	CGO_CFLAGS="${CFLAGS}" GOROOT="${WORKDIR}/goroot" GOPATH="${WORKDIR}" \
 		bash src/${GO_PN}/all.bash.patched || die
@@ -44,7 +44,7 @@ src_compile() {
 src_install() {
 	insinto /usr/lib/go
 	doins -r pkg
-	insinto /usr/lib/go/src/pkg
+	insinto /usr/lib/go/src
 	rm src/${GO_PN}/all.bash.patched || die
 	find src/${GO_PN} -name .gitignore -delete
 	doins -r src/*
