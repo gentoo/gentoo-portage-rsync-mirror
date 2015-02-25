@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/torrent
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/torrent/ChangeLog,v 1.8 2009/08/10 21:23:49 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/torrent/ChangeLog,v 1.9 2015/02/25 21:54:45 tupone Exp $
+
+  25 Feb 2015; Tupone Alfredo <tupone@gentoo.org> torrent-0.8.2.ebuild:
+  EAPI 5
 
   10 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> torrent-0.8.2.ebuild:
   EAPI=2; build with gcc43

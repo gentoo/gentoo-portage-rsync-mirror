@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/tong-1.2.ebuild,v 1.4 2014/05/15 16:54:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tong/tong-1.2.ebuild,v 1.5 2015/02/25 21:41:46 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Tetris and Pong in the same place at the same time"
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="media-libs/libsdl[sound,joystick,video]
 	media-libs/sdl-image[png]
 	media-libs/sdl-mixer[vorbis]"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
@@ -33,7 +34,7 @@ src_prepare() {
 }
 
 src_install() {
-	dogamesbin tong || die
+	dogamesbin tong
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r media/ "${D}/${GAMES_DATADIR}/${PN}" || die
 	dodoc CHANGELOG README making-of.txt CREDITS
