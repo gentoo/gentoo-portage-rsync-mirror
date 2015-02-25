@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-gnupg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-gnupg/ChangeLog,v 1.5 2014/10/10 01:49:10 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-gnupg/ChangeLog,v 1.6 2015/02/25 02:53:10 grknight Exp $
+
+*pecl-gnupg-1.3.6 (25 Feb 2015)
+
+  25 Feb 2015; Brian Evans <grknight@gentoo.org> +pecl-gnupg-1.3.6.ebuild:
+  Version bump
 
 *pecl-gnupg-1.3.3 (30 Sep 2014)
 
