@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.8a.ebuild,v 1.4 2015/02/19 10:06:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.8a.ebuild,v 1.5 2015/02/25 08:19:41 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -18,7 +18,7 @@ RDEPEND="dev-libs/geoip"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}
 
 src_prepare() {
 	emake clean
