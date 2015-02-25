@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-perl/URI virtual/perl-Scalar-List-Utils >=virtual/perl-Module-Build-0.28 dev-lang/perl:=[-build(-)]
+DESCRIPTION=Translate Wiki formatted text into other formats
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Text-WikiFormat/
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=dev-perl/URI virtual/perl-Scalar-List-Utils dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/C/CY/CYCLES/Text-WikiFormat-0.81.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=18656192f3b9da0abd6bfe4da37580f1
