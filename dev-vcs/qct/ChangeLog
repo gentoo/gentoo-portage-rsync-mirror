@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/qct
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/ChangeLog,v 1.9 2011/01/18 12:55:44 arfrever Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qct/ChangeLog,v 1.10 2015/02/25 01:04:48 idella4 Exp $
+
+*qct-1.7-r1 (25 Feb 2015)
+
+  25 Feb 2015; Ian Delaney <idella4@gentoo.org> +qct-1.7-r1.ebuild,
+  -qct-1.7.ebuild:
+  revbump; convert -> distutils-r1, rm old, fixes Bug #541150, endorsement
+  provided in said bug
 
   18 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   qct-1.7.ebuild:
@@ -37,4 +44,3 @@
   15 Jun 2009; Ben de Groot <yngwin@gentoo.org> +files/qct.rc:
   Initial import from qting-edge overlay. Ebuild developed by Dror Levin and
   contributors in bug 162963.
-
