@@ -1,6 +1,6 @@
 # Copyright 2013-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/execline/execline-2.0.2.1.ebuild,v 1.1 2015/02/21 04:52:56 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/execline/execline-2.0.2.1.ebuild,v 1.2 2015/02/24 23:03:57 williamh Exp $
 
 EAPI=5
 
@@ -41,6 +41,11 @@ src_configure()
                 --with-dynlib=/$(get_libdir) \
                 --with-lib=/usr/$(get_libdir)/skalibs \
                 --with-sysdeps=/usr/$(get_libdir)/skalibs
+}
+
+src_compile()
+{
+	emake DESTDIR="${D}"
 }
 
 src_install()

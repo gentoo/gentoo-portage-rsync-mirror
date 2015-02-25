@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s6/s6-2.1.1.1.ebuild,v 1.1 2015/02/21 04:54:18 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s6/s6-2.1.1.1.ebuild,v 1.2 2015/02/24 23:05:08 williamh Exp $
 
 EAPI=5
 
@@ -52,6 +52,11 @@ src_configure()
 		--sysdepdir=/usr/$(get_libdir)/${PN} \
 		--with-dynlib=/$(get_libdir) \
 		--with-sysdeps=/usr/$(get_libdir)/skalibs
+}
+
+src_compile()
+{
+	emake DESTDIR="${D}"
 }
 
 src_install()
