@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.526 2015/02/06 18:52:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.527 2015/02/25 10:21:36 pacho Exp $
+
+  25 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnutls-3.3.10-r2.ebuild:
+  ppc/ppc64 stable, bug #492522
 
   06 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnutls-3.3.10-r2.ebuild:
   amd64/x86 stable, bug #492522
