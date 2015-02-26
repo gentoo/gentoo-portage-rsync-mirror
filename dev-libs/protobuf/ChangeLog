@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.77 2015/01/26 09:37:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.78 2015/02/26 04:48:28 radhermit Exp $
+
+*protobuf-2.6.1-r2 (26 Feb 2015)
+*protobuf-2.5.0-r3 (26 Feb 2015)
+
+  26 Feb 2015; Tim Harder <radhermit@gentoo.org> +protobuf-2.5.0-r3.ebuild,
+  +protobuf-2.6.1-r2.ebuild:
+  Add zlib use flag (bug #541396).
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> protobuf-2.5.0-r2.ebuild:
   Stable for x86, wrt bug #536794
