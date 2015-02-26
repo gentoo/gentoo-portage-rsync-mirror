@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.19.ebuild,v 1.1 2015/02/26 09:07:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.19.ebuild,v 1.2 2015/02/26 16:47:30 voyageur Exp $
 
 EAPI=4
 inherit eutils multilib systemd toolchain-funcs user
@@ -21,6 +21,7 @@ RDEPEND="dev-perl/Capture-Tiny
 	dev-perl/Config-Simple
 	dev-perl/File-BaseDir
 	dev-perl/File-ReadBackwards
+	dev-perl/File-Which
 	media-fonts/font-cursor-misc
 	media-fonts/font-misc-misc
 	>=net-misc/nx-3.5.0.25
