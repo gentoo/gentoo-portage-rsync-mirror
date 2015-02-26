@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/eventlet-0.17.1.ebuild,v 1.1 2015/02/26 04:40:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/eventlet-0.17.1.ebuild,v 1.2 2015/02/26 17:09:59 prometheanfire Exp $
 
 EAPI=5
 
@@ -34,9 +34,9 @@ python_prepare_all() {
 	fi
 
 	if use test; then
-		sed -i '/This is a Python 3 module/d' eventlet/green/http/__init__.py || die
-		sed -i 's/^import/from OpenSSL import/g' eventlet/green/OpenSSL/__init__.py || die
-		sed -i 's/^from version/from OpenSSL.version/' eventlet/green/OpenSSL/__init__.py || die
+#		sed -i '/This is a Python 3 module/d' eventlet/green/http/__init__.py || die
+#		sed -i 's/^import/from OpenSSL import/g' eventlet/green/OpenSSL/__init__.py || die
+#		sed -i 's/^from version/from OpenSSL.version/' eventlet/green/OpenSSL/__init__.py || die
 		sed -i 's/TEST_TIMEOUT = 1/TEST_TIMEOUT = 10/' tests/__init__.py || die
 	fi
 
@@ -54,7 +54,7 @@ python_compile_all() {
 python_test() {
 	# Several errors 1 failure
 	# https://github.com/eventlet/eventlet/issues/151
-	nosetests || die "Tests fail with ${EPYTHON}"
+	nosetests tests || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
