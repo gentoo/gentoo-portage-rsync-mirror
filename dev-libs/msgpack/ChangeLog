@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/msgpack
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.12 2014/07/09 04:54:50 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.14 2015/02/26 05:50:46 yngwin Exp $
+
+  26 Feb 2015; Ben de Groot <yngwin@gentoo.org>
+  msgpack-0.6.0_pre20150220.ebuild:
+  restore inadvertently dropped keywords
+
+*msgpack-0.6.0_pre20150220 (26 Feb 2015)
+
+  26 Feb 2015; Ben de Groot <yngwin@gentoo.org>
+  +msgpack-0.6.0_pre20150220.ebuild:
+  snapshot needed for neovim
 
 *msgpack-0.5.9 (09 Jul 2014)
 
