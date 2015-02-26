@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.161 2015/02/24 16:30:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.162 2015/02/26 07:50:22 jlec Exp $
+
+*ccpn-2.4.1_p150226 (26 Feb 2015)
+
+  26 Feb 2015; Justin Lecher <jlec@gentoo.org> +ccpn-2.4.1_p150226.ebuild,
+  files/analysis, files/dangle, files/dataShifter, files/depositionFileImporter,
+  files/eci, files/extendNmr, files/formatConverter, files/pipe2azara,
+  files/xeasy2azara:
+  Todays python patches; drop LD_LIBRARY_PATH from launcher
 
 *ccpn-2.4.1_p150224 (24 Feb 2015)
 
