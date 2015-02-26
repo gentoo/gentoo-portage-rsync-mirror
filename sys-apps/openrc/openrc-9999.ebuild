@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.142 2014/12/05 21:00:53 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.143 2015/02/26 18:59:35 williamh Exp $
 
 EAPI=5
 
@@ -25,7 +25,10 @@ IUSE="audit debug elibc_glibc ncurses pam newnet prefix +netifrc selinux static-
 COMMON_DEPEND="kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
-	pam? ( sys-auth/pambase )
+	pam? (
+		sys-auth/pambase
+		virtual/pam
+	)
 	tools? ( dev-lang/perl )
 	audit? ( sys-process/audit )
 	kernel_linux? (

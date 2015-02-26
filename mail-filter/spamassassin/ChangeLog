@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/spamassassin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.259 2014/12/19 19:16:08 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.260 2015/02/26 19:00:42 maekke Exp $
+
+  26 Feb 2015; Markus Meier <maekke@gentoo.org> spamassassin-3.4.0.ebuild:
+  arm stable, bug #537464
 
   19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop to maintainer-needed

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gevent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.28 2015/02/23 11:20:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.29 2015/02/26 18:56:39 maekke Exp $
+
+  26 Feb 2015; Markus Meier <maekke@gentoo.org> gevent-1.0.1.ebuild:
+  arm stable, bug #535326
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gevent-1.0.1.ebuild:
   Stable for ppc64, wrt bug #535326
