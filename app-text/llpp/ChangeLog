@@ -1,6 +1,11 @@
 # ChangeLog for app-text/llpp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.64 2014/12/09 05:48:22 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.65 2015/02/26 14:31:34 xmw Exp $
+
+*llpp-21 (26 Feb 2015)
+
+  26 Feb 2015; Michael Weber <xmw@gentoo.org> +llpp-21.ebuild:
+  Version bump (bug 537404, thanks radhermit)
 
   09 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> llpp-17_p20140112.ebuild:
   x86 stable wrt bug #472532
