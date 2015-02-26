@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.6.0_pre20150220.ebuild,v 1.2 2015/02/26 05:50:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.6.0_pre20150220.ebuild,v 1.3 2015/02/26 06:16:37 yngwin Exp $
 
 EAPI=5
-inherit cmake-utils
+inherit cmake-multilib
 
 DESCRIPTION="MessagePack is a binary-based efficient data interchange format"
 HOMEPAGE="http://msgpack.org/ https://github.com/msgpack/msgpack-c/"
@@ -20,5 +20,5 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="static-libs test"
 
-DEPEND="test? ( >=dev-cpp/gtest-1.6.0-r2 )"
+DEPEND="test? ( >=dev-cpp/gtest-1.6.0-r2[${MULTILIB_USEDEP}] )"
 DOCS=( CHANGELOG.md QUICKSTART-C.md QUICKSTART-CPP.md README.md CROSSLANG.md )

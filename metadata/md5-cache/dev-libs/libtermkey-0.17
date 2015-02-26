@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=dev-libs/unibilium:= sys-devel/libtool virtual/pkgconfig demos? ( dev-libs/glib:2 )
+DESCRIPTION=Library for easy processing of keyboard entry from terminal-based programs
+EAPI=5
+HOMEPAGE=http://www.leonerd.org.uk/code/libtermkey/
+IUSE=demos
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=dev-libs/unibilium:=
+SLOT=0
+SRC_URI=http://www.leonerd.org.uk/code/libtermkey/libtermkey-0.17.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_md5_=abed3eab754fe19e2adc1e6bdeae66b9

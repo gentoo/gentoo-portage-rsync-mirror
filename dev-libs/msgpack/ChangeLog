@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/msgpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.14 2015/02/26 05:50:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.15 2015/02/26 06:16:37 yngwin Exp $
+
+  26 Feb 2015; Ben de Groot <yngwin@gentoo.org>
+  msgpack-0.6.0_pre20150220.ebuild:
+  multilib-enable the snapshot
 
   26 Feb 2015; Ben de Groot <yngwin@gentoo.org>
   msgpack-0.6.0_pre20150220.ebuild:
