@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.114 2015/02/26 18:46:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.115 2015/02/26 19:03:02 maekke Exp $
+
+  26 Feb 2015; Markus Meier <maekke@gentoo.org> privoxy-3.0.23.ebuild:
+  arm stable, bug #537884
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org> privoxy-3.0.22.ebuild:
   arm stable, bug #531292

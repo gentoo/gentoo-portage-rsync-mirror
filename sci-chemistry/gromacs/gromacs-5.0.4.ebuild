@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-5.0.4.ebuild,v 1.5 2015/02/25 15:44:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-5.0.4.ebuild,v 1.6 2015/02/26 19:04:02 maekke Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ if [[ $PV = *9999* ]]; then
 else
 	SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${PN}-${PV/_/-}.tar.gz
 		test? ( http://gerrit.gromacs.org/download/regressiontests-${PV}.tar.gz )"
-	KEYWORDS="~alpha amd64 ~arm ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+	KEYWORDS="~alpha amd64 arm ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 fi
 
 ACCE_IUSE="cpu_flags_x86_sse2 cpu_flags_x86_sse4_1 cpu_flags_x86_fma4 cpu_flags_x86_avx cpu_flags_x86_avx2"
