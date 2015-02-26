@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.31.eclass,v 1.3 2015/02/26 20:41:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-v5.36.eclass,v 1.1 2015/02/26 20:41:10 axs Exp $
 #
-# @ECLASS: mozconfig-v5.31.eclass
+# @ECLASS: mozconfig-v5.33.eclass
 # @MAINTAINER:
 # mozilla team <mozilla@gentoo.org>
-# @BLURB: the new mozilla common configuration eclass for FF31 and newer, v5
+# @BLURB: the new mozilla common configuration eclass for FF33 and newer, v5
 # @DESCRIPTION:
 # This eclass is used in mozilla ebuilds (firefox, thunderbird, seamonkey)
 # to provide a single common place for the common mozilla engine compoments.
@@ -45,7 +45,7 @@ esac
 # Set the variable to any value if the use flag should exist but not be default-enabled.
 
 # use-flags common among all mozilla ebuilds
-IUSE="${IUSE} dbus debug gstreamer pulseaudio startup-notification system-cairo system-icu system-jpeg system-sqlite system-libvpx"
+IUSE="${IUSE} dbus debug gstreamer pulseaudio selinux startup-notification system-cairo system-icu system-jpeg system-sqlite system-libvpx"
 
 # some notes on deps:
 # gtk:2 minimum is technically 2.10 but gio support (enabled by default) needs 2.14
@@ -56,32 +56,40 @@ RDEPEND=">=app-text/hunspell-1.2
 	dev-libs/expat
 	>=dev-libs/libevent-1.4.7
 	>=x11-libs/cairo-1.10[X]
-	>=x11-libs/gtk+-2.14:2
+	>=x11-libs/gtk+-2.18:2
 	x11-libs/gdk-pixbuf
 	>=x11-libs/pango-1.22.0
-	>=media-libs/libpng-1.6.10:0=[apng]
+	>=media-libs/libpng-1.6.14:0=[apng]
 	>=media-libs/mesa-10.2:*
 	media-libs/fontconfig
 	>=media-libs/freetype-2.4.10
 	kernel_linux? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )
-	>=sys-libs/zlib-1.2.3
 	virtual/freedesktop-icon-theme
 	dbus? ( >=sys-apps/dbus-0.60
 		>=dev-libs/dbus-glib-0.72 )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	>=dev-libs/glib-2.26:2
-	virtual/libffi
-	gstreamer? ( media-plugins/gst-plugins-meta:1.0[ffmpeg] )
+	>=sys-libs/zlib-1.2.3
+	>=virtual/libffi-3.0.10
+	gstreamer? (
+		>=media-libs/gstreamer-1.2.3:1.0
+		>=media-libs/gst-plugins-base-1.2.3:1.0
+		>=media-libs/gst-plugins-good-1.2.3:1.0
+		>=media-plugins/gst-plugins-libav-1.1.0_pre20130128-r1:1.0
+	)
 	x11-libs/libX11
+	x11-libs/libXcomposite
+	x11-libs/libXdamage
 	x11-libs/libXext
+	x11-libs/libXfixes
 	x11-libs/libXrender
 	x11-libs/libXt
 	system-cairo? ( >=x11-libs/cairo-1.12[X] >=x11-libs/pixman-0.19.2 )
 	system-icu? ( >=dev-libs/icu-51.1:= )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-sqlite? ( >=dev-db/sqlite-3.8.4.2:3[secure-delete,debug=] )
-	system-libvpx? ( =media-libs/libvpx-1.3.0* )
+	system-sqlite? ( >=dev-db/sqlite-3.8.7.4:3[secure-delete,debug=] )
+	system-libvpx? ( =media-libs/libvpx-1.3.0*[postproc] )
 "
 
 if [[ -n ${MOZCONFIG_OPTIONAL_WIFI} ]]; then
@@ -108,6 +116,9 @@ DEPEND="app-arch/zip
 	>=sys-devel/binutils-2.16.1
 	${RDEPEND}"
 
+RDEPEND+="
+	selinux? ( sec-policy/selinux-mozilla )"
+
 # @FUNCTION: mozconfig_config
 # @DESCRIPTION:
 # Set common configure options for mozilla packages.
@@ -115,7 +126,7 @@ DEPEND="app-arch/zip
 #
 # Example:
 #
-# inherit mozconfig-v5.31
+# inherit mozconfig-v5.33
 #
 # src_configure() {
 # 	mozconfig_init
@@ -130,7 +141,8 @@ mozconfig_config() {
 	mozconfig_annotate 'system_libs' \
 		--with-system-zlib \
 		--enable-pango \
-		--enable-svg
+		--enable-svg \
+		--with-system-bz2
 
 	mozconfig_annotate '' --enable-default-toolkit=cairo-gtk2
 
@@ -146,6 +158,8 @@ mozconfig_config() {
 
 	if ! use debug ; then
 		mozconfig_annotate 'disabled by Gentoo' --disable-debug-symbols
+	else
+		mozconfig_annotate 'enabled by Gentoo' --enable-debug-symbols
 	fi
 
 	mozconfig_use_enable startup-notification
@@ -164,6 +178,7 @@ mozconfig_config() {
 		mozconfig_annotate 'disabled' --disable-necko-wifi
 	fi
 
+	# These are forced-on for webm support
 	mozconfig_annotate 'required' --enable-ogg
 	mozconfig_annotate 'required' --enable-wave
 
@@ -179,20 +194,24 @@ mozconfig_config() {
 	mozconfig_annotate '' --with-system-libevent="${EPREFIX}"/usr
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
-	mozconfig_annotate '' --enable-system-hunspell
+	mozconfig_annotate 'Gentoo default' --enable-system-hunspell
 	mozconfig_annotate '' --disable-gnomevfs
 	mozconfig_annotate '' --disable-gnomeui
 	mozconfig_annotate '' --enable-gio
 	mozconfig_annotate '' --disable-crashreporter
-	mozconfig_annotate '' --with-system-png
+	mozconfig_annotate 'Gentoo default' --with-system-png
 	mozconfig_annotate '' --enable-system-ffi
-	mozconfig_annotate '' --disable-gold
+	mozconfig_annotate 'Gentoo default to honor system linker' --disable-gold
 	mozconfig_annotate '' --disable-gconf
 
-	# We must force enable jemalloc 3 threw .mozconfig
-	echo "export MOZ_JEMALLOC=1" >> "${S}"/.mozconfig || die
-	mozconfig_annotate '' --enable-jemalloc
-	mozconfig_annotate '' --enable-replace-malloc
+	# Use jemalloc unless libc is not glibc >= 2.4
+	# at this time the minimum glibc in the tree is 2.9 so we should be safe.
+	if use elibc_glibc; then
+		# We must force-enable jemalloc 3 via .mozconfig
+		echo "export MOZ_JEMALLOC3=1" >> "${S}"/.mozconfig || die
+		mozconfig_annotate '' --enable-jemalloc
+		mozconfig_annotate '' --enable-replace-malloc
+	fi
 
 	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 	mozconfig_annotate '' --build="${CTARGET:-${CHOST}}"

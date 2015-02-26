@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/shash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.38 2015/01/02 22:29:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.39 2015/02/26 20:42:43 tgall Exp $
+
+  26 Feb 2015;  <tgall@gentoo.org> shash-0.2.6-r2.ebuild:
+  Stable for arm64
 
   02 Jan 2015; Michał Górny <mgorny@gentoo.org> -shash-0.2.6-r1.ebuild:
   Remove old now that -r2 has complete stable keyword set.

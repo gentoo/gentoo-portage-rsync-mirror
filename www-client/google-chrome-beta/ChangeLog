@@ -1,6 +1,13 @@
 # ChangeLog for www-client/google-chrome-beta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/ChangeLog,v 1.67 2015/02/21 15:05:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/ChangeLog,v 1.68 2015/02/26 20:33:38 xmw Exp $
+
+*google-chrome-beta-41.0.2272.74_p1 (26 Feb 2015)
+
+  26 Feb 2015; Michael Weber <xmw@gentoo.org>
+  +google-chrome-beta-41.0.2272.74_p1.ebuild,
+  -google-chrome-beta-41.0.2272.64_p1.ebuild:
+  Automated update.
 
 *google-chrome-beta-41.0.2272.64_p1 (21 Feb 2015)
 
