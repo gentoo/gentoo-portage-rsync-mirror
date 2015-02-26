@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-vi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.50 2014/11/22 09:26:45 yngwin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.51 2015/02/26 07:02:47 yngwin Exp $
+
+*eselect-vi-1.1.9 (26 Feb 2015)
+
+  26 Feb 2015; Ben de Groot <yngwin@gentoo.org> +eselect-vi-1.1.9.ebuild:
+  version bump, offering neovim as option
 
   22 Nov 2014; Ben de Groot <yngwin@gentoo.org> eselect-vi-1.1.8.ebuild:
   fix SRC_URI (bug #530104)
