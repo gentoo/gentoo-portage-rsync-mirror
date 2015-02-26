@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/ogg-vorbis-header
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.26 2014/08/24 01:32:45 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.27 2015/02/25 23:21:13 dilfridge Exp $
+
+  25 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  ogg-vorbis-header-0.30.0-r1.ebuild:
+  Specify that for newer versions of Inline also Inline::C is needed, bug
+  539860
 
 *ogg-vorbis-header-0.30.0-r1 (24 Aug 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.30.0-r1.ebuild,v 1.1 2014/08/24 01:32:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.30.0-r1.ebuild,v 1.2 2015/02/25 23:21:13 dilfridge Exp $
 
 EAPI=5
 
@@ -16,9 +16,11 @@ LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2" # GPL-2+
 KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
-RDEPEND="dev-perl/Inline
+RDEPEND="
+	|| ( <=dev-perl/Inline-0.560.0 dev-perl/Inline-C )
 	media-libs/libogg
-	media-libs/libvorbis"
+	media-libs/libvorbis
+"
 DEPEND="${RDEPEND}"
 
 SRC_TEST="do"
