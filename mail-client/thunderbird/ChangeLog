@@ -1,6 +1,15 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.315 2015/02/18 09:16:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.316 2015/02/26 15:14:39 axs Exp $
+
+*thunderbird-31.5.0 (26 Feb 2015)
+
+  26 Feb 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +thunderbird-31.5.0.ebuild, -thunderbird-17.0.9.ebuild, metadata.xml,
+  thunderbird-24.8.0.ebuild, thunderbird-31.3.0.ebuild,
+  thunderbird-31.4.0.ebuild:
+  version bump; fixed bug 541416; dropped 17.x as it has missing deps despite
+  being the only stable arm package
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.4.0.ebuild:
   Stable for ppc, wrt bug #536564

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/zathura-cb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.17 2014/10/24 18:35:21 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-cb/ChangeLog,v 1.18 2015/02/26 15:07:06 xmw Exp $
+
+*zathura-cb-0.1.4 (26 Feb 2015)
+
+  26 Feb 2015; Michael Weber <xmw@gentoo.org> +zathura-cb-0.1.4.ebuild:
+  Version bump.
 
 *zathura-cb-0.1.3 (24 Oct 2014)
 

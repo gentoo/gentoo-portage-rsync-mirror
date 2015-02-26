@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gresistor
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gresistor/ChangeLog,v 1.8 2012/06/17 09:30:48 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gresistor/ChangeLog,v 1.9 2015/02/26 15:27:04 idella4 Exp $
+
+*gresistor-0.0.1-r2 (26 Feb 2015)
+
+  26 Feb 2015; Ian Delaney <idella4@gentoo.org> +gresistor-0.0.1-r2.ebuild:
+  revbump; convert -> distutils-r1, consent by maintainer hwoarang
 
 *gresistor-0.0.1-r1 (17 Jun 2012)
 
@@ -33,4 +38,3 @@
   +gresistor-0.0.1.ebuild, +metadata.xml:
   Initial commit. Fixes bug #265582. Thanks to Johanus
   <johanus.dwbh@gmail.com> for the initial ebuild
-

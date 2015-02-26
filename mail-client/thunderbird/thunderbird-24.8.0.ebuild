@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.8.0.ebuild,v 1.6 2014/11/02 08:33:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.8.0.ebuild,v 1.7 2015/02/26 15:14:39 axs Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -38,6 +38,7 @@ KEYWORDS="~alpha amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist crypt gstreamer +jit ldap +lightning +minimal mozdom pulseaudio selinux system-cairo system-icu system-jpeg system-sqlite"
+RESTRICT="!bindist? ( bindist )"
 
 PATCH="thunderbird-24.0-patches-0.1"
 PATCHFF="firefox-24.0-patches-0.9"

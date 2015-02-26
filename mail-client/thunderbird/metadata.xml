@@ -20,9 +20,6 @@
 		instead of bundled.</flag>
 	<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
-	<flag name="ipc">Use inter-process communication between tabs and plugins.
-		Allows for greater stability in case of plugin crashes</flag>
-	<flag name="gconf">Enable gnome2 gconf support</flag>
 	<flag name="minimal">Remove the software development kit and headers</flag>
 </use>
 </pkgmetadata>
