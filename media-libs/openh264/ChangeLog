@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openh264
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openh264/ChangeLog,v 1.1 2014/12/04 04:01:03 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openh264/ChangeLog,v 1.2 2015/02/26 21:18:49 axs Exp $
+
+*openh264-1.3.1 (26 Feb 2015)
+
+  26 Feb 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +openh264-1.3.1.ebuild:
+  version bump, supports firefox-36
 
 *openh264-1.2_p20141104 (04 Dec 2014)
 
@@ -11,4 +16,3 @@
   for the time being. Note also that the mozilla prefs overrides will not
   forcibly install at a later version, however a script needs to be written to
   synchronize their installation.
-
