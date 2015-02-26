@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jflex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.20 2015/02/23 10:37:47 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jflex/ChangeLog,v 1.21 2015/02/26 16:07:12 fordfrog Exp $
+
+*jflex-1.4.3-r2 (26 Feb 2015)
+
+  26 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> -jflex-1.4.3.ebuild,
+  +jflex-1.4.3-r2.ebuild:
+  due to some changes in stable 1.4.3 ebuild that broke qdox, we need to force
+  users to recompile jflex with the previous fixed stable version, that's why i
+  commit stable straight to the tree
 
 *jflex-1.4.3-r1 (23 Feb 2015)
 
