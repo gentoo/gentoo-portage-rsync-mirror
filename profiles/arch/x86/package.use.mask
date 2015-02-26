@@ -4,6 +4,10 @@
 
 # This file requires >=portage-2.1.1
 
+# Michał Górny <mgorny@gentoo.org> (01 Mar 2015)
+# pidgin-opensteamworks is only available for amd64, ppc32 and x86
+net-im/telepathy-connection-managers -steam
+
 # Andrey Grozin <grozin@gentoo.org> (23 Feb 2015)
 # Does not compile with this flag
 =dev-lisp/ecls-15.2.21 cpu_flags_x86_sse
