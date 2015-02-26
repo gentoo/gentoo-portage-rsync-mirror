@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Sysadm-Install
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sysadm-Install/ChangeLog,v 1.16 2014/08/28 18:17:11 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sysadm-Install/ChangeLog,v 1.17 2015/02/26 09:47:40 monsieurp Exp $
+
+*Sysadm-Install-0.440.0 (26 Feb 2015)
+
+  26 Feb 2015; Patrice Clement <monsieurp@gentoo.org>
+  +Sysadm-Install-0.440.0.ebuild:
+  Version bump.
 
   28 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Sysadm-Install-0.390.0.ebuild, -Sysadm-Install-0.400.0.ebuild,
