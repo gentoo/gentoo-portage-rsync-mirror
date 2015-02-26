@@ -10,5 +10,5 @@ RDEPEND=!<x11-libs/qwt-5.2.3 qt4? ( dev-qt/designer:4 dev-qt/qtcore:4 dev-qt/qtg
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=6
 SRC_URI=mirror://sourceforge/project/qwt/qwt/6.1.2/qwt-6.1.2.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	9e0174de733aecba0a7e66b2b01841d2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=5d54bd69cd9075c9180b7f055547b773
