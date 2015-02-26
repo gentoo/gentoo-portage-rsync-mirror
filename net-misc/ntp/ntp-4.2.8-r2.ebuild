@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r2.ebuild,v 1.1 2014/12/23 21:11:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r2.ebuild,v 1.2 2015/02/26 18:30:06 floppym Exp $
 
 EAPI="4"
 
@@ -15,11 +15,11 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-${PV:0:3}/${MY_P}.tar
 LICENSE="HPND BSD ISC"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~m68k-mint"
-IUSE="caps debug ipv6 openntpd parse-clocks samba selinux snmp ssl vim-syntax zeroconf"
+IUSE="caps debug ipv6 openntpd parse-clocks samba selinux snmp ssl +threads vim-syntax zeroconf"
 
 CDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
-	>=dev-libs/libevent-2.0.9
+	>=dev-libs/libevent-2.0.9[threads?]
 	kernel_linux? ( caps? ( sys-libs/libcap ) )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 	!openntpd? ( !net-misc/openntpd )
@@ -66,7 +66,8 @@ src_configure() {
 		$(use_enable debug debugging) \
 		$(use_enable samba ntp-signd) \
 		$(use_with snmp ntpsnmpd) \
-		$(use_with ssl crypto)
+		$(use_with ssl crypto) \
+		$(use_enable threads thread-support)
 }
 
 src_install() {

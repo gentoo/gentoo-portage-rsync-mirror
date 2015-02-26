@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.107 2015/01/29 17:33:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.108 2015/02/26 18:25:41 mgorny Exp $
+
+  26 Feb 2015; Michał Górny <mgorny@gentoo.org> gegl-0.2.0-r2.ebuild,
+  gegl-9999.ebuild:
+  Switch to USE=libav. https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/60 by Nikoli.
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> gegl-0.2.0-r2.ebuild,
   gegl-9999.ebuild:
