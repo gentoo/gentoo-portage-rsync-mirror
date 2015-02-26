@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.317 2015/01/30 02:55:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.318 2015/02/26 03:35:58 radhermit Exp $
+
+*mpg123-1.22.0 (26 Feb 2015)
+
+  26 Feb 2015; Tim Harder <radhermit@gentoo.org> +mpg123-1.22.0.ebuild:
+  Version bump.
 
   30 Jan 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml
