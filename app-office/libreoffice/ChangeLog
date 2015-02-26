@@ -1,6 +1,15 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.621 2015/02/23 11:34:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.622 2015/02/26 20:02:58 dilfridge Exp $
+
+*libreoffice-4.4.1.2 (26 Feb 2015)
+
+  26 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/libreoffice-4.4.1.2-add-kde4-open-url-script.patch,
+  +files/libreoffice-4.4.1.2-improve-KDE4FilePicker.patch,
+  +libreoffice-4.4.1.2.ebuild, libreoffice-4.4.9999.ebuild,
+  libreoffice-9999.ebuild:
+  Version bump
 
   23 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   +files/libreoffice-4.4.0.3-gcc-4.9-Os-link-failure.patch,

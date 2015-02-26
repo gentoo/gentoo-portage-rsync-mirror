@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.763 2015/02/22 00:22:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.764 2015/02/26 20:15:19 pacho Exp $
+
+*gtk+-3.14.9 (26 Feb 2015)
+
+  26 Feb 2015; Pacho Ramos <pacho@gentoo.org> +gtk+-3.14.9.ebuild, metadata.xml:
+  Version bump, add broadway support (#452376 by Olaf Leidinger)
 
   22 Feb 2015; Rémi Cardona <remi@gentoo.org>
   files/gtk+-non-bash-support.patch:

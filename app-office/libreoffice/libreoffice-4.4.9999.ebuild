@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.9999.ebuild,v 1.7 2015/02/22 10:16:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.9999.ebuild,v 1.8 2015/02/26 20:02:58 dilfridge Exp $
 
 EAPI=5
 
@@ -192,6 +192,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-fonts/liberation-fonts
 	media-fonts/urw-fonts
 	java? ( >=virtual/jre-1.6 )
+	kde? ( || ( $(add_kdeapps_dep kioclient) $(add_kdebase_dep kioclient) ) )
 	vlc? ( media-video/vlc )
 "
 
@@ -246,6 +247,8 @@ PATCHES=(
 
 	# from master branch
 	"${FILESDIR}/${PN}-4.4.0.3-telepathy-build-fix.patch"
+	"${FILESDIR}/${PN}-4.4.1.2-add-kde4-open-url-script.patch"
+	"${FILESDIR}/${PN}-4.4.1.2-improve-KDE4FilePicker.patch"
 )
 
 REQUIRED_USE="

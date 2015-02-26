@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.31 2015/02/26 20:02:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.1.2.ebuild,v 1.1 2015/02/26 20:02:58 dilfridge Exp $
 
 EAPI=5
 
@@ -215,7 +215,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.12.0:=
+	>=dev-util/mdds-0.10.3:=
 	media-libs/glm
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
@@ -244,6 +244,14 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-4.4-system-pyuno.patch"
+
+	# from 4.4 branch
+	"${FILESDIR}/${PN}-4.4.0.3-gcc-4.9-Os-link-failure.patch" # bug 538348
+
+	# from master branch
+	"${FILESDIR}/${PN}-4.4.0.3-telepathy-build-fix.patch"
+	"${FILESDIR}/${PN}-4.4.1.2-add-kde4-open-url-script.patch"
+	"${FILESDIR}/${PN}-4.4.1.2-improve-KDE4FilePicker.patch"
 )
 
 REQUIRED_USE="
