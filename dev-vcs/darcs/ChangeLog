@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.58 2015/01/03 02:28:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.59 2015/02/27 22:51:17 slyfox Exp $
+
+  27 Feb 2015; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.8.5-r3.ebuild,
+  metadata.xml:
+  Fallback to automatic libiconv detection (bug #541566 by Allen Parker).
 
   03 Jan 2015; Mark Wright <gienah@gentoo.org>
   +files/darcs-2.8.5-ghc-7.10.patch, darcs-2.8.5-r3.ebuild:

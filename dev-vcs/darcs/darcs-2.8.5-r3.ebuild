@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.5-r3.ebuild,v 1.2 2015/01/03 02:28:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/darcs-2.8.5-r3.ebuild,v 1.3 2015/02/27 22:51:17 slyfox Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
-IUSE="+color +curl +http libiconv +mmap +network-uri +optimize static +terminfo test +threaded"
+IUSE="+color +curl +http +mmap +network-uri +optimize static +terminfo test +threaded"
 
 RDEPEND=">=dev-haskell/extensible-exceptions-0.1:=[profile?] <dev-haskell/extensible-exceptions-0.2:=[profile?]
 	>=dev-haskell/hashed-storage-0.5.6:=[profile?] <dev-haskell/hashed-storage-0.6:=[profile?]
@@ -33,6 +33,7 @@ RDEPEND=">=dev-haskell/extensible-exceptions-0.1:=[profile?] <dev-haskell/extens
 	>=dev-haskell/vector-0.7:=[profile?]
 	>=dev-haskell/zlib-0.5.1.0:=[profile?] <dev-haskell/zlib-0.6.0.0:=[profile?]
 	>=dev-lang/ghc-7.4.1:=
+	virtual/libiconv
 	curl? ( net-misc/curl )
 	http? ( >=dev-haskell/http-4000.0.8:=[profile?] <dev-haskell/http-4000.3:=[profile?]
 		network-uri? ( >=dev-haskell/network-2.6:=[profile?]
@@ -73,7 +74,6 @@ src_configure() {
 		--flag=executable \
 		--flag=-hpc \
 		$(cabal_flag http http) \
-		$(cabal_flag libiconv libiconv) \
 		--flag=library \
 		$(cabal_flag mmap mmap) \
 		$(cabal_flag network-uri network-uri) \
