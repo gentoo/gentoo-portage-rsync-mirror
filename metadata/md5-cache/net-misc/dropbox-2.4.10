@@ -10,5 +10,5 @@ RDEPEND=X? ( dev-libs/glib:2 media-libs/libpng:1.2 sys-libs/zlib virtual/jpeg x1
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=x86? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-2.4.10.tar.gz ) amd64? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-2.4.10.tar.gz )
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=00e471862016907d59f883e60b9db85f

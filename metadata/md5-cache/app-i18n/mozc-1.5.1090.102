@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 dev-libs/openssl emacs? ( virtual/emacs ) ibus? ( >=app-
 RESTRICT=test
 SLOT=0
 SRC_URI=http://mozc.googlecode.com/files/mozc-1.5.1090.102.tar.bz2 http://protobuf.googlecode.com/files/protobuf-2.4.1.tar.bz2
-_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=9a8e37a826598ba603ea77e37a61d8c2

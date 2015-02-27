@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~ppc x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://www.dsm.fordham.edu/~ftnchek/download/ftnchek-3.3.1.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=4287a7311e3e0b5b8d80c29c22abd37d

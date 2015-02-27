@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=kernel_linux? ( virtual/modutils )
 SLOT=0
 SRC_URI=mirror://gentoo/nouveau-drm-20120322.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	linux-info	2b8c53f6065bdee2d757472215a3088f	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	linux-info	2b8c53f6065bdee2d757472215a3088f	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=7a4432a76a7782581b895742fb7b12f3

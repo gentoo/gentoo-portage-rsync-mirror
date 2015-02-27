@@ -10,5 +10,5 @@ RDEPEND=dev-cpp/glibmm:2 dev-cpp/gtkmm:2.4 dev-libs/libsigc++:2 >=net-libs/obby-
 RESTRICT=test
 SLOT=0
 SRC_URI=http://releases.0x539.de/gobby/gobby-0.4.13.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=2661f70a75b27896e6b13bb802da899c

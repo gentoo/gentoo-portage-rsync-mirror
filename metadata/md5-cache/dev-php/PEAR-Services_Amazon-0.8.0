@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=>=dev-php/PEAR-HTTP_Request-1.2.4-r1 >=dev-php/PEAR-XML_Serializer-0.17.0 !minimal? ( dev-php/PEAR-Cache ) dev-lang/php:* >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Services_Amazon-0.8.0.tgz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	6199074ba0005674c2291a5a8d0274e2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	6199074ba0005674c2291a5a8d0274e2	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=c91b4dd87814f66894b903ac1e7ba78a

@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=ssl? ( dev-libs/openssl ) virtual/inetd !www-servers/publicfile
 SLOT=0
 SRC_URI=ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/linux-ftpd-0.17.tar.gz mirror://gentoo/linux-ftpd-0.17-ssl.patch
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ssl-cert	b53367370fde96e19beca78050a47c61	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=e9f4d679ce7d45eee12a088f503e401b

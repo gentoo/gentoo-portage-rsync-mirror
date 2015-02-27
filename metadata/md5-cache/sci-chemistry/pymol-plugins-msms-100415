@@ -8,5 +8,5 @@ LICENSE=BSD pymol
 RDEPEND=sci-chemistry/msms-bin sci-chemistry/pymol =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://www.biotec.tu-dresden.de/~hongboz/msms_pymol/pymol_script/msms_pymol.py -> pymol-plugins-msms-100415.py
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=de7ec893dc677cd451035435afc4a631

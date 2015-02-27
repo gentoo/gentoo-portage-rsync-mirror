@@ -9,5 +9,5 @@ RDEPEND=dev-python/pygtk:2[python_targets_python2_7(-)?,-python_single_target_jy
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://xyne.archlinux.ca/projects/pystopwatch/src/pystopwatch-2012.12.24.1.tar.xz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=b9bf6f854796404e7ebfe99e2a54be1c

@@ -9,5 +9,5 @@ RDEPEND=app-crypt/gnupg:0= net-misc/socat:0= dev-perl/Crypt-OpenSSL-RSA:0= dev-p
 RESTRICT=test
 SLOT=0/0
 SRC_URI=mirror://debian/pool/monkeysphere/m/monkeysphere/monkeysphere_0.37.orig.tar.gz http://archive.monkeysphere.info/debian/pool/monkeysphere/m/monkeysphere/monkeysphere_0.37.orig.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=8263862bd7783689411fa5a2d6a83ba0

@@ -8,5 +8,5 @@ LICENSE=9wm
 RDEPEND=x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libXext
 SLOT=0
 SRC_URI=http://larswm.fnurt.net/larswm-7.5.3.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=83edf7f9de7016f279a6113ce00c7ce7

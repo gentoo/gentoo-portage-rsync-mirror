@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses >=dev-libs/glib-2.6.0 ssl? ( dev-libs/openssl ) perl? ( dev-lang/perl ) socks5? ( >=net-proxy/dante-1.1.18 ) selinux? ( sec-policy/selinux-irc ) perl? ( !net-im/silc-client ) dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=http://irssi.org/files/irssi-0.8.16.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=8303d6b583312354780eca240d8f4e7b

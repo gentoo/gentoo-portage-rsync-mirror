@@ -9,5 +9,5 @@ RDEPEND=!<=media-libs/libmp4v2-1.9.1:0
 RESTRICT=test
 SLOT=1
 SRC_URI=http://mp4v2.googlecode.com/files/mp4v2-1.9.1.tar.bz2
-_eclasses_=libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=790e687b1482925b38dba7154c2c0b8e

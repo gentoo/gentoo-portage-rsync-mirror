@@ -11,5 +11,5 @@ RDEPEND=>=x11-libs/motif-2.3:0
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://common-lisp.net/project/cmucl/downloads/release/20a/cmucl-src-20a.tar.bz2 http://common-lisp.net/project/cmucl/downloads/release/20a/cmucl-20a-x86-linux.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=e41d4ebb7d3fc6e73acc0fba09134fb4

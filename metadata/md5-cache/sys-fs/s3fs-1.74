@@ -9,5 +9,5 @@ RDEPEND=>=dev-libs/libxml2-2.6:2 dev-libs/openssl >=net-misc/curl-7.0 >=sys-fs/f
 RESTRICT=test
 SLOT=0
 SRC_URI=http://s3fs.googlecode.com/files/s3fs-1.74.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=3c296ade46d6a3eef3dcf2da29c7db61

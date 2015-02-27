@@ -8,5 +8,5 @@ LICENSE=GPL-2 MPL-1.0
 RDEPEND=>=app-pda/jpilot-0.99.9 >=app-pda/pilot-link-0.12.3 >=x11-libs/gtk+-2.8.19:2 >=dev-libs/libmal-0.44
 SLOT=0
 SRC_URI=http://www.jlogday.com/code/syncmal/jpilot-syncmal-0.81.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=84e062711994d77bd9bd4fc5db02819c

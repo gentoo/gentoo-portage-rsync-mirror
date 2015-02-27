@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=dev-scheme/gauche dev-db/tinycdb
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/gauche/8407/Gauche-cdb-0.3.1.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=5736faa926a80cfa401f77ececf8c22a

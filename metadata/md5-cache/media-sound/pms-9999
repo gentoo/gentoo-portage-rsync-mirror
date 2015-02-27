@@ -7,5 +7,5 @@ IUSE=regex
 LICENSE=GPL-3
 RDEPEND=sys-libs/ncurses dev-libs/glib:2 regex? ( >=dev-libs/boost-1.36 )
 SLOT=0
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=6da9fef5a02affed57d49ed520b996ac

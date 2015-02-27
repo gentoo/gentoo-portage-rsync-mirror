@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 media-sound/sox virtual/ffmpeg
 SLOT=0
 SRC_URI=mirror://sourceforge/imagination/imagination/3.0/imagination-3.0.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=74aea1b17a58167fad0ec51a94e03ad8

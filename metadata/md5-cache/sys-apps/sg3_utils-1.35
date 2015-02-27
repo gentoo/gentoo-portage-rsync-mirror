@@ -10,5 +10,5 @@ PDEPEND=>=sys-apps/rescan-scsi-bus-1.24
 RDEPEND=sys-apps/sdparm
 SLOT=0
 SRC_URI=http://sg.danny.cz/sg/p/sg3_utils-1.35.tgz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=fb952ff90d6a902709b298942d88286b

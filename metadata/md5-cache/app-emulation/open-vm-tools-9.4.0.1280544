@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=app-emulation/open-vm-tools-kmod dev-libs/glib:2 dev-libs/libdnet sys-apps/ethtool sys-process/procps virtual/pam X? ( dev-cpp/gtkmm:2.4 x11-base/xorg-server x11-drivers/xf86-input-vmmouse x11-drivers/xf86-video-vmware x11-libs/gtk+:2 x11-libs/libnotify x11-libs/libX11 x11-libs/libXtst ) fuse? ( sys-fs/fuse ) icu? ( dev-libs/icu:= ) xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=mirror://sourceforge/open-vm-tools/open-vm-tools-9.4.0-1280544.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=6a3dcde07a13f0597c8cbe6d68555a02

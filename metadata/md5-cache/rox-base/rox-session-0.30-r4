@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/dbus-python-0.71 x11-apps/xgamma x11-apps/xset =dev-lang/python-2* >=rox-base/rox-2.7-r1 >=rox-base/rox-lib-2.0.4-r1
 SLOT=0
 SRC_URI=mirror://sourceforge/rox/rox-session-0.30.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	rox	9e79f0fd284c634cc111a3e0ff1da581	rox-0install	1bd665827d230145f087a03771dd7c63	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	rox	9e79f0fd284c634cc111a3e0ff1da581	rox-0install	1bd665827d230145f087a03771dd7c63	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=d62eb9f3aa84a31d8cde9a7a78f25897

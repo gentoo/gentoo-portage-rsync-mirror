@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( >=media-video/mplayer-0.9.0 >=media-video/totem-1.4.2 ) =dev-lang/python-2* >=rox-base/rox-2.3 >=rox-base/rox-lib-2.0.4-r1
 SLOT=0
 SRC_URI=http://www.kerofin.demon.co.uk/rox/VideoThumbnail-0.1.14.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	rox	9e79f0fd284c634cc111a3e0ff1da581	rox-0install	1bd665827d230145f087a03771dd7c63	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	rox	9e79f0fd284c634cc111a3e0ff1da581	rox-0install	1bd665827d230145f087a03771dd7c63	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=6e27799dba252d2a15f20f7ac5873af6

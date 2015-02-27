@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=ssl? ( >=dev-libs/openssl-0.9.6d ) >=sys-libs/zlib-1.1.4
 SLOT=0
 SRC_URI=http://projects.acidbeats.de/mhxd-0.4.11.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=69432ded526363cd180c8cdbb90c4111

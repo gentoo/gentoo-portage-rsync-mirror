@@ -10,5 +10,5 @@ RDEPEND=>=app-emacs/muse-3.02.6a app-emacs/bbdb app-emacs/emacs-w3m >=virtual/em
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.gna.org/planner-el/planner-3.42.tar.gz
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=387b52272bc6c640f7a909047a69fd7e

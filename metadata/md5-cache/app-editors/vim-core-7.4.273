@@ -9,5 +9,5 @@ LICENSE=vim
 PDEPEND=!minimal? ( app-vim/gentoo-syntax )
 SLOT=0
 SRC_URI=ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2 http://dev.gentoo.org/~radhermit/vim/vim-core-7.3-gentoo-patches-r4.tar.bz2 http://dev.gentoo.org/~radhermit/vim/vim-patches-7.4.273.patch.bz2
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	vim-doc	1c18baeec98cec3287524cbf2fee2bd2
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f	vim-doc	1c18baeec98cec3287524cbf2fee2bd2
 _md5_=5db477a682a703904767ee7b29fed837

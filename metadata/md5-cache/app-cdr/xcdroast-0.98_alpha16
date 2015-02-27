@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2:2 app-cdr/cdrtools
 SLOT=0
 SRC_URI=mirror://sourceforge/xcdroast/xcdroast-0.98alpha16.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=34fe9508548d99b4ff92cca81ae068d1

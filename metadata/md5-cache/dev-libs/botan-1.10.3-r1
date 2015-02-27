@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=bzip2? ( >=app-arch/bzip2-1.0.5 ) zlib? ( >=sys-libs/zlib-1.2.3 ) python? ( python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-)] >=dev-libs/boost-1.48[python,python_targets_python2_7(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-)] ) gmp? ( >=dev-libs/gmp-4.2.2 ) ssl? ( >=dev-libs/openssl-0.9.8g[bindist=] )
 SLOT=0
 SRC_URI=http://files.randombit.net/botan/Botan-1.10.3.tbz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=5e056bcc26f801111e57b1f824be1ec9

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.131 2014/11/01 05:19:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.132 2015/02/27 06:08:39 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -373,10 +373,10 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 		arm*)		echo arm;;
 		avr*)		ninj avr32 avr;;
 		bfin*)		ninj blackfin bfin;;
-		c6x)		echo c6x;;
+		c6x*)		echo c6x;;
 		cris*)		echo cris;;
-		frv)		echo frv;;
-		hexagon)	echo hexagon;;
+		frv*)		echo frv;;
+		hexagon*)	echo hexagon;;
 		hppa*)		ninj parisc hppa;;
 		i?86*)
 			# Starting with linux-2.6.24, the 'x86_64' and 'i386'
@@ -390,11 +390,12 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 			;;
 		ia64*)		echo ia64;;
 		m68*)		echo m68k;;
-		metag)		echo metag;;
+		metag*)		echo metag;;
+		microblaze*)	echo microblaze;;
 		mips*)		echo mips;;
 		nios2*)		echo nios2;;
 		nios*)		echo nios;;
-		or32)		echo openrisc;;
+		or32*)		echo openrisc;;
 		powerpc*)
 			# Starting with linux-2.6.15, the 'ppc' and 'ppc64' trees
 			# have been unified into simply 'powerpc', but until 2.6.16,
@@ -417,7 +418,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 			;;
 		riscv*)		echo riscv;;
 		s390*)		echo s390;;
-		score)		echo score;;
+		score*)		echo score;;
 		sh64*)		ninj sh64 sh;;
 		sh*)		echo sh;;
 		sparc64*)	ninj sparc64 sparc;;

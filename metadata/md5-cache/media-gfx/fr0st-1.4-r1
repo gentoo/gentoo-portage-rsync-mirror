@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-python/wxpython:2.8 >=media-gfx/flam3-3.0.1 =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=http://launchpad.net/fr0st/trunk/1.4.0/+download/fr0st-1.4-src.tgz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=176bac210267485a37a5eef435871b5d

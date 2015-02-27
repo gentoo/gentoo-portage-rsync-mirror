@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-python/boto-2.7.0
 SLOT=0
 SRC_URI=http://commondatastorage.googleapis.com/pub/gsutil_3.21.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=8b9ffaaab1d5a681567b28082e995c86

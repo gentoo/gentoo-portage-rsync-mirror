@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libsndfile-1
 SLOT=0
 SRC_URI=mirror://sourceforge/twolame/twolame-0.3.12.tar.gz
-_eclasses_=libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=69120d3b1f180e59f1bd32e3def7683f

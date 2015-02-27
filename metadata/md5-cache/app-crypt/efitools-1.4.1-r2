@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/openssl sys-apps/util-linux
 SLOT=0
 SRC_URI=https://build.opensuse.org/package/rawsourcefile/home:jejb1:UEFI/efitools/efitools-1.4.1.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=8009c6ad40f3c3fc09cab6b01672d461

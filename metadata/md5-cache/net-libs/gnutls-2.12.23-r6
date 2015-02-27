@@ -9,5 +9,5 @@ LICENSE=GPL-3 LGPL-2.1
 RDEPEND=>=dev-libs/libtasn1-0.3.4 guile? ( >=dev-scheme/guile-1.8[networking] ) nettle? ( >=dev-libs/nettle-2.1[gmp] ) !nettle? ( >=dev-libs/libgcrypt-1.4.0:0 ) nls? ( virtual/libintl ) pkcs11? ( >=app-crypt/p11-kit-0.11 ) zlib? ( >=sys-libs/zlib-1.2.3.1 ) !bindist? ( lzo? ( >=dev-libs/lzo-2 ) )
 SLOT=0
 SRC_URI=ftp://ftp.gnutls.org/gcrypt/gnutls/v2.12/gnutls-2.12.23.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f4e4cb47ea261c3b2a7f1ee9e589b878

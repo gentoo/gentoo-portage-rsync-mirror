@@ -7,5 +7,5 @@ IUSE=doc cpu_flags_x86_sse2 sctp dahdi zaptel wpcard tdmcard wanpipe +ilbc +ilbc
 LICENSE=GPL-2
 RDEPEND=postgres? ( dev-db/postgresql ) mysql? ( virtual/mysql ) gsm? ( media-sound/gsm ) speex? ( media-libs/speex ) ssl? ( dev-libs/openssl ) h323? ( net-libs/h323plus ) zlib? ( sys-libs/zlib ) qt4? ( dev-qt/qtgui:4 dev-qt/designer:4 ) ilbc? ( dev-libs/ilbc-rfc3951 ) spandsp? ( >=media-libs/spandsp-0.0.3 ) dahdi? ( net-misc/dahdi )
 SLOT=0/9999
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=ce06e4644bc09a07d3eebc5081919b15

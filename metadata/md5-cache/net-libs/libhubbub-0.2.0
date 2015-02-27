@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/libparserutils-0.1.2[static-libs?,abi_x86_32(-)?,abi_x86_64(-
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.netsurf-browser.org/libs/releases/libhubbub-0.2.0-src.tar.gz http://download.netsurf-browser.org/libs/releases/buildsystem-1.0.tar.gz -> netsurf-buildsystem-1.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	netsurf	cbabed57b3c38e9deb5ebcc75b977097	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	netsurf	cbabed57b3c38e9deb5ebcc75b977097	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=31e37264f349d7e7f462a82ea5f7f595

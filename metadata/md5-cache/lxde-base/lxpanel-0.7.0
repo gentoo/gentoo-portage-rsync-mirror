@@ -10,5 +10,5 @@ RDEPEND=x11-libs/gtk+:2 x11-libs/libwnck:1 x11-libs/libXmu x11-libs/libXpm x11-l
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/LXPanel%20%28desktop%20panel%29/LXPanel%200.7.x/lxpanel-0.7.0.tar.xz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=effd530477298188884ed2e11827d461

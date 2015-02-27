@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.5.ebuild,v 1.11 2015/02/24 12:26:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.5.ebuild,v 1.12 2015/02/27 06:19:31 yngwin Exp $
 
 EAPI=5
 inherit autotools-multilib flag-o-matic multilib toolchain-funcs
@@ -21,6 +21,7 @@ KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc
 IUSE="X +adobe-cff auto-hinter bindist bzip2 debug doc fontforge harfbuzz
 	infinality png static-libs utils"
 REQUIRED_USE="harfbuzz? ( auto-hinter )"
+RESTRICT="!bindist? ( bindist )" # bug 541408
 
 CDEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )

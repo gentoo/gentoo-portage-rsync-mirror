@@ -8,5 +8,5 @@ RDEPEND=dev-util/debootstrap dev-lang/python app-arch/dpkg
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://debian/pool/main/r/rootstrap/rootstrap_0.3.24.orig.tar.gz mirror://debian/pool/main/r/rootstrap/rootstrap_0.3.24-3.diff.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=ebd2efe082d3b4e0498a97d4a58d677d

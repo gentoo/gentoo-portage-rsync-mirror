@@ -8,5 +8,5 @@ LICENSE=GPL-2+ FDL-1.1+
 RDEPEND=|| ( games-board/gnuchess games-board/crafty games-board/phalanx games-board/sjeng ) >=virtual/emacs-23
 SLOT=0
 SRC_URI=mirror://sourceforge/emacs-chess/chess-2.0b6.tar.gz mirror://gentoo/emacs-chess-sounds-2.0.tar.bz2 mirror://gentoo/emacs-chess-pieces-2.0.tar.bz2
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=c8b8c6b5a8f483b5c413a6fd8ac73dbe

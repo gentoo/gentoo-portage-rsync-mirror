@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXext
 SLOT=0
 SRC_URI=http://www.jnrowe.ukfsn.org/files/bfm-0.6.4.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=6817e11980b4f5ffb10d2d5e0feb6930

@@ -7,5 +7,5 @@ LICENSE=FoilTeX
 RDEPEND=virtual/latex-base
 SLOT=0
 SRC_URI=mirror://gentoo/foiltex-2.1.4a.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=a54369790345d694a0603db9fd99818f

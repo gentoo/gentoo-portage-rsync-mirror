@@ -7,5 +7,5 @@ LICENSE=LGPL-2.1
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://debian/pool/main/f/fakechroot/fakechroot_2.15.orig.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=1acd93ff7708c7632d584453563f7a7b

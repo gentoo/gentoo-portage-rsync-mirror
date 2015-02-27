@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxml2 !<sys-cluster/vzctl-4.5 sys-block/parted sys-fs/e2fsprogs sys-process/lsof sys-apps/findutils
 SLOT=0
 SRC_URI=http://download.openvz.org/utils/ploop/1.11/src/ploop-1.11.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=1d5db564ad652859813e0a2dac034dfa

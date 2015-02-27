@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.425 2015/02/24 12:26:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.426 2015/02/27 06:19:31 yngwin Exp $
+
+  27 Feb 2015; Ben de Groot <yngwin@gentoo.org> freetype-2.5.5.ebuild:
+  Restrict binary distribution (bug #541492)
 
   24 Feb 2015; Ben de Groot <yngwin@gentoo.org>
   -files/2.5.4-0001-pcf-Fix-Savannah-bug-43774.patch,

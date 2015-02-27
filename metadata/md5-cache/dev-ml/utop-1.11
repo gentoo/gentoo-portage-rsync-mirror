@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-ml/lwt-2.4.0:=[react] >=dev-ml/lambda-term-1.2:= >=dev-ml/zed-1.2:= emacs? ( virtual/emacs ) >=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/1.11
 SRC_URI=http://github.com/diml/utop/archive/1.11.tar.gz -> utop-1.11.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	oasis	45027e91f880d9142eec842f0cca0088	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=ff0f7d974d37d5796d28ecfd8d7acbec

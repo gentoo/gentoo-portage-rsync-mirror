@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/lua-5.1.4 >=media-gfx/flam3-3.0.1 || ( ( >=dev-qt/qtgui-4.8.5:4 dev-qt/designer:4 ) <dev-qt/qtgui-4.8.5:4 )
 SLOT=0
 SRC_URI=http://qosmic.googlecode.com/files/qosmic-1.5.0.tar.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	qt4-r2	7199e3db5b5908325487d379c6f67cf0	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=e12a300fd93836f8ed3b9bad84a3c2fa

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=fam? ( virtual/fam )
 SLOT=0
 SRC_URI=http://www.vanheusden.com/turbotail/turbotail-0.3.tgz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=9f328f6f0c27cb7020b5cdaad8086ae2

@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux 
 LICENSE=public-domain
 RDEPEND=|| ( virtual/jre:1.8 virtual/jre:1.7 virtual/jre:1.6 virtual/jre:1.5 dev-java/sun-jmx:0 ) >=dev-java/java-config-2.1.6
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=7adb145d6c36d4e1366322c9a71ece4d

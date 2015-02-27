@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=net-im/jabber-base >=dev-lang/lua-5.1 >=net-dns/libidn-1.1 >=dev-libs/openssl-0.9.8 dev-lua/luasocket ssl? ( dev-lua/luasec ) dev-lua/luaexpat dev-lua/luafilesystem mysql? ( >=dev-lua/luadbi-0.5[mysql] ) postgres? ( >=dev-lua/luadbi-0.5[postgres] ) sqlite? ( >=dev-lua/luadbi-0.5[sqlite] ) libevent? ( dev-lua/luaevent ) zlib? ( dev-lua/lua-zlib )
 SLOT=0
 SRC_URI=http://prosody.im/downloads/source/prosody-0.8.2.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=93c5cf5a8a065904dbe64a3c49723c01

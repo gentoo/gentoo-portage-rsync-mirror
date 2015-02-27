@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 dev-lang/php[mssql] dev-lang/php:* >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/MDB2_Driver_mssql-1.5.0b4.tgz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	6199074ba0005674c2291a5a8d0274e2	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-r1	6199074ba0005674c2291a5a8d0274e2	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=e8311678ddeace6a4cd78f494a4cb6ae

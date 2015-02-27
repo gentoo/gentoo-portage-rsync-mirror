@@ -5,5 +5,5 @@ KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://dl.exactcode.de/oss/minised/minised-1.13.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=4fc3e4adb8e9167a49ac194fb5ad3a97

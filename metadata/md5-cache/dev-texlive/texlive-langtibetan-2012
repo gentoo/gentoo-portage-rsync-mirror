@@ -9,5 +9,5 @@ LICENSE=GPL-2 GPL-1
 RDEPEND=>=dev-texlive/texlive-basic-2012 >=app-text/texlive-core-2012
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-ctib-2012.tar.xz mirror://gentoo/texlive-module-otibet-2012.tar.xz mirror://gentoo/texlive-module-collection-langtibetan-2012.tar.xz doc? ( mirror://gentoo/texlive-module-ctib.doc-2012.tar.xz mirror://gentoo/texlive-module-otibet.doc-2012.tar.xz ) source? ( mirror://gentoo/texlive-module-ctib.source-2012.tar.xz mirror://gentoo/texlive-module-otibet.source-2012.tar.xz )
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	12c5ffd805581a3e724ff87014ac8919	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	12c5ffd805581a3e724ff87014ac8919	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=3259cce5b64a112d9f0b8c6986da9118

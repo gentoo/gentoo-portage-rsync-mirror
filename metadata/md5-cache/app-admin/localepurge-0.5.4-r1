@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/localepurge-0.5.4.tbz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
 _md5_=f29557ec7d2de11366bfddf86845569f

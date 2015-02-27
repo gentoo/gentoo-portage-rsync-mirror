@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/db-4.2 >=sys-libs/zlib-1.1.4 >=media-libs/libpng-1.2 >=media-libs/gd-1.8.3[png] dev-libs/geoip bzip2? ( app-arch/bzip2 ) >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=ftp://ftp.mrunix.net/pub/webalizer/webalizer-2.21-02-src.tar.bz2 mirror://gentoo/webalizer.conf.gz
-_eclasses_=db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=f42a9e31424424bef658590067d02ee0

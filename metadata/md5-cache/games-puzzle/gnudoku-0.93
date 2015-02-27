@@ -9,5 +9,5 @@ RDEPEND=>=dev-cpp/gtkmm-2.6:2.4 games-misc/games-envd
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.icculus.org/~jcspray/GNUDoku/GNUDoku-0.93.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=bd0f705a1b611d68354b482ac598281e

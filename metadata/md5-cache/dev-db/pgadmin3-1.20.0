@@ -9,5 +9,5 @@ LICENSE=POSTGRESQL
 RDEPEND=x11-libs/wxGTK:2.8[X,debug=] >=dev-db/postgresql-8.4.0 >=dev-libs/libxml2-2.6.18 >=dev-libs/libxslt-1.1
 SLOT=0
 SRC_URI=mirror://postgresql/pgadmin3/release/v1.20.0/src/pgadmin3-1.20.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=7867fdfc6d78a233abc6ce75c486be0e

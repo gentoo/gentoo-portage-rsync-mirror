@@ -9,5 +9,5 @@ LICENSE=Apache-2.0 GPL-2 LGPL-2.1
 RDEPEND=|| ( dev-libs/libltdl:0 <sys-devel/libtool-2.4.3-r2:2 ) mysql? ( virtual/mysql ) sqlite? ( =dev-db/sqlite-3* ) berkdb? ( sys-libs/db ) xml? ( dev-libs/libxml2 ) !xml? ( >=dev-libs/expat-2 ) >=media-libs/raptor-2.0.7 >=dev-libs/rasqal-0.9.28 postgres? ( dev-db/postgresql ) iodbc? ( dev-db/libiodbc ) odbc? ( dev-db/unixODBC )
 SLOT=0
 SRC_URI=http://download.librdf.org/source/redland-1.0.16.tar.gz
-_eclasses_=db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=764db880206c374c5f4c359fa768eeea

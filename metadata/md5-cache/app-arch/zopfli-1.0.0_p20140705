@@ -6,5 +6,5 @@ KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux
 LICENSE=Apache-2.0
 SLOT=0/1
 SRC_URI=https://github.com/Hello71/zopfli/archive/1c07f374419ccb352412fd6403acc2b59ab6cce7.tar.gz -> zopfli-1.0.0_p20140705.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=0d3c12513c6114367c9c6ab8c06495ec
