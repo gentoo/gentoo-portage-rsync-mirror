@@ -1,6 +1,10 @@
 # ChangeLog for media-video/bino
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bino/ChangeLog,v 1.6 2014/12/28 23:56:24 robbat2 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/bino/ChangeLog,v 1.7 2015/02/27 22:24:32 mgorny Exp $
+
+  27 Feb 2015; Michał Górny <mgorny@gentoo.org> bino-1.6.1.ebuild:
+  Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/62.
 
 *bino-1.6.1 (28 Dec 2014)
 

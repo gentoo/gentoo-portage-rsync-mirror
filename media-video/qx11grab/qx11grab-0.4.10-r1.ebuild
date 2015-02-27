@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.10-r1.ebuild,v 1.2 2014/08/14 17:18:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qx11grab/qx11grab-0.4.10-r1.ebuild,v 1.3 2015/02/27 22:24:32 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://qx11grab.hjcms.de/downloads/${PV}/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="kde opengl pulseaudio"
+IUSE="libav kde opengl pulseaudio"
 
 RDEPEND="
 	>=dev-qt/qtcore-4.7.4:4
@@ -25,7 +25,8 @@ RDEPEND="
 	>=sys-apps/dbus-1.6.4
 	>=x11-libs/libX11-1.3.4
 	>=x11-libs/libXrandr-1.3
-	>=virtual/ffmpeg-9[X,encode,truetype]
+	libav? ( >=media-video/libav-9:0=[X,encode,truetype] )
+	!libav? ( >=media-video/ffmpeg-1.1:0=[X,encode,truetype] )
 	kde? ( kde-base/kdelibs:4 )
 	opengl? ( >=dev-qt/qtopengl-4.7.4:4 )
 	pulseaudio? ( media-sound/pulseaudio )

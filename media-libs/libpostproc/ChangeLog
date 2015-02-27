@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpostproc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.35 2015/01/31 01:31:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/ChangeLog,v 1.36 2015/02/27 22:24:32 mgorny Exp $
+
+  27 Feb 2015; Michał Górny <mgorny@gentoo.org>
+  libpostproc-10.20140517-r1.ebuild, libpostproc-9999.ebuild:
+  Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/62.
 
   31 Jan 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneded useflag description from metadata.xml

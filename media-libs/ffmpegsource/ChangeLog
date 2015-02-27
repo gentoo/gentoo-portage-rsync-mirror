@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ffmpegsource
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.22 2014/07/27 13:56:05 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ffmpegsource/ChangeLog,v 1.23 2015/02/27 22:24:32 mgorny Exp $
+
+  27 Feb 2015; Michał Górny <mgorny@gentoo.org> ffmpegsource-2.19.1.ebuild,
+  ffmpegsource-2.20.ebuild, ffmpegsource-9999.ebuild:
+  Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/62.
 
 *ffmpegsource-2.20 (27 Jul 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.370 2014/12/08 19:13:10 angelos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.371 2015/02/27 22:24:32 mgorny Exp $
+
+  27 Feb 2015; Michał Górny <mgorny@gentoo.org> mpd-0.18.16.ebuild,
+  mpd-0.18.20.ebuild, mpd-0.19.6.ebuild:
+  Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/62.
 
 *mpd-0.19.6 (08 Dec 2014)
 *mpd-0.18.20 (08 Dec 2014)

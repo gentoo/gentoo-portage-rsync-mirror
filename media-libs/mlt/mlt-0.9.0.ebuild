@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.9.0.ebuild,v 1.7 2015/01/29 17:51:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.9.0.ebuild,v 1.8 2015/02/27 22:24:32 mgorny Exp $
 
-EAPI=4
+EAPI=5
 PYTHON_DEPEND="python? 2:2.6"
 inherit eutils toolchain-funcs multilib python
 
@@ -13,12 +13,16 @@ SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde kdenlive libsamplerate melt
+IUSE="compressed-lumas dv debug ffmpeg frei0r gtk jack kde kdenlive libav libsamplerate melt
 cpu_flags_x86_mmx qt4 quicktime rtaudio sdl cpu_flags_x86_sse cpu_flags_x86_sse2 vorbis xine xml lua python ruby vdpau" # java perl php tcl
 IUSE="${IUSE} kernel_linux"
 
 #rtaudio will use OSS on non linux OSes
-RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
+RDEPEND="
+	ffmpeg? (
+		libav? ( media-video/libav:0=[vdpau?] )
+		!libav? ( media-video/ffmpeg:0=[vdpau?] )
+	)
 	dv? ( >=media-libs/libdv-0.104 )
 	xml? ( >=dev-libs/libxml2-2.5 )
 	vorbis? ( >=media-libs/libvorbis-1.1.2 )
@@ -107,18 +111,20 @@ src_configure() {
 		$(use_enable kdenlive)
 		$(use_enable qt4 qimage)
 		--disable-sox"
-		#$(use_enable sox)  FIXME
+		#$(use_enable sox) FIXME
 
 	use ffmpeg && myconf="${myconf} --avformat-swscale"
 	use kde || myconf="${myconf} --without-kde"
-	(use quicktime && use dv) ||  myconf="${myconf} --disable-kino"
+	(use quicktime && use dv) || myconf="${myconf} --disable-kino"
 	use compressed-lumas && myconf="${myconf} --luma-compress"
 
 	( use x86 || use amd64 ) && \
 		myconf="${myconf} $(use_enable cpu_flags_x86_mmx mmx)" ||
 		myconf="${myconf} --disable-mmx"
 
-	use melt || sed -i -e "s;src/melt;;" Makefile
+	if ! use melt; then
+		sed -i -e "s;src/melt;;" Makefile || die
+	fi
 
 	# TODO: add swig language bindings
 	# see also http://www.mltframework.org/twiki/bin/view/MLT/ExtremeMakeover
@@ -131,11 +137,11 @@ src_configure() {
 	[ -z "${swig_lang}" ] && swig_lang="none"
 
 	econf ${myconf} --swig-languages="${swig_lang}"
-	sed -i -e s/^OPT/#OPT/ "${S}/config.mak"
+	sed -i -e s/^OPT/#OPT/ "${S}/config.mak" || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README docs/*.txt
 
 	dodir /usr/share/${PN}
@@ -146,25 +152,25 @@ src_install() {
 
 	# Install SWIG bindings
 	if use lua; then
-		cd "${S}"/src/swig/lua
+		cd "${S}"/src/swig/lua || die
 		exeinto $(pkg-config --variable INSTALL_CMOD lua)
-		doexe mlt.so || die
+		doexe mlt.so
 		dodoc play.lua
 	fi
 
 	if use python; then
-		cd "${S}"/src/swig/python
+		cd "${S}"/src/swig/python || die
 		insinto $(python_get_sitedir)
-		doins mlt.py || die
+		doins mlt.py
 		exeinto $(python_get_sitedir)
-		doexe _mlt.so || die
+		doexe _mlt.so
 		dodoc play.py
 	fi
 
 	if use ruby; then
-		cd "${S}"/src/swig/ruby
+		cd "${S}"/src/swig/ruby || die
 		exeinto $("${EPREFIX}"/usr/bin/ruby -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
-		doexe mlt.so || die
+		doexe mlt.so
 		dodoc play.rb thumbs.rb
 	fi
 	# TODO: java perl php tcl

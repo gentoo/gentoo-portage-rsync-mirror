@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.12 2015/01/30 17:00:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-9999.ebuild,v 1.13 2015/02/27 22:24:32 mgorny Exp $
 
 EAPI="5"
 
@@ -36,13 +36,13 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-DEPEND=">=virtual/ffmpeg-9-r1[${MULTILIB_USEDEP}]"
-RDEPEND="${DEPEND}
-	!<media-video/libav-0.8.2-r2
+RDEPEND="
+	>=media-video/libav-0.8.2-r2:0=
 	!media-video/ffmpeg:0
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
 "
+DEPEND="${RDEPEND}"
 
 multilib_src_configure() {
 	local myconf=( ${EXTRA_LIBPOSTPROC_CONF} )

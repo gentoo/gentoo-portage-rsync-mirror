@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.8-r1.ebuild,v 1.1 2014/07/13 11:50:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.8-r1.ebuild,v 1.2 2015/02/27 22:24:32 mgorny Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/strigi/strigi"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="clucene +dbus debug exif fam ffmpeg inotify log +qt4 test"
+IUSE="clucene +dbus debug exif fam ffmpeg inotify libav log +qt4 test"
 
 RDEPEND="
 	app-arch/bzip2
@@ -34,7 +34,10 @@ RDEPEND="
 	)
 	exif? ( media-gfx/exiv2:= )
 	fam? ( virtual/fam )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? (
+		libav? ( media-video/libav:0= )
+		!libav? ( media-video/ffmpeg:0= )
+	)
 	log? ( >=dev-libs/log4cxx-0.10.0 )
 	qt4? (
 		dev-qt/qtcore:4

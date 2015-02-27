@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.543 2015/01/31 18:05:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.544 2015/02/27 22:06:53 chutzpah Exp $
+
+*openssh-6.7_p1-r4 (27 Feb 2015)
+
+  27 Feb 2015; Patrick McLean <chutzpah@gentoo.org>
+  +files/openssh-6.7_p1-xmalloc-include.patch, +openssh-6.7_p1-r4.ebuild:
+  Add patch to fix crasher bug triggered on hardened x86_64 machines with
+  USE=X509 and ancient clients.
 
   31 Jan 2015; Lars Wendler <polynomial-c@gentoo.org>
   -openssh-6.6_p1-r1.ebuild, -openssh-6.6.1_p1-r4.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/chromaprint
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/ChangeLog,v 1.19 2014/11/20 17:07:44 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/ChangeLog,v 1.20 2015/02/27 22:24:32 mgorny Exp $
+
+  27 Feb 2015; Michał Górny <mgorny@gentoo.org> chromaprint-1.2.ebuild:
+  Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/62.
 
   20 Nov 2014; Tobias Klausmann <klausman@gentoo.org> chromaprint-1.2.ebuild:
   Keyworded on alpha, bug 489436

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.2.ebuild,v 1.2 2014/11/20 17:07:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.2.ebuild,v 1.3 2015/02/27 22:24:32 mgorny Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -12,10 +12,13 @@ SRC_URI="https://bitbucket.org/acoustid/${PN}/downloads/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-fbsd"
-IUSE="test tools"
+IUSE="libav test tools"
 
-# note: use ffmpeg instead of fftw because it's recommended and required for tools
-RDEPEND=">=virtual/ffmpeg-0.10"
+# note: use ffmpeg or libav instead of fftw because it's recommended and required for tools
+RDEPEND="
+	libav? ( media-video/libav:0= )
+	!libav? ( media-video/ffmpeg:0= )
+"
 DEPEND="${RDEPEND}
 	test? (
 		dev-cpp/gtest

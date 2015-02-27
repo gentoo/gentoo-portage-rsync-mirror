@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.110 2014/12/16 16:40:04 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.111 2015/02/27 22:24:32 mgorny Exp $
+
+  27 Feb 2015; Michał Górny <mgorny@gentoo.org> strigi-0.7.8-r1.ebuild:
+  Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/62.
 
   16 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> strigi-0.7.8.ebuild:
   Add missing slot operator on exiv2 dependency
