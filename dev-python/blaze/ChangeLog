@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/blaze
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.13 2015/01/26 05:28:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.14 2015/02/27 02:19:53 patrick Exp $
+
+*blaze-0.7.2 (27 Feb 2015)
+
+  27 Feb 2015; Patrick Lauer <patrick@gentoo.org> +blaze-0.7.2.ebuild:
+  Bump
 
 *blaze-0.7.1 (26 Jan 2015)
 
