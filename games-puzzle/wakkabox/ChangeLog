@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/wakkabox
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wakkabox/ChangeLog,v 1.6 2007/02/08 21:20:36 wolf31o2 Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/wakkabox/ChangeLog,v 1.7 2015/02/26 23:07:52 tupone Exp $
+
+  26 Feb 2015; Tupone Alfredo <tupone@gentoo.org> wakkabox-1.1.0.ebuild,
+  +files/wakkabox-1.1.0-gentoo.patch:
+  EAPI 5 - underlinking and buffer overflow
 
   08 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
