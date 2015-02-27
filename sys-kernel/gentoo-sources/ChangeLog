@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1511 2015/02/27 14:41:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1512 2015/02/27 19:15:42 mpagano Exp $
+
+*gentoo-sources-3.10.70 (27 Feb 2015)
+
+  27 Feb 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.10.70.ebuild:
+  Linux patch 3.10.70. Enable link security restrictions by default.
 
   27 Feb 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.14.34.ebuild:
   Linux patch 3.14.34. Enable link security restrictions by default.
