@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_RSS
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.49 2015/02/26 18:50:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_RSS/ChangeLog,v 1.50 2015/02/27 11:35:34 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-XML_RSS-1.0.2.ebuild:
+  Stable for sparc, wrt bug #535300
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org> PEAR-XML_RSS-1.0.2.ebuild:
   arm stable, bug #535300

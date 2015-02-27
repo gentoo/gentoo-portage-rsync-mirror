@@ -1,14 +1,18 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/android-studio-0.8.14.135.1538390.ebuild,v 1.1 2014/11/03 02:22:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/android-studio-1.1.0.135.1740770.ebuild,v 1.1 2015/02/27 11:49:38 perfinion Exp $
 
 EAPI=5
 inherit eutils versionator
 
 RESTRICT="strip"
-QA_TEXTRELS="opt/${P}/bin/libbreakgen.so"
+QA_PREBUILT="opt/${PN}/bin/libbreakgen.so"
 STUDIO_V=$(get_version_component_range 1-3)
 BUILD_V=$(get_version_component_range 4-5)
+if [[ $(get_version_component_count) -gt 5 ]]; then
+	STUDIO_V="${STUDIO_V}-$(get_version_component_range 6-)"
+fi
+
 DESCRIPTION="A new Android development environment based on IntelliJ IDEA"
 HOMEPAGE="http://developer.android.com/sdk/installing/studio.html"
 SRC_URI="http://dl.google.com/dl/android/studio/ide-zips/${STUDIO_V}/${PN}-ide-${BUILD_V}-linux.zip"

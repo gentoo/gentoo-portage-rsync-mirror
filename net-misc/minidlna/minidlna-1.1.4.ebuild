@@ -1,30 +1,33 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.0-r3.ebuild,v 1.1 2013/09/05 20:25:35 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.1.4.ebuild,v 1.1 2015/02/27 11:50:34 xmw Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils systemd toolchain-funcs user
+inherit eutils linux-info systemd toolchain-funcs user
 
 DESCRIPTION="DLNA/UPnP-AV compliant media server"
 HOMEPAGE="http://minidlna.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz
+	http://dev.gentoo.org/~xmw/${PN}-gentoo-artwork.patch.xz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="netgear readynas"
 
-RDEPEND="dev-db/sqlite
+RDEPEND="dev-db/sqlite:3
 	media-libs/flac
 	media-libs/libexif
 	media-libs/libid3tag
 	media-libs/libogg
 	media-libs/libvorbis
 	virtual/ffmpeg
-	virtual/jpeg"
+	virtual/jpeg:0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+CONFIG_CHECK="~INOTIFY_USER"
 
 pkg_setup() {
 	local my_is_new="yes"
@@ -38,12 +41,16 @@ pkg_setup() {
 		# if user already exists, but /var/lib/minidlna is missing
 		# rely on ${D}/var/lib/minidlna created in src_install
 	fi
+
+	linux-info_pkg_setup
 }
 
 src_prepare() {
 	sed -e "/log_dir/s:/var/log:/var/log/${PN}:" \
 		-e "/db_dir/s:/var/cache/:/var/lib/:" \
 		-i ${PN}.conf || die
+
+	epatch "${WORKDIR}"/${PN}-gentoo-artwork.patch
 
 	epatch_user
 }
@@ -65,8 +72,8 @@ src_install() {
 	doins ${PN}.conf
 
 	newconfd "${FILESDIR}"/${PN}-1.0.25.confd ${PN}
-	newinitd "${FILESDIR}"/${PF}.initd ${PN}
-	systemd_newunit "${FILESDIR}"/${PF}.service ${PN}.service
+	newinitd "${FILESDIR}"/${PN}-1.1.2.initd ${PN}
+	systemd_newunit "${FILESDIR}"/${PN}-1.1.2.service ${PN}.service
 	echo "d /run/${PN} 0755 ${PN} ${PN} -" > "${T}"/${PN}.conf
 	systemd_dotmpfilesd "${T}"/${PN}.conf
 

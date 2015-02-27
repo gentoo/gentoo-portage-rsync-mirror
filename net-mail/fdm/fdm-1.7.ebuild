@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.7.ebuild,v 1.4 2014/03/03 23:32:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fdm/fdm-1.7.ebuild,v 1.5 2015/02/27 11:59:38 xmw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="courierauth examples pcre"
 
-DEPEND="dev-libs/openssl
+DEPEND="dev-libs/openssl:0
 	sys-libs/tdb
 	courierauth? ( net-libs/courier-authlib )
 	pcre? ( dev-libs/libpcre )"

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.161 2015/02/26 18:50:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.162 2015/02/27 11:35:53 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pinentry-0.9.0.ebuild:
+  Stable for sparc, wrt bug #540002
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org> pinentry-0.9.0.ebuild:
   arm stable, bug #540002

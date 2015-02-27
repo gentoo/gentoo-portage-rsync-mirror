@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/suhosin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.22 2015/02/25 15:54:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.23 2015/02/27 11:33:31 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> suhosin-0.9.37.1.ebuild:
+  Stable for sparc, wrt bug #540328
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> suhosin-0.9.37.1.ebuild:
   Stable for x86, wrt bug #540328

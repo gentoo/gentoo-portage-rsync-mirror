@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.106 2015/02/26 18:51:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.107 2015/02/27 11:36:15 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> boto-2.35.1.ebuild:
+  Stable for sparc, wrt bug #535316
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org> boto-2.35.1.ebuild:
   arm stable, bug #535316

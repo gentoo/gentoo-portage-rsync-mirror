@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.124 2015/02/26 18:58:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.125 2015/02/27 11:36:39 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> boehm-gc-7.4.2.ebuild:
+  Stable for sparc, wrt bug #538126
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org> boehm-gc-7.4.2.ebuild:
   arm stable, bug #538126

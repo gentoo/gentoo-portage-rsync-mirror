@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Parser/ChangeLog,v 1.47 2015/02/26 18:49:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Parser/ChangeLog,v 1.48 2015/02/27 11:35:17 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-XML_Parser-1.3.4-r1.ebuild:
+  Stable for sparc, wrt bug #535298
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org>
   PEAR-XML_Parser-1.3.4-r1.ebuild:
