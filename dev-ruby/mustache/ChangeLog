@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.47 2015/01/17 19:55:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.48 2015/02/27 15:31:56 graaff Exp $
+
+*mustache-1.0.1 (27 Feb 2015)
+
+  27 Feb 2015; Hans de Graaff <graaff@gentoo.org> +mustache-1.0.1.ebuild:
+  Version bump. Add ruby22.
 
   17 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -mustache-0.99.4-r1.ebuild:
   Remove old.

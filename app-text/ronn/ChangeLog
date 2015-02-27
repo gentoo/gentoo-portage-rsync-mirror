@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ronn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.40 2015/01/17 19:53:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.41 2015/02/27 15:31:45 graaff Exp $
+
+  27 Feb 2015; Hans de Graaff <graaff@gentoo.org> ronn-0.7.3-r3.ebuild:
+  Add ruby22.
 
   17 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -ronn-0.7.3-r1.ebuild:
   Remove old.
