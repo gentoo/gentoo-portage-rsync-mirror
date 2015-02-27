@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.55.0-r1.ebuild,v 1.3 2015/01/01 03:30:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/boost-build-1.55.0-r1.ebuild,v 1.4 2015/02/27 09:26:38 pinkbyte Exp $
 
 EAPI="5"
 
@@ -49,7 +49,8 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.49.0-darwin-gentoo-toolchain.patch" \
 		"${FILESDIR}/${PN}-1.52.0-darwin-no-python-framework.patch" \
 		"${FILESDIR}/${PN}-1.54.0-fix-test.patch" \
-		"${FILESDIR}/${PN}-1.54.0-support_dots_in_python-buildid.patch"
+		"${FILESDIR}/${PN}-1.54.0-support_dots_in_python-buildid.patch" \
+		"${FILESDIR}/${PN}-1.55.0-ppc-aix.patch"
 
 	# Remove stripping option
 	# Fix python components build on multilib systems, bug #496446
