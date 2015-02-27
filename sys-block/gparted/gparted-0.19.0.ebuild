@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.19.0.ebuild,v 1.3 2014/07/23 15:37:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.19.0.ebuild,v 1.4 2015/02/27 01:40:40 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,7 +11,7 @@ DESCRIPTION="Gnome Partition Editor"
 HOMEPAGE="http://gparted.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+ FDL-1.2+"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="btrfs dmraid f2fs fat hfs jfs kde mdadm ntfs policykit reiserfs reiser4 xfs"

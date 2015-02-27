@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/gparted
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.140 2014/12/19 13:43:28 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.141 2015/02/27 01:40:40 tetromino Exp $
+
+*gparted-0.21.0 (27 Feb 2015)
+
+  27 Feb 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gparted-0.19.0.ebuild, gparted-0.19.1.ebuild, gparted-0.20.0.ebuild,
+  +gparted-0.21.0.ebuild:
+  Version bump; fixes error in partition copy/move that corrupted the last
+  block, fixes reiser4 support. Update license.
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> gparted-0.20.0.ebuild:
   amd64 stable, bug 529964
