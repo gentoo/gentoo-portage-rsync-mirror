@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/dirmngr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.72 2015/02/24 09:07:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/ChangeLog,v 1.73 2015/02/27 11:20:07 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dirmngr-1.1.1-r1.ebuild:
+  Stable for sparc, wrt bug #534826
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> dirmngr-1.1.1-r1.ebuild:
   Stable for alpha, wrt bug #534826

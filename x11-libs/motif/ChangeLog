@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.64 2015/02/24 09:08:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.65 2015/02/27 11:21:04 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> motif-2.3.4-r3.ebuild:
+  Stable for sparc, wrt bug #537004
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> motif-2.3.4-r3.ebuild:
   Stable for alpha, wrt bug #537004

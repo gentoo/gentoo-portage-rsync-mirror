@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.50 2015/02/24 15:51:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.51 2015/02/27 11:27:58 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libtirpc-0.2.5.ebuild:
+  Stable for sparc, wrt bug #525268
 
   24 Feb 2015; Mike Frysinger <vapier@gentoo.org> libtirpc-0.2.5.ebuild:
   Mark arm64/ia64/s390/sh stable.

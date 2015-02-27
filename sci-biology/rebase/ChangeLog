@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.143 2015/02/02 09:11:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.144 2015/02/27 11:22:03 jlec Exp $
+
+*rebase-1503 (27 Feb 2015)
+
+  27 Feb 2015; Justin Lecher <jlec@gentoo.org> +rebase-1503.ebuild:
+  Version Bump
 
 *rebase-1502 (02 Feb 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-ctags
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.92 2015/02/24 09:09:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.93 2015/02/27 11:22:20 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> eselect-ctags-1.18.ebuild:
+  Stable for sparc, wrt bug #537006
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> eselect-ctags-1.18.ebuild:
   Stable for alpha, wrt bug #537006

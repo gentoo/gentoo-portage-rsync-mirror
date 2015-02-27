@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/libxml-sax
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libxml-sax/ChangeLog,v 1.22 2015/02/23 11:01:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libxml-sax/ChangeLog,v 1.23 2015/02/27 11:08:12 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libxml-sax-0.7.5.ebuild:
+  Stable for sparc, wrt bug #534988
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libxml-sax-0.7.5.ebuild:
   Stable for ppc64, wrt bug #534988

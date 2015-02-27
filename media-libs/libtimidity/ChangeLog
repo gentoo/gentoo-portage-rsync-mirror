@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtimidity
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.27 2015/02/25 15:29:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.28 2015/02/27 11:28:56 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libtimidity-0.1.0-r2.ebuild:
+  Stable for sparc, wrt bug #526020
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libtimidity-0.1.0-r2.ebuild:
   Stable for x86, wrt bug #526020

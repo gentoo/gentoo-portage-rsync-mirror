@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/isodate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.35 2015/02/24 09:06:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/isodate/ChangeLog,v 1.36 2015/02/27 11:19:44 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> isodate-0.5.1.ebuild:
+  Stable for sparc, wrt bug #535334
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> isodate-0.5.1.ebuild:
   Stable for alpha, wrt bug #535334

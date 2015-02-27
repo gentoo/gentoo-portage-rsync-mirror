@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.71 2015/02/24 09:09:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.72 2015/02/27 11:21:41 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libpipeline-1.4.0.ebuild:
+  Stable for sparc, wrt bug #535118
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libpipeline-1.4.0.ebuild:
   Stable for alpha, wrt bug #535118

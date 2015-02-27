@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-ro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.39 2015/02/24 09:12:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ro/ChangeLog,v 1.40 2015/02/27 11:23:15 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> myspell-ro-3.3.10.ebuild:
+  Stable for sparc, wrt bug #534840
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> myspell-ro-3.3.10.ebuild:
   Stable for alpha, wrt bug #534840

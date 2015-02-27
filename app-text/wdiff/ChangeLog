@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.103 2015/02/24 09:19:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.104 2015/02/27 11:26:43 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> wdiff-1.2.2.ebuild:
+  Stable for sparc, wrt bug #534914
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> wdiff-1.2.2.ebuild:
   Stable for alpha, wrt bug #534914
