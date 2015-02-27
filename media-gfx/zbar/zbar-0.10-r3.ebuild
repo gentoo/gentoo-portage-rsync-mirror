@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r3.ebuild,v 1.4 2013/06/29 09:37:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10-r3.ebuild,v 1.5 2015/02/27 12:12:58 xmw Exp $
 
 EAPI=5
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="2:2.7"
 
 inherit autotools eutils flag-o-matic python
 
@@ -20,7 +20,7 @@ RDEPEND="gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 )
 	imagemagick? (
 		|| ( media-gfx/imagemagick
 		media-gfx/graphicsmagick[imagemagick] ) )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	python? ( gtk? ( >=dev-python/pygtk-2 ) )
 	qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
 	X? ( x11-libs/libXext

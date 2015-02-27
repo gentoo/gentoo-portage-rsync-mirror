@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.343 2015/01/05 17:58:25 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.344 2015/02/27 12:19:55 pinkbyte Exp $
+
+*boost-1.57.0 (27 Feb 2015)
+
+  27 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> +boost-1.57.0.ebuild:
+  Version bump, wrt bug #528204
 
   05 Jan 2015; Christoph Junghans <ottxor@gentoo.org> boost-1.56.0-r1.ebuild:
   added prefix keywords (ebuild does not differ from prefix overlay)
