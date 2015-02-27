@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 arm hppa ppc ~sh x86 ~x86-fbsd ~x64-macos"
 IUSE="adplug +alsa ao audiofile bzip2 cdio +curl debug faad +fifo +ffmpeg flac
-	fluidsynth gme +id3tag inotify ipv6 jack lame mms libmpdclient
+	fluidsynth gme +id3tag inotify ipv6 jack lame mms libav libmpdclient
 	libsamplerate +mad mikmod modplug mpg123 musepack +network ogg openal opus
 	oss pipe pulseaudio recorder selinux sid sndfile soundcloud sqlite systemd tcpd
 	twolame unicode vorbis wavpack wildmidi zeroconf zip"
@@ -40,7 +40,10 @@ CDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	cdio? ( dev-libs/libcdio-paranoia )
 	curl? ( net-misc/curl )
 	faad? ( media-libs/faad2 )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? (
+		libav? ( media-video/libav:0= )
+		!libav? ( media-video/ffmpeg:0= )
+	)
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
 	gme? ( >=media-libs/game-music-emu-0.6.0_pre20120802 )

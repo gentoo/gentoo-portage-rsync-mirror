@@ -15,11 +15,12 @@ EGIT_REPO_URI="https://github.com/FFMS/ffms2.git"
 LICENSE="MIT"
 SLOT="0/3"
 KEYWORDS=""
-IUSE="static-libs"
+IUSE="libav static-libs"
 
 RDEPEND="
 	sys-libs/zlib
-	>=virtual/ffmpeg-9
+	libav? ( >=media-video/libav-9.17:0= )
+	!libav? ( >=media-video/ffmpeg-1.2.6-r1:0= )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

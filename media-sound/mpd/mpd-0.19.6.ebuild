@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~x86 ~x86-fbsd ~x64-macos"
 IUSE="adplug +alsa ao audiofile bzip2 cdio +curl debug expat faad +fifo +ffmpeg
 	flac fluidsynth +glib gme +icu +id3tag +inotify +ipv6 jack lame mms
-	libmpdclient libsamplerate libsoxr +mad mikmod modplug mpg123 musepack
+	libav libmpdclient libsamplerate libsoxr +mad mikmod modplug mpg123 musepack
 	+network nfs ogg openal opus oss pipe pulseaudio recorder samba selinux sid
 	sndfile soundcloud sqlite systemd tcpd twolame unicode upnp vorbis wavpack
 	wildmidi zeroconf zip"
@@ -51,7 +51,10 @@ CDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	curl? ( net-misc/curl )
 	expat? ( dev-libs/expat )
 	faad? ( media-libs/faad2 )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? (
+		libav? ( media-video/libav:0= )
+		!libav? ( media-video/ffmpeg:0= )
+	)
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
 	glib? ( dev-libs/glib:2 )

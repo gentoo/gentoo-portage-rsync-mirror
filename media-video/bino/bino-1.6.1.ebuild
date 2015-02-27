@@ -15,7 +15,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/${PN}/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc lirc"
+IUSE="doc libav lirc"
 
 IUSE_VIDEO_CARDS="
 	video_cards_nvidia"
@@ -32,7 +32,8 @@ RDEPEND=">=media-libs/glew-1.6.0
 	dev-qt/qtcore:4
 	dev-qt/qtopengl:4
 	>=media-libs/libass-0.9.9
-	>=virtual/ffmpeg-0.6.90
+	libav? ( >=media-video/libav-0.7:0= )
+	!libav? ( >=media-video/ffmpeg-0.7:0= )
 	lirc? ( app-misc/lirc )
 	video_cards_nvidia? ( media-video/nvidia-settings )
 	virtual/libintl"
