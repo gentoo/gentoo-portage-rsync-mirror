@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/xmonad
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.36 2014/05/11 07:02:24 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.37 2015/02/27 08:45:58 slyfox Exp $
+
+*xmonad-0.11-r3 (27 Feb 2015)
+
+  27 Feb 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/xmonad-0.11-ghc-7.10.patch, +files/xmonad-0.11-sample.patch,
+  +files/xmonad-check-repeat.patch, +xmonad-0.11-r3.ebuild, metadata.xml:
+  x11-wm/xmonad: fix sample (thanks to NP-Hardass)
 
   11 May 2014; Sergei Trofimovich <slyfox@gentoo.org> -xmonad-0.10.ebuild,
   -xmonad-0.11.ebuild:
