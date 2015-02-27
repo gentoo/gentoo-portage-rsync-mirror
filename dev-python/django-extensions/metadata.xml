@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>dev-zero@gentoo.org</email>
-		<name>Tiziano Müller</name>
-	</maintainer>
-	<use>
-		<flag name="graphviz">Create a diagram of your database entity relationships using <pkg>dev-python/pygraphviz</pkg>.</flag>
-		<flag name="s3">Upload your media files to S3.</flag>
-		<flag name="vcard">Export your users email addresses to the vcard format.</flag>
-	</use>
+  <maintainer>
+    <email>dev-zero@gentoo.org</email>
+    <name>Tiziano Müller</name>
+  </maintainer>
+  <use>
+    <flag name="graphviz">Create a diagram of your database entity relationships using <pkg>dev-python/pygraphviz</pkg>.</flag>
+    <flag name="s3">Upload your media files to S3.</flag>
+    <flag name="vcard">Export your users email addresses to the vcard format.</flag>
+  </use>
 </pkgmetadata>

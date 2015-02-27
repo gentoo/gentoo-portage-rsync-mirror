@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ptpython/ptpython-0.5.ebuild,v 1.1 2015/02/27 15:57:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ptpython/ptpython-0.5.ebuild,v 1.2 2015/02/27 16:32:01 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="
 	>=dev-python/prompt_toolkit-0.31[${PYTHON_USEDEP}]
-	>=dev-python/jedi-0.8.1[${PYTHON_USEDEP}]
+	>=dev-python/jedi-0.8.1-r1[${PYTHON_USEDEP}]
 	dev-python/docopt[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}
