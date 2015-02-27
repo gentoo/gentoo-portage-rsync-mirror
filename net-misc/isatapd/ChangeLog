@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/isatapd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/isatapd/ChangeLog,v 1.3 2014/03/30 10:09:14 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/isatapd/ChangeLog,v 1.4 2015/02/27 09:46:00 xmw Exp $
+
+*isatapd-0.9.7-r2 (27 Feb 2015)
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org> +files/isatapd.service-r2,
+  +isatapd-0.9.7-r2.ebuild, -files/isatapd.service, -files/isatapd.service-r1,
+  -isatapd-0.9.6.ebuild, -isatapd-0.9.7-r1.ebuild, -isatapd-0.9.7.ebuild:
+  Revbump to fix typo in service file (bug 539178, thanks Markus Kaindl for the
+  report).
 
 *isatapd-0.9.7-r1 (30 Mar 2014)
 

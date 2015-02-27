@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/enet-1.3.4.ebuild,v 1.3 2012/07/03 07:59:54 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/enet-1.3.12.ebuild,v 1.1 2015/02/27 09:57:49 xmw Exp $
 
-EAPI=3
+EAPI=5
+
 inherit base
 
 DESCRIPTION="relatively thin, simple and robust network communication layer on top of UDP"
@@ -10,8 +11,8 @@ HOMEPAGE="http://enet.bespin.org/"
 SRC_URI="http://enet.bespin.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
-SLOT="1.3"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+SLOT="1.3/2.2"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="static-libs"
 
 RDEPEND="!${CATEGORY}/${PN}:0"

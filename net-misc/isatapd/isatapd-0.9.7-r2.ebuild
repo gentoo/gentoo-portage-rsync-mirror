@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/isatapd/isatapd-0.9.6.ebuild,v 1.1 2012/10/19 19:56:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/isatapd/isatapd-0.9.7-r2.ebuild,v 1.1 2015/02/27 09:46:00 xmw Exp $
 
-EAPI=4
-
-inherit linux-info
+EAPI=5
+inherit linux-info systemd
 
 DESCRIPTION="creates and maintains an ISATAP tunnel (rfc5214)"
 HOMEPAGE="http://www.saschahlusiak.de/linux/isatap.htm"
@@ -31,4 +30,6 @@ src_install() {
 
 	newinitd openrc/isatapd.init.d isatapd
 	newconfd openrc/isatapd.conf.d isatapd
+	systemd_newunit "${FILESDIR}"/${PN}.service-r2 ${PN}.service
+	systemd_install_serviced "${FILESDIR}"/${PN}.service.conf
 }

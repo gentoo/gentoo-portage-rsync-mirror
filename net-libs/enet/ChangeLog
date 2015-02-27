@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/enet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.32 2013/03/30 14:47:26 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.34 2015/02/27 09:57:49 xmw Exp $
+
+*enet-1.3.12 (27 Feb 2015)
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org> +enet-1.3.12.ebuild:
+  Version bump.
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org> -enet-1.3.4.ebuild,
+  -enet-1.3.5.ebuild:
+  Drop old ebuilds
 
   30 Mar 2013; Ulrich Müller <ulm@gentoo.org> enet-1.0.ebuild:
   Fix LICENSE, MIT (Expat) according to LICENSE file.
