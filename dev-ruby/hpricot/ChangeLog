@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.69 2015/01/17 19:54:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.70 2015/02/27 15:19:56 graaff Exp $
+
+  27 Feb 2015; Hans de Graaff <graaff@gentoo.org> hpricot-0.8.6-r3.ebuild:
+  Add ruby22. Drop jruby.
 
   17 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -hpricot-0.8.6-r1.ebuild:
   Remove old.

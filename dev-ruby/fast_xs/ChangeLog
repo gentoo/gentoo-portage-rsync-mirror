@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fast_xs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.37 2014/11/12 16:58:52 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.38 2015/02/27 15:09:23 graaff Exp $
+
+  27 Feb 2015; Hans de Graaff <graaff@gentoo.org> fast_xs-0.8.0-r2.ebuild:
+  Add ruby22.
 
   12 Nov 2014; Agostino Sarubbo <ago@gentoo.org> fast_xs-0.8.0-r1.ebuild:
   Stable for ppc64, wrt bug #497490
