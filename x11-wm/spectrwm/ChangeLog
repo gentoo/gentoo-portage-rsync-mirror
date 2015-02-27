@@ -1,6 +1,16 @@
 # ChangeLog for x11-wm/spectrwm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/spectrwm/ChangeLog,v 1.13 2013/10/19 15:30:46 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/spectrwm/ChangeLog,v 1.14 2015/02/27 12:50:58 xmw Exp $
+
+*spectrwm-2.5.0 (27 Feb 2015)
+*spectrwm-2.4.0 (27 Feb 2015)
+*spectrwm-2.6.2 (27 Feb 2015)
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org>
+  +files/spectrwm-2.4.0-Makefile.patch, +files/spectrwm-2.5.0-Makefile.patch,
+  +files/spectrwm-2.6.2-Makefile.patch, +spectrwm-2.4.0.ebuild,
+  +spectrwm-2.5.0.ebuild, +spectrwm-2.6.2.ebuild:
+  Version bumps (bug 502946, thanks Amir Aupov).
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal
