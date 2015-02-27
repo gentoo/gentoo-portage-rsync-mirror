@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/scourge
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.39 2013/05/07 23:29:09 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.40 2015/02/27 21:50:41 tupone Exp $
+
+  27 Feb 2015; Tupone Alfredo <tupone@gentoo.org> scourge-0.21.1.ebuild:
+  EAPI 5
 
   07 May 2013; Julian Ospald <hasufell@gentoo.org> scourge-0.21.1.ebuild,
   +files/scourge-0.21.1-automake-1.13.patch:

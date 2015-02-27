@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16386 2015/02/27 07:18:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16387 2015/02/27 21:52:29 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -102,9 +102,10 @@ dev-python/ldaptor
 games-board/kaya
 
 # Bernard Cafarelli <voyageur@gentoo.org> (18 Feb 2015)
-# Masked release candidates for testing
+# Masked until reverse deps are OK
 =sys-devel/llvm-3.6.0*
 =sys-devel/clang-3.6.0*
+=sys-devel/dragonegg-3.6.0*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (18 Feb 2015)
 # Integrated into games-engines/scummvm

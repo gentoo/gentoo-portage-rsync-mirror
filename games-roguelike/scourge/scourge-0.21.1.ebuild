@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.21.1.ebuild,v 1.8 2013/05/07 23:29:09 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/scourge-0.21.1.ebuild,v 1.9 2015/02/27 21:50:41 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils wxwidgets games
 
 DESCRIPTION="A graphical rogue-like adventure game"
@@ -46,17 +46,15 @@ src_prepare() {
 
 src_configure() {
 	egamesconf \
-		--disable-dependency-tracking \
 		--with-data-dir="${GAMES_DATADIR}"/${PN} \
 		--localedir=/usr/share/locale
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r ../scourge_data/* || die "doins failed"
+	doins -r ../scourge_data/*
 	doicon assets/scourge.png
 	make_desktop_entry scourge S.C.O.U.R.G.E.
-	dodoc AUTHORS README
 	prepgamesdirs
 }
