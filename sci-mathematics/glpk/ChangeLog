@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.73 2015/02/22 11:51:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.74 2015/02/27 14:14:35 jlec Exp $
+
+*glpk-4.55 (27 Feb 2015)
+
+  27 Feb 2015; Justin Lecher <jlec@gentoo.org> +glpk-4.55.ebuild,
+  glpk-4.45.ebuild, glpk-4.48.ebuild, metadata.xml:
+  Version BUmp, #532906; fix missing slot Operators and inherits
 
   22 Feb 2015; Michał Górny <mgorny@gentoo.org> glpk-4.54.ebuild:
   Drop ~alpha because of a number of non-keyworded deps.

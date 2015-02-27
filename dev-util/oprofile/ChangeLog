@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.110 2015/02/27 11:12:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.111 2015/02/27 14:11:26 bircoph Exp $
+
+  27 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> -oprofile-0.9.8.ebuild,
+  -oprofile-0.9.9.ebuild, oprofile-0.9.9-r1.ebuild, oprofile-1.0.0-r1.ebuild:
+  Fix repoman warnings about missing dependency slots.
+  Remove old versions.
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> oprofile-0.9.9-r1.ebuild:
   Stable for sparc, wrt bug #536166

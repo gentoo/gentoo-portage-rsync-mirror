@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.4-r3.ebuild,v 1.1 2015/02/21 08:47:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.4-r3.ebuild,v 1.2 2015/02/27 14:04:45 ulm Exp $
 
 EAPI=5
 
-inherit elisp-common eutils flag-o-matic multilib readme.gentoo
+inherit autotools elisp-common eutils flag-o-matic multilib readme.gentoo
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
@@ -94,7 +94,7 @@ src_prepare() {
 	sed -i -e "/^\\.so/s/etags/&-${EMACS_SUFFIX}/" doc/man/ctags.1 \
 		|| die "unable to sed ctags.1"
 
-	#AT_M4DIR=m4 eautoreconf
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_configure() {

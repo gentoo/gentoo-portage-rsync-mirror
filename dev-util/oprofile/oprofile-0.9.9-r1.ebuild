@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.9-r1.ebuild,v 1.9 2015/02/27 11:12:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.9-r1.ebuild,v 1.10 2015/02/27 14:11:26 bircoph Exp $
 
 EAPI="5"
 inherit autotools eutils linux-info multilib user java-pkg-opt-2
@@ -16,10 +16,10 @@ KEYWORDS="alpha amd64 arm hppa ~mips ppc ppc64 sparc x86"
 IUSE="java pch qt4"
 
 DEPEND=">=dev-libs/popt-1.7-r1
-	>=sys-devel/binutils-2.14.90.0.6-r3
+	>=sys-devel/binutils-2.14.90.0.6-r3:*
 	>=sys-libs/glibc-2.3.2-r1
 	qt4? ( dev-qt/qtgui:4[qt3support] )
-	java? ( >=virtual/jdk-1.5 )"
+	java? ( >=virtual/jdk-1.5:= )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

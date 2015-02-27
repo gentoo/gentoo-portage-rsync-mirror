@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-1.0.0-r1.ebuild,v 1.1 2015/02/09 07:55:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-1.0.0-r1.ebuild,v 1.2 2015/02/27 14:11:26 bircoph Exp $
 
 EAPI="5"
 inherit eutils java-pkg-opt-2 linux-info multilib user
@@ -16,9 +16,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="java pch"
 
 RDEPEND=">=dev-libs/popt-1.7-r1
-	>=sys-devel/binutils-2.14.90.0.6-r3
+	>=sys-devel/binutils-2.14.90.0.6-r3:*
 	>=sys-libs/glibc-2.3.2-r1
-	java? ( >=virtual/jdk-1.5 )"
+	java? ( >=virtual/jdk-1.5:= )"
 DEPEND="${RDEPEND}
 	>=sys-kernel/linux-headers-2.6.31"
 
