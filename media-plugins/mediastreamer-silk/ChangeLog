@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/mediastreamer-silk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/ChangeLog,v 1.14 2014/11/12 14:19:46 bircoph Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-silk/ChangeLog,v 1.16 2015/02/27 04:29:18 bircoph Exp $
+
+  27 Feb 2015; Andrew Savchenko <bircoph@gentoo.org>
+  mediastreamer-silk-0.0.1.ebuild:
+  Remove bindist from IUSE as well.
+
+  27 Feb 2015; Andrew Savchenko <bircoph@gentoo.org>
+  mediastreamer-silk-0.0.1.ebuild:
+  Fix bindist implementation, wrt bug 541464.
 
   12 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Package is now directly maintained instead of proxy-maintaining.
