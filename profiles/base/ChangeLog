@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.773 2015/02/23 10:14:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.774 2015/02/27 13:10:45 dilfridge Exp $
+
+  27 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
+  Mask atlas support in newer armadillo versions since atlas is not in the main
+  tree yet
 
   23 Feb 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   drop use mask on long gone x264-encoder versions

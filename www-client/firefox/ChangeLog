@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.388 2015/02/27 08:36:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.389 2015/02/27 13:25:27 ago Exp $
+
+  27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> firefox-31.5.0.ebuild:
+  Stable for amd64, wrt bug #541316
 
   27 Feb 2015; Lars Wendler <polynomial-c@gentoo.org> firefox-36.0.ebuild:
   Rolled out an intermediate patchset tarball until the one from _AxS_ is

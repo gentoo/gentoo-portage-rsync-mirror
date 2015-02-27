@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.652 2015/02/25 16:07:02 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.653 2015/02/27 13:10:45 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (27 Feb 2015)
+# Mask atlas support since atlas is not in the main tree yet
+sci-libs/armadillo atlas
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (18 Feb 2015)
 # Experimental backend, plus it requires openvg support in mesa which is

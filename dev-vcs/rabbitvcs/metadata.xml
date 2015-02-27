@@ -9,8 +9,9 @@
  simple and straightforward access to the version control systems you use.
  RabbitVCS is inspired by TortoiseSVN and others.</longdescription> 
 <use>
-<flag name='diff'>Use for diff command <pkg>dev-util/meld</pkg></flag>
+<flag name='caja'>Enable extension for <pkg>mate-base/caja</pkg></flag>
 <flag name='cli'>Eanble console based frontend</flag>
+<flag name='diff'>Use for diff command <pkg>dev-util/meld</pkg></flag>
 <flag name='gedit'>Enable plugin for <pkg>app-editors/gedit</pkg></flag>
 <flag name='nautilus'>Enable extension for <pkg>gnome-base/nautilus</pkg></flag>
 <flag name='thunar'>Enable extension for <pkg>xfce-base/thunar</pkg></flag>

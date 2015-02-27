@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci</herd>
-  <longdescription lang="en">
+<herd>sci</herd>
+<maintainer><email>dilfridge@gentoo.org</email></maintainer>
+<longdescription lang="en">
   Armadillo is a C++ linear algebra library (matrix maths) aiming
   towards a good balance between speed and ease of use. Integer,
   floating point and complex numbers are supported, as well as a
@@ -14,4 +15,20 @@
   need for temporaries. This is accomplished through recursive
   templates and template meta-programming.
 </longdescription>
+<use>
+  <flag name="atlas">
+    Link with <pkg>sci-libs/atlas</pkg> libraries for cblas and
+    clapack
+  </flag>
+  <flag name="arpack">
+    Link with <pkg>sci-libs/arpack</pkg> libraries for eigen decomposition
+  </flag>
+  <flag name='mkl'>
+    Use matrix allocation from the Intel MKL <pkg>sci-libs/mkl</pkg>
+  </flag> 
+  <flag name='tbb'>
+    Use matrix allocation from the Threads Building Blocks
+    <pkg>dev-cpp/tbb</pkg>
+  </flag> 
+</use>
 </pkgmetadata>

@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.29 2015/01/05 16:30:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.30 2015/02/27 13:13:27 dilfridge Exp $
+
+*armadillo-4.600.4 (27 Feb 2015)
+
+  27 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +armadillo-4.600.4.ebuild, -armadillo-3.6.0.ebuild, -armadillo-3.6.1.ebuild,
+  metadata.xml:
+  Version bump from science overlay
 
   05 Jan 2015; Alexis Ballier <aballier@gentoo.org> armadillo-3.6.2.ebuild:
   keyword ~arm

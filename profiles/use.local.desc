@@ -2652,6 +2652,7 @@ dev-vcs/mercurial:tk - Install dev-lang/tk for hgk script.
 dev-vcs/qct:bazaar - Support for dev-vcs/bzr
 dev-vcs/qct:mercurial - Support for dev-vcs/mercurial
 dev-vcs/qct:monotone - Support for dev-vcs/monotone
+dev-vcs/rabbitvcs:caja - Enable extension for mate-base/caja
 dev-vcs/rabbitvcs:cli - Eanble console based frontend
 dev-vcs/rabbitvcs:diff - Use for diff command dev-util/meld
 dev-vcs/rabbitvcs:gedit - Enable plugin for app-editors/gedit
@@ -6372,6 +6373,10 @@ sci-libs/acml:gfortran - Fetch and install acml compiled with GNU gfortran
 sci-libs/acml:ifc - Fetch and install acml compiled with Intel Fortran Compiler (dev-lang/ifc)
 sci-libs/acml:int64 - Install the 64 bits integer library
 sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colpack
+sci-libs/armadillo:arpack - Link with sci-libs/arpack libraries for eigen decomposition
+sci-libs/armadillo:atlas - Link with sci-libs/atlas libraries for cblas and clapack
+sci-libs/armadillo:mkl - Use matrix allocation from the Intel MKL sci-libs/mkl
+sci-libs/armadillo:tbb - Use matrix allocation from the Threads Building Blocks dev-cpp/tbb
 sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
 sci-libs/avogadrolibs:static-plugins - build all plugins statically into main plugin modules
 sci-libs/avogadrolibs:vtk - include vtk support

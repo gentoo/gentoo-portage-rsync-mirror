@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.15.3.ebuild,v 1.2 2015/02/27 13:07:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.16.ebuild,v 1.1 2015/02/27 13:07:06 xmw Exp $
 
-EAPI=4
+EAPI=5
 
 PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,18 +12,21 @@ inherit eutils gnome2-utils multilib distutils
 
 DESCRIPTION="Integrated version control support for your desktop"
 HOMEPAGE="http://rabbitvcs.org"
-SRC_URI="http://rabbitvcs.googlecode.com/files/${P}.tar.bz2"
+SRC_URI="http://github.com/rabbitvcs/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cli diff gedit git nautilus spell thunar"
+IUSE="caja cli diff gedit git nautilus spell thunar"
 
 RDEPEND="dev-python/configobj
 	dev-python/pygobject:2
 	dev-python/pygtk
 	dev-python/pysvn
 	dev-python/simplejson
+	caja? ( dev-python/python-caja
+		dev-python/dbus-python
+		dev-python/gnome-vfs-python )
 	diff? ( dev-util/meld )
 	gedit? ( app-editors/gedit )
 	git? ( dev-python/dulwich )
@@ -47,6 +50,10 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 
+	if use caja ; then
+		insinto /usr/share/caja-python/extensions
+		doins clients/caja/RabbitVCS.py
+	fi
 	if use cli ; then
 		dobin clients/cli/${PN}
 	fi
@@ -81,6 +88,7 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 
 	elog "You should restart file manager to changes take effect:"
+	use caja && elog "\$ caja -q"
 	use nautilus && elog "\$ nautilus -q"
 	use thunar && elog "\$ thunar -q && thunar &"
 	elog ""
