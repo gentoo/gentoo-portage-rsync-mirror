@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.228 2015/01/15 11:36:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.229 2015/02/27 21:25:29 k_f Exp $
+
+*libgcrypt-1.6.3 (27 Feb 2015)
+
+  27 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org> +libgcrypt-1.6.3.ebuild:
+  New upstream release, security fix for two side channel attacks:
+  CVE-2014-3591,CVE-2015-0837
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> libgcrypt-1.5.4-r1.ebuild:
   alpha/ia64/sparc stable wrt #524308
