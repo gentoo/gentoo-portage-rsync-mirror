@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.577 2015/02/18 17:42:40 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.578 2015/02/27 20:57:08 k_f Exp $
+
+*gnupg-1.4.19 (27 Feb 2015)
+
+  27 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-1.4.19.ebuild:
+  Version bump of 1.4 series. This release mitigates two new side channel
 
 *gnupg-2.0.27 (18 Feb 2015)
 
