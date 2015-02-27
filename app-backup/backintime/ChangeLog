@@ -1,6 +1,15 @@
 # ChangeLog for app-backup/backintime
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.23 2014/12/28 18:20:45 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.25 2015/02/27 10:08:43 xmw Exp $
+
+*backintime-1.0.36-r2 (27 Feb 2015)
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org> +backintime-1.0.36-r2.ebuild,
+  -backintime-1.0.36-r1.ebuild:
+  Revbump for previous RDEPEND change
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org> backintime-1.0.36-r1.ebuild:
+  Add DEPEND on dbus-python (bug 522734, thanks Martin LORANG).
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> backintime-1.0.24-r2.ebuild,
   backintime-1.0.36-r1.ebuild:

@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.3.ebuild,v 1.3 2014/08/10 18:11:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.3.ebuild,v 1.4 2015/02/27 10:01:26 xmw Exp $
 
 EAPI=4
 
 DESCRIPTION="The Other Implementations letters. Figlet replacement"
-HOMEPAGE="http://libcaca.zoy.org/toilet.html"
+HOMEPAGE="http://caca.zoy.org/wiki/toilet"
 SRC_URI="http://caca.zoy.org/raw-attachment/wiki/${PN}/${P}.tar.gz"
 
 LICENSE="WTFPL-2"

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/toilet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.22 2014/08/10 18:11:13 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/ChangeLog,v 1.23 2015/02/27 10:01:26 xmw Exp $
+
+  27 Feb 2015; Michael Weber <xmw@gentoo.org> toilet-0.2.ebuild,
+  toilet-0.3.ebuild:
+  Update HOMEPAGE
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> toilet-0.2.ebuild,
   toilet-0.3.ebuild:
