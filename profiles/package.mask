@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16385 2015/02/24 18:01:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16386 2015/02/27 07:18:14 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -273,12 +273,6 @@ rox-extra/songer
 rox-extra/videothumbnail
 rox-extra/wallpaper
 rox-extra/weather
-
-# Sergey Popov <pinkbyte@gentoo.org> (11 Jan 2015)
-# Upstream support is discontinued(last release in 2005)
-# Has some opened bugs - #369653, #448958
-# Removal in 30 days
-net-dialup/gtk-imonc
 
 # Tim Harder <radhermit@gentoo.org> (10 Jan 2015)
 # Masked until protobuf-2.6.0 is unmasked
