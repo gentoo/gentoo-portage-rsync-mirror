@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.7.1.ebuild,v 1.4 2015/02/27 14:37:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.8.0.ebuild,v 1.1 2015/02/27 14:37:33 xmw Exp $
 
 EAPI=5
 
@@ -47,9 +47,7 @@ src_prepare() {
 	java-pkg-opt-2_src_prepare
 
 	epatch \
-		"${FILESDIR}"/${PN}-6.7.1-deprecated-glx-api.patch \
-		"${FILESDIR}"/${PN}-6.7.0-fixed-DESTDIR.patch \
-		"${FILESDIR}"/${PN}-6.5.4-fixed-tbb-VERSION.patch
+		"${FILESDIR}"/${P}-fixed-DESTDIR.patch
 
 	# Feed environment variables used by Opencascade compilation
 	my_install_dir=${EROOT}usr/$(get_libdir)/${P}/ros
@@ -144,7 +142,6 @@ src_install() {
 	insinto /etc/env.d/${PN}
 	newins 50${PN} ${PV}
 
-	#cd "${S}"
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/examples
 		doins -r data

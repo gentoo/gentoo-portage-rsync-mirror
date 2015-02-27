@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.5 2013/04/27 18:15:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.5.ebuild,v 1.6 2015/02/27 14:37:33 xmw Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils check-reqs multilib java-pkg-opt-2 flag-o-matic
 
@@ -26,7 +26,7 @@ DEPEND="
 	virtual/opengl
 	x11-libs/libXmu
 	gl2ps? ( x11-libs/gl2ps )
-	java? ( >=virtual/jdk-0 )
+	java? ( virtual/jdk:= )
 "
 RDEPEND=${DEPEND}
 

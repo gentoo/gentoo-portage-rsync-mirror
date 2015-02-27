@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.30 2015/02/27 13:13:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.31 2015/02/27 14:41:26 dilfridge Exp $
+
+*armadillo-4.650.2 (27 Feb 2015)
+
+  27 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +armadillo-4.650.2.ebuild:
+  Version bump
 
 *armadillo-4.600.4 (27 Feb 2015)
 
