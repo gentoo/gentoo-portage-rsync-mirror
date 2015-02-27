@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/libspe2-2.3.0_p135.ebuild,v 1.2 2012/09/14 22:44:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libspe2/libspe2-2.3.0_p135.ebuild,v 1.3 2015/02/27 08:09:09 vapier Exp $
 inherit eutils
 
 MY_P=${P/_p/.}
@@ -22,10 +22,9 @@ RDEPEND="!sys-libs/libspe"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
-
 if [[ ${CTARGET} == ${CHOST} ]] ; then
-	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET=${CATEGORY/cross-}
+	if [[ ${CATEGORY} == cross-* ]] ; then
+		export CTARGET=${CATEGORY#cross-}
 	fi
 fi
 

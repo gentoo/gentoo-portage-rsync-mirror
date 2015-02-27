@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.41 2015/01/14 21:08:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.42 2015/02/27 08:07:49 vapier Exp $
+
+  27 Feb 2015; Mike Frysinger <vapier@gentoo.org> musl-1.1.5.ebuild,
+  musl-1.1.6.ebuild, musl-9999.ebuild:
+  Use more readable CTARGET setup logic.
 
   14 Jan 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.6.ebuild:
   Stable on amd64, arm, ppc and x86

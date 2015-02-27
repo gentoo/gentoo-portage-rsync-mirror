@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p527-r1.ebuild,v 1.14 2015/02/27 08:05:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.5.3_p550.ebuild,v 1.1 2015/02/27 08:05:58 jlec Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="resolvconf +gnutls bindist selinux"
 
 REQUIRED_USE="bindist? ( gnutls )"
@@ -43,8 +43,6 @@ src_prepare() {
 		elog "See the Makefile itself and http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=440318"
 	fi
 
-	epatch "${FILESDIR}"/${PN}-0.5.3_p514-as-needed.patch
-
 	sed -e 's:test/cert0.pem::g' -i Makefile || die
 
 	tc-export CC
@@ -60,7 +58,7 @@ src_install() {
 	keepdir /etc/vpnc/scripts.d
 	newinitd "${FILESDIR}/vpnc-3.init" vpnc
 	newconfd "${FILESDIR}/vpnc.confd" vpnc
-	sed -e "s:/usr/local:/usr:" -i "${D}"/etc/vpnc/vpnc-script || die
+	sed -e "s:/usr/local:/usr:" -i "${ED}"/etc/vpnc/vpnc-script || die
 
 	systemd_dotmpfilesd "${FILESDIR}"/vpnc-tmpfiles.conf
 	systemd_newunit "${FILESDIR}"/vpnc.service vpnc@.service

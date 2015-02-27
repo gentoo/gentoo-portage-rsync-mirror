@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.132 2015/01/05 12:55:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.133 2015/02/27 08:05:58 jlec Exp $
+
+*vpnc-0.5.3_p550 (27 Feb 2015)
+
+  27 Feb 2015; Justin Lecher <jlec@gentoo.org> +vpnc-0.5.3_p550.ebuild,
+  vpnc-0.5.3_p527-r1.ebuild:
+  Restrict binary distribution with USE=-bindist, #541450; bump to latest svn
+  snapshot
 
   05 Jan 2015; Justin Lecher <jlec@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
   Fix documentation URL, #534490
