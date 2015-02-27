@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.94 2015/01/31 08:22:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.95 2015/02/27 03:24:41 radhermit Exp $
+
+*dcraw-9.24.1 (27 Feb 2015)
+
+  27 Feb 2015; Tim Harder <radhermit@gentoo.org> +dcraw-9.24.1.ebuild:
+  Version bump.
 
 *dcraw-9.23 (31 Jan 2015)
 

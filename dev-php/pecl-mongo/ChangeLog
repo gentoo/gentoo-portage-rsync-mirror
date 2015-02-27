@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-mongo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mongo/ChangeLog,v 1.14 2015/02/13 18:52:48 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mongo/ChangeLog,v 1.15 2015/02/27 03:15:24 grknight Exp $
+
+*pecl-mongo-1.6.3 (27 Feb 2015)
+
+  27 Feb 2015; Brian Evans <grknight@gentoo.org> +pecl-mongo-1.6.3.ebuild:
+  Version bump
 
 *pecl-mongo-1.6.2 (13 Feb 2015)
 

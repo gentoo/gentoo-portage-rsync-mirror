@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.386 2015/02/26 21:54:23 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.387 2015/02/27 03:03:46 patrick Exp $
+
+  27 Feb 2015; Patrick Lauer <patrick@gentoo.org> firefox-36.0.ebuild:
+  De-keyword until missing patches are made available #541478
 
 *firefox-31.5.0 (26 Feb 2015)
 *firefox-36.0 (26 Feb 2015)
