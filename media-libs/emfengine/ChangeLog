@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/emfengine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emfengine/ChangeLog,v 1.4 2013/03/02 21:42:40 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emfengine/ChangeLog,v 1.5 2015/02/27 07:47:16 jlec Exp $
+
+  27 Feb 2015; Justin Lecher <jlec@gentoo.org> emfengine-0.8.ebuild,
+  metadata.xml:
+  Mirror the sources, #537754; Bump to EAPI=5
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> emfengine-0.8.ebuild:
   Move Qt dependencies to the new category
