@@ -44,7 +44,8 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-9.0-sysctluint.patch"
 	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2014-8612.patch"
-	"${FILESDIR}/${PN}-10.1-cve-2014-8613.patch" )
+	"${FILESDIR}/${PN}-10.1-cve-2014-8613.patch"
+	"${FILESDIR}/${PN}-10.1-cve-2015-1414.patch" )
 
 pkg_setup() {
 	# Force set CC=clang. when using gcc, aesni fails to build.
