@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r2.ebuild,v 1.11 2014/11/24 15:03:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre20120101-r2.ebuild,v 1.12 2015/02/28 18:06:08 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
@@ -32,6 +32,11 @@ RDEPEND="${DEPEND}"
 if [[ "${PV}" != *_pre* ]]; then
 	S="${WORKDIR}/${P}release"
 fi
+
+PATCHES=(
+	# Workaround bug #516434
+	"${FILESDIR}"/${P}-import-bdist.patch
+)
 
 DOCS=( WHATSNEW )
 

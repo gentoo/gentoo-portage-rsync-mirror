@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Spiffy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.37 2015/02/21 00:29:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.38 2015/02/28 18:21:41 grobian Exp $
+
+  28 Feb 2015; Fabian Groffen <grobian@gentoo.org> Spiffy-0.460.0.ebuild:
+  Added some Prefix keywords, bug #541380
 
 *Spiffy-0.460.0 (21 Feb 2015)
 

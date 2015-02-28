@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.2 2015/02/17 00:05:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.3 2015/02/28 18:06:15 vapier Exp $
 
 EAPI="5"
 
@@ -49,7 +49,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-libs/boost
 	dev-libs/fribidi
 	dev-libs/libcdio[-minimal]
-	cec? ( >=dev-libs/libcec-2.1 )
+	cec? ( >=dev-libs/libcec-2.2 )
 	dev-libs/libpcre[cxx]
 	>=dev-libs/lzo-2.04
 	dev-libs/tinyxml[stl]

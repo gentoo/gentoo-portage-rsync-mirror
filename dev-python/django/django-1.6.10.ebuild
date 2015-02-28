@@ -1,10 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.7.5.ebuild,v 1.2 2015/02/28 18:08:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.6.10.ebuild,v 1.1 2015/02/28 18:08:42 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE='sqlite?'
 WEBAPP_NO_AUTO_INSTALL="yes"
 
@@ -28,23 +29,24 @@ DEPEND="${RDEPEND}
 	test? (
 		${PYTHON_DEPS//sqlite?/sqlite}
 		dev-python/docutils[${PYTHON_USEDEP}]
-		dev-python/numpy[$(python_gen_usedep 'python*')]
+		<dev-python/numpy-1.9[$(python_gen_usedep 'python*')]
 		dev-python/pillow[${PYTHON_USEDEP}]
-		dev-python/pytz[${PYTHON_USEDEP}]
 		dev-python/pyyaml[${PYTHON_USEDEP}]
+		dev-python/pytz[${PYTHON_USEDEP}]
 		)"
 
-#		dev-python/python-sqlparse[${PYTHON_USEDEP}]
 #		dev-python/bcrypt[${PYTHON_USEDEP}]
 #		dev-python/selenium[${PYTHON_USEDEP}]
-#		sci-libs/gdal[geos,${PYTHON_USEDEP}]
 
 S="${WORKDIR}/${MY_P}"
 
 WEBAPP_MANUAL_SLOT="yes"
 
 PATCHES=(
+	"${FILESDIR}"/${PN}-1.5-py3tests.patch
+	"${FILESDIR}"/${PN}-1.6-objects.patch
 	"${FILESDIR}"/${P}-bashcomp.patch
+	"${FILESDIR}"/${P}-test.patch
 )
 
 pkg_setup() {
@@ -52,12 +54,13 @@ pkg_setup() {
 }
 
 python_prepare_all() {
-	# Prevent d'loading in the doc build
-	sed -e '/^    "sphinx.ext.intersphinx",/d' -i docs/conf.py || die
+	# Disable tests requiring network connection.
+	sed \
+		-e "s:test_sensitive_cookie_not_cached:_&:g" \
+		-i tests/cache/tests.py || die
 
 	distutils-r1_python_prepare_all
 }
-
 python_compile_all() {
 	use doc && emake -C docs html
 }
@@ -75,10 +78,9 @@ src_install() {
 
 	elog "Additional Backend support can be enabled via"
 	optfeature "MySQL backend support in python 2.7 only" dev-python/mysql-python
-	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysqlcient
+	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysql-connector-python
 	optfeature "PostgreSQL backend support" dev-python/psycopg:2
-	optfeature "GEO Django" sci-libs/gdal[geos]
-	optfeature "Memcached support" dev-python/python-memcached
+	optfeature "Memcached support" python-memcached
 	optfeature "ImageField Support" virtual/python-imaging
 	echo ""
 }
@@ -88,7 +90,7 @@ python_install_all() {
 	bashcomp_alias ${PN}-admin django-admin.py
 
 	if use doc; then
-		rm -fr docs/_build/html/_sources || die
+		rm -fr docs/_build/html/_sources || die
 		local HTML_DOCS=( docs/_build/html/. )
 	fi
 

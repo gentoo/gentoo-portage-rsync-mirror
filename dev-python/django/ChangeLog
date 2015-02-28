@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.151 2015/02/28 12:59:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.152 2015/02/28 18:08:42 jlec Exp $
+
+*django-1.4.19 (28 Feb 2015)
+*django-1.6.10 (28 Feb 2015)
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> +django-1.4.19.ebuild,
+  +django-1.6.10.ebuild, +files/django-1.4.19-bashcomp.patch,
+  +files/django-1.4.19-test.patch, +files/django-1.6.10-bashcomp.patch,
+  +files/django-1.6.10-test.patch, -django-1.7.4.ebuild, -django-1.7.ebuild,
+  django-1.7.5.ebuild, django-9999.ebuild:
+  Version BUmp and drop old for CVE-2015-{0219,0220,0221,0222}, #536586; add
+  correct dependencies for tests, Use optfeature instead of harddepened on
+  imaging, #473228
 
 *django-1.7.5 (28 Feb 2015)
 
