@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.101 2015/01/27 09:37:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.102 2015/02/28 22:44:59 zorry Exp $
+
+  28 Feb 2015; Magnus Granberg <zorry@gentoo.org>
+  dietlibc-0.34_pre20140729.ebuild:
+  Disable ssp when building, wrt bug #414629
 
   27 Jan 2015; Pacho Ramos <pacho@gentoo.org> -dietlibc-0.33.ebuild,
   -dietlibc-0.33_pre20130103.ebuild:

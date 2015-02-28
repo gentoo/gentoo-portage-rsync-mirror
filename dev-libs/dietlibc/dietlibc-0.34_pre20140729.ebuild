@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.34_pre20140729.ebuild,v 1.2 2014/07/29 09:15:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.34_pre20140729.ebuild,v 1.3 2015/02/28 22:44:59 zorry Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -32,6 +32,9 @@ src_prepare() {
 	append-flags -nostdinc -W -Wall -Wextra -Wchar-subscripts \
 		-Wmissing-prototypes -Wmissing-declarations -Wno-switch \
 		-Wno-unused -Wredundant-decls -fno-strict-aliasing
+
+	# Disable ssp for we default to it on >=gcc-4.8.3
+	append-flags $(test-flags -fno-stack-protector)
 
 	# only use -nopie on archs that support it
 	gcc-specs-pie && append-flags -nopie
