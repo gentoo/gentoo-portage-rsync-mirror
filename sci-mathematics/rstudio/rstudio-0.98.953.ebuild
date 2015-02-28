@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.98.953.ebuild,v 1.2 2014/12/06 12:32:01 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.98.953.ebuild,v 1.3 2015/02/28 04:39:43 gienah Exp $
 
 EAPI=5
 
@@ -42,12 +42,12 @@ RDEPEND="
 	app-text/pandoc
 	dev-haskell/pandoc-citeproc
 	>=dev-lang/R-2.11.1
-	>=dev-libs/boost-1.50
+	>=dev-libs/boost-1.50:=
 	dev-libs/mathjax
 	dev-libs/openssl:0
 	sys-apps/util-linux
 	sys-libs/zlib
-	>=virtual/jre-1.5
+	>=virtual/jre-1.5:=
 	x11-libs/pango
 	!dedicated? (
 		>=dev-qt/qtcore-${QTVER}:${QTSLOT}

@@ -5439,6 +5439,8 @@ net-libs/wt:resources - Install resources directory
 net-libs/wt:server - Compile in stand-alone httpd connector
 net-libs/wvstreams:boost - Use dev-libs/boost to provide TR1-compatible functional interface. This USE flag is only needed with GCC earlier than version 4.1, or with other compilares not providing said interface.
 net-libs/xrootd:fuse - Enable the sys-fs/fuse filesystem driver
+net-libs/xrootd:http - Enable http protocol support
+net-libs/xrootd:libevent - Use dev-libs/libevent for event handling
 net-libs/zeromq:pgm - Build PGM (Pragmatic General Multicast)extention, a protocol for reliable multicast transport of data over IP networks.
 net-mail/automx:memcached - Enable memcached support
 net-mail/automx:sql - Enable support for SQL backends

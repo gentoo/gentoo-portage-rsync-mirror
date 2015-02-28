@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/rstudio
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.18 2014/12/06 12:32:01 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.19 2015/02/28 04:39:43 gienah Exp $
+
+  28 Feb 2015; Mark Wright <gienah@gentoo.org>
+  +files/rstudio-0.98.1091-boost-1.57.patch, rstudio-0.97.336.ebuild,
+  rstudio-0.97.551.ebuild, rstudio-0.98.1028.ebuild, rstudio-0.98.1091.ebuild,
+  rstudio-0.98.490-r1.ebuild, rstudio-0.98.490.ebuild, rstudio-0.98.932.ebuild,
+  rstudio-0.98.953.ebuild:
+  Patch rstudio-0.98.1091 to build with boost 1.57
 
 *rstudio-0.98.1091 (06 Dec 2014)
 

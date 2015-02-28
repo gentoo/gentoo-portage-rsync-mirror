@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/xrootd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.19 2014/06/19 18:13:17 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.21 2015/02/28 04:39:57 bircoph Exp $
+
+  28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> -xrootd-3.3.2.ebuild,
+  -xrootd-3.3.4.ebuild, -xrootd-4.0.0.ebuild,
+  -files/xrootd-3.2.2-glibc216.patch:
+  Remove old versions.
+
+*xrootd-4.1.1 (28 Feb 2015)
+
+  28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> +xrootd-4.1.1.ebuild,
+  +files/xrootd-no-werror.patch, metadata.xml:
+  Version bump.
 
 *xrootd-4.0.0 (19 Jun 2014)
 

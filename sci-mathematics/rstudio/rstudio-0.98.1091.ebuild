@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.98.1091.ebuild,v 1.1 2014/12/06 12:32:01 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/rstudio-0.98.1091.ebuild,v 1.2 2015/02/28 04:39:43 gienah Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ RDEPEND="
 	dev-libs/openssl:0
 	sys-apps/util-linux
 	sys-libs/zlib
-	>=virtual/jre-1.5
+	>=virtual/jre-1.5:=
 	x11-libs/pango
 	!dedicated? (
 		>=dev-qt/qtcore-${QTVER}:${QTSLOT}
@@ -107,7 +107,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.98.490-prefs.patch \
 		"${FILESDIR}"/${PN}-0.98.932-paths.patch \
 		"${FILESDIR}"/${PN}-0.98.1091-pandoc.patch \
-		"${FILESDIR}"/${PN}-0.98.490-linker_flags.patch
+		"${FILESDIR}"/${PN}-0.98.490-linker_flags.patch \
+		"${FILESDIR}"/${PN}-0.98.1091-boost-1.57.patch
 
 	# Adding -DDISTRO_SHARE=... to append-flags breaks cmake so using
 	# this sed hack for now. ~RMH

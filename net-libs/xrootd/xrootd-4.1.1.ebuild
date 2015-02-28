@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-4.0.0.ebuild,v 1.1 2014/06/19 18:13:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-4.1.1.ebuild,v 1.1 2015/02/28 04:33:34 bircoph Exp $
 
 EAPI=5
 
@@ -15,13 +15,14 @@ SRC_URI="${HOMEPAGE}/download/v${PV}/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc fuse kerberos perl readline ssl test"
+IUSE="doc fuse http kerberos libevent perl readline ssl test"
 
 RDEPEND="
 	!<sci-physics/root-5.32[xrootd]
 	sys-libs/zlib:0=
 	fuse? ( sys-fs/fuse:0= )
 	kerberos? ( virtual/krb5 )
+	libevent? ( dev-libs/libevent[threads] )
 	perl? (
 		dev-lang/perl
 		readline? ( dev-perl/Term-ReadLine-Perl )
@@ -33,6 +34,11 @@ DEPEND="${RDEPEND}
 	perl? ( dev-lang/swig )
 	test? ( dev-util/cppunit )"
 
+REQUIRED_USE="
+	http? ( kerberos ssl )"
+
+PATCHES=( "${FILESDIR}"/${PN}-no-werror.patch )
+
 pkg_setup() {
 	enewgroup xrootd
 	enewuser xrootd -1 -1 "${EPREFIX}"/var/spool/xrootd xrootd
@@ -41,7 +47,9 @@ pkg_setup() {
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_enable fuse)
+		$(cmake-utils_use_enable http)
 		$(cmake-utils_use_enable kerberos KRB5)
+		$(cmake-utils_use_enable libevent)
 		$(cmake-utils_use_enable perl)
 		$(cmake-utils_use_enable readline)
 		$(cmake-utils_use_enable ssl CRYPTO)
