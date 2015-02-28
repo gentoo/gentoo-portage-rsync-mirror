@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-7.40.0.ebuild,v 1.1 2015/02/25 23:08:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-7.40.0.ebuild,v 1.2 2015/02/28 18:44:38 dilfridge Exp $
 
 EAPI=5
 MODULE_AUTHOR=BINGOS
@@ -18,6 +18,7 @@ DEPEND="
 	>=virtual/perl-ExtUtils-Install-1.540.0
 	>=virtual/perl-ExtUtils-Manifest-1.600.0
 	>=virtual/perl-File-Spec-0.800.0
+	!perl-core/ExtUtils-Manifest
 "
 RDEPEND="${DEPEND}"
 PDEPEND="

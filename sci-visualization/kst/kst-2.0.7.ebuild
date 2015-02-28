@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.7.ebuild,v 1.1 2013/08/01 18:28:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/kst-2.0.7.ebuild,v 1.2 2015/02/28 18:49:24 jlec Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ RDEPEND="
 	sci-libs/cfitsio
 	sci-libs/getdata
 	sci-libs/gsl
-	sci-libs/netcdf[cxx]
+	sci-libs/netcdf-cxx:3
 "
 DEPEND="${RDEPEND}
 	test? ( dev-qt/qttest:4 )

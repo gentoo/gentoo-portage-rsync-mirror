@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/kst
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.13 2013/08/01 18:28:16 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.14 2015/02/28 18:49:25 jlec Exp $
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> kst-2.0.7.ebuild, metadata.xml:
+  Fix broken deps
 
 *kst-2.0.7 (01 Aug 2013)
 
