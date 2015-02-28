@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-9999.ebuild,v 1.6 2014/10/24 18:18:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/pology-9999.ebuild,v 1.7 2015/02/28 17:20:33 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,8 @@ HOMEPAGE="http://pology.nedohodnik.net"
 
 LICENSE="GPL-3"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == 9999 ]] || \
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="

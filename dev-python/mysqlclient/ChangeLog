@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/mysqlclient
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysqlclient/ChangeLog,v 1.1 2015/02/28 17:15:44 jlec Exp $
+
+*mysqlclient-1.3.6 (28 Feb 2015)
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> +metadata.xml,
+  +mysqlclient-1.3.6.ebuild:
+  New package written by me

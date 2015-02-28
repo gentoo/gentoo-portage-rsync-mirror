@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/pology
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.11 2014/12/05 14:24:46 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pology/ChangeLog,v 1.12 2015/02/28 17:20:33 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pology-9999.ebuild:
+  Move KEYWORDS to another line to avoid bug #399061
 
   05 Dec 2014; Michael Palimaka <kensington@gentoo.org> -pology-0.11.ebuild:
   Remove old.

@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/menu-cache
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.38 2014/03/04 20:25:45 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.39 2015/02/28 17:16:32 nullishzero Exp $
+
+*menu-cache-1.0.0 (28 Feb 2015)
+
+  28 Feb 2015; Pavel Kazakov <nullishzero@gentoo.org> +menu-cache-1.0.0.ebuild:
+  Version bump; thanks to jospezial
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   menu-cache-0.5.1.ebuild:

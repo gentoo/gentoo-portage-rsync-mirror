@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspdftool/pspdftool-9999.ebuild,v 1.2 2012/01/12 16:21:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspdftool/pspdftool-9999.ebuild,v 1.3 2015/02/28 17:21:55 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,8 @@ unset EXTRA_ECLASS
 DESCRIPTION="Tool for prepress preparation of PDF and PostScript documents"
 HOMEPAGE="http://sourceforge.net/projects/pspdftool"
 [[ "${PV}" == "9999" ]] || SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-[[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
+[[ "${PV}" == "9999" ]] || \
+KEYWORDS="~amd64 ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"

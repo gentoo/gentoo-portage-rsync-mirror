@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kde-l10n-scripts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/ChangeLog,v 1.6 2014/08/10 17:48:24 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/ChangeLog,v 1.7 2015/02/28 17:19:51 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> kde-l10n-scripts-9999.ebuild:
+  Move KEYWORDS to another line to avoid bug #399061
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   kde-l10n-scripts-9999.ebuild:

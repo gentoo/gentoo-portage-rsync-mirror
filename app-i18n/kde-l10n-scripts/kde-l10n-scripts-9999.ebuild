@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/kde-l10n-scripts-9999.ebuild,v 1.6 2014/08/10 17:48:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/kde-l10n-scripts-9999.ebuild,v 1.7 2015/02/28 17:19:51 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ HOMEPAGE="https://github.com/vpelcak/kde-scripts"
 
 LICENSE="LGPL-3"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == 9999 ]] || \
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
