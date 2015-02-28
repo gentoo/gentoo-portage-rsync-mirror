@@ -1,8 +1,8 @@
- Makefile | 76 ++++++++++++++++++++++++++++++++++++----------------------------
- 1 file changed, 43 insertions(+), 33 deletions(-)
+ Makefile | 94 +++++++++++++++++++++++++++++++++++-----------------------------
+ 1 file changed, 52 insertions(+), 42 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index e368cee..bebb7af 100644
+index e368cee..9054526 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -21,11 +21,12 @@
@@ -136,6 +136,47 @@ index e368cee..bebb7af 100644
  	test/merge/test_bam_translate test/merge/test_bam_translate.tmp
  	test/merge/test_pretty_header
  	test/merge/test_rtrans_build
+@@ -191,31 +201,31 @@ check test: samtools $(BGZIP) $(BUILT_TEST_PROGRAMS)
+ 	test/split/test_parse_args
+ 
+ 
+-test/merge/test_bam_translate: test/merge/test_bam_translate.o test/test.o $(HTSLIB)
++test/merge/test_bam_translate: test/merge/test_bam_translate.o test/test.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/merge/test_bam_translate.o test/test.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/merge/test_pretty_header: test/merge/test_pretty_header.o $(HTSLIB)
++test/merge/test_pretty_header: test/merge/test_pretty_header.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/merge/test_pretty_header.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/merge/test_rtrans_build: test/merge/test_rtrans_build.o $(HTSLIB)
++test/merge/test_rtrans_build: test/merge/test_rtrans_build.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/merge/test_rtrans_build.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/merge/test_trans_tbl_init: test/merge/test_trans_tbl_init.o $(HTSLIB)
++test/merge/test_trans_tbl_init: test/merge/test_trans_tbl_init.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/merge/test_trans_tbl_init.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/split/test_count_rg: test/split/test_count_rg.o test/test.o $(HTSLIB)
++test/split/test_count_rg: test/split/test_count_rg.o test/test.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/split/test_count_rg.o test/test.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/split/test_expand_format_string: test/split/test_expand_format_string.o test/test.o $(HTSLIB)
++test/split/test_expand_format_string: test/split/test_expand_format_string.o test/test.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/split/test_expand_format_string.o test/test.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/split/test_filter_header_rg: test/split/test_filter_header_rg.o test/test.o $(HTSLIB)
++test/split/test_filter_header_rg: test/split/test_filter_header_rg.o test/test.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/split/test_filter_header_rg.o test/test.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/split/test_parse_args: test/split/test_parse_args.o test/test.o $(HTSLIB)
++test/split/test_parse_args: test/split/test_parse_args.o test/test.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/split/test_parse_args.o test/test.o $(HTSLIB) $(LDLIBS) -lz
+ 
+-test/vcf-miniview: test/vcf-miniview.o $(HTSLIB)
++test/vcf-miniview: test/vcf-miniview.o
+ 	$(CC) -pthread $(LDFLAGS) -o $@ test/vcf-miniview.o $(HTSLIB) $(LDLIBS) -lz
+ 
+ test_test_h = test/test.h $(htslib_sam_h)
 @@ -252,10 +262,10 @@ misc/md5sum-lite: misc/md5sum-lite.o
  misc/wgsim: misc/wgsim.o
  	$(CC) $(LDFLAGS) -o $@ misc/wgsim.o $(LDLIBS) -lm -lz

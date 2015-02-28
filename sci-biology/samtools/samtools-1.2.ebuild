@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-1.2.ebuild,v 1.1 2015/02/18 10:21:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-1.2.ebuild,v 1.2 2015/02/28 10:51:24 jlec Exp $
 
 EAPI=5
 
@@ -61,7 +61,7 @@ src_test() {
 		HTSLIB=$($(tc-getPKG_CONFIG) --libs htslib)
 		BAMLIB="libbam.so"
 		)
-	emake "${mymakeargs[@]}" test
+	LD_LIBRARY_PATH="${S}" emake "${mymakeargs[@]}" test
 }
 
 src_install() {

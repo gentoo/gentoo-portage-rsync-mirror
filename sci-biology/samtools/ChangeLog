@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/samtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.22 2015/02/18 10:21:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.23 2015/02/28 10:51:24 jlec Exp $
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org>
+  files/samtools-1.2-buildsystem.patch, samtools-1.2.ebuild:
+  Fix depend rules in make which break due to unbundling of htslib, #541134; use
+  LD_LIBRARY_PATH druing tests
 
 *samtools-1.2 (18 Feb 2015)
 

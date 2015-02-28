@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/csu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.8 2015/02/03 21:04:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.9 2015/02/28 10:53:58 grobian Exp $
+
+  28 Feb 2015; Fabian Groffen <grobian@gentoo.org> csu-85.ebuild:
+  Let the compiler determine if Availability.h is available for a more reliable
+  result, bug #539964
 
 *csu-85 (03 Feb 2015)
 
