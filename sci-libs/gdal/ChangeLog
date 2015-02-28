@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.160 2015/02/24 00:05:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.161 2015/02/28 15:52:54 jlec Exp $
+
+*gdal-1.11.1-r3 (28 Feb 2015)
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> +gdal-1.11.1-r3.ebuild,
+  gdal-1.10.0-r1.ebuild, gdal-1.10.1.ebuild, gdal-1.11.1-r1.ebuild,
+  gdal-1.11.1-r2.ebuild, gdal-1.9.2.ebuild:
+  replicate python scripts for each ABI; fix SLOT operators usage
 
 *gdal-1.11.1-r2 (24 Feb 2015)
 

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16390 2015/02/28 15:26:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16391 2015/02/28 15:47:13 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -71,7 +71,6 @@ dev-ruby/mixlib-authentication
 dev-ruby/mixlib-cli
 dev-ruby/mixlib-config
 dev-ruby/mixlib-log
-dev-ruby/mixlib-shellout
 dev-ruby/ohai
 =dev-ruby/rest-client-1.6.7-r1
 

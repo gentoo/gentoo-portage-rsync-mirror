@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.22 2015/02/16 02:16:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.23 2015/02/28 15:52:03 ago Exp $
 
 EAPI="5"
 
@@ -228,6 +228,9 @@ src_prepare() {
 
 	# Fix up broken audio; first is a fixed reversed bisected commit, latter two are backported.
 	epatch "${FILESDIR}"/${PN}-2.1.0-TomWij-bisected-PA-broken-underflow.patch
+
+	# Fix bug #541654
+	epatch "${FILESDIR}"/${PN}-2.1-mem_undefined_functions.patch
 
 	# Disable avcodec checks when avcodec is not used.
 	if ! use avcodec; then

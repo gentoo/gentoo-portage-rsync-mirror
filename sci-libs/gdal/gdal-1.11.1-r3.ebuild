@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r2.ebuild,v 1.2 2015/02/28 15:52:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r3.ebuild,v 1.1 2015/02/28 15:52:54 jlec Exp $
 
 EAPI=5
 
@@ -333,6 +333,7 @@ src_install() {
 		newdoc swig/python/README.txt README-python.txt
 		insinto /usr/share/${PN}/samples
 		doins swig/python/samples/*
+		python_replicate_script "${ED}"/usr/bin/*py
 	fi
 
 	pushd man/man1 > /dev/null

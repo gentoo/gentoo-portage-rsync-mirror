@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.931 2015/02/16 08:48:37 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.932 2015/02/28 15:52:03 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
+  +files/vlc-2.1-mem_undefined_functions.patch, vlc-2.1.2.ebuild,
+  vlc-2.1.5-r1.ebuild:
+  Fix bug #541654
 
   16 Feb 2015; Yixun Lan <dlan@gentoo.org> vlc-2.1.9999.ebuild:
   foward libavcodec patch to 2.1.9999, disable bogus version check

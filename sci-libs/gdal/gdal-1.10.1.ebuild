@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.13 2014/12/31 14:08:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.14 2015/02/28 15:52:54 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-libs/expat
 	dev-libs/libpcre
 	dev-libs/libxml2
-	media-libs/tiff
+	media-libs/tiff:0=
 	sci-libs/libgeotiff
 	sys-libs/zlib[minizip(+)]
 	armadillo? ( sci-libs/armadillo[lapack] )
@@ -35,8 +35,8 @@ RDEPEND="
 	gif? ( media-libs/giflib )
 	gml? ( >=dev-libs/xerces-c-3 )
 	hdf5? ( >=sci-libs/hdf5-1.6.4[szip] )
-	java? ( >=virtual/jre-1.6 )
-	jpeg? ( virtual/jpeg )
+	java? ( >=virtual/jre-1.6:* )
+	jpeg? ( virtual/jpeg:0= )
 	jpeg2k? ( media-libs/jasper )
 	mysql? ( virtual/mysql )
 	netcdf? ( sci-libs/netcdf )
@@ -45,8 +45,8 @@ RDEPEND="
 	opencl? ( virtual/opencl )
 	pdf? ( >=app-text/poppler-0.24.3:= )
 	perl? ( dev-lang/perl:= )
-	png? ( media-libs/libpng )
-	postgres? ( >=dev-db/postgresql-8.4 )
+	png? ( media-libs/libpng:0= )
+	postgres? ( >=dev-db/postgresql-8.4:* )
 	python? (
 		${PYTHON_DEPS}
 		dev-python/setuptools[${PYTHON_USEDEP}]
