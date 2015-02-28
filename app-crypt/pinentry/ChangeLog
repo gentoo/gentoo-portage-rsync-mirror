@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.163 2015/02/28 13:23:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.164 2015/02/28 19:40:33 alonbl Exp $
+
+  28 Feb 2015; Alon Bar-Lev <alonbl@gentoo.org> -pinentry-0.8.2.ebuild,
+  -pinentry-0.8.3.ebuild, -pinentry-0.8.4.ebuild:
+  Cleanup
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pinentry-0.9.0.ebuild:
   Stable for ia64, wrt bug #540002

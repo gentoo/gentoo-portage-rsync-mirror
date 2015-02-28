@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.201 2015/02/17 07:43:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.202 2015/02/28 19:54:40 maekke Exp $
+
+  28 Feb 2015; Markus Meier <maekke@gentoo.org> python-docs-2.7.8.ebuild:
+  arm stable, bug #540278
 
   17 Feb 2015; Jeroen Roovers <jer@gentoo.org> python-docs-2.7.8.ebuild:
   Stable for HPPA (bug #540278).

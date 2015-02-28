@@ -4,10 +4,10 @@ DESCRIPTION=High-level C Binding for ZeroMQ
 EAPI=5
 HOMEPAGE=http://czmq.zeromq.org
 IUSE=doc static-libs
-KEYWORDS=amd64 ~arm hppa x86
+KEYWORDS=amd64 arm hppa x86
 LICENSE=LGPL-3
 RDEPEND=dev-libs/libsodium:= sys-apps/util-linux >=net-libs/zeromq-2.1
 SLOT=0
 SRC_URI=http://download.zeromq.org/czmq-2.2.0.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=83df845372b4610d8c11a60fa81c472e
+_md5_=0b14a9432b0a6d37faa32830a36a8083
