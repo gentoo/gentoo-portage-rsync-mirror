@@ -26,7 +26,6 @@
 	<flag name='pulseaudio'>Enable pulseaudio output for sound emulation</flag>
 	<flag name='rbd'>Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD</flag>
 	<flag name='sdl'>Enable the SDL-based console</flag>
-	<flag name='seccomp'>Utilize <pkg>sys-libs/libseccomp</pkg> to enable kernel filtering of system calls to prevent malicious guests from doing damage.</flag>
 	<flag name='spice'>Enable Spice protocol support via <pkg>app-emulation/spice</pkg></flag>
 	<flag name='ssh'>Enable SSH based block device support via <pkg>net-libs/libssh2</pkg></flag>
 	<flag name='static-softmmu'>Builds the Software MMU (system) targets as static binaries</flag>

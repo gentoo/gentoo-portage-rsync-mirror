@@ -31,7 +31,6 @@ app-admin/clsync:extra-hardened - Enable extra security checks. This will hurt p
 app-admin/clsync:gio - Enable GIO for FS monitoring (glib based alternative to inotify interface, not recommended; if both are compiled, may be selected at runtime).
 app-admin/clsync:highload-locks - Allows to use spinlocks for short delays instead of mutexes, but only on SMP systems.
 app-admin/clsync:namespaces - Enable namespaces isolation.
-app-admin/clsync:seccomp - Enable seccomp for system call filtering.
 app-admin/collectd:collectd_plugins_aggregation - Build the aggregation plugin (aggregate multiplte values into a single value)
 app-admin/collectd:collectd_plugins_apache - Build the apache input plugin (transferred bytes, handled requests, detailed scoreboard statistics)
 app-admin/collectd:collectd_plugins_apcups - Build the apcups input plugin (UPS charge, load, input/output/battery voltage, etc.)
@@ -581,7 +580,6 @@ app-emulation/libvirt:xen - Support management of Xen virtualisation (app-emulat
 app-emulation/libvirt-glib:introspection - Use dev-libs/gobject-introspection for introspection
 app-emulation/libvirt-glib:vala - Enable bindings for dev-lang/vala
 app-emulation/lxc:cgmanager - Enable support for cgroup management using app-admin/cgmanager
-app-emulation/lxc:seccomp - Use seccomp syscall filters using sys-libs/libseccomp
 app-emulation/open-vm-tools:doc - Generate API documentation
 app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
@@ -607,7 +605,6 @@ app-emulation/qemu:png - Enable png image support for the VNC console server
 app-emulation/qemu:pulseaudio - Enable pulseaudio output for sound emulation
 app-emulation/qemu:rbd - Enable rados block device backend support, see http://ceph.newdream.net/wiki/QEMU-RBD
 app-emulation/qemu:sdl - Enable the SDL-based console
-app-emulation/qemu:seccomp - Utilize sys-libs/libseccomp to enable kernel filtering of system calls to prevent malicious guests from doing damage.
 app-emulation/qemu:snappy - Enable support for snappy compression
 app-emulation/qemu:spice - Enable Spice protocol support via app-emulation/spice
 app-emulation/qemu:ssh - Enable SSH based block device support via net-libs/libssh2
@@ -4864,7 +4861,6 @@ net-dns/bind:nslint - Build and install the nslint util
 net-dns/bind:rpz - Enable response policy rewriting (rpz)
 net-dns/bind:rrl - Response Rate Limiting (RRL) - Experimental
 net-dns/bind:sdb-ldap - Enables ldap-sdb backend
-net-dns/bind:seccomp - Enable use of sys-libs/libseccomp for system call filtering
 net-dns/bind:urandom - Use /dev/urandom instead of /dev/random
 net-dns/bind-tools:gost - Enables gost OpenSSL engine support
 net-dns/bind-tools:gssapi - Enable gssapi support
@@ -5690,7 +5686,6 @@ net-misc/lldpd:graph - Create dot graphs in documentations
 net-misc/lldpd:jansson - Enable JSON output via Jansson
 net-misc/lldpd:json-c - Enable JSON output via json-c
 net-misc/lldpd:lldpmed - Enable LLDP-MED extension
-net-misc/lldpd:seccomp - Enable use of libseccomp for system call filtering
 net-misc/lldpd:snmp - Enable the use of SNMP
 net-misc/lldpd:sonmp - Enable SynOptics Network Management
 net-misc/mediatomb:curl - Support YouTube and external media sources (e.g. internet radio)
@@ -5878,7 +5873,6 @@ net-misc/tinc:gui - Add GUI support, using dev-python/wxpython
 net-misc/tinc:openssl - Using dev-libs/openssl for cryptography-related functions
 net-misc/tinc:uml - Enable support for User Mode Linux Sockets
 net-misc/tinc:vde - Enable Virtual Distributed Ethernet (VDE) based networking
-net-misc/tlsdate:seccomp - Use seccomp syscall filters to improve security
 net-misc/tor:bufferevents - Use libevent's buffered IO implementation (unstable, buggy)
 net-misc/tor:ecc - Enable Elliptical Curve Cyptography
 net-misc/tor:nat-pmp - Enable NAT Port Mapping Protocol

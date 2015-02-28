@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ExtUtils-Manifest-1.630.0-r1.ebuild,v 1.1 2014/07/26 13:57:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ExtUtils-Manifest-1.630.0-r1.ebuild,v 1.2 2015/02/28 21:35:34 dilfridge Exp $
 
 EAPI=5
 
@@ -16,3 +16,5 @@ IUSE=""
 
 SRC_TEST="do"
 PREFER_BUILDPL="no"
+
+RDEPEND="!=perl-core/ExtUtils-MakeMaker-7.40.0"

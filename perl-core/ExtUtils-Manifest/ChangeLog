@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-Manifest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.42 2015/02/27 23:35:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.43 2015/02/28 21:35:34 dilfridge Exp $
+
+  28 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  ExtUtils-Manifest-1.630.0-r1.ebuild, ExtUtils-Manifest-1.700.0.ebuild:
+  Add another blocker for bug 541544
 
 *ExtUtils-Manifest-1.700.0 (27 Feb 2015)
 

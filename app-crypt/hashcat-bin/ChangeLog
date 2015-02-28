@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/hashcat-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.11 2014/05/05 15:42:54 alonbl Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashcat-bin/ChangeLog,v 1.12 2015/02/28 21:59:15 alonbl Exp $
+
+*hashcat-bin-0.49 (28 Feb 2015)
+
+  28 Feb 2015; Alon Bar-Lev <alonbl@gentoo.org> +hashcat-bin-0.49.ebuild:
+  Version bump, bug#540406
 
 *hashcat-bin-0.47 (05 May 2014)
 

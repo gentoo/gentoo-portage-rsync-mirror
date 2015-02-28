@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.63 2015/02/23 20:36:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.64 2015/02/28 21:42:38 bircoph Exp $
+
+  28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  seccomp USE flag is now global, removing from metadata
 
   23 Feb 2015; Markos Chandras <hwoarang@gentoo.org> lxc-1.0.6-r1.ebuild,
   lxc-1.0.7.ebuild, lxc-1.1.0-r2.ebuild, lxc-1.1.0-r3.ebuild:

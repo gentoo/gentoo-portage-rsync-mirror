@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tlsdate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.19 2015/02/22 06:26:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.20 2015/02/28 21:59:43 bircoph Exp $
+
+  28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  seccomp USE flag is now global, removing from metadata
 
   22 Feb 2015; Mike Frysinger <vapier@gentoo.org> tlsdate-0.0.12-r2.ebuild:
   Add hppa love.

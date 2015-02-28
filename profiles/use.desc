@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.523 2015/02/18 16:11:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.524 2015/02/28 21:33:20 bircoph Exp $
 
 # Keep them sorted
 
@@ -296,6 +296,7 @@ savedconfig - Use this to restore your config from /etc/portage/savedconfig ${CA
 scanner - Add support for scanner hardware (e.g. build the sane frontend in kdegraphics)
 sdl - Add support for Simple Direct Layer (media library)
 seamonkey - Add support for the Seamonkey web-browser
+seccomp - Enable seccomp for system call filtering
 selinux - !!internal use only!! Security Enhanced Linux support, this must be set by the selinux profile or breakage will occur
 semantic-desktop - Cross-KDE support for semantic search and information retrieval
 session - Add persistent session support

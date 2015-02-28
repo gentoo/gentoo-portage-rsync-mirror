@@ -5,7 +5,4 @@
  <email>vapier@gentoo.org</email>
  <description>feel free to fix things</description>
 </maintainer>
-<use>
- <flag name='seccomp'>Use seccomp syscall filters to improve security</flag>
-</use>
 </pkgmetadata>

@@ -13,6 +13,5 @@
   </maintainer>
   <use>
     <flag name="cgmanager">Enable support for cgroup management using <pkg>app-admin/cgmanager</pkg></flag>
-    <flag name="seccomp">Use seccomp syscall filters using <pkg>sys-libs/libseccomp</pkg></flag>
   </use>
 </pkgmetadata>

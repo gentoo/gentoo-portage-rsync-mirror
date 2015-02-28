@@ -28,7 +28,6 @@ lldpd also implements CDP (Cisco Discovery Protocol), FDP (Foundry Discovery Pro
 		<flag name='jansson'>Enable JSON output via Jansson</flag>
 		<flag name='json-c'>Enable JSON output via json-c</flag>
 		<flag name='lldpmed'>Enable LLDP-MED extension</flag>
-		<flag name='seccomp'>Enable use of libseccomp for system call filtering</flag>
 		<flag name='sonmp'>Enable SynOptics Network Management</flag>
 		<flag name='snmp'>Enable the use of SNMP</flag>
 	</use>

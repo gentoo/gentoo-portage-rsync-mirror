@@ -1,11 +1,14 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9832 2015/02/28 17:17:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9833 2015/02/28 21:33:20 bircoph Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
+  28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> use.desc:
+  Add "seccomp" global USE flag.
+  
   28 Feb 2015; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Add dev-libs/libzypp to zypper mask too.
 

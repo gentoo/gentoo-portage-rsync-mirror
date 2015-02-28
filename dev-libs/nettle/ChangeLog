@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.116 2015/01/16 11:52:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.118 2015/02/28 21:35:59 robbat2 Exp $
+
+  28 Feb 2015; Robin H. Johnson <robbat2@gentoo.org> nettle-2.7.1-r2.ebuild:
+  Oops, changed old r2 as well, revert.
+
+*nettle-2.7.1-r3 (28 Feb 2015)
+
+  28 Feb 2015; Robin H. Johnson <robbat2@gentoo.org> +nettle-2.7.1-r3.ebuild,
+  nettle-2.7.1-r2.ebuild:
+  Bug #540942: gmp w/o 32-bit will cause nettle to compile successfully, but be
+  missing libhogweed, cascading to other build failures (eg rtmpdump); bump so
+  that anybody who installed nettle then gmp rebuilds nettle correctly.
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> nettle-2.7.1-r1.ebuild:
   alpha/arm64/ia64/s390/sparc stable wrt #525160
