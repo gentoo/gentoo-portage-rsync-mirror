@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1556 2015/02/26 20:41:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1557 2015/02/27 23:44:41 mpagano Exp $
+
+  27 Feb 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Cleanup how we determine base linux tarball.
 
   26 Feb 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   mozconfig-v5.31.eclass, +mozconfig-v5.36.eclass:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.299 2015/02/23 12:42:40 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.300 2015/02/27 23:44:41 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -371,15 +371,12 @@ detect_version() {
 			UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-git*}.xz ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.xz"
 		fi
 	else
+		KV_PATCH_ARR=(${KV_PATCH//\./ })
+
+		# the different majorminor versions have different patch start versions
+		OKV_DICT=(["2"]="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))" ["3"]="2.6.39" ["4"]="3.19")
 		if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
-			if [[ ${KV_MAJOR}${KV_PATCH} -eq 30 ]]; then
-				OKV="2.6.39"
-			elif [[ ${KV_MAJOR}${KV_PATCH} -eq 40 ]]; then
-				OKV="3.19"
-			else
-				KV_PATCH_ARR=(${KV_PATCH//\./ })
-				OKV="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"
-			fi
+			OKV=${OKV_DICT["${KV_MAJOR}"]}
 			KERNEL_URI="${KERNEL_BASE_URI}/testing/patch-${CKV//_/-}.xz
 						${KERNEL_BASE_URI}/linux-${OKV}.tar.xz"
 			UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.xz"
@@ -392,14 +389,7 @@ detect_version() {
 		fi
 
 		if [[ ${RELEASETYPE} == -rc-git ]]; then
-			if [[ ${KV_MAJOR}${KV_PATCH} -eq 30 ]]; then
-				OKV="2.6.39"
-			elif [[ ${KV_MAJOR}${KV_PATCH} -eq 40 ]]; then
-				OKV="2.19"
-			else
-				KV_PATCH_ARR=(${KV_PATCH//\./ })
-				OKV="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"
-			fi
+			OKV=${OKV_DICT["${KV_MAJOR}"]}
 			KERNEL_URI="${KERNEL_BASE_URI}/snapshots/patch-${KV_MAJOR}.${KV_PATCH}${RELEASE}.xz
 						${KERNEL_BASE_URI}/testing/patch-${KV_MAJOR}.${KV_PATCH}${RELEASE/-git*}.xz
 						${KERNEL_BASE_URI}/linux-${OKV}.tar.xz"
@@ -409,8 +399,7 @@ detect_version() {
 
 
 	fi
-
-
+	
 	debug-print-kernel2-variables
 
 	handle_genpatches
