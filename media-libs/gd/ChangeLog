@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.104 2015/02/16 14:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.105 2015/02/28 22:27:05 vapier Exp $
+
+  28 Feb 2015; Mike Frysinger <vapier@gentoo.org> +files/gd-2.1.1-headers.patch,
+  gd-2.1.1.ebuild:
+  Fix out-of-tree test builds #540376 by tka.
 
 *gd-2.1.1 (16 Feb 2015)
 

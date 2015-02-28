@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.21 2014/07/26 09:04:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.2.ebuild,v 1.22 2015/02/28 22:23:01 mattst88 Exp $
 
 EAPI=3
 
@@ -35,6 +35,7 @@ fi
 LICENSE="MIT LGPL-3 SGI-B-2.0"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+RESTRICT="!bindist? ( bindist )"
 
 INTEL_CARDS="intel"
 RADEON_CARDS="radeon"

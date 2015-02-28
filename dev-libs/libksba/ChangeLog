@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.164 2014/12/06 17:14:32 k_f Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.165 2015/02/28 22:07:08 tgall Exp $
+
+  28 Feb 2015;  <tgall@gentoo.org> libksba-1.3.2.ebuild:
+  stable on arm64
 
   06 Dec 2014; Kristian Fiskerstrand <k_f@gentoo.org> -libksba-1.3.0.ebuild:
   Cleanup old for security bug #530634

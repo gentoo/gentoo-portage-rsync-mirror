@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.1.1.ebuild,v 1.1 2015/02/16 14:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.1.1.ebuild,v 1.2 2015/02/28 22:27:05 vapier Exp $
 
 EAPI="5"
 
@@ -28,6 +28,10 @@ DEPEND="${RDEPEND}
 	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 S="${WORKDIR}/lib${P}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-headers.patch" #540376
+}
 
 multilib_src_configure() {
 	# we aren't actually {en,dis}abling X here ... the configure
