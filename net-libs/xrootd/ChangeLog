@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xrootd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.21 2015/02/28 04:39:57 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.22 2015/02/28 19:30:46 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xrootd-3.3.6.ebuild:
+  Stable for amd64, wrt bug #541580
 
   28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> -xrootd-3.3.2.ebuild,
   -xrootd-3.3.4.ebuild, -xrootd-4.0.0.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nano
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.311 2014/07/29 15:24:14 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.312 2015/02/28 19:30:36 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> nano-2.3.6.ebuild:
+  Stable for amd64, wrt bug #541548
 
 *nano-2.3.6 (29 Jul 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-util/antimicro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/antimicro/ChangeLog,v 1.15 2015/02/15 23:22:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/antimicro/ChangeLog,v 1.16 2015/02/28 19:30:56 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> antimicro-2.10.1.ebuild:
+  Stable for amd64, wrt bug #541554
 
   15 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> -antimicro-2.3.3.ebuild:
   old

@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.834 2015/02/27 21:44:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.835 2015/02/28 19:03:29 mgorny Exp $
+
+*xorg-server-1.16.4-r2 (28 Feb 2015)
+
+  28 Feb 2015; Michał Górny <mgorny@gentoo.org> +xorg-server-1.16.4-r2.ebuild:
+  Backport the eselect-opengl/Files section fix to 1.16* branch.
 
 *xorg-server-1.17.1-r1 (27 Feb 2015)
 

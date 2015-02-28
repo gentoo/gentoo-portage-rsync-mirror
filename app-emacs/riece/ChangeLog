@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.87 2015/01/25 22:20:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.88 2015/02/28 19:30:26 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> riece-9.0.0.ebuild:
+  Stable for amd64, wrt bug #541602
 
 *riece-9.0.0 (25 Jan 2015)
 

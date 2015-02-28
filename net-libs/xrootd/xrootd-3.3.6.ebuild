@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.3.6.ebuild,v 1.2 2014/03/11 03:14:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.3.6.ebuild,v 1.3 2015/02/28 19:30:46 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/download/v${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc fuse kerberos perl readline ssl test"
 
 RDEPEND="

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.20.ebuild,v 1.6 2012/12/16 19:52:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/scala/scala-3.3.20.ebuild,v 1.7 2015/02/28 19:15:33 monsieurp Exp $
 
 EAPI=4
 
@@ -17,6 +17,8 @@ IUSE=""
 
 RDEPEND="
 	!<sci-chemistry/ccp4-6.1.2
+	!dev-java/scala-bin
+	!dev-lang/scala
 	sci-libs/ccp4-libs
 	virtual/lapack"
 DEPEND="${RDEPEND}
