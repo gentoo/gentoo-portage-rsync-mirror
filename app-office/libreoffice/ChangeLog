@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.622 2015/02/26 20:02:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.623 2015/02/28 11:48:35 remi Exp $
+
+  28 Feb 2015; Rémi Cardona <remi@gentoo.org> libreoffice-4.4.1.2.ebuild:
+  Add bashisms removal patch back, it's not in 4.4, but in the
+  'feature/priorities' branch in upstream git.
 
 *libreoffice-4.4.1.2 (26 Feb 2015)
 
