@@ -1,7 +1,10 @@
 # ChangeLog for dev-java/cssparser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cssparser/ChangeLog,v 1.1 2015/01/30 20:31:22 monsieurp Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cssparser/ChangeLog,v 1.2 2015/02/28 00:29:40 monsieurp Exp $
+
+  28 Feb 2015; Patrice Clement <monsieurp@gentoo.org> cssparser-0.9.14.ebuild,
+  metadata.xml:
+  Add myself as maintainer.
 
   22 Jan 2009; Alistair Bush <ali_bush@gentoo.org> ChangeLog:
   Add ChangeLog for QA.
-

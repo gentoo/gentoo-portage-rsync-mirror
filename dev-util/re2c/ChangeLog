@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/re2c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.86 2015/02/27 11:24:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.87 2015/02/28 00:06:06 slyfox Exp $
+
+*re2c-0.14.1 (28 Feb 2015)
+
+  28 Feb 2015; Sergei Trofimovich <slyfox@gentoo.org> +re2c-0.14.1.ebuild,
+  -re2c-0.14.ebuild:
+  Version bump. Fixes 're2c -V' output for trailing zero versions. bug #541430
+  by Phil Tooley and Slava Gorbunov, fix by Mike Gilbert.
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> re2c-0.13.7.5.ebuild:
   Stable for sparc, wrt bug #535406

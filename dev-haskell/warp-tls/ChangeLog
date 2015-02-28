@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/warp-tls
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp-tls/ChangeLog,v 1.5 2014/12/22 11:56:36 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp-tls/ChangeLog,v 1.6 2015/02/28 00:29:42 slyfox Exp $
+
+  28 Feb 2015; Sergei Trofimovich <slyfox@gentoo.org> -warp-tls-2.0.0.ebuild:
+  Drop old (uses deprecated dev-haskell/tls-extra).
 
 *warp-tls-3.0.1.1 (22 Dec 2014)
 
