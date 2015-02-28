@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.55 2015/01/07 14:04:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.56 2015/02/28 20:03:10 maekke Exp $
+
+  28 Feb 2015; Markus Meier <maekke@gentoo.org> tinyproxy-1.8.3-r3.ebuild:
+  add ~arm, bug #540102
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Reassign as and cleanup discussed at https://www.mail-archive.com/gentoo-

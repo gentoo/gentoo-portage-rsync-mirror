@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/suhosin-0.9.37.1.ebuild,v 1.8 2015/02/28 19:57:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/suhosin-0.9.37.1.ebuild,v 1.9 2015/02/28 20:16:14 grknight Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ LICENSE="PHP-3.01"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-lang/php[unicode]"
+DEPEND="dev-lang/php:*[unicode]"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

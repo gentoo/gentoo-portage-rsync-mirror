@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.391 2014/07/28 09:44:48 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.392 2015/02/28 20:15:19 tgall Exp $
+
+  28 Feb 2015;  <tgall@gentoo.org> coreutils-8.22-r1.ebuild:
+  arm64, stable
 
 *coreutils-8.23 (28 Jul 2014)
 

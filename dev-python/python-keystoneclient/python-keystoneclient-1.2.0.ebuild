@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-1.2.0.ebuild,v 1.1 2015/02/28 07:06:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-1.2.0.ebuild,v 1.2 2015/02/28 20:10:04 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 )
@@ -24,6 +24,7 @@ TCDEPEND="
 	>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 	>=dev-python/mox3-0.7.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-mock-0.5.1[${PYTHON_USEDEP}]
+	>=dev-python/tempest-lib-0.2.0[${PYTHON_USEDEP}]
 	>=dev-python/testresources-0.2.4[${PYTHON_USEDEP}]
 	>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 "
@@ -42,7 +43,6 @@ DEPEND="
 		>=dev-python/oslotest-1.2.0[${PYTHON_USEDEP}]
 		>=dev-python/pycrypto-2.6[${PYTHON_USEDEP}]
 		>=dev-python/requests-mock-0.5.1[${PYTHON_USEDEP}]
-		>=dev-python/tempest-lib-0.2.0[${PYTHON_USEDEP}]
 		>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 		>=dev-python/testtools-0.9.36[${PYTHON_USEDEP}]
 		!~dev-python/testtools-1.2.0[${PYTHON_USEDEP}]
