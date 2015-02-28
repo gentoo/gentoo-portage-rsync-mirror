@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/eric
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.216 2014/12/09 03:29:55 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.218 2015/02/28 01:54:29 pesa Exp $
+
+  28 Feb 2015; Davide Pesavento <pesa@gentoo.org> -eric-5.4.7.ebuild:
+  old
+
+*eric-4.5.25-r1 (28 Feb 2015)
+
+  28 Feb 2015; Davide Pesavento <pesa@gentoo.org> +eric-4.5.25-r1.ebuild,
+  -eric-4.5.25.ebuild:
+  Add missing USE deps, bug 541560.
 
 *eric-5.5.2 (09 Dec 2014)
 

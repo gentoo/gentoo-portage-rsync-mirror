@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.25.ebuild,v 1.1 2014/10/08 00:27:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.25-r1.ebuild,v 1.1 2015/02/28 01:50:51 pesa Exp $
 
 EAPI=4
 
@@ -8,6 +8,7 @@ PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
 # 2.4 and 2.5 are restricted to avoid conditional dependency on dev-python/simplejson
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
+PYTHON_USE_WITH="sqlite xml"
 
 PLOCALES="cs de en es fr it ru tr zh_CN"
 
