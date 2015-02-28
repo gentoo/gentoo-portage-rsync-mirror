@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxtask
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.34 2014/09/17 03:50:20 nullishzero Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.35 2015/02/28 17:43:57 nullishzero Exp $
+
+*lxtask-0.1.6 (28 Feb 2015)
+
+  28 Feb 2015; Pavel Kazakov <nullishzero@gentoo.org> +lxtask-0.1.6.ebuild:
+  Version bump
 
 *lxtask-0.1.5 (17 Sep 2014)
 

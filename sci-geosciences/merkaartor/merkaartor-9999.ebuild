@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.14 2013/03/02 23:21:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.15 2015/02/28 17:39:49 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,8 @@ HOMEPAGE="http://www.merkaartor.be"
 
 LICENSE="GPL-2"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == 9999 ]] || \
+KEYWORDS="~amd64 ~x86"
 IUSE="debug exif gps nls libproxy webkit"
 
 QT_MINIMAL="4.7.2"

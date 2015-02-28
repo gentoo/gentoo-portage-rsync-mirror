@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/simple-mtpfs/simple-mtpfs-9999.ebuild,v 1.2 2013/12/29 17:16:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/simple-mtpfs/simple-mtpfs-9999.ebuild,v 1.3 2015/02/28 17:40:30 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,8 @@ HOMEPAGE="https://github.com/phatina/simple-mtpfs"
 
 LICENSE="GPL-2+"
 SLOT="0"
-[[ ${PV} == 9999 ]] || KEYWORDS="~amd64 ~x86"
+[[ ${PV} == 9999 ]] || \
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="

@@ -1,6 +1,15 @@
 # ChangeLog for app-text/texlive-core
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.218 2014/11/04 10:50:58 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.219 2015/02/28 17:45:07 blueness Exp $
+
+*texlive-core-2014-r2 (28 Feb 2015)
+*texlive-core-2013-r2 (28 Feb 2015)
+*texlive-core-2012-r2 (28 Feb 2015)
+
+  28 Feb 2015; Anthony G. Basile <blueness@gentoo.org>
+  +texlive-core-2012-r2.ebuild, +texlive-core-2013-r2.ebuild,
+  +texlive-core-2014-r2.ebuild:
+  Bump 2012/2013/2014 for bug #510770
 
   04 Nov 2014; Alexis Ballier <aballier@gentoo.org>
   -texlive-core-2011-r6.ebuild, -texlive-core-2011-r7.ebuild:
