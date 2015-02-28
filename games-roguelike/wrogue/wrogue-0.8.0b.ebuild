@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/wrogue/wrogue-0.8.0b.ebuild,v 1.4 2012/10/05 20:37:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/wrogue/wrogue-0.8.0b.ebuild,v 1.5 2015/02/28 12:31:29 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Gothic science fantasy roguelike game"
@@ -30,13 +30,13 @@ src_compile() {
 	local myCPPFLAGS="-std=c99 -Iinclude -Ilib -Iui -Igenerate"
 	local myCFLAGS="$(sdl-config --cflags) ${CFLAGS}"
 	emake -C src -f linux.mak STRIP_BINARY=NO \
-		CFLAGS="${myCPPFLAGS} ${myCFLAGS}" release || die "emake failed"
+		CFLAGS="${myCPPFLAGS} ${myCFLAGS}" release
 }
 
 src_install() {
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r data || die "doins failed"
+	doins -r data
 	dodoc changes.txt
 
 	newicon data/ui/icon.bmp ${PN}.bmp

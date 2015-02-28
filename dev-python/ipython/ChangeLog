@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.159 2015/02/08 23:24:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.160 2015/02/28 12:53:04 jlec Exp $
+
+*ipython-3.0.0 (28 Feb 2015)
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> +ipython-3.0.0.ebuild,
+  -ipython-0.12-r1.ebuild, -ipython-0.13.2.ebuild, -ipython-1.1.0-r1.ebuild,
+  -ipython-1.1.0-r2.ebuild, -ipython-1.1.0.ebuild, -ipython-1.2.0.ebuild,
+  -ipython-2.1.0.ebuild, -ipython-2.3.0.ebuild, -ipython-2.3.1.ebuild:
+  Version Bump; drop old
 
   08 Feb 2015; Kacper Kowalik <xarthisius@gentoo.org> ipython-2.4.0.ebuild:
   Simplify check if pandoc is installed. Thanks to Arfrever for a suggestion

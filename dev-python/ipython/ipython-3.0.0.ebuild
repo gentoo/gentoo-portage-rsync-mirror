@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.3.1.ebuild,v 1.4 2015/01/31 07:05:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.1 2015/02/28 12:53:04 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 PYTHON_REQ_USE='readline,sqlite'
 
-inherit distutils-r1 virtualx
+inherit distutils-r1 eutils virtualx
 
 DESCRIPTION="Advanced interactive shell for Python"
 HOMEPAGE="http://ipython.org/"
@@ -15,67 +15,74 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc examples matplotlib mongodb notebook nbconvert octave qt4 +smp test wxwidgets"
 
 PY2_USEDEP=$(python_gen_usedep python2_7)
 CDEPEND="
 	dev-python/decorator[${PYTHON_USEDEP}]
 	dev-python/pexpect[${PYTHON_USEDEP}]
+	dev-python/pyparsing[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/simplegeneric[${PYTHON_USEDEP}]
-	dev-python/pyparsing[${PYTHON_USEDEP}]
 	matplotlib? ( dev-python/matplotlib[${PYTHON_USEDEP}] )
 	mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
 	octave? ( dev-python/oct2py[${PYTHON_USEDEP}] )
-	smp? ( >=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}] )
+	smp? ( >=dev-python/pyzmq-13[${PYTHON_USEDEP}] )
 	wxwidgets? ( $(python_gen_cond_dep 'dev-python/wxpython[${PYTHON_USEDEP}]' python2_7) )"
 RDEPEND="${CDEPEND}
 	notebook? (
-		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
+		dev-libs/mathjax
+		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-python/jsonschema[${PYTHON_USEDEP}]
+		>=dev-python/mistune-0.5[${PYTHON_USEDEP}]
 		dev-python/pygments[${PYTHON_USEDEP}]
 		>=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}]
-		dev-python/jinja[${PYTHON_USEDEP}]
-		dev-libs/mathjax
+		>=dev-python/terminado-0.3.3[${PYTHON_USEDEP}]
+		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)
 	nbconvert? (
-		>=app-text/pandoc-1.12.1
+		|| ( >=net-libs/nodejs-0.9.12 >=app-text/pandoc-1.12.1 )
+		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-python/jsonschema[${PYTHON_USEDEP}]
+		>=dev-python/mistune-0.5[${PYTHON_USEDEP}]
 		dev-python/pygments[${PYTHON_USEDEP}]
 		dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/jinja[${PYTHON_USEDEP}]
 	)
-	qt4? ( || ( dev-python/PyQt4[${PYTHON_USEDEP}] dev-python/pyside[${PYTHON_USEDEP}] )
+	qt4? (
+		|| ( dev-python/PyQt4[${PYTHON_USEDEP}] dev-python/pyside[${PYTHON_USEDEP}] )
 		dev-python/pygments[${PYTHON_USEDEP}]
-		>=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}] )"
+		>=dev-python/pyzmq-13[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
 	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/mock[${PY2_USEDEP}]
-		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
-		dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-python/mock[${PY2_USEDEP}]
+		>=dev-python/nose-0.10.1[${PYTHON_USEDEP}]
+		dev-python/requests[${PYTHON_USEDEP}]
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		>=www-servers/tornado-4.0[${PYTHON_USEDEP}]
 	)
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/numpydoc[${PYTHON_USEDEP}]
-		dev-python/nose[${PYTHON_USEDEP}]
+	doc? (
 		dev-python/cython[${PYTHON_USEDEP}]
-		dev-python/rpy[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/fabric[${PYTHON_USEDEP}]' python2_7)
-		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
+		>=dev-python/nose-0.10.1[${PYTHON_USEDEP}]
+		dev-python/numpydoc[${PYTHON_USEDEP}]
+		dev-python/rpy[${PYTHON_USEDEP}]
+		>=dev-python/sphinx-1.1[${PYTHON_USEDEP}]
+		>=www-servers/tornado-4.0[${PYTHON_USEDEP}]
 	)"
 
 REQUIRED_USE="doc? ( matplotlib mongodb octave )"
 
-PATCHES=( "${FILESDIR}/2.1.0-substitute-files.patch"
-	"${FILESDIR}/2.1.0-disable-tests.patch" )
+PATCHES=(
+	"${FILESDIR}"/2.1.0-substitute-files.patch
+	)
 
 DISTUTILS_IN_SOURCE_BUILD=1
 
 python_prepare_all() {
 	# Remove out of date insource files
 	rm IPython/extensions/rmagic.py || die
-	rm IPython/extensions/octavemagic.py || die
 
 	# Prevent un-needed download during build
 	if use doc; then
@@ -128,6 +135,13 @@ python_install_all() {
 }
 
 pkg_postinst() {
-	elog "To enable sympyprinting, it's required to emerge sympy"
-	elog "To enable cythonmagic, it's required to emerge cython"
+	optfeature "sympyprinting" dev-python/sympy
+	optfeature "cythonmagic" dev-python/cython
+	if use nbconvert; then
+		if ! has_version app-text/pandoc ; then
+			einfo "Node.js will be used to convert notebooks to other formats"
+			einfo "like HTML. Support for that is still experimental. If you"
+			einfo "encounter any problems, please use app-text/pandoc instead."
+		fi
+	fi
 }

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.150 2015/02/06 03:41:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.151 2015/02/28 12:59:28 jlec Exp $
+
+*django-1.7.5 (28 Feb 2015)
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> +django-1.7.5.ebuild,
+  +files/django-1.7.5-bashcomp.patch, metadata.xml:
+  Version Bump; fix bashcompletions, #526272
 
 *django-1.7.4 (06 Feb 2015)
 
