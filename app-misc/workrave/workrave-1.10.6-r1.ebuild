@@ -29,7 +29,7 @@ RDEPEND="
 	>=dev-cpp/glibmm-2.28.0:2
 	>=dev-libs/libsigc++-2.2.4.2:2
 	ayatana? (
-		>=dev-libs/libdbusmenu-0.4:3[gtk]
+		>=dev-libs/libdbusmenu-0.4[gtk3]
 		>=dev-libs/libindicator-0.4:3 )
 	distribution? ( >=net-libs/gnet-2 )
 	gnome? ( >=gnome-base/gnome-shell-3.6.2 )
