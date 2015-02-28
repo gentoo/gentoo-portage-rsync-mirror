@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.54 2015/02/27 11:36:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.55 2015/02/28 13:58:12 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libatomic_ops-7.4.2.ebuild:
+  Stable for ia64, wrt bug #538126
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libatomic_ops-7.4.2.ebuild:
   Stable for sparc, wrt bug #538126

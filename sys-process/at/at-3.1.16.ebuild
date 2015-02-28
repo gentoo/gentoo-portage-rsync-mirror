@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.16.ebuild,v 1.9 2015/01/02 15:03:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.16.ebuild,v 1.10 2015/02/28 13:35:54 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/a/at/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="pam selinux"
 
 DEPEND="virtual/mta

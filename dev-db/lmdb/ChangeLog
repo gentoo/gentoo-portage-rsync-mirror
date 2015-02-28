@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/lmdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.23 2015/02/03 06:54:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.24 2015/02/28 13:33:23 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> lmdb-0.9.14.ebuild:
+  Stable for ia64, wrt bug #531430
 
   03 Feb 2015; Eray Aslan <eras@gentoo.org> -lmdb-0.9.10.ebuild,
   -lmdb-0.9.11.ebuild, -lmdb-0.9.13.ebuild:

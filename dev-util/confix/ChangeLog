@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/confix
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.20 2013/11/05 14:29:15 haubi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.21 2015/02/28 13:36:42 idella4 Exp $
+
+*confix-2.3.5-r2 (28 Feb 2015)
+
+  28 Feb 2015; Ian Delaney <idella4@gentoo.org> +confix-2.3.5-r2.ebuild,
+  -confix-2.3.5-r1.ebuild, confix-9999.ebuild:
+  revbump conversion -> distutils-r1, ditto live ebuild, rm old, endorsed by
+  maintainer in bug #540894, closes the bug
 
   05 Nov 2013; Michael Haubenwallner <haubi@gentoo.org> confix-9999.ebuild:
   Follow upstream repository move.
@@ -106,4 +113,3 @@
   +files/2.1.0/ext-ac-archive.patch, +files/2.1.0/jni-hpux.patch,
   +metadata.xml, +confix-2.1.0.ebuild:
   initial import of dev-util/confix (ebuild from me).
-

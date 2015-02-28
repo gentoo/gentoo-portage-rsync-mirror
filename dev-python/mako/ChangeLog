@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.92 2015/01/02 12:34:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.93 2015/02/28 13:37:27 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> mako-1.0.0.ebuild:
+  Stable for ia64, wrt bug #532336
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> mako-1.0.0.ebuild:
   Stable for sparc, wrt bug #532336

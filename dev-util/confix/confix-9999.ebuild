@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.7 2013/11/05 14:29:15 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.8 2015/02/28 13:36:42 idella4 Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI=5
 
-inherit distutils eutils subversion
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1 subversion
 
 DESCRIPTION="Confix: A Build Tool on Top of GNU Automake"
 HOMEPAGE="http://confix.sourceforge.net"
@@ -25,19 +25,19 @@ RDEPEND="dev-util/confix-wrapper
 	sys-devel/automake
 	sys-devel/libtool"
 
-PYTHON_MODNAME="libconfix"
-
-src_prepare() {
-	# find jni-include dirs on hpux.
-	epatch "${FILESDIR}"/2.1.0/jni-hpux.patch
+PATCHES=( # find jni-include dirs on hpux.
+	"${FILESDIR}"/2.1.0/jni-hpux.patch
 	# add .exe extension to TESTS
-	epatch "${FILESDIR}"/2.3.0/exeext.patch
+	"${FILESDIR}"/2.3.0/exeext.patch
 	# use external autoconf archive
-	epatch "${FILESDIR}"/2.3.0/ext-ac-archive.patch
+	"${FILESDIR}"/2.3.0/ext-ac-archive.patch
 	# link local libraries first.
-	epatch "${FILESDIR}"/2.3.0/local-libs-first.patch
+	"${FILESDIR}"/2.3.0/local-libs-first.patch
 	# don't use automake 1.9, but any newer too...
-	epatch "${FILESDIR}"/2.3.0/new-automake.patch
+	"${FILESDIR}"/2.3.0/new-automake.patch )
+
+pkg_setup() {
+	python-single-r1_pkg_setup
 }
 
 pkg_preinst() {
