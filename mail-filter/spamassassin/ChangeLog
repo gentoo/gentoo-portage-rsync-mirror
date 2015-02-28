@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.260 2015/02/26 19:00:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.261 2015/02/27 23:30:33 mjo Exp $
+
+*spamassassin-3.4.0-r1 (27 Feb 2015)
+
+  27 Feb 2015; Michael Orlitzky <mjo@gentoo.org>
+  +files/net-dns-0.76_compatibility.patch, +spamassassin-3.4.0-r1.ebuild,
+  metadata.xml:
+  Revbump to fix bug #541100. Thanks to Markus Oehme for the report and the fix.
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org> spamassassin-3.4.0.ebuild:
   arm stable, bug #537464
