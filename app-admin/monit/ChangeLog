@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.93 2015/02/11 23:22:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.94 2015/02/28 06:05:10 patrick Exp $
+
+*monit-5.12 (28 Feb 2015)
+
+  28 Feb 2015; Patrick Lauer <patrick@gentoo.org> +monit-5.12.ebuild:
+  Bump
 
   11 Feb 2015; Anthony G. Basile <blueness@gentoo.org> monit-5.10.ebuild,
   monit-5.11-r1.ebuild, monit-5.11.ebuild, monit-5.8.1-r1.ebuild,
