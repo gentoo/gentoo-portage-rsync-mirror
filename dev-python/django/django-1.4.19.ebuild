@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.19.ebuild,v 1.1 2015/02/28 18:08:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.19.ebuild,v 1.2 2015/02/28 20:45:48 jlec Exp $
 
 EAPI=5
 
@@ -77,7 +77,7 @@ src_install() {
 	optfeature "MySQL backend support in python 2.7 only" dev-python/mysql-python
 	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysql-connector-python
 	optfeature "PostgreSQL backend support" dev-python/psycopg:2
-	optfeature "Memcached support" python-memcached
+	optfeature "Memcached support" dev-python/python-memcached
 	optfeature "ImageField Support" virtual/python-imaging
 	echo ""
 }
