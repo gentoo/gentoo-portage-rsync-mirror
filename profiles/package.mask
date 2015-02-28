@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16387 2015/02/27 21:52:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16388 2015/02/28 13:14:53 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (28 Feb 2015)
+# Unfixed security problems
+# CVE-2015-{0219,0220,0221,0222}
+# #536586
+=dev-python/django-1.5*
 
 # Ulrich Müller <ulm@gentoo.org> (24 Feb 2015)
 # Does not work with Emacs 24 or later. Last visible upstream

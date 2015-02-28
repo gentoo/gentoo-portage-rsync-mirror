@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r4.ebuild,v 1.7 2015/02/24 09:00:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r4.ebuild,v 1.8 2015/02/28 13:29:27 ago Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -23,7 +23,7 @@ IUSE="dbus"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 # is libgsf needed for runtime or just compiling?
 # only need expat for python-2.4, I think
