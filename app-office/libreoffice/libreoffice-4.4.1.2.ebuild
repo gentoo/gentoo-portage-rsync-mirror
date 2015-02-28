@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.1.2.ebuild,v 1.2 2015/02/28 11:48:35 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.1.2.ebuild,v 1.3 2015/02/28 12:15:26 dilfridge Exp $
 
 EAPI=5
 
@@ -252,8 +252,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.0.3-telepathy-build-fix.patch"
 	"${FILESDIR}/${PN}-4.4.1.2-add-kde4-open-url-script.patch"
 	"${FILESDIR}/${PN}-4.4.1.2-improve-KDE4FilePicker.patch"
-
-	# from feature/priorities branch
 	"${FILESDIR}/${PN}-4.3.5.2-remove-bashisms.patch" # bug 525454
 )
 
