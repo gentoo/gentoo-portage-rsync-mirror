@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.324 2015/01/02 12:21:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.325 2015/02/28 11:28:48 grobian Exp $
+
+  28 Feb 2015; Fabian Groffen <grobian@gentoo.org> gentoolkit-0.3.0.9-r1.ebuild,
+  gentoolkit-0.3.0.9-r2.ebuild, gentoolkit-9999.ebuild:
+  drop condition on Prefix for gentoo-functions
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gentoolkit-0.3.0.9-r2.ebuild:
   Stable for sparc, wrt bug #530264
