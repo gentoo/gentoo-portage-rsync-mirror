@@ -8,7 +8,7 @@ VALA_MIN_API_VERSION=0.16
 VALA_USE_DEPEND=vapigen
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils flag-o-matic python-single-r1 vala
+inherit eutils flag-o-matic python-single-r1 vala autotools-multilib
 
 DESCRIPTION="Library to pass menu structure across DBus"
 HOMEPAGE="http://launchpad.net/dbusmenu"
@@ -20,17 +20,17 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug gtk3 +introspection"
 
 RDEPEND="
-	>=dev-libs/dbus-glib-0.100
-	>=dev-libs/json-glib-0.13.4
-	>=dev-libs/glib-2.32
-	dev-libs/libxml2
-	gtk3? ( >=x11-libs/gtk+-3.2:3[introspection?] )
+	>=dev-libs/dbus-glib-0.100[${MULTILIB_USEDEP}]
+	>=dev-libs/json-glib-0.13.4[${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.32[${MULTILIB_USEDEP}]
+	dev-libs/libxml2[${MULTILIB_USEDEP}]
+	gtk3? ( >=x11-libs/gtk+-3.2:3[introspection?,${MULTILIB_USEDEP}] )
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 	!<${CATEGORY}/${PN}-0.5.1-r200"
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	dev-util/intltool
-	virtual/pkgconfig
+	virtual/pkgconfig[${MULTILIB_USEDEP}]
 	introspection? ( $(vala_depend) )"
 
 src_prepare() {
@@ -41,29 +41,36 @@ src_prepare() {
 	python_fix_shebang tools
 }
 
-src_configure() {
+multilib_src_configure() {
 	append-flags -Wno-error #414323
 
 	# dumper extra tool is only for GTK+-2.x, tests use valgrind which is stupid
-	econf \
-		--docdir=/usr/share/doc/${PF} \
-		--disable-static \
-		--disable-silent-rules \
-		--disable-scrollkeeper \
-		$(use_enable gtk3 gtk) \
-		--disable-dumper \
-		$(use_enable introspection) \
-		$(use_enable introspection vala) \
-		$(use_enable debug massivedebugging) \
-		--with-html-dir=/usr/share/doc/${PF}/html \
+	myeconfargs=(
+		--docdir=/usr/share/doc/${PF}
+		--disable-static
+		--disable-silent-rules
+		--disable-scrollkeeper
+		$(use_enable gtk3 gtk)
+		--disable-dumper
+		$(multilib_native_use_enable introspection)
+		$(multilib_native_use_enable introspection vala)
+		$(use_enable debug massivedebugging)
+		--with-html-dir=/usr/share/doc/${PF}/html
 		--with-gtk=3
+	)
+	autotools-utils_src_configure
 }
 
 src_test() { :; } #440192
 
-src_install() {
+multilib_src_install() {
 	MAKEOPTS+=" -j1"
-	default
+	autotools-utils_src_install
+}
+
+multilib_src_install_all() {
+	DOCS=( AUTHORS ChangeLog NEWS README )
+	einstalldocs
 
 	local a b
 	for a in ${PN}-{glib,gtk}; do
