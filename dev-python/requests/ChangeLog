@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.82 2014/12/28 15:30:21 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.83 2015/02/28 07:52:17 patrick Exp $
+
+*requests-2.5.3 (28 Feb 2015)
+
+  28 Feb 2015; Patrick Lauer <patrick@gentoo.org> +requests-2.5.3.ebuild:
+  Bump
 
 *requests-2.5.1 (28 Dec 2014)
 
