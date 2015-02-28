@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latexdiff
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.27 2012/05/09 17:10:42 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.28 2015/02/28 21:25:14 ottxor Exp $
+
+*latexdiff-1.0.4 (28 Feb 2015)
+
+  28 Feb 2015; Christoph Junghans <ottxor@gentoo.org> +latexdiff-1.0.4.ebuild:
+  version bump
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> latexdiff-0.5.ebuild:
   keyword ~amd64-fbsd
@@ -92,4 +97,3 @@
   +latexdiff-0.2.ebuild:
   Initial import. Ebuild submitted by Anders Bo Rasmussen <gentoo@fuzz.dk>;
   bug #68033.
-

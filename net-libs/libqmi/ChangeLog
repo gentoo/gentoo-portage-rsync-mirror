@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libqmi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.22 2014/09/12 19:27:37 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.23 2015/02/28 21:30:02 vapier Exp $
+
+*libqmi-1.12.6 (28 Feb 2015)
+
+  28 Feb 2015; Mike Frysinger <vapier@gentoo.org> +libqmi-1.12.6.ebuild:
+  Version bump #541220 by Pacho Ramos.
 
   12 Sep 2014; Vicente Olivert Riera <vincent@gentoo.org> libqmi-1.0.0.ebuild,
   libqmi-1.10.2.ebuild, libqmi-1.4.0.ebuild, libqmi-1.8.0.ebuild:

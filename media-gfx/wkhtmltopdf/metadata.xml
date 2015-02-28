@@ -6,6 +6,6 @@
 		<name>Tim Harder</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="google-code">wkhtmltopdf</remote-id>
+		<remote-id type="github">wkhtmltopdf/wkhtmltopdf</remote-id>
 	</upstream>
 </pkgmetadata>

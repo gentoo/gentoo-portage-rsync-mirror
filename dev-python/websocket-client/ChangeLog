@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/websocket-client
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/websocket-client/ChangeLog,v 1.6 2014/10/26 21:49:08 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/websocket-client/ChangeLog,v 1.7 2015/02/28 21:24:27 alunduil Exp $
+
+*websocket-client-0.25.0 (28 Feb 2015)
+
+  28 Feb 2015; Alex Brandt <alunduil@gentoo.org>
+  +websocket-client-0.25.0.ebuild:
+  add version 0.25.0
 
 *websocket-client-0.11.0 (26 Oct 2014)
 

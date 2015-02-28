@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wkhtmltopdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wkhtmltopdf/ChangeLog,v 1.6 2015/01/20 22:32:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wkhtmltopdf/ChangeLog,v 1.7 2015/02/28 21:29:51 radhermit Exp $
+
+  28 Feb 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Update upstream metadata to github.
 
   20 Jan 2015; Tim Harder <radhermit@gentoo.org>
   -wkhtmltopdf-0.10.0_rc2.ebuild, -wkhtmltopdf-0.11.0_rc1.ebuild:
