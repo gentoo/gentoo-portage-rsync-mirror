@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.71.0.ebuild,v 1.1 2015/02/19 01:58:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.71.0.ebuild,v 1.2 2015/02/28 14:02:31 tupone Exp $
 
 EAPI=5
-inherit autotools eutils toolchain-funcs gnome2-utils games
+inherit toolchain-funcs gnome2-utils games
 
 DESCRIPTION="Client for the nethack-style but more in the line of UO"
 HOMEPAGE="http://crossfire.real-time.com/"
@@ -47,7 +47,7 @@ src_configure() {
 src_compile() {
 	# bug 139785
 	if use alsa || use oss ; then
-		emake -j1 -C sound-src AR="$(tc-getAR)"
+		emake -C sound-src AR="$(tc-getAR)"
 	fi
 	emake AR="$(tc-getAR)"
 }

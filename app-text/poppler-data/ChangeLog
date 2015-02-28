@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.79 2015/01/02 12:23:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.80 2015/02/28 14:10:43 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> poppler-data-0.4.7.ebuild:
+  Stable for ia64, wrt bug #530520
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> poppler-data-0.4.7.ebuild:
   Stable for sparc, wrt bug #530520

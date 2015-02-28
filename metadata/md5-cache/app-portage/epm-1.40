@@ -3,10 +3,10 @@ DEPEND=>=dev-lang/perl-5
 DESCRIPTION=rpm workalike for Gentoo Linux
 EAPI=4
 HOMEPAGE=https://github.com/fuzzyray/epm
-KEYWORDS=alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 s390 sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5
 SLOT=0
 SRC_URI=http://www.gentoo.org/~fuzzyray/distfiles/epm-1.40.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=29582b92fa26e47a542f9121c8e9d4b7
+_md5_=ae43ab20fd7db5569e74cbed8470b60d

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.174 2015/02/27 11:25:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.175 2015/02/28 14:11:52 ago Exp $
+
+  28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rdesktop-1.8.3.ebuild:
+  Stable for ia64, wrt bug #535614
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rdesktop-1.8.3.ebuild:
   Stable for sparc, wrt bug #535614

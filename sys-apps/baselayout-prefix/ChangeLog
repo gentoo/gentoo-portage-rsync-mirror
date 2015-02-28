@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/baselayout-prefix
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.37 2014/02/12 19:57:23 redlizard Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.38 2015/02/28 14:07:30 grobian Exp $
+
+*baselayout-prefix-2.2-r4 (28 Feb 2015)
+
+  28 Feb 2015; Fabian Groffen <grobian@gentoo.org>
+  +baselayout-prefix-2.2-r4.ebuild:
+  Move away from einfo (bug #504284) to solve bugs #538374 and #513070
 
   12 Feb 2014; redlizard <redlizard@gentoo.org> baselayout-prefix-2.2-r3.ebuild:
   Bump einfo version for fixes for platforms without visibility(hidden) support.

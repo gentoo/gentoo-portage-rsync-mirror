@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/crossfire-client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.38 2015/02/19 01:58:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.39 2015/02/28 14:02:31 tupone Exp $
+
+  28 Feb 2015; Tupone Alfredo <tupone@gentoo.org>
+  crossfire-client-1.71.0.ebuild:
+  Enable parallel compilation
 
 *crossfire-client-1.71.0 (19 Feb 2015)
 
