@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.6.0_rc4.ebuild,v 1.1 2015/02/23 10:38:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.6.0.ebuild,v 1.1 2015/02/28 09:38:22 voyageur Exp $
 
 EAPI=5
 
@@ -11,14 +11,14 @@ inherit eutils flag-o-matic multibuild multilib \
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.6.0_}/${P/_}.src.tar.xz
-	clang? ( http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.6.0_}/compiler-rt-${PV/_}.src.tar.xz
-		http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.6.0_}/cfe-${PV/_}.src.tar.xz
-		http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.6.0_}/clang-tools-extra-${PV/_}.src.tar.xz )
-	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P/_rc*}-manpages.tar.bz2 )"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.xz
+	clang? ( http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.xz
+		http://llvm.org/releases/${PV}/cfe-${PV}.src.tar.xz
+		http://llvm.org/releases/${PV}/clang-tools-extra-${PV}.src.tar.xz )
+	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
-SLOT="0/3.5"
+SLOT="0/3.6"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="clang debug doc gold libedit +libffi multitarget ncurses ocaml python
 	+static-analyzer test xml video_cards_radeon
@@ -391,9 +391,9 @@ multilib_src_install() {
 			dohtml -r "${S}"/docs/_build/html/
 		else
 			if ! use clang; then
-				rm "${WORKDIR}"/${P/_rc*}-manpages/clang.1 || die
+				rm "${WORKDIR}"/${P}-manpages/clang.1 || die
 			fi
-			doman "${WORKDIR}"/${P/_rc*}-manpages/*.1
+			doman "${WORKDIR}"/${P}-manpages/*.1
 		fi
 
 		# Symlink the gold plugin.

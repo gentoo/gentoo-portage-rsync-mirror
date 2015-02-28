@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.6.0_rc4-r100.ebuild,v 1.1 2015/02/23 13:09:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.6.0-r100.ebuild,v 1.1 2015/02/28 09:38:31 voyageur Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://clang.llvm.org/"
 SRC_URI=""
 
 LICENSE="UoI-NCSA"
-SLOT="0/3.5"
+SLOT="0/3.6"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="debug multitarget python +static-analyzer"
 
