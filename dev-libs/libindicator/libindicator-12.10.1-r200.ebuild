@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/libindicator-12.10.1-r200.ebuild,v 1.1 2014/03/15 14:03:58 ssuominen Exp $
 
 EAPI=4
-inherit eutils flag-o-matic virtualx
+inherit eutils flag-o-matic virtualx autotools-multilib
 
 DESCRIPTION="A set of symbols and convience functions that all indicators would like to use"
 HOMEPAGE="http://launchpad.net/libindicator"
@@ -14,27 +14,33 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND=">=dev-libs/glib-2.22
-	>=x11-libs/gtk+-2.18:2"
+RDEPEND=">=dev-libs/glib-2.22[${MULTILIB_USEDEP}]
+	>=x11-libs/gtk+-2.18:2"[${MULTILIB_USEDEP}]
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
+	virtual/pkgconfig[${MULTILIB_USEDEP}]
 	test? ( dev-util/dbus-test-runner )"
 
-src_configure() {
+multilib_src_configure() {
 	append-flags -Wno-error
 
-	econf \
-		--disable-silent-rules \
-		--disable-static \
+	myeconfargs=(
+		--disable-silent-rules
+		--disable-static
 		--with-gtk=2
+	)
+	autotools-utils_src_configure
 }
 
-src_test() {
+multilib_src_test() {
 	Xemake check #391179
 }
 
-src_install() {
+multilib_src_install() {
 	emake -j1 DESTDIR="${D}" install
+}
+
+multilib_src_install_all() {
+	dodoc AUTHORS ChangeLog NEWS
 	prune_libtool_files --all
 
 	rm -vf \
