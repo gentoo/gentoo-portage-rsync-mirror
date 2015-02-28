@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.7.1-r2.ebuild,v 1.5 2014/08/02 17:59:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.1.3.ebuild,v 1.1 2015/02/28 14:59:13 dlan Exp $
 
 EAPI=5
 
@@ -14,11 +14,12 @@ FONT_S="${S}/lib/fonts"
 FONT_SUFFIX="ttf"
 DESCRIPTION="WYSIWYM frontend for LaTeX, DocBook, etc."
 HOMEPAGE="http://www.lyx.org/"
-SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/${MY_P}.tar.xz"
+SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/2.1.x/${MY_P}.tar.xz
+	ftp://ftp.lyx.org/pub/lyx/devel/lyx-2.1/${MY_P}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos"
 IUSE="cups debug nls +latex monolithic-build html rtf dot docbook dia subversion rcs svg gnumeric +hunspell aspell enchant"
 
 LANGS="ar ca cs de da el en es eu fi fr gl he hu ia id it ja nb nn pl pt ro ru sk sr sv tr uk zh_CN zh_TW"
@@ -70,7 +71,7 @@ RDEPEND="${COMMONDEPEND}
 	docbook? ( app-text/sgmltools-lite )
 	dot? ( media-gfx/graphviz )
 	dia? ( app-office/dia )
-	subversion? ( <dev-vcs/subversion-1.7.0 )
+	subversion? ( dev-vcs/subversion )
 	rcs? ( dev-vcs/rcs )
 	svg? (  || ( media-gfx/imagemagick[svg] media-gfx/graphicsmagick[svg] )
 			|| ( gnome-base/librsvg media-gfx/inkscape )
@@ -90,7 +91,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/2.0-python.patch
+	epatch "${FILESDIR}"/2.1-python.patch
 	sed "s:python -tt:${EPYTHON} -tt:g" -i lib/configure.py || die
 }
 
@@ -125,7 +126,6 @@ src_install() {
 	newicon -s 32 "${S}/development/Win32/packaging/icons/lyx_32x32.png" ${PN}.png
 	doicon -s 48 "${S}/lib/images/lyx.png"
 	doicon -s scalable "${S}/lib/images/lyx.svg"
-	make_desktop_entry ${PN} "LyX" "${PN}" "Office" "MimeType=application/x-lyx;"
 
 	# fix for bug 91108
 	if use latex ; then

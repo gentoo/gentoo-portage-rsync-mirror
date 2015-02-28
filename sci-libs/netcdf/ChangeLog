@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.117 2015/02/22 10:58:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.118 2015/02/28 14:42:00 jlec Exp $
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> -netcdf-4.1.1-r4.ebuild,
+  -netcdf-4.1.3.ebuild, -netcdf-4.2.1.1.ebuild, -netcdf-4.3.0.ebuild,
+  -netcdf-4.3.1.1.ebuild, -netcdf-4.3.2.ebuild, metadata.xml:
+  Drop old; obsoletes #348922, #363131, #435844, #454950 & #478618
 
   22 Feb 2015; Pacho Ramos <pacho@gentoo.org> netcdf-4.3.2-r1.ebuild:
   amd64/ppc/ppc64/x86 stable, bug #540494

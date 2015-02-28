@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.127 2015/02/28 14:02:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.128 2015/02/28 14:49:28 jlec Exp $
+
+  28 Feb 2015; Justin Lecher <jlec@gentoo.org> -hdf5-1.8.10.ebuild,
+  -hdf5-1.8.13.ebuild, metadata.xml:
+  Drop old; obsoletes #326719
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> hdf5-1.8.14-r1.ebuild:
   Stable for ia64, wrt bug #530648
