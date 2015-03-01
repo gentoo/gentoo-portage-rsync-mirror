@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/blaze
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.14 2015/02/27 02:19:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.15 2015/03/01 14:55:36 idella4 Exp $
+
+*blaze-0.7.2-r1 (01 Mar 2015)
+
+  01 Mar 2015; Ian Delaney <idella4@gentoo.org> +blaze-0.7.2-r1.ebuild,
+  -blaze-0.4.1.ebuild, -blaze-0.4.2.ebuild, -blaze-0.5.0.ebuild,
+  -blaze-0.6.0.ebuild, -blaze-0.6.5.ebuild, -blaze-0.6.6.ebuild,
+  -blaze-0.6.7.ebuild, -blaze-0.6.8.ebuild, -blaze-0.7.0.ebuild,
+  -blaze-0.7.2.ebuild:
+  revbump; add new rdep, rm old
 
 *blaze-0.7.2 (27 Feb 2015)
 

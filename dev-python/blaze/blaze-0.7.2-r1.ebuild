@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.6.8.ebuild,v 1.1 2014/12/19 08:05:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.7.2-r1.ebuild,v 1.1 2015/03/01 14:55:36 idella4 Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-# if it won't fail anyway why run it at all?
+# Tests attempt to import mystery modules in datashape
 RESTRICT="test"
 
 inherit distutils-r1
@@ -19,13 +19,12 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 
-# Currently doc build fails, reason unclear but appears it's tied to use of
-# redhat's anaconda installer, seemingly hostile to gentoo.
+# Currently doc build fails, reason now, attempt to import mystery modules in datashape
 # Leaving doc build content in case this is fixed
 IUSE="doc examples test"
 
 # pyspark appears an optional dep not in portage. pyskit appears to be dropped
-# pyparsing lokks to be required still despite its absence from requirements.txt
+# pyparsing looks to be required still despite its absence from requirements.txt
 PY2_USEDEP=$(python_gen_usedep python2_7)
 RDEPEND="
 	>=dev-python/blz-0.6.2[${PYTHON_USEDEP}]
@@ -49,6 +48,8 @@ RDEPEND="
 	dev-python/psutil[${PYTHON_USEDEP}]
 	dev-python/into[${PYTHON_USEDEP}]
 	dev-python/networkx[${PYTHON_USEDEP}]
+	dev-python/numba[${PYTHON_USEDEP}]
+	dev-python/bcolz[${PYTHON_USEDEP}]
 	"
 DEPEND="
 	>=dev-python/cython-0.18[${PYTHON_USEDEP}]
@@ -81,6 +82,6 @@ python_test() {
 
 python_install_all() {
 #	use doc && local HTML_DOCS=( docs/build/html/. )
-	use examples && local EXAMPLES=( examples/. )
+	use examples && local EXAMPLES=( blaze/examples/. )
 	distutils-r1_python_install_all
 }
