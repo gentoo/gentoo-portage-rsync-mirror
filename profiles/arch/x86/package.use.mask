@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.149 2015/02/25 16:07:02 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.150 2015/03/01 13:20:06 mgorny Exp $
 
 # This file requires >=portage-2.1.1
+
+# Michał Górny <mgorny@gentoo.org> (01 Mar 2015)
+# pidgin-opensteamworks is only available for amd64, ppc32 and x86
+net-im/telepathy-connection-managers -steam
 
 # Andrey Grozin <grozin@gentoo.org> (23 Feb 2015)
 # Does not compile with this flag

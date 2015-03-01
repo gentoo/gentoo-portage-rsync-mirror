@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/xxv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.21 2014/07/29 15:56:49 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.22 2015/03/01 13:29:06 hd_brummy Exp $
+
+  01 Mar 2015; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.1.ebuild:
+  using corefonts instead of ttf-bitstream-vera now, wrt bug 335789; eapi=5
 
   29 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org> xxv-1.6.1.ebuild:
   Use perl virtual

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.774 2015/02/27 13:10:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.775 2015/03/01 13:20:06 mgorny Exp $
+
+  01 Mar 2015; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Mask telepathy-connection-managers[steam] on unsupported arches.
 
   27 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
   Mask atlas support in newer armadillo versions since atlas is not in the main

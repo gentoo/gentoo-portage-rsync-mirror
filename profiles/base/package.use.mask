@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.653 2015/02/27 13:10:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.654 2015/03/01 13:20:06 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michał Górny <mgorny@gentoo.org> (01 Mar 2015)
+# pidgin-opensteamworks is only available for amd64, ppc32 and x86
+net-im/telepathy-connection-managers steam
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (27 Feb 2015)
 # Mask atlas support since atlas is not in the main tree yet

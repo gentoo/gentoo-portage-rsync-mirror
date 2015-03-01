@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/vdr-burn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.61 2014/07/13 10:26:57 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.62 2015/03/01 13:09:00 hd_brummy Exp $
+
+*vdr-burn-0.2.2-r1 (01 Mar 2015)
+
+  01 Mar 2015; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-burn-0.2.0.ebuild,
+  +vdr-burn-0.2.2-r1.ebuild,
+  -files/vdr-burn-0.2.0-missing-include-for-function-setpriority.patch,
+  -files/vdr-burn-0.2.0_gentoo-path.diff, -files/vdr-burn-0.2.0_makefile.diff,
+  -files/vdr-burn-0.2.0_setdefaults.diff,
+  -files/vdr-burn-0.2.0_vdr-1.7.33.diff,
+  +files/vdr-burn-0.2.2-r1_gentoo-path.diff, -files/vdr-1.7.27.diff:
+  using corefonts instead of ttf-bitstream-vera now, wrt bug 335782
 
   13 Jul 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-burn-0.2.2.ebuild:
   compilefix for >=vdr-2.1.2, thx to R.Hertel for this

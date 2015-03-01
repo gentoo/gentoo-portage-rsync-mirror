@@ -5144,9 +5144,12 @@ net-im/qutim:webkit - Enable Adium-like WebView plugin
 net-im/qutim:xscreensaver - Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events
 net-im/skype:apulse - Use media-sound/apulse for PulseAudio emulation
 net-im/skype:pax_kernel - Triggers a paxmarking of the main skype binary
+net-im/telepathy-connection-managers:gadu - Enable Gadu Gadu protocol support.
 net-im/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) support.
+net-im/telepathy-connection-managers:meanwhile - Enable meanwhile support for Sametime protocol.
 net-im/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
 net-im/telepathy-connection-managers:sipe - Enable Sip Exchange Protocol.
+net-im/telepathy-connection-managers:steam - Enable Steam Chat support.
 net-im/telepathy-connection-managers:xmpp - Enable XMPP protocol handler (this is also Google Talk).
 net-im/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
 net-im/telepathy-connection-managers:zeroconf - Enable Link-Local Messaging via the zeroconf or Bonjour protocol.

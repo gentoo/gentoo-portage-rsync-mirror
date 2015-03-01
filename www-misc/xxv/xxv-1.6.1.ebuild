@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.8 2014/07/29 15:56:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.6.1.ebuild,v 1.9 2015/03/01 13:29:06 hd_brummy Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils versionator
 
@@ -15,12 +15,12 @@ SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="-mplayer themes"
 
 RDEPEND=">=media-video/vdr-1.2.6
 	media-video/vdr2jpeg
-	media-fonts/ttf-bitstream-vera
+	media-fonts/corefonts
 	virtual/mysql
 	virtual/perl-CGI
 	virtual/perl-Digest-MD5
@@ -125,10 +125,10 @@ src_prepare() {
 		-e "s:\$RealBin/../doc:/usr/share/doc/${P}:" \
 		-e "s:HTMLDIR     => \"\$RealBin/../:HTMLDIR     => \"${SHAREDIR}/skins:" \
 		-e "s:\$RealBin/../share/vtx:${SHAREDIR}/vtx:" \
-		-e "s:\$RealBin/../lib/XXV/OUTPUT:${LIBDIR}/XXV/OUTPUT:" \
+		-e "s:\$Real	Bin/../lib/XXV/OUTPUT:${LIBDIR}/XXV/OUTPUT:" \
 		-e "s:\$RealBin/../share/news:${SHAREDIR}/news:" \
 		-e "s:\$RealBin/../contrib:${SHAREDIR}/contrib:" \
-		-e "s:\$RealBin/../share/fonts/:/usr/share/fonts/:" \
+		-e "s:\$RealBin/../share/fonts/ttf-bitstream-vera:/usr/share/fonts/corefonts:" \
 		-e "s:\$RealBin/../share/xmltv:${SHAREDIR}/xmltv:"
 
 	sed -i "s:\$RealBin/../lib:${LIBDIR}:" ./locale/xgettext.pl

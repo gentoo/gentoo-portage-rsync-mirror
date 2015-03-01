@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.316 2015/02/21 17:29:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.317 2015/03/01 13:20:06 mgorny Exp $
+
+  01 Mar 2015; Michał Górny <mgorny@gentoo.org> ppc32/package.use.mask:
+  Mask telepathy-connection-managers[steam] on unsupported arches.
 
   21 Feb 2015; Justin Lecher <jlec@gentoo.org> package.use.stable.mask:
   Mask USE=tracker for net-fs/netatalk as it needs a stable gnome-3

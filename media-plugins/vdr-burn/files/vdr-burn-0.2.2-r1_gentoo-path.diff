@@ -1,6 +1,7 @@
 some path adaption to gentoo vdr
+use corefonts instead of ttf-bitstream-vera, #335782
 
-Signed-of-by: Joerg Bornkessel <hd_brummy@gentoo.org> (15 Feb 2011)
+Signed-of-by: Joerg Bornkessel <hd_brummy@gentoo.org> (1 Mar 2015)
 diff -Naur burn-0.2.0.orig/burn.c burn-0.2.0/burn.c
 --- burn-0.2.0.orig/burn.c	2012-02-12 19:46:51.000000000 +0100
 +++ burn-0.2.0/burn.c	2012-02-12 19:49:21.000000000 +0100
@@ -14,7 +15,7 @@ diff -Naur burn-0.2.0.orig/burn.c burn-0.2.0/burn.c
  		manager::start();
  		logger_vdr::start();
 -		gdwrapper::setup::set_font_path( m_configPath + "/fonts" );
-+		gdwrapper::setup::set_font_path( "/usr/share/fonts/ttf-bitstream-vera" );
++		gdwrapper::setup::set_font_path( "/usr/share/fonts/corefonts" );
  		if ( !skin_list::get().load( get_config_path() ) )
  			return false;
  

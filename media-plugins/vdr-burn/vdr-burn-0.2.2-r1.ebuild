@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.0.ebuild,v 1.6 2013/01/16 06:38:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.2.2-r1.ebuild,v 1.1 2015/03/01 13:09:00 hd_brummy Exp $
 
 EAPI="5"
 
 inherit vdr-plugin-2
 
-VERSION="832" # every bump, new version!
+VERSION="1252" # every bump, new version!
 
 DESCRIPTION="VDR Plugin: burn records on DVD"
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-burn"
@@ -17,14 +17,14 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE="dvdarchive"
 
-DEPEND=">=media-video/vdr-1.6
+DEPEND=">=media-video/vdr-1.7.36-r1
 		media-libs/gd[png,truetype,jpeg]"
 RDEPEND="${DEPEND}
 		>=dev-libs/libcdio-0.71
 		>=media-video/dvdauthor-0.6.14
 		>=media-video/mjpegtools-1.6.2[png]
 		media-video/transcode
-		media-fonts/ttf-bitstream-vera
+		media-fonts/corefonts
 		virtual/eject
 		>=app-cdr/dvd+rw-tools-5.21
 		>=media-video/projectx-0.90.4.00_p32
@@ -40,7 +40,7 @@ src_prepare() {
 	vdr-plugin-2_src_prepare
 
 	epatch \
-		"${FILESDIR}"/${P}_gentoo-path.diff \
+		"${FILESDIR}"/${P}-r1_gentoo-path.diff \
 		"${FILESDIR}"/${P}_setdefaults.diff \
 		"${FILESDIR}"/${P}_makefile.diff \
 		"${FILESDIR}"/${P}-missing-include-for-function-setpriority.patch
@@ -49,18 +49,17 @@ src_prepare() {
 		-e "s:#ENABLE_DMH_ARCHIVE:ENABLE_DMH_ARCHIVE:"
 
 	sed -i Makefile \
-		-e 's:^TMPDIR = .*$:TMPDIR = /tmp:' \
 		-e 's:^ISODIR=.*$:ISODIR=/var/vdr/video/dvd-images:'
 
 	sed -i Makefile -e 's:DEFINES += -DTTXT_SUBTITLES:#DEFINES += -DTTXT_SUBTITLES:'
 
-	if has_version ">=media-video/vdr-1.7.27"; then
-		epatch "${FILESDIR}/vdr-1.7.27.diff"
+	if has_version ">=media-video/vdr-2.1.2"; then
+		sed -e "s#VideoDirectory#cVideoDirectory::Name\(\)#" \
+		-i jobs.c
 	fi
 
-	if has_version ">=media-video/vdr-1.7.33"; then
-	epatch "${FILESDIR}/${P}_vdr-1.7.33.diff"
-	fi
+	# ttf-bitstream-vera deprecated, bug #335782
+	sed -e "s:Vera:arial:" -i skins.c
 
 	fix_vdr_libsi_include scanner.c
 }
