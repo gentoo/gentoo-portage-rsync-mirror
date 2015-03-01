@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r3.ebuild,v 1.1 2015/02/27 22:00:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.3.1-r4.ebuild,v 1.1 2015/03/01 10:12:23 mgorny Exp $
 
 EAPI=5
 
@@ -30,7 +30,9 @@ RDEPEND=">=app-admin/eselect-1.2.4
 		 !=media-libs/mesa-10.3.5
 		 !=media-libs/mesa-10.3.7-r1
 		 !<x11-proto/glproto-1.4.17-r1
-		 !<x11-base/xorg-server-1.17.1-r1
+		 !<x11-base/xorg-server-1.16.4-r1
+		 !~x11-base/xorg-server-1.17.0
+		 !=x11-base/xorg-server-1.17.1
 		 !<x11-drivers/ati-drivers-14.9-r2
 		 !=x11-drivers/ati-drivers-14.12
 		 !<=app-emulation/emul-linux-x86-opengl-20140508"
