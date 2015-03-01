@@ -1,0 +1,11 @@
+--- Electrum-1.9.8/gui/gtk.py	2014-03-11 14:12:31.000000000 +0000
++++ Electrum-1.9.8/gui/gtk.py	2015-03-01 08:01:02.851740805 +0000
+@@ -87,7 +87,7 @@
+     # ask if the user wants to create a new wallet, or recover from a seed. 
+     # if he wants to recover, and nothing is found, do not create wallet
+     dialog = Gtk.Dialog("electrum", parent=None, 
+-                        flags=Gtk.DialogFlags.MODAL|Gtk.DialogFlags.NO_SEPARATOR, 
++                        flags=Gtk.DialogFlags.MODAL | getattr(Gtk.DialogFlags, 'NO_SEPARATOR', 0), 
+                         buttons= ("create", 0, "restore",1, "cancel",2)  )
+ 
+     label = Gtk.Label("Wallet file not found.\nDo you want to create a new wallet,\n or to restore an existing one?"  )
