@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/jeweler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.26 2014/08/15 14:34:10 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.27 2015/03/01 08:23:58 graaff Exp $
+
+*jeweler-2.0.1-r1 (01 Mar 2015)
+
+  01 Mar 2015; Hans de Graaff <graaff@gentoo.org> +jeweler-2.0.1-r1.ebuild:
+  Add ruby20, ruby21. Add missing keywords and drop ppc, ppc64 accordingly, bug
+  541768.
 
   15 Aug 2014; Anthony G. Basile <blueness@gentoo.org> jeweler-2.0.1.ebuild:
   Keyword ~ppc ~ppc64, bug #511424

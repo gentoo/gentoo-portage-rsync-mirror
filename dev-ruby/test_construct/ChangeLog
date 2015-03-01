@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/test_construct
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_construct/ChangeLog,v 1.1 2015/03/01 08:10:15 graaff Exp $
+
+*test_construct-2.0.1 (01 Mar 2015)
+
+  01 Mar 2015; Hans de Graaff <graaff@gentoo.org> +test_construct-2.0.1.ebuild,
+  +metadata.xml:
+  Initial import. Missing dependency for dev-ruby/jeweler.
+
