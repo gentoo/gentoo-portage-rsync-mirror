@@ -7,6 +7,6 @@
   desktops over low-bandwidth links such as the Internet, WANS, and wireless
 </longdescription>
   <use>
-	  <flag name="nxclient">Allow to install <pkg>net-misc/nxclient</pkg> in parallel with this package, using it to display messages in the sessions</flag>
+    <flag name="nxclient">Allow to install <pkg>net-misc/nxclient</pkg> in parallel with this package, using it to display messages in the sessions</flag>
   </use>
 </pkgmetadata>

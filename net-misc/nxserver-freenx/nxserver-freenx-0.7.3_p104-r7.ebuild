@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r7.ebuild,v 1.3 2015/01/08 15:58:39 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r7.ebuild,v 1.4 2015/03/01 15:04:04 jlec Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ PATCH_VER="$(get_version_component_range 4)"
 MY_PN="freenx-server"
 
 DESCRIPTION="Free Software Implementation of the NX Server"
-HOMEPAGE="http://freenx.berlios.de/ https://launchpad.net/~freenx-team"
+HOMEPAGE="https://launchpad.net/~freenx-team"
 SRC_URI="http://ppa.launchpad.net/freenx-team/ppa/ubuntu/pool/main/f/${MY_PN}/freenx-server_${MAJOR_PV}+teambzr${PATCH_VER/p}.orig.tar.gz"
 
 LICENSE="GPL-2"
