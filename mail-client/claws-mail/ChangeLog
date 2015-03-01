@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/claws-mail
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.246 2014/11/23 07:27:21 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.247 2015/03/01 19:04:59 mgorny Exp $
+
+*claws-mail-3.11.1-r1 (01 Mar 2015)
+
+  01 Mar 2015; Michał Górny <mgorny@gentoo.org> +claws-mail-3.11.1-r1.ebuild,
+  +files/claws-mail-3.11.1_RSSyl-encodings-fix.patch, -claws-mail-3.11.1.ebuild:
+  Backport a RSS parsing fix, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/47 by cerebrum.
 
 *claws-mail-3.11.1 (23 Nov 2014)
 

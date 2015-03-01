@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.11.1.ebuild,v 1.1 2014/11/23 07:27:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.11.1-r1.ebuild,v 1.1 2015/03/01 19:04:59 mgorny Exp $
 
 EAPI="5"
 
@@ -98,6 +98,8 @@ RDEPEND="${COMMONDEPEND}
 		dev-libs/libxml2 )
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
+
+PATCHES=( "${FILESDIR}/${P}_RSSyl-encodings-fix.patch" )
 
 src_configure() {
 	local myeconfargs=(

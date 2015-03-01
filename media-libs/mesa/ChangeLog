@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.620 2015/02/28 22:23:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.621 2015/03/01 19:29:20 mattst88 Exp $
+
+  01 Mar 2015; Matt Turner <mattst88@gentoo.org> mesa-10.5.0_rc3.ebuild:
+  Drop r600-llvm-compiler USE flag. Upstream only wants active developers to use
+  this.
 
   28 Feb 2015; Matt Turner <mattst88@gentoo.org> mesa-10.0.4.ebuild,
   mesa-10.1.6.ebuild, mesa-10.2.8.ebuild, mesa-10.3.5.ebuild,
