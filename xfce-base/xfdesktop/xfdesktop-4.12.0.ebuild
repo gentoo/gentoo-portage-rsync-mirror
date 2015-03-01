@@ -15,7 +15,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 IUSE="debug libnotify +thunar"
 
 # src/xfdesktop-file-utils.c:#if GLIB_CHECK_VERSION (2, 38, 0)
-RDEPEND=">=dev-libs/dbus-glib-0.100
+RDEPEND=">=x11-libs/cairo-1.6
+	>=dev-libs/dbus-glib-0.100
 	>=dev-libs/glib-2.20
 	>=x11-libs/gtk+-2.24:2
 	x11-libs/libSM
