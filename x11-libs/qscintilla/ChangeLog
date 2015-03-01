@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qscintilla
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.105 2014/12/20 16:57:28 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.106 2015/03/01 16:32:24 pesa Exp $
+
+  01 Mar 2015; Davide Pesavento <pesa@gentoo.org> qscintilla-2.8.4-r1.ebuild:
+  x86 stable wrt bug 524466
 
   20 Dec 2014; Davide Pesavento <pesa@gentoo.org> qscintilla-2.8.4-r1.ebuild:
   amd64 stable wrt #524466

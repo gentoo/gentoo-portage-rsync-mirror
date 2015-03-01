@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.115 2014/12/20 16:58:40 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.116 2015/03/01 16:33:04 pesa Exp $
+
+  01 Mar 2015; Davide Pesavento <pesa@gentoo.org>
+  qscintilla-python-2.8.4.ebuild:
+  x86 stable wrt bug 524466
 
   20 Dec 2014; Davide Pesavento <pesa@gentoo.org>
   qscintilla-python-2.8.4.ebuild:
