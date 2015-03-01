@@ -47,8 +47,6 @@ REQUIRED_USE="systemd? ( polkit )"
 pkg_setup() {
 	PATCHES=( "${FILESDIR}"/${PN}-4.10.1-alock_support_to_xflock4.patch )
 
-	use upower && PATCHES+=( "${FILESDIR}"/${P}-upower-0.99.0.patch )
-
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		$(use_enable polkit)

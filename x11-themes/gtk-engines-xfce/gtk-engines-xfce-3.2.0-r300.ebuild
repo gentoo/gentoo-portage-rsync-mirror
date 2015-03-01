@@ -30,6 +30,7 @@ S=${WORKDIR}/${MY_PN}-${PV}
 pkg_setup() {
 	XFCONF=(
 		--disable-gtk2
+		--enable-gtk3
 		$(xfconf_use_debug)
 		)
 
