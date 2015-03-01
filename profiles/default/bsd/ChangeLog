@@ -1,6 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.173 2015/02/08 16:29:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.174 2015/03/01 18:25:17 mgorny Exp $
+
+  01 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +fbsd/amd64/10.1/clang/parent, +fbsd/amd64/10.1/eapi,
+  +fbsd/amd64/10.1/make.defaults, +fbsd/amd64/10.1/package.use.force,
+  +fbsd/amd64/10.1/parent, +fbsd/x86/10.1/eapi, +fbsd/x86/10.1/make.defaults,
+  +fbsd/x86/10.1/parent:
+  Introduce support for FreeBSD 10.1,
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/46 by nigoro.
 
   08 Feb 2015; Michał Górny <mgorny@gentoo.org> -fbsd/amd64/9.1/clang/eapi,
   -fbsd/amd64/9.1/clang/make.defaults, -fbsd/amd64/9.1/clang/package.use.force,
