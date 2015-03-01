@@ -5,8 +5,8 @@
 inherit toolchain-funcs
 
 DESCRIPTION="Firmware Tool for Broadcom 43xx based wireless network devices"
-HOMEPAGE="http://bcm43xx.berlios.de"
-SRC_URI="mirror://berlios/bcm43xx/${P}.tar.bz2"
+HOMEPAGE="http://sourceforge.net/projects/bcm43xx.berlios/"
+SRC_URI="mirror://sourceforge/bcm43xx.berlios/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
