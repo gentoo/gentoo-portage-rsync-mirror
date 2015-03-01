@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.578 2015/02/27 20:57:08 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.579 2015/03/01 11:11:24 alonbl Exp $
+
+  01 Mar 2015; Alon Bar-Lev <alonbl@gentoo.org> gnupg-1.4.19.ebuild:
+  Remove russian man page, bug#541788
 
 *gnupg-1.4.19 (27 Feb 2015)
 
