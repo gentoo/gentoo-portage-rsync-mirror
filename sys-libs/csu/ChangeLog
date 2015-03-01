@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/csu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.9 2015/02/28 10:53:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.10 2015/03/01 09:15:22 grobian Exp $
+
+  01 Mar 2015; Fabian Groffen <grobian@gentoo.org>
+  +files/csu-85-arm-availability.patch, -files/csu-85-darwin8.patch,
+  csu-85.ebuild:
+  Take simpler approach to fix Availability.h header problem by Michael Weiser,
+  bug #538602
 
   28 Feb 2015; Fabian Groffen <grobian@gentoo.org> csu-85.ebuild:
   Let the compiler determine if Availability.h is available for a more reliable
