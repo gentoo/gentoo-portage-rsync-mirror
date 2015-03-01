@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.12.2.ebuild,v 1.1 2015/01/29 10:02:44 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.12.2.ebuild,v 1.2 2015/03/01 12:22:49 tomka Exp $
 
 EAPI=5
 
@@ -28,6 +28,7 @@ S=${WORKDIR}/${MYP}
 
 src_prepare () {
 	epatch "${FILESDIR}/${PN}-2.12.1-respect-flags.patch"
+	epatch "${FILESDIR}/${PN}-2.12.2-gcc49.patch"
 
 	# Respect users AR tool (Bug 474532)
 	sed -e "s:ar -cr:$(tc-getAR) -cr:" -i source/libnormaliz/Makefile || die

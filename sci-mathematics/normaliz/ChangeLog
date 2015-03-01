@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/normaliz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.23 2015/01/29 10:02:44 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.24 2015/03/01 12:22:49 tomka Exp $
+
+  01 Mar 2015; Thomas Kahle <tomka@gentoo.org>
+  +files/normaliz-2.12.2-gcc49.patch, normaliz-2.12.2.ebuild:
+  Fix gcc-4.9 build (541364)
 
 *normaliz-2.12.2 (29 Jan 2015)
 

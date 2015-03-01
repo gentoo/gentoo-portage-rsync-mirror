@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
-<maintainer>
-<email>aaron@flappyport.com</email>
-<name>Aaron Bauman</name>
-<description>Maintainer. Assign bugs to him</description>
-</maintainer>
-<longdescription lang="en">
-</longdescription>
+	<maintainer>
+		<email>bman@gentoo.org</email>
+		<name>Aaron Bauman</name>
+	</maintainer>
 </pkgmetadata>
-
