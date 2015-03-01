@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.25-r1.ebuild,v 1.1 2015/02/28 01:50:51 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.25-r1.ebuild,v 1.2 2015/03/01 16:02:58 nimiux Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ done
 unset L
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="kde"
 
 DEPEND="

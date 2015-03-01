@@ -1,7 +1,7 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.5 2011/07/26 10:28:31 tupone Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.6 2015/03/01 16:13:55 tupone Exp $
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Beneath a Steel Sky: a science fiction thriller set in a bleak vision of the future"
@@ -25,7 +25,7 @@ src_install() {
 	games_make_wrapper bass "scummvm -f -p \"${GAMES_DATADIR}/${PN}\" -q\$(scummvmGetLang.sh) sky" .
 	dogamesbin "${FILESDIR}"/scummvmGetLang.sh
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins sky.* || die "doins failed"
+	doins sky.*
 	dodoc readme.txt
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} "Beneath a Steel Sky"

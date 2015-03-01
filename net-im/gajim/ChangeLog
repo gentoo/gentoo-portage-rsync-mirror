@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.216 2015/01/17 19:58:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.217 2015/03/01 16:02:24 jlec Exp $
+
+*gajim-0.16.1 (01 Mar 2015)
+
+  01 Mar 2015; Justin Lecher <jlec@gentoo.org> +gajim-0.16.1.ebuild:
+  Version Bump
 
   17 Jan 2015; Markus Meier <maekke@gentoo.org> gajim-0.16.ebuild:
   arm stable, bug #533404
