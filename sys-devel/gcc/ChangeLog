@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1049 2015/02/21 17:39:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1050 2015/02/28 23:14:31 tgall Exp $
+
+  28 Feb 2015;  <tgall@gentoo.org> gcc-4.9.2.ebuild:
+  add ~arm64
 
   21 Feb 2015; Anthony G. Basile <blueness@gentoo.org> gcc-4.8.4.ebuild:
   Bump gentoo gcc patchset for 4.8.4 for alpha, bug #539950
