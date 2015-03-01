@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.240 2015/02/27 21:10:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.241 2015/03/01 15:49:39 hwoarang Exp $
+
+  01 Mar 2015; Markos Chandras <hwoarang@gentoo.org> qbittorrent-3.1.12.ebuild,
+  qbittorrent-9999.ebuild:
+  Add epatch_user. Bug #541690
 
 *qbittorrent-3.1.12 (27 Feb 2015)
 

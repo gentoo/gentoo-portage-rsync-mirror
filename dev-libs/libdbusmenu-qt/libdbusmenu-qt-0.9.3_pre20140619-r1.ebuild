@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild,v 1.1 2015/02/26 12:41:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild,v 1.2 2015/03/01 15:33:37 kensington Exp $
 
 EAPI=5
 
@@ -65,6 +65,7 @@ src_prepare() {
 	[[ ${PV} == 9999* ]] && bzr_src_prepare
 	cmake-utils_src_prepare
 
+	comment_add_subdirectory tools
 	use test || comment_add_subdirectory tests
 }
 

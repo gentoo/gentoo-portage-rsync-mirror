@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.20 2015/02/23 19:02:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.21 2015/03/01 15:49:39 hwoarang Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit python-r1 qmake-utils
+inherit eutils python-r1 qmake-utils
 
 DESCRIPTION="BitTorrent client in C++ and Qt"
 HOMEPAGE="http://www.qbittorrent.org/"
@@ -54,6 +54,10 @@ RDEPEND="${CDEPEND}
 
 S=${WORKDIR}/${MY_P}
 DOCS=(AUTHORS Changelog README.md TODO)
+
+src_prepare() {
+	epatch_user
+}
 
 src_configure() {
 	# Custom configure script, econf fails

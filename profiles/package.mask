@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16393 2015/03/01 03:53:48 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16394 2015/03/01 15:44:33 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -398,15 +398,6 @@ www-apps/trac-downloads
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (03 Sep 2014)
 # Temporary mask until it is verified to work
 =media-libs/raspberrypi-userland-0_pre20140830
-
-# Markos Chandras <hwoarang@gentoo.org> (02 Sep 2014)
-# MSN service terminated.
-# You can still use your MSN account in net-im/skype
-# or switch to an open protocol instead
-# Masked for removal in 30 days
-net-im/amsn
-net-im/emesene
-x11-themes/amsn-skins
 
 # Christian Faulhammer <fauli@gentoo.org> (02 Sep 2014)
 # website not working anymore and will stay like this,
