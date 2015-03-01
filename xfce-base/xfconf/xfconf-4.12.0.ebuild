@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x8
 IUSE="debug perl"
 
 RDEPEND=">=dev-libs/dbus-glib-0.98
-	>=dev-libs/glib-2.24
+	>=dev-libs/glib-2.30
 	>=xfce-base/libxfce4util-4.10
 	perl? ( dev-perl/glib-perl )"
 DEPEND="${RDEPEND}
