@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-im/indicator-messages/indicator-messages-0.6.0.ebuild,v 1.2 2014/08/05 18:34:06 mrueg Exp $
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/libdbusmenu-0.6.2:3[gtk]
+RDEPEND=">=dev-libs/libdbusmenu-0.6.2[gtk3]
 	>=dev-libs/glib-2.22
 	>=dev-libs/libindicate-12.10.0:3
 	>=dev-libs/libindicator-12.10.0:3
