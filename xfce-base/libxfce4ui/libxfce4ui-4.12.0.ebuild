@@ -14,14 +14,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="debug glade startup-notification"
 
-RDEPEND=">=dev-libs/glib-2.28
+RDEPEND=">=dev-libs/glib-2.30
 	>=x11-libs/gtk+-2.24:2
 	>=x11-libs/gtk+-3.2:3
 	x11-libs/libX11
 	x11-libs/libICE
 	x11-libs/libSM
-	>=xfce-base/libxfce4util-4.11
-	>=xfce-base/xfconf-4.10
+	>=xfce-base/libxfce4util-4.12
+	>=xfce-base/xfconf-4.12
 	glade? ( dev-util/glade:3 )
 	startup-notification? ( x11-libs/startup-notification )
 	!xfce-base/xfce-utils"
