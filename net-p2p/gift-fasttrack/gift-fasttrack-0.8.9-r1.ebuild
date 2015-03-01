@@ -9,8 +9,8 @@ IUSE=""
 MY_P=${P/gift-fasttrack/giFT-FastTrack}
 
 DESCRIPTION="FastTrack Plugin for giFT"
-HOMEPAGE="https://developer.berlios.de/projects/gift-fasttrack/"
-SRC_URI="mirror://berlios/${PN}/${MY_P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/gift-fasttrack.berlios/"
+SRC_URI="mirror://sourceforge/${PN}.berlios/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~x86-fbsd"
@@ -22,7 +22,7 @@ DEPEND="virtual/pkgconfig
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	make DESTDIR=${D} \
+	make DESTDIR="${D}" \
 		giftconfdir=/etc/giFT \
 		plugindir=/usr/$(get_libdir)/giFT \
 		libgiftincdir=/usr/include/libgift \
