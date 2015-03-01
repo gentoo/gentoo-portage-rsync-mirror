@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/south
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/ChangeLog,v 1.19 2014/10/10 10:59:18 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/ChangeLog,v 1.21 2015/03/01 17:21:00 jlec Exp $
+
+  01 Mar 2015; Justin Lecher <jlec@gentoo.org> south-1.0.ebuild:
+  Readd python3 support
+
+  01 Mar 2015; Justin Lecher <jlec@gentoo.org> -south-0.7.5-r1.ebuild,
+  -south-0.7.5.ebuild, -south-0.8.1-r1.ebuild, metadata.xml, south-1.0.ebuild:
+  Drop py3 support as it isn't needed for all present django versions; drop old
 
   10 Oct 2014; Agostino Sarubbo <ago@gentoo.org> south-0.8.4.ebuild:
   Stable for x86, wrt bug #524336

@@ -1,17 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-1.0.ebuild,v 1.1 2014/10/03 05:24:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/south/south-1.0.ebuild,v 1.3 2015/03/01 17:21:00 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
 
 inherit distutils-r1
 
 MY_PN="South"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Intelligent schema migrations for Django apps."
+DESCRIPTION="Intelligent schema migrations for Django apps"
 HOMEPAGE="http://south.aeracode.org/"
 SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz -> ${P}.tar.gz"
 

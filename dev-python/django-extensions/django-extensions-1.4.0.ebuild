@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/django-extensions-1.4.0.ebuild,v 1.2 2014/11/28 10:14:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/django-extensions-1.4.0.ebuild,v 1.3 2015/03/01 17:08:16 jlec Exp $
 
 EAPI=5
 
@@ -17,12 +17,12 @@ SRC_URI="http://github.com/django-extensions/django-extensions/tarball/${PV}/${P
 LICENSE="BSD || ( MIT GPL-2 )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc graphviz mysql postgres s3 sqlite test vcard"
+IUSE="doc graphviz s3 test vcard"
 # Req'd for tests
 DISTUTILS_IN_SOURCE_BUILD=1
 
 PY2_USEDEP=$(python_gen_usedep 'python2*')
-RDEPEND=">=dev-python/django-1.5.4[${PYTHON_USEDEP},mysql?,postgres?,sqlite?]
+RDEPEND=">=dev-python/django-1.5.4[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/werkzeug[${PYTHON_USEDEP}]
