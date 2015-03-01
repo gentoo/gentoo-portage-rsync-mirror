@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-markad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/ChangeLog,v 1.15 2015/02/06 21:09:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/ChangeLog,v 1.16 2015/03/01 03:23:54 hd_brummy Exp $
+
+*vdr-markad-0.1.4-r1 (01 Mar 2015)
+
+  01 Mar 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-markad-0.1.4-r1.ebuild:
+  compile fix libav11, wrt bug 540884, thx to T.Foerster for reporting this
 
   06 Feb 2015; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-markad-0.1.4.ebuild:
   stable amd64 x86
