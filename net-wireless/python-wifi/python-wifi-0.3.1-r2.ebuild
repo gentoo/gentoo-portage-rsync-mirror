@@ -5,7 +5,6 @@
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils-r1
 
@@ -23,10 +22,6 @@ RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 DOCS="docs/AUTHORS docs/BUGS docs/DEVEL.txt docs/TODO"
-
-pkg_setup() {
-	python-single-r1_pkg_setup
-}
 
 src_install() {
 	distutils-r1_src_install
