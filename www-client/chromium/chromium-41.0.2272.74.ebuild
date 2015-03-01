@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-41.0.2272.35.ebuild,v 1.4 2015/02/09 10:39:40 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-41.0.2272.74.ebuild,v 1.1 2015/03/01 03:47:00 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )

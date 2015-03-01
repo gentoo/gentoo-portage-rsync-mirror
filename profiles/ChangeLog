@@ -1,10 +1,13 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9833 2015/02/28 21:33:20 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9834 2015/03/01 03:53:48 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Mar 2015; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-pcd masked for removal around 1 Apr 2015
 
   28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> use.desc:
   Add "seccomp" global USE flag.
