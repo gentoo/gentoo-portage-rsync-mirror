@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20091009.ebuild,v 1.5 2015/01/17 13:37:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20091009.ebuild,v 1.6 2015/03/01 01:50:56 slyfox Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,9 +38,6 @@ src_compile() {
 
 	# Has problems with -O3 on some systems
 	replace-flags -O[3-9] -O2
-
-	# Fix compilation on hardened
-	append-flags -fno-pic
 
 	unset KERNEL
 

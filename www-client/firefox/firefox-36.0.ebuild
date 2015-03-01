@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-36.0.ebuild,v 1.3 2015/02/27 08:36:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-36.0.ebuild,v 1.4 2015/03/01 01:44:10 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -34,7 +34,7 @@ MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases/"
 
 MOZCONFIG_OPTIONAL_WIFI=1
-MOZCONFIG_OPTIONAL_JIT="enabled"
+# No longer optional -- MOZCONFIG_OPTIONAL_JIT="enabled"
 
 inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-v5.36 multilib pax-utils fdo-mime autotools virtualx mozlinguas
 
@@ -131,13 +131,6 @@ pkg_pretend() {
 		CHECKREQS_DISK_BUILD="4G"
 	fi
 	check-reqs_pkg_setup
-
-	if use jit && [[ -n ${PROFILE_IS_HARDENED} ]]; then
-		ewarn "You are emerging this package on a hardened profile with USE=jit enabled."
-		ewarn "This is horribly insecure as it disables all PAGEEXEC restrictions."
-		ewarn "Please ensure you know what you are doing.  If you don't, please consider"
-		ewarn "emerging the package with USE=-jit"
-	fi
 }
 
 src_unpack() {
@@ -228,6 +221,12 @@ src_configure() {
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+
+	# Force jit
+	mozconfig_annotate '' --enable-ion
+	# Force jit simulators for mips and arm
+	use arm && mozconfig_annotate '' --enable-arm-simulator
+	use mips && mozconfig_annotate '' --enable-mips-simulator
 
 	# Allow for a proper pgo build
 	if use pgo; then
@@ -355,11 +354,11 @@ src_install() {
 	fi
 
 	# Required in order to use plugins and even run firefox on hardened.
-	if use jit; then
+#	if use jit; then
 		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
-	else
-		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
-	fi
+#	else
+#		pax-mark m "${ED}"${MOZILLA_FIVE_HOME}/plugin-container
+#	fi
 
 	if use minimal; then
 		rm -r "${ED}"/usr/include "${ED}${MOZILLA_FIVE_HOME}"/{idl,include,lib,sdk} \

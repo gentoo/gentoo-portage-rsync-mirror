@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.389 2015/02/27 13:25:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.390 2015/03/01 01:44:10 axs Exp $
+
+  01 Mar 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-36.0.ebuild:
+  dropped USE=jit from firefox-36.0 as disabling jit is not supported according
+  to upstream, also added configure flags to enable the jit simulators for arm
+  and mips; works around bug 541534
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> firefox-31.5.0.ebuild:
   Stable for amd64, wrt bug #541316

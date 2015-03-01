@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.61 2015/01/17 13:37:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.62 2015/03/01 01:50:56 slyfox Exp $
+
+  01 Mar 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  dosemu-1.4.1_pre20091009.ebuild:
+  Drop outdated workaround for hardened: bug #540912 by Toralf Förster.
 
   17 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> -dosemu-1.4.0.1.ebuild,
   -dosemu-1.4.1_pre20130107-r2.ebuild, -dosemu-1.4.1_pre20130107.ebuild,
