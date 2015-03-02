@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.4.0.ebuild,v 1.1 2015/02/25 00:31:34 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-3.4.0.ebuild,v 1.2 2015/03/02 01:18:36 reavertm Exp $
 
 EAPI=5
 
@@ -25,7 +25,11 @@ COMMON_DEPEND="
 	sys-libs/zlib
 	x11-libs/libX11
 	dbus? ( >=sys-apps/dbus-1.6.18-r1 )
-	qt5? ( >=dev-qt/qtgui-5.4.0:5 )
+	qt5? (
+		>=dev-qt/qtcore-5.4.1:5
+		>=dev-qt/qtgui-5.4.1:5
+		>=dev-qt/qtwidgets-5.4.1:5
+	)
 	udev? ( virtual/udev )
 	utils? (
 		media-libs/freeglut
