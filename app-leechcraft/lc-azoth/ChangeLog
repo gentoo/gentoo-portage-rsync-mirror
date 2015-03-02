@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-azoth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.26 2015/02/22 18:30:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.27 2015/03/02 19:08:06 maksbotan Exp $
+
+  02 Mar 2015; Maxim Koltsov <maksbotan@gentoo.org> lc-azoth-0.6.60.ebuild,
+  lc-azoth-0.6.65.ebuild, lc-azoth-0.6.70.ebuild, lc-azoth-9999.ebuild:
+  Removed msn use flag and support because of coming last rite of libmsn due to
+  the death of the service.
 
   22 Feb 2015; Michał Górny <mgorny@gentoo.org> lc-azoth-0.6.60.ebuild,
   lc-azoth-0.6.65.ebuild, lc-azoth-0.6.70.ebuild, lc-azoth-9999.ebuild:

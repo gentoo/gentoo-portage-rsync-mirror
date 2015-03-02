@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16395 2015/03/02 18:56:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16396 2015/03/02 19:11:41 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # MSNp18 clients are not able to connect anymore
 # See also: http://ismsndeadyet.com
 # Masked for removal in 30 days
+net-libs/libmsn
 net-im/pebrot
 net-im/msnlib
 net-im/pymsn-t
