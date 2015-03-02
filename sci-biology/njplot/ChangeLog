@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/njplot
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.12 2013/03/11 16:22:49 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.13 2015/03/02 13:14:37 jlec Exp $
+
+*njplot-2.3-r1 (02 Mar 2015)
+
+  02 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/njplot-2.3-buildsystem.patch, +files/njplot-2.3-format-security.patch,
+  +njplot-2.3-r1.ebuild, njplot-2.3.ebuild:
+  Fix dependencies, #425710; make buildsystem sane; fix format-security
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
@@ -56,4 +63,3 @@
   06 Oct 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
   +njplot-unrooted-1.ebuild:
   Initial import.
-

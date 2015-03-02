@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diamond/diamond-9999.ebuild,v 1.1 2015/03/02 10:35:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diamond/diamond-9999.ebuild,v 1.3 2015/03/02 13:19:23 grobian Exp $
 
 EAPI=5
 
@@ -52,10 +52,15 @@ python_install() {
 	export VIRTUAL_ENV=1
 	distutils-r1_python_install
 	mv "${ED}"/usr/etc "${ED}"/ || die
+	rm "${ED}"/etc/diamond/*.windows  # won't need these
+	sed -i \
+		-e '/pid_file =/s:/var/run:/run:' \
+		"${ED}"/etc/diamond/diamond.conf.example || die
 }
 
 src_install() {
 	distutils-r1_src_install
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	keepdir /var/log/diamond
 }

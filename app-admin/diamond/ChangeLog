@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/diamond
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diamond/ChangeLog,v 1.2 2015/03/02 10:35:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diamond/ChangeLog,v 1.4 2015/03/02 13:19:23 grobian Exp $
+
+  02 Mar 2015; Fabian Groffen <grobian@gentoo.org> diamond-4.0.ebuild,
+  diamond-9999.ebuild:
+  create /var/log/diamond for first-time starts
+
+  02 Mar 2015; Fabian Groffen <grobian@gentoo.org> diamond-4.0.ebuild,
+  diamond-9999.ebuild:
+  Remove windows config, fix pid-file location
 
 *diamond-9999 (02 Mar 2015)
 

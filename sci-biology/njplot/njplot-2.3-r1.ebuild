@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/njplot-2.3.ebuild,v 1.3 2015/03/02 13:14:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/njplot-2.3-r1.ebuild,v 1.1 2015/03/02 13:14:37 jlec Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A phylogenetic tree drawing program which supports tree rooting"
 HOMEPAGE="http://pbil.univ-lyon1.fr/software/njplot.html"
@@ -12,7 +12,7 @@ SRC_URI="ftp://pbil.univ-lyon1.fr/pub/mol_phylogeny/njplot/archive/njplot-${PV}.
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -21,14 +21,15 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -i -e 's|/banques0/ncbiJun04|/usr/include/ncbi|' \
-		-e 's/CC = gcc/CC='$(tc-getCC)'/' -e 's/CFLAGS  =/CFLAGS +=/' \
-		makefile || die
-	sed -i -e "s%njplot.help%/usr/share/doc/${PF}/njplot.help%" njplot-vib.c || die
+	sed -i -e "s%njplot.help%${EPREFIX}/usr/share/doc/${PF}/njplot.help%" njplot-vib.c || die
+	epatch \
+		"${FILESDIR}"/${P}-format-security.patch \
+		"${FILESDIR}"/${P}-buildsystem.patch
+	tc-export CC
 }
 
 src_install() {
-	dobin newicktops newicktotxt njplot unrooted || die
-	doman *.1 || die
+	dobin newicktops newicktotxt njplot unrooted
+	doman *.1
 	dodoc README njplot.help
 }
