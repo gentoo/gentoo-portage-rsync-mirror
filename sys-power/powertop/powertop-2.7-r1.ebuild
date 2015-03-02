@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.7-r1.ebuild,v 1.1 2015/03/02 21:40:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.7-r1.ebuild,v 1.2 2015/03/02 22:25:47 vapier Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ HOMEPAGE="https://01.org/powertop/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="unicode X"
+IUSE="nls unicode X"
 
 COMMON_DEPEND="
 	dev-libs/libnl:3
@@ -93,5 +93,5 @@ src_prepare() {
 
 src_configure() {
 	export ac_cv_search_delwin=$(usex unicode -lncursesw -lncurses)
-	default
+	econf $(use_enable nls)
 }
