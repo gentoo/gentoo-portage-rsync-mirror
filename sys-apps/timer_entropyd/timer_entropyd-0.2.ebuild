@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/timer_entropyd-0.2.ebuild,v 1.3 2012/09/23 08:16:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/timer_entropyd-0.2.ebuild,v 1.4 2015/03/02 01:36:20 kumba Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.vanheusden.com/te/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~mips x86"
 IUSE="debug"
 
 src_prepare() {
