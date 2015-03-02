@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.938 2015/03/01 09:31:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.939 2015/03/02 17:01:33 lu_zero Exp $
+
+  02 Mar 2015; Luca Barbato <lu_zero@gentoo.org> vlc-2.2.0.ebuild:
+  Fix bug #541924 and provide saner defaults
 
   01 Mar 2015; Agostino Sarubbo <ago@gentoo.org> vlc-2.1.5-r1.ebuild:
   Stable for ppc64, wrt bug #534532

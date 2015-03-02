@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.27.0.ebuild,v 1.4 2015/03/02 09:27:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.27.0.ebuild,v 1.5 2015/03/02 17:21:17 nimiux Exp $
 
 EAPI="5"
 
@@ -44,7 +44,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/thttpd-renamed-htpasswd.patch
-	mv "${S}"/extras/{htpasswd.c,th_htpasswd.c}
+	mv "${S}"/extras/{htpasswd.c,th_htpasswd.c} || die
 	eautoreconf -f -i
 }
 
@@ -67,8 +67,8 @@ src_install () {
 	#move htdocs to docdir, bug #429632
 	docompress -x /usr/share/doc/"${PF}"/htdocs.dist
 	mv "${ED}"${WEBROOT}/htdocs \
-		"${ED}"/usr/share/doc/"${PF}"/htdocs.dist
-	mkdir "${ED}"${WEBROOT}/htdocs
+		"${ED}"/usr/share/doc/"${PF}"/htdocs.dist || die
+	mkdir "${ED}"${WEBROOT}/htdocs || die
 
 	keepdir ${WEBROOT}/htdocs
 

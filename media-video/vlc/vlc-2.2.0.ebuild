@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.2 2015/02/28 23:09:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.3 2015/03/02 17:01:33 lu_zero Exp $
 
 EAPI="5"
 
@@ -49,7 +49,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtkit
 	matroska media-library cpu_flags_x86_mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory opus
-	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
+	png postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex cpu_flags_x86_sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
 	vlm vnc vorbis vpx wma-fixed +X x264 x265 +xcb xml xv zvbi"
@@ -66,7 +66,7 @@ RDEPEND="
 		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
 		avcodec? (
 			!libav? ( media-video/ffmpeg:0= )
-			libav? ( media-video/libav:0= )
+			libav? ( >=media-video/libav-11:0= )
 		)
 		avformat? (
 			!libav? ( media-video/ffmpeg:0= )
