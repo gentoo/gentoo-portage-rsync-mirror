@@ -1,6 +1,20 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.63 2015/02/24 08:54:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.65 2015/03/02 13:39:59 pinkbyte Exp $
+
+*ceph-0.80.7-r1 (02 Mar 2015)
+*ceph-0.80.5-r1 (02 Mar 2015)
+*ceph-0.67.10-r1 (02 Mar 2015)
+*ceph-0.67.9-r1 (02 Mar 2015)
+
+  02 Mar 2015; Sergey Popov <pinkbyte@gentoo.org> -ceph-0.67.9.ebuild,
+  +ceph-0.67.9-r1.ebuild, -ceph-0.67.10.ebuild, +ceph-0.67.10-r1.ebuild,
+  -ceph-0.80.5.ebuild, +ceph-0.80.5-r1.ebuild, -ceph-0.80.7.ebuild,
+  +ceph-0.80.7-r1.ebuild:
+  QA: revbump all ceph ebuilds to fix bug #529228 and related logrotate issues
+
+  02 Mar 2015; Sergey Popov <pinkbyte@gentoo.org> files/ceph.logrotate:
+  QA: prevent rotating already rotated log files
 
   24 Feb 2015; Sergey Popov <pinkbyte@gentoo.org> files/ceph.logrotate:
   QA: do not pollute cron output in logrotate script in cases, when no
