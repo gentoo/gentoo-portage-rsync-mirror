@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ethon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ethon/ChangeLog,v 1.1 2014/08/31 06:31:15 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ethon/ChangeLog,v 1.2 2015/03/02 06:11:26 graaff Exp $
+
+*ethon-0.7.3 (02 Mar 2015)
+
+  02 Mar 2015; Hans de Graaff <graaff@gentoo.org> +ethon-0.7.3.ebuild:
+  Version bump. Add missing sinatra test dependency.
 
 *ethon-0.7.1 (31 Aug 2014)
 
