@@ -6623,7 +6623,6 @@ sci-physics/lammps:package-rigid - rigid bodies
 sci-physics/lhapdf:octave - Add bindings for sci-mathematics/octave
 sci-physics/meep:mpb - Enable build against sci-physics/mpb
 sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc
-sci-physics/root:c++0x - Build ROOT using the C++11 standard. Not supported, requires sys-devel/gcc>=4.7.0
 sci-physics/root:c++11 - Build ROOT using the C++11 standard
 sci-physics/root:c++14 - Build ROOT using the C++14 standard
 sci-physics/root:clarens - Build the Clarens and PEAC plug-ins, to use in a GRID enabled analysis
@@ -6631,7 +6630,6 @@ sci-physics/root:fits - Support for images and data from FITS files with sci-lib
 sci-physics/root:htmldoc - Generate html documentation
 sci-physics/root:http - Enable http server support including but not limited to fastcgi support
 sci-physics/root:math - Build all math related libraries plugins, needs sci-libs/gsl
-sci-physics/root:metric - Default to A4 paper size and metric measurement
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
 sci-physics/root:pythia8 - Build the interface for sci-physics/pythia version 8.x
 sci-physics/root:reflex - Build the reflection database for the C++ interpreter

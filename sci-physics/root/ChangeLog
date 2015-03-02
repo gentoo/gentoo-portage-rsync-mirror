@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.136 2015/03/02 08:27:34 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.137 2015/03/02 08:46:28 bircoph Exp $
+
+  02 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> -root-5.34.18.ebuild,
+  -root-5.34.18-r1.ebuild, -files/root-5.32.00-prop-flags.patch,
+  -files/root-5.34.13-pythia8.patch:
+  Remove old and broken vensions.
 
 *root-5.34.26 (02 Mar 2015)
 
