@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/Test-Trap-0.2.4.ebuild,v 1.1 2014/05/26 06:38:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/Test-Trap-0.3.2.ebuild,v 1.1 2015/03/02 07:10:39 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	virtual/perl-IO
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.30
+	>=virtual/perl-Module-Build-0.400.3
 	test? (
 		>=dev-perl/Test-Tester-0.107
 	)"

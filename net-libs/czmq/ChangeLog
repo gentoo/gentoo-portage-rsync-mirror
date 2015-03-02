@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/czmq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/ChangeLog,v 1.22 2015/02/28 19:56:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/ChangeLog,v 1.23 2015/03/02 07:18:26 jlec Exp $
+
+  02 Mar 2015; Justin Lecher <jlec@gentoo.org> -czmq-1.2.0-r1.ebuild,
+  -czmq-1.2.0.ebuild:
+  Drop old
 
   28 Feb 2015; Markus Meier <maekke@gentoo.org> czmq-2.2.0-r2.ebuild:
   arm stable, bug #539750
