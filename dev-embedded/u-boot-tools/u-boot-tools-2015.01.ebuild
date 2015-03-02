@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2015.01.ebuild,v 1.1 2015/02/11 17:50:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2015.01.ebuild,v 1.2 2015/03/02 10:04:44 hwoarang Exp $
 
 EAPI="5"
 
@@ -19,6 +19,8 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
+	# Unset a few KBUILD variables. Bug #540476
+	unset KBUILD_OUTPUT KBUILD_SRC
 	emake defconfig
 	emake \
 		HOSTSTRIP=: \
