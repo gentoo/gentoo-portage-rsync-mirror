@@ -1,6 +1,9 @@
 # ChangeLog for net-im/bitlbee
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.174 2014/11/02 08:58:11 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.175 2015/03/02 09:22:48 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> bitlbee-3.2.2.ebuild:
+  Stable for ppc, wrt bug #529512
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> bitlbee-3.0.5-r1.ebuild,
   bitlbee-3.0.6.ebuild, bitlbee-3.2.1-r2.ebuild, bitlbee-3.2.1.ebuild,

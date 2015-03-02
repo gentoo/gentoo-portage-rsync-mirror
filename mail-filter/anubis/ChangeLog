@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/anubis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.26 2014/12/28 15:52:31 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/anubis/ChangeLog,v 1.27 2015/03/02 09:21:23 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> anubis-4.1.1-r1.ebuild:
+  Stable for ppc, wrt bug #502826
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> anubis-4.1.1.ebuild,
   anubis-4.1.1-r1.ebuild:

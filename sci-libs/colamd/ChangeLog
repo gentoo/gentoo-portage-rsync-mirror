@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/colamd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.39 2015/02/22 00:50:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.40 2015/03/02 09:22:54 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> colamd-2.8.0.ebuild:
+  Stable for ppc, wrt bug #534636
 
   22 Feb 2015; Matt Turner <mattst88@gentoo.org> colamd-2.7.1.ebuild,
   colamd-2.7.3.ebuild, colamd-2.8.0.ebuild:

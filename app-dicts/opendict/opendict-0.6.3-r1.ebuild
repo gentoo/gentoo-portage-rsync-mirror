@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3-r1.ebuild,v 1.2 2015/01/29 10:32:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3-r1.ebuild,v 1.3 2015/03/02 09:20:14 ago Exp $
 
 EAPI=5
 GCONF_DEBUG="no" # We skip gnome2_src_configure entirely
@@ -13,7 +13,7 @@ HOMEPAGE="http://opendict.sourceforge.net/"
 SRC_URI="http://opendict.idiles.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

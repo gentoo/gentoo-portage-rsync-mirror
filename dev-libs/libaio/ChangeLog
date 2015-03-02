@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.92 2015/02/20 19:21:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.93 2015/03/02 09:27:31 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libaio-0.3.110.ebuild:
+  Stable for ppc, wrt bug #525980
 
   20 Feb 2015; Mike Frysinger <vapier@gentoo.org> libaio-0.3.110.ebuild:
   Add arm64 love.

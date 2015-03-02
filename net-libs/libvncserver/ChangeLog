@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.85 2015/01/16 11:19:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.86 2015/03/02 09:29:06 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libvncserver-0.9.9-r3.ebuild:
+  Stable for ppc, wrt bug #526032
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> libvncserver-0.9.9-r3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #526032

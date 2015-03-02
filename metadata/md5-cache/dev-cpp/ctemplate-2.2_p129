@@ -4,11 +4,11 @@ DESCRIPTION=A simple but powerful template language for C++
 EAPI=5
 HOMEPAGE=http://code.google.com/p/ctemplate/
 IUSE=doc emacs vim-syntax static-libs test
-KEYWORDS=amd64 arm ~ppc x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 arm ppc x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=vim-syntax? ( >=app-editors/vim-core-7 ) emacs? ( virtual/emacs )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/ctemplate-2.2_p129.tar.bz2
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=8925c3e59368dfbd557d22bb972c9353
+_md5_=c600a649d28cb21b1952d4f3ea94b68e

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20130729.ebuild,v 1.17 2015/01/30 17:15:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20130729.ebuild,v 1.18 2015/03/02 09:21:49 ago Exp $
 
 EAPI=5
 
@@ -159,9 +159,9 @@ RDEPEND+="
 SLOT="0"
 LICENSE="GPL-2"
 if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="alpha amd64 arm hppa ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm hppa ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 else
-	KEYWORDS="alpha hppa"
+	KEYWORDS="alpha hppa ppc"
 fi
 
 # faac codecs are nonfree

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1430 2015/02/13 17:47:58 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1431 2015/03/02 09:27:01 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> portage-2.2.14.ebuild:
+  Stable for ppc, wrt bug #531594
 
   13 Feb 2015; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
   Update ebuild back to automagic, undeclared vcs deps. Fix typo in bug # for

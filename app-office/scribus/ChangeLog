@@ -1,6 +1,9 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.199 2015/02/17 12:05:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.200 2015/03/02 09:29:17 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> scribus-1.4.4-r1.ebuild:
+  Stable for ppc, wrt bug #519890
 
   17 Feb 2015; Justin Lecher <jlec@gentoo.org> scribus-9999.ebuild:
   Use subslots for deps

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.60 2015/02/01 23:59:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.61 2015/03/02 09:28:02 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> subunit-0.0.21-r1.ebuild:
+  Stable for ppc, wrt bug #525994
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -subunit-0.0.8.ebuild,
   -subunit-0.0.9.ebuild:

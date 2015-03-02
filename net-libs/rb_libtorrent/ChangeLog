@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.183 2015/01/16 09:53:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.184 2015/03/02 09:20:26 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rb_libtorrent-0.16.17.ebuild:
+  Stable for ppc, wrt bug #522764
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> rb_libtorrent-0.16.17.ebuild:
   sparc stable wrt #522764

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.191 2015/02/25 03:09:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.192 2015/03/02 09:29:54 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> quassel-0.10.0-r1.ebuild:
+  Stable for ppc, wrt bug #516836
 
 *quassel-0.12_beta1 (25 Feb 2015)
 

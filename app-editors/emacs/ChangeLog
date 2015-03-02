@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.658 2015/02/28 20:47:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.659 2015/03/02 09:21:35 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> emacs-24.4-r1.ebuild:
+  Stable for ppc, wrt bug #531806
 
   28 Feb 2015; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r12.ebuild,
   emacs-24.4-r3.ebuild:

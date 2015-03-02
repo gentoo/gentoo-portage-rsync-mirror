@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.5 2015/02/27 16:40:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.7 2015/03/02 09:04:09 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-1054.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
 RDEPEND="app-i18n/enca

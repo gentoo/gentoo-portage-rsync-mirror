@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/opendict
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.31 2015/01/29 10:32:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/ChangeLog,v 1.32 2015/03/02 09:20:14 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> opendict-0.6.3-r1.ebuild:
+  Stable for ppc, wrt bug #531460
 
   29 Jan 2015; Pacho Ramos <pacho@gentoo.org> opendict-0.6.3-r1.ebuild:
   amd64/x86 stable, bug #531460

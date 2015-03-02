@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.7.1.ebuild,v 1.4 2014/11/21 12:28:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.7.1.ebuild,v 1.5 2015/03/02 09:27:55 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/brianb/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 IUSE="gnome odbc static-libs"
 

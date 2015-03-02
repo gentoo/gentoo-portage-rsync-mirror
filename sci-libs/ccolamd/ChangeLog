@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.37 2015/02/22 00:52:02 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.38 2015/03/02 09:23:11 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ccolamd-2.8.0.ebuild:
+  Stable for ppc, wrt bug #534642
 
   22 Feb 2015; Matt Turner <mattst88@gentoo.org> ccolamd-2.7.3.ebuild,
   ccolamd-2.8.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-2.2_p129.ebuild,v 1.3 2014/12/23 12:31:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-2.2_p129.ebuild,v 1.4 2015/03/02 09:21:17 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs vim-syntax static-libs test"
 
 DEPEND="test? ( ${PYTHON_DEPS} )"

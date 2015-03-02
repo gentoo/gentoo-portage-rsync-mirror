@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.407 2015/02/28 19:59:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.408 2015/03/02 09:20:51 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.18-r1.ebuild:
+  Stable for ppc, wrt bug #540676
 
   28 Feb 2015; Markus Meier <maekke@gentoo.org> cairo-1.12.18-r1.ebuild:
   arm stable, bug #540676

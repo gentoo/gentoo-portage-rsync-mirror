@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129-r1.ebuild,v 1.9 2014/11/03 11:09:33 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/stride-20011129-r1.ebuild,v 1.10 2015/03/02 09:21:54 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="STRIDE"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 S="${WORKDIR}"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.190 2014/11/21 10:27:42 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.191 2015/03/02 09:27:19 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mdadm-3.3.1-r2.ebuild:
+  Stable for ppc, wrt bug #520342
 
   21 Nov 2014; Tobias Klausmann <klausman@gentoo.org> mdadm-3.3.1-r2.ebuild:
   Stable on alpha, bug 520342
