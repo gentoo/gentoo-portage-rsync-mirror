@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-8.0.ebuild,v 1.7 2014/12/28 16:04:54 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-8.0.ebuild,v 1.8 2015/03/02 09:32:33 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://freeworld.thc.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="firebird gtk idn mysql ncp oracle pcre postgres ssl subversion"
 
 RDEPEND="

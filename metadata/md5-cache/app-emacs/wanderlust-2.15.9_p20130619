@@ -4,10 +4,10 @@ DESCRIPTION=Yet Another Message Interface on Emacsen
 EAPI=5
 HOMEPAGE=https://github.com/wanderlust/wanderlust http://emacswiki.org/emacs/WanderLust
 IUSE=bbdb ssl linguas_ja
-KEYWORDS=amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2+
 RDEPEND=>=app-emacs/apel-10.6 virtual/emacs-flim app-emacs/semi bbdb? ( app-emacs/bbdb ) >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ulm/distfiles/wanderlust-2.15.9_p20130619.tar.xz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=cfdd35c94aec4b8e0c5f1293a328f523
+_md5_=21c9225a619b4e4d08ea76f5c59a7b8a

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs-gtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.35 2014/08/01 11:18:40 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/ChangeLog,v 1.36 2015/03/02 09:34:23 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> xdg-user-dirs-gtk-0.10.ebuild:
+  Stable for ppc, wrt bug #506826
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> xdg-user-dirs-gtk-0.10.ebuild:
   sparc stable wrt #506826

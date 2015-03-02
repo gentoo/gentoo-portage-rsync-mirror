@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook2X
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.55 2015/01/15 10:28:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.56 2015/03/02 09:33:43 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> docbook2X-0.8.8-r4.ebuild:
+  Stable for ppc, wrt bug #520860
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> docbook2X-0.8.8-r4.ebuild:
   ia64/s390/sh/sparc/x86 stable wrt #520860

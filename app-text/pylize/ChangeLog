@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pylize
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.16 2013/09/05 18:26:42 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.17 2015/03/02 09:32:09 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pylize-1.3b-r1.ebuild:
+  Stable for ppc, wrt bug #512854
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pylize-1.3b-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

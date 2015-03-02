@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/delay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.32 2015/01/09 14:03:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.33 2015/03/02 09:32:03 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> delay-1.6-r2.ebuild:
+  Stable for ppc, wrt bug #534868
 
   09 Jan 2015; Justin Lecher <jlec@gentoo.org> delay-1.6-r2.ebuild,
   files/delay-1.6-tinfo.patch, metadata.xml:

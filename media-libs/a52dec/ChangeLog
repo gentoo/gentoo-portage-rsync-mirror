@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.74 2015/01/16 12:01:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.75 2015/03/02 09:34:06 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> a52dec-0.7.4-r7.ebuild:
+  Stable for ppc, wrt bug #525754
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> a52dec-0.7.4-r7.ebuild:
   alpha/ia64/sh/sparc/x86 stable wrt #525754

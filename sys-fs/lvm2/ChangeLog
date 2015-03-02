@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.373 2015/01/09 19:08:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.374 2015/03/02 09:31:40 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.109.ebuild:
+  Stable for ppc, wrt bug #493892
 
   09 Jan 2015; Tobias Klausmann <klausman@gentoo.org> lvm2-2.02.109.ebuild:
   Stable on alpha, bug 493892

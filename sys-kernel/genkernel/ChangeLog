@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.399 2014/11/26 09:37:54 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.400 2015/03/02 09:35:37 ago Exp $
+
+  02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> genkernel-3.4.49.2.ebuild:
+  Stable for ppc, wrt bug #511992
 
   26 Nov 2014; Raúl Porcel <armin76@gentoo.org> genkernel-3.4.49.2.ebuild,
   genkernel-3.4.50.ebuild, genkernel-3.4.51.ebuild, genkernel-3.4.51.1.ebuild,

@@ -3,9 +3,9 @@ DEPEND=>=app-text/chasen-2.3.1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/
 DESCRIPTION=Japanese dictionary for ChaSen
 EAPI=4
 HOMEPAGE=http://sourceforge.jp/projects/ipadic/
-KEYWORDS=amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
+KEYWORDS=amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=ipadic
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/ipadic/24435/ipadic-2.7.0.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=f3da694363612dfe48dffe1a5c88b21d
+_md5_=7ed6a53fba38a5a6bd95016a048f721d
