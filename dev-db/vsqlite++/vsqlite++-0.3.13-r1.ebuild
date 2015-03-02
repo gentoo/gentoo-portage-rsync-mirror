@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/vsqlite++-0.3.13.ebuild,v 1.1 2014/11/09 10:34:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/vsqlite++-0.3.13-r1.ebuild,v 1.1 2015/03/02 20:42:52 graaff Exp $
 
 EAPI=5
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -24,7 +24,7 @@ DEPEND=">=dev-libs/boost-1.33.1"
 RDEPEND="${DEPEND}
 		dev-db/sqlite:3"
 
-DOCS=(AUTHORS COPYING ChangeLog INSTALL NEWS README TODO VERSION)
+DOCS=(AUTHORS COPYING ChangeLog INSTALL NEWS README.md TODO VERSION)
 
 # package name is vsqlite++, but github / homepage name is vsqlite--
 S="${WORKDIR}/vsqlite---${PV}"
