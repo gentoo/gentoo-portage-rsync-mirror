@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.96 2015/02/18 03:35:21 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.97 2015/03/02 14:07:07 swift Exp $
+
+  02 Mar 2015; Sven Vermeulen <swift@gentoo.org> -setools-3.3.8-r6.ebuild:
+  Drop r6 (build failure with swig, fixed in r7)
 
   18 Feb 2015; Jason Zaman <perfinion@gentoo.org> setools-3.3.8-r7.ebuild:
   re-add keywords to -r7

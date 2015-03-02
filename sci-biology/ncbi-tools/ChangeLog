@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/ncbi-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.96 2013/06/12 11:31:50 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.97 2015/03/02 14:09:51 jlec Exp $
+
+  02 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/ncbi-tools-2.2.26-_DEFAULT_SOURCE.patch,
+  +files/ncbi-tools-2.2.26-format-security.patch, ncbi-tools-2.2.26-r2.ebuild:
+  Fix format-security and SLOT operators
 
   12 Jun 2013; Justin Lecher <jlec@gentoo.org> ncbi-tools-2.2.26-r2.ebuild,
   files/ncbirc:
