@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.183 2015/01/19 15:15:48 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.184 2015/03/02 18:17:36 williamh Exp $
+
+*kmod-20 (02 Mar 2015)
+
+  02 Mar 2015; William Hubbs <williamh@gentoo.org> +kmod-20.ebuild:
+  version bump
 
   19 Jan 2015; Anthony G. Basile <blueness@gentoo.org> kmod-19.ebuild:
   Stable on arm, ppc, ppc64 and x86.  Bug #530424.

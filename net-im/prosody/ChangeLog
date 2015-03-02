@@ -1,6 +1,12 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.47 2015/02/26 18:45:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.48 2015/03/02 18:26:39 mrueg Exp $
+
+  02 Mar 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/prosody-0.8.0-cfg.lua.patch, -files/prosody.initd,
+  -files/prosody.initd.old, -prosody-0.8.2-r1.ebuild, -prosody-0.8.2.ebuild,
+  -prosody-0.9.4.ebuild, -prosody-0.9.5-r2.ebuild, -prosody-0.9.5.ebuild:
+  Remove old.
 
   26 Feb 2015; Markus Meier <maekke@gentoo.org> prosody-0.9.7.ebuild:
   arm stable, bug #511532
