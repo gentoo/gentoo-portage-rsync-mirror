@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/charm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.9 2013/04/03 05:30:08 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.10 2015/03/02 10:31:23 bman Exp $
+
+*charm-1.9.2-r1 (02 Mar 2015)
+
+  02 Mar 2015; Aaron Bauman <bman@gentoo.org> +charm-1.9.2-r1.ebuild,
+  -charm-1.9.2.ebuild, charm-1.9.1.ebuild:
+  revbump; conversion to distutils-r1, rm charm-1.9.2.ebuild, checked by idella4
 
 *charm-1.9.2 (03 Apr 2013)
 

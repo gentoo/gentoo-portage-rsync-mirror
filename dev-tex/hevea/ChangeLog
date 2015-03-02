@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/hevea
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.53 2015/01/19 10:11:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/ChangeLog,v 1.54 2015/03/02 10:52:11 aballier Exp $
+
+*hevea-2.22 (02 Mar 2015)
+
+  02 Mar 2015; Alexis Ballier <aballier@gentoo.org> +hevea-2.22.ebuild:
+  version bump
 
 *hevea-2.21 (19 Jan 2015)
 

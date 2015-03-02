@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.5.2.ebuild,v 1.3 2014/03/31 21:17:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-2.8.ebuild,v 1.1 2015/03/02 10:40:44 ultrabug Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
 
 inherit check-reqs distutils-r1
 
@@ -14,15 +14,21 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="doc kerberos mod_wsgi test"
+KEYWORDS="~amd64 ~hppa ~x86"
+IUSE="doc kerberos test"
 
-RDEPEND="dev-db/mongodb"
-DEPEND="${RDEPEND}
+RDEPEND="
+	kerberos? ( dev-python/pykerberos )
+"
+DEPEND="
+	${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )
-	kerberos? ( dev-python/pykerberos )"
+	test? (
+		dev-python/nose[${PYTHON_USEDEP}]
+		>=dev-db/mongodb-2.6.0
+	)
+"
 DISTUTILS_IN_SOURCE_BUILD=1
 
 reqcheck() {
@@ -41,8 +47,6 @@ pkg_pretend() {
 pkg_setup() {
 	reqcheck pkg_setup
 }
-
-PATCHES=( "${FILESDIR}"/${PN}-2.5.1-greenlet.patch )
 
 python_compile_all() {
 	if use doc; then
@@ -115,14 +119,6 @@ python_test() {
 	[[ ${failed} ]] && die "Tests fail with ${EPYTHON}"
 
 	rm -rf "${dbpath}"
-}
-
-python_install() {
-	# Maintainer note:
-	# In order to work with mod_wsgi, we need to disable the C extension.
-	# See [1] for more information.
-	# [1] http://api.mongodb.org/python/current/faq.html#does-pymongo-work-with-mod-wsgi
-	distutils-r1_python_install $(use mod_wsgi && echo --no_ext)
 }
 
 python_install_all() {

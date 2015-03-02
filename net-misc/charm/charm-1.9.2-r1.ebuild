@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/charm-1.9.1.ebuild,v 1.6 2015/03/02 10:31:23 bman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/charm-1.9.2-r1.ebuild,v 1.1 2015/03/02 10:31:23 bman Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/ljcharm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 sparc x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-python/feedparser[$PYTHON_USEDEP]"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.45 2015/02/16 09:51:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.46 2015/03/02 10:40:44 ultrabug Exp $
+
+*pymongo-2.8 (02 Mar 2015)
+
+  02 Mar 2015; Ultrabug <ultrabug@gentoo.org> -pymongo-2.5.2.ebuild,
+  -pymongo-2.7-r1.ebuild, -pymongo-2.7.1.ebuild, +pymongo-2.8.ebuild:
+  version bump, drop old
 
   16 Feb 2015; Pacho Ramos <pacho@gentoo.org> pymongo-2.7.2.ebuild:
   amd64/x86 stable, bug #530324

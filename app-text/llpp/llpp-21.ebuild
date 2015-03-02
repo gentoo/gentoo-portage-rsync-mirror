@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-21.ebuild,v 1.1 2015/02/26 14:31:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-21.ebuild,v 1.2 2015/03/02 11:00:29 xmw Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 		x11-libs/libXau[static-libs]
 		x11-libs/libXdmcp[static-libs]
 		x11-libs/libXmu[static-libs] )
-	dev-lang/ocaml[ocamlopt?]
+	>=dev-lang/ocaml-4[ocamlopt?]
 	dev-ml/lablgl[glut,ocamlopt?]"
 
 RESTRICT="!ocamlopt? ( strip )"
