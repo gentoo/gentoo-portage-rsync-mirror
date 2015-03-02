@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.373 2015/02/19 18:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.374 2015/03/02 21:14:39 zerochaos Exp $
+
+*pulseaudio-5.99.3-r1 (02 Mar 2015)
+
+  02 Mar 2015; Rick Farina <zerochaos@gentoo.org> +pulseaudio-5.99.3-r1.ebuild:
+  resolution for bug #537358
 
   19 Feb 2015; Michał Górny <mgorny@gentoo.org> pulseaudio-5.0-r4.ebuild,
   pulseaudio-5.0-r5.ebuild, pulseaudio-5.0-r6.ebuild, pulseaudio-5.0-r7.ebuild,

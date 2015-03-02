@@ -3162,7 +3162,7 @@ kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
 kde-base/okular:dpi - DPI detection support for PDF rendering via x11-libs/libkscreen
 kde-base/okular:ebook - Add E-Book support
 kde-base/okular:mobi - Add mobipocket support
-kde-base/oxygen-icons:bindist - Additionally install the svg sources of the bitmap icons (needed for redistribution)
+kde-base/oxygen-icons:sources - Additionally install the svg sources of the bitmap icons (needed for redistribution)
 kde-base/perlkde:akonadi - Compile bindings for Akonadi
 kde-base/perlkde:attica - Compile bindings for dev-libs/libattica
 kde-base/perlkde:kate - Compile bindings for KDE Advanced Text Editor
