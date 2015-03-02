@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.2.ebuild,v 1.1 2014/01/06 04:40:43 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.2.ebuild,v 1.3 2015/03/02 14:45:47 ago Exp $
 
 EAPI="5"
 inherit cmake-utils eutils multilib
@@ -12,7 +12,7 @@ SRC_URI="http://ibus.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 RDEPEND=">=app-i18n/ibus-1.3.7
