@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.2.0-r1.ebuild,v 1.1 2014/10/02 10:01:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.3.0.ebuild,v 1.1 2015/03/02 04:35:03 idella4 Exp $
 
 EAPI=5
 
@@ -22,8 +22,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
+#PATCHES=( "${FILESDIR}"/1.2.0-tests.patch )
+
 python_prepare_all() {
-	# Remove doctest that access an i'net sire
+	# Remove doctest that access an i'net site
 	rm doc/example/test_info.txt || die
 
 	distutils-r1_python_prepare_all
@@ -33,19 +35,11 @@ python_compile_all() {
 	use doc && emake -C doc html
 }
 
-src_test() {
-	# Tests are a bit fragile to failures in parallel.
-	local DISTUTILS_NO_PARALLEL_BUILD=1
-	distutils-r1_src_test
-}
-
 python_test() {
-	# Re-enable in order to properly test disabling it ;).
 	# https://bitbucket.org/hpk42/execnet/issue/10
 	unset PYTHONDONTWRITEBYTECODE
+	py.test testing || die "Tests fail with ${EPYTHON}"
 
-	# https://bitbucket.org/hpk42/execnet/issue/35/test-failures-in-execnet-120
-	py.test || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {

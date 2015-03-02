@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/execnet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.21 2014/10/10 13:34:07 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/ChangeLog,v 1.22 2015/03/02 04:35:03 idella4 Exp $
+
+*execnet-1.3.0 (02 Mar 2015)
+
+  02 Mar 2015; Ian Delaney <idella4@gentoo.org> +execnet-1.3.0.ebuild,
+  -execnet-1.1-r1.ebuild, -execnet-1.1.ebuild, -execnet-1.2.0-r1.ebuild,
+  execnet-1.2.0-r2.ebuild:
+  update test pahse in -1.2.0-r2 re eclass change, correct test phase to test
+  the one intended folder, bump, rm old
 
 *execnet-1.2.0-r2 (10 Oct 2014)
 
