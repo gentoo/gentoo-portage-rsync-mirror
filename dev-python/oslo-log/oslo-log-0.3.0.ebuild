@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-log/oslo-log-0.3.0.ebuild,v 1.1 2015/02/28 07:05:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-log/oslo-log-0.3.0.ebuild,v 1.2 2015/03/02 20:11:12 prometheanfire Exp $
 
 EAPI=5
 
@@ -11,6 +11,7 @@ inherit distutils-r1
 DESCRIPTION="OpenStack logging config library provides standardized configuration for all openstack projects."
 HOMEPAGE="http://pypi.python.org/pypi/oslo.log https://github.com/openstack/oslo.log"
 SRC_URI="mirror://pypi/o/oslo.log/oslo.log-${PV}.tar.gz"
+S="${WORKDIR}/oslo.log-${PV}"
 
 LICENSE="Apache-2.0"
 SLOT="0"
