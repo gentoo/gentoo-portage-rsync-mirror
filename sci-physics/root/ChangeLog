@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/root
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.135 2014/12/28 16:55:15 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.136 2015/03/02 08:27:34 bircoph Exp $
+
+*root-5.34.26 (02 Mar 2015)
+
+  02 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> +root-5.34.26.ebuild,
+  files/root-5.32.00-chklib64.patch, metadata.xml:
+  Version bump (from science overlay). Rework compilers handling,
+  *flags handling. Add support for http, C++14. Fix html headers.
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> root-5.32.03-r2.ebuild,
   root-5.34.18.ebuild, root-5.34.18-r1.ebuild:

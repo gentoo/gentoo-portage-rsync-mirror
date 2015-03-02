@@ -1,6 +1,18 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.568 2015/02/28 13:33:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.571 2015/03/02 08:30:13 eras Exp $
+
+  02 Mar 2015; Eray Aslan <eras@gentoo.org> postfix-2.11.3.ebuild:
+  QA: add missing slot
+
+  02 Mar 2015; Eray Aslan <eras@gentoo.org> -postfix-2.10.2.ebuild,
+  -postfix-2.10.3.ebuild, -postfix-2.10.4.ebuild, -postfix-2.10.5.ebuild:
+  Remove old
+
+*postfix-2.10.6 (02 Mar 2015)
+
+  02 Mar 2015; Eray Aslan <eras@gentoo.org> +postfix-2.10.6.ebuild:
+  Version bump and remove keywords except mips and s390 - bug #498466
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> postfix-2.11.3.ebuild:
   Stable for ia64, wrt bug #531430

@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/root-docs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.43 2014/11/11 18:58:47 bircoph Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.44 2015/03/02 08:25:14 bircoph Exp $
+
+*root-docs-5.34.26 (02 Mar 2015)
+
+  02 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> +root-docs-5.34.26.ebuild,
+  +files/root-docs-6.00.01-fillpatterns.patch,
+  +files/root-docs-6.00.01-makehtml.patch, metadata.xml:
+  Version bump (from science overlay).
 
   11 Nov 2014; Andrew Savchenko <bircoph@gmail.com> metadata.xml:
   Package is now directly maintained instead of proxy-maintaining.
