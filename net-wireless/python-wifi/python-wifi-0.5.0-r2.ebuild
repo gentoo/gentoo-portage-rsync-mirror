@@ -20,14 +20,11 @@ IUSE="examples"
 RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
-DOCS="docs/AUTHORS docs/BUGS docs/DEVEL.txt docs/TODO"
+DOCS=( docs/AUTHORS docs/BUGS docs/DEVEL.txt docs/TODO )
 
 src_install() {
 	distutils-r1_src_install
-	if use examples; then
-		insinto /usr/share/${P}/
-		doins -r examples
-	fi
+	use examples && doins -r examples
 	rm -rvf "${ED}"/usr/{docs,examples,INSTALL,README} || die
 	mv -v "${ED}"/usr{,/share}/man || die
 }
