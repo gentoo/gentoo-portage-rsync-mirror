@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.91 2014/01/19 10:16:22 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.92 2015/03/02 23:30:46 chewi Exp $
+
+  02 Mar 2015; James Le Cuirot <chewi@gentoo.org> -asm-3.2.ebuild:
+  Remove old version.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> asm-3.3.1.ebuild:
   Stable for ppc64, wrt bug #495014

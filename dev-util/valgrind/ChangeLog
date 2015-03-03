@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.180 2015/02/24 18:06:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.181 2015/03/02 23:18:01 blueness Exp $
+
+  02 Mar 2015; Anthony G. Basile <blueness@gentoo.org> valgrind-3.10.1.ebuild:
+  Stable for arm, bug #541952.
 
   24 Feb 2015; Anthony G. Basile <blueness@gentoo.org> -valgrind-3.10.0.ebuild,
   -valgrind-3.8.1-r1.ebuild, valgrind-3.10.1.ebuild:
