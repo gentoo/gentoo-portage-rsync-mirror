@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/garcon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.68 2014/04/22 13:46:56 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.69 2015/03/03 13:00:59 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> garcon-0.3.0.ebuild:
+  add arm64 support, tested on A53 board
 
   22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -garcon-0.2.0.ebuild:
   old

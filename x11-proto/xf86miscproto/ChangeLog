@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86miscproto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/ChangeLog,v 1.40 2012/05/16 14:04:28 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86miscproto/ChangeLog,v 1.41 2015/03/03 12:46:35 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xf86miscproto-0.9.3.ebuild:
+  add arm64 support, tested on A53 board
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org> xf86miscproto-0.9.3.ebuild:
   keyword ~amd64-fbsd

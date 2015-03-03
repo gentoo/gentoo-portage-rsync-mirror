@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.67 2014/12/30 12:08:56 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.68 2015/03/03 12:56:54 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> hicolor-icon-theme-0.14.ebuild:
+  add arm64 support, tested on A53 board
 
   30 Dec 2014; Pacho Ramos <pacho@gentoo.org> hicolor-icon-theme-0.14.ebuild:
   Use latest eapi, that also allows to use tar.xz (#534006 by Marien Zwart)

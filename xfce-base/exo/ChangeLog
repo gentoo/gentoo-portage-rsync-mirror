@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.110 2014/07/18 20:02:27 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.111 2015/03/03 12:59:33 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> exo-0.10.2-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   18 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> -exo-0.10.2.ebuild:
   old

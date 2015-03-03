@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86rushproto
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.40 2013/02/27 05:58:12 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.41 2015/03/03 12:47:52 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xf86rushproto-1.1.2-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> xf86rushproto-1.1.2-r1.ebuild:
   Add ~arm-linux keyword.
