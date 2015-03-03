@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/menu-cache
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.39 2015/02/28 17:16:32 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/ChangeLog,v 1.40 2015/03/03 08:12:49 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> menu-cache-0.5.1.ebuild:
+  add arm64 support, tested on A53 board
 
 *menu-cache-1.0.0 (28 Feb 2015)
 

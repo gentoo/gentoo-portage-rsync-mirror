@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.39 2013/04/27 06:55:20 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.40 2015/03/03 08:25:16 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> ftgl-2.1.3_rc5.ebuild:
+  add arm64 support, tested on A53 board
 
   27 Apr 2013; Patrick Lauer <patrick@gentoo.org> ftgl-2.1.3_rc5.ebuild:
   Automake 1.13 fix

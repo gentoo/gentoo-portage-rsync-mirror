@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/roboto
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/roboto/ChangeLog,v 1.7 2014/05/16 03:25:10 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/roboto/ChangeLog,v 1.8 2015/03/03 08:17:06 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> roboto-1.2.ebuild:
+  add arm64 support, tested on A53 board
 
   16 May 2014; Manuel Rüger <mrueg@gentoo.org> roboto-1.2.ebuild:
   Add ~arm keyword.

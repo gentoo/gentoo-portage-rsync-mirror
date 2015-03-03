@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.149 2014/06/20 14:45:20 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.150 2015/03/03 08:21:44 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> audiofile-0.3.6-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   20 Jun 2014; Agostino Sarubbo <ago@gentoo.org> audiofile-0.3.6-r1.ebuild:
   Stable for arm, wrt bug #508862

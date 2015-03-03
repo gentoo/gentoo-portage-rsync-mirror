@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.27 2014/06/18 19:30:54 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.28 2015/03/03 08:27:34 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> glu-9.0.0-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> glu-9.0.0-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

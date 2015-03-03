@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxterminal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.31 2015/02/28 16:21:42 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.32 2015/03/03 08:11:52 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> lxterminal-0.1.11.ebuild:
+  add arm64 support, tested on A53 board
 
 *lxterminal-0.2.0 (28 Feb 2015)
 

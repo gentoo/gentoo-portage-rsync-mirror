@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.32 2015/03/01 22:18:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.33 2015/03/03 08:18:52 mgorny Exp $
+
+  03 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  files/blueman-9999-set-codeset-for-gettext-to-UTF-8-always.patch:
+  Fix accidental retab.
 
   01 Mar 2015; Michał Górny <mgorny@gentoo.org>
   files/blueman-9999-set-codeset-for-gettext-to-UTF-8-always.patch:
