@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.107 2015/01/19 20:33:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.108 2015/03/03 12:05:18 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> lightdm-1.12.2.ebuild:
+  add arm64 support, tested on A53 board
 
 *lightdm-1.13.1 (19 Jan 2015)
 

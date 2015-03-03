@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.77 2014/10/20 07:03:25 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.78 2015/03/03 12:04:11 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> imake-1.0.7.ebuild:
+  add arm64 support, tested on A53 board
 
   20 Oct 2014; Agostino Sarubbo <ago@gentoo.org> imake-1.0.7.ebuild:
   Stable for ia64, wrt bug #499166

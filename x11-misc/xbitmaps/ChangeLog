@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbitmaps
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.47 2013/10/21 13:56:54 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.48 2015/03/03 12:11:36 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xbitmaps-1.1.1.ebuild:
+  add arm64 support, tested on A53 board
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> xbitmaps-1.1.1.ebuild:
   Marked ~x64-macos, bug #486818

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.113 2014/08/10 20:03:23 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.114 2015/03/03 12:07:37 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> obconf-2.0.4.ebuild:
+  add arm64 support, tested on A53 board
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   obconf-2.0.3_p20111019.ebuild, obconf-2.0.4.ebuild, obconf-9999.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.42 2014/03/15 19:47:38 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.43 2015/03/03 12:12:56 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xdg-user-dirs-0.15.ebuild:
+  add arm64 support, tested on A53 board
 
   15 Mar 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/xdg-user-dirs-0.15-libiconv.patch, xdg-user-dirs-0.15.ebuild:
