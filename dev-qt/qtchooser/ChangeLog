@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtchooser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.7 2015/01/22 07:40:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtchooser/ChangeLog,v 1.8 2015/03/03 07:29:23 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> qtchooser-0_p20150102.ebuild:
+  add arm64 support, tested on A53 board
 
   22 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> qtchooser-0_p20150102.ebuild:
   Add ~ppc and ~ppc64, wrt bug #529196

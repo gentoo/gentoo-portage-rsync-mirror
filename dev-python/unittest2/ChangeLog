@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.53 2015/01/02 12:25:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.54 2015/03/03 07:27:15 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> unittest2-0.8.0.ebuild:
+  add arm64 support, tested on A53 board
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> unittest2-0.5.1-r2.ebuild:
   Stable for sparc, wrt bug #530612

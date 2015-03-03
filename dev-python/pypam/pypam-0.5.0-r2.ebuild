@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/pypam-0.5.0-r2.ebuild,v 1.5 2014/03/23 03:00:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/pypam-0.5.0-r2.ebuild,v 1.6 2015/03/03 07:13:57 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -16,7 +16,7 @@ SRC_URI="http://www.pangalactic.org/PyPAM/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/pam-0.64"

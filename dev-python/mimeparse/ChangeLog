@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mimeparse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.34 2014/12/01 09:45:43 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.35 2015/03/03 07:11:32 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> mimeparse-0.1.4-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mimeparse-0.1.4-r1.ebuild:
   Stable for sparc, wrt bug #525508
