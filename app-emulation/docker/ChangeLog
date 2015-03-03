@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.39 2015/02/19 00:43:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.40 2015/03/03 14:21:35 xarthisius Exp $
+
+  03 Mar 2015; Kacper Kowalik <xarthisius@gentoo.org> docker-1.5.0.ebuild,
+  metadata.xml:
+  Port changes from Tianon's overlay. Fixes bug #541742 by Thomas Capricelli
+  <orzel@freehackers.org>
 
   19 Feb 2015; Patrick Lauer <patrick@gentoo.org> -docker-1.3.3-r1.ebuild,
   -docker-1.4.1.ebuild:
