@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.813 2015/02/09 15:33:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.814 2015/03/03 03:11:42 floppym Exp $
+
+*python-3.4.3 (03 Mar 2015)
+
+  03 Mar 2015; Mike Gilbert <floppym@gentoo.org> +python-3.4.3.ebuild:
+  Version bump.
 
   09 Feb 2015; Mike Frysinger <vapier@gentoo.org> python-2.7.9-r1.ebuild,
   python-3.4.1.ebuild:
