@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libqmi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.23 2015/02/28 21:30:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.24 2015/03/03 09:27:51 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libqmi-1.10.2.ebuild:
+  add arm64 support, tested on A53 board
 
 *libqmi-1.12.6 (28 Feb 2015)
 

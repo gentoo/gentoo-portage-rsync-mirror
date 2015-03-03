@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.123 2015/02/18 12:03:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.124 2015/03/03 09:29:35 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libssh-0.6.4.ebuild:
+  add arm64 support, tested on A53 board
 
   18 Feb 2015; Jeroen Roovers <jer@gentoo.org> -libssh-0.6.3.ebuild,
   -libssh-0.6.3-r1.ebuild:

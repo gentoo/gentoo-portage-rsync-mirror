@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.711 2015/02/25 19:28:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.712 2015/03/03 09:24:11 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> samba-4.1.17.ebuild:
+  add arm64 support, tested on A53 board
 
   25 Feb 2015; Jeroen Roovers <jer@gentoo.org> samba-3.6.25.ebuild:
   Stable for HPPA (bug #541182).

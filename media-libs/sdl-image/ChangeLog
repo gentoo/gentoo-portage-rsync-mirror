@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-image
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.99 2014/11/02 17:42:55 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.100 2015/03/03 09:03:30 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> sdl-image-1.2.12-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   02 Nov 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/sdl-image-1.2.10-libpng15.patch, -sdl-image-1.2.10-r1.ebuild,

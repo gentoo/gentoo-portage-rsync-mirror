@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.318 2015/02/26 03:35:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.319 2015/03/03 09:12:43 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> mpg123-1.21.0.ebuild:
+  add arm64 support, tested on A53 board
 
 *mpg123-1.22.0 (26 Feb 2015)
 
