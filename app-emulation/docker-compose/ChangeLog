@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/docker-compose
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker-compose/ChangeLog,v 1.1 2015/01/31 16:49:42 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker-compose/ChangeLog,v 1.2 2015/03/02 23:58:38 alunduil Exp $
+
+*docker-compose-1.1.0 (02 Mar 2015)
+
+  02 Mar 2015; Alex Brandt <alunduil@gentoo.org> +docker-compose-1.1.0.ebuild:
+  add version 1.1.0
 
 *docker-compose-1.1.0_rc2 (31 Jan 2015)
 *docker-compose-1.1.0_rc1 (31 Jan 2015)
