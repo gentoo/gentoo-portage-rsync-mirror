@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.24 2015/01/03 01:16:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.25 2015/03/03 06:54:41 graaff Exp $
+
+*faraday-0.9.1 (03 Mar 2015)
+
+  03 Mar 2015; Hans de Graaff <graaff@gentoo.org> +faraday-0.9.1.ebuild:
+  Version bump.
 
   03 Jan 2015; Manuel Rüger <mrueg@gentoo.org>
   -files/faraday-0.4.5-gentoo.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcrypt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.64 2014/08/10 20:36:16 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.65 2015/03/03 06:34:38 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> libmcrypt-2.5.8-r3.ebuild:
+  add arm64 support, tested on A53 board
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libmcrypt-2.5.8-r2.ebuild,
   libmcrypt-2.5.8-r3.ebuild:

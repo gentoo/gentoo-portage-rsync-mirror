@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.92 2015/01/09 15:09:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.93 2015/03/03 06:51:14 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> File-MimeInfo-0.210.0.ebuild:
+  add arm64 support, tested on A53 board
 
   09 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> File-MimeInfo-0.210.0.ebuild:
   Stable for all wrt bug #535176

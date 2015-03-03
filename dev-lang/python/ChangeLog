@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.814 2015/03/03 03:11:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.815 2015/03/03 06:49:14 vapier Exp $
+
+  03 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/python-2.7.9-ncurses-pkg-config.patch,
+  +files/python-3.3.5-ncurses-pkg-config.patch,
+  +files/python-3.4.3-ncurses-pkg-config.patch, python-2.7.9-r2.ebuild,
+  python-3.3.5-r1.ebuild, python-3.4.3.ebuild:
+  Use pkg-config to locate ncurses headers to fix cross-compiling.
 
 *python-3.4.3 (03 Mar 2015)
 

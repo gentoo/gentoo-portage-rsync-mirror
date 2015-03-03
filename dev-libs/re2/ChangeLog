@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/re2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.13 2014/10/23 13:47:06 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/ChangeLog,v 1.14 2015/03/03 06:42:12 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> re2-0_p20140304.ebuild:
+  add arm64 support, tested on A53 board
 
   23 Oct 2014; Pacho Ramos <pacho@gentoo.org> re2-0_p20140304.ebuild:
   amd64/x86 stable, bug #525986

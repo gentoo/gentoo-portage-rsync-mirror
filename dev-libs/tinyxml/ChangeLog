@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tinyxml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.25 2012/07/29 16:09:01 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.26 2015/03/03 06:43:31 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> tinyxml-2.6.2-r2.ebuild:
+  add arm64 support, tested on A53 board
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> tinyxml-2.6.2-r2.ebuild:
   sparc stable wrt #398285

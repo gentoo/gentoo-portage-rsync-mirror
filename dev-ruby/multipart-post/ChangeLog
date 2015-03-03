@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/multipart-post
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/ChangeLog,v 1.18 2014/11/11 11:07:35 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/ChangeLog,v 1.19 2015/03/03 06:59:30 graaff Exp $
+
+  03 Mar 2015; Hans de Graaff <graaff@gentoo.org> multipart-post-2.0.0.ebuild:
+  Add ruby22.
 
   11 Nov 2014; Manuel Rüger <mrueg@gentoo.org> multipart-post-1.2.0.ebuild,
   multipart-post-2.0.0.ebuild:

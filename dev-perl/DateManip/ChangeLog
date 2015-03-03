@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateManip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.111 2014/06/11 08:57:55 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.112 2015/03/03 06:47:51 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> DateManip-6.430.0.ebuild:
+  add arm64 support, tested on A53 board
 
   11 Jun 2014; Mikle Kolyada <zlogene@gentoo.org> -DateManip-5.56.ebuild,
   -DateManip-6.310.0.ebuild, -DateManip-6.370.0.ebuild,

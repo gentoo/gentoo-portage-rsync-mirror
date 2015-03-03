@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.89 2015/02/11 16:42:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.90 2015/03/03 06:32:45 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> libical-1.0.1.ebuild:
+  add arm64 support, tested on A53 board
 
   11 Feb 2015; Mike Frysinger <vapier@gentoo.org> libical-1.0.1.ebuild:
   Add mips love.

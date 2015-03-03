@@ -1,10 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leapcast/leapcast-9999.ebuild,v 1.1 2014/01/12 18:09:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leapcast/leapcast-9999.ebuild,v 1.2 2015/03/03 06:46:18 bman Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit distutils
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+
+inherit distutils-r1
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/dz0ny/leapcast.git"
@@ -14,12 +16,12 @@ else
 	KEYWORDS="~amd64 ~x86"
 fi
 
-DESCRIPTION="simple ChromeCast emulation app"
+DESCRIPTION="Simple ChromeCast emulation app"
 HOMEPAGE="https://github.com/dz0ny/leapcast"
 
 LICENSE="MIT"
 SLOT="0"
 IUSE=""
 
-RDEPEND="dev-python/requests
-	www-servers/tornado"
+RDEPEND="dev-python/requests[$PYTHON_USEDEP]
+	www-servers/tornado[$PYTHON_USEDEP]"
