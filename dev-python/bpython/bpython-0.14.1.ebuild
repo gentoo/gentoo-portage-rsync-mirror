@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.14.1.ebuild,v 1.1 2015/03/03 15:03:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.14.1.ebuild,v 1.2 2015/03/03 19:04:21 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND="
-	dev-python/curtsies[${PYTHON_USEDEP}]
+	>=dev-python/curtsies-0.1.18[${PYTHON_USEDEP}]
+	<dev-python/curtsies-0.2.0[${PYTHON_USEDEP}]
 	dev-python/greenlet[${PYTHON_USEDEP}]
 	dev-python/jedi[${PYTHON_USEDEP}]
 	dev-python/pygments[${PYTHON_USEDEP}]

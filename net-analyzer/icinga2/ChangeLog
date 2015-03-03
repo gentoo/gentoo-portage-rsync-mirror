@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.23 2015/02/14 08:47:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.24 2015/03/03 19:22:46 prometheanfire Exp $
+
+*icinga2-2.2.4 (03 Mar 2015)
+
+  03 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> +icinga2-2.2.4.ebuild:
+  bump of icinga2 and allowing monitoring-plugins to be used bug 541162
 
   14 Feb 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.
