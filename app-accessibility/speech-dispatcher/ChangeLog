@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speech-dispatcher
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.117 2014/12/12 02:17:57 teiresias Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.118 2015/03/03 05:28:52 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> speech-dispatcher-0.8.1.ebuild:
+  add arm64 support, tested on A53 board
 
   12 Dec 2014; Christopher Brannon <teiresias@gentoo.org>
   -speech-dispatcher-0.7.1-r1.ebuild, -speech-dispatcher-0.7.1-r2.ebuild,

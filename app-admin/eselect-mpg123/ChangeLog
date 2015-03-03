@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-mpg123
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpg123/ChangeLog,v 1.12 2013/08/07 13:24:32 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-mpg123/ChangeLog,v 1.13 2015/03/03 05:30:24 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> eselect-mpg123-0.1.ebuild:
+  add arm64 support, tested on A53 board
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> eselect-mpg123-0.1.ebuild:
   Stable for x86, wrt bug #477588
