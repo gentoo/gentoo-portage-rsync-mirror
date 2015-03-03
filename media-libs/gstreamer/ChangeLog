@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gstreamer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.384 2015/01/25 13:48:25 leio Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.386 2015/03/03 08:35:05 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> gstreamer-1.4.5.ebuild:
+  add arm64 support, tested on A53 board
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> gstreamer-0.10.36-r2.ebuild:
+  add arm64 support, tested on A53 board
 
 *gstreamer-1.4.5 (24 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.99 2014/08/29 04:24:38 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.100 2015/03/03 08:44:13 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libmng-2.0.2-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   29 Aug 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/libmng-2.0.2-jpeg-9a.patch, libmng-2.0.2-r1.ebuild:

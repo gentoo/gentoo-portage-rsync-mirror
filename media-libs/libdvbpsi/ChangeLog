@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.65 2014/04/16 17:54:05 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.66 2015/03/03 08:40:19 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libdvbpsi-1.2.0.ebuild:
+  add arm64 support, tested on A53 board
 
 *libdvbpsi-1.2.0 (16 Apr 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.28.ebuild,v 1.1 2015/02/11 17:31:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.28.ebuild,v 1.2 2015/03/03 08:34:20 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -15,7 +15,6 @@ LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/3"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
 IUSE="cups debug +obex +readline selinux systemd test +udev"
-REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
 CDEPEND="
 	>=dev-libs/glib-2.28:2
@@ -35,10 +34,13 @@ DEPEND="${CDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
 	test? (
-		${PYTHON_DEPS}
-		>=dev-python/dbus-python-1
-		dev-python/pygobject:2
-		dev-python/pygobject:3
+		$(python_gen_any_dep '
+			>=dev-python/dbus-python-1[${PYTHON_USEDEP}]
+			|| (
+				dev-python/pygobject:3[${PYTHON_USEDEP}]
+				dev-python/pygobject:2[${PYTHON_USEDEP}]
+			)
+		')
 	)
 "
 RDEPEND="${CDEPEND}

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsamplerate
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.85 2014/08/23 15:31:31 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.86 2015/03/03 08:51:41 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libsamplerate-0.1.8-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   23 Aug 2014; Agostino Sarubbo <ago@gentoo.org> libsamplerate-0.1.8-r1.ebuild:
   Stable for ia64, wrt bug #512012

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.623 2015/03/01 19:36:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.624 2015/03/03 08:59:53 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> mesa-10.4.4.ebuild:
+  add arm64 support, tested on A53 board
 
   01 Mar 2015; Matt Turner <mattst88@gentoo.org> -mesa-10.3.5.ebuild:
   Drop old.

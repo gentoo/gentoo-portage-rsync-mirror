@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.59 2014/05/24 01:33:28 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.60 2015/03/03 08:50:30 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libprojectm-2.1.0-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   24 May 2014; Manuel Rüger <mrueg@gentoo.org> libprojectm-2.1.0-r1.ebuild:
   Add ~arm keyword.
