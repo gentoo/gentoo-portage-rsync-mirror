@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.13.ebuild,v 1.1 2014/06/26 12:22:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/polymake-2.13.ebuild,v 1.2 2015/03/03 09:34:22 tomka Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 src_prepare() {
 	# Don't strip
 	sed -i '/system "strip $to"/d' support/install.pl || die
+	epatch "${FILESDIR}/${PN}_gcc49.patch"
 
 	einfo "During compile this package uses up to"
 	einfo "750MB of RAM per process. Use MAKEOPTS=\"-j1\" if"

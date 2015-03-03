@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/polymake
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.13 2014/06/27 10:49:06 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.14 2015/03/03 09:34:22 tomka Exp $
+
+  03 Mar 2015; Thomas Kahle <tomka@gentoo.org> +files/polymake_gcc49.patch,
+  polymake-2.13.ebuild:
+  Fix gcc-4.9 compatibility (bug 541238)
 
   27 Jun 2014; Thomas Kahle <tomka@gentoo.org>
   -files/polymake-2.11-drop-jreality.patch, -files/polymake-2.12-soname.patch,

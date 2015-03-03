@@ -1,6 +1,11 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.45 2015/03/03 06:02:53 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.46 2015/03/03 09:34:59 dlan Exp $
+
+*stardict-3.0.6 (03 Mar 2015)
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> +stardict-3.0.6.ebuild:
+  version bump
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> stardict-3.0.5.ebuild:
   add arm64 support, tested on A53 board
