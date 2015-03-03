@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/superlu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.27 2015/01/26 11:33:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.28 2015/03/03 19:58:09 jlec Exp $
+
+*superlu-4.3-r1 (03 Mar 2015)
+
+  03 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/superlu-4.3-format-security.patch, +superlu-4.3-r1.ebuild:
+  Fix for format-security, #536118
 
   26 Jan 2015; Justin Lecher <jlec@gentoo.org> -superlu-4.1-r1.ebuild:
   Drop old

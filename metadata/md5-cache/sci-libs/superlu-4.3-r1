@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=virtual/blas virtual/pkgconfig test? ( app-shells/tcsh ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/fortran
+DESCRIPTION=Sparse LU factorization library
+EAPI=5
+HOMEPAGE=http://crd.lbl.gov/~xiaoye/SuperLU/
+IUSE=doc examples static-libs test
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=virtual/blas virtual/fortran
+SLOT=0
+SRC_URI=http://crd.lbl.gov/~xiaoye/SuperLU//superlu_4.3.tar.gz
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_md5_=dab268e6a18d90f11ea1567f1936ce1a

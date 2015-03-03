@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.8-r7.ebuild,v 1.2 2015/02/18 03:35:21 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.8-r7.ebuild,v 1.3 2015/03/03 19:57:39 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_4 )
@@ -75,6 +75,8 @@ src_prepare() {
 
 	# Fix build failure due to double __init__.py installation
 	sed -e "s/^wrappedpy_DATA = qpol.py \$(pkgpython_PYTHON)/wrappedpy_DATA = qpol.py/" -i libqpol/swig/python/Makefile.am || die
+	# Disable broken check for SWIG version. Bug #542032
+	sed -e "s/AC_PROG_SWIG(2.0.0)/AC_PROG_SWIG/" -i configure.ac || die "sed failed"
 
 	local dir
 	for dir in ${PYTHON_DIRS}; do
