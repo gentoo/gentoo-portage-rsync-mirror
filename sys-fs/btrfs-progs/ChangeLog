@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.97 2015/02/14 02:21:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.98 2015/03/03 10:02:23 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> btrfs-progs-3.18.2.ebuild:
+  add arm64 support, tested on A53 board
 
   14 Feb 2015; Mike Gilbert <floppym@gentoo.org> btrfs-progs-9999.ebuild:
   Move custom autogen logic to the ebuild and call eautoreconf.

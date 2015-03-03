@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.400 2015/01/05 13:35:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.401 2015/03/03 10:27:04 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> nginx-1.7.8.ebuild:
+  add arm64 support, tested on A53 board
 
 *nginx-1.7.8 (05 Jan 2015)
 

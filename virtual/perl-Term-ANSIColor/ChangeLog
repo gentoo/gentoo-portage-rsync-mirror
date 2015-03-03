@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Term-ANSIColor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ANSIColor/ChangeLog,v 1.48 2014/07/21 19:35:55 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Term-ANSIColor/ChangeLog,v 1.49 2015/03/03 10:22:37 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org>
+  perl-Term-ANSIColor-4.20.0-r2.ebuild:
+  add arm64 support, tested on A53 board
 
 *perl-Term-ANSIColor-4.20.0-r2 (21 Jul 2014)
 

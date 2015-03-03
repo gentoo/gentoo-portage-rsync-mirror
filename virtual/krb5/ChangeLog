@@ -1,6 +1,9 @@
 # ChangeLog for virtual/krb5
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.12 2014/09/15 08:24:29 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/krb5/ChangeLog,v 1.13 2015/03/03 10:19:13 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> krb5-0-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> krb5-0-r1.ebuild:
   Stable for sparc, wrt bug #512012

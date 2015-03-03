@@ -4,10 +4,10 @@ DESCRIPTION=phpBB is an open-source bulletin board package
 EAPI=5
 HOMEPAGE=http://www.phpbb.com/
 IUSE=vhosts
-KEYWORDS=~alpha ~amd64 ~ppc ~sparc ~x86
+KEYWORDS=~alpha ~amd64 ~arm64 ~ppc ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=virtual/httpd-php >=app-admin/webapp-config-1.50.15
 SLOT=3.0.12
 SRC_URI=http://download.phpbb.com/pub/release/3.0/3.0.12/phpBB-3.0.12.tar.bz2
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=0e33b4f544cc02900851bd17f429460f
+_md5_=ecebda3e620182ec96fbdf0bdbf35a33

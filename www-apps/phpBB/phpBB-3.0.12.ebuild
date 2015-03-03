@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-3.0.12.ebuild,v 1.1 2013/12/02 21:10:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/phpBB-3.0.12.ebuild,v 1.2 2015/03/03 10:24:42 dlan Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.phpbb.com/"
 SRC_URI="http://download.phpbb.com/pub/release/${PV:0:3}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm64 ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/httpd-php"
 

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/eject
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.7 2012/06/04 22:32:58 alexxy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/eject/ChangeLog,v 1.8 2015/03/03 10:12:10 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> eject-0.ebuild:
+  add arm64 support, tested on A53 board
 
   04 Jun 2012; Alexey Shvetsov <alexxy@gentoo.org> eject-0.ebuild:
   [virtual/eject] Works on ~amd64-fbsd

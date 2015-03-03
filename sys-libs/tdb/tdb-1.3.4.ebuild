@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.3.4.ebuild,v 1.2 2015/01/03 12:40:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.3.4.ebuild,v 1.3 2015/03/03 10:09:44 dlan Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://samba.org/ftp/tdb/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="python"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

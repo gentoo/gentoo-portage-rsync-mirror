@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ntdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.6 2015/01/03 13:14:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.7 2015/03/03 10:06:34 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> ntdb-1.0-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> ntdb-1.0-r1.ebuild,
   ntdb-1.0.ebuild:
