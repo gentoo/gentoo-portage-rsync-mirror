@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r1.ebuild,v 1.1 2014/11/15 08:33:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r1.ebuild,v 1.3 2015/03/03 22:24:13 hwoarang Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2:2.7"
 PYTHON_USE_WITH="threads"
 PYTHON_USE_WITH_OPT="python"
 
-inherit multilib python versionator
+inherit eutils multilib python versionator
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}
@@ -23,12 +23,12 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl static-libs test"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/boost-1.48:=[python?,threads(+)]
-	>=sys-devel/libtool-2.2
+RDEPEND=">=dev-libs/boost-1.48:=[python?,threads(+)]
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
-	ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
+	ssl? ( dev-libs/openssl:= )"
+DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2"
 
 pkg_setup() {
 	if use python; then
@@ -39,6 +39,7 @@ pkg_setup() {
 
 src_prepare() {
 	use python && python_convert_shebangs -r 2 .
+	epatch_user
 }
 
 src_configure() {

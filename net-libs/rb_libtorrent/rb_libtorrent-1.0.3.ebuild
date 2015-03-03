@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.3.ebuild,v 1.1 2014/12/19 21:07:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.3.ebuild,v 1.3 2015/03/03 22:24:13 hwoarang Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE="threads"
 
-inherit multilib python-r1
+inherit eutils multilib python-r1
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}
@@ -23,19 +23,20 @@ IUSE="debug doc examples python ssl static-libs test"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-DEPEND=">=dev-libs/boost-1.53:=[threads]
-	>=sys-devel/libtool-2.2
+RDEPEND=">=dev-libs/boost-1.53:=[threads]
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
 	python? (
 		${PYTHON_DEPS}
 		dev-libs/boost[python,${PYTHON_USEDEP}]
 	)
-	ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
+	ssl? ( dev-libs/openssl:= )"
+DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2"
 
 src_prepare() {
 	use python && python_copy_sources
+	epatch_user
 }
 
 src_configure() {
