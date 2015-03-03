@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/rgb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.76 2015/02/24 08:37:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.77 2015/03/03 10:34:09 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> rgb-1.0.6.ebuild:
+  add arm64 support, tested on A53 board
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rgb-1.0.6.ebuild:
   Stable for alpha, wrt bug #530652

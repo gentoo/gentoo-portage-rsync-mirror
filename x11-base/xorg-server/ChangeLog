@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.835 2015/02/28 19:03:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.836 2015/03/03 10:59:06 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xorg-server-1.17.1.ebuild:
+  add arm64 support, tested on A53 board
 
 *xorg-server-1.16.4-r2 (28 Feb 2015)
 
