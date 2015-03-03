@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.17.1-r1.ebuild,v 1.3 2014/10/23 01:41:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.17.1-r1.ebuild,v 1.4 2015/03/03 07:44:45 dlan Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 RDEPEND=">=dev-vcs/git-1.6.3.3"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20141119.ebuild,v 1.1 2015/03/02 07:27:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/xds-bin-20150301.ebuild,v 1.1 2015/03/03 07:48:05 jlec Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ src_install() {
 		dosym ../${PN}/${bin}${suffix} /opt/bin/${bin}
 	done
 
-	for bin in 2cbf cellparm forkcolspot forkintegrate merge2cbf xdsconv; do
+	for bin in 2cbf cellparm forkcolspot forkintegrate merge2cbf pixlab xdsconv; do
 		dosym ../${PN}/${bin} /opt/bin/${bin}
 	done
 
@@ -49,5 +49,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "This package will expire on December 31, 2015"
+	elog "This package will expire on March 31, 2016"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libglade
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.165 2014/11/21 09:17:49 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/ChangeLog,v 1.166 2015/03/03 07:53:17 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> libglade-2.6.4-r2.ebuild:
+  add arm64 support, tested on A53 board
 
   21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -libglade-2.6.4-r1.ebuild,
   -libglade-2.6.4.ebuild:

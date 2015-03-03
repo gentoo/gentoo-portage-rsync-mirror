@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxappearance
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.42 2014/03/08 13:14:24 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.43 2015/03/03 08:00:19 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> lxappearance-0.5.5.ebuild:
+  add arm64 support, tested on A53 board
 
   08 Mar 2014; Markus Meier <maekke@gentoo.org> lxappearance-0.5.5.ebuild:
   arm stable, bug #502818
