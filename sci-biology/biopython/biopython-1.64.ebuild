@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.64.ebuild,v 1.1 2014/06/03 06:54:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.64.ebuild,v 1.2 2015/03/03 16:03:42 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/reportlab[${PYTHON_USEDEP}]
 	media-gfx/pydot[${PYTHON_USEDEP}]
 	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
-	postgres? ( dev-python/psycopg[${PYTHON_USEDEP}] )"
+	postgres? ( dev-python/psycopg:2[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
 
