@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.3 2015/02/28 18:06:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.4 2015/03/03 14:37:22 tupone Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ CODENAME="Helix"
 case ${PV} in
 9999)
 	EGIT_REPO_URI="git://github.com/xbmc/xbmc.git"
-	inherit git-2
+	inherit git-r3
 	;;
 *|*_p*)
 	MY_PV=${PV/_p/_r}
@@ -137,7 +137,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	[[ ${PV} == "9999" ]] && git-2_src_unpack || default
+	[[ ${PV} == "9999" ]] && git-r3_src_unpack || default
 }
 
 src_prepare() {
@@ -146,6 +146,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-14.0-dvddemux-ffmpeg.patch #526992#36
 	# The mythtv patch touches configure.ac, so force a regen
 	rm -f configure
+	mv xbmc/visualizations/Goom/goom2k4-0/configure.{in,ac}
+	mv configure.{in,ac}
+	sed -i -e "s:configure.in:configure.ac:" \
+		bootstrap.mk || die "sed failed"
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 	# some dirs ship generated autotools, some dont
 	multijob_init
