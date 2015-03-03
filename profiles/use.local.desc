@@ -5646,13 +5646,18 @@ net-misc/dropbear:multicall - Build all the programs as one little binary (to sa
 net-misc/dropbear:shadow - Enable shadow password support
 net-misc/dropbox:librsync-bundled - Use bundled librsync library
 net-misc/electrum:aliases - Enable plugin for looking up aliases
+net-misc/electrum:amodem - Enable plugin for air-gapped transaction signing using dev-python/amodem
 net-misc/electrum:cli - Enables the CLI interface
 net-misc/electrum:coinbase_com - Enable plugin to use Coinbase.com's buyback program
+net-misc/electrum:cosign - Enable plugin to support multisig wallets between multiple Electrum clients
 net-misc/electrum:fiat - Enable plugin for looking up fiat values of bitcoin
+net-misc/electrum:graph - Enable plugin to generate transaction graphs
+net-misc/electrum:greenaddress_it - Enable plugin to verify GreenAddress.it instant transactions
 net-misc/electrum:gtk3 - Enable support for gtk+3
 net-misc/electrum:pos - Enable plugin for point-of-sale operation
-net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar/
+net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
+net-misc/electrum:trustedcoin_com - Enable plugin to use two-factor service by TrustedCoin.com
 net-misc/electrum:vkb - Enable plugin for virtual keyboard
 net-misc/fatrat:bittorrent - Use the bittorrent protocol via net-libs/rb_libtorrent.
 net-misc/fatrat:webinterface - Enable builtin webinterface.
