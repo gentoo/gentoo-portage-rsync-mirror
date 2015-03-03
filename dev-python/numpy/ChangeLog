@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.253 2015/01/02 12:28:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.254 2015/03/03 15:05:25 jlec Exp $
+
+*numpy-1.9.2 (03 Mar 2015)
+
+  03 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/numpy-1.9.2-no-hardcode-blas.patch, +numpy-1.9.2.ebuild,
+  files/numpy-1.9.0-no-hardcode-blas.patch:
+  Version Bump
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> numpy-1.9.0-r1.ebuild:
   Stable for sparc, wrt bug #530710
