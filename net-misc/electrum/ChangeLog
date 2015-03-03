@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/electrum
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.28 2015/03/03 00:23:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.29 2015/03/03 00:33:27 blueness Exp $
+
+  03 Mar 2015; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signature of Manifest.
 
   03 Mar 2015; Anthony G. Basile <blueness@gentoo.org> -electrum-1.7.4.ebuild,
   -electrum-1.8.1.ebuild, -electrum-1.9.7.ebuild, -electrum-1.9.8.ebuild:
