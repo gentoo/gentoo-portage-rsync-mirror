@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.282 2015/02/24 08:38:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.283 2015/03/03 11:38:21 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libdrm-2.4.58.ebuild:
+  add arm64 support, tested on A53 board
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.59.ebuild:
   Stable for alpha, wrt bug #530652

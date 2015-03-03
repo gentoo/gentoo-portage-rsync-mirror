@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXres
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.82 2014/03/26 12:58:02 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXres/ChangeLog,v 1.83 2015/03/03 11:32:04 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libXres-1.0.7.ebuild:
+  add arm64 support, tested on A53 board
 
   26 Mar 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -libXres-1.0.5.ebuild, -libXres-1.0.6.ebuild:

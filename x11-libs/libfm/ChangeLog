@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.102 2014/10/18 20:31:52 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.103 2015/03/03 11:39:33 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> libfm-1.2.3.ebuild:
+  add arm64 support, tested on A53 board
 
 *libfm-1.2.3 (18 Oct 2014)
 
