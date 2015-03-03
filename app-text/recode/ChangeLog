@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.109 2015/02/28 14:22:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.110 2015/03/03 05:59:35 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> recode-3.6_p20-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   28 Feb 2015; Justin Lecher <jlec@gentoo.org> -recode-3.6_p17-r2.ebuild,
   -recode-3.6_p20.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-qtgraphicssystem
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-qtgraphicssystem/ChangeLog,v 1.13 2013/04/20 09:22:07 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-qtgraphicssystem/ChangeLog,v 1.14 2015/03/03 05:34:02 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org>
+  eselect-qtgraphicssystem-1.1.1.ebuild:
+  add arm64 support, tested on A53 board
 
   20 Apr 2013; Markos Chandras <hwoarang@gentoo.org>
   eselect-qtgraphicssystem-1.1.1.ebuild:

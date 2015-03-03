@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.232 2014/11/27 13:15:58 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.233 2015/03/03 05:45:05 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> heimdal-1.5.3-r2.ebuild:
+  add arm64 support, tested on A53 board
 
   27 Nov 2014; Pacho Ramos <pacho@gentoo.org> heimdal-1.5.3-r2.ebuild:
   Support python 3.4

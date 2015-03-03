@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/genlop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.95 2015/02/25 21:12:42 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.96 2015/03/03 05:53:40 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> genlop-0.30.10-r1.ebuild:
+  add arm64 support, tested on A53 board
 
 *genlop-0.30.10-r1 (25 Feb 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/media-player-info
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.39 2014/04/27 20:06:48 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.40 2015/03/03 05:52:31 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> media-player-info-21-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   27 Apr 2014; Mike Gilbert <floppym@gentoo.org> media-player-info-21-r1.ebuild:
   Add python3.4.

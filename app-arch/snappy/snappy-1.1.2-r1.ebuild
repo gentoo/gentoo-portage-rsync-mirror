@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.2-r1.ebuild,v 1.6 2014/11/15 06:49:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/snappy-1.1.2-r1.ebuild,v 1.7 2015/03/03 05:40:47 dlan Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~radhermit/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ~arm64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 src_prepare() {

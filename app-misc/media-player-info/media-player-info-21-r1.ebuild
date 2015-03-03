@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21-r1.ebuild,v 1.7 2014/04/27 20:06:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21-r1.ebuild,v 1.8 2015/03/03 05:52:31 dlan Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86"
 IUSE=""
 
 # http://cgit.freedesktop.org/media-player-info/commit/?id=d83dd01a0a1df6198ee08954da1c033b88a1004b

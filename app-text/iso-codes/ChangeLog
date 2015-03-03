@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.183 2015/01/02 12:08:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.184 2015/03/03 05:57:19 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> iso-codes-3.57.ebuild:
+  add arm64 support, tested on A53 board
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> iso-codes-3.57.ebuild:
   Stable for alpha, wrt bug #529964

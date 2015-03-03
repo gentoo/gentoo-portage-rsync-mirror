@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.104 2015/02/21 21:03:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.105 2015/03/03 05:48:51 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> qca-2.1.0.3.ebuild:
+  add arm64 support, tested on A53 board
 
   21 Feb 2015; Michał Górny <mgorny@gentoo.org> -qca-2.0.3.ebuild,
   qca-2.0.3-r1.ebuild:

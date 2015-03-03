@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.75 2012/05/09 16:50:03 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.76 2015/03/03 05:39:32 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> cabextract-1.4.ebuild:
+  add arm64 support, tested on A53 board
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> cabextract-1.4.ebuild:
   keyword ~amd64-fbsd

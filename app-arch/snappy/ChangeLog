@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/snappy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.21 2014/11/15 06:49:21 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/snappy/ChangeLog,v 1.22 2015/03/03 05:40:47 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> snappy-1.1.2-r1.ebuild:
+  add arm64 support, tested on A53 board
 
   15 Nov 2014; Mike Frysinger <vapier@gentoo.org> snappy-1.1.2-r1.ebuild:
   Make sure we depend on autotools #529078 by Nikoli.
