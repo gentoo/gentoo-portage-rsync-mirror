@@ -3,10 +3,10 @@ DEPEND=>=x11-base/xorg-server-1.6.3 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-d
 DESCRIPTION=Keyboard input driver
 EAPI=5
 HOMEPAGE=http://xorg.freedesktop.org/
-KEYWORDS=alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
+KEYWORDS=alpha amd64 ~arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=MIT
 RDEPEND=>=x11-base/xorg-server-1.6.3 x11-base/xorg-server:= x11-base/xorg-server[xorg]
 SLOT=0
 SRC_URI=http://xorg.freedesktop.org/releases/individual/driver/xf86-input-keyboard-1.8.0.tar.bz2
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	xorg-2	69479ff7a35a30e863a475568d29b9be
-_md5_=e8a2f7360363de9688562522f52b3ff0
+_md5_=25a6cdacc791112eb99978d65c8edd19
