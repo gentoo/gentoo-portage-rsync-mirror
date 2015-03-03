@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.298 2014/12/21 12:28:59 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.299 2015/03/03 06:15:06 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> atk-2.14.0.ebuild:
+  add arm64 support, tested on A53 board
 
 *atk-2.14.0 (21 Dec 2014)
 

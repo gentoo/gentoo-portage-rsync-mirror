@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dotconf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.33 2013/08/29 19:49:55 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.34 2015/03/03 06:20:27 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> dotconf-1.3.ebuild:
+  add arm64 support, tested on A53 board
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> dotconf-1.3.ebuild:
   Stable for ia64, wrt bug #478264

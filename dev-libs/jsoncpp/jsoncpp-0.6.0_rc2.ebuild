@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/jsoncpp-0.6.0_rc2.ebuild,v 1.1 2014/02/28 00:17:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/jsoncpp-0.6.0_rc2.ebuild,v 1.2 2015/03/03 06:23:25 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="doc"
 
 DEPEND="

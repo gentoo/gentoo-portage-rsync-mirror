@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jsoncpp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.10 2014/02/28 00:17:19 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.11 2015/03/03 06:23:25 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> jsoncpp-0.6.0_rc2.ebuild:
+  add arm64 support, tested on A53 board
 
 *jsoncpp-0.6.0_rc2 (28 Feb 2014)
 

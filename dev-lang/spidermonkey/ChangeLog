@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.161 2014/09/30 17:13:36 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.162 2015/03/03 06:13:08 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> spidermonkey-1.8.5-r4.ebuild:
+  add arm64 support, tested on A53 board
 
   30 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   spidermonkey-24.2.0-r2.ebuild:

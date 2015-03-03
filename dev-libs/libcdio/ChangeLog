@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.167 2015/01/29 06:58:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.168 2015/03/03 06:27:37 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> libcdio-0.93.ebuild:
+  add arm64 support, tested on A53 board
 
 *libcdio-0.93 (29 Jan 2015)
 

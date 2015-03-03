@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libattica
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.50 2014/11/30 14:05:08 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/ChangeLog,v 1.51 2015/03/03 06:25:55 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> libattica-0.4.2.ebuild:
+  add arm64 support, tested on A53 board
 
   30 Nov 2014; Michael Palimaka <kensington@gentoo.org> libattica-0.4.2.ebuild:
   Force Qt4 build wrt bug #531184.

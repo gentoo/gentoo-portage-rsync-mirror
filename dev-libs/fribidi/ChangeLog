@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.93 2014/10/17 14:26:38 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.94 2015/03/03 06:21:33 dlan Exp $
+
+  02 Mar 2015; Yixun Lan <dlan@gentoo.org> fribidi-0.19.6.ebuild:
+  add arm64 support, tested on A53 board
 
   17 Oct 2014; Tobias Klausmann <klausman@gentoo.org> fribidi-0.19.6.ebuild:
   Stable on alpha, bug 517606
