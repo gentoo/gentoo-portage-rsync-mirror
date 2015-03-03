@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/lure-1.1.ebuild,v 1.5 2010/01/06 20:53:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/lure-1.1.ebuild,v 1.6 2015/03/03 20:57:00 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DAT_PV=0.13.1
@@ -90,7 +90,7 @@ src_install() {
 			if use ${lang} ; then
 				lang=${lang/linguas_}
 				insinto "${GAMES_DATADIR}"/${PN}-${lang}
-				newins "${DISTDIR}"/lure-${DAT_PV}.dat lure.dat || die "newins failed"
+				newins "${DISTDIR}"/lure-${DAT_PV}.dat lure.dat
 				doins -r ${PN}-${lang}/*
 				games_make_wrapper ${PN}-${lang} "scummvm -q ${lang} -f -p \"${GAMES_DATADIR}/${PN}-${lang}\" lure" .
 				make_desktop_entry ${PN}-${lang} "Lure of the Temptress (${lang})" ${PN}
@@ -100,7 +100,7 @@ src_install() {
 		done
 	else
 		insinto "${GAMES_DATADIR}"/${PN}
-		newins "${DISTDIR}"/lure-${DAT_PV}.dat lure.dat || die "newins failed"
+		newins "${DISTDIR}"/lure-${DAT_PV}.dat lure.dat
 		doins -r ${PN}/*
 		games_make_wrapper ${PN} "scummvm -f -p \"${GAMES_DATADIR}/${PN}\" lure" .
 		make_desktop_entry ${PN} "Lure of the Temptress"

@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/lure
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/ChangeLog,v 1.5 2010/01/06 20:53:59 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/ChangeLog,v 1.6 2015/03/03 20:57:00 tupone Exp $
+
+  03 Mar 2015; Tupone Alfredo <tupone@gentoo.org> lure-1.1.ebuild:
+  EAPI 5
 
   06 Jan 2010; Tupone Alfredo <tupone@gentoo.org> lure-1.1.ebuild:
   Installing documentation correctly. Bug #299879 by flameeyes@gentoo.org
