@@ -1,6 +1,16 @@
 # ChangeLog for dev-tcltk/tcllib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.47 2013/10/10 09:51:46 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.48 2015/03/03 13:59:25 jlec Exp $
+
+*tcllib-1.16 (03 Mar 2015)
+*tcllib-1.15-r2 (03 Mar 2015)
+
+  03 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/tcllib-1.15-XSS-vuln.patch, +files/tcllib-1.15-test.patch,
+  +files/tcllib-1.16-XSS-vuln.patch, +files/tcllib-1.16-test.patch,
+  +tcllib-1.15-r2.ebuild, +tcllib-1.16.ebuild:
+  Version Bump, #531864; fix testfailure, #478216; backport security fix,
+  #541912
 
   10 Oct 2013; Justin Lecher <jlec@gentoo.org> -tcllib-1.14.ebuild,
   -tcllib-1.15.ebuild:
