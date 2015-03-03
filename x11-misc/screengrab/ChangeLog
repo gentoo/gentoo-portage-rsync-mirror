@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/screengrab
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.31 2014/09/07 16:43:32 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.32 2015/03/03 22:56:21 hwoarang Exp $
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  -screengrab-0.9.90-r1.ebuild, -screengrab-0.9.96.ebuild:
+  Remove old
 
   07 Sep 2014; Markos Chandras <hwoarang@gentoo.org> screengrab-1.0.ebuild:
   amd64/x86 stable

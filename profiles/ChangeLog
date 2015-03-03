@@ -1,10 +1,13 @@
 .# ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9838 2015/03/02 19:11:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9839 2015/03/03 22:37:44 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Drop obsolete entry
 
   02 Mar 2015; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Add missed MSN library to mask.
