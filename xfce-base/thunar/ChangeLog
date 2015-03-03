@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/thunar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.175 2014/07/24 10:58:32 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.176 2015/03/03 13:04:56 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> thunar-1.6.3.ebuild:
+  add arm64 support, tested on A53 board
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> thunar-1.6.3.ebuild:
   Rename USE="udev" to USE="udisks" wrt #516380

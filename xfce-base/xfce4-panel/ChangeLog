@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.253 2014/06/22 21:53:20 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.254 2015/03/03 13:08:47 dlan Exp $
+
+  03 Mar 2015; Yixun Lan <dlan@gentoo.org> xfce4-panel-4.11.1.ebuild:
+  add arm64 support, tested on A53 board
 
 *xfce4-panel-4.11.1 (22 Jun 2014)
 
