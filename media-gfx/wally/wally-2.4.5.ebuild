@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.5.ebuild,v 1.1 2014/08/06 11:36:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.4.5.ebuild,v 1.2 2015/03/03 23:10:40 hwoarang Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug kde"
 
 DEPEND="

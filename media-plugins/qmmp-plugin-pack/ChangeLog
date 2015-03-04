@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/qmmp-plugin-pack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.28 2015/01/26 09:57:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/qmmp-plugin-pack/ChangeLog,v 1.30 2015/03/03 23:08:01 hwoarang Exp $
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  qmmp-plugin-pack-0.8.3.ebuild:
+  Relax dependencies
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  -qmmp-plugin-pack-0.8.0.ebuild, -qmmp-plugin-pack-0.8.2.ebuild,
+  qmmp-plugin-pack-0.8.3.ebuild:
+  x86/amd64 stable. drop old
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> qmmp-plugin-pack-0.8.2.ebuild:
   Stable for x86, wrt bug #535476

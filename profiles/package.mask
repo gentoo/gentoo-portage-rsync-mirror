@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16397 2015/03/03 22:37:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16398 2015/03/03 23:21:45 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -194,11 +194,6 @@ app-office/openerp-web
 # Dead upstream, will be removed in 30 days.
 # Qt support is provided by app-crypt/pinentry[qt4]
 app-crypt/pinentry-qt
-
-# Anthony G. Basile <blueness@gentoo.org> (09 Feb 2015)
-# Dead upstream, will be removed in 30 days.
-# https://lists.torproject.org/pipermail/tor-dev/2015-February/008244.html
-net-misc/vidalia
 
 # Hanno Boeck <hanno@gentoo.org> (08 Feb 2015)
 # Dead upstream, will be removed in 30 days if nobody

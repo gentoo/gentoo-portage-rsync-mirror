@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/wally
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.48 2014/08/06 11:36:51 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.49 2015/03/03 23:10:40 hwoarang Exp $
+
+  03 Mar 2015; Markos Chandras <hwoarang@gentoo.org> -wally-2.4.4.ebuild,
+  wally-2.4.5.ebuild:
+  x86/amd64 stable. Remove old
 
 *wally-2.4.5 (06 Aug 2014)
 
