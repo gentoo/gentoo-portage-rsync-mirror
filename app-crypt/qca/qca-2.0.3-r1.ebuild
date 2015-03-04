@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3-r1.ebuild,v 1.3 2015/02/21 21:03:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3-r1.ebuild,v 1.4 2015/03/04 07:54:12 kensington Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="http://delta.affinix.com/download/${PN}/${PV%.*}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
-IUSE="aqua debug doc examples gpg logger openssl pkcs11 sasl"
+IUSE="aqua debug doc examples gpg logger +openssl pkcs11 sasl"
 RESTRICT="test"
 
 DEPEND="dev-qt/qtcore:4[debug?]"

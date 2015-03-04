@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.629 2015/01/28 19:35:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.630 2015/03/04 07:34:28 vapier Exp $
+
+*openssl-1.0.2-r2 (04 Mar 2015)
+
+  04 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.2-CVE-2015-0209.patch,
+  +files/openssl-1.0.2-CVE-2015-0288.patch, +openssl-1.0.2-r2.ebuild:
+  Add fix from upstream for CVE-2015-0209 #541502 by Agostino Sarubbo and
+  CVE-2015-0288 #542038 by Kristian Fiskerstrand.
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> openssl-0.9.8z_p1-r2.ebuild,
   openssl-0.9.8z_p2.ebuild, openssl-0.9.8z_p3.ebuild, openssl-0.9.8z_p4.ebuild,
