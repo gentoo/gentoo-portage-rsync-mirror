@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.69 2015/03/03 16:29:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.70 2015/03/04 19:52:37 vapier Exp $
+
+*crda-3.18 (04 Mar 2015)
+
+  04 Mar 2015; Mike Frysinger <vapier@gentoo.org> +crda-3.18.ebuild,
+  +files/crda-3.18-cflags.patch, +files/crda-3.18-no-ldconfig.patch,
+  +files/crda-3.18-no-werror.patch, +files/crda-3.18-openssl.patch,
+  metadata.xml:
+  Version bump.
 
   03 Mar 2015; Mike Gilbert <floppym@gentoo.org> crda-1.1.3-r1.ebuild:
   Set EAPI=5. Call has_version --host-root in python_check_deps to help with

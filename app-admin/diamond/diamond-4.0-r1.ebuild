@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diamond/diamond-4.0.ebuild,v 1.4 2015/03/02 13:19:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diamond/diamond-4.0-r1.ebuild,v 1.1 2015/03/04 19:57:48 grobian Exp $
 
 EAPI=5
 
@@ -39,6 +39,14 @@ src_prepare() {
 	sed -i \
 		-e '/default="\/etc\/diamond\/diamond.conf"/s:=":="'"${EPREFIX}"':' \
 		bin/diamond* \
+		|| die
+
+	# fix necessary to make handlers honour their config, simple sed
+	# doing the same as upstream
+	# https://github.com/python-diamond/Diamond/commit/3cb29eedd117d2e4146823a5c5811d16cc77206a.patch
+	sed -i \
+		-e '/cls_name =/s/\.__class__//' \
+		src/diamond/utils/classes.py \
 		|| die
 
 	distutils-r1_src_prepare
