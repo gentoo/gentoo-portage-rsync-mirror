@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.4 2015/03/03 14:37:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.5 2015/03/04 22:12:34 tupone Exp $
 
 EAPI="5"
 
@@ -61,7 +61,6 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/flac
 	media-libs/fontconfig
 	media-libs/freetype
-	>=media-libs/glew-1.5.6
 	media-libs/jasper
 	media-libs/jbigkit
 	>=media-libs/libass-0.9.7
@@ -98,9 +97,9 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	opengl? (
 		virtual/glu
 		virtual/opengl
+		>=media-libs/glew-1.5.6
 	)
 	gles? (
-		virtual/opengl
 		media-libs/mesa[gles2]
 	)
 	vaapi? ( x11-libs/libva[opengl] )
@@ -232,6 +231,10 @@ src_configure() {
 		$(use_enable webserver) \
 		$(use_enable X x11) \
 		$(use_enable xrandr)
+}
+
+src_compile() {
+	emake V=1
 }
 
 src_install() {

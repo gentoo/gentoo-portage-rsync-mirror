@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/kodi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.4 2015/03/03 14:37:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.5 2015/03/04 22:12:34 tupone Exp $
+
+  04 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild:
+  Make verbose
+  GLEW is required by opengl
+  opengl is not required by gles
 
   03 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild,
   +files/kodi-9999-gentoo.patch:
