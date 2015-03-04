@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.5.ebuild,v 1.3 2015/03/04 12:12:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.5.ebuild,v 1.4 2015/03/04 13:09:26 kensington Exp $
 
 EAPI=5
 
@@ -48,8 +48,6 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 
-RESTRICT="test"
-
 pkg_setup() {
 	python-any-r1_pkg_setup
 	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
@@ -83,7 +81,7 @@ src_compile() {
 src_test() {
 	mytest() {
 		pushd "${BUILD_DIR}" > /dev/null
-		Xemake test || die "tests failed"
+		VIRTUALX_COMMAND="ctest -E '(CallChannel)'" virtualmake || die "tests failed"
 		popd > /dev/null
 	}
 
