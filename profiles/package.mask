@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16398 2015/03/03 23:21:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16399 2015/03/04 17:55:10 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -208,12 +208,6 @@ app-portage/portage-mod_jabber
 # No upstream anymore; nothing in the tree uses it.
 # masked for removal on 20150306
 media-libs/sdl-flic
-
-# Bernard Cafarelli <voyageur@gentoo.org> (03 Feb 2015)
-# Masked for removal in 30 days
-# Requires GTK+2 audacious (<=3.2) with audclient (<=3.4)
-# Bugs #411077 and #538464
-x11-plugins/wmauda
 
 # Eray Aslan <eras@gentoo.org> (03 Feb 2015)
 # Mask experimental software

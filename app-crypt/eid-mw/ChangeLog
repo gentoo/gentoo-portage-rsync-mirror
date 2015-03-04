@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/eid-mw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.11 2015/01/24 18:17:08 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/eid-mw/ChangeLog,v 1.12 2015/03/04 17:44:08 swift Exp $
+
+  04 Mar 2015; Sven Vermeulen <swift@gentoo.org> -eid-mw-4.0.2_p1188.ebuild,
+  -eid-mw-4.0.4_p1253.ebuild:
+  Drop 4.0.2 and 4.0.4 as recent e-ids require later versions to be read/used
 
 *eid-mw-4.0.6_p1620 (24 Jan 2015)
 

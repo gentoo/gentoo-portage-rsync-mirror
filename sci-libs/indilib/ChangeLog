@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/indilib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.49 2014/11/29 13:23:51 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.50 2015/03/04 17:46:28 mrueg Exp $
+
+*indilib-1.0.0 (04 Mar 2015)
+
+  04 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +indilib-1.0.0.ebuild:
+  Version bump.
 
   29 Nov 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

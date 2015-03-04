@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.136 2015/02/24 16:15:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.137 2015/03/04 17:41:31 dilfridge Exp $
+
+*cups-filters-1.0.66 (04 Mar 2015)
+
+  04 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-filters-1.0.66.ebuild, cups-filters-9999.ebuild:
+  Version bump
 
   24 Feb 2015; Michał Górny <mgorny@gentoo.org> cups-filters-1.0.65.ebuild:
   Remove /usr/bin/foomatic-rip on USE=-foomatic as well.
