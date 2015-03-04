@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bitcoincore.eclass,v 1.2 2015/02/24 12:14:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bitcoincore.eclass,v 1.3 2015/03/03 23:56:08 blueness Exp $
 #
 # @ECLASS: bitcoincore.eclass
 # @MAINTAINER:
@@ -132,10 +132,12 @@ fi
 
 BITCOINCORE_COMMON_DEPEND="
 	${OPENSSL_DEPEND}
-	$LIBSECP256K1_DEPEND
 "
+if [ "${BITCOINCORE_NEED_LIBSECP256K1}" = "1" ]; then
+	BITCOINCORE_COMMON_DEPEND="${BITCOINCORE_COMMON_DEPEND} $LIBSECP256K1_DEPEND"
+fi
 if [ "${PN}" != "libbitcoinconsensus" ]; then
-	BITCOINCORE_COMMON_DEPEND=">=dev-libs/boost-1.52.0[threads(+)]"
+	BITCOINCORE_COMMON_DEPEND="${BITCOINCORE_COMMON_DEPEND} >=dev-libs/boost-1.52.0[threads(+)]"
 fi
 bitcoincore_common_depend_use() {
 	in_bcc_iuse "$1" || return
@@ -149,6 +151,9 @@ DEPEND="${DEPEND} ${BITCOINCORE_COMMON_DEPEND}
 	>=app-shells/bash-4.1
 	sys-apps/sed
 "
+if [ "${BITCOINCORE_NEED_LEVELDB}" = "1" ]; then
+	RDEPEND="${RDEPEND} virtual/bitcoin-leveldb"
+fi
 if in_bcc_iuse ljr && [ "$BITCOINCORE_SERIES" = "0.10.x" ]; then
 	DEPEND="${DEPEND} ljr? ( dev-vcs/git )"
 fi
@@ -263,10 +268,13 @@ bitcoincore_conf() {
 	else
 		my_econf="${my_econf} --without-utils"
 	fi
+	if [ "${BITCOINCORE_NEED_LEVELDB}" = "1" ]; then
+		# Passing --with-system-leveldb fails if leveldb is not installed, so only use it for targets that use LevelDB
+		my_econf="${my_econf} --with-system-leveldb"
+	fi
 	econf \
 		--disable-ccache \
 		--disable-static \
-		--with-system-leveldb       \
 		--with-system-libsecp256k1  \
 		--without-libs    \
 		--without-daemon  \

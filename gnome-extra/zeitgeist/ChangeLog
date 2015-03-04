@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/zeitgeist
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.43 2014/07/04 02:32:45 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/ChangeLog,v 1.44 2015/03/03 23:48:32 eva Exp $
+
+*zeitgeist-0.9.15 (03 Mar 2015)
+
+  03 Mar 2015; Gilles Dartiguelongue <eva@gentoo.org> +zeitgeist-0.9.15.ebuild,
+  +files/zeitgeist-0.9.15-fix-array-length-string-join.patch,
+  +files/zeitgeist-0.9.15-python-detection.patch:
+  Version bump, fix bug #518174. Move vala_src_prepare call after potential
+  eautoreconf, fix configure to properly detect/use python, make unittest run
+  within a dbus session, do not install docs in multiple paths.
 
   04 Jul 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-1.0.ebuild,v 1.1 2015/03/02 09:50:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-1.0.ebuild,v 1.2 2015/03/03 23:31:32 vapier Exp $
 
 EAPI="4"
 
 inherit eutils toolchain-funcs unpacker
 
 DESCRIPTION="ELF related utils for ELF 32/64 binaries that can check files for security relevant properties"
-HOMEPAGE="http://hardened.gentoo.org/pax-utils.xml"
+HOMEPAGE="https://wiki.gentoo.org/index.php?title=Project:Hardened/PaX_Utilities"
 SRC_URI="mirror://gentoo/pax-utils-${PV}.tar.xz
 	http://dev.gentoo.org/~solar/pax/pax-utils-${PV}.tar.xz
 	http://dev.gentoo.org/~vapier/dist/pax-utils-${PV}.tar.xz"

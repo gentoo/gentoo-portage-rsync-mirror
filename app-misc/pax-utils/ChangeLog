@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.170 2015/03/02 09:50:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.171 2015/03/03 23:31:32 vapier Exp $
+
+  03 Mar 2015; Mike Frysinger <vapier@gentoo.org> pax-utils-1.0.ebuild:
+  Update HOMEPAGE to the wiki.
 
 *pax-utils-1.0 (02 Mar 2015)
 

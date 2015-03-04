@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.8.0.31.ebuild,v 1.1 2015/01/23 17:37:23 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.8.0.40.ebuild,v 1.1 2015/03/03 23:49:06 chewi Exp $
 
 EAPI="5"
 

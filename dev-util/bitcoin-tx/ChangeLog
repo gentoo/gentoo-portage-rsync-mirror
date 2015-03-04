@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bitcoin-tx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitcoin-tx/ChangeLog,v 1.1 2015/02/23 21:58:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitcoin-tx/ChangeLog,v 1.2 2015/03/03 23:49:34 blueness Exp $
+
+  03 Mar 2015; Anthony G. Basile <blueness@gentoo.org> bitcoin-tx-0.10.0.ebuild,
+  bitcoin-tx-9999.ebuild:
+  Fix bug #541266.
 
 *bitcoin-tx-9999 (23 Feb 2015)
 *bitcoin-tx-0.10.0 (23 Feb 2015)
@@ -9,4 +13,3 @@
   +bitcoin-tx-0.10.0.ebuild, +bitcoin-tx-9999.ebuild,
   +files/9999-sys_libsecp256k1.patch, +metadata.xml:
   Initial commit
-

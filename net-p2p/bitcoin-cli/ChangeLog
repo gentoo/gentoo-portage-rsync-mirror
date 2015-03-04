@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/bitcoin-cli
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/ChangeLog,v 1.5 2015/02/23 21:36:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-cli/ChangeLog,v 1.6 2015/03/03 23:59:21 blueness Exp $
+
+*bitcoin-cli-0.10.0-r1 (04 Mar 2015)
+
+  04 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-cli-0.10.0-r1.ebuild, -bitcoin-cli-0.10.0.ebuild,
+  bitcoin-cli-9999.ebuild:
+  Dependency on leveldb is now handled by the eclass.
 
 *bitcoin-cli-0.10.0 (23 Feb 2015)
 
