@@ -1,4 +1,4 @@
-From c5e163ea6346538d9f5c6c111fd865e92eeb491d Mon Sep 17 00:00:00 2001
+From 7d2e4a41de6d7c231bb10dba6940533c756f3c89 Mon Sep 17 00:00:00 2001
 From: "H.J. Lu" <hongjiu.lu@intel.com>
 Date: Fri, 20 Dec 2013 14:36:01 -0500
 Subject: [PATCH] Add x32 support to config.guess
@@ -16,10 +16,10 @@ URL: http://gcc.gnu.org/ml/gcc-patches/2012-08/msg01083.html
  1 file changed, 12 insertions(+), 1 deletion(-)
 
 diff --git a/config.guess b/config.guess
-index 9afd676..8b26ecf 100755
+index f7eb141..8a5d3f4 100755
 --- a/config.guess
 +++ b/config.guess
-@@ -1020,7 +1020,18 @@ EOF
+@@ -1038,7 +1038,18 @@ EOF
  	echo ${UNAME_MACHINE}-dec-linux-${LIBC}
  	exit ;;
      x86_64:Linux:*:*)
@@ -40,5 +40,5 @@ index 9afd676..8b26ecf 100755
      xtensa*:Linux:*:*)
  	echo ${UNAME_MACHINE}-unknown-linux-${LIBC}
 -- 
-1.8.4.3
+2.3.1
 
