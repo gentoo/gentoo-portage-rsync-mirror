@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.19 2015/02/22 00:49:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.2.0.ebuild,v 1.20 2015/03/04 14:56:16 jlec Exp $
 
 inherit autotools eutils fortran-2 toolchain-funcs
 
@@ -17,6 +17,7 @@ IUSE="doc"
 
 RDEPEND="
 	virtual/blas
+	sci-libs/ufconfig
 	sci-libs/amd"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

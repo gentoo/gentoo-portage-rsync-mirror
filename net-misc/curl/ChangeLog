@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.390 2015/02/25 12:24:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.391 2015/03/04 14:44:59 blueness Exp $
+
+  04 Mar 2015; Anthony G. Basile <blueness@gentoo.org> curl-7.41.0.ebuild:
+  ca-bundle and ca-path are no longer mutually exclusive.  Bug #539260.
 
   25 Feb 2015; Anthony G. Basile <blueness@gentoo.org> -curl-7.36.0.ebuild,
   -curl-7.37.1.ebuild:

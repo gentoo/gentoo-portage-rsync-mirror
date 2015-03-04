@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/putty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.105 2014/11/15 13:38:10 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.106 2015/03/04 14:37:05 jer Exp $
+
+*putty-0.64 (04 Mar 2015)
+
+  04 Mar 2015; Jeroen Roovers <jer@gentoo.org> +putty-0.64.ebuild:
+  Version bump (bug #542098).
 
   15 Nov 2014; Jeroen Roovers <jer@gentoo.org> putty-9999.ebuild:
   Move to git repo.

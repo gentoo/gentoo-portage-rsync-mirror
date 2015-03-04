@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.41.0.ebuild,v 1.1 2015/02/25 12:16:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.41.0.ebuild,v 1.2 2015/03/04 14:44:59 blueness Exp $
 
 EAPI="5"
 
@@ -163,7 +163,7 @@ multilib_src_configure() {
 		fi
 		if use curl_ssl_openssl; then
 			einfo "SSL provided by openssl"
-			myconf+=( --with-ssl --without-ca-bundle --with-ca-path="${EPREFIX}"/etc/ssl/certs )
+			myconf+=( --with-ssl --with-ca-path="${EPREFIX}"/etc/ssl/certs )
 		fi
 		if use curl_ssl_winssl; then
 			einfo "SSL provided by Windows"
