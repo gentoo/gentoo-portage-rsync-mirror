@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.149 2015/02/06 06:04:27 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.150 2015/03/04 16:05:39 swift Exp $
+
+  04 Mar 2015; Sven Vermeulen <swift@gentoo.org> policycoreutils-2.4.ebuild:
+  Fix build failure on x32 (bug #541618)
 
   06 Feb 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-2.3-r3.ebuild:
   Stablize 2.3-r3
