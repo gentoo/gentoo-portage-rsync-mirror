@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.4-r1.ebuild,v 1.6 2014/11/11 10:54:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-2.1.4-r1.ebuild,v 1.7 2015/03/04 11:06:28 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://uuidtools.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~x86-macos"
+KEYWORDS="amd64 x86 ~x86-macos"
 IUSE="doc"
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )"
