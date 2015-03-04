@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=app-mobilephone/anyremote-6.5[bluetooth?] dev-python/PyQt4[X,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] kde-base/pykde4:4[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] bluetooth? ( dev-python/pybluez[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DESCRIPTION=KDE frontend to Anyremote
+EAPI=5
+HOMEPAGE=http://anyremote.sourceforge.net/
+IUSE=bluetooth python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=app-mobilephone/anyremote-6.5[bluetooth?] dev-python/PyQt4[X,python_targets_python2_7(-)?,-python_single_target_python2_7(-)] kde-base/pykde4:4[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] bluetooth? ( dev-python/pybluez[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] )
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=4
+SRC_URI=mirror://sourceforge/anyremote/kanyremote-6.3.5.tar.gz
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_md5_=7e7b6545daccf7f89aa1cee92fff6a49

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.23 2014/11/29 13:44:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.24 2015/03/04 10:19:40 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability unpacker user versionator
@@ -23,17 +23,6 @@ RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
 
 COMMON="
-	gtk? (
-		!media-video/nvidia-settings
-		dev-libs/atk
-		dev-libs/glib
-		x11-libs/gdk-pixbuf
-		x11-libs/gtk+:2
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/pango[X]
-		x11-libs/pangox-compat
-	)
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	>=app-admin/eselect-opengl-1.0.9
 "
@@ -43,6 +32,17 @@ DEPEND="${COMMON}
 RDEPEND="${COMMON}
 	<x11-base/xorg-server-1.12.99:=
 	acpi? ( sys-power/acpid )
+	gtk? (
+		!media-video/nvidia-settings
+		dev-libs/atk
+		dev-libs/glib:2
+		x11-libs/gdk-pixbuf
+		x11-libs/gtk+:2
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/pango[X]
+		x11-libs/pangox-compat
+	)
 	multilib? (
 		|| (
 			(
@@ -54,7 +54,8 @@ RDEPEND="${COMMON}
 	)
 "
 
-QA_TEXTRELS_x86="usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
+QA_TEXTRELS_x86="
+	usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
@@ -62,28 +63,36 @@ QA_TEXTRELS_x86="usr/lib/opengl/nvidia/lib/libnvidia-tls.so.${PV}
 	usr/lib/libcuda.so.${PV}
 	usr/lib/libnvidia-cfg.so.${PV}
 	usr/lib/libvdpau_nvidia.so.${PV}
-	usr/lib/libXvMCNVIDIA.so.${PV}"
+	usr/lib/libXvMCNVIDIA.so.${PV}
+"
 
-QA_TEXTRELS_x86_fbsd="boot/modules/nvidia.ko
+QA_TEXTRELS_x86_fbsd="
+	boot/modules/nvidia.ko
 	usr/lib/opengl/nvidia/lib/libGL.so.1
 	usr/lib/opengl/nvidia/lib/libGLcore.so.1
 	usr/lib/libnvidia-cfg.so.1
 	usr/lib/opengl/nvidia/extensions/libglx.so.1
-	usr/lib/xorg/modules/drivers/nvidia_drv.so"
+	usr/lib/xorg/modules/drivers/nvidia_drv.so
+"
 
-QA_TEXTRELS_amd64="usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
+QA_TEXTRELS_amd64="
+	usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/libcuda.so.${PV}
-	usr/lib32/libvdpau_nvidia.so.${PV}"
+	usr/lib32/libvdpau_nvidia.so.${PV}
+"
 
-QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+QA_EXECSTACK_x86="
+	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
 	usr/lib/xorg/modules/drivers/nvidia_drv.so
-	usr/lib/libXvMCNVIDIA.a:NVXVMC.o"
+	usr/lib/libXvMCNVIDIA.a:NVXVMC.o
+"
 
-QA_EXECSTACK_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
+QA_EXECSTACK_amd64="
+	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/libnvcompiler.so.${PV}
 	usr/lib64/libXvMCNVIDIA.so.${PV}
@@ -96,22 +105,30 @@ QA_EXECSTACK_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/xorg/modules/drivers/nvidia_drv.so
 	usr/bin/nvidia-settings
 	usr/bin/nvidia-smi
-	usr/bin/nvidia-xconfig"
+	usr/bin/nvidia-xconfig
+"
 
-QA_WX_LOAD_x86="usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
+QA_WX_LOAD_x86="
+	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib/opengl/nvidia/extensions/libglx.so.${PV}
-	usr/lib/libXvMCNVIDIA.a"
+	usr/lib/libXvMCNVIDIA.a
+"
 
-QA_WX_LOAD_amd64="usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+QA_WX_LOAD_amd64="
+	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
-	usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}"
+	usr/lib64/opengl/nvidia/extensions/libglx.so.${PV}
+"
 
-QA_SONAME_amd64="usr/lib64/libnvcompiler.so.${PV}"
+QA_SONAME_amd64="
+	usr/lib64/libnvcompiler.so.${PV}
+"
 
-QA_FLAGS_IGNORED_amd64="usr/lib32/libcuda.so.${PV}
+QA_FLAGS_IGNORED_amd64="
+	usr/lib32/libcuda.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libnvidia-tls.so.${PV}
@@ -127,9 +144,11 @@ QA_FLAGS_IGNORED_amd64="usr/lib32/libcuda.so.${PV}
 	usr/lib64/libvdpau_nvidia.so.${PV}
 	usr/bin/nvidia-settings
 	usr/bin/nvidia-smi
-	usr/bin/nvidia-xconfig"
+	usr/bin/nvidia-xconfig
+"
 
-QA_FLAGS_IGNORED_x86="usr/lib/libcuda.so.${PV}
+QA_FLAGS_IGNORED_x86="
+	usr/lib/libcuda.so.${PV}
 	usr/lib/libnvidia-cfg.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
@@ -140,7 +159,8 @@ QA_FLAGS_IGNORED_x86="usr/lib/libcuda.so.${PV}
 	usr/lib/libvdpau_nvidia.so.${PV}
 	usr/bin/nvidia-settings
 	usr/bin/nvidia-smi
-	usr/bin/nvidia-xconfig"
+	usr/bin/nvidia-xconfig
+"
 
 S="${WORKDIR}/"
 
