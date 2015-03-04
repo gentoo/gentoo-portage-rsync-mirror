@@ -1,9 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-1.2.0.ebuild,v 1.1 2015/03/04 09:42:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-1.2.0.ebuild,v 1.2 2015/03/04 13:45:02 kensington Exp $
 
 EAPI=5
 
+CMAKE_IN_SOURCE_BUILD="true"
 DECLARATIVE_REQUIRED="always"
 KDE_LINGUAS="bg bs ca ca@valencia cs da de en_GB eo es et fi fr ga gl hu is it
 ja ko lt mai mr nb nds nl pl pt pt_BR ro ru sk sv tr ug uk zh_CN zh_TW"

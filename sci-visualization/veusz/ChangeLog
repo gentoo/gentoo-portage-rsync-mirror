@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/veusz
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.51 2014/10/27 16:46:35 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.52 2015/03/04 13:59:17 jlec Exp $
+
+  04 Mar 2015; Justin Lecher <jlec@gentoo.org> veusz-1.22.ebuild:
+  Add missing dep
 
 *veusz-1.22 (27 Oct 2014)
 

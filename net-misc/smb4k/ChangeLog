@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.139 2015/03/04 09:42:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.140 2015/03/04 13:45:02 kensington Exp $
+
+  04 Mar 2015; Michael Palimaka <kensington@gentoo.org> smb4k-1.2.0.ebuild:
+  Force in-source build to avoid build failure when LINGUAS has multiple values
+  wrt bug #542088.
 
 *smb4k-1.2.0 (04 Mar 2015)
 

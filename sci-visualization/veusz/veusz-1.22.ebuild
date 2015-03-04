@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.22.ebuild,v 1.1 2014/10/27 16:46:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.22.ebuild,v 1.2 2015/03/04 13:59:17 jlec Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ LICENSE="GPL-2"
 
 CDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/pyminuit[${PYTHON_USEDEP}]
 	>=dev-python/PyQt4-4.6[X,svg,${PYTHON_USEDEP}]
 "
 RDEPEND="${CDEPEND}
