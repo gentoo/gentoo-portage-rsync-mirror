@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.4.ebuild,v 1.1 2015/02/04 17:55:33 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.4.ebuild,v 1.2 2015/03/04 16:00:26 swift Exp $
 
 EAPI="5"
 
@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" YACC="bison -y"
+	emake CC="$(tc-getCC)" YACC="bison -y" LIBDIR="\$(PREFIX)/$(get_libdir)"
 }
 
 src_install() {

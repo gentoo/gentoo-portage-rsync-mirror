@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.84 2015/02/04 17:55:33 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.85 2015/03/04 16:00:26 swift Exp $
+
+  04 Mar 2015; Sven Vermeulen <swift@gentoo.org> checkpolicy-2.4.ebuild:
+  Fix build failure on x32 (bug #541618)
 
 *checkpolicy-2.4 (04 Feb 2015)
 

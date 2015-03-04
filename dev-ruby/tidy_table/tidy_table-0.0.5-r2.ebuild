@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r2.ebuild,v 1.7 2014/11/03 15:06:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/tidy_table-0.0.5-r2.ebuild,v 1.8 2015/03/04 16:00:31 mrueg Exp $
 
 EAPI=4
 USE_RUBY="ruby19"
@@ -15,7 +15,7 @@ RUBY_FAKEGEM_EXTRADOC="History.txt README.txt"
 inherit ruby-fakegem
 
 DESCRIPTION="Tool to convert an array of struct into an HTML table"
-HOMEPAGE="http://seattlerb.rubyforge.org/tidy_table/"
+HOMEPAGE="https://github.com/topfunky/tidy_table"
 
 LICENSE="MIT"
 SLOT="0"

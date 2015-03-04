@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.139 2015/02/04 17:49:56 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.140 2015/03/04 15:47:03 swift Exp $
+
+  04 Mar 2015; Sven Vermeulen <swift@gentoo.org> libselinux-2.4.ebuild:
+  Fix build failure on x32 (bug #541618)
 
 *libselinux-2.4 (04 Feb 2015)
 
