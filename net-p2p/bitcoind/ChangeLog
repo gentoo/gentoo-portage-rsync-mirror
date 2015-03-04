@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.102 2015/02/27 16:17:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.103 2015/03/04 00:11:48 blueness Exp $
+
+*bitcoind-0.10.0-r1 (04 Mar 2015)
+
+  04 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.10.0-r1.ebuild, +files/0.10.0-openrc-compat.patch,
+  +files/bitcoind.logrotate-r1, -bitcoind-0.10.0.ebuild, bitcoind-9999.ebuild:
+  Dependency on leveldb and libsecp256k1 is now handled by the eclass.  Fix
+  logrotate, bug #541510.
 
   27 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> bitcoind-0.10.0.ebuild:
   ComRel: Disable more add-on patches by default

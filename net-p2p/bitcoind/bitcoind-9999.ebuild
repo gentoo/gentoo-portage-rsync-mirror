@@ -1,10 +1,12 @@
 # Copyright 2010-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-9999.ebuild,v 1.3 2015/02/23 21:31:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-9999.ebuild,v 1.4 2015/03/04 00:11:48 blueness Exp $
 
 EAPI=5
 
 BITCOINCORE_IUSE="examples logrotate test upnp +wallet"
+BITCOINCORE_NEED_LEVELDB=1
+BITCOINCORE_NEED_LIBSECP256K1=1
 inherit bash-completion-r1 bitcoincore user systemd
 
 DESCRIPTION="Original Bitcoin crypto-currency wallet for automated services"
@@ -13,7 +15,6 @@ SLOT="0"
 KEYWORDS=""
 
 RDEPEND="
-	virtual/bitcoin-leveldb
 	logrotate? (
 		app-admin/logrotate
 	)

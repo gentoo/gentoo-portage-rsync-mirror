@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.99 2015/03/01 12:11:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.100 2015/03/04 00:04:51 blueness Exp $
+
+*bitcoin-qt-0.10.0-r1 (04 Mar 2015)
+
+  04 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoin-qt-0.10.0-r1.ebuild, -bitcoin-qt-0.10.0.ebuild,
+  bitcoin-qt-9999.ebuild:
+  Dependency on leveldb and libsecp256k1 is now handled by the eclass.
 
   01 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   bitcoin-qt-0.10.0.ebuild:
