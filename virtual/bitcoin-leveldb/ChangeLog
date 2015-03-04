@@ -1,6 +1,9 @@
 # ChangeLog for virtual/bitcoin-leveldb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/ChangeLog,v 1.6 2015/02/23 21:19:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/bitcoin-leveldb/ChangeLog,v 1.7 2015/03/04 12:36:57 blueness Exp $
+
+  04 Mar 2015; Anthony G. Basile <blueness@gentoo.org> bitcoin-leveldb-0.ebuild:
+  Remove restriction on snappy
 
   23 Feb 2015; Anthony G. Basile <blueness@gentoo.org> bitcoin-leveldb-0.ebuild:
   Update the providers

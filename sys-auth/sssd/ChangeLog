@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.66 2015/03/03 22:28:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.67 2015/03/04 12:49:29 hwoarang Exp $
+
+  04 Mar 2015; Markos Chandras <hwoarang@gentoo.org> -sssd-1.12.2-r1.ebuild,
+  -sssd-1.12.2.ebuild, -sssd-1.12.3.ebuild:
+  Remove old
 
   03 Mar 2015; Markus Meier <maekke@gentoo.org> sssd-1.12.4.ebuild:
   add ~arm, bug #540540
