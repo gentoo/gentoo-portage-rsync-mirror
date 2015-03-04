@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/B-Utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Utils/ChangeLog,v 1.25 2015/02/21 00:48:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Utils/ChangeLog,v 1.26 2015/03/04 06:02:01 maekke Exp $
+
+  04 Mar 2015; Markus Meier <maekke@gentoo.org> B-Utils-0.250.0.ebuild:
+  add ~arm, bug #540862
 
 *B-Utils-0.250.0 (21 Feb 2015)
 
