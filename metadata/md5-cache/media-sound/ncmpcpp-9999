@@ -1,11 +1,11 @@
 DEFINED_PHASES=configure install postinst prepare unpack
-DEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost:=[nls,threads] sys-libs/ncurses[unicode?] sys-libs/readline taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
+DEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost:=[nls,threads] sys-libs/ncurses[unicode?] sys-libs/readline:* taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=featureful ncurses based MPD client inspired by ncmpc
 EAPI=5
 HOMEPAGE=http://ncmpcpp.rybczak.net/
 IUSE=clock curl outputs taglib unicode visualizer
 LICENSE=GPL-2
-RDEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost:=[nls,threads] sys-libs/ncurses[unicode?] sys-libs/readline taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 )
+RDEPEND=>=media-libs/libmpdclient-2.1 curl? ( net-misc/curl ) dev-libs/boost:=[nls,threads] sys-libs/ncurses[unicode?] sys-libs/readline:* taglib? ( media-libs/taglib ) visualizer? ( sci-libs/fftw:3.0 )
 SLOT=0
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=2fa7063abfae67daf6483d8db2b48250
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_md5_=88eb3214e239ff0a710f8ec5c26de39e
