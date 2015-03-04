@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.138 2015/01/02 15:09:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.139 2015/03/04 09:42:12 kensington Exp $
+
+*smb4k-1.2.0 (04 Mar 2015)
+
+  04 Mar 2015; Michael Palimaka <kensington@gentoo.org> +smb4k-1.2.0.ebuild:
+  Version bump.
 
 *smb4k-1.1.4 (02 Jan 2015)
 

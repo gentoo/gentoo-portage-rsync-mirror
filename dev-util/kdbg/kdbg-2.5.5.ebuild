@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.5.3.ebuild,v 1.1 2013/04/22 08:52:02 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.5.5.ebuild,v 1.1 2015/03/04 09:34:07 kensington Exp $
 
 EAPI=5
 
@@ -21,9 +21,9 @@ RDEPEND="sys-devel/gdb"
 DEPEND="${RDEPEND}"
 
 DOCS=( BUGS README ReleaseNotes-${PV} TODO )
-PATCHES=( "${FILESDIR}/${P}-gdb-7.5.patch" )
 
 src_prepare() {
+	# allow documentation to be handled by eclass
 	mv kdbg/doc . || die
 	sed -i -e '/add_subdirectory(doc)/d' kdbg/CMakeLists.txt || die
 	echo "add_subdirectory ( doc ) " >> CMakeLists.txt || die
@@ -32,5 +32,7 @@ src_prepare() {
 
 src_install() {
 	kde4-base_src_install
+
+	# hack since ChangeLog-* is automagically installed by eclass
 	rm -f "${ED}"usr/share/doc/${PF}/ChangeLog-pre*
 }
