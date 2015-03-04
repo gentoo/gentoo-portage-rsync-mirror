@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/geant
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.79 2014/04/15 15:31:42 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.80 2015/03/04 04:21:18 amadio Exp $
+
+*geant-4.10.01 (04 Mar 2015)
+
+  04 Mar 2015; <amadio@gentoo.org> +geant-4.10.01.ebuild:
+  version bump. Fixes bug #541152
 
 *geant-4.10.00_p01 (15 Apr 2014)
 
