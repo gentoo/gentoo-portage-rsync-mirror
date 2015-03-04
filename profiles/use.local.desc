@@ -6817,6 +6817,8 @@ sys-auth/consolekit:systemd-units - Install systemd unit files to replace the mo
 sys-auth/fingerprint-gui:upekbsapi - Add UPEK BSAPI drivers for identify functions on some readers
 sys-auth/munge:gcrypt - Use libgcrypt instead of openssl
 sys-auth/nss-mdns:search-domains - Honour search domains from /etc/resolv.conf (see bug #201948 for possible side effects)
+sys-auth/oath-toolkit:pam - Build PAM module for pluggable login authentication for OATH
+sys-auth/oath-toolkit:pskc - Build tools & library for the Portable Symmetric Key Container (PSKC) format per RFC6030
 sys-auth/pam_mktemp:prevent-removal - If supported, set EXT2_APPEND_FL on /tmp/.private to prevent temporary directories from being removed
 sys-auth/pam_mysql:openssl - Use OpenSSL for md5 and sha1 support
 sys-auth/pam_pkcs11:nss - Use Mozilla NSS (dev-libs/nss) as provider for PKCS#11 access, rather than using OpenSSL with a custom implementation of the PKC#11 protocol.

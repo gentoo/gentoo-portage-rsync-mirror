@@ -1,0 +1,9 @@
+# ChangeLog for sys-auth/oath-toolkit
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/oath-toolkit/ChangeLog,v 1.1 2015/03/04 06:42:24 robbat2 Exp $
+
+*oath-toolkit-2.4.1 (04 Mar 2015)
+
+  04 Mar 2015; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +oath-toolkit-2.4.1.ebuild:
+  Add ebuild based on sunrise.
