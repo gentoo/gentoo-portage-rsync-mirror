@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_rc1-r1.ebuild,v 1.1 2014/05/27 11:51:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_rc1-r1.ebuild,v 1.2 2015/03/04 15:15:31 xmw Exp $
 
 EAPI=5
 
@@ -23,14 +23,14 @@ RDEPEND="media-fonts/terminus-font
 	gif? ( media-libs/giflib )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )
-	jpeg? ( virtual/jpeg )
-	pdf? ( app-text/poppler )
-	png? ( media-libs/libpng )
+	jpeg? ( virtual/jpeg:0 )
+	pdf? ( <app-text/poppler-0.31 )
+	png? ( media-libs/libpng:0 )
 	postscript? ( app-text/libspectre )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:0 )
 	sdl? ( media-libs/libsdl )
 	svg? ( media-gfx/inkscape )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:0 )
 	xfig? ( media-gfx/xfig )"
 DEPEND="${RDEPEND}
 	sys-devel/bison

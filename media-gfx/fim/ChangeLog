@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fim
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/ChangeLog,v 1.5 2014/05/27 11:51:16 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/ChangeLog,v 1.6 2015/03/04 15:15:31 xmw Exp $
+
+*fim-0.4_rc3 (04 Mar 2015)
+
+  04 Mar 2015; Michael Weber <xmw@gentoo.org> +fim-0.4_rc3.ebuild,
+  -fim-0.4_pre.ebuild, -fim-0.4_rc1.ebuild, fim-0.4_rc1-r1.ebuild:
+  Version bump for new release candidate, adjust poppler dep and drop old.
 
 *fim-0.4_rc1-r1 (27 May 2014)
 *fim-0.4_rc1_p1 (27 May 2014)
