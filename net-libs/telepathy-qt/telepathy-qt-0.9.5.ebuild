@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.5.ebuild,v 1.2 2015/01/30 22:24:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.5.ebuild,v 1.3 2015/03/04 12:12:48 kensington Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-inherit base python-any-r1 cmake-utils virtualx multibuild
+inherit python-any-r1 cmake-utils virtualx multibuild
 
 DESCRIPTION="Qt4 bindings for the Telepathy D-Bus protocol"
 HOMEPAGE="http://telepathy.freedesktop.org/"

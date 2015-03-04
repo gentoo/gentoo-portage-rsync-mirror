@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.31 2015/01/30 22:24:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.32 2015/03/04 12:12:48 kensington Exp $
+
+  04 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  telepathy-qt-0.9.5.ebuild:
+  Remove unused inherit.
 
   30 Jan 2015; Johannes Huber <johu@gentoo.org> telepathy-qt-0.9.5.ebuild:
   Shorten pkg setup. Sort functions.
