@@ -6657,6 +6657,7 @@ sci-visualization/paraview:nvcontrol - Add NVCONTROL support for OpenGL options
 sci-visualization/paraview:plugins - Build and install additional plugins
 sci-visualization/veusz:emf - Add FITS format via dev-python/pyemf
 sci-visualization/veusz:fits - Add FITS format via dev-python/astropy
+sci-visualization/veusz:minuit - Use Minuit during fitting viadev-python/pyminuit
 sci-visualization/veusz:vo - Add Virtual Observatory tools via dev-python/astropy
 sci-visualization/visit:cgns - Builds the reader for the CFD General Notation System file format.
 sci-visualization/visit:silo - Adds support for reading .silo files.

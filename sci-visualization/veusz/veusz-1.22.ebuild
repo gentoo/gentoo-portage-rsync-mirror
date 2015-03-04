@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.22.ebuild,v 1.2 2015/03/04 13:59:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.22.ebuild,v 1.3 2015/03/04 14:08:01 jlec Exp $
 
 EAPI=5
 
@@ -12,14 +12,13 @@ DESCRIPTION="Qt scientific plotting package with good Postscript output"
 HOMEPAGE="http://home.gna.org/veusz/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 
-IUSE="dbus doc emf fits hdf5 vo"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="dbus doc emf fits hdf5 minuit vo"
 
 CDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/pyminuit[${PYTHON_USEDEP}]
 	>=dev-python/PyQt4-4.6[X,svg,${PYTHON_USEDEP}]
 "
 RDEPEND="${CDEPEND}
@@ -27,6 +26,7 @@ RDEPEND="${CDEPEND}
 	emf? ( dev-python/pyemf[$(python_gen_usedep 'python2*')] )
 	fits? ( dev-python/astropy[${PYTHON_USEDEP}] )
 	hdf5? ( dev-python/h5py[${PYTHON_USEDEP}] )
+	minuit? ( dev-python/pyminuit[${PYTHON_USEDEP}] )
 	vo? (
 			dev-python/astropy[${PYTHON_USEDEP}]
 			dev-python/sampy[$(python_gen_usedep 'python2*')]

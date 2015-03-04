@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/veusz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.52 2015/03/04 13:59:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.53 2015/03/04 14:08:01 jlec Exp $
+
+  04 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml, veusz-1.22.ebuild:
+  Make minuit optional
 
   04 Mar 2015; Justin Lecher <jlec@gentoo.org> veusz-1.22.ebuild:
   Add missing dep
