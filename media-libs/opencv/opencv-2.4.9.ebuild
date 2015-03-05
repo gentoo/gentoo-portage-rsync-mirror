@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.9 2015/02/27 22:24:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.10 2015/03/05 12:11:57 amynka Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -80,6 +80,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.4.8-javamagic.patch"
 	"${FILESDIR}/${PN}-2.4.9-cuda.patch"
 	"${FILESDIR}/${PN}-2.4.9-libav10.patch"
+	"${FILESDIR}/${PN}-2.4.9-cuda-pkg-config.patch"
 )
 
 pkg_setup() {

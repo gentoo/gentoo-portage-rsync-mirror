@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.118 2015/02/27 22:24:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.119 2015/03/05 12:11:57 amynka Exp $
+
+  05 Mar 2015;  <amy@gentoo.org> +files/opencv-2.4.9-cuda-pkg-config.patch,
+  opencv-2.4.9.ebuild:
+  Patch for cuda-pkg-config added #531198. Thanks Quentin Minster for patch.
 
   27 Feb 2015; Michał Górny <mgorny@gentoo.org> opencv-2.4.9.ebuild:
   Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in
