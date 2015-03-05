@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/cutg
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.56 2011/08/09 15:36:17 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.57 2015/03/05 10:14:41 jlec Exp $
+
+*cutg-160-r1 (05 Mar 2015)
+
+  05 Mar 2015; Justin Lecher <jlec@gentoo.org> +cutg-160-r1.ebuild,
+  metadata.xml:
+  Bump to EAPI=5 and host tarball instead of just mirror it
 
   09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> cutg-151.ebuild,
   cutg-160.ebuild:
@@ -231,4 +237,3 @@
   cutg-141.0.ebuild, metadata.xml :
   Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
   Reference: Gentoo Bugzilla, bug #54322
-

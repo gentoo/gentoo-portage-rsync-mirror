@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-biology</herd>
-	<longdescription>
+  <herd>sci-biology</herd>
+  <longdescription>
 		Codon usage tables maintained at the Kazusa DNA Research Institute.
 		Codon usage in individual genes has been calculated using the
 		nucleotide sequence data obtained from the GenBank Genetic Sequence
