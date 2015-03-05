@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9841 2015/03/04 17:55:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9842 2015/03/05 10:57:57 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Mar 2015; Justin Lecher <jlec@gentoo.org> arch/mips/ChangeLog,
+  arch/mips/package.use.mask, arch/powerpc/ChangeLog,
+  arch/powerpc/package.use.mask, arch/sparc/ChangeLog,
+  arch/sparc/package.use.mask, base/ChangeLog, base/package.use.mask,
+  package.mask:
+  Cleaned obsolete entries in package.use.mask
 
   04 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Remove x11-plugins/wmauda mask after last rites

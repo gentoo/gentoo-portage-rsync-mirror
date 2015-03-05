@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.157 2015/02/11 16:09:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.158 2015/03/05 10:57:57 jlec Exp $
+
+  05 Mar 2015; Justin Lecher <jlec@gentoo.org> package.use.mask:
+  Cleaned obsolete entries in package.use.mask
 
   11 Feb 2015; Mike Frysinger <vapier@gentoo.org> use.mask:
   Stop masking USE=bluetooth since it works on mips.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.654 2015/03/01 13:20:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.655 2015/03/05 10:57:57 jlec Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -424,11 +424,6 @@ net-misc/teamviewer system-wine
 # Mask it until upstream fixes it. Bug #417869
 media-sound/audacity ffmpeg
 
-# Julian Ospald <hasufell@gentoo.org> (10 Feb 2013)
-# This flag is experimental and breaks googleearth
-# in numerous ways. Unsupportable.
->=sci-geosciences/googleearth-7.0.2.8415-r2 system-qt
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (30 Dec 2012)
 # sys-apps/biosdevname is keyworded only for amd64/x86
 # systemd keyworded only for amd64/arm/x86
@@ -558,17 +553,13 @@ sys-auth/consolekit acl
 # directfb build issues, bug #405817.
 www-plugins/gnash directfb
 
-# Justin Lecher <jlec@gentoo.org> (13. Feb 2012)
-# Is broken somehow, upstream informed
->=sci-chemistry/pymol-1.5.0.1 vmd
-
 # Bernard Cafarelli <voyageur@gentoo.org> (08 Feb 2012)
 # libobjc2/clang experimental support
 >=gnustep-base/gnustep-make-2.6.2 libobjc2
 
 # Christoph Junghans <ottxor@gentoo.org> (04 Feb 2012)
 # mips only use flags
->=sci-libs/fftw-3 paired-single zbus
+>=sci-libs/fftw-3 zbus
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2012)
 # This is required only for Linux, so mask it here and unmask in
