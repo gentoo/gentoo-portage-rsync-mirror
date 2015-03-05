@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.408 2015/03/02 09:20:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.409 2015/03/05 18:22:53 tetromino Exp $
+
+*cairo-1.14.0-r2 (05 Mar 2015)
+
+  05 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cairo-1.14.0-r2.ebuild, +files/cairo-1.14.0-CFF-unaligned-access.patch,
+  +files/cairo-1.14.0-image-negative-span-length.patch,
+  +files/cairo-1.14.0-tor-scan-converter-do_fullrow-intersection.patch,
+  +files/cairo-1.14.0-xcb-0-sized-glyph.patch,
+  +files/cairo-1.14.0-xlib-0-sized-glyph.patch:
+  Add upstream patches to fix several crashes. Should fix bug #541326 (heap
+  corruption in darktable and evince), thanks to sergeev917 and Andrey Volkov.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.18-r1.ebuild:
   Stable for ppc, wrt bug #540676

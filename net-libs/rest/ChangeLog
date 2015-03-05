@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.32 2015/01/19 10:41:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.33 2015/03/05 18:20:52 tetromino Exp $
+
+*rest-0.7.92-r2 (05 Mar 2015)
+
+  05 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> -rest-0.7.91.ebuild,
+  +rest-0.7.92-r2.ebuild, +files/rest-0.7.92-oauth-missing-include.patch,
+  +files/rest-0.7.92-tests-GError-pointers.patch,
+  +files/rest-0.7.92-xml-parser-missing-break.patch:
+  Fix potentially exploitable memory corruption (bug #542264, thanks to
+  Agostino Sarubbo). Punt old.
 
   19 Jan 2015; Jeroen Roovers <jer@gentoo.org> rest-0.7.92-r1.ebuild:
   Stable for HPPA (bug #536694).
