@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20140326.ebuild,v 1.1 2014/05/19 09:17:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20141228.ebuild,v 1.1 2015/03/05 11:45:35 jlec Exp $
 
 EAPI=5
 
@@ -15,6 +15,7 @@ SRC_URI="
 		shelxe_amd64.bz2
 		shelxl_amd64.bz2
 		shelxs_amd64.bz2
+		shelxt_amd64.bz2
 		shredcif_amd64.bz2
 	)
 	x86? (
@@ -25,14 +26,15 @@ SRC_URI="
 		shelxe_x86.bz2
 		shelxl_x86.bz2
 		shelxs_x86.bz2
+		shelxt_x86.bz2
 		shredcif_x86.bz2
 	)
 "
 
 SLOT="0"
 LICENSE="free-noncomm"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="dosformat"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+IUSE=""
 
 S="${WORKDIR}"
 

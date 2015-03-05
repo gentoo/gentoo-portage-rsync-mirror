@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/shelx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.25 2015/03/05 11:13:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.26 2015/03/05 11:45:35 jlec Exp $
+
+*shelx-20141228 (05 Mar 2015)
+
+  05 Mar 2015; Justin Lecher <jlec@gentoo.org> +shelx-20141228.ebuild,
+  -shelx-20140326.ebuild:
+  Version Bump
 
   05 Mar 2015; Justin Lecher <jlec@gentoo.org> -shelx-20060317-r1.ebuild,
   -shelx-20060317-r2.ebuild:
