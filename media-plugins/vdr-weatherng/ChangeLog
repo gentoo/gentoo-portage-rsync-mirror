@@ -1,10 +1,10 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.27 2015/03/05 18:30:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.29 2015/03/05 18:34:53 hd_brummy Exp $
 
   05 Mar 2015; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-weatherng-0.0.8_pre3-r1.ebuild:
-  fixed typo in sed line, txh to T.Foerster on wrt bug 514892
+  fixed typo in sed line, txh to T.Foerster on wrt bug 541892
 
   08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   -vdr-weatherng-0.0.8_pre3.ebuild, vdr-weatherng-0.0.8_pre3-r1.ebuild:
