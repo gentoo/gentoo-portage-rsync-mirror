@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-chemistry</herd>
-  <use>
-    <flag name="dosformat">Use CR/LF to end lines; useful in mixed Linux/Windows
-    environments</flag>
-  </use>
 </pkgmetadata>

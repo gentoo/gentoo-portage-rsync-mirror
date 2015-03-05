@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.21 2015/01/31 12:11:09 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.22 2015/03/05 19:38:35 johu Exp $
+
+*qt-gstreamer-1.2.0-r1 (05 Mar 2015)
+
+  05 Mar 2015; Johannes Huber <johu@gentoo.org> +qt-gstreamer-1.2.0-r1.ebuild:
+  Revision bump adds multibuild support by Karol Herbst <git@karolherbst.de>.
 
   31 Jan 2015; Johannes Huber <johu@gentoo.org> -qt-gstreamer-0.10.3.ebuild,
   qt-gstreamer-1.2.0.ebuild:

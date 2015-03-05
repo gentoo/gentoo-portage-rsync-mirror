@@ -1474,6 +1474,7 @@ dev-haskell/httpd-shed:network-uri - Get Network.URI from the network-uri packag
 dev-haskell/hxt:network-uri - Get Network.URI from the network-uri package.
 dev-haskell/ieee754:big_endian - Build for a big endian machine. Beware that only little endian machines have been tested.
 dev-haskell/json:generic - Add support for generic encoder (dev-haskell/syb)
+dev-haskell/json:mapdict - Encode Haskell maps as JSON dicts
 dev-haskell/json:parsec - Add support for parsing with Parsec
 dev-haskell/json:pretty - Add support for using pretty printing combinators
 dev-haskell/lens:benchmark-uniplate - Enable benchmarking against Neil Mitchell's uniplate library for comparative performance analysis. Defaults to being turned off to avoid the extra dependency.
@@ -6320,7 +6321,6 @@ sci-chemistry/pdb2pqr:pdb2pka - Install experimental pdb2pka interface
 sci-chemistry/pymol:apbs - Install the apbs plugin
 sci-chemistry/pymol:web - Install Pymodule needed for web app support
 sci-chemistry/raster3d:gd - libgd support for PNG and JPEG output
-sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
 sci-chemistry/vmd:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-chemistry/vmd:msms - Add support for MSMS SAS calcualtion tool
 sci-chemistry/vmd:povray - Add support for povray raytracer for HQ images
