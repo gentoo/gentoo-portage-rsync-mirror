@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/udis86
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.24 2014/08/10 20:39:59 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.25 2015/03/05 12:38:28 chithanh Exp $
+
+*udis86-1.7.2 (05 Mar 2015)
+
+  05 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/udis86-1.7.2-docdir.patch, +udis86-1.7.2.ebuild, -udis86-1.7-r1.ebuild,
+  -udis86-1.7.ebuild:
+  Version bump, bug #472964. Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> udis86-1.7-r1.ebuild,
   udis86-1.7-r2.ebuild, udis86-1.7.ebuild:
