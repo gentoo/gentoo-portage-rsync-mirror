@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.01.ebuild,v 1.1 2015/03/04 04:21:18 amadio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.01.ebuild,v 1.2 2015/03/05 01:05:38 heroxbd Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 	gdml? ( dev-libs/xerces-c )
 	motif? ( x11-libs/motif:0 )
 	opengl? ( virtual/opengl )
-	inventor? (	media-libs/SoXt )
+	inventor? ( media-libs/SoXt )
 	qt4? ( dev-qt/qtgui:4 opengl? ( dev-qt/qtopengl:4 ) )
 	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
 	zlib? ( sys-libs/zlib )"
