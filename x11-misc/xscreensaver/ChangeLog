@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.395 2015/03/03 12:18:38 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.396 2015/03/05 08:44:37 jer Exp $
+
+  05 Mar 2015; Jeroen Roovers <jer@gentoo.org> -xscreensaver-5.30.ebuild,
+  -files/xscreensaver-5.29-pragma.patch:
+  Old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> xscreensaver-5.32.ebuild:
   add arm64 support, tested on A53 board

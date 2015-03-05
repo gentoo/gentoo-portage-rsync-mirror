@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-28.5.ebuild,v 1.5 2014/08/10 17:36:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-28.5.ebuild,v 1.6 2015/03/05 08:32:40 jlec Exp $
 
 EAPI=4
 
@@ -22,8 +22,6 @@ IUSE=""
 # ones and try to cover the .so deps with the packages listed in RDEPEND.
 DEPEND=""
 RDEPEND="net-misc/curl"
-
-RESTRICT="binchecks"
 
 S="${WORKDIR}"
 I="/opt/gimps"
