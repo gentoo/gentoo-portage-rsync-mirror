@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.4.1.ebuild,v 1.1 2015/02/24 18:46:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-5.4.1.ebuild,v 1.2 2015/03/05 09:50:36 kensington Exp $
 
 EAPI=5
 
@@ -62,6 +62,7 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	sys-devel/bison
 	sys-devel/flex
+	virtual/rubygems
 "
 
 src_prepare() {

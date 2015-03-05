@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-2.0.1.ebuild,v 1.1 2015/03/05 09:18:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-2.0.1.ebuild,v 1.2 2015/03/05 09:41:39 alonbl Exp $
 
 EAPI=5
 inherit eutils linux-info
@@ -37,8 +37,8 @@ pkg_setup() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-		--with-autosave="${EPREFIX}/etc/conf.d/iptables" \
-		--with-autosave="${EPREFIX}/etc/conf.d/ip6tables"
+		--with-autosave="${EPREFIX}/var/lib/iptables/rules-save" \
+		--with-autosave6="${EPREFIX}/var/lib/ip6tables/rules-save"
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.54 2015/03/05 09:18:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.55 2015/03/05 09:41:39 alonbl Exp $
+
+  05 Mar 2015; Alon Bar-Lev <alonbl@gentoo.org> firehol-2.0.1.ebuild:
+  fix autosave locations
 
 *firehol-2.0.1 (05 Mar 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.27 2015/02/24 18:46:10 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.28 2015/03/05 09:50:36 kensington Exp $
+
+  05 Mar 2015; Michael Palimaka <kensington@gentoo.org> qtwebkit-5.4.1.ebuild:
+  Add missing dependency wrt bug #540124.
 
 *qtwebkit-5.4.1 (24 Feb 2015)
 
