@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/firehol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.53 2012/12/14 10:03:29 alonbl Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.54 2015/03/05 09:18:08 alonbl Exp $
+
+*firehol-2.0.1 (05 Mar 2015)
+
+  05 Mar 2015; Alon Bar-Lev <alonbl@gentoo.org> +files/fireqos.conf.d,
+  +files/fireqos.initrd, +firehol-2.0.1.ebuild, -files/firehol.initrd,
+  files/firehol.initrd.1:
+  Version bump, bug#542148
 
   14 Dec 2012; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Assign as a maintainer
