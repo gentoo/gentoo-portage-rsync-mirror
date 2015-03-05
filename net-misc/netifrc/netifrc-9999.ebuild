@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.10 2015/01/11 06:03:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.11 2015/03/05 04:20:35 heroxbd Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ src_install() {
 	UNIT_DIR="$(systemd_get_unitdir)"
 	sed "s:@LIBEXECDIR@:${LIBEXECDIR}:" "${S}/systemd/net_at.service.in" > "${T}/net_at.service" || die
 	systemd_newunit "${T}/net_at.service" 'net@.service'
-	dosym "${UNIT_DIR}/net@.service" "${UNIT_DIR}/net@lo.service"
+	dosym "${UNIT_DIR#${EPREFIX}}/net@.service" "${UNIT_DIR#${EPREFIX}}/net@lo.service"
 }
 
 pkg_postinst() {

@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.41 2015/01/23 18:05:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.44 2015/03/05 04:20:35 heroxbd Exp $
+
+  05 Mar 2015; Benda Xu <heroxbd@gentoo.org> netifrc-9999.ebuild:
+  Strip EPREFIX from dosym operand: Avoid double prefix.
+
+  05 Mar 2015; Benda Xu <heroxbd@gentoo.org> netifrc-0.3.1.ebuild:
+  Strip EPREFIX from dosym operand: Avoid double prefix.
+
+  05 Mar 2015; Benda Xu <heroxbd@gentoo.org> netifrc-0.3.0.ebuild:
+  Strip EPREFIX from dosym operand: Avoid double prefix.
 
 *netifrc-0.3.1 (23 Jan 2015)
 
