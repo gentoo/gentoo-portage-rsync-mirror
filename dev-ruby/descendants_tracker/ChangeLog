@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/descendants_tracker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/descendants_tracker/ChangeLog,v 1.5 2015/01/26 13:00:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/descendants_tracker/ChangeLog,v 1.6 2015/03/05 03:19:41 patrick Exp $
+
+  05 Mar 2015; Patrick Lauer <patrick@gentoo.org>
+  descendants_tracker-0.0.4.ebuild:
+  Keyword for x86
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> descendants_tracker-0.0.4.ebuild:
   Add missing dependency.

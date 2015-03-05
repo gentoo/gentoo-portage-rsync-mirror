@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/git
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/git/ChangeLog,v 1.7 2015/01/16 07:52:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/git/ChangeLog,v 1.8 2015/03/05 03:20:45 patrick Exp $
+
+  05 Mar 2015; Patrick Lauer <patrick@gentoo.org> git-1.2.9.1.ebuild:
+  Keyword for x86
 
 *git-1.2.9.1 (16 Jan 2015)
 
