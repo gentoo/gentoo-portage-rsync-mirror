@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.66 2015/03/03 09:10:33 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.67 2015/03/05 21:24:30 dlan Exp $
+
+  05 Mar 2015; Yixun Lan <dlan@gentoo.org> ceph-0.87.1.ebuild,
+  +files/ceph-0.87.1-glibc-2.20.patch:
+  fix segfault if using =glibc-2.20, bug 529076
 
 *ceph-0.93 (03 Mar 2015)
 *ceph-0.87.1 (03 Mar 2015)
