@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst
+DEFINED_PHASES=compile configure install
 DEPEND=sys-libs/zlib !xz? ( !lzo? ( sys-libs/zlib ) ) lz4? ( app-arch/lz4 ) lzma? ( app-arch/xz-utils ) lzo? ( dev-libs/lzo ) xattr? ( sys-apps/attr ) xz? ( app-arch/xz-utils )
 DESCRIPTION=Tool for creating compressed filesystem type squashfs
 EAPI=5
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/zlib !xz? ( !lzo? ( sys-libs/zlib ) ) lz4? ( app-arch/lz4 ) lzm
 SLOT=0
 SRC_URI=mirror://sourceforge/squashfs/squashfs4.3.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=9819c9bfad8e438170d1c93236fe9917
+_md5_=21b428bcc37a986e82dbb0d5675f3a1d

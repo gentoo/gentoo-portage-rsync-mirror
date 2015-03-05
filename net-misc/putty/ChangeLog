@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.106 2015/03/04 14:37:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.107 2015/03/05 08:19:59 jer Exp $
+
+  05 Mar 2015; Jeroen Roovers <jer@gentoo.org> putty-0.64.ebuild:
+  Stable for HPPA (bug #542098).
 
 *putty-0.64 (04 Mar 2015)
 

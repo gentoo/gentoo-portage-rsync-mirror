@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/timidity-freepats
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.13 2011/03/16 19:29:01 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.14 2015/03/05 08:21:06 jlec Exp $
+
+*timidity-freepats-20060219-r1 (05 Mar 2015)
+
+  05 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +timidity-freepats-20060219-r1.ebuild, metadata.xml:
+  Bump to EAPI=5
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   timidity-freepats-20060219.ebuild:
@@ -57,4 +63,3 @@
   +timidity-freepats-20060219.ebuild:
   Add freepats patchset, that is released under GPL-2 (plus exception similar
   to classpath's), not as complete as the other ones, but free.
-
