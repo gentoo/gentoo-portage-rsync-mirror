@@ -1,6 +1,16 @@
 # ChangeLog for sys-boot/arcload
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.16 2014/08/10 20:20:54 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.17 2015/03/05 04:45:30 kumba Exp $
+
+*arcload-0.50-r2 (05 Mar 2015)
+
+  05 Mar 2015; Joshua Kinard <kumba@gentoo.org> -arcload-0.50-r1.ebuild,
+  +arcload-0.50-r2.ebuild, -files/arcload-0.50-makefile-targets.patch,
+  -files/arcload-0.50-shut-gcc4x-up.patch, +files/arcload.8:
+  Big cleanup: Include some patches and a manpage from Debian, re-work the code
+  a little to compile under an n32-only system (should work for n64 as well),
+  silence many compiler warnings, and move patches to a tarball due to the size
+  of the changes.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> arcload-0.50-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

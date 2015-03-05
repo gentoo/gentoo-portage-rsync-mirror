@@ -8,5 +8,6 @@
 	</upstream>
   <use>
 	<flag name="yahoo">Enables use of YahooPlaceFinder</flag>
+	<flag name="timezone">Enables localized date support</flag>
   </use>
 </pkgmetadata>

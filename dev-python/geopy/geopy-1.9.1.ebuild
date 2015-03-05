@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.7.1.ebuild,v 1.1 2015/01/12 03:21:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.9.1.ebuild,v 1.1 2015/03/05 04:35:56 idella4 Exp $
 
 EAPI=5
 
@@ -12,20 +12,23 @@ DESCRIPTION="A Geocoding Toolbox for Python"
 HOMEPAGE="http://www.geopy.org/ https://github.com/geopy/geopy"
 SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-IUSE="test doc yahoo"
+IUSE="test doc timezone yahoo"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="yahoo? ( >=dev-python/requests-oauthlib-0.4.0[${PYTHON_USEDEP}]
-		dev-python/placefinder[${PYTHON_USEDEP}] )"
+		dev-python/placefinder[${PYTHON_USEDEP}] )
+	timezone? ( dev-python/pytz[${PYTHON_USEDEP}] )"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]
 		dev-python/pylint[${PYTHON_USEDEP}] )
 	doc? ( $(python_gen_cond_dep 'dev-python/sphinx[${PYTHON_USEDEP}]' python2_7)
 		>=dev-python/python-docs-2.7.6-r1:2.7 )"
+
+REQUIRED_USE="test? ( yahoo timezone )"
 
 python_prepare_all() {
 	if use doc; then
