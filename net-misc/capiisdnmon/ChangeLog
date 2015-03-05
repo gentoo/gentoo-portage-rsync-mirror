@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/capiisdnmon
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/ChangeLog,v 1.10 2011/03/29 11:59:19 angelos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capiisdnmon/ChangeLog,v 1.11 2015/03/05 07:49:33 pinkbyte Exp $
+
+*capiisdnmon-0.42-r2 (05 Mar 2015)
+
+  05 Mar 2015; Sergey Popov <pinkbyte@gentoo.org> -capiisdnmon-0.42-r1.ebuild,
+  +capiisdnmon-0.42-r2.ebuild:
+  Revision bump: fix linking, wrt bugs #370101 and #540672. Drop old revision
+  with deprecated EAPI, wrt bug #540814
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> capiisdnmon-0.42-r1.ebuild:
   Fixed slot deps
