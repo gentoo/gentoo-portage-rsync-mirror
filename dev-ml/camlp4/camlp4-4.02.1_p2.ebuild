@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp4/camlp4-4.02.1_p2.ebuild,v 1.1 2015/01/30 13:14:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp4/camlp4-4.02.1_p2.ebuild,v 1.2 2015/03/05 17:30:58 aballier Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ IUSE="+ocamlopt"
 
 DEPEND=">=dev-lang/ocaml-4.02:=[ocamlopt?]"
 RDEPEND="${DEPEND}
+	!<dev-lang/ocaml-4.02
 	!<dev-ml/findlib-1.5.5-r1"
 
 S=${WORKDIR}/${P/_p/-}

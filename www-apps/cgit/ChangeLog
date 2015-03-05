@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/cgit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.29 2015/01/20 16:03:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.30 2015/03/05 17:19:02 robbat2 Exp $
+
+*cgit-0.11.1 (05 Mar 2015)
+
+  05 Mar 2015; Robin H. Johnson <robbat2@gentoo.org> +cgit-0.11.1.ebuild:
+  Bump for infra use.
 
 *cgit-0.10.2 (20 Jan 2015)
 

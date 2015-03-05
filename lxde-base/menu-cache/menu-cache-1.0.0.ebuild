@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/menu-cache-1.0.0.ebuild,v 1.1 2015/02/28 17:16:32 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/menu-cache/menu-cache-1.0.0.ebuild,v 1.2 2015/03/05 17:12:30 nullishzero Exp $
 
 EAPI="5"
 
@@ -14,7 +14,8 @@ SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="dev-libs/glib:2"
+RDEPEND="dev-libs/glib:2
+	x11-libs/libfm[gtk]"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig"

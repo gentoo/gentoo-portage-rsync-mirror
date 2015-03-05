@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/camlp4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp4/ChangeLog,v 1.3 2015/01/30 13:14:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp4/ChangeLog,v 1.5 2015/03/05 17:30:58 aballier Exp $
+
+  05 Mar 2015; Alexis Ballier <aballier@gentoo.org> camlp4-4.02.1_p2.ebuild:
+  block old ocaml versions
+
+  05 Mar 2015; Alexis Ballier <aballier@gentoo.org>
+  -camlp4-4.02.0_p1-r1.ebuild:
+  remove old
 
 *camlp4-4.02.1_p2 (30 Jan 2015)
 
