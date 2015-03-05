@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jackson-databind/jackson-databind-2.5.1.ebuild,v 1.1 2015/03/04 23:21:13 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jackson-databind/jackson-databind-2.5.1.ebuild,v 1.2 2015/03/05 21:47:19 chewi Exp $
 
 EAPI="5"
 
@@ -42,7 +42,7 @@ java_prepare() {
 		-e 's:@projectgroupid@:com.fasterxml.jackson.core:g' \
 		-e 's:@projectartifactid@:jackson-databind:g' \
 		"${S}/main/java/com/fasterxml/jackson/databind/cfg/PackageVersion.java.in" \
-		> "${S}/main/java/com/fasterxml/jackson/databind/cfg/PackageVersion.java" || diee
+		> "${S}/main/java/com/fasterxml/jackson/databind/cfg/PackageVersion.java" || die
 
 	# Requires newer JScience. Could be any class but they chose this!
 	rm "${S}/test/java/com/fasterxml/jackson/databind/deser/TestNoClassDefFoundDeserializer.java" || die
