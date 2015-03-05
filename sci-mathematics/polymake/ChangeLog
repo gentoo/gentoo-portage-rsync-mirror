@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/polymake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.14 2015/03/03 09:34:22 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.15 2015/03/05 15:09:25 tomka Exp $
+
+*polymake-2.14 (05 Mar 2015)
+
+  05 Mar 2015; Thomas Kahle <tomka@gentoo.org> +polymake-2.14.ebuild:
+  Bump to 2.14
 
   03 Mar 2015; Thomas Kahle <tomka@gentoo.org> +files/polymake_gcc49.patch,
   polymake-2.13.ebuild:
