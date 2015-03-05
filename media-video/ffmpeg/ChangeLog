@@ -1,6 +1,22 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.837 2015/02/20 11:17:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.841 2015/03/05 14:00:41 aballier Exp $
+
+  05 Mar 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-1.0.10.ebuild,
+  ffmpeg-1.2.12.ebuild, ffmpeg-1.2.6-r1.ebuild, ffmpeg-2.2.13.ebuild:
+  force libcdio update to shutup repoman warning
+
+  05 Mar 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.10.15.ebuild,
+  ffmpeg-1.0.10.ebuild, ffmpeg-1.2.12.ebuild, ffmpeg-1.2.6-r1.ebuild,
+  ffmpeg-2.2.13.ebuild, ffmpeg-2.5.4.ebuild, metadata.xml:
+  convert to RESTRICT=bindist, bug #541588
+
+  05 Mar 2015; Alexis Ballier <aballier@gentoo.org> -ffmpeg-1.2.11.ebuild,
+  -ffmpeg-2.2.12.ebuild, -ffmpeg-2.5.3.ebuild:
+  remove old
+
+  05 Mar 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  convert to RESTRICT=bindist, bug #541588
 
 *ffmpeg-2.2.13 (20 Feb 2015)
 

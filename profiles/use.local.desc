@@ -4352,7 +4352,6 @@ media-video/ffmpeg:armv5te - Enables optimizations for armv5te processors.
 media-video/ffmpeg:armv6 - Enables optimizations for armv6 processors.
 media-video/ffmpeg:armv6t2 - Enables optimizations for armv6t2 processors.
 media-video/ffmpeg:armvfp - Enables VFP optimizations for ARM processors.
-media-video/ffmpeg:bindist - Enforces license compatibility constraints via REQUIRED_USE.
 media-video/ffmpeg:bluray - Enable playback of Blu-ray filesystems
 media-video/ffmpeg:bs2b - Enables media-libs/libbs2b based Bauer stereo-to-binaural filter.
 media-video/ffmpeg:cdio - Enables audio CD grabbing with dev-libs/libcdio.

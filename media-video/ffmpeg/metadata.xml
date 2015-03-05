@@ -13,7 +13,6 @@
 	<flag name="armv6">Enables optimizations for armv6 processors.</flag>
 	<flag name="armv6t2">Enables optimizations for armv6t2 processors.</flag>
 	<flag name="armvfp">Enables VFP optimizations for ARM processors.</flag>
-	<flag name="bindist">Enforces license compatibility constraints via REQUIRED_USE.</flag>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
 	<flag name="bs2b">Enables <pkg>media-libs/libbs2b</pkg> based Bauer stereo-to-binaural filter.</flag>
 	<flag name="cdio">Enables audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.10.ebuild,v 1.3 2015/01/30 16:40:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.0.10.ebuild,v 1.5 2015/03/05 14:00:41 aballier Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
-	aac aacplus alsa amr bindist bluray +bzip2 cdio celt
+	aac aacplus alsa amr bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gnutls gsm +hardcoded-tables iec61883 ieee1394 jack jpeg2k libass libcaca
 	libv4l modplug mp3 +network openal openssl opus oss pic pulseaudio rtmp
@@ -56,7 +56,7 @@ RDEPEND="
 	amr? ( media-libs/opencore-amr )
 	bluray? ( media-libs/libbluray )
 	bzip2? ( app-arch/bzip2 )
-	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
+	cdio? ( dev-libs/libcdio-paranoia )
 	celt? ( >=media-libs/celt-0.11.1 )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
@@ -116,11 +116,12 @@ DEPEND="${RDEPEND}
 	truetype? ( virtual/pkgconfig )
 	v4l? ( sys-kernel/linux-headers )
 "
-# faac is license-incompatible with ffmpeg
-REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
+REQUIRED_USE="
 	libv4l? ( v4l )
 	fftools_cws2fws? ( zlib )
 	test? ( encode )"
+# faac is license-incompatible with ffmpeg
+RESTRICT="encode? ( faac? ( bindist ) aacplus? ( bindist ) ) openssl? ( bindist )"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -129,12 +130,10 @@ src_prepare() {
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
 
-	if has_version dev-libs/libcdio-paranoia; then
-		sed -i \
-			-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
-			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
-			configure libavdevice/libcdio.c || die
-	fi
+	sed -i \
+		-e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' \
+		-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
+		configure libavdevice/libcdio.c || die
 
 	epatch "${FILESDIR}"/${PN}-1.0.8-freetype251.patch
 }

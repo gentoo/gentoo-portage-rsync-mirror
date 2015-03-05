@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-appconf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/ChangeLog,v 1.9 2014/06/06 13:47:30 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/ChangeLog,v 1.10 2015/03/05 13:35:32 mrueg Exp $
+
+  05 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -django-appconf-0.5.ebuild:
+  Remove old.
 
   06 Jun 2014; Ian Delaney <idella4@gentoo.org> django-appconf-0.6.ebuild:
   drop py2.6 add py3 support, upgrade HOMEPAGE, SRC_URI to github, complete deps

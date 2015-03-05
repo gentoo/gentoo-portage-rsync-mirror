@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.13.ebuild,v 1.1 2015/02/20 11:17:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.2.13.ebuild,v 1.3 2015/03/05 14:00:41 aballier Exp $
 
 EAPI="5"
 
@@ -40,7 +40,7 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
-	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
+	aac aacplus alsa amr amrenc bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k
 	ladspa libass libcaca libsoxr libv4l modplug mp3 +network openal opengl
@@ -78,12 +78,7 @@ RDEPEND="
 	amr? ( >=media-libs/opencore-amr-0.1.3-r1[${MULTILIB_USEDEP}] )
 	bluray? ( >=media-libs/libbluray-0.3.0-r1[${MULTILIB_USEDEP}] )
 	bzip2? ( >=app-arch/bzip2-1.0.6-r4[${MULTILIB_USEDEP}] )
-	cdio? (
-		|| (
-			>=dev-libs/libcdio-paranoia-0.90_p1-r1[${MULTILIB_USEDEP}]
-			<dev-libs/libcdio-0.90[-minimal,${MULTILIB_USEDEP}]
-		)
-	)
+	cdio? ( >=dev-libs/libcdio-paranoia-0.90_p1-r1[${MULTILIB_USEDEP}] )
 	celt? ( >=media-libs/celt-0.11.1-r1[${MULTILIB_USEDEP}] )
 	encode? (
 		aac? ( >=media-libs/vo-aacenc-0.1.3[${MULTILIB_USEDEP}] )
@@ -177,11 +172,12 @@ RDEPEND="${RDEPEND}
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20140508-r3
 		!app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )"
 
-# faac is license-incompatible with ffmpeg
-REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )
+REQUIRED_USE="
 	libv4l? ( v4l )
 	fftools_cws2fws? ( zlib )
 	test? ( encode )"
+# faac is license-incompatible with ffmpeg
+RESTRICT="encode? ( faac? ( bindist ) aacplus? ( bindist ) ) openssl? ( bindist )"
 
 S=${WORKDIR}/${P/_/-}
 

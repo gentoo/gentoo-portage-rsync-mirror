@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.185 2015/02/18 14:36:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.186 2015/03/05 13:50:46 aballier Exp $
 
 EAPI="5"
 
@@ -95,7 +95,7 @@ FFMPEG_ENCODER_FLAG_MAP=(
 )
 
 IUSE="
-	alsa bindist +encode examples jack oss pic static-libs test v4l
+	alsa +encode examples jack oss pic static-libs test v4l
 	${FFMPEG_FLAG_MAP[@]%:*}
 	${FFMPEG_ENCODER_FLAG_MAP[@]%:*}
 "
@@ -269,15 +269,15 @@ GPL_REQUIRED_USE="
 	)
 "
 REQUIRED_USE="
-	bindist? (
-		encode? ( !faac !aacplus )
-		gpl? ( !openssl !fdk )
-	)
 	libv4l? ( v4l )
 	fftools_cws2fws? ( zlib )
 	test? ( encode )
 	${GPL_REQUIRED_USE}
 	${CPU_REQUIRED_USE}"
+RESTRICT="
+	encode? ( faac? ( bindist ) aacplus? ( bindist ) )
+	gpl? ( openssl? ( bindist ) fdk? ( bindist ) )
+"
 
 S=${WORKDIR}/${P/_/-}
 
