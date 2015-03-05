@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/spiped
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spiped/ChangeLog,v 1.2 2015/03/05 16:26:12 monsieurp Exp $
+
+  05 Mar 2015; Patrice Clement <monsieurp@gentoo.org> ChangeLog:
+  Adding spiped-1.5.0 to Portage courtesy of Tomas Mozes
+  <hydrapolic@gmail.com>. Fix 542216.
+
