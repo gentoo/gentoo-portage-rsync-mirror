@@ -28,7 +28,7 @@
 			* IPC and socket sharing between processes uv_write2
 	</longdescription>
 	<upstream>
-		<bugs-to>https://github.com/joyent/libuv/issues</bugs-to>
-		<remote-id type="github">joyent/libuv</remote-id>
+		<bugs-to>https://github.com/libuv/libuv/issues</bugs-to>
+		<remote-id type="github">libuv/libuv</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-0.11.25-r1.ebuild,v 1.5 2014/08/29 01:33:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/libuv-0.11.25-r1.ebuild,v 1.6 2015/03/05 02:23:17 hasufell Exp $
 
 EAPI=5
 
 inherit eutils autotools multilib-minimal
 
 DESCRIPTION="A new platform layer for Node"
-HOMEPAGE="https://github.com/joyent/libuv"
-SRC_URI="https://github.com/joyent/libuv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/libuv/libuv"
+SRC_URI="https://github.com/libuv/libuv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD BSD-2 ISC MIT"
 SLOT="0/11"
