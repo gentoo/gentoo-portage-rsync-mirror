@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.13 2014/05/15 16:59:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/xu4/xu4-0.9.ebuild,v 1.14 2015/03/06 21:33:52 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A remake of the computer game Ultima IV"
@@ -55,8 +55,7 @@ src_compile() {
 		E_CFLAGS="${CFLAGS}" \
 		bindir="${GAMES_BINDIR}" \
 		datadir="/usr/share" \
-		libdir="$(games_get_libdir)" \
-		|| die
+		libdir="$(games_get_libdir)"
 }
 
 src_install() {
@@ -66,9 +65,9 @@ src_install() {
 		bindir="${D}${GAMES_BINDIR}" \
 		datadir="${D}/usr/share" \
 		libdir="${D}$(games_get_libdir)" \
-		install || die
+		install
 	dodoc AUTHORS README doc/*txt "${WORKDIR}/u4-dos/ULTIMA4/"*TXT
 	insinto "$(games_get_libdir)/u4"
-	doins "${WORKDIR}/"*zip || die
+	doins "${WORKDIR}/"*zip
 	prepgamesdirs
 }
