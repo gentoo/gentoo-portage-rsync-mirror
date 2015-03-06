@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_FTP/PEAR-Net_FTP-1.3.7-r1.ebuild,v 1.8 2014/01/26 18:36:09 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_FTP/PEAR-Net_FTP-1.3.7-r1.ebuild,v 1.9 2015/03/06 01:38:59 grknight Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit php-pear-r1
 

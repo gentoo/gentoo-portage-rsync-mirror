@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1557 2015/02/27 23:44:41 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1558 2015/03/06 01:32:36 chithanh Exp $
+
+  06 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-2.eclass:
+  Raise util-macros dependency to latest stable 1.18
 
   27 Feb 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Cleanup how we determine base linux tarball.

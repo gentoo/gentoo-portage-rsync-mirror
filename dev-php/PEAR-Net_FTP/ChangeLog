@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_FTP
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_FTP/ChangeLog,v 1.34 2014/01/26 18:36:09 olemarkus Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_FTP/ChangeLog,v 1.35 2015/03/06 01:38:59 grknight Exp $
+
+  06 Mar 2015; Brian Evans <grknight@gentoo.org> PEAR-Net_FTP-1.3.7-r1.ebuild:
+  EAPI bump to 4. Removes deprecation warning without changing deps
 
   26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
   PEAR-Net_FTP-1.3.7-r1.ebuild:
