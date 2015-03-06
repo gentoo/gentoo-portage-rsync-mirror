@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdfminer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/ChangeLog,v 1.4 2014/05/01 10:43:05 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/ChangeLog,v 1.5 2015/03/06 22:04:28 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pdfminer-20140328.ebuild:
+  amd64 stable, bug 540290
 
 *pdfminer-20140328 (01 May 2014)
 

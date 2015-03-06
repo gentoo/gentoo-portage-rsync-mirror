@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/datashape/datashape-0.4.2.ebuild,v 1.1 2014/12/24 08:40:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/datashape/datashape-0.4.2.ebuild,v 1.2 2015/03/06 22:13:40 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/ContinuumIO/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND="dev-python/numpy[${PYTHON_USEDEP}]

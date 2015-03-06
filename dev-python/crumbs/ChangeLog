@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/crumbs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/ChangeLog,v 1.8 2014/12/21 02:53:51 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/crumbs/ChangeLog,v 1.9 2015/03/06 22:13:03 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> crumbs-2.0.1.ebuild:
+  amd64 stable, bug 540290
 
   21 Dec 2014; Alex Brandt <alunduil@gentoo.org> -crumbs-9999.ebuild:
   remove live ebuild

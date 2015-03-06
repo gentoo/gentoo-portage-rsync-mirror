@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/networkx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.31 2014/12/19 23:18:37 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.32 2015/03/06 22:31:05 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> networkx-1.9.1.ebuild:
+  amd64 stable, bug 540290
 
   19 Dec 2014; Ian Delaney <idella4@gentoo.org> -networkx-1.6-r1.ebuild,
   -networkx-1.7-r2.ebuild, -networkx-1.8.1.ebuild, -networkx-1.9.ebuild,

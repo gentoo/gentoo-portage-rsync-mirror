@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/lightblue
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/lightblue/ChangeLog,v 1.8 2015/02/28 11:52:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/lightblue/ChangeLog,v 1.9 2015/03/06 22:04:20 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> lightblue-0.4-r1.ebuild:
+  amd64 stable, bug 540290
 
   28 Feb 2015; Pacho Ramos <pacho@gentoo.org> lightblue-0.4-r1.ebuild:
   Fix deps

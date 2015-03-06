@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/celery
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.46 2014/12/08 09:02:56 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.47 2015/03/06 22:11:19 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> celery-3.1.17.ebuild:
+  amd64 stable, bug 540290
 
 *celery-3.1.17 (08 Dec 2014)
 

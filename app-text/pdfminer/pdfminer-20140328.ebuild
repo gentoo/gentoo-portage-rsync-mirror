@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/pdfminer-20140328.ebuild,v 1.1 2014/05/01 10:43:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfminer/pdfminer-20140328.ebuild,v 1.2 2015/03/06 22:04:28 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/p/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc examples"
 
 python_compile_all(){

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/discogs-client/discogs-client-2.0.2.ebuild,v 1.1 2014/09/30 03:17:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/discogs-client/discogs-client-2.0.2.ebuild,v 1.2 2015/03/06 22:14:17 pacho Exp $
 
 EAPI=5
 # Not py3 capable due to oauth2 supports py2 pypy only
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/discogs/${PN/-/_}/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND="dev-python/requests[${PYTHON_USEDEP}]
 		dev-python/oauth2[${PYTHON_USEDEP}]"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/columnize
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/columnize/ChangeLog,v 1.8 2014/12/29 12:52:31 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/columnize/ChangeLog,v 1.9 2015/03/06 22:12:24 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> columnize-0.3.5-r1.ebuild:
+  amd64 stable, bug 540290
 
 *columnize-0.3.5-r1 (29 Dec 2014)
 

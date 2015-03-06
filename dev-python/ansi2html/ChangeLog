@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ansi2html
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.18 2014/10/25 06:48:44 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.19 2015/03/06 22:06:27 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> ansi2html-1.0.7.ebuild:
+  amd64 stable, bug 540290
 
 *ansi2html-1.0.7 (25 Oct 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/colander-1.0.ebuild,v 1.1 2014/12/07 10:45:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colander/colander-1.0.ebuild,v 1.2 2015/03/06 22:12:13 pacho Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 # MIT license is used by included (modified) iso8601.py code.
 LICENSE="repoze MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc test"
 
 # Depend on an ebuild of translationstring with Python 3 support.

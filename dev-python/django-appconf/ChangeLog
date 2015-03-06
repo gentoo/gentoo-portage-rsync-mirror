@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-appconf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/ChangeLog,v 1.10 2015/03/05 13:35:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-appconf/ChangeLog,v 1.11 2015/03/06 22:14:36 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-appconf-0.6.ebuild:
+  amd64 stable, bug 540290
 
   05 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -django-appconf-0.5.ebuild:
   Remove old.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/natsort
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/natsort/ChangeLog,v 1.4 2015/01/31 09:37:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/natsort/ChangeLog,v 1.5 2015/03/06 22:30:52 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> natsort-3.4.0.ebuild:
+  amd64 stable, bug 540290
 
 *natsort-3.5.2 (31 Jan 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docopt/docopt-0.6.2.ebuild,v 1.3 2014/09/24 19:41:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docopt/docopt-0.6.2.ebuild,v 1.4 2015/03/06 22:17:13 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND=""

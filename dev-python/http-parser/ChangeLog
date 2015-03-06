@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/http-parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.24 2015/02/02 15:30:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.25 2015/03/06 22:24:11 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> http-parser-0.8.3.ebuild:
+  amd64 stable, bug 540290
 
   02 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -http-parser-0.8.1.ebuild:
   Remove old.

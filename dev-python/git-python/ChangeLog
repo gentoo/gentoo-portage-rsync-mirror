@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/git-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.17 2015/02/07 07:06:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.18 2015/03/06 22:22:24 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> git-python-0.3.6.ebuild:
+  amd64 stable, bug 540290
 
 *git-python-0.3.6 (07 Feb 2015)
 

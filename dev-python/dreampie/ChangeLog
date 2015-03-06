@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dreampie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dreampie/ChangeLog,v 1.6 2015/02/01 16:20:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dreampie/ChangeLog,v 1.7 2015/03/06 22:17:37 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> dreampie-1.2.1.ebuild:
+  amd64 stable, bug 540290
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -dreampie-1.0.2.ebuild,
   -dreampie-1.0.3.ebuild, -dreampie-1.1.1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-select2/django-select2-4.2.2.ebuild,v 1.1 2014/04/27 02:53:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-select2/django-select2-4.2.2.ebuild,v 1.2 2015/03/06 22:16:38 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND="dev-python/django[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

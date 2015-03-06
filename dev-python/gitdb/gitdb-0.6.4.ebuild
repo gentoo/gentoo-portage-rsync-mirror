@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gitdb/gitdb-0.6.4.ebuild,v 1.1 2015/01/18 08:06:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gitdb/gitdb-0.6.4.ebuild,v 1.2 2015/03/06 22:22:30 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-vcs/git

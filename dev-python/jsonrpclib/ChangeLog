@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jsonrpclib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonrpclib/ChangeLog,v 1.4 2014/12/25 20:03:43 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonrpclib/ChangeLog,v 1.5 2015/03/06 22:26:56 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  jsonrpclib-0_pre20110820-r1.ebuild:
+  amd64 stable, bug 540290
 
   25 Dec 2014; Michał Górny <mgorny@gentoo.org> jsonrpclib-9999.ebuild:
   Sync the live ebuild.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imapclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imapclient/ChangeLog,v 1.5 2015/01/17 01:36:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imapclient/ChangeLog,v 1.6 2015/03/06 22:24:30 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> imapclient-0.12.ebuild:
+  amd64 stable, bug 540290
 
 *imapclient-0.12 (17 Jan 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaraco-utils/jaraco-utils-10.0.2.ebuild,v 1.3 2014/06/12 06:48:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaraco-utils/jaraco-utils-10.0.2.ebuild,v 1.4 2015/03/06 22:25:40 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${MY_PN}/${MY_PN}-${PV}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="test"
 
 DEPEND="dev-python/hgtools[${PYTHON_USEDEP}]

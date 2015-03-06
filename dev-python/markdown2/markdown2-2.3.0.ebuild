@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown2/markdown2-2.3.0.ebuild,v 1.1 2014/10/07 09:24:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown2/markdown2-2.3.0.ebuild,v 1.2 2015/03/06 22:29:44 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://github.com/trentm/python-markdown2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="dev-python/pygments[${PYTHON_USEDEP}]"

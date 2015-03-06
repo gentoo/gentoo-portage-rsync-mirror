@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-metadata
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.22 2013/07/02 02:01:14 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.23 2015/03/06 22:27:03 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> kaa-metadata-0.7.7-r1.ebuild:
+  amd64 stable, bug 540290
 
 *kaa-metadata-0.7.7-r1 (02 Jul 2013)
 

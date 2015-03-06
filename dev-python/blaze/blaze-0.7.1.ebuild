@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.7.1.ebuild,v 1.1 2015/01/26 05:28:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/blaze-0.7.1.ebuild,v 1.2 2015/03/06 22:09:48 pacho Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/ContinuumIO/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 
 # Currently doc build fails, reason unclear but appears it's tied to use of
 # redhat's anaconda installer, seemingly hostile to gentoo.

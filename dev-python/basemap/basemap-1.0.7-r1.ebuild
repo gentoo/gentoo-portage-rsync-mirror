@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.7-r1.ebuild,v 1.2 2015/02/16 14:49:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-1.0.7-r1.ebuild,v 1.3 2015/03/06 22:08:55 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/matplotlib/${P}.tar.gz"
 
 IUSE="examples test"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="MIT GPL-2"
 
 CDEPEND="sci-libs/shapelib

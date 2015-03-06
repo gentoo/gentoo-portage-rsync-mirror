@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-picklefield
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-picklefield/ChangeLog,v 1.6 2014/11/24 17:01:08 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-picklefield/ChangeLog,v 1.7 2015/03/06 22:16:09 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-picklefield-0.3.1.ebuild:
+  amd64 stable, bug 540290
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> django-picklefield-0.3.1.ebuild:
   Support python 3.4

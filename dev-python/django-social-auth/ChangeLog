@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-social-auth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-social-auth/ChangeLog,v 1.5 2014/03/18 10:06:46 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-social-auth/ChangeLog,v 1.6 2015/03/06 22:16:50 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-social-auth-0.7.28.ebuild:
+  amd64 stable, bug 540290
 
 *django-social-auth-0.7.28 (18 Mar 2014)
 

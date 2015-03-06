@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-dashed/flask-dashed-0.1b_p2.ebuild,v 1.1 2013/09/27 04:13:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-dashed/flask-dashed-0.1b_p2.ebuild,v 1.2 2015/03/06 22:20:00 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-python/flask[${PYTHON_USEDEP}]

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mantissa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.21 2014/11/21 01:50:32 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/ChangeLog,v 1.22 2015/03/06 22:29:27 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> mantissa-0.7.0-r1.ebuild:
+  amd64 stable, bug 540290
 
   21 Nov 2014; Mike Gilbert <floppym@gentoo.org> -mantissa-0.7.0.ebuild:
   Remove ebuilds using twisted.eclass.

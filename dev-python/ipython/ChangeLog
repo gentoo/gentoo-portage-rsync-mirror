@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.160 2015/02/28 12:53:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.161 2015/03/06 22:25:17 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipython-2.2.0.ebuild:
+  amd64 stable, bug 540290
 
 *ipython-3.0.0 (28 Feb 2015)
 

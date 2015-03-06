@@ -4,11 +4,11 @@ DESCRIPTION=python implementation of the JSON-RPC spec (1.0 and 2.0)
 EAPI=5
 HOMEPAGE=https://github.com/joshmarshall/jsonrpclib
 IUSE=python_targets_python2_7
-KEYWORDS=~amd64 ~arm ~x86
+KEYWORDS=amd64 ~arm ~x86
 LICENSE=Apache-2.0
 RDEPEND=dev-python/simplejson python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://gentoo/jsonrpclib-0_pre20110820.tar.bz2
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=f287c3b22b869fe3f8d403010c507b1b
+_md5_=93668676415385c403988f44aa774fd0

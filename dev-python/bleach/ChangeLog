@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/bleach
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bleach/ChangeLog,v 1.1 2015/01/27 05:23:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bleach/ChangeLog,v 1.2 2015/03/06 22:09:57 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> bleach-1.4.1.ebuild:
+  amd64 stable, bug 540290
 
 *bleach-1.4.1 (27 Jan 2015)
 
   27 Jan 2015; Tim Harder <radhermit@gentoo.org> +bleach-1.4.1.ebuild,
   +metadata.xml:
   Initial import.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bytecodeassembler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bytecodeassembler/ChangeLog,v 1.3 2014/03/31 20:39:51 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bytecodeassembler/ChangeLog,v 1.4 2015/03/06 22:10:48 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> bytecodeassembler-0.6.ebuild:
+  amd64 stable, bug 540290
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> bytecodeassembler-0.6.ebuild:
   Add support for the new PyPy slotting.

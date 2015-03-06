@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gcs-oauth2-boto-plugin/gcs-oauth2-boto-plugin-1.8-r1.ebuild,v 1.1 2015/01/27 22:05:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gcs-oauth2-boto-plugin/gcs-oauth2-boto-plugin-1.8-r1.ebuild,v 1.2 2015/03/06 22:21:52 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE=""
 
 PATCHES=(

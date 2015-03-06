@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/manuel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.14 2014/11/29 14:27:23 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.15 2015/03/06 22:29:35 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> manuel-1.7.1.ebuild:
+  amd64 stable, bug 540290
 
   29 Nov 2014; Ian Delaney <idella4@gentoo.org> manuel-1.7.1.ebuild:
   clean old python impls, tidy

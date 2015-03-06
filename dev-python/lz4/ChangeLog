@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lz4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lz4/ChangeLog,v 1.5 2015/01/05 16:44:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lz4/ChangeLog,v 1.6 2015/03/06 22:29:12 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> lz4-0.6.1.ebuild:
+  amd64 stable, bug 540290
 
   05 Jan 2015; Alexis Ballier <aballier@gentoo.org> lz4-0.6.1.ebuild:
   keyword ~arm

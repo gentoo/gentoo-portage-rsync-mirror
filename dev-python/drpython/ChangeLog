@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/drpython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.21 2015/01/26 15:30:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/ChangeLog,v 1.22 2015/03/06 22:17:42 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> drpython-3.11.4.ebuild:
+  amd64 stable, bug 540290
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -drpython-3.11.3.ebuild:
   Remove old.

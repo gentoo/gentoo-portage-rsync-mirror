@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cosmolopy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.8 2014/12/30 02:11:10 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cosmolopy/ChangeLog,v 1.9 2015/03/06 22:12:51 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> cosmolopy-0.1.104-r1.ebuild:
+  amd64 stable, bug 540290
 
 *cosmolopy-0.1.104-r1 (30 Dec 2014)
 

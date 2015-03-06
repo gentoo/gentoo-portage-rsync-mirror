@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cssutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.33 2014/11/24 16:41:14 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.34 2015/03/06 22:13:09 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> cssutils-0.9.10-r1.ebuild:
+  amd64 stable, bug 540290
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> cssutils-0.9.10-r1.ebuild:
   Support python 3.4

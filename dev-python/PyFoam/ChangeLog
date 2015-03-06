@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyFoam
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/ChangeLog,v 1.12 2014/12/29 00:07:59 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyFoam/ChangeLog,v 1.13 2015/03/06 22:05:15 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> PyFoam-0.5.4-r2.ebuild:
+  amd64 stable, bug 540290
 
 *PyFoam-0.5.4-r2 (29 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gitdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gitdb/ChangeLog,v 1.8 2015/01/18 08:06:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gitdb/ChangeLog,v 1.9 2015/03/06 22:22:30 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> gitdb-0.6.4.ebuild:
+  amd64 stable, bug 540290
 
 *gitdb-0.6.4 (18 Jan 2015)
 

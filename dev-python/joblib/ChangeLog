@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/joblib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/joblib/ChangeLog,v 1.15 2014/12/04 05:25:07 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/joblib/ChangeLog,v 1.16 2015/03/06 22:26:02 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> joblib-0.8.4.ebuild:
+  amd64 stable, bug 540290
 
 *joblib-0.8.4 (04 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.34 2014/11/21 19:52:31 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.35 2015/03/06 22:18:45 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> epsilon-0.7.0.ebuild:
+  amd64 stable, bug 540290
 
   21 Nov 2014; Mike Gilbert <floppym@gentoo.org> epsilon-0.6.0-r2.ebuild:
   Restore stable keywords.

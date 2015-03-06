@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.17.ebuild,v 1.1 2014/12/08 09:02:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.1.17.ebuild,v 1.2 2015/03/06 22:11:19 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 # There are a number of other optional 'extras' which overlap with those of kombu, however
 # there has been no apparent expression of interest or demand by users for them. See requires.txt
 IUSE="doc examples redis sqs test yaml zeromq"

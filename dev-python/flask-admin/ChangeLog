@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-admin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-admin/ChangeLog,v 1.2 2013/08/17 09:11:45 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-admin/ChangeLog,v 1.3 2015/03/06 22:19:55 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> flask-admin-1.0.6.ebuild:
+  amd64 stable, bug 540290
 
   17 Aug 2013; Patrick Lauer <patrick@gentoo.org> flask-admin-1.0.6.ebuild:
   Add more deps to test suite. Might pass now if we had a local mongoDB instance

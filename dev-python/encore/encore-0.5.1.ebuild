@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/encore-0.5.1.ebuild,v 1.3 2014/05/05 15:17:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/encore-0.5.1.ebuild,v 1.4 2015/03/06 22:18:21 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="virtual/python-futures[${PYTHON_USEDEP}]

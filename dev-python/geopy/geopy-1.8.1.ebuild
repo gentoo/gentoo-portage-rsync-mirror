@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.8.1.ebuild,v 1.1 2015/02/07 07:29:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/geopy-1.8.1.ebuild,v 1.2 2015/03/06 22:21:59 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE="test doc yahoo"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 RDEPEND="yahoo? ( >=dev-python/requests-oauthlib-0.4.0[${PYTHON_USEDEP}]
 		dev-python/placefinder[${PYTHON_USEDEP}] )"

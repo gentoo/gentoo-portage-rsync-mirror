@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.51 2015/03/03 19:04:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.52 2015/03/06 22:10:30 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> bpython-0.13.2.ebuild:
+  amd64 stable, bug 540290
 
   03 Mar 2015; Justin Lecher <jlec@gentoo.org> bpython-0.14.1.ebuild:
   Adopt deps to requirements.txt recommendations

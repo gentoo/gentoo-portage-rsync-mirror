@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iconvcodec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.14 2014/12/30 23:56:48 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.15 2015/03/06 22:24:17 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> iconvcodec-1.1.2-r1.ebuild:
+  amd64 stable, bug 540290
 
   30 Dec 2014; Ian Delaney <idella4@gentoo.org> iconvcodec-1.1.2-r1.ebuild:
   rm PYTHON_MODNAME (missed)

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configargparse/configargparse-0.9.3.ebuild,v 1.1 2015/01/04 04:46:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configargparse/configargparse-0.9.3.ebuild,v 1.2 2015/03/06 22:12:34 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -16,6 +16,6 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 S=${WORKDIR}/${MY_P}

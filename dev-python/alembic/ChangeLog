@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/alembic
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/ChangeLog,v 1.16 2015/03/02 08:27:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/ChangeLog,v 1.17 2015/03/06 22:06:08 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> alembic-0.7.4.ebuild:
+  amd64 stable, bug 540290
 
   02 Mar 2015; Ian Delaney <idella4@gentoo.org> -alembic-0.6.0.ebuild,
   -alembic-0.6.3.ebuild, -alembic-0.6.4.ebuild:

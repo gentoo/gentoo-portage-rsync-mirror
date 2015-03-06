@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/multipledispatch/multipledispatch-0.4.7.ebuild,v 1.1 2014/10/07 10:09:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/multipledispatch/multipledispatch-0.4.7.ebuild,v 1.2 2015/03/06 22:30:38 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
@@ -13,7 +13,7 @@ HOMEPAGE="http://pypi.python.org/pypi/mimerender"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

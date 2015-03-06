@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/librharris
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librharris/ChangeLog,v 1.3 2014/12/31 01:04:59 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librharris/ChangeLog,v 1.4 2015/03/06 22:28:08 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> librharris-0.1.14-r1.ebuild:
+  amd64 stable, bug 540290
 
 *librharris-0.1.14-r1 (31 Dec 2014)
 

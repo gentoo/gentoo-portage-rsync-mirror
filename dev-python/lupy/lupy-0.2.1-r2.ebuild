@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1-r2.ebuild,v 1.1 2014/12/31 03:25:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lupy/lupy-0.2.1-r2.ebuild,v 1.2 2015/03/06 22:28:59 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/lupy/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~s390 ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~s390 ~x86"
 IUSE="examples"
 
 DEPEND=""
