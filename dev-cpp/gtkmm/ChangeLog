@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/gtkmm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.290 2014/12/21 12:21:54 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.291 2015/03/06 05:06:28 tetromino Exp $
+
+*gtkmm-3.14.0-r1 (06 Mar 2015)
+*gtkmm-2.24.4-r1 (06 Mar 2015)
+
+  06 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtkmm-2.24.4-r1.ebuild, gtkmm-3.12.0.ebuild, gtkmm-3.14.0.ebuild,
+  +gtkmm-3.14.0-r1.ebuild:
+  Add multilib support. Update license.
 
 *gtkmm-3.14.0 (21 Dec 2014)
 

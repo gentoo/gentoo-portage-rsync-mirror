@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.14.0.ebuild,v 1.2 2015/03/06 05:06:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-3.14.0-r1.ebuild,v 1.1 2015/03/06 05:06:28 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 multilib-minimal
 
 DESCRIPTION="C++ interface for GTK+"
 HOMEPAGE="http://www.gtkmm.org"
@@ -16,16 +16,21 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~
 IUSE="aqua doc examples test wayland +X"
 REQUIRED_USE="|| ( aqua wayland X )"
 
-RDEPEND="
-	>=dev-cpp/glibmm-2.41.2:2
-	>=x11-libs/gtk+-3.14:3[aqua?,wayland?,X?]
-	>=x11-libs/gdk-pixbuf-2.26:2
-	>=dev-cpp/atkmm-2.22.2
-	>=dev-cpp/cairomm-1.9.2.2
-	>=dev-cpp/pangomm-2.27.1:1.4
-	dev-libs/libsigc++:2
+COMMON_DEPEND="
+	>=dev-cpp/glibmm-2.41.2:2[${MULTILIB_USEDEP}]
+	>=x11-libs/gtk+-3.14:3[aqua?,wayland?,X?,${MULTILIB_USEDEP}]
+	>=x11-libs/gdk-pixbuf-2.28:2[${MULTILIB_USEDEP}]
+	>=dev-cpp/atkmm-2.22.7[${MULTILIB_USEDEP}]
+	>=dev-cpp/cairomm-1.10.0-r1[${MULTILIB_USEDEP}]
+	>=dev-cpp/pangomm-2.34.0:1.4[${MULTILIB_USEDEP}]
+	>=dev-libs/libsigc++-2.3.2:2[${MULTILIB_USEDEP}]
 "
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtkmmlibs-20140508
+		!app-emulation/emul-linux-x86-gtkmmlibs[-abi_x86_32(-)] )
+"
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? (
 		media-gfx/graphviz
@@ -51,12 +56,20 @@ src_prepare() {
 	gnome2_src_prepare
 }
 
-src_configure() {
-	DOCS="AUTHORS ChangeLog PORTING NEWS README"
-	gnome2_src_configure \
+multilib_src_configure() {
+	ECONF_SOURCE="${S}" gnome2_src_configure \
 		--enable-api-atkmm \
-		$(use_enable doc documentation) \
+		$(multilib_native_use_enable doc documentation) \
 		$(use_enable aqua quartz-backend) \
 		$(use_enable wayland wayland-backend) \
 		$(use_enable X x11-backend)
+}
+
+multilib_src_install() {
+	gnome2_src_install
+}
+
+multilib_src_install_all() {
+	DOCS="AUTHORS ChangeLog PORTING NEWS README"
+	einstalldocs
 }

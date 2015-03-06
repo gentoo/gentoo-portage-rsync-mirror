@@ -1,27 +1,32 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7.ebuild,v 1.13 2015/03/06 05:07:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7-r1.ebuild,v 1.1 2015/03/06 05:07:33 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit gnome2
+inherit gnome2 multilib-minimal
 
 DESCRIPTION="C++ bindings for libglade"
 HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="LGPL-2.1+"
 SLOT="2.4"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc examples"
 
-RDEPEND="
-	>=gnome-base/libglade-2.6.1:2.0
-	>=dev-cpp/gtkmm-2.6:2.4
-	>=dev-cpp/glibmm-2.4:2
+COMMON_DEPEND="
+	>=gnome-base/libglade-2.6.4-r1:2.0[${MULTILIB_USEDEP}]
+	>=dev-cpp/gtkmm-2.24.3:2.4[${MULTILIB_USEDEP}]
+	>=dev-cpp/glibmm-2.34.1:2[${MULTILIB_USEDEP}]
 "
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-gtkmmlibs-20140508
+		!app-emulation/emul-linux-x86-gtkmmlibs[-abi_x86_32(-)] )
+"
+DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 "
 
@@ -37,16 +42,24 @@ src_prepare() {
 	gnome2_src_prepare
 }
 
-src_compile() {
+multilib_src_configure() {
+	ECONF_SOURCE="${S}" gnome2_src_configure
+}
+
+multilib_src_compile() {
 	gnome2_src_compile
 
-	if use doc; then
-		emake -C "${S}/docs/reference" all || die "emake doc failed"
+	if multilib_is_native_abi && use doc; then
+		emake -C "docs/reference" all || die "emake doc failed"
 	fi
 }
 
-src_install() {
+multilib_src_install() {
 	gnome2_src_install
+}
+
+multilib_src_install_all() {
+	einstalldocs
 
 	if use doc ; then
 		dohtml -r docs/reference/html/*

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtkmmlibs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtkmmlibs/ChangeLog,v 1.28 2014/06/26 09:22:45 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtkmmlibs/ChangeLog,v 1.29 2015/03/06 05:08:21 tetromino Exp $
+
+*emul-linux-x86-gtkmmlibs-20140508-r1 (06 Mar 2015)
+
+  06 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +emul-linux-x86-gtkmmlibs-20140508-r1.ebuild,
+  +files/remove-native-20140508-r1:
+  Add native multilib glibmm, cairomm, atkmm, pangomm, gtkmm, libglademm.
 
   26 Jun 2014; Pacho Ramos <pacho@gentoo.org>
   emul-linux-x86-gtkmmlibs-20140508.ebuild:

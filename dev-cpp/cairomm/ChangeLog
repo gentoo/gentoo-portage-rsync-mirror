@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/cairomm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.63 2013/09/29 11:05:31 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.64 2015/03/06 05:03:55 tetromino Exp $
+
+*cairomm-1.10.0-r1 (06 Mar 2015)
+
+  06 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  cairomm-1.10.0.ebuild, +cairomm-1.10.0-r1.ebuild:
+  Add multilib support, update license, install docs where other *mm packages
+  expect them (bug #443950)
 
   29 Sep 2013; Pacho Ramos <pacho@gentoo.org> cairomm-1.10.0.ebuild:
   Fix docs installation patch, #443950 by Chris Mayo
