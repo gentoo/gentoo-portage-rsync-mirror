@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/kodi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.5 2015/03/04 22:12:34 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.6 2015/03/06 20:59:31 tupone Exp $
+
+  06 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild,
+  metadata.xml:
+  Build for raspberry-pi
 
   04 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild:
   Make verbose

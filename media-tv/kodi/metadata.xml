@@ -14,6 +14,7 @@
  <flag name='projectm'>Enable projectM visualization plugin</flag>
  <flag name='pvr'>Enable MythTV support</flag>
  <flag name='rtmp'>Enable Real Time Messaging Protocol using librtmp</flag>
+ <flag name='raspberry-pi'>Enable support for the Raspberry Pi</flag>
  <flag name='rsxs'>Enable really slick X screensavers</flag>
  <flag name='sftp'>Support browsing files over SFTP</flag>
  <flag name='webserver'>Enable internal webserver</flag>
