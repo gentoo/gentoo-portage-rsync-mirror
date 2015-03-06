@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst postrm preinst prepare setup
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup unpack
 DEPEND=>=sys-apps/sed-4 =dev-lang/python-2.7*
 DESCRIPTION=Integrated version control support for your desktop
 EAPI=5
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/configobj dev-python/pygobject:2 dev-python/pygtk dev-python/pysvn dev-python/simplejson caja? ( dev-python/python-caja dev-python/dbus-python dev-python/gnome-vfs-python ) diff? ( dev-util/meld ) gedit? ( app-editors/gedit ) git? ( dev-python/dulwich ) nautilus? ( >=dev-python/nautilus-python-0.7.0 dev-python/dbus-python dev-python/gnome-vfs-python ) spell? ( dev-python/gtkspell-python ) thunar? ( dev-python/thunarx-python dev-python/dbus-python ) =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=http://github.com/rabbitvcs/rabbitvcs/tarball/v0.16 -> rabbitvcs-0.16.tar.gz
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=4c01d659062c6109bdb406c2c80e7c9c
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=240e549be005c8b2df781bba34bd8f0c
