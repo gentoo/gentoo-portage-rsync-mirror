@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.93 2015/01/26 14:27:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.95 2015/03/06 11:44:03 idella4 Exp $
+
+  06 Mar 2015; Ian Delaney <idella4@gentoo.org> dnspython-1.12.0-r1.ebuild:
+  add multilib eclass to inherit to exlicitly support of function from the
+  eclass
+
+*dnspython-1.12.0-r1 (06 Mar 2015)
+
+  06 Mar 2015; Ian Delaney <idella4@gentoo.org> +dnspython-1.12.0-r1.ebuild:
+  revbump; add py3 support by addition of dnspython3 tarball, SRC_URI updated,
+  virtual re-write, assistance from NP-Hardass in achieving final form of the
+  ebuild
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -dnspython-1.10.0-r1.ebuild,
   -dnspython-1.10.0.ebuild, -dnspython-1.9.4.ebuild:

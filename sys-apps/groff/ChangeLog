@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.144 2014/11/19 10:32:20 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.145 2015/03/06 11:47:19 vapier Exp $
+
+  06 Mar 2015; Mike Frysinger <vapier@gentoo.org> groff-1.22.3.ebuild:
+  Do not delete mom-pdf.pdf based on USE=examples #516732 by Dave Kemper.
 
 *groff-1.22.3 (19 Nov 2014)
 
