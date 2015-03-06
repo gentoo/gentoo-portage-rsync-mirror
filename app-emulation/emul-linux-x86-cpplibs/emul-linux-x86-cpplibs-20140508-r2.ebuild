@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/emul-linux-x86-cpplibs-20140508-r2.ebuild,v 1.2 2015/03/05 23:33:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/emul-linux-x86-cpplibs-20140508-r2.ebuild,v 1.3 2015/03/06 01:29:57 tetromino Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -14,11 +14,11 @@ DEPEND=""
 RDEPEND="!abi_x86_32? (
 		~app-emulation/emul-linux-x86-baselibs-${PV}
 		!>=dev-libs/boost-1.55.0-r2[abi_x86_32(-)]
-		!>=dev-libs/libsigc++-2.4.0-r1[abi_x86_32(-)]
+		!>=dev-libs/libsigc++-2.4.0-r1:2[abi_x86_32(-)]
 	)
 	abi_x86_32? (
 		>=dev-libs/boost-1.55.0-r2[abi_x86_32(-)]
-		>=dev-libs/libsigc++-2.4.0-r1[abi_x86_32(-)]
+		>=dev-libs/libsigc++-2.4.0-r1:2[abi_x86_32(-)]
 	)"
 
 src_prepare() {

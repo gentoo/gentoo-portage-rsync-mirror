@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.11.6-r1.ebuild,v 1.1 2014/11/17 09:56:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.11.6-r2.ebuild,v 1.1 2015/03/06 01:25:05 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_{6,7})
@@ -40,24 +40,22 @@ REQUIRED_USE="|| ( kvm xen lxc )"
 USER_PREFIX="${GANETI_USER_PREFIX:-"gnt-"}"
 GROUP_PREFIX="${GANETI_GROUP_PREFIX:-"${USER_PREFIX}"}"
 
-S="${WORKDIR}/${MY_P}"
-
 HASKELL_DEPS=">=dev-lang/ghc-6.12:0=
-		dev-haskell/json:0=
-		dev-haskell/curl:0=
-		dev-haskell/network:0=
-		dev-haskell/parallel
-		dev-haskell/hslogger:0=
-		dev-haskell/utf8-string:0=
-		dev-haskell/deepseq:0=
-		dev-haskell/attoparsec:0=
-		dev-haskell/crypto:0=
-		dev-haskell/vector:0=
-		dev-haskell/hinotify:0=
-		dev-haskell/regex-pcre-builtin:0=
-		dev-haskell/zlib:0=
-		dev-haskell/base64-bytestring:0=
-		monitoring? ( dev-haskell/snap-server:0= )"
+	dev-haskell/json:0=
+	dev-haskell/curl:0=
+	dev-haskell/network:0=
+	dev-haskell/parallel:3=
+	dev-haskell/hslogger:0=
+	dev-haskell/utf8-string:0=
+	dev-haskell/deepseq:0=
+	dev-haskell/attoparsec:0=
+	dev-haskell/crypto:0=
+	dev-haskell/vector:0=
+	dev-haskell/hinotify:0=
+	dev-haskell/regex-pcre-builtin:0=
+	dev-haskell/zlib:0=
+	dev-haskell/base64-bytestring:0=
+	monitoring? ( dev-haskell/snap-server:0= )"
 
 DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu )
@@ -69,7 +67,7 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 		${HASKELL_DEPS}
 		dev-haskell/text:0=
 	)
-	dev-libs/openssl
+	dev-libs/openssl:0
 	dev-python/paramiko[${PYTHON_USEDEP}]
 	dev-python/pyopenssl[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
@@ -123,6 +121,8 @@ PATCHES=(
 )
 
 REQUIRED_USE="kvm? ( || ( amd64 x86 ) )"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup () {
 	confutils_use_depend_all haskell-daemons htools
@@ -215,5 +215,7 @@ pkg_postinst() {
 }
 
 src_test () {
-	emake check || die "emake check failed"
+	PATH="${S}/scripts:${S}/src:${PATH}" \
+		TMPDIR="/tmp" \
+		emake check || die "emake check failed"
 }

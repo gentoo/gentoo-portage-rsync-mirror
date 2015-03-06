@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/toybox
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/toybox/ChangeLog,v 1.7 2014/11/20 06:20:23 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/toybox/ChangeLog,v 1.8 2015/03/06 01:24:59 patrick Exp $
+
+*toybox-0.5.2 (06 Mar 2015)
+
+  06 Mar 2015; Patrick Lauer <patrick@gentoo.org> +toybox-0.5.2.ebuild:
+  Bump
 
 *toybox-0.5.1 (20 Nov 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-cpplibs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/ChangeLog,v 1.31 2015/03/05 23:33:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/ChangeLog,v 1.32 2015/03/06 01:29:57 tetromino Exp $
+
+  06 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  emul-linux-x86-cpplibs-20140508-r2.ebuild:
+  Forgot slots.
 
   05 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   emul-linux-x86-cpplibs-20140508-r2.ebuild:

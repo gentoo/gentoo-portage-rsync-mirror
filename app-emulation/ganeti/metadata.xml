@@ -30,7 +30,6 @@
 		<flag name='multiple-users'>Enable support for running VMs as different users.</flag>
 		<flag name='monitoring'>Enable the ganeti monitoring daemon</flag>
 		<flag name='rbd'>Enable rados block device support via sys-cluster/ceph</flag>
-		<flag name='sharedstorage'>Enable Shared Storage support</flag>
 		<flag name='xen'>Enable Xen support</flag>
 	</use>
 </pkgmetadata>

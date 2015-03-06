@@ -1,6 +1,25 @@
 # ChangeLog for app-emulation/ganeti
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.96 2014/11/17 09:56:40 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.97 2015/03/06 01:25:05 chutzpah Exp $
+
+*ganeti-2.11.6-r2 (06 Mar 2015)
+*ganeti-2.10.5-r4 (06 Mar 2015)
+*ganeti-2.12.1 (06 Mar 2015)
+
+  06 Mar 2015; Patrick McLean <chutzpah@gentoo.org>
+  +files/ganeti-2.12-daemon-util.patch,
+  +files/ganeti-2.12-qemu-enable-kvm.patch,
+  +files/ganeti-2.12-start-stop-daemon-args.patch,
+  +files/ganeti-2.12-tests.patch, +ganeti-2.10.5-r4.ebuild,
+  +ganeti-2.11.6-r2.ebuild, +ganeti-2.12.1.ebuild,
+  -files/ganeti-2.0.3-gentoo-brctl-path.patch,
+  -files/ganeti-2.5-gentoo-start-stop-daemon.patch,
+  -files/ganeti-2.6-fix-tests.patch, -files/ganeti-2.9-automake-1.13.patch,
+  -ganeti-2.10.5-r3.ebuild, -ganeti-2.11.2-r3.ebuild, -ganeti-2.11.5-r1.ebuild,
+  -ganeti-2.11.6-r1.ebuild, -ganeti-2.7.2.ebuild, -ganeti-2.9.5.ebuild,
+  metadata.xml:
+  Version bump. Revision bump on 2.11.6 and 2.10.5 to update dependencies to be
+  more specific (makes repoman happy). Clean out old versions.
 
 *ganeti-2.11.6-r1 (17 Nov 2014)
 
