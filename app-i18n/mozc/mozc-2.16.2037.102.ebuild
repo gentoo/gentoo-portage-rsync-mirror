@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-2.16.2037.102.ebuild,v 1.1 2015/02/25 07:27:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-2.16.2037.102.ebuild,v 1.2 2015/03/06 06:30:28 naota Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -30,7 +30,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="emacs +ibus +qt4 renderer test"
 
-RDEPEND="dev-libs/glib:2
+RDEPEND="app-i18n/tegaki-zinnia-japanese
+	dev-libs/glib:2
 	dev-libs/openssl
 	>=dev-libs/protobuf-2.5.0
 	x11-libs/libxcb
@@ -38,6 +39,7 @@ RDEPEND="dev-libs/glib:2
 	ibus? ( >=app-i18n/ibus-1.4.1 )
 	renderer? ( x11-libs/gtk+:2 )
 	qt4? (
+		app-i18n/ibus-qt
 		dev-qt/qtgui:4
 		app-i18n/zinnia
 	)
