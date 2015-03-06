@@ -1,10 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-2.16.2037.102.ebuild,v 1.2 2015/03/06 06:30:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/mozc-2.16.2037.102.ebuild,v 1.3 2015/03/06 10:51:00 naota Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
-inherit elisp-common eutils multilib multiprocessing python-single-r1 toolchain-funcs
+PLOCALES="de ja zh_CN zh_TW"
+inherit elisp-common eutils l10n multilib multiprocessing python-single-r1 toolchain-funcs
 
 DESCRIPTION="The Mozc engine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/mozc/"
@@ -15,6 +16,8 @@ GTEST_VER="1.6.0"
 JSONCPP_VER="0.6.0-rc2"
 GYP_DATE="20140602"
 JAPANESE_USAGE_DICT_VER="10"
+FCITX_PATCH_VER="2"
+FCITX_PATCH="fcitx-mozc-${PV}.${FCITX_PATCH_VER}.patch"
 MOZC_URL="http://dev.gentoo.org/~naota/files/${P}.tar.bz2"
 PROTOBUF_URL="http://protobuf.googlecode.com/files/protobuf-${PROTOBUF_VER}.tar.bz2"
 GMOCK_URL="https://googlemock.googlecode.com/files/gmock-${GMOCK_VER}.zip"
@@ -22,20 +25,23 @@ GTEST_URL="https://googletest.googlecode.com/files/gtest-${GTEST_VER}.zip"
 JSONCPP_URL="mirror://sourceforge/jsoncpp/jsoncpp-src-${JSONCPP_VER}.tar.gz"
 GYP_URL="http://dev.gentoo.org/~naota/files/gyp-${GYP_DATE}.tar.bz2"
 JAPANESE_USAGE_DICT_URL="http://dev.gentoo.org/~naota/files/japanese-usage-dictionary-${JAPANESE_USAGE_DICT_VER}.tar.bz2"
+FCITX_PATCH_URL="http://download.fcitx-im.org/fcitx-mozc/${FCITX_PATCH}"
 SRC_URI="${MOZC_URL} ${PROTOBUF_URL} ${GYP_URL} ${JAPANESE_USAGE_DICT_URL}
+	fcitx? ( ${FCITX_PATCH_URL} )
 	test? ( ${GMOCK_URL} ${GTEST_URL} ${JSONCPP_URL} )"
 
 LICENSE="BSD ipadic public-domain unicode"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="emacs +ibus +qt4 renderer test"
+IUSE="emacs fcitx +ibus +qt4 renderer test"
 
 RDEPEND="app-i18n/tegaki-zinnia-japanese
 	dev-libs/glib:2
-	dev-libs/openssl
+	dev-libs/openssl:0
 	>=dev-libs/protobuf-2.5.0
 	x11-libs/libxcb
 	emacs? ( virtual/emacs )
+	fcitx? ( app-i18n/fcitx )
 	ibus? ( >=app-i18n/ibus-1.4.1 )
 	renderer? ( x11-libs/gtk+:2 )
 	qt4? (
@@ -83,6 +89,9 @@ src_prepare() {
 	sed -i -e "s/<!(which clang)/$(tc-getCC)/" \
 		-e "s/<!(which clang++)/$(tc-getCXX)/" \
 		gyp/common.gypi || die
+	if use fcitx; then
+		EPATCH_OPTS="-p2" epatch "${DISTDIR}/${FCITX_PATCH}"
+	fi
 	epatch_user
 }
 
@@ -114,6 +123,7 @@ src_compile() {
 
 	local mytarget="server/server.gyp:mozc_server"
 	use emacs && mytarget="${mytarget} unix/emacs/emacs.gyp:mozc_emacs_helper"
+	use fcitx && mytarget="${mytarget} unix/fcitx/fcitx.gyp:fcitx-mozc"
 	use ibus && mytarget="${mytarget} unix/ibus/ibus.gyp:ibus_mozc"
 	use renderer && mytarget="${mytarget} renderer/renderer.gyp:mozc_renderer"
 	if use qt4 ; then
@@ -133,12 +143,36 @@ src_test() {
 	tc-export CC CXX AR AS RANLIB LD
 	V=1 "${PYTHON}" build_mozc.py runtests -c "${BUILDTYPE}" || die
 }
-
 src_install() {
+	install_fcitx_locale() {
+		lang=$1
+		insinto "/usr/share/locale/${lang}/LC_MESSAGES/"
+		newins out_linux/${BUILDTYPE}/gen/unix/fcitx/po/${lang}.mo fcitx-mozc.mo
+	}
+
 	if use emacs ; then
 		dobin "out_linux/${BUILDTYPE}/mozc_emacs_helper" || die
 		elisp-install ${PN} unix/emacs/*.{el,elc} || die
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" ${PN} || die
+	fi
+
+	if use fcitx; then
+		exeinto /usr/$(get_libdir)/fcitx
+		doexe "out_linux/${BUILDTYPE}/fcitx-mozc.so"
+		insinto /usr/share/fcitx/addon
+		doins "unix/fcitx/fcitx-mozc.conf"
+		insinto /usr/share/fcitx/inputmethod
+		doins "unix/fcitx/mozc.conf"
+		insinto /usr/share/fcitx/mozc/icon
+		(
+			cd data/images
+			newins product_icon_32bpp-128.png mozc.png
+			cd unix
+			for f in ui-* ; do
+				newins ${f} mozc-${f/ui-}
+			done
+		)
+		l10n_for_each_locale_do install_fcitx_locale
 	fi
 
 	if use ibus ; then

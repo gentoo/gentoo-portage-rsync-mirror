@@ -751,6 +751,7 @@ app-i18n/imsettings:xfconf - Enable integration in the Xfce desktop environment 
 app-i18n/kimera:anthy - Support for Anthy input method
 app-i18n/libskk:introspection - Use dev-libs/gobject-introspection for introspection
 app-i18n/libtomoe-gtk:gucharmap - Enable gucharmap dictionary plugin
+app-i18n/mozc:fcitx - Enable support for app-i18n/fcitx
 app-i18n/mozc:ibus - Enable support for app-i18n/ibus
 app-i18n/mozc:renderer - Enable native candidate window.
 app-i18n/mozc:scim - Enable support for app-i18n/scim
