@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.42.0-r1.ebuild,v 1.1 2015/03/06 05:03:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.42.0-r1.ebuild,v 1.2 2015/03/06 19:33:42 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -37,11 +37,9 @@ src_prepare() {
 			-i Makefile.am Makefile.in || die "sed 1 failed"
 	fi
 
-	if ! use examples; then
-		# don't waste time building examples
-		sed 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' \
-			-i Makefile.am Makefile.in || die "sed 2 failed"
-	fi
+	# don't build examples - we want to install example sources, not binaries
+	sed 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' \
+		-i Makefile.am Makefile.in || die "sed 2 failed"
 
 	# Test fails with IPv6 but not v4, upstream bug #720073
 	sed -e 's:giomm_tls_client/test::' \
