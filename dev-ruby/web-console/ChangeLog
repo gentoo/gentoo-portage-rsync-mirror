@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/web-console
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/web-console/ChangeLog,v 1.1 2015/03/06 07:10:35 graaff Exp $
+
+*web-console-2.1.1 (06 Mar 2015)
+
+  06 Mar 2015; Hans de Graaff <graaff@gentoo.org> +web-console-2.1.1.ebuild,
+  +metadata.xml:
+  Initial import.
+

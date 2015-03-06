@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.624 2015/03/03 08:59:53 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.625 2015/03/06 07:18:22 jer Exp $
+
+  06 Mar 2015; Jeroen Roovers <jer@gentoo.org> mesa-10.3.7-r1.ebuild:
+  Stable for HPPA (bug #530652).
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> mesa-10.4.4.ebuild:
   add arm64 support, tested on A53 board
