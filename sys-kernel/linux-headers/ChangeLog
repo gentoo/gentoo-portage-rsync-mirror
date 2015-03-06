@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.426 2015/02/09 19:25:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.427 2015/03/06 09:28:48 zlogene Exp $
+
+  06 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> linux-headers-3.18.ebuild:
+  amd64 stable wrt bug #541048
 
 *linux-headers-3.19 (09 Feb 2015)
 

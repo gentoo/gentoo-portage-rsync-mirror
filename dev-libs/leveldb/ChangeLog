@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.27 2015/02/21 18:34:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.28 2015/03/06 09:12:42 vapier Exp $
+
+*leveldb-1.18-r1 (06 Mar 2015)
+
+  06 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/leveldb-1.18-configure.patch, +leveldb-1.18-r1.ebuild:
+  Fix USE=-snappy handling #541186 by Johan Bergström. Move memenv.h header to
+  leveldb/helpers/ to match Debian.
 
 *leveldb-1.18 (21 Feb 2015)
 
