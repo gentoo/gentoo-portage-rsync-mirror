@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.12.1.ebuild,v 1.1 2015/03/06 01:25:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.12.1-r1.ebuild,v 1.1 2015/03/06 18:27:43 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -40,9 +40,30 @@ REQUIRED_USE="|| ( kvm xen lxc )"
 USER_PREFIX="${GANETI_USER_PREFIX:-"gnt-"}"
 GROUP_PREFIX="${GANETI_GROUP_PREFIX:-"${USER_PREFIX}"}"
 
-# lest-than atoms at the end of this list are resolver hints
-# they aren't actual direct dependencies, these need to stay until 2.14.0
-HASKELL_DEPS=">=dev-lang/ghc-6.12:0=
+# the haskell less-than atoms list are resolver hints, they aren't actual
+# direct dependencies, just hints to help the resolver fufill the dependency
+# on an older transformer.
+# these need to stay until 2.14.0
+DEPEND="
+	dev-libs/openssl:0
+	dev-python/paramiko[${PYTHON_USEDEP}]
+	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	dev-python/pyparsing[${PYTHON_USEDEP}]
+	dev-python/pycurl[${PYTHON_USEDEP}]
+	dev-python/pyinotify[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]
+	dev-python/ipaddr[${PYTHON_USEDEP}]
+	dev-python/bitarray[${PYTHON_USEDEP}]
+	net-analyzer/arping
+	net-analyzer/fping
+	net-misc/bridge-utils
+	net-misc/curl[ssl]
+	net-misc/openssh
+	net-misc/socat
+	sys-apps/iproute2
+	sys-fs/lvm2
+	>=sys-apps/baselayout-2.0
+	>=dev-lang/ghc-7.6.0:0=
 	>=dev-haskell/json-0.9:0=
 	<dev-haskell/monad-control-1.0.0.0:0=
 	<dev-haskell/transformers-0.4.0:0=
@@ -71,42 +92,19 @@ HASKELL_DEPS=">=dev-lang/ghc-6.12:0=
 	<dev-haskell/transformers-base-0.4.4
 	<dev-haskell/semigroupoids-4.0
 	<dev-haskell/semigroupoid-extras-4.0
-	<dev-haskell/groupoids-4.0"
-
-DEPEND="xen? ( >=app-emulation/xen-3.0 )
+	<dev-haskell/groupoids-4.0
+	xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu )
 	lxc? ( app-emulation/lxc )
 	drbd? ( <sys-cluster/drbd-8.5 )
 	rbd? ( sys-cluster/ceph )
 	ipv6? ( net-misc/ndisc6 )
-	haskell-daemons? (
-		${HASKELL_DEPS}
-		dev-haskell/text:0=
-	)
-	dev-libs/openssl:0
-	dev-python/paramiko[${PYTHON_USEDEP}]
-	dev-python/pyopenssl[${PYTHON_USEDEP}]
-	dev-python/pyparsing[${PYTHON_USEDEP}]
-	dev-python/pycurl[${PYTHON_USEDEP}]
-	dev-python/pyinotify[${PYTHON_USEDEP}]
-	dev-python/simplejson[${PYTHON_USEDEP}]
-	dev-python/ipaddr[${PYTHON_USEDEP}]
-	dev-python/bitarray[${PYTHON_USEDEP}]
-	net-analyzer/arping
-	net-analyzer/fping
-	net-misc/bridge-utils
-	net-misc/curl[ssl]
-	net-misc/openssh
-	net-misc/socat
-	sys-apps/iproute2
-	sys-fs/lvm2
-	>=sys-apps/baselayout-2.0
+	haskell-daemons? ( dev-haskell/text:0= )
 	${PYTHON_DEPS}
 	${GIT_DEPEND}"
 RDEPEND="${DEPEND}
 	!app-emulation/ganeti-htools"
-DEPEND+="${HASKELL_DEPS}
-	sys-devel/m4
+DEPEND+="sys-devel/m4
 	test? (
 		dev-python/mock
 		dev-python/pyyaml
