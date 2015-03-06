@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/greenbone-security-assistant-6.0_beta6.ebuild,v 1.2 2015/03/06 10:17:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/greenbone-security-assistant-5.0.6.ebuild,v 1.1 2015/03/06 10:17:47 jlec Exp $
 
 EAPI=5
 
@@ -8,21 +8,20 @@ inherit cmake-utils systemd
 
 MY_PN=gsad
 
-DL_ID=1934
+DL_ID=1967
 
 DESCRIPTION="Greenbone Security Assistant for openvas"
 HOMEPAGE="http://www.openvas.org/"
-SRC_URI="http://wald.intevation.org/frs/download.php/${DL_ID}/${P/_beta/+beta}.tar.gz"
+SRC_URI="http://wald.intevation.org/frs/download.php/${DL_ID}/${P}.tar.gz"
 
 SLOT="0"
-LICENSE="GPL-2+ BSD MIT"
-KEYWORDS=""
+LICENSE="GPL-2"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-libs/libgcrypt:0
+	>=net-analyzer/openvas-libraries-7.0.9
 	dev-libs/libxslt
-	>=net-analyzer/openvas-libraries-8.0_beta6
 	net-libs/libmicrohttpd[messages]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
@@ -30,8 +29,6 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-5.0.3-run.patch
 	)
-
-S="${WORKDIR}"/${P/_beta/+beta}
 
 src_prepare() {
 	sed \

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install nofetch prepare setup
+DEPEND=|| ( =dev-lang/tk-8.5*:0=[-truetype] >=dev-lang/tk-8.6.1 ) dev-lang/perl dev-libs/expat dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] sci-libs/netcdf virtual/opengl >=x11-libs/fltk-1.1.10-r2:1 x11-libs/libXft x11-libs/libXi cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 ) gromacs? ( >=sci-chemistry/gromacs-5.0.4-r1[tng] ) sqlite? ( dev-db/sqlite:3= ) tachyon? ( >=media-gfx/tachyon-0.99_beta6 ) xinerama? ( x11-libs/libXinerama ) virtual/pkgconfig dev-lang/swig
+DESCRIPTION=Visual Molecular Dynamics
+EAPI=5
+HOMEPAGE=http://www.ks.uiuc.edu/Research/vmd/
+IUSE=cuda gromacs msms povray sqlite tachyon xinerama python_targets_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=vmd
+RDEPEND=|| ( =dev-lang/tk-8.5*:0=[-truetype] >=dev-lang/tk-8.6.1 ) dev-lang/perl dev-libs/expat dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] sci-libs/netcdf virtual/opengl >=x11-libs/fltk-1.1.10-r2:1 x11-libs/libXft x11-libs/libXi cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 ) gromacs? ( >=sci-chemistry/gromacs-5.0.4-r1[tng] ) sqlite? ( dev-db/sqlite:3= ) tachyon? ( >=media-gfx/tachyon-0.99_beta6 ) xinerama? ( x11-libs/libXinerama ) sci-biology/stride sci-chemistry/surf x11-terms/xterm msms? ( sci-chemistry/msms-bin ) povray? ( media-gfx/povray )
+RESTRICT=fetch
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~jlec/distfiles/vmd-1.9.2-gentoo-patches.tar.xz vmd-1.9.2.src.tar.gz
+_eclasses_=cuda	2ba75c44d72d2b0b1fe31e2e2dc42d0e	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=67105c8a4289bc21f9c97649038fdebf

@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/greenbone-security-assistant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/ChangeLog,v 1.16 2015/02/15 02:02:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/ChangeLog,v 1.17 2015/03/06 10:17:47 jlec Exp $
+
+*greenbone-security-assistant-5.0.6 (06 Mar 2015)
+
+  06 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +greenbone-security-assistant-5.0.6.ebuild,
+  greenbone-security-assistant-6.0_beta6.ebuild:
+  Version Bump
 
   15 Feb 2015; Patrick Lauer <patrick@gentoo.org>
   -greenbone-security-assistant-5.0.4.ebuild:

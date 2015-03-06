@@ -1,23 +1,23 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r2.ebuild,v 1.5 2013/10/02 11:39:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.2.ebuild,v 1.1 2015/03/06 10:07:11 jlec Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python2_7 )
 
-inherit cuda eutils multilib prefix python toolchain-funcs
+inherit cuda eutils flag-o-matic multilib prefix python-single-r1 toolchain-funcs
 
 DESCRIPTION="Visual Molecular Dynamics"
 HOMEPAGE="http://www.ks.uiuc.edu/Research/vmd/"
 SRC_URI="
-	http://dev.gentoo.org/~jlec/distifles/${P}-gentoo-patches-2.tar.xz
+	http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo-patches.tar.xz
 	${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="vmd"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="cuda msms povray tachyon xinerama"
+IUSE="cuda gromacs msms povray sqlite tachyon xinerama"
 
 RESTRICT="fetch"
 
@@ -26,15 +26,20 @@ RESTRICT="fetch"
 CDEPEND="
 	|| ( =dev-lang/tk-8.5*:0=[-truetype] >=dev-lang/tk-8.6.1 )
 	dev-lang/perl
-	dev-python/numpy
+	dev-libs/expat
+	dev-python/numpy[${PYTHON_USEDEP}]
 	sci-libs/netcdf
 	virtual/opengl
 	>=x11-libs/fltk-1.1.10-r2:1
 	x11-libs/libXft
 	x11-libs/libXi
 	cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2.9-r1 )
+	gromacs? ( >=sci-chemistry/gromacs-5.0.4-r1[tng] )
+	sqlite? ( dev-db/sqlite:3= )
+	tachyon? ( >=media-gfx/tachyon-0.99_beta6 )
 	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${CDEPEND}
+	virtual/pkgconfig
 	dev-lang/swig"
 RDEPEND="${CDEPEND}
 	sci-biology/stride
@@ -42,7 +47,7 @@ RDEPEND="${CDEPEND}
 	x11-terms/xterm
 	msms? ( sci-chemistry/msms-bin )
 	povray? ( media-gfx/povray )
-	tachyon? ( media-gfx/tachyon )"
+	"
 
 VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=VMD"
 # Binary only plugin!!
@@ -54,33 +59,28 @@ pkg_nofetch() {
 	elog "Please download ${P}.src.tar.gz from"
 	elog "${VMD_DOWNLOAD}"
 	elog "after agreeing to the license and get"
-	elog "http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo-patches-2.tar.xz"
+	elog "http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo-patches.tar.xz"
 	elog "Place both in ${DISTDIR}"
-}
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
 }
 
 src_prepare() {
 	use cuda && cuda_sanitize
 
-	epatch "${FILESDIR}"/${P}-cuda-device_ptr.patch
+	epatch "${FILESDIR}"/${PN}-1.9.1-cuda-device_ptr.patch
 
-	cd "${WORKDIR}"/plugins
+	cd "${WORKDIR}"/plugins || die
 
 	epatch \
 		"${WORKDIR}"/${P}-gentoo-plugins.patch \
-		"${FILESDIR}"/${P}-tcl8.6.patch
+		"${FILESDIR}"/${P}-format-security.patch
 
 	[[ ${SILENT} == yes ]] || sed '/^.SILENT/d' -i $(find -name Makefile)
 
 	sed \
 		-e "s:CC = gcc:CC = $(tc-getCC):" \
 		-e "s:CXX = g++:CXX = $(tc-getCXX):" \
-		-e "s:COPTO =.*\":COPTO = -fPIC -o\":" \
-		-e "s:LOPTO = .*\":LOPTO = ${LDFLAGS} -fPIC -o\":" \
+		-e "s:COPTO =.*\":COPTO = -fPIC -o \":" \
+		-e "s:LOPTO = .*\":LOPTO = ${LDFLAGS} -fPIC -o \":" \
 		-e "s:CCFLAGS =.*\":CCFLAGS = ${CFLAGS}\":" \
 		-e "s:CXXFLAGS =.*\":CXXFLAGS = ${CXXFLAGS}\":" \
 		-e "s:SHLD = gcc:SHLD = $(tc-getCC) -shared:" \
@@ -100,7 +100,7 @@ src_prepare() {
 		-i hesstrans/Makefile || die
 
 	# prepare vmd itself
-	cd "${S}"
+	cd "${S}" || die
 
 	epatch "${WORKDIR}"/${P}-gentoo-base.patch
 
@@ -128,18 +128,17 @@ src_prepare() {
 		-e "s:gentoo-netcdf-libs:${EPREFIX}/usr/$(get_libdir):g" \
 		-i configure || die
 
-#	local NUMPY_INCLUDE="numpy/core/include"
-#	sed -e "s:gentoo-python-include:${EPREFIX}$(python_get_includedir):" \
-#		-e "s:gentoo-python-lib:${EPREFIX}$(python_get_libdir):" \
-#		-e "s:gentoo-python-link:$(PYTHON):" \
-#		-e "s:gentoo-numpy-include:${EPREFIX}$(python_get_sitedir)/${NUMPY_INCLUDE}:" \
-#		-i configure || die "failed setting up python"
-
 	if use cuda; then
 		sed \
 			-e "s:gentoo-cuda-lib:${EPREFIX}/opt/cuda/$(get_libdir):g" \
 			-e "/NVCCFLAGS/s:=:= ${NVCCFLAGS}:g" \
 			-i configure src/Makefile || die
+		sed \
+			-e '/compute_/d' \
+			-i configure || die
+		sed \
+			-e 's:-gencode .*code=sm_..::' \
+			-i src/Makefile || die
 	fi
 
 	sed \
@@ -150,63 +149,89 @@ src_prepare() {
 		-e "s:gentoo-surf:${EPREFIX}/usr/bin/surf:g" \
 		-e "s:gentoo-tachyon:${EPREFIX}/usr/bin/tachyon:g" \
 		-i "${S}"/bin/vmd.sh || die "failed setting up vmd wrapper script"
+
+	EMAKEOPTS=(
+		TCLINC="-I${EPREFIX}/usr/include"
+		TCLLIB="-L${EPREFIX}/usr/$(get_libdir)"
+		TCLLDFLAGS="-shared"
+		NETCDFLIB="$($(tc-getPKG_CONFIG) --libs-only-L netcdf) ${EPREFIX}/usr/$(get_libdir)/libnetcdf.so"
+		NETCDFINC="$($(tc-getPKG_CONFIG) --cflags-only-I netcdf) ${EPREFIX}/usr/include"
+		NETCDFLDFLAGS="$($(tc-getPKG_CONFIG) --libs netcdf)"
+		NETCDFDYNAMIC=1
+		EXPATINC="-I${EPREFIX}/usr/include"
+		EXPATLIB="$($(tc-getPKG_CONFIG) --libs expat)"
+		EXPATLDFLAGS="-shared"
+		EXPATDYNAMIC=1
+	)
+	if use gromacs; then
+		EMAKEOPTS+=(
+			TNGLIB="$($(tc-getPKG_CONFIG) --libs libgromacs)"
+			TNGINC="-I${EPREFIX}/usr/include"
+			TNGLDFLAGS="-shared"
+			TNGDYNAMIC=1
+		)
+	fi
+	if use sqlite; then
+		EMAKEOPTS+=(
+			SQLITELIB="$($(tc-getPKG_CONFIG) --libs sqlite3)"
+			SQLITEINC="-I${EPREFIX}/usr/include"
+			SQLITELDFLAGS="-shared"
+			SQLITEDYNAMIC=1
+		)
+	fi
 }
 
 src_configure() {
-	local myconf="OPENGL FLTK TK TCL PTHREADS PYTHON IMD NETCDF NUMPY NOSILENT XINPUT"
+	local myconf="OPENGL OPENGLPBUFFER COLVARS FLTK TK TCL PTHREADS PYTHON IMD NETCDF NUMPY NOSILENT XINPUT"
 	rm -f configure.options && echo $myconf >> configure.options
 
 	use cuda && myconf+=" CUDA"
 #	use mpi && myconf+=" MPI"
-#	use tachion && myconf+=" LIBTACHYON"
+	use tachyon && myconf+=" LIBTACHYON" && append-cflags -I"${EPREFIX}/usr/include/tachyon"
 	use xinerama && myconf+=" XINERAMA"
 
 	export \
-		PYTHON_INCLUDE_DIR="${EPREFIX}$(python_get_includedir)" \
-		PYTHON_LIBRARY_DIR="${EPREFIX}$(python_get_libdir)" \
-		PYTHON_LIBRARY="$(python_get_library -l)" \
-		NUMPY_INCLUDE_DIR="${EPREFIX}$(python_get_sitedir)/numpy/core/include" \
-		NUMPY_LIBRARY_DIR="${EPREFIX}$(python_get_sitedir)/numpy/core/include"
+		PYTHON_INCLUDE_DIR="$(python_get_includedir)" \
+		PYTHON_LIBRARY_DIR="$(python_get_library_path)" \
+		PYTHON_LIBRARY="$(python_get_LIBS)" \
+		NUMPY_INCLUDE_DIR="$(python_get_sitedir)/numpy/core/include" \
+		NUMPY_LIBRARY_DIR="$(python_get_sitedir)/numpy/core/include"
 
-	./configure LINUX \
+	perl ./configure LINUX \
 		${myconf} || die
 }
 
 src_compile() {
 	# build plugins
-	cd "${WORKDIR}"/plugins
+	cd "${WORKDIR}"/plugins || die
 
 	emake \
-		TCLINC="-I${EPREFIX}/usr/include" \
-		TCLLIB="-L${EPREFIX}/usr/$(get_libdir)" \
-		NETCDFLIB="$(pkg-config --libs-only-L netcdf) ${EPREFIX}/usr/$(get_libdir)/libnetcdf.so" \
-		NETCDFINC="$(pkg-config --cflags-only-I netcdf) ${EPREFIX}/usr/include" \
-		NETCDFLDFLAGS="$(pkg-config --libs netcdf)" \
+		${EMAKEOPTS[@]} \
 		LINUX
 
 	# build vmd
-	cd "${S}"/src
+	cd "${S}"/src || die
 	emake
 }
 
 src_install() {
 	# install plugins
-	cd "${WORKDIR}"/plugins
+	cd "${WORKDIR}"/plugins || die
 	emake \
 			PLUGINDIR="${ED}/usr/$(get_libdir)/${PN}/plugins" \
 			distrib
 
 	# install vmd
-	cd "${S}"/src
+	cd "${S}"/src || die
 	emake install
 
 	# install docs
-	cd "${S}"
+	cd "${S}" || die
 	dodoc Announcement README doc/ig.pdf doc/ug.pdf
 
 	# remove some of the things we don't want and need in
 	# /usr/lib
-	cd "${ED}"/usr/$(get_libdir)/vmd
+	cd "${ED}"/usr/$(get_libdir)/vmd || die
 	rm -fr doc README Announcement LICENSE || \
 		die "failed to clean up /usr/lib/vmd directory"
 
