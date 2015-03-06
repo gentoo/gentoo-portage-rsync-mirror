@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.205 2015/03/03 06:36:17 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.207 2015/03/05 23:16:20 tetromino Exp $
+
+*libsigc++-2.4.1 (05 Mar 2015)
+
+  05 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libsigc++-1.2.7.ebuild, -libsigc++-2.3.1.ebuild, libsigc++-2.4.0.ebuild,
+  +libsigc++-2.4.1.ebuild:
+  Version bump and add native multilib support. Drop old. Update license
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> libsigc++-2.4.0.ebuild:
   add arm64 support, tested on A53 board

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hoauth2/hoauth2-0.4.5.ebuild,v 1.1 2015/03/05 21:58:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hoauth2/hoauth2-0.4.5.ebuild,v 1.2 2015/03/05 23:10:14 slyfox Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 CABAL_FEATURES="bin lib profile haddock hoogle hscolour"
 inherit haskell-cabal
 
-DESCRIPTION="hoauth2"
+DESCRIPTION="Haskell OAuth2 authentication"
 HOMEPAGE="https://github.com/freizl/hoauth2"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 

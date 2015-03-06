@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.11 2014/12/02 22:38:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.12 2015/03/05 23:06:14 tetromino Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -11,7 +11,7 @@ inherit autotools gnome2 eutils
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
 
-LICENSE="GPL-2 LGPL-2.1"
+LICENSE="GPL-2 LGPL-2.1+"
 SLOT="1.2"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE=""

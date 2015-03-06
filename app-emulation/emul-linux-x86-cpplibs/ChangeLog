@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-cpplibs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/ChangeLog,v 1.29 2014/08/14 08:42:00 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-cpplibs/ChangeLog,v 1.30 2015/03/05 23:17:41 tetromino Exp $
+
+*emul-linux-x86-cpplibs-20140508-r2 (05 Mar 2015)
+
+  05 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +emul-linux-x86-cpplibs-20140508-r2.ebuild, +files/remove-native-20140508-r2:
+  Add multilib libsigc++
 
 *emul-linux-x86-cpplibs-20140508-r1 (14 Aug 2014)
 
