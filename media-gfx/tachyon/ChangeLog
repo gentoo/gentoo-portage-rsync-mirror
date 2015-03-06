@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/tachyon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/ChangeLog,v 1.8 2012/12/06 15:56:25 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/ChangeLog,v 1.9 2015/03/06 08:01:42 jlec Exp $
+
+*tachyon-0.99_beta6 (06 Mar 2015)
+
+  06 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/tachyon-0.99_beta6-ldflags.patch,
+  +files/tachyon-0.99_beta6-shared.patch, +tachyon-0.99_beta6.ebuild,
+  metadata.xml, tachyon-0.98.9-r2.ebuild:
+  Version BUmp
 
   06 Dec 2012; Justin Lecher <jlec@gentoo.org> tachyon-0.98.9-r2.ebuild,
   metadata.xml:
@@ -39,4 +47,3 @@
   23 Feb 2010; Alexey Shvetsov <alexxy@gentoo.org> +tachyon-0.98.9.ebuild,
   +metadata.xml:
   Initial import per bug #293969
-

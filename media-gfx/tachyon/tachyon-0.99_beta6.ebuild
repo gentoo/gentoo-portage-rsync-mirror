@@ -1,14 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.98.9-r2.ebuild,v 1.5 2015/03/06 08:01:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tachyon/tachyon-0.99_beta6.ebuild,v 1.1 2015/03/06 08:01:42 jlec Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
+MY_PV=${PV/_beta/b}
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="A portable, high performance parallel ray tracing system"
 HOMEPAGE="http://jedi.ks.uiuc.edu/~johns/raytracer/"
-SRC_URI="http://jedi.ks.uiuc.edu/~johns/raytracer/files/${PV}/${P}.tar.gz"
+SRC_URI="http://jedi.ks.uiuc.edu/~johns/raytracer/files/${MY_PV}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
@@ -16,12 +19,13 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x64-macos ~x86-macos"
 IUSE="doc examples jpeg mpi +opengl png threads"
 
 CDEPEND="
-	jpeg? ( virtual/jpeg:0 )
+	jpeg? ( virtual/jpeg:0= )
 	mpi? ( virtual/mpi )
 	opengl? (
 		virtual/glu
-		virtual/opengl )
-	png? ( media-libs/libpng:0 )"
+		virtual/opengl
+		)
+	png? ( media-libs/libpng:0= )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}"
@@ -30,14 +34,14 @@ REQUIRED_USE="^^ ( opengl mpi )"
 
 S="${WORKDIR}/${PN}/unix"
 
-# TODO: Test on alpha, ia64, ppc
-# TODO: add other architectures
-# TODO: X, Motif, MBOX, Open Media Framework, Spaceball I/O, MGF ?
-
-TACHYON_MAKE_TARGET=
-
 pkg_setup() {
 	local ostarget
+
+	# TODO: Test on alpha, ia64
+	# TODO: add other architectures
+	# TODO: X, Motif, MBOX, Open Media Framework, Spaceball I/O, MGF ?
+	TACHYON_MAKE_TARGET=
+
 	case ${CHOST} in
 		powerpc*-darwin*)   ostarget=macosx      ;;
 		*86*-darwin*)       ostarget=macosx-x86  ;;
@@ -70,24 +74,25 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if use jpeg ; then
-		sed -i \
-			-e "s:USEJPEG=:USEJPEG=-DUSEJPEG:g" \
-			-e "s:JPEGLIB=:JPEGLIB=-ljpeg:g" Make-config \
-			|| die "sed failed"
-	fi
+	emakeconf=()
+	use jpeg && \
+		emakeconf+=(
+			USEJPEG=-DUSEJPEG
+			JPEGLIB=-ljpeg
+		)
 
-	if use png ; then
-		sed -i \
-			-e "s:USEPNG=:USEPNG=-DUSEPNG:g" \
-			-e "s:PNGINC=:PNGINC=$(pkg-config libpng --cflags):g" \
-			-e "s:PNGLIB=:PNGLIB=$(pkg-config libpng --libs):g" Make-config \
-			|| die "sed failed"
-	fi
+	use png && \
+		emakeconf+=(
+			USEPNG=-DUSEPNG
+			PNGINC="$($(tc-getPKG_CONFIG) --cflags libpng)"
+			PNGLIB="$($(tc-getPKG_CONFIG) --libs libpng)"
+			)
 
 	if use mpi ; then
-		sed -i "s:MPIDIR=:MPIDIR=/usr:g" Make-config || die "sed failed"
-		sed -i "s:linux-lam:linux-mpi:g" Make-config || die "sed failed"
+		sed \
+			-e "s:MPIDIR=:MPIDIR=/usr:g" \
+			-e "s:linux-lam:linux-mpi:g" \
+			-i Make-config || die "sed failed"
 	fi
 	sed -i \
 		-e "s:-O3::g;s:-g::g;s:-pg::g" \
@@ -98,25 +103,31 @@ src_prepare() {
 		-e "s:CC = *cc:CC = $(tc-getCC):g" \
 		-e "s:-fomit-frame-pointer::g" Make-arch || die "sed failed"
 
-	epatch "${FILESDIR}"/${PV}-ldflags.patch
+	epatch \
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-shared.patch
 }
 
 src_compile() {
-	emake ${TACHYON_MAKE_TARGET}
+	emake ${TACHYON_MAKE_TARGET} ${emakeconf[@]} VERSION=${PV}
 }
 
 src_install() {
-	cd ..
+	cd .. || die
 	dodoc Changes README
+
+	insinto /usr/include/${PN}
+	doheader src/*.h
 
 	use doc && dohtml docs/tachyon/*
 
-	cd compile/${TACHYON_MAKE_TARGET}
+	cd compile/${TACHYON_MAKE_TARGET} || die
 
 	dobin ${PN}
+	dolib.so lib${PN}.so*
 
 	if use examples; then
-		cd "${S}/../scenes"
+		cd "${S}/../scenes" || die
 		insinto "/usr/share/${PN}/examples"
 		doins *
 	fi
