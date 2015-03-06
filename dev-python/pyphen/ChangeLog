@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyphen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyphen/ChangeLog,v 1.5 2014/05/21 08:37:51 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyphen/ChangeLog,v 1.6 2015/03/06 22:34:07 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyphen-0.9.1.ebuild:
+  amd64 stable, bug 540290
 
   21 May 2014; Ian Delaney <idella4@gentoo.org> pyphen-0.9.1.ebuild:
   drop py2.6 both pypys add py3.4 support

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-api-python-client/google-api-python-client-1.3.1.ebuild,v 1.3 2014/12/30 17:44:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-api-python-client/google-api-python-client-1.3.1.ebuild,v 1.4 2015/03/06 22:44:57 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/google/google-api-python-client/archive/v${PV}.tar.g
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 IUSE=""
 
 DEPEND="

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.43 2015/02/28 20:10:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.44 2015/03/06 22:44:40 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  python-keystoneclient-1.0.0.ebuild:
+  amd64 stable, bug 540290
 
   28 Feb 2015; Matthew Thode <prometheanfire@gentoo.org>
   python-keystoneclient-1.2.0.ebuild:

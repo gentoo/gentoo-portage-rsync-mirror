@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2client/oauth2client-1.4.6.ebuild,v 1.1 2015/01/27 22:05:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2client/oauth2client-1.4.6.ebuild,v 1.2 2015/03/06 22:31:21 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/google/oauth2client/archive/v${PV}.tar.gz -> ${P}.ta
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="

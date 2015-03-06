@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/wsgiproxy2-0.4.1.ebuild,v 1.9 2014/12/25 12:37:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/wsgiproxy2-0.4.1.ebuild,v 1.10 2015/03/06 22:42:45 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="doc test"
 
 RDEPEND="dev-python/urllib3[${PYTHON_USEDEP}]

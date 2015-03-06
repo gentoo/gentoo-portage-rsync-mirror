@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyramid
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.7 2014/12/12 23:23:19 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.8 2015/03/06 22:34:31 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyramid-1.5.1.ebuild:
+  amd64 stable, bug 540290
 
   12 Dec 2014; Michał Górny <mgorny@gentoo.org> pyramid-1.4.3.ebuild,
   pyramid-1.5.1.ebuild, pyramid-1.5.2.ebuild, pyramid-1.5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.266 2015/01/27 04:41:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.267 2015/03/06 22:37:30 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> setuptools-12.0.1.ebuild:
+  amd64 stable, bug 540290
 
 *setuptools-12.0.5 (27 Jan 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-0.3.4.ebuild,v 1.2 2014/10/18 16:20:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ws4py/ws4py-0.3.4.ebuild,v 1.3 2015/03/06 22:42:29 pacho Exp $
 
 # We could depend on dev-python/cherrypy when USE=server, but
 # that is an optional component ...
@@ -18,7 +18,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	inherit vcs-snapshot
 	SRC_URI="https://github.com/Lawouach/WebSocket-for-Python/tarball/v${PV} -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm ~x86"
 fi
 
 DESCRIPTION="WebSocket client and server library for Python 2 and 3 as well as PyPy"

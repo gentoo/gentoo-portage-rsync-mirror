@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/exodusii
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/ChangeLog,v 1.8 2014/10/24 14:35:26 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/ChangeLog,v 1.9 2015/03/06 22:47:23 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> exodusii-6.02.ebuild:
+  amd64 stable, bug 540290
 
   24 Oct 2014; Alexis Ballier <aballier@gentoo.org> exodusii-6.02.ebuild:
   keyword ~arm

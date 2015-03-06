@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oauthlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.38 2014/12/26 17:53:21 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.39 2015/03/06 22:31:29 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> oauthlib-0.7.2.ebuild:
+  amd64 stable, bug 540290
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> oauthlib-0.7.2.ebuild:
   add ~arm, bug #528432

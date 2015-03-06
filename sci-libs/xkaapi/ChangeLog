@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/xkaapi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xkaapi/ChangeLog,v 1.5 2014/12/23 12:41:48 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xkaapi/ChangeLog,v 1.6 2015/03/06 22:47:36 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> xkaapi-2.2.ebuild:
+  amd64 stable, bug 540290
 
 *xkaapi-2.2 (23 Dec 2014)
 

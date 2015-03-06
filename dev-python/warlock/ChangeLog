@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/warlock
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/ChangeLog,v 1.7 2014/10/12 19:52:28 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/ChangeLog,v 1.8 2015/03/06 22:42:00 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> warlock-1.0.1.ebuild:
+  amd64 stable, bug 540290
 
   12 Oct 2014; Mike Gilbert <floppym@gentoo.org> -warlock-0.7.0-r1.ebuild,
   -warlock-0.7.0.ebuild:

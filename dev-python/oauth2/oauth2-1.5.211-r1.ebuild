@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/oauth2-1.5.211-r1.ebuild,v 1.3 2014/09/30 02:53:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2/oauth2-1.5.211-r1.ebuild,v 1.4 2015/03/06 22:31:15 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x64-macos"
+KEYWORDS="amd64 ~x86 ~x64-macos"
 IUSE="test"
 
 RDEPEND="dev-python/httplib2[${PYTHON_USEDEP}]"

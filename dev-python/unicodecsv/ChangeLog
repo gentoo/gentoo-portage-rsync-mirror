@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unicodecsv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unicodecsv/ChangeLog,v 1.1 2014/09/02 04:00:56 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unicodecsv/ChangeLog,v 1.2 2015/03/06 22:41:20 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> unicodecsv-0.9.4.ebuild:
+  amd64 stable, bug 540290
 
 *unicodecsv-0.9.4 (02 Sep 2014)
 

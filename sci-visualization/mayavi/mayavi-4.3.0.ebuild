@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.3.0.ebuild,v 1.1 2013/04/16 16:00:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.3.0.ebuild,v 1.2 2015/03/06 22:43:56 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.enthought.com/repo/ets/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="2"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
 RDEPEND="

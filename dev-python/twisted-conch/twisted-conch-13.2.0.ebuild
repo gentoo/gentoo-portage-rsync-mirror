@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-13.2.0.ebuild,v 1.1 2014/01/20 07:03:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-13.2.0.ebuild,v 1.2 2015/03/06 22:40:02 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -9,7 +9,7 @@ inherit twisted-r1
 
 DESCRIPTION="Twisted SSHv2 implementation"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND="

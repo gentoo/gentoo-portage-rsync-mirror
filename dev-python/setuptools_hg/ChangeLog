@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools_hg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools_hg/ChangeLog,v 1.8 2015/02/02 14:47:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools_hg/ChangeLog,v 1.9 2015/03/06 22:37:36 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> setuptools_hg-0.4-r1.ebuild:
+  amd64 stable, bug 540290
 
   02 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -setuptools_hg-0.4.ebuild:
   Remove old.

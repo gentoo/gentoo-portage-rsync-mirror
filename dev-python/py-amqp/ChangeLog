@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py-amqp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.24 2014/08/20 08:08:22 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.25 2015/03/06 22:32:38 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> py-amqp-1.4.6.ebuild:
+  amd64 stable, bug 540290
 
 *py-amqp-1.4.6 (20 Aug 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/selenium
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.7 2014/07/24 14:58:06 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.8 2015/03/06 22:37:18 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> selenium-2.42.1.ebuild:
+  amd64 stable, bug 540290
 
 *selenium-2.42.1 (24 Jul 2014)
 

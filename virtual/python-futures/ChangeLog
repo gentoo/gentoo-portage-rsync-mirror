@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-futures
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.4 2014/05/05 05:11:23 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.5 2015/03/06 22:43:31 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> python-futures-0.ebuild:
+  amd64 stable, bug 540290
 
   05 May 2014; Ian Delaney <idella4@gentoo.org> python-futures-0.ebuild:
   drop py2.6 add pypy support

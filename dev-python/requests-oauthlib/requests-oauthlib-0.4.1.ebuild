@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/requests-oauthlib-0.4.1.ebuild,v 1.1 2014/09/08 05:52:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/requests-oauthlib-0.4.1.ebuild,v 1.2 2015/03/06 22:36:26 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/requests/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="ISC"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="test"
 
 DEPEND="test? ( dev-python/mock[${PYTHON_USEDEP}] )"

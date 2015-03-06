@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinxtogithub
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxtogithub/ChangeLog,v 1.5 2014/09/24 19:40:14 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxtogithub/ChangeLog,v 1.6 2015/03/06 22:38:44 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> sphinxtogithub-1.1.0.ebuild:
+  amd64 stable, bug 540290
 
   24 Sep 2014; Markus Meier <maekke@gentoo.org> sphinxtogithub-1.1.0.ebuild:
   add ~arm, bug #519616

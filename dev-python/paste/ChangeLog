@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paste
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.25 2014/10/15 23:08:08 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.26 2015/03/06 22:31:49 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> paste-1.7.5.1-r1.ebuild:
+  amd64 stable, bug 540290
 
   15 Oct 2014; Anthony G. Basile <blueness@gentoo.org> paste-1.7.5.1-r1.ebuild,
   paste-1.7.5.1-r2.ebuild, paste-1.7.5.1.ebuild:

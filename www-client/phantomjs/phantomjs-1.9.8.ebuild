@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.8.ebuild,v 1.1 2014/10/29 08:28:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.8.ebuild,v 1.2 2015/03/06 22:46:14 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://bitbucket.org/ariya/phantomjs/downloads/${P}-source.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="examples"
 
 RDEPEND="dev-libs/icu:=

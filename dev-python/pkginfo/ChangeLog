@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pkginfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/ChangeLog,v 1.8 2014/06/30 07:17:01 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/ChangeLog,v 1.9 2015/03/06 22:32:04 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pkginfo-1.0.ebuild:
+  amd64 stable, bug 540290
 
   30 Jun 2014; Ian Delaney <idella4@gentoo.org> pkginfo-1.0.ebuild:
   drop py2.6 pypy2_0

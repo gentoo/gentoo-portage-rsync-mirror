@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.30 2015/02/20 11:23:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.31 2015/03/06 22:45:02 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pytools-2014.3.5.ebuild:
+  amd64 stable, bug 540290
 
   20 Feb 2015; Justin Lecher <jlec@gentoo.org> -pytools-2013.5.6.ebuild,
   -pytools-2013.5.7.ebuild, -pytools-2014.1.2.ebuild, -pytools-2014.2.1.ebuild,

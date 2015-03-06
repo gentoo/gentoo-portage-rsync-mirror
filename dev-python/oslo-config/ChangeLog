@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oslo-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.15 2015/02/24 19:00:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.16 2015/03/06 22:31:36 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> oslo-config-1.4.0.ebuild:
+  amd64 stable, bug 540290
 
 *oslo-config-1.7.0 (24 Feb 2015)
 

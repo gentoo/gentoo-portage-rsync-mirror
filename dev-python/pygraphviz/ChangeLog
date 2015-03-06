@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygraphviz
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.17 2013/12/29 08:44:31 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.18 2015/03/06 22:33:33 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> pygraphviz-1.2.ebuild:
+  amd64 stable, bug 540290
 
   29 Dec 2013; Kacper Kowalik <xarthisius@gentoo.org> pygraphviz-1.2.ebuild:
   Use pypi instead of upstream server for src_uri, fixes failed fetch

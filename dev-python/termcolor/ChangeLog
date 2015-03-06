@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/termcolor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/termcolor/ChangeLog,v 1.7 2014/11/25 12:49:05 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/termcolor/ChangeLog,v 1.8 2015/03/06 22:39:24 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> termcolor-1.1.0-r1.ebuild:
+  amd64 stable, bug 540290
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> termcolor-1.1.0-r1.ebuild:
   Support python 3.4

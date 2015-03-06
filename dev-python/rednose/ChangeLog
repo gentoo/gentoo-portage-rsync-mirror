@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rednose
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rednose/ChangeLog,v 1.2 2014/10/15 01:33:12 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rednose/ChangeLog,v 1.3 2015/03/06 22:46:57 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> rednose-0.4.1.ebuild:
+  amd64 stable, bug 540290
 
   15 Oct 2014; Ian Delaney <idella4@gentoo.org> rednose-0.4.1.ebuild:
   add py3.4 pypy support, keyword ~x86

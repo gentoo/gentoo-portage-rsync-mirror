@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ujson
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.7 2015/02/02 00:01:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.8 2015/03/06 22:41:14 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> ujson-1.33.ebuild:
+  amd64 stable, bug 540290
 
   02 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -ujson-1.30-r1.ebuild,
   -ujson-1.30.ebuild:

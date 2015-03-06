@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lyvi/lyvi-2.0.0.ebuild,v 1.3 2014/11/25 13:21:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lyvi/lyvi-2.0.0.ebuild,v 1.4 2015/03/06 22:43:25 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python3_{3,4} )
@@ -12,7 +12,7 @@ HOMEPAGE="http://ok100.github.io/lyvi/"
 SRC_URI="https://github.com/ok100/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="WTFPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 SLOT="0"
 IUSE="mpris"
 

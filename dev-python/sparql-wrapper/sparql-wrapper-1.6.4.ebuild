@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sparql-wrapper/sparql-wrapper-1.6.4.ebuild,v 1.1 2014/10/15 12:29:02 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sparql-wrapper/sparql-wrapper-1.6.4.ebuild,v 1.2 2015/03/06 22:38:16 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 
 IUSE=""
 

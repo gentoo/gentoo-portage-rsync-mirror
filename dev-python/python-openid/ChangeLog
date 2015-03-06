@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-openid
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.25 2014/10/15 23:06:05 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.26 2015/03/06 22:35:06 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> python-openid-2.2.5-r1.ebuild:
+  amd64 stable, bug 540290
 
   15 Oct 2014; Anthony G. Basile <blueness@gentoo.org>
   python-openid-2.2.5-r1.ebuild, python-openid-2.2.5.ebuild:

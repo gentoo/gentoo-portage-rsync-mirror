@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-social-auth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-social-auth/ChangeLog,v 1.3 2014/11/25 10:56:18 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-social-auth/ChangeLog,v 1.4 2015/03/06 22:35:17 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> python-social-auth-0.1.26.ebuild:
+  amd64 stable, bug 540290
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> python-social-auth-0.1.26.ebuild:
   Support python 3.4

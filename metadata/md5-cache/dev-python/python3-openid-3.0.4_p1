@@ -4,11 +4,11 @@ DESCRIPTION=Python 3 port of the python-openid library
 EAPI=5
 HOMEPAGE=https://github.com/necaris/python3-openid https://pypi.python.org/pypi/python3-openid
 IUSE=examples test python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64
+KEYWORDS=amd64
 LICENSE=Apache-2.0
 RDEPEND=python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=https://github.com/necaris/python3-openid/archive/47a15d30b962a4316473ae9909b3405773d78181.tar.gz -> python3-openid-3.0.4_p1.tar.gz
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=62ce38d36101020d0a9be25783d7c15f
+_md5_=ade8a5d58909771e286926c032b66d12

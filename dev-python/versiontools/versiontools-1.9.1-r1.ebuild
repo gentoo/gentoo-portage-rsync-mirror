@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/versiontools-1.9.1-r1.ebuild,v 1.4 2014/06/06 10:39:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/versiontools-1.9.1-r1.ebuild,v 1.5 2015/03/06 22:41:44 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -10,7 +10,7 @@ inherit distutils-r1
 DESCRIPTION="Smart replacement for plain tuple used in __version__"
 HOMEPAGE="http://pypi.python.org/pypi/versiontools/ https://launchpad.net/versiontools"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 LICENSE="GPL-2"

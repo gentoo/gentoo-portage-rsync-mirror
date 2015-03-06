@@ -4,11 +4,11 @@ DESCRIPTION=A simple command-line lyrics viewer
 EAPI=5
 HOMEPAGE=http://ok100.github.io/lyvi/
 IUSE=mpris python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64
+KEYWORDS=amd64
 LICENSE=WTFPL-2
 RDEPEND=dev-python/pillow[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/plyr[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/psutil[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/urwid[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] mpris? ( dev-python/dbus-python[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/pygobject:3[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=https://github.com/ok100/lyvi/archive/v2.0.0.tar.gz -> lyvi-2.0.0.tar.gz
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=488caee8d6783bf0759dd9bca68bedeb
+_md5_=ba987dd94f104ed3d468f6bd70c75ee1

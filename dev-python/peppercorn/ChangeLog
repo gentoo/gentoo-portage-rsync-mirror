@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/peppercorn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peppercorn/ChangeLog,v 1.7 2014/10/18 14:57:34 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peppercorn/ChangeLog,v 1.8 2015/03/06 22:31:59 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> peppercorn-0.5.ebuild:
+  amd64 stable, bug 540290
 
   18 Oct 2014; Ian Delaney <idella4@gentoo.org> peppercorn-0.5.ebuild:
   take out un-needed IUSE test flag, dep nose

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testfixtures
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/ChangeLog,v 1.9 2014/11/30 04:06:57 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testfixtures/ChangeLog,v 1.10 2015/03/06 22:39:30 pacho Exp $
+
+  06 Mar 2015; Pacho Ramos <pacho@gentoo.org> testfixtures-3.0.0.ebuild:
+  amd64 stable, bug 540290
 
 *testfixtures-4.1.1 (30 Nov 2014)
 
