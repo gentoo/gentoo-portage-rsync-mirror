@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libFS
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.77 2015/02/24 08:38:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.78 2015/03/06 07:38:41 jer Exp $
+
+  06 Mar 2015; Jeroen Roovers <jer@gentoo.org> libFS-1.0.6.ebuild:
+  Stable for HPPA (bug #530652).
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libFS-1.0.6.ebuild:
   Stable for alpha, wrt bug #530652

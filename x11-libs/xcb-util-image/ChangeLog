@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-image
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.31 2015/03/03 11:56:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.32 2015/03/06 07:56:37 jer Exp $
+
+  06 Mar 2015; Jeroen Roovers <jer@gentoo.org> xcb-util-image-0.4.0.ebuild:
+  Stable for HPPA (bug #530652).
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> xcb-util-image-0.4.0.ebuild:
   add arm64 support, tested on A53 board

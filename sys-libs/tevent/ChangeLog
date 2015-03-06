@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.75 2015/03/02 13:13:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.76 2015/03/06 07:40:33 polynomial-c Exp $
+
+*tevent-0.9.24 (06 Mar 2015)
+
+  06 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> -tevent-0.9.22.ebuild,
+  +tevent-0.9.24.ebuild:
+  Version bump. Removed old.
 
 *tevent-0.9.23 (02 Mar 2015)
 

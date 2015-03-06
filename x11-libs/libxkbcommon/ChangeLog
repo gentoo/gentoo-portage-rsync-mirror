@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbcommon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.21 2015/03/03 11:43:24 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/ChangeLog,v 1.22 2015/03/06 07:46:40 jer Exp $
+
+  06 Mar 2015; Jeroen Roovers <jer@gentoo.org> libxkbcommon-0.5.0.ebuild:
+  Stable for HPPA (bug #530652).
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libxkbcommon-0.5.0.ebuild:
   add arm64 support, tested on A53 board
