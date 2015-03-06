@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.103 2015/03/03 11:39:33 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.104 2015/03/06 12:44:59 yngwin Exp $
+
+*libfm-1.2.3-r1 (06 Mar 2015)
+
+  06 Mar 2015; Ben de Groot <yngwin@gentoo.org> +libfm-1.2.3-r1.ebuild,
+  metadata.xml:
+  Split off libfm-extra to prevent circular dep with menu-cache. Add lxqt herd
+  as co-maintainer.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libfm-1.2.3.ebuild:
   add arm64 support, tested on A53 board

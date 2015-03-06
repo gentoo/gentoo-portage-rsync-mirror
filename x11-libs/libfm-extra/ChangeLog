@@ -1,0 +1,9 @@
+# ChangeLog for x11-libs/libfm-extra
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm-extra/ChangeLog,v 1.1 2015/03/06 12:38:02 yngwin Exp $
+
+*libfm-extra-1.2.3 (06 Mar 2015)
+
+  06 Mar 2015; Ben de Groot <yngwin@gentoo.org> +libfm-extra-1.2.3.ebuild,
+  +metadata.xml:
+  Initial commit. Split off from libfm to prevent circular dep with menu-cache.
