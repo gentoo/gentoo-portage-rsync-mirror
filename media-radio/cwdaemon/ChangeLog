@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/cwdaemon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.28 2015/02/24 08:42:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/cwdaemon/ChangeLog,v 1.29 2015/03/07 18:30:44 tomjbe Exp $
+
+  07 Mar 2015; Thomas Beierlein <tomjbe@gentoo.org> -cwdaemon-0.9.2.ebuild,
+  -cwdaemon-0.9.4.ebuild, -cwdaemon-0.9.6.ebuild, -cwdaemon-0.9.7.ebuild,
+  -cwdaemon-0.10.0.ebuild, -files/cwdaemon-0.9.4-unixcw3.patch:
+  Drop old
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> cwdaemon-0.10.1.ebuild:
   Stable for alpha, wrt bug #531962
