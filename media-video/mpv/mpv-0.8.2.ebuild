@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.8.2.ebuild,v 1.1 2015/03/05 14:23:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.8.2.ebuild,v 1.2 2015/03/07 05:27:59 yngwin Exp $
 
 EAPI=5
 EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
@@ -119,7 +119,7 @@ DEPEND="${RDEPEND}
 RDEPEND+="
 	selinux? ( sec-policy/selinux-mplayer )
 "
-DOCS=( Copyright README.md etc/example.conf etc/input.conf )
+DOCS=( Copyright README.md RELEASE_NOTES etc/example.conf etc/input.conf )
 
 pkg_setup() {
 	if use !libass; then

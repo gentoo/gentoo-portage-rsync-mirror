@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm-extra/libfm-extra-1.2.3.ebuild,v 1.1 2015/03/06 12:38:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm-extra/libfm-extra-1.2.3.ebuild,v 1.2 2015/03/07 05:09:58 yngwin Exp $
 
 EAPI=5
 inherit autotools fdo-mime
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	!<=x11-libs/libfm-1.2.3"
 
 S="${WORKDIR}"/${MY_P}
 
