@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sigar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sigar/ChangeLog,v 1.11 2014/10/10 23:55:57 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sigar/ChangeLog,v 1.12 2015/03/07 07:00:53 graaff Exp $
+
+*sigar-0.7.3 (07 Mar 2015)
+
+  07 Mar 2015; Hans de Graaff <graaff@gentoo.org> +sigar-0.7.3.ebuild:
+  Version bump.
 
   10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> sigar-0.7.2-r1.ebuild:
   Add ruby21 target.

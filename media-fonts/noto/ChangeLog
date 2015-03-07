@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/noto
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/noto/ChangeLog,v 1.1 2015/03/07 06:45:11 yngwin Exp $
+
+*noto-2014.11 (07 Mar 2015)
+
+  07 Mar 2015; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
+  +noto-2014.11.ebuild:
+  Initial commit. Requested in bug #494194.
