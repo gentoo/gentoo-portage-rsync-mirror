@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.14.0-r1.ebuild,v 1.2 2015/02/16 10:36:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.14.0-r1.ebuild,v 1.3 2015/03/07 16:15:36 jlec Exp $
 
 EAPI=5
 
@@ -104,6 +104,7 @@ python_prepare_all() {
 		"${FILESDIR}"/${PN}-0.12.0-restore-sys-argv.patch
 		"${FILESDIR}"/${PN}-0.12.0-cephes-missing-include.patch
 		"${FILESDIR}"/${P}-lsqr-backport.patch
+		"${FILESDIR}"/${P}-cython-0.22-backport.patch
 	)
 	distutils-r1_python_prepare_all
 }
