@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.87 2015/01/31 07:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.88 2015/03/07 06:02:41 vapier Exp $
+
+  07 Mar 2015; Mike Frysinger <vapier@gentoo.org> pexpect-3.3.ebuild:
+  Mark arm64/s390/sh stable.
 
   31 Jan 2015; Mike Frysinger <vapier@gentoo.org> pexpect-3.3.ebuild:
   Add mips love.
