@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gnome-online-miners
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/ChangeLog,v 1.13 2014/12/23 23:05:38 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/ChangeLog,v 1.14 2015/03/07 02:34:33 tetromino Exp $
+
+  07 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-online-miners-3.12.0.ebuild, gnome-online-miners-3.14.1.ebuild:
+  Require libgdata[gnome] (bug #541942, thanks to Toralf Förster).
 
 *gnome-online-miners-3.14.1 (23 Dec 2014)
 

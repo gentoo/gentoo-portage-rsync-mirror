@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.14.1.ebuild,v 1.1 2014/12/23 23:05:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/gnome-online-miners-3.14.1.ebuild,v 1.2 2015/03/07 02:34:33 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,8 +15,9 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 
+# libgdata[gnome] needed for goa support
 RDEPEND="
-	>=dev-libs/libgdata-0.15.2:0=
+	>=dev-libs/libgdata-0.15.2:0=[gnome]
 	>=dev-libs/glib-2.35.1:2
 	>=net-libs/gnome-online-accounts-3.13.3
 	>=media-libs/grilo-0.2.6:0.2

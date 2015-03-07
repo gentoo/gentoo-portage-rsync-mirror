@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.441 2014/12/19 13:36:00 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.442 2015/03/07 02:50:26 tetromino Exp $
+
+  07 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libxml2-2.9.2.ebuild:
+  python_parallel_foreach_impl is deprecated (bug #541886, thanks to Ilya
+  Gordeev).
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> libxml2-2.9.2.ebuild:
   amd64 stable, bug 529964
