@@ -27,4 +27,7 @@ and so forth.
 	<remote-id type="github">libgd/libgd</remote-id>
 	<bugs-to>https://github.com/libgd/libgd/issues</bugs-to>
 </upstream>
+<use>
+	<flag name='webp'>Enable support for the webp format</flag>
+</use>
 </pkgmetadata>
