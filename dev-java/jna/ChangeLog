@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.20 2012/06/11 14:05:33 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jna/ChangeLog,v 1.21 2015/03/07 15:30:44 chewi Exp $
+
+  07 Mar 2015; James Le Cuirot <chewi@gentoo.org>
+  -files/3.2.4-makefile-flags.patch, -files/makefile-flags.patch,
+  -jna-3.0.3-r1.ebuild, -jna-3.2.4.ebuild:
+  Remove old versions.
 
   11 Jun 2012; Michał Górny <mgorny@gentoo.org> jna-3.4.0-r1.ebuild,
   jna-3.4.0.ebuild:
@@ -102,4 +107,3 @@
   +metadata.xml:
   New package, jruby dependency, bug #244785. Ebuild provided by serkan and
   chewi in java-overlay.
-

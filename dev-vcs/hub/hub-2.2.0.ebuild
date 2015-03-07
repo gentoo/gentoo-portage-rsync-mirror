@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-2.2.0.ebuild,v 1.1 2015/03/06 22:14:51 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-2.2.0.ebuild,v 1.2 2015/03/07 15:28:13 jlec Exp $
 
 EAPI=5
 
@@ -13,14 +13,11 @@ SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="zsh-completion"
-DEPEND="
-	>=dev-lang/go-1.4
-"
-RDEPEND="
-	>=dev-vcs/git-1.7.3
-	zsh-completion? ( app-shells/zsh )
-"
+IUSE=""
+
+DEPEND=">=dev-lang/go-1.4"
+RDEPEND=">=dev-vcs/git-1.7.3"
+
 DOC_CONTENTS="You may want to add 'alias git=hub' to your .{csh,bash}rc"
 
 src_compile() {
@@ -30,16 +27,15 @@ src_compile() {
 src_install() {
 	readme.gentoo_create_doc
 
-	exeinto /usr/bin
-	doexe hub
+	dobin hub
 
 	doman man/${PN}.1
 	dodoc README.md
 
-	newbashcomp etc/${PN}.bash_completion.sh ${PN}
+	# Broken with autoloader
+	# https://github.com/github/hub/issues/592
+	# newbashcomp etc/${PN}.bash_completion.sh ${PN}
 
-	if use zsh-completion ; then
-		insinto /usr/share/zsh/site-functions
-		newins etc/hub.zsh_completion _${PN}
-	fi
+	insinto /usr/share/zsh/site-functions
+	newins etc/hub.zsh_completion _${PN}
 }

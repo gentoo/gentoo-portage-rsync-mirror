@@ -3,11 +3,10 @@ DEPEND=>=dev-lang/go-1.4
 DESCRIPTION=Command-line wrapper for git that makes you better at GitHub
 EAPI=5
 HOMEPAGE=https://github.com/github/hub
-IUSE=zsh-completion
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
-RDEPEND=>=dev-vcs/git-1.7.3 zsh-completion? ( app-shells/zsh )
+RDEPEND=>=dev-vcs/git-1.7.3
 SLOT=0
 SRC_URI=https://github.com/github/hub/archive/v2.2.0.tar.gz -> hub-2.2.0.tar.gz
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=b78b4cfb5d9d60258345bd1e9c7ce491
+_md5_=35d8953814c6d59404217fef89b80866
