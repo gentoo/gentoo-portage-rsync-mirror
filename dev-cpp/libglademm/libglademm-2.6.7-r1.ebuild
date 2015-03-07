@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7-r1.ebuild,v 1.1 2015/03/06 05:07:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.6.7-r1.ebuild,v 1.2 2015/03/07 18:57:02 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -56,6 +56,10 @@ multilib_src_compile() {
 
 multilib_src_install() {
 	gnome2_src_install
+
+	if use examples; then
+		emake -C "examples" distclean || die "examples clean up failed"
+	fi
 }
 
 multilib_src_install_all() {
@@ -66,7 +70,6 @@ multilib_src_install_all() {
 	fi
 
 	if use examples; then
-		emake -C "${S}/examples" distclean || die "examples clean up failed"
 		find "${S}/examples" -name "Makefile*" -delete \
 			|| die "examples cleanup failed"
 		insinto "/usr/share/doc/${PF}"
