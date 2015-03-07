@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.106 2015/03/07 17:29:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.107 2015/03/07 17:33:25 blueness Exp $
+
+  07 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  -cherokee-1.2.101-r3.ebuild, -files/cherokee-1.2.101-libav-9.patch,
+  -files/cherokee-1.2.98-linux3.patch:
+  Some further cleanups.
 
   07 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
   cherokee-1.2.103-r2.ebuild, cherokee-1.2.104.ebuild:

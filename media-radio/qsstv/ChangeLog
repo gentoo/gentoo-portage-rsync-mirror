@@ -1,6 +1,13 @@
 # ChangeLog for media-radio/qsstv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.28 2015/02/25 16:01:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qsstv/ChangeLog,v 1.29 2015/03/07 17:54:50 tomjbe Exp $
+
+*qsstv-8.2.10 (07 Mar 2015)
+
+  07 Mar 2015; Thomas Beierlein <tomjbe@gentoo.org> -qsstv-7.1.7.ebuild,
+  -qsstv-8.1.14.ebuild, -qsstv-8.1.17.ebuild, -qsstv-8.2.7.ebuild,
+  -qsstv-8.2.8.ebuild, +qsstv-8.2.10.ebuild, -files/qsstv-7.1.7-gcc-47.patch:
+  Version bump. Drop old
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> qsstv-8.2.9.ebuild:
   Stable for x86, wrt bug #541004
