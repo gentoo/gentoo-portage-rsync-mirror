@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpeas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.41 2014/12/22 18:10:01 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.42 2015/03/07 10:51:43 pacho Exp $
+
+*libpeas-1.12.1-r1 (07 Mar 2015)
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> +libpeas-1.12.1-r1.ebuild:
+  --disable-seed because it's dead, bug #541890
 
 *libpeas-1.12.1 (22 Dec 2014)
 

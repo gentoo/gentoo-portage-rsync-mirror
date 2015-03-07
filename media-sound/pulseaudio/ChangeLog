@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.374 2015/03/02 21:14:39 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.375 2015/03/07 10:44:25 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> -pulseaudio-5.0-r5.ebuild,
+  -pulseaudio-5.0-r6.ebuild, -pulseaudio-5.99.3.ebuild:
+  Drop old
 
 *pulseaudio-5.99.3-r1 (02 Mar 2015)
 
