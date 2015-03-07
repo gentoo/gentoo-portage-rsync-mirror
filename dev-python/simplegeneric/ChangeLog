@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplegeneric
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.21 2015/01/31 07:01:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.22 2015/03/07 00:21:44 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> simplegeneric-0.8.1-r1.ebuild:
+  ppc64 stable, bug 540290
 
   31 Jan 2015; Mike Frysinger <vapier@gentoo.org> simplegeneric-0.8.1-r1.ebuild:
   Add mips love.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.38 2015/02/23 10:59:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.39 2015/03/07 00:16:55 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> greenlet-0.4.5.ebuild:
+  ppc64 stable, bug 540290
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> greenlet-0.4.5.ebuild:
   Stable for ppc64, wrt bug #535330

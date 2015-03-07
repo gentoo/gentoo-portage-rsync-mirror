@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.146 2015/03/02 09:35:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.147 2015/03/07 00:19:34 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> sqlalchemy-0.9.8.ebuild:
+  ppc64 stable, bug 540290
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sqlalchemy-0.9.2.ebuild:
   Stable for ppc, wrt bug #505840

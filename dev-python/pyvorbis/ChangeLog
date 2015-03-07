@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyvorbis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.58 2015/02/28 13:47:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyvorbis/ChangeLog,v 1.59 2015/03/07 00:18:49 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyvorbis-1.4-r4.ebuild:
+  ppc64 stable, bug 540290
 
   28 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pyvorbis-1.4-r3.ebuild:
   Remove old.

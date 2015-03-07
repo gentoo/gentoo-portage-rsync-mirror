@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.92 2014/12/26 18:06:10 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.93 2015/03/07 00:16:15 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> egenix-mx-base-3.2.5.ebuild:
+  ppc64 stable, bug 540290
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> egenix-mx-base-3.2.8.ebuild:
   arm stable, bug #532490

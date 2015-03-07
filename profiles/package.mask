@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16401 2015/03/06 23:08:05 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16402 2015/03/07 00:03:31 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -217,12 +217,6 @@ media-libs/sdl-flic
 # Eray Aslan <eras@gentoo.org> (03 Feb 2015)
 # Mask experimental software
 =mail-mta/postfix-3.1*
-
-# Brian Evans <grknight@gentoo.org> (02 Feb 2015)
-# Last rites bug 538584
-# >=dev-lang/php-5.4 no longer includes the extension needed
-# In preparation of dev-lang/php:5.3 removal, Removal in 30 days
-dev-php/PEAR-MDB2_Driver_sqlite
 
 # Sergei Trofimovich <slyfox@gentoo.org> (29 Jan 2015)
 # Mask live ebuild

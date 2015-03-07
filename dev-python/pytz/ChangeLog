@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.200 2015/03/03 07:15:39 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.201 2015/03/07 00:18:43 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pytz-2014.10.ebuild:
+  ppc64 stable, bug 540290
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> pytz-2014.10.ebuild:
   add arm64 support, tested on A53 board

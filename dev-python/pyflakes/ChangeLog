@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.51 2015/02/01 21:30:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.52 2015/03/07 00:22:39 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyflakes-0.8.1.ebuild:
+  ppc64 stable, bug 540290
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pyflakes-0.5.0.ebuild,
   -pyflakes-0.6.1.ebuild:

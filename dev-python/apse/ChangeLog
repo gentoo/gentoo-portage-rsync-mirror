@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.18 2015/03/06 22:07:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apse/ChangeLog,v 1.19 2015/03/07 00:15:33 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> apse-0.2-r3.ebuild:
+  ppc64 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> apse-0.2-r3.ebuild:
   amd64 stable, bug 540290

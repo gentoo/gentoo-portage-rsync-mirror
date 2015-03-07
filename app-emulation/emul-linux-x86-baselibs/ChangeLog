@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.235 2015/02/16 23:59:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.236 2015/03/07 00:07:14 dilfridge Exp $
+
+  07 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  emul-linux-x86-baselibs-20140508-r12.ebuild,
+  emul-linux-x86-baselibs-20140508-r13.ebuild,
+  emul-linux-x86-baselibs-20140508-r14.ebuild,
+  emul-linux-x86-baselibs-20140508-r15.ebuild:
+  Drop dependency on media-libs/lcms:0, which will be removed for security
+  reasons, bug 534102
 
 *emul-linux-x86-baselibs-20140508-r15 (16 Feb 2015)
 

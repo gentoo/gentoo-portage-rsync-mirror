@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/waitress
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/ChangeLog,v 1.14 2015/03/06 22:41:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/waitress/ChangeLog,v 1.15 2015/03/07 00:21:00 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> waitress-0.8.9.ebuild:
+  ppc64 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> waitress-0.8.9.ebuild:
   amd64 stable, bug 540290

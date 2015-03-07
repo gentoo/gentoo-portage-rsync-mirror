@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9842 2015/03/05 10:57:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9843 2015/03/07 00:03:31 grknight Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Mar 2015; Brian Evans <grknight@gentoo.org> package.mask:
+  Clean up from removed dev-php/PEAR-MDB2_Driver_sqlite
 
   05 Mar 2015; Justin Lecher <jlec@gentoo.org> arch/mips/ChangeLog,
   arch/mips/package.use.mask, arch/powerpc/ChangeLog,
