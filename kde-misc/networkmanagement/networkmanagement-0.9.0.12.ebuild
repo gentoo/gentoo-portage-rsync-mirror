@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.11-r1.ebuild,v 1.1 2015/01/20 22:26:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.12.ebuild,v 1.1 2015/03/07 09:44:06 johu Exp $
 
 EAPI=5
 
@@ -32,8 +32,6 @@ RDEPEND="${DEPEND}
 	!kde-base/solid
 	!kde-misc/plasma-nm
 "
-
-PATCHES=( "${FILESDIR}/${P}-openconnect7.patch" )
 
 src_configure() {
 	local mycmakeargs=(

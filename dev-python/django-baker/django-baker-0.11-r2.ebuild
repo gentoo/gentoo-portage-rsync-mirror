@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-baker/django-baker-0.11-r1.ebuild,v 1.1 2015/03/01 17:33:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-baker/django-baker-0.11-r2.ebuild,v 1.1 2015/03/07 09:52:53 jlec Exp $
 
 EAPI=5
 
@@ -19,4 +19,5 @@ IUSE=""
 
 PATCHES=(
 	"${FILESDIR}"/${P}-py3-backport.patch
+	"${FILESDIR}"/${P}-py3-iter.patch
 )
