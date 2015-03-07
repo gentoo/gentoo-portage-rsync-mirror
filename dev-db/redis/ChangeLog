@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/redis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.90 2014/12/28 12:05:57 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.91 2015/03/07 03:21:24 mschiff Exp $
+
+*redis-2.8.19-r1 (07 Mar 2015)
+
+  07 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> +redis-2.8.19-r1.ebuild,
+  -redis-2.8.19.ebuild, files/redis.initd-4:
+  Fix init script pid file handling (Fixes #541856) and minor RDEPEND slot
+  error.
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> redis-2.8.17-r1.ebuild:
   Stable for x86, wrt bug #528312

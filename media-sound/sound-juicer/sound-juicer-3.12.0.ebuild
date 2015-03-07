@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-3.12.0.ebuild,v 1.3 2014/07/23 15:23:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-3.12.0.ebuild,v 1.4 2015/03/07 03:08:30 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -57,7 +57,7 @@ src_prepare() {
 }
 
 src_configure() {
-	gnome2_src_configure ITSTOOLS="$(type -P true)"
+	gnome2_src_configure ITSTOOL="$(type -P true)"
 }
 
 pkg_postinst() {

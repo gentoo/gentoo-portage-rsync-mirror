@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.8.19.ebuild,v 1.1 2014/12/21 09:48:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.8.19-r1.ebuild,v 1.1 2015/03/07 03:21:24 mschiff Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~amd64-linux ~hppa ~x86 ~x86-linux ~x86-macos ~x86-solaris"
 IUSE="+jemalloc tcmalloc test"
 SLOT="0"
 
-RDEPEND=">=dev-lang/lua-5.1
+RDEPEND=">=dev-lang/lua-5.1:*
 	tcmalloc? ( dev-util/google-perftools )
 	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
 DEPEND="virtual/pkgconfig

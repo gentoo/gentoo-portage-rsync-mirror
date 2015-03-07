@@ -1,0 +1,12 @@
+# ChangeLog for media-fonts/fira-sans
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fira-sans/ChangeLog,v 1.2 2015/03/07 03:24:10 yngwin Exp $
+
+  07 Mar 2015; Ben de Groot <yngwin@gentoo.org> fira-sans-4.002.ebuild:
+  Add dep on unzip
+
+*fira-sans-4.002 (07 Mar 2015)
+
+  07 Mar 2015; Ben de Groot <yngwin@gentoo.org> +fira-sans-4.002.ebuild,
+  +metadata.xml:
+  Initial commit. Fixes bug #485922.

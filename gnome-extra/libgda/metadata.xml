@@ -3,8 +3,6 @@
 <pkgmetadata>
   <herd>gnome</herd>
   <use>
-    <flag name="bindist">Disable support for <pkg>dev-db/firebird</pkg> database
-		which is not GPL compatible.</flag>
     <flag name="canvas">Enable support for <pkg>x11-libs/goocanvas</pkg></flag>
     <flag name="http">Enable embedded <pkg>net-libs/libsoup</pkg> based server</flag>
 	<flag name="libsecret">Enable <pkg>app-crypt/libsecret</pkg> support to

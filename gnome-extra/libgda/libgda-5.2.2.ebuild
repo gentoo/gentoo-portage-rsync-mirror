@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.5 2014/12/28 15:50:28 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.6 2015/03/07 03:18:51 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -16,11 +16,10 @@ DESCRIPTION="GNOME database access library"
 HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2+ LGPL-2+"
 
-IUSE="berkdb bindist canvas firebird gtk graphviz http +introspection json ldap libsecret mdb mysql oci8 postgres reports sourceview ssl" # vala
+IUSE="berkdb canvas firebird gtk graphviz http +introspection json ldap libsecret mdb mysql oci8 postgres reports sourceview ssl" # vala
 REQUIRED_USE="
 	reports? ( ${PYTHON_REQUIRED_USE} )
 	canvas? ( gtk )
-	firebird? ( !bindist )
 	graphviz? ( gtk )
 	sourceview? ( gtk )
 "
@@ -37,7 +36,7 @@ RDEPEND="
 	sys-libs/readline:=
 	sys-libs/ncurses:=
 	berkdb?   ( sys-libs/db )
-	!bindist? ( firebird? ( dev-db/firebird ) )
+	firebird? ( dev-db/firebird )
 	gtk? (
 		>=x11-libs/gtk+-3.0.0:3
 		canvas? ( x11-libs/goocanvas:2.0= )
@@ -69,7 +68,9 @@ DEPEND="${RDEPEND}
 #	vala? ( $(vala_depend) )
 
 # FIXME: lots of tests failing. Check if they still fail in 5.1.2
-RESTRICT="test"
+# firebird support bindist-restricted because it is not GPL compatible
+RESTRICT="test
+	firebird? ( bindist )"
 
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup

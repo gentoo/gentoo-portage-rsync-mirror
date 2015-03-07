@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgda
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.228 2014/12/28 15:50:28 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.229 2015/03/07 03:18:51 tetromino Exp $
+
+  07 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> libgda-5.2.2.ebuild,
+  metadata.xml:
+  bindist is now a RESTRICT flag, not a USE flag (bug #541456, thanks to Ulrich
+  Müller).
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> libgda-5.2.2.ebuild:
   Rename virtual/postgresql to dev-db/postgresql
