@@ -1,15 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r2.ebuild,v 1.4 2014/08/10 20:08:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.104.ebuild,v 1.1 2015/03/07 16:45:29 blueness Exp $
 
-EAPI=4
-PYTHON_DEPEND="admin? 2"
-PYTHON_USE_WITH="threads"
+EAPI="5"
 
-inherit eutils multilib pam python versionator user
+WANT_AUTOMAKE="1.11"
+
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit autotools python-r1 eutils multilib pam systemd user
 
 DESCRIPTION="An extremely fast and tiny web server"
-SRC_URI="http://www.cherokee-project.com/download/$(get_version_component_range 1-2)/${PV}/${P}.tar.gz"
+SRC_URI="https://github.com/cherokee/webserver/archive/v${PV}.zip -> ${P}.zip"
 HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
@@ -39,29 +41,30 @@ RESTRICT="test"
 
 WEBROOT="/var/www/localhost"
 
+src_unpack() {
+	unpack ${A}
+	mv "webserver-${PV}" "${S}" || die
+}
+
 pkg_setup() {
-	python_pkg_setup
-
-	python_set_active_version 2
-
 	enewgroup cherokee
 	enewuser cherokee -1 -1 /var/www cherokee
 }
 
 src_prepare() {
+	python_setup
 	epatch \
-		"${FILESDIR}/${PN}-1.2.99-gentoo.patch" \
-		"${FILESDIR}/${PN}-1.2.98-linux3.patch" \
-		"${FILESDIR}/${P}-libav-9.patch"
+		"${FILESDIR}/${PN}-1.2.99-gentoo.patch"
 
-	python_convert_shebangs -r 2 .
+	"${S}/po/admin/generate_POTFILESin.py" > po/admin/POTFILES.in
+	eautoreconf
 }
 
 src_configure() {
 	local myconf
 
 	if use admin ; then
-		myconf="${myconf} --enable-admin --with-python=$(PYTHON -2)"
+		myconf="${myconf} --enable-admin --with-python=/usr/bin/python"
 	else
 		myconf="${myconf} --disable-admin --without-python"
 	fi
@@ -87,8 +90,6 @@ src_configure() {
 			os="Linux" ;;
 	esac
 
-	# This make cherokee 1.2 sad
-	#	$(use_enable threads pthread) \
 	econf \
 		$(use_enable debug trace) \
 		$(use_enable debug backtraces) \
@@ -123,7 +124,7 @@ src_install() {
 		find "${ED}/usr/$(get_libdir)/cherokee" '(' -name '*.la' -o -name '*.a' ')' -delete || die
 	fi
 
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS NEWS README.rst
 
 	if use pam ; then
 		pamd_mimic system-auth cherokee auth account session || die
@@ -161,12 +162,13 @@ src_install() {
 	# logrotate
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/${PN}.logrotate-r1 ${PN}
+
+	systemd_dounit "${FILESDIR}"/cherokee.service
 }
 
 pkg_postinst() {
 	elog
 	if use admin ; then
-		python_mod_optimize "${EPREFIX}/usr/share/cherokee/admin/"
 		elog "Just run '/usr/sbin/cherokee-admin' and go to: http://localhost:9090"
 		elog
 		elog "Cherokee currently supports configuration versioning, so from now on,"
@@ -185,10 +187,4 @@ pkg_postinst() {
 	elog
 	elog "emerge www-servers/spawn-fcgi if you use Ruby on Rails with ${PN}."
 	elog
-}
-
-pkg_postrm() {
-	if use admin ; then
-		python_mod_cleanup "${EPREFIX}/usr/share/cherokee/admin/"
-	fi
 }

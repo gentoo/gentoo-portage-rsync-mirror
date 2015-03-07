@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/cherokee
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.103 2014/08/10 20:08:32 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.105 2015/03/07 16:45:29 blueness Exp $
+
+*cherokee-1.2.104 (07 Mar 2015)
+
+  07 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +cherokee-1.2.104.ebuild:
+  Version bump.  Bug #533502.  Thanks Leho Kraav.
+
+  07 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  -cherokee-1.2.101-r1.ebuild, -cherokee-1.2.101-r2.ebuild:
+  Remove older versions.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   cherokee-1.2.101-r1.ebuild, cherokee-1.2.101-r2.ebuild,
