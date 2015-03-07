@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/croscorefonts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/croscorefonts/ChangeLog,v 1.3 2014/01/18 12:08:33 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/croscorefonts/ChangeLog,v 1.4 2015/03/07 12:01:12 yngwin Exp $
+
+*croscorefonts-1.23.0 (07 Mar 2015)
+
+  07 Mar 2015; Ben de Groot <yngwin@gentoo.org> +croscorefonts-1.23.0.ebuild:
+  version bump
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> croscorefonts-1.21.0.ebuild:
   Add arm/arm64 love.

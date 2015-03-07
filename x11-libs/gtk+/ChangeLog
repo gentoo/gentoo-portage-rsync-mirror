@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.766 2015/03/03 11:12:56 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.767 2015/03/07 12:11:42 pacho Exp $
+
+*gtk+-2.24.27 (07 Mar 2015)
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> +gtk+-2.24.27.ebuild,
+  -gtk+-3.14.8.ebuild:
+  Version bump, drop old
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> gtk+-3.14.8.ebuild:
   add arm64 support, tested on A53 board

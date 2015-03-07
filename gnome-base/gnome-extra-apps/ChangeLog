@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-extra-apps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/ChangeLog,v 1.40 2015/02/11 10:01:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/ChangeLog,v 1.41 2015/03/07 12:26:34 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> -gnome-extra-apps-3.14.0.ebuild,
+  gnome-extra-apps-3.14.0-r1.ebuild:
+  Add a new game, drop old
 
 *gnome-extra-apps-3.14.0-r1 (11 Feb 2015)
 
