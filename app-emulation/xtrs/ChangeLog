@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xtrs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.57 2014/08/03 18:51:15 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.58 2015/03/07 21:24:23 ulm Exp $
+
+  07 Mar 2015; Ulrich Müller <ulm@gentoo.org> xtrs-4.9d-r3.ebuild:
+  Add slot to sys-libs/readline dependency.
 
   03 Aug 2014; Ulrich Müller <ulm@gentoo.org> -xtrs-4.9d-r1.ebuild:
   Remove old.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrome-remote-desktop/chrome-remote-desktop-41.0.2272.41-r1.ebuild,v 1.1 2015/03/03 05:34:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrome-remote-desktop/chrome-remote-desktop-41.0.2272.41-r1.ebuild,v 1.2 2015/03/07 21:24:13 vapier Exp $
 
 # Base URL: https://dl.google.com/linux/chrome-remote-desktop/deb/
 # Fetch the Release file:
@@ -16,7 +16,7 @@
 
 EAPI="4"
 
-inherit unpacker
+inherit unpacker eutils
 
 DESCRIPTION="access remote computers via Chrome!"
 PLUGIN_URL="https://chrome.google.com/remotedesktop"
