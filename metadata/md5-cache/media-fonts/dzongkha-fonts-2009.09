@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm setup unpack
+DEPEND=app-arch/unzip X? ( x11-apps/mkfontdir media-fonts/encodings )
+DESCRIPTION=Bhutanese/Tibetan fonts for dzongkha script, provided by the Bhutanese government
+EAPI=5
+HOMEPAGE=http://www.dit.gov.bt/downloads
+IUSE=X
+KEYWORDS=~amd64 ~arm ~arm64 ~x86
+LICENSE=freedist
+SLOT=0
+SRC_URI=http://www.dit.gov.bt/sites/default/files/dzongkhafonts.zip -> dzongkha-fonts-2009.09.zip
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_md5_=0929a5124ca34ca439696cf3ea1ee85a
