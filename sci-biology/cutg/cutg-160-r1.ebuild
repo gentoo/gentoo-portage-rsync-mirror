@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-160-r1.ebuild,v 1.1 2015/03/05 10:14:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-160-r1.ebuild,v 1.2 2015/03/07 19:59:57 jlec Exp $
 
 EAPI=5
 
@@ -32,6 +32,7 @@ src_compile() {
 
 src_install() {
 	local file
+	dodoc README CODON_LABEL SPSUM_LABEL
 	if ! use minimal; then
 		dodir /usr/share/${PN}
 		mv *.codon *.spsum "${ED}"/usr/share/${PN} || die \
@@ -46,6 +47,4 @@ src_install() {
 				"Installing the EMBOSS-indexed database failed."
 		done
 	fi
-
-	dodoc README CODON_LABEL SPSUM_LABEL
 }

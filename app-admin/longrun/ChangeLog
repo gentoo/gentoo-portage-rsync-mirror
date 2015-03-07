@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/longrun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.25 2012/11/18 10:47:19 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.26 2015/03/07 19:43:33 blueness Exp $
+
+  07 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/0.9-replace-loff_t.patch, longrun-0.9-r4.ebuild:
+  Fix type for pread/pwrite.  Bug #541694.
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML

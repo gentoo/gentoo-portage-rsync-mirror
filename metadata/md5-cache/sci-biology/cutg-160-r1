@@ -10,4 +10,4 @@ RDEPEND=emboss? ( sci-biology/emboss )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/cutg-160.tar.xz
-_md5_=66d9e08f7a666d65913cbed7dc4d6a26
+_md5_=874d6a8f39907b8da4d5cc6e6e9735bd

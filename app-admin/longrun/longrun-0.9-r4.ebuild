@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r4.ebuild,v 1.2 2009/11/20 14:44:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r4.ebuild,v 1.3 2015/03/07 19:43:33 blueness Exp $
 
 inherit eutils linux-info toolchain-funcs
 
@@ -41,6 +41,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}/${DEBIAN_PATCH}"
 	epatch "${FILESDIR}/${PV}-makefile_cflags.patch"
+	epatch "${FILESDIR}/${PV}-replace-loff_t.patch"
 }
 
 src_compile() {
