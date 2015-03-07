@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.218 2015/02/01 07:39:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.219 2015/03/07 12:50:38 grozin Exp $
+
+*sbcl-1.2.9 (07 Mar 2015)
+
+  07 Mar 2015; Andrey Grozin <grozin@gentoo.org> +sbcl-1.2.9.ebuild,
+  +files/bsd-sockets-test-1.2.9.patch:
+  Version bump, commenting out one more test in bsd-sockets (#517004), adding
+  pax-mark in src_install (#517008)
 
   01 Feb 2015; Mark Wright <gienah@gentoo.org> sbcl-1.2.6.ebuild:
   Applied my fix from sbcl-1.2.7 to sbcl-1.2.6 to fix Bug 526194 - dev-

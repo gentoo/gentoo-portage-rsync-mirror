@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.5.1.ebuild,v 1.3 2013/12/08 18:50:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-frippery/gnome-shell-frippery-0.9.0.ebuild,v 1.1 2015/03/07 12:52:50 pacho Exp $
 
 EAPI="5"
 
@@ -10,16 +10,18 @@ SRC_URI="http://intgat.tigress.co.uk/rmy/extensions/${P}.tgz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-admin/eselect-gnome-shell-extensions
+RDEPEND="
+	app-admin/eselect-gnome-shell-extensions
 	>=dev-libs/gjs-1.29
 	dev-libs/gobject-introspection
 	gnome-base/gnome-menus:3[introspection]
-	>=gnome-base/gnome-shell-3.6
+	>=gnome-base/gnome-shell-3.14
 	media-libs/clutter:1.0[introspection]
-	x11-libs/pango[introspection]"
+	x11-libs/pango[introspection]
+"
 DEPEND=""
 
 S="${WORKDIR}/.local/share/gnome-shell"

@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.188 2014/12/30 11:41:23 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.189 2015/03/07 12:44:57 pacho Exp $
+
+*seahorse-3.14.1 (07 Mar 2015)
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> +seahorse-3.14.1.ebuild:
+  Version bump
 
   30 Dec 2014; Pacho Ramos <pacho@gentoo.org> seahorse-3.12.2.ebuild,
   seahorse-3.14.0.ebuild:
