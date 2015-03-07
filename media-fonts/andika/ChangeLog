@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/andika
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/andika/ChangeLog,v 1.1 2015/03/07 08:20:36 yngwin Exp $
+
+*andika-5.000 (07 Mar 2015)
+
+  07 Mar 2015; Ben de Groot <yngwin@gentoo.org> +andika-5.000.ebuild,
+  +metadata.xml:
+  initial commit

@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.105 2015/03/07 08:00:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.107 2015/03/07 08:07:32 graaff Exp $
+
+  07 Mar 2015; Hans de Graaff <graaff@gentoo.org> mysql-workbench-6.2.3.ebuild,
+  mysql-workbench-6.2.3-r1.ebuild, mysql-workbench-6.2.5.ebuild:
+  Add ~ppc keyword for bug 492364 now that vsqlite++ was marked stable for it.
+
+  07 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  -mysql-workbench-5.2.47.ebuild, -mysql-workbench-5.2.47-r1.ebuild:
+  Cleanup.
 
 *mysql-workbench-6.2.5 (07 Mar 2015)
 

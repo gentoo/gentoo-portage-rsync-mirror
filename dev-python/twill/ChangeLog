@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twill
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.17 2015/01/16 03:37:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twill/ChangeLog,v 1.18 2015/03/07 08:24:53 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> twill-0.9-r1.ebuild:
+  ppc stable, bug 540290
 
   16 Jan 2015; Patrick Lauer <patrick@gentoo.org> twill-0.9-r1.ebuild:
   Stable on amd64 and x86 for 527558

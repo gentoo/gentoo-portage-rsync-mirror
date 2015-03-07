@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.51 2015/03/07 00:19:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.52 2015/03/07 08:24:16 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> tempita-0.5.3.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> tempita-0.5.3.ebuild:
   ppc64 stable, bug 540290

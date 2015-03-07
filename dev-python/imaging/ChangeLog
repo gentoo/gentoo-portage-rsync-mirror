@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.98 2015/03/07 00:17:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.99 2015/03/07 08:17:35 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> imaging-1.1.7-r5.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> imaging-1.1.7-r5.ebuild:
   ppc64 stable, bug 540290

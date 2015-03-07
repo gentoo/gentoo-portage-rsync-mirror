@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configobj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.55 2015/03/07 00:15:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configobj/ChangeLog,v 1.56 2015/03/07 08:15:12 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> configobj-5.0.5.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> configobj-5.0.5.ebuild:
   ppc64 stable, bug 540290

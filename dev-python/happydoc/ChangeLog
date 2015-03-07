@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.30 2015/03/06 22:23:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.31 2015/03/07 08:17:22 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> happydoc-3.1-r2.ebuild:
+  ppc stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> happydoc-3.1-r2.ebuild:
   amd64 stable, bug 540290

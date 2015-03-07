@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.2.0_p20100322-r1.ebuild,v 1.6 2015/02/10 10:03:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/pyode-1.2.0_p20100322-r1.ebuild,v 1.7 2015/03/07 08:19:49 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/PyODE-snapshot-${SNAPSHOT_DATE}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=">=dev-games/ode-0.7

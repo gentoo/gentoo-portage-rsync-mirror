@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pep8
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.44 2015/03/07 00:22:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.45 2015/03/07 08:28:29 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pep8-1.5.6.ebuild,
+  pep8-1.5.7.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pep8-1.5.6.ebuild,
   pep8-1.5.7.ebuild:

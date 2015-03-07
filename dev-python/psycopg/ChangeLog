@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.198 2015/03/07 00:17:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.199 2015/03/07 08:18:52 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> psycopg-1.1.21-r1.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> psycopg-1.1.21-r1.ebuild:
   ppc64 stable, bug 540290

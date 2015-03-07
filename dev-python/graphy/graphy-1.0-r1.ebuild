@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graphy/graphy-1.0-r1.ebuild,v 1.4 2015/03/06 22:22:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graphy/graphy-1.0-r1.ebuild,v 1.5 2015/03/07 08:16:52 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="examples"
 
 S=${WORKDIR}/${MY_P}

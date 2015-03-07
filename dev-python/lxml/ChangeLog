@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.210 2015/03/07 00:17:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.211 2015/03/07 08:18:25 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> lxml-3.4.1.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> lxml-3.4.1.ebuild:
   ppc64 stable, bug 540290

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.150 2015/03/07 00:17:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.151 2015/03/07 08:18:13 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> logilab-common-0.63.2.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> logilab-common-0.63.2.ebuild:
   ppc64 stable, bug 540290

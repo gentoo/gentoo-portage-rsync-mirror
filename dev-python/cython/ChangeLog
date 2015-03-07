@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.148 2015/03/07 00:16:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.149 2015/03/07 08:15:34 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> cython-0.22.ebuild:
+  ppc stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> cython-0.22.ebuild:
   ppc64 stable, bug 540290

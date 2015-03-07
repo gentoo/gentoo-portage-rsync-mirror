@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.25 2015/02/19 07:02:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyode/ChangeLog,v 1.26 2015/03/07 08:19:49 pacho Exp $
+
+  07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyode-1.2.0_p20100322-r1.ebuild:
+  ppc stable, bug 540290
 
   19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -pyode-1.2.0_p20100322.ebuild:
