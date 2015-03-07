@@ -7,6 +7,6 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
-SRC_URI=https://github.com/tomtom/tcomment_vim/archive/2.08.tar.gz -> tcomment-2.08.tar.gz
+SRC_URI=https://github.com/tomtom/tcomment_vim/archive/3.06.tar.gz -> tcomment-3.06.tar.gz
 _eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
-_md5_=41b0f380c1b5659de0fad324e4ad8ba5
+_md5_=ff7f69bf1efb4dbaf544d0dbc6ec0281

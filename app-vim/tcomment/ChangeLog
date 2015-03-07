@@ -1,6 +1,16 @@
 # ChangeLog for app-vim/tcomment
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tcomment/ChangeLog,v 1.6 2014/10/18 03:30:47 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tcomment/ChangeLog,v 1.8 2015/03/06 23:04:28 radhermit Exp $
+
+  06 Mar 2015; Tim Harder <radhermit@gentoo.org> -tcomment-2.08.ebuild,
+  -tcomment-2.09.ebuild, -tcomment-3.00.ebuild, -tcomment-3.01.ebuild,
+  -tcomment-3.03.ebuild:
+  Remove old.
+
+*tcomment-3.06 (06 Mar 2015)
+
+  06 Mar 2015; Tim Harder <radhermit@gentoo.org> +tcomment-3.06.ebuild:
+  Version bump.
 
 *tcomment-3.04 (18 Oct 2014)
 
