@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.19.ebuild,v 1.1 2015/01/24 12:31:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.21.ebuild,v 1.1 2015/03/07 11:55:45 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
