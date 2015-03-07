@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.9.7.ebuild,v 1.2 2015/03/07 10:18:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.9.8.ebuild,v 1.1 2015/03/07 10:18:38 jlec Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="High-level widget set for Tcl/Tk"
 HOMEPAGE="http://tcllib.sourceforge.net/"
-SRC_URI="mirror://sourceforge/tcllib/${P}.zip"
+SRC_URI="mirror://sourceforge/project/tcllib/${MY_PN}/${PV}/${P}.tar.gz"
 
 LICENSE="tcltk"
 SLOT="0"

@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/bwidget
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.30 2014/03/18 17:14:28 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.31 2015/03/07 10:18:38 jlec Exp $
+
+*bwidget-1.9.8 (07 Mar 2015)
+
+  07 Mar 2015; Justin Lecher <jlec@gentoo.org> +bwidget-1.9.8.ebuild,
+  +files/bwidget-1.9.7-test.patch, +files/bwidget-1.9.8-test.patch,
+  bwidget-1.9.7.ebuild:
+  Version BUmp
 
 *bwidget-1.9.7 (18 Mar 2014)
 
