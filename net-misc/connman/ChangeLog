@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/connman
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.89 2014/12/19 04:32:21 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.90 2015/03/07 14:00:35 dlan Exp $
+
+*connman-1.28 (07 Mar 2015)
+
+  07 Mar 2015; Yixun Lan <dlan@gentoo.org> +connman-1.28.ebuild, metadata.xml:
+  version bump, fix bug 542336, new USE="l2tp pptp wispr" introduced; drop
+  ppc/ppc64 keyword, see bug 542378. thanks Balint SZENTE
 
 *connman-1.27 (19 Dec 2014)
 

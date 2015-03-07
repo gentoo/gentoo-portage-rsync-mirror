@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/xl2tpd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.46 2014/05/07 22:53:36 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xl2tpd/ChangeLog,v 1.47 2015/03/07 13:49:57 dlan Exp $
+
+  07 Mar 2015; Yixun Lan <dlan@gentoo.org> xl2tpd-1.3.1-r4.ebuild,
+  xl2tpd-1.3.6.ebuild:
+  add arm support, tested on cortex-a9 board
 
 *xl2tpd-1.3.6 (07 May 2014)
 

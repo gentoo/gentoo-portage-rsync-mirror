@@ -5629,11 +5629,14 @@ net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/cgminer:spondoolies - Enable support for Spondoolies
 net-misc/chrony:rtc - Include support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.
+net-misc/connman:l2tp - Use net-dialup/xl2tpd for L2TP VPN support.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
 net-misc/connman:openconnect - Use net-misc/openconnect for VPN support.
 net-misc/connman:openvpn - Use net-misc/openvpn for openvpn support.
+net-misc/connman:pptp - Use net-dialup/pptpclient for PPTP VPN support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:vpnc - Use net-misc/vpnc for cisco VPN support.
+net-misc/connman:wispr - Enable support for WISPr hotspot logins.
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:metalink - Enable metalink support
 net-misc/curl:rtmp - Enable RTMP Streaming Media support
