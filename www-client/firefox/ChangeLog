@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.392 2015/03/04 00:02:33 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.393 2015/03/07 08:40:02 zlogene Exp $
+
+  07 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> firefox-31.5.0.ebuild:
+  x86 stable wrt bug #541316
 
 *firefox-36.0-r1 (04 Mar 2015)
 
