@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.3.ebuild,v 1.13 2014/08/10 20:19:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.9.3.ebuild,v 1.14 2015/03/07 21:34:40 vapier Exp $
 
 EAPI=5
 inherit eutils libtool linux-info udev toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/fuse/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="examples kernel_linux kernel_FreeBSD static-libs"
 
 PDEPEND="kernel_FreeBSD? ( sys-fs/fuse4bsd )"
@@ -32,6 +32,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-kernel-types.patch
 	# sandbox violation with mtab writability wrt #438250
 	# don't sed configure.in without eautoreconf because of maintainer mode
 	sed -i 's:umount --fake:true --fake:' configure || die

@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.13.ebuild,v 1.7 2009/01/19 23:56:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.13.ebuild,v 1.8 2015/03/07 21:45:58 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="a simple interactive planetary system simulator"
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	dev-lang/ocaml[tk]"
 
 src_install() {
-	dogamesbin planets || die "dogamesbin failed"
+	dogamesbin planets
 	doicon ${PN}.png
 	domenu ${PN}.desktop
 	doman ${PN}.1

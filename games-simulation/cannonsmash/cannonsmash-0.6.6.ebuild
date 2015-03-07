@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.19 2014/05/15 16:59:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.20 2015/03/07 21:35:02 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_OGG=danslatristesse2-48.ogg
@@ -54,18 +54,16 @@ src_configure() {
 
 src_compile() {
 	emake \
-		localedir="/usr/share" \
-		|| die "emake failed"
+		localedir="/usr/share"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	if use vorbis ; then
 		insinto "${GAMES_DATADIR}"/csmash
-		doins "${DISTDIR}"/${MY_OGG} || die "doins failed"
+		doins "${DISTDIR}"/${MY_OGG}
 	fi
 	newicon win32/orange.ico ${PN}.ico
 	make_desktop_entry csmash "Cannon Smash" /usr/share/pixmaps/${PN}.ico
-	dodoc AUTHORS CREDITS README*
 	prepgamesdirs
 }
