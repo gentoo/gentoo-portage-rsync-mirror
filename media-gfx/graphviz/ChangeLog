@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.283 2015/02/15 04:21:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.284 2015/03/07 11:29:49 slyfox Exp $
+
+*graphviz-2.36.0-r1 (07 Mar 2015)
+
+  07 Mar 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/graphviz-2.38-fix-backslashes.patch, +graphviz-2.36.0-r1.ebuild:
+  Backport backslash fix from upstream. Thanks to Ulya Trofimovich.
 
   15 Feb 2015; Mike Frysinger <vapier@gentoo.org>
   +files/graphviz-2.26.3-libtool-configure.patch, graphviz-2.26.3-r4.ebuild:
