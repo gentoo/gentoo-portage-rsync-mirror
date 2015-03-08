@@ -14,10 +14,10 @@ IUSE=""
 # Crypto is needed to have an internal OpenSSL header
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${USBIN}.tar.xz
-			mirror://gentoo/${SBIN}.tar.xz
-			mirror://gentoo/${CONTRIB}.tar.xz
-			mirror://gentoo/${ETC}.tar.xz"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz"
 fi
 
 RDEPEND="net-libs/libpcap"

@@ -11,16 +11,16 @@ SLOT="0"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${P}.tar.xz
-			mirror://gentoo/${CONTRIB}.tar.xz
-			mirror://gentoo/${UBIN}.tar.xz
-			mirror://gentoo/${LIB}.tar.xz
-			mirror://gentoo/${SBIN}.tar.xz
-			mirror://gentoo/${ETC}.tar.xz
-			mirror://gentoo/${GNU}.tar.xz
-			nis? ( mirror://gentoo/${LIBEXEC}.tar.xz )
-			build? ( mirror://gentoo/${SYS}.tar.xz
-			mirror://gentoo/${INCLUDE}.tar.xz )"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${P}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${GNU}.tar.xz
+			nis? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIBEXEC}.tar.xz )
+			build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${INCLUDE}.tar.xz )"
 fi
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?,netware?]

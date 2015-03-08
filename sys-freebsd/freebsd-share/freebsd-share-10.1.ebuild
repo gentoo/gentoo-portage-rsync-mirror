@@ -13,16 +13,16 @@ IUSE="doc zfs"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${SHARE}.tar.xz
-		mirror://gentoo/${CONTRIB}.tar.xz
-		mirror://gentoo/${GNU}.tar.xz
-		mirror://gentoo/${UBIN}.tar.xz
-		mirror://gentoo/${USBIN}.tar.xz
-		mirror://gentoo/${SBIN}.tar.xz
-		mirror://gentoo/${BIN}.tar.xz
-		mirror://gentoo/${LIB}.tar.xz
-		mirror://gentoo/${ETC}.tar.xz
-		zfs? ( mirror://gentoo/${CDDL}.tar.xz )"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SHARE}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${GNU}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${BIN}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz
+		zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )"
 fi
 
 DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*

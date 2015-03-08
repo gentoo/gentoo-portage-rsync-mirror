@@ -13,9 +13,9 @@ IUSE="bzip2 ieee1394 tftp zfs"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${SYS}.tar.xz
-		mirror://gentoo/${LIB}.tar.xz
-		mirror://gentoo/${CONTRIB}.tar.xz"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz"
 fi
 
 RDEPEND=""

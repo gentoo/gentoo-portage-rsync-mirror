@@ -14,17 +14,17 @@ SLOT="0"
 # extracting the whole tarball
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${LIB}.tar.xz
-			mirror://gentoo/${CONTRIB}.tar.xz
-			mirror://gentoo/${CRYPTO}.tar.xz
-			mirror://gentoo/${LIBEXEC}.tar.xz
-			mirror://gentoo/${ETC}.tar.xz
-			mirror://gentoo/${INCLUDE}.tar.xz
-			mirror://gentoo/${USBIN}.tar.xz
-			mirror://gentoo/${GNU}.tar.xz
-			mirror://gentoo/${SECURE}.tar.xz
-			build? ( mirror://gentoo/${SYS}.tar.xz )
-			zfs? ( mirror://gentoo/${CDDL}.tar.xz )"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CRYPTO}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIBEXEC}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${INCLUDE}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${GNU}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SECURE}.tar.xz
+			build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz )
+			zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )"
 fi
 
 if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
@@ -48,7 +48,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		>=virtual/libiconv-0-r2"
 else
 	SRC_URI="${SRC_URI}
-			mirror://gentoo/${SYS}.tar.xz"
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz"
 fi
 
 DEPEND="${DEPEND}

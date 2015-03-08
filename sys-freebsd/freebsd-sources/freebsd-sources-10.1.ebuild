@@ -13,8 +13,8 @@ IUSE="+build-kernel debug dtrace profile zfs"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${SYS}.tar.xz
-		mirror://gentoo/${UBIN}.tar.xz"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz"
 fi
 
 RDEPEND="dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )

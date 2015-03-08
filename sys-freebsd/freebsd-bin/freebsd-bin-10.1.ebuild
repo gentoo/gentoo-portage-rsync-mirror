@@ -13,10 +13,10 @@ IUSE=""
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${BIN}.tar.xz
-			mirror://gentoo/${UBIN}.tar.xz
-			mirror://gentoo/${SBIN}.tar.xz
-			mirror://gentoo/${LIB}.tar.xz"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${BIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
+			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz"
 fi
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*

@@ -13,7 +13,7 @@ IUSE="userland_GNU"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="mirror://gentoo/${SHARE}.tar.xz"
+	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SHARE}.tar.xz"
 fi
 
 RDEPEND=""
