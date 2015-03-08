@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-3.18.ebuild,v 1.1 2015/03/04 19:52:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-3.18.ebuild,v 1.2 2015/03/08 03:32:24 vapier Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.18-no-werror.patch
 	epatch "${FILESDIR}"/${PN}-3.18-openssl.patch
 	epatch "${FILESDIR}"/${PN}-3.18-cflags.patch
+	epatch "${FILESDIR}"/${PN}-3.18-libreg-link.patch #542436
 	sed -i \
 		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
 		Makefile || die

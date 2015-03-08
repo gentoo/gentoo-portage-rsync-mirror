@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.70 2015/03/04 19:52:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.71 2015/03/08 03:32:24 vapier Exp $
+
+  08 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/crda-3.18-libreg-link.patch, crda-3.18.ebuild:
+  Fix libreg linkage #542436 by Rémi Cardona.
 
 *crda-3.18 (04 Mar 2015)
 
