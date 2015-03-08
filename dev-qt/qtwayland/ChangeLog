@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtwayland
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwayland/ChangeLog,v 1.6 2015/02/24 18:50:02 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwayland/ChangeLog,v 1.7 2015/03/08 14:03:38 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtwayland-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *qtwayland-5.4.1 (24 Feb 2015)
 

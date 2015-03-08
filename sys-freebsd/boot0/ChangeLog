@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.50 2015/02/18 17:09:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.51 2015/03/08 14:01:56 mgorny Exp $
+
+*boot0-10.1 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +boot0-10.1.ebuild,
+  +files/boot0-10.1-drop-unsupport-cflags.patch, +files/boot0-10.1-gcc46.patch:
+  Add FreeBSD 10.1 ebuilds, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/46 by nigoro.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org>
   +files/boot0-add-nossp-cflags.patch, boot0-9.1.ebuild, boot0-9.2.ebuild:

@@ -1,6 +1,17 @@
 # ChangeLog for sys-freebsd/freebsd-sources
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.106 2014/06/05 02:33:45 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.107 2015/03/08 14:01:56 mgorny Exp $
+
+*freebsd-sources-10.1 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +files/config-GENTOO,
+  +files/freebsd-sources-10.0-gentoo.patch,
+  +files/freebsd-sources-10.1-cve-2014-8612.patch,
+  +files/freebsd-sources-10.1-cve-2014-8613.patch,
+  +files/freebsd-sources-10.1-cve-2015-1414.patch, +freebsd-sources-10.1.ebuild,
+  metadata.xml:
+  Add FreeBSD 10.1 ebuilds, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/46 by nigoro.
 
 *freebsd-sources-9.1-r9 (05 Jun 2014)
 

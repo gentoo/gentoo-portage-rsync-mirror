@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtwebsockets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebsockets/ChangeLog,v 1.10 2015/02/24 20:23:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebsockets/ChangeLog,v 1.11 2015/03/08 14:03:43 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtwebsockets-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
   24 Feb 2015; Davide Pesavento <pesa@gentoo.org>
   -files/0001-Remove-dependency-on-unused-sql-module.patch:

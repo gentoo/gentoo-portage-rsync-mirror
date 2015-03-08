@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-share
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.58 2013/11/09 09:17:59 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.59 2015/03/08 14:01:56 mgorny Exp $
+
+*freebsd-share-10.1 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +files/freebsd-share-10.0-gentoo-eapi3.patch, +freebsd-share-10.1.ebuild:
+  Add FreeBSD 10.1 ebuilds, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/46 by nigoro.
 
 *freebsd-share-9.2 (09 Nov 2013)
 

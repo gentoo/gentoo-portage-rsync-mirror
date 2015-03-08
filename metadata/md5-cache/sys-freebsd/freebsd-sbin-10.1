@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare setup unpack
+DEPEND==sys-freebsd/freebsd-lib-10.1*[ipv6?,atm?,netware?] =sys-freebsd/freebsd-libexec-10.1* >=dev-libs/expat-2.0.1 ssl? ( dev-libs/openssl ) >=dev-libs/libedit-20120311.3.0-r1 sys-libs/readline || ( sys-process/cronie sys-process/vixie-cron ) atm? ( net-analyzer/bsnmp ) !build? ( =sys-freebsd/freebsd-sources-10.1* ) =sys-freebsd/freebsd-mk-defs-10.1* virtual/pmake virtual/pmake
+DESCRIPTION=FreeBSD sbin utils
+EAPI=3
+HOMEPAGE=http://www.freebsd.org/
+IUSE=atm ipfilter +pf ipv6 build ssl +cxx netware profile
+KEYWORDS=~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+LICENSE=BSD
+RDEPEND==sys-freebsd/freebsd-lib-10.1*[ipv6?,atm?,netware?] =sys-freebsd/freebsd-libexec-10.1* >=dev-libs/expat-2.0.1 ssl? ( dev-libs/openssl ) >=dev-libs/libedit-20120311.3.0-r1 sys-libs/readline || ( sys-process/cronie sys-process/vixie-cron ) atm? ( net-analyzer/bsnmp )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~mgorny/dist/freebsd/10.1/freebsd-sbin-10.1.tar.xz http://dev.gentoo.org/~mgorny/dist/freebsd/10.1/freebsd-contrib-10.1.tar.xz http://dev.gentoo.org/~mgorny/dist/freebsd/10.1/freebsd-lib-10.1.tar.xz http://dev.gentoo.org/~mgorny/dist/freebsd/10.1/freebsd-libexec-10.1.tar.xz http://dev.gentoo.org/~mgorny/dist/freebsd/10.1/freebsd-usbin-10.1.tar.xz http://dev.gentoo.org/~mgorny/dist/freebsd/10.1/freebsd-etc-10.1.tar.xz build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/10.1/freebsd-sys-10.1.tar.xz )
+_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	freebsd	b2473fe162b685fe81251ec1f7b2a218	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=72fd472aa4b62784962c2371fe589ad8

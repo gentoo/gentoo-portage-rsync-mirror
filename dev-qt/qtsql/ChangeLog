@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtsql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.29 2015/02/24 20:25:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.30 2015/03/08 14:02:59 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtsql-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
   24 Feb 2015; Davide Pesavento <pesa@gentoo.org>
   -files/qtsql-5.3.1-path-filtering.patch:

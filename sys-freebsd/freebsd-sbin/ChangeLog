@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.82 2014/07/24 01:58:41 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.83 2015/03/08 14:01:55 mgorny Exp $
+
+*freebsd-sbin-10.1 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +files/freebsd-sbin-10.0-zlib.patch, +freebsd-sbin-10.1.ebuild:
+  Add FreeBSD 10.1 ebuilds, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/46 by nigoro.
 
   24 Jul 2014; Naohiro Aota <naota@gentoo.org> freebsd-sbin-8.2-r1.ebuild,
   freebsd-sbin-9.1.ebuild, freebsd-sbin-9.2.ebuild:

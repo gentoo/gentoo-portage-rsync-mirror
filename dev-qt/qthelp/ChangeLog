@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.36 2015/02/24 18:35:57 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.37 2015/03/08 14:01:23 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qthelp-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *qthelp-5.4.1 (24 Feb 2015)
 

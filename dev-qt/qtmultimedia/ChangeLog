@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtmultimedia
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.22 2015/02/24 18:48:38 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.23 2015/03/08 14:01:41 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtmultimedia-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *qtmultimedia-5.4.1 (24 Feb 2015)
 

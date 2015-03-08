@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtwidgets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.12 2015/02/24 18:48:19 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.13 2015/03/08 14:03:48 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtwidgets-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *qtwidgets-5.4.1 (24 Feb 2015)
 
