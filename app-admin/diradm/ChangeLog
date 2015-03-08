@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/diradm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.49 2014/08/10 01:37:40 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.50 2015/03/08 00:45:18 robbat2 Exp $
+
+  08 Mar 2015; Robin H. Johnson <robbat2@gentoo.org> -diradm-2.9.3.ebuild:
+  Cleanup.
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> diradm-2.9.3.ebuild,
   diradm-2.9.5.ebuild, diradm-2.9.6.ebuild, diradm-2.9.7.1.ebuild,
