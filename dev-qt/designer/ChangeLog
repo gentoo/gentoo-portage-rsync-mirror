@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/designer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.26 2015/02/24 18:48:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.27 2015/03/08 13:59:07 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> designer-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *designer-5.4.1 (24 Feb 2015)
 

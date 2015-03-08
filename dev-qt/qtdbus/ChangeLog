@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtdbus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/ChangeLog,v 1.23 2015/02/24 18:49:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/ChangeLog,v 1.24 2015/03/08 14:00:15 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtdbus-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *qtdbus-5.4.1 (24 Feb 2015)
 

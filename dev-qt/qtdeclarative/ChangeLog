@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtdeclarative
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdeclarative/ChangeLog,v 1.26 2015/02/24 20:24:20 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdeclarative/ChangeLog,v 1.27 2015/03/08 14:00:27 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtdeclarative-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
   24 Feb 2015; Michael Palimaka <kensington@gentoo.org>
   qtdeclarative-5.4.1.ebuild:

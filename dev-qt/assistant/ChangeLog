@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/assistant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/assistant/ChangeLog,v 1.22 2015/02/24 18:49:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/assistant/ChangeLog,v 1.23 2015/03/08 13:58:55 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> assistant-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *assistant-5.4.1 (24 Feb 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/versiontools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/ChangeLog,v 1.10 2015/03/06 22:41:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/ChangeLog,v 1.11 2015/03/08 13:47:36 mrueg Exp $
+
+  08 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -versiontools-1.9.1.ebuild:
+  Remove old.
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> versiontools-1.9.1-r1.ebuild:
   amd64 stable, bug 540290

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/qtdbus-5.4.1.ebuild,v 1.1 2015/02/24 18:49:03 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/qtdbus-5.4.1.ebuild,v 1.2 2015/03/08 14:00:15 pesa Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit qt5-build
 DESCRIPTION="The D-Bus module for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == live ]]; then
-	KEYWORDS="~hppa"
+	KEYWORDS=""
 else
 	KEYWORDS="~amd64 ~arm ~hppa ~x86"
 fi

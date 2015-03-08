@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/linguist-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist-tools/ChangeLog,v 1.10 2015/02/24 18:48:24 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist-tools/ChangeLog,v 1.11 2015/03/08 13:59:12 pesa Exp $
+
+  08 Mar 2015; Davide Pesavento <pesa@gentoo.org> linguist-tools-5.4.1.ebuild:
+  Remove all keywords from "live" branch.
 
 *linguist-tools-5.4.1 (24 Feb 2015)
 
