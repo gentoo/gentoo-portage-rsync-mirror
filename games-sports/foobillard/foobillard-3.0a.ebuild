@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.17 2011/10/13 14:45:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.18 2015/03/08 19:24:26 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools games
 
 DESCRIPTION="8ball, 9ball, snooker and carambol game"
@@ -22,6 +22,7 @@ DEPEND="x11-libs/libXaw
 	media-libs/libpng
 	sdl? ( media-libs/libsdl )
 	!sdl? ( media-libs/freeglut )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
@@ -29,6 +30,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-fbsd.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-gl-clamp.patch
+	mv configure.{in,ac}
+	rm aclocal.m4
 
 	eautoreconf
 }
@@ -42,8 +45,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README README.FONTS
+	default
 	doman foobillard.6
 	newicon data/full_symbol.png foobillard.png
 	make_desktop_entry foobillard Foobillard

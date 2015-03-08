@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.12 2010/09/16 17:01:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/billardgl/billardgl-1.75-r1.ebuild,v 1.13 2015/03/08 19:17:38 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="an OpenGL billards game"
@@ -20,6 +20,7 @@ DEPEND="x11-libs/libXi
 	virtual/opengl
 	virtual/glu
 	media-libs/freeglut"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/BillardGL-${PV}/src
 
@@ -44,9 +45,9 @@ src_prepare() {
 }
 
 src_install() {
-	newgamesbin BillardGL ${PN} || die "newgamesbin failed"
+	newgamesbin BillardGL ${PN}
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r lang Texturen || die "doins failed"
+	doins -r lang Texturen
 	dodoc README
 	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} BillardGL
