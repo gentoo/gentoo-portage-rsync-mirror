@@ -1,11 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mpatch/mpatch-0.8.ebuild,v 1.4 2014/08/10 21:28:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mpatch/mpatch-0.8-r1.ebuild,v 1.1 2015/03/08 08:25:25 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
+EAPI=5
 
-inherit distutils
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1
 
 DESCRIPTION="Patch-like tool for applying diffs which can resolve common causes of patch rejects"
 HOMEPAGE="http://oss.oracle.com/~mason/mpatch/"
@@ -20,11 +22,10 @@ DEPEND=""
 RDEPEND=""
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 src_install() {
-	distutils_src_install
-	dobin cmd/qp cmd/mp || die "dobin failed"
+	distutils-r1_src_install
+	dobin cmd/qp cmd/mp
 }
