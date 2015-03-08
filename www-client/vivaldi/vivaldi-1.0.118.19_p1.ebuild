@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.94.2_p2-r2.ebuild,v 1.1 2015/02/21 09:41:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.118.19_p1.ebuild,v 1.1 2015/03/07 23:13:29 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -12,13 +12,15 @@ inherit chromium multilib unpacker toolchain-funcs
 
 DESCRIPTION="A new browser for our friends"
 HOMEPAGE="http://vivaldi.com/"
+VIVALDI_BASE_URI="${HOMEPAGE}download/${PN}-preview_${PV/_p/-}_"
 SRC_URI="
-	amd64? ( ${HOMEPAGE}download/${PN^}_TP${PV/*_p}_${PV/_p*}_amd64.deb )
+	amd64? ( ${VIVALDI_BASE_URI}amd64.deb )
+	x86? ( ${VIVALDI_BASE_URI}i386.deb )
 "
 
 LICENSE="Vivaldi"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RESTRICT="bindist mirror"
 
@@ -66,19 +68,19 @@ src_unpack() {
 
 src_prepare() {
 	sed -i \
-		-e 's|vivaldi-stable|vivaldi|g' \
+		-e 's|vivaldi-preview|vivaldi|g' \
 		usr/share/applications/${PN}.desktop \
 		usr/share/xfce4/helpers/${PN}.desktop || die
 
-	mv usr/share/doc/${PN}-stable usr/share/doc/${PF} || die
-	rm usr/bin/${PN}-stable || die
+	mv usr/share/doc/${PN}-preview usr/share/doc/${PF} || die
+	rm usr/bin/${PN}-preview || die
 	rm _gpgbuilder || die
 
 	local c d
 	for d in 16 22 24 32 48 64 128 256; do
 		mkdir -p usr/share/icons/hicolor/${d}x${d}/apps || die
 		cp \
-			opt/vivaldi/product_logo_${d}.png \
+			${VIVALDI_HOME}/product_logo_${d}.png \
 			usr/share/icons/hicolor/${d}x${d}/apps/vivaldi.png || die
 	done
 
