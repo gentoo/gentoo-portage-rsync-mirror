@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.163 2015/02/23 11:48:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.164 2015/03/08 15:13:40 mgorny Exp $
+
+# Michał Górny <mgorny@gentoo.org> (08 Mar 2015)
+# Dependency not keyworded on this arch, bug #542570.
+xfce-base/xfce4-settings libinput
 
 # Alexis Ballier <aballier@gentoo.org> (11 Feb 2015)
 # Missing ffmpeg deps, bug #510340

@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst postrm preinst prepare setup
+DEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.30 >=x11-libs/gtk+-3.2:3 >=xfce-base/garcon-0.3 >=xfce-base/libxfce4util-4.11 >=xfce-base/libxfce4ui-4.11 >=xfce-base/xfconf-4.10 !xfce-base/xfce-utils dev-util/intltool sys-devel/gettext virtual/pkgconfig >=sys-apps/sed-4
+DESCRIPTION=A tool to find and launch installed applications for the Xfce desktop environment
+EAPI=5
+HOMEPAGE=http://www.xfce.org/projects/
+IUSE=debug
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.30 >=x11-libs/gtk+-3.2:3 >=xfce-base/garcon-0.3 >=xfce-base/libxfce4util-4.11 >=xfce-base/libxfce4ui-4.11 >=xfce-base/xfconf-4.10 !xfce-base/xfce-utils
+SLOT=0
+SRC_URI=mirror://xfce/src/xfce/xfce4-appfinder/4.12/xfce4-appfinder-4.12.0.tar.bz2
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	xfconf	eee85b2bc9e9826f5a9c1349a75a69fe
+_md5_=50660638e951e20aea23a3b80511df38

@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.89 2014/12/03 05:39:40 williamh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.90 2015/03/08 15:06:39 mgorny Exp $
+
+*xfce4-power-manager-1.4.3 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-power-manager-1.4.3.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
 
 *xfce4-power-manager-1.4.2 (03 Dec 2014)
 

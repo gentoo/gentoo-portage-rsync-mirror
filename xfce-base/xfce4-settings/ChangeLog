@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.126 2015/03/03 13:11:45 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.127 2015/03/08 15:06:38 mgorny Exp $
+
+*xfce4-settings-4.12.0 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfce4-settings-4.12.0.ebuild,
+  metadata.xml:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> xfce4-settings-4.11.3.ebuild:
   add arm64 support, tested on A53 board

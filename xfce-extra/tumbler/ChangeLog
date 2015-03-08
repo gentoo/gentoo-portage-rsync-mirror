@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/tumbler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.65 2014/04/22 13:59:14 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.66 2015/03/08 15:06:39 mgorny Exp $
+
+*tumbler-0.1.31 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +tumbler-0.1.31.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
 
   22 Apr 2014; Samuli Suominen <ssuominen@gentoo.org> -tumbler-0.1.25.ebuild,
   -tumbler-0.1.29.ebuild:

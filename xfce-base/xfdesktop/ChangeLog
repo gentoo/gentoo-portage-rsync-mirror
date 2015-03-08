@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.251 2015/03/03 13:14:24 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.252 2015/03/08 15:06:39 mgorny Exp $
+
+*xfdesktop-4.12.0 (08 Mar 2015)
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfdesktop-4.12.0.ebuild:
+  Xfce 4.12 version bump, bug #541962. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/63 by me and damex.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> xfdesktop-4.11.8.ebuild:
   add arm64 support, tested on A53 board

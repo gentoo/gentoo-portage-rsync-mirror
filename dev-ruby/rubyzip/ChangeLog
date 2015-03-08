@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.44 2015/02/04 06:42:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.45 2015/03/08 15:26:36 graaff Exp $
+
+*rubyzip-0.9.9-r2 (08 Mar 2015)
+
+  08 Mar 2015; Hans de Graaff <graaff@gentoo.org> rubyzip-0.9.9-r1.ebuild,
+  +rubyzip-0.9.9-r2.ebuild:
+  Create stable candidate.
 
 *rubyzip-1.1.7 (04 Feb 2015)
 

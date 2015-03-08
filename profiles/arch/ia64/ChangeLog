@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.225 2015/02/20 13:03:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.226 2015/03/08 15:13:40 mgorny Exp $
+
+  08 Mar 2015; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Mask xfce-base/xfce4-settings[libinput] because of missing deps, bug #542570.
 
   20 Feb 2015; Raúl Porcel <armin76@gentoo.org> use.stable.mask:
   Add mkl to use.stable.mkl since mkl is not stable

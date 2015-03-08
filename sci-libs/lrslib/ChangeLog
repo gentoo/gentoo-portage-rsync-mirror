@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/lrslib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/ChangeLog,v 1.9 2012/03/24 17:23:18 phajdan.jr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lrslib/ChangeLog,v 1.10 2015/03/08 15:18:28 tomka Exp $
+
+*lrslib-051 (08 Mar 2015)
+
+  08 Mar 2015; Thomas Kahle <tomka@gentoo.org> +lrslib-051.ebuild:
+  Bump to 051
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> lrslib-042c-r2.ebuild:
   x86 stable wrt bug #408085
@@ -37,4 +42,3 @@
   12 Nov 2010; Thomas Kahle <tomka@gentoo.org> +lrslib-042c.ebuild,
   +metadata.xml:
   Initial import from science overlay. Fixes bug 338685
-
