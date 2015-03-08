@@ -1,8 +1,7 @@
-From 0f579172142d290dc48b9d466f9cd699987aacf3 Mon Sep 17 00:00:00 2001
+From 695c19cdd2fc24aaa7ed89976c4965b376707131 Mon Sep 17 00:00:00 2001
 From: Sebastian Lackner <sebastian@fds-team.de>
 Date: Wed, 25 Feb 2015 22:45:42 +0100
-Subject: [PATCH] ntdll: Fix race-condition when threads are killed during
- shutdown.
+Subject: ntdll: Fix race-condition when threads are killed during shutdown.
 
 When exit_thread is executed, nb_threads is decremented before the thread is
 fully shutdown. When another thread runs ExitProcess() this will cause a SIGQUIT
@@ -18,35 +17,42 @@ fix the most critical one (messed up refcounting of threads) for now.
 [Alexandre Rostovtsev <tetromino@gentoo.org> : rebase to be applied after
  Maarten Lankhorst's "override pthreads to fix gstreamer v5" patch.]
 ---
- dlls/ntdll/thread.c | 6 ++++++
- 1 file changed, 6 insertions(+)
+ dlls/ntdll/thread.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
 
 diff --git a/dlls/ntdll/thread.c b/dlls/ntdll/thread.c
-index 936cabe..98e679e 100755
+index 4f181dc..1bdbcbf 100755
 --- a/dlls/ntdll/thread.c
 +++ b/dlls/ntdll/thread.c
-@@ -459,6 +459,8 @@ static void exit_thread_common( int status )
+@@ -461,6 +461,7 @@ static void exit_thread_common( int status )
      static void *prev_teb;
      TEB *teb;
  #endif
-+
 +    sigset_t sigset;
-
-    if (status)  /* send the exit code to the server (0 is already the default) */
-    {
---
-@@ -498,6 +499,11 @@ static void exit_thread_common( int status )
- #else
+ 
+     if (status)  /* send the exit code to the server (0 is already the default) */
+     {
+@@ -473,7 +474,7 @@ static void exit_thread_common( int status )
+         SERVER_END_REQ;
+     }
+ 
+-    if (interlocked_xchg_add( &nb_threads, -1 ) <= 1)
++    if (interlocked_xchg_add( &nb_threads, 0 ) <= 1)
+     {
+         LdrShutdownProcess();
+         exit( status );
+@@ -499,6 +500,11 @@ static void exit_thread_common( int status )
      reap_thread(NtCurrentTeb());
  #endif
-+
+ 
 +    sigemptyset( &sigset );
 +    sigaddset( &sigset, SIGQUIT );
 +    pthread_sigmask( SIG_BLOCK, &sigset, NULL );
 +    if (interlocked_xchg_add( &nb_threads, -1 ) <= 1) _exit( status );
-
-    close( ntdll_get_thread_data()->wait_fd[0] );
-    close( ntdll_get_thread_data()->wait_fd[1] );
++
+     close( ntdll_get_thread_data()->wait_fd[0] );
+     close( ntdll_get_thread_data()->wait_fd[1] );
+     close( ntdll_get_thread_data()->reply_fd );
 -- 
 2.3.1
 
