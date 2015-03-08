@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.134 2015/02/26 19:57:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.135 2015/03/08 15:57:21 dilfridge Exp $
+
+  08 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-l10n-4.3.5.2.ebuild:
+  Update SRC_URI since our mirrors seem to be missing some files
 
 *libreoffice-l10n-4.4.1.2 (26 Feb 2015)
 

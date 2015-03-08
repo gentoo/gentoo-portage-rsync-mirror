@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/writerperfect-0.8.2.ebuild,v 1.3 2014/12/27 21:10:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/writerperfect-0.8.2.ebuild,v 1.4 2015/03/08 15:42:11 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	mspub? ( app-text/libmspub )
 	mwaw? ( =app-text/libmwaw-0.1* )
 	visio? ( media-libs/libvisio )
-	wps? ( app-text/libwps )
+	wps? ( =app-text/libwps-0.2* )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

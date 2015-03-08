@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.7.0.ebuild,v 1.7 2015/02/15 14:59:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.7.0.ebuild,v 1.8 2015/03/08 15:38:13 dilfridge Exp $
 
 EAPI=5
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.7.0-boost-1.56.patch" # bug 527242
+
 	[[ ${PV} == 9999 ]] && eautoreconf
 }
 

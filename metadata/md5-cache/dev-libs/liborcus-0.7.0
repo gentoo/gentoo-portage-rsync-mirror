@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/boost-1.51.0:= =dev-libs/libixion-0.7* sys-libs/zlib:=
 SLOT=0
 SRC_URI=http://kohei.us/files/orcus/src/liborcus-0.7.0.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=7ab1a0a1f681ce643dcffca07e7dafe9
+_md5_=20789fe11a6924cc5c337cb1ddfe5d6a
