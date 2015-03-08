@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.28 2015/03/07 22:22:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.29 2015/03/08 01:11:20 tetromino Exp $
+
+  08 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Add NP-Hardass as proxy maintainer
 
 *winetricks-20141130 (07 Mar 2015)
 
