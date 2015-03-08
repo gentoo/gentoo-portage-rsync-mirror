@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-HomeDir
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.94 2014/03/03 17:40:00 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.95 2015/03/08 08:32:50 jer Exp $
+
+  08 Mar 2015; Jeroen Roovers <jer@gentoo.org> File-HomeDir-1.0.0-r1.ebuild:
+  Marked ~hppa (bug #541190).
 
   03 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -File-HomeDir-0.980.0.ebuild,
   -File-HomeDir-0.990.0.ebuild, -File-HomeDir-1.0.0.ebuild:

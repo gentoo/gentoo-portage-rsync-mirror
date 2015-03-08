@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Install
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.34 2015/02/24 00:39:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/ChangeLog,v 1.35 2015/03/08 08:33:29 jer Exp $
+
+  08 Mar 2015; Jeroen Roovers <jer@gentoo.org> Module-Install-1.140.0.ebuild:
+  Marked ~hppa (bug #541190).
 
 *Module-Install-1.140.0 (24 Feb 2015)
 
