@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.527 2015/03/08 07:00:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.528 2015/03/08 19:53:58 tetromino Exp $
+
+  08 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  files/wine-1.7.38-gstreamer-v5-staging-post.patch:
+  Fix gst post-patch, thanks to Sebastian Lackner and NP-Hardass. No revbump
+  (affects only USE="gstreamer staging").
 
 *wine-1.7.38 (08 Mar 2015)
 
