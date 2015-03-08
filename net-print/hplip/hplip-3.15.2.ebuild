@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.15.2.ebuild,v 1.1 2015/02/22 14:41:34 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.15.2.ebuild,v 1.2 2015/03/08 09:43:02 billie Exp $
 
 EAPI=5
 
@@ -27,13 +27,13 @@ COMMON_DEPEND="
 	)
 	!minimal? (
 		${PYTHON_DEPS}
-		>=net-print/cups-1.4.0[${PYTHON_USEDEP}]
+		>=net-print/cups-1.4.0
 		!libusb0? ( virtual/libusb:1 )
 		libusb0? ( virtual/libusb:0 )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( >=sys-apps/dbus-1.6.8-r1 )
 		snmp? (
-			net-analyzer/net-snmp[${PYTHON_USEDEP}]
+			net-analyzer/net-snmp
 			dev-libs/openssl:0
 		)
 	)"

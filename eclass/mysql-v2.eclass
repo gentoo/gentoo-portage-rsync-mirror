@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.36 2015/02/16 14:37:50 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.37 2015/03/08 09:39:55 ulm Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -222,12 +222,15 @@ IUSE="${IUSE} latin1 extraengine cluster max-idx-128 +community profiling"
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] && \
 	mysql_version_is_at_least "5.5" ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 elif [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] && \
 	mysql_check_version_range "5.5.37 to 5.6.11.99" ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 elif [[ ${PN} == "mysql-cluster" ]] && \
 	mysql_check_version_range "7.2 to 7.2.99.99"  ; then
 	IUSE="bindist ${IUSE}"
+	RESTRICT="${RESTRICT} !bindist? ( bindist )"
 fi
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]]; then

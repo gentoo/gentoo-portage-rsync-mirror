@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.318 2015/02/22 14:41:34 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.319 2015/03/08 09:43:02 billie Exp $
+
+  08 Mar 2015; Daniel Pielmeier <billie@gentoo.org> hplip-3.15.2.ebuild:
+  Remove PYTHON_USEDEP from net-print/cups and net-analyzer/net-snmp. Thanks to
+  Arfrever Frehtes Taifersar Arahesis for the report and the gentoo python team
+  for the detailed explanation.
 
 *hplip-3.15.2 (22 Feb 2015)
 
