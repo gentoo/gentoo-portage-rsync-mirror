@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.54 2014/11/10 17:07:58 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.56 2015/03/08 13:16:09 graaff Exp $
+
+*archive-tar-minitar-0.5.4-r2 (08 Mar 2015)
+
+  08 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  +archive-tar-minitar-0.5.4-r2.ebuild:
+  New revision with ruby21 and ruby22.
+
+  08 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  archive-tar-minitar-0.5.4-r1.ebuild:
+  Run as many tests as possible and fix ruby19+ incompatible tests, fixing bug
+  455248.
 
   10 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   archive-tar-minitar-0.5.4-r1.ebuild, archive-tar-minitar-0.5.4.ebuild:
