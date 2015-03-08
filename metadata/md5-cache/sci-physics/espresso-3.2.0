@@ -1,8 +1,8 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test
-DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/tcl fftw? ( sci-libs/fftw:3.0 ) mpi? ( virtual/mpi ) packages? ( dev-tcltk/tcllib ) tk? ( >=dev-lang/tk-8.4.18-r1 ) X? ( x11-libs/libX11 ) doc? ( || ( <app-doc/doxygen-1.7.6.1[-nodot] >=app-doc/doxygen-1.7.6.1[dot] ) dev-texlive/texlive-latexextra virtual/latex-base )
+DEPEND=|| ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/tcl fftw? ( sci-libs/fftw:3.0 ) mpi? ( virtual/mpi ) packages? ( dev-tcltk/tcllib ) tk? ( >=dev-lang/tk-8.4.18-r1 ) X? ( x11-libs/libX11 ) doc? ( app-doc/doxygen[dot] dev-texlive/texlive-latexextra virtual/latex-base )
 DESCRIPTION=Extensible Simulation Package for Research on Soft matter
 EAPI=5
-HOMEPAGE=http://www.espressomd.org
+HOMEPAGE=http://espressomd.org
 IUSE=X doc examples fftw mpi packages test -tk savedconfig
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-macos
 LICENSE=GPL-3
@@ -12,4 +12,4 @@ RESTRICT=tk? ( test )
 SLOT=0
 SRC_URI=mirror://nongnu/espressomd/espresso-3.2.0.tar.gz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=46efd4f91242ff7f717daaae7642216d
+_md5_=7a234738e12fe8079f9426a8447d18f3
