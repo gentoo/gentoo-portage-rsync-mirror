@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libircclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.22 2015/02/19 04:12:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.23 2015/03/08 06:29:35 mr_bones_ Exp $
+
+  08 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> libircclient-1.8.ebuild:
+  add slot dep for openssl; set RDEPEND
 
   19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/libircclient-1.7-build.patch, -files/libircclient-1.7-include.patch,
