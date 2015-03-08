@@ -1,0 +1,50 @@
+From 0f579172142d290dc48b9d466f9cd699987aacf3 Mon Sep 17 00:00:00 2001
+From: Sebastian Lackner <sebastian@fds-team.de>
+Date: Wed, 25 Feb 2015 22:45:42 +0100
+Subject: [PATCH] ntdll: Fix race-condition when threads are killed during
+ shutdown.
+
+When exit_thread is executed, nb_threads is decremented before the thread is
+fully shutdown. When another thread runs ExitProcess() this will cause a SIGQUIT
+signal to all threads, effectively decrementing nb_threads twice. The process
+will terminate with a wrong exitcode then because the refcount reaches zero too
+early.
+
+Currently Wine has no locking protection of LdrShutdownProcess(), so it can
+only be executed safely when all other threads have terminated before. Most
+likely there are more Wine bugs in this area, but the attached patch should
+fix the most critical one (messed up refcounting of threads) for now.
+
+[Alexandre Rostovtsev <tetromino@gentoo.org> : rebase to be applied after
+ Maarten Lankhorst's "override pthreads to fix gstreamer v5" patch.]
+---
+ dlls/ntdll/thread.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/dlls/ntdll/thread.c b/dlls/ntdll/thread.c
+index 936cabe..98e679e 100755
+--- a/dlls/ntdll/thread.c
++++ b/dlls/ntdll/thread.c
+@@ -459,6 +459,7 @@ static void exit_thread_common( int status )
+ {
+ #ifndef __linux__
+     static void *prev_teb;
++    sigset_t sigset;
+     TEB *teb;
+ #endif
+ 
+@@ -495,6 +496,11 @@ static void exit_thread_common( int status )
+             signal_free_thread( teb );
+         }
+     }
++
++    sigemptyset( &sigset );
++    sigaddset( &sigset, SIGQUIT );
++    pthread_sigmask( SIG_BLOCK, &sigset, NULL );
++    if (interlocked_xchg_add( &nb_threads, -1 ) <= 1) _exit( status );
+ #else
+     reap_thread(NtCurrentTeb());
+ #endif
+-- 
+2.3.1
+

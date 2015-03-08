@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.526 2015/01/01 21:01:23 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.527 2015/03/08 07:00:24 tetromino Exp $
+
+*wine-1.7.38 (08 Mar 2015)
+
+  08 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.7.28.ebuild,
+  wine-1.7.29.ebuild, wine-1.7.33.ebuild, +wine-1.7.38.ebuild,
+  wine-9999.ebuild, -files/wine-1.7.28-gstreamer-v4.patch,
+  +files/wine-1.7.38-gstreamer-v5-staging-post.patch,
+  +files/wine-1.7.38-gstreamer-v5-staging-pre.patch, metadata.xml:
+  Belated version bump (bug #536380), see
+  https://www.winehq.org/announce/1.7.38 for the announcement. Sync changes
+  from NP-Hardass's overlay and add him as proxy maintainer. Move big gstreamer
+  patches out of filesdir and into compressed downloads.
 
 *wine-1.7.33 (01 Jan 2015)
 
