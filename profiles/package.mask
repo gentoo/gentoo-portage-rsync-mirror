@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16403 2015/03/07 11:14:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16404 2015/03/08 00:03:37 ottxor Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christoph Junghans <ottxor@gentoo.org> (7 Mar 2015)
+# Fails to build (bug #536406); nothing in the tree uses it.
+# Masked for removal in 30 days
+sci-libs/openmm
 
 # James Le Cuirot <chewi@gentoo.org> (6 Mar 2015)
 # A Jackon library that was part of v1 but not v2. Nothing in the tree
