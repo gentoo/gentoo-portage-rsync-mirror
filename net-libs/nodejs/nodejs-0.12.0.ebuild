@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.12.0.ebuild,v 1.2 2015/02/15 03:05:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.12.0.ebuild,v 1.3 2015/03/08 18:54:10 xarthisius Exp $
 
 EAPI=5
 
@@ -20,11 +20,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
 IUSE="+npm"
 
-RDEPEND="dev-libs/openssl[-bindist]"
-DEPEND="${PYTHON_DEPS}
-	${RDEPEND}
+RDEPEND="dev-libs/openssl[-bindist]
 	>=net-libs/http-parser-2.3
 	=dev-libs/libuv-1.1.0"
+DEPEND="${PYTHON_DEPS}
+	${RDEPEND}"
 
 S=${WORKDIR}/node-v${PV}
 
