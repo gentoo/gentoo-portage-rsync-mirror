@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ntdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.7 2015/03/03 10:06:34 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ntdb/ChangeLog,v 1.8 2015/03/08 11:09:35 polynomial-c Exp $
+
+  08 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> -ntdb-1.0.ebuild:
+  Removed non-multilib ebuild.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> ntdb-1.0-r1.ebuild:
   add arm64 support, tested on A53 board
