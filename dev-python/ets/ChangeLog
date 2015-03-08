@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.22 2015/03/06 22:18:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.23 2015/03/08 10:35:54 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> ets-4.4.1.ebuild:
+  Revert amd64 stable due to bug #500104
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> ets-4.4.1.ebuild:
   amd64 stable, bug 540290

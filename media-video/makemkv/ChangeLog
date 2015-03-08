@@ -1,6 +1,21 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.48 2015/02/01 23:11:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.49 2015/03/08 10:55:49 chewi Exp $
+
+*makemkv-1.9.1 (08 Mar 2015)
+
+  08 Mar 2015; James Le Cuirot <chewi@gentoo.org> +files/makemkv-path.patch,
+  +makemkv-1.9.1.ebuild, -files/makemkv-1.8.11-makefile.linux.patch,
+  -files/makemkv-1.8.12-makefile.linux.patch,
+  -files/makemkv-1.8.13-makefile.linux.patch,
+  -files/makemkv-1.8.7-makefile.linux.patch,
+  -files/makemkv-1.8.8-makefile.linux.patch,
+  -files/makemkv-1.8.9-makefile.linux.patch, -makemkv-1.8.12-r2.ebuild,
+  -makemkv-1.8.13-r1.ebuild, -makemkv-1.8.13.ebuild, metadata.xml:
+  Taking over maintainership. Version bump (bug #528698) and removal of old
+  versions except 1.8.10, which supports older glibc versions. Patch to fix path
+  for libaacs/libbdplus emulation and inform users about how to use this feature
+  (bug #509838).
 
 *makemkv-1.8.13-r1 (01 Feb 2015)
 

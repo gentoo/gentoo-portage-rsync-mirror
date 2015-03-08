@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9846 2015/03/08 10:25:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9847 2015/03/08 10:34:28 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  arch/amd64/package.use.stable.mask, arch/x86/package.use.stable.mask:
+  Mask dev-python/apptools[test] because mayavi is broken (#500104)
 
   08 Mar 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask various ruby19-only packages.

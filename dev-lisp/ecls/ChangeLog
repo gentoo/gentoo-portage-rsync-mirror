@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/ecls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.53 2015/02/24 10:00:35 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ChangeLog,v 1.54 2015/03/08 10:35:02 grozin Exp $
+
+*ecls-15.3.7 (08 Mar 2015)
+
+  08 Mar 2015; Andrey Grozin <grozin@gentoo.org> -ecls-15.2.21.ebuild,
+  +ecls-15.3.7.ebuild, -files/15.2.21-headers-gentoo.patch,
+  +files/15.3.7-headers-gentoo.patch:
+  Version bump
 
   24 Feb 2015; Andrey Grozin <grozin@gentoo.org>
   +files/15.2.21-headers-gentoo.patch:
