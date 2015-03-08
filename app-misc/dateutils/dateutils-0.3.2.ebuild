@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dateutils/dateutils-0.2.4.ebuild,v 1.1 2013/03/04 07:43:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dateutils/dateutils-0.3.2.ebuild,v 1.1 2015/03/08 16:50:49 radhermit Exp $
 
 EAPI=5
 
@@ -18,6 +18,16 @@ DEPEND="app-arch/xz-utils
 # bug 429810
 RDEPEND="!sys-infiniband/dapl"
 
+src_configure() {
+	econf \
+		--docdir=/usr/share/doc/${PF}
+}
+
 src_compile() {
 	emake CFLAGS="${CFLAGS}"
+}
+
+src_test() {
+	# parallel tests failure
+	emake CFLAGS="${CFLAGS}" -j1 check
 }
