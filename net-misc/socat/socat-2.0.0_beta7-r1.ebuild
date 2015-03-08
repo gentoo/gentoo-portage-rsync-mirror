@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta7-r1.ebuild,v 1.1 2014/03/22 15:32:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta7-r1.ebuild,v 1.2 2015/03/08 07:58:31 jer Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="ssl readline ipv6 tcpd"
 
 DEPEND="
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
+	readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( sys-apps/tcp-wrappers )
 "
 RDEPEND="${DEPEND}"

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.776 2015/03/05 10:57:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.777 2015/03/08 07:38:34 tetromino Exp $
+
+  08 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Unmask wine-9999[pulseaudio], the patchset is now much more actively
+  maintained.
 
   05 Mar 2015; Justin Lecher <jlec@gentoo.org> package.use.mask:
   Cleaned invalid entries in package.use.mask

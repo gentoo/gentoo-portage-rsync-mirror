@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.2.ebuild,v 1.1 2015/02/05 09:34:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.99.3.ebuild,v 1.1 2015/03/08 07:59:13 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps multilib qt4-r2 user
