@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9845 2015/03/08 00:03:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9846 2015/03/08 10:25:33 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Mar 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask various ruby19-only packages.
 
   07 Mar 2015; Christoph Junghans <ottxor@gentoo.org> package.mask:
   Masked sci-libs/openmm for removal
