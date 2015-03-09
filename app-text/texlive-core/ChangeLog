@@ -1,6 +1,13 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.220 2015/03/09 12:17:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.221 2015/03/09 14:27:47 jlec Exp $
+
+*texlive-core-2014-r3 (09 Mar 2015)
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/texlive-core-2014-format-security.patch, +texlive-core-2014-r3.ebuild:
+  Drop incomplete installation of pythontex and import fedora patch for format-
+  security, #512410
 
   09 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
   texlive-core-2014-r2.ebuild:
