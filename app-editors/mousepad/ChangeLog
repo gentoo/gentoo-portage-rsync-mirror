@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mousepad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.31 2015/03/09 14:37:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.32 2015/03/09 17:21:18 zerochaos Exp $
+
+  09 Mar 2015; Rick Farina <zerochaos@gentoo.org> mousepad-0.4.0.ebuild:
+  fix repoman warning
 
 *mousepad-0.4.0 (09 Mar 2015)
 

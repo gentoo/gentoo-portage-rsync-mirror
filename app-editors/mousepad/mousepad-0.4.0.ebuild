@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/mousepad-0.4.0.ebuild,v 1.1 2015/03/09 14:37:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/mousepad-0.4.0.ebuild,v 1.2 2015/03/09 17:21:18 zerochaos Exp $
 
 EAPI=5
 inherit gnome2-utils xfconf
@@ -16,7 +16,7 @@ IUSE="debug dbus gtk3"
 
 RDEPEND=">=dev-libs/glib-2.30:2=
 	dbus? ( >=dev-libs/dbus-glib-0.100:0= )
-	!gtk3? ( >=x11-libs/gtk+-2.24:2= 
+	!gtk3? ( >=x11-libs/gtk+-2.24:2=
 		x11-libs/gtksourceview:2.0= )
 	gtk3? ( x11-libs/gtk+:3=
 		x11-libs/gtksourceview:3.0= )"

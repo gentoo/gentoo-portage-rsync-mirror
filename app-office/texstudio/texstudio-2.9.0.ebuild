@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.9.0.ebuild,v 1.1 2015/03/09 15:44:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.9.0.ebuild,v 1.2 2015/03/09 17:28:38 jlec Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/TeXstudio%20${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="video qt4 qt5"
+IUSE="video +qt4 qt5"
 
 REQUIRED_USE="^^ ( qt4 qt5 )"
 
