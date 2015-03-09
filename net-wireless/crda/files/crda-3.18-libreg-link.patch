@@ -21,7 +21,7 @@ index 8e345a1..77708e6 100644
  $(LIBREG): regdb.h reglib.h reglib.c
  	$(NQ) '  CC  ' $@
 -	$(Q)$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -shared -Wl,-soname,$(LIBREG) $^
-+	$(Q)$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -shared -Wl,-soname,$(LIBREG) $^ $(LDLIBS)
++	$(Q)$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -shared -Wl,-soname,$(LIBREG) $^ $(filter-out -lreg,$(LDLIBS))
  
  install-libreg-headers:
  	$(NQ) '  INSTALL  libreg-headers'
