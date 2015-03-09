@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/notify-webhook/notify-webhook-20150308.ebuild,v 1.1 2015/03/09 00:51:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/notify-webhook/notify-webhook-20150308.ebuild,v 1.2 2015/03/09 05:35:40 patrick Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ PATCH_COMMIT='BCLibCoop:ee038b53a48e70d9e69c86386c39b7f24736d07e'
 PATCH_DELTA="${COMMIT:0:7}...${PATCH_COMMIT:0:17}"
 PATCH_NAME="${P}-${PATCH_DELTA}.patch"
 SRC_URI="https://github.com/metajack/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz
-         https://github.com/metajack/notify-webhook/compare/${PATCH_DELTA}.patch -> ${PATCH_NAME}"
+	https://github.com/metajack/notify-webhook/compare/${PATCH_DELTA}.patch -> ${PATCH_NAME}"
 
 LICENSE="GPL-3"
 SLOT="0"
