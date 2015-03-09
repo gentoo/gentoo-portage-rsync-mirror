@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.210 2014/06/06 19:27:06 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.211 2015/03/09 17:53:52 blueness Exp $
+
+  09 Mar 2015; Anthony G. Basile <blueness@gentoo.org> gmp-6.0.0a.ebuild:
+  Fix license for gmp-6, bug #542642.
 
   06 Jun 2014; Mike Frysinger <vapier@gentoo.org> -gmp-4.3.2.ebuild,
   gmp-4.3.2-r1.ebuild:
