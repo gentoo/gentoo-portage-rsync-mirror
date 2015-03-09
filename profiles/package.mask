@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16407 2015/03/09 16:58:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16408 2015/03/09 19:46:07 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (9 Mar 2015)
+# Broken multilib dependencies causing blockers, bug 542728.
+# Masked by QA until maintainer will sort this out.
+=net-misc/teamviewer-10.0.36281
 
 # Lars Wendler <polynomial-c@gentoo.org> (8 Mar 2015)
 # Masked for testing

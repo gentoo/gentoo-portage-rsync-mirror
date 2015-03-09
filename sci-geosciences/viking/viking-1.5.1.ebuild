@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.5.1.ebuild,v 1.1 2015/01/02 08:21:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.5.1.ebuild,v 1.2 2015/03/09 19:59:46 graaff Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ COMMONDEPEND="
 	sys-libs/zlib
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
-	gps? ( >=sci-geosciences/gpsd-2.96 )
+	gps? ( >=sci-geosciences/gpsd-2.96 <sci-geosciences/gpsd-3.12 )
 	exif? ( media-libs/libexif )
 	magic? ( sys-apps/file )
 "
