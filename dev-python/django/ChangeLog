@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.157 2015/03/01 17:19:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.158 2015/03/09 16:26:41 jlec Exp $
+
+*django-1.7.6 (09 Mar 2015)
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org> +django-1.7.6.ebuild,
+  +files/django-1.7.6-bashcomp.patch, -django-1.7.5.ebuild,
+  -files/django-1.7.5-bashcomp.patch:
+  Version Bump to fix CVE-2015-2241
 
   01 Mar 2015; Justin Lecher <jlec@gentoo.org> django-1.6.10.ebuild:
   Readd python support
