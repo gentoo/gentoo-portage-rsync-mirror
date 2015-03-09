@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.7.0.ebuild,v 1.6 2015/02/19 06:22:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-1.7.0.ebuild,v 1.7 2015/03/09 21:53:24 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER=2.8
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	rm -rf *.bat dists/win32
 	sed -ri -e '/^(CC|CXX)\b/d' Makefile || die
+	epatch "${FILESDIR}/${P}-binprefix.patch"
 }
 
 src_configure() {
@@ -39,6 +40,7 @@ src_configure() {
 		--mandir=/usr/share/man \
 		--prefix="${GAMES_PREFIX}" \
 		--libdir="${GAMES_PREFIX}/lib" \
+		--datadir="${GAMES_DATADIR}" \
 		$(use_enable flac) \
 		$(use_enable iconv) \
 		$(use_enable iconv freetype) \
@@ -48,10 +50,7 @@ src_configure() {
 }
 
 src_install() {
-	local f
-	for f in $(find . -type f -perm +1 -print); do
-		newgamesbin $f ${PN}-${f##*/} || die
-	done
+	emake DESTDIR="${D}" EXEPREFIX="${PN}-" install
 	dodoc README TODO
 	prepgamesdirs
 }
