@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.22 2015/03/05 19:38:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.23 2015/03/09 11:09:27 kensington Exp $
+
+  09 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  qt-gstreamer-1.2.0-r1.ebuild:
+  Enable qt4 by default. Ensure at least one variant is built wrt bug #542496.
 
 *qt-gstreamer-1.2.0-r1 (05 Mar 2015)
 

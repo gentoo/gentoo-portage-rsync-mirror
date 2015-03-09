@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/anonymous-pro/anonymous-pro-1.002-r1.ebuild,v 1.2 2015/03/07 13:14:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/anonymous-pro/anonymous-pro-1.002-r1.ebuild,v 1.3 2015/03/09 11:04:31 yngwin Exp $
 
 EAPI=5
 inherit font
@@ -8,8 +8,8 @@ inherit font
 MY_PN="AnonymousPro"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Monospaced truetype font designed with coding in mind"
-HOMEPAGE="http://www.ms-studio.com/FontSales/anonymouspro.html"
-SRC_URI="http://www.ms-studio.com/FontSales/${MY_P}.zip"
+HOMEPAGE="http://www.marksimonson.com/fonts/view/anonymous-pro"
+SRC_URI="http://www.marksimonson.com/assets/content/fonts/${MY_P}.zip"
 
 LICENSE="OFL-1.1"
 SLOT="0"

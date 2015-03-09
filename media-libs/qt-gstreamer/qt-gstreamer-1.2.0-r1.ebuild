@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-1.2.0-r1.ebuild,v 1.1 2015/03/05 19:38:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/qt-gstreamer-1.2.0-r1.ebuild,v 1.2 2015/03/09 11:09:27 kensington Exp $
 
 EAPI=5
 
@@ -20,7 +20,9 @@ HOMEPAGE="http://gstreamer.freedesktop.org/modules/qt-gstreamer.html"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="qt4 qt5 test"
+IUSE="+qt4 qt5 test"
+
+REQUIRED_USE="|| ( qt4 qt5 )"
 
 RDEPEND="
 	dev-libs/glib:2

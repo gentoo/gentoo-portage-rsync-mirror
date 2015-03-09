@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/baka-mplayer/baka-mplayer-2.0.2.ebuild,v 1.1 2015/03/08 14:12:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/baka-mplayer/baka-mplayer-2.0.2.ebuild,v 1.2 2015/03/09 11:31:03 yngwin Exp $
 
 EAPI=5
 inherit qmake-utils
@@ -20,7 +20,8 @@ RDEPEND="dev-qt/qtcore:5
 	dev-qt/qtsvg:5
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
-	media-video/mpv[libmpv]"
+	media-video/mpv[libmpv]
+	x11-libs/libX11"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
