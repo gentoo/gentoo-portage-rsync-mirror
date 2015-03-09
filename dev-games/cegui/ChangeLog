@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.66 2014/09/07 07:15:31 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.67 2015/03/09 18:37:20 mr_bones_ Exp $
+
+  09 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.8.4.ebuild:
+  punt python 2_6
 
 *cegui-0.8.4 (07 Sep 2014)
 

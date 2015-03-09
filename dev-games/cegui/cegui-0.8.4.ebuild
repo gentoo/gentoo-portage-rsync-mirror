@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.8.4.ebuild,v 1.1 2014/09/07 07:15:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.8.4.ebuild,v 1.2 2015/03/09 18:37:20 mr_bones_ Exp $
 
 EAPI=5
 
 # TODO: multiple ABI?
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 inherit eutils flag-o-matic cmake-utils python-single-r1
 
 DESCRIPTION="Crazy Eddie's GUI System"
