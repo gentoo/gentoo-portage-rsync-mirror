@@ -1,6 +1,20 @@
 # ChangeLog for sys-block/fio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.58 2015/01/13 05:12:43 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.59 2015/03/09 01:10:34 prometheanfire Exp $
+
+*fio-2.2.4-r1 (09 Mar 2015)
+
+  09 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> +fio-2.2.4-r1.ebuild,
+  -fio-1.17.ebuild, -fio-1.18.1.ebuild, -fio-1.20.ebuild, -fio-1.21.ebuild,
+  -fio-1.21_rc3.ebuild, -fio-1.22.ebuild, -fio-1.23.ebuild, -fio-1.25.1.ebuild,
+  -fio-1.34.ebuild, -fio-1.50_rc4.ebuild, -fio-1.58.ebuild, -fio-2.0.10.ebuild,
+  -fio-2.0.13.ebuild, -fio-2.0.14.ebuild, -fio-2.0.3.ebuild, -fio-2.0.8.ebuild,
+  -fio-2.0.9.ebuild, -fio-2.1.10-r1.ebuild, -fio-2.1.10.ebuild,
+  -fio-2.1.11-r1.ebuild, -fio-2.1.11.ebuild, -fio-2.1.14.ebuild,
+  -fio-2.1.2.ebuild, -fio-2.1.4.ebuild, -fio-2.1.5.ebuild, -fio-2.1.6.1.ebuild,
+  -fio-2.1.7.ebuild, -fio-2.1.8-r1.ebuild, -fio-2.1.8.ebuild, -fio-2.2.4.ebuild,
+  metadata.xml:
+  fixing bug 541348 and some major cleanup
 
 *fio-2.2.4 (13 Jan 2015)
 

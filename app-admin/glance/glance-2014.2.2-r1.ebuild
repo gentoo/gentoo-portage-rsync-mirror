@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.2.ebuild,v 1.1 2015/02/08 01:51:56 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.2-r1.ebuild,v 1.1 2015/03/09 01:28:07 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -112,6 +112,7 @@ RDEPEND="
 
 PATCHES=(
 	"${FILESDIR}/${PN}-2013.2-sphinx_mapping.patch"
+	"${FILESDIR}/2014.2.2-CVE-2015-1881.patch"
 )
 
 pkg_setup() {

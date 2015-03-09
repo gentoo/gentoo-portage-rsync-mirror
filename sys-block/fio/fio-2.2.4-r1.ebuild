@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.8-r1.ebuild,v 1.3 2014/09/07 17:42:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.2.4-r1.ebuild,v 1.1 2015/03/09 01:10:34 prometheanfire Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -15,15 +15,19 @@ SRC_URI="http://brick.kernel.dk/snaps/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
-IUSE="aio gnuplot gtk numa zlib"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
+IUSE="aio glusterfs gnuplot gtk numa rbd rdma zlib"
 
 DEPEND="aio? ( dev-libs/libaio )
+	glusterfs? ( !arm? ( sys-cluster/glusterfs ) )
 	gtk? (
 		dev-libs/glib:2
 		x11-libs/gtk+:2
 	)
-	numa? ( sys-process/numactl )
+	numa? ( !arm? ( sys-process/numactl ) )
+	rbd? ( !arm? ( !ppc? ( sys-cluster/ceph ) ) )
+	rdma? ( !ppc? ( !ppc64? ( !ia64? ( !arm? (
+		sys-infiniband/librdmacm ) ) ) ) )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	gnuplot? (
@@ -42,6 +46,7 @@ src_prepare() {
 		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
 		-e '/if compile_prog "" "-lz" "zlib" *; *then/  '"s::if $(usex zlib true false) ; then:" \
 		-e '/if compile_prog "" "-laio" "libaio" ; then/'"s::if $(usex aio true false) ; then:" \
+		-e '/if compile_prog "" "-lrdmacm" "rdma" ; then/'"s::if $(usex rdma true false) ; then:" \
 		configure || die
 }
 
@@ -51,8 +56,11 @@ src_configure() {
 	./configure \
 		--extra-cflags="${CFLAGS} ${CPPFLAGS}" \
 		--cc="$(tc-getCC)" \
+		$(usex glusterfs '' '--disable-gfapi') \
 		$(usex gtk '--enable-gfio' '') \
 		$(usex numa '' '--disable-numa') \
+		$(usex rbd '' '--disable-rbd') \
+		$(usex rdma '' '--enable-rdma') \
 		|| die 'configure failed'
 }
 
