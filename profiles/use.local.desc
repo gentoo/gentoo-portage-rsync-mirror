@@ -464,6 +464,7 @@ app-editors/joe:xterm - Enable full xterm clipboard support
 app-editors/latexila:latexmk - Install dev-tex/latexmk (used by default for the build tools)
 app-editors/latexila:rubber - Install dev-tex/rubber (can be used for the build tools)
 app-editors/leafpad:emacs - Enable Emacs key theme
+app-editors/mousepad:gtk3 - Use GTK+3 instead of GTK+2
 app-editors/nano:debug - Enable debug messages and assert warnings. Note that these will all be sent straight to stderr rather than some logging facility.
 app-editors/nano:justify - Enable justify/unjustify functions for text formatting.
 app-editors/nano:magic - Add magic file support (sys-apps/file) to automatically detect appropriate syntax highlighting

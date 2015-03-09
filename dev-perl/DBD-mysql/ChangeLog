@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-mysql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.142 2014/08/20 20:27:28 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.143 2015/03/09 14:56:36 monsieurp Exp $
+
+*DBD-mysql-4.31.0 (09 Mar 2015)
+
+  09 Mar 2015; Patrice Clement <monsieurp@gentoo.org> +DBD-mysql-4.31.0.ebuild:
+  Version bump. Fix bug 420245.
 
 *DBD-mysql-4.20.0-r1 (20 Aug 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-opentegra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-opentegra/ChangeLog,v 1.1 2015/01/29 17:04:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-opentegra/ChangeLog,v 1.2 2015/03/09 14:47:43 chithanh Exp $
+
+  09 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-opentegra-0.7.0.ebuild:
+  Raise minimum xorg-server dependency, bug #540822.
 
 *xf86-video-opentegra-0.7.0 (29 Jan 2015)
 
