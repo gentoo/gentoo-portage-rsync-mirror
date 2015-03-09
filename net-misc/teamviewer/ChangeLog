@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/teamviewer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.15 2014/11/25 22:51:02 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.16 2015/03/09 05:29:03 idella4 Exp $
+
+*teamviewer-10.0.36281 (09 Mar 2015)
+
+  09 Mar 2015; Ian Delaney <idella4@gentoo.org>
+  +files/teamviewer-10.0.36281-gentoo.patch, +teamviewer-10.0.36281.ebuild,
+  -files/teamviewer-7.0.9377-POSIX.patch,
+  -files/teamviewer-8.0.20931-gentoo.patch, -teamviewer-7.0.9377.ebuild,
+  -teamviewer-8.0.20931.ebuild, metadata.xml:
+  bump; ebuild and new gentoo.patch submitted by newly designated proxy
+  maintainer, herd re-assigned to proxy-maint, all wrt bug #533452.  Being a
+  binary package, runtested for install, bugs and runtime issues addressed in
+  the course of bug #533452.  2 oldest versions and corresponding patches
+  removed to prevent build up
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

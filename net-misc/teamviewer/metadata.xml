@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
+<herd>proxy-maintainers</herd>
+        <maintainer>
+                <email>dct23@cornell.edu</email>
+                <name>Devrin Talen</name>
+                <description>Proxy maintainer. Assign bugs to him</description>
+        </maintainer>
 	<use>
 		<flag name="system-wine">Use <pkg>app-emulation/wine</pkg> instead of bundled one.</flag>
 	</use>
