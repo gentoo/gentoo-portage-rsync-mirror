@@ -1,6 +1,9 @@
 # ChangeLog for www-client/phantomjs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.17 2015/03/06 22:46:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.18 2015/03/09 00:04:56 pacho Exp $
+
+  09 Mar 2015; Pacho Ramos <pacho@gentoo.org> phantomjs-1.9.8.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> phantomjs-1.9.8.ebuild:
   amd64 stable, bug 540290

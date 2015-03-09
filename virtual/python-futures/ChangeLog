@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-futures
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.5 2015/03/06 22:43:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-futures/ChangeLog,v 1.6 2015/03/09 00:02:58 pacho Exp $
+
+  09 Mar 2015; Pacho Ramos <pacho@gentoo.org> python-futures-0.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> python-futures-0.ebuild:
   amd64 stable, bug 540290

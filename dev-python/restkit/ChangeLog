@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/restkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.23 2015/03/07 08:27:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.24 2015/03/09 00:04:05 pacho Exp $
+
+  09 Mar 2015; Pacho Ramos <pacho@gentoo.org> restkit-4.2.2.ebuild:
+  x86 stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> restkit-4.2.2.ebuild:
   ppc stable, bug 540290

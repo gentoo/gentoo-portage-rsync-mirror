@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twython/twython-3.2.0.ebuild,v 1.3 2015/03/06 22:41:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twython/twython-3.2.0.ebuild,v 1.4 2015/03/09 00:01:23 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/t/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
