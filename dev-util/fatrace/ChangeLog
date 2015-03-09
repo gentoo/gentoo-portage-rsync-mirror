@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/fatrace
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fatrace/ChangeLog,v 1.4 2014/11/28 13:05:13 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fatrace/ChangeLog,v 1.5 2015/03/09 15:36:08 monsieurp Exp $
+
+*fatrace-0.9 (09 Mar 2015)
+
+  09 Mar 2015; Patrice Clement <monsieurp@gentoo.org> +fatrace-0.9.ebuild:
+  Version bump courtesy of Jorge Nerin <nerin@gmail.com>. Fix bug 542686.
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> fatrace-0.5.ebuild:
   Support python 3.4
