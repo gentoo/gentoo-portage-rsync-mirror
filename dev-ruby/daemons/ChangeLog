@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.89 2015/01/29 13:16:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.90 2015/03/09 06:14:55 graaff Exp $
+
+*daemons-1.2.0 (09 Mar 2015)
+
+  09 Mar 2015; Hans de Graaff <graaff@gentoo.org> +daemons-1.2.0.ebuild:
+  Version bump.
 
   29 Jan 2015; Manuel Rüger <mrueg@gentoo.org> daemons-1.1.9-r1.ebuild:
   Add ruby22 target.
