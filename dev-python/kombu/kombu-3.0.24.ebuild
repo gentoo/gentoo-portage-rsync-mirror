@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-3.0.24.ebuild,v 1.2 2015/03/06 22:27:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-3.0.24.ebuild,v 1.3 2015/03/08 23:52:17 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="amqplib doc examples msgpack sqs test"
 
 PY27_GEN_USEDEP=$(python_gen_usedep python2_7)

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/manuel-1.7.1.ebuild,v 1.10 2015/03/06 22:29:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/manuel-1.7.1.ebuild,v 1.11 2015/03/08 23:53:28 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://dev.gentoo.org/~idella4/tarballs/${P}-20130316.tar.bz2"
 
 LICENSE="ZPL"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/six[${PYTHON_USEDEP}]"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.12 2015/03/06 22:25:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.13 2015/03/08 23:51:01 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipdb-0.8.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipdb-0.8.ebuild:
   amd64 stable, bug 540290

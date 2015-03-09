@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/enaml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enaml/ChangeLog,v 1.7 2015/03/06 22:18:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enaml/ChangeLog,v 1.8 2015/03/08 23:46:22 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> enaml-0.6.8-r1.ebuild,
+  enaml-0.9.8.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> enaml-0.6.8-r1.ebuild,
   enaml-0.9.8.ebuild:

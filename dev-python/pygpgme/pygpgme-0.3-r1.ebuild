@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/pygpgme-0.3-r1.ebuild,v 1.5 2015/03/06 22:33:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/pygpgme-0.3-r1.ebuild,v 1.6 2015/03/08 23:56:06 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-crypt/gpgme"

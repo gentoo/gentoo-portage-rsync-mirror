@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyquery
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.53 2015/03/07 08:20:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/ChangeLog,v 1.54 2015/03/08 23:56:49 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyquery-1.2.9.ebuild:
+  x86 stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyquery-1.2.9.ebuild:
   ppc stable, bug 540290

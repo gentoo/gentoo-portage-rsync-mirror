@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.0-r2.ebuild,v 1.7 2015/03/07 08:18:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.0-r2.ebuild,v 1.8 2015/03/08 23:55:20 pacho Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="py3"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="doc examples test"
 
 DEPEND="!dev-python/pmw:0"

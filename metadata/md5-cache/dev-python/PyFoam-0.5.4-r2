@@ -4,11 +4,11 @@ DESCRIPTION=Tool to analyze and plot the residual files of OpenFOAM computations
 EAPI=5
 HOMEPAGE=http://openfoamwiki.net/index.php/Contrib_PyFoam
 IUSE=extras python_targets_python2_7
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=sci-visualization/gnuplot || ( sci-libs/openfoam sci-libs/openfoam-bin ) extras? ( dev-python/matplotlib[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/ply[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/PyQt4[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] sci-libs/vtk[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://openfoamwiki.net/images/a/ae/PyFoam-0.5.4.tar.gz
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
-_md5_=1d4e413806092dbd256bd15ea59d3730
+_md5_=5687ef5479dd9ae1a74cc9fef385add0

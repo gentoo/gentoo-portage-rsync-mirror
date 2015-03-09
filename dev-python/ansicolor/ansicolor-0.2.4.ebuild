@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansicolor/ansicolor-0.2.4.ebuild,v 1.2 2015/03/06 22:06:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansicolor/ansicolor-0.2.4.ebuild,v 1.3 2015/03/08 23:38:52 pacho Exp $
 
 EAPI=5
 
@@ -16,5 +16,5 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="Apache-2.0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/django-compressor-1.4.ebuild,v 1.5 2015/03/06 22:14:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/django-compressor-1.4.ebuild,v 1.6 2015/03/08 23:44:06 pacho Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ MY_PN="${PN/-/_}"
 DESCRIPTION="Compresses linked and inline javascript or CSS into a single cached file"
 HOMEPAGE="https://github.com/django-compressor/django-compressor"
 SRC_URI="https://github.com/jezdez/django_compressor/archive/${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 LICENSE="MIT"

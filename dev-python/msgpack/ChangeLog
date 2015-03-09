@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/msgpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.27 2015/03/06 22:30:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/msgpack/ChangeLog,v 1.28 2015/03/08 23:54:00 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> msgpack-0.4.5.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> msgpack-0.4.5.ebuild:
   amd64 stable, bug 540290

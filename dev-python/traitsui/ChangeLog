@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traitsui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/ChangeLog,v 1.13 2015/03/07 08:24:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsui/ChangeLog,v 1.14 2015/03/09 00:00:37 pacho Exp $
+
+  09 Mar 2015; Pacho Ramos <pacho@gentoo.org> traitsui-4.4.0.ebuild:
+  x86 stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> traitsui-4.4.0.ebuild:
   ppc stable, bug 540290

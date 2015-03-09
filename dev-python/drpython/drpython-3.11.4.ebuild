@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.11.4.ebuild,v 1.3 2015/03/07 08:15:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.11.4.ebuild,v 1.4 2015/03/08 23:45:56 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~x86"
+KEYWORDS="amd64 ~ia64 ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-python/wxpython-2.6"

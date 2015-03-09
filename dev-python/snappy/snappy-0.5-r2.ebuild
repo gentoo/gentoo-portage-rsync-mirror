@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snappy/snappy-0.5-r2.ebuild,v 1.3 2015/03/06 22:37:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snappy/snappy-0.5-r2.ebuild,v 1.4 2015/03/08 23:59:06 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://pypi.python.org/pypi/python-snappy"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 SLOT="0"
 
 DEPEND=">=app-arch/snappy-1.0.2"

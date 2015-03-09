@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/hachoir-regex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.12 2015/03/07 08:17:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hachoir-regex/ChangeLog,v 1.13 2015/03/08 23:49:58 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> hachoir-regex-1.0.5-r1.ebuild:
+  x86 stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> hachoir-regex-1.0.5-r1.ebuild:
   ppc stable, bug 540290

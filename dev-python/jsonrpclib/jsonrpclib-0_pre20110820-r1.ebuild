@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonrpclib/jsonrpclib-0_pre20110820-r1.ebuild,v 1.3 2015/03/06 22:26:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonrpclib/jsonrpclib-0_pre20110820-r1.ebuild,v 1.4 2015/03/08 23:51:57 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm x86"
 fi
 
 DESCRIPTION="python implementation of the JSON-RPC spec (1.0 and 2.0)"

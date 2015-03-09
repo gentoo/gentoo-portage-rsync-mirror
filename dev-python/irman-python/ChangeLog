@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/irman-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/ChangeLog,v 1.18 2015/03/06 22:25:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irman-python/ChangeLog,v 1.19 2015/03/08 23:51:15 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> irman-python-0.1-r1.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> irman-python-0.1-r1.ebuild:
   amd64 stable, bug 540290

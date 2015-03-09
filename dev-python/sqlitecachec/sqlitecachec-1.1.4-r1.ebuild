@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/sqlitecachec-1.1.4-r1.ebuild,v 1.6 2015/03/07 08:24:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlitecachec/sqlitecachec-1.1.4-r1.ebuild,v 1.7 2015/03/08 23:59:51 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
@@ -16,7 +16,7 @@ SRC_URI="http://yum.baseurl.org/download/yum-metadata-parser/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 # glib and libxml2 are used via an extension module written in C.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-news
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.88 2015/03/07 08:25:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.89 2015/03/09 00:01:02 pacho Exp $
+
+  09 Mar 2015; Pacho Ramos <pacho@gentoo.org> twisted-news-13.2.0.ebuild:
+  x86 stable, bug 540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> twisted-news-13.2.0.ebuild:
   ppc stable, bug 540290

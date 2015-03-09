@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-openid-auth/django-openid-auth-0.5.ebuild,v 1.2 2015/03/06 22:15:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-openid-auth/django-openid-auth-0.5.ebuild,v 1.3 2015/03/08 23:44:53 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${PN}-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

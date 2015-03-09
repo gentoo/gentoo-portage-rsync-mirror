@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blz/blz-0.6.2.ebuild,v 1.2 2015/03/06 22:10:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blz/blz-0.6.2.ebuild,v 1.3 2015/03/08 23:40:47 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/ContinuumIO/${PN}/archive/${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 # dev-libs/c-blosc-1.3.5 shatters the testsuite

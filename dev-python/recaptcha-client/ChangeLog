@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/recaptcha-client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/recaptcha-client/ChangeLog,v 1.4 2015/03/06 22:36:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/recaptcha-client/ChangeLog,v 1.5 2015/03/08 23:57:58 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> recaptcha-client-1.0.6-r1.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> recaptcha-client-1.0.6-r1.ebuild:
   amd64 stable, bug 540290

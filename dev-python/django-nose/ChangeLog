@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django-nose
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-nose/ChangeLog,v 1.9 2015/03/06 22:15:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-nose/ChangeLog,v 1.10 2015/03/08 23:44:45 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-nose-1.3.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-nose-1.3.ebuild:
   amd64 stable, bug 540290

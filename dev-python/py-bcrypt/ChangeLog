@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py-bcrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.10 2015/03/06 22:32:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.11 2015/03/08 23:55:37 pacho Exp $
+
+  08 Mar 2015; Pacho Ramos <pacho@gentoo.org> py-bcrypt-0.4.ebuild:
+  x86 stable, bug 540290
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> py-bcrypt-0.4.ebuild:
   amd64 stable, bug 540290

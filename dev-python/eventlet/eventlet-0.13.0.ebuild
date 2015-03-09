@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/eventlet-0.13.0.ebuild,v 1.2 2015/03/06 22:19:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/eventlet-0.13.0.ebuild,v 1.3 2015/03/08 23:47:01 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/e/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc examples test"
 
 RDEPEND=">=dev-python/greenlet-0.3[${PYTHON_USEDEP}]"
