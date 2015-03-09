@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/quazip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.38 2014/07/17 12:37:30 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.39 2015/03/09 15:26:18 jlec Exp $
+
+*quazip-0.7.1 (09 Mar 2015)
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org> +quazip-0.7.1.ebuild:
+  Version Bump
 
 *quazip-0.6.2-r1 (17 Jul 2014)
 
