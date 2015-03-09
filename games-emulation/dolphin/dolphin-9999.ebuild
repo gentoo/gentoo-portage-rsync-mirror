@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.22 2015/03/09 21:00:42 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.23 2015/03/09 21:07:44 twitch153 Exp $
 
 EAPI=5
 
@@ -93,12 +93,10 @@ src_prepare() {
 	# - Bochs-disasm: Don't know what it is.
 	# - GL: A custom gl.h file is used.
 	# - enet: Not fully supported yet.
-	# - polarssl: Not fully supported yet.
 	# - gtest: Their build set up solely relies on the build in gtest.
 	# - xxhash: Not on the tree.
 	mv Externals/SOIL . || die
 	mv Externals/Bochs_disasm . || die
-	mv Externals/polarssl . || die
 	mv Externals/GL . || die
 	mv Externals/enet . || die
 	mv Externals/gtest . || die
@@ -106,7 +104,6 @@ src_prepare() {
 	rm -r Externals/* || die "Failed to delete Externals dir."
 	mv Bochs_disasm Externals || die
 	mv SOIL Externals || die
-	mv polarssl Externals || die
 	mv GL Externals || die
 	mv enet Externals || die
 	mv gtest Externals || die

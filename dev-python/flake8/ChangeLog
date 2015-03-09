@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/flake8
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.28 2015/03/09 18:53:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.30 2015/03/09 21:26:18 floppym Exp $
+
+*flake8-2.1.0 (09 Mar 2015)
+
+  09 Mar 2015; Mike Gilbert <floppym@gentoo.org> +flake8-2.1.0.ebuild,
+  flake8-2.0-r1.ebuild:
+  Restore version needed by dev-python/hacking.
+
+*flake8-2.0-r1 (09 Mar 2015)
+
+  09 Mar 2015; Mike Gilbert <floppym@gentoo.org> +flake8-2.0-r1.ebuild:
+  Restore stable ebuild.
 
 *flake8-2.4.0 (09 Mar 2015)
 

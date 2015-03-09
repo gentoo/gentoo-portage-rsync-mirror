@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.31 2015/03/09 21:00:42 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.32 2015/03/09 21:07:44 twitch153 Exp $
+
+  09 Mar 2015; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Removes preservation of polarssl bundled libs, it's no longer necessary
 
   09 Mar 2015; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
   Preserves enet bundled libs, bug #542608
