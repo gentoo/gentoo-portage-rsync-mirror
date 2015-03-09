@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/normaliz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.24 2015/03/01 12:22:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.25 2015/03/09 11:45:56 ago Exp $
+
+  09 Mar 2015; Agostino Sarubbo <ago@gentoo.org> normaliz-2.12.2.ebuild:
+  Stable for amd64, wrt bug #542270
 
   01 Mar 2015; Thomas Kahle <tomka@gentoo.org>
   +files/normaliz-2.12.2-gcc49.patch, normaliz-2.12.2.ebuild:

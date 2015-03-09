@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.8 2015/02/05 20:30:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/insaneodyssey/insaneodyssey-000311.ebuild,v 1.9 2015/03/09 11:45:11 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/io${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl[sound,video]

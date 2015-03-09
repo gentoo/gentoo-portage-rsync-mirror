@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libircclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.23 2015/03/08 06:29:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.24 2015/03/09 11:44:31 ago Exp $
+
+  09 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libircclient-1.8.ebuild:
+  Stable for amd64, wrt bug #542500
 
   08 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> libircclient-1.8.ebuild:
   add slot dep for openssl; set RDEPEND

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.03.03.ebuild,v 1.1 2014/12/11 14:32:13 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-4.03.03.ebuild,v 1.2 2015/03/09 11:45:01 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://clusterssh.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.3.ebuild,v 1.1 2015/01/06 09:27:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.3.ebuild,v 1.2 2015/03/09 11:44:56 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="https://downloads.teeworlds.com/${P}-src.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug dedicated"
 
 RDEPEND="

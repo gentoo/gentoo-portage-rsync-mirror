@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.7 2015/02/06 10:55:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent1-demodata/descent1-demodata-1.4.ebuild,v 1.8 2015/03/09 11:45:36 ago Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -18,7 +18,7 @@ SRC_URI="http://icculus.org/d2x/data/${DEMO}
 LICENSE="free-noncomm"
 
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""
