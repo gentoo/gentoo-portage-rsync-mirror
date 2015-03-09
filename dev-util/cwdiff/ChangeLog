@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cwdiff
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/ChangeLog,v 1.8 2014/03/13 20:25:28 ottxor Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/ChangeLog,v 1.9 2015/03/09 22:51:50 ottxor Exp $
+
+*cwdiff-0.2.7 (09 Mar 2015)
+
+  09 Mar 2015; Christoph Junghans <ottxor@gentoo.org> +cwdiff-0.2.7.ebuild:
+  version bump
 
   13 Mar 2014; Christoph Junghans <ottxor@gentoo.org> cwdiff-0.2.6.ebuild:
   added ~x64-macos (tested by me)
