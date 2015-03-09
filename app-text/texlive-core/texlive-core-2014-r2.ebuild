@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2014-r2.ebuild,v 1.1 2015/02/28 17:45:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2014-r2.ebuild,v 1.2 2015/03/09 12:17:39 jlec Exp $
 
 EAPI=5
 
@@ -236,9 +236,9 @@ src_configure() {
 
 src_compile() {
 	tc-export CC CXX AR RANLIB
-	emake SHELL="${EPREFIX}"/bin/sh texmf="${EPREFIX}"${TEXMF_PATH:-/usr/share/texmf-dist} || die "emake failed"
+	emake SHELL="${EPREFIX}"/bin/sh texmf="${EPREFIX}"${TEXMF_PATH:-/usr/share/texmf-dist}
 
-	cd "${B}"
+	cd "${B}" || die
 	# Mimic updmap --syncwithtrees to enable only fonts installed
 	# Code copied from updmap script
 	for i in `egrep '^(Mixed|Kanji)?Map' "texmf-dist/web2c/updmap.cfg" | sed 's@.* @@'`; do
@@ -255,9 +255,9 @@ src_compile() {
 
 src_install() {
 	dodir ${TEXMF_PATH:-/usr/share/texmf-dist}/web2c
-	emake DESTDIR="${D}" texmf="${ED}${TEXMF_PATH:-/usr/share/texmf-dist}" run_texlinks="true" run_mktexlsr="true" install || die "install failed"
+	emake DESTDIR="${D}" texmf="${ED}${TEXMF_PATH:-/usr/share/texmf-dist}" run_texlinks="true" run_mktexlsr="true" install
 
-	cd "${B}"
+	cd "${B}" || die
 	dodir /usr/share # just in case
 	cp -pR texmf-dist "${ED}/usr/share/" || die "failed to install texmf trees"
 	cp -pR "${WORKDIR}"/tlpkg "${ED}/usr/share/" || die "failed to install tlpkg files"
@@ -268,19 +268,19 @@ src_install() {
 
 	docinto texk
 	cd "${B}/texk"
-	dodoc ChangeLog README || die "failed to install texk docs"
+	dodoc ChangeLog README
 
 	docinto dviljk
 	cd "${B}/texk/dviljk"
-	dodoc ChangeLog README NEWS || die "failed to install dviljk docs"
+	dodoc ChangeLog README NEWS
 
 	docinto makeindexk
 	cd "${B}/texk/makeindexk"
-	dodoc ChangeLog NOTES README || die "failed to install makeindexk docs"
+	dodoc ChangeLog NOTES README
 
 	docinto web2c
 	cd "${B}/texk/web2c"
-	dodoc ChangeLog NEWS PROJECTS README || die "failed to install web2c docs"
+	dodoc ChangeLog NEWS PROJECTS README
 
 	use doc || rm -rf "${ED}/usr/share/texmf-dist/doc"
 

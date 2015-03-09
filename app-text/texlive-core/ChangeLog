@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.219 2015/02/28 17:45:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.220 2015/03/09 12:17:39 jlec Exp $
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  texlive-core-2014-r2.ebuild:
+  Drop unnecessary die usage
 
 *texlive-core-2014-r2 (28 Feb 2015)
 *texlive-core-2013-r2 (28 Feb 2015)

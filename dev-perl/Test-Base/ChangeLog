@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Base
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.69 2015/02/28 18:33:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/ChangeLog,v 1.70 2015/03/09 12:17:31 zlogene Exp $
+
+  09 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> Test-Base-0.880.0.ebuild:
+  Add ~alpha/~ia64/~ppc64/~sparc keywords
 
   28 Feb 2015; Fabian Groffen <grobian@gentoo.org> Test-Base-0.880.0.ebuild:
   Added some Prefix keywords, bug #541380
