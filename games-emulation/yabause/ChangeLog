@@ -1,6 +1,15 @@
 # ChangeLog for games-emulation/yabause
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.38 2015/02/09 21:39:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/ChangeLog,v 1.40 2015/03/09 18:20:18 mr_bones_ Exp $
+
+  09 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  yabause-0.9.14.ebuild:
+  clean metadata
+
+  09 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/yabause-0.9.12-RWX.patch, -files/yabause-0.9.12-cmake.patch,
+  -yabause-0.9.12.ebuild, yabause-0.9.14.ebuild:
+  old
 
 *yabause-0.9.14 (09 Feb 2015)
 
