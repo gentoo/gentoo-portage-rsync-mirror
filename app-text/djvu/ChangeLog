@@ -1,6 +1,11 @@
 # ChangeLog for app-text/djvu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.150 2014/11/12 08:26:30 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.151 2015/03/09 07:57:23 aballier Exp $
+
+*djvu-3.5.27 (09 Mar 2015)
+
+  09 Mar 2015; Alexis Ballier <aballier@gentoo.org> +djvu-3.5.27.ebuild:
+  version bump
 
   12 Nov 2014; Justin Lecher <jlec@gentoo.org> djvu-3.5.25.3.ebuild,
   metadata.xml:

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dvipng
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.88 2014/11/01 17:07:08 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.89 2015/03/09 07:44:39 aballier Exp $
+
+*dvipng-1.15 (09 Mar 2015)
+
+  09 Mar 2015; Alexis Ballier <aballier@gentoo.org> +dvipng-1.15.ebuild:
+  version bump
 
   01 Nov 2014; Ulrich Müller <ulm@gentoo.org> dvipng-1.14.ebuild:
   Specify LICENSE more precisely. Update ebuild to EAPI 5.
