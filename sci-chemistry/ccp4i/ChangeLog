@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/ccp4i
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ChangeLog,v 1.13 2014/01/06 15:05:37 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ChangeLog,v 1.14 2015/03/09 13:30:18 jlec Exp $
+
+*ccp4i-6.1.3-r4 (09 Mar 2015)
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org> +ccp4i-6.1.3-r4.ebuild:
+  Bump to new python.eclasses
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> ccp4i-6.1.3-r3.ebuild:
   Punt base.eclass
@@ -57,4 +62,3 @@
   +files/6.1.3-rename-superpose.patch, +files/6.1.3-rename-truncate.patch,
   +ccp4i-6.1.3.ebuild, +metadata.xml:
   Interface splitted from ccp4
-

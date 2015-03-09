@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/anigif
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/ChangeLog,v 1.6 2012/12/05 20:45:20 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/ChangeLog,v 1.7 2015/03/09 13:21:28 jlec Exp $
+
+*anigif-1.3-r1 (09 Mar 2015)
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org> +anigif-1.3-r1.ebuild,
+  metadata.xml:
+  Bump to EAPI=5
 
   05 Dec 2012; Ulrich Müller <ulm@gentoo.org> anigif-1.3.ebuild:
   Fix LICENSE, see anygif.tcl: "AniGif is distributed under the same license
@@ -23,4 +29,3 @@
   06 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +anigif-1.3.ebuild,
   +metadata.xml:
   Initial commit
-
