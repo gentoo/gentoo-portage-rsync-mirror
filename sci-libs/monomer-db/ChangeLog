@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/monomer-db
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.20 2013/06/02 14:05:19 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/ChangeLog,v 1.21 2015/03/09 13:39:22 jlec Exp $
+
+  09 Mar 2015; Justin Lecher <jlec@gentoo.org> monomer-db-0.090729.ebuild:
+  Bump EAPI
 
   02 Jun 2013; Justin Lecher <jlec@gentoo.org> -monomer-db-5.28.ebuild,
   -monomer-db-5.30.ebuild, -monomer-db-5.31.ebuild, -monomer-db-5.32.ebuild,
@@ -93,4 +96,3 @@
   02 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   +monomer-db-0.090729.ebuild, +metadata.xml:
   Split out monomer library for ccp4 based chrystallographic packages
-

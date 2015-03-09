@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r3.ebuild,v 1.6 2013/12/24 12:43:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r3.ebuild,v 1.7 2015/03/09 13:33:02 jlec Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${PN}${PV}_Linux"
 
 DESCRIPTION="A direct-method program for SAD/SIR phasing"
 HOMEPAGE="http://cryst.iphy.ac.cn/Project/protein/protein-I.html"
-SRC_URI="http://dev.gentooexperimental.org/~jlec/distfiles/${MY_P}.zip"
+SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${MY_P}.zip"
 
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
@@ -20,7 +20,7 @@ IUSE="examples +minimal"
 RDEPEND="
 	sci-chemistry/ccp4-apps
 	sci-chemistry/pymol
-	sci-libs/mmdb
+	sci-libs/mmdb:0
 	sci-visualization/gnuplot
 	!minimal? (
 		sci-chemistry/solve-resolve-bin
