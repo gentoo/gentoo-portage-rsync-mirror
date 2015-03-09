@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.110.ebuild,v 1.7 2015/03/02 09:27:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.110.ebuild,v 1.8 2015/03/09 19:22:19 vapier Exp $
 
 EAPI=5
 
-inherit eutils multilib-minimal toolchain-funcs
+inherit eutils multilib-minimal toolchain-funcs flag-o-matic
 
 DESCRIPTION="Asynchronous input/output library that uses the kernels native interface"
 HOMEPAGE="https://git.fedorahosted.org/cgit/libaio.git/  http://lse.sourceforge.net/io/aio.html"
@@ -35,6 +35,16 @@ src_prepare() {
 	sed -i "${sed_args[@]}" src/Makefile Makefile || die
 
 	multilib_copy_sources
+}
+
+multilib_src_configure() {
+	if use arm ; then
+		# When building for thumb, we can't allow frame pointers.
+		# http://crbug.com/464517
+		if $(tc-getCPP) ${CFLAGS} ${CPPFLAGS} - <<<$'#ifndef __thumb__\n#error\n#endif' >&/dev/null ; then
+			append-flags -fomit-frame-pointer
+		fi
+	fi
 }
 
 _emake() {
