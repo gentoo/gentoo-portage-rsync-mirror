@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-8.0.0.ebuild,v 1.1 2015/02/09 16:00:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-8.0.0.ebuild,v 1.2 2015/03/09 16:58:58 voyageur Exp $
 
 EAPI=5
 
@@ -43,4 +43,11 @@ src_install() {
 	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess
 
 	webapp_src_install
+}
+
+pkg_postinst() {
+	elog "Additional applications (calendar, ...) are no longer provided by default."
+	elog "You can install them after login via the applications management page"
+	elog "(check the recommended tab). No application data is lost."
+	webapp_pkg_postinst
 }
