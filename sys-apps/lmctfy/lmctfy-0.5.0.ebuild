@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctfy/lmctfy-0.5.0.ebuild,v 1.1 2014/07/14 03:55:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctfy/lmctfy-0.5.0.ebuild,v 1.2 2015/03/10 21:40:30 vapier Exp $
 
 EAPI=5
 
@@ -10,8 +10,8 @@ DESCRIPTION="Linux application container management from Google"
 HOMEPAGE="https://github.com/google/lmctfy"
 SRC_URI="https://github.com/google/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-SLOT="0"
 LICENSE="Apache-2.0"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
@@ -30,8 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	# silly upstream!
-	mkdir -p "${D}/usr/bin"
-	cp "${S}/bin/lmctfy/cli/lmctfy" "${D}/usr/bin/" || die "Failed to copy cli binary"
-	dolib.a "${S}/bin/liblmctfy.a" || die "Failed to copy library"
+	dobin bin/lmctfy/cli/lmctfy
+	dolib.a bin/liblmctfy.a
 }

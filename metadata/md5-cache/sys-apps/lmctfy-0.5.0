@@ -10,4 +10,4 @@ RDEPEND=dev-libs/protobuf >=dev-cpp/gflags-2.1.1 dev-libs/re2 dev-lang/go sys-li
 SLOT=0
 SRC_URI=https://github.com/google/lmctfy/archive/0.5.0.tar.gz -> lmctfy-0.5.0.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=17b9b735dcb7fefcebff5487d4259e00
+_md5_=577f71cb7872a450fb81869093e58bb3
