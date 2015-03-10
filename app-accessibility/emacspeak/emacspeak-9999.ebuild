@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.9 2015/01/28 00:00:35 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-9999.ebuild,v 1.10 2015/03/10 15:29:50 williamh Exp $
 
 EAPI=5
 
@@ -10,11 +10,11 @@ DISABLE_AUTOFORMATTING=1
 inherit eutils readme.gentoo elisp
 
 if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="http://${PN}.googlecode.com/svn/trunk"
-	inherit subversion
+	EGIT_REPO_URI="git://github.com/tvraman/emacspeak.git"
+	inherit git-r3
 else
 	SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
-	KEYWORDS="amd64 ppc x86"
+	KEYWORDS="~amd64 ~ppc ~x86"
 fi
 
 DESCRIPTION="the emacspeak audio desktop"

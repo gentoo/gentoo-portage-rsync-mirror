@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/spacefm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.65 2014/11/26 09:11:22 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.66 2015/03/10 15:08:39 dlan Exp $
+
+  10 Mar 2015; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  update maintainer's email address
 
   26 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   update Daniel Campbell as maintainer

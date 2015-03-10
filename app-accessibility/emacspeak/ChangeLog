@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.60 2015/01/28 00:00:35 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.61 2015/03/10 15:29:50 williamh Exp $
+
+  10 Mar 2015; William Hubbs <williamh@gentoo.org> emacspeak-9999.ebuild:
+  Upstream moved to github, so adjust the live ebuild
 
   27 Jan 2015; Christopher Brannon <teiresias@gentoo.org>
   -emacspeak-39.0-r1.ebuild, emacspeak-9999.ebuild:
