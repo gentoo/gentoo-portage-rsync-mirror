@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/baudline
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.7 2014/11/15 21:00:50 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/ChangeLog,v 1.8 2015/03/10 16:07:28 xmw Exp $
+
+  10 Mar 2015; Michael Weber <xmw@gentoo.org> baudline-1.08-r1.ebuild:
+  Drop RESTRICT=binchecks (bug 542214) and fix .desktop file errors
 
   15 Nov 2014; Rick Farina <zerochaos@gentoo.org> baudline-1.08-r1.ebuild:
   adjust restrictions per discussion with ulm and baudline license

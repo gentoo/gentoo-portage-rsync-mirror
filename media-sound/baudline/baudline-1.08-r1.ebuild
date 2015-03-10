@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/baudline-1.08-r1.ebuild,v 1.4 2014/11/15 21:00:50 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/baudline/baudline-1.08-r1.ebuild,v 1.5 2015/03/10 16:07:28 xmw Exp $
 
 EAPI=3
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE="jack"
 
-RESTRICT="binchecks mirror bindist"
+RESTRICT="mirror bindist"
+QA_PREBUILT="/opt/baudline/baudline"
 
 RDEPEND="media-fonts/font-adobe-75dpi
 	media-fonts/font-misc-misc
@@ -43,14 +44,14 @@ src_install() {
 	exeinto /opt/${PN}
 	doexe ${PN} || die
 	dosym /opt/${PN}/${PN} /usr/bin/${PN} || die
-	make_desktop_entry /usr/bin/${PN} Baudline ${PN} "Audio;Player;" "Comment=Sound analyser\n" \
+	make_desktop_entry /usr/bin/${PN} Baudline ${PN} "AudioVideo;Player;" \
 		"MimeType=audio/x-aiff;audio/basic;audio/x-mp3;audio/x-flac;audio/vorbis;audio/x-wav;" \
 		"audio/x-vorbis;audio/mpeg;audio/x-gsm;audio/x-voc;application/x-ogg;"
 
 	if use jack ; then
 		doexe ${PN}_jack || die
 		dosym /opt/${PN}/${PN}_jack /usr/bin/${PN}_jack || die
-		make_desktop_entry /usr/bin/${PN}_jack "Baudline (jack support)" ${PN} "Audio;Player;" "Comment=Sound analyser\n" \
+		make_desktop_entry /usr/bin/${PN}_jack "Baudline (jack support)" ${PN} "AudioVideo;Player;" \
 			"MimeType=audio/x-aiff;audio/basic;audio/x-mp3;audio/x-flac;audio/vorbis;audio/x-wav;" \
 			"audio/x-vorbis;audio/mpeg;audio/x-gsm;audio/x-voc;application/x-ogg;"
 	fi

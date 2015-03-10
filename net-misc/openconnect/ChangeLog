@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.36 2015/01/06 02:35:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.37 2015/03/10 16:02:51 dlan Exp $
+
+  10 Mar 2015; Yixun Lan <dlan@gentoo.org> openconnect-7.02.ebuild:
+  keyword for arm/arm64, test on cortex-a9 and a53 board
 
   06 Jan 2015; Mike Gilbert <floppym@gentoo.org> openconnect-7.02.ebuild:
   Use tarball for vpnc-scripts.

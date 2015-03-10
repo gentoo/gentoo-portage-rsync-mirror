@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.28.ebuild,v 1.1 2015/03/07 14:00:35 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-1.28.ebuild,v 1.2 2015/03/10 16:06:53 dlan Exp $
 
 EAPI="5"
 inherit base systemd
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	bluetooth? ( net-wireless/bluez )
 	l2tp? ( net-dialup/xl2tpd )
 	ofono? ( net-misc/ofono )
+	openconnect? ( net-misc/openconnect )
 	openvpn? ( net-misc/openvpn )
 	policykit? ( sys-auth/polkit )
 	pptp? ( net-dialup/pptpclient )

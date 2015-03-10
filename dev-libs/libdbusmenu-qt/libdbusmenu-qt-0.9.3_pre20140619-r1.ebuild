@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild,v 1.2 2015/03/01 15:33:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild,v 1.3 2015/03/10 16:26:01 kensington Exp $
 
 EAPI=5
 
@@ -32,9 +32,9 @@ REQUIRED_USE="|| ( qt4 qt5 )"
 
 RDEPEND="
 	qt4? (
-		dev-qt/qtcore:4[${MULTILIB_USEDEP}]
-		dev-qt/qtdbus:4[${MULTILIB_USEDEP}]
-		dev-qt/qtgui:4[${MULTILIB_USEDEP}]
+		>=dev-qt/qtcore-4.8.6:4[${MULTILIB_USEDEP}]
+		>=dev-qt/qtdbus-4.8.6:4[${MULTILIB_USEDEP}]
+		>=dev-qt/qtgui-4.8.6:4[${MULTILIB_USEDEP}]
 	)
 	qt5? (
 		dev-qt/qtcore:5
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? (
 		dev-libs/qjson[${MULTILIB_USEDEP}]
-		qt4? ( dev-qt/qttest:4[${MULTILIB_USEDEP}] )
+		qt4? ( >=dev-qt/qttest-4.8.6:4[${MULTILIB_USEDEP}] )
 		qt5? ( dev-qt/qttest:5 )
 	)
 "

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-        <maintainer>
-                <email>dlan@gentoo.org</email>
-                <name>Yixun Lan</name>
-        </maintainer>
-        <maintainer>
-                <email>chainsaw@gentoo.org</email>
-                <name>Tony Vroon</name>
-        </maintainer>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>balint@szentedwg.ro</email>
+		<name>Bálint Szente</name>
+		<description>Primary Maintainer, Assign bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>dlan@gentoo.org</email>
+		<name>Yixun Lan</name>
+		<description>Co Maintainer, CC bugs</description>
+	</maintainer>
 	<use>
 		<flag name="ethernet">Enable ethernet support.</flag>
 		<flag name="l2tp">Use <pkg>net-dialup/xl2tpd</pkg> for L2TP VPN support.</flag>

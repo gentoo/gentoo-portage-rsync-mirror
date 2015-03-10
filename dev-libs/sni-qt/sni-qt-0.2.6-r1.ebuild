@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sni-qt/sni-qt-0.2.6-r1.ebuild,v 1.1 2015/02/26 12:48:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sni-qt/sni-qt-0.2.6-r1.ebuild,v 1.2 2015/03/10 16:23:53 kensington Exp $
 
 EAPI=5
 
@@ -17,12 +17,12 @@ IUSE="test"
 
 RDEPEND="
 	dev-libs/libdbusmenu-qt[qt4,${MULTILIB_USEDEP}]
-	dev-qt/qtcore:4[${MULTILIB_USEDEP}]
-	dev-qt/qtdbus:4[${MULTILIB_USEDEP}]
-	dev-qt/qtgui:4[${MULTILIB_USEDEP}]
+	>=dev-qt/qtcore-4.8.6:4[${MULTILIB_USEDEP}]
+	>=dev-qt/qtdbus-4.8.6:4[${MULTILIB_USEDEP}]
+	>=dev-qt/qtgui-4.8.6:4[${MULTILIB_USEDEP}]
 "
 DEPEND="${RDEPEND}
-	test? ( dev-qt/qttest:4[${MULTILIB_USEDEP}] )
+	test? ( >=dev-qt/qttest-4.8.6:4[${MULTILIB_USEDEP}] )
 "
 
 src_prepare() {
