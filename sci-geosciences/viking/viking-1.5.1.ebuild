@@ -1,8 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.5.1.ebuild,v 1.2 2015/03/09 19:59:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.5.1.ebuild,v 1.3 2015/03/10 18:42:06 graaff Exp $
 
 EAPI=5
+
+inherit eutils
 
 DESCRIPTION="GPS data editor and analyzer"
 HOMEPAGE="http://viking.sourceforge.net/"
@@ -23,7 +25,7 @@ COMMONDEPEND="
 	sys-libs/zlib
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
-	gps? ( >=sci-geosciences/gpsd-2.96 <sci-geosciences/gpsd-3.12 )
+	gps? ( >=sci-geosciences/gpsd-2.96 )
 	exif? ( media-libs/libexif )
 	magic? ( sys-apps/file )
 "
@@ -39,6 +41,10 @@ DEPEND="${COMMONDEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext
 "
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gpsd-3.13.patch
+}
 
 src_configure() {
 	econf \

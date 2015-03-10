@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/viking
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.28 2015/03/09 19:59:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.29 2015/03/10 18:42:06 graaff Exp $
+
+  10 Mar 2015; Hans de Graaff <graaff@gentoo.org> viking-1.5.1.ebuild,
+  +files/viking-1.5.1-gpsd-3.13.patch:
+  Add upstream patch to fix compilation with newer gpsd versions, fixing bug
+  541646.
 
   09 Mar 2015; Hans de Graaff <graaff@gentoo.org> viking-1.5.1.ebuild:
   Limit gpsd dependency to compatible versions for bug 541646.
