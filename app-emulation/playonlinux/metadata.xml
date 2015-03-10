@@ -3,8 +3,13 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>mikemol@gmail.com</email>
-		<name>Michael Mol</name>
+                <email>idella4@gentoo.org</email>
+                <name>Ian Delaney</name>
+        </maintainer>
+        <maintainer>
+                <email>np.hardass@gmail.com</email>
+                <name>NP-Hardass</name>
+                <description>proxy maintainer and recipient of bugs</description>
 	</maintainer>
 <use>
 	<flag name="winbind">Enables support for the winbind auth daemon</flag>
