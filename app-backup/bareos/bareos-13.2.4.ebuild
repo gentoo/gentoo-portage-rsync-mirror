@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.4.ebuild,v 1.2 2014/12/28 14:43:07 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.4.ebuild,v 1.4 2015/03/10 14:30:04 mschiff Exp $
 
 EAPI="5"
 
@@ -23,9 +23,9 @@ IUSE="acl clientonly +director fastlz ipv6 logwatch mysql ndmp postgres python q
 
 DEPEND="
 	!app-backup/bacula
-	dev-libs/gmp
+	dev-libs/gmp:*
 	!clientonly? (
-		postgres? ( dev-db/postgresql[threads] )
+		postgres? ( dev-db/postgresql:*[threads] )
 		mysql? ( virtual/mysql )
 		sqlite3? ( dev-db/sqlite:3 )
 		director? ( virtual/mta )
@@ -37,18 +37,18 @@ DEPEND="
 	fastlz? ( dev-libs/bareos-fastlzlib )
 	logwatch? ( sys-apps/logwatch )
 	tcpd? ( sys-apps/tcp-wrappers )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:* )
 	static? (
 		acl? ( virtual/acl[static-libs] )
 		sys-libs/zlib[static-libs]
 		dev-libs/lzo[static-libs]
 		sys-libs/ncurses[static-libs]
-		ssl? ( dev-libs/openssl[static-libs] )
+		ssl? ( dev-libs/openssl:0[static-libs] )
 	)
 	!static? (
 		acl? ( virtual/acl )
 		dev-libs/lzo
-		ssl? ( dev-libs/openssl )
+		ssl? ( dev-libs/openssl:0 )
 		sys-libs/ncurses
 		sys-libs/zlib
 	)
