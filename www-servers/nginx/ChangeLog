@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.402 2015/03/10 09:34:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.403 2015/03/10 12:45:41 jlec Exp $
+
+  10 Mar 2015; Justin Lecher <jlec@gentoo.org> nginx-1.7.10.ebuild:
+  Import changes from proxy maintainer Johan Bergstroem,
+  https://github.com/gentoo/proxy-maintainers/pull/22
 
 *nginx-1.7.10 (10 Mar 2015)
 

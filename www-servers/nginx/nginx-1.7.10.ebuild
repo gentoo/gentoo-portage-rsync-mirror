@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.10.ebuild,v 1.1 2015/03/10 09:34:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.10.ebuild,v 1.2 2015/03/10 12:45:41 jlec Exp $
 
 EAPI="5"
 
@@ -498,11 +498,11 @@ src_configure() {
 		--with-cc-opt="-I${EROOT}usr/include" \
 		--with-ld-opt="-L${EROOT}usr/$(get_libdir)" \
 		--http-log-path="${EPREFIX}"/var/log/${PN}/access_log \
-		--http-client-body-temp-path="${EPREFIX}/${NGINX_HOME_TMP}"/client \
-		--http-proxy-temp-path="${EPREFIX}/${NGINX_HOME_TMP}"/proxy \
-		--http-fastcgi-temp-path="${EPREFIX}/${NGINX_HOME_TMP}"/fastcgi \
-		--http-scgi-temp-path="${EPREFIX}/${NGINX_HOME_TMP}"/scgi \
-		--http-uwsgi-temp-path="${EPREFIX}/${NGINX_HOME_TMP}"/uwsgi \
+		--http-client-body-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/client \
+		--http-proxy-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/proxy \
+		--http-fastcgi-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/fastcgi \
+		--http-scgi-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/scgi \
+		--http-uwsgi-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/uwsgi \
 		${myconf} || die "configure failed"
 
 	# A purely cosmetic change that makes nginx -V more readable. This can be
@@ -520,9 +520,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D%/}" install
 
-	cp "${FILESDIR}"/nginx.conf "${ED}"/etc/nginx/nginx.conf || die
+	cp "${FILESDIR}"/nginx.conf "${ED}"etc/nginx/nginx.conf || die
 
 	newinitd "${FILESDIR}"/nginx.initd-r2 nginx
 
@@ -533,7 +533,7 @@ src_install() {
 
 	# just keepdir. do not copy the default htdocs files (bug #449136)
 	keepdir /var/www/localhost
-	rm -rf "${D}"/usr/html || die
+	rm -rf "${D}"usr/html || die
 
 	# set up a list of directories to keep
 	local keepdir_list="${NGINX_HOME_TMP}"/client
@@ -641,9 +641,9 @@ src_install() {
 
 pkg_postinst() {
 	if use ssl; then
-		if [ ! -f "${EROOT}"/etc/ssl/${PN}/${PN}.key ]; then
+		if [ ! -f "${EROOT}"etc/ssl/${PN}/${PN}.key ]; then
 			install_cert /etc/ssl/${PN}/${PN}
-			use prefix || chown ${PN}:${PN} "${EROOT}"/etc/ssl/${PN}/${PN}.{crt,csr,key,pem}
+			use prefix || chown ${PN}:${PN} "${EROOT}"etc/ssl/${PN}/${PN}.{crt,csr,key,pem}
 		fi
 	fi
 
@@ -669,7 +669,7 @@ pkg_postinst() {
 		ewarn "Check if this is correct for your setup before restarting nginx!"
 		ewarn "This is a one-time change and will not happen on subsequent updates."
 		ewarn "Furthermore nginx' temp directories got moved to ${NGINX_HOME_TMP}"
-		chmod -f o-rwx "${EPREFIX}"/var/log/nginx "${EPREFIX}/${NGINX_HOME_TMP}"/{,client,proxy,fastcgi,scgi,uwsgi}
+		chmod -f o-rwx "${EPREFIX}"/var/log/nginx "${EPREFIX}${NGINX_HOME_TMP}"/{,client,proxy,fastcgi,scgi,uwsgi}
 	fi
 
 	# If the nginx user can't change into or read the dir, display a warning.
