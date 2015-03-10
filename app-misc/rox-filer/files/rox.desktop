@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Rox-Filer
+Comment=The Rox File Manager
+Icon=rox
+Exec=rox
+Categories=GTK;Utility;System;Core;
+StartupNotify=true
+Terminal=false
