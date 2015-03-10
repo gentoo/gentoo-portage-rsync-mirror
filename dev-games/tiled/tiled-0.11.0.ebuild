@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.10.1.ebuild,v 1.1 2014/09/22 18:37:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.11.0.ebuild,v 1.1 2015/03/10 13:03:21 kensington Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="A general purpose tile map editor"
 HOMEPAGE="http://www.mapeditor.org/"
 SRC_URI="https://github.com/bjorn/tiled/archive/v${PV}/${P}.tar.gz"
 
-LICENSE="BSD GPL-2"
+LICENSE="BSD-2 GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="examples python"

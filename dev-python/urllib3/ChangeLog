@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.32 2015/03/09 00:01:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.33 2015/03/10 13:16:49 idella4 Exp $
+
+  10 Mar 2015; Ian Delaney <idella4@gentoo.org> urllib3-1.10.ebuild,
+  urllib3-1.9.1.ebuild:
+  add dep to DEPEND
 
   09 Mar 2015; Pacho Ramos <pacho@gentoo.org> urllib3-1.9.1.ebuild:
   x86 stable, bug 540290
