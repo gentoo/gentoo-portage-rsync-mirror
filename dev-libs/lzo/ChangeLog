@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.90 2014/12/26 18:47:48 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.91 2015/03/10 20:19:03 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> lzo-2.08.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   26 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> -lzo-2.06-r1.ebuild,
   -lzo-2.06.ebuild:

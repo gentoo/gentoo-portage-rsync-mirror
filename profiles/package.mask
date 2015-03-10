@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16410 2015/03/10 18:40:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16411 2015/03/10 20:29:02 k_f Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -238,11 +238,6 @@ app-office/openerp-web
 # Michał Górny <mgorny@gentoo.org> (11 Feb 2015)
 # Potentially destructive to @world, bug #539746.
 =sys-apps/portage-2.2.16
-
-# Kristian Fiskerstrand <k_f@gentoo.org> (09 Feb 2015)
-# Dead upstream, will be removed in 30 days.
-# Qt support is provided by app-crypt/pinentry[qt4]
-app-crypt/pinentry-qt
 
 # Hanno Boeck <hanno@gentoo.org> (08 Feb 2015)
 # Dead upstream, will be removed in 30 days if nobody

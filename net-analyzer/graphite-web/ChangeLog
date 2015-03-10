@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/graphite-web
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/ChangeLog,v 1.1 2015/03/10 20:17:50 grobian Exp $
+
+*graphite-web-0.9.13 (10 Mar 2015)
+
+  10 Mar 2015; Fabian Groffen <grobian@gentoo.org>
+  +files/graphite-web-0.9.13-fhs-paths.patch,
+  +files/graphite-web-0.9.13-system-libs.patch, +graphite-web-0.9.13.ebuild,
+  +metadata.xml:
+  Initial ebuild by me, closes bug #435558

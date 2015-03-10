@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gnome-maps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gnome-maps/ChangeLog,v 1.9 2014/12/23 23:21:33 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gnome-maps/ChangeLog,v 1.10 2015/03/10 20:15:41 pacho Exp $
+
+  10 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-maps-3.14.2.ebuild:
+  x86 keyword
 
 *gnome-maps-3.14.2 (23 Dec 2014)
 
