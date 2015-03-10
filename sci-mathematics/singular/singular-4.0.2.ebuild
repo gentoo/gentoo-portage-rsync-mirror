@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-4.0.2.ebuild,v 1.1 2015/03/09 13:49:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-4.0.2.ebuild,v 1.2 2015/03/10 19:12:44 tomka Exp $
 
 EAPI=5
 
@@ -28,7 +28,8 @@ RDEPEND="dev-libs/gmp
 	>=dev-libs/ntl-5.5.1
 	emacs? ( >=virtual/emacs-22 )
 	sci-mathematics/flint
-	sci-mathematics/4ti2"
+	sci-mathematics/4ti2
+	sci-libs/cddlib"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl

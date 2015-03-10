@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/singular
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.61 2015/03/09 13:49:39 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.62 2015/03/10 19:12:44 tomka Exp $
+
+  10 Mar 2015; Thomas Kahle <tomka@gentoo.org> singular-4.0.2.ebuild:
+  Fix missing dep on cddlib (542746)
 
 *singular-4.0.2 (09 Mar 2015)
 
