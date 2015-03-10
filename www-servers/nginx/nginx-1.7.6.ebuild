@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.6.ebuild,v 1.7 2014/11/17 23:21:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.7.6.ebuild,v 1.8 2015/03/10 09:34:27 jlec Exp $
 
 EAPI="5"
 
@@ -211,8 +211,8 @@ done
 CDEPEND="
 	pcre? ( >=dev-libs/libpcre-4.2 )
 	pcre-jit? ( >=dev-libs/libpcre-8.20[jit] )
-	ssl? ( dev-libs/openssl )
-	http-cache? ( userland_GNU? ( dev-libs/openssl ) )
+	ssl? ( dev-libs/openssl:0= )
+	http-cache? ( userland_GNU? ( dev-libs/openssl:0= ) )
 	nginx_modules_http_geoip? ( dev-libs/geoip )
 	nginx_modules_http_gunzip? ( sys-libs/zlib )
 	nginx_modules_http_gzip? ( sys-libs/zlib )
@@ -220,10 +220,10 @@ CDEPEND="
 	nginx_modules_http_image_filter? ( media-libs/gd[jpeg,png] )
 	nginx_modules_http_perl? ( >=dev-lang/perl-5.8 )
 	nginx_modules_http_rewrite? ( >=dev-libs/libpcre-4.2 )
-	nginx_modules_http_secure_link? ( userland_GNU? ( dev-libs/openssl ) )
-	nginx_modules_http_spdy? ( >=dev-libs/openssl-1.0.1c )
+	nginx_modules_http_secure_link? ( userland_GNU? ( dev-libs/openssl:0= ) )
+	nginx_modules_http_spdy? ( >=dev-libs/openssl-1.0.1c:0= )
 	nginx_modules_http_xslt? ( dev-libs/libxml2 dev-libs/libxslt )
-	nginx_modules_http_lua? ( !luajit? ( dev-lang/lua ) luajit? ( dev-lang/luajit ) )
+	nginx_modules_http_lua? ( !luajit? ( dev-lang/lua:0= ) luajit? ( dev-lang/luajit:2= ) )
 	nginx_modules_http_auth_pam? ( virtual/pam )
 	nginx_modules_http_metrics? ( dev-libs/yajl )
 	nginx_modules_http_dav_ext? ( dev-libs/expat )
