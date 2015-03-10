@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr-git
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/ChangeLog,v 1.16 2013/03/25 20:39:56 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/ChangeLog,v 1.17 2015/03/10 14:38:14 idella4 Exp $
+
+*bzr-git-0.6.8-r1 (10 Mar 2015)
+
+  10 Mar 2015; Ian Delaney <idella4@gentoo.org> +bzr-git-0.6.8-r1.ebuild:
+  revbump; conversion -> distutils-r1 wrt bug #541008
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> bzr-git-0.6.8.ebuild:
   Stable for x86, wrt bug #457348

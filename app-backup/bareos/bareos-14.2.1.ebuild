@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-14.2.1.ebuild,v 1.4 2015/03/10 14:30:04 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-14.2.1.ebuild,v 1.5 2015/03/10 14:43:07 mschiff Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ DEPEND="
 	rados? ( sys-cluster/ceph )
 	glusterfs? ( sys-cluster/glusterfs )
 	lmdb? ( dev-db/lmdb )
-	dev-libs/gmp:*
+	dev-libs/gmp:0
 	!clientonly? (
 		postgres? ( dev-db/postgresql:*[threads] )
 		mysql? ( virtual/mysql )
@@ -41,7 +41,7 @@ DEPEND="
 	fastlz? ( dev-libs/bareos-fastlzlib )
 	logwatch? ( sys-apps/logwatch )
 	tcpd? ( sys-apps/tcp-wrappers )
-	readline? ( sys-libs/readline:* )
+	readline? ( sys-libs/readline:0 )
 	static? (
 		acl? ( virtual/acl[static-libs] )
 		sys-libs/zlib[static-libs]

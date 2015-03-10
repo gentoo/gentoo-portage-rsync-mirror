@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr-xmloutput
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.17 2013/03/25 20:52:41 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.18 2015/03/10 14:40:42 idella4 Exp $
+
+*bzr-xmloutput-0.8.8-r2 (10 Mar 2015)
+
+  10 Mar 2015; Ian Delaney <idella4@gentoo.org> +bzr-xmloutput-0.8.8-r2.ebuild:
+  revbump; conversion -> distutils-r1 wrt bug #541008
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> bzr-xmloutput-0.8.8-r1.ebuild:
   Stable for x86, wrt bug #456632
