@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-36.0.1.ebuild,v 1.1 2015/03/08 03:45:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-36.0.1.ebuild,v 1.2 2015/03/10 14:00:38 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -223,10 +223,6 @@ src_configure() {
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
-
-	# Force jit simulators for mips and arm
-	use jit && use arm && mozconfig_annotate '' --enable-arm-simulator
-	use jit && use mips && mozconfig_annotate '' --enable-mips-simulator
 
 	# Allow for a proper pgo build
 	if use pgo; then

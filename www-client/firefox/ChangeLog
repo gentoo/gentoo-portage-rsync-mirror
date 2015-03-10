@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.394 2015/03/08 03:45:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.395 2015/03/10 14:00:38 axs Exp $
+
+  10 Mar 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-36.0.1.ebuild:
+  Stripped 'simulator' configure flags for arm and mips platforms as they do not
+  simulate jit, but rather simulate arm and mips on x86 to allow jit to be
+  tested; bug 542754
 
 *firefox-36.0.1 (08 Mar 2015)
 

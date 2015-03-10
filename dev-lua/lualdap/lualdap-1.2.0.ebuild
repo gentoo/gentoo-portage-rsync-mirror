@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lualdap/lualdap-1.2.0.ebuild,v 1.1 2015/03/10 11:31:17 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lualdap/lualdap-1.2.0.ebuild,v 1.2 2015/03/10 13:33:22 zx2c4 Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_PN="LuaLDAP"
 
 DESCRIPTION="Simple interface from Lua to OpenLDAP"
 HOMEPAGE="http://git.zx2c4.com/lualdap/about/"
-SRC_URI="http://git.zx2c4.com/${PN}/snapshot/${P}.tar.gz"
+SRC_URI="http://git.zx2c4.com/${PN}/snapshot/${P}.tar.xz"
 
 LICENSE="MIT"
 SLOT="0"
