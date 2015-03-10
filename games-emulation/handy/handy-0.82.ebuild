@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/handy-0.82.ebuild,v 1.9 2014/09/07 09:43:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/handy/handy-0.82.ebuild,v 1.10 2015/03/10 05:38:14 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 MY_RLS="R1"
@@ -20,13 +21,16 @@ IUSE=""
 RDEPEND="media-libs/libsdl
 	sys-libs/zlib
 	sys-libs/lib-compat"
+DEPEND=${RDEPEND}
 
 S=${WORKDIR}
+
+QA_PREBUILT="${GAMES_PREFIX_OPT:1}/${PN}/handy"
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 	exeinto "${dir}"
-	newexe sdlhandy handy || die "doexe failed"
+	newexe sdlhandy handy
 	dohtml -r docs/*
 	games_make_wrapper sdlhandy ./sdlhandy "${dir}" "${dir}"
 	games_make_wrapper handy ./handy "${dir}" "${dir}"
