@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.1.2.2041.ebuild,v 1.1 2014/02/08 15:56:20 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.1.2.2041.ebuild,v 1.2 2015/03/10 00:56:23 mschiff Exp $
 
 EAPI=5
 
@@ -144,7 +144,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	elog "When you get a crash starting Google Earth, try adding a file ~./config/Google/GoogleEarthPlus.conf"
+	elog "When you get a crash starting Google Earth, try adding a file ~./.config/Google/GoogleEarthPlus.conf"
 	elog "with the following options:"
 	elog "lastTip = 4"
 	elog "enableTips = false"

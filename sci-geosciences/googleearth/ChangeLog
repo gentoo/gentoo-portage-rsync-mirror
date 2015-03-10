@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/googleearth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.58 2014/02/08 15:56:20 mschiff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.59 2015/03/10 00:56:23 mschiff Exp $
+
+  10 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org>
+  googleearth-7.1.2.2041.ebuild:
+  Fix config path in ewarn. Thanks to Toralf Förster, Fixes #532454
 
 *googleearth-7.1.2.2041 (08 Feb 2014)
 
