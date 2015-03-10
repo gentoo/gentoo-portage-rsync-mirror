@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.5.0.ebuild,v 1.4 2014/10/18 14:19:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-3.5.4.ebuild,v 1.1 2015/03/10 15:57:24 dlan Exp $
 
 EAPI="5"
 
@@ -13,15 +13,15 @@ SRC_URI="mirror://sourceforge/scintilla/${PN}${MY_PV}.tgz"
 
 LICENSE="HPND lua? ( MIT )"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="lua"
 
-RDEPEND="dev-libs/glib
+RDEPEND="dev-libs/glib:2
 	x11-libs/cairo
 	x11-libs/gtk+:2
 	x11-libs/gdk-pixbuf
 	x11-libs/pango
-	lua? ( >=dev-lang/lua-5 )"
+	lua? ( >=dev-lang/lua-5:0= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-apps/sed-4"
@@ -55,8 +55,6 @@ src_prepare() {
 		-e 's#-g root#-g 0#' \
 		-e "s#-Os##" \
 		|| die "error patching makefile"
-	cd "${WORKDIR}"
-	epatch "${FILESDIR}/${PN}-3.0.1-no-lua.patch"
 }
 
 src_compile() {
