@@ -9,5 +9,5 @@ LICENSE=GPL-2 FDL-1.1
 RDEPEND=>=dev-texlive/texlive-documentation-base-2012 >=app-text/texlive-core-2012
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-lshort-korean-2012.tar.xz mirror://gentoo/texlive-module-collection-documentation-korean-2012.tar.xz mirror://gentoo/texlive-module-lshort-korean.doc-2012.tar.xz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	12c5ffd805581a3e724ff87014ac8919	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	texlive-module	12c5ffd805581a3e724ff87014ac8919	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=29a401745ba4c842b0fce7f7e7fdc139

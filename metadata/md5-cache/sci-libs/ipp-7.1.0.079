@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/intel-common-13
 RESTRICT=mirror
 SLOT=0
 SRC_URI=amd64? ( multilib? ( http://registrationcenter-download.intel.com/irc_nas/2749/parallel_studio_xe_2013.tgz ) ) amd64? ( !multilib? ( http://registrationcenter-download.intel.com/irc_nas/2749/parallel_studio_xe_2013_intel64.tgz ) ) x86? ( http://registrationcenter-download.intel.com/irc_nas/2749/parallel_studio_xe_2013_ia32.tgz )
-_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	998e5931fb95b10a6a11ec796ada2759	intel-sdp	0bea3d47a4bdd4f4b80cd111958a2e31	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=check-reqs	a7f404bfb16e0a996700c5d3ac4edad3	eutils	998e5931fb95b10a6a11ec796ada2759	intel-sdp	0bea3d47a4bdd4f4b80cd111958a2e31	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=83b51d4db2a076dd316bf9ee8ad05dea

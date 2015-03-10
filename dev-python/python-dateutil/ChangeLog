@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.68 2015/03/08 23:57:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.69 2015/03/10 17:33:02 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> python-dateutil-2.4.0.ebuild:
+  Add arm64/m68k/s390/sh love.
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> python-dateutil-2.2.ebuild:
   x86 stable, bug 540290

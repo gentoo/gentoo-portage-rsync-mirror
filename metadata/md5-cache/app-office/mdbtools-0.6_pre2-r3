@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=>=dev-libs/glib-2 sys-libs/ncurses sys-libs/readline gnome? ( >=gnome-base/libglade-2 >=gnome-base/libgnomeui-2 ) odbc? ( >=dev-db/unixODBC-2.0 )
 SLOT=0
 SRC_URI=mirror://gentoo/mdbtools-cvs-20050624.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=8504af4b5b3812d221de8074264188a8

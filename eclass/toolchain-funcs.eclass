@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.132 2015/02/27 06:08:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.133 2015/03/10 17:56:30 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -297,7 +297,8 @@ tc-env_build() {
 # }
 # @CODE
 econf_build() {
-	tc-env_build econf --build=${CBUILD:-${CHOST}} "$@"
+	local CBUILD=${CBUILD:-${CHOST}}
+	tc-env_build econf --build=${CBUILD} --host=${CBUILD} "$@"
 }
 
 # @FUNCTION: tc-has-openmp

@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/skkserv
 SLOT=0
 SRC_URI=http://www1.interq.or.jp/~deton/jvim-skk/skkfep0.86c.tar.gz http://www1.interq.or.jp/~deton/jvim-skk/skkfep0.86c-kh1.2.10.patch.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=e0599057a4a1596243cc51c45e258fbb

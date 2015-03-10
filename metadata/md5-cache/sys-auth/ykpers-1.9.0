@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=>=sys-auth/libyubikey-1.6 virtual/libusb:1 consolekit? ( sys-auth/consolekit[acl] )
 SLOT=0
 SRC_URI=http://yubikey-personalization.googlecode.com/files/ykpers-1.9.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=ffe5b491f8be5688298c96fc1818f0cb

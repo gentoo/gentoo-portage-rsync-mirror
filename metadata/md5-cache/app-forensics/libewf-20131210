@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=sys-libs/zlib bfio? ( =app-forensics/libbfio-0.0.20120425_alpha ) fuse? ( sys-fs/fuse ) uuid? ( sys-apps/util-linux ) ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib )
 SLOT=0/2
 SRC_URI=https://googledrive.com/host/0B3fBvzttpiiSMTdoaVExWWNsRjg/libewf-20131210.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=c45b4b8a63948f2c25311f52884b0645

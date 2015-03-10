@@ -8,5 +8,5 @@ KEYWORDS=amd64 arm arm64 ppc ppc64 x86
 LICENSE=Apache-2.0
 SLOT=0
 SRC_URI=mirror://gentoo/droid-113-r1.tar.bz2 mirror://gentoo/DroidSansMonoSlashed-112_p1.ttf.bz2 mirror://gentoo/DroidSansMonoDotted-112_p1.ttf.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=a250b1c2ff9b0350186d4a937044e93b

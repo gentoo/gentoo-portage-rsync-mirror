@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=>=sys-apps/sed-4 !dev-db/tinycdb
 SLOT=0
 SRC_URI=http://cr.yp.to/cdb/cdb-0.75.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=5892f6f8ef51e7bed464ed3d64f9c4ef

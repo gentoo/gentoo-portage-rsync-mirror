@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=x11-libs/libSM x11-libs/libXext x11-libs/libXrender png? ( >=media-libs/libpng-1.4:0 ) jpeg? ( virtual/jpeg ) gif? ( media-libs/giflib ) svg? ( gnome-base/librsvg ) tiff? ( media-libs/tiff:0 ) truetype? ( media-libs/freetype )
 SLOT=0
 SRC_URI=ftp://ftp.afterstep.org/stable/libAfterImage/libAfterImage-1.20.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=73fac9ba1739900bb844ff03e0471bb8

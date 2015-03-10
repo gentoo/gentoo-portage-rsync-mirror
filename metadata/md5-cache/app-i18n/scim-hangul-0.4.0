@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( >=app-i18n/scim-0.99.8 >=app-i18n/scim-cvs-0.99.8 ) >=app-i18n/libhangul-0.0.4 nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://sourceforge/scim/scim-hangul-0.4.0.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=e4458386ad2b4d8171d325bfef44e16c

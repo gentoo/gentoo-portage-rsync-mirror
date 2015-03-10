@@ -7,5 +7,5 @@ IUSE=ftdi serial static-libs test usb
 LICENSE=GPL-3
 RDEPEND=!static-libs? ( >=dev-libs/glib-2.32.0 >=dev-libs/libzip-0.8 ftdi? ( >=dev-embedded/libftdi-0.16 ) serial? ( dev-libs/libserialport ) usb? ( virtual/libusb:1 ) ) static-libs? ( >=dev-libs/glib-2.32.0[static-libs(+)] >=dev-libs/libzip-0.8[static-libs(+)] ftdi? ( >=dev-embedded/libftdi-0.16[static-libs(+)] ) serial? ( dev-libs/libserialport[static-libs(+)] ) usb? ( virtual/libusb:1[static-libs(+)] ) )
 SLOT=0
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=c0317c3f4acd89580613ee474de5f791

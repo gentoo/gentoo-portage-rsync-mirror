@@ -9,5 +9,5 @@ LICENSE=public-domain
 RDEPEND=dev-lang/tk X? ( x11-libs/libX11 ) opengl? ( virtual/opengl )
 SLOT=0
 SRC_URI=http://geant4.kek.jp/~tanaka/src/dawn_3_90b.tgz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f2ee4cf1dbe14ddbcef261de35cab048

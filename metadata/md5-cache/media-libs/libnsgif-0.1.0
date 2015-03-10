@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~m68k-mint
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://download.netsurf-browser.org/libs/releases/libnsgif-0.1.0-src.tar.gz http://download.netsurf-browser.org/libs/releases/buildsystem-1.0.tar.gz -> netsurf-buildsystem-1.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	netsurf	cbabed57b3c38e9deb5ebcc75b977097	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	netsurf	cbabed57b3c38e9deb5ebcc75b977097	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=db3d17d7542cd580cdcea03ce7a987dd

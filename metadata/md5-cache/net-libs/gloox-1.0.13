@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=idn? ( net-dns/libidn ) gnutls? ( net-libs/gnutls ) ssl? ( dev-libs/openssl ) zlib? ( sys-libs/zlib )
 SLOT=0/13
 SRC_URI=http://camaya.net/download/gloox-1.0.13.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=def98dbd0a261b55a32f9dca3bce43e9

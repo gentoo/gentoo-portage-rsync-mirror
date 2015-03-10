@@ -8,5 +8,5 @@ LICENSE=Openwall GPL-2
 RDEPEND=nids? ( net-libs/libnids net-libs/libnet net-libs/libpcap ) pcap? ( net-libs/libpcap )
 SLOT=0
 SRC_URI=http://www.openwall.com/scanlogd/scanlogd-2.2.6.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=105e2c64c9a9835b4e1ff11fe95f7123

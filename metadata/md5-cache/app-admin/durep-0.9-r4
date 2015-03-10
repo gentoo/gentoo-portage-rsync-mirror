@@ -8,5 +8,5 @@ LICENSE=Artistic
 RDEPEND=dev-lang/perl dev-perl/MLDBM virtual/perl-Getopt-Long virtual/perl-Term-ANSIColor
 SLOT=0
 SRC_URI=http://www.hibernaculum.net/download/durep-0.9.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=1ebbc7781d2c05b8e082ab6b3d17710f

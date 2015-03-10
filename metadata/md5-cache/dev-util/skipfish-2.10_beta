@@ -9,5 +9,5 @@ LICENSE=Apache-2.0 LGPL-3
 RDEPEND=dev-libs/openssl:0 dev-libs/libpcre net-dns/libidn sys-libs/zlib
 SLOT=0
 SRC_URI=http://skipfish.googlecode.com/files/skipfish-2.10b.tgz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=1d91c3f5746e04d228041dd991453b22

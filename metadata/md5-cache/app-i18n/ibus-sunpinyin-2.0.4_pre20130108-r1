@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 CDDL
 RDEPEND=app-i18n/ibus ~app-i18n/sunpinyin-2.0.4_pre20130108:= nls? ( virtual/libintl ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~yngwin/distfiles/sunpinyin-2.0.4_pre20130108.tar.xz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=b875e19bcf9ee3a2d18ad534ef4cc359

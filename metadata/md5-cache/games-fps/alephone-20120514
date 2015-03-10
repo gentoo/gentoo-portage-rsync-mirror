@@ -9,5 +9,5 @@ LICENSE=GPL-2 BitstreamVera
 RDEPEND=media-libs/sdl-net media-libs/sdl-image media-libs/libsdl[video] dev-libs/expat dev-libs/zziplib media-libs/libpng:0 alsa? ( media-libs/alsa-lib ) mad? ( media-libs/libmad ) mpeg? ( media-libs/smpeg ) virtual/opengl virtual/glu sndfile? ( media-libs/libsndfile ) speex? ( media-libs/speex ) truetype? ( media-libs/sdl-ttf ) vorbis? ( media-libs/libvorbis ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/marathon/AlephOne-20120514.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=f20db1999236510fb260d0c27537db94

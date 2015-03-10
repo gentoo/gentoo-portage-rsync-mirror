@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.1-r2.ebuild,v 1.2 2015/03/10 17:24:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.6.1-r2.ebuild,v 1.3 2015/03/10 17:58:44 vapier Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -9,7 +9,7 @@ JAVA_PKG_IUSE="source"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=1
 
-inherit autotools-multilib eutils flag-o-matic distutils-r1 java-pkg-opt-2 elisp-common
+inherit autotools-multilib eutils flag-o-matic toolchain-funcs distutils-r1 java-pkg-opt-2 elisp-common
 
 DESCRIPTION="Google's Protocol Buffers -- an efficient method of encoding structured data"
 HOMEPAGE="http://code.google.com/p/protobuf/ https://github.com/google/protobuf/"
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/google/${PN}/releases/download/${PV}/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0/9" # subslot = soname major version
-KEYWORDS="~amd64 ~arm -hppa ~ia64 ~mips -ppc -ppc64 ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~arm64 -hppa ~ia64 ~mips -ppc -ppc64 ~sh ~x86 ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="emacs examples java python static-libs vim-syntax zlib"
 
 CDEPEND="emacs? ( virtual/emacs )
@@ -52,6 +52,18 @@ src_configure() {
 	local myeconfargs=(
 		$(use_with zlib)
 	)
+
+	if tc-is-cross-compiler; then
+		# The build system wants `protoc` when building, so we need a copy that
+		# runs on the host.  This is more hermetic than relying on the version
+		# installed in the host being the exact same version.
+		mkdir -p "${WORKDIR}"/build || die
+		pushd "${WORKDIR}"/build >/dev/null
+		ECONF_SOURCE=${S} econf_build "${myeconfargs[@]}"
+		myeconfargs+=( --with-protoc="${PWD}"/src/protoc )
+		popd >/dev/null
+	fi
+
 	autotools-multilib_src_configure
 }
 
@@ -81,6 +93,10 @@ multilib_src_compile() {
 }
 
 src_compile() {
+	if tc-is-cross-compiler; then
+		emake -C "${WORKDIR}"/build/src protoc
+	fi
+
 	autotools-multilib_src_compile
 
 	if use emacs; then

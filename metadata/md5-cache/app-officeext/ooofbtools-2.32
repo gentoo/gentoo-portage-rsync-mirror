@@ -10,5 +10,5 @@ RDEPEND=dev-libs/libxml2 office_implementation_libreoffice? ( || ( app-office/li
 REQUIRED_USE=|| ( office_implementation_libreoffice office_implementation_openoffice )
 SLOT=0
 SRC_URI=mirror://sourceforge/fbtools/files/release/OOoFBTools-2.32.zip
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=2140b8bf5a6237727846b93e3b30bb5a

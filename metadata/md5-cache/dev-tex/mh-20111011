@@ -8,5 +8,5 @@ LICENSE=LPPL-1.3
 RDEPEND=dev-tex/xcolor >=dev-texlive/texlive-latexrecommended-2011 virtual/latex-base
 SLOT=0
 SRC_URI=mirror://gentoo/mh-20111011.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=ade5ae82bd014755a3242b27b17f0b79

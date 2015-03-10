@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=media-fonts/dejavu >=media-libs/ftgl-2.1.3_rc5 media-libs/freetype:2 media-libs/mesa media-libs/glew sys-libs/zlib video_cards_nvidia? ( media-gfx/nvidia-cg-toolkit )
 SLOT=0
 SRC_URI=mirror://sourceforge/projectm/projectM-complete-2.1.0-Source.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=5a3621a626d1e29d805b64223908cfaf

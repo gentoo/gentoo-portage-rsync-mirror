@@ -9,5 +9,5 @@ LICENSE=CAPS
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://gentoo/ipfdevlib_linux-20060612.tgz amd64? ( mirror://gentoo/ipflib_linux-amd64-20071115.tgz ) doc? ( mirror://gentoo/ipfdoc102a.zip ) mirror://gentoo/config_uae_ocs13_512c-512s.zip
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=89ce87b0481414e344e552784036de33

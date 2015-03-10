@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=app-text/ghostscript-gpl dev-scheme/guile:12[deprecated] media-libs/freetype x11-apps/xmodmap x11-libs/libXext virtual/latex-base imlib? ( media-libs/imlib2 ) jpeg? ( || ( media-gfx/imagemagick media-gfx/jpeg2ps ) ) netpbm? ( media-libs/netpbm ) qt4? ( dev-qt/qtgui:4 ) spell? ( app-text/aspell ) svg? ( || ( media-gfx/inkscape gnome-base/librsvg:2 ) )
 SLOT=0
 SRC_URI=ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/TeXmacs-1.0.7.21-src.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=e1dce971b71ecb64d5b65a13b5dbdefc

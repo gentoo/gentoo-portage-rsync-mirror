@@ -1,9 +1,15 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.29 2015/03/10 10:21:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.30 2015/03/10 18:17:57 graaff Exp $
+
+  10 Mar 2015; Hans de Graaff <graaff@gentoo.org> trollop-2.1.1.ebuild:
+  Fix license information.
 
   10 Mar 2015; Jeroen Roovers <jer@gentoo.org> trollop-2.1.1.ebuild:
   Marked ~hppa (bug #542782).
+
+  10 Mar 2015; Hans de Graaff <graaff@gentoo.org> trollop-2.1.1.ebuild:
+  Fix license information.
 
   10 Mar 2015; Hans de Graaff <graaff@gentoo.org> trollop-2.1.1.ebuild:
   Add ruby22.

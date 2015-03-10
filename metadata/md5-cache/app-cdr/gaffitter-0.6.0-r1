@@ -7,5 +7,5 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://sourceforge/gaffitter/gaffitter-0.6.0.tar.bz2 scripts? ( mirror://sourceforge/gaffitter/scripts/0.1.0/scripts-0.1.0.tar.bz2 )
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=819c32d1401825fef42fd0438b8dab61

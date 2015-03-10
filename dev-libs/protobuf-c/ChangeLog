@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf-c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.13 2015/01/10 06:48:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.14 2015/03/10 18:16:18 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/protobuf-c-1.1.0-no-build-tests.patch, protobuf-c-1.1.0.ebuild:
+  Add arm64/mips love. Fix cross-compiling #518440 by Luke-Jr.
 
 *protobuf-c-1.1.0 (10 Jan 2015)
 

@@ -10,5 +10,5 @@ RDEPEND=ffmpeg? ( virtual/ffmpeg ) ~media-libs/x264-0.0.20140308[10bit=,interlac
 REQUIRED_USE=ffmpegsource? ( ffmpeg )
 SLOT=0
 SRC_URI=http://download.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20140308-2245.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=de7acc24f7c7d6d55cd8f9ed8c72ec6b

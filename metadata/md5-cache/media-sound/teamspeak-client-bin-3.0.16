@@ -10,5 +10,5 @@ REQUIRED_USE=|| ( alsa pulseaudio )
 RESTRICT=fetch mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/3.0.16/TeamSpeak3-Client-linux_amd64-3.0.16.run ) x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/3.0.16/TeamSpeak3-Client-linux_x86-3.0.16.run )
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=28b75e1eec0ee09693fec5fc38514656

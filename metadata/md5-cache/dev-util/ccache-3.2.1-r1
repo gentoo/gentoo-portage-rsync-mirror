@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=app-arch/xz-utils sys-libs/zlib sys-apps/gentoo-functions
 SLOT=0
 SRC_URI=http://samba.org/ftp/ccache/ccache-3.2.1.tar.xz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=683899e4242c951270fabf414be640b9

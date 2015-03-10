@@ -9,5 +9,5 @@ LICENSE=Apache-2.0 BSD
 RDEPEND=>=dev-python/testtools-0.9.23[python_targets_pypy(-)?,python_targets_python3_3(-)?,python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy3(-),-python_single_target_python3_4(-),python_single_target_pypy(+)?,python_single_target_python3_3(+)?,python_single_target_python2_7(+)?]
 SLOT=0
 SRC_URI=http://launchpad.net/subunit/trunk/0.0.10/+download/subunit-0.0.10.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	autotools-utils	3727db64c7b960903d5033280f108080	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=afe819d788e32ee0cf2152a016c61cb2

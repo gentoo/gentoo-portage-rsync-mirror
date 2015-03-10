@@ -9,5 +9,5 @@ LICENSE=IPAfont
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://dl.ipafont.ipa.go.jp/IPAfont/IPAfont00302.zip
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=70c9b1f5e289ee8c44c91d31c60f1c4c

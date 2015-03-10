@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=sci-libs/superlu:0= virtual/blas virtual/lapack mpi? ( virtual/mpi ) fortran? ( virtual/fortran )
 SLOT=0/2.9.0b
 SRC_URI=https://computation.llnl.gov/casc/hypre/download/hypre-2.9.0b.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=4cf32cf2d9050d837a8f2f0ce59e7618

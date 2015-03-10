@@ -7,5 +7,5 @@ IUSE=examples
 LICENSE=ISC
 RDEPEND=dev-libs/glib:2 dev-libs/libbsd dev-libs/libgcrypt:0 net-libs/libsoup net-libs/gnutls net-libs/webkit-gtk:3 x11-libs/gdk-pixbuf x11-libs/gtk+:3 x11-libs/pango
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=99ac05766f23712546475d416c2a28c7

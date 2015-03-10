@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=metapackage
 RDEPEND=>=lxde-base/lxmenu-data-0.1.2 ~lxqt-base/lxqt-about-0.7.0 ~lxqt-base/lxqt-common-0.7.0 ~lxqt-base/lxqt-config-0.7.0 ~lxqt-base/lxqt-config-randr-0.7.0 ~lxqt-base/lxqt-notificationd-0.7.0 ~lxqt-base/lxqt-panel-0.7.0 ~lxqt-base/lxqt-qtplugin-0.7.0 ~lxqt-base/lxqt-runner-0.7.0 ~lxqt-base/lxqt-session-0.7.0 ~x11-misc/pcmanfm-qt-0.7.0 icons? ( >=lxde-base/lxde-icon-theme-0.5 ) lightdm? ( x11-misc/lightdm ) lximage? ( media-gfx/lximage-qt ) !minimal? ( x11-wm/openbox >=x11-misc/obconf-qt-0.1.0 ) policykit? ( ~lxqt-base/lxqt-policykit-0.7.0 || ( sys-auth/consolekit[policykit(-)] sys-apps/systemd[policykit(-)] ) ) powermanagement? ( ~lxqt-base/lxqt-powermanagement-0.7.0 ) sddm? ( x11-misc/sddm ) ssh-askpass? ( ~lxqt-base/lxqt-openssh-askpass-0.7.0 )
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=249d57a7bd559f13d87ac6ea633c4daa

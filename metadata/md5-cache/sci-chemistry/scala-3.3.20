@@ -8,5 +8,5 @@ LICENSE=ccp4
 RDEPEND=!<sci-chemistry/ccp4-6.1.2 !dev-java/scala-bin !dev-lang/scala sci-libs/ccp4-libs virtual/lapack virtual/fortran
 SLOT=0
 SRC_URI=ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/scala-3.3.20.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=a06949b857808ea0ecdec46bb3305c99

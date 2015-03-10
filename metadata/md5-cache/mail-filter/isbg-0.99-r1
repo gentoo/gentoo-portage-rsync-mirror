@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=mail-filter/spamassassin =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://github.com/downloads/ook/isbg/isbg_0.99_20100303.tgz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=6f8e044f567a800786cefe7ba5bdf19d

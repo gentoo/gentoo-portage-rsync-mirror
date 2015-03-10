@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/boost:= dev-libs/log4cpp dev-libs/openssl
 SLOT=0
 SRC_URI=http://thoughtcrime.org/software/sslsniff/sslsniff-0.8.tar.gz
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=5e029b3c1e637660f226c506f319092b

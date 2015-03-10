@@ -10,5 +10,5 @@ RDEPEND=ruby_targets_ruby19? ( >=dev-ruby/xml-simple-1.0.12[ruby_targets_ruby19]
 REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=mirror://rubygems/amazon-ec2-0.9.17.gem
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	d4f8591e9b20b106327e9d143eb13da5	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	d4f8591e9b20b106327e9d143eb13da5	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=4c90e3de34d4a22ff75e48f9adfb8566

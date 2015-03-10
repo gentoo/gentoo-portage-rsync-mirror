@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.79 2015/03/10 17:24:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.80 2015/03/10 17:58:44 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> protobuf-2.6.1-r2.ebuild:
+  Add arm64/sh love. Add cross-compile support #432106 by Dennis Schridde.
 
   10 Mar 2015; Mike Frysinger <vapier@gentoo.org> protobuf-2.6.1-r2.ebuild:
   Add ~ia64 #524084 by Paweł Hajdan, Jr..

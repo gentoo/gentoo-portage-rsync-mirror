@@ -8,5 +8,5 @@ RDEPEND==www-servers/apache-2*
 RESTRICT=test
 SLOT=2
 SRC_URI=http://dominia.org/djao/limit/mod_limitipconn-0.24.tar.bz2
-_eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=1f3e839f72db075cfb71590faba501b7

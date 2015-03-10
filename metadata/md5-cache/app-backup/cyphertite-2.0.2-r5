@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=app-arch/xz-utils:0= dev-db/sqlite:3= >=dev-libs/openssl-1.0.1g:0=[-bindist] dev-libs/expat:0= dev-libs/libbsd:0= dev-libs/libedit:0= dev-libs/libevent:0= >=dev-libs/lzo-2.0:2= >=net-misc/curl-7.15.1:0=[ssl] sys-libs/zlib:0=
 SLOT=0
 SRC_URI=https://www.cyphertite.com/snapshots/source/2.0.2/cyphertite-full-2.0.2.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=a7958b4ade98987a082872059577418d

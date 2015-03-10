@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt?] gtk? ( dev-ml/lablgtk:=[gnomecanvas,ocamlopt?] )
 SLOT=0/0.99b
 SRC_URI=http://www.lri.fr/~filliatr/ftp/ocamlgraph/ocamlgraph-0.99b.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=82affa1930e89a20150b89c4e92dccc6

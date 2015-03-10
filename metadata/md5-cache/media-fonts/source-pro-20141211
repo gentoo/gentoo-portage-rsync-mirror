@@ -10,5 +10,5 @@ RDEPEND=media-libs/fontconfig
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=https://github.com/adobe-fonts/source-sans-pro/archive/2.010R-ro/1.065R-it.tar.gz -> source-sans-pro-20141211.tar.gz https://github.com/adobe-fonts/source-serif-pro/archive/1.017R.tar.gz -> source-serif-pro-20141211.tar.gz https://github.com/adobe-fonts/source-code-pro/archive/1.017R.tar.gz -> source-code-pro-20141211.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
 _md5_=49c0d58a6729bcf0dbeee3019539211c
