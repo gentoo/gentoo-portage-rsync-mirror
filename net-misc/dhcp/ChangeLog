@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.265 2015/03/08 08:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.266 2015/03/10 02:17:25 vapier Exp $
+
+*dhcp-4.3.2 (10 Mar 2015)
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> +dhcp-4.3.2.ebuild:
+  Version bump #542766 by Sebastian Pipping.
 
   08 Mar 2015; Jeroen Roovers <jer@gentoo.org> dhcp-4.3.1-r2.ebuild:
   Stable for HPPA (bug #539258).

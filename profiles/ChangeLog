@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9850 2015/03/09 19:46:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9851 2015/03/10 02:02:00 alicef Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Mar 2015; Alice Ferrazzi <alicef@gentoo.org> package.mask:
+  Added mask for =pypy-2.5.0
 
   09 Mar 2015; Ulrich Müller <ulm@gentoo.org> package.mask:
   QA mask net-misc/teamviewer-10.0.36281, broken dependencies.
