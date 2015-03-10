@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.214 2015/01/02 12:09:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.215 2015/03/10 21:16:55 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> gtk-doc-1.21.ebuild:
+  Add arm64/s390 love & mark m68k/sh stable.
 
   02 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.21.ebuild:
   Stable for alpha, wrt bug #529964

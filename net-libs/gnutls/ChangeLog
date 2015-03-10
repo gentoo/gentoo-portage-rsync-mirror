@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.527 2015/02/25 10:21:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.528 2015/03/10 21:24:23 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> gnutls-3.3.10-r2.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable #492522.
 
   25 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnutls-3.3.10-r2.ebuild:
   ppc/ppc64 stable, bug #492522
