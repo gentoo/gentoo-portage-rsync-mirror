@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.20.ebuild,v 1.13 2014/05/03 15:56:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.20.ebuild,v 1.14 2015/03/10 20:47:20 vapier Exp $
 
 EAPI=5
 GNOME_ORG_MODULE="gtk-doc"

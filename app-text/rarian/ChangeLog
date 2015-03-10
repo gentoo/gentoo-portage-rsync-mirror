@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rarian
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.69 2015/03/03 05:58:28 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.70 2015/03/10 20:54:00 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> rarian-0.8.1-r2.ebuild:
+  Mark arm64 stable.
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> rarian-0.8.1-r2.ebuild:
   add arm64 support, tested on A53 board

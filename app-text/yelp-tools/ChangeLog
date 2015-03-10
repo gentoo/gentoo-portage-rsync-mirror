@@ -1,6 +1,14 @@
 # ChangeLog for app-text/yelp-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.60 2014/12/21 12:18:35 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.62 2015/03/10 20:45:48 vapier Exp $
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> yelp-tools-3.12.1.ebuild,
+  yelp-tools-3.14.1.ebuild:
+  Mark s390/sh stable.
+
+  10 Mar 2015; Mike Frysinger <vapier@gentoo.org> yelp-tools-3.12.1.ebuild,
+  yelp-tools-3.14.1.ebuild:
+  Add arm64/m68k love.
 
 *yelp-tools-3.14.1 (21 Dec 2014)
 
