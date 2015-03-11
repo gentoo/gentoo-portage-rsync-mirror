@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ploop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ChangeLog,v 1.33 2015/01/26 09:39:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ploop/ChangeLog,v 1.34 2015/03/11 08:00:14 civil Exp $
+
+*ploop-1.12.2 (11 Mar 2015)
+
+  11 Mar 2015; Vladimir Smirnov <civil@gentoo.org> +ploop-1.12.2.ebuild:
+  Version bump, thanks to Andreis Vinogradovs
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ploop-1.12.ebuild:
   Stable for x86, wrt bug #535668

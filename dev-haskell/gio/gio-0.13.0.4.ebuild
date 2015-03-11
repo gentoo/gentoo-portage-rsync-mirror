@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/gio-0.13.0.4.ebuild,v 1.1 2015/01/03 10:32:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/gio-0.13.0.4.ebuild,v 1.2 2015/03/11 07:42:25 gienah Exp $
 
 EAPI=5
 
@@ -31,3 +31,10 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=("${FILESDIR}/${PN}-0.13.0.4-ghc-7.10.patch")
+
+src_prepare() {
+	base_src_prepare
+	# workaround for module order
+	cabal_chdeps \
+		'other-modules:' 'exposed-modules:'
+}

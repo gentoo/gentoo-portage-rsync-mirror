@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.187 2015/03/05 15:28:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.188 2015/03/11 07:38:28 idella4 Exp $
+
+  11 Mar 2015; Ian Delaney <idella4@gentoo.org> rb_libtorrent-0.16.17-r2.ebuild:
+  revert DEPEND RDEPEND to reflect the state in the -r1
 
 *rb_libtorrent-0.16.17-r2.ebuild (05 Mar 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r2.ebuild,v 1.1 2015/03/05 14:59:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r2.ebuild,v 1.2 2015/03/11 07:38:28 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl static-libs test"
 RESTRICT="test"
 
-DEPEND=">=dev-libs/boost-1.48:=[threads]
+RDEPEND=">=dev-libs/boost-1.48:=[threads]
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
@@ -31,7 +31,7 @@ DEPEND=">=dev-libs/boost-1.48:=[threads]
 		${PYTHON_DEPS}
 		dev-libs/boost[python,${PYTHON_USEDEP}]
 	)"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"

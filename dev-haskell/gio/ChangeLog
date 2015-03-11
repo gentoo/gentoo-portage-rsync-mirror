@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.27 2015/01/03 10:32:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.28 2015/03/11 07:42:25 gienah Exp $
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org> gio-0.13.0.4.ebuild:
+  Workaround module order for ghc 7.10 in gio-0.13.0.4.ebuild
 
 *gio-0.13.0.4 (03 Jan 2015)
 
