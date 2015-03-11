@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.66 2015/03/10 15:08:39 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.67 2015/03/11 02:10:02 dlan Exp $
+
+  11 Mar 2015; Yixun Lan <dlan@gentoo.org> -spacefm-0.8.7.ebuild:
+  drop old per discuss with maintainer
 
   10 Mar 2015; Yixun Lan <dlan@gentoo.org> metadata.xml:
   update maintainer's email address
