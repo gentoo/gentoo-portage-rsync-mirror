@@ -5,4 +5,7 @@
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
 	</maintainer>
+	<use>
+		<flag name='setproctitle'>Make process titles of service workers to be more verbose</flag>
+	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.4-r2.ebuild,v 1.1 2015/03/11 22:29:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.4-r2.ebuild,v 1.2 2015/03/11 22:32:36 chutzpah Exp $
 
 EAPI=5
 
@@ -16,19 +16,20 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug kerberos +pam sasl test +utils"
 
-RDEPEND="
+COMMON_DEP="
 	net-nds/openldap[${MULTILIB_USEDEP}]
 	sasl? ( dev-libs/cyrus-sasl[${MULTILIB_USEDEP}] )
 	kerberos? ( virtual/krb5[${MULTILIB_USEDEP}] )
 	pam? ( virtual/pam[${MULTILIB_USEDEP}] )
 	utils? ( ${PYTHON_DEPS} )
+	!sys-auth/nss_ldap
+	!sys-auth/pam_ldap"
+RDEPEND="${COMMON_DEP}"
+DEPEND="${COMMON_DEP}
 	test? (
 		${PYTHON_DEPS}
 		dev-python/pylint[${PYTHON_USEDEP}]
 	)
-	!sys-auth/nss_ldap
-	!sys-auth/pam_ldap"
-DEPEND="${RDEPEND}
 	sys-devel/automake"
 
 REQUIRED_USE="
