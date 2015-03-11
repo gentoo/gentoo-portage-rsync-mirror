@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-qt/qtcore:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/linguist-tools:5 dev-qt/qtx11extras:5 x11-libs/libxcb media-sound/drumstick dbus? ( dev-qt/qtdbus:5 ) app-text/docbook-xsl-stylesheets virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Virtual MIDI Piano Keyboard
+EAPI=4
+HOMEPAGE=http://vmpk.sourceforge.net/
+IUSE=dbus
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:5 dev-qt/qtnetwork:5 dev-qt/qtsvg:5 dev-qt/qtwidgets:5 dev-qt/linguist-tools:5 dev-qt/qtx11extras:5 x11-libs/libxcb media-sound/drumstick dbus? ( dev-qt/qtdbus:5 )
+SLOT=0
+SRC_URI=mirror://sourceforge/vmpk/vmpk-0.6.0.tar.bz2
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
+_md5_=cf2ef926dbc60123a816b0a7a9f27433
