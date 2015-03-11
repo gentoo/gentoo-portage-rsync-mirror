@@ -1,6 +1,9 @@
 # ChangeLog for www-client/vivaldi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/ChangeLog,v 1.8 2015/03/07 23:13:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/ChangeLog,v 1.9 2015/03/11 06:22:25 jer Exp $
+
+  11 Mar 2015; Jeroen Roovers <jer@gentoo.org> -vivaldi-1.0.118.2_p1.ebuild:
+  Old.
 
 *vivaldi-1.0.118.19_p1 (07 Mar 2015)
 

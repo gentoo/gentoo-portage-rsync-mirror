@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.2.4-r1.ebuild,v 1.1 2015/03/09 01:10:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.2.4-r1.ebuild,v 1.2 2015/03/11 06:02:43 prometheanfire Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -24,10 +24,8 @@ DEPEND="aio? ( dev-libs/libaio )
 		dev-libs/glib:2
 		x11-libs/gtk+:2
 	)
-	numa? ( !arm? ( sys-process/numactl ) )
-	rbd? ( !arm? ( !ppc? ( sys-cluster/ceph ) ) )
-	rdma? ( !ppc? ( !ppc64? ( !ia64? ( !arm? (
-		sys-infiniband/librdmacm ) ) ) ) )
+	numa? ( sys-process/numactl )
+	rbd? ( sys-cluster/ceph )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	gnuplot? (
@@ -46,7 +44,6 @@ src_prepare() {
 		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
 		-e '/if compile_prog "" "-lz" "zlib" *; *then/  '"s::if $(usex zlib true false) ; then:" \
 		-e '/if compile_prog "" "-laio" "libaio" ; then/'"s::if $(usex aio true false) ; then:" \
-		-e '/if compile_prog "" "-lrdmacm" "rdma" ; then/'"s::if $(usex rdma true false) ; then:" \
 		configure || die
 }
 
@@ -60,7 +57,6 @@ src_configure() {
 		$(usex gtk '--enable-gfio' '') \
 		$(usex numa '' '--disable-numa') \
 		$(usex rbd '' '--disable-rbd') \
-		$(usex rdma '' '--enable-rdma') \
 		|| die 'configure failed'
 }
 

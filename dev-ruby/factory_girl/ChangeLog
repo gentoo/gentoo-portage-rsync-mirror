@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/factory_girl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/factory_girl/ChangeLog,v 1.6 2015/02/22 07:38:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/factory_girl/ChangeLog,v 1.7 2015/03/11 06:16:32 graaff Exp $
+
+  11 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  -factory_girl-4.2.0-r1.ebuild:
+  Cleanup.
 
 *factory_girl-4.5.0 (22 Feb 2015)
 
