@@ -1,6 +1,9 @@
 # ChangeLog for games-server/mtavc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/ChangeLog,v 1.10 2014/09/07 11:31:57 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/ChangeLog,v 1.11 2015/03/11 22:22:15 mr_bones_ Exp $
+
+  11 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> mtavc-0.5.ebuild:
+  EAPI=5
 
   07 Sep 2014; Ulrich Müller <ulm@gentoo.org> mtavc-0.5.ebuild:
   Update dependency, this links against libstdc++.so.5.
@@ -49,4 +52,3 @@
   02 Sep 2003; Michael Sterrett <msterret@gentoo.org> mtavc-0.1.0.ebuild,
   files/mtavc:
   initial commit (bug 25872)
-

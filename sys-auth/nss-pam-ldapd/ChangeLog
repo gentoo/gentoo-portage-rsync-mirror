@@ -1,6 +1,15 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.17 2015/03/09 00:36:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.18 2015/03/11 22:29:56 chutzpah Exp $
+
+*nss-pam-ldapd-0.9.4-r2 (11 Mar 2015)
+
+  11 Mar 2015; Patrick McLean <chutzpah@gentoo.org>
+  +files/nss-pam-ldapd-0.9.4-disable-py3-only-linters.patch,
+  +nss-pam-ldapd-0.9.4-r2.ebuild, metadata.xml:
+  Revision bump, add "utils" USE flag to control installation of userspace
+  utilities written in python. Use python-r1 eclass to install python code
+  rather than the automake-based internal code.
 
 *nss-pam-ldapd-0.9.4-r1 (09 Mar 2015)
 

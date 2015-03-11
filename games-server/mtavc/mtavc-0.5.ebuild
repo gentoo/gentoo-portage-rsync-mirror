@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/mtavc-0.5.ebuild,v 1.4 2014/09/07 11:31:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/mtavc/mtavc-0.5.ebuild,v 1.5 2015/03/11 22:22:15 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="dedicated server for GTA3 multiplayer"
@@ -14,24 +15,28 @@ KEYWORDS="-* ~x86"
 IUSE=""
 
 RDEPEND="virtual/libstdc++"
+DEPEND=""
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	sed -i 's:NoName:Gentoo:' mtaserver.conf
+QA_PREBUILT="${GAMES_PREFIX_OPT:1}/${PN}/MTAServer"
+QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/${PN}/MTAServer"
+
+src_prepare() {
+	sed -i 's:NoName:Gentoo:' mtaserver.conf || die
 }
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
+	local files="banned.lst motd.txt mtaserver.conf"
+	local f
 
 	dogamesbin "${FILESDIR}"/mtavc
-	dosed "s:GENTOO_DIR:${dir}:" "${GAMES_BINDIR}"/mtavc
+	sed -i -e "s:GENTOO_DIR:${dir}:" "${D}${GAMES_BINDIR}"/mtavc
 
 	exeinto "${dir}"
 	newexe MTAServer${PV} MTAServer
 	insinto "${GAMES_SYSCONFDIR}"/${PN}
-	local files="banned.lst motd.txt mtaserver.conf"
 	doins ${files}
 	dodoc README CHANGELOG
 	for f in ${files} ; do
