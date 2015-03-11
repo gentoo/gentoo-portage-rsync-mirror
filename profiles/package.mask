@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16411 2015/03/10 20:29:02 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16412 2015/03/11 03:15:09 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -325,10 +325,6 @@ rox-extra/videothumbnail
 rox-extra/wallpaper
 rox-extra/weather
 
-# Tim Harder <radhermit@gentoo.org> (10 Jan 2015)
-# Masked until protobuf-2.6.0 is unmasked
->=dev-libs/protobuf-c-1.1.0
-
 # Anthony G. Basile <blueness@gentoo.org> (9 Jan 2015)
 # p.mask the -9999 version
 =dev-misc/i2pd-9999
@@ -417,10 +413,6 @@ www-apps/trac-downloads
 =sys-kernel/vanilla-sources-3.17.0
 =sys-kernel/gentoo-sources-3.17.0
 =sys-kernel/aufs-sources-3.17.0
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Sep 2014)
-# Reverse dependencies need to be tested and fixed, bug #521406.
->=dev-libs/protobuf-2.6.0
 
 # Michał Górny <mgorny@gentoo.org> (15 Sep 2014)
 # Causes undefined references few layers down (in mediastreamer),
