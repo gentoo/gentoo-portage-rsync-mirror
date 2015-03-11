@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9853 2015/03/11 03:15:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9854 2015/03/11 09:37:50 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Mar 2015; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask latest aubio
 
   10 Mar 2015; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop protobuf/protobuf-c masks now that packages seem to work with it.

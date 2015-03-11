@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/gtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.24 2014/12/13 13:58:56 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.25 2015/03/11 09:31:42 gienah Exp $
+
+*gtk-0.13.4.0.2 (11 Mar 2015)
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org> +files/gtk-0.13.4-ghc-7.10.patch,
+  +gtk-0.13.4.0.2.ebuild, gtk-0.13.3.0.2.ebuild:
+  Bump gtk to 0.13.4.0.2. Add back the missing KEYWORDS ~alpha ~ia64 ~ppc ~ppc64
+  ~sparc to gtk.
 
 *gtk-0.13.3.0.2 (13 Dec 2014)
 

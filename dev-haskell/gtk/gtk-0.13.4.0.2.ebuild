@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/gtk-0.13.3.0.2.ebuild,v 1.2 2015/03/11 09:31:42 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/gtk-0.13.4.0.2.ebuild,v 1.1 2015/03/11 09:31:42 gienah Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ MY_P="${PN}-${MY_PV}"
 
 #nocabaldep is for the fancy cabal-detection feature at build-time
 CABAL_FEATURES="lib profile haddock hoogle hscolour nocabaldep"
-inherit haskell-cabal
+inherit base haskell-cabal
 
 DESCRIPTION="Binding to the Gtk+ graphical user interface library"
 HOMEPAGE="http://projects.haskell.org/gtk2hs/"
@@ -40,6 +40,15 @@ DEPEND="${RDEPEND}
 	>=dev-haskell/gtk2hs-buildtools-0.13.0.3:0=
 	virtual/pkgconfig
 "
+
+PATCHES=("${FILESDIR}/${PN}-0.13.4-ghc-7.10.patch")
+
+src_prepare() {
+	base_src_prepare
+	# workaround for module order
+	cabal_chdeps \
+		'other-modules:' 'exposed-modules:'
+}
 
 src_configure() {
 	# Upstream has this enabled, so we might as well force it enabled to be sure.
