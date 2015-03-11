@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.65 2015/03/03 05:51:15 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.66 2015/03/11 18:18:44 hwoarang Exp $
+
+*lxc-1.1.0-r4 (11 Mar 2015)
+
+  11 Mar 2015; Markos Chandras <hwoarang@gentoo.org> +lxc-1.1.0-r4.ebuild:
+  Respect USE=python so additional tools can be built. Bug #541932
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> lxc-1.0.7.ebuild:
   add arm64 support, tested on A53 board
