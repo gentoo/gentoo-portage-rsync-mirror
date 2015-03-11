@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.3.0.ebuild,v 1.1 2015/03/11 04:43:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.3.0.ebuild,v 1.2 2015/03/11 05:09:24 prometheanfire Exp $
 
 EAPI=5
 inherit depend.apache eutils cmake-utils toolchain-funcs user versionator systemd
@@ -125,7 +125,7 @@ src_install() {
 	keepdir /var/lib/icinga2/api/log
 	keepdir /var/spool/icinga2/perfdata
 
-	rm -r "${D}var/run" || die "failed to remove  /var/run"
+	rm -r "${D}var/run" || die "failed to remove /var/run"
 	rm -r "${D}var/cache" || die "failed to remove /var/cache"
 
 	fowners icinga:icinga /etc/icinga2

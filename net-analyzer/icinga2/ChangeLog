@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.25 2015/03/11 04:43:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.26 2015/03/11 05:09:24 prometheanfire Exp $
+
+  11 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> icinga2-2.3.0.ebuild:
+  signing
 
 *icinga2-2.3.0 (11 Mar 2015)
 
