@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/text
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.46 2014/12/20 23:51:00 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.47 2015/03/11 11:53:29 gienah Exp $
+
+*text-1.2.0.4 (11 Mar 2015)
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org>
+  +files/text-1.2.0.4-ghc-7.10.patch, +text-1.2.0.4.ebuild:
+  Bump text to 1.2.0.4
 
   20 Dec 2014; Mark Wright <gienah@gentoo.org> text-1.2.0.3.ebuild:
   Thanks to Chris Kerr for reporting, add quickcheck-unicode to test

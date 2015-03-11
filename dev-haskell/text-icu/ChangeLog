@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/text-icu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/ChangeLog,v 1.12 2015/02/25 15:27:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-icu/ChangeLog,v 1.13 2015/03/11 11:54:47 gienah Exp $
+
+*text-icu-0.7.0.1 (11 Mar 2015)
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org> +text-icu-0.7.0.1.ebuild:
+  Bump text-icu to 0.7.0.1
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> text-icu-0.6.3.7-r1.ebuild:
   Stable for x86, wrt bug #502696
