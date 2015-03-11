@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.11 2015/02/22 11:51:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.12 2015/03/11 08:30:12 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 CMAKE_MAKEFILE_GENERATOR=ninja
 
-inherit eutils flag-o-matic java-pkg-opt-2 python-single-r1 qt4-r2 versionator toolchain-funcs cmake-utils virtualx
+inherit eutils flag-o-matic java-pkg-opt-2 python-single-r1 qmake-utils versionator toolchain-funcs cmake-utils virtualx
 
 # Short package version
 SPV="$(get_version_component_range 1-2)"
@@ -243,10 +243,10 @@ src_configure() {
 			-DQT_WRAP_UI=ON
 			-DVTK_INSTALL_QT_DIR=/$(get_libdir)/qt4/plugins/designer
 			-DDESIRED_QT_VERSION=4
-			-DQT_MOC_EXECUTABLE="${EPREFIX}/usr/bin/moc"
-			-DQT_UIC_EXECUTABLE="${EPREFIX}/usr/bin/uic"
+			-DQT_MOC_EXECUTABLE="$(qt4_get_bindir)/moc"
+			-DQT_UIC_EXECUTABLE="$(qt4_get_bindir)/uic"
 			-DQT_INCLUDE_DIR="${EPREFIX}/usr/include/qt4"
-			-DQT_QMAKE_EXECUTABLE="${EPREFIX}/usr/bin/qmake"
+			-DQT_QMAKE_EXECUTABLE="$(qt4_get_bindir)/qmake"
 		)
 	fi
 
