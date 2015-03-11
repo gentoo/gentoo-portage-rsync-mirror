@@ -1,27 +1,25 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1-r2.ebuild,v 1.2 2013/06/04 12:49:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.5.ebuild,v 1.1 2015/03/11 13:31:52 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
-
-inherit eutils prefix python-single-r1
+inherit eutils prefix
 
 MY_P="arp_warp_${PV}"
 
-DESCRIPTION="Software for improvement and interpretation of crystallographic electron density maps"
+DESCRIPTION="Improvement and interpretation of crystallographic electron density maps"
 SRC_URI="${MY_P}.tar.gz"
 HOMEPAGE="http://www.embl-hamburg.de/ARP/"
 
 LICENSE="ArpWarp"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+KEYWORDS="-* amd64 x86 ~amd64-linux ~x86-linux"
+IUSE="cpu_flags_x86_sse2"
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+REQUIRED_USE="cpu_flags_x86_sse2"
 
-RDEPEND="${PYTHON_DEPS}
+RDEPEND="
 	app-shells/tcsh
 	sci-chemistry/refmac
 	virtual/awk
@@ -42,11 +40,9 @@ pkg_nofetch(){
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-setup.patch
+	epatch "${FILESDIR}"/7.3-setup.patch
 	eprefixify "${S}"/share/arpwarp_setup_base.*
-	sed "s:EPYTHON:${EPYTHON}:g" -i "${S}"/share/arpwarp_setup_base.* || die
-	python_fix_shebang flex-wARP-src-354/*py
-	sed -e "s:/usr/:${EPREFIX}/usr/:g" -i flex-wARP-src-354/*py || die
+
 	sed -e '/exit/d' -i "${S}"/share/arpwarp_setup_base.* || die
 }
 
@@ -54,14 +50,11 @@ src_install(){
 	m_type=$(uname -m)
 	os_type=$(uname)
 
-	insinto /opt/${PN}/byte-code/${EPYTHON}
-	doins "${S}"/flex-wARP-src-354/*py
-
 	exeinto /opt/${PN}/bin/bin-${m_type}-${os_type}
-	doexe "${S}"/bin/bin-${m_type}-${os_type}/* "${S}"/share/*sh
+	doexe "${S}"/bin/bin-${m_type}-${os_type}/* "${S}"/share/*{pl,sh}
 
 	insinto /opt/${PN}/bin/bin-${m_type}-${os_type}
-	doins "${S}"/share/*{gif,bmp,XYZ,bash,csh,dat,lib,tbl,llh}
+	doins "${S}"/share/*{gif,bmp,XYZ,bash,csh,dat,lib,tbl,llh,prm}
 
 	insinto /etc/profile.d/
 	newins "${S}"/share/arpwarp_setup_base.csh 90arpwarp_setup.csh
@@ -69,8 +62,6 @@ src_install(){
 
 	dodoc "${S}"/README manual/UserGuide${PV}.pdf
 	dohtml -r "${S}"/manual/html/*
-
-	python_optimize "${ED}"/opt/${PN}/byte-code/${EPYTHON}
 }
 
 pkg_postinst(){
@@ -87,7 +78,4 @@ pkg_postinst(){
 	  ewarn "export LC_NUMERIC=C' in your .bashrc file"
 	  ewarn "Otherwise please consult your system manager"
 	fi
-
-	grep -q sse2 /proc/cpuinfo || einfo "The CPU is lacking SSE2! You should use the cluster at EMBL-Hamburg."
-	echo
 }

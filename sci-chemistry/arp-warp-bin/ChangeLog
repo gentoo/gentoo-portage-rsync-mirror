@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/arp-warp-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.25 2013/06/04 12:49:48 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/ChangeLog,v 1.26 2015/03/11 13:31:52 jlec Exp $
+
+*arp-warp-bin-7.5 (11 Mar 2015)
+
+  11 Mar 2015; Justin Lecher <jlec@gentoo.org> +arp-warp-bin-7.5.ebuild,
+  -arp-warp-bin-7.1-r1.ebuild, -arp-warp-bin-7.1-r2.ebuild,
+  -arp-warp-bin-7.3.ebuild, -files/7.1-setup-2.patch, -files/7.1-setup.patch:
+  Version Bump; Drop old with unavailable upstream sources, #542758
 
   04 Jun 2013; Justin Lecher <jlec@gentoo.org> arp-warp-bin-7.1-r2.ebuild:
   Fix for correct usage of new python eclasses
@@ -104,4 +111,3 @@
   +metadata.xml, +arp-warp-bin-7.0.1-r1.ebuild:
   (#212054) New package: ARP/wARP is a software for improvement and
   interpretation of crystallographic electron density maps.
-
