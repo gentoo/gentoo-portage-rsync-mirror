@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/jenkins-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/ChangeLog,v 1.21 2015/03/10 18:25:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/ChangeLog,v 1.22 2015/03/11 17:44:15 mrueg Exp $
+
+*jenkins-bin-1.602 (11 Mar 2015)
+
+  11 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +jenkins-bin-1.602.ebuild,
+  -jenkins-bin-1.580.3.ebuild, -jenkins-bin-1.598.ebuild,
+  -jenkins-bin-1.600.ebuild, jenkins-bin-1.596.1.ebuild:
+  Version bump. Move freetype dep to RDEPEND. Remove old.
 
   10 Mar 2015; Patrice Clement <monsieurp@gentoo.org> jenkins-bin-1.600.ebuild:
   Get DEPENDs right this time round by adding media-libs/freetype. Fix bug

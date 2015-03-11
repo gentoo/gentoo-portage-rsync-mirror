@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.7 2015/02/08 10:17:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/galaxyhack-1.74.ebuild,v 1.8 2015/03/11 17:31:40 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils flag-o-matic games
@@ -15,10 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	>=dev-libs/boost-1.34"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN}/src
 

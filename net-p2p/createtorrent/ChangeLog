@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/createtorrent
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/ChangeLog,v 1.7 2014/03/02 09:38:58 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/createtorrent/ChangeLog,v 1.8 2015/03/11 17:32:04 mrueg Exp $
+
+  11 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -createtorrent-1.1.3-r1.ebuild,
+  -files/createtorrent-1.1.3-asneeded.patch:
+  Remove old.
 
   02 Mar 2014; Pacho Ramos <pacho@gentoo.org> createtorrent-1.1.4.ebuild:
   amd64 stable, bug #289480

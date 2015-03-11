@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.598.ebuild,v 1.1 2015/01/27 02:26:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.602.ebuild,v 1.1 2015/03/11 17:44:15 mrueg Exp $
 
 EAPI=5
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-fonts/dejavu"
-RDEPEND="${DEPEND}
+RDEPEND="media-fonts/dejavu
+	media-libs/freetype
 	!dev-util/jenkins-bin:lts
 	virtual/jre"
 
