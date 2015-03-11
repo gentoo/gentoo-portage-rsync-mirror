@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/vc-0.7.4.ebuild,v 1.1 2015/03/02 17:02:07 amadio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/vc-0.7.4.ebuild,v 1.2 2015/03/11 14:20:05 monsieurp Exp $
 
 EAPI=5
 
@@ -22,7 +22,6 @@ IUSE="test"
 
 src_unpack() {
 	vcs-snapshot_src_unpack
-
 	if use test ; then
 		mkdir -p "${WORKDIR}"/${P}_build/tests || die
 		for i in ${VC_TEST_DATA[@]}; do
