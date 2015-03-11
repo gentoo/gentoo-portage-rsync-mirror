@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.277 2015/02/28 13:28:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.278 2015/03/11 07:14:41 jer Exp $
+
+  11 Mar 2015; Jeroen Roovers <jer@gentoo.org> -rxvt-unicode-9.20.ebuild,
+  -files/rxvt-unicode-9.15-xsubpp.patch:
+  Old.
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> rxvt-unicode-9.21.ebuild:
   Stable for ia64, wrt bug #539650

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.47 2015/02/28 23:50:59 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.48 2015/03/11 07:08:43 patrick Exp $
+
+*cffi-0.9.1 (11 Mar 2015)
+
+  11 Mar 2015; Patrick Lauer <patrick@gentoo.org> +cffi-0.9.1.ebuild:
+  Bump
 
 *cffi-0.8.6-r1 (28 Feb 2015)
 
