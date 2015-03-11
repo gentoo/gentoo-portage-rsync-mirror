@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.1.2.ebuild,v 1.2 2015/03/10 17:43:01 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.1.2-r1.ebuild,v 1.1 2015/03/11 08:48:37 jlec Exp $
 
 EAPI=5
 
@@ -23,6 +23,9 @@ DEPEND="
 src_prepare() {
 	append-cflags -Iregexp -I. -ansi
 	append-ldflags -Lregexp
+	sed \
+		-e 's:STRIP=true:STRIP=false:g' \
+		-i src/Makefile || die
 }
 
 src_compile() {
@@ -32,6 +35,7 @@ src_compile() {
 src_install() {
 	dobin src/boxes
 	doman doc/boxes.1
+	dodoc README.md
 	insinto /usr/share/boxes
 	doins boxes-config
 }

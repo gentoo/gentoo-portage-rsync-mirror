@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.9.0.ebuild,v 1.2 2015/03/09 17:28:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.9.0.ebuild,v 1.3 2015/03/11 08:35:03 jlec Exp $
 
 EAPI=5
 
@@ -34,12 +34,16 @@ COMMON_DEPEND="
 	)
 	qt5? (
 		dev-qt/designer:5
-		dev-qt/qtgui:5
 		dev-qt/qtcore:5
+		dev-qt/qtconcurrent:5
+		dev-qt/qtgui:5
+		dev-qt/qtnetwork:5
+		dev-qt/qtprintsupport:5
 		dev-qt/qtscript:5
 		dev-qt/qtsvg:5
 		dev-qt/qttest:5
 		dev-qt/qtwidgets:5
+		dev-qt/qtxml:5
 	)
 	video? ( media-libs/phonon[qt4?,qt5?] )"
 RDEPEND="${COMMON_DEPEND}

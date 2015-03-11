@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cairo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.33 2014/12/13 13:29:33 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.34 2015/03/11 08:49:19 gienah Exp $
+
+*cairo-0.13.1.0 (11 Mar 2015)
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org> +cairo-0.13.1.0.ebuild:
+  Bump cairo to 0.13.1.0
 
 *cairo-0.13.0.5 (13 Dec 2014)
 

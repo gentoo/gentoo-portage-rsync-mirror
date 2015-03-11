@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/boxes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.33 2015/03/10 17:43:01 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.34 2015/03/11 08:48:37 jlec Exp $
+
+*boxes-1.1.2-r1 (11 Mar 2015)
+
+  11 Mar 2015; Justin Lecher <jlec@gentoo.org> +boxes-1.1.2-r1.ebuild,
+  -boxes-1.1.2.ebuild:
+  Install README, #542598 and fix prestripping
 
   10 Mar 2015; Patrice Clement <monsieurp@gentoo.org> boxes-1.1.2.ebuild:
   Remove dodoc README. Fix bug 542598.

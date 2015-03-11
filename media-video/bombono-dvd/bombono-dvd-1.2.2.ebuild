@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.2.ebuild,v 1.3 2014/07/24 17:17:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bombono-dvd/bombono-dvd-1.2.2.ebuild,v 1.4 2015/03/11 08:48:19 aballier Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="0.96.1"
@@ -46,6 +46,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.0.1-cflags.patch"
 	"${FILESDIR}/${PN}-1.2.0-cdrtools.patch"
 	"${FILESDIR}/${PN}-1.2.2-ffmpeg2.patch"
+	"${FILESDIR}/${PN}-1.2.2-ffmpeg26.patch"
 )
 
 src_configure() {
