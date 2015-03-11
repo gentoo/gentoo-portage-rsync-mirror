@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libaosd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.11 2014/08/21 11:42:26 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/ChangeLog,v 1.12 2015/03/11 20:46:11 blueness Exp $
+
+  11 Mar 2015; Anthony G. Basile <blueness@gentoo.org> libaosd-0.2.7.ebuild:
+  Keyword ~ppc for bug #473920.
 
   21 Aug 2014; Raúl Porcel <armin76@gentoo.org> libaosd-0.2.7.ebuild:
   Add ~ia64/~sparc wrt bug #473920
