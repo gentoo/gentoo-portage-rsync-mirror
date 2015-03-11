@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-1.0.0.ebuild,v 1.1 2014/09/22 18:20:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pithos/pithos-1.0.0.ebuild,v 1.2 2015/03/11 18:53:47 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python3_3)
@@ -28,6 +28,7 @@ RDEPEND="${DEPEND}
 	dev-python/pygobject[${PYTHON_USEDEP}]
 	dev-python/pylast[${PYTHON_USEDEP}]
 	x11-libs/gtk+:3
+	media-libs/gstreamer:1.0[introspection]
 	media-plugins/gst-plugins-meta:1.0[aac,http,mp3]
 	libnotify? ( x11-libs/libnotify )
 	appindicator? ( dev-libs/libappindicator:3 )

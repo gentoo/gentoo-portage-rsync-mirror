@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.313 2015/02/28 21:49:56 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.314 2015/03/11 18:46:46 vapier Exp $
+
+*qemu-2.2.1 (11 Mar 2015)
+
+  11 Mar 2015; Mike Frysinger <vapier@gentoo.org> +qemu-2.2.1.ebuild,
+  qemu-9999.ebuild:
+  Version bump #542900 by Thomas Stein.
 
   28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   seccomp USE flag is now global, removing from metadata
