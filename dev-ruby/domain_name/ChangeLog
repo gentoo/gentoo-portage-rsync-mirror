@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/domain_name
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.29 2015/03/11 06:12:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.32 2015/03/11 16:48:59 mrueg Exp $
+
+  11 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -domain_name-0.5.13.ebuild:
+  Remove old.
+
+  11 Mar 2015; Agostino Sarubbo <ago@gentoo.org> domain_name-0.5.22.ebuild:
+  Stable for x86, wrt bug #542868
+
+  11 Mar 2015; Agostino Sarubbo <ago@gentoo.org> domain_name-0.5.22.ebuild:
+  Stable for amd64, wrt bug #542868
 
   11 Mar 2015; Hans de Graaff <graaff@gentoo.org> domain_name-0.5.22.ebuild:
   Create stable candidate.

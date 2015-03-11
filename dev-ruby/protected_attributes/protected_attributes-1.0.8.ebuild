@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/protected_attributes/protected_attributes-1.0.8.ebuild,v 1.1 2014/06/17 06:01:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/protected_attributes/protected_attributes-1.0.8.ebuild,v 1.2 2015/03/11 16:54:30 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -19,7 +19,7 @@ SLOT="1"
 
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 ruby_add_rdepend "

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.82 2015/02/15 07:12:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.83 2015/03/11 16:57:12 ago Exp $
+
+  11 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rspec-rails-2.14.2.ebuild:
+  Add ~x86, wrt bug #510614
 
 *rspec-rails-3.2.0 (15 Feb 2015)
 
