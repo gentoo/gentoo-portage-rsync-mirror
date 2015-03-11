@@ -1,0 +1,10 @@
+# ChangeLog for sci-misc/ViSP-images
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ViSP-images/ChangeLog,v 1.1 2015/03/11 17:10:10 aballier Exp $
+
+*ViSP-images-2.10.0 (11 Mar 2015)
+
+  11 Mar 2015; Alexis Ballier <aballier@gentoo.org> +ViSP-images-2.10.0.ebuild,
+  +metadata.xml:
+  initial import, ebuild by me
+

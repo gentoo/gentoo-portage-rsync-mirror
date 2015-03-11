@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/trollop-2.1.1.ebuild,v 1.4 2015/03/10 18:17:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/trollop-2.1.1.ebuild,v 1.6 2015/03/11 17:03:03 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -14,7 +14,7 @@ DESCRIPTION="Trollop is a commandline option parser for Ruby"
 HOMEPAGE="http://manageiq.github.io/trollop/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 SLOT="2"
 IUSE=""
 

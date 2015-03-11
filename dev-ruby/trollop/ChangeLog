@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.30 2015/03/10 18:17:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.32 2015/03/11 17:03:03 ago Exp $
+
+  11 Mar 2015; Agostino Sarubbo <ago@gentoo.org> trollop-2.1.1.ebuild:
+  Add ~ppc64, wrt bug #542782
+
+  11 Mar 2015; Agostino Sarubbo <ago@gentoo.org> trollop-2.1.1.ebuild:
+  Add ~ppc, wrt bug #542782
 
   10 Mar 2015; Hans de Graaff <graaff@gentoo.org> trollop-2.1.1.ebuild:
   Fix license information.

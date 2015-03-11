@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/chronic-0.10.2.ebuild,v 1.7 2015/03/10 10:21:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/chronic-0.10.2.ebuild,v 1.9 2015/03/11 17:03:00 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -16,7 +16,7 @@ DESCRIPTION="Chronic is a natural language date/time parser written in pure Ruby
 HOMEPAGE="https://github.com/mojombo/chronic"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.3.ebuild,v 1.8 2014/11/02 09:28:15 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.9.3.ebuild,v 1.9 2015/03/11 17:28:14 mrueg Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.1-ncurses.patch
 
 	# upstream forgot to include
-	cp ${FILESDIR}/rtorrent.1 ${S}/doc/ || die
+	cp "${FILESDIR}"/rtorrent.1 "${S}"/doc/ || die
 }
 
 src_configure() {

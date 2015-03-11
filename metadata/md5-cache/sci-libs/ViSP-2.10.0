@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dmtx? ( media-libs/libdmtx ) ffmpeg? ( virtual/ffmpeg ) gsl? ( sci-libs/gsl ) ieee1394? ( media-libs/libdc1394 ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) ogre? ( dev-games/ogre[ois?] dev-libs/boost:=[threads] ) opencv? ( media-libs/opencv ) png? ( media-libs/libpng:0= ) usb? ( virtual/libusb:1 ) v4l? ( media-libs/libv4l ) X? ( x11-libs/libX11 ) xml? ( dev-libs/libxml2 ) zbar? ( media-gfx/zbar ) zlib? ( sys-libs/zlib ) doc? ( app-doc/doxygen virtual/latex-base media-gfx/graphviz ) virtual/pkgconfig test? ( sci-misc/ViSP-images ) v4l? ( virtual/os-headers ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Visual Servoing Platform: visual tracking and visual servoing library
+EAPI=5
+HOMEPAGE=http://www.irisa.fr/lagadic/visp/visp.html
+IUSE=demos dmtx doc examples ffmpeg gsl ieee1394 jpeg lapack ogre ois opencv png test tutorials usb v4l X xml zbar zlib
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=dmtx? ( media-libs/libdmtx ) ffmpeg? ( virtual/ffmpeg ) gsl? ( sci-libs/gsl ) ieee1394? ( media-libs/libdc1394 ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) ogre? ( dev-games/ogre[ois?] dev-libs/boost:=[threads] ) opencv? ( media-libs/opencv ) png? ( media-libs/libpng:0= ) usb? ( virtual/libusb:1 ) v4l? ( media-libs/libv4l ) X? ( x11-libs/libX11 ) xml? ( dev-libs/libxml2 ) zbar? ( media-gfx/zbar ) zlib? ( sys-libs/zlib ) demos? ( sci-misc/ViSP-images )
+REQUIRED_USE=ffmpeg? ( opencv ) ois? ( ogre )
+SLOT=0
+SRC_URI=http://gforge.inria.fr/frs/download.php/latestfile/475/ViSP-2.10.0.tar.gz
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
+_md5_=f50ee04247d8df986dbdad5d8f4dba42

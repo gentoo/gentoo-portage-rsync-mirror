@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/ViSP
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ViSP/ChangeLog,v 1.1 2015/03/11 17:16:48 aballier Exp $
+
+*ViSP-2.10.0 (11 Mar 2015)
+
+  11 Mar 2015; Alexis Ballier <aballier@gentoo.org> +ViSP-2.10.0.ebuild,
+  +files/opencv.patch, +metadata.xml:
+  initial import, ebuild by me
+

@@ -6407,6 +6407,13 @@ sci-geosciences/qlandkartegt:mikrokopter - Enable telemtry with a mikrokopter
 sci-geosciences/qlandkartegt:rmap - Enable support for TwoNav RMAP file format
 sci-geosciences/viking:magic - Use libmagic to determine mimetypes
 sci-geosciences/xtide:gps - Use sci-geosciences/gpsd
+sci-libs/ViSP:demos - Installs demo programs.
+sci-libs/ViSP:dmtx - Enables barcode data matrix support.
+sci-libs/ViSP:ogre - Enables dev-games/ogre support.
+sci-libs/ViSP:ois - Enables dev-games/ois support via ogre.
+sci-libs/ViSP:opencv - Enables media-libs/opencv support.
+sci-libs/ViSP:tutorials - Installs tutorials.
+sci-libs/ViSP:zbar - Enables barcodes reading.
 sci-libs/acml:gfortran - Fetch and install acml compiled with GNU gfortran
 sci-libs/acml:ifc - Fetch and install acml compiled with Intel Fortran Compiler (dev-lang/ifc)
 sci-libs/acml:int64 - Install the 64 bits integer library
