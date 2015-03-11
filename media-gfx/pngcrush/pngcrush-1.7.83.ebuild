@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.83.ebuild,v 1.1 2015/02/15 02:58:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.83.ebuild,v 1.2 2015/03/11 19:57:44 vapier Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -17,7 +17,7 @@ IUSE="+system-libs"
 
 RDEPEND="
 	system-libs? (
-		>=media-libs/libpng-1.5:0=
+		media-libs/libpng:0=
 		sys-libs/zlib:=
 	)"
 DEPEND="${RDEPEND}
@@ -31,7 +31,7 @@ src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC)" \
-		CFLAGS="${CFLAGS} -Wall" \
+		CFLAGS="${CFLAGS} ${CPPFLAGS} -Wall" \
 		LDFLAGS="${LDFLAGS}"
 }
 

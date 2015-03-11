@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.9999.ebuild,v 1.6 2015/02/08 01:51:56 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.9999.ebuild,v 1.7 2015/03/11 19:57:00 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -75,7 +75,7 @@ RDEPEND="
 	!~dev-python/routes-2.0[${PYTHON_USEDEP}]
 	>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 	>=dev-python/boto-2.32.1[${PYTHON_USEDEP}]
-	>=dev-python/boto-2.35.0[${PYTHON_USEDEP}]
+	<dev-python/boto-2.35.0[${PYTHON_USEDEP}]
 	~dev-python/sqlalchemy-migrate-0.9.1[${PYTHON_USEDEP}]
 	>=dev-python/httplib2-0.7.5[${PYTHON_USEDEP}]
 	>=dev-python/kombu-2.5.0[${PYTHON_USEDEP}]

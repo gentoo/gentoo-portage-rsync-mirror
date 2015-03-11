@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.134 2015/02/15 02:58:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.135 2015/03/11 19:57:44 vapier Exp $
+
+  11 Mar 2015; Mike Frysinger <vapier@gentoo.org> pngcrush-1.7.83.ebuild:
+  Respect CPPFLAGS and relax libpng requirement.
 
 *pngcrush-1.7.83 (15 Feb 2015)
 
