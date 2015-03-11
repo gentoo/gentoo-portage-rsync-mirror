@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.63 2015/03/09 16:58:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.64 2015/03/11 16:21:57 voyageur Exp $
+
+*owncloud-8.0.2 (11 Mar 2015)
+*owncloud-7.0.5 (11 Mar 2015)
+*owncloud-6.0.7 (11 Mar 2015)
+*owncloud-5.0.19 (11 Mar 2015)
+
+  11 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> -owncloud-5.0.18.ebuild,
+  +owncloud-5.0.19.ebuild, -owncloud-6.0.6.ebuild, +owncloud-6.0.7.ebuild,
+  -owncloud-7.0.4.ebuild, +owncloud-7.0.5.ebuild, +owncloud-8.0.2.ebuild:
+  Version bumps, remove previous versions for old branches as some changelogs
+  report security fixes
 
   09 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> owncloud-8.0.0.ebuild:
   Add warning about removed apps from core tarball, thanks Jaak Ristioja
