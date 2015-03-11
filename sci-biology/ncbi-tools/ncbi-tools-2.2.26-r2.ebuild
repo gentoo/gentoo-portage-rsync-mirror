@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r2.ebuild,v 1.7 2015/03/02 14:09:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-2.2.26-r2.ebuild,v 1.8 2015/03/11 13:17:35 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,15 @@ RDEPEND="
 	app-shells/tcsh
 	dev-lang/perl
 	media-libs/libpng:0=
-	X? ( x11-libs/motif:0 )"
+	X? (
+		media-libs/fontconfig
+		x11-libs/motif:0=
+		x11-libs/libICE
+		x11-libs/libX11
+		x11-libs/libXft
+		x11-libs/libXmu
+		x11-libs/libXt
+		)"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/ncbi"
