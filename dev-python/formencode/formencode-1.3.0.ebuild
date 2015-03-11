@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.3.0.ebuild,v 1.1 2015/03/10 14:16:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/formencode-1.3.0.ebuild,v 1.2 2015/03/11 04:28:40 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -25,15 +25,16 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/dnspython-1.12.0-r1[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
+RESTRICT="test"
 DOCS=( docs/{index.txt,modules.txt} )
 
 S="${WORKDIR}/${MY_P}"
+DISTUTILS_IN_SOURCE_BUILD=1
 
 python_test() {
 	# https://github.com/formencode/formencode/issues/78
-	# 5 failures under pu2.7. Although the package claims to cater to py3, the suite fails horribly
-	# Requires switching cwd to ${BUILD_DIR}/lib for py3 but leave commented out for now since it can't be used
-	#pushd "${BUILD_DIR}"/lib > /dev/null
-	nosetests ${PN}/tests || die "tests failed under ${EPYTHON}"
-	#popd > /dev/null
+	# 5 failures under py2.7. Although the package claims to cater to py3, the suite fails horribly
+	# Main problem is that it is written requiring to be system installed, then run.
+	# Suite found to pass on extended testing using tox.
+	nosetests || die "tests failed under ${EPYTHON}"
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.4-r1.ebuild,v 1.2 2013/03/10 09:02:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-6.4.4-r1.ebuild,v 1.3 2015/03/11 04:19:52 patrick Exp $
 
 EAPI=5
 
@@ -60,6 +60,6 @@ src_compile() {
 
 src_install() {
 	default
-	mkdir -p "${D}/usr/include/${PN}/"
-	cp "${S}"/*.h "${D}/usr/include/${PN}" || die "Failed to copy headers" # needed by other apps like YAFU
+	mkdir -p "${ED}/usr/include/${PN}/"
+	cp "${S}"/*.h "${ED}/usr/include/${PN}" || die "Failed to copy headers" # needed by other apps like YAFU
 }
