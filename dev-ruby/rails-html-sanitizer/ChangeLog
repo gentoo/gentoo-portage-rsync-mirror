@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rails-html-sanitizer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails-html-sanitizer/ChangeLog,v 1.4 2015/01/08 20:50:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails-html-sanitizer/ChangeLog,v 1.5 2015/03/11 05:58:31 graaff Exp $
+
+*rails-html-sanitizer-1.0.2 (11 Mar 2015)
+
+  11 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  +rails-html-sanitizer-1.0.2.ebuild:
+  Version bump.
 
   08 Jan 2015; Markus Meier <maekke@gentoo.org>
   rails-html-sanitizer-1.0.1.ebuild:

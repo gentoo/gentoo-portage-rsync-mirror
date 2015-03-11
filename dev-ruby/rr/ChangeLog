@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.52 2014/12/28 08:56:22 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.53 2015/03/11 06:00:40 graaff Exp $
+
+  11 Mar 2015; Hans de Graaff <graaff@gentoo.org> rr-1.1.2-r1.ebuild:
+  Add ruby22.
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> rr-1.1.2.ebuild,
   rr-1.1.2-r1.ebuild:
