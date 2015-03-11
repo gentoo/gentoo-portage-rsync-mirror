@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.37 2015/03/10 16:02:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.38 2015/03/11 03:33:48 floppym Exp $
+
+*openconnect-7.04 (11 Mar 2015)
+
+  11 Mar 2015; Mike Gilbert <floppym@gentoo.org> +openconnect-7.04.ebuild:
+  Version bump. Use java-pkg-opt-2.eclass for java support.
 
   10 Mar 2015; Yixun Lan <dlan@gentoo.org> openconnect-7.02.ebuild:
   keyword for arm/arm64, test on cortex-a9 and a53 board
