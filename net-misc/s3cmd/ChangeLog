@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/s3cmd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.27 2015/03/10 16:18:14 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/ChangeLog,v 1.28 2015/03/11 09:05:25 monsieurp Exp $
+
+  11 Mar 2015; Patrice Clement <monsieurp@gentoo.org> s3cmd-1.5.2.ebuild:
+  Get rid of py2.6 (deprecated) + QA.
 
 *s3cmd-1.5.2 (10 Mar 2015)
 

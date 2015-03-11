@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/aubio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.30 2015/01/03 11:00:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.31 2015/03/11 09:22:54 aballier Exp $
+
+*aubio-0.4.1 (11 Mar 2015)
+
+  11 Mar 2015; Alexis Ballier <aballier@gentoo.org> +aubio-0.4.1.ebuild:
+  version bump
 
 *aubio-0.4.0-r1 (03 Jan 2015)
 

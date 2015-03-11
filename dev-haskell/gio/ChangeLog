@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/gio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.28 2015/03/11 07:42:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.29 2015/03/11 09:24:27 gienah Exp $
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org> gio-0.13.0.3.ebuild,
+  gio-0.13.0.4.ebuild:
+  Add back the ~ia64 to KEYWORDS in gio
 
   11 Mar 2015; Mark Wright <gienah@gentoo.org> gio-0.13.0.4.ebuild:
   Workaround module order for ghc 7.10 in gio-0.13.0.4.ebuild
