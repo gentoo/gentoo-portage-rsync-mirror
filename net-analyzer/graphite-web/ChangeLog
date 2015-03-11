@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/graphite-web
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/ChangeLog,v 1.1 2015/03/10 20:17:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/ChangeLog,v 1.2 2015/03/11 02:33:52 patrick Exp $
+
+  11 Mar 2015; Patrick Lauer <patrick@gentoo.org> graphite-web-0.9.13.ebuild,
+  metadata.xml:
+  Whitespace, fix metadata/iuse
 
 *graphite-web-0.9.13 (10 Mar 2015)
 

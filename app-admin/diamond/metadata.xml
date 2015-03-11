@@ -12,4 +12,8 @@
 		Additionally, it features an API for implementing custom
 		collectors for gathering metrics from almost any source.
 	</longdescription>
+	<use>
+		<flag name="mongo">Enable MongoDB support</flag>
+		<flag name="redis">Enable Redis support</flag>
+	</use>
 </pkgmetadata>

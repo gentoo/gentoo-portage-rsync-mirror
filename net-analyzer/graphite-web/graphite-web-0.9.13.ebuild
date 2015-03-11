@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/graphite-web-0.9.13.ebuild,v 1.1 2015/03/10 20:17:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/graphite-web-0.9.13.ebuild,v 1.2 2015/03/11 02:33:52 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,7 @@ IUSE="ldap mysql memcached +sqlite"
 DEPEND=""
 RDEPEND="dev-lang/python[sqlite?]
 	|| ( >=dev-python/django-1.4[sqlite?,mysql?,${PYTHON_USEDEP}]
-		( >=dev-python/django-1.6[sqlite?,${PYTHON_USEDEP}] 
+		( >=dev-python/django-1.6[sqlite?,${PYTHON_USEDEP}]
 		mysql? ( || ( dev-python/mysql-python dev-python/mysqlclient ) ) ) )
 	>=dev-python/twisted-core-10.0[${PYTHON_USEDEP}]
 	>=dev-python/django-tagging-0.3.1[${PYTHON_USEDEP}]
