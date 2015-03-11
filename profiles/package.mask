@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16413 2015/03/11 09:37:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16414 2015/03/11 21:48:55 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (11 Mar 2015)
+# Doesn't build with modern gcc, randomly fails to build (bug #494170)
+# and no upstream updates for over 10 years.
+# masked for removal on 20150410
+games-roguelike/ivan
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Mar 2015)
 # Mask broken and untested ebuild.

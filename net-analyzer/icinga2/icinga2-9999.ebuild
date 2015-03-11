@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-9999.ebuild,v 1.2 2015/03/11 21:24:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-9999.ebuild,v 1.3 2015/03/11 21:38:24 prometheanfire Exp $
 
 EAPI=5
 inherit cmake-utils depend.apache eutils git-2 systemd toolchain-funcs user versionator
 
-DESCRIPTION="Distributed, general purpose, network monitoring engine"
+DESCRIPTION="Distributed, general purpose, network monitoring engine."
 HOMEPAGE="http://icinga.org/icinga2"
 EGIT_REPO_URI="http://github.com/Icinga/icinga2.git"
 EGIT_BRANCH="master"
