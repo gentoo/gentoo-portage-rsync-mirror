@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-2.13-r1.ebuild,v 1.5 2014/08/26 09:41:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/killproc-2.13-r1.ebuild,v 1.6 2015/03/11 06:34:33 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="killproc and assorted tools for boot scripts"
-HOMEPAGE="http://www.suse.de/"
+HOMEPAGE="http://ftp.suse.com/pub/projects/init/"
 SRC_URI="ftp://ftp.suse.com/pub/projects/init/${P}.tar.gz"
 
 LICENSE="GPL-2"
