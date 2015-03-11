@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2014-r3.ebuild,v 1.1 2015/03/09 14:27:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2014-r3.ebuild,v 1.2 2015/03/11 11:22:57 jlec Exp $
 
 EAPI=5
 
 #TL_UPSTREAM_PATCHLEVEL="1"
-PATCHLEVEL="46"
+PATCHLEVEL="47"
 TL_SOURCE_VERSION=20140525
 
 inherit eutils flag-o-matic toolchain-funcs libtool texlive-common
@@ -154,8 +154,6 @@ src_prepare() {
 	cd "${B}"
 	#EPATCH_MULTI_MSG="Applying patches from upstream bugfix branch..." EPATCH_SUFFIX="patch" epatch "${WORKDIR}/gentoo_branch2011_patches"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-
-	epatch "${FILESDIR}"/${P}-format-security.patch
 
 	elibtoolize
 }
