@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/monad-control
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-control/ChangeLog,v 1.17 2014/12/23 05:22:35 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monad-control/ChangeLog,v 1.18 2015/03/11 12:28:27 gienah Exp $
+
+*monad-control-1.0.0.4 (11 Mar 2015)
+
+  11 Mar 2015; Mark Wright <gienah@gentoo.org> +monad-control-1.0.0.4.ebuild:
+  Bump monad-control to 1.0.0.4
 
 *monad-control-1.0.0.1 (23 Dec 2014)
 

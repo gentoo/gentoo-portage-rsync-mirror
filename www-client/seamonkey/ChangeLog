@@ -1,6 +1,15 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.509 2015/02/07 23:52:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.511 2015/03/11 12:07:06 polynomial-c Exp $
+
+  11 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.33.ebuild:
+  Use correct mozconfig eclass.
+
+*seamonkey-2.33 (11 Mar 2015)
+
+  11 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -seamonkey-2.31-r1.ebuild, +seamonkey-2.33.ebuild:
+  Version bump. Removed old.
 
 *seamonkey-2.32.1 (07 Feb 2015)
 
