@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.95 2015/03/12 09:17:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.96 2015/03/12 11:59:08 jer Exp $
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org> libssh2-1.5.0.ebuild:
+  Stable for HPPA (bug #542914).
 
 *libssh2-1.5.0 (12 Mar 2015)
 
