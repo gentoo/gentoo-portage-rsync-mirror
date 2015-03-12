@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-10.20140517-r1.ebuild,v 1.11 2015/03/03 08:49:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpostproc/libpostproc-10.20140517-r1.ebuild,v 1.12 2015/03/12 10:31:57 jer Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="alpha amd64 arm ~arm64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="alpha amd64 arm ~arm64 hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 fi
 IUSE="pic static-libs"
 
