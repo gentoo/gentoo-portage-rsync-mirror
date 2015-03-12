@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pioneers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.48 2015/02/21 12:24:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/ChangeLog,v 1.49 2015/03/12 18:48:21 mr_bones_ Exp $
+
+  12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/pioneers-15.1-build.patch, -pioneers-15.1-r1.ebuild:
+  old
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pioneers-15.3.ebuild:
   Stable for ppc, wrt bug #539382

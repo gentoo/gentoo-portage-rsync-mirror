@@ -1,6 +1,10 @@
 # ChangeLog for games-util/linux-wbfs-manager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/ChangeLog,v 1.9 2015/02/25 15:53:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/ChangeLog,v 1.10 2015/03/12 18:36:37 mr_bones_ Exp $
+
+  12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -linux-wbfs-manager-0.1.11.ebuild:
+  old
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   linux-wbfs-manager-0.1.12.ebuild:

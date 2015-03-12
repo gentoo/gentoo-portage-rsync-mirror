@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.99 2015/02/23 11:17:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.100 2015/03/12 18:35:49 mr_bones_ Exp $
+
+  12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/scorched3d-43.3d-fixups.patch, -files/scorched3d-43.3d-freetype.patch,
+  -files/scorched3d-43.3d-gcc43.patch, -files/scorched3d-43.3d-gcc47.patch,
+  -files/scorched3d-43.3d-jpeg9.patch, -files/scorched3d-43.3d-odbc.patch,
+  -files/scorched3d-43.3d-png15.patch, -files/scorched3d-43.3d-win32.patch,
+  -scorched3d-43.3d.ebuild:
+  old
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> scorched3d-44.ebuild:
   Stable for ppc64, wrt bug #538986

@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.74 2015/02/21 12:26:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.75 2015/03/12 18:40:23 mr_bones_ Exp $
+
+  12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/irrlicht-1.8-config.patch, -files/irrlicht-1.8-demoMake.patch,
+  -files/irrlicht-1.8-mesa-10.x.patch, -files/irrlicht-1.8-r2-gentoo.patch,
+  -irrlicht-1.8-r2.ebuild:
+  old
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> irrlicht-1.8.1.ebuild:
   Stable for ppc, wrt bug #539484

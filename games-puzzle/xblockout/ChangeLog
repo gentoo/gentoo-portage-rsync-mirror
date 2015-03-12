@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/xblockout
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.30 2015/02/21 12:27:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xblockout/ChangeLog,v 1.31 2015/03/12 18:32:26 mr_bones_ Exp $
+
+  12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/xblockout-1.1.5-font.patch, -xblockout-1.1.5-r1.ebuild:
+  old
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xblockout-1.1.6.ebuild:
   Stable for ppc, wrt bug #539520
