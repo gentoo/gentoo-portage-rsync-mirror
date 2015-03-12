@@ -1,11 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.8.ebuild,v 1.14 2014/06/10 00:12:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.1.2.ebuild,v 1.1 2015/03/12 15:04:38 polynomial-c Exp $
 
-EAPI=3
-PYTHON_DEPEND="python? 2:2.6"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
-inherit waf-utils python multilib
+EAPI=5
+
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="threads"
+
+inherit waf-utils python-single-r1 multilib multilib-minimal
 
 DESCRIPTION="Samba talloc library"
 HOMEPAGE="http://talloc.samba.org/"
@@ -13,32 +15,51 @@ SRC_URI="http://samba.org/ftp/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~sparc-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~sparc-solaris"
 IUSE="compat +python"
 
-RDEPEND="!!<sys-libs/talloc-2.0.5"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="python? ( ${PYTHON_DEPS} )
+	!!<sys-libs/talloc-2.0.5
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20140508-r1
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	dev-libs/libxslt
-	|| ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] )"
+	${PYTHON_DEPS}"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
 
-pkg_setup() {
-	# Make sure the build system will use the right python
-	python_set_active_version 2
-	python_pkg_setup
+MULTILIB_WRAPPED_HEADERS=(
+	# python goes only for native
+	/usr/include/pytalloc.h
+)
+
+src_prepare() {
+	# what would you expect of waf? i won't even waste time trying.
+	multilib_copy_sources
 }
 
-src_configure() {
-	local extra_opts=""
+multilib_src_configure() {
+	local extra_opts=()
 
-	use compat && extra_opts+=" --enable-talloc-compat1"
-	use python || extra_opts+=" --disable-python"
+	use compat && extra_opts+=( --enable-talloc-compat1 )
+	if ! multilib_is_native_abi || ! use python; then
+		extra_opts+=( --disable-python )
+	fi
+
 	waf-utils_src_configure \
-		${extra_opts}
+		"${extra_opts[@]}"
 }
 
-src_install() {
+multilib_src_compile() {
+	waf-utils_src_compile
+}
+
+multilib_src_install() {
 	waf-utils_src_install
 
 	# waf is stupid, and no, we can't fix the build-system, since it's provided
@@ -59,6 +80,6 @@ src_install() {
 				-change "${S}/bin/default/libtalloc.dylib" \
 					"${EPREFIX}"/usr/$(get_libdir)/libtalloc.2.dylib \
 				"${ED}"$(python_get_sitedir)/talloc.bundle || die
-	   fi
+		fi
 	fi
 }
