@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libyaml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.57 2014/05/14 16:50:26 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.58 2015/03/12 06:09:00 vapier Exp $
+
+  12 Mar 2015; Mike Frysinger <vapier@gentoo.org> libyaml-0.1.6.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   14 May 2014; Tim Harder <radhermit@gentoo.org> -libyaml-0.1.5.ebuild:
   Remove old.
