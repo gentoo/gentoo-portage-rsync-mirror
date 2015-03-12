@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-13.11.ebuild,v 1.6 2015/01/19 05:50:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-15.02.ebuild,v 1.1 2015/03/12 19:30:39 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -10,11 +10,11 @@ inherit autotools eutils python-single-r1 games
 
 DESCRIPTION="full featured educational application for children from 2 to 10"
 HOMEPAGE="http://gcompris.net/"
-SRC_URI="mirror://sourceforge/gcompris/${P}.tar.bz2"
+SRC_URI="http://gcompris.net/download/${P}.tar.bz2"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gstreamer"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
@@ -53,9 +53,7 @@ pkg_setup() {
 src_prepare() {
 	# Drop DEPRECATED flags, bug #387817
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
-		src/gcompris/Makefile.am src/gcompris/Makefile.in \
-		src/goocanvas/src/Makefile.am src/goocanvas/src/Makefile.in \
-		|| die
+		src/gcompris/Makefile.am || die
 
 	epatch "${FILESDIR}"/${P}-build.patch
 	cp /usr/share/gettext/config.rpath .
@@ -84,13 +82,8 @@ src_configure() {
 		--enable-py-build-only
 }
 
-src_compile() {
-	emake -j1
-}
-
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	prune_libtool_files --modules
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	prepgamesdirs
 }

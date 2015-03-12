@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12_beta1.ebuild,v 1.1 2015/02/25 03:09:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12_rc1.ebuild,v 1.1 2015/03/12 19:12:34 johu Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="ayatana crypt dbus debug kde monolithic phonon postgres qt5 +server +ssl s
 SERVER_RDEPEND="
 	qt5? (
 		dev-qt/qtscript:5
+		crypt? ( app-crypt/qca:2[openssl,qt5] )
 		postgres? ( dev-qt/qtsql:5[postgres] )
 		!postgres? ( dev-qt/qtsql:5[sqlite] dev-db/sqlite:3[threadsafe(+),-secure-delete] )
 	)
@@ -40,6 +41,16 @@ GUI_RDEPEND="
 		dbus? (
 			dev-libs/libdbusmenu-qt[qt5]
 			dev-qt/qtdbus:5
+		)
+		kde? (
+			kde-frameworks/kconfigwidgets:5
+			kde-frameworks/kcoreaddons:5
+			kde-frameworks/knotifications:5
+			kde-frameworks/knotifyconfig:5
+			kde-frameworks/ktextwidgets:5
+			kde-frameworks/kwidgetsaddons:5
+			kde-frameworks/kxmlgui:5
+			kde-frameworks/sonnet:5
 		)
 		phonon? ( media-libs/phonon[qt5] )
 		webkit? ( dev-qt/qtwebkit:5 )
@@ -78,7 +89,10 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	qt5? ( dev-qt/linguist-tools:5 )
+	qt5? (
+		dev-libs/extra-cmake-modules
+		dev-qt/linguist-tools:5
+	)
 "
 
 DOCS=( AUTHORS ChangeLog README )
@@ -90,10 +104,10 @@ REQUIRED_USE="
 	ayatana? ( || ( X monolithic ) )
 	crypt? ( || ( server monolithic ) )
 	dbus? ( || ( X monolithic ) )
-	kde? ( phonon || ( X monolithic ) )
+	kde? ( || ( X monolithic ) )
 	phonon? ( || ( X monolithic ) )
 	postgres? ( || ( server monolithic ) )
-	qt5? ( !ayatana !crypt !kde phonon )
+	qt5? ( !ayatana phonon )
 	syslog? ( || ( server monolithic ) )
 	webkit? ( || ( X monolithic ) )
 "
@@ -112,6 +126,7 @@ src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_find_package ayatana IndicateQt)
 		$(cmake-utils_use_find_package crypt QCA2)
+		$(cmake-utils_use_find_package crypt QCA2-QT5)
 		$(cmake-utils_use_find_package dbus dbusmenu-qt)
 		$(cmake-utils_use_find_package dbus dbusmenu-qt5)
 		$(cmake-utils_use_with kde)

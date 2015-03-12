@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.7.ebuild,v 1.1 2012/10/19 08:32:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.2.7.ebuild,v 1.2 2015/03/12 19:05:59 mr_bones_ Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils cmake-utils gnome2-utils games
 
 DESCRIPTION="Warcraft II for the Stratagus game engine"
