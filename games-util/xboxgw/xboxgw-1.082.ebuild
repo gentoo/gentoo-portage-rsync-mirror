@@ -1,9 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxgw/xboxgw-1.082.ebuild,v 1.5 2007/12/05 04:12:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxgw/xboxgw-1.082.ebuild,v 1.6 2015/03/12 17:22:27 mr_bones_ Exp $
+
+EAPI=5
+inherit eutils
 
 XBOXGW_P="${PN}-1.08-2"
 HMLIBS_P="hmlibs-1.07-2"
+
 DESCRIPTION="Tunnels XBox system link games over the net"
 HOMEPAGE="http://www.xboxgw.com/"
 SRC_URI="http://www.xboxgw.com/rel/dist2.1/tarballs/i386/${XBOXGW_P}.tgz
@@ -14,16 +18,30 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
+QA_PREBUILT="opt/${PN}/lib/libhmdb.so
+	opt/${PN}/lib/libhmsched.so
+	opt/${PN}/lib/libhmcli.so
+	opt/${PN}/lib/libhmsdb.so
+	opt/${PN}/bin/hmdbdump
+	opt/${PN}/bin/xboxgw
+	opt/${PN}/bin/xbifsetup"
+
 S=${WORKDIR}
 
 src_install() {
+	into /opt/${PN}
+
 	cd "${WORKDIR}/${HMLIBS_P}"
-	dolib.so *.so || die
-	dobin hmdbdump || die
+	dolib.so *.so
+	dobin hmdbdump
 	insinto /usr/include/hmlibs
-	doins *.h || die
+	doins *.h
 
 	cd "${WORKDIR}/${XBOXGW_P}"
-	dobin xboxgw xbifsetup || die
+	dobin xboxgw xbifsetup
 	dodoc *.txt
+
+	if use amd64 ; then
+		mv "${D}"/opt/${PN}/lib64 "${D}"/opt/${PN}/lib || die
+	fi
 }

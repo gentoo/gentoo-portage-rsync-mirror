@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gens
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.22 2011/09/21 21:17:48 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/ChangeLog,v 1.23 2015/03/12 17:28:41 mr_bones_ Exp $
+
+  12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gens-2.15.5-gcc34.patch, gens-2.15.5.ebuild:
+  EAPI=5
 
   21 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> gens-2.15.5.ebuild:
   zlib-1.2.5 fix (bug #384019); more use flags for libsdl
@@ -79,4 +83,3 @@
 
   01 Aug 2003; Michael Sterrett <msterret@gentoo.org> gens-2.12.ebuild:
   initial commit.  ebuild contributed by David Holm (modified) via bug 24821.
-

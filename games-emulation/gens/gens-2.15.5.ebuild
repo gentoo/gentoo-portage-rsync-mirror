@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.15.5.ebuild,v 1.7 2011/09/21 21:17:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.15.5.ebuild,v 1.8 2015/03/12 17:28:41 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic games
 
 DESCRIPTION="A Sega Genesis/CD/32X emulator"
@@ -21,15 +21,25 @@ DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-romsdir.patch \
+	epatch \
+		"${FILESDIR}"/${P}-romsdir.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-ovflfix.patch
+		"${FILESDIR}"/${P}-ovflfix.patch \
+		"${FILESDIR}"/${P}-gcc34.patch
 	sed -i -e '1i#define OF(x) x' src/gens/util/file/unzip.h || die
 	append-ldflags -Wl,-z,noexecstack
 }
 
+src_configure() {
+	egamesconf \
+		--disable-gtktest \
+		--disable-sdltest
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS BUGS README
+	DOCS="AUTHORS BUGS README gens.txt history.txt" \
+		default
+	newicon pixmaps/gens_small.png ${PN}.png
+	make_desktop_entry "${PN}" "Gens"
 	prepgamesdirs
 }
