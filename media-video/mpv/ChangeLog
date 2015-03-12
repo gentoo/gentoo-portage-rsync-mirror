@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.120 2015/03/07 05:27:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.121 2015/03/12 08:26:43 jer Exp $
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org> mpv-0.7.3.ebuild,
+  mpv-0.8.0.ebuild, mpv-0.8.2.ebuild:
+  Marked ~hppa (bug #538802).
 
   07 Mar 2015; Ben de Groot <yngwin@gentoo.org> mpv-0.8.2.ebuild:
   Add RELEASE_NOTES to DOCS (bug #542344)

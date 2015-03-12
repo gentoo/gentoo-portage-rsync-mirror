@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.8.0.ebuild,v 1.2 2015/03/03 09:18:56 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.8.0.ebuild,v 1.3 2015/03/12 08:26:43 jer Exp $
 
 EAPI=5
 EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
@@ -21,7 +21,7 @@ SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.g
 LICENSE="GPL-2+ BSD"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~arm64 ~x86 ~amd64-linux"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio +cli doc-pdf dvb +dvd dvdnav egl +enca encode
 +iconv jack -joystick jpeg ladspa lcms +libass libav libcaca libguess libmpv
 lirc lua luajit +mpg123 -openal +opengl oss pulseaudio pvr samba -sdl selinux

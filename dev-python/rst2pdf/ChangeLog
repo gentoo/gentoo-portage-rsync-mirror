@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.38 2015/01/13 02:32:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.39 2015/03/12 08:25:58 jer Exp $
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org> rst2pdf-0.93-r2.ebuild:
+  Marked ~hppa (bug #538802).
 
   13 Jan 2015; Mike Gilbert <floppym@gentoo.org> rst2pdf-0.93-r2.ebuild:
   Depend on setuptools, bug 536344.

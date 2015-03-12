@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.826 2015/03/04 14:53:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.827 2015/03/12 08:14:05 jer Exp $
+
+*opera-28.0.1750.40 (12 Mar 2015)
+
+  12 Mar 2015; Jeroen Roovers <jer@gentoo.org> +opera-28.0.1750.40.ebuild:
+  Version bump.
 
 *opera-27.0.1689.76 (04 Mar 2015)
 
