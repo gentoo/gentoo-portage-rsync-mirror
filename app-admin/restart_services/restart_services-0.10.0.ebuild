@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/restart_services/restart_services-0.9.8.ebuild,v 1.1 2015/02/19 16:25:52 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/restart_services/restart_services-0.10.0.ebuild,v 1.1 2015/03/12 00:24:54 mschiff Exp $
 
 EAPI=5
 
