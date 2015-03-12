@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.189 2015/03/10 02:13:36 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.190 2015/03/12 09:32:21 dlan Exp $
+
+*xen-4.5.0-r3 (12 Mar 2015)
+*xen-4.4.1-r8 (12 Mar 2015)
+*xen-4.3.3-r7 (12 Mar 2015)
+*xen-4.2.5-r6 (12 Mar 2015)
+
+  12 Mar 2015; Yixun Lan <dlan@gentoo.org> -xen-4.2.5-r4.ebuild,
+  -xen-4.2.5-r5.ebuild, +xen-4.2.5-r6.ebuild, -xen-4.3.3-r5.ebuild,
+  -xen-4.3.3-r6.ebuild, +xen-4.3.3-r7.ebuild, -xen-4.4.1-r6.ebuild,
+  -xen-4.4.1-r7.ebuild, +xen-4.4.1-r8.ebuild, -xen-4.5.0-r2.ebuild,
+  +xen-4.5.0-r3.ebuild:
+  security bump, fix bug 542263, XSA-123
 
 *xen-4.5.0-r2 (10 Mar 2015)
 *xen-4.4.1-r7 (10 Mar 2015)

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.10.3.ebuild,v 1.1 2015/01/20 16:14:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.10.3.ebuild,v 1.2 2015/03/12 09:33:40 jer Exp $
 
 EAPI=5
 
@@ -19,7 +19,6 @@ RESTRICT="test"
 RDEPEND="
 	>=sys-block/parted-3.1
 	dev-python/decorator[${PYTHON_USEDEP}]
-	sys-libs/ncurses
 "
 DEPEND="
 	${RDEPEND}

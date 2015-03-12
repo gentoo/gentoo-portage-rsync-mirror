@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4.1.ebuild,v 1.1 2012/10/07 18:04:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4.1.ebuild,v 1.2 2015/03/12 09:45:33 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib versionator
 
@@ -17,7 +17,7 @@ LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
-RDEPEND="dev-lang/tcl"
+RDEPEND="<dev-lang/tcl-8.6"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}${PV}"

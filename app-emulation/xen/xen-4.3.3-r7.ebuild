@@ -1,31 +1,30 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0-r2.ebuild,v 1.1 2015/03/10 02:13:36 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.3-r7.ebuild,v 1.1 2015/03/12 09:32:21 dlan Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-MY_PV=${PV/_/-}
-MY_P=${PN}-${PV/_/-}
-
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
-	EGIT_REPO_URI="git://xenbits.xen.org/${PN}.git"
-	live_eclass="git-2"
+	REPO="xen-unstable.hg"
+	EHG_REPO_URI="http://xenbits.xensource.com/${REPO}"
+	S="${WORKDIR}/${REPO}"
+	live_eclass="mercurial"
 else
-	KEYWORDS="~arm ~arm64 ~amd64"
-	UPSTREAM_VER=1
+	# Set to match entry in stable 4.3.1-r1, Bug 493944
+	KEYWORDS="~amd64 -x86"
+	UPSTREAM_VER=6
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
 		UPSTREAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P}-upstream-patches-${UPSTREAM_VER}.tar.xz"
 	[[ -n ${GENTOO_VER} ]] && \
 		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P}-gentoo-patches-${GENTOO_VER}.tar.xz"
-	SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV}/${MY_P}.tar.gz
+	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 		${UPSTREAM_PATCHSET_URI}
 		${GENTOO_PATCHSET_URI}"
-
 fi
 
 inherit mount-boot flag-o-matic python-any-r1 toolchain-funcs eutils ${live_eclass}
@@ -47,10 +46,7 @@ RESTRICT="test"
 # Approved by QA team in bug #144032
 QA_WX_LOAD="boot/xen-syms-${PV}"
 
-REQUIRED_USE="flask? ( xsm )
-	arm? ( debug )"
-
-S="${WORKDIR}/${MY_P}"
+REQUIRED_USE="flask? ( xsm )"
 
 pkg_setup() {
 	python-any-r1_pkg_setup
@@ -61,10 +57,6 @@ pkg_setup() {
 			export XEN_TARGET_ARCH="x86_32"
 		elif use amd64; then
 			export XEN_TARGET_ARCH="x86_64"
-		elif use arm; then
-			export XEN_TARGET_ARCH="arm32"
-		elif use arm64; then
-			export XEN_TARGET_ARCH="arm64"
 		else
 			die "Unsupported architecture!"
 		fi
@@ -94,11 +86,11 @@ src_prepare() {
 			epatch "${WORKDIR}"/patches-gentoo
 	fi
 
-	# Drop .config
-	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't	drop"
+	# Drop .config and fix gcc-4.6
+	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4.3-fix_dotconfig-gcc.patch
 
 	if use efi; then
-		epatch "${FILESDIR}"/${PN}-4.5-efi.patch
+		epatch "${FILESDIR}"/${PN}-4.2-efi.patch
 		export EFI_VENDOR="gentoo"
 		export EFI_MOUNTPOINT="boot"
 	fi
@@ -116,9 +108,6 @@ src_prepare() {
 			-i {} \; || die "failed to re-set custom-cflags"
 	fi
 
-	# remove -Werror for gcc-4.6's sake
-	find "${S}" -name 'Makefile*' -o -name '*.mk' -o -name 'common.make' | \
-		xargs sed -i 's/ *-Werror */ /'
 	# not strictly necessary to fix this
 	sed -i 's/, "-Werror"//' "${S}/tools/python/setup.py" || die "failed to re-set setup.py"
 
@@ -126,8 +115,6 @@ src_prepare() {
 }
 
 src_configure() {
-	use arm && myopt="${myopt} CONFIG_EARLY_PRINTK=sun7i"
-
 	use debug && myopt="${myopt} debug=y"
 
 	if use custom-cflags; then
