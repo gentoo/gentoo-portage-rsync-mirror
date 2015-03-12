@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install postinst prepare unpack
-DEPEND=kernel_linux? ( virtual/pkgconfig ) !<sys-fs/udev-172 virtual/pkgconfig >=dev-vcs/git-1.8.2.1
+DEPEND=kernel_linux? ( virtual/pkgconfig ) !<sys-fs/udev-172 virtual/pkgconfig virtual/pkgconfig >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Gentoo Network Interface Management Scripts
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/base/openrc/
 LICENSE=BSD-2
 RDEPEND=sys-apps/gentoo-functions
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=33b28265ee85d66fcfb6b42f02f3ddec
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	udev	da001465a2e939c93f7ae16947ce3438
+_md5_=e11224a0a996fd57b26c30426bca8f7b

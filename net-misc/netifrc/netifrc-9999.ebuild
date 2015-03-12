@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.11 2015/03/05 04:20:35 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.12 2015/03/12 12:24:41 heroxbd Exp $
 
 EAPI=5
 
-inherit eutils systemd
+inherit eutils systemd udev
 
 DESCRIPTION="Gentoo Network Interface Management Scripts"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
@@ -40,6 +40,7 @@ src_prepare() {
 
 src_compile() {
 	MAKE_ARGS="${MAKE_ARGS}
+		UDEVDIR=${EPREFIX}$(get_udevdir)
 		LIBEXECDIR=${EPREFIX}/lib/${PN} PF=${PF}"
 
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
