@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.38 2015/03/11 03:33:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.39 2015/03/12 22:17:30 floppym Exp $
+
+*openconnect-7.05 (12 Mar 2015)
+
+  12 Mar 2015; Mike Gilbert <floppym@gentoo.org> +openconnect-7.05.ebuild:
+  Version bump, bug 542874. Use readme.gentoo for postinst messaging. Add
+  message about openresolv, bug 539012.
 
 *openconnect-7.04 (11 Mar 2015)
 
