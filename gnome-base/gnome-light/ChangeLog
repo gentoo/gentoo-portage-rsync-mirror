@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.183 2015/02/23 11:55:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.184 2015/03/11 23:21:18 tranquility Exp $
+
+  11 Mar 2015; Ole Reifschneider <tranquility@gentoo.org>
+  gnome-light-3.14.0.ebuild:
+  Add missing dependency on gnome-backgrounds
 
   23 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnome-light-3.14.0.ebuild:
   Rekeyword

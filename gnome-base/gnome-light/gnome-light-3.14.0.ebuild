@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.14.0.ebuild,v 1.2 2015/02/23 11:55:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.14.0.ebuild,v 1.3 2015/03/11 23:21:18 tranquility Exp $
 
 EAPI="5"
 
@@ -34,6 +34,7 @@ RDEPEND="!gnome-base/gnome
 
 	>=x11-themes/adwaita-icon-theme-${PV}
 	>=x11-themes/gnome-themes-standard-${PV}
+	>=x11-themes/gnome-backgrounds-${PV}
 
 	>=x11-terms/gnome-terminal-${PV}
 "
