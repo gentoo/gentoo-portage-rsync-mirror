@@ -1,6 +1,12 @@
 # ChangeLog for app-office/impressive
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/ChangeLog,v 1.14 2014/12/13 11:24:57 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/ChangeLog,v 1.15 2015/03/12 08:50:49 jlec Exp $
+
+*impressive-0.11.0b (12 Mar 2015)
+
+  12 Mar 2015; Justin Lecher <jlec@gentoo.org> +impressive-0.11.0b.ebuild,
+  impressive-0.10.5.ebuild:
+  Version BUmp, #541710
 
   13 Dec 2014; Pacho Ramos <pacho@gentoo.org> -impressive-0.10.4.ebuild,
   impressive-0.10.5.ebuild:
