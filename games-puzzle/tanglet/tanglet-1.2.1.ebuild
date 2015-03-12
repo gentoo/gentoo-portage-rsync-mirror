@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/tanglet-1.2.1.ebuild,v 1.4 2013/03/02 21:20:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tanglet/tanglet-1.2.1.ebuild,v 1.5 2015/03/12 21:23:59 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils gnome2-utils qt4-r2 games
 
 DESCRIPTION="A single player word finding game based on Boggle"
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="sys-libs/zlib
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4"
+RDEPEND=${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-datadir.patch
@@ -34,7 +35,7 @@ src_configure() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die
+	emake INSTALL_ROOT="${D}" install
 	dodoc ChangeLog CREDITS
 	prepgamesdirs
 }
