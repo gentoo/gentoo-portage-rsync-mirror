@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.6.ebuild,v 1.1 2015/02/19 19:16:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.6-r1.ebuild,v 1.1 2015/03/12 19:41:26 jer Exp $
 
 EAPI=5
 inherit autotools eutils linux-info toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="
 	https://codeload.github.com/tgraf/${PN}/tar.gz/v${PV} -> ${P}.tar.gz
 "
 
-LICENSE="MIT"
+LICENSE="BSD-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
@@ -34,11 +34,13 @@ ERROR_NET_SCHED="
 "
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-docdir-examples.patch
 	epatch_user
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		CURSES_LIB="$( $(tc-getPKG_CONFIG) --libs ncurses)"
+		CURSES_LIB="$( $(tc-getPKG_CONFIG) --libs ncurses)" \
+		--docdir="/usr/share/doc/${PF}"
 }
