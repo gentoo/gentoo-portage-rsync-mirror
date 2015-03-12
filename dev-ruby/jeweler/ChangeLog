@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.30 2015/03/04 11:19:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.31 2015/03/12 06:59:00 graaff Exp $
+
+  12 Mar 2015; Hans de Graaff <graaff@gentoo.org> jeweler-2.0.1.ebuild:
+  Add missing ~x86 keyword.
 
   04 Mar 2015; Agostino Sarubbo <ago@gentoo.org> jeweler-2.0.1-r1.ebuild:
   Add ~x86, wrt bug #541768

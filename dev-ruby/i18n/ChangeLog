@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/i18n
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.70 2014/12/31 12:18:07 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/i18n/ChangeLog,v 1.71 2015/03/12 06:57:13 graaff Exp $
+
+  12 Mar 2015; Hans de Graaff <graaff@gentoo.org> -i18n-0.6.9.ebuild:
+  Cleanup.
 
   31 Dec 2014; Hans de Graaff <graaff@gentoo.org> i18n-0.6.9.ebuild,
   i18n-0.6.9-r1.ebuild, i18n-0.6.11.ebuild:
