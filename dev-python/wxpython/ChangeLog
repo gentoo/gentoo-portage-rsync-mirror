@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.209 2014/12/31 17:38:10 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.210 2015/03/12 13:23:56 heroxbd Exp $
+
+  12 Mar 2015; Benda Xu <heroxbd@gentoo.org> wxpython-3.0.2.0.ebuild:
+  Upstream wiki is now http://wiki.wxpython.org/MultiVersionInstalls
 
 *wxpython-3.0.2.0 (31 Dec 2014)
 
