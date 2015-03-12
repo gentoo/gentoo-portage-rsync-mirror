@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/rasmol
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.39 2012/12/20 14:54:13 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.40 2015/03/12 10:12:18 jlec Exp $
+
+*rasmol-2.7.5.2-r1 (12 Mar 2015)
+
+  12 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/rasmol-2.7.5.2-format-security.patch,
+  +files/rasmol-2.7.5.2-longlong.patch, +rasmol-2.7.5.2-r1.ebuild:
+  Fix for format-security, #543032
 
   20 Dec 2012; Justin Lecher <jlec@gentoo.org> -rasmol-2.7.5.1.ebuild,
   metadata.xml:

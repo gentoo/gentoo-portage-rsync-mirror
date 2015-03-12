@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/alien
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.53 2014/06/09 07:25:08 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.54 2015/03/12 10:17:50 lordvan Exp $
+
+*alien-8.93 (12 Mar 2015)
+
+  12 Mar 2015; Thomas Raschbacher <lordvan@gentoo.org> -alien-8.88.ebuild,
+  +alien-8.93.ebuild, metadata.xml:
+  version bump, removed old version and added monsierp to maintainers
 
 *alien-8.90 (09 Jun 2014)
 

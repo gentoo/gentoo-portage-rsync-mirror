@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.6.ebuild,v 1.1 2015/03/09 07:48:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.6.ebuild,v 1.2 2015/03/12 10:21:21 aballier Exp $
 
 EAPI="5"
 
@@ -289,6 +289,8 @@ src_prepare() {
 	if [[ "${PV%_p*}" != "${PV}" ]] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
+	# https://bugs.gentoo.org/show_bug.cgi?id=543000
+	epatch "${FILESDIR}/noneon.patch"
 	epatch_user
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spice
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.63 2014/09/23 07:18:23 dev-zero Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.64 2015/03/12 10:05:49 ago Exp $
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> spice-0.12.5-r1.ebuild:
+  Stable for amd64, wrt bug #542722
 
   23 Sep 2014; Tiziano Müller <dev-zero@gentoo.org> spice-0.12.5-r1.ebuild:
   opus is an automagic dep for client and server, depend on it unconditionally

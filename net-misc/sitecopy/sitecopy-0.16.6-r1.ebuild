@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.6-r1.ebuild,v 1.1 2015/01/31 00:21:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.6-r1.ebuild,v 1.2 2015/03/12 10:07:41 ago Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -13,7 +13,7 @@ HOMEPAGE=" http://www.manyfish.co.uk/sitecopy/"
 # http://ftp.debian.org/debian/pool/main/s/sitecopy/
 # The sitecopy_0.16.6-5.debian.tar.gz contains their build scripts and patches.
 # This SiteCopy now builds using the original sources.
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 LICENSE="GPL-2"
 SLOT="0"

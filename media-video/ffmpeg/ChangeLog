@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.843 2015/03/09 07:48:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.844 2015/03/12 10:21:21 aballier Exp $
+
+  12 Mar 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.6.ebuild,
+  +files/noneon.patch:
+  backport upstream fix to fix build on arm without neon, bug #543000
 
 *ffmpeg-2.6 (09 Mar 2015)
 

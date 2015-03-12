@@ -3,10 +3,10 @@ DEPEND=app-arch/unzip >=sys-apps/sed-4
 DESCRIPTION=D&D character generator
 EAPI=5
 HOMEPAGE=http://pcgen.sourceforge.net/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=LGPL-2.1 OGL-1.0a
 RDEPEND=>=virtual/jre-1.6 games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/pcgen/pcgen-6.04.01-full.zip
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=6101cd30cebcf81e6e89a3cb32b104ff
+_md5_=0cb21e3dd881a3a5f3f014683e99ef31

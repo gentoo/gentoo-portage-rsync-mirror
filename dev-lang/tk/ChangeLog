@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.210 2015/01/24 14:29:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.211 2015/03/12 10:26:40 ago Exp $
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tk-8.5.17.ebuild:
+  Stable for amd64, wrt bug #543022
 
   24 Jan 2015; Justin Lecher <jlec@gentoo.org> tk-8.6.3.ebuild:
   Add minimal dep versions for multilib support, #537400

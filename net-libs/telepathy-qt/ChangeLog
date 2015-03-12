@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/telepathy-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.33 2015/03/04 13:09:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.34 2015/03/12 10:07:06 ago Exp $
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> telepathy-qt-0.9.5.ebuild:
+  Stable for amd64, wrt bug #542094
 
   04 Mar 2015; Michael Palimaka <kensington@gentoo.org>
   telepathy-qt-0.9.5.ebuild:

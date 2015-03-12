@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.61 2015/03/09 13:35:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.62 2015/03/12 10:07:56 ago Exp $
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ccp4-libs-6.1.3-r15.ebuild:
+  Stable for amd64, wrt bug #542696
 
   09 Mar 2015; Justin Lecher <jlec@gentoo.org> -ccp4-libs-6.1.3-r12.ebuild,
   -ccp4-libs-6.1.3-r13.ebuild, -ccp4-libs-6.1.3-r14.ebuild,

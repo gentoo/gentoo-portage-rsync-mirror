@@ -4,10 +4,10 @@ DESCRIPTION=Maintain remote web sites with ease
 EAPI=5
 HOMEPAGE=http://www.manyfish.co.uk/sitecopy/
 IUSE=expat nls rsh ssl webdav xml zlib
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=rsh? ( net-misc/netkit-rsh ) >=net-libs/neon-0.24.6[zlib?,ssl?,expat?] <=net-libs/neon-0.30.9999[zlib?,ssl?,expat?] xml? ( >=net-libs/neon-0.24.6[-expat] )
 SLOT=0
 SRC_URI=http://www.manyfish.co.uk/sitecopy/sitecopy-0.16.6.tar.gz http://dev.gentoo.org/~idella4/sitecopy-0.16.6-04-manpages-addition-fixes.patch
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=18b48d6beb27260d85cc81090b7701ea
+_md5_=7a2963066fc9c2b9cd4dd141b783a90a

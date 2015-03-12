@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libnw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/ChangeLog,v 1.13 2015/02/07 04:05:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/ChangeLog,v 1.14 2015/03/12 10:06:24 ago Exp $
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libnw-1.30.02.ebuild:
+  Stable for amd64, wrt bug #542740
 
   07 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> libnw-1.30.02.ebuild:
   EAPI=5

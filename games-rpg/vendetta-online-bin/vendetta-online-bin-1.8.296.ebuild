@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/vendetta-online-bin-1.8.296.ebuild,v 1.1 2014/07/04 20:13:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/vendetta-online-bin-1.8.296.ebuild,v 1.2 2015/03/12 10:07:01 ago Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -18,7 +18,7 @@ SRC_URI="amd64? (
 
 LICENSE="guild"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE=""
 RESTRICT="mirror strip"
 

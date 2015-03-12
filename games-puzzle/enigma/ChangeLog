@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.57 2015/02/08 18:52:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.58 2015/03/12 10:07:11 ago Exp $
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> enigma-1.21.ebuild:
+  Stable for amd64, wrt bug #542934
 
   08 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> enigma-1.21.ebuild:
   drop slot dep since upstream supports both now (bug #424341)

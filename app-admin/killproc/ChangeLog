@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/killproc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.34 2015/03/11 06:34:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.35 2015/03/12 10:06:29 ago Exp $
+
+  12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> killproc-2.13-r1.ebuild:
+  Stable for amd64, wrt bug #542870
 
   11 Mar 2015; Jeroen Roovers <jer@gentoo.org> killproc-2.13-r1.ebuild:
   Update HOMEPAGE (bug #541376).
