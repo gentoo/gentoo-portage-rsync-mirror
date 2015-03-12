@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0-r4.ebuild,v 1.1 2015/03/11 18:18:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0-r4.ebuild,v 1.2 2015/03/12 07:52:10 hwoarang Exp $
 
 EAPI="5"
 
@@ -108,9 +108,11 @@ src_prepare() {
 src_configure() {
 	append-flags -fno-strict-aliasing
 
-	#541932
-	python_setup "python3*"
-	export PKG_CONFIG_PATH="${T}/${EPYTHON}/pkgconfig:${PKG_CONFIG_PATH}"
+	if use python; then
+		#541932
+		python_setup "python3*"
+		export PKG_CONFIG_PATH="${T}/${EPYTHON}/pkgconfig:${PKG_CONFIG_PATH}"
+	fi
 
 	# I am not sure about the --with-rootfs-path
 	# /var/lib/lxc is probably more appropriate than
