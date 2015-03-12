@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/itcl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.61 2014/12/21 15:49:44 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.62 2015/03/12 09:21:36 jlec Exp $
+
+*itcl-4.0.3 (12 Mar 2015)
+
+  12 Mar 2015; Justin Lecher <jlec@gentoo.org> +itcl-4.0.3.ebuild:
+  Version Bump
 
 *itcl-4.0.2 (21 Dec 2014)
 
