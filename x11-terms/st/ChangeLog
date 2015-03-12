@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/st
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.20 2014/10/09 09:13:35 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.21 2015/03/12 14:16:15 xmw Exp $
+
+  12 Mar 2015; Michael Weber <xmw@gentoo.org> -st-0.4.1-r1.ebuild,
+  -st-0.4.1.ebuild, st-0.5.ebuild, st-9999.ebuild:
+  Drop old versions, add epatch_user
 
   09 Oct 2014; Agostino Sarubbo <ago@gentoo.org> st-0.5.ebuild:
   Stable for amd64, wrt bug #523954
