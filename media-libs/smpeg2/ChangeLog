@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/smpeg2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/ChangeLog,v 1.7 2015/02/22 07:51:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/ChangeLog,v 1.8 2015/03/12 17:43:29 mr_bones_ Exp $
+
+  12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -smpeg2-2.0.0-r2.ebuild:
+  old
 
 *smpeg2-2.0.0-r3 (22 Feb 2015)
 
