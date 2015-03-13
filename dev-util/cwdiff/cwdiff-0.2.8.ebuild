@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/cwdiff-0.2.7.ebuild,v 1.1 2015/03/09 22:51:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/cwdiff-0.2.8.ebuild,v 1.1 2015/03/13 20:12:37 ottxor Exp $
 
 EAPI=5
 
 DESCRIPTION="A script that wraps wdiff to support directories and colorize the output"
-HOMEPAGE="http://code.google.com/p/cj-overlay/source/browse/cwdiff?repo=evergreens"
-SRC_URI="http://downloads.cj-overlay.googlecode.com/hg/${P}.tar.gz"
+HOMEPAGE="https://github.com/junghans/cwdiff"
+SRC_URI="https://github.com/junghans/cwdiff/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,4 +29,5 @@ src_install () {
 		insinto /etc/mercurial/hgrc.d
 		doins hgrc.d/"${PN}".rc
 	fi
+	dodoc README.md
 }

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=virtual/perl-Carp dev-perl/Module-Runtime >=dev-perl/Moose-2.30.0 dev-perl/namespace-autoclean dev-perl/namespace-clean virtual/perl-ExtUtils-MakeMaker >=dev-perl/Module-Build-Tiny-0.37.0 test? ( >=dev-perl/CPAN-Meta-Check-0.7.0 virtual/perl-CPAN-Meta-Requirements virtual/perl-Data-Dumper virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec dev-perl/MooseX-Role-WithOverloading virtual/perl-Storable dev-perl/Test-Fatal >=virtual/perl-Test-Simple-0.960.0 dev-perl/Test-Requires ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Roles with composition parameters
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/MooseX-Role-Parameterized/
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Artistic GPL-1+ )
+RDEPEND=virtual/perl-Carp dev-perl/Module-Runtime >=dev-perl/Moose-2.30.0 dev-perl/namespace-autoclean dev-perl/namespace-clean dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/MooseX-Role-Parameterized-1.08.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=7956a31605af4c00f89e882fb3833f6c

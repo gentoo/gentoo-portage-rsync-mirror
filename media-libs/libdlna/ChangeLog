@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdlna
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.12 2015/02/16 19:03:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/ChangeLog,v 1.13 2015/03/13 20:08:38 hwoarang Exp $
+
+  13 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  +files/libdlna-0.2.4-ffmpeg.patch, libdlna-0.2.4.ebuild:
+  Adapt to the latest ffmpeg API. Bug #540150
 
   16 Feb 2015; Jeroen Roovers <jer@gentoo.org> libdlna-0.2.4.ebuild,
   +files/libdlna-0.2.4-libav9.patch, -files/libdlna-libav9.patch:
