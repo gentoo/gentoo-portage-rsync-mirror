@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsri
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.21 2015/02/25 15:45:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.22 2015/03/13 19:14:36 jer Exp $
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org> -xsri-2.1.0-r2.ebuild:
+  Old.
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> xsri-2.1.0-r3.ebuild:
   Stable for x86, wrt bug #538688
