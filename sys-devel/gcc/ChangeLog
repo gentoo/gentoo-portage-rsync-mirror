@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1050 2015/02/28 23:14:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1051 2015/03/13 19:59:30 vapier Exp $
+
+  13 Mar 2015; Mike Frysinger <vapier@gentoo.org> -gcc-4.5.1-r1.ebuild,
+  -gcc-4.5.2.ebuild, -gcc-4.5.3-r2.ebuild, -gcc-4.6.0.ebuild,
+  -gcc-4.6.1-r1.ebuild, -gcc-4.6.2.ebuild, -gcc-4.6.3.ebuild:
+  Move old ebuilds to toolchain overlay.
 
   28 Feb 2015;  <tgall@gentoo.org> gcc-4.9.2.ebuild:
   add ~arm64
