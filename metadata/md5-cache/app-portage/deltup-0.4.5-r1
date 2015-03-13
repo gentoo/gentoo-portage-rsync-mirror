@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=dev-libs/openssl sys-libs/zlib >=app-arch/bzip2-1.0.0
+DEPEND=dev-libs/openssl:0 sys-libs/zlib app-arch/bzip2
 DESCRIPTION=Delta-Update - patch system for updating source-archives
 EAPI=5
 HOMEPAGE=http://deltup.sourceforge.net
 KEYWORDS=~alpha ~amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=dev-libs/openssl sys-libs/zlib >=app-arch/bzip2-1.0.0 || ( dev-util/bdelta =dev-util/xdelta-1* ) >=app-arch/bzip2-1.0.4
+RDEPEND=dev-libs/openssl:0 sys-libs/zlib app-arch/bzip2 || ( dev-util/bdelta =dev-util/xdelta-1* )
 SLOT=0
 SRC_URI=http://deltup.org/e107_files/downloads//deltup-0.4.5.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=3710bf46057582375cb414541a01000a
+_md5_=28781a3c7225e9689ac0a7bbeb21efa8

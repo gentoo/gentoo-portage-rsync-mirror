@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/deltup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.30 2014/08/10 18:20:53 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.31 2015/03/12 23:03:03 dlan Exp $
+
+*deltup-0.4.6 (12 Mar 2015)
+
+  12 Mar 2015; Yixun Lan <dlan@gentoo.org> -deltup-0.4.5.ebuild,
+  deltup-0.4.5-r1.ebuild, +deltup-0.4.6.ebuild,
+  -files/deltup-0.4.4-asneeded.patch, -files/deltup-0.4.4-gcc44.patch,
+  +files/deltup-0.4.6-fix-prefix.patch,
+  -files/bzip2-1.0.2-makefile-CFLAGS.patch,
+  -files/bzip2-1.0.3-makefile-CFLAGS.patch, -files/gcc-4.3-compile.fix,
+  metadata.xml:
+  version bump, drop old, add new proxy maintainer, thanks Ameretat Reith
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> deltup-0.4.5-r1.ebuild,
   deltup-0.4.5.ebuild:

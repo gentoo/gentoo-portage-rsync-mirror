@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.5-r1.ebuild,v 1.3 2014/08/10 18:20:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.5-r1.ebuild,v 1.4 2015/03/12 23:03:03 dlan Exp $
 
 EAPI=5
 
@@ -15,12 +15,11 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="dev-libs/openssl
+DEPEND="dev-libs/openssl:0
 	sys-libs/zlib
-	>=app-arch/bzip2-1.0.0"
+	app-arch/bzip2"
 RDEPEND="${DEPEND}
-	|| ( dev-util/bdelta =dev-util/xdelta-1* )
-	>=app-arch/bzip2-1.0.4"
+	|| ( dev-util/bdelta =dev-util/xdelta-1* )"
 
 src_prepare () {
 	epatch "${FILESDIR}"/${PN}-0.4.4-gcc47.patch
