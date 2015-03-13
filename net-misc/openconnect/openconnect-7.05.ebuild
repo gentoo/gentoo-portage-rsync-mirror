@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-7.05.ebuild,v 1.1 2015/03/12 22:17:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-7.05.ebuild,v 1.2 2015/03/13 01:43:25 floppym Exp $
 
 EAPI="5"
 
@@ -153,6 +153,6 @@ pkg_postinst() {
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
 		elog
 		elog "You may want to consider installing the following optional packages."
-		optfeature "resolvconf support" net-misc/openresolv
+		optfeature "resolvconf support" net-dns/openresolv
 	fi
 }
