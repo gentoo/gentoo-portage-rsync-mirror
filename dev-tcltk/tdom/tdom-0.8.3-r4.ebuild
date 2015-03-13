@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.3-r4.ebuild,v 1.1 2013/06/15 16:12:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tdom/tdom-0.8.3-r4.ebuild,v 1.2 2015/03/13 11:57:17 jer Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://github/tDOM/${PN}/${MY_P}.tgz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~hppa ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs threads"
 
 DEPEND="

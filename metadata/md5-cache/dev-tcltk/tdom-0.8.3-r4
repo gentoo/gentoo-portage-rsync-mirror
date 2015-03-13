@@ -4,10 +4,10 @@ DESCRIPTION=A XML/DOM/XPath/XSLT Implementation for Tcl
 EAPI=5
 HOMEPAGE=http://tdom.github.com/
 IUSE=static-libs threads
-KEYWORDS=amd64 ~ppc x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~hppa ~ppc x86 ~amd64-linux ~x86-linux
 LICENSE=MPL-1.1
 RDEPEND=dev-lang/tcl:= dev-libs/expat
 SLOT=0
 SRC_URI=mirror://github/tDOM/tdom/tDOM-0.8.3.tgz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=b57a3debd01e25f49e47ee2709b59c40
+_md5_=8067041ef6bf111236f6151142cc4889

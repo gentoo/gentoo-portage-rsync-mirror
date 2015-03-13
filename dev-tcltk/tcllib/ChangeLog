@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.51 2015/03/08 14:01:54 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.52 2015/03/13 11:57:45 jer Exp $
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org> tcllib-1.16.ebuild:
+  Marked ~hppa (bug #541980).
 
   08 Mar 2015; Sergey Popov <pinkbyte@gentoo.org> tcllib-1.15-r2.ebuild:
   Stable on s390, bug #541912
