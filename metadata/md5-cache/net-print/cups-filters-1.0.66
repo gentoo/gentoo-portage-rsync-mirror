@@ -4,10 +4,10 @@ DESCRIPTION=Cups PDF filters
 EAPI=5
 HOMEPAGE=http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat
 IUSE=dbus +foomatic jpeg perl png static-libs tiff zeroconf
-KEYWORDS=~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~m68k-mint
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86 ~amd64-fbsd ~m68k-mint
 LICENSE=MIT GPL-2
 RDEPEND=>=app-text/ghostscript-gpl-9.09 app-text/poppler:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)] >=app-text/qpdf-3.0.2:= media-libs/fontconfig media-libs/freetype:2 media-libs/lcms:2 >=net-print/cups-1.7.3 !<=net-print/cups-1.5.9999 sys-devel/bc sys-libs/zlib dbus? ( sys-apps/dbus ) foomatic? ( !net-print/foomatic-filters ) jpeg? ( virtual/jpeg:0 ) perl? ( dev-lang/perl:= ) png? ( media-libs/libpng:0= ) tiff? ( media-libs/tiff:0 ) zeroconf? ( net-dns/avahi[dbus] )
 SLOT=0
 SRC_URI=http://www.openprinting.org/download/cups-filters/cups-filters-1.0.66.tar.xz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=ea046a2e54995c8d78e62c53f95504ba
+_md5_=6cc554e8ae0128ef63e4688ce32f6879
