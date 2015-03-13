@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ttfunk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.19 2014/11/10 15:59:07 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.20 2015/03/13 06:31:51 graaff Exp $
+
+  13 Mar 2015; Hans de Graaff <graaff@gentoo.org> ttfunk-1.4.0.ebuild:
+  Version bump.
 
   10 Nov 2014; Manuel Rüger <mrueg@gentoo.org> ttfunk-1.0.3-r1.ebuild,
   ttfunk-1.1.1.ebuild, ttfunk-1.2.0.ebuild, ttfunk-1.2.1.ebuild,

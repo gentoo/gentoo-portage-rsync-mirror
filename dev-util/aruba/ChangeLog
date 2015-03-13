@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.49 2015/03/08 14:46:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.50 2015/03/13 06:53:10 jer Exp $
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org> aruba-0.5.4-r1.ebuild:
+  Stable for HPPA (bug #542574).
 
   08 Mar 2015; Hans de Graaff <graaff@gentoo.org> -aruba-0.5.4.ebuild,
   -aruba-0.6.0.ebuild:

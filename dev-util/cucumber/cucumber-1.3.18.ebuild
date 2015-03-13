@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.18.ebuild,v 1.1 2014/12/28 08:19:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/cucumber-1.3.18.ebuild,v 1.2 2015/03/13 06:47:40 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -45,7 +45,7 @@ ruby_add_rdepend "
 all_ruby_prepare() {
 	# Remove development dependencies from the gemspec that we don't
 	# need or can't satisfy.
-	sed -i -e '/\(spork\|simplecov\|bcat\|kramdown\|yard\|capybara\|rack-test\|ramaze\|sinatra\|webrat\)/d' ${RUBY_FAKEGEM_GEMSPEC} || die
+	sed -i -e '/\(spork\|simplecov\|bcat\|kramdown\|yard\|capybara\|rack-test\|ramaze\|sinatra\|webrat\|mime-types\|rubyzip\)/d' ${RUBY_FAKEGEM_GEMSPEC} || die
 
 	# Fix too-strict test dependencies
 	sed -e '/nokogiri/ s/~> 1.5.2/>= 1.5.2/' \
@@ -54,6 +54,7 @@ all_ruby_prepare() {
 
 	# Make sure spork is run in the right interpreter
 	sed -i -e 's/#{Spork::BINARY}/-S #{Spork::BINARY}/' features/support/env.rb || die
+	rm features/drb_server_integration.feature || die
 
 	# Avoid json, they most likely fail due to multi_json weirdness.
 	rm features/json_formatter.feature || die
