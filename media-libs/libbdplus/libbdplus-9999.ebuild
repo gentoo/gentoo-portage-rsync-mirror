@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbdplus/libbdplus-9999.ebuild,v 1.2 2015/01/29 01:23:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbdplus/libbdplus-9999.ebuild,v 1.3 2015/03/13 15:20:12 yngwin Exp $
 
 EAPI=5
-
 inherit autotools-multilib
 
 if [[ ${PV} == 9999 ]] ; then
@@ -21,9 +20,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="aacs static-libs"
 
-RDEPEND="dev-libs/libgcrypt:0=
-	dev-libs/libgpg-error
-	aacs? ( >=media-libs/libaacs-0.7.0 )"
+RDEPEND="dev-libs/libgcrypt:0=[${MULTILIB_USEDEP}]
+	dev-libs/libgpg-error[${MULTILIB_USEDEP}]
+	aacs? ( >=media-libs/libaacs-0.7.0[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}"
 
 DOCS="ChangeLog README.txt"

@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.2.0.ebuild,v 1.9 2015/03/08 23:51:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-2.2.0.ebuild,v 1.10 2015/03/13 15:10:24 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 PYTHON_REQ_USE='readline,sqlite'
 
 inherit distutils-r1 virtualx
@@ -23,14 +23,14 @@ PY2_USEDEP=$(python_gen_usedep python2_7)
 CDEPEND="
 	dev-python/decorator[${PYTHON_USEDEP}]
 	dev-python/pexpect[${PYTHON_USEDEP}]
+	dev-python/pyparsing[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/simplegeneric[${PYTHON_USEDEP}]
-	dev-python/pyparsing[${PYTHON_USEDEP}]
 	matplotlib? ( dev-python/matplotlib[${PYTHON_USEDEP}] )
 	mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
 	octave? ( dev-python/oct2py[${PYTHON_USEDEP}] )
 	smp? ( >=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}] )
-	wxwidgets? ( $(python_gen_cond_dep 'dev-python/wxpython[${PYTHON_USEDEP}]' python2_7) )"
+	wxwidgets? ( $(python_gen_cond_dep 'dev-python/wxpython:*[${PYTHON_USEDEP}]' python2_7) )"
 RDEPEND="${CDEPEND}
 	notebook? (
 		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
@@ -45,7 +45,11 @@ RDEPEND="${CDEPEND}
 		dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/jinja[${PYTHON_USEDEP}]
 	)
-	qt4? ( || ( dev-python/PyQt4[${PYTHON_USEDEP}] dev-python/pyside[${PYTHON_USEDEP}] )
+	qt4? (
+		|| (
+			dev-python/PyQt4[${PYTHON_USEDEP}]
+			dev-python/pyside[${PYTHON_USEDEP}]
+		)
 		dev-python/pygments[${PYTHON_USEDEP}]
 		>=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
@@ -53,19 +57,22 @@ DEPEND="${CDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/mock[${PY2_USEDEP}]
 	)
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/numpydoc[${PYTHON_USEDEP}]
-		dev-python/nose[${PYTHON_USEDEP}]
+	doc? (
 		dev-python/cython[${PYTHON_USEDEP}]
-		dev-python/rpy[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/fabric[${PYTHON_USEDEP}]' python2_7)
+		dev-python/matplotlib[${PYTHON_USEDEP}]
+		dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/numpydoc[${PYTHON_USEDEP}]
+		dev-python/pymongo[${PYTHON_USEDEP}]
+		dev-python/rpy[${PYTHON_USEDEP}]
+		dev-python/sphinx[${PYTHON_USEDEP}]
 		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)"
 
-REQUIRED_USE="doc? ( matplotlib mongodb octave )"
-
-PATCHES=( ${FILESDIR}/2.1.0-substitute-files.patch
-	${FILESDIR}/2.1.0-disable-tests.patch )
+PATCHES=(
+	"${FILESDIR}"/2.1.0-substitute-files.patch
+	"${FILESDIR}"/2.1.0-disable-tests.patch
+	)
 
 DISTUTILS_IN_SOURCE_BUILD=1
 

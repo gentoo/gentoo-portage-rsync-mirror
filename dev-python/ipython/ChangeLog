@@ -1,6 +1,21 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.164 2015/03/08 23:51:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.165 2015/03/13 15:10:24 jlec Exp $
+
+*ipython-2.4.1 (13 Mar 2015)
+
+  13 Mar 2015; Justin Lecher <jlec@gentoo.org> +ipython-2.4.1.ebuild,
+  -files/62ipython-gentoo.el, -files/ipython-0.12-globalpath.patch,
+  -files/ipython-0.13-umlaut.patch, -files/ipython-0.9.1-globalpath.patch,
+  -files/ipython-1.0.0-setuptools.patch, -ipython-0.10.2.ebuild,
+  -ipython-1.0.0.ebuild, -ipython-1.2.1.ebuild, -ipython-2.4.0.ebuild,
+  ipython-2.2.0.ebuild, ipython-3.0.0.ebuild:
+  Version Bump, bug #539578; fix SLOT operators loosen USE constraints for
+  USE=doc, bug #542426; don't build API docs for iypthon-3 due to missing
+  buildtime deps, bug #541832; drop old fixes CVE-2014-3429 bug #517222 and
+  obsolets bug #486880, bug #489372, bug #489384, bug #428170, bug #407823, bug
+  #407715, bug #490166, bug #456960, bug #483580, bug #530324, bug #536386 and
+  bug #481726
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> ipython-2.2.0.ebuild:
   x86 stable, bug 540290

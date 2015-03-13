@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.1 2015/02/28 12:53:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.2 2015/03/13 15:10:24 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ CDEPEND="
 	mongodb? ( dev-python/pymongo[${PYTHON_USEDEP}] )
 	octave? ( dev-python/oct2py[${PYTHON_USEDEP}] )
 	smp? ( >=dev-python/pyzmq-13[${PYTHON_USEDEP}] )
-	wxwidgets? ( $(python_gen_cond_dep 'dev-python/wxpython[${PYTHON_USEDEP}]' python2_7) )"
+	wxwidgets? ( $(python_gen_cond_dep 'dev-python/wxpython:*[${PYTHON_USEDEP}]' python2_7) )"
 RDEPEND="${CDEPEND}
 	notebook? (
 		dev-libs/mathjax
@@ -50,7 +50,10 @@ RDEPEND="${CDEPEND}
 		dev-python/sphinx[${PYTHON_USEDEP}]
 	)
 	qt4? (
-		|| ( dev-python/PyQt4[${PYTHON_USEDEP}] dev-python/pyside[${PYTHON_USEDEP}] )
+		|| (
+			dev-python/PyQt4[${PYTHON_USEDEP}]
+			dev-python/pyside[${PYTHON_USEDEP}]
+		)
 		dev-python/pygments[${PYTHON_USEDEP}]
 		>=dev-python/pyzmq-13[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
@@ -65,14 +68,15 @@ DEPEND="${CDEPEND}
 	doc? (
 		dev-python/cython[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/fabric[${PYTHON_USEDEP}]' python2_7)
+		dev-python/jsonschema[${PYTHON_USEDEP}]
+		dev-python/matplotlib[${PYTHON_USEDEP}]
 		>=dev-python/nose-0.10.1[${PYTHON_USEDEP}]
 		dev-python/numpydoc[${PYTHON_USEDEP}]
+		dev-python/pymongo[${PYTHON_USEDEP}]
 		dev-python/rpy[${PYTHON_USEDEP}]
 		>=dev-python/sphinx-1.1[${PYTHON_USEDEP}]
 		>=www-servers/tornado-4.0[${PYTHON_USEDEP}]
 	)"
-
-REQUIRED_USE="doc? ( matplotlib mongodb octave )"
 
 PATCHES=(
 	"${FILESDIR}"/2.1.0-substitute-files.patch
@@ -93,7 +97,7 @@ python_prepare_all() {
 }
 
 python_compile_all() {
-	use doc && emake -C docs html
+	use doc && emake -C docs html_noapi
 }
 
 src_test() {
