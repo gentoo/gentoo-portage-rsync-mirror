@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.46.ebuild,v 1.4 2014/04/16 17:26:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/datutil/datutil-2.46.ebuild,v 1.5 2015/03/13 03:37:08 mr_bones_ Exp $
 
+EAPI=5
 inherit toolchain-funcs
 
 DL_PV=2.36
@@ -38,6 +39,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin datutil || die "cannot install datutil"
+	dobin datutil
 	dodoc readme.txt whatsnew.txt
 }
