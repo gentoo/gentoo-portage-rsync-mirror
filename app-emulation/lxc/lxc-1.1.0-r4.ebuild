@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0-r4.ebuild,v 1.2 2015/03/12 07:52:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.0-r4.ebuild,v 1.3 2015/03/13 08:54:55 dlan Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ DESCRIPTION="LinuX Containers userspace utilities"
 HOMEPAGE="https://linuxcontainers.org/"
 SRC_URI="https://github.com/lxc/lxc/archive/${MY_P}.tar.gz"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 
 LICENSE="LGPL-3"
 SLOT="0"

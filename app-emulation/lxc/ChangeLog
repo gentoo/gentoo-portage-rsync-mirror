@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.67 2015/03/12 07:52:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.68 2015/03/13 08:54:55 dlan Exp $
+
+  13 Mar 2015; Yixun Lan <dlan@gentoo.org> lxc-1.1.0-r4.ebuild:
+  add ~arm keyword, test on cortex-a9 board
 
   12 Mar 2015; Markos Chandras <hwoarang@gentoo.org> lxc-1.1.0-r4.ebuild:
   Hide python specific code behind USE=python

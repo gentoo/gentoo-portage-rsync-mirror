@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.5-r1.ebuild,v 1.1 2015/03/11 22:38:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.5-r1.ebuild,v 1.2 2015/03/13 08:52:48 dlan Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.openvz.org/criu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE="setproctitle"
 
 RDEPEND="<dev-libs/protobuf-c-1.1.0

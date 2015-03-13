@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.2.ebuild,v 1.1 2014/09/15 18:31:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.4.ebuild,v 1.1 2015/03/13 08:31:25 jlec Exp $
 
 EAPI=5
 
-inherit autotools eutils multilib prefix toolchain-funcs versionator virtualx
+inherit autotools eutils multilib multilib-minimal prefix toolchain-funcs versionator virtualx
 
 MY_P="${PN}${PV/_beta/b}"
 
@@ -19,15 +19,15 @@ IUSE="debug +threads truetype aqua xscreensaver"
 
 RDEPEND="
 	!aqua? (
-		media-libs/fontconfig
-		x11-libs/libX11
-		x11-libs/libXt
-		truetype? ( x11-libs/libXft )
-		xscreensaver? ( x11-libs/libXScrnSaver )
+		>=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}]
+		>=x11-libs/libX11-1.6.2[${MULTILIB_USEDEP}]
+		>=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}]
+		truetype? ( >=x11-libs/libXft-2.3.1-r1[${MULTILIB_USEDEP}] )
+		xscreensaver? ( >=x11-libs/libXScrnSaver-1.2.2-r1[${MULTILIB_USEDEP}] )
 	)
-	~dev-lang/tcl-${PV}"
+	~dev-lang/tcl-${PV}[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
-	!aqua? ( x11-proto/xproto )"
+	!aqua? ( >=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )"
 
 # Not bumped to 8.6
 #RESTRICT=test
@@ -65,10 +65,14 @@ src_prepare() {
 		-e 's:-O[2s]\?::g' \
 		-i tcl.m4 || die
 
+	mv configure.{in,ac} || die
+
 	eautoconf
+
+	multilib_copy_sources
 }
 
-src_configure() {
+multilib_src_configure() {
 	local mylibdir=$(get_libdir)
 
 	econf \
@@ -80,11 +84,11 @@ src_configure() {
 		$(use_enable debug symbols)
 }
 
-src_test() {
+multilib_src_test() {
 	Xemake test
 }
 
-src_install() {
+multilib_src_install() {
 	#short version number
 	local v1=$(get_version_component_range 1-2)
 	local mylibdir=$(get_libdir)
@@ -124,7 +128,8 @@ src_install() {
 	dosym libtk${v1}$(get_libname) /usr/${mylibdir}/libtk$(get_libname)
 	dosym libtkstub${v1}.a /usr/${mylibdir}/libtkstub.a
 
-	dosym wish${v1} /usr/bin/wish
-
-	dodoc "${SPARENT}"/{ChangeLog*,README,changes}
+	if multilib_is_native_abi; then
+		dosym wish${v1} /usr/bin/wish
+		dodoc "${SPARENT}"/{ChangeLog*,README,changes}
+	fi
 }

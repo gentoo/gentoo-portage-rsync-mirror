@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/criu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.15 2015/03/11 22:39:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.16 2015/03/13 08:52:48 dlan Exp $
+
+  13 Mar 2015; Yixun Lan <dlan@gentoo.org> criu-1.5-r1.ebuild:
+  add ~arm keyword
 
   11 Mar 2015; Tim Harder <radhermit@gentoo.org> -criu-1.2-r1.ebuild,
   -criu-1.3.1.ebuild, -criu-1.5.ebuild, -files/criu-0.6-flags.patch,
