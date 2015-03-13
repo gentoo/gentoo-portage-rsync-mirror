@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.2.3-r1.ebuild,v 1.3 2011/06/26 09:00:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.2.3-r1.ebuild,v 1.4 2015/03/13 11:04:23 jlec Exp $
 
 EAPI=3
 

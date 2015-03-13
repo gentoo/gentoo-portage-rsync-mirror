@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/autodock
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/ChangeLog,v 1.9 2011/06/26 09:00:41 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/ChangeLog,v 1.10 2015/03/13 11:04:23 jlec Exp $
+
+*autodock-4.2.6 (13 Mar 2015)
+
+  13 Mar 2015; Justin Lecher <jlec@gentoo.org> +autodock-4.2.6.ebuild,
+  +files/autodock-4.2.6-buildsystem.patch, autodock-4.2.3-r1.ebuild,
+  metadata.xml:
+  Version Bump; Move to new python eclasses
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> autodock-4.2.3-r1.ebuild:
   Straight out QA issues
@@ -41,4 +48,3 @@
   +autodock-4.0.1.ebuild:
   Initial import. Thanks to Luc Grenier <lgrenier@rsvs.ulaval.ca> for his
   ebuild and for testing the package.
-
