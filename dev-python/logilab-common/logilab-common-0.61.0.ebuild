@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.10 2014/12/11 12:01:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.61.0.ebuild,v 1.11 2015/03/13 13:09:34 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1 eutils
 
@@ -19,13 +19,9 @@ IUSE="test doc"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
-# Tests using dev-python/psycopg are skipped when dev-python/psycopg isn't installed.
 # egenix-mx-base tests are optional and supports python2 only.
 DEPEND="${RDEPEND}
-	test? (
-		$(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' python2_7)
-		!dev-python/psycopg[-mxdatetime]
-	)
+	test? ( $(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' python2_7) )
 	doc? ( $(python_gen_cond_dep 'dev-python/epydoc[${PYTHON_USEDEP}]' python2_7) )"
 
 PATCHES=(
