@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0.ebuild,v 1.8 2012/03/16 20:04:54 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/speed-dreams-1.4.0.ebuild,v 1.9 2015/03/13 17:04:04 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils versionator games
 
 DESCRIPTION="A fork of the famous open racing car simulator TORCS"
@@ -70,7 +70,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install datainstall || die
+	emake DESTDIR="${D}" install datainstall
 
 	find "${D}" -name Makefile -exec rm -f {} +
 

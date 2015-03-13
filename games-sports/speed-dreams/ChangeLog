@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/speed-dreams
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.12 2012/03/16 20:04:54 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/speed-dreams/ChangeLog,v 1.13 2015/03/13 17:04:04 mr_bones_ Exp $
+
+  13 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  speed-dreams-1.4.0.ebuild:
+  EAPI=5
 
   16 Mar 2012; Tupone Alfredo <tupone@gentoo.org> speed-dreams-1.4.0.ebuild,
   files/speed-dreams-1.4.0-automake.patch:
@@ -54,4 +58,3 @@
   +files/speed-dreams-1.4.0_rc1-asneeded.patch:
   Initial commit wrt #298182 by Kirin Yuri and Piotr Szymaniak with
   -Wl,--as-needed patch by Kacper Kowalik.
-
