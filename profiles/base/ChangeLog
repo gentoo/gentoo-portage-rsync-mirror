@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.777 2015/03/08 07:38:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.778 2015/03/13 12:53:22 tamiko Exp $
+
+  13 Mar 2015; Matthias Maier <tamiko@gentoo.org> package.use.stable.mask:
+  Add a package.use.stable.mask entry for app-emulation/libvirt glusterfs
 
   08 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Unmask wine-9999[pulseaudio], the patchset is now much more actively

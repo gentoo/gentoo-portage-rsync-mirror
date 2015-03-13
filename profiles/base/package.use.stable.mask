@@ -1,9 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.36 2015/02/22 10:51:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.37 2015/03/13 12:53:22 tamiko Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+
+# Matthias Maier <tamiko@gentoo.org> (13 Mar 2015)
+# Masking glusterfs for the time being, see entry for app-emulation/qemu of
+# 12 Sep 2013: Waiting on glusterfs maintainers in bug #484016
+app-emulation/libvirt glusterfs
 
 # Pacho Ramos <pacho@gentoo.org>
 # sci-visualization/paraview is not ready for stabilization yet
