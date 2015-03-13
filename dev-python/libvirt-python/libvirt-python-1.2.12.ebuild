@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.12.ebuild,v 1.1 2015/01/27 10:41:17 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libvirt-python/libvirt-python-1.2.12.ebuild,v 1.3 2015/03/13 13:53:43 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ if [[ ${PV} = *9999* ]]; then
 	RDEPEND="app-emulation/libvirt:=[-python(-)]"
 else
 	SRC_URI="http://libvirt.org/sources/python/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	RDEPEND="app-emulation/libvirt:0/${PV}"
 fi
 S="${WORKDIR}/${P%_rc*}"
