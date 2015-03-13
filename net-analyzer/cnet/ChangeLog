@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/cnet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.17 2014/01/16 11:31:45 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.19 2015/03/13 06:13:42 jer Exp $
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org> cnet-3.3.1.ebuild:
+  Fix LICENSE.
+
+*cnet-3.3.1 (13 Mar 2015)
+
+  13 Mar 2015; Jeroen Roovers <jer@gentoo.org> -cnet-2.0.10.ebuild,
+  -cnet-3.2.4.ebuild, +cnet-3.3.1.ebuild, -files/cnet-2.0.10-gentoo.patch,
+  -files/cnet-3.2.4-gentoo.patch, +files/cnet-3.3.1-gentoo.patch, metadata.xml:
+  Version bump. Remove fetch restriction.
 
 *cnet-3.2.4 (16 Jan 2014)
 

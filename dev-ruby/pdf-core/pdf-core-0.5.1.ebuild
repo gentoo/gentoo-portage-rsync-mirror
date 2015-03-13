@@ -1,19 +1,19 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/pdf-core-0.4.0.ebuild,v 1.1 2014/09/17 13:51:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/pdf-core-0.5.1.ebuild,v 1.1 2015/03/13 06:29:51 graaff Exp $
 
 EAPI=5
 
 USE_RUBY="ruby19 ruby20 ruby21"
 
-RUBY_FAKEGEM_RECIPE_TEST="rspec"
+RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
 inherit ruby-fakegem
 
 DESCRIPTION="Implements low level PDF features for Prawn"
-HOMEPAGE="http://github.com/prawnpdf/pdf-core/"
+HOMEPAGE="https://github.com/prawnpdf/pdf-core/"
 
 LICENSE="|| ( Ruby GPL-2 GPL-3 )"
 SLOT="0"
