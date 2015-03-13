@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.5.0_rc1.ebuild,v 1.1 2015/01/19 15:13:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.5.0_rc2.ebuild,v 1.1 2015/03/13 07:38:39 jer Exp $
 
 EAPI="5"
 
@@ -81,7 +81,7 @@ src_prepare() {
 		-e '/^all-local:/s| @COMP_PYTHON@||' \
 		bindings/Makefile.am || die
 
-	echo ${PV} >> VERSION || die
+	echo ${PV/_rc*/} >> VERSION || die
 
 	export rd_cv_gcc_flag__Werror=no
 
