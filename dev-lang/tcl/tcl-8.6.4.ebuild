@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.1-r1.ebuild,v 1.6 2014/06/18 19:07:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.6.4.ebuild,v 1.1 2015/03/13 08:29:53 jlec Exp $
 
 EAPI=5
 
-inherit autotools eutils flag-o-matic multilib toolchain-funcs versionator multilib-minimal
+inherit autotools eutils flag-o-matic multilib multilib-minimal toolchain-funcs versionator
 
 MY_P="${PN}${PV}"
 
@@ -32,10 +32,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-8.5.13-multilib.patch
 
 	# Bug 125971
-	epatch "${FILESDIR}"/${P}-conf.patch
-
-	# Bug 354067
-	epatch "${FILESDIR}"/${PN}-8.5.9-gentoo-fbsd.patch
+	epatch "${FILESDIR}"/${PN}-8.6.1-conf.patch
 
 	# workaround stack check issues, bug #280934
 	use hppa && append-cflags "-DTCL_NO_STACK_CHECK=1"
@@ -45,6 +42,8 @@ src_prepare() {
 	sed \
 		-e 's:-O[2s]\?::g' \
 		-i tcl.m4 || die
+
+	mv configure.{in,ac} || die
 
 	eautoconf
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.204 2015/03/12 10:26:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.205 2015/03/13 08:29:53 jlec Exp $
+
+*tcl-8.6.4 (13 Mar 2015)
+
+  13 Mar 2015; Justin Lecher <jlec@gentoo.org> +tcl-8.6.4.ebuild,
+  -tcl-8.5.16.ebuild, -tcl-8.6.1-r1.ebuild, -tcl-8.6.2.ebuild:
+  Version Bump; drop old
 
   12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.17.ebuild:
   Stable for amd64, wrt bug #543022
