@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/trigger
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.27 2013/01/20 01:21:00 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.28 2015/03/13 05:56:44 mr_bones_ Exp $
+
+*trigger-0.6.1 (13 Mar 2015)
+
+  13 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> +trigger-0.6.1.ebuild:
+  version bump
 
   20 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/trigger-0.5.2.1-ldflags.patch, -trigger-0.5.2.1.ebuild:
