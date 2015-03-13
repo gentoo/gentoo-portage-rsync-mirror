@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/kodi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.6 2015/03/06 20:59:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.7 2015/03/13 20:52:24 tupone Exp $
+
+  12 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild,
+  files/kodi-9999-gentoo.patch:
+  Require media-libs/ffmpeg:2.6
+  Fix a parallel make issue
+  Internal mythtv has been removed by upstream.
 
   06 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild,
   metadata.xml:
