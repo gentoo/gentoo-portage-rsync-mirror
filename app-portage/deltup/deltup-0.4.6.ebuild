@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.6.ebuild,v 1.1 2015/03/12 23:03:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.6.ebuild,v 1.2 2015/03/13 02:02:33 dlan Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 	|| ( dev-util/bdelta =dev-util/xdelta-1* )"
 
 src_prepare () {
-	epatch "${FILESDIR}"/${P}-fix-prefix.patch
+	default
 	epatch_user
 }
 
@@ -34,7 +34,7 @@ src_compile () {
 }
 
 src_install () {
-	default
+	emake DESTDIR="${D}" PREFIX=/usr install
 	dodoc "${S}"/../{README,ChangeLog}
 	doman "${S}"/../deltup.1
 }

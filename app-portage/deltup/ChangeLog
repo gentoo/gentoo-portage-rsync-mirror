@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/deltup
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.31 2015/03/12 23:03:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.32 2015/03/13 02:02:33 dlan Exp $
+
+  13 Mar 2015; Yixun Lan <dlan@gentoo.org> deltup-0.4.6.ebuild,
+  -files/deltup-0.4.4-CFLAGS.patch, -files/deltup-0.4.6-fix-prefix.patch:
+  explicitly set PREFIX variable
 
 *deltup-0.4.6 (12 Mar 2015)
 

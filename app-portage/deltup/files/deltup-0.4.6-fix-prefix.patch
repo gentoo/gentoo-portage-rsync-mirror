@@ -1,9 +1,0 @@
---- src/Makefile	2014-08-12 21:27:16.000000000 +0430
-+++ src/Makefile.new	2015-03-12 13:31:03.119500449 +0330
-@@ -1,5 +1,5 @@
- DESTDIR=
--PREFIX=%%PREFIX%%
-+PREFIX=/usr
- BINDIR=$(PREFIX)/bin
- 
- CC = g++
