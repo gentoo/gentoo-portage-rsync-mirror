@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.1.ebuild,v 1.3 2015/03/12 10:08:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.1.ebuild,v 1.4 2015/03/13 14:55:38 kensington Exp $
 
 EAPI=5
 
@@ -24,11 +24,12 @@ KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 SLOT="4"
 IUSE="debug minimal"
 
-DEPEND="
+RDEPEND="
 	>=sys-auth/polkit-qt-0.103.0
-"
-RDEPEND="${DEPEND}
 	!sys-auth/polkit-kde
+"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
 "
 
 if [[ ${KDE_BUILD_TYPE} != live ]] ; then
