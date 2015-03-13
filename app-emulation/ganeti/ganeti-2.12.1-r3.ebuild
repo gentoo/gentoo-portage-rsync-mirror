@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.12.1-r2.ebuild,v 1.1 2015/03/07 00:13:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.12.1-r3.ebuild,v 1.1 2015/03/13 18:53:31 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -135,6 +135,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.11-dont-print-man-help.patch"
 	"${FILESDIR}/${PN}-2.11-daemon-util-tests.patch"
 	"${FILESDIR}/${PN}-2.12-tests.patch"
+	"${FILESDIR}/${PN}-2.12-cfgupgrade-state.patch"
 )
 
 REQUIRED_USE="kvm? ( || ( amd64 x86 ) )"

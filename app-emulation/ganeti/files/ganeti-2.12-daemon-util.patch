@@ -1,5 +1,5 @@
 diff --git a/daemons/daemon-util.in b/daemons/daemon-util.in
-index 6a47253..7eec363 100644
+index 6a47253..5d7c4cf 100644
 --- a/daemons/daemon-util.in
 +++ b/daemons/daemon-util.in
 @@ -31,18 +31,24 @@ set -e
@@ -19,7 +19,7 @@ index 6a47253..7eec363 100644
 -  ganeti-luxid
 -  ganeti-kvmd
 -  )
-+DAEMONS=( ganeti-noded ganeti-wconfd ) 
++DAEMONS=( ganeti-noded ) 
 +
 +_is_master() {
 +        [ -z "${ganeti_master}" ] && ganeti_master="$(gnt-cluster getmaster)"
@@ -28,7 +28,7 @@ index 6a47253..7eec363 100644
 +}
 +
 +if _is_master; then
-+  DAEMONS+=( ganeti-masterd ganeti-rapi ganeti-luxid )
++  DAEMONS+=( ganeti-wconfd ganeti-rapi ganeti-luxid )
 +fi
 +
 +DAEMONS+=( ganeti-kvmd )

@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.99 2015/03/07 00:13:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.100 2015/03/13 18:53:31 chutzpah Exp $
+
+*ganeti-2.12.1-r3 (13 Mar 2015)
+
+  13 Mar 2015; Patrick McLean <chutzpah@gentoo.org>
+  +files/ganeti-2.12-cfgupgrade-state.patch, +ganeti-2.12.1-r3.ebuild,
+  -ganeti-2.12.1-r2.ebuild, files/ganeti-2.12-daemon-util.patch:
+  Revision bump, remove gnt-masterd from daemon-util patch, add code to
+  cfgupgrade to handle 'disk_state_static' and 'hv_state_static' in the cluster
+  config (bug #542628).
 
 *ganeti-2.12.1-r2 (07 Mar 2015)
 
