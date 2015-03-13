@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.15 2015/03/10 17:34:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/python-gflags-2.0.ebuild,v 1.16 2015/03/13 16:47:57 vapier Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://python-gflags.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~m68k ~mips ~s390 ~sh x86"
+KEYWORDS="amd64 ~arm ~arm64 ~ia64 ~m68k ~mips ~s390 ~sh x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

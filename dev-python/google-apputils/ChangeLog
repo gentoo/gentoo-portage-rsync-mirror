@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/google-apputils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.7 2015/03/10 17:37:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.8 2015/03/13 16:50:26 vapier Exp $
+
+  13 Mar 2015; Mike Frysinger <vapier@gentoo.org> google-apputils-0.4.0.ebuild:
+  Add ia64 love.
 
   10 Mar 2015; Mike Frysinger <vapier@gentoo.org> google-apputils-0.4.0.ebuild:
   Add arm64/m68k/mips/s390/sh love.
