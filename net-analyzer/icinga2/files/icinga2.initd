@@ -75,5 +75,5 @@ reload() {
         return 1
     fi
     ebegin "Reloading icinga2"
-    start-stop-daemon --signal HUP "$ICINGA2_PID_FILE"
+    start-stop-daemon --signal HUP --pidfile "$ICINGA2_PID_FILE"
 }

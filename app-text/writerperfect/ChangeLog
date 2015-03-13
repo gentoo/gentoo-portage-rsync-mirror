@@ -1,6 +1,10 @@
 # ChangeLog for app-text/writerperfect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/ChangeLog,v 1.4 2015/03/08 15:42:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/writerperfect/ChangeLog,v 1.5 2015/03/13 21:11:52 dilfridge Exp $
+
+  13 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  writerperfect-0.8.1.ebuild:
+  Fix libwps version, bug 540310
 
 *writerperfect-0.9.2 (08 Mar 2015)
 

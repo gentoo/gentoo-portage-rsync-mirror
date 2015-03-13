@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.3.2.ebuild,v 1.1 2015/03/13 20:46:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-2.3.2.ebuild,v 1.2 2015/03/13 21:09:51 prometheanfire Exp $
 
 EAPI=5
 inherit depend.apache eutils cmake-utils toolchain-funcs user versionator systemd
@@ -131,6 +131,7 @@ src_install() {
 	fowners icinga:icinga /etc/icinga2
 	fowners icinga:icinga /var/lib/icinga2
 	fowners icinga:icinga /var/spool/icinga2
+	fowners icinga:icinga /var/spool/icinga2/perfdata
 	fowners icinga:icingacmd /var/log/icinga2
 
 	fperms ug+rwX,o-rwx /etc/icinga2

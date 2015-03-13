@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.30 2015/03/13 20:46:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.32 2015/03/13 21:11:38 prometheanfire Exp $
+
+  13 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> icinga2-9999.ebuild:
+  fixing fowners for 9999
+
+  13 Mar 2015; Matthew Thode <prometheanfire@gentoo.org> files/icinga2.initd,
+  icinga2-2.3.2.ebuild:
+  fixing reload in init script
 
 *icinga2-2.3.2 (13 Mar 2015)
 
