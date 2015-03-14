@@ -7,5 +7,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/SB/SBURKE/I18N-LangTags-0.35.tar.gz http://dev.gentoo.org/~tove/files/I18N-LangTags-0.35-Detect-1.04.patch
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	b5d8036f23139ccadead91c9a6e92f5c	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=ccca756290b7386014707e14c59d400f

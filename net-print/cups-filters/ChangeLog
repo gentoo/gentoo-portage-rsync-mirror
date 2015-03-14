@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.140 2015/03/13 09:27:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.141 2015/03/14 14:33:15 maekke Exp $
+
+  14 Mar 2015; Markus Meier <maekke@gentoo.org> cups-filters-1.0.66.ebuild:
+  arm stable, bug #542158
 
   13 Mar 2015; Agostino Sarubbo <ago@gentoo.org> cups-filters-1.0.66.ebuild:
   Stable for x86, wrt bug #542158

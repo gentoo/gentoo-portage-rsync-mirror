@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.162 2015/02/01 12:01:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.163 2015/03/14 14:32:10 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -174,8 +174,7 @@ perl-module_src_configure() {
 # Please use the function above instead, perl-module_src_configure().
 perl-module_src_prep() {
 	debug-print-function $FUNCNAME "$@"
-	ewarn "perl-modules.eclass: perl-module_src_prep is deprecated and will be removed. Please use perl-module_src_configure instead."
-	perl-module_src_configure
+	die "perl-modules.eclass: perl-module_src_prep has been removed. Please use perl-module_src_configure instead."
 }
 
 # @FUNCTION: perl-module_src_compile
@@ -297,8 +296,7 @@ perl-module_src_install() {
 # Deprecated, to be removed. Where it is called, place a call to perl_set_version instead.
 perl-module_pkg_setup() {
 	debug-print-function $FUNCNAME "$@"
-	ewarn "perl-modules.eclass: perl-module_pkg_setup is deprecated and will be removed. Please use perl_set_version instead."
-	perl_set_version
+	die "perl-modules.eclass: perl-module_pkg_setup has been removed. Please use perl_set_version instead."
 }
 
 # @FUNCTION: perl-module_pkg_preinst
@@ -308,8 +306,7 @@ perl-module_pkg_setup() {
 # Deprecated, to be removed. Where it is called, place a call to perl_set_version instead.
 perl-module_pkg_preinst() {
 	debug-print-function $FUNCNAME "$@"
-	ewarn "perl-modules.eclass: perl-module_pkg_preinst is deprecated and will be removed. Please use perl_set_version instead."
-	perl_set_version
+	die "perl-modules.eclass: perl-module_pkg_preinst has been removed. Please use perl_set_version instead."
 }
 
 # @FUNCTION: perl-module_pkg_postinst
@@ -336,7 +333,7 @@ perl-module_pkg_postinst() {
 # It does not do anything. Deprecated, to be removed.
 perl-module_pkg_prerm() {
 	debug-print-function $FUNCNAME "$@"
-	ewarn "perl-module.eclass: perl-module_pkg_prerm does not do anything and will be removed. Please remove the call."
+	die "perl-module.eclass: perl-module_pkg_prerm has been removed. Please remove the call."
 }
 
 # @FUNCTION: perl-module_pkg_postrm
@@ -390,8 +387,7 @@ perl_set_version() {
 # Please use the function above instead, perl_set_version().
 perlinfo() {
 	debug-print-function $FUNCNAME "$@"
-	ewarn "perl-modules.eclass: perlinfo is deprecated and will be removed. Please use perl_set_version instead."
-	perl_set_version
+	die "perl-modules.eclass: perlinfo has been removed. Please use perl_set_version instead."
 }
 
 # @FUNCTION: perl_delete_localpod
@@ -415,8 +411,7 @@ perl_delete_localpod() {
 # Please use the function above instead, perl_delete_localpod().
 fixlocalpod() {
 	debug-print-function $FUNCNAME "$@"
-	ewarn "perl-modules.eclass: fixlocalpod is deprecated and will be removed. Please use perl_delete_localpod instead."
-	perl_delete_localpod
+	die "perl-modules.eclass: fixlocalpod has been removed. Please use perl_delete_localpod instead."
 }
 
 # @FUNCTION: perl_fix_osx_extra

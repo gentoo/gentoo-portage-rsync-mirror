@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/bcel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.66 2014/06/17 13:39:28 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.67 2015/03/14 14:51:12 chewi Exp $
+
+*bcel-6.0_rc3 (14 Mar 2015)
+
+  14 Mar 2015; James Le Cuirot <chewi@gentoo.org> +bcel-6.0_rc3.ebuild:
+  Version bump. Tests added. No longer needs patching for findbugs.
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -bcel-5.2-r1.ebuild,
   -bcel-5.2.ebuild, -files/bcel-5.1-gentoo-buildxml.diff,

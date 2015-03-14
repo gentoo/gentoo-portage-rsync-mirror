@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/D/DC/DCOPPIT/FileHandle-Unget-0.1623.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	6b84915e66050718c89bcbc76c144e80	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	b5d8036f23139ccadead91c9a6e92f5c	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=a58212bd95eb5d08bd5b8dc66088c83f
