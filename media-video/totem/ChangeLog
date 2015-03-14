@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.389 2015/02/23 11:53:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.390 2015/03/14 18:42:58 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> totem-3.14.2.ebuild:
+  amd64 stable, bug 534012
 
   23 Feb 2015; Pacho Ramos <pacho@gentoo.org> totem-3.14.2.ebuild:
   Rekeyword

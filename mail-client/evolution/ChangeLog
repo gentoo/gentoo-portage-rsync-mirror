@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.439 2015/02/09 21:28:11 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.440 2015/03/14 18:40:18 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> evolution-3.12.11.ebuild:
+  amd64 stable, bug 534012
 
   09 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org> evolution-3.12.10.ebuild,
   evolution-3.12.11.ebuild, evolution-3.12.8.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/cinnamon-control-center
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/ChangeLog,v 1.15 2015/01/27 09:32:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-control-center/ChangeLog,v 1.16 2015/03/14 18:35:58 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  cinnamon-control-center-2.4.2-r2.ebuild:
+  amd64 stable, bug 534012
 
 *cinnamon-control-center-2.4.2-r2 (27 Jan 2015)
 

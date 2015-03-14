@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/yelp-xsl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.68 2015/03/10 20:44:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.69 2015/03/14 18:39:58 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> yelp-xsl-3.14.0.ebuild:
+  amd64 stable, bug 534012
 
   10 Mar 2015; Mike Frysinger <vapier@gentoo.org> yelp-xsl-3.12.0.ebuild,
   yelp-xsl-3.14.0.ebuild:

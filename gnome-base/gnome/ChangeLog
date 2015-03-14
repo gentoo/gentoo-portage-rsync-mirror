@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.485 2015/02/23 11:55:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.486 2015/03/14 18:35:10 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-3.14.0.ebuild:
+  amd64 stable, bug 534012
 
   23 Feb 2015; Pacho Ramos <pacho@gentoo.org> gnome-3.14.0.ebuild:
   Rekeyword

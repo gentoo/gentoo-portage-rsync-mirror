@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gucharmap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.225 2014/12/22 23:33:51 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/ChangeLog,v 1.226 2015/03/14 18:39:18 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gucharmap-3.14.2.ebuild:
+  amd64 stable, bug 534012
 
 *gucharmap-3.14.2 (22 Dec 2014)
 

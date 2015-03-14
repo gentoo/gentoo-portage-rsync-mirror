@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gnome-maps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gnome-maps/ChangeLog,v 1.10 2015/03/10 20:15:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gnome-maps/ChangeLog,v 1.11 2015/03/14 18:45:39 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-maps-3.14.2.ebuild:
+  amd64 stable, bug 534012
 
   10 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-maps-3.14.2.ebuild:
   x86 keyword

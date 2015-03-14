@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.14.2.ebuild,v 1.1 2015/02/18 11:37:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-3.14.2.ebuild,v 1.2 2015/03/14 18:45:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Vino"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="crypt libsecret ipv6 jpeg networkmanager ssl +telepathy zeroconf +zlib"
 # bug #394611; tight encoding requires zlib encoding
 REQUIRED_USE="jpeg? ( zlib )"

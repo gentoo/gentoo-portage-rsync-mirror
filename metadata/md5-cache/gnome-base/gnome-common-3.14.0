@@ -3,10 +3,10 @@ DEPEND=app-arch/xz-utils
 DESCRIPTION=Common files for development of Gnome packages
 EAPI=5
 HOMEPAGE=http://git.gnome.org/browse/gnome-common
-KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=GPL-3
 RDEPEND=!>=sys-devel/autoconf-archive-2015.02.04
 SLOT=3
 SRC_URI=mirror://gnome/sources/gnome-common/3.14/gnome-common-3.14.0.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=ba819bac891b26f257d7f343f25a3de6
+_md5_=667413c5cdb1a2790e8a5382c4e162cf

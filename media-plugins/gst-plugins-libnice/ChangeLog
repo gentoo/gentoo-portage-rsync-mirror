@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libnice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/ChangeLog,v 1.58 2015/02/03 18:53:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libnice/ChangeLog,v 1.59 2015/03/14 18:41:57 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-libnice-0.1.10-r100.ebuild, gst-plugins-libnice-0.1.10.ebuild:
+  amd64 stable, bug 534012
 
 *gst-plugins-libnice-0.1.10-r100 (03 Feb 2015)
 *gst-plugins-libnice-0.1.10 (03 Feb 2015)

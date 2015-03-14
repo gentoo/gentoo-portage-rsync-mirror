@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.1.5.ebuild,v 1.1 2015/02/12 11:19:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-2.1.5.ebuild,v 1.2 2015/03/14 18:54:29 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG=no
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE="aac flac mp3 opus vorbis"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

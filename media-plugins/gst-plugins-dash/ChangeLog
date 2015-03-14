@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-dash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dash/ChangeLog,v 1.10 2015/02/03 18:08:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dash/ChangeLog,v 1.11 2015/03/14 18:49:37 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gst-plugins-dash-1.4.5.ebuild:
+  amd64 stable, bug 534012
 
 *gst-plugins-dash-1.4.5 (03 Feb 2015)
 

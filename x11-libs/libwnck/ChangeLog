@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.341 2015/03/03 11:42:10 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.342 2015/03/14 18:46:57 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> libwnck-3.14.0.ebuild:
+  amd64 stable, bug 534012
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libwnck-2.31.0.ebuild:
   add arm64 support, tested on A53 board

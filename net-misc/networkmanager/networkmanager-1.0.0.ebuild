@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-1.0.0.ebuild,v 1.8 2015/03/03 09:35:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-1.0.0.ebuild,v 1.9 2015/03/14 18:45:00 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ IUSE="bluetooth connection-sharing consolekit +dhclient dhcpcd gnutls +introspec
 kernel_linux +nss +modemmanager ncurses +ppp resolvconf selinux systemd teamd test \
 vala +wext +wifi zeroconf" # wimax
 
-KEYWORDS="~alpha ~amd64 arm ~arm64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm ~arm64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nemo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/ChangeLog,v 1.22 2015/01/25 15:18:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/ChangeLog,v 1.23 2015/03/14 18:39:43 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> nemo-2.4.5.ebuild:
+  amd64 stable, bug 534012
 
 *nemo-2.4.5 (25 Jan 2015)
 

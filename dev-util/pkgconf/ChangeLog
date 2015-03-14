@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.86 2014/08/28 04:27:21 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.87 2015/03/14 18:42:23 jdhore Exp $
+
+*pkgconf-0.9.8 (14 Mar 2015)
+
+  14 Mar 2015; Jeff Horelick <jdhore@gentoo.org> +pkgconf-0.9.8.ebuild:
+  Version bump
 
 *pkgconf-0.9.6 (28 Aug 2014)
 

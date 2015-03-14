@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.185 2015/03/12 18:59:09 tranquility Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.186 2015/03/14 18:34:34 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-light-3.14.0.ebuild:
+  amd64 stable, bug 534012
 
   11 Mar 2015; Ole Reifschneider <tranquility@gentoo.org>
   gnome-light-3.14.0.ebuild:

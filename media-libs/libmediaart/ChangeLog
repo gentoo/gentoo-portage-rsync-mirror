@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmediaart
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/ChangeLog,v 1.13 2015/01/18 11:04:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/ChangeLog,v 1.14 2015/03/14 18:41:52 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> libmediaart-0.7.0.ebuild:
+  amd64 stable, bug 534012
 
   18 Jan 2015; Pacho Ramos <pacho@gentoo.org> libmediaart-0.7.0.ebuild:
   Don't run elibtoolize two times

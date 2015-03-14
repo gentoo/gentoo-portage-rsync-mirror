@@ -1,6 +1,10 @@
 # ChangeLog for media-video/istanbul
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.22 2012/12/28 00:20:35 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.23 2015/03/14 18:54:43 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  istanbul-0.2.2.1_pre20120909.ebuild:
+  amd64 stable, bug 534012
 
   28 Dec 2012; Gilles Dartiguelongue <eva@gentoo.org> istanbul-0.2.2.ebuild,
   istanbul-0.2.2.1_pre20120909.ebuild:
@@ -99,4 +103,3 @@
 
   13 Jul 2006; <zaheerm@gentoo.org> +metadata.xml, +istanbul-0.2.0.ebuild:
   Initial Ebuild
-

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-taglib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.149 2015/01/13 12:29:42 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.150 2015/03/14 18:53:30 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gst-plugins-taglib-1.4.5.ebuild:
+  amd64 stable, bug 534012
 
 *gst-plugins-taglib-1.4.5 (13 Jan 2015)
 

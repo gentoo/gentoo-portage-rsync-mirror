@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnome-online-miners
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/ChangeLog,v 1.14 2015/03/07 02:34:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/ChangeLog,v 1.15 2015/03/14 18:44:21 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-online-miners-3.14.1.ebuild:
+  amd64 stable, bug 534012
 
   07 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-online-miners-3.12.0.ebuild, gnome-online-miners-3.14.1.ebuild:

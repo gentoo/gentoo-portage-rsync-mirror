@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnome-chess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.21 2015/02/24 09:45:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.22 2015/03/14 18:31:27 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-chess-3.14.3.ebuild:
+  amd64 stable, bug 534012
 
 *gnome-chess-3.14.3 (24 Feb 2015)
 

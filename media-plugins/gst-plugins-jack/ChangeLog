@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-jack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.83 2015/01/02 04:02:56 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jack/ChangeLog,v 1.84 2015/03/14 18:50:45 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gst-plugins-jack-1.4.5.ebuild:
+  amd64 stable, bug 534012
 
 *gst-plugins-jack-1.4.5 (02 Jan 2015)
 

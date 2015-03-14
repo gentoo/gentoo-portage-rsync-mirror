@@ -4,11 +4,11 @@ DESCRIPTION=Music management for Gnome
 EAPI=5
 HOMEPAGE=http://wiki.gnome.org/Apps/Music
 IUSE=+python_single_target_python3_3 python_single_target_python3_4 python_targets_python3_3 python_targets_python3_4 python_single_target_python3_3 python_single_target_python3_4
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_single_target_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python2_7(-),python_single_target_python3_3(+)?,python_single_target_python3_4(+)?] >=dev-libs/glib-2.28:2 >=dev-libs/gobject-introspection-1.35.9 >=media-libs/grilo-0.2.6:0.2[introspection] media-libs/libmediaart:1.0 >=x11-libs/gtk+-3.13.2:3[introspection] app-misc/tracker[introspection(+)] || ( app-misc/tracker[gstreamer] app-misc/tracker[ffmpeg] ) dev-python/pygobject:3[cairo,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python2_7(-),python_single_target_python3_3(+)?,python_single_target_python3_4(+)?] dev-python/dbus-python[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python2_7(-),python_single_target_python3_3(+)?,python_single_target_python3_4(+)?] media-libs/gstreamer:1.0[introspection] media-libs/gst-plugins-base:1.0[introspection] media-plugins/gst-plugins-meta:1.0 media-plugins/grilo-plugins:0.2[tracker] x11-misc/xdg-user-dirs
 REQUIRED_USE=^^ ( python_single_target_python3_3 python_single_target_python3_4 ) python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python3_4? ( python_targets_python3_4 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-music/3.14/gnome-music-3.14.3.1.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=b59ad42797ac28a91e401bb086263594
+_md5_=25ccc26134418de10077a2f87433a7dc

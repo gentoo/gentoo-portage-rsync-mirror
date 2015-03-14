@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.263 2015/03/03 08:30:31 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.264 2015/03/14 18:48:20 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-base-0.10.36-r2.ebuild, gst-plugins-base-1.4.5.ebuild:
+  amd64 stable, bug 534012
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> gst-plugins-base-1.4.5.ebuild:
   add arm64 support, tested on A53 board

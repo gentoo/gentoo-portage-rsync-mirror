@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-voaacenc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voaacenc/ChangeLog,v 1.21 2015/02/03 20:03:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-voaacenc/ChangeLog,v 1.22 2015/03/14 18:53:50 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gst-plugins-voaacenc-1.4.5.ebuild:
+  amd64 stable, bug 534012
 
 *gst-plugins-voaacenc-1.4.5 (03 Feb 2015)
 
