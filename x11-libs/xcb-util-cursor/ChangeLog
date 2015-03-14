@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xcb-util-cursor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-cursor/ChangeLog,v 1.23 2015/03/06 07:57:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-cursor/ChangeLog,v 1.24 2015/03/14 14:25:40 maekke Exp $
+
+  14 Mar 2015; Markus Meier <maekke@gentoo.org>
+  xcb-util-cursor-0.1.1-r1.ebuild:
+  arm stable, bug #530652
 
   06 Mar 2015; Jeroen Roovers <jer@gentoo.org> xcb-util-cursor-0.1.1-r1.ebuild:
   Stable for HPPA (bug #530652).

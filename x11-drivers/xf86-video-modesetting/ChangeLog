@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-modesetting
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-modesetting/ChangeLog,v 1.61 2015/03/06 07:38:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-modesetting/ChangeLog,v 1.62 2015/03/14 14:06:08 maekke Exp $
+
+  14 Mar 2015; Markus Meier <maekke@gentoo.org>
+  xf86-video-modesetting-0.9.0.ebuild:
+  arm stable, bug #530652
 
   06 Mar 2015; Jeroen Roovers <jer@gentoo.org>
   xf86-video-modesetting-0.9.0.ebuild:

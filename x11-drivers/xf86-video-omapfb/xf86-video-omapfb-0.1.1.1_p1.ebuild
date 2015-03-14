@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-omapfb/xf86-video-omapfb-0.1.1.1_p1.ebuild,v 1.1 2014/08/01 08:56:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-omapfb/xf86-video-omapfb-0.1.1.1_p1.ebuild,v 1.2 2015/03/14 14:07:28 maekke Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://debian/pool/main/x/${PN}/${PN}_${PV/_p*/}.orig.tar.gz
 HOMEPAGE="https://packages.debian.org/source/sid/xf86-video-omapfb"
 
 DESCRIPTION="X.org driver for TI OMAP framebuffers"
-KEYWORDS="-* ~arm"
+KEYWORDS="-* arm"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}

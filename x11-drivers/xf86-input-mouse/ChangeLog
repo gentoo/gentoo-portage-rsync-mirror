@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-mouse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.156 2015/03/06 07:37:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-mouse/ChangeLog,v 1.157 2015/03/14 14:04:02 maekke Exp $
+
+  14 Mar 2015; Markus Meier <maekke@gentoo.org> xf86-input-mouse-1.9.1.ebuild:
+  arm stable, bug #530652
 
   06 Mar 2015; Jeroen Roovers <jer@gentoo.org> xf86-input-mouse-1.9.1.ebuild:
   Stable for HPPA (bug #530652).

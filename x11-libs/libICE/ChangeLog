@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.111 2015/03/06 07:39:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.112 2015/03/14 14:10:52 maekke Exp $
+
+  14 Mar 2015; Markus Meier <maekke@gentoo.org> libICE-1.0.9.ebuild:
+  arm stable, bug #530652
 
   06 Mar 2015; Jeroen Roovers <jer@gentoo.org> libICE-1.0.9.ebuild:
   Stable for HPPA (bug #530652).
