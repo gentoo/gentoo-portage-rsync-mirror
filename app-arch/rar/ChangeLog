@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.90 2014/08/29 08:50:37 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.91 2015/03/14 19:01:09 jdhore Exp $
+
+*rar-5.2.1 (14 Mar 2015)
+
+  14 Mar 2015; Jeff Horelick <jdhore@gentoo.org> +rar-5.2.1.ebuild:
+  Version bump
 
 *rar-5.1.0 (29 Aug 2014)
 

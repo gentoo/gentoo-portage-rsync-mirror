@@ -1,6 +1,17 @@
 # ChangeLog for net-wireless/wireless-regdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.53 2015/03/03 09:42:55 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.54 2015/03/14 19:11:56 zerochaos Exp $
+
+*wireless-regdb-20150313 (14 Mar 2015)
+
+  14 Mar 2015; Rick Farina <zerochaos@gentoo.org>
+  +wireless-regdb-20150313.ebuild, -wireless-regdb-20090115.ebuild,
+  -wireless-regdb-20110428-r1.ebuild, -wireless-regdb-20130111.ebuild,
+  -wireless-regdb-20131011.ebuild, -wireless-regdb-20131127-r1.ebuild,
+  -wireless-regdb-20131127.ebuild, -wireless-regdb-20140529.ebuild,
+  -wireless-regdb-20141006.ebuild, -wireless-regdb-20141107.ebuild:
+  version bump and allarches stabilization, there should be no need to load the
+  arch teams with this
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> wireless-regdb-20141118.ebuild:
   add arm64 support, tested on A53 board

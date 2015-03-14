@@ -3,10 +3,10 @@ DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys
 DESCRIPTION=Command-line Bitcoin transaction tool
 EAPI=5
 HOMEPAGE=https://github.com/bitcoin/bitcoin
-KEYWORDS=~amd64 ~arm ~x86
+KEYWORDS=~amd64 ~arm ~arm64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
 RDEPEND=dev-libs/openssl:0[-bindist] =dev-libs/libsecp256k1-0.0.0_pre20141212 >=dev-libs/boost-1.52.0[threads(+)]
 SLOT=0
-SRC_URI=https://github.com/bitcoin/bitcoin/archive/047a89831760ff124740fe9f58411d57ee087078.tar.gz -> bitcoin-v0.10.0.tgz http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/0.10.x/0.10.0.ljr20150220/bitcoin-0.10.0.ljr20150220.patches.txz -> bitcoin-0.10.0.ljr20150220.patches.tar.xz
+SRC_URI=https://github.com/bitcoin/bitcoin/archive/047a89831760ff124740fe9f58411d57ee087078.tar.gz -> bitcoin-v0.10.0.tgz http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/0.10.x/0.10.0.ljr20150311/bitcoin-0.10.0.ljr20150311.patches.txz -> bitcoin-0.10.0.ljr20150311.patches.tar.xz
 _eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	bitcoincore	dc75324a8d11c56e59b6f19ab585bbef	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=78a7557e8bbf44edf6651546c88ca26e
+_md5_=ed48cbe268ac62f03af1f5ef03792d3e
