@@ -1,21 +1,20 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-2.11-r1.ebuild,v 1.1 2013/08/17 09:35:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-2.12.1.ebuild,v 1.1 2015/03/13 23:05:32 chewi Exp $
 
-EAPI="5"
+EAPI=5
 
 JAVA_PKG_IUSE="doc source"
 
-inherit vcs-snapshot java-pkg-2 java-pkg-simple
+inherit java-pkg-2 java-pkg-simple
 
 DESCRIPTION="A Java library for handling console input"
 HOMEPAGE="https://github.com/jline/jline2"
-SRC_URI="https://github.com/jline/jline2/tarball/${P} -> ${P}.tar.gz"
+SRC_URI="https://github.com/jline/jline2/archive/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-
 IUSE="test"
 
 CDEPEND="dev-java/jansi:1.11
@@ -28,7 +27,7 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	>=virtual/jre-1.5"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${PN}2-${P}"
 
 JAVA_SRC_DIR="src/main/java"
 JAVA_GENTOO_CLASSPATH="jansi-1.11,jansi-native"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jline
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.29 2014/06/17 11:14:19 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/ChangeLog,v 1.30 2015/03/13 23:05:32 chewi Exp $
+
+*jline-2.12.1 (13 Mar 2015)
+
+  13 Mar 2015; James Le Cuirot <chewi@gentoo.org> +jline-2.12.1.ebuild,
+  -files/jline-0.9.91-import.patch, -jline-2.11-r1.ebuild, -jline-2.11.ebuild:
+  Version bump. Closes bug #535884. Thanks to Arfrever.
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jline-0.9.91.ebuild,
   -jline-0.9.94.ebuild:
