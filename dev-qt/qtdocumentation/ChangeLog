@@ -1,0 +1,9 @@
+# ChangeLog for dev-qt/qtdocumentation
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdocumentation/ChangeLog,v 1.1 2015/03/14 16:24:20 zx2c4 Exp $
+
+*qtdocumentation-5.4.1 (14 Mar 2015)
+
+  14 Mar 2015; Jason A. Donenfeld <zx2c4@gentoo.org> +metadata.xml,
+  +qtdocumentation-5.4.1.ebuild:
+  Qt documentation import
