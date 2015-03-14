@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.8 2008/12/06 14:41:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/biounzip/biounzip-1.1a.ebuild,v 1.9 2015/03/14 02:19:36 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Unpacks BioZip archives"
@@ -13,19 +14,20 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
+DEPEND="sys-libs/zlib"
+RDEPEND=${DEPEND}
+
 S=${WORKDIR}/${P/a/}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-64bit.patch
 }
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o ${PN} *.c -lz || die "cc failed"
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o ${PN} *.c -lz || die
 }
 
 src_install() {
-	dobin ${PN} || die "dobin failed"
+	dobin ${PN}
 	dodoc biozip.txt
 }

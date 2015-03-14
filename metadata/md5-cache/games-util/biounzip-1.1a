@@ -1,9 +1,12 @@
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install prepare
+DEPEND=sys-libs/zlib
 DESCRIPTION=Unpacks BioZip archives
+EAPI=5
 HOMEPAGE=http://biounzip.sourceforge.net/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
+RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/biounzip/biounzip-1.1a.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=ee0c20cdec5b54fe2503fd040575303c
+_md5_=cd0b594b92c448fe410d10ac13e70787
