@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.193 2015/03/12 19:12:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.194 2015/03/14 13:21:22 mrueg Exp $
+
+  14 Mar 2015; Manuel Rüger <mrueg@gentoo.org> quassel-0.12_rc1.ebuild:
+  Fix build.
 
 *quassel-0.12_rc1 (12 Mar 2015)
 

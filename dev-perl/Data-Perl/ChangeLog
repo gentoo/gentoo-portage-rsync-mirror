@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Data-Perl
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Perl/ChangeLog,v 1.1 2015/03/14 13:26:18 dilfridge Exp $
+
+*Data-Perl-0.2.9 (14 Mar 2015)
+
+  14 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Data-Perl-0.2.9.ebuild, +metadata.xml:
+  New package, needed for dev-perl/GnuPG-Interface

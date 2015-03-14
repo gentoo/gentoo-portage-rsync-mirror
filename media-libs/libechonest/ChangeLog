@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libechonest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/ChangeLog,v 1.31 2015/01/29 22:10:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/ChangeLog,v 1.32 2015/03/14 13:23:46 maksbotan Exp $
+
+*libechonest-2.3.1 (14 Mar 2015)
+
+  14 Mar 2015; Maxim Koltsov <maksbotan@gentoo.org> +libechonest-2.3.1.ebuild:
+  Add REQUIRED_USE, bug #539940. Thanks to Nikoli.
 
 *libechonest-2.3.0 (29 Jan 2015)
 
