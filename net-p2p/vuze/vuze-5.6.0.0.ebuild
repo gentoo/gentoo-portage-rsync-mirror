@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-5.3.0.0.ebuild,v 1.2 2015/03/14 09:39:07 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-5.6.0.0.ebuild,v 1.1 2015/03/14 09:39:07 rhill Exp $
 
 EAPI="5"
 
@@ -58,14 +58,15 @@ java_prepare() {
 	# upstream likes randomly changing a subset of files to CRLF every release
 	edos2unix $(find "${S}" -type f -name "*.java")
 
-	epatch "${FILESDIR}"/${P}-java5.patch
-	epatch "${FILESDIR}"/${P}-remove-classpath.patch
-	epatch "${FILESDIR}"/${P}-disable-shared-plugins.patch
-	epatch "${FILESDIR}"/${P}-disable-osx.patch
-	epatch "${FILESDIR}"/${P}-disable-updaters.patch
-	epatch "${FILESDIR}"/${P}-invalid-characters.patch
-	epatch "${FILESDIR}"/${P}-unbundle-commons.patch
-	epatch "${FILESDIR}"/${P}-unbundle-json.patch
+	epatch "${FILESDIR}"/${PN}-5.3.0.0-java5.patch
+	epatch "${FILESDIR}"/${PN}-5.3.0.0-remove-classpath.patch
+	epatch "${FILESDIR}"/${PN}-5.3.0.0-disable-shared-plugins.patch
+	epatch "${FILESDIR}"/${PN}-5.3.0.0-disable-osx.patch
+	epatch "${FILESDIR}"/${PN}-5.3.0.0-disable-updaters.patch
+	epatch "${FILESDIR}"/${PN}-5.3.0.0-unbundle-commons.patch
+	epatch "${FILESDIR}"/${PN}-5.3.0.0-unbundle-json.patch
+	epatch "${FILESDIR}"/${PN}-5.6.0.0-commons-lang-entities.patch
+	epatch "${FILESDIR}"/${PN}-5.6.0.0-invalid-characters.patch
 #	epatch "${FILESDIR}"/${P}-use-jdk-cipher-only.patch # bcprov
 
 	# OSX / Windows
