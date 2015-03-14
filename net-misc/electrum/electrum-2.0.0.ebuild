@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-2.0.0.ebuild,v 1.1 2015/03/03 00:06:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-2.0.0.ebuild,v 1.2 2015/03/14 19:53:20 blueness Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 )
-PYTHON_REQ_USE="ncurses="
+PYTHON_REQ_USE="ncurses?"
 
 inherit eutils distutils-r1 gnome2-utils
 
