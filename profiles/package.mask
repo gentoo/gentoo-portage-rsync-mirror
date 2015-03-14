@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16414 2015/03/11 21:48:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16415 2015/03/14 20:54:55 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -183,12 +183,6 @@ dev-python/ldaptor
 # Doesn't work with current version of ruby. Dead upstream.
 # Masked for removal in 30 days.
 games-board/kaya
-
-# Bernard Cafarelli <voyageur@gentoo.org> (18 Feb 2015)
-# Masked until reverse deps are OK
-=sys-devel/llvm-3.6.0*
-=sys-devel/clang-3.6.0*
-=sys-devel/dragonegg-3.6.0*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (18 Feb 2015)
 # Integrated into games-engines/scummvm
