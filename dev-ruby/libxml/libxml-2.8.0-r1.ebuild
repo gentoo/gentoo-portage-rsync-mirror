@@ -1,10 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.7.0-r2.ebuild,v 1.4 2014/08/05 16:00:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.8.0-r1.ebuild,v 1.1 2015/03/14 06:13:39 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+# ruby22 → test suite hangs
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_NAME="libxml-ruby"
 
@@ -41,18 +42,10 @@ all_ruby_prepare() {
 	# replace ulimit -n output as it does not work with Ruby 1.9
 	sed -i -e 's:`ulimit -n`:"'`ulimit -n`'":' test/tc_parser.rb || die
 
-	# Avoid test failing due to different semantics in libxml 2.8.
-	# https://github.com/xml4r/libxml-ruby/issues/43
-	sed -i -e '/test_invalid_encoding/,/^  end/ s:^:#:' test/tc_reader.rb || die
-
-	# Ignore two test failures on ruby18 for now given that older
-	# versions no longer compile.
-	sed -i -e '/test_schema_type/,/end/ s:^:#:' \
-		-e '/test_schema_element/,/end/ s:^:#:' test/tc_schema.rb || die
-
-	# Remove the pregenerated extconf.h. It should not be included, but
-	# it also confuses our hardlink-based duplication scheme.
-	rm ext/libxml/extconf.h || die
+	# Avoid test failures with libxml2-2.9.2 since that is the oldest
+	# secure version available: https://github.com/xml4r/libxml-ruby/issues/103
+	sed -i -e '/tc_html_parser_context/d' test/test_suite.rb || die
+	sed -i -e '/test_bad_xml/,/^  end/ s:^:#:' test/tc_parser.rb || die
 }
 
 each_ruby_configure() {

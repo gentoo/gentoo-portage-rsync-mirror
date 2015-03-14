@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.8.0.ebuild,v 1.1 2015/01/15 07:10:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.8.0.ebuild,v 1.2 2015/03/14 06:13:39 graaff Exp $
 
 EAPI=5
 
 # ruby22 → test suite hangs
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_NAME="libxml-ruby"
 
