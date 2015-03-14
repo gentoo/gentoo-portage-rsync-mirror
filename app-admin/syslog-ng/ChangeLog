@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.414 2015/03/14 02:56:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.415 2015/03/14 09:01:01 zlogene Exp $
+
+  14 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> syslog-ng-3.6.2.ebuild:
+  amd64 stable wrt bug #543234
 
   14 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/3.4/syslog-ng-3.4.2-autotools.patch,
