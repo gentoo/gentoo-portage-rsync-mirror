@@ -3755,14 +3755,12 @@ media-libs/mesa:classic - Build drivers based on the classic architecture.
 media-libs/mesa:d3d9 - Enable Direct 3D9 API through Nine state tracker. Can be used together with patched wine.
 media-libs/mesa:dri3 - Enable DRI3 support.
 media-libs/mesa:egl - Enable EGL support.
-media-libs/mesa:g3dvl - Enable video decode acceleration support for Gallium3D.
 media-libs/mesa:gallium - Build drivers based on Gallium3D, the new architecture for 3D graphics drivers.
 media-libs/mesa:gbm - Enable the Graphics Buffer Manager for EGL on KMS.
 media-libs/mesa:gles - Enable GLES (both v1 and v2) support.
 media-libs/mesa:gles1 - Enable GLESv1 support.
 media-libs/mesa:gles2 - Enable GLESv2 support.
 media-libs/mesa:llvm - Enable LLVM backend for Gallium3D.
-media-libs/mesa:llvm-shared-libs - Dynamically link Gallium3D drivers against LLVM.
 media-libs/mesa:opencl - Enable the Clover Gallium OpenCL state tracker.
 media-libs/mesa:openmax - Enable OpenMAX video decode/encode acceleration for Gallium3D.
 media-libs/mesa:openvg - Enable the OpenVG 2D acceleration API for Gallium3D.
@@ -3770,12 +3768,9 @@ media-libs/mesa:osmesa - Build the Mesa library for off-screen rendering.
 media-libs/mesa:pax_kernel - Enable if the user plans to run the package under a pax enabled hardened kernel
 media-libs/mesa:pic - disable optimized assembly code that is not PIC friendly
 media-libs/mesa:r600-llvm-compiler - Build the LLVM based r600 shader compiler.
-media-libs/mesa:shared-dricore - Enable sharing of common code for classic DRI drivers.
-media-libs/mesa:shared-glapi - Enable sharing of common code for the OpenGL API.
 media-libs/mesa:vdpau - Enable the VDPAU acceleration interface for the Gallium3D Video Layer.
 media-libs/mesa:wayland - Enable support for dev-libs/wayland
 media-libs/mesa:xa - Enable the XA (X Acceleration) API for Gallium3D.
-media-libs/mesa:xorg - Enable the Xorg state tracker for Gallium3D. This is not required for OpenGL acceleration in X.
 media-libs/mesa:xvmc - Enable the XvMC acceleration interface for the Gallium3D Video Layer.
 media-libs/mlt:compressed-lumas - Compress the luma files in png.
 media-libs/mlt:frei0r - Build the module for media-plugins/frei0r-plugins

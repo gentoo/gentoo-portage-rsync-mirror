@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.626 2015/03/14 01:22:33 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.628 2015/03/14 01:36:32 mattst88 Exp $
+
+  14 Mar 2015; Matt Turner <mattst88@gentoo.org> metadata.xml:
+  Drop dead USE flags.
+
+  14 Mar 2015; Matt Turner <mattst88@gentoo.org> -mesa-7.11.2.ebuild,
+  -mesa-8.0.4-r1.ebuild, -mesa-9.0.3.ebuild, -mesa-9.1.6.ebuild,
+  -mesa-9.2.5-r1.ebuild, -mesa-10.0.4.ebuild, -mesa-10.1.6.ebuild,
+  -mesa-10.4.3.ebuild, -files/mesa-8.0-dont-require-llvm-for-r300.patch,
+  -files/mesa-8.0.4-configure-bsd.patch,
+  -files/mesa-8.1-dont-require-llvm-for-r300.patch,
+  -files/mesa-9.2-dont-require-llvm-for-r300.patch,
+  -files/eselect-mesa.conf.7.11, -files/eselect-mesa.conf.8.0.1,
+  -files/eselect-mesa.conf.8.1:
+  Drop old.
 
 *mesa-10.5.1 (14 Mar 2015)
 
