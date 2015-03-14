@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/asyncio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asyncio/ChangeLog,v 1.1 2015/02/26 05:12:06 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asyncio/ChangeLog,v 1.2 2015/03/14 11:38:58 bman Exp $
+
+  14 Mar 2015; Aaron Bauman <bman@gentoo.org> asyncio-3.4.2.ebuild:
+  add py3.4 support
 
 *asyncio-3.4.2 (26 Feb 2015)
 
