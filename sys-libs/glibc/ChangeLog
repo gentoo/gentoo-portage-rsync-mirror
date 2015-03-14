@@ -1,6 +1,22 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1040 2015/02/17 08:13:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1041 2015/03/14 08:19:41 vapier Exp $
+
+  14 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  -files/2.10/glibc-2.10-hardened-ssp-compat.patch,
+  -files/2.11/glibc-2.11-hardened-pie.patch,
+  -files/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch,
+  -files/2.5/glibc-2.5-gentoo-stack_chk_fail.c,
+  -files/2.5/glibc-2.5-hardened-configure-picdefault.patch,
+  -files/2.5/glibc-2.5-hardened-inittls-nosysenter.patch,
+  -files/2.5/glibc-2.5-hardened-pie.patch,
+  -files/2.6/glibc-2.6-hardened-inittls-nosysenter.patch,
+  -files/2.7/glibc-2.7-hardened-inittls-nosysenter.patch,
+  -glibc-2.10.1-r1.ebuild, -glibc-2.11.3.ebuild, -glibc-2.12.1-r3.ebuild,
+  -glibc-2.12.2.ebuild, -glibc-2.13-r2.ebuild, -glibc-2.14.1-r2.ebuild,
+  -glibc-2.14.ebuild, -glibc-2.15-r1.ebuild, -glibc-2.15-r2.ebuild,
+  -glibc-2.9_p20081201-r3.ebuild:
+  Move old ebuilds to toolchain overlay.
 
 *glibc-2.20-r2 (17 Feb 2015)
 
