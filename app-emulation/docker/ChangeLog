@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.40 2015/03/03 14:21:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.41 2015/03/14 02:47:43 xarthisius Exp $
+
+  14 Mar 2015; Kacper Kowalik <xarthisius@gentoo.org> docker-1.5.0.ebuild:
+  Check if CPUSETS are enabled in kernel wrt bug #536546 by Dirk Best <mail
+  @dirk-best.de>. Thanks to Tianon <admwiggin@gmail.com> for reporting and
+  fixing it upstream
 
   03 Mar 2015; Kacper Kowalik <xarthisius@gentoo.org> docker-1.5.0.ebuild,
   metadata.xml:

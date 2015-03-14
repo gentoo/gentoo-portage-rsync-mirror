@@ -1,6 +1,13 @@
 # ChangeLog for games-sports/ultimatestunts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.26 2012/07/15 07:37:42 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.27 2015/03/14 02:31:10 mr_bones_ Exp $
+
+*ultimatestunts-0.7.7 (14 Mar 2015)
+
+  14 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ultimatestunts-0.7.7-gcc-4.7.patch,
+  +files/ultimatestunts-0.7.7-paths.patch, +ultimatestunts-0.7.7.ebuild:
+  version bump (bug #503846)
 
   15 Jul 2012; Julian Ospald <hasufell@gentoo.org> ultimatestunts-0.7.6.ebuild,
   +files/ultimatestunts-0.7.6-gcc-4.7.patch:
@@ -138,4 +145,3 @@
   edited by Michael Sterrett <mr_bones_@gentoo.org>, Fernando V.
   <email@missionaccomplish.com>, Andrei Slavoiu <ansla80@yahoo.com>, Adrian
   Fruehwirth <adrian.fruehwirth@gmx.at>, and myself. Closing bug #69976.
-
