@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-9999.ebuild,v 1.6 2012/06/01 02:37:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/drqueue/drqueue-9999.ebuild,v 1.7 2015/03/14 05:11:45 idella4 Exp $
 
-EAPI="3"
-PYTHON_DEPEND="python? 2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+EAPI=5
 
-inherit distutils git-2 user
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1 git-2 user
 
 DESCRIPTION="Render farm managing software"
 HOMEPAGE="http://www.drqueue.org/"
@@ -25,7 +25,7 @@ RDEPEND="X? ( x11-libs/gtk+:2 )
 DEPEND="${RDEPEND}
 	python? ( dev-lang/swig )
 	ruby? ( dev-lang/swig )
-	python? ( dev-python/setuptools )
+	python? ( dev-python/setuptools[${PYTHON_USEDEP}] )
 	>=dev-util/scons-0.97"
 
 pkg_setup() {
@@ -44,8 +44,9 @@ src_compile() {
 
 	if use python; then
 		einfo "compiling python bindings"
-		cd "${S}"/python/
-		distutils_src_compile
+		pushd  "${S}"/python/ > /dev/null
+		distutils-r1_src_compile
+		popd > /dev/null
 	fi
 
 	if use ruby; then
@@ -99,8 +100,8 @@ src_install() {
 		done
 	fi
 	for cmd in ${commands[@]} ; do
-		dosed 's|SHLIB=\$DRQUEUE_ROOT/bin/shlib|SHLIB=/var/lib/drqueue/bin/shlib|' \
-				/var/lib/drqueue/bin/${cmd} || die "dosed failed"
+		sed -e 's|SHLIB=\$DRQUEUE_ROOT/bin/shlib|SHLIB=/var/lib/drqueue/bin/shlib|' \
+			-i "${D}"var/lib/drqueue/bin/${cmd} || die "sed failed"
 		dosym /var/lib/drqueue/bin/${cmd} /usr/bin/ \
 				|| die "dosym failed"
 	done
@@ -113,13 +114,13 @@ src_install() {
 
 	if use python; then
 		cd "${S}"/python/
-		distutils_src_install
+		distutils-r1_src_install
 		dodir /var/lib/${PN}/python
 
 		# Install DRKeewee web service and example python scripts
 		insinto /var/lib/${PN}/python
 		doins -r DrKeewee examples || die "doins failed"
-		python_convert_shebangs -r 2 "${ED}var/lib/${PN}/python"
+		python_fix_shebang "${ED}var/lib/${PN}/python"
 	fi
 
 	if use ruby; then
@@ -135,11 +136,5 @@ pkg_postinst() {
 	if use python ; then
 		einfo
 		einfo "DrKeewee can be found in /var/lib/drqueue/python"
-
-		distutils_pkg_postinst
 	fi
-}
-
-pkg_postrm() {
-	use python && distutils_pkg_postrm
 }
