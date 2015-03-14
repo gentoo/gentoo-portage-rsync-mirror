@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-ssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.33 2015/01/19 19:51:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.34 2015/03/14 00:06:16 mrueg Exp $
+
+  14 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -ruby-ssl-1.ebuild,
+  -ruby-ssl-3.ebuild, -ruby-ssl-4.ebuild, -ruby-ssl-5.ebuild:
+  Remove old.
 
 *ruby-ssl-7 (19 Jan 2015)
 *ruby-ssl-6 (19 Jan 2015)

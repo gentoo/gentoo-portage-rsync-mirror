@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mod_survey
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/ChangeLog,v 1.8 2014/08/10 20:13:58 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/ChangeLog,v 1.9 2015/03/14 00:10:13 mrueg Exp $
+
+  14 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -mod_survey-3.2.4.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mod_survey-3.2.4.ebuild,
   mod_survey-3.2.5.ebuild:
