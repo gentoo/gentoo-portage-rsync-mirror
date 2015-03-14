@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/etswitch-0.1.14.ebuild,v 1.8 2009/11/26 19:48:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/etswitch/etswitch-0.1.14.ebuild,v 1.9 2015/03/14 22:34:25 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="*nix minimizer for a few games"
@@ -24,14 +24,17 @@ DEPEND="${RDEPEND}
 	x11-proto/recordproto
 	x11-proto/xf86vidmodeproto"
 
-PATCHES=( "${FILESDIR}"/${P}-desktop-entry.patch "${FILESDIR}"/${P}-glibc.patch )
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-desktop-entry.patch \
+		"${FILESDIR}"/${P}-glibc.patch
+}
 
 src_configure() {
 	egamesconf --datadir=/usr/share
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
+	default
 	prepgamesdirs
 }
