@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.19.0.ebuild,v 1.2 2015/02/12 07:26:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.21.0.ebuild,v 1.1 2015/03/14 17:50:42 yngwin Exp $
 
 EAPI=5
-
 inherit eutils fdo-mime bash-completion-r1 multilib toolchain-funcs
 
 DESCRIPTION="Ebook management application"
@@ -31,20 +30,28 @@ LICENSE="
 	PSF-2
 	unRAR
 "
-
 KEYWORDS="~amd64 ~arm ~x86"
 SLOT="0"
 IUSE="+udisks"
 
-# Note, dropped dep on 	>=app-text/poppler-0.20.2:=[qt4,xpdf-headers(+)] as #1, its qt5 now, and
-# 2, because repoman blew up when it was there, and my installed copy doesnt seem to link to it.
-
 COMMON_DEPEND="
 	>=app-text/podofo-0.8.2:=
+	>=app-text/poppler-0.26.5[qt5]
 	>=dev-lang/python-2.7.1:2.7[sqlite,ssl]
 	>=dev-libs/chmlib-0.40:=
-	>=dev-libs/icu-4.4:=
 	dev-libs/glib:2
+	>=dev-libs/icu-4.4:=
+	>=dev-python/apsw-3.7.17[python_targets_python2_7(-)]
+	>=dev-python/beautifulsoup-3.0.5:python-2[python_targets_python2_7(-)]
+	>=dev-python/dnspython-1.6.0[python_targets_python2_7(-)]
+	>=dev-python/cssselect-0.7.1[python_targets_python2_7(-)]
+	>=dev-python/cssutils-0.9.9[python_targets_python2_7(-)]
+	>=dev-python/dbus-python-0.82.2[python_targets_python2_7(-)]
+	>=dev-python/lxml-3.2.1[python_targets_python2_7(-)]
+	>=dev-python/mechanize-0.1.11[python_targets_python2_7(-)]
+	dev-python/netifaces[python_targets_python2_7(-)]
+	>=dev-python/python-dateutil-1.4.1[python_targets_python2_7(-)]
+	>=dev-python/PyQt5-5.2.0[gui,svg,webkit,widgets,network,printsupport,python_targets_python2_7(-)]
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
@@ -52,31 +59,18 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	>=media-libs/freetype-2:=
 	>=media-libs/libmtp-1.1.5:=
+	>=media-libs/libwmf-0.2.8
 	sys-libs/zlib
-	udisks? ( virtual/libudev )
+	virtual/libusb:1=
+	virtual/python-imaging[python_targets_python2_7(-)]
+	virtual/ttf-fonts
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
-	>=dev-python/apsw-3.7.17[python_targets_python2_7(-)]
-	>=dev-python/beautifulsoup-3.0.5:python-2[python_targets_python2_7(-)]
-	dev-python/netifaces[python_targets_python2_7(-)]
-	>=dev-python/dnspython-1.6.0[python_targets_python2_7(-)]
-	>=dev-python/cssselect-0.7.1[python_targets_python2_7(-)]
-	>=dev-python/cssutils-0.9.9[python_targets_python2_7(-)]
-	>=dev-python/dbus-python-0.82.2[python_targets_python2_7(-)]
-	>=dev-python/lxml-3.2.1[python_targets_python2_7(-)]
-	>=dev-python/mechanize-0.1.11[python_targets_python2_7(-)]
-	>=dev-python/python-dateutil-1.4.1[python_targets_python2_7(-)]
-	>=dev-python/PyQt5-5.2.0[gui,svg,webkit,widgets,network,printsupport,python_targets_python2_7(-)]
-	media-fonts/liberation-fonts
-	>=media-libs/libwmf-0.2.8
-	virtual/libusb:1=
-	virtual/python-imaging[python_targets_python2_7(-)]
-	>=x11-misc/xdg-utils-1.0.2-r2"
-
+	>=x11-misc/xdg-utils-1.0.2-r2
+	udisks? ( virtual/libudev )"
 RDEPEND="${COMMON_DEPEND}
 	udisks? ( || ( sys-fs/udisks:2 sys-fs/udisks:0 ) )"
-
 DEPEND="${COMMON_DEPEND}
 	>=dev-python/setuptools-0.6_rc5
 	>=virtual/podofo-build-0.8.2"
