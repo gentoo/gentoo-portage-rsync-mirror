@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.1.ebuild,v 1.2 2015/01/30 16:57:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.3.ebuild,v 1.1 2015/03/14 16:56:02 lu_zero Exp $
 
 EAPI=5
 
@@ -23,6 +23,8 @@ elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
 else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
+
+SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-11.tar.xz )"
 
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
 SLOT="0/10"
@@ -135,7 +137,6 @@ REQUIRED_USE="bindist? ( !faac !openssl !fdk )
 "
 
 # Test on live ebuild are not possible as they require trunk fate
-RESTRICT="test"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/libavutil/avconfig.h
