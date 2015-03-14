@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword-docs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.8 2015/01/14 11:40:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.9 2015/03/14 18:24:53 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> abiword-docs-3.0.1.ebuild:
+  amd64 stable, bug 534012
 
 *abiword-docs-3.0.1 (14 Jan 2015)
 

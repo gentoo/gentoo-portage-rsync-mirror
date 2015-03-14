@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.64 2015/02/19 21:44:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.65 2015/03/14 18:05:51 mgorny Exp $
+
+  14 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  -nvidia-cg-toolkit-3.1.0013-r2.ebuild:
+  Drop old versions that require emul-linux-x86 packages.
 
 *nvidia-cg-toolkit-3.1.0013-r4 (19 Feb 2015)
 

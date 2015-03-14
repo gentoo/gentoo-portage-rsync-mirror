@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/accerciser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.43 2014/12/14 22:10:54 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.44 2015/03/14 18:22:08 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> accerciser-3.14.0.ebuild:
+  amd64 stable, bug 534012
 
 *accerciser-3.14.0 (14 Dec 2014)
 

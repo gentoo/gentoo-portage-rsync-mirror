@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.310 2015/03/01 13:20:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.311 2015/03/14 18:10:08 mgorny Exp $
+
+  14 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  no-emul-linux-x86/package.mask:
+  Update masked package list in no-emul-linux-x86 profile.
 
   01 Mar 2015; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Mask telepathy-connection-managers[steam] on unsupported arches.

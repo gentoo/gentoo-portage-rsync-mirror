@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.14.2.ebuild,v 1.1 2015/01/24 12:51:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.14.2.ebuild,v 1.2 2015/03/14 18:24:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Gnote"
 
 LICENSE="GPL-3+ FDL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug X"
 
 # Automagic glib-2.32 dep

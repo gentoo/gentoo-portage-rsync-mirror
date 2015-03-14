@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/atkmm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.47 2015/03/06 05:04:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.48 2015/03/14 18:25:43 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> atkmm-2.22.7-r1.ebuild:
+  amd64 stable, bug 534012
 
 *atkmm-2.22.7-r1 (06 Mar 2015)
 

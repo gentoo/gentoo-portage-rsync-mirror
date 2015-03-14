@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qqwing
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qqwing/ChangeLog,v 1.3 2015/01/27 10:08:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qqwing/ChangeLog,v 1.4 2015/03/14 18:29:13 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> qqwing-1.3.3.ebuild:
+  amd64 stable, bug 534012
 
   27 Jan 2015; Pacho Ramos <pacho@gentoo.org> qqwing-1.3.3.ebuild:
   x86 keyword, bug #533344

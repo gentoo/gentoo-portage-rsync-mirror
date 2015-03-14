@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.181 2014/12/23 23:58:12 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.182 2015/03/14 18:24:36 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> tracker-1.2.5.ebuild:
+  amd64 stable, bug 534012
 
 *tracker-1.2.5 (23 Dec 2014)
 

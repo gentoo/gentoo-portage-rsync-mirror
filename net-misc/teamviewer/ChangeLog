@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/teamviewer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.16 2015/03/09 05:29:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.17 2015/03/14 18:05:51 mgorny Exp $
+
+  14 Mar 2015; Michał Górny <mgorny@gentoo.org> -teamviewer-9.0.30203.ebuild:
+  Drop old versions that require emul-linux-x86 packages.
 
 *teamviewer-10.0.36281 (09 Mar 2015)
 

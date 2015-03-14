@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bijiben
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/ChangeLog,v 1.20 2014/12/21 11:50:26 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/ChangeLog,v 1.21 2015/03/14 18:24:18 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> bijiben-3.14.2.ebuild:
+  amd64 stable, bug 534012
 
 *bijiben-3.14.2 (21 Dec 2014)
 

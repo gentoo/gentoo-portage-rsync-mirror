@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.98 2015/01/14 11:10:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.99 2015/03/14 18:24:46 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> workrave-1.10.6.ebuild:
+  amd64 stable, bug 534012
 
 *workrave-1.10.6 (14 Jan 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.mask,v 1.6 2014/12/16 11:56:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-emul-linux-x86/package.mask,v 1.7 2015/03/14 18:10:08 mgorny Exp $
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -32,10 +32,4 @@ app-emulation/emul-linux-x86-xlibs
 # Old version of packages that do not fully support multilib deps. Those
 # versions will be removed along with emul-linux-x86 packages.
 <app-emulation/wine-1.6.1
-=x11-libs/libSM-1.2.1-r1
-=x11-libs/libSM-1.2.2
-
-# Michał Górny <mgorny@gentoo.org> (17 Sep 2014)
-# on behalf of gx86-multilib project <multilib@gentoo.org>
-# Packages that do not support multilib deps at all. Those packages will
-# need to be updated before emul-linux-x86 packages are removed.
+<x11-drivers/ati-drivers-14

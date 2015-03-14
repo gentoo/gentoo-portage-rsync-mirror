@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.120 2015/01/21 10:17:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.121 2015/03/14 18:28:33 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> libgweather-3.14.3.ebuild:
+  amd64 stable, bug 534012
 
 *libgweather-3.14.3 (21 Jan 2015)
 

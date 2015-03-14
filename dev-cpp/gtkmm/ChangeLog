@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.291 2015/03/06 05:06:28 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.292 2015/03/14 18:26:16 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtkmm-2.24.4-r1.ebuild,
+  gtkmm-3.14.0-r1.ebuild:
+  amd64 stable, bug 534012
 
 *gtkmm-3.14.0-r1 (06 Mar 2015)
 *gtkmm-2.24.4-r1 (06 Mar 2015)

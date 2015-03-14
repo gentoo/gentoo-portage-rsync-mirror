@@ -4,11 +4,11 @@ DESCRIPTION=Official plugins for gedit
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Apps/Gedit/ShippedPlugins
 IUSE=+python charmap git terminal zeitgeist python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=>=app-editors/gedit-3.14[python?] >=dev-libs/glib-2.32:2 >=dev-libs/libpeas-1.7.0[gtk,python?] >=x11-libs/gtk+-3.9:3 >=x11-libs/gtksourceview-3.14:3.0 python? ( python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[xml] ) python_targets_python3_4? ( dev-lang/python:3.4[xml] ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] >=app-editors/gedit-3.14[introspection,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-libs/libpeas[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] >=dev-python/dbus-python-0.82[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/pycairo[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/pygobject:3[cairo,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] >=x11-libs/gtk+-3.9:3[introspection] >=x11-libs/gtksourceview-3.14:3.0[introspection] x11-libs/pango[introspection] x11-libs/gdk-pixbuf:2[introspection] ) charmap? ( >=gnome-extra/gucharmap-3:2.90[introspection] ) git? ( >=dev-libs/libgit2-glib-0.0.6 ) terminal? ( x11-libs/vte:2.91[introspection] ) zeitgeist? ( >=gnome-extra/zeitgeist-0.9.12[introspection] )
 REQUIRED_USE=charmap? ( python ) git? ( python ) python? ( ^^ ( python_targets_python3_3 python_targets_python3_4 ) ) terminal? ( python ) zeitgeist? ( python )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gedit-plugins/3.14/gedit-plugins-3.14.1.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=bd2f4bf76e882b2a45f842c2602af195
+_md5_=555c9980b14a3fe19c03031c8bff0ada

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.6.ebuild,v 1.1 2015/01/14 11:10:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.6.ebuild,v 1.2 2015/03/14 18:24:46 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -17,7 +17,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 # dbus support looks to be used only for trying to use panel applets on gnome3!
 IUSE="ayatana doc distribution gnome gstreamer mate nls pulseaudio test xfce"

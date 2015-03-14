@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/vala-common-0.26.2.ebuild,v 1.2 2015/03/03 06:45:18 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/vala-common-0.26.2.ebuild,v 1.3 2015/03/14 18:29:32 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="vala"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x64-solaris"
+KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x64-solaris"
 IUSE=""
 
 # Previously ${PN} was part of dev-lang/vala

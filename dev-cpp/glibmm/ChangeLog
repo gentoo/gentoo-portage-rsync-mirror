@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.231 2015/03/06 19:33:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.232 2015/03/14 18:25:59 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> glibmm-2.42.0-r1.ebuild:
+  amd64 stable, bug 534012
 
   06 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   glibmm-2.42.0-r1.ebuild:

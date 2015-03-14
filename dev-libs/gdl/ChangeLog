@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.109 2014/12/21 12:29:35 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.110 2015/03/14 18:27:18 pacho Exp $
+
+  14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gdl-3.14.0.ebuild:
+  amd64 stable, bug 534012
 
 *gdl-3.14.0 (21 Dec 2014)
 
