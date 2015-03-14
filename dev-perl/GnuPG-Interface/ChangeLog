@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/GnuPG-Interface
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.57 2014/09/05 15:35:56 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.58 2015/03/14 13:56:43 dilfridge Exp $
+
+*GnuPG-Interface-0.520.0 (14 Mar 2015)
+
+  14 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +GnuPG-Interface-0.520.0.ebuild:
+  Version bump
 
   05 Sep 2014; Mikle Kolyada <zlogene@gentoo.org>
   -GnuPG-Interface-0.450.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/mtdev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.48 2015/03/06 07:19:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.49 2015/03/14 13:51:46 maekke Exp $
+
+  14 Mar 2015; Markus Meier <maekke@gentoo.org> mtdev-1.1.5.ebuild:
+  arm stable, bug #530652
 
   06 Mar 2015; Jeroen Roovers <jer@gentoo.org> mtdev-1.1.5.ebuild:
   Stable for HPPA (bug #530652).

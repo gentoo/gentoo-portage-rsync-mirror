@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.60 2015/03/06 07:14:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.61 2015/03/14 13:35:23 maekke Exp $
+
+  14 Mar 2015; Markus Meier <maekke@gentoo.org> wayland-1.6.1.ebuild:
+  arm stable, bug #530652
 
   06 Mar 2015; Jeroen Roovers <jer@gentoo.org> wayland-1.6.1.ebuild:
   Stable for HPPA (bug #530652).

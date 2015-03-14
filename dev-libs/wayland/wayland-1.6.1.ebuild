@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.6.1.ebuild,v 1.10 2015/03/06 07:14:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.6.1.ebuild,v 1.11 2015/03/14 13:35:23 maekke Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="doc static-libs"
 
 RDEPEND=">=dev-libs/expat-2.1.0-r3:=[${MULTILIB_USEDEP}]

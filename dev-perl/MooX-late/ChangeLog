@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/MooX-late
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-late/ChangeLog,v 1.1 2015/03/14 13:54:53 dilfridge Exp $
+
+*MooX-late-0.15.0 (14 Mar 2015)
+
+  14 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +MooX-late-0.15.0.ebuild, +metadata.xml:
+  New package, needed for dev-perl/GnuPG-Interface
