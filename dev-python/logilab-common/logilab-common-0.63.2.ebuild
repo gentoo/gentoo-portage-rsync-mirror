@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.63.2.ebuild,v 1.6 2015/03/13 13:09:34 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.63.2.ebuild,v 1.7 2015/03/13 23:50:54 idella4 Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 # egenix-mx-base tests are optional and supports python2 only.
 DEPEND="${RDEPEND}
-	test? (	$(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' python2_7) )
+	test? (	$(python_gen_cond_dep 'dev-python/egenix-mx-base[${PYTHON_USEDEP}]' python2_7)
+		dev-python/pytz[${PYTHON_USEDEP}] )
 	doc? ( $(python_gen_cond_dep 'dev-python/epydoc[${PYTHON_USEDEP}]' python2_7) )"
 
 PATCHES=(

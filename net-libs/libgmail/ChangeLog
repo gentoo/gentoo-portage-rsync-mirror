@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgmail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.22 2015/03/05 15:08:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/ChangeLog,v 1.23 2015/03/13 23:56:45 idella4 Exp $
+
+  13 Mar 2015; Ian Delaney <idella4@gentoo.org> libgmail-0.1.11-r1.ebuild:
+  correction to pkg_setup
 
 *libgmail-0.1.11-r1 (05 Mar 2015)
 

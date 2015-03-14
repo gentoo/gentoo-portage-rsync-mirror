@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.1.11-r1.ebuild,v 1.1 2015/03/05 15:08:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.1.11-r1.ebuild,v 1.2 2015/03/13 23:56:45 idella4 Exp $
 
 EAPI=5
 
@@ -23,5 +23,5 @@ DEPEND="dev-python/clientcookie[${PYTHON_USEDEP}]
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	python-any-r1_pkg_setup
+	python-single-r1_pkg_setup
 }
