@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-av
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.47 2015/03/14 18:43:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/ChangeLog,v 1.48 2015/03/15 13:30:27 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gupnp-av-0.12.7.ebuild:
+  x86 stable, bug 534012
 
   14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gupnp-av-0.12.7.ebuild:
   amd64 stable, bug 534012

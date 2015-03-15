@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.2.0.ebuild,v 1.2 2015/03/14 18:24:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.2.0.ebuild,v 1.3 2015/03/15 13:15:01 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="ftp://libvirt.org/libvirt/glib/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+introspection python +vala"
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )

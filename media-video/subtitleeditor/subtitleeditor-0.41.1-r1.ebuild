@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.41.1-r1.ebuild,v 1.2 2015/03/14 18:42:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.41.1-r1.ebuild,v 1.3 2015/03/15 13:29:39 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="http://download.gna.org/${PN}/$(get_version_component_range 1-2)/${P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug nls opengl"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.381 2015/03/14 18:23:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.382 2015/03/15 13:14:49 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gedit-3.14.3.ebuild:
+  x86 stable, bug 534012
 
   14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gedit-3.14.3.ebuild:
   amd64 stable, bug 534012

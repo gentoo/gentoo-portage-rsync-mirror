@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.284 2015/03/14 18:25:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.285 2015/03/15 13:16:01 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> evince-3.14.2.ebuild:
+  x86 stable, bug 534012
 
   14 Mar 2015; Pacho Ramos <pacho@gentoo.org> evince-3.14.2.ebuild:
   amd64 stable, bug 534012

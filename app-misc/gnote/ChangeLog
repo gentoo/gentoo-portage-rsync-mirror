@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.51 2015/03/14 18:24:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.52 2015/03/15 13:15:13 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnote-3.14.2.ebuild:
+  x86 stable, bug 534012
 
   14 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnote-3.14.2.ebuild:
   amd64 stable, bug 534012

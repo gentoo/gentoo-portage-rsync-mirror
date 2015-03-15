@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.14.0.ebuild,v 1.2 2015/03/14 18:30:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.14.0.ebuild,v 1.3 2015/03/15 13:19:42 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Devhelp"
 
 LICENSE="GPL-2+"
 SLOT="0/3-1" # subslot = 3-(libdevhelp-3 soname version)
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="gedit"
 REQUIRED_USE="gedit? ( ${PYTHON_REQUIRED_USE} )"
 

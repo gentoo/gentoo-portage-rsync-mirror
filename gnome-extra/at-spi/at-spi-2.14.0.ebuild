@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-2.14.0.ebuild,v 1.3 2015/03/14 18:35:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-2.14.0.ebuild,v 1.4 2015/03/15 13:23:53 pacho Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="metapackage"
 SLOT="2"
-KEYWORDS="amd64 ~arm ~hppa ~x86"
+KEYWORDS="amd64 ~arm ~hppa x86"
 IUSE=""
 
 RDEPEND="

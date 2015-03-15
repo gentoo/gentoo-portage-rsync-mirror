@@ -4,10 +4,10 @@ DESCRIPTION=GObject to SQLite object mapper library
 EAPI=5
 HOMEPAGE=https://wiki.gnome.org/Projects/Gom
 IUSE=+introspection debug
-KEYWORDS=amd64 ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 ~ppc ~ppc64 x86
 LICENSE=LGPL-2+
 RDEPEND=>=dev-db/sqlite-3.7:3 >=dev-libs/glib-2.36:2 introspection? ( >=dev-libs/gobject-introspection-1.30.0 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gom/0.3/gom-0.3.0.tar.xz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=120e8f72038466ed5e468568253ddaf8
+_md5_=35091dea73ff42504df214778cc7c9d9

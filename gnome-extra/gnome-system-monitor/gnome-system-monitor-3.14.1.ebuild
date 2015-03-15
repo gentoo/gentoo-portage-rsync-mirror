@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.14.1.ebuild,v 1.3 2015/03/14 18:38:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.14.1.ebuild,v 1.4 2015/03/15 13:26:15 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://help.gnome.org/users/gnome-system-monitor/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="systemd +X"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 RDEPEND="
 	>=dev-libs/glib-2.37.3:2

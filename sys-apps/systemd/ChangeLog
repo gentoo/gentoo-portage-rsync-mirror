@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.355 2015/03/11 16:39:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.356 2015/03/15 13:02:39 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> systemd-216-r3.ebuild:
+  ppc64 stable, bug #525112
 
 *systemd-219-r2 (11 Mar 2015)
 

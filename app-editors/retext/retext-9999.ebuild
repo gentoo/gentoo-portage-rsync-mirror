@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-9999.ebuild,v 1.5 2014/11/14 07:35:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-9999.ebuild,v 1.6 2015/03/15 13:28:46 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python3_{3,4} )
 
-PLOCALES="ca cs cy da de es et eu fr it ja pl pt pt_BR ru sk uk zh_CN zh_TW"
+PLOCALES="ca cs cy da de es et eu fr it ja pl pt pt_BR ru sk uk vi zh_CN zh_TW"
 
 inherit distutils-r1 l10n
 
@@ -29,11 +29,12 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="+spell"
 
-RDEPEND+="
+RDEPEND="
 	dev-python/docutils[${PYTHON_USEDEP}]
 	dev-python/markdown[${PYTHON_USEDEP}]
 	dev-python/markups[${PYTHON_USEDEP}]
-	dev-python/PyQt5[webkit,${PYTHON_USEDEP}]
+	dev-python/pygments[${PYTHON_USEDEP}]
+	dev-python/PyQt5[gui,network,printsupport,webkit,widgets,${PYTHON_USEDEP}]
 	spell? ( dev-python/pyenchant[${PYTHON_USEDEP}] )
 "
 
