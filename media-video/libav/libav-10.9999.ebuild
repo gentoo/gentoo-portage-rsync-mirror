@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.9999.ebuild,v 1.10 2015/01/30 16:57:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10.9999.ebuild,v 1.11 2015/03/15 17:33:24 ulm Exp $
 
 EAPI=5
 
@@ -29,8 +29,8 @@ SLOT="0/10"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
-IUSE="aac alsa amr bindist +bzip2 cdio cpudetection custom-cflags debug doc
-	+encode faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
+IUSE="aac alsa amr +bzip2 cdio cpudetection custom-cflags debug doc	+encode
+	faac fdk frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k mp3
 	+network openssl opus oss pic pulseaudio rtmp schroedinger sdl speex ssl
 	static-libs test theora threads tools truetype v4l vaapi vdpau vorbis vpx X
 	wavpack webp x264 xvid +zlib"
@@ -124,14 +124,13 @@ RDEPEND="${RDEPEND}
 # faac and aac are concurent implementations
 # amr and aac require at least lgpl3
 # x264 requires gpl2
-REQUIRED_USE="bindist? ( !faac !openssl !fdk )
-	rtmp? ( network )
+REQUIRED_USE="rtmp? ( network )
 	amr? ( gpl ) aac? ( gpl ) x264? ( gpl ) X? ( gpl ) cdio? ( gpl )
 	test? ( encode zlib )
 "
 
 # Test on live ebuild are not possible as they require trunk fate
-RESTRICT="test"
+RESTRICT="test faac? ( bindist ) fdk? ( bindist ) openssl? ( bindist )"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/libavutil/avconfig.h

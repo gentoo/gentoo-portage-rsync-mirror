@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1.1-r1.ebuild,v 1.15 2015/01/30 17:15:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1.1-r1.ebuild,v 1.16 2015/03/15 17:45:19 ulm Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
-IUSE="cpu_flags_x86_3dnow cpu_flags_x86_3dnowext +a52 aalib +alsa altivec aqua bidi bindist bl bluray
+IUSE="cpu_flags_x86_3dnow cpu_flags_x86_3dnowext +a52 aalib +alsa altivec aqua bidi bl bluray
 bs2b cddb +cdio cdparanoia cpudetection debug dga
 directfb doc +dts +dv dvb +dvd +dvdnav +enca +encode faac +faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
@@ -169,7 +169,7 @@ fi
 # libvorbis require external tremor to work
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
-REQUIRED_USE="bindist? ( !faac )
+REQUIRED_USE="
 	dvdnav? ( dvd )
 	libass? ( truetype )
 	truetype? ( iconv )
@@ -183,6 +183,7 @@ REQUIRED_USE="bindist? ( !faac )
 	xscreensaver? ( X )
 	xv? ( X )
 	xvmc? ( xv )"
+RESTRICT="faac? ( bindist )"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0_rc4-pkg-config.patch"

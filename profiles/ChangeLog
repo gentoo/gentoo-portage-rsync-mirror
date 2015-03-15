@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9861 2015/03/15 14:03:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9862 2015/03/15 17:32:09 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Mask <app-emulation/wine-1.6.2 for removal in 30 days due to new multilib
+  unmask (bug #543336)
 
   15 Mar 2015; Manuel Rüger <mrueg@gentoo.org> categories:
   Drop rox-* categories

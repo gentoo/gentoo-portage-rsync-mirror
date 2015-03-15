@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.725 2015/02/19 21:51:43 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.726 2015/03/15 17:31:35 grknight Exp $
+
+  15 Mar 2015; Brian Evans <grknight@gentoo.org> files/my.cnf-5.1,
+  files/my.cnf-5.5, files/my.cnf-5.6:
+  Remove commented value from the example config files that no longer exist in
+  MySQL server
 
   19 Feb 2015; Brian Evans <grknight@gentoo.org> mysql-5.6.22.ebuild:
   Update stable 5.6.22 patches to include the configure fix for openssl-1.0.2

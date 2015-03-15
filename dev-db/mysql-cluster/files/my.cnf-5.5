@@ -1,5 +1,5 @@
 # @GENTOO_PORTAGE_EPREFIX@/etc/mysql/my.cnf: The global mysql configuration file.
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/files/my.cnf-5.5,v 1.1 2014/08/03 21:42:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-cluster/files/my.cnf-5.5,v 1.2 2015/03/15 17:37:42 grknight Exp $
 
 # The following options will be passed to all MySQL clients
 [client]
@@ -102,7 +102,6 @@ innodb_additional_mem_pool_size = 2M
 # and upstream wants things to be under @GENTOO_PORTAGE_EPREFIX@/var/lib/mysql/, so that's the route
 # we have to take for the moment
 #innodb_data_home_dir		= @GENTOO_PORTAGE_EPREFIX@/var/lib/mysql/
-#innodb_log_arch_dir		= @GENTOO_PORTAGE_EPREFIX@/var/lib/mysql/
 #innodb_log_group_home_dir	= @GENTOO_PORTAGE_EPREFIX@/var/lib/mysql/
 # you may wish to change this size to be more suitable for your system
 # the max is there to avoid run-away growth on your machine

@@ -4419,7 +4419,6 @@ media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
 media-video/kmplayer:npp - Compile the npp backend that plays xembed style browser plugins.
 media-video/libav:aac - Use external vo-aacenc library for AAC encoding
 media-video/libav:amr - Enable Adaptive Multi-Rate Audio support
-media-video/libav:bindist - Build binary redistributable version without including nonfree decoders and encoders.
 media-video/libav:cdio - Enable audio CD grabbing with dev-libs/libcdio.
 media-video/libav:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs).
 media-video/libav:faac - Use external faac library for AAC encoding
@@ -4455,12 +4454,11 @@ media-video/mjpg-streamer:output_udp - Plugin receiving content over UDP and sto
 media-video/mjpg-streamer:v4l - Uses media-libs/libv4l function mapping for input_uvc plugin
 media-video/mjpg-streamer:www - Installs WWW content
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
-media-video/mplayer:bindist - Enforces license compatibility constraints via REQUIRED_USE.
 media-video/mplayer:bl - Blinkenlights video output
 media-video/mplayer:bluray - Enable playback of Blu-ray filesystems
 media-video/mplayer:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mplayer:cdio - Use libcdio for CD support (instead of cdparanoia)
-media-video/mplayer:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
+media-video/mplayer:cpudetection - Enables runtime CPU detection (useful for binpkgs, compatibility on other CPUs)
 media-video/mplayer:dvdnav - Use forked libdvdnav, navigate menus in GUIs
 media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:faac - Use external faac library for AAC encoding
@@ -4847,7 +4845,6 @@ net-dialup/accel-ppp:valgrind - Compile in valgrind hints
 net-dialup/capi4k-utils:fax - Install capi-fax demo programs
 net-dialup/capi4k-utils:pppd - Installs pppdcapiplugin modules
 net-dialup/capi4k-utils:rcapid - Installs rcapid daemon
-net-dialup/freeradius:bindist - Disallow building the dev-db/firebird module, which is not compatible with GPL-2.
 net-dialup/freeradius:pcap - Build the RADIUS sniffer which requires net-libs/libpcap.
 net-dialup/freeradius-client:scp - Add service type hints derived from username prefix
 net-dialup/freeradius-client:shadow - Enable shadow password support

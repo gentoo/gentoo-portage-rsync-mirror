@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20150214.ebuild,v 1.2 2015/02/14 20:44:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.2_pre20150214.ebuild,v 1.3 2015/03/15 17:45:19 ulm Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
-IUSE="cpu_flags_x86_3dnow cpu_flags_x86_3dnowext a52 aalib +alsa altivec aqua bidi bindist bl bluray
+IUSE="cpu_flags_x86_3dnow cpu_flags_x86_3dnowext a52 aalib +alsa altivec aqua bidi bl bluray
 bs2b cddb +cdio cdparanoia cpudetection debug dga
 directfb doc dts dv dvb +dvd +dvdnav +enca +encode faac faad fbcon
 ftp gif ggi gsm +iconv ipv6 jack joystick jpeg jpeg2k kernel_linux ladspa
@@ -172,7 +172,6 @@ fi
 # radio requires oss or alsa backend
 # xvmc requires xvideo support
 REQUIRED_USE="
-	bindist? ( !faac )
 	dga? ( X )
 	dvdnav? ( dvd )
 	enca? ( iconv )
@@ -187,6 +186,7 @@ REQUIRED_USE="
 	xscreensaver? ( X )
 	xv? ( X )
 	xvmc? ( xv )"
+RESTRICT="faac? ( bindist )"
 
 pkg_setup() {
 	if [[ ${PV} == *9999* ]]; then

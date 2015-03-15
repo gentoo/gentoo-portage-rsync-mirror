@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16417 2015/03/15 14:03:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16418 2015/03/15 17:32:09 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (15 Mar 2015)
+# Ancient wine ebuilds, don't work with new multilib (bug #543336).
+# Masked for removal in 30 days.
+<app-emulation/wine-1.6.2
 
 # Ben de Groot <yngwin@gentoo.org> (15 Mar 2015)
 # These projects have been abandoned upstream. Most mplayer2 devs have moved

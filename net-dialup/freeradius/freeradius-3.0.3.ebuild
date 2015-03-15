@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.3.ebuild,v 1.3 2014/12/28 16:14:40 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.3.ebuild,v 1.4 2015/03/15 17:56:04 ulm Exp $
 
 EAPI=5
 
@@ -23,11 +23,10 @@ LICENSE="GPL-2"
 SLOT="0"
 
 IUSE="
-	bindist debug firebird iodbc kerberos ldap mysql odbc oracle pam pcap
+	debug firebird iodbc kerberos ldap mysql odbc oracle pam pcap
 	postgres python readline sqlite ssl
 "
-
-REQUIRED_USE="bindist? ( !firebird )"
+RESTRICT="firebird? ( bindist )"
 
 RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius

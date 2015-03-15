@@ -8,7 +8,6 @@
 <use>
 	<flag name="aac">Use external vo-aacenc library for AAC encoding</flag>
 	<flag name="amr">Enable Adaptive Multi-Rate Audio support</flag>
-	<flag name="bindist">Build binary redistributable version without including nonfree decoders and encoders.</flag>
 	<flag name="cdio">Enable audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>
 	<flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs).</flag>
 	<flag name="faac">Use external faac library for AAC encoding</flag>

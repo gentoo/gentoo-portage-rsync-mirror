@@ -1,6 +1,12 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.241 2015/03/14 16:56:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.242 2015/03/15 17:33:24 ulm Exp $
+
+  15 Mar 2015; Ulrich Müller <ulm@gentoo.org> libav-9.14.ebuild,
+  libav-9.17.ebuild, libav-10.5.ebuild, libav-10.9999.ebuild,
+  libav-11.2.ebuild, libav-11.3.ebuild, libav-11.9999.ebuild,
+  libav-9999.ebuild, metadata.xml:
+  Add conditional bindist restriction and remove bindist USE flag, bug 541592.
 
 *libav-11.3 (14 Mar 2015)
 

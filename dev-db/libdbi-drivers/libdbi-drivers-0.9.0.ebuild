@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.9.0.ebuild,v 1.15 2014/12/28 15:03:53 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.9.0.ebuild,v 1.16 2015/03/15 17:50:39 ulm Exp $
 
 EAPI=4
 
@@ -11,9 +11,11 @@ SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${P}/${P}.tar.gz"
 HOMEPAGE="http://libdbi-drivers.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
-IUSE="bindist doc firebird mysql oci8 postgres +sqlite static-libs"
+IUSE="doc firebird mysql oci8 postgres +sqlite static-libs"
 KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 SLOT=0
+REQUIRED_USE="|| ( mysql postgres sqlite firebird oci8 )"
+RESTRICT="firebird? ( bindist )"
 
 RDEPEND="
 	>=dev-db/libdbi-0.9.0
@@ -24,11 +26,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	doc? ( app-text/openjade )
-"
-
-REQUIRED_USE="
-	firebird? ( !bindist )
-	|| ( mysql postgres sqlite firebird oci8 )
 "
 
 DOCS="AUTHORS ChangeLog NEWS README README.osx TODO"
