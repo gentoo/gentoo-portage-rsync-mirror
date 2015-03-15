@@ -3252,10 +3252,11 @@ lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxqt-base/lxqt-meta:admin - Install app-admin/lxqt-admin
 lxqt-base/lxqt-meta:filemanager - Install x11-misc/pcmanfm-qt file manager
-lxqt-base/lxqt-meta:icons - Install lxde-base/lxde-icon-theme icon theme (pulls in x11-libs/gtk+)
+lxqt-base/lxqt-meta:icons - Install an icon theme
 lxqt-base/lxqt-meta:lightdm - Install x11-misc/lightdm display manager
 lxqt-base/lxqt-meta:lximage - Install media-gfx/lximage-qt image viewer
 lxqt-base/lxqt-meta:minimal - Do not install x11-wm/openbox window manager
+lxqt-base/lxqt-meta:oxygen - Prefer kde-base/oxygen-icons (default)
 lxqt-base/lxqt-meta:powermanagement - Install lxqt-base/lxqt-powermanagement package
 lxqt-base/lxqt-meta:sddm - Install x11-misc/sddm display manager
 lxqt-base/lxqt-meta:ssh-askpass - Install net-misc/lxqt-openssh-askpass user password prompt tool

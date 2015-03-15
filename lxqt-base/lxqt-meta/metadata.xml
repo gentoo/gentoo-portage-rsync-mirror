@@ -6,14 +6,14 @@
     <flag name="admin">Install <pkg>app-admin/lxqt-admin</pkg></flag>
     <flag name="filemanager">Install <pkg>x11-misc/pcmanfm-qt</pkg>
     file manager</flag>
-    <flag name="icons">Install <pkg>lxde-base/lxde-icon-theme</pkg>
-    icon theme (pulls in <pkg>x11-libs/gtk+</pkg>)</flag>
+    <flag name="icons">Install an icon theme</flag>
     <flag name="lightdm">Install <pkg>x11-misc/lightdm</pkg>
     display manager</flag>
     <flag name="lximage">Install <pkg>media-gfx/lximage-qt</pkg>
     image viewer</flag>
     <flag name="minimal">Do not install <pkg>x11-wm/openbox</pkg>
     window manager</flag>
+    <flag name="oxygen">Prefer <pkg>kde-base/oxygen-icons</pkg> (default)</flag>
     <flag name="powermanagement">Install
     <pkg>lxqt-base/lxqt-powermanagement</pkg> package</flag>
     <flag name="sddm">Install <pkg>x11-misc/sddm</pkg>

@@ -1,6 +1,13 @@
 # ChangeLog for lxqt-base/lxqt-meta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.9 2015/02/20 11:47:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.10 2015/03/15 03:16:22 yngwin Exp $
+
+*lxqt-meta-0.9.0-r2 (15 Mar 2015)
+
+  15 Mar 2015; Ben de Groot <yngwin@gentoo.org> +lxqt-meta-0.9.0-r2.ebuild,
+  metadata.xml:
+  Add dependencies for oxygen-icons (bug #528676) and virtual/ttf-fonts, as they
+  are expected in the default install.
 
 *lxqt-meta-0.9.0-r1 (20 Feb 2015)
 
