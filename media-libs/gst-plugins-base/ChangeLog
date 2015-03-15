@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.264 2015/03/14 18:48:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.265 2015/03/15 11:14:52 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-base-0.10.36-r2.ebuild, gst-plugins-base-1.4.5.ebuild:
+  ppc stable, bug 534012
 
   14 Mar 2015; Pacho Ramos <pacho@gentoo.org>
   gst-plugins-base-0.10.36-r2.ebuild, gst-plugins-base-1.4.5.ebuild:

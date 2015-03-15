@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/json-glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.75 2015/03/14 18:28:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.76 2015/03/15 11:10:18 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org> json-glib-1.0.2-r1.ebuild:
+  ppc stable, bug 534012
 
   14 Mar 2015; Pacho Ramos <pacho@gentoo.org> json-glib-1.0.2-r1.ebuild:
   amd64 stable, bug 534012
