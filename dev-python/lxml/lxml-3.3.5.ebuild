@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.3.5.ebuild,v 1.13 2014/11/24 16:02:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.3.5.ebuild,v 1.14 2015/03/15 16:57:23 monsieurp Exp $
 
 EAPI=5
 
@@ -49,6 +49,15 @@ python_test() {
 	cp -r -l src/lxml/tests "${BUILD_DIR}"/lib/lxml/ || die
 	cp -r -l src/lxml/html/tests "${BUILD_DIR}"/lib/lxml/html/ || die
 	ln -s "${S}"/doc "${BUILD_DIR}"/ || die
+
+	OLDPWD=$(pwd)
+	cd "${BUILD_DIR}" || die "can't cd into ${BUILD_DIR}"
+
+	# Patching test files has to happen at this precise moment.
+	# Not before, not after but now.
+	epatch "${FILESDIR}"/lxml-3.3.x-test_etree.py.patch
+
+	cd "${OLDPWD}"
 
 	local test
 	for test in test.py selftest.py selftest2.py; do

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.7 2015/03/13 20:52:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.8 2015/03/15 17:00:31 tupone Exp $
 
 EAPI="5"
 
@@ -147,7 +147,6 @@ src_prepare() {
 	mv configure.{in,ac}
 	sed -i -e "s:configure.in:configure.ac:" \
 		bootstrap.mk || die "sed failed"
-	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 	# some dirs ship generated autotools, some dont
 	multijob_init

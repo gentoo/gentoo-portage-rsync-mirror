@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.212 2015/03/08 23:53:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.213 2015/03/15 16:57:23 monsieurp Exp $
+
+  15 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/lxml-3.3.x-test_etree.py.patch,
+  +files/lxml-3.4.0-common_imports.py.patch,
+  +files/lxml-3.4.0-test_xslt.py.patch, lxml-3.3.5.ebuild, lxml-3.3.6.ebuild,
+  lxml-3.4.0.ebuild, lxml-3.4.1.ebuild, lxml-3.4.2.ebuild:
+  Patch broken tests in 3.3.x and 3.4.0 versions. Fix bug 439156.
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> lxml-3.4.1.ebuild:
   x86 stable, bug 540290

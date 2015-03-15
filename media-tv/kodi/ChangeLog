@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/kodi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.7 2015/03/13 20:52:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.8 2015/03/15 17:00:31 tupone Exp $
+
+  15 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild,
+  -files/kodi-9999-gentoo.patch:
+  kodi-9999-gentoo.patch accepted upstream
 
   12 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild,
   files/kodi-9999-gentoo.patch:

@@ -1,0 +1,11 @@
+--- build/lib/lxml/tests/common_imports.py.orig	2015-03-08 02:08:53.641449085 +0100
++++ build/lib/lxml/tests/common_imports.py	2015-03-08 02:09:05.047490400 +0100
+@@ -271,7 +271,7 @@
+ 
+ def path2url(path):
+     return urlparse.urljoin(
+-        'file:', pathname2url(path))
++        '', pathname2url(path))
+ 
+ def fileUrlInTestDir(name):
+     return path2url(fileInTestDir(name))

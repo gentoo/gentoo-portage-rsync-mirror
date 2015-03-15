@@ -4,11 +4,11 @@ DESCRIPTION=A Pythonic binding for the libxml2 and libxslt libraries
 EAPI=5
 HOMEPAGE=http://lxml.de/ http://pypi.python.org/pypi/lxml/
 IUSE=beautifulsoup3 doc examples +threads python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris ~arm64
 LICENSE=BSD ElementTree GPL-2 PSF-2
 RDEPEND=>=dev-libs/libxml2-2.7.2 >=dev-libs/libxslt-1.1.23 beautifulsoup3? ( python_targets_python2_7? ( dev-python/beautifulsoup:python-2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) python_targets_python3_3? ( dev-python/beautifulsoup:python-3[python_targets_python3_3(-)?,-python_single_target_python3_3(-),python_targets_python3_4(-)?,-python_single_target_python3_4(-)] ) python_targets_python3_4? ( dev-python/beautifulsoup:python-3[python_targets_python3_3(-)?,-python_single_target_python3_3(-),python_targets_python3_4(-)?,-python_single_target_python3_4(-)] ) ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=mirror://pypi/l/lxml/lxml-3.4.2.tar.gz
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=ceae75073b0b8115c283303d9b5f6f5e
+_md5_=544b894e1e2f4f9e782b6694f9f0e67b

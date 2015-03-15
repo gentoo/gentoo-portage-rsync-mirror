@@ -1,0 +1,15 @@
+--- build/lib/lxml/tests/test_xslt.py.orig	2015-03-08 02:06:17.723881176 +0100
++++ build/lib/lxml/tests/test_xslt.py	2015-03-08 02:08:27.088352843 +0100
+@@ -763,10 +763,10 @@
+ 
+         # now the same thing with a stylesheet base file:// URL
+         called['count'] = 0
+-        expected_url = 'file://BASE/DIR/test.xml'
++        expected_url = 'BASE/DIR/test.xml'
+         xslt = etree.XSLT(etree.XML(
+             stylesheet_xml, parser,
+-            base_url='file://BASE/DIR/FILE'))
++            base_url='BASE/DIR/FILE'))
+ 
+         self.assertEqual(called['count'], 0)
+         result = xslt(etree.XML('<a/>'))
