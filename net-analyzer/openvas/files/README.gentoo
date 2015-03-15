@@ -13,10 +13,10 @@ openvas-nvt-sync (free) or greenbone-nvt-sync (commercial)
 openvas-scapdata-sync (free) or greenbone-scapdata-sync (commercial)
 
 # get cert feed
-openvas-certdata-sync (free) or greenbone-certdata-sync (commercial
+openvas-certdata-sync (free) or greenbone-certdata-sync (commercial)
 
 # Generate initial NVT cache (takes some minutes)
-rc-service openvassd create_cache
+rc-service openvassd create_cache or openvassd --foreground --only-cache
 
 # Start the OpenVAS Scanner
 rc-service openvassd start or systemctl start openvassd.service

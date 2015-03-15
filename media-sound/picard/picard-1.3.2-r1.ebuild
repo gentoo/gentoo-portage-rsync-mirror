@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-1.3.2.ebuild,v 1.1 2015/02/02 17:03:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-1.3.2-r1.ebuild,v 1.1 2015/03/15 10:24:23 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -21,7 +21,7 @@ DEPEND="dev-python/PyQt4[X,${PYTHON_USEDEP}]
 	dev-qt/qtgui:4[accessibility]
 	media-libs/mutagen
 	acoustid? ( >=media-libs/chromaprint-1.0[tools] )
-	cdda? ( >=media-libs/libdiscid-0.1.1 )"
+	cdda? ( dev-python/python-discid )"
 RDEPEND="${DEPEND}"
 
 RESTRICT="test" # doesn't work with ebuilds

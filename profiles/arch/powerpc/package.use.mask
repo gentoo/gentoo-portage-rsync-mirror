@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.237 2015/03/05 10:57:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.238 2015/03/15 10:22:35 yngwin Exp $
+
+# Ben de Groot <yngwin@gentoo.org> (15 Mar 2015)
+# Waiting for keywording in bug 543398
+>=media-sound/picard-1.3.2 cdda
 
 # Michał Górny <mgorny@gentoo.org> (21 Feb 2015)
 # The external QCA plugins are not keyworded on this arch. Since
@@ -126,7 +130,7 @@ sys-kernel/dracut -dracut_modules_systemd
 
 # Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
 # Missing keywords, bug #492820
-net-im/telepathy-connection-managers sipe     
+net-im/telepathy-connection-managers sipe
 
 # Pacho Ramos <pacho@gentoo.org> (31 Oct 2013)
 # Missing keywords, bug #478254
