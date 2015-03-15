@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.10.ebuild,v 1.10 2014/05/15 17:01:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.10.ebuild,v 1.11 2015/03/15 20:51:08 tupone Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic games
 
 DESCRIPTION="a physics based 2-D racer inspired by Micro Machines"
@@ -20,6 +20,7 @@ DEPEND="media-libs/libsdl[sound,video,joystick]
 	>=media-libs/fmod-4.25.07-r1:1
 	virtual/glu
 	virtual/opengl"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch \
@@ -35,12 +36,11 @@ src_configure() {
 }
 
 src_install() {
-	local d,f
+	default
+	local d f
 
-	emake DESTDIR="${D}" install || die "emake install failed"
 	newicon toycars/celica-render.png ${PN}.png
 	make_desktop_entry ${PN} "Toy Cars"
-	dodoc AUTHORS
 
 	for d in toycars toycars_track_editor toycars_vehicle_editor
 	do
