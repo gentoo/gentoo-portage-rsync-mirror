@@ -1,50 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>video</herd>
-<herd>proxy-maintainers</herd>
-<maintainer>
-	<email>nikoli@gmx.us</email>
-	<description>Maintainer. Assign bugs to him</description>
-</maintainer>
-<longdescription lang="en">
-	This fork has several usefull features:
-	1) Uses multithreading out of box.
-	2) Ability to change many settings staying paused.
-	3) Matroska external chapters support.
-	4) Ability to cleanly build with shared libav libraries.
-</longdescription>
-<longdescription lang="ru">
-	Этот форк обладает рядом полезных возможностей:
-	1) Многопоточный ffmpeg.
-	2) Возможность изменить настройки без продолжения воспроизведения.
-	3) Поддержка внешних глав матрёшки.
-	4) Возможность сборки с разделяемыми библиотеками ffmpeg.
-</longdescription>
-<use>
-	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
-	<flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
-	<flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
-	<flag name="cpudetection">Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)</flag>
-	<flag name="dvdnav">Use forked libdvdnav, navigate menus in GUIs</flag>
-	<flag name="enca">Enables support for charset discovery and conversion</flag>
-	<flag name="faad">Use external faad library for AAC decoding</flag>
-	<flag name="md5sum">Enables md5sum video output</flag>
-	<flag name="mng">MNG input support</flag>
-	<flag name="mp3">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support.</flag>
-	<flag name="network">Enables network streaming support</flag>
-	<flag name="nut">Enables support for the NUT container format</flag>
-	<flag name="pnm">Add PNM video output option, to create PPM/PGM/PGMYUV images</flag>
-	<flag name="postproc">Enable image post-processing via libpostproc</flag>
-	<flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>
-	<flag name="quvi">Enable support for streaming sites using <pkg>media-libs/libquvi</pkg></flag>
-	<flag name="radio">Enable V4L2 radio interface and support</flag>
-	<flag name="rar">Enable Unique RAR File Library</flag>
-	<flag name="rtc">Enables usage of the linux real time clock. The alternative is software emulation of rtc</flag>
-	<flag name="shm">Enable support for shm</flag>
-	<flag name="symlink">Copy all binaries and configuration into locations occupied by <pkg>media-video/mplayer</pkg> and thus act like drop-in replacement.</flag>
-	<flag name="tga">Enables Targa video output</flag>
-	<flag name="xanim">Enables support for xanim based codecs</flag>
-	<flag name="yuv4mpeg">Enables yuv4mpeg video output</flag>
-</use>
+  <maintainer>
+    <email>maintainer-needed@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name="bluray">Enable playback of Blu-ray filesystems</flag>
+    <flag name="bs2b">Enable Bauer stereophonic-to-binaural headphone filter</flag>
+    <flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
+    <flag name="cpudetection">Enables runtime CPU detection (useful for
+      bindist, compatibility on other CPUs)
+    </flag>
+    <flag name="dvdnav">Use forked libdvdnav, navigate menus in GUIs</flag>
+    <flag name="enca">Enables support for charset discovery and conversion</flag>
+    <flag name="faad">Use external faad library for AAC decoding</flag>
+    <flag name="md5sum">Enables md5sum video output</flag>
+    <flag name="mng">MNG input support</flag>
+    <flag name="mp3">
+      Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg>
+      instead of relying on ffmpeg support.
+    </flag>
+    <flag name="network">Enables network streaming support</flag>
+    <flag name="nut">Enables support for the NUT container format</flag>
+    <flag name="pnm">Add PNM video output option, to create PPM/PGM/PGMYUV
+      images
+    </flag>
+    <flag name="postproc">Enable image post-processing via libpostproc</flag>
+    <flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>
+    <flag name="quvi">
+      Enable support for streaming sites using <pkg>media-libs/libquvi</pkg>
+    </flag>
+    <flag name="radio">Enable V4L2 radio interface and support</flag>
+    <flag name="rar">Enable Unique RAR File Library</flag>
+    <flag name="rtc">Enables usage of the linux real time clock. The
+      alternative is software emulation of rtc
+    </flag>
+    <flag name="shm">Enable support for shm</flag>
+    <flag name="symlink">Copy all binaries and configuration into locations
+      occupied by <pkg>media-video/mplayer</pkg> and thus act like drop-in
+      replacement.
+    </flag>
+    <flag name="tga">Enables Targa video output</flag>
+    <flag name="xanim">Enables support for xanim based codecs</flag>
+    <flag name="yuv4mpeg">Enables yuv4mpeg video output</flag>
+  </use>
 </pkgmetadata>
