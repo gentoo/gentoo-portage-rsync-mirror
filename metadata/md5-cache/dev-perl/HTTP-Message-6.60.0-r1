@@ -8,5 +8,5 @@ LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=!<dev-perl/libwww-perl-6 virtual/perl-Compress-Raw-Zlib >=dev-perl/URI-1.10 >=virtual/perl-Encode-2.210.0 >=dev-perl/HTTP-Date-6.0.0 dev-perl/IO-HTML >=dev-perl/Encode-Locale-1.0.0 >=dev-perl/LWP-MediaTypes-6.0.0 >=virtual/perl-IO-Compress-2.021 >=virtual/perl-MIME-Base64-2.1 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/G/GA/GAAS/HTTP-Message-6.06.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	b5d8036f23139ccadead91c9a6e92f5c	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=c9fce565762764f3b0762ef0e0467b67

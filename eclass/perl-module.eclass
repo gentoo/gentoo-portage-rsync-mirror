@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.163 2015/03/14 14:32:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.164 2015/03/15 17:23:09 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -114,6 +114,8 @@ perl-module_src_configure() {
 	[[ ${SRC_PREP} = yes ]] && return 0
 	SRC_PREP="yes"
 
+	perl_check_env
+
 	perl_set_version
 
 	[[ -z ${pm_echovar} ]] && export PERL_MM_USE_DEFAULT=1
@@ -127,13 +129,25 @@ perl-module_src_configure() {
 	fi
 
 	if [[ ( ${PREFER_BUILDPL} == yes || ! -f Makefile.PL ) && -f Build.PL ]] ; then
-		einfo "Using Module::Build"
-		if [[ ${DEPEND} != *virtual/perl-Module-Build* && ${PN} != Module-Build ]] ; then
-			eqawarn "QA Notice: The ebuild uses Module::Build but doesn't depend on it."
-			eqawarn "           Add virtual/perl-Module-Build to DEPEND!"
-			if [[ -n ${PERLQAFATAL} ]]; then
-				eerror "Bailing out due to PERLQAFATAL=1";
-				die;
+		if grep -q '\(use\|require\)\s*Module::Build::Tiny' Build.PL ; then
+			einfo "Using Module::Build::Tiny"
+			if [[ ${DEPEND} != *dev-perl/Module-Build-Tiny* && ${PN} != Module-Build-Tiny ]]; then
+				eqawarn "QA Notice: The ebuild uses Module::Build::Tiny but doesn't depend on it."
+				eqawarn " Add dev-perl/Module-Build-Tiny to DEPEND!"
+				if [[ -n ${PERLQAFATAL} ]]; then
+					eerror "Bailing out due to PERLQAFATAL=1";
+					die
+				fi
+			fi
+		else
+			einfo "Using Module::Build"
+			if [[ ${DEPEND} != *virtual/perl-Module-Build* && ${PN} != Module-Build ]] ; then
+				eqawarn "QA Notice: The ebuild uses Module::Build but doesn't depend on it."
+				eqawarn " Add virtual/perl-Module-Build to DEPEND!"
+				if [[ -n ${PERLQAFATAL} ]]; then
+					eerror "Bailing out due to PERLQAFATAL=1";
+					die
+				fi
 			fi
 		fi
 		set -- \
@@ -256,23 +270,22 @@ perl-module_src_install() {
 
 	local f
 
-	if [[ -z ${mytargets} ]] ; then
+	if [[ -f Build ]]; then
+		mytargets="${mytargets:-install}"
+		mbparams="${mbparams:---pure}"
+		einfo "./Build ${mytargets} ${mbparams}"
+		./Build ${mytargets} ${mbparams} \
+			|| die "./Build ${mytargets} ${mbparams} failed"
+	elif [[ -f Makefile ]]; then
 		case "${CATEGORY}" in
 			dev-perl|perl-core) mytargets="pure_install" ;;
 			*)                  mytargets="install" ;;
 		esac
-	fi
-
-	if [[ $(declare -p myinst 2>&-) != "declare -a myinst="* ]]; then
-		local myinst_local=(${myinst})
-	else
-		local myinst_local=("${myinst[@]}")
-	fi
-
-	if [[ -f Build ]] ; then
-		./Build ${mytargets} \
-			|| die "./Build ${mytargets} failed"
-	elif [[ -f Makefile ]] ; then
+		if [[ $(declare -p myinst 2>&-) != "declare -a myinst="* ]]; then
+			local myinst_local=(${myinst})
+		else
+			local myinst_local=("${myinst[@]}")
+		fi
 		emake "${myinst_local[@]}" ${mytargets} \
 			|| die "emake ${myinst_local[@]} ${mytargets} failed"
 	fi
@@ -547,4 +560,54 @@ perl_link_duallife_scripts() {
 		done
 		popd > /dev/null
 	fi
+}
+
+# @FUNCTION: perl_check_env
+# @USAGE: perl_check_env
+# @DESCRIPTION:
+# Checks a blacklist of known-suspect ENV values that can be accidentally set by users
+# doing personal perl work, which may accidentally leak into portage and break the
+# system perl installaton.
+# Dies if any of the suspect fields are found, and tell the user what needs to be unset.
+# There's a workaround, but you'll have to read the code for it.
+perl_check_env() {
+	local errored value;
+
+	for i in PERL_MM_OPT PERL5LIB PERL5OPT PERL_MB_OPT PERL_CORE PERLPREFIX; do
+		# Next unless match
+		[ -v $i ] || continue;
+
+		# Warn only once, and warn only when one of the bad values are set.
+		# record failure here.
+		if [ ${errored:-0} == 0 ]; then
+			if [ -n "${I_KNOW_WHAT_I_AM_DOING}" ]; then
+				elog "perl-module.eclass: Suspicious environment values found.";
+			else
+				eerror "perl-module.eclass: Suspicious environment values found.";
+			fi
+		fi
+		errored=1
+
+		# Read ENV Value
+		eval "value=\$$i";
+
+		# Print ENV name/value pair
+		if [ -n "${I_KNOW_WHAT_I_AM_DOING}" ]; then
+			elog "    $i=\"$value\"";
+		else
+			eerror "    $i=\"$value\"";
+		fi
+	done
+
+	# Return if there were no failures
+	[ ${errored:-0} == 0 ] && return;
+
+	# Return if user knows what they're doing
+	if [ -n "${I_KNOW_WHAT_I_AM_DOING}" ]; then
+		elog "Continuing anyway, seems you know what you're doing."
+		return
+	fi
+
+	eerror "Your environment settings may lead to undefined behavior and/or build failures."
+	die "Please fix your environment ( ~/.bashrc, package.env, ... ), see above for details."
 }

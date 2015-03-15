@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.48 2015/01/02 09:35:02 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.49 2015/03/15 17:03:27 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -41,7 +41,8 @@ inherit eutils ghc-package multilib multiprocessing
 # @ECLASS-VARIABLE: CABAL_EXTRA_CONFIGURE_FLAGS
 # @DESCRIPTION:
 # User-specified additional parameters passed to 'setup configure'.
-# example: /etc/portage/make.conf: CABAL_EXTRA_CONFIGURE_FLAGS=--enable-shared
+# example: /etc/portage/make.conf:
+#    CABAL_EXTRA_CONFIGURE_FLAGS="--enable-shared --enable-executable-dynamic"
 : ${CABAL_EXTRA_CONFIGURE_FLAGS:=}
 
 # @ECLASS-VARIABLE: CABAL_EXTRA_BUILD_FLAGS
@@ -111,7 +112,7 @@ if [[ -n "${CABAL_USE_HSCOLOUR}" ]]; then
 fi
 
 if [[ -n "${CABAL_USE_HOOGLE}" ]]; then
-	# enabled only in ::gentoo-haskell
+	# enabled only in ::haskell
 	CABAL_USE_HOOGLE=
 fi
 
@@ -148,8 +149,9 @@ if [[ -z "${CABAL_BOOTSTRAP}" && -z "${CABAL_FROM_GHC}" ]]; then
 	DEPEND="${DEPEND} >=dev-haskell/cabal-${CABAL_MIN_VERSION}"
 fi
 
-# returns the version of cabal currently in use
-_CABAL_VERSION_CACHE=""
+# returns the version of cabal currently in use.
+# Rarely it's handy to pin cabal version from outside.
+: ${_CABAL_VERSION_CACHE:=""}
 cabal-version() {
 	if [[ -z "${_CABAL_VERSION_CACHE}" ]]; then
 		if [[ "${CABAL_BOOTSTRAP}" ]]; then
@@ -362,7 +364,8 @@ cabal-configure() {
 	# currently cabal does not respect CFLAGS and LDFLAGS on it's own (bug #333217)
 	# so translate LDFLAGS to ghc parameters (without filtering)
 	local flag
-	for flag in $LDFLAGS; do cabalconf+=(--ghc-option="-optl$flag"); done
+	for flag in   $CFLAGS; do cabalconf+=(--ghc-option="-optc$flag"); done
+	for flag in  $LDFLAGS; do cabalconf+=(--ghc-option="-optl$flag"); done
 
 	# disable executable stripping for the executables, as portage will
 	# strip by itself, and pre-stripping gives a QA warning.
@@ -456,10 +459,21 @@ cabal-pkg() {
 # However portage still records the dependency and we can upgrade the package
 # to a later one that's not included with ghc.
 # You can also put a space separated list, eg CABAL_CORE_LIB_GHC_PV="6.6 6.6.1".
+# Those versions are taken as-is from ghc `--numeric-version`.
+# Package manager versions are also supported:
+#     CABAL_CORE_LIB_GHC_PV="7.10.* PM:7.8.4-r1".
 cabal-is-dummy-lib() {
+	local bin_ghc_version=$(ghc-version)
+	local pm_ghc_p=$(best_version dev-lang/ghc)
+	local pm_ghc_version version
+
+	pm_ghc_version=PM:${pm_ghc_p#dev-lang/ghc-}
+
 	for version in ${CABAL_CORE_LIB_GHC_PV[*]}; do
-		[[ "$(ghc-version)" == ${version} ]] && return 0
+		[[ "${bin_ghc_version}" == ${version} ]] && return 0
+		[[ "${pm_ghc_version}"  == ${version} ]] && return 0
 	done
+
 	return 1
 }
 
