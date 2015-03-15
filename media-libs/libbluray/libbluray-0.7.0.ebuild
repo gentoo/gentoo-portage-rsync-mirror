@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.7.0.ebuild,v 1.1 2015/01/29 02:29:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.7.0.ebuild,v 1.2 2015/03/15 01:57:01 yngwin Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="aacs +fontconfig java static-libs +truetype utils +xml"
+IUSE="aacs bdplus +fontconfig java static-libs +truetype utils +xml"
 
 COMMON_DEPEND="
 	xml? ( >=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}] )
@@ -23,6 +23,7 @@ COMMON_DEPEND="
 RDEPEND="
 	${COMMON_DEPEND}
 	aacs? ( >=media-libs/libaacs-0.6.0[${MULTILIB_USEDEP}] )
+	bdplus? ( media-libs/libbdplus[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.6 )
 "
 DEPEND="

@@ -1,27 +1,28 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.18 2014/08/05 09:57:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.19 2015/03/15 01:57:01 yngwin Exp $
 
 EAPI=5
-
 inherit autotools java-pkg-opt-2 git-r3 flag-o-matic eutils multilib-minimal
-EGIT_REPO_URI="git://git.videolan.org/libbluray.git"
 
 DESCRIPTION="Blu-ray playback libraries"
 HOMEPAGE="http://www.videolan.org/developers/libbluray.html"
+EGIT_REPO_URI="git://git.videolan.org/libbluray.git"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS=""
-IUSE="aacs java static-libs +truetype utils +xml"
+IUSE="aacs bdplus +fontconfig java static-libs +truetype utils +xml"
 
 COMMON_DEPEND="
 	xml? ( >=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}] )
+	fontconfig? ( >=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}] )
 	truetype? ( >=media-libs/freetype-2.5.0.1:2[${MULTILIB_USEDEP}] )
 "
 RDEPEND="
 	${COMMON_DEPEND}
 	aacs? ( >=media-libs/libaacs-0.6.0[${MULTILIB_USEDEP}] )
+	bdplus? ( media-libs/libbdplus[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.6 )
 "
 DEPEND="
@@ -60,6 +61,7 @@ multilib_src_configure() {
 	ECONF_SOURCE="${S}" econf \
 		--disable-optimizations \
 		$(multilib_native_use_enable utils examples) \
+		$(use_with fontconfig) \
 		$(use_with truetype freetype) \
 		$(use_enable static-libs static) \
 		$(use_with xml libxml2) \

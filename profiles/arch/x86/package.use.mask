@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.150 2015/03/01 13:20:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.151 2015/03/15 01:55:12 yngwin Exp $
 
 # This file requires >=portage-2.1.1
+
+# Ben de Groot <yngwin@gentoo.org> (15 Mar 2015)
+# media-libs/libbdplus is keyworded on x86, so unmask the useflag
+media-libs/libbluray -bdplus
 
 # Michał Górny <mgorny@gentoo.org> (01 Mar 2015)
 # pidgin-opensteamworks is only available for amd64, ppc32 and x86

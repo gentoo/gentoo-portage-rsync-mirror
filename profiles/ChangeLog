@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9855 2015/03/14 20:54:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9856 2015/03/15 01:55:12 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2015; Ben de Groot <yngwin@gentoo.org> arch/amd64/package.use.mask,
+  arch/x86/package.use.mask, base/package.use.mask:
+  Globally mask bdplus useflag on media-libs/libbluray, and unmask on amd64/x86
+  where media-libs/libbdplus is keyworded.
 
   14 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Unmask llvm 3.6

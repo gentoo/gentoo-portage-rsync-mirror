@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.71 2015/03/02 09:28:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.72 2015/03/15 01:57:01 yngwin Exp $
+
+  15 Mar 2015; Ben de Groot <yngwin@gentoo.org> libbluray-0.7.0.ebuild,
+  libbluray-9999.ebuild, metadata.xml:
+  Add bdplus useflag (as requested in bug #524396). Sync live ebuild with 0.7.0
+  changes.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libbluray-0.6.2.ebuild:
   Stable for ppc, wrt bug #526004
