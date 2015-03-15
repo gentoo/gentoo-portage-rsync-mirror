@@ -97,9 +97,7 @@ src_compile() {
 	if use build-kernel ; then
 		if has_version "<sys-freebsd/freebsd-ubin-10.0"; then
 			cd "${WORKDIR}"/usr.bin/bmake || die
-			local CC_SAVE="${CC}"
 			CC=${CHOST}-gcc freebsd_src_compile
-			export CC="${CC_SAVE}"
 			export BMAKE="${WORKDIR}/usr.bin/bmake/make"
 		fi
 		cd "${S}/$(tc-arch-kernel)/compile/${KERN_BUILD}" || die
