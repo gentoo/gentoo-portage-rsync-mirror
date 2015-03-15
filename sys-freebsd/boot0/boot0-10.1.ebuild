@@ -68,7 +68,7 @@ src_compile() {
 		cd "${S}/i386/btx" || die
 		freebsd_src_compile
 		cd "${S}/i386/boot2" || die
-		CC=gcc freebsd_src_compile
+		CC=${CHOST}-gcc freebsd_src_compile
 	fi
 
 	cd "${WORKDIR}/lib/libstand" || die
