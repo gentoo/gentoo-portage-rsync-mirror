@@ -4,10 +4,10 @@ DESCRIPTION=Use shorter versions of class names
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/aliased/
 IUSE=test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~x64-macos
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp virtual/perl-Exporter dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/aliased-0.34.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=3156a5eac0edbc319aadb4ae6088be05
+_md5_=dd5a76d66167201c89862891b135d1be

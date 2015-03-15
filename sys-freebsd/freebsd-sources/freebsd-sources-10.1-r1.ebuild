@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r1.ebuild,v 1.1 2015/03/14 14:12:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r1.ebuild,v 1.2 2015/03/15 18:06:56 mgorny Exp $
 
 EAPI=5
 
@@ -14,6 +14,7 @@ IUSE="+build-kernel debug dtrace profile zfs"
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
 		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz"
 fi
 
@@ -96,13 +97,7 @@ src_compile() {
 	if use build-kernel ; then
 		if has_version "<sys-freebsd/freebsd-ubin-10.0"; then
 			cd "${WORKDIR}"/usr.bin/bmake || die
-			if [[ -e /usr/lib/libgcc.a ]] ; then
-				freebsd_src_compile
-			else
-				local CC_SAVE="${CC}"
-				CC=gcc freebsd_src_compile
-				export CC="${CC_SAVE}"
-			fi
+			CC=${CHOST}-gcc freebsd_src_compile
 			export BMAKE="${WORKDIR}/usr.bin/bmake/make"
 		fi
 		cd "${S}/$(tc-arch-kernel)/compile/${KERN_BUILD}" || die

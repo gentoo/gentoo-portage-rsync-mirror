@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.15-r1.ebuild,v 1.1 2014/11/09 13:51:18 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.15-r1.ebuild,v 1.2 2015/03/15 18:13:54 ulm Exp $
 
 EAPI=5
 
@@ -15,12 +15,12 @@ PVM=$(get_version_component_range 1-2)
 SRC_URI="
 	http://downloads.ghostscript.com/public/${MY_P}.tar.bz2
 	mirror://gentoo/${PN}-9.12-patchset-1.tar.bz2
-	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )"
+	djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz )"
 
 LICENSE="AGPL-3 CPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="bindist cups dbus djvu gtk idn linguas_de static-libs X"
+IUSE="cups dbus djvu gtk idn linguas_de static-libs X"
 
 COMMON_DEPEND="
 	app-text/libpaper
@@ -32,9 +32,9 @@ COMMON_DEPEND="
 	>=media-libs/tiff-4.0.1:0=
 	>=sys-libs/zlib-1.2.7:=
 	virtual/jpeg:0
-	!bindist? ( djvu? ( app-text/djvu ) )
 	cups? ( >=net-print/cups-1.3.8 )
 	dbus? ( sys-apps/dbus )
+	djvu? ( app-text/djvu )
 	gtk? ( || ( x11-libs/gtk+:3 x11-libs/gtk+:2 ) )
 	idn? ( net-dns/libidn )
 	X? ( x11-libs/libXt x11-libs/libXext )
@@ -64,8 +64,8 @@ for X in ${LANGS} ; do
 done
 
 pkg_setup() {
-	if use bindist && use djvu; then
-		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
+	if use djvu; then
+		ewarn "With USE=\"djvu\", distribution of binaries is restricted!"
 		ewarn "See http://djvu.sourceforge.net/gsdjvu/COPYING for details on licensing issues."
 	fi
 }
@@ -90,7 +90,7 @@ src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/patches/"
 	epatch
 
-	if ! use bindist && use djvu ; then
+	if use djvu ; then
 		unpack gsdjvu-${GSDJVU_PV}.tar.gz
 		cp gsdjvu-${GSDJVU_PV}/gsdjvu "${S}"
 		cp gsdjvu-${GSDJVU_PV}/gdevdjvu.c "${S}"/base
@@ -163,7 +163,7 @@ src_configure() {
 		$(use_with idn libidn) \
 		$(use_with X x)
 
-	if ! use bindist && use djvu ; then
+	if use djvu ; then
 		sed -i -e 's!$(DD)bbox.dev!& $(DD)djvumask.dev $(DD)djvusep.dev!g' \
 			"${S}"/Makefile || die "sed failed"
 	fi
@@ -185,7 +185,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install-so install
 
-	if ! use bindist && use djvu ; then
+	if use djvu ; then
 		dobin gsdjvu
 	fi
 

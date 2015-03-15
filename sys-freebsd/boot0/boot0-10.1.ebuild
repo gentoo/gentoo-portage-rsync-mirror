@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-10.1.ebuild,v 1.1 2015/03/08 14:01:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-10.1.ebuild,v 1.2 2015/03/15 18:18:23 mgorny Exp $
 
 EAPI=3
 
@@ -62,6 +62,15 @@ src_compile() {
 		cd "${S}/libstand32" || die
 		freebsd_src_compile
 	fi
+
+	# bug542676
+	if [[ $(tc-getCC) == *clang* ]]; then
+		cd "${S}/i386/btx" || die
+		freebsd_src_compile
+		cd "${S}/i386/boot2" || die
+		CC=${CHOST}-gcc freebsd_src_compile
+	fi
+
 	cd "${WORKDIR}/lib/libstand" || die
 	freebsd_src_compile
 

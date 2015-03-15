@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.108 2015/03/14 14:12:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.109 2015/03/15 18:06:56 mgorny Exp $
+
+  15 Mar 2015; Michał Górny <mgorny@gentoo.org> freebsd-sources-10.1-r1.ebuild:
+  Support upgrades from 9.x. https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/70 by nigoro.
 
 *freebsd-sources-10.1-r1 (14 Mar 2015)
 

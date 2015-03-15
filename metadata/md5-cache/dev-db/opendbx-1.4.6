@@ -3,12 +3,12 @@ DEPEND=mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) sqlite? ( <dev-d
 DESCRIPTION=OpenDBX - A database abstraction layer
 EAPI=5
 HOMEPAGE=http://www.linuxnetworks.de/doc/index.php/OpenDBX
-IUSE=bindist firebird +mysql oracle postgres sqlite sqlite3
+IUSE=firebird +mysql oracle postgres sqlite sqlite3
 KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
 RDEPEND=mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql ) sqlite? ( <dev-db/sqlite-3 ) sqlite3? ( =dev-db/sqlite-3* ) oracle? ( dev-db/oracle-instantclient-basic ) firebird? ( dev-db/firebird )
-REQUIRED_USE=bindist? ( !firebird )
+RESTRICT=firebird? ( bindist )
 SLOT=0
 SRC_URI=http://www.linuxnetworks.de/opendbx/download/opendbx-1.4.6.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
-_md5_=44fc8339d5e82ff568eea63100e749c7
+_md5_=bdbe0d2799e3be8e930b3b1b78249eab

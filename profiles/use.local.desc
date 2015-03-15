@@ -1134,7 +1134,6 @@ app-text/evince:nautilus - Enable property page extension in gnome-base/nautilus
 app-text/evince:t1lib - Enable the Type-1 fonts for the built-in DVI viewer (media-libs/t1lib)
 app-text/evince:xps - Enable XPS viewer using app-text/libgxps
 app-text/getxbook:ocr - Use app-text/tesseract for optical character recognition
-app-text/ghostscript-gpl:bindist - Disable dejavu support for binary distribution because of licensing issue
 app-text/glark:zip - Support for ZIP files using dev-ruby/rubyzip
 app-text/groonga:abort - Enable query abortion
 app-text/groonga:benchmark - Build benchmark programs
@@ -1315,7 +1314,6 @@ dev-db/mysql-cluster:profiling - Add support for statement profiling (requires U
 dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-connector-c++:gcov - Build coverage support
-dev-db/opendbx:bindist - Disable support for dev-db/firebird database which is not GPL compatible.
 dev-db/percona-server:cluster - Add support for NDB clustering (deprecated)
 dev-db/percona-server:community - Enables the community features from upstream.
 dev-db/percona-server:embedded - Build embedded server (libmysqld)

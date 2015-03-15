@@ -5,8 +5,4 @@
 	<email>alicef@gentoo.org</email>
 	<name>Alice Ferrazzi</name>
 </maintainer>
-<use>
-	<flag name="bindist">Disable support for <pkg>dev-db/firebird</pkg> database
-		which is not GPL compatible.</flag>
-</use>
 </pkgmetadata>
