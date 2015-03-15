@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.1_pre20120909.ebuild,v 1.3 2015/03/14 18:54:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.2.1_pre20120909.ebuild,v 1.4 2015/03/15 13:41:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2" # Note: not GPL-2+
 SLOT=0
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="

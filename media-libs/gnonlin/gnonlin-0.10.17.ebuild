@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.17.ebuild,v 1.6 2015/03/14 18:48:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-0.10.17.ebuild,v 1.7 2015/03/15 13:35:11 pacho Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0.10"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="doc test"
 
 RDEPEND=">=media-libs/gstreamer-0.10.30:0.10

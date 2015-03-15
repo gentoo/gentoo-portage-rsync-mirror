@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-1.4.0.ebuild,v 1.2 2015/03/14 18:48:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gnonlin/gnonlin-1.4.0.ebuild,v 1.3 2015/03/15 13:35:11 pacho Exp $
 
 EAPI="5"
 inherit gst-plugins10
@@ -10,7 +10,7 @@ HOMEPAGE="http://gnonlin.sourceforge.net"
 
 LICENSE="LGPL-2"
 SLOT="1.0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND="

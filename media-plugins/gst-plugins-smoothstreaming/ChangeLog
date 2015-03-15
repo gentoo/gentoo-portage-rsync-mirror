@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-smoothstreaming
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-smoothstreaming/ChangeLog,v 1.11 2015/03/14 18:53:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-smoothstreaming/ChangeLog,v 1.12 2015/03/15 13:40:20 pacho Exp $
+
+  15 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  gst-plugins-smoothstreaming-1.4.5.ebuild:
+  x86 stable, bug 534012
 
   14 Mar 2015; Pacho Ramos <pacho@gentoo.org>
   gst-plugins-smoothstreaming-1.4.5.ebuild:

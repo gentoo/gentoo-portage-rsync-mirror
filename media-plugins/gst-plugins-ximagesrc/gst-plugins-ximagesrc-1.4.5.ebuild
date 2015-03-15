@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/gst-plugins-ximagesrc-1.4.5.ebuild,v 1.4 2015/03/15 11:55:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/gst-plugins-ximagesrc-1.4.5.ebuild,v 1.5 2015/03/15 13:41:35 pacho Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit gstreamer
 
 DESCRIPTION="GStreamer plugin for X11 video capture stream"
 
-KEYWORDS="amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="
