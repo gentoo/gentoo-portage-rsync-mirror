@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.160 2015/03/11 14:07:56 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.161 2015/03/15 01:25:19 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -326,7 +326,7 @@ qt4-build_src_configure() {
 		x86-macos)		  conf+=" -arch x86" ;;
 		x86|x86-*)		  conf+=" -arch i386" ;;
 		alpha|arm|ia64|mips|s390) conf+=" -arch $(tc-arch)" ;;
-		arm64|hppa|sh)		conf+=" -arch generic" ;;
+		arm64|hppa|sh)		  conf+=" -arch generic" ;;
 		*) die "$(tc-arch) is unsupported by this eclass. Please file a bug." ;;
 	esac
 
