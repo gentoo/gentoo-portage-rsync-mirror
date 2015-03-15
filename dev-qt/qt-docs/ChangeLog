@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt-docs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-docs/ChangeLog,v 1.1 2015/03/15 02:26:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-docs/ChangeLog,v 1.2 2015/03/15 04:34:26 yngwin Exp $
+
+  15 Mar 2015; Ben de Groot <yngwin@gentoo.org> qt-docs-5.4.1.ebuild:
+  Adjust description
 
 *qtdocumentation-5.4.1 (14 Mar 2015)
 
