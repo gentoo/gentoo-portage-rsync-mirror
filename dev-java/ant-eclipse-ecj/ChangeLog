@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.47 2015/02/10 18:51:46 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.48 2015/03/15 21:09:37 chewi Exp $
+
+*ant-eclipse-ecj-4.4.2 (15 Mar 2015)
+
+  15 Mar 2015; James Le Cuirot <chewi@gentoo.org> +ant-eclipse-ecj-4.4.2.ebuild:
+  Version bump. Fixes issue introduced in last version where the rest of
+  eclipse-ecj was built and included in the jar.
 
   10 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
   -ant-eclipse-ecj-4.2.ebuild:
