@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/relax
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.34 2015/02/07 07:58:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.35 2015/03/15 09:15:32 jlec Exp $
+
+*relax-3.3.7 (15 Mar 2015)
+
+  15 Mar 2015; Justin Lecher <jlec@gentoo.org> +relax-3.3.7.ebuild,
+  relax-3.3.6.ebuild:
+  Version BUmp
 
   07 Feb 2015; Justin Lecher <jlec@gentoo.org> -files/relax-2.1.0-gentoo.patch,
   -files/relax-2.2.1-gentoo.patch, -files/relax-3.0.1-gentoo.patch,

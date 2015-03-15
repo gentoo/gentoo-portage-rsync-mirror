@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9857 2015/03/15 02:30:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9858 2015/03/15 09:15:06 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2015; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Mask media-video/mplayer2 and media-video/smplayer2 for removal in 30 days
+  (bug #519212 and others)
 
   15 Mar 2015; Ben de Groot <yngwin@gentoo.org> updates/1Q-2015:
   Move dev-qt/qtdocumentation to dev-qt/qt-docs as per Qt team policy (bug

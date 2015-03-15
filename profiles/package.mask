@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16415 2015/03/14 20:54:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16416 2015/03/15 09:15:06 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (15 Mar 2015)
+# These projects have been abandoned upstream. Most mplayer2 devs have moved
+# on to media-video/mpv, and users are suggested to do the same. We have
+# media-video/baka-mplayer and media-video/smplayer available as Qt-based GUIs.
+# See bugs 452484, 485994, 512082, 519212. Removal in 30 days.
+media-video/mplayer2
+media-video/smplayer2
 
 # Michael Sterrett <mr_bones_@gentoo.org> (11 Mar 2015)
 # Doesn't build with modern gcc, randomly fails to build (bug #494170)
