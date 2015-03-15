@@ -62,6 +62,15 @@ src_compile() {
 		cd "${S}/libstand32" || die
 		freebsd_src_compile
 	fi
+
+	# bug542676
+	if [[ $(tc-getCC) == *clang* ]]; then
+		cd "${S}/i386/btx" || die
+		freebsd_src_compile
+		cd "${S}/i386/boot2" || die
+		CC=${CHOST}-gcc freebsd_src_compile
+	fi
+
 	cd "${WORKDIR}/lib/libstand" || die
 	freebsd_src_compile
 
