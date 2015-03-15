@@ -1,0 +1,9 @@
+# ChangeLog for media-fonts/eb-garamond
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/eb-garamond/ChangeLog,v 1.1 2015/03/15 10:43:51 yngwin Exp $
+
+*eb-garamond-0.016 (15 Mar 2015)
+
+  15 Mar 2015; Ben de Groot <yngwin@gentoo.org> +eb-garamond-0.016.ebuild,
+  +metadata.xml:
+  Initial import from ebuild submitted by Florian Steinel in bug #542724
