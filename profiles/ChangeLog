@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9859 2015/03/15 10:22:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9861 2015/03/15 14:03:53 mrueg Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2015; Manuel Rüger <mrueg@gentoo.org> categories:
+  Drop rox-* categories
+
+  15 Mar 2015; Manuel Rüger <mrueg@gentoo.org> package.mask:
+  Remove old masks.
 
   15 Mar 2015; Ben de Groot <yngwin@gentoo.org> arch/powerpc/package.use.mask:
   Mask >=media-sound/picard-1.3.2[cdda] while waiting for ppc keywording in bug

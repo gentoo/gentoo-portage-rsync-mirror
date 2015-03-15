@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16416 2015/03/15 09:15:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16417 2015/03/15 14:03:14 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -282,56 +282,6 @@ games-rpg/morrowind-data
 # No one uses it anymore. You can
 # use dev-perl/Geo-IP instead.
 dev-perl/IP-Country
-
-# Manuel Rüger <mrueg@gentoo.org> (17 Jan 2015)
-# Unmaintained. Old eclasses, EAPIs and various bugs.
-# See bug #533642
-# Removal in 30 days.
-rox-base/mime-editor
-rox-base/oroborox
-rox-base/pager
-rox-base/rox
-rox-base/rox-autostart
-rox-base/rox-clib
-rox-base/rox-launch
-rox-base/rox-lib
-rox-base/rox-session
-rox-base/systemtrayn
-rox-base/tasklist
-rox-base/tasktray
-rox-base/thumbs
-rox-base/traylib
-rox-base/volume
-rox-base/xdg-menu
-rox-base/zeroinstall-injector
-rox-extra/archive
-rox-extra/clock
-rox-extra/contacts
-rox-extra/diff
-rox-extra/edit
-rox-extra/fetch
-rox-extra/find
-rox-extra/gnome-thumbnailer
-rox-extra/lithium
-rox-extra/magickthumbnail
-rox-extra/memo
-rox-extra/mp3ogg2wav
-rox-extra/musicbox
-rox-extra/picky
-rox-extra/resolution
-rox-extra/reticker
-rox-extra/ripper
-rox-extra/rox-tail
-rox-extra/rox-wifi
-rox-extra/rox-xplanet
-rox-extra/roxcd
-rox-extra/roxdao
-rox-extra/roxget
-rox-extra/roxiso
-rox-extra/songer
-rox-extra/videothumbnail
-rox-extra/wallpaper
-rox-extra/weather
 
 # Anthony G. Basile <blueness@gentoo.org> (9 Jan 2015)
 # p.mask the -9999 version

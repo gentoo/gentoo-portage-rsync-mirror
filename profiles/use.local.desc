@@ -6262,15 +6262,6 @@ net-wireless/yatebts:bladerf - Build bladeRF transceiver
 net-wireless/yatebts:rad1 - Build RAD1 transceiver
 net-wireless/yatebts:uhd - Build UHD transceiver
 net-wireless/yatebts:usrp1 - Build USRP1 transceiver
-rox-base/rox:video - Enable rox-extra/videothumbnail for creating thumbnails of videos with mplayer or totem.
-rox-extra/archive:ace - Enable .ace extraction via app-arch/unace
-rox-extra/archive:compress - Enable tar.Z and *.Z extraction via app-arch/ncompress
-rox-extra/archive:cpio - Enable .cpio extraction via app-arch/cpio
-rox-extra/archive:rar - Enable .rar extraction via app-arch/unrar
-rox-extra/archive:rpm - Enable .rpm extraction via rpm2cpio from app-arch/rpm
-rox-extra/archive:uuencode - Enable .uue extraction via app-arch/sharutils
-rox-extra/archive:zip - Enable .zip extraction via app-arch/unzip and app-arch/zip
-rox-extra/magickthumbnail:xcf - Enable previews of .xcf files using media-gfx/gimp
 sci-astronomy/casacore:data - Installs measures and data (pulls sci-astronomy/casa-data)
 sci-astronomy/cpl:gasgano - Enable support for sci-astronomy/gasgano file organizer
 sci-astronomy/predict:xforms - Add a "map" client which uses the x11-libs/xforms library for its GUI
