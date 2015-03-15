@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gtkglext
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.96 2014/11/21 09:31:00 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/ChangeLog,v 1.97 2015/03/15 18:54:40 tetromino Exp $
+
+*gtkglext-1.2.0-r3 (15 Mar 2015)
+
+  15 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtkglext-1.2.0-r2.ebuild, +gtkglext-1.2.0-r3.ebuild,
+  +files/gtkglext-1.2.0-gl-configure.patch:
+  Fix broken multilib gl and glu detection (bug #543050, thanks to Bertrand
+  Jacquin). Update license.
 
   21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gtkglext-1.2.0-r1.ebuild:
   Drop old

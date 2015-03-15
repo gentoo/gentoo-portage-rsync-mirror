@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.227 2015/03/08 15:06:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.228 2015/03/15 18:53:38 mgorny Exp $
+
+*xfce4-session-4.12.0-r1 (15 Mar 2015)
+
+  15 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfce4-session-4.12.0-r1.ebuild,
+  -xfce4-session-4.12.0.ebuild:
+  Revbump and block libxfce4ui-4.12.0 to force rebuilding against non-broken
+  libxfce4ui. Add slot operators.
 
 *xfce4-session-4.12.0 (08 Mar 2015)
 
