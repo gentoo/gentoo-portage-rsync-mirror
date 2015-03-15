@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9856 2015/03/15 01:55:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9857 2015/03/15 02:30:44 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Mar 2015; Ben de Groot <yngwin@gentoo.org> updates/1Q-2015:
+  Move dev-qt/qtdocumentation to dev-qt/qt-docs as per Qt team policy (bug
+  457028#c56)
 
   15 Mar 2015; Ben de Groot <yngwin@gentoo.org> arch/amd64/package.use.mask,
   arch/x86/package.use.mask, base/package.use.mask:
