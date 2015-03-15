@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/raine
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.32 2014/05/15 16:39:45 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/ChangeLog,v 1.33 2015/03/15 04:21:02 mr_bones_ Exp $
+
+  15 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> raine-0.51.9.ebuild:
+  EAPI=5
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> raine-0.51.9.ebuild:
   Fix USE dependency on media-libs/libsdl, "audio" USE flag was renamed to

@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.9.ebuild,v 1.6 2014/05/15 16:39:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/raine/raine-0.51.9.ebuild,v 1.7 2015/03/15 04:21:02 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit flag-o-matic eutils games
 
 DESCRIPTION="R A I N E  M680x0 Arcade Emulation"
@@ -32,8 +32,7 @@ src_prepare() {
 		-e "/bindir/s:=.*:=\$(DESTDIR)${GAMES_BINDIR}:" \
 		-e "/sharedir =/s:=.*:=\$(DESTDIR)${GAMES_DATADIR}:" \
 		-e "/mandir/s:=.*:=\$(DESTDIR)/usr/share/man/man6:" \
-		makefile \
-		|| die "sed failed"
+		makefile || die
 	epatch "${FILESDIR}"/${P}-ldflags.patch \
 		"${FILESDIR}"/${P}-underlink.patch \
 		"${FILESDIR}"/${P}-libpng15.patch
@@ -48,11 +47,11 @@ src_compile() {
 	emake \
 		_MARCH="${CFLAGS}" \
 		VERBOSE=1 \
-		${myopts} || die "emake failed"
+		${myopts}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	keepdir "${GAMES_DATADIR}"/${PN}/{roms,artwork,emudx,scripts/raine}
 	dodoc docs/readme.txt
 	prepgamesdirs
