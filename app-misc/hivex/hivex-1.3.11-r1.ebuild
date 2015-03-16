@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.11.ebuild,v 1.6 2015/03/16 14:40:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.11-r1.ebuild,v 1.1 2015/03/16 14:40:42 zerochaos Exp $
 
 EAPI=5
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-USE_RUBY="ruby20"
+USE_RUBY="ruby20 ruby21"
 RUBY_OPTIONAL=yes
 
 PYTHON_COMPAT=(python2_7 python3_{3,4})
@@ -19,7 +19,7 @@ SRC_URI="http://libguestfs.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="ocaml readline +perl python test static-libs ruby"
 
 RDEPEND="

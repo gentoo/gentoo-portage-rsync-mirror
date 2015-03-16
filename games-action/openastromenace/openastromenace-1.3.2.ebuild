@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.3.2.ebuild,v 1.3 2013/12/24 12:51:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.3.2.ebuild,v 1.4 2015/03/16 14:51:45 mr_bones_ Exp $
 
 EAPI=5
 inherit gnome2-utils cmake-utils eutils games
@@ -29,6 +29,7 @@ S=${WORKDIR}/AstroMenace
 src_prepare() {
 	# no messing with CXXFLAGS please.
 	sed -i -e '/-Os/d' CMakeLists.txt || die
+	epatch_user # bug #542930
 }
 
 src_configure() {

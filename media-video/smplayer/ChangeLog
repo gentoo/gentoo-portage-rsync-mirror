@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.160 2015/03/12 08:28:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.161 2015/03/16 14:54:37 yngwin Exp $
+
+*smplayer-14.9.0.6690-r2 (16 Mar 2015)
+
+  16 Mar 2015; Ben de Groot <yngwin@gentoo.org> +smplayer-14.9.0.6690-r2.ebuild:
+  More specific dependencies for USE=streaming. Fixes bug #543498.
 
   12 Mar 2015; Jeroen Roovers <jer@gentoo.org> smplayer-14.9.0.6690-r1.ebuild:
   Marked ~hppa (bug #538802).
