@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.93 2015/03/11 18:46:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.94 2015/03/16 18:41:00 vapier Exp $
 
 EAPI=5
 
@@ -334,7 +334,7 @@ qemu_src_configure() {
 		$(conf_softmmu ncurses curses)
 		$(conf_softmmu nfs libnfs)
 		$(conf_softmmu numa)
-		$(conf_softmmu opengl glx)
+		$(conf_softmmu opengl)
 		$(conf_softmmu png vnc-png)
 		$(conf_softmmu rbd)
 		$(conf_softmmu sasl vnc-sasl)
@@ -393,7 +393,7 @@ qemu_src_configure() {
 		gcc-specs-pie && conf_opts+=( --enable-pie )
 	fi
 
-	einfo "./configure ${conf_opts[*]}"
+	einfo "../configure ${conf_opts[*]}"
 	cd "${builddir}"
 	../configure "${conf_opts[@]}" || die "configure failed"
 

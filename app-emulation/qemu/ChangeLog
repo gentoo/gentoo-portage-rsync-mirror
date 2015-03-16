@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.315 2015/03/12 10:06:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.316 2015/03/16 18:41:00 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> qemu-9999.ebuild:
+  Handle renamed opengl configure flag #543386 by Chase Rayfield.
 
   12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> qemu-2.2.0.ebuild:
   Stable for amd64, wrt bug #542910

@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130925.ebuild,v 1.3 2014/10/20 07:02:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130925.ebuild,v 1.4 2015/03/16 18:49:47 vapier Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 GIT_REV="cba22d36b77da53890bd65fdadd0e63925687af0"
 GIT_SHORT="cba22d3"
@@ -37,6 +37,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-git-version.patch #482804
+
 	cat <<-EOF > "${S}"/config/local/general.h
 #undef BANNER_TIMEOUT
 #define BANNER_TIMEOUT 0
