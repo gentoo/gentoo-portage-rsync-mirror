@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/supertransball2-1.5.ebuild,v 1.5 2010/10/16 19:41:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/supertransball2-1.5.ebuild,v 1.6 2015/03/16 07:27:31 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils versionator games
 
 MY_PV=$(delete_all_version_separators)
@@ -18,7 +19,7 @@ SLOT="0"
 KEYWORDS="x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-image
 	media-libs/sdl-mixer
 	media-libs/sdl-sound
@@ -31,10 +32,13 @@ S=${WORKDIR}/${P}/sources
 src_unpack() {
 	unpack ${A}
 	mv -f "${FILE}" ${P}
+}
 
+src_prepare() {
+	cd "${WORKDIR}"
 	sed -i \
 		-e "s:/usr/share/games:${GAMES_DATADIR}:" \
-		"${DEBIAN_PATCH}" || die "sed patch failed"
+		"${DEBIAN_PATCH}" || die
 
 	epatch "${DEBIAN_PATCH}"
 
@@ -53,13 +57,13 @@ src_unpack() {
 
 src_install() {
 	cd ..
-	dogamesbin ${PN} || die "dogamesbin failed"
+	dogamesbin ${PN}
 	make_desktop_entry ${PN} "Super Transball 2"
-	dodoc readme.txt || die "Installing doc failed"
-	doman debian/supertransball2.6 || die "Installing man page failed"
+	dodoc readme.txt
+	doman debian/supertransball2.6
 
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r demos graphics maps sound || die "doins -r failed"
+	doins -r demos graphics maps sound
 
 	prepgamesdirs
 }

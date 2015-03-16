@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.4.0.ebuild,v 1.2 2014/12/04 13:35:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.7.4.0.ebuild,v 1.3 2015/03/16 07:13:30 jlec Exp $
 
 EAPI=5
 
@@ -25,14 +25,14 @@ IUSE="apbs web"
 
 DEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/pmw[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]
+	media-libs/freeglut
 	media-libs/freetype:2
 	media-libs/glew
-	media-libs/libpng
+	media-libs/libpng:0=
 	media-video/mpeg-tools
 	sys-libs/zlib
-	media-libs/freeglut
+	virtual/pmw[${PYTHON_USEDEP}]
 	apbs? (
 		sci-chemistry/apbs[${PYTHON_USEDEP}]
 		sci-chemistry/pdb2pqr[${PYTHON_USEDEP}]

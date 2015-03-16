@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/supertransball2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/ChangeLog,v 1.5 2010/10/16 19:41:49 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/supertransball2/ChangeLog,v 1.6 2015/03/16 07:27:31 mr_bones_ Exp $
+
+  16 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  supertransball2-1.5.ebuild:
+  EAPI=5
 
   16 Oct 2010; Tupone Alfredo <tupone@gentoo.org>
   supertransball2-1.5.ebuild, +files/supertransball2-1.5-ldflags.patch:
@@ -23,4 +27,3 @@
   11 Feb 2007; <tupone@gentoo.org> +metadata.xml,
   +supertransball2-1.5.ebuild:
   New ebuild by brebs. Bug #109199 by desowin.
-
