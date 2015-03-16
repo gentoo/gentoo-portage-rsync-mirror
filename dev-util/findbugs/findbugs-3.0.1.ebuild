@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/findbugs/findbugs-3.0.1.ebuild,v 1.1 2015/03/14 15:11:23 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/findbugs/findbugs-3.0.1.ebuild,v 1.2 2015/03/16 14:24:51 chewi Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ EANT_GENTOO_CLASSPATH="ant-core,apple-java-extensions-bin,asm-4,bcel,commons-lan
 
 pkg_setup() {
 	java-pkg-2_pkg_setup
-	EANT_GENTOO_CLASSPATH_EXTRA="$(java-pkg_getjars --build-only --with-dependencies saxon-6.5)"
+	use doc && EANT_GENTOO_CLASSPATH_EXTRA="$(java-pkg_getjars --build-only --with-dependencies saxon-6.5)"
 	EANT_EXTRA_ARGS="-Dgitrnum=gentoo -Dxsl.stylesheet.home=${EROOT}usr/share/sgml/docbook/xsl-stylesheets"
 }
 
