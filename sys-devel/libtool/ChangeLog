@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.246 2015/02/23 10:50:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.248 2015/03/16 22:19:07 vapier Exp $
+
+*libtool-2.4.6-r1 (16 Mar 2015)
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/libtool-2.4.6-fuse-ld.patch, +libtool-2.4.6-r1.ebuild:
+  Pass through -fuse-ld to the linking steps.
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> libtool-2.4.4.ebuild:
+  Mark alpha/arm64/ia64/m68k/s390/sh/sparc stable #536696.
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.4.ebuild:
   Stable for ppc64, wrt bug #536696

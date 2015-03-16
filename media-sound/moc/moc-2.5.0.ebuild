@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0.ebuild,v 1.7 2015/01/02 16:45:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0.ebuild,v 1.8 2015/03/16 22:09:00 vapier Exp $
 
 EAPI=5
 
@@ -15,8 +15,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="aac alsa +cache curl debug ffmpeg flac jack libsamplerate mad +magic modplug musepack
 	oss sid sndfile speex timidity tremor +unicode vorbis wavpack"
 
-# libltdl from libtool is used at runtime
-RDEPEND=">=sys-devel/libtool-2.2.6b
+RDEPEND=">=dev-libs/libltdl-2:0
 	sys-libs/ncurses[unicode?]
 	aac? ( media-libs/faad2 )
 	alsa? ( media-libs/alsa-lib )
@@ -71,7 +70,7 @@ src_configure() {
 		$(use_with vorbis vorbis $(usex tremor tremor ""))
 		$(use_with wavpack)
 		$(use_with curl)
-		)
+	)
 
 	econf "${myconf[@]}"
 }
