@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.29 2015/02/27 11:13:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.30 2015/03/16 06:13:02 jer Exp $
+
+  16 Mar 2015; Jeroen Roovers <jer@gentoo.org> -unidecode-0.04.14.ebuild:
+  Old.
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> unidecode-0.04.16.ebuild:
   Stable for sparc, wrt bug #530110

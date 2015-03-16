@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.8.ebuild,v 1.7 2013/05/28 23:37:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.8.ebuild,v 1.8 2015/03/16 06:06:44 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils multilib
 
 DESCRIPTION="provide a uniform API and user configuration for joysticks and game controllers"
@@ -25,20 +25,20 @@ src_prepare() {
 src_compile() {
 	LDFLAGS+=" -Wl,-soname,libjsw.so.1"
 	cd libjsw
-	emake || die
+	emake
 	ln -s libjsw.so.${PV} libjsw.so
 }
 
 src_install() {
 	insinto /usr/include
-	doins include/jsw.h || die
+	doins include/jsw.h
 
 	dodoc README
 	docinto jswdemos
 	dodoc jswdemos/*
 
 	cd "${S}"/libjsw
-	dolib.so libjsw.so.${PV} || die
+	dolib.so libjsw.so.${PV}
 	dosym libjsw.so.${PV} /usr/$(get_libdir)/libjsw.so
 	dosym libjsw.so.${PV} /usr/$(get_libdir)/libjsw.so.1
 	doman man/*

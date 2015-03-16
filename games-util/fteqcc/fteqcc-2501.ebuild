@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.5 2010/01/20 20:09:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/fteqcc/fteqcc-2501.ebuild,v 1.6 2015/03/16 06:29:10 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic
 
 DESCRIPTION="QC compiler"
@@ -33,10 +33,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake BASE_CFLAGS="${CFLAGS} -Wall" || die "emake qcc failed"
+	emake BASE_CFLAGS="${CFLAGS} -Wall"
 }
 
 src_install() {
-	newbin fteqcc.bin fteqcc || die "newbin fteqcc.bin failed"
+	newbin fteqcc.bin fteqcc
 	dodoc readme.txt
 }
