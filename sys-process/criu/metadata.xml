@@ -1,8 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>virtualization</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>dlan@gentoo.org</email>
+		<name>Yixun Lan</name>
 	</maintainer>
 	<use>
 		<flag name='setproctitle'>Make process titles of service workers to be more verbose</flag>
