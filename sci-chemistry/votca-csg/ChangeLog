@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.27 2015/01/02 22:06:18 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.28 2015/03/16 08:23:47 ago Exp $
+
+  16 Mar 2015; Agostino Sarubbo <ago@gentoo.org> votca-csg-1.2.4-r1.ebuild:
+  Stable for x86, wrt bug #526968
 
   02 Jan 2015; Chema Alonso <nimiux@gentoo.org> votca-csg-1.2.4-r1.ebuild:
   Stable for amd64 wrt bug #526968

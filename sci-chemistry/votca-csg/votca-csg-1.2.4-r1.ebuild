@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.4-r1.ebuild,v 1.2 2015/01/02 22:06:18 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.4-r1.ebuild,v 1.3 2015/03/16 08:23:47 ago Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.votca.org"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-macos"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-macos"
 
 #perl is only used for scripts
 RDEPEND="~sci-libs/votca-tools-${PV}
