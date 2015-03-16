@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.9999.ebuild,v 1.3 2015/03/15 17:33:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.9999.ebuild,v 1.4 2015/03/16 10:24:32 lu_zero Exp $
 
 EAPI=5
 
@@ -23,6 +23,8 @@ elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
 else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
+
+SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-11.tar.xz )"
 
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
 SLOT="0/10"
@@ -132,9 +134,7 @@ REQUIRED_USE="rtmp? ( network )
 	test? ( encode zlib )
 	fontconfig? ( truetype )
 "
-
-# Test on live ebuild are not possible as they require trunk fate
-RESTRICT="test faac? ( bindist ) fdk? ( bindist ) openssl? ( bindist )"
+RESTRICT="faac? ( bindist ) fdk? ( bindist ) openssl? ( bindist )"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/libavutil/avconfig.h
@@ -324,6 +324,6 @@ multilib_src_install_all() {
 }
 
 multilib_src_test() {
-	LD_LIBRARY_PATH="${BUILD_DIR}/libavcore:${BUILD_DIR}/libswscale:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavutil" \
+	LD_LIBRARY_PATH="${BUILD_DIR}/libswscale:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavresample:${BUILD_DIR}/libavutil" \
 		emake -j1 fate
 }

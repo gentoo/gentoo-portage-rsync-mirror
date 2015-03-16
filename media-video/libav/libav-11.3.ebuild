@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.3.ebuild,v 1.2 2015/03/15 17:33:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.3.ebuild,v 1.3 2015/03/16 10:24:32 lu_zero Exp $
 
 EAPI=5
 
@@ -324,6 +324,6 @@ multilib_src_install_all() {
 }
 
 multilib_src_test() {
-	LD_LIBRARY_PATH="${BUILD_DIR}/libavcore:${BUILD_DIR}/libswscale:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavutil" \
+	LD_LIBRARY_PATH="${BUILD_DIR}/libswscale:${BUILD_DIR}/libavcodec:${BUILD_DIR}/libavdevice:${BUILD_DIR}/libavfilter:${BUILD_DIR}/libavformat:${BUILD_DIR}/libavresample:${BUILD_DIR}/libavutil" \
 		emake -j1 fate
 }
