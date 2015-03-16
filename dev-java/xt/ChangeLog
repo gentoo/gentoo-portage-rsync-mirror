@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.25 2012/11/16 09:38:38 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/ChangeLog,v 1.26 2015/03/16 18:12:40 ercpe Exp $
+
+*xt-20051206-r3 (16 Mar 2015)
+
+  16 Mar 2015; Johann Schmitz <ercpe@gentoo.org> +files/enum.patch,
+  +xt-20051206-r3.ebuild:
+  Bug #540762, reported by Toralf Förster: Renamed enum variable to make it
+  compilable with newer jdks
 
   16 Nov 2012; Ulrich Müller <ulm@gentoo.org> xt-20051206-r2.ebuild:
   Update LICENSE, this is exactly the MIT/X11 license, only with different
@@ -75,4 +82,3 @@
   14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +xt-20020426a.ebuild:
   now builds from source, submitted by Jan Brinkmann <lucky@the-luckyduck.de>
-

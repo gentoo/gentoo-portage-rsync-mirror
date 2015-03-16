@@ -1,0 +1,34 @@
+diff --git a/xt-20051206/src/xt/java/com/jclark/xsl/expr/PatternList.java b/xt-20051206/src/xt/java/com/jclark/xsl/expr/PatternList.java
+index e33c724..8d5cf1b 100644
+--- a/xt-20051206/src/xt/java/com/jclark/xsl/expr/PatternList.java
++++ b/xt-20051206/src/xt/java/com/jclark/xsl/expr/PatternList.java
+@@ -126,9 +126,9 @@ public class PatternList
+             case Node.ATTRIBUTE:
+             case Node.PROCESSING_INSTRUCTION:
+             case Node.ALLTYPES:            // for "node()" node test
+-                for (Enumeration enum =
+-                         nameRules.elements();  enum.hasMoreElements(); ) {
+-                    append((Vector)enum.nextElement(), ppb, obj);
++                for (Enumeration enumeration =
++                         nameRules.elements();  enumeration.hasMoreElements(); ) {
++                    append((Vector)enumeration.nextElement(), ppb, obj);
+                 }
+                 append(anyNameRules, ppb, obj);
+                 break;
+diff --git a/xt-20051206/src/xt/java/com/jclark/xsl/tr/AppendAction.java b/xt-20051206/src/xt/java/com/jclark/xsl/tr/AppendAction.java
+index 0859b4b..fe3eea1 100644
+--- a/xt-20051206/src/xt/java/com/jclark/xsl/tr/AppendAction.java
++++ b/xt-20051206/src/xt/java/com/jclark/xsl/tr/AppendAction.java
+@@ -16,9 +16,9 @@ class AppendAction implements Action
+     public void invoke(ProcessContext context, 
+                        Node sourceNode, Result result) throws XSLException
+     {
+-        for (Enumeration enum = sequence.elements();
+-             enum.hasMoreElements();)
+-            ((Action)enum.nextElement()).invoke(context, sourceNode, result);
++        for (Enumeration enumeration = sequence.elements();
++             enumeration.hasMoreElements();)
++            ((Action)enumeration.nextElement()).invoke(context, sourceNode, result);
+     }
+ 
+     void add(Action action)
