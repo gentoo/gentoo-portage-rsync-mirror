@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.393 2015/02/28 19:48:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.394 2015/03/16 21:53:19 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.23.1-trylink-flags.patch:
+  Respect CFLAGS/CPPFLAGS when testing the compiler #471118#1 by Alphat-PC.
 
   28 Feb 2015;  <tgall@gentoo.org> busybox-1.23.1-r1.ebuild:
   arm64, stable

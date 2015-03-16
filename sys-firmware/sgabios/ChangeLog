@@ -1,6 +1,9 @@
 # ChangeLog for sys-firmware/sgabios
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/ChangeLog,v 1.5 2014/04/30 21:07:36 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/ChangeLog,v 1.6 2015/03/16 21:17:16 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> sgabios-0.1_pre8.ebuild:
+  Use new toolchain helpers for selecting the bfd linker.
 
   30 Apr 2014; Mike Frysinger <vapier@gentoo.org> sgabios-0.1_pre8.ebuild:
   Add epatch_user support #487100 by Hristo Venev.

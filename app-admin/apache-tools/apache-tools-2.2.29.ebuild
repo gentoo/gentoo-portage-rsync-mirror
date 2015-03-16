@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.29.ebuild,v 1.10 2015/02/24 10:57:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.29.ebuild,v 1.11 2015/03/16 21:58:00 polynomial-c Exp $
 
 EAPI="4"
 inherit flag-o-matic eutils
@@ -17,7 +17,9 @@ RESTRICT="test"
 
 RDEPEND="=dev-libs/apr-1*
 	=dev-libs/apr-util-1*
+	dev-libs/expat
 	dev-libs/libpcre
+	kernel_linux? ( sys-apps/util-linux )
 	ssl? ( dev-libs/openssl )
 	!<www-servers/apache-2.2.4"
 

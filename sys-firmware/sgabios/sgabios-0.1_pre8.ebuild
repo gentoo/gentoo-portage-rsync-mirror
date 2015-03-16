@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/sgabios-0.1_pre8.ebuild,v 1.5 2014/04/30 21:07:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/sgabios/sgabios-0.1_pre8.ebuild,v 1.6 2015/03/16 21:17:16 vapier Exp $
 
 EAPI=4
 
@@ -17,16 +17,6 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-
-pkg_setup() {
-	local myld=$(tc-getLD)
-
-	${myld} -v | grep -q "GNU gold" && \
-	ewarn "gold linker unable to handle 16-bit code using ld.bfd. bug #438058"
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	epatch_user
@@ -34,8 +24,12 @@ src_prepare() {
 
 src_compile() {
 	if use amd64 || use x86 ; then
-		emake CC=$(tc-getCC) LD="$(tc-getLD).bfd" AR=$(tc-getAR) \
-			OBJCOPY=$(tc-getOBJCOPY)
+		tc-ld-disable-gold
+		emake \
+			CC="$(tc-getCC)" \
+			LD="$(tc-getLD)" \
+			AR="$(tc-getAR)" \
+			OBJCOPY="$(tc-getOBJCOPY)"
 	fi
 }
 

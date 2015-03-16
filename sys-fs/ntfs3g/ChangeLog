@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.168 2015/02/27 11:14:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.169 2015/03/16 21:16:56 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> ntfs3g-2013.1.13.ebuild,
+  ntfs3g-2014.2.15-r1.ebuild, ntfs3g-2014.2.15.ebuild:
+  Use new toolchain helpers for selecting the bfd linker #539388 by nzqr.
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ntfs3g-2014.2.15.ebuild:
   Stable for sparc, wrt bug #533270

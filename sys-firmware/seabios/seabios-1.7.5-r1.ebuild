@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.5-r1.ebuild,v 1.1 2015/02/15 08:02:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.5-r1.ebuild,v 1.2 2015/03/16 21:22:12 vapier Exp $
 
 EAPI=5
 
@@ -58,11 +58,6 @@ pkg_pretend() {
 		ewarn "own SeaBIOS. Virtual machines subtly fail based on changes"
 		ewarn "in SeaBIOS."
 	fi
-
-	local myld=$(tc-getLD)
-
-	${myld} -v | grep -q "GNU gold" && \
-	ewarn "gold linker unable to handle 16-bit code using ld.bfd.  bug #438058"
 }
 
 pkg_setup() {
@@ -95,19 +90,19 @@ src_prepare() {
 }
 
 src_configure() {
-	:
+	use binary || tc-ld-disable-gold #438058
 }
 
 _emake() {
 	LANG=C \
 	emake V=1 \
-		CC=$(tc-getCC) \
-		LD="$(tc-getLD).bfd" \
-		AR=$(tc-getAR) \
-		OBJCOPY=$(tc-getOBJCOPY) \
-		RANLIB=$(tc-getRANLIB) \
-		OBJDUMP=$(tc-getPROG OBJDUMP objdump) \
-		HOST_CC=$(tc-getBUILD_CC) \
+		CC="$(tc-getCC)" \
+		LD="$(tc-getLD)" \
+		AR="$(tc-getAR)" \
+		OBJCOPY="$(tc-getOBJCOPY)" \
+		RANLIB="$(tc-getRANLIB)" \
+		OBJDUMP="$(tc-getOBJDUMP)" \
+		HOST_CC="$(tc-getBUILD_CC)" \
 		"$@"
 }
 

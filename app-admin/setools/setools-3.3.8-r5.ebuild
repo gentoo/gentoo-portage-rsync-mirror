@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.8-r5.ebuild,v 1.2 2014/07/30 12:04:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.8-r5.ebuild,v 1.3 2015/03/16 21:34:05 vapier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
 
-inherit autotools java-pkg-opt-2 python-r1 eutils
+inherit autotools java-pkg-opt-2 python-r1 eutils toolchain-funcs
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux/selinux_policy_tools.shtml"
@@ -56,14 +56,9 @@ RESTRICT="test"
 PYTHON_DIRS="libapol/swig/python libpoldiff/swig/python libqpol/swig/python libseaudit/swig/python libsefs/swig/python python"
 
 pkg_setup() {
-	local myld=$(tc-getLD)
-
 	if use java; then
 		java-pkg-opt-2_pkg_setup
 	fi
-
-	${myld} -v | grep -q "GNU gold" && \
-	ewarn "Bug #467136 shows us that the gold linker doesn't work with setools for now."
 }
 
 src_prepare() {
@@ -107,6 +102,7 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-ld-disable-gold #467136
 	econf \
 		--with-java-prefix=${JAVA_HOME} \
 		--disable-selinux-check \
@@ -123,29 +119,29 @@ src_configure() {
 }
 
 src_compile() {
-	emake LD="$(tc-getLD).bfd" || die "Failed to build setools"
+	emake
 
 	if use python; then
 		building() {
 			python_export PYTHON_INCLUDEDIR
 			python_export PYTHON_SITEDIR
 			python_export PYTHON_LIBS
-			emake LD="$(tc-getLD).bfd" \
+			emake \
 				SWIG_PYTHON_CPPFLAGS="-I${PYTHON_INCLUDEDIR}" \
 				PYTHON_LDFLAGS="${PYTHON_LIBS}" \
 				pyexecdir="${PYTHON_SITEDIR}" \
 				pythondir="${PYTHON_SITEDIR}" \
-				-C ${1};
+				-C "$1"
 		}
 		local dir
 		for dir in ${PYTHON_DIRS}; do
-			python_foreach_impl building ${dir};
+			python_foreach_impl building ${dir}
 		done
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	if use python; then
 		installation() {
@@ -153,12 +149,12 @@ src_install() {
 			emake DESTDIR="${D}" \
 				pyexecdir="${PYTHON_SITEDIR}" \
 				pythondir="${PYTHON_SITEDIR}" \
-				-C ${1} install
+				-C "$1" install
 		}
 
 		local dir
 		for dir in ${PYTHON_DIRS}; do
-			python_foreach_impl installation ${dir};
+			python_foreach_impl installation "${dir}"
 		done
 	fi
 }

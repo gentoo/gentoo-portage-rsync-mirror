@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r14.ebuild,v 1.6 2015/02/16 18:06:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r14.ebuild,v 1.7 2015/03/16 21:39:48 vapier Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -43,18 +43,6 @@ LIB_DEPEND="ncurses? (
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)\]/} )"
 DEPEND="${RDEPEND}
 	static? ( ${LIB_DEPEND} )"
-
-pkg_pretend() {
-	if [[ ${MERGE_TYPE} != binary ]]; then
-		# Bugs 526348 , 466536
-		if ! test-flags-CC -fuse-ld=bfd &>/dev/null &&
-			$(tc-getLD) --version | grep -q "GNU gold"; then
-			eerror "GRUB does not function correctly when built with the gold linker."
-			eerror "Please select the bfd linker with binutils-config."
-			die "GNU gold detected"
-		fi
-	fi
-}
 
 pkg_setup() {
 	case $(tc-arch) in
@@ -110,8 +98,7 @@ src_configure() {
 	# -fno-stack-protector detected by configure, removed from netboot's emake.
 	use custom-cflags || unset CFLAGS
 
-	# Force ld.bfd if we can set it, bug 466536
-	append-ldflags $(test-flags-CC -fuse-ld=bfd)
+	tc-ld-disable-gold #439082 #466536 #526348
 
 	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static

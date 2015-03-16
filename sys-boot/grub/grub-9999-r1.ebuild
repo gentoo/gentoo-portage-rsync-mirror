@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.29 2015/02/07 20:38:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.30 2015/03/16 21:39:48 vapier Exp $
 
 EAPI=5
 
@@ -143,18 +143,6 @@ QA_PRESTRIPPED="
 	usr/lib.*/grub/.*/kernel.img
 "
 
-pkg_pretend() {
-	if [[ ${MERGE_TYPE} != binary ]]; then
-		# Bug 439082
-		if ! test-flags-CC -fuse-ld=bfd > /dev/null &&
-			$(tc-getLD) --version | grep -q "GNU gold"; then
-			eerror "GRUB does not function correctly when built with the gold linker."
-			eerror "Please select the bfd linker with binutils-config."
-			die "GNU gold detected"
-		fi
-	fi
-}
-
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack
@@ -256,8 +244,7 @@ src_configure() {
 
 	use static && HOST_LDFLAGS+=" -static"
 
-	export TARGET_LDFLAGS+=" $(test-flags-CC -fuse-ld=bfd)"
-
+	tc-ld-disable-gold #439082 #466536 #526348
 	tc-export CC NM OBJCOPY STRIP
 	export TARGET_CC=${TARGET_CC:-${CC}}
 	tc-export BUILD_CC # Bug 485592

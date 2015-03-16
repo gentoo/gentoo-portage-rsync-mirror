@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=x11-libs/libX11
 SLOT=0
 SRC_URI=ftp://ftp.x.org/contrib/utilities/unclutter-8.tar.Z
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c58901ffbbe028e53bca6ae743abf01d
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=009c67166bb88343fd9e6f59afa873a6

@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.38 2015/02/15 08:02:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.39 2015/03/16 21:22:12 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> seabios-1.7.5-r1.ebuild,
+  seabios-1.7.5.ebuild:
+  Use new toolchain helpers for selecting the bfd linker #438058 by Alexandre
+  Rostovtsev.
 
 *seabios-1.7.5-r1 (15 Feb 2015)
 

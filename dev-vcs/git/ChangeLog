@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.316 2015/03/13 06:37:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.317 2015/03/16 21:50:00 polynomial-c Exp $
+
+*git-2.3.3 (16 Mar 2015)
+
+  16 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> -git-2.3.1.ebuild,
+  +git-2.3.3.ebuild:
+  Version bump. Removed old.
 
 *git-2.3.2 (13 Mar 2015)
 

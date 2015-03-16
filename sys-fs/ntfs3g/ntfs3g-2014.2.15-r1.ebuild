@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2014.2.15-r1.ebuild,v 1.1 2015/01/29 08:20:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2014.2.15-r1.ebuild,v 1.2 2015/03/16 21:16:56 vapier Exp $
 
 EAPI=5
-inherit eutils linux-info udev autotools
+inherit eutils linux-info udev toolchain-funcs autotools
 
 MY_PN=${PN/3g/-3g}
 MY_P=${MY_PN}_ntfsprogs-${PV}
@@ -58,7 +58,8 @@ src_prepare() {
 }
 
 src_configure() {
-	LD="$(tc-getLD).bfd" econf \
+	tc-ld-disable-gold
+	econf \
 		--prefix="${EPREFIX}"/usr \
 		--exec-prefix="${EPREFIX}"/usr \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \

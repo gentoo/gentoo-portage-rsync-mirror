@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.13 2014/03/01 22:11:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2013.1.13.ebuild,v 1.14 2015/03/16 21:16:56 vapier Exp $
 
 EAPI=5
-inherit eutils linux-info udev
+inherit eutils linux-info udev toolchain-funcs
 
 MY_PN=${PN/3g/-3g}
 MY_P=${MY_PN}_ntfsprogs-${PV}
@@ -84,7 +84,7 @@ src_install() {
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		# Bug 450024
-		if $(tc-getLD) --version | grep -q "GNU gold"; then
+		if tc-ld-is-gold; then
 			eerror "ntfs-3g does not function correctly when built with the gold linker."
 			eerror "Please select the bfd linker with binutils-config."
 			die "GNU gold detected"

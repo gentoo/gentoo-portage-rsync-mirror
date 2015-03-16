@@ -8,5 +8,5 @@ LICENSE=MIT public-domain
 RDEPEND=virtual/fortran
 SLOT=0
 SRC_URI=https://github.com/JuliaLang/openspecfun/archive/v0.4.tar.gz -> openspecfun-0.4.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c58901ffbbe028e53bca6ae743abf01d
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=cefe9d2ead16ca6df287d652cc194ed5
