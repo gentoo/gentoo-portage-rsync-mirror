@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.185 2015/01/29 17:54:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.186 2015/03/16 18:00:20 aballier Exp $
+
+*openal-1.16.0 (16 Mar 2015)
+
+  16 Mar 2015; Alexis Ballier <aballier@gentoo.org> +openal-1.16.0.ebuild:
+  version bump
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> openal-1.15.1-r1.ebuild,
   openal-1.15.1-r2.ebuild, openal-1.15.1.ebuild:
