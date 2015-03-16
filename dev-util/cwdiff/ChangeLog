@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cwdiff
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/ChangeLog,v 1.13 2015/03/16 01:47:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/ChangeLog,v 1.14 2015/03/16 16:42:54 ottxor Exp $
+
+  16 Mar 2015; Christoph Junghans <ottxor@gentoo.org> cwdiff-0.3.0.ebuild:
+  fixed build with mercurial
 
   16 Mar 2015; Christoph Junghans <ottxor@gentoo.org> metadata.xml:
   updated metadata.xml

@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.488 2015/01/26 17:17:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.489 2015/03/16 16:35:23 axs Exp $
+
+*eix-0.30.7 (16 Mar 2015)
+
+  16 Mar 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +eix-0.30.7.ebuild:
+  version bump
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Drop unused USE description.
