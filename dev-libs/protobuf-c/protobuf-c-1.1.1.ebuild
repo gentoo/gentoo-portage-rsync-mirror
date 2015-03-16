@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/protobuf-c-1.1.0.ebuild,v 1.2 2015/03/10 18:16:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/protobuf-c-1.1.1.ebuild,v 1.1 2015/03/16 02:47:24 radhermit Exp $
 
 EAPI=5
 
