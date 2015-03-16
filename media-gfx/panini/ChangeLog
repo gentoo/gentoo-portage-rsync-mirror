@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/panini
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/panini/ChangeLog,v 1.4 2014/06/09 18:17:55 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/panini/ChangeLog,v 1.5 2015/03/16 03:31:34 radhermit Exp $
+
+  16 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself as maintainer.
 
   09 Jun 2014; Tim Harder <radhermit@gentoo.org>
   files/panini-0.71.104-glu.patch:
