@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pgmagick
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pgmagick/ChangeLog,v 1.5 2014/08/20 07:48:23 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pgmagick/ChangeLog,v 1.6 2015/03/16 05:22:00 patrick Exp $
+
+*pgmagick-0.5.9 (16 Mar 2015)
+
+  16 Mar 2015; Patrick Lauer <patrick@gentoo.org> +pgmagick-0.5.9.ebuild:
+  Bump
 
 *pgmagick-0.5.8 (20 Aug 2014)
 
