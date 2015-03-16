@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r9.ebuild,v 1.12 2014/07/14 19:30:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r9.ebuild,v 1.13 2015/03/16 19:22:00 grobian Exp $
 
 EAPI=5
 
@@ -30,6 +30,8 @@ src_prepare() {
 	epatch "${DISTDIR}"/nc-v6-20000918.patch.gz patch
 	sed -i 's:#define HAVE_BIND:#undef HAVE_BIND:' netcat.c
 	sed -i 's:#define FD_SETSIZE 16:#define FD_SETSIZE 1024:' netcat.c #34250
+	[[ ${CHOST} == *-solaris* ]] && \
+		sed -i 's:gethostbyname2(\([^)]\+\)):getipnodebyname(\1, AI_DEFAULT, NULL):' netcat.c
 }
 
 src_compile() {

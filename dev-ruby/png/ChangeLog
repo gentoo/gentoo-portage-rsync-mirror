@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/png
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.14 2014/08/25 14:25:07 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.15 2015/03/16 19:55:47 graaff Exp $
+
+  16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -png-1.2.0-r1.ebuild:
+  Cleanup.
 
 *png-1.2.0-r2 (25 Aug 2014)
 

@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/electronics-menu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/ChangeLog,v 1.7 2010/10/08 19:24:05 darkside Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electronics-menu/ChangeLog,v 1.8 2015/03/16 19:04:11 tomjbe Exp $
+
+*electronics-menu-1.0-r1 (16 Mar 2015)
+
+  16 Mar 2015; Thomas Beierlein <tomjbe@gentoo.org>
+  +electronics-menu-1.0-r1.ebuild:
+  Migrate to EAPI5
 
   08 Oct 2010; Jeremy Olexa <darkside@gentoo.org>
   electronics-menu-1.0.ebuild:

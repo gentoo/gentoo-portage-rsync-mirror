@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.133 2015/03/10 17:56:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.134 2015/03/16 19:26:39 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -84,6 +84,10 @@ tc-getRANLIB() { tc-getPROG RANLIB ranlib "$@"; }
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the object copier
 tc-getOBJCOPY() { tc-getPROG OBJCOPY objcopy "$@"; }
+# @FUNCTION: tc-getOBJDUMP
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the object dumper
+tc-getOBJDUMP() { tc-getPROG OBJDUMP objdump "$@"; }
 # @FUNCTION: tc-getF77
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the Fortran 77 compiler

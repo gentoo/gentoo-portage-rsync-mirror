@@ -9,5 +9,5 @@ RDEPEND=!www-plugins/chrome-binary-plugins:0 !www-plugins/chrome-binary-plugins:
 RESTRICT=bindist mirror strip
 SLOT=beta
 SRC_URI=amd64? ( https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-beta/google-chrome-beta_42.0.2311.39-1_amd64.deb ) x86? ( https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-beta/google-chrome-beta_42.0.2311.39-1_i386.deb )
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c58901ffbbe028e53bca6ae743abf01d	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=00ae9fccc37ce8a20899ad87a1cb817e

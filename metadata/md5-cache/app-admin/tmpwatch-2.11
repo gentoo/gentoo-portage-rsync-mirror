@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=selinux? ( sec-policy/selinux-tmpreaper )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/t/m/tmpwatch/tmpwatch-2.11.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c58901ffbbe028e53bca6ae743abf01d
 _md5_=88c0a84dee1eb24a31b0ef4386bd43c0

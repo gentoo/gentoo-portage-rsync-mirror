@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-ssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.132 2015/03/13 08:17:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh/ChangeLog,v 1.133 2015/03/16 19:41:07 graaff Exp $
+
+  16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -net-ssh-2.4.0.ebuild:
+  Cleanup.
 
   13 Mar 2015; Agostino Sarubbo <ago@gentoo.org> net-ssh-2.8.0.ebuild:
   Stable for ppc64, wrt bug #542200

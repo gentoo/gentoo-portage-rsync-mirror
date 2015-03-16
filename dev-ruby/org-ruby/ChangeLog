@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/org-ruby
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/ChangeLog,v 1.6 2014/08/31 05:57:37 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/ChangeLog,v 1.7 2015/03/16 19:47:59 graaff Exp $
+
+  16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -org-ruby-0.8.2.ebuild,
+  -org-ruby-0.9.0.ebuild, -org-ruby-0.9.7.ebuild:
+  Cleanup.
 
   31 Aug 2014; Hans de Graaff <graaff@gentoo.org> org-ruby-0.9.9.ebuild:
   Version bump.

@@ -8,5 +8,5 @@ LICENSE=WTFPL-2
 RDEPEND=dev-libs/libtommath
 SLOT=0
 SRC_URI=http://poly.libtomcrypt.org/files/ltp-0.04.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	3a1969a45ff85b026c4e0fa3aa2ab443
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c58901ffbbe028e53bca6ae743abf01d
 _md5_=b98044647e055478d19dabdd43138938

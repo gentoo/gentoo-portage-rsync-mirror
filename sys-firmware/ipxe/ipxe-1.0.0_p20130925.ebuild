@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130925.ebuild,v 1.4 2015/03/16 18:49:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/ipxe/ipxe-1.0.0_p20130925.ebuild,v 1.5 2015/03/16 19:27:11 vapier Exp $
 
 EAPI=5
 
@@ -56,14 +56,14 @@ src_compile() {
 	ipxemake() {
 		# Q='' makes the build verbose since that's what everyone loves now
 		emake Q='' \
-			CC=$(tc-getCC) \
+			CC="$(tc-getCC)" \
 			LD="$(tc-getLD).bfd" \
-			AR=$(tc-getAR) \
-			OBJCOPY=$(tc-getOBJCOPY) \
-			RANLIB=$(tc-getRANLIB) \
-			OBJDUMP=$(tc-getPROG OBJDUMP objdump) \
-			HOST_CC=$(tc-getBUILD_CC) \
-			${*}
+			AR="$(tc-getAR)" \
+			OBJCOPY="$(tc-getOBJCOPY)" \
+			RANLIB="$(tc-getRANLIB)" \
+			OBJDUMP="$(tc-getOBJDUMP)" \
+			HOST_CC="$(tc-getBUILD_CC)" \
+			"$@"
 	}
 
 	export NO_WERROR=1
