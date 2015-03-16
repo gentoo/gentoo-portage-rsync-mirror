@@ -1,6 +1,13 @@
 # ChangeLog for games-util/gslist
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/ChangeLog,v 1.10 2015/02/25 08:19:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/ChangeLog,v 1.11 2015/03/16 15:52:16 mr_bones_ Exp $
+
+*gslist-0.8.11a (16 Mar 2015)
+
+  16 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/gslist-0.8.11a-build.patch, +gslist-0.8.11a.ebuild,
+  files/gslist-0.8.8a-build.patch:
+  version bump
 
   25 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> gslist-0.8.8a.ebuild:
   Fix S

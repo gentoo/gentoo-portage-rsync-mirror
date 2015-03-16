@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.6.0.ebuild,v 1.1 2015/03/11 10:20:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.6.0.ebuild,v 1.2 2015/03/16 15:48:12 aballier Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-qt/linguist-tools:5
 	dev-qt/qtx11extras:5
 	x11-libs/libxcb
-	media-sound/drumstick
+	>=media-sound/drumstick-1.0.0
 	dbus? ( dev-qt/qtdbus:5 )"
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
