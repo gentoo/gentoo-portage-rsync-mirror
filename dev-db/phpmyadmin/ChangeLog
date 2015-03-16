@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.551 2015/03/14 15:33:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.552 2015/03/16 04:57:55 jer Exp $
+
+  16 Mar 2015; Jeroen Roovers <jer@gentoo.org> phpmyadmin-4.0.10.9.ebuild,
+  phpmyadmin-4.2.13.2.ebuild, phpmyadmin-4.3.12.ebuild:
+  Stable for HPPA (bug #542218).
 
 *phpmyadmin-4.4.0_beta1 (14 Mar 2015)
 *phpmyadmin-4.2.13.2 (14 Mar 2015)

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.493 2015/03/13 16:37:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.494 2015/03/16 04:59:49 jer Exp $
+
+  16 Mar 2015; Jeroen Roovers <jer@gentoo.org> util-linux-2.25.2-r2.ebuild:
+  Stable for HPPA (bug #536906).
 
 *util-linux-2.26.1 (13 Mar 2015)
 
