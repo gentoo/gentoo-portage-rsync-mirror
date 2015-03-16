@@ -10,6 +10,6 @@
 		<flag name='mercurial'>install hg wdiff alias for <pkg>dev-vcs/mercurial</pkg></flag>
 	</use>
 	<upstream>
-		<remote-id type="google-code">cj-overlay</remote-id>
+		<remote-id type="github">junghans/cwdiff</remote-id>
 	</upstream>
 </pkgmetadata>
