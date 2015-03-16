@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-0.98.2.ebuild,v 1.1 2014/08/19 07:48:18 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-0.98.2.ebuild,v 1.2 2015/03/16 20:25:44 ultrabug Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="debug examples sasl ssl static-libs test"
 
 RDEPEND=">=dev-libs/libbson-0.98.0
 	sasl? ( dev-libs/cyrus-sasl )
-	ssl? ( dev-libs/openssl )"
+	ssl? ( dev-libs/openssl:= )"
 DEPEND="${RDEPEND}
 	test? ( dev-db/mongodb )"
 

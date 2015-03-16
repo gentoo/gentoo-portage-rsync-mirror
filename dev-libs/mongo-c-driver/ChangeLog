@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/mongo-c-driver
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.17 2014/08/19 07:48:18 ultrabug Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/ChangeLog,v 1.18 2015/03/16 20:25:44 ultrabug Exp $
+
+*mongo-c-driver-1.1.2 (16 Mar 2015)
+
+  16 Mar 2015; Ultrabug <ultrabug@gentoo.org> -mongo-c-driver-0.6.ebuild,
+  -mongo-c-driver-0.7.1.ebuild, -mongo-c-driver-0.8.1.ebuild,
+  -mongo-c-driver-0.98.0.ebuild, mongo-c-driver-0.98.2.ebuild,
+  +mongo-c-driver-1.1.2.ebuild:
+  version bump, drop old
 
 *mongo-c-driver-0.98.2 (19 Aug 2014)
 

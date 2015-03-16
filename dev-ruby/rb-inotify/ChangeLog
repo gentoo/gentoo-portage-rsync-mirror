@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rb-inotify
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.36 2014/12/31 11:28:04 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.37 2015/03/16 20:24:43 graaff Exp $
+
+  16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -rb-inotify-0.9.0.ebuild:
+  Cleanup.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> rb-inotify-0.9.5.ebuild:
   Stable for x86, wrt bug #523188

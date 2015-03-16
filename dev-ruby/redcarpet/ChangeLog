@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcarpet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.20 2014/12/08 21:54:41 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.21 2015/03/16 20:28:47 graaff Exp $
+
+  16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -redcarpet-2.3.0.ebuild:
+  Cleanup.
 
 *redcarpet-3.2.2 (07 Dec 2014)
 

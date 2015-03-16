@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pry
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.17 2015/01/24 22:35:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pry/ChangeLog,v 1.18 2015/03/16 20:09:52 graaff Exp $
+
+  16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -pry-0.9.11.4.ebuild,
+  -pry-0.9.12.6.ebuild:
+  Cleanup.
 
 *pry-0.10.1 (24 Jan 2015)
 
