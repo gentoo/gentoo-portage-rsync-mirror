@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9-r1.ebuild,v 1.5 2014/07/13 13:10:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9-r1.ebuild,v 1.6 2015/03/16 06:42:41 jer Exp $
 
 EAPI=5
-
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A remote security scanner for Linux (libnasl)"
@@ -28,10 +27,13 @@ S=${WORKDIR}/${PN}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-openssl-1.patch \
-		"${FILESDIR}"/${P}-gentoo.patch
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-bison3.patch
+
 	sed \
 		-e "/^LDFLAGS/s:$:${LDFLAGS}:g" \
 		-i nasl.tmpl.in || die
+
 	tc-export CC
 }
 

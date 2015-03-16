@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/libnasl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.95 2014/10/12 10:21:12 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.96 2015/03/16 06:42:41 jer Exp $
+
+  16 Mar 2015; Jeroen Roovers <jer@gentoo.org> libnasl-2.2.9-r1.ebuild,
+  +files/libnasl-2.2.9-bison3.patch:
+  Fix building with sys-devel/bison-3* (bug #485914, patch by Charlie Gehlin).
 
   12 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.
