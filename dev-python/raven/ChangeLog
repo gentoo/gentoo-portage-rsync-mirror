@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/raven
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/raven/ChangeLog,v 1.1 2015/03/16 07:33:59 bman Exp $
+
+*raven-5.2.0 (16 Mar 2015)
+
+  16 Mar 2015; Aaron Bauman <bman@gentoo.org> +metadata.xml,
+  +raven-5.2.0.ebuild:
+  Initial commit; no testsuite packaged with tarball
