@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.3.0.ebuild,v 1.2 2015/03/07 23:40:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso/espresso-3.3.0.ebuild,v 1.3 2015/03/16 16:11:55 ottxor Exp $
 
 EAPI=5
 
@@ -53,6 +53,7 @@ DEPEND="${RDEPEND}
 		virtual/latex-base )"
 
 DOCS=( AUTHORS NEWS README ChangeLog )
+PATCHES=( "${FILESDIR}/${P}-cython-0.22.patch" )
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup

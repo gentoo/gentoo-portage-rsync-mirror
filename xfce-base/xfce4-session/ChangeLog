@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.228 2015/03/15 18:53:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.229 2015/03/16 16:02:47 mgorny Exp $
+
+*xfce4-session-4.12.1 (16 Mar 2015)
+
+  16 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfce4-session-4.12.1.ebuild:
+  Version bump with minor bugfixes.
 
 *xfce4-session-4.12.0-r1 (15 Mar 2015)
 
