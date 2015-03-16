@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aiohttp/aiohttp-0.14.4.ebuild,v 1.1 2015/03/14 12:49:07 bman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aiohttp/aiohttp-0.14.4-r1.ebuild,v 1.1 2015/03/16 11:08:45 bman Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="dev-python/asyncio[${PYTHON_USEDEP}]"
-DEPEND="
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (
 		${RDEPEND}
 		dev-python/chardet[${PYTHON_USEDEP}]
@@ -26,5 +26,5 @@ DEPEND="
 		www-servers/gunicorn[${PYTHON_USEDEP}] )"
 
 python_test() {
-	nosetests || die
+	nosetests || die "Tests failed under ${EPYTHON}"
 }
