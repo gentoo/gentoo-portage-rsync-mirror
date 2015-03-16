@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-6.0.ebuild,v 1.3 2015/03/14 19:48:14 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-6.0.ebuild,v 1.4 2015/03/16 04:24:33 jer Exp $
 
 EAPI=5
 inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -17,7 +17,7 @@ LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
 
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-KEYWORDS="~amd64 ~arm ~sh ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~sh ~x86 ~amd64-linux ~x86-linux"
 
 # +alsa-plugin as discussed in bug #519530
 IUSE="+alsa +alsa-plugin +asyncns bluetooth +caps dbus doc equalizer +gdbm +glib

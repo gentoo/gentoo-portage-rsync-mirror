@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.378 2015/03/14 19:33:49 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.379 2015/03/16 04:24:33 jer Exp $
+
+  16 Mar 2015; Jeroen Roovers <jer@gentoo.org> pulseaudio-6.0.ebuild:
+  Marked ~hppa (bug #543354).
 
   14 Mar 2015; Rick Farina <zerochaos@gentoo.org> pulseaudio-6.0.ebuild:
   let's add some keywords to pulseaudio 6 now that it's not a pre-release, it's
