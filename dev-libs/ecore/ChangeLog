@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/ecore
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.23 2013/11/12 18:14:05 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.24 2015/03/17 00:00:55 vapier Exp $
+
+*ecore-1.7.10 (17 Mar 2015)
+*ecore-9999 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +ecore-1.7.10.ebuild,
+  +ecore-9999.ebuild:
+  Version bump. Import live git ebuild from overlay.
 
 *ecore-1.7.9 (12 Nov 2013)
 
