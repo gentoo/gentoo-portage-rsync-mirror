@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16420 2015/03/17 11:15:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16421 2015/03/17 20:18:18 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -48,11 +48,6 @@ media-video/smplayer2
 # and no upstream updates for over 10 years.
 # masked for removal on 20150410
 games-roguelike/ivan
-
-# Markos Chandras <hwoarang@gentoo.org> (10 Mar 2015)
-# Mask broken and untested ebuild.
-# See #542434 and #539368
-=net-libs/rb_libtorrent-0.16.17-r2
 
 # Alice Ferrazzi <alicef@gentoo.org> (10 Mar 2015)
 # Masked new version of pypy as experimental.

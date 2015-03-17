@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.778 2015/03/13 12:53:22 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.779 2015/03/17 20:11:10 grknight Exp $
+
+  17 Mar 2015; <grknight@gentoo.org> package.use.mask:
+  Mask the cluster flag for deprecation. Use dev-db/mysql-cluster if you need
+  NDB
 
   13 Mar 2015; Matthias Maier <tamiko@gentoo.org> package.use.stable.mask:
   Add a package.use.stable.mask entry for app-emulation/libvirt glusterfs

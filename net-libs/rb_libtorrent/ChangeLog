@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.188 2015/03/11 07:38:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.190 2015/03/17 20:30:26 hwoarang Exp $
+
+*rb_libtorrent-0.16.19 (17 Mar 2015)
+
+  17 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  +rb_libtorrent-0.16.19.ebuild:
+  Version bump. Bug #542196
+
+  17 Mar 2015; Markos Chandras <hwoarang@gentoo.org>
+  rb_libtorrent-0.16.17-r2.ebuild:
+  Really fix the broken commit by Ian Delaney. Bug #539368 again
 
   11 Mar 2015; Ian Delaney <idella4@gentoo.org> rb_libtorrent-0.16.17-r2.ebuild:
   revert DEPEND RDEPEND to reflect the state in the -r1
