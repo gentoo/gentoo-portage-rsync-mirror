@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/elementary
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.25 2014/12/31 14:23:07 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.26 2015/03/17 02:21:57 vapier Exp $
+
+*elementary-9999 (17 Mar 2015)
+*elementary-1.13.1 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +elementary-1.13.1.ebuild,
+  +elementary-9999.ebuild:
+  Version bump #537920 by José Romildo Malaquias. Import live git ebuild from
+  overlay.
 
 *elementary-1.12.2 (31 Dec 2014)
 
