@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.842 2015/03/17 18:41:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.843 2015/03/17 19:25:25 chithanh Exp $
+
+  17 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.15.2-r2.ebuild:
+  Apply libXfont dependency changes to 1.15 too
 
   17 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.12.4-r4.ebuild, xorg-server-1.17.1-r1.ebuild:
