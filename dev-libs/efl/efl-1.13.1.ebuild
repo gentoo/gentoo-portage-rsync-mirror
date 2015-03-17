@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.13.1.ebuild,v 1.1 2015/03/17 01:43:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.13.1.ebuild,v 1.2 2015/03/17 17:34:56 vapier Exp $
 
 EAPI="5"
 
@@ -37,13 +37,18 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	drm? ( >=x11-libs/libxkbcommon-0.3.0 )
+	drm? (
+		>=dev-libs/libinput-0.8
+		media-libs/mesa[gbm]
+		>=x11-libs/libdrm-2.4
+		>=x11-libs/libxkbcommon-0.3.0
+	)
 	fontconfig? ( media-libs/fontconfig )
 	fribidi? ( dev-libs/fribidi )
 	gif? ( media-libs/giflib )
-	glib? ( dev-libs/glib )
+	glib? ( dev-libs/glib:2 )
 	gnutls? ( net-libs/gnutls )
-	!gnutls? ( ssl? ( dev-libs/openssl ) )
+	!gnutls? ( ssl? ( dev-libs/openssl:0 ) )
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
@@ -57,14 +62,14 @@ RDEPEND="
 	pixman? ( x11-libs/pixman )
 	png? ( media-libs/libpng:0= )
 	pulseaudio? ( media-sound/pulseaudio )
-	scim?	( app-i18n/scim )
+	scim? ( app-i18n/scim )
 	sdl? (
 		media-libs/libsdl2
 		virtual/opengl
 	)
 	sound? ( media-libs/libsndfile )
 	systemd? ( sys-apps/systemd )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:0 )
 	tslib? ( x11-libs/tslib )
 	valgrind? ( dev-util/valgrind )
 	wayland? (
