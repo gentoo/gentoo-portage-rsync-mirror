@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gcj-jdk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.16 2014/07/14 18:45:53 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.17 2015/03/17 12:34:45 chewi Exp $
+
+*gcj-jdk-4.9.2 (17 Mar 2015)
+
+  17 Mar 2015; James Le Cuirot <chewi@gentoo.org> +gcj-jdk-4.9.2.ebuild:
+  Simple version bump. Tested with ecj 4.4 to build icedtea 7.
 
 *gcj-jdk-4.8.3 (14 Jul 2014)
 *gcj-jdk-4.8.2 (14 Jul 2014)
