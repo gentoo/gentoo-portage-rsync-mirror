@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/mksh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.61 2015/01/18 01:44:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.62 2015/03/17 10:45:06 polynomial-c Exp $
+
+*mksh-50e (17 Mar 2015)
+
+  17 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> +mksh-50e.ebuild:
+  Version bump.
 
 *mksh-50d-r1 (18 Jan 2015)
 

@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/mongo-cxx-driver
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/ChangeLog,v 1.2 2015/03/17 10:53:13 ultrabug Exp $
+
+  17 Mar 2015; Ultrabug <ultrabug@gentoo.org> mongo-cxx-driver-1.0.0.ebuild:
+  fix hard blocker on mongo-3.0.0
+
+*mongo-cxx-driver-1.0.0 (17 Mar 2015)
+
+  17 Mar 2015; Ultrabug <ultrabug@gentoo.org> +mongo-cxx-driver-1.0.0.ebuild,
+  +files/mongo-cxx-driver-1.0.0-fix-scons.patch, +metadata.xml:
+  new ebuild dev-libs/mongo-cxx-driver

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lmms
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.36 2014/07/29 16:06:31 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.37 2015/03/17 10:53:37 aballier Exp $
+
+*lmms-1.1.3 (17 Mar 2015)
+
+  17 Mar 2015; Alexis Ballier <aballier@gentoo.org> +lmms-1.1.3.ebuild:
+  version bump
 
 *lmms-1.0.3 (29 Jul 2014)
 

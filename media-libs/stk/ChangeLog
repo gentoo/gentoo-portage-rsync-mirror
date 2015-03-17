@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/stk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.16 2013/03/17 15:52:47 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stk/ChangeLog,v 1.17 2015/03/17 10:47:23 aballier Exp $
+
+*stk-4.5.0 (17 Mar 2015)
+
+  17 Mar 2015; Alexis Ballier <aballier@gentoo.org> +stk-4.5.0.ebuild,
+  +files/stk-4.5.0/010_all_removeForcedFlags.patch,
+  +files/stk-4.5.0/020_all_noExamplesOrDemo.patch,
+  +files/stk-4.5.0/040_all_sharedliblink.patch,
+  +files/stk-4.5.0/050_all_cxxflags.patch:
+  version bump
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
