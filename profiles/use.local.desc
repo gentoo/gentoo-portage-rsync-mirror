@@ -179,6 +179,7 @@ app-admin/mate-system-tools:caja - Adds support for the Caja file manager
 app-admin/mate-system-tools:nfs - Adds support for NFS shares
 app-admin/matter:entropy - Add Entropy support
 app-admin/mcollective:client - Install client utilities
+app-admin/mms-agent:monitoring - Install the monitoring agent
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
 app-admin/packagekit-base:command-not-found - Enable packagekit support on shell "command not found"
 app-admin/packagekit-base:cron - Install cron script for auto-update
@@ -1291,6 +1292,7 @@ dev-db/mariadb-galera:tokudb - Add support for TokuDB storage engine
 dev-db/mongodb:mms-agent - Install the MongoDB Monitoring Service agent
 dev-db/mongodb:sharedclient - build client shared library libmongoclient.so
 dev-db/mongodb:spidermonkey - Use embedded SpiderMonkey engine (dev-lang/spidermonkey) instead of v8
+dev-db/mongodb:tools - Install the MongoDB tools (mongoimport, mongodump...) from app-admin/mongo-tools
 dev-db/mysql:cluster - Add support for NDB clustering (deprecated)
 dev-db/mysql:community - Enables the community features from upstream.
 dev-db/mysql:embedded - Build embedded server (libmysqld)
