@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/luajit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.23 2015/02/16 16:56:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.24 2015/03/17 01:06:33 vapier Exp $
+
+*luajit-2.0.3-r1 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +luajit-2.0.3-r1.ebuild:
+  Fix multilib handling #533686 by Thomas Sachau.
 
   16 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/LuaJIT-2.0.0-beta10-gentoo.patch,
