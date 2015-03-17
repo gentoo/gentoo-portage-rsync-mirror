@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.16 2015/03/17 08:35:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.17 2015/03/17 15:24:52 aballier Exp $
+
+  17 Mar 2015; Alexis Ballier <aballier@gentoo.org> x265-1.5.ebuild,
+  x265-9999.ebuild:
+  Tests are really about checking asm. Dont run them on arches with no asm
+  optimisations. Bug #519046
 
 *x265-1.5 (17 Mar 2015)
 

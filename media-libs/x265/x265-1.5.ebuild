@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-1.5.ebuild,v 1.1 2015/03/17 08:35:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-1.5.ebuild,v 1.2 2015/03/17 15:24:52 aballier Exp $
 
 EAPI=5
 
@@ -56,10 +56,12 @@ src_configure() {
 }
 
 multilib_src_test() {
-	cd "${BUILD_DIR}/test" || die
-	for i in TestBench ; do
-		./${i} || die
-	done
+	if has ${MULTILIB_ABI_FLAG} abi_x86_32 abi_x86_64 ; then
+		cd "${BUILD_DIR}/test" || die
+		for i in TestBench ; do
+			./${i} || die
+		done
+	fi
 }
 
 src_test() {
