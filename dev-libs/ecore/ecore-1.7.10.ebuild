@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.10.ebuild,v 1.1 2015/03/17 00:00:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.10.ebuild,v 1.2 2015/03/17 02:34:17 vapier Exp $
 
 EAPI="4"
 
@@ -53,7 +53,10 @@ RDEPEND=">=dev-libs/eina-${PV}
 		xprint? ( x11-libs/libXp )
 		xscreensaver? ( x11-libs/libXScrnSaver )
 	)
-	!X? ( xcb? ( x11-libs/xcb-util ) )"
+	!X? ( xcb? (
+		x11-libs/pixman
+		x11-libs/xcb-util
+	) )"
 DEPEND="${RDEPEND}"
 
 # tests depend on temp data from eina WORKDIR.
