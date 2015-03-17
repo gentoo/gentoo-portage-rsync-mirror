@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.373 2015/02/20 16:05:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.374 2015/03/16 23:09:51 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> db-4.8.30-r2.ebuild,
+  db-5.1.29-r1.ebuild, db-5.3.28-r2.ebuild, db-6.0.30-r1.ebuild,
+  db-6.1.19.ebuild:
+  Set linker to bfd when gold is detected #470634 by Nick.
 
   20 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> db-4.8.30-r2.ebuild:
   ia64 stable wrt bug #525282

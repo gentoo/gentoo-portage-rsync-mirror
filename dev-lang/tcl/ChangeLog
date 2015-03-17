@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.205 2015/03/13 08:29:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.206 2015/03/16 23:07:57 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> tcl-8.5.15-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
 *tcl-8.6.4 (13 Mar 2015)
 

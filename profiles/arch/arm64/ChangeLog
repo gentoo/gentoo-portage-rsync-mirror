@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm64/ChangeLog,v 1.8 2015/03/09 16:46:45 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm64/ChangeLog,v 1.9 2015/03/16 23:07:59 vapier Exp $
+
+  16 Mar 2015; Mike Frysinger <vapier@gentoo.org> package.use.mask, use.mask:
+  Mask USE=java for all packages.
 
   25 Oct 2014; Michael Palimaka <kensington@gentoo.org> package.use.mask:
   Remove obsolete mask for package no longer in the tree.

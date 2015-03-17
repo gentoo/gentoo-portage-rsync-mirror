@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.30-r2.ebuild,v 1.10 2015/02/20 16:05:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.30-r2.ebuild,v 1.11 2015/03/16 23:09:51 vapier Exp $
 
 EAPI=5
 
-inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib multilib-minimal
+inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib multilib-minimal toolchain-funcs
 
 #Number of official patches
 #PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
@@ -100,6 +100,8 @@ src_configure() {
 
 multilib_src_configure() {
 	local myconf=()
+
+	tc-ld-disable-gold #470634
 
 	# compilation with -O0 fails on amd64, see bug #171231
 	if [[ ${ABI} == amd64 ]]; then
