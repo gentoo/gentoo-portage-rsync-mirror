@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.137 2015/03/02 08:46:28 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.138 2015/03/17 22:07:42 bircoph Exp $
+
+  17 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild,
+  +files/root-5.34.26-ldflags.patch:
+  Upstream is not interested in ldflags patch:
+  https://sft.its.cern.ch/jira/browse/ROOT-7106
+  so reverting to much simpler solution.
 
   02 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> -root-5.34.18.ebuild,
   -root-5.34.18-r1.ebuild, -files/root-5.32.00-prop-flags.patch,

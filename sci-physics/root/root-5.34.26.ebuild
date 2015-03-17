@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.26.ebuild,v 1.1 2015/03/02 08:27:34 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.26.ebuild,v 1.2 2015/03/17 22:07:42 bircoph Exp $
 
 EAPI=5
 
@@ -11,7 +11,6 @@ else
 	SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz"
 	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 fi
-SRC_URI+=" http://dev.gentoo.org/~bircoph/patches/${PN}-5.34.26-ldflags.patch.xz"
 
 PYTHON_COMPAT=( python2_7 )
 
@@ -195,7 +194,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.34.05-nobyte-compile.patch \
 		"${FILESDIR}"/${PN}-5.34.13-unuran.patch \
 		"${FILESDIR}"/${PN}-5.34.13-desktop.patch \
-		"${WORKDIR}"/${PN}-5.34.26-ldflags.patch
+		"${FILESDIR}"/${PN}-5.34.26-ldflags.patch
 
 	# make sure we use system libs and headers
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc || die
@@ -274,7 +273,6 @@ src_configure() {
 		--nohowto
 		--cflags='${CFLAGS}'
 		--cxxflags='${CXXFLAGS}'
-		--ldflags='${LDFLAGS}'
 	)
 
 	if use minimal; then

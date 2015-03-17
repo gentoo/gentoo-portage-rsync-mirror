@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ecj-gcj-4.4.2.ebuild,v 1.1 2015/03/17 12:30:29 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ecj-gcj-4.4.2.ebuild,v 1.2 2015/03/17 22:21:32 chewi Exp $
 
 EAPI=5
 
@@ -40,20 +40,16 @@ java_prepare() {
 
 	# these java6 specific classes cannot compile with gcj
 	rm -r org/eclipse/jdt/internal/compiler/{apt,tool}/ || die
-
-	# Strip Java 6 annotations that gcj doesn't support
-	# Put these modifications in bootstrap and build a sources list
-	find org/ -name "*.java" -print -exec sh -c "mkdir -p \$(dirname bootstrap/{}) && sed '/^\s*@Override\s*$/d' {} > bootstrap/{}" \; > sources.lst || die
 }
 
 src_compile() {
 	local gccbin=$(gcc-config -B)
 	local gcj="${gccbin}/gcj"
 
+	find org/ -name "*.java" > sources.lst || die
+
 	einfo "bootstrapping ${MY_PN} with gcj ..."
-	cd bootstrap || die
-	"${gcj}" -w -C @../sources.lst || die
-	cd .. || die
+	"${gcj}" -w -C -fsource=${JAVA_PKG_WANT_SOURCE} -d bootstrap @sources.lst || die
 
 	einfo "building ${MY_PN} with bootstrapped ${MY_PN} ..."
 	"${gccbin}/gij" -cp bootstrap:. org.eclipse.jdt.internal.compiler.batch.Main -nowarn $(java-pkg_javac-args) @sources.lst || die
