@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.656 2015/03/17 05:24:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.657 2015/03/17 06:34:54 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1084,7 +1084,7 @@ toolchain_src_configure() {
 	amd64)
 		# drop the older/ABI checks once this get's merged into some
 		# version of gcc upstream
-		if tc_version_is_at_least 4.7 && has x32 $(get_all_abis TARGET) ; then
+		if tc_version_is_at_least 4.8 && has x32 $(get_all_abis TARGET) ; then
 			confgcc+=( --with-abi=$(gcc-abi-map ${TARGET_DEFAULT_ABI}) )
 		fi
 		;;
@@ -1465,7 +1465,7 @@ gcc-multilib-configure() {
 	if [[ -n ${list} ]] ; then
 		case ${CTARGET} in
 		x86_64*)
-			tc_version_is_at_least 4.7 && confgcc+=( --with-multilib-list=${list:1} )
+			tc_version_is_at_least 4.8 && confgcc+=( --with-multilib-list=${list:1} )
 			;;
 		esac
 	fi
