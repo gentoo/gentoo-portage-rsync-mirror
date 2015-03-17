@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.20-r1.ebuild,v 1.1 2014/12/29 14:13:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.26.ebuild,v 1.1 2015/03/17 08:01:42 polynomial-c Exp $
 
 EAPI=5
 
@@ -222,8 +222,7 @@ src_compile() {
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
 		TOOL_GCC3_CFLAGS="${CFLAGS}" TOOL_GCC3_CXXFLAGS="${CXXFLAGS}" \
 		VBOX_GCC_OPT="${CXXFLAGS}" \
-		TOOL_YASM_AS=yasm KBUILD_PATH="${S}/kBuild" \
-		KBUILD_VERBOSE=2 \
+		TOOL_YASM_AS=yasm KBUILD_VERBOSE=2 \
 		all
 }
 

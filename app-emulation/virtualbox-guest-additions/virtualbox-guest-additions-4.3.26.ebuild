@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.20.ebuild,v 1.1 2014/11/23 14:22:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.26.ebuild,v 1.1 2015/03/17 08:03:08 polynomial-c Exp $
 
 EAPI=5
 
@@ -106,7 +106,6 @@ src_compile() {
 			cd "${S}"${each} || die
 			MAKE="kmk" \
 			emake TOOL_YASM_AS=yasm \
-			KBUILD_PATH="${S}/kBuild" \
 			KBUILD_VERBOSE=2
 	done
 
