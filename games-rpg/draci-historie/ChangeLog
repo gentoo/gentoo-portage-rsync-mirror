@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/draci-historie
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/draci-historie/ChangeLog,v 1.1 2015/03/17 21:38:16 calchan Exp $
+
+*draci-historie-2012 (17 Mar 2015)
+
+  17 Mar 2015; Denis Dupeyron <calchan@gentoo.org> +draci-historie-2012.ebuild,
+  +metadata.xml:
+  Initial commit.
+
