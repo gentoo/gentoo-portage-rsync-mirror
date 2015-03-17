@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r6.ebuild,v 1.4 2015/03/16 21:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r6.ebuild,v 1.5 2015/03/17 02:00:07 floppym Exp $
 
 EAPI=5
 
@@ -237,6 +237,9 @@ src_configure() {
 	use static && HOST_LDFLAGS+=" -static"
 
 	tc-ld-disable-gold #439082 #466536 #526348
+	export TARGET_LDFLAGS=${LDFLAGS}
+	unset LDFLAGS
+
 	tc-export CC NM OBJCOPY STRIP
 	export TARGET_CC=${TARGET_CC:-${CC}}
 	tc-export BUILD_CC # Bug 485592

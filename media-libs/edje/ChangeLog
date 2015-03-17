@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/edje
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.26 2013/11/12 18:21:21 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/edje/ChangeLog,v 1.27 2015/03/17 01:58:29 vapier Exp $
+
+*edje-1.7.10 (17 Mar 2015)
+*edje-9999 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +edje-1.7.10.ebuild,
+  +edje-9999.ebuild:
+  Version bump. Import live git ebuild from overlay.
 
 *edje-1.7.9 (12 Nov 2013)
 

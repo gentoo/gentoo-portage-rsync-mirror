@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/efl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.25 2015/02/15 02:01:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.26 2015/03/17 01:43:59 vapier Exp $
+
+*efl-9999 (17 Mar 2015)
+*efl-1.13.1 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +efl-1.13.1.ebuild,
+  +efl-9999.ebuild, metadata.xml:
+  Version bump #537916 by José Romildo Malaquias. Import live git ebuild from
+  overlay.
 
   15 Feb 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneded useflag description from metadata.xml

@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.247 2015/03/08 15:13:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.248 2015/03/17 01:38:59 vapier Exp $
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +package.use.force,
+  package.use.mask:
+  Mask dev-libs/ef[oldlua,physics,sdl] #499974.
 
   08 Mar 2015; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Mask xfce-base/xfce4-settings[libinput] because of missing deps, bug #542570.

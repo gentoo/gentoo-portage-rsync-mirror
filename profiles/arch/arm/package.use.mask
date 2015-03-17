@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.246 2015/03/03 22:27:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.247 2015/03/17 01:36:17 vapier Exp $
 
 # Markus Meier <maekke@gentoo.org> (03 Mar 2015)
 # Unkeyworded deps, bug #540540
@@ -131,7 +131,7 @@ app-emulation/xen-tools system-qemu
 =media-video/mplayer2-2.0_p20130428-r1 quvi
 
 # Markus Meier <maekke@gentoo.org> (23 Feb 2014)
-# unkeyworded dep, bug #499974
+# Needs sci-physics/bullet tested #499974
 dev-libs/efl physics
 
 # Jason A. Donenfeld <zx2c4@gentoo.org> (27 Jan 2014)
