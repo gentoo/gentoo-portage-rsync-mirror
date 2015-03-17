@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.379 2015/03/16 04:24:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.381 2015/03/17 13:19:16 tetromino Exp $
+
+  17 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pulseaudio-5.0-r4.ebuild, pulseaudio-5.0-r7.ebuild,
+  pulseaudio-5.99.3-r1.ebuild, pulseaudio-6.0.ebuild:
+  openssl dep needs to be slotted
+
+  17 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pulseaudio-5.99.3-r1.ebuild, pulseaudio-6.0.ebuild:
+  Raise minimum orc version to 0.4.15 to ensure sane temp usage (bug #543364).
 
   16 Mar 2015; Jeroen Roovers <jer@gentoo.org> pulseaudio-6.0.ebuild:
   Marked ~hppa (bug #543354).

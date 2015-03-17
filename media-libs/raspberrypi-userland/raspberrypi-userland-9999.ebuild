@@ -1,61 +1,47 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raspberrypi-userland/raspberrypi-userland-9999.ebuild,v 1.2 2013/07/13 17:13:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raspberrypi-userland/raspberrypi-userland-9999.ebuild,v 1.3 2015/03/17 13:03:30 tupone Exp $
 
 EAPI=5
-
-inherit cmake-utils
+inherit cmake-utils git-r3
 
 DESCRIPTION="Raspberry Pi userspace tools and libraries"
 HOMEPAGE="https://github.com/raspberrypi/userland"
-
-if [[ ${PV} == 9999* ]]; then
-	inherit git-2
-	EGIT_REPO_URI="git://github.com/${PN/-//}.git"
-	SRC_URI=""
-	KEYWORDS=""
-else
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
-	KEYWORDS="~arm"
-fi
+SRC_URI=""
 
 LICENSE="BSD"
 SLOT="0"
+KEYWORDS=""
+IUSE=""
 
-# TODO:
-# * port vcfiled init script
-# * stuff is still installed to hardcoded /opt/vc location, investigate whether
-#   anything else depends on it being there
-# * live ebuild
+DEPEND=""
+RDEPEND=""
 
-src_unpack() {
-	if [[ ${PV} == 9999* ]]; then
-		git-2_src_unpack
-	else
-		default
-		mv userland-*/ ${P}/ || die
-	fi
-}
+EGIT_REPO_URI="https://github.com/raspberrypi/userland"
 
 src_prepare() {
-	# init script for Debian, not useful on Gentoo
-	sed -i "/DESTINATION \/etc\/init.d/,+2d" interface/vmcs_host/linux/vcfiled/CMakeLists.txt || die
-}
-
-src_configure() {
-	# toolchain file not needed, but build fails if it is not specified
-	local mycmakeargs="-DCMAKE_TOOLCHAIN_FILE=/dev/null"
-	cmake-utils_src_configure
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_install() {
 	cmake-utils_src_install
-	doenvd "${FILESDIR}"/04${PN}
 
-	# enable dynamic switching of the GL implementation
-	dodir /usr/lib/opengl
-	dosym ../../../opt/vc /usr/lib/opengl/${PN}
+	dodir /usr/lib/opengl/raspberrypi/lib
+	touch "${D}"/usr/lib/opengl/raspberrypi/.gles-only
+	mv "${D}"/usr/lib/lib{EGL,GLESv2}* \
+		"${D}"/usr/lib/opengl/raspberrypi/lib
 
-	# tell eselect opengl that we do not have libGL
-	touch "${ED}"/opt/vc/.gles-only
+	dodir /usr/lib/opengl/raspberrypi/include
+	mv "${D}"/usr/include/{EGL,GLES,GLES2,KHR,WF} \
+		"${D}"/usr/lib/opengl/raspberrypi/include
+	mv "${D}"/usr/include/interface/vcos/pthreads/* \
+		"${D}"/usr/include/interface/vcos/
+	rmdir "${D}"/usr/include/interface/vcos/pthreads
+	mv "${D}"/usr/include/interface/vmcs_host/linux/* \
+		"${D}"/usr/include/interface/vmcs_host/
+	rmdir "${D}"/usr/include/interface/vmcs_host/linux
+
+	dodir /usr/share/doc/${PF}
+	mv "${D}"/usr/src/hello_pi "${D}"/usr/share/doc/${PF}/
+	rmdir "${D}"/usr/src
 }

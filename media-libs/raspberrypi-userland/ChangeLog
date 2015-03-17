@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/raspberrypi-userland
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raspberrypi-userland/ChangeLog,v 1.6 2014/09/03 22:28:11 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raspberrypi-userland/ChangeLog,v 1.7 2015/03/17 13:03:30 tupone Exp $
+
+  17 Mar 2015; Tupone Alfredo <tupone@gentoo.org>
+  raspberrypi-userland-9999.ebuild,
+  +files/raspberrypi-userland-9999-gentoo.patch:
+  Build from source and deployed on canonical tree /usr
 
 *raspberrypi-userland-0_pre20140830 (03 Sep 2014)
 
