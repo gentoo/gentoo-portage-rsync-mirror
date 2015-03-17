@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.655 2015/03/13 19:59:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.656 2015/03/17 05:24:34 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -146,9 +146,11 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	tc_version_is_at_least 4.1 && IUSE+=" libssp objc++"
 	tc_version_is_at_least 4.2 && IUSE_DEF+=( openmp )
 	tc_version_is_at_least 4.3 && IUSE+=" fixed-point"
-	tc_version_is_at_least 4.6 && IUSE+=" graphite"
 	tc_version_is_at_least 4.7 && IUSE+=" go"
-	tc_version_is_at_least 4.8 && IUSE_DEF+=( sanitize )
+	# Note: while <=gcc-4.7 also supported graphite, it required forked ppl
+	# versions which we dropped.  Since graphite was also experimental in
+	# the older versions, we don't want to bother supporting it.  #448024
+	tc_version_is_at_least 4.8 && IUSE+=" graphite" IUSE_DEF+=( sanitize )
 fi
 
 [[ ${EAPI:-0} != 0 ]] && IUSE_DEF=( "${IUSE_DEF[@]/#/+}" )
@@ -179,20 +181,14 @@ fi
 
 tc_version_is_at_least 4.5 && RDEPEND+=" >=dev-libs/mpc-0.8.1"
 
-if in_iuse graphite ; then
-	if tc_version_is_at_least 4.8 ; then
-		RDEPEND+="
-			graphite? (
-				>=dev-libs/cloog-0.18.0
-				>=dev-libs/isl-0.11.1
-			)"
-	else
-		RDEPEND+="
-			graphite? (
-				>=dev-libs/cloog-ppl-0.15.10
-				>=dev-libs/ppl-0.11
-			)"
-	fi
+if tc_version_is_at_least 5.0 ; then
+	RDEPEND+=" graphite? ( >=dev-libs/isl-0.12 )"
+elif tc_version_is_at_least 4.8 ; then
+	RDEPEND+="
+		graphite? (
+			>=dev-libs/cloog-0.18.0
+			>=dev-libs/isl-0.11.1
+		)"
 fi
 
 DEPEND="${RDEPEND}
@@ -1182,21 +1178,16 @@ toolchain_src_configure() {
 		confgcc+=( --disable-lto )
 	fi
 
-	# graphite was added in 4.4 but we only support it in 4.6+ due to external
-	# library issues.  4.6/4.7 uses cloog-ppl which is a fork of CLooG with a
-	# PPL backend.  4.8+ uses upstream CLooG with the ISL backend.  We install
-	# cloog-ppl into a non-standard location to prevent collisions.
-	if tc_version_is_at_least 4.8 ; then
+	# graphite was added in 4.4 but we only support it in 4.8+ due to external
+	# library issues.  #448024
+	if tc_version_is_at_least 5.0 ; then
+		confgcc+=( $(use_with graphite isl) )
+		use graphite && confgcc+=( --disable-isl-version-check )
+	elif tc_version_is_at_least 4.8 ; then
 		confgcc+=( $(use_with graphite cloog) )
 		use graphite && confgcc+=( --disable-isl-version-check )
-	elif tc_version_is_at_least 4.6 ; then
-		confgcc+=( $(use_with graphite cloog) )
-		confgcc+=( $(use_with graphite ppl) )
-		use graphite && confgcc+=( --with-cloog-include=/usr/include/cloog-ppl )
-		use graphite && confgcc+=( --disable-ppl-version-check )
 	elif tc_version_is_at_least 4.4 ; then
-		confgcc+=( --without-cloog )
-		confgcc+=( --without-ppl )
+		confgcc+=( --without-{cloog,ppl} )
 	fi
 
 	if tc_version_is_at_least 4.8 ; then

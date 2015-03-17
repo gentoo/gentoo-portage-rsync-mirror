@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.1.ebuild,v 1.13 2014/12/26 11:28:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.1.ebuild,v 1.14 2015/03/17 05:29:23 vapier Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ IUSE="static-libs"
 
 RDEPEND=">=dev-libs/gmp-5.1.3-r1[${MULTILIB_USEDEP}]
 	>=dev-libs/isl-0.12.2:0/10[${MULTILIB_USEDEP}]
-	!<dev-libs/cloog-ppl-0.15.10"
+	!dev-libs/cloog-ppl"
 DEPEND="${DEPEND}
 	virtual/pkgconfig"
 

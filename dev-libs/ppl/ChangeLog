@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.71 2015/03/17 04:52:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.72 2015/03/17 05:27:11 vapier Exp $
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> ppl-1.1.ebuild:
+  Block cloog-ppl as we are punting it #448024.
 
   17 Mar 2015; Mike Frysinger <vapier@gentoo.org> ppl-1.1.ebuild:
   Force a newer gmp version to avoid build issues with newer gcc versions

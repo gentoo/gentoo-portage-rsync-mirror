@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.14.ebuild,v 1.2 2014/11/04 03:22:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.14.ebuild,v 1.3 2015/03/17 05:05:07 vapier Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ inherit eutils multilib-minimal
 
 DESCRIPTION="A library for manipulating integer points bounded by linear constraints"
 HOMEPAGE="http://isl.gforge.inria.fr/"
-SRC_URI="http://isl.gforge.inria.fr/${P}.tar.bz2"
+SRC_URI="http://isl.gforge.inria.fr/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/14"
@@ -17,6 +17,7 @@ IUSE="static-libs"
 
 RDEPEND=">=dev-libs/gmp-5.1.3-r1[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	virtual/pkgconfig"
 
 DOCS=( ChangeLog AUTHORS doc/manual.pdf )

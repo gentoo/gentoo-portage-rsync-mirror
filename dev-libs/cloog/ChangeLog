@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cloog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.29 2015/02/05 12:33:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.30 2015/03/17 05:29:23 vapier Exp $
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> cloog-0.18.0.ebuild,
+  cloog-0.18.1.ebuild, cloog-0.18.3.ebuild, cloog-9999.ebuild:
+  Block cloog-ppl as we are punting it #448024.
 
   05 Feb 2015; Anthony G. Basile <blueness@gentoo.org> cloog-0.18.3.ebuild:
   Fix FEATURES=test for 0.18.3
