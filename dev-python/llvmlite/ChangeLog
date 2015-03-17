@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/llvmlite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmlite/ChangeLog,v 1.4 2015/03/08 23:52:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmlite/ChangeLog,v 1.5 2015/03/17 06:02:58 patrick Exp $
+
+*llvmlite-0.2.2 (17 Mar 2015)
+
+  17 Mar 2015; Patrick Lauer <patrick@gentoo.org> +llvmlite-0.2.2.ebuild,
+  llvmlite-0.2.1.ebuild:
+  Bump, fix llvm dep
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> llvmlite-0.2.1.ebuild:
   x86 stable, bug 540290
