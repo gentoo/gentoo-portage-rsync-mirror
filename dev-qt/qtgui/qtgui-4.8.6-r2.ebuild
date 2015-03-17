@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.6-r1.ebuild,v 1.1 2014/11/15 02:36:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.6-r2.ebuild,v 1.1 2015/03/17 14:41:53 kensington Exp $
 
 EAPI=5
 
@@ -75,6 +75,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.5-disable-gtk-theme-check.patch" # bug 491226
 	"${FILESDIR}/${PN}-4.8.5-dont-crash-on-broken-GIF-images.patch" # bug 508984
 	"${FILESDIR}/${PN}-4.8.5-qclipboard-delay.patch" # bug 514968
+	"${FILESDIR}/${PN}-4.8.5-CVE-2015-0295.patch" # bug 541972
 )
 
 QT4_TARGET_DIRECTORIES="

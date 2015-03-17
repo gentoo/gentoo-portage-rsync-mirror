@@ -1,6 +1,14 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.61 2015/03/17 14:24:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.62 2015/03/17 14:41:53 kensington Exp $
+
+*qtgui-4.8.6-r2 (17 Mar 2015)
+*qtgui-4.8.5-r4 (17 Mar 2015)
+
+  17 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/qtgui-4.8.5-CVE-2015-0295.patch, +qtgui-4.8.5-r4.ebuild,
+  +qtgui-4.8.6-r2.ebuild, -qtgui-4.8.6-r1.ebuild:
+  Backport patch from upstream to solve CVE-2015-0295 wrt bug #541972.
 
 *qtgui-5.4.1-r1 (17 Mar 2015)
 
