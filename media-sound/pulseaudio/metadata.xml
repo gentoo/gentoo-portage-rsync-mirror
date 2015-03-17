@@ -35,7 +35,8 @@
       Allow preparation and installation of the system-wide init
       script for PulseAudio. Since this support is only supported for
       embedded situations, do not enable without reading the upstream
-      instructions at http://pulseaudio.org/wiki/WhatIsWrongWithSystemMode .
+      instructions at
+	  http://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/WhatIsWrongWithSystemWide/ .
     </flag>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
     <flag name="doc">Build the doxygen-described API documentation.</flag>

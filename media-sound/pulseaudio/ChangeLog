@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.381 2015/03/17 13:19:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.383 2015/03/17 14:24:14 tetromino Exp $
+
+  17 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Update another url
+
+  17 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pulseaudio-5.0-r4.ebuild, pulseaudio-5.0-r7.ebuild,
+  pulseaudio-5.99.3-r1.ebuild, pulseaudio-6.0.ebuild:
+  Update urls for USE=system-wide and make the elog message clearer about the
+  negative implications of the flag (bug #543574, thanks to Kent Fredric).
 
   17 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   pulseaudio-5.0-r4.ebuild, pulseaudio-5.0-r7.ebuild,

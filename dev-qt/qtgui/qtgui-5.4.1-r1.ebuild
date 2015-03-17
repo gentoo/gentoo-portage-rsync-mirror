@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-5.4.1.ebuild,v 1.4 2015/03/08 14:01:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-5.4.1-r1.ebuild,v 1.1 2015/03/17 14:24:12 kensington Exp $
 
 EAPI=5
 
@@ -68,6 +68,8 @@ DEPEND="${RDEPEND}
 PDEPEND="
 	ibus? ( app-i18n/ibus )
 "
+
+PATCHES=( "${FILESDIR}/${PN}-5.4.1-CVE-2015-0295.patch" )
 
 QT5_TARGET_SUBDIRS=(
 	src/gui
