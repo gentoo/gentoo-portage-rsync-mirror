@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/e_dbus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/ChangeLog,v 1.23 2014/06/01 07:58:53 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/ChangeLog,v 1.24 2015/03/17 00:51:56 vapier Exp $
+
+*e_dbus-9999 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +e_dbus-9999.ebuild:
+  Import live git ebuild from overlay.
 
   01 Jun 2014; Pacho Ramos <pacho@gentoo.org> -e_dbus-1.7.8.ebuild,
   -e_dbus-1.7.9.ebuild:

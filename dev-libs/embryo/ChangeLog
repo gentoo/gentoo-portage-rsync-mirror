@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/embryo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.18 2013/11/12 18:17:01 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.19 2015/03/17 00:49:48 vapier Exp $
+
+*embryo-1.7.10 (17 Mar 2015)
+*embryo-9999 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +embryo-1.7.10.ebuild,
+  +embryo-9999.ebuild:
+  Version bump. Import live git ebuild from overlay.
 
 *embryo-1.7.9 (12 Nov 2013)
 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/eeze
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.16 2014/07/09 03:52:10 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.17 2015/03/17 00:39:28 vapier Exp $
+
+*eeze-1.7.10 (17 Mar 2015)
+*eeze-9999 (17 Mar 2015)
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org> +eeze-1.7.10.ebuild,
+  +eeze-9999.ebuild:
+  Version bump. Import live git ebuild from overlay.
 
   09 Jul 2014; Patrick Lauer <patrick@gentoo.org> eeze-1.7.8.ebuild,
   eeze-1.7.9.ebuild:
