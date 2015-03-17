@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/clipgrab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.19 2015/02/26 16:00:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.20 2015/03/17 07:25:34 xmw Exp $
+
+*clipgrab-3.4.9-r1 (17 Mar 2015)
+
+  17 Mar 2015; Michael Weber <xmw@gentoo.org> +clipgrab-3.4.9-r1.ebuild,
+  -clipgrab-3.4.9.ebuild:
+  Works with libav (bug 543330, thanks Sergey S. Starikoff).
 
 *clipgrab-3.4.9 (26 Feb 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-3.4.9.ebuild,v 1.1 2015/02/26 16:00:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/clipgrab-3.4.9-r1.ebuild,v 1.1 2015/03/17 07:25:34 xmw Exp $
 
 EAPI=5
 
@@ -16,9 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-qt/qtwebkit:4"
-# does not work with libav #474368
 RDEPEND="${DEPEND}
-	media-video/ffmpeg:0"
+	|| ( media-video/libav media-video/ffmpeg )"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.4.2-obey.patch"

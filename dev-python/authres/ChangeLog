@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/authres
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.24 2015/02/07 04:13:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/authres/ChangeLog,v 1.25 2015/03/17 07:09:03 patrick Exp $
+
+*authres-0.800 (17 Mar 2015)
+
+  17 Mar 2015; Patrick Lauer <patrick@gentoo.org> +authres-0.800.ebuild:
+  Bump
 
 *authres-0.702 (07 Feb 2015)
 
