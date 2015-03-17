@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pocl/pocl-0.11.ebuild,v 1.1 2015/03/17 03:41:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pocl/pocl-0.11.ebuild,v 1.2 2015/03/17 15:34:46 patrick Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ pkg_pretend() {
 		einfo "Valid OpenCL ICD set"
 	else
 		eerror "Please use a supported ICD:"
-		eerror "eselect set ocl-icd"
+		eerror "eselect opencl set ocl-icd"
 		die "OpenCL ICD not set to a supported value"
 	fi
 }
