@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/traverso
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.34 2013/03/02 22:04:48 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/ChangeLog,v 1.35 2015/03/17 10:30:59 aballier Exp $
+
+*traverso-0.49.3 (17 Mar 2015)
+
+  17 Mar 2015; Alexis Ballier <aballier@gentoo.org> +traverso-0.49.3.ebuild:
+  version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> traverso-0.49.2-r1.ebuild:
   Move Qt dependencies to the new category
