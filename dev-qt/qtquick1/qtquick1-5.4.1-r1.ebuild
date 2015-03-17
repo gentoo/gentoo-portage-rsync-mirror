@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquick1/qtquick1-5.4.1-r1.ebuild,v 1.1 2015/03/17 14:51:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquick1/qtquick1-5.4.1-r1.ebuild,v 1.2 2015/03/17 17:10:46 pesa Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ fi
 
 IUSE="designer +opengl webkit xml"
 
-# bug 542698 for pinned designer dependency
+# see bug 542698 for pinned dev-qt/designer dependency
 DEPEND="
 	>=dev-qt/qtcore-${PV}:5[debug=]
 	>=dev-qt/qtgui-${PV}:5[debug=]
@@ -25,7 +25,7 @@ DEPEND="
 	>=dev-qt/qtsql-${PV}:5[debug=]
 	>=dev-qt/qtwidgets-${PV}:5[debug=]
 	designer? (
-		~dev-qt/designer-${PV}:5[debug=]
+		~dev-qt/designer-${PV}[debug=]
 		>=dev-qt/qtdeclarative-${PV}:5[debug=]
 	)
 	opengl? ( >=dev-qt/qtopengl-${PV}:5[debug=] )
