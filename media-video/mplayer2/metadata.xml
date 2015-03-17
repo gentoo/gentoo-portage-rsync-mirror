@@ -13,7 +13,6 @@
     </flag>
     <flag name="dvdnav">Use forked libdvdnav, navigate menus in GUIs</flag>
     <flag name="enca">Enables support for charset discovery and conversion</flag>
-    <flag name="faad">Use external faad library for AAC decoding</flag>
     <flag name="md5sum">Enables md5sum video output</flag>
     <flag name="mng">MNG input support</flag>
     <flag name="mp3">
@@ -21,7 +20,6 @@
       instead of relying on ffmpeg support.
     </flag>
     <flag name="network">Enables network streaming support</flag>
-    <flag name="nut">Enables support for the NUT container format</flag>
     <flag name="pnm">Add PNM video output option, to create PPM/PGM/PGMYUV
       images
     </flag>
@@ -31,17 +29,12 @@
       Enable support for streaming sites using <pkg>media-libs/libquvi</pkg>
     </flag>
     <flag name="radio">Enable V4L2 radio interface and support</flag>
-    <flag name="rar">Enable Unique RAR File Library</flag>
-    <flag name="rtc">Enables usage of the linux real time clock. The
-      alternative is software emulation of rtc
-    </flag>
     <flag name="shm">Enable support for shm</flag>
     <flag name="symlink">Copy all binaries and configuration into locations
       occupied by <pkg>media-video/mplayer</pkg> and thus act like drop-in
       replacement.
     </flag>
     <flag name="tga">Enables Targa video output</flag>
-    <flag name="xanim">Enables support for xanim based codecs</flag>
     <flag name="yuv4mpeg">Enables yuv4mpeg video output</flag>
   </use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/megatools-1.9.92-r2.ebuild,v 1.2 2014/09/12 04:15:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/megatools-1.9.94.ebuild,v 1.1 2015/03/17 03:56:42 dlan Exp $
 
 EAPI=5
 
@@ -28,8 +28,6 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	app-text/asciidoc"
-
-PATCHES=( "${FILESDIR}"/${P}-fuse.patch )
 
 src_configure() {
 	local myeconfargs=(

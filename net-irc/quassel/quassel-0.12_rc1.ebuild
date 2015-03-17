@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12_rc1.ebuild,v 1.2 2015/03/14 13:19:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12_rc1.ebuild,v 1.3 2015/03/17 03:42:26 patrick Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ EGIT_REPO_URI="git://git.quassel-irc.org/quassel"
 
 DESCRIPTION="Qt/KDE IRC client supporting a remote daemon for 24/7 connectivity"
 HOMEPAGE="http://quassel-irc.org/"
-[[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2 
+[[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2
 https://github.com/quassel/quassel/commit/32c0bb666209932d7540c22ddc393fd4550d5418.patch -> quassel-0.12_rc1-fix-ftbfs.patch"
 
 LICENSE="GPL-3"
