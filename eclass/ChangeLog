@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1565 2015/03/15 17:23:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1566 2015/03/17 19:39:43 grknight Exp $
+
+  17 Mar 2015; <grknight@gentoo.org> mysql-multilib.eclass:
+  Move flag modifications to apply once for all ABIs; Use tc-ld-disable-gold
+  for bug 508724; Move tokudb check to pkg_pretend
 
   15 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
   Detect dangerous environment variables, bug 543042; support

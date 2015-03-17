@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.17 2015/03/08 09:42:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-multilib.eclass,v 1.18 2015/03/17 19:39:43 grknight Exp $
 
 # @ECLASS: mysql-multilib.eclass
 # @MAINTAINER:
@@ -39,7 +39,7 @@ case "${EAPI:-0}" in
 	*) die "Unsupported EAPI: ${EAPI}" ;;
 esac
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_config
+EXPORT_FUNCTIONS pkg_pretend pkg_setup src_unpack src_prepare src_configure src_compile src_install pkg_preinst pkg_postinst pkg_config
 
 #
 # VARIABLES:
@@ -291,7 +291,9 @@ fi
 ### End readline/libedit
 
 if [[ ${PN} == "mysql" || ${PN} == "percona-server" ]] ; then
-	mysql_version_is_at_least "5.7.5" && DEPEND="${DEPEND} >=dev-libs/boost-1.56.0:0="
+	if mysql_version_is_at_least "5.7.6" ; then DEPEND="${DEPEND} >=dev-libs/boost-1.57.0:0=" ; else
+		mysql_version_is_at_least "5.7.5" && DEPEND="${DEPEND} >=dev-libs/boost-1.56.0:0="
+	fi
 fi
 
 if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
@@ -419,6 +421,20 @@ mysql-multilib_disable_test() {
 # EBUILD FUNCTIONS
 #
 
+# @FUNCTION: mysql-multilib_pkg_pretend
+# @DESCRIPTION:
+# Perform some basic tests and tasks during pkg_pretend phase:
+mysql-multilib_pkg_pretend() {
+	if [[ ${MERGE_TYPE} != binary ]] ; then
+		if use_if_iuse tokudb && [[ $(gcc-major-version) -lt 4 || \
+			$(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ; then
+			eerror "${PN} with tokudb needs to be built with gcc-4.7 or later."
+			eerror "Please use gcc-config to switch to gcc-4.7 or later version."
+			die
+		fi
+	fi
+}
+
 # @FUNCTION: mysql-multilib_pkg_setup
 # @DESCRIPTION:
 # Perform some basic tests and tasks during pkg_setup phase:
@@ -448,14 +464,6 @@ mysql-multilib_pkg_setup() {
 	if [[ ${PN} == "mysql-cluster" ]] ; then
 		mysql_version_is_at_least "7.2.9" && java-pkg-opt-2_pkg_setup
 	fi
-
-	if use_if_iuse tokudb && [[ "${MERGE_TYPE}" != "binary" && $(gcc-major-version) -lt 4 || \
-		$(gcc-major-version) -eq 4 && $(gcc-minor-version) -lt 7 ]] ; then
-		eerror "${PN} with tokudb needs to be built with gcc-4.7 or later."
-		eerror "Please use gcc-config to switch to gcc-4.7 or later version."
-		die
-	fi
-
 }
 
 # @FUNCTION: mysql-multilib_src_unpack
@@ -488,6 +496,29 @@ mysql-multilib_src_prepare() {
 # @DESCRIPTION:
 # Configure mysql to build the code for Gentoo respecting the use flags.
 mysql-multilib_src_configure() {
+	# Bug #114895, bug #110149
+	filter-flags "-O" "-O[01]"
+
+	CXXFLAGS="${CXXFLAGS} -fno-strict-aliasing"
+	CXXFLAGS="${CXXFLAGS} -felide-constructors"
+	# Causes linkage failures.  Upstream bug #59607 removes it
+	if ! mysql_version_is_at_least "5.6" ; then
+		CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
+	fi
+	# As of 5.7, exceptions are used!
+	if ! mysql_version_is_at_least "5.7" ; then
+		CXXFLAGS="${CXXFLAGS} -fno-exceptions -fno-rtti"
+	fi
+	export CXXFLAGS
+
+	# bug #283926, with GCC4.4, this is required to get correct behavior.
+	append-flags -fno-strict-aliasing
+
+	# bug 508724 mariadb cannot use ld.gold
+	if [[ ${PN} == "mariadb" || ${PN} == "mariadb-galera" ]] ; then
+		tc-ld-disable-gold
+	fi
+
 	multilib-minimal_src_configure
 }
 
@@ -571,24 +602,6 @@ multilib_src_configure() {
 	[[ ${PN} == "mysql-cluster" ]] && mycmakeargs+=(
 		-DWITH_NDBCLUSTER=1 -DWITH_PARTITION_STORAGE_ENGINE=1
 		-DWITHOUT_PARTITION_STORAGE_ENGINE=0 )
-
-	# Bug #114895, bug #110149
-	filter-flags "-O" "-O[01]"
-
-	CXXFLAGS="${CXXFLAGS} -fno-strict-aliasing"
-	CXXFLAGS="${CXXFLAGS} -felide-constructors"
-	# Causes linkage failures.  Upstream bug #59607 removes it
-	if ! mysql_version_is_at_least "5.6" ; then
-		CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
-	fi
-	# As of 5.7, exceptions are used!
-	if ! mysql_version_is_at_least "5.7" ; then
-		CXXFLAGS="${CXXFLAGS} -fno-exceptions -fno-rtti"
-	fi
-	export CXXFLAGS
-
-	# bug #283926, with GCC4.4, this is required to get correct behavior.
-	append-flags -fno-strict-aliasing
 
 	cmake-utils_src_configure
 }
