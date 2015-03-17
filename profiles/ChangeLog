@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9863 2015/03/16 05:20:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9865 2015/03/17 11:15:08 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Mar 2015; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove pdftex mask; its gone
+
+  17 Mar 2015; Alexis Ballier <aballier@gentoo.org> updates/1Q-2015:
+  move dev-tex/pdftex to app-text/texlive-core; standalone pdftex is not going
+  to be updated and is provided by texlive-core
 
   16 Mar 2015; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove package.mask entry for net-analyzer/mausezahn (bug #515210).

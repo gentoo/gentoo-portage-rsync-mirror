@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/mongo-cxx-driver-1.0.0.ebuild,v 1.2 2015/03/17 10:53:13 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/mongo-cxx-driver-1.0.0.ebuild,v 1.3 2015/03/17 11:17:15 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="2.3.0"
@@ -18,8 +18,7 @@ IUSE="debug sasl ssl static-libs"
 
 RDEPEND=">=dev-libs/boost-1.50[threads(+)]
 	sasl? ( dev-libs/cyrus-sasl )
-	ssl? ( dev-libs/openssl:= )
-	!!<=dev-db/mongodb-3.0.0"
+	ssl? ( dev-libs/openssl:= )"
 DEPEND="${RDEPEND}"
 
 # Maintainer notes
@@ -66,5 +65,5 @@ src_prepare() {
 src_install() {
 	escons ${scons_opts} install --prefix="${ED}"/usr
 
-	use static-libs || find "${D}" -name '*.la' -delete
+	use static-libs || find "${D}" -name '*.a' -delete
 }

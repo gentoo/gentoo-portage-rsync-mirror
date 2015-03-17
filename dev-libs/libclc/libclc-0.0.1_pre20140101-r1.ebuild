@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.0.1_pre20140101-r1.ebuild,v 1.1 2014/10/09 06:30:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.0.1_pre20140101-r1.ebuild,v 1.2 2015/03/17 11:23:25 chithanh Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -30,7 +30,9 @@ IUSE=""
 
 RDEPEND="
 	>=sys-devel/clang-3.4
-	>=sys-devel/llvm-3.4"
+	>=sys-devel/llvm-3.4
+	<sys-devel/clang-3.6
+	<sys-devel/llvm-3.6"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}"
 

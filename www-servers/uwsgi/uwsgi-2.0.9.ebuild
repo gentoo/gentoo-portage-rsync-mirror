@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.9.ebuild,v 1.2 2015/03/10 09:21:04 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.9.ebuild,v 1.3 2015/03/17 11:23:21 ultrabug Exp $
 
 EAPI="5"
 
@@ -84,7 +84,7 @@ CDEPEND="sys-libs/zlib
 	json? ( !yajl? ( dev-libs/jansson )
 		yajl? ( dev-libs/yajl ) )
 	pcre? ( dev-libs/libpcre:3 )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:= )
 	xml? ( !expat? ( dev-libs/libxml2 )
 		expat? ( dev-libs/expat ) )
 	yaml? ( dev-libs/libyaml )
@@ -104,7 +104,7 @@ CDEPEND="sys-libs/zlib
 	uwsgi_plugins_systemd_logger? ( sys-apps/systemd )
 	uwsgi_plugins_webdav? ( dev-libs/libxml2 )
 	uwsgi_plugins_xslt? ( dev-libs/libxslt )
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua:= )
 	mono? ( =dev-lang/mono-2* )
 	perl? ( dev-lang/perl:= )
 	php? (
