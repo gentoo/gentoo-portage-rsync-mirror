@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1041 2015/03/14 08:19:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1042 2015/03/17 00:06:40 vapier Exp $
+
+  17 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_configure.eblit:
+  Use new tc-ld-disable-gold helper.
 
   14 Mar 2015; Mike Frysinger <vapier@gentoo.org>
   -files/2.10/glibc-2.10-hardened-ssp-compat.patch,
