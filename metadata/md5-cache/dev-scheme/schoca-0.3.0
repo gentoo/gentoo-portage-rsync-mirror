@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install
-DEPEND=dev-ml/findlib dev-lang/ocaml[ocamlopt?]
+DEPEND=dev-ml/findlib dev-lang/ocaml[ocamlopt?] || ( dev-ml/camlp4[ocamlopt?] <dev-lang/ocaml-4.02.0 )
 DESCRIPTION=Schoca is a Scheme implementation in OCaml
 EAPI=3
 HOMEPAGE=http://sourceforge.net/projects/chesslib/
 IUSE=+ocamlopt
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-ml/findlib dev-lang/ocaml[ocamlopt?]
+RDEPEND=dev-ml/findlib dev-lang/ocaml[ocamlopt?] || ( dev-ml/camlp4[ocamlopt?] <dev-lang/ocaml-4.02.0 )
 RESTRICT=installsources
 SLOT=0
 SRC_URI=mirror://sourceforge/chesslib/schoca-0.3.0.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=5d506b01d8e239e10c497facc82c327f
+_md5_=d21a724124bbaae20b1d2716350e3808

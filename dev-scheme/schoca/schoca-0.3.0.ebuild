@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.5 2014/08/10 21:25:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/schoca/schoca-0.3.0.ebuild,v 1.6 2015/03/17 12:02:22 aballier Exp $
 
 EAPI="3"
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+ocamlopt"
 
 DEPEND="dev-ml/findlib
-	dev-lang/ocaml[ocamlopt?]"
+	dev-lang/ocaml[ocamlopt?]
+	|| ( dev-ml/camlp4[ocamlopt?] <dev-lang/ocaml-4.02.0 )"
 RDEPEND="${DEPEND}"
 
 RESTRICT="installsources"

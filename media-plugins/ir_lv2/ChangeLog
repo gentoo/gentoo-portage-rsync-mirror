@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/ir_lv2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/ir_lv2/ChangeLog,v 1.4 2012/05/05 08:27:18 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/ir_lv2/ChangeLog,v 1.5 2015/03/17 12:08:54 aballier Exp $
+
+  17 Mar 2015; Alexis Ballier <aballier@gentoo.org> ir_lv2-1.3.ebuild:
+  add missing dep on lv2, bug #514430
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> ir_lv2-1.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
