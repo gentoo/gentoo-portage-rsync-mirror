@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httpretty/httpretty-0.8.0-r1.ebuild,v 1.1 2015/03/17 08:26:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httpretty/httpretty-0.8.0-r1.ebuild,v 1.2 2015/03/17 08:31:53 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -32,8 +32,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 DISTUTILS_IN_SOURCE_BUILD=1
 
 python_test() {
-	echo $"${BUILD_DIR}" && die "ded"
-
 	# https://github.com/gabrielfalcao/HTTPretty/issues/125, still occur
 	# py3.4 hangs on many tests and is deemed underdone
 	# Upstream does not make it clear whether py3.4 is sctually tested and supported.
