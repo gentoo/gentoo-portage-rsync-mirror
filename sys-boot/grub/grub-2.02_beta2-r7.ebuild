@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r7.ebuild,v 1.9 2015/03/17 02:07:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r7.ebuild,v 1.10 2015/03/17 18:51:49 floppym Exp $
 
 EAPI=5
 
@@ -317,11 +317,10 @@ pkg_postinst() {
 	fi
 
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
-		if ! has_version sys-boot/os-prober; then
-			elog "Install sys-boot/os-prober to enable detection of other operating systems using grub2-mkconfig."
-		fi
-		if ! has_version dev-libs/libisoburn; then
-			elog "Install dev-libs/libisoburn to enable creation of rescue media using grub2-mkrescue."
-		fi
+		elog
+		elog "You may consider installing the following optional packages:"
+		optfeature "Detect other operating systems (grub-mkconfig)" sys-boot/os-prober
+		optfeature "Create rescue media (grub-mkrescue)" dev-libs/libisoburn
+		optfeature "Enable RAID device detection" sys-fs/mdadm
 	fi
 }

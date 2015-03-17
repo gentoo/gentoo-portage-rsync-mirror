@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.17-r100.ebuild,v 1.1 2015/03/17 12:12:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.17-r100.ebuild,v 1.3 2015/03/17 18:46:05 jlec Exp $
 
 # this ebuild is only for the libtcl8.5.so SONAME for ABI compat
 
@@ -20,7 +20,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE="debug threads"
 
 RDEPEND=">=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	!=dev-lang/tcl-8.5*:0
+	"
 
 SPARENT="${WORKDIR}/${MY_P}"
 S="${SPARENT}"/unix

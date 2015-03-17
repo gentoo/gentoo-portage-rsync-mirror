@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.198 2013/10/07 20:27:16 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.199 2015/03/17 18:44:55 bircoph Exp $
+
+  17 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  Update maintainers information.
 
   07 Oct 2013; Julian Ospald <hasufell@gentoo.org> openafs-1.6.5-r1.ebuild:
   add epatch_user as requested by a user

@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/kismet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.143 2014/11/02 09:38:04 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.144 2015/03/17 18:31:45 zerochaos Exp $
+
+*kismet-2013.03.1-r2 (17 Mar 2015)
+
+  17 Mar 2015; Rick Farina <zerochaos@gentoo.org> +files/ruby19_fixes.patch,
+  +files/update-kismet_shootout.patch, +kismet-2013.03.1-r2.ebuild,
+  -kismet-2011.03.2-r3.ebuild, -kismet-2013.03.1-r1.ebuild, kismet-9999.ebuild:
+  kismet, updates to fix ruby issues, and repoman issues
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> kismet-2013.03.1-r1.ebuild,
   kismet-9999.ebuild:

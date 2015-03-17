@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.207 2015/03/17 12:12:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.209 2015/03/17 18:46:05 jlec Exp $
+
+  17 Mar 2015; Justin Lecher <jlec@gentoo.org> tcl-8.5.17-r100.ebuild:
+  Negate the blocker
+
+  17 Mar 2015; Justin Lecher <jlec@gentoo.org> tcl-8.5.17-r100.ebuild:
+  Add necessary Blocker, thanks kobboi for reporting
 
 *tcl-8.5.17-r100 (17 Mar 2015)
 

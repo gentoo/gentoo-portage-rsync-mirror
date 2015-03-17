@@ -1,6 +1,17 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.840 2015/03/14 13:48:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.842 2015/03/17 18:41:00 chithanh Exp $
+
+  17 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.12.4-r4.ebuild, xorg-server-1.17.1-r1.ebuild:
+  Update dependencies to explicitly state compatibility with libXfont versions.
+  Restore arm64 keyword that was apparently dropped due to mistake.
+
+  17 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xorg-server-1.12.4-r3.ebuild, -xorg-server-1.15.2-r1.ebuild,
+  -xorg-server-1.16.3-r1.ebuild, -xorg-server-1.16.3.ebuild,
+  -xorg-server-1.17.0.ebuild:
+  Remove vulnerable versions, security bug #539692.
 
   14 Mar 2015; Markus Meier <maekke@gentoo.org> xorg-server-1.16.4.ebuild:
   arm stable, bug #530652

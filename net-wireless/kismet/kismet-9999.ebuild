@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-9999.ebuild,v 1.12 2014/11/02 09:38:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-9999.ebuild,v 1.13 2015/03/17 18:31:45 zerochaos Exp $
 
 EAPI=5
 
@@ -30,15 +30,13 @@ IUSE="+client +pcre speech +plugin-autowep +plugin-btscan plugin-dot15d4 +plugin
 CDEPEND="net-wireless/wireless-tools
 	kernel_linux? ( sys-libs/libcap
 			dev-libs/libnl:3
-			|| (
-				<net-libs/libpcap-1.4.0[-netlink]
-				>=net-libs/libpcap-1.4.0
-			) )
+			net-libs/libpcap
+			)
 	pcre? ( dev-libs/libpcre )
 	suid? ( sys-libs/libcap )
 	client? ( sys-libs/ncurses )
 	!arm? ( speech? ( app-accessibility/flite ) )
-	ruby? ( dev-lang/ruby )
+	ruby? ( dev-lang/ruby:* )
 	plugin-btscan? ( net-wireless/bluez )
 	plugin-dot15d4? ( virtual/libusb:0 )
 	plugin-spectools? ( net-wireless/spectools )

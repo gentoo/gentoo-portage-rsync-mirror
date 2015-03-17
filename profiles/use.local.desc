@@ -4421,10 +4421,15 @@ media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
 media-video/kmplayer:npp - Compile the npp backend that plays xembed style browser plugins.
 media-video/libav:aac - Use external vo-aacenc library for AAC encoding
 media-video/libav:amr - Enable Adaptive Multi-Rate Audio support
+media-video/libav:armv5te - Enable optimizations for armv5te processors
+media-video/libav:armv6 - Enable optimizations for armv6 processors
+media-video/libav:armv6t2 - Enable optimizations for armv6t2 processors
+media-video/libav:armvfp - Enable VFP optimizations for ARM processors
+media-video/libav:bs2b - Enable media-libs/libbs2b based Bauer stereo-to-binaural audio filter
 media-video/libav:cdio - Enable audio CD grabbing with dev-libs/libcdio.
 media-video/libav:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs).
 media-video/libav:faac - Use external faac library for AAC encoding
-media-video/libav:fdk - Use external fdk-aac library for AAC encoding
+media-video/libav:fdk - Use external fdk-aac library for AAC encoding and decoding
 media-video/libav:frei0r - Enable frei0r wrapping in libavfilter
 media-video/libav:gpl - Build all GPL licensed code. Without this flag set the package is build under LGPL license.
 media-video/libav:hardcoded-tables - Use pre-calculated tables rather than calculating them on the fly.
@@ -4437,6 +4442,7 @@ media-video/libav:rtmp - Enable Real Time Messaging Protocol using librtmp inste
 media-video/libav:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/libav:ssl - Enable SSL/TLS support using dev-libs/openssl or dev-libs/gnutls.
 media-video/libav:tools - Build and install small tools like aviocat, cws2fws, graph2dot, ismindex, qt-faststart.
+media-video/libav:twolame - Enable MP2 encoding via media-sound/twolame as an alternative to the internal encoder
 media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/libav:vpx - Enable vp8 encoding support using libvpx.
 media-video/libav:webp - Enable WebP encoding with media-libs/libwebp.

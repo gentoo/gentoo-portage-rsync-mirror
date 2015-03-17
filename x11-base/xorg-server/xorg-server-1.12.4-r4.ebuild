@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r4.ebuild,v 1.9 2015/03/14 13:39:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r4.ebuild,v 1.10 2015/03/17 18:41:00 chithanh Exp $
 
 EAPI=5
 
@@ -28,6 +28,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	>=x11-libs/libXau-1.0.4
 	>=x11-libs/libXdmcp-1.0.2
 	>=x11-libs/libXfont-1.4.2
+	<x11-libs/libXfont-1.5.0
 	>=x11-libs/libxkbfile-1.0.4
 	>=x11-libs/pixman-0.21.8
 	>=x11-libs/xtrans-1.2.2
@@ -67,6 +68,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/damageproto-1.1
 	>=x11-proto/fixesproto-5.0
 	>=x11-proto/fontsproto-2.0.2
+	<x11-proto/fontsproto-2.1.3
 	>=x11-proto/glproto-1.4.14
 	>=x11-proto/inputproto-2.1.99.3
 	>=x11-proto/kbproto-1.0.3
