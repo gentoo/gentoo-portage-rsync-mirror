@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.2.8.ebuild,v 1.14 2015/02/28 22:23:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.2.8.ebuild,v 1.15 2015/03/17 11:43:43 chithanh Exp $
 
 EAPI=5
 
@@ -120,6 +120,7 @@ RDEPEND="
 				) )
 		)
 		>=sys-devel/llvm-3.3-r3:=[${MULTILIB_USEDEP}]
+		<sys-devel/llvm-3.6
 	)
 	opencl? (
 				app-admin/eselect-opencl

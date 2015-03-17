@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.6.8.ebuild,v 1.1 2015/02/27 09:55:48 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.6.8.ebuild,v 1.2 2015/03/17 11:59:12 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="1.2.0"
@@ -83,6 +83,12 @@ src_prepare() {
 
 	# bug #482576
 	sed -i -e "/-Werror/d" src/third_party/v8/SConscript || die
+}
+
+src_configure() {
+	# filter some problematic flags
+	filter-flags "-march=*"
+	filter-flags -O?
 }
 
 src_compile() {

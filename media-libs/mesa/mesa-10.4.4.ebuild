@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.4.4.ebuild,v 1.6 2015/03/03 08:59:53 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.4.4.ebuild,v 1.7 2015/03/17 11:43:43 chithanh Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ fi
 # GLES[2]/gl[2]{,ext,platform}.h are SGI-B-2.0
 LICENSE="MIT SGI-B-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 RESTRICT="!bindist? ( bindist )"
 
 INTEL_CARDS="i915 i965 ilo intel"
@@ -124,6 +124,7 @@ RDEPEND="
 				) )
 		)
 		>=sys-devel/llvm-3.4.2:=[${MULTILIB_USEDEP}]
+		<sys-devel/llvm-3.6
 	)
 	opencl? (
 				app-admin/eselect-opencl

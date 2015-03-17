@@ -11,4 +11,4 @@ REQUIRED_USE=^^ ( qt4 qt5 )
 SLOT=0
 SRC_URI=mirror://sourceforge/smplayer/smplayer-14.9.0.6690.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=ff6e39a994e54f87d4711c501c5b1919
+_md5_=a19f3b2cbcfbaff8cd7457037adb1b10

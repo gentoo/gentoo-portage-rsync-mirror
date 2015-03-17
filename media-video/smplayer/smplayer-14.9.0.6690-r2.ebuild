@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.9.0.6690-r2.ebuild,v 1.1 2015/03/16 14:54:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.9.0.6690-r2.ebuild,v 1.2 2015/03/17 11:49:20 yngwin Exp $
 
 EAPI=5
 PLOCALES="ar ar_SY bg ca cs da de el_GR en_GB en_US es et eu fi fr gl he_IL hr
@@ -82,9 +82,14 @@ src_configure() {
 }
 
 gen_translation() {
+	local mydir
+	if use qt4; then
+		mydir="$(qt4_get_bindir)"
+	elif use qt5; then
+		mydir="$(qt5_get_bindir)"
+	fi
 	ebegin "Generating $1 translation"
-	use qt4 && "$(qt4_get_bindir)"/lrelease ${PN}_${1}.ts
-	use qt5 && "$(qt5_get_bindir)"/lrelease ${PN}_${1}.ts
+	"${mydir}"/lrelease ${PN}_${1}.ts
 	eend $? || die "failed to generate $1 translation"
 }
 
