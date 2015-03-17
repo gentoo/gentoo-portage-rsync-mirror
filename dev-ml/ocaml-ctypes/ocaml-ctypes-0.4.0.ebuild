@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ctypes/ocaml-ctypes-0.4.0.ebuild,v 1.1 2015/03/16 16:41:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ctypes/ocaml-ctypes-0.4.0.ebuild,v 1.2 2015/03/17 07:42:18 aballier Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/ocamllabs/ocaml-ctypes"
 SRC_URI="https://github.com/ocamllabs/ocaml-ctypes/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE=""
 

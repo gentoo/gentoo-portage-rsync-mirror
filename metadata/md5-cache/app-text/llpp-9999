@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install prepare unpack
-DEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.3:= media-libs/openjpeg:2 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 ) static? ( >=app-text/mupdf-1.3:=[static-libs] media-libs/openjpeg:2[static-libs] media-libs/freetype:2[static-libs] media-libs/jbig2dec[static-libs] sys-libs/zlib[static-libs] virtual/jpeg:0[static-libs] x11-libs/libX11[static-libs] app-arch/bzip2[static-libs] media-libs/libXcm[static-libs] x11-libs/libXau[static-libs] x11-libs/libXdmcp[static-libs] x11-libs/libXmu[static-libs] ) dev-lang/ocaml[ocamlopt?] dev-ml/lablgl[glut,ocamlopt?] dev-vcs/git
+DEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.5:0= media-libs/openjpeg:2 media-libs/fontconfig:1.0 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 ) static? ( >=app-text/mupdf-1.5:0=[static-libs] media-libs/openjpeg:2[static-libs] media-libs/fontconfig:1.0[static-libs] media-libs/freetype:2[static-libs] media-libs/jbig2dec[static-libs] sys-libs/zlib[static-libs] virtual/jpeg:0[static-libs] x11-libs/libX11[static-libs] app-arch/bzip2[static-libs] media-libs/libXcm[static-libs] x11-libs/libXau[static-libs] x11-libs/libXdmcp[static-libs] x11-libs/libXmu[static-libs] ) >=dev-lang/ocaml-4.02[ocamlopt?] dev-ml/lablgl[glut,ocamlopt?] dev-vcs/git
 DESCRIPTION=a graphical PDF viewer which aims to superficially resemble less(1)
 EAPI=5
 HOMEPAGE=http://repo.or.cz/w/llpp.git
 IUSE=+ocamlopt static
 LICENSE=GPL-3
-RDEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.3:= media-libs/openjpeg:2 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 )
+RDEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.5:0= media-libs/openjpeg:2 media-libs/fontconfig:1.0 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 )
 RESTRICT=!ocamlopt? ( strip )
 SLOT=0
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=47cf83db419fc01f87c6c3ada847f42b
+_md5_=8b45adcf19723478366cda6c536378b3

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cytoolz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/ChangeLog,v 1.5 2015/03/08 23:43:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/ChangeLog,v 1.6 2015/03/17 07:44:13 patrick Exp $
+
+*cytoolz-0.7.2 (17 Mar 2015)
+
+  17 Mar 2015; Patrick Lauer <patrick@gentoo.org> +cytoolz-0.7.2.ebuild:
+  Bump
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> cytoolz-0.7.1.ebuild:
   x86 stable, bug 540290

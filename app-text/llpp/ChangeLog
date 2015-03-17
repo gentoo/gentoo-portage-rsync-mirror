@@ -1,6 +1,10 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.66 2015/03/02 11:00:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.67 2015/03/17 07:46:15 xmw Exp $
+
+  17 Mar 2015; Michael Weber <xmw@gentoo.org> llpp-21.ebuild, llpp-9999.ebuild:
+  Bump ocaml dep to 4.02 (bug 541820, thanks Franz Fellner and Max Klinger),
+  push recent changes into -9999.
 
   02 Mar 2015; Michael Weber <xmw@gentoo.org> llpp-21.ebuild:
   Needs ocaml-4
