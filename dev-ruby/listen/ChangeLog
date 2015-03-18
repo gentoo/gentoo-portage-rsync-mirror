@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/listen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.43 2015/01/26 19:41:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.44 2015/03/18 13:10:28 mrueg Exp $
+
+*listen-2.8.6 (18 Mar 2015)
+
+  18 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +listen-2.8.6.ebuild:
+  Version bump.
 
   26 Jan 2015; Hans de Graaff <graaff@gentoo.org> listen-2.8.5.ebuild:
   Add blockers for other packages trying to install /usr/bin/listen, bug

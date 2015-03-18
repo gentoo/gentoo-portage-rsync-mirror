@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby19] >=dev-ruby/celluloid-0.15.2[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby20] >=dev-ruby/celluloid-0.15.2[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby21] >=dev-ruby/celluloid-0.15.2[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/celluloid-io[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/celluloid-io[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( dev-ruby/celluloid-io[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:3[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/rspec:3[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( dev-ruby/rspec:3[ruby_targets_ruby21] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] ) )
+DESCRIPTION=Listens to file modifications and notifies you about the changes
+EAPI=5
+HOMEPAGE=https://github.com/guard/listen
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 test test
+KEYWORDS=~amd64 ~ppc ~ppc64
+LICENSE=MIT
+RDEPEND=!!media-sound/listen !!media-radio/ax25 ruby_targets_ruby19? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby19] >=dev-ruby/celluloid-0.15.2[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby20] >=dev-ruby/celluloid-0.15.2[ruby_targets_ruby20] ) ruby_targets_ruby21? ( >=dev-ruby/rb-inotify-0.9.0[ruby_targets_ruby21] >=dev-ruby/celluloid-0.15.2[ruby_targets_ruby21] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) ruby_targets_ruby21? ( virtual/rubygems[ruby_targets_ruby21] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 )
+SLOT=2
+SRC_URI=https://github.com/guard/listen/archive/v2.8.6.tar.gz -> listen-2.8.6.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-fakegem	d4f8591e9b20b106327e9d143eb13da5	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=352188520e1a4e169d85a272d476ef52

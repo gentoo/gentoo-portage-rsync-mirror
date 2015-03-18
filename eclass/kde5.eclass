@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.3 2015/02/10 22:21:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.4 2015/03/18 13:04:35 kensington Exp $
 
 # @ECLASS: kde5.eclass
 # @MAINTAINER:
@@ -35,7 +35,7 @@ EXPORT_FUNCTIONS pkg_pretend pkg_setup src_unpack src_prepare src_configure src_
 # @ECLASS-VARIABLE: QT_MINIMAL
 # @DESCRIPTION:
 # Minimal Qt version to require for the package.
-: ${QT_MINIMAL:=5.3.0}
+: ${QT_MINIMAL:=5.4.1}
 
 # @ECLASS-VARIABLE: KDE_AUTODEPS
 # @DESCRIPTION:
@@ -83,6 +83,13 @@ else
 	: ${KDE_TEST:=false}
 fi
 
+# @ECLASS-VARIABLE: KDE_SELINUX_MODULE
+# @DESCRIPTION:
+# If set to "none", do nothing.
+# For any other value, add selinux to IUSE, and depending on that useflag
+# add a dependency on sec-policy/selinux-${KDE_SELINUX_MODULE} to (R)DEPEND
+: ${KDE_SELINUX_MODULE:=none}
+
 if [[ ${KDEBASE} = kdevelop ]]; then
 	HOMEPAGE="http://www.kdevelop.org/"
 else
@@ -100,20 +107,40 @@ fi
 case ${KDE_AUTODEPS} in
 	false)	;;
 	*)
-		if [[ ${KDE_BUILD_TYPE} = live ]]; then
-			ecm_version=9999
-		elif [[ ${CATEGORY} = kde-frameworks ]]; then
-			ecm_version=1.$(get_version_component_range 2).0
-		else
-			ecm_version=1.3.0
+		if [[ ${CATEGORY} = kde-frameworks ]]; then
+			ECM_MINIMAL=1.$(get_version_component_range 2).0
 		fi
 
-		DEPEND+=" >=dev-libs/extra-cmake-modules-${ecm_version}"
+		if [[ ${KDE_BUILD_TYPE} = live ]]; then
+			case ${CATEGORY} in
+				kde-frameworks)
+					ECM_MINIMAL=9999
+					FRAMEWORKS_MINIMAL=9999
+				;;
+				kde-plasma)
+					ECM_MINIMAL=9999
+					FRAMEWORKS_MINIMAL=9999
+				;;
+				*) ;;
+			esac
+		fi
+
+		DEPEND+=" >=dev-libs/extra-cmake-modules-${ECM_MINIMAL}"
 		RDEPEND+=" >=kde-frameworks/kf-env-3"
 		COMMONDEPEND+="	>=dev-qt/qtcore-${QT_MINIMAL}:5"
 
-		if [[ ${CATEGORY} = kde-base ]]; then
-			RDEPEND+=" !kde-base/kde-l10n:4"
+		if [[ ${CATEGORY} = kde-plasma ]]; then
+			RDEPEND+="
+				!kde-apps/kde-l10n[-minimal]
+				!kde-base/kde-l10n:4
+			"
+		fi
+
+		if [[ ${CATEGORY} == kde-apps ]]; then
+			RDEPEND+="
+				!kde-apps/${PN}:4
+				!kde-base/${PN}
+			"
 		fi
 
 		unset ecm_version
@@ -158,6 +185,14 @@ case ${KDE_TEST} in
 	*)
 		IUSE+=" test"
 		DEPEND+=" test? ( >=dev-qt/qttest-${QT_MINIMAL}:5 )"
+		;;
+esac
+
+case ${KDE_SELINUX_MODULE} in
+	none)   ;;
+	*)
+		IUSE+=" selinux"
+		COMMONDEPEND+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
 		;;
 esac
 
@@ -236,7 +271,14 @@ _calculate_live_repo() {
 			# This variable allows easy overriding of default kde mirror service
 			# (anonsvn) with anything else you might want to use.
 			ESVN_MIRROR=${ESVN_MIRROR:=svn://anonsvn.kde.org/home/kde}
-			ESVN_REPO_URI="${ESVN_MIRROR}/trunk/KDE/${PN}"
+
+			local branch_prefix="KDE"
+
+			if [[ -n ${KMNAME} ]]; then
+				branch_prefix="${KMNAME}"
+			fi
+
+			ESVN_REPO_URI="${ESVN_MIRROR}/trunk/${branch_prefix}/${PN}"
 			;;
 		git)
 			# @ECLASS-VARIABLE: EGIT_MIRROR
@@ -260,7 +302,7 @@ _calculate_live_repo() {
 				_kmname=${PN}
 			fi
 
-			if [[ ${PV} != 9999 && ${KDEBASE} = kde-base ]]; then
+			if [[ ${PV} != 9999 && ${CATEGORY} = kde-plasma ]]; then
 				EGIT_BRANCH="Plasma/$(get_version_component_range 1-2)"
 			fi
 
@@ -349,9 +391,10 @@ kde5_src_prepare() {
 	# only build unit tests when required
 	if ! use_if_iuse test ; then
 		comment_add_subdirectory autotests
+		comment_add_subdirectory tests
 	fi
 
-	if [[ ${CATEGORY} = kde-base ]]; then
+	if [[ ${CATEGORY} = kde-plasma ]]; then
 		punt_bogus_deps
 	fi
 
@@ -374,9 +417,6 @@ kde5_src_configure() {
 	if ! use_if_iuse test ; then
 		cmakeargs+=( -DBUILD_TESTING=OFF )
 	fi
-
-	# make sure config files go to /etc instead of /usr/etc
-	cmakeargs+=(-DSYSCONF_INSTALL_DIR="${EPREFIX}"/etc)
 
 	# install mkspecs in the same directory as qt stuff
 	cmakeargs+=(-DKDE_INSTALL_USE_QT_SYS_PATHS=ON)
