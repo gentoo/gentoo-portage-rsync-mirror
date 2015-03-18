@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/elasticsearch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.9 2015/01/06 10:47:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.10 2015/03/18 10:07:27 chainsaw Exp $
+
+*elasticsearch-1.4.4 (18 Mar 2015)
+
+  18 Mar 2015; Tony Vroon <chainsaw@gentoo.org> +elasticsearch-1.4.4.ebuild:
+  Version bump, as requested by Tomas "hydrapolic" Mozes in bug #542580.
+  Testing by Amadeusz "aidecoe" Żołnowski suggests no changes to the ebuild
+  are required.
 
 *elasticsearch-1.4.2 (06 Jan 2015)
 

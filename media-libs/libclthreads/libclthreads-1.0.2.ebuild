@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/libclthreads-1.0.2.ebuild,v 1.5 2009/08/21 19:45:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/libclthreads-1.0.2.ebuild,v 1.6 2015/03/18 10:04:08 aballier Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -8,8 +8,8 @@ inherit eutils multilib toolchain-funcs
 MY_P=clthreads-${PV}
 
 DESCRIPTION="An audio library by Fons Adriaensen <fons.adriaensen@skynet.be>"
-HOMEPAGE="http://users.skynet.be/solaris/linuxaudio"
-SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/${MY_P}.tar.bz2"
+HOMEPAGE="http://kokkinizita.linuxaudio.org/linuxaudio/index.html"
+SRC_URI="http://kokkinizita.linuxaudio.org/linuxaudio/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

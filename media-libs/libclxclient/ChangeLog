@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libclxclient
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.15 2012/09/07 22:38:10 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.17 2015/03/18 10:29:45 aballier Exp $
+
+*libclxclient-3.9.0 (18 Mar 2015)
+
+  18 Mar 2015; Alexis Ballier <aballier@gentoo.org> +libclxclient-3.9.0.ebuild,
+  +files/libclxclient-3.9.0-Makefile.patch:
+  Version bump, fix libraries symlink by Rodrigo Severo (bug #418063)
+
+  18 Mar 2015; Alexis Ballier <aballier@gentoo.org> libclxclient-3.3.2.ebuild,
+  libclxclient-3.6.1.ebuild:
+  fix homepage & src_uri, bug #385411 by Emery Hemingway
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libclthreads
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.13 2012/09/07 22:39:55 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclthreads/ChangeLog,v 1.14 2015/03/18 10:04:08 aballier Exp $
+
+  18 Mar 2015; Alexis Ballier <aballier@gentoo.org> libclthreads-1.0.2.ebuild,
+  libclthreads-2.2.1.ebuild, libclthreads-2.4.0.ebuild:
+  fix homepage & src_uri, bug #385411 by Emery Hemingway
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
