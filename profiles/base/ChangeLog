@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.780 2015/03/18 14:30:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.781 2015/03/18 15:42:45 aballier Exp $
+
+  18 Mar 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  unmask ruby useflag for newest libcaca versions, bug #483104
 
   18 Mar 2015; Michael Palimaka <kensington@gentoo.org> package.use.mask:
   Unmask dev-qt/designer[phonon] as blockers have been resolved (bug #477632).

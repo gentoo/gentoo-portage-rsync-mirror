@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.660 2015/03/18 14:30:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.661 2015/03/18 15:42:45 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -229,7 +229,7 @@ sys-infiniband/ofed ofed_drivers_ehca
 # Mask ruby18-only compatible flags
 # Bugs: 483104, 483102
 =dev-ruby/rubygems-1.8* server
-media-libs/libcaca ruby
+<media-libs/libcaca-0.99_beta19 ruby
 =dev-vcs/subversion-1.7* ruby
 media-sound/podcatcher bittorrent
 
