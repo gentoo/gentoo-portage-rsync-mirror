@@ -1,14 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/aeolus-0.8.1.ebuild,v 1.3 2009/01/25 14:56:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/aeolus-0.8.1.ebuild,v 1.4 2015/03/18 10:00:45 aballier Exp $
 
 inherit versionator toolchain-funcs multilib
 
 MY_P=${PN}-$(replace_version_separator 3 '-')
 
 DESCRIPTION="A synthesised pipe organ emulator"
-HOMEPAGE="http://www.kokkinizita.net/linuxaudio/aeolus/index.html"
-SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${MY_P}.tar.bz2"
+HOMEPAGE="http://kokkinizita.linuxaudio.org/linuxaudio/aeolus/index.html"
+SRC_URI="http://kokkinizita.linuxaudio.org/linuxaudio/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

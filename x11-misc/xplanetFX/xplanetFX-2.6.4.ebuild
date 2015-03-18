@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanetFX/xplanetFX-2.6.4.ebuild,v 1.1 2015/03/17 16:52:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanetFX/xplanetFX-2.6.4.ebuild,v 1.2 2015/03/18 09:51:08 voyageur Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ src_install() {
 	exeinto /usr/share/${PN}
 	doexe gentoo/autostart
 
-	dodoc usr/share/doc/${PN}/{changelog,README}
+	dodoc share/doc/${PN}/{changelog,README}
 
 	python_scriptinto /usr/share/${PN}/stars
 	python_foreach_impl python_doscript gentoo/catalog.py
