@@ -1,48 +1,35 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.3.ebuild,v 1.2 2015/02/03 07:28:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.4.ebuild,v 1.1 2015/03/18 20:39:40 pesa Exp $
 
 EAPI=5
 
 inherit multilib pax-utils qmake-utils
 
 DESCRIPTION="Qt Build Suite"
-HOMEPAGE="http://qt-project.org/wiki/qbs"
+HOMEPAGE="http://wiki.qt.io/Qbs"
 SRC_URI="http://download.qt.io/official_releases/${PN}/${PV}/${P}.src.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="|| ( LGPL-2.1 LGPL-3 )"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="doc qt5 test"
+IUSE="doc test"
 
 RDEPEND="
-	!qt5? (
-		dev-qt/qtcore:4
-		dev-qt/qtgui:4
-		dev-qt/qtscript:4
-	)
-	qt5? (
-		dev-qt/qtcore:5
-		dev-qt/qtgui:5
-		dev-qt/qtscript:5
-		dev-qt/qtwidgets:5
-		dev-qt/qtxml:5
-	)
+	dev-qt/qtcore:5
+	dev-qt/qtgui:5
+	dev-qt/qtscript:5
+	dev-qt/qtwidgets:5
+	dev-qt/qtxml:5
 "
 DEPEND="${RDEPEND}
 	doc? (
-		!qt5? ( dev-qt/qthelp:4 )
-		qt5? ( dev-qt/qdoc:5 dev-qt/qthelp:5 )
+		dev-qt/qdoc:5
+		dev-qt/qthelp:5
 	)
 	test? (
-		!qt5? (
-			dev-qt/qtdeclarative:4
-			dev-qt/qttest:4
-		)
-		qt5? (
-			dev-qt/qtdeclarative:5
-			dev-qt/qttest:5
-		)
+		dev-qt/qtdeclarative:5
+		dev-qt/qttest:5
 	)
 "
 
@@ -69,12 +56,7 @@ src_configure() {
 		QBS_INSTALL_PREFIX="${EPREFIX}/usr"
 		QBS_LIBRARY_DIRNAME="$(get_libdir)"
 	)
-
-	if use qt5; then
-		eqmake5 "${myqmakeargs[@]}"
-	else
-		eqmake4 "${myqmakeargs[@]}"
-	fi
+	eqmake5 "${myqmakeargs[@]}"
 }
 
 src_compile() {
@@ -93,11 +75,8 @@ src_test() {
 	export HOME=${T}
 	export LD_LIBRARY_PATH=${S}/$(get_libdir)
 
-	local qmakepath=${EROOT}usr/$(get_libdir)/$(usev qt5 || echo qt4)/bin/qmake
-	[[ -x ${qmakepath} ]] || qmakepath=${EROOT}usr/bin/qmake
-
 	"${S}"/bin/qbs-setup-toolchains "${EROOT}usr/bin/gcc" gcc || die
-	"${S}"/bin/qbs-setup-qt "${qmakepath}" qbs_autotests || die
+	"${S}"/bin/qbs-setup-qt "$(qt5_get_bindir)/qmake" qbs_autotests || die
 
 	einfo "Running autotests"
 	default
