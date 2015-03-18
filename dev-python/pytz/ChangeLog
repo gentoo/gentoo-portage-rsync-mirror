@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.203 2015/03/10 17:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.204 2015/03/18 06:08:52 patrick Exp $
+
+  18 Mar 2015; Patrick Lauer <patrick@gentoo.org> pytz-2014.10.ebuild,
+  pytz-2014.9.ebuild:
+  Add pypy3
 
   10 Mar 2015; Mike Frysinger <vapier@gentoo.org> pytz-2014.10.ebuild:
   Mark arm64/s390/sh stable.
