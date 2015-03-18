@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.2.5.ebuild,v 1.2 2015/03/07 08:07:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.2.5.ebuild,v 1.3 2015/03/18 19:22:56 graaff Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -63,6 +63,7 @@ RDEPEND="${CDEPEND}
 
 DEPEND="${CDEPEND}
 		dev-lang/swig
+		virtual/jre
 		virtual/pkgconfig"
 
 S="${WORKDIR}"/"${MY_P}"

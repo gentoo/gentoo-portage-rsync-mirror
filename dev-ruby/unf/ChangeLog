@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/unf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/ChangeLog,v 1.20 2014/11/28 17:55:44 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/ChangeLog,v 1.21 2015/03/18 19:15:46 graaff Exp $
+
+  18 Mar 2015; Hans de Graaff <graaff@gentoo.org> -unf-0.1.1.ebuild:
+  Cleanup.
 
   28 Nov 2014; Manuel Rüger <mrueg@gentoo.org> unf-0.1.1.ebuild,
   unf-0.1.3-r1.ebuild, unf-0.1.4.ebuild:

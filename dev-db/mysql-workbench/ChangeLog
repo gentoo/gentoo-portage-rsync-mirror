@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.107 2015/03/07 08:07:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.108 2015/03/18 19:22:56 graaff Exp $
+
+  18 Mar 2015; Hans de Graaff <graaff@gentoo.org> mysql-workbench-6.2.5.ebuild:
+  Add missing dependency on virtual/jre, fixing bug 542576.
 
   07 Mar 2015; Hans de Graaff <graaff@gentoo.org> mysql-workbench-6.2.3.ebuild,
   mysql-workbench-6.2.3-r1.ebuild, mysql-workbench-6.2.5.ebuild:
