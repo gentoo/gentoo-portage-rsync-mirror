@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/x265
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.17 2015/03/17 15:24:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/ChangeLog,v 1.18 2015/03/18 06:38:00 jer Exp $
+
+  18 Mar 2015; Jeroen Roovers <jer@gentoo.org> x265-1.5.ebuild:
+  Marked ~hppa (bug #510340).
 
   17 Mar 2015; Alexis Ballier <aballier@gentoo.org> x265-1.5.ebuild,
   x265-9999.ebuild:
