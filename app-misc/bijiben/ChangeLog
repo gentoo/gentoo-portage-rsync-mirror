@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/bijiben
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/ChangeLog,v 1.22 2015/03/15 13:15:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/ChangeLog,v 1.23 2015/03/18 15:17:44 tetromino Exp $
+
+  18 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  bijiben-3.14.2.ebuild:
+  Missing dependency on evolution (bug #543652, thanks to Toralf Förster).
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> bijiben-3.14.2.ebuild:
   x86 stable, bug 534012
