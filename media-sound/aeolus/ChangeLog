@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aeolus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/ChangeLog,v 1.9 2015/03/18 10:01:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aeolus/ChangeLog,v 1.10 2015/03/18 11:58:28 aballier Exp $
+
+*aeolus-0.9.0 (18 Mar 2015)
+
+  18 Mar 2015; Alexis Ballier <aballier@gentoo.org> +aeolus-0.9.0.ebuild:
+  version bump
 
   18 Mar 2015; Alexis Ballier <aballier@gentoo.org> -aeolus-0.8.2.ebuild:
   remove old
