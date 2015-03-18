@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.159 2015/03/17 09:45:40 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.160 2015/03/18 08:32:34 ago Exp $
+
+  18 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ettercap-0.8.2.ebuild:
+  Stable for amd64, wrt bug #532764
 
   17 Mar 2015; Andreas Schuerch <nativemad@gentoo.org> ettercap-0.8.2.ebuild:
   x86 stable, see bug 532764
