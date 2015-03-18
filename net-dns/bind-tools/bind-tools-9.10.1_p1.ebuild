@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.10.1_p1.ebuild,v 1.7 2015/02/16 18:23:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.10.1_p1.ebuild,v 1.8 2015/03/18 00:06:42 floppym Exp $
 
 EAPI="5"
 
@@ -70,6 +70,7 @@ src_configure() {
 		--without-libjson \
 		$(use_enable ipv6) \
 		$(use_with idn) \
+		$(usex idn --with-idnlib=-lidnkit '') \
 		$(use_with ssl openssl "${EPREFIX}"/usr) \
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
