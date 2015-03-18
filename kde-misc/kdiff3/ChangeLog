@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.75 2015/03/18 16:40:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.76 2015/03/18 18:22:37 voyageur Exp $
+
+  18 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> kdiff3-0.9.98-r1.ebuild:
+  Use default instead of deprecated base eclass, thanks Nikoli <nikoli@gmx.us>
 
 *kdiff3-0.9.98-r1 (18 Mar 2015)
 

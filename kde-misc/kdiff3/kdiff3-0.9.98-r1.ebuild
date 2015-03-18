@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.98-r1.ebuild,v 1.1 2015/03/18 16:40:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.98-r1.ebuild,v 1.2 2015/03/18 18:22:37 voyageur Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ else
 fi
 
 KDE_REQUIRED="optional"
-inherit base kde4-base qmake-utils
+inherit kde4-base qmake-utils
 
 DESCRIPTION="Qt/KDE based frontend to diff3"
 HOMEPAGE="http://kdiff3.sourceforge.net/"
@@ -52,7 +52,7 @@ src_unpack(){
 		git-r3_src_unpack
 		mv "${S}"/${PN}/* "${S}" || die
 	else
-		base_src_unpack
+		default
 	fi
 }
 
@@ -81,7 +81,7 @@ src_compile() {
 	if use kde; then
 		kde4-base_src_compile
 	else
-		base_src_compile
+		default
 	fi
 }
 
@@ -89,7 +89,7 @@ src_install() {
 	if use kde; then
 		kde4-base_src_install
 	else
-		base_src_install INSTALL_ROOT="${D}"
+		emake INSTALL_ROOT="${D}" install
 	fi
 }
 
