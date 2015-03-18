@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install prepare
+DEPEND=media-libs/alsa-lib
+DESCRIPTION=Provides easy access to ALSA PCM devices
+EAPI=5
+HOMEPAGE=http://kokkinizita.linuxaudio.org/linuxaudio/
+KEYWORDS=~amd64
+LICENSE=GPL-3
+RDEPEND=media-libs/alsa-lib
+SLOT=0
+SRC_URI=http://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-alsa-pcmi-0.2.0.tar.bz2
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=9ccde5d758e7b671c8ea905e77c5c5b1
