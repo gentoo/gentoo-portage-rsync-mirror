@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice-bin-debug
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.77 2015/02/15 17:47:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.78 2015/03/18 18:37:58 dilfridge Exp $
+
+*libreoffice-bin-debug-4.3.5.2-r1 (18 Mar 2015)
+
+  18 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-debug-4.3.5.2-r1.ebuild:
+  Revision bump for Poppler 0.32
 
   15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   -libreoffice-bin-debug-4.2.8.2.ebuild:

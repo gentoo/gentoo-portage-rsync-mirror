@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.25 2014/08/26 01:33:17 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.26 2015/03/18 18:37:24 zerochaos Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit multilib distutils cmake-utils
+inherit multilib distutils cmake-utils udev
 
 HOMEPAGE="http://ubertooth.sourceforge.net/"
 
@@ -21,15 +21,14 @@ REQUIRED_USE="dfu? ( python )
 		python? ( || ( dfu specan ) )"
 DEPEND="bluez? ( net-wireless/bluez:= )
 	>=net-libs/libbtbb-${PV}:=
-	pcap? ( net-libs/libpcap:= )"
+	pcap? ( net-libs/libpcap:= )
+	virtual/libusb:1="
 RDEPEND="${DEPEND}
-	specan? ( virtual/libusb:1
-		 >=dev-qt/qtgui-4.7.2:4
+	specan? ( >=dev-qt/qtgui-4.7.2:4
 		>=dev-python/pyside-1.0.2
 		>=dev-python/numpy-1.3
 		>=dev-python/pyusb-1.0.0_alpha1 )
-	dfu? ( virtual/libusb:1
-		>=dev-python/pyusb-1.0.0_alpha1 )
+	dfu? ( >=dev-python/pyusb-1.0.0_alpha1 )
 	udev? ( virtual/udev )"
 
 MY_PV=${PV/\./-}
@@ -74,8 +73,15 @@ src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_enable bluez USE_BLUEZ)
 		$(cmake-utils_use_enable pcap USE_PCAP)
+		$(cmake-utils_use_enable udev INSTALL_UDEV_RULES)
 		-DDISABLE_PYTHON=true
 	)
+	if use udev; then
+		mycmakeargs+=(
+			-DUDEV_RULES_GROUP=usb
+			-DUDEV_RULES_PATH="$(get_udevdir)/rules.d"
+		)
+	fi
 	cmake-utils_src_configure
 }
 
@@ -95,11 +101,6 @@ src_install() {
 		ewarn "on the latest and/or can build your own."
 	else
 	        use ubertooth1-firmware && newins ubertooth-one-firmware-bin/bluetooth_rxtx.dfu ${PN}-one-${PV}-bluetooth_rxtx.dfu
-	fi
-
-	if use udev; then
-		insinto /lib/udev/rules.d/
-		doins "${S}"/lib${PN}/40-${PN}.rules
 	fi
 
 	use python && distutils_src_install

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ubertooth
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.26 2014/08/26 01:33:17 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.27 2015/03/18 18:37:24 zerochaos Exp $
+
+  18 Mar 2015; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  update live ebuild for new udev installation method
 
   26 Aug 2014; Rick Farina <zerochaos@gentoo.org> ubertooth-2014.04.1-r1.ebuild,
   ubertooth-9999.ebuild:
