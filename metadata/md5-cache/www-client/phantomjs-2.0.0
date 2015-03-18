@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-libs/icu:= dev-libs/openssl media-libs/fontconfig media-libs/freetype media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 media-libs/libpng:0= virtual/jpeg:0
 SLOT=0
 SRC_URI=https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-source.zip
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=5de6de629ed8679010bd8164b7e696b4
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=3b505566fda6410011a4f0b3f55702a3

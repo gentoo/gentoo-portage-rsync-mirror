@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.544 2015/02/27 22:06:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.545 2015/03/18 20:24:48 vapier Exp $
+
+*openssh-6.8_p1 (18 Mar 2015)
+
+  18 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-6.8_p1-sshd-gssapi-multihomed.patch,
+  +files/openssh-6.8_p1-ssl-engine-configure.patch, +openssh-6.8_p1.ebuild,
+  metadata.xml:
+  Version bump #543694 by Jason A. Donenfeld.
 
 *openssh-6.7_p1-r4 (27 Feb 2015)
 

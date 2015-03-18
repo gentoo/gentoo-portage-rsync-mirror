@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-2.0.0.ebuild,v 1.1 2015/03/15 07:49:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-2.0.0.ebuild,v 1.2 2015/03/18 20:17:45 graaff Exp $
 
 EAPI=5
 
-inherit toolchain-funcs pax-utils multiprocessing
+inherit eutils toolchain-funcs pax-utils multiprocessing
 
 DESCRIPTION="A headless WebKit scriptable with a JavaScript API"
 HOMEPAGE="http://phantomjs.org/"
@@ -28,6 +28,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}/phantomjs-python3-udis86-itab.patch"
+
 	# Respect CC, CXX, {C,CXX,LD}FLAGS in .qmake.cache
 	sed -i \
 		-e "/^SYSTEM_VARIABLES=/i \

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/phantomjs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.19 2015/03/15 07:49:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.20 2015/03/18 20:17:45 graaff Exp $
+
+  18 Mar 2015; Hans de Graaff <graaff@gentoo.org> phantomjs-2.0.0.ebuild,
+  +files/phantomjs-python3-udis86-itab.patch:
+  Fix building fix python 3 selected. Thanks for Benjamin Southall for the
+  patch in bug 543534.
 
 *phantomjs-2.0.0 (15 Mar 2015)
 
