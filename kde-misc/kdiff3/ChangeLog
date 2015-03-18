@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kdiff3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.74 2014/08/08 09:48:23 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.75 2015/03/18 16:40:00 voyageur Exp $
+
+*kdiff3-0.9.98-r1 (18 Mar 2015)
+
+  18 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +kdiff3-0.9.98-r1.ebuild:
+  Support qt5 build, fixes bug #543286
 
   08 Aug 2014; Bernard Cafarelli <voyageur@gentoo.org> kdiff3-0.9.98.ebuild:
   Fix sed command for USE=-kde, bug #519370
