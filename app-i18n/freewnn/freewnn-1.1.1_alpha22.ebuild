@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha22.ebuild,v 1.3 2014/09/15 23:05:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha22.ebuild,v 1.4 2015/03/18 02:13:47 naota Exp $
 
 EAPI=5
 
@@ -33,6 +33,11 @@ src_prepare() {
 	#bug #318593
 
 	epatch "${FILESDIR}"/${P}-parallel-build.patch #517916
+
+	# 542534
+	sed -i -e "s/egrep -v/egrep -av/" kWnn/kdic/Makefile.in \
+		cWnn/tdic/Makefile.in cWnn/cdic/Makefile.in \
+		Wnn/pubdicplus/Makefile.in || die
 }
 
 src_configure() {

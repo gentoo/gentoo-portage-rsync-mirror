@@ -10,4 +10,4 @@ RDEPEND=X? ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt )
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/freewnn/59257/FreeWnn-1.1.1-a022.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=1d7e4a247c016e1e283691dde7861340
+_md5_=623e0ddb7986861d6b7785cec2932c9c

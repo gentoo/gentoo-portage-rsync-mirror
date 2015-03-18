@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/igbinary
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.16 2015/01/11 03:32:17 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.17 2015/03/18 02:12:25 grknight Exp $
+
+  18 Mar 2015; Brian Evans <grknight@gentoo.org> -igbinary-1.1.1-r2.ebuild:
+  Drop old now that deps are clear
 
 *igbinary-1.1.1-r2 (11 Jan 2015)
 
