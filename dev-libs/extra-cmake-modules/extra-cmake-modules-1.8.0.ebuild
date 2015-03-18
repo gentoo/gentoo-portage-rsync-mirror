@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/extra-cmake-modules/extra-cmake-modules-1.6.1.ebuild,v 1.2 2015/02/01 18:00:50 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/extra-cmake-modules/extra-cmake-modules-1.8.0.ebuild,v 1.1 2015/03/18 12:04:33 mrueg Exp $
 
 EAPI=5
 
