@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-functions
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.28 2015/03/17 18:14:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-functions/ChangeLog,v 1.29 2015/03/18 21:42:34 fuzzyray Exp $
+
+  18 Mar 2015; Paul Varner <fuzzyray@gentoo.org> gentoo-functions-0.9.ebuild,
+  gentoo-functions-9999.ebuild:
+  Fix ebuilds to install files to prefix filesystem. (Bug 543710)
 
 *gentoo-functions-0.9 (17 Mar 2015)
 
