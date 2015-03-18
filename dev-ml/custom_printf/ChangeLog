@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/custom_printf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/custom_printf/ChangeLog,v 1.11 2015/02/20 17:09:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/custom_printf/ChangeLog,v 1.12 2015/03/18 17:11:51 aballier Exp $
+
+*custom_printf-112.24.00 (18 Mar 2015)
+
+  18 Mar 2015; Alexis Ballier <aballier@gentoo.org>
+  +custom_printf-112.24.00.ebuild:
+  version bump
 
   20 Feb 2015; Alexis Ballier <aballier@gentoo.org>
   -custom_printf-109.27.00.ebuild, -custom_printf-109.60.00.ebuild,
@@ -61,4 +67,3 @@
   24 May 2013; Alexis Ballier <aballier@gentoo.org>
   +custom_printf-109.15.00.ebuild, +metadata.xml:
   initial import, ebuild by me
-
