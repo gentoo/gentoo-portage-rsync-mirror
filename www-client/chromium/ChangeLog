@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1210 2015/03/12 13:10:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1211 2015/03/18 19:47:38 phajdan.jr Exp $
+
+*chromium-43.0.2334.0 (18 Mar 2015)
+
+  18 Mar 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-43.0.2334.0.ebuild, metadata.xml:
+  Dev channel bump. Replace bindist with proprietary-codecs USE flag (bug
+  #538628 by pacho).
 
 *chromium-43.0.2327.5 (12 Mar 2015)
 
