@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/designer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.27 2015/03/08 13:59:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.28 2015/03/18 14:18:17 kensington Exp $
+
+  18 Mar 2015; Michael Palimaka <kensington@gentoo.org> designer-4.8.5.ebuild,
+  designer-4.8.6-r1.ebuild:
+  Introduce kde use flag to use phonon plugin from media-libs/phonon wrt bug
+  #477632.
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> designer-5.4.1.ebuild:
   Remove all keywords from "live" branch.

@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/gtk-engines-unico
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/ChangeLog,v 1.17 2014/04/27 09:20:49 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/ChangeLog,v 1.18 2015/03/18 14:13:14 tetromino Exp $
+
+*gtk-engines-unico-1.0.3_pre20140109 (18 Mar 2015)
+
+  18 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtk-engines-unico-1.0.3_pre20140109.ebuild:
+  Version bump, fixes performance issues with >=gtk+-3.10 (bug #543558, thanks
+  to Sebastian Pipping). Enable multilib support.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -gtk-engines-unico-1.0.2.ebuild:
   drop old

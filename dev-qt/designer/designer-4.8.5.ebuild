@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/designer-4.8.5.ebuild,v 1.11 2014/01/26 11:55:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/designer-4.8.5.ebuild,v 1.12 2015/03/18 14:18:17 kensington Exp $
 
 EAPI=5
 
@@ -15,18 +15,19 @@ else
 fi
 
 DESIGNER_PLUGINS="declarative phonon qt3support webkit"
-IUSE="${DESIGNER_PLUGINS}"
+IUSE="${DESIGNER_PLUGINS} kde"
 
 DEPEND="
 	~dev-qt/qtcore-${PV}[aqua=,debug=]
 	~dev-qt/qtgui-${PV}[aqua=,debug=]
 	~dev-qt/qtscript-${PV}[aqua=,debug=]
 	declarative? ( ~dev-qt/qtdeclarative-${PV}[aqua=,debug=] )
-	phonon? ( ~dev-qt/qtphonon-${PV}[aqua=,debug=] )
+	phonon? ( !kde? ( ~dev-qt/qtphonon-${PV}[aqua=,debug=] ) )
 	qt3support? ( ~dev-qt/qt3support-${PV}[aqua=,debug=] )
 	webkit? ( ~dev-qt/qtwebkit-${PV}[aqua=,debug=] )
 "
 RDEPEND="${DEPEND}"
+PDEPEND="phonon? ( kde? ( media-libs/phonon[designer,qt4] ) )"
 
 pkg_setup() {
 	QT4_TARGET_DIRECTORIES="tools/designer"
@@ -43,8 +44,10 @@ src_prepare() {
 
 	local plugin
 	for plugin in ${DESIGNER_PLUGINS}; do
-		use ${plugin} || sed -i -e "/\<${plugin}\>/d" \
-			tools/designer/src/plugins/plugins.pro || die
+		if ! use ${plugin} || ( [[ ${plugin} == phonon ]] && use kde ); then
+			sed -i -e "/\<${plugin}\>/d" \
+				tools/designer/src/plugins/plugins.pro || die
+		fi
 	done
 }
 

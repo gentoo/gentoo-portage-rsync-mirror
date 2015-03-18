@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.659 2015/03/17 20:11:10 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.660 2015/03/18 14:30:26 kensington Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -353,11 +353,6 @@ media-sound/clementine ios
 # Ben de Groot <yngwin@gentoo.org> (07 Aug 2013)
 # Newer lightdm doesn't work with current razorqt-lightdm-greeter, bug 479734
 >=x11-misc/lightdm-1.5.0 razor
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (21 Jul 2013)
-# designer is pulled in by kdelibs, designer[phonon] blocks kdelibs...
-# Lots of reports on difficulties. Acked by kensington for qt team
-dev-qt/designer phonon
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Jul 2013)
 # GL/GLES support in cairo is mutually exclusive, bug #428770.
