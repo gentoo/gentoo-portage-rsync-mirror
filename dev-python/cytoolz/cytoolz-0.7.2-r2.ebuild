@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/cytoolz-0.7.2-r1.ebuild,v 1.1 2015/03/18 05:10:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/cytoolz-0.7.2-r2.ebuild,v 1.1 2015/03/19 04:58:45 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -16,7 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND="dev-python/cython[${PYTHON_USEDEP}]"
+# Informed by author the dep in toolz is not only required but the
+# tests are version sensitive. Dep on toolz actually appears missing from setup.py
+# https://github.com/pytoolz/cytoolz/issues/57
+RDEPEND="
+	dev-python/cython[${PYTHON_USEDEP}]
+	>=dev-python/toolz-0.7.1[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
@@ -27,7 +32,6 @@ python_compile() {
 }
 
 python_test() {
-	# https://github.com/pytoolz/cytoolz/issues/57
 	pushd "${BUILD_DIR}"/lib/ > /dev/null
 	PYTHONPATH=.:${PN} nosetests --with-doctest ${PN} || die "tests failed under ${EPYTHON}"
 	popd > /dev/null
