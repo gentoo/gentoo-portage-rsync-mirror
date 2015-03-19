@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gorilla
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/ChangeLog,v 1.5 2014/08/10 02:27:01 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gorilla/ChangeLog,v 1.6 2015/03/19 14:05:28 jlec Exp $
+
+*gorilla-1.4-r1 (19 Mar 2015)
+
+  19 Mar 2015; Justin Lecher <jlec@gentoo.org> +gorilla-1.4-r1.ebuild,
+  metadata.xml:
+  Fix tcl/tk slotting; bump EAPI=5; New homepage, bug #350703
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> gorilla-1.4.ebuild:
   Fix description for more repoman happy
