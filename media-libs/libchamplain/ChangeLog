@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libchamplain
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.61 2014/12/19 13:40:14 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/ChangeLog,v 1.62 2015/03/19 11:51:00 pacho Exp $
+
+*libchamplain-0.12.10 (19 Mar 2015)
+
+  19 Mar 2015; Pacho Ramos <pacho@gentoo.org> +libchamplain-0.12.10.ebuild,
+  -files/libchamplain-0.12.5-configure-maemo.patch, -libchamplain-0.12.7.ebuild,
+  -libchamplain-0.12.8.ebuild, metadata.xml:
+  Version bump, drop old
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> libchamplain-0.12.9.ebuild:
   amd64 stable, bug 529964

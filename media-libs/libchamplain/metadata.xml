@@ -5,9 +5,4 @@
 	<maintainer>
 		<email>jlec@gentoo.org</email>
 	</maintainer>
-	<use>
-		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for
-		introspection</flag>
-		<flag name="vala">Generate bindings for <pkg>dev-lang/vala</pkg></flag>
-	</use>
 </pkgmetadata>

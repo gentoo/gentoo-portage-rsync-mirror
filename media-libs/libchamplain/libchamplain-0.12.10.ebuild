@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.7.ebuild,v 1.6 2014/05/26 19:02:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.12.10.ebuild,v 1.1 2015/03/19 11:51:00 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG=no
@@ -10,13 +10,13 @@ VALA_USE_DEPEND=vapigen
 inherit gnome2 vala
 
 DESCRIPTION="Clutter based world map renderer"
-HOMEPAGE="http://projects.gnome.org/libchamplain/"
+HOMEPAGE="https://wiki.gnome.org/Projects/libchamplain"
 
 SLOT="0.12"
 LICENSE="LGPL-2"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
-IUSE="debug +gtk +introspection vala"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
+IUSE="debug +gtk +introspection vala"
 REQUIRED_USE="vala? ( introspection )"
 
 RDEPEND="
@@ -25,7 +25,7 @@ RDEPEND="
 	>=media-libs/clutter-1.12:1.0[introspection?]
 	media-libs/memphis:0.2[introspection?]
 	media-libs/cogl:=
-	net-libs/libsoup-gnome:2.4
+	>=net-libs/libsoup-2.34:2.4
 	x11-libs/cairo
 	gtk? (
 		x11-libs/gtk+:3[introspection?]

@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-1.0.0.ebuild,v 1.1 2014/04/27 16:22:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-1.0.4.ebuild,v 1.1 2015/03/19 11:47:39 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 multilib-minimal
 
 DESCRIPTION="A library providing GLib serialization and deserialization support for the JSON format"
-HOMEPAGE="https://wiki.gnome.org/JsonGlib"
+HOMEPAGE="https://wiki.gnome.org/Projects/JsonGlib"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~am
 IUSE="debug +introspection"
 
 RDEPEND="
-	>=dev-libs/glib-2.37.6:2
+	>=dev-libs/glib-2.37.6:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 "
 DEPEND="${RDEPEND}
@@ -25,19 +25,33 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-util/gtk-doc-am-1.20
 	>=sys-devel/gettext-0.18
-	virtual/pkgconfig
+	virtual/pkgconfig[${MULTILIB_USEDEP}]
 "
 
 src_prepare() {
 	# Do not touch CFLAGS
 	sed -e 's/CFLAGS -g/CFLAGS/' -i "${S}"/configure || die
+	gnome2_src_prepare
 }
 
-src_configure() {
+multilib_src_configure() {
 	# Coverage support is useless, and causes runtime problems
+	ECONF_SOURCE=${S} \
 	gnome2_src_configure \
 		--enable-man \
 		--disable-gcov \
 		$(usex debug --enable-debug=yes --enable-debug=minimum) \
-		$(use_enable introspection)
+		$(multilib_native_use_enable introspection)
+
+	if multilib_is_native_abi; then
+		ln -s "${S}"/doc/reference/html doc/reference/html || die
+	fi
+}
+
+multilib_src_compile() {
+	gnome2_src_compile
+}
+
+multilib_src_install() {
+	gnome2_src_install
 }

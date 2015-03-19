@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.22.2.ebuild,v 1.2 2015/03/03 07:52:06 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.22.4.ebuild,v 1.1 2015/03/19 11:42:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,14 +14,14 @@ HOMEPAGE="https://git.gnome.org/browse/gvfs"
 LICENSE="LGPL-2+"
 SLOT="0"
 
-IUSE="afp archive avahi bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks"
+IUSE="afp archive bluray cdda fuse gnome-online-accounts gphoto2 gtk +http ios libsecret mtp samba systemd test +udev udisks zeroconf"
 REQUIRED_USE="
 	cdda? ( udev )
 	mtp? ( udev )
 	udisks? ( udev )
 	systemd? ( udisks )
 "
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
 # Can use libgphoto-2.5.0 as well. Automagic detection.
 RDEPEND="
@@ -31,7 +31,6 @@ RDEPEND="
 	net-misc/openssh
 	afp? ( >=dev-libs/libgcrypt-1.2.2:0= )
 	archive? ( app-arch/libarchive:= )
-	avahi? ( >=net-dns/avahi-0.6 )
 	bluray? ( media-libs/libbluray )
 	fuse? ( >=sys-fs/fuse-2.8.0 )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 )
@@ -50,6 +49,7 @@ RDEPEND="
 		virtual/libgudev:=
 		virtual/libudev:= )
 	udisks? ( >=sys-fs/udisks-1.97:2 )
+	zeroconf? ( >=net-dns/avahi-0.6 )
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
@@ -100,7 +100,6 @@ src_configure() {
 		--enable-documentation \
 		$(use_enable afp) \
 		$(use_enable archive) \
-		$(use_enable avahi) \
 		$(use_enable bluray) \
 		$(use_enable cdda) \
 		$(use_enable fuse) \
@@ -115,5 +114,6 @@ src_configure() {
 		$(use_enable libsecret keyring) \
 		$(use_enable samba) \
 		$(use_enable systemd libsystemd-login) \
-		$(use_enable udisks udisks2)
+		$(use_enable udisks udisks2) \
+		$(use_enable zeroconf avahi)
 }

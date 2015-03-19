@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.14.2.ebuild,v 1.1 2014/12/22 21:35:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.14.3.ebuild,v 1.1 2015/03/19 11:38:11 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -21,12 +21,6 @@ QA_CONFIGURE_OPTIONS=".*"
 
 # gnome-session-2.91.6-r1 is needed so that 10-user-dirs-update is run at login
 # g-s-d[policykit] needed for bug #403527
-#
-# kerberos unfortunately means mit-krb5; build fails with heimdal
-
-# FIXME: modemmanager is not optional
-#        networkmanager is not optional
-
 COMMON_DEPEND="
 	>=dev-libs/glib-2.39.91:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
@@ -84,7 +78,7 @@ COMMON_DEPEND="
 # libgnomekbd needed only for gkbd-keyboard-display tool
 RDEPEND="${COMMON_DEPEND}
 	|| ( ( app-admin/openrc-settingsd sys-auth/consolekit ) >=sys-apps/systemd-31 )
-	>=sys-apps/accountsservice-0.6.30
+	>=sys-apps/accountsservice-0.6.33
 	x11-themes/gnome-icon-theme-symbolic
 	colord? ( >=gnome-extra/gnome-color-manager-3 )
 	cups? (
@@ -112,8 +106,6 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40.1
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
-
-	cups? ( sys-apps/sed )
 
 	gnome-base/gnome-common
 "
