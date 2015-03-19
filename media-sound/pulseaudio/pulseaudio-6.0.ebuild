@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-6.0.ebuild,v 1.7 2015/03/17 14:19:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-6.0.ebuild,v 1.8 2015/03/19 08:13:50 pacho Exp $
 
 EAPI=5
-inherit autotools bash-completion-r1 eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
+inherit autotools bash-completion-r1 eutils flag-o-matic gnome2-utils linux-info readme.gentoo systemd user versionator udev multilib-minimal
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
@@ -128,6 +128,7 @@ pkg_pretend() {
 
 pkg_setup() {
 	linux-info_pkg_setup
+	gnome2_environment_reset #543364
 
 	enewgroup audio 18 # Just make sure it exists
 
