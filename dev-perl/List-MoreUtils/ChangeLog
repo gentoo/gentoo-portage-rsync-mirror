@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.45 2015/03/17 18:01:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.46 2015/03/19 18:42:47 jer Exp $
+
+  19 Mar 2015; Jeroen Roovers <jer@gentoo.org> List-MoreUtils-0.407.0.ebuild:
+  Marked ~hppa (bug #543632).
 
 *List-MoreUtils-0.407.0 (17 Mar 2015)
 
