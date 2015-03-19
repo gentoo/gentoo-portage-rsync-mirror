@@ -10,4 +10,4 @@ RDEPEND=>=media-libs/libdiscid-0.2.2 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/N/NJ/NJH/MusicBrainz-DiscID-0.03.tar.gz http://dev.gentoo.org/~tove/distfiles/dev-perl/MusicBrainz-DiscID/MusicBrainz-DiscID-0.30.0-patch.tar.bz2
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=13cbe0c7a245d8d33072ed269609da20
+_md5_=df83429716030b90ed00c97d80a0cfd7

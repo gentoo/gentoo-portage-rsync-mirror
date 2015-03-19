@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.633 2015/03/19 15:10:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.634 2015/03/19 17:06:35 ago Exp $
+
+  19 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8z_p5-r1.ebuild,
+  openssl-1.0.1l-r1.ebuild:
+  Stable for alpha/amd64/arm/ia64/ppc/ppc64/s390/sh/sparc/x86, wrt bug #543552
 
 *openssl-0.9.8z_p5-r1 (19 Mar 2015)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MusicBrainz-DiscID
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MusicBrainz-DiscID/ChangeLog,v 1.8 2014/08/23 22:01:44 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MusicBrainz-DiscID/ChangeLog,v 1.9 2015/03/19 17:26:47 monsieurp Exp $
+
+  19 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  MusicBrainz-DiscID-0.30.0-r1.ebuild:
+  Remove bad character in DiscID.pm for tests to pass. Fix bug 526260.
 
 *MusicBrainz-DiscID-0.30.0-r1 (23 Aug 2014)
 
