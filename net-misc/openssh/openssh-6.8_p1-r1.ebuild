@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.8_p1-r1.ebuild,v 1.3 2015/03/19 20:59:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.8_p1-r1.ebuild,v 1.4 2015/03/19 22:22:41 vapier Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -10,7 +10,7 @@ inherit eutils user flag-o-matic multilib autotools pam systemd versionator
 PARCH=${P/_}
 
 HPN_PATCH="${PN}-6.8p1-r1-hpnssh14v5.tar.xz"
-LDAP_PATCH="${PN}-lpk-6.7p1-0.3.14.patch.xz"
+LDAP_PATCH="${PN}-lpk-6.8p1-0.3.14.patch.xz"
 X509_VER="8.3" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
@@ -173,11 +173,37 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=()
 	addwrite /dev/ptmx
 	addpredict /etc/skey/skeykeys # skey configure code triggers this
 
 	use static && append-ldflags -static
+
+	local myconf=(
+		--with-ldflags="${LDFLAGS}"
+		--disable-strip
+		--with-pid-dir="${EPREFIX}"$(usex kernel_linux '' '/var')/run
+		--sysconfdir="${EPREFIX}"/etc/ssh
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir)/misc
+		--datadir="${EPREFIX}"/usr/share/openssh
+		--with-privsep-path="${EPREFIX}"/var/empty
+		--with-privsep-user=sshd
+		$(use_with kerberos kerberos5 "${EPREFIX}"/usr)
+		# We apply the ldap patch conditionally, so can't pass --without-ldap
+		# unconditionally else we get unknown flag warnings.
+		$(use ldap && use_with ldap)
+		$(use_with ldns)
+		$(use_with libedit)
+		$(use_with pam)
+		$(use_with pie)
+		$(use_with sctp)
+		$(use_with selinux)
+		$(use_with skey)
+		$(use_with ssh1)
+		# The X509 patch deletes this option entirely.
+		$(use X509 || use_with ssl openssl)
+		$(use_with ssl md5-passwords)
+		$(use_with ssl ssl-engine)
+	)
 
 	# Special settings for Gentoo/FreeBSD 9.0 or later (see bug #391011)
 	if use elibc_FreeBSD && version_is_at_least 9.0 "$(uname -r|sed 's/\(.\..\).*/\1/')" ; then
@@ -185,29 +211,7 @@ src_configure() {
 		append-ldflags -lutil
 	fi
 
-	econf \
-		--with-ldflags="${LDFLAGS}" \
-		--disable-strip \
-		--with-pid-dir="${EPREFIX}"$(usex kernel_linux '' '/var')/run \
-		--sysconfdir="${EPREFIX}"/etc/ssh \
-		--libexecdir="${EPREFIX}"/usr/$(get_libdir)/misc \
-		--datadir="${EPREFIX}"/usr/share/openssh \
-		--with-privsep-path="${EPREFIX}"/var/empty \
-		--with-privsep-user=sshd \
-		$(use_with kerberos kerberos5 "${EPREFIX}"/usr) \
-		$(use ldap && use_with ldap) \
-		$(use_with ldns) \
-		$(use_with libedit) \
-		$(use_with pam) \
-		$(use_with pie) \
-		$(use_with sctp) \
-		$(use_with selinux) \
-		$(use_with skey) \
-		$(use_with ssh1) \
-		$(use_with ssl openssl) \
-		$(use_with ssl md5-passwords) \
-		$(use_with ssl ssl-engine) \
-		"${myconf[@]}"
+	econf "${myconf[@]}"
 }
 
 src_install() {
