@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/pygit2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.33 2015/01/18 23:34:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.35 2015/03/19 07:23:57 radhermit Exp $
+
+  19 Mar 2015; Tim Harder <radhermit@gentoo.org> -pygit2-0.19.1.ebuild,
+  -pygit2-0.20.3.ebuild, -pygit2-0.21.4.ebuild, -pygit2-0.22.0.ebuild:
+  Remove old.
+
+*pygit2-0.22.0-r1 (19 Mar 2015)
+*pygit2-0.21.4-r1 (19 Mar 2015)
+
+  19 Mar 2015; Tim Harder <radhermit@gentoo.org> +pygit2-0.21.4-r1.ebuild,
+  +pygit2-0.22.0-r1.ebuild:
+  Add subslot deps for cffi.
 
   18 Jan 2015; Tim Harder <radhermit@gentoo.org> -pygit2-0.21.0.ebuild,
   -pygit2-0.21.1.ebuild, -pygit2-0.21.2.ebuild, -pygit2-0.21.3.ebuild:

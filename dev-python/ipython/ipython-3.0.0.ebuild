@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.2 2015/03/13 15:10:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.3 2015/03/19 07:30:17 jlec Exp $
 
 EAPI=5
 
@@ -17,6 +17,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc examples matplotlib mongodb notebook nbconvert octave qt4 +smp test wxwidgets"
+
+REQUIRED_USE="test? ( doc matplotlib mongodb notebook nbconvert octave qt4 wxwidgets )"
 
 PY2_USEDEP=$(python_gen_usedep python2_7)
 CDEPEND="
