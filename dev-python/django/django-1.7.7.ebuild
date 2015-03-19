@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.7.6.ebuild,v 1.1 2015/03/09 16:26:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.7.7.ebuild,v 1.1 2015/03/19 07:44:29 jlec Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ S="${WORKDIR}/${MY_P}"
 WEBAPP_MANUAL_SLOT="yes"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-bashcomp.patch
+	"${FILESDIR}"/${PN}-1.7.6-bashcomp.patch
 )
 
 pkg_setup() {
