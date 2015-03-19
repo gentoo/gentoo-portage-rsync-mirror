@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>video</herd>
 <maintainer>
 	<email>nikoli@gmx.us</email>
 </maintainer>
+<herd>video</herd>
 <herd>proxy-maintainers</herd>
 <use>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
@@ -23,6 +23,7 @@
 	<flag name="mpg123">Enable support for mp3 decoding via <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support</flag>
 	<flag name="postproc">Enable image post-processing via libpostproc</flag>
 	<flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>
+	<flag name="rubberband">Enable high quality pitch correction via <pkg>media-libs/rubberband</pkg></flag>
 	<flag name="quvi">Enable support for streaming sites using <pkg>media-libs/libquvi</pkg></flag>
 	<flag name="radio">Enable V4L2 radio interface and support</flag>
 	<flag name="sdl">Enable <pkg>media-libs/libsdl2</pkg> based video and audio outputs</flag>

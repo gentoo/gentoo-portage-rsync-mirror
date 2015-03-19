@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.121 2015/03/12 08:26:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.122 2015/03/19 02:56:40 dlan Exp $
+
+*mpv-0.8.3 (19 Mar 2015)
+
+  19 Mar 2015; Yixun Lan <dlan@gentoo.org> +mpv-0.8.3.ebuild, mpv-9999.ebuild,
+  metadata.xml:
+  version bump, new USE=rubberband, fix media-libs/libass dep, bug 540602,
+  proxy for Nikoli
 
   12 Mar 2015; Jeroen Roovers <jer@gentoo.org> mpv-0.7.3.ebuild,
   mpv-0.8.0.ebuild, mpv-0.8.2.ebuild:

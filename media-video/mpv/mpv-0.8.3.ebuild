@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.67 2015/03/19 02:56:40 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.8.3.ebuild,v 1.1 2015/03/19 02:56:40 dlan Exp $
 
 EAPI=5
 
@@ -26,8 +26,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio +cli -doc-pdf dvb +dvd dvdnav egl +enca encode
 +iconv jack -joystick jpeg ladspa lcms +libass libav libcaca libguess libmpv
-lirc lua luajit +mpg123 -openal +opengl oss pulseaudio pvr rubberband samba
--sdl selinux v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
+lirc lua luajit +mpg123 -openal +opengl oss pulseaudio pvr samba -sdl selinux
+v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
@@ -48,8 +48,8 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	libav? ( >=media-video/libav-11:0=[encode?,threads,vaapi?,vdpau?] )
-	!libav? ( >=media-video/ffmpeg-2.4.0:0=[encode?,threads,vaapi?,vdpau?] )
+	libav? ( >=media-video/libav-10:0=[encode?,threads,vaapi?,vdpau?] )
+	!libav? ( >=media-video/ffmpeg-2.1.4:0=[encode?,threads,vaapi?,vdpau?] )
 	sys-libs/zlib
 	X? (
 		x11-libs/libX11
@@ -84,7 +84,7 @@ RDEPEND="
 	jpeg? ( virtual/jpeg:0 )
 	ladspa? ( media-libs/ladspa-sdk )
 	libass? (
-		>=media-libs/libass-0.12.1:=[enca?,fontconfig]
+		>=media-libs/libass-0.9.10:=[enca?,fontconfig]
 		virtual/ttf-fonts
 	)
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
@@ -97,7 +97,6 @@ RDEPEND="
 	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
 	pulseaudio? ( media-sound/pulseaudio )
-	rubberband? ( >=media-libs/rubberband-1.8.0 )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
 	v4l? ( media-libs/libv4l )
@@ -186,7 +185,6 @@ src_configure() {
 		$(use_enable enca)
 		$(use_enable mpg123)
 		$(use_enable ladspa)
-		$(use_enable rubberband)
 		$(use_enable bs2b libbs2b)
 		$(use_enable lcms lcms2)
 		--disable-vapoursynth	# vapoursynth is not packaged
