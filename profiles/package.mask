@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16421 2015/03/17 20:18:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16422 2015/03/19 13:24:08 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -236,13 +236,6 @@ dev-python/rax-backup-schedule-python-novaclient-ext
 # removal around 12 Mar 2015
 media-plugins/vdr-yaepg
 
-# Ian Delaney <idella4@gentoo.org> (12 Feb 2015)
-# upstream found to be dead, hash values now fail,
-# no longer has relevance, masked for removal in 30 days
-app-office/openerp-client
-app-office/openerp-server
-app-office/openerp-web
-
 # Michał Górny <mgorny@gentoo.org> (11 Feb 2015)
 # Potentially destructive to @world, bug #539746.
 =sys-apps/portage-2.2.16
@@ -272,10 +265,6 @@ app-portage/portage-mod_jabber
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-42
-
-# Julian Ospald <hasufell@gentoo.org> (22 Jan 2015)
-# Masked for removal in 30 days, wrt #537260.
-games-rpg/morrowind-data
 
 # Mikle Kolyada <zlogene@gentoo.org> (22 Jan 2015)
 # Unclear license (bug 253443).

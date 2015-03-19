@@ -1,4 +1,0 @@
-#!/bin/sh
-PYTHON_DIRECTORY=$(/usr/bin/python2 -c 'from distutils.sysconfig import get_config_var; print(get_config_var("LIBP"))')
-cd "${PYTHON_DIRECTORY}/site-packages/openerp-client"
-exec /usr/bin/python2 ./openerp-client.py $@

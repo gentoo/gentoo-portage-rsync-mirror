@@ -1,2 +1,0 @@
-CONFIGFILE="/etc/openerp/openerp-web.cfg"
-PIDFILE="/var/run/openerp/openerp-web.pid"

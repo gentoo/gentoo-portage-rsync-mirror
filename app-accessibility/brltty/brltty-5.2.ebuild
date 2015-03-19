@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.2.ebuild,v 1.8 2015/02/28 14:00:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.2.ebuild,v 1.9 2015/03/19 13:26:09 jlec Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ COMMON_DEP="bluetooth? ( net-wireless/bluez )
 	python? ( ${PYTHON_DEPS} )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
-	tcl? ( >=dev-lang/tcl-8.4.15 )
+	tcl? ( >=dev-lang/tcl-8.4.15:0= )
 	usb? ( virtual/libusb:0 )
 	X? ( x11-libs/libXaw )"
 DEPEND="virtual/pkgconfig
