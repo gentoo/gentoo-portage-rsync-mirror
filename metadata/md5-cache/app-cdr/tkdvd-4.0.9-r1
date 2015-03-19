@@ -1,10 +1,11 @@
 DEFINED_PHASES=compile install
 DESCRIPTION=A Tcl/Tk GUI for writing DVDs and CDs
+EAPI=5
 HOMEPAGE=http://regis.damongeot.free.fr/tkdvd/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
-RDEPEND=virtual/cdrtools app-cdr/dvd+rw-tools dev-lang/tcl dev-lang/tk
+RDEPEND=app-cdr/dvd+rw-tools dev-lang/tcl:0 dev-lang/tk:0 virtual/cdrtools
 SLOT=0
-SRC_URI=http://regis.damongeot.free.fr/tkdvd/dl/tkdvd-4.0.8.tar.gz
+SRC_URI=http://regis.damongeot.free.fr/tkdvd/dl/tkdvd-4.0.9.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=a725e2191ba47b07f7df214bac0ab398
+_md5_=ee4e4770a34a29ca6211c5c776ce3e5e
