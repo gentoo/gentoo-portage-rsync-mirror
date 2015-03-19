@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.634 2015/03/19 17:06:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.636 2015/03/19 17:55:24 ulm Exp $
+
+  19 Mar 2015; Ulrich Müller <ulm@gentoo.org> openssl-0.9.8z_p5-r1.ebuild,
+  openssl-1.0.1l-r1.ebuild, openssl-1.0.2-r3.ebuild:
+  [QA] Add conditional bindist restriction, bug 541414.
+
+  19 Mar 2015; Jeroen Roovers <jer@gentoo.org> openssl-1.0.1l-r1.ebuild:
+  Stable for HPPA (bug #543552).
 
   19 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openssl-0.9.8z_p5-r1.ebuild,
   openssl-1.0.1l-r1.ebuild:

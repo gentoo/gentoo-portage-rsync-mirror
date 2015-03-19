@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.100 2015/03/02 09:32:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.101 2015/03/19 17:34:55 ulm Exp $
+
+*mg-20150316 (19 Mar 2015)
+
+  19 Mar 2015; Ulrich Müller <ulm@gentoo.org> +mg-20150316.ebuild:
+  Version bump.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mg-20141127.ebuild:
   Stable for ppc, wrt bug #536006

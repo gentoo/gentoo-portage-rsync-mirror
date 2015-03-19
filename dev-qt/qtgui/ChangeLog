@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.64 2015/03/18 12:49:53 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.65 2015/03/19 17:48:59 jer Exp $
+
+  19 Mar 2015; Jeroen Roovers <jer@gentoo.org> qtgui-4.8.5-r4.ebuild:
+  Stable for HPPA (bug #541972).
 
   18 Mar 2015; Andreas Schuerch <nativemad@gentoo.org> qtgui-4.8.5-r4.ebuild:
   x86 stable, see bug 541972
