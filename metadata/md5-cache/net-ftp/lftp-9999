@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=>=sys-libs/ncurses-5.1 >=sys-libs/readline-5.1 dev-libs/expat sys-libs/zlib convert-mozilla-cookies? ( dev-perl/DBI ) idn? ( net-dns/libidn ) socks5? ( >=net-proxy/dante-1.1.12 virtual/pam ) ssl? ( gnutls? ( >=net-libs/gnutls-1.2.3 ) openssl? ( >=dev-libs/openssl-0.9.6 ) ) verify-file? ( dev-perl/string-crc32 virtual/perl-Digest-MD5 )
 REQUIRED_USE=ssl? ( ^^ ( openssl gnutls ) )
 SLOT=0
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=42e78577caa1896e3df67ea36f017a2c

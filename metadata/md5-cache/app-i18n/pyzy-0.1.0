@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 dev-db/sqlite:3 sys-apps/util-linux boost? ( dev-libs/bo
 RESTRICT=test
 SLOT=0
 SRC_URI=https://pyzy.googlecode.com/files/pyzy-0.1.0.tar.gz https://pyzy.googlecode.com/files/pyzy-database-1.0.0.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=8dea04c2dde0d8d778c8e9afb0cecaa1

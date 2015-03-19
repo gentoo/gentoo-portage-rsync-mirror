@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/awk dev-lang/perl
 SLOT=0
 SRC_URI=mirror://gentoo/wm-icons-0.4.0_pre1-cvs-01092003.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=788b2f7119296c8844ad020eb12b8f49

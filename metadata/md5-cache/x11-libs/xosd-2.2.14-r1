@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXext x11-libs/libXt media-fonts/font-misc-misc
 SLOT=0
 SRC_URI=mirror://debian/pool/main/x/xosd/xosd_2.2.14.orig.tar.gz mirror://debian/pool/main/x/xosd/xosd_2.2.14-1.diff.gz http://digilander.libero.it/dgp85/gentoo/xosd-gentoo-m4-1.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=1a12e8da18277ac35972973493cdc31f

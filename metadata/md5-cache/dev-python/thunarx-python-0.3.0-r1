@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=x11-libs/gtk+:2 dev-libs/glib:2 >=dev-python/pygobject-2.16:2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pygtk:2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=xfce-base/thunar-1.1.0
 SLOT=0
 SRC_URI=mirror://xfce/src/bindings/thunarx-python/0.3/thunarx-python-0.3.0.tar.bz2
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	xfconf	eee85b2bc9e9826f5a9c1349a75a69fe
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	xfconf	eee85b2bc9e9826f5a9c1349a75a69fe
 _md5_=67030801c18cecaccc8edce9284e38a9
