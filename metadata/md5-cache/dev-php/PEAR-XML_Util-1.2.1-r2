@@ -9,4 +9,4 @@ PDEPEND=dev-php/pear
 RDEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) >=dev-php/PEAR-PEAR-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/XML_Util-1.2.1.tgz
-_md5_=bc47c13452d3475b1db845309dcb1c03
+_md5_=3cf7f4f297a2402cfaceedab316c8fc5

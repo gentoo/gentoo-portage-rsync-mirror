@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=net-libs/libpcap wireshark-plugins? ( >=net-analyzer/wireshark-1.8.3-r1:= ) wireshark-plugins? ( dev-libs/glib virtual/pkgconfig ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-vcs/git-1.8.2.1
+DEPEND=pcap? ( net-libs/libpcap ) wireshark-plugins? ( >=net-analyzer/wireshark-1.8.3-r1:= ) wireshark-plugins? ( dev-libs/glib virtual/pkgconfig ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-vcs/git-1.8.2.1
 DESCRIPTION=A library to decode Bluetooth baseband packets
 EAPI=5
 HOMEPAGE=http://libbtbb.sourceforge.net/
 IUSE=+pcap +wireshark-plugins
 LICENSE=GPL-2
-RDEPEND=net-libs/libpcap wireshark-plugins? ( >=net-analyzer/wireshark-1.8.3-r1:= )
+RDEPEND=pcap? ( net-libs/libpcap ) wireshark-plugins? ( >=net-analyzer/wireshark-1.8.3-r1:= )
 SLOT=0/9999
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=b6795ef1dc2937889ea139a046ce3c83
+_md5_=b0a1d270b05aa6cfcf0df6276a6e62ae

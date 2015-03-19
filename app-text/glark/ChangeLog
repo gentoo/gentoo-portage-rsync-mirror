@@ -1,6 +1,11 @@
 # ChangeLog for app-text/glark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.72 2015/01/16 08:52:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.73 2015/03/19 20:47:46 mrueg Exp $
+
+*glark-1.10.5 (19 Mar 2015)
+
+  19 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +glark-1.10.5.ebuild:
+  Version bump. Add ruby20, ruby21 support. Fixes bug #540650.
 
   16 Jan 2015; Raúl Porcel <armin76@gentoo.org> glark-1.10.4.ebuild:
   sparc stable wrt #505102

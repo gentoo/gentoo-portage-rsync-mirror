@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0q.ebuild,v 1.2 2015/01/28 19:35:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0r.ebuild,v 1.1 2015/03/19 20:47:26 polynomial-c Exp $
 
 EAPI="4"
 
@@ -49,7 +49,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.0d-windres.patch #373743
 	epatch "${FILESDIR}"/${PN}-1.0.0h-pkg-config.patch
 	epatch "${FILESDIR}"/${PN}-1.0.0e-parallel-build.patch
-	epatch "${FILESDIR}"/${PN}-1.0.0e-x32.patch
+	epatch "${FILESDIR}"/${PN}-1.0.0r-x32.patch
 	epatch_user #332661
 
 	# disable fips in the build

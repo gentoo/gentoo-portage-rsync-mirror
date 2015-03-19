@@ -1,6 +1,24 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.637 2015/03/19 18:03:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.638 2015/03/19 20:47:26 polynomial-c Exp $
+
+*openssl-1.0.2a (19 Mar 2015)
+*openssl-1.0.1m (19 Mar 2015)
+*openssl-1.0.0r (19 Mar 2015)
+*openssl-0.9.8z_p6 (19 Mar 2015)
+
+  19 Mar 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -openssl-0.9.8z_p1-r2.ebuild, -openssl-0.9.8z_p2.ebuild,
+  -openssl-0.9.8z_p3.ebuild, -openssl-0.9.8z_p4.ebuild,
+  -openssl-0.9.8z_p5.ebuild, +openssl-0.9.8z_p6.ebuild, -openssl-1.0.0q.ebuild,
+  +openssl-1.0.0r.ebuild, -openssl-1.0.1j.ebuild, -openssl-1.0.1k.ebuild,
+  -openssl-1.0.1l.ebuild, +openssl-1.0.1m.ebuild, -openssl-1.0.2-r1.ebuild,
+  -openssl-1.0.2-r2.ebuild, +openssl-1.0.2a.ebuild,
+  -files/openssl-1.0.0e-x32.patch, +files/openssl-1.0.0r-x32.patch,
+  +files/openssl-1.0.1m-ipv6.patch, +files/openssl-1.0.1m-parallel-build.patch,
+  +files/openssl-1.0.1m-s_client-verify.patch, +files/openssl-1.0.1m-x32.patch,
+  +files/openssl-1.0.2a-parallel-build.patch:
+  Version bump. Removed old.
 
   19 Mar 2015; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1l-r1.ebuild:
   Mark arm64/m68k stable.

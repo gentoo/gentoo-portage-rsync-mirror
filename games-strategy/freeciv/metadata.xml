@@ -15,5 +15,7 @@
 			will also make it impossible to start local games.</flag>
 		<flag name="sound">Add support for sound provided by
 			<pkg>media-libs/sdl-mixer</pkg></flag>
+		<flag name="system-lua">Use <pkg>dev-lang/lua</pkg> instead of
+			the bundled liblua</flag>
 	</use>
 </pkgmetadata>

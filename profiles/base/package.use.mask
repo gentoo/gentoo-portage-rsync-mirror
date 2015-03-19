@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.661 2015/03/18 15:42:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.662 2015/03/19 20:34:53 polynomial-c Exp $
+
+# Lars Wendler <polynomial-c@gentoo.org> (19 Mar 2015)
+# >=games-strategy/freeciv-2.5.0 requires >=dev-lang/lua-5.2
+games-strategy/freeciv system-lua
 
 # This file requires >=portage-2.1.1
 # New entries go on top.

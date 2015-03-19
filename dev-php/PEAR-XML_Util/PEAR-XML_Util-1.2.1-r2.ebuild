@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/PEAR-XML_Util-1.2.1-r2.ebuild,v 1.10 2014/01/26 18:42:04 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/PEAR-XML_Util-1.2.1-r2.ebuild,v 1.11 2015/03/19 20:56:48 grknight Exp $
 
 EAPI="2"
 
@@ -17,6 +17,7 @@ SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 
 DEPEND="|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )
 		>=dev-php/PEAR-PEAR-1.8.1"
+RDEPEND="${DEPEND}"
 PDEPEND="dev-php/pear"
 
 HOMEPAGE="http://pear.php.net/package/XML_Util"

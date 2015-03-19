@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.13 2014/11/01 18:25:38 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.14 2015/03/19 20:45:13 zerochaos Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ SLOT="0/${PV}"
 IUSE="+pcap +wireshark-plugins"
 
 RDEPEND="
-	net-libs/libpcap
+	pcap? ( net-libs/libpcap )
 	wireshark-plugins? (
 		>=net-analyzer/wireshark-1.8.3-r1:=
 	)
@@ -66,9 +66,10 @@ src_configure() {
 	CMAKE_USE_DIR="${S}"
 	BUILD_DIR="${S}"_build
 	local mycmakeargs=(
-	-DDISABLE_PYTHON=true
-	-DPACKAGE_MANAGER=true
-	$(cmake-utils_use pcap PCAPDUMP)
+		-DDISABLE_PYTHON=true
+		-DPACKAGE_MANAGER=true
+		$(cmake-utils_use pcap PCAPDUMP)
+		$(cmake-utils_use pcap USE_PCAP)
 	)
 	cmake-utils_src_configure
 

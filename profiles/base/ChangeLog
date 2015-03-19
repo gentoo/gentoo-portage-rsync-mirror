@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.781 2015/03/18 15:42:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.782 2015/03/19 20:34:53 polynomial-c Exp $
+
+  19 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
+  >=games-strategy/freeciv-2.5.0 requires >=dev-lang/lua-5.2
 
   18 Mar 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   unmask ruby useflag for newest libcaca versions, bug #483104

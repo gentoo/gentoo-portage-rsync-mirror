@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libbtbb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.18 2014/11/01 18:25:38 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.19 2015/03/19 20:45:13 zerochaos Exp $
+
+  19 Mar 2015; Rick Farina <zerochaos@gentoo.org> libbtbb-9999.ebuild:
+  make pcap properly optional
 
 *libbtbb-2014.02.4 (01 Nov 2014)
 
