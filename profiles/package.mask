@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16423 2015/03/19 13:49:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16424 2015/03/19 19:41:36 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (19 Mar 2015)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-43
 
 # Pacho Ramos <pacho@gentoo.org> (19 Mar 2015)
 # Dead for years, unmaintained, doesn't respect CFLAGS,
@@ -351,11 +356,6 @@ app-portage/portage-mod_jabber
 # Anthony G. Basile <blueness@gentoo.org> (28 Jan 2015)
 # Its broken and we're waiting for fixes from upstream, bug #536196
 =net-misc/tor-0.2.6.2_alpha-r1
-
-# Mike Gilbert <floppym@gentoo.org> (26 Jan 2015)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-42
 
 # Mikle Kolyada <zlogene@gentoo.org> (22 Jan 2015)
 # Unclear license (bug 253443).

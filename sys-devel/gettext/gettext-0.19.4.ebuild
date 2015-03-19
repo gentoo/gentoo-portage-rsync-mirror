@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19.4.ebuild,v 1.1 2014/12/24 12:59:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.19.4.ebuild,v 1.2 2015/03/19 19:39:58 vapier Exp $
 
 EAPI="4"
 
@@ -14,12 +14,6 @@ LICENSE="GPL-3 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="acl -cvs doc emacs git java nls +cxx ncurses openmp static-libs elibc_glibc elibc_musl"
-
-if [[ ${PV} =~ _rc ]] ; then
-	SRC_URI="mirror://gnu-alpha/${PN}/${P/_/-}.tar.xz"
-	KEYWORDS=""
-	S="${WORKDIR}/${P/_/-}"
-fi
 
 # only runtime goes multilib
 DEPEND=">=virtual/libiconv-0-r1[${MULTILIB_USEDEP}]
@@ -144,14 +138,5 @@ multilib_src_install_all() {
 }
 
 pkg_preinst() {
-	# older gettext's sometimes installed libintl ...
-	# need to keep the linked version or the system
-	# could die (things like sed link against it :/)
-	preserve_old_lib /{,usr/}$(get_libdir)/libintl$(get_libname 7)
-
 	java-pkg-opt-2_pkg_preinst
-}
-
-pkg_postinst() {
-	preserve_old_lib_notify /{,usr/}$(get_libdir)/libintl$(get_libname 7)
 }
