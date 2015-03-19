@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.154 2015/03/13 23:50:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.155 2015/03/19 05:34:16 patrick Exp $
+
+  19 Mar 2015; Patrick Lauer <patrick@gentoo.org> logilab-common-0.63.2.ebuild:
+  Remove obsolete fixes for testphase that now fail themselves #543750
 
   13 Mar 2015; Ian Delaney <idella4@gentoo.org> logilab-common-0.63.2.ebuild:
   return dep needed for tests

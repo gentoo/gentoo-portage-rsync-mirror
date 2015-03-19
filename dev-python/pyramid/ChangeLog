@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyramid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.9 2015/03/08 23:56:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyramid/ChangeLog,v 1.10 2015/03/19 05:41:47 patrick Exp $
+
+*pyramid-1.5.4 (19 Mar 2015)
+
+  19 Mar 2015; Patrick Lauer <patrick@gentoo.org> +pyramid-1.5.4.ebuild:
+  Bump
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyramid-1.5.1.ebuild:
   x86 stable, bug 540290

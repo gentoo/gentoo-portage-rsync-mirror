@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.63.2.ebuild,v 1.7 2015/03/13 23:50:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.63.2.ebuild,v 1.8 2015/03/19 05:34:16 patrick Exp $
 
 EAPI=5
 
@@ -58,25 +58,6 @@ python_test() {
 
 	# Make sure that the tests use correct modules.
 	pushd "${TEST_DIR}"/lib > /dev/null || die
-
-	if python_is_python3; then
-	# http://www.logilab.org/ticket/241813, 241807
-	# The suite can be made to pass under py3.4 by disabling the class MxDateTC in unittest_date.py
-	# These are covered by issue 241813.  Any and all methods to disable them temporarily
-	# (assuming they will ever be fixed) are simply cumbersome in the extreme, thus impractical.
-	# The failures are specific to py3.4's unittest's parameters in _addSkip and not the package itself.
-		if [[ "${EPYTHON}" == "python3.4" ]]; then
-			sed -e 's:test_any:_&:' \
-				-i $(find . -name unittest_compat.py) || die
-			sed -e 's:test_add_days_worked:_&:' \
-				-i $(find . -name unittest_date.py) || die
-		fi
-	# Still one related failure under py3.4
-	# Returns a clean run under py3.3, though leaving fails exposed in this bump of 0.62.1
-	# https://www.logilab.org/ticket/269904
-	# Also unittest_date.py known to fail related to absence of installed egenix-mx-base
-	#	rm $(find . -name unittest_umessage.py) || die
-	fi
 	"${TEST_DIR}"/scripts/pytest || die "Tests fail with ${EPYTHON}"
 	popd > /dev/null || die
 }
