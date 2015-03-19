@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
+	<email>yngwin@gentoo.org</email>
+</maintainer>
+<maintainer>
 	<email>nikoli@gmx.us</email>
 </maintainer>
 <herd>video</herd>
