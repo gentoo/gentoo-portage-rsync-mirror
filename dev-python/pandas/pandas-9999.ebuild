@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-9999.ebuild,v 1.7 2014/12/21 18:29:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-9999.ebuild,v 1.8 2015/03/19 09:34:45 jlec Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 python3_{3,4} )
 inherit distutils-r1 eutils flag-o-matic git-r3 virtualx
 
 DESCRIPTION="Powerful data structures for data analysis and statistics"
-HOMEPAGE="http://pandas.sourceforge.net/"
+HOMEPAGE="http://pandas.pydata.org/"
 SRC_URI=""
 EGIT_REPO_URI="https://github.com/pydata/pandas.git"
 
