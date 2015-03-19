@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.26 2015/03/18 18:37:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.27 2015/03/19 21:51:22 zerochaos Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ REQUIRED_USE="dfu? ( python )
 		python? ( || ( dfu specan ) )"
 DEPEND="bluez? ( net-wireless/bluez:= )
 	>=net-libs/libbtbb-${PV}:=
-	pcap? ( net-libs/libpcap:= )
+	pcap? ( net-libs/libbtbb[pcap] )
 	virtual/libusb:1="
 RDEPEND="${DEPEND}
 	specan? ( >=dev-qt/qtgui-4.7.2:4

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.12.0-r1.ebuild,v 1.3 2014/12/19 13:37:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.12.0-r1.ebuild,v 1.4 2015/03/19 21:48:50 pacho Exp $
 
 EAPI="5"
 
@@ -47,7 +47,6 @@ RDEPEND="
 	games? (
 		>=games-arcade/gnome-nibbles-${PV}
 		>=games-arcade/gnome-robots-${PV}
-		>=games-board/aisleriot-3.2.3.2
 		>=games-board/four-in-a-row-${PV}
 		>=games-board/gnome-chess-${PV}
 		>=games-board/gnome-mahjongg-${PV}

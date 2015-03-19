@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16424 2015/03/19 19:41:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16425 2015/03/19 21:40:51 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -293,12 +293,6 @@ games-board/kaya
 # masked for removal on 20150320
 games-engines/freesci
 
-# Hans de Graaff <graaff@gentoo.org> (17 Feb 2015)
-# Mask virtual/ruby-threads for removal in 30 days, bug 537074. This
-# virtual is no longer used in the tree and serves no purpose since
-# the removal of ruby 1.8.
-virtual/ruby-threads
-
 # Michael Sterrett <mr_bones_@gentoo.org> (16 Feb 2015)
 # No upstream anymore; misc issues
 # masked for removal on 20150318
@@ -306,14 +300,6 @@ games-puzzle/candycrisis
 games-rpg/aklabeth
 games-sports/foosball
 games-strategy/dark-oberon
-
-# Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
-# Mask old virtuals based on the slot-per-version idea for removal,
-# bug 421497.
-<virtual/rubygems-9
-<virtual/ruby-ssl-6
-<virtual/ruby-threads-6
-
 
 # Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
 # Masked for removal due to licensing issues, bug 539778
