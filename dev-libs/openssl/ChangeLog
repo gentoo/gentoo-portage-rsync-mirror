@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.638 2015/03/19 20:47:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.639 2015/03/19 21:14:17 vapier Exp $
+
+  19 Mar 2015; Mike Frysinger <vapier@gentoo.org> openssl-1.0.2-r3.ebuild,
+  openssl-1.0.2a.ebuild:
+  Fix typos and re-add RESTRICT in newer ebuild.
 
 *openssl-1.0.2a (19 Mar 2015)
 *openssl-1.0.1m (19 Mar 2015)

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2a.ebuild,v 1.1 2015/03/19 20:47:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2a.ebuild,v 1.2 2015/03/19 21:14:17 vapier Exp $
 
 EAPI="4"
 
@@ -17,6 +17,7 @@ LICENSE="openssl"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="bindist gmp kerberos rfc3779 sctp cpu_flags_x86_sse2 static-libs test +tls-heartbeat vanilla zlib"
+RESTRICT="!bindist? ( bindist )"
 
 # The blocks are temporary just to make sure people upgrade to a
 # version that lack runtime version checking.  We'll drop them in
@@ -118,7 +119,7 @@ multilib_src_configure() {
 	# IDEA:     Expired                 http://en.wikipedia.org/wiki/International_Data_Encryption_Algorithm
 	# EC:       ????????? ??/??/2015    http://en.wikipedia.org/wiki/Elliptic_Curve_Cryptography
 	# MDC2:     Expired                 http://en.wikipedia.org/wiki/MDC-2
-	# RC5:      Expirted                http://en.wikipedia.org/wiki/RC5
+	# RC5:      Expired                 http://en.wikipedia.org/wiki/RC5
 
 	use_ssl() { usex $1 "enable-${2:-$1}" "no-${2:-$1}" " ${*:3}" ; }
 	echoit() { echo "$@" ; "$@" ; }

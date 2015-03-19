@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2-r3.ebuild,v 1.2 2015/03/19 17:55:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.2-r3.ebuild,v 1.3 2015/03/19 21:14:17 vapier Exp $
 
 EAPI="4"
 
@@ -122,7 +122,7 @@ multilib_src_configure() {
 	# IDEA:     Expired                 http://en.wikipedia.org/wiki/International_Data_Encryption_Algorithm
 	# EC:       ????????? ??/??/2015    http://en.wikipedia.org/wiki/Elliptic_Curve_Cryptography
 	# MDC2:     Expired                 http://en.wikipedia.org/wiki/MDC-2
-	# RC5:      Expirted                http://en.wikipedia.org/wiki/RC5
+	# RC5:      Expired                 http://en.wikipedia.org/wiki/RC5
 
 	use_ssl() { usex $1 "enable-${2:-$1}" "no-${2:-$1}" " ${*:3}" ; }
 	echoit() { echo "$@" ; "$@" ; }
