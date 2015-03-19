@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.99 2015/03/15 21:07:16 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.100 2015/03/19 10:03:23 chewi Exp $
+
+*eclipse-ecj-4.4.2-r1 (19 Mar 2015)
+
+  19 Mar 2015; James Le Cuirot <chewi@gentoo.org> +eclipse-ecj-4.4.2-r1.ebuild,
+  -eclipse-ecj-4.4.2.ebuild:
+  Regarding bug #449442, don't install ecj.jar as a symlink because the gnu-
+  classpath ebuild cannot find it. Use the new feature in java-pkg-simple to
+  give it this name instead.
 
 *eclipse-ecj-4.4.2 (15 Mar 2015)
 

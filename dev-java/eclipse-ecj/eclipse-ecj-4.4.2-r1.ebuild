@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-4.4.2.ebuild,v 1.1 2015/03/15 21:07:16 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-4.4.2-r1.ebuild,v 1.1 2015/03/19 10:03:23 chewi Exp $
 
 EAPI=5
 
@@ -30,6 +30,8 @@ DEPEND="${COMMON_DEP}
 PDEPEND="
 	ant? ( ~dev-java/ant-eclipse-ecj-${PV} )"
 
+JAVA_JAR_FILENAME="${MY_PN}.jar"
+
 java_prepare() {
 	# These have their own package.
 	rm org/eclipse/jdt/core/JDTCompilerAdapter.java || die
@@ -40,13 +42,11 @@ java_prepare() {
 
 src_compile() {
 	java-pkg-simple_src_compile
-	find org META-INF -type f ! -name "*.java" | xargs jar uvf "${PN}.jar" || die "jar update failed"
+	find org META-INF -type f ! -name "*.java" | xargs jar uvf "${JAVA_JAR_FILENAME}" || die "jar update failed"
 }
 
 src_install() {
 	java-pkg-simple_src_install
-	dosym "${PN}.jar" "/usr/share/${PN}-${SLOT}/lib/${MY_PN}.jar"
-
 	java-pkg_dolauncher ${MY_PN}-${SLOT} --main \
 		org.eclipse.jdt.internal.compiler.batch.Main
 }
