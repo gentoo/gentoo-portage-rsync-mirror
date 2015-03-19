@@ -3,8 +3,8 @@ http://bugs.gentoo.org/400617
 do not force any particular ABI or FPU or SIMD compiler flags for arm
 targets.  let the toolchain and user CFLAGS control that.
 
---- a/configure.ac
-+++ b/configure.ac
+--- a/configure.in
++++ b/configure.in
 @@ -571,7 +571,7 @@
  elif test "$target_platform" = "target_raspberry_pi"; then
    ARCH="arm"

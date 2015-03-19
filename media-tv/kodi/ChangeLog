@@ -1,6 +1,12 @@
 # ChangeLog for media-tv/kodi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.8 2015/03/15 17:00:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.9 2015/03/19 12:48:23 tupone Exp $
+
+  19 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-14.1.ebuild,
+  kodi-9999.ebuild, +files/kodi-14.1-no-arm-flags.patch,
+  files/kodi-9999-no-arm-flags.patch, +files/kodi-9999-texturepacker.patch:
+  Upstream accepted changes
+  Build texturepacker nostatic
 
   15 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-9999.ebuild,
   -files/kodi-9999-gentoo.patch:

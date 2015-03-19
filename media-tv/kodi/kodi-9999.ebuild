@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.8 2015/03/15 17:00:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.9 2015/03/19 12:48:23 tupone Exp $
 
 EAPI="5"
 
@@ -33,7 +33,7 @@ HOMEPAGE="http://kodi.tv/ http://kodi.wiki/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio +rsxs raspberry-pi rtmp +samba sftp test udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
+IUSE="airplay alsa avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio +rsxs raspberry-pi rtmp +samba sftp test udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
 REQUIRED_USE="
 	rsxs? ( X )
 	xrandr? ( X )
@@ -59,7 +59,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	dev-python/simplejson[${PYTHON_USEDEP}]
 	media-fonts/corefonts
 	media-fonts/roboto
-	media-libs/alsa-lib
+	alsa? ( media-libs/alsa-lib )
 	media-libs/flac
 	media-libs/fontconfig
 	media-libs/freetype
@@ -142,11 +142,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-9999-no-arm-flags.patch #400617
-	mv xbmc/visualizations/Goom/goom2k4-0/configure.{in,ac}
-	mv configure.{in,ac}
-	sed -i -e "s:configure.in:configure.ac:" \
-		bootstrap.mk || die "sed failed"
+	epatch "${FILESDIR}"/${P}-no-arm-flags.patch #400617
+	epatch "${FILESDIR}"/${P}-texturepacker.patch
 
 	# some dirs ship generated autotools, some dont
 	multijob_init
@@ -204,6 +201,7 @@ src_configure() {
 		--disable-ccache \
 		--disable-optimizations \
 		--with-ffmpeg=shared \
+		$(use_enable alsa) \
 		$(use_enable airplay) \
 		$(use_enable avahi) \
 		$(use_enable bluray libbluray) \
