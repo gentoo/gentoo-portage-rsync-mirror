@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.233 2015/03/03 10:00:26 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.234 2015/03/19 09:28:02 voyageur Exp $
+
+  19 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.1-r2.ebuild,
+  +files/llvm-3.1-docs-pod-markup-fixes.patch,
+  +files/llvm-3.6.0-ocaml-ctypes-0.4.0.patch:
+  Fix compilation with newer perl versions, bug #541132
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> llvm-3.5.1.ebuild:
   add arm64 support, tested on A53 board

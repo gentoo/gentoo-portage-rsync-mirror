@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r2.ebuild,v 1.9 2013/01/03 23:29:51 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.1-r2.ebuild,v 1.10 2015/03/19 09:28:02 voyageur Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -99,6 +99,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-ivybridge_support.patch
 	epatch "${FILESDIR}"/${P}-fix_debug_line_info.patch
 	epatch "${FILESDIR}"/${P}-ExecutionEngine_tests_xfail_arm.patch
+	epatch "${FILESDIR}"/${P}-docs-pod-markup-fixes.patch
 
 	# Apply r600 OpenCL-related patches, bug #425688
 	epatch "${FILESDIR}"/cl-patches/*.patch
