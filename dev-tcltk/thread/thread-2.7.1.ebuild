@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.7.1.ebuild,v 1.1 2014/09/15 18:37:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.7.1.ebuild,v 1.2 2015/03/20 11:17:19 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="debug gdbm"
 
 DEPEND="
-	dev-lang/tcl[threads]
+	dev-lang/tcl:0=[threads]
 	gdbm? ( sys-libs/gdbm )"
 RDEPEND="${DEPEND}"
 

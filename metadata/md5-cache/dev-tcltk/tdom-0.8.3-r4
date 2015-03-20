@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=dev-lang/tcl:= dev-libs/expat !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-lang/tcl:0= dev-libs/expat !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A XML/DOM/XPath/XSLT Implementation for Tcl
 EAPI=5
 HOMEPAGE=http://tdom.github.com/
 IUSE=static-libs threads
 KEYWORDS=amd64 ~hppa ~ppc x86 ~amd64-linux ~x86-linux
 LICENSE=MPL-1.1
-RDEPEND=dev-lang/tcl:= dev-libs/expat
+RDEPEND=dev-lang/tcl:0= dev-libs/expat
 SLOT=0
 SRC_URI=mirror://github/tDOM/tdom/tDOM-0.8.3.tgz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=8067041ef6bf111236f6151142cc4889
+_md5_=29c0fc1b4a0f4013a3e4a9a80248b6a6
