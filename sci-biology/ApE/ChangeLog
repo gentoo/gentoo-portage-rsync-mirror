@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ApE
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.9 2012/12/31 18:16:06 je_fro Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ApE/ChangeLog,v 1.10 2015/03/20 15:39:09 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> -ApE-2.0.7.ebuild,
+  ApE-2.0.7-r1.ebuild, metadata.xml:
+  Fix tcl/tk slotting;drop old; Bump EAPI
 
 *ApE-2.0.7-r1 (31 Dec 2012)
 
@@ -42,4 +46,3 @@
 
   09 Jul 2008; Jeff Gardner <je_fro@gentoo.org> +ApE-1.12.ebuild:
   Initial import, thanks to Marek Miller on bug #231231.
-

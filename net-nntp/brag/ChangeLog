@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/brag
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.9 2014/08/10 20:42:17 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.10 2015/03/20 15:41:43 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> -brag-1.4.1.ebuild,
+  brag-1.4.3.ebuild, metadata.xml:
+  Fix tcl/tk slotting;drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> brag-1.4.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

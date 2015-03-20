@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.199 2015/01/18 19:01:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.200 2015/03/20 15:47:45 vapier Exp $
+
+  20 Mar 2015; Mike Frysinger <vapier@gentoo.org> libffi-3.1-r3.ebuild:
+  Drop Darwin patch as it does not apply cleanly and it is already in newer
+  versions #543856 by Hans de Graaff.
 
   18 Jan 2015; Fabian Groffen <grobian@gentoo.org>
   +files/libffi-3.1-darwin-x32.patch, libffi-3.1-r3.ebuild, libffi-3.2.1.ebuild,

@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/imosflm-1.0.7-r1.ebuild,v 1.1 2014/04/08 13:12:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/imosflm-1.0.7-r1.ebuild,v 1.2 2015/03/20 15:32:49 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils multilib toolchain-funcs versionator
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	dev-lang/tcl
+	dev-lang/tcl:0=
 	>=dev-tcltk/itcl-3.3
 	>=dev-tcltk/itk-3.3
 	>=dev-tcltk/iwidgets-4

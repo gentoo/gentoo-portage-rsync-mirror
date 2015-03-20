@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid-git/rancid-git-2.3.8.ebuild,v 1.1 2013/08/02 22:45:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid-git/rancid-git-2.3.8.ebuild,v 1.2 2015/03/20 15:58:55 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ REQUIRED_USE="^^ ( git cvs subversion )"
 # app-arch/par is blocker, due to bug #455838
 DEPEND="!app-arch/par
 	dev-lang/perl
-	dev-lang/tcl
+	dev-lang/tcl:0=
 	dev-tcltk/expect
 	sys-apps/diffutils
 	git? ( dev-vcs/git )
@@ -50,8 +50,8 @@ src_configure() {
 		--enable-conf-install \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
-		`use_with subversion svn fsfs` \
-		`use_with git`
+		$(use_with subversion svn fsfs) \
+		$(use_with git)
 }
 
 src_install() {

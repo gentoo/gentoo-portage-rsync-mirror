@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmmldonkey
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.8 2012/02/15 09:51:41 voyageur Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.9 2015/03/20 15:57:58 jlec Exp $
+
+*wmmldonkey-0.003-r1 (20 Mar 2015)
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> +wmmldonkey-0.003-r1.ebuild,
+  metadata.xml:
+  Modernize ebuild
 
   15 Feb 2012; Bernard Cafarelli <voyageur@gentoo.org> wmmldonkey-0.003.ebuild:
   Update HOMEPAGE and SRC_URI, thanks Lorenz in bug #394607
@@ -29,4 +35,3 @@
   26 Dec 2003; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
   wmmldonkey-0.003.ebuild:
   Initial import. Thanks to Marco Lui for the ebuild.
-

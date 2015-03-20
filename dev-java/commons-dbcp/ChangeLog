@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-dbcp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.64 2014/08/03 10:34:29 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.65 2015/03/20 15:34:23 monsieurp Exp $
+
+*commons-dbcp-2.1 (20 Mar 2015)
+
+  20 Mar 2015; Patrice Clement <monsieurp@gentoo.org> +commons-dbcp-2.1.ebuild,
+  commons-dbcp-1.4-r2.ebuild:
+  Version bump to v2.1. Drop ~ppc and ~ppc64 arch (no jdk-1.7 nor commons-pool
+  for these archs yet). Add SLOT. Fix bug 496110.
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org>
   -commons-dbcp-1.2.2-r1.ebuild, -commons-dbcp-1.4-r1.ebuild:
