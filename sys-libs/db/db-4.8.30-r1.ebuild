@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.30-r1.ebuild,v 1.12 2014/10/27 01:52:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.30-r1.ebuild,v 1.13 2015/03/20 14:41:50 jlec Exp $
 
 EAPI=4
 
@@ -32,11 +32,11 @@ KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86
 IUSE="doc java cxx tcl test"
 
 # the entire testsuite needs the TCL functionality
-DEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
-	test? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
+DEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1:0[${MULTILIB_USEDEP}] )
+	test? ( >=dev-lang/tcl-8.5.15-r1:0[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jdk-1.5 )
 	>=sys-devel/binutils-2.16.1"
-RDEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1[${MULTILIB_USEDEP}] )
+RDEPEND="tcl? ( >=dev-lang/tcl-8.5.15-r1:0[${MULTILIB_USEDEP}] )
 	java? ( >=virtual/jre-1.5 )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20140508-r2

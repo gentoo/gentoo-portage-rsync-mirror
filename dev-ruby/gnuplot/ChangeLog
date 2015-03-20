@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gnuplot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.23 2014/11/03 15:40:28 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.24 2015/03/20 14:33:56 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> gnuplot-2.6.2-r2.ebuild:
+  Document problems with ruby22.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -gnuplot-2.6.2-r1.ebuild,
   gnuplot-2.6.2-r2.ebuild:

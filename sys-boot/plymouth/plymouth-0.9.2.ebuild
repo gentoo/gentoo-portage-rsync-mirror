@@ -1,15 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-9999.ebuild,v 1.2 2015/03/20 14:47:36 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.9.2.ebuild,v 1.1 2015/03/20 14:47:36 dlan Exp $
 
 EAPI=5
 
 SRC_URI="
 	http://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/gentoo-logo.png"
 
+AUTOTOOLS_AUTORECONF="1"
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/plymouth"
-	AUTOTOOLS_AUTORECONF="1"
 	inherit git-r3
 else
 	SRC_URI="${SRC_URI} http://www.freedesktop.org/software/plymouth/releases/${P}.tar.bz2"
@@ -49,6 +49,10 @@ DOC_CONTENTS="
 	http://dev.gentoo.org/~aidecoe/doc/en/plymouth.xml
 "
 
+PATCHES=(
+	"${FILESDIR}/0.9.2-systemdsystemunitdir.patch"
+)
+
 src_prepare() {
 	autotools-utils_src_prepare
 }
@@ -59,6 +63,7 @@ src_configure() {
 		--localstatedir=/var
 		--without-rhgb-compat-link
 		--enable-systemd-integration
+		"$(systemd_with_unitdir)"
 		$(use_enable debug tracing)
 		$(use_enable gtk gtk)
 		$(use_enable libkms drm)

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.15.ebuild,v 1.1 2013/10/28 17:31:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.15.ebuild,v 1.2 2015/03/20 14:33:12 jlec Exp $
 
 EAPI=5
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
-RDEPEND="dev-lang/tcl
+RDEPEND="
+	dev-lang/tcl:0=
 	x11-libs/libXt
 	!<sci-astronomy/ds9-5.3"
 DEPEND="${RDEPEND}"
