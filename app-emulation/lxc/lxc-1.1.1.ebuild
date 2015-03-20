@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.1.ebuild,v 1.1 2015/03/17 20:03:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-1.1.1.ebuild,v 1.2 2015/03/20 21:56:18 hwoarang Exp $
 
 EAPI="5"
 
@@ -39,7 +39,6 @@ RDEPEND="${RDEPEND}
 
 CONFIG_CHECK="~CGROUPS ~CGROUP_DEVICE
 	~CPUSETS ~CGROUP_CPUACCT
-	~RESOURCE_COUNTERS
 	~CGROUP_SCHED
 
 	~NAMESPACES

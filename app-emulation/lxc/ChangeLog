@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.70 2015/03/17 20:03:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.72 2015/03/20 21:58:12 hwoarang Exp $
+
+  20 Mar 2015; Markos Chandras <hwoarang@gentoo.org> -files/lxc.initd.2:
+  Remove unused file
+
+  20 Mar 2015; Markos Chandras <hwoarang@gentoo.org> -lxc-1.1.0-r2.ebuild,
+  -lxc-1.1.0-r3.ebuild, -lxc-1.1.0-r4.ebuild, lxc-1.1.0-r5.ebuild,
+  lxc-1.1.1.ebuild:
+  Drop obsolete RESOURCE_COUNTERS check. Bug #540980
+
+  LKML: https://lkml.org/lkml/2014/10/13/498
+  Commit: 5b1efc027c0b51ca3e76f4e00c83358f8349f543
 
 *lxc-1.1.1 (17 Mar 2015)
 
