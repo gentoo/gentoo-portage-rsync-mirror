@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Config-AutoConf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-AutoConf/ChangeLog,v 1.11 2015/03/01 16:07:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-AutoConf/ChangeLog,v 1.12 2015/03/19 23:15:44 mrueg Exp $
+
+*Config-AutoConf-0.311.0 (19 Mar 2015)
+
+  19 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +Config-AutoConf-0.311.0.ebuild,
+  -Config-AutoConf-0.309.0.ebuild:
+  Version bump. Remove old.
 
 *Config-AutoConf-0.310.0 (01 Mar 2015)
 

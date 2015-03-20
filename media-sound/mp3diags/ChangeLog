@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mp3diags
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/ChangeLog,v 1.18 2014/03/28 16:19:36 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3diags/ChangeLog,v 1.19 2015/03/19 23:19:01 mrueg Exp $
+
+*mp3diags-1.2.02 (19 Mar 2015)
+
+  19 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +mp3diags-1.2.02.ebuild:
+  Version bump.
 
 *mp3diags-1.2.01 (28 Mar 2014)
 
