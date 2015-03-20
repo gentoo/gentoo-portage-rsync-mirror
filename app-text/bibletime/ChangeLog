@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibletime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.73 2015/02/18 01:47:11 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.74 2015/03/20 20:52:19 creffett Exp $
+
+  20 Mar 2015; Chris Reffett <creffett@gentoo.org> bibletime-2.10.1.ebuild:
+  Add missing qtwebkit:5 dep, drop ppc keyword due to qt5 not being keyworded on
+  ppc
 
   18 Feb 2015;  <creffett@gentoo.org> -bibletime-2.10.0.ebuild,
   bibletime-2.10.1.ebuild:

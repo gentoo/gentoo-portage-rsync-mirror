@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.10.1.ebuild,v 1.2 2015/02/18 01:47:11 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-2.10.1.ebuild,v 1.3 2015/03/20 20:52:19 creffett Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/project/bibletime/BibleTime%202/BibleTime%202%20so
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug qt5"
 
 # bug 313657
@@ -25,6 +25,7 @@ RDEPEND="
 		dev-qt/qtcore:5
 		dev-qt/qtdbus:5
 		dev-qt/qtprintsupport:5
+		dev-qt/qtwebkit:5
 		dev-qt/qtwidgets:5
 	)
 	!qt5? (
