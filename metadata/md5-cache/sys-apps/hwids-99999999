@@ -7,5 +7,5 @@ IUSE=+net +pci +udev +usb
 LICENSE=|| ( GPL-2 BSD ) public-domain
 RDEPEND=!<sys-apps/pciutils-3.1.9-r2 !<sys-apps/usbutils-005-r1
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=b2e26c26fe8db463865ec2fb3b766929

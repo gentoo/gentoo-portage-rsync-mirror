@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/dbus-glib-0.51 >=dev-libs/glib-2.32:2 >=net-libs/telepathy-gl
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-idle/telepathy-idle-0.2.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=c86697f16d7b8ab786a8c1d1c1f11074

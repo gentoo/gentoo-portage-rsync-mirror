@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=!games-misc/bsd-games
 SLOT=0
 SRC_URI=http://dev.gentooexperimental.org/~darkside/distfiles/wtf/wtf-20090924.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=bae2d12afb3945e3bee4108375bcb669

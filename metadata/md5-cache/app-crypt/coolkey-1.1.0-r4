@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=sys-apps/pcsc-lite-1.6.4 dev-libs/nss[utils] sys-libs/zlib
 SLOT=0
 SRC_URI=http://directory.fedora.redhat.com/download/coolkey/coolkey-1.1.0.tar.gz mirror://gentoo/coolkey-patches-20110419.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=2751cd0adc839323754507610d227546

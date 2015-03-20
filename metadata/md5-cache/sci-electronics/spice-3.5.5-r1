@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=sys-libs/ncurses x11-libs/libXaw >=app-misc/editor-wrapper-3
 SLOT=0
 SRC_URI=http://www.ibiblio.org/pub/Linux/apps/circuits/spice3f5sfix.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=afe89b7a0fd2dc963607e7e2bae4fa4d

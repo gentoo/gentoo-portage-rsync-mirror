@@ -9,5 +9,5 @@ LICENSE=wxWinLL-3.1
 RDEPEND=>=dev-python/wxpython-2.8.9.2:2.8 >=dev-python/setuptools-0.6 spell? ( dev-python/pyenchant ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://editra.org/uploads/src/Editra-0.7.12.tar.gz
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=76db6d677feb7e495562b82afba3cede

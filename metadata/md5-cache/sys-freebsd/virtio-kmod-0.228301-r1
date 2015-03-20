@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://freebsd/ports/local-distfiles/kuriyama/virtio-0.228301.tar.gz
-_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=5a349f1c5072619dd0f359dab4caf2d2

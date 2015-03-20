@@ -5,5 +5,5 @@ IUSE=bzip2 gdbm ncurses sqlite tk
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 RDEPEND=|| ( >=dev-python/pypy-2.4.0:0/2.4[bzip2?,gdbm(-)?,ncurses?,sqlite?,tk?] >=dev-python/pypy-bin-2.4.0:0/2.4[gdbm(-)?,sqlite?,tk?] )
 SLOT=0/2.4
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=95c3d87658ba6c729e3d12a0777677fa

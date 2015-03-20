@@ -10,5 +10,5 @@ RDEPEND=sys-libs/readline opengl? ( media-libs/freeglut ) nls? ( sys-devel/gette
 RESTRICT=test
 SLOT=0/6.8.0
 SRC_URI=ftp://ftp.parrot.org/pub/parrot/releases/all/6.8.0/parrot-6.8.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=22d427d743e0746f3765d646c7c0d0c3

@@ -9,5 +9,5 @@ RDEPEND=dev-libs/glib sys-libs/gdbm crypt? ( dev-libs/openssl ) snmp? ( net-anal
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/openipmi/OpenIPMI-2.0.18.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=a4e636e8d3799e74aa0fb680f6a61c6b

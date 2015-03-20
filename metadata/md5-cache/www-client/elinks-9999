@@ -9,5 +9,5 @@ RDEPEND=dev-libs/boehm-gc >=dev-libs/expat-1.95.4 bzip2? ( >=app-arch/bzip2-1.0.
 RESTRICT=test
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.10.4.conf.bz2
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=26284cfdb82a1b6d1254c3dc46fe527e

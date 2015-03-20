@@ -9,5 +9,5 @@ RDEPEND=>=dev-libs/libcdio-0.71 !minimal? ( dev-libs/popt ) xml? ( >=dev-libs/li
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/vcdimager-0.7.23.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=330ac8e58c014576b59a528bee06ed18

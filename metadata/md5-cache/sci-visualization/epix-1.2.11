@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/latex-base dev-texlive/texlive-pstricks dev-texlive/texlive-pictures dev-texlive/texlive-latexextra dev-tex/xcolor emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=http://mathcs.holycross.edu/~ahwang/epix/epix-1.2.11_withpdf.tar.bz2
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=a802c50c48315db0cd89098aaa55f11d

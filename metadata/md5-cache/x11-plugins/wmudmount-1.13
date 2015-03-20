@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/dbus-glib-0.98 >=dev-libs/glib-2.20 >=x11-libs/gtk+-2.18:2 x11-libs/libX11 gnome-keyring? ( gnome-base/libgnome-keyring ) libnotify? ( >=x11-libs/libnotify-0.7 ) sys-fs/udisks:0
 SLOT=0
 SRC_URI=mirror://sourceforge/wmudmount/wmudmount-1.13.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=b99f752cbbe574e9ec4a60160ad9e070

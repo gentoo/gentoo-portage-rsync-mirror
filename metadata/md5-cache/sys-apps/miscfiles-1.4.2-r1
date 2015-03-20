@@ -8,5 +8,5 @@ LICENSE=GPL-2 unicode
 RDEPEND=!<sys-freebsd/freebsd-share-7.2-r1
 SLOT=0
 SRC_URI=mirror://gnu/miscfiles/miscfiles-1.4.2.tar.gz mirror://gentoo/UnicodeData-5.2.0.txt.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=423c03b5d22a7f440b1f26d3dc4c68ad

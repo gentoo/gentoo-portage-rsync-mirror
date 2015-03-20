@@ -7,5 +7,5 @@ KEYWORDS=~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=BSD-2
 SLOT=0
 SRC_URI=http://www.snortsam.net/files/snortsam/snortsam-src-2.70.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=71a9b24b05d1c6154ed5721dfbf4730d

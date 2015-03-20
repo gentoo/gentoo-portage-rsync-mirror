@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Andika-5.000.zip&filename=Andika-5.000.zip -> andika-5.000.zip
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=157679202dab24f7df3d3d01ce04ae24

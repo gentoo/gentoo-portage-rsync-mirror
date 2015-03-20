@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=net-libs/libpcap
 SLOT=0
 SRC_URI=https://github.com/verisign/dnscap/tarball/727ed7d5e46625abc2c8d988689a300589e948b6 -> dnscap-20130814.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=c41991386d4a48b3fa3b9cc1834283e4

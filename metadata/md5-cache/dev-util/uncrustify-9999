@@ -6,5 +6,5 @@ HOMEPAGE=http://uncrustify.sourceforge.net/
 IUSE=test
 LICENSE=GPL-2
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=2a07e19aba297d152b487ba7687d9165

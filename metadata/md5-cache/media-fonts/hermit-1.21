@@ -8,5 +8,5 @@ KEYWORDS=~amd64
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=http://pcaro.es/d/otf-hermit-1.21.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=7cfcbf1005d139d9c1d5abec154f5e4a

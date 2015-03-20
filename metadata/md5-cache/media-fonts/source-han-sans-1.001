@@ -10,5 +10,5 @@ REQUIRED_USE=|| ( linguas_ja linguas_ko linguas_zh_CN linguas_zh_TW )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=linguas_ja? ( http://dev.gentoo.org/~yngwin/distfiles/source-han-sans-ja-1.001.tar.xz ) linguas_ko? ( http://dev.gentoo.org/~yngwin/distfiles/source-han-sans-ko-1.001.tar.xz ) linguas_zh_CN? ( http://dev.gentoo.org/~yngwin/distfiles/source-han-sans-zh_CN-1.001.tar.xz ) linguas_zh_TW? ( http://dev.gentoo.org/~yngwin/distfiles/source-han-sans-zh_TW-1.001.tar.xz )
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=30f7e22e2b54dd9516ef0d1c7d3e3832

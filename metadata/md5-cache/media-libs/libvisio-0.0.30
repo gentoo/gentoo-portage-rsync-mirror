@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2+ LGPL-2.1 MPL-1.1 )
 RDEPEND=app-text/libwpd:0.9 app-text/libwpg:0.2 dev-libs/icu:= dev-libs/libxml2 sys-libs/zlib
 SLOT=0
 SRC_URI=http://dev-www.libreoffice.org/src/libvisio-0.0.30.tar.xz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=fd228bee79972afb592ebb7467c2f5f3

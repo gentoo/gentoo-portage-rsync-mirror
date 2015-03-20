@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-libs/openssl:0= sys-apps/util-linux:= !minimal? ( app-arch/xz-utils:= dev-libs/libyaml:= )
 SLOT=0
 SRC_URI=https://chromium.googlesource.com/chromiumos/platform/vboot_reference/+archive/f44ebbe36b2c1603437edc57b534244e89bfcd9c.tar.gz -> vboot-utils-42_p20150219.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=22a81f316282ec369c61a51344b4d915

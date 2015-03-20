@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 LGPL-3
 RDEPEND=>=dev-libs/dbus-glib-0.98 >=dev-libs/glib-2.26:2 >=dev-libs/libdbusmenu-0.6.2:3[gtk] >=dev-libs/libindicator-12.10.0:3 >=x11-libs/gtk+-3.2:3 introspection? ( >=dev-libs/gobject-introspection-1 )
 SLOT=3
 SRC_URI=http://launchpad.net/libappindicator/12.10/12.10.0/+download/libappindicator-12.10.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	vala	a41415fe361172827ed11b6a32ee38fb
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	vala	a41415fe361172827ed11b6a32ee38fb
 _md5_=0d136a1b3029f85db322d05c3935f892

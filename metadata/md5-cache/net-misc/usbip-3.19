@@ -10,5 +10,5 @@ PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=>=dev-libs/glib-2.6 sys-apps/hwids >=sys-kernel/linux-headers-3.17 virtual/libudev tcpd? ( sys-apps/tcp-wrappers ) !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 SLOT=0
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.19.tar.xz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	kernel-2	b544eac9542c54048d7dd55302455f51	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	b544eac9542c54048d7dd55302455f51	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=2c49cd0826ca27de5cd5d2e3cb038263

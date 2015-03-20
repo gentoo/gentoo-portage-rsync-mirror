@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://sourceforge/chemical-mime/chemical-mime-data-0.1.94.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=96aef0c3b356e210f6fb954fbbce5613

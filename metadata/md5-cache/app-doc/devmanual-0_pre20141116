@@ -7,5 +7,5 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc
 LICENSE=CC-BY-SA-2.0
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/devmanual-0_pre20141116.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=8e239361f01a93c752e948e7de66c0c6

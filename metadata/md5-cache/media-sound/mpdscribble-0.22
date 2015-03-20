@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.16:2 >=media-libs/libmpdclient-2.2 curl? ( net-misc/curl ) !curl? ( net-libs/libsoup:2.4 )
 SLOT=0
 SRC_URI=mirror://sourceforge/musicpd/mpdscribble-0.22.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=133dc62211b1f4650983e9cbce46c331

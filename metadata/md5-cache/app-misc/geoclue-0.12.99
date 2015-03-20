@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2 dev-libs/libxml2 sys-apps/d
 REQUIRED_USE=skyhook? ( networkmanager )
 SLOT=0
 SRC_URI=http://freedesktop.org/~hadess/geoclue-0.12.99.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=e5b3f64b72b942fa5329e31358abbe85

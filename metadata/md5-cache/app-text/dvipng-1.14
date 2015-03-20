@@ -9,5 +9,5 @@ LICENSE=LGPL-3+ Texinfo-manual
 RDEPEND=dev-libs/kpathsea media-libs/gd[jpeg,png] media-libs/libpng virtual/latex-base sys-libs/zlib t1lib? ( media-libs/t1lib ) truetype? ( >=media-libs/freetype-2.1.5 )
 SLOT=0
 SRC_URI=mirror://sourceforge/dvipng/dvipng-1.14.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=ab05e6dc843014c67a298ea7a2faf390

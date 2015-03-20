@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-haskell/profunctors-4:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/4.0
 SRC_URI=mirror://hackage/packages/archive/profunctor-extras/4.0/profunctor-extras-4.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	26ad8cdd26b723e556b3614c8ffb11f6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	26ad8cdd26b723e556b3614c8ffb11f6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=baf343f448305b3b57c8df9e6a349438

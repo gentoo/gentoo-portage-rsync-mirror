@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=virtual/jre-1.4 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=http://www.clarkware.com/software/jdepend-2.9.zip
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=6e989988f3d02cd076fe54167f81a8d6

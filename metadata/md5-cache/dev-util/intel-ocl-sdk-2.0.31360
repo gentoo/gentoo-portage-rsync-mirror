@@ -10,5 +10,5 @@ RDEPEND=app-admin/eselect-opencl dev-cpp/tbb sys-process/numactl tools? ( sys-de
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://registrationcenter.intel.com/irc_nas/2563/intel_sdk_for_ocl_applications_2012_x64.tgz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=2fe90c56b74afb512d4a8ea6ba5a403a

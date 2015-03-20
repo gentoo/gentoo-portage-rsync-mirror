@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-sound/gmpc-11.8.16 dev-libs/dbus-glib
 SLOT=0
 SRC_URI=http://download.sarine.nl/Programs/gmpc/11.8/gmpc-awn-11.8.16.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=aeb59d3d45940e0e565f547893e562b7

@@ -10,5 +10,5 @@ RDEPEND=sys-apps/groff >=sys-apps/ucspi-tcp-0.88 virtual/daemontools
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://cr.yp.to/software/serialmail-0.75.tar.gz mirror://gentoo/serialmail-0.75-patch.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=594d8ae6e3fc2f95708591e3aab8c6b9

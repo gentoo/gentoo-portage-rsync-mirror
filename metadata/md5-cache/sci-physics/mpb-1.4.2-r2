@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/lapack dev-scheme/guile sci-libs/libctl sci-libs/fftw:2.1[mpi?] sys-libs/readline hdf5? ( sci-libs/hdf5 ) mpi? ( virtual/mpi )
 SLOT=0
 SRC_URI=http://ab-initio.mit.edu/mpb/mpb-1.4.2.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=74a1fb3d12ab3c3be65d84ea50c36bc9

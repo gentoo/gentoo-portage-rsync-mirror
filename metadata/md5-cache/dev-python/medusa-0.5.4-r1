@@ -10,5 +10,5 @@ RDEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targ
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_pypy )
 SLOT=0
 SRC_URI=http://www.amk.ca/files/python/medusa-0.5.4.tar.gz
-_eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	998e5931fb95b10a6a11ec796ada2759	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	331701099758706863819fe3ff6ddc8a	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=09cd9a732e408c9dfe5752c86daf6516

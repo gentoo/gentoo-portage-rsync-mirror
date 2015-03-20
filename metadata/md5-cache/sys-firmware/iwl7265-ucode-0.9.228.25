@@ -8,5 +8,5 @@ LICENSE=ipw3945
 RDEPEND=!sys-kernel/linux-firmware[-savedconfig]
 SLOT=9
 SRC_URI=https://wireless.wiki.kernel.org/_media/en/users/drivers/iwlwifi-7265-ucode-25.228.9.0.tgz -> iwl7265-ucode-0.9.228.25.tgz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=02381efed83982634572ef3707f435bb

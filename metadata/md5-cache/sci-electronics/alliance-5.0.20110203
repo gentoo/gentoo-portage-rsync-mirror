@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2
 RDEPEND=>=x11-libs/motif-2.3:0 x11-libs/libXpm x11-libs/libXt
 SLOT=0
 SRC_URI=http://www-asim.lip6.fr/pub/alliance/distribution/5.0/alliance-5.0-20110203.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=b085aa1cd23d18f1c08a1cbd0686f493

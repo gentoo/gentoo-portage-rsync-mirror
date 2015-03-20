@@ -10,5 +10,5 @@ PDEPEND==media-libs/avidemux-plugins-2.6.2-r2[aften?,a52?,alsa?,amr?,dts?,fontco
 RDEPEND==media-libs/avidemux-core-2.6.2-r1[aften?,a52?,alsa?,amr?,dts?,fontconfig?,jack?,lame?,libsamplerate?,cpu_flags_x86_mmx?,oss?,nls?,sdl?,vorbis?,truetype?,xvid?,x264?,xv?] qt4? ( >=dev-qt/qtgui-4.8.3:4 )
 SLOT=2.6
 SRC_URI=mirror://sourceforge/avidemux/2.6.2/avidemux_2.6.2.tar.gz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=43a6eeb386ed72b02a93a0c6ee51580d

@@ -10,5 +10,5 @@ PDEPEND=dev-lisp/gentoo-init
 RDEPEND=virtual/libiconv >=dev-libs/libsigsegv-2.4 >=dev-libs/ffcall-1.10 dbus? ( sys-apps/dbus ) fastcgi? ( dev-libs/fcgi ) gdbm? ( sys-libs/gdbm ) gtk? ( >=x11-libs/gtk+-2.10:2 >=gnome-base/libglade-2.6:2.0 ) pari? ( >=sci-mathematics/pari-2.3.0 ) postgres? ( >=dev-db/postgresql-8.0 ) readline? ( >=sys-libs/readline-5.0 ) pcre? ( dev-libs/libpcre ) svm? ( sci-libs/libsvm ) zlib? ( sys-libs/zlib ) X? ( new-clx? ( x11-libs/libXpm ) ) hyperspec? ( dev-lisp/hyperspec ) berkdb? ( sys-libs/db:4.5 )
 SLOT=2
 SRC_URI=mirror://sourceforge/clisp/clisp-2.48.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=3d367ba1b9b3be2fe0f5dd20c84eca24

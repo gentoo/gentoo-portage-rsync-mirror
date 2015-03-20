@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/python-2.5 dev-python/pyid3lib media-sound/vorbis-tools[ogg123] >=media-libs/mutagen-1.11 aac? ( || ( media-libs/faad2 media-video/mplayer ) ) cdparanoia? ( || ( dev-libs/libcdio-paranoia media-sound/cdparanoia ) ) flac? ( || ( media-libs/flac media-video/mplayer ) ) mac? ( || ( media-sound/mac media-video/mplayer ) ) mp3? ( || ( media-sound/mpg123 media-sound/lame media-video/mplayer media-sound/mpg321 ) ) musepack? ( || ( >=media-sound/musepack-tools-444 media-video/mplayer ) ) wavpack? ( || ( media-sound/wavpack media-video/mplayer ) ) wma? ( media-video/mplayer )
 SLOT=0
 SRC_URI=http://jak-linux.org/projects/dir2ogg/0.11/dir2ogg-0.11.8.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=64a19e6eff2b34fddf110945bac5afec

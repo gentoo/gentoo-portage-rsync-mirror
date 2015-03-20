@@ -9,5 +9,5 @@ PDEPEND=virtual/commonlisp
 RDEPEND=dev-lisp/common-lisp-controller virtual/commonlisp dev-lisp/cl-ppcre doc? ( virtual/texi2dvi ) emacs? ( app-emacs/slime ) !clisp? ( !sbcl? ( !amd64? ( dev-lisp/cmucl ) ) ) clisp? ( >=dev-lisp/clisp-2.38-r2[X,-new-clx] ) sbcl? ( >=dev-lisp/sbcl-1.1.15 dev-lisp/clx )
 RESTRICT=mirror
 SLOT=0
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	common-lisp-3	b69798cfa8d750d59a6fbb5f22a3fd67	eutils	998e5931fb95b10a6a11ec796ada2759	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	common-lisp-3	b69798cfa8d750d59a6fbb5f22a3fd67	eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=b1c7aac93573a2fdbd19cf3efdba0803

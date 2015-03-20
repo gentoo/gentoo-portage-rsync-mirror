@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1
 RDEPEND=x11-libs/gtk+:2 nls? ( sys-devel/gettext ) crypt? ( app-crypt/gpgme ) ldap? ( net-nds/openldap ) oniguruma? ( dev-libs/oniguruma ) pda? ( app-pda/jpilot ) spell? ( app-text/gtkspell:2 ) ssl? ( dev-libs/openssl ) app-misc/mime-types net-misc/curl
 SLOT=0
 SRC_URI=http://sylpheed.sraoss.jp/sylpheed/v3.3/sylpheed-3.3.0.tar.bz2
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=67b35aefd30d78a106afc040646ab6d0

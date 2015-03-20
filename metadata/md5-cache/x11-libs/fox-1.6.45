@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=x11-libs/libXrandr x11-libs/libXcursor x11-libs/fox-wrapper bzip2? ( >=app-arch/bzip2-1.0.2 ) jpeg? ( virtual/jpeg ) opengl? ( virtual/glu virtual/opengl ) png? ( >=media-libs/libpng-1.2.5 ) tiff? ( >=media-libs/tiff-3.5.7 ) truetype? ( =media-libs/freetype-2* x11-libs/libXft ) zlib? ( >=sys-libs/zlib-1.1.4 )
 SLOT=1.6
 SRC_URI=ftp://ftp.fox-toolkit.org/pub/fox-1.6.45.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	fox	26650ced206327e4fca3dec6cd441381	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	fox	26650ced206327e4fca3dec6cd441381	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=ab80d069ceb303dc6cf96653dea4bf5b

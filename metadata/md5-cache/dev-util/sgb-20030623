@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=|| ( >=dev-util/cweb-3.00 virtual/tex-base )
 SLOT=0
 SRC_URI=ftp://labrea.stanford.edu/pub/sgb/sgb-2003-06-23.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=6b6ab3bfb01dc1e5eec4b7796ba1648b

@@ -6,5 +6,5 @@ KEYWORDS=~amd64
 LICENSE=public-domain
 RDEPEND=sys-devel/gcc:=
 SLOT=0
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=85e2be2693d7516bf96c85539494b2e8

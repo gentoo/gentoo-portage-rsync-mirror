@@ -10,5 +10,5 @@ RDEPEND=games-misc/games-envd dedicated? ( games-fps/enemy-territory[dedicated] 
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=http://etpro.anime.net/etpro-3_2_6.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	998e5931fb95b10a6a11ec796ada2759	games	1ad3205dbf62a2c98249f2f59b0a2d39	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	games	1ad3205dbf62a2c98249f2f59b0a2d39	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=1adf30bef4f1316054fc50ca5527b3c3

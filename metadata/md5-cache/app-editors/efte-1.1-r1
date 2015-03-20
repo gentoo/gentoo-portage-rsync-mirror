@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 Artistic )
 RDEPEND=sys-libs/ncurses gpm? ( sys-libs/gpm ) X? ( x11-libs/libX11 x11-libs/libXpm x11-libs/libXdmcp x11-libs/libXau media-fonts/font-misc-misc )
 SLOT=0
 SRC_URI=mirror://sourceforge/efte/efte-1.1.tar.bz2
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	998e5931fb95b10a6a11ec796ada2759	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=3802862f54152e6da1ef3ab73a9f3cbf

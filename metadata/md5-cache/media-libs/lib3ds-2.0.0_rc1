@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=media-libs/freeglut virtual/opengl
 SLOT=0
 SRC_URI=http://lib3ds.googlecode.com/files/lib3ds-20080909.zip
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=b388010b3cbcc24b3f16929ba5868683

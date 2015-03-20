@@ -6,5 +6,5 @@ KEYWORDS=alpha amd64 ppc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://debian/pool/main/a/adjtimex/adjtimex_1.20-6.diff.gz mirror://debian/pool/main/a/adjtimex/adjtimex_1.20.orig.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=685ee96d01a93501f71f8457577c425a

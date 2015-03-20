@@ -8,5 +8,5 @@ LICENSE=GPL-1
 RDEPEND=sys-libs/ncurses sys-libs/zlib !net-irc/irc-client
 SLOT=0
 SRC_URI=ftp://ftp.irc.org/irc/server/irc2.10.3p7.tgz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=e6e982b070f490cb86a27cf1a866bac8

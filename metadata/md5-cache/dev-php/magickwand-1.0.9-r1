@@ -10,5 +10,5 @@ RDEPEND=>=media-gfx/imagemagick-6.5.2.9 php_targets_php5-6? ( dev-lang/php:5.6 )
 REQUIRED_USE=|| ( php_targets_php5-6 php_targets_php5-5 php_targets_php5-4 )
 SLOT=0
 SRC_URI=http://www.magickwand.org/download/php/MagickWandForPHP-1.0.9-2.tar.bz2
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=8c09db590f1099e2d33169c9a95c7801

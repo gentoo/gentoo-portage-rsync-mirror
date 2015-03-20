@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-devel/gcc-4.5:* =sys-devel/llvm-3.6.0*
 SLOT=0
 SRC_URI=http://llvm.org/releases/3.6.0/dragonegg-3.6.0.src.tar.xz test? ( http://llvm.org/releases/3.6.0/llvm-3.6.0.src.tar.xz )
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=788b5f91ec98275674ce1432cc7a00f6

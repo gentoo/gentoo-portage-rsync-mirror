@@ -9,5 +9,5 @@ LICENSE=AGPL-3
 RDEPEND=dev-java/maven-bin www-servers/tomcat >virtual/jre-1.6 net-misc/guacamole-server mysql? ( virtual/mysql ) ldap? ( net-nds/openldap )
 SLOT=0
 SRC_URI=mirror://sourceforge/guacamole/guacamole-client-0.9.0.tar.gz mysql? ( http://sourceforge.net/projects/guacamole/files/current/extensions/guacamole-auth-mysql-0.9.0.tar.gz ) ldap? ( http://sourceforge.net/projects/guacamole/files/current/extensions/guacamole-auth-ldap-0.9.0.tar.gz )
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=7a23b675280bc0002f44bb172d2ee610

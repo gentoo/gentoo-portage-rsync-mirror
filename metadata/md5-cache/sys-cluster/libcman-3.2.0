@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=!sys-cluster/cman-lib
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/c/l/cluster/cluster-3.2.0.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=0c04559f261b94de7bfa31a60262e90b

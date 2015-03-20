@@ -9,5 +9,5 @@ RDEPEND=>=x11-libs/motif-2.3:0 sci-biology/samtools >=sci-biology/phred-000925 >
 RESTRICT=fetch
 SLOT=0
 SRC_URI=consed-27-sources.tar.gz consed-27-linux.tar.gz
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=0c536de51a94de4aa5367c62a3c4bb0f
