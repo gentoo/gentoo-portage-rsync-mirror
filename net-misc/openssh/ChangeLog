@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.549 2015/03/19 22:22:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.550 2015/03/20 02:35:27 vapier Exp $
+
+  20 Mar 2015; Mike Frysinger <vapier@gentoo.org> openssh-6.8_p1-r1.ebuild:
+  Also check /etc/hosts.allow for tcp-wrappers #531156#18 by Martin Mokrejš.
 
   19 Mar 2015; Mike Frysinger <vapier@gentoo.org> openssh-6.8_p1-r1.ebuild:
   Refresh ldap patch #543822 by Anton Gubarkov. Move configure options to an
