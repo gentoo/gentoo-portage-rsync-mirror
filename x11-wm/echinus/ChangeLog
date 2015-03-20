@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/echinus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.13 2013/10/19 15:21:34 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.14 2015/03/20 09:00:26 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/echinus.desktop:
+  Fix desktop file
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal

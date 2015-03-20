@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=IceWM
 Comment=This session logs you into IceWM
 Exec=icewm-session

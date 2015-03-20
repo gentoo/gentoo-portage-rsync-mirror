@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/dwm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.92 2014/11/20 11:47:14 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.93 2015/03/20 09:00:16 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/dwm.desktop:
+  Fix desktop file
 
   20 Nov 2014; Jeroen Roovers <jer@gentoo.org> dwm-6.0.ebuild:
   Fix DEPEND vs. RDEPEND.

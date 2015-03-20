@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.164 2015/01/11 19:28:57 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.165 2015/03/20 08:59:44 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  files/awesome-gnome-xsession.desktop, files/awesome-gnome.desktop,
+  files/awesome.desktop:
+  Fix desktop file
 
 *awesome-3.5.6 (11 Jan 2015)
 

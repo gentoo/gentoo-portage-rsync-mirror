@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.57 2014/08/10 19:58:08 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.58 2015/03/20 09:00:41 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/evilwm.desktop:
+  Fix desktop file
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> evilwm-1.0.1.ebuild,
   evilwm-1.1.0.ebuild:
