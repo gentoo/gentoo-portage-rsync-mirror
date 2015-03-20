@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.189 2014/12/28 14:46:02 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.190 2015/03/20 07:48:19 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/xemacs.desktop,
+  xemacs-21.4.22-r4.ebuild, xemacs-21.5.31.ebuild, xemacs-21.5.33.ebuild,
+  xemacs-21.5.34-r2.ebuild:
+  Fix desktop file; fix SLOT operators
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   xemacs-21.4.22-r4.ebuild, xemacs-21.5.31.ebuild, xemacs-21.5.33.ebuild,

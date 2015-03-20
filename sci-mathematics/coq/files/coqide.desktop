@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Comment=Coq integrated developpment environment
 Icon=/usr/lib/coq/ide/coq.png
 Exec=/usr/bin/coqide
@@ -7,4 +6,4 @@ Name=CoqIDE
 GenericName=Coq IDE
 Terminal=false
 Type=Application
-Categories=Application;Education;Science;Math;
+Categories=Science;Math;

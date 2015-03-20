@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/monkeysign
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/ChangeLog,v 1.8 2015/02/02 22:25:45 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysign/ChangeLog,v 1.9 2015/03/20 07:39:47 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/monkeysign.desktop,
+  monkeysign-2.0.2-r1.ebuild:
+  Fix desktop file
 
 *monkeysign-2.0.2-r1 (02 Feb 2015)
 

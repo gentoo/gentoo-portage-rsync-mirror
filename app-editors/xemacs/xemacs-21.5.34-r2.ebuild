@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.34-r2.ebuild,v 1.5 2014/12/28 14:46:02 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.34-r2.ebuild,v 1.6 2015/03/20 07:48:19 jlec Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -27,7 +27,7 @@ RDEPEND="
 	berkdb? ( >=sys-libs/db-4 !!<sys-libs/db-4 )
 	gdbm? ( >=sys-libs/gdbm-1.8.3[berkdb(+)] )
 	>=sys-libs/zlib-1.1.4
-	>=dev-libs/openssl-0.9.6
+	>=dev-libs/openssl-0.9.6:0
 	>=media-libs/audiofile-0.2.3
 	gpm? ( >=sys-libs/gpm-1.19.6 )
 	postgres? ( dev-db/postgresql )
@@ -42,9 +42,9 @@ RDEPEND="
 	xft? ( media-libs/freetype:2 x11-libs/libXft x11-libs/libXrender >=media-libs/fontconfig-2.5.0 )
 	neXt? ( x11-libs/neXtaw )
 	xface? ( media-libs/compface )
-	tiff? ( media-libs/tiff )
-	png? ( >=media-libs/libpng-1.2 )
-	jpeg? ( virtual/jpeg )
+	tiff? ( media-libs/tiff:0 )
+	png? ( >=media-libs/libpng-1.2:0 )
+	jpeg? ( virtual/jpeg:0 )
 	canna? ( app-i18n/canna )
 	freewnn? ( app-i18n/freewnn )
 	>=sys-libs/ncurses-5.2

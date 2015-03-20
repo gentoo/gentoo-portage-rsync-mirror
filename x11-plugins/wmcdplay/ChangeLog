@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcdplay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/ChangeLog,v 1.10 2015/01/12 10:48:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/ChangeLog,v 1.11 2015/03/20 07:56:51 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/wmcdplay.desktop:
+  Fix desktop file
 
 *wmcdplay-1.1 (12 Jan 2015)
 

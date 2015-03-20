@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.153 2014/12/25 10:47:23 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.154 2015/03/20 07:55:00 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/bittorrent.desktop:
+  Fix desktop file
 
 *bittorrent-4.4.0-r3 (25 Dec 2014)
 

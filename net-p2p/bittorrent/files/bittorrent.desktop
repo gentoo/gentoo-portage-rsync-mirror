@@ -1,5 +1,4 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=BitTorrent File Transfer
 Comment=Distributed download of files from the Internet
 Exec=bittorrent

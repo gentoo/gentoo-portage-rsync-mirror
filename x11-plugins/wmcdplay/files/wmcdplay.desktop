@@ -4,6 +4,5 @@ Comment=Dockable CD player applet
 Comment[pl]=Dokowalny aplet CD playera
 Exec=wmcdplay
 Type=Application
-Encoding=UTF-8
 Terminal=false
 Categories=AudioVideo;Audio;
