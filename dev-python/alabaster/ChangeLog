@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/alabaster
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/alabaster/ChangeLog,v 1.4 2015/03/18 06:39:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/alabaster/ChangeLog,v 1.5 2015/03/20 03:42:53 patrick Exp $
+
+*alabaster-0.7.2 (20 Mar 2015)
+
+  20 Mar 2015; Patrick Lauer <patrick@gentoo.org> +alabaster-0.7.2.ebuild:
+  Bump
 
   18 Mar 2015; Patrick Lauer <patrick@gentoo.org> alabaster-0.6.3.ebuild:
   Add pypy3
