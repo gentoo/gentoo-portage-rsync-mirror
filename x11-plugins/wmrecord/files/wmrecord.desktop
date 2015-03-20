@@ -4,5 +4,5 @@ Comment=Audio recorder for WindowMaker
 Comment[pl]=Rekorder dźwięku dla WindowMakera
 Exec=wmrecord
 Type=Application
-Terminal=0
-Categories=Application;Recorder;
+Terminal=false
+Categories=AudioVideo;Audio;Recorder;

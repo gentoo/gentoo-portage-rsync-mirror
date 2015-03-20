@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.67 2015/03/03 07:07:33 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.68 2015/03/20 08:12:34 idella4 Exp $
+
+*markdown-2.6.1 (20 Mar 2015)
+
+  20 Mar 2015; Ian Delaney <idella4@gentoo.org> +markdown-2.6.1.ebuild:
+  bump; add ~arm64 based on addition to 2.5.2 by dlan
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> markdown-2.5.2.ebuild:
   add arm64 support, tested on A53 board

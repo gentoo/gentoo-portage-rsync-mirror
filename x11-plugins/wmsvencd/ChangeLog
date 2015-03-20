@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsvencd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/ChangeLog,v 1.11 2014/07/22 20:32:37 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsvencd/ChangeLog,v 1.12 2015/03/20 08:03:49 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/wmsvencd.desktop:
+  Fix desktop file
 
   22 Jul 2014; Manuel Rüger <mrueg@gentoo.org> wmsvencd-0.5.0.ebuild:
   Update HOMEPAGE

@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.285 2015/03/14 14:08:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.286 2015/03/20 08:12:34 vapier Exp $
+
+*libdrm-2.4.59-r1 (20 Mar 2015)
+
+  20 Mar 2015; Mike Frysinger <vapier@gentoo.org> +libdrm-2.4.59-r1.ebuild,
+  metadata.xml:
+  Explicitly disable udev/cairo since they are used only by tests #299008 by
+  Nathan Phillip Brink.  Add USE=valgrind to control inclusion of memory hints
+  #481120 by Franz Fellner.
 
   14 Mar 2015; Markus Meier <maekke@gentoo.org> libdrm-2.4.59.ebuild:
   arm stable, bug #530652

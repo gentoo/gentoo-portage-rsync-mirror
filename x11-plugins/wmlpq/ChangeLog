@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmlpq
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/ChangeLog,v 1.10 2012/09/05 08:19:40 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmlpq/ChangeLog,v 1.11 2015/03/20 08:01:47 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/wmlpq.desktop:
+  Fix desktop file
 
   05 Sep 2012; Justin Lecher <jlec@gentoo.org> wmlpq-0.2.1-r1.ebuild,
   wmlpq-0.2.1-r2.ebuild:
