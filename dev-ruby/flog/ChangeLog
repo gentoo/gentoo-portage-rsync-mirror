@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/ChangeLog,v 1.19 2015/03/20 13:57:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flog/ChangeLog,v 1.20 2015/03/20 14:04:27 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> flog-4.3.2.ebuild:
+  Add ruby22.
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> -flog-4.3.0.ebuild,
   -flog-4.3.1.ebuild:
