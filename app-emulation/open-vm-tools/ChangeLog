@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.83 2015/02/14 14:56:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.84 2015/03/20 09:03:52 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/open-vm-tools.desktop:
+  Fix desktop file
 
   14 Feb 2015; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Add myself as a maintainer.

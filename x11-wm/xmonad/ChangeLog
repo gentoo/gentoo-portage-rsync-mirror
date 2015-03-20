@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xmonad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.37 2015/02/27 08:45:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.38 2015/03/20 09:02:35 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/xmonad.desktop:
+  Fix desktop file
 
 *xmonad-0.11-r3 (27 Feb 2015)
 

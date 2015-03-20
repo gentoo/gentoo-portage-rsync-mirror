@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.63 2014/12/25 12:31:34 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.64 2015/03/20 09:15:47 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  metakit-2.4.9.7-r1.ebuild, metakit-2.4.9.7-r2.ebuild:
+  Fix tcl/tk slotting
 
 *metakit-2.4.9.7-r2 (25 Dec 2014)
 

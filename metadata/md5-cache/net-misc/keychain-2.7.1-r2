@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install prepare
+DESCRIPTION=manage ssh and GPG keys in a convenient and secure manner. Frontend for ssh-agent/ssh-add
+EAPI=5
+HOMEPAGE=http://www.funtoo.org/wiki/Keychain
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=app-shells/bash virtual/ssh
+SLOT=0
+SRC_URI=http://www.funtoo.org/archive/keychain/keychain-2.7.1.tar.bz2
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=8457eb99b3024a96ad2e8570e3c6f16c

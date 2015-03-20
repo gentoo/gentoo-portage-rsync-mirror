@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/notion
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/ChangeLog,v 1.9 2014/05/25 13:01:33 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/ChangeLog,v 1.10 2015/03/20 09:01:49 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/notion.desktop:
+  Fix desktop file
 
   25 May 2014; Jeroen Roovers <jer@gentoo.org> notion-3_p2013030200.ebuild,
   notion-9999.ebuild:

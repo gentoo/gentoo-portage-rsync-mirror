@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.151 2015/01/22 09:24:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.152 2015/03/20 09:02:17 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/wmaker.desktop:
+  Fix desktop file
 
   22 Jan 2015; Bernard Cafarelli <voyageur@gentoo.org>
   windowmaker-0.95.6.ebuild, +files/windowmaker-0.95.6-webp_detection.patch:

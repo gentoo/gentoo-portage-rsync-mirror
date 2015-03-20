@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/keychain
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.110 2013/05/24 20:30:30 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.111 2015/03/20 09:24:36 hwoarang Exp $
+
+*keychain-2.7.1-r2 (20 Mar 2015)
+
+  20 Mar 2015; Markos Chandras <hwoarang@gentoo.org> +keychain-2.7.1-r2.ebuild,
+  +files/keychain-2.7.1-openssh-6.8.patch:
+  Revbump to include upstream commit for new openssh-6.8 fingerprint format
 
   24 May 2013; Alexis Ballier <aballier@gentoo.org> keychain-2.7.1-r1.ebuild:
   keyword ~amd64-fbsd thanks to Yuta SATOH, bug #432410
