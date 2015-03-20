@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/gitv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.8 2014/06/19 05:43:03 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.10 2015/03/20 19:30:58 radhermit Exp $
+
+  20 Mar 2015; Tim Harder <radhermit@gentoo.org> gitv-1.2.ebuild:
+  Keyword amd64 and x86.
+
+*gitv-1.3 (20 Mar 2015)
+
+  20 Mar 2015; Tim Harder <radhermit@gentoo.org> +gitv-1.3.ebuild:
+  Version bump.
 
 *gitv-9999 (19 Jun 2014)
 

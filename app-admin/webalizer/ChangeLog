@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webalizer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.104 2014/06/30 00:46:02 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.105 2015/03/20 19:15:47 blueness Exp $
+
+  20 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  -files/webalizer-2.21.02-gcc-4.4.patch, -webalizer-2.21.02.ebuild,
+  webalizer-2.23.08.ebuild:
+  Add xtender patch, bug #499976.
 
   30 Jun 2014; Anthony G. Basile <blueness@gentoo.org> webalizer-2.21.02.ebuild,
   webalizer-2.23.05.ebuild, webalizer-2.23.08.ebuild:

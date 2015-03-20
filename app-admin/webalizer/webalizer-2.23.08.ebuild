@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.08.ebuild,v 1.2 2014/06/30 00:46:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.23.08.ebuild,v 1.3 2015/03/20 19:15:47 blueness Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -10,6 +10,8 @@ EAPI="5"
 inherit versionator eutils webapp db-use
 
 WEBAPP_MANUAL_SLOT="yes"
+XTENDED_VER="RB30"
+XTENDED_URL="rb30"
 
 MY_PV="$(get_version_component_range 1-2)-$(get_version_component_range 3)"
 MY_P="${PN}-${MY_PV}"
@@ -21,12 +23,13 @@ GEODB_DIR="/usr/share/webalizer/geodb"
 DESCRIPTION="Webserver log file analyzer"
 HOMEPAGE="http://www.webalizer.org/"
 SRC_URI="ftp://ftp.mrunix.net/pub/webalizer/${MY_P}-src.tar.bz2
+	xtended? ( http://patrickfrei.ch/webalizer/${XTENDED_URL}/${PN}-${MY_PV}-${XTENDED_VER}-patch.tar.gz )
 	http://dev.gentoo.org/~blueness/webalizer/webalizer.conf.gz
 	${GEODB_URL}/webalizer-geodb-${GEODB_DATE}.tgz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bzip2 geoip nls"
+IUSE="bzip2 xtended geoip nls"
 SLOT="0"
 
 DEPEND=">=sys-libs/db-4.2
@@ -47,6 +50,12 @@ pkg_setup() {
 		ewarn "you must set LINGUAS in /etc/make.conf"
 		ewarn "if you want to USE=nls"
 		die "please either set LINGUAS or do not use nls"
+	fi
+}
+
+src_prepare() {
+	if use xtended; then
+		epatch "${WORKDIR}"/${PN}-${MY_PV}-${XTENDED_VER}-patch
 	fi
 }
 
@@ -112,6 +121,17 @@ pkg_postinst() {
 		ewarn "only with ${LINGUAS:0:2} support. If this is not what"
 		ewarn "you intended, please place the language you desire"
 		ewarn "_first_ in the list of LINGUAS in /etc/make.conf"
+		ewarn
+	fi
+
+	if use xtended; then
+		ewarn
+		ewarn "If you are upgrading webalizer from USE=-xtended to USE=xtended"
+		ewarn "you will need to delete webalizer.current and process all previous"
+		ewarn "days in the same month using 'webalizer /path/to/access_log.1'."
+		ewarn "For more information about using XTENDED webalizer, see:"
+		ewarn
+		ewarn "    http://www.patrickfrei.ch/webalizer/rb30/INSTALL"
 		ewarn
 	fi
 
