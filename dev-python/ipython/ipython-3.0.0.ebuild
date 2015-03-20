@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.3 2015/03/19 07:30:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.4 2015/03/20 05:21:12 patrick Exp $
 
 EAPI=5
 
@@ -60,6 +60,7 @@ RDEPEND="${CDEPEND}
 		>=dev-python/pyzmq-13[${PYTHON_USEDEP}] )"
 DEPEND="${CDEPEND}
 	test? (
+		app-text/dvipng
 		dev-python/jinja[${PYTHON_USEDEP}]
 		dev-python/mock[${PY2_USEDEP}]
 		>=dev-python/nose-0.10.1[${PYTHON_USEDEP}]

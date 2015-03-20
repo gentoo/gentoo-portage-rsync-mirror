@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/cytoolz-0.7.2-r2.ebuild,v 1.1 2015/03/19 04:58:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cytoolz/cytoolz-0.7.2-r2.ebuild,v 1.2 2015/03/20 05:29:12 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -17,13 +17,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 # Informed by author the dep in toolz is not only required but the
-# tests are version sensitive. Dep on toolz actually appears missing from setup.py
+# tests are version sensitive.
 # https://github.com/pytoolz/cytoolz/issues/57
 RDEPEND="
-	dev-python/cython[${PYTHON_USEDEP}]
-	>=dev-python/toolz-0.7.1[${PYTHON_USEDEP}]"
+	dev-python/cython[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	test? ( dev-python/nose[${PYTHON_USEDEP}]
+		>=dev-python/toolz-0.7.1[${PYTHON_USEDEP}] )"
 
 python_compile() {
 	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
