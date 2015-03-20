@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclpython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.23 2015/01/05 12:45:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/ChangeLog,v 1.24 2015/03/20 10:49:54 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> tclpython-4.1-r4.ebuild:
+  Fix tcl/tk slotting
 
   05 Jan 2015; Justin Lecher <jlec@gentoo.org> -tclpython-3.1-r1.ebuild,
   -tclpython-4.1-r2.ebuild:

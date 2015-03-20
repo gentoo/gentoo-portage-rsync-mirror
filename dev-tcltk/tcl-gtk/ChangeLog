@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcl-gtk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-gtk/ChangeLog,v 1.7 2011/03/23 06:26:30 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-gtk/ChangeLog,v 1.8 2015/03/20 10:37:05 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> tcl-gtk-0.08.ebuild:
+  Fix tcl/tk slotting; Bump to EAPI=5
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> tcl-gtk-0.08.ebuild:
   Use SLOT dependencies for x11-libs/gtk+ and x11-libs/vte.
@@ -24,4 +27,3 @@
 
   25 Aug 2004; Doug Goldstein <cardoe@gentoo.org> +tcl-gtk-0.08.ebuild:
   new ebuild based on submitted ebuild from bug #60935 by Niklas Bolander
-

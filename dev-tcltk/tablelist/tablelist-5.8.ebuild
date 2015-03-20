@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.8.ebuild,v 1.1 2013/04/29 06:33:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/tablelist-5.8.ebuild,v 1.2 2015/03/20 10:35:49 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples doc"
 
-RDEPEND="dev-lang/tcl"
+RDEPEND="dev-lang/tcl:0"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"

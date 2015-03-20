@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0-r4.ebuild,v 1.5 2014/01/18 20:09:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/tclreadline-2.1.0-r4.ebuild,v 1.6 2015/03/20 10:50:17 jlec Exp $
 
 EAPI=5
 
@@ -22,8 +22,8 @@ KEYWORDS="alpha amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 DEPEND="
-	dev-lang/tcl
-	sys-libs/readline"
+	dev-lang/tcl:0=
+	sys-libs/readline:0="
 RDEPEND="${DEPEND}"
 
 PATCHES=(

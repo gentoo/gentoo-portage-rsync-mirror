@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-3.05.ebuild,v 1.7 2013/01/04 15:49:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/mysqltcl-3.05.ebuild,v 1.8 2015/03/20 10:34:57 jlec Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="
-	dev-lang/tcl
+	dev-lang/tcl:0
 	>=virtual/mysql-4.1"
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclreadline
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.31 2014/01/19 18:36:40 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.32 2015/03/20 10:50:17 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> tclreadline-2.1.0-r4.ebuild:
+  Fix tcl/tk slotting
 
   19 Jan 2014; Justin Lecher <jlec@gentoo.org> -tclreadline-2.1.0-r2.ebuild,
   -tclreadline-2.1.0-r3.ebuild:

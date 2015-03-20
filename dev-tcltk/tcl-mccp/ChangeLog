@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcl-mccp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-mccp/ChangeLog,v 1.5 2012/08/10 06:50:27 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-mccp/ChangeLog,v 1.6 2015/03/20 10:38:19 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> tcl-mccp-0.6.ebuild:
+  Fix tcl/tk slotting; Bump to EAPI=5
 
   10 Aug 2012; Justin Lecher <jlec@gentoo.org> tcl-mccp-0.6.ebuild,
   +files/tcl-mccp-0.6-flags.patch, metadata.xml:
@@ -20,4 +23,3 @@
   28 Aug 2004; Doug Goldstein <cardoe@gentoo.org> +metadata.xml,
   +tcl-mccp-0.6.ebuild:
   New ebuild submitted by user in bug #60931
-

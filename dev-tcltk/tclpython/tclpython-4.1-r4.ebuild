@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-4.1-r4.ebuild,v 1.4 2014/12/31 16:02:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-4.1-r4.ebuild,v 1.5 2015/03/20 10:49:54 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}
-	dev-lang/tcl"
+	dev-lang/tcl:0="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
