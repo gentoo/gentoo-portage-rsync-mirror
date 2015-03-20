@@ -2916,7 +2916,6 @@ games-sports/xmoto:editor - Depend on inkscape, scripts to convert svg to level 
 games-strategy/0ad:editor - Include Atlas scenario editor projects
 games-strategy/0ad:lobby - Enable the use of net-libs/gloox and the multiplayer lobby
 games-strategy/0ad:nvtt - Support for some uncompressed data formats via media-gfx/nvidia-texture-tools (might be needed for some mods)
-games-strategy/dark-oberon:fmod - Add sound support (fmod)
 games-strategy/defcon-demo:system-libs - Use system libraries instead of the ones included in the upstream distribution.
 games-strategy/freeciv:aimodules - Support for dynamically loadable AI modules (server-side)
 games-strategy/freeciv:auth - Add authentication capability via mysql, postgres or sqlite3
