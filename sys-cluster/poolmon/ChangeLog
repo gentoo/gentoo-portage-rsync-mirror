@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/poolmon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/poolmon/ChangeLog,v 1.1 2014/09/18 17:25:35 mschiff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/poolmon/ChangeLog,v 1.2 2015/03/20 16:56:49 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml, poolmon-0.5.ebuild:
+  Use newbin instead of exinto /usr/bin && doexe
 
 *poolmon-0.5 (18 Sep 2014)
 

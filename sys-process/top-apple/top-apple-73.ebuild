@@ -1,14 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/top-apple/top-apple-73.ebuild,v 1.1 2012/05/03 13:22:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/top-apple/top-apple-73.ebuild,v 1.2 2015/03/20 16:49:53 jlec Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Apple's top from Mac OS X Lion 10.7"
 HOMEPAGE="http://www.opensource.apple.com/"
-SRC_URI="http://www.opensource.apple.com/tarballs/top/top-${PV}.tar.gz
+SRC_URI="
+	http://www.opensource.apple.com/tarballs/top/top-${PV}.tar.gz
 	http://www.opensource.apple.com/source/libutil/libutil-11/libutil.h?txt -> libutil-11-top-${PV}.h"
 
 LICENSE="APSL-2 BSD"
@@ -33,9 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
-	exeinto /usr/bin
-	doexe top
+	dobin top
 }
 
 pkg_postinst() {

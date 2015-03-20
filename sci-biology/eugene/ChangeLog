@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/eugene
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.10 2013/03/09 19:24:44 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.11 2015/03/20 16:38:39 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/eugene-4.1-format-security.patch, -eugene-3.5g.ebuild,
+  eugene-3.6-r1.ebuild, eugene-4.1.ebuild:
+  Drop old; fix for format-security; drop broken doc generation, bug #461000
 
 *eugene-4.1 (09 Mar 2013)
 
@@ -44,4 +49,3 @@
 
   04 Jan 2009; weaver <weaver@gentoo.org> +eugene-3.5d.ebuild:
   Initial commit, ebuild written by me
-

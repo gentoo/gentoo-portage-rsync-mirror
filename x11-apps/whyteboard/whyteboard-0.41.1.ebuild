@@ -1,48 +1,44 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/whyteboard/whyteboard-0.41.1.ebuild,v 1.4 2014/08/10 20:07:33 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/whyteboard/whyteboard-0.41.1.ebuild,v 1.5 2015/03/20 16:34:47 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
-PYTHON_DEPEND="2" # Upstream doesn't support Python 3.x
+PYTHON_COMPAT=( python2_7 )
 
-inherit eutils python multilib
+inherit eutils python-single-r1 multilib
 
 DESCRIPTION="A simple image, PDF and postscript file annotator"
+HOMEPAGE="http://code.google.com/p/whyteboard"
+SRC_URI="
+	http://whyteboard.googlecode.com/files/${P}.tar.gz
+	http://dev.gentoo.org/~lxnay/${PN}/${PN}.png"
+
 LICENSE="ISC"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-HOMEPAGE="http://code.google.com/p/whyteboard"
-SRC_URI="http://whyteboard.googlecode.com/files/${P}.tar.gz http://dev.gentoo.org/~lxnay/${PN}/${PN}.png"
-KEYWORDS="~amd64 ~x86"
-
+DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
-	dev-python/wxpython
+	dev-python/wxpython:*[${PYTHON_USEDEP}]
 	media-gfx/imagemagick"
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/applications
-	dodir /usr/share/pixmaps
+	doicon "${DISTDIR}"/${PN}.png
+	domenu "${FILESDIR}"/${PN}.desktop
 
-	insinto /usr/share/pixmaps
-	doins "${DISTDIR}/${PN}.png" || die
-	domenu "${FILESDIR}/${PN}.desktop" || die
+	dodoc CHANGELOG.txt DEVELOPING.txt README.txt TODO.txt
 
-	dodoc CHANGELOG.txt DEVELOPING.txt README.txt TODO.txt || die
-
-	local appdir="$(python_get_sitedir)/${PN}"
-	dodir "${appdir}"
-	insinto "${appdir}"
-	doins -r images 'locale' "${PN}" "${PN}-help" "${PN}.py" || die
+	python_domodule images locale ${PN} ${PN}-help ${PN}.py
 
 	cat >> "${T}/${PN}" <<- EOF
 	#!/bin/sh
-	exec $(PYTHON) -O "$(python_get_sitedir)/${PN}/${PN}.py"
+	exec ${PYTHON} -O "$(python_get_sitedir)/${PN}/${PN}.py"
 	EOF
-	exeinto /usr/bin
-	doexe "${T}/${PN}" || die
+	dobin "${T}/${PN}"
+
+	python_optimize
 }
 
 pkg_preinst() {

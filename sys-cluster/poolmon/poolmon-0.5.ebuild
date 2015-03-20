@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/poolmon/poolmon-0.5.ebuild,v 1.1 2014/09/18 17:25:35 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/poolmon/poolmon-0.5.ebuild,v 1.2 2015/03/20 16:56:49 jlec Exp $
 
 EAPI=5
 
@@ -20,8 +20,7 @@ RDEPEND="
 	"
 
 src_install() {
-	exeinto /usr/bin
-	doexe poolmon
+	dobin poolmon
 	dodoc README
 	newinitd "${FILESDIR}"/poolmon.init poolmon
 	newconfd "${FILESDIR}"/poolmon.conf poolmon

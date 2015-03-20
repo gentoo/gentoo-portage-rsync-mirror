@@ -1,12 +1,13 @@
-DEFINED_PHASES=install preinst
-DEPEND==dev-lang/python-2*
+DEFINED_PHASES=install preinst setup
+DEPEND=>=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
 DESCRIPTION=A simple image, PDF and postscript file annotator
-EAPI=3
+EAPI=5
 HOMEPAGE=http://code.google.com/p/whyteboard
+IUSE=python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=ISC
-RDEPEND=dev-python/wxpython media-gfx/imagemagick =dev-lang/python-2*
+RDEPEND=>=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] dev-python/wxpython:*[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] media-gfx/imagemagick
 SLOT=0
 SRC_URI=http://whyteboard.googlecode.com/files/whyteboard-0.41.1.tar.gz http://dev.gentoo.org/~lxnay/whyteboard/whyteboard.png
-_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=e5cd8e701d71ae326afff1c408da162d
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=ed2a268fceb1792a296b59f2d2566403

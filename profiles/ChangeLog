@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9871 2015/03/19 23:18:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9872 2015/03/20 16:59:40 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Mar 2015; Johannes Huber <johu@gentoo.org> package.mask:
+  Remove obsolete mask on games-board/kaya.
 
   19 Mar 2015; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Remove old masks.

@@ -1,19 +1,23 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongoose/mongoose-5.3.ebuild,v 1.1 2014/06/06 04:22:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongoose/mongoose-5.3.ebuild,v 1.2 2015/03/20 16:46:44 jlec Exp $
 
 EAPI=5
+
 inherit toolchain-funcs
 
 DESCRIPTION="easy to use web server"
 SRC_URI="https://github.com/cesanta/${PN}/archive/${PV}.zip -> ${P}.zip"
 HOMEPAGE="https://code.google.com/p/${PN}/"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~amd64-linux ~x86 ~arm-linux ~x86-linux"
 IUSE="lua"
+
 RDEPEND="lua? ( >=dev-lang/lua-5.2.3:5.2= )"
 DEPEND="${RDEPEND}"
+
 S=${WORKDIR}/${P}/examples
 
 src_prepare() {
@@ -38,7 +42,6 @@ src_test() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	newexe "${S}/server" "${PN}"
+	newbin "${S}/server" "${PN}"
 	dodoc ../docs/{FAQ,LuaSqlite,Options,SSL,Usage}.md
 }

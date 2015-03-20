@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16426 2015/03/19 23:18:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16427 2015/03/20 16:59:40 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -282,11 +282,6 @@ dev-python/genetic
 dev-python/gnosis-utils
 dev-python/g-pypi
 dev-python/ldaptor
-
-# Michael Palimaka <kensington@gentoo.org> (19 Feb 2015)
-# Doesn't work with current version of ruby. Dead upstream.
-# Masked for removal in 30 days.
-games-board/kaya
 
 # Michael Sterrett <mr_bones_@gentoo.org> (18 Feb 2015)
 # Integrated into games-engines/scummvm
