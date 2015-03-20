@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-2.1.ebuild,v 1.1 2015/03/20 15:34:23 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-2.1.ebuild,v 1.3 2015/03/20 16:18:45 monsieurp Exp $
 
-EAPI=4
+EAPI=5
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -26,10 +26,10 @@ CDEPEND=">=dev-java/commons-logging-1.1.1
 	java-virtuals/transaction-api:0
 	dev-java/junit:4"
 DEPEND="${CDEPEND}
-	virtual/jdk:1.7
+	>=virtual/jdk-1.6
 	test? ( dev-java/ant-junit:0 )"
 RDEPEND="
-	virtual/jdk:1.7
+	>=virtual/jdk-1.6
 	${CDEPEND}"
 
 S="${WORKDIR}/${MY_P}"

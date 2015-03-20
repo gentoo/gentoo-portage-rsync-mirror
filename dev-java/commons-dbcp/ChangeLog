@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.65 2015/03/20 15:34:23 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.67 2015/03/20 16:18:45 monsieurp Exp $
+
+  20 Mar 2015; Patrice Clement <monsieurp@gentoo.org> commons-dbcp-2.1.ebuild:
+  EAPI 5 bump while we're at it.
+
+  20 Mar 2015; Patrice Clement <monsieurp@gentoo.org> commons-dbcp-2.1.ebuild:
+  Remove slotted virtual dep in lieu of a "normal" one. We pull in at least
+  jdk/jre 6 since 7 is not stable yet in the tree.
 
 *commons-dbcp-2.1 (20 Mar 2015)
 

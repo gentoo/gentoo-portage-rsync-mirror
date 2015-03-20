@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/gkrellweather
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.34 2013/06/01 11:38:58 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.36 2015/03/20 16:07:57 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> gkrellweather-2.0.8.ebuild:
+  Remove workaround
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> -gkrellweather-2.0.7-r1.ebuild,
+  -gkrellweather-2.0.7-r2.ebuild, gkrellweather-2.0.8.ebuild, metadata.xml:
+  Modernize ebuild; drop old, respect CC and CFLAGS, bug #428598
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #144305

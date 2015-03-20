@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install setup
+DEPEND==app-admin/gkrellm-2* virtual/pkgconfig
+DESCRIPTION=Get Stock quotes plugin for Gkrellm2
+EAPI=5
+HOMEPAGE=http://gkrellstock.sourceforge.net/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=dev-perl/libwww-perl dev-perl/Finance-Quote =app-admin/gkrellm-2*
+SLOT=2
+SRC_URI=mirror://sourceforge/gkrellstock/gkrellstock-0.5.tar.gz
+_eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=527a21a93e11078450c60f1949a704c6

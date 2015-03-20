@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/logstash-forwarder
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logstash-forwarder/ChangeLog,v 1.1 2015/03/20 16:06:41 aidecoe Exp $
+
+*logstash-forwarder-0.4.0 (20 Mar 2015)
+
+  20 Mar 2015; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +logstash-forwarder-0.4.0.ebuild, +files/logstash-forwarder.confd,
+  +files/logstash-forwarder.initd, +metadata.xml:
+  Add initial ebuild. It has been copied from aidecoe overlay.
+
