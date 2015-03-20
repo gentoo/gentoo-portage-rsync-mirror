@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.771 2015/03/15 13:33:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.773 2015/03/20 19:58:30 pacho Exp $
+
+*gtk+-2.24.27-r1 (20 Mar 2015)
+
+  20 Mar 2015; Pacho Ramos <pacho@gentoo.org> +gtk+-2.24.27-r1.ebuild:
+  Sync gtkrc with settings.ini from gtk3 and default values from other
+  distdistributions. Readd ~arm64 as looks like it was lost at some point by
+  error.
+
+  20 Mar 2015; Pacho Ramos <pacho@gentoo.org> -gtk+-2.24.26.ebuild:
+  Drop old
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.27.ebuild,
   gtk+-3.14.9.ebuild:

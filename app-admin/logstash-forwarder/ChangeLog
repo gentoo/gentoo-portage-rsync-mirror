@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logstash-forwarder
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logstash-forwarder/ChangeLog,v 1.1 2015/03/20 16:06:41 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logstash-forwarder/ChangeLog,v 1.2 2015/03/20 19:43:25 aidecoe Exp $
+
+  20 Mar 2015; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  files/logstash-forwarder.initd:
+  Don't warn if there's no tmp directory.
 
 *logstash-forwarder-0.4.0 (20 Mar 2015)
 

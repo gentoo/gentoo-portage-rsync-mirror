@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/di
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.44 2014/03/09 02:32:09 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.45 2015/03/20 19:35:11 blueness Exp $
+
+  20 Mar 2015; Anthony G. Basile <blueness@gentoo.org> di-4.35.ebuild:
+  Stable on ppc and ppc64.  Bug #530312.
 
 *di-4.35 (09 Mar 2014)
 
