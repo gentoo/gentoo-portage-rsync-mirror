@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/evented-spec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/evented-spec/ChangeLog,v 1.8 2014/10/30 13:44:07 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/evented-spec/ChangeLog,v 1.9 2015/03/20 13:52:17 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> evented-spec-0.9.0.ebuild:
+  Add ruby22.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> evented-spec-0.9.0.ebuild:
   Drop jruby target.

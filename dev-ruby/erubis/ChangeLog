@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/erubis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.31 2014/06/14 11:20:53 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.32 2015/03/20 13:51:10 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> erubis-2.7.0-r2.ebuild:
+  Drop jruby. Add ruby22. Restrict tests since they fail with Psych as YAML
+  provider.
 
   14 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -erubis-2.7.0.ebuild:
   Cleanup old.

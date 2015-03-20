@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/commander
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/commander/ChangeLog,v 1.8 2015/02/14 02:28:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/commander/ChangeLog,v 1.9 2015/03/20 13:37:48 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> commander-4.3.0.ebuild:
+  Add ruby22.
 
 *commander-4.3.0 (14 Feb 2015)
 

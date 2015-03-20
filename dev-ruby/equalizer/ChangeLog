@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/equalizer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.6 2014/11/02 08:01:35 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.7 2015/03/20 13:45:09 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> equalizer-0.0.9.ebuild:
+  Add ruby22.
 
   02 Nov 2014; Hans de Graaff <graaff@gentoo.org> equalizer-0.0.9.ebuild:
   Avoid spec failing due to memoizable 0.4.2.

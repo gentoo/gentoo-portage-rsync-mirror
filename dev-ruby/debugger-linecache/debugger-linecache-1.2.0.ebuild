@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/debugger-linecache/debugger-linecache-1.2.0.ebuild,v 1.3 2014/10/30 13:44:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/debugger-linecache/debugger-linecache-1.2.0.ebuild,v 1.4 2015/03/20 13:42:07 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_TEST="test"
 RUBY_FAKEGEM_TASK_DOC=""
