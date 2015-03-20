@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.28 2015/03/08 23:51:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.29 2015/03/20 05:54:00 idella4 Exp $
+
+*jsonpickle-0.9.1 (20 Mar 2015)
+
+  20 Mar 2015; Ian Delaney <idella4@gentoo.org> +jsonpickle-0.9.1.ebuild,
+  -jsonpickle-0.4.0-r1.ebuild, -jsonpickle-0.7.2.ebuild:
+  bump; drop arm to allow adding of optional rdep, correction to HOMEPAGE, cite
+  upstream bug for a regression in testsuite
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> jsonpickle-0.8.0.ebuild:
   x86 stable, bug 540290

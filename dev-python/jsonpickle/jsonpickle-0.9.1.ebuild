@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.7.2.ebuild,v 1.2 2014/09/24 19:40:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/jsonpickle-0.9.1.ebuild,v 1.1 2015/03/20 05:54:00 idella4 Exp $
 
 EAPI=5
 
@@ -9,23 +9,26 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 inherit distutils-r1
 
 DESCRIPTION="Python library for serializing any arbitrary object graph into JSON"
-HOMEPAGE="http://jsonpickle.github.com/ http://pypi.python.org/pypi/jsonpickle"
+HOMEPAGE="https://github.com/jsonpickle/jsonpickle/ http://pypi.python.org/pypi/jsonpickle"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
-RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}
-	test? (
+# There are optional json backends serializer/deserializers in addition to those selected here
+# jsonlib, yajl.  demjson added
+RDEPEND="dev-python/simplejson[${PYTHON_USEDEP}]
 		dev-python/feedparser[${PYTHON_USEDEP}]
-		dev-python/ujson[${PYTHON_USEDEP}] )
+		dev-python/ujson[${PYTHON_USEDEP}]
+		dev-python/demjson[${PYTHON_USEDEP}]
+		"
+DEPEND="test? ( ${RDEPEND} )
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/sphinxtogithub[${PYTHON_USEDEP}]' python2_7) )"
 
-PATCHES=( "${FILESDIR}"/${PN}-0.6.1-drop-brocken-backend.patch )
+PATCHES=( "${FILESDIR}"/0.9.0-drop-broken-backend.patch )
 
 python_prepare_all() {
 	# Prevent un-needed d'loading during doc build
@@ -38,6 +41,8 @@ python_compile_all() {
 }
 
 python_test() {
+	# An apparent regression in tests
+	# https://github.com/jsonpickle/jsonpickle/issues/124
 	einfo "testsuite has optional tests for package demjson"
 	${PYTHON} tests/runtests.py || die
 }
