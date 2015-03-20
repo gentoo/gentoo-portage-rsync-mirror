@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.24.ebuild,v 1.3 2014/11/24 12:16:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.24.ebuild,v 1.4 2015/03/20 07:07:48 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( dev-lang/ruby )
-	tcl? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl:0= )
 "
 DEPEND="
 	${RDEPEND}

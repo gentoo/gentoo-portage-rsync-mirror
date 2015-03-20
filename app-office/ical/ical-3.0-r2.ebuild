@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0-r1.ebuild,v 1.8 2015/03/20 07:12:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-3.0-r2.ebuild,v 1.1 2015/03/20 07:12:52 jlec Exp $
 
-EAPI=3
+EAPI=5
 
 inherit autotools eutils multilib virtualx
 
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/ical-tcl/3.x/${PV}/+download/${P}.tar.gz"
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="
@@ -38,24 +38,25 @@ src_prepare() {
 		-e '/MANDIR =/s:man:share/man:' \
 		Makefile.in || die
 
+	mv configure.{in,ac} || die
+
 	eautoconf
 }
 
 src_compile() {
-	emake OPTF="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die
+	emake OPTF="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 }
 
 src_test() {
-	if [[ ${EUID} != 0 ]]; then
-		Xemake check || die
-	fi
+	[[ ${EUID} != 0 ]] && Xemake check
 }
 
 src_install() {
-	emake prefix="${D}/usr" install || die
+	emake prefix="${D}/usr" install
 
-	dodoc ANNOUNCE *README RWMJ-release-notes.txt TODO
-	dohtml {.,doc}/*.html
+	DOCS=( ANNOUNCE *README RWMJ-release-notes.txt TODO )
+	HTML_DOCS=( {.,doc}/*.html )
+	einstalldocs
 
 	rm -f "${D}"/usr/$(get_libdir)/ical/v3.0/contrib/README || die
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tkman
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.27 2014/09/26 20:05:57 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/ChangeLog,v 1.28 2015/03/20 07:20:29 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/tkman.desktop,
+  metadata.xml, tkman-2.2-r1.ebuild:
+  Fix tcl/tk slotting; make desktop file pass validation
 
   26 Sep 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
   +files/tkman-CVE-2008-5137.diff:

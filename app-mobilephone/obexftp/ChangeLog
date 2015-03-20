@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.77 2014/11/27 23:42:25 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.78 2015/03/20 07:07:48 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> obexftp-0.23-r2.ebuild,
+  obexftp-0.24.ebuild:
+  Fix tcl/tk slotting
 
   27 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   obexftp-0.23-r2.ebuild:

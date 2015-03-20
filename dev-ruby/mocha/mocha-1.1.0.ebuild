@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-1.1.0.ebuild,v 1.6 2014/12/31 11:43:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/mocha-1.1.0.ebuild,v 1.7 2015/03/20 07:16:01 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 "
@@ -31,4 +31,9 @@ ruby_add_rdepend "dev-ruby/introspection" # introspection ~> 0.0.1
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/ s:^:#:' -e '1iload "lib/mocha/version.rb"' Rakefile || die
+}
+
+each_ruby_test() {
+	export MOCHA_NO_DOCS=true
+	each_fakegem_test
 }
