@@ -5,8 +5,8 @@ diff -urNad wordnet-3.0/src/stubs.c.orig wordnet-3.0/src/stubs.c
  #include <tk.h>
  #include <wn.h>
  
--static char *Id = "$Id: wordnet-3.0-stubs_c.patch,v 1.1 2015/03/19 14:32:00 jlec Exp $";
-+static const char Id[] = "$Id: wordnet-3.0-stubs_c.patch,v 1.1 2015/03/19 14:32:00 jlec Exp $";
+-static char *Id = "$Id: stubs.c,v 1.7 2005/04/29 19:01:57 wn Exp $";
++static const char Id[] = "$Id: stubs.c,v 1.7 2005/04/29 19:01:57 wn Exp $";
  
  static char resultbuf[SEARCHBUF];
  

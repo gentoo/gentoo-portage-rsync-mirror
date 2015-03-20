@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r4.ebuild,v 1.1 2015/03/19 14:32:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r4.ebuild,v 1.2 2015/03/20 06:48:05 jlec Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ PATCHES=(
 
 	"${FILESDIR}"/${P}-tcl8.6.patch
 	"${FILESDIR}"/${P}-format-security.patch
-	"${FILESDIR}"/${P}-stubs_c.patch
+	"${FILESDIR}"/${P}-src_stubs_c.patch
 )
 src_prepare() {
 	epatch ${PATCHES[@]}

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.3.ebuild,v 1.4 2015/03/19 18:25:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.3.ebuild,v 1.5 2015/03/20 06:48:41 graaff Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ HOMEPAGE="https://rubygems.org/gems/blankslate"
 IUSE=""
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 all_ruby_prepare() {
 	# Avoid test failing with rspec 2.x.

@@ -1,12 +1,13 @@
-DEFINED_PHASES=install unpack
-DEPEND=>=dev-lang/tcl-8.3 >=dev-lang/tk-8.3
+DEFINED_PHASES=install prepare
+DEPEND=>=dev-lang/tcl-8.3:0= >=dev-lang/tk-8.3:0=
 DESCRIPTION=A useful and reliable personal password manager, written in Tcl/Tk
+EAPI=5
 HOMEPAGE=http://www.xs4all.nl/~wbsoft/linux/tkpasman.html
 IUSE=ssl
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=ssl? ( dev-libs/openssl ) >=dev-lang/tcl-8.3 >=dev-lang/tk-8.3
+RDEPEND=>=dev-lang/tcl-8.3:0= >=dev-lang/tk-8.3:0= ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=http://www.xs4all.nl/~wbsoft/linux/projects/TkPasMan-2.2b.tar.gz
 _eclasses_=eutils	998e5931fb95b10a6a11ec796ada2759	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=82ac135612a5192db0f831c17b1c1b39
+_md5_=62cccd0e8f2532cde8e1af063002b977

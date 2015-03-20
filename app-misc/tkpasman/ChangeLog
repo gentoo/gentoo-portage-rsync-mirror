@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tkpasman
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.16 2008/04/10 15:51:54 ken69267 Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.17 2015/03/20 07:00:49 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  tkpasman-2.2b.ebuild:
+  Fix tcl/tk slotting; bump EAPI=5
 
   10 Apr 2008; Kenneth Prugh <ken69267@gentoo.org> tkpasman-2.2b.ebuild:
   amd64 stable, bug #214955
