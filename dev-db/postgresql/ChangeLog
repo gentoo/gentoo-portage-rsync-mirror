@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.419 2015/02/24 11:01:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.420 2015/03/20 09:55:40 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> postgresql-9.0.19.ebuild,
+  postgresql-9.1.15.ebuild, postgresql-9.2.10.ebuild, postgresql-9.3.6.ebuild,
+  postgresql-9.4.1.ebuild, postgresql-9999.ebuild:
+  Fix tcl/tk slotting; fix SLOT operators
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> -postgresql-9.0.18-r2.ebuild,
   -postgresql-9.0.18-r3.ebuild, -postgresql-9.1.14-r2.ebuild,

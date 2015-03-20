@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.549 2015/03/11 23:09:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.550 2015/03/20 09:58:33 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> sqlite-3.8.6.ebuild,
+  sqlite-3.8.7.1.ebuild, sqlite-3.8.7.2.ebuild, sqlite-3.8.7.3.ebuild,
+  sqlite-3.8.7.4.ebuild, sqlite-3.8.7.ebuild, sqlite-3.8.8.1.ebuild,
+  sqlite-3.8.8.2.ebuild, sqlite-3.8.8.3.ebuild:
+  Fix tcl/tk slotting; fix SLOT operators
 
 *sqlite-3.8.8.3 (11 Mar 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.8.2.ebuild,v 1.1 2015/02/14 02:55:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.8.2.ebuild,v 1.2 2015/03/20 09:58:33 jlec Exp $
 
 EAPI="5"
 
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 	tcl? ( app-arch/unzip )
 	test? (
 		app-arch/unzip
-		dev-lang/tcl[${MULTILIB_USEDEP}]
+		dev-lang/tcl:0=[${MULTILIB_USEDEP}]
 	)"
 
 amalgamation() {
