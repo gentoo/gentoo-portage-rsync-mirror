@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.89 2015/01/25 08:30:31 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.90 2015/03/20 15:27:56 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> gtkwave-3.3.28.ebuild,
+  gtkwave-3.3.45.ebuild, gtkwave-3.3.47.ebuild, gtkwave-3.3.59.ebuild,
+  gtkwave-3.3.64.ebuild:
+  Fix tcl/tk slotting
 
 *gtkwave-3.3.64 (25 Jan 2015)
 

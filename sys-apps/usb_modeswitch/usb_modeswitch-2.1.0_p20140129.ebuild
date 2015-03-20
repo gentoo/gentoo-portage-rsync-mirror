@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-2.1.0_p20140129.ebuild,v 1.2 2014/03/06 16:30:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-2.1.0_p20140129.ebuild,v 1.3 2015/03/20 15:16:28 jlec Exp $
 
 EAPI=5
 inherit eutils linux-info toolchain-funcs udev systemd
@@ -23,7 +23,7 @@ COMMON_DEPEND="virtual/udev
 	virtual/libusb:1"
 RDEPEND="${COMMON_DEPEND}
 	jimtcl? ( dev-lang/jimtcl )
-	!jimtcl? ( dev-lang/tcl )" # usb_modeswitch script is tcl
+	!jimtcl? ( dev-lang/tcl:0 )" # usb_modeswitch script is tcl
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 

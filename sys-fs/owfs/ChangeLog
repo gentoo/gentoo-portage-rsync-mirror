@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/owfs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.26 2014/12/26 11:42:05 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.27 2015/03/20 15:12:49 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> -owfs-2.7_p21-r2.ebuild,
+  owfs-2.7_p21-r3.ebuild:
+  Fix tcl/tk slotting; drop old
 
 *owfs-2.7_p21-r3 (26 Dec 2014)
 

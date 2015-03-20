@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.53 2015/03/20 10:13:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.54 2015/03/20 15:14:04 nativemad Exp $
+
+  20 Mar 2015; Andreas Schuerch <nativemad@gentoo.org> tcllib-1.15-r2.ebuild:
+  x86 stable, see bug 541912
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> tcllib-1.15-r1.ebuild,
   tcllib-1.15-r2.ebuild, tcllib-1.16.ebuild:

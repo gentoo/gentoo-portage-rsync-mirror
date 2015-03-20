@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/irsim/irsim-9.7.87.ebuild,v 1.1 2014/08/12 04:30:10 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/irsim/irsim-9.7.87.ebuild,v 1.2 2015/03/20 15:26:36 jlec Exp $
 
 EAPI=4
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/tcl
-	dev-lang/tk"
+RDEPEND="dev-lang/tcl:0
+	dev-lang/tk:0"
 DEPEND="${RDEPEND}
 	app-shells/tcsh"
 

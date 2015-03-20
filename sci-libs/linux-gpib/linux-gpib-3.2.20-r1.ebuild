@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.20-r1.ebuild,v 1.8 2014/11/28 22:21:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.20-r1.ebuild,v 1.9 2015/03/20 15:22:53 jlec Exp $
 
 EAPI=5
 
@@ -21,10 +21,10 @@ KEYWORDS="amd64 ~arm x86"
 IUSE="isa pcmcia static debug guile perl php python tcl doc firmware"
 
 COMMONDEPEND="
-	tcl? ( dev-lang/tcl )
-	guile? ( dev-scheme/guile )
+	tcl? ( dev-lang/tcl:0= )
+	guile? ( dev-scheme/guile:12 )
 	perl? ( dev-lang/perl:= )
-	php? ( dev-lang/php )
+	php? ( dev-lang/php:= )
 	python? ( ${PYTHON_DEPS} )
 	firmware? ( sys-apps/fxload )"
 RDEPEND="${COMMONDEPEND}"

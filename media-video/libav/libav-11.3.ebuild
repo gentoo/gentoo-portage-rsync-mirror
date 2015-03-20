@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.3.ebuild,v 1.4 2015/03/17 18:55:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-11.3.ebuild,v 1.5 2015/03/20 15:21:19 lu_zero Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
 	SRC_URI="http://dev.gentoo.org/~lu_zero/libav/${P}.tar.xz"
 else # Official release
 	SRC_URI="https://libav.org/releases/${P}.tar.xz"
+	SRC_URI+=" http://dev.gentoo.org/~lu_zero/libav/patches/0001-x86-Put-COPY3_IF_LT-under-HAVE_6REGS.patch.gz"
 fi
 # 9999 does not have fate-*.tar.xz
 [[ ${PV%9999} != "" ]] && SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-${PV%%.*}.tar.xz )"
@@ -150,6 +151,8 @@ src_unpack() {
 
 src_prepare() {
 	epatch_user
+
+	epatch "${WORKDIR}/0001-x86-Put-COPY3_IF_LT-under-HAVE_6REGS.patch"
 
 	# if we have snapshot then we need to hardcode the version
 	if [[ ${PV%_p*} != ${PV} ]]; then

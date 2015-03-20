@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.4 2014/12/03 20:57:38 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.5 2015/03/20 15:18:23 dilfridge Exp $
 
 EAPI=5
 
@@ -75,7 +75,6 @@ src_configure() {
 		-DENABLE_XPDF_HEADERS=ON
 		$(cmake-utils_use_enable curl LIBCURL)
 		$(cmake-utils_use_enable cxx CPP)
-		$(cmake-utils_use_enable jpeg2k LIBOPENJPEG)
 		$(cmake-utils_use_enable utils)
 		$(cmake-utils_use_with cairo)
 		$(cmake-utils_use_with introspection GObjectIntrospection)
@@ -85,6 +84,11 @@ src_configure() {
 		$(cmake-utils_use_find_package qt5 Qt5Core)
 		$(cmake-utils_use_with tiff)
 	)
+	if use jpeg2k; then
+		mycmakeargs+=(-DENABLE_LIBOPENJPEG=openjpeg1)
+	else
+		mycmakeargs+=(-DENABLE_LIBOPENJPEG=)
+	fi
 	if use lcms; then
 		mycmakeargs+=(-DENABLE_CMS=lcms2)
 	else

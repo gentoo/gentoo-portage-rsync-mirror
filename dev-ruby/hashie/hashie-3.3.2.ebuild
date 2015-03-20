@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/hashie-3.3.2.ebuild,v 1.1 2014/12/31 07:03:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/hashie-3.3.2.ebuild,v 1.2 2015/03/20 15:26:13 graaff Exp $
 
 EAPI=5
 
@@ -20,6 +20,8 @@ LICENSE="MIT"
 SLOT="3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
+
+ruby_add_bdepend "test? ( dev-ruby/activesupport )"
 
 all_ruby_prepare() {
 	# Remove bundler and fix one spec that depends on its requires

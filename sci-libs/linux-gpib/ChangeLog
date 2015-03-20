@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/linux-gpib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.34 2014/12/17 16:58:05 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.35 2015/03/20 15:22:53 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> linux-gpib-3.2.20-r1.ebuild,
+  linux-gpib-3.2.21.ebuild:
+  Fix tcl/tk slotting
 
 *linux-gpib-3.2.21 (17 Dec 2014)
 

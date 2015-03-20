@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/sparky
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.20 2013/11/11 18:12:11 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/ChangeLog,v 1.21 2015/03/20 15:29:21 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> -sparky-3.115.ebuild,
+  sparky-3.115-r1.ebuild:
+  Fix tcl/tk slotting; drop old
 
   11 Nov 2013; Justin Lecher <jlec@gentoo.org> sparky-3.115-r1.ebuild:
   It also works with python 2.7
@@ -83,4 +87,3 @@
   A new graphical NMR assignment and integration program for proteins, nucleic
   acids, and other polymers. Very strange build system; takes lots of hacking
   and tweaking to get working. Doesn't work with python-2.4, only 2.3.
-

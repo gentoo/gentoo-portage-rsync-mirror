@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r2.ebuild,v 1.1 2015/01/19 18:12:00 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r2.ebuild,v 1.2 2015/03/20 15:18:17 jlec Exp $
 
 EAPI=5
 
@@ -33,12 +33,12 @@ RDEPEND="
 	media-libs/freetype
 	media-libs/libpng:0
 	media-libs/libtheora
-	media-libs/tiff
+	media-libs/tiff:0=
 	sci-libs/hdf5[mpi=]
 	|| ( ( >=sci-libs/netcdf-4.2[hdf5] >=sci-libs/netcdf-cxx-4.2:3 )
 		~sci-libs/netcdf-4.1.3[cxx,hdf5] )
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	virtual/opengl
 	>=x11-libs/gl2ps-1.3.8
 	x11-libs/libX11
@@ -73,9 +73,9 @@ RDEPEND="
 		dev-qt/qtsql:4
 		dev-qt/qtwebkit:4
 	)
-	sqlite? ( dev-db/sqlite )
-	tcl? ( dev-lang/tcl )
-	tk? ( dev-lang/tk )"
+	sqlite? ( dev-db/sqlite:3 )
+	tcl? ( dev-lang/tcl:0= )
+	tk? ( dev-lang/tk:0= )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	boost? ( >=dev-libs/boost-1.40.0[mpi?,${PYTHON_USEDEP}] )

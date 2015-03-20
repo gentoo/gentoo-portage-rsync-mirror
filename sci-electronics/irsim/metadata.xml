@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-electronics</herd>
-	<longdescription>
+  <herd>sci-electronics</herd>
+  <longdescription>
 		 IRSIM is a tool for simulating digital circuits. It is a "switch-level"
 		 simulator; that is, it treats transistors as ideal switches. Extracted
 		 capacitance and lumped resistance values are used to make the switch a
@@ -10,4 +10,3 @@
 		 to predict the relative timing of events. 
 	</longdescription>
 </pkgmetadata>
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.8.77.ebuild,v 1.1 2014/12/14 10:28:35 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.8.77.ebuild,v 1.2 2015/03/20 15:25:12 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND="
 	app-text/ghostscript-gpl
-	dev-lang/tk
+	dev-lang/tk:0
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXt

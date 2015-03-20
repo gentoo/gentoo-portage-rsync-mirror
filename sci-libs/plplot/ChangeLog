@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.60 2015/02/02 10:13:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.61 2015/03/20 15:20:24 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> plplot-5.10.0-r1.ebuild:
+  Fix tcl/tk slotting
 
   02 Feb 2015; Justin Lecher <jlec@gentoo.org> plplot-5.10.0-r1.ebuild,
   +files/plplot-5.10.0-cmake.patch, metadata.xml:

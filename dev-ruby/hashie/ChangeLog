@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hashie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.31 2015/02/05 10:16:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashie/ChangeLog,v 1.32 2015/03/20 15:26:13 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> hashie-3.3.2.ebuild:
+  Add missing test dependency on activesupport.
 
   05 Feb 2015; Agostino Sarubbo <ago@gentoo.org> hashie-2.1.2.ebuild:
   Stable for x86, wrt bug #536890

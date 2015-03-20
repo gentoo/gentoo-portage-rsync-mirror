@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.86 2015/01/19 18:12:00 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.87 2015/03/20 15:18:17 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  paraview-4.0.1-r2.ebuild, paraview-4.1.0-r2.ebuild, paraview-4.2.0-r1.ebuild:
+  Fix tcl/tk slotting
 
 *paraview-4.2.0-r1 (19 Jan 2015)
 *paraview-4.1.0-r2 (19 Jan 2015)

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.13 2014/12/28 16:47:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.14 2015/03/20 15:24:07 jlec Exp $
 
 EAPI=4
 
@@ -23,8 +23,9 @@ KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="X cairo cxx ffmpeg fftw gmath jpeg motif mysql nls odbc opengl png postgres python readline sqlite tiff truetype wxwidgets"
 
 TCL_DEPS="
-	>=dev-lang/tcl-8.5
-	>=dev-lang/tk-8.5"
+	>=dev-lang/tcl-8.5:0
+	>=dev-lang/tk-8.5:0
+	"
 
 RDEPEND="
 	>=app-admin/eselect-1.2
@@ -40,18 +41,18 @@ RDEPEND="
 		virtual/blas
 		virtual/lapack
 	)
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	mysql? ( virtual/mysql )
 	odbc? ( dev-db/unixODBC )
 	opengl? (
 		virtual/opengl
 		${TCL_DEPS}
 	)
-	png? ( media-libs/libpng )
+	png? ( media-libs/libpng:0 )
 	postgres? ( >=dev-db/postgresql-8.4 )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:0 )
 	sqlite? ( dev-db/sqlite:3 )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:0 )
 	truetype? ( media-libs/freetype:2 )
 	wxwidgets? ( >=dev-python/wxpython-2.8.10.1[cairo,opengl?] )
 	X? (

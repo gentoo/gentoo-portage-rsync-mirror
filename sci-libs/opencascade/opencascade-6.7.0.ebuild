@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.7.0.ebuild,v 1.4 2015/02/27 14:37:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.7.0.ebuild,v 1.5 2015/03/20 15:20:05 jlec Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug doc examples freeimage gl2ps java qt4 +tbb"
 
 DEPEND="app-admin/eselect-opencascade
-	dev-lang/tcl
-	dev-lang/tk
+	dev-lang/tcl:0=
+	dev-lang/tk:0=
 	dev-tcltk/itcl
 	dev-tcltk/itk
 	dev-tcltk/tix

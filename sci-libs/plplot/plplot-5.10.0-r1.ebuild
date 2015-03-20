@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.10.0-r1.ebuild,v 1.3 2015/02/02 10:13:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.10.0-r1.ebuild,v 1.4 2015/03/20 15:20:24 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE="ada cairo cxx doc +dynamic examples fortran gd java jpeg latex lua
 	threads tk truetype wxwidgets X"
 
 RDEPEND="
-	ada? ( virtual/gnat )
+	ada? ( virtual/gnat:* )
 	cairo? ( x11-libs/cairo:0=[svg?,X?] )
 	gd? ( media-libs/gd:2=[jpeg?,png?] )
 	java? ( >=virtual/jre-1.5 )
@@ -58,7 +58,7 @@ RDEPEND="
 		dev-lang/tcl:0=
 		dev-tcltk/itcl:0=
 		tk? (
-			dev-lang/tk
+			dev-lang/tk:0=
 			dev-tcltk/itk
 		)
 	)

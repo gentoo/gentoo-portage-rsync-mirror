@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/irsim
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/irsim/ChangeLog,v 1.4 2014/08/12 04:30:10 tomjbe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/irsim/ChangeLog,v 1.5 2015/03/20 15:26:36 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> irsim-9.7.79.ebuild,
+  irsim-9.7.87.ebuild, metadata.xml:
+  Fix tcl/tk slotting
 
 *irsim-9.7.87 (12 Aug 2014)
 
@@ -25,4 +29,3 @@
   +files/irsim-9.7.72-ldflags.patch, +metadata.xml:
   New ebuild (see bug #241196). Thanks opensource@andmarios.com for providing
   the starting point.
-

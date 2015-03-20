@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.8 2015/03/11 08:30:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.1.0-r1.ebuild,v 1.9 2015/03/20 15:19:16 jlec Exp $
 
 EAPI=5
 
@@ -97,8 +97,8 @@ RDEPEND="
 		python? ( dev-python/PyQt4[${PYTHON_USEDEP}] )
 		)
 	tbb? ( dev-cpp/tbb )
-	tcl? ( dev-lang/tcl )
-	tk? ( dev-lang/tk )
+	tcl? ( dev-lang/tcl:0= )
+	tk? ( dev-lang/tk:0= )
 	video_cards_nvidia? ( media-video/nvidia-settings )
 	web? (
 		${WEBAPP_DEPEND}

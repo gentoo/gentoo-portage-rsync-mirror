@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-electronics</herd>
-	<longdescription>
+  <herd>sci-electronics</herd>
+  <longdescription>
   Magic is a venerable VLSI layout tool, written in the 1980's at Berkeley by
   John Ousterhout, of Tcl fame. Due largely in part to its liberal Berkeley
   open-source license, magic has remained popular with universities and small
@@ -13,14 +13,13 @@
   as being the easiest tool to use for circuit layout, even for people who
   ultimately rely on commercial tools for their product design flow.
   </longdescription>
-<upstream>
+  <upstream>
     <maintainer status="active">
-    <email>tim@opencircuitdesign.com</email>
-	<name>Timothy Edwards</name>
+      <email>tim@opencircuitdesign.com</email>
+      <name>Timothy Edwards</name>
     </maintainer>
     <changelog>http://www.opencircuitdesign.com/magic/release.html</changelog>
     <doc lang="en">http://www.opencircuitdesign.com/magic/magic_docs.html</doc>
-	<bugs-to>tim@opencircuitdesign.com</bugs-to>
-</upstream>
-
+    <bugs-to>tim@opencircuitdesign.com</bugs-to>
+  </upstream>
 </pkgmetadata>

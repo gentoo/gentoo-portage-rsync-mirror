@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r3.ebuild,v 1.1 2014/12/26 11:42:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r3.ebuild,v 1.2 2015/03/20 15:12:49 jlec Exp $
 
 EAPI="5"
 
@@ -19,11 +19,12 @@ KEYWORDS="~amd64 ~arm ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-RDEPEND="fuse? ( sys-fs/fuse )
+RDEPEND="
+	fuse? ( sys-fs/fuse )
 	perl? ( dev-lang/perl )
-	php? ( dev-lang/php )
+	php? ( dev-lang/php:= )
 	python? ( ${PYTHON_DEPS} )
-	tcl? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl:= )
 	usb? ( virtual/libusb:0 )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 
@@ -41,9 +42,7 @@ OWUID=${OWUID:-owfs}
 OWGID=${OWGID:-owfs}
 
 pkg_setup() {
-	if use php; then
-		require_php_cli
-	fi
+	use php && require_php_cli
 
 	enewgroup ${OWGID} 150
 	enewuser  ${OWUID} 150 -1 -1 ${OWGID}

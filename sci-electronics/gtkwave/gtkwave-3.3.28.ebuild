@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.28.ebuild,v 1.8 2012/05/04 07:10:19 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.3.28.ebuild,v 1.9 2015/03/20 15:27:56 jlec Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/pango
 	sys-libs/zlib
 	judy? ( dev-libs/judy )
-	tcl? ( dev-lang/tcl dev-lang/tk )
+	tcl? ( dev-lang/tcl:0 dev-lang/tk:0 )
 	lzma? ( app-arch/xz-utils )"
 
 DEPEND="${RDEPEND}

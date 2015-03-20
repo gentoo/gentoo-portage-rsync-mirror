@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.30.ebuild,v 1.6 2014/08/10 20:28:53 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/xcircuit-3.4.30.ebuild,v 1.7 2015/03/20 15:25:12 jlec Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 IUSE=""
 
 RDEPEND="app-text/ghostscript-gpl
-	dev-lang/tk
+	dev-lang/tk:0
 	x11-libs/libXt"
 DEPEND="${RDEPEND}"
 

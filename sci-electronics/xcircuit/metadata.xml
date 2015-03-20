@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci-electronics</herd>
-	<longdescription>
+  <herd>sci-electronics</herd>
+  <longdescription>
   XCircuit is a UNIX/X11 program for drawing publishable-quality electrical
   circuit schematic diagrams and related figures, and produce circuit netlists
   through schematic capture. XCircuit regards circuits as inherently
@@ -12,13 +12,13 @@
   circuit drawing; it maintains flexiblity in style without compromising the
   power of schematic capture.
   </longdescription>
-<upstream>
+  <upstream>
     <maintainer status="active">
-    <email>tim@opencircuitdesign.com</email>
-	<name>Timothy Edwards</name>
+      <email>tim@opencircuitdesign.com</email>
+      <name>Timothy Edwards</name>
     </maintainer>
     <changelog>http://www.opencircuitdesign.com/xcircuit/changes.html</changelog>
     <doc lang="en">http://www.opencircuitdesign.com/xcircuit/reference.html</doc>
-	<bugs-to>tim@opencircuitdesign.com</bugs-to>
-</upstream>
+    <bugs-to>tim@opencircuitdesign.com</bugs-to>
+  </upstream>
 </pkgmetadata>

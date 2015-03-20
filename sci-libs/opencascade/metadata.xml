@@ -3,7 +3,7 @@
 <pkgmetadata>
   <maintainer>
     <email>xmw@gentoo.org</email>
-	<name>Michael Weber</name>
+    <name>Michael Weber</name>
   </maintainer>
   <use>
     <flag name="freeimage">Enable support for image i/o via media-libs/freeimage</flag>

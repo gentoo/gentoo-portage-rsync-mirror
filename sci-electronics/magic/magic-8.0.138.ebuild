@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-8.0.138.ebuild,v 1.2 2014/08/10 20:28:13 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/magic-8.0.138.ebuild,v 1.3 2015/03/20 15:27:08 jlec Exp $
 
 EAPI=5
 
@@ -17,9 +17,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug opengl"
 
 RDEPEND="sys-libs/ncurses
-	sys-libs/readline
-	dev-lang/tcl
-	dev-lang/tk
+	sys-libs/readline:0=
+	dev-lang/tcl:0=
+	dev-lang/tk:0=
 	dev-tcltk/blt
 	opengl? ( virtual/glu
 		virtual/opengl )"
