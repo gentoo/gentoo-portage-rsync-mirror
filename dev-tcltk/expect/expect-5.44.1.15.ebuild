@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.17 2011/12/27 08:16:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.44.1.15.ebuild,v 1.18 2015/03/20 10:22:30 jlec Exp $
 
 EAPI="3"
 
@@ -17,8 +17,8 @@ IUSE="debug doc threads X"
 
 # We need dejagnu for src_test, but dejagnu needs expect
 # to compile/run, so we cant add dejagnu to DEPEND :/
-DEPEND=">=dev-lang/tcl-8.2[threads?]
-	X? ( >=dev-lang/tk-8.2[threads?] )"
+DEPEND=">=dev-lang/tcl-8.2:0[threads?]
+	X? ( >=dev-lang/tk-8.2:0[threads?] )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

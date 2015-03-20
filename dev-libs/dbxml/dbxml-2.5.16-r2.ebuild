@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.10 2014/11/19 19:48:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/dbxml-2.5.16-r2.ebuild,v 1.11 2015/03/20 10:15:23 jlec Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? 2"
@@ -34,7 +34,7 @@ RDEPEND="sys-libs/db:${DB_VER}[cxx,java?]
 	perl? ( dev-lang/perl )
 	python? (
 		>=dev-python/bsddb3-4.8.0 )
-	tcl? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl:0= )
 	java? ( >=virtual/jre-1.5 )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool

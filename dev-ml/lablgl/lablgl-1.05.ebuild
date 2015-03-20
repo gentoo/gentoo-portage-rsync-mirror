@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.05.ebuild,v 1.11 2014/11/28 17:20:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.05.ebuild,v 1.12 2015/03/20 10:18:01 jlec Exp $
 
 EAPI="5"
 
@@ -22,8 +22,8 @@ RDEPEND="
 	|| ( dev-ml/camlp4:= <dev-lang/ocaml-4.02.0 )
 	glut? ( media-libs/freeglut )
 	tk? (
-		>=dev-lang/tcl-8.3
-		>=dev-lang/tk-8.3
+		>=dev-lang/tcl-8.3:0=
+		>=dev-lang/tk-8.3:0=
 		|| ( dev-ml/labltk:= <dev-lang/ocaml-4.02[tk] )
 	)
 	"

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.8 2011/06/04 18:56:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.4_beta1.ebuild,v 1.9 2015/03/20 10:30:35 jlec Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 
-RDEPEND="dev-lang/tcl"
+RDEPEND="dev-lang/tcl:0"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}$(get_version_component_range 1-2)"

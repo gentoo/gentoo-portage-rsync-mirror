@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.46 2015/03/19 18:42:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.47 2015/03/20 10:25:03 monsieurp Exp $
+
+*List-MoreUtils-0.408.0 (20 Mar 2015)
+
+  20 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  +List-MoreUtils-0.408.0.ebuild, -List-MoreUtils-0.407.0.ebuild:
+  Version bump. Removed List-MoreUtils-0.407.0 due to a bug with Moose. Fix bug
+  543866.
 
   19 Mar 2015; Jeroen Roovers <jer@gentoo.org> List-MoreUtils-0.407.0.ebuild:
   Marked ~hppa (bug #543632).

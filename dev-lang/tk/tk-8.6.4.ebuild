@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.4.ebuild,v 1.1 2015/03/13 08:31:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.4.ebuild,v 1.2 2015/03/20 10:11:23 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="
 		truetype? ( >=x11-libs/libXft-2.3.1-r1[${MULTILIB_USEDEP}] )
 		xscreensaver? ( >=x11-libs/libXScrnSaver-1.2.2-r1[${MULTILIB_USEDEP}] )
 	)
-	~dev-lang/tcl-${PV}[${MULTILIB_USEDEP}]"
+	~dev-lang/tcl-${PV}:0=[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}
 	!aqua? ( >=x11-proto/xproto-7.0.24[${MULTILIB_USEDEP}] )"
 

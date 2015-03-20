@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15-r2.ebuild,v 1.4 2015/03/08 14:01:54 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15-r2.ebuild,v 1.5 2015/03/20 10:13:29 jlec Exp $
 
 EAPI=5
 
@@ -18,18 +18,22 @@ SLOT="0"
 IUSE="examples"
 KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc s390 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 
-RDEPEND="dev-lang/tcl"
+RDEPEND="dev-lang/tcl:0="
 DEPEND="${RDEPEND}"
 
 DOCS=( DESCRIPTION.txt STATUS )
 
+PATCHES=(
+	"${FILESDIR}"/${P}-tcl8.6-test.patch
+	"${WORKDIR}"/${P}-test.patch
+	"${WORKDIR}"/${P}-manpage-rename.patch
+	"${FILESDIR}"/${P}-XSS-vuln.patch
+)
+
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-tcl8.6-test.patch \
-		"${WORKDIR}"/${P}-test.patch \
-		"${WORKDIR}"/${P}-manpage-rename.patch \
-		"${FILESDIR}"/${P}-XSS-vuln.patch \
-		"${FILESDIR}"/${P}-test.patch
+	has_version ">=dev-lang/tcl-8.6" && \
+		PATCHES+=( "${FILESDIR}"/${P}-test.patch )
+	epatch ${PATCHES[@]}
 }
 
 src_test() {

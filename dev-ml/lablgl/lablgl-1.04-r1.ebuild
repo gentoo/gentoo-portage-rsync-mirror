@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.04-r1.ebuild,v 1.8 2013/05/25 14:23:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.04-r1.ebuild,v 1.9 2015/03/20 10:18:01 jlec Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	virtual/glu
 	glut? ( media-libs/freeglut )
 	"
-#	tk? ( >=dev-lang/tcl-8.3 >=dev-lang/tk-8.3 )
+#	tk? ( >=dev-lang/tcl-8.3:0= >=dev-lang/tk-8.3:0= )
 
 DEPEND="${RDEPEND}"
 

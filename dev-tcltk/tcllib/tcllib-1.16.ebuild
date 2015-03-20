@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.16.ebuild,v 1.2 2015/03/13 11:57:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.16.ebuild,v 1.3 2015/03/20 10:13:29 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="examples"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 
 RDEPEND="
-	dev-lang/tcl
+	dev-lang/tcl:0=
 	dev-tcltk/tdom
 	"
 DEPEND="${RDEPEND}"
@@ -28,15 +28,19 @@ DOCS=( DESCRIPTION.txt STATUS )
 
 S="${WORKDIR}"/${MY_P}
 
+PATCHES=( "${FILESDIR}"/${P}-XSS-vuln.patch )
+
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-test.patch \
-		"${FILESDIR}"/${P}-XSS-vuln.patch
+	has_version ">=dev-lang/tcl-8.6" && \
+		PATCHES+=( "${FILESDIR}"/${P}-test.patch )
+	epatch ${PATCHES[@]}
+
+	sed \
+		-e '/testsNeedTcl/s:8.5:8.6:g' \
+		-i modules/tar/tar.test || die
 }
 
 src_test() {
-#	emake test_interactive
-	#emake test_batch
 	Xemake test_batch
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.14-r2.ebuild,v 1.2 2013/01/12 05:57:16 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.14-r2.ebuild,v 1.3 2015/03/20 10:17:05 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ RDEPEND="=sys-libs/slang-2*
 	>=dev-libs/popt-1.6
 	elibc_uclibc? ( sys-libs/ncurses )
 	gpm? ( sys-libs/gpm )
-	tcl? ( >=dev-lang/tcl-8.5 )
+	tcl? ( >=dev-lang/tcl-8.5:0 )
 	"
 
 DEPEND="${RDEPEND}"

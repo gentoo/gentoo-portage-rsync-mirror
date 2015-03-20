@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.17-r100.ebuild,v 1.2 2015/03/17 18:44:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.5.17-r100.ebuild,v 1.3 2015/03/20 10:11:23 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 		truetype? ( x11-libs/libXft )
 		xscreensaver? ( x11-libs/libXScrnSaver )
 	)
-	~dev-lang/tcl-${PV}:8.5
+	~dev-lang/tcl-${PV}:8.5=
 	!=dev-lang/tk-8.5:0"
 DEPEND="${RDEPEND}
 	!aqua? ( x11-proto/xproto )"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.215 2015/03/20 06:26:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.216 2015/03/20 10:11:23 jlec Exp $
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> tk-8.5.13-r1.ebuild,
+  tk-8.5.15.ebuild, tk-8.5.17-r100.ebuild, tk-8.6.3.ebuild, tk-8.6.4.ebuild:
+  Fix tcl/tk slotting
 
   20 Mar 2015; Jeroen Roovers <jer@gentoo.org> tk-8.5.17.ebuild:
   Stable for HPPA (bug #543022).

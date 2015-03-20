@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-13.05.2.ebuild,v 1.1 2014/02/18 10:36:37 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-13.05.2.ebuild,v 1.2 2015/03/20 10:09:03 jlec Exp $
 
 EAPI=2
 
@@ -28,8 +28,8 @@ RDEPEND="~dev-lang/mercury-${PV}
 	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
 	tcl? ( tk? (
-			dev-lang/tcl
-			dev-lang/tk
+			dev-lang/tcl:0
+			dev-lang/tk:0
 			x11-libs/libX11
 			x11-libs/libXmu ) )"
 

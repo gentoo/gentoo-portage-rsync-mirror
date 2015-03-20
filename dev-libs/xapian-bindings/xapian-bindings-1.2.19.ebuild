@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.19.ebuild,v 1.3 2014/10/22 21:28:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.19.ebuild,v 1.4 2015/03/20 10:16:32 jlec Exp $
 
 EAPI="5"
 
@@ -33,7 +33,7 @@ COMMONDEPEND="=dev-libs/xapian-${PV}*
 	lua? ( >=dev-lang/lua-5.1 )
 	perl? ( dev-lang/perl:= )
 	ruby? ( dev-lang/ruby )
-	tcl? ( >=dev-lang/tcl-8.1 )"
+	tcl? ( >=dev-lang/tcl-8.1:0= )"
 #	mono? ( >=dev-lang/mono-1.0.8 )
 DEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jdk-1.3 )"

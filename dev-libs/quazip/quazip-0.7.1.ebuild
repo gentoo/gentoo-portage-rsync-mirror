@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.7.1.ebuild,v 1.1 2015/03/09 15:26:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.7.1.ebuild,v 1.2 2015/03/20 10:26:44 jlec Exp $
 
 EAPI=5
 
@@ -66,7 +66,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" INSTALL_ROOT="${ED}" install
+	emake DESTDIR="${D}" INSTALL_ROOT="${D}" install
 	einstalldocs
 	insinto /usr/share/cmake/Modules
 	doins FindQuaZip.cmake

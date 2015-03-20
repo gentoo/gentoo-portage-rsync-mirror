@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15-r1.ebuild,v 1.9 2013/06/30 18:07:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.15-r1.ebuild,v 1.10 2015/03/20 10:13:29 jlec Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0"
 IUSE="examples"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc s390 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 
-RDEPEND="dev-lang/tcl"
+RDEPEND="dev-lang/tcl:0="
 DEPEND="${RDEPEND}"
 
 DOCS=( DESCRIPTION.txt STATUS )
