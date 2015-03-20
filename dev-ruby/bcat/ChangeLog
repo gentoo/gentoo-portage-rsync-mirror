@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.28 2015/03/12 11:56:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.29 2015/03/20 12:40:26 graaff Exp $
+
+  20 Mar 2015; Hans de Graaff <graaff@gentoo.org> bcat-0.6.2-r2.ebuild:
+  Add ruby22.
 
   12 Mar 2015; Jeroen Roovers <jer@gentoo.org> bcat-0.6.2-r1.ebuild:
   Stable for HPPA (bug #542574).

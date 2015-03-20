@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.25.ebuild,v 1.4 2014/11/02 09:18:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.5_rc.ebuild,v 1.1 2015/03/20 12:46:12 blueness Exp $
 
 EAPI="5"
 
-inherit eutils flag-o-matic readme.gentoo versionator toolchain-funcs user
+inherit eutils flag-o-matic readme.gentoo systemd toolchain-funcs versionator user
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -16,18 +16,19 @@ S="${WORKDIR}/${MY_PF}"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
-IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads upnp web"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
+IUSE="-bufferevents nat-pmp scrypt seccomp selinux stats systemd tor-hardening transparent-proxy test upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
 	dev-libs/libevent
 	bufferevents? ( dev-libs/libevent[ssl] )
 	nat-pmp? ( net-libs/libnatpmp )
+	scrypt? ( app-crypt/libscrypt )
+	seccomp? ( sys-libs/libseccomp )
 	upnp? ( net-libs/miniupnpc )"
 RDEPEND="${DEPEND}
-	selinux? ( sec-policy/selinux-tor )
-"
+	selinux? ( sec-policy/selinux-tor )"
 
 pkg_setup() {
 	enewgroup tor
@@ -36,6 +37,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.2.3.14_alpha-torrc.sample.patch
+	epatch_user
 }
 
 src_configure() {
@@ -43,27 +45,32 @@ src_configure() {
 	# will break tor, but does recommend against -fstrict-aliasing.
 	# We'll filter-flags them here as we encounter them.
 	filter-flags -fstrict-aliasing
+
 	econf \
-		--disable-buf-freelists \
 		--enable-asciidoc \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable stats instrument-downloads) \
 		$(use_enable bufferevents) \
-		$(use_enable ecc curve25519) \
 		$(use_enable nat-pmp) \
+		$(use_enable scrypt libscrypt) \
+		$(use_enable seccomp) \
+		$(use_enable systemd) \
 		$(use_enable tor-hardening gcc-hardening) \
 		$(use_enable tor-hardening linker-hardening) \
 		$(use_enable transparent-proxy transparent) \
-		$(use_enable threads) \
 		$(use_enable upnp) \
-		$(use_enable web tor2web-mode)
+		$(use_enable web tor2web-mode) \
+		$(use_enable test unittests) \
+		$(use_enable test coverage)
 }
 
 src_install() {
 	readme.gentoo_create_doc
 
 	newconfd "${FILESDIR}"/tor.confd tor
-	newinitd "${FILESDIR}"/tor.initd-r6 tor
+	newinitd "${FILESDIR}"/tor.initd-r7 tor
+	systemd_dounit "${FILESDIR}/${PN}.service"
+	systemd_dotmpfilesd "${FILESDIR}/${PN}.conf"
 
 	emake DESTDIR="${D}" install
 

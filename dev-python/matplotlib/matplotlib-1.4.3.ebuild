@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.3.ebuild,v 1.1 2015/02/24 16:19:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.4.3.ebuild,v 1.2 2015/03/20 12:57:09 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SLOT="0"
 # Fonts: BitstreamVera, OFL-1.1
 LICENSE="BitstreamVera BSD matplotlib MIT OFL-1.1"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="cairo doc excel examples fltk gtk gtk3 latex pyside qt4 test tk wxwidgets"
+IUSE="cairo doc excel examples fltk gtk gtk3 latex pyside qt4 qt5 test tk wxwidgets"
 
 # #456704 -- a lot of py2-only deps
 PY2_USEDEP=$(python_gen_usedep python2_7)
@@ -31,15 +31,15 @@ COMMON_DEPEND="
 	dev-python/pytz[${PYTHON_USEDEP}]
 	>=dev-python/six-1.4[${PYTHON_USEDEP}]
 	media-fonts/stix-fonts
-	>=media-libs/freetype-2.3
+	media-libs/freetype:2
 	media-libs/libpng:0
 	media-libs/qhull
 	gtk? (
-		dev-libs/glib
+		dev-libs/glib:2=
 		x11-libs/gdk-pixbuf
 		x11-libs/gtk+:2
 		dev-python/pygtk[${PY2_USEDEP}] )
-	wxwidgets? ( >=dev-python/wxpython-2.8[${PY2_USEDEP}] )"
+	wxwidgets? ( >=dev-python/wxpython-2.8:*[${PY2_USEDEP}] )"
 
 # internal copy of pycxx highly patched
 #	dev-python/pycxx
@@ -86,7 +86,9 @@ RDEPEND="${COMMON_DEPEND}
 		dev-texlive/texlive-xetex
 	)
 	pyside? ( dev-python/pyside[X,${PYTHON_USEDEP}] )
-	qt4? ( dev-python/PyQt4[X,${PYTHON_USEDEP}] )"
+	qt4? ( dev-python/PyQt4[X,${PYTHON_USEDEP}] )
+	qt5? ( dev-python/PyQt5[gui,widgets,${PYTHON_USEDEP}] )
+	"
 
 PY2_FLAGS="|| ( $(python_gen_useflags python2_7) )"
 REQUIRED_USE="
@@ -96,7 +98,7 @@ REQUIRED_USE="
 	gtk? ( ${PY2_FLAGS} )
 	wxwidgets? ( ${PY2_FLAGS} )
 	test? (
-		cairo fltk latex pyside qt4 tk wxwidgets
+		cairo fltk latex pyside qt5 qt4 tk wxwidgets
 		|| ( gtk gtk3 )
 		)"
 
@@ -140,6 +142,10 @@ python_prepare_all() {
 		-e '/tol/s:32:35:g' \
 		-i lib/matplotlib/tests/test_mathtext.py || die
 
+	sed \
+		-e "s:/usr/:${EPREFIX}/usr/:g" \
+		-i setupext.py || die
+
 	export XDG_RUNTIME_DIR="${T}/runtime-dir"
 	mkdir "${XDG_RUNTIME_DIR}" || die
 	chmod 0700 "${XDG_RUNTIME_DIR}" || die
@@ -169,6 +175,7 @@ python_configure() {
 		$(use_setup cairo)
 		$(use_setup pyside)
 		$(use_setup qt4)
+		$(use_setup qt5)
 		$(use_setup tk)
 	EOF
 
