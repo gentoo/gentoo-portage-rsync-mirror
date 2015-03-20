@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.300 2015/02/27 23:44:41 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.301 2015/03/20 00:13:32 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -157,22 +157,11 @@ handle_genpatches() {
 			if use experimental ; then
 				UNIPATCH_LIST_GENPATCHES+=" ${DISTDIR}/${tarball}"
 				debug-print "genpatches tarball: $tarball"
-
-				# check gcc version < 4.9.X uses patch 5000 and = 4.9.X uses patch 5010			
-				if [[ $(gcc-major-version) -eq 4 ]] && [[ $(gcc-minor-version) -ne 9 ]]; then
-						# drop 5000_enable-additional-cpu-optimizations-for-gcc-4.9.patch
-						UNIPATCH_EXCLUDE+=" 5010_enable-additional-cpu-optimizations-for-gcc-4.9.patch"
-				else
-					#drop 5000_enable-additional-cpu-optimizations-for-gcc.patch
-					UNIPATCH_EXCLUDE+=" 5000_enable-additional-cpu-optimizations-for-gcc.patch"
-				fi
-
 			fi
 		else
 			UNIPATCH_LIST_GENPATCHES+=" ${DISTDIR}/${tarball}"
 			debug-print "genpatches tarball: $tarball"
 		fi
-
 		GENPATCHES_URI+=" ${use_cond_start}mirror://gentoo/${tarball}${use_cond_end}"
 	done
 }
@@ -1001,6 +990,22 @@ unipatch() {
 				done
 				UNIPATCH_DROP+=" $(basename ${j})"
 			done
+		else 
+			UNIPATCH_LIST_GENPATCHES+=" ${DISTDIR}/${tarball}"
+			debug-print "genpatches tarball: $tarball"
+
+			# check gcc version < 4.9.X uses patch 5000 and = 4.9.X uses patch 5010			
+			if [[ $(gcc-major-version) -eq 4 ]] && [[ $(gcc-minor-version) -ne 9 ]]; then
+				# drop 5000_enable-additional-cpu-optimizations-for-gcc-4.9.patch
+				if [[ $UNIPATCH_DROP != *"5010_enable-additional-cpu-optimizations-for-gcc-4.9.patch"* ]]; then
+					UNIPATCH_DROP+=" 5010_enable-additional-cpu-optimizations-for-gcc-4.9.patch"
+				fi
+			else
+				if [[ $UNIPATCH_DROP != *"5000_enable-additional-cpu-optimizations-for-gcc.patch"* ]]; then
+					#drop 5000_enable-additional-cpu-optimizations-for-gcc.patch
+					UNIPATCH_DROP+=" 5000_enable-additional-cpu-optimizations-for-gcc.patch"
+				fi
+			fi
 		fi
 	done
 

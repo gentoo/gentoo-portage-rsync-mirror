@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.155 2015/02/12 00:57:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.156 2015/03/20 00:11:55 blueness Exp $
+
+*eudev-3.0 (20 Mar 2015)
+
+  20 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +eudev-3.0.ebuild:
+  Version bump to 3.0 = upstream udev-219.
 
   12 Feb 2015; Anthony G. Basile <blueness@gentoo.org> eudev-9999.ebuild:
   Update 9999 version for eudev 3.0 branch.

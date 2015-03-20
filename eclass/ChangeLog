@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1568 2015/03/19 09:57:43 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1569 2015/03/20 00:13:32 mpagano Exp $
+
+  20 Mar 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Move cpu-optimation removal. See bug #542810
 
   19 Mar 2015; <chewi@gentoo.org> java-pkg-simple.eclass:
   Allow jar to be named something other than ${PN}.jar.
