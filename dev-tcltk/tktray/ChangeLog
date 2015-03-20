@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tktray
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.10 2014/03/31 02:03:06 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/ChangeLog,v 1.11 2015/03/20 12:09:11 jlec Exp $
+
+*tktray-1.3.9 (20 Mar 2015)
+
+  20 Mar 2015; Justin Lecher <jlec@gentoo.org> +tktray-1.3.9.ebuild,
+  metadata.xml, tktray-1.1-r1.ebuild:
+  Version BUmp, bug #359967; fix tcltk slotting
 
   31 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -tktray-1.1.ebuild:
   Cleanup old.

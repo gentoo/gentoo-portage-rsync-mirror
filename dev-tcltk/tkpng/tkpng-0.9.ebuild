@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpng/tkpng-0.9.ebuild,v 1.3 2012/12/05 08:08:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkpng/tkpng-0.9.ebuild,v 1.4 2015/03/20 12:03:30 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 MY_P="${PN}${PV}"
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.muonics.com/FreeStuff/TkPNG/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}/${PV}/${MY_P}.tgz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 LICENSE="tcltk"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug threads"
 
 RDEPEND="
-	>=dev-lang/tcl-8.4
-	>=dev-lang/tk-8.4
+	>=dev-lang/tcl-8.4:0=
+	>=dev-lang/tk-8.4:0=
 	sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
@@ -31,9 +31,4 @@ src_configure() {
 		$(use_enable debug symbols) \
 		$(use_enable amd64 64bit) \
 		$(use_enable threads)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc ChangeLog README || die
 }

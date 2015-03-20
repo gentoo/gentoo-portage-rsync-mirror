@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/tktray-1.1-r1.ebuild,v 1.5 2014/03/29 06:09:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tktray/tktray-1.1-r1.ebuild,v 1.6 2015/03/20 12:09:11 jlec Exp $
 
 EAPI="3"
 
@@ -19,8 +19,9 @@ IUSE="threads debug"
 
 RESTRICT="test"
 
-DEPEND=">=dev-lang/tcl-8.4
-	>=dev-lang/tk-8.4
+DEPEND="
+	>=dev-lang/tcl-8.4:0
+	>=dev-lang/tk-8.4:0
 	x11-libs/libXext"
 RDEPEND="${DEPEND}"
 
