@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.10.1.ebuild,v 1.5 2015/03/12 10:05:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.10.1.ebuild,v 1.6 2015/03/19 23:57:01 blueness Exp $
 
 EAPI="4"
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -39,6 +39,9 @@ src_prepare() {
 
 	# glibc 2.19 fix
 	epatch "${FILESDIR}"/${PN}-3.9.0-glibc-2.19.patch
+
+	# valgrind works fine on linux-4, bug #543648
+	epatch "${FILESDIR}"/${PN}-3.10.1-linux-4.patch
 
 	# Allow users to test their own patches
 	epatch_user

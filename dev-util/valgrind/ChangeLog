@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.183 2015/03/12 10:05:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.184 2015/03/19 23:57:01 blueness Exp $
+
+  19 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/valgrind-3.10.1-linux-4.patch, valgrind-3.10.1.ebuild:
+  Patch 3.10.1 to work on linux-4, bug #543648.  Thanks Janne Grunau <janne-
+  gentoo@jannau.net>.
 
   12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> valgrind-3.10.1.ebuild:
   Stable for amd64, wrt bug #541952

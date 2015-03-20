@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.65-r1.ebuild,v 1.13 2014/12/03 05:52:22 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.65-r1.ebuild,v 1.14 2015/03/19 23:49:17 vapier Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils
 
@@ -21,25 +21,13 @@ RDEPEND="${DEPEND}
 	!~sys-devel/${P}:0
 	>=sys-devel/autoconf-wrapper-13"
 
-src_prepare() {
-	find -name Makefile.in -exec sed -i '/^pkgdatadir/s:$:-@VERSION@:' {} +
-	epatch "${FILESDIR}"/${P}-AC_TYPE_INT_T.patch #324649
-}
+PATCHES=(
+	"${FILESDIR}"/${P}-AC_TYPE_INT_T.patch #324649
+)
 
-src_configure() {
-	# Disable Emacs in the build system since it is in a separate package.
-	export EMACS=no
-	econf --program-suffix="-${PV}"
-	# econf updates config.{sub,guess} which forces the manpages
-	# to be regenerated which we dont want to do #146621
-	touch man/*.1
-}
-
-src_install() {
-	default
-
-	local f
-	for f in "${ED}"/usr/share/info/*.info* ; do
-		mv "${f}" "${f/.info/-${SLOT}.info}" || die
-	done
-}
+if [[ -z ${__EBLITS__} && -n ${FILESDIR} ]] ; then
+	source "${FILESDIR}"/eblits/main.eblit || die
+fi
+src_prepare()   { eblit-run src_prepare   ; }
+src_configure() { eblit-run src_configure ; }
+src_install()   { eblit-run src_install   ; }

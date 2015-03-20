@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/autoconf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.194 2014/12/03 05:52:22 heroxbd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.195 2015/03/19 23:49:17 vapier Exp $
+
+*autoconf-2.69-r1 (19 Mar 2015)
+
+  19 Mar 2015; Mike Frysinger <vapier@gentoo.org> +autoconf-2.69-r1.ebuild,
+  +files/eblits/main.eblit, +files/eblits/src_configure.eblit,
+  +files/eblits/src_install.eblit, +files/eblits/src_prepare.eblit,
+  autoconf-2.13.ebuild, autoconf-2.59-r7.ebuild, autoconf-2.61-r2.ebuild,
+  autoconf-2.62-r1.ebuild, autoconf-2.63-r1.ebuild, autoconf-2.64.ebuild,
+  autoconf-2.65-r1.ebuild, autoconf-2.67.ebuild, autoconf-2.68.ebuild,
+  autoconf-9999.ebuild:
+  Copy info page SLOT logic from automake #543730 by Tupone Alfredo. Unify
+  duplicated logic into eblits. Migrate to EAPI=5 for non-default SLOTs.
 
   03 Dec 2014; Benda Xu <heroxbd@gentoo.org> autoconf-2.59-r7.ebuild,
   autoconf-2.61-r2.ebuild, autoconf-2.62-r1.ebuild, autoconf-2.63-r1.ebuild,
