@@ -1,8 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.3.26780.0-r1.ebuild,v 1.1 2014/12/16 10:14:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.3.26780.0-r1.ebuild,v 1.2 2015/03/21 14:57:55 jlec Exp $
 
 EAPI=5
+
 inherit flag-o-matic eutils autotools multilib user readme.gentoo versionator
 
 MY_P=${PN/f/F}-$(replace_version_separator 4 -)
@@ -10,7 +11,8 @@ MY_P=${PN/f/F}-$(replace_version_separator 4 -)
 
 DESCRIPTION="A relational database offering many ANSI SQL:2003 and some SQL:2008 features"
 HOMEPAGE="http://www.firebirdsql.org/"
-SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
+SRC_URI="
+	mirror://sourceforge/firebird/${MY_P}.tar.bz2
 	 doc? (	ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
 
 LICENSE="IDPL Interbase-1.0"
@@ -24,20 +26,20 @@ REQUIRED_USE="
 	superserver? ( !xinetd )
 "
 
-RESTRICT="userpriv"
-
-RDEPEND="
+CDEPEND="
 	dev-libs/libedit
 	dev-libs/icu:=
 "
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	>=dev-util/btyacc-3.0-r2
 	doc? ( app-arch/unzip )
 "
-RDEPEND="${RDEPEND}
+RDEPEND="${CDEPEND}
 	xinetd? ( virtual/inetd )
 	!sys-cluster/ganglia
 "
+
+RESTRICT="userpriv"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -53,26 +55,21 @@ function check_sed() {
 }
 
 src_unpack() {
+	unpack "${MY_P}.tar.bz2"
 	if use doc; then
 		# Unpack docs
-		mkdir "${WORKDIR}/manuals"
-		cd "${WORKDIR}/manuals"
+		mkdir "${WORKDIR}/manuals" && cd "${WORKDIR}/manuals" || die
 		unpack ib_b60_doc.zip
-		cd "${WORKDIR}"
 	fi
-	unpack "${MY_P}.tar.bz2"
-	cd "${S}"
 }
 
 src_prepare() {
 	# This patch might be portable, and not need to be duplicated per version
 	# also might no longer be necessary to patch deps or libs, just flags
-	epatch "${FILESDIR}/${PN}-2.5.3.26780.0-deps-flags.patch"
+	epatch "${FILESDIR}"/${PN}-2.5.3.26780.0-deps-flags.patch
 
-	use client && epatch "${FILESDIR}/${PN}-2.5.1.26351.0-client.patch"
-	if ! use superserver ; then
-		epatch "${FILESDIR}/${PN}-2.5.1.26351.0-superclassic.patch"
-	fi
+	use client && epatch "${FILESDIR}"/${PN}-2.5.1.26351.0-client.patch
+	use superserver || epatch "${FILESDIR}"/${PN}-2.5.1.26351.0-superclassic.patch
 
 	# Rename references to isql to fbsql
 	# sed vs patch for portability and addtional location changes
@@ -85,8 +82,8 @@ src_prepare() {
 		-e 's:ISQL :FBSQL :w /dev/stdout' \
 		src/msgs/messages2.sql | wc -l)" "6" "src/msgs/messages2.sql" # 6 lines
 
-	find "${S}" -name \*.sh -print0 | xargs -0 chmod +x
-	rm -rf "${S}"/extern/{btyacc,editline,icu}
+	find "${S}" -name \*.sh -print0 | xargs -0 chmod +x || die
+	rm -rf "${S}"/extern/{btyacc,editline,icu} || die
 
 	eautoreconf
 }
@@ -129,15 +126,14 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}/gen/${PN}"
+	cd "${S}/gen/${PN}" || die
 
 	if use doc; then
 		dodoc "${S}"/doc/*.pdf
 		find "${WORKDIR}"/manuals -type f -iname "*.pdf" -exec dodoc '{}' + || die
 	fi
 
-	insinto /usr/include
-	doins include/*
+	doheader include/*
 
 	rm lib/libfbstatic.a
 
@@ -253,11 +249,11 @@ pkg_config() {
 		chown firebird:firebird "${ROOT}/etc/firebird/{security.*,security2.*}"
 		chmod 660 "${ROOT}/etc/firebird/{security.*,security2.*}"
 
-		einfo
+		echo
 		einfo "Converted old security.gdb to security2.fdb, security.gdb has been "
 		einfo "renamed to security.gdb.old. if you had previous security2.fdb, "
 		einfo "it's backed to security2.fdb.old (all under ${ROOT}/etc/firebird)."
-		einfo
+		echo
 	fi
 
 	# we need to enable local access to the server

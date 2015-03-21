@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.89 2015/02/20 17:57:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.90 2015/03/21 14:55:33 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -33,8 +33,22 @@ case "${EAPI:-0}" in
 	0|1|2|3)
 		die "Unsupported EAPI=${EAPI:-0} (too old) for ${ECLASS}"
 		;;
-	4|5)
-		# EAPI=4 is required for USE default deps on USE_EXPAND flags
+	4)
+		# EAPI=4 is only allowed on legacy packages
+		if [[ ${CATEGORY}/${P} == dev-python/pyelftools-0.2[123] ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == sys-apps/file-5.22 ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == sys-apps/i2c-tools-3.1.1 ]]; then
+			:
+		elif [[ ${CATEGORY}/${P} == sys-libs/cracklib-2.9.[12] ]]; then
+			:
+		else
+			die "Unsupported EAPI=${EAPI:-4} (too old, allowed only on restricted set of packages) for ${ECLASS}"
+		fi
+		;;
+	5)
+		# EAPI=5 is required for sane USE_EXPAND dependencies
 		;;
 	*)
 		die "Unsupported EAPI=${EAPI} (unknown) for ${ECLASS}"
@@ -652,7 +666,6 @@ _python_obtain_impls() {
 
 	_python_validate_useflags
 	_python_check_USE_PYTHON
-	_python_check_EAPI
 
 	MULTIBUILD_VARIANTS=()
 

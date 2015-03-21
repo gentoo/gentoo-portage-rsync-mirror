@@ -10,5 +10,5 @@ RDEPEND=dev-python/cheetah[python_targets_python2_7(-)?,-python_single_target_jy
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://launchpad.net/cloud-init/trunk/0.7.5/+download/cloud-init-0.7.5.tar.gz
-_eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a9825781ce17f742654908a6ef0f007f	python-utils-r1	096f8247eae93026af13ab88cf4305cd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=ea613a0d671ec6985190d05ec6b3ac77

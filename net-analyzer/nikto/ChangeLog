@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nikto
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.34 2014/12/19 19:18:28 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.35 2015/03/21 14:37:40 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -nikto-2.03.ebuild, metadata.xml,
+  nikto-2.1.5.ebuild:
+  drop old; fix SLOT operators
 
   19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop to maintainer-needed

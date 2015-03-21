@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/graphy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graphy/ChangeLog,v 1.10 2015/03/08 23:49:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graphy/ChangeLog,v 1.11 2015/03/21 14:33:41 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> graphy-1.0-r1.ebuild,
+  metadata.xml:
+  use esvn_clean; clean python eclass usage
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> graphy-1.0-r1.ebuild:
   x86 stable, bug 540290

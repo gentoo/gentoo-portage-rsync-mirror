@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs-headers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/ChangeLog,v 1.28 2015/01/25 17:41:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/ChangeLog,v 1.29 2015/03/21 14:54:26 nativemad Exp $
+
+  21 Mar 2015; Andreas Schuerch <nativemad@gentoo.org>
+  aufs-headers-3.12_p20140114.ebuild:
+  x86 stable, see bug 504082
 
 *aufs-headers-3.18_p20150126 (25 Jan 2015)
 

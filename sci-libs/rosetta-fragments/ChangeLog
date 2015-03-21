@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/rosetta-fragments
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/ChangeLog,v 1.6 2014/05/14 12:09:55 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rosetta-fragments/ChangeLog,v 1.7 2015/03/21 14:49:37 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -rosetta-fragments-3.1.ebuild:
+  Drop old
 
   14 May 2014; Justin Lecher <jlec@gentoo.org> rosetta-fragments-3.1.ebuild,
   rosetta-fragments-3.1-r1.ebuild:
@@ -29,4 +32,3 @@
   18 May 2010; Justin Lecher <jlec@gentoo.org> +files/3.1-chemshift.patch,
   +files/3.1-nnmake.patch, +rosetta-fragments-3.1.ebuild, +metadata.xml:
   Initial addition, #250415
-

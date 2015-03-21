@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1569 2015/03/20 00:13:32 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1570 2015/03/21 14:55:33 mgorny Exp $
+
+  21 Mar 2015; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
+  python-single-r1.eclass, python-utils-r1.eclass:
+  Ban new EAPI < 5 packages for python-r1 & python-single-r1.
 
   20 Mar 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Move cpu-optimation removal. See bug #542810

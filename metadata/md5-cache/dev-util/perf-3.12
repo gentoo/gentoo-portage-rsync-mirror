@@ -10,5 +10,5 @@ RDEPEND=audit? ( sys-process/audit ) demangle? ( sys-devel/binutils ) perl? ( de
 REQUIRED_USE=python? ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.12.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	f782db6207752efeca1d59c016d8c813	python-utils-r1	e3288bc2e6e487674ce218b632701c9e	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a9825781ce17f742654908a6ef0f007f	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f6c26a0f51af6ca30de03210947f66c9
