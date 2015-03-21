@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.110.0-r2.ebuild,v 1.1 2014/08/25 02:04:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.110.0-r2.ebuild,v 1.2 2015/03/21 22:44:13 dilfridge Exp $
 
 EAPI=5
 
@@ -29,4 +29,9 @@ SRC_TEST="do"
 EPATCH_SUFFIX=patch
 PATCHES=(
 	"${WORKDIR}"/${MY_PN:-${PN}}-patch
+)
+
+PERL_RM_FILES=(
+	t/pod-coverage.t
+	t/pod.t
 )

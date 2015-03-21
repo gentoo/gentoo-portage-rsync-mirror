@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/GnuPG-Interface-0.520.0.ebuild,v 1.1 2015/03/14 13:56:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/GnuPG-Interface-0.520.0.ebuild,v 1.2 2015/03/21 22:35:17 dilfridge Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Perl module interface to interacting with GnuPG"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 RDEPEND="
 	>=app-crypt/gnupg-1.2.1-r1
@@ -24,6 +24,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-MakeMaker-6.360.0
+	test? ( dev-perl/Any-Moose )
 "
 
 SRC_TEST="do"

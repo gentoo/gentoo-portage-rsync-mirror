@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Std
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Std/ChangeLog,v 1.5 2014/08/21 19:47:44 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Std/ChangeLog,v 1.6 2015/03/21 22:38:07 dilfridge Exp $
+
+  21 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Class-Std-0.11.0-r1.ebuild:
+  Fix tests, bug 543938
 
 *Class-Std-0.11.0-r1 (21 Aug 2014)
 

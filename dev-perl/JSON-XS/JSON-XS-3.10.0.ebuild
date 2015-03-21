@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/JSON-XS-3.10.0.ebuild,v 1.3 2014/12/31 18:33:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/JSON-XS-3.10.0.ebuild,v 1.4 2015/03/21 22:41:59 dilfridge Exp $
 
 EAPI=5
 
@@ -17,6 +17,8 @@ IUSE="test"
 RDEPEND="
 	dev-perl/Types-Serialiser
 	dev-perl/common-sense
+	!<dev-perl/JSON-2.900.0
+	!<dev-perl/JSON-Any-1.310.0
 "
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker

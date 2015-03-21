@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON-XS
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/ChangeLog,v 1.45 2014/12/31 18:33:41 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/ChangeLog,v 1.46 2015/03/21 22:41:59 dilfridge Exp $
+
+  21 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org> JSON-XS-3.10.0.ebuild:
+  Block buggy version combinations, bug 543680
 
   31 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> JSON-XS-3.10.0.ebuild:
   Add more keywords wrt bug #523298

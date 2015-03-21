@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.58 2015/03/14 13:56:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.59 2015/03/21 22:35:17 dilfridge Exp $
+
+  21 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  GnuPG-Interface-0.520.0.ebuild:
+  Add missing test dependency, bug 543990
 
 *GnuPG-Interface-0.520.0 (14 Mar 2015)
 
