@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/multibit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/multibit/ChangeLog,v 1.4 2014/05/26 21:24:06 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/multibit/ChangeLog,v 1.5 2015/03/21 19:54:30 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -multibit-0.5.16.ebuild,
+  -multibit-0.5.17.ebuild, multibit-0.5.18.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; drop old
 
 *multibit-0.5.18 (26 May 2014)
 

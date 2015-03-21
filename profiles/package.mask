@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16429 2015/03/20 17:15:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16430 2015/03/21 19:48:55 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -264,12 +264,6 @@ app-emulation/fig
 # Duplicates media-fonts/culmus[ancient] (bug #486814).
 # Masked for removal in 30 days.
 media-fonts/culmus-ancient
-
-# Joerg BOrnkessel <hd_brummy@gentoo.org> (20 Feb 2015)
-# masked for removal around 20/Mar/2015
-# dead on upstream, no other package relies on this
-# wrt bug 540788
-media-plugins/vdr-setup
 
 # Ian Delaney <idella4@gentoo.org> (19 Feb 2015)
 # Some no longer fetch and upstream dead. genetic was to be

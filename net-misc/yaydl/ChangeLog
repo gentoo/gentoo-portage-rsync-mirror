@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/yaydl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/ChangeLog,v 1.8 2012/06/16 07:51:40 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/ChangeLog,v 1.9 2015/03/21 19:53:48 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> yaydl-1.5.2.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; bump EAPI
 
   16 Jun 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as he is not able to maintain this anymore.
@@ -43,4 +46,3 @@
   10 May 2009; Mounir Lamouri <volkmar@gentoo.org>
   +files/yaydl-1.2-gentoo.patch, +metadata.xml, +yaydl-1.2.ebuild:
   Initial commit.
-

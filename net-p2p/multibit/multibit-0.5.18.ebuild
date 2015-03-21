@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/multibit/multibit-0.5.18.ebuild,v 1.1 2014/05/26 21:24:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/multibit/multibit-0.5.18.ebuild,v 1.2 2015/03/21 19:54:30 jlec Exp $
 
 EAPI=5
 
 inherit eutils
 
-DESCRIPTION="MultiBit is a secure, lightweight, international Bitcoin wallet written in Java"
+DESCRIPTION="Secure, lightweight, international Bitcoin wallet written in Java"
 HOMEPAGE="https://multibit.org/"
 SRC_URI="https://multibit.org/releases/${P}/${P}-linux.jar"
 
@@ -20,18 +20,15 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
 
-src_unpack() {
-:
-}
+src_unpack() { :; }
 
 src_prepare() {
-	cp "${FILESDIR}"/auto-install.xml "${WORKDIR}"
-	sed -i "s:ED:${ED}:" auto-install.xml
+	cp "${FILESDIR}"/auto-install.xml "${WORKDIR}" || die
+	sed -i "s:ED:${ED}:" auto-install.xml || die
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe "${FILESDIR}"/${PN}
+	dobin "${FILESDIR}"/${PN}
 
 	make_desktop_entry "${PN}" "Multibit" "/opt/MultiBit/multibit48.png" "GNOME;Network;P2P;Office;Finance;" "MimeType=x-scheme-handler/multibit;\nTerminal=false"
 

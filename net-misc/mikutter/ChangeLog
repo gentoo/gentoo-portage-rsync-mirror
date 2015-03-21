@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mikutter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.47 2015/01/22 03:58:58 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.48 2015/03/21 19:42:27 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -mikutter-3.0.7.ebuild,
+  mikutter-3.1.1.ebuild, mikutter-9999.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; drop old
 
   22 Jan 2015; Naohiro Aota <naota@gentoo.org> mikutter-9999.ebuild:
   Update live ebuild. #536286
