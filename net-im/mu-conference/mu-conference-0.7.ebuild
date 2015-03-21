@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.7.ebuild,v 1.5 2014/08/05 18:34:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.7.ebuild,v 1.6 2015/03/21 19:12:17 jlec Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 SLOT="0"
 
-DEPEND="dev-libs/expat
+DEPEND="
+	dev-libs/expat
 	>=dev-libs/glib-2
 	net-dns/libidn
 	net-im/jabberd2
@@ -28,13 +29,13 @@ src_unpack() {
 
 	# Fix missing header in src/conference_user.c in order to
 	# make emerge happy and avoid QA notice.
-	sed -i "/conference.h/ i #define _XOPEN_SOURCE" src/conference_user.c
+	sed -i "/conference.h/ i #define _XOPEN_SOURCE" src/conference_user.c || die
 
 	if use mysql; then
-		sed -i '/^CFLAGS/ a CFLAGS:=$(CFLAGS) -DHAVE_MYSQL' src/Makefile
+		sed -i '/^CFLAGS/ a CFLAGS:=$(CFLAGS) -DHAVE_MYSQL' src/Makefile || die
 	else
 		# Makefile is broken. Should not always link against mysql
-		sed -i 's/`mysql_config --libs`//' src/Makefile
+		sed -i 's/`mysql_config --libs`//' src/Makefile || die
 	fi
 }
 
@@ -43,8 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe src/mu-conference
+	dobin src/mu-conference
 	fowners jabber:jabber /usr/bin/mu-conference
 	fperms 750 /usr/bin/mu-conference
 
@@ -65,7 +65,7 @@ src_install() {
 	newins muc-default.xml mu-conference.xml
 	doins style.css
 
-	cd "${D}/etc/jabber/"
+	cd "${D}/etc/jabber/" || die
 	sed -i \
 		-e 's,./spool/chat.localhost,/var/spool/jabber/mu-conference,g' \
 		-e 's,./syslogs,/var/log/jabber,g' \
@@ -77,10 +77,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
+	echo
 	elog "For jabberd-2 connection:"
 	elog "1. Make sure that the ip and port in /etc/jabber/mu-conference.xml"
 	elog "   match the address of your jabberd router."
 	elog "2. Set a common secret in mu-conference.xml and router.xml"
-	elog
+	echo
 }

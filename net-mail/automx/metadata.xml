@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>mschiff@gentoo.org</email>
-		<name>Marc Schiffbauer</name>
-	</maintainer>
-	<use>
-		<flag name="memcached">Enable memcached support</flag>
-		<flag name="sql">Enable support for SQL backends</flag>
-		<flag name="tools">Install additional automx-test tool</flag>
-	</use>
+  <maintainer>
+    <email>mschiff@gentoo.org</email>
+    <name>Marc Schiffbauer</name>
+  </maintainer>
+  <use>
+    <flag name="memcached">Enable memcached support</flag>
+    <flag name="sql">Enable support for SQL backends</flag>
+    <flag name="tools">Install additional automx-test tool</flag>
+  </use>
 </pkgmetadata>

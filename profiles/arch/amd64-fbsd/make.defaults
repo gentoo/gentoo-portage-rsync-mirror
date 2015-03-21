@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.16 2015/02/01 13:40:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/make.defaults,v 1.17 2015/03/21 19:15:02 mgorny Exp $
 # System-wide defaults for the G/FBSD Portage system
 
 ARCH="amd64-fbsd"
@@ -20,8 +20,8 @@ ABI="amd64_fbsd"
 CFLAGS_x86_fbsd="-m32 -DCOMPAT_32BIT -B/usr/lib32 -L/usr/lib32"
 LDFLAGS_x86_fbsd="-m elf_i386_fbsd -L/usr/lib32"
 
-USE="mmx sse sse2"
-CPU_FLAGS_X86="mmx sse sse2"
+USE="mmx mmxext sse sse2"
+CPU_FLAGS_X86="mmx mmxext sse sse2"
 
 VIDEO_CARDS="apm ark chips cirrus cyrix dummy i128 intel mach64 mga \
 	nv r128 radeon rendition s3 s3virge savage siliconmotion sis \

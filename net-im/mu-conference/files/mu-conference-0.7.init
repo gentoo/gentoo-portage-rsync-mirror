@@ -10,7 +10,7 @@ start() {
 	start-stop-daemon \
 		--background \
 		--start  \
-		--chuid jabber:jabber \
+		--user jabber:jabber \
 		--exec /usr/bin/mu-conference \
 		-- -c /etc/jabber/mu-conference.xml
 	eend $?

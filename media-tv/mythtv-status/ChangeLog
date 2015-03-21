@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv-status
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv-status/ChangeLog,v 1.5 2015/03/21 18:45:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv-status/ChangeLog,v 1.6 2015/03/21 19:14:35 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -mythtv-status-0.10.1.ebuild,
+  -mythtv-status-0.10.2.ebuild, metadata.xml:
+  Drop old
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> mythtv-status-0.10.1.ebuild,
   mythtv-status-0.10.2.ebuild, mythtv-status-0.10.4.ebuild:

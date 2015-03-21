@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.8-r1.ebuild,v 1.4 2015/03/21 19:12:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.8.81.ebuild,v 1.1 2015/03/21 19:12:17 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs
 
 DESCRIPTION="Multi-User Chat for jabberd"
 HOMEPAGE="https://gna.org/projects/mu-conference/"
-SRC_URI="http://download.gna.org/mu-conference/${PN}_${PV}.tar.gz"
+SRC_URI="http://download.gna.org/mu-conference/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
@@ -23,8 +23,6 @@ RDEPEND="
 	mysql? ( virtual/mysql )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
-
-S=${WORKDIR}/${PN}_${PV}
 
 src_prepare() {
 	# Fix missing header in src/conference_user.c in order to

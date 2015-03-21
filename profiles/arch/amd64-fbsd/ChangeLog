@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.65 2015/03/14 14:00:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.66 2015/03/21 19:15:02 mgorny Exp $
+
+  21 Mar 2015; Michał Górny <mgorny@gentoo.org> make.defaults:
+  Enable mmxext by default since it is implied by sse, and required for ffmpeg.
 
   14 Mar 2015; Michał Górny <mgorny@gentoo.org> clang/package.use.force,
   clang/packages.build:
