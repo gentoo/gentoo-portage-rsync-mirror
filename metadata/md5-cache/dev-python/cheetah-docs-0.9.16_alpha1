@@ -1,8 +1,11 @@
 DEFINED_PHASES=install
 DESCRIPTION=Documentation for Cheetah templates
+EAPI=5
 HOMEPAGE=http://www.cheetahtemplate.org/
 KEYWORDS=~amd64 ~ia64 ppc x86
 LICENSE=OPL
+RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://sourceforge/cheetahtemplate/CheetahDocs-0.9.16a1.tgz
-_md5_=e6dee6387e9667c4f309d34ca39065dd
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=8337efdfc26ca16589e7261466a10b0e

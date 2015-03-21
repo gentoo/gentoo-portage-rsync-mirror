@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/srf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/srf/ChangeLog,v 1.7 2012/11/04 10:28:29 araujo Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/srf/ChangeLog,v 1.9 2015/03/21 11:49:31 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> srf-1.0-r1.ebuild:
+  add missing eclass
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> srf-1.0-r1.ebuild:
+  use ecvs_clean; bump EAPI
 
   04 Nov 2012; Luis Araujo <araujo@gentoo.org> -srf-1.0.ebuild,
   srf-1.0-r1.ebuild:
@@ -29,4 +35,3 @@
   17 Sep 2005; Luis F. Araujo <araujo@gentoo.org> +metadata.xml,
   +srf-1.0.ebuild:
   Added new package Srf. Initial import by Adrian Fruehwirth (bug #104032).
-

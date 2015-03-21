@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.07.ebuild,v 1.3 2015/03/20 10:09:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-11.07.ebuild,v 1.4 2015/03/21 11:41:50 jlec Exp $
 
 EAPI=2
 
@@ -187,7 +187,7 @@ src_install() {
 			doins mopenssl/*.m || die
 		fi
 
-		rm -rf $(find "${D}"/usr/share/doc/${PF}/samples -name CVS)
+		ecvs_clean
 	fi
 
 	dodoc README || die

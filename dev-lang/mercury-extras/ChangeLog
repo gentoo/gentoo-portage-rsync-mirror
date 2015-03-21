@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.112 2015/03/20 10:09:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.113 2015/03/21 11:41:50 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> mercury-extras-11.01.ebuild,
+  mercury-extras-11.07.1.ebuild, mercury-extras-11.07.2.ebuild,
+  mercury-extras-11.07.ebuild, mercury-extras-13.05.1.ebuild,
+  mercury-extras-13.05.2.ebuild, mercury-extras-13.05.ebuild:
+  use ecvs_clean
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> mercury-extras-11.01.ebuild,
   mercury-extras-11.07.1.ebuild, mercury-extras-11.07.2.ebuild,

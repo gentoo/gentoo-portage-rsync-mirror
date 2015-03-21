@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xalan-c
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.32 2012/04/24 10:02:07 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.33 2015/03/21 11:46:00 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> xalan-c-1.10.0.ebuild,
+  xalan-c-1.11.0_pre705082.ebuild:
+  use ecvs_clean
 
   24 Apr 2012; Michał Górny <mgorny@gentoo.org> xalan-c-1.10.0.ebuild:
   Use mirror:// in SRC_URI.

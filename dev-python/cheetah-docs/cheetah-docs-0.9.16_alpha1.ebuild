@@ -1,6 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/cheetah-docs-0.9.16_alpha1.ebuild,v 1.9 2014/08/10 21:08:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/cheetah-docs-0.9.16_alpha1.ebuild,v 1.10 2015/03/21 11:51:35 jlec Exp $
+
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Documentation for Cheetah templates"
 HOMEPAGE="http://www.cheetahtemplate.org/"
@@ -11,13 +15,12 @@ LICENSE="OPL"
 KEYWORDS="~amd64 ~ia64 ppc x86"
 SLOT="0"
 
-DEPEND=""
-RDEPEND=""
-
 S=${WORKDIR}/CheetahDocs
 
+RESTRICT="binchecks strip"
+
 src_install() {
-	find . -name CVS -or -iname "*~" -exec rm -rf '{}' \;
+	ecvs_clean
 
 	dodoc *.txt TODO
 	dohtml -r devel_guide_html devel_guide_html_multipage \

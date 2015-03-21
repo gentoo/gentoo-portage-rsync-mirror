@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.62 2015/03/01 13:09:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.63 2015/03/21 11:31:55 hd_brummy Exp $
+
+  21 Mar 2015; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-burn-0.2.2.ebuild:
+  cleanup for #540788
 
 *vdr-burn-0.2.2-r1 (01 Mar 2015)
 

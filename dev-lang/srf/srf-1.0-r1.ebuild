@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/srf/srf-1.0-r1.ebuild,v 1.2 2012/11/04 10:28:29 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/srf/srf-1.0-r1.ebuild,v 1.4 2015/03/21 11:49:31 jlec Exp $
 
-EAPI="3"
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="The Simple Recursive Functions programming language"
 HOMEPAGE="http://www.stratigery.com/srf.html"
@@ -13,19 +15,21 @@ SLOT="0"
 KEYWORDS="~x86 ~x86-linux ~ppc-macos ~amd64"
 IUSE=""
 
-DEPEND="sys-devel/flex
+DEPEND="
+	sys-devel/flex
 	virtual/yacc"
 RDEPEND=""
 
 src_prepare() {
 	# Remove CVS directory Bug#371821
-	rm -rf examples/CVS || die "removing CVS directory failed"
+	ecvs_clean
 }
 
 src_install() {
-	dobin srf rfunc/rfunc || die "cannot instal binary"
-	doman srf.1 || die "cannot install man page"
-	dodoc srf.html README || die "cannot install docs"
+	dobin srf rfunc/rfunc
+	doman srf.1
+	dohtml srf.html
+	dodoc README
 	docinto examples
-	dodoc examples/* || die "cannot install examples"
+	dodoc examples/*
 }

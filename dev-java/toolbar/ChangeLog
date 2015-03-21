@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/toolbar
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.15 2007/10/24 06:25:45 wltjr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/ChangeLog,v 1.17 2015/03/21 11:48:24 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> toolbar-1.1.0-r1.ebuild:
+  add missing eclass
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> toolbar-1.1.0-r1.ebuild:
+  use ecvs_clean
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -toolbar-0.4.ebuild, -toolbar-1.1.0.ebuild, toolbar-1.1.0-r1.ebuild:
@@ -60,4 +66,3 @@
   29 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> +files/build.xml,
   +toolbar-0.4.ebuild:
   Initial import; Depedency for ArgoUML from source bug #63307.
-

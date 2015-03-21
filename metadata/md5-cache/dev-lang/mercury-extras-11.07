@@ -10,4 +10,4 @@ RDEPEND=~dev-lang/mercury-11.07 cairo? ( >=x11-libs/cairo-1.10.0 ) glut? ( media
 SLOT=0
 SRC_URI=http://www.mercury.cs.mu.oz.au/download/files/mercury-extras-11.07.tar.gz mirror://gentoo/mercury-extras-11.07-gentoo-patchset-0.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=997593ea12a3a0705ef782adbe409e4d
+_md5_=72c8de8133f8c13641eac43243ed1ab0

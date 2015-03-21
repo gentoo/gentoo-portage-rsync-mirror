@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.15 2012/04/24 10:02:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.10.0.ebuild,v 1.16 2015/03/21 11:46:00 jlec Exp $
 
 inherit toolchain-funcs eutils flag-o-matic multilib
 
@@ -63,7 +63,7 @@ src_install() {
 	if use doc ; then
 		dodir /usr/share/doc/${PF}
 		cp -r "${S}/samples" "${D}/usr/share/doc/${PF}"
-		find "${D}/usr/share/doc/${PF}" -type d -name CVS -exec rm -rf '{}' \; >& /dev/null
+		ecvs_clean
 		dohtml -r build/docs/apiDocs
 	fi
 }
