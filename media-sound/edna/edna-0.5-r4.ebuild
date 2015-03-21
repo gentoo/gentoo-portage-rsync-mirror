@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.16 2012/06/09 23:07:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.5-r4.ebuild,v 1.17 2015/03/21 17:42:37 jlec Exp $
 
 inherit eutils multilib
 
@@ -21,16 +21,13 @@ DEPEND="${RDEPEND}"
 src_install() {
 	newinitd "${FILESDIR}"/edna.gentoo edna
 
-	dodir /usr/bin /usr/$(get_libdir)/edna /usr/$(get_libdir)/edna/templates
-	exeinto /usr/bin ; newexe edna.py edna
-	exeinto /usr/$(get_libdir)/edna ; doexe ezt.py
-	exeinto /usr/$(get_libdir)/edna ; doexe MP3Info.py
+	newbin edna.py edna
+	exeinto /usr/$(get_libdir)/edna
+	doexe ezt.py MP3Info.py
 	insinto /usr/$(get_libdir)/edna/templates
-	insopts -m 644
 	doins templates/*
 
 	insinto /etc/edna
-	insopts -m 644
 	doins edna.conf
 	dosym /usr/$(get_libdir)/edna/templates /etc/edna/templates
 

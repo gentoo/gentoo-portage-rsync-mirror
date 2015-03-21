@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sound</herd>
-<longdescription>
+  <herd>sound</herd>
+  <longdescription>
   Edna is Greg Stein's http streaming audio server for mp3 and ogg files.
 </longdescription>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/edna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.32 2012/09/07 22:05:49 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.33 2015/03/21 17:42:37 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> edna-0.5-r4.ebuild,
+  edna-0.6.ebuild, metadata.xml:
+  use dobin instead of exeinto /usr/bin/ && doexe; bump to EAPI=5 and new python
+  eclasses, #313947
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -113,4 +118,3 @@
   14 Dec 2003; <nerdboy@gentoo.org> edna-0.5.ebuild, metadata.xml,
   files/edna.gentoo:
   new ebuild for edna streaming audio server
-

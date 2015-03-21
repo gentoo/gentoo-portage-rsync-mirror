@@ -1,9 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.6.ebuild,v 1.6 2012/06/09 23:07:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.6.ebuild,v 1.7 2015/03/21 17:42:37 jlec Exp $
 
-EAPI=2
-inherit eutils multilib user
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils multilib user python-r1
 
 DESCRIPTION="Greg Stein's python streaming audio server for desktop or LAN use"
 HOMEPAGE="http://edna.sourceforge.net/"
@@ -14,13 +17,16 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="flac ogg"
 
-RDEPEND=">=dev-lang/python-2.5
-	flac? ( media-libs/mutagen )
-	ogg? ( dev-python/pyogg )"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
+	flac? ( media-libs/mutagen[${PYTHON_USEDEP}] )
+	ogg? ( dev-python/pyogg[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}"-SystemExit.patch \
+	epatch \
+		"${FILESDIR}/${P}"-SystemExit.patch \
 		"${FILESDIR}/${P}"-flac.patch \
 		"${FILESDIR}/${P}"-daemon.patch \
 		"${FILESDIR}/${P}"-syslog.patch
@@ -29,19 +35,19 @@ src_prepare() {
 src_install() {
 	newinitd "${FILESDIR}"/edna.gentoo edna
 
-	dodir /usr/bin /usr/$(get_libdir)/edna /usr/$(get_libdir)/edna/templates
-	exeinto /usr/bin ; newexe edna.py edna
-	exeinto /usr/$(get_libdir)/edna ; doexe ezt.py
-	exeinto /usr/$(get_libdir)/edna ; doexe MP3Info.py
-	insinto /usr/$(get_libdir)/edna/templates
-	insopts -m 644
-	doins templates/*
-	insinto /usr/$(get_libdir)/edna/resources
-	doins resources/*
+	python_foreach_impl python_newscript edna.py edna
+
+	python_scriptinto /usr/$(get_libdir)/edna
+	python_foreach_impl python_domodule ezt.py MP3Info.py
+
+	python_foreach_impl python_optimize
+
+	insinto /usr/$(get_libdir)/edna
+	doins -r templates resources
 
 	insinto /etc/edna
-	insopts -m 644
 	doins edna.conf
+
 	dosym /usr/$(get_libdir)/edna/resources /etc/edna/resources
 	dosym /usr/$(get_libdir)/edna/templates /etc/edna/templates
 

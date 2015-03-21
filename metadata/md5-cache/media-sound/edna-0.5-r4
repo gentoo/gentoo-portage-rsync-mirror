@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/python-2.5 vorbis? ( dev-python/pyogg dev-python/pyvorbis )
 SLOT=0
 SRC_URI=mirror://sourceforge/edna/edna-0.5.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=4f9423c24e53b4368aa98d728bf20917
+_md5_=da6f3b68a2a40cbe906084ae7a888202

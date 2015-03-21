@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krename
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.84 2015/02/01 15:43:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.85 2015/03/21 17:43:48 kensington Exp $
+
+  21 Mar 2015; Michael Palimaka <kensington@gentoo.org> krename-4.0.9-r3.ebuild:
+  Add missing dependency wrt bug #543282.
 
   01 Feb 2015; Michael Palimaka <kensington@gentoo.org> -krename-4.0.9.ebuild:
   Remove old.
