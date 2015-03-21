@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/ntlmaps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.21 2015/01/07 13:59:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ChangeLog,v 1.22 2015/03/21 20:34:29 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  ntlmaps-0.9.9.6-r3.ebuild:
+  Bump to new python eclasses
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org> -ntlmaps-0.9.9.6-r2.ebuild,
   metadata.xml:

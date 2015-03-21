@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.106 2015/03/07 20:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.107 2015/03/21 20:49:05 grobian Exp $
+
+  21 Mar 2015; Fabian Groffen <grobian@gentoo.org> gd-2.0.35-r4.ebuild,
+  gd-2.1.1.ebuild:
+  Install shared lib on Solaris, fix SRC_URI repoman complaint
 
   07 Mar 2015; Mike Frysinger <vapier@gentoo.org> gd-2.1.1.ebuild, metadata.xml:
   Add USE=webp to control the libvpx dep #541854 by Anthony Parsons.

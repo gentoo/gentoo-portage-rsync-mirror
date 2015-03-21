@@ -6,4 +6,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://bues.ch/b43/fwcutter/b43-fwcutter-018.tar.bz2
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=343d19de61347f5a939142340f7d481a
+_md5_=b6fde7954c8becfacd6ad299348fc168

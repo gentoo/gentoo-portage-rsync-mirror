@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile install postinst unpack
-DESCRIPTION=Fast multiple sequence alignments using partial-order graphs
-HOMEPAGE=http://bioinfo.mbi.ucla.edu/poa/
-KEYWORDS=~x86 ~amd64
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=mirror://sourceforge/poamsa/poaV2.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=a4d147a677e1f794e5142cca4a626410

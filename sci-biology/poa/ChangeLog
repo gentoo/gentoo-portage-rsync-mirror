@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/poa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/poa/ChangeLog,v 1.3 2010/09/18 16:04:00 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/poa/ChangeLog,v 1.4 2015/03/21 20:42:37 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -poa-2.ebuild, metadata.xml,
+  poa-2-r1.ebuild:
+  Drop old; BUmp EAPI; handle static-libs
 
 *poa-2-r1 (18 Sep 2010)
 
@@ -16,4 +20,3 @@
   21 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/respect-cflags.patch, +metadata.xml, +poa-2.ebuild:
   New package: Fast multiple sequence alignments using partial-order graphs.
-

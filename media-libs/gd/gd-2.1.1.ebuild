@@ -1,14 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.1.1.ebuild,v 1.3 2015/03/07 20:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.1.1.ebuild,v 1.4 2015/03/21 20:49:05 grobian Exp $
 
 EAPI="5"
 
-inherit multilib-minimal
+inherit libtool multilib-minimal
 
 DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://libgd.org/ http://www.boutell.com/gd/"
-SRC_URI="https://bitbucket.org/libgd/gd-libgd/downloads/lib${P}.tar.xz"
+SRC_URI="mirror://bitbucket/libgd/gd-libgd/downloads/lib${P}.tar.xz"
 
 LICENSE="gd IJG HPND BSD"
 SLOT="2/3"
@@ -32,6 +32,8 @@ S="${WORKDIR}/lib${P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-headers.patch" #540376
+
+	elibtoolize  # for shared library on Solaris
 }
 
 multilib_src_configure() {

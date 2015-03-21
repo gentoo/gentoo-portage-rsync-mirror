@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.64 2015/02/07 14:06:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.65 2015/03/21 20:47:33 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> eagle-4.16_p2-r2.ebuild,
+  eagle-5.11.0.ebuild, eagle-5.12.0.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe
 
   07 Feb 2015; Christian Ruppert <idl0r@gentoo.org> eagle-7.2.0.ebuild:
   Fix dependencies, bug 531746

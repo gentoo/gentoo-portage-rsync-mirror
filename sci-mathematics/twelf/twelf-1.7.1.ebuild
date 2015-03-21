@@ -1,15 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/twelf-1.7.1.ebuild,v 1.5 2014/08/10 20:24:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/twelf-1.7.1.ebuild,v 1.6 2015/03/21 20:56:43 jlec Exp $
 
 EAPI="5"
 
-inherit base elisp-common multilib
+inherit elisp-common eutils multilib
 
 MY_PN="${PN}-src"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Twelf is an implementation of the logical framework LF"
+DESCRIPTION="Implementation of the logical framework LF"
 HOMEPAGE="http://twelf.org/"
 SRC_URI="http://twelf.plparty.org/releases/${MY_P}.tar.gz"
 
@@ -17,10 +17,12 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD-2"
 IUSE="doc emacs examples"
+
 # tests reference non-existing directory TEST
 RESTRICT="test"
 
-RDEPEND="dev-lang/mlton
+RDEPEND="
+	dev-lang/mlton
 	doc? (
 		virtual/latex-base
 	)
@@ -33,16 +35,19 @@ S=${WORKDIR}/${PN}
 
 SITEFILE=50${PN}-gentoo.el
 
-PATCHES=("${FILESDIR}/${PN}-1.7.1-doc-guide-twelf-dot-texi.patch"
+PATCHES=(
+	"${FILESDIR}/${PN}-1.7.1-doc-guide-twelf-dot-texi.patch"
 	"${FILESDIR}/${PN}-1.7.1-doc-guide-Makefile.patch"
 	"${FILESDIR}/${PN}-1.7.1-emacs-twelf.patch"
 	"${FILESDIR}/${PN}-1.7.1-emacs-twelf-init.patch"
 	"${FILESDIR}/${PN}-1.7.1-Makefile.patch"
-	"${FILESDIR}/${PN}-1.7.1-mlton-mlb.patch")
+	"${FILESDIR}/${PN}-1.7.1-mlton-mlb.patch"
+	)
 
 src_prepare() {
-	base_src_prepare
-	sed -e "s@/usr/bin@${ROOT}usr/bin@g" \
+	epatch ${PYTCHES[@]}
+	sed \
+		-e "s@/usr/bin@${ROOT}usr/bin@g" \
 		-e "s@/usr/share@${ROOT}usr/share@" \
 		-i "${S}"/emacs/twelf-init.el \
 		|| die "Could not set ROOT in ${S}/emacs/twelf-init.el"
@@ -68,7 +73,6 @@ src_compile() {
 }
 
 ins_example_dir() {
-	dodir "/usr/share/${PN}/examples/${1}"
 	insinto "/usr/share/${PN}/examples/${1}"
 	pushd "${S}/${1}"
 	doins -r *
@@ -86,8 +90,7 @@ src_install() {
 		ins_example_dir examples-clp
 		ins_example_dir examples-delphin
 	fi
-	exeinto /usr/bin
-	doexe bin/twelf-server
+	dobin bin/twelf-server
 	dohtml doc/html/index.html
 	doinfo doc/guide/twelf.info
 	dodoc doc/guide/twelf.dvi doc/guide/twelf.ps doc/guide/twelf.pdf

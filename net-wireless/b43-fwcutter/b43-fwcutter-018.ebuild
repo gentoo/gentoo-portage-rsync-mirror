@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/b43-fwcutter-018.ebuild,v 1.5 2014/01/19 10:26:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/b43-fwcutter-018.ebuild,v 1.6 2015/03/21 20:39:24 jlec Exp $
 
 inherit toolchain-funcs
 
@@ -12,10 +12,7 @@ SRC_URI="http://bues.ch/b43/fwcutter/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
-
 IUSE=""
-DEPEND=""
-RDEPEND=""
 
 src_compile() {
 	MAKEOPTS+=" V=1"
@@ -24,15 +21,14 @@ src_compile() {
 
 src_install() {
 	# Install fwcutter
-	exeinto /usr/bin
-	doexe ${PN}
+	dobin ${PN}
 	doman ${PN}.1
 	dodoc README
 }
 
 pkg_postinst() {
-	einfo
+	echo
 	einfo "Firmware may be downloaded from http://linuxwireless.org."
 	einfo "This version of fwcutter works with all b43 driver versions."
-	einfo
+	echo
 }

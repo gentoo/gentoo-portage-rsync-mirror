@@ -1,21 +1,28 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/reduce-20110414-r1.ebuild,v 1.1 2011/12/22 12:23:04 grozin Exp $
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/reduce-20110414-r1.ebuild,v 1.2 2015/03/21 20:51:37 jlec Exp $
+
+EAPI=5
+
 inherit elisp-common multilib
 
 DESCRIPTION="A general-purpose computer algebra system"
-HOMEPAGE="http://reduce-algebra.sourceforge.net/
+HOMEPAGE="
+	http://reduce-algebra.sourceforge.net/
 	http://reduce-algebra.com/"
-IUSE="doc emacs gnuplot X"
 SRC_URI="mirror://sourceforge/${PN}-algebra/${PN}-src-${PV}.tar.bz2"
-LICENSE="BSD-2 X? ( LGPL-2.1 )"
-SLOT="0"
-KEYWORDS="~amd64 ~x86"
 
-RDEPEND="X? ( x11-libs/libXrandr
+SLOT="0"
+LICENSE="BSD-2 X? ( LGPL-2.1 )"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc emacs gnuplot X"
+
+RDEPEND="
+	X? (
+		x11-libs/libXrandr
 		x11-libs/libXcursor
-		x11-libs/libXft )
+		x11-libs/libXft
+		)
 	gnuplot? ( sci-visualization/gnuplot )
 	emacs? ( virtual/emacs )"
 DEPEND="${RDEPEND}"
@@ -27,7 +34,7 @@ src_configure() {
 	# Therefore, I cannot use econf here
 	# Also, make calls configure in maintainer mode in subdirs *by design*
 	# The trunk sucks less => WONTFIX until the next release
-	./configure --with-csl $(use_with X gui)
+	./configure --with-csl $(use_with X gui) || die
 	# psl build requires Internet connection at build time
 	# we cannot support it
 }
@@ -36,7 +43,7 @@ src_compile() {
 	emake -j1 STRIP=true
 
 	pushd cslbuild/*/csl/reduce.doc > /dev/null
-	rm -f *.txt *.tex
+	rm -f *.txt *.tex || die
 	popd > /dev/null
 
 	if use emacs; then
@@ -46,18 +53,17 @@ src_compile() {
 }
 
 src_test() {
-	emake -j1 testall || die "emake testall failed"
+	emake -j1 testall
 }
 
 src_install() {
 	local lib="$(get_libdir)"
 	dodoc README BUILDING DEPENDENCY_TRACKING
 	pushd bin > /dev/null
-	cp "${FILESDIR}"/redcsl "${FILESDIR}"/csl .
-	sed -e "s/lib/${lib}/" -i redcsl
-	sed -e "s/lib/${lib}/" -i csl
-	exeinto /usr/bin
-	doexe redcsl csl
+	cp "${FILESDIR}"/redcsl "${FILESDIR}"/csl . || die
+	sed -e "s/lib/${lib}/" -i redcsl || die
+	sed -e "s/lib/${lib}/" -i csl || die
+	dobin redcsl csl
 	popd > /dev/null
 
 	pushd cslbuild/*/csl > /dev/null
@@ -67,18 +73,17 @@ src_install() {
 	doins reduce.img csl.img
 	insinto /usr/share/${PN}
 	doins -r ${PN}.doc
-	mv "${D}"usr/share/${PN}/${PN}.doc "${D}"usr/share/${PN}/doc
+	mv "${D}"usr/share/${PN}/${PN}.doc "${D}"usr/share/${PN}/doc || die
 	dosym /usr/share/${PN}/doc /usr/${lib}/${PN}/${PN}.doc
 	if use X; then
 		doins -r ${PN}.fonts
-		mv "${D}"usr/share/${PN}/${PN}.fonts "${D}"usr/share/${PN}/fonts
+		mv "${D}"usr/share/${PN}/${PN}.fonts "${D}"usr/share/${PN}/fonts || die
 		dosym /usr/share/${PN}/fonts /usr/${lib}/${PN}/${PN}.fonts
 	fi
 	popd > /dev/null
 
 	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins doc/util/r38.pdf
+		dodoc doc/util/r38.pdf
 	fi
 
 	if use emacs; then

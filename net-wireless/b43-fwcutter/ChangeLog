@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/b43-fwcutter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.33 2014/07/27 02:54:59 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-fwcutter/ChangeLog,v 1.34 2015/03/21 20:39:24 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> b43-fwcutter-018.ebuild,
+  b43-fwcutter-019.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe
 
 *b43-fwcutter-019 (27 Jul 2014)
 

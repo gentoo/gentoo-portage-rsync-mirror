@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/poa/poa-2-r1.ebuild,v 1.1 2010/09/18 16:04:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/poa/poa-2-r1.ebuild,v 1.2 2015/03/21 20:42:37 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/poamsa/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="static-libs"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -28,15 +28,15 @@ src_compile() {
 	emake \
 		CC="$(tc-getCC)" \
 		OPT_CFLAGS="${CFLAGS}" \
-		poa || die "make failed"
+		poa
 }
 
 src_install() {
-	dobin "${S}"/poa "${S}"/make_pscores.pl || die
-	dolib.a "${S}"/liblpo.a || die
-	dodoc "${S}"/README "${S}"/multidom.* || die
+	dobin "${S}"/poa "${S}"/make_pscores.pl
+	use static-libs && dolib.a "${S}"/liblpo.a
+	dodoc "${S}"/README "${S}"/multidom.*
 	insinto /usr/share/poa
-	doins "${S}"/*.mat || die
+	doins "${S}"/*.mat
 }
 
 pkg_postinst() {

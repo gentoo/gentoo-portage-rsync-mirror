@@ -6,4 +6,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://berlios/bcm43xx/bcm43xx-fwcutter-006.tar.bz2
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=41451637c7a1390a9ff2ea9376c587f7
+_md5_=b18d2d8969cb8abfeb475d245e25c3f8

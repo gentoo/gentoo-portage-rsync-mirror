@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.7 2014/10/15 21:05:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.8 2015/03/21 20:47:33 jlec Exp $
 
 EAPI=5
 
@@ -58,23 +58,19 @@ MY_P=${PN}-lin-${MY_LANG}-${MY_PV}
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
-
 	unpack ${MY_P}.tgz
 	use doc && cp "${DISTDIR}"/${MANFILE} "${S}"
 
 }
 
 src_install() {
-
-	cd "${S}"
 	dodir ${INSTALLDIR}
 	# Copy all to INSTALLDIR
-	cp -r . "${D}"/${INSTALLDIR}
+	cp -r . "${D}"/${INSTALLDIR} || die
 
 	# Install wrapper (suppressing leading tabs)
 	# see bug #188368 or http://www.cadsoft.de/faq.htm#17040701
-	exeinto /usr/bin
-	newexe "${FILESDIR}/eagle_wrapper_script" eagle
+	newbin "${FILESDIR}/eagle_wrapper_script" eagle
 	# Finally, append the path of the eagle binary respecting INSTALLDIR and any
 	# arguments passed to the script (thanks Denilson)
 	echo "${INSTALLDIR}/bin/eagle" '"$@"' >> "${D}/usr/bin/eagle"
@@ -85,7 +81,7 @@ src_install() {
 	# Conditionally install the user's manual
 	use doc && cp ${MANFILE} "${D}/usr/share/doc/${PF}"
 	# Remove docs left in INSTALLDIR
-	rm -rf "${D}${INSTALLDIR}/{README,install,${MANFILE}}" "${D}${INSTALLDIR}/doc" "${D}${INSTALLDIR}/man"
+	rm -rf "${D}${INSTALLDIR}/{README,install,${MANFILE}}" "${D}${INSTALLDIR}/doc" "${D}${INSTALLDIR}/man" || die
 
 	echo -e "ROOTPATH=${INSTALLDIR}/bin\nPRELINK_PATH_MASK=${INSTALLDIR}" > "${S}/90eagle"
 	doenvd "${S}/90eagle"
@@ -97,9 +93,7 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	elog "Run \`env-update && source /etc/profile\` from within \${ROOT}"
 	elog "now to set up the correct paths."
 	elog "You must first run eagle as root to invoke product registration."
-
 }

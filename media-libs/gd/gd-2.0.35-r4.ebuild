@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.15 2014/10/11 13:40:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.16 2015/03/21 20:49:05 grobian Exp $
 
 EAPI="5"
 
