@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Unicode-UTF8
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8/ChangeLog,v 1.8 2014/10/19 03:55:22 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-UTF8/ChangeLog,v 1.9 2015/03/21 05:59:24 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org> Unicode-UTF8-0.600.0.ebuild:
+  Marked ~hppa (bug #543630).
 
   19 Oct 2014; Patrick Lauer <patrick@gentoo.org> Unicode-UTF8-0.600.0.ebuild:
   Fix header

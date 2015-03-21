@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.184 2015/03/19 02:36:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.185 2015/03/21 05:53:43 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org> sphinx-1.3.ebuild:
+  Marked ~hppa (bug #543742).
 
 *sphinx-1.3 (19 Mar 2015)
 

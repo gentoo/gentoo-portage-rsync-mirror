@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/alabaster
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/alabaster/ChangeLog,v 1.5 2015/03/20 03:42:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/alabaster/ChangeLog,v 1.6 2015/03/21 05:49:41 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org> alabaster-0.7.2.ebuild:
+  Marked ~hppa (bug #543742).
 
 *alabaster-0.7.2 (20 Mar 2015)
 
