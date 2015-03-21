@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.309 2015/01/13 08:56:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.310 2015/03/21 21:18:34 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> exim-4.84.ebuild,
+  exim-4.85.ebuild:
+  use dosbin instead of exeinto /usr/sbin/ && doexe
 
 *exim-4.85 (13 Jan 2015)
 

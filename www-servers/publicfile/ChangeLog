@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/publicfile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.32 2014/03/22 17:58:07 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/ChangeLog,v 1.33 2015/03/21 21:04:15 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> publicfile-0.52-r4.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; bump EAPI
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -publicfile-0.52-r3.ebuild:

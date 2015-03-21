@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/restart_services
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/restart_services/ChangeLog,v 1.4 2015/03/12 00:24:54 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/restart_services/ChangeLog,v 1.5 2015/03/21 21:06:13 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> restart_services-0.10.0.ebuild:
+  use dosbin instead of exeinto /usr/sbin/ && doexe
 
 *restart_services-0.10.0 (12 Mar 2015)
 

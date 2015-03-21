@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>radhermit@gentoo.org</email>
-		<name>Tim Harder</name>
-	</maintainer>
+	<herd>graphics</herd>
 	<longdescription>
 		This utility converts the native (RAW), format of various digital cameras into
 		netpbm portable pixmap (.ppm) image. Supports the following models: Canon,

@@ -1,10 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.5 2014/06/27 07:20:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.6 2015/03/21 21:23:01 jlec Exp $
 
 EAPI="2"
 
 AT_M4DIR="m4"
+
 inherit autotools eutils
 
 DESCRIPTION="User level application for IBM Mwave modem"
@@ -17,16 +18,16 @@ KEYWORDS="~amd64 x86"
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+	epatch \
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch
 	eautoreconf
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	exeinto /usr/sbin
-	doexe "${FILESDIR}/mwave-dev-handler"
+	dosbin "${FILESDIR}/mwave-dev-handler"
 
 	insinto /etc/devfs.d
 	newins "${FILESDIR}/mwave.devfs" mwave

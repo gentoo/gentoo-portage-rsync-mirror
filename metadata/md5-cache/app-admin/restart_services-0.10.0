@@ -7,4 +7,4 @@ LICENSE=GPL-3
 RDEPEND=app-admin/lib_users sys-apps/openrc
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~mschiff/src/restart_services/restart_services-0.10.0.tgz
-_md5_=a013b23f1c21f39aacb8195a60f374bf
+_md5_=a5ff18bfd04a0322984984035aec85a1

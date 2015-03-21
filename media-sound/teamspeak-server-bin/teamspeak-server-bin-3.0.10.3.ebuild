@@ -1,34 +1,30 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/teamspeak-server-bin-3.0.10.3.ebuild,v 1.1 2014/01/27 16:05:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/teamspeak-server-bin-3.0.10.3.ebuild,v 1.2 2015/03/21 21:17:13 jlec Exp $
 
 EAPI="5"
 
-inherit eutils systemd user
+inherit eutils multilib systemd user
 
-DESCRIPTION="TeamSpeak Server - Voice Communication Software"
+DESCRIPTION="Voice Communication Software - Server"
 HOMEPAGE="http://www.teamspeak.com/"
-LICENSE="teamspeak3 GPL-2"
+SRC_URI="
+	amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/teamspeak3-server_linux-amd64-${PV}.tar.gz )
+	x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/teamspeak3-server_linux-x86-${PV}.tar.gz )"
 
 SLOT="0"
+LICENSE="teamspeak3 GPL-2"
 IUSE="doc pdf tsdns"
 KEYWORDS="~amd64 ~x86"
 
 RESTRICT="installsources fetch mirror strip"
 
-SRC_URI="amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/teamspeak3-server_linux-amd64-${PV}.tar.gz )
-	x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/teamspeak3-server_linux-x86-${PV}.tar.gz )"
-
 S="${WORKDIR}/teamspeak3-server_linux-${ARCH}"
 
 pkg_nofetch() {
-	if use amd64 ; then
-		einfo "Please download teamspeak3-server_linux-amd64-${PV}.tar.gz"
-	elif use x86 ; then
-		einfo "Please download teamspeak3-server_linux-x86-${PV}.tar.gz"
-	fi
-	einfo "from ${HOMEPAGE}?page=downloads and place this"
-	einfo "file in ${DISTDIR}"
+	elog "Please download ${A}"
+	elog "from ${HOMEPAGE}?page=downloads and place this"
+	elog "file in ${DISTDIR}"
 }
 
 pkg_setup() {
@@ -44,8 +40,7 @@ src_install() {
 	# Install binary, wrapper, shell files and libraries.
 	newsbin ts3server_linux_${ARCH} ts3server-bin
 
-	exeinto /usr/sbin
-	doexe "${FILESDIR}"/ts3server
+	dosbin "${FILESDIR}"/ts3server
 
 	exeinto ${opt_dir}
 	doexe *.sh
@@ -69,8 +64,7 @@ src_install() {
 
 	# Install the runtime FS layout.
 	insinto /etc/teamspeak3-server
-	doins "${FILESDIR}"/server.conf
-	doins "${FILESDIR}"/ts3db_mysql.ini
+	doins "${FILESDIR}"/server.conf "${FILESDIR}"/ts3db_mysql.ini
 	keepdir /{etc,var/{lib,log,run}}/teamspeak3-server
 
 	# Install the init script and systemd unit.

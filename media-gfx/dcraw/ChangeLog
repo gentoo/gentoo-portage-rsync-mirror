@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.97 2015/03/08 16:59:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.99 2015/03/21 21:30:39 radhermit Exp $
+
+  21 Mar 2015; Tim Harder <radhermit@gentoo.org> -dcraw-9.17.ebuild,
+  -dcraw-9.19.ebuild, -dcraw-9.20.ebuild, -dcraw-9.21.ebuild,
+  -dcraw-9.22.ebuild, -dcraw-9.22-r1.ebuild, -dcraw-9.23.ebuild,
+  -dcraw-9.24.1.ebuild:
+  Remove old.
+
+  21 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add to graphics herd and drop myself as maintainer.
 
 *dcraw-9.24.4 (08 Mar 2015)
 

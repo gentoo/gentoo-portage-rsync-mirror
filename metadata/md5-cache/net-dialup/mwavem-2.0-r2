@@ -8,4 +8,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=ftp://www-126.ibm.com/pub/acpmodem/2.0/mwavem-2.0.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=b94f56f03a84dcd122d7f7c3ebaf05aa
+_md5_=5b2ca8c2cdcd57cb2f9deb169e09caad

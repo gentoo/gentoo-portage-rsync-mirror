@@ -1,14 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r4.ebuild,v 1.5 2014/01/14 15:34:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r4.ebuild,v 1.6 2015/03/21 21:04:15 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs user
 
 DESCRIPTION="publish files through FTP and HTTP"
 HOMEPAGE="http://cr.yp.to/publicfile.html"
-SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz
+SRC_URI="
+	http://cr.yp.to/publicfile/${P}.tar.gz
 	http://www.ohse.de/uwe/patches/${P}-filetype-diff
 	http://www.publicfile.org/ftp-ls-patch"
 
@@ -16,12 +17,14 @@ LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="selinux vanilla"
-RESTRICT="mirror bindist test"
 
-RDEPEND="virtual/daemontools
+RDEPEND="
+	virtual/daemontools
 	>=sys-apps/ucspi-tcp-0.83
 	selinux? ( sec-policy/selinux-publicfile )
 	!net-ftp/netkit-ftpd"
+
+RESTRICT="mirror bindist test"
 
 src_prepare() {
 	# verbose build log
@@ -34,7 +37,7 @@ src_prepare() {
 	use vanilla || epatch "${DISTDIR}"/ftp-ls-patch
 
 	# fix for glibc-2.3.2 errno issue
-	sed -i -e 's|extern int errno;|#include <errno.h>|' error.h
+	sed -i -e 's|extern int errno;|#include <errno.h>|' error.h || die
 
 	# fix file collision
 	sed -i configure.c \
@@ -51,10 +54,7 @@ src_configure() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	newexe ftpd publicfile-ftpd
-	newexe httpd publicfile-httpd
-	newexe configure publicfile-conf
+	newbin ftpd publicfile-ftpd httpd publicfile-httpd configure publicfile-conf
 	dodoc CHANGES README TODO
 }
 

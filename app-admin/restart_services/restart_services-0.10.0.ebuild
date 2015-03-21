@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/restart_services/restart_services-0.10.0.ebuild,v 1.1 2015/03/12 00:24:54 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/restart_services/restart_services-0.10.0.ebuild,v 1.2 2015/03/21 21:06:13 jlec Exp $
 
 EAPI=5
 
@@ -20,8 +20,7 @@ RDEPEND="
 "
 
 src_install() {
-	exeinto /usr/sbin
-	doexe restart_services
+	dosbin restart_services
 	doman restart_services.1
 	insinto /etc
 	doins restart_services.conf
