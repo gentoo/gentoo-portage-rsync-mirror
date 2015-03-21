@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/clozurecl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.13 2014/09/14 09:57:58 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/ChangeLog,v 1.14 2015/03/21 14:21:02 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> clozurecl-1.10.ebuild,
+  clozurecl-1.9_p1-r1.ebuild:
+  use esvn_clean
 
 *clozurecl-1.10 (14 Sep 2014)
 
@@ -67,4 +71,3 @@
   17 Dec 2009; Andrey Grozin <grozin@gentoo.org> +clozurecl-1.4.ebuild,
   +files/fix_user-homedir-pathname.patch, +metadata.xml:
   Initial import (from the lisp overlay)
-

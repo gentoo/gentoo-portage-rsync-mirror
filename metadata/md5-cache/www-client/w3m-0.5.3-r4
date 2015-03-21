@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/ncurses-5.2-r3 >=sys-libs/zlib-1.1.3-r2 >=dev-libs/boehm-gc-6
 SLOT=0
 SRC_URI=mirror://sourceforge/w3m/w3m-0.5.3.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=6149ffb8d542e90db741d6191eddcfc6
+_md5_=90bc25e9955805f418f132e776ca9d4c

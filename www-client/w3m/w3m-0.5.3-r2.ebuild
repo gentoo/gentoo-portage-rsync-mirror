@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r2.ebuild,v 1.7 2012/11/25 22:01:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3m/w3m-0.5.3-r2.ebuild,v 1.8 2015/03/21 14:11:35 jlec Exp $
 
 EAPI="3"
 inherit eutils
@@ -39,7 +39,7 @@ src_prepare() {
 	use vanilla || \
 		epatch "${FILESDIR}"/${PN}-0.5.3-button.patch \
 			"${FILESDIR}"/${P}-gdk-pixbuf.patch
-	find . -name CVS -type d | xargs rm -r
+	ecvs_clean
 	sed -i -e "/^AR=/s/ar/$(tc-getAR)/" {.,w3mimg,libwc}/Makefile.in || die
 }
 

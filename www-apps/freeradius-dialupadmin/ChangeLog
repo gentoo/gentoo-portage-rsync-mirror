@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/freeradius-dialupadmin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/ChangeLog,v 1.10 2010/09/11 15:05:30 mabi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/ChangeLog,v 1.11 2015/03/21 14:09:04 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  freeradius-dialupadmin-1.70.3.ebuild, metadata.xml:
+  use ecvs_clean
 
   11 Sep 2010; Matti Bickel <mabi@gentoo.org>
   freeradius-dialupadmin-1.70.3.ebuild, freeradius-dialupadmin-1.80.ebuild:
@@ -62,4 +66,3 @@
   29 Mar 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   +files/setrootpath, +freeradius-dialupadmin-1.0.2.ebuild:
   Initial version (#84070).
-

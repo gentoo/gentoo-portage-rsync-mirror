@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.70.3.ebuild,v 1.3 2010/09/11 15:05:30 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.70.3.ebuild,v 1.4 2015/03/21 14:09:04 jlec Exp $
 
 inherit eutils webapp
 MY_FREERADIUS_P="freeradius-1.1.6"
@@ -43,7 +43,7 @@ src_unpack() {
 		die "failed to replace php3 with php"
 
 	# remove cvs data
-	find . -name CVS | xargs rm -r
+	ecvs_clean
 
 	# fix dangling ../ to deal with the way webapp-config installs files
 	find . -name '*.php' | xargs sed -i \
