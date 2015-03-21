@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/which
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.58 2014/11/15 08:08:56 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/ChangeLog,v 1.59 2015/03/21 12:28:37 polynomial-c Exp $
+
+*which-2.21 (21 Mar 2015)
+
+  21 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> -which-2.19.ebuild,
+  -which-2.20.ebuild, +which-2.21.ebuild,
+  -files/which-2.19-remove-readline.patch, -files/which-gentoo.patch:
+  Version bump. Removed old.
 
   15 Nov 2014; Mike Frysinger <vapier@gentoo.org> which-2.20-r1.ebuild:
   Update HOMEPAGE/SRC_URI #515528 by Manfred Knick.
