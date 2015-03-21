@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-musicbrainz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.20 2015/03/08 23:57:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/ChangeLog,v 1.21 2015/03/21 08:37:46 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  python-musicbrainz-0.7.4-r1.ebuild:
+  Stable for HPPA (bug #540290).
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org>
   python-musicbrainz-0.7.4-r1.ebuild:

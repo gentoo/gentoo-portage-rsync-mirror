@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.94 2015/03/07 08:16:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.95 2015/03/21 08:31:49 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org> egenix-mx-base-3.2.5.ebuild:
+  Stable for HPPA (bug #540290).
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> egenix-mx-base-3.2.5.ebuild:
   ppc stable, bug 540290

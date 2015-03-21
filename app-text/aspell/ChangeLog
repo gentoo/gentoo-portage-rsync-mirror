@@ -1,6 +1,13 @@
 # ChangeLog for app-text/aspell
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.147 2014/02/11 18:00:40 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.148 2015/03/21 08:48:48 jlec Exp $
+
+*aspell-0.60.6.1-r1 (21 Mar 2015)
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> +aspell-0.60.6.1-r1.ebuild,
+  metadata.xml:
+  Bump EAPI; use pkg-config for ncurses lib detection; use dobin and
+  prune_libtool_files
 
   11 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org> -aspell-0.50.5-r4.ebuild,
   -files/aspell-0.50.5-charcount.patch,

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.112 2015/03/09 00:01:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.113 2015/03/21 08:45:36 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org> twisted-words-13.2.0.ebuild:
+  Stable for HPPA (bug #540290).
 
   09 Mar 2015; Pacho Ramos <pacho@gentoo.org> twisted-words-13.2.0.ebuild:
   x86 stable, bug 540290
