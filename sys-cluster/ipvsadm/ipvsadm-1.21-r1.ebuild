@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.20 2013/11/06 02:31:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.21 2015/03/21 22:08:57 jlec Exp $
 
 inherit linux-info
 
@@ -41,8 +41,7 @@ src_install() {
 	newinitd "${FILESDIR}"/ipvsadm-init ipvsadm || die
 	keepdir /var/lib/ipvsadm
 
-	insinto /usr/lib
-	doins libipvs/libipvs.a || die
+	dolib.a libipvs/libipvs.a || die
 
 	insinto /usr/include/ipvs
 	newins libipvs/libipvs.h ipvs.h || die

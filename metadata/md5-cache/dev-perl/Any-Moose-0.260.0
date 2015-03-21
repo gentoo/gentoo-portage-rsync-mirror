@@ -1,12 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=|| ( >=dev-perl/Mouse-0.40 dev-perl/Moose ) virtual/perl-version >=virtual/perl-ExtUtils-MakeMaker-6.31 dev-lang/perl:=[-build(-)]
-DESCRIPTION=Use Moose or Mouse modules
+DEPEND=|| ( >=dev-perl/Mouse-0.40 dev-perl/Moose ) virtual/perl-version >=virtual/perl-ExtUtils-MakeMaker-6.31 test? ( dev-perl/MouseX-Types dev-perl/Moose dev-perl/MooseX-Types ) dev-lang/perl:=[-build(-)]
+DESCRIPTION=Use Moose or Mouse modules (DEPRECATED)
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Any-Moose/
-KEYWORDS=amd64 hppa ppc x86 ~ppc-macos
+IUSE=test
+KEYWORDS=~amd64 ~x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=|| ( >=dev-perl/Mouse-0.40 dev-perl/Moose ) virtual/perl-version dev-lang/perl:=[-build(-)]
 SLOT=0
-SRC_URI=mirror://cpan/authors/id/S/SA/SARTAK/Any-Moose-0.21.tar.gz
+SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Any-Moose-0.26.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=8978dc18a38f8930c64feb04e8b6eaf8
+_md5_=59a6db34a75d3b5b8edd82f7b6893bc4

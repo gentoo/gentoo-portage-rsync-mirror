@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.10 2013/02/24 21:15:34 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1-r2.ebuild,v 1.11 2015/03/21 22:02:57 jlec Exp $
 
 inherit eutils versionator multilib autotools
 
@@ -97,8 +97,7 @@ src_install() {
 	insinto /usr/share/${PN}
 	doins db-Makefile
 
-	exeinto /usr/sbin
-	doexe "${FILESDIR}"/remake-all-db
+	dosbin "${FILESDIR}"/remake-all-db
 
 	dodoc AUTHORS COPYING* ChangeLog INSTALL NEWS README THANKS
 

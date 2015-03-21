@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/webscarab-20070504.ebuild,v 1.5 2012/03/25 07:25:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/webscarab/webscarab-20070504.ebuild,v 1.6 2015/03/21 22:10:29 jlec Exp $
+
+inherit multilib
 
 DESCRIPTION="A framework for analysing applications that communicate using the HTTP and HTTPS protocols"
 HOMEPAGE="https://www.owasp.org/index.php/Webscarab"
@@ -19,6 +21,6 @@ src_unpack() {
 
 src_install() {
 	newbin "${FILESDIR}/${PN}.sh" "${PN}" || die "dobin failed"
-	insinto /usr/lib
+	insinto /usr/$(get_libdir)
 	newins "${DISTDIR}/${A}" "${PN}.jar" || die "failed to install jar archive"
 }

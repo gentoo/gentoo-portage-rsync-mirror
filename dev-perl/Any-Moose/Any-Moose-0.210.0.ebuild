@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/Any-Moose-0.210.0.ebuild,v 1.5 2013/12/24 12:42:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/Any-Moose-0.210.0.ebuild,v 1.6 2015/03/21 22:25:20 dilfridge Exp $
 
 EAPI=5
 
@@ -19,4 +19,4 @@ RDEPEND="|| ( >=dev-perl/Mouse-0.40 dev-perl/Moose )
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-MakeMaker-6.31"
 
-SRC_TEST=do
+SRC_TEST=skip
