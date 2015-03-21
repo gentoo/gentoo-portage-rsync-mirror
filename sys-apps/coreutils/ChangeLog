@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.392 2015/02/28 20:15:19 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.393 2015/03/21 12:43:03 mgorny Exp $
+
+  21 Mar 2015; Michał Górny <mgorny@gentoo.org> coreutils-8.23.ebuild:
+  Keyword x86-fbsd, bug #507536 by nigoro.
 
   28 Feb 2015;  <tgall@gentoo.org> coreutils-8.22-r1.ebuild:
   arm64, stable
