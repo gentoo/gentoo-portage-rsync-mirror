@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.159 2014/12/28 15:53:32 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.160 2015/03/21 16:38:35 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> dspam-3.10.2-r1.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> dspam-3.10.2-r1.ebuild:
   Rename virtual/postgresql to dev-db/postgresql

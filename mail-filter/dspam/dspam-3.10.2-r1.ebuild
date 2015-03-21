@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.2-r1.ebuild,v 1.7 2014/12/28 15:53:32 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.2-r1.ebuild,v 1.8 2015/03/21 16:38:35 jlec Exp $
 
 EAPI=4
 
@@ -9,6 +9,7 @@ inherit eutils user
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 HOMEPAGE="http://dspam.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~ppc x86"
@@ -23,7 +24,6 @@ DEPEND="
 	postgres? ( dev-db/postgresql )
 	sqlite? ( dev-db/sqlite:3 )
 "
-
 RDEPEND="
 	${DEPEND}
 	clamav? ( app-antivirus/clamav )
@@ -60,29 +60,29 @@ pkg_setup() {
 
 src_configure() {
 	econf \
-	--sysconfdir=${DSPAM_CONF} \
-	--with-dspam-home=${DSPAM_HOME} \
-	--with-dspam-home-group=dspam \
-	--with-dspam-mode=${DSPAM_MODE} \
-	--with-dspam-group=dspam \
-	--with-logdir=${DSPAM_LOG} \
-	--enable-external-lookup \
-	--enable-long-usernames \
-	--enable-split-configuration \
-	$(use_enable clamav) \
-	$(use_enable daemon) \
-	$(use_enable debug) \
-	$(use_enable debug bnr-debug) \
-	$(use_enable debug verbose-debug) \
-	$(use_enable domain-scale) \
-	$(use_enable large-scale) \
-	$(use_enable static-libs static) \
-	$(use_enable syslog) \
-	$(use_enable user-homedirs homedir) \
-	$(use_enable virtual-users) \
-	--with-storage-driver=${DSPAM_DRIVERS} ${DSPAM_DRIVERS_EXTRAS} \
-	$(use mysql || use postgres && echo "--enable-preferences-extension") \
-	$(use syslog || echo "--with-logfile=${DSPAM_LOG}/dspam.log")
+		--sysconfdir=${DSPAM_CONF} \
+		--with-dspam-home=${DSPAM_HOME} \
+		--with-dspam-home-group=dspam \
+		--with-dspam-mode=${DSPAM_MODE} \
+		--with-dspam-group=dspam \
+		--with-logdir=${DSPAM_LOG} \
+		--enable-external-lookup \
+		--enable-long-usernames \
+		--enable-split-configuration \
+		$(use_enable clamav) \
+		$(use_enable daemon) \
+		$(use_enable debug) \
+		$(use_enable debug bnr-debug) \
+		$(use_enable debug verbose-debug) \
+		$(use_enable domain-scale) \
+		$(use_enable large-scale) \
+		$(use_enable static-libs static) \
+		$(use_enable syslog) \
+		$(use_enable user-homedirs homedir) \
+		$(use_enable virtual-users) \
+		--with-storage-driver=${DSPAM_DRIVERS} ${DSPAM_DRIVERS_EXTRAS} \
+		$(use mysql || use postgres && echo "--enable-preferences-extension") \
+		$(use syslog || echo "--with-logfile=${DSPAM_LOG}/dspam.log")
 }
 
 dspam_setup_user() {
@@ -178,8 +178,7 @@ src_install() {
 		doins "${T}/msgtag.${i}"
 	done
 
-	exeinto /usr/bin
-	newexe contrib/dspam_maintenance/dspam_maintenance.sh dspam_maintenance
+	newbin contrib/dspam_maintenance/dspam_maintenance.sh dspam_maintenance
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}/dspam.cron-r4" dspam
 

@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.43 2015/03/07 21:08:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.44 2015/03/21 16:42:19 blueness Exp $
+
+*musl-1.1.7 (21 Mar 2015)
+
+  21 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.7.ebuild:
+  Version bump.  Add sym link for ldd.
 
   07 Mar 2015; Anthony G. Basile <blueness@gentoo.org> musl-9999.ebuild:
   Provide a sym link to ld.so for ldd.  Bug #542026.

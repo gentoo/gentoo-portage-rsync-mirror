@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/milter-regex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.14 2014/03/02 08:05:32 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.15 2015/03/21 16:41:53 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -milter-regex-1.7-r2.ebuild,
+  -milter-regex-1.8.ebuild, milter-regex-1.9.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; drop old
 
   02 Mar 2014; Agostino Sarubbo <ago@gentoo.org> milter-regex-1.9.ebuild:
   Stable for x86, wrt bug #462828

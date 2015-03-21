@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.9.ebuild,v 1.3 2014/03/02 08:05:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.9.ebuild,v 1.4 2015/03/21 16:41:53 jlec Exp $
 
 EAPI=4
 
@@ -24,12 +24,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" -f Makefile.linux milter-regex || die "emake failed"
+	emake CC="$(tc-getCC)" -f Makefile.linux milter-regex
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe milter-regex
+	dobin milter-regex
 
 	keepdir /var/run/milter-regex
 
@@ -55,7 +54,7 @@ pkg_preinst() {
 pkg_postinst() {
 	elog "If you're using Sendmail, you'll need to add this to your sendmail.mc:"
 	elog "  INPUT_MAIL_FILTER(\`milter-regex', \`S=unix:/var/run/milter-regex/milter-regex.sock, T=S:30s;R:2m')"
-	elog
+	echo
 	elog "If you are using Postfix, you'll need to add this to your main.cf:"
 	elog "  smtpd_milters     = unix:/var/run/milter-regex/milter-regex.sock"
 	elog "  non_smtpd_milters = unix:/var/run/milter-regex/milter-regex.sock"

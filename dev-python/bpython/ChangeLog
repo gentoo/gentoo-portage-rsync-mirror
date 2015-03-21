@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.53 2015/03/08 23:40:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.54 2015/03/21 16:50:05 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> bpython-0.13.1.ebuild,
+  bpython-0.13.2.ebuild:
+  Add missing dependency on dev-python/requests, #543764
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> bpython-0.13.2.ebuild:
   x86 stable, bug 540290
