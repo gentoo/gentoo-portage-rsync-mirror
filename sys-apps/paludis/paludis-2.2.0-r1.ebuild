@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.2.0-r1.ebuild,v 1.1 2015/03/21 12:31:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.2.0-r1.ebuild,v 1.2 2015/03/21 15:37:58 mgorny Exp $
 
 EAPI=5
 
@@ -136,7 +136,7 @@ src_test() {
 		local -x PALUDIS_REDUCED_GID=0
 	fi
 
-	if ! nonfatal emake check ; then
+	if ! nonfatal emake -k check ; then
 		eerror "Tests failed. Looking for files for you to add to your bug report..."
 		find "${S}" -type f -name '*.epicfail' -or -name '*.log' | while read a ; do
 			eerror "    $a"

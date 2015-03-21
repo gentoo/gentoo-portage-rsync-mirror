@@ -1,0 +1,13 @@
+DEFINED_PHASES=install prepare setup
+DEPEND=>=dev-lang/tk-8.3.4:0= >=dev-python/pmw-1.2:0
+DESCRIPTION=Nice and powerful spanish development environment for Python
+EAPI=5
+HOMEPAGE=http://www3.uji.es/~dllorens/PythonG/principal.html
+IUSE=doc python_targets_python2_7
+KEYWORDS=~amd64 ~ia64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/tk-8.3.4:0= >=dev-python/pmw-1.2:0
+SLOT=0
+SRC_URI=http://www3.uji.es/~dllorens/downloads/pythong/linux/pythonG-2_1_5.tgz doc? ( http://marmota.act.uji.es/MTP/pdf/python.pdf )
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a9825781ce17f742654908a6ef0f007f	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=1d91835c5670924b4054642f376772b5
