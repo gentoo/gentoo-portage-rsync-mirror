@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.21.ebuild,v 1.11 2015/03/10 20:47:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/gtk-doc-am-1.21.ebuild,v 1.12 2015/03/21 16:30:42 jlec Exp $
 
 EAPI=5
 GNOME_ORG_MODULE="gtk-doc"
@@ -43,9 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	fperms +x gtkdoc-rebase
-	exeinto /usr/bin/
-	doexe gtkdoc-rebase
+	dobin gtkdoc-rebase
 
 	insinto /usr/share/aclocal
 	doins gtk-doc.m4

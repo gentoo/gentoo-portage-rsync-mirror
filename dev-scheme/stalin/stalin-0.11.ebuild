@@ -1,41 +1,37 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stalin/stalin-0.11.ebuild,v 1.4 2014/08/10 21:26:00 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/stalin/stalin-0.11.ebuild,v 1.5 2015/03/21 16:25:50 jlec Exp $
+
+EAPI=5
 
 inherit eutils
 
 DESCRIPTION="An aggressively optimizing Scheme compiler"
 HOMEPAGE="http://community.schemewiki.org/?Stalin"
 SRC_URI="ftp://ftp.ecn.purdue.edu/qobi/${P}.tgz"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RESTRICT="strip"
+
 RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e 's/-O3 -fomit-frame-pointer/$(CFLAGS)/' makefile
-}
+RESTRICT="strip"
 
-pkg_setup() {
-	ewarn "Stalin is an ugly beast, which will eat all your memory and stress your"
-	ewarn "processor to levels you have never experienced. If you want to abort,"
-	ewarn "please do it now. You have been warned."
+src_prepare() {
+	sed -i -e "s/-O3 -fomit-frame-pointer/${CFLAGS}/" makefile  || die
 }
 
 src_compile() {
-	einfo "Beginning of stalin's compilation process. It may take several minutes."
 	./build || die "Stalin's compilation failed"
 }
 
 src_test() {
 	einfo "This may take REALLY much time and requires"
 	einfo "possibly more than 2Gb of RAM+swap."
-	cd benchmarks
+	cd benchmarks || die
 	./compile-and-run-stalin-old-benchmarks || die "old benchmarks failed"
 	#./compile-and-run-stalin-bcl-benchmarks || die "bcl bechmarks failed"
 	#./compile-and-run-stalin-fdlcc-benchmarks || die "fdlcc benchmarks failed"
@@ -43,32 +39,28 @@ src_test() {
 
 src_install() {
 	pushd include
-		dodir /usr/include/${PN}
-		insinto /usr/include/${PN}
-		doins gc.h gc_config_macros.h
-		dodir /usr/lib/${PN}
-		insinto /usr/lib/${PN}
-		doins libgc.a libstalin.a stalin stalin-architecture-name \
+	doheader gc.h gc_config_macros.h
+	insinto /usr/lib/${PN}
+	doins \
+		libgc.a libstalin.a stalin stalin-architecture-name \
 		stalin.architectures QobiScheme.sc xlib.sc xlib-original.sc \
 		Scheme-to-C-compatibility.sc
-		fperms 755 /usr/lib/${PN}/stalin \
-		/usr/lib/${PN}/stalin-architecture-name
+	fperms 755 /usr/lib/${PN}/stalin /usr/lib/${PN}/stalin-architecture-name
 	popd
-(
-cat <<'EOF'
-#!/bin/bash
 
-exec /usr/lib/stalin/stalin -I /usr/include/stalin \
--I /usr/lib/stalin -copt -fno-strict-aliasing $@
+	cat > stalin  <<- EOF
+	#!/bin/bash
 
-EOF
-) > stalin
-	exeinto /usr/bin
-	doexe stalin
+	exec /usr/lib/stalin/stalin -I /usr/include/stalin \
+		-I /usr/lib/stalin -copt -fno-strict-aliasing $@
+
+	EOF
+
+	dobin stalin
 	doman stalin.1
 	dodoc ANNOUNCEMENT MORE README
 	pushd benchmarks
-		sed -i -e 's/..\/stalin/stalin/' make-hello
+		sed -i -e 's/..\/stalin/stalin/' make-hello || die
 		dodoc hello.sc make-hello
 	popd
 }
