@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.50-r1.ebuild,v 1.13 2014/07/17 14:28:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.50-r1.ebuild,v 1.14 2015/03/21 13:28:47 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,7 +26,7 @@ src_unpack() {
 			-e "s: -O2 : ${CFLAGS} :" \
 			-e "s:gcc :$(tc-getCC) :" \
 			-e "s:\( -o ../snortsam\): ${LDFLAGS}\1:" makesnortsam.sh || die "sed failed"
-	find "${S}" -depth -type d -name CVS -exec rm -rf \{\} \;
+		ecvs_clean
 }
 
 src_compile() {

@@ -1,8 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.70.ebuild,v 1.6 2014/07/17 14:31:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/snortsam-2.70.ebuild,v 1.7 2015/03/21 13:28:47 jlec Exp $
 
 EAPI=5
+
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Snort plugin that allows automated blocking of IP addresses on several firewalls"
@@ -18,8 +19,7 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-
-	find "${S}" -depth -type d -name CVS -exec rm -rf \{\} \;
+	ecvs_clean
 }
 
 src_configure() {
@@ -38,9 +38,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
+	echo
 	elog "To use snortsam with snort, you'll have to compile snort with USE=snortsam."
 	elog "Read the INSTALL file to configure snort for snortsam, and configure"
 	elog "snortsam for your particular firewall."
-	elog
+	echo
 }

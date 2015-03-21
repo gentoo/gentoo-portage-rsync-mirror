@@ -1,6 +1,16 @@
 # ChangeLog for sys-process/audit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.104 2014/09/15 08:24:25 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.105 2015/03/21 13:19:16 polynomial-c Exp $
+
+*audit-2.4.1 (21 Mar 2015)
+
+  21 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> -audit-1.7.4.ebuild,
+  -audit-1.7.17.ebuild, -audit-2.1.3.ebuild, -audit-2.2.2.ebuild,
+  -audit-2.2.2-r1.ebuild, +audit-2.4.1.ebuild, -files/auditd-init.d-1.2.3,
+  -files/audit-1.5.4-build.patch, -files/audit-1.5.4-swig-gcc-attribute.patch,
+  -files/audit-1.6.8-subdirs-fix.patch, -files/audit-1.7.4-glibc212.patch,
+  -files/audit-1.7.4-python.patch, +files/audit-2.4.1-python.patch:
+  Version bump. Removed old.
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> audit-2.2.2-r2.ebuild:
   Stable for sparc, wrt bug #512012

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.3.ebuild,v 1.2 2015/01/08 09:41:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.4.ebuild,v 1.1 2015/03/21 13:19:27 gurligebis Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~x86"
 IUSE="ipv6 logwatch netlink sqlite +ssl +wps +crda"
 
-DEPEND="ssl? ( dev-libs/openssl )
+DEPEND="ssl? ( dev-libs/openssl[-bindist] )
 	kernel_linux? (
 		dev-libs/libnl:3
 		crda? ( net-wireless/crda )
@@ -28,6 +28,8 @@ RDEPEND="${DEPEND}"
 S="${S}/${PN}"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-hlr_auc_gw-openssl.patch"
+
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		"${S}/hostapd.conf" || die
 }
@@ -40,6 +42,7 @@ src_configure() {
 
 	# EAP authentication methods
 	echo "CONFIG_EAP=y" >> ${CONFIG}
+	echo "CONFIG_ERP=y" >> ${CONFIG}
 	echo "CONFIG_EAP_MD5=y" >> ${CONFIG}
 
 	if use ssl; then
