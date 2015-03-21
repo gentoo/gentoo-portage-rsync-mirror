@@ -1,6 +1,13 @@
 # ChangeLog for app-text/getxbook
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/getxbook/ChangeLog,v 1.5 2014/08/06 07:09:33 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/getxbook/ChangeLog,v 1.6 2015/03/21 09:25:25 jlec Exp $
+
+*getxbook-1.0-r1 (21 Mar 2015)
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> +getxbook-1.0-r1.ebuild,
+  -getxbook-1.0.ebuild, files/getxbook-1.0.patch, metadata.xml:
+  Bump EAPI; respect CC and use LDFLAGS correctly for as-needed; use dobin
+  instead of exeinto && doexe
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> getxbook-1.0.ebuild:
   Make description more repoman-happy

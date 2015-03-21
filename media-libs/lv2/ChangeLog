@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lv2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.10 2015/01/03 11:39:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lv2/ChangeLog,v 1.11 2015/03/21 09:27:14 mgorny Exp $
+
+*lv2-1.10.0-r1 (21 Mar 2015)
+
+  21 Mar 2015; Michał Górny <mgorny@gentoo.org> +lv2-1.10.0-r1.ebuild:
+  EAPI bump, bug #543170.
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> lv2-1.10.0.ebuild,
   lv2-1.8.0.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyelftools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.31 2015/02/14 04:45:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.32 2015/03/21 09:05:48 mgorny Exp $
+
+*pyelftools-0.23-r1 (21 Mar 2015)
+
+  21 Mar 2015; Michał Górny <mgorny@gentoo.org> +pyelftools-0.23-r1.ebuild:
+  EAPI bump, bug #543158.
 
   14 Feb 2015; Mike Frysinger <vapier@gentoo.org> pyelftools-0.22.ebuild:
   Mark alpha/arm64/ia64/m68k/s390/sh stable #530556.

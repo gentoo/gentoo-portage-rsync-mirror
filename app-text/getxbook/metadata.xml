@@ -12,7 +12,7 @@
     barnes and noble's "book viewer",
     optionally using tesseract to produce OCRed pdf or djvu.
   </longdescription>
-<use>
-  <flag name='ocr'>Use <pkg>app-text/tesseract</pkg> for optical character recognition</flag>
-</use>
+  <use>
+    <flag name="ocr">Use <pkg>app-text/tesseract</pkg> for optical character recognition</flag>
+  </use>
 </pkgmetadata>

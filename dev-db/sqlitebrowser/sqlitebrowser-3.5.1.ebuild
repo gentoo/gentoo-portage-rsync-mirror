@@ -1,8 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.5.1.ebuild,v 1.2 2015/03/21 08:30:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.5.1.ebuild,v 1.3 2015/03/21 09:20:34 jlec Exp $
 
 EAPI=5
+
+CMAKE_MAKEFILE_GENERATOR=ninja
 
 inherit eutils cmake-utils
 
@@ -13,7 +15,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3 MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="qt4 qt5"
+IUSE="qt4 qt5 test"
 
 REQUIRED_USE="^^ ( qt4 qt5 )"
 
@@ -34,7 +36,7 @@ DEPEND="
 		)"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.3.1-unbundle.patch )
+PATCHES=( "${FILESDIR}"/${P}-unbundle.patch )
 
 src_prepare() {
 	# https://github.com/qingfengxia/qhexedit still bundled
@@ -43,15 +45,24 @@ src_prepare() {
 }
 
 src_configure() {
-	# Wait for unmask
 	local mycmakeargs=(
 		$(cmake-utils_use_use qt5)
 	)
 	cmake-utils_src_configure
+	if use test; then
+		BUILD_DIR="${S}"/tests CMAKE_USE_DIR="${S}"/tests cmake-utils_src_configure
+	fi
+}
+
+src_compile() {
+	cmake-utils_src_compile
+	if use test; then
+		BUILD_DIR="${S}"/tests CMAKE_USE_DIR="${S}"/tests cmake-utils_src_compile
+	fi
 }
 
 src_test() {
-	ls -l sqlb-unittests
+	tests/sqlb-unittests || die
 }
 
 src_install() {
