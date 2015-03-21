@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.5 2015/03/20 07:53:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0-r1.ebuild,v 1.6 2015/03/21 18:45:40 jlec Exp $
 
 EAPI=5
 
@@ -103,11 +103,10 @@ src_install() {
 		doins "${FILESDIR}/freevo.desktop"
 	fi
 
-	exeinto /usr/bin
-	newexe "${FILESDIR}"/${PN}-1.8.2.boot freevoboot
+	newbin "${FILESDIR}"/${PN}-1.8.2.boot freevoboot
 	newconfd "${FILESDIR}/freevo.conf" freevo
 
-	rm -rf "${D}/usr/share/doc"
+	rm -rf "${D}/usr/share/doc" || die
 
 	dodoc ChangeLog FAQ RELEASE_NOTES README TODO \
 		Docs/{CREDITS,NOTES,*.txt,plugins/*.txt}
@@ -117,7 +116,7 @@ src_install() {
 	use nls || rm -rf "${D}"/usr/share/locale
 
 	# Create a default freevo setup
-	cd "${S}/src"
+	cd "${S}/src" || die
 	if [ "${PROFILE_ARCH}" == "xbox" ]; then
 		myconf="${myconf} --geometry=640x480 --display=x11"
 	elif use matrox && use directfb; then

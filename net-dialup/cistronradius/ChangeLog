@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/cistronradius
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/ChangeLog,v 1.21 2014/08/10 20:55:30 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/ChangeLog,v 1.22 2015/03/21 18:56:12 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -cistronradius-1.6.8.ebuild,
+  cistronradius-1.6.8-r1.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; drop old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   cistronradius-1.6.8.ebuild:

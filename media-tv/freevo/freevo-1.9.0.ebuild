@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.20 2014/12/12 23:23:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.21 2015/03/21 18:45:40 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -96,8 +96,7 @@ src_install() {
 		doins "${FILESDIR}/freevo.desktop"
 	fi
 
-	exeinto /usr/bin
-	newexe "${FILESDIR}"/${PN}-1.8.2.boot freevoboot
+	newbin "${FILESDIR}"/${PN}-1.8.2.boot freevoboot
 	newconfd "${FILESDIR}/freevo.conf" freevo
 
 	rm -rf "${D}/usr/share/doc"

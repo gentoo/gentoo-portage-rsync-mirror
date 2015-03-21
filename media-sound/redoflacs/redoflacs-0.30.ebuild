@@ -1,8 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/redoflacs/redoflacs-0.30.ebuild,v 1.1 2014/10/08 08:50:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/redoflacs/redoflacs-0.30.ebuild,v 1.2 2015/03/21 18:33:50 jlec Exp $
 
 EAPI=5
+
 inherit readme.gentoo vcs-snapshot
 
 DESCRIPTION="Bash commandline flac compressor, verifier, organizer, analyzer, retagger"
@@ -15,12 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=app-shells/bash-4
+RDEPEND="
+	>=app-shells/bash-4
 	media-libs/flac
 	sys-apps/coreutils"
 
 src_install() {
-	exeinto /usr/bin
-	doexe redoflacs
+	dobin redoflacs
 	readme.gentoo_create_doc
 }

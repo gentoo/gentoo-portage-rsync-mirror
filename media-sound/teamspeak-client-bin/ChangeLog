@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.38 2015/01/15 16:41:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.39 2015/03/21 18:41:22 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  teamspeak-client-bin-3.0.13.1.ebuild, teamspeak-client-bin-3.0.16.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; make ebuild layout more
+  readable; use elog if apropriate; fix ebuild layout
 
 *teamspeak-client-bin-3.0.16 (15 Jan 2015)
 

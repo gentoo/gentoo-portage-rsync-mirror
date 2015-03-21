@@ -10,4 +10,4 @@ RDEPEND=dev-python/beautifulsoup:python-2 virtual/python-imaging dev-python/pyga
 SLOT=0
 SRC_URI=mirror://sourceforge/freevo/freevo-1.9.0.tar.gz
 _eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	cd022f89fef846d083fc994b9e3d8c04	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=d219cc516f37109d33453973aad2a25a
+_md5_=a66d1454d493fe00aebca5c8b0f0c92b

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.13.1.ebuild,v 1.1 2013/11/09 18:44:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/teamspeak-client-bin-3.0.13.1.ebuild,v 1.2 2015/03/21 18:41:22 jlec Exp $
 
 EAPI="5"
 
@@ -8,37 +8,34 @@ inherit eutils unpacker
 
 DESCRIPTION="TeamSpeak Client - Voice Communication Software"
 HOMEPAGE="http://www.teamspeak.com/"
-LICENSE="teamspeak3"
+SRC_URI="
+	amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/TeamSpeak3-Client-linux_amd64-${PV/_/-}.run )
+	x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/TeamSpeak3-Client-linux_x86-${PV/_/-}.run )"
 
+LICENSE="teamspeak3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-RESTRICT="fetch mirror strip"
 IUSE="alsa pulseaudio"
 
 REQUIRED_USE="|| ( alsa pulseaudio )"
 
-SRC_URI="amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/TeamSpeak3-Client-linux_amd64-${PV/_/-}.run )
-	x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/${PV}/TeamSpeak3-Client-linux_x86-${PV/_/-}.run )"
-
-RDEPEND="dev-qt/qtcore:4
+RDEPEND="
+	dev-qt/qtcore:4
 	dev-qt/qtgui:4[accessibility,xinerama]
 	dev-qt/qtsql:4
 	sys-libs/glibc
 	sys-libs/zlib
-
 	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )"
+
+RESTRICT="fetch mirror strip"
 
 S="${WORKDIR}"
 
 pkg_nofetch() {
-	if use amd64 ; then
-		einfo "Please download TeamSpeak3-Client-linux_amd64-${PV/_/-}.run"
-	elif use x86 ; then
-		einfo "Please download TeamSpeak3-Client-linux_x86-${PV/_/-}.run"
-	fi
-	einfo "from ${HOMEPAGE}?page=downloads and place this"
-	einfo "file in ${DISTDIR}"
+	elog "Please download ${A}"
+	elog "from ${HOMEPAGE}?page=downloads and place this"
+	elog "file in ${DISTDIR}"
 }
 
 src_prepare() {
@@ -59,14 +56,12 @@ src_prepare() {
 }
 
 src_install() {
-	dodir /opt/teamspeak3-client
 	insinto /opt/teamspeak3-client
 	doins -r *
 
 	fperms +x /opt/teamspeak3-client/ts3client
 
-	exeinto /usr/bin
-	doexe "${FILESDIR}/teamspeak3"
+	dobin "${FILESDIR}/teamspeak3"
 
 	make_desktop_entry teamspeak3 TeamSpeak3 \
 		"/opt/teamspeak3-client/pluginsdk/docs/client_html/images/logo.png" \

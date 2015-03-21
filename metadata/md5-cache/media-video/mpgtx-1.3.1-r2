@@ -1,9 +1,10 @@
-DEFINED_PHASES=compile install
-DESCRIPTION=mpgtx a command line MPEG audio/video/system file toolbox
+DEFINED_PHASES=configure install prepare
+DESCRIPTION=Command line MPEG audio/video/system file toolbox
+EAPI=5
 HOMEPAGE=http://mpgtx.sourceforge.net/
-KEYWORDS=amd64 ~ppc x86
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/mpgtx/mpgtx-1.3.1.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=e76814340bfa8a0c1609cd0b59e8c02e
+_md5_=03949bf51401364142d2e6f0ed78437f

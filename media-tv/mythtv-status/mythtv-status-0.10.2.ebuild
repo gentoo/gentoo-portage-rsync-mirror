@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv-status/mythtv-status-0.10.2.ebuild,v 1.1 2013/02/16 22:38:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv-status/mythtv-status-0.10.2.ebuild,v 1.2 2015/03/21 18:45:47 jlec Exp $
 
 EAPI=5
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-perl/libwww-perl
+DEPEND="
+	dev-perl/libwww-perl
 	dev-perl/XML-LibXML
 	dev-perl/DateManip
 	dev-perl/MIME-tools
@@ -32,7 +33,6 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe bin/mythtv-status
+	dobin bin/mythtv-status
 	doman "${FILESDIR}/mythtv-status.1"
 }

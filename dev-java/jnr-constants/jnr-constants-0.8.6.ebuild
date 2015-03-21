@@ -1,20 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/jnr-constants-0.8.5.ebuild,v 1.4 2015/03/21 18:37:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/jnr-constants-0.8.6.ebuild,v 1.1 2015/03/21 18:37:49 monsieurp Exp $
 
 EAPI="5"
 
 JAVA_PKG_IUSE="doc source test"
 
-inherit java-pkg-2 java-ant-2 vcs-snapshot
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A set of platform constants (e.g. errno values)"
 HOMEPAGE="https://github.com/jnr/jnr-constants"
-SRC_URI="https://github.com/jnr/${PN}/tarball/${PV} -> ${P}.tar.gz"
+# SRC_URI="https://github.com/jnr/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/jnr/${PN}/archive/${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-3 )"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=virtual/jre-1.5"
@@ -25,6 +26,8 @@ DEPEND="
 		dev-java/ant-junit:0
 		>=dev-java/junit-4.8:4
 	)"
+
+S="${WORKDIR}/${PN}-${P}"
 
 java_prepare() {
 	cp "${FILESDIR}"/${PN}_maven-build.xml build.xml || die
