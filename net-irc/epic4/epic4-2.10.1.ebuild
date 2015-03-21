@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.1.ebuild,v 1.7 2012/12/23 20:12:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.10.1.ebuild,v 1.8 2015/03/21 13:40:29 jlec Exp $
 
 EAPI=4
 
@@ -10,7 +10,8 @@ HELP_V="20050315"
 
 DESCRIPTION="Epic4 IRC Client"
 HOMEPAGE="http://epicsol.org/"
-SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
+SRC_URI="
+	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
 	ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-${HELP_V}.tar.gz
 	mirror://gentoo/epic4-local.bz2"
 
@@ -19,20 +20,22 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="ipv6 perl ssl"
 
-DEPEND=">=sys-libs/ncurses-5.2
+DEPEND="
+	>=sys-libs/ncurses-5.2
 	perl? ( dev-lang/perl )
-	ssl? ( >=dev-libs/openssl-0.9.5 )"
+	ssl? ( >=dev-libs/openssl-0.9.5:0 )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/epic-defaultserver.patch \
+	epatch \
+		"${FILESDIR}"/epic-defaultserver.patch \
 		"${FILESDIR}"/${P}-make-recursion.patch \
 		"${FILESDIR}"/${P}-perl.patch
 
 	eautoconf
 
 	rm -f "${WORKDIR}"/help/Makefile || die
-	find "${WORKDIR}"/help -type d -name CVS -print0 | xargs -0 rm -r
+	ecvs_clean
 }
 
 src_configure() {
@@ -57,7 +60,7 @@ src_install () {
 		sharedir="${ED}"/usr/share \
 		libexecdir="${ED}"/usr/libexec/${PN}
 
-	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
+	dodoc BUG_FORM README KNOWNBUGS VOTES
 
 	cd "${S}"/doc || die
 	docinto doc
@@ -65,8 +68,8 @@ src_install () {
 		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
 		nicknames outputhelp SILLINESS TS4
 
-	insinto /usr/share/epic/help
-	doins -r "${WORKDIR}"/help/*
+	insinto /usr/share/epic
+	doins -r "${WORKDIR}"/help
 }
 
 pkg_postinst() {

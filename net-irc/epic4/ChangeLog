@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/epic4
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.95 2012/12/23 20:12:41 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.96 2015/03/21 13:40:29 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -epic4-2.10.ebuild,
+  epic4-2.10.1.ebuild:
+  use ecvs_clean; drop old
 
   23 Dec 2012; Ulrich Müller <ulm@gentoo.org> epic4-2.10.ebuild,
   epic4-2.10.1.ebuild:
@@ -399,4 +403,3 @@
  
   13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
-

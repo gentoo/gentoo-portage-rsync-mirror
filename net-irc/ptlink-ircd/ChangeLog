@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ptlink-ircd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.16 2014/08/10 20:53:43 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.17 2015/03/21 13:55:32 jlec Exp $
+
+*ptlink-ircd-6.19.6-r2 (21 Mar 2015)
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> +ptlink-ircd-6.19.6-r2.ebuild,
+  ptlink-ircd-6.19.6-r1.ebuild:
+  use ecvs_clean; Bump to EAPI=5
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   ptlink-ircd-6.19.6-r1.ebuild:

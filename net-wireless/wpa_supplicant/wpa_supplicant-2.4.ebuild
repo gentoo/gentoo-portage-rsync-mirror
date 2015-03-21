@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.3.ebuild,v 1.3 2014/11/02 09:40:03 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.4.ebuild,v 1.1 2015/03/21 13:32:11 gurligebis Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs qt4-r2 systemd multilib
 
@@ -12,8 +12,8 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="ap dbus gnutls eap-sim fasteap p2p ps3 qt4 readline selinux smartcard ssl wimax wps kernel_linux kernel_FreeBSD"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="ap dbus gnutls eap-sim fasteap +hs2-0 p2p ps3 qt4 readline selinux smartcard ssl tdls uncommon-eap-types wimax wps kernel_linux kernel_FreeBSD"
 REQUIRED_USE="fasteap? ( !gnutls !ssl ) smartcard? ( ssl )"
 
 CDEPEND="dbus? ( sys-apps/dbus )
@@ -30,9 +30,9 @@ CDEPEND="dbus? ( sys-apps/dbus )
 	)
 	readline? (
 		sys-libs/ncurses
-		sys-libs/readline
+		sys-libs/readline:0
 	)
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0 )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )
 "
@@ -44,6 +44,23 @@ RDEPEND="${CDEPEND}
 "
 
 S="${WORKDIR}/${P}/${PN}"
+
+Kconfig_style_config() {
+		#param 1 is CONFIG_* item
+		#param 2 is what to set it = to, defaulting in y
+		CONFIG_PARAM="${CONFIG_HEADER:-CONFIG_}$1"
+		setting="${2:-y}"
+
+		if [ ! $setting = n ]; then
+			#first remove any leading "# " if $2 is not n
+			sed -i "/^# *$CONFIG_PARAM=/s/^# *//" .config || echo "Kconfig_style_config error uncommenting $CONFIG_PARAM"
+			#set item = $setting (defaulting to y)
+			sed -i "/^$CONFIG_PARAM/s/=.*/=$setting/" .config || echo "Kconfig_style_config error setting $CONFIG_PARAM=$setting"
+		else
+			#ensure item commented out
+			sed -i "/^$CONFIG_PARAM/s/$CONFIG_PARAM/# $CONFIG_PARAM/" .config || echo "Kconfig_style_config error commenting $CONFIG_PARAM"
+		fi
+}
 
 pkg_setup() {
 	if use gnutls && use ssl ; then
@@ -103,126 +120,151 @@ src_configure() {
 	# Toolchain setup
 	tc-export CC
 
+	cp defconfig .config
+
 	# Basic setup
-	echo "CONFIG_CTRL_IFACE=y" >> .config
-	echo "CONFIG_BACKEND=file" >> .config
-	echo "CONFIG_IBSS_RSN=y"   >> .config
+	Kconfig_style_config CTRL_IFACE
+	Kconfig_style_config BACKEND file
+	Kconfig_style_config IBSS_RSN
+	Kconfig_style_config IEEE80211W
+	Kconfig_style_config IEEE80211R
 
 	# Basic authentication methods
 	# NOTE: we don't set GPSK or SAKE as they conflict
 	# with the below options
-	echo "CONFIG_EAP_GTC=y"         >> .config
-	echo "CONFIG_EAP_MD5=y"         >> .config
-	echo "CONFIG_EAP_OTP=y"         >> .config
-	echo "CONFIG_EAP_PAX=y"         >> .config
-	echo "CONFIG_EAP_PSK=y"         >> .config
-	echo "CONFIG_EAP_TLV=y"         >> .config
-	echo "CONFIG_EAP_EXE=y"         >> .config
-	echo "CONFIG_IEEE8021X_EAPOL=y" >> .config
-	echo "CONFIG_PKCS12=y"          >> .config
-	echo "CONFIG_PEERKEY=y"         >> .config
-	echo "CONFIG_EAP_LEAP=y"        >> .config
-	echo "CONFIG_EAP_MSCHAPV2=y"    >> .config
-	echo "CONFIG_EAP_PEAP=y"        >> .config
-	echo "CONFIG_EAP_TLS=y"         >> .config
-	echo "CONFIG_EAP_TTLS=y"        >> .config
+	Kconfig_style_config EAP_GTC
+	Kconfig_style_config EAP_MD5
+	Kconfig_style_config EAP_OTP
+	Kconfig_style_config EAP_PAX
+	Kconfig_style_config EAP_PSK
+	Kconfig_style_config EAP_TLV
+	Kconfig_style_config EAP_EXE
+	Kconfig_style_config IEEE8021X_EAPOL
+	Kconfig_style_config PKCS12
+	Kconfig_style_config PEERKEY
+	Kconfig_style_config EAP_LEAP
+	Kconfig_style_config EAP_MSCHAPV2
+	Kconfig_style_config EAP_PEAP
+	Kconfig_style_config EAP_TLS
+	Kconfig_style_config EAP_TTLS
 
 	# Enabling background scanning.
-	echo "CONFIG_BGSCAN_SIMPLE=y"	>> .config
-	echo "CONFIG_BGSCAN_LEARN=y"	>> .config
+	Kconfig_style_config BGSCAN_SIMPLE
+	Kconfig_style_config BGSCAN_LEARN
 
 	if use dbus ; then
-		echo "CONFIG_CTRL_IFACE_DBUS=y" >> .config
-		echo "CONFIG_CTRL_IFACE_DBUS_NEW=y" >> .config
-		echo "CONFIG_CTRL_IFACE_DBUS_INTRO=y" >> .config
+		Kconfig_style_config CTRL_IFACE_DBUS
+		Kconfig_style_config CTRL_IFACE_DBUS_NEW
+		Kconfig_style_config CTRL_IFACE_DBUS_INTRO
 	fi
 
 	# Enable support for writing debug info to a log file.
-	echo "CONFIG_DEBUG_FILE=y" >> .config
+	Kconfig_style_config DEBUG_FILE
+
+	if use hs2-0 ; then
+		Kconfig_style_config INTERWORKING
+		Kconfig_style_config HS20
+	fi
+
+	if use uncommon-eap-types; then
+		Kconfig_style_config EAP_GPSK
+		Kconfig_style_config EAP_SAKE
+		Kconfig_style_config EAP_GPSK_SHA256
+		Kconfig_style_config EAP_IKEV2
+		Kconfig_style_config EAP_EKE
+	fi
 
 	if use eap-sim ; then
 		# Smart card authentication
-		echo "CONFIG_EAP_SIM=y"       >> .config
-		echo "CONFIG_EAP_AKA=y"       >> .config
-		echo "CONFIG_EAP_AKA_PRIME=y" >> .config
-		echo "CONFIG_PCSC=y"          >> .config
+		Kconfig_style_config EAP_SIM
+		Kconfig_style_config EAP_AKA
+		Kconfig_style_config EAP_AKA_PRIME
+		Kconfig_style_config PCSC
 	fi
 
 	if use fasteap ; then
-		echo "CONFIG_EAP_FAST=y" >> .config
+		Kconfig_style_config EAP_FAST
 	fi
 
 	if use readline ; then
 		# readline/history support for wpa_cli
-		echo "CONFIG_READLINE=y" >> .config
+		Kconfig_style_config READLINE
+	else
+		#internal line edit mode for wpa_cli
+		Kconfig_style_config WPA_CLI_EDIT
 	fi
 
 	# SSL authentication methods
 	if use ssl ; then
-		echo "CONFIG_TLS=openssl"    >> .config
+		Kconfig_style_config TLS openssl
 	elif use gnutls ; then
-		echo "CONFIG_TLS=gnutls"     >> .config
-		echo "CONFIG_GNUTLS_EXTRA=y" >> .config
+		Kconfig_style_config TLS gnutls
+		Kconfig_style_config GNUTLS_EXTRA
 	else
-		echo "CONFIG_TLS=internal"   >> .config
+		Kconfig_style_config TLS internal
 	fi
 
 	if use smartcard ; then
-		echo "CONFIG_SMARTCARD=y"    >> .config
+		Kconfig_style_config SMARTCARD
+	fi
+
+	if use tdls ; then
+		Kconfig_style_config TDLS
 	fi
 
 	if use kernel_linux ; then
 		# Linux specific drivers
-		echo "CONFIG_DRIVER_ATMEL=y"       >> .config
-		echo "CONFIG_DRIVER_HOSTAP=y"      >> .config
-		echo "CONFIG_DRIVER_IPW=y"         >> .config
-		echo "CONFIG_DRIVER_NL80211=y"     >> .config
-		echo "CONFIG_DRIVER_RALINK=y"      >> .config
-		echo "CONFIG_DRIVER_WEXT=y"        >> .config
-		echo "CONFIG_DRIVER_WIRED=y"       >> .config
+		Kconfig_style_config DRIVER_ATMEL
+		Kconfig_style_config DRIVER_HOSTAP
+		Kconfig_style_config DRIVER_IPW
+		Kconfig_style_config DRIVER_NL80211
+		Kconfig_style_config DRIVER_RALINK
+		Kconfig_style_config DRIVER_WEXT
+		Kconfig_style_config DRIVER_WIRED
 
 		if use ps3 ; then
-			echo "CONFIG_DRIVER_PS3=y" >> .config
+			Kconfig_style_config DRIVER_PS3
 		fi
 
 	elif use kernel_FreeBSD ; then
 		# FreeBSD specific driver
-		echo "CONFIG_DRIVER_BSD=y" >> .config
+		Kconfig_style_config DRIVER_BSD
 	fi
 
 	# Wi-Fi Protected Setup (WPS)
 	if use wps ; then
-		echo "CONFIG_WPS=y" >> .config
-		echo "CONFIG_WPS2=y" >> .config
+		Kconfig_style_config WPS
+		Kconfig_style_config WPS2
 		# USB Flash Drive
-		echo "CONFIG_WPS_UFD=y" >> .config
+		Kconfig_style_config WPS_UFD
 		# External Registrar
-		echo "CONFIG_WPS_ER=y" >> .config
+		Kconfig_style_config WPS_ER
 		# Universal Plug'n'Play
-		echo "CONFIG_WPS_UPNP=y" >> .config
+		Kconfig_style_config WPS_UPNP
 		# Near Field Communication
-		echo "CONFIG_WPS_NFC=y" >> .config
+		Kconfig_style_config WPS_NFC
 	fi
 
 	# Wi-Fi Direct (WiDi)
 	if use p2p ; then
-		echo "CONFIG_P2P=y" >> .config
+		Kconfig_style_config P2P
+		Kconfig_style_config WIFI_DISPLAY
 	fi
 
 	# Access Point Mode
 	if use ap ; then
-		echo "CONFIG_AP=y" >> .config
+		Kconfig_style_config AP
 	fi
 
 	# Enable mitigation against certain attacks against TKIP
-	echo "CONFIG_DELAYED_MIC_ERROR_REPORT=y" >> .config
+	Kconfig_style_config DELAYED_MIC_ERROR_REPORT
 
 	# If we are using libnl 2.0 and above, enable support for it
 	# Bug 382159
 	# Removed for now, since the 3.2 version is broken, and we don't
 	# support it.
 	if has_version ">=dev-libs/libnl-3.2"; then
-		echo "CONFIG_LIBNL32=y" >> .config
+		Kconfig_style_config LIBNL32
 	fi
 
 	if use qt4 ; then
@@ -272,6 +314,8 @@ src_install() {
 	dodoc ChangeLog {eap_testing,todo}.txt README{,-WPS} \
 		wpa_supplicant.conf
 
+	newdoc .config build-config
+
 	doman doc/docbook/*.{5,8}
 
 	if use qt4 ; then
@@ -290,10 +334,14 @@ src_install() {
 		insinto /usr/share/dbus-1/system-services
 		doins fi.epitest.hostap.WPASupplicant.service fi.w1.wpa_supplicant1.service
 		popd > /dev/null
+
+		# This unit relies on dbus support, bug 538600.
+		systemd_dounit systemd/wpa_supplicant.service
 	fi
 
-	# systemd stuff
-	systemd_dounit systemd/*.service
+	systemd_dounit "systemd/wpa_supplicant@.service"
+	systemd_dounit "systemd/wpa_supplicant-nl80211@.service"
+	systemd_dounit "systemd/wpa_supplicant-wired@.service"
 }
 
 pkg_postinst() {

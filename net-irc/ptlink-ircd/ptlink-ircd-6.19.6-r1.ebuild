@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6-r1.ebuild,v 1.4 2014/08/10 20:53:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6-r1.ebuild,v 1.5 2015/03/21 13:55:32 jlec Exp $
 
 inherit eutils ssl-cert user
 
@@ -9,26 +9,27 @@ MY_P="PTlink${PV}"
 DESCRIPTION="PTlink IRCd is a secure IRC daemon with many advanced features"
 HOMEPAGE="http://www.ptlink.net/"
 SRC_URI="ftp://ftp.sunsite.dk/projects/ptlink/ircd/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86"
-
 IUSE="ssl"
-DEPEND="sys-libs/zlib
+
+DEPEND="
+	sys-libs/zlib
 	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	find "${S}" -type d -name CVS -print0 2>/dev/null | xargs -0r rm -rf
+	ecvs_clean
 }
 
 src_compile() {
 	econf \
 		--disable-ipv6 \
-		$(use_with ssl ssl openssl) \
-		|| die "econf failed"
+		$(use_with ssl ssl openssl)
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
@@ -76,13 +77,13 @@ pkg_postinst() {
 		"${ROOT}"/{etc,var/{log,lib}}/ptlink-ircd \
 		"${ROOT}"/etc/ptlink-ircd/server.key.pem
 
-	elog
+	echo
 	elog "PTlink IRCd will run without configuration, although this is strongly"
 	elog "advised against."
-	elog
+	echo
 	elog "You can find example cron script ircd.cron here:"
 	elog "   /usr/share/doc/${PF}"
-	elog
+	echo
 	elog "You can also use /etc/init.d/ptlink-ircd to start at boot"
-	elog
+	echo
 }

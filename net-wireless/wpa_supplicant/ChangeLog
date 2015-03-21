@@ -1,6 +1,20 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.228 2015/03/03 09:45:18 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.229 2015/03/21 13:32:11 gurligebis Exp $
+
+*wpa_supplicant-2.4 (21 Mar 2015)
+
+  21 Mar 2015; <gurligebis@gentoo.org> -wpa_supplicant-2.3.ebuild,
+  -wpa_supplicant-2.3-r2.ebuild, +wpa_supplicant-2.4.ebuild,
+  -files/wpa_supplicant-2.3-dbus-path-fix.patch,
+  -files/wpa_supplicant-2.3-do-not-call-dbus-functions-with-NULL-path.patch,
+  -files/wpa_supplicant-2.3-fix-undefined-reference-to-random_get_bytes.patch,
+  -files/wpa_supplicant-2.3-generate-libeap-peer.patch,
+  +files/wpa_supplicant-2.4-dbus-path-fix.patch,
+  +files/wpa_supplicant-2.4-do-not-call-dbus-functions-with-NULL-path.patch,
+  +files/wpa_supplicant-2.4-fix-undefined-reference-to-random_get_bytes.patch,
+  +files/wpa_supplicant-2.4-generate-libeap-peer.patch:
+  Bumping to 2.4 and removing old version
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> wpa_supplicant-2.3-r2.ebuild:
   add arm64 support, tested on A53 board
