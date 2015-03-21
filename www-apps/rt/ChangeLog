@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.91 2014/11/19 15:40:10 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.92 2015/03/21 08:10:54 idella4 Exp $
+
+  21 Mar 2015; Ian Delaney <idella4@gentoo.org> files/postinstall-en.txt:
+  update files/postinstall-en.txt, patch by user 'j.habenicht@gmx.de' in bug
+  #543128
 
   19 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> rt-4.2.9-r1.ebuild:
   Fix bug 529854. Properly install all docs by letting dodoc -r do its thing.

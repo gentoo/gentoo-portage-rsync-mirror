@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tprint/tprint-1.1.0-r1.ebuild,v 1.1 2010/09/28 19:41:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tprint/tprint-1.1.0-r1.ebuild,v 1.2 2015/03/21 08:30:33 jlec Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit toolchain-funcs
 
@@ -23,15 +23,13 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+	emake CC=$(tc-getCC)
 }
 
 src_install() {
-	dodir /etc/tprint
 	insinto /etc/tprint
 	doins tprint.conf
-	exeinto /usr/bin
-	doexe tprint || die "doexe failed"
+	dobin tprint
 
 	dodoc INSTALL README
 }

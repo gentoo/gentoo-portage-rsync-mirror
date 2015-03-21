@@ -1,6 +1,6 @@
 Please follow the Gentoo install guide found at:
 
-    https://wiki.gentoo.com/wiki/Request_Tracker
+    https://wiki.gentoo.org/wiki/Request_Tracker
 
 Your local config files are located here:
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hachoir-metadata
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/ChangeLog,v 1.9 2014/06/11 14:40:47 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/ChangeLog,v 1.10 2015/03/21 08:27:00 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -hachoir-metadata-1.3.3.ebuild,
+  hachoir-metadata-1.3.3-r1.ebuild, metadata.xml:
+  use dobin instead of exeinto /usr/bin/ && doexe; drop old
 
 *hachoir-metadata-1.3.3-r1 (11 Jun 2014)
 

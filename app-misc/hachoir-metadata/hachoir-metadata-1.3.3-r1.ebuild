@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/hachoir-metadata-1.3.3-r1.ebuild,v 1.1 2014/06/11 14:40:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/hachoir-metadata-1.3.3-r1.ebuild,v 1.2 2015/03/21 08:27:00 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnome gtk kde qt4"
 
-RDEPEND=">=dev-python/hachoir-core-1.3[${PYTHON_USEDEP}]
+RDEPEND="
+	>=dev-python/hachoir-core-1.3[${PYTHON_USEDEP}]
 	>=dev-python/hachoir-parser-1.3[${PYTHON_USEDEP}]
 	gtk? ( >=dev-python/pygtk-2.0[${PYTHON_USEDEP}] )
 	gnome? ( gnome-base/nautilus gnome-extra/zenity )
@@ -53,14 +54,13 @@ python_install_all() {
 	fi
 
 	if use kde; then
-		exeinto /usr/bin
-		doexe kde/hachoir-metadata-kde
+		dobin kde/hachoir-metadata-kde
 		insinto /usr/share/apps/konqueror/servicemenus
 		doins kde/hachoir.desktop
 	fi
 
 	if ! use gtk; then
-		rm "${ED}usr/bin/hachoir-metadata-gtk"*
+		rm "${ED}usr/bin/hachoir-metadata-gtk"* || die
 	fi
 }
 

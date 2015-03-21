@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.7.2-r4.ebuild,v 1.1 2013/08/15 15:14:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.6.7.2-r4.ebuild,v 1.2 2015/03/21 08:07:43 jlec Exp $
 
 EAPI="5"
 
@@ -10,14 +10,13 @@ DESCRIPTION="These command-line tools serve as the client interface to the Amazo
 HOMEPAGE="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=351&categoryID=88"
 SRC_URI="http://s3.amazonaws.com/ec2-downloads/${PN}-${PV}.zip"
 
-S=${WORKDIR}/${PN}-${PV}
-
 LICENSE="Amazon"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror"
 
-CDEPEND="dev-java/bcprov:1.45
+CDEPEND="
+	dev-java/bcprov:1.45
 	dev-java/commons-cli:1
 	dev-java/commons-codec:0
 	dev-java/commons-discovery:0
@@ -39,6 +38,8 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	>=virtual/jre-1.4"
 
+S=${WORKDIR}/${PN}-${PV}
+
 java_prepare() {
 	rm lib/{bcprov-jdk*,commons-cli-*,commons-codec-*,commons-discovery,commons-httpclient-*,commons-logging-adapters-*,commons-logging-api-*,jaxb-api,jaxb-impl,jaxws-api,jdom,log4j-*,stax2-api-*,wsdl4j,xalan,xercesImpl}.jar \
 		|| die "Failed to remove bundled jar files that are provided by system."
@@ -54,8 +55,7 @@ java_prepare() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe bin/*
+	dobin bin/*
 
 	local libs="/usr/share/${PN}/lib"
 	insinto ${libs}

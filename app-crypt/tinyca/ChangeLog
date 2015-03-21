@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/tinyca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.27 2015/01/26 09:47:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/ChangeLog,v 1.28 2015/03/21 08:17:43 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> tinyca-2.0.7.5-r2.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe
 
   26 Jan 2015; Alon Bar-Lev <alonbl@gentoo.org> -tinyca-2.0.7.5-r1.ebuild:
   Cleanup

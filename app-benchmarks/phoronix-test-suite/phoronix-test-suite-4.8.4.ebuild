@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-4.8.4.ebuild,v 1.1 2013/12/09 03:30:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-4.8.4.ebuild,v 1.3 2015/03/21 08:24:55 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-inherit eutils bash-completion-r1
+inherit bash-completion-r1 eutils
 
-DESCRIPTION="Phoronix's comprehensive, cross-platform testing and benchmark suite"
+DESCRIPTION="The comprehensive, cross-platform testing and benchmark suite"
 HOMEPAGE="http://www.phoronix-test-suite.com"
 SRC_URI="http://www.phoronix-test-suite.com/download.php?file=${P} -> ${P}.tar.gz"
 
@@ -23,8 +23,9 @@ RDEPEND="dev-lang/php[cli,curl,gd,json,posix,pcntl,truetype,zip]"
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-	sed -i -e "s,export PTS_DIR=\`pwd\`,export PTS_DIR=\"/usr/share/${PN}\"," \
-		phoronix-test-suite
+	sed \
+		-e "s,export PTS_DIR=\`pwd\`,export PTS_DIR=\"/usr/share/${PN}\"," \
+		-i phoronix-test-suite || die
 }
 
 src_configure() {
@@ -36,23 +37,22 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/share/${PN}
-	insinto /usr/share/${PN}
-
 	doman documentation/man-pages/phoronix-test-suite.1
 	dodoc AUTHORS CHANGE-LOG
 	dohtml -r documentation/
-	doicon pts-core/static/images/phoronix-test-suite.png
-	doicon pts-core/static/images/openbenchmarking.png
+	doicon \
+		pts-core/static/images/phoronix-test-suite.png \
+		pts-core/static/images/openbenchmarking.png
 	domenu pts-core/static/phoronix-test-suite.desktop
-	rm -f pts-core/static/phoronix-test-suite.desktop
+	rm -f pts-core/static/phoronix-test-suite.desktop || die
 
+	insinto /usr/share/${PN}
 	doins -r pts-core
-	exeinto /usr/bin
-	doexe phoronix-test-suite
+	dobin phoronix-test-suite
 
-	fperms a+x /usr/share/${PN}/pts-core/static/scripts/root-access.sh
-	fperms a+x /usr/share/${PN}/pts-core/external-test-dependencies/scripts/install-gentoo-packages.sh
+	fperms a+x \
+		/usr/share/${PN}/pts-core/static/scripts/root-access.sh \
+		/usr/share/${PN}/pts-core/external-test-dependencies/scripts/install-gentoo-packages.sh
 
 	dobashcompletion pts-core/static/bash_completion ${PN}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.5-r2.ebuild,v 1.3 2015/01/26 09:43:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tinyca/tinyca-2.0.7.5-r2.ebuild,v 1.4 2015/03/21 08:17:43 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-RDEPEND=">=dev-libs/openssl-0.9.7e
+RDEPEND="
+	>=dev-libs/openssl-0.9.7e:0=
 	dev-perl/Locale-gettext
 	>=virtual/perl-MIME-Base64-2.12
 	>=dev-perl/gtk2-perl-1.072"
@@ -36,7 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-perl-5.18.patch"
 	sed -i -e 's:./lib:/usr/share/tinyca/lib:g' \
 		-e 's:./templates:/usr/share/tinyca/templates:g' \
-		-e 's:./locale:/usr/share/locale:g' "${S}/tinyca2"
+		-e 's:./locale:/usr/share/locale:g' "${S}/tinyca2" || die
 }
 
 src_compile() {
@@ -44,14 +45,12 @@ src_compile() {
 }
 
 locale_install() {
-	dodir /usr/share/locale/$@/LC_MESSAGES/
 	insinto /usr/share/locale/$@/LC_MESSAGES/
 	doins locale/$@/LC_MESSAGES/tinyca2.mo
 }
 
 src_install() {
-	exeinto /usr/bin
-	newexe tinyca2 tinyca
+	newbin tinyca2 tinyca
 	insinto /usr/share/tinyca/lib
 	doins lib/*.pm
 	insinto /usr/share/tinyca/lib/GUI

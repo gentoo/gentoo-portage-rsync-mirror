@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.5.1.ebuild,v 1.1 2015/02/21 14:03:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.5.1.ebuild,v 1.2 2015/03/21 08:30:48 jlec Exp $
 
 EAPI=5
 
-inherit qt4-r2 eutils cmake-utils
+inherit eutils cmake-utils
 
 DESCRIPTION="SQLite Database Browser"
 HOMEPAGE="http://sqlitebrowser.org"
