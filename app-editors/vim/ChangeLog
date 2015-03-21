@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.492 2015/03/21 06:29:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.493 2015/03/21 06:32:58 radhermit Exp $
+
+  21 Mar 2015; Tim Harder <radhermit@gentoo.org> -vim-7.4.488.ebuild,
+  -vim-7.4.527.ebuild, -vim-7.4.542.ebuild, -vim-7.4.560.ebuild:
+  Remove old.
 
 *vim-7.4.670 (21 Mar 2015)
 
