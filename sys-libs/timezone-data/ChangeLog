@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.321 2015/02/14 02:27:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.323 2015/03/21 11:15:01 vapier Exp $
+
+*timezone-data-2015b (21 Mar 2015)
+
+  21 Mar 2015; Mike Frysinger <vapier@gentoo.org> +timezone-data-2015b.ebuild:
+  Version bump.
+
+  21 Mar 2015; Mike Frysinger <vapier@gentoo.org> timezone-data-2015a.ebuild:
+  Stabilize for all.
 
   14 Feb 2015; Mike Gilbert <floppym@gentoo.org> timezone-data-2015a.ebuild:
   If /etc/localtime is a symlink, don't replace it; this breaks systemd-

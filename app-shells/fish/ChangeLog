@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/fish
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.74 2014/12/22 13:33:16 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.75 2015/03/21 11:10:33 polynomial-c Exp $
+
+*fish-2.1.2 (21 Mar 2015)
+
+  21 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> +fish-2.1.2.ebuild:
+  Version bump (bug #543940).
 
   06 Dec 2014; Lars Wendler <polynomial-c@gentoo.org> -fish-2.1.0-r2.ebuild,
   -fish-2.1.0-r3.ebuild:

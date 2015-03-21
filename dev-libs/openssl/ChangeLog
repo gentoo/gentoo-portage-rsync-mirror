@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.643 2015/03/21 11:01:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.644 2015/03/21 11:02:41 vapier Exp $
+
+  21 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.2a-x32-asm.patch, openssl-1.0.2a.ebuild:
+  Fix building on x32 ABIs #542618 by Bertrand Jacquin.
 
   21 Mar 2015; Mike Frysinger <vapier@gentoo.org> openssl-1.0.2a.ebuild,
   metadata.xml:
