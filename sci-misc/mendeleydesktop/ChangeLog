@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/mendeleydesktop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.24 2015/03/13 11:14:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.25 2015/03/21 00:40:06 xmw Exp $
+
+*mendeleydesktop-1.13.4 (21 Mar 2015)
+
+  21 Mar 2015; Michael Weber <xmw@gentoo.org> +mendeleydesktop-1.13.4.ebuild,
+  -mendeleydesktop-1.13.5.ebuild:
+  Version bump __down__ tp 1.13.4. 1.13.5 was removed(?) by upstream.
 
 *mendeleydesktop-1.13.5 (13 Mar 2015)
 
