@@ -1,8 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/man-pages-zh_CN-1.5.ebuild,v 1.5 2014/01/30 20:28:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/man-pages-zh_CN-1.5.ebuild,v 1.6 2015/03/21 10:15:55 jlec Exp $
 
-EAPI="3"
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="A somewhat comprehensive collection of Chinese Linux man pages"
 HOMEPAGE="http://cmpp.linuxforum.net/"
@@ -16,16 +18,16 @@ IUSE=""
 RDEPEND="virtual/man"
 
 src_prepare() {
-	rm -r `find . -type d -name CVS`
+	ecvs_clean
 }
 
 src_configure() { :; }
 
 src_compile() {
-	make u8 || die
+	emake u8
 }
 
 src_install() {
-	make install-u8 DESTDIR="${ED}"/usr/share || die
+	emake install-u8 DESTDIR="${ED}"/usr/share
 	dodoc README* DOCS/*
 }

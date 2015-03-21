@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/ncurses-5.2 X? ( x11-libs/libXdmcp x11-libs/libXau x11-libs/l
 SLOT=0
 SRC_URI=mirror://sourceforge/fte/fte-20051115-src.zip mirror://sourceforge/fte/fte-20051115-common.zip
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=4376f7e9111a6ab318ca1614f3b27a28
+_md5_=1d228dea6e4ce5e4f65d73e18df5efcc

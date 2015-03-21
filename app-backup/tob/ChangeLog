@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/tob
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tob/ChangeLog,v 1.13 2014/08/10 01:54:01 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tob/ChangeLog,v 1.14 2015/03/21 10:07:24 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml, tob-0.26-r2.ebuild:
+  Use ecvs_clean and modernize ebuild style
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> tob-0.26-r2.ebuild:
   Fix description for more repoman happy

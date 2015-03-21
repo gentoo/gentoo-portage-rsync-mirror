@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fte
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.58 2013/04/03 17:57:32 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.59 2015/03/21 10:12:46 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> fte-20051115-r3.ebuild,
+  fte-20110708.ebuild, metadata.xml:
+  Use ecvs_clean and modernize ebuild style
 
   03 Apr 2013; Tom Wijsman <TomWij@gentoo.org> fte-20110708.ebuild:
   Extensively tested. Changed HOMEPAGE according to the dev manual.

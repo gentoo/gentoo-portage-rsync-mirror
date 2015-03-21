@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20110708.ebuild,v 1.2 2013/04/03 17:57:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20110708.ebuild,v 1.3 2015/03/21 10:12:46 jlec Exp $
 
 EAPI="5"
 
@@ -8,7 +8,8 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="Lightweight text-mode editor"
 HOMEPAGE="http://fte.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
+SRC_URI="
+	mirror://sourceforge/${PN}/${P}-src.zip
 	mirror://sourceforge/${PN}/${P}-common.zip"
 
 LICENSE="|| ( GPL-2 Artistic )"
@@ -18,7 +19,8 @@ IUSE="gpm slang X"
 
 S="${WORKDIR}/${PN}"
 
-RDEPEND=">=sys-libs/ncurses-5.2
+RDEPEND="
+	>=sys-libs/ncurses-5.2
 	X? (
 		x11-libs/libXdmcp
 		x11-libs/libXau
@@ -58,6 +60,7 @@ src_prepare() {
 		-e '/^LDFLAGS/s:=:+=:g' \
 		-e 's:= g++:= $(CXX):g' \
 		-i src/${PN}-unix.mak || die "sed CFLAGS, LDFLAGS, CC"
+	ecvs_clean
 }
 
 src_configure() {
@@ -111,8 +114,6 @@ src_install() {
 
 	insinto /usr/share/${PN}
 	doins -r config/*
-
-	rm -rf "${ED}"/usr/share/${PN}/CVS
 }
 
 pkg_postinst() {

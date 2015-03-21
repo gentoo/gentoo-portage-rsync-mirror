@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.64 2015/01/01 23:27:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.65 2015/03/21 10:30:32 jlec Exp $
+
+*sgmltools-lite-3.0.3-r14 (21 Mar 2015)
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> +sgmltools-lite-3.0.3-r14.ebuild,
+  -sgmltools-lite-3.0.3-r13.ebuild, metadata.xml:
+  Use ecvs_clean; make man packe symlinks work correctly; modernize ebuild style
 
 *sgmltools-lite-3.0.3-r13 (01 Jan 2015)
 
