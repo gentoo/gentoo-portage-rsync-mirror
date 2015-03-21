@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.72 2015/03/20 21:58:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.73 2015/03/21 10:38:38 hwoarang Exp $
+
+*lxc-1.1.0-r6 (21 Mar 2015)
+*lxc-1.1.1-r1 (21 Mar 2015)
+
+  21 Mar 2015; Markos Chandras <hwoarang@gentoo.org> +lxc-1.1.0-r6.ebuild,
+  +lxc-1.1.1-r1.ebuild, -lxc-1.1.0-r5.ebuild, -lxc-1.1.1.ebuild,
+  files/lxc_at.service.2:
+  Revbump to fix systemd file paths. Bug #543970
 
   20 Mar 2015; Markos Chandras <hwoarang@gentoo.org> -files/lxc.initd.2:
   Remove unused file

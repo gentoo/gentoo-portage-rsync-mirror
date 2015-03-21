@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.8 2007/10/24 06:21:01 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.1-r1.ebuild,v 1.9 2015/03/21 10:43:57 jlec Exp $
 
 JAVA_PKG_IUSE="source"
 
-inherit java-pkg-2 java-ant-2
+inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Various reusable SWING components"
 HOMEPAGE="http://swidgets.tigris.org"
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 
 	# Remove the CVS directories
-	find . -name 'CVS' | xargs rmdir
+	ecvs_clean
 
 	# Create the directory structor
 	mkdir "${S}"

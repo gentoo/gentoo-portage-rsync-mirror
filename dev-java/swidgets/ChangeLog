@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swidgets
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/ChangeLog,v 1.17 2007/10/24 06:21:01 wltjr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/ChangeLog,v 1.18 2015/03/21 10:43:57 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> swidgets-0.1.1-r1.ebuild:
+  use ecvs_clean
 
   24 Oct 2007; William L. Thomson Jr. <wltjr@gentoo.org>
   -swidgets-0.1.ebuild, -swidgets-0.1.1.ebuild, swidgets-0.1.1-r1.ebuild:
@@ -68,4 +71,3 @@
   29 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> +files/build.xml,
   +swidgets-0.1.ebuild:
   Initial import; Dependency for ArgoUML bug #63307
-
