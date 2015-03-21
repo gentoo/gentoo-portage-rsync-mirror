@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/paver-1.2.2.ebuild,v 1.13 2014/10/29 09:33:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/paver-1.2.4.ebuild,v 1.1 2015/03/21 07:50:44 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -11,21 +11,23 @@ MY_PN=${PN/p/P}
 MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Python-based software project scripting tool along the lines of Make"
-HOMEPAGE="http://www.blueskyonmars.com/projects/paver/ http://pypi.python.org/pypi/Paver"
+HOMEPAGE="http://www.blueskyonmars.com/projects/paver/ http://github.com/paver/paver"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="test"
 
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/mock[${PYTHON_USEDEP}]
+	test? ( $(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy)
 		dev-python/nose[${PYTHON_USEDEP}] )"
 
 S=${WORKDIR}/${MY_P}
 
 python_test() {
+	# There is a regression in tests
+	# https://github.com/paver/paver/issues/143
 	nosetests || die "Testing failed with ${EPYTHON}"
 }

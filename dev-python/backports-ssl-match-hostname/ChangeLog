@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/backports-ssl-match-hostname
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-ssl-match-hostname/ChangeLog,v 1.10 2015/02/15 13:19:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports-ssl-match-hostname/ChangeLog,v 1.11 2015/03/21 07:40:52 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  backports-ssl-match-hostname-3.4.0.2.ebuild:
+  Stable for HPPA (bug #540290).
 
   15 Feb 2015; Pacho Ramos <pacho@gentoo.org>
   backports-ssl-match-hostname-3.4.0.2.ebuild:
