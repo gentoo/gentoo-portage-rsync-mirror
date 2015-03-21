@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.226 2015/02/09 17:01:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.227 2015/03/21 21:35:09 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> courier-imap-4.15-r1.ebuild,
+  courier-imap-4.16.0.ebuild:
+  use dosbin instead of exeinto /usr/sbin/ && doexe
 
 *courier-imap-4.16.0 (09 Feb 2015)
 

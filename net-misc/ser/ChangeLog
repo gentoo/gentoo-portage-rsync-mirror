@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.38 2014/12/28 16:42:12 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.39 2015/03/21 21:46:58 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> ser-0.9.7-r1.ebuild:
+  use dosbin instead of exeinto /usr/sbin/ && doexe
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> ser-0.9.7-r1.ebuild:
   Rename virtual/postgresql to dev-db/postgresql

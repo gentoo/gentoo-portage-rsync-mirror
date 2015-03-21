@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysfml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysfml/ChangeLog,v 1.5 2014/08/03 04:20:55 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysfml/ChangeLog,v 1.6 2015/03/21 21:36:18 radhermit Exp $
+
+  21 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
   03 Aug 2014; Tim Harder <radhermit@gentoo.org> -pysfml-1.6.ebuild:
   Remove old.

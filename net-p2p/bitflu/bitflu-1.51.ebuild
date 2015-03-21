@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitflu/bitflu-1.51.ebuild,v 1.1 2014/03/03 12:39:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitflu/bitflu-1.51.ebuild,v 1.2 2015/03/21 21:54:33 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit user
 
-DESCRIPTION="Bitflu is a BitTorrent client, written in Perl and is designed to run as a daemon"
+DESCRIPTION="BitTorrent client, written in Perl and is designed to run as a daemon"
 HOMEPAGE="http://bitflu.workaround.ch"
 SRC_URI="http://bitflu.workaround.ch/bitflu/${P}.tgz"
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-perl/Danga-Socket
+DEPEND="
+	dev-perl/Danga-Socket
 	dev-perl/Sys-Syscall"
 RDEPEND="${DEPEND}"
 
@@ -24,9 +25,7 @@ pkg_setup() {
 	enewuser bitflu -1 -1 /var/lib/bitflu bitflu
 }
 
-src_compile() {
-:
-}
+src_compile() { :; }
 
 PLUGINS="/usr/lib/bitflu"
 HOMEDIR="/var/lib/bitflu"
@@ -35,11 +34,9 @@ LOGDIR="/var/log/bitflu"
 
 src_install() {
 	# executable daemon
-	exeinto /usr/sbin
-	doexe bitflu.pl
+	dosbin bitflu.pl
 
 	# plugins
-	dodir "${PLUGINS}"
 	insinto "${PLUGINS}"
 	doins -r plugins
 
@@ -49,10 +46,9 @@ src_install() {
 	fperms 775 "${HOMEDIR}"
 
 	# config file
-	dodir "${CONFDIR}"
+	insinto "${CONFDIR}"
 	fowners bitflu:bitflu "${CONFDIR}"
 	fperms 775 "${CONFDIR}"
-	insinto "${CONFDIR}"
 	doins "${FILESDIR}"/bitflu.config
 	fowners bitflu:bitflu "${CONFDIR}"/bitflu.config
 	fperms 664 "${CONFDIR}"/bitflu.config

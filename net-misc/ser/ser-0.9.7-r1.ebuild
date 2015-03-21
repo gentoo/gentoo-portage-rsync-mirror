@@ -1,12 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.7-r1.ebuild,v 1.2 2014/12/28 16:42:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.7-r1.ebuild,v 1.3 2015/03/21 21:46:58 jlec Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic toolchain-funcs multilib user
-
-IUSE="ipv6 mysql radius postgres jabber ldap ssl"
+inherit eutils flag-o-matic multilib toolchain-funcs user
 
 ETHZ_PV="1.0"
 LDAP_PV="1.0"
@@ -16,24 +14,28 @@ MODULES_PV="0.9.0"
 
 DESCRIPTION="SIP Express Router"
 HOMEPAGE="http://www.iptel.org/ser"
-SRC_URI="http://ftp.iptel.org/pub/ser/${PV}/src/${P}_src.tar.gz
+SRC_URI="
+	http://ftp.iptel.org/pub/ser/${PV}/src/${P}_src.tar.gz
 	 mirror://gentoo/silomail-${SILOMAIL_PV}-${PN}-${MODULES_PV}.tar.gz
 	 mirror://gentoo/ethz-${ETHZ_PV}-${PN}-${MODULES_PV}.tar.gz
-	 ldap? ( mirror://gentoo/ldap-${LDAP_PV}-${PN}-${MODULES_PV}.tar.gz
-		 mirror://gentoo/ldaps-${LDAPS_PV}-${PN}-${MODULES_PV}.tar.gz )"
+	 ldap? (
+	 	mirror://gentoo/ldap-${LDAP_PV}-${PN}-${MODULES_PV}.tar.gz
+		mirror://gentoo/ldaps-${LDAPS_PV}-${PN}-${MODULES_PV}.tar.gz
+		)"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
+IUSE="ipv6 mysql radius postgres jabber ldap ssl"
 
 RDEPEND="
 	mysql? ( virtual/mysql )
 	radius? ( >=net-dialup/radiusclient-ng-0.5.0 )
-	postgres? ( dev-db/postgresql[server] )
+	postgres? ( dev-db/postgresql:=[server] )
 	jabber? ( dev-libs/expat )
 	ldap? (
 		net-nds/openldap
-		ssl? ( dev-libs/openssl )
+		ssl? ( dev-libs/openssl:0= )
 	)"
 
 DEPEND="${RDEPEND}
@@ -91,8 +93,8 @@ src_prepare() {
 	for x in ${extmodules}; do
 		MY_A=$(eval echo ${x}-\${$(echo ${x} | tr "[:lower:]" "[:upper:]")_PV}-${PN}-${MODULES_PV})
 		MY_PATCH_A="${P}-extmod-${x}"
-		mkdir -p "${S}"/modules/${x}
-		cd "${S}"/modules/${x}
+		mkdir -p "${S}"/modules/${x} || die
+		cd "${S}"/modules/${x} || die
 		unpack ${MY_A}.tar.gz
 		# fix makefiles
 		if [[ -f "${FILESDIR}"/${MY_A}.diff ]]; then
@@ -125,7 +127,7 @@ src_compile() {
 		CC="`tc-getCC`" \
 		CFLAGS="${CFLAGS}" \
 		cfg-prefix=/ \
-		cfg-target=/etc/ser/ || die "emake failed"
+		cfg-target=/etc/ser/
 }
 
 src_install () {
@@ -142,18 +144,17 @@ src_install () {
 		man-prefix="${D}"/usr/share/man \
 		man-dir="" \
 		doc-prefix="${D}"/usr/share/doc \
-		doc-dir="${P}" || die "emake install failed"
+		doc-dir="${P}"
 
 	newinitd "${FILESDIR}"/ser.rc6 ser
 	newconfd "${FILESDIR}"/ser.confd ser
-	exeinto /usr/sbin
-	newexe scripts/harv_ser.sh harv_ser.sh
-	newexe scripts/sc serctl
-	newexe scripts/ser_mysql.sh ser_mysql.sh
+	newsbin scripts/harv_ser.sh harv_ser.sh
+	newsbin scripts/sc serctl
+	newsbin scripts/ser_mysql.sh ser_mysql.sh
 
-	chown -R root:ser "${D}"/etc/ser
-	chmod 750 "${D}"/etc/ser
-	chmod 640 "${D}"/etc/ser/*
+	chown -R root:ser "${D}"/etc/ser || die
+	chmod 750 "${D}"/etc/ser || die
+	chmod 640 "${D}"/etc/ser/* || die
 
 	# fix manpages
 	sed -i	-e "s:^.B /ser-${PV}AUTHORS:.B /usr/share/doc/${PF}/AUTHORS:" \

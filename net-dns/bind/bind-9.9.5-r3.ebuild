@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.5-r3.ebuild,v 1.13 2014/12/28 16:17:11 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.9.5-r3.ebuild,v 1.14 2015/03/21 21:34:40 jlec Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -73,7 +73,7 @@ DEPEND="ssl? ( dev-libs/openssl:0[-bindist] )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/idnkit )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:= )
 	caps? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
@@ -281,9 +281,8 @@ src_install() {
 	if use python; then
 		install_python_tools() {
 			python_convert_shebangs $PYTHON_ABI bin/python/dnssec-checkds bin/python/dnssec-coverage
-			exeinto /usr/sbin
-			newexe bin/python/dnssec-checkds dnssec-checkds-${PYTHON_ABI}
-			newexe bin/python/dnssec-coverage dnssec-coverage-${PYTHON_ABI}
+			newsbin bin/python/dnssec-checkds dnssec-checkds-${PYTHON_ABI}
+			newsbin bin/python/dnssec-coverage dnssec-coverage-${PYTHON_ABI}
 		}
 		python_execute_function install_python_tools
 

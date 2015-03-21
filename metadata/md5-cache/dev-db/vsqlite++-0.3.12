@@ -4,10 +4,10 @@ DESCRIPTION=VSQLite++ - A welldesigned and portable SQLite3 Wrapper for C++
 EAPI=5
 HOMEPAGE=http://evilissimo.fedorapeople.org/releases/vsqlite--/
 IUSE=static-libs
-KEYWORDS=amd64 ppc ~x86
+KEYWORDS=amd64 ppc x86
 LICENSE=BSD
 RDEPEND=>=dev-libs/boost-1.33.1 dev-db/sqlite:3
 SLOT=0
 SRC_URI=https://github.com/vinzenz/vsqlite--/archive/0.3.12.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=f4e74dbce56bc9c22bc830bcc44c4c87
+_md5_=43e7460f5485fd45780c2a6e0b1f313b

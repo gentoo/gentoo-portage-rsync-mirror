@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jnr-netdb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.14 2014/08/10 20:18:54 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/ChangeLog,v 1.15 2015/03/21 21:38:09 monsieurp Exp $
+
+*jnr-netdb-1.1.4 (21 Mar 2015)
+
+  21 Mar 2015; Patrice Clement <monsieurp@gentoo.org> +jnr-netdb-1.1.4.ebuild,
+  jnr-netdb-1.1.2-r1.ebuild:
+  Version bump courtesy of Arfrever <arfrever.fta@gmail.com>. Commented out unit
+  tests. Fix bug 525342.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jnr-netdb-1.0.1.ebuild,
   jnr-netdb-1.0.6.ebuild, jnr-netdb-1.1.1.ebuild, jnr-netdb-1.1.2-r1.ebuild,

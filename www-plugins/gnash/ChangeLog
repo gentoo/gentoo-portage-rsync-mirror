@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.102 2015/03/02 09:21:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.103 2015/03/21 21:55:35 mrueg Exp $
+
+  21 Mar 2015; Manuel Rüger <mrueg@gentoo.org>
+  -gnash-0.8.10_p20120903-r1.ebuild, -gnash-0.8.10_p20120903.ebuild,
+  -gnash-0.8.10_p20130822.ebuild:
+  Remove old superseded versions.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnash-0.8.10_p20131019.ebuild:
   Stable for ppc, wrt bug #490208

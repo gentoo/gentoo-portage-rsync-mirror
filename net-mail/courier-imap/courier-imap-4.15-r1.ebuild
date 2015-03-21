@@ -1,31 +1,34 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15-r1.ebuild,v 1.14 2014/11/21 10:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.15-r1.ebuild,v 1.15 2015/03/21 21:35:09 jlec Exp $
 
 EAPI=5
-inherit autotools eutils multilib libtool systemd
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+inherit autotools eutils multilib libtool systemd
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 HOMEPAGE="http://www.courier-mta.org/"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="berkdb debug fam +gdbm ipv6 selinux gnutls trashquota"
+
 REQUIRED_USE="|| ( berkdb gdbm )"
 
-CDEPEND="gnutls? ( net-libs/gnutls )
-		!gnutls? ( >=dev-libs/openssl-0.9.6 )
-		>=net-libs/courier-authlib-0.61
-		>=net-mail/mailbase-0.00-r8
-		berkdb? ( sys-libs/db )
-		fam? ( virtual/fam )
-		gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+CDEPEND="
+	gnutls? ( net-libs/gnutls )
+	!gnutls? ( >=dev-libs/openssl-0.9.6:0= )
+	>=net-libs/courier-authlib-0.61
+	>=net-mail/mailbase-0.00-r8
+	berkdb? ( sys-libs/db:= )
+	fam? ( virtual/fam )
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 DEPEND="${CDEPEND}
-		dev-lang/perl
-		!mail-mta/courier
-		userland_GNU? ( sys-process/procps )"
+	dev-lang/perl
+	!mail-mta/courier
+	userland_GNU? ( sys-process/procps )"
 RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-courier )"
 
@@ -52,7 +55,8 @@ src_prepare() {
 	# These patches should fix problems detecting BerkeleyDB.
 	# We now can compile with db4 support.
 	if use berkdb ; then
-		epatch "${FILESDIR}"/${P}-db4-bdbobj_configure.ac.patch\
+		epatch \
+			"${FILESDIR}"/${P}-db4-bdbobj_configure.ac.patch \
 			"${FILESDIR}"/${P}-db4-configure.ac.patch
 	fi
 
@@ -124,25 +128,25 @@ src_compile() {
 
 src_install() {
 	dodir /var/lib/${PN} /etc/pam.d
-	emake DESTDIR="${D}" install
-	rm -Rf "${D}/etc/pam.d"
+	default
+	rm -Rf "${D}/etc/pam.d" || die
 
 	# Avoid name collisions in /usr/sbin wrt imapd and pop3d
-	cd "${D}/usr/sbin"
+	cd "${D}/usr/sbin" || die
 	for name in imapd pop3d ; do
 		mv -f "${name}" "courier-${name}" || die "Failed to mv ${name} to courier-${name}"
 	done
 
 	# Hack /usr/lib/courier-imap/foo.rc to use ${MAILDIR} instead of
 	# 'Maildir', and to use /usr/sbin/courier-foo names.
-	cd "${D}/usr/$(get_libdir)/${PN}"
+	cd "${D}/usr/$(get_libdir)/${PN}" || die
 	for service in {imapd,pop3d}{,-ssl} ; do
 		sed -i -e 's/Maildir/${MAILDIR}/' "${service}.rc" || die "sed failed"
 		sed -i -e "s/\/usr\/sbin\/${service}/\/usr\/sbin\/courier-${service}/" "${service}.rc" || die "sed failed"
 	done
 
 	# Rename the config files correctly and add a value for ${MAILDIR} to them.
-	cd "${D}/etc/${PN}"
+	cd "${D}/etc/${PN}" || die
 	for service in {imapd,pop3d}{,-ssl} ; do
 		mv -f "${service}.dist" "${service}" || die "Failed to mv ${service}.dist to ${service}"
 		echo -e '\n# Hardwire a value for ${MAILDIR}' >> "${service}"
@@ -157,28 +161,27 @@ src_install() {
 		echo 'LOGINRUN=' >> "${service}"
 	done
 
-	cd "${D}/usr/sbin"
+	cd "${D}/usr/sbin" || die
 	for x in * ; do
 		if [[ -L "${x}" ]] ; then
 			rm -f "${x}" || die "Failed to rm ${x}"
 		fi
 	done
 
-	cd ../share
-	mv -f * ../sbin
-	mv -f ../sbin/man .
-	cd ..
+	cd ../share || die
+	mv -f * ../sbin || die
+	mv -f ../sbin/man . || die
+	cd .. || die
 
 	for x in mkimapdcert mkpop3dcert ; do
 		mv -f "${D}/usr/sbin/${x}" "${D}/usr/sbin/${x}.orig" || die "Failed to mv /usr/sbin/${x} to /usr/sbin/${x}.orig"
 	done
 
-	exeinto /usr/sbin
-	doexe "${FILESDIR}/mkimapdcert" "${FILESDIR}/mkpop3dcert"
+	dosbin "${FILESDIR}/mkimapdcert" "${FILESDIR}/mkpop3dcert"
 
 	dosym /usr/sbin/courierlogger /usr/$(get_libdir)/${PN}/courierlogger
 
-	mkdir "${WORKDIR}/tmp" ; cd "${WORKDIR}/tmp"
+	mkdir "${WORKDIR}/tmp" && cd "${WORKDIR}/tmp" || die
 
 	for initd in courier-{imapd,pop3d}{,-ssl} ; do
 		sed -e "s:GENTOO_LIBDIR:$(get_libdir):g" "${FILESDIR}/${PN}-${INITD_VER}-${initd}.rc6" > "${initd}" || die "initd libdir-sed failed"
@@ -199,7 +202,7 @@ src_install() {
 	mv -f "${D}/usr/sbin/maildirmake" "${D}/usr/bin/maildirmake" || die "Failed to mv /usr/sbin/maildirmake to /usr/bin/maildirmake"
 
 	# Bug #45953, more docs.
-	cd "${S}"
+	cd "${S}" || die
 	dohtml -r "${S}"/*
 	dodoc "${S}"/{AUTHORS,INSTALL,NEWS,README,ChangeLog} "${FILESDIR}"/${PN}-gentoo.readme
 	docinto imap

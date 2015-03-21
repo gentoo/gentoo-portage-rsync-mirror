@@ -1,6 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-2.0.0_rc6-r1.ebuild,v 1.6 2015/03/21 22:00:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_smb/pam_smb-2.0.0_rc6-r2.ebuild,v 1.1 2015/03/21 22:00:27 jlec Exp $
+
+EAPI=5
 
 inherit eutils pam
 
@@ -14,7 +16,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=">=sys-libs/pam-0.75"
@@ -22,15 +24,12 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/10-pam_smb-bash-3.1.patch"
 }
 
-src_compile() {
+src_configure() {
 	econf --disable-root-only
-	emake || die "emake failed"
 }
 
 src_install() {

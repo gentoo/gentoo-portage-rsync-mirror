@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vitunes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vitunes/ChangeLog,v 1.1 2012/01/11 07:44:15 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vitunes/ChangeLog,v 1.2 2015/03/21 21:32:33 radhermit Exp $
+
+  21 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
 *vitunes-2.3 (11 Jan 2012)
 
