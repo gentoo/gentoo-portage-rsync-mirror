@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-FailWarnings
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-FailWarnings/ChangeLog,v 1.1 2014/11/30 00:11:05 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-FailWarnings/ChangeLog,v 1.2 2015/03/21 06:03:19 jer Exp $
+
+  21 Mar 2015; Jeroen Roovers <jer@gentoo.org> Test-FailWarnings-0.8.0.ebuild:
+  Marked ~hppa (bug #543630).
 
 *Test-FailWarnings-0.8.0 (30 Nov 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-FailWarnings/Test-FailWarnings-0.8.0.ebuild,v 1.1 2014/11/30 00:11:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-FailWarnings/Test-FailWarnings-0.8.0.ebuild,v 1.2 2015/03/21 06:03:19 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Add test failures if warnings are caught"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="test"
 LICENSE="Apache-2.0"
 
