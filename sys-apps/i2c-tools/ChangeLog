@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/i2c-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.20 2014/10/16 19:00:31 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.21 2015/03/21 09:39:33 mgorny Exp $
+
+*i2c-tools-3.1.1-r1 (21 Mar 2015)
+
+  21 Mar 2015; Michał Górny <mgorny@gentoo.org> +i2c-tools-3.1.1-r1.ebuild:
+  EAPI bump, bug #543162.
 
 *i2c-tools-3.1.1 (16 Oct 2014)
 

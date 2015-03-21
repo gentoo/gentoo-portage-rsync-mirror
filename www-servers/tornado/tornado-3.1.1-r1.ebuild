@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.1.1-r1.ebuild,v 1.9 2015/03/09 00:04:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.1.1-r1.ebuild,v 1.10 2015/03/21 09:35:36 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="curl test"
 
 RDEPEND="curl? ( dev-python/pycurl[$(python_gen_usedep python2_7)] )"
