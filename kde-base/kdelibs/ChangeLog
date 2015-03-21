@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1049 2015/02/19 07:01:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1050 2015/03/21 18:24:15 kensington Exp $
+
+*kdelibs-4.14.6-r1 (21 Mar 2015)
+
+  21 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/kdelibs-4.14.5-fatalwarnings.patch,
+  +files/kdelibs-4.14.5-mimetypes.patch, +files/kdelibs-4.15.6-fix-bic.patch,
+  +kdelibs-4.14.6-r1.ebuild:
+  Version bump.
 
   19 Feb 2015; Michael Palimaka <kensington@gentoo.org>
   -files/kdelibs-4.13.1-kio-diskfree.patch,

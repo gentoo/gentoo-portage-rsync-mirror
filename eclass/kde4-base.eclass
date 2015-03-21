@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.147 2015/02/21 13:51:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.148 2015/03/21 18:22:22 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -335,7 +335,7 @@ fi
 
 # all packages needs oxygen icons for basic iconset
 if [[ ${PN} != oxygen-icons ]]; then
-	kderdepend+=" || ( kde-apps/oxygen-icons $(add_kdebase_dep oxygen-icons) )"
+	kderdepend+=" || ( kde-apps/oxygen-icons $(add_kdebase_dep oxygen-icons '' 4.14.3) )"
 fi
 
 # add a dependency over kde-l10n
@@ -443,12 +443,12 @@ _calculate_src_uri() {
 				4.11.14)
 					# Part of 4.14 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/4.14.3/src/${_kmname_pv}.tar.xz" ;;
-				4.11.16)
-					# Part of 14.12.2 actually, sigh. Not stable for next release!
-					SRC_URI="mirror://kde/stable/applications/14.12.2/src/${_kmname_pv}.tar.xz" ;;
-				4.14.5)
-					# Part of 14.12.2 actually, sigh. Not stable for next release!
-					SRC_URI="mirror://kde/stable/applications/14.12.2/src/${_kmname_pv}.tar.xz" ;;
+				4.11.17)
+					# Part of 14.12.3 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/applications/14.12.3/src/${_kmname_pv}.tar.xz" ;;
+				4.14.6)
+					# Part of 14.12.3 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/applications/14.12.3/src/${_kmname_pv}.tar.xz" ;;
 				??.?.[6-9]? | ??.??.[4-9]?)
 					# Unstable KDE Applications releases
 					SRC_URI="mirror://kde/unstable/applications/${PV}/src/${_kmname}-${PV}.tar.xz" ;;

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jffi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.38 2014/11/20 08:03:26 ercpe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.39 2015/03/21 18:29:53 monsieurp Exp $
+
+*jffi-1.2.8 (21 Mar 2015)
+
+  21 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/jffi-1.2.8-junit-4.11.patch, +files/jffi-1.2.8-makefile.patch,
+  +jffi-1.2.8.ebuild, jffi-1.2.7-r2.ebuild:
+  Version bump courtesy of Arfrever <arfrever.fta@gmail.com>.
 
   20 Nov 2014; Johann Schmitz <ercpe@gentoo.org>
   +files/jffi-1.2.7_no-werror.patch:
