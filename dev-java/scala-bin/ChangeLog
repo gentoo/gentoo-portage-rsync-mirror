@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/scala-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.18 2015/03/04 13:08:32 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.19 2015/03/21 15:11:24 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> scala-bin-2.11.4.ebuild,
+  scala-bin-2.11.5.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe; add missing die; make ebuild
+  layout better readable
 
   04 Mar 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-2.11.4.ebuild,
   scala-bin-2.11.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-2.11.5.ebuild,v 1.2 2015/03/04 13:08:32 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-2.11.5.ebuild,v 1.3 2015/03/21 15:11:24 jlec Exp $
 EAPI=5
 
 inherit java-pkg-2
@@ -8,39 +8,40 @@ inherit java-pkg-2
 DESCRIPTION="The Scala Programming Language"
 HOMEPAGE="http://scala.epfl.ch/"
 SRC_URI="http://downloads.typesafe.com/scala/${PV}/scala-${PV}.tgz"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc"
-DEPEND=""
 
-RDEPEND=">=virtual/jre-1.6
-!dev-lang/scala"
+DEPEND=""
+RDEPEND="
+	>=virtual/jre-1.6
+	!dev-lang/scala"
 
 JAVA_PKG_IUSE='doc'
+
 S=${WORKDIR}/scala-${PV}
 
 java_prepare() {
 	ebegin 'Cleaning .bat files'
-	rm -f bin/*.bat
+	rm -f bin/*.bat || die
 	eend $?
 
 	ebegin 'Patching SCALA_HOME variable in bin/ scripts'
 	for f in bin/*; do
-		sed -i -e 's#\(SCALA_HOME\)=.*#\1=/usr/share/scala-bin#' $f
+		sed -i -e 's#\(SCALA_HOME\)=.*#\1=/usr/share/scala-bin#' $f || die
 	done
 	eend $?
 }
 
 src_install() {
 	ebegin 'Installing bin scripts'
-	dodir /usr/bin
-	exeinto /usr/bin
-	doexe bin/*
+	dobin bin/*
 	eend $?
 
 	ebegin 'Installing jar files'
-	cd lib/
+	cd lib/ || die
 
 	# Unversion those libs
 	java-pkg_newjar scala-continuations-library_*.jar scala-continuations-library.jar
@@ -62,7 +63,7 @@ src_install() {
 
 	eend $?
 
-	cd ../
+	cd ../ || die
 
 	ebegin 'Installing man pages'
 	doman man/man1/*.1

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r2.ebuild,v 1.9 2014/01/03 15:43:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r2.ebuild,v 1.10 2015/03/21 15:08:20 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -85,8 +85,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe "${S}"/scripts/antlr-config
+	dobin "${S}"/scripts/antlr-config
 
 	if use cxx ; then
 		cd "${S}"/lib/cpp

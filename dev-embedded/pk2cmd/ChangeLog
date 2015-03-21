@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/pk2cmd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.7 2015/01/05 15:24:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pk2cmd/ChangeLog,v 1.8 2015/03/21 15:01:13 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> pk2cmd-1.20.ebuild:
+  use dobin instead of exeinto /usr/bin/ && doexe
 
   05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pk2cmd-1.12.0-r1.ebuild,
   pk2cmd-1.20.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.79 2015/03/21 13:10:45 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.80 2015/03/21 15:07:45 nicolasbock Exp $
+
+*lammps-20150312 (21 Mar 2015)
+
+  21 Mar 2015; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20150312.ebuild:
+  sci-physics/lammps: Adding new version.
 
   21 Mar 2015; Nicolas Bock <nicolasbock@gentoo.org> lammps-20150210.ebuild:
   sci-physics/lammps-20150210: Stable for amd64, rf. bug #544018.
