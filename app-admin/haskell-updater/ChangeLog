@@ -1,6 +1,17 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.79 2015/01/04 12:52:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.81 2015/03/20 23:09:07 slyfox Exp $
+
+  20 Mar 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  haskell-updater-1.2.9.ebuild:
+  Stabilize on alpha/amd64/ia64/ppc/ppc64/sparc/x86
+
+*haskell-updater-1.2.9 (20 Mar 2015)
+
+  20 Mar 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +haskell-updater-1.2.9.ebuild:
+  Version bump. Better action hints to recover a broken system, a hew check for
+  doubly registered package.
 
   04 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org>
   haskell-updater-1.2.8.ebuild:
