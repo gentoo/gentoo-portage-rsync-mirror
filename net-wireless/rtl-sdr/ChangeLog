@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/rtl-sdr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/ChangeLog,v 1.10 2014/12/23 18:17:11 tomjbe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl-sdr/ChangeLog,v 1.11 2015/03/21 20:15:48 zerochaos Exp $
+
+*rtl-sdr-0.5.3-r1 (21 Mar 2015)
+
+  21 Mar 2015; Rick Farina <zerochaos@gentoo.org> +rtl-sdr-0.5.3-r1.ebuild,
+  rtl-sdr-9999.ebuild:
+  add detach kernel driver option to co-exist with the kernel rtl driver, switch
+  to cmake build system per upstream default, don't install udev rules, if the
+  user wants 666 rules let's not make it easy to cripple security
 
   23 Dec 2014; Thomas Beierlein <tomjbe@gentoo.org> rtl-sdr-0.5.3.ebuild,
   rtl-sdr-9999.ebuild:

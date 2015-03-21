@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/opendchub
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.17 2011/08/19 13:59:24 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.18 2015/03/21 20:03:35 jlec Exp $
+
+  21 Mar 2015; Justin Lecher <jlec@gentoo.org> -opendchub-0.7.15.ebuild,
+  metadata.xml, opendchub-0.8.2.ebuild:
+  Drop old, bump to EAPI=5
 
   19 Aug 2011; Thomas Kahle <tomka@gentoo.org> opendchub-0.8.2.ebuild:
   x86 stable per bug 314551

@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.247 2015/02/28 13:21:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.248 2015/03/21 20:04:57 williamh Exp $
+
+  21 Mar 2015; William Hubbs <williamh@gentoo.org> -iproute2-2.6.29.1-r1.ebuild,
+  -iproute2-2.6.35-r2.ebuild, -iproute2-2.6.35-r3.ebuild,
+  -iproute2-3.1.0.ebuild, -iproute2-3.10.0.ebuild, -iproute2-3.11.0.ebuild,
+  -iproute2-3.12.0.ebuild, -iproute2-3.14.0.ebuild, -iproute2-3.15.0.ebuild,
+  -iproute2-3.16.0-r1.ebuild, -iproute2-3.16.0.ebuild, -iproute2-3.18.0.ebuild,
+  -iproute2-3.4.0.ebuild, -iproute2-3.5.1.ebuild, -iproute2-3.6.0.ebuild,
+  -iproute2-3.7.0.ebuild, -iproute2-3.9.0.ebuild:
+  remove old versions
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> iproute2-3.17.0.ebuild:
   Stable for ia64, wrt bug #535698
