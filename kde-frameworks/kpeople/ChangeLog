@@ -1,0 +1,9 @@
+# ChangeLog for kde-frameworks/kpeople
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kpeople/ChangeLog,v 1.1 2015/03/21 17:29:08 kensington Exp $
+
+*kpeople-5.8.0 (21 Mar 2015)
+
+  21 Mar 2015; Michael Palimaka <kensington@gentoo.org> +kpeople-5.8.0.ebuild,
+  +metadata.xml:
+  Import from KDE overlay.

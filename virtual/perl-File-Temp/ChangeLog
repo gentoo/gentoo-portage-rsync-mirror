@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.103 2015/02/18 08:37:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.104 2015/03/21 17:13:23 vapier Exp $
+
+  21 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  perl-File-Temp-0.230.400-r2.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-File-Temp-0.230.400-r2.ebuild:

@@ -1,22 +1,29 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.32.ebuild,v 1.3 2015/01/11 16:27:22 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.32.ebuild,v 1.4 2015/03/21 17:11:55 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python2_7 )
-inherit eutils autotools elisp-common latex-package multilib python-single-r1
+
+inherit autotools elisp-common eutils latex-package multilib python-single-r1
 
 DESCRIPTION="A vector graphics language that provides a framework for technical drawing"
 HOMEPAGE="http://asymptote.sourceforge.net/"
 SRC_URI="mirror://sourceforge/asymptote/${P}.src.tgz"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="+boehm-gc doc emacs examples fftw gsl +imagemagick latex offscreen +opengl python sigsegv svg vim-syntax X"
-REQUIRED_USE="offscreen? ( opengl )"
 
-RDEPEND=">=sys-libs/readline-4.3-r5
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
+	offscreen? ( opengl )"
+
+RDEPEND="
 	>=sys-libs/ncurses-5.4-r5
+	>=sys-libs/readline-4.3-r5:0=
 	imagemagick? ( media-gfx/imagemagick[png] )
 	opengl? ( >=media-libs/mesa-8 )
 	offscreen? ( media-libs/mesa[osmesa] )
@@ -26,12 +33,24 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	fftw? ( >=sci-libs/fftw-3.0.1 )
 	gsl? ( sci-libs/gsl )
 	python? ( ${PYTHON_DEPS} )
-	X? ( x11-misc/xdg-utils ${PYTHON_DEPS} virtual/python-imaging[tk,${PYTHON_USEDEP}] )
-	latex? ( virtual/latex-base >=dev-texlive/texlive-latexextra-2013 )
+	X? (
+		${PYTHON_DEPS}
+		x11-misc/xdg-utils
+		virtual/python-imaging[tk,${PYTHON_USEDEP}]
+		)
+	latex? (
+		virtual/latex-base
+		>=dev-texlive/texlive-latexextra-2013
+		)
 	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 DEPEND="${RDEPEND}
-	doc? ( dev-lang/perl virtual/texi2dvi virtual/latex-base media-gfx/imagemagick[png] )"
+	doc? (
+		dev-lang/perl
+		media-gfx/imagemagick[png]
+		virtual/texi2dvi
+		virtual/latex-base
+		)"
 
 TEXMF=/usr/share/texmf-site
 
@@ -62,7 +81,8 @@ src_prepare() {
 src_configure() {
 	# for the CPPFLAGS see
 	# http://sourceforge.net/forum/forum.php?thread_id=1683277&forum_id=409349
-	econf CPPFLAGS=-DHAVE_SYS_TYPES_H \
+	econf \
+		CPPFLAGS=-DHAVE_SYS_TYPES_H \
 		CFLAGS="${CXXFLAGS}" \
 		--disable-gc-debug \
 		$(use_enable boehm-gc gc system) \
@@ -74,17 +94,17 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	default
 
-	cd doc
+	cd doc || die
 	emake asy.1
 	if use doc; then
 		# info
 		einfo "Making info"
 		emake ${PN}.info
-		cd FAQ
+		cd FAQ || die
 		emake
-		cd ..
+		cd .. || die
 		# pdf
 		einfo "Making pdf docs"
 		export VARTEXFONTS="${T}"/fonts
@@ -92,7 +112,7 @@ src_compile() {
 		emake -j1 asymptote.pdf
 		emake CAD.pdf
 	fi
-	cd ..
+	cd .. || die
 
 	if use emacs; then
 		einfo "Compiling emacs lisp files"
@@ -102,8 +122,7 @@ src_compile() {
 
 src_install() {
 	# the program
-	exeinto /usr/bin
-	doexe asy
+	dobin asy
 
 	# .asy files
 	insinto /usr/share/${PN}
@@ -115,10 +134,8 @@ src_install() {
 
 	# X GUI
 	if use X; then
-		insinto /usr/share/${PN}/GUI
-		doins GUI/*.py
-		chmod 755 "${ED}"usr/share/${PN}/GUI/xasy.py
-		python_fix_shebang "${ED}"usr/share/${PN}/GUI
+		python_scriptinto /usr/share/${PN}/GUI
+		python_doscript GUI/*.py
 		dosym /usr/share/${PN}/GUI/xasy.py /usr/bin/xasy
 		doman doc/xasy.1x
 	fi
@@ -126,36 +143,33 @@ src_install() {
 	# examples
 	if use examples; then
 		insinto /usr/share/${PN}/examples
-		doins examples/*.asy \
+		doins \
+			examples/*.asy \
 			examples/*.eps \
 			doc/*.asy \
 			doc/*.csv \
 			doc/*.dat \
 			doc/extra/*.asy
-		if use X; then
-			doins GUI/*.asy
-		fi
+		use X && doins GUI/*.asy
+
 		insinto /usr/share/${PN}/examples/animations
 		doins examples/animations/*.asy
 	fi
 
 	# LaTeX style
 	if use latex; then
-		cd doc
+		cd doc || die
 		insinto "${TEXMF}"/tex/latex/${PN}
 		doins ${PN}.sty asycolors.sty
 		if use examples; then
 			insinto /usr/share/${PN}/examples
 			doins latexusage.tex
 		fi
-		cd ..
+		cd .. || die
 	fi
 
 	# asymptote.py
-	if use python; then
-		python_moduleinto "$(python_get_sitedir)"
-		python_domodule base/${PN}.py
-	fi
+	use python && python_domodule base/${PN}.py
 
 	# emacs mode
 	if use emacs; then
@@ -173,14 +187,14 @@ src_install() {
 
 	# extra documentation
 	if use doc; then
-		cd doc
+		cd doc || die
 		doinfo ${PN}.info*
-		cd FAQ
+		cd FAQ || die
 		dodoc asy-faq.ascii
 		doinfo asy-faq.info
 		insinto /usr/share/doc/${PF}/html/FAQ
 		doins asy-faq.html/*
-		cd ..
+		cd .. || die
 		insinto /usr/share/doc/${PF}
 		doins ${PN}.pdf CAD.pdf
 	fi

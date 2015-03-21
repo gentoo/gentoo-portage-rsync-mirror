@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare pretend setup test unpack
+DEPEND=>=kde-frameworks/kconfig-5.8 >=kde-frameworks/kcoreaddons-5.8 designer? ( dev-qt/designer:5 >=kde-frameworks/kcompletion-5.8 >=kde-frameworks/kconfigwidgets-5.8 >=kde-frameworks/kiconthemes-5.8 >=kde-frameworks/kio-5.8 >=kde-frameworks/kitemviews-5.8 >=kde-frameworks/kplotting-5.8 >=kde-frameworks/ktextwidgets-5.8 >=kde-frameworks/kwidgetsaddons-5.8 >=kde-frameworks/kxmlgui-5.8 >=kde-frameworks/sonnet-5.8 ) webkit? ( dev-qt/designer:5 dev-qt/qtgui:5 >=kde-frameworks/kdewebkit-5.8 ) >=kde-frameworks/kdoctools-5.8 nls? ( dev-qt/linguist-tools:5 ) >=sys-apps/sed-4 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-libs/extra-cmake-modules-1.8.0 doc? ( >=kde-frameworks/kapidox-5.8 app-doc/doxygen ) >=dev-qt/qtcore-5.4.1:5 dev-util/desktop-file-utils app-arch/xz-utils
+DESCRIPTION=Framework providing plugins to use KDE frameworks widgets in QtDesigner
+EAPI=5
+HOMEPAGE=http://www.kde.org/
+IUSE=designer nls webkit doc debug
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1+
+RDEPEND=>=kde-frameworks/kconfig-5.8 >=kde-frameworks/kcoreaddons-5.8 designer? ( dev-qt/designer:5 >=kde-frameworks/kcompletion-5.8 >=kde-frameworks/kconfigwidgets-5.8 >=kde-frameworks/kiconthemes-5.8 >=kde-frameworks/kio-5.8 >=kde-frameworks/kitemviews-5.8 >=kde-frameworks/kplotting-5.8 >=kde-frameworks/ktextwidgets-5.8 >=kde-frameworks/kwidgetsaddons-5.8 >=kde-frameworks/kxmlgui-5.8 >=kde-frameworks/sonnet-5.8 ) webkit? ( dev-qt/designer:5 dev-qt/qtgui:5 >=kde-frameworks/kdewebkit-5.8 ) >=kde-frameworks/kf-env-3 >=dev-qt/qtcore-5.4.1:5
+SLOT=5/5.8
+SRC_URI=mirror://kde/stable/frameworks/5.8/kdesignerplugin-5.8.0.tar.xz
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	kde5	9717fd514416dc1b5a4237e24e09bc73	kde5-functions	f998edccf74f8156899d9b3585b9f008	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=d57198656900c4a869047fffe395f359
