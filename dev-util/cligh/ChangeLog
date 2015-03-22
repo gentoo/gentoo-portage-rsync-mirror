@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cligh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cligh/ChangeLog,v 1.3 2014/07/06 12:51:44 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cligh/ChangeLog,v 1.4 2015/03/22 20:20:59 williamh Exp $
+
+  22 Mar 2015; William Hubbs <williamh@gentoo.org> cligh-9999.ebuild:
+  Upstream moved to python 3.x
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> cligh-0.1_p20120630.ebuild,
   cligh-0.2.ebuild, cligh-9999.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/libxmlpp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.132 2014/06/22 18:43:47 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.133 2015/03/22 20:08:22 tetromino Exp $
+
+*libxmlpp-2.36.0-r1 (22 Mar 2015)
+
+  22 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libxmlpp-2.36.0-r1.ebuild:
+  Add multilib support (bug #469180, thanks to Karl Lindén). Install docs
+  where upstream expects so other *pp docs can link to them.
 
   22 Jun 2014; Markus Meier <maekke@gentoo.org> libxmlpp-2.36.0.ebuild:
   add ~arm, bug #511566

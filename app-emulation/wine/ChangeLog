@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.530 2015/03/22 19:58:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.531 2015/03/22 20:07:55 tetromino Exp $
 
 *wine-1.7.39 (22 Mar 2015)
 
@@ -8,7 +8,7 @@
   wine-9999.ebuild, +files/wine-1.7.39-gstreamer-v5-staging-post.patch,
   +files/wine-1.7.39-gstreamer-v5-staging-pre.patch:
   Version bump from NP-Hardass overlay, see
-  https://www.winehq.org/news/2015032001 for the announcement.
+  https://www.winehq.org/announce/1.7.39 for the announcement.
 
   08 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   files/wine-1.7.38-gstreamer-v5-staging-post.patch:
