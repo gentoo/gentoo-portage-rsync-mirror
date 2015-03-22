@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.293 2015/03/14 08:08:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.294 2015/03/22 03:14:14 zerochaos Exp $
+
+  22 Mar 2015; Rick Farina <zerochaos@gentoo.org> gdb-7.7-r1.ebuild,
+  gdb-7.7.1.ebuild, gdb-7.8.1.ebuild, gdb-7.8.2.ebuild, gdb-7.8.ebuild:
+  python-single-r1 no longer supports eapi 4 due to metadata varience.  this
+  tested QA fix allows gdb to be buildable.  Please do not revert gdb to an
+  unbuiltable state.
 
   14 Mar 2015; Mike Frysinger <vapier@gentoo.org> -gdb-6.6-r2.ebuild,
   -gdb-6.7.1-r3.ebuild, -gdb-6.8-r1.ebuild, -gdb-6.8-r2.ebuild,
