@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/jnr-constants-0.8.6.ebuild,v 1.1 2015/03/21 18:37:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/jnr-constants-0.8.6.ebuild,v 1.2 2015/03/21 23:16:56 monsieurp Exp $
 
 EAPI="5"
 
@@ -18,10 +18,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	>=virtual/jre-1.5"
+	>=virtual/jre-1.6"
 
 DEPEND="
-	>=virtual/jdk-1.5
+	>=virtual/jdk-1.6
 	test? (
 		dev-java/ant-junit:0
 		>=dev-java/junit-4.8:4
@@ -39,6 +39,7 @@ JAVA_ANT_REWRITE_CLASSPATH="yes"
 EANT_EXTRA_ARGS="-Dmaven.build.finalName=${PN}"
 
 EANT_TEST_GENTOO_CLASSPATH="junit-4"
+
 src_test() {
 	java-pkg-2_src_test
 }

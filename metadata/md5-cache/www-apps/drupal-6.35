@@ -8,7 +8,7 @@ KEYWORDS=~alpha ~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/php[gd,pdo,postgres?,xml] virtual/httpd-php mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) ) >=app-admin/webapp-config-1.50.15
 REQUIRED_USE=|| ( mysql postgres )
-SLOT=6.34
-SRC_URI=http://drupal.org/files/projects/drupal-6.34.tar.gz
+SLOT=6.35
+SRC_URI=http://drupal.org/files/projects/drupal-6.35.tar.gz
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=b7bb532c3f49e77085287ffa1350575b
+_md5_=77b4878476341d373cd654e27c9629e8
