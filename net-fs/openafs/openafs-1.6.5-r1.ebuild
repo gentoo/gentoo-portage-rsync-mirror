@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.5-r1.ebuild,v 1.4 2013/10/07 20:27:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.5-r1.ebuild,v 1.5 2015/03/22 21:41:59 bircoph Exp $
 
 EAPI="4"
 
@@ -150,5 +150,5 @@ pkg_postinst() {
 	elog "(warning: it is not yet up to date wrt the new file locations)"
 	elog
 	elog "The documentation can be found at:"
-	elog "  http://www.gentoo.org/doc/en/openafs.xml"
+	elog "  https://wiki.gentoo.org/wiki/OpenAFS"
 }

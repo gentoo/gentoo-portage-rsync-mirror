@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-NFSLock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.15 2015/03/22 17:00:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/ChangeLog,v 1.16 2015/03/22 21:35:01 dilfridge Exp $
+
+  22 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  File-NFSLock-1.270.0.ebuild:
+  Fix whitespace
 
 *File-NFSLock-1.270.0 (22 Mar 2015)
 
