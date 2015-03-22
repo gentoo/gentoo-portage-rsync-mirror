@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libva-vdpau-driver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.13 2015/03/17 10:21:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.14 2015/03/22 08:51:12 rhill Exp $
+
+*libva-vdpau-driver-0.7.4-r3 (22 Mar 2015)
+
+  22 Mar 2015; Ryan Hill <rhill@gentoo.org>
+  +libva-vdpau-driver-0.7.4-r3.ebuild,
+  +files/libva-vdpau-driver-0.7.4-nouveau.patch:
+  Get vaapi working on nouveau (bug #543982).
 
   17 Mar 2015; Alexis Ballier <aballier@gentoo.org>
   -libva-vdpau-driver-0.7.3.ebuild, -libva-vdpau-driver-0.7.4.ebuild,

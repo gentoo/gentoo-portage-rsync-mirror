@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.83 2015/01/28 19:47:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.84 2015/03/22 08:56:03 idella4 Exp $
+
+*pypy-2.5.0 (22 Mar 2015)
+
+  22 Mar 2015; Ian Delaney <idella4@gentoo.org> +files/2.5.0-shared-lib.patch,
+  +files/2.5.0_all_distutils_cxx.patch, +pypy-2.5.0.ebuild, metadata.xml:
+  bump; add missed dep for tests, update patches for shared-lib, all_distutils
+  (renamed 2.5.0_all_distutils_cxx.patch)
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> pypy-2.3.1-r2.ebuild,
   pypy-2.4.0.ebuild:
