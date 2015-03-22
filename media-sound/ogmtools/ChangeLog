@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ogmtools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.34 2009/06/19 21:41:22 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.35 2015/03/22 15:33:16 mrueg Exp $
+
+  22 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -ogmtools-1.5.ebuild:
+  Remove superseded stable version.
 
   19 Jun 2009; Brent Baude <ranger@gentoo.org> ogmtools-1.5-r2.ebuild:
   stable ppc64, bug 272111

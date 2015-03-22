@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tempest_for_eliza
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tempest_for_eliza/ChangeLog,v 1.13 2012/03/18 15:49:16 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tempest_for_eliza/ChangeLog,v 1.14 2015/03/22 15:37:44 mrueg Exp $
+
+  22 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -tempest_for_eliza-1.0.5.ebuild:
+  Remove superseded stable version.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org>
   tempest_for_eliza-1.0.5.ebuild, tempest_for_eliza-1.0.5-r1.ebuild:
