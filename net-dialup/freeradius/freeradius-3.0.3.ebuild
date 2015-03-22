@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.3.ebuild,v 1.4 2015/03/15 17:56:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-3.0.3.ebuild,v 1.5 2015/03/22 07:24:15 ulm Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="
 	debug firebird iodbc kerberos ldap mysql odbc oracle pam pcap
 	postgres python readline sqlite ssl
 "
-RESTRICT="firebird? ( bindist )"
+RESTRICT="test firebird? ( bindist )"
 
 RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
@@ -50,8 +50,6 @@ RDEPEND="!net-dialup/cistronradius
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-
-RESTRICT="test"
 
 pkg_setup() {
 	enewgroup radius
