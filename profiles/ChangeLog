@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9874 2015/03/22 13:16:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9875 2015/03/22 18:49:44 grknight Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Mar 2015; Brian Evans <grknight@gentoo.org> package.mask:
+  PHP 5.3.x is vulernable to several security bugs and has
+  reached EOL status. (Bugs #533998, #537586, #537590, #538822, #541098)
+  Masked pending resolution to bug #538756
 
   22 Mar 2015; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask some packages for removal

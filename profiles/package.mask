@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16431 2015/03/22 13:16:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16432 2015/03/22 18:49:44 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Brian Evans <grknight@gentoo.org> (22 Mar 2015)
+# PHP 5.3.x is vulernable to several security bugs and has
+# reached EOL status. (Bugs #533998, #537586, #537590, #538822, #541098)
+# Masked pending resolution to bug #538756
+dev-lang/php:5.3
+virtual/httpd-php:5.3
+=mail-client/squirrelmail-1.4.2
 
 # Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
 # Cannot be fetched, also has licensing issues (#531270).
