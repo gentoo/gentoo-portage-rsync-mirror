@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/iobuffer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.15 2014/05/01 06:11:28 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.16 2015/03/22 16:17:49 graaff Exp $
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org> iobuffer-1.1.2-r3.ebuild:
+  Add ruby22.
 
   01 May 2014; Hans de Graaff <graaff@gentoo.org> iobuffer-1.1.2-r3.ebuild:
   Add ruby21. Remove ruby18.

@@ -1,11 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-1.1.2-r3.ebuild,v 1.2 2014/05/01 06:11:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/iobuffer-1.1.2-r3.ebuild,v 1.3 2015/03/22 16:17:49 graaff Exp $
 
 EAPI=5
-# jruby: mkmf
 # rbx: Kernel(Autoload)#allocate (method_missing)
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGES.md README.md"

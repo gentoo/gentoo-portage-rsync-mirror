@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/loofah
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loofah/ChangeLog,v 1.4 2015/01/08 20:50:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loofah/ChangeLog,v 1.5 2015/03/22 16:30:24 graaff Exp $
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org> loofah-2.0.1.ebuild:
+  Add ruby22.
 
   08 Jan 2015; Markus Meier <maekke@gentoo.org> loofah-2.0.1.ebuild:
   add ~arm, bug #534186

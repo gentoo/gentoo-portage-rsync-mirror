@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/instantiator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/instantiator/ChangeLog,v 1.10 2014/12/31 11:43:13 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/instantiator/ChangeLog,v 1.11 2015/03/22 16:16:07 graaff Exp $
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org> instantiator-0.0.6.ebuild:
+  Add ruby22.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> instantiator-0.0.6.ebuild:
   Add ~sparc, wrt bug #501152
