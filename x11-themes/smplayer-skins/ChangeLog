@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/smplayer-skins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-skins/ChangeLog,v 1.5 2014/09/24 08:30:44 yngwin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-skins/ChangeLog,v 1.6 2015/03/22 04:55:17 yngwin Exp $
+
+*smplayer-skins-15.2.0 (22 Mar 2015)
+
+  22 Mar 2015; Ben de Groot <yngwin@gentoo.org> +smplayer-skins-15.2.0.ebuild:
+  version bump
 
   24 Sep 2014; Ben de Groot <yngwin@gentoo.org> smplayer-skins-14.9.0.ebuild:
   do not install Makefile
