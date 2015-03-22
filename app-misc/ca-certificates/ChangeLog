@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.106 2015/03/22 00:07:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.107 2015/03/22 14:52:53 zlogene Exp $
+
+  22 Mar 2015; Mikle Kolyada <zlogene@gentoo.org>
+  ca-certificates-20140927.3.17.2.ebuild:
+  amd64 stable wrt bug #543976
 
 *ca-certificates-20141019.3.17.4 (22 Mar 2015)
 

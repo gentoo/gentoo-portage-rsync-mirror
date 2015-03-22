@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.90 2015/03/08 15:06:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.91 2015/03/22 14:31:22 mgorny Exp $
+
+*xfce4-power-manager-1.4.4 (22 Mar 2015)
+
+  22 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-power-manager-1.4.4.ebuild:
+  Version bump with trayicon reintroduced and minor bugfixes. Add slot operators
+  to deps.
 
 *xfce4-power-manager-1.4.3 (08 Mar 2015)
 
