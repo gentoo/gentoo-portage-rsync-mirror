@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/adwaita-icon-theme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/adwaita-icon-theme/ChangeLog,v 1.8 2015/03/15 13:34:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/adwaita-icon-theme/ChangeLog,v 1.9 2015/03/22 17:53:27 tetromino Exp $
+
+*adwaita-icon-theme-3.14.1-r1 (22 Mar 2015)
+
+  22 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +adwaita-icon-theme-3.14.1-r1.ebuild:
+  Stop installing the /usr/share/cursors/xorg-x11/default symlink, it messes up
+  cursors in some non-GNOME desktop environments (bug #543488). Instead, rely
+  on env variables set by the session; for GNOME, make sure you have
+  >=gnome-session-3.14.0-r2
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> adwaita-icon-theme-3.14.1.ebuild:
   x86 stable, bug 534012
