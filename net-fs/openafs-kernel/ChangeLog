@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.163 2015/03/17 18:47:57 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.164 2015/03/22 21:00:47 bircoph Exp $
+
+*openafs-kernel-1.6.11 (22 Mar 2015)
+
+  22 Mar 2015; Andrew Savchenko <bircoph@gentoo.org>
+  +openafs-kernel-1.6.11.ebuild:
+  Version bump based on proxied maintainer commit from NP-hardass
+  <np.hardass@gmail.com>. Fixes bugs 476332, 497006, 500378.
 
   17 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Update maintainers information.
