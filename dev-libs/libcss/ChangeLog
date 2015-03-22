@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libcss
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/ChangeLog,v 1.13 2014/11/15 12:45:44 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcss/ChangeLog,v 1.14 2015/03/21 23:44:39 xmw Exp $
+
+*libcss-0.5.0 (21 Mar 2015)
+
+  21 Mar 2015; Michael Weber <xmw@gentoo.org>
+  +files/libcss-0.5.0-glibc2.20.patch, +libcss-0.5.0.ebuild,
+  -files/libcss-0.1.2-enum-compare.patch, -libcss-0.1.2.ebuild,
+  -libcss-0.2.0.ebuild:
+  Version bump (bug 543846).
 
   15 Nov 2014; Michael Weber <xmw@gentoo.org> libcss-0.4.0.ebuild:
   tighten dependencies
