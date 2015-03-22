@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/requests-cache-0.4.9.ebuild,v 1.1 2015/01/26 04:27:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/requests-cache-0.4.9.ebuild,v 1.2 2015/03/22 11:23:35 nativemad Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc"
 
 # Portage only has versions of request >= minimum border

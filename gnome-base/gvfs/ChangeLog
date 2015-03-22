@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.287 2015/03/19 11:42:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.288 2015/03/22 11:10:33 pacho Exp $
+
+  22 Mar 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gvfs-1.22.4-fix-parallel.patch, gvfs-1.22.4.ebuild:
+  Fix parallel installation (#543812 by tman, Aaron U'Ren and many others)
 
 *gvfs-1.22.4 (19 Mar 2015)
 

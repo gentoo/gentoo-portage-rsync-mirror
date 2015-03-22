@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.22.4.ebuild,v 1.1 2015/03/19 11:42:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.22.4.ebuild,v 1.2 2015/03/22 11:10:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -81,9 +81,14 @@ src_prepare() {
 			-e 's/burn.mount/ /' \
 			-i daemon/Makefile.am || die
 
-		eautoreconf
+		# Uncomment when eautoreconf stops being needed always
+		#eautoreconf
 	fi
 
+	# Fix parallel installation, bug #543812 (from 'master')
+	epatch "${FILESDIR}/${PN}-1.22.4-fix-parallel.patch"
+
+	eautoreconf
 	gnome2_src_prepare
 }
 
