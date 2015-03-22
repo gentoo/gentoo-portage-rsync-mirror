@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.236 2015/03/03 08:34:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.237 2015/03/22 13:36:53 pacho Exp $
+
+*bluez-5.29 (22 Mar 2015)
+
+  22 Mar 2015; Pacho Ramos <pacho@gentoo.org> +bluez-5.29.ebuild,
+  +files/bluez-udevadm-path.patch, -bluez-5.27.ebuild:
+  Version bump, try both udevadm paths (#539844 by Rick Harris), drop old.
 
   03 Mar 2015; Michał Górny <mgorny@gentoo.org> bluez-5.28.ebuild:
   Remove broken REQUIRED_USE and correct deps for python-any-r1.

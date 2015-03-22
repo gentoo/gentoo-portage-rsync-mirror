@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prepare unpack
+DEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20141203-r4 sys-devel/m4 >=sys-apps/checkpolicy-2.0.21
+DESCRIPTION=SELinux policy for sysstat
+EAPI=5
+HOMEPAGE=https://wiki.gentoo.org/wiki/Project:SELinux
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20141203-r4
+SLOT=0
+SRC_URI=https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-2.20141203.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20141203-r4.tar.bz2
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	selinux-policy-2	5c9bf941743acbb8e98d156b9657adde	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=8088bd8e0db0d599a10ecb458846f8f0

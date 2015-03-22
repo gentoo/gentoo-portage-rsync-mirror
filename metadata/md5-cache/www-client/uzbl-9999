@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1 MPL-1.1
 RDEPEND=dev-libs/glib:2 >=dev-libs/icu-4.0.1 >=net-libs/libsoup-2.24:2.4 !gtk3? ( >=net-libs/webkit-gtk-1.1.15:2 >=x11-libs/gtk+-2.14:2 ) gtk3? ( net-libs/webkit-gtk:3 x11-libs/gtk+:3 ) x11-misc/xdg-utils browser? ( x11-misc/xclip ) helpers? ( dev-python/pygtk dev-python/pygobject:2 gnome-extra/zenity net-misc/socat x11-libs/pango x11-misc/dmenu x11-misc/xclip ) tabbed? ( dev-python/pygtk ) vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 REQUIRED_USE=tabbed? ( browser )
 SLOT=0
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	a9825781ce17f742654908a6ef0f007f	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
 _md5_=dc5ab10bfa227eaf6846c174b96c06ca

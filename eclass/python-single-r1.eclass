@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.37 2015/03/21 14:55:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.38 2015/03/22 13:41:16 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -49,7 +49,7 @@ case "${EAPI:-0}" in
 			:
 		elif [[ ${CATEGORY}/${P} == sys-apps/util-linux-2.2[456]* ]]; then
 			:
-		elif [[ ${CATEGORY}/${P} == sys-devel/gdb-7.[78]* ]]; then
+		elif [[ ${CATEGORY}/${P} == */gdb-7.[78]* ]]; then
 			:
 		else
 			die "Unsupported EAPI=${EAPI:-4} (too old, allowed only on restricted set of packages) for ${ECLASS}"
