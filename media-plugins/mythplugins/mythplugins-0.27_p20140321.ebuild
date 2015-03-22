@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.27_p20140321.ebuild,v 1.2 2014/04/19 23:47:38 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.27_p20140321.ebuild,v 1.3 2015/03/22 07:46:18 nativemad Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/MythTV/mythtv/archive/v0.27.tar.gz -> mythtv-0.27.ta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 MYTHPLUGINS="mytharchive mythbrowser mythgallery mythgame \
 mythmusic mythnetvision mythnews mythweather mythzoneminder"

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.27_p20140321.ebuild,v 1.2 2014/04/19 23:46:44 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.27_p20140321.ebuild,v 1.3 2015/03/22 07:44:29 nativemad Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="https://github.com/MythTV/mythtv/archive/v0.27.tar.gz -> mythtv-0.27.ta
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE_INPUT_DEVICES="input_devices_joystick"
 IUSE="alsa altivec libass autostart bluray cec crystalhd debug dvb dvd \
