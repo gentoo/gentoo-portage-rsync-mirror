@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-entropyd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-entropyd/ChangeLog,v 1.52 2015/03/22 13:47:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-entropyd/ChangeLog,v 1.53 2015/03/22 14:17:09 swift Exp $
+
+  22 Mar 2015; Sven Vermeulen <swift@gentoo.org>
+  selinux-entropyd-2.20141203-r3.ebuild:
+  Stabilize 2.20141203-r3 policies
 
 *selinux-entropyd-2.20141203-r4 (22 Mar 2015)
 

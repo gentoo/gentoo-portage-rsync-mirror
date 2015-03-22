@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.252 2015/03/08 15:06:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.253 2015/03/22 14:23:09 mgorny Exp $
+
+*xfdesktop-4.12.1 (22 Mar 2015)
+
+  22 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfdesktop-4.12.1.ebuild:
+  Version bump with bugfixes. Add slot operators to deps.
 
 *xfdesktop-4.12.0 (08 Mar 2015)
 

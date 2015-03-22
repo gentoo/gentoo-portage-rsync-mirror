@@ -1,4 +1,8 @@
 
+  22 Mar 2015; Sven Vermeulen <swift@gentoo.org>
+  selinux-pan-2.20141203-r3.ebuild:
+  Stabilize 2.20141203-r3 policies
+
 *selinux-pan-2.20141203-r4 (22 Mar 2015)
 
   22 Mar 2015; Sven Vermeulen <swift@gentoo.org>

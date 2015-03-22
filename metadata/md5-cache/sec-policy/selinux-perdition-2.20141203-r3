@@ -3,10 +3,10 @@ DEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.2014
 DESCRIPTION=SELinux policy for perdition
 EAPI=5
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:SELinux
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20141203-r3
 SLOT=0
 SRC_URI=https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-2.20141203.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20141203-r3.tar.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	selinux-policy-2	5c9bf941743acbb8e98d156b9657adde	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=f9a1669725eb2690195ad7dba683c61b
+_md5_=a14c1188eacd2d076f39231c339d5c83
