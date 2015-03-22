@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.67 2015/03/20 13:21:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.68 2015/03/22 09:01:57 rhill Exp $
+
+  22 Mar 2015; Ryan Hill <rhill@gentoo.org> libva-1.5.1.ebuild:
+  Add nouveau to VIDEO_CARDS (bug #543982).
 
 *libva-1.5.1 (20 Mar 2015)
 
