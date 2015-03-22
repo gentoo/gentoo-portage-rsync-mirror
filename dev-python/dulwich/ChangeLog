@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/dulwich
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.84 2014/12/28 10:18:18 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.85 2015/03/22 15:30:50 jlec Exp $
+
+*dulwich-0.10.0 (22 Mar 2015)
+*dulwich-0.9.9 (22 Mar 2015)
+
+  22 Mar 2015; Justin Lecher <jlec@gentoo.org> +dulwich-0.10.0.ebuild,
+  +dulwich-0.9.9.ebuild, -dulwich-0.9.4.ebuild, -dulwich-0.9.5.ebuild,
+  -dulwich-0.9.8.ebuild:
+  Drop old and bump version which fixes CVE-2015-0838, #544104
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org> dulwich-0.9.7.ebuild:
   Stable for x86, wrt bug #533320

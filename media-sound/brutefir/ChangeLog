@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/brutefir
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.19 2012/06/09 02:08:39 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/ChangeLog,v 1.20 2015/03/22 15:26:36 mrueg Exp $
+
+  22 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -brutefir-1.0i.ebuild,
+  -brutefir-1.0k.ebuild:
+  Remove superseded stable version.
 
   09 Jun 2012; Zac Medico <zmedico@gentoo.org> brutefir-1.0i.ebuild,
   brutefir-1.0k.ebuild:
@@ -79,4 +83,3 @@
   18 Aug 2004; <frank@gentoo.org> :
   New ebuild for brutefir 1.0 submitted by Ed Wildgoose <gentoo@wildgooses.com>.
   Closes bug #58554.
-

@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.165 2015/03/01 22:30:54 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.166 2015/03/22 15:09:04 k_f Exp $
+
+*pinentry-0.9.0-r3 (22 Mar 2015)
+
+  22 Mar 2015; Kristian Fiskerstrand <k_f@gentoo.org> +pinentry-0.9.0-r3.ebuild:
+  Use qt4_get_bindir from qmake-utils instead of hardcoding moc path. Fixes
+  #544110
 
 *pinentry-0.9.0-r2 (01 Mar 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3asm
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/ChangeLog,v 1.15 2014/08/10 21:08:14 slyfox Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3asm/ChangeLog,v 1.16 2015/03/22 15:19:57 mrueg Exp $
+
+  22 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -mp3asm-0.1.3-r1.ebuild:
+  Remove superseded stable version.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mp3asm-0.1.3-r1.ebuild,
   mp3asm-0.1.3-r2.ebuild:

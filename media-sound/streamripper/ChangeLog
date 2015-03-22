@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/streamripper
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.76 2014/03/19 13:47:02 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.77 2015/03/22 15:20:52 mrueg Exp $
+
+  22 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -streamripper-1.64.0.ebuild:
+  Remove superseded stable version.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> streamripper-1.64.6.ebuild:
   Stable for alpha, wrt bug #471688

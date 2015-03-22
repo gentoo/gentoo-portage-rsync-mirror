@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3v2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.33 2014/08/10 21:07:06 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.34 2015/03/22 15:23:54 mrueg Exp $
+
+  22 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -id3v2-0.1.11.ebuild:
+  Remove superseded stable version.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> id3v2-0.1.11.ebuild,
   id3v2-0.1.12.ebuild:

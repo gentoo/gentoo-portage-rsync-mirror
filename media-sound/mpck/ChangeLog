@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpck
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpck/ChangeLog,v 1.5 2009/06/30 08:32:23 fauli Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpck/ChangeLog,v 1.6 2015/03/22 15:24:57 mrueg Exp $
+
+  22 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -mpck-0.10.ebuild:
+  Remove superseded stable version.
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org> mpck-0.15.ebuild:
   stable x86, bug 274766
@@ -23,4 +26,3 @@
 
   09 Dec 2005; <chainsaw@gentoo.org> +metadata.xml, +mpck-0.10.ebuild:
   Initial commit; ebuild by Francesco Turco <fctk86@gmail.com> in bug #105671.
-
