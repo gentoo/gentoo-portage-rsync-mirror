@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.5 2014/12/31 13:27:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.6 2015/03/22 13:12:04 johu Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend"
-HOMEPAGE="http://kmplayer.kde.org/"
+HOMEPAGE="https://projects.kde.org/projects/extragear/multimedia/kmplayer"
 SRC_URI="http://kmplayer.kde.org/pkgs/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2 LGPL-2.1"

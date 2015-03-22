@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.59 2015/01/26 11:08:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.60 2015/03/22 13:04:02 johu Exp $
+
+  22 Mar 2015; Johannes Huber <johu@gentoo.org> kplayer-0.7.2-r1.ebuild:
+  Update HOMEPAGE, bug #544072.
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -kplayer-0.7.2.ebuild:
   Remove old.

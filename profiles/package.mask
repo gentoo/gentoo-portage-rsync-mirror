@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16430 2015/03/21 19:48:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16431 2015/03/22 13:16:19 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,159 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Cannot be fetched, also has licensing issues (#531270).
+# Removal in a month.
+www-servers/publicfile
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Not compatible with apache-2.4, Netscape Communicator is obsolete
+# for ages (#532862). Removal in a month.
+www-apache/mod_roaming
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream dead, nothing needs them anymore (#533326). Removal in a month.
+gnome-base/gnome-js-common
+dev-libs/seed
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream dead for ages, many unresolved bugs (#533542).
+# Removal in a month.
+net-irc/xchat-gnome
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Hardmasked for a long time and still broken (#533626).
+# Removal in a month.
+# Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
+# Dead upstream, has known dataloss bugs.
+# Please use something more sane: rsnapshot, backuppc, obnam, ...
+app-backup/rdiff-backup
+app-backup/pybackpack
+sys-fs/rdiff-backup-fs
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Package was not updated since 2001, build system
+# not friendly (#534764). Removal in a month.
+app-crypt/cfs
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream dead, doesn't build (#535968). Removal in a month.
+app-editors/gphpedit
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream dead, nothing requires this anymore (#536900).
+# Removal in a month.
+media-libs/libgnome-media-profiles
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream dead, nothing needs it, relies on other obsolete stuff
+# (#537360). Removal in a month.
+net-libs/libsocialweb
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Doesn't build, unmaintained for ages (#537628).
+# Removal in a month.
+app-admin/ulog-acctd
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Relies on berlios.de, dead since 2009, nothing needs it.
+# Removal in a month (#537698)
+app-crypt/gringotts
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Dead, not compatible with current gnome versions (#537890).
+# Removal in a month.
+gnome-extra/drwright
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Dead and broken for ages (#537896). Removal in a month.
+sys-apps/blktool
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Use net-news/canto-curses and net-news/canto-daemon instead.
+# (#537900). Removal in a month.
+net-news/canto
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Dead for a long time as current kernels don't need it (#537902).
+# Removal in a month.
+app-laptop/fnfx
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Nothing in the tree need this obsolete libs (#537906).
+# Removal in a month.
+dev-libs/gdome2
+dev-libs/gmetadom
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream stopped its development as udev replaces it (#537910).
+# Removal in a month.
+sys-apps/kudzu
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Not needed by anything once gcompris (the same upstream as this one)
+# stopped using it (#537912). Removal in a month.
+dev-libs/libassetml
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Fedora killed it long time ago as it's redundant with gcc FORTIFY_SOURCE
+# and stack protector, also nothing needs it on Gentoo currently (#537914).
+# Removal in a month.
+sys-libs/libsafe
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Licensing issues (#537924). Removal in a month.
+dev-lang/mosml
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# No longer useful with current devices, dead for a long time
+# (#537926). Removal in a month.
+sys-power/nvclock
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# It's dead for ages and, also, its functionality is replaced by gdb
+# (#537938). Removal in a month.
+dev-util/pstack
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Unmaintained and dead for ages, doesn't compile anymore (#538818).
+# Removal in a month.
+net-im/gnomeicu
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Dead and unmaintained for ages, glade3 replaced it long time ago
+# (#539636). Removal in a month.
+dev-util/gazpacho
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Doesn't run at all (#539638). Removal in a month.
+x11-misc/gdevilspie
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Nothing needs it, upstream asked to drop it (#539756).
+# Removal in a month.
+app-backup/pybackpack
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream deprecated it long time ago and removed it in
+# favor of "real python modules" (#539758). Removal in a month.
+dev-python/rhpl
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# It doesn't work with current rhythmbox versions (#539762).
+# Removal in a month.
+media-plugins/rhythmbox-equalizer
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# Upstream dead, still uses ruby19 (#541640).
+# Removal in a month.
+media-sound/rubyripper
+
+# Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
+# No longer required as it's now part of www-apps/trac
+# (#542092). Removal in a month.
+www-apps/trac-git
 
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (19 Mar 2015)
 # Dev channel releases are only for people who are developers or want more
@@ -555,13 +708,6 @@ app-admin/eselect-lua
 =dev-lang/lua-5.1.5-r100
 =dev-lang/lua-5.2.3
 =dev-lang/lua-5.2.3-r1
-
-# Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
-# Dead upstream, has known dataloss bugs.
-# Please use something more sane: rsnapshot, backuppc, obnam, ...
-app-backup/rdiff-backup
-app-backup/pybackpack
-sys-fs/rdiff-backup-fs
 
 # Gilles Dartiguelongue <eva@gentoo.org> (06 Apr 2014)
 # Old release, never stable, not working anymore
