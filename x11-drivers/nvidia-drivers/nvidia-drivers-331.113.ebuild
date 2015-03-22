@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-331.113.ebuild,v 1.4 2015/03/04 10:19:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-331.113.ebuild,v 1.5 2015/03/22 08:18:06 jer Exp $
 
 EAPI=5
 
@@ -346,8 +346,7 @@ src_install() {
 		doexe ${NV_OBJ}/nvidia-settings
 	fi
 
-	exeinto /usr/bin/
-	doexe ${NV_OBJ}/nvidia-bug-report.sh
+	dobin ${NV_OBJ}/nvidia-bug-report.sh
 
 	# Desktop entries for nvidia-settings
 	if use tools ; then
