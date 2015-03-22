@@ -1,36 +1,55 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.2-r1.ebuild,v 1.1 2013/08/30 14:52:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.11.ebuild,v 1.1 2015/03/22 21:01:39 bircoph Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit flag-o-matic eutils autotools multilib toolchain-funcs versionator pam
+inherit autotools eutils flag-o-matic multilib pam systemd toolchain-funcs versionator
 
 MY_PV=$(delete_version_separator '_')
 MY_P="${PN}-${MY_PV}"
-PVER="1"
+
 DESCRIPTION="The OpenAFS distributed file system"
 HOMEPAGE="http://www.openafs.org/"
 # We always d/l the doc tarball as man pages are not USE=doc material
-SRC_URI="http://openafs.org/dl/openafs/${MY_PV}/${MY_P}-src.tar.bz2
+[[ ${PV} == *_pre* ]] && MY_PRE="candidate/" || MY_PRE=""
+SRC_URI="
+	http://openafs.org/dl/openafs/${MY_PRE}${MY_PV}/${MY_P}-src.tar.bz2
 	http://openafs.org/dl/openafs/${MY_PV}/${MY_P}-doc.tar.bz2
-	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
+	http://dev.gentoo.org/~bircoph/patches/${P}-patches.tar.xz
+"
 
 LICENSE="IBM BSD openafs-krb5-a APSL-2"
 SLOT="0"
-KEYWORDS="amd64 sparc x86 ~amd64-linux ~x86-linux"
-IUSE="doc kerberos pam"
+KEYWORDS="~amd64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 
-RDEPEND="~net-fs/openafs-kernel-${PV}
+IUSE="doc kerberos +modules pam"
+
+CDEPEND="
 	sys-libs/ncurses
 	pam? ( sys-libs/pam )
 	kerberos? ( virtual/krb5 )"
 
+DEPEND="${CDEPEND}
+	doc? (
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt
+	)"
+
+RDEPEND="${CDEPEND}
+	modules? ( ~net-fs/openafs-kernel-${PV} )"
+
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	EPATCH_EXCLUDE="050_all_job_server.patch" \
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}"/gentoo/patches
+	epatch_user
+
+	# fixing 2-nd level makefiles to honor flags
+	sed -i -r 's/\<CFLAGS[[:space:]]*=/CFLAGS+=/; s/\<LDFLAGS[[:space:]]*=/LDFLAGS+=/' \
+		src/*/Makefile.in || die '*/Makefile.in sed failed'
 
 	# packaging is f-ed up, so we can't run eautoreconf
 	# run autotools commands based on what is listed in regen.sh
@@ -43,29 +62,29 @@ src_prepare() {
 }
 
 src_configure() {
-	# cannot use "use_with" macro, as --without-krb5-config crashes the econf
-	local myconf=""
-	if use kerberos; then
-		myconf="--with-krb5-conf=$(type -p krb5-config)"
-	fi
-
 	AFS_SYSKVERS=26 \
-	XCFLAGS="${CFLAGS}" \
 	econf \
-		$(use_enable pam) \
-		--enable-supergroups \
 		--disable-kernel-module \
 		--disable-strip-binaries \
-		${myconf}
+		--enable-supergroups \
+		$(use_enable pam) \
+		$(use_with doc html-xsl /usr/share/sgml/docbook/xsl-stylesheets/html/chunk.xsl) \
+		$(use_with kerberos krb5)
 }
 
 src_compile() {
 	emake all_nolibafs
+	local d
+	if use doc; then
+		for d in doc/xml/{AdminGuide,QuickStartUnix,UserGuide}; do
+			emake -C "${d}" html;
+		done
+	fi
 }
 
 src_install() {
-	local CONFDIR=${WORKDIR}/gentoo/configs
-	local SCRIPTDIR=${WORKDIR}/gentoo/scripts
+	local OPENRCDIR="${WORKDIR}/gentoo/openrc"
+	local SYSTEMDDIR="${WORKDIR}/gentoo/systemd"
 
 	emake DESTDIR="${ED}" install_nolibafs
 
@@ -99,19 +118,22 @@ src_install() {
 
 	# minimal documentation
 	use pam && doman src/pam/pam_afs.5
-	dodoc "${CONFDIR}"/README src/afsd/CellServDB
+	dodoc "${WORKDIR}/gentoo/README" src/afsd/CellServDB
 
 	# documentation package
 	if use doc ; then
-		find doc/{arch,examples,pdf,protocol,txt}/ -type f -exec dodoc {} +
-		dohtml -A xml -r doc/{html,xml}/*
+		dodoc -r doc/{arch,examples,protocol,txt}
+		dohtml -r doc/xml/*
 	fi
 
 	# Gentoo related scripts
-	newinitd "${SCRIPTDIR}"/openafs-client openafs-client || die
-	newconfd "${CONFDIR}"/openafs-client openafs-client || die
-	newinitd "${SCRIPTDIR}"/openafs-server openafs-server || die
-	newconfd "${CONFDIR}"/openafs-server openafs-server || die
+	newinitd "${OPENRCDIR}"/openafs-client.initd openafs-client
+	newconfd "${OPENRCDIR}"/openafs-client.confd openafs-client
+	newinitd "${OPENRCDIR}"/openafs-server.initd openafs-server
+	newconfd "${OPENRCDIR}"/openafs-server.confd openafs-server
+	systemd_dotmpfilesd "${SYSTEMDDIR}"/tmpfiles.d/openafs-client.conf
+	systemd_dounit "${SYSTEMDDIR}"/openafs-client.service
+	systemd_dounit "${SYSTEMDDIR}"/openafs-server.service
 
 	# used directories: client
 	keepdir /etc/openafs
@@ -149,5 +171,5 @@ pkg_postinst() {
 	elog "(warning: it is not yet up to date wrt the new file locations)"
 	elog
 	elog "The documentation can be found at:"
-	elog "  http://www.gentoo.org/doc/en/openafs.xml"
+	elog "  https://wiki.gentoo.org/wiki/OpenAFS"
 }

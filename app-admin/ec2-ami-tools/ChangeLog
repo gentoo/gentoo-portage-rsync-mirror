@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/ec2-ami-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.18 2014/11/14 00:49:32 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.19 2015/03/22 21:01:29 blueness Exp $
+
+*ec2-ami-tools-1.5.6 (22 Mar 2015)
+
+  22 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
+  +ec2-ami-tools-1.5.6.ebuild:
+  Version bump.  Switch to ruby 2.0. See:
+  https://aws.amazon.com/developertools/368
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Maintainer needed.

@@ -22,4 +22,8 @@
 	<name>Andrej Filipcic</name>
 	<description>inactive maintainer</description>
 </maintainer>
+<use>
+	<flag name='modules'>Build libafs kernel module. Disable only if you know
+	what you're doing: without this module OpenAFS client will not work.</flag>
+</use>
 </pkgmetadata>
