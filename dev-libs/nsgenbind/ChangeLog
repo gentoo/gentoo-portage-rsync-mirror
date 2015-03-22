@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nsgenbind
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nsgenbind/ChangeLog,v 1.3 2014/11/15 13:28:00 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nsgenbind/ChangeLog,v 1.4 2015/03/22 00:05:18 xmw Exp $
+
+*nsgenbind-0.1.2 (22 Mar 2015)
+
+  22 Mar 2015; Michael Weber <xmw@gentoo.org>
+  +files/nsgenbind-0.1.2-glibc2.20.patch, +nsgenbind-0.1.2.ebuild,
+  -files/nsgenbind-0.0.1-bison-2.6.patch, -nsgenbind-0.0.1.ebuild:
+  Version bump (bug 543846).
 
 *nsgenbind-0.1.1 (15 Nov 2014)
 

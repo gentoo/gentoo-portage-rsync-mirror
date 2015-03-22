@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.1.0.ebuild,v 1.4 2014/06/18 19:13:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnsfb/libnsfb-0.1.3.ebuild,v 1.1 2015/03/22 00:11:05 xmw Exp $
 
 EAPI=5
 
+NETSURF_BUILDSYSTEM=buildsystem-1.3
 inherit netsurf
 
 DESCRIPTION="framebuffer abstraction library, written in C"
@@ -23,5 +24,18 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.15-r4[static-libs?,${MULTILIB_USEDEP}] )
 		>=x11-libs/xcb-util-keysyms-0.3.9-r1[static-libs?,${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${PN}-0.1.0-autodetect.patch )
+PATCHES=( "${FILESDIR}"/${PN}-0.1.0-autodetect.patch
+	"${FILESDIR}"/${P}-glibc2.20.patch )
+
 DOCS=( usage )
+
+src_configure() {
+	netsurf_src_configure
+
+	netsurf_makeconf+=(
+		WITH_VNC=$(usex vnc)
+		WITH_SDL=$(usex sdl)
+		WITH_XCB=$(usex xcb)
+		WITH_WLD=$(usex wayland)
+	)
+}

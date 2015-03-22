@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.35 2015/01/26 13:48:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.36 2015/03/22 00:15:14 robbat2 Exp $
+
+*thin-1.6.3-r1 (22 Mar 2015)
+
+  22 Mar 2015; Robin H. Johnson <robbat2@gentoo.org> +files/thin.initd-3,
+  +thin-1.6.3-r1.ebuild:
+  Infra got bit by a missing directory causing the service to fail to start if
+  the pid path has more dirs than the stock; add a workaround as checkpath does
+  not have a --parents option
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -thin-1.5.1-r1.ebuild,
   -thin-1.5.1-r2.ebuild, -thin-1.5.1-r3.ebuild, -thin-1.6.2.ebuild:

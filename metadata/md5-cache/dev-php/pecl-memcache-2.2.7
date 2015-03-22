@@ -1,15 +1,15 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=sys-libs/zlib dev-lang/php[session?] !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-6? ( dev-lang/php:5.6 ) php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+DEPEND=sys-libs/zlib dev-lang/php:*[session?] !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-6? ( dev-lang/php:5.6 ) php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
 DESCRIPTION=PHP extension for using memcached
 EAPI=5
 HOMEPAGE=http://pecl.php.net/memcache
 IUSE=+session php_targets_php5-6 php_targets_php5-5 php_targets_php5-4
 KEYWORDS=~amd64 ~hppa ~ppc64 ~x86
 LICENSE=PHP-3
-RDEPEND=sys-libs/zlib dev-lang/php[session?] php_targets_php5-6? ( dev-lang/php:5.6 ) php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+RDEPEND=sys-libs/zlib dev-lang/php:*[session?] php_targets_php5-6? ( dev-lang/php:5.6 ) php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
 REQUIRED_USE=|| ( php_targets_php5-6 php_targets_php5-5 php_targets_php5-4 )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://pecl.php.net/get/memcache-2.2.7.tgz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=73afb634ff16afe92b9dd44439cfc121
+_md5_=e5a35a890d85fe514504a6dd06beaa14

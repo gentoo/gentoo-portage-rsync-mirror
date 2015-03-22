@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/pecl-memcache-3.0.8.ebuild,v 1.6 2014/08/10 21:02:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-memcache/pecl-memcache-3.0.8.ebuild,v 1.7 2015/03/22 00:30:13 grknight Exp $
 
 EAPI="5"
 PHP_EXT_NAME="memcache"
@@ -8,7 +8,7 @@ PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="README"
 
-USE_PHP="php5-5 php5-3 php5-4"
+USE_PHP="php5-5 php5-4"
 
 inherit php-ext-pecl-r2
 
@@ -20,7 +20,7 @@ SLOT="0"
 IUSE="+session"
 
 DEPEND="sys-libs/zlib
-		dev-lang/php[session?]"
+		dev-lang/php:*[session?]"
 RDEPEND="${DEPEND}"
 
 # upstream does not ship any testsuite, so the PHPize test-runner fails.

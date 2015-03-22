@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/ca-certificates
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.105 2014/10/16 17:48:39 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.106 2015/03/22 00:07:09 vapier Exp $
+
+*ca-certificates-20141019.3.17.4 (22 Mar 2015)
+
+  22 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +ca-certificates-20141019.3.17.4.ebuild,
+  +files/ca-certificates-20141019-root.patch:
+  Version bump.
 
 *ca-certificates-20140927.3.17.2 (16 Oct 2014)
 
