@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/higan/higan-094.ebuild,v 1.3 2015/02/10 10:07:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/higan/higan-094.ebuild,v 1.4 2015/03/22 19:29:00 mr_bones_ Exp $
 
 EAPI=5
 
-inherit eutils gnome2-utils toolchain-funcs games
+inherit eutils gnome2-utils toolchain-funcs qmake-utils games
 
 MY_P=${PN}_v${PV}-source
 
@@ -73,7 +73,7 @@ src_prepare() {
 	# regenerate .moc if needed
 	if use qt4; then
 		cd phoenix/qt || die
-		moc -i -I. -o platform.moc platform.moc.hpp || die
+		 "$(qt4_get_bindir)"/moc -i -I. -o platform.moc platform.moc.hpp || die
 	fi
 
 	for i in profile_accuracy profile_balanced profile_performance ; do
