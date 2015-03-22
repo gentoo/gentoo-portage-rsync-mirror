@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/httpd-basic-0.ebuild,v 1.8 2014/03/06 16:03:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/httpd-basic-0.ebuild,v 1.9 2015/03/22 12:33:19 pacho Exp $
 
 DESCRIPTION="Virtual for static HTML-enabled webservers"
 HOMEPAGE=""
@@ -21,7 +21,6 @@ RDEPEND="|| (
 	www-servers/gorg
 	www-servers/monkeyd
 	www-servers/nginx
-	www-servers/publicfile
 	www-servers/resin
 	www-servers/skunkweb
 	www-servers/thttpd

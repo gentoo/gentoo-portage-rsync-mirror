@@ -1874,7 +1874,6 @@ dev-libs/elfutils:utils - Install command-line utilities (all the eu-* programs)
 dev-libs/fampp2:stlport - Include support for dev-libs/STLport
 dev-libs/fcgi:html - Install HTML documentation
 dev-libs/ferrisloki:stlport - Include support for dev-libs/STLport
-dev-libs/folks:socialweb - Load web service contacts using net-libs/libsocialweb
 dev-libs/folks:telepathy - Load contacts from the Telepathy framework
 dev-libs/folks:tracker - Load contacts from app-misc/tracker index
 dev-libs/folks:utils - Build the folks-inspect utility
@@ -1948,7 +1947,6 @@ dev-libs/libpcre:recursion-limit - Limit match recursion to 8192; if disabled, t
 dev-libs/libpcre:zlib - Add support for pcregrep command to search within gzip-compressed files, through app-arch/gzip.
 dev-libs/libpeas:glade - Install the glade catalog
 dev-libs/libpeas:python - Build support for loading dev-lang/python plugins
-dev-libs/libpeas:seed - Build support for loading JavaScript plugins using dev-libs/seed
 dev-libs/librra:recurrence - Enable recurrence support (EXPERIMENTAL)
 dev-libs/libsecp256k1:asm - Enable x86_64 assembly optimisation
 dev-libs/libsecp256k1:endomorphism - Enable endomorphism
@@ -3006,7 +3004,6 @@ gnome-extra/avant-window-navigator:gconf - Enable GConf as configuration backend
 gnome-extra/avant-window-navigator-extras:gconf - Enable GConf as configuration backend
 gnome-extra/cinnamon:l10n - Pull in gnome-extra/cinnamon-translations for localization support
 gnome-extra/cinnamon-control-center:colord - Support color management using x11-misc/colord
-gnome-extra/cinnamon-control-center:socialweb - Add support for desktop background images from Flickr using net-libs/libsocialweb
 gnome-extra/cinnamon-session:gconf - Support old autostart conditions which use gnome-base/gconf
 gnome-extra/cinnamon-settings-daemon:colord - Support color management using x11-misc/colord
 gnome-extra/evolution-data-server:api-doc-extras - Build documentation for private APIs
@@ -3059,7 +3056,6 @@ gnome-extra/zeitgeist-datasources:telepathy - Zeitgeist plugin for telepathy fra
 gnome-extra/zeitgeist-datasources:thunderbird - Zeitgeist plugin for mail-client/thunderbird as data source
 gnome-extra/zeitgeist-datasources:tomboy - Zeitgeist plugin for app-misc/tomboy as data source
 gnome-extra/zeitgeist-datasources:vim - Zeitgeist plugin for vim as data source
-gnome-extra/zeitgeist-datasources:xchat - Zeitgeist plugin for net-irc/xchat-gnome as data source
 gnome-extra/zeitgeist-extensions:fts - Enable the full text search
 gnome-extra/zeitgeist-extensions:geolocation - Add the physical location of the computer at the moment when events are inserted
 gnome-extra/zeitgeist-extensions:memprofile - Memory profiling extension

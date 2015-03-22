@@ -1,6 +1,9 @@
 # ChangeLog for virtual/httpd-basic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.10 2014/03/06 16:03:03 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.11 2015/03/22 12:33:19 pacho Exp $
+
+  22 Mar 2015; Pacho Ramos <pacho@gentoo.org> httpd-basic-0.ebuild:
+  publicfile is going to be removed (#531270)
 
   06 Mar 2014; Manuel Rüger <mrueg@gentoo.org> httpd-basic-0.ebuild:
   Drop www-servers/mongrel.

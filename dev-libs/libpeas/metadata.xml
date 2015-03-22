@@ -6,7 +6,5 @@
 		<flag name="glade">Install the glade catalog</flag>
 		<flag name="python">Build support for loading <pkg>dev-lang/python</pkg>
 			plugins</flag>
-		<flag name="seed">Build support for loading JavaScript plugins using
-			<pkg>dev-libs/seed</pkg></flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.2.3.ebuild,v 1.1 2015/01/25 13:43:30 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.2.3.ebuild,v 1.2 2015/03/22 12:53:43 pacho Exp $
 
 EAPI="4"
 inherit eutils multilib versionator user
@@ -21,7 +21,7 @@ DEPEND="dev-db/libzdb
 	app-text/xmlto
 	app-crypt/mhash
 	sys-libs/zlib
-	|| ( dev-libs/gmime:2.6 dev-libs/gmime:2.4 )
+	dev-libs/gmime:2.6
 	>=dev-libs/glib-2.16
 	dev-libs/libevent
 	ssl? ( dev-libs/openssl )"
