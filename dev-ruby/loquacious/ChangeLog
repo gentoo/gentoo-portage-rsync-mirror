@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/loquacious
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.23 2014/10/30 13:56:48 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.24 2015/03/22 16:31:42 graaff Exp $
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org> loquacious-1.9.1-r2.ebuild:
+  Add ruby22.
 
   30 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -loquacious-1.9.1-r1.ebuild,
   loquacious-1.9.1-r2.ebuild:

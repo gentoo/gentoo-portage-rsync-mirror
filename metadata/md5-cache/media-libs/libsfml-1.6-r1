@@ -2,7 +2,7 @@ DEFINED_PHASES=compile install prepare
 DEPEND=media-libs/freetype:2 media-libs/glew >=media-libs/libpng-1.4 media-libs/libsndfile media-libs/mesa media-libs/openal sys-libs/zlib virtual/jpeg x11-libs/libX11 x11-libs/libXrandr
 DESCRIPTION=Simple and Fast Multimedia Library (SFML)
 EAPI=4
-HOMEPAGE=http://sfml.sourceforge.net/
+HOMEPAGE=http://www.sfml-dev.org/
 IUSE=debug doc examples static-libs
 KEYWORDS=~amd64 ~x86
 LICENSE=ZLIB
@@ -10,4 +10,4 @@ RDEPEND=media-libs/freetype:2 media-libs/glew >=media-libs/libpng-1.4 media-libs
 SLOT=0
 SRC_URI=mirror://sourceforge/sfml/SFML-1.6-sdk-linux-32.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=ecb6e9867da9b235a5858c5ab856fa8b
+_md5_=f51cc9563670348c71c97af2459cd2dc

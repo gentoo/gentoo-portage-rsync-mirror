@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-2.2.ebuild,v 1.1 2014/12/11 18:31:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsfml/libsfml-2.2.ebuild,v 1.2 2015/03/22 16:32:17 radhermit Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit cmake-utils eutils
 MY_P=SFML-${PV}
 
 DESCRIPTION="Simple and Fast Multimedia Library (SFML)"
-HOMEPAGE="http://sfml.sourceforge.net/ https://github.com/LaurentGomila/SFML"
+HOMEPAGE="http://www.sfml-dev.org/ https://github.com/LaurentGomila/SFML"
 SRC_URI="https://github.com/LaurentGomila/SFML/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="ZLIB"

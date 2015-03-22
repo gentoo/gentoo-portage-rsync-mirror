@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/YAML-Tiny
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.51 2014/08/21 20:33:27 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Tiny/ChangeLog,v 1.52 2015/03/22 16:40:25 dilfridge Exp $
+
+*YAML-Tiny-1.660.0 (22 Mar 2015)
+
+  22 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +YAML-Tiny-1.660.0.ebuild:
+  Version bump
 
 *YAML-Tiny-1.510.0-r1 (21 Aug 2014)
 

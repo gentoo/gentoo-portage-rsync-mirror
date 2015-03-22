@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mini_shoulda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_shoulda/ChangeLog,v 1.8 2015/02/08 06:43:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_shoulda/ChangeLog,v 1.9 2015/03/22 16:59:52 graaff Exp $
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org> mini_shoulda-0.5.0-r1.ebuild:
+  Document ruby22 status.
 
   08 Feb 2015; Hans de Graaff <graaff@gentoo.org> mini_shoulda-0.5.0-r1.ebuild:
   Add ruby21.

@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/mail
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.40 2014/12/15 07:06:32 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.42 2015/03/22 16:40:56 graaff Exp $
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org> mail-2.6.3.ebuild:
+  Add ruby22.
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org> -mail-2.6.1.ebuild,
+  -mail-2.6.1-r1.ebuild:
+  Cleanup.
 
 *mail-2.6.3 (15 Dec 2014)
 
