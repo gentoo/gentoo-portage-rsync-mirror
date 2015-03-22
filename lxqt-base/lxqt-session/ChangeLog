@@ -1,6 +1,10 @@
 # ChangeLog for lxqt-base/lxqt-session
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/ChangeLog,v 1.10 2015/02/20 11:45:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/ChangeLog,v 1.11 2015/03/22 06:28:34 yngwin Exp $
+
+  22 Mar 2015; Ben de Groot <yngwin@gentoo.org> -lxqt-session-0.9.0.ebuild,
+  lxqt-session-0.9.0-r1.ebuild:
+  Specify X useflag for kwindowsystem dependency (bug #543708)
 
 *lxqt-session-0.9.0-r1 (20 Feb 2015)
 

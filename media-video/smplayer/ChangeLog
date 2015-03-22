@@ -1,6 +1,15 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.162 2015/03/17 11:49:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.163 2015/03/22 06:18:09 yngwin Exp $
+
+*smplayer-14.9.0.6690-r3 (22 Mar 2015)
+
+  22 Mar 2015; Ben de Groot <yngwin@gentoo.org> +smplayer-14.9.0.6690-r3.ebuild,
+  -smplayer-14.9.0.6690-r1.ebuild, -smplayer-14.9.0.6690-r2.ebuild:
+  Improve dependency ordering and streaming handling (bug #543642). Put mplayer
+  back into preferred position over mpv, since mpv is used thru deprecated slave
+  mode, some smplayer options will not work in mpv, and we have a proper libmpv
+  GUI in baka-mplayer now. Remove old revisions.
 
   17 Mar 2015; Ben de Groot <yngwin@gentoo.org> smplayer-14.9.0.6690-r2.ebuild:
   Fix translations generation snafu

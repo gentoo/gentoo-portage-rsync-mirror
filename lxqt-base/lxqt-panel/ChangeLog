@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-panel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/ChangeLog,v 1.12 2015/02/20 08:17:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/ChangeLog,v 1.13 2015/03/22 06:25:50 yngwin Exp $
+
+  22 Mar 2015; Ben de Groot <yngwin@gentoo.org> lxqt-panel-0.9.0.ebuild:
+  Specify X useflag for kwindowsystem dependency (bug #543708)
 
   20 Feb 2015; Ben de Groot <yngwin@gentoo.org> lxqt-panel-0.9.0.ebuild:
   Include all deps (bug #540634)

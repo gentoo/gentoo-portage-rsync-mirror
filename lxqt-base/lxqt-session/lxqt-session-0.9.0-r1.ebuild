@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.9.0-r1.ebuild,v 1.1 2015/02/20 11:45:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-session/lxqt-session-0.9.0-r1.ebuild,v 1.2 2015/03/22 06:28:34 yngwin Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ CDEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
-	kde-frameworks/kwindowsystem:5
+	kde-frameworks/kwindowsystem:5[X]
 	~lxqt-base/liblxqt-${PV}
 	x11-libs/libX11"
 DEPEND="${CDEPEND}

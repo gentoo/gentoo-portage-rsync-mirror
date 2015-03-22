@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.9.0.ebuild,v 1.2 2015/02/20 08:17:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/lxqt-panel-0.9.0.ebuild,v 1.3 2015/03/22 06:25:50 yngwin Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -34,7 +34,7 @@ DEPEND="
 	dev-qt/qtx11extras:5
 	dev-qt/qtxml:5
 	kde-frameworks/kguiaddons:5
-	kde-frameworks/kwindowsystem:5
+	kde-frameworks/kwindowsystem:5[X]
 	>=lxde-base/menu-cache-0.3.3
 	~lxqt-base/liblxqt-${PV}
 	~lxqt-base/liblxqt-mount-${PV}
