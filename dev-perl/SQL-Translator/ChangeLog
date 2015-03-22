@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SQL-Translator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/ChangeLog,v 1.35 2014/08/26 18:33:04 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Translator/ChangeLog,v 1.36 2015/03/22 17:08:28 dilfridge Exp $
+
+*SQL-Translator-0.110.210 (22 Mar 2015)
+
+  22 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +SQL-Translator-0.110.210.ebuild:
+  Version bump
 
 *SQL-Translator-0.110.160-r1 (26 Aug 2014)
 

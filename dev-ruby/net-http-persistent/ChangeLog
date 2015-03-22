@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-http-persistent
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/ChangeLog,v 1.21 2014/08/05 16:00:36 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/ChangeLog,v 1.22 2015/03/22 17:11:48 graaff Exp $
+
+  22 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  net-http-persistent-2.9.4.ebuild:
+  Add ruby22.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> net-http-persistent-2.9.4.ebuild,
   net-http-persistent-2.9.ebuild:
