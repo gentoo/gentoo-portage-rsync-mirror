@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/martian-modem/martian-modem-20100123.ebuild,v 1.1 2012/12/15 16:41:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/martian-modem/martian-modem-20100123-r1.ebuild,v 1.1 2015/03/22 12:28:21 pacho Exp $
 
 EAPI=5
 inherit linux-mod eutils
@@ -31,19 +31,26 @@ MODULE_NAMES="martian_dev(ltmodem::kmodule)"
 CONFIG_CHECK="SERIAL_8250"
 SERIAL_8250_ERROR="This driver requires you to compile your kernel with serial core (CONFIG_SERIAL_8250) support."
 
-pkg_setup() {
-	linux-mod_pkg_setup
-
-	if kernel_is 2 4; then
-		eerror "This driver works only with 2.6 kernels!"
-		die "unsupported kernel detected"
-	fi
-}
-
 src_prepare() {
 	# Exclude Makefile kernel version check, we used kernel_is above.
 	# TODO: More exactly, martian-modem-full-20100123 is for >kernel-2.6.20!
 	epatch "${FILESDIR}/${P}-makefile.patch"
+
+	# Per Gentoo Bug #543702, CONFIG_HOTPLUG is going away as an option.  As of
+	# Linux Kernel 3.8, the __dev* markings need to be removed.  This patch removes
+	# the use of __devinit, __devexit_p, and __devexit as the type cast simply isn't
+	# needed any longer.
+	if kernel_is -ge 3 8; then
+		epatch "${FILESDIR}/${P}-linux-3.8.patch"
+	fi
+
+	# Per Gentoo Bug #543702, "proc_dir_entry" and "create_proc_entry" Linux
+	# Kernel header definition was moved and only accessible internally as of
+	# Linux Kernel 3.10.  This patch originates from Paul McClay (2014.05.28)
+	# and posted to Ubuntu Launchpad.
+	if kernel_is -ge 3 10; then
+		epatch "${FILESDIR}/${P}-linux-3.10.patch"
+	fi
 
 	# fix compile on amd64
 	sed -i -e "/^HOST.*$/s:uname -i:uname -m:" modem/Makefile || die "sed failed"

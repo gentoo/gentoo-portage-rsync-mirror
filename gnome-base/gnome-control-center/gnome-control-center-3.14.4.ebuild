@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.14.3.ebuild,v 1.1 2015/03/19 11:38:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.14.4.ebuild,v 1.1 2015/03/22 12:10:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
-GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen
+GNOME2_LA_PUNT="yes"
 
 inherit autotools bash-completion-r1 eutils gnome2
 
@@ -22,7 +22,7 @@ QA_CONFIGURE_OPTIONS=".*"
 # gnome-session-2.91.6-r1 is needed so that 10-user-dirs-update is run at login
 # g-s-d[policykit] needed for bug #403527
 COMMON_DEPEND="
-	>=dev-libs/glib-2.39.91:2
+	>=dev-libs/glib-2.39.91:2[dbus]
 	>=x11-libs/gdk-pixbuf-2.23.0:2
 	>=x11-libs/gtk+-3.13:3
 	>=gnome-base/gsettings-desktop-schemas-3.13.91
@@ -113,10 +113,6 @@ DEPEND="${COMMON_DEPEND}
 #	gnome-base/gnome-common
 
 src_prepare() {
-	# Gentoo handles completions in a different directory, bugs #465094 and #477390
-	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
-		shell/Makefile.am || die "sed completiondir failed"
-
 	# Make some panels and dependencies optional; requires eautoreconf
 	# https://bugzilla.gnome.org/686840, 697478, 700145
 	epatch "${FILESDIR}"/${PN}-3.14.0-optional.patch
@@ -127,15 +123,6 @@ src_prepare() {
 	epatch_user
 
 	eautoreconf
-
-	# panels/datetime/Makefile.am gets touched by "gentoo-paths" patch.
-	# We need to touch timedated{c,h} to prevent them from being
-	# regenerated (bug #415901)
-	# Upstream think they should be removed, preventing compilation errors too
-	# (https://bugzilla.gnome.org/704822)
-	[[ -f panels/datetime/timedated.h ]] && rm -f panels/datetime/timedated.h
-	[[ -f panels/datetime/timedated.c ]] && rm -f panels/datetime/timedated.c
-
 	gnome2_src_prepare
 }
 
@@ -152,4 +139,8 @@ src_configure() {
 		$(use_enable kerberos) \
 		$(use_with v4l cheese) \
 		$(use_enable input_devices_wacom wacom)
+}
+
+src_install() {
+	gnome2_src_install completiondir="$(get_bashcompdir)"
 }
