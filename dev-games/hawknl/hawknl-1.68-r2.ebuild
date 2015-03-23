@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r2.ebuild,v 1.6 2012/08/08 19:47:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68-r2.ebuild,v 1.7 2015/03/23 07:51:41 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit toolchain-funcs eutils multilib
 
 DESCRIPTION="A cross-platform network library designed for games"
@@ -22,25 +22,22 @@ S=${WORKDIR}/hawknl${PV}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
 	sed -i \
-		-e '/echo /d' src/makefile.linux \
-		|| die "sed src/makefile.linux failed"
+		-e '/echo /d' src/makefile.linux || die
 }
 
 src_compile() {
 	emake -C src -f makefile.linux \
 		CC="$(tc-getCC)" \
-		OPTFLAGS="${CFLAGS} -D_GNU_SOURCE -D_REENTRANT" \
-		|| die "emake failed"
+		OPTFLAGS="${CFLAGS} -D_GNU_SOURCE -D_REENTRANT"
 }
 
 src_install() {
-	make -C src -f makefile.linux \
+	emake -j1 -C src -f makefile.linux \
 		LIBDIR="${D}/usr/$(get_libdir)" \
 		INCDIR="${D}/usr/include" \
-		install \
-		|| die "make install failed"
+		install || die
 	if use doc ; then
 		docinto samples
-		dodoc samples/* || die "dodoc failed"
+		dodoc samples/*
 	fi
 }

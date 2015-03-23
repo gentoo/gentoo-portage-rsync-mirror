@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/poker-eval/poker-eval-138.0.ebuild,v 1.4 2010/12/05 18:05:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/poker-eval/poker-eval-138.0.ebuild,v 1.5 2015/03/23 07:48:44 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="A fast C library for evaluating poker hands"
-HOMEPAGE="http://pokersource.info/"
+HOMEPAGE="http://gna.org/projects/pokersource/"
 SRC_URI="http://download.gna.org/pokersource/sources/${P}.tar.gz"
 
 LICENSE="GPL-3"
@@ -16,17 +16,12 @@ IUSE="static-libs"
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--without-ccache \
-		$(use_enable static-libs static) \
-		|| die
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO WHATS-HERE
-	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
-	fi
+	DOCS="AUTHORS ChangeLog NEWS README TODO WHATS-HERE" \
+		default
+	prune_libtool_files
 }
