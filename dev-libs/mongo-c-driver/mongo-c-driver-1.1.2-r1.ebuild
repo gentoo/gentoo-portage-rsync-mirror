@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-1.1.2.ebuild,v 1.1 2015/03/16 20:25:44 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-1.1.2-r1.ebuild,v 1.1 2015/03/23 09:02:26 ultrabug Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug examples sasl ssl static-libs test"
 
-RDEPEND=">=dev-libs/libbson-0.98.0
+RDEPEND=">=dev-libs/libbson-1.0
 	sasl? ( dev-libs/cyrus-sasl )
 	ssl? ( dev-libs/openssl:= )"
 DEPEND="${RDEPEND}
@@ -31,7 +31,8 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --disable-hardening \
+	econf --with-libbson=system \
+		--disable-hardening \
 		--disable-optimizations \
 		--disable-examples \
 		$(use_enable sasl) \
