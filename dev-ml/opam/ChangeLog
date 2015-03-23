@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/opam
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/opam/ChangeLog,v 1.1 2014/10/29 09:05:04 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/opam/ChangeLog,v 1.2 2015/03/23 08:59:54 aballier Exp $
+
+*opam-1.2.1 (23 Mar 2015)
+
+  23 Mar 2015; Alexis Ballier <aballier@gentoo.org> +opam-1.2.1.ebuild:
+  version bump
 
 *opam-1.2.0 (29 Oct 2014)
 
