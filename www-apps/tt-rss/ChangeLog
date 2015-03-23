@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.37 2015/03/04 09:22:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.38 2015/03/23 13:01:06 tomka Exp $
+
+  23 Mar 2015; Thomas Kahle <tomka@gentoo.org> tt-rss-20150304.ebuild:
+  Call webapp pkg_postinst again (bug 543626)
 
 *tt-rss-20150304 (04 Mar 2015)
 

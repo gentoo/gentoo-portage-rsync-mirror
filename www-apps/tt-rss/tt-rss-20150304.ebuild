@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-20150304.ebuild,v 1.1 2015/03/04 09:22:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-20150304.ebuild,v 1.2 2015/03/23 13:01:06 tomka Exp $
 
 EAPI=5
 
@@ -85,4 +85,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "You need to merge config.php and config.php-dist manually now."
+	webapp_pkg_postinst
 }
