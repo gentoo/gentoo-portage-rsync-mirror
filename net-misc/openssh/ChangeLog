@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.552 2015/03/22 19:48:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.553 2015/03/23 16:47:39 vapier Exp $
+
+  23 Mar 2015; Mike Frysinger <vapier@gentoo.org> openssh-6.8_p1-r2.ebuild:
+  Fix building on systems w/out getpeername syscall #544196 by Patrick Lauer.
 
 *openssh-6.8_p1-r2 (22 Mar 2015)
 
