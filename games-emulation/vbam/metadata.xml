@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
-	<maintainer>
-		<email>radhermit@gentoo.org</email>
-		<name>Tim Harder</name>
-	</maintainer>
 	<use>
 		<flag name="link">Enable GBA linking functionality</flag>
 	</use>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/bcrypt-1.1.0.ebuild,v 1.1 2015/02/17 11:14:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/bcrypt-1.1.0.ebuild,v 1.2 2015/03/23 15:45:11 jlec Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="
 		dev-python/mock[${PYTHON_USEDEP}]
 		)"
 RDEPEND="
-	>=dev-python/cffi-0.8:=[${PYTHON_USEDEP}]
+	virtual/python-cffi[${PYTHON_USEDEP}]
 	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
 	!dev-python/py-bcrypt"
 

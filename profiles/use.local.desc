@@ -6649,9 +6649,6 @@ sci-physics/hepmc:cm - Build with cm instead of default mm for length units
 sci-physics/hepmc:gev - Build with GeV instead of default MeV for momentum units
 sci-physics/hoomd-blue:cuda - Enable cuda non-bonded kernels
 sci-physics/lammps:lammps-memalign - Enables the use of the posix_memalign() call instead of malloc() when large chunks or memory are allocated by LAMMPS
-sci-physics/lammps:package-dipole - point dipole particles
-sci-physics/lammps:package-meam - modified EAM potential
-sci-physics/lammps:package-rigid - rigid bodies
 sci-physics/lhapdf:octave - Add bindings for sci-mathematics/octave
 sci-physics/meep:mpb - Enable build against sci-physics/mpb
 sci-physics/pythia:hepmc - Adds support for High Energy Physics Monte Carlo Generators sci-physics/hepmc

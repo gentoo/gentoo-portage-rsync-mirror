@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.105 2015/01/19 16:46:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.106 2015/03/23 15:54:05 radhermit Exp $
+
+  23 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Drop myself as maintainer.
 
   19 Jan 2015; Tim Harder <radhermit@gentoo.org> -minicom-2.5.ebuild,
   -minicom-2.6.2-r1.ebuild:
