@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16433 2015/03/22 21:21:03 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16434 2015/03/23 03:09:10 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -923,10 +923,6 @@ app-portage/g-ctan
 # Michael Weber <xmw@gentoo.org> (18 Apr 2013)
 # Masked due test failures
 =app-arch/advancecomp-1.17
-
-# Patrick Lauer <patrick@gentoo.org> (09 Apr 2013)
-# Masked to get 0.10 tested
-=net-libs/nodejs-0.11*
 
 # Sergey Popov <pinkbyte@gentoo.org> (02 Apr 2013)
 # Masking =media-libs/ffmpegsource-2.17.4_pre753
