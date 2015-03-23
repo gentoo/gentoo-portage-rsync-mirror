@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.124.2_p1.ebuild,v 1.1 2015/03/12 08:17:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.135.2_p1.ebuild,v 1.1 2015/03/23 21:17:13 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
-	 am ar bg bn ca cs da de el en_GB en_US es_419 es et fa fil fi fr gu he hi
-	 hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr sv
-	 sw ta te th tr uk vi zh_CN zh_TW
+	am ar bg bn ca cs da de el en_GB en_US es_419 es et fa fil fi fr gu he hi
+	hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr sv
+	sw ta te th tr uk vi zh_CN zh_TW
 "
 inherit chromium multilib unpacker toolchain-funcs
 
@@ -40,7 +40,6 @@ RDEPEND="
 	net-print/cups
 	sys-apps/dbus
 	sys-libs/libcap
-	virtual/libudev
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -93,9 +92,6 @@ src_prepare() {
 src_install() {
 	mv * "${D}" || die
 	dosym /${VIVALDI_HOME}/${PN} /usr/bin/${PN}
-
-	dodir /${VIVALDI_HOME}/lib
-	dosym /usr/$(get_libdir)/libudev.so /${VIVALDI_HOME}/lib/libudev.so.0
 
 	fperms 4711 /${VIVALDI_HOME}/${PN}-sandbox
 }
