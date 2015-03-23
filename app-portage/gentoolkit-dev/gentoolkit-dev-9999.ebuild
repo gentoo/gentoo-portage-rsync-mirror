@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.13 2014/11/18 08:53:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.14 2015/03/23 02:25:31 patrick Exp $
 
 EAPI="5"
 
@@ -32,7 +32,6 @@ DEPEND="${PYTHON_DEPS}
 	test? ( ${CDEPEND} )"
 RDEPEND="${PYTHON_DEPS}
 	${CDEPEND}"
-
 
 src_test() {
 	# echangelog test is not able to run as root

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.161 2015/03/15 01:25:19 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.162 2015/03/23 02:15:14 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -172,10 +172,18 @@ qt4-build_src_prepare() {
 		skip_qmake_build
 		skip_project_generation
 		symlink_binaries_to_buildtree
-	fi
+	else
+		# Bug 373061
+		# qmake bus errors with -O2 or -O3 but -O1 works
+		if [[ ${CHOST} == *86*-apple-darwin* ]]; then
+			replace-flags -O[23] -O1
+		fi
 
-	if use_if_iuse c++0x; then
-		append-cxxflags -std=c++0x
+		# Bug 503500
+		# undefined reference with -Os and --as-needed
+		if use x86; then
+			replace-flags -Os -O2
+		fi
 	fi
 
 	# Bug 261632
@@ -183,16 +191,14 @@ qt4-build_src_prepare() {
 		append-flags -mminimal-toc
 	fi
 
-	# Bug 373061
-	# qmake bus errors with -O2 or -O3 but -O1 works
-	if [[ ${CHOST} == *86*-apple-darwin* ]]; then
-		replace-flags -O[23] -O1
-	fi
-
 	# Bug 417105
 	# graphite on gcc 4.7 causes miscompilations
 	if [[ $(gcc-version) == "4.7" ]]; then
 		filter-flags -fgraphite-identity
+	fi
+
+	if use_if_iuse c++0x; then
+		append-cxxflags -std=c++0x
 	fi
 
 	# Respect CC, CXX, {C,CXX,LD}FLAGS in .qmake.cache

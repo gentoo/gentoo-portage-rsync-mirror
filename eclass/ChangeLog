@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1572 2015/03/22 13:41:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1573 2015/03/23 02:15:14 pesa Exp $
+
+  23 Mar 2015; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass,
+  qt4-build-multilib.eclass:
+  Workaround toolchain bug on x86 with -Os and --as-needed, see bug #503500.
 
   22 Mar 2015; Michał Górny <mgorny@gentoo.org> python-single-r1.eclass:
   Extend EAPI=4 whitelist to cover crossdev gdb.
