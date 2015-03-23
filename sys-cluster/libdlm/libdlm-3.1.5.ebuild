@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libdlm/libdlm-3.1.5.ebuild,v 1.3 2013/02/05 13:37:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libdlm/libdlm-3.1.5.ebuild,v 1.4 2015/03/23 11:01:10 ultrabug Exp $
 
-EAPI=4
+EAPI=5
 
-inherit linux-info multilib toolchain-funcs versionator
+inherit multilib toolchain-funcs versionator
 
 CLUSTER_RELEASE="${PV}"
 MY_P="cluster-${CLUSTER_RELEASE}"
@@ -37,7 +37,7 @@ src_configure() {
 		--cflags="-Wall" \
 		--libdir=/usr/$(get_libdir) \
 		--disable_kernel_check \
-		--kernel_src=${KERNEL_DIR} \
+		--kernel_src=/usr/ \
 		--somajor="$MAJ_PV" \
 		--sominor="$MIN_PV" \
 		--dlmlibdir=/usr/$(get_libdir) \
