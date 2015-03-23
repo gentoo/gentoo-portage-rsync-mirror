@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.518 2015/02/11 20:53:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.519 2015/03/23 11:19:03 chainsaw Exp $
+
+*asterisk-13.2.0 (23 Mar 2015)
+*asterisk-11.16.0 (23 Mar 2015)
+
+  23 Mar 2015; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.16.0.ebuild,
+  +asterisk-13.2.0.ebuild:
+  New releases on 11 & 13 branches; DAHDI channel variable patch now upstream
+  (after only 3.5 years).
 
 *asterisk-13.1.1 (11 Feb 2015)
 *asterisk-12.8.1 (11 Feb 2015)

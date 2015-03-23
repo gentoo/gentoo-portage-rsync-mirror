@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/mongo-cxx-driver-0.0.2.6.7.ebuild,v 1.1 2015/03/23 09:51:59 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/mongo-cxx-driver-0.0.2.6.7.ebuild,v 1.2 2015/03/23 11:27:13 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="2.3.0"
@@ -35,7 +35,7 @@ S=${WORKDIR}/${PN}-${MY_P}
 
 pkg_setup() {
 	scons_opts="--variant-dir=build --cc=$(tc-getCC) --cxx=$(tc-getCXX)"
-	scons_opts+=" --disable-warnings-as-errors"
+	scons_opts+=" --disable-warnings-as-errors --sharedclient"
 	scons_opts+=" --use-system-boost"
 	scons_opts+=" --use-system-pcre"
 	scons_opts+=" --use-system-snappy"
@@ -49,10 +49,6 @@ pkg_setup() {
 
 	if use kerberos; then
 		scons_opts+=" --use-sasl-client"
-	fi
-
-	if use static-libs; then
-		scons_opts+=" --sharedclient"
 	fi
 
 	if use ssl; then

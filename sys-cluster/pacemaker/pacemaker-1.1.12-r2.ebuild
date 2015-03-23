@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.12-r1.ebuild,v 1.1 2015/01/01 23:01:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.12-r2.ebuild,v 1.1 2015/03/23 11:13:20 ultrabug Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -37,13 +37,20 @@ RDEPEND="${DEPEND}"
 
 REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
-PATCHES=("${FILESDIR}"/pacemaker-1.1.10-tinfo.patch)
+PATCHES=(
+	"${FILESDIR}"/pacemaker-1.1.10-tinfo.patch
+	"${FILESDIR}"/pacemaker-1.1.12-glib.patch
+	"${FILESDIR}"/pacemaker-1.1.12-stonith.patch
+)
 
 S="${WORKDIR}/${PN}-${MY_P}"
 
 src_prepare() {
 	epatch "${PATCHES[@]}"
 	epatch_user
+
+	# bug #490908
+	cp "${FILESDIR}/ping" extra/resources/ping || die
 
 	sed -i -e "/ggdb3/d" configure.ac || die
 	sed -i -e "s/ -ggdb//g" configure.ac || die

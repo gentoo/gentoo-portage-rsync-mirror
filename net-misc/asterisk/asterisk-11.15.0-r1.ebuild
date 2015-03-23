@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.15.0-r1.ebuild,v 1.3 2015/02/10 10:07:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.15.0-r1.ebuild,v 1.4 2015/03/23 11:19:03 chainsaw Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user systemd
@@ -33,7 +33,7 @@ PATCHES=( "${WORKDIR}/asterisk-patchset" )
 CDEPEND="dev-db/sqlite:3
 	dev-libs/popt
 	dev-libs/libxml2
-	dev-libs/openssl
+	dev-libs/openssl:*
 	sys-libs/ncurses
 	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )
@@ -54,13 +54,13 @@ CDEPEND="dev-db/sqlite:3
 	jabber? ( dev-libs/iksemel )
 	ldap? ( net-nds/openldap )
 	libedit? ( dev-libs/libedit )
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua:* )
 	mysql? ( virtual/mysql )
 	newt? ( dev-libs/newt )
 	odbc? ( dev-db/unixODBC )
 	osplookup? ( net-libs/osptoolkit )
 	portaudio? ( media-libs/portaudio )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:* )
 	radius? ( net-dialup/radiusclient-ng )
 	snmp? ( net-analyzer/net-snmp )
 	span? ( media-libs/spandsp )
