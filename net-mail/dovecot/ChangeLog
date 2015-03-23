@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.501 2015/03/23 15:54:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.502 2015/03/23 16:02:40 eras Exp $
+
+  23 Mar 2015; Eray Aslan <eras@gentoo.org> -dovecot-2.2.13.ebuild,
+  -dovecot-2.2.14-r1.ebuild, -dovecot-2.2.14.ebuild, -dovecot-2.2.15-r1.ebuild,
+  -dovecot-2.2.15-r2.ebuild, -dovecot-2.2.15.ebuild,
+  -files/dovecot-pigeonhole-0.4.5.patch:
+  Remove old
 
 *dovecot-2.2.16 (23 Mar 2015)
 
