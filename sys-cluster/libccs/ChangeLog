@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/libccs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libccs/ChangeLog,v 1.3 2013/03/20 14:25:56 ultrabug Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libccs/ChangeLog,v 1.4 2015/03/23 11:35:37 ultrabug Exp $
+
+  23 Mar 2015; Ultrabug <ultrabug@gentoo.org> libccs-3.1.5.ebuild,
+  libccs-3.2.0.ebuild:
+  fix corosync version dep thx to Patrik Halfar
 
 *libccs-3.2.0 (20 Mar 2013)
 

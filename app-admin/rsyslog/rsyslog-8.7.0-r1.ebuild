@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.7.0.ebuild,v 1.1 2015/02/23 14:46:03 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.7.0-r1.ebuild,v 1.1 2015/03/23 11:44:44 ultrabug Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -22,7 +22,6 @@ if [[ ${PV} == "9999" ]]; then
 	"
 
 	inherit git-r3
-	KEYWORDS=""
 else
 	SRC_URI="
 		http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
@@ -52,12 +51,12 @@ RDEPEND="
 		>=dev-libs/liblognorm-1.1.0:=
 	)
 	omudpspoof? ( >=net-libs/libnet-1.1.6 )
-	postgres? ( >=dev-db/postgresql-8.4.20 )
+	postgres? ( >=dev-db/postgresql-8.4.20:= )
 	rabbitmq? ( >=net-libs/rabbitmq-c-0.3.0 )
 	redis? ( >=dev-libs/hiredis-0.11.0 )
 	relp? ( >=dev-libs/librelp-1.2.5 )
 	rfc3195? ( >=dev-libs/liblogging-1.0.1:=[rfc3195] )
-	rfc5424hmac? ( >=dev-libs/openssl-0.9.8y )
+	rfc5424hmac? ( >=dev-libs/openssl-0.9.8y:= )
 	snmp? ( >=net-analyzer/net-snmp-5.7.2 )
 	ssl? ( >=net-libs/gnutls-2.12.23 )
 	systemd? ( >=sys-apps/systemd-208 )
@@ -66,7 +65,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 if [[ ${PV} == "9999" ]]; then
-	RDEPEND+=" doc? ( >=dev-python/sphinx-1.1.3-r7 )"
+	DEPEND+=" doc? ( >=dev-python/sphinx-1.1.3-r7 )"
 fi
 
 BRANCH="8-stable"
@@ -198,7 +197,7 @@ src_configure() {
 src_compile() {
 	autotools-utils_src_compile
 
-	if use doc -a ${PV} == "9999"; then
+	if use doc && [[ "${PV}" == "9999" ]]; then
 		einfo "Building documentation ..."
 		local doc_dir="${S}/docs"
 		cd "${doc_dir}" || die "Cannot chdir into \"${doc_dir}\"!"
