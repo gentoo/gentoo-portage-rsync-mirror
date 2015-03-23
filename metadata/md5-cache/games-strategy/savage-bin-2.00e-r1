@@ -3,11 +3,11 @@ DEPEND=app-arch/unzip
 DESCRIPTION=Unique mix of strategy and FPS
 EAPI=5
 HOMEPAGE=http://www.s2games.com/savage/ http://www.notforidiots.com/SFE/ http://www.newerth.com/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=all-rights-reserved
 RDEPEND=|| ( ( >=media-libs/freetype-2.5.0.1[abi_x86_32(-)] >=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)] >=virtual/jpeg-62:62[abi_x86_32(-)] >=virtual/opengl-7.0-r1[abi_x86_32(-)] ) amd64? ( ( app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) ) ) games-misc/games-envd
 RESTRICT=mirror bindist strip
 SLOT=0
 SRC_URI=http://www.newerth.com/?id=downloads&op=downloadFile&file=SFE-Standalone.tar.gz&mirrorid=1 -> SFE-Standalone.tar.gz http://www.newerth.com/?id=downloads&op=downloadFile&file=SFE-Standalone.tar.gz&mirrorid=2 -> SFE-Standalone.tar.gz http://www.newerth.com/?id=downloads&op=downloadFile&file=SFE-Standalone.tar.gz&mirrorid=3 -> SFE-Standalone.tar.gz http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=1 -> lin-client-auth-patch.zip http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=2 -> lin-client-auth-patch.zip http://www.newerth.com/?id=downloads&op=downloadFile&file=lin-client-auth-patch.zip&mirrorid=3 -> lin-client-auth-patch.zip
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=35d1efcd4b36407b2e000dc4220640ad
+_md5_=d8fde5bc4bee0296c05770c258d1bf46

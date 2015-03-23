@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.7 2014/04/25 15:51:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/stoned-bin/stoned-bin-1.1.6.ebuild,v 1.8 2015/03/23 06:29:31 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="3D curling simulation"
@@ -20,12 +21,13 @@ RDEPEND="virtual/opengl
 	=media-libs/fmod-3*
 	sys-libs/zlib
 	media-libs/libpng"
+DEPEND=${RDEPEND}
 
 S=${WORKDIR}/${P/-bin}-i386-linux
 
 src_install() {
 	into "${GAMES_PREFIX_OPT}"
-	dobin stoned || die "dobin failed"
+	dobin stoned
 	dodoc FAQ README
 	prepgamesdirs
 }

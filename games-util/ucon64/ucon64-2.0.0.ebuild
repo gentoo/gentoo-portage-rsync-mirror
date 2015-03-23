@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.11 2014/03/02 09:39:21 pacho Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.12 2015/03/23 06:18:44 mr_bones_ Exp $
+
+EAPI=5
 inherit eutils
 
 DESCRIPTION="The backup tool and wonderful emulator's Swiss Army knife program"
@@ -24,7 +25,7 @@ src_prepare() {
 	sed -i \
 		-e "/^CFLAGS/s/-O3/${CFLAGS}/" \
 		-e "/^LDFLAGS/s/-s$/${LDFLAGS}/" \
-		{,libdiscmage/}Makefile.in || die "sed failed"
+		{,libdiscmage/}Makefile.in || die
 }
 
 src_configure() {
@@ -35,12 +36,12 @@ src_configure() {
 		myconf="${myconf} --disable-parallel"
 	fi
 
-	econf ${myconf} || die
+	econf ${myconf}
 }
 
 src_install() {
-	dobin ucon64 || die "dobin failed"
-	dolib.so libdiscmage/discmage.so || die "dolib.so failed"
+	dobin ucon64
+	dolib.so libdiscmage/discmage.so
 	cd ..
 	dohtml -x src -r -A png,jpg *
 }

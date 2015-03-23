@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/savage-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.19 2014/06/25 17:28:07 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.20 2015/03/23 06:17:27 mr_bones_ Exp $
+
+  23 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -savage-bin-2.00e.ebuild,
+  savage-bin-2.00e-r1.ebuild:
+  mark stable and clean old
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> savage-bin-2.00e-r1.ebuild:
   Update multilib dependencies to use the lowest known EAPI 5 or multilib

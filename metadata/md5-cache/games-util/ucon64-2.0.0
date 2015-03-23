@@ -1,10 +1,10 @@
 DEFINED_PHASES=configure install postinst prepare
 DESCRIPTION=The backup tool and wonderful emulator's Swiss Army knife program
-EAPI=2
+EAPI=5
 HOMEPAGE=http://ucon64.sourceforge.net/
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/ucon64/ucon64-2.0.0-src.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=5097262b815f3ac262e6c4b375aacee4
+_md5_=cc55474d87ed36f3d69f86ce89c1fbdb
