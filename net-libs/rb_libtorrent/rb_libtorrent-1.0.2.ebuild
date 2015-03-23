@@ -1,12 +1,15 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.2.ebuild,v 1.2 2014/11/15 08:33:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.2.ebuild,v 1.3 2015/03/23 12:07:50 jlec Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3,3_4} )
-PYTHON_REQ_USE="threads"
 
-inherit multilib python-r1
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
+PYTHON_REQ_USE="threads"
+DISTUTILS_OPTIONAL=true
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils multilib distutils-r1
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}
@@ -23,59 +26,47 @@ IUSE="debug doc examples python ssl static-libs test"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-DEPEND=">=dev-libs/boost-1.53:=[threads]
-	>=sys-devel/libtool-2.2
+RDEPEND="
+	>=dev-libs/boost-1.53:=[threads]
 	sys-libs/zlib
 	examples? ( !net-p2p/mldonkey )
+	ssl? ( dev-libs/openssl:0= )
 	python? (
 		${PYTHON_DEPS}
 		dev-libs/boost[python,${PYTHON_USEDEP}]
-	)
-	ssl? ( dev-libs/openssl )"
-RDEPEND="${DEPEND}"
+	)"
+DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2"
 
-src_prepare() {
-	use python && python_copy_sources
-}
+RESTRICT="test"
+
+PATCHES=( "${FILESDIR}"/${P}-python.patch )
+
+AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_configure() {
-	local myconf=(
+	local myeconfargs=(
 		--disable-silent-rules # bug 441842
+		--with-boost-libdir=/usr/$(get_libdir)
 		$(use_enable debug)
 		$(use_enable test tests)
 		$(use_enable examples)
 		$(use_enable ssl encryption)
-		$(use_enable static-libs static)
-		--with-boost-libdir=/usr/$(get_libdir)
+		$(use_enable python python-binding)
+		$(usex debug "--enable-logging=verbose" "")
 	)
+	autotools-utils_src_configure
+	use python && cd "${BUILD_DIR}"/bindings/python && distutils-r1_src_configure
+}
 
-	use debug && myconf+=( --enable-logging=verbose )
-
-	econf "${myconf[@]}" --disable-python-binding
-	if use python; then
-		python_configure() {
-			run_in_build_dir econf "${myconf[@]}" --enable-python-binding --with-boost-python=boost_python-${EPYTHON#python}
-		}
-
-		python_foreach_impl python_configure
-	fi
+src_compile() {
+	autotools-utils_src_compile
+	use python && cd "${BUILD_DIR}"/bindings/python && distutils-r1_src_compile
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	use doc && HTML_DOCS=( docs/. )
 
-	if use python; then
-		python_install() {
-			emake -C "${BUILD_DIR}"/bindings/python \
-				DESTDIR="${D}" install
-		}
-
-		python_foreach_impl python_install
-	fi
-
-	use static-libs || find "${D}" -name '*.la' -exec rm -f {} +
-	dodoc ChangeLog AUTHORS NEWS README
-	if use doc; then
-		dohtml docs/*
-	fi
+	autotools-utils_src_install
+	use python && cd "${BUILD_DIR}"/bindings/python && distutils-r1_src_install
 }

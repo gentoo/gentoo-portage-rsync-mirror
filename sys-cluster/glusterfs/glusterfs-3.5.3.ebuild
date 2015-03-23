@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.5.1.ebuild,v 1.3 2014/08/11 22:28:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.5.3.ebuild,v 1.1 2015/03/23 12:12:44 ultrabug Exp $
 
 EAPI=5
 
@@ -25,13 +25,13 @@ RDEPEND="bd-xlator? ( sys-fs/lvm2 )
 	emacs? ( virtual/emacs )
 	fuse? ( >=sys-fs/fuse-2.7.0 )
 	georeplication? ( ${PYTHON_DEPS} )
-	infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm )
+	infiniband? ( sys-infiniband/libibverbs:* sys-infiniband/librdmacm:* )
 	qemu-block? ( dev-libs/glib:2 )
 	systemtap? ( dev-util/systemtap )
 	xml? ( dev-libs/libxml2 )
-	sys-libs/readline
+	sys-libs/readline:=
 	dev-libs/libaio
-	dev-libs/openssl
+	dev-libs/openssl:=
 	|| ( sys-libs/glibc sys-libs/argp-standalone )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -131,7 +131,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}/${PN}-r1.initd" glusterfsd
-	newinitd "${FILESDIR}/glusterd-r1.initd" glusterd
+	newinitd "${FILESDIR}/glusterd-r2.initd" glusterd
 	newconfd "${FILESDIR}/${PN}.confd" glusterfsd
 
 	keepdir /var/log/${PN}

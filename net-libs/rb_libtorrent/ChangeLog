@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.190 2015/03/17 20:30:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.191 2015/03/23 12:07:50 jlec Exp $
+
+  23 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/rb_libtorrent-0.16.17-python.patch,
+  +files/rb_libtorrent-1.0.2-python.patch, metadata.xml,
+  rb_libtorrent-0.16.17-r2.ebuild, rb_libtorrent-0.16.19.ebuild,
+  rb_libtorrent-1.0.2.ebuild, rb_libtorrent-1.0.3.ebuild:
+  Fix python stuff, bug #542434
 
 *rb_libtorrent-0.16.19 (17 Mar 2015)
 
