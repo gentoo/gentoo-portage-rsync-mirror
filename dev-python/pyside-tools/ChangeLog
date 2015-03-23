@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyside-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.30 2013/12/26 02:00:56 pesa Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.31 2015/03/23 10:11:42 yngwin Exp $
+
+*pyside-tools-0.2.15-r1 (23 Mar 2015)
+
+  23 Mar 2015; Ben de Groot <yngwin@gentoo.org> +pyside-tools-0.2.15-r1.ebuild:
+  Convert to python-r1.eclass. Fixes bug #531146. With thanks to Ian Delaney and
+  Michał Górny.
 
   26 Dec 2013; Davide Pesavento <pesa@gentoo.org> pyside-tools-0.2.15.ebuild:
   Unrestrict python 3.3
