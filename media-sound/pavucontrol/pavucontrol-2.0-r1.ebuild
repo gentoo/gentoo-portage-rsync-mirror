@@ -1,8 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-2.0.ebuild,v 1.5 2014/08/03 18:32:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-2.0-r1.ebuild,v 1.1 2015/03/23 08:28:06 mgorny Exp $
 
 EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Pulseaudio Volume Control, GTK based mixer for Pulseaudio"
 HOMEPAGE="http://freedesktop.org/software/pulseaudio/pavucontrol/"
@@ -27,6 +29,11 @@ DEPEND="${RDEPEND}
 		sys-devel/gettext
 		)
 "
+
+src_prepare() {
+	# Fix statup crashes (bug #530170)
+	epatch "${FILESDIR}"/${P}-fix-startup-crashes.patch
+}
 
 src_configure() {
 	econf \
