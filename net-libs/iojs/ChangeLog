@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/iojs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/ChangeLog,v 1.11 2015/03/10 03:20:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/ChangeLog,v 1.12 2015/03/23 07:21:48 patrick Exp $
+
+*iojs-1.6.2 (23 Mar 2015)
+
+  23 Mar 2015; Patrick Lauer <patrick@gentoo.org> +iojs-1.6.2.ebuild:
+  Bump
 
 *iojs-1.5.1 (10 Mar 2015)
 

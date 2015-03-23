@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.11 2012/11/18 05:57:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ensemblist-040126.ebuild,v 1.12 2015/03/23 07:13:49 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Put together several primitives to build a given shape. (C.S.G. Game)"
@@ -21,18 +21,19 @@ DEPEND="media-libs/freeglut
 	virtual/opengl
 	x11-libs/libXmu"
 
-PATCHES=( "${FILESDIR}"/${P}-build.patch )
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-build.patch
+}
 
 src_compile() {
 	emake DATADIR="\"${GAMES_DATADIR}\"/${PN}/datas" \
-		CFLAGSLD="${LDFLAGS}" \
-		|| die
+		CFLAGSLD="${LDFLAGS}"
 }
 
 src_install() {
-	dogamesbin ensemblist || die
+	dogamesbin ensemblist
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r datas || die
+	doins -r datas
 	dodoc Changelog README
 	make_desktop_entry ${PN} Ensemblist
 	prepgamesdirs

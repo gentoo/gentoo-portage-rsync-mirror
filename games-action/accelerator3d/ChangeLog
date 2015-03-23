@@ -1,6 +1,10 @@
 # ChangeLog for games-action/accelerator3d
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.15 2015/03/21 15:10:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/ChangeLog,v 1.16 2015/03/23 07:26:50 mr_bones_ Exp $
+
+  23 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -accelerator3d-0.1.1-r1.ebuild:
+  old
 
   21 Mar 2015; Andreas Schuerch <nativemad@gentoo.org>
   accelerator3d-0.1.1-r2.ebuild:

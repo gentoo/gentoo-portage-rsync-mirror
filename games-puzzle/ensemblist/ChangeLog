@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/ensemblist
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ChangeLog,v 1.11 2012/11/18 05:57:10 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ensemblist/ChangeLog,v 1.12 2015/03/23 07:13:49 mr_bones_ Exp $
+
+  23 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> ensemblist-040126.ebuild:
+  EAPI=5
 
   18 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> ensemblist-040126.ebuild:
   Let REQUIRED_USE in libmikmod's ebuild force audio backend and remove the
@@ -46,4 +49,3 @@
   25 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   +ensemblist-040126.ebuild:
   initial commit - ebuild from Greg Watson via bug #64408
-
