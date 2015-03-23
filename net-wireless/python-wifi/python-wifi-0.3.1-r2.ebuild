@@ -25,5 +25,5 @@ DOCS=( docs/AUTHORS docs/BUGS docs/DEVEL.txt docs/TODO )
 
 src_install() {
 	distutils-r1_src_install
-	use examples && doins -r examples
+	use examples && dodoc -r examples
 }
