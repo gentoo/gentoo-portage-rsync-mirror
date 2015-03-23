@@ -1,9 +1,9 @@
 DEFINED_PHASES=-
-DESCRIPTION=EDIT ME
+DESCRIPTION=https://bpaste.net/raw/006f2714152b
 EAPI=5
 IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 python_targets_pypy
 KEYWORDS=~amd64 ~x86
 RDEPEND=python_targets_python2_7? ( dev-python/cffi[python_targets_python2_7(-)?,-python_single_target_python2_7(-),python_targets_python3_3(-)?,-python_single_target_python3_3(-),python_targets_python3_4(-)?,-python_single_target_python3_4(-)] ) python_targets_python3_3? ( dev-python/cffi[python_targets_python2_7(-)?,-python_single_target_python2_7(-),python_targets_python3_3(-)?,-python_single_target_python3_3(-),python_targets_python3_4(-)?,-python_single_target_python3_4(-)] ) python_targets_python3_4? ( dev-python/cffi[python_targets_python2_7(-)?,-python_single_target_python2_7(-),python_targets_python3_3(-)?,-python_single_target_python3_3(-),python_targets_python3_4(-)?,-python_single_target_python3_4(-)] ) python_targets_pypy? ( virtual/pypy )
 SLOT=0
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	6d3a3cb5705b9fff1aeb7cfa4e3336fe	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=62b700f905dddad498d802290249f47a
+_md5_=e7dbafdc4ef15091f0b84cfbb247d413
