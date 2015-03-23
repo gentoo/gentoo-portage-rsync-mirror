@@ -4,6 +4,8 @@
 
 EAPI=5
 
+inherit eutils
+
 DESCRIPTION="Pulseaudio Volume Control, GTK based mixer for Pulseaudio"
 HOMEPAGE="http://freedesktop.org/software/pulseaudio/pavucontrol/"
 SRC_URI="http://freedesktop.org/software/pulseaudio/${PN}/${P}.tar.xz"
@@ -27,6 +29,11 @@ DEPEND="${RDEPEND}
 		sys-devel/gettext
 		)
 "
+
+src_prepare() {
+	# Fix statup crashes (bug #530170)
+	epatch "${FILESDIR}"/${P}-fix-startup-crashes.patch
+}
 
 src_configure() {
 	econf \
