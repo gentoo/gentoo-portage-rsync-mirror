@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/patchage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.20 2015/01/03 14:49:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.21 2015/03/23 02:47:36 mrueg Exp $
+
+  23 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -files/ldconfig.patch,
+  -patchage-0.4.4.ebuild, -patchage-0.4.5.ebuild, -patchage-0.5.0.ebuild:
+  Remove old superseded versions.
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> patchage-0.5.0-r1.ebuild:
   Add PYTHON_REQ_USE as necessary for waf.
