@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-2.3.ebuild,v 1.3 2015/03/23 09:34:04 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-time/joda-time-2.7.ebuild,v 1.1 2015/03/23 09:34:04 monsieurp Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc examples source test"
@@ -10,7 +10,7 @@ inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="A quality open-source replacement for the Java Date and Time classes"
 HOMEPAGE="http://www.joda.org/joda-time/ https://github.com/JodaOrg/joda-time/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-dist.tar.gz"
+SRC_URI="https://github.com/JodaOrg/${PN}/releases/download/v${PV}/${P}-dist.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -30,6 +30,9 @@ java_prepare() {
 
 	mkdir -p "${S}"/target/classes || die "Failed to create target classes directory."
 	cp -Rv "${S}"/src/tz-data/* "${S}"/target/classes/ || die "Failed to copy timezone data."
+
+	mkdir -p "${S}"/target/classes/org/joda/time/format || die "Failed to create target classes subdirectory."
+	cp -Rv "${S}"/src/main/java/org/joda/time/format/*properties "${S}"/target/classes/org/joda/time/format/ || die "Failed to copy message bundles."
 }
 
 src_compile() {
