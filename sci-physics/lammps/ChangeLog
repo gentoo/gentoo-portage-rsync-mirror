@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.83 2015/03/23 12:38:24 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.84 2015/03/23 15:28:15 nicolasbock Exp $
+
+  23 Mar 2015; Nicolas Bock <nicolasbock@gentoo.org> -lammps-20141021-r1.ebuild,
+  -lammps-20141021.ebuild, -lammps-20150105.ebuild, -lammps-20150106.ebuild,
+  -lammps-20150110.ebuild, -lammps-20150119.ebuild, -lammps-20150120.ebuild,
+  -lammps-20150121.ebuild, -lammps-20150130.ebuild:
+  sci-physics/lammps: Removing old packages.
 
   23 Mar 2015; Nicolas Bock <nicolasbock@gentoo.org> -lammps-20141217.ebuild,
   -lammps-20141219.ebuild, -lammps-20141222.ebuild:
