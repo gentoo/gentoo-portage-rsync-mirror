@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2014.11_rc3.ebuild,v 1.2 2014/11/03 15:26:43 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-2015.02.ebuild,v 1.1 2015/03/23 01:51:24 zerochaos Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0/${PV}"
 #maintainer notes:
 #doc use flag, looks like it can't be disabled right now and will
 #	always build if pandoc and help2man are installed
-#	also ignores when deps are missing and just disabled docs
+#	also ignores when deps are missing and just disables docs
 IUSE="doc +tecla"
 
 MY_PN="bladeRF"
@@ -38,8 +38,8 @@ CDEPEND=">=dev-libs/libusb-1.0.16
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}"
-PDEPEND=">=net-wireless/bladerf-firmware-1.7.1
-	>=net-wireless/bladerf-fpga-0.1.1"
+PDEPEND=">=net-wireless/bladerf-firmware-1.8.0
+	>=net-wireless/bladerf-fpga-0.1.2"
 
 src_configure() {
 	mycmakeargs=(

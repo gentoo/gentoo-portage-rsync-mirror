@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-c++/dbus-c++-0.9.0-r2.ebuild,v 1.1 2015/03/22 21:36:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-c++/dbus-c++-0.9.0-r2.ebuild,v 1.2 2015/03/23 01:35:15 zerochaos Exp $
 
 EAPI="5"
 
@@ -61,4 +61,3 @@ multilib_src_install_all() {
 		dohtml -r "${S}"/doc/html/*
 	fi
 }
-
