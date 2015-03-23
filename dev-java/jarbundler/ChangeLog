@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jarbundler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.16 2014/08/03 15:13:40 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarbundler/ChangeLog,v 1.17 2015/03/23 19:02:16 monsieurp Exp $
+
+*jarbundler-2.3.1 (23 Mar 2015)
+
+  23 Mar 2015; Patrice Clement <monsieurp@gentoo.org> +jarbundler-2.3.1.ebuild:
+  Version bump. Fix bug 541480.
 
 *jarbundler-1.8.1-r2 (03 Aug 2014)
 
@@ -70,4 +75,3 @@
   13 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   +jarbundler-1.4.ebuild:
   Initial import.
-
