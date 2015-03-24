@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>python</herd>
-<use>
-	<flag name='web'>enable the web front end for ldaptor (uses
-	<pkg>dev-python/nevow</pkg>)</flag>
-</use>
-</pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.11.ebuild,v 1.3 2015/03/15 13:25:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.11.ebuild,v 1.4 2015/03/24 02:32:36 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -99,6 +99,7 @@ src_configure() {
 		$(use_enable introspection) \
 		$(use_enable ipv6) \
 		$(use_with kerberos krb5 "${EPREFIX}"/usr) \
+		$(use_with kerberos krb5-libs "${EPREFIX}"/usr/$(get_libdir)) \
 		$(use_with ldap openldap) \
 		$(use_enable vala vala-bindings) \
 		$(use_enable weather) \
