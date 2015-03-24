@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libinput
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/ChangeLog,v 1.15 2015/03/17 18:09:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libinput/ChangeLog,v 1.16 2015/03/24 12:12:38 chithanh Exp $
+
+*libinput-0.13.0 (24 Mar 2015)
+
+  24 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libinput-0.13.0.ebuild:
+  Version bump.
 
 *libinput-0.12.0 (17 Mar 2015)
 
