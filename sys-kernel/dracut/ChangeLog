@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.186 2015/02/18 17:02:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.187 2015/03/24 13:12:00 aidecoe Exp $
+
+*dracut-041-r1 (24 Mar 2015)
+
+  24 Mar 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-041-r1.ebuild,
+  +files/041-r1-0001-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/041-r1-0002-Install-dracut-install-and-skipcpio-in.patch,
+  +files/041-r1-0003-Take-into-account-lib64-dirs-when-dete.patch,
+  +files/041-r1-0004-Don-t-install-scripts-in-kernel-instal.patch:
+  Clean up patches for upcoming stabilization.
 
 *dracut-041 (17 Feb 2015)
 

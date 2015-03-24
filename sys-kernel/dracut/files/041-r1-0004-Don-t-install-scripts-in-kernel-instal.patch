@@ -1,0 +1,28 @@
+From 6b1ed1bcc4df213f9bf7ffbc5a7586e7d5b26206 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Amadeusz=20=C5=BBo=C5=82nowski?= <aidecoe@aidecoe.name>
+Date: Mon, 23 Mar 2015 21:58:28 +0100
+Subject: [PATCH 4/4] Don't install scripts in kernel/install.d
+
+Scripts installed kernel/install.d have no use in Gentoo.  It is
+probably a RH specific thing.
+---
+ Makefile | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index bb007d1..b150491 100644
+--- a/Makefile
++++ b/Makefile
+@@ -155,9 +155,6 @@ endif
+ 		mkdir -p $(DESTDIR)$(libexecdir)/dracut; \
+ 		install -m 0755 skipcpio/skipcpio $(DESTDIR)$(libexecdir)/dracut/skipcpio; \
+ 	fi
+-	mkdir -p $(DESTDIR)${prefix}/lib/kernel/install.d
+-	install -m 0755 50-dracut.install $(DESTDIR)${prefix}/lib/kernel/install.d/50-dracut.install
+-	install -m 0755 51-dracut-rescue.install $(DESTDIR)${prefix}/lib/kernel/install.d/51-dracut-rescue.install
+ 	mkdir -p $(DESTDIR)${bashcompletiondir}
+ 	install -m 0644 dracut-bash-completion.sh $(DESTDIR)${bashcompletiondir}/dracut
+ 	install -m 0644 lsinitrd-bash-completion.sh $(DESTDIR)${bashcompletiondir}/lsinitrd
+-- 
+2.3.3
+
