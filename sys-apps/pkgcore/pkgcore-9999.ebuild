@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.22 2015/02/19 17:28:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.23 2015/03/24 06:06:02 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,16 +15,18 @@ else
 fi
 
 DESCRIPTION="pkgcore package manager"
-HOMEPAGE="http://pkgcore.googlecode.com/"
+HOMEPAGE="https://github.com/pkgcore/pkgcore"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc"
+IUSE="doc test"
 
 RDEPEND="=dev-python/snakeoil-9999[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/sphinx[${PYTHON_USEDEP}]
-	dev-python/pyparsing[${PYTHON_USEDEP}]"
+	dev-python/pyparsing[${PYTHON_USEDEP}]
+	test? ( $(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )
+"
 
 pkg_setup() {
 	# disable snakeoil 2to3 caching...

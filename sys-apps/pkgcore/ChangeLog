@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.182 2015/03/24 05:14:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.183 2015/03/24 06:06:02 radhermit Exp $
+
+  24 Mar 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Update homepage and add dev-python/mock test dep (conditional for when py3
+  support is re-enabled).
 
   24 Mar 2015; Tim Harder <radhermit@gentoo.org> -pkgcore-0.8.6.ebuild:
   Remove old.

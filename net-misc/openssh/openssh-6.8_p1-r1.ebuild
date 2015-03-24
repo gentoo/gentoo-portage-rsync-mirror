@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.8_p1-r1.ebuild,v 1.6 2015/03/22 06:54:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.8_p1-r1.ebuild,v 1.7 2015/03/24 06:23:39 patrick Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -9,7 +9,8 @@ inherit eutils user flag-o-matic multilib autotools pam systemd versionator
 # and _p? releases.
 PARCH=${P/_}
 
-HPN_PATCH="${PN}-6.8p1-r1-hpnssh14v5.tar.xz"
+# Causes login failures etc. #544254
+#HPN_PATCH="${PN}-6.8p1-r1-hpnssh14v5.tar.xz"
 LDAP_PATCH="${PN}-lpk-6.8p1-0.3.14.patch.xz"
 X509_VER="8.3" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
