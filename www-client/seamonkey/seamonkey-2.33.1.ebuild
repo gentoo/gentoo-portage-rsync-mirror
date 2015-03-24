@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.32.1.ebuild,v 1.1 2015/02/07 23:52:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.33.1.ebuild,v 1.1 2015/03/24 07:28:40 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -28,10 +28,10 @@ fi
 
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT="enabled"
-inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v5.34 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
+inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-v5.36 multilib pax-utils fdo-mime autotools mozextension nsplugins mozlinguas
 
-PATCHFF="firefox-35.0-patches-0.1"
-PATCH="${PN}-2.32-patches-01"
+PATCHFF="firefox-36.0-patches-01"
+PATCH="${PN}-2.33-patches-01"
 EMVER="1.7.2"
 
 DESCRIPTION="Seamonkey Web Browser"
@@ -55,12 +55,13 @@ SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
 	http://dev.gentoo.org/~axs/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
+	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCHFF}.tar.xz
 	crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
-RDEPEND=">=dev-libs/nss-3.17.2
-	>=dev-libs/nspr-4.10.7
+RDEPEND=">=dev-libs/nss-3.17.4
+	>=dev-libs/nspr-4.10.8
 	crypt? ( || (
 			( >=app-crypt/gnupg-2.0
 				|| (
@@ -69,7 +70,7 @@ RDEPEND=">=dev-libs/nss-3.17.2
 				)
 			)
 			=app-crypt/gnupg-1.4* ) )
-	system-sqlite? ( >=dev-db/sqlite-3.8.5:3[secure-delete,debug=] )"
+	system-sqlite? ( >=dev-db/sqlite-3.8.7.4:3[secure-delete,debug=] )"
 
 DEPEND="${RDEPEND}
 	!elibc_glibc? ( !elibc_uclibc?  ( dev-libs/libexecinfo ) )

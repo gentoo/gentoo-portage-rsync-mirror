@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.554 2015/03/24 06:23:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.555 2015/03/24 07:07:13 patrick Exp $
+
+  24 Mar 2015; Patrick Lauer <patrick@gentoo.org> openssh-6.8_p1-r1.ebuild,
+  openssh-6.8_p1-r2.ebuild:
+  Undo changes and use package.use.mask instead
 
   24 Mar 2015; Patrick Lauer <patrick@gentoo.org> openssh-6.8_p1-r1.ebuild,
   openssh-6.8_p1-r2.ebuild:

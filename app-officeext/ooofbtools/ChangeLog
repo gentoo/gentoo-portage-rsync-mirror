@@ -1,6 +1,12 @@
 # ChangeLog for app-officeext/ooofbtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.18 2015/02/25 15:54:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.19 2015/03/24 07:14:05 qnikst Exp $
+
+*ooofbtools-2.33 (24 Mar 2015)
+
+  24 Mar 2015; Alexander Vershilov <qnikst@gentoo.org> +ooofbtools-2.33.ebuild,
+  -ooofbtools-2.32.ebuild:
+  app-officeext/ooofbtools: bump up to 2.33
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> ooofbtools-2.31.ebuild:
   Stable for x86, wrt bug #540268

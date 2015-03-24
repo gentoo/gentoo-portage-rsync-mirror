@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.782 2015/03/19 20:34:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.783 2015/03/24 07:07:56 patrick Exp $
+
+  24 Mar 2015; Patrick Lauer <patrick@gentoo.org> package.use.mask:
+  Mask hpn useflag for openssh #544254
 
   19 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
   >=games-strategy/freeciv-2.5.0 requires >=dev-lang/lua-5.2
