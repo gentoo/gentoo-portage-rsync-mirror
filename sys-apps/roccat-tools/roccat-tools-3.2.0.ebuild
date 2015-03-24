@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-2.4.0.ebuild,v 1.2 2015/02/21 14:28:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-3.2.0.ebuild,v 1.1 2015/03/24 05:24:49 idella4 Exp $
 
 EAPI=5
 
@@ -29,12 +29,16 @@ IUSE_INPUT_DEVICES="
 	input_devices_roccat_pyra
 	input_devices_roccat_savu
 	input_devices_roccat_ryosmk
+	input_devices_roccat_ryostkl
 	input_devices_roccat_tyon
 "
-IUSE="${IUSE_INPUT_DEVICES}"
+IUSE="${IUSE_INPUT_DEVICES} lua"
+REQUIRED_USE="
+	lua? ( input_devices_roccat_ryosmk )
+"
 
 RDEPEND="
-	>=dev-libs/libgaminggear-0.5
+	>=dev-libs/libgaminggear-0.7
 	x11-libs/gtk+:2
 	x11-libs/libnotify
 	media-libs/libcanberra
@@ -52,9 +56,11 @@ pkg_setup() {
 src_configure() {
 	local UDEVDIR="$(get_udevdir)"/rules.d
 	local MODELS=${INPUT_DEVICES//roccat_/}
-	MODELS=${MODELS/ryosmk/ryos}
-	mycmakeargs=( -DDEVICES=${MODELS// /;} \
-	-DUDEVDIR="${UDEVDIR/"//"//}" )
+	mycmakeargs=(
+		-DDEVICES=${MODELS// /;} \
+		-DUDEVDIR="${UDEVDIR/"//"//}"
+		$(cmake-utils_use_with lua LUA)
+	)
 	cmake-utils_src_configure
 }
 src_install() {
@@ -71,6 +77,14 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_icon_cache_update
 	readme.gentoo_print_elog
+	ewarn
+	ewarn "Starting from version 3.0.0, executables were renamed and now prefixed with 'roccat',"
+	ewarn "so konextdconfig is now roccatkonextdconfig and so on"
+	ewarn "Everything that was ryos is now ryosmk to distinguish it from the ryostkl product range"
+	ewarn
+	ewarn "In version 3.0.0 the support for Python as a scripting language for RyosMKPro"
+	ewarn "ripple effects was dropped and replaced with Lua. Use USE=lua to enable it"
+	ewarn
 }
 
 pkg_postrm() {

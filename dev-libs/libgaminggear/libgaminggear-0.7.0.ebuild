@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgaminggear/libgaminggear-0.2.0.ebuild,v 1.2 2014/07/24 17:44:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgaminggear/libgaminggear-0.7.0.ebuild,v 1.1 2015/03/24 05:02:17 idella4 Exp $
 
 EAPI=5
 
@@ -13,6 +13,7 @@ SRC_URI="mirror://sourceforge/libgaminggear/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="doc"
 
 RDEPEND="
 	x11-libs/gtk+:2
@@ -20,14 +21,16 @@ RDEPEND="
 	media-libs/libcanberra
 	virtual/libusb:1
 	dev-libs/dbus-glib
-	virtual/libgudev:=
 "
 
 DEPEND="${RDEPEND}
-	app-doc/doxygen
+	doc? ( app-doc/doxygen )
 "
 src_configure() {
-	mycmakeargs=( -DCMAKE_INSTALL_PREFIX=${EPREFIX}/usr )
+	mycmakeargs=(
+		-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
+		$(cmake-utils_use_with doc DOC)
+	)
 	cmake-utils_src_configure
 }
 src_install() {
