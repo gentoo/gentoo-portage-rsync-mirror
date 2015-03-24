@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.63 2015/03/07 21:30:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.64 2015/03/23 23:52:57 xarthisius Exp $
+
+  23 Mar 2015; Kacper Kowalik <xarthisius@gentoo.org> i3-4.8.ebuild,
+  i3-4.9.1.ebuild, i3-9999.ebuild:
+  Add proper x11-libs/libxcb[xkb] dependency. Fixes bug #544200 by Evgenij Badin
+  <badineu@gmail.com>
 
 *i3-4.9.1 (07 Mar 2015)
 
