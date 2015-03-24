@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bcrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.10 2015/03/23 23:11:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/ChangeLog,v 1.11 2015/03/24 14:50:27 floppym Exp $
+
+  24 Mar 2015; Mike Gilbert <floppym@gentoo.org> bcrypt-1.1.0.ebuild:
+  cffi is also a build-time dep.
 
   23 Mar 2015; Mike Gilbert <floppym@gentoo.org> bcrypt-1.1.0.ebuild:
   Using virtual/python-cffi breaks subslot rebuilds, so don't use it.

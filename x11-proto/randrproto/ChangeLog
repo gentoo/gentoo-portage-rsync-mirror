@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/randrproto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.108 2015/03/03 12:33:37 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/randrproto/ChangeLog,v 1.109 2015/03/24 14:44:34 chithanh Exp $
+
+*randrproto-1.4.1 (24 Mar 2015)
+
+  24 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +randrproto-1.4.1.ebuild, -randrproto-1.3.2.ebuild, -randrproto-1.4.0.ebuild:
+  Version bump. Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> randrproto-1.4.0-r1.ebuild:
   add arm64 support, tested on A53 board

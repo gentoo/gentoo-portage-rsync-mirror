@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.58 2015/03/12 10:07:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.59 2015/03/24 14:52:40 mr_bones_ Exp $
+
+  24 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -enigma-1.01.ebuild,
+  -files/enigma-1.01-autotools.patch, -files/enigma-1.01-gcc43.patch,
+  -files/enigma-1.01-gcc44.patch, -files/enigma-1.01-gcc46.patch,
+  -files/enigma-1.01-gcc47.patch, -files/enigma-1.01-libpng15.patch,
+  -files/enigma-1.01-xerces-c.patch, enigma-1.21.ebuild:
+  mark stable; clean old
 
   12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> enigma-1.21.ebuild:
   Stable for amd64, wrt bug #542934
