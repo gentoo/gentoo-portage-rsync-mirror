@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.4.ebuild,v 1.3 2015/03/24 18:27:47 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-3.4.1.0.ebuild,v 1.1 2015/03/24 18:27:47 monsieurp Exp $
 
 EAPI="5"
 
@@ -51,6 +51,7 @@ RDEPEND="${COMMON_DEP}
 
 java_prepare() {
 	epatch "${FILESDIR}"/${PV}-*.patch
+	#epatch "${FILESDIR}"/${PV}-build.xml.patch
 
 	rm -v lib/{bsh-,commons,jgoodies,l2fprod-common-tasks,skinlf,stax,htmlparser,opencsv,trident,texhyphj,jRegistryKey}*.jar
 
