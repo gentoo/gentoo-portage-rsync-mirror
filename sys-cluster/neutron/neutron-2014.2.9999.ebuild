@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.9999.ebuild,v 1.10 2015/02/13 00:58:41 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2014.2.9999.ebuild,v 1.11 2015/03/24 04:13:56 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -107,9 +107,9 @@ PATCHES=(
 
 pkg_setup() {
 	linux-info_pkg_setup
-	CONFIG_CHECK_MODULES="8021Q IP6TABLE_FILTER IP6_TABLES IPT_REJECT \
-	IPTABLE_MANGLE IPT_MASQUERADE IPTABLE_NAT NF_CONNTRACK_IPV4 NF_DEFRAG_IPV4 \
-	NF_NAT_IPV4 NF_NAT NF_CONNTRACK IPTABLE_FILTER IP_TABLES X_TABLES"
+	CONFIG_CHECK_MODULES="VLAN_8021Q IP6_NF_FILTER IP6_NF_IPTABLES IP_NF_TARGET_REJECT \
+	IP_NF_MANGLE IP_NF_TARGET_MASQUERADE NF_NAT_IPV4 NF_CONNTRACK_IPV4 NF_DEFRAG_IPV4 \
+	NF_NAT_IPV4 NF_NAT NF_CONNTRACK IP_NF_FILTER IP_NF_IPTABLES NETFILTER_XTABLES"
 	if linux_config_exists; then
 		for module in ${CONFIG_CHECK_MODULES}; do
 			linux_chkconfig_present ${module} || ewarn "${module} needs to be enabled in kernel"

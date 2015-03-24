@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.36 2015/03/11 06:38:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.37 2015/03/24 04:19:46 patrick Exp $
+
+*cryptography-0.8.1 (24 Mar 2015)
+
+  24 Mar 2015; Patrick Lauer <patrick@gentoo.org> +cryptography-0.8.1.ebuild:
+  Bump
 
 *cryptography-0.8 (11 Mar 2015)
 

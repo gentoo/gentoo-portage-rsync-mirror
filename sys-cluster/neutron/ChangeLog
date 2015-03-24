@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.54 2015/02/13 00:58:41 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.55 2015/03/24 04:13:56 prometheanfire Exp $
+
+  24 Mar 2015; Matthew Thode <prometheanfire@gentoo.org>
+  neutron-2014.2.2-r1.ebuild, neutron-2014.2.9999.ebuild:
+  newer module naming bug 532848
 
 *neutron-2014.2.2-r1 (13 Feb 2015)
 
