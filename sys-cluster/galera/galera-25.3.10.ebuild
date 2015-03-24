@@ -1,15 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.4 2015/03/24 18:32:11 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.10.ebuild,v 1.1 2015/03/24 18:32:11 grknight Exp $
 
 EAPI=5
 
-MY_P="${PN}-${PV}-src"
+inherit scons-utils multilib toolchain-funcs eutils user
 
-inherit scons-utils multilib toolchain-funcs base versionator eutils user
+MY_PV="release_${PV}"
 DESCRIPTION="Synchronous multi-master replication engine that provides its service through wsrep API"
-HOMEPAGE="http://www.codership.org/"
-SRC_URI="https://launchpad.net/${PN}/$(get_version_component_range 2).x/${PV}/+download/${MY_P}.tar.gz"
+HOMEPAGE="http://www.galeracluster.com/"
+SRC_URI="https://github.com/codership/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
@@ -19,7 +19,7 @@ IUSE="garbd ssl test"
 
 CDEPEND="
 	 ssl? ( dev-libs/openssl:0= )
-	>=dev-libs/boost-1.41
+	>=dev-libs/boost-1.41:0=
 	"
 DEPEND="${DEPEND}
 	${CDEPEND}
@@ -36,7 +36,7 @@ RDEPEND="${CDEPEND}
 		net-analyzer/openbsd-netcat
 	) )"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 pkg_preinst() {
 	if use garbd ; then
@@ -81,6 +81,7 @@ src_install() {
 		dobin garb/garbd
 		newconfd "${FILESDIR}/garb.cnf" garbd
 		newinitd "${FILESDIR}/garb.sh" garbd
+		doman man/garbd.8
 	fi
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe libgalera_smm.so
