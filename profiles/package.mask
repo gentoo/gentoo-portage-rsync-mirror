@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16436 2015/03/24 03:35:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16437 2015/03/24 21:51:17 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (24 Mar 2015)
+# no need for the -bin version when we have a source build
+# masked for removal on 20150423
+games-kids/memonix-bin
 
 # Ian Delaney <idella4@gentoo.org> (24 Mar 2015)
 # These packages now superceded by the fork limnoria
