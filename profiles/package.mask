@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16435 2015/03/24 03:13:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16436 2015/03/24 03:35:48 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (24 Mar 2015)
+# These packages now superceded by the fork limnoria
+# Masked for removal in 30 days.
+net-irc/supybot
+net-irc/supybot-plugins
 
 # Ian Delaney <idella4@gentoo.org> (24 Mar 2015)
 # the cffi requires setting ':=' which isn't reliable in a virtual
