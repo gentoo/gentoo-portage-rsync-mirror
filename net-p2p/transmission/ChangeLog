@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/transmission
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.261 2014/09/05 05:39:30 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.262 2015/03/24 22:57:05 mgorny Exp $
+
+*transmission-2.84-r1 (24 Mar 2015)
+
+  24 Mar 2015; Michał Górny <mgorny@gentoo.org> +transmission-2.84-r1.ebuild:
+  Enable support for Qt5, https://bugs.funtoo.org/browse/FL-2204.
 
   05 Sep 2014; Samuli Suominen <ssuominen@gentoo.org> transmission-2.84.ebuild:
   Reference /var/lib instead of /var in pkg_postinst() message wrt #521898

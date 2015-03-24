@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/r8168
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.16 2014/03/18 16:45:02 joker Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/ChangeLog,v 1.17 2015/03/24 22:44:54 chewi Exp $
+
+*r8168-8.039.00 (24 Mar 2015)
+
+  24 Mar 2015; James Le Cuirot <chewi@gentoo.org> +r8168-8.039.00.ebuild,
+  -files/r8168-8.029.00-linux-3.3-compat.patch,
+  -files/r8168-8.035.00-build-3.8.patch, -r8168-8.026.00.ebuild,
+  -r8168-8.027.00.ebuild, -r8168-8.029.00.ebuild, -r8168-8.030.00.ebuild,
+  -r8168-8.031.00.ebuild, -r8168-8.032.00.ebuild, -r8168-8.035.00-r1.ebuild,
+  -r8168-8.035.00.ebuild, -r8168-8.038.00.ebuild, metadata.xml:
+  Version bump and clear out of old unstable versions. I'm taking over this
+  package as I have the hardware. Closes bugs #523418, #519816 and #512842.
 
 *r8168-8.038.00 (18 Mar 2014)
 

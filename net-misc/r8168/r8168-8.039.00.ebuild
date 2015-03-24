@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/r8168-8.030.00.ebuild,v 1.1 2012/05/18 19:38:12 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/r8168-8.039.00.ebuild,v 1.1 2015/03/24 22:44:54 chewi Exp $
 
-EAPI=4
+EAPI=5
 
 inherit linux-mod eutils
 
 DESCRIPTION="r8168 driver for Realtek 8111/8168 PCI-E NICs"
 HOMEPAGE="http://www.realtek.com.tw"
-SRC_URI="http://r8168.googlecode.com/files/${P}.tar.bz2"
+SRC_URI="http://12244.wpc.azureedge.net/8012244/drivers/rtdrivers/cn/nic/0001-r8168-8.039.00.tar.bz2 -> ${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
