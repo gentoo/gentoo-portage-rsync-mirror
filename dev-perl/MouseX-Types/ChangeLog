@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MouseX-Types
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MouseX-Types/ChangeLog,v 1.1 2015/03/21 22:14:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MouseX-Types/ChangeLog,v 1.2 2015/03/24 04:52:50 jer Exp $
+
+  24 Mar 2015; Jeroen Roovers <jer@gentoo.org> MouseX-Types-0.60.0.ebuild:
+  Marked ~hppa (bug #544064).
 
 *MouseX-Types-0.60.0 (21 Mar 2015)
 
