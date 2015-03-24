@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.20.ebuild,v 1.2 2015/03/19 19:15:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.20.ebuild,v 1.3 2015/03/24 09:12:33 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="https://www.djangoproject.com/m/releases/$(get_version_component_range 
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="sqlite test"
 
 RDEPEND=""

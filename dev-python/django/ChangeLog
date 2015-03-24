@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.160 2015/03/19 19:15:33 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.162 2015/03/24 09:20:29 jlec Exp $
+
+  24 Mar 2015; Justin Lecher <jlec@gentoo.org> -django-1.4.19.ebuild,
+  -django-1.6.10.ebuild:
+  Clean up after sec stabilization, bug #543754
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> django-1.4.20.ebuild,
+  django-1.6.11.ebuild:
+  Stable for amd64, wrt bug #543754
 
   19 Mar 2015; Andreas Schuerch <nativemad@gentoo.org> django-1.4.20.ebuild,
   django-1.6.11.ebuild:
