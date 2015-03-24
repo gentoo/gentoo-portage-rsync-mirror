@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.183 2015/03/24 06:06:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.184 2015/03/24 09:33:54 patrick Exp $
+
+*pkgcore-0.8.6 (24 Mar 2015)
+
+  24 Mar 2015; Patrick Lauer <patrick@gentoo.org> +pkgcore-0.8.6.ebuild:
+  Restore last release
 
   24 Mar 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
   Update homepage and add dev-python/mock test dep (conditional for when py3
