@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-3.2.4.ebuild,v 1.1 2015/01/11 09:36:42 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-3.3.2.ebuild,v 1.1 2015/03/24 17:32:12 polynomial-c Exp $
 
 EAPI=5
 

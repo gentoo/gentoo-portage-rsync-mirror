@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.172 2015/02/02 10:04:06 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.173 2015/03/24 17:32:12 polynomial-c Exp $
+
+*mercurial-3.3.2 (24 Mar 2015)
+
+  24 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> -mercurial-3.2.4.ebuild,
+  -mercurial-3.3.ebuild, +mercurial-3.3.2.ebuild:
+  Security bump (bug #544332). Removed old.
 
 *mercurial-3.3 (02 Feb 2015)
 

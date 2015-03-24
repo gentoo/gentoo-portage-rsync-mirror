@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-3.2.4.ebuild,v 1.1 2015/02/03 07:26:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-3.3.2.ebuild,v 1.1 2015/03/24 17:34:12 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -10,7 +10,7 @@ inherit distutils-r1 eutils
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="https://www.bitbucket.org/${PN}/targz/downloads/${P}.tar.gz"
-	HG_DEPEND=">=dev-vcs/mercurial-3.0 <dev-vcs/mercurial-3.3"
+	HG_DEPEND=">=dev-vcs/mercurial-3.2 <dev-vcs/mercurial-3.4"
 else
 	inherit mercurial
 	EHG_REPO_URI="https://bitbucket.org/tortoisehg/thg"
