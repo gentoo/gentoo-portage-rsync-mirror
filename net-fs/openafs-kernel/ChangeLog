@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.165 2015/03/22 21:14:48 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.168 2015/03/24 08:57:41 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openafs-kernel-1.6.11.ebuild:
+  Stable for sparc, wrt bug #544158
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openafs-kernel-1.6.11.ebuild:
+  Stable for x86, wrt bug #544158
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openafs-kernel-1.6.11.ebuild:
+  Stable for amd64, wrt bug #544158
 
   22 Mar 2015; Andrew Savchenko <bircoph@gentoo.org>
   -openafs-kernel-1.6.2-r1.ebuild, -openafs-kernel-1.6.5-r2.ebuild,

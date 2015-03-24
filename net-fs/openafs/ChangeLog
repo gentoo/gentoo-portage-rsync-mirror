@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.202 2015/03/22 21:41:59 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.205 2015/03/24 08:58:09 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openafs-1.6.11.ebuild:
+  Stable for sparc, wrt bug #536272
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openafs-1.6.11.ebuild:
+  Stable for x86, wrt bug #536272
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> openafs-1.6.11.ebuild:
+  Stable for amd64, wrt bug #536272
 
   22 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> openafs-1.6.5-r1.ebuild:
   Fix bug 534488 for older verion.

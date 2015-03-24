@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.11.ebuild,v 1.1 2015/03/20 12:46:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.11.ebuild,v 1.3 2015/03/24 08:52:26 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_PF}"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="-bufferevents +ecc nat-pmp seccomp selinux stats tor-hardening transparent-proxy threads test upnp web"
 
 DEPEND="dev-libs/openssl

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.11.ebuild,v 1.1 2015/03/22 21:00:47 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.11.ebuild,v 1.4 2015/03/24 08:57:41 ago Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ SRC_URI="
 
 LICENSE="IBM BSD openafs-krb5-a APSL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
