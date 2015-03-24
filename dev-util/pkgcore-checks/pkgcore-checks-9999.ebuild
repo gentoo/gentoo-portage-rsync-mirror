@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.7 2015/02/19 17:30:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.8 2015/03/24 15:05:27 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -40,7 +40,7 @@ python_install_all() {
 
 pkg_postinst() {
 	einfo "updating pkgcore plugin cache"
-	python_foreach_impl pplugincache pkgcore_checks.plugins
+	python_foreach_impl pplugincache pkgcheck.plugins
 }
 
 pkg_postrm() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.57 2015/02/19 17:30:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.58 2015/03/24 15:05:27 radhermit Exp $
+
+  24 Mar 2015; Tim Harder <radhermit@gentoo.org> pkgcore-checks-9999.ebuild:
+  Update module name for plugincache generation.
 
   19 Feb 2015; Tim Harder <radhermit@gentoo.org> pkgcore-checks-9999.ebuild:
   Bump to EAPI 5.
