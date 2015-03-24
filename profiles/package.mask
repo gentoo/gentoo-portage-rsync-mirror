@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16434 2015/03/23 03:09:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16435 2015/03/24 03:13:55 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (24 Mar 2015)
+# the cffi requires setting ':=' which isn't reliable in a virtual
+# Masked while a solution is found
+virtual/python-cffi
 
 # Brian Evans <grknight@gentoo.org> (22 Mar 2015)
 # PHP 5.3.x is vulnerable to several security bugs and has
@@ -411,12 +416,6 @@ dev-ruby/mixlib-log
 dev-ruby/ohai
 =dev-ruby/rest-client-1.6.7-r1
 
-# Ian Delaney <idella4@gentoo.org> (23 Feb 2015)
-# ancient and abandonned packages
-# Masked for removal in 30 days.
-dev-python/py-freebsd
-dev-util/spe
-
 # Alex Brandt <alunduil@gentoo.org> (21 Feb 2015)
 # Upstream renamed to docker-compose for all future releases
 app-emulation/fig
@@ -426,25 +425,9 @@ app-emulation/fig
 # Masked for removal in 30 days.
 media-fonts/culmus-ancient
 
-# Ian Delaney <idella4@gentoo.org> (19 Feb 2015)
-# Some no longer fetch and upstream dead. genetic was to be
-# used by sci-chemistry/pymss but this is absent from portage.
-# For g-pypi, maintainer has lost interest and abandonned the package.
-# Masked for removal in 30 days
-dev-python/cherryflow
-dev-python/colubrid
-dev-python/genetic
-dev-python/gnosis-utils
-dev-python/g-pypi
-dev-python/ldaptor
-
 # Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
 # Masked for removal due to licensing issues, bug 539778
 dev-ruby/gemoji
-
-# Ian Delaney <idella4@gentoo.org> (15 Feb 2015)
-# Dead upstream, does not fetch
-app-text/pyrpub
 
 # Matthew Thode <prometheanfire@gentoo.org> (12 Feb 2015)
 # Dead upstream and no deps
