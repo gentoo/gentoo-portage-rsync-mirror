@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/msgpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.17 2015/03/21 21:46:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.18 2015/03/24 02:28:44 radhermit Exp $
+
+*msgpack-1.0.1 (24 Mar 2015)
+
+  24 Mar 2015; Tim Harder <radhermit@gentoo.org> +msgpack-1.0.1.ebuild:
+  Version bump.
 
   21 Mar 2015; Tim Harder <radhermit@gentoo.org> -msgpack-0.5.6-r1.ebuild,
   -msgpack-0.5.8.ebuild, -msgpack-0.6.0_pre20150220.ebuild:
