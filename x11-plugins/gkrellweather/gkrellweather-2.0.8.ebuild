@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.8.ebuild,v 1.3 2015/03/20 16:07:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.8.ebuild,v 1.4 2015/03/24 20:14:51 jlec Exp $
 
 EAPI=5
 
-inherit gkrellm-plugin toolchain-funcs
+inherit flag-o-matic gkrellm-plugin toolchain-funcs
 
 DESCRIPTION="GKrellM2 Plugin that monitors a METAR station and displays weatherinfo"
 HOMEPAGE="http://sites.google.com/site/makovick/gkrellm-plugins"
@@ -18,12 +18,17 @@ IUSE=""
 RDEPEND="
 	>=dev-lang/perl-5.6.1
 	>=net-misc/wget-1.5.3"
-DEPEND=">=sys-apps/sed-4.0.5"
+DEPEND=">=sys-apps/sed-4.0.5
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-Respect-LDFLAGS.patch \
 		"${FILESDIR}"/${P}-Move-GrabWeather.patch
+	append-cflags $($(tc-getPKG_CONFIG) --cflags gtk+-2.0)
+	append-flags -fPIC
+
 }
 
 src_compile() {

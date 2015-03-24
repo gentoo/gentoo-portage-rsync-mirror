@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/factory_girl/factory_girl-4.5.0.ebuild,v 1.1 2015/02/22 07:38:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/factory_girl/factory_girl-4.5.0.ebuild,v 1.2 2015/03/24 20:10:21 maekke Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ HOMEPAGE="https://github.com/thoughtbot/factory_girl"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/activesupport-3.0.0"

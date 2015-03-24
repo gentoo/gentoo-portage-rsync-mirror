@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/gkrellm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.204 2013/12/23 00:43:05 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.205 2015/03/24 20:01:43 jlec Exp $
+
+*gkrellm-2.3.5-r3 (24 Mar 2015)
+
+  24 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/gkrellm-2.3.5-binding.patch, +files/gkrellm-2.3.5-config.patch,
+  +files/gkrellm-2.3.5-format-security.patch,
+  +files/gkrellm-2.3.5-sansfont.patch, +files/gkrellm-2.3.5-width.patch,
+  +gkrellm-2.3.5-r3.ebuild, metadata.xml:
+  Bump to EAPI=5; add missing dependency on x11-libs/pango, #382235; fix for
+  format-security, #520556; import various patches from fedora
 
   23 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
   -files/gkrellm-2.3.2-getline-fix.patch:

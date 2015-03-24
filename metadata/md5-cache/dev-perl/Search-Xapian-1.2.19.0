@@ -4,10 +4,10 @@ DESCRIPTION=Perl XS frontend to the Xapian C++ search library
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Search-Xapian/
 IUSE=examples
-KEYWORDS=~amd64 ~arm ~mips ppc ppc64 ~x86
+KEYWORDS=~amd64 arm ~mips ppc ppc64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=~dev-libs/xapian-1.2.19 !dev-libs/xapian-bindings[perl] dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/O/OL/OLLY/Search-Xapian-1.2.19.0.tar.gz http://oligarchy.co.uk/xapian/1.2.19/Search-Xapian-1.2.19.0.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a28edde82ccc64c206f8d49785f2b3a8
+_md5_=1fe9408510462ada471d61370ddc68f8
