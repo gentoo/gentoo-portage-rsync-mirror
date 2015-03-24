@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/log4r
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.47 2015/03/16 19:30:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.48 2015/03/24 17:24:26 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> log4r-1.1.10-r1.ebuild:
+  Stable for amd64, wrt bug #543538
 
 *log4r-1.1.10-r2 (16 Mar 2015)
 

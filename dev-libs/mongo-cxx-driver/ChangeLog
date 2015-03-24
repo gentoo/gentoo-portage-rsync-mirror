@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/mongo-cxx-driver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/ChangeLog,v 1.5 2015/03/23 11:27:13 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/ChangeLog,v 1.6 2015/03/24 17:25:27 ultrabug Exp $
+
+*mongo-cxx-driver-0.0.2.6.7-r1 (24 Mar 2015)
+
+  24 Mar 2015; Ultrabug <ultrabug@gentoo.org>
+  -mongo-cxx-driver-0.0.2.6.7.ebuild, +mongo-cxx-driver-0.0.2.6.7-r1.ebuild:
+  strip useless deps on compat26 ebuild thx to Balint SZENTE
 
   23 Mar 2015; Ultrabug <ultrabug@gentoo.org>
   mongo-cxx-driver-0.0.2.6.7.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/automx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.17 2015/03/21 19:29:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.18 2015/03/24 17:24:06 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> automx-0.10.2-r1.ebuild:
+  Stable for amd64, wrt bug #544052
 
 *automx-0.10.2-r1 (21 Mar 2015)
 

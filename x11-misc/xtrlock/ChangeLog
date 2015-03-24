@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtrlock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.29 2015/03/12 08:58:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.30 2015/03/24 17:23:11 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> xtrlock-2.7.ebuild:
+  Stable for amd64, wrt bug #543012
 
 *xtrlock-2.7 (12 Mar 2015)
 

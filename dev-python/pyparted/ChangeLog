@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.94 2015/03/15 12:28:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.95 2015/03/24 17:22:36 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.3-r1.ebuild:
+  Stable for amd64, wrt bug #543038
 
   15 Mar 2015; Jeroen Roovers <jer@gentoo.org> pyparted-3.10.3-r1.ebuild:
   Stable for HPPA (bug #543038).

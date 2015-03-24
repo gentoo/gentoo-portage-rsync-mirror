@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/eugene
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.11 2015/03/20 16:38:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/eugene/ChangeLog,v 1.12 2015/03/24 17:24:46 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> eugene-4.1.ebuild:
+  Stable for amd64, wrt bug #543936
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org>
   +files/eugene-4.1-format-security.patch, -eugene-3.5g.ebuild,

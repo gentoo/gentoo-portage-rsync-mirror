@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmldonkey
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.9 2015/03/20 15:57:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmldonkey/ChangeLog,v 1.10 2015/03/24 17:25:11 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> wmmldonkey-0.003-r1.ebuild:
+  Stable for amd64, wrt bug #543922
 
 *wmmldonkey-0.003-r1 (20 Mar 2015)
 

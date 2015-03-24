@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glfw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.22 2015/03/22 21:10:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.23 2015/03/24 17:26:01 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> glfw-2.7.7.ebuild:
+  Stable for amd64, wrt bug #544088
 
 *glfw-3.1.1 (22 Mar 2015)
 

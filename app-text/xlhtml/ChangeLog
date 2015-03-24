@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xlhtml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.21 2015/03/21 10:36:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/ChangeLog,v 1.22 2015/03/24 17:22:20 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> xlhtml-0.5.1_p6.ebuild:
+  Stable for amd64, wrt bug #544010
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
   xlhtml-0.5.1_p6.ebuild:

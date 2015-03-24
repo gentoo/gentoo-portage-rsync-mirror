@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.32 2014/07/04 11:08:51 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.33 2015/03/24 17:22:15 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> Macaulay2-1.7_pre.ebuild:
+  Stable for amd64, wrt bug #542572
 
 *Macaulay2-1.7_pre (04 Jul 2014)
 

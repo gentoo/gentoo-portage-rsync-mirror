@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/vaal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.15 2015/03/15 10:55:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.16 2015/03/24 17:23:36 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> vaal-46233.ebuild:
+  Stable for amd64, wrt bug #543404
 
   15 Mar 2015; Justin Lecher <jlec@gentoo.org> -vaal-42179.ebuild,
   -vaal-45166.ebuild:

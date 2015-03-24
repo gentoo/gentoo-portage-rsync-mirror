@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.571 2015/03/02 08:30:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.572 2015/03/24 17:27:41 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> postfix-3.0.0.ebuild:
+  Stable for amd64, wrt bug #544248
 
   02 Mar 2015; Eray Aslan <eras@gentoo.org> postfix-2.11.3.ebuild:
   QA: add missing slot

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.27 2013/08/14 12:35:14 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.28 2015/03/24 17:24:16 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sux-1.0-r4.ebuild:
+  Stable for amd64, wrt bug #543928
 
 *sux-1.0-r4 (14 Aug 2013)
 
@@ -95,4 +98,3 @@
   28 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> sux-1.0.ebuild:
   Initial import. Since it is rather old and has no real version
   number, I'll call this 1.0.
-

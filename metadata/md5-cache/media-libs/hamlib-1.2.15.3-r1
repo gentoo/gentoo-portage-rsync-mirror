@@ -4,7 +4,7 @@ DESCRIPTION=Ham radio backend rig control libraries
 EAPI=5
 HOMEPAGE=http://sourceforge.net/apps/mediawiki/hamlib
 IUSE=doc python tcl python_targets_python2_7
-KEYWORDS=~amd64 ~x86 ~x86-fbsd
+KEYWORDS=amd64 ~x86 ~x86-fbsd
 LICENSE=LGPL-2 GPL-2
 RDEPEND==virtual/libusb-0* dev-libs/libxml2 python? ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)] ) tcl? ( dev-lang/tcl )
 REQUIRED_USE=python_targets_python2_7
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/hamlib/hamlib-1.2.15.3.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=3091f19c0ed34b6c077ee5bafb377513
+_md5_=a027a94e22c610523eff53a030b8cb09

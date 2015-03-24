@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmon+smp
 # Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.12 2015/03/20 15:53:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon+smp/ChangeLog,v 1.13 2015/03/24 17:23:06 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> wmmon+smp-1.0-r2.ebuild:
+  Stable for amd64, wrt bug #543920
 
 *wmmon+smp-1.0-r2 (20 Mar 2015)
 

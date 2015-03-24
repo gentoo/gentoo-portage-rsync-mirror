@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnugo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.36 2015/02/14 03:34:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.37 2015/03/24 17:25:16 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnugo-3.9.1-r1.ebuild:
+  Stable for amd64, wrt bug #543564
 
   14 Feb 2015; Rick Farina <zerochaos@gentoo.org> gnugo-3.9.1-r1.ebuild:
   qa remove trailing whitespace

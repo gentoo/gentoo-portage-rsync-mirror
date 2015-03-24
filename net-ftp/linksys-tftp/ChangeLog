@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/linksys-tftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/linksys-tftp/ChangeLog,v 1.12 2015/03/21 18:58:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/linksys-tftp/ChangeLog,v 1.13 2015/03/24 17:24:01 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> linksys-tftp-1.2.1-r3.ebuild:
+  Stable for amd64, wrt bug #544050
 
 *linksys-tftp-1.2.1-r3 (21 Mar 2015)
 

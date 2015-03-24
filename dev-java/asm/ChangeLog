@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.93 2015/03/03 23:16:52 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.94 2015/03/24 17:25:06 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> asm-4.0.ebuild:
+  Stable for amd64, wrt bug #543942
 
 *asm-5.0.3 (03 Mar 2015)
 

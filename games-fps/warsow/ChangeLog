@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.65 2015/02/01 19:15:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.66 2015/03/24 17:23:31 ago Exp $
+
+  24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> warsow-1.5.1-r1.ebuild:
+  Stable for amd64, wrt bug #544170
 
   31 Jan 2015; Tupone Alfredo <tupone@gentoo.org> warsow-1.5.1-r1.ebuild,
   -files/warsow-1.5.1-build.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.1-r1.ebuild,v 1.1 2015/03/22 13:38:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.1-r1.ebuild,v 1.2 2015/03/24 17:26:12 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ if [[ ${KDE_BUILD_TYPE} != live ]] ; then
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 SLOT="4"
 IUSE="debug minimal"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/mongo-cxx-driver-0.0.2.6.7.ebuild,v 1.2 2015/03/23 11:27:13 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-cxx-driver/mongo-cxx-driver-0.0.2.6.7-r1.ebuild,v 1.1 2015/03/24 17:25:27 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="2.3.0"
@@ -24,9 +24,7 @@ RDEPEND="
 	>=dev-cpp/yaml-cpp-0.5.1
 	>=dev-libs/boost-1.50[threads(+)]
 	>=dev-libs/libpcre-8.30[cxx]
-	dev-libs/snowball-stemmer
 	dev-util/google-perftools[-minimal]
-	net-libs/libpcap
 	ssl? ( dev-libs/openssl:= )"
 DEPEND="${RDEPEND}
 	kerberos? ( dev-libs/cyrus-sasl[kerberos] )"
@@ -39,7 +37,6 @@ pkg_setup() {
 	scons_opts+=" --use-system-boost"
 	scons_opts+=" --use-system-pcre"
 	scons_opts+=" --use-system-snappy"
-	scons_opts+=" --use-system-stemmer"
 	scons_opts+=" --use-system-yaml"
 
 	if use prefix; then
@@ -58,6 +55,9 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-26compat-fix-scons.patch"
+
+	# stemmer/pcap are not used, strip them wrt #518104
+	sed -e '/stemmer/d' -e '/pcap/d' -i SConstruct || die
 
 	# fix yaml-cpp detection
 	sed -i -e "s/\[\"yaml\"\]/\[\"yaml-cpp\"\]/" SConstruct || die

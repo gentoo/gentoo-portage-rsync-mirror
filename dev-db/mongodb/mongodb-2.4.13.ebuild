@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.13.ebuild,v 1.1 2015/02/27 09:55:48 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.13.ebuild,v 1.2 2015/03/24 17:30:59 ago Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -18,7 +18,7 @@ SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
 
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="kerberos mms-agent sharedclient spidermonkey ssl static-libs"
 
 PDEPEND="mms-agent? ( dev-python/pymongo app-arch/unzip )"

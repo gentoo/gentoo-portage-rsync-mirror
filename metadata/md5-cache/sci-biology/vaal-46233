@@ -4,10 +4,10 @@ DESCRIPTION=A variant ascertainment algorithm that can be used to detect SNPs, i
 EAPI=5
 HOMEPAGE=http://www.broadinstitute.org/science/programs/genome-biology/crd/
 IUSE=openmp
-KEYWORDS=~amd64
+KEYWORDS=amd64
 LICENSE=Whitehead-MIT
 RDEPEND=>=dev-libs/boost-1.41.0-r3
 SLOT=0
 SRC_URI=ftp://ftp.broad.mit.edu/pub/crd/VAAL/latest_source_code/vaal-46233.tar.gz ftp://ftp.broad.mit.edu/pub/crd/VAAL/VAAL_manual.doc
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=016f081a9e5c8a3d8f6cf5ab43663fde
+_md5_=d2a2922a0c1292de68e3cadd8267a721
