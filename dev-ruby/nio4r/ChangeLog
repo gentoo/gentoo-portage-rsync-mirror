@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nio4r
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/ChangeLog,v 1.7 2015/02/01 20:41:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nio4r/ChangeLog,v 1.8 2015/03/24 16:20:14 graaff Exp $
+
+  24 Mar 2015; Hans de Graaff <graaff@gentoo.org> nio4r-1.1.0.ebuild:
+  Add ruby22.
 
 *nio4r-1.1.0 (01 Feb 2015)
 

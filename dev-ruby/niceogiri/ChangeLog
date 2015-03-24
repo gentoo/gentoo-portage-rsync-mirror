@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/niceogiri
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/niceogiri/ChangeLog,v 1.5 2015/01/26 12:52:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/niceogiri/ChangeLog,v 1.6 2015/03/24 16:18:35 graaff Exp $
+
+  24 Mar 2015; Hans de Graaff <graaff@gentoo.org> niceogiri-1.1.2.ebuild:
+  Add ruby22.
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> niceogiri-1.1.2.ebuild:
   Drop bundler usage in Rakefile.
