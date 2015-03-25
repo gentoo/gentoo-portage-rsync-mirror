@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.40 2015/03/25 00:20:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.42 2015/03/25 01:00:23 floppym Exp $
 
 EAPI=5
 
@@ -25,17 +25,20 @@ HOMEPAGE="https://btrfs.wiki.kernel.org"
 
 LICENSE="GPL-2"
 SLOT="0/${libbtrfs_soname}"
-IUSE=""
+IUSE="+convert"
 
 RESTRICT=test # tries to mount repared filesystems
 
 RDEPEND="
 	dev-libs/lzo:2=
 	sys-libs/zlib:0=
-	sys-fs/e2fsprogs:0=
+	convert? (
+		sys-fs/e2fsprogs:0=
+		sys-libs/e2fsprogs-libs:0=
+	)
 "
 DEPEND="${RDEPEND}
-	sys-apps/acl
+	convert? ( sys-apps/acl )
 	app-text/asciidoc
 	app-text/docbook-xml-dtd:4.5
 	app-text/xmlto
@@ -56,6 +59,17 @@ src_prepare() {
 		ln -s "${EPREFIX}"/usr/share/gnuconfig/config.guess config/config.guess || die
 		ln -s "${EPREFIX}"/usr/share/gnuconfig/config.sub config/config.sub || die
 	fi
+}
+
+src_configure() {
+	local myeconfargs=(
+		--bindir="${EPREFIX}"/sbin
+
+		# --enable-convert is broken
+		# http://thread.gmane.org/gmane.comp.file-systems.btrfs/43873
+		$(usex convert '' --disable-convert)
+	)
+	econf "${myeconfargs[@]}"
 }
 
 src_compile() {
