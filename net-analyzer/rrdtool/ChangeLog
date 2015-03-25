@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.284 2015/03/13 07:38:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.285 2015/03/25 16:10:32 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> rrdtool-1.4.8-r1.ebuild,
+  rrdtool-1.4.8-r3.ebuild, rrdtool-1.4.9.ebuild, rrdtool-1.5.0_rc2.ebuild:
+  Fix tcl/tk slotting
 
 *rrdtool-1.5.0_rc2 (13 Mar 2015)
 

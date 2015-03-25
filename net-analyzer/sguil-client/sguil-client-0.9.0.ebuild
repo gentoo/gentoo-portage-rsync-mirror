@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.9.0.ebuild,v 1.1 2014/07/17 00:04:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/sguil-client-0.9.0.ebuild,v 1.2 2015/03/25 16:07:17 jlec Exp $
 
 EAPI=5
 inherit multilib
@@ -9,14 +9,15 @@ MY_PV="${PV/_p/p}"
 DESCRIPTION="GUI Console for sguil Network Security Monitoring"
 HOMEPAGE="http://sguil.sf.net"
 SRC_URI="https://github.com/bammv/${PN/-client}/archive/v${PV}.tar.gz -> ${P/-client}.tar.gz"
+
 LICENSE="QPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
 
 RDEPEND="
-	>=dev-lang/tcl-8.3[-threads]
-	>=dev-lang/tk-8.3
+	>=dev-lang/tcl-8.3:0=[-threads]
+	>=dev-lang/tk-8.3:0=
 	>=dev-tcltk/itcl-3.2
 	>=dev-tcltk/tclx-8.3
 	dev-tcltk/itk

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/csound
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.35 2015/03/23 15:55:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.36 2015/03/25 16:02:32 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> csound-5.19.01.ebuild,
+  csound-6.02.ebuild, csound-6.03.2.ebuild, csound-6.04.ebuild:
+  Fix tcl/tk slotting
 
   23 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself as maintainer.

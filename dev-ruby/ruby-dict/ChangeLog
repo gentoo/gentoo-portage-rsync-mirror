@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dict
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.19 2014/11/26 02:26:55 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.20 2015/03/25 16:28:09 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-dict-0.9.4-r4.ebuild:
+  Add ruby22.
 
   26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> ruby-dict-0.9.4-r3.ebuild,
   ruby-dict-0.9.4-r4.ebuild:

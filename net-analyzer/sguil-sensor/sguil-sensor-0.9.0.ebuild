@@ -1,8 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.9.0.ebuild,v 1.1 2014/07/16 23:56:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/sguil-sensor-0.9.0.ebuild,v 1.2 2015/03/25 16:11:59 jlec Exp $
 
 EAPI=5
+
 inherit user
 
 MY_PV="${PV/_p/p}"
@@ -13,9 +14,10 @@ SRC_URI="https://github.com/bammv/${PN/-sensor}/archive/v${PV}.tar.gz -> ${P/-se
 LICENSE="GPL-2 QPL"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 RDEPEND="
-	>=dev-lang/tcl-8.3[-threads]
+	>=dev-lang/tcl-8.3:0=[-threads]
 	>=dev-tcltk/tclx-8.3
 	>=net-analyzer/barnyard-0.2.0-r1
 	>=net-analyzer/snort-2.4.1-r1

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.9.0.ebuild,v 1.1 2014/07/17 00:00:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.9.0.ebuild,v 1.2 2015/03/25 16:12:18 jlec Exp $
 
 EAPI=5
 
@@ -10,12 +10,14 @@ MY_PV="${PV/_p/p}"
 DESCRIPTION="Daemon for Sguil Network Security Monitoring"
 HOMEPAGE="http://sguil.sourceforge.net"
 SRC_URI="https://github.com/bammv/${PN/-server}/archive/v${PV}.tar.gz -> ${P/-server}.tar.gz"
+
 LICENSE="GPL-2 QPL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ssl"
 
-DEPEND=">=dev-lang/tcl-8.3[-threads]
+DEPEND="
+	>=dev-lang/tcl-8.3:0=[-threads]
 	>=dev-tcltk/tclx-8.3
 	dev-tcltk/tcllib
 	dev-tcltk/mysqltcl

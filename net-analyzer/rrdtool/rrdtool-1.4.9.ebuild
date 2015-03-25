@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.9.ebuild,v 1.4 2014/11/28 21:28:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.9.ebuild,v 1.5 2015/03/25 16:10:32 jlec Exp $
 
 EAPI="5"
 
@@ -19,18 +19,18 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="dbi doc graph lua perl python rrdcgi ruby static-libs tcl tcpd"
 
 CDEPEND="
-	>=dev-libs/glib-2.28.7[static-libs(+)?]
-	>=dev-libs/libxml2-2.7.8[static-libs(+)?]
+	>=dev-libs/glib-2.28.7:2[static-libs(+)?]
+	>=dev-libs/libxml2-2.7.8:2[static-libs(+)?]
 	dbi? ( dev-db/libdbi[static-libs(+)?] )
 	graph? (
-		>=media-libs/libpng-1.5.10[static-libs(+)?]
+		>=media-libs/libpng-1.5.10:0=[static-libs(+)?]
 		>=x11-libs/cairo-1.10.2[svg,static-libs(+)?]
 		>=x11-libs/pango-1.28
 	)
-	lua? ( dev-lang/lua[deprecated] )
+	lua? ( dev-lang/lua:0[deprecated] )
 	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
-	tcl? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl:0= )
 	tcpd? ( sys-apps/tcp-wrappers )
 "
 

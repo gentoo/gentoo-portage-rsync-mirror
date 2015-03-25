@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sguil-sensor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.19 2014/07/16 23:56:11 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-sensor/ChangeLog,v 1.20 2015/03/25 16:11:59 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> sguil-sensor-0.8.0.ebuild,
+  sguil-sensor-0.9.0.ebuild:
+  Fix tcl/tk slotting
 
 *sguil-sensor-0.9.0 (16 Jul 2014)
 
@@ -87,4 +91,3 @@
   08 Oct 2005; Benjamin Smee <strerror@gentoo.org> +files/log_packets.initd,
   +files/sensor_agent.initd, +metadata.xml, +sguil-sensor-0.5.3.ebuild:
   Initial import
-

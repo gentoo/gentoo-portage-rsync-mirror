@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.7.1.ebuild,v 1.6 2014/06/05 10:10:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.7.1.ebuild,v 1.7 2015/03/25 16:14:07 jlec Exp $
 
 EAPI="4"
 
@@ -18,11 +18,21 @@ IUSE="jabber gnutls otr tcl ssl"
 # for ssl we fall back on gnutls instead of openssl.
 REQUIRED_USE="jabber? ( ssl gnutls )"
 
-RDEPEND="jabber? ( || ( >=dev-libs/iksemel-1.4[ssl] >=dev-libs/iksemel-1.3[gnutls] ) )
-	ssl? ( gnutls? ( >=net-libs/gnutls-0.8.10
-					dev-libs/libgcrypt:0 )
-			!gnutls? ( dev-libs/openssl ) )
-	tcl? ( dev-lang/tcl )
+RDEPEND="
+	jabber? (
+		|| (
+			>=dev-libs/iksemel-1.4[ssl]
+			>=dev-libs/iksemel-1.3[gnutls]
+			)
+		)
+	ssl? (
+		gnutls? (
+			>=net-libs/gnutls-0.8.10
+			dev-libs/libgcrypt:0
+			)
+		!gnutls? ( dev-libs/openssl )
+	)
+	tcl? ( dev-lang/tcl:0 )
 	otr? ( <net-libs/libotr-4 )"
 DEPEND="${RDEPEND}
 	ssl? ( gnutls? ( virtual/pkgconfig ) )"

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unrtf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.49 2015/03/14 13:32:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.50 2015/03/25 16:06:39 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> unrtf-0.21.9.ebuild:
+  Stable for ia64, wrt bug #531544
 
   14 Mar 2015; Markus Meier <maekke@gentoo.org> unrtf-0.21.9.ebuild:
   arm stable, bug #531544

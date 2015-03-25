@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r3.ebuild,v 1.7 2012/03/01 23:32:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r3.ebuild,v 1.8 2015/03/25 16:04:36 jlec Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="tcl"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="net-libs/libpcap
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl:0 )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

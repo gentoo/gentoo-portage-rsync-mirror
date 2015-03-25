@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.3.0-r1.ebuild,v 1.2 2014/12/12 23:23:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.3.1.ebuild,v 1.1 2015/03/25 16:20:41 prometheanfire Exp $
 
 EAPI=5
 
@@ -76,9 +76,15 @@ src_configure() {
 src_compile() {
 	default
 
-	use monitor && python_fix_shebang \
-		utilities/ovs-{pcap,tcpundump,test,vlan-test} \
-		utilities/bugtool/ovs-bugtool
+#	use monitor && python_fix_shebang \
+#		utilities/ovs-{pcap,tcpundump,test,vlan-test} \
+#		utilities/bugtool/ovs-bugtool
+	if use monitor; then
+		sed -i \
+			's/^#\!\ python2\.7/#\!\/usr\/bin\/env\ python2\.7/' \
+			utilities/ovs-{pcap,parse-backtrace,dpctl-top,l3ping,tcpundump,test,vlan-test} \
+			utilities/bugtool/ovs-bugtool || die "sed died :("
+	fi
 
 	use modules && linux-mod_src_compile
 }

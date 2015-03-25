@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/barnyard
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.30 2014/12/28 16:01:11 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.31 2015/03/25 16:04:09 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> barnyard-0.2.0-r3.ebuild:
+  Fix tcl/tk slotting
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   barnyard-0.2.0-r3.ebuild:
@@ -129,4 +132,3 @@
   09 Aug 2003; <solar@gentoo.org> barnyard-0.1.0.ebuild, metadata.xml,
   files/barnyard.confd, files/barnyard.rc6:
   Initial import of barnyard to portage
-

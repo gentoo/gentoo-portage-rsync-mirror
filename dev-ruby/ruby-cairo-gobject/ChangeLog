@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-cairo-gobject
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-cairo-gobject/ChangeLog,v 1.7 2014/12/05 15:20:49 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-cairo-gobject/ChangeLog,v 1.8 2015/03/25 16:26:49 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org>
+  ruby-cairo-gobject-2.2.3.ebuild:
+  Add ruby22.
 
 *ruby-cairo-gobject-2.2.3 (05 Dec 2014)
 
