@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9879 2015/03/24 03:35:48 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9880 2015/03/25 07:45:14 bircoph Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> package.mask:
+  sys-power/nvclock is maintained again, removing mask: #537926.
 
   24 Mar 2015; Ian Delaney <idella4@gentoo.org> package.mask:
   Entry for net-irc/{supybot-plugins,supybot} masked for removal

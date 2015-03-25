@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.453 2015/02/25 10:14:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.454 2015/03/25 08:00:31 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> mit-krb5-1.13-r1.ebuild,
+  mit-krb5-1.13.1.ebuild:
+  Fix tcl/tk slotting
 
   25 Feb 2015; Eray Aslan <eras@gentoo.org> -mit-krb5-1.13.ebuild:
   Remove old
