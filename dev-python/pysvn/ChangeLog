@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.45 2015/01/14 05:37:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.46 2015/03/25 10:50:56 idella4 Exp $
+
+*pysvn-1.7.10 (25 Mar 2015)
+
+  25 Mar 2015; Ian Delaney <idella4@gentoo.org>
+  +files/pysvn-1.7.10-respect_flags.patch, +pysvn-1.7.10.ebuild:
+  bump; re-based patch for new version
 
   14 Jan 2015; Ian Delaney <idella4@gentoo.org>
   -files/pysvn-1.7.6-respect_flags.patch,
