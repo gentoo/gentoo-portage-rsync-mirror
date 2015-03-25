@@ -4,11 +4,11 @@ DESCRIPTION=TLS OpenSSL extension to Tcl
 EAPI=5
 HOMEPAGE=http://tls.sourceforge.net/
 IUSE=tk
-KEYWORDS=~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=BSD
 RDEPEND=dev-lang/tcl:0= dev-libs/openssl:0= tk? ( dev-lang/tk:0= )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/tls/tls1.6-src.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=3483b80165dd8f91145623c6f20d8064
+_md5_=cd4de09ba20279cea4f1b9bf1ca28fe8

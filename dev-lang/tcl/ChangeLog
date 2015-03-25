@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.210 2015/03/20 06:25:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.211 2015/03/25 14:09:52 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.17.ebuild:
+  Stable for x86, wrt bug #543022
 
   20 Mar 2015; Jeroen Roovers <jer@gentoo.org> tcl-8.5.17.ebuild:
   Stable for HPPA (bug #543022).

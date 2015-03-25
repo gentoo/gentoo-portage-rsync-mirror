@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mktwpol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/ChangeLog,v 1.16 2015/03/24 17:24:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/ChangeLog,v 1.17 2015/03/25 14:03:44 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mktwpol-0.2.5.ebuild:
+  Stable for x86, wrt bug #542788
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mktwpol-0.2.5.ebuild:
   Stable for amd64, wrt bug #542788

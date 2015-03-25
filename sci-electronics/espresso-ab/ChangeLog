@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/espresso-ab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/espresso-ab/ChangeLog,v 1.7 2015/03/24 17:23:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/espresso-ab/ChangeLog,v 1.8 2015/03/25 14:08:18 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> espresso-ab-1.0-r1.ebuild:
+  Stable for x86, wrt bug #543142
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> espresso-ab-1.0-r1.ebuild:
   Stable for amd64, wrt bug #543142

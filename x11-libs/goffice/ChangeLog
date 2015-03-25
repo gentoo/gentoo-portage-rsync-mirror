@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.170 2015/03/25 02:25:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.171 2015/03/25 14:06:13 tetromino Exp $
+
+  25 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  goffice-0.10.18.ebuild:
+  Missing deps (same change as in 0.10.21)
 
   25 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   goffice-0.10.20.ebuild, goffice-0.10.21.ebuild:

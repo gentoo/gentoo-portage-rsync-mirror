@@ -3,10 +3,10 @@ DEPEND=>=sys-libs/ncurses-5.3-r2 dev-libs/confuse dev-libs/libnl:3 virtual/pkgco
 DESCRIPTION=interface bandwidth monitor
 EAPI=5
 HOMEPAGE=http://www.infradead.org/~tgr/bmon/
-KEYWORDS=amd64 ~hppa ~ppc ~sparc ~x86
+KEYWORDS=amd64 ~hppa ~ppc ~sparc x86
 LICENSE=BSD-2 MIT
 RDEPEND=>=sys-libs/ncurses-5.3-r2 dev-libs/confuse dev-libs/libnl:3
 SLOT=0
 SRC_URI=https://codeload.github.com/tgraf/bmon/tar.gz/v3.6 -> bmon-3.6.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=4353b9ed1f6f058bd78f19d22ca3dc0b
+_md5_=0c4bf025de4e9e1d9357be12e36020dd

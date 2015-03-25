@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.37 2015/03/24 17:22:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.38 2015/03/25 14:10:59 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tls-1.6-r3.ebuild:
+  Stable for x86, wrt bug #543898
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tls-1.6-r3.ebuild:
   Stable for amd64, wrt bug #543898

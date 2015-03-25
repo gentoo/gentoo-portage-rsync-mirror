@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.10.2-r1.ebuild,v 1.2 2015/03/24 17:24:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.10.2-r1.ebuild,v 1.3 2015/03/25 14:01:52 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/sys4/${PN}/archive/v${PV}.tar.gz -> automx-${PV}.tgz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ldap memcached sql +tools"
 
 DEPEND="

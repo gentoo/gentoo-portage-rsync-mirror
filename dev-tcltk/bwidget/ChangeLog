@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.33 2015/03/17 05:32:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.34 2015/03/25 14:09:26 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> bwidget-1.9.7.ebuild:
+  Stable for x86, wrt bug #542428
 
   17 Mar 2015; Jeroen Roovers <jer@gentoo.org> bwidget-1.9.7.ebuild:
   Stable for HPPA (bug #542428).

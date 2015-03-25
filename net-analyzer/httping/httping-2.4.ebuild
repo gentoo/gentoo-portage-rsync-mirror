@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-2.4.ebuild,v 1.3 2015/03/12 10:35:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-2.4.ebuild,v 1.4 2015/03/25 14:02:28 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.vanheusden.com/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 hppa ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="debug fftw linguas_nl ncurses ssl tfo"
 
 RDEPEND="

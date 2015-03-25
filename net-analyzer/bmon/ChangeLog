@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.61 2015/03/24 17:27:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.62 2015/03/25 14:03:02 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> bmon-3.6-r1.ebuild:
+  Stable for x86, wrt bug #543478
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> bmon-3.6-r1.ebuild:
   Stable for amd64, wrt bug #543478
