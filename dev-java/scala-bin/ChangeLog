@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/scala-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.23 2015/03/25 13:54:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.24 2015/03/25 15:51:03 monsieurp Exp $
+
+  25 Mar 2015; Patrice Clement <monsieurp@gentoo.org> -scala-bin-1.2.0.1.ebuild:
+  Remove old (scala-1.2) after scala-2.11.4 has been stabled.
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> scala-bin-2.11.4.ebuild:
   Stable for x86, wrt bug #544302

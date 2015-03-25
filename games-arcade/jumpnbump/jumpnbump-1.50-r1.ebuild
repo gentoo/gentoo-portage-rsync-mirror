@@ -1,13 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.16 2015/01/04 15:40:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.17 2015/03/25 15:32:08 jlec Exp $
 
 EAPI=5
+
 inherit autotools eutils games
 
 DESCRIPTION="a funny multiplayer game about cute little fluffy bunnies"
 HOMEPAGE="http://www.jumpbump.mine.nu/"
-SRC_URI="http://www.jumpbump.mine.nu/port/${P}.tar.gz
+SRC_URI="
+	http://www.jumpbump.mine.nu/port/${P}.tar.gz
 	mirror://gentoo/${P}-autotool.patch.bz2"
 
 LICENSE="GPL-2"
@@ -15,16 +17,19 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="X fbcon kde svga tk +music"
 
-DEPEND="X? ( x11-libs/libXext )
-	kde? ( kde-base/kdialog )
+DEPEND="
 	media-libs/sdl-mixer
-	music? ( media-libs/sdl-mixer[mod] )
 	media-libs/libsdl[sound,joystick,video]
-	media-libs/sdl-net"
+	media-libs/sdl-net
+	X? ( x11-libs/libXext )
+	kde? ( kde-base/kdialog )
+	music? ( media-libs/sdl-mixer[mod] )
+"
 RDEPEND="${DEPEND}
 	tk? (
-		dev-lang/tcl
-		dev-lang/tk )"
+		dev-lang/tcl:0=
+		dev-lang/tk:0=
+	)"
 
 src_prepare() {
 	epatch ../${P}-autotool.patch

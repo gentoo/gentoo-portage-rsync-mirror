@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattleai/xbattleai-1.2.2-r1.ebuild,v 1.3 2009/10/25 15:26:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattleai/xbattleai-1.2.2-r1.ebuild,v 1.4 2015/03/25 15:37:19 jlec Exp $
 
 EAPI=2
+
 inherit eutils games
 
 DESCRIPTION="A multi-player game of strategy and coordination"
@@ -16,10 +17,11 @@ IUSE=""
 
 # Since this uses similar code and the same binary name as the original XBattle,
 # we want to make sure you can't install both at the same time
-RDEPEND="x11-libs/libXext
+RDEPEND="
+	x11-libs/libXext
 	x11-libs/libX11
-	dev-lang/tcl
-	dev-lang/tk
+	dev-lang/tcl:0
+	dev-lang/tk:0
 	!games-strategy/xbattle"
 DEPEND="${RDEPEND}
 	x11-proto/xproto

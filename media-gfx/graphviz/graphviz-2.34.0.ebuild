@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.34.0.ebuild,v 1.3 2014/10/19 21:21:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.34.0.ebuild,v 1.4 2015/03/25 15:42:04 jlec Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ RDEPEND="
 	)
 	ruby?	( dev-lang/ruby )
 	svg?	( gnome-base/librsvg )
-	tcl?	( >=dev-lang/tcl-8.3 )"
+	tcl?	( >=dev-lang/tcl-8.3:0= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/flex

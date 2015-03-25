@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/gracer
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.22 2011/09/14 12:37:51 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.23 2015/03/25 15:38:03 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> gracer-0.1.5.ebuild:
+  Fix tcl/tk slotting
 
   14 Sep 2011; Tupone Alfredo <tupone@gentoo.org> gracer-0.1.5.ebuild,
   +files/gracer-0.1.5-png15.patch:

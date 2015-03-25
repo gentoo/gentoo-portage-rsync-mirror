@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.15.3-r1.ebuild,v 1.3 2015/03/25 14:11:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.15.3-r1.ebuild,v 1.4 2015/03/25 15:58:23 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	=virtual/libusb-0*
 	dev-libs/libxml2
 	python? ( ${PYTHON_DEPS} )
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl:0= )"
 
 DEPEND=" ${RDEPEND}
 	virtual/pkgconfig

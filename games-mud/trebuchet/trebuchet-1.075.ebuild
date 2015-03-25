@@ -1,8 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/trebuchet-1.075.ebuild,v 1.4 2015/01/04 02:33:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/trebuchet/trebuchet-1.075.ebuild,v 1.5 2015/03/25 15:34:21 jlec Exp $
 
 EAPI=5
+
 inherit games
 
 DESCRIPTION="A crossplatform TCL/TK based MUD client"
@@ -15,8 +16,9 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 RESTRICT="test"
 
-RDEPEND=">=dev-lang/tk-8.3.3
-	dev-lang/tcl"
+RDEPEND="
+	>=dev-lang/tk-8.3.3:0=
+	dev-lang/tcl:0="
 
 src_prepare() {
 	sed -i \

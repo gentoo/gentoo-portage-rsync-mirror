@@ -1,8 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.9.1.ebuild,v 1.7 2015/01/18 11:32:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.9.1.ebuild,v 1.8 2015/03/25 15:33:09 jlec Exp $
 
 EAPI=5
+
 inherit eutils games
 
 DESCRIPTION="MSX emulator that aims for perfection"
@@ -14,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE=""
 
-DEPEND="dev-lang/tcl
+DEPEND="
+	dev-lang/tcl:0=
 	dev-libs/libxml2
 	media-libs/libpng:0
 	media-libs/libsdl[sound,video]

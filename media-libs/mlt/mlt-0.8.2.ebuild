@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.2.ebuild,v 1.8 2015/01/29 17:51:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.8.2.ebuild,v 1.9 2015/03/25 15:58:52 jlec Exp $
 
 EAPI=4
 PYTHON_DEPEND="python? 2:2.6"
@@ -43,7 +43,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[vdpau?] )
 #	java? ( >=virtual/jre-1.5 )
 #	perl? ( dev-lang/perl )
 #	php? ( dev-lang/php )
-#	tcl? ( dev-lang/tcl )
+#	tcl? ( dev-lang/tcl:0 )
 
 SWIG_DEPEND=">=dev-lang/swig-2.0"
 DEPEND="${RDEPEND}

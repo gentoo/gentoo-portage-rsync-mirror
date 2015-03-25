@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.114 2015/02/27 22:24:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.115 2015/03/25 15:58:52 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> mlt-0.8.2.ebuild,
+  mlt-0.8.8.ebuild, mlt-0.9.0.ebuild:
+  Fix tcl/tk slotting
 
   27 Feb 2015; Michał Górny <mgorny@gentoo.org> mlt-0.9.0.ebuild:
   Use USE=libav to control ffmpeg/libav linking. Patch provided by Nikoli in

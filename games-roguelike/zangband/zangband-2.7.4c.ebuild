@@ -1,8 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.13 2015/02/24 09:34:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.14 2015/03/25 15:34:48 jlec Exp $
 
 EAPI=5
+
 inherit autotools eutils games
 
 DESCRIPTION="An enhanced version of the Roguelike game Angband"
@@ -14,9 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="tk"
 
-RDEPEND="tk? (
-		dev-lang/tcl
-		dev-lang/tk )
+RDEPEND="
+	tk? (
+		dev-lang/tcl:0=
+		dev-lang/tk:0=
+		)
 	x11-libs/libXaw"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto"
