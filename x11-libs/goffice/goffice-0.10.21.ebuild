@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.21.ebuild,v 1.5 2015/03/15 13:33:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.10.21.ebuild,v 1.6 2015/03/25 02:25:20 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,6 +36,10 @@ RDEPEND="
 		>=gnome-extra/libgsf-1.14.23:= )
 "
 DEPEND="${RDEPEND}
+	dev-lang/perl
+	virtual/perl-Getopt-Long
+	virtual/perl-IO-Compress
+	virtual/perl-Compress-Raw-Zlib
 	>=dev-util/gtk-doc-am-1.12
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
