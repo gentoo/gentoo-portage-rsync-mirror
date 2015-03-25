@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/mastergear-bin-2.0.ebuild,v 1.5 2014/04/19 11:10:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/mastergear-bin-2.0.ebuild,v 1.6 2015/03/24 23:08:22 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="SEGA Master System / Game Gear emulator"
@@ -20,7 +21,7 @@ RDEPEND="x11-libs/libXext
 S=${WORKDIR}
 
 src_install() {
-	dogamesbin mg || die "dogamesbin failed"
+	dogamesbin mg
 	insinto /usr/share/doc/${PF}
 	doins CART.ROM SF7000.ROM
 	dohtml MG.html

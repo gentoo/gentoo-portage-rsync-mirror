@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.30-r1.ebuild,v 1.3 2014/10/18 13:55:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.33.1.ebuild,v 1.1 2015/03/24 23:28:08 polynomial-c Exp $
 
 EAPI="4"
 
@@ -26,10 +26,9 @@ SRC_URI="${SRC_URI}
 	amd64? ( ${MOZ_FTP_URI}/${MOZ_PV}/contrib/${MOZ_P}.en-US.linux-x86_64.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
 	x86? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-i686/en-US/${MOZ_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.seamonkey-project.org/"
-RESTRICT="strip mirror binchecks"
-QA_EXECSTACK="opt/seamonkey/*"
+RESTRICT="strip mirror"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"
@@ -56,6 +55,18 @@ RDEPEND="dev-libs/atk
 	x11-libs/libXt
 	>=x11-libs/pango-1.22.0
 	virtual/freedesktop-icon-theme
+"
+
+QA_PREBUILT="
+	opt/${MOZ_PN}/*.so
+	opt/${MOZ_PN}/${MOZ_PN}
+	opt/${MOZ_PN}/${PN}
+	opt/${MOZ_PN}/components/*.so
+	opt/${MOZ_PN}/crashreporter
+	opt/${MOZ_PN}/webapprt-stub
+	opt/${MOZ_PN}/plugin-container
+	opt/${MOZ_PN}/mozilla-xremote-client
+	opt/${MOZ_PN}/updater
 "
 
 S="${WORKDIR}/${MOZ_PN}"

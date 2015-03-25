@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mastergear-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/ChangeLog,v 1.7 2014/04/19 11:10:22 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mastergear-bin/ChangeLog,v 1.8 2015/03/24 23:08:22 mr_bones_ Exp $
+
+  24 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  mastergear-bin-2.0.ebuild:
+  EAPI=5
 
   19 Apr 2014; Ulrich Müller <ulm@gentoo.org> mastergear-bin-2.0.ebuild:
   Fix LICENSE, add mirror and bindist restrictions, bug 505626.
@@ -28,4 +32,3 @@
   27 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +mastergear-bin-2.0.ebuild:
   initial commit - ebuild provided by Jesús Pérez via bug #89103
-
