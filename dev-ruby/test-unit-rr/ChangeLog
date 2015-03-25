@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit-rr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.36 2014/11/18 11:50:58 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.37 2015/03/25 20:58:31 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> test-unit-rr-1.0.3-r1.ebuild:
+  Add ruby22.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -test-unit-rr-1.0.2.ebuild:
   Cleanup old.

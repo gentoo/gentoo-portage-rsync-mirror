@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/termcolor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/ChangeLog,v 1.8 2014/05/04 06:55:26 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/ChangeLog,v 1.9 2015/03/25 20:55:52 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> termcolor-1.2.2.ebuild:
+  Add ruby22.
 
 *termcolor-1.2.2 (04 May 2014)
 

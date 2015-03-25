@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/simplecov-html
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov-html/ChangeLog,v 1.5 2014/08/05 16:00:31 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov-html/ChangeLog,v 1.6 2015/03/25 20:35:21 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> simplecov-html-0.8.0.ebuild:
+  Add ruby22.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> simplecov-html-0.7.1.ebuild,
   simplecov-html-0.8.0.ebuild:

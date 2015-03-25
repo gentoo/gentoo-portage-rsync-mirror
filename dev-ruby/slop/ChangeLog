@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/slop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.32 2014/12/29 06:52:00 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.33 2015/03/25 20:37:41 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> slop-3.6.0.ebuild:
+  Add ruby22.
 
   29 Dec 2014; Hans de Graaff <graaff@gentoo.org> -slop-3.5.0.ebuild,
   -slop-3.5.0-r1.ebuild:
