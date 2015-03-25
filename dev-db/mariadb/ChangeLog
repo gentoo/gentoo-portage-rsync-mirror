@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.100 2015/03/03 06:08:08 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.101 2015/03/25 18:22:33 grknight Exp $
+
+  25 Mar 2015; Brian Evans <grknight@gentoo.org> mariadb-10.0.17.ebuild:
+  Add additional ~arm64 keyword to latest version
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> mariadb-10.0.16.ebuild:
   add arm64 support, tested on A53 board
