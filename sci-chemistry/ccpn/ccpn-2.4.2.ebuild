@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.4.2.ebuild,v 1.1 2015/03/11 15:23:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.4.2.ebuild,v 1.2 2015/03/25 12:17:39 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	dev-lang/tk[threads]
+	dev-lang/tk:0=[threads]
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-tcltk/tix
 	=sci-libs/ccpn-data-"${MY_MAJOR}"*[${PYTHON_USEDEP}]
@@ -38,7 +38,8 @@ RDEPEND="
 	x11-libs/libX11
 	opengl? (
 		media-libs/freeglut
-		dev-python/pyglet[${PYTHON_USEDEP}] )"
+		dev-python/pyglet[${PYTHON_USEDEP}]
+		)"
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror"

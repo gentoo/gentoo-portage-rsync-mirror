@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.6.ebuild,v 1.10 2015/03/20 09:58:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.6.ebuild,v 1.11 2015/03/25 12:19:13 jlec Exp $
 
 EAPI="5"
 
@@ -26,7 +26,7 @@ IUSE="debug doc icu +readline secure-delete static-libs tcl test"
 
 RDEPEND="icu? ( dev-libs/icu:=[${MULTILIB_USEDEP}] )
 	readline? ( sys-libs/readline:0=[${MULTILIB_USEDEP}] )
-	tcl? ( dev-lang/tcl:=[${MULTILIB_USEDEP}] )
+	tcl? ( dev-lang/tcl:0=[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
 		!<=app-emulation/emul-linux-x86-baselibs-20131008-r14
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
