@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pychroot
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychroot/ChangeLog,v 1.1 2015/03/25 04:20:16 radhermit Exp $
+
+*pychroot-9999 (25 Mar 2015)
+*pychroot-0.9.7 (25 Mar 2015)
+
+  25 Mar 2015; Tim Harder <radhermit@gentoo.org> +pychroot-0.9.7.ebuild,
+  +pychroot-9999.ebuild, +metadata.xml:
+  Initial import.
+
