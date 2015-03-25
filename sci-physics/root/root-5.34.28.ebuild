@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.26.ebuild,v 1.3 2015/03/25 21:32:36 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.28.ebuild,v 1.1 2015/03/25 21:38:59 bircoph Exp $
 
 EAPI=5
 
@@ -193,7 +193,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.32.00-dotfont.patch \
 		"${FILESDIR}"/${PN}-5.34.05-nobyte-compile.patch \
 		"${FILESDIR}"/${PN}-5.34.13-unuran.patch \
-		"${FILESDIR}"/${PN}-5.34.13-desktop.patch \
 		"${FILESDIR}"/${PN}-5.34.26-ldflags.patch
 
 	# make sure we use system libs and headers

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/re2c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.88 2015/02/28 13:56:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/re2c/ChangeLog,v 1.89 2015/03/25 21:34:59 slyfox Exp $
+
+*re2c-0.14.2 (25 Mar 2015)
+
+  25 Mar 2015; Sergei Trofimovich <slyfox@gentoo.org> +re2c-0.14.2.ebuild:
+  Version bump.
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> re2c-0.13.7.5.ebuild:
   Stable for ia64, wrt bug #535406
