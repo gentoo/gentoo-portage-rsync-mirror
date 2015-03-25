@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/alsa-firmware
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/ChangeLog,v 1.12 2014/11/08 18:54:43 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/alsa-firmware/ChangeLog,v 1.13 2015/03/25 11:55:21 chainsaw Exp $
+
+*alsa-firmware-1.0.29 (25 Mar 2015)
+
+  25 Mar 2015; Tony Vroon <chainsaw@gentoo.org> +alsa-firmware-1.0.29.ebuild:
+  Version bump, as requested by Manuel Rüger in bug #541798.
 
   08 Nov 2014; Samuli Suominen <ssuominen@gentoo.org>
   -alsa-firmware-1.0.27.ebuild:

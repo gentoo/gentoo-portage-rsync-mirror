@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/alsa-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.205 2014/11/23 14:57:52 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.206 2015/03/25 11:41:10 chainsaw Exp $
+
+*alsa-plugins-1.0.29 (25 Mar 2015)
+
+  25 Mar 2015; Tony Vroon <chainsaw@gentoo.org> +alsa-plugins-1.0.29.ebuild:
+  Version bump, as requested by Manuel Rüger in bug #541798.
 
   23 Nov 2014; Agostino Sarubbo <ago@gentoo.org> alsa-plugins-1.0.28.ebuild:
   Stable for sparc, wrt bug #522038

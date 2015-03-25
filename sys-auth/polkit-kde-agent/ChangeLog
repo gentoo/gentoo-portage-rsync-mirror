@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/polkit-kde-agent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.22 2015/03/24 17:26:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.23 2015/03/25 11:31:28 kensington Exp $
+
+  25 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  polkit-kde-agent-0.99.0-r1.ebuild, polkit-kde-agent-0.99.1-r1.ebuild,
+  polkit-kde-agent-0.99.1.ebuild:
+  Enforce sys-auth/polkit-qt USE dependency wrt bug #544412.
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
   polkit-kde-agent-0.99.1-r1.ebuild:
