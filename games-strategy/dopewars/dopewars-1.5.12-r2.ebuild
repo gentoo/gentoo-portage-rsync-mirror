@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r2.ebuild,v 1.7 2012/05/04 04:51:08 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12-r2.ebuild,v 1.8 2015/03/25 15:19:31 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="Re-Write of the game Drug Wars"
@@ -32,8 +32,7 @@ src_prepare() {
 		-e "/priv_hiscore/ s:DPDATADIR:\"${GAMES_STATEDIR}\":" \
 		-e "/\/doc\// s:DPDATADIR:\"/usr/share\":" \
 		-e 's:index.html:html/index.html:' \
-		src/dopewars.c \
-		|| die "sed failed"
+		src/dopewars.c || die
 }
 
 src_configure() {
@@ -55,15 +54,17 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	default
 
 	dodir /usr/share
-	cd "${D}/${GAMES_DATADIR}"
-	use gnome && mv gnome "${D}/usr/share" || rm -rf gnome
-	mv pixmaps "${D}/usr/share"
-	dohtml -r doc/*/*
-	rm -rf doc
+	if use gnome ; then
+		mv "${D}/${GAMES_DATADIR}"/gnome "${D}/usr/share" || die
+	else
+		rm -r "${D}/${GAMES_DATADIR}"/gnome || die
+	fi
+	mv "${D}/${GAMES_DATADIR}"/pixmaps "${D}/usr/share" || die
+	dohtml -r "${D}/${GAMES_DATADIR}"/doc/*/*
+	rm -r "${D}/${GAMES_DATADIR}"/doc || die
 
 	prepgamesdirs
 }

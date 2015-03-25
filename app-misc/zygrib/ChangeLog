@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/zygrib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.6 2014/09/11 11:21:28 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.8 2015/03/25 15:05:32 mschiff Exp $
+
+  25 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> zygrib-7.0.0.ebuild:
+  mask until fixed :-/
+
+*zygrib-7.0.0 (25 Mar 2015)
+
+  25 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> +zygrib-7.0.0.ebuild:
+  Version bump
 
   11 Sep 2014; Michael Palimaka <kensington@gentoo.org> zygrib-6.2.3.ebuild:
   Pin dev-qt/qtsvg to SLOT 4.

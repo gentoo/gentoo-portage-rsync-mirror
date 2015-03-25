@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.25 2015/02/27 01:35:42 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.26 2015/03/25 15:30:01 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> fossil-20150119112900.ebuild:
+  Fix tcl/tk slotting
 
   27 Feb 2015; Rafael G. Martins <rafaelmartins@gentoo.org>
   -fossil-20130911114349.ebuild, -fossil-20140612172556.ebuild:
