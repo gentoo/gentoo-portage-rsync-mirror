@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/nvclock
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.19 2014/03/22 18:05:34 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.20 2015/03/25 02:49:33 bircoph Exp $
+
+  25 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
+  Take an orphaned package.
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -files/nvclock-0.8_beta4-as-needed.patch,

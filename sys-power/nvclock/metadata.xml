@@ -2,10 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>maintainer-needed@gentoo.org</email>
+	<email>bircoph@gentoo.org</email>
+	<name>Andrew Savchenko</name>
 </maintainer>
 <use>
-<flag name="gtk">Install the GTK+ based graphical interface</flag>
-<flag name="nvcontrol">Add NVCONTROL support for OpenGL options</flag>
+	<flag name="gtk">Install the GTK+ based graphical interface</flag>
+	<flag name="nvcontrol">Add NVCONTROL support for OpenGL options</flag>
 </use>
 </pkgmetadata>
