@@ -1,5 +1,5 @@
---- rw_aa.c.old	2008-03-18 23:29:28.000000000 +0100
-+++ rw_aa.c	2008-03-18 23:29:44.000000000 +0100
+--- rw_aa.c.old
++++ rw_aa.c
 @@ -61,7 +61,7 @@
  #include <signal.h>
  #include <sys/mman.h>
@@ -9,8 +9,8 @@
  
  #include <aalib.h>
  
---- rw_in_aa.c.old	2008-03-18 23:29:33.000000000 +0100
-+++ rw_in_aa.c	2008-03-18 23:29:54.000000000 +0100
+--- rw_in_aa.c.old
++++ rw_in_aa.c
 @@ -46,7 +46,7 @@
  #include <signal.h>
  #include <sys/mman.h>

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.13 2010/10/13 21:23:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/aaquake2-0.1.ebuild,v 1.14 2015/03/25 17:23:51 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="text mode Quake II"
@@ -22,43 +22,42 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/quake2-3.21/linux
 
 src_prepare() {
-	epatch \
+	cd .. && epatch \
 		"${FILESDIR}"/${PV}-gentoo.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
+	cd "${S}" && epatch \
 		"${FILESDIR}"/${P}-glibc.patch \
-		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
-		-e "s:GENTOO_DIR:$(games_get_libdir)/${PN}:" sys_linux.c \
-		|| die "sed failed"
+		-e "s:GENTOO_DIR:$(games_get_libdir)/${PN}:" sys_linux.c || die
 	sed -i \
 		-e "s:/etc/quake2.conf:${GAMES_SYSCONFDIR}/${PN}.conf:" \
-		sys_linux.c vid_so.c \
-		|| die "sed failed"
+		sys_linux.c vid_so.c || die
 }
 
 src_compile() {
 	mkdir -p releasei386-glibc/ref_soft
-	make \
+	emake -j1 \
 		GENTOO_CFLAGS="${CFLAGS}" \
 		GENTOO_DATADIR="${GAMES_DATADIR}"/quake2/baseq2/ \
-		build_release || die
+		build_release
 }
 
 src_install() {
-	cd release*
+	cd release* || die
 
 	exeinto "$(games_get_libdir)"/${PN}
-	doexe gamei386.so ref_softaa.so || die "doexe failed"
+	doexe gamei386.so ref_softaa.so
 	dosym ref_softaa.so "$(games_get_libdir)"/${PN}/ref_softx.so
 	dosym ref_softaa.so "$(games_get_libdir)"/${PN}/ref_soft.so
 	exeinto "$(games_get_libdir)"/${PN}/ctf
-	doexe ctf/gamei386.so || die "doexe failed"
+	doexe ctf/gamei386.so
 
-	newgamesbin quake2 aaquake2 || die "newgamesbin failed"
+	newgamesbin quake2 aaquake2
 
 	insinto "${GAMES_SYSCONFDIR}"
 	echo "$(games_get_libdir)"/${PN} > ${PN}.conf
-	doins ${PN}.conf || die "doins failed"
+	doins ${PN}.conf
 
 	prepgamesdirs
 }

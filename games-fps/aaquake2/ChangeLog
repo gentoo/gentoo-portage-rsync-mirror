@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/aaquake2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/ChangeLog,v 1.9 2010/09/21 09:11:01 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/aaquake2/ChangeLog,v 1.10 2015/03/25 17:23:51 mr_bones_ Exp $
+
+  25 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> aaquake2-0.1.ebuild,
+  files/0.1-gentoo.patch, files/aaquake2-0.1-gcc41.patch,
+  files/aaquake2-0.1-glibc.patch, files/aaquake2-0.1-ldflags.patch:
+  EAPI=5; work with newer versions of patch (bug #544480)
 
   21 Sep 2010; Tupone Alfredo <tupone@gentoo.org> files/0.1-gentoo.patch,
   aaquake2-0.1.ebuild, files/aaquake2-0.1-gcc41.patch,

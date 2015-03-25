@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-poppler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.58 2014/12/07 09:59:29 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-poppler/ChangeLog,v 1.59 2015/03/25 17:06:42 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-poppler-2.2.3.ebuild:
+  Add ruby22.
 
 *ruby-poppler-2.2.3 (07 Dec 2014)
 
