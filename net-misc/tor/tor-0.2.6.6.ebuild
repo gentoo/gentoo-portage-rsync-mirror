@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.3_alpha.ebuild,v 1.1 2015/03/08 00:04:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.6.6.ebuild,v 1.1 2015/03/25 00:24:39 blueness Exp $
 
 EAPI="5"
 
@@ -47,6 +47,7 @@ src_configure() {
 	filter-flags -fstrict-aliasing
 
 	econf \
+		--enable-system-torrc \
 		--enable-asciidoc \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable stats instrument-downloads) \

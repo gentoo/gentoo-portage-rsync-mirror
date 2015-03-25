@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.98 2015/03/03 10:02:23 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.99 2015/03/25 00:20:10 floppym Exp $
+
+*btrfs-progs-3.19 (25 Mar 2015)
+
+  25 Mar 2015; Mike Gilbert <floppym@gentoo.org> +btrfs-progs-3.19.ebuild,
+  btrfs-progs-9999.ebuild:
+  Version bump, bug 544392.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> btrfs-progs-3.18.2.ebuild:
   add arm64 support, tested on A53 board
