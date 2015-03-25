@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-7.0.0.ebuild,v 1.2 2015/03/25 15:05:32 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-7.0.0.ebuild,v 1.3 2015/03/25 18:51:22 mschiff Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.zygrib.org/getfile.php?file=${MY_PN}-${PV}.tgz -> ${P}.tgz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+maps"
 
 DEPEND="app-arch/bzip2
@@ -37,6 +37,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	sed -i 's,INSTALLDIR=$(HOME)/zyGrib,INSTALLDIR=$(DESTDIR)/opt/zyGrib,' Makefile
+	sed -i 's,QMAKE=/usr/bin/qmake-qt4,QMAKE=/usr/bin/qmake,' Makefile
 }
 
 src_install() {

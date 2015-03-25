@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/zygrib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.8 2015/03/25 15:05:32 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/ChangeLog,v 1.9 2015/03/25 18:51:22 mschiff Exp $
+
+  25 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> zygrib-7.0.0.ebuild:
+  Fix build and readd keywords
 
   25 Mar 2015; Marc Schiffbauer <mschiff@gentoo.org> zygrib-7.0.0.ebuild:
   mask until fixed :-/
