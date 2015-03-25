@@ -1,6 +1,16 @@
 # ChangeLog for sys-firmware/iwl7260-ucode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7260-ucode/ChangeLog,v 1.8 2015/01/14 12:15:50 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7260-ucode/ChangeLog,v 1.9 2015/03/25 04:01:17 gienah Exp $
+
+*iwl7260-ucode-0.12.16.25 (25 Mar 2015)
+*iwl7260-ucode-0.10.15.23 (25 Mar 2015)
+
+  25 Mar 2015; Mark Wright <gienah@gentoo.org> +iwl7260-ucode-0.10.15.23.ebuild,
+  +iwl7260-ucode-0.12.16.25.ebuild:
+  Bump iwl7260-ucode to 0.10.15.23 (upstream write the version number components
+  reversed) for kernel 3.17+ and 0.12.16.25 for kernel 3.19+. Fixes Bug 540316 -
+  sys-firmware/iwl7260-ucode-0.10.13.23 version bump - thanks to David Flogeras
+  for reporting.
 
 *iwl7260-ucode-0.10.11.23 (14 Jan 2015)
 *iwl7260-ucode-0.7.1.22 (14 Jan 2015)
