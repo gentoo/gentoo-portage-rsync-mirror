@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-xslt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.41 2014/10/11 00:12:14 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.42 2015/03/25 20:15:09 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-xslt-0.9.9-r3.ebuild:
+  Add ruby22.
 
 *ruby-xslt-0.9.9-r3 (11 Oct 2014)
 

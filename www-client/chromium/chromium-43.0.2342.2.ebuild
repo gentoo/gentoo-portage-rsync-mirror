@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2327.5.ebuild,v 1.1 2015/03/12 13:10:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2342.2.ebuild,v 1.1 2015/03/25 20:31:13 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -19,8 +19,8 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bindist cups gnome gnome-keyring hidpi kerberos neon pic pulseaudio selinux +tcmalloc widevine"
-RESTRICT="!bindist? ( bindist )"
+IUSE="cups gnome gnome-keyring hidpi kerberos neon pic proprietary-codecs pulseaudio selinux +tcmalloc widevine"
+RESTRICT="proprietary-codecs? ( bindist )"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -181,12 +181,6 @@ pkg_setup() {
 	python-any-r1_pkg_setup
 
 	chromium_suid_sandbox_check_kernel_config
-
-	if use bindist; then
-		elog "bindist enabled: H.264 video support will be disabled."
-	else
-		elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
-	fi
 }
 
 src_prepare() {
@@ -243,7 +237,7 @@ src_prepare() {
 		'third_party/cros_system_api' \
 		'third_party/cython/python_flags.py' \
 		'third_party/dom_distiller_js' \
-		'third_party/dom_distiller_js/package/proto_gen/third_party/dom_distiller_js' \
+		'third_party/dom_distiller_js/dist/proto_gen/third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
 		'third_party/fips181' \
 		'third_party/flot' \
@@ -416,15 +410,8 @@ src_configure() {
 		-Dlinux_use_bundled_gold=0
 		-Dlinux_use_gold_flags=0"
 
-	# Always support proprietary codecs.
-	myconf+=" -Dproprietary_codecs=1"
-
-	ffmpeg_branding="Chromium"
-	if ! use bindist; then
-		# Enable H.264 support in bundled ffmpeg.
-		ffmpeg_branding="Chrome"
-	fi
-	myconf+=" -Dffmpeg_branding=${ffmpeg_branding}"
+	ffmpeg_branding="$(usex proprietary-codecs Chrome Chromium)"
+	myconf+=" -Dproprietary_codecs=1 -Dffmpeg_branding=${ffmpeg_branding}"
 
 	# Set up Google API keys, see http://www.chromium.org/developers/how-tos/api-keys .
 	# Note: these are for Gentoo use ONLY. For your own distribution,

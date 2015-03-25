@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.84-r1.ebuild,v 1.2 2015/03/25 07:47:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.84-r1.ebuild,v 1.3 2015/03/25 20:25:27 grknight Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils qmake-utils systemd user
@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	xfs? ( sys-fs/xfsprogs )"
 
-REQUIRED_USE="ayatana? ( gtk ) || ( qt4 qt5 )"
+REQUIRED_USE="ayatana? ( gtk ) ?? ( qt4 qt5 )"
 
 DOCS="AUTHORS NEWS qt/README.txt"
 

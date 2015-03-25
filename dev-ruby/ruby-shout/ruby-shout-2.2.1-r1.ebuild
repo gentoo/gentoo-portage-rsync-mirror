@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ruby-shout-2.2.1-r1.ebuild,v 1.3 2014/10/16 19:38:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shout/ruby-shout-2.2.1-r1.ebuild,v 1.4 2015/03/25 20:07:58 graaff Exp $
 
 EAPI=5
 
+# ruby22 -> Does not compile
 USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST=""

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-shadow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.42 2014/12/22 23:49:38 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.43 2015/03/25 20:04:51 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-shadow-2.4.1.ebuild:
+  Add ruby22.
 
   22 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -ruby-shadow-2.1.4.ebuild:
   Remove old.

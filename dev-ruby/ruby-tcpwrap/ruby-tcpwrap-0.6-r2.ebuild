@@ -1,8 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ruby-tcpwrap-0.6-r2.ebuild,v 1.3 2014/10/11 05:36:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ruby-tcpwrap-0.6-r2.ebuild,v 1.4 2015/03/25 20:10:04 graaff Exp $
 
 EAPI=5
+
+# ruby22 -> Does not compile
 USE_RUBY="ruby19 ruby20 ruby21"
 
 inherit ruby-ng
