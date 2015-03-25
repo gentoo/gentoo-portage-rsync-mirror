@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygal/ChangeLog,v 1.8 2015/03/08 23:56:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygal/ChangeLog,v 1.9 2015/03/25 14:57:16 idella4 Exp $
+
+*pygal-1.7.0 (25 Mar 2015)
+
+  25 Mar 2015; Ian Delaney <idella4@gentoo.org> +pygal-1.7.0.ebuild,
+  -pygal-1.1.0.ebuild, -pygal-1.4.5.ebuild:
+  bump; correction to deps, add optional rdep media-gfx/cairosvg hard set in
+  RDEPEND
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> pygal-1.5.1.ebuild:
   x86 stable, bug 540290
