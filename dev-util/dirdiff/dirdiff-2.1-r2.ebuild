@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/dirdiff-2.1-r2.ebuild,v 1.5 2013/06/10 21:45:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/dirdiff-2.1-r2.ebuild,v 1.6 2015/03/25 13:26:08 jlec Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ KEYWORDS="amd64 ~mips ppc x86"
 IUSE=""
 
 DEPEND="
-	dev-lang/tk
-	dev-lang/tcl"
+	dev-lang/tk:0=
+	dev-lang/tcl:0="
 RDEPEND="${DEPEND}"
 
 src_prepare() {

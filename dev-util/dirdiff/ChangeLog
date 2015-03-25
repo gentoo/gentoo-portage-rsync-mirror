@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dirdiff
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.18 2013/06/10 21:45:09 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dirdiff/ChangeLog,v 1.19 2015/03/25 13:26:08 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> dirdiff-2.1-r2.ebuild:
+  Fix tcl/tk slotting
 
   10 Jun 2013; Markos Chandras <hwoarang@gentoo.org> dirdiff-2.1-r2.ebuild:
   Add ~mips

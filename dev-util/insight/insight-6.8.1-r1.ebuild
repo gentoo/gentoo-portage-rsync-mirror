@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1-r1.ebuild,v 1.2 2013/11/03 17:09:14 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1-r1.ebuild,v 1.3 2015/03/25 13:26:47 jlec Exp $
 
 EAPI=4
 
@@ -26,8 +26,8 @@ RDEPEND="
 	x11-libs/libX11
 "
 DEPEND="${RDEPEND}
-	dev-lang/tcl
-	dev-lang/tk
+	dev-lang/tcl:0
+	dev-lang/tk:0
 	dev-tcltk/itcl
 	dev-tcltk/itk
 	sys-devel/bison
