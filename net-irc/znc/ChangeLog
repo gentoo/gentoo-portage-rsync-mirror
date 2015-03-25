@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/znc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.78 2014/11/28 13:47:58 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.79 2015/03/25 16:48:24 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> znc-1.2-r1.ebuild,
+  znc-1.4-r1.ebuild, znc-1.4.ebuild, znc-9999.ebuild:
+  Fix tcl/tk slotting
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> znc-1.4-r1.ebuild,
   znc-9999.ebuild:

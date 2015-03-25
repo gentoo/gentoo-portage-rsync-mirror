@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r3.ebuild,v 1.2 2015/03/20 15:12:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21-r3.ebuild,v 1.3 2015/03/25 16:55:11 jlec Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ RDEPEND="
 	perl? ( dev-lang/perl )
 	php? ( dev-lang/php:= )
 	python? ( ${PYTHON_DEPS} )
-	tcl? ( dev-lang/tcl:= )
+	tcl? ( dev-lang/tcl:0= )
 	usb? ( virtual/libusb:0 )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 

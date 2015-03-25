@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r6.ebuild,v 1.5 2014/12/28 16:41:22 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r6.ebuild,v 1.6 2015/03/25 16:49:40 jlec Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ RDEPEND="
 	postgres?  ( dev-db/postgresql )
 	qt4?       ( dev-qt/qtgui:4[qt3support] )
 	ssl?       ( dev-libs/openssl )
-	tcl?       ( dev-lang/tcl )
+	tcl?       ( dev-lang/tcl:0 )
 	X?         ( x11-libs/libXt )
 "
 DEPEND="${RDEPEND}

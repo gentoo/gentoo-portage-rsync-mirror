@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.13 2015/01/28 22:59:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1-r2.ebuild,v 1.14 2015/03/25 16:48:28 jlec Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="dbus libnotify cpu_flags_x86_mmx nls perl python spell ssl tcl"
 
-RDEPEND=">=dev-libs/glib-2.18:2
+RDEPEND="
+	>=dev-libs/glib-2.18:2
 	>=gnome-base/libgnome-2.16.0
 	>=gnome-base/gconf-2.8.0
 	>=gnome-base/libgnomeui-2.16.0
@@ -30,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 	spell? ( app-text/enchant )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( >=dev-lang/perl-5.6.1 )
-	tcl? ( dev-lang/tcl )
+	tcl? ( dev-lang/tcl:0 )
 	dbus? ( >=sys-apps/dbus-0.60 )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 "

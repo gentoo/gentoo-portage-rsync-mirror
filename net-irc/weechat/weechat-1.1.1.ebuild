@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-1.1.1.ebuild,v 1.1 2015/01/26 20:02:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-1.1.1.ebuild,v 1.2 2015/03/25 16:39:41 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -34,15 +34,15 @@ RDEPEND="
 	sys-libs/ncurses
 	sys-libs/zlib
 	charset? ( virtual/libiconv )
-	guile? ( dev-scheme/guile )
-	lua? ( dev-lang/lua[deprecated] )
+	guile? ( dev-scheme/guile:12 )
+	lua? ( dev-lang/lua:0[deprecated] )
 	nls? ( virtual/libintl )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	ruby? ( >=dev-lang/ruby-1.9 )
 	ssl? ( net-libs/gnutls )
 	spell? ( app-text/aspell )
-	tcl? ( >=dev-lang/tcl-8.4.15 )
+	tcl? ( >=dev-lang/tcl-8.4.15:0= )
 "
 #	ncurses? ( sys-libs/ncurses )
 #	gtk? ( x11-libs/gtk+:2 )

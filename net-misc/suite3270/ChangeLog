@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.63 2015/02/16 10:08:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.64 2015/03/25 16:53:23 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> suite3270-3.3.12_p10.ebuild,
+  suite3270-3.3.12_p12.ebuild, suite3270-3.3.13_p7.ebuild,
+  suite3270-3.3.14_p11.ebuild, suite3270-3.3.14_p6.ebuild,
+  suite3270-3.3.14_p7.ebuild, suite3270-3.3.14_p9.ebuild,
+  suite3270-3.3.15_p4.ebuild, suite3270-3.3.15_p7.ebuild:
+  Fix tcl/tk slotting; bump to EAPI=5
 
 *suite3270-3.3.15_p7 (16 Feb 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/gnetman-0.0.1_pre20060522-r2.ebuild,v 1.3 2012/05/25 07:49:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/gnetman-0.0.1_pre20060522-r2.ebuild,v 1.4 2015/03/25 16:54:29 jlec Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="
-	dev-lang/tk
+	dev-lang/tk:0
 	sci-electronics/geda"
 RDEPEND="${DEPEND}"
 

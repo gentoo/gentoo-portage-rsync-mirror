@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rancid
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/ChangeLog,v 1.7 2013/09/18 03:24:05 creffett Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rancid/ChangeLog,v 1.8 2015/03/25 16:50:52 jlec Exp $
+
+  25 Mar 2015; Justin Lecher <jlec@gentoo.org> rancid-2.3.8.ebuild:
+  Fix tcl/tk slotting; bump to EAPI=5
 
   18 Sep 2013; Chris Reffett <creffett@gentoo.org> metadata.xml:
   Update proxy maintainer's email at his request.

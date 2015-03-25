@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gstreamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.73 2015/02/03 16:54:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.74 2015/03/25 16:57:49 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-gstreamer-2.2.4.ebuild:
+  Add ruby22.
 
 *ruby-gstreamer-2.2.4 (03 Feb 2015)
 
