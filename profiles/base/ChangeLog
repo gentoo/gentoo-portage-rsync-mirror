@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.783 2015/03/24 07:07:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.784 2015/03/25 21:05:40 vapier Exp $
+
+  25 Mar 2015; Mike Frysinger <vapier@gentoo.org> package.use.mask:
+  Revert openssh[hpn] masking #544254.
 
   24 Mar 2015; Patrick Lauer <patrick@gentoo.org> package.use.mask:
   Mask hpn useflag for openssh #544254

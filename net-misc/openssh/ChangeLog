@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.555 2015/03/24 07:07:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.557 2015/03/25 21:06:03 vapier Exp $
+
+*openssh-6.8_p1-r3 (25 Mar 2015)
+
+  25 Mar 2015; Mike Frysinger <vapier@gentoo.org> +openssh-6.8_p1-r3.ebuild:
+  Fix the server logging patch to work on IPv6 & x86 (socketcall) #544254 by
+  Thomas D..
+
+  25 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  files/openssh-6.8_p1-ssh-keygen-no-ssh1.patch:
+  Update to the version merged upstream that also fixes USE=-ssl behavior.
 
   24 Mar 2015; Patrick Lauer <patrick@gentoo.org> openssh-6.8_p1-r1.ebuild,
   openssh-6.8_p1-r2.ebuild:
