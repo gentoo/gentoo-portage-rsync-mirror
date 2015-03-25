@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-29.0.1795.0.ebuild,v 1.1 2015/03/12 08:13:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-30.0.1812.0.ebuild,v 1.1 2015/03/25 05:34:20 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
