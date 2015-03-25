@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.2.ebuild,v 1.1 2015/01/25 13:08:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.2.ebuild,v 1.2 2015/03/25 01:46:06 gienah Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ POLYML_IC_P="${POLYML_IC_PN}-${POLYML_PV}"
 
 DESCRIPTION="Isabelle is a generic proof assistant"
 HOMEPAGE="http://www.cl.cam.ac.uk/research/hvg/Isabelle/index.html"
-SRC_URI="http://isabelle.in.tum.de/dist/${MY_P}.tar.gz
+SRC_URI="http://www.cl.cam.ac.uk/users/lcp/archive/${MY_P}.tar.gz
 		http://isabelle.in.tum.de/components/${JEDIT_P}.tar.gz -> ${JEDIT_IC_P}.tar.gz
 		http://isabelle.in.tum.de/dist/contrib/${JFREECHART_P}.tar.gz -> ${JFREECHART_IC_P}.tar.gz
 		http://dev.gentoo.org/~gienah/snapshots/${POLYML_IC_P}.tar.gz"
@@ -43,7 +43,7 @@ IUSE="doc graphbrowsing ledit readline proofgeneral"
 #upstream says
 #bash 2.x/3.x, Poly/ML 5.x, Perl 5.x,
 #for document preparation: complete LaTeX
-DEPEND=">=app-shells/bash-3.0
+DEPEND=">=app-shells/bash-3.0:*
 	dev-java/ant-core:0
 	>=dev-java/jcommon-1.0.18:1.0
 	>=dev-java/jfreechart-1.0.14:1.0

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1-r2.ebuild,v 1.1 2014/01/07 13:36:33 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1-r2.ebuild,v 1.2 2015/03/25 01:46:06 gienah Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ IUSE="${ALL_LOGICS} doc graphbrowsing ledit readline +proofgeneral test"
 #upstream says
 #bash 2.x/3.x, Poly/ML 5.x, Perl 5.x,
 #for document preparation: complete LaTeX
-DEPEND=">=app-shells/bash-3.0
+DEPEND=">=app-shells/bash-3.0:*
 		>=dev-lang/polyml-5.4.1:=[-portable]
 		>=dev-lang/perl-5.8.8-r2"
 
