@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.410 2015/03/05 19:13:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.411 2015/03/25 03:15:30 tetromino Exp $
+
+*cairo-1.14.2 (25 Mar 2015)
+
+  25 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cairo-1.14.0-r1.ebuild, +cairo-1.14.2.ebuild, cairo-9999.ebuild:
+  Version bump, various bugs fixed. Update live ebuild to git-r3.eclass.
+  Propagate live ebuild flag changes (experimental/broken flags now
+  completely removed from the ebuild). Drop old.
 
   05 Mar 2015; Jeroen Roovers <jer@gentoo.org> cairo-1.12.18-r1.ebuild:
   Stable for HPPA (bug #540676).

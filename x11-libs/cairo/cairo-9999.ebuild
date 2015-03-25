@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.58 2015/02/23 05:44:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.59 2015/03/25 03:15:30 tetromino Exp $
 
 EAPI=5
 
 inherit eutils flag-o-matic autotools multilib-minimal
 
 if [[ ${PV} == *9999* ]]; then
-	inherit git-2
+	inherit git-r3
 	EGIT_REPO_URI="git://anongit.freedesktop.org/git/cairo"
 	SRC_URI=""
 else
@@ -136,7 +136,7 @@ multilib_src_configure() {
 		--enable-ps \
 		--disable-drm \
 		--disable-gallium \
-		--disable-qt4 \
+		--disable-qt \
 		--disable-vg \
 		${myopts}
 }
