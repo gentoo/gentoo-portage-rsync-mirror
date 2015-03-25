@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-romkan
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.42 2014/10/11 00:13:21 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-romkan/ChangeLog,v 1.43 2015/03/25 20:00:39 graaff Exp $
+
+  25 Mar 2015; Hans de Graaff <graaff@gentoo.org> ruby-romkan-0.4-r5.ebuild:
+  Add ruby22.
 
   11 Oct 2014; Manuel Rüger <mrueg@gentoo.org> ruby-romkan-0.4-r5.ebuild:
   Add ruby21 target.
