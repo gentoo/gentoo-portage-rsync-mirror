@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.107 2015/03/22 14:52:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.108 2015/03/25 10:21:12 zlogene Exp $
+
+  25 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> metadata.xml:
+  Fix CAcert URL
 
   22 Mar 2015; Mikle Kolyada <zlogene@gentoo.org>
   ca-certificates-20140927.3.17.2.ebuild:
