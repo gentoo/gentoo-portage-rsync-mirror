@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/keurocalc-1.2.3.ebuild,v 1.2 2015/03/12 10:05:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/keurocalc-1.2.3.ebuild,v 1.3 2015/03/25 13:57:06 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://opensource.bureau-cornavin.com/keurocalc/sources/${P}.tgz"
 
 LICENSE="GPL-2+ FDL-1.2"
 SLOT="4"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DOCS=( AUTHORS TODO )

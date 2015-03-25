@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl2-gfx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-gfx/ChangeLog,v 1.7 2015/03/09 11:45:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-gfx/ChangeLog,v 1.8 2015/03/25 13:47:33 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sdl2-gfx-1.0.1.ebuild:
+  Stable for x86, wrt bug #542518
 
   09 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sdl2-gfx-1.0.1.ebuild:
   Stable for amd64, wrt bug #542518

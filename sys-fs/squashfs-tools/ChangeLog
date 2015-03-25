@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.110 2015/03/10 19:10:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.111 2015/03/25 13:57:26 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> squashfs-tools-4.3.ebuild:
+  Stable for x86, wrt bug #542226
 
   10 Mar 2015; Jeroen Roovers <jer@gentoo.org> squashfs-tools-4.3.ebuild:
   Stable for HPPA (bug #542226).

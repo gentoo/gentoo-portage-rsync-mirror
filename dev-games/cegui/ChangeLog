@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.69 2015/03/20 17:48:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.70 2015/03/25 13:49:09 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> cegui-0.8.4.ebuild:
+  Stable for x86, wrt bug #542734
 
   20 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -cegui-0.8.3.ebuild,
   -files/cegui-0.8.3-freetype.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/scala-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.22 2015/03/24 17:23:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.23 2015/03/25 13:54:05 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> scala-bin-2.11.4.ebuild:
+  Stable for x86, wrt bug #544302
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> scala-bin-2.11.4.ebuild:
   Stable for amd64, wrt bug #544302

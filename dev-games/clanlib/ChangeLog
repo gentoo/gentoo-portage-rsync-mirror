@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.67 2015/02/28 19:30:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.68 2015/03/25 13:45:23 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> clanlib-2.3.7.ebuild:
+  Stable for x86, wrt bug #541586
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> clanlib-2.3.7.ebuild:
   Stable for amd64, wrt bug #541586

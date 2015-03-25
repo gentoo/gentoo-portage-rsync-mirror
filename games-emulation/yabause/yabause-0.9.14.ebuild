@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.14.ebuild,v 1.2 2015/03/12 10:05:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.14.ebuild,v 1.3 2015/03/25 13:48:49 ago Exp $
 
 EAPI=5
 inherit eutils cmake-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="openal opengl qt5 sdl"
 
 # x11-libs/libXrandr is an automagic dep

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.88 2015/03/12 10:05:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.89 2015/03/25 13:40:57 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> monkeyd-1.5.5.ebuild:
+  Stable for x86, wrt bug #541974
 
   12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> monkeyd-1.5.5.ebuild:
   Stable for amd64, wrt bug #541974

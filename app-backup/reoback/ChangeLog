@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/reoback
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/reoback/ChangeLog,v 1.10 2015/03/24 17:22:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/reoback/ChangeLog,v 1.11 2015/03/25 13:59:46 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> reoback-1.0_p3-r1.ebuild:
+  Stable for x86, wrt bug #544004
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> reoback-1.0_p3-r1.ebuild:
   Stable for amd64, wrt bug #544004

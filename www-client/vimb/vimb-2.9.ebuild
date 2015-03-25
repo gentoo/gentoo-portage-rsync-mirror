@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vimb/vimb-2.9.ebuild,v 1.2 2015/03/24 17:28:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vimb/vimb-2.9.ebuild,v 1.3 2015/03/25 13:38:37 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/fanglingsu/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gtk3"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.32 2015/03/24 17:27:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.33 2015/03/25 13:54:58 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> unidecode-0.04.17.ebuild:
+  Stable for x86, wrt bug #543476
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> unidecode-0.04.17.ebuild:
   Stable for amd64, wrt bug #543476

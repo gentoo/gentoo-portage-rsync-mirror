@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.3.1-r1.ebuild,v 1.2 2015/03/09 11:44:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/pssh-2.3.1-r1.ebuild,v 1.3 2015/03/25 13:41:16 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://parallel-ssh.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="net-misc/openssh

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0-r4.ebuild,v 1.2 2015/03/24 17:24:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0-r4.ebuild,v 1.3 2015/03/25 13:42:46 ago Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://fgouget.free.fr/sux/sux"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~sparc x86"
 IUSE=""
 
 S="${WORKDIR}"

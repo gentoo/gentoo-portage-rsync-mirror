@@ -4,11 +4,11 @@ DESCRIPTION=A library for file management
 EAPI=5
 HOMEPAGE=http://pcmanfm.sourceforge.net/
 IUSE=+automount debug doc examples exif gtk udisks vala
-KEYWORDS=~alpha amd64 ~arm ~arm64 ~mips ~ppc ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~alpha amd64 ~arm ~arm64 ~mips ~ppc x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.18:2 gtk? ( >=x11-libs/gtk+-2.16:2 ) >=lxde-base/menu-cache-0.3.2:= !lxde-base/lxshortcut x11-misc/shared-mime-info automount? ( udisks? ( gnome-base/gvfs[udev,udisks] ) !udisks? ( gnome-base/gvfs[udev] ) ) exif? ( media-libs/libexif )
 REQUIRED_USE=udisks? ( automount ) doc? ( gtk )
 SLOT=0/4.3.0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/libfm-1.2.3.tar.xz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	vala	a41415fe361172827ed11b6a32ee38fb
-_md5_=e3178ac122f48cd8fd6e70ed741c0f69
+_md5_=5e11e6c6391161ca842ae5bf41bb5aef

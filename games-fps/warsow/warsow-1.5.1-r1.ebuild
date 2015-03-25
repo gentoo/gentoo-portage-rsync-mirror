@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1-r1.ebuild,v 1.5 2015/03/24 17:23:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.5.1-r1.ebuild,v 1.6 2015/03/25 13:53:12 ago Exp $
 
 EAPI=5
 inherit eutils check-reqs gnome2-utils flag-o-matic games
@@ -22,7 +22,7 @@ SRC_URI="http://www.warsow.eu/${ENGINE_P}.tar.gz
 # ZLIB: bundled angelscript
 LICENSE="GPL-2 ZLIB warsow"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug dedicated irc openal server"
 
 RDEPEND=">=dev-libs/libRocket-1.2.1_p20130110

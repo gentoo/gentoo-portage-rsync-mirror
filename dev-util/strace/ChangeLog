@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.207 2015/03/13 19:35:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.208 2015/03/25 13:40:01 ago Exp $
+
+  25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> strace-4.9.ebuild:
+  Stable for x86, wrt bug #532494
 
   13 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> strace-4.9.ebuild:
   amd64 stable wrt bug #532494
