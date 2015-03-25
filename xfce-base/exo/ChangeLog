@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.112 2015/03/08 15:06:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.113 2015/03/25 09:49:38 mgorny Exp $
+
+*exo-0.10.4 (25 Mar 2015)
+
+  25 Mar 2015; Michał Górny <mgorny@gentoo.org> +exo-0.10.4.ebuild:
+  Version bump with minor bugfixes. Add slot operators.
 
 *exo-0.10.3 (08 Mar 2015)
 

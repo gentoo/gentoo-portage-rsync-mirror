@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.174 2015/03/24 20:00:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.175 2015/03/25 09:31:52 eras Exp $
+
+  25 Mar 2015; Eray Aslan <eras@gentoo.org> -squirrelmail-1.4.22.ebuild,
+  -squirrelmail-1.4.23_pre20121024.ebuild:
+  Remove old
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
   squirrelmail-1.4.23_pre20140426.ebuild:
