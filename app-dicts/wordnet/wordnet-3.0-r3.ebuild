@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.6 2013/03/01 13:15:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.7 2015/03/25 08:01:51 jlec Exp $
 
 EAPI="3"
 
@@ -18,8 +18,9 @@ IUSE="doc"
 
 # In contrast to what the configure script seems to imply, Tcl/Tk is NOT optional.
 # cf. bug 163478 for details. (Yes, it's about 2.1 but it's still the same here.)
-DEPEND="dev-lang/tcl
-		dev-lang/tk"
+DEPEND="
+	dev-lang/tcl:0
+	dev-lang/tk:0"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/WordNet-${PV}"

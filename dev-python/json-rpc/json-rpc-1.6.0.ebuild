@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/json-rpc/json-rpc-1.6.0.ebuild,v 1.1 2014/06/26 00:27:10 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/json-rpc/json-rpc-1.6.0.ebuild,v 1.2 2015/03/25 08:21:56 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python{2_7,3_{3,4}})
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-DEPEND="test? (
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	test? (
 		dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
 	)"

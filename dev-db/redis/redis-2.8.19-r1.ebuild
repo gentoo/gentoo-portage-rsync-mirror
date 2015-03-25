@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.8.19-r1.ebuild,v 1.1 2015/03/07 03:21:24 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.8.19-r1.ebuild,v 1.2 2015/03/25 08:04:11 jlec Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-lang/lua-5.1:*
 	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
 DEPEND="virtual/pkgconfig
 	>=sys-devel/autoconf-2.63
-	test? ( dev-lang/tcl )
+	test? ( dev-lang/tcl:0= )
 	${RDEPEND}"
 REQUIRED_USE="?? ( tcmalloc jemalloc )"
 
