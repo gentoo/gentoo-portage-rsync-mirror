@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16439 2015/03/25 07:45:14 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16440 2015/03/26 16:11:28 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Bernard Cafarelli <voyageur@gentoo.org> (26 Mar 2015)
+# Dead upstreams, not working in some use cases, 
+# compatibility with current net-misc/nx not guaranteed,
+# some bundle old binary Xorg code that may be vulnerable,
+# modern alternative exist:
+# net-misc/x2go{client,server} and proprietary NX 4 (bug #488334)
+# These packages are now available in the NX overlay
+# Removal in a month (bug #537774)
+app-admin/eselect-nxserver
+net-misc/neatx
+net-misc/nxcl
+net-misc/nxclient
+net-misc/nxnode
+net-misc/nxsadmin
+net-misc/nxserver-freeedition
+net-misc/nxserver-freenx
+net-misc/qtnx
 
 # Michael Sterrett <mr_bones_@gentoo.org> (24 Mar 2015)
 # no need for the -bin version when we have a source build

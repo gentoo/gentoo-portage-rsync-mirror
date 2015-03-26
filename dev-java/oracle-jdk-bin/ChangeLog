@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.89 2015/03/26 15:52:34 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.90 2015/03/26 16:06:11 monsieurp Exp $
+
+*oracle-jdk-bin-1.8.0.40-r1 (26 Mar 2015)
+
+  26 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  +oracle-jdk-bin-1.8.0.40-r1.ebuild, oracle-jdk-bin-1.8.0.40.ebuild:
+  Revert previous commit and revbump the file instead.
 
   26 Mar 2015; Patrice Clement <monsieurp@gentoo.org> metadata.xml,
   oracle-jdk-bin-1.8.0.40.ebuild:

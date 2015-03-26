@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9880 2015/03/25 07:45:14 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9881 2015/03/26 16:11:28 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Last rites for old NX packages, bug #537774
 
   25 Mar 2015; Andrew Savchenko <bircoph@gentoo.org> package.mask:
   sys-power/nvclock is maintained again, removing mask: #537926.

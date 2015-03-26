@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.113 2015/01/22 17:32:30 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.114 2015/03/26 16:07:56 grknight Exp $
+
+  26 Mar 2015; Brian Evans <grknight@gentoo.org> ming-0.4.4-r1.ebuild:
+  Add USE_PHP as the eclass will no longer support an empty/missing value
 
   22 Jan 2015; Brian Evans <grknight@gentoo.org> ming-0.4.5.ebuild:
   Split the php extension into dev-php/ming-php due to how php ext configure

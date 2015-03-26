@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kwidgetsaddons/kwidgetsaddons-5.8.0.ebuild,v 1.1 2015/03/21 17:26:27 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kwidgetsaddons/kwidgetsaddons-5.8.0.ebuild,v 1.2 2015/03/26 16:20:59 kensington Exp $
 
 EAPI=5
 
@@ -18,4 +18,5 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	nls? ( dev-qt/linguist-tools:5 )
+	test? ( dev-qt/designer:5 )
 "
