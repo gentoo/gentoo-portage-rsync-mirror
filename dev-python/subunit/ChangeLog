@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.67 2015/03/26 06:41:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.68 2015/03/26 09:37:43 idella4 Exp $
+
+*subunit-0.0.10-r1 (26 Mar 2015)
+
+  26 Mar 2015; Ian Delaney <idella4@gentoo.org> +subunit-0.0.10-r1.ebuild,
+  files/0.0.21-tests.patch:
+  re-add -0.0.10-r1 to appease revdep requiring support of unstable keywords
 
 *subunit-1.0.0 (26 Mar 2015)
 
