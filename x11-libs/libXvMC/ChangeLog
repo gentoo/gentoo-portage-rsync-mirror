@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXvMC
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.80 2014/06/18 21:12:26 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.81 2015/03/26 16:48:21 chithanh Exp $
+
+*libXvMC-1.0.9 (26 Mar 2015)
+
+  26 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXvMC-1.0.9.ebuild:
+  Version bump.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libXvMC-1.0.8.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug
