@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.45 2015/03/24 00:14:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.46 2015/03/26 13:42:41 blueness Exp $
+
+*musl-1.1.7-r1 (26 Mar 2015)
+
+  26 Mar 2015; Anthony G. Basile <blueness@gentoo.org> +musl-1.1.7-r1.ebuild,
+  musl-9999.ebuild:
+  Make ldd symlink happy when cross compiling.  Bug #544128.
 
   24 Mar 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.7.ebuild:
   Stable on amd64, arm, ppc and x86.

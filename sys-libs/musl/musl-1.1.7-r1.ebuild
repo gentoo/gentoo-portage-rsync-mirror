@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.15 2015/03/26 13:42:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.7-r1.ebuild,v 1.1 2015/03/26 13:42:41 blueness Exp $
 
 EAPI=5
 

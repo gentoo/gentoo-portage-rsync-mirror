@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/multi_xml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/ChangeLog,v 1.24 2015/03/15 15:22:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/ChangeLog,v 1.25 2015/03/26 14:00:05 ago Exp $
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> multi_xml-0.5.4-r1.ebuild:
+  Stable for amd64, wrt bug #543252
 
 *multi_xml-0.5.4-r2 (15 Mar 2015)
 
