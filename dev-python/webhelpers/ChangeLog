@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webhelpers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.17 2015/01/01 23:56:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webhelpers/ChangeLog,v 1.18 2015/03/26 09:28:47 patrick Exp $
+
+  26 Mar 2015; Patrick Lauer <patrick@gentoo.org> webhelpers-1.3-r1.ebuild:
+  Drop pypy as dependencies dropped it too
 
   01 Jan 2015; Michał Górny <mgorny@gentoo.org> webhelpers-1.3-r1.ebuild:
   Add missing nose dependency, remove obsolete vars. Add missing distutils-
