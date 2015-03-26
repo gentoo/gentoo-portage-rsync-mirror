@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/kodi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.9 2015/03/19 12:48:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.10 2015/03/26 21:58:27 tupone Exp $
+
+  26 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-14.1.ebuild,
+  kodi-9999.ebuild:
+  Fix autodetection of SDL and add missing dependency. Bug #540472
 
   19 Mar 2015; Tupone Alfredo <tupone@gentoo.org> kodi-14.1.ebuild,
   kodi-9999.ebuild, +files/kodi-14.1-no-arm-flags.patch,
