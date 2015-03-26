@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.6.0.ebuild,v 1.3 2015/02/23 11:19:30 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.7.0-r2.ebuild,v 1.1 2015/03/26 15:17:05 ultrabug Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -9,6 +9,12 @@ inherit autotools-utils eutils systemd
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more"
 HOMEPAGE="http://www.rsyslog.com/"
+
+BRANCH="8-stable"
+
+PATCHES=(
+	"${FILESDIR}"/${BRANCH}/10-respect_CFLAGS-r1.patch
+)
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="
@@ -22,13 +28,15 @@ if [[ ${PV} == "9999" ]]; then
 	"
 
 	inherit git-r3
-	KEYWORDS=""
 else
 	SRC_URI="
 		http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
 		doc? ( http://www.rsyslog.com/files/download/${PN}/${PN}-doc-${PV}.tar.gz )
 	"
 	KEYWORDS="~amd64 ~arm ~hppa ~x86"
+
+	PATCHES+=( "${FILESDIR}"/${BRANCH}/50-rsyslog-run-queue-persist-test-only-once.patch )
+	PATCHES+=( "${FILESDIR}"/${BRANCH}/50-rsyslog-fix-size-based-legacy-config-statements.patch )
 fi
 
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
@@ -49,15 +57,15 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	normalize? (
 		>=dev-libs/libee-0.4.0
-		>=dev-libs/liblognorm-1.0.0:=
+		>=dev-libs/liblognorm-1.1.0:=
 	)
 	omudpspoof? ( >=net-libs/libnet-1.1.6 )
-	postgres? ( >=dev-db/postgresql-8.4.20 )
+	postgres? ( >=dev-db/postgresql-8.4.20:= )
 	rabbitmq? ( >=net-libs/rabbitmq-c-0.3.0 )
 	redis? ( >=dev-libs/hiredis-0.11.0 )
 	relp? ( >=dev-libs/librelp-1.2.5 )
 	rfc3195? ( >=dev-libs/liblogging-1.0.1:=[rfc3195] )
-	rfc5424hmac? ( >=dev-libs/openssl-0.9.8y )
+	rfc5424hmac? ( >=dev-libs/openssl-0.9.8y:= )
 	snmp? ( >=net-analyzer/net-snmp-5.7.2 )
 	ssl? ( >=net-libs/gnutls-2.12.23 )
 	systemd? ( >=sys-apps/systemd-208 )
@@ -66,15 +74,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 if [[ ${PV} == "9999" ]]; then
-	RDEPEND+=" doc? ( >=dev-python/sphinx-1.1.3-r7 )"
-fi
-
-BRANCH="8-stable"
-
-if [[ ${PV} < "8.7" ]]; then
-	# Test suite is broken in v8.6.0 release tarball
-	# Upstream is notified; Will be fixed with v8.7.0 in January
-	RESTRICT="test"
+	DEPEND+=" doc? ( >=dev-python/sphinx-1.1.3-r7 )"
 fi
 
 # Maitainer note : open a bug to upstream
@@ -99,8 +99,20 @@ src_unpack() {
 
 	if use doc; then
 		if [[ ${PV} == "9999" ]]; then
+			local _EGIT_BRANCH=
+			if [ -n "${EGIT_BRANCH}" ]; then
+				# Cannot use rsyslog commits/branches for documentation repository
+				_EGIT_BRANCH=${EGIT_BRANCH}
+				unset EGIT_BRANCH
+			fi
+
 			git-r3_fetch "${DOC_REPO_URI}"
 			git-r3_checkout "${DOC_REPO_URI}" "${S}"/docs
+
+			if [ -n "${_EGIT_BRANCH}" ]; then
+				# Restore previous EGIT_BRANCH information
+				EGIT_BRANCH=${_EGIT_BRANCH}
+			fi
 		else
 			local doc_tarball="${PN}-doc-${PV}.tar.gz"
 
@@ -110,14 +122,6 @@ src_unpack() {
 			unpack ${doc_tarball}
 		fi
 	fi
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${BRANCH}/10-respect_CFLAGS-r1.patch
-
-	epatch_user
-
-	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -204,7 +208,7 @@ src_configure() {
 src_compile() {
 	autotools-utils_src_compile
 
-	if use doc -a ${PV} == "9999"; then
+	if use doc && [[ "${PV}" == "9999" ]]; then
 		einfo "Building documentation ..."
 		local doc_dir="${S}/docs"
 		cd "${doc_dir}" || die "Cannot chdir into \"${doc_dir}\"!"
