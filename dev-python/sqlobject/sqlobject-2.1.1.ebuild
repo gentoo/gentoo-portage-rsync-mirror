@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-1.6.0.ebuild,v 1.2 2015/01/02 23:00:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/sqlobject-2.1.1.ebuild,v 1.1 2015/03/26 04:46:04 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -20,21 +20,18 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-
 IUSE="doc mysql postgres sqlite"
 
 RDEPEND=">=dev-python/formencode-1.1.1[${PYTHON_USEDEP}]
-		mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
-		postgres? ( dev-python/psycopg[${PYTHON_USEDEP}] )"
-DEPEND="${RDEPEND}
-		dev-python/setuptools[${PYTHON_USEDEP}]"
+	mysql? ( dev-python/mysql-python[${PYTHON_USEDEP}] )
+	postgres? ( dev-python/psycopg[${PYTHON_USEDEP}] )"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${MY_P}"
 
 python_install_all() {
 	if use doc; then
-		pushd docs
-		dodoc *.txt || die "dodoc failed"
-		dohtml -r presentation-2004-11 || die "dohtml failed"
+		HTML_DOCS=( docs/html/. )
 		insinto /usr/share/doc/${PF}
-		doins -r europython || die "doins failed"
-		popd
+		doins -r docs/europython
 	fi
+
 	distutils-r1_python_install_all
 }
