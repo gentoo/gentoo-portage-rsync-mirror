@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.104 2015/03/21 15:08:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.105 2015/03/26 17:59:16 monsieurp Exp $
+
+*antlr-4.4 (26 Mar 2015)
+
+  26 Mar 2015; Patrice Clement <monsieurp@gentoo.org> +antlr-4.4.ebuild:
+  Version bump courtesy of silver_ghost@list.ru. Fix bug 462778.
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> antlr-2.7.7-r2.ebuild,
   antlr-2.7.7-r5.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.90 2015/03/25 13:48:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.91 2015/03/26 17:41:40 mr_bones_ Exp $
+
+  26 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/warzone2100-3.1.0-pkgconf.patch, -warzone2100-3.1.0.ebuild:
+  old
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> warzone2100-3.1.2.ebuild:
   Stable for x86, wrt bug #542594

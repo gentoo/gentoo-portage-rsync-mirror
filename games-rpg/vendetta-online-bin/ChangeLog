@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/vendetta-online-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.12 2015/03/25 13:50:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/vendetta-online-bin/ChangeLog,v 1.13 2015/03/26 17:37:24 mr_bones_ Exp $
+
+  26 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -vendetta-online-bin-1.8.82.ebuild:
+  old
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
   vendetta-online-bin-1.8.296.ebuild:

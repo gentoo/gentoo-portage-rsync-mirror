@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/libsvgtiny-0.1.3.ebuild,v 1.2 2015/03/22 00:02:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvgtiny/libsvgtiny-0.1.3.ebuild,v 1.3 2015/03/26 17:51:15 xmw Exp $
 
 EAPI=5
 
@@ -21,4 +21,5 @@ DEPEND="${RDEPEND}
 	dev-util/gperf
 	virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}"/${P}-glibc2.20.patch )
+PATCHES=( "${FILESDIR}"/${P}-glibc2.20.patch 
+	"${FILESDIR}"/${P}-parallel-build.patch )
