@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/fugitive-2.2.ebuild,v 1.1 2015/01/20 13:21:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/fugitive-2.2.ebuild,v 1.2 2015/03/26 03:50:15 radhermit Exp $
 
 EAPI=5
 inherit vim-plugin
@@ -11,7 +11,7 @@ if [[ ${PV} == 9999 ]]; then
 else
 	inherit vcs-snapshot
 	SRC_URI="https://github.com/tpope/vim-fugitive/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos"
+	KEYWORDS="amd64 x86 ~ppc-macos ~x64-macos"
 fi
 
 DESCRIPTION="vim plugin: a git wrapper for vim"
