@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.79 2015/03/26 07:11:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.80 2015/03/26 12:17:18 jlec Exp $
+
+  26 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +files/biopython-1.65-test-fix-backport.patch, biopython-1.65.ebuild:
+  Backport test fix
 
   26 Mar 2015; Justin Lecher <jlec@gentoo.org> biopython-1.65.ebuild:
   Add note for embos support, bug #543510
