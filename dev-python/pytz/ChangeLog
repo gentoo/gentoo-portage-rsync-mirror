@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.204 2015/03/18 06:08:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.205 2015/03/26 07:14:23 patrick Exp $
+
+*pytz-2015.2 (26 Mar 2015)
+
+  26 Mar 2015; Patrick Lauer <patrick@gentoo.org> +pytz-2015.2.ebuild:
+  Bump
 
   18 Mar 2015; Patrick Lauer <patrick@gentoo.org> pytz-2014.10.ebuild,
   pytz-2014.9.ebuild:

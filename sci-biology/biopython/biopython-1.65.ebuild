@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.65.ebuild,v 1.1 2015/03/03 16:01:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.65.ebuild,v 1.2 2015/03/26 07:11:28 jlec Exp $
 
 EAPI=5
 
@@ -48,4 +48,7 @@ pkg_postinst() {
 	elog "For database support you need to install:"
 	optfeature "MySQL" dev-python/mysql-python
 	optfeature "PostGreSQL" dev-python/psycopg
+	echo
+	elog "Some applications need extra packages:"
+	optfeature "EMBOSS (The European Molecular Biology Open Software Suite)" sci-biology/emboss
 }
