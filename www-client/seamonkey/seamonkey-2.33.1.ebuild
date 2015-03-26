@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.33.1.ebuild,v 1.3 2015/03/26 08:21:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.33.1.ebuild,v 1.4 2015/03/26 08:54:21 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -217,8 +217,8 @@ src_configure() {
 	mozconfig_annotate '' --enable-safe-browsing
 
 	# jit needs to be enabled unconditionally (bug #544436)
-	mozconfig_use_enable jit ion
-	mozconfig_use_enable jit yarr-jit
+	mozconfig_annotate '' --enable-ion
+	mozconfig_annotate '' --enable-yarr-jit
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=${BUILD_OBJ_DIR}" \
