@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.275 2015/03/16 13:22:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.276 2015/03/26 22:10:58 dlan Exp $
+
+  26 Mar 2015; Yixun Lan <dlan@gentoo.org> -xen-tools-4.2.5-r2.ebuild,
+  -xen-tools-4.4.1-r6.ebuild:
+  drop old vulnerable versions, bug 543304
 
   16 Mar 2015; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.2.5-r3.ebuild:
   Stable for x86, wrt bug #543304
