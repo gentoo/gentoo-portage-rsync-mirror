@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-3.0.1.ebuild,v 1.1 2015/03/17 13:45:06 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-3.0.1.ebuild,v 1.2 2015/03/26 15:56:30 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="2.3.0"
@@ -121,8 +121,9 @@ pkg_preinst() {
 }
 
 src_test() {
-	escons ${scons_opts} test
-	"${S}"/test --dbpath=unittest || die
+	escons ${scons_opts} dbtest
+	"${S}"/dbtest --dbpath=unittest || die "dbtest failed"
+	escons ${scons_opts} smokeCppUnittests --smokedbprefix="smokecpptest" || die "smokeCppUnittests tests failed"
 }
 
 pkg_postinst() {

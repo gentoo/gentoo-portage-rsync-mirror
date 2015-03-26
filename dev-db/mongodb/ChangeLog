@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.112 2015/03/24 17:58:57 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.113 2015/03/26 15:56:30 ultrabug Exp $
+
+  26 Mar 2015; Ultrabug <ultrabug@gentoo.org> mongodb-3.0.1.ebuild:
+  fix tests #543760 thx to Tomas Mozes
 
 *mongodb-2.6.9 (24 Mar 2015)
 

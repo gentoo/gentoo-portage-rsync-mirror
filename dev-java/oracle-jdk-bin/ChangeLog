@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.88 2015/03/03 23:46:58 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.89 2015/03/26 15:52:34 monsieurp Exp $
+
+  26 Mar 2015; Patrice Clement <monsieurp@gentoo.org> metadata.xml,
+  oracle-jdk-bin-1.8.0.40.ebuild:
+  Install JavaFX sources as well as JVM sources. Document source USE flag. Fix
+  bug 544478.
 
 *oracle-jdk-bin-1.8.0.40 (03 Mar 2015)
 

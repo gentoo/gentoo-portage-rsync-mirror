@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.40.ebuild,v 1.1 2015/03/03 23:46:58 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.8.0.40.ebuild,v 1.2 2015/03/26 15:52:34 monsieurp Exp $
 
 EAPI="5"
 
@@ -224,7 +224,12 @@ src_install() {
 	fi
 
 	if use source ; then
-		cp -p src.zip "${ddest}" || die
+		for mysrc in src javafx-src; do
+			mysrc="${mysrc}.zip"
+			ebegin "Copying source file ${mysrc}"
+			cp -p "${mysrc}" "${ddest}" || die
+			eend $?
+		done
 	fi
 
 	if [[ -d jre/lib/desktop ]] ; then

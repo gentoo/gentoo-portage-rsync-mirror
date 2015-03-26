@@ -1669,6 +1669,7 @@ dev-java/netbeans-nb:keychain - Automatically starts keychain on netbeans start 
 dev-java/oracle-jdk-bin:derby - Enable Installation of Bundled Derby (Java DB)
 dev-java/oracle-jdk-bin:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/oracle-jdk-bin:pax_kernel - Use paxctl to mark the JVM binaries.
+dev-java/oracle-jdk-bin:source - Install JVM and JavaFX sources.
 dev-java/oracle-jre-bin:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/oracle-jre-bin:pax_kernel - Use paxctl to mark the JVM binaries.
 dev-java/proguard:ant - Ant task for using ProGuard in build.xml scripts
