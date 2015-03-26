@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.24 2014/05/15 17:07:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.25 2015/03/26 20:21:43 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils unpacker cdrom games
 
 DESCRIPTION="Linux port of the popular strategy game from Firaxis"
@@ -45,7 +45,7 @@ src_unpack() {
 src_install() {
 	einfo "Copying files... this may take a while..."
 	exeinto "${dir}"
-	doexe "${CDROM_ROOT}"/bin/x86/{smac,smacx,smacpack} || die
+	doexe "${CDROM_ROOT}"/bin/x86/{smac,smacx,smacpack}
 
 	insinto "${dir}"
 	doins ${CDROM_ROOT}/{{Alien_Crossfire,Alpha_Centauri}_Manual.pdf,QuickStart.txt,README,icon.{bmp,xpm}}
@@ -53,11 +53,11 @@ src_install() {
 	cd "${Ddir}"
 	tar xzf "${CDROM_ROOT}"/data.tar.gz || die
 	insinto "${dir}"/data
-	doins "${CDROM_ROOT}"/data/*.{pcx,cvr,flc,gif} || die
-	doins -r "${CDROM_ROOT}"/data/{facs,fx,projs,techs,voices} || die
+	doins "${CDROM_ROOT}"/data/*.{pcx,cvr,flc,gif}
+	doins -r "${CDROM_ROOT}"/data/{facs,fx,projs,techs,voices}
 
 	if use videos ; then
-		doins -r "${CDROM_ROOT}"/data/movies || die
+		doins -r "${CDROM_ROOT}"/data/movies
 	fi
 
 	cd "${S}"/a
@@ -86,7 +86,7 @@ src_install() {
 	    einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."
 	    dosym /lib/loki_ld-linux.so.2 "${dir}"/ld-linux.so.2 && \
 	    dosym /usr/lib/loki_libc.so.6 "${dir}"/libc.so.6 && \
-	    dosym /usr/lib/loki_libnss_files.so.2 "${dir}"/libnss_files.so.2 || die
+	    dosym /usr/lib/loki_libnss_files.so.2 "${dir}"/libnss_files.so.2
 	fi
 }
 

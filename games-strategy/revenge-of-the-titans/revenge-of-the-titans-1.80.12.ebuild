@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/revenge-of-the-titans-1.80.12.ebuild,v 1.4 2014/04/16 17:22:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/revenge-of-the-titans-1.80.12.ebuild,v 1.5 2015/03/26 20:22:50 mr_bones_ Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils games java-pkg-2
 
 DESCRIPTION="defeat the returning Titan horde in a series of epic ground battles"
@@ -36,10 +36,10 @@ src_install() {
 	local dir="${GAMES_PREFIX_OPT}/${PN}"
 
 	insinto "${dir}"
-	doins *.jar || die "doins jar"
+	doins *.jar
 
 	exeinto "${dir}"
-	doexe *.so revenge.sh || die "doexe"
+	doexe *.so revenge.sh
 
 	games_make_wrapper ${PN} ./revenge.sh "${dir}" "${dir}"
 	doicon revenge.png

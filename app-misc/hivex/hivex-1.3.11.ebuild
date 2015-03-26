@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.11.ebuild,v 1.6 2015/03/16 14:40:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.11.ebuild,v 1.7 2015/03/26 20:28:10 zerochaos Exp $
 
 EAPI=5
 
@@ -42,9 +42,10 @@ DEPEND="${RDEPEND}
 			dev-perl/Test-Pod-Coverage )
 		  )
 	"
-
-ruby_add_bdepend "ruby? ( dev-ruby/rake )"
-ruby_add_bdepend "ruby? ( dev-ruby/rdoc )"
+ruby_add_bdepend "ruby? ( dev-ruby/rake
+			virtual/rubygems
+			dev-ruby/rdoc )"
+ruby_add_rdepend "ruby? ( virtual/rubygems )"
 
 REQUIRED_USE="python? ( ${PYTHON_REQ_USE} )"
 

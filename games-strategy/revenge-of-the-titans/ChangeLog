@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/revenge-of-the-titans
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/ChangeLog,v 1.4 2014/04/16 17:22:48 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/revenge-of-the-titans/ChangeLog,v 1.5 2015/03/26 20:22:50 mr_bones_ Exp $
+
+  26 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  revenge-of-the-titans-1.80.12.ebuild:
+  EAPI=5
 
   16 Apr 2014; Ulrich Müller <ulm@gentoo.org>
   revenge-of-the-titans-1.80.12.ebuild:
@@ -21,4 +25,3 @@
   22 Mar 2011; Mike Frysinger <vapier@gentoo.org>
   +revenge-of-the-titans-1.80.10.ebuild, +metadata.xml:
   Initial ebuild #357259 by Azamat H. Hackimov.
-
