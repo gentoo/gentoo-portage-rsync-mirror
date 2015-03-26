@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/libXaw3dXft
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3dXft/ChangeLog,v 1.7 2014/11/25 23:27:36 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3dXft/ChangeLog,v 1.9 2015/03/26 17:13:20 chithanh Exp $
+
+  26 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> metadata.xml:
+  Drop maintainership.
+
+*libXaw3dXft-1.6.2d (26 Mar 2015)
+
+  26 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libXaw3dXft-1.6.2d.ebuild, -libXaw3dXft-1.6.2b.ebuild:
+  Version bump. Remove old.
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
