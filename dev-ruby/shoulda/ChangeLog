@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.37 2014/11/03 15:48:54 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.38 2015/03/26 06:10:36 graaff Exp $
+
+  26 Mar 2015; Hans de Graaff <graaff@gentoo.org> shoulda-2.11.3-r2.ebuild:
+  Add ruby22.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> shoulda-2.11.3-r1.ebuild,
   shoulda-2.11.3-r2.ebuild:

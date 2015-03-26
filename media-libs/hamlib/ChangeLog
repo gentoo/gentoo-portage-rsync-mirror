@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.82 2015/03/25 15:58:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.83 2015/03/26 06:16:23 tomjbe Exp $
+
+  26 Mar 2015; Thomas Beierlein <tomjbe@gentoo.org> -hamlib-1.2.15.ebuild,
+  -hamlib-1.2.15.2.ebuild, -hamlib-1.2.15.3.ebuild:
+  Drop old
 
   25 Mar 2015; Justin Lecher <jlec@gentoo.org> hamlib-1.2.15.2.ebuild,
   hamlib-1.2.15.3-r1.ebuild, hamlib-1.2.15.3.ebuild, hamlib-1.2.15.ebuild:

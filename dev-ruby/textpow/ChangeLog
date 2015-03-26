@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/textpow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/textpow/ChangeLog,v 1.16 2015/01/18 03:05:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/textpow/ChangeLog,v 1.17 2015/03/26 06:20:46 graaff Exp $
+
+  26 Mar 2015; Hans de Graaff <graaff@gentoo.org> textpow-1.4.0.ebuild:
+  Add ruby22.
 
 *textpow-1.4.0 (18 Jan 2015)
 
