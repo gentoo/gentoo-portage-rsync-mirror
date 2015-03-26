@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbsd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.39 2015/02/27 15:27:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbsd/ChangeLog,v 1.40 2015/03/26 11:28:41 ago Exp $
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libbsd-0.7.0.ebuild:
+  Stable for ppc64, wrt bug #532764
 
   27 Feb 2015; Michael Palimaka <kensington@gentoo.org> -libbsd-0.6.0.ebuild:
   Remove old.
