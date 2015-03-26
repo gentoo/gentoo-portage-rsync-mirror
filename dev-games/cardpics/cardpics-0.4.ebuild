@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cardpics/cardpics-0.4.ebuild,v 1.10 2008/02/17 13:03:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cardpics/cardpics-0.4.ebuild,v 1.11 2015/03/26 18:27:32 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="set of free cards sets"
@@ -14,7 +15,6 @@ KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	prepgamesdirs
 }

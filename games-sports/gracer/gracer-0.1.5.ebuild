@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.23 2015/03/25 15:38:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.24 2015/03/26 18:25:07 mr_bones_ Exp $
 
-EAPI=2
-
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="3D motor sports simulator"
@@ -25,18 +24,18 @@ DEPEND="
 	x11-libs/libXmu
 	virtual/glu
 	virtual/opengl
-	virtual/jpeg
-	"
-RDEPEND="${DEPEND}"
+	virtual/jpeg"
+RDEPEND=${DEPEND}
 
-PATCHES=(
-	"${FILESDIR}"/${PV}-gldefs.patch
-	"${FILESDIR}"/${PN}-gcc-3.4.patch
-	"${FILESDIR}/${P}"-gcc41.patch
-	"${FILESDIR}"/${P}-as-needed.patch
-	"${FILESDIR}"/${P}-libpng14.patch
-	"${FILESDIR}"/${P}-png15.patch
-	)
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PV}-gldefs.patch \
+		"${FILESDIR}"/${PN}-gcc-3.4.patch \
+		"${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-libpng14.patch \
+		"${FILESDIR}"/${P}-png15.patch
+}
 
 src_configure() {
 	egamesconf \
@@ -45,12 +44,11 @@ src_configure() {
 		--enable-png \
 		$(use_enable joystick)
 	sed -i \
-		-e 's:-lplibsl:-lplibsl -lplibul:' $(find -name Makefile) \
-			|| die "sed Makefiles failed"
+		-e 's:-lplibsl:-lplibsl -lplibul:' \
+		$(find -name Makefile) || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	default
 	prepgamesdirs
 }
