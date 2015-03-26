@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.398 2015/03/25 16:07:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.400 2015/03/26 11:36:31 ago Exp $
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> firefox-31.5.3.ebuild:
+  Stable for x86, wrt bug #544056
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> firefox-31.5.3.ebuild:
+  Stable for amd64, wrt bug #544056
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> firefox-31.5.3.ebuild:
   Stable for ia64, wrt bug #544056
