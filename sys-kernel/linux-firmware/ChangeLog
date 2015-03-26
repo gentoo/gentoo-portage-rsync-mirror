@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.122 2015/03/02 09:32:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.124 2015/03/26 13:29:46 ago Exp $
+
+  26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> linux-firmware-20150206.ebuild:
+  Stable for alpha/amd64/arm/hppa/ia64/ppc64/ppc/sparc/x86, wrt bug #544540
+
+*linux-firmware-20150320 (26 Mar 2015)
+
+  26 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +linux-firmware-20150320.ebuild:
+  New snapshot.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> linux-firmware-20140902.ebuild:
   Stable for ppc, wrt bug #529240
