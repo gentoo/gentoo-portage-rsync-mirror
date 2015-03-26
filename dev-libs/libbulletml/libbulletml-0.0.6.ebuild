@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/libbulletml-0.0.6.ebuild,v 1.10 2012/06/07 17:29:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/libbulletml-0.0.6.ebuild,v 1.11 2015/03/26 19:21:55 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="A Library of Bullet Markup Language"
@@ -15,30 +15,31 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/boost"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN#lib}/src
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-gcc46.patch
-	rm -r boost || die "remove of local boost failed"
+	rm -r boost || die
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die
+	emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
-	dolib.a libbulletml.a || die
+	dolib.a libbulletml.a
 
 	insinto /usr/include/bulletml
-	doins *.h || die
+	doins *.h
 
 	insinto /usr/include/bulletml/tinyxml
-	doins tinyxml/tinyxml.h || die
+	doins tinyxml/tinyxml.h
 
 	insinto /usr/include/bulletml/ygg
-	doins ygg/ygg.h || die
+	doins ygg/ygg.h
 
 	dodoc ../README*
 }

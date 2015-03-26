@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libbulletml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.10 2012/06/07 17:29:16 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.11 2015/03/26 19:21:55 mr_bones_ Exp $
+
+  26 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> libbulletml-0.0.6.ebuild:
+  EAPI=5
 
   07 Jun 2012; Michael Sterrett <mr_bones_@gentoo.org> libbulletml-0.0.6.ebuild:
   update SRC_URI and HOMEPAGE
@@ -39,4 +42,3 @@
   26 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +libbulletml-0.0.6.ebuild:
   initial commit - ebuild submitted by Atzm Watanabe via bug #45038
-
