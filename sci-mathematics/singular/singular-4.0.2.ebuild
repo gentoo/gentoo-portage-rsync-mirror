@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-4.0.2.ebuild,v 1.3 2015/03/26 10:16:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-4.0.2.ebuild,v 1.4 2015/03/26 12:44:41 tomka Exp $
 
 EAPI=5
 
@@ -26,7 +26,6 @@ IUSE="boost doc emacs examples python +readline"
 
 RDEPEND="dev-libs/gmp
 	>=dev-libs/ntl-5.5.1
-	<dev-libs/ntl-7
 	emacs? ( >=virtual/emacs-22 )
 	sci-mathematics/flint
 	sci-mathematics/4ti2
@@ -58,6 +57,8 @@ src_prepare () {
 
 	# omalloc's old configure will fail if ar is not exactly 'ar'.
 	epatch "${FILESDIR}"/${PN}-4.0.0-fix-omalloc-ar-detection.patch
+
+	epatch "${FILESDIR}"/${PN}-4.0.2-ntl8-compat.patch
 
 	cd "${S}"/omalloc || die "failed to cd into omalloc directory"
 	eautoreconf

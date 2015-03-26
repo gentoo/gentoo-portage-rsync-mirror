@@ -1,6 +1,11 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.53 2015/02/03 10:56:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.54 2015/03/26 12:48:29 yngwin Exp $
+
+*quiterss-0.17.6 (26 Mar 2015)
+
+  26 Mar 2015; Ben de Groot <yngwin@gentoo.org> +quiterss-0.17.6.ebuild:
+  version bump
 
 *quiterss-0.17.5 (03 Feb 2015)
 
