@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.67 2015/03/26 01:07:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.68 2015/03/26 01:55:56 tetromino Exp $
+
+  26 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  qtgui-4.8.5-r3.ebuild, qtgui-4.8.5-r4.ebuild, qtgui-4.8.6-r2.ebuild:
+  >=cairo-1.14.2 no longer has experimental qt4 USE flag (bug #544506, thanks
+  to Dennis Schridde).
 
   26 Mar 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Update harfbuzz USE flag description.

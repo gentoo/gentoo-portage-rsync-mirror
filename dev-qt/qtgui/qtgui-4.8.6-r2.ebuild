@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.6-r2.ebuild,v 1.1 2015/03/17 14:41:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.6-r2.ebuild,v 1.2 2015/03/26 01:55:56 tetromino Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ RDEPEND="
 	egl? ( media-libs/mesa[egl,${MULTILIB_USEDEP}] )
 	glib? ( dev-libs/glib:2[${MULTILIB_USEDEP}] )
 	gtkstyle? (
-		>=x11-libs/cairo-1.12[-qt4,${MULTILIB_USEDEP}]
+		>=x11-libs/cairo-1.12[-qt4(-),${MULTILIB_USEDEP}]
 		>=x11-libs/gtk+-2.24.23-r1:2[aqua=,${MULTILIB_USEDEP}]
 	)
 	mng? ( >=media-libs/libmng-1.0.10-r2:=[${MULTILIB_USEDEP}] )
