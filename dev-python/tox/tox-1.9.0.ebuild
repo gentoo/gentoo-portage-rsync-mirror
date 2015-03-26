@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.7.2.ebuild,v 1.2 2014/10/14 02:28:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/tox-1.9.0.ebuild,v 1.1 2015/03/26 07:46:25 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 
@@ -20,13 +20,14 @@ RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/virtualenv-1.11.2[${PYTHON_USEDEP}]
 		dev-python/pip[${PYTHON_USEDEP}]
 		>=dev-python/py-1.4.17[${PYTHON_USEDEP}]"
-DEPEND="${RDEPEND}
+DEPEND="
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( >=dev-python/pytest-2.3.5[${PYTHON_USEDEP}] )"
+	test? ( ${RDEPEND}
+		>=dev-python/pytest-2.3.5[${PYTHON_USEDEP}] )"
 
 python_prepare_all() {
 	# Take out failing tests known to pass when run manually
-	# Run from ebuild interferes in subtle & mysterious ways, inducing these erroroneous fails
+	# # Run from ebuild interferes in subtle & mysterious ways, inducing these erroroneous fails
 	sed -e 's:test_package_install_fails:_&:' -e 's:test_different_config_cwd:_&:' \
 		-e 's:test_develop:_&:' -e 's:test_usedevelop:_&:' \
 		-e 's:test_usedevelop_mixed:_&:' -e 's:test__test_usedevelop:_&:' \
@@ -49,10 +50,10 @@ python_compile_all() {
 }
 
 python_test() {
-	py.test tests || die "tests failed under ${EPYTHON}"
+	py.test tests || die "Testsuite failed under ${EPYTHON}"
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( "${S}"/doc/_build/html/. )
+	use doc && HTML_DOCS=( "${S}"/doc/_build/html/. )
 	distutils-r1_python_install_all
 }
