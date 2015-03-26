@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.66 2015/03/25 16:06:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.67 2015/03/26 01:07:14 pesa Exp $
+
+  26 Mar 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Update harfbuzz USE flag description.
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> qtgui-4.8.5-r4.ebuild:
   Stable for ia64, wrt bug #541972

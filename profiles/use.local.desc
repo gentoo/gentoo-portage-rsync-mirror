@@ -2395,7 +2395,7 @@ dev-qt/qtgui:exceptions - Add support for exceptions - like catching them inside
 dev-qt/qtgui:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
 dev-qt/qtgui:glib - Enable dev-libs/glib eventloop support
 dev-qt/qtgui:gtkstyle - Build a Qt style called GTK+ that mimics the active GTK+ theme
-dev-qt/qtgui:harfbuzz - Use media-libs/harfbuzz for text shaping (experimental in Qt 5.3.x, default in Qt 5.4.0 and later). If enabled, it can still be disabled at runtime by setting QT_HARFBUZZ environment variable to "old".
+dev-qt/qtgui:harfbuzz - Use media-libs/harfbuzz for text shaping
 dev-qt/qtgui:ibus - Build the IBus input method plugin
 dev-qt/qtgui:kms - Build the KMS platform plugin
 dev-qt/qtgui:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.

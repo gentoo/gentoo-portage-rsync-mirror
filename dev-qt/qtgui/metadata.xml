@@ -12,10 +12,7 @@
 		<flag name="glib">Enable <pkg>dev-libs/glib</pkg> eventloop support</flag>
 		<flag name="gtkstyle">Build a Qt style called GTK+ that mimics the active
 			GTK+ theme</flag>
-		<flag name="harfbuzz">Use <pkg>media-libs/harfbuzz</pkg> for text shaping
-			(experimental in Qt 5.3.x, default in Qt 5.4.0 and later). If enabled,
-			it can still be disabled at runtime by setting QT_HARFBUZZ environment
-			variable to &quot;old&quot;.</flag>
+		<flag name="harfbuzz">Use <pkg>media-libs/harfbuzz</pkg> for text shaping</flag>
 		<flag name="ibus">Build the IBus input method plugin</flag>
 		<flag name="kms">Build the KMS platform plugin</flag>
 		<flag name="qt3support">Enable the Qt3Support libraries for Qt4. Note that
