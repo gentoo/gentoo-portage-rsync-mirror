@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.101 2015/03/25 01:00:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.102 2015/03/26 21:20:40 floppym Exp $
+
+*btrfs-progs-3.19.1 (26 Mar 2015)
+
+  26 Mar 2015; Mike Gilbert <floppym@gentoo.org> +btrfs-progs-3.19.1.ebuild,
+  btrfs-progs-9999.ebuild:
+  Version bump, bug 544602. Install bash completion file, bug 544414.
 
   25 Mar 2015; Mike Gilbert <floppym@gentoo.org> btrfs-progs-9999.ebuild:
   Add note about --enable-convert being broken.
