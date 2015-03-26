@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.65 2015/03/08 13:34:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.67 2015/03/26 06:41:44 idella4 Exp $
+
+*subunit-1.0.0 (26 Mar 2015)
+
+  26 Mar 2015; Ian Delaney <idella4@gentoo.org> +files/1.0.0-tests.patch,
+  +subunit-1.0.0.ebuild, -subunit-0.0.10-r1.ebuild, -subunit-0.0.15-r1.ebuild,
+  -subunit-0.0.15.ebuild, -subunit-0.0.18-r1.ebuild, -subunit-0.0.18.ebuild,
+  files/0.0.21-tests.patch:
+  bump; rebase tests.patch for testsuite, add commented list of tests found to
+  fail only under py2.7, pypy in updated test phase, rm many old
 
   08 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -subunit-0.0.10.ebuild:
   Remove old.
