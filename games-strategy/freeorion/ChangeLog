@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeorion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.12 2015/01/20 08:27:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.13 2015/03/26 19:55:38 tomka Exp $
+
+  26 Mar 2015; Thomas Kahle <tomka@gentoo.org> -freeorion-0.4.3.ebuild:
+  drop old
 
   20 Jan 2015; Thomas Kahle <tomka@gentoo.org> -files/ogre-1.9-compat.patch,
   freeorion-0.4.4.ebuild:

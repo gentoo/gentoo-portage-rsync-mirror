@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-git/selinux-git-9999.ebuild,v 1.1 2015/01/29 10:13:51 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-git/selinux-git-9999.ebuild,v 1.2 2015/03/26 19:32:47 perfinion Exp $
 EAPI="5"
 
 IUSE=""
@@ -15,3 +15,10 @@ if [[ $PV == 9999* ]] ; then
 else
 	KEYWORDS="~amd64 ~x86"
 fi
+
+DEPEND="${DEPEND}
+	sec-policy/selinux-apache
+"
+RDEPEND="${DEPEND}
+	sec-policy/selinux-apache
+"
