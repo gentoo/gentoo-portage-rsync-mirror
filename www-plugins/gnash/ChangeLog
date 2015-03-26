@@ -1,6 +1,12 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.103 2015/03/21 21:55:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.104 2015/03/26 14:59:41 chithanh Exp $
+
+*gnash-0.8.10_p20150316 (26 Mar 2015)
+
+  26 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +gnash-0.8.10_p20150316.ebuild:
+  New snapshot, bug #536256.
 
   21 Mar 2015; Manuel Rüger <mrueg@gentoo.org>
   -gnash-0.8.10_p20120903-r1.ebuild, -gnash-0.8.10_p20120903.ebuild,
