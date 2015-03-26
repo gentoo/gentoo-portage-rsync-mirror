@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.7_pre.ebuild,v 1.2 2015/03/24 17:22:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/Macaulay2-1.7_pre.ebuild,v 1.3 2015/03/26 10:17:49 tomka Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ DEPEND="${PYTHON_DEPS}
 
 RDEPEND="${PYTHON_DEPS}
 	sys-libs/gdbm
-	dev-libs/ntl
+	<dev-libs/ntl-7
 	sci-mathematics/pari[gmp]
 	>=sys-libs/readline-6.1
 	dev-libs/libxml2:2
