@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.68 2015/03/03 12:56:54 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.69 2015/03/27 09:21:05 leio Exp $
+
+*hicolor-icon-theme-0.15 (27 Mar 2015)
+
+  27 Mar 2015; Mart Raudsepp <leio@gentoo.org> +hicolor-icon-theme-0.15.ebuild:
+  Version bump. Adds location for applications to install symbolic app icons
+  themselves, expected/supported by GNOME 3.16. Version 0.14 added support for
+  512x512 icon directories and support for themes to add scalable variants of
+  icons for HiDPI usage (e.g have 48x48 icons scaled to 96x96 without getting
+  the 96x96 extra icon details, as those might be too hard to see on a HiDPI
+  screen)
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> hicolor-icon-theme-0.14.ebuild:
   add arm64 support, tested on A53 board

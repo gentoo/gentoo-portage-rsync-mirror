@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.4 2015/01/21 05:33:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/openxcom/openxcom-1.0.0.ebuild,v 1.5 2015/03/27 09:11:51 ago Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/SupSuper/OpenXcom/archive/v1.0.tar.gz -> ${P}.tar.gz
 
 LICENSE="GPL-3 CC-BY-SA-4.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-cpp/yaml-cpp-0.5.1

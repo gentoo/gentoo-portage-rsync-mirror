@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.16 2015/02/22 20:12:53 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/magiccube4d/magiccube4d-2.2.ebuild,v 1.17 2015/03/27 09:12:01 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -12,7 +12,7 @@ SRC_URI="http://www.superliminal.com/cube/mc4d-src-${MY_PV}.tgz"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="x11-libs/libXaw"

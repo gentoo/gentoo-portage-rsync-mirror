@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.113 2015/02/23 20:48:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.114 2015/03/27 09:11:26 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> emacs-common-gentoo-1.5.ebuild:
+  Stable for amd64, wrt bug #544448
 
 *emacs-common-gentoo-1.5 (23 Feb 2015)
 
