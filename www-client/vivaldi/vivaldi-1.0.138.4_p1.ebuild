@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.129.2_p1.ebuild,v 1.1 2015/03/17 05:24:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.138.4_p1.ebuild,v 1.1 2015/03/27 05:41:44 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -40,7 +40,6 @@ RDEPEND="
 	net-print/cups
 	sys-apps/dbus
 	sys-libs/libcap
-	virtual/libudev
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
@@ -93,9 +92,6 @@ src_prepare() {
 src_install() {
 	mv * "${D}" || die
 	dosym /${VIVALDI_HOME}/${PN} /usr/bin/${PN}
-
-	dodir /${VIVALDI_HOME}/lib
-	dosym /usr/$(get_libdir)/libudev.so /${VIVALDI_HOME}/lib/libudev.so.0
 
 	fperms 4711 /${VIVALDI_HOME}/${PN}-sandbox
 }
