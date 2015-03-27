@@ -7704,6 +7704,10 @@ x11-misc/dunst:dunstify - Experimental replacement for notify-send.
 x11-misc/etm:ical - Enable export of ical format files by depending on dev-python/icalendar
 x11-misc/fbpager:xrender - Enable transparency support via x11-libs/libXrender
 x11-misc/i3status:filecaps - Linux capabilities library is required for i3status to be able to read net bandwith
+x11-misc/light-locker:consolekit - Keep track of the various users, sessions, and seats present on the system.
+x11-misc/light-locker:dpms - Turn on the display on screensaver deactivation.
+x11-misc/light-locker:gtk3 - Build with GTK+ 3 instead of GTK+ 2.
+x11-misc/light-locker:screensaver - Lock the screen on screensaver activation.
 x11-misc/lightdm:gtk - Pull in the gtk+ greeter
 x11-misc/lightdm:introspection - Use dev-libs/gobject-introspection for introspection
 x11-misc/lightdm:kde - Pull in the kde greeter

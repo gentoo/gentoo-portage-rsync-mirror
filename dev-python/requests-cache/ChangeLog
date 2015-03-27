@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/requests-cache
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.15 2015/03/27 16:25:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-cache/ChangeLog,v 1.16 2015/03/27 17:00:09 jlec Exp $
+
+  27 Mar 2015; Justin Lecher <jlec@gentoo.org> -requests-cache-0.4.5.ebuild,
+  -requests-cache-0.4.6.ebuild, -requests-cache-0.4.8.ebuild, metadata.xml:
+  Drop old
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> requests-cache-0.4.9.ebuild:
   Stable for amd64, wrt bug #507316
