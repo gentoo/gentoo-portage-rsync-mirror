@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cssutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.37 2015/03/15 14:31:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.38 2015/03/27 22:54:05 mrueg Exp $
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -cssutils-0.9.9.ebuild:
+  Remove old.
 
   15 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -cssutils-0.9.10_beta1-r1.ebuild,
   -cssutils-0.9.10_beta1.ebuild:
