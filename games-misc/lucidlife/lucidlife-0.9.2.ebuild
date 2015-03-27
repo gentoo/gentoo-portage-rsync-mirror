@@ -1,13 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/lucidlife/lucidlife-0.9.2.ebuild,v 1.7 2015/02/06 21:28:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/lucidlife/lucidlife-0.9.2.ebuild,v 1.8 2015/03/27 04:26:24 mr_bones_ Exp $
 
 EAPI=5
-
 inherit autotools eutils games
 
 DESCRIPTION="A Conway's Life simulator written in GTK+2 - fork from Gtklife"
-HOMEPAGE="http://linux.softpedia.com/get/GAMES-ENTERTAINMENT/Simulation/LucidLife-26633.shtml"
+HOMEPAGE="http://gtk-apps.org/content/show.php/LucidLife?content=130867"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"

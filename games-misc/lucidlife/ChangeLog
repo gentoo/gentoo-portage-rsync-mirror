@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/lucidlife
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/lucidlife/ChangeLog,v 1.7 2015/02/06 21:28:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/lucidlife/ChangeLog,v 1.8 2015/03/27 04:26:24 mr_bones_ Exp $
+
+  27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> lucidlife-0.9.2.ebuild:
+  update HOMEPAGE (bug #533560)
 
   06 Feb 2015; Tupone Alfredo <tupone@gentoo.org> lucidlife-0.9.2.ebuild:
   EAPI 5
@@ -30,4 +33,3 @@
   +metadata.xml:
   Initial import, fixes bug #96852, thanks to Denilson (CrazyTB)
   <denilsonsa@gmail.com> for the inital ebuild on sunrise.
-
