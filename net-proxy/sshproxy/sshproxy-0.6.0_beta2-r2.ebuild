@@ -1,11 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.6 2014/01/08 06:24:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r2.ebuild,v 1.1 2015/03/27 08:17:06 idella4 Exp $
 
 EAPI="5"
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
 
-inherit distutils eutils user
+inherit distutils-r1 eutils user
 
 DESCRIPTION="sshproxy is an ssh gateway to apply ACLs on ssh connections"
 HOMEPAGE="http://sshproxy-project.org/"
@@ -21,16 +22,14 @@ IUSE="client-only mysql minimal"
 # client-only: install only the client wrappers
 
 DEPEND="!client-only? (
-		>=dev-python/paramiko-1.6.3
-		mysql? ( >=dev-python/mysql-python-1.2.0 )
+		>=dev-python/paramiko-1.6.3[${PYTHON_USEDEP}]
+		mysql? ( >=dev-python/mysql-python-1.2.0[${PYTHON_USEDEP}] )
 	)"
 RDEPEND="${DEPEND}
 		net-misc/openssh"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-
+	python-single-r1_pkg_setup
 	enewgroup sshproxy
 	enewuser sshproxy -1 -1 /var/lib/sshproxy sshproxy
 }
@@ -55,7 +54,7 @@ src_install () {
 	dobin bin/spssh
 
 	if ! use client-only; then
-		distutils_src_install
+		distutils-r1_src_install
 
 		diropts -o sshproxy -g sshproxy -m0750
 		keepdir /var/lib/sshproxy
