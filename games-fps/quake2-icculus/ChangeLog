@@ -1,6 +1,19 @@
 # ChangeLog for games-fps/quake2-icculus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.48 2014/07/04 08:19:46 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.49 2015/03/27 06:40:34 mr_bones_ Exp $
+
+  27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/quake2-icculus-0.16.1-ia64.patch, files/0.16-rogue-armor.patch,
+  files/0.16-rogue-nan.patch, files/quake2-icculus-0.16.1-alsa.patch,
+  files/quake2-icculus-0.16.1-amd64.patch,
+  files/quake2-icculus-0.16.1-gcc41.patch,
+  files/quake2-icculus-0.16.1-gentoo-paths.patch,
+  files/quake2-icculus-0.16.1-gnusource.patch,
+  files/quake2-icculus-0.16.1-ldflags.patch,
+  files/quake2-icculus-0.16.1-no-asm-io.patch,
+  files/quake2-icculus-0.16.1-x11_mouse.patch,
+  files/quake2-icculus-0.16.1-x11_soft.patch, quake2-icculus-0.16.1-r1.ebuild:
+  add support for ia64 with patch from Émeric Maschino via bug #509212
 
   04 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild:

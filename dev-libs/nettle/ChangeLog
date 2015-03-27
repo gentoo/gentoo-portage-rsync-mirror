@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.118 2015/02/28 21:35:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.119 2015/03/27 06:41:28 alonbl Exp $
+
+*nettle-2.7.1-r4 (27 Mar 2015)
+
+  27 Mar 2015; Alon Bar-Lev <alonbl@gentoo.org> +nettle-2.7.1-r4.ebuild:
+  Fix multilib issue, bug#543892
 
   28 Feb 2015; Robin H. Johnson <robbat2@gentoo.org> nettle-2.7.1-r2.ebuild:
   Oops, changed old r2 as well, revert.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.29 2014/07/04 08:19:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.30 2015/03/27 06:40:34 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs games
@@ -15,7 +15,7 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ppc sparc x86 ~x86-fbsd"
 IUSE="aalib alsa cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl X xatrix"
 
 UIDEPEND="aalib? ( media-libs/aalib )
@@ -39,17 +39,9 @@ S=${WORKDIR}/${MY_P}
 pkg_setup() {
 	games_pkg_setup
 
-	local alert_user
-
 	if ! use qmax && $( use opengl || use sdl ) ; then
-		einfo "The 'qmax' graphical improvements are recommended."
+		elog "The 'qmax' graphical improvements are recommended."
 		echo
-		alert_user=y
-	fi
-
-	if [[ -n "${alert_user}" ]] ; then
-		ebeep
-		epause
 	fi
 }
 
@@ -78,7 +70,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gnusource.patch \
 		"${FILESDIR}"/${P}-x11_soft.patch \
 		"${FILESDIR}"/${P}-x11_mouse.patch \
-		"${FILESDIR}"/${P}-alsa.patch
+		"${FILESDIR}"/${P}-alsa.patch \
+		"${FILESDIR}"/${P}-ia64.patch
 
 	if use xatrix ; then
 		epatch "${FILESDIR}/${P}"-gcc41.patch

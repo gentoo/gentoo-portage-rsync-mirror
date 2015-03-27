@@ -1,5 +1,5 @@
---- src/xatrix/g_local.h.old	2006-05-06 11:58:32.000000000 +0200
-+++ src/xatrix/g_local.h	2006-05-06 11:58:52.000000000 +0200
+--- src/xatrix/g_local.h.old
++++ src/xatrix/g_local.h
 @@ -446,11 +446,6 @@
  extern	int	sm_meat_index;
  extern	int	snd_fry;

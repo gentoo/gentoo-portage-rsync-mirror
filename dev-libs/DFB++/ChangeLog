@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DFB++
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.14 2012/05/04 18:35:55 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DFB++/ChangeLog,v 1.15 2015/03/27 06:48:15 mr_bones_ Exp $
+
+  27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  match support to dev-libs/DirectFB
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> DFB++-1.2.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

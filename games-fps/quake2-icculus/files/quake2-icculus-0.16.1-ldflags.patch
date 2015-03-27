@@ -1,5 +1,5 @@
---- Makefile.old	2010-09-15 09:31:41.000000000 +0200
-+++ Makefile	2010-09-15 10:13:01.000000000 +0200
+--- Makefile.old
++++ Makefile
 @@ -169,18 +169,18 @@
  DEBUG_CFLAGS=$(BASE_CFLAGS) -g
  

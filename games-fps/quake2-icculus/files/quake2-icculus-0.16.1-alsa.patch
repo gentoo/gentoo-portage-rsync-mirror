@@ -1,7 +1,7 @@
---- src/linux/snd_alsa.c.old	2012-03-28 19:22:06.533174832 +0200
-+++ src/linux/snd_alsa.c	2012-03-28 19:22:19.670009575 +0200
+--- src/linux/snd_alsa.c.old
++++ src/linux/snd_alsa.c
 @@ -22,13 +22,22 @@
- 	$Id: quake2-icculus-0.16.1-alsa.patch,v 1.1 2012/03/28 22:32:18 tupone Exp $
+ 	$Id: quake2-icculus-0.16.1-alsa.patch,v 1.2 2015/03/27 06:40:34 mr_bones_ Exp $
  */
  
 -#define BUFFER_SIZE 4096

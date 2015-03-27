@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-demodata
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.8 2015/01/31 16:33:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.9 2015/03/27 06:40:26 mr_bones_ Exp $
+
+  27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  quake2-demodata-3.14.ebuild:
+  add ia64 support (bug #509212)
 
   31 Jan 2015; Tupone Alfredo <tupone@gentoo.org> quake2-demodata-3.14.ebuild:
   EAPI 5
