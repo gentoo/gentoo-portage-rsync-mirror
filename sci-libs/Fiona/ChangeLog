@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/Fiona
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.6 2015/01/08 12:50:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.7 2015/03/27 21:09:18 slis Exp $
+
+  27 Mar 2015; Sławek Lis <slis@gentoo.org> +files/scriptname.patch,
+  Fiona-1.4.1.ebuild:
+  Fixed: 544240, updated dependencies
 
   08 Jan 2015; Justin Lecher <jlec@gentoo.org> Fiona-1.1.6.ebuild,
   Fiona-1.4.1.ebuild, Fiona-9999.ebuild:
