@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libwacom
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.24 2015/02/17 22:52:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.25 2015/03/27 03:07:31 tetromino Exp $
+
+*libwacom-0.12 (27 Mar 2015)
+
+  27 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libwacom-0.10.ebuild, +libwacom-0.12.ebuild:
+  Version bump (bug #544616, thanks to Chí-Thanh Christopher Nguyễn), adds
+  support for cintiq 27qhd, dtu-1031x, pen medium; improves udev rules to avoid
+  misidentifying as a joystick/touchpad.
 
 *libwacom-0.11 (17 Feb 2015)
 

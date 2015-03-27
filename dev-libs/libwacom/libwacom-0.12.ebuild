@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.10.ebuild,v 1.1 2014/10/25 10:21:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.12.ebuild,v 1.1 2015/03/27 03:07:31 tetromino Exp $
 
 EAPI=5
 inherit eutils udev
