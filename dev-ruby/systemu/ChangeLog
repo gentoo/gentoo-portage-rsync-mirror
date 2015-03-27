@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/systemu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.24 2014/04/24 16:50:32 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.25 2015/03/27 20:01:19 mrueg Exp $
+
+*systemu-2.6.5 (27 Mar 2015)
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +systemu-2.6.5.ebuild:
+  Version bump. Add ruby22.
 
   24 Apr 2014; Manuel Rüger <mrueg@gentoo.org> -systemu-2.6.0.ebuild:
   Cleanup old.
