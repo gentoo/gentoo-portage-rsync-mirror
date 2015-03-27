@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/majesty-demo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/ChangeLog,v 1.15 2014/10/13 15:44:00 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/ChangeLog,v 1.16 2015/03/27 02:33:01 mr_bones_ Exp $
+
+  27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  majesty-demo-1.0.0.ebuild:
+  EAPI=5; switch to LGP version of demo
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> majesty-demo-1.0.0.ebuild:
   Support multilib providers for deps.
