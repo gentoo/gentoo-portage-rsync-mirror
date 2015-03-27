@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.29 2015/03/20 12:40:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.31 2015/03/27 10:15:31 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> bcat-0.6.2-r1.ebuild:
+  Stable for x86, wrt bug #542574
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> bcat-0.6.2-r1.ebuild:
+  Stable for amd64, wrt bug #542574
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> bcat-0.6.2-r2.ebuild:
   Add ruby22.

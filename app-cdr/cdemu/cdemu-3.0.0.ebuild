@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-3.0.0.ebuild,v 1.1 2015/02/21 22:55:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-3.0.0.ebuild,v 1.3 2015/03/27 10:15:11 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/cdemu/cdemu-client-${PV}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE="+cdemu-daemon"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

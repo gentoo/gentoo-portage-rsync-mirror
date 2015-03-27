@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-3.0.3.ebuild,v 1.1 2015/02/21 22:55:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/libmirage-3.0.3.ebuild,v 1.3 2015/03/27 10:15:05 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0/10" # subslot = libmirage soname version
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE="doc +introspection"
 
 RDEPEND=">=app-arch/bzip2-1:=
