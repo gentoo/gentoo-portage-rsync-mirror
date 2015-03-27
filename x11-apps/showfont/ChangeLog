@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/showfont
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/showfont/ChangeLog,v 1.41 2013/10/08 05:02:59 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/showfont/ChangeLog,v 1.42 2015/03/26 23:45:03 chithanh Exp $
+
+*showfont-1.0.5 (26 Mar 2015)
+
+  26 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +showfont-1.0.5.ebuild, -showfont-1.0.3.ebuild:
+  Version bump. Remove old.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> showfont-1.0.4.ebuild:
   Stable for x86, wrt bug #475480

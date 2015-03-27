@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.57 2015/02/18 19:08:02 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.58 2015/03/26 23:58:39 idella4 Exp $
+
+*nicotine+-1.2.16-r1 (26 Mar 2015)
+
+  26 Mar 2015; Ian Delaney <idella4@gentoo.org> +nicotine+-1.2.16-r1.ebuild:
+  revbump; conversion -> distutils-r1, endorsed by maintainer in bug #543002
 
   18 Feb 2015; Ryan Hill <rhill@gentoo.org> nicotine+-1.2.16.ebuild:
   Add dependency on librsvg (bug #523292).
@@ -229,4 +234,3 @@
   +files/nicotine-n.png, +metadata.xml, +nicotine+-1.2.3.ebuild:
   Initial import, fork of nicotine project, bug #139377. Ebuild by Josu Lopez
   Fernandez <zamorate@zamorate.net>.
-
