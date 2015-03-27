@@ -1,14 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ris-linux/ris-linux-0.4.ebuild,v 1.2 2011/08/09 19:17:52 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ris-linux/ris-linux-0.4-r1.ebuild,v 1.1 2015/03/27 07:28:11 idella4 Exp $
 
-EAPI=3
+EAPI=5
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
 
-inherit distutils python
+inherit distutils-r1
 
 DESCRIPTION="BINL server to doing Windows(r) RIS"
 HOMEPAGE="http://oss.netfarm.it/guides/pxe.php"
@@ -26,13 +25,13 @@ RDEPEND="${DEPEND}
 	net-fs/samba
 	sys-boot/syslinux"
 
-src_prepare(){
+python_prepare_all(){
 	sed "s:VERSION:${PV}:" "${FILESDIR}"/setup.py > "${S}"/setup.py
-	distutils_src_prepare
+	distutils-r1_python_prepare_all
 }
 
-src_install() {
-	distutils_src_install
+python_install_all() {
+	distutils-r1_python_install_all
 
 	newinitd "${FILESDIR}"/binlsrv.initd binlsrv
 	newconfd "${FILESDIR}"/binlsrv.confd binlsrv

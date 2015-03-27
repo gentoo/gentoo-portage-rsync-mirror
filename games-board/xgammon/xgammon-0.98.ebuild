@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.16 2015/01/08 08:58:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.17 2015/03/27 07:20:13 mr_bones_ Exp $
 
 EAPI=5
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils games
 
 DESCRIPTION="very nice backgammon game for X"
 HOMEPAGE="http://fawn.unibw-hamburg.de/steuer/xgammon/xgammon.html"
@@ -29,7 +29,7 @@ src_prepare() {
 }
 
 src_configure() {
-	xmkmf || die "xmkmf died"
+	xmkmf || die
 }
 
 src_compile() {
