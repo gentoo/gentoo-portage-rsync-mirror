@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.4.0.ebuild,v 1.1 2015/03/23 07:14:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.4.0.ebuild,v 1.2 2015/03/27 20:39:55 vapier Exp $
 
 EAPI="4"
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-no-speller.patch #544296
 	epatch_user
 }
 
