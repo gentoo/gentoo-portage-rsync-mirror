@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004-demo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.49 2014/10/15 11:06:04 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.50 2015/03/26 23:09:23 mr_bones_ Exp $
+
+  26 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> ut2004-demo-3334.ebuild:
+  remove unused empty dodir (bug #534584)
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> ut2004-demo-3334.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.

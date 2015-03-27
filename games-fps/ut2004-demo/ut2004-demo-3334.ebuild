@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.23 2014/10/15 11:06:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.24 2015/03/26 23:09:23 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils unpacker games
 
 MY_P="ut2004-lnx-demo${PV}.run"
@@ -13,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}"
 
 LICENSE="ut2003-demo"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* amd64 x86"
 RESTRICT="strip"
 IUSE=""
 
@@ -47,15 +46,15 @@ src_unpack() {
 src_install() {
 	dodir "${dir}"
 
-	tar xjf ut2004demo.tar.bz2 -C "${Ddir}" || die "unpacking ut2004 failed"
+	tar xjf ut2004demo.tar.bz2 -C "${Ddir}" || die
 
 	if use x86
 	then
-		tar xjf linux-x86.tar.bz2 || die "unpacking exe"
+		tar xjf linux-x86.tar.bz2 || die
 	fi
 	if use amd64
 	then
-		tar xjf linux-amd64.tar.bz2 || die "unpacking exe"
+		tar xjf linux-amd64.tar.bz2 || die
 	fi
 
 	insinto "${dir}"
@@ -68,7 +67,6 @@ src_install() {
 	exeinto "${dir}"/System
 	doexe System/{libSDL-1.2.so.0,openal.so,ucc-bin,ut2004-bin}
 
-	dodir
 	games_make_wrapper ut2004-demo ./ut2004-demo "${dir}" "${dir}"
 	make_desktop_entry ut2004-demo "Unreal Tournament 2004 (Demo)" ut2004-demo
 

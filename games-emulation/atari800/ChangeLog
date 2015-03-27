@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/atari800
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.40 2015/03/25 13:53:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/ChangeLog,v 1.41 2015/03/26 23:06:52 reavertm Exp $
+
+  26 Mar 2015; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/atari800-3.1.0-tgetent-detection.patch, atari800-3.1.0.ebuild:
+  Look for tgetent also in tinfow, fixes bug 544608.
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> atari800-3.1.0.ebuild:
   Stable for x86, wrt bug #544244
