@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.91 2015/03/16 09:30:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.92 2015/03/27 14:47:37 voyageur Exp $
+
+  27 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> nx-3.5.0.20.ebuild,
+  nx-3.5.0.28.ebuild, nx-3.5.0.30.ebuild:
+  No need to depend on libtirpc (yet), thanks F. Kater <fkater@googlemail.com>
+  in bug #370767
 
 *nx-3.5.0.30 (16 Mar 2015)
 

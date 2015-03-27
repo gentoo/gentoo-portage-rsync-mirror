@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.20.ebuild,v 1.4 2014/08/22 08:20:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.20.ebuild,v 1.5 2015/03/27 14:47:37 voyageur Exp $
 
 EAPI=4
 inherit autotools eutils multilib
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="elibc_glibc"
 
-RDEPEND="elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) )
-	>=media-libs/libpng-1.2.8
+RDEPEND=">=media-libs/libpng-1.2.8
 	>=sys-libs/zlib-1.2.3
 	virtual/jpeg"
 

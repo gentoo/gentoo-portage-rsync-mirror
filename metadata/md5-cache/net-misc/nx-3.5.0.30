@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare
-DEPEND=elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) ) media-libs/freetype:2 >=media-libs/libpng-1.2.8:* >=sys-libs/zlib-1.2.3 virtual/jpeg:* x11-libs/libfontenc x11-misc/gccmakedep x11-misc/imake x11-proto/inputproto !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=media-libs/freetype:2 >=media-libs/libpng-1.2.8:* >=sys-libs/zlib-1.2.3 virtual/jpeg:* x11-libs/libfontenc x11-misc/gccmakedep x11-misc/imake x11-proto/inputproto !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=NX compression technology core libraries
 EAPI=5
 HOMEPAGE=http://www.x2go.org/doku.php/wiki:libs:nx-libs
 IUSE=elibc_glibc
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
-RDEPEND=elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) ) media-libs/freetype:2 >=media-libs/libpng-1.2.8:* >=sys-libs/zlib-1.2.3 virtual/jpeg:*
+RDEPEND=media-libs/freetype:2 >=media-libs/libpng-1.2.8:* >=sys-libs/zlib-1.2.3 virtual/jpeg:*
 SLOT=0
 SRC_URI=http://code.x2go.org/releases/source/nx-libs/nx-libs-3.5.0.30-full.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=22d03ce7fc04f3e2f4ca687c97e98c22
+_md5_=a6c983339b1d0dea08a2e3e065238dae
