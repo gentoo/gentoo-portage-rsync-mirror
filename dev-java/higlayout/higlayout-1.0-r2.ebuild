@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/higlayout/higlayout-1.0-r2.ebuild,v 1.1 2014/09/06 16:45:00 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/higlayout/higlayout-1.0-r2.ebuild,v 1.2 2015/03/27 09:53:01 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.autel.cz/dmi/HIGLayout${PV}.zip"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4

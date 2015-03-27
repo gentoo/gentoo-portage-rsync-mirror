@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/jcodings-1.0.11.ebuild,v 1.1 2014/05/03 20:39:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/jcodings-1.0.11.ebuild,v 1.2 2015/03/27 09:53:46 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jruby/${PN}/archive/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 
 RDEPEND=">=virtual/jre-1.5"
 DEPEND=">=virtual/jdk-1.5

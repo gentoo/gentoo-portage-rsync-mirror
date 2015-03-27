@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/jid3-0.46-r2.ebuild,v 1.1 2014/02/19 13:55:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/jid3-0.46-r2.ebuild,v 1.2 2015/03/27 09:54:02 ago Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ SRC_URI="http://jid3.blinkenlights.org/release/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 S="${WORKDIR}/${MY_P}"
 

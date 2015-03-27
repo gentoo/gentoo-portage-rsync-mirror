@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-3.0.ebuild,v 1.2 2014/08/10 20:09:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-3.0.ebuild,v 1.3 2015/03/27 09:54:57 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.jar"
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 IUSE=""
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1-r4.ebuild,v 1.1 2014/09/06 06:36:11 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/soap/soap-2.3.1-r4.ebuild,v 1.2 2015/03/27 09:54:27 ago Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://archive.apache.org/dist/ws/soap/version-${PV}/soap-src-${PV}.tar
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 CDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jid3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.9 2014/02/19 13:55:59 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jid3/ChangeLog,v 1.10 2015/03/27 09:54:02 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> jid3-0.46-r2.ebuild:
+  Stable for amd64, wrt bug #535082
 
 *jid3-0.46-r2 (19 Feb 2014)
 

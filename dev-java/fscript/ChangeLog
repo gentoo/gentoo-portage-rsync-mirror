@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fscript
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.18 2014/09/06 16:33:20 ercpe Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.19 2015/03/27 09:52:51 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> fscript-1.17-r1.ebuild:
+  Stable for amd64, wrt bug #535056
 
 *fscript-1.17-r1 (06 Sep 2014)
 

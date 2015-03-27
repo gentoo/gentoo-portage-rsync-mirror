@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcodings
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.15 2014/06/17 10:56:33 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcodings/ChangeLog,v 1.16 2015/03/27 09:53:46 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> jcodings-1.0.11.ebuild:
+  Stable for amd64, wrt bug #535076
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -jcodings-1.0.2.ebuild:
   NM: Cleanup superseeded ebuilds.

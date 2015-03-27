@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.135 2015/03/26 15:17:05 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.136 2015/03/27 09:45:23 ultrabug Exp $
+
+  27 Mar 2015; Ultrabug <ultrabug@gentoo.org> rsyslog-8.7.0-r2.ebuild,
+  +files/8-stable/50-rsyslog-add-option-to-disable-valgrind-usage-in-testbench.
+  patch:
+  disable failing valgrind test by Thomas D.
 
 *rsyslog-8.7.0-r2 (26 Mar 2015)
 

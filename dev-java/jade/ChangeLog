@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jade
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.23 2014/03/01 17:12:45 ercpe Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/ChangeLog,v 1.24 2015/03/27 09:53:16 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> jade-3.3-r2.ebuild:
+  Stable for amd64, wrt bug #535066
 
 *jade-3.3-r2 (01 Mar 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/fscript-1.17-r1.ebuild,v 1.1 2014/09/06 16:33:20 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/fscript-1.17-r1.ebuild,v 1.2 2015/03/27 09:52:51 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4"

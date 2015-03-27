@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blowfishj
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.15 2014/07/14 08:30:52 ercpe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.16 2015/03/27 09:55:28 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> blowfishj-2.14-r2.ebuild:
+  Stable for amd64, wrt bug #535032
 
 *blowfishj-2.14-r2 (14 Jul 2014)
 
