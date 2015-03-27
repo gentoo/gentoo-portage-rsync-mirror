@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mms-agent/mms-agent-3.1.0.175_p1.ebuild,v 1.1 2015/03/17 13:42:16 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mms-agent/mms-agent-3.1.0.175_p1.ebuild,v 1.2 2015/03/27 17:27:41 ultrabug Exp $
 
 EAPI=5
 
@@ -28,6 +28,11 @@ RDEPEND="!<dev-db/mongodb-3.0.0[mms-agent]"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}
+
+pkg_setup() {
+	enewgroup mongodb
+	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
+}
 
 src_install() {
 	if use amd64; then
