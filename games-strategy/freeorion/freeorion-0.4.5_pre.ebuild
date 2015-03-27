@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.4.ebuild,v 1.2 2015/01/20 08:27:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/freeorion-0.4.5_pre.ebuild,v 1.1 2015/03/27 14:05:26 tomka Exp $
 
 EAPI=5
 
@@ -9,8 +9,7 @@ inherit cmake-utils python-any-r1 games
 
 DESCRIPTION="A free turn-based space empire and galactic conquest game"
 HOMEPAGE="http://www.freeorion.org"
-SRC_URI="http://dev.gentoo.org/~tomka/files/${P}.tar.bz2
-		 http://dev.gentoo.org/~tomka/files/${P}-ogre-1.9-compat.patch.bz2"
+SRC_URI="http://dev.gentoo.org/~tomka/files/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 CC-BY-SA-3.0"
 SLOT="0"
@@ -21,8 +20,7 @@ IUSE="cg"
 # The split version dev-games/gigi is not used anymore as of 0.4.3
 RDEPEND="
 	!dev-games/gigi
-	dev-games/ogre[cg?,ois,opengl]
-	dev-games/ois
+	media-libs/libsdl2
 	>=dev-libs/boost-1.47[python]
 	media-libs/freealut
 	media-libs/libogg
@@ -46,24 +44,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# set OGRE plugin-dir
-	sed \
-		-e "s:PluginFolder=.*$:PluginFolder=$(pkg-config --variable=plugindir OGRE):" \
-		-i "${CMAKE_USE_DIR}"/ogre_plugins.cfg.in || die
-
-	if use cg ; then
-		# add cg ogre plugin to config
-		echo "Plugin=Plugin_CgProgramManager" \
-			>> "${CMAKE_USE_DIR}"/ogre_plugins.cfg || die
-	fi
-
-	epatch "${WORKDIR}/${P}-ogre-1.9-compat.patch"
-
 	# parse subdir sets -O3
 	sed -e "s:-O3::" -i parse/CMakeLists.txt
 
 	# set revision for display in game -- update on bump!
-	sed -i -e 's/???/7708/' CMakeLists.txt
+	sed -i -e 's/???/8051/' CMakeLists.txt
 }
 
 src_configure() {
@@ -95,16 +80,6 @@ src_install() {
 	# lib
 	dogameslib "${CMAKE_BUILD_DIR}"/libfreeorion{common,parse}.so || die
 	dogameslib "${CMAKE_BUILD_DIR}"/libGiGi*.so || die
-
-	# config
-	insinto "${GAMES_SYSCONFDIR}"/${PN}
-	doins "${CMAKE_BUILD_DIR}"/ogre_plugins.cfg || die
-	doins "${CMAKE_USE_DIR}"/OISInput.cfg || die
-	# game uses relative paths
-	dosym "${GAMES_SYSCONFDIR}"/${PN}/ogre_plugins.cfg \
-		"${GAMES_DATADIR}"/${PN}/ogre_plugins.cfg || die
-	dosym "${GAMES_SYSCONFDIR}"/${PN}/OISInput.cfg \
-		"${GAMES_DATADIR}"/${PN}/OISInput.cfg || die
 
 	# other
 	dodoc "${CMAKE_USE_DIR}"/changelog.txt || die
