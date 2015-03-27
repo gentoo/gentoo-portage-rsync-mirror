@@ -4,10 +4,10 @@ DESCRIPTION=Development library for simulation games
 EAPI=5
 HOMEPAGE=http://www.simgear.org/
 IUSE=debug subversion test
-KEYWORDS=amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=dev-libs/expat >=dev-games/openscenegraph-3.2.0 media-libs/openal sys-libs/zlib virtual/opengl subversion? ( dev-vcs/subversion )
 SLOT=0
 SRC_URI=http://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/simgear-3.2.0.tar.bz2
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=b43e4b2e74bcb1a35ee56e27c1605739
+_md5_=d282280570f012d75bdf581f320cba05

@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.77 2015/03/06 21:51:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.78 2015/03/27 10:32:54 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> flightgear-3.2.0.ebuild:
+  Stable for x86, wrt bug #541288
 
   06 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> flightgear-3.2.0.ebuild:
   amd64 stable wrt bug #541288

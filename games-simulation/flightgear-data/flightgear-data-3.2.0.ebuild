@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear-data/flightgear-data-3.2.0.ebuild,v 1.2 2015/03/06 21:50:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear-data/flightgear-data-3.2.0.ebuild,v 1.3 2015/03/27 10:32:50 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://flightgear/Shared/FlightGear-data-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 # data files split to separate package since 2.10.0
