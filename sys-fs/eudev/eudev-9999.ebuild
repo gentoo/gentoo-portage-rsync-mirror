@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.65 2015/02/12 00:57:47 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-9999.ebuild,v 1.66 2015/03/27 15:49:37 blueness Exp $
 
 EAPI="5"
 
@@ -122,6 +122,7 @@ multilib_src_configure() {
 		DBUS_CFLAGS=' '
 		DBUS_LIBS=' '
 		--with-rootprefix=
+		--with-rootrundir=/run
 		--docdir=/usr/share/doc/${PF}
 		--libdir=/usr/$(get_libdir)
 		--with-rootlibexecdir=/lib/udev
