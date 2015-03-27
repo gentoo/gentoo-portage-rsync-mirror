@@ -3653,7 +3653,6 @@ media-libs/evas:wayland - Add support for dev-libs/wayland
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/flickcurl:raptor - Use media-libs/raptor for proper RDF serializing
 media-libs/fontconfig-infinality:nyx - Additional style using croscorefonts
-media-libs/freeglut:mpx - Enable support for multi-pointer-X. One pointer for each pointer device.
 media-libs/freetype:adobe-cff - Use Adobe CFF as default font-renderer
 media-libs/freetype:auto-hinter - Use the unpatented auto-hinter instead of the (recommended) TrueType bytecode interpreter
 media-libs/freetype:bzip2 - Support bzip2 compressed PCF fonts.

@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.118 2015/03/03 08:24:11 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.119 2015/03/27 00:43:55 chithanh Exp $
+
+*freeglut-3.0.0 (27 Mar 2015)
+
+  27 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +freeglut-3.0.0.ebuild, -files/2.6.0-GFX_radeon.patch, -freeglut-2.6.0.ebuild,
+  -freeglut-2.8.0-r1.ebuild, -freeglut-2.8.0.ebuild, -freeglut-2.8.1.ebuild,
+  metadata.xml:
+  Version bump. Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> freeglut-2.8.1-r1.ebuild:
   add arm64 support, tested on A53 board
