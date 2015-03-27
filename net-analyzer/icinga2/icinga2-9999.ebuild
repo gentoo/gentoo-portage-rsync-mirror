@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-9999.ebuild,v 1.4 2015/03/13 21:11:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/icinga2-9999.ebuild,v 1.5 2015/03/27 19:47:42 prometheanfire Exp $
 
 EAPI=5
 inherit cmake-utils depend.apache eutils git-2 systemd toolchain-funcs user versionator
 
-DESCRIPTION="Distributed, general purpose, network monitoring engine."
+DESCRIPTION="Distributed, general purpose, network monitoring engine"
 HOMEPAGE="http://icinga.org/icinga2"
 EGIT_REPO_URI="http://github.com/Icinga/icinga2.git"
 EGIT_BRANCH="master"
@@ -13,24 +13,26 @@ EGIT_BRANCH="master"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="+mysql postgres classicui nano-syntax +plugins +vim-syntax"
+IUSE="+mysql postgres classicui minimal nano-syntax +plugins +vim-syntax"
 
-DEPEND="dev-util/cmake
-		dev-libs/openssl
-		>=dev-libs/boost-1.41
-		sys-devel/bison
-		>=sys-devel/flex-2.5.35
-		mysql? ( virtual/mysql )
-		postgres? ( dev-db/postgresql )"
+DEPEND="
+	dev-util/cmake
+	dev-libs/openssl
+	>=dev-libs/boost-1.41
+	sys-devel/bison
+	>=sys-devel/flex-2.5.35
+	mysql? ( virtual/mysql )
+	postgres? ( dev-db/postgresql )"
 
-RDEPEND="${DEPEND}
+RDEPEND="
+	${DEPEND}
 	plugins? ( || (
 		net-analyzer/monitoring-plugins
 		net-analyzer/nagios-plugins
 	) )
 	classicui? ( net-analyzer/icinga[web] )"
 
-REQUIRED_USE="|| ( mysql postgres )"
+REQUIRED_USE="!minimal? ( || ( mysql postgres ) )"
 
 want_apache2
 
