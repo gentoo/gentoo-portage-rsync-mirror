@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/mcollective-2.8.0.ebuild,v 1.1 2015/02/16 19:41:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/mcollective-2.8.0.ebuild,v 1.2 2015/03/27 16:28:18 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="http://puppetlabs.com/downloads/mcollective/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc +client"
 
 DEPEND=""

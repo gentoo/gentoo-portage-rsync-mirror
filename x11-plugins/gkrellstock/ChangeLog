@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellstock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/ChangeLog,v 1.17 2015/03/24 19:50:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/ChangeLog,v 1.18 2015/03/27 16:27:37 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gkrellstock-0.5-r1.ebuild:
+  Stable for amd64, wrt bug #543926
 
 *gkrellstock-0.5.1 (24 Mar 2015)
 

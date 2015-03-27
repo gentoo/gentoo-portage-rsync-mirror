@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rescan-scsi-bus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.43 2015/03/19 18:30:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.44 2015/03/27 16:28:43 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rescan-scsi-bus-1.57-r1.ebuild:
+  Stable for amd64, wrt bug #530402
 
   19 Mar 2015; Jeroen Roovers <jer@gentoo.org> rescan-scsi-bus-1.57-r1.ebuild:
   Stable for HPPA (bug #530402).

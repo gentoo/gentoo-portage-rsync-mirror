@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/alien
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.55 2015/03/19 18:23:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.56 2015/03/27 16:25:40 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> alien-8.90.ebuild:
+  Stable for amd64, wrt bug #534808
 
   19 Mar 2015; Jeroen Roovers <jer@gentoo.org> alien-8.90.ebuild:
   Stable for HPPA (bug #534808).

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.5.13.ebuild,v 1.1 2014/06/13 20:17:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/FTL-1.5.13.ebuild,v 1.2 2015/03/27 16:16:11 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="FTL.${PV}.tar.gz"
 
 LICENSE="all-rights-reserved Boost-1.0 free-noncomm MIT bundled-libs? ( FTL LGPL-2.1 ZLIB libpng )"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="fetch bindist splitdebug"
 

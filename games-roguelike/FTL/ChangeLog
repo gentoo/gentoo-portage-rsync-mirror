@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/FTL
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/ChangeLog,v 1.20 2014/11/26 09:25:52 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/FTL/ChangeLog,v 1.21 2015/03/27 16:16:11 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> FTL-1.5.13.ebuild:
+  Stable for amd64/x86, wrt bug #518238
 
   26 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   udpate meatadata.xml, add Alex Xu as maintainer

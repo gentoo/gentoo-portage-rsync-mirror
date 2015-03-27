@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/isatapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/isatapd/ChangeLog,v 1.4 2015/02/27 09:46:00 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/isatapd/ChangeLog,v 1.5 2015/03/27 16:25:20 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> isatapd-0.9.7-r2.ebuild:
+  Stable for amd64, wrt bug #535600
 
 *isatapd-0.9.7-r2 (27 Feb 2015)
 

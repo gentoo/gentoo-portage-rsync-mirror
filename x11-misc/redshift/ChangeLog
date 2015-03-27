@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.32 2015/01/26 00:18:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.33 2015/03/27 16:27:17 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> redshift-1.10.ebuild:
+  Stable for amd64, wrt bug #539056
 
 *redshift-1.10 (26 Jan 2015)
 

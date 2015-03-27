@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.76 2015/01/19 08:27:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.77 2015/03/27 16:26:06 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pydot-1.0.28-r2.ebuild:
+  Stable for amd64, wrt bug #535448
 
   19 Jan 2015; Ian Delaney <idella4@gentoo.org> pydot-1.0.28-r2.ebuild:
   correction to dep graphviz, fixes Bug #537014

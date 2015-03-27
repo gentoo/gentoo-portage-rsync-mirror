@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knock
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.53 2014/07/30 21:54:50 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knock/ChangeLog,v 1.54 2015/03/27 16:27:27 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> knock-0.7.ebuild:
+  Stable for amd64, wrt bug #535602
 
 *knock-0.7 (30 Jul 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html2text
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.20 2014/12/20 12:42:00 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html2text/ChangeLog,v 1.21 2015/03/27 16:26:47 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> html2text-2014.4.5-r1.ebuild:
+  Stable for amd64, wrt bug #530474
 
   20 Dec 2014; Ian Delaney <idella4@gentoo.org> -html2text-3.02.ebuild,
   -html2text-3.200.3-r1.ebuild:

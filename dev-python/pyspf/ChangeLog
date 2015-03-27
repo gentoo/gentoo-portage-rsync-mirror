@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.29 2015/01/25 09:31:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.30 2015/03/27 16:26:31 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pyspf-2.0.10.ebuild:
+  Stable for amd64, wrt bug #537634
 
 *pyspf-2.0.11 (25 Jan 2015)
 

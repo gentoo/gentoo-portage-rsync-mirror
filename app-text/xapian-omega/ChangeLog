@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xapian-omega
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.57 2015/03/24 20:07:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xapian-omega/ChangeLog,v 1.58 2015/03/27 16:27:00 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> xapian-omega-1.2.19.ebuild:
+  Stable for amd64, wrt bug #531758
 
   24 Mar 2015; Markus Meier <maekke@gentoo.org> xapian-omega-1.2.19.ebuild:
   arm stable, bug #531758

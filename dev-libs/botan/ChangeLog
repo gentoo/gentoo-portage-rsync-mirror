@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.88 2015/02/02 16:38:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.89 2015/03/27 16:30:11 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> botan-1.10.5.ebuild:
+  Stable for amd64, wrt bug #529416
 
   02 Feb 2015; Jeroen Roovers <jer@gentoo.org> botan-1.10.1.ebuild,
   botan-1.10.3.ebuild, botan-1.10.3-r1.ebuild, botan-1.10.5.ebuild,

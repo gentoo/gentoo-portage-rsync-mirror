@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.78 2015/02/07 20:13:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.79 2015/03/27 16:26:21 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mediastreamer-2.9.0.ebuild:
+  Stable for amd64, wrt bug #510690
 
 *mediastreamer-2.9.0-r1 (07 Feb 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-1.0.1.ebuild,v 1.4 2015/02/05 10:28:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-1.0.1.ebuild,v 1.5 2015/03/27 16:29:54 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xstow/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="ncurses"
 
 DEPEND="ncurses? ( sys-libs/ncurses )"

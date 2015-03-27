@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/ChangeLog,v 1.8 2015/01/04 17:45:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/ChangeLog,v 1.9 2015/03/27 16:25:35 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mc-1.5.ebuild:
+  Stable for amd64, wrt bug #534668
 
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> mc-1.5.ebuild, metadata.xml:
   Bump EAPI
@@ -39,4 +42,3 @@
   +mc-1.4.ebuild, +files/1.4-overflow.patch, +files/1.4-superlu.patch,
   +metadata.xml:
   New addition
-

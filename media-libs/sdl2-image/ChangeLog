@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl2-image
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-image/ChangeLog,v 1.4 2015/01/22 08:20:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-image/ChangeLog,v 1.5 2015/03/27 16:26:26 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sdl2-image-2.0.0-r1.ebuild:
+  Stable for amd64, wrt bug #537328
 
   22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org> -sdl2-image-2.0.0.ebuild:
   old

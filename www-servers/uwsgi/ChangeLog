@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.72 2015/03/17 11:23:21 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.73 2015/03/27 16:27:43 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> uwsgi-2.0.9.ebuild:
+  Stable for amd64, wrt bug #529140
 
 *uwsgi-2.0.10 (17 Mar 2015)
 

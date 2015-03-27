@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.52 2015/03/04 23:51:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.53 2015/03/27 16:30:21 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sflowtool-3.34.ebuild:
+  Stable for amd64, wrt bug #535542
 
 *sflowtool-3.35 (04 Mar 2015)
 

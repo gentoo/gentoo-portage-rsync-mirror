@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.250 2015/03/21 17:11:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.251 2015/03/27 16:30:27 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.6.ebuild:
+  Stable for amd64, wrt bug #540408
 
   21 Mar 2015; Mike Frysinger <vapier@gentoo.org> libtool-2.4.6.ebuild:
   Mark arm64/ia64/m68k/s390/sh stable #540408.

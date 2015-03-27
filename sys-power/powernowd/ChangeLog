@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powernowd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.26 2014/12/03 12:39:26 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.27 2015/03/27 16:25:15 ago Exp $
+
+  27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> powernowd-1.00-r3.ebuild:
+  Stable for amd64, wrt bug #535686
 
 *powernowd-1.00-r3 (03 Dec 2014)
 
