@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/connection_pool-2.0.0.ebuild,v 1.1 2014/05/16 18:42:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/connection_pool-2.1.3.ebuild,v 1.1 2015/03/27 06:13:59 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rake"
 RUBY_FAKEGEM_RECIPE_DOC="none"
@@ -23,4 +23,5 @@ ruby_add_bdepend "test? ( >=dev-ruby/minitest-5 )"
 
 all_ruby_prepare() {
 	sed -i -e '/git ls-files/d' connection_pool.gemspec || die
+	sed -i -e '/bundler/d' Rakefile || die
 }

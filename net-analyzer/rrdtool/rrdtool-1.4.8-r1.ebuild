@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.15 2015/03/25 16:10:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.8-r1.ebuild,v 1.16 2015/03/27 06:18:00 jer Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ CDEPEND="
 		>=x11-libs/cairo-1.10.2[svg,static-libs(+)?]
 		>=x11-libs/pango-1.28
 	)
-	lua? ( dev-lang/lua:0[deprecated] )
+	lua? ( dev-lang/lua:*[deprecated] )
 	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
 	tcl? ( dev-lang/tcl:0= )
@@ -48,12 +48,12 @@ PDEPEND="
 "
 
 python_compile() {
-	cd bindings/python || die 'can not enter to python bindings directory'
+	cd bindings/python || die
 	distutils-r1_python_compile
 }
 
 python_install() {
-	cd bindings/python || die 'can not enter to python bindings directory'
+	cd bindings/python || die
 	distutils-r1_python_install
 }
 
