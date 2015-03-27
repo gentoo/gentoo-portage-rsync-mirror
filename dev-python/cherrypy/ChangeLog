@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cherrypy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.70 2014/12/20 03:54:09 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.71 2015/03/27 22:00:40 mrueg Exp $
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -cherrypy-3.1.2.ebuild:
+  Remove old.
 
   20 Dec 2014; Ian Delaney <idella4@gentoo.org> -cherrypy-2.3.0.ebuild,
   -cherrypy-3.2.0.ebuild, -cherrypy-3.2.1.ebuild, -cherrypy-3.2.2-r1.ebuild,
