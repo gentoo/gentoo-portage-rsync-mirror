@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-4.3.ebuild,v 1.4 2014/10/12 09:05:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenvwrapper/virtualenvwrapper-4.3.2.ebuild,v 1.1 2015/03/27 04:31:49 idella4 Exp $
 
 EAPI=5
 
@@ -16,21 +16,21 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-# testsuite doesn't work out of the box.  Demand of a virtualenv outstrips setup by the exlass
+# testsuite doesn't work out of the box.  Demand of a virtualenv outstrips setup by the eclass
 RESTRICT=test
 
 RDEPEND="dev-python/virtualenv[${PYTHON_USEDEP}]
-	dev-python/stevedore[${PYTHON_USEDEP}]
+	>=dev-python/stevedore-0.15-r1[${PYTHON_USEDEP}]
 	dev-python/virtualenv-clone[${PYTHON_USEDEP}]"
 DEPEND="${DEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/pbr[${PYTHON_USEDEP}]
-	test? ( dev-python/tox[${PYTHON_USEDEP}] )"
+	dev-python/pbr[${PYTHON_USEDEP}]"
 
+# Keep just in case
 src_prepare() {
 	sed -e 's:-o shwordsplit::' -i tests/run_tests || die
 }
 
 python_test() {
-	tox tests/test_cp.sh || die "Tests failed under ${EPYTHON}"
+	bash ./tests/run_tests || die "Tests failed under ${EPYTHON}"
 }
