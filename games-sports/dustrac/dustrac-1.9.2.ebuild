@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/dustrac-1.9.2.ebuild,v 1.1 2015/02/27 17:42:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/dustrac-1.9.2.ebuild,v 1.2 2015/03/27 18:37:43 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils cmake-utils games
@@ -24,6 +24,7 @@ RDEPEND="
 	media-libs/openal
 	virtual/opengl"
 DEPEND="${RDEPEND}
+	dev-qt/qttest:5
 	virtual/pkgconfig"
 
 src_prepare() {

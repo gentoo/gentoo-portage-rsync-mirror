@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/dustrac
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/ChangeLog,v 1.9 2015/03/12 18:34:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/ChangeLog,v 1.10 2015/03/27 18:37:43 mr_bones_ Exp $
+
+  27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> dustrac-1.9.2.ebuild:
+  add qttest dep (bug #544546)
 
   12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -dustrac-1.7.3.ebuild,
   -files/dustrac-1.7.3-cmake.patch, -files/dustrac-1.7.3-desktopfile.patch:
