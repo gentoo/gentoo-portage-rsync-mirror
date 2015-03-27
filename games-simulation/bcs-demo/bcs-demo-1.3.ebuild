@@ -1,13 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.12 2014/10/13 21:09:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.13 2015/03/27 03:43:21 mr_bones_ Exp $
 
 EAPI=5
-
 inherit unpacker games
 
 DESCRIPTION="design and build bridges and then stress test them with trains"
-HOMEPAGE="http://www.garagegames.com/pg/product/view.php?id=17"
+HOMEPAGE="http://www.chroniclogic.com/pontifex2.htm"
 SRC_URI="ftp://ggdev-1.homelan.com/bcs/bcsdemo_v${PV/./_}.sh.bin
 	http://www.highprogrammer.com/alan/pfx2/openal-alan-hack-0.0.1.tar.gz"
 
