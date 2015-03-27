@@ -1,16 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.12 2014/09/07 08:36:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ut2003-ded-2225-r2.ebuild,v 1.13 2015/03/27 22:06:56 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="Unreal Tournament 2003 Linux Dedicated Server"
 HOMEPAGE="http://www.ut2003.com/"
-SRC_URI="http://games.gci.net/pub/UT2003/ut2003-lnxded-${PV}.tar.bz2
-	mirror://3dgamers/unrealtourn2/ut2003-lnxded-${PV}.tar.bz2
-	http://downloads.unrealadmin.org/UT2003/Server/Linux/ut2003-lnxded-${PV}.tar.bz2
-	mirror://gentoo/UT2003CrashFix.zip
-	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
+SRC_URI="http://ftp.games.skynet.be/pub/misc/ut2003-lnxded-${PV}.tar.bz2
+	mirror://gentoo/UT2003CrashFix.zip"
 
 LICENSE="ut2003"
 SLOT="0"
@@ -29,10 +27,8 @@ Ddir=${D}/${dir}
 QA_PREBUILT="${dir:1}/System/*"
 
 src_unpack() {
-	unpack ut2003-lnxded-${PV}.tar.bz2 \
-		|| die "unpacking dedicated server files."
-	unzip "${DISTDIR}"/UT2003CrashFix.zip \
-		|| die "unpacking crash-fix"
+	unpack ut2003-lnxded-${PV}.tar.bz2
+	unzip "${DISTDIR}"/UT2003CrashFix.zip || die
 }
 
 src_install() {
@@ -55,8 +51,9 @@ q
 EOT
 
 	# Here we apply fix for bug #54726
-	dosed "s:UplinkToGamespy=True:UplinkToGamespy=False:" \
-		"${dir}"/System/Default.ini
+	sed -i \
+		-e "s:UplinkToGamespy=True:UplinkToGamespy=False:" \
+		"${D}${dir}"/System/Default.ini || die
 
 	prepgamesdirs
 }

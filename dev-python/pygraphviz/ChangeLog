@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygraphviz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.20 2015/03/08 23:56:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.21 2015/03/27 22:03:47 mrueg Exp $
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -pygraphviz-1.1-r1.ebuild,
+  -pygraphviz-1.1-r2.ebuild:
+  Remove old.
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> pygraphviz-1.2.ebuild:
   x86 stable, bug 540290

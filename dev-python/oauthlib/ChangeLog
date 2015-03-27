@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/oauthlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.40 2015/03/08 23:54:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.41 2015/03/27 22:11:43 mrueg Exp $
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -oauthlib-0.3.0.ebuild,
+  -oauthlib-0.6.3.ebuild, -oauthlib-0.7.1.ebuild:
+  Remove old.
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> oauthlib-0.7.2.ebuild:
   x86 stable, bug 540290

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-iwscan
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iwscan/ChangeLog,v 1.20 2014/03/31 20:45:22 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iwscan/ChangeLog,v 1.21 2015/03/27 22:05:59 mrueg Exp $
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -python-iwscan-20080402.ebuild:
+  Remove old.
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org>
   python-iwscan-20080402-r1.ebuild:

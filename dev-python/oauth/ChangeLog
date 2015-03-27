@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oauth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth/ChangeLog,v 1.12 2015/03/08 23:54:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth/ChangeLog,v 1.13 2015/03/27 22:02:25 mrueg Exp $
+
+  27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -oauth-1.0.1.ebuild:
+  Remove old.
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> oauth-1.0.1-r1.ebuild:
   x86 stable, bug 540290

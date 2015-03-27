@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2003-ded
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.16 2014/09/07 08:36:04 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2003-ded/ChangeLog,v 1.17 2015/03/27 22:06:56 mr_bones_ Exp $
+
+  27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  ut2003-ded-2225-r2.ebuild:
+  EAPI=5; update SRC_URI (bug #534338)
 
   07 Sep 2014; Ulrich Müller <ulm@gentoo.org> ut2003-ded-2225-r2.ebuild:
   QA: Remove unnecessary dependency on emul-linux-x86-compat, bug 522134.
