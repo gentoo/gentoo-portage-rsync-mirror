@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.5.0-r2.ebuild,v 1.1 2015/03/14 13:15:05 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.5.0-r2.ebuild,v 1.2 2015/03/28 13:27:54 dlan Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ if [[ $PV == *9999 ]]; then
 else
 	KEYWORDS="~arm ~arm64 ~amd64 -x86"
 	UPSTREAM_VER=3
+	SECURITY_VER=
 	# xen-tools's gentoo patches tarball
 	GENTOO_VER=3
 	# xen-tools's gentoo patches version which apply to this specific ebuild
@@ -29,7 +30,9 @@ else
 	OVMF_PV=20131208
 
 	[[ -n ${UPSTREAM_VER} ]] && \
-		UPSTRAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
+		UPSTREAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
+	[[ -n ${SECURITY_VER} ]] && \
+		SECURITY_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-security-patches-${SECURITY_VER}.tar.xz"
 	[[ -n ${GENTOO_VER} ]] && \
 		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-gentoo-patches-${GENTOO_VER}.tar.xz"
 	[[ -n ${OVMF_VER} ]] && \
@@ -39,7 +42,8 @@ else
 	http://code.coreboot.org/p/seabios/downloads/get/seabios-${SEABIOS_VER}.tar.gz
 	http://dev.gentoo.org/~dlan/distfiles/seabios-${SEABIOS_VER}.tar.gz
 	http://dev.gentoo.org/~dlan/distfiles/ovmf-${OVMF_PV}.tar.bz2
-	${UPSTRAM_PATCHSET_URI}
+	${UPSTREAM_PATCHSET_URI}
+	${SECURITY_PATCHSET_URI}
 	${GENTOO_PATCHSET_URI}
 	${OVMF_PATCHSET_URI}"
 	S="${WORKDIR}/xen-${MY_PV}"
@@ -157,14 +161,25 @@ pkg_setup() {
 src_prepare() {
 	# Upstream's patchset
 	if [[ -n ${UPSTREAM_VER} ]]; then
+		einfo "Try to apply Xen Upstream patcheset"
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
 		EPATCH_OPTS="-p1" \
 			epatch "${WORKDIR}"/patches-upstream
 	fi
 
+	# Security patchset
+	if [[ -n ${SECURITY_VER} ]]; then
+		einfo "Try to apply Xen Security patcheset"
+		EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" \
+		EPATCH_OPTS="-p1" \
+			epatch "${WORKDIR}/patches-security/${PV}"
+	fi
+
 	# Gentoo's patchset
 	if [[ -n ${GENTOO_VER} && -n ${GENTOO_GPV} ]]; then
+		einfo "Try to apply Gentoo specific patcheset"
 		source "${FILESDIR}"/gentoo-patches.conf
 		_gpv=_gpv_${PN/-/_}_${PV//./}_${GENTOO_GPV}
 		for i in ${!_gpv}; do
@@ -176,6 +191,7 @@ src_prepare() {
 
 	# Ovmf's patchset
 	if [[ -n ${OVMF_VER} ]]; then
+		einfo "Try to apply Ovmf patcheset"
 		pushd "${WORKDIR}"/ovmf-*/ > /dev/null
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \

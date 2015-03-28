@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0-r4.ebuild,v 1.1 2015/03/14 12:31:07 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0-r4.ebuild,v 1.2 2015/03/28 13:25:42 dlan Exp $
 
 EAPI=5
 
@@ -16,14 +16,18 @@ if [[ $PV == *9999 ]]; then
 else
 	KEYWORDS="~arm ~arm64 ~amd64"
 	UPSTREAM_VER=3
+	SECURITY_VER=
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
 		UPSTREAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P}-upstream-patches-${UPSTREAM_VER}.tar.xz"
+	[[ -n ${SECURITY_VER} ]] && \
+		SECURITY_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN}-security-patches-${SECURITY_VER}.tar.xz"
 	[[ -n ${GENTOO_VER} ]] && \
-		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P}-gentoo-patches-${GENTOO_VER}.tar.xz"
+		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN}-gentoo-patches-${GENTOO_VER}.tar.xz"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV}/${MY_P}.tar.gz
 		${UPSTREAM_PATCHSET_URI}
+		${SECURITY_PATCHSET_URI}
 		${GENTOO_PATCHSET_URI}"
 
 fi
@@ -85,6 +89,14 @@ src_prepare() {
 		EPATCH_FORCE="yes" \
 		EPATCH_OPTS="-p1" \
 			epatch "${WORKDIR}"/patches-upstream
+	fi
+
+	# Security patchset
+	if [[ -n ${SECURITY_VER} ]]; then
+		EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" \
+		EPATCH_OPTS="-p1" \
+			epatch "${WORKDIR}/patches-security/${PV}"
 	fi
 
 	# Gentoo's patchset
