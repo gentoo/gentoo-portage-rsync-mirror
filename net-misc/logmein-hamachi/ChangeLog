@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/logmein-hamachi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.16 2014/12/23 19:52:00 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.17 2015/03/28 11:18:21 dlan Exp $
+
+*logmein-hamachi-2.1.0.139 (28 Mar 2015)
+
+  28 Mar 2015; Yixun Lan <dlan@gentoo.org> +logmein-hamachi-2.1.0.139.ebuild:
+  version bump, proxy for Simone
 
 *logmein-hamachi-2.1.0.136 (23 Dec 2014)
 
