@@ -30,6 +30,11 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (28 Mar 2015)
+# Broken dependencies, bug #544816.
+sci-biology/embassy-memenew
+sci-biology/embassy-mira
+
 # Ian Delaney <idella4@gentoo.org> (28 Mar 2015)
 # old package with no active maintainers
 # No evidence of support or use.
