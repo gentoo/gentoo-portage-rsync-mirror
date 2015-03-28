@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-dict
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.54 2012/11/28 12:20:54 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/ChangeLog,v 1.55 2015/03/28 20:46:41 mgorny Exp $
+
+*xfce4-dict-0.7.1 (28 Mar 2015)
+
+  28 Mar 2015; Michał Górny <mgorny@gentoo.org> +xfce4-dict-0.7.1.ebuild:
+  Version bump with a lot of fixes.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> xfce4-dict-0.6.0.ebuild:
   EAPI5
@@ -198,4 +203,3 @@
   +xfce4-dict-0.2.1.ebuild:
   Initial import. Ebuild originally by Sideris Michael <msid@daemons.gr> on
   bug #157561.
-
