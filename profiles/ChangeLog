@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9881 2015/03/26 16:11:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9882 2015/03/28 12:38:00 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Mar 2015; Ian Delaney <idella4@gentoo.org> package.mask:
+  Entry for LatLongUTMconversion masked for removal
 
   26 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Last rites for old NX packages, bug #537774

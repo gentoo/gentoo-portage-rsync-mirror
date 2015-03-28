@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16440 2015/03/26 16:11:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16441 2015/03/28 12:38:00 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (28 Mar 2015)
+# old package with no active maintainers
+# No evidence of support or use.
+# Masked for removal in 30 days.
+sci-geosciences/LatLongUTMconversion
 
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Mar 2015)
 # Dead upstreams, not working in some use cases, 

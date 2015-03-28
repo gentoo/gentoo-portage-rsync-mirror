@@ -1,9 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation.
+# Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.8 2015/01/24 07:15:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/musl/package.mask,v 1.9 2015/03/28 12:39:38 blueness Exp $
 
 sys-libs/uclibc
 sys-libs/glibc
+
+# We mask these until we sort out bug #544476.
+>sys-kernel/linux-headers-3.16
 
 # We use eudev which is tested on both uclibc and musl
 sys-apps/systemd
