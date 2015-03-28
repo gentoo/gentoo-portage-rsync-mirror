@@ -1,14 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattleai/xbattleai-1.2.2-r1.ebuild,v 1.4 2015/03/25 15:37:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattleai/xbattleai-1.2.2-r1.ebuild,v 1.5 2015/03/28 07:08:56 mr_bones_ Exp $
 
-EAPI=2
-
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="A multi-player game of strategy and coordination"
-HOMEPAGE="http://www.lysator.liu.se/~mbrx/XBattleAI/index.html"
-SRC_URI="http://www.lysator.liu.se/~mbrx/XBattleAI/${P}.tgz"
+HOMEPAGE="https://inf.ug.edu.pl/~piotao/xbattle/mirror/www.lysator.liu.se/XBattleAI/"
+SRC_URI="https://inf.ug.edu.pl/~piotao/xbattle/mirror/www.lysator.liu.se/XBattleAI/${P}.tgz"
 
 LICENSE="xbattle"
 SLOT="0"
@@ -34,8 +33,8 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	DOCS="CONTRIBUTORS README README.AI TODO xbattle.dot" \
+		default
 	mv "${D}/${GAMES_BINDIR}"/{,xb_}gauntletCampaign
-	dodoc CONTRIBUTORS README README.AI TODO xbattle.dot
 	prepgamesdirs
 }

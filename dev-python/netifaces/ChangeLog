@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/netifaces
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.21 2015/03/08 23:54:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.22 2015/03/28 07:01:24 maekke Exp $
+
+  28 Mar 2015; Markus Meier <maekke@gentoo.org> netifaces-0.10.4.ebuild:
+  arm stable, bug #535340
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> netifaces-0.10.4.ebuild:
   x86 stable, bug 540290
