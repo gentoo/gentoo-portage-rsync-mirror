@@ -1,9 +1,9 @@
- bindings/python/setup.py.in |  6 +++---
- configure.ac                | 10 +---------
- 2 files changed, 4 insertions(+), 12 deletions(-)
+ bindings/python/setup.py.in | 6 +++---
+ configure.ac                | 4 ----
+ 2 files changed, 3 insertions(+), 7 deletions(-)
 
 diff --git a/bindings/python/setup.py.in b/bindings/python/setup.py.in
-index e58045e..a55f444 100644
+index adc474c..3faf982 100644
 --- a/bindings/python/setup.py.in
 +++ b/bindings/python/setup.py.in
 @@ -61,10 +61,10 @@ if "CFLAGS" in config_vars and "-Wstrict-prototypes" in config_vars["CFLAGS"]:
@@ -21,23 +21,17 @@ index e58045e..a55f444 100644
  setup( name='python-libtorrent',
  	version='@PACKAGE_VERSION@',
 diff --git a/configure.ac b/configure.ac
-index f727b81..9b4ccee 100644
+index 55ee13a..bdbf2a3 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -539,15 +539,7 @@ AS_CASE(["$ARG_ENABLE_PYTHON_BINDING"],
-       AC_MSG_RESULT([yes])
+@@ -559,10 +559,6 @@ AS_CASE(["$ARG_ENABLE_PYTHON_BINDING"],
  
        AM_PATH_PYTHON([2.4], [], AC_MSG_ERROR([Python interpreter not found.]))
--      AX_PYTHON_DEVEL([>= '2.4'])
+       AX_PYTHON_DEVEL([>= '2.4'])
 -      AX_BOOST_PYTHON()
 -
 -      AS_IF([test -z "$BOOST_PYTHON_LIB"],
 -            [AC_MSG_ERROR([Boost.Python library not found. Try using --with-boost-python=lib.])])
--    ],
--  ["no"], [
--      AC_MSG_RESULT([no])
--    ],
-+      AX_PYTHON_DEVEL([>= '2.4'])],
-   [AC_MSG_RESULT([$ARG_ENABLE_PYTHON_BINDING])
-    AC_MSG_ERROR([Unknown option "$ARG_ENABLE_PYTHON_BINDING". Use either "yes" or "no".])]
- )
+     ],
+   ["no"], [
+       AC_MSG_RESULT([no])
