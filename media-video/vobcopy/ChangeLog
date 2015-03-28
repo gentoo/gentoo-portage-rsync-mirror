@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vobcopy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.50 2011/02/12 19:15:04 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.51 2015/03/28 22:58:46 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -vobcopy-1.1.0.ebuild,
+  -vobcopy-1.1.1.ebuild, -vobcopy-1.1.2.ebuild:
+  Remove old.
 
   12 Feb 2011; Raúl Porcel <armin76@gentoo.org> vobcopy-1.2.0.ebuild:
   sparc stable wrt #343315
@@ -183,4 +187,3 @@
   16 Apr 2003; Martin Holzer <mholzer@gentoo.org> vobcopy-0.5.7.ebuild:
   Adding initial ebuild. Submitted by Daniel Willmann <willmann.daniel@web.de>
   in #15844.
-

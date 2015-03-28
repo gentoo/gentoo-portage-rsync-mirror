@@ -1,6 +1,11 @@
 # ChangeLog for media-video/recordmydesktop
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.40 2011/03/31 20:47:15 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/recordmydesktop/ChangeLog,v 1.41 2015/03/28 23:01:11 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org>
+  -recordmydesktop-0.3.8.1-r1.ebuild, -recordmydesktop-0.3.8.1-r3.ebuild,
+  -recordmydesktop-0.3.8.1.ebuild:
+  Remove old.
 
   31 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   recordmydesktop-0.3.8.1-r4.ebuild:
@@ -196,4 +201,3 @@
   +recordmydesktop-0.2.5.ebuild:
   Initial import of ebuild, based on one from Hydonsingore Cia
   <hydonsingore@educities.edu.tw>, Bug #148771.
-
