@@ -1,6 +1,18 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.297 2015/03/15 13:34:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.298 2015/03/28 09:38:20 pacho Exp $
+
+*gnome-terminal-3.14.3 (28 Mar 2015)
+
+  28 Mar 2015; Pacho Ramos <pacho@gentoo.org> +gnome-terminal-3.14.3.ebuild,
+  -files/gnome-terminal-3.12.0-fallback-title-1.patch,
+  -files/gnome-terminal-3.12.0-fallback-title-2.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-0.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-1.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-2.patch,
+  -files/gnome-terminal-3.12.0-remove-set-title-feature-3.patch,
+  -gnome-terminal-3.12.3.ebuild:
+  Version bump, drop old
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.14.2-r2.ebuild:
   x86 stable, bug 534012

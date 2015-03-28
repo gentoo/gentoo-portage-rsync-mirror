@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.7.ebuild,v 1.1 2015/02/18 11:27:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.40.9.ebuild,v 1.1 2015/03/28 09:58:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,6 +16,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/LibRsvg"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+
 IUSE="+introspection vala tools"
 REQUIRED_USE="
 	vala? ( introspection )
@@ -28,7 +29,7 @@ RDEPEND="
 	>=dev-libs/libxml2-2.9.1-r4:2[${MULTILIB_USEDEP}]
 	>=dev-libs/libcroco-0.6.8-r1[${MULTILIB_USEDEP}]
 	>=x11-libs/gdk-pixbuf-2.30.7:2[introspection?,${MULTILIB_USEDEP}]
-	introspection? ( >=dev-libs/gobject-introspection-0.10.8 )
+	introspection? ( >=dev-libs/gobject-introspection-0.10.8:= )
 	tools? ( >=x11-libs/gtk+-3.2.0:3 )
 "
 DEPEND="${RDEPEND}

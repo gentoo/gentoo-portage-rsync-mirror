@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.12.2.ebuild,v 1.4 2014/07/23 15:17:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.14.4.ebuild,v 1.1 2015/03/28 09:33:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils gnome2 multilib pax-utils python-r1 systemd
 
@@ -16,25 +16,24 @@ LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+bluetooth +i18n +networkmanager -openrc-force"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # libXfixes-5.0 needed for pointer barriers
 # FIXME:
 #  * gstreamer support is currently automagic
-#  * mutter/mutter-wayland support is automagic
 COMMON_DEPEND="
 	>=app-accessibility/at-spi2-atk-2.5.3
 	>=dev-libs/atk-2[introspection]
 	>=app-crypt/gcr-3.7.5[introspection]
-	>=dev-libs/glib-2.39.1:2
+	>=dev-libs/glib-2.39.1:2[dbus]
 	>=dev-libs/gjs-1.39
-	>=dev-libs/gobject-introspection-0.10.1
-	>=x11-libs/gtk+-3.7.9:3[introspection]
+	>=dev-libs/gobject-introspection-0.10.1:=
+	>=x11-libs/gtk+-3.13.2:3[introspection]
 	>=media-libs/clutter-1.15.90:1.0[introspection]
 	>=dev-libs/json-glib-0.13.2
 	>=dev-libs/libcroco-0.6.8:0.6
 	>=gnome-base/gnome-desktop-3.7.90:3=[introspection]
-	>=gnome-base/gsettings-desktop-schemas-3.12
+	>=gnome-base/gsettings-desktop-schemas-3.14
 	>=gnome-base/gnome-keyring-3.3.90
 	gnome-base/libgnome-keyring
 	>=gnome-extra/evolution-data-server-3.5.3:=
@@ -44,7 +43,7 @@ COMMON_DEPEND="
 	>=sys-auth/polkit-0.100[introspection]
 	>=x11-libs/libXfixes-5.0
 	x11-libs/libXtst
-	>=x11-wm/mutter-3.12.1[introspection]
+	>=x11-wm/mutter-3.14.4[introspection]
 	>=x11-libs/startup-notification-0.11
 
 	${PYTHON_DEPS}
@@ -120,14 +119,14 @@ DEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	# Change favorites defaults, bug #479918
-	epatch "${FILESDIR}/${PN}-defaults.patch"
+	epatch "${FILESDIR}"/${PN}-3.14.0-defaults.patch
 
 	# Fix automagic gnome-bluetooth dep, bug #398145
-	epatch "${FILESDIR}/${PN}-3.12-bluetooth-flag.patch"
+	epatch "${FILESDIR}"/${PN}-3.12-bluetooth-flag.patch
 
 	# Fix silent bluetooth linking failure with ld.gold, bug #503952
 	# https://bugzilla.gnome.org/show_bug.cgi?id=726435
-	epatch "${FILESDIR}/${PN}-3.10.4-bluetooth-gold.patch"
+	epatch "${FILESDIR}"/${PN}-3.14.0-bluetooth-gold.patch
 
 	epatch_user
 
@@ -154,14 +153,15 @@ src_install() {
 	# Required for gnome-shell on hardened/PaX, bug #398941
 	# Future-proof for >=spidermonkey-1.8.7 following polkit's example
 	if has_version '<dev-lang/spidermonkey-1.8.7'; then
-		pax-mark mr "${ED}usr/bin/gnome-shell"
+		pax-mark mr "${ED}usr/bin/gnome-shell"{,-extension-prefs}
 	elif has_version '>=dev-lang/spidermonkey-1.8.7[jit]'; then
-		pax-mark m "${ED}usr/bin/gnome-shell"
-	fi
+		pax-mark m "${ED}usr/bin/gnome-shell"{,-extension-prefs}
 	# Required for gnome-shell on hardened/PaX #457146 and #457194
 	# PaX EMUTRAMP need to be on
-	if has_version '>=dev-libs/libffi-3.0.13[pax_kernel]'; then
-		pax-mark E "${ED}usr/bin/gnome-shell"
+	elif has_version '>=dev-libs/libffi-3.0.13[pax_kernel]'; then
+		pax-mark E "${ED}usr/bin/gnome-shell"{,-extension-prefs}
+	else
+		pax-mark m "${ED}usr/bin/gnome-shell"{,-extension-prefs}
 	fi
 }
 
