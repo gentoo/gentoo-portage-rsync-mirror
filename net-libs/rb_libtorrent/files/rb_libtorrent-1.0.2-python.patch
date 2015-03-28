@@ -1,6 +1,6 @@
- bindings/python/setup.py |  2 +-
- configure.ac             | 10 +---------
- 2 files changed, 2 insertions(+), 10 deletions(-)
+ bindings/python/setup.py | 2 +-
+ configure.ac             | 4 ----
+ 2 files changed, 1 insertion(+), 5 deletions(-)
 
 diff --git a/bindings/python/setup.py b/bindings/python/setup.py
 index 961395f..c38ef52 100644
@@ -16,23 +16,17 @@ index 961395f..c38ef52 100644
  except:
  	extra_cmd = None
 diff --git a/configure.ac b/configure.ac
-index ebb1f7e..dddc403 100644
+index ebb1f7e..3e07828 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -539,15 +539,7 @@ AS_CASE(["$ARG_ENABLE_PYTHON_BINDING"],
-       AC_MSG_RESULT([yes])
+@@ -540,10 +540,6 @@ AS_CASE(["$ARG_ENABLE_PYTHON_BINDING"],
  
        AM_PATH_PYTHON([2.4], [], AC_MSG_ERROR([Python interpreter not found.]))
--      AX_PYTHON_DEVEL([>= '2.4'])
+       AX_PYTHON_DEVEL([>= '2.4'])
 -      AX_BOOST_PYTHON()
 -
 -      AS_IF([test -z "$BOOST_PYTHON_LIB"],
 -            [AC_MSG_ERROR([Boost.Python library not found. Try using --with-boost-python=lib.])])
--    ],
--  ["no"], [
--      AC_MSG_RESULT([no])
--    ],
-+      AX_PYTHON_DEVEL([>= '2.4'])],
-   [AC_MSG_RESULT([$ARG_ENABLE_PYTHON_BINDING])
-    AC_MSG_ERROR([Unknown option "$ARG_ENABLE_PYTHON_BINDING". Use either "yes" or "no".])]
- )
+     ],
+   ["no"], [
+       AC_MSG_RESULT([no])

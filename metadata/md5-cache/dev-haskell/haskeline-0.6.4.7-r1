@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-haskell/extensible-exceptions-0.1.1.0:=[profile?] <dev-haskell/extensible-exceptions-0.2:=[profile?] >=dev-haskell/mtl-1.1:=[profile?] <dev-haskell/mtl-2.2:=[profile?] >=dev-haskell/terminfo-0.3.1.3:=[profile?] <dev-haskell/terminfo-0.4:=[profile?] >=dev-haskell/utf8-string-0.3.6:=[profile?] <dev-haskell/utf8-string-0.4:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/0.6.4.7
 SRC_URI=mirror://hackage/packages/archive/haskeline/0.6.4.7/haskeline-0.6.4.7.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	ghc-package	29f14cf665461bc19b8724d1842b0b3a	haskell-cabal	26ad8cdd26b723e556b3614c8ffb11f6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	ghc-package	48ae4e0fd75e1c8047c4b7f507d5debc	haskell-cabal	98224cebe581f23d62c7fbb75c07fd90	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=09a3e0fe4f4a5eec3c83e0975493229d
