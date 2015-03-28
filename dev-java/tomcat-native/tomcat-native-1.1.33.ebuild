@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.31.ebuild,v 1.1 2014/09/24 11:31:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-native/tomcat-native-1.1.33.ebuild,v 1.1 2015/03/28 15:37:56 fordfrog Exp $
 
 EAPI="5"
 
@@ -16,10 +16,10 @@ LICENSE="Apache-2.0"
 IUSE=""
 
 RDEPEND="=dev-libs/apr-1*
-	dev-libs/openssl
-	>=virtual/jre-1.5"
+	dev-libs/openssl:=
+	>=virtual/jre-1.5:*"
 
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.5:*
 	${RDEPEND}"
 
 S=${WORKDIR}/${P}-src/jni/native
