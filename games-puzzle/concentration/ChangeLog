@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/concentration
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/concentration/ChangeLog,v 1.15 2015/03/27 06:16:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/concentration/ChangeLog,v 1.16 2015/03/28 05:06:51 mr_bones_ Exp $
+
+  28 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  concentration-1.2-r1.ebuild:
+  update HOMEPAGE
 
   27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
   concentration-1.2-r1.ebuild:
