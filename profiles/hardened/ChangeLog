@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.79 2015/03/28 12:39:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.80 2015/03/28 22:11:55 mgorny Exp $
+
+  28 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  -linux/amd64/no-emul-linux-x86/eapi, -linux/amd64/no-emul-linux-x86/parent:
+  emul-linux-x86 last rites. Remove no-emul-linux-x86 subprofiles that are now
+  redundant.
 
   28 Mar 2015; Anthony G. Basile <blueness@gentoo.org> linux/musl/package.mask:
   Mask >sys-kernel/linux-headers-3.16 on musl profiles. Bug #544476.

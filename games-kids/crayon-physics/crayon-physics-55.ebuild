@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/crayon-physics/crayon-physics-55.ebuild,v 1.8 2014/11/30 12:36:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/crayon-physics/crayon-physics-55.ebuild,v 1.9 2015/03/28 22:14:06 mgorny Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="crayon_physics_deluxe-linux-release${PV}.tar.gz"
 
 LICENSE="CRAYON-PHYSICS"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="bindist fetch splitdebug"
 

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9883 2015/03/28 21:50:37 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9884 2015/03/28 22:12:13 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Mar 2015; Michał Górny <mgorny@gentoo.org> package.mask, profiles.desc:
+  emul-linux-x86 last rites. Remove no-emul-linux-x86 subprofiles that are now
+  redundant.
 
   28 Mar 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
   Mask dev-java/jna-posix.

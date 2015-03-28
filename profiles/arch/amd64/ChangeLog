@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.312 2015/03/21 19:15:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.313 2015/03/28 22:11:21 mgorny Exp $
+
+  28 Mar 2015; Michał Górny <mgorny@gentoo.org> -no-emul-linux-x86/eapi,
+  -no-emul-linux-x86/package.mask, -no-emul-linux-x86/package.use.mask,
+  -no-emul-linux-x86/package.use.stable.mask, -no-emul-linux-x86/parent,
+  package.use.mask, package.use.stable.mask:
+  emul-linux-x86 last rites. Unmask abi_x86_32 on stable amd64. Mask gcj[awt]
+  and gcj-jdk[X] since the maintainers failed to accept patches. Remove
+  no-emul-linux-x86 subprofiles that are now redundant.
 
   21 Mar 2015; Michał Górny <mgorny@gentoo.org> make.defaults:
   Enable mmxext by default since it is implied by sse, and required for ffmpeg.
