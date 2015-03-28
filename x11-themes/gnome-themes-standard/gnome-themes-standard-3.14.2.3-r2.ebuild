@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.14.2.3-r1.ebuild,v 1.1 2015/03/18 15:04:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.14.2.3-r2.ebuild,v 1.1 2015/03/28 04:44:34 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit eutils gnome2 multilib-minimal
+inherit autotools eutils gnome2 multilib-minimal
 
 DESCRIPTION="Standard Themes for GNOME Applications"
 HOMEPAGE="https://git.gnome.org/browse/gnome-themes-standard/"
@@ -37,6 +37,14 @@ RDEPEND="${COMMON_DEPEND}
 	!<x11-themes/gnome-themes-2.32.1-r1
 "
 
+src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=746920
+	epatch "${FILESDIR}/${PN}-3.14.2.3-srcdir.patch"
+	eautoreconf
+
+	gnome2_src_prepare
+}
+
 multilib_src_configure() {
 	# The icon cache needs to be generated in pkg_postinst()
 	ECONF_SOURCE="${S}" \
@@ -61,7 +69,7 @@ multilib_src_compile() {
 	# processing >3500 icons is slow on old hard drives, do it only for native ABI
 	if multilib_is_native_abi; then
 		gnome2_src_compile
-	else
+	elif use gtk; then
 		emake_engines_only
 	fi
 }
@@ -70,7 +78,7 @@ multilib_src_install() {
 	# processing >3500 icons is slow on old hard drives, do it only for native ABI
 	if multilib_is_native_abi; then
 		gnome2_src_install
-	else
+	elif use gtk; then
 		emake_engines_only install
 		prune_libtool_files --modules
 	fi

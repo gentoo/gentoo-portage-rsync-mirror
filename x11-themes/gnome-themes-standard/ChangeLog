@@ -1,6 +1,15 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.78 2015/03/18 15:04:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.79 2015/03/28 04:44:34 tetromino Exp $
+
+*gnome-themes-standard-3.14.2.3-r2 (28 Mar 2015)
+
+  28 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-themes-standard-3.14.2.3-r1.ebuild,
+  +gnome-themes-standard-3.14.2.3-r2.ebuild,
+  +files/gnome-themes-standard-3.14.2.3-srcdir.patch:
+  Fix corrupt HighContrast/index.theme file (thanks to Nikolay Kichukov and
+  Pavel Volkov, bugs #544590, #544054).
 
 *gnome-themes-standard-3.14.2.3-r1 (18 Mar 2015)
 
