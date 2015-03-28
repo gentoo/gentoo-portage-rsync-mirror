@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-041-r1.ebuild,v 1.1 2015/03/24 13:12:00 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-041-r2.ebuild,v 1.1 2015/03/28 14:08:04 aidecoe Exp $
 
 EAPI=4
 
@@ -52,7 +52,6 @@ PATCHES=(
 	"${FILESDIR}/${PVR}-0001-Use-the-same-paths-in-dracut.sh-as-tho.patch"
 	"${FILESDIR}/${PVR}-0002-Install-dracut-install-and-skipcpio-in.patch"
 	"${FILESDIR}/${PVR}-0003-Take-into-account-lib64-dirs-when-dete.patch"
-	"${FILESDIR}/${PVR}-0004-Don-t-install-scripts-in-kernel-instal.patch"
 	)
 QA_MULTILIB_PATHS="
 	usr/lib/dracut/dracut-install
@@ -174,6 +173,11 @@ src_install() {
 	dodir /var/lib/dracut/overlay
 
 	dohtml dracut.html
+
+	if ! use systemd; then
+		# Scripts in kernel/install.d are systemd-specific
+		rm -r "${D%/}/${my_libdir}/kernel" || die
+	fi
 
 	#
 	# Modules
