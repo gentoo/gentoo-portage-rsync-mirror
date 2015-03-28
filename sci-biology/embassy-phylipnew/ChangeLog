@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-phylipnew
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylipnew/ChangeLog,v 1.16 2015/03/28 17:13:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylipnew/ChangeLog,v 1.17 2015/03/28 17:58:36 jlec Exp $
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org> -embassy-phylipnew-3.68.ebuild,
+  embassy-phylipnew-3.69.650.ebuild:
+  Drop old
 
 *embassy-phylipnew-3.69.650 (28 Mar 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustal-omega/clustal-omega-1.1.0.ebuild,v 1.1 2013/04/26 10:06:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustal-omega/clustal-omega-1.2.1.ebuild,v 1.1 2015/03/28 17:44:56 jlec Exp $
 
 EAPI=5
 
@@ -14,8 +14,8 @@ SRC_URI="http://www.clustal.org/omega/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 KEYWORDS="~amd64 ~x86"
+IUSE="static-libs"
 
 DEPEND="dev-libs/argtable"
 RDEPEND="${DEPEND}"
@@ -27,4 +27,12 @@ src_prepare() {
 		-e "s:-O3::g" \
 		-i configure.ac || die
 	autotools-utils_src_prepare
+}
+
+src_install() {
+	autotools-utils_src_install
+	if ! use static-libs; then
+		rm -f "${ED}"/usr/$(get_libdir)/*.a || die
+		rm -fr "${ED}"/usr/$(get_libdir)/pkgconfig || die
+	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-emnu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.33 2015/03/28 17:24:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.34 2015/03/28 18:00:22 jlec Exp $
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org> -embassy-emnu-1.05-r6.ebuild,
+  embassy-emnu-1.05.650.ebuild:
+  Drop old
 
 *embassy-emnu-1.05.650 (28 Mar 2015)
 

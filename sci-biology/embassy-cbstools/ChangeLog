@@ -1,6 +1,18 @@
 # ChangeLog for sci-biology/embassy-cbstools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-cbstools/ChangeLog,v 1.7 2011/10/20 08:56:48 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-cbstools/ChangeLog,v 1.9 2015/03/28 17:54:39 jlec Exp $
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  -embassy-cbstools-1.0.0-r1.ebuild, embassy-cbstools-1.0.0.650.ebuild:
+  Drop old
+
+*embassy-cbstools-1.0.0.650 (28 Mar 2015)
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +embassy-cbstools-1.0.0.650.ebuild,
+  +files/embassy-cbstools-1.0.0.650_fix-build-system.patch, metadata.xml:
+  Import latest changes from science overlay, thanks Ted Tanberry for the work;
+  fixes #335603
 
   20 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   embassy-cbstools-1.0.0.ebuild, embassy-cbstools-1.0.0-r1.ebuild:
@@ -32,4 +44,3 @@
   27 Aug 2008; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
   +embassy-cbstools-1.0.0.ebuild:
   Initial import for EMBASSY 6.0.1.
-

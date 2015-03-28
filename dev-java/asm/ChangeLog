@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.95 2015/03/25 13:53:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.96 2015/03/28 17:42:25 dlan Exp $
+
+  28 Mar 2015; Yixun Lan <dlan@gentoo.org> asm-4.0.ebuild, asm-5.0.3.ebuild:
+  keyword ~arm, bug 544242, build on cortex-a9 board
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> asm-4.0.ebuild:
   Stable for x86, wrt bug #543942

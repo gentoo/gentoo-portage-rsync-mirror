@@ -1,6 +1,18 @@
 # ChangeLog for sci-biology/embassy-domainatrix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.32 2011/10/20 08:57:09 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domainatrix/ChangeLog,v 1.34 2015/03/28 17:57:09 jlec Exp $
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  -embassy-domainatrix-0.1.0-r4.ebuild, embassy-domainatrix-0.1.650.ebuild:
+  Drop old
+
+*embassy-domainatrix-0.1.650 (28 Mar 2015)
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +embassy-domainatrix-0.1.650.ebuild,
+  +files/embassy-domainatrix-0.1.650_fix-build-system.patch, metadata.xml:
+  Import latest changes from science overlay, thanks Ted Tanberry for the work;
+  fixes #335603
 
   20 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   embassy-domainatrix-0.1.0-r3.ebuild, embassy-domainatrix-0.1.0-r4.ebuild:
