@@ -18,6 +18,10 @@
 
 #--- END OF EXAMPLES ---
 
+# Michał Górny <mgorny@gentoo.org> (28 Mar 2015)
+# Broken dependencies, bug #544406.
+x11-themes/gtk-engines-qtcurve mozilla
+
 # Pacho Ramos <pacho@gentoo.org> (02 Jul 2014)
 # Mask due Gnome3 not going to be stabilized on this arch
 dev-util/geany-plugins devhelp markdown webkit
