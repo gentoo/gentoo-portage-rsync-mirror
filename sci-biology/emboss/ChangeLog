@@ -1,6 +1,16 @@
 # ChangeLog for sci-biology/emboss
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.71 2014/12/28 16:46:09 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.72 2015/03/28 17:03:16 jlec Exp $
+
+*emboss-6.6.0 (28 Mar 2015)
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org> +emboss-6.6.0.ebuild,
+  +files/README.gentoo, +files/emboss-6.6.0_FORTIFY_SOURCE-fix.patch,
+  +files/emboss-6.6.0_fix-build-system.patch,
+  +files/emboss-6.6.0_plplot-declarations.patch,
+  +files/emboss-6.6.0_qa-implicit-declarations.patch, metadata.xml:
+  Import latest changes from science overlay, thanks Ted Tanberry for the work;
+  fixes #504680
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> emboss-6.3.1_p4.ebuild,
   emboss-6.3.1_p4-r1.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/embassy-emnu
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.32 2011/10/20 08:54:43 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-emnu/ChangeLog,v 1.33 2015/03/28 17:24:57 jlec Exp $
+
+*embassy-emnu-1.05.650 (28 Mar 2015)
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org> +embassy-emnu-1.05.650.ebuild,
+  +files/embassy-emnu-1.05.650_fix-build-system.patch, metadata.xml:
+  Import latest changes from science overlay, thanks Ted Tanberry for the work;
+  fixes #335603
 
   20 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   embassy-emnu-1.05-r5.ebuild, embassy-emnu-1.05-r6.ebuild:
