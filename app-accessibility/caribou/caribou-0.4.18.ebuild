@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.16.ebuild,v 1.3 2014/12/19 13:33:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.18.ebuild,v 1.1 2015/03/28 09:00:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Caribou"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE=""
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 	>=dev-python/pygobject-2.90.3:3[${PYTHON_USEDEP}]
 	>=x11-libs/gtk+-3:3[introspection]
 	x11-libs/gtk+:2
-	>=dev-libs/gobject-introspection-0.10.7
+	>=dev-libs/gobject-introspection-0.10.7:=
 	dev-libs/libgee:0.8
 	dev-libs/libxml2
 	>=media-libs/clutter-1.5.11:1.0[introspection]
@@ -37,6 +37,7 @@ COMMON_DEPEND="
 # pyatspi-2.1.90 needed to run caribou if pygobject:3 is installed
 # librsvg needed to load svg images in css styles
 RDEPEND="${COMMON_DEPEND}
+	dev-libs/glib[dbus]
 	>=dev-python/pyatspi-2.1.90[${PYTHON_USEDEP}]
 	>=gnome-base/gsettings-desktop-schemas-3
 	gnome-base/librsvg:2
