@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.15 2015/03/26 13:42:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.16 2015/03/28 12:28:53 blueness Exp $
 
 EAPI=5
 
@@ -80,9 +80,9 @@ src_install() {
 	just_headers && return 0
 
 	# musl provides ldd via a sym link to its ld.so
-	local ldso=$(basename "${D}"/lib/ld-musl-*)
 	local sysroot
 	is_crosscompile && sysroot=/usr/${CTARGET}
+	local ldso=$(basename "${D}"${sysroot}/lib/ld-musl-*)
 	dosym /lib/${ldso} ${sysroot}/usr/bin/ldd
 }
 
