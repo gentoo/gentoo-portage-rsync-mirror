@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/anigif-1.3-r1.ebuild,v 1.4 2015/03/25 13:55:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/anigif/anigif-1.3-r1.ebuild,v 1.5 2015/03/28 21:30:07 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.zip"
 
 LICENSE="tcltk"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-lang/tcl:0"

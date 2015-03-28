@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.11.ebuild,v 1.3 2015/03/27 10:17:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.11.ebuild,v 1.4 2015/03/28 21:27:01 ago Exp $
 
 EAPI=5
 inherit eutils udev
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/linuxwacom/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="doc static-libs"
 
 RDEPEND="

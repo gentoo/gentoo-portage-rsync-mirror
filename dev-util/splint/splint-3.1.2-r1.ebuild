@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/splint-3.1.2-r1.ebuild,v 1.5 2015/03/27 16:25:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/splint-3.1.2-r1.ebuild,v 1.6 2015/03/28 21:28:21 ago Exp $
 
 EAPI=5
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.splint.org/downloads/${P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="
 	sys-devel/flex

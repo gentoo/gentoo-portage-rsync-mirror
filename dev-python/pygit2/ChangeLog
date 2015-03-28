@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygit2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.35 2015/03/19 07:23:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.36 2015/03/28 21:28:16 radhermit Exp $
+
+  28 Mar 2015; Tim Harder <radhermit@gentoo.org> +pygit2-0.20.3.ebuild:
+  Re-add old release for www-apps/blohg (bug #544820).
 
   19 Mar 2015; Tim Harder <radhermit@gentoo.org> -pygit2-0.19.1.ebuild,
   -pygit2-0.20.3.ebuild, -pygit2-0.21.4.ebuild, -pygit2-0.22.0.ebuild:

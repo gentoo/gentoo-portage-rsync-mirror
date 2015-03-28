@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libltdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.16 2015/03/27 16:30:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.17 2015/03/28 21:22:20 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libltdl-2.4.6.ebuild:
+  Stable for ppc, wrt bug #540408
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libltdl-2.4.6.ebuild:
   Stable for amd64, wrt bug #540408

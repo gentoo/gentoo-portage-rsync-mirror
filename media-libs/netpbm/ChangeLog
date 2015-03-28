@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.281 2015/03/27 10:19:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.282 2015/03/28 21:27:21 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> netpbm-10.66.00.ebuild:
+  Stable for ppc, wrt bug #544404
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> netpbm-10.66.00.ebuild:
   Stable for x86, wrt bug #544404

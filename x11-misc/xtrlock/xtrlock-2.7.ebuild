@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.7.ebuild,v 1.3 2015/03/25 13:42:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/xtrlock-2.7.ebuild,v 1.4 2015/03/28 21:25:21 ago Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -14,7 +14,7 @@ HOMEPAGE="http://ftp.debian.org/debian/pool/main/x/xtrlock/"
 
 SLOT="0"
 LICENSE="GPL-3"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
