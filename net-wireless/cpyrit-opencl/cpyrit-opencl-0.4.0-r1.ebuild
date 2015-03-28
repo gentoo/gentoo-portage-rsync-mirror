@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/cpyrit-opencl-0.4.0-r1.ebuild,v 1.2 2015/03/28 03:14:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/cpyrit-opencl-0.4.0-r1.ebuild,v 1.3 2015/03/28 07:37:15 patrick Exp $
 
 EAPI=5
 
@@ -28,4 +28,3 @@ PDEPEND="~net-wireless/pyrit-${PV}"
 pkg_setup() {
 	python-single-r1_pkg_setup
 }
-

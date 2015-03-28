@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.66 2015/03/27 06:22:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.67 2015/03/28 07:40:19 patrick Exp $
+
+  28 Mar 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   27 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/spice-0.12.3-CVE-2013-4130.patch,

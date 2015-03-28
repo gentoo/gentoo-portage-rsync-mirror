@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/cpyrit-opencl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/ChangeLog,v 1.5 2015/03/27 10:39:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/cpyrit-opencl/ChangeLog,v 1.6 2015/03/28 07:37:15 patrick Exp $
+
+  28 Mar 2015; Patrick Lauer <patrick@gentoo.org> cpyrit-opencl-0.4.0-r1.ebuild:
+  Whitespace
 
 *cpyrit-opencl-0.4.0-r1 (27 Mar 2015)
 

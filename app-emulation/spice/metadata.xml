@@ -8,7 +8,6 @@
 	</maintainer>
 	<use>
 		<flag name="client">Build the spicec client app (does not reduce dependencies at the moment).</flag>
-		<flag name="gui">Build some GUI components (inside the guest window).</flag>
 		<flag name="smartcard">Enable smartcard remoting using <pkg>app-emulation/libcacard</pkg></flag>
 	</use>
 </pkgmetadata>
