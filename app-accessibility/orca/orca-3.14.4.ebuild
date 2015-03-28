@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.12.2.ebuild,v 1.3 2014/07/23 15:12:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-3.14.4.ebuild,v 1.1 2015/03/28 10:10:17 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_{3,4} )
 PYTHON_REQ_USE="threads"
 
 inherit gnome2 python-r1
@@ -15,21 +15,24 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Orca"
 
 LICENSE="LGPL-2.1+ CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+
+IUSE="+braille"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # liblouis is not in portage yet
 # it is used to provide contracted braille support
 # XXX: Check deps for correctness
-COMMON_DEPEND="
+COMMON_DEPEND="${PYTHON_DEPS}
 	>=app-accessibility/at-spi2-atk-2.10:2
 	>=app-accessibility/at-spi2-core-2.10:2[introspection]
 	>=dev-libs/atk-2.10
 	>=dev-libs/glib-2.28:2
 	>=dev-python/pygobject-3.10:3[${PYTHON_USEDEP}]
 	>=x11-libs/gtk+-3.6.2:3[introspection]
-	${PYTHON_DEPS}
+	braille? (
+		>=app-accessibility/brltty-5.0-r3[python,${PYTHON_USEDEP}]
+		dev-libs/liblouis[python,${PYTHON_USEDEP}] )
 "
 RDEPEND="${COMMON_DEPEND}
 	>=app-accessibility/speech-dispatcher-0.8[python,${PYTHON_USEDEP}]
@@ -52,7 +55,9 @@ src_prepare() {
 }
 
 src_configure() {
-	python_foreach_impl run_in_build_dir gnome2_src_configure ITSTOOL="$(type -P true)"
+	python_foreach_impl run_in_build_dir gnome2_src_configure \
+		ITSTOOL="$(type -P true)" \
+		$(use_with braille liblouis)
 }
 
 src_compile() {
