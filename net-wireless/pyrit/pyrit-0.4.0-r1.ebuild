@@ -1,14 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/pyrit/pyrit-0.4.0.ebuild,v 1.1 2012/03/29 16:46:45 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/pyrit/pyrit-0.4.0-r1.ebuild,v 1.1 2015/03/28 01:58:53 idella4 Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.5"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
 
-inherit distutils eutils
+inherit distutils-r1
 
 DESCRIPTION="GPU-accelerated attack against WPA-PSK authentication"
 HOMEPAGE="http://code.google.com/p/pyrit/"
@@ -21,15 +20,16 @@ IUSE="cuda opencl test"
 
 DEPEND="dev-libs/openssl
 	net-libs/libpcap
-	test? ( >=net-analyzer/scapy-2 )"
+	test? ( >=net-analyzer/scapy-2[${PYTHON_USEDEP}] )"
 RDEPEND=">=net-analyzer/scapy-2
 	opencl? ( net-wireless/cpyrit-opencl )
 	cuda? ( net-wireless/cpyrit-cuda )"
 
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
+
 src_test() {
 	cd test
-	testing() {
-		PYTHONPATH=$(ls -d "${S}"/build-${PYTHON_ABI}/lib*) $(PYTHON) test_pyrit.py
-	}
-	python_execute_function testing
+	"${PYTHON}" test_pyrit.py
 }

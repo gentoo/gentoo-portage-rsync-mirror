@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.124 2015/03/19 11:24:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.125 2015/03/28 01:53:34 yngwin Exp $
+
+  28 Mar 2015; Ben de Groot <yngwin@gentoo.org> -mpv-0.8.0.ebuild,
+  -mpv-0.8.2.ebuild, mpv-0.7.3.ebuild, mpv-0.8.3.ebuild, mpv-9999.ebuild:
+  Update live ebuild to sync with upstream changes, as reported by Nikos
+  Chantziaras in bug #544402. Normalize useflags. Do not default enable mpg123,
+  as upstream recommends libavcodec. Remove older 0.8.x ebuilds.
 
   19 Mar 2015; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Add myself as maintainer

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.68 2015/03/19 11:14:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.69 2015/03/28 01:53:34 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -28,9 +28,9 @@ fi
 LICENSE="GPL-2+ BSD ISC"
 SLOT="0"
 IUSE="+alsa bluray bs2b cdio +cli doc-pdf dvb +dvd dvdnav egl +enca encode
-+iconv jack -joystick jpeg ladspa lcms +libass libav libcaca libguess libmpv
-lirc lua luajit +mpg123 -openal +opengl oss pulseaudio pvr rubberband samba
--sdl selinux v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
++iconv jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit
+openal +opengl oss pulseaudio pvr rubberband samba sdl selinux v4l vaapi vdpau
+vf-dlopen wayland +X xinerama +xscreensaver xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
@@ -92,12 +92,10 @@ RDEPEND="
 	)
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
 	libguess? ( >=app-i18n/libguess-1.0 )
-	lirc? ( app-misc/lirc )
 	lua? (
 		!luajit? ( >=dev-lang/lua-5.1:= )
 		luajit? ( dev-lang/luajit:2 )
 	)
-	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
 	pulseaudio? ( media-sound/pulseaudio )
 	rubberband? ( >=media-libs/rubberband-1.8.0 )
@@ -174,14 +172,11 @@ src_configure() {
 		$(use_enable libass)
 		$(use_enable libass libass-osd)
 		$(use_enable encode encoding)
-		$(use_enable joystick)
-		$(use_enable lirc)
 		$(use_enable bluray libbluray)
 		$(use_enable dvd dvdread)
 		$(use_enable dvdnav)
 		$(use_enable cdio cdda)
 		$(use_enable enca)
-		$(use_enable mpg123)
 		$(use_enable ladspa)
 		$(use_enable rubberband)
 		$(use_enable bs2b libbs2b)
