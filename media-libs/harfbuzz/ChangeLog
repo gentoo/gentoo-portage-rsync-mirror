@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.99 2015/03/03 08:36:27 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.100 2015/03/28 18:06:23 tetromino Exp $
+
+*harfbuzz-0.9.40 (28 Mar 2015)
+
+  28 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -harfbuzz-0.9.37.ebuild, +harfbuzz-0.9.40.ebuild, harfbuzz-9999.ebuild,
+  -files/harfbuzz-0.9.12-hb-version.h.patch:
+  Version bump, drop old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> harfbuzz-0.9.38.ebuild:
   add arm64 support, tested on A53 board

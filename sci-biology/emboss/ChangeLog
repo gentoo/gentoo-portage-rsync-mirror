@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.72 2015/03/28 17:03:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.73 2015/03/28 18:03:23 jlec Exp $
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org> -emboss-6.1.0-r1.ebuild,
+  -emboss-6.3.1_p4.ebuild:
+  Drop old
 
 *emboss-6.6.0 (28 Mar 2015)
 

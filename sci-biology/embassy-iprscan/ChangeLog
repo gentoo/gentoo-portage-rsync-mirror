@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-iprscan
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-iprscan/ChangeLog,v 1.8 2015/03/28 17:20:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-iprscan/ChangeLog,v 1.9 2015/03/28 18:01:54 jlec Exp $
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org> -embassy-iprscan-4.3.1-r1.ebuild,
+  embassy-iprscan-4.3.1.650.ebuild:
+  Drop old
 
 *embassy-iprscan-4.3.1.650 (28 Mar 2015)
 

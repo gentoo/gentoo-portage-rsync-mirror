@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.37.ebuild,v 1.1 2014/12/27 20:47:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.40.ebuild,v 1.1 2015/03/28 18:06:23 tetromino Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
 LICENSE="Old-MIT ISC icu"
 SLOT="0/0.9.18" # 0.9.18 introduced the harfbuzz-icu split; bug #472416
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
 IUSE="+cairo +glib +graphite icu +introspection static-libs test +truetype"
 REQUIRED_USE="introspection? ( glib )"
 
@@ -64,17 +64,21 @@ src_prepare() {
 
 	[[ ${PV} == 9999 ]] && eautoreconf
 	elibtoolize # for Solaris
+
+	# failing test, https://bugs.freedesktop.org/show_bug.cgi?id=89190
+	sed -e 's#tests/arabic-fallback-shaping.tests##' -i test/shaping/Makefile.in || die "sed failed"
 }
 
 multilib_src_configure() {
 	ECONF_SOURCE="${S}" \
+	# harfbuzz-gobject only used for instrospection, bug #535852
 	econf \
 		--without-coretext \
 		--without-uniscribe \
 		$(use_enable static-libs static) \
 		$(multilib_native_use_with cairo) \
 		$(use_with glib) \
-		$(use_with glib gobject) \
+		$(use_with introspection gobject) \
 		$(use_with graphite graphite2) \
 		$(use_with icu) \
 		$(multilib_native_use_enable introspection) \

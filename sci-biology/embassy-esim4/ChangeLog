@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-esim4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-esim4/ChangeLog,v 1.32 2015/03/28 17:23:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-esim4/ChangeLog,v 1.33 2015/03/28 18:01:21 jlec Exp $
+
+  28 Mar 2015; Justin Lecher <jlec@gentoo.org> -embassy-esim4-1.0.0-r6.ebuild,
+  embassy-esim4-1.0.0.650.ebuild:
+  Drop old
 
 *embassy-esim4-1.0.0.650 (28 Mar 2015)
 
