@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.12.1-r1.ebuild,v 1.4 2014/12/19 13:44:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog-plugins/eog-plugins-3.14.2.ebuild,v 1.1 2015/03/28 09:04:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,9 +14,9 @@ HOMEPAGE="https://wiki.gnome.org/Apps/EyeOfGnome/Plugins"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+exif +flickr map +picasa +python"
+KEYWORDS="~amd64 ~x86"
 
+IUSE="+exif +flickr map +picasa +python"
 REQUIRED_USE="
 	map? ( exif )
 	python? ( ^^ ( $(python_gen_useflags '*') ) )"
@@ -35,6 +35,7 @@ RDEPEND="
 	picasa? ( >=dev-libs/libgdata-0.9.1:= )
 	python? (
 		${PYTHON_DEPS}
+		>=dev-libs/glib-2.32:2[dbus]
 		dev-libs/libpeas:=[gtk,python,${PYTHON_USEDEP}]
 		dev-python/pygobject:3[${PYTHON_USEDEP}]
 		gnome-base/gsettings-desktop-schemas
@@ -43,7 +44,7 @@ RDEPEND="
 		x11-libs/pango[introspection] )
 "
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.50.1
 	sys-devel/gettext
 	virtual/pkgconfig
 "
