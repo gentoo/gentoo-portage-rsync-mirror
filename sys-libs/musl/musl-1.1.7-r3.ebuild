@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.7-r2.ebuild,v 1.1 2015/03/28 12:28:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.7-r3.ebuild,v 1.1 2015/03/28 16:24:57 blueness Exp $
 
 EAPI=5
 
@@ -83,7 +83,7 @@ src_install() {
 	local sysroot
 	is_crosscompile && sysroot=/usr/${CTARGET}
 	local ldso=$(basename "${D}"${sysroot}/lib/ld-musl-*)
-	dosym /lib/${ldso} ${sysroot}/usr/bin/ldd
+	dosym ${sysroot}/lib/${ldso} ${sysroot}/usr/bin/ldd
 }
 
 pkg_postinst() {

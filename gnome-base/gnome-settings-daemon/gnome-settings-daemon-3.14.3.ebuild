@@ -1,28 +1,29 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.12.3.ebuild,v 1.4 2014/12/27 01:51:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.14.3.ebuild,v 1.1 2015/03/28 16:07:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit autotools eutils gnome2 systemd udev virtualx
+inherit autotools eutils gnome2 python-r1 systemd udev virtualx
 
 DESCRIPTION="Gnome Settings Daemon"
 HOMEPAGE="https://git.gnome.org/browse/gnome-settings-daemon"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="+colord +cups debug +i18n input_devices_wacom -openrc-force packagekit policykit +short-touchpad-timeout smartcard +udev"
+IUSE="+colord +cups debug input_devices_wacom -openrc-force networkmanager policykit +short-touchpad-timeout smartcard test +udev wayland"
 REQUIRED_USE="
 	input_devices_wacom? ( udev )
-	packagekit? ( udev )
 	smartcard? ( udev )
+	test? ( ${PYTHON_REQUIRED_USE} )
 "
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.37.7:2
+	>=dev-libs/glib-2.37.7:2[dbus]
 	>=x11-libs/gtk+-3.7.8:3
 	>=gnome-base/gnome-desktop-3.11.1:3=
 	>=gnome-base/gsettings-desktop-schemas-3.9.91.1
@@ -52,15 +53,15 @@ COMMON_DEPEND="
 
 	colord? ( >=x11-misc/colord-1.0.2:= )
 	cups? ( >=net-print/cups-1.4[dbus] )
-	i18n? ( >=app-i18n/ibus-1.4.99 )
 	input_devices_wacom? (
 		>=dev-libs/libwacom-0.7
 		>=x11-libs/pango-1.20
 		x11-drivers/xf86-input-wacom
 		virtual/libgudev:= )
-	packagekit? ( >=app-admin/packagekit-base-0.8.1 )
+	networkmanager? ( >=net-misc/networkmanager-0.9.9.1 )
 	smartcard? ( >=dev-libs/nss-3.11.2 )
 	udev? ( virtual/libgudev:= )
+	wayland? ( dev-libs/wayland )
 "
 # Themes needed by g-s-d, gnome-shell, gtk+:3 apps to work properly
 # <gnome-color-manager-3.1.1 has file collisions with g-s-d-3.1.x
@@ -79,6 +80,9 @@ RDEPEND="${COMMON_DEPEND}
 # xproto-7.0.15 needed for power plugin
 DEPEND="${COMMON_DEPEND}
 	cups? ( sys-apps/sed )
+	test? (
+		${PYTHON_DEPS}
+		dev-python/pygobject[${PYTHON_USEDEP}] )
 	dev-libs/libxml2:2
 	sys-devel/gettext
 	>=dev-util/intltool-0.40
@@ -94,10 +98,10 @@ src_prepare() {
 	# people, so revert it if USE=short-touchpad-timeout.
 	# Revisit if/when upstream adds a setting for customizing the timeout.
 	use short-touchpad-timeout &&
-		epatch "${FILESDIR}/${PN}-3.7.90-short-touchpad-timeout.patch"
+		epatch "${FILESDIR}"/${PN}-3.7.90-short-touchpad-timeout.patch
 
 	# Make colord and wacom optional; requires eautoreconf
-	epatch "${FILESDIR}/${PN}-3.12.0-optional.patch"
+	epatch "${FILESDIR}"/${PN}-3.14.0-optional.patch
 
 	epatch_user
 	eautoreconf
@@ -113,14 +117,15 @@ src_configure() {
 		$(use_enable cups) \
 		$(use_enable debug) \
 		$(use_enable debug more-warnings) \
-		$(use_enable i18n ibus) \
-		$(use_enable packagekit) \
+		$(use_enable networkmanager network-manager) \
 		$(use_enable smartcard smartcard-support) \
 		$(use_enable udev gudev) \
-		$(use_enable input_devices_wacom wacom)
+		$(use_enable input_devices_wacom wacom) \
+		$(use_enable wayland)
 }
 
 src_test() {
+	python_export_best
 	Xemake check
 }
 
