@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/edna
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.35 2015/03/25 14:09:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.36 2015/03/28 21:41:05 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> edna-0.6.ebuild:
+  Stable for ppc, wrt bug #544040
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> edna-0.6.ebuild:
   Stable for x86, wrt bug #544040

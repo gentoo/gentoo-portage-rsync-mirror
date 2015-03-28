@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.9 2012/12/27 01:41:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.17.ebuild,v 1.10 2015/03/28 21:50:41 tupone Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils versionator toolchain-funcs flag-o-matic cmake-utils games
 
 MY_PV=build$(get_version_component_range 2)
@@ -27,6 +27,7 @@ DEPEND="dev-lang/lua
 	media-libs/glew
 	media-libs/sdl-ttf
 	>=dev-libs/boost-1.37"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -76,7 +77,7 @@ src_compile() {
 
 src_install() {
 	cmake-utils_src_install
-	newicon pics/wl-ico-128.png ${PN}.png || die
+	newicon pics/wl-ico-128.png ${PN}.png
 	make_desktop_entry ${PN} Widelands
 	dodoc ChangeLog CREDITS
 	prepgamesdirs

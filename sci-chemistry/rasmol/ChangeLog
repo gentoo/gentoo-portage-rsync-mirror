@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.42 2015/03/25 14:08:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.43 2015/03/28 21:40:24 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rasmol-2.7.5.2-r1.ebuild:
+  Stable for ppc, wrt bug #543036
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rasmol-2.7.5.2-r1.ebuild:
   Stable for x86, wrt bug #543036

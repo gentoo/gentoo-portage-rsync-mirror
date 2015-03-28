@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ical
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.39 2015/03/25 13:58:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.40 2015/03/28 21:33:09 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ical-3.0-r2.ebuild:
+  Stable for ppc, wrt bug #543852
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ical-3.0-r2.ebuild:
   Stable for x86, wrt bug #543852

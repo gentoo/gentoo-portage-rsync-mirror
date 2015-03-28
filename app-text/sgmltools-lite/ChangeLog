@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.68 2015/03/28 06:51:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.69 2015/03/28 21:34:34 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
+  sgmltools-lite-3.0.3-r14.ebuild:
+  Stable for ppc, wrt bug #544008
 
   28 Mar 2015; Jeroen Roovers <jer@gentoo.org> sgmltools-lite-3.0.3-r14.ebuild:
   Stable for HPPA (bug #544008).

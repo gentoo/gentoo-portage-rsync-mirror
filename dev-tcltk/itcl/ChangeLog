@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.66 2015/03/25 14:10:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.67 2015/03/28 21:43:14 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> itcl-3.4.1.ebuild:
+  Stable for ppc, wrt bug #543024
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> itcl-3.4.1.ebuild:
   Stable for x86, wrt bug #543024

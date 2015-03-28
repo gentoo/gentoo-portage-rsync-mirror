@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.65.ebuild,v 1.5 2015/03/27 10:17:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.65.ebuild,v 1.6 2015/03/28 21:39:49 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.biopython.org/DIST/${P}.tar.gz"
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="

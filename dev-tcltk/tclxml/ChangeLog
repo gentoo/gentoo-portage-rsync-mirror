@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.52 2015/03/25 14:10:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.53 2015/03/28 21:43:33 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tclxml-3.2-r2.ebuild:
+  Stable for ppc, wrt bug #543884
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tclxml-3.2-r2.ebuild:
   Stable for x86, wrt bug #543884

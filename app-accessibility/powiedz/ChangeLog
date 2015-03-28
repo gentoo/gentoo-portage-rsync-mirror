@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/powiedz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/ChangeLog,v 1.19 2015/03/25 14:08:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/powiedz/ChangeLog,v 1.20 2015/03/28 21:40:46 ago Exp $
+
+  28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> powiedz-1.0-r2.ebuild:
+  Stable for ppc, wrt bug #543854
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> powiedz-1.0-r2.ebuild:
   Stable for x86, wrt bug #543854

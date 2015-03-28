@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.78 2015/03/25 14:12:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.79 2015/03/28 21:47:04 johu Exp $
+
+  28 Mar 2015; Johannes Huber <johu@gentoo.org>
+  -files/kdiff3-0.9.97-relativepath.patch, -kdiff3-0.9.97-r2.ebuild:
+  Remove old.
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> kdiff3-0.9.98.ebuild:
   Stable for x86, wrt bug #543284
