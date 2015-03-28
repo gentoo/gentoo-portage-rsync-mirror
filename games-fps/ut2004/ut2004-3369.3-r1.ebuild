@@ -1,17 +1,16 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369.3-r1.ebuild,v 1.2 2011/12/14 17:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369.3-r1.ebuild,v 1.3 2015/03/28 06:52:21 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils multilib games
 
 MY_P="ut2004-lnxpatch${PV%.*}-2.tar.bz2"
 DESCRIPTION="Editor's Choice Edition plus Mega Pack for the critically-acclaimed first-person shooter"
 HOMEPAGE="http://www.unrealtournament2004.com/"
-SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
-	http://speculum.twistedgamer.com/pub/0day.icculus.org/${PN}/${MY_P}
+SRC_URI="
 	http://treefort.icculus.org/${PN}/${MY_P}
-	http://sonic-lux.net/data/mirror/ut2004/${MY_P}
+	http://storage.guntoo.de/downs/downloads/Patch/ut2004-v${PV/./-}-linux-dedicated.7z
 	mirror://gentoo/ut2004-v${PV/./-}-linux-dedicated.7z"
 
 LICENSE="ut2003"
@@ -41,21 +40,19 @@ S=${WORKDIR}/UT2004-Patch
 dir=${GAMES_PREFIX_OPT}/${PN}
 
 # The executable pages are required #114733
-QA_EXECSTACK_x86="${dir:1}/System/ut2004-bin
+QA_PREBUILT="${dir:1}/System/ut2004-bin
 	${dir:1}/System/ucc-bin"
 
 src_prepare() {
 	cd "${S}"/System
 
 	# These files are owned by ut2004-bonuspack-mega
-	rm -f Manifest.in{i,t} Packages.md5
-
-	rm -f ucc-bin*
+	rm -f Manifest.in{i,t} Packages.md5 ucc-bin* || die
 
 	if use amd64 ; then
 		mv -f ut2004-bin-linux-amd64 ut2004-bin || die
 	else
-		rm -f ut2004-bin-linux-amd64
+		rm -f ut2004-bin-linux-amd64 || die
 	fi
 
 	cd "${WORKDIR}"/ut2004-ucc-bin-09192008
@@ -66,22 +63,20 @@ src_prepare() {
 	fi
 
 	if use dedicated && ! use opengl ; then
-		rm -f "${S}"/System/ut2004-bin
+		rm -f "${S}"/System/ut2004-bin || die
 	fi
 }
 
 src_install() {
 	insinto "${dir}"
-	doins -r * || die "doins failed"
-	fperms +x "${dir}"/System/ucc-bin || die "fperms ucc-bin failed"
+	doins -r *
+	fperms +x "${dir}"/System/ucc-bin
 
 	if use opengl || ! use dedicated ; then
-		fperms +x "${dir}"/System/ut2004-bin || die "fperms ut2004-bin failed"
+		fperms +x "${dir}"/System/ut2004-bin
 
-		dosym /usr/$(get_libdir)/libopenal.so "${dir}"/System/openal.so \
-			|| die "dosym openal failed"
-		dosym /usr/$(get_libdir)/libSDL-1.2.so.0 "${dir}"/System/libSDL-1.2.so.0 \
-			|| die "dosym sdl failed"
+		dosym /usr/$(get_libdir)/libopenal.so "${dir}"/System/openal.so
+		dosym /usr/$(get_libdir)/libSDL-1.2.so.0 "${dir}"/System/libSDL-1.2.so.0
 
 		games_make_wrapper ut2004 ./ut2004 "${dir}" "${dir}"
 		make_desktop_entry ut2004 "Unreal Tournament 2004"

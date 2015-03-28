@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.248 2015/03/21 20:04:57 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.249 2015/03/28 06:53:22 jer Exp $
+
+  28 Mar 2015; Jeroen Roovers <jer@gentoo.org> iproute2-3.19.0.ebuild:
+  Stable for HPPA (bug #543662).
 
   21 Mar 2015; William Hubbs <williamh@gentoo.org> -iproute2-2.6.29.1-r1.ebuild,
   -iproute2-2.6.35-r2.ebuild, -iproute2-2.6.35-r3.ebuild,

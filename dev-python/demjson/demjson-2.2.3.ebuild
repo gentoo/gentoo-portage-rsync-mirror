@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/demjson-2.2.3.ebuild,v 1.1 2014/12/07 13:59:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/demjson/demjson-2.2.3.ebuild,v 1.2 2015/03/28 06:57:06 maekke Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
@@ -13,7 +13,7 @@ SRC_URI="http://deron.meranda.us/python/${PN}/dist/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

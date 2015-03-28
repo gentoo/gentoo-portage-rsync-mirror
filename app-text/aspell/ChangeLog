@@ -1,6 +1,9 @@
 # ChangeLog for app-text/aspell
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.150 2015/03/25 13:59:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.151 2015/03/28 06:50:05 jer Exp $
+
+  28 Mar 2015; Jeroen Roovers <jer@gentoo.org> aspell-0.60.6.1-r1.ebuild:
+  Stable for HPPA (bug #543996).
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> aspell-0.60.6.1-r1.ebuild:
   Stable for x86, wrt bug #543996

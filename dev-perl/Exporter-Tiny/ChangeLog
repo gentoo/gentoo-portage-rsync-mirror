@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Exporter-Tiny
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Tiny/ChangeLog,v 1.2 2015/03/19 18:42:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Tiny/ChangeLog,v 1.3 2015/03/28 06:54:13 maekke Exp $
+
+  28 Mar 2015; Markus Meier <maekke@gentoo.org> Exporter-Tiny-0.42.0.ebuild:
+  add ~arm, bug #543632
 
   19 Mar 2015; Jeroen Roovers <jer@gentoo.org> Exporter-Tiny-0.42.0.ebuild:
   Marked ~hppa (bug #543632).

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.48 2015/03/21 06:13:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.49 2015/03/28 06:54:56 maekke Exp $
+
+  28 Mar 2015; Markus Meier <maekke@gentoo.org> List-MoreUtils-0.408.0.ebuild:
+  add ~arm, bug #543632
 
   21 Mar 2015; Jeroen Roovers <jer@gentoo.org> List-MoreUtils-0.408.0.ebuild:
   Marked ~hppa (bug #543632).

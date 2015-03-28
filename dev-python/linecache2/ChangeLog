@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/linecache2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/linecache2/ChangeLog,v 1.1 2015/03/18 23:07:42 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/linecache2/ChangeLog,v 1.2 2015/03/28 06:58:39 maekke Exp $
+
+  28 Mar 2015; Markus Meier <maekke@gentoo.org> linecache2-1.0.0.ebuild:
+  add ~arm, bug #544142
 
 *linecache2-1.0.0 (18 Mar 2015)
 

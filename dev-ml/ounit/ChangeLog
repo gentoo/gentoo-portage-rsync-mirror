@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.40 2014/01/14 15:33:02 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.41 2015/03/28 06:55:39 maekke Exp $
+
+  28 Mar 2015; Markus Meier <maekke@gentoo.org> ounit-2.0.0.ebuild:
+  add ~arm, bug #543604
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ounit-2.0.0.ebuild:
   Stable for ppc, wrt bug #495418
