@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9887 2015/03/29 13:47:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9888 2015/03/29 19:48:58 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Mar 2015; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask for removal all app-emulation/emul-linux-x86-jna versions. People
+  relying on latest version should update to
+  >=virtual/libffi-3.0.13-r1[abi_x86_32(-)] dep.
 
   29 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask Perl 5.18 for removal

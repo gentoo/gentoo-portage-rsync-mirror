@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16446 2015/03/29 13:47:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16447 2015/03/29 19:48:59 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -125,7 +125,7 @@ app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
-<app-emulation/emul-linux-x86-jna-20140508-r1
+app-emulation/emul-linux-x86-jna
 <app-emulation/wine-1.6.1
 <x11-drivers/ati-drivers-14
 
