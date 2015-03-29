@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.6.ebuild,v 1.3 2015/02/25 16:01:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.6.ebuild,v 1.4 2015/03/29 12:35:42 yngwin Exp $
 
 EAPI=5
 MY_PN="QupZilla"
@@ -20,11 +20,14 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE="dbus debug gnome-keyring kde nonblockdialogs +qt4 qt5"
-REQUIRED_USE="^^ ( qt4 qt5 )"
+REQUIRED_USE="^^ ( qt4 qt5 )
+	kde? ( qt4 )"
 
 RDEPEND="dev-libs/openssl:0
+	x11-libs/libX11
 	gnome-keyring? ( gnome-base/gnome-keyring )
-	kde? ( kde-base/kwalletd:4 )
+	kde? ( kde-base/kdelibs:4
+		kde-base/kwalletd:4 )
 	qt4? ( >=dev-qt/qtcore-4.8:4
 		>=dev-qt/qtgui-4.8:4
 		>=dev-qt/qtscript-4.8:4
@@ -52,6 +55,8 @@ src_prepare() {
 		sed -i -e "/${1}.ts/d" translations/translations.pri || die
 		rm translations/${1}.ts || die
 	}
+
+	epatch_user
 
 	# remove outdated prebuilt localizations
 	rm -rf bin/locale || die

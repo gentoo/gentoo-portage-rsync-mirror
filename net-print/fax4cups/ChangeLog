@@ -1,6 +1,11 @@
 # ChangeLog for net-print/fax4cups
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.23 2014/03/09 01:22:33 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.24 2015/03/29 12:40:45 pacho Exp $
+
+*fax4cups-1.29-r1 (29 Mar 2015)
+
+  29 Mar 2015; Pacho Ramos <pacho@gentoo.org> +fax4cups-1.29-r1.ebuild:
+  Remove capisuite-fax as capisuite is going to be removed (#330329)
 
   09 Mar 2014; Manuel Rüger <mrueg@gentoo.org> -fax4cups-1.28.ebuild:
   Cleanup old.

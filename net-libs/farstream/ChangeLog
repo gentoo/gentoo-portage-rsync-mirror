@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/farstream
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.53 2015/03/29 11:12:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/ChangeLog,v 1.54 2015/03/29 12:51:26 pacho Exp $
+
+  29 Mar 2015; Pacho Ramos <pacho@gentoo.org> -farstream-0.2.4.ebuild,
+  farstream-0.1.2-r2.ebuild, farstream-0.2.7.ebuild:
+  Drop msn USE as libmimic will be removed (#489552), drop old.
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> farstream-0.2.7.ebuild:
   Stable for HPPA (bug #534012).
