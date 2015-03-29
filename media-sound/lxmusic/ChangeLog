@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lxmusic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lxmusic/ChangeLog,v 1.5 2012/05/23 19:59:03 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lxmusic/ChangeLog,v 1.6 2015/03/29 22:20:51 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -lxmusic-0.4.4.ebuild:
+  Remove old.
 
 *lxmusic-0.4.5 (23 May 2012)
 
@@ -23,4 +26,3 @@
   07 Aug 2010; Víctor Ostorga <vostorga@gentoo.org> +lxmusic-0.4.4.ebuild,
   +metadata.xml:
   Initial commit of lxmusic
-

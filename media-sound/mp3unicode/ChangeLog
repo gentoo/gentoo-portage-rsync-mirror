@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3unicode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3unicode/ChangeLog,v 1.6 2012/09/07 22:26:50 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3unicode/ChangeLog,v 1.7 2015/03/29 22:10:20 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -mp3unicode-1.2.ebuild:
+  Remove old.
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -26,4 +29,3 @@
   28 Sep 2007; Alon Bar-Lev <alonbl@gentoo.org> +metadata.xml,
   +mp3unicode-1.2.ebuild:
   Initial import
-

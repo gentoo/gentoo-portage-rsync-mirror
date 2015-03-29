@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/frei0r-plugins
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.22 2013/08/27 20:38:19 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.23 2015/03/29 22:31:02 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -frei0r-plugins-1.1.22-r1.ebuild:
+  Remove old.
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> frei0r-plugins-1.4.ebuild:
   keyword ~amd64-fbsd
@@ -97,4 +100,3 @@
   +files/frei0r-plugins-1.1.22-no-automagic-deps.patch, +metadata.xml:
   Initial commit, based on ebuild by Roberto Castagnola in bug 255319. Added
   patch to keep opencv and gavl optional but not automagic deps.
-

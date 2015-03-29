@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/awesfx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.39 2012/01/28 14:41:26 phajdan.jr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/ChangeLog,v 1.40 2015/03/29 22:02:54 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -awesfx-0.5.1c-r2.ebuild,
+  -files/awesfx-0.5.1c-getline.patch:
+  Remove old.
 
   28 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> awesfx-0.5.1d.ebuild:
   x86 stable wrt bug #400397

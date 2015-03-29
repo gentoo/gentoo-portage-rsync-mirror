@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtick
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.41 2012/05/05 08:27:39 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.42 2015/03/29 22:27:11 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -gtick-0.4.2.ebuild:
+  Remove old.
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> gtick-0.4.2.ebuild,
   gtick-0.5.0.ebuild:
@@ -149,4 +152,3 @@
   Initial revision.
   
   Submitted by: Nicolas GRANDCLAUDE <ngclaude@visitmail.com>
-
