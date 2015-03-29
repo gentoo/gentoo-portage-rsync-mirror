@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic-gui
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.15 2012/01/28 21:37:54 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-gui/ChangeLog,v 1.16 2015/03/29 11:41:19 idella4 Exp $
+
+*foomatic-gui-0.7.9.5-r1 (29 Mar 2015)
+
+  29 Mar 2015; Ian Delaney <idella4@gentoo.org> +foomatic-gui-0.7.9.5-r1.ebuild,
+  -foomatic-gui-0.7.9.5.ebuild:
+  revbump; conversion -> distutils-r1, rm old ebuild, closes Bug #543236
 
   28 Jan 2012; Andreas K. Huettel <dilfridge@gentoo.org>
   foomatic-gui-0.7.9.5.ebuild:
@@ -67,4 +73,3 @@
   04 Aug 2004; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   initial import, thx to Martin Klaffenboeck <martin.klaffenboeck@gmx.at>,
   bug #40163
-

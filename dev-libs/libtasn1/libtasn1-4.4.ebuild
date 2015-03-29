@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-4.3.ebuild,v 1.1 2015/03/09 21:26:02 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-4.4.ebuild,v 1.1 2015/03/29 11:59:02 alonbl Exp $
 
 EAPI=5
 
@@ -25,11 +25,6 @@ RDEPEND="
 	)"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS )
-
-AUTOTOOLS_AUTORECONF=1
-PATCHES=(
-	"${FILESDIR}/${P}-build.patch"
-)
 
 src_configure() {
 	local myeconfargs

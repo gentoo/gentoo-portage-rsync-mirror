@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Any-Moose
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.41 2015/03/29 09:36:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.42 2015/03/29 11:51:05 zlogene Exp $
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> Any-Moose-0.260.0.ebuild:
+  Add ~ppc keyword wrt bug #544064
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Any-Moose-0.260.0.ebuild:
   Marked ~hppa (bug #544064).

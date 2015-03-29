@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MouseX-Types/MouseX-Types-0.60.0.ebuild,v 1.2 2015/03/24 04:52:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MouseX-Types/MouseX-Types-0.60.0.ebuild,v 1.3 2015/03/29 11:49:36 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Organize your Mouse types in libraries"
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="test"
 
 RDEPEND="

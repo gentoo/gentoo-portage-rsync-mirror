@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstyles
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.235 2015/02/19 07:43:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.236 2015/03/29 11:33:08 johu Exp $
+
+*kstyles-4.11.17 (29 Mar 2015)
+
+  29 Mar 2015; Johannes Huber <johu@gentoo.org> +kstyles-4.11.17.ebuild:
+  Version bump KDE Workspace 4.11.17
 
   19 Feb 2015; Michael Palimaka <kensington@gentoo.org> -kstyles-4.11.9.ebuild:
   Remove KDE Workspace 4.11.9
