@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/killproc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.38 2015/03/28 21:29:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.39 2015/03/29 08:30:21 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> -killproc-2.13.ebuild:
+  Old.
 
   28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> killproc-2.13-r1.ebuild:
   Stable for ppc, wrt bug #542870
