@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.304 2015/03/02 03:14:52 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.305 2015/03/29 21:17:15 pesa Exp $
+
+*sip-4.16.7 (29 Mar 2015)
+
+  29 Mar 2015; Davide Pesavento <pesa@gentoo.org> +sip-4.16.7.ebuild,
+  -sip-4.16.5.ebuild:
+  Version bump, remove old.
 
 *sip-4.16.6 (02 Mar 2015)
 

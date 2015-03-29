@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-ecj
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.23 2013/04/06 10:23:49 caster Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ecj/ChangeLog,v 1.24 2015/03/29 21:19:44 monsieurp Exp $
+
+*eselect-ecj-0.7-r1 (29 Mar 2015)
+
+  29 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
+  +eselect-ecj-0.7-r1.ebuild:
+  EAPI 5 bump. Fig bug 543906.
 
   06 Apr 2013; Vlastimil Babka <caster@gentoo.org> eselect-ecj-0.7.ebuild:
   Add blockers for upcoming packages related to java-config-2.2, so that they
