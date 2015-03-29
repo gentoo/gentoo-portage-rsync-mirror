@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.26.ebuild,v 1.1 2015/03/17 08:01:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.26.ebuild,v 1.2 2015/03/29 20:58:20 zerochaos Exp $
 
 EAPI=5
 
@@ -27,9 +27,9 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	net-misc/curl
-	dev-libs/openssl
+	dev-libs/openssl:0=
 	dev-libs/libxml2
-	media-libs/libpng
+	media-libs/libpng:0=
 	media-libs/libvpx
 	sys-libs/zlib
 	!headless? (
@@ -215,6 +215,9 @@ src_compile() {
 	# and strip all flags
 	# strip-flags
 
+	MAKEJOBS=$(echo ${MAKEOPTS} | egrep -o '(\-j|\-\-jobs)(=?|[[:space:]]*)[[:digit:]]+')
+	MAKELOAD=$(echo ${MAKEOPTS} | egrep -o '(\-l|\-\-load-average)(=?|[[:space:]]*)[[:digit:]]+')
+	MAKEOPTS="${MAKEJOBS} ${MAKELOAD}"
 	MAKE="kmk" emake \
 		VBOX_BUILD_PUBLISHER=_Gentoo \
 		TOOL_GCC3_CC="$(tc-getCC)" TOOL_GCC3_CXX="$(tc-getCXX)" \
