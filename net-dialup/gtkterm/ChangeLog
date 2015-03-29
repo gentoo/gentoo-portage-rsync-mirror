@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gtkterm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.28 2014/08/10 20:55:45 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.29 2015/03/28 23:55:52 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -gtkterm-0.99.5-r1.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> gtkterm-0.99.5-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

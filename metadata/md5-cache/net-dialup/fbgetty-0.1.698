@@ -1,9 +1,0 @@
-DEFINED_PHASES=install unpack
-DESCRIPTION=An extended getty for the framebuffer console
-HOMEPAGE=http://projects.meuh.org/fbgetty/
-KEYWORDS=x86 amd64 ~ppc
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=http://projects.meuh.org/fbgetty/downloads/fbgetty-0.1.698.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=7b3ec3c5f8e573be78894eb65b0d5407

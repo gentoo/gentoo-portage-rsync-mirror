@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile config install postinst prerm setup
-DESCRIPTION=Driver for Connexant DGC modems
-HOMEPAGE=http://www.linuxant.com/drivers/dgc/
-KEYWORDS=~x86
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=http://www.linuxant.com/drivers/dgc/archive/dgcmodem-1.07/dgcmodem-1.07.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=5972a1baf497d7dbf720af779d4c08f1

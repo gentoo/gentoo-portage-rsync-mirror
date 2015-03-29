@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/dgcmodem
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/ChangeLog,v 1.7 2010/10/06 20:05:57 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/ChangeLog,v 1.8 2015/03/28 23:36:57 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -dgcmodem-1.07.ebuild,
+  -dgcmodem-1.08.ebuild, -dgcmodem-1.09.ebuild:
+  Remove old.
 
   06 Oct 2010; Markus Meier <maekke@gentoo.org> dgcmodem-1.10.ebuild:
   x86 stable, bug #338692
@@ -32,4 +36,3 @@
   07 Sep 2008; Denis Dupeyron <calchan@gentoo.org> +metadata.xml,
   +dgcmodem-1.07.ebuild:
   Initial commit.
-

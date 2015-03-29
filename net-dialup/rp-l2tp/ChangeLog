@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-l2tp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.23 2014/08/30 12:27:18 nimiux Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.24 2015/03/28 23:52:29 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -rp-l2tp-0.4-r1.ebuild,
+  -rp-l2tp-0.4-r2.ebuild:
+  Remove old.
 
   30 Aug 2014; Chema Alonso <nimiux@gentoo.org> rp-l2tp-0.4-r3.ebuild:
   Stable for amd64 wrt bug #514910

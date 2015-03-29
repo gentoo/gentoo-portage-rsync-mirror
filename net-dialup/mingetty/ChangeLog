@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mingetty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.57 2014/08/10 20:56:06 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mingetty/ChangeLog,v 1.58 2015/03/28 23:53:46 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -files/mingetty-1.07-utf8.patch,
+  -mingetty-1.07-r1.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mingetty-1.07-r1.ebuild,
   mingetty-1.08.ebuild:

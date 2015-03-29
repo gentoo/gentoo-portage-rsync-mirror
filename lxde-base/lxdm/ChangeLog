@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxdm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.34 2014/03/03 23:54:43 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.35 2015/03/28 23:33:06 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -lxdm-0.4.1-r5.ebuild,
+  -lxdm-0.4.1-r7.ebuild, -lxdm-0.4.1-r8.ebuild:
+  Remove old.
 
   03 Mar 2014; Pacho Ramos <pacho@gentoo.org> lxdm-0.4.1-r9.ebuild:
   amd64 stable, bug #499318
