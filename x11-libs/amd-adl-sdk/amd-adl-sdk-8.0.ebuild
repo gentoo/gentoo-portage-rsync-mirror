@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-8.0.ebuild,v 1.1 2015/03/29 05:07:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-8.0.ebuild,v 1.2 2015/03/29 18:37:47 mrueg Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RESTRICT="fetch"
 S="${WORKDIR}"
 
 pkg_nofetch() {
-	einfo "Please visit the download page [1], rename ADL_SDK.zip to ${A} and save it in ${DISTDIR}"
+	einfo "Please visit the download page [1], download ${A} and save it in ${DISTDIR}"
 	einfo "[1] http://developer.amd.com/tools-and-sdks/graphics-development/display-library-adl-sdk/"
 }
 

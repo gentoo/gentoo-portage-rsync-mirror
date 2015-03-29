@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Scalar-List-Utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.85 2015/02/18 08:38:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Scalar-List-Utils/ChangeLog,v 1.86 2015/03/29 18:39:18 tgall Exp $
+
+  29 Mar 2015;  <tgall@gentoo.org> perl-Scalar-List-Utils-1.380.0.ebuild:
+  stable on arm64
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-Scalar-List-Utils-1.380.0.ebuild:

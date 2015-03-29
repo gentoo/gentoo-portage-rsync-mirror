@@ -1,4 +1,7 @@
 
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> amd-adl-sdk-8.0.ebuild:
+  Fix nofetch msg.
+
 *amd-adl-sdk-8.0 (29 Mar 2015)
 
   29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-8.0.ebuild:
