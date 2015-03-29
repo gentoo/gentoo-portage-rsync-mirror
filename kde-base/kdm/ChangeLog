@@ -1,10 +1,6 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.418 2015/03/29 13:14:08 johu Exp $
-
-  29 Mar 2015; Johannes Huber <johu@gentoo.org>
-  files/kdm-4-gentoo-xinitrc.d.patch, files/kdm-logrotate, files/kdm.service:
-  Version bump KDE PIM 4.14.6
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.419 2015/03/29 17:05:20 kensington Exp $
 
 *kdm-4.11.17-r1 (29 Mar 2015)
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ucommon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.22 2014/10/27 20:03:03 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ChangeLog,v 1.23 2015/03/29 17:20:56 polynomial-c Exp $
+
+*ucommon-6.3.1 (29 Mar 2015)
+
+  29 Mar 2015; Lars Wendler <polynomial-c@gentoo.org> +ucommon-6.3.1.ebuild,
+  +files/ucommon-6.3.1-gcrypt_autotools.patch:
+  Version bump.
 
   27 Oct 2014; Maxim Koltsov <maksbotan@gentoo.org> ucommon-6.1.10.ebuild:
   Enable in source build, fixes bug #526726.
