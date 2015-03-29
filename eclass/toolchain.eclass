@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.657 2015/03/17 06:34:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.658 2015/03/29 06:15:31 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -181,14 +181,16 @@ fi
 
 tc_version_is_at_least 4.5 && RDEPEND+=" >=dev-libs/mpc-0.8.1"
 
-if tc_version_is_at_least 5.0 ; then
-	RDEPEND+=" graphite? ( >=dev-libs/isl-0.12 )"
-elif tc_version_is_at_least 4.8 ; then
-	RDEPEND+="
-		graphite? (
-			>=dev-libs/cloog-0.18.0
-			>=dev-libs/isl-0.11.1
-		)"
+if in_iuse graphite ; then
+	if tc_version_is_at_least 5.0 ; then
+		RDEPEND+=" graphite? ( >=dev-libs/isl-0.12 )"
+	elif tc_version_is_at_least 4.8 ; then
+		RDEPEND+="
+			graphite? (
+				>=dev-libs/cloog-0.18.0
+				>=dev-libs/isl-0.11.1
+			)"
+	fi
 fi
 
 DEPEND="${RDEPEND}
