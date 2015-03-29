@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/volwheel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/ChangeLog,v 1.8 2014/03/04 20:17:38 vincent Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volwheel/ChangeLog,v 1.9 2015/03/29 21:51:08 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -volwheel-0.2.8.ebuild:
+  Remove old.
 
   04 Mar 2014; Vicente Olivert Riera <vincent@gentoo.org>
   volwheel-0.2.8-r1.ebuild:

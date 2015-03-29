@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vlevel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/ChangeLog,v 1.15 2012/09/07 22:27:38 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vlevel/ChangeLog,v 1.16 2015/03/29 21:51:48 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -vlevel-0.5.ebuild:
+  Remove old.
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

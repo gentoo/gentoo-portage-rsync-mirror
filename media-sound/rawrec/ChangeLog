@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rawrec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.21 2014/08/10 21:10:54 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.22 2015/03/29 21:57:53 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -rawrec-0.9.98.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rawrec-0.9.98.ebuild,
   rawrec-0.9.991.ebuild:
