@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qttranslations
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.13 2015/03/08 14:03:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.14 2015/03/29 14:31:05 pesa Exp $
+
+  29 Mar 2015; Davide Pesavento <pesa@gentoo.org> qttranslations-5.4.1.ebuild:
+  This package has no RDEPENDs (bug 544938).
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qttranslations-5.4.1.ebuild:
   Remove all keywords from "live" branch.

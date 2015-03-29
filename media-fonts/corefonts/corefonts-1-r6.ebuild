@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r6.ebuild,v 1.3 2014/01/18 12:17:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/corefonts/corefonts-1-r6.ebuild,v 1.4 2015/03/29 14:22:51 yngwin Exp $
 
 inherit font
 
@@ -39,7 +39,5 @@ src_install() {
 	font_src_install
 	# The license explicitly states that the license must be distributed with the
 	# fonts. The only way to do that for the binpkg is to include it.
-	# We just have to copy it from the portdir because it's not actually inside
-	# upstream's own files...
-	dodoc "${PORTDIR}"/licenses/"${LICENSE}"
+	dodoc licen.txt
 }

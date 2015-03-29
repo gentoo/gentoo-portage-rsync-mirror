@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.67.ebuild,v 1.6 2008/06/29 08:24:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.67.ebuild,v 1.7 2015/03/29 14:05:50 jlec Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="PHYLIP - The PHYLogeny Inference Package"
+DESCRIPTION=" The PHYLogeny Inference Package"
 LICENSE="freedist"
 HOMEPAGE="http://evolution.genetics.washington.edu/phylip.html"
 SRC_URI="http://evolution.gs.washington.edu/${PN}/download/${P}.tar.gz"

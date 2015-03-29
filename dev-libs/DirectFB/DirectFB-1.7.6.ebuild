@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.6.ebuild,v 1.4 2015/02/16 07:58:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.7.6.ebuild,v 1.5 2015/03/29 14:01:19 pacho Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -32,7 +32,7 @@ SRC_URI="http://directfb.org/downloads/Core/${PN}-${PV:0:3}/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 -mips ~ppc ~ppc64 ~sh -sparc ~x86"
-IUSE="alsa bmp cddb debug divine drmkms +dynload doc egl fbcon fusiondale fusionsound gif gles2 gstreamer imlib2 input_hub jpeg jpeg2k mad cpu_flags_x86_mmx mng mpeg2 mpeg3 multicore opengl oss png pnm sawman sdl cpu_flags_x86_sse static-libs svg swfdec tiff timidity tremor truetype v4l vdpau vorbis webp X xine zlib ${IUV} ${IUD}"
+IUSE="alsa bmp cddb debug divine drmkms +dynload doc egl fbcon fusiondale fusionsound gif gles2 gstreamer imlib2 input_hub jpeg jpeg2k mad cpu_flags_x86_mmx mng mpeg2 mpeg3 multicore opengl oss png pnm sawman sdl cpu_flags_x86_sse static-libs swfdec tiff timidity tremor truetype v4l vdpau vorbis webp X xine zlib ${IUV} ${IUD}"
 REQUIRED_USE="gles2? ( opengl )"
 
 # ffmpeg useflag broken
@@ -53,7 +53,6 @@ RDEPEND="
 	opengl? ( media-libs/mesa[gbm,egl?,gles2?] x11-libs/libdrm )
 	png? ( media-libs/libpng:0 )
 	sdl? ( media-libs/libsdl )
-	svg? ( x11-libs/libsvg-cairo )
 	swfdec? ( media-libs/swfdec )
 	tiff? ( media-libs/tiff:0 )
 	timidity? (
@@ -152,7 +151,7 @@ src_configure() {
 		$(use_enable tiff) \
 		$(use_enable imlib2) \
 		$(use_enable pnm) \
-		$(use_enable svg) \
+		--disable-svg \
 		$(use_enable mpeg2) \
 		$(use_enable mpeg3 libmpeg3) \
 		--disable-flash \

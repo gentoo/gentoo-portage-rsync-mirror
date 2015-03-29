@@ -3435,6 +3435,7 @@ mate-extra/mate-power-manager:man - Build power manager's man page.
 mate-extra/mate-power-manager:unique - Enable single instance support using dev-libs/libunique.
 mate-extra/mate-screensaver:consolekit - Enable support for sys-auth/consolkekit
 mate-extra/mate-utils:applet - Enable the mate dictionary applet
+media-fonts/corefonts:tahoma - Also install the Tahoma font. Due to the lack of a free bold variant, this may render badly. See bug 184790.
 media-fonts/culmus:ancient - Install ancient semitic scripts
 media-fonts/culmus:fancy - Install fancy fonts
 media-fonts/culmus:fontforge - Use media-gfx/fontforge to build fonts from source

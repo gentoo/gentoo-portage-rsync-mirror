@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.37 2015/03/02 09:20:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.38 2015/03/29 14:16:07 zlogene Exp $
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> polkit-qt-0.112.0-r1.ebuild:
+  x86 stable wrt bug #524294
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> polkit-qt-0.112.0-r1.ebuild:
   Stable for ppc, wrt bug #524294
