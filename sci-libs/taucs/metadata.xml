@@ -24,6 +24,6 @@
   * Utility Routines
 </longdescription>
   <use>
-    <flag name="cilk">Enable multithreading using <pkg>dev-lang/cilk</pkg>)</flag>
+    <flag name="cilk">Enable multithreading using <pkg>dev-lang/cilk</pkg></flag>
   </use>
 </pkgmetadata>

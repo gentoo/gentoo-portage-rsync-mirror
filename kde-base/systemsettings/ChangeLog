@@ -1,10 +1,6 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.278 2015/03/29 13:14:08 johu Exp $
-
-  29 Mar 2015; Johannes Huber <johu@gentoo.org>
-  files/systemsettings-kcm-randr.patch:
-  Version bump KDE PIM 4.14.6
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.279 2015/03/29 16:54:41 kensington Exp $
 
 *systemsettings-4.11.17 (29 Mar 2015)
 

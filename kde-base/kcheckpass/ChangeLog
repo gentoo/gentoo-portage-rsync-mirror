@@ -1,10 +1,6 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.337 2015/03/29 13:14:08 johu Exp $
-
-  29 Mar 2015; Johannes Huber <johu@gentoo.org>
-  files/kcheckpass-4.4.2-no-SUID-no-GUID.patch:
-  Version bump KDE PIM 4.14.6
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.338 2015/03/29 16:50:35 kensington Exp $
 
 *kcheckpass-4.11.17 (29 Mar 2015)
 
