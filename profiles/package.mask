@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16444 2015/03/29 01:09:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16445 2015/03/29 05:06:16 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,7 +35,7 @@
 # Removal in 30 days. See also bug #544406.
 x11-themes/gtk-engines-qtcurve
 
-# Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
+# Michał Górny <mgorny@gentoo.org> (28 Mar 2015)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
 # Mask emul-linux-x86 packages along with unported old versions
 # of reverse dependencies for removal in 60 days, bug #544876.

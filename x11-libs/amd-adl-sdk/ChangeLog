@@ -1,4 +1,9 @@
 
+*amd-adl-sdk-8.0 (29 Mar 2015)
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-8.0.ebuild:
+  Version bump.
+
 *amd-adl-sdk-7.0 (21 Dec 2014)
 
   21 Dec 2014; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-7.0.ebuild:

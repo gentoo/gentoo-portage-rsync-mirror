@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/andromeda
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/ChangeLog,v 1.5 2014/06/23 07:43:49 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/ChangeLog,v 1.6 2015/03/29 05:23:14 yngwin Exp $
+
+  29 Mar 2015; Ben de Groot <yngwin@gentoo.org> -andromeda-0.2.1.ebuild,
+  andromeda-0.3.ebuild:
+  Update ebuild wrt gitorious shutdown (bug #544866). Remove old.
 
 *andromeda-0.3 (23 Jun 2014)
 

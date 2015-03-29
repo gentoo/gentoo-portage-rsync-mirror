@@ -1,14 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/andromeda-0.3.ebuild,v 1.1 2014/06/23 07:43:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/andromeda/andromeda-0.3.ebuild,v 1.2 2015/03/29 05:23:14 yngwin Exp $
 
 EAPI=5
-
 inherit cmake-utils
 
 DESCRIPTION="Qt4-based filemanager"
-HOMEPAGE="https://gitorious.org/andromeda/pages/Home"
-SRC_URI="https://gitorious.org/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/ABBAPOH/andromeda"
+SRC_URI="http://dev.gentoo.org/~yngwin/distfiles/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
