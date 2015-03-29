@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moo/Moo-2.0.0.ebuild,v 1.1 2015/03/14 13:52:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moo/Moo-2.0.0.ebuild,v 1.2 2015/03/29 09:45:47 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Minimalist Object Orientation (with Moose compatiblity)"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-aix ~ppc-macos ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~ppc-aix ~ppc-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND="

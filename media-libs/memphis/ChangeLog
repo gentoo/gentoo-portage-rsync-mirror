@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/memphis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.26 2014/01/15 12:58:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.27 2015/03/29 09:49:27 jlec Exp $
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org> memphis-0.2.3.ebuild:
+  Move dev-util/gtk-doc dep behing USE=doc, #544136
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> memphis-0.2.3.ebuild:
   Stable for arm, wrt bug #488770

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/strictures
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/strictures/ChangeLog,v 1.16 2014/12/07 12:57:33 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/strictures/ChangeLog,v 1.17 2015/03/29 09:54:09 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> strictures-1.4.4-r1.ebuild:
+  Marked ~hppa (bug #543312).
 
   07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> strictures-1.4.4-r1.ebuild:
   Add ~ppc keyword

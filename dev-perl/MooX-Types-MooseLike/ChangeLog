@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooX-Types-MooseLike
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/ChangeLog,v 1.6 2015/02/24 00:16:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/ChangeLog,v 1.7 2015/03/29 09:56:48 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  MooX-Types-MooseLike-0.270.0.ebuild:
+  Marked ~hppa (bug #543312).
 
 *MooX-Types-MooseLike-0.270.0 (24 Feb 2015)
 

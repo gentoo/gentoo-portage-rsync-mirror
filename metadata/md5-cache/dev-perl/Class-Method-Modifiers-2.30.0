@@ -4,10 +4,10 @@ DESCRIPTION=provides Moose-like method modifiers
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Class-Method-Modifiers/
 IUSE=test
-KEYWORDS=amd64 ~ppc x86 ~ppc-aix ~ppc-macos ~x86-solaris
+KEYWORDS=amd64 ~hppa ~ppc x86 ~ppc-aix ~ppc-macos ~x86-solaris
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Class-Method-Modifiers-2.03.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=9955e61a6d2f58e2860d4793a2ad4026
+_md5_=fc33798c0cb838dfa9f0478f9133d1f2

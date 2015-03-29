@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Type-Tiny
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Type-Tiny/ChangeLog,v 1.1 2015/02/21 21:08:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Type-Tiny/ChangeLog,v 1.2 2015/03/29 10:00:48 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Type-Tiny-1.0.5.ebuild:
+  Marked ~hppa (bug #543312).
 
 *Type-Tiny-1.0.5 (21 Feb 2015)
 

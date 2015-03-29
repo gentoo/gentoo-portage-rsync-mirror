@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Meta-Check/CPAN-Meta-Check-0.9.0-r1.ebuild,v 1.1 2014/10/19 21:31:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Meta-Check/CPAN-Meta-Check-0.9.0-r1.ebuild,v 1.2 2015/03/29 09:32:37 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION='Verify requirements in a CPAN::Meta object'
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="test"
 
 # CPAN::Meta::Prereqs -> perl-CPAN-Meta

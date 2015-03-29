@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CPAN-Meta-Check
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Meta-Check/ChangeLog,v 1.6 2014/10/19 21:31:19 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Meta-Check/ChangeLog,v 1.7 2015/03/29 09:32:37 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> CPAN-Meta-Check-0.9.0-r1.ebuild:
+  Marked ~hppa (bug #544064).
 
 *CPAN-Meta-Check-0.9.0-r1 (19 Oct 2014)
 

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-libs/expat dev-libs/glib:2 x11-libs/cairo introspection? ( dev-libs/gobject-introspection ) vala? ( || ( dev-lang/vala:0.26 dev-lang/vala:0.24 dev-lang/vala:0.22 dev-lang/vala:0.20 ) ) dev-util/gtk-doc !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.11* >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-libs/expat dev-libs/glib:2 x11-libs/cairo introspection? ( dev-libs/gobject-introspection ) doc? ( dev-util/gtk-doc ) vala? ( || ( dev-lang/vala:0.26 dev-lang/vala:0.24 dev-lang/vala:0.22 dev-lang/vala:0.20 ) ) !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.11* >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A map-rendering application and a library for OpenStreetMap
 EAPI=4
 HOMEPAGE=http://trac.openstreetmap.ch/trac/memphis/
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/expat dev-libs/glib:2 x11-libs/cairo introspection? ( dev-libs/
 SLOT=0.2
 SRC_URI=http://wenner.ch/files/public/mirror/memphis/memphis-0.2.3.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	vala	a41415fe361172827ed11b6a32ee38fb
-_md5_=9d694ab28c2c3c1c93f5175e0b08884a
+_md5_=40014dc6724473ee11ff4a5325bcee96

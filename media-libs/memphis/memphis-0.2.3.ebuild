@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.23 2014/01/15 12:58:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/memphis-0.2.3.ebuild,v 1.24 2015/03/29 09:49:27 jlec Exp $
 
 EAPI=4
 
@@ -26,8 +26,8 @@ RDEPEND="
 	x11-libs/cairo
 	introspection? ( dev-libs/gobject-introspection )"
 DEPEND="${RDEPEND}
-	vala? ( $(vala_depend) )
-	dev-util/gtk-doc"
+	doc? ( dev-util/gtk-doc )
+	vala? ( $(vala_depend) )"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 

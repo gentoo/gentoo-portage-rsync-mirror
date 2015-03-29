@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/cutg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.61 2015/03/28 21:39:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/ChangeLog,v 1.62 2015/03/29 09:35:00 jlec Exp $
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org> -cutg-151.ebuild,
+  -cutg-160.ebuild:
+  Drop old
 
   28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> cutg-160-r1.ebuild:
   Stable for ppc, wrt bug #542246

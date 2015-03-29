@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-CheckDeps
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-CheckDeps/ChangeLog,v 1.5 2014/10/19 21:37:27 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-CheckDeps/ChangeLog,v 1.6 2015/03/29 09:33:44 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Test-CheckDeps-0.10.0.ebuild:
+  Marked ~hppa (bug #544064).
 
 *Test-CheckDeps-0.10.0 (19 Oct 2014)
 

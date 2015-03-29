@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Perl/Data-Perl-0.2.9.ebuild,v 1.1 2015/03/14 13:26:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Perl/Data-Perl-0.2.9.ebuild,v 1.2 2015/03/29 09:54:38 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Base classes wrapping fundamental Perl data types"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="test"
 
 RDEPEND="

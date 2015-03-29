@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-CheckDeps/Test-CheckDeps-0.10.0.ebuild,v 1.1 2014/10/19 21:37:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-CheckDeps/Test-CheckDeps-0.10.0.ebuild,v 1.2 2015/03/29 09:33:44 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION='Check for presence of dependencies'
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="test"
 
 # rdep Test::Builder -> perl-Test-Simple

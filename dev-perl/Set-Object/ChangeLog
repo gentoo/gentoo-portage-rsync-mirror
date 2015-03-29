@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Set-Object
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-Object/ChangeLog,v 1.15 2014/09/03 18:21:48 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-Object/ChangeLog,v 1.16 2015/03/29 09:56:29 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Set-Object-1.310.0.ebuild:
+  Marked ~hppa (bug #543312).
 
   03 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -Set-Object-1.280.0.ebuild:
   Drop old.
