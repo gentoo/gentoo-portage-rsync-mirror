@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.76 2015/03/15 13:33:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.77 2015/03/29 11:18:51 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gnome-pty-helper-0.38.3.ebuild:
+  Stable for HPPA (bug #534012).
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-pty-helper-0.38.3.ebuild:
   x86 stable, bug 534012

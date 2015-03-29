@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.76 2015/03/03 05:39:32 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.77 2015/03/29 11:22:52 yngwin Exp $
+
+*cabextract-1.6 (29 Mar 2015)
+
+  29 Mar 2015; Ben de Groot <yngwin@gentoo.org> +cabextract-1.6.ebuild,
+  -cabextract-1.3.ebuild, cabextract-1.4.ebuild, metadata.xml:
+  Version bump, which fixes security bugs #538152 and #540626. Bump EAPI. Rename
+  extra-tools useflag to extras (bug #411643). Remove old.
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> cabextract-1.4.ebuild:
   add arm64 support, tested on A53 board
