@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.380 2015/03/29 11:40:40 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.381 2015/03/29 12:08:09 ago Exp $
+
+  29 Mar 2015; Agostino Sarubbo <ago@gentoo.org> sudo-1.8.12.ebuild:
+  Stable for x86, wrt bug #539532
 
   29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> sudo-1.8.12.ebuild:
   amd64 stable wrt bug #539532

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/http-cookie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-cookie/ChangeLog,v 1.6 2015/03/29 07:07:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-cookie/ChangeLog,v 1.8 2015/03/29 12:04:55 ago Exp $
+
+  29 Mar 2015; Agostino Sarubbo <ago@gentoo.org> http-cookie-1.0.2.ebuild:
+  Stable for x86, wrt bug #544326
+
+  29 Mar 2015; Agostino Sarubbo <ago@gentoo.org> http-cookie-1.0.2.ebuild:
+  Stable for amd64, wrt bug #544326
 
 *http-cookie-1.0.2-r1 (29 Mar 2015)
 

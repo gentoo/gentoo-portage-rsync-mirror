@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.113 2015/03/26 15:56:30 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.115 2015/03/29 12:19:26 ultrabug Exp $
+
+  29 Mar 2015; Ultrabug <ultrabug@gentoo.org> -mongodb-2.4.6-r2.ebuild,
+  -mongodb-2.6.7.ebuild:
+  drop vulnerable wrt #542880
+
+  29 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mongodb-2.4.13.ebuild,
+  mongodb-2.6.8.ebuild:
+  Stable for x86, wrt bug #542880
 
   26 Mar 2015; Ultrabug <ultrabug@gentoo.org> mongodb-3.0.1.ebuild:
   fix tests #543760 thx to Tomas Mozes
