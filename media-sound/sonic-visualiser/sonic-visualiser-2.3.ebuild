@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-2.3.ebuild,v 1.1 2014/03/09 11:04:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-2.3.ebuild,v 1.2 2015/03/29 19:06:02 zlogene Exp $
 
 EAPI=4
 inherit eutils qt4-r2 autotools fdo-mime
@@ -16,6 +16,7 @@ IUSE="id3tag jack mad ogg osc +portaudio pulseaudio"
 
 RDEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
+	dev-qt/qttest:4
 	media-libs/libsndfile
 	media-libs/libsamplerate
 	app-arch/bzip2

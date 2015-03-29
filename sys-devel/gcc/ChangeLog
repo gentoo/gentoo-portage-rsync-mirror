@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1052 2015/03/17 06:41:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1054 2015/03/29 19:24:26 vapier Exp $
+
+  29 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  -files/3.4.1/gcc-3.4.1-mips-n32only.patch,
+  -files/3.4.1/gcc-3.4.1-mips-n64only.patch,
+  -files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch,
+  -files/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch, gcc-3.4.6-r2.ebuild,
+  metadata.xml:
+  Drop old mips-specific patches -- they can use newer gcc-4 versions.  The r10k
+  patch has been moved to the gentoo patchset.
+
+  29 Mar 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add USE=cilk to control support for the Cilk Plus language.
 
   17 Mar 2015; Mike Frysinger <vapier@gentoo.org> gcc-4.7.0.ebuild,
   gcc-4.7.1.ebuild, gcc-4.7.2-r1.ebuild, gcc-4.7.3-r1.ebuild, gcc-4.7.4.ebuild:

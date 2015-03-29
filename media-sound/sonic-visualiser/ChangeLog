@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sonic-visualiser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.29 2015/03/11 10:05:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.30 2015/03/29 19:06:02 zlogene Exp $
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> sonic-visualiser-2.3.ebuild,
+  sonic-visualiser-2.4.1.ebuild:
+  Add missing dev-qt/qttest dependency wrt bug #531214
 
 *sonic-visualiser-2.4.1 (11 Mar 2015)
 
