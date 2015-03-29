@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/serienbrief
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.11 2013/05/17 15:44:14 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.12 2015/03/29 00:04:03 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -serienbrief-0.2.2.ebuild,
+  -serienbrief-0.2.3.ebuild:
+  Remove old.
 
 *serienbrief-0.2.4 (17 May 2013)
 
@@ -60,4 +64,3 @@
   +serienbrief-0.2.ebuild:
   Initial commit. Ebuild submitted by Tobias Leupold (who is also upstream) in
   bug #141271.
-
