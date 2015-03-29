@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jisp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.10 2015/03/27 10:23:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jisp/ChangeLog,v 1.11 2015/03/29 17:57:51 zlogene Exp $
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> jisp-2.5.1-r3.ebuild:
+  ppc stable wrt bug #535084
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> jisp-2.5.1-r3.ebuild:
   Stable for x86, wrt bug #535084

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.3-r2.ebuild,v 1.3 2015/03/27 10:25:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.3-r2.ebuild,v 1.4 2015/03/29 18:00:08 zlogene Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 S="${WORKDIR}/${PN}"
 

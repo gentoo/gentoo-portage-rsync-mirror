@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.140 2015/03/24 20:14:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.141 2015/03/29 17:48:51 zlogene Exp $
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> make-4.1-r1.ebuild:
+  ppc64 stable wrt bug #540868
 
   24 Mar 2015; Markus Meier <maekke@gentoo.org> make-4.1-r1.ebuild:
   arm stable, bug #540868

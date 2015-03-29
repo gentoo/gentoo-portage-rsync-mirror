@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/ChangeLog,v 1.14 2015/03/27 10:21:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xp/ChangeLog,v 1.15 2015/03/29 17:52:22 zlogene Exp $
+
+  29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> xp-0.5-r2.ebuild:
+  ppc stable wrt bug #535100
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> xp-0.5-r2.ebuild:
   Stable for x86, wrt bug #535100
