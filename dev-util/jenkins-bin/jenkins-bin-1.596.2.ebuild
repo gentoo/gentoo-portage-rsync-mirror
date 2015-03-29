@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.605.ebuild,v 1.1 2015/03/18 12:24:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.596.2.ebuild,v 1.1 2015/03/29 04:47:44 mrueg Exp $
 
 EAPI=5
 
@@ -9,15 +9,15 @@ inherit user
 DESCRIPTION="Extensible continuous integration server"
 HOMEPAGE="http://jenkins-ci.org/"
 LICENSE="MIT"
-SRC_URI="http://mirrors.jenkins-ci.org/war/${PV}/${PN/-bin/}.war -> ${P}.war"
+SRC_URI="http://mirrors.jenkins-ci.org/war-stable/${PV}/${PN/-bin/}.war -> ${P}.war"
 RESTRICT="mirror"
-SLOT="0"
+SLOT="lts"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-fonts/dejavu
 	media-libs/freetype
-	!dev-util/jenkins-bin:lts
+	!dev-util/jenkins-bin:0
 	virtual/jre"
 
 S=${WORKDIR}

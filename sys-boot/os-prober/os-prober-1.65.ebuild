@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.57.ebuild,v 1.1 2013/01/05 22:52:56 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/os-prober/os-prober-1.65.ebuild,v 1.1 2015/03/29 04:51:39 mrueg Exp $
 
 EAPI=5
 
@@ -9,16 +9,23 @@ inherit toolchain-funcs
 
 DESCRIPTION="Utility to detect other OSs on a set of drives"
 HOMEPAGE="http://packages.debian.org/source/sid/os-prober"
-SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${PN}_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/${PN::1}/${PN}/${PN}_${PV}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+S=${WORKDIR}/${PN}
+
 src_prepare() {
 	# use default GNU rules
 	rm Makefile || die 'rm Makefile failed'
+	# Fix references to grub-mount
+	sed -i -e 's:grub-mount:grub2-mount:g' \
+		common.sh \
+		linux-boot-probes/common/50mounted-tests \
+		os-probes/common/50mounted-tests
 }
 
 src_compile() {
@@ -50,6 +57,10 @@ src_install() {
 		doexe $dir/common/*
 		if [[ -d $dir/$debarch ]]; then
 			doexe $dir/$debarch/*
+		fi
+		if [[ -d $dir/$debarch/efi ]]; then
+			exeinto /usr/lib/$dir/efi
+			doexe $dir/$debarch/efi/*
 		fi
 	done
 

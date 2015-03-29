@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/zh-kcfonts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.26 2011/06/14 11:46:09 pva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.27 2015/03/29 04:33:24 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -zh-kcfonts-1.05-r2.ebuild:
+  Remove old.
 
   14 Jun 2011; Peter Volkov <pva@gentoo.org> zh-kcfonts-1.05-r3.ebuild:
   Add missing bdftopcf dependency, bug 371233 thank Piotr Szymaniak for report.

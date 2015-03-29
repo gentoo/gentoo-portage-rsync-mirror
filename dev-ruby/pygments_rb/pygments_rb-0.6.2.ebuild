@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.2.ebuild,v 1.1 2015/01/29 21:04:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/pygments_rb-0.6.2.ebuild,v 1.2 2015/03/29 04:45:17 mrueg Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RDEPEND+=" dev-python/pygments[${PYTHON_USEDEP}]
 	dev-python/simplejson[${PYTHON_USEDEP}]"
 DEPEND+=" test? ( ${RDEPEND} )"
 
-ruby_add_rdepend ">=dev-ruby/yajl-ruby-1.1
+ruby_add_rdepend ">=dev-ruby/yajl-ruby-1.2
 	dev-ruby/posix-spawn"
 ruby_add_bdepend "dev-ruby/rake-compiler"
 

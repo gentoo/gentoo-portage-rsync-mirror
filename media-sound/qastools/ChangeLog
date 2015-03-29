@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qastools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qastools/ChangeLog,v 1.6 2015/03/26 12:52:54 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qastools/ChangeLog,v 1.7 2015/03/29 04:43:03 yngwin Exp $
+
+*qastools-0.18.1-r1 (29 Mar 2015)
+
+  29 Mar 2015; Ben de Groot <yngwin@gentoo.org> +qastools-0.18.1-r1.ebuild,
+  -qastools-0.18.1.ebuild:
+  Use l10n eclass for localization handling. Add he locale. Add virtual/libudev
+  dependency (bug #544782). Do not install license file.
 
 *qastools-0.18.1 (26 Mar 2015)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/aquapfont
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.38 2010/01/01 17:52:49 fauli Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.39 2015/03/29 04:32:04 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -aquapfont-2.6-r1.ebuild,
+  -aquapfont-2.6.ebuild:
+  Remove old.
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   aquapfont-2.6-r2.ebuild:
@@ -136,4 +140,3 @@
   <sitosito@p.chan.ne.jp> at GentooJP BugTrack. Redistribution
   courtesy of the author, Aqua <aquablue@m12.milkcafe.to>
   See /usr/portage/licenses/aquafont before using the software.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pygments_rb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/ChangeLog,v 1.8 2015/01/29 21:04:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pygments_rb/ChangeLog,v 1.9 2015/03/29 04:45:17 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -pygments_rb-0.6.0-r2.ebuild,
+  pygments_rb-0.6.2.ebuild:
+  Fix dep. Remove old. Fixes bug #540838.
 
 *pygments_rb-0.6.2 (29 Jan 2015)
 
