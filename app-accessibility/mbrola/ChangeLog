@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.59 2014/08/06 06:24:38 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.60 2015/03/29 03:49:33 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -mbrola-3.0.1h-r5.ebuild:
+  Remove old.
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> mbrola-3.0.1h-r5.ebuild,
   mbrola-3.0.1h-r6.ebuild:

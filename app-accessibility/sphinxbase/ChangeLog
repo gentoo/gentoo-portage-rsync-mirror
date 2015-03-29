@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinxbase
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.9 2013/10/27 15:51:51 teiresias Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.10 2015/03/29 03:50:41 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -sphinxbase-0.7.ebuild:
+  Remove old.
 
   27 Oct 2013; Christopher Brannon <teiresias@gentoo.org>
   sphinxbase-0.8.ebuild, +files/sphinxbase-0.8-automake113.patch:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.67 2015/03/08 14:00:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.68 2015/03/29 03:42:21 pesa Exp $
+
+  29 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtcore-4.8.5-r2.ebuild:
+  Add blocker to prevent file collision on downgrade, thanks to Zero_Chaos in
+  bug #544666.
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtcore-5.4.1.ebuild:
   Remove all keywords from "live" branch.
