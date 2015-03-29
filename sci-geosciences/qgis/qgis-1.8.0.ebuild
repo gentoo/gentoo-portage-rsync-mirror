@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.8 2014/12/28 16:51:34 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/qgis-1.8.0.ebuild,v 1.9 2015/03/29 13:29:06 pacho Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="http://qgis.org/downloads/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bundled-libs examples gps grass gsl postgres python spatialite test"
+IUSE="bundled-libs examples gps gsl postgres python spatialite test"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
@@ -37,7 +37,6 @@ RDEPEND="
 	sci-libs/proj
 	x11-libs/qwt:5[svg]
 	!bundled-libs? ( <x11-libs/qwtpolar-1 )
-	grass? ( >=sci-geosciences/grass-6.4.0_rc6[python?] )
 	postgres? ( >=dev-db/postgresql-8.4 )
 	python? (
 		dev-python/PyQt4[X,sql,svg,${PYTHON_USEDEP}]
@@ -70,13 +69,12 @@ src_configure() {
 		"-DWITH_INTERNAL_QWTPOLAR=$(usex bundled-libs "ON" "OFF")"
 		"-DPEDANTIC=OFF"
 		"-DWITH_APIDOC=OFF"
+		"-DWITH_GRASS=OFF"
 		$(cmake-utils_use_with postgres POSTGRESQL)
-		$(cmake-utils_use_with grass GRASS)
 		$(cmake-utils_use_with python BINDINGS)
 		$(cmake-utils_use python BINDINGS_GLOBAL_INSTALL)
 		$(cmake-utils_use_with spatialite SPATIALITE)
 		$(cmake-utils_use_enable test TESTS)
-		$(usex grass "-DGRASS_PREFIX=/usr/" "")
 	)
 	cmake-utils_src_configure
 }

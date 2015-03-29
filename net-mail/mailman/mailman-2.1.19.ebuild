@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.15.ebuild,v 1.9 2014/01/08 06:42:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.19.ebuild,v 1.1 2015/03/29 13:08:58 hanno Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -8,19 +8,22 @@ PYTHON_DEPEND="2"
 inherit eutils python multilib systemd user
 
 DESCRIPTION="A python-based mailing list server with an extensive web interface"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P/_p/-}.tgz"
 HOMEPAGE="http://www.list.org/"
+S="${WORKDIR}/${P/_p/-}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="selinux"
 
 DEPEND="virtual/mta
 	virtual/cron
 	virtual/httpd-cgi
-	selinux? ( sec-policy/selinux-mailman )"
-RDEPEND="${DEPEND}"
+	dev-python/dnspython"
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-mailman )
+"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -68,7 +71,7 @@ src_install () {
 	emake "DESTDIR=${D}" doinstall || die
 
 	insinto /etc/apache2/modules.d
-	newins "${FILESDIR}/50_mailman.conf-r1" 50_mailman.conf
+	newins "${FILESDIR}/50_mailman.conf-r2" 50_mailman.conf
 	sed -i "s:/usr/local/mailman/cgi-bin:${INSTALLDIR}/cgi-bin:g" "${D}/etc/apache2/modules.d/50_mailman.conf"
 	sed -i "s:/usr/local/mailman/icons:${INSTALLDIR}/icons:g" "${D}/etc/apache2/modules.d/50_mailman.conf"
 	sed -i "s:/usr/local/mailman/archives:${VAR_PREFIX}/archives:g" "${D}/etc/apache2/modules.d/50_mailman.conf"

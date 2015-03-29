@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mailman
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.147 2014/12/31 16:07:02 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.148 2015/03/29 13:08:58 hanno Exp $
+
+*mailman-2.1.19 (29 Mar 2015)
+
+  29 Mar 2015; <hanno@gentoo.org> -mailman-2.1.14.ebuild,
+  -mailman-2.1.15.ebuild, -mailman-2.1.17.ebuild, +mailman-2.1.19.ebuild,
+  +files/50_mailman.conf-r2:
+  Bump, remove old apache 2.2 directives, remove old versions.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> mailman-2.1.18_p1.ebuild:
   Stable for ppc, wrt bug #530772

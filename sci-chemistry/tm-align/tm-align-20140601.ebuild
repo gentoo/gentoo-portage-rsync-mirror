@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/tm-align-20120707.ebuild,v 1.4 2015/02/09 12:49:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/tm-align-20140601.ebuild,v 1.1 2015/03/29 13:15:56 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils flag-o-matic fortran-2
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r5.ebuild,v 1.4 2015/03/28 21:28:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.10-r5.ebuild,v 1.5 2015/03/29 13:16:36 zlogene Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="https://alioth.debian.org/frs/download.php/3351/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="nls readline"
 
 RDEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.6.ebuild,v 1.4 2015/03/29 12:35:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.6.ebuild,v 1.5 2015/03/29 13:02:16 yngwin Exp $
 
 EAPI=5
 MY_PN="QupZilla"
@@ -34,8 +34,7 @@ RDEPEND="dev-libs/openssl:0
 		>=dev-qt/qtsql-4.8:4[sqlite]
 		>=dev-qt/qtwebkit-4.8:4
 		dbus? ( >=dev-qt/qtdbus-4.8:4 ) )
-	qt5? ( dev-qt/linguist-tools:5
-		dev-qt/qtcore:5
+	qt5? ( dev-qt/qtcore:5
 		dev-qt/qtgui:5
 		dev-qt/qtconcurrent:5
 		dev-qt/qtprintsupport:5
@@ -44,7 +43,8 @@ RDEPEND="dev-libs/openssl:0
 		dev-qt/qtwebkit:5
 		dbus? ( dev-qt/qtdbus:5 ) )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	qt5? ( dev-qt/linguist-tools:5 )"
 
 DOCS=( AUTHORS CHANGELOG FAQ README.md )
 S=${WORKDIR}/${MY_P}

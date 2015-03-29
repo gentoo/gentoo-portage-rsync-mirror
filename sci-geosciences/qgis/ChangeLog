@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/qgis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.36 2014/12/28 16:51:34 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qgis/ChangeLog,v 1.37 2015/03/29 13:29:06 pacho Exp $
+
+  29 Mar 2015; Pacho Ramos <pacho@gentoo.org> qgis-1.8.0.ebuild:
+  Disable grass as it will be removed (#514514)
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> qgis-1.7.0.ebuild,
   qgis-1.8.0.ebuild:

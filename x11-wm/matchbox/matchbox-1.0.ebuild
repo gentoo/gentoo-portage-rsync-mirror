@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.13 2012/12/22 17:52:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.14 2015/03/29 13:27:23 pacho Exp $
 
 DESCRIPTION="Light weight WM designed for use on PDA computers"
 HOMEPAGE="http://matchbox-project.org/"
@@ -17,7 +17,6 @@ RDEPEND="x11-wm/matchbox-common
 	x11-wm/matchbox-panel
 	x11-wm/matchbox-window-manager
 	!minimal? ( x11-misc/matchbox-keyboard
-		x11-misc/matchbox-panel-manager
 		x11-themes/matchbox-themes-extra
 		x11-plugins/matchbox-applet-input-manager
 		x11-plugins/matchbox-applet-startup-monitor
