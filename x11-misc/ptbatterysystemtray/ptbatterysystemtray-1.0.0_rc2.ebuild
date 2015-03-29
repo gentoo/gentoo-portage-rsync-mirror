@@ -1,14 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ptbatterysystemtray-1.0.0_rc2.ebuild,v 1.3 2013/03/02 23:51:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ptbatterysystemtray-1.0.0_rc2.ebuild,v 1.4 2015/03/29 05:34:10 yngwin Exp $
 
-EAPI=4
-
+EAPI=5
 inherit qt4-r2
 
 DESCRIPTION="A simple battery monitor in the system tray"
-HOMEPAGE="https://gitorious.org/ptbatterysystemtray"
-SRC_URI="https://gitorious.org/${PN}/${PN}/archive-tarball/${PV/_/-} -> ${P}.tar.gz"
+HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

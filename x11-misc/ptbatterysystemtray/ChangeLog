@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/ptbatterysystemtray
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ChangeLog,v 1.3 2013/03/02 23:51:03 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ptbatterysystemtray/ChangeLog,v 1.4 2015/03/29 05:34:10 yngwin Exp $
+
+  29 Mar 2015; Ben de Groot <yngwin@gentoo.org>
+  ptbatterysystemtray-1.0.0_rc2.ebuild:
+  Update ebuild wrt gitorious shutdown (bug #544868). Update EAPI.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   ptbatterysystemtray-1.0.0_rc2.ebuild:
