@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.2.0-r1.ebuild,v 1.2 2015/03/21 15:37:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.2.0-r2.ebuild,v 1.1 2015/03/29 18:30:52 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit bash-completion-r1 eutils python-single-r1 user
+inherit autotools bash-completion-r1 eutils python-single-r1 user
 
 DESCRIPTION="paludis, the other package mangler"
 HOMEPAGE="http://paludis.exherbo.org/"
@@ -88,7 +88,17 @@ src_prepare() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=439372#c2
 	sed -i -e '1s/ruby/&19/' ruby/demos/*.rb || die
 
+	local PATCHES=(
+		"${FILESDIR}"/${P}-fix-MERGE_TYPE.patch
+		"${FILESDIR}"/${P}-fix-PWD-handling.patch
+		"${FILESDIR}"/${P}-filter-IUSE_EFFECTIVE.patch
+		"${FILESDIR}"/${P}-check-IUSE_EFFECTIVE-in-EAPI-5.patch
+		"${FILESDIR}"/${P}-filter-EBUILD_PHASE_FUNC.patch
+	)
+
+	epatch "${PATCHES[@]}"
 	epatch_user
+	eautoreconf
 }
 
 src_configure() {

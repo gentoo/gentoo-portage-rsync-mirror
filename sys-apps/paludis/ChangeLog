@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.250 2015/03/21 15:37:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.251 2015/03/29 18:30:52 mgorny Exp $
+
+*paludis-2.2.0-r2 (29 Mar 2015)
+
+  29 Mar 2015; Michał Górny <mgorny@gentoo.org>
+  +files/paludis-2.2.0-check-IUSE_EFFECTIVE-in-EAPI-5.patch,
+  +files/paludis-2.2.0-filter-EBUILD_PHASE_FUNC.patch,
+  +files/paludis-2.2.0-filter-IUSE_EFFECTIVE.patch,
+  +files/paludis-2.2.0-fix-MERGE_TYPE.patch,
+  +files/paludis-2.2.0-fix-PWD-handling.patch, +paludis-2.2.0-r2.ebuild,
+  -paludis-2.2.0-r1.ebuild:
+  Backport some EAPI support bugfixes.
 
   21 Mar 2015; Michał Górny <mgorny@gentoo.org> paludis-2.2.0-r1.ebuild:
   Add -k to emake check, to get as many tests done as possible on failure.

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.98 2015/03/29 11:19:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.99 2015/03/29 18:19:23 tetromino Exp $
+
+  29 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -colord-1.2.5-r1.ebuild, -colord-1.2.8.ebuild, colord-1.2.9.ebuild:
+  Fix multilib build when USE=-gusb (bug #544968, thanks to Dell'Aica
+  Valentino). Drop old.
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> colord-1.2.9.ebuild:
   Stable for HPPA (bug #534012).
