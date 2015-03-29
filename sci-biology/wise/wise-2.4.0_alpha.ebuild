@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.4.0_alpha.ebuild,v 1.2 2010/10/02 15:08:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.4.0_alpha.ebuild,v 1.3 2015/03/29 13:39:24 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils toolchain-funcs versionator
 
@@ -12,8 +12,8 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/${PN}2/${PN}$(delete_version_separator
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="doc"
 KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+IUSE="doc static-libs"
 
 RDEPEND="~sci-biology/hmmer-2.3.2"
 DEPEND="
@@ -25,11 +25,12 @@ DEPEND="
 S="${WORKDIR}"/${PN}$(delete_version_separator 3)
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
-	epatch "${FILESDIR}"/${P}-cflags.patch
-	cd "${S}"/docs
-	cat "${S}"/src/models/*.tex "${S}"/src/dynlibsrc/*.tex | perl gettex.pl > temp.tex
-	cat wise2api.tex temp.tex apiend.tex > api.tex
+	epatch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch \
+		"${FILESDIR}"/${P}-cflags.patch
+	cd "${S}"/docs || die
+	cat "${S}"/src/models/*.tex "${S}"/src/dynlibsrc/*.tex | perl gettex.pl > temp.tex || die
+	cat wise2api.tex temp.tex apiend.tex > api.tex || die
 	epatch "${FILESDIR}"/${PN}-api.tex.patch
 }
 
@@ -37,9 +38,9 @@ src_compile() {
 	emake \
 		-C src \
 		CC="$(tc-getCC)" \
-		all || die
+		all
 	if use doc; then
-		cd "${S}"/docs
+		cd "${S}"/docs || die
 		for i in api appendix dynamite wise2 wise3arch; do
 			latex ${i} || die
 			latex ${i} || die
@@ -49,21 +50,24 @@ src_compile() {
 }
 
 src_test() {
-	cd "${S}"/src
-	WISECONFIGDIR="${S}/wisecfg" make test || die
+	cd "${S}"/src || die
+	WISECONFIGDIR="${S}/wisecfg" emake test
 }
 
 src_install() {
-	dobin "${S}"/src/bin/* || die "Failed to install program"
-	dolib.a "${S}"/src/base/libwisebase.a || die "Failed to install libwisebase"
-	dolib.a "${S}"/src/dynlibsrc/libdyna.a || die "Failed to install libdyna"
-	dobin "${S}"/src/dynlibsrc/testgendb || die "Failed to install testgendb"
-	dolib.a "${S}"/src/models/libmodel.a || die "Failed to install libmodel"
+	dobin "${S}"/src/bin/* "${S}"/src/dynlibsrc/testgendb
+	use static-libs && \
+		dolib.a \
+			"${S}"/src/base/libwisebase.a \
+			"${S}"/src/dynlibsrc/libdyna.a \
+			"${S}"/src/models/libmodel.a
+
 	insinto /usr/share/${PN}
-	doins -r "${S}"/wisecfg || die "Failed to install wisecfg"
+	doins -r "${S}"/wisecfg
+
 	if use doc; then
 		insinto /usr/share/doc/${PF}
-		doins "${S}"/docs/*.ps || die "Failed to install documentation"
+		doins "${S}"/docs/*.ps
 	fi
 	newenvd "${FILESDIR}"/${PN}-env 24wise || die "Failed to install env file"
 }

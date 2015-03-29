@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/prank-111130.ebuild,v 1.2 2012/06/20 21:12:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/prank-111130.ebuild,v 1.3 2015/03/29 13:52:32 jlec Exp $
 
 EAPI=4
 
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Probabilistic Alignment Kit"
-HOMEPAGE="http://code.google.com/p/prank-msa/ http://www.ebi.ac.uk/goldman-srv/prank/prank/"
+HOMEPAGE="http://wasabiapp.org/software/prank/"
 SRC_URI="http://prank-msa.googlecode.com/files/prank.src.${PV}.tgz"
 
 LICENSE="GPL-3"

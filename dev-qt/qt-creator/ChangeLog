@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.44 2015/03/18 20:43:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.45 2015/03/29 13:57:41 pesa Exp $
+
+  29 Mar 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-2.8.1.ebuild,
+  qt-creator-3.2.2.ebuild, qt-creator-3.3.2.ebuild:
+  Switch git URIs to code.qt.io wrt bug #544842.
 
   18 Mar 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.3.2.ebuild:
   Adjust qbs dependency.
