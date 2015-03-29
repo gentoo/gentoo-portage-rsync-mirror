@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16443 2015/03/28 22:12:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16444 2015/03/29 01:09:43 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (29 Mar 2015)
+# Merged with qtcurve-qt4 into x11-themes/qtcurve (with gtk useflag)
+# Removal in 30 days. See also bug #544406.
+x11-themes/gtk-engines-qtcurve
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
@@ -64,7 +69,7 @@ dev-java/jna-posix
 sci-geosciences/LatLongUTMconversion
 
 # Bernard Cafarelli <voyageur@gentoo.org> (26 Mar 2015)
-# Dead upstreams, not working in some use cases, 
+# Dead upstreams, not working in some use cases,
 # compatibility with current net-misc/nx not guaranteed,
 # some bundle old binary Xorg code that may be vulnerable,
 # modern alternative exist:
@@ -284,7 +289,7 @@ net-misc/geekcredit
 
 # Pacho Ramos <pacho@gentoo.org> (19 Mar 2015)
 # Removal in a month, bug #346791
-# Justin Lecher <jlec@gentoo.org> (27 Jun 2011)  
+# Justin Lecher <jlec@gentoo.org> (27 Jun 2011)
 # Only avalable version isn't in the tree.
 # Mask until it is bumped
 sci-chemistry/webmo
