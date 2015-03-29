@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-2.1.ebuild,v 1.3 2015/03/20 16:18:45 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-2.1.ebuild,v 1.4 2015/03/29 00:53:49 monsieurp Exp $
 
 EAPI=5
 
@@ -26,10 +26,10 @@ CDEPEND=">=dev-java/commons-logging-1.1.1
 	java-virtuals/transaction-api:0
 	dev-java/junit:4"
 DEPEND="${CDEPEND}
-	>=virtual/jdk-1.6
+	>=virtual/jdk-1.7
 	test? ( dev-java/ant-junit:0 )"
 RDEPEND="
-	>=virtual/jdk-1.6
+	>=virtual/jdk-1.7
 	${CDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -59,7 +59,6 @@ src_test() {
 	# These tests depend on a geronimo,
 	# which is not packaged yet for Gentoo unfortunately. 
 	# See bug #348853.
-
 	test_to_del src/test/java/org/apache/commons/dbcp2/managed/TestBasicManagedDataSource.java
 	test_to_del src/test/java/org/apache/commons/dbcp2/managed/TestManagedDataSource.java
 	test_to_del src/test/java/org/apache/commons/dbcp2/managed/TestManagedDataSourceInTx.java

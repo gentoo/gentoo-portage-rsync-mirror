@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.67 2015/03/20 16:18:45 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.68 2015/03/29 00:53:49 monsieurp Exp $
+
+  29 Mar 2015; Patrice Clement <monsieurp@gentoo.org> commons-dbcp-2.1.ebuild:
+  Augment required JDK to 1.7. Fix bug 544810.
 
   20 Mar 2015; Patrice Clement <monsieurp@gentoo.org> commons-dbcp-2.1.ebuild:
   EAPI 5 bump while we're at it.
