@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/aquafont
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.30 2010/02/21 02:14:12 abcd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.31 2015/03/29 04:31:11 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -aquafont-2.7-r2.ebuild,
+  -aquafont-2.7-r3.ebuild:
+  Remove old.
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> aquafont-2.7-r4.ebuild:
   Transfer prefix keywords (no other changes)
@@ -110,4 +114,3 @@
   <sitosito@p.chan.ne.jp> at GentooJP BugTrack.  Redistribution 
   courtesy of the author, Aqua <aquablue@m12.milkcafe.to>
   See /usr/portage/licenses/aquafont before using the software.
-

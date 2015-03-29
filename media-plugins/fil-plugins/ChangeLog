@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/fil-plugins
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.14 2011/03/03 11:23:30 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.15 2015/03/29 04:07:10 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -fil-plugins-0.1.0.ebuild:
+  Remove old.
 
   03 Mar 2011; Thomas Kahle <tomka@gentoo.org> fil-plugins-0.3.0.ebuild:
   x86 stable per bug 353697
@@ -52,4 +55,3 @@
 
   16 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> :
   New ebuild for Fons Adriaensen's equalisation plugins
-

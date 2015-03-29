@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/openslp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.69 2014/07/20 12:04:36 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/ChangeLog,v 1.70 2015/03/29 04:09:13 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -openslp-1.2.1-r1.ebuild,
+  -openslp-1.2.1-r2.ebuild:
+  Remove old.
 
   20 Jul 2014; Pacho Ramos <pacho@gentoo.org> openslp-1.2.1-r3.ebuild:
   ia64/ppc64/sparc stable, bug #509372
