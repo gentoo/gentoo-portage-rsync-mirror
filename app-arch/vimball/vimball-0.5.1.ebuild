@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/vimball/vimball-0.5.0.ebuild,v 1.1 2015/03/29 01:41:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/vimball/vimball-0.5.1.ebuild,v 1.1 2015/03/29 09:12:46 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{3_3,3_4} )

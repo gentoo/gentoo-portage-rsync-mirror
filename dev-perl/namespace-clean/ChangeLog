@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/namespace-clean
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.33 2014/08/24 01:39:43 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.34 2015/03/29 09:30:04 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  namespace-clean-0.240.0-r1.ebuild:
+  Marked ~hppa (bug #544064).
 
 *namespace-clean-0.240.0-r1 (24 Aug 2014)
 *namespace-clean-0.210.0-r1 (24 Aug 2014)

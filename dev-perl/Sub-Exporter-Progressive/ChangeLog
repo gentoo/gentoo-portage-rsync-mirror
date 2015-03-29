@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Exporter-Progressive
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/ChangeLog,v 1.15 2015/01/31 14:09:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/ChangeLog,v 1.16 2015/03/29 09:21:29 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  Sub-Exporter-Progressive-0.1.11.ebuild:
+  Marked ~hppa (bug #544064).
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   Sub-Exporter-Progressive-0.1.11.ebuild:

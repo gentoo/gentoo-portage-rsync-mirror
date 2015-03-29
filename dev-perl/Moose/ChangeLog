@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.114 2015/01/31 14:05:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.115 2015/03/29 09:27:03 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Moose-2.60.400-r1.ebuild:
+  Marked ~hppa (bug #544064).
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Moose-2.60.400-r1.ebuild:
   Add ~x86-fbsd keyword

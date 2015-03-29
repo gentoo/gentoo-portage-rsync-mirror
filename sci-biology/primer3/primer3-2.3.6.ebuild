@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-2.3.4.ebuild,v 1.2 2012/12/12 13:10:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-2.3.6.ebuild,v 1.1 2015/03/29 09:25:57 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Primer Design for PCR reactions"
 HOMEPAGE="http://primer3.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${PV}/${PN}-src-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -19,7 +19,7 @@ DEPEND="dev-lang/perl"
 RDEPEND=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-2.3.4-buildsystem.patch
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		sed -e "s:LIBOPTS ='-static':LIBOPTS =:" -i Makefile || die

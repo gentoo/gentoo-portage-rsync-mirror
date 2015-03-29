@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.57 2015/01/31 14:15:33 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.58 2015/03/29 09:26:04 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Path-Class-0.350.0.ebuild:
+  Marked ~hppa (bug #544064).
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Path-Class-0.350.0.ebuild:
   Add ~x86-fbsd keyword

@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/primer3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.40 2013/02/14 17:27:03 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.41 2015/03/29 09:25:57 jlec Exp $
+
+*primer3-2.3.6 (29 Mar 2015)
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org> +primer3-2.3.6.ebuild,
+  -primer3-2.3.4.ebuild:
+  Version BUmp; drop old
 
 *primer3-2.3.5 (14 Feb 2013)
 

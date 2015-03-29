@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-GlobalDestruction
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.33 2015/01/31 14:08:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-GlobalDestruction/ChangeLog,v 1.34 2015/03/29 09:22:01 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  Devel-GlobalDestruction-0.120.0.ebuild:
+  Marked ~hppa (bug #544064).
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   Devel-GlobalDestruction-0.120.0.ebuild:

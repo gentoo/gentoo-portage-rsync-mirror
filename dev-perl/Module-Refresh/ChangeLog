@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Refresh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.31 2015/01/31 14:14:24 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Refresh/ChangeLog,v 1.32 2015/03/29 09:26:32 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
+  Module-Refresh-0.170.0-r1.ebuild:
+  Marked ~hppa (bug #544064).
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   Module-Refresh-0.170.0-r1.ebuild:

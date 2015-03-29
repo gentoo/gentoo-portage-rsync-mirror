@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-14.1.ebuild,v 1.5 2015/03/26 21:58:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-14.1.ebuild,v 1.6 2015/03/29 09:15:41 tupone Exp $
 
 EAPI="5"
 
@@ -33,7 +33,7 @@ HOMEPAGE="http://kodi.tv/ http://kodi.wiki/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba sdl sftp test udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
+IUSE="airplay avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio pvr +rsxs rtmp +samba sdl sftp test +texturepacker udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
 REQUIRED_USE="
 	pvr? ( mysql )
 	rsxs? ( X )
@@ -78,10 +78,7 @@ COMMON_DEPEND="${PYTHON_DEPS}
 	media-libs/libpng
 	projectm? ( media-libs/libprojectm )
 	media-libs/libsamplerate
-	sdl? (
-		media-libs/libsdl2
-		media-libs/sdl-image
-	)
+	sdl? ( media-libs/libsdl2 )
 	>=media-libs/taglib-1.8
 	media-libs/libvorbis
 	media-libs/tiff
@@ -130,6 +127,11 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
 	dev-lang/swig
 	dev-util/gperf
+	texturepacker? (
+		media-libs/libsdl
+		media-libs/sdl-image
+	)
+	sdl? ( media-libs/sdl-image )
 	X? ( x11-proto/xineramaproto )
 	dev-util/cmake
 	x86? ( dev-lang/nasm )
@@ -229,6 +231,7 @@ src_configure() {
 		$(use_enable sftp ssh) \
 		$(use_enable usb libusb) \
 		$(use_enable test gtest) \
+		$(use_enable texturepacker) \
 		$(use_enable upnp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
