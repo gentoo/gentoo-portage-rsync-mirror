@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.6.ebuild,v 1.3 2015/01/29 21:23:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.6.ebuild,v 1.4 2015/03/29 16:03:43 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="A Program for Sequential, Parallel & Distributed Inference of Large Phylogenetic Trees"
+DESCRIPTION="Sequential, Parallel & Distributed Inference of Large Phylogenetic Trees"
 HOMEPAGE="http://wwwkramer.in.tum.de/exelixis/software.html"
 SRC_URI="http://wwwkramer.in.tum.de/exelixis/software/RAxML-${PV}.tar.bz2"
 
@@ -15,15 +15,13 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="cpu_flags_x86_sse3 +threads"
 
+REQUIRED_USE="cpu_flags_x86_sse3"
+
 # mpi is not supported in version 7.2.2. mpi is enabled by adding -DPARALLEL to CFLAGS
 DEPEND="" # mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/RAxML-${PV}"
-
-pkg_pretend() {
-	use cpu_flags_x86_sse3 || die "This package needs sse3 support in your CPU"
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch
