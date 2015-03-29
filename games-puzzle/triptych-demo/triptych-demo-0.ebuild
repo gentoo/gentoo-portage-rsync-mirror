@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.10 2014/04/17 16:21:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.11 2015/03/29 01:56:17 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="fast-paced tetris-like puzzler"
@@ -15,17 +16,19 @@ IUSE=""
 RESTRICT="mirror bindist strip"
 
 DEPEND="x11-libs/libXext
-	media-libs/libsdl
+	media-libs/libsdl[opengl,sound,video]
 	virtual/opengl"
-RDEPEND=""
+RDEPEND=${DEPEND}
+
+QA_PREBUILT="${GAMES_PREFIX_OPT}/${PN}/triptych ${GAMES_PREFIX_OPT}/${PN}/setup"
 
 S=${WORKDIR}/triptych
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir "${dir}" "${GAMES_BINDIR}"
+	dodir "${dir}"
 
-	cp -pPR * "${D}"/${dir}/
+	cp -pPR * "${D}"/${dir}/ || die
 	games_make_wrapper triptych ./triptych "${dir}"
 
 	prepgamesdirs
@@ -38,9 +41,10 @@ pkg_postinst() {
 	for f in triptych.{clr,cnt,scr} ; do
 		f="${ROOT}/${GAMES_PREFIX_OPT}/${PN}/${f}"
 		if [[ ! -e ${f} ]] ; then
-			touch "${f}"
-			chmod 660 "${f}"
-			chown ${GAMES_USER}:${GAMES_GROUP} "${f}"
+			touch "${f}" \
+				&& chmod 660 "${f}" \
+				&& chown ${GAMES_USER}:${GAMES_GROUP} "${f}" \
+				|| die
 		fi
 	done
 }

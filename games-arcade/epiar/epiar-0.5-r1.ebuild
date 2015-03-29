@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5-r1.ebuild,v 1.4 2011/06/22 13:33:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5-r1.ebuild,v 1.5 2015/03/29 01:59:43 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit flag-o-matic eutils games
 
 DESCRIPTION="A space adventure/combat game"
@@ -26,8 +26,7 @@ S=${WORKDIR}
 src_prepare() {
 	sed -i \
 		-e "/^CFLAGS/s:-pg -g:${CFLAGS} ${LDFLAGS}:" \
-		Makefile.linux \
-		|| die "sed failed"
+		Makefile.linux || die
 	epatch \
 		"${FILESDIR}"/${P}-paths.patch \
 		"${FILESDIR}"/${P}-gcc41.patch \
@@ -35,18 +34,17 @@ src_prepare() {
 		"${FILESDIR}"/${P}-underlink.patch
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}/:" \
-		src/main.c \
-		|| die "sed failed"
+		src/main.c || die
 }
 
 src_compile() {
-	emake -f Makefile.linux || die "emake failed"
+	emake -f Makefile.linux
 }
 
 src_install() {
-	dogamesbin epiar || die "dogamesbin failed"
+	dogamesbin epiar
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r missions *.eaf || die "doins failed"
+	doins -r missions *.eaf
 	keepdir "${GAMES_DATADIR}"/${PN}/plugins
 	dodoc AUTHORS ChangeLog README
 	prepgamesdirs

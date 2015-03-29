@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/triptych-demo
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/ChangeLog,v 1.10 2014/04/17 16:21:16 ulm Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/ChangeLog,v 1.11 2015/03/29 01:56:17 mr_bones_ Exp $
+
+  29 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> triptych-demo-0.ebuild:
+  EAPI=5
 
   17 Apr 2014; Ulrich Müller <ulm@gentoo.org> triptych-demo-0.ebuild:
   Fix LICENSE, add mirror and bindist restrictions, update SRC_URI, bug 505728.
