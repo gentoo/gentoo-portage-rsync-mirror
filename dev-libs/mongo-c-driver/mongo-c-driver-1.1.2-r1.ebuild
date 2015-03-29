@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-1.1.2-r1.ebuild,v 1.1 2015/03/23 09:02:26 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mongo-c-driver/mongo-c-driver-1.1.2-r1.ebuild,v 1.2 2015/03/29 07:55:28 jer Exp $
 
 EAPI=5
 
@@ -24,6 +24,9 @@ DEPEND="${RDEPEND}
 DOCS=( NEWS README.rst TUTORIAL.md )
 
 src_prepare() {
+	rm -r src/libbson || die
+	sed -i -e '/SUBDIRS/s:src/libbson::g' Makefile.am || die
+
 	# https://github.com/mongodb/mongo-c-driver/issues/54
 	sed -i -e "s/PTHREAD_LIBS/PTHREAD_CFLAGS/g" src/Makefile.am \
 		tests/Makefile.am || die

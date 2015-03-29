@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm setup
+DEPEND=X? ( x11-apps/mkfontdir media-fonts/encodings )
+DESCRIPTION=A geometric sans-serif font with a technological feel
+EAPI=5
+HOMEPAGE=http://ndiscovered.com/exo-2/
+IUSE=X
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=OFL-1.1
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~yngwin/distfiles/exo-2.tar.xz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_md5_=3e822fc91fb7b822bbc9de29cd64331f
