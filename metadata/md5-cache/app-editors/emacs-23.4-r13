@@ -4,11 +4,11 @@ DESCRIPTION=The extensible, customizable, self-documenting real-time display edi
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/emacs/
 IUSE=alsa aqua athena dbus games gconf gif gpm gtk gzip-el hesiod jpeg kerberos livecd m17n-lib motif pax_kernel png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm
-KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-3+ FDL-1.3+ BSD HPND MIT W3C unicode PSF-2
 RDEPEND=sys-libs/ncurses >=app-admin/eselect-emacs-1.16 >=app-emacs/emacs-common-gentoo-1.5[games?,X?] net-libs/liblockfile hesiod? ( net-dns/hesiod ) kerberos? ( virtual/krb5 ) alsa? ( media-libs/alsa-lib ) gpm? ( sys-libs/gpm ) dbus? ( sys-apps/dbus ) X? ( x11-libs/libXmu x11-libs/libXt x11-misc/xbitmaps gconf? ( >=gnome-base/gconf-2.26.2 ) gif? ( media-libs/giflib ) jpeg? ( virtual/jpeg:0= ) png? ( >=media-libs/libpng-1.4:0= ) svg? ( >=gnome-base/librsvg-2.0 ) tiff? ( media-libs/tiff:0 ) xpm? ( x11-libs/libXpm ) xft? ( media-libs/fontconfig media-libs/freetype x11-libs/libXft m17n-lib? ( >=dev-libs/libotf-0.9.4 >=dev-libs/m17n-lib-1.5.1 ) ) gtk? ( x11-libs/gtk+:2 ) !gtk? ( motif? ( >=x11-libs/motif-2.3:0 ) !motif? ( Xaw3d? ( x11-libs/libXaw3d ) !Xaw3d? ( athena? ( x11-libs/libXaw ) ) ) ) ) !<app-editors/emacs-vcs-23.4
 REQUIRED_USE=?? ( aqua X )
 SLOT=23
 SRC_URI=mirror://gnu/emacs/emacs-23.4.tar.bz2 http://dev.gentoo.org/~ulm/emacs/emacs-23.4-patches-17.tar.xz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	elisp-common	1aa23b3de5dae55456fa2071428eb5bf	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=f06875829170f8d50d8b1ef594d82590
+_md5_=d6cc21a40b80579b4c9a3ba6f0fa9f98

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.59 2015/03/21 22:35:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.60 2015/03/29 10:02:46 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> GnuPG-Interface-0.520.0.ebuild:
+  Marked ~hppa (bug #543312).
 
   21 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   GnuPG-Interface-0.520.0.ebuild:

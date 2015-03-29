@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.774 2015/03/28 09:52:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.775 2015/03/29 10:20:53 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gtk+-2.24.27.ebuild,
+  gtk+-3.14.9.ebuild:
+  Stable for HPPA (bug #534012).
 
 *gtk+-3.14.10 (28 Mar 2015)
 

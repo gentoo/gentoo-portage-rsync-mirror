@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1577 2015/03/28 22:01:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1578 2015/03/29 10:29:42 johu Exp $
+
+  29 Mar 2015; Johannes Huber <johu@gentoo.org> kde4-base.eclass,
+  kde4-functions.eclass, kde4-meta.eclass, kde4-meta-pkg.eclass:
+  Drop EAPI 4 support.
 
   28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -rox-0install.eclass,
   -rox.eclass:

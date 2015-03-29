@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.102 2015/03/14 19:37:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.103 2015/03/29 10:21:13 johu Exp $
+
+  29 Mar 2015; Johannes Huber <johu@gentoo.org> bitcoin-qt-0.9.4.ebuild:
+  EAPI 5, needed for kde4*eclass EAPI 4 removal.
 
   14 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
   bitcoin-qt-0.10.0-r1.ebuild:

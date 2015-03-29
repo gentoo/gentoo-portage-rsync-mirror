@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.148 2015/03/21 18:22:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.149 2015/03/29 10:29:42 johu Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -10,7 +10,7 @@
 # The kde4-base.eclass provides support for building KDE4 based ebuilds
 # and KDE4 applications.
 #
-# NOTE: KDE 4 ebuilds currently support EAPIs 4 and 5.  This will be
+# NOTE: KDE 4 ebuilds currently support EAPI 5. This will be
 # reviewed over time as new EAPI versions are approved.
 
 if [[ -z ${_KDE4_BASE_ECLASS} ]]; then
@@ -66,14 +66,7 @@ KDE_MINIMAL="${KDE_MINIMAL:-4.4}"
 # Set slot for KDEBASE known packages
 case ${KDEBASE} in
 	kde-base)
-		case ${EAPI} in
-			5)
-				SLOT=4/$(get_version_component_range 1-2)
-				;;
-			*)
-				SLOT=4
-				;;
-		esac
+		SLOT=4/$(get_version_component_range 1-2)
 		KDE_MINIMAL="${PV}"
 		;;
 	kdevelop)

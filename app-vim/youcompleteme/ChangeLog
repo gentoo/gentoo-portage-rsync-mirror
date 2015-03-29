@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/youcompleteme
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/ChangeLog,v 1.4 2014/06/25 17:52:17 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/ChangeLog,v 1.5 2015/03/29 10:09:31 maksbotan Exp $
+
+  29 Mar 2015; Maxim Koltsov <maksbotan@gentoo.org>
+  youcompleteme-99999999.ebuild:
+  Add dev-python/sh dependency
 
   25 Jun 2014; Maxim Koltsov <maksbotan@gentoo.org>
   youcompleteme-99999999.ebuild:

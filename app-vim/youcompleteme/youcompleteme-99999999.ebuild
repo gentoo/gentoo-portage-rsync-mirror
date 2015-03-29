@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/youcompleteme-99999999.ebuild,v 1.4 2014/06/25 17:52:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/youcompleteme-99999999.ebuild,v 1.5 2015/03/29 10:09:31 maksbotan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -36,6 +36,7 @@ RDEPEND="
 	dev-python/futures[${PYTHON_USEDEP}]
 	dev-python/jedi[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
+	dev-python/sh[${PYTHON_USEDEP}]
 	dev-python/waitress[${PYTHON_USEDEP}]
 "
 DEPEND="
@@ -61,7 +62,7 @@ src_prepare() {
 		rm -r "${S}"/third_party/${third_party_module} || die "Failed to remove third party module ${third_party_module}"
 	done
 	# Argparse is included in python 2.7
-	for third_party_module in argparse bottle jedi waitress; do
+	for third_party_module in argparse bottle jedi waitress sh; do
 		rm -r "${S}"/third_party/ycmd/third_party/${third_party_module} || die "Failed to remove third party module ${third_party_module}"
 	done
 }

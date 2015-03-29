@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.116 2015/03/28 21:26:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.117 2015/03/29 10:06:16 jer Exp $
+
+  29 Mar 2015; Jeroen Roovers <jer@gentoo.org> emacs-common-gentoo-1.5.ebuild:
+  Stable for HPPA (bug #544448).
 
   28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> emacs-common-gentoo-1.5.ebuild:
   Stable for ppc, wrt bug #544448
