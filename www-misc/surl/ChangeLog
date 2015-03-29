@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/surl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/surl/ChangeLog,v 1.4 2014/08/10 20:10:33 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/surl/ChangeLog,v 1.5 2015/03/28 23:15:03 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -surl-0.7.0-r1.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> surl-0.7.0-r1.ebuild,
   surl-0.7.1.1.ebuild:

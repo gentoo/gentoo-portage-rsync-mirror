@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/iozone
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.50 2012/07/03 03:54:31 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.51 2015/03/28 23:20:40 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -iozone-3.242.ebuild,
+  -iozone-3.338.ebuild:
+  Remove old.
 
 *iozone-3.408 (03 Jul 2012)
 

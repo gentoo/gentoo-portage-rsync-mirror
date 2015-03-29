@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Log-Any
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Any/ChangeLog,v 1.11 2014/07/21 15:21:11 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Any/ChangeLog,v 1.12 2015/03/28 23:18:33 dilfridge Exp $
+
+*Log-Any-1.32.0 (28 Mar 2015)
+
+  28 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Log-Any-1.32.0.ebuild:
+  Version bump
 
   21 Jul 2014; Mikle Kolyada <zlogene@gentoo.org> -Log-Any-0.140.0.ebuild,
   Log-Any-0.150.0.ebuild:

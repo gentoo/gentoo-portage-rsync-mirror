@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.119 2014/08/10 20:09:05 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.120 2015/03/28 23:06:53 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -resin-4.0.13-r1.ebuild,
+  -resin-4.0.14.ebuild, -resin-4.0.15.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> resin-4.0.13-r1.ebuild,
   resin-4.0.14.ebuild, resin-4.0.15.ebuild, resin-4.0.22.ebuild,

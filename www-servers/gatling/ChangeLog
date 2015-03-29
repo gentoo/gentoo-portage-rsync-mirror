@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gatling
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.14 2014/01/08 06:08:34 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.15 2015/03/28 23:05:16 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -gatling-0.12-r1.ebuild,
+  -gatling-0.12.ebuild:
+  Remove old.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> gatling-0.12-r1.ebuild,
   gatling-0.12-r2.ebuild, gatling-0.12.ebuild, gatling-0.13.ebuild:

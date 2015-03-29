@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cpdvd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.16 2012/03/06 20:54:16 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.17 2015/03/28 23:02:00 mrueg Exp $
+
+  28 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -cpdvd-1.10.ebuild:
+  Remove old.
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> cpdvd-1.10-r1.ebuild:
   Marking cpdvd-1.10-r1 ppc for bug 397115
