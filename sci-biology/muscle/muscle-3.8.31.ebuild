@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.8.31.ebuild,v 1.1 2010/06/24 19:03:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/muscle-3.8.31.ebuild,v 1.2 2015/03/29 14:51:05 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -28,6 +28,6 @@ src_prepare() {
 }
 
 src_install() {
-	dobin "${PN}" || die
-	dodoc *.txt || die
+	dobin "${PN}"
+	dodoc *.txt
 }

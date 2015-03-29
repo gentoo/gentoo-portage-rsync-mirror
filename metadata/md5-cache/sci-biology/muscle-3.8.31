@@ -1,6 +1,6 @@
 DEFINED_PHASES=install prepare
 DESCRIPTION=Multiple sequence comparison by log-expectation
-EAPI=3
+EAPI=5
 HOMEPAGE=http://www.drive5.com/muscle/
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=public-domain
@@ -8,4 +8,4 @@ RDEPEND=!sci-libs/libmuscle
 SLOT=0
 SRC_URI=http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_src.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=f91a0aa56285471f305ac474e34944da
+_md5_=8ac7b0309b7dba9768262233b6bcbac0

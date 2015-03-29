@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/paml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.16 2015/03/03 15:26:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.17 2015/03/29 14:59:48 jlec Exp $
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org> paml-4.4c-r1.ebuild:
+  Streamline ebuild layout
 
 *paml-4.4c-r1 (03 Mar 2015)
 

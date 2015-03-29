@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12-r1.ebuild,v 1.5 2011/06/13 11:17:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12-r1.ebuild,v 1.6 2015/03/29 14:58:53 jlec Exp $
 
-EAPI=3
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -35,15 +35,14 @@ src_prepare() {
 src_compile() {
 	emake \
 		CXX="$(tc-getCXX)" \
-		OPT_CXXFLAGS="${CXXFLAGS}" \
-		|| die "make failed"
+		OPT_CXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
-	dobin probcons project makegnuplot || die "failed to install"
+	dobin probcons project makegnuplot
 	# Overlap with imagemagick
-	newbin compare compare-probcons || die "failed to install compare"
-	dodoc README || die
+	newbin compare compare-probcons
+	dodoc README
 }
 
 pkg_postinst() {

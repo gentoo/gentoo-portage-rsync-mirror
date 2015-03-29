@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/mafft
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.20 2013/07/19 09:44:31 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.21 2015/03/29 14:48:58 jlec Exp $
+
+*mafft-7.215 (29 Mar 2015)
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org> +mafft-7.215.ebuild,
+  -files/mafft-6.240-mktemp.patch:
+  Version BUmp; drop obsolete patch
 
   19 Jul 2013; Justin Lecher <jlec@gentoo.org> mafft-7.050.ebuild:
   Keyword for ~-linux
@@ -103,4 +109,3 @@
   21 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
   +mafft-5.861.ebuild:
   New package: Multiple sequence alignments using a variety of algorithms.
-

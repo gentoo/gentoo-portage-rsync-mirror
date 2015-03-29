@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-4.4c-r1.ebuild,v 1.1 2015/03/03 15:26:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/paml-4.4c-r1.ebuild,v 1.2 2015/03/29 14:59:48 jlec Exp $
 
 EAPI=5
 
@@ -25,19 +25,24 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -C src CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+	emake -C src \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS} -Wno-unused-result" \
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	pushd "${S}"/src
-	dobin baseml codeml basemlg mcmctree pamp evolver yn00 chi2
-	popd
 	dodoc README.txt doc/*
+
 	insinto /usr/share/${PN}/control
 	doins *.ctl
+
 	insinto /usr/share/${PN}/dat
 	doins stewart* *.dat dat/*
+
 	insinto /usr/share/${PN}
 	doins -r examples/
+
+	cd src || die
+	dobin baseml codeml basemlg mcmctree pamp evolver yn00 chi2
 }

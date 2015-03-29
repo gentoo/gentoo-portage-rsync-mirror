@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/muscle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.15 2010/07/20 11:54:30 josejx Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.16 2015/03/29 14:51:05 jlec Exp $
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org> -muscle-3.6.ebuild,
+  -muscle-3.7.ebuild, metadata.xml, muscle-3.8.31.ebuild:
+  Drop old
 
   20 Jul 2010; Joseph Jezak <josejx@gentoo.org> muscle-3.7-r1.ebuild:
   Marked ppc stable for bug #277980.
@@ -59,4 +63,3 @@
   New multiple sequence alignment package. Provides a great tradeoff between
   runtime and quality for global alignments; quite a bit worse on local
   alignments.
-
