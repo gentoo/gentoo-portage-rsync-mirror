@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/etqw-ded-1.5.ebuild,v 1.4 2014/10/13 21:11:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/etqw-ded/etqw-ded-1.5.ebuild,v 1.5 2015/03/29 06:56:11 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="Enemy Territory: Quake Wars dedicated server"
@@ -38,9 +39,9 @@ src_unpack() {
 
 src_install() {
 	insinto "${dir}"
-	doins -r base pb *.txt || die "doins failed"
+	doins -r base pb *.txt
 	exeinto "${dir}"
-	doexe etqwded.x86 *.so* || die "doexe failed"
+	doexe etqwded.x86 *.so*
 	games_make_wrapper ${PN} ./etqwded.x86 "${dir}" "${dir}"
 	prepgamesdirs
 }
