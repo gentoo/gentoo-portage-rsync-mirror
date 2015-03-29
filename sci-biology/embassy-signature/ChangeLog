@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-signature
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-signature/ChangeLog,v 1.23 2015/03/28 17:11:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-signature/ChangeLog,v 1.24 2015/03/29 08:44:28 jlec Exp $
+
+  29 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  -embassy-signature-0.1.0-r4.ebuild:
+  Drop old
 
 *embassy-signature-0.1.650 (28 Mar 2015)
 
