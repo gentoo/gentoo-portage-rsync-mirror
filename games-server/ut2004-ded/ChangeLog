@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2004-ded
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.27 2011/12/14 17:31:42 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.28 2015/03/30 18:15:37 mr_bones_ Exp $
+
+  30 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  ut2004-ded-3369.3-r1.ebuild:
+  EAPI=5
 
   14 Dec 2011; Mike Frysinger <vapier@gentoo.org> ut2004-ded-3369.3-r1.ebuild:
   The games.eclass has dropped GAMES_CHECK_LICENSE support (since portage now
@@ -128,4 +132,3 @@
   <cuban@drunkstudents.net> with an init script submitted by Ken Smith
   <themyrmidon@mac.com>. Updated to 3236-1 patch by Davin Boling
   <davin@postmark.net> with some modifications by me. Closing bug #46057.
-

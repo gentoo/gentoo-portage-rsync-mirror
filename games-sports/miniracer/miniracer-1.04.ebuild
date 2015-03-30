@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.7 2010/10/13 12:28:28 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/miniracer-1.04.ebuild,v 1.8 2015/03/30 18:22:23 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils games
 
 DESCRIPTION="an OpenGL car racing game, based on ID's famous Quake engine"
@@ -33,13 +33,10 @@ src_prepare() {
 		-e "s:@CFLAGS@:${CFLAGS}:" \
 		-e "s:@GAMES_LIBDIR@:$(games_get_libdir)/${PN}:" \
 		-e "s:@GAMES_BINDIR@:${GAMES_BINDIR}:" \
-		miniracer \
-		Makefile \
-		|| die "2nd sed failed"
+		miniracer Makefile || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc TODO README ChangeLog
+	default
 	prepgamesdirs
 }

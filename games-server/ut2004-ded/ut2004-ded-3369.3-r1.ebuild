@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.3-r1.ebuild,v 1.5 2011/12/14 17:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.3-r1.ebuild,v 1.6 2015/03/30 18:15:37 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 BONUSPACK_P="dedicatedserver3339-bonuspack.zip"
@@ -62,22 +62,20 @@ src_install() {
 	games_make_wrapper ${PN} "./ucc-bin server" "${dir}"/System
 
 	insinto "${dir}"
-	doins -r * || die "doins failed"
-	fperms +x "${dir}"/System/ucc-bin || die "fperms failed"
+	doins -r *
+	fperms +x "${dir}"/System/ucc-bin
 
 	sed \
 		-e "s:@USER@:${GAMES_USER_DED}:" \
 		-e "s:@GROUP@:${GAMES_GROUP}:" \
 		-e "s:@HOME@:${GAMES_PREFIX}:" \
-		"${FILESDIR}"/${PN}.confd > "${T}"/${PN}.confd \
-		|| die "sed confd failed"
-	newconfd "${T}"/${PN}.confd ${PN} || die "newconfd failed"
+		"${FILESDIR}"/${PN}.confd > "${T}"/${PN}.confd || die
+	newconfd "${T}"/${PN}.confd ${PN}
 
 	sed \
 		-e "s:@DIR@:${GAMES_BINDIR}:g" \
-		"${FILESDIR}"/${PN}.initd > "${T}"/${PN}.initd \
-		|| die "sed initd failed"
-	newinitd "${T}"/${PN}.initd ${PN} || die "initd failed"
+		"${FILESDIR}"/${PN}.initd > "${T}"/${PN}.initd || die
+	newinitd "${T}"/${PN}.initd ${PN}
 
 	prepgamesdirs
 }

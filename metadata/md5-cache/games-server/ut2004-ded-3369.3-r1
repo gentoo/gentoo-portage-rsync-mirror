@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare setup unpack
 DEPEND=app-arch/unzip app-arch/p7zip
 DESCRIPTION=Unreal Tournament 2004 Linux Dedicated Server
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.unrealtournament.com/
 KEYWORDS=amd64 x86
 LICENSE=ut2003
@@ -10,4 +10,4 @@ RESTRICT=mirror strip
 SLOT=0
 SRC_URI=mirror://3dgamers/unrealtourn2k4/dedicatedserver3339-bonuspack.zip http://downloads.unrealadmin.org/UT2004/Server/dedicatedserver3339-bonuspack.zip http://sonic-lux.net/data/mirror/ut2004/dedicatedserver3339-bonuspack.zip mirror://3dgamers/unrealtourn2k4/ut2004-lnxpatch3369-2.tar.bz2 http://downloads.unrealadmin.org/UT2004/Patches/Linux/ut2004-lnxpatch3369-2.tar.bz2 http://sonic-lux.net/data/mirror/ut2004/ut2004-lnxpatch3369-2.tar.bz2 mirror://gentoo/ut2004-v3369-3-linux-dedicated.7z
 _eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=390e3ea2228667d2a81be0b6202069a2
+_md5_=ccc16ceaa469c9d01551c0d36fe1b368

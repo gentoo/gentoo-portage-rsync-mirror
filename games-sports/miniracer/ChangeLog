@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/miniracer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/ChangeLog,v 1.8 2010/10/13 12:28:28 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/miniracer/ChangeLog,v 1.9 2015/03/30 18:22:23 mr_bones_ Exp $
+
+  30 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> miniracer-1.04.ebuild:
+  EAPI=5
 
   13 Oct 2010; Tupone Alfredo <tupone@gentoo.org> miniracer-1.04.ebuild,
   +files/miniracer-1.04-ldflags.patch,
@@ -29,4 +32,3 @@
   01 Jun 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
   +miniracer-1.04.ebuild:
   initial commit - ebuild submitted by Christoph Brill (egore) via bug #93056
-
