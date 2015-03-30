@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.111 2015/03/30 09:49:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.112 2015/03/30 10:02:24 ago Exp $
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> putty-0.64.ebuild:
+  Stable for alpha, wrt bug #542098
 
   30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> putty-0.64.ebuild:
   Stable for sparc, wrt bug #542098

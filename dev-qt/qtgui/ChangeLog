@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.72 2015/03/30 09:49:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.73 2015/03/30 10:02:29 ago Exp $
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> qtgui-4.8.5-r4.ebuild:
+  Stable for alpha, wrt bug #541972
 
   30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> qtgui-4.8.5-r4.ebuild:
   Stable for sparc, wrt bug #541972
