@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r30.ebuild,v 1.5 2015/03/28 21:35:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r30.ebuild,v 1.6 2015/03/30 15:54:47 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic readme.gentoo toolchain-funcs user
@@ -15,7 +15,7 @@ SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~alpha amd64 ~hppa ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~mips ppc ~ppc64 ~sparc x86"
 IUSE="ipv6 selinux"
 
 DEPEND=""

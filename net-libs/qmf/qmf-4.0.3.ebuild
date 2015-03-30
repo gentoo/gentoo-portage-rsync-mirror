@@ -1,22 +1,24 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.3.ebuild,v 1.5 2014/10/12 13:01:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.3.ebuild,v 1.6 2015/03/30 15:34:56 pesa Exp $
 
 EAPI=5
 
 inherit qt4-r2
 
-if [[ ${PV} == *9999* ]]; then
-	inherit git-2
-	EGIT_REPO_URI="git://gitorious.org/qt-labs/messagingframework.git
-		https://git.gitorious.org/qt-labs/messagingframework.git"
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI=(
+		"git://code.qt.io/qt-labs/messagingframework.git"
+		"https://code.qt.io/git/qt-labs/messagingframework.git"
+	)
 else
 	SRC_URI="http://dev.gentoo.org/~pesa/distfiles/${P}.tar.gz"
 	S=${WORKDIR}/qt-labs-messagingframework
 fi
 
 DESCRIPTION="The Qt Messaging Framework"
-HOMEPAGE="http://qt.gitorious.org/qt-labs/messagingframework"
+HOMEPAGE="https://code.qt.io/cgit/qt-labs/messagingframework.git/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

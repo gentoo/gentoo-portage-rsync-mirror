@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcllib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.59 2015/03/30 10:02:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/ChangeLog,v 1.60 2015/03/30 15:42:03 jlec Exp $
+
+  30 Mar 2015; Justin Lecher <jlec@gentoo.org> -tcllib-1.15-r1.ebuild:
+  Clean vulnerable
 
   30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tcllib-1.15-r2.ebuild:
   Stable for alpha, wrt bug #541912
