@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16447 2015/03/29 19:48:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16448 2015/03/30 12:10:41 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (30 Mar 2015)
+# Does not build against glibc-2.20 or modern X servers, bug #544904.
+# Removal in 30 days.
+<x11-drivers/xf86-input-synaptics-1.7
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Mar 2015)
 # Mask Perl 5.18 for removal. Please upgrade to Perl 5.20

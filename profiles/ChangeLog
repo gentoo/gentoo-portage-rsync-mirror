@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9888 2015/03/29 19:48:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9889 2015/03/30 12:10:41 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Mar 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Mask <xf86-input-synaptics-1.7 due to build failure against glibc-2.20, bug
+  #544094.
 
   29 Mar 2015; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask for removal all app-emulation/emul-linux-x86-jna versions. People
