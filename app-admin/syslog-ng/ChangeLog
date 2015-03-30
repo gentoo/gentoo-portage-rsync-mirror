@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.421 2015/03/29 07:27:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.422 2015/03/30 02:02:51 tgall Exp $
+
+  30 Mar 2015;  <tgall@gentoo.org> syslog-ng-3.6.2.ebuild:
+  stable on arm64
 
   29 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> files/3.6/syslog-ng.rc6:
   fix checkpath typo (bug #544748)
