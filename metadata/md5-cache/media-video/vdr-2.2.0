@@ -4,10 +4,10 @@ DESCRIPTION=Video Disk Recorder - turns a pc into a powerful set top box for DVB
 EAPI=5
 HOMEPAGE=http://www.tvdr.de/
 IUSE=bidi debug +kbd html systemd vanilla alternatechannel graphtft naludump permashift_v1 pinplugin mainmenuhooks menuorg menuselection resumereset ttxtsubs
-KEYWORDS=~arm ~amd64 ~ppc ~x86
+KEYWORDS=~arm amd64 ~ppc x86
 LICENSE=GPL-2
 RDEPEND=virtual/jpeg:* sys-libs/libcap >=media-libs/fontconfig-2.4.2 >=media-libs/freetype-2 dev-lang/perl >=media-tv/gentoo-vdr-scripts-2.7 media-fonts/corefonts bidi? ( dev-libs/fribidi ) systemd? ( sys-apps/systemd )
 SLOT=0
 SRC_URI=ftp://ftp.tvdr.de/vdr/vdr-2.2.0.tar.bz2 http://dev.gentoo.org/~hd_brummy/distfiles/extpng-vdr-2.2.0-gentoo-edition-v1.patch.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
-_md5_=327faf3c366ed2bc36b0de25ee8d45e2
+_md5_=d2415f18e006af834f5d787d422550e5
