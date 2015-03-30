@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/svn2git-1.0.3_p1.ebuild,v 1.5 2014/08/10 21:23:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2git/svn2git-1.0.3_p1.ebuild,v 1.6 2015/03/30 14:54:59 sping Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ if [ "$PV" == "9999" ]; then
 	EGIT_REPO_URI="git://gitorious.org/svn2git/svn2git.git"
 	KEYWORDS=""
 else
-	SRC_URI="http://gitorious.org/${PN}/${PN}/archive-tarball/${MY_PV} -> ${PN}-${MY_PV}.tar.gz"
+	SRC_URI="https://www.hartwork.org/public/${PN}-${MY_PV}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
