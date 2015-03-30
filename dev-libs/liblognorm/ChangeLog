@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblognorm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.34 2015/03/25 14:12:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/ChangeLog,v 1.35 2015/03/30 16:32:53 jer Exp $
+
+  30 Mar 2015; Jeroen Roovers <jer@gentoo.org> liblognorm-1.1.0.ebuild:
+  Stable for HPPA (bug #544208).
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> liblognorm-1.1.0.ebuild:
   Stable for x86, wrt bug #544208
