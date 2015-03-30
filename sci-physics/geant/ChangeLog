@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.81 2015/03/05 01:05:38 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.82 2015/03/30 20:46:18 amadio Exp $
+
+  30 Mar 2015; Guilherme Amadio <amadio@gentoo.org> geant-4.10.01.ebuild:
+  Fix examples install location
 
   05 Mar 2015; Benda Xu <heroxbd@gentoo.org> geant-4.10.00.ebuild,
   geant-4.10.00_p01.ebuild, geant-4.10.01.ebuild, geant-4.9.6_p02-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.52 2014/06/09 23:57:45 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.53 2015/03/30 20:34:29 mr_bones_ Exp $
+
+  30 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> eventlog-0.2.12.ebuild:
+  EAPI=5
 
   09 Jun 2014; Mike Frysinger <vapier@gentoo.org> eventlog-0.2.12.ebuild:
   Add arm64/m68k love.

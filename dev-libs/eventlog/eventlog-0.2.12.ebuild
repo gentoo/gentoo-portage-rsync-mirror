@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.12.ebuild,v 1.11 2014/06/09 23:57:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/eventlog-0.2.12.ebuild,v 1.12 2015/03/30 20:34:29 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit libtool eutils
 
 DESCRIPTION="Support library for syslog-ng"
@@ -21,16 +21,11 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable static-libs static)
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS CREDITS ChangeLog NEWS PORTS README
-	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
-	fi
+	DOCS="AUTHORS CREDITS ChangeLog NEWS PORTS README" \
+		default
+	prune_libtool_files
 }

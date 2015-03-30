@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.01.ebuild,v 1.2 2015/03/05 01:05:38 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.01.ebuild,v 1.3 2015/03/30 20:46:18 amadio Exp $
 
 EAPI=5
 
@@ -40,7 +40,9 @@ PDEPEND="
 
 S="${WORKDIR}/${MYP}"
 
-PATCHES=( "${FILESDIR}"/${PN}-4.10.0-no-examples.patch )
+src_prepare() {
+	use examples || epatch "${FILESDIR}"/${PN}-4.10.0-no-examples.patch
+}
 
 src_configure() {
 	local mycmakeargs=(
@@ -75,9 +77,8 @@ src_install() {
 	cmake-utils_src_install
 	insinto /usr/share/doc/${PF}
 	doins ReleaseNotes/ReleaseNotes${PV1}.${PV2}.${SPV3}.html
-	[[ -e ReleaseNotes/Patch${PV1}.${PV2}.${SPV3}-1.txt ]] && \
+	[[ -f ReleaseNotes/Patch${PV1}.${PV2}.${SPV3}-1.txt ]] && \
 		dodoc ReleaseNotes/Patch${mypv}-*.txt
-	use examples && doins -r examples
 }
 
 pkg_postinst() {
