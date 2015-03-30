@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.13 2010/10/18 14:17:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattle/xbattle-5.4.1.ebuild,v 1.14 2015/03/30 18:42:25 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit games
 
 DESCRIPTION="A multi-player game of strategy and coordination"
@@ -24,25 +24,25 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i \
-		-e "s:/export/home/lesher/:${GAMES_DATADIR}/${PN}/:" Imakefile \
-		|| die "sed Imakefile failed"
+		-e "s:/export/home/lesher/:${GAMES_DATADIR}/${PN}/:" Imakefile || die
 }
 
 src_configure() {
-	xmkmf || die "xmkmf failed"
+	xmkmf || die
 }
 
 src_compile() {
-	emake CDEBUGFLAGS="${CFLAGS}" \
-		LOCAL_LDFLAGS="${LDFLAGS}" || die "emake failed"
+	emake \
+		CDEBUGFLAGS="${CFLAGS}" \
+		LOCAL_LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dogamesbin xbattle || die "dogamesbin failed"
-	newgamesbin tutorial1 xbattle-tutorial1 || die "newgamesbin failed"
-	newgamesbin tutorial2 xbattle-tutorial2 || die "newgamesbin failed"
+	dogamesbin xbattle
+	newgamesbin tutorial1 xbattle-tutorial1
+	newgamesbin tutorial2 xbattle-tutorial2
 	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r xbas/ xbos/ xbts/ "${D}${GAMES_DATADIR}/${PN}/" || die "cp failed"
+	cp -r xbas/ xbos/ xbts/ "${D}${GAMES_DATADIR}/${PN}/" || die
 	newman xbattle.man xbattle.6
 	dodoc README xbattle.dot
 	prepgamesdirs

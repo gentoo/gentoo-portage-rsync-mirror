@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.9.ebuild,v 1.1 2015/03/26 13:31:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.9.ebuild,v 1.2 2015/03/30 18:36:06 mrueg Exp $
 
 EAPI=5
 LANGS="cs de fr ru sr"
@@ -19,9 +19,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 DEPEND=">=dev-qt/qtcore-4.2:4
 	>=dev-qt/qtgui-4.2:4
 	>=media-sound/fluidsynth-1.0.7a[jack?,alsa?,pulseaudio?]
-	x11-libs/libX11
-	!pulseaudio? ( !jack? ( !alsa? ( >=media-sound/fluidsynth-1.0.7a[oss] ) ) )"
+	x11-libs/libX11"
 RDEPEND="${DEPEND}"
+
+REQUIRED_USE="|| ( alsa jack pulseaudio )"
 
 DOCS="AUTHORS ChangeLog README TODO TRANSLATORS"
 

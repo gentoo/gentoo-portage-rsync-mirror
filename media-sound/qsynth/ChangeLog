@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.61 2015/03/26 13:31:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.62 2015/03/30 18:36:06 mrueg Exp $
+
+  30 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -qsynth-0.3.7.ebuild,
+  -qsynth-0.3.8.ebuild, qsynth-0.3.6.ebuild, qsynth-0.3.9.ebuild:
+  Drop support for media-sound/fluidsynth[oss]. Remove old.
 
 *qsynth-0.3.9 (26 Mar 2015)
 

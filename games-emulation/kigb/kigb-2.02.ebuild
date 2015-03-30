@@ -1,7 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-2.02.ebuild,v 1.6 2014/04/17 16:06:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-2.02.ebuild,v 1.7 2015/03/30 18:52:44 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="A Gameboy (GB, SGB, GBA) Emulator for Linux"
@@ -21,23 +22,20 @@ RDEPEND="x11-libs/libXext
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# use the system version
 	rm -f libNL.so*
 	# wrapper script creates these in the users' home directories.
 	rm -rf cfg inp snap state rom save
-	cp "${FILESDIR}/kigb" "${T}/" || die "cp failed"
+	cp "${FILESDIR}/kigb" "${T}/" || die
 	sed -i \
-		-e "s:GENTOODIR:${GAMES_PREFIX_OPT}:" "${T}/kigb" \
-		|| die "sed failed"
+		-e "s:GENTOODIR:${GAMES_PREFIX_OPT}:" "${T}/kigb" || die
 }
 
 src_install() {
-	dogamesbin "${T}/kigb" || die "dogamesbin failed"
+	dogamesbin "${T}/kigb"
 	exeinto "${GAMES_PREFIX_OPT}/${PN}"
-	doexe kigb || die "doexe failed"
+	doexe kigb
 	dodoc doc/*
 	prepgamesdirs
 }
