@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16449 2015/03/30 18:14:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16450 2015/03/30 22:38:49 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,42 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
+# Not used by anything in the tree and no upstream anymore.
+# masked for removal on 20150429
+dev-games/libgrapple
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
+# Masked since 2011 because of fmod:0 dep.  Things haven't
+# improved so...
+# masked for removal on 20150429
+games-simulation/stoned-bin
+games-sports/racer-bin
+games-strategy/savage-bin
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
+# Last release in 2004; doesn't work with newer tcl
+# masked for removal on 20150429
+games-strategy/xconq
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
+# Last release in 2001; doesn't build on modern systems.
+# masked for removal on 20150429
+games-emulation/tuxnes
+
+# Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
+# Unfetchable.
+# masked for removal on 20150429
+games-fps/enemy-territory-fortress
+games-fps/quake1-ctf
+games-fps/quake3-brainworks
+games-fps/ut2004-da2
+games-fps/ut2004-damnation
+games-rpg/rain-slick
+games-server/bf1942-desertcombat
+games-strategy/dominions2-demo
+games-fps/doom3-phantasm
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (30 Mar 2015)
 # Does not build against glibc-2.20 or modern X servers, bug #544904.

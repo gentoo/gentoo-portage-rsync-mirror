@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.17 2014/08/10 21:21:43 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/battalion-1.4b.ebuild,v 1.18 2015/03/30 22:36:05 mr_bones_ Exp $
 
-EAPI=2
-inherit games
+EAPI=5
+inherit eutils games
 
 DESCRIPTION="Be a rampaging monster and destroy the city"
 HOMEPAGE="http://evlweb.eecs.uic.edu/aej/AndyBattalion.html"
@@ -15,41 +15,44 @@ KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/opengl
-	virtual/glu"
+	virtual/glu
+	x11-libs/libX11"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${PN}${PV}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-warning.patch
 	# Modify data paths
 	sed -i \
 		-e "s:SOUNDS/:${GAMES_DATADIR}/${PN}/SOUNDS/:" \
 		-e "s:MUSIC/:${GAMES_DATADIR}/${PN}/MUSIC/:" \
-		audio.c || die "sed audio.c failed"
+		audio.c || die
 	sed -i \
 		-e "s:DATA/:${GAMES_DATADIR}/${PN}/DATA/:" \
 		-e "s:/usr/tmp:${GAMES_STATEDIR}:" \
-		battalion.c || die "sed battalion.c failed"
+		battalion.c || die
 	sed -i \
 		-e "s:TEXTURES/:${GAMES_DATADIR}/${PN}/TEXTURES/:" \
-		graphics.c || die "sed graphics.c failed"
+		graphics.c || die
 
 	# Modify Makefile and add CFLAGS
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" \
 		-e "/^CC/d" \
-		Makefile || die "sed Makefile failed"
+		Makefile || die
 	# Only .raw sound files are used on Linux. The .au files are not needed.
 	rm -f {SOUNDS,MUSIC}/*.au
 }
 
 src_compile() {
-	emake LIBFLAGS="${LDFLAGS}" || die "died running emake"
+	emake LIBFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dogamesbin battalion || die "dogamesbin failed"
+	dogamesbin battalion
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins -r DATA MUSIC SOUNDS TEXTURES || die "doins failed"
+	doins -r DATA MUSIC SOUNDS TEXTURES
 	dodoc README
 
 	dodir "${GAMES_STATEDIR}"

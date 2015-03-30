@@ -1,6 +1,10 @@
 # ChangeLog for games-action/battalion
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.13 2014/08/10 21:21:43 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/battalion/ChangeLog,v 1.14 2015/03/30 22:36:05 mr_bones_ Exp $
+
+  30 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/battalion-1.4b-warning.patch, battalion-1.4b.ebuild:
+  EAPI=5
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> battalion-1.4b.ebuild:
   QA: drop trailing '.' from DESCRIPTION
