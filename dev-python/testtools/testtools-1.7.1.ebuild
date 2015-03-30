@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.7.1.ebuild,v 1.1 2015/03/21 15:21:53 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-1.7.1.ebuild,v 1.2 2015/03/30 16:19:53 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE="doc test"
 
 CDEPEND="

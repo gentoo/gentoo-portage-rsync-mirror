@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-1.0.1.ebuild,v 1.1 2015/03/19 15:46:15 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-1.0.1.ebuild,v 1.2 2015/03/30 16:17:22 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE=""
 
 CDEPEND="

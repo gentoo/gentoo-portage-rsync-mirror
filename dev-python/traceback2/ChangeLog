@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traceback2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traceback2/ChangeLog,v 1.1 2015/03/17 19:09:59 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traceback2/ChangeLog,v 1.2 2015/03/30 16:16:41 jer Exp $
+
+  30 Mar 2015; Jeroen Roovers <jer@gentoo.org> traceback2-1.4.0.ebuild:
+  Marked ~hppa (bug #544142).
 
 *traceback2-1.4.0 (17 Mar 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.431 2015/03/30 03:21:40 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.432 2015/03/30 16:23:29 jer Exp $
+
+  30 Mar 2015; Jeroen Roovers <jer@gentoo.org> linux-headers-3.18.ebuild:
+  Stable for HPPA (bug #541048).
 
   30 Mar 2015;  <tgall@gentoo.org> linux-headers-3.18.ebuild:
   stable on arm64, minimum needed for HiKey and other boards

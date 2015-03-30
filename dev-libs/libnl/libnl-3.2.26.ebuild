@@ -1,19 +1,18 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.26_rc1.ebuild,v 1.1 2015/03/12 19:40:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.26.ebuild,v 1.1 2015/03/30 16:10:31 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} python3_{2,3,4} )
 DISTUTILS_OPTIONAL=1
-inherit autotools distutils-r1 eutils libtool multilib multilib-minimal
+inherit distutils-r1 eutils libtool multilib multilib-minimal
 
-NL_PV=${PV/_/}
-NL_PV=${NL_PV//./_}
+NL_P=${P/_/-}
 
 DESCRIPTION="A collection of libraries providing APIs to netlink protocol based Linux kernel interfaces"
 HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
 SRC_URI="
-	https://github.com/thom311/${PN}/archive/${PN}3_2_26rc1.tar.gz
+	https://github.com/thom311/${PN}/releases/download/${PN}${PV//./_}/${P}.tar.gz
 "
 LICENSE="LGPL-2.1 utils? ( GPL-2 )"
 SLOT="3"
@@ -35,7 +34,7 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 DOCS=( ChangeLog )
 
-S=${WORKDIR}/${PN}-${PN}${NL_PV}
+S=${WORKDIR}/${NL_P}
 
 MULTILIB_WRAPPED_HEADERS=(
 	# we do not install CLI stuff for non-native
@@ -58,7 +57,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2.20-rtnl_tc_get_ops.patch
 	epatch "${FILESDIR}"/${PN}-3.2.20-cache-api.patch
 
-	eautoreconf
+	elibtoolize
 
 	if use python; then
 		cd "${S}"/python || die

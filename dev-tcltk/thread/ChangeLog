@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/thread
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.35 2015/03/28 21:42:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/ChangeLog,v 1.36 2015/03/30 16:21:29 jer Exp $
+
+  30 Mar 2015; Jeroen Roovers <jer@gentoo.org> thread-2.7.1.ebuild:
+  Stable for HPPA (bug #535386).
 
   28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> thread-2.7.1.ebuild:
   Stable for ppc, wrt bug #535386
