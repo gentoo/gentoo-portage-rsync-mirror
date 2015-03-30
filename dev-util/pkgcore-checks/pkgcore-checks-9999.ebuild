@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.8 2015/03/24 15:05:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.9 2015/03/30 06:03:29 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -34,22 +34,11 @@ python_test() {
 }
 
 python_install_all() {
-	local DOCS=( AUTHORS NEWS )
+	local DOCS=( AUTHORS NEWS.rst )
 	distutils-r1_python_install_all
 }
 
 pkg_postinst() {
 	einfo "updating pkgcore plugin cache"
 	python_foreach_impl pplugincache pkgcheck.plugins
-}
-
-pkg_postrm() {
-	# Careful not to remove this on up/downgrades.
-	plugincache_update() {
-		local sitep="${ROOT}$(python_get_sitedir)"
-		if [[ -e "${sitep}/pkgcore_checks/plugins/plugincache2" && ! -e "${sitep}/pkgcore_checks/base.py" ]]; then
-			rm "${sitep}/pkgcore_checks/plugins/plugincache2"
-		fi
-	}
-	python_foreach_impl plugincache_update
 }
