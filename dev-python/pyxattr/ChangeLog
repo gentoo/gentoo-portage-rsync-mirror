@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.71 2015/02/28 13:36:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.72 2015/03/30 02:53:00 tgall Exp $
+
+  30 Mar 2015;  <tgall@gentoo.org> pyxattr-0.5.3.ebuild:
+  stable on arm64
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> pyxattr-0.5.3.ebuild:
   Stable for ia64, wrt bug #530296
