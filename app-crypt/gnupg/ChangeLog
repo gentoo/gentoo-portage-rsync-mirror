@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.586 2015/03/26 11:27:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.587 2015/03/30 03:06:10 tgall Exp $
+
+  30 Mar 2015;  <tgall@gentoo.org> gnupg-2.0.26-r3.ebuild:
+  stable on arm64
 
   26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.19.ebuild:
   Stable for ppc64, wrt bug #541568
