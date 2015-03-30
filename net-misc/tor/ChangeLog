@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.470 2015/03/25 14:32:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.471 2015/03/30 09:49:28 ago Exp $
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tor-0.2.5.11.ebuild:
+  Stable for sparc, wrt bug #544226
 
   25 Mar 2015; Anthony G. Basile <blueness@gentoo.org> tor-0.2.5.11.ebuild:
   Stable on arm, ppc and ppc64.  Bug #544226.

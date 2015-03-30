@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.102 2015/03/28 06:53:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.103 2015/03/30 09:49:18 ago Exp $
+
+  30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libssh2-1.5.0.ebuild:
+  Stable for sparc, wrt bug #542914
 
   28 Mar 2015; Markus Meier <maekke@gentoo.org> libssh2-1.5.0.ebuild:
   arm stable, bug #542914
