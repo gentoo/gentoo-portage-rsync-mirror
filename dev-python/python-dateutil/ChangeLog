@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.71 2015/03/25 14:33:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.72 2015/03/30 00:57:06 idella4 Exp $
+
+*python-dateutil-2.4.1-r1 (30 Mar 2015)
+
+  30 Mar 2015; Ian Delaney <idella4@gentoo.org>
+  +python-dateutil-2.4.1-r1.ebuild, -python-dateutil-2.4.1.ebuild:
+  revbump; upstream added missing testsuite to already released 2.4.1, rm the
+  2.4.1.ebuild to avoid confusion over new hash values and the renamed file @
+  pypi
 
 *python-dateutil-2.4.1 (25 Mar 2015)
 

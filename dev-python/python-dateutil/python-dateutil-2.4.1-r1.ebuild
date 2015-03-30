@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.4.1.ebuild,v 1.1 2015/03/25 14:33:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-2.4.1-r1.ebuild,v 1.1 2015/03/30 00:57:06 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -9,7 +9,7 @@ inherit distutils-r1
 
 DESCRIPTION="Extensions to the standard Python datetime module"
 HOMEPAGE="https://dateutil.readthedocs.org/ https://pypi.python.org/pypi/python-dateutil https://github.com/dateutil/dateutil/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.post1.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,7 +20,6 @@ RDEPEND=">=dev-python/six-1.5[${PYTHON_USEDEP}]
 	sys-libs/timezone-data"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
-RESTRICT="test"
 
 python_prepare_all() {
 	# don't install zoneinfo tarball
@@ -29,7 +28,6 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
-# Leave test phase for now. Upstream yet again missed out the testsuite in the tarball
 python_test() {
 	esetup.py test
 }
