@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.5.1.ebuild,v 1.3 2013/05/01 10:35:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.5.1.ebuild,v 1.4 2015/03/30 19:38:05 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 JAVA_PKG_IUSE="source test"
 
 inherit java-pkg-2 java-ant-2
@@ -29,5 +29,5 @@ src_test() {
 src_install() {
 	java-pkg_newjar ${P/_/-}.jar
 	java-pkg_dolauncher  ${PN}-${SLOT} --main clojure.main
-	dodoc changes.md readme.txt || die
+	dodoc changes.md readme.txt
 }
