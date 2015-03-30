@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.11.1.ebuild,v 1.7 2010/09/20 03:47:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.11.1.ebuild,v 1.8 2015/03/30 21:52:38 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
+inherit eutils
+
 DESCRIPTION="Open Dynamics Engine SDK"
 HOMEPAGE="http://ode.org/"
 SRC_URI="mirror://sourceforge/opende/${P}.tar.bz2"
@@ -22,15 +24,13 @@ src_prepare() {
 	sed -i \
 		-e "s:\$.*/drawstuff/textures:/usr/share/doc/${PF}/examples:" \
 		drawstuff/src/Makefile.in \
-		ode/demo/Makefile.in \
-		|| die "sed Makefile.in failed"
+		ode/demo/Makefile.in || die
 }
 
 src_configure() {
 	# use bash (bug #335760)
 	CONFIG_SHELL=/bin/bash \
 	econf \
-		--disable-dependency-tracking \
 		--enable-shared \
 		$(use_enable static-libs static) \
 		$(use_enable debug asserts) \
@@ -41,29 +41,26 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 	if use doc ; then
 		cd ode/doc
-		doxygen Doxyfile || die "doxygen failed"
+		doxygen Doxyfile || die
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc CHANGELOG.txt README.txt
-	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
-	fi
+	DOCS="CHANGELOG.txt README.txt" \
+		default
+	prune_libtool_files
 	if use doc ; then
-		dohtml docs/* || die "dohtml failed"
+		dohtml docs/*
 	fi
 	if use examples; then
 		cd ode/demo
 		exeinto /usr/share/doc/${PF}/examples
 		local f
 		for f in *.c* ; do
-			doexe .libs/${f%.*} || die "doexe ${f%.*} failed"
+			doexe .libs/${f%.*}
 		done
 		cd ../..
 		doexe drawstuff/dstest/dstest
@@ -71,7 +68,6 @@ src_install() {
 		doins ode/demo/*.{c,cpp,h} \
 			drawstuff/textures/*.ppm \
 			drawstuff/dstest/dstest.cpp \
-			drawstuff/src/{drawstuff.cpp,internal.h,x11.cpp} \
-			|| die "doins failed"
+			drawstuff/src/{drawstuff.cpp,internal.h,x11.cpp}
 	fi
 }

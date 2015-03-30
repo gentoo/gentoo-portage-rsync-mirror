@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/postalplus/postalplus-1.ebuild,v 1.5 2012/01/16 19:09:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/postalplus/postalplus-1.ebuild,v 1.6 2015/03/30 21:45:32 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils cdrom games
 
 DESCRIPTION="Ultraviolent and controversial game featuring the Postal Dude"
@@ -21,12 +22,12 @@ src_install() {
 
 	cdrom_get_cds postal_plus.ini
 	exeinto "${dir}"
-	doexe "${CDROM_ROOT}"/bin/x86/postal || die
+	doexe "${CDROM_ROOT}"/bin/x86/postal
 	insinto "${dir}"
-	doins "${CDROM_ROOT}"/{icon.{bmp,xpm},postal_plus.ini,README} || die
+	doins "${CDROM_ROOT}"/{icon.{bmp,xpm},postal_plus.ini,README}
 	cp "${CDROM_ROOT}"/icon.xpm ${PN}.xpm || die
 
-	cp -r "${CDROM_ROOT}"/res "${D}${dir}" || die "cp data failed"
+	cp -r "${CDROM_ROOT}"/res "${D}${dir}" || die
 	find "${D}" -name TRANS.TBL -exec rm '{}' +
 
 	games_make_wrapper ${PN} ./postal "${dir}"
