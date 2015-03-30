@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.12 2012/12/29 22:01:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.13 2015/03/30 20:28:50 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit flag-o-matic eutils
 
 DESCRIPTION="multi-platform game development library"
@@ -65,16 +65,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	DOCS="CODING_STYLE CREDITS NEWS PATCHES README* INSTALL.linux" \
+		default
 	if use doc ; then
 		dodir /usr/share/doc/${PF}/html
 		mv "${D}"/usr/share/doc/clanlib/* "${D}"/usr/share/doc/${PF}/html/ || die
 		rm -rf "${D}"/usr/share/doc/clanlib
 		cp -r Examples Resources "${D}"/usr/share/doc/${PF}/ || die
 	fi
-	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
-	fi
-	dodoc CODING_STYLE CREDITS NEWS PATCHES README* INSTALL.linux
+	prune_libtool_files
 }

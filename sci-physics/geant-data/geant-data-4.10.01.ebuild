@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.10.01.ebuild,v 1.1 2015/03/04 04:27:35 amadio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.10.01.ebuild,v 1.2 2015/03/30 20:29:33 amadio Exp $
 
 EAPI=5
 
@@ -8,9 +8,9 @@ DESCRIPTION="Data files for Geant4 physical processes"
 HOMEPAGE="http://geant4.cern.ch/"
 
 GEANT4_DATA="
-	G4NDL.4.4
-	G4EMLOW.6.39
-	G4RadioactiveDecay.4.1
+	G4NDL.4.5
+	G4EMLOW.6.41
+	G4RadioactiveDecay.4.2
 	G4SAIDDATA.1.1
 	G4NEUTRONXS.1.4
 	G4PII.1.3

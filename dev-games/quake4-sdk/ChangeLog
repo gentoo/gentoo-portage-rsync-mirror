@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/quake4-sdk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/quake4-sdk/ChangeLog,v 1.6 2015/03/25 13:50:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/quake4-sdk/ChangeLog,v 1.7 2015/03/30 20:30:36 mr_bones_ Exp $
+
+  30 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> quake4-sdk-1.4.2.ebuild:
+  EAPI=5
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> quake4-sdk-1.4.2.ebuild:
   Stable for x86, wrt bug #542942

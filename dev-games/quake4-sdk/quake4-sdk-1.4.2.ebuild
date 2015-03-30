@@ -1,7 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/quake4-sdk/quake4-sdk-1.4.2.ebuild,v 1.4 2015/03/25 13:50:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/quake4-sdk/quake4-sdk-1.4.2.ebuild,v 1.5 2015/03/30 20:30:36 mr_bones_ Exp $
 
+EAPI=5
 inherit unpacker games
 
 DESCRIPTION="Quake4 SDK"
@@ -23,6 +24,6 @@ src_unpack() {
 
 src_install() {
 	insinto "${GAMES_PREFIX_OPT}/${PN}"
-	doins -r * || die
+	doins -r *
 	prepgamesdirs
 }

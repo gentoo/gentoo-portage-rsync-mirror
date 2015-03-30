@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ps2-packer
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ChangeLog,v 1.4 2009/03/31 06:34:27 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ChangeLog,v 1.5 2015/03/30 20:17:44 mr_bones_ Exp $
+
+  30 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> ps2-packer-0.4.4.ebuild:
+  EAPI=5
 
   31 Mar 2009; Mike Frysinger <vapier@gentoo.org> ps2-packer-0.4.4.ebuild:
   Use QA_WX_LOAD rather than QA_EXECSTACK #264348 by Mr. Bones.

@@ -1,12 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ps2-packer-0.4.4.ebuild,v 1.6 2010/01/26 17:29:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ps2-packer-0.4.4.ebuild,v 1.7 2015/03/30 20:17:44 mr_bones_ Exp $
 
+EAPI=5
 inherit games
 
 DESCRIPTION="another ELF packer for the PS2"
-HOMEPAGE="http://ps2dev.org/kb.x?T=1061"
-SRC_URI="http://ps2dev.org/files/${P}-linux.tar.gz"
+HOMEPAGE="https://github.com/ps2dev/ps2-packer"
+SRC_URI="mirror://gentoo/${P}-linux.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,15 +36,15 @@ QA_WX_LOAD="
 	${GAMES_PREFIX_OPT:1}/ps2-packer/stub/lzo-1d00-stub
 	${GAMES_PREFIX_OPT:1}/ps2-packer/stub/n2d-0088-stub"
 
-DEPEND="sys-libs/glibc"
+RDEPEND="sys-libs/glibc"
 
 S=${WORKDIR}
 
 src_install() {
 	insinto "${GAMES_PREFIX_OPT}"/${PN}
-	doins -r README.txt stub || die "doins"
+	doins -r README.txt stub
 	exeinto "${GAMES_PREFIX_OPT}"/${PN}
-	doexe *.so ps2-packer || die "doexe"
+	doexe *.so ps2-packer
 	games_make_wrapper ${PN} "${GAMES_PREFIX_OPT}"/${PN}/${PN}
 	prepgamesdirs
 }
