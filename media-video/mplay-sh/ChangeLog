@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplay-sh
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplay-sh/ChangeLog,v 1.4 2009/03/30 22:19:32 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplay-sh/ChangeLog,v 1.5 2015/03/29 23:53:44 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -mplay-sh-0.5.3.ebuild:
+  Remove old.
 
   30 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   mplay-sh-0.5.3.ebuild, mplay-sh-0.5.3-r1.ebuild:
@@ -21,4 +24,3 @@
   15 May 2007; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +mplay-sh-0.5.3.ebuild:
   Initial import of ebuild. Moved here from vdr-testing overlay.
-

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.125 2015/02/12 08:46:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.126 2015/03/29 23:58:12 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -gpac-0.4.5-r4.ebuild,
+  -gpac-0.4.5-r5.ebuild:
+  Remove old.
 
   12 Feb 2015; Alexis Ballier <aballier@gentoo.org> gpac-0.5.1_pre5456.ebuild,
   +files/ffmpeg25.patch:

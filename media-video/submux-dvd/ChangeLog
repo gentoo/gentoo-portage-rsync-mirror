@@ -1,6 +1,9 @@
 # ChangeLog for media-video/submux-dvd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.15 2012/03/11 19:08:16 lordvan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/submux-dvd/ChangeLog,v 1.16 2015/03/29 23:54:45 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -submux-dvd-0.5.1.ebuild:
+  Remove old.
 
 *submux-dvd-0.5.2 (11 Mar 2012)
 
@@ -54,4 +57,3 @@
   27 May 2004; Thomas Raschbacher <lordvan@gentoo.org> +metadata.xml,
   +files/submux-dvd-0.5.patch, +submux-dvd-0.5.ebuild:
   initial import
-

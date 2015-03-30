@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flinker/flinker-1.72.ebuild,v 1.7 2010/08/31 10:37:36 tupone Exp $
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flinker/flinker-1.72.ebuild,v 1.8 2015/03/29 23:38:03 mr_bones_ Exp $
 
+EAPI=5
 inherit toolchain-funcs
 
 DESCRIPTION="GBA cart writing utility by Jeff Frohwein"
@@ -23,8 +23,7 @@ src_prepare() {
 	sed -i \
 		-e '/unistd/s:^//::' \
 		-e 's:asm/io.h:sys/io.h:' \
-		fl.c \
-		|| die "sed failed"
+		fl.c || die
 	echo >> fl.c
 	echo >> cartlib.c
 }
@@ -33,6 +32,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin FLinker || die
+	dobin FLinker
 	dodoc readme
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/pymp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.10 2014/01/05 10:47:24 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.11 2015/03/29 23:55:30 mrueg Exp $
+
+  29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -pymp-1.0.ebuild:
+  Remove old.
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pymp-1.1.ebuild:
   Stable for x86, wrt bug #493624
