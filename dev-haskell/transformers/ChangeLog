@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/transformers
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/ChangeLog,v 1.22 2014/12/23 22:52:43 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/ChangeLog,v 1.23 2015/03/31 00:08:45 gienah Exp $
+
+  31 Mar 2015; Mark Wright <gienah@gentoo.org> transformers-0.4.2.0.ebuild:
+  Sync CABAL_CORE_LIB_GHC_PV from the Haskell overlay for transformers 0.4.2.0
 
   23 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org>
   transformers-0.3.0.0-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/transformers-0.4.2.0.ebuild,v 1.1 2014/12/14 06:35:05 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers/transformers-0.4.2.0.ebuild,v 1.2 2015/03/31 00:08:45 gienah Exp $
 
 EAPI=5
 
@@ -24,4 +24,4 @@ DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.6
 "
 
-CABAL_CORE_LIB_GHC_PV="7.9.2014*"
+CABAL_CORE_LIB_GHC_PV="PM:7.8.4-r1 PM:7.8.4-r2  PM:7.8.4-r3 PM:7.10.1_rc3 PM:7.10.1 7.11.2015*"
