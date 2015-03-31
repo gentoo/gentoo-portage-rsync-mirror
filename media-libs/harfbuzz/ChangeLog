@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.100 2015/03/28 18:06:23 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.101 2015/03/31 16:34:11 jer Exp $
+
+  31 Mar 2015; Jeroen Roovers <jer@gentoo.org> harfbuzz-0.9.38.ebuild:
+  Stable for HPPA (bug #544792).
 
 *harfbuzz-0.9.40 (28 Mar 2015)
 

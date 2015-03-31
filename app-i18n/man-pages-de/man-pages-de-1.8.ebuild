@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-1.8.ebuild,v 1.1 2014/11/22 22:05:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/man-pages-de-1.8.ebuild,v 1.2 2015/03/31 16:55:31 vapier Exp $
 
 EAPI=5
 
