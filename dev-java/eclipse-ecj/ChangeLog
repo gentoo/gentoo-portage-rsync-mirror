@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/eclipse-ecj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.100 2015/03/19 10:03:23 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.101 2015/03/31 18:51:35 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> eclipse-ecj-3.3.0-r3.ebuild,
+  eclipse-ecj-3.3.0-r4.ebuild, eclipse-ecj-3.4-r4.ebuild,
+  eclipse-ecj-3.4-r5.ebuild, eclipse-ecj-3.5.2.ebuild,
+  eclipse-ecj-3.5.2-r1.ebuild, eclipse-ecj-3.6-r1.ebuild,
+  eclipse-ecj-3.7.1.ebuild, eclipse-ecj-3.7.2-r1.ebuild,
+  eclipse-ecj-4.2.1.ebuild, eclipse-ecj-4.4.1.ebuild,
+  eclipse-ecj-4.4.2-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *eclipse-ecj-4.4.2-r1 (19 Mar 2015)
 

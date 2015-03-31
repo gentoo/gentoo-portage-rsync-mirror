@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-2.2.1.ebuild,v 1.7 2012/12/07 22:55:11 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-2.2.1.ebuild,v 1.8 2015/03/31 18:58:00 ulm Exp $
 
 inherit java-pkg-2
 
@@ -16,7 +16,7 @@ SLOT="2.2"
 KEYWORDS="amd64 ppc x86"
 
 RDEPEND=">=virtual/jdk-1.5
-	app-admin/eselect-maven"
+	app-eselect/eselect-maven"
 
 IUSE=""
 

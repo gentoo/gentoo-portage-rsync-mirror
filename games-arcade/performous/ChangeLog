@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/performous
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.17 2014/07/14 12:54:24 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/ChangeLog,v 1.18 2015/03/31 18:34:46 mr_bones_ Exp $
+
+*performous-1.0 (31 Mar 2015)
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/performous-1.0-gentoo.patch, +files/performous-1.0-include.patch,
+  +files/performous-1.0-libav.patch, +files/performous-1.0-linguas.patch,
+  +performous-1.0.ebuild:
+  version bump
 
   14 Jul 2014; Alfredo Tupone <tupone@gentoo.org> performous-0.7.0-r1.ebuild,
   +files/performous-0.7.0-freetype.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.4.0.ebuild,v 1.3 2014/05/10 01:44:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.4.0.ebuild,v 1.4 2015/03/31 18:46:33 ulm Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -53,7 +53,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.65
 	!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )"
-PDEPEND="app-admin/eselect-python
+PDEPEND="app-eselect/eselect-python
 	app-admin/python-updater"
 
 S="${WORKDIR}/${MY_P}"

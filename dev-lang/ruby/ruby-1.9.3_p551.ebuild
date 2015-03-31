@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p551.ebuild,v 1.11 2015/01/19 20:07:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p551.ebuild,v 1.12 2015/03/31 18:33:50 ulm Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ RDEPEND="
 	yaml? ( dev-libs/libyaml )
 	virtual/libffi
 	sys-libs/zlib
-	>=app-admin/eselect-ruby-20100402
+	>=app-eselect/eselect-ruby-20100402
 	!<dev-ruby/rdoc-3.9.4
 	!<dev-ruby/rubygems-1.8.10-r1"
 #	libedit? ( dev-libs/libedit )

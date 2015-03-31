@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.290 2014/11/29 09:56:32 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.291 2015/03/31 18:55:04 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> java-config-2.1.11.ebuild,
+  java-config-2.1.12-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   29 Nov 2014; Pacho Ramos <pacho@gentoo.org> java-config-2.2.0.ebuild:
   Support python 3.4

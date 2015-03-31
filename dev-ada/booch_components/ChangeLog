@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/booch_components
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.18 2008/01/20 23:01:45 george Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.19 2015/03/31 18:34:59 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org>
+  booch_components-20051222-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   20 Jan 2008; George Shapovalov <george@gentoo.org>
   -booch_components-20051222.ebuild, booch_components-20051222-r1.ebuild,

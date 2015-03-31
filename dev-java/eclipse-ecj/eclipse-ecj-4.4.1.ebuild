@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-4.4.1.ebuild,v 1.6 2014/11/29 13:35:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-4.4.1.ebuild,v 1.7 2015/03/31 18:51:35 ulm Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ SLOT="4.4"
 IUSE="+ant userland_GNU"
 
 COMMON_DEP="
-	|| ( app-admin/eselect-java app-admin/eselect-ecj )"
+	|| ( app-eselect/eselect-java app-eselect/eselect-ecj )"
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.6"
 DEPEND="${COMMON_DEP}

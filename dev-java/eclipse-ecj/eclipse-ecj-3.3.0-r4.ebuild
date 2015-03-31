@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.3.0-r4.ebuild,v 1.2 2014/03/10 20:43:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.3.0-r4.ebuild,v 1.3 2015/03/31 18:51:35 ulm Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux 
 SLOT="3.3"
 IUSE=""
 
-COMMON_DEPEND="|| ( app-admin/eselect-java app-admin/eselect-ecj )"
+COMMON_DEPEND="|| ( app-eselect/eselect-java app-eselect/eselect-ecj )"
 RDEPEND=">=virtual/jre-1.4
 	${COMMON_DEPEND}"
 DEPEND="<virtual/jdk-1.7

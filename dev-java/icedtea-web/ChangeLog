@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.48 2015/02/18 16:56:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.49 2015/03/31 18:53:10 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> icedtea-web-1.4.2.ebuild,
+  icedtea-web-1.4.2-r1.ebuild, icedtea-web-1.5.1-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> files/README.gentoo:
   Fix typos in README.gentoo, https://github.com/gentoo/gentoo-portage-rsync-

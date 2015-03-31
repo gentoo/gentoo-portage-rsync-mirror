@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11.ebuild,v 1.13 2013/04/06 10:21:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.1.11.ebuild,v 1.14 2015/03/31 18:55:04 ulm Exp $
 
 EAPI="2"
 PYTHON_DEPEND="*:2.6"
@@ -20,7 +20,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=">=dev-java/java-config-wrapper-0.15
 	!sys-apps/baselayout-java
-	!app-admin/eselect-java"
+	!app-eselect/eselect-java"
 # Tests fail when java-config isn't already installed.
 RESTRICT="test"
 RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython"

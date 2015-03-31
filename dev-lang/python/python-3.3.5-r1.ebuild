@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.5-r1.ebuild,v 1.11 2015/03/03 06:49:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.5-r1.ebuild,v 1.12 2015/03/31 18:46:33 ulm Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -54,7 +54,7 @@ DEPEND="${RDEPEND}
 	!sys-devel/gcc[libffi]"
 RDEPEND+=" !build? ( app-misc/mime-types )
 	doc? ( dev-python/python-docs:${SLOT} )"
-PDEPEND="app-admin/eselect-python
+PDEPEND="app-eselect/eselect-python
 	app-admin/python-updater"
 
 S="${WORKDIR}/${MY_P}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.1.0.ebuild,v 1.1 2013/07/19 23:58:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.1.0.ebuild,v 1.2 2015/03/31 18:58:00 ulm Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ LICENSE="Apache-2.0"
 SLOT="3.1"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="|| ( app-admin/eselect-java app-admin/eselect-maven )
+DEPEND="|| ( app-eselect/eselect-java app-eselect/eselect-maven )
 	dev-java/avalon-framework:4.1
 	dev-java/avalon-logkit:2.0
 	dev-java/commons-io:1

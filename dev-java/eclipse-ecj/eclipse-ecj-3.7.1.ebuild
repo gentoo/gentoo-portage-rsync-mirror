@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.7.1.ebuild,v 1.6 2015/02/10 12:04:59 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.7.1.ebuild,v 1.7 2015/03/31 18:51:35 ulm Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ LICENSE="EPL-1.0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 SLOT="3.7"
 
-CDEPEND=">=app-admin/eselect-ecj-0.3"
+CDEPEND=">=app-eselect/eselect-ecj-0.3"
 
 JAVA_PKG_WANT_SOURCE=1.4
 JAVA_PKG_WANT_TARGET=1.4

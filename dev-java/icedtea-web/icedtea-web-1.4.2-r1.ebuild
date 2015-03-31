@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.2-r1.ebuild,v 1.2 2014/11/01 22:47:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.2-r1.ebuild,v 1.3 2015/03/31 18:53:10 ulm Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="5"
@@ -25,7 +25,7 @@ COMMON_DEP="
 		dev-java/icedtea:7 dev-java/icedtea-bin:7
 		dev-java/icedtea:6 dev-java/icedtea-bin:6
 	) )
-	app-admin/eselect-java
+	app-eselect/eselect-java
 	nsplugin? (
 		>=dev-libs/glib-2.16
 	)"

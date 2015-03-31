@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.31 2015/01/05 18:15:06 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.32 2015/03/31 18:43:33 ulm Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -101,8 +101,8 @@
 inherit eutils flag-o-matic multilib toolchain-funcs unpacker
 
 case ${EAPI:-0} in
-    4|5) ;;
-    *) die "EAPI ${EAPI} unsupported."
+	4|5) ;;
+	*) die "EAPI ${EAPI} unsupported."
 esac
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_prepare src_compile src_install pkg_postinst pkg_postrm pkg_config
@@ -125,7 +125,7 @@ COMMON_DEPEND=">=media-tv/gentoo-vdr-scripts-0.4.2"
 DEPEND="${COMMON_DEPEND}
 	virtual/linuxtv-dvb-headers"
 RDEPEND="${COMMON_DEPEND}
-	>=app-admin/eselect-vdr-0.0.2"
+	>=app-eselect/eselect-vdr-0.0.2"
 
 if [[ "${GENTOO_VDR_CONDITIONAL:-no}" = "yes" ]]; then
 	IUSE="${IUSE} vdr"

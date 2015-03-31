@@ -1,13 +1,13 @@
 DEFINED_PHASES=install postinst postrm prepare prerm setup
-DEPEND==dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+DEPEND==dev-java/java-config-2* || ( app-eselect/eselect-java <dev-java/java-config-2.2 )
 DESCRIPTION=Landon Fuller's Java 6 for Mac OS X 10.4 and 10.5
 EAPI=3
 HOMEPAGE=http://landonf.bikemonkey.org/static/soylatte/
 IUSE=examples
 KEYWORDS=~x86-macos ~x64-macos
 LICENSE=sun-jrl
-RDEPEND=dev-db/unixODBC =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
+RDEPEND=dev-db/unixODBC =dev-java/java-config-2* || ( app-eselect/eselect-java <dev-java/java-config-2.2 )
 SLOT=1.6
 SRC_URI=x86-macos? ( http://landonf.bikemonkey.org/static/soylatte/bsd-dist/javasrc_1_6_jrl_darwin/soylatte16-i386-1.0.3.tar.bz2 ) x64-macos? ( http://landonf.bikemonkey.org/static/soylatte/bsd-dist/javasrc_1_6_jrl_darwin/soylatte16-amd64-1.0.3.tar.bz2 )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	834752b84da3c4deea95f5b186aada54	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	3be2b41fb351dbaa00c7d14a732c75cd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=3468be850dc93f081c7bcab6852f4277

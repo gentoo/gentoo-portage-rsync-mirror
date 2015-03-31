@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ecj-gcj-3.6-r1.ebuild,v 1.1 2012/12/14 13:08:17 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ecj-gcj/ecj-gcj-3.6-r1.ebuild,v 1.2 2015/03/31 18:49:02 ulm Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="+native"
 
 COMMON_DEPEND="
 	sys-devel/gcc[gcj]
-	|| ( app-admin/eselect-java >=app-admin/eselect-ecj-0.6 )"
+	|| ( app-eselect/eselect-java >=app-eselect/eselect-ecj-0.6 )"
 RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}
 	app-arch/unzip

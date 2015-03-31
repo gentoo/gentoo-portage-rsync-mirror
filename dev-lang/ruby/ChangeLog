@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.702 2015/03/03 18:19:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.703 2015/03/31 18:33:50 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> ruby-1.9.3_p551.ebuild,
+  ruby-2.0.0_p598.ebuild, ruby-2.0.0_p643.ebuild, ruby-2.1.5.ebuild,
+  ruby-2.2.0-r1.ebuild, ruby-2.2.1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *ruby-2.2.1 (03 Mar 2015)
 

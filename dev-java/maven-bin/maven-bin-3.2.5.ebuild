@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.2.5.ebuild,v 1.1 2015/01/19 20:42:58 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/maven-bin-3.2.5.ebuild,v 1.2 2015/03/31 18:58:00 ulm Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~x86"
 # - https://bugs.gentoo.org/show_bug.cgi?id=472850
 # - https://bugs.gentoo.org/show_bug.cgi?id=477436
 #
-DEPEND="|| ( app-admin/eselect-java app-admin/eselect-maven )
+DEPEND="|| ( app-eselect/eselect-java app-eselect/eselect-maven )
 || ( dev-java/commons-logging:0 dev-java/log4j:0 dev-java/avalon-logkit:2.0 )
 dev-java/aopalliance:1
 dev-java/avalon-framework:4.1
