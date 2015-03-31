@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r4.ebuild,v 1.1 2015/03/31 04:53:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r4.ebuild,v 1.2 2015/03/31 21:18:02 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs multilib-minimal
@@ -41,6 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.9-fix-clang-build.patch #417763
 	epatch "${FILESDIR}"/${PN}-5.9-pkg-config.patch
 	epatch "${FILESDIR}"/${P}-no-I-usr-include.patch #522586
+	epatch "${FILESDIR}"/${P}-gcc-5.patch #545114
 }
 
 src_configure() {

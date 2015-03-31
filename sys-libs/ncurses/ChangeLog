@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.232 2015/03/31 04:53:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.233 2015/03/31 21:18:02 vapier Exp $
+
+  31 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/ncurses-5.9-gcc-5.patch, ncurses-5.9-r4.ebuild:
+  Add fix from upstream for building w/gcc-5 #545114#2 by David Kredba.
 
 *ncurses-5.9-r4 (31 Mar 2015)
 
