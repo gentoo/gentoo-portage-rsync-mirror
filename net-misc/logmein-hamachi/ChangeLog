@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/logmein-hamachi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.17 2015/03/28 11:18:21 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.18 2015/03/31 01:16:32 idella4 Exp $
+
+  31 Mar 2015; Ian Delaney <idella4@gentoo.org>
+  -logmein-hamachi-2.1.0.119.ebuild:
+  rm oldest
 
 *logmein-hamachi-2.1.0.139 (28 Mar 2015)
 
