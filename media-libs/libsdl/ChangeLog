@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.233 2015/03/31 09:25:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.234 2015/03/31 15:50:13 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r4.ebuild:
+  old
 
 *libsdl-1.2.15-r4 (31 Mar 2015)
 
