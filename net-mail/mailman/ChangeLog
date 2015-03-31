@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.148 2015/03/29 13:08:58 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.149 2015/03/31 22:47:38 hanno Exp $
+
+*mailman-2.1.20 (31 Mar 2015)
+
+  31 Mar 2015; <hanno@gentoo.org> +mailman-2.1.20.ebuild:
+  Security bump for CVE-2015-2775, see #545070.
 
 *mailman-2.1.19 (29 Mar 2015)
 
