@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.5-r1.ebuild,v 1.12 2014/11/24 02:50:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/libnotify-0.7.5-r1.ebuild,v 1.13 2015/03/31 20:26:35 ulm Exp $
 
 EAPI=5
 inherit autotools gnome.org
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc +introspection test"
 
-RDEPEND="app-admin/eselect-notify-send
+RDEPEND="app-eselect/eselect-notify-send
 	>=dev-libs/glib-2.26
 	x11-libs/gdk-pixbuf:2
 	introspection? ( >=dev-libs/gobject-introspection-1.32 )"

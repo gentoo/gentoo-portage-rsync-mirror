@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.234 2015/03/31 15:50:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.238 2015/03/31 20:24:44 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  clean unused ps3 use flag
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.15-r8.ebuild:
+  mark stable for the fringe archs
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r4.ebuild:
+  old
+
+*libsdl-1.2.15-r4 (31 Mar 2015)
+
+  31 Mar 2015; Michał Górny <mgorny@gentoo.org> +libsdl-1.2.15-r4.ebuild:
+  Restore stable ebuild. Again.
 
   31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r4.ebuild:
   old

@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.317 2015/02/02 16:26:17 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.318 2015/03/31 20:05:20 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> wxGTK-2.8.12.1-r1.ebuild,
+  wxGTK-2.9.4.1-r1.ebuild, wxGTK-3.0.0.0.ebuild, wxGTK-3.0.1.1.ebuild,
+  wxGTK-3.0.2.0.ebuild, wxGTK-3.0.2.0-r1.ebuild,
+  files/wxGTK-2.8.11-collision.patch, files/wxGTK-2.9.3.1-collision.patch,
+  files/wxGTK-2.9.4.1-collision.patch, files/wxGTK-3.0.0.0-collision.patch:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *wxGTK-3.0.2.0-r1 (02 Feb 2015)
 

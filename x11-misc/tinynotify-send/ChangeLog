@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/tinynotify-send
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/ChangeLog,v 1.13 2014/07/06 13:24:12 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/ChangeLog,v 1.14 2015/03/31 20:27:30 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> tinynotify-send-1.2.1-r1.ebuild,
+  tinynotify-send-9999.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> tinynotify-send-1.2.1-r1.ebuild,
   tinynotify-send-9999.ebuild:

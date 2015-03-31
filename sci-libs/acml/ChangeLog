@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.49 2015/02/20 14:46:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.50 2015/03/31 20:09:31 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> acml-4.1.0-r2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *acml-4.1.0-r2 (20 Feb 2015)
 

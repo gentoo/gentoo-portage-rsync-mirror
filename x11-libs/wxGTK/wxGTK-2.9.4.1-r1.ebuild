@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.4.1-r1.ebuild,v 1.2 2014/01/27 17:35:05 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.4.1-r1.ebuild,v 1.3 2015/03/31 20:05:20 ulm Exp $
 
 EAPI="5"
 
@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 		)"
 #	test? ( dev-util/cppunit )
 
-PDEPEND=">=app-admin/eselect-wxwidgets-1.4"
+PDEPEND=">=app-eselect/eselect-wxwidgets-1.4"
 
 LICENSE="wxWinLL-3
 		GPL-2
@@ -168,11 +168,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_version app-admin/eselect-wxwidgets \
+	has_version app-eselect/eselect-wxwidgets \
 		&& eselect wxwidgets update
 }
 
 pkg_postrm() {
-	has_version app-admin/eselect-wxwidgets \
+	has_version app-eselect/eselect-wxwidgets \
 		&& eselect wxwidgets update
 }

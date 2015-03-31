@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.19 2013/07/02 09:00:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.20 2015/03/31 20:12:53 ulm Exp $
 
 inherit eutils fortran-2 multilib toolchain-funcs check-reqs
 
@@ -18,9 +18,9 @@ IUSE="doc fftw fortran95 int64 mpi"
 RESTRICT="strip mirror"
 
 DEPEND="
-	app-admin/eselect-blas
-	app-admin/eselect-cblas
-	app-admin/eselect-lapack"
+	app-eselect/eselect-blas
+	app-eselect/eselect-cblas
+	app-eselect/eselect-lapack"
 RDEPEND="${DEPEND}
 	doc? ( app-doc/blas-docs app-doc/lapack-docs )
 	mpi? ( virtual/mpi )"

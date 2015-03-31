@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mawk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.35 2014/12/08 01:48:52 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.36 2015/03/31 20:24:07 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> mawk-1.3.4_p20131226.ebuild,
+  mawk-1.3.4_p20140914.ebuild, mawk-1.3.4_p20141027.ebuild,
+  mawk-1.3.4_p20141206.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *mawk-1.3.4_p20141206 (08 Dec 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/tinynotify-send-1.2.1-r1.ebuild,v 1.2 2014/07/06 13:24:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/tinynotify-send-1.2.1-r1.ebuild,v 1.3 2015/03/31 20:27:30 ulm Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-admin/eselect-notify-send
+RDEPEND="app-eselect/eselect-notify-send
 	x11-libs/libtinynotify
 	~x11-libs/libtinynotify-cli-${PV}"
 DEPEND="${RDEPEND}

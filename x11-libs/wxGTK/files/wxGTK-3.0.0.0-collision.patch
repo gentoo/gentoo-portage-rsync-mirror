@@ -1,6 +1,6 @@
 Prevent file collisions between multiple installed SLOTs.
 
-  - Don't install wxwin.m4.  It is installed with app-admin/eselect-wxwidgets.
+  - Don't install wxwin.m4.  It is installed with app-eselect/eselect-wxwidgets.
   - Version the bakefile preset filenames.  Unversioned symlinks to these files
     are handled by eselect.
   - Version wx-config and wxrc.  The unversioned forms are wrapper scripts

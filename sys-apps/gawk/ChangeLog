@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gawk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.179 2014/04/25 18:41:07 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.180 2015/03/31 20:22:33 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> gawk-4.0.2.ebuild,
+  gawk-4.1.0.ebuild, gawk-4.1.1-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *gawk-4.1.1-r1 (25 Apr 2014)
 

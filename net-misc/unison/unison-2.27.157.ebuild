@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.27.157.ebuild,v 1.2 2012/06/18 15:55:24 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.27.157.ebuild,v 1.3 2015/03/31 20:08:12 ulm Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 RDEPEND="gtk? ( >=dev-ml/lablgtk-2.2
 || ( net-misc/x11-ssh-askpass net-misc/ssh-askpass-fullscreen ) )
 	!net-misc/unison:0
-	app-admin/eselect-unison"
+	app-eselect/eselect-unison"
 
 PDEPEND="gtk? ( media-fonts/font-schumacher-misc )"
 
@@ -70,7 +70,7 @@ src_install () {
 	# work to force the Makefile to do the right thing.
 	newbin unison unison-${SLOT} || die
 	dodoc BUGS.txt CONTRIB INSTALL NEWS \
-	      README ROADMAP.txt TODO.txt || die
+		  README ROADMAP.txt TODO.txt || die
 
 	if use doc; then
 		dohtml "${DISTDIR}/${P}-manual.html" || die

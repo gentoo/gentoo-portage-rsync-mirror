@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.32.52.ebuild,v 1.5 2012/02/05 18:44:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.32.52.ebuild,v 1.6 2015/03/31 20:08:12 ulm Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 RDEPEND="gtk? ( >=dev-ml/lablgtk-2.2
 	|| ( net-misc/x11-ssh-askpass net-misc/ssh-askpass-fullscreen ) )
 	!net-misc/unison:0
-	app-admin/eselect-unison"
+	app-eselect/eselect-unison"
 
 #PDEPEND="gtk? ( media-fonts/font-schumacher-misc )"
 

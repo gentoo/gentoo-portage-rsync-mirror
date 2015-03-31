@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r1.ebuild,v 1.18 2013/07/14 17:34:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.2.1-r1.ebuild,v 1.19 2015/03/31 20:12:17 ulm Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbs
 IUSE="doc"
 
 RDEPEND="
-	app-admin/eselect-lapack
+	app-eselect/eselect-lapack
 	virtual/blas"
 DEPEND="
 	${RDEPEND}

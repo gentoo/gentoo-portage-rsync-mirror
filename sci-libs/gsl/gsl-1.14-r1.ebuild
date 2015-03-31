@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.8 2013/03/29 12:17:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14-r1.ebuild,v 1.9 2015/03/31 20:16:02 ulm Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ IUSE="cblas-external static-libs"
 
 RDEPEND="cblas-external? ( virtual/cblas )"
 DEPEND="${RDEPEND}
-	app-admin/eselect-cblas
+	app-eselect/eselect-cblas
 	virtual/pkgconfig"
 
 pkg_setup() {

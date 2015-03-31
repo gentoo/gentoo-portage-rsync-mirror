@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/xconq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.17 2015/03/25 15:42:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xconq/ChangeLog,v 1.18 2015/03/31 20:01:35 tupone Exp $
+
+  31 Mar 2015; Tupone Alfredo <tupone@gentoo.org> xconq-7.4.1.ebuild:
+  EAPI 5
 
   25 Mar 2015; Justin Lecher <jlec@gentoo.org> xconq-7.4.1.ebuild:
   Fix tcl/tk slotting

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.1.1.ebuild,v 1.1 2014/10/06 01:06:16 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.1.1.ebuild,v 1.2 2015/03/31 20:05:20 ulm Exp $
 
 EAPI="5"
 
@@ -55,7 +55,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xf86vidmodeproto
 		)"
 
-PDEPEND=">=app-admin/eselect-wxwidgets-20131230"
+PDEPEND=">=app-eselect/eselect-wxwidgets-20131230"
 
 LICENSE="wxWinLL-3
 		GPL-2
@@ -159,11 +159,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	has_version app-admin/eselect-wxwidgets \
+	has_version app-eselect/eselect-wxwidgets \
 		&& eselect wxwidgets update
 }
 
 pkg_postrm() {
-	has_version app-admin/eselect-wxwidgets \
+	has_version app-eselect/eselect-wxwidgets \
 		&& eselect wxwidgets update
 }

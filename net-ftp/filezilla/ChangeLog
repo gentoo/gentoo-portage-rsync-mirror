@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.122 2015/03/30 12:05:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.123 2015/03/31 20:01:26 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> filezilla-3.7.3.ebuild,
+  filezilla-3.8.1.ebuild, filezilla-3.9.0.5.ebuild, filezilla-3.9.0.6.ebuild,
+  filezilla-3.10.1.1.ebuild, filezilla-3.10.2.ebuild, filezilla-3.10.3.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *filezilla-3.10.3 (30 Mar 2015)
 

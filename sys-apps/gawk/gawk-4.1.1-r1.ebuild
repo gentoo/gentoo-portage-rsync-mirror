@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.1.1-r1.ebuild,v 1.1 2014/04/25 18:41:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.1.1-r1.ebuild,v 1.2 2015/03/31 20:22:33 ulm Exp $
 
 EAPI="4"
 
@@ -58,7 +58,8 @@ src_install() {
 
 pkg_postinst() {
 	# symlink creation here as the links do not belong to gawk, but to any awk
-	if has_version app-admin/eselect && has_version app-admin/eselect-awk ; then
+	if has_version app-admin/eselect \
+			&& has_version app-eselect/eselect-awk ; then
 		eselect awk update ifunset
 	else
 		local l
@@ -70,7 +71,8 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if has_version app-admin/eselect && has_version app-admin/eselect-awk ; then
+	if has_version app-admin/eselect \
+			&& has_version app-eselect/eselect-awk ; then
 		eselect awk update ifunset
 	fi
 }
