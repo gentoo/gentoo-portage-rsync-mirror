@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.634 2015/03/30 17:04:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.635 2015/03/31 18:02:03 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> mesa-7.10.3.ebuild,
+  mesa-10.2.8.ebuild, mesa-10.3.7-r1.ebuild, mesa-10.3.7-r2.ebuild,
+  mesa-10.4.4.ebuild, mesa-10.5.1.ebuild, mesa-10.5.2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   30 Mar 2015; Matt Turner <mattst88@gentoo.org> mesa-10.5.2.ebuild:
   Move python deps back, bug 545058.

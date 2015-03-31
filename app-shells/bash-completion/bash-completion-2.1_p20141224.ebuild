@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1_p20141224.ebuild,v 1.2 2015/02/09 19:52:52 amadio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1_p20141224.ebuild,v 1.3 2015/03/31 18:26:57 ulm Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND=">=app-shells/bash-4.3_p30-r1
 	sys-apps/miscfiles
-	!app-admin/eselect-bashcomp"
+	!app-eselect/eselect-bashcomp"
 DEPEND="app-arch/xz-utils"
 PDEPEND=">=app-shells/gentoo-bashcomp-20140911"
 

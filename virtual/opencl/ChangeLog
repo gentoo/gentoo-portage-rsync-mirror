@@ -1,6 +1,10 @@
 # ChangeLog for virtual/opencl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.18 2014/06/18 20:56:25 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/ChangeLog,v 1.19 2015/03/31 18:17:59 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> opencl-0-r2.ebuild,
+  opencl-0-r3.ebuild, opencl-0-r4.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> opencl-0-r4.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

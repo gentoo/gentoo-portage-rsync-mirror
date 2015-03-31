@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.148 2015/02/28 13:30:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.149 2015/03/31 18:30:07 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> metadata.xml:
+  Update reference after package move of eselect modules to app-eselect.
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   docbook-xsl-stylesheets-1.78.0-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r92.ebuild,v 1.2 2014/11/10 17:59:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r92.ebuild,v 1.3 2015/03/31 18:26:57 ulm Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND=">=app-shells/bash-4.3_p30-r1
 	sys-apps/miscfiles
-	!app-admin/eselect-bashcomp"
+	!app-eselect/eselect-bashcomp"
 
 # Remove unwanted completions.
 STRIP_COMPLETIONS=(

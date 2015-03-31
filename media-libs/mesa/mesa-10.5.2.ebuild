@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.5.2.ebuild,v 1.2 2015/03/30 17:04:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.5.2.ebuild,v 1.3 2015/03/31 18:02:03 ulm Exp $
 
 EAPI=5
 
@@ -80,9 +80,9 @@ RDEPEND="
 	!<x11-base/xorg-server-1.7
 	!<=x11-proto/xf86driproto-2.0.3
 	abi_x86_32? ( !app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
-	classic? ( app-admin/eselect-mesa )
-	gallium? ( app-admin/eselect-mesa )
-	>=app-admin/eselect-opengl-1.3.0
+	classic? ( app-eselect/eselect-mesa )
+	gallium? ( app-eselect/eselect-mesa )
+	>=app-eselect/eselect-opengl-1.3.0
 	udev? ( kernel_linux? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] ) )
 	>=dev-libs/expat-2.1.0-r3:=[${MULTILIB_USEDEP}]
 	gbm? ( >=virtual/libudev-215:=[${MULTILIB_USEDEP}] )
@@ -108,7 +108,7 @@ RDEPEND="
 		>=sys-devel/llvm-3.4.2:=[${MULTILIB_USEDEP}]
 	)
 	opencl? (
-				app-admin/eselect-opencl
+				app-eselect/eselect-opencl
 				dev-libs/libclc
 				|| (
 					>=dev-libs/elfutils-0.155-r1:=[${MULTILIB_USEDEP}]
@@ -263,7 +263,7 @@ multilib_src_configure() {
 		"
 	fi
 
-	# on abi_x86_32 hardened we need to have asm disable  
+	# on abi_x86_32 hardened we need to have asm disable
 	if [[ ${ABI} == x86* ]] && use pic; then
 		myconf+=" --disable-asm"
 	fi

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.16-r1.ebuild,v 1.1 2013/09/21 17:09:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.16-r1.ebuild,v 1.2 2015/03/31 18:14:22 ulm Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 LICENSE="SGI-B-2.0"
 IUSE=""
 
-RDEPEND=">=app-admin/eselect-opengl-1.2.6"
+RDEPEND=">=app-eselect/eselect-opengl-1.2.6"
 DEPEND=""
 
 src_install() {

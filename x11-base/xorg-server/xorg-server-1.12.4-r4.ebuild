@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r4.ebuild,v 1.10 2015/03/17 18:41:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.12.4-r4.ebuild,v 1.11 2015/03/31 18:08:58 ulm Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/${PN}-1.12-cve-2014-8091..8103.patches.tar.x
 IUSE_SERVERS="dmx kdrive xnest xorg xvfb"
 IUSE="${IUSE_SERVERS} ipv6 minimal nptl selinux tslib +udev"
 
-RDEPEND=">=app-admin/eselect-opengl-1.0.8
+RDEPEND=">=app-eselect/eselect-opengl-1.0.8
 	dev-libs/openssl
 	media-libs/freetype
 	>=x11-apps/iceauth-1.0.2

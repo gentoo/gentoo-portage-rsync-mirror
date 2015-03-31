@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.3.ebuild,v 1.20 2015/02/28 22:23:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.10.3.ebuild,v 1.21 2015/03/31 18:02:03 ulm Exp $
 
 EAPI=3
 
@@ -59,9 +59,9 @@ EXTERNAL_DEPEND="
 RDEPEND="${EXTERNAL_DEPEND}
 	!<x11-base/xorg-server-1.7
 	!<=x11-proto/xf86driproto-2.0.3
-	classic? ( app-admin/eselect-mesa )
-	gallium? ( app-admin/eselect-mesa )
-	>=app-admin/eselect-opengl-1.1.1-r2
+	classic? ( app-eselect/eselect-mesa )
+	gallium? ( app-eselect/eselect-mesa )
+	>=app-eselect/eselect-opengl-1.1.1-r2
 	dev-libs/expat
 	dev-libs/libxml2[python]
 	sys-libs/talloc

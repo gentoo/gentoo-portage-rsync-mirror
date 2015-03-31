@@ -6,9 +6,9 @@ HOMEPAGE=http://software.intel.com/en-us/articles/opencl-sdk/
 IUSE=tools
 KEYWORDS=amd64 -x86
 LICENSE=Intel-SDP
-RDEPEND=app-admin/eselect-opencl dev-cpp/tbb sys-process/numactl tools? ( sys-devel/llvm >=virtual/jre-1.6 )
+RDEPEND=app-eselect/eselect-opencl dev-cpp/tbb sys-process/numactl tools? ( sys-devel/llvm >=virtual/jre-1.6 )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://registrationcenter.intel.com/irc_nas/2563/intel_sdk_for_ocl_applications_2012_x64.tgz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=2fe90c56b74afb512d4a8ea6ba5a403a
+_md5_=b1dbfa6b359d9c6e098cfd79c4d1bdc7

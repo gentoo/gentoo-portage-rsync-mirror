@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.6_beta2.ebuild,v 1.1 2014/09/01 14:57:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.6_beta2.ebuild,v 1.2 2015/03/31 18:10:48 ulm Exp $
 
 EAPI=5
 
@@ -25,8 +25,8 @@ RESTRICT="bindist test"
 
 RDEPEND="
 	<=x11-base/xorg-server-1.15.49[-minimal]
-	>=app-admin/eselect-opengl-1.0.7
-	app-admin/eselect-opencl
+	>=app-eselect/eselect-opengl-1.0.7
+	app-eselect/eselect-opencl
 	sys-power/acpid
 	x11-apps/xauth
 	x11-libs/libX11

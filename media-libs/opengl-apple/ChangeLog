@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opengl-apple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/ChangeLog,v 1.8 2013/07/20 18:44:01 grobian Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/ChangeLog,v 1.9 2015/03/31 18:02:51 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> opengl-apple-3.ebuild,
+  opengl-apple-4.ebuild, opengl-apple-5.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *opengl-apple-5 (20 Jul 2013)
 

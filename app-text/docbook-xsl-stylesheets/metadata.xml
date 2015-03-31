@@ -5,7 +5,7 @@
   <use>
     <flag name="ruby">
       Install the Ruby-based dbtoepub script; requires an interpreter
-      compatible with <pkg>app-admin/eselect-ruby</pkg>.
+      compatible with <pkg>app-eselect/eselect-ruby</pkg>.
     </flag>
   </use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117-r1.ebuild,v 1.2 2014/09/11 11:26:33 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117-r1.ebuild,v 1.3 2015/03/31 18:16:34 ulm Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE="android bundled_libs"
 KEYWORDS="-* ~amd64"
 RESTRICT="mirror"
 
-RDEPEND="app-admin/eselect-opencl
+RDEPEND="app-eselect/eselect-opencl
 	sys-process/numactl
 	!bundled_libs? (
 		dev-cpp/tbb

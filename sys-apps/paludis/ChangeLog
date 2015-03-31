@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.251 2015/03/29 18:30:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.252 2015/03/31 18:24:09 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> paludis-1.2.0.ebuild,
+  paludis-1.4.0.ebuild, paludis-1.4.2-r1.ebuild, paludis-2.0.0.ebuild,
+  paludis-2.2.0.ebuild, paludis-2.2.0-r2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *paludis-2.2.0-r2 (29 Mar 2015)
 

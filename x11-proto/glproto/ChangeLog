@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.125 2015/03/03 12:29:27 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.126 2015/03/31 18:14:22 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> glproto-1.4.16.ebuild,
+  glproto-1.4.16-r1.ebuild, glproto-1.4.17.ebuild, glproto-1.4.17-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> glproto-1.4.17-r1.ebuild:
   add arm64 support, tested on A53 board

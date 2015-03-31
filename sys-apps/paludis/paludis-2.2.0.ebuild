@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.2.0.ebuild,v 1.1 2014/10/09 10:29:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-2.2.0.ebuild,v 1.2 2015/03/31 18:24:09 ulm Exp $
 
 EAPI=4
 
@@ -49,7 +49,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/sandbox"
 
-PDEPEND="app-admin/eselect-package-manager"
+PDEPEND="app-eselect/eselect-package-manager"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 

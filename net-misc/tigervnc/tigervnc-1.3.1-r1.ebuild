@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.3.1-r1.ebuild,v 1.11 2015/01/25 11:24:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.3.1-r1.ebuild,v 1.12 2015/03/31 18:05:36 ulm Exp $
 
 EAPI="4"
 
@@ -42,7 +42,7 @@ RDEPEND="virtual/jpeg:0
 		>=x11-apps/xauth-1.0.3
 		x11-apps/xsetroot
 		>=x11-misc/xkeyboard-config-2.4.1-r3
-		opengl? ( >=app-admin/eselect-opengl-1.0.8 )
+		opengl? ( >=app-eselect/eselect-opengl-1.0.8 )
 		xorgmodule? ( =x11-base/xorg-server-${XSERVER_VERSION%.*}* )
 	)
 	!net-misc/vnc
