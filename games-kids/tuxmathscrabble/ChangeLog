@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/tuxmathscrabble
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.25 2015/03/25 13:47:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.26 2015/03/31 16:22:42 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/tuxmathscrabble-0.7.4-gentoo.patch, -tuxmathscrabble-0.7.4.ebuild:
+  old
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tuxmathscrabble-0.8.1.ebuild:
   Stable for x86, wrt bug #542512

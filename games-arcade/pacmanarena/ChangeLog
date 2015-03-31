@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pacmanarena
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.17 2014/10/09 15:31:09 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.18 2015/03/31 16:10:36 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> pacmanarena-0.15.ebuild:
+  alpha is unstable
 
   09 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org> pacmanarena-0.15.ebuild:
   EAPI=5; add libsdl use dep (bug #524834)

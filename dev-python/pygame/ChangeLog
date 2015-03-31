@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.104 2015/02/28 18:06:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.105 2015/03/31 16:25:55 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  pygame-1.9.2_pre20120101-r2.ebuild:
+  alpha, ia64, and sparc are unstable
 
   28 Feb 2015; Pacho Ramos <pacho@gentoo.org>
   +files/pygame-1.9.2_pre20120101-import-bdist.patch,

@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/tuxpuck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.17 2015/01/07 14:01:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.18 2015/03/31 16:16:01 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> tuxpuck-0.8.2-r1.ebuild:
+  alpha and sparc are unstable
 
   07 Jan 2015; Tupone Alfredo <tupone@gentoo.org> tuxpuck-0.8.2-r1.ebuild,
   +files/tuxpuck-0.8.2-parallel.patch:

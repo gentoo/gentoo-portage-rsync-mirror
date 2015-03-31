@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.28 2015/01/02 15:51:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.29 2015/03/31 16:16:57 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  maelstrom-3.0.6-r2.ebuild:
+  alpha is unstable
 
   02 Jan 2015; Tupone Alfredo <tupone@gentoo.org> maelstrom-3.0.6-r2.ebuild:
   Fix build with new automake. Bug #514566 by Patrick Lauer

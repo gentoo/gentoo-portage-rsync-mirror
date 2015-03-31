@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/kobodeluxe
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.31 2015/01/05 10:18:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/ChangeLog,v 1.32 2015/03/31 16:08:53 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> kobodeluxe-0.5.1.ebuild:
+  alpha is unstable
 
   05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> kobodeluxe-0.5.1.ebuild:
   EAPI 5

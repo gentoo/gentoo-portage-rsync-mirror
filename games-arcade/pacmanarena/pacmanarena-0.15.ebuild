@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.17 2014/10/09 15:31:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/pacmanarena-0.15.ebuild,v 1.18 2015/03/31 16:10:36 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils autotools games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/pacman-arena-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 x86"
+KEYWORDS="~alpha amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
