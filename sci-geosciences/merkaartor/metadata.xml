@@ -3,7 +3,11 @@
 <pkgmetadata>
   <herd>sci-geosciences</herd>
   <use>
-    <flag name="libproxy">Use <pkg>net-libs/libproxy</pkg> for getting the HTTP/HTTPS/SOCKS proxy configuration</flag>
-    <flag name="webkit">Enable Webkit browser plugin using <pkg>dev-qt/qtwebkit</pkg></flag>
+    <flag name="libproxy">
+    	Use <pkg>net-libs/libproxy</pkg> for getting the HTTP/HTTPS/SOCKS proxy configuration
+    	</flag>
+    <flag name="qrcode">
+    Enable QR code scanning with <pkg>media-gfx/zbar</pkg>
+    </flag>
   </use>
 </pkgmetadata>

@@ -1,0 +1,54 @@
+From 1fc139ff9958039c7836ac043a7f9a91aa7785a6 Mon Sep 17 00:00:00 2001
+From: Nikoli <nikoli@gmx.us>
+Date: Thu, 10 Oct 2013 16:28:02 +0400
+Subject: [PATCH] Support for building with system qtsingleapplication and
+ quazip
+
+---
+ INSTALL     |  2 ++
+ src/src.pro | 16 +++++++++++-----
+ 2 files changed, 13 insertions(+), 5 deletions(-)
+
+diff --git a/INSTALL b/INSTALL
+index 79ec63b..447876c 100644
+--- a/INSTALL
++++ b/INSTALL
+@@ -51,6 +51,8 @@ TRANSDIR_MERKAARTOR=<path>  - where will the Merkaartor translations be installe
+ TRANSDIR_SYSTEM=<path>      - where your global Qt translation directory is
+ NODEBUG=1                   - release target
+ NOUSEWEBKIT                 - disable use of WebKit (Yahoo adapter)
++SYSTEM_QTSA                 - use system copy of qtsingleapplication instead of internal
++SYSTEM_QUAZIP               - use system copy of quazip instead of internal
+ 
+ 
+ 3. Run your build tool, make for posix like systems, nmake for
+diff --git a/src/src.pro b/src/src.pro
+index a8a4730..c332b18 100644
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -6,11 +6,17 @@ include (Config.pri)
+ #Custom config
+ include(Custom.pri)
+ 
+-include(../3rdparty/qtsingleapplication-2.6_1-opensource/src/qtsingleapplication.pri)
+-DEFINES += QUAZIP_STATIC
+-include(../3rdparty/quazip-0.7/quazip.pri)
+-
+-#LIBS += -lquazip
++isEmpty(SYSTEM_QTSA) {
++  include(../3rdparty/qtsingleapplication-2.6_1-opensource/src/qtsingleapplication.pri)
++} else {
++  CONFIG += qtsingleapplication
++}
++isEmpty(SYSTEM_QUAZIP) {
++  DEFINES += QUAZIP_STATIC
++  include(../3rdparty/quazip-0.7/quazip.pri)
++} else {
++  LIBS += -lquazip
++}
+ 
+ #Qt Version
+ QT_VERSION = $$[QT_VERSION]
+-- 
+2.0.5
+

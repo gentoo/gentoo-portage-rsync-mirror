@@ -1,24 +1,21 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.17.2.ebuild,v 1.8 2013/03/02 23:21:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.17.2.ebuild,v 1.9 2015/03/31 13:15:04 jlec Exp $
 
 EAPI=4
 
 REDMINE_HASH="253"
-[[ ${PV} == 9999 ]] && SCM_ECLASS=git-2
-EGIT_REPO_URI="git://gitorious.org/merkaartor/main.git"
-EGIT_PROJECT=${PN}
+
 inherit multilib qt4-r2 ${SCM_ECLASS}
 
 DESCRIPTION="A Qt4 based map editor for the openstreetmap.org project"
 HOMEPAGE="http://www.merkaartor.be"
-[[ ${PV} == 9999 ]] || SRC_URI="http://merkaartor.be/attachments/download/${REDMINE_HASH}/merkaartor-${PV}.tar.bz2"
+SRC_URI="http://merkaartor.be/attachments/download/${REDMINE_HASH}/merkaartor-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
-[[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~x86"
 
 IUSE="debug exif gps nls libproxy"

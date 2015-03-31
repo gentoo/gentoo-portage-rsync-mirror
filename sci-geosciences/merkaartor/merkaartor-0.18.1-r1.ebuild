@@ -1,21 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.16 2015/03/31 13:15:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-0.18.1-r1.ebuild,v 1.1 2015/03/31 13:15:04 jlec Exp $
 
 EAPI=5
 
 PLOCALES="ar cs de es et fr hr hu it ja nl pl pt_BR pt ru sk sv uk"
 
-inherit eutils fdo-mime gnome2-utils git-r3 l10n multilib qt4-r2
+inherit eutils fdo-mime gnome2-utils l10n multilib qt4-r2
 
 DESCRIPTION="A Qt4 based map editor for the openstreetmap.org project"
 HOMEPAGE="http://www.merkaartor.be https://github.com/openstreetmap/merkaartor"
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/openstreetmap/merkaartor.git"
+SRC_URI="https://github.com/openstreetmap/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug exif gps libproxy qrcode"
 
 RDEPEND="
@@ -24,7 +23,6 @@ RDEPEND="
 	dev-qt/qtsvg:4
 	dev-qt/qtwebkit:4
 	>=dev-qt/qtsingleapplication-2.6.1[X,qt4(+)]
-	>=dev-libs/quazip-0.7[qt4(+)]
 	>=sci-libs/gdal-1.6.0
 	>=sci-libs/proj-4.6
 	sys-libs/zlib
@@ -39,10 +37,6 @@ DEPEND="${RDEPEND}
 "
 
 DOCS=( AUTHORS CHANGELOG HACKING )
-
-src_unpack() {
-	git-r3_src_unpack
-}
 
 src_prepare() {
 	my_rm_loc() {
@@ -69,7 +63,7 @@ src_configure() {
 		TRANSDIR_MERKAARTOR="${EPREFIX}/usr/share/${PN}/translations" \
 		TRANSDIR_SYSTEM="${EPREFIX}/usr/share/qt4/translations" \
 		SYSTEM_QTSA=1 \
-		SYSTEM_QUAZIP=1 \
+		RELEASE=1 \
 		NODEBUG="$(usex debug '0' '1')" \
 		GEOIMAGE="$(usex exif '1' '0')" \
 		GPSDLIB="$(usex gps '1' '0')" \
