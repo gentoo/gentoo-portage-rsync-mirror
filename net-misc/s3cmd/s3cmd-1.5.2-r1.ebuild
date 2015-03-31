@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/s3cmd-1.5.2.ebuild,v 1.2 2015/03/11 09:05:25 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/s3cmd/s3cmd-1.5.2-r1.ebuild,v 1.1 2015/03/31 01:51:53 idella4 Exp $
 
 EAPI=5
 
@@ -18,12 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE=""
 
-DEPEND="${PYTHON_DEPS}"
-RDEPEND=""
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/python-dateutil[${PYTHON_USEDEP}]
+	dev-python/python-magic[${PYTHON_USEDEP}]"
 
 S="$WORKDIR/${P/_/-}"
 
-src_install() {
-	S3CMD_INSTPATH_DOC="${EPREFIX}"/usr/share/doc/${PF} distutils-r1_src_install
-	rm -rf "${ED}"/usr/share/doc/${PF}/${PN} || die 'rm failed'
+python_install_all() {
+	# setup/py doesn't intereact well with the eclass
+	distutils-r1_python_install_all
+#	rm -rf "${D}"usr/share/doc/packages || die
 }
