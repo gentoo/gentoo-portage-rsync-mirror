@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.458 2015/03/21 06:32:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.459 2015/03/31 17:30:28 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> gvim-7.4.273.ebuild,
+  gvim-7.4.591.ebuild, gvim-7.4.622.ebuild, gvim-7.4.670.ebuild,
+  gvim-9999.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   21 Mar 2015; Tim Harder <radhermit@gentoo.org> -gvim-7.4.488.ebuild,
   -gvim-7.4.527.ebuild, -gvim-7.4.542.ebuild, -gvim-7.4.560.ebuild:

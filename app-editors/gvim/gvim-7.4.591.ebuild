@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.591.ebuild,v 1.2 2015/03/19 15:44:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.591.ebuild,v 1.3 2015/03/31 17:30:28 ulm Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -33,7 +33,7 @@ REQUIRED_USE="
 
 RDEPEND="
 	~app-editors/vim-core-${PV}
-	>=app-admin/eselect-vi-1.1
+	>=app-eselect/eselect-vi-1.1
 	>=sys-libs/ncurses-5.2-r2
 	x11-libs/libXext
 	x11-libs/libXt

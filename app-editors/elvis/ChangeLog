@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.51 2015/03/29 03:58:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.52 2015/03/31 17:19:20 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> elvis-2.2.0-r4.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -elvis-2.2.0-r3.ebuild:
   Remove old.

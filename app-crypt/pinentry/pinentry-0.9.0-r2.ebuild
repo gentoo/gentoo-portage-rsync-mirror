@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.9.0-r2.ebuild,v 1.1 2015/03/01 22:30:54 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.9.0-r2.ebuild,v 1.2 2015/03/31 17:18:11 ulm Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~spa
 IUSE="clipboard gtk ncurses qt4 caps static"
 
 RDEPEND="
-	app-admin/eselect-pinentry
+	app-eselect/eselect-pinentry
 	caps? ( sys-libs/libcap )
 	gtk? ( x11-libs/gtk+:2 )
 	ncurses? ( sys-libs/ncurses )

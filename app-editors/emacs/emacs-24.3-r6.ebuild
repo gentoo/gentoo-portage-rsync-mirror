@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r6.ebuild,v 1.15 2015/02/21 21:38:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-24.3-r6.ebuild,v 1.16 2015/03/31 17:22:41 ulm Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="alsa aqua athena dbus games gconf gif gnutls gpm gsettings gtk +gtk3 gzip-
 REQUIRED_USE="?? ( aqua X )"
 
 RDEPEND="sys-libs/ncurses
-	>=app-admin/eselect-emacs-1.16
+	>=app-eselect/eselect-emacs-1.16
 	>=app-emacs/emacs-common-gentoo-1.4-r1[games?,X?]
 	net-libs/liblockfile
 	hesiod? ( net-dns/hesiod )
