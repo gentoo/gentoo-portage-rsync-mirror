@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8k.ebuild,v 1.7 2014/01/18 19:51:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8k.ebuild,v 1.8 2015/03/31 17:33:30 ulm Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
-	app-admin/eselect-vi"
+	app-eselect/eselect-vi"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9.8h-flex.patch

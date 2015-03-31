@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r5.ebuild,v 1.2 2015/03/19 15:47:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r5.ebuild,v 1.3 2015/03/31 17:32:04 ulm Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ DEPEND="${CDEPEND}
 		virtual/pkgconfig"
 
 RDEPEND="${CDEPEND}
-	app-admin/eselect-vi"
+	app-eselect/eselect-vi"
 
 REQUIRED_USE="tcl? ( !unicode )"
 

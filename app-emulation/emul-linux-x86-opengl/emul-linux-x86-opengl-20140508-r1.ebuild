@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20140508-r1.ebuild,v 1.1 2015/01/03 22:51:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20140508-r1.ebuild,v 1.2 2015/03/31 17:52:01 ulm Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -12,8 +12,8 @@ IUSE="abi_x86_32"
 
 DEPEND="
 	!abi_x86_32? (
-		>=app-admin/eselect-opengl-1.3
-		>=app-admin/eselect-mesa-0.0.9
+		>=app-eselect/eselect-opengl-1.3
+		>=app-eselect/eselect-mesa-0.0.9
 	)"
 RDEPEND="
 	!abi_x86_32? (

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.7 2013/04/15 14:46:08 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.9.3-r2.ebuild,v 1.8 2015/03/31 17:53:41 ulm Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils games
@@ -33,7 +33,7 @@ RDEPEND="dev-libs/libxml2:=
 	x11-libs/libXdmcp:=
 	x11-libs/libXext:="
 DEPEND="${RDEPEND}
-	>=app-admin/eselect-opengl-1.0.6-r1
+	>=app-eselect/eselect-opengl-1.0.6-r1
 	app-arch/unzip
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen

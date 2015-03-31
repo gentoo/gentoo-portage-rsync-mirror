@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.16 2015/03/20 07:48:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.17 2015/03/31 17:41:09 ulm Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -50,7 +50,7 @@ RDEPEND="
 	>=sys-libs/ncurses-5.2"
 
 DEPEND="${RDEPEND}
-	>=app-admin/eselect-emacs-1.2"
+	>=app-eselect/eselect-emacs-1.2"
 
 PDEPEND="app-xemacs/xemacs-base
 	mule? ( app-xemacs/mule-base )"

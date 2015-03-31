@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8-r2.ebuild,v 1.7 2014/03/23 13:02:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8-r2.ebuild,v 1.8 2015/03/31 17:42:16 ulm Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86 ~x86-linux ~ppc-macos"
 IUSE="X"
 
-DEPEND=">=app-admin/eselect-emacs-1.15
+DEPEND=">=app-eselect/eselect-emacs-1.15
 	X? ( x11-libs/libXau )"
 RDEPEND="${DEPEND}
 	!!app-emacs/gnuserv-programs

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-13.5.1-r1.ebuild,v 1.4 2015/01/28 19:40:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-13.5.1-r1.ebuild,v 1.5 2015/03/31 17:46:46 ulm Exp $
 
 EAPI=5
 inherit eutils multilib
@@ -25,7 +25,7 @@ CDEPEND="dev-libs/gmp
 		>=dev-lisp/asdf-2.33-r3:="
 DEPEND="${CDEPEND}
 		app-text/texi2html
-		emacs? ( virtual/emacs >=app-admin/eselect-emacs-1.12 )"
+		emacs? ( virtual/emacs >=app-eselect/eselect-emacs-1.12 )"
 RDEPEND="${CDEPEND}"
 
 S="${WORKDIR}"/${MY_P}

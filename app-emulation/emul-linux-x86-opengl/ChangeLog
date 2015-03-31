@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-opengl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.43 2015/01/03 22:51:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.44 2015/03/31 17:52:01 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org>
+  emul-linux-x86-opengl-20131008.ebuild, emul-linux-x86-opengl-20140406.ebuild,
+  emul-linux-x86-opengl-20140508.ebuild,
+  emul-linux-x86-opengl-20140508-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *emul-linux-x86-opengl-20140508-r1 (03 Jan 2015)
 

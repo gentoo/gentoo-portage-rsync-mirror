@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.273.ebuild,v 1.13 2015/03/19 16:24:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.273.ebuild,v 1.14 2015/03/31 17:37:10 ulm Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -32,7 +32,7 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=app-admin/eselect-vi-1.1
+	>=app-eselect/eselect-vi-1.1
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( virtual/libintl )
 	acl? ( kernel_linux? ( sys-apps/acl ) )
@@ -55,7 +55,6 @@ RDEPEND="
 	X? ( x11-libs/libXt )
 "
 DEPEND="${RDEPEND}
-	>=app-admin/eselect-vi-1.1
 	sys-devel/autoconf
 	>=sys-libs/ncurses-5.2-r2
 	nls? ( sys-devel/gettext )

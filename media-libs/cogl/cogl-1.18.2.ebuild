@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.18.2.ebuild,v 1.3 2014/07/23 15:19:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.18.2.ebuild,v 1.4 2015/03/31 17:56:31 ulm Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -45,7 +45,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 	test? (
-		app-admin/eselect-opengl
+		app-eselect/eselect-opengl
 		media-libs/mesa[classic] )
 "
 
@@ -62,8 +62,8 @@ src_prepare() {
 		# For some reason the configure switch will not completely disable
 		# tests being built
 		sed -e "s/^\(SUBDIRS =.*\)test-fixtures\(.*\)$/\1\2/" \
-    		-e "s/^\(SUBDIRS +=.*\)tests\(.*\)$/\1\2/" \
-    		-e "s/^\(.*am__append.* \)tests\(.*\)$/\1\2/" \
+			-e "s/^\(SUBDIRS +=.*\)tests\(.*\)$/\1\2/" \
+			-e "s/^\(.*am__append.* \)tests\(.*\)$/\1\2/" \
 			-i Makefile.am Makefile.in || die
 	fi
 

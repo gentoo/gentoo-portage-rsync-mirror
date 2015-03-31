@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8o.ebuild,v 1.1 2015/01/28 01:46:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8o.ebuild,v 1.2 2015/03/31 17:33:30 ulm Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
-	app-admin/eselect-vi"
+	app-eselect/eselect-vi"
 
 src_configure() {
 	econf \

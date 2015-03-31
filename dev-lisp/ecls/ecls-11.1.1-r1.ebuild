@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-11.1.1-r1.ebuild,v 1.3 2014/08/10 20:41:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-11.1.1-r1.ebuild,v 1.4 2015/03/31 17:46:46 ulm Exp $
 
 EAPI=3
 inherit eutils multilib
@@ -21,7 +21,7 @@ RDEPEND="dev-libs/gmp
 		>=dev-libs/boehm-gc-7.1[threads?]"
 DEPEND="${RDEPEND}
 		app-text/texi2html
-		emacs? ( virtual/emacs >=app-admin/eselect-emacs-1.12 )"
+		emacs? ( virtual/emacs >=app-eselect/eselect-emacs-1.12 )"
 PDEPEND="dev-lisp/gentoo-init"
 
 S="${WORKDIR}"/${MY_P}

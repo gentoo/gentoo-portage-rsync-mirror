@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ctags
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.87 2014/09/26 23:10:11 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.88 2015/03/31 17:44:26 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> ctags-5.8.ebuild,
+  ctags-5.8-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   26 Sep 2014; Tim Harder <radhermit@gentoo.org> -ctags-5.5.4-r2.ebuild,
   -ctags-5.6-r2.ebuild, -ctags-5.6-r3.ebuild, -ctags-5.7.ebuild,

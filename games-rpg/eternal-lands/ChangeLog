@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/eternal-lands
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.70 2013/04/15 14:46:08 rich0 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.71 2015/03/31 17:53:41 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> eternal-lands-1.9.2.ebuild,
+  eternal-lands-1.9.2-r1.ebuild, eternal-lands-1.9.3.ebuild,
+  eternal-lands-1.9.3-r1.ebuild, eternal-lands-1.9.3-r2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   15 Apr 2013; Richard Freeman <rich0@gentoo.org>
   eternal-lands-1.9.3-r2.ebuild:

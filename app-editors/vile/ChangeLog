@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.57 2015/01/28 01:46:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.58 2015/03/31 17:33:30 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> vile-9.8k.ebuild,
+  vile-9.8n.ebuild, vile-9.8o.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *vile-9.8o (28 Jan 2015)
 
