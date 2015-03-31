@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/fingerprint-gui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/ChangeLog,v 1.10 2015/02/22 18:41:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fingerprint-gui/ChangeLog,v 1.11 2015/03/31 12:23:31 kensington Exp $
+
+  31 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  fingerprint-gui-1.05-r1.ebuild, fingerprint-gui-1.05.ebuild:
+  Enforce missing USE dependency wrt bug #545136.
 
   22 Feb 2015; Michał Górny <mgorny@gentoo.org> fingerprint-gui-1.05-r1.ebuild,
   fingerprint-gui-1.05.ebuild:

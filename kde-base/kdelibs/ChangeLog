@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1050 2015/03/21 18:24:15 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1051 2015/03/31 12:12:39 kensington Exp $
+
+  31 Mar 2015; Michael Palimaka <kensington@gentoo.org>
+  kdelibs-4.14.3-r1.ebuild, kdelibs-4.14.6-r1.ebuild:
+  Enforce missing USE dependency.
 
 *kdelibs-4.14.6-r1 (21 Mar 2015)
 

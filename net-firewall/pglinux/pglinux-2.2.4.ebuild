@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.4.ebuild,v 1.3 2014/03/22 19:37:29 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.4.ebuild,v 1.4 2015/03/31 12:19:54 kensington Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	net-libs/libnfnetlink
 	dbus? ( sys-apps/dbus )
 	zlib? ( sys-libs/zlib )
-	qt4? ( sys-auth/polkit-qt
+	qt4? ( sys-auth/polkit-qt[qt4(+)]
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4
 		dev-qt/qtgui:4

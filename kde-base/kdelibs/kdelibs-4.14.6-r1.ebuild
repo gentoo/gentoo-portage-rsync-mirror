@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.6-r1.ebuild,v 1.1 2015/03/21 18:24:15 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.14.6-r1.ebuild,v 1.2 2015/03/31 12:12:39 kensington Exp $
 
 EAPI=5
 
@@ -81,7 +81,7 @@ COMMONDEPEND="
 		media-libs/openexr:=
 		media-libs/ilmbase:=
 	)
-	policykit? ( >=sys-auth/polkit-qt-0.103.0 )
+	policykit? ( >=sys-auth/polkit-qt-0.103.0[qt4(+)] )
 	spell? ( app-text/enchant )
 	ssl? ( dev-libs/openssl:0 )
 	udev? ( virtual/udev )
