@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions-topicons/gnome-shell-extensions-topicons-26.ebuild,v 1.3 2015/03/15 13:25:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-shell-extensions-topicons/gnome-shell-extensions-topicons-26.ebuild,v 1.4 2015/03/31 19:27:48 ulm Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
-	app-admin/eselect-gnome-shell-extensions
+	app-eselect/eselect-gnome-shell-extensions
 	>=gnome-base/gnome-shell-3.10
 "
 DEPEND="app-arch/xz-utils"

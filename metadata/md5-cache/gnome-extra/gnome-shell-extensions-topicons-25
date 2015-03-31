@@ -5,7 +5,7 @@ EAPI=5
 HOMEPAGE=https://extensions.gnome.org/extension/495/topicons/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2+
-RDEPEND=app-admin/eselect-gnome-shell-extensions >=gnome-base/gnome-shell-3.10
+RDEPEND=app-eselect/eselect-gnome-shell-extensions >=gnome-base/gnome-shell-3.10
 SLOT=0
 SRC_URI=http://94.247.144.115/repo/topicons/snapshot/topicons-25.tar.xz
-_md5_=dcc1e6bcd1979e7070e69f1990d200f6
+_md5_=b5036eb55d8b61c224a4192e0df479f8

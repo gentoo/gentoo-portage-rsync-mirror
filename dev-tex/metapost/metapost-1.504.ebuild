@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.504.ebuild,v 1.2 2012/07/26 11:10:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.504.ebuild,v 1.3 2015/03/31 19:23:56 ulm Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-libs/kpathsea
-	>=app-admin/eselect-mpost-0.3"
+	>=app-eselect/eselect-mpost-0.3"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}/source/texk/web2c

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.948 2015/03/31 07:58:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.949 2015/03/31 19:03:23 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> php-5.3.29.ebuild,
+  php-5.4.36.ebuild, php-5.4.37.ebuild, php-5.4.38.ebuild, php-5.4.39.ebuild,
+  php-5.5.20.ebuild, php-5.5.21.ebuild, php-5.5.22.ebuild, php-5.5.23.ebuild,
+  php-5.6.4.ebuild, php-5.6.5.ebuild, php-5.6.6.ebuild, php-5.6.7.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> php-5.4.39.ebuild,
   php-5.5.23.ebuild:

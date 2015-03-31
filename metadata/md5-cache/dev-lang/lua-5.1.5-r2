@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=readline? ( sys-libs/readline ) app-admin/eselect-lua !dev-lang/lua:0 sys-devel/libtool
+DEPEND=readline? ( sys-libs/readline ) app-eselect/eselect-lua !dev-lang/lua:0 sys-devel/libtool
 DESCRIPTION=A powerful light-weight programming language designed for extending applications
 EAPI=5
 HOMEPAGE=http://www.lua.org/
@@ -7,8 +7,8 @@ IUSE=+deprecated emacs readline static
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux
 LICENSE=MIT
 PDEPEND=emacs? ( app-emacs/lua-mode )
-RDEPEND=readline? ( sys-libs/readline ) app-admin/eselect-lua !dev-lang/lua:0
+RDEPEND=readline? ( sys-libs/readline ) app-eselect/eselect-lua !dev-lang/lua:0
 SLOT=5.1
 SRC_URI=http://www.lua.org/ftp/lua-5.1.5.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=73ffee5dfebb1a2104007932cc7e67e6
+_md5_=e80343cdd3a34ebf4d2c7f5c8b7acafd

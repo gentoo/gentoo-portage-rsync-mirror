@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.6.6.ebuild,v 1.2 2015/03/03 06:11:48 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.6.6.ebuild,v 1.3 2015/03/31 19:03:23 ulm Exp $
 
 EAPI=5
 
@@ -76,7 +76,7 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	+xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib"
 
 DEPEND="
-	>=app-admin/eselect-php-0.7.1-r3[apache2?,fpm?]
+	>=app-eselect/eselect-php-0.7.1-r3[apache2?,fpm?]
 	>=dev-libs/libpcre-8.32[unicode]
 	apache2? ( || ( >=www-servers/apache-2.4[apache2_modules_unixd,threads=]
 		<www-servers/apache-2.4[threads=] ) )

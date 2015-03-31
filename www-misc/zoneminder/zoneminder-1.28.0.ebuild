@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.28.0.ebuild,v 1.2 2014/12/21 21:51:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.28.0.ebuild,v 1.3 2015/03/31 19:04:37 ulm Exp $
 
 # TO DO:
-# * ffmpeg support can be disabled in CMakeLists.txt but it does not build then 
+# * ffmpeg support can be disabled in CMakeLists.txt but it does not build then
 #		$(cmake-utils_useno ffmpeg ZM_NO_FFMPEG)
 # * dependencies of unknown status:
 # 	dev-perl/Archive-Zip
@@ -37,7 +37,7 @@ REQUIRED_USE="
 "
 
 DEPEND="
-	app-admin/eselect-php[apache2]
+	app-eselect/eselect-php[apache2]
 	dev-lang/perl:=
 	dev-lang/php[apache2,cgi,curl,inifile,pdo,mysql,mysqli,sockets]
 	dev-libs/libpcre

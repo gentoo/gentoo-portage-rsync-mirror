@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install postinst
-DEPEND=dev-libs/kpathsea >=app-admin/eselect-mpost-0.3
+DEPEND=dev-libs/kpathsea >=app-eselect/eselect-mpost-0.3
 DESCRIPTION=System for producing graphics
 EAPI=3
 HOMEPAGE=http://tug.org/metapost.html
 KEYWORDS=~amd64
 LICENSE=GPL-2 LGPL-3
-RDEPEND=dev-libs/kpathsea >=app-admin/eselect-mpost-0.3
+RDEPEND=dev-libs/kpathsea >=app-eselect/eselect-mpost-0.3
 SLOT=0
 SRC_URI=http://foundry.supelec.fr/gf/download/frsrelease/383/1651/metapost-1.212-src.tar.bz2
-_md5_=b7c4bacf03f34ab849d035d71b2bdfcc
+_md5_=ffa034064ea4c61d7a65df164fd7ffcc

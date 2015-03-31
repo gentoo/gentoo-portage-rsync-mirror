@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio-paranoia
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.25 2015/01/29 06:59:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.26 2015/03/31 19:14:39 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org>
+  libcdio-paranoia-0.90_p1-r1.ebuild, libcdio-paranoia-0.93_p1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *libcdio-paranoia-0.93_p1 (29 Jan 2015)
 

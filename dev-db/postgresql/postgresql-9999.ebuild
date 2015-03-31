@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9999.ebuild,v 1.7 2015/03/20 09:55:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9999.ebuild,v 1.8 2015/03/31 19:06:54 ulm Exp $
 
 EAPI="5"
 
@@ -40,7 +40,7 @@ wanted_languages() {
 }
 
 CDEPEND="
->=app-admin/eselect-postgresql-1.2.0
+>=app-eselect/eselect-postgresql-1.2.0
 sys-apps/less
 virtual/libintl
 kerberos? ( virtual/krb5 )

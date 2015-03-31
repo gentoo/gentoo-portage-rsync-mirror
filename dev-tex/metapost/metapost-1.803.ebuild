@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.803.ebuild,v 1.2 2013/07/02 21:51:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/metapost-1.803.ebuild,v 1.3 2015/03/31 19:23:56 ulm Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND=">=dev-libs/kpathsea-6.1.0_p20120701
-	>=app-admin/eselect-mpost-0.3
+	>=app-eselect/eselect-mpost-0.3
 	>=x11-libs/cairo-1.12
 	>x11-libs/pixman-0.18
 	media-libs/libpng:0="

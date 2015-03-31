@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/guichan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.26 2013/04/27 23:10:19 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/ChangeLog,v 1.27 2015/03/31 19:03:28 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> guichan-0.8.2.ebuild:
+  EAPI=5
 
   27 Apr 2013; Julian Ospald <hasufell@gentoo.org> guichan-0.8.2.ebuild,
   +files/guichan-0.8.2-automake-1.13.patch:

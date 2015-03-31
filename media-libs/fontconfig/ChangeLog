@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.204 2015/03/15 11:34:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.205 2015/03/31 19:31:04 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> fontconfig-2.8.0-r1.ebuild,
+  fontconfig-2.9.0.ebuild, fontconfig-2.10.92.ebuild,
+  fontconfig-2.10.93.ebuild, fontconfig-2.11.0-r1.ebuild,
+  fontconfig-2.11.1.ebuild, fontconfig-2.11.1-r1.ebuild,
+  fontconfig-2.11.1-r2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> fontconfig-2.11.1-r2.ebuild:
   ppc64 stable, bug #520010

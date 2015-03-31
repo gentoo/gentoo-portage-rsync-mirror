@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_alpha2.ebuild,v 1.1 2015/02/24 14:02:34 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_alpha2.ebuild,v 1.2 2015/03/31 19:11:51 ulm Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE="clang debug doc libcxx +system-llvm"
 REQUIRED_USE="libcxx? ( clang )"
 
 CDEPEND="libcxx? ( sys-libs/libcxx )
-	>=app-admin/eselect-rust-0.2_pre20150206
+	>=app-eselect/eselect-rust-0.2_pre20150206
 	!dev-lang/rust:0
 "
 DEPEND="${CDEPEND}

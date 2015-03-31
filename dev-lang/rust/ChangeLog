@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/rust
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.12 2015/02/24 14:02:34 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/ChangeLog,v 1.13 2015/03/31 19:11:51 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> rust-1.0.0_alpha2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *rust-1.0.0_alpha2 (24 Feb 2015)
 

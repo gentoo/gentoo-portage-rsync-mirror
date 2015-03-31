@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.0-r1.ebuild,v 1.3 2014/10/13 07:22:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.0-r1.ebuild,v 1.4 2015/03/31 19:31:04 ulm Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 		=app-text/docbook-sgml-dtd-3.1*
 		app-text/docbook-sgml-utils[jadetex]
 	)"
-PDEPEND="!x86-winnt? ( app-admin/eselect-fontconfig )
+PDEPEND="!x86-winnt? ( app-eselect/eselect-fontconfig )
 	virtual/ttf-fonts"
 
 PATCHES=(

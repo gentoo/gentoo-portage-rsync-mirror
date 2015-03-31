@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.2.ebuild,v 1.7 2013/04/27 23:10:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.8.2.ebuild,v 1.8 2015/03/31 19:03:28 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils autotools
 
 DESCRIPTION="a portable C++ GUI library designed for games using Allegro, SDL and/or OpenGL"
@@ -20,9 +20,11 @@ DEPEND="allegro? ( <media-libs/allegro-5 )
 		media-libs/libsdl
 		media-libs/sdl-image
 	)"
+RDEPEND=${DEPEND}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-as-needed.patch \
+	epatch \
+		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-automake-1.13.patch
 	mv configure.in configure.ac || die
 	eautoreconf
@@ -30,7 +32,6 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable allegro) \
 		$(use_enable opengl) \
 		$(use_enable sdl) \
@@ -39,10 +40,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
-	if ! use static-libs ; then
-		find "${D}" -type f -name '*.la' -exec rm {} + \
-			|| die "la removal failed"
-	fi
+	default
+	prune_libtool_files
 }

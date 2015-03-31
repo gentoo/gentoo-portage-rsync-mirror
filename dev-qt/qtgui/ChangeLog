@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.74 2015/03/30 14:02:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.75 2015/03/31 19:19:40 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> qtgui-4.8.5-r4.ebuild,
+  qtgui-4.8.6-r2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   30 Mar 2015; Michael Palimaka <kensington@gentoo.org> -qtgui-4.8.5-r3.ebuild:
   Remove old.
