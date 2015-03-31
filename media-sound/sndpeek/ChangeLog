@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sndpeek
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/ChangeLog,v 1.10 2013/06/01 12:17:41 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/ChangeLog,v 1.11 2015/03/31 19:48:37 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> sndpeek-1.3-r2.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #151880

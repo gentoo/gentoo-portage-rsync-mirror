@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.20.1.ebuild,v 1.2 2015/01/29 18:56:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.20.1.ebuild,v 1.3 2015/03/31 19:55:21 ulm Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs libtool multilib-minimal
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fb
 IUSE="cpu_flags_x86_3dnow cpu_flags_x86_3dnowext alsa altivec coreaudio int-quality ipv6 jack cpu_flags_x86_mmx nas oss portaudio pulseaudio sdl cpu_flags_x86_sse"
 
 # No MULTILIB_USEDEP here since we only build libmpg123 for non native ABIs.
-RDEPEND="app-admin/eselect-mpg123
+RDEPEND="app-eselect/eselect-mpg123
 	>=sys-devel/libtool-2.2.6b
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/timidity-freepats-20060219-r1.ebuild,v 1.1 2015/03/05 08:21:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/timidity-freepats-20060219-r1.ebuild,v 1.2 2015/03/31 19:39:12 ulm Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 RESTRICT="binchecks strip"
 
 RDEPEND=""
-DEPEND=">=app-admin/eselect-timidity-20061203"
+DEPEND=">=app-eselect/eselect-timidity-20061203"
 
 S=${WORKDIR}/${MY_PN}
 

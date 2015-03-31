@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r5.ebuild,v 1.14 2012/12/02 15:51:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r5.ebuild,v 1.15 2015/03/31 19:37:48 ulm Exp $
 
 S=${WORKDIR}/eawpats
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 # These can be used for libmodplug too, so don't depend on timidity++
-DEPEND="app-admin/eselect-timidity"
+DEPEND="app-eselect/eselect-timidity"
 RDEPEND=""
 
 RESTRICT="binchecks strip"

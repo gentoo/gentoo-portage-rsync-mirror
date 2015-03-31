@@ -1,5 +1,5 @@
 DEFINED_PHASES=install postinst prepare
-DEPEND=>=app-admin/eselect-timidity-20061203
+DEPEND=>=app-eselect/eselect-timidity-20061203
 DESCRIPTION=Free and open set of instrument patches
 EAPI=2
 HOMEPAGE=http://freepats.opensrc.org/
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://freepats.opensrc.org//freepats-20060219.tar.bz2
-_md5_=466a7d0a48a01a92e229d2da67fe7d50
+_md5_=d4f675b15f0fce768cb7bd3ce97cd766

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.34 2014/12/28 16:07:25 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.35 2015/03/31 19:51:48 ulm Exp $
 
 EAPI="5"
 
@@ -73,7 +73,7 @@ COMMON_DEPEND="dev-db/postgresql[server]
 	net-analyzer/nmap"
 DEPEND+=" ${COMMON_DEPEND}"
 RDEPEND+=" ${COMMON_DEPEND}
-	>=app-admin/eselect-metasploit-0.13"
+	>=app-eselect/eselect-metasploit-0.13"
 
 RESTRICT="strip"
 

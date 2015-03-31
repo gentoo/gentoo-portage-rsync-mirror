@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg321
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.96 2014/01/26 12:16:35 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.97 2015/03/31 19:59:13 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> mpg321-0.3.1-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mpg321-0.3.1-r1.ebuild:
   Stable for sparc, wrt bug #495804

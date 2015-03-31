@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluid-soundfont/fluid-soundfont-3.1.ebuild,v 1.1 2011/05/13 18:43:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluid-soundfont/fluid-soundfont-3.1.ebuild,v 1.2 2015/03/31 19:36:46 ulm Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="timidity"
 
-RDEPEND="timidity? ( app-admin/eselect-timidity )"
+RDEPEND="timidity? ( app-eselect/eselect-timidity )"
 
 src_install() {
 	insinto /usr/share/sounds/sf2

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig-infinality/fontconfig-infinality-20130404.ebuild,v 1.5 2014/12/13 13:27:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig-infinality/fontconfig-infinality-20130404.ebuild,v 1.6 2015/03/31 19:32:52 ulm Exp $
 
 EAPI=5
 inherit readme.gentoo
@@ -16,9 +16,9 @@ KEYWORDS="amd64 x86"
 IUSE="+nyx"
 
 DEPEND=""
-RDEPEND="app-admin/eselect-fontconfig
-	app-admin/eselect-infinality
-	app-admin/eselect-lcdfilter"
+RDEPEND="app-eselect/eselect-fontconfig
+	app-eselect/eselect-infinality
+	app-eselect/eselect-lcdfilter"
 PDEPEND="media-libs/freetype:2[infinality]
 	>=x11-libs/libXft-2.3.0
 	nyx? ( media-fonts/croscorefonts )"

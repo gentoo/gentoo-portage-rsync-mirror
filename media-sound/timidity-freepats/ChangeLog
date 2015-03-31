@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity-freepats
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.14 2015/03/05 08:21:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.15 2015/03/31 19:39:12 ulm Exp $
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org>
+  timidity-freepats-20060219.ebuild, timidity-freepats-20060219-r1.ebuild:
+  Update dependency after package move of eselect modules to app-eselect.
 
 *timidity-freepats-20060219-r1 (05 Mar 2015)
 
