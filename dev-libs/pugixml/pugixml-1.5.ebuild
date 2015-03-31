@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/pugixml-1.5.ebuild,v 1.3 2015/03/28 21:35:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/pugixml-1.5.ebuild,v 1.4 2015/03/31 07:47:29 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/zeux/${PN}/releases/download/v${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 S=${WORKDIR}/${P}/scripts
 

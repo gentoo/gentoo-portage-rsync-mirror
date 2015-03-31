@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.47 2015/03/24 20:11:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rman/ChangeLog,v 1.48 2015/03/31 07:45:07 ago Exp $
+
+  31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rman-3.2-r1.ebuild:
+  Stable for ppc64, wrt bug #540792
 
   24 Mar 2015; Markus Meier <maekke@gentoo.org> rman-3.2-r1.ebuild:
   arm stable, bug #540792

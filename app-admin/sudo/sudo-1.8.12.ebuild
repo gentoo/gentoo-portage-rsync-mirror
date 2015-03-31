@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.12.ebuild,v 1.6 2015/03/30 15:41:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.12.ebuild,v 1.7 2015/03/31 07:57:14 ago Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ SRC_URI="http://www.sudo.ws/sudo/dist/${uri_prefix}${MY_P}.tar.gz
 # 3-clause BSD license
 LICENSE="ISC BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~sparc-solaris"
+KEYWORDS="alpha amd64 ~arm ~arm64 hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~sparc-solaris"
 IUSE="ldap nls pam offensive selinux skey +sendmail"
 
 DEPEND="pam? ( virtual/pam )

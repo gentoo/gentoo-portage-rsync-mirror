@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/splint
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.34 2015/03/28 21:28:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/splint/ChangeLog,v 1.35 2015/03/31 07:49:36 ago Exp $
+
+  31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> splint-3.1.2-r1.ebuild:
+  Stable for ppc64, wrt bug #535408
 
   28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> splint-3.1.2-r1.ebuild:
   Stable for ppc, wrt bug #535408

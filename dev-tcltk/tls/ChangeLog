@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.40 2015/03/30 16:22:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.41 2015/03/31 07:48:42 ago Exp $
+
+  31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tls-1.6-r3.ebuild:
+  Stable for ppc64, wrt bug #543898
 
   30 Mar 2015; Jeroen Roovers <jer@gentoo.org> tls-1.6-r3.ebuild:
   Stable for HPPA (bug #543898).
