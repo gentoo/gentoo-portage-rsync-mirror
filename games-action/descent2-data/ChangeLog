@@ -1,6 +1,9 @@
 # ChangeLog for games-action/descent2-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/ChangeLog,v 1.8 2012/01/16 19:03:03 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/ChangeLog,v 1.9 2015/03/31 02:49:11 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> descent2-data-1.0.ebuild:
+  EAPI=5
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> descent2-data-1.0.ebuild:
   Migrate to cdrom.eclass, bug 398809.
@@ -34,4 +37,3 @@
   +descent2-data-1.0.ebuild:
   Initial import. Ebuild by Paul Bredbury <brebs@sent.com> based loosely on
   the games-action/d2x ebuild. Closing bug #137307.
-

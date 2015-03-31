@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.9 2012/01/16 19:03:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.10 2015/03/31 02:49:11 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils cdrom games
 
 MY_PV=${PV/./}
@@ -61,7 +62,7 @@ src_unpack() {
 
 	[[ -e "${f}" ]] || f="${CDROM_ROOT}/d2data/${SOW}"
 	# Extract level data
-	unarj e "${f}" || die "unarj ${f} failed"
+	unarj e "${f}" || die
 
 	if use videos ; then
 		# Include both high and low resolution movie files
@@ -69,7 +70,7 @@ src_unpack() {
 			f="${DISTDIR}/${m}"
 			[[ -e "${f}" ]] || f="${CDROM_ROOT}/d2data/${m}"
 			einfo "Copying ${m}"
-			cp -f "${f}" . || die "cp ${f} failed"
+			cp -f "${f}" . || die
 		done
 	fi
 
@@ -83,7 +84,7 @@ src_unpack() {
 
 src_install() {
 	insinto "${dir}"
-	doins * || die "doins * failed"
+	doins *
 
 	dodoc doc/*
 

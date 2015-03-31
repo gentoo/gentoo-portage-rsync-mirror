@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.7 2007/04/24 15:13:43 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spout/spout-1.3.ebuild,v 1.8 2015/03/31 02:31:55 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils games
 
 MY_P="spout-unix-${PV}"
@@ -15,11 +16,12 @@ KEYWORDS="ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.2.6"
+RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	dogamesbin spout || die "dogamesbin failed"
+	dogamesbin spout
 	doicon spout.png
 	make_desktop_entry spout "Spout"
 	dodoc README
