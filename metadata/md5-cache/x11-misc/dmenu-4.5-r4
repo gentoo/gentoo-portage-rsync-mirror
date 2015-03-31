@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libX11 xft? ( x11-libs/libXft ) xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=http://dl.suckless.org/tools/dmenu-4.5.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=9a5cab724680a0ce228a2a11df7ec624

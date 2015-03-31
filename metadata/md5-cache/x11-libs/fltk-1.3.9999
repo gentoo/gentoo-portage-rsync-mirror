@@ -7,5 +7,5 @@ IUSE=cairo debug doc examples games opengl pdf static-libs threads xft xinerama
 LICENSE=FLTK LGPL-2
 RDEPEND=>=media-libs/libpng-1.2:0 virtual/jpeg:0 sys-libs/zlib x11-libs/libICE x11-libs/libSM x11-libs/libXext x11-libs/libXt cairo? ( x11-libs/cairo ) opengl? ( virtual/opengl ) xinerama? ( x11-libs/libXinerama ) xft? ( x11-libs/libXft )
 SLOT=1
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=e8628be8f5b42e50fd1430e12c630a5e

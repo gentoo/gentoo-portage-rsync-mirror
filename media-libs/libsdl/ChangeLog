@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.230 2015/03/03 08:53:07 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.232 2015/03/31 04:47:29 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> -libsdl-1.2.15-r4.ebuild:
+  old
+
+  31 Mar 2015; <jmorgan@gentoo.org> libsdl-1.2.15-r8.ebuild:
+  ppc64 stable wrt #522270
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libsdl-1.2.15-r8.ebuild:
   add arm64 support, tested on A53 board

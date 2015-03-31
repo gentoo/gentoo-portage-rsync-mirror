@@ -8,5 +8,5 @@ LICENSE=WTFPL-2
 RDEPEND=>=games-engines/love-0.8.0 media-libs/devil[png] games-misc/games-envd
 SLOT=0
 SRC_URI=http://stabyourself.net/dl.php?file=trosh/trosh-linux.zip -> trosh-20.zip http://dev.gentoo.org/~hasufell/distfiles/trosh.png
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	games	1ad3205dbf62a2c98249f2f59b0a2d39	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	games	1ad3205dbf62a2c98249f2f59b0a2d39	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=6c2a1d333c371a5a6286b16fb2922da7

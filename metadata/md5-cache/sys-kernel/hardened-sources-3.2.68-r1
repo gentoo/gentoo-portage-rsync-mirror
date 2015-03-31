@@ -11,5 +11,5 @@ RDEPEND=>=sys-devel/gcc-4.5 !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-
 RESTRICT=binchecks strip
 SLOT=3.2.68-r1
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.2.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-3.2 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.2.N/deblob-check -> deblob-check-3.2 ) http://dev.gentoo.org/~blueness/hardened-sources/hardened-patches/hardened-patches-3.2.68-2.extras.tar.bz2 mirror://gentoo/genpatches-3.2-16.base.tar.xz mirror://gentoo/genpatches-3.2-16.extras.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	b544eac9542c54048d7dd55302455f51	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	b544eac9542c54048d7dd55302455f51	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=bb993026cdc25ea104d6b9369bd3446f

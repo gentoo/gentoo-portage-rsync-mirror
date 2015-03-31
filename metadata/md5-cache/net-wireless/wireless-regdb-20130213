@@ -6,5 +6,5 @@ KEYWORDS=~alpha amd64 arm ~ia64 ~mips ppc ppc64 sparc x86
 LICENSE=ISC
 SLOT=0
 SRC_URI=https://www.kernel.org/pub/software/network/wireless-regdb/wireless-regdb-2013.02.13.tar.xz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=9049fc58c0f71a1e19b0332d68328938

@@ -9,5 +9,5 @@ LICENSE=astrolog
 RDEPEND=X? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=http://www.astrolog.org/ftp/ast54unx.shr
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=b674089d587aece07401ab14e6cf1f4c

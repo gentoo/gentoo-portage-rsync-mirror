@@ -8,5 +8,5 @@ LICENSE=exljbris-free
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www.exljbris.com/dl/delicious-123.zip http://www.exljbris.com/dl/Diavlo_II_37b2.zip http://www.exljbris.com/dl/fontin2_pc.zip http://www.exljbris.com/dl/FontinSans_49.zip http://www.exljbris.com/dl/tallys_15b2.zip
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=04c7371a006ed3e6f5650cddb7ffd1c4

@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=!<dev-lang/vala-0.10.4-r2 !<dev-lang/vala-0.12.1-r1:0.12 !<dev-lang/vala-0.14.2-r2:0.14 !<dev-lang/vala-0.16.1-r2:0.16 !<dev-lang/vala-0.17.5:0.18
 SLOT=0
 SRC_URI=mirror://gnome/sources/vala/0.24/vala-0.24.0.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=7ebb5fda8228f2d04292aabe1c21f6d6

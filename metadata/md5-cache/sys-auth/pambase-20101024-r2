@@ -10,5 +10,5 @@ RDEPEND=|| ( >=sys-libs/pam-0.99.9.0-r1 ( sys-auth/openpam || ( sys-freebsd/free
 RESTRICT=binchecks
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~flameeyes/pambase/pambase-20101024.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=45327e3e24a338e5f6991fe0195de334

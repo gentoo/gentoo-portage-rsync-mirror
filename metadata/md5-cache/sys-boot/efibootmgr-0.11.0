@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/pciutils sys-libs/efivar
 SLOT=0
 SRC_URI=https://github.com/vathpela/efibootmgr/releases/download/efibootmgr-0.11.0/efibootmgr-0.11.0.tar.bz2
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=1c7fe7cd15e833f64f81b76aaa2cb626

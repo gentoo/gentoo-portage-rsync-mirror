@@ -10,5 +10,5 @@ RDEPEND=emacs? ( virtual/emacs app-emacs/scheme-complete )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://code.call-cc.org/releases/4.8.0/chicken-4.8.0.3.tar.gz mirror://gentoo/chicken-4.8.0.3-cve-updates.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=6d4f832623e5e17fca6b2cf85d5c5b7e

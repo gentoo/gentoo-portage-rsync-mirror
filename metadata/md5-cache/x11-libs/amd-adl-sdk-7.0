@@ -10,5 +10,5 @@ RDEPEND=x11-drivers/ati-drivers
 RESTRICT=fetch
 SLOT=0
 SRC_URI=ADL_SDK_7.0.zip
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=6754c90ceff1b72e2c13a85ad18c99da

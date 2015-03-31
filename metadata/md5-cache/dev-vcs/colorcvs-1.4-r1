@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl dev-vcs/cvs
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/colorcvs-1.4.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=09cd267ddaea0ed5feed34210fd02808

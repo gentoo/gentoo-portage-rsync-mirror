@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=net-libs/libnet:1.1 net-libs/libpcap ~net-libs/netwib-5.39.0
 SLOT=0
 SRC_URI=mirror://sourceforge/ntwox/netwox-5.39.0-src.tgz doc? ( mirror://sourceforge/ntwox/netwox-5.39.0-doc_html.tgz )
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=7615116535b7a712a50f8f3e7af27f97

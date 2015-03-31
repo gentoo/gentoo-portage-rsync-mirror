@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND==sci-libs/fftw-3*
 SLOT=0
 SRC_URI=http://plugin.org.uk/lv2/swh-lv2-1.0.15.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=b30ec57039d87fc5f2b9666a0b2d13f1

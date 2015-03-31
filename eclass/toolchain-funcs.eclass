@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.135 2015/03/16 21:12:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.136 2015/03/31 04:27:29 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -223,10 +223,13 @@ tc-is-static-only() {
 # Export common build related compiler settings.
 tc-export_build_env() {
 	tc-export "$@"
+	# Some build envs will initialize vars like:
+	# : ${BUILD_LDFLAGS:-${LDFLAGS}}
+	# So make sure all variables are non-empty. #526734
 	: ${BUILD_CFLAGS:=-O1 -pipe}
 	: ${BUILD_CXXFLAGS:=-O1 -pipe}
-	: ${BUILD_CPPFLAGS:=}
-	: ${BUILD_LDFLAGS:=}
+	: ${BUILD_CPPFLAGS:= }
+	: ${BUILD_LDFLAGS:= }
 	export BUILD_{C,CXX,CPP,LD}FLAGS
 
 	# Some packages use XXX_FOR_BUILD.

@@ -10,5 +10,5 @@ RDEPEND=>=dev-python/pygtk-2.12 || ( x11-libs/gdk-pixbuf:2[jpeg] x11-libs/gtk+:2
 REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://codingteam.net/project/sonata/download/file/sonata-1.6.2.1.tar.bz2
-_eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=b466f5854bab94967ad76697ae8f9d0b

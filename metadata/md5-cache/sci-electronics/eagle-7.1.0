@@ -8,5 +8,5 @@ LICENSE=cadsoft
 RDEPEND=sys-libs/glibc || ( ( || ( virtual/jpeg:62[abi_x86_32(-)] media-libs/jpeg:62[abi_x86_32(-)] ) >=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)] >=dev-libs/openssl-0.9.8z_p1-r2:0.9.8[abi_x86_32(-)] >=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)] >=media-libs/freetype-2.5.0.1[abi_x86_32(-)] >=media-libs/fontconfig-2.10.92[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] >=x11-libs/libXrender-0.9.8[abi_x86_32(-)] >=x11-libs/libXrandr-1.4.2[abi_x86_32(-)] >=x11-libs/libXcursor-1.1.14[abi_x86_32(-)] >=x11-libs/libXi-1.7.2[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)] ) )
 SLOT=0
 SRC_URI=ftp://ftp.cadsoft.de/eagle/program/7.1/eagle-lin-7.1.0.run
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=ee4ca78a28ba4bb52e02e9754309572f

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=xen? ( >=app-emulation/xen-3.0 ) kvm? ( app-emulation/qemu ) drbd? ( >=sys-cluster/drbd-8.3 ) ipv6? ( net-misc/ndisc6 ) dev-libs/openssl dev-python/paramiko dev-python/pyopenssl dev-python/pyparsing dev-python/pycurl dev-python/pyinotify dev-python/simplejson net-analyzer/arping net-misc/bridge-utils net-misc/curl[ssl] net-misc/openssh net-misc/socat sys-apps/iproute2 sys-fs/lvm2 >=sys-apps/baselayout-2.0 !<app-emulation/ganeti-htools-0.3
 SLOT=0
 SRC_URI=http://ganeti.googlecode.com/files/ganeti-2.4.5.tar.gz
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=7898aa57560fb2961f59cf08d325f31f

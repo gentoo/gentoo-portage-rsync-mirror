@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-libs/libsigc++:2 >=net-libs/gnutls-1.2.10
 SLOT=0
 SRC_URI=http://releases.0x539.de/net6/net6-1.3.14.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=6ac5341e04f6e2dcaeef2981b933ed05

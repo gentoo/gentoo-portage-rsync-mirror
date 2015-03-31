@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/libexplain sys-devel/gettext sys-apps/groff
 SLOT=0
 SRC_URI=http://fhist.sourceforge.net/fhist-1.19.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=36815487e0997cbb22e759731bf9414b

@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=x11-libs/gtk+:2 >=dev-libs/libgcrypt-1.2.1:0
 SLOT=0
 SRC_URI=http://gpe.linuxtogo.org/download/source/libdisplaymigration-0.99.tar.gz
-_eclasses_=gpe	dc397204e130de43bfcf156546e8d9d4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=gpe	dc397204e130de43bfcf156546e8d9d4	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=c9a1202c377af54962e7793d2df54b6b

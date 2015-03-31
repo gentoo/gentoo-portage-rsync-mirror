@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 media-libs/alsa-lib >=x11-libs/gtk+-3.6:3 x11-libs/libX11 libnotify? ( x11-libs/libnotify )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/pnmixer-0.6_pre20140924.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=b6fc83ca6df7a7c7d54ca4c18f74d5a4

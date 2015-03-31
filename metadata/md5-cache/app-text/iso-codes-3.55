@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1+
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://pkg-isocodes.alioth.debian.org/downloads/iso-codes-3.55.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=9d38f64d845176ec40a99fcc0687775c

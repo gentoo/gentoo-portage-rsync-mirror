@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND==sys-freebsd/freebsd-lib-9.2*[ipv6?,atm?,netware?] =sys-freebsd/freebsd-libexec-9.2* >=dev-libs/expat-2.0.1 ssl? ( dev-libs/openssl ) >=dev-libs/libedit-20120311.3.0-r1 sys-libs/readline sys-process/vixie-cron atm? ( net-analyzer/bsnmp )
 SLOT=0
 SRC_URI=mirror://gentoo/freebsd-sbin-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-contrib-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-lib-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-libexec-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-usbin-9.2_rc2.tar.bz2 mirror://gentoo/freebsd-etc-9.2_rc2.tar.bz2 build? ( mirror://gentoo/freebsd-sys-9.2_rc2.tar.bz2 )
-_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	freebsd	b2473fe162b685fe81251ec1f7b2a218	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=bsdmk	a5323161d86b178920afb5e31a9e5d3f	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	freebsd	b2473fe162b685fe81251ec1f7b2a218	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=13ab7542077f0e70850a76de5532ebb9

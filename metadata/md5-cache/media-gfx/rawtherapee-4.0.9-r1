@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=bzip2? ( app-arch/bzip2 ) >=dev-cpp/gtkmm-2.12:2.4 >=dev-cpp/glibmm-2.16:2 dev-libs/expat dev-libs/libsigc++:2 media-libs/tiff media-libs/libpng media-libs/libiptcdata media-libs/lcms:2 sys-libs/zlib virtual/jpeg
 SLOT=0
 SRC_URI=http://rawtherapee.googlecode.com/files/rawtherapee-4.0.9.tar.xz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=a9dd2a39982fa663bce46748e67bde7c

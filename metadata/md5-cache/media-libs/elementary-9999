@@ -7,5 +7,5 @@ IUSE=debug examples fbcon quicklaunch sdl wayland X static-libs nls doc
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/efl-9999[fbcon?,sdl?,png,wayland?,X?] nls? ( sys-devel/gettext )
 SLOT=0
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=155f663939a776e6fac488bca8eac577

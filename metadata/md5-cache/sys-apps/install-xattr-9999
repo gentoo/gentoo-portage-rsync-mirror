@@ -5,5 +5,5 @@ EAPI=5
 HOMEPAGE=http://dev.gentoo.org/~blueness/install-xattr/
 LICENSE=GPL-3
 SLOT=0
-_eclasses_=git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=06552e13476690b80e5f256cf0f55cce

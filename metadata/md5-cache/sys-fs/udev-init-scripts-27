@@ -9,5 +9,5 @@ RDEPEND=>=virtual/udev-180 !<sys-fs/udev-186 !<sys-apps/openrc-0.13
 RESTRICT=test
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~williamh/dist/udev-init-scripts-27.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=9374702c4ef4ed6568f3abf408afe8bb

@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/ncurses
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.231 2014/11/06 19:30:09 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.232 2015/03/31 04:53:02 vapier Exp $
+
+*ncurses-5.9-r4 (31 Mar 2015)
+
+  31 Mar 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/ncurses-5.9-no-I-usr-include.patch, +ncurses-5.9-r4.ebuild:
+  Fix the inverted leak flag #329537#5 by Arthur Taylor.  Fix from upstream for
+  building with -I/usr/include/ncursesw #522586 by Joakim Tjernlund.
 
   06 Nov 2014; Manuel Rüger <mrueg@gentoo.org> -files/ncurses-5.6-build.patch,
   -files/ncurses-5.6-gfbsd.patch, -files/ncurses-5.7-emacs.patch,

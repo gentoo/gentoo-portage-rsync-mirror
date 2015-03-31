@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2.1+
 RDEPEND=dev-libs/glib:2 dev-libs/libxml2 dev-qt/linguist-tools:5 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 media-libs/fontconfig media-libs/freetype x11-wm/openbox:3 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXft x11-libs/pango
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jauhien/distfiles/obconf-qt-0.1.0_p20141029.tar.gz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=889d4aa48580dcceaa70c3a723469108

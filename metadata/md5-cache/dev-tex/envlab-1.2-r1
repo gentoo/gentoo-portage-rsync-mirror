@@ -7,5 +7,5 @@ LICENSE=LPPL-1.2
 RDEPEND=virtual/latex-base
 SLOT=0
 SRC_URI=mirror://gentoo/envlab-1.2.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=b3c0aec85c57e4e6eac0bd5890c01602

@@ -8,5 +8,5 @@ LICENSE=freedist
 RDEPEND=x11-libs/libXaw
 SLOT=0
 SRC_URI=http://evolution.gs.washington.edu/phylip/download/phylip-3.69.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=e09a6e0e6cfdf96b2fabfa1bd1929129

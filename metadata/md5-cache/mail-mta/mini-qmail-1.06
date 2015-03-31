@@ -7,5 +7,5 @@ LICENSE=public-domain
 RDEPEND=!mail-mta/courier !mail-mta/esmtp !mail-mta/exim !mail-mta/maildrop !mail-mta/msmtp !mail-mta/netqmail !mail-mta/nullmailer !mail-mta/postfix !mail-mta/qmail-ldap !mail-mta/sendmail !mail-mta/ssmtp !mail-mta/opensmtpd
 SLOT=0
 SRC_URI=mirror://qmail/netqmail-1.06.tar.gz http://dev.gentoo.org/~hollow/distfiles/genqmail-20080406.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmail	9aa474d2def73a95c642872fdca9c014	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fixheadtails	c6fd1fc49c9dc11924f28a1406f251a0	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmail	9aa474d2def73a95c642872fdca9c014	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=2109280a54fd9ceb10f139388d59cc5c

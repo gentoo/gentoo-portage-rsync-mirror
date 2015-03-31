@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=!minimal? ( >=dev-php/Savant3-Plugin-Form-0.2.1 ) dev-lang/php >=dev-php/pear-1.9.0
 SLOT=0
 SRC_URI=http://phpsavant.com/Savant3-3.0.0.tgz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-lib-r1	d953dd90cfa8143851da6736f3fd4c76	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-lib-r1	d953dd90cfa8143851da6736f3fd4c76	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=4ff2671c85d95c39b5afd02f2d2307f9

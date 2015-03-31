@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-devel/gnuconfig !<sys-devel/autoconf-2.62:2.5 !<sys-devel/automake-1.11.1:1.11 !=sys-devel/libtool-2*:1.5 abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20140406-r2 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=2
 SRC_URI=mirror://gnu/libtool/libtool-2.4.2.tar.xz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=526f3cbbe1df8c0412727b5f8095651f

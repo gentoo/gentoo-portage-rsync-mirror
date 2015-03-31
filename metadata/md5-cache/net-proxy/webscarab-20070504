@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/jre-1.5
 SLOT=0
 SRC_URI=mirror://sourceforge/owasp/webscarab-selfcontained-20070504-1631.jar
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=303b32aadd93fb837b74223fc22338c2

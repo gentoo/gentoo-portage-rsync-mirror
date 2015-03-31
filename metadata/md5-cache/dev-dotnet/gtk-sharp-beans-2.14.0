@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-dotnet/gio-sharp >=dev-dotnet/glib-sharp-2.12 >=dev-dotnet/gtk-sharp-2.12 >=dev-dotnet/gtk-sharp-gapi-2.12
 SLOT=0
 SRC_URI=http://github.com/mono/gtk-sharp-beans/tarball/2.14.0 -> gtk-sharp-beans-2.14.0.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	libtool	52d0e17251d04645ffaa61bfdd858944	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	libtool	52d0e17251d04645ffaa61bfdd858944	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=37d1f672ebfbc54e3b2e06e53c1f027a

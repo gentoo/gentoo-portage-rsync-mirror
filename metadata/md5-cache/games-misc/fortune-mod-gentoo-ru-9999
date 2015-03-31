@@ -6,5 +6,5 @@ HOMEPAGE=http://fortunes.gentoo.ru
 LICENSE=fairuse
 RDEPEND=games-misc/fortune-mod
 SLOT=0
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	mercurial	2fbda5894dda6392b71334ee9a92de0b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=bf2881d8dd02b42d461ebb117c818318

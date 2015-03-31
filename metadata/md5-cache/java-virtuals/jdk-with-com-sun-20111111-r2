@@ -8,5 +8,5 @@ KEYWORDS=amd64 x86 ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=public-domain
 RDEPEND=|| ( dev-java/icedtea-bin:6 dev-java/icedtea:6 dev-java/icedtea-bin:7 dev-java/icedtea:7 dev-java/oracle-jdk-bin:1.7 dev-java/oracle-jdk-bin:1.8 dev-java/diablo-jdk:1.6 dev-java/apple-jdk-bin:1.6 dev-java/apple-jdk-bin:1.5 dev-java/apple-jdk-bin:1.4 ) >=dev-java/java-config-2.1.6
 SLOT=0
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	f02d3e4777b404c719a5a6479c37c6e3	java-virtuals-2	348b5b41a30c0b4eee11e7a9343d53ce	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=ceddb2f3e2804ac06f8d501feeed043d

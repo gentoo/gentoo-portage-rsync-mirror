@@ -10,5 +10,5 @@ RDEPEND=dev-lang/perl dev-libs/libgcrypt:0= >=sys-apps/iproute2-2.6.19.20061214[
 RESTRICT=!gnutls? ( bindist )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/vpnc-0.5.3_p527.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=dedbbd0bd32c1f5df6f9cadbf7cf4b11

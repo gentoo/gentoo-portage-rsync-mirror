@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/ffmpeg-0.10.2-r1 !<media-video/libav-0.8.2-r2 !media-video/ffmpeg:0
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~lu_zero/distfiles/libpostproc-0.8.0.20121125.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=71ceb1a93146fa55acf6f7529888e4e8

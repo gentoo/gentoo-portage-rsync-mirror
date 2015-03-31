@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/zziplib >=media-libs/libpng-1.4:0= >=x11-libs/cairo-1.12 >x11-libs/pixman-0.18 app-text/poppler:=[xpdf-headers(+)] sys-libs/zlib >=dev-libs/kpathsea-6.1.0_p20120701
 SLOT=0
 SRC_URI=http://foundry.supelec.fr/frs/download.php/file/15745/luatex-beta-0.76.0-source.tar.bz2 http://foundry.supelec.fr/frs/download.php/file/15747/luatex-beta-0.76.0-doc.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	texlive-common	8bd0f2143e4bb5fa3bb0bb56aa08006f	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=fa6acf33a49a4acda35f986514fb6d1e

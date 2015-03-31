@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/expat >=dev-libs/glib-2:2 net-dns/libidn net-im/jabberd2 mysql? ( virtual/mysql )
 SLOT=0
 SRC_URI=http://download.gna.org/mu-conference/mu-conference-0.8.81.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=7cfa03b32cf44aa04ab46aa0c39ec08f

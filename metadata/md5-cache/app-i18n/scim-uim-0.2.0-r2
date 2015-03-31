@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-i18n/uim-1.5.0 >=app-i18n/scim-1.4.0
 SLOT=0
 SRC_URI=mirror://sourceforge/scim/scim-uim-0.2.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=f4bb4a6341641ff0dc3a71ca8202a5f7

@@ -8,5 +8,5 @@ KEYWORDS=amd64 ~arm ppc x86
 LICENSE=Unicode_Fonts_for_Ancient_Scripts
 SLOT=0
 SRC_URI=http://users.teilar.gr/~g1951d/Symbola.ttf -> symbola-7.12.ttf doc? ( http://users.teilar.gr/~g1951d/Symbola.docx -> symbola-7.12.docx http://users.teilar.gr/~g1951d/Symbola.pdf -> symbola-7.12.pdf )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=bd1f7f3d61d96fb3bde0a745bc49638b

@@ -9,5 +9,5 @@ LICENSE=LGPL-2+
 RDEPEND=>=dev-libs/glib-2.18:2 >=x11-libs/gtk+-2.91.7:3[introspection?] >=x11-libs/libxklavier-5.2[introspection?] introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/libgnomekbd/3.6/libgnomekbd-3.6.0.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=26fbd1621e9d071b1aac6c3eb6402d6d

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=valgrind? ( dev-util/valgrind ) nls? ( sys-devel/gettext )
 SLOT=0
 SRC_URI=http://download.enlightenment.org/releases/eina-1.7.10.tar.bz2
-_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=67fdfc03835ae3cec51d742ccb0371f0

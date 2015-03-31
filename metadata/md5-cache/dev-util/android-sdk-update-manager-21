@@ -9,5 +9,5 @@ RDEPEND=>=virtual/jdk-1.5 >=dev-java/ant-core-1.6.5 >=dev-java/swt-3.5[cairo] ||
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://dl.google.com/android/android-sdk_r21-linux.tgz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=e052b305fc5cd115478c4cac0347b8a6

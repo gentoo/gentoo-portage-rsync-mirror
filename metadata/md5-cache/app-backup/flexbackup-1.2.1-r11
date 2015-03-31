@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/mt-st
 SLOT=0
 SRC_URI=mirror://sourceforge/flexbackup/flexbackup-1.2.1.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=4691ff52878ac5d79ee6f7d46189a94f

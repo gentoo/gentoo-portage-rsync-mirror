@@ -9,5 +9,5 @@ RDEPEND=!sys-devel/libtool:1.5
 RESTRICT=test
 SLOT=1.5
 SRC_URI=mirror://gnu/libtool/libtool-1.5.26.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=ec3a8f362bb81ae54a5c10b20b8cb617

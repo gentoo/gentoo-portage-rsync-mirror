@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sdl? ( media-libs/libsdl ) X? ( x11-libs/libXv x11-libs/libICE x11-libs/libSM x11-libs/libXt ) abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r9 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=http://libmpeg2.sourceforge.net/files/libmpeg2-0.5.1.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
 _md5_=6fca45d28edd9a1e24fcd7f7d17bfdba
