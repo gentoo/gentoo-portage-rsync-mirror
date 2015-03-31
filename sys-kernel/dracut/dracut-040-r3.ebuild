@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-040-r3.ebuild,v 1.1 2015/01/11 14:20:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-040-r3.ebuild,v 1.2 2015/03/31 10:54:29 aidecoe Exp $
 
 EAPI=4
 
@@ -248,7 +248,7 @@ pkg_postinst() {
 		sys-libs/libcap
 	optfeature "Support CIFS" net-fs/cifs-utils
 	optfeature "Decrypt devices encrypted with cryptsetup/LUKS" \
-		sys-fs/cryptsetup
+		"sys-fs/cryptsetup[-static-libs]"
 	optfeature "Support for GPG-encrypted keys for crypt module" \
 		app-crypt/gnupg
 	optfeature \

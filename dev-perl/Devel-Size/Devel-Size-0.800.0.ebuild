@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/Devel-Size-0.795.200.ebuild,v 1.1 2015/03/22 21:32:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/Devel-Size-0.800.0.ebuild,v 1.1 2015/03/31 10:41:17 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=NWCLARK
-MODULE_VERSION=0.79_52
+MODULE_VERSION=0.80
 inherit perl-module
 
 DESCRIPTION="Perl extension for finding the memory usage of Perl variables"
