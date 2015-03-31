@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sass-rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.24 2015/03/31 05:57:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.25 2015/03/31 06:05:05 graaff Exp $
+
+*sass-rails-5.0.2 (31 Mar 2015)
+
+  31 Mar 2015; Hans de Graaff <graaff@gentoo.org> +sass-rails-5.0.2.ebuild:
+  Version bump.
 
   31 Mar 2015; Hans de Graaff <graaff@gentoo.org> -sass-rails-4.0.3.ebuild,
   -sass-rails-4.0.4.ebuild, -sass-rails-5.0.0.ebuild:

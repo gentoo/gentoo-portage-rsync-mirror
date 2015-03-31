@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.25-r1.ebuild,v 1.9 2014/01/15 09:17:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.25-r1.ebuild,v 1.10 2015/03/31 06:10:22 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit elisp distutils-r1 vcs-snapshot
 
@@ -39,6 +39,7 @@ python_compile_all() {
 
 python_install_all() {
 	elisp_src_install
+	distutils-r1_python_install_all
 	dodoc pymacs.rst
 	use doc && dodoc pymacs.pdf
 }

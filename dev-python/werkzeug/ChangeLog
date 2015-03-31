@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.63 2015/03/07 08:26:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.64 2015/03/31 06:26:55 patrick Exp $
+
+*werkzeug-0.10.4 (31 Mar 2015)
+
+  31 Mar 2015; Patrick Lauer <patrick@gentoo.org> +werkzeug-0.10.4.ebuild:
+  Bump
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> werkzeug-0.9.6.ebuild:
   ppc stable, bug 540290
