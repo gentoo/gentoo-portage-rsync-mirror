@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9892 2015/03/31 17:05:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9894 2015/03/31 20:40:16 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> package.mask,
+  prefix/sunos/solaris/5.9/package.use.force:
+  Remove duplicate app-admin/eselect-* entries, following package move.
+
+  31 Mar 2015; Ulrich Müller <ulm@gentoo.org> updates/1Q-2015:
+  Package move app-admin/eselect-* to app-eselect/eselect-*.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> package.mask,
   prefix/sunos/solaris/5.9/package.use.force:

@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/advancemenu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.37 2015/02/25 15:58:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.38 2015/03/31 20:39:18 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -advancemenu-2.5.0.ebuild, -files/advancemenu-2.5.0-alsa-pkg-config.patch,
+  -files/advancemenu-2.5.0-pic.patch:
+  old
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> advancemenu-2.7.ebuild:
   Stable for x86, wrt bug #540632
