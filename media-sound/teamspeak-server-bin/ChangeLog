@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/teamspeak-server-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/ChangeLog,v 1.38 2015/03/21 21:17:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/ChangeLog,v 1.39 2015/03/31 09:14:47 jlec Exp $
+
+*teamspeak-server-bin-3.0.10.3-r1 (31 Mar 2015)
+
+  31 Mar 2015; Justin Lecher <jlec@gentoo.org>
+  +teamspeak-server-bin-3.0.10.3-r1.ebuild,
+  -teamspeak-server-bin-3.0.10.3.ebuild:
+  Fix installation locations, thanks Dessa reporting this issue
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org>
   -teamspeak-server-bin-3.0.10.1.ebuild, -teamspeak-server-bin-3.0.10.ebuild,

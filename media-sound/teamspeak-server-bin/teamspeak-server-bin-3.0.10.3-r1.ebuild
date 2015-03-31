@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/teamspeak-server-bin-3.0.10.3.ebuild,v 1.2 2015/03/21 21:17:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-server-bin/teamspeak-server-bin-3.0.10.3-r1.ebuild,v 1.1 2015/03/31 09:14:47 jlec Exp $
 
 EAPI="5"
 
@@ -32,17 +32,15 @@ pkg_setup() {
 }
 
 src_install() {
+	# Install wrapper
+	dosbin "${FILESDIR}"/ts3server
+
 	# Install TeamSpeak 3 server into /opt/teamspeak3-server.
 	local opt_dir="/opt/teamspeak3-server"
 	into ${opt_dir}
 	insinto ${opt_dir}
-
-	# Install binary, wrapper, shell files and libraries.
-	newsbin ts3server_linux_${ARCH} ts3server-bin
-
-	dosbin "${FILESDIR}"/ts3server
-
 	exeinto ${opt_dir}
+	newsbin ts3server_linux_${ARCH} ts3server-bin
 	doexe *.sh
 	doins *.so
 	# 'libmysqlclient.so.15' is hard-coded into the ts3-server binary :(
