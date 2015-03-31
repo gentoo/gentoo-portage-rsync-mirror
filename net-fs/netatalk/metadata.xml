@@ -6,15 +6,6 @@
     <email>jlec@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name="appletalk">
-			Build support for Apple's AppleTalk (DDP) protocol and its
-			utilities (atalkd, timelord, papd).
-		</flag>
-    <flag name="cups">
-			Add support for <pkg>net-print/cups</pkg> printers in papd. This
-			flag is only considered if appletalk USE flag is enabled, and is
-			otherwise ignored.
-		</flag>
     <flag name="pgp">
 			Add support pgp authentication module
 		</flag>

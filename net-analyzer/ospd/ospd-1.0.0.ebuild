@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ospd/ospd-1.0_beta3.ebuild,v 1.1 2014/10/26 14:21:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ospd/ospd-1.0.0.ebuild,v 1.1 2015/03/31 11:10:47 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DL_ID=1783
+DL_ID=1999
 
 DESCRIPTION="Collection of scanner wrappers for OpenVAS"
 HOMEPAGE="http://www.openvas.org/"
@@ -29,6 +29,6 @@ S="${WORKDIR}"/${P/_beta/-beta}
 
 _DOCS=( ChangeLog CHANGES README )
 
-PATCHES=(
-	"${FILESDIR}"/${P}-description.patch
-	)
+python_test() {
+	esetup.py test
+}

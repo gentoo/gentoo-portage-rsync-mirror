@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.120 2015/03/31 07:53:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.121 2015/03/31 11:06:48 jlec Exp $
+
+  31 Mar 2015; Justin Lecher <jlec@gentoo.org> -files/afpd.init.3,
+  -files/atalk_service.init.2, -files/atalkd.init, -files/cnid_metad.init.2,
+  -files/netatalk-2.2.1-gentoo.patch, -files/netatalk-3.0.1-gentoo.patch,
+  -netatalk-2.2.1-r3.ebuild, -netatalk-3.0.5-r1.ebuild, metadata.xml:
+  Drop old
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> netatalk-3.1.6.ebuild:
   Stable for ppc64, wrt bug #532636
