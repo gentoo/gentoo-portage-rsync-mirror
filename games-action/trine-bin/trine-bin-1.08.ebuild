@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trine-bin/trine-bin-1.08.ebuild,v 1.5 2013/03/29 15:48:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trine-bin/trine-bin-1.08.ebuild,v 1.6 2015/03/31 00:48:37 mr_bones_ Exp $
 
 # these are ELFs that include a ZIP (504b0304) appended to it
 #   dd if=Trine.64.run of=Trine.64.zip ibs=$((0x342a8)) skip=1
@@ -8,6 +8,7 @@
 # but `unzip` will skip the ELF at the start.  both ELFs contain
 # the same zip appended, so only need to hash one of them.
 
+EAPI=5
 inherit unpacker games eutils
 
 DESCRIPTION="a physics-based action game where diff characters allow diff solutions to challenges"
@@ -28,7 +29,7 @@ RDEPEND=">=sys-libs/glibc-2.4
 
 S=${WORKDIR}
 
-d="${GAMES_PREFIX_OPT}/${PN}"
+d=${GAMES_PREFIX_OPT}/${PN}
 QA_PRESTRIPPED="${d#/}/trine-launcher ${d#/}/trine-bin ${d#/}/lib*/lib*.so*"
 QA_TEXTRELS_x86="`echo ${d#/}/lib32/lib{avcodec.so.51,avformat.so.52,avutil.so.49,FLAC.so.8}`"
 
@@ -47,20 +48,20 @@ src_install() {
 	local b bb
 	local sfx=$(use x86 && echo 32 || echo 64)
 
-	doicon Trine.xpm || die
+	doicon Trine.xpm
 	for b in bin launcher ; do
 		bb="trine-${b}"
 		exeinto ${d}
-		newexe ${bb}${sfx} ${bb} || die
-		games_make_wrapper ${bb} "./${bb}" "${d}" || die
+		newexe ${bb}${sfx} ${bb}
+		games_make_wrapper ${bb} "./${bb}" "${d}"
 		make_desktop_entry ${bb} "Trine ${b}" Trine
 	done
 
 	exeinto ${d}/lib${sfx}
-	doexe lib${sfx}/* || die
+	doexe lib${sfx}/*
 
 	insinto ${d}
-	doins -r binds config data dev profiles *.fbz *.glade trine-logo.png || die
+	doins -r binds config data dev profiles *.fbz *.glade trine-logo.png
 
 	dodoc Trine_Manual_linux.pdf Trine_updates.txt
 

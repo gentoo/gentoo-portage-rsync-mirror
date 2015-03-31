@@ -1,6 +1,9 @@
 # ChangeLog for games-action/fakk2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.19 2012/01/16 19:06:50 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.20 2015/03/31 00:43:12 mr_bones_ Exp $
+
+  31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> fakk2-1.02.ebuild:
+  EAPI=5
 
   16 Jan 2012; Ulrich Müller <ulm@gentoo.org> fakk2-1.02.ebuild:
   Migrate to cdrom.eclass, bug 398809.
@@ -60,4 +63,3 @@
 
   27 Jul 2003; Chris Gianelloni <wolf31o2@gentoo.org> files/fakk2:
   Initial import. Ebuild by me.
-

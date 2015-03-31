@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xtrap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.30 2013/01/01 18:49:12 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xtrap/ChangeLog,v 1.31 2015/03/31 00:54:40 mrueg Exp $
+
+  31 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -xtrap-1.0.2.ebuild:
+  Remove old.
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org> xtrap-1.0.2-r1.ebuild:
   s390/sh stable wrt #440872
@@ -109,4 +112,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xtrap-0.99.0.ebuild:
   Initial commit for modular X.
-
