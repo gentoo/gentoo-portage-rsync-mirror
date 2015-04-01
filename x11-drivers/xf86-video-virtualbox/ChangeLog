@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.150 2015/04/01 18:37:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.151 2015/04/01 19:03:05 vapier Exp $
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  xf86-video-virtualbox-4.3.26.ebuild:
+  Respect the user's CC/CXX/CFLAGS/CPPFLAGS settings.
 
   01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   xf86-video-virtualbox-4.3.26.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.26.ebuild,v 1.4 2015/04/01 18:35:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.26.ebuild,v 1.5 2015/04/01 19:02:07 vapier Exp $
 
 EAPI=5
 
-inherit eutils linux-mod systemd user
+inherit eutils linux-mod systemd user toolchain-funcs
 
 MY_PV="${PV/beta/BETA}"
 MY_PV="${MY_PV/rc/RC}"
@@ -97,6 +97,8 @@ src_configure() {
 		--disable-sdl-ttf
 		--disable-pulse
 		--disable-alsa
+		--with-gcc="$(tc-getCC)"
+		--with-g++="$(tc-getCXX)"
 		--target-arch=${ARCH}
 		--with-linux="${KV_OUT_DIR}"
 		--build-headless
@@ -104,6 +106,7 @@ src_configure() {
 	echo "${cmd[@]}"
 	"${cmd[@]}" || die "configure failed"
 	source ./env.sh
+	export VBOX_GCC_OPT="${CFLAGS} ${CPPFLAGS}"
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.26.ebuild,v 1.4 2015/04/01 18:37:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.26.ebuild,v 1.5 2015/04/01 19:03:05 vapier Exp $
 
 EAPI=5
 
@@ -102,6 +102,8 @@ src_configure() {
 		--disable-sdl-ttf
 		--disable-pulse
 		--disable-alsa
+		--with-gcc="$(tc-getCC)"
+		--with-g++="$(tc-getCXX)"
 		--target-arch=${ARCH}
 		--with-linux="${KV_OUT_DIR}"
 		--build-headless
@@ -109,6 +111,7 @@ src_configure() {
 	echo "${cmd[@]}"
 	"${cmd[@]}" || die "configure failed"
 	source ./env.sh
+	export VBOX_GCC_OPT="${CFLAGS} ${CPPFLAGS}"
 }
 
 src_compile() {
