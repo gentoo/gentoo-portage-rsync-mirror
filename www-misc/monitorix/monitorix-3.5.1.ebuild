@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.5.1.ebuild,v 1.1 2014/05/23 15:58:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.5.1.ebuild,v 1.2 2015/04/01 22:25:27 dilfridge Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="apcupsd evms hddtemp httpd lm_sensors postfix"
 
 DEPEND="sys-apps/sed"
-RDEPEND="dev-perl/config-general
+RDEPEND="dev-perl/Config-General
 	dev-perl/DBI
 	dev-perl/HTTP-Server-Simple
 	dev-perl/IO-Socket-SSL

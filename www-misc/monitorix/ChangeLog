@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/monitorix
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.7 2014/11/14 02:17:10 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.8 2015/04/01 22:25:27 dilfridge Exp $
+
+  01 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> monitorix-3.5.1.ebuild:
+  Fix dependencies: pkgmove of Config-General
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Maintainer needed.

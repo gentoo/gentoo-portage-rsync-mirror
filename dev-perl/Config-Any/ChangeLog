@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Config-Any
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.20 2014/10/05 16:01:29 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.21 2015/04/01 22:22:30 dilfridge Exp $
+
+  01 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Config-Any-0.240.0-r1.ebuild:
+  Fix dependencies: pkgmove of Config-General
 
   05 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Config-Any-0.230.0.ebuild:
   Drop old.

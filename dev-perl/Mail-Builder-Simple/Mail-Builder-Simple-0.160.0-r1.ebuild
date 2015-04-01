@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Builder-Simple/Mail-Builder-Simple-0.160.0-r1.ebuild,v 1.1 2014/08/26 19:14:54 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Builder-Simple/Mail-Builder-Simple-0.160.0-r1.ebuild,v 1.2 2015/04/01 22:23:18 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ COMMON="
 	dev-perl/Email-Sender
 	dev-perl/Email-Valid
 	dev-perl/Config-Any
-	dev-perl/config-general
+	dev-perl/Config-General
 	dev-perl/Exception-Died
 	>=dev-perl/MailTools-2.04
 	dev-perl/Email-MessageID
