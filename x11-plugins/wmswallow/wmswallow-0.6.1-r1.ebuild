@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/wmswallow-0.6.1-r1.ebuild,v 1.2 2015/03/27 16:28:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/wmswallow-0.6.1-r1.ebuild,v 1.3 2015/04/01 15:22:06 voyageur Exp $
 
 EAPI=5
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A dock applet to make any application dockable"
 HOMEPAGE="http://burse.uni-hamburg.de/~friedel/software/wmswallow.html"
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/wmswallow
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-format-security.patch
 	sed -e "s:\${OBJS} -o:\${OBJS} \${LDFLAGS} -o:" \
 		-e "/LIBS/s/-lXext/-lX11 \0/"\
 		-i Makefile || die

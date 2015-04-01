@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmswallow
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/ChangeLog,v 1.11 2015/03/27 16:28:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/ChangeLog,v 1.12 2015/04/01 15:22:06 voyageur Exp $
+
+  01 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  wmswallow-0.6.1-r1.ebuild, +files/wmswallow-0.6.1-format-security.patch:
+  Fix compilation with format-security, bug #544644
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> wmswallow-0.6.1-r1.ebuild:
   Stable for amd64, wrt bug #541774
