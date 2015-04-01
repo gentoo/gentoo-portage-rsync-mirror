@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/homer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.17 2015/04/01 09:38:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.18 2015/04/01 11:09:11 idella4 Exp $
+
+  01 Apr 2015; Ian Delaney <idella4@gentoo.org> -homer-0.24.1.ebuild,
+  -homer-0.25.ebuild:
+  rm old by selection of proxy maintainer from Bug #543138
 
   01 Apr 2015; Ian Delaney <idella4@gentoo.org> homer-0.25-r1.ebuild:
   substitute broken patch (-ffmpeg-avstream.patch) with a sed statement in place
