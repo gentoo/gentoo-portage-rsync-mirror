@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.158 2015/04/01 18:28:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.159 2015/04/01 18:35:55 vapier Exp $
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  virtualbox-guest-additions-4.3.26.ebuild:
+  Log the configure command we run.
 
   01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   virtualbox-guest-additions-4.3.26.ebuild:

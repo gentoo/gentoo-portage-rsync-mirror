@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt-meta
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/ChangeLog,v 1.9 2014/12/31 13:12:26 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/ChangeLog,v 1.10 2015/04/01 18:52:12 pesa Exp $
+
+  01 Apr 2015; Davide Pesavento <pesa@gentoo.org> qt-meta-4.8.5.ebuild:
+  Update HOMEPAGE and LICENSE.
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org> qt-meta-4.8.5.ebuild:
   Enforce USE dependency for media-libs/phonon.
