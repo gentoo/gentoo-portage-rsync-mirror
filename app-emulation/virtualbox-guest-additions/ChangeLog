@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.156 2015/03/17 08:03:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.158 2015/04/01 18:28:32 vapier Exp $
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  virtualbox-guest-additions-4.3.26.ebuild:
+  Fixes by Maxim Kammerer and Tomoh K. to pass in the right kernel build dir
+  that the user set up #424816.
+
+  01 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  virtualbox-guest-additions-4.3.26.ebuild:
+  Add --target for cross-compiling #410553 by Liam McLoughlin.
 
 *virtualbox-guest-additions-4.3.26 (17 Mar 2015)
 
