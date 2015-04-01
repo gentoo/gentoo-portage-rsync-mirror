@@ -22,6 +22,7 @@
 	<flag name="python">Enable Python source code editor</flag>
 	<flag name="qbs">Enable QBS project manager plugin</flag>
 	<flag name="qnx">Build plugin for QNX/Blackberry devices</flag>
+	<flag name="systemd">Add support for retrieving application output from journald</flag>
 	<flag name="valgrind">Add support for memory debugging using <pkg>dev-util/valgrind</pkg></flag>
 	<flag name="winrt">Build plugin for WinRT devices</flag>
 </use>

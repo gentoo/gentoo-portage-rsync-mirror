@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16453 2015/03/31 20:40:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16454 2015/04/01 14:36:34 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1026,8 +1026,6 @@ sci-geosciences/googleearth
 
 # Michael Weber <xmw@gentoo.org> (17 Jul 2013)
 # Upstream next versions
->=sys-kernel/raspberrypi-image-3.7_pre
->=sys-kernel/raspberrypi-sources-3.7_pre
 >=sys-boot/raspberrypi-firmware-1_pre
 
 # Sergey Popov <pinkbyte@gentoo.org> (12 Jul 2013)

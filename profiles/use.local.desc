@@ -2343,6 +2343,7 @@ dev-qt/qt-creator:perforce - Add support for Perforce version control system (re
 dev-qt/qt-creator:python - Enable Python source code editor
 dev-qt/qt-creator:qbs - Enable QBS project manager plugin
 dev-qt/qt-creator:qnx - Build plugin for QNX/Blackberry devices
+dev-qt/qt-creator:systemd - Add support for retrieving application output from journald
 dev-qt/qt-creator:valgrind - Add support for memory debugging using dev-util/valgrind
 dev-qt/qt-creator:winrt - Build plugin for WinRT devices
 dev-qt/qt-meta:kde - Select media-libs/phonon as Phonon variant (needed for KDE)
