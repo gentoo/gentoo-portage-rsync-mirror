@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/spacerider
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.9 2015/02/15 23:19:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/spacerider/ChangeLog,v 1.10 2015/04/01 05:09:52 mr_bones_ Exp $
+
+  01 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/spacerider-0.13-font.patch, +files/spacerider-0.13-gcc49.patch,
+  spacerider-0.13.ebuild:
+  first attempt at patch to fix bug #539658
 
   15 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> spacerider-0.13.ebuild:
   use deps for libsdl
