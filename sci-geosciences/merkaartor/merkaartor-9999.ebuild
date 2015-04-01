@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.16 2015/03/31 13:15:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/merkaartor-9999.ebuild,v 1.17 2015/04/01 06:17:33 jlec Exp $
 
 EAPI=5
 
@@ -57,7 +57,6 @@ src_prepare() {
 		$(qt4_get_bindir)/lrelease src/src.pro || die
 	fi
 
-	epatch "${FILESDIR}"/${P}-system-libs.patch
 	epatch_user
 }
 

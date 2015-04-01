@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/livestreamer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.15 2014/12/24 02:05:32 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.16 2015/04/01 06:14:42 idella4 Exp $
+
+  01 Apr 2015; Ian Delaney <idella4@gentoo.org> -livestreamer-1.10.2.ebuild,
+  -livestreamer-1.7.5.ebuild, -livestreamer-1.8.0.ebuild,
+  -livestreamer-1.8.1.ebuild, -livestreamer-1.8.2.ebuild:
+  rm old
 
 *livestreamer-1.11.1 (24 Dec 2014)
 

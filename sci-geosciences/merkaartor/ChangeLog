@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/merkaartor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.31 2015/03/31 13:15:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.32 2015/04/01 06:17:33 jlec Exp $
+
+  01 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  -files/merkaartor-9999-system-libs.patch, merkaartor-9999.ebuild:
+  Drop patch as it was merged by upstream
 
 *merkaartor-0.18.1-r1 (31 Mar 2015)
 
