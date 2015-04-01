@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.669 2015/03/31 17:22:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.671 2015/04/01 21:13:09 ulm Exp $
+
+*emacs-24.5_rc2 (01 Apr 2015)
+
+  01 Apr 2015; Ulrich Müller <ulm@gentoo.org> +emacs-24.5_rc2.ebuild:
+  Version bump.
+
+  01 Apr 2015; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r10.ebuild:
+  Adjust USE dependency to work around false positive repoman warning.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r10.ebuild,
   emacs-23.4-r11.ebuild, emacs-23.4-r13.ebuild, emacs-24.3-r6.ebuild,
