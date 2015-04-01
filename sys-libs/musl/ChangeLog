@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.49 2015/03/30 23:31:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.50 2015/04/01 20:04:37 blueness Exp $
+
+  01 Apr 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.8.ebuild:
+  Mark stable on all musl arches.
 
 *musl-1.1.8 (30 Mar 2015)
 

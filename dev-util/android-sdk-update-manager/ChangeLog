@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/android-sdk-update-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.63 2014/10/15 20:22:19 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.64 2015/04/01 20:08:34 rich0 Exp $
+
+  01 Apr 2015; Richard Freeman <rich0@gentoo.org>
+  android-sdk-update-manager-23.ebuild:
+  Fix 531358 - thanks to Daniel Solano Gómez and Denis Sokolovsky.
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org>
   android-sdk-update-manager-21.1.ebuild, android-sdk-update-manager-21.ebuild,
