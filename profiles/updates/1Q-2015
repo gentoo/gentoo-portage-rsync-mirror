@@ -14,7 +14,6 @@ move app-admin/lxqt-admin lxqt-base/lxqt-admin
 move net-misc/lxqt-openssh-askpass lxqt-base/lxqt-openssh-askpass
 move media-fonts/libertine-ttf media-fonts/libertine
 move dev-qt/qtdocumentation dev-qt/qt-docs
-move dev-tex/pdftex app-text/texlive-core
 move app-admin/eselect-audicle app-eselect/eselect-audicle
 move app-admin/eselect-awk app-eselect/eselect-awk
 move app-admin/eselect-bashcomp app-eselect/eselect-bashcomp

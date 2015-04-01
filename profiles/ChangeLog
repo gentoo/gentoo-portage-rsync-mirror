@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9894 2015/03/31 20:40:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9895 2015/04/01 07:49:27 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Apr 2015; Ulrich Müller <ulm@gentoo.org> updates/1Q-2015:
+  Delete package move for dev-tex/pdftex because target package exists.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> package.mask,
   prefix/sunos/solaris/5.9/package.use.force:
