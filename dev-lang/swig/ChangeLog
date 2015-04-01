@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.219 2015/02/01 16:58:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.220 2015/04/01 02:08:39 zerochaos Exp $
+
+  01 Apr 2015; Rick Farina <zerochaos@gentoo.org> -swig-3.0.3.ebuild:
+  removing known bad swig 3.0.3 version per bug #534362
 
 *swig-3.0.5 (01 Feb 2015)
 
