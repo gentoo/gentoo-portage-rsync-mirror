@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/raspberrypi-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-sources/ChangeLog,v 1.9 2015/03/31 23:27:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-sources/ChangeLog,v 1.10 2015/04/01 00:25:50 xmw Exp $
+
+  01 Apr 2015; Michael Weber <xmw@gentoo.org>
+  -raspberrypi-sources-3.16.9999.ebuild, -raspberrypi-sources-3.17.9999.ebuild:
+  Drop EOL'd versions
 
 *raspberrypi-sources-3.18.9999 (31 Mar 2015)
 *raspberrypi-sources-3.19.9999 (31 Mar 2015)
