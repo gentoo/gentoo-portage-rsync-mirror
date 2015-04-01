@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qt-mobility
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-mobility/ChangeLog,v 1.11 2015/01/08 22:26:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-mobility/ChangeLog,v 1.12 2015/04/01 20:50:17 pesa Exp $
+
+  01 Apr 2015; Davide Pesavento <pesa@gentoo.org>
+  qt-mobility-1.2.2_p20130703-r1.ebuild:
+  Update HOMEPAGE.
 
   08 Jan 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Update upstream bugtracker URL.

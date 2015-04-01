@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.1.ebuild,v 1.7 2015/03/29 13:57:41 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-2.8.1.ebuild,v 1.8 2015/04/01 20:57:55 pesa Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PLOCALES="cs de es fr it ja pl ru sl uk zh_CN zh_TW"
 inherit eutils l10n multilib qt4-r2
 
 DESCRIPTION="Lightweight IDE for C++/QML development centering around Qt"
-HOMEPAGE="http://qt-project.org/wiki/Category:Tools::QtCreator"
+HOMEPAGE="http://doc.qt.io/qtcreator/"
 LICENSE="LGPL-2.1"
 
 if [[ ${PV} == *9999* ]]; then
