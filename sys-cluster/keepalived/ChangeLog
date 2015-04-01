@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.125 2015/03/31 07:55:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.126 2015/04/01 08:32:24 ago Exp $
+
+  01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> keepalived-1.2.15.ebuild:
+  Stable for sparc, wrt bug #538792
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> keepalived-1.2.15.ebuild:
   Stable for ppc64, wrt bug #538792
