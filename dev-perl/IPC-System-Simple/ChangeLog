@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/IPC-System-Simple
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-System-Simple/ChangeLog,v 1.6 2014/08/23 02:06:07 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-System-Simple/ChangeLog,v 1.7 2015/04/01 22:35:40 dilfridge Exp $
+
+*IPC-System-Simple-1.250.0 (01 Apr 2015)
+
+  01 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +IPC-System-Simple-1.250.0.ebuild:
+  Version bump
 
 *IPC-System-Simple-1.21-r1 (23 Aug 2014)
 
