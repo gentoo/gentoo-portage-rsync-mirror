@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.25-r1.ebuild,v 1.7 2014/12/22 18:31:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/homer-0.25-r1.ebuild,v 1.8 2015/04/01 09:38:13 idella4 Exp $
 
 EAPI=5
 
@@ -49,7 +49,9 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	epatch "${DISTDIR}/${P}-ffmpeg2.patch"
-	epatch "${FILESDIR}/${P}-ffmpeg-avstream.patch"
+	# Bug #543138
+	sed -e '/mRtpEncoderStream->reference_dts = 0;/d' \
+		-i HomerMultimedia/src/RTP.cpp || die
 
 	if use pulseaudio; then
 		sed -i \
