@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/filemanip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filemanip/ChangeLog,v 1.3 2014/07/25 09:16:26 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filemanip/ChangeLog,v 1.4 2015/04/01 11:51:27 gienah Exp $
+
+*filemanip-0.3.6.3 (01 Apr 2015)
+
+  01 Apr 2015; Mark Wright <gienah@gentoo.org> +filemanip-0.3.6.3.ebuild:
+  Bump filemanip to 0.3.6.3
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> filemanip-0.3.6.2.ebuild:
   Drop trailing '.' from description.
