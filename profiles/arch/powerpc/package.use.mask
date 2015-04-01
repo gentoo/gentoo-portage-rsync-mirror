@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.239 2015/03/17 01:38:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.240 2015/04/01 11:00:12 gienah Exp $
 
 # Mike Frysinger <vapier@gentoo.org> (16 Mar 2015)
 # Needs sci-physics/bullet & media-libs/libsdl2 tested #499974
@@ -32,9 +32,10 @@ media-video/libav x265
 # app-admin/cgmanager misses PPC/PPC64 keywords. Bug #539208
 app-emulation/lxc cgmanager
 
-# Mark Wright <gienah@gentoo.org> (14-24 Dec 2014)
+# Mark Wright <gienah@gentoo.org> (14-24 Dec 2014, 1 Apr 2015)
 # test dependencies need keywording
 dev-haskell/binary test
+dev-haskell/dlist test
 dev-haskell/haskell-src-exts test
 dev-haskell/text test
 dev-haskell/vector test
