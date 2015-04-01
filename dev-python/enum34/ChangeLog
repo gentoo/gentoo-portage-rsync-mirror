@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enum34
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.15 2015/03/08 23:46:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.16 2015/04/01 10:22:29 klausman Exp $
+
+  01 Apr 2015; Tobias Klausmann <klausman@gentoo.org> enum34-1.0.4.ebuild:
+  Keyworded on alpha, bug 503094
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> enum34-1.0.ebuild:
   x86 stable, bug 540290
