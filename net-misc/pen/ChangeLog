@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.21 2014/10/15 16:07:07 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.22 2015/04/01 19:52:14 nativemad Exp $
+
+  01 Apr 2015; Andreas Schuerch <nativemad@gentoo.org> pen-0.25.1.ebuild:
+  x86 stable, see bug 505168
 
 *pen-0.25.1 (15 Oct 2014)
 
