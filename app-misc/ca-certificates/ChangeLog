@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.112 2015/03/31 07:44:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.113 2015/04/01 08:23:09 ago Exp $
+
+  01 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
+  ca-certificates-20140927.3.17.2.ebuild:
+  Stable for sparc, wrt bug #543976
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
   ca-certificates-20140927.3.17.2.ebuild:

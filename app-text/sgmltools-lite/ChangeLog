@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.70 2015/03/31 07:45:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.71 2015/04/01 08:24:00 ago Exp $
+
+  01 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
+  sgmltools-lite-3.0.3-r14.ebuild:
+  Stable for sparc, wrt bug #544008
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
   sgmltools-lite-3.0.3-r14.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.148 2015/03/31 07:40:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.149 2015/04/01 08:20:11 ago Exp $
+
+  01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> lm_sensors-3.3.4-r1.ebuild:
+  Stable for sparc, wrt bug #544014
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> lm_sensors-3.3.4-r1.ebuild:
   Stable for ppc64, wrt bug #544014

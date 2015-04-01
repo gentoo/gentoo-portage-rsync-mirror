@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.1_p6.ebuild,v 1.8 2015/03/28 21:34:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlhtml/xlhtml-0.5.1_p6.ebuild,v 1.9 2015/04/01 08:25:04 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 S=${WORKDIR}/${PN}

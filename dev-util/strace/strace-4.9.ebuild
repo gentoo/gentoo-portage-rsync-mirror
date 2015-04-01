@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.9.ebuild,v 1.8 2015/03/31 07:49:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.9.ebuild,v 1.9 2015/04/01 08:29:21 ago Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
+	KEYWORDS="~alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
 fi
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"

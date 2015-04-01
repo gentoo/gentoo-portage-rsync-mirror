@@ -3,9 +3,9 @@ DEPEND=sys-devel/flex !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-
 DESCRIPTION=Check C programs for vulnerabilities and programming mistakes
 EAPI=5
 HOMEPAGE=http://lclint.cs.virginia.edu/
-KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ppc ppc64 sparc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.splint.org/downloads/splint-3.1.2.src.tgz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=8f02ec7a09590ed9dd02a1117c2ce6ef
+_md5_=456449e344abb3655e6a4fa99615a94b

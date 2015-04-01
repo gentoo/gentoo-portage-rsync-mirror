@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.19.0.ebuild,v 1.4 2015/03/27 16:27:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.19.0.ebuild,v 1.5 2015/04/01 08:24:47 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Perl XS frontend to the Xapian C++ search library"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ppc ppc64 ~x86"
+KEYWORDS="amd64 arm ~mips ppc ppc64 sparc ~x86"
 IUSE="examples"
 
 RDEPEND="~dev-libs/xapian-${VERSION}

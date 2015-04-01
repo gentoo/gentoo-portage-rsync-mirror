@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.6.ebuild,v 1.12 2015/03/31 16:05:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/edna-0.6.ebuild,v 1.13 2015/04/01 08:30:36 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/edna/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="flac ogg"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
