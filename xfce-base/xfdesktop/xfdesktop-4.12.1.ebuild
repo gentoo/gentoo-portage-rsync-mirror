@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.12.1.ebuild,v 1.1 2015/03/22 14:23:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.12.1.ebuild,v 1.2 2015/04/01 16:22:15 mgorny Exp $
 
 EAPI=5
 inherit xfconf
@@ -38,6 +38,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 pkg_setup() {
+	PATCHES=(
+		"${FILESDIR}"/${P}-no-thunar-build.patch
+	)
+
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		$(use_enable thunar file-icons)
