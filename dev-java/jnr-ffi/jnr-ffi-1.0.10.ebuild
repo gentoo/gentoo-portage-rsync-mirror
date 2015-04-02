@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/jnr-ffi-1.0.10.ebuild,v 1.3 2015/03/29 00:27:57 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/jnr-ffi-1.0.10.ebuild,v 1.4 2015/04/02 22:13:15 chewi Exp $
 
 EAPI="5"
 
@@ -31,12 +31,8 @@ DEPEND="${COMMON_DEP}
 		>=dev-java/junit-4.8:4
 	)"
 
-# Yeah, well.. don't ask me why.
-S="${WORKDIR}/jnr-${PN}-c0b5ebf"
-
 java_prepare() {
 	cp "${FILESDIR}"/${PN}_maven-build.xml build.xml || die
-
 	epatch "${FILESDIR}"/${PN}-1.0.6-junit48.patch
 }
 
