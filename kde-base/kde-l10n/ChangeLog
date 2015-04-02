@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.261 2015/02/18 16:26:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.262 2015/04/02 19:45:11 kensington Exp $
+
+  02 Apr 2015; Michael Palimaka <kensington@gentoo.org> kde-l10n-4.14.3.ebuild:
+  Introduce minimal USE flag to avoid collisions with Plasma 5.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -kde-l10n-4.12.5.ebuild:
   Remove KDE SC 4.12

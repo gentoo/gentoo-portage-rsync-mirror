@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.949 2015/03/31 19:03:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.951 2015/04/02 19:58:49 maekke Exp $
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> php-5.5.23.ebuild:
+  arm stable, bug #544186
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> php-5.4.39.ebuild:
+  arm stable, bug #544186
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> php-5.3.29.ebuild,
   php-5.4.36.ebuild, php-5.4.37.ebuild, php-5.4.38.ebuild, php-5.4.39.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.54 2015/03/28 09:56:26 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.55 2015/04/02 19:56:46 maekke Exp $
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> tesseract-3.03_rc1-r1.ebuild:
+  add ~arm, bug #544622
 
 *tesseract-3.03_rc1-r1 (28 Mar 2015)
 
