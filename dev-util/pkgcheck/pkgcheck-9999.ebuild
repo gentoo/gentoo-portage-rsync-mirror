@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcheck/pkgcheck-9999.ebuild,v 1.1 2015/04/02 02:58:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcheck/pkgcheck-9999.ebuild,v 1.2 2015/04/02 03:17:57 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 if [[ ${PV} == *9999 ]] ; then
-	EGIT_REPO_URI="git://github.com/pkgcore/pkgcheck.git"
+	EGIT_REPO_URI="https://github.com/pkgcore/pkgcheck.git"
 	inherit git-r3
 else
 	KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
