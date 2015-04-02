@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.9.6_p02.ebuild,v 1.2 2013/06/10 17:22:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-data/geant-data-4.9.6_p02.ebuild,v 1.3 2015/04/02 17:44:35 mr_bones_ Exp $
 
 EAPI=5
 
@@ -19,8 +19,8 @@ GEANT4_DATA="
 	G4ABLA.3.0
 	RealSurface.1.0"
 
-SRC_URI="${SRC_COM}/G4NDL${NDLPV}.TS.tar.gz"
 SRC_COM="http://geant4.cern.ch/support/source"
+SRC_URI="${SRC_COM}/G4NDL${NDLPV}.TS.tar.gz"
 for d in ${GEANT4_DATA}; do
 	SRC_URI="${SRC_URI} ${SRC_COM}/${d}.tar.gz"
 done
