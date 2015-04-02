@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.247 2015/03/17 01:36:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.248 2015/04/02 16:50:48 aballier Exp $
+
+# Alexis Ballier <aballier@gentoo.org> (02 Apr 2015)
+# Needs ilmbase (openexr), which does not build and is masked on arm.
+media-libs/freeimage tiff
 
 # Markus Meier <maekke@gentoo.org> (03 Mar 2015)
 # Unkeyworded deps, bug #540540

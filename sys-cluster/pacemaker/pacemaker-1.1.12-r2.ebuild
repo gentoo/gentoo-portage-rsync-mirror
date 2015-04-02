@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.12-r2.ebuild,v 1.3 2015/03/24 08:52:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.12-r2.ebuild,v 1.4 2015/04/02 16:44:39 jer Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/ClusterLabs/${PN}/archive/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="amd64 hppa x86"
 REQUIRED_USE="cman? ( !heartbeat )"
 IUSE="acl cman heartbeat smtp snmp static-libs"
 

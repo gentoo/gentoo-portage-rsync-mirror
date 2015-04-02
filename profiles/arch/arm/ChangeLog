@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.348 2015/03/03 22:27:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.349 2015/04/02 16:50:48 aballier Exp $
+
+  02 Apr 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask media-libs/freeimage[tiff]
 
   03 Mar 2015; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask sys-auth/sssd[augeas], bug #540540

@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.44 2015/03/03 02:47:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.45 2015/04/02 16:37:09 robbat2 Exp $
+
+*gitolite-gentoo-3.6.2.4 (02 Apr 2015)
+
+  02 Apr 2015; Robin H. Johnson <robbat2@gentoo.org>
+  +gitolite-gentoo-3.6.2.4.ebuild:
+  Bump; has a single fix for wild repos for mva.
 
   03 Mar 2015; Robin H. Johnson <robbat2@gentoo.org>
   gitolite-gentoo-3.6.2.3.ebuild:

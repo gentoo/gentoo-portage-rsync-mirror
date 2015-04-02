@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/libqb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libqb/ChangeLog,v 1.9 2015/03/24 08:52:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libqb/ChangeLog,v 1.10 2015/04/02 16:44:59 jer Exp $
+
+  02 Apr 2015; Jeroen Roovers <jer@gentoo.org> libqb-0.17.1.ebuild:
+  Stable for HPPA (bug #539608).
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libqb-0.17.1.ebuild:
   Stable for x86, wrt bug #539608
