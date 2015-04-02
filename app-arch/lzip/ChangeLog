@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.59 2015/02/27 11:19:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.60 2015/04/02 17:18:10 vapier Exp $
+
+  02 Apr 2015; Mike Frysinger <vapier@gentoo.org> lzip-1.16.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable.
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> lzip-1.16.ebuild:
   Stable for sparc, wrt bug #534812

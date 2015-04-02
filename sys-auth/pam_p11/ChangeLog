@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_p11
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.39 2014/08/08 08:09:21 alonbl Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_p11/ChangeLog,v 1.40 2015/04/02 17:30:54 mr_bones_ Exp $
+
+  02 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> pam_p11-0.1.5-r1.ebuild:
+  fix SRC_URI
 
   08 Aug 2014; Alon Bar-Lev <alonbl@gentoo.org> pam_p11-0.1.5-r1.ebuild:
   Update urls, cleanup
