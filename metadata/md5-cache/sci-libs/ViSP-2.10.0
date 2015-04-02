@@ -3,7 +3,7 @@ DEPEND=dmtx? ( media-libs/libdmtx ) ffmpeg? ( virtual/ffmpeg ) gsl? ( sci-libs/g
 DESCRIPTION=Visual Servoing Platform: visual tracking and visual servoing library
 EAPI=5
 HOMEPAGE=http://www.irisa.fr/lagadic/visp/visp.html
-IUSE=demos dmtx doc examples ffmpeg gsl ieee1394 jpeg lapack ogre ois opencv png test tutorials usb v4l X xml zbar zlib
+IUSE=demos +dmtx doc examples ffmpeg gsl ieee1394 jpeg lapack ogre ois opencv png test tutorials usb v4l X xml +zbar zlib
 KEYWORDS=~amd64
 LICENSE=GPL-2
 RDEPEND=dmtx? ( media-libs/libdmtx ) ffmpeg? ( virtual/ffmpeg ) gsl? ( sci-libs/gsl ) ieee1394? ( media-libs/libdc1394 ) jpeg? ( virtual/jpeg:0 ) lapack? ( virtual/lapack ) ogre? ( dev-games/ogre[ois?] dev-libs/boost:=[threads] ) opencv? ( media-libs/opencv ) png? ( media-libs/libpng:0= ) usb? ( virtual/libusb:1 ) v4l? ( media-libs/libv4l ) X? ( x11-libs/libX11 ) xml? ( dev-libs/libxml2 ) zbar? ( media-gfx/zbar ) zlib? ( sys-libs/zlib ) demos? ( sci-misc/ViSP-images )
@@ -11,4 +11,4 @@ REQUIRED_USE=ffmpeg? ( opencv ) ois? ( ogre )
 SLOT=0
 SRC_URI=http://gforge.inria.fr/frs/download.php/latestfile/475/ViSP-2.10.0.tar.gz
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=f50ee04247d8df986dbdad5d8f4dba42
+_md5_=a5775b7f5594b65decf752782fc13463

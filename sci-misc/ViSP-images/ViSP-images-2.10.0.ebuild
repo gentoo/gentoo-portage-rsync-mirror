@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/ViSP-images/ViSP-images-2.10.0.ebuild,v 1.1 2015/03/11 17:10:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/ViSP-images/ViSP-images-2.10.0.ebuild,v 1.2 2015/04/02 16:30:57 aballier Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.irisa.fr/lagadic/visp/download/sequence/ViSP-images-${PV}.zi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE=""
 
 DEPEND="app-arch/unzip"

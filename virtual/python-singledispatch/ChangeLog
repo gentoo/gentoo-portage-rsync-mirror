@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-singledispatch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-singledispatch/ChangeLog,v 1.1 2014/11/15 12:35:12 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-singledispatch/ChangeLog,v 1.2 2015/04/02 16:15:16 idella4 Exp $
+
+  02 Apr 2015; Ian Delaney <idella4@gentoo.org> python-singledispatch-0.ebuild:
+  drop old impl
 
 *python-singledispatch-0 (15 Nov 2014)
 

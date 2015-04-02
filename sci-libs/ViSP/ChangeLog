@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ViSP
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ViSP/ChangeLog,v 1.1 2015/03/11 17:16:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ViSP/ChangeLog,v 1.2 2015/04/02 16:12:09 aballier Exp $
+
+  02 Apr 2015; Alexis Ballier <aballier@gentoo.org> ViSP-2.10.0.ebuild:
+  enable zbar and dmtx by default
 
 *ViSP-2.10.0 (11 Mar 2015)
 

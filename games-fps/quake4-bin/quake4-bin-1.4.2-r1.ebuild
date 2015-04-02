@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2-r1.ebuild,v 1.1 2014/07/09 19:48:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2-r1.ebuild,v 1.2 2015/04/02 16:12:08 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -11,7 +11,7 @@ SRC_URI="mirror://idsoftware/quake4/linux/quake4-linux-${PV}.x86.run"
 
 LICENSE="QUAKE4"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="cdinstall dedicated linguas_cs linguas_fr linguas_it linguas_pl linguas_ru"
 RESTRICT="strip"
 

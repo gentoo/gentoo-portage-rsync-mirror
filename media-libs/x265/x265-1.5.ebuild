@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-1.5.ebuild,v 1.3 2015/03/18 06:38:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x265/x265-1.5.ebuild,v 1.4 2015/04/02 16:22:50 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ if [[ ${PV} = 9999* ]]; then
 	EHG_REPO_URI="http://bitbucket.org/multicoreware/x265"
 else
 	SRC_URI="https://bitbucket.org/multicoreware/x265/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~hppa ~x86"
+	KEYWORDS="~amd64 ~arm hppa ~x86"
 fi
 
 DESCRIPTION="Library for encoding video streams into the H.265/HEVC format"

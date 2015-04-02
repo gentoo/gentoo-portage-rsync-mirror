@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/fms
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.35 2014/06/01 12:26:29 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.36 2015/04/02 16:07:58 kensington Exp $
+
+  02 Apr 2015; Michael Palimaka <kensington@gentoo.org> -fms-0.3.71.ebuild:
+  Remove old.
 
 *fms-0.3.73 (01 Jun 2014)
 

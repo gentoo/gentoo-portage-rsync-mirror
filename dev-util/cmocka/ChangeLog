@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmocka
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.18 2014/11/25 08:41:58 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/ChangeLog,v 1.19 2015/04/02 16:21:40 jer Exp $
+
+  02 Apr 2015; Jeroen Roovers <jer@gentoo.org> cmocka-0.4.1.ebuild:
+  Stable for HPPA (bug #538798).
 
   25 Nov 2014; Agostino Sarubbo <ago@gentoo.org> cmocka-0.4.1.ebuild:
   Stable for x86, wrt bug #526066

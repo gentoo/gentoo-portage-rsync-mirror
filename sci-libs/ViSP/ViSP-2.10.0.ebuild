@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ViSP/ViSP-2.10.0.ebuild,v 1.1 2015/03/11 17:16:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ViSP/ViSP-2.10.0.ebuild,v 1.2 2015/04/02 16:12:09 aballier Exp $
 
 EAPI=5
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="
-	demos dmtx doc examples ffmpeg gsl ieee1394 jpeg lapack ogre ois opencv png
-	test tutorials usb v4l X xml zbar zlib
+	demos +dmtx doc examples ffmpeg gsl ieee1394 jpeg lapack ogre ois opencv png
+	test tutorials usb v4l X xml +zbar zlib
 "
 
 RDEPEND="

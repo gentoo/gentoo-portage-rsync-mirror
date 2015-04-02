@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.124 2015/03/03 09:29:35 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.125 2015/04/02 16:22:14 jer Exp $
+
+  02 Apr 2015; Jeroen Roovers <jer@gentoo.org> libssh-0.6.4.ebuild:
+  Stable for HPPA (bug #538798).
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libssh-0.6.4.ebuild:
   add arm64 support, tested on A53 board
