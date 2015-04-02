@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.80 2015/04/01 23:54:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.81 2015/04/02 02:17:03 radhermit Exp $
+
+*snakeoil-0.6.3 (02 Apr 2015)
+
+  02 Apr 2015; Tim Harder <radhermit@gentoo.org> -snakeoil-0.6.1.ebuild,
+  -snakeoil-0.6.2.ebuild, +snakeoil-0.6.3.ebuild:
+  Version bump and remove old.
 
 *snakeoil-0.6.2 (01 Apr 2015)
 
