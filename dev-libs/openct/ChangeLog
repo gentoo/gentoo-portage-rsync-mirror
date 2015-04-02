@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openct
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.114 2014/11/06 05:36:49 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.115 2015/04/02 18:21:41 mr_bones_ Exp $
+
+  02 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> openct-0.6.20-r3.ebuild,
+  openct-0.6.20-r4.ebuild:
+  fix SRC_URI
 
   06 Nov 2014; Mike Frysinger <vapier@gentoo.org> openct-0.6.20-r3.ebuild,
   openct-0.6.20-r4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ant-swing-1.9.1.ebuild,v 1.2 2014/08/10 20:07:46 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ant-swing-1.9.1.ebuild,v 1.3 2015/04/02 18:01:34 mr_bones_ Exp $
 
 EAPI="5"
 

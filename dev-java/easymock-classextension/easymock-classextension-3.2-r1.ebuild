@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock-classextension/easymock-classextension-3.2-r1.ebuild,v 1.1 2013/09/11 16:28:39 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock-classextension/easymock-classextension-3.2-r1.ebuild,v 1.2 2015/04/02 18:05:57 mr_bones_ Exp $
 
 EAPI="5"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/gmock-1.7.0-r1.ebuild,v 1.7 2015/01/16 10:02:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/gmock-1.7.0-r1.ebuild,v 1.8 2015/04/02 18:17:50 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://googlemock.googlecode.com/files/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh sparc x86"
-IUSE="static-libs"
+IUSE="static-libs test"
 
 RDEPEND="=dev-cpp/gtest-${PV}*[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}

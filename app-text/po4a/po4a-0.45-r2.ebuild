@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45-r2.ebuild,v 1.2 2014/12/12 09:31:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45-r2.ebuild,v 1.3 2015/04/02 18:27:05 mr_bones_ Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ src_prepare() {
 	einfo "Your LINGUAS lists the following languages: $LINGUAS"
 	einfo "Removing locale files not listed in it ..."
 
-	# perl_rm_files also updates the Manifest file 
+	# perl_rm_files also updates the Manifest file
 	# and therefore silences Perl as to .po files we're about to clean
 	perl_rm_files "${locales_to_remove[@]}"
 }

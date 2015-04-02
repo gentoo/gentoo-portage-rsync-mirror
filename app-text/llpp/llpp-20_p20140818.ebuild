@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-20_p20140818.ebuild,v 1.1 2014/08/25 15:25:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-20_p20140818.ebuild,v 1.2 2015/04/02 18:26:20 mr_bones_ Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ src_compile() {
 	#if use egl ; then
 	#	ccopt+=" -DUSE_EGL $(pkg-config --cflags egl)"
 	#	local egl="egl"
-	#fi 
+	#fi
 	if use static ; then
 		local cclib=""
 		local slib=""

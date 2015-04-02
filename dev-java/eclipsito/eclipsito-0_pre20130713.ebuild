@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipsito/eclipsito-0_pre20130713.ebuild,v 1.2 2014/08/10 20:12:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipsito/eclipsito-0_pre20130713.ebuild,v 1.3 2015/04/02 18:06:40 mr_bones_ Exp $
 
 EAPI=5
 

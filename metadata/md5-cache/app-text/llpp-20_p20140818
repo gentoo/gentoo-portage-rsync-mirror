@@ -11,4 +11,4 @@ RESTRICT=!ocamlopt? ( strip )
 SLOT=0
 SRC_URI=http://repo.or.cz/w/llpp.git/snapshot/4fc967506989680faf64fb6c1dd0e0d13c678124.tar.gz -> llpp-20_p20140818.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=96e655d0c3dc59f79f85b24871a3968c
+_md5_=d1c47130e0f2ad471941944be6b237c6

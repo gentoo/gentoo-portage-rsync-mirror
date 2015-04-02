@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mate-netspeed/mate-netspeed-1.8.0.ebuild,v 1.4 2014/07/02 09:48:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mate-netspeed/mate-netspeed-1.8.0.ebuild,v 1.5 2015/04/02 18:29:55 mr_bones_ Exp $
 
 EAPI="5"
 

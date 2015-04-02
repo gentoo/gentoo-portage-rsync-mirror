@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/validns/validns-0.8.ebuild,v 1.1 2014/04/03 15:07:53 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/validns/validns-0.8.ebuild,v 1.2 2015/04/02 18:20:31 mr_bones_ Exp $
 
 EAPI=4
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.validns.net/download/${P}.tar.gz"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="test"
 
 RDEPEND="dev-libs/judy"
 DEPEND="

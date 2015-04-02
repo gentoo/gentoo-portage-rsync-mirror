@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.3.5.2.ebuild,v 1.5 2015/02/22 10:15:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.3.5.2.ebuild,v 1.6 2015/04/02 18:25:35 mr_bones_ Exp $
 
 EAPI=5
 
@@ -73,8 +73,8 @@ BIN_COMMON_DEPEND="
 "
 
 # PLEASE place any restrictions that are specific to the binary builds
-# into the BIN_COMMON_DEPEND block above. 
-# All dependencies below this point should remain identical to those in 
+# into the BIN_COMMON_DEPEND block above.
+# All dependencies below this point should remain identical to those in
 # the source ebuilds.
 
 COMMON_DEPEND="

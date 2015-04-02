@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-2.1.ebuild,v 1.4 2015/03/29 00:53:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-2.1.ebuild,v 1.5 2015/04/02 18:29:19 mr_bones_ Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ src_test() {
 	}
 
 	# These tests depend on a geronimo,
-	# which is not packaged yet for Gentoo unfortunately. 
+	# which is not packaged yet for Gentoo unfortunately.
 	# See bug #348853.
 	test_to_del src/test/java/org/apache/commons/dbcp2/managed/TestBasicManagedDataSource.java
 	test_to_del src/test/java/org/apache/commons/dbcp2/managed/TestManagedDataSource.java

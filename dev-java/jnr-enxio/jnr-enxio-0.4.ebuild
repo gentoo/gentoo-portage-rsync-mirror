@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-enxio/jnr-enxio-0.4.ebuild,v 1.2 2013/10/23 18:21:45 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-enxio/jnr-enxio-0.4.ebuild,v 1.3 2015/04/02 18:13:52 mr_bones_ Exp $
 
 EAPI="5"
 

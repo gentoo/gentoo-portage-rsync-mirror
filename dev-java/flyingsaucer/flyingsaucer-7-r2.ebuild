@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/flyingsaucer/flyingsaucer-7-r2.ebuild,v 1.1 2014/03/08 16:43:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/flyingsaucer/flyingsaucer-7-r2.ebuild,v 1.2 2015/04/02 18:30:46 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -54,7 +54,7 @@ java_prepare() {
 	use minimal || EANT_BUILD_TARGET=" jar.docbook jar.about jar.browser"
 }
 
-# Investigate building demos/photogallery demos/filebrowser because 
+# Investigate building demos/photogallery demos/filebrowser because
 # the files seem to be missing for jar.photogaller jar.filebrowser
 EANT_BUILD_TARGET="jar.core"
 EANT_DOC_TARGET="docs"

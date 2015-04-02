@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-interceptor-api/glassfish-interceptor-api-3.1.ebuild,v 1.2 2014/03/10 21:06:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-interceptor-api/glassfish-interceptor-api-3.1.ebuild,v 1.3 2015/04/02 18:08:06 mr_bones_ Exp $
 
 EAPI="5"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/lgi-0.6.2-r1.ebuild,v 1.1 2013/02/08 15:48:18 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/lgi-0.6.2-r1.ebuild,v 1.2 2015/04/02 18:22:41 mr_bones_ Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="http://github.com/downloads/pavouk/lgi/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
-IUSE="examples"
+IUSE="examples test"
 
 RDEPEND=">=dev-lang/lua-5.1
 		dev-libs/gobject-introspection
