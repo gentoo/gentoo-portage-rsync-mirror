@@ -1,6 +1,11 @@
 # ChangeLog for www-client/otter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/otter/ChangeLog,v 1.9 2015/02/04 12:37:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/ChangeLog,v 1.10 2015/04/02 04:37:47 jer Exp $
+
+*otter-0.9.05 (02 Apr 2015)
+
+  02 Apr 2015; Jeroen Roovers <jer@gentoo.org> +otter-0.9.05.ebuild:
+  Version bump.
 
   04 Feb 2015; Jeroen Roovers <jer@gentoo.org> -otter-0.9.03.ebuild,
   otter-0.9.04.ebuild, otter-9999.ebuild:
