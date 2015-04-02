@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Method-Modifiers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Method-Modifiers/ChangeLog,v 1.18 2015/03/29 09:42:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Method-Modifiers/ChangeLog,v 1.19 2015/04/02 10:21:23 zlogene Exp $
+
+  02 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  Class-Method-Modifiers-2.30.0.ebuild:
+  Add ~arm keyword
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
   Class-Method-Modifiers-2.30.0.ebuild:

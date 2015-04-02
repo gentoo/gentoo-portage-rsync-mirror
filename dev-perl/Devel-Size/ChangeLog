@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Size
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.47 2015/03/31 10:41:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.48 2015/04/02 10:14:02 zlogene Exp $
+
+  02 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Devel-Size-0.800.0.ebuild:
+  amd64/x86 stable wrt bug #543392
 
 *Devel-Size-0.800.0 (31 Mar 2015)
 

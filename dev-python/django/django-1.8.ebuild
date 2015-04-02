@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.8.ebuild,v 1.1 2015/04/02 06:59:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.8.ebuild,v 1.2 2015/04/02 10:15:26 jlec Exp $
 
 EAPI=5
 
@@ -68,23 +68,6 @@ python_test() {
 		|| die "Tests fail with ${EPYTHON}"
 }
 
-src_install() {
-	distutils-r1_src_install
-	webapp_src_install
-
-	elog "Additional Backend support can be enabled via"
-	optfeature "MySQL backend support in python 2.7 only" dev-python/mysql-python
-	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysqlcient
-	optfeature "PostgreSQL backend support" dev-python/psycopg:2
-	echo
-	elog "Other features can be enhanced by"
-	optfeature "GEO Django" sci-libs/gdal[geos]
-	optfeature "Memcached support" dev-python/python-memcached
-	optfeature "ImageField Support" virtual/python-imaging
-	optfeature "Password encryption" dev-python/bcrypt
-	echo ""
-}
-
 python_install_all() {
 	newbashcomp extras/django_bash_completion ${PN}-admin
 	bashcomp_alias ${PN}-admin django-admin.py
@@ -99,7 +82,24 @@ python_install_all() {
 	distutils-r1_python_install_all
 }
 
+src_install() {
+	distutils-r1_src_install
+	webapp_src_install
+}
+
 pkg_postinst() {
+	elog "Additional Backend support can be enabled via"
+	optfeature "MySQL backend support in python 2.7 only" dev-python/mysql-python
+	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysqlcient
+	optfeature "PostgreSQL backend support" dev-python/psycopg:2
+	echo ""
+	elog "Other features can be enhanced by"
+	optfeature "GEO Django" sci-libs/gdal[geos]
+	optfeature "Memcached support" dev-python/python-memcached
+	optfeature "ImageField Support" virtual/python-imaging
+	optfeature "Password encryption" dev-python/bcrypt
+	optfeature "High-level abstractions for Django forms" dev-python/django-formtools
+	echo ""
 	elog "A copy of the admin media is available to webapp-config for installation in a"
 	elog "webroot, as well as the traditional location in python's site-packages dir"
 	elog "for easy development."

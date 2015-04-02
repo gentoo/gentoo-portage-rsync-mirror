@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/App-Nopaste-1.4.0.ebuild,v 1.1 2015/03/28 23:37:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-Nopaste/App-Nopaste-1.4.0.ebuild,v 1.2 2015/04/02 10:24:29 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Easy access to any pastebin"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="+pastebin clipboard github test"
 
 RDEPEND="

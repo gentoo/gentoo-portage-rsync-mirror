@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Role-Tiny
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/ChangeLog,v 1.21 2015/03/29 09:43:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Role-Tiny/ChangeLog,v 1.22 2015/04/02 10:22:05 zlogene Exp $
+
+  02 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Role-Tiny-2.0.0.ebuild:
+  Add ~arm keyword
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> Role-Tiny-2.0.0.ebuild:
   Marked ~hppa (bug #543312).

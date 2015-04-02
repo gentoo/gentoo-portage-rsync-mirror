@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTTP-Body
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Body/ChangeLog,v 1.6 2014/11/30 22:20:45 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Body/ChangeLog,v 1.7 2015/04/02 10:17:13 zlogene Exp $
+
+*HTTP-Body-1.220.0 (02 Apr 2015)
+
+  02 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> +HTTP-Body-1.220.0.ebuild:
+  Version bump wrt bug #544970
 
 *HTTP-Body-1.190.0 (30 Nov 2014)
 

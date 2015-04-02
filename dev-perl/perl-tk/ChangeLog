@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.107 2015/04/01 23:13:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.108 2015/04/02 10:10:22 zlogene Exp $
+
+  02 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> perl-tk-804.33.0.ebuild:
+  Mark stable for all
 
   01 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-tk-804.32.0.ebuild:
