@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/blz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blz/ChangeLog,v 1.4 2015/03/08 23:40:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blz/ChangeLog,v 1.5 2015/04/02 07:26:07 jlec Exp $
+
+  02 Apr 2015; Justin Lecher <jlec@gentoo.org> -blz-0.6.1.ebuild,
+  blz-0.6.2.ebuild, metadata.xml:
+  Drop restriction on c-blocs version as failure isn't reproducible anymore;
+  DRop old
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> blz-0.6.2.ebuild:
   x86 stable, bug 540290

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2334.0.ebuild,v 1.1 2015/03/18 19:47:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2351.3.ebuild,v 1.1 2015/04/02 07:04:17 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -194,6 +194,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-system-jinja-r7.patch"
 	epatch "${FILESDIR}/${PN}-libsecret-r0.patch"
+	epatch "${FILESDIR}/${PN}-gnome-r0.patch"
 
 	if use widevine; then
 		local WIDEVINE_VERSION="$(< "${ROOT}/usr/$(get_libdir)/chromium-browser/widevine.version")"
@@ -237,7 +238,7 @@ src_prepare() {
 		'third_party/cros_system_api' \
 		'third_party/cython/python_flags.py' \
 		'third_party/dom_distiller_js' \
-		'third_party/dom_distiller_js/package/proto_gen/third_party/dom_distiller_js' \
+		'third_party/dom_distiller_js/dist/proto_gen/third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
 		'third_party/fips181' \
 		'third_party/flot' \
