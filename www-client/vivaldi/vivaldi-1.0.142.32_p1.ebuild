@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.138.4_p1.ebuild,v 1.1 2015/03/27 05:41:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.142.32_p1.ebuild,v 1.1 2015/04/02 04:18:44 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -14,8 +14,8 @@ DESCRIPTION="A new browser for our friends"
 HOMEPAGE="http://vivaldi.com/"
 VIVALDI_BASE_URI="${HOMEPAGE}download/download.php?f=${PN}-snapshot_${PV/_p/-}_"
 SRC_URI="
-	amd64? ( ${VIVALDI_BASE_URI}amd64.deb )
-	x86? ( ${VIVALDI_BASE_URI}i386.deb )
+	amd64? ( ${VIVALDI_BASE_URI}amd64.deb -> ${P}-amd64.deb )
+	x86? ( ${VIVALDI_BASE_URI}i386.deb -> ${P}-i386.deb )
 "
 
 LICENSE="Vivaldi"
