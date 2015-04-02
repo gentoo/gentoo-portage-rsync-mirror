@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cmdliner/cmdliner-0.9.7.ebuild,v 1.1 2015/02/09 09:49:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cmdliner/cmdliner-0.9.7.ebuild,v 1.2 2015/04/02 14:39:23 aballier Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE="doc +ocamlopt"
 
-DEPEND=">=dev-lang/ocaml-3.12:=[ocamlopt?]"
+DEPEND=">=dev-lang/ocaml-4:=[ocamlopt?]"
 RDEPEND="${DEPEND}"
 
 src_compile() {
