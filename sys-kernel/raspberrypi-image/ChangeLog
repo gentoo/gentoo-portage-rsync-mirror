@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/raspberrypi-image
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/ChangeLog,v 1.20 2015/04/01 14:34:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/ChangeLog,v 1.21 2015/04/02 00:23:21 xmw Exp $
+
+  02 Apr 2015; Michael Weber <xmw@gentoo.org>
+  -raspberrypi-image-3.10.11_pre-r20130907.ebuild,
+  -raspberrypi-image-3.11.2_pre-r20130926.ebuild:
+  Drop old kernels
 
 *raspberrypi-image-3.18.10_pre-r20150330 (01 Apr 2015)
 *raspberrypi-image-3.19.3_pre-r20150327 (01 Apr 2015)
