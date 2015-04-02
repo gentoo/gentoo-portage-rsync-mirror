@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kjs/kjs-5.8.0.ebuild,v 1.1 2015/03/21 17:26:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kjs/kjs-5.8.0.ebuild,v 1.2 2015/04/02 12:49:26 kensington Exp $
 
 EAPI=5
 
@@ -15,6 +15,7 @@ RDEPEND="
 	dev-libs/libpcre
 "
 DEPEND="${RDEPEND}
+	$(add_frameworks_dep kdoctools)
 	dev-lang/perl
 "
 
