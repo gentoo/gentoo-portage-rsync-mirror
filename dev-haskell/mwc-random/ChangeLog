@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/mwc-random
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mwc-random/ChangeLog,v 1.5 2014/12/14 05:24:37 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mwc-random/ChangeLog,v 1.6 2015/04/02 10:56:16 gienah Exp $
+
+*mwc-random-0.13.3.2 (02 Apr 2015)
+
+  02 Apr 2015; Mark Wright <gienah@gentoo.org> +mwc-random-0.13.3.2.ebuild:
+  Bump mwc-random to 0.13.3.2
 
 *mwc-random-0.13.2.2 (14 Dec 2014)
 
