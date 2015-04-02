@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16454 2015/04/01 14:36:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16455 2015/04/02 21:47:12 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (2 Apr 2015)
+# Ancient, dead upstream. File collisions (bug 535700)
+# and build failures (bug 277670). Masked for removal in
+# 30 days.
+dev-perl/Eidetic
+app-admin/rackview
 
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
 # Not used by anything in the tree and no upstream anymore.
