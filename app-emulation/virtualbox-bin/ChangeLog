@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.189 2015/03/17 08:00:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.190 2015/04/02 13:40:18 idella4 Exp $
+
+*virtualbox-bin-4.3.26.98988-r1 (02 Apr 2015)
+
+  02 Apr 2015; Ian Delaney <idella4@gentoo.org>
+  +virtualbox-bin-4.3.26.98988-r1.ebuild:
+  revbump; add python-r1 eclass to conduct install with use of python use flag,
+  fixes bug #539712 with consent of maintainer
 
 *virtualbox-bin-4.3.26.98988 (17 Mar 2015)
 
