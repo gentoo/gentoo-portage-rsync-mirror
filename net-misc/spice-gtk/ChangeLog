@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.92 2015/03/24 17:28:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.93 2015/04/02 20:14:40 maekke Exp $
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  arm stable, bug #542890
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> spice-gtk-0.25-r1.ebuild:
   Stable for amd64, wrt bug #542890

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.254 2015/04/01 08:32:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.255 2015/04/02 20:02:04 maekke Exp $
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> libtool-2.4.6.ebuild:
+  arm stable, bug #540408
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.6.ebuild:
   Stable for sparc, wrt bug #540408

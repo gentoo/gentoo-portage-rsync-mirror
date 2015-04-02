@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.97 2015/04/01 08:19:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.98 2015/04/02 20:13:15 maekke Exp $
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> arping-2.15.ebuild:
+  arm stable, bug #543196
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> arping-2.15.ebuild:
   Stable for sparc, wrt bug #543196

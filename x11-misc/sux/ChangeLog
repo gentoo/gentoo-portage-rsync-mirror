@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/sux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.31 2015/04/01 08:33:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/ChangeLog,v 1.32 2015/04/02 20:18:47 maekke Exp $
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> sux-1.0-r4.ebuild:
+  arm stable, bug #543928
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sux-1.0-r4.ebuild:
   Stable for sparc, wrt bug #543928

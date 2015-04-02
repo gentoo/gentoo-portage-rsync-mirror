@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.220 2015/04/01 08:25:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.221 2015/04/02 20:20:56 maekke Exp $
+
+  02 Apr 2015; Markus Meier <maekke@gentoo.org> tk-8.5.17.ebuild:
+  arm stable, bug #543022
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> tk-8.5.17.ebuild:
   Stable for sparc, wrt bug #543022
