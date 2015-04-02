@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.234 2015/03/19 09:28:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.235 2015/04/02 15:05:26 voyageur Exp $
+
+  02 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild,
+  +files/llvm-3.7-nodoctargz.patch:
+  Fix live ebuild patch, though it requires a rewrite for cmake build system,
+  bug #543536
 
   19 Mar 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.1-r2.ebuild,
   +files/llvm-3.1-docs-pod-markup-fixes.patch,
