@@ -1,1 +1,2 @@
 move dev-perl/config-general dev-perl/Config-General
+move dev-util/pkgcore-checks dev-util/pkgcheck

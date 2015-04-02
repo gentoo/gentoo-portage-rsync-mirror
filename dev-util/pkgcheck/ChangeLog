@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/pkgcheck
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcheck/ChangeLog,v 1.1 2015/04/02 02:58:38 radhermit Exp $
+
+*pkgcheck-9999 (02 Apr 2015)
+*pkgcheck-0.5 (02 Apr 2015)
+
+  02 Apr 2015; Tim Harder <radhermit@gentoo.org> +pkgcheck-0.5.ebuild,
+  +pkgcheck-9999.ebuild, +metadata.xml:
+  Rename pkgcore-checks to pkgcheck and version bump.
+

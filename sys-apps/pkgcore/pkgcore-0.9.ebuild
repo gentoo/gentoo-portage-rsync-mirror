@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.24 2015/04/02 02:34:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.9.ebuild,v 1.1 2015/04/02 02:34:16 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,7 +11,7 @@ if [[ ${PV} == *9999 ]] ; then
 	inherit git-r3
 else
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.bz2"
 fi
 
 DESCRIPTION="pkgcore package manager"
@@ -21,10 +21,10 @@ LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
 IUSE="doc test"
 
-RDEPEND="=dev-python/snakeoil-9999[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/snakeoil-0.6.3[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/pyparsing[${PYTHON_USEDEP}]
-	dev-python/sphinx[${PYTHON_USEDEP}]
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( $(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )
 "
 
