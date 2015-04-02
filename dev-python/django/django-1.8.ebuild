@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.25 2015/04/02 06:59:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.8.ebuild,v 1.1 2015/04/02 06:59:07 jlec Exp $
 
 EAPI=5
 
@@ -8,18 +8,21 @@ PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
 PYTHON_REQ_USE='sqlite?'
 WEBAPP_NO_AUTO_INSTALL="yes"
 
-inherit bash-completion-r1 distutils-r1 eutils git-r3 versionator webapp
+inherit bash-completion-r1 distutils-r1 eutils versionator webapp
+
+MY_PN="Django"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="High-level Python web framework"
 HOMEPAGE="http://www.djangoproject.com/ http://pypi.python.org/pypi/Django"
-SRC_URI=""
-EGIT_REPO_URI="
-	https://github.com/django/django.git
+SRC_URI="
+	https://www.djangoproject.com/m/releases/$(get_version_component_range 1-2)/${MY_P}.tar.gz
+	mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz
 	"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc sqlite test"
 
 RDEPEND=""
@@ -79,7 +82,6 @@ src_install() {
 	optfeature "Memcached support" dev-python/python-memcached
 	optfeature "ImageField Support" virtual/python-imaging
 	optfeature "Password encryption" dev-python/bcrypt
-	optfeature "Extended templating support" dev-python/jinja
 	echo ""
 }
 

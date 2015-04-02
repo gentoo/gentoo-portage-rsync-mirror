@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/meld3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.18 2015/03/08 23:53:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/meld3/ChangeLog,v 1.19 2015/04/02 06:53:00 patrick Exp $
+
+*meld3-1.0.2 (02 Apr 2015)
+
+  02 Apr 2015; Patrick Lauer <patrick@gentoo.org> +meld3-1.0.2.ebuild:
+  Bump
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> meld3-1.0.0.ebuild:
   x86 stable, bug 540290
