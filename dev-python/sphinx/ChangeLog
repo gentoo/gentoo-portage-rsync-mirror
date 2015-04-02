@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.187 2015/03/28 07:02:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.188 2015/04/02 09:56:15 idella4 Exp $
+
+*sphinx-1.3-r1 (02 Apr 2015)
+
+  02 Apr 2015; Ian Delaney <idella4@gentoo.org> +sphinx-1.3-r1.ebuild:
+  revbump; correction to deps noted by Arfrever
 
   28 Mar 2015; Markus Meier <maekke@gentoo.org> sphinx-1.3.ebuild:
   add ~arm, bug #543742
