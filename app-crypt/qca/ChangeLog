@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.106 2015/03/04 07:54:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.107 2015/04/02 14:06:37 kensington Exp $
+
+  02 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/qca-2.1.0.3-qt55.patch, qca-2.1.0.3.ebuild:
+  Backport patch from upstream to solve build failure with Qt 5.5 wrt bug
+  #543622.
 
   04 Mar 2015; Michael Palimaka <kensington@gentoo.org> qca-2.0.3-r1.ebuild:
   Pull in OpenSSL plugin by default.

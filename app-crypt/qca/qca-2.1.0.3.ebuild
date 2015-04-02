@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.6 2015/03/03 05:48:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.1.0.3.ebuild,v 1.7 2015/04/02 14:06:37 kensington Exp $
 
 EAPI=5
 
@@ -53,7 +53,10 @@ DOCS=( README TODO )
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
-PATCHES=( "${FILESDIR}/${PN}-disable-pgp-test.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-disable-pgp-test.patch"
+	"${FILESDIR}/${P}-qt55.patch"
+)
 
 qca_plugin_use() {
 	echo "-DWITH_${2:-$1}_PLUGIN=$(use $1 && echo yes || echo no)"
