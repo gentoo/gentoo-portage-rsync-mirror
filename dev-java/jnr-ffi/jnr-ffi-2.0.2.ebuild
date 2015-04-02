@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/jnr-ffi-2.0.2.ebuild,v 1.3 2015/04/02 22:13:15 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/jnr-ffi-2.0.2.ebuild,v 1.4 2015/04/02 22:37:02 chewi Exp $
 
 EAPI="5"
 
@@ -46,9 +46,6 @@ EANT_EXTRA_ARGS="-Dmaven.build.finalName=${PN}"
 EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},junit-4"
 
 src_test() {
-	# Fails, upstream pom has ignore test failures enabled.
-	rm -v src/test/java/jnr/ffi/StringArrayTest.java || die
-
 	# build native test library
 	emake BUILD_DIR=build -f libtest/GNUmakefile
 

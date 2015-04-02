@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.1.4.ebuild,v 1.1 2015/03/21 21:38:09 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-netdb/jnr-netdb-1.1.4.ebuild,v 1.2 2015/04/02 22:55:40 chewi Exp $
 
 EAPI="5"
 
@@ -39,13 +39,12 @@ JAVA_ANT_REWRITE_CLASSPATH="yes"
 JAVA_ANT_CLASSPATH_TAGS="${JAVA_ANT_CLASSPATH_TAGS} javadoc"
 JAVA_ANT_ENCODING="UTF-8"
 
-EANT_GENTOO_CLASSPATH="jnr-ffi-1"
+EANT_GENTOO_CLASSPATH="jnr-ffi-2"
 EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},junit-4"
 
-# TODO: Test fails. Investigate why?
-# src_test() {
-# 	java-pkg-2_src_test
-# }
+src_test() {
+	java-pkg-2_src_test
+}
 
 src_install() {
 	java-pkg_dojar target/${PN}.jar
