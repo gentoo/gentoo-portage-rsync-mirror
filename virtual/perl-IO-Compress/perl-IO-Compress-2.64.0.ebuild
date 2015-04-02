@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/perl-IO-Compress-2.64.0.ebuild,v 1.10 2015/02/18 08:37:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO-Compress/perl-IO-Compress-2.64.0.ebuild,v 1.11 2015/04/02 20:59:16 dilfridge Exp $
 
 EAPI=5
 
@@ -17,4 +17,6 @@ RDEPEND="
 	|| ( =dev-lang/perl-5.20* ~perl-core/${PN#perl-}-${PV} )
 	!<perl-core/${PN#perl-}-${PV}
 	!>perl-core/${PN#perl-}-${PV}-r999
+	>=virtual/perl-Compress-Raw-Zlib-${PV}
+	>=virtual/perl-Compress-Raw-Bzip2-${PV}
 "
