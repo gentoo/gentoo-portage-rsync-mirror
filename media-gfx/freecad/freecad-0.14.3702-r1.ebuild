@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.14.3702-r1.ebuild,v 1.3 2014/10/13 08:30:09 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.14.3702-r1.ebuild,v 1.4 2015/04/02 18:48:25 mr_bones_ Exp $
 
 EAPI=5
 
@@ -106,8 +106,8 @@ src_configure() {
 
 	# TODO to remove embedded dependencies:
 	#
-	#	-DFREECAD_USE_EXTERNAL_ZIPIOS="ON" -- this option needs zipios++ but it's not yet in portage so the embedded zipios++ 
-	#                (under src/zipios++) will be used 
+	#	-DFREECAD_USE_EXTERNAL_ZIPIOS="ON" -- this option needs zipios++ but it's not yet in portage so the embedded zipios++
+	#                (under src/zipios++) will be used
 	#	salomesmesh is in 3rdparty but upstream's find_package function is not complete yet to compile against external version
 	#                (external salomesmesh is available in "science" overlay)
 

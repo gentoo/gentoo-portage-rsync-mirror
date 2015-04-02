@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-emergelog/plasma-emergelog-0.0.2-r1.ebuild,v 1.1 2013/06/22 16:35:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-emergelog/plasma-emergelog-0.0.2-r1.ebuild,v 1.2 2015/04/02 18:46:55 mr_bones_ Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.kde-look.org/content/show.php?content=103928"
 SRC_URI="http://dev.gentooexperimental.org/~hwoarang/projects/plasma-emergelog/${P}.tar.gz"
 
 LICENSE="GPL-3+"
-# Included LICENSE is GPL-2, but all headers say 3+. hwoarang said 
+# Included LICENSE is GPL-2, but all headers say 3+. hwoarang said
 # that it can be licensed as 3+
 KEYWORDS="~amd64 ~x86"
 SLOT="4"

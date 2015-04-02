@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.8.ebuild,v 1.13 2014/09/20 21:13:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.8.ebuild,v 1.14 2015/04/02 18:42:28 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos ~x86-solaris"
 
 # Block on older versions of rrdtool that install the bindings themselves.
-# requires rrd_xport which requires rrd_graph 
+# requires rrd_xport which requires rrd_graph
 RDEPEND="${RDEPEND} net-analyzer/rrdtool[graph] !!<net-analyzer/rrdtool-1.4.8-r1"
 DEPEND="${DEPEND} net-analyzer/rrdtool[graph]"
 

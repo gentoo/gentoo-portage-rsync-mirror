@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.9 2014/11/04 09:23:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.5.1.ebuild,v 1.10 2015/04/02 18:45:26 mr_bones_ Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ run_for_build() {
 src_compile() {
 	tc-export AR CXX
 
-	# configure.py uses CFLAGS instead of CXXFLAGS 
+	# configure.py uses CFLAGS instead of CXXFLAGS
 	export CFLAGS=${CXXFLAGS}
 
 	run_for_build "${PYTHON}" bootstrap.py --verbose || die

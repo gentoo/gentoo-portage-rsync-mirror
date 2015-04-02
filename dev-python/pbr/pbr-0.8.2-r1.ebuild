@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/pbr-0.8.2-r1.ebuild,v 1.5 2015/03/09 00:03:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/pbr-0.8.2-r1.ebuild,v 1.6 2015/04/02 18:37:17 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -54,7 +54,7 @@ python_prepare_all() {
 }
 
 python_test() {
-	# Note; removed tests pass once package is emerged, 
+	# Note; removed tests pass once package is emerged,
 	# it's the suite's design that breaks form, not the tests' intended purpose
 	testr init
 	testr run || die "Testsuite failed under ${EPYTHON}"

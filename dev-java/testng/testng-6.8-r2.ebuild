@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/testng/testng-6.8-r2.ebuild,v 1.2 2014/08/10 20:25:44 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/testng/testng-6.8-r2.ebuild,v 1.3 2015/04/02 18:34:23 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -59,7 +59,7 @@ java_prepare() {
 	#     TrueParallelTest - Doesn't always work, especially not on a system
 	#                        under load; since this could fail during parallel
 	#                        emerges, we assume the underlying functionality to
-	#                        work as it has definitely succeeded under lower load. 
+	#                        work as it has definitely succeeded under lower load.
 	sed -i '/test.thread.TrueParallelTest/d' src/test/resources/testng.xml || die
 
 	mkdir lib || die

@@ -10,4 +10,4 @@ RDEPEND=>=sys-libs/ncurses-5.2 dev-libs/libnl >=dev-libs/popt-1.16
 SLOT=0
 SRC_URI=https://kernel.org/pub/linux/utils/kernel/ipvsadm/ipvsadm-1.27.tar.xz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=eeadfb7e63da13366e299a0748482d33
+_md5_=5b91f0b4cb8f4233477bbcbb556002e2

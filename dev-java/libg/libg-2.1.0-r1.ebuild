@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libg/libg-2.1.0-r1.ebuild,v 1.2 2014/08/10 20:21:03 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libg/libg-2.1.0-r1.ebuild,v 1.3 2015/04/02 18:32:12 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 # its own turn again depends on aQute.libg again; we can temporarily assume that
 # if bndlib tests pass that libg is sufficiently tested, in the future we should
 # look whether it is feasible to combine the packages or otherwise temporarily
-# build biz.aquite.bndlib and biz.aqute.junit in this package. 
+# build biz.aquite.bndlib and biz.aqute.junit in this package.
 RESTRICT="test"
 
 DEPEND=">=virtual/jdk-1.5"

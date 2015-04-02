@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/pycountry-1.8.ebuild,v 1.3 2014/10/04 14:16:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/pycountry-1.8.ebuild,v 1.4 2015/04/02 18:38:44 mr_bones_ Exp $
 
 EAPI=5
 # pypy pending actioning of bug filed upstream
@@ -25,7 +25,7 @@ DOCS=( HISTORY.txt README TODO.txt )
 
 python_test() {
 	# https://bitbucket.org/techtonik/pycountry/issue/8/test_locales-pycountry-015-pypy
-	# and STILL 
+	# and STILL
 	pushd "${BUILD_DIR}"/lib > /dev/null
 	if [[ "${EPYTHON}" == pypy ]]; then
 		sed -e 's:test_locales:_&:' -i pycountry/tests/test_general.py || die

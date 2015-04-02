@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.8.ebuild,v 1.3 2014/07/23 15:19:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.8.ebuild,v 1.4 2015/04/02 18:49:11 mr_bones_ Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -60,7 +60,7 @@ DEPEND="${COMMON_DEPEND}
 #	gnome-base/gnome-common
 
 src_prepare() {
-	# Remove unwanted CFLAGS added with USE=debug 
+	# Remove unwanted CFLAGS added with USE=debug
 	sed -e 's/CFLAGS="$CFLAGS -g -O0 -DDEBUG"//' \
 		-i configure.ac -i configure || die
 

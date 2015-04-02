@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.15.ebuild,v 1.7 2015/04/01 08:19:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.15.ebuild,v 1.8 2015/04/02 18:53:00 mr_bones_ Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	rm -f Makefile
 
-	# since we install as arping2, use arping2 in documentation 
+	# since we install as arping2, use arping2 in documentation
 	sed -i \
 		-e "s|\(${PN}\)|\12|g" \
 		-e "s|\(${PN}\)\(\W\)|\12\2|g" \

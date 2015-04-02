@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.2.1.ebuild,v 1.2 2014/01/05 01:43:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.2.1.ebuild,v 1.3 2015/04/02 18:56:38 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ RELNOTES="${SRC_URI_BASE}/${PV}_Release_Notes.pdf"
 # Products or for use with LSI Devices to its Subsequent Users;
 # (d) Distribute the Explanatory Materials related to LSI Binary Code only
 # for use with LSI Devices;
-# 
+#
 # 3. License Restrictions
 # 3.1. LSI Binary Code. The Licenses granted in Section 2.1 for LSI Binary
 # Code and related Explanatory Materials are subject to the following

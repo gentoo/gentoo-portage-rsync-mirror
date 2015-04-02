@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/visit/visit-2.8.2.ebuild,v 1.1 2015/01/09 12:02:13 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/visit/visit-2.8.2.ebuild,v 1.2 2015/04/02 18:33:35 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )

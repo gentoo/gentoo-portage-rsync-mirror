@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.9 2015/02/26 18:25:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.10 2015/04/02 18:49:57 mr_bones_ Exp $
 
 EAPI=5
 
@@ -77,7 +77,7 @@ src_configure() {
 	#  - Parameter --with-exiv2 compiles a noinst-app only, no use
 	#
 	#  - Parameter --disable-workshop disables any use of Lua, effectivly
-	# 
+	#
 	#  - v4l support does not work with our media-libs/libv4l-0.8.9,
 	#    upstream bug https://bugzilla.gnome.org/show_bug.cgi?id=654675
 	#

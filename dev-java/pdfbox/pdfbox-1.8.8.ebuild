@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-1.8.8.ebuild,v 1.2 2015/02/22 12:01:04 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-1.8.8.ebuild,v 1.3 2015/04/02 18:33:40 mr_bones_ Exp $
 EAPI=5
 
 JAVA_PKG_IUSE="doc source test"
@@ -61,7 +61,7 @@ src_test() {
 	# So let's move our precious jar to another dir
 	mv target/${P}.jar ${P}.jar
 
-	# TODO: not all tests pass; investigate why. 
+	# TODO: not all tests pass; investigate why.
 	# (is it our business or upstream's?)
 	java-pkg-2_src_test
 }

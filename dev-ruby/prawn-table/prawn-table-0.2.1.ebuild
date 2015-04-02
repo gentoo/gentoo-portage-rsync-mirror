@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.2.1.ebuild,v 1.1 2014/11/02 18:47:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/prawn-table-0.2.1.ebuild,v 1.2 2015/04/02 18:41:43 mr_bones_ Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -26,6 +26,6 @@ ruby_add_bdepend "test? ( dev-ruby/mocha
 all_ruby_prepare() {
 	sed -i -e "/[Bb]undler/s/^/#/" spec/spec_helper.rb || die
 	# Remove failing test
-	# See https://github.com/prawnpdf/prawn-table/issues/10 
+	# See https://github.com/prawnpdf/prawn-table/issues/10
 	sed -i -e "/Prints table on one page when using subtable with colspan > 1/,+24 s/^/#/" spec/table_spec.rb || die
 }

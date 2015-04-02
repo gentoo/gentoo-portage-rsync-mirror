@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.0.3.ebuild,v 1.5 2014/03/01 22:19:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.0.3.ebuild,v 1.6 2015/04/02 18:36:32 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -38,7 +38,7 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
 
-	# Aclocal 1.13 deprecated error #467674	
+	# Aclocal 1.13 deprecated error #467674
 	sed -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' -i configure.ac || die
 
 	autotools-utils_src_prepare

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.3.ebuild,v 1.13 2014/01/18 07:52:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.6.3.ebuild,v 1.14 2015/04/02 18:55:53 mr_bones_ Exp $
 
 EAPI=5
 
@@ -142,7 +142,7 @@ src_configure() {
 			# Live ebuild needs an Emacs to build gnuplot.texi
 			if has_version virtual/emacs; then emacs=emacs
 			elif has_version app-xemacs/texinfo; then emacs=xemacs; fi
-			# for emacs != no gnuplot will install lisp files in 
+			# for emacs != no gnuplot will install lisp files in
 			# ${lispdir}/ which will / for emtpy lispdir
 			lispdir="${T}"
 		fi

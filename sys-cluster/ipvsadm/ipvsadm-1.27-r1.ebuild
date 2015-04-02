@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.27-r1.ebuild,v 1.1 2013/11/02 19:49:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.27-r1.ebuild,v 1.2 2015/04/02 18:58:08 mr_bones_ Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ pkg_pretend() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.27-buildsystem.patch
 	# Merged upstream in 1.27
-	#epatch "${FILESDIR}"/${PN}-1.26-stack_smashing.patch # bug 371903 
+	#epatch "${FILESDIR}"/${PN}-1.26-stack_smashing.patch # bug 371903
 	epatch "${FILESDIR}"/${PN}-1.27-fix-daemon-state.patch
 	use static-libs && export STATIC=1
 }

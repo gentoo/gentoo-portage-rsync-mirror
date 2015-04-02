@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20100223-r1.ebuild,v 1.4 2014/03/05 18:29:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20100223-r1.ebuild,v 1.5 2015/04/02 18:51:31 mr_bones_ Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ldflags.patch \
 		"${FILESDIR}"/${P}-alevt.patch
 
-	# do not compile test-progs, incompartible with videodev2.h	
+	# do not compile test-progs, incompartible with videodev2.h
 	sed -e '/-C test/d' \
 		-i Makefile || die
 

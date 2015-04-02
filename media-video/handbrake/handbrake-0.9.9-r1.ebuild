@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9-r1.ebuild,v 1.4 2014/09/01 16:47:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9-r1.ebuild,v 1.5 2015/04/02 18:52:16 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -85,7 +85,7 @@ src_prepare() {
 		"${S}"/make/include/main.defs \
 		|| die "Contrib removal failed."
 
-	# Instead of adding a #define to libmkv, we expand it in place. 
+	# Instead of adding a #define to libmkv, we expand it in place.
 	epatch "${FILESDIR}"/${PN}-9999-expand-MK_SUBTITLE_PGS.patch
 
 	# Fix compilation against the released 1.9.1 version of mp4v2.

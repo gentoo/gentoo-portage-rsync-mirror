@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.50.2-r1.ebuild,v 1.14 2014/04/06 15:44:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.50.2-r1.ebuild,v 1.15 2015/04/02 18:44:42 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 DOCS=( AUTHORS ChangeLog NEWS README TODO doc/I18N-HOWTO )
 
 src_prepare() {
-	# Use plain localedir to install mo files to, rather than trying to 
+	# Use plain localedir to install mo files to, rather than trying to
 	# guess one, bug #432848#c11
 	epatch "${FILESDIR}/${P}-localedir-fix.patch"
 

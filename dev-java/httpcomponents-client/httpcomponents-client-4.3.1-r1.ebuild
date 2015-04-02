@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-client/httpcomponents-client-4.3.1-r1.ebuild,v 1.1 2013/12/01 16:08:26 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-client/httpcomponents-client-4.3.1-r1.ebuild,v 1.2 2015/04/02 18:31:30 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ EANT_TEST_ANT_TASKS="ant-junit"
 java_prepare() {
 	# The Ehcache cache storage depends on a version of Ehcache
 	# (with a .replace(Element, Element) method) >= 2.2.0 which can only be built
-	# with the proprietary terracotta library 
+	# with the proprietary terracotta library
 	rm "${S}"/httpclient-cache/src/main/java/org/apache/http/impl/client/cache/ehcache/EhcacheHttpCacheStorage.java \
 		"${S}"/httpclient-cache/src/test/java/org/apache/http/impl/client/cache/ehcache/TestEhcacheHttpCacheStorage.java \
 		"${S}"/httpclient-cache/src/test/java/org/apache/http/impl/client/cache/ehcache/TestEhcacheProtocolRequirements.java || die

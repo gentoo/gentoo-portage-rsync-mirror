@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.12.ebuild,v 1.1 2015/02/04 18:16:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.12.ebuild,v 1.2 2015/04/02 19:01:08 mr_bones_ Exp $
 
 EAPI=5
 
@@ -169,7 +169,7 @@ src_install() {
 		rm "${ED}/"$i || die "Failed to prune apache-tools bits"
 	done
 
-	# install apxs in /usr/bin (bug #502384) and put a symlink into the 
+	# install apxs in /usr/bin (bug #502384) and put a symlink into the
 	# old location until all ebuilds and eclasses have been modified to
 	# use the new location.
 	local apxs="/usr/bin/apxs"

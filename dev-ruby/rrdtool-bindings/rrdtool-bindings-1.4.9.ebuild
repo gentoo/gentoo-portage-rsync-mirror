@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.9.ebuild,v 1.1 2014/10/04 09:35:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rrdtool-bindings/rrdtool-bindings-1.4.9.ebuild,v 1.2 2015/04/02 18:42:28 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ IUSE="graph test"
 REQUIRED_USE="test? ( graph )"
 
 # Block on older versions of rrdtool that install the bindings themselves.
-# requires rrd_xport which requires rrd_graph 
+# requires rrd_xport which requires rrd_graph
 RDEPEND="
 	~net-analyzer/rrdtool-${PV}[graph=]
 "

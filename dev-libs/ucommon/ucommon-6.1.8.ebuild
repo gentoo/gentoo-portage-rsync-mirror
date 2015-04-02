@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.1.8.ebuild,v 1.1 2014/06/27 08:46:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucommon/ucommon-6.1.8.ebuild,v 1.2 2015/04/02 18:36:32 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -38,7 +38,7 @@ PATCHES=( "${FILESDIR}"/6.1/disable_rtf_gen_doxy.patch
 
 src_prepare() {
 
-	# Aclocal 1.13 deprecated error BGO #467674	
+	# Aclocal 1.13 deprecated error BGO #467674
 	sed -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' -i configure.ac || die
 
 	autotools-utils_src_prepare

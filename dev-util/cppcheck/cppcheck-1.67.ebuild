@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.67.ebuild,v 1.3 2015/02/27 10:14:25 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.67.ebuild,v 1.4 2015/04/02 18:43:59 mr_bones_ Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ src_test() {
 	mv -v cli/cppcheckexecutor.o{,.final}
 	#trigger recompile with CFGDIR inside ${S}
 	emake check CFGDIR="${S}/cfg"
-	# restore 
+	# restore
 	mv -v ${PN}{.final,}
 	mv -v lib/library.o{.final,}
 	mv -v cli/cppcheckexecutor.o{.final,}

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ujson-1.33.ebuild,v 1.6 2015/03/09 00:01:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ujson-1.33.ebuild,v 1.7 2015/04/02 18:40:59 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ PATCHES=(
 
 python_test() {
 	# See setup.py; line 72. Again "${S}" is used for reading tests
-	# Since py3_2 is first in the queue it needs its own copy 
+	# Since py3_2 is first in the queue it needs its own copy
 	# or else all py2s to follow will be reading read py3 tests
 	if [[ "${EPYTHON}" =~ 'python3' ]]; then
 		cd "${BUILD_DIR}"/lib || die

@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/perl-5.8.1 dev-perl/XML-Parser sys-devel/gettext
 SLOT=0
 SRC_URI=https://launchpad.net/intltool/trunk/0.50.2/+download/intltool-0.50.2.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=dc3dfb04c9d0df123419d49932ebcf0d
+_md5_=b4af2466aee063cf3a3c91613dcc98b5

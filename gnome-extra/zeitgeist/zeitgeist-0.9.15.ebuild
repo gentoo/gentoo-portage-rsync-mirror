@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.15.ebuild,v 1.1 2015/03/03 23:48:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.15.ebuild,v 1.2 2015/04/02 18:46:11 mr_bones_ Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=true
@@ -52,7 +52,7 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	# pure-python module is better managed manually, see src_install 
+	# pure-python module is better managed manually, see src_install
 	sed -e 's:python::g' \
 		-i Makefile.am || die
 

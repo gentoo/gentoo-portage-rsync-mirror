@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-4.0-r1.ebuild,v 1.1 2015/02/21 16:36:48 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/balsa-4.0-r1.ebuild,v 1.2 2015/04/02 18:55:09 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -68,8 +68,8 @@ src_compile() {
 	PATH="$PATH:"${S}"/bin"
 	emake -j1
 
-	# the additional packages have to be configured after compiling 
-	# balsa binaries 
+	# the additional packages have to be configured after compiling
+	# balsa binaries
 
 	# configure AMS035 tech
 	if [ $TECH_AMS ]; then

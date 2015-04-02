@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vrrpd/vrrpd-1.9.ebuild,v 1.1 2013/12/03 22:49:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vrrpd/vrrpd-1.9.ebuild,v 1.2 2015/04/02 18:54:26 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils
@@ -20,7 +20,7 @@ S="${WORKDIR}/Vrrpd-${PV}"
 src_prepare() {
 	epatch "${FILESDIR}"/vrrpd-1.9-rollup.patch || die
 	emake mrproper
-	#rm -f atropos 
+	#rm -f atropos
 }
 
 src_compile() {

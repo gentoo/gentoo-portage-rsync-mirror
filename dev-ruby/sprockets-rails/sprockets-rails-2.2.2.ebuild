@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/sprockets-rails-2.2.2.ebuild,v 1.1 2014/12/22 12:13:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/sprockets-rails-2.2.2.ebuild,v 1.2 2015/04/02 18:43:14 mr_bones_ Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -36,7 +36,7 @@ ruby_add_bdepend "
 all_ruby_prepare() {
 	# Avoid tests that fail on a custom manifest name. It is not clear
 	# if this is related to Rails 4.2, and the current sprockets
-	# version already in the tree only works with this newer 
+	# version already in the tree only works with this newer
 	# sprockets-rails version.
 	rm test/test_task.rb || die
 }

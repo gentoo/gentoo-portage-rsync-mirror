@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/mate-menus-1.8.0.ebuild,v 1.4 2014/07/02 09:46:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-base/mate-menus/mate-menus-1.8.0.ebuild,v 1.5 2015/04/02 18:47:39 mr_bones_ Exp $
 
 EAPI="5"
 
@@ -51,7 +51,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable introspection)"
 
-	# Do NOT compile with --disable-debug/--enable-debug=no as it disables API 
+	# Do NOT compile with --disable-debug/--enable-debug=no as it disables API
 	# usage checks.
 	if ! use debug ; then
 		G2CONF="${G2CONF} --enable-debug=minimum"

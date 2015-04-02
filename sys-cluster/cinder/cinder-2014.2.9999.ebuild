@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.2.9999.ebuild,v 1.4 2015/02/08 02:15:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2014.2.9999.ebuild,v 1.5 2015/04/02 18:57:23 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -123,7 +123,7 @@ pkg_setup() {
 #}
 
 python_test() {
-	# Let's track progress of this # https://bugs.launchpad.net/swift/+bug/1249727	
+	# Let's track progress of this # https://bugs.launchpad.net/swift/+bug/1249727
 	nosetests -I test_wsgi.py cinder/tests/ || die "tests failed under python2.7"
 }
 

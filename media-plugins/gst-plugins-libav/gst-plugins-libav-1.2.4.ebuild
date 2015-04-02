@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.4.ebuild,v 1.11 2014/10/11 13:16:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.4.ebuild,v 1.12 2015/04/02 18:50:47 mr_bones_ Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic multilib-minimal
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
-	# compatibility with recent releases 
+	# compatibility with recent releases
 	# TODO: likely apply them with libav-10 when it's out but there will
 	# probably be an upstream gst-libav release compatible at that time.
 	if has_version '>=media-video/ffmpeg-2.0' ; then
