@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/uutf/uutf-0.9.4.ebuild,v 1.2 2015/01/26 14:01:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/uutf/uutf-0.9.4.ebuild,v 1.3 2015/04/02 08:34:38 aballier Exp $
 
 EAPI="5"
 
@@ -13,11 +13,12 @@ SRC_URI="http://erratique.ch/software/uutf/releases/${P}.tbz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64"
-IUSE="utftrip +ocamlopt doc"
+IUSE="doc utftrip +ocamlopt test"
 
 RDEPEND=">=dev-lang/ocaml-3.12:=[ocamlopt?]
 	utftrip? ( dev-ml/cmdliner:= )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? ( dev-ml/cmdliner )"
 
 src_compile() {
 	ocaml pkg/build.ml \

@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/django-formtools
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-formtools/ChangeLog,v 1.1 2015/04/02 08:50:31 jlec Exp $
+
+*django-formtools-1.0 (02 Apr 2015)
+
+  02 Apr 2015; Justin Lecher <jlec@gentoo.org> +django-formtools-1.0.ebuild,
+  +metadata.xml:
+  New package written by me
