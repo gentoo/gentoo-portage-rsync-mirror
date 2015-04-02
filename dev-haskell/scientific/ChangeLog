@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/scientific
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/scientific/ChangeLog,v 1.6 2015/03/11 11:39:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/scientific/ChangeLog,v 1.7 2015/04/02 11:10:54 gienah Exp $
+
+*scientific-0.3.3.8 (02 Apr 2015)
+
+  02 Apr 2015; Mark Wright <gienah@gentoo.org> +scientific-0.3.3.8.ebuild:
+  Bump scientific to 0.3.3.8
 
 *scientific-0.3.3.7 (11 Mar 2015)
 
