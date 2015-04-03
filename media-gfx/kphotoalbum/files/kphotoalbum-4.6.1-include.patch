@@ -1,0 +1,47 @@
+From cd1235b9f5b15be4b87d3dc1c147510efc0c6728 Mon Sep 17 00:00:00 2001
+From: Tobias Leupold <tobias.leupold@web.de>
+Date: Wed, 18 Mar 2015 18:25:51 +0100
+Subject: [PATCH] Includes cleanup and missing KLocale include added (thanks to
+ Michael Palimaka for the hint!)
+
+---
+ ThumbnailView/GridResizeSlider.cpp | 13 +++++++++----
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+
+diff --git a/ThumbnailView/GridResizeSlider.cpp b/ThumbnailView/GridResizeSlider.cpp
+index 85b4a97..3e84f24 100644
+--- a/ThumbnailView/GridResizeSlider.cpp
++++ b/ThumbnailView/GridResizeSlider.cpp
+@@ -15,20 +15,25 @@
+    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+    Boston, MA 02110-1301, USA.
+ */
+-#include "GridResizeSlider.h"
+ 
++// Qt includes
+ #include <QScrollBar>
+ #include <QTimer>
+-#include <KSharedConfig>
+ #include <QDebug>
++
++// KDE includes
++#include <KSharedConfig>
+ #include <KMessageBox>
++#include <KLocale>
+ 
++// Local includes
++#include "MainWindow/Window.h"
++#include "Settings/SettingsData.h"
++#include "GridResizeSlider.h"
+ #include "CellGeometry.h"
+ #include "ThumbnailModel.h"
+ #include "ThumbnailWidget.h"
+-#include "Settings/SettingsData.h"
+ #include "ImageManager/ThumbnailBuilder.h"
+-#include "MainWindow/Window.h"
+ 
+ #ifdef DEBUG_ResizeSlider
+ #define Debug qDebug
+-- 
+2.0.5
+
