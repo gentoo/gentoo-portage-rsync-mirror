@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/CGI-Emulate-PSGI
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Emulate-PSGI/ChangeLog,v 1.5 2014/08/26 17:37:36 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Emulate-PSGI/ChangeLog,v 1.6 2015/04/03 20:27:52 dilfridge Exp $
+
+*CGI-Emulate-PSGI-0.200.0 (03 Apr 2015)
+
+  03 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +CGI-Emulate-PSGI-0.200.0.ebuild:
+  Version bump
 
 *CGI-Emulate-PSGI-0.150.0-r1 (26 Aug 2014)
 

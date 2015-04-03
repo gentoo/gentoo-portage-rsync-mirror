@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyyaml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.54 2015/02/01 21:46:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.55 2015/04/03 20:10:41 vapier Exp $
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> pyyaml-3.11.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pyyaml-3.10.ebuild:
   Remove old.
