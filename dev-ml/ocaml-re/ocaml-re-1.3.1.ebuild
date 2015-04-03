@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-re/ocaml-re-1.3.1.ebuild,v 1.1 2015/03/16 13:54:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-re/ocaml-re-1.3.1.ebuild,v 1.2 2015/04/03 07:52:43 aballier Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0/${PV}"
 KEYWORDS="~amd64"
 IUSE="test"
 
-RDEPEND=""
+RDEPEND=">=dev-lang/ocaml-4.02:="
 DEPEND="${RDEPEND}
 	test? ( dev-ml/ounit )"
 DOCS=( "CHANGES" "TODO.txt" "README.md" )

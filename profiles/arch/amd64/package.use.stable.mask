@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.126 2015/03/28 22:11:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.127 2015/04/03 07:51:52 dlan Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Yixun Lan <dlan@gentoo.org> (02 Apr 2015)
+# sys-fs/zfs is not stable.
+sys-cluster/ceph zfs
 
 # Pacho Ramos <pacho@gentoo.org> (08 Mar 2015)
 # mayavi is broken, bug #500104
