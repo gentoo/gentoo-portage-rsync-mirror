@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16456 2015/04/03 01:33:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16457 2015/04/03 07:16:14 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -608,10 +608,6 @@ dev-ruby/ohai
 # Duplicates media-fonts/culmus[ancient] (bug #486814).
 # Masked for removal in 30 days.
 media-fonts/culmus-ancient
-
-# Hans de Graaff <graaff@gentoo.org> (15 Feb 2015)
-# Masked for removal due to licensing issues, bug 539778
-dev-ruby/gemoji
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (12 Feb 2015)
 # dead on upstream since years,

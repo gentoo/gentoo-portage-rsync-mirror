@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r9.ebuild,v 1.5 2011/04/15 21:56:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r9.ebuild,v 1.6 2015/04/03 07:17:16 vapier Exp $
+
+EAPI="5"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -18,15 +20,12 @@ RDEPEND=""
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-kernel-2.5.patch
 	epatch "${FILESDIR}"/${P}-pic.patch
 	epatch "${FILESDIR}"/${P}-no-nis.patch
 
-	use elibc_uclibc || append-flags -DHAVE_NIS
+	use elibc_uclibc || append-cppflags -DHAVE_NIS
 	sed -i \
 		-e "s:-O2:${CFLAGS}:g" \
 		-e 's:/usr/man:/usr/share/man:' \
@@ -41,7 +40,7 @@ src_unpack() {
 
 src_install() {
 	dodir /sbin /usr/share/man /etc
-	emake PREFIX="${D}" install || die
+	emake PREFIX="${D}" install
 	dodoc devfsd.conf INSTALL
 
 	keepdir /etc/devfs.d
@@ -56,6 +55,6 @@ pkg_postinst() {
 	echo
 	einfo "You may wish to read the Gentoo Linux Device Filesystem Guide,"
 	einfo "which can be found online at:"
-	einfo "    http://www.gentoo.org/doc/en/devfs-guide.xml"
+	einfo "    https://wwwold.gentoo.org/doc/en/devfs-guide.xml"
 	echo
 }

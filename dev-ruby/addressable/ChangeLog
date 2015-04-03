@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.50 2015/02/20 23:15:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.51 2015/04/03 07:07:15 graaff Exp $
+
+*addressable-2.3.8 (03 Apr 2015)
+
+  03 Apr 2015; Hans de Graaff <graaff@gentoo.org> +addressable-2.3.8.ebuild:
+  Version bump. Add ruby22. Add missing dependency on dev-ruby/rspec-its.
 
   20 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -addressable-2.3.5.ebuild:
   Remove old.

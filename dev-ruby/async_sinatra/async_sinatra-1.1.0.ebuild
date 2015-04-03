@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/async_sinatra-1.1.0.ebuild,v 1.3 2014/10/05 09:17:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/async_sinatra/async_sinatra-1.1.0.ebuild,v 1.4 2015/04/03 07:11:56 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_TASK_DOC="docs"
 inherit ruby-fakegem
 
 DESCRIPTION="Asynchronous response API for Sinatra and Thin"
-HOMEPAGE="http://libraggi.rubyforge.org/async_sinatra"
+HOMEPAGE="https://github.com/raggi/async_sinatra"
 SRC_URI="https://github.com/raggi/async_sinatra/archive/v${PV}.tar.gz -> ${P}-git.tgz"
 
 LICENSE="MIT"
@@ -24,6 +24,7 @@ ruby_add_bdepend "test? (
 	>=dev-ruby/hoe-2.9.1
 	>=dev-ruby/minitest-2.5.1
 	>=dev-ruby/eventmachine-0.12.11
+	dev-ruby/rack-test
 	)"
 ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.9.1 )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.10-r2.ebuild,v 1.1 2015/04/03 06:10:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.10-r2.ebuild,v 1.2 2015/04/03 07:22:20 vapier Exp $
 
 EAPI=5
 
@@ -19,9 +19,9 @@ IUSE=""
 ECONF_SOURCE=${S}
 
 src_prepare() {
-	eautoreconf
 	epatch "${FILESDIR}"/${PN}-2.0.8-cpuid-pic.patch #456238
 	epatch "${FILESDIR}"/${PN}-2.0.10-numademo-cflags.patch #540856
+	eautoreconf
 }
 
 src_test() {
