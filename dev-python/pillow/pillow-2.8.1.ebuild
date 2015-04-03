@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.4.0-r1.ebuild,v 1.1 2014/10/26 03:08:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.8.1.ebuild,v 1.1 2015/04/03 19:39:54 jlec Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
+
+PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
 PYTHON_REQ_USE='tk?'
 
 inherit distutils-r1 eutils
@@ -17,17 +18,17 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="HPND"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
-IUSE="doc examples jpeg jpeg2k lcms scanner test tiff tk truetype webp zlib"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
+IUSE="doc examples jpeg jpeg2k lcms test tiff tk truetype webp zlib"
+
 REQUIRED_USE="test? ( jpeg )"
 
 RDEPEND="
-	truetype? ( media-libs/freetype:2= )
 	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/openjpeg:2= )
 	lcms? ( media-libs/lcms:2= )
-	scanner? ( media-gfx/sane-backends:0= )
 	tiff? ( media-libs/tiff:0= )
+	truetype? ( media-libs/freetype:2= )
 	webp? ( media-libs/libwebp:0= )
 	zlib? ( sys-libs/zlib:0= )"
 DEPEND="${RDEPEND}
@@ -62,33 +63,19 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
-# XXX: split into two ebuilds?
-wrap_phase() {
-	"${@}"
-
-	if use scanner; then
-		cd Sane || die
-		"${@}"
-	fi
-}
-
-python_compile() {
-	wrap_phase distutils-r1_python_compile
-}
-
 python_compile_all() {
 	use doc && emake -C docs html
 }
 
 python_test() {
-	"${PYTHON}" selftest.py --installed || die "Tests fail with ${EPYTHON}"
-	"${PYTHON}" Tests/run.py --installed || die "Tests fail with ${EPYTHON}"
+	"${PYTHON}" selftest.py --installed || die "selftest failed with ${EPYTHON}"
+	nosetests -vx Tests/test_*.py || die "Testing failed with ${EPYTHON}"
 }
 
 python_install() {
 	python_doheader libImaging/{Imaging.h,ImPlatform.h}
 
-	wrap_phase distutils-r1_python_install
+	distutils-r1_python_install
 }
 
 python_install_all() {
@@ -96,14 +83,4 @@ python_install_all() {
 	use examples && local EXAMPLES=( Scripts/. )
 
 	distutils-r1_python_install_all
-
-	if use scanner; then
-		docinto sane
-		dodoc Sane/{CHANGES,README,sanedoc.txt}
-	fi
-
-	if use examples && use scanner; then
-		docinto examples/sane
-		dodoc Sane/demo_*.py
-	fi
 }

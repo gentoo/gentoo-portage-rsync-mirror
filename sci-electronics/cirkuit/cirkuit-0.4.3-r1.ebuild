@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/cirkuit/cirkuit-0.4.3-r1.ebuild,v 1.3 2014/07/18 14:34:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/cirkuit/cirkuit-0.4.3-r1.ebuild,v 1.4 2015/04/03 19:39:49 kensington Exp $
 
 EAPI=5
 
@@ -20,12 +20,13 @@ DEPEND="
 	>=app-text/poppler-0.12.3-r3[qt4]
 "
 RDEPEND="${DEPEND}
-	virtual/latex-base
-	media-libs/netpbm
-	dev-texlive/texlive-pstricks
 	app-text/ghostscript-gpl
 	app-text/ps2eps
+	dev-texlive/texlive-pstricks
+	media-gfx/dpic
 	media-gfx/pdf2svg
+	media-libs/netpbm
+	virtual/latex-base
 "
 
 DOCS=( Changelog README )

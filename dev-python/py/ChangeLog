@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/py
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.189 2014/12/01 09:45:05 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.191 2015/04/03 20:01:06 vapier Exp $
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> py-1.4.25.ebuild:
+  Mark s390/sh stable.
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> py-1.4.25.ebuild,
+  py-1.4.26.ebuild:
+  Add arm64/m68k love.
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> py-1.4.25.ebuild:
   Stable for sparc, wrt bug #524416

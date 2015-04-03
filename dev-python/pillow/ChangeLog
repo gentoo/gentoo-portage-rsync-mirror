@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pillow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.46 2014/11/02 09:04:40 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.47 2015/04/03 19:39:54 jlec Exp $
+
+*pillow-2.8.1 (03 Apr 2015)
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> +pillow-2.8.1.ebuild,
+  -pillow-2.4.0-r1.ebuild, metadata.xml:
+  Version BUmp, with fix for CVE-2014-9601, #534748; drop old
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.5.3-r1.ebuild:
   Stable for alpha, wrt bug #522426
