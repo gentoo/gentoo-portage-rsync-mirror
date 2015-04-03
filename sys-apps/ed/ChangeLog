@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.108 2015/04/02 17:18:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.109 2015/04/03 04:41:12 jer Exp $
+
+  03 Apr 2015; Jeroen Roovers <jer@gentoo.org> ed-1.10.ebuild:
+  Stable for HPPA (bug #545204).
 
   02 Apr 2015; Mike Frysinger <vapier@gentoo.org> ed-1.11.ebuild:
   Switch to gzip as lzip is uncommon, and not that much smaller for this package
