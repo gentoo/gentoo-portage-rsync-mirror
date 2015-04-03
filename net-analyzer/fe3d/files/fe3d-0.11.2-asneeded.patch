@@ -1,5 +1,5 @@
---- configure.ac
-+++ configure.ac
+--- a/configure.ac
++++ b/configure.ac
 @@ -46,16 +46,15 @@
  		])
  fi
@@ -22,8 +22,8 @@
  
  AC_OUTPUT
  
---- src/Makefile.am
-+++ src/Makefile.am
+--- a/src/Makefile.am
++++ b/src/Makefile.am
 @@ -1,8 +1,10 @@
 -fe3d_CPPFLAGS	= -DFE_DATA_DIR="\"@datadir@/@PACKAGE@/\""
 +fe3d_CPPFLAGS	= -DFE_DATA_DIR="\"@datadir@/@PACKAGE@/\"" @WX_CPPFLAGS@

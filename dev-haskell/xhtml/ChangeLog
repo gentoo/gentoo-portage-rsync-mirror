@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.45 2015/01/02 23:12:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.46 2015/04/03 05:45:41 gienah Exp $
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> xhtml-3000.2.1-r1.ebuild:
+  Update the ghc core libs in xhtml-3000.2.1-r1 for ghc 7.10.1
 
   02 Jan 2015; Sergei Trofimovich <slyfox@gentoo.org> xhtml-3000.2.1-r1.ebuild:
   ppc64 stable

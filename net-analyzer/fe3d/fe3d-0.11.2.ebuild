@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.7 2013/02/01 15:05:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fe3d/fe3d-0.11.2.ebuild,v 1.8 2015/04/03 05:42:40 jer Exp $
 
 EAPI=5
-inherit autotools eutils
+WX_GTK_VER="2.8"
+inherit autotools eutils wxwidgets
 
 if [[ "${PV}" =~ (_p)([0-9]+) ]] ; then
 	inherit subversion
@@ -20,7 +21,6 @@ HOMEPAGE="http://projects.icapsid.net/fe3d/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 x86"
-IUSE=""
 
 DOCS=( AUTHORS doc/{ChangeLog,README}.txt )
 
@@ -34,8 +34,12 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${PN}_${PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-asneeded.patch \
+	need-wxwidgets unicode
+
+	epatch \
+		"${FILESDIR}"/${P}-asneeded.patch \
 		"${FILESDIR}"/${P}-coreutils.patch
+
 	eautoreconf
 }
 

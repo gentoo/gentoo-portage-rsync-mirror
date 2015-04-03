@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.349 2015/04/02 16:50:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.350 2015/04/03 05:56:01 maekke Exp $
+
+  03 Apr 2015; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask media-libs/libsdl2[fusionsound] due to unkeyworded/unstable
+  deps
 
   02 Apr 2015; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask media-libs/freeimage[tiff]
