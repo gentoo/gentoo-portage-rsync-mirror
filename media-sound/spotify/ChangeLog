@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/spotify
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.38 2015/03/27 18:31:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/ChangeLog,v 1.39 2015/04/03 01:42:41 prometheanfire Exp $
+
+*spotify-0.9.17.1-r1 (03 Apr 2015)
+
+  03 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +spotify-0.9.17.1-r1.ebuild, -spotify-0.9.17.1.ebuild:
+  removing the qt3support useflag, doesn't seem to be needed bug 545068
 
 *spotify-0.9.17.1 (27 Mar 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.62 2015/03/21 09:37:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.63 2015/04/03 01:33:32 vapier Exp $
 
 EAPI="5"
 
@@ -85,6 +85,7 @@ lfs_fallocate_test() {
 multilib_src_configure() {
 	lfs_fallocate_test
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
+	export ac_cv_header_security_pam_appl_h=$(multilib_native_usex pam) #545042
 	# We manually set --libdir to the default since on prefix, econf will set it to
 	# a value which the configure script does not recognize.  This makes it set the
 	# usrlib_execdir to a bad value. bug #518898#c2, fixed upstream for >2.25

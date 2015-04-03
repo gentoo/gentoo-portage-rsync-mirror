@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.17.1.ebuild,v 1.1 2015/03/27 18:31:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.17.1-r1.ebuild,v 1.1 2015/04/03 01:42:41 prometheanfire Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
@@ -34,9 +34,9 @@ RDEPEND="${DEPEND}
 		x11-libs/libXScrnSaver
 		x11-libs/libXrandr
 		x11-libs/libXrender
-		dev-qt/qtcore:4[qt3support,glib]
+		dev-qt/qtcore:4[glib]
 		dev-qt/qtdbus:4
-		dev-qt/qtgui:4[qt3support,glib]
+		dev-qt/qtgui:4[glib]
 		dev-qt/qtwebkit:4
 		x11-misc/xdg-utils
 		media-libs/alsa-lib
@@ -70,14 +70,6 @@ QA_PREBUILT="/opt/spotify/spotify-client/spotify
 			/opt/spotify/spotify-client/Data/libcef.so"
 
 src_prepare() {
-#	# different NSPR / NSS library names for some reason
-#	sed -i \
-#		-e 's/\(lib\(plc4\|nspr4\).so\).9\(.\)/\1.0d\3\3/g' \
-#		opt/spotify/spotify-client/Data/SpotifyHelper || die "sed failed"
-#	sed -i \
-#		-e 's/\(lib\(nss3\|nssutil3\|smime3\).so\).1d/\1\x00\x00\x00/g' \
-#		-e 's/\(lib\(plc4\|nspr4\).so\).0d\(.\)/\1\x00\x00\3\3/g' \
-#		opt/spotify/spotify-client/Data/libcef.so || die "sed failed"
 	# Fix desktop entry to launch spotify-dbus.py for GNOME integration
 	if use gnome ; then
 	sed -i \
@@ -107,10 +99,6 @@ src_install() {
 	fperms +x ${SPOTIFY_HOME}/Data/SpotifyHelper
 
 	dodir /usr/bin
-#		LD_PRELOAD="\${LD_PRELOAD} ${SPOTIFY_HOME}/libnspr4.so.9 ${SPOTIFY_HOME}/libplc4.so.9"
-#		LD_LIBRARY_PATH="${SPOTIFY_HOME}/Data/"
-#		export LD_PRELOAD
-#		export LD_LIBRARY_PATH
 	cat <<-EOF >"${D}"/usr/bin/spotify
 		#! /bin/sh
 		exec ${SPOTIFY_HOME}/spotify "\$@"
@@ -144,9 +132,6 @@ src_install() {
 		eqawarn "please open a bug."
 	fi
 
-#	#hack to fix the nspr linking in spotify
-#	dosym /usr/lib/libnspr4.so "${SPOTIFY_HOME}/libnspr4.so.9"
-#	dosym /usr/lib/libplc4.so "${SPOTIFY_HOME}/libplc4.so.9"
 	#TODO fix for x86
 	dosym /usr/lib/libudev.so "${SPOTIFY_HOME}/Data/libudev.so.0"
 }
