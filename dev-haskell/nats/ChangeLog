@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/nats
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/nats/ChangeLog,v 1.8 2015/01/26 09:54:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/nats/ChangeLog,v 1.9 2015/04/03 10:15:46 gienah Exp $
+
+*nats-1 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +nats-1.ebuild:
+  Bump nats to 1
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> nats-0.2.ebuild:
   Stable for x86, wrt bug #534994

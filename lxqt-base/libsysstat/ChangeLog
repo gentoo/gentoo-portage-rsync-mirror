@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/libsysstat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/libsysstat/ChangeLog,v 1.5 2015/02/10 14:54:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/libsysstat/ChangeLog,v 1.6 2015/04/03 10:27:09 dlan Exp $
+
+  03 Apr 2015; Yixun Lan <dlan@gentoo.org> libsysstat-0.3.0.ebuild:
+  keyword arm/arm64, tested on cortex-a9/cortex-a53 hardware
 
 *libsysstat-0.3.0 (10 Feb 2015)
 
