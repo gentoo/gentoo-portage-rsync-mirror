@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cifparse-obj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.16 2015/01/11 20:38:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.17 2015/04/03 14:29:10 jlec Exp $
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> -cifparse-obj-6.302.ebuild:
+  Drop old
 
 *cifparse-obj-7.025-r1 (11 Jan 2015)
 
@@ -68,4 +71,3 @@
   +files/respect-flags-and-add-gcc4.patch, +metadata.xml,
   +cifparse-obj-6.302.ebuild:
   Libraries needed to build the other RCSB Protein Data Bank tools.
-

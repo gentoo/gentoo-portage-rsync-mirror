@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
 Common Data Format (CDF) is a conceptual data abstraction for storing
 multi-dimensional data sets. The basic component of CDF is a software
 programming interface that is a device independent view of the CDF data
