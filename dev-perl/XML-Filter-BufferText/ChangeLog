@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Filter-BufferText
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-BufferText/ChangeLog,v 1.27 2014/08/24 02:36:46 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-BufferText/ChangeLog,v 1.28 2015/04/03 09:51:58 dlan Exp $
+
+  03 Apr 2015; Yixun Lan <dlan@gentoo.org>
+  XML-Filter-BufferText-1.10.0-r1.ebuild:
+  keyword arm/arm64, tested on cortex-a9/cortex-a53 hardware
 
 *XML-Filter-BufferText-1.10.0-r1 (24 Aug 2014)
 
