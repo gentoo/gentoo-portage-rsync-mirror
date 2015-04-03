@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/test-framework
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/ChangeLog,v 1.32 2014/12/22 04:50:40 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework/ChangeLog,v 1.33 2015/04/03 22:37:20 gienah Exp $
+
+*test-framework-0.8.1.1 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +test-framework-0.8.1.1.ebuild:
+  Bump test-framework to 0.8.1.1
 
 *test-framework-0.8.1.0 (22 Dec 2014)
 
