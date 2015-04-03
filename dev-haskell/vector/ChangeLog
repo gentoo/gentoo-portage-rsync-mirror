@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/vector
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.22 2015/02/20 13:14:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.23 2015/04/03 05:22:10 gienah Exp $
+
+*vector-0.10.12.3 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +vector-0.10.12.3.ebuild:
+  Bump vector to 0.10.12.3
 
   20 Feb 2015; Raúl Porcel <armin76@gentoo.org> vector-0.10.0.1.ebuild:
   alpha/ia64 stable wrt #480568

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/vector-instances
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector-instances/ChangeLog,v 1.2 2014/07/25 08:59:05 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector-instances/ChangeLog,v 1.3 2015/04/03 05:23:28 gienah Exp $
+
+*vector-instances-3.3.0.1 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +vector-instances-3.3.0.1.ebuild:
+  Bump vector-instances to 3.3.0.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

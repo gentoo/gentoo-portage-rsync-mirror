@@ -1,12 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.4.1-r7.ebuild,v 1.3 2015/04/03 05:10:20 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.5-r4.ebuild,v 1.1 2015/04/03 05:10:20 dlan Exp $
 
 EAPI=5
 
-MY_PV=${PV/_/-}
-
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE='xml,threads'
 
 if [[ $PV == *9999 ]]; then
@@ -16,33 +14,29 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="~amd64 ~arm -x86"
-	UPSTREAM_VER=8
+	KEYWORDS="~amd64 ~x86"
+	UPSTREAM_VER=6
+	SECURITY_VER=0
 	# xen-tools's gentoo patches tarball
-	GENTOO_VER=3
+	GENTOO_VER=0
 	# xen-tools's gentoo patches version which apply to this specific ebuild
-	GENTOO_GPV=2
-	# xen-tools ovmf's patches
-	OVMF_VER=0
-
-	SEABIOS_VER=1.7.3.1
-	OVMF_PV=20131208
+	GENTOO_GPV=0
+	SEABIOS_VER=1.6.3.2
 
 	[[ -n ${UPSTREAM_VER} ]] && \
-		UPSTRAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
+		UPSTREAM_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${P/-tools/}-upstream-patches-${UPSTREAM_VER}.tar.xz"
+	[[ -n ${SECURITY_VER} ]] && \
+		SECURITY_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-security-patches-${SECURITY_VER}.tar.xz"
 	[[ -n ${GENTOO_VER} ]] && \
-		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-gentoo-patches-${GENTOO_VER}.tar.xz"
-	[[ -n ${OVMF_VER} ]] && \
-		OVMF_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools}-ovmf-patches-${OVMF_VER}.tar.xz"
+		GENTOO_PATCHSET_URI="http://dev.gentoo.org/~dlan/distfiles/${PN/-tools/}-gentoo-patches-${GENTOO_VER}.tar.xz"
 
-	SRC_URI="http://bits.xensource.com/oss-xen/release/${MY_PV}/xen-${MY_PV}.tar.gz
+	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 	http://code.coreboot.org/p/seabios/downloads/get/seabios-${SEABIOS_VER}.tar.gz
 	http://dev.gentoo.org/~dlan/distfiles/seabios-${SEABIOS_VER}.tar.gz
-	http://dev.gentoo.org/~dlan/distfiles/ovmf-${OVMF_PV}.tar.bz2
-	${UPSTRAM_PATCHSET_URI}
-	${GENTOO_PATCHSET_URI}
-	${OVMF_PATCHSET_URI}"
-	S="${WORKDIR}/xen-${MY_PV}"
+	${UPSTREAM_PATCHSET_URI}
+	${SECURITY_PATCHSET_URI}
+	${GENTOO_PATCHSET_URI}"
+	S="${WORKDIR}/xen-${PV}"
 fi
 
 inherit bash-completion-r1 eutils flag-o-matic multilib python-single-r1 toolchain-funcs udev ${live_eclass}
@@ -53,49 +47,38 @@ DOCS=( README docs/README.xen-bugtool )
 
 LICENSE="GPL-2"
 SLOT="0"
-# Inclusion of IUSE ocaml on stabalizing requires maintainer of ocaml to (get off his hands and) make
-# >=dev-lang/ocaml-4 stable
-# Masked in profiles/eapi-5-files instead
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml ovmf +pam python pygrub screen static-libs system-qemu system-seabios"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs system-seabios"
 
-REQUIRED_USE="hvm? ( || ( qemu system-qemu ) )
-	${PYTHON_REQUIRED_USE}
-	pygrub? ( python )
-	ovmf? ( hvm )
-	qemu? ( !system-qemu )"
+REQUIRED_USE="hvm? ( qemu )
+	${PYTHON_REQUIRED_USE}"
 
-COMMON_DEPEND="
-	dev-libs/lzo:2
+DEPEND="dev-libs/lzo:2
 	dev-libs/glib:2
 	dev-libs/yajl
-	dev-libs/libaio
 	dev-libs/libgcrypt:0
-	sys-libs/zlib
-"
-
-DEPEND="${COMMON_DEPEND}
 	dev-python/lxml[${PYTHON_USEDEP}]
-	pam? ( dev-python/pypam[${PYTHON_USEDEP}] )
+	dev-python/pypam[${PYTHON_USEDEP}]
+	sys-libs/zlib
+	sys-power/iasl
+	system-seabios? ( sys-firmware/seabios )
+	sys-firmware/ipxe
+	dev-ml/findlib
 	hvm? ( media-libs/libsdl )
 	${PYTHON_DEPS}
 	api? ( dev-libs/libxml2
 		net-misc/curl )
+	${PYTHON_DEPS}
 	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )
-	arm? ( >=sys-apps/dtc-1.4.0 )
-	!arm? ( sys-devel/bin86
-		system-seabios? ( sys-firmware/seabios )
-		sys-firmware/ipxe
-		sys-devel/dev86
-		sys-power/iasl )
+	sys-devel/bin86
+	sys-devel/dev86
 	dev-lang/perl
 	app-misc/pax-utils
-	dev-python/markdown[${PYTHON_USEDEP}]
 	doc? (
 		app-doc/doxygen
 		dev-tex/latex2html[png,gif]
+		media-gfx/transfig
 		media-gfx/graphviz
 		dev-tex/xcolor
-		media-gfx/transfig
 		dev-texlive/texlive-latexextra
 		virtual/latex-base
 		dev-tex/latexmk
@@ -103,16 +86,11 @@ DEPEND="${COMMON_DEPEND}
 		dev-texlive/texlive-pictures
 		dev-texlive/texlive-latexrecommended
 	)
-	hvm? ( x11-proto/xproto
-		!net-libs/libiscsi )
-	qemu? ( x11-libs/pixman )
-	system-qemu? ( app-emulation/qemu[xen] )
-	ocaml? ( dev-ml/findlib
-		>=dev-lang/ocaml-4 )"
-
-RDEPEND="${COMMON_DEPEND}
-	sys-apps/iproute2
+	hvm? (  x11-proto/xproto
+		!net-libs/libiscsi )"
+RDEPEND="sys-apps/iproute2
 	net-misc/bridge-utils
+	ocaml? ( >=dev-lang/ocaml-4 )
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -121,8 +99,7 @@ RDEPEND="${COMMON_DEPEND}
 
 # hvmloader is used to bootstrap a fully virtualized kernel
 # Approved by QA team in bug #144032
-QA_WX_LOAD="usr/lib/xen/boot/hvmloader
-	usr/share/qemu-xen/qemu/s390-ccw.img"
+QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
 
 RESTRICT="test"
 
@@ -137,6 +114,12 @@ pkg_setup() {
 		export "CONFIG_GCRYPT=y"
 	fi
 
+	if use qemu; then
+		export "CONFIG_IOEMU=y"
+	else
+		export "CONFIG_IOEMU=n"
+	fi
+
 	if [[ -z ${XEN_TARGET_ARCH} ]] ; then
 		if use x86 && use amd64; then
 			die "Confusion! Both x86 and amd64 are set in your use flags!"
@@ -144,25 +127,37 @@ pkg_setup() {
 			export XEN_TARGET_ARCH="x86_32"
 		elif use amd64 ; then
 			export XEN_TARGET_ARCH="x86_64"
-		elif use arm; then
-			export XEN_TARGET_ARCH="arm32"
 		else
 			die "Unsupported architecture!"
 		fi
 	fi
+
+	use api     && export "LIBXENAPI_BINDINGS=y"
+	use flask   && export "FLASK_ENABLE=y"
 }
 
 src_prepare() {
 	# Upstream's patchset
 	if [[ -n ${UPSTREAM_VER} ]]; then
+		einfo "Try to apply Xen Upstream patcheset"
 		EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" \
 		EPATCH_OPTS="-p1" \
 			epatch "${WORKDIR}"/patches-upstream
 	fi
 
+	# Security patchset
+	if [[ -n ${SECURITY_VER} ]]; then
+		einfo "Try to apply Xen Security patcheset"
+		EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" \
+		EPATCH_OPTS="-p1" \
+			epatch "${WORKDIR}/patches-security/${PV}"
+	fi
+
 	# Gentoo's patchset
 	if [[ -n ${GENTOO_VER} && -n ${GENTOO_GPV} ]]; then
+		einfo "Try to apply Gentoo specific patcheset"
 		source "${FILESDIR}"/gentoo-patches.conf
 		_gpv=_gpv_${PN/-/_}_${PV//./}_${GENTOO_GPV}
 		for i in ${!_gpv}; do
@@ -172,33 +167,11 @@ src_prepare() {
 		done
 	fi
 
-	# Ovmf's patchset
-	if [[ -n ${OVMF_VER} ]]; then
-		pushd "${WORKDIR}"/ovmf-*/ > /dev/null
-		EPATCH_SUFFIX="patch" \
-		EPATCH_FORCE="yes" \
-		EPATCH_OPTS="-p1" \
-			epatch "${WORKDIR}"/patches-ovmf
-		popd > /dev/null
+	use system-seabios && epatch "${WORKDIR}"/patches-gentoo/${PN}-4-unbundle-seabios.patch
+
+	if gcc-specs-pie; then
+		epatch "${WORKDIR}"/patches-gentoo/ipxe-nopie.patch
 	fi
-
-	mv tools/qemu-xen/qemu-bridge-helper.c tools/qemu-xen/xen-bridge-helper.c || die
-
-	mv ../seabios-${SEABIOS_VER} tools/firmware/seabios-dir-remote || die
-	mv ../ovmf-${OVMF_PV} tools/firmware/ovmf-dir-remote || die
-	pushd tools/firmware/ > /dev/null
-	ln -s seabios-dir-remote seabios-dir || die
-	popd > /dev/null
-
-	# Fix texi2html build error with new texi2html, qemu.doc.html
-	sed -i -e "/texi2html -monolithic/s/-number//" tools/qemu-xen-traditional/Makefile || die
-
-	use api   || sed -e "/SUBDIRS-\$(LIBXENAPI_BINDINGS) += libxen/d" -i tools/Makefile || die
-	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' \
-		 -i tools/firmware/Makefile || die
-
-	# Drop .config, fixes to gcc-4.6
-	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't	drop"
 
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
@@ -216,14 +189,12 @@ src_prepare() {
 	fi
 
 	if ! use pygrub; then
-		sed -e '/^SUBDIRS-y += pygrub/d' -i tools/Makefile || die
+		sed -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' -i tools/Makefile || die
 	fi
 
-	if ! use python; then
-		sed -e '/^SUBDIRS-y += python$/d' -i tools/Makefile || die
-	fi
-
+	# Disable hvm support on systems that don't support x86_32 binaries.
 	if ! use hvm; then
+		sed -e '/^CONFIG_IOEMU := y$/d' -i config/*.mk || die
 		sed -e '/SUBDIRS-$(CONFIG_X86) += firmware/d' -i tools/Makefile || die
 	# Bug 351648
 	elif ! use x86 && ! has x86 $(get_all_abis); then
@@ -234,31 +205,22 @@ src_prepare() {
 
 	# Don't bother with qemu, only needed for fully virtualised guests
 	if ! use qemu; then
-		sed -e "s:install-tools\: tools/qemu-xen-traditional-dir:install-tools\: :g" -i Makefile || die
+		sed -e "/^CONFIG_IOEMU := y$/d" -i config/*.mk || die
+		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" -i Makefile || die
 	fi
+
+	mv ../seabios-${SEABIOS_VER} tools/firmware/seabios-dir-remote || die
+	pushd tools/firmware/ > /dev/null
+	ln -s seabios-dir-remote seabios-dir || die
+	popd > /dev/null
 
 	# Reset bash completion dir; Bug 472438
 	sed -e "s:^BASH_COMPLETION_DIR ?= \$(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(get_bashcompdir):" \
 		-i Config.mk || die
 	sed -i -e "/bash-completion/s/xl\.sh/xl/g" tools/libxl/Makefile || die
 
-	# xencommons, Bug #492332, sed lighter weight than patching
-	sed -e 's:\$QEMU_XEN -xen-domid:test -e "\$QEMU_XEN" \&\& &:' \
-		-i tools/hotplug/Linux/init.d/xencommons || die
-
-	# respect multilib, usr/lib/libcacard.so.0.0.0
-	sed -e "/^libdir=/s/\/lib/\/$(get_libdir)/" \
-		-i tools/qemu-xen/configure || die
-
-	#bug 518136, don't build 32bit exactuable for nomultilib profile
-	if [[ "${ARCH}" == 'amd64' ]] && ! has_multilib_profile; then
-		sed -i -e "/x86_emulator/d" tools/tests/Makefile || die
-	fi
-
-	# Bug 477884, 518136
-	if [[ "${ARCH}" == 'amd64' ]]; then
-		sed -i -e "/LIBEXEC =/s|/lib/xen/bin|/$(get_libdir)/xen/bin|" config/StdGNU.mk || die
-	fi
+	# Bug 445986
+	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' -i tools/firmware/Makefile || die
 
 	# fix QA warning, create /var/run/, /var/lock dynamically
 	sed -i -e "/\$(INSTALL_DIR) \$(DESTDIR)\$(XEN_RUN_DIR)/d" \
@@ -271,27 +233,11 @@ src_prepare() {
 	sed -i -e "/\/var\/lock\/subsys/d" \
 		tools/Makefile || die
 
-	epatch_user
-}
+	# xencommons, Bug #492332, sed lighter weight than patching
+	sed -e 's:\$QEMU_XEN -xen-domid:test -e "\$QEMU_XEN" \&\& &:' \
+		-i tools/hotplug/Linux/init.d/xencommons || die
 
-src_configure() {
-	local myconf="--prefix=/usr \
-		--libdir=/usr/$(get_libdir) \
-		--disable-werror \
-		--disable-xen \
-		--enable-tools \
-		--enable-docs \
-		$(use_with system-qemu) \
-		$(use_enable pam) \
-		$(use_enable api xenapi) \
-		$(use_enable ovmf) \
-		$(use_enable ocaml ocamltools) \
-		"
-	# disable qemu-traditional for arm, fail to build
-	use arm || myconf+=" --enable-qemu-traditional"
-	use system-seabios && myconf+=" --with-system-seabios=/usr/share/seabios/bios.bin"
-	use qemu || myconf+=" --with-system-qemu"
-	econf ${myconf}
+	epatch_user
 }
 
 src_compile() {
@@ -321,11 +267,10 @@ src_install() {
 	local PYTHONDONTWRITEBYTECODE
 	export PYTHONDONTWRITEBYTECODE
 
-	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" \
+	emake DESTDIR="${ED}" DOCDIR="/usr/share/doc/${PF}" install-tools \
 		XEN_PYTHON_NATIVE_INSTALL=y install-tools
-
 	# Fix the remaining Python shebangs.
-	python_fix_shebang "${D}"
+	python_fix_shebang "${ED}"
 
 	# Remove RedHat-specific stuff
 	rm -rf "${D}"tmp || die
@@ -356,13 +301,16 @@ src_install() {
 	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled
 	newinitd "${FILESDIR}"/xencommons.initd xencommons
 	newconfd "${FILESDIR}"/xencommons.confd xencommons
-	newinitd "${FILESDIR}"/xenqemudev.initd xenqemudev
-	newconfd "${FILESDIR}"/xenqemudev.confd xenqemudev
 
 	if use screen; then
-		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains || die
-		cp "${FILESDIR}"/xen-consoles.logrotate "${D}"/etc/xen/ || die
+		cat "${FILESDIR}"/xendomains-screen.confd >> "${ED}"/etc/conf.d/xendomains || die
+		cp "${FILESDIR}"/xen-consoles.logrotate "${ED}"/etc/xen/ || die
 		keepdir /var/log/xen-consoles
+	fi
+
+	if [[ "${ARCH}" == 'amd64' ]] && use qemu; then
+		mkdir -p "${D}"usr/$(get_libdir)/xen/bin || die
+		mv "${D}"usr/lib/xen/bin/qemu* "${D}"usr/$(get_libdir)/xen/bin/ || die
 	fi
 
 	# For -static-libs wrt Bug 384355
@@ -388,10 +336,10 @@ src_install() {
 
 pkg_postinst() {
 	elog "Official Xen Guide and the offical wiki page:"
-	elog "https://wiki.gentoo.org/wiki/Xen"
+	elog "http://www.gentoo.org/doc/en/xen-gu"${D}"usr/ide.xml"
 	elog "http://wiki.xen.org/wiki/Main_Page"
 	elog ""
-	elog "Recommended to utilise the xencommons script to config sytem At boot"
+	elog "Recommended to utilise the xencommons script to config sytem at boot."
 	elog "Add by use of rc-update on completion of the install"
 
 	# TODO: we need to have the current Python slot here.
@@ -412,13 +360,6 @@ pkg_postinst() {
 		elog "HVM (VT-x and AMD-V) support has been disabled. If you need hvm"
 		elog "support enable the hvm use flag."
 		elog "An x86 or amd64 system is required to build HVM support."
-	fi
-
-	if use qemu; then
-		elog "The qemu-bridge-helper is renamed to the xen-bridge-helper in the in source"
-		elog "build of qemu.  This allows for app-emulation/qemu to be emerged concurrently"
-		elog "with the qemu capable xen.  It is up to the user to distinguish between and utilise"
-		elog "the qemu-bridge-helper and the xen-bridge-helper.  File bugs of any issues that arise"
 	fi
 
 	if grep -qsF XENSV= "${ROOT}/etc/conf.d/xend"; then
