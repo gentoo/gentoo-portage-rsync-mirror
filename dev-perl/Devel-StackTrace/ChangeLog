@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.94 2015/01/31 13:50:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.95 2015/04/03 21:27:58 dilfridge Exp $
+
+*Devel-StackTrace-2.0.0 (03 Apr 2015)
+
+  03 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Devel-StackTrace-2.0.0.ebuild:
+  Version bump
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   Devel-StackTrace-1.300.0-r1.ebuild:

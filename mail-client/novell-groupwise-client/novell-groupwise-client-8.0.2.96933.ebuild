@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.3 2014/09/07 15:20:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.4 2015/04/03 21:10:32 dilfridge Exp $
 
-RESTRICT="binchecks fetch mirror strip"
+EAPI=5
 
 inherit eutils rpm multilib versionator
 
@@ -16,19 +16,29 @@ SRC_URI="gw802_hp3_client_linux_multi.tar.gz"
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="novell-jre multilib"
+IUSE=""
+
 DEPEND=""
-RDEPEND="sys-libs/libstdc++-v3
-	!novell-jre? (
-		|| ( virtual/jdk
-		virtual/jre )
-		multilib? (
-		amd64? ( app-emulation/emul-linux-x86-java ) ) )"
+RDEPEND="
+	sys-libs/libstdc++-v3
+	>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	>=x11-libs/libXau-1.0.8[abi_x86_32(-)]
+	>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
+	>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32(-)]
+	>=x11-libs/libXext-1.3.3[abi_x86_32(-)]
+	>=x11-libs/libXfixes-5.0.1[abi_x86_32(-)]
+	>=x11-libs/libXi-1.7.4[abi_x86_32(-)]
+	>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
+	>=x11-libs/libXtst-1.2.2[abi_x86_32(-)]
+	>=x11-libs/libxcb-1.11-r1[abi_x86_32(-)]
+"
+
+RESTRICT="binchecks fetch mirror strip"
 
 src_unpack() {
 	unpack ${A}
-	mkdir -p "${WORKDIR}"/${PN}-${MY_PV}
-	cd ${PN}-${MY_PV}
+	mkdir -p "${WORKDIR}"/${PN}-${MY_PV} || die
+	cd ${PN}-${MY_PV} || die
 	rpm_unpack ./../gw${MY_PV}_client_linux_multi/${PN}-${MY_PV}.i586.rpm
 }
 
@@ -37,26 +47,16 @@ src_compile() { :; }
 src_install() {
 	JRE_DIR="${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/java;
 
-	if use novell-jre; then
-		# Undo Sun's funny-business with packed .jar's
-		for i in $JRE_DIR/lib/*.pack; do
-			i_b=`echo $i | sed 's/\.pack$//'`;
-			einfo "Unpacking `basename $i` -> `basename $i_b.jar`";
-			$JRE_DIR/bin/unpack200 $i $i_b.jar || die "Unpack failed";
-		done;
-	else
-		if use multilib; then
-			rm -rf "${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/java
-			sed -i 's%/opt/novell/groupwise/client/java/lib/i386%`java-config --select-vm=emul-linux-x86-java --jre-home`/lib/i386/client:`java-config --select-vm=emul-linux-x86-java --jre-home`/lib/i386/server:`java-config --select-vm=emul-linux-x86-java --jre-home`/lib/i386%' "${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/bin/groupwise
-		else
-			rm -rf "${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/java
-			sed -i 's%/opt/novell/groupwise/client/java/lib/i386%`java-config --jre-home`/jre/lib/i386/client:`java-config --jre-home`/jre/lib/i386/server:`java-config --jre-home`/jre/lib/i386%' "${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/bin/groupwise
-		fi
-	fi
+	# Undo Sun's funny-business with packed .jar's
+	for i in $JRE_DIR/lib/*.pack; do
+		i_b=`echo $i | sed 's/\.pack$//'`;
+		einfo "Unpacking `basename $i` -> `basename $i_b.jar`";
+		$JRE_DIR/bin/unpack200 $i $i_b.jar || die "Unpack failed";
+	done;
 
 	domenu "${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/gwclient.desktop
 
-	mv "${WORKDIR}"/${PN}-${MY_PV}/opt "${D}"/ || die "mv opt"
+	mv "${WORKDIR}"/${PN}-${MY_PV}/opt "${D}"/ || die "mv opt failed"
 
 	dodir /opt/bin
 	dosym /opt/novell/groupwise/client/bin/groupwise /opt/bin/groupwise
