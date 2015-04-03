@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/python-wifi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.15 2015/03/28 03:55:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.16 2015/04/03 20:53:28 mgorny Exp $
+
+*python-wifi-0.5.0-r3 (03 Apr 2015)
+
+  03 Apr 2015; Michał Górny <mgorny@gentoo.org> +python-wifi-0.5.0-r3.ebuild,
+  -python-wifi-0.5.0-r2.ebuild:
+  Use more correct distutils-r1 conversion with SRC_URI fix by mm1ke,
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/66.
 
 *python-wifi-0.5.0-r2 (28 Mar 2015)
 

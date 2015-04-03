@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.57 2015/04/02 19:54:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.58 2015/04/03 20:54:15 vapier Exp $
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> unittest2-0.5.1-r2.ebuild:
+  Mark arm64/s390/sh stable.
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> unittest2-1.0.1.ebuild:
   add ~arm, bug #544146

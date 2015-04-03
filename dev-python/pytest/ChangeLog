@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pytest
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.111 2014/12/01 09:45:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.113 2015/04/03 20:35:13 vapier Exp $
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> pytest-2.6.3.ebuild:
+  Mark s390/sh stable.
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> pytest-2.6.3.ebuild,
+  pytest-2.6.4.ebuild:
+  Add arm64/m68k love.
 
   01 Dec 2014; Agostino Sarubbo <ago@gentoo.org> pytest-2.6.3.ebuild:
   Stable for sparc, wrt bug #524416
