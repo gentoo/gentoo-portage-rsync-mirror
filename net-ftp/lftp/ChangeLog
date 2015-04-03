@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.510 2015/04/02 05:25:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.511 2015/04/03 19:28:59 jer Exp $
+
+*lftp-4.6.1.20150401-r1 (03 Apr 2015)
+
+  03 Apr 2015; Jeroen Roovers <jer@gentoo.org> -lftp-4.6.1.20150401.ebuild,
+  +lftp-4.6.1.20150401-r1.ebuild:
+  Set negative defaults for mechanisms that write to known_hosts (bug #536036).
 
 *lftp-4.6.1.20150401 (02 Apr 2015)
 
