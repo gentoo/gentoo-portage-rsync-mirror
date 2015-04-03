@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/Shapely
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/Shapely/ChangeLog,v 1.5 2015/01/08 12:53:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Shapely/ChangeLog,v 1.6 2015/04/03 12:43:10 jlec Exp $
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> Shapely-1.3.0.ebuild,
+  Shapely-1.3.2.ebuild:
+  Fix usage of distutils-r1.eclass
 
   08 Jan 2015; Justin Lecher <jlec@gentoo.org> Shapely-1.3.0.ebuild,
   Shapely-1.3.2.ebuild, Shapely-9999.ebuild:

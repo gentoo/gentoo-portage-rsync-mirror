@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.5.ebuild,v 1.2 2014/11/10 22:47:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.5.ebuild,v 1.3 2015/04/03 12:34:53 idella4 Exp $
 
 EAPI=5
 inherit autotools eutils perl-module user systemd
@@ -8,13 +8,16 @@ inherit autotools eutils perl-module user systemd
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
 HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
+
 LICENSE="HPND BSD BSD-2 GPL-2+ GPL-3+"
 SLOT="0"
+IUSE="curl gnuplot ipv6 kerberos minimal nls readline s3 samba systemd xfs"
+
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 RDEPEND="sys-libs/readline
 	virtual/awk
 	app-arch/tar
-	>=dev-lang/perl-5.6
+	dev-lang/perl:=
 	app-arch/dump
 	net-misc/openssh
 	>=dev-libs/glib-2.26.0
@@ -42,8 +45,6 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd
 	dev-libs/libxslt
 	"
-
-IUSE="curl gnuplot ipv6 kerberos minimal nls readline s3 samba systemd xfs"
 
 MYFILESDIR="${T}/files"
 ENVDIR="/etc/env.d"
@@ -135,6 +136,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	# gentoo bug #537248
+	epatch "${FILESDIR}/local-amanda-perl5.20.patch"
 
 	# gentoo bug #331111
 	sed -i '/^check-local: check-perl$/d' "${S}"/config/automake/scripts.am
@@ -470,3 +473,4 @@ amanda_permissions_fix() {
 		chmod u=srwx,g=rx,o= "${root}"/${i}
 	done
 }
+

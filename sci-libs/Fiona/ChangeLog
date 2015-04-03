@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/Fiona
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.7 2015/03/27 21:09:18 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.8 2015/04/03 12:41:25 jlec Exp $
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> Fiona-1.1.6.ebuild,
+  Fiona-1.4.1.ebuild, Fiona-9999.ebuild:
+  Fix usage of distutils-r1.eclass
 
   27 Mar 2015; Sławek Lis <slis@gentoo.org> +files/scriptname.patch,
   Fiona-1.4.1.ebuild:

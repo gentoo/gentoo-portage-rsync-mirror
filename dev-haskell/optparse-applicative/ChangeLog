@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/optparse-applicative
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/optparse-applicative/ChangeLog,v 1.7 2014/12/14 04:38:08 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/optparse-applicative/ChangeLog,v 1.8 2015/04/03 12:54:12 gienah Exp $
+
+*optparse-applicative-0.11.0.2 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org>
+  +optparse-applicative-0.11.0.2.ebuild:
+  Bump optparse-applicative to 0.11.0.2
 
 *optparse-applicative-0.11.0.1 (14 Dec 2014)
 

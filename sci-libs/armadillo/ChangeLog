@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.31 2015/02/27 14:41:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.32 2015/04/03 12:32:07 jlec Exp $
+
+*armadillo-4.650.4 (03 Apr 2015)
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> +armadillo-4.650.4.ebuild,
+  metadata.xml:
+  Version Bump, fixes https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/79; thanks Marius Brehler for the bump
 
 *armadillo-4.650.2 (27 Feb 2015)
 
