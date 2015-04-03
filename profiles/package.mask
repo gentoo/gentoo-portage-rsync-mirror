@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16457 2015/04/03 07:16:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16458 2015/04/03 09:22:02 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mikle Kolyada <zlogene@gentoo.org> (2 Apr 2015)
+# Dead upstream. Fails tests (byg #442770).
+# Doesn't build with never perl versions.
+# Masked for removal in 30 days.
+dev-perl/Apache-AuthTicket
+
 # Matthew Thode <prometheanfire@gentoo.org> (2 Apr 2015)
 # removing firmware package I accidently added
 # people should move to linux-firmware

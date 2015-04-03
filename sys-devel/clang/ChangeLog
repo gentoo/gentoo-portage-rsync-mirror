@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.121 2015/02/28 09:38:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.122 2015/04/03 09:03:03 voyageur Exp $
+
+*clang-3.5.2-r100 (03 Apr 2015)
+
+  03 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +clang-3.5.2-r100.ebuild:
+  3.5 bugfix release bump
 
 *clang-3.6.0-r100 (27 Feb 2015)
 

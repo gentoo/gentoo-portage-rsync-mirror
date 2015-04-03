@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9902 2015/04/03 07:51:52 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9903 2015/04/03 09:22:02 zlogene Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> package.mask:
+  Mask dev-perl/Apache-AuthTicket for removal
 
   03 Apr 2015; Yixun Lan <dlan@gentoo.org> arch/amd64/package.use.stable.mask:
   stable mask USE=zfs on sys-cluster/ceph, for bug 544606
