@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cctbx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.34 2013/06/04 12:37:25 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.35 2015/04/03 13:41:28 jlec Exp $
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> cctbx-2010.03.29.2334-r6.ebuild,
+  cctbx-2010.03.29.2334-r7.ebuild:
+  Fix SLOT operator and drop unsupported PYthon ABIs
 
   04 Jun 2013; Justin Lecher <jlec@gentoo.org> cctbx-2010.03.29.2334-r7.ebuild:
   Fix deps for new python eclasses
@@ -171,4 +175,3 @@
   04 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org>
   +cctbx-2009.11.01.0123.ebuild, +metadata.xml:
   New ebuild, initialy written by dberkholz
-

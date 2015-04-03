@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r7.ebuild,v 1.4 2013/06/04 12:37:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r7.ebuild,v 1.5 2015/04/03 13:41:28 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils fortran-2 multilib prefix python-single-r1 toolchain-funcs
 
@@ -27,7 +27,7 @@ RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-libs/boost-1.48[python,${PYTHON_USEDEP}]
 	sci-libs/clipper
-	sci-libs/fftw
+	sci-libs/fftw:3.0=
 	!minimal? (
 		sci-chemistry/cns
 		sci-chemistry/shelx )"

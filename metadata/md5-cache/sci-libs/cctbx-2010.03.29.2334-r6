@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test
-DEPEND=>=dev-libs/boost-1.48[python] sci-libs/clipper sci-libs/fftw !minimal? ( sci-chemistry/cns sci-chemistry/shelx ) !prefix? ( >=dev-util/scons-1.2 ) virtual/fortran =dev-lang/python-2*
+DEPEND=>=dev-libs/boost-1.48[python] sci-libs/clipper sci-libs/fftw:3.0 !minimal? ( sci-chemistry/cns sci-chemistry/shelx ) !prefix? ( >=dev-util/scons-1.2 ) virtual/fortran =dev-lang/python-2*
 DESCRIPTION=Computational Crystallography Toolbox
 EAPI=3
 HOMEPAGE=http://cctbx.sourceforge.net/
 IUSE=+minimal openmp threads
 KEYWORDS=amd64 ~ppc x86 ~amd64-linux ~x86-linux
 LICENSE=cctbx-2.0
-RDEPEND=>=dev-libs/boost-1.48[python] sci-libs/clipper sci-libs/fftw !minimal? ( sci-chemistry/cns sci-chemistry/shelx ) virtual/fortran =dev-lang/python-2*
+RDEPEND=>=dev-libs/boost-1.48[python] sci-libs/clipper sci-libs/fftw:3.0 !minimal? ( sci-chemistry/cns sci-chemistry/shelx ) virtual/fortran =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://cci.lbl.gov/cctbx_build/results/2010_03_29_2334/cctbx_bundle.tar.gz -> cctbx-2010.03.29.2334.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=cbdc72d301f160e56cc4b042faaf3b1b
+_md5_=3cd22af9d4847ecf8e8a3b1ff6855c98

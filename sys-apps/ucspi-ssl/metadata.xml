@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-</maintainer>
+	<herd>proxy-maint@gentoo.org</herd>
+	<maintainer>
+		<email>powerman-asdf@yandex.ru</email>
+                <description>Primary maintainer</description>
+                <name>Alex Efros</name>
+	</maintainer>
+	<use>
+        	<flag name='tls'>Add TLS support (see also
+                http://www.suspectclass.com/~sgifford/ucspi-tls/)</flag>
+	</use>
 <longdescription>sslserver and sslclient are command-line tools for building SSL
 client-server applications. They conform to the UNIX Client-Server Program
 Interface, UCSPI.</longdescription>
-<use>
-	<flag name='tls'>Add TLS support (see also
-		http://www.suspectclass.com/~sgifford/ucspi-tls/)</flag>
-</use>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/lens
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lens/ChangeLog,v 1.8 2014/12/14 09:01:57 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lens/ChangeLog,v 1.9 2015/04/03 13:35:08 gienah Exp $
+
+*lens-4.9 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +lens-4.9.ebuild:
+  Bump lens to 4.9
 
 *lens-4.6.0.1 (14 Dec 2014)
 

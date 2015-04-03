@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/cddlib-094g.ebuild,v 1.2 2014/08/10 20:24:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/cddlib-094g.ebuild,v 1.3 2015/04/03 13:44:34 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
-DEPEND=">=dev-libs/gmp-4.2.2"
+DEPEND=">=dev-libs/gmp-4.2.2:0="
 RDEPEND="${DEPEND}"
 
 AUTOTOOLS_IN_SOURCE_BUILD="1"
@@ -38,7 +38,7 @@ src_prepare() {
 }
 
 src_install() {
-	use doc && DOCS=( ${DOCS[@]} doc/cddlibman.pdf doc/cddlibman.ps )
+	use doc && DOCS+=( doc/cddlibman.pdf doc/cddlibman.ps )
 
 	autotools-utils_src_install
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.9 2013/03/17 14:46:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/cctbx-2010.03.29.2334-r6.ebuild,v 1.10 2015/04/03 13:41:28 jlec Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ IUSE="+minimal openmp threads"
 RDEPEND="
 	>=dev-libs/boost-1.48[python]
 	sci-libs/clipper
-	sci-libs/fftw
+	sci-libs/fftw:3.0
 	!minimal? (
 		sci-chemistry/cns
 		sci-chemistry/shelx )"
