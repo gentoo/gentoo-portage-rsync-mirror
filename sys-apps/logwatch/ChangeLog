@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/logwatch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.94 2014/01/26 12:18:39 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.97 2015/04/03 06:21:56 vapier Exp $
+
+*logwatch-7.4.1 (03 Apr 2015)
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> +logwatch-7.4.1.ebuild,
+  files/logwatch:
+  Version bump #542744 by Tobias Sager.  Create cache dirs via existing cronjob
+  #520570 by Agostino Sarubbo.
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> logwatch-7.4.0-r1.ebuild,
+  logwatch-7.4.0_p170-r1.ebuild:
+  Add ~x86-fbsd #303295 by Johan Hattne.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> logwatch-7.4.0_p170-r1.ebuild:
   Stable for sparc, wrt bug #495922

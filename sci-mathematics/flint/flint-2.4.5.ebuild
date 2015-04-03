@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.5.ebuild,v 1.1 2015/04/02 12:27:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.5.ebuild,v 1.2 2015/04/03 06:29:57 patrick Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ IUSE="doc gc ntl static-libs test"
 RDEPEND="dev-libs/gmp
 	dev-libs/mpfr
 	gc? ( dev-libs/boehm-gc )
-	ntl? ( dev-libs/ntl )"
+	ntl? ( <dev-libs/ntl-8 )"
 DEPEND="${RDEPEND}
 	doc? (
 		app-text/texlive-core
