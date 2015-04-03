@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.9999.ebuild,v 1.10 2015/04/03 22:12:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.2.2.ebuild,v 1.1 2015/04/03 22:12:56 dilfridge Exp $
 
 EAPI=5
 

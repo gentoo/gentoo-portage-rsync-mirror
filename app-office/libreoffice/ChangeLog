@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.624 2015/02/28 12:15:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.625 2015/04/03 22:12:56 dilfridge Exp $
+
+*libreoffice-4.4.2.2 (03 Apr 2015)
+
+  03 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-4.3.9999.ebuild, +libreoffice-4.4.2.2.ebuild,
+  libreoffice-4.4.9999.ebuild, libreoffice-9999.ebuild:
+  Version bump
 
   28 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-4.3.9999.ebuild, libreoffice-4.4.1.2.ebuild,
