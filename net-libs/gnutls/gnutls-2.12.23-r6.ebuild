@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r6.ebuild,v 1.12 2014/06/13 13:35:52 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r6.ebuild,v 1.13 2015/04/03 17:21:34 vapier Exp $
 
 EAPI=5
 
@@ -81,6 +81,10 @@ src_configure() {
 
 	econf \
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		--without-libgcrypt-prefix \
+		--without-libnettle-prefix \
+		--without-libpth-prefix \
+		--without-libreadline-prefix \
 		$(use_enable cxx) \
 		$(use_enable doc gtk-doc) \
 		$(use_enable doc gtk-doc-pdf) \

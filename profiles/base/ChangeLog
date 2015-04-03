@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.787 2015/04/02 19:04:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.788 2015/04/03 17:06:40 ottxor Exp $
+
+  03 Apr 2015; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  masked sys-devel/byfl[dragonegg]
 
   02 Apr 2015; <mgorny@gentoo.org> package.use.mask:
   Mask freevo[directfb] due to unsolvable deps, bug #545246.

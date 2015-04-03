@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.666 2015/04/02 19:04:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.667 2015/04/03 17:06:40 ottxor Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Christoph Junghans <ottxor@gentoo.org> (03 Apr 2015)
+# >=~sys-devel/dragonegg-3.6 is broken (bug #543644)
+sys-devel/byfl dragonegg
 
 # Michał Górny <mgorny@gentoo.org> (02 Apr 2015)
 # DirectFB support was removed from libsdl, mask the relevant flag

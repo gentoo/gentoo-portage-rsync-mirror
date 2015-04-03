@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.529 2015/04/01 22:33:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.530 2015/04/03 17:21:34 vapier Exp $
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> gnutls-2.12.23-r6.ebuild:
+  Fix cross-compiling by not searching the host paths directly.  The toolchain
+  already has the right paths built into it for finding these libs.
 
 *gnutls-3.3.14 (01 Apr 2015)
 
