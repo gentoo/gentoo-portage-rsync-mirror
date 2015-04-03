@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.23 2015/04/03 08:29:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.24 2015/04/03 12:01:29 kensington Exp $
+
+  03 Apr 2015; Michael Palimaka <kensington@gentoo.org> -pen-0.20.1.ebuild:
+  Remove old.
 
   03 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pen-0.25.1.ebuild:
   Stable for amd64, wrt bug #505168
