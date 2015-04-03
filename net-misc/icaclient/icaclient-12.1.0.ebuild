@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.8 2014/10/15 15:38:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-12.1.0.ebuild,v 1.9 2015/04/03 21:48:08 dilfridge Exp $
 
 EAPI=5
 
@@ -47,21 +47,33 @@ RDEPEND="
 	media-fonts/font-xfree86-type1
 	media-fonts/font-misc-ethiopic
 	amd64? ( nsplugin? ( www-plugins/nspluginwrapper ) )
-	|| (
-		(
-			>=x11-libs/libXp-1.0.2[abi_x86_32(-)]
-			>=x11-libs/libXaw-1.0.11-r2[abi_x86_32(-)]
-			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-			>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
-			>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
-			>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
-			>=x11-libs/motif-2.3.4-r1:0[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-motif[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
+	>=app-crypt/mit-krb5-1.12.1-r2[abi_x86_32(-)]
+	>=dev-libs/atk-2.10.0[abi_x86_32(-)]
+	>=dev-libs/glib-2.38.2-r1:2[abi_x86_32(-)]
+	>=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)]
+	>=media-libs/gst-plugins-base-0.10.36:0.10[abi_x86_32(-)]
+	>=media-libs/gstreamer-0.10.36-r2:0.10[abi_x86_32(-)]
+	>=media-libs/libogg-1.3.0[abi_x86_32(-)]
+	>=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)]
+	>=media-libs/speex-1.2_rc1-r1[abi_x86_32(-)]
+	>=virtual/ffmpeg-9-r1[abi_x86_32(-)]
+	>=x11-libs/cairo-1.12.14-r4[abi_x86_32(-)]
+	>=x11-libs/gdk-pixbuf-2.30.7:2[abi_x86_32(-)]
+	>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
+	>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+	>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+	>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	>=x11-libs/libXaw-1.0.11-r2[abi_x86_32(-)]
+	>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+	>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
+	>=x11-libs/libXmu-1.1.1-r1[abi_x86_32(-)]
+	>=x11-libs/libXp-1.0.2[abi_x86_32(-)]
+	>=x11-libs/libXpm-3.5.10-r1[abi_x86_32(-)]
+	>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
+	>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
+	>=x11-libs/motif-2.3.4-r1:0[abi_x86_32(-)]
+	>=x11-libs/pango-1.36.3[abi_x86_32(-)]
+	media-libs/flac[abi_x86_32(-)]
 "
 
 DEPEND=""

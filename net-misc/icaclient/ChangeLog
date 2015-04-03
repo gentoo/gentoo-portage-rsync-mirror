@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icaclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.93 2014/10/15 15:38:38 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.94 2015/04/03 21:48:08 dilfridge Exp $
+
+  03 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  icaclient-12.1.0.ebuild:
+  Add missing dependencies and clean up emul packages, bug 523150
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> icaclient-12.1.0.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.
