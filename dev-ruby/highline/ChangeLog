@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.100 2015/04/01 08:26:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.102 2015/04/03 10:43:26 ago Exp $
+
+  03 Apr 2015; Agostino Sarubbo <ago@gentoo.org> highline-1.6.21.ebuild:
+  Stable for alpha, wrt bug #542996
+
+  03 Apr 2015; Agostino Sarubbo <ago@gentoo.org> highline-1.6.21.ebuild:
+  Stable for ia64, wrt bug #542996
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> highline-1.6.21.ebuild:
   Stable for sparc, wrt bug #542996

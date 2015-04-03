@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-DBus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.28 2014/08/24 12:40:14 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DBus/ChangeLog,v 1.29 2015/04/03 10:39:01 dlan Exp $
+
+  03 Apr 2015; Yixun Lan <dlan@gentoo.org> Net-DBus-1.0.0-r1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
 *Net-DBus-1.0.0-r1 (24 Aug 2014)
 

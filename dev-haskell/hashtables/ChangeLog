@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hashtables
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.23 2015/01/30 18:00:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.24 2015/04/03 10:41:13 gienah Exp $
+
+*hashtables-1.2.0.2 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +hashtables-1.2.0.2.ebuild:
+  Bump hashtables to 1.2.0.2
 
   30 Jan 2015; Michał Górny <mgorny@gentoo.org> hashtables-1.1.2.1.ebuild:
   Convert to CPU_FLAGS_X86 the old ebuild as well.

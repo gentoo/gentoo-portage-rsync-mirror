@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.320 2015/03/14 14:34:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.321 2015/04/03 10:35:13 billie Exp $
+
+  03 Apr 2015; Daniel Pielmeier <billie@gentoo.org> -hplip-3.14.10.ebuild:
+  Remove old.
 
   14 Mar 2015; Markus Meier <maekke@gentoo.org> hplip-3.14.10.ebuild:
   arm stable, bug #531312

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf-qt/obconf-qt-0.1.0_p20141029.ebuild,v 1.2 2014/11/16 12:44:39 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf-qt/obconf-qt-0.1.0_p20141029.ebuild,v 1.3 2015/04/03 10:35:58 dlan Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -13,7 +13,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.lxde.org/git/lxde/${PN}.git"
 else
 	SRC_URI="http://dev.gentoo.org/~jauhien/distfiles/${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
 LICENSE="GPL-2 LGPL-2.1+"

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/lximage-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lximage-qt/ChangeLog,v 1.5 2015/02/25 10:31:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lximage-qt/ChangeLog,v 1.6 2015/04/03 10:35:09 dlan Exp $
+
+  03 Apr 2015; Yixun Lan <dlan@gentoo.org> lximage-qt-0.4.0.ebuild:
+  keyword arm/arm64, tested on cortex-a9/cortex-a53 hardware
 
 *lximage-qt-0.4.0 (25 Feb 2015)
 

@@ -3,10 +3,10 @@ DEPEND=dev-libs/glib:2 dev-qt/linguist-tools:5 dev-qt/qtcore:5 dev-qt/qtdbus:5 d
 DESCRIPTION=LXImage Image Viewer - GPicView replacement
 EAPI=5
 HOMEPAGE=http://lxqt.org/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=GPL-2 LGPL-2.1+
 RDEPEND=dev-libs/glib:2 dev-qt/linguist-tools:5 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtprintsupport:5 dev-qt/qtwidgets:5 dev-qt/qtx11extras:5 media-libs/libexif >=x11-libs/libfm-1.2 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXfixes x11-misc/pcmanfm-qt
 SLOT=0
 SRC_URI=http://downloads.lxqt.org/lximage-qt/0.4.0/lximage-qt-0.4.0.tar.xz
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=966cfccccdcfb9ebeae83fea3602a1c2
+_md5_=cc15aca34a0b9d20209e76f263df274a

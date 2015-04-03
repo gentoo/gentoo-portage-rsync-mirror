@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/system-tools-backends
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.79 2014/11/23 22:27:19 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.80 2015/04/03 10:40:39 dlan Exp $
+
+  03 Apr 2015; Yixun Lan <dlan@gentoo.org> system-tools-backends-2.10.2.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   23 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   system-tools-backends-2.10.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.25 2015/03/29 07:15:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.26 2015/04/03 10:54:19 ago Exp $
+
+  03 Apr 2015; Agostino Sarubbo <ago@gentoo.org> samuel-0.3.3-r1.ebuild:
+  Stable for amd64, wrt bug #543256
 
 *samuel-0.3.3-r2 (29 Mar 2015)
 

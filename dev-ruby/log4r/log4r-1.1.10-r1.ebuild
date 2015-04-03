@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/log4r-1.1.10-r1.ebuild,v 1.12 2015/04/02 20:21:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/log4r-1.1.10-r1.ebuild,v 1.14 2015/04/03 10:43:22 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -20,7 +20,7 @@ IUSE=""
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
 
 all_ruby_install() {
 	all_fakegem_install

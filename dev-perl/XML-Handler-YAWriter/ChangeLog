@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Handler-YAWriter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.28 2014/08/23 01:55:55 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.29 2015/04/03 10:38:12 dlan Exp $
+
+  03 Apr 2015; Yixun Lan <dlan@gentoo.org>
+  XML-Handler-YAWriter-0.230.0-r1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
 *XML-Handler-YAWriter-0.230.0-r1 (23 Aug 2014)
 

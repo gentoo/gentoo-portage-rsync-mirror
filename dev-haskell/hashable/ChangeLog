@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hashable
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.30 2015/03/02 09:30:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.31 2015/04/03 10:40:20 gienah Exp $
+
+*hashable-1.2.3.2 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +hashable-1.2.3.2.ebuild:
+  Bump hashable to 1.2.3.2
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> hashable-1.2.1.0.ebuild:
   Stable for ppc, wrt bug #495380

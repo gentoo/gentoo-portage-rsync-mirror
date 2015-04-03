@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/samuel-0.3.3-r1.ebuild,v 1.7 2015/03/29 07:15:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/samuel-0.3.3-r1.ebuild,v 1.8 2015/04/03 10:54:19 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://github.com/chrisk/samuel"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 ruby_add_bdepend "

@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-policykit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-policykit/ChangeLog,v 1.8 2015/02/10 17:12:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-policykit/ChangeLog,v 1.9 2015/04/03 10:31:22 dlan Exp $
+
+  03 Apr 2015; Yixun Lan <dlan@gentoo.org> lxqt-policykit-0.9.0.ebuild:
+  keyword arm/arm64, tested on cortex-a9/cortex-a53 hardware
 
 *lxqt-policykit-0.9.0 (10 Feb 2015)
 
