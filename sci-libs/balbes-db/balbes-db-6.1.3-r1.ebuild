@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3-r1.ebuild,v 1.2 2011/11/21 15:29:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3-r1.ebuild,v 1.3 2015/04/03 13:02:18 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 MY_P="ccp4-${PV}"
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	dodir /usr/share/balbes/BALBES_0.0.1
-	rm -rf share/balbes/BALBES_0.0.1/dic
+	rm -rf share/balbes/BALBES_0.0.1/dic || die
 	# We don't want to wait around to copy all this, or suck up double
 	# the disk space
 	einfo "Installing files, which can take some time ..."
@@ -36,8 +36,8 @@ src_install() {
 	# db files shouldn't be executable
 	find "${ED}"/usr/share/balbes/BALBES_0.0.1/ \
 		-type f \
-		-exec chmod 664 '{}' \;
-	dosym ../../ccp4/data/monomers /usr/share/balbes/BALBES_0.0.1/dic || die
+		-exec chmod 664 '{}' \; || die
+	dosym ../../ccp4/data/monomers /usr/share/balbes/BALBES_0.0.1/dic
 
 	cat >> "${T}"/20balbes <<- EOF
 	BALBES_ROOT="${EPREFIX}/usr/share/balbes/BALBES_0.0.1/"

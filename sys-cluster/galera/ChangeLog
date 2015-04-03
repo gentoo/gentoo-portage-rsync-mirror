@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/galera
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/ChangeLog,v 1.4 2015/03/24 18:32:11 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/ChangeLog,v 1.5 2015/04/03 13:04:03 grknight Exp $
+
+  03 Apr 2015; Brian Evans <grknight@gentoo.org> galera-25.3.5.ebuild:
+  Add append-flags -D_REENTRANT wrt bug 545376
 
 *galera-25.3.10 (24 Mar 2015)
 

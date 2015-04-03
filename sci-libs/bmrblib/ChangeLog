@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/bmrblib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/bmrblib/ChangeLog,v 1.9 2014/11/28 14:57:25 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/bmrblib/ChangeLog,v 1.10 2015/04/03 13:13:22 jlec Exp $
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> -bmrblib-1.0.0-r1.ebuild,
+  -bmrblib-1.0.0.ebuild, -bmrblib-1.0.1_pre198.ebuild, -bmrblib-1.0.2.ebuild,
+  bmrblib-1.0.3.ebuild:
+  Drop old and unsupported ABIs
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> bmrblib-1.0.3.ebuild:
   Support python 3.4

@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.4 2015/03/24 18:32:11 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.5 2015/04/03 13:04:03 grknight Exp $
 
 EAPI=5
 
 MY_P="${PN}-${PV}-src"
 
-inherit scons-utils multilib toolchain-funcs base versionator eutils user
+inherit scons-utils multilib toolchain-funcs base versionator eutils user flag-o-matic
 DESCRIPTION="Synchronous multi-master replication engine that provides its service through wsrep API"
 HOMEPAGE="http://www.codership.org/"
 SRC_URI="https://launchpad.net/${PN}/$(get_version_component_range 2).x/${PV}/+download/${MY_P}.tar.gz"
@@ -61,6 +61,8 @@ src_prepare() {
 }
 
 src_configure() {
+	# Bug 545376 - some arches need this for pthread
+	append-flags -D_REENTRANT
 	tc-export CC CXX
 	# strict_build_flags=0 disables -Werror, -pedantic, -Weffc++,
 	# and -Wold-style-cast

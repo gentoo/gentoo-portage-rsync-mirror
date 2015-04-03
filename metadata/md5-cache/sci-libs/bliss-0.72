@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=gmp? ( dev-libs/gmp ) doc? ( app-doc/doxygen )
+DEPEND=gmp? ( dev-libs/gmp:0= ) doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A Tool for Computing Automorphism Groups and Canonical Labelings of Graphs
 EAPI=5
 HOMEPAGE=http://www.tcs.hut.fi/Software/bliss/index.shtml
 IUSE=doc gmp static-libs
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=gmp? ( dev-libs/gmp )
+RDEPEND=gmp? ( dev-libs/gmp:0= )
 SLOT=0
 SRC_URI=http://www.tcs.hut.fi/Software/bliss/bliss-0.72.zip
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=acc119a8a46845af2c33718e3dda259b
+_md5_=964e62d79683a2ad99f71dc631b48beb

@@ -1,8 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/bliss/bliss-0.72.ebuild,v 1.1 2015/03/09 12:51:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/bliss/bliss-0.72.ebuild,v 1.2 2015/04/03 13:11:35 jlec Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils
 
@@ -15,12 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc gmp static-libs"
 
-RDEPEND="gmp? ( dev-libs/gmp )"
+RDEPEND="gmp? ( dev-libs/gmp:0= )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_PRUNE_LIBTOOL_FILES="all" #comes with pkg-config file
 
 PATCHES=(
@@ -33,11 +34,11 @@ src_configure() {
 	autotools-utils_src_configure
 }
 
+src_compile() {
+	autotools-utils_src_compile all $(usex doc html "")
+}
+
 src_install() {
+	use doc && HTML_DOCS=( "${BUILD_DIR}"/html/. )
 	autotools-utils_src_install
-	if use doc; then
-		cd "${BUILD_DIR}"
-		emake html
-		dohtml -r html
-	fi
 }

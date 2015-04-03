@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/bifunctors
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bifunctors/ChangeLog,v 1.6 2014/12/14 08:38:42 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bifunctors/ChangeLog,v 1.7 2015/04/03 13:27:21 gienah Exp $
+
+*bifunctors-4.2.1 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +bifunctors-4.2.1.ebuild:
+  Bump bifunctors to 4.2.1
 
 *bifunctors-4.2 (14 Dec 2014)
 

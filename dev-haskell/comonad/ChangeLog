@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/comonad
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/comonad/ChangeLog,v 1.6 2014/12/14 08:40:30 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/comonad/ChangeLog,v 1.7 2015/04/03 13:04:46 gienah Exp $
+
+*comonad-4.2.5 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +comonad-4.2.5.ebuild:
+  Bump comonad to 4.2.5
 
 *comonad-4.2.2 (14 Dec 2014)
 

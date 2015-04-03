@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/dnsruby-1.57.0.ebuild,v 1.1 2015/01/01 17:55:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dnsruby/dnsruby-1.57.0.ebuild,v 1.2 2015/04/03 13:16:26 graaff Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
+
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.4:5 )"
 
 all_ruby_prepare() {
 	sed -i -e "/[Cc]overall/d" Rakefile || die

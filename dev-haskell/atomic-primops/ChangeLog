@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/atomic-primops
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/atomic-primops/ChangeLog,v 1.7 2015/01/25 21:11:03 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/atomic-primops/ChangeLog,v 1.8 2015/04/03 13:24:10 gienah Exp $
+
+*atomic-primops-0.7 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +atomic-primops-0.7.ebuild:
+  Bump atomic-primops to 0.7
 
 *atomic-primops-0.6.1.1 (25 Jan 2015)
 

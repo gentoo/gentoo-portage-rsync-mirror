@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/buddy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/ChangeLog,v 1.14 2013/02/05 18:33:04 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/ChangeLog,v 1.15 2015/04/03 13:14:34 jlec Exp $
+
+  03 Apr 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Recalculate checksums
 
   05 Feb 2013; Ulrich Müller <ulm@gentoo.org> buddy-2.2.ebuild,
   buddy-2.4.ebuild:
