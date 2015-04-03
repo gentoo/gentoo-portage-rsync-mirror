@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-7.02.ebuild,v 1.3 2015/03/10 16:02:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/openconnect-7.02.ebuild,v 1.4 2015/04/03 08:10:34 maekke Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.infradead.org/pub/${PN}/${P}.tar.gz
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5"
-KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 arm ~arm64 ~ppc64 ~x86"
 IUSE="doc +gnutls gssapi java libproxy nls static-libs"
 ILINGUAS="ar cs de el en_GB en_US es eu fi fr gl id lt nl pa pl pt pt_BR sk sl tg ug uk zh_CN zh_TW"
 for lang in $ILINGUAS; do

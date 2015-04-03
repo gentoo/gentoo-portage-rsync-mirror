@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.249 2015/04/03 05:56:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.250 2015/04/03 08:10:26 maekke Exp $
 
 # Markus Meier <maekke@gentoo.org> (03 Apr 2015)
 # Deps not yet stable or keyworded
@@ -274,6 +274,7 @@ media-gfx/pstoedit emf
 
 # Rick Farina <zerochaos@gentoo.org> (05 Feb 2013)
 # masking all stable packages with java use flag
+net-misc/openconnect java
 dev-util/oprofile java
 =dev-db/qdbm-1.8.78-r1 java
 =dev-libs/beecrypt-4.2.1 java

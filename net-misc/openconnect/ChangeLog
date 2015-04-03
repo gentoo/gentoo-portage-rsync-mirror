@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.41 2015/03/22 22:17:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.42 2015/04/03 08:10:34 maekke Exp $
+
+  03 Apr 2015; Markus Meier <maekke@gentoo.org> openconnect-7.02.ebuild:
+  arm stable, bug #542444
 
 *openconnect-7.06 (22 Mar 2015)
 

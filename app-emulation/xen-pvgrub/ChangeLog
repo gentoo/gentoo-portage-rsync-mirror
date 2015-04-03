@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.64 2015/03/28 13:30:30 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.65 2015/04/03 08:30:14 ago Exp $
+
+  03 Apr 2015; Agostino Sarubbo <ago@gentoo.org> xen-pvgrub-4.4.2.ebuild:
+  Stable for amd64, wrt bug #545144
 
 *xen-pvgrub-4.4.2 (28 Mar 2015)
 

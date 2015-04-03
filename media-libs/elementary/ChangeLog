@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/elementary
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.26 2015/03/17 02:21:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.27 2015/04/03 08:13:54 maekke Exp $
+
+  03 Apr 2015; Markus Meier <maekke@gentoo.org> elementary-1.12.2.ebuild:
+  arm stable, bug #538722
 
 *elementary-9999 (17 Mar 2015)
 *elementary-1.13.1 (17 Mar 2015)

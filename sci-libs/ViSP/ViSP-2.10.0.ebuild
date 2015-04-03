@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ViSP/ViSP-2.10.0.ebuild,v 1.2 2015/04/02 16:12:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ViSP/ViSP-2.10.0.ebuild,v 1.3 2015/04/03 08:21:17 aballier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://gforge.inria.fr/frs/download.php/latestfile/475/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE="
 	demos +dmtx doc examples ffmpeg gsl ieee1394 jpeg lapack ogre ois opencv png
 	test tutorials usb v4l X xml +zbar zlib

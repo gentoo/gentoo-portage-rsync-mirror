@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-2.1.532.ebuild,v 1.7 2014/08/13 02:04:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-2.1.532.ebuild,v 1.8 2015/04/03 08:01:11 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
-ruby_add_bdepend "test? ( dev-ruby/rack-test >=dev-ruby/minitest-4:0 )"
+ruby_add_bdepend "test? ( dev-ruby/rack-test >=dev-ruby/minitest-4:0 dev-ruby/tilt )"
 
 ruby_add_rdepend "
 	>=dev-ruby/mab-0.0.3

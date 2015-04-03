@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/maintboot
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/maintboot/ChangeLog,v 1.1 2015/04/03 08:05:19 idella4 Exp $
+
+*maintboot-0.1.0 (03 Apr 2015)
+
+  03 Apr 2015; Ian Delaney <idella4@gentoo.org> +maintboot-0.1.0.ebuild,
+  +metadata.xml:
+  minimal ebuild, written by me, required to support sys-block/blocks wrt bug
+  #531050

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/camping
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.36 2014/08/13 02:04:29 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.37 2015/04/03 08:01:11 graaff Exp $
+
+  03 Apr 2015; Hans de Graaff <graaff@gentoo.org> camping-2.1.532.ebuild:
+  Add missing test dependency on dev-ruby/tilt.
 
   13 Aug 2014; Manuel Rüger <mrueg@gentoo.org> camping-2.1.532.ebuild:
   Add ruby21 target.
