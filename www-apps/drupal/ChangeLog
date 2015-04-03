@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.114 2015/03/21 23:30:16 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.116 2015/04/03 11:13:35 jmbsvicetto Exp $
+
+*drupal-7.36 (03 Apr 2015)
+*drupal-8.0.0_beta9 (03 Apr 2015)
+
+  03 Apr 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-7.36.ebuild, +drupal-8.0.0_beta9.ebuild, -drupal-7.35.ebuild,
+  -drupal-8.0.0_beta7.ebuild:
+  Bump to releases 7.36 and 8.0.0_beta9.
 
 *drupal-6.35 (21 Mar 2015)
 

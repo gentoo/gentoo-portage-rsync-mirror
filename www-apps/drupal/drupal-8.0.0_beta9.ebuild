@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-8.0.0_beta7.ebuild,v 1.1 2015/03/01 17:34:18 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-8.0.0_beta9.ebuild,v 1.1 2015/04/03 11:12:18 jmbsvicetto Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://drupal.org/"
 SRC_URI="http://drupal.org/files/projects/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="+accelerator +mysql postgres sqlite +uploadprogress"
 
 RDEPEND="
