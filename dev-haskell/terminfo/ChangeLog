@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/terminfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.38 2014/12/23 22:53:13 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/terminfo/ChangeLog,v 1.39 2015/04/03 08:53:16 gienah Exp $
+
+*terminfo-0.4.0.1 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +terminfo-0.4.0.1.ebuild:
+  Bump terminfo to 0.4.0.1
 
   23 Dec 2014; Sergei Trofimovich <slyfox@gentoo.org> terminfo-0.4.0.0.ebuild:
   Mark as a core lib for ghc-7.8.4.

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.85 2015/03/27 16:30:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.86 2015/04/03 08:49:35 idella4 Exp $
+
+  03 Apr 2015; Ian Delaney <idella4@gentoo.org> varnish-4.0.3.ebuild:
+  Clean old impls, add py3.4 support
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> varnish-3.0.5-r4.ebuild:
   Stable for amd64, wrt bug #538736

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.90 2015/04/02 21:30:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.91 2015/04/03 08:57:45 zlogene Exp $
+
+  03 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> SOAP-Lite-1.140.0.ebuild:
+  Add more keywords wrt bug #545360
 
 *SOAP-Lite-1.140.0 (02 Apr 2015)
 

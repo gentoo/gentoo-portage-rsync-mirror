@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.235 2015/04/02 15:05:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.236 2015/04/03 08:59:51 voyageur Exp $
+
+*llvm-3.5.2 (03 Apr 2015)
+
+  03 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> +llvm-3.5.2.ebuild:
+  3.5 bugfix release bump
 
   02 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild,
   +files/llvm-3.7-nodoctargz.patch:
