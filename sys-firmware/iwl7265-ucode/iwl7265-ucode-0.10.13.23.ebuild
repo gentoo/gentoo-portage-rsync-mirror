@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7265-ucode/iwl7265-ucode-0.10.13.23.ebuild,v 1.2 2015/02/23 03:34:53 prometheanfire Exp $
+# $Header: $
 
 EAPI=5
 inherit linux-info versionator
@@ -42,5 +42,6 @@ pkg_pretend() {
 src_install() {
 	insinto /lib/firmware
 	doins "${S}/iwlwifi-${DEV_N}-${vc[2]}.ucode"
+	doins "${S}/iwlwifi-${DEV_N}D-${vc[2]}.ucode"
 	dodoc README*
 }
