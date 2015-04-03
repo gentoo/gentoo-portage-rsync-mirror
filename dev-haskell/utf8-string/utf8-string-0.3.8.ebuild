@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/utf8-string-0.3.8.ebuild,v 1.8 2015/02/28 13:27:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/utf8-string-0.3.8.ebuild,v 1.9 2015/04/03 03:05:56 gienah Exp $
 
 EAPI=5
 
@@ -23,3 +23,8 @@ RDEPEND=">=dev-lang/ghc-7.4.1:=
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.2
 "
+
+src_prepare() {
+	cabal_chdeps \
+		'base >= 3 && < 4.8' 'base >= 3'
+}
