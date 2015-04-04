@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-1.0.0.ebuild,v 1.1 2015/01/10 06:26:48 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/irssi-otr-1.0.0.ebuild,v 1.2 2015/04/04 15:15:15 kensington Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	>=dev-libs/glib-2.22.0:2
 	>=dev-libs/libgcrypt-1.2.0:0
 	>=net-libs/libotr-4.1.0
-	>=net-irc/irssi-0.8.15"
+	>=net-irc/irssi-0.8.15[perl]"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

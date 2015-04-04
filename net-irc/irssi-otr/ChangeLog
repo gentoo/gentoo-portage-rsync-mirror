@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-otr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.19 2015/01/10 06:26:48 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.20 2015/04/04 15:15:15 kensington Exp $
+
+  04 Apr 2015; Michael Palimaka <kensington@gentoo.org> irssi-otr-1.0.0.ebuild:
+  Enforce missing USE dependency wrt bug #541838.
 
 *irssi-otr-1.0.0 (10 Jan 2015)
 
