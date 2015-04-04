@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1583 2015/04/04 20:33:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1584 2015/04/04 21:04:49 chewi Exp $
+
+  04 Apr 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass,
+  java-pkg-simple.eclass:
+  Add ejavadoc function. Thanks to wltjr. Fixes bug #544076.
 
   04 Apr 2015; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   Disable building dynamic libraris by default before-ghc-7.10 (was

@@ -4,7 +4,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-simple.eclass,v 1.4 2015/03/19 09:57:43 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-simple.eclass,v 1.5 2015/04/04 21:04:49 chewi Exp $
 
 inherit java-utils-2
 
@@ -139,7 +139,7 @@ java-pkg-simple_src_compile() {
 	if has doc ${JAVA_PKG_IUSE} && use doc; then
 		mkdir -p ${apidoc}
 		java-pkg-simple_verbose-cmd \
-			javadoc -d ${apidoc} \
+			ejavadoc -d ${apidoc} \
 			-encoding ${JAVA_ENCODING} -docencoding UTF-8 -charset UTF-8 \
 			${classpath:+-classpath ${classpath}} ${JAVADOC_ARGS:- -quiet} \
 			@${sources} || die "javadoc failed"

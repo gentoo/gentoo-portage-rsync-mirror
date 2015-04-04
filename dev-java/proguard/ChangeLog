@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/proguard
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.28 2014/08/10 20:22:30 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.29 2015/04/04 21:20:52 chewi Exp $
+
+*proguard-5.2.1 (04 Apr 2015)
+
+  04 Apr 2015; James Le Cuirot <chewi@gentoo.org> +proguard-5.2.1.ebuild,
+  -files/build.xml:
+  Version bump. Remove j2me support because we're going to remove sun-j2me-bin.
+  Also remove unused build.xml file.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> proguard-4.5.ebuild,
   proguard-4.7.ebuild, proguard-4.8.ebuild:

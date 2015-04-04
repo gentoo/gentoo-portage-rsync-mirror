@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mkdocs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mkdocs/ChangeLog,v 1.1 2015/03/01 21:11:20 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mkdocs/ChangeLog,v 1.2 2015/04/04 21:17:52 alunduil Exp $
+
+*mkdocs-0.11.1-r1 (04 Apr 2015)
+
+  04 Apr 2015; Alex Brandt <alunduil@gentoo.org> +mkdocs-0.11.1-r1.ebuild:
+  add patch that reduces Markdown restrictions
 
 *mkdocs-0.11.1 (01 Mar 2015)
 

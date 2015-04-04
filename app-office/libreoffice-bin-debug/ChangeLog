@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin-debug
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.78 2015/03/18 18:37:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.79 2015/04/04 21:03:18 zlogene Exp $
+
+  04 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  libreoffice-bin-debug-4.3.5.2-r1.ebuild:
+  amd64 stable wrt bug #542220
 
 *libreoffice-bin-debug-4.3.5.2-r1 (18 Mar 2015)
 

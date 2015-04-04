@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.156 2014/04/09 21:55:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.157 2015/04/04 21:04:49 chewi Exp $
 
 # @ECLASS: java-utils-2.eclass
 # @MAINTAINER:
@@ -21,7 +21,7 @@
 # This eclass should not be inherited this directly from an ebuild. Instead,
 # you should inherit java-pkg-2 for Java packages or java-pkg-opt-2 for packages
 # that have optional Java support. In addition you can inherit java-ant-2 for
-# Ant-based packages. 
+# Ant-based packages.
 inherit eutils versionator multilib
 
 IUSE="elibc_FreeBSD"
@@ -1808,7 +1808,7 @@ java-utils-2_pkg_preinst() {
 # Ant wrapper function. Will use the appropriate compiler, based on user-defined
 # compiler. Will also set proper ANT_TASKS from the variable ANT_TASKS,
 # variables:
-# 
+#
 # @CODE
 # Variables:
 # EANT_GENTOO_CLASSPATH - calls java-pkg_getjars for the value and adds to the
@@ -1962,6 +1962,23 @@ ejavac() {
 
 	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ${compiler_executable} ${javac_args} "${@}"
 	${compiler_executable} ${javac_args} "${@}" || die "ejavac failed"
+}
+
+# @FUNCTION: ejavadoc
+# @USAGE: <javadoc_arguments>
+# @DESCRIPTION:
+# javadoc wrapper function. Will set some flags based on the VM version
+# due to strict javadoc rules in 1.8.
+ejavadoc() {
+	debug-print-function ${FUNCNAME} $*
+
+	local javadoc_args=""
+
+	if java-pkg_is-vm-version-ge "1.8" ; then
+		javadoc_args="-Xdoclint:none"
+	fi
+
+	javadoc ${javadoc_args} "${@}" || die "ejavadoc failed"
 }
 
 # @FUNCTION: java-pkg_filter-compiler

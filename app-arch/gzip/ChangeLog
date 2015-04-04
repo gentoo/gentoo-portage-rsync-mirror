@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/gzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.134 2015/02/28 14:03:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.135 2015/04/04 21:28:12 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> gzip-1.6.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> gzip-1.6.ebuild:
   Stable for ia64, wrt bug #534810
