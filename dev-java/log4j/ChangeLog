@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/log4j
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.94 2014/08/02 16:51:16 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.95 2015/04/04 00:46:30 monsieurp Exp $
+
+*log4j-1.2.17 (04 Apr 2015)
+
+  04 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +log4j-1.2.17.ebuild:
+  Version and EAPI 5 bump. Fix bug 530818.
 
   02 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -log4j-1.2.15-r2.ebuild:
   Remove old
