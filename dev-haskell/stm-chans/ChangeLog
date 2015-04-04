@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/stm-chans
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm-chans/ChangeLog,v 1.4 2014/07/25 09:16:30 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm-chans/ChangeLog,v 1.5 2015/04/04 08:18:22 gienah Exp $
+
+*stm-chans-3.0.0.3 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +stm-chans-3.0.0.3.ebuild:
+  Bump stm-chans to 3.0.0.3
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> stm-chans-3.0.0.2.ebuild,
   stm-chans-3.0.0.ebuild:

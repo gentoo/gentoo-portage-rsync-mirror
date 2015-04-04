@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.125 2015/03/30 04:27:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.126 2015/04/04 08:27:59 jer Exp $
+
+*fbida-2.10 (04 Apr 2015)
+
+  04 Apr 2015; Jeroen Roovers <jer@gentoo.org> +fbida-2.10.ebuild:
+  Version bump.
 
   30 Mar 2015; Jeroen Roovers <jer@gentoo.org> -fbida-2.09.ebuild,
   -files/fbida-2.08-posix-make.patch:

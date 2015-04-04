@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.3.3.ebuild,v 1.2 2013/08/13 15:57:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.3.3.ebuild,v 1.3 2015/04/04 08:07:47 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
 
 RDEPEND="dev-libs/gmp"

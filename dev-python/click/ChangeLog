@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/click
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/click/ChangeLog,v 1.9 2015/03/08 23:41:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/click/ChangeLog,v 1.10 2015/04/04 08:14:24 idella4 Exp $
+
+*click-4.0 (04 Apr 2015)
+
+  04 Apr 2015; Ian Delaney <idella4@gentoo.org> +click-4.0.ebuild:
+  bump; doc build disabled due to its failure in new version
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> click-3.3.ebuild:
   x86 stable, bug 540290
