@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r3.ebuild,v 1.1 2015/02/28 15:52:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.11.1-r3.ebuild,v 1.2 2015/04/04 20:33:29 zlogene Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://download.osgeo.org/${PN}/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="armadillo +aux_xml curl debug doc fits geos gif gml hdf5 java jpeg jpeg2k mdb mysql netcdf odbc ogdi opencl pdf perl png postgres python ruby spatialite sqlite threads xls"
 
 RDEPEND="

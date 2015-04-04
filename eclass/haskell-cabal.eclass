@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.50 2015/03/28 13:32:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.51 2015/04/04 20:33:05 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -387,12 +387,11 @@ cabal-configure() {
 			cabalconf+=(--enable-shared)
 
 	if $(ghc-supports-shared-libraries); then
-		# maybe a bit lower
-		cabalconf+=(--enable-shared)
-
 		# Experimental support for dynamically linked binaries.
 		# We are enabling it since 7.10.1_rc3
 		if version_is_at_least "7.10.0.20150316" "$(ghc-version)"; then
+			# we didn't enable it before as it was not stable on all arches
+			cabalconf+=(--enable-shared)
 			# Known to break on ghc-7.8/Cabal-1.18
 			# https://ghc.haskell.org/trac/ghc/ticket/9625
 			cabalconf+=(--enable-executable-dynamic)
