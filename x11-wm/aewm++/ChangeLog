@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm++
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.24 2014/08/10 19:57:09 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.25 2015/04/04 06:07:42 mr_bones_ Exp $
+
+  04 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -aewm++-1.1.5.ebuild:
+  old
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> aewm++-1.1.5-r1.ebuild,
   aewm++-1.1.5.ebuild:

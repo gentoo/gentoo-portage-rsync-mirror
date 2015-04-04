@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/i2c-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.21 2015/03/21 09:39:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/ChangeLog,v 1.22 2015/04/04 06:28:17 mr_bones_ Exp $
+
+  04 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -i2c-tools-3.1.0.ebuild,
+  -i2c-tools-3.1.1.ebuild:
+  old
 
 *i2c-tools-3.1.1-r1 (21 Mar 2015)
 

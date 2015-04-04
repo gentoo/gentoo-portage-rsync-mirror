@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/obmenu-generator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu-generator/ChangeLog,v 1.14 2015/02/22 07:33:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu-generator/ChangeLog,v 1.15 2015/04/04 06:06:46 mr_bones_ Exp $
+
+  04 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -obmenu-generator-0.55.ebuild, -obmenu-generator-0.58.ebuild,
+  -obmenu-generator-0.59.ebuild:
+  old
 
 *obmenu-generator-0.61 (22 Feb 2015)
 
