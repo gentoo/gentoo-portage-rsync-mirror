@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/freemat
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.31 2014/12/06 21:05:59 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.32 2015/04/04 15:53:21 kensington Exp $
+
+  04 Apr 2015; Michael Palimaka <kensington@gentoo.org> -freemat-4.0.ebuild,
+  -freemat-4.1.ebuild:
+  Remove old.
 
   06 Dec 2014; Matthias Maier <tamiko@gentoo.org>
   +files/freemat-4.2-use_llvm.patch, freemat-4.2.ebuild:

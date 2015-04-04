@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/automoc-0.9.88-r1.ebuild,v 1.2 2015/03/03 07:38:23 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/automoc-0.9.88-r1.ebuild,v 1.3 2015/04/04 15:36:42 kensington Exp $
 
 EAPI=5
 
 MY_PN="automoc4"
-MY_P="$MY_PN-${PV}"
-inherit base cmake-utils flag-o-matic
+MY_P="${MY_PN}-${PV}"
+inherit cmake-utils flag-o-matic
 
 DESCRIPTION="KDE Meta Object Compiler"
 HOMEPAGE="http://www.kde.org"
@@ -27,7 +27,7 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=( "${FILESDIR}/${PN}-0.9.88-objc++.patch" )
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	if [[ ${ELIBC} = uclibc ]]; then
 		append-flags -pthread

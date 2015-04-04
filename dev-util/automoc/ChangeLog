@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/automoc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/ChangeLog,v 1.9 2015/03/03 07:38:23 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/ChangeLog,v 1.10 2015/04/04 15:36:42 kensington Exp $
+
+  04 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  automoc-0.9.88-r1.ebuild:
+  Port away from base.eclass.
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> automoc-0.9.88-r1.ebuild:
   add arm64 support, tested on A53 board

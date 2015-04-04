@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libprojectm-qt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.17 2013/03/02 21:45:16 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm-qt/ChangeLog,v 1.18 2015/04/04 15:31:17 kensington Exp $
+
+  04 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  -libprojectm-qt-2.0.1.ebuild:
+  Remove old.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   libprojectm-qt-2.0.1.ebuild, libprojectm-qt-2.1.0-r1.ebuild:
