@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgcal/libgcal-0.9.6.ebuild,v 1.1 2011/01/12 14:47:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgcal/libgcal-0.9.6-r1.ebuild,v 1.1 2015/04/04 17:02:02 kensington Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit cmake-utils
 
@@ -11,8 +11,8 @@ HOMEPAGE="http://code.google.com/p/libgcal/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc test"
 
 # Some tests fail
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	test? ( dev-libs/check )
 "
 
-DOCS=(README)
+DOCS=( README )
 
 src_configure() {
 	mycmakeargs=(
@@ -43,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	use doc && HTML_DOCS=("${CMAKE_BUILD_DIR}/docs/doxygen/html/")
+	use doc && HTML_DOCS=( "${BUILD_DIR}/docs/doxygen/html/" )
 	cmake-utils_src_install
 }
 
