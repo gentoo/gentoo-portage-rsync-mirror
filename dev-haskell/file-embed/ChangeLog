@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/file-embed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/file-embed/ChangeLog,v 1.8 2015/02/25 15:32:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/file-embed/ChangeLog,v 1.9 2015/04/04 12:10:40 gienah Exp $
+
+*file-embed-0.0.8.2 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +file-embed-0.0.8.2.ebuild:
+  Bump file-embed to 0.0.8.2
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> file-embed-0.0.7.ebuild:
   Stable for x86, wrt bug #534970

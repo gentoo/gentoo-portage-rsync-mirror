@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haskell-src
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.54 2014/07/02 09:19:43 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src/ChangeLog,v 1.55 2015/04/04 12:12:02 gienah Exp $
+
+*haskell-src-1.0.2.0 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +haskell-src-1.0.2.0.ebuild:
+  Bump haskell-src to 1.0.2.0
 
 *haskell-src-1.0.1.6 (02 Jul 2014)
 
