@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.252 2015/03/31 18:24:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.253 2015/04/04 17:54:43 mgorny Exp $
+
+*paludis-2.4.0 (04 Apr 2015)
+
+  04 Apr 2015; Michał Górny <mgorny@gentoo.org> +paludis-2.4.0.ebuild:
+  Version bump. Switch to ruby:2.0 which is the newer version in profile
+  defaults, until we are provided with better tools to handle Ruby.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> paludis-1.2.0.ebuild,
   paludis-1.4.0.ebuild, paludis-1.4.2-r1.ebuild, paludis-2.0.0.ebuild,
