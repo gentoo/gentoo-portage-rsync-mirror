@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/blocks/blocks-0.1.4_pre131210-r1.ebuild,v 1.1 2013/12/18 08:00:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/blocks/blocks-0.1.4_pre131210-r1.ebuild,v 1.2 2015/04/04 11:09:53 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python3_3 )
+PYTHON_COMPAT=( python3_{3,4} )
 
 inherit distutils-r1
 
@@ -18,8 +18,10 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+minimal"
 
 DEPEND="
-	dev-python/pyparted[${PYTHON_USEDEP}]
-	dev-python/python-augeas[${PYTHON_USEDEP}]"
+	dev-python/maintboot
+	>=dev-python/pyparted-3.10[${PYTHON_USEDEP}]
+	>=dev-python/python-augeas-0.5.0[${PYTHON_USEDEP}]
+"
 RDEPEND="${DEPEND}
 	>=sys-block/parted-2.3
 	!minimal? (
