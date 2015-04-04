@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/harmonics-dwf-free
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/harmonics-dwf-free/ChangeLog,v 1.8 2014/11/25 22:54:09 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/harmonics-dwf-free/ChangeLog,v 1.9 2015/04/04 06:40:06 mr_bones_ Exp $
+
+  04 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -harmonics-dwf-free-20120302.ebuild:
+  old
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

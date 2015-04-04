@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spread
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.13 2014/03/11 09:50:44 kumba Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.14 2015/04/04 06:41:54 mr_bones_ Exp $
+
+  04 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -spread-4.1.0-r1.ebuild:
+  old
 
 *spread-4.3.0 (11 Mar 2014)
 *spread-4.1.0-r1 (11 Mar 2014)

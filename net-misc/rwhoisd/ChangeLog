@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rwhoisd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/ChangeLog,v 1.7 2014/11/09 10:43:38 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/ChangeLog,v 1.8 2015/04/04 06:45:00 mr_bones_ Exp $
+
+  04 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -rwhoisd-1.5.9.5-r1.ebuild:
+  old
 
   09 Nov 2014; Jeroen Roovers <jer@gentoo.org> rwhoisd-1.5.9.5-r2.ebuild:
   Add -DNEW_STYLE_BIN_SORT by Joshua Coombs (bug #501924).

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/net-http-digest_auth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.15 2015/03/22 17:09:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.16 2015/04/04 06:47:54 graaff Exp $
+
+*net-http-digest_auth-1.4-r2 (04 Apr 2015)
+
+  04 Apr 2015; Hans de Graaff <graaff@gentoo.org>
+  net-http-digest_auth-1.4-r1.ebuild, +net-http-digest_auth-1.4-r2.ebuild:
+  Create stable candidate.
 
   22 Mar 2015; Hans de Graaff <graaff@gentoo.org>
   net-http-digest_auth-1.4-r1.ebuild:
