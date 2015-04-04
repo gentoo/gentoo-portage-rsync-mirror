@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.94 2015/02/26 17:44:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.95 2015/04/04 22:34:26 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> xz-utils-5.0.8.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
 *xz-utils-5.2.1 (26 Feb 2015)
 

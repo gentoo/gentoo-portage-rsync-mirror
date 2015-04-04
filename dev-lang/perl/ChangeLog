@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.474 2015/04/04 18:43:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.475 2015/04/04 22:35:28 zlogene Exp $
+
+  04 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> perl-5.20.2.ebuild:
+  alpha stable wrt bug #545510
 
   04 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> perl-5.20.2.ebuild:
   amd64 stable wrt bug #545510

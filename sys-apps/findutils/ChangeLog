@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.225 2014/09/08 23:14:34 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.226 2015/04/04 22:38:19 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/findutils-4.5.14-test-bashisms.patch, findutils-4.5.14-r1.ebuild:
+  Fix bashisms in test scripts #531020 by Paolo Pedroni.
 
 *findutils-4.4.2-r2 (08 Sep 2014)
 *findutils-4.5.14-r1 (08 Sep 2014)
