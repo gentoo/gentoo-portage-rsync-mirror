@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.77 2014/12/06 10:55:56 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.78 2015/04/04 19:40:27 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> pyasn1-0.1.7.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   06 Dec 2014; Justin Lecher <jlec@gentoo.org> pyasn1-0.1.7.ebuild,
   metadata.xml:

@@ -14,6 +14,7 @@
 	<flag name='fdt'>Enables firmware device tree support</flag>
 	<flag name='glusterfs'>Enables GlusterFS cluster fileystem via
 			<pkg>sys-cluster/glusterfs</pkg></flag>
+	<flag name='gtk2'>Use gtk-2 instead of gtk-3</flag>
 	<flag name='iscsi'>Enable direct iSCSI support via
 		<pkg>net-libs/libiscsi</pkg> instead of indirectly via the Linux
 		block layer that <pkg>sys-block/open-iscsi</pkg> does.</flag>

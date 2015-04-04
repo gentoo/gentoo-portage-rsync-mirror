@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.138 2015/02/07 02:46:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.139 2015/04/04 19:32:00 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> virtualenv-1.11.6.ebuild,
+  virtualenv-12.0.5.ebuild, virtualenv-12.0.6.ebuild, virtualenv-12.0.7.ebuild,
+  virtualenv-12.0.ebuild:
+  Add arm64/m68k/s390/sh love.
 
 *virtualenv-12.0.7 (07 Feb 2015)
 

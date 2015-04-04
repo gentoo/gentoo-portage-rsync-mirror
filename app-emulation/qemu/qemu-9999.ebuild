@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.95 2015/03/28 04:15:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.96 2015/04/04 19:59:28 vapier Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.qemu.org http://www.linux-kvm.org"
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
 IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
-gtk infiniband iscsi +jpeg \
+gtk gtk2 infiniband iscsi +jpeg \
 kernel_linux kernel_FreeBSD lzo ncurses nfs nls numa opengl +pin-upstream-blobs
 +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard snappy spice ssh static static-softmmu \
@@ -51,12 +51,13 @@ IUSE+=" ${use_softmmu_targets} ${use_user_targets}"
 # Block USE flag configurations known to not work.
 REQUIRED_USE="|| ( ${use_softmmu_targets} ${use_user_targets} )
 	${PYTHON_REQUIRED_USE}
+	gtk2? ( gtk )
 	qemu_softmmu_targets_arm? ( fdt )
 	qemu_softmmu_targets_microblaze? ( fdt )
 	qemu_softmmu_targets_ppc? ( fdt )
 	qemu_softmmu_targets_ppc64? ( fdt )
 	static? ( static-softmmu static-user )
-	static-softmmu? ( !alsa !pulseaudio !bluetooth !opengl !gtk )
+	static-softmmu? ( !alsa !pulseaudio !bluetooth !opengl !gtk !gtk2 )
 	virtfs? ( xattr )"
 
 # Yep, you need both libcap and libcap-ng since virtfs only uses libcap.
@@ -74,7 +75,7 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	curl? ( >=net-misc/curl-7.15.4[static-libs(+)] )
 	fdt? ( >=sys-apps/dtc-1.4.0[static-libs(+)] )
 	glusterfs? ( >=sys-cluster/glusterfs-3.4.0[static-libs(+)] )
-	infiniband? ( sys-infiniband/librdmacm[static-libs(+)] )
+	infiniband? ( sys-infiniband/librdmacm:=[static-libs(+)] )
 	jpeg? ( virtual/jpeg:=[static-libs(+)] )
 	lzo? ( dev-libs/lzo:2[static-libs(+)] )
 	ncurses? ( sys-libs/ncurses[static-libs(+)] )
@@ -115,7 +116,8 @@ CDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
 	gtk? (
-		x11-libs/gtk+:3
+		gtk2? ( x11-libs/gtk+:2 )
+		!gtk2? ( x11-libs/gtk+:3 )
 		x11-libs/vte:2.90
 	)
 	iscsi? ( net-libs/libiscsi )
@@ -376,7 +378,7 @@ qemu_src_configure() {
 			--with-system-pixman
 			--audio-drv-list="${audio_opts}"
 		)
-		use gtk && conf_opts+=( --with-gtkabi=3.0 )
+		use gtk && conf_opts+=( --with-gtkabi=$(usex gtk2 2.0 3.0) )
 		;;
 	esac
 

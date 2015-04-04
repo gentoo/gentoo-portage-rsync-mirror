@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/characteristic
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/characteristic/ChangeLog,v 1.6 2015/03/21 09:31:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/characteristic/ChangeLog,v 1.7 2015/04/04 19:35:09 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> characteristic-14.1.0.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable.
 
   21 Mar 2015; Jeroen Roovers <jer@gentoo.org> characteristic-14.1.0.ebuild:
   Stable for HPPA too.

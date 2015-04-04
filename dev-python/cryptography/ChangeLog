@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.38 2015/04/01 10:22:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.39 2015/04/04 19:58:14 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> cryptography-0.6.1.ebuild,
+  cryptography-0.7.1-r1.ebuild, cryptography-0.7.2.ebuild,
+  cryptography-0.8.1.ebuild, cryptography-0.8.ebuild:
+  Add arm64/ia64/m68k/s390/sh love.
 
   01 Apr 2015; Tobias Klausmann <klausman@gentoo.org>
   cryptography-0.8.1.ebuild:

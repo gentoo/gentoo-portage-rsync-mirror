@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.65 2015/03/03 07:20:48 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.66 2015/04/04 19:56:22 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> six-1.8.0.ebuild,
+  six-1.9.0.ebuild:
+  Add arm64/m68k/s390/sh love.
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> six-1.9.0.ebuild:
   add arm64 support, tested on A53 board
