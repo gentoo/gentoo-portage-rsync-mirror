@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hxt-charproperties
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-charproperties/ChangeLog,v 1.10 2014/12/13 14:45:20 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-charproperties/ChangeLog,v 1.11 2015/04/04 09:03:39 gienah Exp $
+
+*hxt-charproperties-9.2.0.1 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org>
+  +hxt-charproperties-9.2.0.1.ebuild:
+  Bump hxt-charproperties to 9.2.0.1
 
 *hxt-charproperties-9.2.0.0 (13 Dec 2014)
 

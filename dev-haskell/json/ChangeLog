@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/json
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.14 2015/03/05 19:44:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/json/ChangeLog,v 1.15 2015/04/04 09:06:20 gienah Exp $
+
+*json-0.9.1 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +json-0.9.1.ebuild:
+  Bump json to 0.9.1
 
 *json-0.9 (05 Mar 2015)
 

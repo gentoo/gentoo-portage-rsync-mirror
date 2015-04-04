@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.10.2.ebuild,v 1.1 2015/01/10 17:54:59 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.10.2.ebuild,v 1.2 2015/04/04 09:12:10 djc Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -26,7 +26,7 @@ DOCS=( ACKS README RELEASE-NOTES )
 python_compile_all() {
 	if use doc; then
 		einfo "Generation of documentation"
-		emake -C doc html || die "Generation of documentation failed"
+		emake -C doc/source html || die "Generation of documentation failed"
 	fi
 }
 
@@ -36,6 +36,6 @@ python_test() {
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( doc/.build/html/. )
+	use doc && local HTML_DOCS=( doc/source/.build/html/. )
 	distutils-r1_python_install_all
 }

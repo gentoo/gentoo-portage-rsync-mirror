@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lockfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.27 2015/01/10 18:10:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/ChangeLog,v 1.28 2015/04/04 09:12:10 djc Exp $
+
+  04 Apr 2015; Dirkjan Ochtman <djc@gentoo.org> lockfile-0.10.2.ebuild:
+  Fix documentation build (fixes bug 540986)
 
   10 Jan 2015; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Fix upstream remote-id to point to PyPI

@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hxt-regex-xmlschema
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-regex-xmlschema/ChangeLog,v 1.8 2014/12/13 14:46:06 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt-regex-xmlschema/ChangeLog,v 1.9 2015/04/04 09:02:11 gienah Exp $
+
+*hxt-regex-xmlschema-9.2.0.2 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org>
+  +hxt-regex-xmlschema-9.2.0.2.ebuild:
+  Bump hxt-regex-xmlschema to 9.2.0.2
 
 *hxt-regex-xmlschema-9.2.0 (13 Dec 2014)
 

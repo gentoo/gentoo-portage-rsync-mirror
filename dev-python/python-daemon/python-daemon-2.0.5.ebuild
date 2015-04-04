@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-2.0.5.ebuild,v 1.1 2015/02/02 09:22:00 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-daemon/python-daemon-2.0.5.ebuild,v 1.2 2015/04/04 09:06:55 djc Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -19,6 +19,7 @@ IUSE="test"
 RDEPEND=">=dev-python/lockfile-0.9[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/docutils[${PYTHON_USEDEP}]
 	test? (
 		>=dev-python/unittest2-0.8.0[${PYTHON_USEDEP}]
 		>=dev-python/mock-1.0[${PYTHON_USEDEP}]
