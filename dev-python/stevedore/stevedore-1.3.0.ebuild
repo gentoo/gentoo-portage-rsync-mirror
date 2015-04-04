@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/stevedore-1.3.0.ebuild,v 1.1 2015/03/25 18:43:56 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/stevedore-1.3.0.ebuild,v 1.2 2015/04/04 01:54:21 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 inherit distutils-r1
 
 DESCRIPTION="Manage dynamic plugins for Python applications"
-HOMEPAGE="https://github.com/dreamhost/stevedore https://pypi.python.org/pypi/stevedore"
+HOMEPAGE="https://github.com/openstack/stevedore https://pypi.python.org/pypi/stevedore"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
@@ -38,7 +38,7 @@ DEPEND="
 RDEPEND=">=dev-python/six-1.9.0[${PYTHON_USEDEP}]"
 
 python_compile_all() {
-	use doc && emake -C docs html
+	use doc && ${EPYTHON} setup.py build_sphinx
 }
 
 python_test() {
@@ -46,7 +46,7 @@ python_test() {
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( docs/build/. )
+	use doc && local HTML_DOCS=( doc/build/html/. )
 
 	distutils-r1_python_install_all
 }
