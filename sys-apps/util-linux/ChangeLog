@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.498 2015/04/03 01:33:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.499 2015/04/04 21:33:45 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> util-linux-2.25.2-r2.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   03 Apr 2015; Mike Frysinger <vapier@gentoo.org> util-linux-2.26.1-r1.ebuild,
   util-linux-9999.ebuild:

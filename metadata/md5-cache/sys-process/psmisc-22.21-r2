@@ -4,10 +4,10 @@ DESCRIPTION=A set of tools that use the proc filesystem
 EAPI=4
 HOMEPAGE=http://psmisc.sourceforge.net/
 IUSE=ipv6 nls selinux X
-KEYWORDS=~alpha amd64 arm ~arm64 hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux
+KEYWORDS=~alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=>=sys-libs/ncurses-5.7-r7 nls? ( virtual/libintl ) selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=mirror://sourceforge/psmisc/psmisc-22.21.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=b64e625ee4d4be94d4572f93428b1ae6
+_md5_=0dda1225d0680b28a3935b39eb37dcb1

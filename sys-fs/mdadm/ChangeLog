@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.191 2015/03/02 09:27:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.193 2015/04/04 21:58:34 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/mdraid.confd,
+  files/mdraid.rc:
+  Add a conf.d setting to pass options to the assemble step #531604 by Adrian.
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> mdadm-3.3.1-r2.ebuild:
+  Mark ia64/ppc64/sparc stable #520342.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mdadm-3.3.1-r2.ebuild:
   Stable for ppc, wrt bug #520342
