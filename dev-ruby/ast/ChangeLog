@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ast
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ast/ChangeLog,v 1.1 2014/09/04 00:37:34 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ast/ChangeLog,v 1.2 2015/04/04 10:31:43 graaff Exp $
+
+  04 Apr 2015; Hans de Graaff <graaff@gentoo.org> ast-2.0.0.ebuild:
+  Add ruby22.
 
 *ast-2.0.0 (04 Sep 2014)
 
