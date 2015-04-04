@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.1.0.ebuild,v 1.2 2015/04/04 12:56:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.1.0.ebuild,v 1.3 2015/04/04 13:33:47 idella4 Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND="
 	test? (
 		${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/mock[${PYTHON_USEDEP}]
+		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy)
 	)
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 

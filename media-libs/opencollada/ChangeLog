@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/opencollada
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/ChangeLog,v 1.7 2015/02/08 00:19:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/ChangeLog,v 1.9 2015/04/04 13:37:24 dilfridge Exp $
+
+  04 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  opencollada-1.2.2_p20150207.ebuild:
+  Revert accidental stabilization on x86
+
+  04 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  opencollada-0_p864-r1.ebuild, opencollada-1.2.2_p20150207.ebuild:
+  Dropping ppc64 to testing since nothing stable on ppc64 depends on this
+  library
 
 *opencollada-9999 (08 Feb 2015)
 *opencollada-1.2.2_p20150207 (08 Feb 2015)
