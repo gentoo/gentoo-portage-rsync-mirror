@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hexpat
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hexpat/ChangeLog,v 1.4 2014/12/14 11:29:19 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hexpat/ChangeLog,v 1.5 2015/04/04 00:12:28 gienah Exp $
+
+*hexpat-0.20.9 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +hexpat-0.20.9.ebuild:
+  Bump hexpat to 0.20.9
 
 *hexpat-0.20.7 (14 Dec 2014)
 
