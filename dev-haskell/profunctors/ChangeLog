@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/profunctors
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/profunctors/ChangeLog,v 1.5 2014/12/14 05:36:25 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/profunctors/ChangeLog,v 1.6 2015/04/04 09:46:52 gienah Exp $
+
+*profunctors-4.4.1 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +profunctors-4.4.1.ebuild:
+  Bump profunctors to 4.4.1
 
 *profunctors-4.3.2 (14 Dec 2014)
 

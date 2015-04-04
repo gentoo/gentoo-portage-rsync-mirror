@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.1.ebuild,v 1.12 2015/01/30 12:48:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.14.10.ebuild,v 1.10 2015/04/04 09:35:38 billie Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit eutils fdo-mime linux-info python-single-r1 udev autotools toolchain-fun
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools"
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
-		http://dev.gentoo.org/~billie/distfiles/${PN}-3.13.11-patches-1.tar.xz"
+		http://dev.gentoo.org/~billie/distfiles/${PN}-3.14.10-patches-1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -48,11 +48,11 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.71-r3
-	>=dev-python/dbus-python-1.1.1-r1[${PYTHON_USEDEP}]
 	policykit? (
 		sys-auth/polkit
 	)
 	!minimal? (
+		>=dev-python/dbus-python-1.1.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/pygobject-2.28.6-r53:2[${PYTHON_USEDEP}]
 		kernel_linux? ( virtual/udev !<sys-fs/udev-114 )
 		scanner? (
@@ -212,7 +212,6 @@ src_configure() {
 		--disable-shadow-build \
 		--disable-qt3 \
 		--disable-udev_sysfs_rules \
-		--disable-udev-acl-rules \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--with-docdir=/usr/share/doc/${PF} \
@@ -243,7 +242,7 @@ src_install() {
 	# Remove hal fdi files
 	rm -rf "${D}"/usr/share/hal || die
 
-	find "${D}" -name '*.la' -exec rm -rf {} + || die
+	prune_libtool_files --all
 
 	if use !minimal ; then
 		python_export EPYTHON PYTHON

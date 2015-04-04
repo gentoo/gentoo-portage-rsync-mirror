@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/setlocale
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/setlocale/ChangeLog,v 1.1 2015/01/04 22:20:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/setlocale/ChangeLog,v 1.2 2015/04/04 09:36:46 gienah Exp $
+
+*setlocale-1.0.0.2 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +setlocale-1.0.0.2.ebuild:
+  Bump setlocale to 1.0.0.2
 
 *setlocale-1.0.0.1 (04 Jan 2015)
 

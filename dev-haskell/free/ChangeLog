@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/free
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/free/ChangeLog,v 1.5 2014/12/14 05:04:24 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/free/ChangeLog,v 1.6 2015/04/04 09:51:29 gienah Exp $
+
+*free-4.11 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +free-4.11.ebuild:
+  Bump free to 4.11
 
 *free-4.10.0.1 (14 Dec 2014)
 
