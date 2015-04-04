@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.7.4.ebuild,v 1.1 2015/01/29 05:23:07 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.7.4.ebuild,v 1.2 2015/04/04 07:37:04 graaff Exp $
 
 EAPI="5"
 
@@ -31,6 +31,8 @@ ruby_add_rdepend "
 	shadow? ( dev-ruby/ruby-shadow )
 	sqlite3? ( dev-ruby/sqlite3 )
 	virtual/ruby-ssl"
+
+ruby_add_bdepend "test? ( dev-ruby/mocha:0.10 )"
 
 DEPEND="${DEPEND}
 	ruby_targets_ruby19? ( dev-lang/ruby:1.9[yaml] )

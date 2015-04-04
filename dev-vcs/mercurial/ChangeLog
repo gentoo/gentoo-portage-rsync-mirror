@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.177 2015/03/31 07:58:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.178 2015/04/04 07:54:19 djc Exp $
+
+*mercurial-3.3.3 (04 Apr 2015)
+
+  04 Apr 2015; Dirkjan Ochtman <djc@gentoo.org> +mercurial-3.3.3.ebuild:
+  Version bump mercurial to 3.3.3
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> mercurial-3.3.2.ebuild:
   Stable for ppc64, wrt bug #544332
