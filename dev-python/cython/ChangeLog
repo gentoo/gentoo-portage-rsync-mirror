@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.151 2015/03/21 08:03:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.152 2015/04/03 23:13:03 vapier Exp $
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> cython-0.22.ebuild:
+  Mark arm/arm64/ia64/s390/sh stable.
 
   21 Mar 2015; Jeroen Roovers <jer@gentoo.org> cython-0.22.ebuild:
   Stable for HPPA (bug #540290).

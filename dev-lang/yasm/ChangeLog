@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.66 2015/03/03 06:13:53 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.67 2015/04/03 23:13:35 vapier Exp $
+
+*yasm-1.3.0 (03 Apr 2015)
+
+  03 Apr 2015; Mike Frysinger <vapier@gentoo.org> +yasm-1.3.0.ebuild:
+  Version bump #532702 by Longtime Gentoo User.
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> yasm-1.2.0-r1.ebuild:
   add arm64 support, tested on A53 board
