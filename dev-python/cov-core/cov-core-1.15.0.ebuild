@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/cov-core-1.15.0.ebuild,v 1.2 2015/02/15 13:16:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/cov-core-1.15.0.ebuild,v 1.3 2015/04/04 19:30:20 vapier Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ppc ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm arm64 ~hppa ia64 m68k ppc ppc64 s390 sh x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-python/coverage-3.6[${PYTHON_USEDEP}]"
