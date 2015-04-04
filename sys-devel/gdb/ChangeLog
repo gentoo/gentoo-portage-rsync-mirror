@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.294 2015/03/22 03:14:14 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.295 2015/04/04 18:28:46 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> gdb-7.9.ebuild,
+  gdb-9999.ebuild:
+  Depend on a specific readline SLOT.
 
   22 Mar 2015; Rick Farina <zerochaos@gentoo.org> gdb-7.7-r1.ebuild,
   gdb-7.7.1.ebuild, gdb-7.8.1.ebuild, gdb-7.8.2.ebuild, gdb-7.8.ebuild:

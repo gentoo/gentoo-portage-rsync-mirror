@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.139 2015/03/27 22:09:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.140 2015/04/04 18:05:36 jlec Exp $
+
+*nose-1.3.6 (04 Apr 2015)
+
+  04 Apr 2015; Justin Lecher <jlec@gentoo.org> +nose-1.3.6.ebuild, metadata.xml:
+  Version BUmp
 
   27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -nose-1.1.2.ebuild,
   -nose-1.3.1-r1.ebuild, -nose-1.3.1.ebuild:

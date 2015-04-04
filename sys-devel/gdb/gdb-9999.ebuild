@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.35 2015/03/14 07:18:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.36 2015/04/04 18:28:46 vapier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -62,7 +62,7 @@ REQUIRED_USE="
 RDEPEND="server? ( !dev-util/gdbserver )
 	client? (
 		>=sys-libs/ncurses-5.2-r2
-		sys-libs/readline
+		sys-libs/readline:0=
 		expat? ( dev-libs/expat )
 		lzma? ( app-arch/xz-utils )
 		python? ( ${PYTHON_DEPS} )
