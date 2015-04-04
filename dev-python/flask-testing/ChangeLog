@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/flask-testing
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/ChangeLog,v 1.8 2015/01/16 03:47:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-testing/ChangeLog,v 1.10 2015/04/04 08:42:35 idella4 Exp $
+
+  04 Apr 2015; Ian Delaney <idella4@gentoo.org> -flask-testing-0.4.ebuild:
+  rm oldest
+
+  04 Apr 2015; Ian Delaney <idella4@gentoo.org> +files/0.4.2-test-fix.patch,
+  flask-testing-0.4.2.ebuild:
+  add patch (from upstream) to fix broken tests
 
   16 Jan 2015; Patrick Lauer <patrick@gentoo.org> flask-testing-0.4.2.ebuild:
   Stable on amd64 and x86 for 527558

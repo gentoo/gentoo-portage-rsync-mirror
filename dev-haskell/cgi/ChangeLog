@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cgi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.37 2014/12/14 11:21:22 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.38 2015/04/04 08:57:54 gienah Exp $
+
+*cgi-3001.2.2.1 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +cgi-3001.2.2.1.ebuild:
+  Bump cgi to 3001.2.2.1
 
 *cgi-3001.2.2.0 (14 Dec 2014)
 

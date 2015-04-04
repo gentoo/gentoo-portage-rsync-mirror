@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hxt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.25 2014/12/23 08:43:20 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hxt/ChangeLog,v 1.26 2015/04/04 08:59:55 gienah Exp $
+
+*hxt-9.3.1.15 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +hxt-9.3.1.15.ebuild:
+  Bump hxt to 9.3.1.15
 
 *hxt-9.3.1.10 (23 Dec 2014)
 
