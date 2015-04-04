@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.217 2015/03/02 01:25:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.218 2015/04/04 18:40:03 radhermit Exp $
+
+*mkvtoolnix-7.8.0 (04 Apr 2015)
+
+  04 Apr 2015; Tim Harder <radhermit@gentoo.org> +mkvtoolnix-7.8.0.ebuild:
+  Version bump.
 
 *mkvtoolnix-7.7.0 (02 Mar 2015)
 
