@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-9999.ebuild,v 1.10 2014/11/19 15:14:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-9999.ebuild,v 1.11 2015/04/04 20:12:11 vapier Exp $
 
 EAPI=5
 
