@@ -1,9 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.12.3-r1.ebuild,v 1.1 2014/05/26 13:22:03 p8952 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/RubyInline-3.12.3-r1.ebuild,v 1.2 2015/04/04 10:08:27 graaff Exp $
 
 EAPI=5
 
+# ruby22 -> Code uses obsolete Config module.
 USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"

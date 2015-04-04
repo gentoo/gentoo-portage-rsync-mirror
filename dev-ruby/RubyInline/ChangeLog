@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/RubyInline
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.20 2014/05/26 13:22:03 p8952 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.21 2015/04/04 10:08:27 graaff Exp $
+
+  04 Apr 2015; Hans de Graaff <graaff@gentoo.org> RubyInline-3.12.3-r1.ebuild:
+  Document ruby22 status.
 
 *RubyInline-3.12.3-r1 (26 May 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/fgl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.52 2015/02/28 14:05:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/fgl/ChangeLog,v 1.53 2015/04/04 10:20:01 gienah Exp $
+
+*fgl-5.5.1.0 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +fgl-5.5.1.0.ebuild:
+  Bump fgl to 5.5.1.0
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> fgl-5.5.0.1.ebuild:
   Stable for ia64, wrt bug #534968

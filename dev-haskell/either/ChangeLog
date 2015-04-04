@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/either
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/either/ChangeLog,v 1.6 2015/02/01 23:49:22 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/either/ChangeLog,v 1.7 2015/04/04 10:14:10 gienah Exp $
+
+*either-4.3.3.2 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +either-4.3.3.2.ebuild:
+  Bump either to 4.3.3.2
 
 *either-4.3.3 (01 Feb 2015)
 

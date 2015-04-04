@@ -1238,6 +1238,9 @@ app-vim/youcompleteme:clang - Enable semantic support for C-family languages usi
 dev-cpp/glog:gflags - Use dev-cpp/gflags for flag parsing
 dev-cpp/glog:unwind - Use sys-libs/libunwind for stack unwinding instead of glibc/gcc (may be more reliable on x86_64)
 dev-cpp/libcmis:man - Build and install man pages.
+dev-cpp/libjson-rpc-cpp:http-client - Build support for HTTP client using dev-util/curl
+dev-cpp/libjson-rpc-cpp:http-server - Build support for HTTP server using net-libs/libmicrohttpd
+dev-cpp/libjson-rpc-cpp:stubgen - Build header stub code generator (needed for development and when pregenerated headers are not bundled)
 dev-cpp/pficommon:fcgi - Build FCGI feature
 dev-cpp/pficommon:mprpc - Build MessagePack RPC feature
 dev-cpp/websocketpp:boost - Use dev-libs/boost instead of C++11
