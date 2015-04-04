@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.0.7.ebuild,v 1.3 2015/03/08 23:38:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.0.7.ebuild,v 1.4 2015/04/04 12:56:41 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,9 @@ DEPEND="test? ( ${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
-	nosetests -w tests || die "Tests fail with ${EPYTHON}"
+	chmod -x "${S}"/tests/* || die
+	esetup.py check
+	esetup.py test
 }
 
 python_install_all() {

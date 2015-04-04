@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/agda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.30 2015/01/29 04:15:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.31 2015/04/04 12:52:28 gienah Exp $
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> agda-2.4.2.2-r1.ebuild:
+  Loosen cpphs dep in agda-2.4.2.2-r1
 
   29 Jan 2015; Mark Wright <gienah@gentoo.org> -files/agda-2.3.0-emacs.patch,
   -files/agda-2.3.0.1-emacs.patch,

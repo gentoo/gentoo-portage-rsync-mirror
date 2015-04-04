@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.1.0.ebuild,v 1.1 2015/04/02 06:56:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ansi2html-1.1.0.ebuild,v 1.2 2015/04/04 12:56:41 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
 
 inherit distutils-r1
 
@@ -17,15 +17,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="test"
 
-RDEPEND="dev-python/six[${PYTHON_USEDEP}]"
-DEPEND="test? ( ${RDEPEND}
+RDEPEND=">=dev-python/six-1.7.3[${PYTHON_USEDEP}]"
+DEPEND="
+	test? (
+		${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
-		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy)
+		dev-python/mock[${PYTHON_USEDEP}]
 	)
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 python_test() {
-	nosetests -w tests || die "Tests fail with ${EPYTHON}"
+	chmod -x "${S}"/tests/* || die
+	esetup.py check
+	esetup.py test
 }
 
 python_install_all() {
