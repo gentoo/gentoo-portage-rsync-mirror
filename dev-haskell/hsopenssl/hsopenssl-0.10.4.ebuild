@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsopenssl/hsopenssl-0.10.4.ebuild,v 1.1 2014/07/03 11:30:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsopenssl/hsopenssl-0.10.4.ebuild,v 1.2 2015/04/04 07:16:25 gienah Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE="+fast-bignum"
 
 RDEPEND=">=dev-haskell/network-2.1.0.0:=[profile?]
 	>=dev-lang/ghc-6.12.1:=
-	dev-libs/openssl
+	dev-libs/openssl:*
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8.0.2

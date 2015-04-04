@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r2.ebuild,v 1.2 2015/02/26 18:30:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r2.ebuild,v 1.3 2015/04/04 07:07:20 vapier Exp $
 
 EAPI="4"
 
@@ -44,6 +44,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.2.4_p7-nano.patch #270483
 	epatch "${FILESDIR}"/${P}-ntp-keygen-no-openssl.patch #533238
 	append-cppflags -D_GNU_SOURCE #264109
+	# Make sure every build uses the same install layout. #539092
+	find sntp/loc/ -type f '!' -name legacy -delete || die
 	eautoreconf
 }
 
