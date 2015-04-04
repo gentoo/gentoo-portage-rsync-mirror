@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/amanda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.115 2015/04/03 12:34:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.116 2015/04/03 23:59:06 idella4 Exp $
+
+*amanda-3.3.7 (03 Apr 2015)
+
+  03 Apr 2015; Ian Delaney <idella4@gentoo.org> +amanda-3.3.7.ebuild,
+  amanda-3.3.3-r1.ebuild, amanda-3.3.5.ebuild:
+  bump, patch fix from bug #537248 dropped, no longer required, request from
+  proxy maintainer from bug #529074
 
   03 Apr 2015; Ian Delaney <idella4@gentoo.org>
   +files/local-amanda-perl5.20.patch, amanda-3.3.3-r1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.4 2015/04/03 21:10:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.6 2015/04/03 23:58:35 dilfridge Exp $
 
 EAPI=5
 
@@ -8,6 +8,7 @@ inherit eutils rpm multilib versionator
 
 MY_PV=$(replace_version_separator 3 '-')
 MY_P="${P/_p/-}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="Novell Groupwise Client for Linux"
 HOMEPAGE="http://www.novell.com/products/groupwise/"
@@ -31,6 +32,7 @@ RDEPEND="
 	>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
 	>=x11-libs/libXtst-1.2.2[abi_x86_32(-)]
 	>=x11-libs/libxcb-1.11-r1[abi_x86_32(-)]
+	>=x11-libs/motif-2.3.4-r1:0[abi_x86_32(-)]
 "
 
 RESTRICT="binchecks fetch mirror strip"

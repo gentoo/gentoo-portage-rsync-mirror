@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.5.ebuild,v 1.4 2015/04/03 23:59:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.7.ebuild,v 1.1 2015/04/03 23:59:06 idella4 Exp $
 
 EAPI=5
 inherit autotools eutils perl-module user systemd
@@ -136,9 +136,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	# gentoo bug #537248
-	epatch "${FILESDIR}/local-amanda-perl5.20.patch"
-
 	# gentoo bug #331111
 	sed -i '/^check-local: check-perl$/d' "${S}"/config/automake/scripts.am
 	sed -i '/^check-local:/s,syntax-check,,g' "${S}"/perl/Makefile.am

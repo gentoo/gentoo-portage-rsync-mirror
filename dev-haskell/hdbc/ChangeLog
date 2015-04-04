@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hdbc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.19 2014/07/25 08:58:35 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.20 2015/04/03 23:52:02 gienah Exp $
+
+*hdbc-2.4.0.1 (03 Apr 2015)
+
+  03 Apr 2015; Mark Wright <gienah@gentoo.org> +hdbc-2.4.0.1.ebuild:
+  Bump hdbc to 2.4.0.1
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.
