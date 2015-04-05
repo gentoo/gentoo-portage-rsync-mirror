@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fleet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.9 2015/04/05 15:00:43 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.10 2015/04/05 15:02:23 alunduil Exp $
+
+  05 Apr 2015; Alex Brandt <alunduil@gentoo.org> -fleet-0.8.3.ebuild:
+  remove version 0.8.3
 
 *fleet-0.9.2 (05 Apr 2015)
 

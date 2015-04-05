@@ -4,11 +4,11 @@ DESCRIPTION=Graphical console client for connecting to virtual machines
 EAPI=5
 HOMEPAGE=http://virt-manager.org/
 IUSE=sasl +spice +vnc debug
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=app-emulation/libvirt-0.10.0[sasl?] >=dev-libs/libxml2-2.6 x11-libs/gtk+:3 spice? ( >=net-misc/spice-gtk-0.22[sasl?,gtk3] ) vnc? ( >=net-libs/gtk-vnc-0.5.0[sasl?,gtk3] )
 REQUIRED_USE=|| ( spice vnc )
 SLOT=0
 SRC_URI=http://virt-manager.org/download/sources/virt-viewer/virt-viewer-1.0.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=7c4b2775f54b891e76bde8eeb0bcdd7b
+_md5_=2047b9f5153247d2f8257c764a021156

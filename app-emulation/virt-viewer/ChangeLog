@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virt-viewer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.31 2015/03/22 16:25:10 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.32 2015/04/05 15:24:25 tamiko Exp $
+
+  05 Apr 2015; Matthias Maier <tamiko@gentoo.org> virt-viewer-1.0.ebuild,
+  virt-viewer-2.0.ebuild:
+  Keyword with ~x86
 
   22 Mar 2015; Andreas Schuerch <nativemad@gentoo.org>
   virt-viewer-0.6.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-1.0.ebuild,v 1.2 2015/01/19 17:38:32 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/virt-viewer-1.0.ebuild,v 1.3 2015/04/05 15:24:25 tamiko Exp $
 
 EAPI=5
 inherit eutils gnome2 fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="sasl +spice +vnc"
 
 RDEPEND=">=app-emulation/libvirt-0.10.0[sasl?]
