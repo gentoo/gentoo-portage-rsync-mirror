@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9906 2015/04/05 06:37:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9907 2015/04/05 10:37:25 chewi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Apr 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
+  dev-java/jackson-mapper has been removed. Mask
+  app-emulation/emul-linux-x86-java and dev-java/sun-j2me-bin.
 
   05 Apr 2015; Ben de Groot <yngwin@gentoo.org> package.mask:
   Remove obsolete masks for >roboto-9999 and culmus-ancient
