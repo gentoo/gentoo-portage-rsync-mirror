@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.33 2015/04/05 12:58:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.34 2015/04/05 16:09:44 mgorny Exp $
+
+*libdbusmenu-12.10.2-r1 (05 Apr 2015)
+*libdbusmenu-0.6.2-r1 (05 Apr 2015)
+
+  05 Apr 2015; Michał Górny <mgorny@gentoo.org> +libdbusmenu-0.6.2-r1.ebuild,
+  +libdbusmenu-12.10.2-r1.ebuild, -libdbusmenu-0.6.2.ebuild,
+  -libdbusmenu-12.10.2.ebuild, metadata.xml:
+  Move dev-libs/libdbusmenu to slot 0, and replace USE=gtk with USE=gtk3 per the
+  QA decision.
 
   05 Apr 2015; Michał Górny <mgorny@gentoo.org> libdbusmenu-12.10.2.ebuild:
   Pass -j1 to emake rather than overriding MAKEOPTS, patch by karolherbst.

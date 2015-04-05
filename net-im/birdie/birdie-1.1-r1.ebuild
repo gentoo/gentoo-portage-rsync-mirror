@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/birdie/birdie-1.1.ebuild,v 1.2 2014/03/10 07:29:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/birdie/birdie-1.1-r1.ebuild,v 1.1 2015/04/05 16:09:44 mgorny Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/granite-0.2.1
 	dev-libs/json-glib
-	dev-libs/libdbusmenu:3
+	dev-libs/libdbusmenu
 	dev-libs/libgee:0
 	net-libs/libsoup:2.4
 	net-libs/rest:0.7

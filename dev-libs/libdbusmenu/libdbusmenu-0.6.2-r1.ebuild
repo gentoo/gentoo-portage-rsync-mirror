@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2.ebuild,v 1.11 2014/08/07 23:47:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.6.2-r1.ebuild,v 1.1 2015/04/05 16:09:44 mgorny Exp $
 
 EAPI=4
 VALA_MIN_API_VERSION=0.16
@@ -13,14 +13,14 @@ HOMEPAGE="http://launchpad.net/dbusmenu"
 SRC_URI="http://launchpad.net/${PN/lib}/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 LGPL-3"
-SLOT="3"
+SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86"
-IUSE="debug gtk +introspection"
+IUSE="debug gtk3 +introspection"
 
 RDEPEND=">=dev-libs/glib-2.32
 	>=dev-libs/dbus-glib-0.100
 	dev-libs/libxml2
-	gtk? ( >=x11-libs/gtk+-3.2:3[introspection?] )
+	gtk3? ( >=x11-libs/gtk+-3.2:3[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 	!<${CATEGORY}/${PN}-0.5.1-r200"
 DEPEND="${RDEPEND}
@@ -45,7 +45,7 @@ src_configure() {
 		--disable-static \
 		--disable-silent-rules \
 		--disable-scrollkeeper \
-		$(use_enable gtk) \
+		$(use_enable gtk3 gtk) \
 		--disable-dumper \
 		--disable-tests \
 		$(use_enable introspection) \

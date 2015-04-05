@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.6.ebuild,v 1.3 2015/03/15 13:15:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.6-r1.ebuild,v 1.1 2015/04/05 16:09:44 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -29,7 +29,7 @@ RDEPEND="
 	>=dev-cpp/glibmm-2.28.0:2
 	>=dev-libs/libsigc++-2.2.4.2:2
 	ayatana? (
-		>=dev-libs/libdbusmenu-0.4:3[gtk]
+		>=dev-libs/libdbusmenu-0.4[gtk3]
 		>=dev-libs/libindicator-0.4:3 )
 	distribution? ( >=net-libs/gnet-2 )
 	gnome? ( >=gnome-base/gnome-shell-3.6.2 )

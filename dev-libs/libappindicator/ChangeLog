@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libappindicator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.13 2015/01/27 12:17:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.14 2015/04/05 16:09:44 mgorny Exp $
+
+*libappindicator-12.10.0-r1 (05 Apr 2015)
+
+  05 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +libappindicator-12.10.0-r1.ebuild, -libappindicator-12.10.0.ebuild:
+  Move dev-libs/libdbusmenu to slot 0, and replace USE=gtk with USE=gtk3 per the
+  QA decision.
 
   27 Jan 2015; Pacho Ramos <pacho@gentoo.org> libappindicator-12.10.0.ebuild,
   metadata.xml:

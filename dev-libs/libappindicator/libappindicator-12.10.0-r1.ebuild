@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0.ebuild,v 1.4 2015/01/27 12:17:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-12.10.0-r1.ebuild,v 1.1 2015/04/05 16:09:44 mgorny Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
@@ -20,7 +20,7 @@ IUSE="+introspection"
 RDEPEND="
 	>=dev-libs/dbus-glib-0.98
 	>=dev-libs/glib-2.26:2
-	>=dev-libs/libdbusmenu-0.6.2:3[gtk]
+	>=dev-libs/libdbusmenu-0.6.2[gtk3]
 	>=dev-libs/libindicator-12.10.0:3
 	>=x11-libs/gtk+-3.2:3
 	introspection? ( >=dev-libs/gobject-introspection-1 )
