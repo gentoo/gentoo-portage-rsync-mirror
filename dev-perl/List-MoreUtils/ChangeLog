@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.49 2015/03/28 06:54:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.50 2015/04/05 16:43:25 zlogene Exp $
+
+  05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> List-MoreUtils-0.408.0.ebuild:
+  Add ~s390 keyword wrt bug #543632
 
   28 Mar 2015; Markus Meier <maekke@gentoo.org> List-MoreUtils-0.408.0.ebuild:
   add ~arm, bug #543632

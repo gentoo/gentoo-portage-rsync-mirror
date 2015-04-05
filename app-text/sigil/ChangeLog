@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sigil
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.15 2014/08/10 18:33:08 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.16 2015/04/05 17:00:52 maksbotan Exp $
+
+*sigil-0.8.5 (05 Apr 2015)
+
+  05 Apr 2015; Maxim Koltsov <maksbotan@gentoo.org> +sigil-0.8.5.ebuild:
+  Bump to 0.8.5, update deps reflecting switch to Qt5.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sigil-0.6.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION
