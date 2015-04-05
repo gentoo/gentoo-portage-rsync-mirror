@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Exception
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.86 2014/08/20 17:55:22 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.87 2015/04/05 20:33:52 dilfridge Exp $
+
+*Test-Exception-0.380.0 (05 Apr 2015)
+
+  05 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Test-Exception-0.380.0.ebuild:
+  Version bump
 
 *Test-Exception-0.320.0-r1 (20 Aug 2014)
 

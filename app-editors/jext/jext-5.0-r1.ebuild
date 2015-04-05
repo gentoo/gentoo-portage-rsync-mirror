@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-5.0.ebuild,v 1.3 2015/04/05 20:43:35 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-5.0-r1.ebuild,v 1.1 2015/04/05 20:43:35 monsieurp Exp $
 
-EAPI=2
+EAPI=5
 
 JAVA_PKG_IUSE="doc"
 inherit java-pkg-2 java-ant-2
@@ -20,9 +20,9 @@ COMMON_DEP="
 	dev-java/jython:0
 	dev-java/jgoodies-looks:1.2
 	dev-java/gnu-regexp:1"
-DEPEND=">=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.6
 	${COMMON_DEP}"
-RDEPEND=">=virtual/jre-1.4
+RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEP}"
 
 S="${WORKDIR}/${PN}-src-${MY_PV}"
@@ -36,7 +36,7 @@ java_prepare() {
 }
 
 src_compile() {
-	cd "${S}/src"
+	cd "${S}/src" || die
 	eant jar $(use_doc javadocs) \
 		-Dclasspath="$(java-pkg_getjars jython,jgoodies-looks-1.2,gnu-regexp-1)"
 }
@@ -50,7 +50,9 @@ src_install () {
 		--java_args '-Dpython.path=$(java-config --classpath=jython)' \
 		-pre "${FILESDIR}/${PN}-pre"
 
-	use doc && java-pkg_dohtml -A .css .gif .jpg -r docs/api
+	if use doc; then
+		java-pkg_dohtml -A .css .gif .jpg -r docs/api
+	fi
 }
 
 pkg_postinst() {

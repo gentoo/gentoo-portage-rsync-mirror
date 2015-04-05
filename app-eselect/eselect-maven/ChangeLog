@@ -1,6 +1,12 @@
 # ChangeLog for app-eselect/eselect-maven
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-maven/ChangeLog,v 1.1 2015/03/31 16:50:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-maven/ChangeLog,v 1.2 2015/04/05 20:46:14 monsieurp Exp $
+
+*eselect-maven-0.2-r2 (05 Apr 2015)
+
+  05 Apr 2015; Patrice Clement <monsieurp@gentoo.org>
+  +eselect-maven-0.2-r2.ebuild, eselect-maven-0.2-r1.ebuild:
+  EAPI 5 bump wrt bug 543906.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> +eselect-maven-0.2-r1.ebuild,
   +files/maven-0.2.eselect, +metadata.xml:
@@ -77,4 +83,3 @@
   08 May 2009; Jesse Farinacci <jieryn@gmail.com> +eselect-maven-0.1.ebuild,
   +files/maven.eselect, +metadata.xml:
   initial import, related to bug #264027
-

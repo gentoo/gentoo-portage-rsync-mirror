@@ -1,6 +1,11 @@
 # ChangeLog for app-office/borg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/borg/ChangeLog,v 1.13 2012/09/29 08:27:26 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/borg/ChangeLog,v 1.14 2015/04/05 20:50:28 monsieurp Exp $
+
+*borg-1.7.4-r2 (05 Apr 2015)
+
+  05 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +borg-1.7.4-r2.ebuild:
+  EAPI 5 bump wrt bug 543906.L
 
 *borg-1.7.4-r1 (29 Sep 2012)
 
@@ -57,4 +62,3 @@
   +borg-1.3.2.ebuild:
   Initial import, ebuild submitted by antoine marmignon
   <antoine.marmignon@wanadoo.fr> in 53181
-
