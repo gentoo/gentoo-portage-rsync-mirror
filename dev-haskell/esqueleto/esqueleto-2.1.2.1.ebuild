@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/esqueleto/esqueleto-2.1.2.1.ebuild,v 1.1 2014/12/14 08:48:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/esqueleto/esqueleto-2.1.2.1.ebuild,v 1.2 2015/04/05 01:12:14 gienah Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+RESTRICT=test # tests hang
 
 RDEPEND=">=dev-haskell/conduit-1.1:=[profile?]
 	dev-haskell/monad-logger:=[profile?]

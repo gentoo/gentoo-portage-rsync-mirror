@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/esqueleto
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/esqueleto/ChangeLog,v 1.5 2014/12/14 08:48:48 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/esqueleto/ChangeLog,v 1.6 2015/04/05 01:12:14 gienah Exp $
+
+*esqueleto-2.1.2.2 (05 Apr 2015)
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> +esqueleto-2.1.2.2.ebuild,
+  esqueleto-2.1.2.1.ebuild:
+  Bump esqueleto to 2.1.2.2
 
 *esqueleto-2.1.2.1 (14 Dec 2014)
 
