@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.30 2015/03/28 06:57:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.31 2015/04/05 07:11:56 idella4 Exp $
+
+*jsonpickle-0.9.2 (05 Apr 2015)
+
+  05 Apr 2015; Ian Delaney <idella4@gentoo.org> +jsonpickle-0.9.2.ebuild,
+  -jsonpickle-0.9.0.ebuild:
+  bump one rm one
 
   28 Mar 2015; Markus Meier <maekke@gentoo.org> jsonpickle-0.9.1.ebuild:
   add ~arm, bug #543850
