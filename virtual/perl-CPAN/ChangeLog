@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CPAN
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/ChangeLog,v 1.38 2015/04/05 11:11:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/ChangeLog,v 1.39 2015/04/05 13:59:38 zlogene Exp $
+
+  05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> perl-CPAN-2.90.0-r1.ebuild:
+  arm stable wrt bug #545510
 
   05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> perl-CPAN-2.90.0-r1.ebuild:
   x86 stable wrt bug #545510
