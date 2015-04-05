@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-XSLoader
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.42 2015/02/18 08:38:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-XSLoader/ChangeLog,v 1.43 2015/04/05 02:16:30 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org> perl-XSLoader-0.170.0.ebuild:
+  Mark s390/sh stable.
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-XSLoader-0.170.0.ebuild:
   Stable for alpha, wrt bug #536790

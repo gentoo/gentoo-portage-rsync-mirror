@@ -3,10 +3,10 @@ DEPEND=>=dev-libs/glib-2 virtual/pkgconfig >=dev-perl/extutils-pkgconfig-1.0.0 >
 DESCRIPTION=Glib - Perl wrappers for the GLib utility and Object libraries
 EAPI=5
 HOMEPAGE=http://gtk2-perl.sf.net/ http://search.cpan.org/dist/Glib/
-KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/X/XA/XAOC/Glib-1.301.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=3e1fdfc2e3394406ea47813231e56d1b
+_md5_=7cbadad79e90ce320330d6fd6e09800a

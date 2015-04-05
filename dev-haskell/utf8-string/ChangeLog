@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/utf8-string
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.36 2015/04/03 03:05:56 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-string/ChangeLog,v 1.37 2015/04/05 02:17:05 gienah Exp $
+
+*utf8-string-1 (05 Apr 2015)
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> +utf8-string-1.ebuild:
+  Bump utf8-string to 1
 
   03 Apr 2015; Mark Wright <gienah@gentoo.org> utf8-string-0.3.8.ebuild:
   Loosen base dep in utf8-string-0.3.8 to allow ghc 7.10

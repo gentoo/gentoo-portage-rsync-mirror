@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.135 2015/02/28 22:00:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.136 2015/04/05 02:11:54 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org> Net-SSLeay-1.650.0.ebuild:
+  Mark m68k/s390/sh stable.
 
   28 Feb 2015;  <tgall@gentoo.org> Net-SSLeay-1.650.0.ebuild:
   stable on arm64

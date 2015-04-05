@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.6.9.ebuild,v 1.3 2014/11/21 09:56:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/autojump-21.6.9.ebuild,v 1.4 2015/04/05 02:28:08 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit python-r1 python-utils-r1 vcs-snapshot
 

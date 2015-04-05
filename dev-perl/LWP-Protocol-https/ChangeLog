@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/LWP-Protocol-https
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/ChangeLog,v 1.36 2014/10/26 23:09:05 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-Protocol-https/ChangeLog,v 1.37 2015/04/05 02:16:59 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  LWP-Protocol-https-6.30.0-r1.ebuild:
+  Mark m68k stable.
 
 *LWP-Protocol-https-6.60.0 (26 Oct 2014)
 
