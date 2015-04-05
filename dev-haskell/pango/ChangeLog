@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/pango
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/ChangeLog,v 1.28 2015/03/11 08:50:38 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/ChangeLog,v 1.29 2015/04/05 03:27:30 gienah Exp $
+
+*pango-0.13.1.0 (05 Apr 2015)
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> +pango-0.13.1.0.ebuild,
+  -pango-0.13.0.4.ebuild:
+  Bump pango to 0.13.1.0. Drop pango-0.13.0.4 as it was missing KEYWORDS and the
+  next version 0.13.0.5 has been in portage for almost 30 days.
 
 *pango-0.13.0.5 (11 Mar 2015)
 
