@@ -1,10 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/files/swift-account.initd,v 1.1 2013/01/02 20:03:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/files/swift-account.initd,v 1.2 2015/04/05 02:40:10 prometheanfire Exp $
 
 COMMAND=/usr/bin/swift-init
-PIDFILE=/var/run/swift/swift-account.pid
+PIDFILE=/run/swift/account-server.pid
 
 depend() {
     after net

@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.2.2.ebuild,v 1.1 2015/02/08 02:22:19 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.2.2.ebuild,v 1.2 2015/04/05 02:40:10 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils linux-info user
 
-DESCRIPTION="A highly available, distributed, eventually consistent object/blob store"
+DESCRIPTION="A highly available, distributed, and eventually consistent object/blob store"
 HOMEPAGE="https://launchpad.net/swift"
 SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 
@@ -80,7 +80,6 @@ python_install() {
 	insinto /etc/swift
 
 	newins "etc/swift.conf-sample" "swift.conf"
-#	newins "etc/swift-bench.conf-sample" "swift-bench.conf-sample"
 	newins "etc/rsyncd.conf-sample" "rsyncd.conf"
 	newins "etc/mime.types-sample" "mime.types-sample"
 	newins "etc/memcache.conf-sample" "memcache.conf-sample"
