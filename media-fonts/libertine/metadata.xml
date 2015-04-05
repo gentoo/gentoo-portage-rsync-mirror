@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>fonts</herd>
-  <use>
-    <flag name='opentype'>Prefer installing OpenType over TrueType fonts</flag>
-  </use>
 </pkgmetadata>

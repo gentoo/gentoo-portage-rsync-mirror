@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/unf_ext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf_ext/ChangeLog,v 1.17 2015/03/18 19:16:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf_ext/ChangeLog,v 1.18 2015/04/05 06:27:43 graaff Exp $
+
+  05 Apr 2015; Hans de Graaff <graaff@gentoo.org> unf_ext-0.0.6-r2.ebuild:
+  Add ruby22.
 
   18 Mar 2015; Hans de Graaff <graaff@gentoo.org> -unf_ext-0.0.6.ebuild:
   Cleanup.
