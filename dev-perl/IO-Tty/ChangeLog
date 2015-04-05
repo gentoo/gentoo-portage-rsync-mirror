@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.57 2015/01/24 08:50:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.58 2015/04/05 00:08:28 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org> IO-Tty-1.120.0.ebuild:
+  Mark s390/sh stable.
 
   24 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> IO-Tty-1.120.0.ebuild:
   alpha/ia64/sparc/x86 stable wrt bug #535202

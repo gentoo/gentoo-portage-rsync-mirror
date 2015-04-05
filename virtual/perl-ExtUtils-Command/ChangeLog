@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Command
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.54 2015/04/02 21:29:48 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Command/ChangeLog,v 1.55 2015/04/05 00:01:30 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  perl-ExtUtils-Command-1.180.0-r2.ebuild:
+  Mark m68k/s390/sh stable.
 
   02 Apr 2015; Tom Gall <tgall@gentoo.org>
   perl-ExtUtils-Command-1.180.0-r2.ebuild:

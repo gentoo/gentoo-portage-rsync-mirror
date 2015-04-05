@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/perl-Compress-Raw-Bzip2-2.60.0-r2.ebuild,v 1.1 2014/07/18 21:53:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/perl-Compress-Raw-Bzip2-2.60.0-r2.ebuild,v 1.2 2015/04/05 00:05:01 vapier Exp $
 
 EAPI=5
 

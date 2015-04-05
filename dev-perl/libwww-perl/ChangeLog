@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.174 2014/03/18 11:48:37 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.175 2015/04/05 00:06:01 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org> libwww-perl-6.50.0.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   18 Mar 2014; Mikle Kolyada <zlogene@gentoo.org> -libwww-perl-6.30.0.ebuild,
   -libwww-perl-6.40.0.ebuild, libwww-perl-6.50.0.ebuild:

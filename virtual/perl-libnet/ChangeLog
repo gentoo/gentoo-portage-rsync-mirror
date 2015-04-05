@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-libnet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.61 2015/03/29 18:25:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/ChangeLog,v 1.62 2015/04/05 00:03:24 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org> perl-libnet-1.220.0-r3.ebuild,
+  perl-libnet-1.270.0.ebuild:
+  Mark m68k/s390/sh stable.
 
   29 Mar 2015;  <tgall@gentoo.org> perl-libnet-1.270.0.ebuild:
   stable on arm64
