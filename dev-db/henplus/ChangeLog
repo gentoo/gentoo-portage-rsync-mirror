@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/henplus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.26 2014/08/10 19:59:28 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.27 2015/04/05 21:03:34 monsieurp Exp $
+
+*henplus-0.9.8-r1 (05 Apr 2015)
+
+  05 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +henplus-0.9.8-r1.ebuild:
+  EAPI 5 bump wrt bug 543906.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> henplus-0.9.8.ebuild:
   QA: drop trailing '.' from DESCRIPTION
