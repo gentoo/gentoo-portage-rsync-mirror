@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.119 2015/02/28 18:36:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.120 2015/04/05 12:37:34 zlogene Exp $
+
+  05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> yaml-1.140.0.ebuild:
+  Add ~alpha/~ia64/~ppc64/~sparc keywords
 
   28 Feb 2015; Fabian Groffen <grobian@gentoo.org> yaml-1.140.0.ebuild:
   Added some Prefix keywords, bug #541380

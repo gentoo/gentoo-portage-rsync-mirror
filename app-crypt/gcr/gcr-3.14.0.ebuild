@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.14.0.ebuild,v 1.7 2015/03/15 13:14:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.14.0.ebuild,v 1.8 2015/04/05 12:44:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,6 +36,7 @@ DEPEND="${COMMON_DEPEND}
 	${PYTHON_DEPS}
 	dev-libs/gobject-introspection-common
 	dev-libs/libxslt
+	dev-libs/vala-common
 	dev-util/gdbus-codegen
 	>=dev-util/gtk-doc-am-1.9
 	>=dev-util/intltool-0.35
@@ -45,6 +46,7 @@ DEPEND="${COMMON_DEPEND}
 "
 # eautoreconf needs:
 #	dev-libs/gobject-introspection-common
+#	dev-libs/vala-common
 
 pkg_setup() {
 	python-any-r1_pkg_setup

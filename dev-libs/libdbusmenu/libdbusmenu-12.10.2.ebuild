@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2.ebuild,v 1.5 2014/08/20 11:25:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2.ebuild,v 1.6 2015/04/05 12:58:07 mgorny Exp $
 
 EAPI=5
 
@@ -62,8 +62,8 @@ src_configure() {
 src_test() { :; } #440192
 
 src_install() {
-	MAKEOPTS+=" -j1"
-	default
+	emake -j1 DESTDIR="${D}" install
+	einstalldocs
 
 	local a b
 	for a in ${PN}-{glib,gtk}; do

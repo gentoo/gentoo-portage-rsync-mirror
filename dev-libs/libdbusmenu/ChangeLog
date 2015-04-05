@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.32 2014/08/20 11:25:43 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.33 2015/04/05 12:58:07 mgorny Exp $
+
+  05 Apr 2015; Michał Górny <mgorny@gentoo.org> libdbusmenu-12.10.2.ebuild:
+  Pass -j1 to emake rather than overriding MAKEOPTS, patch by karolherbst.
 
   20 Aug 2014; Raúl Porcel <armin76@gentoo.org> libdbusmenu-12.10.2.ebuild:
   Add ~sparc wrt #468984
