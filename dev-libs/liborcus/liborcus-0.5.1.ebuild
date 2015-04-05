@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.11 2015/02/08 18:33:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.12 2015/04/04 23:25:25 dilfridge Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit eutils autotools ${GITECLASS}
 unset GITECLASS
 
 DESCRIPTION="Standalone file import filter library for spreadsheet documents"
-HOMEPAGE="http://gitorious.org/orcus/pages/Home"
+HOMEPAGE="https://gitlab.com/orcus/orcus/blob/master/README.md"
 [[ ${PV} == 9999 ]] || SRC_URI="http://kohei.us/files/orcus/src/${P}.tar.bz2"
 
 LICENSE="MIT"

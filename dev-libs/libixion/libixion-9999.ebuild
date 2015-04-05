@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.10 2015/02/08 18:20:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.11 2015/04/04 23:29:50 dilfridge Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://gitorious.org/ixion/ixion.git"
+EGIT_REPO_URI="https://gitlab.com/ixion/ixion.git"
 
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 
@@ -13,7 +13,7 @@ inherit eutils python-single-r1 ${GITECLASS}
 unset GITECLASS
 
 DESCRIPTION="General purpose formula parser & interpreter"
-HOMEPAGE="http://gitorious.org/ixion/pages/Home"
+HOMEPAGE="https://gitlab.com/ixion/ixion"
 [[ ${PV} == 9999 ]] || SRC_URI="http://kohei.us/files/ixion/src/${P}.tar.bz2"
 
 LICENSE="MIT"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.36 2015/03/08 15:38:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.37 2015/04/04 23:25:25 dilfridge Exp $
+
+  04 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> liborcus-0.5.1.ebuild,
+  liborcus-0.7.0.ebuild, liborcus-9999.ebuild:
+  Package moved to gitlab, bug 544838
 
   08 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org> liborcus-0.7.0.ebuild,
   +files/liborcus-0.7.0-boost-1.56.patch:
