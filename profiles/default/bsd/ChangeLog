@@ -1,6 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.174 2015/03/01 18:25:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.175 2015/04/05 14:49:29 mgorny Exp $
+
+  05 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +fbsd/amd64/9.1/clang/deprecated, +fbsd/amd64/9.1/deprecated,
+  +fbsd/amd64/9.2/clang/deprecated, +fbsd/amd64/9.2/deprecated,
+  +fbsd/x86/9.1/deprecated, +fbsd/x86/9.2/deprecated:
+  Deprecate FreeBSD 9.* profiles,
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/80 by nigoro.
 
   01 Mar 2015; Michał Górny <mgorny@gentoo.org>
   +fbsd/amd64/10.1/clang/parent, +fbsd/amd64/10.1/eapi,
