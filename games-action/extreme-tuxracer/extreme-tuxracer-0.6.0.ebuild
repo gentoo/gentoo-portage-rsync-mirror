@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.6.0.ebuild,v 1.8 2014/10/02 15:09:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/extreme-tuxracer-0.6.0.ebuild,v 1.9 2015/04/05 08:31:49 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils autotools gnome2-utils games
@@ -26,7 +26,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/etr-${PV/_/}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libsdl.patch
+	epatch \
+		"${FILESDIR}"/${P}-libsdl.patch \
+		"${FILESDIR}"/${P}-segfault.patch
 	# kind of ugly in there so we'll do it ourselves
 	sed -i -e '/SUBDIRS/s/resources doc//' Makefile.am || die
 	eautoreconf

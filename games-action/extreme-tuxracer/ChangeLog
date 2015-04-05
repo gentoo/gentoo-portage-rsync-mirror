@@ -1,6 +1,10 @@
 # ChangeLog for games-action/extreme-tuxracer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.21 2014/10/02 15:09:48 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/extreme-tuxracer/ChangeLog,v 1.22 2015/04/05 08:31:49 mr_bones_ Exp $
+
+  05 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/extreme-tuxracer-0.6.0-segfault.patch, extreme-tuxracer-0.6.0.ebuild:
+  add patch from N Alex to avoid segfault with no trees (bug #545494)
 
   02 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
   extreme-tuxracer-0.6.0.ebuild:

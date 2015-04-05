@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.788 2015/04/03 17:06:40 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.789 2015/04/05 08:51:33 chewi Exp $
+
+  05 Apr 2015; James Le Cuirot <chewi@gentoo.org> package.use.mask:
+  Mask dev-java/proguard[j2me].
 
   03 Apr 2015; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   masked sys-devel/byfl[dragonegg]

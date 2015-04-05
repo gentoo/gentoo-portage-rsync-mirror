@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.667 2015/04/03 17:06:40 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.668 2015/04/05 08:51:33 chewi Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# James Le Cuirot <chewi@gentoo.org> (05 Apr 2015)
+# dev-java/sun-j2me-bin is going away.
+dev-java/proguard j2me
 
 # Christoph Junghans <ottxor@gentoo.org> (03 Apr 2015)
 # >=~sys-devel/dragonegg-3.6 is broken (bug #543644)
