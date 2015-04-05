@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.5.ebuild,v 1.3 2015/04/03 10:03:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/flint-2.4.5.ebuild,v 1.4 2015/04/05 11:19:35 tomka Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ IUSE="doc gc ntl static-libs test"
 RDEPEND="dev-libs/gmp
 	dev-libs/mpfr
 	gc? ( dev-libs/boehm-gc )
-	ntl? ( <dev-libs/ntl-8 )"
+	ntl? ( dev-libs/ntl )"
 DEPEND="${RDEPEND}
 	doc? (
 		app-text/texlive-core
@@ -32,7 +32,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-2.4.3-whitespaces.patch \
 		"${FILESDIR}"/${PN}-2.4.3-cflags-ldflags.patch \
 		"${FILESDIR}"/${PN}-2.4.4-test.patch \
-		"${FILESDIR}"/${PN}-2.4.5-gmp6-compat.patch
+		"${FILESDIR}"/${PN}-2.4.5-gmp6-compat.patch \
+		"${FILESDIR}"/${PN}-2.4.5-ntl62.patch
 }
 
 src_configure() {

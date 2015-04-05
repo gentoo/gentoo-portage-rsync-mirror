@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/flint
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/ChangeLog,v 1.13 2015/04/03 10:03:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/flint/ChangeLog,v 1.14 2015/04/05 11:19:35 tomka Exp $
+
+  05 Apr 2015; Thomas Kahle <tomka@gentoo.org> +files/flint-2.4.5-ntl62.patch,
+  flint-2.4.5.ebuild:
+  Fix ntl compatibility (bug 545318)
 
   03 Apr 2015; Thomas Kahle <tomka@gentoo.org>
   +files/flint-2.4.5-gmp6-compat.patch, flint-2.4.5.ebuild:
