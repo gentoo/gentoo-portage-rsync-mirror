@@ -15,16 +15,16 @@ HOMEPAGE="http://launchpad.net/dbusmenu"
 SRC_URI="http://launchpad.net/${PN/lib}/${PV%.*}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 LGPL-3"
-SLOT="3"
+SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug gtk +introspection"
+IUSE="debug gtk3 +introspection"
 
 RDEPEND="
 	>=dev-libs/dbus-glib-0.100
 	>=dev-libs/json-glib-0.13.4
 	>=dev-libs/glib-2.32
 	dev-libs/libxml2
-	gtk? ( >=x11-libs/gtk+-3.2:3[introspection?] )
+	gtk3? ( >=x11-libs/gtk+-3.2:3[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 	!<${CATEGORY}/${PN}-0.5.1-r200"
 DEPEND="${RDEPEND}
@@ -50,7 +50,7 @@ src_configure() {
 		--disable-static \
 		--disable-silent-rules \
 		--disable-scrollkeeper \
-		$(use_enable gtk) \
+		$(use_enable gtk3 gtk) \
 		--disable-dumper \
 		$(use_enable introspection) \
 		$(use_enable introspection vala) \
