@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/ibus-chewing
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ChangeLog,v 1.36 2014/04/08 06:38:22 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ChangeLog,v 1.37 2015/04/05 15:49:30 kensington Exp $
+
+  05 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  -files/ibus-chewing-1.3.10-cflags.patch,
+  -files/ibus-chewing-1.3.10-fix_save_setting.patch,
+  -files/ibus-chewing-1.3.10-ibus-1.4.patch,
+  -files/ibus-chewing-1.4.3-content-type.patch, -ibus-chewing-1.3.10-r1.ebuild,
+  -ibus-chewing-1.3.10.ebuild, -ibus-chewing-1.4.2.ebuild,
+  -ibus-chewing-1.4.3-r1.ebuild:
+  Remove old.
 
 *ibus-chewing-1.4.7 (08 Apr 2014)
 

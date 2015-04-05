@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.74 2014/01/19 10:25:14 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.75 2015/04/05 15:41:10 kensington Exp $
+
+  05 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  -musepack-tools-465.ebuild:
+  Remove old.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> musepack-tools-465-r1.ebuild:
   Stable for ppc64, wrt bug #495806

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/game-music-emu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.27 2015/02/24 08:43:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/game-music-emu/ChangeLog,v 1.28 2015/04/05 15:46:27 kensington Exp $
+
+  05 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  -files/game-music-emu-0.5.5-multilib.patch, -game-music-emu-0.5.5.ebuild,
+  -game-music-emu-0.6.0.ebuild, -game-music-emu-0.6.0_pre20120802.ebuild:
+  Remove old.
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> game-music-emu-0.6.0-r1.ebuild:
   Stable for alpha, wrt bug #526070
