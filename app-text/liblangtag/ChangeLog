@@ -1,6 +1,15 @@
 # ChangeLog for app-text/liblangtag
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.21 2013/12/27 09:01:13 scarabeus Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/ChangeLog,v 1.22 2015/04/04 23:49:28 dilfridge Exp $
+
+*liblangtag-0.5.6 (04 Apr 2015)
+
+  04 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -liblangtag-0.4.0-r1.ebuild, +liblangtag-0.5.6.ebuild,
+  -files/liblangtag-0.4.0-arm.patch,
+  -files/liblangtag-0.4.0-introspection.patch,
+  -files/liblangtag-0.4.0-module.patch:
+  Version bump; remove old
 
 *liblangtag-0.5.2 (27 Dec 2013)
 

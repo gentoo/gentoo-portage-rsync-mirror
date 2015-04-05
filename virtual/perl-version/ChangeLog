@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.108 2015/03/31 02:25:38 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.109 2015/04/04 23:45:27 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  perl-version-0.990.200-r1.ebuild, perl-version-0.990.900-r1.ebuild:
+  Mark m68k/s390/sh stable.
 
   31 Mar 2015; Tom Gall <tgall@gentoo.org> perl-version-0.990.900-r1.ebuild:
   stable on arm64

@@ -1,10 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.4.0-r1.ebuild,v 1.7 2013/04/26 19:13:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.5.6.ebuild,v 1.1 2015/04/04 23:49:28 dilfridge Exp $
 
 EAPI=5
-
-AUTOTOOLS_AUTORECONF=true
 
 inherit autotools-utils
 
@@ -14,7 +12,7 @@ SRC_URI="https://bitbucket.org/tagoh/${PN}/downloads/${P}.tar.bz2"
 
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="introspection static-libs test"
 
 RDEPEND="
@@ -29,24 +27,15 @@ DEPEND="${RDEPEND}
 # Upstream expect liblangtag to be installed when one runs tests...
 RESTRICT="test"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-module.patch
-	"${FILESDIR}"/${P}-arm.patch
-	"${FILESDIR}"/${P}-introspection.patch
-)
-
-src_prepare() {
-	sed -i \
-		-e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:g' \
-		configure.ac || die
-
-	autotools-utils_src_prepare
-}
-
 src_configure() {
 	local myeconfargs=(
 		$(use_enable introspection)
 		$(use_enable test)
 	)
 	autotools-utils_src_configure
+}
+
+src_install() {
+	autotools-utils_src_install
+	prune_libtool_files --all
 }

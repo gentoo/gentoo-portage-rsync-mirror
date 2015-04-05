@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Exporter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Exporter/ChangeLog,v 1.31 2015/02/21 16:06:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Exporter/ChangeLog,v 1.32 2015/04/04 23:52:48 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  perl-Exporter-5.710.0-r1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   21 Feb 2015; Michał Górny <mgorny@gentoo.org> -perl-Exporter-5.710.0.ebuild,
   perl-Exporter-5.710.0-r1.ebuild:

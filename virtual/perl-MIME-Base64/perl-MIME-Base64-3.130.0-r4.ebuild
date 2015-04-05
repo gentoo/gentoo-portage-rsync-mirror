@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/perl-MIME-Base64-3.130.0-r4.ebuild,v 1.1 2014/11/08 15:52:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/perl-MIME-Base64-3.130.0-r4.ebuild,v 1.2 2015/04/05 00:00:06 vapier Exp $
 
 EAPI=5
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Zip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.93 2015/02/19 01:06:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.94 2015/04/04 23:50:29 vapier Exp $
+
+  04 Apr 2015; Mike Frysinger <vapier@gentoo.org> Archive-Zip-1.370.0.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
 *Archive-Zip-1.450.0 (19 Feb 2015)
 

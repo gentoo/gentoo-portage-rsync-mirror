@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/perl-Module-Metadata-1.0.11-r1.ebuild,v 1.1 2014/07/10 22:51:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/perl-Module-Metadata-1.0.11-r1.ebuild,v 1.2 2015/04/04 23:36:11 vapier Exp $
 
 EAPI=5
 

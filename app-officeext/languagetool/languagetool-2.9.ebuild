@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/languagetool-2.6.ebuild,v 1.1 2014/09/07 12:41:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/languagetool-2.9.ebuild,v 1.1 2015/04/04 23:52:20 dilfridge Exp $
 
 EAPI=5
 

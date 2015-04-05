@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/warp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp/ChangeLog,v 1.15 2015/01/10 18:49:14 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp/ChangeLog,v 1.16 2015/04/04 23:34:03 gienah Exp $
+
+*warp-3.0.11 (04 Apr 2015)
+
+  04 Apr 2015; Mark Wright <gienah@gentoo.org> +warp-3.0.11.ebuild:
+  Bump warp to 3.0.11
 
   10 Jan 2015; Michael Orlitzky <mjo@gentoo.org> warp-3.0.0.3.ebuild:
   RESTRICT tests for a version where the suite failed.
