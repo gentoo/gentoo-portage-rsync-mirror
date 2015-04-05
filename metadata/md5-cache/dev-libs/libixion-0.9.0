@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare setup
+DEPEND=python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_single_target_python3_4? ( dev-lang/python:3.4 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),python_single_target_python3_3(+)?,python_single_target_python3_4(+)?,python_single_target_python2_7(+)?] dev-libs/boost:= >=dev-util/mdds-0.12.0:=
+DESCRIPTION=General purpose formula parser & interpreter
+EAPI=5
+HOMEPAGE=https://gitlab.com/ixion/ixion
+IUSE=static-libs python_targets_python3_3 python_targets_python3_4 python_targets_python2_7 python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7
+LICENSE=MIT
+RDEPEND=python_single_target_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_single_target_python3_4? ( dev-lang/python:3.4 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),python_single_target_python3_3(+)?,python_single_target_python3_4(+)?,python_single_target_python2_7(+)?] dev-libs/boost:=
+REQUIRED_USE=^^ ( python_single_target_python3_3 python_single_target_python3_4 python_single_target_python2_7 ) python_single_target_python3_3? ( python_targets_python3_3 ) python_single_target_python3_4? ( python_targets_python3_4 ) python_single_target_python2_7? ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=http://kohei.us/files/ixion/src/libixion-0.9.0.tar.xz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_md5_=13d9b4d91cb4e6524e632e5cdc75589e

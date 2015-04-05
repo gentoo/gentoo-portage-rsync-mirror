@@ -3,9 +3,10 @@ DEPEND=dev-libs/boost:=
 DESCRIPTION=A collection of multi-dimensional data structure and indexing algorithm
 EAPI=5
 HOMEPAGE=http://code.google.com/p/multidimalgorithm/
+KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
 RDEPEND=dev-libs/boost:=
 SLOT=0/0.12.0
 SRC_URI=http://kohei.us/files/mdds/src/mdds_0.12.0.tar.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=cf2ab6a4d2d94c4042c969c2f87a1234
+_md5_=33cc01e218e5a1104283b0d4ebcf7286

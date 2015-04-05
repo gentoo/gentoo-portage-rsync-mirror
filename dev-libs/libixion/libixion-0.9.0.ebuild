@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.12 2015/04/05 19:48:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-0.9.0.ebuild,v 1.1 2015/04/05 19:48:06 dilfridge Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ LICENSE="MIT"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS=""
 IUSE="static-libs"
 
 RDEPEND="${PYTHON_DEPS}

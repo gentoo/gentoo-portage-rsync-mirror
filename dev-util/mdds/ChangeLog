@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.43 2015/02/08 18:22:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.45 2015/04/05 19:44:49 dilfridge Exp $
+
+  05 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> -mdds-0.11.2.ebuild:
+  Remove old
+
+*mdds-9999 (05 Apr 2015)
+
+  05 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> mdds-0.12.0.ebuild,
+  +mdds-9999.ebuild:
+  Restore keywords, add live ebuild
 
   08 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org> -mdds-0.8.1.ebuild,
   -mdds-0.11.1.ebuild:

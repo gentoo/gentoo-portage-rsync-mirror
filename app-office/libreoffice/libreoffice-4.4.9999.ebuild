@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.9999.ebuild,v 1.10 2015/04/03 22:12:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.4.9999.ebuild,v 1.11 2015/04/05 19:59:31 dilfridge Exp $
 
 EAPI=5
 
@@ -215,7 +215,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.10.3:=
+	>=dev-util/mdds-0.11.2:=
 	media-libs/glm
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
