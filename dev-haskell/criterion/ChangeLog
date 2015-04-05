@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/criterion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/criterion/ChangeLog,v 1.6 2015/01/31 19:58:01 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/criterion/ChangeLog,v 1.7 2015/04/05 05:47:19 gienah Exp $
+
+*criterion-1.1.0.0 (05 Apr 2015)
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> +criterion-1.1.0.0.ebuild:
+  Bump criterion to 1.1.0.0
 
   31 Jan 2015; Alexander Vershilov <qnikst@gentoo.org>
   -criterion-0.6.2.1.ebuild, -criterion-0.8.0.0.ebuild,
