@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.951 2015/04/02 19:58:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.952 2015/04/05 22:15:41 sping Exp $
+
+  05 Apr 2015; Sebastian Pipping <sping@gentoo.org> php-5.3.29.ebuild,
+  php-5.4.36.ebuild, php-5.4.37.ebuild, php-5.4.38.ebuild, php-5.4.39.ebuild,
+  php-5.5.20.ebuild, php-5.5.21.ebuild, php-5.5.22.ebuild, php-5.5.23.ebuild,
+  php-5.6.4.ebuild, php-5.6.5.ebuild, php-5.6.6.ebuild, php-5.6.7.ebuild,
+  -files/70_mod_php5.conf-apache2:
+  Resolve unused and misleading files/70_mod_php5.conf-apache2, add note about
+  /etc/apache2/modules.d/70_mod_php5.conf actually being provided by
+  app-eselect/eselect-php by now (bug #544564)
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> php-5.5.23.ebuild:
   arm stable, bug #544186

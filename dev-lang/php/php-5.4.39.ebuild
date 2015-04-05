@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.39.ebuild,v 1.9 2015/04/02 19:57:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.39.ebuild,v 1.10 2015/04/05 22:15:41 sping Exp $
 
 EAPI=5
 
@@ -757,7 +757,7 @@ pkg_postinst() {
 	# Output some general info to the user
 	if use apache2 ; then
 		APACHE2_MOD_DEFINE="PHP5"
-		APACHE2_MOD_CONF="70_mod_php5"
+		APACHE2_MOD_CONF="70_mod_php5"  # actually provided by app-eselect/eselect-php
 		apache-module_pkg_postinst
 	fi
 
