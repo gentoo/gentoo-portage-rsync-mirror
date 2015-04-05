@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.60 2015/03/29 10:02:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.62 2015/04/05 13:04:47 zlogene Exp $
+
+  05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  GnuPG-Interface-0.460.0-r1.ebuild:
+  Drop ~ppc-macos
+
+  05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  GnuPG-Interface-0.520.0.ebuild:
+  Add ~ppc keyword wrt bug #543312
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> GnuPG-Interface-0.520.0.ebuild:
   Marked ~hppa (bug #543312).

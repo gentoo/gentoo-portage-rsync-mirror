@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooX-Types-MooseLike
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/ChangeLog,v 1.7 2015/03/29 09:56:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooX-Types-MooseLike/ChangeLog,v 1.8 2015/04/05 13:01:15 zlogene Exp $
+
+  05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  MooX-Types-MooseLike-0.270.0.ebuild:
+  Add ~ppc keyword wrt bug #543312
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
   MooX-Types-MooseLike-0.270.0.ebuild:
