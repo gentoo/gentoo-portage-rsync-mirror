@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-depends
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.94 2015/01/17 18:36:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-depends/ChangeLog,v 1.95 2015/04/05 00:34:14 vapier Exp $
+
+  05 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  extutils-depends-0.308.0.ebuild:
+  Mark s390/sh stable.
 
   17 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   extutils-depends-0.308.0.ebuild:
