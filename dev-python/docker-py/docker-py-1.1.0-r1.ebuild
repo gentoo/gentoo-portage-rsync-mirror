@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/docker-py-1.1.0-r1.ebuild,v 1.1 2015/04/05 00:42:29 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/docker-py-1.1.0-r1.ebuild,v 1.2 2015/04/05 03:45:47 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -34,7 +34,9 @@ RDEPEND="
 "
 
 python_compile_all() {
-	use doc && mkdocs build || die "docs failed to build"
+	if use doc; then
+		mkdocs build || die "docs failed to build"
+	fi
 }
 
 python_test() {
