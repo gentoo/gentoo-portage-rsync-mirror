@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/IO-CaptureOutput
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-CaptureOutput/ChangeLog,v 1.1 2015/04/05 23:00:27 dilfridge Exp $
+
+*IO-CaptureOutput-1.110.400 (05 Apr 2015)
+
+  05 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +IO-CaptureOutput-1.110.400.ebuild, +metadata.xml:
+  New package, required for dev-perl/Email-Valid
