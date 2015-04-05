@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/tagainijisho
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/ChangeLog,v 1.5 2014/05/09 20:21:29 calchan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/tagainijisho/ChangeLog,v 1.7 2015/04/05 05:19:56 calchan Exp $
+
+*tagainijisho-1.0.3 (05 Apr 2015)
+
+  05 Apr 2015; Denis Dupeyron <calchan@gentoo.org> +tagainijisho-1.0.3.ebuild:
+  Version bump, thanks to Christian Tietz (bug #545266).
 
   09 May 2014; Denis Dupeyron <calchan@gentoo.org> tagainijisho-1.0.2.ebuild:
   Fixed bug #509872, thanks to Jouni Rinne.

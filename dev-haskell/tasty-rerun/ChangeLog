@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/tasty-rerun
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-rerun/ChangeLog,v 1.4 2014/12/17 13:19:03 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-rerun/ChangeLog,v 1.5 2015/04/05 05:24:19 gienah Exp $
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> tasty-rerun-1.1.3.ebuild:
+  Patch tasty-rerun-1.1.3 for ghc 7.10.1
 
 *tasty-rerun-1.1.3 (17 Dec 2014)
 

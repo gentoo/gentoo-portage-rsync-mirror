@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/bloomfilter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.10 2014/12/13 13:31:04 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.11 2015/04/05 05:21:29 gienah Exp $
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> bloomfilter-2.0.0.0.ebuild:
+  Patch bloomfilter-2.0.0.0 for ghc 7.10.1
 
 *bloomfilter-2.0.0.0 (13 Dec 2014)
 

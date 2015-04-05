@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/bloomfilter-2.0.0.0.ebuild,v 1.1 2014/12/13 13:31:04 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/bloomfilter-2.0.0.0.ebuild,v 1.2 2015/04/05 05:21:29 gienah Exp $
 
 EAPI=5
 
@@ -27,3 +27,9 @@ DEPEND="${RDEPEND}
 		dev-haskell/test-framework
 		dev-haskell/test-framework-quickcheck2 )
 "
+
+src_prepare() {
+	sed -e 's@LANGUAGE @LANGUAGE FlexibleContexts, @' \
+		-i "${S}/Data/BloomFilter/Hash.hs" \
+		"${S}/Data/BloomFilter/Mutable.hs" || die
+}

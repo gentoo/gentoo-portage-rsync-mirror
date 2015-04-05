@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/dbus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/ChangeLog,v 1.27 2015/02/07 21:34:28 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dbus/ChangeLog,v 1.28 2015/04/05 05:13:23 gienah Exp $
+
+*dbus-0.10.10 (05 Apr 2015)
+
+  05 Apr 2015; Mark Wright <gienah@gentoo.org> +dbus-0.10.10.ebuild:
+  Bump dbus to 0.10.10
 
   07 Feb 2015; Alexander Vershilov <qnikst@gentoo.org> -dbus-0.10.4.ebuild,
   -dbus-0.10.6.ebuild, -dbus-0.10.8.ebuild, -dbus-0.10.9.ebuild:
