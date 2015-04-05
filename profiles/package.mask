@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16460 2015/04/03 17:01:58 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16461 2015/04/05 06:37:32 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -610,11 +610,6 @@ dev-ruby/mixlib-log
 dev-ruby/ohai
 =dev-ruby/rest-client-1.6.7-r1
 
-# Ben de Groot <yngwin@gentoo.org> (21 Feb 2015)
-# Duplicates media-fonts/culmus[ancient] (bug #486814).
-# Masked for removal in 30 days.
-media-fonts/culmus-ancient
-
 # Joerg Bornkessel <hd_brummy@gentoo.org> (12 Feb 2015)
 # dead on upstream since years,
 # removal around 12 Mar 2015
@@ -978,11 +973,6 @@ games-emulation/mupen64plus-ui-console
 games-emulation/mupen64plus-video-glide64mk2
 games-emulation/mupen64plus-video-rice
 games-emulation/m64py
-
-# Ben de Groot <yngwin@gentoo.org> (11 Nov 2013)
-# Mask older roboto versions to give users a regular upgrade path
-# now that we've switched to upstream versioning
->media-fonts/roboto-9999
 
 # Tiziano Müller <dev-zero@gentoo.org> (24 Oct 2013)
 # Mask mainline version branch

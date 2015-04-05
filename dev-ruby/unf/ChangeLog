@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/unf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/ChangeLog,v 1.21 2015/03/18 19:15:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/ChangeLog,v 1.22 2015/04/05 06:35:21 graaff Exp $
+
+  05 Apr 2015; Hans de Graaff <graaff@gentoo.org> unf-0.1.4.ebuild:
+  Add ruby22.
 
   18 Mar 2015; Hans de Graaff <graaff@gentoo.org> -unf-0.1.1.ebuild:
   Cleanup.
