@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.92 2015/03/21 08:10:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.93 2015/04/06 19:55:55 dilfridge Exp $
+
+  06 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.9-r1.ebuild:
+  log-dispatch was moved to Log-Dispatch
 
   21 Mar 2015; Ian Delaney <idella4@gentoo.org> files/postinstall-en.txt:
   update files/postinstall-en.txt, patch by user 'j.habenicht@gmx.de' in bug

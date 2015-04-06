@@ -1,6 +1,16 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.406 2015/04/06 16:31:02 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.409 2015/04/06 19:38:34 axs Exp $
+
+  06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild:
+  fixed configure option to enable jit, last time i promise
+
+  06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild:
+  added missing configure option to enable jit
+
+  06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild:
+  dropped USE=jit from firefox-37 as jit can not be disabled and provide a
+  functional firefox
 
   06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild:
   fixed nss dependency version, bug 575744

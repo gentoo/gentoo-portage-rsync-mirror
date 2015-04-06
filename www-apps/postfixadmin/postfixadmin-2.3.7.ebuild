@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.7.ebuild,v 1.4 2014/08/10 20:14:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.3.7.ebuild,v 1.5 2015/04/06 19:54:09 dilfridge Exp $
 
 EAPI="4"
 
@@ -20,7 +20,7 @@ DEPEND="vacation? ( dev-perl/DBI
 		dev-perl/MIME-EncWords
 		dev-perl/Email-Valid
 		dev-perl/Mail-Sender
-		dev-perl/log-dispatch
+		dev-perl/Log-Dispatch
 		dev-perl/Log-Log4perl
 		dev-perl/MIME-Charset
 		mysql? ( dev-perl/DBD-mysql )
