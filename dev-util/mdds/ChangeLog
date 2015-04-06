@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/mdds
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.45 2015/04/05 19:44:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/ChangeLog,v 1.46 2015/04/06 12:42:00 dilfridge Exp $
+
+  06 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> mdds-0.10.3.ebuild:
+  0.10.3 does not work with Boost 1.57, bug 541790
 
   05 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> -mdds-0.11.2.ebuild:
   Remove old
