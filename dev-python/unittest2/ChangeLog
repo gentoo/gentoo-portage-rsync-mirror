@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.58 2015/04/03 20:54:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.59 2015/04/06 15:19:42 alunduil Exp $
+
+*unittest2-1.0.1-r1 (06 Apr 2015)
+
+  06 Apr 2015; Alex Brandt <alunduil@gentoo.org>
+  +files/remove-argparse-dependence.patch, +unittest2-1.0.1-r1.ebuild:
+  add fixes proposed by Arfrever  * RDEPEND and DEPEND on dev-python/setuptools
+  * drop dependence on dev-python/linecache2 * drop sed (suspect return value)
+  and use patch
 
   03 Apr 2015; Mike Frysinger <vapier@gentoo.org> unittest2-0.5.1-r2.ebuild:
   Mark arm64/s390/sh stable.

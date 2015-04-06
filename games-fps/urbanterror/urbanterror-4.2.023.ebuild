@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.023.ebuild,v 1.2 2015/02/15 01:05:06 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.023.ebuild,v 1.3 2015/04/06 15:30:10 mr_bones_ Exp $
 
 EAPI=5
-
-inherit check-reqs eutils gnome2-utils games pax-utils
+inherit check-reqs eutils gnome2-utils pax-utils games
 
 ENGINE_PV=${PV}
 FULL_P=UrbanTerror42_full022
@@ -82,7 +81,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-4.2.021-build.patch
+	epatch "${FILESDIR}"/${PN}-${ENGINE_PV}-build.patch
 }
 
 src_compile() {
