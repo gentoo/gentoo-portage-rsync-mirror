@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dynamips
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.17 2014/11/28 09:52:31 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.18 2015/04/06 11:30:17 pinkbyte Exp $
+
+  06 Apr 2015; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
+  Reassign package, as Aaron Bauman is Gentoo developer now
 
 *dynamips-0.2.14-r1 (28 Nov 2014)
 

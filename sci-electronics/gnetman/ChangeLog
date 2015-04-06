@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/gnetman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.14 2015/03/25 16:54:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.15 2015/04/06 11:14:48 mgorny Exp $
+
+  06 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +files/gnetman-0.0.1_pre20110124-tcl86.patch,
+  -gnetman-0.0.1_pre20041222.ebuild, -gnetman-0.0.1_pre20060522-r2.ebuild,
+  gnetman-0.0.1_pre20110124.ebuild:
+  Fix build with tcl-8.6, bug #452034. Drop old.
 
   25 Mar 2015; Justin Lecher <jlec@gentoo.org> gnetman-0.0.1_pre20041222.ebuild,
   gnetman-0.0.1_pre20060522-r2.ebuild, gnetman-0.0.1_pre20110124.ebuild:

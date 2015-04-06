@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/gnetman-0.0.1_pre20110124.ebuild,v 1.2 2015/03/25 16:54:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/gnetman-0.0.1_pre20110124.ebuild,v 1.3 2015/04/06 11:14:48 mgorny Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A GNU Netlist Manipulation Library"
 HOMEPAGE="http://sourceforge.net/projects/gnetman/"
@@ -30,6 +30,10 @@ src_prepare() {
 		-e '/^$(TARGET):/,+3s:$(CFLAGS):$(CFLAGS) $(LDFLAGS):' \
 		-i configure || die
 	tc-export CC
+
+	cd ../.. || die
+	# fix build issues with tcl-8.6, #452034
+	epatch "${FILESDIR}/${P}-tcl86.patch"
 }
 
 src_install () {

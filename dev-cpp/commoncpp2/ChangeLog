@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/commoncpp2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.59 2014/03/01 22:24:51 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.60 2015/04/06 11:16:50 pinkbyte Exp $
+
+  06 Apr 2015; Sergey Popov <pinkbyte@gentoo.org> commoncpp2-1.8.1-r1.ebuild,
+  +files/1.8.1-parallel-build.patch:
+  Fix parallel build, wrt bug #492658
 
   01 Mar 2014; Michał Górny <mgorny@gentoo.org> commoncpp2-1.8.0.ebuild,
   commoncpp2-1.8.1-r1.ebuild:
