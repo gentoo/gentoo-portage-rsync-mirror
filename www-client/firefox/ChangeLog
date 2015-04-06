@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.409 2015/04/06 19:38:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.410 2015/04/06 22:38:40 axs Exp $
+
+  06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild,
+  +files/firefox-37.0-jemalloc_configure_unbashify.patch:
+  firefox-37 works now that jit is forced-on, removing mask
 
   06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild:
   fixed configure option to enable jit, last time i promise
@@ -13,7 +17,7 @@
   functional firefox
 
   06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild:
-  fixed nss dependency version, bug 575744
+  fixed nss dependency version, bug 545744
 
 *firefox-31.6.0 (05 Apr 2015)
 
