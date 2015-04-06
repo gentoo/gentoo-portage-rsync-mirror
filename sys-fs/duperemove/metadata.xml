@@ -4,5 +4,9 @@
 <maintainer>
 	<email>rich0@gentoo.org</email>
 </maintainer>
+<maintainer>
+	<email>mgorny@gentoo.org</email>
+	<name>Michał Górny</name>
+</maintainer>
 <longdescription>Btrfs deduplication utility.</longdescription> 
 </pkgmetadata>

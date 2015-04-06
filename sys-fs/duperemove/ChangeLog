@@ -1,10 +1,16 @@
 # ChangeLog for sys-fs/duperemove
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/duperemove/ChangeLog,v 1.1 2015/03/25 00:15:43 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/duperemove/ChangeLog,v 1.2 2015/04/06 17:23:53 mgorny Exp $
+
+*duperemove-0.09.2 (06 Apr 2015)
+
+  06 Apr 2015; Michał Górny <mgorny@gentoo.org> +duperemove-0.09.2.ebuild,
+  metadata.xml:
+  Add myself to maintainers. Version bump. Fix passing CC, CFLAGS & LDFLAGS to
+  the build system. Add missing dependency on libgcrypt.
 
 *duperemove-0.09.1 (25 Mar 2015)
 
   25 Mar 2015; Richard Freeman <rich0@gentoo.org> +duperemove-0.09.1.ebuild,
   +metadata.xml:
   Add duperemove to repository.
-
