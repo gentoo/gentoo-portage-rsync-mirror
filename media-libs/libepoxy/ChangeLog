@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libepoxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/ChangeLog,v 1.17 2015/03/14 13:42:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libepoxy/ChangeLog,v 1.18 2015/04/06 12:16:56 mgorny Exp $
+
+  06 Apr 2015; Michał Górny <mgorny@gentoo.org> -libepoxy-1.1.ebuild,
+  libepoxy-1.2.ebuild, libepoxy-9999.ebuild:
+  Use python-any-r1, require python[xml]. Reported by hasufell.
 
   14 Mar 2015; Markus Meier <maekke@gentoo.org> libepoxy-1.2.ebuild:
   arm stable, bug #530652
