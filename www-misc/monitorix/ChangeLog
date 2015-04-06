@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/monitorix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.8 2015/04/01 22:25:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.9 2015/04/06 03:19:46 reavertm Exp $
+
+  06 Apr 2015; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml,
+  monitorix-3.5.1.ebuild:
+  Remove evms USE flag. evms was superseded by lvm2.
 
   01 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> monitorix-3.5.1.ebuild:
   Fix dependencies: pkgmove of Config-General

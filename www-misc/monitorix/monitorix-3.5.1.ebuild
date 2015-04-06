@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.5.1.ebuild,v 1.2 2015/04/01 22:25:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/monitorix-3.5.1.ebuild,v 1.3 2015/04/06 03:19:46 reavertm Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.${PN}.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="apcupsd evms hddtemp httpd lm_sensors postfix"
+IUSE="apcupsd hddtemp httpd lm_sensors postfix"
 
 DEPEND="sys-apps/sed"
 RDEPEND="dev-perl/Config-General
@@ -26,7 +26,6 @@ RDEPEND="dev-perl/Config-General
 	net-analyzer/rrdtool[perl]
 	virtual/perl-CGI
 	apcupsd? ( sys-power/apcupsd )
-	evms? ( sys-fs/evms )
 	hddtemp? ( app-admin/hddtemp )
 	httpd? ( virtual/httpd-cgi )
 	lm_sensors? ( sys-apps/lm_sensors )

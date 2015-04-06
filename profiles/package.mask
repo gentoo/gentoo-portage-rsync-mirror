@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16462 2015/04/05 10:37:25 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16463 2015/04/06 03:29:53 reavertm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+
+# Maciej Mrozowski <reavertm@gentoo.org> (06 Apr 2015)
+# Does not link against latest ncurses and no interest to fix it.
+# Superseded by LVM2 and all clusters should be migrated by now.
+# Removal in 30 days.
+sys-fs/evms
 
 # James Le Cuirot <chewi@gentoo.org> (05 Apr 2015)
 # A 32-on-64 Java VM is no longer considered necessary and a multilib
