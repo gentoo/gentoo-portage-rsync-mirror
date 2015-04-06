@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/apipkg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apipkg/ChangeLog,v 1.13 2015/03/19 08:24:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apipkg/ChangeLog,v 1.14 2015/04/06 03:38:35 idella4 Exp $
+
+*apipkg-1.4 (06 Apr 2015)
+
+  06 Apr 2015; Ian Delaney <idella4@gentoo.org> +apipkg-1.4.ebuild,
+  -apipkg-1.3.ebuild:
+  bump; rm -1.3 on the basis of msg in ChangeLog 'revert the automated version
+  gathering'
 
 *apipkg-1.3 (19 Mar 2015)
 
