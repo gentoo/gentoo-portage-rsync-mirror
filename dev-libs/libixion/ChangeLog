@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libixion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.18 2015/04/05 19:48:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.19 2015/04/06 11:42:50 dilfridge Exp $
+
+  06 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> libixion-0.9.0.ebuild,
+  libixion-9999.ebuild:
+  Rekeyword, add subslot, disable python-3 for now, bug 545562
 
 *libixion-0.9.0 (05 Apr 2015)
 

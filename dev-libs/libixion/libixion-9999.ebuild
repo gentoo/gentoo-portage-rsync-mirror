@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.12 2015/04/05 19:48:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-9999.ebuild,v 1.13 2015/04/06 11:42:50 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="https://gitlab.com/ixion/ixion"
 [[ ${PV} == 9999 ]] || SRC_URI="http://kohei.us/files/ixion/src/${P}.tar.xz"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0/0.10"
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="static-libs"
