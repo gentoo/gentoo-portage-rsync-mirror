@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/introspection
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.10 2014/12/31 11:43:15 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.11 2015/04/06 15:38:22 graaff Exp $
+
+  06 Apr 2015; Hans de Graaff <graaff@gentoo.org> introspection-0.0.3.ebuild:
+  Add ruby22.
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> introspection-0.0.3.ebuild:
   Add ~sparc, wrt bug #501152

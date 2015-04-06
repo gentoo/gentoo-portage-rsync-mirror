@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.129 2015/03/20 07:16:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.130 2015/04/06 15:55:24 graaff Exp $
+
+  06 Apr 2015; Hans de Graaff <graaff@gentoo.org> mocha-0.10.5-r2.ebuild,
+  mocha-0.11.4-r1.ebuild, mocha-0.12.10-r1.ebuild, mocha-0.13.3-r2.ebuild,
+  mocha-0.14.0.ebuild, mocha-1.1.0.ebuild:
+  Add ruby22.
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> mocha-1.1.0.ebuild:
   Make sure yard is not needed with FEATURES=test, fixing bug 543844.

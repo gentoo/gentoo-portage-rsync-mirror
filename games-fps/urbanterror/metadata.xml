@@ -5,6 +5,6 @@
 	<use>
 		<flag name="altgamma">Clearskies - X11-based gamma for Linux</flag>
 		<flag name="server">Build server target</flag>
-		<flag name="pax_kernel">>Triggers a paxmarking of the binary</flag>
+		<flag name="pax_kernel">Triggers a paxmarking of the binary</flag>
 	</use>
 </pkgmetadata>

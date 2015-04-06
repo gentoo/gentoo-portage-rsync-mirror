@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/introspection-0.0.3.ebuild,v 1.10 2014/12/31 11:43:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/introspection-0.0.3.ebuild,v 1.11 2015/04/06 15:38:22 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 # No documentation task
 RUBY_FAKEGEM_TASK_DOC=""

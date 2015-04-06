@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/urbanterror
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.55 2015/04/06 15:30:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/ChangeLog,v 1.56 2015/04/06 15:57:16 mr_bones_ Exp $
+
+  06 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  urbanterror-4.2.023.ebuild:
+  tidy metadata.xml
 
   06 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
   +files/urbanterror-4.2.023-build.patch, files/urbanterror-4.2.018-build.patch,
