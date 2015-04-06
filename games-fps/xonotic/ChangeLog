@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/xonotic
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/ChangeLog,v 1.17 2015/01/16 09:40:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/ChangeLog,v 1.18 2015/04/06 18:58:11 mr_bones_ Exp $
+
+  06 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  xonotic-0.8.0.ebuild:
+  add ode use flag for alternate physics-engine support from dev-games/ode (bug
+  #475468)
 
 *xonotic-0.8.0 (16 Jan 2015)
 
