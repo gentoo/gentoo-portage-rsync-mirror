@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/shellcheck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shellcheck/ChangeLog,v 1.2 2015/02/06 15:10:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shellcheck/ChangeLog,v 1.3 2015/04/06 14:46:17 jlec Exp $
+
+*shellcheck-0.3.6 (06 Apr 2015)
+
+  06 Apr 2015; Justin Lecher <jlec@gentoo.org> +shellcheck-0.3.6.ebuild:
+  Version Bump
 
 *shellcheck-0.3.5-r1 (06 Feb 2015)
 
@@ -13,4 +18,3 @@
   06 Feb 2015; Justin Lecher <jlec@gentoo.org> +shellcheck-0.3.5.ebuild,
   +metadata.xml:
   New addition
-
