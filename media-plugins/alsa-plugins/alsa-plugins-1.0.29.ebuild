@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.29.ebuild,v 1.1 2015/03/25 11:41:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.29.ebuild,v 1.2 2015/04/06 19:17:56 slyfox Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib multilib-minimal
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
-:	epatch "${FILESDIR}"/${PN}-1.0.23-automagic.patch
+	epatch "${FILESDIR}"/${PN}-1.0.23-automagic.patch
+	epatch "${FILESDIR}"/${PN}-1.0.28-libav10.patch
 
 	epatch_user
 
