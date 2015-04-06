@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A GNU Netlist Manipulation Library"
 HOMEPAGE="http://sourceforge.net/projects/gnetman/"
@@ -24,6 +24,9 @@ DEPEND="${RDEPEND}
 	dev-db/datadraw"
 
 src_prepare() {
+	# fix build issues with tcl-8.6, #452034
+	epatch "${FILESDIR}/${P}-tcl86.patch"
+
 	sed -e "/^CFLAGS=/s:-g -Wall:${CFLAGS}:" \
 	    -e "/^CFLAGS=/s:-I/usr/include/tcl8.4::" \
 		-e "/^LIBS=/s:-ltcl8.4:-ltcl:" \
