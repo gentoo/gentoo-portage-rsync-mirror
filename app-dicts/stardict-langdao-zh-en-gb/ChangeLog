@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-langdao-zh-en-gb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.10 2014/01/03 11:25:33 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.11 2015/04/06 00:26:18 dlan Exp $
+
+  06 Apr 2015; Yixun Lan <dlan@gentoo.org>
+  stardict-langdao-zh-en-gb-2.4.2.ebuild:
+  keyword arm, tested on cortex-a9 hardware
 
   03 Jan 2014; Naohiro Aota <naota@gentoo.org>
   stardict-langdao-zh-en-gb-2.4.2.ebuild:

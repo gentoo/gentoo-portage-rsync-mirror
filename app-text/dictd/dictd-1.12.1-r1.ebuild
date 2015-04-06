@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.12.1-r1.ebuild,v 1.8 2014/01/18 20:03:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.12.1-r1.ebuild,v 1.9 2015/04/06 00:18:31 dlan Exp $
 
 EAPI=5
 inherit eutils readme.gentoo systemd user
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dict/${P}.tar.gz"
 SLOT="0"
 # We install rfc so - ISOC-rfc
 LICENSE="GPL-2 ISOC-rfc"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="dbi judy minimal"
 
 # <gawk-3.1.6 makes tests fail.
