@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-36.0.1.ebuild,v 1.2 2015/03/10 14:00:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-37.0.1.ebuild,v 1.1 2015/04/05 23:07:55 polynomial-c Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -30,8 +30,8 @@ fi
 PATCH="${PN}-36.0-patches-01"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
-MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
-MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases/"
+MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases"
+MOZ_HTTP_URI="http://ftp.mozilla.org/pub/${PN}/releases"
 
 MOZCONFIG_OPTIONAL_WIFI=1
 MOZCONFIG_OPTIONAL_JIT="enabled"
@@ -142,13 +142,14 @@ src_unpack() {
 
 src_prepare() {
 	# Apply our patches
+	EPATCH_EXCLUDE="8002_jemalloc_configure_unbashify.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
 
 	epatch "${FILESDIR}"/${PN}-35.0-gmp-clearkey-sprintf.patch
-	epatch "${FILESDIR}"/${PN}-36.0-disable-ion.patch
-	epatch "${FILESDIR}"/${PN}-36.0-depollute-CONST-from-dtoa.patch
+	#epatch "${FILESDIR}"/${PN}-36.0-disable-ion.patch
+	#epatch "${FILESDIR}"/${PN}-36.0-depollute-CONST-from-dtoa.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

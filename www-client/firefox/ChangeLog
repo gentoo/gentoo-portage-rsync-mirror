@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.403 2015/03/31 07:59:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.404 2015/04/05 23:07:55 polynomial-c Exp $
+
+*firefox-37.0.1 (05 Apr 2015)
+
+  05 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> -firefox-36.0.1.ebuild,
+  +firefox-37.0.1.ebuild:
+  Version bump. Removed old.
 
   31 Mar 2015; Agostino Sarubbo <ago@gentoo.org> firefox-31.5.0.ebuild:
   Stable for ppc64, wrt bug #541316

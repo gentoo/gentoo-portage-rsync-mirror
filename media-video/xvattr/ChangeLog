@@ -1,6 +1,13 @@
 # ChangeLog for media-video/xvattr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/ChangeLog,v 1.25 2012/05/05 08:58:56 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/ChangeLog,v 1.26 2015/04/05 23:23:02 dilfridge Exp $
+
+*xvattr-1.3-r3 (05 Apr 2015)
+
+  05 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> -xvattr-1.3-r2.ebuild,
+  +xvattr-1.3-r3.ebuild, +files/xvattr-1.3-pod-encoding.patch:
+  Fix build, bug 456802. EAPI=5, drop to ~arch since nothing depends on it and
+  stable fails to build
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> xvattr-1.3-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
