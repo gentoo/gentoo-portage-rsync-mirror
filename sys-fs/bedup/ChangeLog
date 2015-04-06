@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/bedup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.10 2014/09/06 11:07:40 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/ChangeLog,v 1.11 2015/04/06 16:53:14 mgorny Exp $
+
+*bedup-0.9.0_p20140413-r1 (06 Apr 2015)
+
+  06 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +bedup-0.9.0_p20140413-r1.ebuild, -bedup-0.9.0_p20140413.ebuild,
+  bedup-9999.ebuild:
+  Restrict alembic to < 0.7.
 
   06 Sep 2014; Michał Górny <mgorny@gentoo.org> bedup-0.9.0_p20140413.ebuild,
   bedup-9999.ebuild:

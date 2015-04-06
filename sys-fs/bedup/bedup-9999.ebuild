@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-9999.ebuild,v 1.8 2014/09/06 11:07:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-9999.ebuild,v 1.9 2015/04/06 16:53:14 mgorny Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ IUSE=""
 DEPEND=">=dev-python/cffi-0.5:=[${PYTHON_USEDEP}]
 	>=sys-fs/btrfs-progs-0.20_rc1_p358"
 RDEPEND="${DEPEND}
-	dev-python/alembic[${PYTHON_USEDEP}]
+	<dev-python/alembic-0.7[${PYTHON_USEDEP}]
 	dev-python/contextlib2[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 	>=dev-python/sqlalchemy-0.8.2[sqlite,${PYTHON_USEDEP}]"
