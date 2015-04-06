@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile install unpack
-DEPEND=<sys-devel/bison-3
+DEPEND=sys-devel/bison
 DESCRIPTION=Compatibility package for running binaries linked against a pre gcc 3.4 libstdc++
 HOMEPAGE=http://gcc.gnu.org/libstdc++/
 IUSE=multilib nls
 KEYWORDS=amd64 ~mips ppc -ppc64 sparc x86 ~x86-fbsd
 LICENSE=GPL-2 LGPL-2.1
 SLOT=5
-SRC_URI=ftp://gcc.gnu.org/pub/gcc/releases/gcc-3.3.6/gcc-3.3.6.tar.bz2 mirror://gentoo/gcc-3.3.6-patches-1.8.tar.bz2
+SRC_URI=ftp://gcc.gnu.org/pub/gcc/releases/gcc-3.3.6/gcc-3.3.6.tar.bz2 mirror://gentoo/gcc-3.3.6-patches-1.9.tar.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=c011c952f1d10956c9238f6301a5b93a
+_md5_=2d633918e4b6fafbd8b8f0f8d8e7a7f3
