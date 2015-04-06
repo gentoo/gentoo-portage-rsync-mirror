@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.273 2015/04/04 18:12:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.274 2015/04/06 13:17:56 idella4 Exp $
+
+  06 Apr 2015; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  update remote-id in metadata.xml
 
 *setuptools-15.0 (04 Apr 2015)
 

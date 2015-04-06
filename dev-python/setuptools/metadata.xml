@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>python</herd>
   <upstream>
-    <remote-id type="pypi">distribute</remote-id>
+    <remote-id type="pypi">setuptools</remote-id>
   </upstream>
 </pkgmetadata>
