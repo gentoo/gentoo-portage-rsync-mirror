@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/henplus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.27 2015/04/05 21:03:34 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.28 2015/04/06 01:25:19 patrick Exp $
+
+  06 Apr 2015; Patrick Lauer <patrick@gentoo.org> henplus-0.9.8-r1.ebuild:
+  Whitespace
 
 *henplus-0.9.8-r1 (05 Apr 2015)
 
