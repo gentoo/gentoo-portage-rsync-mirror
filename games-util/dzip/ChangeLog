@@ -1,6 +1,9 @@
 # ChangeLog for games-util/dzip
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/ChangeLog,v 1.14 2012/12/17 13:39:30 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/dzip/ChangeLog,v 1.15 2015/04/06 09:25:25 tupone Exp $
+
+  06 Apr 2015; Tupone Alfredo <tupone@gentoo.org> dzip-2.9-r3.ebuild:
+  EAPI 5
 
   17 Dec 2012; Ulrich Müller <ulm@gentoo.org> dzip-2.9-r1.ebuild:
   Fix LICENSE.
