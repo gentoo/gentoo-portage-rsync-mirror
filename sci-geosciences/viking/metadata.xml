@@ -9,5 +9,11 @@
     <flag name="magic">
       Use libmagic to determine mimetypes
     </flag>
+    <flag name="mapnik">
+      Enable a layer based on <pkg>sci-geosciences/mapnik</pkg>
+    </flag>
+    <flag name="sqlite3">
+      Enable MBTiles support based on <pkg>dev-db/sqlite</pkg>
+    </flag>
   </use>
 </pkgmetadata>
