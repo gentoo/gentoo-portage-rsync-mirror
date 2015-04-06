@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.233 2015/03/31 21:18:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.234 2015/04/06 20:11:01 vapier Exp $
+
+  06 Apr 2015; Mike Frysinger <vapier@gentoo.org> ncurses-5.9-r4.ebuild:
+  Force usage of bash when running the configure script #545532 by Nick Bowler.
 
   31 Mar 2015; Mike Frysinger <vapier@gentoo.org>
   +files/ncurses-5.9-gcc-5.patch, ncurses-5.9-r4.ebuild:

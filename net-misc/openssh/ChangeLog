@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.557 2015/03/25 21:06:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.558 2015/04/06 20:29:53 chutzpah Exp $
+
+*openssh-6.8_p1-r4 (06 Apr 2015)
+
+  06 Apr 2015; Patrick McLean <chutzpah@gentoo.org> +openssh-6.8_p1-r4.ebuild:
+  Revision bump, bump the X509 patch to version 8.3.1.
 
 *openssh-6.8_p1-r3 (25 Mar 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r4.ebuild,v 1.2 2015/03/31 21:18:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.9-r4.ebuild,v 1.3 2015/04/06 20:11:01 vapier Exp $
 
 EAPI="4"
 inherit eutils flag-o-matic toolchain-funcs multilib-minimal
@@ -127,7 +127,9 @@ do_configure() {
 		--without-reentrant
 	)
 
-	econf "${conf[@]}" "$@"
+	# Force bash until upstream rebuilds the configure script with a newer
+	# version of autotools. #545532
+	CONFIG_SHELL=/bin/bash econf "${conf[@]}" "$@"
 }
 
 src_compile() {
