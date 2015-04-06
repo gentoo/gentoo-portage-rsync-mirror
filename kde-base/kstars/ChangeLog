@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.348 2015/02/18 16:26:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.349 2015/04/06 16:24:00 kensington Exp $
+
+*kstars-4.14.3-r1 (06 Apr 2015)
+
+  06 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/kstars-4.14.3-indilib100.patch, +kstars-4.14.3-r1.ebuild:
+  Backport patch from upstream solving build failure with sci-libs/indilib-1.0.0
+  wrt bug #545542.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -kstars-4.12.5.ebuild:
   Remove KDE SC 4.12

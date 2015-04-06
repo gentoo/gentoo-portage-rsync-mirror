@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-37.0.1.ebuild,v 1.1 2015/04/05 23:07:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-37.0.1.ebuild,v 1.2 2015/04/06 16:31:02 axs Exp $
 
 EAPI="5"
 VIRTUALX_REQUIRED="pgo"
@@ -59,7 +59,7 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=dev-libs/nss-3.17.4
-	>=dev-libs/nspr-4.10.7
+	>=dev-libs/nspr-4.10.8
 	selinux? ( sec-policy/selinux-mozilla )"
 
 DEPEND="${RDEPEND}
@@ -148,8 +148,6 @@ src_prepare() {
 	epatch "${WORKDIR}/firefox"
 
 	epatch "${FILESDIR}"/${PN}-35.0-gmp-clearkey-sprintf.patch
-	#epatch "${FILESDIR}"/${PN}-36.0-disable-ion.patch
-	#epatch "${FILESDIR}"/${PN}-36.0-depollute-CONST-from-dtoa.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

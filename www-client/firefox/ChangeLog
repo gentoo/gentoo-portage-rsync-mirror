@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.405 2015/04/06 06:13:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.406 2015/04/06 16:31:02 axs Exp $
+
+  06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild:
+  fixed nss dependency version, bug 575744
 
 *firefox-31.6.0 (05 Apr 2015)
 
