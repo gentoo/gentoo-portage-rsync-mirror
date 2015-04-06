@@ -24,15 +24,16 @@ DEPEND="${RDEPEND}
 	dev-db/datadraw"
 
 src_prepare() {
-	# fix build issues with tcl-8.6, #452034
-	epatch "${FILESDIR}/${P}-tcl86.patch"
-
 	sed -e "/^CFLAGS=/s:-g -Wall:${CFLAGS}:" \
 	    -e "/^CFLAGS=/s:-I/usr/include/tcl8.4::" \
 		-e "/^LIBS=/s:-ltcl8.4:-ltcl:" \
 		-e '/^$(TARGET):/,+3s:$(CFLAGS):$(CFLAGS) $(LDFLAGS):' \
 		-i configure || die
 	tc-export CC
+
+	cd ../.. || die
+	# fix build issues with tcl-8.6, #452034
+	epatch "${FILESDIR}/${P}-tcl86.patch"
 }
 
 src_install () {
