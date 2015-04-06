@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0_beta6-r1.ebuild,v 1.1 2015/02/17 10:11:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-8.0.1.ebuild,v 1.1 2015/04/06 10:33:54 jlec Exp $
 
 EAPI=5
 
 inherit cmake-utils
 
-DL_ID=1922
+DL_ID=2015
 
 DESCRIPTION="A remote security scanner for Linux (openvas-libraries)"
 HOMEPAGE="http://www.openvas.org/"
@@ -14,7 +14,7 @@ SRC_URI="http://wald.intevation.org/frs/download.php/${DL_ID}/${P/_beta/+beta}.t
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="ldap"
 
 RDEPEND="

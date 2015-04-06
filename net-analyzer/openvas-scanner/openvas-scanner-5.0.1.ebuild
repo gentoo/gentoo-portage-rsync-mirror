@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-5.0_beta6.ebuild,v 1.3 2015/02/14 19:01:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-5.0.1.ebuild,v 1.1 2015/04/06 10:40:26 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit cmake-utils systemd
 
 MY_PN=openvassd
 
-DL_ID=1926
+DL_ID=2016
 
 DESCRIPTION="A remote security scanner for Linux (OpenVAS-scanner)"
 HOMEPAGE="http://www.openvas.org/"
@@ -16,14 +16,14 @@ SRC_URI="http://wald.intevation.org/frs/download.php/${DL_ID}/${P/_beta/+beta}.t
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS=" ~amd64 ~arm ~ppc ~x86"
 IUSE=""
 
 RDEPEND="
 	app-crypt/gpgme
 	>=dev-libs/glib-2.16:2
 	dev-libs/libgcrypt:0
-	>=net-analyzer/openvas-libraries-8_beta6
+	>=net-analyzer/openvas-libraries-8.0.1
 	!net-analyzer/openvas-plugins
 	!net-analyzer/openvas-server"
 DEPEND="${RDEPEND}

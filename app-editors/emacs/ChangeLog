@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.671 2015/04/01 21:13:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.672 2015/04/06 10:55:15 ulm Exp $
+
+*emacs-24.5_rc3 (06 Apr 2015)
+
+  06 Apr 2015; Ulrich Müller <ulm@gentoo.org> +emacs-24.5_rc3.ebuild:
+  Version bump.
 
 *emacs-24.5_rc2 (01 Apr 2015)
 
