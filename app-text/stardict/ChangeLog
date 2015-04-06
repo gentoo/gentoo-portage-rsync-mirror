@@ -1,6 +1,9 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.46 2015/03/03 09:34:59 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.47 2015/04/05 23:58:02 dlan Exp $
+
+  06 Apr 2015; Yixun Lan <dlan@gentoo.org> stardict-3.0.6.ebuild:
+  add keyword arm, tested on cortex-a9 board
 
 *stardict-3.0.6 (03 Mar 2015)
 
