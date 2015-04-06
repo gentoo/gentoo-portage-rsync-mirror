@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libgrapple
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/ChangeLog,v 1.8 2012/05/03 06:35:31 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/ChangeLog,v 1.9 2015/04/06 09:51:10 tupone Exp $
+
+  06 Apr 2015; Tupone Alfredo <tupone@gentoo.org> libgrapple-0.9.8.ebuild:
+  EAPI 5
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> libgrapple-0.9.8.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

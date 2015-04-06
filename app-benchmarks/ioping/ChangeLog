@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/ioping
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ioping/ChangeLog,v 1.4 2014/05/06 07:36:00 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ioping/ChangeLog,v 1.5 2015/04/06 09:54:49 jlec Exp $
+
+*ioping-0.9 (06 Apr 2015)
+
+  06 Apr 2015; Justin Lecher <jlec@gentoo.org> +ioping-0.9.ebuild,
+  -ioping-0.6-r1.ebuild, -ioping-0.7.ebuild:
+  Version BUmp; thanks Johan Bergström for the patch
 
 *ioping-0.8 (06 May 2014)
 

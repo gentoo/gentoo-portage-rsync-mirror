@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/gns3-gui-1.2.ebuild,v 1.1 2014/11/22 10:53:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/gns3-gui-1.3.0.ebuild,v 1.1 2015/04/06 09:53:13 bman Exp $
 
-EAPI="5"
+EAPI=5
 
 PYTHON_COMPAT=( python{3_3,3_4} )
 
@@ -21,8 +21,8 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-python/libcloud-0.15.1[${PYTHON_USEDEP}]
 	>=dev-python/ws4py-0.3.4[${PYTHON_USEDEP}]
-	>=dev-python/requests-2.3.0[${PYTHON_USEDEP}]
-	>=dev-python/paramiko-1.13.0[${PYTHON_USEDEP}]
+	=dev-python/requests-2.4.3[${PYTHON_USEDEP}]
+	>=dev-python/paramiko-1.15.1[${PYTHON_USEDEP}]
 	!=dev-python/PyQt4-4.11.3_pre20141024[${PYTHON_USEDEP}]
 	>=dev-python/PyQt4-4.11.2[X,svg,${PYTHON_USEDEP}]
 	dev-qt/qtgui:4

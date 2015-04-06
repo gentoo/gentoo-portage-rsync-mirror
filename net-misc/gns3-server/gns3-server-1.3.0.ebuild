@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-server/gns3-server-1.2.ebuild,v 1.1 2014/11/22 10:22:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-server/gns3-server-1.3.0.ebuild,v 1.1 2015/04/06 09:51:09 bman Exp $
 
-EAPI="5"
+EAPI=5
 
 PYTHON_COMPAT=( python{3_3,3_4} )
 
@@ -10,18 +10,21 @@ inherit distutils-r1 eutils
 
 DESCRIPTION="GNS3 server to asynchronously manage emulators"
 HOMEPAGE="http://www.gns3.net/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/GNS3/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND=">=dev-python/pyzmq-14.3.1[${PYTHON_USEDEP}]
+RDEPEND=">=app-emulation/dynamips-0.2.12
+		>=dev-python/aiohttp-0.14.4[${PYTHON_USEDEP}]
 		>=dev-python/netifaces-0.8-r2[${PYTHON_USEDEP}]
-		>=www-servers/tornado-3.1.1[${PYTHON_USEDEP}]
-		>=dev-python/jsonschema-2.3.0[${PYTHON_USEDEP}]
+		>=dev-python/jinja-2.7.3[${PYTHON_USEDEP}]
+		>=dev-python/jsonschema-2.4.0[${PYTHON_USEDEP}]
 		>=dev-python/libcloud-0.14.1[${PYTHON_USEDEP}]
-		>=app-emulation/dynamips-0.2.12"
+		>=dev-python/raven-5.2.0[${PYTHON_USEDEP}]
+		>=dev-python/pyzmq-14.3.1[${PYTHON_USEDEP}]
+		>=www-servers/tornado-3.1.1[${PYTHON_USEDEP}]"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 

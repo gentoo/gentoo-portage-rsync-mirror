@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/hdl_dump
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hdl_dump/ChangeLog,v 1.9 2010/11/23 12:53:04 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hdl_dump/ChangeLog,v 1.10 2015/04/06 09:42:05 tupone Exp $
+
+  06 Apr 2015; Tupone Alfredo <tupone@gentoo.org>
+  hdl_dump-0.8.6.20060901.ebuild:
+  EAPI 5
 
   23 Nov 2010; Mike Frysinger <vapier@gentoo.org>
   hdl_dump-0.8.6.20060901.ebuild,

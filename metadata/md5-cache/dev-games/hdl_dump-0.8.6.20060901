@@ -1,10 +1,10 @@
 DEFINED_PHASES=install prepare
 DESCRIPTION=game installer for playstation 2 HD Loader
-EAPI=2
+EAPI=5
 HOMEPAGE=http://www.psx-scene.com/hdldump/
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.psx-scene.com/hdldump/hdl_dumx-0.8.6-20060901-src.tar.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=3b6e2fe86e0ec117392d5680f999468c
+_md5_=34021e8f91b39d41ba2f3f9a50f8227b
