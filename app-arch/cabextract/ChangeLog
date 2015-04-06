@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.77 2015/03/29 11:22:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.78 2015/04/06 06:58:41 jer Exp $
+
+  06 Apr 2015; Jeroen Roovers <jer@gentoo.org> cabextract-1.6.ebuild:
+  Stable for HPPA (bug #538152).
 
 *cabextract-1.6 (29 Mar 2015)
 
