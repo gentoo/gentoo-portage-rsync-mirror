@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.64 2015/02/11 10:26:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.65 2015/04/07 11:13:51 jlec Exp $
+
+  07 Apr 2015; Justin Lecher <jlec@gentoo.org> zeromq-2.2.0.ebuild:
+  Block net-libs/cppzmq due to file collision, bug #545226
 
 *zeromq-4.0.5 (11 Feb 2015)
 
