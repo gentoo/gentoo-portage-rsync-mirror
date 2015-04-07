@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/galera
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/ChangeLog,v 1.5 2015/04/03 13:04:03 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/ChangeLog,v 1.6 2015/04/07 20:58:24 grknight Exp $
+
+  07 Apr 2015; Brian Evans <grknight@gentoo.org>
+  +files/galera-strip-machine-cflags.patch, galera-25.3.10.ebuild:
+  Add patch to remove machine specific CFLAGS and add new IUSE instead for one
+  feature
 
   03 Apr 2015; Brian Evans <grknight@gentoo.org> galera-25.3.5.ebuild:
   Add append-flags -D_REENTRANT wrt bug 545376

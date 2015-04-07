@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/nvtv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.14 2011/03/24 06:53:01 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.15 2015/04/07 20:54:36 dilfridge Exp $
+
+  07 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> -nvtv-0.4.5.ebuild:
+  Drop to unstable (nothing depends on it), remove old EAPI=1 version.
 
   24 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> nvtv-0.4.5.ebuild,
   nvtv-0.4.7-r1.ebuild:
