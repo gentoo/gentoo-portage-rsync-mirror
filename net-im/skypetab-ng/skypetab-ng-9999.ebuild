@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.8 2015/04/01 20:52:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/skypetab-ng-9999.ebuild,v 1.9 2015/04/07 20:12:21 slyfox Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ IUSE=""
 DEPEND="
 	|| (
 		(
+			dev-qt/qtcore:4[abi_x86_32(-)]
 			dev-qt/qtgui:4[abi_x86_32(-)]
 		)
 		amd64? (
