@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.98 2015/03/11 13:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.99 2015/04/07 14:33:55 jlec Exp $
 
   11 Mar 2015; Justin Lecher <jlec@gentoo.org> ncbi-tools-2.2.26-r2.ebuild:
   Add missing X deps, #542558
@@ -68,7 +68,7 @@
 *ncbi-tools-2.2.26 (22 May 2012)
 
   22 May 2012; Justin Lecher <jlec@gentoo.org> +ncbi-tools-2.2.26.ebuild:
-  Version BUmp, #416251; restructured large parts of the ebuild; move to EAPI=4
+  Version Bump, #416251; restructured large parts of the ebuild; move to EAPI=4
 
   26 Apr 2012; Justin Lecher <jlec@gentoo.org> ncbi-tools-20080302.ebuild,
   -ncbi-tools-20090809-r2.ebuild:

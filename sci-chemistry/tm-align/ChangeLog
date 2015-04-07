@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/tm-align
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/ChangeLog,v 1.8 2015/03/29 13:15:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/ChangeLog,v 1.9 2015/04/07 14:39:42 jlec Exp $
 
 *tm-align-20140601 (29 Mar 2015)
 
@@ -16,7 +16,7 @@
 
   12 May 2013; Justin Lecher <jlec@gentoo.org> -tm-align-20130508.ebuild,
   +tm-align-20130511.ebuild:
-  Version BUmp, remove broken version
+  Version Bump, remove broken version
 
 *tm-align-20130508 (11 May 2013)
 

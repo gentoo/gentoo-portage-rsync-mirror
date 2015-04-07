@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.127 2015/03/16 07:13:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.128 2015/04/07 14:38:29 jlec Exp $
 
   16 Mar 2015; Justin Lecher <jlec@gentoo.org> pymol-1.7.0.1.ebuild,
   pymol-1.7.4.0.ebuild:
@@ -32,7 +32,7 @@
 *pymol-1.7.4.0 (04 Dec 2014)
 
   04 Dec 2014; Justin Lecher <jlec@gentoo.org> +pymol-1.7.4.0.ebuild:
-  Version BUmp
+  Version Bump
 
 *pymol-1.7.3.4 (21 Nov 2014)
 
@@ -207,7 +207,7 @@
 
   10 Mar 2012; Justin Lecher <jlec@gentoo.org> +pymol-1.5.0.3.ebuild,
   +files/pymol-1.5.0.3-prefix.patch, +files/pymol-1.5.0.3-web.patch:
-  Version BUmp
+  Version Bump
 
 *pymol-1.5.0.2 (27 Feb 2012)
 

@@ -1,11 +1,11 @@
 # ChangeLog for sci-chemistry/gabedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.26 2014/04/24 12:46:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.27 2015/04/07 14:37:10 jlec Exp $
 
 *gabedit-2.4.8 (24 Apr 2014)
 
   24 Apr 2014; Justin Lecher <jlec@gentoo.org> +gabedit-2.4.8.ebuild:
-  Version BUmp, #508388
+  Version Bump, #508388
 
   18 Sep 2013; Justin Lecher <jlec@gentoo.org> -gabedit-2.3.6.ebuild,
   -gabedit-2.4.0.ebuild, -gabedit-2.4.2.ebuild, -gabedit-2.4.3.ebuild,
@@ -24,7 +24,7 @@
 *gabedit-2.4.7 (19 Aug 2013)
 
   19 Aug 2013; Justin Lecher <jlec@gentoo.org> +gabedit-2.4.7.ebuild:
-  Version BUmp, #481626
+  Version Bump, #481626
 
 *gabedit-2.4.6 (09 Apr 2013)
 
@@ -82,7 +82,7 @@
 
   20 Jun 2011; Justin Lecher <jlec@gentoo.org> gabedit-2.3.6.ebuild,
   gabedit-2.3.7.ebuild, +gabedit-2.3.8.ebuild:
-  Version BUmp
+  Version Bump
 
   31 May 2011; Markus Meier <maekke@gentoo.org> gabedit-2.3.6.ebuild:
   x86 stable, bug #366717

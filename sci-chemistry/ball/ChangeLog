@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/ball
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.14 2014/03/26 13:27:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.15 2015/04/07 14:36:20 jlec Exp $
 
   26 Mar 2014; Justin Lecher <jlec@gentoo.org> -ball-1.4.1-r1.ebuild,
   -files/ball-1.4.1-Added-MAX_PENALTY-option-to-bond-order-assignment.patch,
@@ -19,7 +19,7 @@
   +files/ball-1.4.2-Fix-compilation-of-sipModularWidget.patch,
   +files/ball-1.4.2-PDBFile-Fix-compilation-with-gcc-4.8.patch,
   +files/ball-1.4.2-QT4_EXTRACT_OPTIONS-CMake-macro-changed-in-CMake-2.8.patch:
-  Version BUmp
+  Version Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> ball-1.4.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

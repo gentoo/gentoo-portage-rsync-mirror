@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/cminpack
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cminpack/ChangeLog,v 1.10 2014/06/09 02:43:41 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cminpack/ChangeLog,v 1.11 2015/04/07 14:41:19 jlec Exp $
 
 *cminpack-1.3.4 (09 Jun 2014)
 
@@ -34,7 +34,7 @@
   20 Jun 2012; Justin Lecher <jlec@gentoo.org> cminpack-1.2.2.ebuild,
   +files/cminpack-1.2.2-underlinking.patch, +cminpack-1.3.0.ebuild,
   metadata.xml:
-  Version BUmp, add underlinking fix, which fixes test failures, #422693
+  Version Bump, add underlinking fix, which fixes test failures, #422693
 
 *cminpack-1.2.2 (29 May 2012)
 

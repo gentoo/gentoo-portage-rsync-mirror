@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/xds-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.17 2015/03/03 07:48:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xds-bin/ChangeLog,v 1.18 2015/04/07 14:40:02 jlec Exp $
 
 *xds-bin-20150301 (03 Mar 2015)
 
@@ -30,13 +30,13 @@
 
   28 Nov 2013; Justin Lecher <jlec@gentoo.org> -xds-bin-20130530.ebuild,
   +xds-bin-20131111.ebuild:
-  Version BUmp
+  Version Bump
 
 *xds-bin-20130530 (30 May 2013)
 
   30 May 2013; Justin Lecher <jlec@gentoo.org> -xds-bin-20120926.ebuild,
   +xds-bin-20130530.ebuild:
-  Version BUmp
+  Version Bump
 
 *xds-bin-20120926 (24 Mar 2013)
 
@@ -58,7 +58,7 @@
 
   20 Dec 2011; Justin Lecher <jlec@gentoo.org> -xds-bin-20110610.ebuild,
   +xds-bin-20111220.ebuild:
-  Version BUmp
+  Version Bump
 
 *xds-bin-20110610 (10 Jun 2011)
 

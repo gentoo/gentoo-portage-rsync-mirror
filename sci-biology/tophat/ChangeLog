@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/tophat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/ChangeLog,v 1.13 2014/10/17 08:07:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/ChangeLog,v 1.14 2015/04/07 14:35:24 jlec Exp $
 
   17 Oct 2014; Sergey Popov <pinkbyte@gentoo.org> tophat-1.0.12.ebuild:
   Non-maintainer commit: fix building, approved by Justin Lecher
@@ -25,7 +25,7 @@
 
   19 Jul 2012; Justin Lecher <jlec@gentoo.org> tophat-2.0.0.ebuild,
   +tophat-2.0.2.ebuild, +files/tophat-2.0.2-flags.patch, metadata.xml:
-  Version BUmp; do parallel builds; handle debug build
+  Version Bump; do parallel builds; handle debug build
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> tophat-1.0.12.ebuild,
   tophat-1.4.1.ebuild, tophat-2.0.0.ebuild:

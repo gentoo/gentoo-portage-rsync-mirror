@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/pycifrw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pycifrw/ChangeLog,v 1.6 2015/02/22 12:03:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pycifrw/ChangeLog,v 1.7 2015/04/07 14:43:00 jlec Exp $
 
 *pycifrw-4.1.1 (22 Feb 2015)
 
@@ -12,7 +12,7 @@
 
   06 Jul 2014; Justin Lecher <jlec@gentoo.org> pycifrw-3.3-r1.ebuild,
   +pycifrw-3.6.2.ebuild, metadata.xml:
-  Add missing dep on setuptools, #514782; Version BUmp
+  Add missing dep on setuptools, #514782; Version Bump
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycifrw-3.3-r1.ebuild:
   Restricting pypy and jython

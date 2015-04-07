@@ -1,6 +1,6 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.404 2015/03/28 21:59:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.405 2015/04/07 14:47:37 jlec Exp $
 
 *nginx-1.7.11 (28 Mar 2015)
 
@@ -16,7 +16,7 @@
   10 Mar 2015; Justin Lecher <jlec@gentoo.org> +files/AJP-nginx-1.7.9+.patch,
   +nginx-1.7.10.ebuild, metadata.xml, nginx-1.7.6.ebuild, nginx-1.7.7.ebuild,
   nginx-1.7.8.ebuild:
-  Version BUmp, #531542; fix for musl, #533570; drop suspecious einstall,
+  Version Bump, #531542; fix for musl, #533570; drop suspecious einstall,
   #521662; fix SLOT operators
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> nginx-1.7.8.ebuild:

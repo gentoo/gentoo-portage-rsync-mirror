@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/mmtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.14 2014/12/28 19:05:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.15 2015/04/07 14:42:45 jlec Exp $
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> mmtk-2.7.9.ebuild:
   Drop PYTHON_MODNAME, bug 553838.
@@ -19,7 +19,7 @@
 
   04 Nov 2012; Justin Lecher <jlec@gentoo.org> mmtk-2.7.3.ebuild,
   +mmtk-2.7.5.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   28 Feb 2012; Patrick Lauer <patrick@gentoo.org> mmtk-2.7.3.ebuild:
   Restricting pypy and jython

@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/seqan
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/ChangeLog,v 1.9 2015/02/24 16:47:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seqan/ChangeLog,v 1.10 2015/04/07 14:35:17 jlec Exp $
 
 *seqan-2.0.0 (24 Feb 2015)
 
@@ -21,7 +21,7 @@
 
   17 Oct 2014; Justin Lecher <jlec@gentoo.org> +seqan-1.4.2.ebuild,
   +files/seqan-1.4.2-include.patch, +files/seqan-1.4.2-shared.patch:
-  Version BUmp
+  Version Bump
 
   17 Jul 2013; Justin Lecher <jlec@gentoo.org> seqan-1.3.1-r1.ebuild:
   Add missing dep

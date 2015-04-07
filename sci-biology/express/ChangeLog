@@ -1,12 +1,12 @@
 # ChangeLog for sci-biology/express
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/express/ChangeLog,v 1.6 2014/10/13 07:56:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/express/ChangeLog,v 1.7 2015/04/07 14:32:44 jlec Exp $
 
 *express-1.5.1 (13 Oct 2014)
 
   13 Oct 2014; Justin Lecher <jlec@gentoo.org> +express-1.5.1.ebuild,
   +files/express-1.5.1-buildsystem.patch:
-  Version BUmp; thanks Michael Schubert for the initial patch, #525188
+  Version Bump; thanks Michael Schubert for the initial patch, #525188
 
 *express-0.9.5-r1 (05 Feb 2014)
 

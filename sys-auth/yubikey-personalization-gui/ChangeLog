@@ -1,6 +1,6 @@
 # ChangeLog for sys-auth/yubikey-personalization-gui
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/yubikey-personalization-gui/ChangeLog,v 1.5 2014/12/26 13:34:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/yubikey-personalization-gui/ChangeLog,v 1.6 2015/04/07 14:46:30 jlec Exp $
 
 *yubikey-personalization-gui-3.1.18 (26 Dec 2014)
 
@@ -12,7 +12,7 @@
 
   06 Oct 2014; Justin Lecher <jlec@gentoo.org>
   +yubikey-personalization-gui-3.1.16.ebuild:
-  Version BUmp
+  Version Bump
 
 *yubikey-personalization-gui-3.1.14 (30 Mar 2014)
 

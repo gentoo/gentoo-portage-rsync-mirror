@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.123 2015/03/07 16:15:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.124 2015/04/07 14:43:35 jlec Exp $
 
   07 Mar 2015; Justin Lecher <jlec@gentoo.org>
   +files/scipy-0.14.0-cython-0.22-backport.patch, scipy-0.14.0-r1.ebuild:
@@ -19,7 +19,7 @@
 *scipy-0.15.0 (19 Feb 2015)
 
   19 Feb 2015; Justin Lecher <jlec@gentoo.org> +scipy-0.15.0.ebuild:
-  Version BUmp; fixes problems with newer cython, #540314
+  Version Bump; fixes problems with newer cython, #540314
 
   16 Feb 2015; Pacho Ramos <pacho@gentoo.org> scipy-0.14.0-r1.ebuild:
   amd64/ppc/ppc64/x86 stable, bug #530708

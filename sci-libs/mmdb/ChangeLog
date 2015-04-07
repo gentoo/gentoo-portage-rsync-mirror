@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/mmdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.30 2014/11/12 20:13:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.31 2015/04/07 14:42:35 jlec Exp $
 
 *mmdb-1.25.5-r1 (12 Nov 2014)
 
@@ -13,7 +13,7 @@
 
   23 Sep 2014; Justin Lecher <jlec@gentoo.org> +mmdb-1.25.5.ebuild,
   +mmdb-2.0.1.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   06 Dec 2012; Justin Lecher <jlec@gentoo.org> -files/1.21-allignment.patch,
   -files/1.23.2.2-pkg-config.patch, -files/1.23.2-allignment.patch,

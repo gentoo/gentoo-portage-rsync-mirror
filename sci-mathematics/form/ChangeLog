@@ -1,6 +1,6 @@
 # ChangeLog for sci-mathematics/form
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/ChangeLog,v 1.6 2014/03/30 09:03:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/form/ChangeLog,v 1.7 2015/04/07 14:44:05 jlec Exp $
 
   30 Mar 2014; Andrey Grozin <grozin@gentoo.org> -form-4.0_p20120529.ebuild:
   Cleaning old
@@ -8,7 +8,7 @@
 *form-4.1 (05 Nov 2013)
 
   05 Nov 2013; Justin Lecher <jlec@gentoo.org> +form-4.1.ebuild, metadata.xml:
-  Version BUmp, #490390
+  Version Bump, #490390
 
   01 Jun 2012; Thomas Kahle <tomka@gentoo.org> form-4.0_p20120529.ebuild:
   keyworded ~amd64 after request on sci-ml

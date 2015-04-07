@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/scikits_image
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.20 2015/01/18 11:30:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.21 2015/04/07 14:43:08 jlec Exp $
 
   18 Jan 2015; Justin Lecher <jlec@gentoo.org> scikits_image-0.10.1.ebuild:
   Add missing dep, #536880
@@ -56,7 +56,7 @@
 
   08 Feb 2013; Justin Lecher <jlec@gentoo.org> +scikits_image-0.7.2-r2.ebuild,
   metadata.xml:
-  Version BUmp; move to new python eclasses
+  Version Bump; move to new python eclasses
 
   03 Jan 2013; Sébastien Fabbro <bicatali@gentoo.org>
   scikits_image-0.7.2-r1.ebuild:

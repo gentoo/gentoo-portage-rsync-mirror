@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.149 2015/04/03 17:25:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.150 2015/04/07 14:34:52 jlec Exp $
 
 *rebase-1504 (03 Apr 2015)
 
@@ -47,7 +47,7 @@
   04 Jan 2015; Justin Lecher <jlec@gentoo.org> -rebase-1403.ebuild,
   -rebase-1406.ebuild, -rebase-1408.ebuild, -rebase-1409.ebuild,
   -rebase-1410.ebuild, +rebase-1501.ebuild:
-  Version BUmp; Drop old
+  Version Bump; Drop old
 
   31 Dec 2014; Agostino Sarubbo <ago@gentoo.org> rebase-1411.ebuild:
   Stable for ppc, wrt bug #531422
@@ -80,7 +80,7 @@
 *rebase-1410 (30 Sep 2014)
 
   30 Sep 2014; Justin Lecher <jlec@gentoo.org> +rebase-1410.ebuild:
-  Version BUmp
+  Version Bump
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> -rebase-1111.ebuild:
   Drop ebuild with deprecated EAPI
@@ -108,14 +108,14 @@
 
   04 Jun 2014; Justin Lecher <jlec@gentoo.org> -rebase-1404.ebuild,
   +rebase-1406.ebuild:
-  Version BUmp, fixes broken snapshot, #512286
+  Version Bump, fixes broken snapshot, #512286
 
 *rebase-1404 (02 Jun 2014)
 
   02 Jun 2014; Justin Lecher <jlec@gentoo.org> -rebase-1202.ebuild,
   -rebase-1303.ebuild, -rebase-1310.ebuild, -rebase-1311.ebuild,
   -rebase-1312.ebuild, +rebase-1404.ebuild:
-  Version BUmp; clean old
+  Version Bump; clean old
 
 *rebase-1403 (06 Mar 2014)
 
@@ -133,7 +133,7 @@
 *rebase-1311 (02 Nov 2013)
 
   02 Nov 2013; Justin Lecher <jlec@gentoo.org> +rebase-1311.ebuild:
-  Version BUmp
+  Version Bump
 
 *rebase-1310 (08 Oct 2013)
 

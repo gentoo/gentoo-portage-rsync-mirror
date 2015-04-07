@@ -1,6 +1,6 @@
 # ChangeLog for sci-visualization/quickplot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.23 2015/02/05 08:42:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/quickplot/ChangeLog,v 1.24 2015/04/07 14:45:07 jlec Exp $
 
 *quickplot-0.10.8 (05 Feb 2015)
 
@@ -21,13 +21,13 @@
 *quickplot-0.10.6 (27 Nov 2013)
 
   27 Nov 2013; Justin Lecher <jlec@gentoo.org> +quickplot-0.10.6.ebuild:
-  Verion BUmp
+  Verion Bump
 
 *quickplot-0.10.4 (12 Mar 2013)
 
   12 Mar 2013; Justin Lecher <jlec@gentoo.org> +quickplot-0.10.4.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   quickplot-0.10.3.ebuild:
@@ -50,7 +50,7 @@
 
   29 Jan 2012; Justin Lecher <jlec@gentoo.org> quickplot-0.8.13-r1.ebuild,
   quickplot-0.8.15.ebuild, +quickplot-0.10.2.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #70723

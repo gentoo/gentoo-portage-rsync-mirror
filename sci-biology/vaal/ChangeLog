@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/vaal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.17 2015/03/24 20:21:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.18 2015/04/07 14:35:35 jlec Exp $
 
   24 Mar 2015; Justin Lecher <jlec@gentoo.org> -vaal-1.6.ebuild:
   Drop old
@@ -20,7 +20,7 @@
 *vaal-46233 (02 Jun 2013)
 
   02 Jun 2013; Justin Lecher <jlec@gentoo.org> +vaal-46233.ebuild:
-  Version BUmp
+  Version Bump
 
   12 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
@@ -29,7 +29,7 @@
 
   20 Feb 2013; Justin Lecher <jlec@gentoo.org> +vaal-45166.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *vaal-42179 (25 Jun 2012)
 

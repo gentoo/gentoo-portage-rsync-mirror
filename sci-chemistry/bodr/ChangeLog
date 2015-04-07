@@ -1,12 +1,12 @@
 # ChangeLog for sci-chemistry/bodr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.10 2014/01/06 09:55:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.11 2015/04/07 14:36:32 jlec Exp $
 
 *bodr-10 (06 Jan 2014)
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> bodr-9-r1.ebuild,
   +bodr-10.ebuild:
-  Version BUmp; punt base.eclass
+  Version Bump; punt base.eclass
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #70723

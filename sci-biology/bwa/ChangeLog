@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/bwa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/ChangeLog,v 1.15 2015/03/03 15:17:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/ChangeLog,v 1.16 2015/04/07 14:32:24 jlec Exp $
 
   03 Mar 2015; Justin Lecher <jlec@gentoo.org> -bwa-0.5.0-r1.ebuild,
   -bwa-0.5.9.ebuild, -bwa-0.6.1.ebuild:
@@ -10,7 +10,7 @@
 
   03 Mar 2015; Justin Lecher <jlec@gentoo.org> +bwa-0.7.12.ebuild,
   +files/bwa-0.7.12-Makefile.patch:
-  Version BUmp; thanks Ted Tanberry
+  Version Bump; thanks Ted Tanberry
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
@@ -29,7 +29,7 @@
 *bwa-0.5.9 (01 May 2011)
 
   01 May 2011; Justin Lecher <jlec@gentoo.org> +bwa-0.5.9.ebuild:
-  Version BUmp, #354925
+  Version Bump, #354925
 
 *bwa-0.5.8a (09 Oct 2010)
 

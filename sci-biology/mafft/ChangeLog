@@ -1,12 +1,12 @@
 # ChangeLog for sci-biology/mafft
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.21 2015/03/29 14:48:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.22 2015/04/07 14:33:17 jlec Exp $
 
 *mafft-7.215 (29 Mar 2015)
 
   29 Mar 2015; Justin Lecher <jlec@gentoo.org> +mafft-7.215.ebuild,
   -files/mafft-6.240-mktemp.patch:
-  Version BUmp; drop obsolete patch
+  Version Bump; drop obsolete patch
 
   19 Jul 2013; Justin Lecher <jlec@gentoo.org> mafft-7.050.ebuild:
   Keyword for ~-linux
@@ -50,7 +50,7 @@
 
   21 May 2013; Justin Lecher <jlec@gentoo.org> mafft-7.037.ebuild,
   +mafft-7.040.ebuild:
-  Version BUmp, drop unnecessary die
+  Version Bump, drop unnecessary die
 
   29 Apr 2013; Justin Lecher <jlec@gentoo.org> mafft-7.037.ebuild:
   Fix USE=threads make flag magic
@@ -72,7 +72,7 @@
 
   15 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/6.811-respect.patch,
   +mafft-6.811.ebuild:
-  Version BUmp, keyworded for prefix, repecting multilib and LDFLAGS
+  Version Bump, keyworded for prefix, repecting multilib and LDFLAGS
 
 *mafft-6.707 (27 Jul 2009)
 

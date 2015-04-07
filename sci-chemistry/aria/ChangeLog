@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.24 2014/04/26 15:39:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.25 2015/04/07 14:36:13 jlec Exp $
 
   26 Apr 2014; Justin Lecher <jlec@gentoo.org> -aria-2.3.2-r3.ebuild:
   Drop old, #508740
@@ -15,7 +15,7 @@
 *aria-2.3.2_p20130826 (09 Oct 2013)
 
   09 Oct 2013; Justin Lecher <jlec@gentoo.org> +aria-2.3.2_p20130826.ebuild:
-  Version BUmp
+  Version Bump
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry

@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/xia2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.15 2013/06/19 04:32:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.16 2015/04/07 14:40:13 jlec Exp $
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   sci-chemistry only
@@ -41,7 +41,7 @@
   25 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/0.3.3.1-fix-syntax.patch,
   xia2-0.3.1.0.ebuild, xia2-0.3.1.6.ebuild, xia2-0.3.1.7.ebuild,
   +xia2-0.3.3.1.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> xia2-0.3.1.7.ebuild:
   marked ~ppc wrt #303931

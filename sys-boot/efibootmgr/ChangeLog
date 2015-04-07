@@ -1,6 +1,6 @@
 # ChangeLog for sys-boot/efibootmgr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.34 2015/02/28 13:25:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/ChangeLog,v 1.35 2015/04/07 14:46:38 jlec Exp $
 
   28 Feb 2015; Agostino Sarubbo <ago@gentoo.org> efibootmgr-0.11.0.ebuild:
   Stable for ia64, wrt bug #537620
@@ -27,7 +27,7 @@
 
   06 Nov 2013; Justin Lecher <jlec@gentoo.org> +efibootmgr-0.6.0.ebuild,
   metadata.xml:
-  Version BUmp, #486062
+  Version Bump, #486062
 
   30 Oct 2013; Mike Gilbert <floppym@gentoo.org> efibootmgr-0.5.4-r1.ebuild,
   efibootmgr-0.5.4.ebuild, metadata.xml:

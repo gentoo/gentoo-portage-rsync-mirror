@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.63 2015/04/03 13:00:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.64 2015/04/07 14:40:50 jlec Exp $
 
 *arpack-3.1.5 (03 Apr 2015)
 
@@ -45,7 +45,7 @@
 *arpack-3.1.3 (13 Oct 2013)
 
   13 Oct 2013; Justin Lecher <jlec@gentoo.org> +arpack-3.1.3.ebuild:
-  Version BUmp
+  Version Bump
 
   18 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   arpack-3.1.2-r1.ebuild:
@@ -108,7 +108,7 @@
 *arpack-3.1.1 (30 May 2012)
 
   30 May 2012; Justin Lecher <jlec@gentoo.org> +arpack-3.1.1.ebuild:
-  Version BUmp
+  Version Bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> arpack-3.0.2.ebuild,
   arpack-96-r2.ebuild, arpack-96-r3.ebuild:

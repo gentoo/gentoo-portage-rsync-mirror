@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.131 2015/03/20 15:19:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.132 2015/04/07 14:43:51 jlec Exp $
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> vtk-6.0.0.ebuild,
   vtk-6.1.0-r1.ebuild, vtk-6.1.0.ebuild:
@@ -54,7 +54,7 @@
   +files/vtk-6.1.0-freetype.patch, +files/vtk-6.1.0-glext.patch,
   +files/vtk-6.1.0-install.patch, +files/vtk-6.1.0-netcdf.patch,
   +files/vtk-6.1.0-system.patch, +files/vtk-6.1.0-web.patch, metadata.xml:
-  Version BUmp, #500814; fixes GLintptr declaration problems, #523786; Add slot
+  Version Bump, #500814; fixes GLintptr declaration problems, #523786; Add slot
   operators to dependencies, #531040; drop old which obsoletes, #477638,
   #497224, #520310
 

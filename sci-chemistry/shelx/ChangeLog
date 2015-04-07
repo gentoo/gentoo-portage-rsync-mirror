@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/shelx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.27 2015/03/05 19:40:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/ChangeLog,v 1.28 2015/04/07 14:39:24 jlec Exp $
 
   05 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop unused local USE
@@ -18,7 +18,7 @@
 *shelx-20140326 (19 May 2014)
 
   19 May 2014; Justin Lecher <jlec@gentoo.org> +shelx-20140326.ebuild:
-  Version BUmp
+  Version Bump
 
 *shelx-20060317-r2 (19 May 2014)
 

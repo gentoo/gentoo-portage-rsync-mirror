@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.149 2015/04/01 08:20:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.150 2015/04/07 14:46:18 jlec Exp $
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> lm_sensors-3.3.4-r1.ebuild:
   Stable for sparc, wrt bug #544014
@@ -52,7 +52,7 @@
 
   25 Jul 2013; Justin Lecher <jlec@gentoo.org> +lm_sensors-3.3.4.ebuild,
   +files/lm_sensors-3.3.4-sensors-detect-gentoo.patch, metadata.xml:
-  Version BUmp, #474490
+  Version Bump, #474490
 
   13 Jul 2013; Pacho Ramos <pacho@gentoo.org> +files/fancontrol.service,
   +files/sensord.service, lm_sensors-3.3.3-r2.ebuild:

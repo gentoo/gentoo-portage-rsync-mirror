@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.125 2015/04/07 06:25:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.126 2015/04/07 14:46:46 jlec Exp $
 
 *aufs3-3_p20150406 (07 Apr 2015)
 
@@ -64,7 +64,7 @@
 *aufs3-3_p20141208 (08 Dec 2014)
 
   08 Dec 2014; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20141208.ebuild:
-  Version BUmp
+  Version Bump
 
 *aufs3-3_p20141110 (17 Nov 2014)
 
@@ -279,7 +279,7 @@
 *aufs3-3_p20131014 (14 Oct 2013)
 
   14 Oct 2013; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20131014.ebuild:
-  Version BUmp
+  Version Bump
 
   13 Oct 2013; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20130506.ebuild,
   -aufs3-3_p20130519.ebuild, -aufs3-3_p20130708.ebuild,
@@ -414,7 +414,7 @@
 *aufs3-3_p20130325 (30 Mar 2013)
 
   30 Mar 2013; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20130325.ebuild:
-  Version BUmp
+  Version Bump
 
   21 Mar 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20130318.ebuild:
   Fix kernel patching, thanks likewhoa for the patch
@@ -432,7 +432,7 @@
 *aufs3-3_p20130207 (07 Feb 2013)
 
   07 Feb 2013; Justin Lecher <jlec@gentoo.org> +aufs3-3_p20130207.ebuild:
-  Version BUmp
+  Version Bump
 
   31 Jan 2013; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120813-r1.ebuild:
   Drop old
@@ -535,7 +535,7 @@
   +files/3_p20121210/aufs3-standalone-5.patch,
   +files/3_p20121210/aufs3-base-6.patch,
   +files/3_p20121210/aufs3-standalone-6.patch:
-  Version BUmp
+  Version Bump
 
   05 Dec 2012; Justin Lecher <jlec@gentoo.org> aufs3-3_p20121129.ebuild:
   Check for PAX when using USE=pax_kernel, #445272
@@ -565,7 +565,7 @@
   +files/3_p20121129/aufs3-standalone-5.patch,
   +files/3_p20121129/aufs3-base-6.patch,
   +files/3_p20121129/aufs3-standalone-6.patch:
-  Version BUmp
+  Version Bump
 
   26 Nov 2012; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20120109.ebuild,
   aufs3-3_p20120430.ebuild, -aufs3-3_p20120523.ebuild,
@@ -656,7 +656,7 @@
 
   19 Jun 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
   files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120619.ebuild:
-  Version BUmp
+  Version Bump
 
 *aufs3-3_p20120531 (31 May 2012)
 
@@ -712,7 +712,7 @@
 
   02 Apr 2012; Justin Lecher <jlec@gentoo.org> files/aufs3-base-x-rcN.patch,
   files/aufs3-standalone-x-rcN.patch, +aufs3-3_p20120402.ebuild:
-  Version BUmp
+  Version Bump
 
 *aufs3-3_p20120329 (29 Mar 2012)
 

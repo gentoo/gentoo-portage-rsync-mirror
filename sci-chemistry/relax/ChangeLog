@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/relax
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.36 2015/04/04 14:11:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.37 2015/04/07 14:39:15 jlec Exp $
 
 *relax-3.3.8 (04 Apr 2015)
 
@@ -11,7 +11,7 @@
 
   15 Mar 2015; Justin Lecher <jlec@gentoo.org> +relax-3.3.7.ebuild,
   relax-3.3.6.ebuild:
-  Version BUmp
+  Version Bump
 
   07 Feb 2015; Justin Lecher <jlec@gentoo.org> -files/relax-2.1.0-gentoo.patch,
   -files/relax-2.2.1-gentoo.patch, -files/relax-3.0.1-gentoo.patch,
@@ -32,7 +32,7 @@
   -relax-3.2.2.ebuild, -relax-3.2.3.ebuild, -relax-3.3.0.ebuild,
   -relax-3.3.1.ebuild, -relax-3.3.2.ebuild, -relax-3.3.3.ebuild,
   +relax-3.3.6.ebuild, -relax-9999.ebuild:
-  Version BUmp; drop old
+  Version Bump; drop old
 
 *relax-3.3.5 (29 Jan 2015)
 
@@ -42,7 +42,7 @@
 *relax-3.3.4 (05 Dec 2014)
 
   05 Dec 2014; Justin Lecher <jlec@gentoo.org> +relax-3.3.4.ebuild:
-  Version BUmp
+  Version Bump
 
 *relax-3.3.3 (25 Nov 2014)
 
@@ -57,7 +57,7 @@
 *relax-3.3.1 (10 Oct 2014)
 
   10 Oct 2014; Justin Lecher <jlec@gentoo.org> +relax-3.3.1.ebuild:
-  Version BUmp
+  Version Bump
 
 *relax-3.3.0 (15 Sep 2014)
 
@@ -83,7 +83,7 @@
 *relax-3.2.0 (22 May 2014)
 
   22 May 2014; Justin Lecher <jlec@gentoo.org> +relax-3.2.0.ebuild:
-  Version BUmp
+  Version Bump
 
 *relax-3.1.7-r1 (15 May 2014)
 
@@ -94,7 +94,7 @@
 *relax-3.1.7 (18 Mar 2014)
 
   18 Mar 2014; Justin Lecher <jlec@gentoo.org> +relax-3.1.7.ebuild:
-  Version BUmp
+  Version Bump
 
 *relax-3.1.6 (06 Mar 2014)
 
@@ -150,7 +150,7 @@
 
   29 Nov 2013; Justin Lecher <jlec@gentoo.org> +relax-3.1.0.ebuild,
   +files/relax-3.1.0-sample-script.patch:
-  Version BUmp
+  Version Bump
 
 *relax-3.0.2-r2 (27 Nov 2013)
 
@@ -197,7 +197,7 @@
 
   04 Feb 2013; Justin Lecher <jlec@gentoo.org> +relax-2.2.1.ebuild,
   +files/relax-2.2.1-gentoo.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
 *relax-2.1.0 (19 Jul 2012)
 

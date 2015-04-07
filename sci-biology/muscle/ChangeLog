@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/muscle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.16 2015/03/29 14:51:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/muscle/ChangeLog,v 1.17 2015/04/07 14:33:46 jlec Exp $
 
   29 Mar 2015; Justin Lecher <jlec@gentoo.org> -muscle-3.6.ebuild,
   -muscle-3.7.ebuild, metadata.xml, muscle-3.8.31.ebuild:
@@ -28,7 +28,7 @@
 
   24 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/3.8.31-make.patch,
   muscle-3.6.ebuild, muscle-3.7.ebuild, +muscle-3.8.31.ebuild:
-  Version BUmp, blocking sci-libs/libmuscle, #308707
+  Version Bump, blocking sci-libs/libmuscle, #308707
 
 *muscle-3.7 (21 Mar 2008)
 

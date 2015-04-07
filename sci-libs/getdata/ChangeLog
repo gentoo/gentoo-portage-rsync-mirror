@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/getdata
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.14 2014/09/14 16:05:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.15 2015/04/07 14:41:31 jlec Exp $
 
 *getdata-0.8.5 (14 Sep 2014)
 
@@ -30,7 +30,7 @@
 *getdata-0.8.0 (17 Jul 2012)
 
   17 Jul 2012; Justin Lecher <jlec@gentoo.org> +getdata-0.8.0.ebuild:
-  Version BUmp
+  Version Bump
 
   19 Sep 2011; Justin Lecher <jlec@gentoo.org> getdata-0.6.3-r1.ebuild,
   getdata-0.7.3.ebuild:

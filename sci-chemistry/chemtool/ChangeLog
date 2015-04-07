@@ -1,6 +1,6 @@
 # ChangeLog for sci-chemistry/chemtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.39 2014/03/27 07:12:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.40 2015/04/07 14:36:49 jlec Exp $
 
   27 Mar 2014; Justin Lecher <jlec@gentoo.org> -chemtool-1.6.12.ebuild,
   -chemtool-1.6.12-r1.ebuild, -files/1.6.12-no-underlinking.patch,
@@ -19,7 +19,7 @@
 *chemtool-1.6.14 (11 Feb 2014)
 
   11 Feb 2014; Justin Lecher <jlec@gentoo.org> +chemtool-1.6.14.ebuild:
-  Version BUmp, #501004
+  Version Bump, #501004
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> chemtool-1.6.13.ebuild:
   Whitespace

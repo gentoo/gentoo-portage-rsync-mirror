@@ -1,6 +1,6 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.84 2015/03/29 09:35:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.85 2015/04/07 14:32:18 jlec Exp $
 
   29 Mar 2015; Justin Lecher <jlec@gentoo.org> -biopython-1.57.ebuild,
   -biopython-1.64.ebuild, -files/SffIO_broken_padding.patch,
@@ -50,7 +50,7 @@
 *biopython-1.63 (30 Jan 2014)
 
   30 Jan 2014; Justin Lecher <jlec@gentoo.org> +biopython-1.63.ebuild:
-  Version BUmp
+  Version Bump
 
 *biopython-1.62-r1 (29 Dec 2013)
 

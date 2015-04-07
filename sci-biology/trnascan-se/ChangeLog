@@ -1,13 +1,13 @@
 # ChangeLog for sci-biology/trnascan-se
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.14 2015/01/08 07:42:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.15 2015/04/07 14:35:30 jlec Exp $
 
 *trnascan-se-1.31 (08 Jan 2015)
 
   08 Jan 2015; Justin Lecher <jlec@gentoo.org> -trnascan-se-1.23-r1.ebuild,
   +trnascan-se-1.31.ebuild, +files/trnascan-se-1.31-ldflags.patch,
   metadata.xml:
-  Version BUmp, #532460
+  Version Bump, #532460
 
   16 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   trnascan-se-1.23-r2.ebuild:

@@ -1,12 +1,12 @@
 # ChangeLog for sci-biology/primer3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.41 2015/03/29 09:25:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.42 2015/04/07 14:34:30 jlec Exp $
 
 *primer3-2.3.6 (29 Mar 2015)
 
   29 Mar 2015; Justin Lecher <jlec@gentoo.org> +primer3-2.3.6.ebuild,
   -primer3-2.3.4.ebuild:
-  Version BUmp; drop old
+  Version Bump; drop old
 
 *primer3-2.3.5 (14 Feb 2013)
 
@@ -44,7 +44,7 @@
 
   19 Jul 2012; Justin Lecher <jlec@gentoo.org> primer3-2.3.0.ebuild,
   +primer3-2.3.1.ebuild:
-  Version BUmp
+  Version Bump
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> primer3-2.3.0.ebuild:
   Marking primer3-2.3.0 ppc for bug 402053
