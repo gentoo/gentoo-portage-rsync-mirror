@@ -1,4 +1,5 @@
 /var/log/clamav/clamd.log {
+	su clamav clamav
 	missingok
 	postrotate
 		/etc/init.d/clamd logfix
@@ -7,6 +8,7 @@
 }
 
 /var/log/clamav/freshclam.log {
+	su clamav clamav
 	missingok
 	postrotate
 		/etc/init.d/clamd logfix

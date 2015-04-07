@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/automoc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/ChangeLog,v 1.10 2015/04/04 15:36:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/automoc/ChangeLog,v 1.11 2015/04/07 04:47:27 jer Exp $
+
+  07 Apr 2015; Jeroen Roovers <jer@gentoo.org> automoc-0.9.88-r1.ebuild:
+  Stable for HPPA (bug #545522).
 
   04 Apr 2015; Michael Palimaka <kensington@gentoo.org>
   automoc-0.9.88-r1.ebuild:
