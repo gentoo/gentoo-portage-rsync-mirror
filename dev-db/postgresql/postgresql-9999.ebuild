@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9999.ebuild,v 1.8 2015/03/31 19:06:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9999.ebuild,v 1.9 2015/04/07 02:07:32 patrick Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.postgresql.org/"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr
 		 zh_CN zh_TW"
-IUSE="doc kerberos kernel_linux ldap nls pam perl -pg_legacytimestamp python
+IUSE="kerberos kernel_linux ldap nls pam perl -pg_legacytimestamp python
 	  +readline selinux +server ssl static-libs tcl threads uuid xml zlib"
 
 for lingua in ${LINGUAS}; do
@@ -152,7 +152,7 @@ src_compile() {
 
 	# If use doc, generate all documentation, otherwise just the
 	# man pages
-	use doc && emake -C doc || emake -C doc man
+	#use doc && emake -C doc || emake -C doc man
 }
 
 src_install() {
@@ -162,15 +162,15 @@ src_install() {
 	dodoc README HISTORY doc/{TODO,bug.template}
 
 	# We use ${SLOT} instead of doman for postgresql.eselect
-	insinto /usr/share/postgresql-${SLOT}/man/
-	doins -r doc/src/sgml/man{1,3,7}
-	if ! use server; then
-		# Remove man pages for non-existent binaries
-		for m in {initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}; do
-			rm "${ED}/usr/share/postgresql-${SLOT}/man/man1/${m}.1"
-		done
-	fi
-	docompress /usr/share/postgresql-${SLOT}/man/man{1,3,7}
+	#insinto /usr/share/postgresql-${SLOT}/man/
+	#doins -r doc/src/sgml/man{1,3,7}
+	#if ! use server; then
+	#	# Remove man pages for non-existent binaries
+	#	for m in {initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}; do
+	#		rm "${ED}/usr/share/postgresql-${SLOT}/man/man1/${m}.1"
+	#	done
+	#fi
+	#docompress /usr/share/postgresql-${SLOT}/man/man{1,3,7}
 
 	insinto /etc/postgresql-${SLOT}
 	newins src/bin/psql/psqlrc.sample psqlrc
@@ -181,13 +181,13 @@ src_install() {
 
 	use static-libs || find "${ED}" -name '*.a' -delete
 
-	if use doc ; then
-		docinto html
-		dodoc doc/src/sgml/html/*
+	#if use doc ; then
+	#	docinto html
+	#	dodoc doc/src/sgml/html/*
 
-		docinto sgml
-		dodoc doc/src/sgml/*.{sgml,dsl}
-	fi
+	#	docinto sgml
+	#	dodoc doc/src/sgml/*.{sgml,dsl}
+	#fi
 
 	if use server; then
 		sed -e "s|@SLOT@|${SLOT}|g" -e "s|@LIBDIR@|$(get_libdir)|g" \
