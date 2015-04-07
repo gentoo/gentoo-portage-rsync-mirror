@@ -6,7 +6,7 @@
 
   29 Mar 2015; Justin Lecher <jlec@gentoo.org> +phylip-3.696.ebuild,
   phylip-3.67.ebuild, phylip-3.69-r1.ebuild, phylip-3.69.ebuild:
-  Version BUmp
+  Version Bump
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly

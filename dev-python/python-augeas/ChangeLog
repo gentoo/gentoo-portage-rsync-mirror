@@ -33,7 +33,7 @@
 
   17 Dec 2013; Justin Lecher <jlec@gentoo.org> +python-augeas-0.4.1.ebuild,
   metadata.xml:
-  Version BUmp; bump to new distutils-r1.eclass
+  Version Bump; bump to new distutils-r1.eclass
 
   03 Feb 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   taking maintership

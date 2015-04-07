@@ -189,7 +189,7 @@
 
   16 Nov 2010; Justin Lecher <jlec@gentoo.org>
   +files/5.6.0092-allow-dynamic-linking.patch, +refmac-5.6.0092.ebuild:
-  Version BUmp
+  Version Bump
 
 *refmac-5.6.0091 (06 Nov 2010)
 

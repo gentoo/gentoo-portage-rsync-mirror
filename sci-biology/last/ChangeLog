@@ -23,7 +23,7 @@
 *last-230 (20 Jun 2012)
 
   20 Jun 2012; Justin Lecher <jlec@gentoo.org> +last-230.ebuild:
-  Version BUmp, allows to compile with gcc-4.7, #422573
+  Version Bump, allows to compile with gcc-4.7, #422573
 
 *last-192 (10 Feb 2012)
 

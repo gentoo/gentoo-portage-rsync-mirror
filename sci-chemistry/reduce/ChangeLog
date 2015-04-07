@@ -6,7 +6,7 @@
 
   07 Dec 2012; Justin Lecher <jlec@gentoo.org> +reduce-3.16.111118.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   28 May 2011; Brent Baude <ranger@gentoo.org> reduce-3.13.080428-r1.ebuild:
   Marking reduce-3.13.080428-r1 ppc for bug 325999

@@ -13,7 +13,7 @@
 
   12 Mar 2013; Justin Lecher <jlec@gentoo.org> +oww-0.86.2.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> oww-0.82.1.ebuild,
   oww-0.83.2.ebuild:

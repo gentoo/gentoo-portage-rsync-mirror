@@ -24,7 +24,7 @@
 
   19 Jul 2012; Justin Lecher <jlec@gentoo.org> +vcftools-0.1.8.ebuild,
   +files/vcftools-0.1.8-buildsystem.patch:
-  Version BUmp, fix build system
+  Version Bump, fix build system
 
 *vcftools-0.1.7 (02 Jan 2012)
 

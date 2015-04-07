@@ -41,7 +41,7 @@
 
   26 Aug 2013; Justin Lecher <jlec@gentoo.org> coot-0.6.2.ebuild,
   coot-0.6.2-r1.ebuild, coot-0.7.ebuild, +coot-0.7.1.ebuild:
-  Version BUmp, #482278; bump to new python-r1 eclasses
+  Version Bump, #482278; bump to new python-r1 eclasses
 
   29 May 2013; Justin Lecher <jlec@gentoo.org> coot-0.6.2.ebuild,
   coot-0.6.2-r1.ebuild, coot-0.7.ebuild, metadata.xml:
@@ -195,7 +195,7 @@
   06 Feb 2010; Justin Lecher <jlec@gentoo.org> -coot-0.1.2.ebuild,
   -coot-0.3.1.ebuild, -coot-0.3.3.ebuild, -coot-0.4_pre2-r549.ebuild,
   +coot-0.6.ebuild, +files/glib.m4, +files/gtk.m4:
-  Version BUmp, removed broken versions
+  Version Bump, removed broken versions
 
   10 Oct 2009; Patrick Lauer <patrick@gentoo.org> coot-0.1.2.ebuild,
   coot-0.3.1.ebuild, coot-0.3.3.ebuild, coot-0.4_pre2-r549.ebuild:

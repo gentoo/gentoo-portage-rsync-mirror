@@ -16,7 +16,7 @@
 
   18 Nov 2014; Justin Lecher <jlec@gentoo.org> +nosexcover-1.0.10.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> nosexcover-1.0.7-r1.ebuild,
   nosexcover-1.0.8.ebuild:

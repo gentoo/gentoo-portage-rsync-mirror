@@ -15,7 +15,7 @@
 *munin-2.0.25 (24 Dec 2014)
 
   24 Dec 2014; Justin Lecher <jlec@gentoo.org> +munin-2.0.25.ebuild:
-  Version BUmp, #512070
+  Version Bump, #512070
 
   03 Nov 2014; Aaron W. Swenson <titanofold@gentoo.org> munin-2.0.19.ebuild,
   munin-2.0.19-r1.ebuild, munin-2.1.9999.ebuild:

@@ -16,7 +16,7 @@
   10 Mar 2015; Justin Lecher <jlec@gentoo.org> +files/AJP-nginx-1.7.9+.patch,
   +nginx-1.7.10.ebuild, metadata.xml, nginx-1.7.6.ebuild, nginx-1.7.7.ebuild,
   nginx-1.7.8.ebuild:
-  Version BUmp, #531542; fix for musl, #533570; drop suspecious einstall,
+  Version Bump, #531542; fix for musl, #533570; drop suspecious einstall,
   #521662; fix SLOT operators
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> nginx-1.7.8.ebuild:

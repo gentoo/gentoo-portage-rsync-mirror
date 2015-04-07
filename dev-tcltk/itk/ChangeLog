@@ -20,7 +20,7 @@
 
   13 Jan 2013; Justin Lecher <jlec@gentoo.org> +itk-4.0_beta6.ebuild,
   +files/itk-4.0_beta6-install_data.patch, metadata.xml:
-  Version BUmp, #451154; prepared by Karl Ernst Brunk
+  Version Bump, #451154; prepared by Karl Ernst Brunk
 
   07 Oct 2012; Justin Lecher <jlec@gentoo.org> -itk-3.3-r1.ebuild,
   -itk-3.3.1_pre20090417-r1.ebuild, itk-3.4_pre20090417.ebuild,

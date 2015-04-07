@@ -58,7 +58,7 @@
   -pandas-0.14.1.ebuild, pandas-0.15.0.ebuild, +pandas-0.15.1.ebuild,
   +pandas-9999.ebuild, +files/pandas-0.15.0-backport-GH8587.patch,
   +files/pandas-0.15.1-skip-tz-test.patch:
-  Drop old; Version BUmp; backport testsuite patch, #521880
+  Drop old; Version Bump; backport testsuite patch, #521880
 
 *pandas-0.15.0 (26 Oct 2014)
 
@@ -97,7 +97,7 @@
 
   21 Feb 2014; Justin Lecher <jlec@gentoo.org> +pandas-0.13.1.ebuild,
   +files/pandas-0.13.1-backport-test-fix.patch:
-  Version BUmp
+  Version Bump
 
   22 Jan 2014; Justin Lecher <jlec@gentoo.org> pandas-0.13.0.ebuild:
   Doesn't build docs correctly with <sphinx-1.2.1, #498856

@@ -11,7 +11,7 @@
   +files/tachyon-0.99_beta6-ldflags.patch,
   +files/tachyon-0.99_beta6-shared.patch, +tachyon-0.99_beta6.ebuild,
   metadata.xml, tachyon-0.98.9-r2.ebuild:
-  Version BUmp
+  Version Bump
 
   06 Dec 2012; Justin Lecher <jlec@gentoo.org> tachyon-0.98.9-r2.ebuild,
   metadata.xml:

@@ -22,7 +22,7 @@
 
   23 Feb 2013; Justin Lecher <jlec@gentoo.org> +sphinxbase-0.8.ebuild,
   +files/sphinxbase-0.8-unbundle-lapack.patch, metadata.xml:
-  Version BUmp, #451876; move to new python-r1 eclass; detect blas via
+  Version Bump, #451876; move to new python-r1 eclass; detect blas via
   pkg-config; only build docs with use doc
   (https://sourceforge.net/p/cmusphinx/patches/102/)
 

@@ -6,7 +6,7 @@
 
   27 Feb 2015; Justin Lecher <jlec@gentoo.org> +ipy-0.82a.ebuild,
   -ipy-0.75.ebuild, metadata.xml:
-  Drop old and Version BUmp
+  Drop old and Version Bump
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ipy-0.81.ebuild:
   Stable for x86, wrt bug #530528

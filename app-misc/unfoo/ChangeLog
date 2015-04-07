@@ -37,7 +37,7 @@
 
   19 Nov 2012; Justin Lecher <jlec@gentoo.org> +unfoo-1.0.7.ebuild,
   metadata.xml:
-  Version BUmp, #443742
+  Version Bump, #443742
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> unfoo-1.0.6.ebuild:
   Some Clean up

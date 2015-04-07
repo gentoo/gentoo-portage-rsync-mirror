@@ -6,13 +6,13 @@
 
   28 Jul 2014; Justin Lecher <jlec@gentoo.org> python-uinput-0.9.ebuild,
   python-uinput-0.10.1.ebuild, +python-uinput-0.10.2.ebuild:
-  Version BUmp; drop unsupported python versions
+  Version Bump; drop unsupported python versions
 
 *python-uinput-0.10.1 (13 Nov 2013)
 
   13 Nov 2013; Justin Lecher <jlec@gentoo.org> python-uinput-0.9.ebuild,
   +python-uinput-0.10.1.ebuild, metadata.xml:
-  Version BUmp and fix buildsystem for newer udev, #489640; add missing dep on
+  Version Bump and fix buildsystem for newer udev, #489640; add missing dep on
   virtual/udev; drop uneccessary eutils.eclass and fix DESCRIPTION
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> python-uinput-0.9.ebuild:

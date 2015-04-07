@@ -6,7 +6,7 @@
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> -gatk-1.6.ebuild,
   +gatk-2.4.ebuild, gatk-9999.ebuild:
-  Version BUmp and move to MIT license
+  Version Bump and move to MIT license
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly

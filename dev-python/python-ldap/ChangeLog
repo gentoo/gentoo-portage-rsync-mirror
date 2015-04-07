@@ -68,7 +68,7 @@
 *python-ldap-2.4.14 (05 Feb 2014)
 
   05 Feb 2014; Justin Lecher <jlec@gentoo.org> +python-ldap-2.4.14.ebuild:
-  Version BUmp
+  Version Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> python-ldap-2.4.10-r1.ebuild,
   python-ldap-2.4.12.ebuild, python-ldap-2.4.13.ebuild, python-ldap-9999.ebuild:

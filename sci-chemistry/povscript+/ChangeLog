@@ -6,7 +6,7 @@
 
   12 Jul 2013; Justin Lecher <jlec@gentoo.org> -povscript+-2.1.2.2.18.ebuild,
   povscript+-2.1.2.2.19.ebuild, +povscript+-2.1.2.2.20.ebuild, metadata.xml:
-  Version BUmp; drop old; fix upstreams new webpresents, #476582
+  Version Bump; drop old; fix upstreams new webpresents, #476582
 
   14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
   povscript+-2.1.2.2.19.ebuild, +files/povscript+-2.1.2.2.19-libpng15.patch:

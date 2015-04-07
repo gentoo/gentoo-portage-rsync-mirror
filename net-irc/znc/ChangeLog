@@ -102,7 +102,7 @@
 *znc-0.206 (29 May 2012)
 
   29 May 2012; Justin Lecher <jlec@gentoo.org> +znc-0.206.ebuild:
-  Non maintainer Version BUmp
+  Non maintainer Version Bump
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> znc-0.094.ebuild,
   znc-0.202-r1.ebuild, znc-0.204.ebuild, znc-9999.ebuild:

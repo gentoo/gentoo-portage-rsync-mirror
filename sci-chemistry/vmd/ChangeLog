@@ -7,7 +7,7 @@
   06 Mar 2015; Justin Lecher <jlec@gentoo.org>
   +files/vmd-1.9.2-format-security.patch, +vmd-1.9.2.ebuild,
   -vmd-1.9.1-r2.ebuild, -vmd-1.9.1.ebuild, metadata.xml:
-  Version BUmp; install optional plugins, #517886
+  Version Bump; install optional plugins, #517886
 
   10 Feb 2015; Patrick Lauer <patrick@gentoo.org> -vmd-1.9.1-r1.ebuild:
   Remove version with unsatisfiable dependencies

@@ -6,7 +6,7 @@
 
   29 Mar 2015; Justin Lecher <jlec@gentoo.org> +primer3-2.3.6.ebuild,
   -primer3-2.3.4.ebuild:
-  Version BUmp; drop old
+  Version Bump; drop old
 
 *primer3-2.3.5 (14 Feb 2013)
 
@@ -44,7 +44,7 @@
 
   19 Jul 2012; Justin Lecher <jlec@gentoo.org> primer3-2.3.0.ebuild,
   +primer3-2.3.1.ebuild:
-  Version BUmp
+  Version Bump
 
   07 Mar 2012; Brent Baude <ranger@gentoo.org> primer3-2.3.0.ebuild:
   Marking primer3-2.3.0 ppc for bug 402053

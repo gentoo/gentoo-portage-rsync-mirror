@@ -6,7 +6,7 @@
 
   03 Mar 2015; Justin Lecher <jlec@gentoo.org> +curtsies-0.2.3.ebuild,
   curtsies-0.1.18.ebuild:
-  Version BUmp; fix deps and test
+  Version Bump; fix deps and test
 
 *curtsies-0.1.18 (17 Feb 2015)
 

@@ -117,7 +117,7 @@
 
   19 Dec 2010; Justin Lecher <jlec@gentoo.org> -lsyncd-1.26.ebuild,
   -lsyncd-1.33.ebuild, -lsyncd-1.37.ebuild, +lsyncd-2.0.0.ebuild:
-  Version BUmp, 348976; Cleaned old
+  Version Bump, 348976; Cleaned old
 
 *lsyncd-1.39 (14 Nov 2010)
 

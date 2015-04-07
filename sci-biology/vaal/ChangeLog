@@ -20,7 +20,7 @@
 *vaal-46233 (02 Jun 2013)
 
   02 Jun 2013; Justin Lecher <jlec@gentoo.org> +vaal-46233.ebuild:
-  Version BUmp
+  Version Bump
 
   12 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
@@ -29,7 +29,7 @@
 
   20 Feb 2013; Justin Lecher <jlec@gentoo.org> +vaal-45166.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *vaal-42179 (25 Jun 2012)
 

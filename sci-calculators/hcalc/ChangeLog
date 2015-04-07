@@ -9,7 +9,7 @@
 *hcalc-1.2 (07 Jul 2012)
 
   07 Jul 2012; Justin Lecher <jlec@gentoo.org> +hcalc-1.2.ebuild:
-  Version BUmp including code from Theodore Kilgore, #424960
+  Version Bump including code from Theodore Kilgore, #424960
 
   01 Mar 2012; Justin Lecher <jlec@gentoo.org> -hcalc-1.0.ebuild, metadata.xml:
   Dropped old

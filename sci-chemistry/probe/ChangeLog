@@ -19,7 +19,7 @@
 
   06 Jun 2012; Justin Lecher <jlec@gentoo.org> +probe-2.13.110909.ebuild,
   +files/probe-2.13.110909-as-needed.patch:
-  Version BUmp
+  Version Bump
 
   06 Jun 2012; Justin Lecher <jlec@gentoo.org> probe-2.12.110413.ebuild:
   minor cleaning

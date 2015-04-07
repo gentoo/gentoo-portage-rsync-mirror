@@ -31,7 +31,7 @@
   01 Jul 2012; Justin Lecher <jlec@gentoo.org> pdmenu-1.2.89.ebuild,
   pdmenu-1.2.95.ebuild, +pdmenu-1.3.2.ebuild, +files/pdmenu-impl-dec.patch,
   metadata.xml:
-  Version BUmp, respect LDFLAGS, #337237; move to EAPI=4; fix implicit
+  Version Bump, respect LDFLAGS, #337237; move to EAPI=4; fix implicit
   declarations
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> pdmenu-1.2.95.ebuild:

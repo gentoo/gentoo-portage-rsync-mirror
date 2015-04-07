@@ -52,7 +52,7 @@
 
   25 Jul 2013; Justin Lecher <jlec@gentoo.org> +lm_sensors-3.3.4.ebuild,
   +files/lm_sensors-3.3.4-sensors-detect-gentoo.patch, metadata.xml:
-  Version BUmp, #474490
+  Version Bump, #474490
 
   13 Jul 2013; Pacho Ramos <pacho@gentoo.org> +files/fancontrol.service,
   +files/sensord.service, lm_sensors-3.3.3-r2.ebuild:

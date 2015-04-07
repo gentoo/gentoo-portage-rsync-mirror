@@ -16,7 +16,7 @@
 
   18 Nov 2014; Justin Lecher <jlec@gentoo.org> +async-0.6.2.ebuild,
   metadata.xml:
-  Version BUmp; add support for python3
+  Version Bump; add support for python3
 
 *async-0.6.1-r1 (07 May 2013)
 

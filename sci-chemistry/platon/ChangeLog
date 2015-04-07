@@ -49,7 +49,7 @@
   29 Jun 2010; Justin Lecher <jlec@gentoo.org>
   -files/20100625-buffer-overflow.patch, -platon-20100625.ebuild,
   +files/20100629-buffer-overflow.patch, +platon-20100629.ebuild:
-  Version BUmp
+  Version Bump
 
 *platon-20100625 (27 Jun 2010)
 

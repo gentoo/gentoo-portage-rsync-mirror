@@ -6,7 +6,7 @@
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> +wxmacmolplt-7.5.ebuild,
   +files/wxmacmolplt-7.5-glew.patch:
-  Version BUmp, #439438; thanks Reinis Danne <rei4dan@gmail.com> for the ebuild
+  Version Bump, #439438; thanks Reinis Danne <rei4dan@gmail.com> for the ebuild
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> wxmacmolplt-7.4.2.ebuild,
   metadata.xml:

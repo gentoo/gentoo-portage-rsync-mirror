@@ -6,7 +6,7 @@
 
   06 Apr 2015; Justin Lecher <jlec@gentoo.org> +ioping-0.9.ebuild,
   -ioping-0.6-r1.ebuild, -ioping-0.7.ebuild:
-  Version BUmp; thanks Johan Bergström for the patch
+  Version Bump; thanks Johan Bergström for the patch
 
 *ioping-0.8 (06 May 2014)
 

@@ -54,7 +54,7 @@
   +files/vtk-6.1.0-freetype.patch, +files/vtk-6.1.0-glext.patch,
   +files/vtk-6.1.0-install.patch, +files/vtk-6.1.0-netcdf.patch,
   +files/vtk-6.1.0-system.patch, +files/vtk-6.1.0-web.patch, metadata.xml:
-  Version BUmp, #500814; fixes GLintptr declaration problems, #523786; Add slot
+  Version Bump, #500814; fixes GLintptr declaration problems, #523786; Add slot
   operators to dependencies, #531040; drop old which obsoletes, #477638,
   #497224, #520310
 
