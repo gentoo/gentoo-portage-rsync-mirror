@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2.ebuild,v 1.4 2012/05/29 12:52:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.8.2-r1.ebuild,v 1.1 2015/04/07 16:37:33 ultrabug Exp $
 
 EAPI=4
 PYTHON_DEPEND="gtk? 2"
@@ -21,7 +21,7 @@ RDEPEND="
 	sys-cluster/libcman
 	external? (
 		sys-cluster/libdlm
-		<sys-cluster/pacemaker-1.1[-heartbeat]
+		sys-cluster/pacemaker[-heartbeat]
 		)
 	sys-fs/e2fsprogs
 	sys-libs/ncurses
@@ -53,6 +53,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	sed -e 's/ncurses, tgetstr/ncurses, printw/g' -i configure.in || die
 	# gentoo uses /sys/kernel/dlm as dlmfs mountpoint
 	sed -e 's:"/dlm/":"/sys/kernel/dlm":g' \
 		-i libo2dlm/o2dlm_test.c \
