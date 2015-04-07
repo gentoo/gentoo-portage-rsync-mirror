@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/goaccess
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.7 2014/11/22 12:34:41 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.8 2015/04/07 06:47:44 idella4 Exp $
+
+*goaccess-0.8.5 (07 Apr 2015)
+
+  07 Apr 2015; Ian Delaney <idella4@gentoo.org> +goaccess-0.8.5.ebuild,
+  metadata.xml:
+  bump, wrt bug #530112, reset metadata.xml to substitute proxy maintainer
 
   22 Nov 2014; Jeroen Roovers <jer@gentoo.org> goaccess-0.6.1.ebuild,
   +files/goaccess-0.6.1-CFLAGS.patch, +files/goaccess-0.6.1-tinfo.patch:

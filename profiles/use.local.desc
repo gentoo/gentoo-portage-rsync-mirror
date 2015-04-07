@@ -4685,6 +4685,8 @@ net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
 net-analyzer/ettercap:plugins - Install ettercap plugins (et_*.so)
 net-analyzer/flowgrind:pcap - Enable packet capturing support using net-libs/libpcap
 net-analyzer/fprobe:messages - enable console messages
+net-analyzer/goaccess:btree - Enable Tokyo Cabinet's on-disk B+ Tree database backend
+net-analyzer/goaccess:memhash - Enable Tokyo Cabinet's on-memory hash database backend
 net-analyzer/gr-fosphor:glfw - enable GLFW based interface
 net-analyzer/graphite-web:memcached - Enable memcached support
 net-analyzer/httping:tfo - Enable support for TCP Fast Open
