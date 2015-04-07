@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.5.ebuild,v 1.1 2015/03/30 19:01:38 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.5-r1.ebuild,v 1.1 2015/04/07 01:04:53 chutzpah Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=(python2_7)
-inherit eutils prefix user python-r1 multilib multilib-minimal
+inherit eutils prefix user python-r1 multilib multilib-minimal systemd
 
 DESCRIPTION="NSS module for name lookups using LDAP"
 HOMEPAGE="http://arthurdejong.org/nss-pam-ldapd/"
@@ -94,6 +94,9 @@ multilib_src_install_all() {
 			python_foreach_impl python_newscript utils/${script}.py ${script}.ldap
 		done
 	fi
+
+	systemd_newtmpfilesd "${FILESDIR}"/nslcd-tmpfiles.conf nslcd.conf
+	systemd_dounit "${FILESDIR}"/nslcd.service
 }
 
 multilib_src_test() {

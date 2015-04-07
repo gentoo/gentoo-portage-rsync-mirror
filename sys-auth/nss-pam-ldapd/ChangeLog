@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.20 2015/03/30 19:01:38 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.21 2015/04/07 01:04:53 chutzpah Exp $
+
+*nss-pam-ldapd-0.9.5-r1 (07 Apr 2015)
+
+  07 Apr 2015; Patrick McLean <chutzpah@gentoo.org> +files/nslcd-tmpfiles.conf,
+  +files/nslcd.service, +nss-pam-ldapd-0.9.5-r1.ebuild,
+  -nss-pam-ldapd-0.9.4-r1.ebuild, -nss-pam-ldapd-0.9.4-r2.ebuild,
+  -nss-pam-ldapd-0.9.4.ebuild, -nss-pam-ldapd-0.9.5.ebuild, metadata.xml:
+  Revision bump, add systemd service files (bug #545780). Remove old.
 
 *nss-pam-ldapd-0.9.5 (30 Mar 2015)
 
