@@ -1,12 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-libs/jsoncpp http-client? ( net-misc/curl ) http-server? ( net-libs/libmicrohttpd ) stubgen? ( dev-libs/argtable ) doc? ( app-doc/doxygen ) test? ( dev-libs/boost ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-vcs/git-1.8.2.1
+DEPEND=dev-libs/jsoncpp:= http-client? ( net-misc/curl:= ) http-server? ( net-libs/libmicrohttpd:= ) stubgen? ( dev-libs/argtable:= ) doc? ( app-doc/doxygen ) test? ( dev-libs/boost ) sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-vcs/git-1.8.2.1
 DESCRIPTION=JSON-RPC (1.0 & 2.0) framework for C++
 EAPI=5
 HOMEPAGE=https://github.com/cinemast/libjson-rpc-cpp
 IUSE=doc +http-client +http-server +stubgen test
-KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=dev-libs/jsoncpp http-client? ( net-misc/curl ) http-server? ( net-libs/libmicrohttpd ) stubgen? ( dev-libs/argtable )
+RDEPEND=dev-libs/jsoncpp:= http-client? ( net-misc/curl:= ) http-server? ( net-libs/libmicrohttpd:= ) stubgen? ( dev-libs/argtable:= )
 SLOT=0
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=18fc171c5e04fe5859c687f288bfc6b7
+_md5_=a264053c0facbc9571d2ecd9f31b33c5
