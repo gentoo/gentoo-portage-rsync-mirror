@@ -20,7 +20,7 @@
    always a description without a lang attribute. Also there are no overlapping
    descriptions allowed (multiple description tags with the same language)
 
-   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1144 2015/03/07 20:37:19 tetromino Exp $
+   $Header: /var/cvsroot/gentoo/xml/htdocs/proj/en/metastructure/herds/herds.xml,v 1.1145 2015/04/07 00:21:57 vapier Exp $
 
 -->
 <herds>
@@ -695,9 +695,6 @@
   <description>Gentoo/PPC64 Team</description>
   <maintainer>
     <email>josejx@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-   <email>halcy0n@gentoo.org</email>
   </maintainer>
   <maintainer>
     <email>blueness@gentoo.org</email>
@@ -2007,10 +2004,6 @@
     <name>Ryan Hill</name>
   </maintainer>
   <maintainer>
-    <email>halcy0n@gentoo.org</email>
-    <name>Mark Loeser</name>
-  </maintainer>
-  <maintainer>
     <email>kumba@gentoo.org</email>
     <name>Joshua Kinard</name>
   </maintainer>
@@ -2026,10 +2019,6 @@
   <name>gcc-porting</name>
   <email>gcc-porting</email>
   <description>Handles porting of packages to newer toolchain versions</description>
-  <maintainer>
-    <email>halcy0n@gentoo.org</email>
-    <name>Mark Loeser</name>
-  </maintainer>
   <maintainer>
     <email>lu_zero@gentoo.org</email>
     <name>Luca Barbato</name>
@@ -2188,10 +2177,6 @@
     <maintainer>
       <email>dev-zero@gentoo.org</email>
       <name>Tiziano Müller</name>
-    </maintainer>
-    <maintainer>
-      <email>halcy0n@gentoo.org</email>
-      <name>Mark Loeser</name>
     </maintainer>
     <maintainer>
       <email>pinkbyte@gentoo.org</email>
