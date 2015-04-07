@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pyamg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.11 2015/01/26 15:09:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.12 2015/04/07 14:17:32 jlec Exp $
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pyamg-2.0.5.ebuild:
   Remove old.
@@ -18,7 +18,7 @@
 
   07 Feb 2013; Justin Lecher <jlec@gentoo.org> +pyamg-2.0.5.ebuild,
   metadata.xml:
-  Version BUmp; move to new python eclasses
+  Version Bump; move to new python eclasses
 
   19 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -pyamg-2.0.0.ebuild,
   metadata.xml, pyamg-2.0.4.ebuild:

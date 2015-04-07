@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libdynd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdynd/ChangeLog,v 1.5 2015/02/21 10:39:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdynd/ChangeLog,v 1.6 2015/04/07 14:11:36 jlec Exp $
 
   21 Feb 2015; Pacho Ramos <pacho@gentoo.org> libdynd-0.6.5.ebuild:
   amd64/x86 stable, bug #540514
@@ -15,7 +15,7 @@
 
   29 Oct 2014; Justin Lecher <jlec@gentoo.org> +libdynd-0.6.5.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *libdynd-0.6.2 (10 Jun 2014)
 

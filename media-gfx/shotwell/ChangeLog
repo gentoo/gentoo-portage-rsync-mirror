@@ -1,11 +1,17 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.80 2015/02/22 11:37:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.82 2015/04/07 14:25:51 jlec Exp $
+
+*shotwell-0.22.0 (07 Apr 2015)
+
+  07 Apr 2015; Justin Lecher <jlec@gentoo.org> +shotwell-0.22.0.ebuild,
+  -shotwell-0.20.2-r1.ebuild, -shotwell-0.20.2.ebuild:
+  Version Bump, bug #545200
 
 *shotwell-0.21.0 (22 Feb 2015)
 
   22 Feb 2015; Justin Lecher <jlec@gentoo.org> +shotwell-0.21.0.ebuild:
-  Version BUmp, #540974
+  Version Bump, #540974
 
 *shotwell-0.20.2-r1 (25 Jan 2015)
 
@@ -36,12 +42,12 @@
 *shotwell-0.20.1 (11 Oct 2014)
 
   11 Oct 2014; Justin Lecher <jlec@gentoo.org> +shotwell-0.20.1.ebuild:
-  Version BUmp, #525040
+  Version Bump, #525040
 
 *shotwell-0.20.0 (20 Sep 2014)
 
   20 Sep 2014; Justin Lecher <jlec@gentoo.org> +shotwell-0.20.0.ebuild:
-  Version BUmp, #523288; drop old
+  Version Bump, #523288; drop old
 
   24 Jul 2014; Samuli Suominen <ssuominen@gentoo.org> shotwell-0.15.1.ebuild,
   shotwell-0.18.0.ebuild, shotwell-0.18.1.ebuild:
@@ -57,7 +63,7 @@
 *shotwell-0.18.0 (24 Apr 2014)
 
   24 Apr 2014; Justin Lecher <jlec@gentoo.org> +shotwell-0.18.0.ebuild:
-  Version BUmp, #507918
+  Version Bump, #507918
 
   21 Feb 2014; Justin Lecher <jlec@gentoo.org> -shotwell-0.13.1-r2.ebuild,
   -shotwell-0.14.0-r1.ebuild, -shotwell-0.14.1.ebuild, -shotwell-0.15.0.ebuild:
@@ -79,7 +85,7 @@
 
   20 Nov 2013; Justin Lecher <jlec@gentoo.org> shotwell-0.15.0.ebuild,
   +shotwell-0.15.1.ebuild:
-  Version BUmp and fix deps, #491732; thanks Mark R. Pariente for the patch
+  Version Bump and fix deps, #491732; thanks Mark R. Pariente for the patch
 
   26 Oct 2013; Justin Lecher <jlec@gentoo.org> shotwell-0.15.0.ebuild:
   Update deps, thanks Mao PU for the patch; #489464
@@ -114,7 +120,7 @@
 *shotwell-0.14.1 (29 Apr 2013)
 
   29 Apr 2013; Justin Lecher <jlec@gentoo.org> +shotwell-0.14.1.ebuild:
-  Version BUmp, #467854
+  Version Bump, #467854
 
   07 Apr 2013; Justin Lecher <jlec@gentoo.org> -shotwell-0.12.3.ebuild,
   -shotwell-0.13.1.ebuild, -shotwell-0.13.1-r1.ebuild:

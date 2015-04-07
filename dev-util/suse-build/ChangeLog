@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.27 2014/10/09 09:51:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.28 2015/04/07 14:23:24 jlec Exp $
 
   09 Oct 2014; Justin Lecher <jlec@gentoo.org>
   files/suse-build-2014.09.18-libexec-paths.patch:
@@ -14,7 +14,7 @@
 
   09 Oct 2014; Justin Lecher <jlec@gentoo.org> +suse-build-2014.09.18.ebuild,
   +files/suse-build-2014.09.18-libexec-paths.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
   21 Apr 2014; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/suse-build-20131015-libexec-paths.patch, -suse-build-2013.12.05.ebuild,

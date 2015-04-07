@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pytools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.32 2015/03/09 00:04:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.33 2015/04/07 14:19:30 jlec Exp $
 
   09 Mar 2015; Pacho Ramos <pacho@gentoo.org> pytools-2014.3.5.ebuild:
   x86 stable, bug 540290
@@ -30,12 +30,12 @@
 *pytools-2014.3.2 (17 Nov 2014)
 
   17 Nov 2014; Justin Lecher <jlec@gentoo.org> +pytools-2014.3.2.ebuild:
-  Verison BUmp
+  Verison Bump
 
 *pytools-2014.3.1 (06 Oct 2014)
 
   06 Oct 2014; Justin Lecher <jlec@gentoo.org> +pytools-2014.3.1.ebuild:
-  Version BUmp
+  Version Bump
 
 *pytools-2014.3 (01 Jul 2014)
 
@@ -45,7 +45,7 @@
 *pytools-2014.2.1 (02 Jun 2014)
 
   02 Jun 2014; Justin Lecher <jlec@gentoo.org> +pytools-2014.2.1.ebuild:
-  Version BUmp
+  Version Bump
 
   05 Mar 2014; Michał Górny <mgorny@gentoo.org> pytools-9999.ebuild:
   Require EGIT_MIN_CLONE_TYPE=single due to transport limitations.
@@ -76,7 +76,7 @@
 
   09 Aug 2013; Justin Lecher <jlec@gentoo.org> pytools-2013.5.5.ebuild,
   +pytools-2013.5.6.ebuild:
-  Verison BUmp
+  Verison Bump
 
 *pytools-2013.5.5 (22 Jul 2013)
 
@@ -89,7 +89,7 @@
 *pytools-2013.5.3 (07 Jul 2013)
 
   07 Jul 2013; Justin Lecher <jlec@gentoo.org> +pytools-2013.5.3.ebuild:
-  Version BUmp
+  Version Bump
 
 *pytools-2013.5 (14 Jun 2013)
 
@@ -105,7 +105,7 @@
 
   13 May 2013; Justin Lecher <jlec@gentoo.org> pytools-2012.1.ebuild,
   +pytools-2013.1.ebuild:
-  Version BUmp
+  Version Bump
 
   15 Jan 2013; Justin Lecher <jlec@gentoo.org> pytools-2012.1.ebuild:
   Add correct PYTHON_USEDEP

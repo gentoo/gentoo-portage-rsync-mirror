@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.61 2015/02/08 10:04:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.62 2015/04/07 14:23:17 jlec Exp $
 
   08 Feb 2015; Justin Lecher <jlec@gentoo.org> +nvidia-cuda-sdk-5.5.22.ebuild:
   Readd old version on user request
@@ -45,7 +45,7 @@
 *nvidia-cuda-sdk-6.5.14 (21 Aug 2014)
 
   21 Aug 2014; Justin Lecher <jlec@gentoo.org> +nvidia-cuda-sdk-6.5.14.ebuild:
-  Version BUmp, #520302
+  Version Bump, #520302
 
   14 Aug 2014; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop unused local USE-description: 'emulation'

@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.274 2015/04/06 13:17:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.275 2015/04/07 14:20:26 jlec Exp $
 
   06 Apr 2015; Ian Delaney <idella4@gentoo.org> metadata.xml:
   update remote-id in metadata.xml
@@ -9,7 +9,7 @@
 
   04 Apr 2015; Justin Lecher <jlec@gentoo.org> +setuptools-15.0.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   03 Apr 2015; Mike Frysinger <vapier@gentoo.org> setuptools-12.0.1.ebuild:
   Mark arm/arm64/ia64/m68k/s390/sh stable #540290.

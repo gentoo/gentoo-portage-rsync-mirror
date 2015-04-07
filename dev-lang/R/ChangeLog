@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.242 2015/04/07 09:10:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.243 2015/04/07 14:09:38 jlec Exp $
 
   07 Apr 2015; Justin Lecher <jlec@gentoo.org> R-3.0.1.ebuild:
   Fix Slot operators
@@ -95,7 +95,7 @@
 *R-3.0.2 (26 Sep 2013)
 
   26 Sep 2013; Justin Lecher <jlec@gentoo.org> +R-3.0.2.ebuild, metadata.xml:
-  Version BUmp, #486064
+  Version Bump, #486064
 
 *R-3.0.1-r1 (24 Sep 2013)
 

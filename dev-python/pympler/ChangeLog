@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pympler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.23 2014/01/06 08:19:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.24 2015/04/07 14:18:02 jlec Exp $
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> -pympler-0.2.0.ebuild:
   Drop old
@@ -49,7 +49,7 @@
 
   03 May 2013; Justin Lecher <jlec@gentoo.org> +pympler-0.3.1.ebuild,
   metadata.xml:
-  Version BUmp, #468358; drop pypy as support ist broken
+  Version Bump, #468358; drop pypy as support ist broken
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pympler-0.2.0.ebuild:
   Add ~arm, wrt bug #449220

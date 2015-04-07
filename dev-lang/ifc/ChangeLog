@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.80 2015/02/12 10:43:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.81 2015/04/07 14:09:21 jlec Exp $
 
   12 Feb 2015; Justin Lecher <jlec@gentoo.org> ifc-15.0.2.164.ebuild:
   Avoid file collisions
@@ -71,7 +71,7 @@
 
   10 Dec 2012; Justin Lecher <jlec@gentoo.org> +ifc-13.0.1.117.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *ifc-13.0.0.079-r1 (20 Sep 2012)
 

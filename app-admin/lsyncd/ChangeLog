@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.37 2015/01/19 16:52:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.38 2015/04/07 14:05:17 jlec Exp $
 
   19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself from metadata.
@@ -117,7 +117,7 @@
 
   19 Dec 2010; Justin Lecher <jlec@gentoo.org> -lsyncd-1.26.ebuild,
   -lsyncd-1.33.ebuild, -lsyncd-1.37.ebuild, +lsyncd-2.0.0.ebuild:
-  Version BUmp, 348976; Cleaned old
+  Version Bump, 348976; Cleaned old
 
 *lsyncd-1.39 (14 Nov 2010)
 

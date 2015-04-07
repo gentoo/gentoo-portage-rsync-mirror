@@ -1,6 +1,6 @@
 # ChangeLog for app-accessibility/sphinxbase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.10 2015/03/29 03:50:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.11 2015/04/07 14:04:11 jlec Exp $
 
   29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -sphinxbase-0.7.ebuild:
   Remove old.
@@ -22,7 +22,7 @@
 
   23 Feb 2013; Justin Lecher <jlec@gentoo.org> +sphinxbase-0.8.ebuild,
   +files/sphinxbase-0.8-unbundle-lapack.patch, metadata.xml:
-  Version BUmp, #451876; move to new python-r1 eclass; detect blas via
+  Version Bump, #451876; move to new python-r1 eclass; detect blas via
   pkg-config; only build docs with use doc
   (https://sourceforge.net/p/cmusphinx/patches/102/)
 

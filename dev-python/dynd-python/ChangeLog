@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/dynd-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dynd-python/ChangeLog,v 1.8 2015/03/08 23:46:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dynd-python/ChangeLog,v 1.9 2015/04/07 14:14:21 jlec Exp $
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> dynd-python-0.6.5.ebuild:
   x86 stable, bug 540290
@@ -21,7 +21,7 @@
 
   29 Oct 2014; Justin Lecher <jlec@gentoo.org> +dynd-python-0.6.5.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   02 Sep 2014; Patrick Lauer <patrick@gentoo.org> dynd-python-0.6.2.ebuild:
   Add py3.4 support

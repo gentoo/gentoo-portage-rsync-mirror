@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.32 2014/12/15 10:24:19 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.33 2015/04/07 14:20:48 jlec Exp $
 
 *sympy-0.7.6 (15 Dec 2014)
 
@@ -36,7 +36,7 @@
 
   15 Oct 2013; Justin Lecher <jlec@gentoo.org> sympy-0.7.2-r1.ebuild,
   +sympy-0.7.3.ebuild, metadata.xml:
-  Version BUmp; fix missing py3.3 handling, #488098
+  Version Bump; fix missing py3.3 handling, #488098
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> sympy-0.7.2-r1.ebuild:
   Also compatible with python3_3

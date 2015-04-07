@@ -1,6 +1,6 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.92 2015/02/02 11:50:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.93 2015/04/07 14:24:16 jlec Exp $
 
   02 Feb 2015; Justin Lecher <jlec@gentoo.org> nullmailer-1.13-r5.ebuild,
   +files/nullmailer-1.13-unistd.h.patch:
@@ -116,7 +116,7 @@
 
   25 Jul 2013; Justin Lecher <jlec@gentoo.org> +nullmailer-1.13.ebuild,
   +files/remotes.sample-1.13, +files/nullmailer.service, metadata.xml:
-  Version BUmp, #468152; Add support for systemd, #478166; fix wron
+  Version Bump, #468152; Add support for systemd, #478166; fix wron
   documentation, #475908
 
   28 Feb 2013; Jason A. Donenfeld <zx2c4@gentoo.org> nullmailer-1.11-r1.ebuild,

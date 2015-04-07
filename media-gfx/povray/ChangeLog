@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.157 2015/02/20 13:06:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.158 2015/04/07 14:25:29 jlec Exp $
 
   20 Feb 2015; Raúl Porcel <armin76@gentoo.org> povray-3.7.0.0.ebuild:
   ia64/sparc stable wrt #497970
@@ -29,7 +29,7 @@
   +files/povray-3.7.0.0-automagic.patch,
   +files/povray-3.7.0.0-boost-1.50.patch,
   +files/povray-3.7.0.0-user-conf.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
   26 Dec 2013; Justin Lecher <jlec@gentoo.org> povray-3.7.0_rc3.ebuild:
   Backport fix for boost 1.5*, #494322

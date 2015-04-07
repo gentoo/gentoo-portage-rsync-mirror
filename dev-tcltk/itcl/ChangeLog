@@ -1,6 +1,6 @@
 # ChangeLog for dev-tcltk/itcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.68 2015/04/01 08:27:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/ChangeLog,v 1.69 2015/04/07 14:21:28 jlec Exp $
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> itcl-3.4.1.ebuild:
   Stable for sparc, wrt bug #543024
@@ -36,7 +36,7 @@
 *itcl-4.0.1 (15 Sep 2014)
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> +itcl-4.0.1.ebuild:
-  Version BUmp, #522092
+  Version Bump, #522092
 
 *itcl-4.0.0-r2 (13 Jan 2013)
 
@@ -59,7 +59,7 @@
   07 Oct 2012; Justin Lecher <jlec@gentoo.org> -itcl-3.3-r1.ebuild,
   -itcl-3.3.1_pre20090417.ebuild, -itcl-3.3.1_pre20090417-r1.ebuild,
   +itcl-3.4.1.ebuild, metadata.xml:
-  Version BUmp, #433014; drop old
+  Version Bump, #433014; drop old
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> itcl-3.3.1_pre20090417-r1.ebuild:
   inherit multilib for get_libdir

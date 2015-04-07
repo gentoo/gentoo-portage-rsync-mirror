@@ -1,11 +1,11 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.43 2015/03/27 13:38:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.44 2015/04/07 14:07:42 jlec Exp $
 
 *texstudio-2.9.4 (27 Mar 2015)
 
   27 Mar 2015; Justin Lecher <jlec@gentoo.org> +texstudio-2.9.4.ebuild:
-  Version BUmp, bug #544174
+  Version Bump, bug #544174
 
   11 Mar 2015; Justin Lecher <jlec@gentoo.org> texstudio-2.9.0.ebuild:
   Add missing qt5 deps, #542736
@@ -65,24 +65,24 @@
   -texstudio-2.6.2.ebuild, -texstudio-2.6.4.ebuild, -texstudio-2.6.6.ebuild,
   -texstudio-2.7.0.ebuild, -texstudio-2.8.0.ebuild, texstudio-2.8.2.ebuild,
   +texstudio-2.8.4.ebuild:
-  Version BUmp, #522692; fixes build problem with Werror=format-security,
+  Version Bump, #522692; fixes build problem with Werror=format-security,
   #521120; Drop obsolete deps; drop old
 
 *texstudio-2.8.2 (12 Aug 2014)
 
   12 Aug 2014; Justin Lecher <jlec@gentoo.org> +texstudio-2.8.2.ebuild,
   +files/texstudio-2.8.2-desktop.patch:
-  Version BUmp, #518430
+  Version Bump, #518430
 
 *texstudio-2.8.0 (06 Jul 2014)
 
   06 Jul 2014; Justin Lecher <jlec@gentoo.org> +texstudio-2.8.0.ebuild:
-  version BUmp, #515862
+  version Bump, #515862
 
 *texstudio-2.7.0 (20 Mar 2014)
 
   20 Mar 2014; Justin Lecher <jlec@gentoo.org> +texstudio-2.7.0.ebuild:
-  Version BUmp, #505140
+  Version Bump, #505140
 
 *texstudio-2.6.6 (06 Nov 2013)
 
@@ -93,7 +93,7 @@
 
   22 Oct 2013; Justin Lecher <jlec@gentoo.org> +texstudio-2.6.4.ebuild,
   +files/texstudio-2.6.4-hunspell-quazip.patch, +files/texmakerx_my.pri:
-  Version BUmp, #488942
+  Version Bump, #488942
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> texstudio-2.6.0.ebuild:
   Stable for ppc64, wrt bug #476558
@@ -121,7 +121,7 @@
   -files/texstudio-2.3-xdg-open.patch, -files/texstudio-2.4-desktop.patch,
   -files/texstudio-2.4-hunspell.patch, -files/texstudio-2.5-hunspell.patch,
   -files/texstudio-2.5-qtsingle.patch:
-  Version BUmp, #477292; drop old patches
+  Version Bump, #477292; drop old patches
 
   18 Jul 2013; Patrick Lauer <patrick@gentoo.org> texstudio-2.6.0.ebuild:
   Fixing qtgui deps for qt-4.8.5
@@ -138,7 +138,7 @@
   26 Jun 2013; Justin Lecher <jlec@gentoo.org> +texstudio-2.6.0.ebuild,
   +files/texstudio-2.6.0-desktop.patch,
   +files/texstudio-2.6.0-hunspell-quazip.patch:
-  Version BUmp, #474428
+  Version Bump, #474428
 
   25 Apr 2013; Justin Lecher <jlec@gentoo.org> texstudio-2.5.2.ebuild,
   texstudio-2.5.2-r1.ebuild:

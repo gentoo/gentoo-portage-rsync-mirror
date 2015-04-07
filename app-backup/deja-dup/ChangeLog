@@ -1,6 +1,6 @@
 # ChangeLog for app-backup/deja-dup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.55 2014/11/25 08:57:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.56 2015/04/07 14:05:55 jlec Exp $
 
   25 Nov 2014; Justin Lecher <jlec@gentoo.org> -deja-dup-30.0.ebuild,
   -deja-dup-32.0.ebuild:
@@ -22,7 +22,7 @@
 
   20 Sep 2014; Justin Lecher <jlec@gentoo.org> -deja-dup-28.0.ebuild,
   -deja-dup-29.5.ebuild, +deja-dup-32.0.ebuild:
-  Version BUmp
+  Version Bump
 
   04 May 2014; Pacho Ramos <pacho@gentoo.org> deja-dup-30.0.ebuild:
   x86 stable, bug 508862
@@ -50,7 +50,7 @@
 
   31 Jan 2014; Justin Lecher <jlec@gentoo.org> +deja-dup-29.5.ebuild,
   +files/deja-dup-29.5-cmake.patch, -deja-dup-29.4.ebuild:
-  Version BUmp
+  Version Bump
 
 *deja-dup-29.4 (13 Jan 2014)
 
@@ -85,7 +85,7 @@
   17 Nov 2013; Justin Lecher <jlec@gentoo.org> +deja-dup-29.1.ebuild,
   +files/deja-dup-29.1-cmake-backport-1.patch,
   +files/deja-dup-29.1-cmake-backport-2.patch:
-  Version BUmp
+  Version Bump
 
 *deja-dup-28.0 (25 Sep 2013)
 
@@ -123,7 +123,7 @@
 
   05 Feb 2013; Justin Lecher <jlec@gentoo.org> +deja-dup-25.3.ebuild,
   +deja-dup-25.5.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
 *deja-dup-25.1.1 (05 Nov 2012)
 
@@ -152,7 +152,7 @@
 
   09 Jul 2012; Justin Lecher <jlec@gentoo.org> +deja-dup-23.2.ebuild,
   +files/deja-dup-23.2-add-missing-include.patch:
-  Version BUmp
+  Version Bump
 
   08 Jun 2012; Justin Lecher <jlec@gentoo.org> -deja-dup-22.0.ebuild:
   Cleaned old

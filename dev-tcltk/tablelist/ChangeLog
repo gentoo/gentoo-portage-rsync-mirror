@@ -1,6 +1,6 @@
 # ChangeLog for dev-tcltk/tablelist
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.24 2015/03/25 15:45:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tablelist/ChangeLog,v 1.25 2015/04/07 14:21:51 jlec Exp $
 
   25 Mar 2015; Justin Lecher <jlec@gentoo.org> -tablelist-5.6.ebuild:
   Drop old
@@ -28,7 +28,7 @@
 
   13 Dec 2012; Justin Lecher <jlec@gentoo.org> +tablelist-5.7.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   12 Jun 2012; Justin Lecher <jlec@gentoo.org> -tablelist-5.5.ebuild:
   Cleaned old
@@ -42,7 +42,7 @@
 *tablelist-5.6 (02 May 2012)
 
   02 May 2012; Justin Lecher <jlec@gentoo.org> +tablelist-5.6.ebuild:
-  Version BUmp
+  Version Bump
 
   24 Feb 2012; Justin Lecher <jlec@gentoo.org> -tablelist-5.2.ebuild,
   -tablelist-5.3.ebuild, -tablelist-5.4.ebuild:

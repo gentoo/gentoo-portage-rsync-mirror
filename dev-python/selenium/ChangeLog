@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/selenium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.9 2015/03/08 23:58:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.10 2015/04/07 14:19:59 jlec Exp $
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> selenium-2.42.1.ebuild:
   x86 stable, bug 540290
@@ -12,7 +12,7 @@
 
   24 Jul 2014; Justin Lecher <jlec@gentoo.org> +selenium-2.42.1.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *selenium-2.39.0 (25 Jan 2014)
 

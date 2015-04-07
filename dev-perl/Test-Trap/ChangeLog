@@ -1,12 +1,12 @@
 # ChangeLog for dev-perl/Test-Trap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.22 2015/03/02 07:10:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.23 2015/04/07 14:13:11 jlec Exp $
 
 *Test-Trap-0.3.2 (02 Mar 2015)
 
   02 Mar 2015; Justin Lecher <jlec@gentoo.org> +Test-Trap-0.3.2.ebuild,
   -Test-Trap-0.2.3.ebuild, -Test-Trap-0.2.4.ebuild, -Test-Trap-0.2.5.ebuild:
-  Version BUmp; drop old
+  Version Bump; drop old
 
 *Test-Trap-0.3.0 (22 Dec 2014)
 
@@ -16,12 +16,12 @@
 *Test-Trap-0.2.5 (17 Nov 2014)
 
   17 Nov 2014; Justin Lecher <jlec@gentoo.org> +Test-Trap-0.2.5.ebuild:
-  Verison BUmp
+  Verison Bump
 
 *Test-Trap-0.2.4 (26 May 2014)
 
   26 May 2014; Justin Lecher <jlec@gentoo.org> +Test-Trap-0.2.4.ebuild:
-  Version BUmp
+  Version Bump
 
   30 Jan 2014; Markus Meier <maekke@gentoo.org> Test-Trap-0.2.3.ebuild:
   add ~arm, bug #497208

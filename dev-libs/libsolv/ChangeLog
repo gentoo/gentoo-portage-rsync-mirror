@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libsolv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/ChangeLog,v 1.7 2014/11/19 19:36:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsolv/ChangeLog,v 1.8 2015/04/07 14:12:08 jlec Exp $
 
   19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> libsolv-0.3.0.ebuild,
   libsolv-0.6.6.ebuild:
@@ -14,7 +14,7 @@
 
   09 Oct 2014; Justin Lecher <jlec@gentoo.org> +libsolv-0.6.6.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   24 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libsolv-0.3.0.ebuild:
   Fix S declaration, respect LDFLAGS on one more lib, fix mandir placement.

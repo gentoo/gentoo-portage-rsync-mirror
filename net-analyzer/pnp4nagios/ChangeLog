@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/pnp4nagios
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.62 2014/11/10 13:54:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/ChangeLog,v 1.63 2015/04/07 14:29:01 jlec Exp $
 
   10 Nov 2014; Justin Lecher <jlec@gentoo.org> -pnp4nagios-0.6.19-r1.ebuild,
   -pnp4nagios-0.6.21.ebuild:
@@ -19,12 +19,12 @@
   Stable for amd64, wrt bug #516140
 
   24 Oct 2014; Justin Lecher <jlec@gentoo.org> +pnp4nagios-0.6.24.ebuild:
-  Version BUmp; fixes security issues #516078 & #516140
+  Version Bump; fixes security issues #516078 & #516140
 
 *pnp4nagios-0.6.24 (24 Oct 2014)
 
   24 Oct 2014; Justin Lecher <jlec@gentoo.org> +pnp4nagios-0.6.24.ebuild:
-  Version BUmp; fixes security issues #516078 & #516140
+  Version Bump; fixes security issues #516078 & #516140
 
   15 Jul 2014; Jeroen Roovers <jer@gentoo.org> pnp4nagios-0.6.19-r1.ebuild,
   pnp4nagios-0.6.21.ebuild:

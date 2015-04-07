@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.164 2015/04/07 10:10:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.165 2015/04/07 14:05:48 jlec Exp $
 
   07 Apr 2015; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1-r4.ebuild,
   p7zip-9.20.1-r5.ebuild, p7zip-9.38.1.ebuild:
@@ -9,7 +9,7 @@
 *p7zip-9.38.1 (07 Apr 2015)
 
   07 Apr 2015; Justin Lecher <jlec@gentoo.org> +p7zip-9.38.1.ebuild:
-  Version BUmp, bug #545202
+  Version Bump, bug #545202
 
   10 May 2014; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1-r5.ebuild:
   Add support for x32, #506602, patch by Luke-Jr

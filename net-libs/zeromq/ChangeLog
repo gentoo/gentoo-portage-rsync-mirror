@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.65 2015/04/07 11:13:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.66 2015/04/07 14:31:02 jlec Exp $
 
   07 Apr 2015; Justin Lecher <jlec@gentoo.org> zeromq-2.2.0.ebuild:
   Block net-libs/cppzmq due to file collision, bug #545226
@@ -56,7 +56,7 @@
 
   24 Dec 2013; Justin Lecher <jlec@gentoo.org> zeromq-4.0.1.ebuild,
   zeromq-4.0.1-r1.ebuild, +zeromq-4.0.3.ebuild:
-  Version BUmp; restrict test to serial execution, #489844
+  Version Bump; restrict test to serial execution, #489844
 
   07 Dec 2013; Markus Meier <maekke@gentoo.org> zeromq-4.0.1-r1.ebuild:
   add ~arm, bug #489452

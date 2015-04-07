@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/bokeh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/ChangeLog,v 1.13 2015/03/09 00:03:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/ChangeLog,v 1.14 2015/04/07 14:13:44 jlec Exp $
 
   09 Mar 2015; Pacho Ramos <pacho@gentoo.org> bokeh-0.7.1.ebuild:
   x86 stable, bug 540290
@@ -34,7 +34,7 @@
 
   07 Jul 2014; Justin Lecher <jlec@gentoo.org> +bokeh-0.4.4.ebuild,
   +files/bokeh-0.4.4-fix_test_object.patch, metadata.xml:
-  Importing Version BUmp from sci overlay, thanks Witold Piłat; #516052
+  Importing Version Bump from sci overlay, thanks Witold Piłat; #516052
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> bokeh-0.4.1.ebuild,
   bokeh-0.4.2.ebuild, bokeh-0.4.ebuild:

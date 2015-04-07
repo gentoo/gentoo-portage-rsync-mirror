@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.108 2015/04/02 10:10:22 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.109 2015/04/07 14:12:55 jlec Exp $
 
   02 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> perl-tk-804.33.0.ebuild:
   Mark stable for all
@@ -65,7 +65,7 @@
 *perl-tk-804.32.0 (18 Jun 2014)
 
   18 Jun 2014; Justin Lecher <jlec@gentoo.org> +perl-tk-804.32.0.ebuild:
-  Version BUmp, fixes incompatibilities with png-1.6
+  Version Bump, fixes incompatibilities with png-1.6
 
   21 Jan 2014;  <civil@gentoo.org>
   files/perl-tk-804.31.0-fix-libpng-option.patch:

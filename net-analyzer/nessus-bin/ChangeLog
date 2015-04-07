@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nessus-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.18 2014/10/12 10:27:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/ChangeLog,v 1.19 2015/04/07 14:27:39 jlec Exp $
 
   12 Oct 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove short <longdescription>.
@@ -21,7 +21,7 @@
 
   20 Apr 2011; Justin Lecher <jlec@gentoo.org> -nessus-bin-3.0.5.ebuild,
   -nessus-bin-3.2.0.ebuild, +nessus-bin-4.4.1.ebuild, files/nessusd-initd:
-  Version BUmp, #265555, #228007, #196035, #210006, #276982; CLeaned old,
+  Version Bump, #265555, #228007, #196035, #210006, #276982; CLeaned old,
   #276982
 
   24 Nov 2010; <mattst88@gentoo.org> nessus-bin-3.2.0.ebuild:

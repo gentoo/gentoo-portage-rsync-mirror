@@ -1,6 +1,6 @@
 # ChangeLog for mail-filter/spambayes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.25 2014/12/31 13:57:59 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spambayes/ChangeLog,v 1.26 2015/04/07 14:24:06 jlec Exp $
 
   31 Dec 2014; Thomas Raschbacher <lordvan@gentoo.org>
   -spambayes-1.1_alpha6-r1.ebuild, spambayes-1.1_alpha6-r2.ebuild,
@@ -11,7 +11,7 @@
 *spambayes-1.1_beta1 (24 Jul 2014)
 
   24 Jul 2014; Justin Lecher <jlec@gentoo.org> +spambayes-1.1_beta1.ebuild:
-  Version BUmp
+  Version Bump
 
 *spambayes-1.1_alpha6-r2 (24 Jul 2014)
 

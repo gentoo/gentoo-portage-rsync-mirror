@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.90 2015/03/08 23:58:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.91 2015/04/07 14:19:37 jlec Exp $
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> rpy-2.5.4.ebuild:
   x86 stable, bug 540290
@@ -94,12 +94,12 @@
 *rpy-2.3.6 (29 Apr 2013)
 
   29 Apr 2013; Justin Lecher <jlec@gentoo.org> +rpy-2.3.6.ebuild:
-  Version BUmp
+  Version Bump
 
 *rpy-2.3.4 (18 Mar 2013)
 
   18 Mar 2013; Justin Lecher <jlec@gentoo.org> +rpy-2.3.4.ebuild:
-  Version BUmp; still not py3 ready as pandas is not
+  Version Bump; still not py3 ready as pandas is not
 
   07 Mar 2013; Justin Lecher <jlec@gentoo.org> rpy-2.3.3.ebuild:
   Add missing test dep

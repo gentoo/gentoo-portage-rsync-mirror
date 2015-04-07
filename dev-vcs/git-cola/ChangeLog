@@ -1,11 +1,11 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.39 2015/02/05 10:26:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.40 2015/04/07 14:23:42 jlec Exp $
 
 *git-cola-2.1.1 (05 Feb 2015)
 
   05 Feb 2015; Justin Lecher <jlec@gentoo.org> +git-cola-2.1.1.ebuild:
-  Version BUmp
+  Version Bump
 
   16 Jan 2015; Justin Lecher <jlec@gentoo.org> git-cola-2.0.7.ebuild,
   git-cola-2.1.0.ebuild:
@@ -15,7 +15,7 @@
 
   16 Jan 2015; Justin Lecher <jlec@gentoo.org> -git-cola-2.0.5-r1.ebuild,
   -git-cola-2.0.6.ebuild, git-cola-2.0.7.ebuild, +git-cola-2.1.0.ebuild:
-  Version BUmp; drop old
+  Version Bump; drop old
 
   21 Oct 2014; Justin Lecher <jlec@gentoo.org> files/README.gentoo:
   Fix typo, #526096; thanks Coacher spotting this
@@ -26,7 +26,7 @@
 *git-cola-2.0.7 (01 Oct 2014)
 
   01 Oct 2014; Justin Lecher <jlec@gentoo.org> +git-cola-2.0.7.ebuild:
-  Version BUmp
+  Version Bump
 
   16 Sep 2014; Justin Lecher <jlec@gentoo.org> git-cola-2.0.6.ebuild:
   Some prefix love
@@ -35,7 +35,7 @@
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> -git-cola-2.0.4.ebuild,
   +git-cola-2.0.6.ebuild:
-  Version BUmp
+  Version Bump
 
 *git-cola-2.0.5-r1 (10 Aug 2014)
 
@@ -48,7 +48,7 @@
 *git-cola-2.0.5 (27 Jul 2014)
 
   27 Jul 2014; Justin Lecher <jlec@gentoo.org> +git-cola-2.0.5.ebuild:
-  Version BUmp
+  Version Bump
 
 *git-cola-2.0.4 (25 Jun 2014)
 
@@ -59,7 +59,7 @@
 *git-cola-2.0.3 (26 May 2014)
 
   26 May 2014; Justin Lecher <jlec@gentoo.org> +git-cola-2.0.3.ebuild:
-  Version BUmp
+  Version Bump
 
   25 Apr 2014; Justin Lecher <jlec@gentoo.org> git-cola-2.0.2.ebuild:
   Fix buildtime dependency on sphinx, #508656
@@ -112,7 +112,7 @@
   07 Nov 2013; Justin Lecher <jlec@gentoo.org> +git-cola-1.9.1.ebuild,
   +files/1.9.1-disable-tests.patch,
   +files/git-cola-1.9.1-system-ssh-askpass.patch:
-  Version BUmp
+  Version Bump
 
   12 Oct 2013; Patrick Lauer <patrick@gentoo.org> git-cola-1.8.5.ebuild:
   Whitespace
@@ -120,7 +120,7 @@
 *git-cola-1.8.5 (11 Oct 2013)
 
   11 Oct 2013; Justin Lecher <jlec@gentoo.org> +git-cola-1.8.5.ebuild:
-  Version BUmp
+  Version Bump
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> git-cola-1.8.2.ebuild:
   Stable for x86, wrt bug #472286
@@ -152,7 +152,7 @@
 
   29 Apr 2013; Justin Lecher <jlec@gentoo.org> +git-cola-1.8.2.ebuild,
   metadata.xml:
-  Version BUmp and move to new python eclasses
+  Version Bump and move to new python eclasses
 
 *git-cola-1.8.1 (10 Dec 2012)
 
@@ -166,7 +166,7 @@
 *git-cola-1.8.0 (26 Aug 2012)
 
   26 Aug 2012; Justin Lecher <jlec@gentoo.org> +git-cola-1.8.0.ebuild:
-  Version BUmp
+  Version Bump
 
 *git-cola-1.7.7-r1 (24 May 2012)
 

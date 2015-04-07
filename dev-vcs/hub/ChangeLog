@@ -1,6 +1,6 @@
 # ChangeLog for dev-vcs/hub
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.16 2015/03/07 15:28:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.17 2015/04/07 14:23:56 jlec Exp $
 
   07 Mar 2015; Justin Lecher <jlec@gentoo.org> hub-2.2.0.ebuild:
   Install zsh-completions unconditionally; do not install broken bash-
@@ -63,7 +63,7 @@
 
   25 Dec 2013; Justin Lecher <jlec@gentoo.org> +hub-1.11.0.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *hub-1.10.6 (31 May 2013)
 

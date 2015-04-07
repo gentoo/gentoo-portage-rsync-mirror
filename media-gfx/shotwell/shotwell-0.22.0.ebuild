@@ -1,18 +1,18 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.20.2.ebuild,v 1.1 2014/11/02 19:07:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.22.0.ebuild,v 1.1 2015/04/07 14:20:19 jlec Exp $
 
 EAPI=5
 
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.20"
-VALA_MAX_API_VERSION="0.24"
+VALA_MIN_API_VERSION="0.26"
+VALA_MAX_API_VERSION="0.26"
 
 inherit eutils gnome2 multilib toolchain-funcs vala versionator
 
 MY_PV=$(get_version_component_range 1-2)
 DESCRIPTION="Open source photo manager for GNOME"
-HOMEPAGE="http://yorba.org/shotwell/"
+HOMEPAGE="https://wiki.gnome.org/Apps/Shotwell"
 SRC_URI="
 	mirror://gnome/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.xz
 	http://pkgs.fedoraproject.org/cgit/shotwell.git/plain/shotwell.1
@@ -55,7 +55,7 @@ RDEPEND="
 	>=net-libs/rest-0.7:0.7
 	>=net-libs/webkit-gtk-1.4:3
 	virtual/libgudev:=[introspection]
-	>=x11-libs/gtk+-3.6.0:3[X]"
+	>=x11-libs/gtk+-3.12.2:3[X]"
 DEPEND="${RDEPEND}
 	$(vala_depend)
 	>=sys-devel/m4-1.4.13"

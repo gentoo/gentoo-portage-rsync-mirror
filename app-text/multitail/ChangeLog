@@ -1,6 +1,6 @@
 # ChangeLog for app-text/multitail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.125 2015/02/10 08:19:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.126 2015/04/07 14:08:03 jlec Exp $
 
 *multitail-6.3 (10 Feb 2015)
 
@@ -73,7 +73,7 @@
 
   27 Nov 2013; Justin Lecher <jlec@gentoo.org> +multitail-6.0.ebuild,
   +files/multitail-6.0-as-needed.patch:
-  Version BUmp
+  Version Bump
 
   23 Nov 2013; Jeroen Roovers <jer@gentoo.org> multitail-5.2.13.ebuild:
   Set RESTRICT=test and restore KEYWORDS (bug #492270).

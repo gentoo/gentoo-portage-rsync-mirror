@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/libxmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.12 2014/08/05 11:46:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.13 2015/04/07 14:26:44 jlec Exp $
 
   05 Aug 2014; Raúl Porcel <armin76@gentoo.org> libxmi-1.3.ebuild:
   Add ~s390/~sparc wrt #468582
@@ -33,7 +33,7 @@
 *libxmi-1.3 (04 May 2013)
 
   04 May 2013; Justin Lecher <jlec@gentoo.org> +libxmi-1.3.ebuild:
-  Version BUmp, unbundled from plotutils
+  Version Bump, unbundled from plotutils
 
 *libxmi-1.2 (04 May 2013)
 

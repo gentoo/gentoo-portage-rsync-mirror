@@ -1,11 +1,11 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.168 2015/04/04 18:12:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.169 2015/04/07 14:15:19 jlec Exp $
 
 *ipython-3.1.0 (04 Apr 2015)
 
   04 Apr 2015; Justin Lecher <jlec@gentoo.org> +ipython-3.1.0.ebuild:
-  Version BUmp
+  Version Bump
 
   20 Mar 2015; Patrick Lauer <patrick@gentoo.org> ipython-3.0.0.ebuild:
   Add missing test dep
@@ -154,7 +154,7 @@
 
   21 Feb 2014; Justin Lecher <jlec@gentoo.org> +ipython-1.2.0.ebuild,
   metadata.xml:
-  Version BUmp, tests fail with py3.3
+  Version Bump, tests fail with py3.3
   https://github.com/ipython/ipython/issues/5182
 
   16 Feb 2014; Mike Frysinger <vapier@gentoo.org> ipython-1.0.0.ebuild:

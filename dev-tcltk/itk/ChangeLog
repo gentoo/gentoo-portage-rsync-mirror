@@ -1,6 +1,6 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.37 2015/03/12 09:59:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.38 2015/04/07 14:21:42 jlec Exp $
 
 *itk-3.4.1 (12 Mar 2015)
 *itk-4.0.1 (12 Mar 2015)
@@ -20,7 +20,7 @@
 
   13 Jan 2013; Justin Lecher <jlec@gentoo.org> +itk-4.0_beta6.ebuild,
   +files/itk-4.0_beta6-install_data.patch, metadata.xml:
-  Version BUmp, #451154; prepared by Karl Ernst Brunk
+  Version Bump, #451154; prepared by Karl Ernst Brunk
 
   07 Oct 2012; Justin Lecher <jlec@gentoo.org> -itk-3.3-r1.ebuild,
   -itk-3.3.1_pre20090417-r1.ebuild, itk-3.4_pre20090417.ebuild,

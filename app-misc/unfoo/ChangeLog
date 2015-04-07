@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.39 2014/09/15 19:18:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.40 2015/04/07 14:06:57 jlec Exp $
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> -unfoo-1.0.6.ebuild,
   -unfoo-1.0.7.ebuild:
@@ -37,7 +37,7 @@
 
   19 Nov 2012; Justin Lecher <jlec@gentoo.org> +unfoo-1.0.7.ebuild,
   metadata.xml:
-  Version BUmp, #443742
+  Version Bump, #443742
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> unfoo-1.0.6.ebuild:
   Some Clean up

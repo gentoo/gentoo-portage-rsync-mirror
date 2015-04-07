@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.164 2015/04/02 10:15:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.165 2015/04/07 14:14:14 jlec Exp $
 
   02 Apr 2015; Justin Lecher <jlec@gentoo.org> django-1.8.ebuild:
   Add django-formtools to optfeatures
@@ -9,7 +9,7 @@
 
   02 Apr 2015; Justin Lecher <jlec@gentoo.org> +django-1.8.ebuild,
   django-9999.ebuild:
-  Version BUmp
+  Version Bump
 
   24 Mar 2015; Justin Lecher <jlec@gentoo.org> -django-1.4.19.ebuild,
   -django-1.6.10.ebuild:
@@ -63,7 +63,7 @@
   +files/django-1.4.19-test.patch, +files/django-1.6.10-bashcomp.patch,
   +files/django-1.6.10-test.patch, -django-1.7.4.ebuild, -django-1.7.ebuild,
   django-1.7.5.ebuild, django-9999.ebuild:
-  Version BUmp and drop old for CVE-2015-{0219,0220,0221,0222}, #536586; add
+  Version Bump and drop old for CVE-2015-{0219,0220,0221,0222}, #536586; add
   correct dependencies for tests, Use optfeature instead of harddepened on
   imaging, #473228
 

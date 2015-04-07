@@ -1,6 +1,6 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.49 2014/12/06 21:15:22 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.50 2015/04/07 14:08:25 jlec Exp $
 
 *tbb-4.3.20141023 (06 Dec 2014)
 
@@ -96,7 +96,7 @@
 
   05 Dec 2012; Justin Lecher <jlec@gentoo.org>
   +files/tbb-4.1.20121003-ldflags.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
   04 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -tbb-4.1.20120718.ebuild:
   Removed old w.r.t. bug #442006

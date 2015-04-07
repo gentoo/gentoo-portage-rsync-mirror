@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/libtorrent
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.180 2014/10/27 16:07:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.181 2015/04/07 14:30:41 jlec Exp $
 
   27 Oct 2014; Agostino Sarubbo <ago@gentoo.org> libtorrent-0.13.3.ebuild:
   Stable for ppc64, wrt bug #499474
@@ -39,7 +39,7 @@
 *libtorrent-0.13.2 (09 Jun 2012)
 
   09 Jun 2012; Justin Lecher <jlec@gentoo.org> +libtorrent-0.13.2.ebuild:
-  Version BUmp, move to EAPI=4
+  Version Bump, move to EAPI=4
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtorrent-0.12.5.ebuild,
   libtorrent-0.12.6.ebuild, libtorrent-0.12.7.ebuild,

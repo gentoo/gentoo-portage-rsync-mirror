@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/python-augeas
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/ChangeLog,v 1.12 2015/02/04 04:12:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/ChangeLog,v 1.13 2015/04/07 14:18:16 jlec Exp $
 
 *python-augeas-0.5.0 (04 Feb 2015)
 
@@ -33,7 +33,7 @@
 
   17 Dec 2013; Justin Lecher <jlec@gentoo.org> +python-augeas-0.4.1.ebuild,
   metadata.xml:
-  Version BUmp; bump to new distutils-r1.eclass
+  Version Bump; bump to new distutils-r1.eclass
 
   03 Feb 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   taking maintership

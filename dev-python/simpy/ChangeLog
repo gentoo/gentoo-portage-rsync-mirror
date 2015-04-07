@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/simpy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/ChangeLog,v 1.11 2015/03/31 07:47:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpy/ChangeLog,v 1.12 2015/04/07 14:20:33 jlec Exp $
 
   31 Mar 2015; Ian Delaney <idella4@gentoo.org> -simpy-2.3.1.ebuild,
   -simpy-2.3.ebuild, simpy-3.0.3.ebuild:
@@ -23,7 +23,7 @@
 *simpy-2.3.1 (26 Aug 2012)
 
   26 Aug 2012; Justin Lecher <jlec@gentoo.org> +simpy-2.3.1.ebuild:
-  Version BUmp
+  Version Bump
 
   21 Mar 2012; Justin Lecher <jlec@gentoo.org> simpy-2.3.ebuild:
   Remove version restriction from dev-python/sphinx DEP, #409021

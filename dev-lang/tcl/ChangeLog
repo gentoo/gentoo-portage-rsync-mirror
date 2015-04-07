@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.215 2015/04/02 20:20:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.216 2015/04/07 14:10:02 jlec Exp $
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> tcl-8.5.17.ebuild:
   arm stable, bug #543022
@@ -59,7 +59,7 @@
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> +tcl-8.5.16.ebuild,
   +tcl-8.6.2.ebuild:
-  Version BUmp, #522092
+  Version Bump, #522092
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> tcl-8.5.15-r1.ebuild:
   Stable for sparc, wrt bug #512012
@@ -141,7 +141,7 @@
 
   01 May 2013; Justin Lecher <jlec@gentoo.org> +tcl-8.5.14.ebuild,
   +files/tcl-8.5.14-conf.patch:
-  Version BUmp
+  Version Bump
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> tcl-8.6.0-r1.ebuild:
   Add ~arm-linux keyword.

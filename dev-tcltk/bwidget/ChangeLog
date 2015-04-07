@@ -1,6 +1,6 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.38 2015/04/02 20:12:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.39 2015/04/07 14:21:15 jlec Exp $
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> bwidget-1.9.7.ebuild:
   arm stable, bug #542428
@@ -28,13 +28,13 @@
   07 Mar 2015; Justin Lecher <jlec@gentoo.org> +bwidget-1.9.8.ebuild,
   +files/bwidget-1.9.7-test.patch, +files/bwidget-1.9.8-test.patch,
   bwidget-1.9.7.ebuild:
-  Version BUmp
+  Version Bump
 
 *bwidget-1.9.7 (18 Mar 2014)
 
   18 Mar 2014; Justin Lecher <jlec@gentoo.org> +bwidget-1.9.7.ebuild,
   metadata.xml:
-  Version BUmp, #504966
+  Version Bump, #504966
 
   11 Jun 2013; Markus Meier <maekke@gentoo.org> bwidget-1.9.0.ebuild:
   arm stable, bug #472596

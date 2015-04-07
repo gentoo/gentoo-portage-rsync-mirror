@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/bottleneck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottleneck/ChangeLog,v 1.9 2015/02/17 09:56:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottleneck/ChangeLog,v 1.10 2015/04/07 14:13:50 jlec Exp $
 
   17 Feb 2015; Justin Lecher <jlec@gentoo.org> -bottleneck-0.6.0.ebuild,
   -bottleneck-0.7.0.ebuild, metadata.xml:
@@ -30,7 +30,7 @@
 *bottleneck-0.7.0 (12 Jan 2014)
 
   12 Jan 2014; Justin Lecher <jlec@gentoo.org> +bottleneck-0.7.0.ebuild:
-  Verion BUmp
+  Verion Bump
 
 *bottleneck-0.6.0 (04 May 2013)
 
