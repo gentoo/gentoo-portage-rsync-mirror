@@ -23,7 +23,7 @@
 
   26 Nov 2013; Justin Lecher <jlec@gentoo.org> +enblend-4.1.2.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   09 Sep 2013; Markus Meier <maekke@gentoo.org> enblend-4.1.1-r1.ebuild:
   add slot operator deps for media-libs/openexr and dev-libs/boost

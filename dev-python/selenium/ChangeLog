@@ -12,7 +12,7 @@
 
   24 Jul 2014; Justin Lecher <jlec@gentoo.org> +selenium-2.42.1.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *selenium-2.39.0 (25 Jan 2014)
 

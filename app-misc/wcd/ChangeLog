@@ -88,7 +88,7 @@
 
   26 Jan 2013; Justin Lecher <jlec@gentoo.org> +wcd-5.2.3.ebuild,
   +files/wcd-5.2.3-gentoo.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
 *wcd-5.2.1 (13 Mar 2012)
 

@@ -21,7 +21,7 @@
 
   29 Oct 2014; Justin Lecher <jlec@gentoo.org> +dynd-python-0.6.5.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   02 Sep 2014; Patrick Lauer <patrick@gentoo.org> dynd-python-0.6.2.ebuild:
   Add py3.4 support

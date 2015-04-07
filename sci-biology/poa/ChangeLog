@@ -4,7 +4,7 @@
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> -poa-2.ebuild, metadata.xml,
   poa-2-r1.ebuild:
-  Drop old; BUmp EAPI; handle static-libs
+  Drop old; Bump EAPI; handle static-libs
 
 *poa-2-r1 (18 Sep 2010)
 

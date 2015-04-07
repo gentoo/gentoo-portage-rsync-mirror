@@ -99,7 +99,7 @@
 
   29 Mar 2013; Justin Lecher <jlec@gentoo.org> gptfdisk-0.8.4.ebuild,
   gptfdisk-0.8.5.ebuild, +gptfdisk-0.8.6.ebuild, metadata.xml:
-  Version BUmp and make icu support optional, #428410, #461454
+  Version Bump and make icu support optional, #428410, #461454
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> gptfdisk-0.8.5.ebuild:
   Stable for sparc, wrt bug #427550

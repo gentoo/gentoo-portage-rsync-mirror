@@ -63,7 +63,7 @@
 
   25 Dec 2013; Justin Lecher <jlec@gentoo.org> +hub-1.11.0.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *hub-1.10.6 (31 May 2013)
 

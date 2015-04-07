@@ -16,7 +16,7 @@
   -files/sqlitebrowser-2.0_beta1-gold.patch,
   -files/sqlitebrowser-2.0_beta1-qt-4.7.0.patch,
   -sqlitebrowser-2.0_beta1-r2.ebuild:
-  Drop old; Version BUmp
+  Drop old; Version Bump
 
   29 Sep 2014; Justin Lecher <jlec@gentoo.org> sqlitebrowser-3.3.1.ebuild:
   qcustomplot pkg move
@@ -25,7 +25,7 @@
 
   28 Sep 2014; Justin Lecher <jlec@gentoo.org> +sqlitebrowser-3.3.1.ebuild,
   +files/sqlitebrowser-3.3.1-unbundle.patch, metadata.xml:
-  Version BUmp, #516662
+  Version Bump, #516662
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org>
   sqlitebrowser-2.0_beta1-r2.ebuild:

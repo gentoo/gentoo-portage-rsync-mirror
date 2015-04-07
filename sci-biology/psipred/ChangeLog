@@ -16,7 +16,7 @@
 
   05 Nov 2013; Justin Lecher <jlec@gentoo.org> +psipred-3.4.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   herd is now sci-biology

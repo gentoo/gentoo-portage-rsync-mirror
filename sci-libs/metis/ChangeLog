@@ -48,7 +48,7 @@
 
   14 Oct 2013; Justin Lecher <jlec@gentoo.org> +metis-5.1.0.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   18 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   metis-4.0.3.ebuild:

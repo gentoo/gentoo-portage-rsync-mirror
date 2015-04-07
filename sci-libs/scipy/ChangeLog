@@ -19,7 +19,7 @@
 *scipy-0.15.0 (19 Feb 2015)
 
   19 Feb 2015; Justin Lecher <jlec@gentoo.org> +scipy-0.15.0.ebuild:
-  Version BUmp; fixes problems with newer cython, #540314
+  Version Bump; fixes problems with newer cython, #540314
 
   16 Feb 2015; Pacho Ramos <pacho@gentoo.org> scipy-0.14.0-r1.ebuild:
   amd64/ppc/ppc64/x86 stable, bug #530708

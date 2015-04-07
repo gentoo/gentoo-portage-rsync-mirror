@@ -11,7 +11,7 @@
 
   23 Jan 2013; Justin Lecher <jlec@gentoo.org> +grace-5.1.23.ebuild,
   metadata.xml:
-  Version BUmp, #452338
+  Version Bump, #452338
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> grace-5.1.22-r2.ebuild,
   grace-5.1.22-r3.ebuild:

@@ -268,7 +268,7 @@
   -files/fltk-1.3.0_rc3-conf-tests.patch, -files/fltk-1.3.0_rc3-share.patch,
   -files/fltk-1.3.0_rc5-as-needed.patch, -files/fltk-1.3.0_rc5-share.patch,
   -files/libs-1.7.diff:
-  Version BUmp, Cleaned old, #262395
+  Version Bump, Cleaned old, #262395
 
 *fltk-1.3.0_rc7 (14 Jun 2011)
 

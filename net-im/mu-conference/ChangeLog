@@ -7,7 +7,7 @@
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> +mu-conference-0.8.81.ebuild,
   files/mu-conference-0.7.init, metadata.xml, mu-conference-0.7.ebuild,
   mu-conference-0.8-r1.ebuild:
-  use dobin instead of exeinto /usr/bin/ && doexe; Version BUmp; fix initscript
+  use dobin instead of exeinto /usr/bin/ && doexe; Version Bump; fix initscript
   for deprecated options, #505598
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> mu-conference-0.7.ebuild,

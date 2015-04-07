@@ -40,7 +40,7 @@
 
   16 Mar 2013; Justin Lecher <jlec@gentoo.org> clusterssh-4.01.01.ebuild,
   +clusterssh-4.01.05.ebuild, clusterssh-9999.ebuild:
-  Version BUmp
+  Version Bump
 
   14 Jan 2013; Justin Lecher <jlec@gentoo.org> -clusterssh-3.28.ebuild:
   Drop old, fix #426810

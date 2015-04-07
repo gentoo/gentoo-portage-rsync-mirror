@@ -14,7 +14,7 @@
 
   14 Aug 2012; Justin Lecher <jlec@gentoo.org> arb-5.2.ebuild,
   +files/arb-5.2-gcc-47.patch, +arb-5.3.ebuild:
-  Version BUmp; add fix for gcc-4.7, #431228
+  Version Bump; add fix for gcc-4.7, #431228
 
   04 Mar 2012; Justin Lecher <jlec@gentoo.org> arb-5.1-r1.ebuild,
   arb-5.2.ebuild:

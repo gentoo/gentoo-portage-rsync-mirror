@@ -86,7 +86,7 @@
 *monomer-db-5.16 (16 Jun 2010)
 
   16 Jun 2010; Justin Lecher <jlec@gentoo.org> +monomer-db-5.16.ebuild:
-  Version BUmp
+  Version Bump
 
   28 Mar 2010; Justin Lecher <jlec@gentoo.org> monomer-db-0.090729.ebuild:
   Keyworded for ~x86-linux ~amd64-linux

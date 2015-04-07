@@ -98,7 +98,7 @@
 
   04 Jul 2010; Justin Lecher <jlec@gentoo.org> +files/0.94-session.patch,
   +terminator-0.94.ebuild:
-  Version BUmp, added installation of multiple abis
+  Version Bump, added installation of multiple abis
 
   25 Apr 2010; Justin Lecher <jlec@gentoo.org> +files/0.93-session.patch,
   terminator-0.93.ebuild:

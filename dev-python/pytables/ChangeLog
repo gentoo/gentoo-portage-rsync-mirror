@@ -40,7 +40,7 @@
 *pytables-3.1.0 (21 Feb 2014)
 
   21 Feb 2014; Justin Lecher <jlec@gentoo.org> +pytables-3.1.0.ebuild:
-  Version BUmp
+  Version Bump
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> pytables-3.0.0.ebuild:
   amd64 stable, bug #497866

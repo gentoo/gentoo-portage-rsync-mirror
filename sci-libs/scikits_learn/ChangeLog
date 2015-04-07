@@ -6,7 +6,7 @@
 
   14 Nov 2014; Justin Lecher <jlec@gentoo.org> scikits_learn-0.15.1.ebuild,
   +scikits_learn-0.15.2.ebuild:
-  Version BUmp
+  Version Bump
 
   26 Oct 2014; Justin Lecher <jlec@gentoo.org> scikits_learn-0.15.1.ebuild:
   Add missing dep for doc building, #451834

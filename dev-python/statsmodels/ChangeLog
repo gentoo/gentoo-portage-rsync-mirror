@@ -18,7 +18,7 @@
 
   07 Dec 2014; Justin Lecher <jlec@gentoo.org> +statsmodels-0.6.1.ebuild,
   metadata.xml:
-  Version BUmp; add py3.4 compatibility, #530606; working testsuite, #530270
+  Version Bump; add py3.4 compatibility, #530606; working testsuite, #530270
 
   27 Oct 2013; Michał Górny <mgorny@gentoo.org> statsmodels-0.5.0.ebuild:
   Remove redundant python_export_best (done by the eclass).

@@ -6,7 +6,7 @@
 
   16 Mar 2013; Justin Lecher <jlec@gentoo.org> +cvector-1.0.3.1.ebuild,
   +files/cvector-1.0.3.1-LDFLAGS.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> cvector-1.0.3-r1.ebuild:
   Marking cvector-1.0.3-r1 ppc for bug 393999

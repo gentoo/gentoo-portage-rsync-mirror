@@ -6,7 +6,7 @@
 
   03 Apr 2015; Justin Lecher <jlec@gentoo.org> +pillow-2.8.1.ebuild,
   -pillow-2.4.0-r1.ebuild, metadata.xml:
-  Version BUmp, with fix for CVE-2014-9601, #534748; drop old
+  Version Bump, with fix for CVE-2014-9601, #534748; drop old
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.5.3-r1.ebuild:
   Stable for alpha, wrt bug #522426

@@ -53,7 +53,7 @@
 
   24 Dec 2013; Justin Lecher <jlec@gentoo.org> zeromq-4.0.1.ebuild,
   zeromq-4.0.1-r1.ebuild, +zeromq-4.0.3.ebuild:
-  Version BUmp; restrict test to serial execution, #489844
+  Version Bump; restrict test to serial execution, #489844
 
   07 Dec 2013; Markus Meier <maekke@gentoo.org> zeromq-4.0.1-r1.ebuild:
   add ~arm, bug #489452

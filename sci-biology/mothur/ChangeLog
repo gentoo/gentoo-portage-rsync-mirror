@@ -12,7 +12,7 @@
   mothur-1.13.0-r1.ebuild, +mothur-1.13.0-r2.ebuild,
   +files/mothur-1.13.0-overflows2.patch, +mothur-1.27.0.ebuild,
   +files/mothur-1.27.0-makefile.patch, +files/mothur-1.27.0-overflows.patch:
-  Version BUmp; fix for buffer overflows, #431258
+  Version Bump; fix for buffer overflows, #431258
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> mothur-1.13.0-r1.ebuild:
   Convert from "useq" to "use".

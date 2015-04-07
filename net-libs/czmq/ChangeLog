@@ -44,7 +44,7 @@
 
   27 May 2014; Justin Lecher <jlec@gentoo.org> czmq-2.1.0.ebuild,
   +czmq-2.2.0.ebuild:
-  Add missing dep in libsodium, #511612; version BUmp
+  Add missing dep in libsodium, #511612; version Bump
 
   27 Apr 2014; Justin Lecher <jlec@gentoo.org> czmq-2.0.3.ebuild,
   czmq-2.1.0.ebuild, +files/version.sh:

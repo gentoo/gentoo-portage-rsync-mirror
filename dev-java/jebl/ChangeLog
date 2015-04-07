@@ -13,7 +13,7 @@
 
   18 Feb 2013; Justin Lecher <jlec@gentoo.org> +jebl-2013.02.18.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   25 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> jebl-0.5.3.ebuild,
   jebl-2009.09.22.ebuild, jebl-9999.ebuild:

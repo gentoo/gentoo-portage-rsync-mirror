@@ -10,7 +10,7 @@
   07 Mar 2013; Justin Lecher <jlec@gentoo.org> -repeatmasker-3.2.7.ebuild,
   -repeatmasker-3.2.8.ebuild, -repeatmasker-3.2.9.ebuild,
   +repeatmasker-4.0.1.ebuild, metadata.xml:
-  Version BUmp; cleaned old
+  Version Bump; cleaned old
 
 *repeatmasker-3.2.9 (03 Feb 2011)
 

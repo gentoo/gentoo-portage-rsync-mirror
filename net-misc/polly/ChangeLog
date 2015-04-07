@@ -6,7 +6,7 @@
 
   12 Feb 2014; Justin Lecher <jlec@gentoo.org> +polly-0.93.11.ebuild,
   polly-0.93.10.ebuild, polly-0.93.9.ebuild:
-  Version BUmp, fix usage of distutils-r1.eclass
+  Version Bump, fix usage of distutils-r1.eclass
 
 *polly-0.93.9 (29 Jun 2013)
 *polly-0.93.10 (29 Jun 2013)

@@ -14,7 +14,7 @@
 
   09 Oct 2014; Justin Lecher <jlec@gentoo.org> +libsolv-0.6.6.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   24 Jul 2013; Tomáš Chvátal <scarabeus@gentoo.org> libsolv-0.3.0.ebuild:
   Fix S declaration, respect LDFLAGS on one more lib, fix mandir placement.

@@ -41,7 +41,7 @@
   25 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/0.3.3.1-fix-syntax.patch,
   xia2-0.3.1.0.ebuild, xia2-0.3.1.6.ebuild, xia2-0.3.1.7.ebuild,
   +xia2-0.3.3.1.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> xia2-0.3.1.7.ebuild:
   marked ~ppc wrt #303931

@@ -65,7 +65,7 @@
 *perl-tk-804.32.0 (18 Jun 2014)
 
   18 Jun 2014; Justin Lecher <jlec@gentoo.org> +perl-tk-804.32.0.ebuild:
-  Version BUmp, fixes incompatibilities with png-1.6
+  Version Bump, fixes incompatibilities with png-1.6
 
   21 Jan 2014;  <civil@gentoo.org>
   files/perl-tk-804.31.0-fix-libpng-option.patch:

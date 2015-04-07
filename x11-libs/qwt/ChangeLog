@@ -24,7 +24,7 @@
 
   21 Dec 2014; Justin Lecher <jlec@gentoo.org> qwt-6.1.1.ebuild,
   +qwt-6.1.2.ebuild, +files/qwt-6.1.1-pc-destdir.patch:
-  Version BUmp; fix location of pc files, #523490
+  Version Bump; fix location of pc files, #523490
 
   17 Dec 2014; Michael Palimaka <kensington@gentoo.org> qwt-6.1.0.ebuild,
   qwt-6.1.1.ebuild:

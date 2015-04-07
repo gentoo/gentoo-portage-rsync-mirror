@@ -5,7 +5,7 @@
 *velvet-1.2.10 (28 Dec 2013)
 
   28 Dec 2013; Justin Lecher <jlec@gentoo.org> +velvet-1.2.10.ebuild:
-  Import Version BUmp from sci overlay, thanks mahn for the ebuild, #495094
+  Import Version Bump from sci overlay, thanks mahn for the ebuild, #495094
 
   12 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly

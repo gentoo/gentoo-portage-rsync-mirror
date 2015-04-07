@@ -15,7 +15,7 @@
 
   11 Aug 2014; Justin Lecher <jlec@gentoo.org> astropy-0.3.2.ebuild,
   +astropy-0.4.ebuild, metadata.xml:
-  Version BUmp, #519250
+  Version Bump, #519250
 
 *astropy-0.3.2 (28 May 2014)
 
@@ -64,7 +64,7 @@
 
   31 May 2013; Justin Lecher <jlec@gentoo.org> +astropy-0.2.3.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   22 May 2013; Patrick Lauer <patrick@gentoo.org> astropy-0.2.1.ebuild:
   (Re-)Adding python-3.3 to python_targets

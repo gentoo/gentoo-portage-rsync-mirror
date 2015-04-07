@@ -106,7 +106,7 @@
   28 Sep 2014; Justin Lecher <jlec@gentoo.org> +openvas-scanner-4.0.3.ebuild,
   +files/openvassd.init, +files/openvassd.service, +files/openvassd.tmpfiles.d,
   metadata.xml:
-  Version BUmp; add systemd support
+  Version Bump; add systemd support
 
 *openvas-scanner-4.0.1 (19 Jun 2014)
 

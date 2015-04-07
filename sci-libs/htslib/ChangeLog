@@ -5,7 +5,7 @@
 *htslib-1.2.1 (18 Feb 2015)
 
   18 Feb 2015; Justin Lecher <jlec@gentoo.org> +htslib-1.2.1.ebuild:
-  Version BUmp, #540352
+  Version Bump, #540352
 
   06 Jan 2015; Justin Lecher <jlec@gentoo.org> htslib-1.1.ebuild:
   Fix broken delete of manpage
@@ -13,7 +13,7 @@
 *htslib-1.1 (06 Jan 2015)
 
   06 Jan 2015; Justin Lecher <jlec@gentoo.org> +htslib-1.1.ebuild:
-  Version BUmp
+  Version Bump
 
   20 Sep 2014; Justin Lecher <jlec@gentoo.org> htslib-1.0.ebuild:
   Fix pc file prefix problems

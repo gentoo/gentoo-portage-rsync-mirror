@@ -18,7 +18,7 @@
 
   27 Jul 2013; Justin Lecher <jlec@gentoo.org> granite-0.1.0.ebuild,
   +granite-0.2.1.ebuild:
-  Version BUmp
+  Version Bump
 
   12 May 2013; Pacho Ramos <pacho@gentoo.org> granite-0.1.0.ebuild:
   Use vala.eclass (#467384)

@@ -38,7 +38,7 @@
 *pdb-tools-0.2.1 (26 Apr 2013)
 
   26 Apr 2013; Justin Lecher <jlec@gentoo.org> +pdb-tools-0.2.1.ebuild:
-  Version BUmp
+  Version Bump
 
   16 Apr 2013; Justin Lecher <jlec@gentoo.org> pdb-tools-0.1.4-r4.ebuild:
   This package cannot be installed for multiple py abis

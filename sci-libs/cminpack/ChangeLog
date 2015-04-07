@@ -34,7 +34,7 @@
   20 Jun 2012; Justin Lecher <jlec@gentoo.org> cminpack-1.2.2.ebuild,
   +files/cminpack-1.2.2-underlinking.patch, +cminpack-1.3.0.ebuild,
   metadata.xml:
-  Version BUmp, add underlinking fix, which fixes test failures, #422693
+  Version Bump, add underlinking fix, which fixes test failures, #422693
 
 *cminpack-1.2.2 (29 May 2012)
 

@@ -33,7 +33,7 @@
 
   06 Mar 2013; Justin Lecher <jlec@gentoo.org> dssp-2.0.4.ebuild,
   +dssp-2.1.0.ebuild, +files/dssp-2.1.0-gentoo.patch:
-  Version BUmp; add missing dep on dev-libs/boost
+  Version Bump; add missing dep on dev-libs/boost
 
   28 Feb 2013; Justin Lecher <jlec@gentoo.org> -dssp-070831.ebuild,
   metadata.xml:

@@ -5,13 +5,13 @@
 *minfx-1.0.11 (10 Oct 2014)
 
   10 Oct 2014; Justin Lecher <jlec@gentoo.org> +minfx-1.0.11.ebuild:
-  Version BUmp
+  Version Bump
 
 *minfx-1.0.10 (15 Sep 2014)
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> -minfx-1.0.3.ebuild,
   +minfx-1.0.10.ebuild:
-  Version BUmp; drop version using old python eclass
+  Version Bump; drop version using old python eclass
 
 *minfx-1.0.6 (06 May 2014)
 

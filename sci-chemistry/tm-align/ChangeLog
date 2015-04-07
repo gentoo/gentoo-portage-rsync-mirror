@@ -16,7 +16,7 @@
 
   12 May 2013; Justin Lecher <jlec@gentoo.org> -tm-align-20130508.ebuild,
   +tm-align-20130511.ebuild:
-  Version BUmp, remove broken version
+  Version Bump, remove broken version
 
 *tm-align-20130508 (11 May 2013)
 

@@ -9,7 +9,7 @@
 
   17 Feb 2013; Justin Lecher <jlec@gentoo.org> mcl-08.312.ebuild,
   +mcl-12.135.ebuild, metadata.xml:
-  Version BUmp; move to autotools-utils; install docs in right place, #296893
+  Version Bump; move to autotools-utils; install docs in right place, #296893
 
   26 Apr 2012; Justin Lecher <jlec@gentoo.org> mcl-08.312.ebuild, metadata.xml:
   Move to EAPI=4

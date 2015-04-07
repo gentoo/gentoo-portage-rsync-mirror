@@ -6,7 +6,7 @@
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> bodr-9-r1.ebuild,
   +bodr-10.ebuild:
-  Version BUmp; punt base.eclass
+  Version Bump; punt base.eclass
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #70723

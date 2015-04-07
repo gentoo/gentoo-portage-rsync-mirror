@@ -49,7 +49,7 @@
 
   03 May 2013; Justin Lecher <jlec@gentoo.org> +pympler-0.3.1.ebuild,
   metadata.xml:
-  Version BUmp, #468358; drop pypy as support ist broken
+  Version Bump, #468358; drop pypy as support ist broken
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pympler-0.2.0.ebuild:
   Add ~arm, wrt bug #449220

@@ -76,7 +76,7 @@
 *rtorrent-0.9.2 (09 Jun 2012)
 
   09 Jun 2012; Justin Lecher <jlec@gentoo.org> +rtorrent-0.9.2.ebuild:
-  Version BUmp, move to EAPI=4
+  Version Bump, move to EAPI=4
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> rtorrent-0.8.6-r1.ebuild,
   rtorrent-0.8.6-r4.ebuild, rtorrent-0.8.7-r4.ebuild, rtorrent-0.8.9.ebuild,

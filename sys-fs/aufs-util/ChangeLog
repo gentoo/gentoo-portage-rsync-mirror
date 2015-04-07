@@ -34,7 +34,7 @@
 
   06 Oct 2014; Justin Lecher <jlec@gentoo.org>
   +aufs-util-3.16_p20141006.ebuild:
-  Version BUmp
+  Version Bump
 
   21 Aug 2014; Justin Lecher <jlec@gentoo.org> aufs-util-3.16_p20140818.ebuild:
   Useless blank line on last line
@@ -189,7 +189,7 @@
 *aufs-util-3.7.6 (07 Feb 2013)
 
   07 Feb 2013; Justin Lecher <jlec@gentoo.org> +aufs-util-3.7.6.ebuild:
-  Version BUmp
+  Version Bump
 
   23 Jan 2013; Justin Lecher <jlec@gentoo.org> aufs-util-3.7-r1.ebuild:
   Don't depend on the kernel sources

@@ -17,7 +17,7 @@
 
   06 Jan 2015; Justin Lecher <jlec@gentoo.org> +samtools-1.1.ebuild,
   +files/samtools-1.1-buildsystem.patch:
-  Version BUmp
+  Version Bump
 
 *samtools-1.0-r1 (25 Sep 2014)
 
@@ -59,7 +59,7 @@
 
   20 Sep 2013; Justin Lecher <jlec@gentoo.org> +samtools-0.1.19.ebuild,
   +files/samtools-0.1.19-buildsystem.patch:
-  Version BUmp, #485450
+  Version Bump, #485450
 
 *samtools-0.1.18-r3 (29 Mar 2013)
 
@@ -97,7 +97,7 @@
 
   30 Apr 2011; Justin Lecher <jlec@gentoo.org> samtools-0.1.12.ebuild,
   samtools-0.1.12a-r1.ebuild, +samtools-0.1.16.ebuild:
-  Version BUmp, #365265
+  Version Bump, #365265
 
 *samtools-0.1.12a-r1 (14 Mar 2011)
 

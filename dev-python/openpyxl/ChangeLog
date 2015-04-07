@@ -12,17 +12,17 @@
 *openpyxl-1.7.0 (07 Dec 2014)
 
   07 Dec 2014; Justin Lecher <jlec@gentoo.org> +openpyxl-1.7.0.ebuild:
-  Version BUmp
+  Version Bump
 
 *openpyxl-1.9.0 (07 Dec 2014)
 
   07 Dec 2014; Justin Lecher <jlec@gentoo.org> +openpyxl-1.9.0.ebuild:
-  Version BUmp
+  Version Bump
 
 *openpyxl-2.1.0 (07 Dec 2014)
 
   07 Dec 2014; Justin Lecher <jlec@gentoo.org> +openpyxl-2.1.0.ebuild:
-  Version BUmp
+  Version Bump
 
   28 Oct 2014; Alexis Ballier <aballier@gentoo.org> openpyxl-2.0.2.ebuild:
   keyword ~arm

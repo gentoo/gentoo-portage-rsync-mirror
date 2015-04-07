@@ -6,7 +6,7 @@
 
   01 Apr 2013; Justin Lecher <jlec@gentoo.org> +vpncwatch-1.8.1.ebuild,
   +files/vpncwatch-1.8.1-Makefile.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
 *vpncwatch-1.8 (07 Oct 2011)
 
