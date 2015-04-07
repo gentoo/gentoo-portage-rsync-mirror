@@ -5,4 +5,8 @@
     <email>phajdan.jr@gentoo.org</email>
     <name>Pawel Hajdan jr</name>
   </maintainer>
+  <maintainer>
+    <email>mgorny@gentoo.org</email>
+    <name>Michał Górny</name>
+  </maintainer>
 </pkgmetadata>
