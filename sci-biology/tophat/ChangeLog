@@ -25,7 +25,7 @@
 
   19 Jul 2012; Justin Lecher <jlec@gentoo.org> tophat-2.0.0.ebuild,
   +tophat-2.0.2.ebuild, +files/tophat-2.0.2-flags.patch, metadata.xml:
-  Version BUmp; do parallel builds; handle debug build
+  Version Bump; do parallel builds; handle debug build
 
   25 Apr 2012; Justin Lecher <jlec@gentoo.org> tophat-1.0.12.ebuild,
   tophat-1.4.1.ebuild, tophat-2.0.0.ebuild:

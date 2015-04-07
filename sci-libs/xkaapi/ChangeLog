@@ -20,7 +20,7 @@
 
   22 Dec 2014; Justin Lecher <jlec@gentoo.org> +xkaapi-3.0.3.ebuild,
   +files/xkaapi-3.0.3-flags.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
   31 Jul 2014; Maciej Mrozowski <reavertm@gentoo.org> xkaapi-2.1.ebuild:
   Remove explicit src_test override since eclass is fixed, bug 499580.

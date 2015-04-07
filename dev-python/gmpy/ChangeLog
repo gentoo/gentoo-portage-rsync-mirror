@@ -56,7 +56,7 @@
 
   23 Dec 2013; Justin Lecher <jlec@gentoo.org> +gmpy-1.17.ebuild,
   gmpy-2.0.0.ebuild, +gmpy-2.0.3.ebuild, metadata.xml:
-  Version BUmp; Bump to distutils-r1
+  Version Bump; Bump to distutils-r1
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gmpy-2.0.0.ebuild:
   Stable for x86, wrt bug #474182

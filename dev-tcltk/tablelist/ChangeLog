@@ -28,7 +28,7 @@
 
   13 Dec 2012; Justin Lecher <jlec@gentoo.org> +tablelist-5.7.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   12 Jun 2012; Justin Lecher <jlec@gentoo.org> -tablelist-5.5.ebuild:
   Cleaned old
@@ -42,7 +42,7 @@
 *tablelist-5.6 (02 May 2012)
 
   02 May 2012; Justin Lecher <jlec@gentoo.org> +tablelist-5.6.ebuild:
-  Version BUmp
+  Version Bump
 
   24 Feb 2012; Justin Lecher <jlec@gentoo.org> -tablelist-5.2.ebuild,
   -tablelist-5.3.ebuild, -tablelist-5.4.ebuild:

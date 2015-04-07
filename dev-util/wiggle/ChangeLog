@@ -22,7 +22,7 @@
 
   09 Jun 2012; Justin Lecher <jlec@gentoo.org> -wiggle-0.6-r3.ebuild,
   -wiggle-0.8.ebuild, +wiggle-0.9.ebuild, metadata.xml:
-  Version BUmp, Drop old
+  Version Bump, Drop old
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> wiggle-0.8-r1.ebuild:
   x86 stable wrt bug #397031

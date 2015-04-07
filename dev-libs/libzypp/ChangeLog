@@ -6,7 +6,7 @@
 
   09 Oct 2014; Justin Lecher <jlec@gentoo.org> +libzypp-14.29.4.ebuild,
   +files/libzypp-14.29.4-overload.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
   02 Aug 2013; Michal Hrusecky <miska@gentoo.org> libzypp-13.3.0.ebuild:
   Add missing dependency on dev-libs/libsolv

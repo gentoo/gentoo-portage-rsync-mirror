@@ -12,7 +12,7 @@
 
   06 Jul 2014; Justin Lecher <jlec@gentoo.org> pycifrw-3.3-r1.ebuild,
   +pycifrw-3.6.2.ebuild, metadata.xml:
-  Add missing dep on setuptools, #514782; Version BUmp
+  Add missing dep on setuptools, #514782; Version Bump
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> pycifrw-3.3-r1.ebuild:
   Restricting pypy and jython

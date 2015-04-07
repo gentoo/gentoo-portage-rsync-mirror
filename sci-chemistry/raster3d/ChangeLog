@@ -51,7 +51,7 @@
   27 Feb 2011; Justin Lecher <jlec@gentoo.org> +files/3.0.2-as-needed.patch,
   +files/3.0.2-gentoo-prefix.patch, raster3d-2.7c.ebuild,
   +raster3d-3.0.2.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   17 Dec 2010; Justin Lecher <jlec@gentoo.org> raster3d-2.9.2.ebuild:
   Fix for fortran.eclass removal

@@ -39,7 +39,7 @@
 *Bio-SamTools-1.370.0 (23 Jan 2013)
 
   23 Jan 2013; Justin Lecher <jlec@gentoo.org> +Bio-SamTools-1.370.0.ebuild:
-  Version BUmp, #452364
+  Version Bump, #452364
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

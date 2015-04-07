@@ -8,7 +8,7 @@
 *form-4.1 (05 Nov 2013)
 
   05 Nov 2013; Justin Lecher <jlec@gentoo.org> +form-4.1.ebuild, metadata.xml:
-  Version BUmp, #490390
+  Version Bump, #490390
 
   01 Jun 2012; Thomas Kahle <tomka@gentoo.org> form-4.0_p20120529.ebuild:
   keyworded ~amd64 after request on sci-ml

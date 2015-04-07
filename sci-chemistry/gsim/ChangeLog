@@ -19,7 +19,7 @@
 
   06 Mar 2013; Justin Lecher <jlec@gentoo.org> +gsim-21.0.ebuild,
   +files/gsim-21.0-build.conf.patch:
-  Version BUmp, seems to fix segf #412303
+  Version Bump, seems to fix segf #412303
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gsim-0.20.1.ebuild:
   Move Qt dependencies to the new category

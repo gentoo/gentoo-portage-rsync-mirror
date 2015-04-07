@@ -19,7 +19,7 @@
   +files/ball-1.4.2-Fix-compilation-of-sipModularWidget.patch,
   +files/ball-1.4.2-PDBFile-Fix-compilation-with-gcc-4.8.patch,
   +files/ball-1.4.2-QT4_EXTRACT_OPTIONS-CMake-macro-changed-in-CMake-2.8.patch:
-  Version BUmp
+  Version Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> ball-1.4.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

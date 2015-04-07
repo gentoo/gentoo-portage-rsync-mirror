@@ -28,13 +28,13 @@
   07 Mar 2015; Justin Lecher <jlec@gentoo.org> +bwidget-1.9.8.ebuild,
   +files/bwidget-1.9.7-test.patch, +files/bwidget-1.9.8-test.patch,
   bwidget-1.9.7.ebuild:
-  Version BUmp
+  Version Bump
 
 *bwidget-1.9.7 (18 Mar 2014)
 
   18 Mar 2014; Justin Lecher <jlec@gentoo.org> +bwidget-1.9.7.ebuild,
   metadata.xml:
-  Version BUmp, #504966
+  Version Bump, #504966
 
   11 Jun 2013; Markus Meier <maekke@gentoo.org> bwidget-1.9.0.ebuild:
   arm stable, bug #472596

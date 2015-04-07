@@ -27,7 +27,7 @@
 
   05 Mar 2011; Justin Lecher <jlec@gentoo.org> -liborigin-20100420.ebuild,
   -liborigin-20100630.ebuild, +liborigin-20110221.ebuild:
-  Version BUmp
+  Version Bump
 
   21 Oct 2010; Markos Chandras <hwoarang@gentoo.org>
   liborigin-20100903.ebuild:

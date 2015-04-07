@@ -27,7 +27,7 @@
 
   06 Nov 2013; Justin Lecher <jlec@gentoo.org> +efibootmgr-0.6.0.ebuild,
   metadata.xml:
-  Version BUmp, #486062
+  Version Bump, #486062
 
   30 Oct 2013; Mike Gilbert <floppym@gentoo.org> efibootmgr-0.5.4-r1.ebuild,
   efibootmgr-0.5.4.ebuild, metadata.xml:

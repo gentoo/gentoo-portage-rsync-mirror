@@ -6,7 +6,7 @@
 
   28 Mar 2015; Justin Lecher <jlec@gentoo.org> +clustal-omega-1.2.1.ebuild,
   -clustal-omega-1.0.3.ebuild, -clustal-omega-1.1.0.ebuild:
-  Version BUmp; drop old
+  Version Bump; drop old
 
 *clustal-omega-1.2.0 (06 Jan 2014)
 
@@ -16,7 +16,7 @@
 *clustal-omega-1.1.0 (26 Apr 2013)
 
   26 Apr 2013; Justin Lecher <jlec@gentoo.org> +clustal-omega-1.1.0.ebuild:
-  Version BUmp
+  Version Bump
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly

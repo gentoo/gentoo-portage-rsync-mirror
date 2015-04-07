@@ -100,7 +100,7 @@
 *pointless-1.5.19 (10 Apr 2011)
 
   10 Apr 2011; Justin Lecher <jlec@gentoo.org> +pointless-1.5.19.ebuild:
-  Version BUmp
+  Version Bump
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   pointless-1.5.12.ebuild:

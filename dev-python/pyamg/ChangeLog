@@ -18,7 +18,7 @@
 
   07 Feb 2013; Justin Lecher <jlec@gentoo.org> +pyamg-2.0.5.ebuild,
   metadata.xml:
-  Version BUmp; move to new python eclasses
+  Version Bump; move to new python eclasses
 
   19 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> -pyamg-2.0.0.ebuild,
   metadata.xml, pyamg-2.0.4.ebuild:

@@ -13,7 +13,7 @@
 
   27 Nov 2013; Justin Lecher <jlec@gentoo.org> +fakeroot-ng-0.18.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #328951

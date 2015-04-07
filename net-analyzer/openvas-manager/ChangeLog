@@ -30,7 +30,7 @@
   +openvas-manager-6.0_beta5.ebuild,
   files/openvas-manager-5.0.4-bsdsource.patch,
   +files/openvas-manager-6.0_beta5-bsdsource.patch:
-  Version BUmp
+  Version Bump
 
 *openvas-manager-6.0_beta4 (01 Dec 2014)
 *openvas-manager-5.0.7 (01 Dec 2014)
@@ -83,7 +83,7 @@
   +files/openvas-manager-5.0.4-gpgerror.patch, +files/openvasmd.init,
   +files/openvasmd.logrotate, +files/openvasmd.service,
   +files/openvasmd-daemon.conf, metadata.xml:
-  Version BUmp; add systemd support
+  Version Bump; add systemd support
 
 *openvas-manager-5.0.2 (19 Jun 2014)
 

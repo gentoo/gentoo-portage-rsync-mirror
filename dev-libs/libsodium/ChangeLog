@@ -102,7 +102,7 @@
 
   26 Oct 2013; Justin Lecher <jlec@gentoo.org> +libsodium-0.4.5.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
   10 Sep 2013; Julian Ospald <hasufell@gentoo.org> libsodium-0.4.3.ebuild,
   metadata.xml:

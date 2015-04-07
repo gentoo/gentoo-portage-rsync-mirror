@@ -1131,7 +1131,7 @@
 *aufs-sources-3.7.8 (15 Feb 2013)
 
   15 Feb 2013; Justin Lecher <jlec@gentoo.org> +aufs-sources-3.7.8.ebuild:
-  Version BUmp
+  Version Bump
 
 *aufs-sources-3.7.7 (13 Feb 2013)
 
@@ -1142,7 +1142,7 @@
 
   07 Feb 2013; Justin Lecher <jlec@gentoo.org> -aufs-sources-3.6.10.ebuild,
   -aufs-sources-3.7.1.ebuild, +aufs-sources-3.7.6.ebuild:
-  Version BUmp; drop unsupported
+  Version Bump; drop unsupported
 
 *aufs-sources-3.7.4 (24 Jan 2013)
 

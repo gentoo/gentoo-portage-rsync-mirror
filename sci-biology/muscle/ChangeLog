@@ -28,7 +28,7 @@
 
   24 Jun 2010; Justin Lecher <jlec@gentoo.org> +files/3.8.31-make.patch,
   muscle-3.6.ebuild, muscle-3.7.ebuild, +muscle-3.8.31.ebuild:
-  Version BUmp, blocking sci-libs/libmuscle, #308707
+  Version Bump, blocking sci-libs/libmuscle, #308707
 
 *muscle-3.7 (21 Mar 2008)
 

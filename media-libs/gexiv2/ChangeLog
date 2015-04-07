@@ -47,7 +47,7 @@
   21 Aug 2013; Justin Lecher <jlec@gentoo.org> gexiv2-0.1.0.ebuild,
   gexiv2-0.2.1.ebuild, gexiv2-0.3.1.ebuild, gexiv2-0.4.1.ebuild,
   gexiv2-0.6.0.ebuild, +gexiv2-0.6.1.ebuild:
-  Version BUmp
+  Version Bump
 
   30 Jun 2013; Justin Lecher <jlec@gentoo.org> gexiv2-0.6.0.ebuild:
   Fix usage of python-r1.eclass

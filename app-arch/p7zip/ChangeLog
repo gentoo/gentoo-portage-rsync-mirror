@@ -5,7 +5,7 @@
 *p7zip-9.38.1 (07 Apr 2015)
 
   07 Apr 2015; Justin Lecher <jlec@gentoo.org> +p7zip-9.38.1.ebuild:
-  Version BUmp, bug #545202
+  Version Bump, bug #545202
 
   10 May 2014; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1-r5.ebuild:
   Add support for x32, #506602, patch by Luke-Jr

@@ -6,7 +6,7 @@
 
   06 Oct 2014; Justin Lecher <jlec@gentoo.org> +pam_yubico-2.17.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *pam_yubico-2.16 (19 Aug 2014)
 

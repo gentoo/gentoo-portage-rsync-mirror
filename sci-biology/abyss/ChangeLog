@@ -10,7 +10,7 @@
   11 Aug 2013; Justin Lecher <jlec@gentoo.org> abyss-1.3.3.ebuild,
   abyss-1.3.4.ebuild, +abyss-1.3.6.ebuild, +files/abyss-1.3.3-ac_prog_ar.patch,
   +files/abyss-1.3.6-ac_prog_ar.patch, +files/abyss-1.3.6-gcc-4.7.patch:
-  Version BUmp, respect AR, #477580
+  Version Bump, respect AR, #477580
 
   11 Aug 2013; Justin Lecher <jlec@gentoo.org> -abyss-1.2.3.ebuild,
   -abyss-1.2.7.ebuild, -abyss-1.3.0.ebuild:

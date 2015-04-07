@@ -10,7 +10,7 @@
 
   23 Jan 2013; Justin Lecher <jlec@gentoo.org> +ipe-7.1.3.ebuild,
   +files/ipe-7.1.3-gold.patch, metadata.xml:
-  Version BUmp, #452334
+  Version Bump, #452334
 
 *ipe-7.1.2 (10 May 2012)
 

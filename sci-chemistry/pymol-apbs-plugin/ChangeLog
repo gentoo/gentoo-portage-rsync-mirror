@@ -21,7 +21,7 @@
   22 Nov 2013; Justin Lecher <jlec@gentoo.org>
   +pymol-apbs-plugin-2.1_p26.ebuild,
   +files/pymol-apbs-plugin-2.1_p26-tcltk8.6.patch, metadata.xml:
-  Version BUmp, add fix for tcltk8.6 support
+  Version Bump, add fix for tcltk8.6 support
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry

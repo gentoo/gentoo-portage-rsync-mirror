@@ -6,7 +6,7 @@
 
   09 Oct 2014; Justin Lecher <jlec@gentoo.org> zypper-1.9.1.ebuild,
   +zypper-1.11.14.ebuild, +files/zypper-1.11.14-fix-header.patch, metadata.xml:
-  Version BUmp
+  Version Bump
 
   31 Jul 2013; Michal Hrusecky <miska@gentoo.org> zypper-1.9.1.ebuild:
   Better package description (bug#479112)

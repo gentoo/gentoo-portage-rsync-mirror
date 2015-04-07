@@ -10,7 +10,7 @@
 *theseus-2.0.6 (06 Jun 2013)
 
   06 Jun 2013; Justin Lecher <jlec@gentoo.org> +theseus-2.0.6.ebuild:
-  Version BUmp; fix double prefix
+  Version Bump; fix double prefix
 
 *theseus-2.0.3 (29 May 2013)
 

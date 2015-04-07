@@ -12,7 +12,7 @@
 
   06 Jun 2013; Justin Lecher <jlec@gentoo.org> tklib-0.5.ebuild,
   tklib-0.5-r1.ebuild, +tklib-0.6.ebuild, metadata.xml:
-  Version BUmp, fix file collision, #472336
+  Version Bump, fix file collision, #472336
 
 *tklib-0.5-r1 (02 Aug 2010)
 

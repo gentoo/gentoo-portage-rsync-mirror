@@ -73,7 +73,7 @@
 
   27 Nov 2013; Justin Lecher <jlec@gentoo.org> +multitail-6.0.ebuild,
   +files/multitail-6.0-as-needed.patch:
-  Version BUmp
+  Version Bump
 
   23 Nov 2013; Jeroen Roovers <jer@gentoo.org> multitail-5.2.13.ebuild:
   Set RESTRICT=test and restore KEYWORDS (bug #492270).

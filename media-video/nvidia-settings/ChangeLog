@@ -47,14 +47,14 @@
 *nvidia-settings-331.20 (07 Nov 2013)
 
   07 Nov 2013; Justin Lecher <jlec@gentoo.org> +nvidia-settings-331.20.ebuild:
-  Version BUmp
+  Version Bump
 
 *nvidia-settings-331.17 (29 Oct 2013)
 *nvidia-settings-319.60 (29 Oct 2013)
 
   29 Oct 2013; Justin Lecher <jlec@gentoo.org> +nvidia-settings-319.60.ebuild,
   +nvidia-settings-331.17.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
 *nvidia-settings-325.15 (08 Aug 2013)
 
@@ -64,7 +64,7 @@
 *nvidia-settings-319.32 (30 Jun 2013)
 
   30 Jun 2013; Justin Lecher <jlec@gentoo.org> +nvidia-settings-319.32.ebuild:
-  Version BUmp
+  Version Bump
 
 *nvidia-settings-319.23 (22 Jun 2013)
 

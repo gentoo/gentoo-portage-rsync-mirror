@@ -39,7 +39,7 @@
 *libtorrent-0.13.2 (09 Jun 2012)
 
   09 Jun 2012; Justin Lecher <jlec@gentoo.org> +libtorrent-0.13.2.ebuild:
-  Version BUmp, move to EAPI=4
+  Version Bump, move to EAPI=4
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtorrent-0.12.5.ebuild,
   libtorrent-0.12.6.ebuild, libtorrent-0.12.7.ebuild,

@@ -15,7 +15,7 @@
 *aria-2.3.2_p20130826 (09 Oct 2013)
 
   09 Oct 2013; Justin Lecher <jlec@gentoo.org> +aria-2.3.2_p20130826.ebuild:
-  Version BUmp
+  Version Bump
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry

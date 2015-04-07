@@ -30,7 +30,7 @@
 *getdata-0.8.0 (17 Jul 2012)
 
   17 Jul 2012; Justin Lecher <jlec@gentoo.org> +getdata-0.8.0.ebuild:
-  Version BUmp
+  Version Bump
 
   19 Sep 2011; Justin Lecher <jlec@gentoo.org> getdata-0.6.3-r1.ebuild,
   getdata-0.7.3.ebuild:

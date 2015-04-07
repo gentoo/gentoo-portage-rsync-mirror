@@ -33,7 +33,7 @@
 
   23 Jan 2013; Justin Lecher <jlec@gentoo.org> +merkaartor-0.18.1.ebuild,
   metadata.xml:
-  Version BUmp, #429788; fixes compilation with gcc-4.7, #422549
+  Version Bump, #429788; fixes compilation with gcc-4.7, #422549
 
   16 Nov 2012; Agostino Sarubbo <ago@gentoo.org> merkaartor-0.17.2.ebuild:
   workaround for bug 399061

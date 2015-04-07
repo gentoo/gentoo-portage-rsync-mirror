@@ -19,7 +19,7 @@
 
   04 Nov 2012; Justin Lecher <jlec@gentoo.org> mmtk-2.7.3.ebuild,
   +mmtk-2.7.5.ebuild, metadata.xml:
-  Version BUmp
+  Version Bump
 
   28 Feb 2012; Patrick Lauer <patrick@gentoo.org> mmtk-2.7.3.ebuild:
   Restricting pypy and jython

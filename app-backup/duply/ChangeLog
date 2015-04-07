@@ -6,7 +6,7 @@
 
   17 Oct 2014; Justin Lecher <jlec@gentoo.org> +duply-1.9.1.ebuild,
   +files/README.gentoo:
-  Version BUmp
+  Version Bump
 
 *duply-1.9.0 (15 Sep 2014)
 

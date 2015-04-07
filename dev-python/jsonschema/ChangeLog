@@ -6,7 +6,7 @@
 
   28 Feb 2015; Justin Lecher <jlec@gentoo.org> +jsonschema-2.4.0.ebuild,
   -jsonschema-0.8.0.ebuild, metadata.xml:
-  Version BUmp; drop old
+  Version Bump; drop old
 
   20 Feb 2015; Pacho Ramos <pacho@gentoo.org> jsonschema-2.3.0.ebuild:
   x86 stable, bug #540532

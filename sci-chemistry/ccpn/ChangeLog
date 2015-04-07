@@ -167,7 +167,7 @@
   -ccpn-2.3.1_p140310.ebuild, -ccpn-2.3.1_p140325.ebuild,
   -ccpn-2.3.1_p140401.ebuild, +ccpn-2.3.1_p140425.ebuild,
   +ccpn-2.4.0_p140425.ebuild:
-  Version BUmp; drop old
+  Version Bump; drop old
 
 *ccpn-2.3.1_p140401 (01 Apr 2014)
 

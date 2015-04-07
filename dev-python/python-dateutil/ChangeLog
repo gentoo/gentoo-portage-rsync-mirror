@@ -6,7 +6,7 @@
 
   03 Apr 2015; Justin Lecher <jlec@gentoo.org> +python-dateutil-2.4.2.ebuild,
   metadata.xml:
-  Version BUmp
+  Version Bump
 
 *python-dateutil-2.4.1-r1 (30 Mar 2015)
 

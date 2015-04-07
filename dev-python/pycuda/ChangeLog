@@ -6,7 +6,7 @@
 
   02 Dec 2014; Justin Lecher <jlec@gentoo.org> +pycuda-2014.1.ebuild,
   pycuda-9999.ebuild:
-  Version BUmp; add py3.4 support, #531138
+  Version Bump; add py3.4 support, #531138
 
   23 Nov 2013; Justin Lecher <jlec@gentoo.org> pycuda-2013.1.1.ebuild,
   pycuda-9999.ebuild:

@@ -36,7 +36,7 @@
 
   15 Oct 2013; Justin Lecher <jlec@gentoo.org> sympy-0.7.2-r1.ebuild,
   +sympy-0.7.3.ebuild, metadata.xml:
-  Version BUmp; fix missing py3.3 handling, #488098
+  Version Bump; fix missing py3.3 handling, #488098
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> sympy-0.7.2-r1.ebuild:
   Also compatible with python3_3

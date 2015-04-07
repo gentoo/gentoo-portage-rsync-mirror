@@ -34,7 +34,7 @@
 
   07 Jul 2014; Justin Lecher <jlec@gentoo.org> +bokeh-0.4.4.ebuild,
   +files/bokeh-0.4.4-fix_test_object.patch, metadata.xml:
-  Importing Version BUmp from sci overlay, thanks Witold Piłat; #516052
+  Importing Version Bump from sci overlay, thanks Witold Piłat; #516052
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> bokeh-0.4.1.ebuild,
   bokeh-0.4.2.ebuild, bokeh-0.4.ebuild:

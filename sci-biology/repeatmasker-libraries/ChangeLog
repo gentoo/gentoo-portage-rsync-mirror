@@ -11,7 +11,7 @@
   -repeatmasker-libraries-20090120.ebuild,
   -repeatmasker-libraries-20090604.ebuild,
   +repeatmasker-libraries-20120418.ebuild, metadata.xml:
-  Version BUmp; cleaned old; fix license
+  Version Bump; cleaned old; fix license
 
 *repeatmasker-libraries-20090604 (20 Aug 2009)
 

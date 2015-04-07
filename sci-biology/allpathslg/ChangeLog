@@ -5,7 +5,7 @@
 *allpathslg-52415 (31 Mar 2015)
 
   31 Mar 2015; Justin Lecher <jlec@gentoo.org> +allpathslg-52415.ebuild:
-  Version BUmp; move to EAPI=5 and autotools-utils.eclass; thanks Martin Mokrejs
+  Version Bump; move to EAPI=5 and autotools-utils.eclass; thanks Martin Mokrejs
   for preparing the bump
 
   31 Mar 2015; Justin Lecher <jlec@gentoo.org> allpathslg-47093.ebuild:
