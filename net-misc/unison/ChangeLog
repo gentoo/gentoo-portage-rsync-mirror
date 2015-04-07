@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/unison
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.73 2015/03/31 20:08:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.74 2015/04/07 21:08:33 dilfridge Exp $
+
+  07 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -unison-2.13.16-r1.ebuild:
+  Drop old EAPI=1 version
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> unison-2.13.16-r1.ebuild,
   unison-2.27.157.ebuild, unison-2.32.52.ebuild, unison-2.40.102.ebuild,

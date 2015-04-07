@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16467 2015/04/07 20:59:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16468 2015/04/07 21:02:53 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,7 @@
 # EAPI=1, last upstream release 2007, last significant
 # ebuild commit 2007. Masked for removal in 30 days.
 app-laptop/gtkpbbuttons
+app-laptop/gkrellm-pmu
 
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (07 Apr 2015)
 # Masked for testing.
