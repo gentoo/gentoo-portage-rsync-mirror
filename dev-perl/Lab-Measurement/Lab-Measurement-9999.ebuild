@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.15 2014/07/25 21:42:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.16 2015/04/07 13:40:50 dilfridge Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ RDEPEND="
 	dev-perl/Exception-Class
 	dev-perl/Hook-LexWrap
 	dev-perl/List-MoreUtils
+	dev-perl/Term-ANSIScreen
 	dev-perl/TermReadKey
 	dev-perl/TeX-Encode
 	dev-perl/XML-Generator

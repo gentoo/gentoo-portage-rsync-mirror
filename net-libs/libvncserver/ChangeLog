@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.86 2015/03/02 09:29:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.87 2015/04/07 13:52:01 idella4 Exp $
+
+*libvncserver-0.9.10 (07 Apr 2015)
+
+  07 Apr 2015; Ian Delaney <idella4@gentoo.org>
+  +files/libvncserver-0.9.10-libva-1.0.patch, +libvncserver-0.9.10.ebuild,
+  metadata.xml:
+  bump; add required patch sourced from upstream, setting herd to proxy-
+  maintainers and proxy maintainer to Alex Xu, all wrt sec bug #523590
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libvncserver-0.9.9-r3.ebuild:
   Stable for ppc, wrt bug #526032

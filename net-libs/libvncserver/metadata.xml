@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>alex_y_xu@yahoo.ca</email>
+		<name>Alex Xu</name>
+		<description>Proxy maintainer</description>
 	</maintainer>
 	<longdescription>
 If you don't know VNC, have a look at the original VNC or at Tridia 
