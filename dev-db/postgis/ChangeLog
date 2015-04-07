@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.101 2015/03/25 06:02:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.102 2015/04/07 05:59:56 patrick Exp $
+
+*postgis-2.1.7 (07 Apr 2015)
+
+  07 Apr 2015; Patrick Lauer <patrick@gentoo.org> +postgis-2.1.7.ebuild:
+  Bump
 
 *postgis-2.1.6 (25 Mar 2015)
 

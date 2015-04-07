@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/equalizer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.7 2015/03/20 13:45:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.8 2015/04/07 05:41:35 graaff Exp $
+
+*equalizer-0.0.11 (07 Apr 2015)
+
+  07 Apr 2015; Hans de Graaff <graaff@gentoo.org> +equalizer-0.0.11.ebuild:
+  Version bump.
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> equalizer-0.0.9.ebuild:
   Add ruby22.
