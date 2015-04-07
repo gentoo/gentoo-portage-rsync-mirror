@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r5.ebuild,v 1.4 2014/05/10 17:09:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r5.ebuild,v 1.5 2015/04/07 10:10:39 jlec Exp $
 
 EAPI=5
 
@@ -118,11 +118,10 @@ src_install() {
 		make_wrapper 7zFM "/usr/$(get_libdir)/${PN}/7zFM"
 
 		make_desktop_entry 7zFM "${PN} FM" ${PN} "GTK;Utility;Archiving;Compression"
-		make_desktop_entry 7zG "${PN} GUI" ${PN} "GTK;Utility;Archiving;Compression"
 
 		dobin GUI/p7zipForFilemanager
 		exeinto /usr/$(get_libdir)/${PN}
-		doexe bin/7z{G,FM}
+		doexe bin/7zFM
 
 		insinto /usr/$(get_libdir)/${PN}
 		doins -r GUI/{Lang,help}

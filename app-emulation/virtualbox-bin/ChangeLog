@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.190 2015/04/02 13:40:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.191 2015/04/07 10:21:52 idella4 Exp $
+
+  07 Apr 2015; Ian Delaney <idella4@gentoo.org>
+  virtualbox-bin-4.3.26.98988-r1.ebuild:
+  correction to revbump wrt Bug #539712
 
 *virtualbox-bin-4.3.26.98988-r1 (02 Apr 2015)
 

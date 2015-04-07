@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.26.98988-r1.ebuild,v 1.1 2015/04/02 13:40:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.26.98988-r1.ebuild,v 1.2 2015/04/07 10:21:52 idella4 Exp $
 
 EAPI=5
 
@@ -75,9 +75,9 @@ RDEPEND="!!app-emulation/virtualbox
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXdmcp
-	${PYTHON_DEPS}"
+	python? ( ${PYTHON_DEPS} )"
 
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 S=${WORKDIR}
 
 QA_TEXTRELS_amd64="opt/VirtualBox/VBoxVMM.so"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.15.2.ebuild,v 1.5 2015/04/07 10:10:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.16.0.ebuild,v 1.1 2015/04/07 10:10:31 jlec Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples excel html test R"
 
 EXTRA_DEPEND="
@@ -79,7 +79,7 @@ RDEPEND="${CDEPEND}
 	R? ( dev-python/rpy[${PYTHON_USEDEP}] )"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-zoneinfo.patch
+	"${FILESDIR}"/${PN}-0.15.2-zoneinfo.patch
 )
 
 python_prepare_all() {
