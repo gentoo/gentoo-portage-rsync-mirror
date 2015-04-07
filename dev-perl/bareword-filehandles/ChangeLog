@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/bareword-filehandles
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/bareword-filehandles/ChangeLog,v 1.1 2015/04/06 23:01:19 dilfridge Exp $
+
+*bareword-filehandles-0.3.0 (06 Apr 2015)
+
+  06 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +bareword-filehandles-0.3.0.ebuild, +metadata.xml:
+  New package, needed for dev-perl/strictures
