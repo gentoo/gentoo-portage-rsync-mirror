@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hiera-eyaml-gpg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera-eyaml-gpg/ChangeLog,v 1.1 2015/02/12 01:23:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera-eyaml-gpg/ChangeLog,v 1.2 2015/04/07 18:51:08 graaff Exp $
+
+*hiera-eyaml-gpg-0.5 (07 Apr 2015)
+
+  07 Apr 2015; Hans de Graaff <graaff@gentoo.org> +hiera-eyaml-gpg-0.5.ebuild:
+  Version bump.
 
 *hiera-eyaml-gpg-0.4 (12 Feb 2015)
 

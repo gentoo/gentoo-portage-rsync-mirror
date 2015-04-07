@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera-eyaml/hiera-eyaml-2.0.7.ebuild,v 1.1 2015/03/04 07:10:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera-eyaml/hiera-eyaml-2.0.7.ebuild,v 1.2 2015/04/07 18:42:49 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -24,7 +24,7 @@ IUSE="test"
 ruby_add_rdepend ">=dev-ruby/highline-1.6.19"
 ruby_add_rdepend "dev-ruby/trollop:2"
 
-ruby_add_bdepend "test? ( dev-util/cucumber dev-ruby/hiera-eyaml-plaintext )"
+ruby_add_bdepend "test? ( dev-util/cucumber dev-util/aruba dev-ruby/hiera-eyaml-plaintext )"
 
 all_ruby_prepare() {
 	# Fix highline dependency to be compatible with more versions.

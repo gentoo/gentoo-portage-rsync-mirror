@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r3.ebuild,v 1.3 2015/02/27 15:19:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r3.ebuild,v 1.4 2015/04/07 18:57:22 graaff Exp $
 
 EAPI=5
 
@@ -34,6 +34,9 @@ all_ruby_prepare() {
 	# Fix encoding assumption of environment for Ruby 1.9.
 	# https://github.com/hpricot/hpricot/issues/52
 	# sed -i -e '1 iEncoding.default_external=Encoding::UTF_8 if RUBY_VERSION =~ /1.9/' test/load_files.rb || die
+
+	# Avoid unneeded dependency on git.
+	sed -i -e '/^REV/ s/.*/REV = "6"/' Rakefile || die
 }
 
 each_ruby_prepare() {
