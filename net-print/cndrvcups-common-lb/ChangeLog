@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cndrvcups-common-lb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-common-lb/ChangeLog,v 1.4 2014/09/25 09:27:48 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-common-lb/ChangeLog,v 1.5 2015/04/08 21:32:22 pacho Exp $
+
+  08 Apr 2015; Pacho Ramos <pacho@gentoo.org>
+  -cndrvcups-common-lb-2.70-r2.ebuild, cndrvcups-common-lb-2.90.ebuild:
+  amd64/x86 stable, drop old
 
 *cndrvcups-common-lb-2.90 (25 Sep 2014)
 

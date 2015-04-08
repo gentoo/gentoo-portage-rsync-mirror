@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/unscd-0.52-r1.ebuild,v 1.1 2014/10/09 13:43:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/unscd-0.52-r2.ebuild,v 1.1 2015/04/08 21:35:04 zmedico Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit systemd toolchain-funcs
 
 DESCRIPTION="simple & stable nscd replacement"
 HOMEPAGE="http://busybox.net/~vda/unscd/README"
@@ -31,5 +31,7 @@ src_compile() {
 
 src_install() {
 	newinitd "${FILESDIR}"/unscd.initd-r1 unscd
+	systemd_newtmpfilesd "${FILESDIR}"/unscd-tmpfiles.conf unscd.conf
+	systemd_dounit "${FILESDIR}"/unscd.service
 	dosbin unscd
 }

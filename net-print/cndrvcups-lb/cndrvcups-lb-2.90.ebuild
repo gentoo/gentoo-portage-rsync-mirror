@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/cndrvcups-lb-2.90.ebuild,v 1.2 2014/10/15 15:17:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/cndrvcups-lb-2.90.ebuild,v 1.3 2015/04/08 21:32:48 pacho Exp $
 
 EAPI=5
 inherit eutils autotools multilib versionator
@@ -14,7 +14,7 @@ SRC_URI="http://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDEwMDAwMjcwODEx
 
 LICENSE="Canon-UFR-II"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 # Needed because GPL2 stuff miss their sources in tarball
