@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/django-tables2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tables2/ChangeLog,v 1.1 2015/04/08 14:17:18 jlec Exp $
+
+*django-tables2-0.16.0 (08 Apr 2015)
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org> +django-tables2-0.16.0.ebuild,
+  +metadata.xml:
+  New package written by me
