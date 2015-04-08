@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pympler
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.24 2015/04/07 14:18:02 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.25 2015/04/08 05:11:47 idella4 Exp $
+
+*pympler-0.4 (08 Apr 2015)
+
+  08 Apr 2015; Ian Delaney <idella4@gentoo.org> +pympler-0.4.ebuild,
+  pympler-0.3.1.ebuild:
+  drop old impls & add py3.4 to -0.3.1, bump, add IUSE doc to install pre-built
+  docs, fixes bug #530566 by pacho
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> -pympler-0.2.0.ebuild:
   Drop old
