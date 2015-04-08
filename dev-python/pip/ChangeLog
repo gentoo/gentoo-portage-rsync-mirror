@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.58 2015/03/07 08:27:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.60 2015/04/08 04:08:52 radhermit Exp $
+
+  08 Apr 2015; Tim Harder <radhermit@gentoo.org> -pip-6.0.2.ebuild,
+  -pip-6.0.3.ebuild, -pip-6.0.6.ebuild, -pip-6.0.7.ebuild:
+  Remove old.
+
+*pip-6.1.1 (08 Apr 2015)
+
+  08 Apr 2015; Tim Harder <radhermit@gentoo.org> +pip-6.1.1.ebuild:
+  Version bump.
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pip-1.5.6.ebuild:
   ppc stable, bug 540290
