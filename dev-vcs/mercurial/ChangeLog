@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.178 2015/04/04 07:54:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.179 2015/04/08 17:53:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> mercurial-3.2.3.ebuild,
+  mercurial-3.3.2.ebuild, mercurial-3.3.3.ebuild, mercurial-9999.ebuild:
+  Drop old Python implementations
 
 *mercurial-3.3.3 (04 Apr 2015)
 

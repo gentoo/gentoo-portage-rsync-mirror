@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cryptlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.38 2014/03/31 20:39:28 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.39 2015/04/08 17:51:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cryptlib-3.4.0-r1.ebuild:
+  Drop old Python implementations
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> cryptlib-3.4.0-r1.ebuild:
   Add support for the new PyPy slotting.

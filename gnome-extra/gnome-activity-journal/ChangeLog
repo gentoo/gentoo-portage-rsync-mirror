@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-activity-journal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/ChangeLog,v 1.16 2014/07/23 15:17:57 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-activity-journal/ChangeLog,v 1.17 2015/04/08 17:56:30 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  gnome-activity-journal-0.8.0-r4.ebuild,
+  gnome-activity-journal-0.8.0-r5.ebuild:
+  Drop old Python implementations
 
   23 Jul 2014; Agostino Sarubbo <ago@gentoo.org>
   gnome-activity-journal-0.8.0-r5.ebuild:

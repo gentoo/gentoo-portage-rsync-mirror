@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2-r1.ebuild,v 1.1 2015/04/05 16:09:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2-r1.ebuild,v 1.2 2015/04/08 17:51:55 mgorny Exp $
 
 EAPI=5
 
 VALA_MIN_API_VERSION=0.16
 VALA_USE_DEPEND=vapigen
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils flag-o-matic python-single-r1 vala
 

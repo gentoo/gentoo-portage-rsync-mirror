@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.14-r1.ebuild,v 1.1 2014/07/01 06:46:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist/zeitgeist-0.9.14-r1.ebuild,v 1.2 2015/04/08 17:56:30 mgorny Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 VALA_MIN_API_VERSION=0.20
 

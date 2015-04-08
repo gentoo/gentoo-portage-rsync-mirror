@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.1.0_pre20150305.ebuild,v 1.1 2015/03/17 11:23:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.1.0_pre20150305.ebuild,v 1.2 2015/04/08 17:51:55 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 EGIT_REPO_URI="http://llvm.org/git/${PN}.git"
 

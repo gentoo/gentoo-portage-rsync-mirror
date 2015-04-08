@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.100 2015/03/20 10:17:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.101 2015/04/08 17:51:56 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> newt-0.52.15.ebuild:
+  Drop old Python implementations
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> newt-0.52.12.ebuild,
   newt-0.52.13.ebuild, newt-0.52.14-r1.ebuild, newt-0.52.14-r2.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86rushproto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.41 2015/03/03 12:47:52 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86rushproto/ChangeLog,v 1.42 2015/04/08 17:42:35 mrueg Exp $
+
+  08 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xf86rushproto-1.1.2.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> xf86rushproto-1.1.2-r1.ebuild:
   add arm64 support, tested on A53 board

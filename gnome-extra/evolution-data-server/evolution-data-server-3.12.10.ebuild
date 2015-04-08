@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.10.ebuild,v 1.1 2015/01/14 10:11:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.12.10.ebuild,v 1.2 2015/04/08 17:56:31 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python2_7 python3_4 pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 python3_4 pypy )
 VALA_MIN_API_VERSION="0.22"
 VALA_USE_DEPEND="vapigen"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/svneverever
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.14 2014/12/08 15:16:01 sping Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svneverever/ChangeLog,v 1.15 2015/04/08 17:53:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> svneverever-1.2.2-r1.ebuild:
+  Drop old Python implementations
 
   08 Dec 2014; Sebastian Pipping <sping@gentoo.org> -svneverever-1.2.2.ebuild:
   Remove distutils-r0 version

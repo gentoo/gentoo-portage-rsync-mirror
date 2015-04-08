@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.16.ebuild,v 1.1 2014/06/24 00:58:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/libgit2-glib-0.0.16.ebuild,v 1.2 2015/04/08 17:51:56 mgorny Exp $
 
 EAPI=5
 
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python{3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{3_3,3_4} )
 
 inherit gnome2 python-r1
 

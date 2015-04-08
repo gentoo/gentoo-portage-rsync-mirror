@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.128 2015/03/18 15:41:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.129 2015/04/08 17:59:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libcaca-0.99_beta18-r1.ebuild:
+  Drop old Python implementations
 
 *libcaca-0.99_beta19 (18 Mar 2015)
 

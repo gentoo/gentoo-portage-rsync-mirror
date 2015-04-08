@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzrtools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.40 2014/08/10 21:22:36 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.41 2015/04/08 17:53:04 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> bzrtools-2.5.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bzrtools-2.4.1.ebuild,
   bzrtools-2.5.ebuild:

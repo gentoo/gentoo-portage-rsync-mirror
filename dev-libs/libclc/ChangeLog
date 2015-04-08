@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libclc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/ChangeLog,v 1.16 2015/03/17 11:23:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/ChangeLog,v 1.17 2015/04/08 17:51:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  libclc-0.0.1_pre20140101-r1.ebuild, libclc-0.0.1_pre20141027.ebuild,
+  libclc-0.1.0_pre20150305.ebuild:
+  Drop old Python implementations
 
 *libclc-0.1.0_pre20150305 (17 Mar 2015)
 

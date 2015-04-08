@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgit2-glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.23 2015/01/20 10:35:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.24 2015/04/08 17:51:56 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libgit2-glib-0.0.12.ebuild,
+  libgit2-glib-0.0.16.ebuild:
+  Drop old Python implementations
 
   20 Jan 2015; Pacho Ramos <pacho@gentoo.org> libgit2-glib-0.0.24.ebuild,
   libgit2-glib-0.22.0.ebuild:

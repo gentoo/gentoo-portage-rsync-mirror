@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.193 2014/10/17 22:55:40 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.194 2015/04/08 17:59:42 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> lilypond-9999.ebuild:
+  Drop old Python implementations
 
   17 Oct 2014; Tim Harder <radhermit@gentoo.org> -lilypond-2.16.2.ebuild,
   -lilypond-2.19.13.ebuild, -lilypond-2.19.14.ebuild,

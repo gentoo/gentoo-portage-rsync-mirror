@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.148.2.ebuild,v 1.2 2014/10/12 08:47:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-0.148.2.ebuild,v 1.3 2015/04/08 17:54:02 mgorny Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://github.com/openSUSE/osc.git"
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
 if [[ "${PV}" == "9999" ]]; then

@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86dgaproto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.71 2015/03/03 12:43:58 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.72 2015/04/08 17:42:01 mrueg Exp $
+
+  08 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xf86dgaproto-2.1-r1.ebuild,
+  -xf86dgaproto-2.1.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> xf86dgaproto-2.1-r2.ebuild:
   add arm64 support, tested on A53 board

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fatrace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fatrace/ChangeLog,v 1.5 2015/03/09 15:36:08 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fatrace/ChangeLog,v 1.6 2015/04/08 17:54:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> fatrace-0.5.ebuild,
+  fatrace-0.9.ebuild:
+  Drop old Python implementations
 
 *fatrace-0.9 (09 Mar 2015)
 

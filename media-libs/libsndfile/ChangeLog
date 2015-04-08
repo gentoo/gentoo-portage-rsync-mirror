@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.150 2015/03/03 08:54:24 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.151 2015/04/08 17:59:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libsndfile-1.0.25-r1.ebuild:
+  Drop old Python implementations
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libsndfile-1.0.25-r1.ebuild:
   add arm64 support, tested on A53 board

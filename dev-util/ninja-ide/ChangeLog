@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ninja-ide
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.25 2014/07/06 12:52:10 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.26 2015/04/08 17:54:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> ninja-ide-2.1.1-r3.ebuild,
+  ninja-ide-2.1.1-r5.ebuild, ninja-ide-2.2.ebuild, ninja-ide-2.3.ebuild:
+  Drop old Python implementations
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> ninja-ide-2.1.1-r3.ebuild,
   ninja-ide-2.1.1-r5.ebuild, ninja-ide-2.2.ebuild, ninja-ide-2.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libreport
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.23 2014/04/26 06:55:39 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/ChangeLog,v 1.24 2015/04/08 17:51:56 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libreport-2.0.13-r1.ebuild:
+  Drop old Python implementations
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -libreport-2.0.13.ebuild:
   drop old

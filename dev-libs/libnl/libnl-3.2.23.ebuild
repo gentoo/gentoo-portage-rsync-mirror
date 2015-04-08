@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.23.ebuild,v 1.13 2014/04/06 15:00:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.23.ebuild,v 1.14 2015/04/08 17:51:55 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_{6,7} python3_{2,3} )
+PYTHON_COMPAT=( python2_7 python3_3 )
 DISTUTILS_OPTIONAL=1
 inherit distutils-r1 eutils libtool multilib
 

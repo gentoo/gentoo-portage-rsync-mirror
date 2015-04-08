@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.156 2015/01/13 22:00:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.157 2015/04/08 17:54:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> scons-2.3.0.ebuild,
+  scons-2.3.1-r1.ebuild, scons-2.3.1.ebuild:
+  Drop old Python implementations
 
   13 Jan 2015; Mike Gilbert <floppym@gentoo.org> scons-2.3.4.ebuild:
   Keyword ~amd64-fbsd, tested by Yutah SATOH on bug 488434.

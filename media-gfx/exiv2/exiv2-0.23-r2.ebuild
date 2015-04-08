@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23-r2.ebuild,v 1.4 2014/06/18 19:24:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23-r2.ebuild,v 1.5 2015/04/08 17:58:14 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_IN_SOURCE_BUILD=1
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils multilib toolchain-funcs python-any-r1 autotools-multilib
 

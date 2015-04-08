@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.13.ebuild,v 1.4 2013/09/05 18:40:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.13.ebuild,v 1.5 2015/04/08 17:54:02 mgorny Exp $
 
 EAPI=5
 DISTUTILS_IN_SOURCE_BUILD=1
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 multilib toolchain-funcs
 

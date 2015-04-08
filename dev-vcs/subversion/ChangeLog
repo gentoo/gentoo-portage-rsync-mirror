@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.221 2015/01/03 13:39:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.222 2015/04/08 17:53:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> subversion-1.7.19.ebuild,
+  subversion-1.8.11.ebuild:
+  Drop old Python implementations
 
   03 Jan 2015; Lars Wendler <polynomial-c@gentoo.org> subversion-1.7.19.ebuild,
   subversion-1.8.11.ebuild:

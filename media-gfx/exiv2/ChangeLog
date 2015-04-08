@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.139 2015/02/23 11:36:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.140 2015/04/08 17:58:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> exiv2-0.23-r2.ebuild:
+  Drop old Python implementations
 
   23 Feb 2015; Agostino Sarubbo <ago@gentoo.org> exiv2-0.24-r1.ebuild:
   Stable for ia64, wrt bug #534608

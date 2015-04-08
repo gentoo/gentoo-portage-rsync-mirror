@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.115 2015/03/29 10:12:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.116 2015/04/08 17:54:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gdbus-codegen-2.40.2.ebuild,
+  gdbus-codegen-2.42.1.ebuild, gdbus-codegen-2.42.2.ebuild:
+  Drop old Python implementations
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gdbus-codegen-2.42.2.ebuild:
   Stable for HPPA (bug #534012).

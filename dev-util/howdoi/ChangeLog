@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/howdoi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/howdoi/ChangeLog,v 1.7 2014/11/13 07:57:09 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/howdoi/ChangeLog,v 1.8 2015/04/08 17:54:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> howdoi-1.1.6.ebuild:
+  Drop old Python implementations
 
 *howdoi-1.1.7 (13 Nov 2014)
 

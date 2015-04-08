@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.223 2015/03/30 16:10:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.224 2015/04/08 17:51:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libnl-3.2.23.ebuild,
+  libnl-3.2.24-r1.ebuild, libnl-3.2.24.ebuild, libnl-3.2.25.ebuild,
+  libnl-3.2.26.ebuild, libnl-3.2.9999.ebuild:
+  Drop old Python implementations
 
 *libnl-3.2.26 (30 Mar 2015)
 

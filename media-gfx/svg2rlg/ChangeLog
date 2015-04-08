@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/svg2rlg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/svg2rlg/ChangeLog,v 1.7 2015/03/12 08:25:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/svg2rlg/ChangeLog,v 1.8 2015/04/08 17:58:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> svg2rlg-0.3.ebuild:
+  Drop old Python implementations
 
   12 Mar 2015; Jeroen Roovers <jer@gentoo.org> svg2rlg-0.3.ebuild:
   Marked ~hppa (bug #538802).

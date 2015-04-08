@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitinspector
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitinspector/ChangeLog,v 1.4 2015/04/07 14:23:49 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitinspector/ChangeLog,v 1.5 2015/04/08 17:53:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gitinspector-0.3.1.ebuild:
+  Drop old Python implementations
 
   31 Oct 2014; Justin Lecher <jlec@gentoo.org> gitinspector-0.3.2.ebuild:
   Fix for unknown LC_ALL, #527340
@@ -15,4 +18,3 @@
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> +gitinspector-0.3.1.ebuild,
   +metadata.xml:
   New package, written by me
-

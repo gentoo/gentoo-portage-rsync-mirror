@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/uniconvertor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.28 2015/03/02 09:28:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.29 2015/04/08 17:58:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> uniconvertor-1.1.5-r1.ebuild:
+  Drop old Python implementations
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org>
   uniconvertor-2.0_pre379-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.442 2015/03/07 02:50:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.443 2015/04/08 17:51:56 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libxml2-2.9.2.ebuild:
+  Drop old Python implementations
 
   07 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   libxml2-2.9.2.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/execjs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.29 2015/03/18 12:49:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/ChangeLog,v 1.30 2015/04/08 17:51:18 mrueg Exp $
+
+*execjs-2.5.0 (08 Apr 2015)
+
+  08 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +execjs-2.5.0.ebuild:
+  Version bump.
 
 *execjs-2.4.0 (18 Mar 2015)
 

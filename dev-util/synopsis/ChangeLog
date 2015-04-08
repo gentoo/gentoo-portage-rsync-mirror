@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/synopsis
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.18 2014/03/22 19:05:29 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.19 2015/04/08 17:54:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> synopsis-0.13.ebuild:
+  Drop old Python implementations
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org> -synopsis-0.12.ebuild:
   Remove old.

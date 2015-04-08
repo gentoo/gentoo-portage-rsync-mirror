@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.34 2015/04/05 16:09:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.35 2015/04/08 17:51:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libdbusmenu-12.10.2-r1.ebuild:
+  Drop old Python implementations
 
 *libdbusmenu-12.10.2-r1 (05 Apr 2015)
 *libdbusmenu-0.6.2-r1 (05 Apr 2015)

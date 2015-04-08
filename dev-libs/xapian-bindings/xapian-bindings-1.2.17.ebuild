@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.17.ebuild,v 1.4 2015/03/20 10:16:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.17.ebuild,v 1.5 2015/04/08 17:51:56 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="threads"
 USE_PYTHON='2.6 2.7'
 

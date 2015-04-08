@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lcms
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.191 2014/11/10 18:31:25 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.192 2015/04/08 17:59:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> lcms-1.19-r1.ebuild,
+  lcms-1.19-r2.ebuild, lcms-1.19-r3.ebuild:
+  Drop old Python implementations
 
   10 Nov 2014; Matthias Maier <tamiko@gentoo.org> -lcms-2.3.ebuild,
   -lcms-2.4.ebuild, -lcms-2.5-r1.ebuild, -lcms-2.5.ebuild, -lcms-2.6.ebuild:

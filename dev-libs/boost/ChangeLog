@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.347 2015/03/10 21:02:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.348 2015/04/08 17:51:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> boost-1.52.0-r6.ebuild,
+  boost-1.52.0-r7.ebuild, boost-1.53.0-r1.ebuild, boost-1.54.0-r1.ebuild,
+  boost-1.55.0-r2.ebuild, boost-1.56.0-r1.ebuild, boost-1.57.0.ebuild:
+  Drop old Python implementations
 
   10 Mar 2015; Mike Frysinger <vapier@gentoo.org> boost-1.55.0-r2.ebuild,
   boost-1.57.0.ebuild:

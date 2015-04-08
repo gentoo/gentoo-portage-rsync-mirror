@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sk1libs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.30 2014/07/04 19:39:02 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.31 2015/04/08 17:59:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sk1libs-0.9.1-r2.ebuild,
+  sk1libs-0.9.1-r3.ebuild:
+  Drop old Python implementations
 
   04 Jul 2014; Agostino Sarubbo <ago@gentoo.org> sk1libs-0.9.1-r3.ebuild:
   Stable for ppc, wrt bug #504214

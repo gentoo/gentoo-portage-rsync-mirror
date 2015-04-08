@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.20.ebuild,v 1.12 2014/04/21 10:29:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.20.ebuild,v 1.13 2015/04/08 17:54:03 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils elisp-common gnome2 python-single-r1 readme.gentoo
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.5.ebuild,v 1.9 2014/10/11 11:55:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.5.ebuild,v 1.10 2015/04/08 17:54:02 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME_ORG_MODULE="glade3"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils gnome2 python-single-r1
 

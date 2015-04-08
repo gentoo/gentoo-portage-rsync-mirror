@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.59 2014/08/10 21:12:16 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.60 2015/04/08 17:59:42 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sonata-1.6.2.1-r1.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> sonata-1.6.2.1-r1.ebuild,
   sonata-1.6.2.1.ebuild:

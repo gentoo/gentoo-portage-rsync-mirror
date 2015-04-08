@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgamin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.62 2014/12/06 16:40:07 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.63 2015/04/08 17:51:56 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libgamin-0.1.10-r5.ebuild:
+  Drop old Python implementations
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> libgamin-0.1.10-r5.ebuild:
   Stable for ia64, wrt bug #529418

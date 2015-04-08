@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cdiff
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.31 2015/01/26 11:42:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.32 2015/04/08 17:54:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cdiff-0.9.6.ebuild,
+  cdiff-9999.ebuild:
+  Drop old Python implementations
 
   26 Jan 2015; Justin Lecher <jlec@gentoo.org> -cdiff-0.9.3.ebuild:
   Drop old

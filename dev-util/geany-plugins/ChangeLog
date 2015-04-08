@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.39 2014/04/14 06:11:35 binki Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.40 2015/04/08 17:54:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> geany-plugins-1.24-r1.ebuild:
+  Drop old Python implementations
 
 *geany-plugins-1.24-r1 (14 Apr 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xwd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.64 2013/10/08 05:04:54 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.65 2015/04/08 17:36:12 mrueg Exp $
+
+  08 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xwd-1.0.4.ebuild,
+  -xwd-1.0.5.ebuild:
+  Remove old.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xwd-1.0.6.ebuild:
   Stable for x86, wrt bug #475480

@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/glib-2.20:2 >=media-libs/clutter-1.6.0:1.0=[introspection?] >
 SLOT=2.0
 SRC_URI=mirror://gnome/sources/clutter-gst/2.0/clutter-gst-2.0.12.tar.xz
 _eclasses_=clutter	9f94a7b65d03649427777e9cd447f950	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c647f34501e29ab66a529ac1906236d1
+_md5_=3cd5251611251bf829d43554109f27dd

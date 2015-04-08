@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/fonttosfnt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fonttosfnt/ChangeLog,v 1.36 2012/08/26 16:16:40 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fonttosfnt/ChangeLog,v 1.37 2015/04/08 17:38:41 mrueg Exp $
+
+  08 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -fonttosfnt-1.0.4.ebuild:
+  Remove old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> fonttosfnt-1.0.4-r1.ebuild:
   s390/sh/sparc stable wrt #419473
@@ -149,4 +152,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +fonttosfnt-0.99.0.ebuild:
   Initial commit for modular X.
-

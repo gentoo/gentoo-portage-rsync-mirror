@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.229 2015/03/07 03:18:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.230 2015/04/08 17:56:31 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libgda-5.2.2.ebuild:
+  Drop old Python implementations
 
   07 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org> libgda-5.2.2.ebuild,
   metadata.xml:
