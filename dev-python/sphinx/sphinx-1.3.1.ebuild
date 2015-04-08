@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.3-r1.ebuild,v 1.1 2015/04/02 09:56:15 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.3.1.ebuild,v 1.1 2015/04/08 10:50:54 idella4 Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	)"
 DEPEND="${DEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/simplejson[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy) )"
 
 S="${WORKDIR}/${MY_P}"
