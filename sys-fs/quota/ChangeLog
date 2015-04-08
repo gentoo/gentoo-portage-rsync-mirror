@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.69 2015/04/07 15:52:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.70 2015/04/08 13:13:12 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> quota-4.02.ebuild:
+  Stable for amd64, wrt bug #545586
 
   07 Apr 2015; Jeroen Roovers <jer@gentoo.org> quota-4.02.ebuild:
   Stable for HPPA (bug #545586).

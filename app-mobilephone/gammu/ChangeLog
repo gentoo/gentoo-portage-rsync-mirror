@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gammu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.98 2014/12/28 14:49:38 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.99 2015/04/08 13:13:43 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> gammu-1.33.0.ebuild:
+  Stable for amd64, wrt bug #545530
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> gammu-1.28.0.ebuild,
   gammu-1.32.0-r1.ebuild, gammu-1.33.0.ebuild:

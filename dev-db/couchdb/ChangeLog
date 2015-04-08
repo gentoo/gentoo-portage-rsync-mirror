@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/couchdb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.104 2014/12/29 10:51:33 djc Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.105 2015/04/08 13:13:48 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> couchdb-1.6.1.ebuild:
+  Stable for amd64, wrt bug #545466
 
 *couchdb-1.6.1 (29 Dec 2014)
 

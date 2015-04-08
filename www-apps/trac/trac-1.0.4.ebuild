@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.4.ebuild,v 1.1 2015/02/08 14:26:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-1.0.4.ebuild,v 1.2 2015/04/08 13:12:42 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="http://ftp.edgewall.com/pub/trac/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="cgi fastcgi i18n +highlight +restructuredtext mysql postgres +sqlite subversion test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
