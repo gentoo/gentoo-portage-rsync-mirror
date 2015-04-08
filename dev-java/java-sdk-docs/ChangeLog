@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.119 2015/03/07 23:40:45 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.121 2015/04/08 12:32:28 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> java-sdk-docs-1.8.0.40.ebuild:
+  Stable for x86, wrt bug #545570
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> java-sdk-docs-1.8.0.40.ebuild:
+  Stable for amd64, wrt bug #545570
 
 *java-sdk-docs-1.8.0.40 (07 Mar 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/go
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.70 2015/03/18 14:33:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/ChangeLog,v 1.71 2015/04/08 12:57:46 zlogene Exp $
+
+  08 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> go-1.4.2.ebuild:
+  x86 stable wrt bug #543666
 
   18 Mar 2015; William Hubbs <williamh@gentoo.org> go-1.4.2.ebuild:
   amd64 stable for #543666
