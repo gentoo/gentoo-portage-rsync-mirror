@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1-r1.ebuild,v 1.10 2015/02/28 13:35:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1-r1.ebuild,v 1.11 2015/04/08 18:45:26 mgorny Exp $
 
 EAPI=5
 
 POSTGRES_COMPAT=( 9.{0,1,2,3} )
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 

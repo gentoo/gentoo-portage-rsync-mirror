@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pymmlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.27 2014/02/21 11:09:29 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.28 2015/04/08 18:49:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pymmlib-1.2.0-r1.ebuild,
+  pymmlib-1.2.1.ebuild:
+  Drop old Python implementations
 
 *pymmlib-1.2.1 (21 Feb 2014)
 
@@ -113,4 +117,3 @@
   +pymmlib-0.9.7.ebuild:
   Software toolkit and library of routines for the analysis and manipulation
   of macromolecular structural models.
-

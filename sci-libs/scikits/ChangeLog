@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scikits
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.8 2014/10/26 17:56:53 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.9 2015/04/08 18:49:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> scikits-0.1-r1.ebuild:
+  Drop old Python implementations
 
   26 Oct 2014; Justin Lecher <jlec@gentoo.org> -scikits-0.1.ebuild,
   scikits-0.1-r1.ebuild:

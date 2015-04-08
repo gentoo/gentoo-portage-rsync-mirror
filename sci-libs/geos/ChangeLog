@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/geos
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.87 2014/11/05 12:28:48 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.88 2015/04/08 18:49:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> geos-3.4.1-r1.ebuild,
+  geos-3.4.2-r1.ebuild:
+  Drop old Python implementations
 
 *geos-3.4.2-r1 (05 Nov 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/osm-gps-map
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/ChangeLog,v 1.8 2014/03/21 16:31:10 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm-gps-map/ChangeLog,v 1.9 2015/04/08 18:49:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> osm-gps-map-0.7.3.ebuild:
+  Drop old Python implementations
 
   21 Mar 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Aaron's e-mail address.

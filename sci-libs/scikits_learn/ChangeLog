@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scikits_learn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.28 2015/04/07 14:43:16 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/ChangeLog,v 1.29 2015/04/08 18:49:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> scikits_learn-0.13.1.ebuild,
+  scikits_learn-0.14.1.ebuild:
+  Drop old Python implementations
 
 *scikits_learn-0.15.2 (14 Nov 2014)
 

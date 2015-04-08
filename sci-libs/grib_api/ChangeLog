@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/grib_api
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.15 2014/11/28 15:11:07 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.16 2015/04/08 18:49:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> grib_api-1.11.0.ebuild:
+  Drop old Python implementations
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> grib_api-1.11.0.ebuild:
   Support python 3.4

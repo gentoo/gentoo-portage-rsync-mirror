@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/chemkit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/chemkit/ChangeLog,v 1.3 2014/01/13 18:17:59 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/chemkit/ChangeLog,v 1.4 2015/04/08 18:49:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> chemkit-0.1-r1.ebuild,
+  chemkit-0.1.ebuild:
+  Drop old Python implementations
 
 *chemkit-0.1-r1 (13 Jan 2014)
 
@@ -27,4 +31,3 @@
   22 Jul 2013; Justin Lecher <jlec@gentoo.org> +chemkit-0.1.ebuild,
   +metadata.xml:
   New addition written by me
-

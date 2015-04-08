@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mapnik
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.45 2014/12/28 17:30:45 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.46 2015/04/08 18:49:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> mapnik-2.2.0.ebuild:
+  Drop old Python implementations
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> mapnik-2.0.1.ebuild,
   mapnik-2.0.2.ebuild, mapnik-2.1.0.ebuild, mapnik-2.2.0.ebuild:

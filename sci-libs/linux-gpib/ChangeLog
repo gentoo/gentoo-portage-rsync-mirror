@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/linux-gpib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.37 2015/04/07 10:03:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.38 2015/04/08 18:49:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> linux-gpib-3.2.20-r1.ebuild,
+  linux-gpib-3.2.21-r1.ebuild, linux-gpib-3.2.21.ebuild:
+  Drop old Python implementations
 
 *linux-gpib-3.2.21-r1 (07 Apr 2015)
 

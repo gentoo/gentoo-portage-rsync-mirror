@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tappy/tappy-0.9.0.ebuild,v 1.1 2013/02/10 22:13:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tappy/tappy-0.9.0.ebuild,v 1.2 2015/04/08 18:49:15 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 inherit distutils-r1
 
