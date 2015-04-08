@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/send2trash
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/send2trash/ChangeLog,v 1.4 2014/03/31 20:24:54 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/send2trash/ChangeLog,v 1.5 2015/04/08 08:05:23 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> send2trash-1.2.0.ebuild:
+  Drop old Python implementations
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> send2trash-1.2.0.ebuild:
   Add support for the new PyPy slotting.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.212 2015/02/01 16:29:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.213 2015/04/08 08:05:08 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> docutils-0.10.ebuild,
+  docutils-0.11.ebuild, docutils-0.9.1-r1.ebuild:
+  Drop old Python implementations
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -docutils-0.8.1.ebuild,
   -docutils-0.9.1.ebuild, -docutils-0.9.ebuild:

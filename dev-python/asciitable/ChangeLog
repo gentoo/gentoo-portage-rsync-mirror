@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/asciitable
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.19 2014/11/28 10:01:47 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.20 2015/04/08 08:05:17 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> asciitable-0.8.0-r1.ebuild:
+  Drop old Python implementations
 
   28 Nov 2014; Pacho Ramos <pacho@gentoo.org> asciitable-0.8.0-r1.ebuild:
   Support python 3.4

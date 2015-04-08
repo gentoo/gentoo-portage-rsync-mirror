@@ -1,10 +1,13 @@
 # ChangeLog for dev-python/sphinxcontrib-plantuml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-plantuml/ChangeLog,v 1.1 2014/06/02 09:06:37 pva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-plantuml/ChangeLog,v 1.2 2015/04/08 08:05:06 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  sphinxcontrib-plantuml-0.4.ebuild:
+  Drop old Python implementations
 
 *sphinxcontrib-plantuml-0.4 (02 Jun 2014)
 
   02 Jun 2014; Peter Volkov <pva@gentoo.org>
   +sphinxcontrib-plantuml-0.4.ebuild, +metadata.xml:
   Initial commit. Text tools forever!
-

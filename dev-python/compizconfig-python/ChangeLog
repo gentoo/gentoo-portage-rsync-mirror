@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/compizconfig-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.30 2013/08/25 14:58:39 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/ChangeLog,v 1.31 2015/04/08 08:05:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  compizconfig-python-0.8.4-r5.ebuild:
+  Drop old Python implementations
 
   25 Aug 2013; Sergey Popov <pinkbyte@gentoo.org>
   -compizconfig-python-0.8.4-r4.ebuild, compizconfig-python-0.8.4-r5.ebuild:

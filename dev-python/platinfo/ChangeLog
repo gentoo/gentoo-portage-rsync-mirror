@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/platinfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/platinfo/ChangeLog,v 1.10 2014/01/19 11:33:54 aidecoe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/platinfo/ChangeLog,v 1.11 2015/04/08 08:04:57 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> platinfo-0.15.0-r1.ebuild:
+  Drop old Python implementations
 
   19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -platinfo-0.15.0.ebuild:

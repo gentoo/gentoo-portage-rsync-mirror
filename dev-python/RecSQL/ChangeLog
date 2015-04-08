@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/RecSQL
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/RecSQL/ChangeLog,v 1.4 2013/09/05 18:46:07 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/RecSQL/ChangeLog,v 1.5 2015/04/08 08:05:28 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> RecSQL-0.7.8.ebuild:
+  Drop old Python implementations
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> RecSQL-0.7.8.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

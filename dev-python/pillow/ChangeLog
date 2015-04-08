@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.48 2015/04/07 14:17:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.49 2015/04/08 08:05:29 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pillow-2.5.3-r1.ebuild:
+  Drop old Python implementations
 
 *pillow-2.8.1 (03 Apr 2015)
 

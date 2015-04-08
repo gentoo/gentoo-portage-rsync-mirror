@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-metadata
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.26 2015/03/13 23:26:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-metadata/ChangeLog,v 1.27 2015/04/08 08:05:12 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> kaa-metadata-0.7.7-r1.ebuild:
+  Drop old Python implementations
 
   13 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -kaa-metadata-0.7.7.ebuild:
   Remove old.

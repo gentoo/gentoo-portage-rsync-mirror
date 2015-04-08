@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.205 2015/03/26 07:14:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.206 2015/04/08 08:05:09 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pytz-2013d.ebuild:
+  Drop old Python implementations
 
 *pytz-2015.2 (26 Mar 2015)
 

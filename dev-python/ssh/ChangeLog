@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ssh/ChangeLog,v 1.6 2015/02/28 13:48:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ssh/ChangeLog,v 1.7 2015/04/08 08:05:27 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> ssh-1.8.0-r1.ebuild:
+  Drop old Python implementations
 
   28 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -ssh-1.7.13.ebuild,
   -ssh-1.7.14.ebuild, -ssh-1.8.0.ebuild:

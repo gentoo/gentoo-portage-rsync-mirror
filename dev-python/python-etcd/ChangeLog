@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-etcd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-etcd/ChangeLog,v 1.1 2014/10/15 07:02:05 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-etcd/ChangeLog,v 1.2 2015/04/08 08:05:10 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-etcd-0.3.2.ebuild:
+  Drop old Python implementations
 
 *python-etcd-0.3.2 (15 Oct 2014)
 

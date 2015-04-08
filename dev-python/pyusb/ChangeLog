@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyusb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/ChangeLog,v 1.19 2015/01/26 11:16:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/ChangeLog,v 1.20 2015/04/08 08:04:53 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyusb-1.0.0_beta2.ebuild:
+  Drop old Python implementations
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pyusb-0.4.2.ebuild,
   -pyusb-1.0.0_alpha1.ebuild, -pyusb-1.0.0_alpha3.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jonpy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/ChangeLog,v 1.25 2015/03/08 23:51:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jonpy/ChangeLog,v 1.26 2015/04/08 08:05:07 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> jonpy-0.10-r1.ebuild,
+  jonpy-0.11.ebuild:
+  Drop old Python implementations
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> jonpy-0.11.ebuild:
   x86 stable, bug 540290

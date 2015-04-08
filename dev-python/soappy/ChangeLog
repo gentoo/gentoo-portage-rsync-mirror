@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.63 2015/01/23 05:07:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.64 2015/04/08 08:05:21 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> soappy-0.12.20.ebuild,
+  soappy-0.12.5-r2.ebuild:
+  Drop old Python implementations
 
   23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -soappy-0.12.0.ebuild,
   -soappy-0.12.5-r1.ebuild, -soappy-0.12.5.ebuild:

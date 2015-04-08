@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.45 2015/03/22 05:17:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.46 2015/04/08 08:05:28 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyalsa-1.0.26-r1.ebuild:
+  Drop old Python implementations
 
 *pyalsa-1.0.29 (22 Mar 2015)
 

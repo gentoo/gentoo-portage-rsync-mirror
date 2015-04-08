@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/htmlgen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.21 2014/06/10 02:12:46 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.22 2015/04/08 08:05:28 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> htmlgen-2.2.2-r1.ebuild:
+  Drop old Python implementations
 
   10 Jun 2014; Mike Gilbert <floppym@gentoo.org> -htmlgen-2.2.2.ebuild:
   Remove old.

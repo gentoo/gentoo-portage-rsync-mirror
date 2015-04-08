@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elib-intl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elib-intl/ChangeLog,v 1.4 2014/06/30 01:09:26 nixphoeni Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elib-intl/ChangeLog,v 1.5 2015/04/08 08:05:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> elib-intl-0_pre20110711.ebuild:
+  Drop old Python implementations
 
   30 Jun 2014; Joe Sapp <nixphoeni@gentoo.org> elib-intl-0_pre20110711.ebuild:
   Add dev-python/setuptools dependency per bug #515006

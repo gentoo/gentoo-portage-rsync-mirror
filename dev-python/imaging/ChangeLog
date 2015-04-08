@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.101 2015/03/21 08:36:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.102 2015/04/08 08:05:18 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> imaging-1.1.7-r2.ebuild,
+  imaging-1.1.7-r5.ebuild:
+  Drop old Python implementations
 
   21 Mar 2015; Jeroen Roovers <jer@gentoo.org> imaging-1.1.7-r5.ebuild:
   Stable for HPPA (bug #540290).

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopencl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.32 2015/03/27 22:47:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/ChangeLog,v 1.33 2015/04/08 08:05:10 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyopencl-2014.1.ebuild,
+  pyopencl-2015.1.ebuild, pyopencl-9999.ebuild:
+  Drop old Python implementations
 
   27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -pyopencl-2013.2-r1.ebuild,
   -pyopencl-2013.2.ebuild:

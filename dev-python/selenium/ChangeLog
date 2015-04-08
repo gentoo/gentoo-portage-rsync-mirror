@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/selenium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.10 2015/04/07 14:19:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.11 2015/04/08 08:04:59 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> selenium-2.29.0.ebuild,
+  selenium-2.39.0.ebuild, selenium-2.42.1.ebuild:
+  Drop old Python implementations
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> selenium-2.42.1.ebuild:
   x86 stable, bug 540290

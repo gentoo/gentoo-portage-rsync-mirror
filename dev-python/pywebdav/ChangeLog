@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pywebdav
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.22 2015/02/01 21:45:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/ChangeLog,v 1.23 2015/04/08 08:05:06 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pywebdav-0.9.8-r1.ebuild:
+  Drop old Python implementations
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pywebdav-0.9.8.ebuild:
   Remove old.

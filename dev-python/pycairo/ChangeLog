@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.147 2015/01/03 00:20:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.148 2015/04/08 08:05:21 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pycairo-1.10.0-r4.ebuild:
+  Drop old Python implementations
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> -pycairo-1.10.0-r2.ebuild,
   -pycairo-1.10.0-r3.ebuild, -pycairo-1.8.10.ebuild:

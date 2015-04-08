@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.142 2014/11/23 17:47:50 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.143 2015/04/08 08:05:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> dbus-python-1.2.0-r1.ebuild:
+  Drop old Python implementations
 
 *dbus-python-1.2.0-r1 (23 Nov 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pykerberos
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.13 2014/10/13 20:08:52 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.14 2015/04/08 08:05:17 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pykerberos-1.1-r2.ebuild,
+  pykerberos-1.1.5.ebuild:
+  Drop old Python implementations
 
   13 Oct 2014; Jeroen Roovers <jer@gentoo.org> pykerberos-1.1.5.ebuild:
   Marked ~hppa (bug #525246).

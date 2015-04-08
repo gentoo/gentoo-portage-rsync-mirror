@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cmd2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cmd2/ChangeLog,v 1.8 2014/11/24 15:15:18 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cmd2/ChangeLog,v 1.9 2015/04/08 08:05:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cmd2-0.6.4-r1.ebuild,
+  cmd2-0.6.6.1.ebuild, cmd2-0.6.7.ebuild:
+  Drop old Python implementations
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> cmd2-0.6.7.ebuild:
   Support python 3.4

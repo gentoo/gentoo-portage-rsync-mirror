@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-distutils-extra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.35 2015/02/01 23:51:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.36 2015/04/08 08:05:09 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  python-distutils-extra-2.33-r1.ebuild, python-distutils-extra-2.37-r1.ebuild:
+  Drop old Python implementations
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org>
   -python-distutils-extra-2.34.ebuild, -python-distutils-extra-2.35.ebuild,

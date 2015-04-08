@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.74 2015/04/04 09:40:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.75 2015/04/08 08:05:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> decorator-3.4.0-r1.ebuild:
+  Drop old Python implementations
 
 *decorator-3.4.2 (04 Apr 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/peak-rules
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peak-rules/ChangeLog,v 1.3 2014/03/31 20:34:21 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peak-rules/ChangeLog,v 1.4 2015/04/08 08:04:57 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> peak-rules-0.5.ebuild:
+  Drop old Python implementations
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> peak-rules-0.5.ebuild:
   Add support for the new PyPy slotting.

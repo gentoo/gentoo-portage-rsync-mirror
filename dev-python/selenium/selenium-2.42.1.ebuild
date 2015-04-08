@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/selenium-2.42.1.ebuild,v 1.3 2015/03/08 23:58:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/selenium-2.42.1.ebuild,v 1.4 2015/04/08 08:04:59 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1
 

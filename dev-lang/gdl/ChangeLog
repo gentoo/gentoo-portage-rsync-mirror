@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.46 2015/02/05 14:59:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.47 2015/04/08 08:22:09 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gdl-0.9.4.ebuild:
+  Drop old Python implementations
 
   05 Feb 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Fix USE=eigen description.

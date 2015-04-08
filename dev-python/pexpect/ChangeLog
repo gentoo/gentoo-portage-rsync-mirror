@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.88 2015/03/07 06:02:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.89 2015/04/08 08:04:53 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pexpect-2.4-r1.ebuild,
+  pexpect-3.0.ebuild, pexpect-3.1.ebuild, pexpect-3.2.ebuild,
+  pexpect-3.3.ebuild:
+  Drop old Python implementations
 
   07 Mar 2015; Mike Frysinger <vapier@gentoo.org> pexpect-3.3.ebuild:
   Mark arm64/s390/sh stable.

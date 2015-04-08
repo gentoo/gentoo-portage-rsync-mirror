@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dogpile-cache
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dogpile-cache/ChangeLog,v 1.7 2014/11/27 15:24:34 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dogpile-cache/ChangeLog,v 1.8 2015/04/08 08:05:20 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> dogpile-cache-0.5.2.ebuild:
+  Drop old Python implementations
 
   27 Nov 2014; Pacho Ramos <pacho@gentoo.org> dogpile-cache-0.5.4.ebuild:
   Support python 3.4

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygal/ChangeLog,v 1.9 2015/03/25 14:57:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygal/ChangeLog,v 1.10 2015/04/08 08:04:52 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pygal-1.5.1.ebuild,
+  pygal-1.6.1.ebuild:
+  Drop old Python implementations
 
 *pygal-1.7.0 (25 Mar 2015)
 

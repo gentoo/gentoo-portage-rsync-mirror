@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.31 2015/01/28 19:46:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.32 2015/04/08 08:05:07 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pypy-bin-2.3.1-r2.ebuild:
+  Drop old Python implementations
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> pypy-bin-2.3.1-r2.ebuild,
   pypy-bin-2.4.0.ebuild:

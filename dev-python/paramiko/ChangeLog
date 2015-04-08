@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.129 2015/03/08 23:54:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.130 2015/04/08 08:04:58 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> paramiko-1.10.1.ebuild,
+  paramiko-1.12.2.ebuild:
+  Drop old Python implementations
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> paramiko-1.15.1-r1.ebuild:
   x86 stable, bug 540290

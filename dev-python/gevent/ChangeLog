@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gevent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.31 2015/03/07 08:16:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.32 2015/04/08 08:05:13 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gevent-1.0.1.ebuild,
+  gevent-1.0.ebuild:
+  Drop old Python implementations
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> gevent-1.0.1.ebuild:
   ppc stable, bug 540290

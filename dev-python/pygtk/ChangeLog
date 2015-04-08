@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.304 2014/04/26 07:15:32 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.305 2015/04/08 08:04:51 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pygtk-2.24.0-r4.ebuild:
+  Drop old Python implementations
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -pygtk-2.24.0-r3.ebuild:
   drop old

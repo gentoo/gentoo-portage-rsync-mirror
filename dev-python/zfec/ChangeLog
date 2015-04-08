@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/zfec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/ChangeLog,v 1.6 2014/11/25 22:43:28 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zfec/ChangeLog,v 1.7 2015/04/08 08:05:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> zfec-1.4.24.ebuild:
+  Drop old Python implementations
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

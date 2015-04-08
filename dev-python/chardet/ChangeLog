@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/chardet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.49 2015/02/17 17:56:49 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.50 2015/04/08 08:05:09 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> chardet-2.2.1.ebuild,
+  chardet-2.3.0.ebuild:
+  Drop old Python implementations
 
 *chardet-2.3.0 (17 Feb 2015)
 

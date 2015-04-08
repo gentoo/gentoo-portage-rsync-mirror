@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tablib/tablib-0.9.11.ebuild,v 1.1 2013/11/23 07:29:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tablib/tablib-0.9.11.ebuild,v 1.2 2015/04/08 08:05:27 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 

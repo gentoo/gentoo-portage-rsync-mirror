@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-openid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.28 2015/03/27 22:07:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/ChangeLog,v 1.29 2015/04/08 08:05:19 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-openid-2.2.5-r1.ebuild:
+  Drop old Python implementations
 
   27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -python-openid-2.2.5.ebuild:
   Remove old.

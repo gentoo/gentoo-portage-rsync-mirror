@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-registration
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.8 2015/03/06 22:16:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-registration/ChangeLog,v 1.9 2015/04/08 08:05:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  django-registration-0.8-r1.ebuild, django-registration-1.0.ebuild:
+  Drop old Python implementations
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-registration-1.0.ebuild:
   amd64 stable, bug 540290

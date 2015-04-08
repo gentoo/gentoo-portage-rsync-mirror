@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-9999.ebuild,v 1.6 2014/10/17 07:31:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-9999.ebuild,v 1.7 2015/04/08 08:05:10 mgorny Exp $
 
 EAPI=5
 
 # pypy: bug #458558 (wrong linker options due to not respecting CC)
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_IN_SOURCE_BUILD=1
 DISTUTILS_NO_PARALLEL_BUILD=1
 

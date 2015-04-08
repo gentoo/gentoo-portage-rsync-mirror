@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/testscenarios
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.24 2015/03/07 08:27:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/ChangeLog,v 1.25 2015/04/08 08:04:59 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> testscenarios-0.4-r2.ebuild,
+  testscenarios-0.4-r4.ebuild, testscenarios-0.4.ebuild:
+  Drop old Python implementations
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> testscenarios-0.4-r5.ebuild:
   ppc stable, bug 540290

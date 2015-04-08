@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.76 2015/03/03 07:10:18 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.77 2015/04/08 08:05:26 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> markupsafe-0.23.ebuild:
+  Drop old Python implementations
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> markupsafe-0.23.ebuild:
   add arm64 support, tested on A53 board

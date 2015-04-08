@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.132 2015/03/03 07:17:15 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.133 2015/04/08 08:04:59 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyxdg-0.25-r1.ebuild:
+  Drop old Python implementations
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> pyxdg-0.25-r1.ebuild:
   add arm64 support, tested on A53 board

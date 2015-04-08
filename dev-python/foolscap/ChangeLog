@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.54 2015/03/27 22:01:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.55 2015/04/08 08:05:11 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> foolscap-0.6.4-r1.ebuild:
+  Drop old Python implementations
 
   27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -foolscap-0.6.4.ebuild:
   Remove old.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.141 2014/11/25 18:36:53 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.142 2015/04/08 08:05:05 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gst-python-0.10.22-r1.ebuild,
+  gst-python-1.2.1.ebuild:
+  Drop old Python implementations
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gst-python-1.2.0.ebuild,
   gst-python-1.2.1.ebuild:

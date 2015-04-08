@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-novaclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/ChangeLog,v 1.24 2014/11/18 23:17:00 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/ChangeLog,v 1.25 2015/04/08 08:05:25 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-novaclient-9999.ebuild:
+  Drop old Python implementations
 
 *python-novaclient-2.20.0 (18 Nov 2014)
 

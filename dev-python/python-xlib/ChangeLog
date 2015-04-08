@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-xlib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.42 2014/03/31 20:55:43 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.43 2015/04/08 08:05:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-xlib-0.15_rc1-r2.ebuild:
+  Drop old Python implementations
 
   31 Mar 2014; Michał Górny <mgorny@gentoo.org> python-xlib-0.15_rc1-r2.ebuild:
   Add support for the new PyPy slotting.

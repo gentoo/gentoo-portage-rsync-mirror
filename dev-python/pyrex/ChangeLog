@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.110 2015/01/26 13:50:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.111 2015/04/08 08:04:54 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyrex-0.9.9-r1.ebuild:
+  Drop old Python implementations
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pyrex-0.9.9.ebuild:
   Remove old.

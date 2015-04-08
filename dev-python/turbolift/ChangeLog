@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/turbolift
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/turbolift/ChangeLog,v 1.4 2014/07/06 12:50:28 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/turbolift/ChangeLog,v 1.5 2015/04/08 08:05:28 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> turbolift-2.0.5.ebuild:
+  Drop old Python implementations
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> turbolift-2.0.5.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

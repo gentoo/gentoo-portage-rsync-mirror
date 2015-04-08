@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pivy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.10 2015/01/26 17:22:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pivy/ChangeLog,v 1.11 2015/04/08 08:05:09 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  pivy-0.5_alpha20110303-r1.ebuild, pivy-9999.ebuild:
+  Drop old Python implementations
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pivy-0.5_alpha20110303.ebuild:
   Remove old.

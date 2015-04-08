@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.83 2015/03/14 14:48:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.84 2015/04/08 08:05:00 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> m2crypto-0.21.1-r2.ebuild,
+  m2crypto-0.22.3-r3.ebuild:
+  Drop old Python implementations
 
 *m2crypto-0.22.3-r3 (14 Mar 2015)
 

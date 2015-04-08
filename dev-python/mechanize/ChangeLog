@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mechanize
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.47 2014/05/20 20:56:18 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.48 2015/04/08 08:05:29 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> mechanize-0.2.5-r1.ebuild:
+  Drop old Python implementations
 
   20 May 2014; Manuel Rüger <mrueg@gentoo.org> mechanize-0.2.5-r1.ebuild:
   Add ~arm keyword.

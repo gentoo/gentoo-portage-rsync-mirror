@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-imlib2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.19 2014/08/10 21:12:56 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.20 2015/04/08 08:05:22 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> kaa-imlib2-0.2.3-r2.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   kaa-imlib2-0.2.3-r1.ebuild, kaa-imlib2-0.2.3-r2.ebuild:

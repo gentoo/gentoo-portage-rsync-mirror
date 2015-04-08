@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/atpy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.15 2014/02/05 23:36:16 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.16 2015/04/08 08:04:57 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> atpy-0.9.7.ebuild:
+  Drop old Python implementations
 
   05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -atpy-0.9.6-r1.ebuild,
   -atpy-0.9.6.ebuild, atpy-0.9.7.ebuild, metadata.xml:

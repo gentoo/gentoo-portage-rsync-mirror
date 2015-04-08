@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/simpleeval
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleeval/ChangeLog,v 1.1 2014/10/22 21:53:50 cedk Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleeval/ChangeLog,v 1.2 2015/04/08 08:04:54 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> simpleeval-0.8.2.ebuild:
+  Drop old Python implementations
 
 *simpleeval-0.8.2 (22 Oct 2014)
 
   22 Oct 2014; Cédric Krier <cedk@gentoo.org> +simpleeval-0.8.2.ebuild,
   +metadata.xml:
   New ebuild for simpleeval
-

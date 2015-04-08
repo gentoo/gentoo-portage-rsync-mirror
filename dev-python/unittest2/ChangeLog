@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.59 2015/04/06 15:19:42 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.60 2015/04/08 08:04:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> unittest2-0.5.1-r1.ebuild:
+  Drop old Python implementations
 
 *unittest2-1.0.1-r1 (06 Apr 2015)
 

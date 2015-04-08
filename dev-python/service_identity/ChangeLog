@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/service_identity
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/service_identity/ChangeLog,v 1.7 2015/04/04 20:02:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/service_identity/ChangeLog,v 1.8 2015/04/08 08:05:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> service_identity-14.0.0.ebuild:
+  Drop old Python implementations
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   service_identity-14.0.0.ebuild:

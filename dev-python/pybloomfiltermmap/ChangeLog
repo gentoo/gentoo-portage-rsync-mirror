@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pybloomfiltermmap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.19 2014/07/01 04:30:18 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.20 2015/04/08 08:04:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  pybloomfiltermmap-0.3.11-r1.ebuild:
+  Drop old Python implementations
 
   01 Jul 2014; Ian Delaney <idella4@gentoo.org> pybloomfiltermmap-0.3.14.ebuild:
   drop py2.6 add pypy, add missing dep, test phase,

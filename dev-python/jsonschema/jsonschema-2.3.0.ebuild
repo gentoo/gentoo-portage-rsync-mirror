@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/jsonschema-2.3.0.ebuild,v 1.7 2015/02/20 10:09:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonschema/jsonschema-2.3.0.ebuild,v 1.8 2015/04/08 08:04:54 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=(python{2_6,2_7,3_{2,3,4}} pypy pypy2_0)
+PYTHON_COMPAT=(python{2_7,3_{3,4}} pypy)
 inherit distutils-r1
 
 DESCRIPTION="An implementation of JSON-Schema validation for Python"

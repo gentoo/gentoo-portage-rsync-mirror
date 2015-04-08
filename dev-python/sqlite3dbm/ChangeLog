@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlite3dbm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/ChangeLog,v 1.8 2014/06/03 10:09:37 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlite3dbm/ChangeLog,v 1.9 2015/04/08 08:05:03 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sqlite3dbm-0.1.4-r1.ebuild:
+  Drop old Python implementations
 
   03 Jun 2014; Ian Delaney <idella4@gentoo.org> -sqlite3dbm-0.1.4.ebuild:
   rm old

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/editobj
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.27 2014/08/10 21:10:01 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/editobj/ChangeLog,v 1.28 2015/04/08 08:05:08 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> editobj-0.5.7-r2.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> editobj-0.5.7-r1.ebuild,
   editobj-0.5.7-r2.ebuild:

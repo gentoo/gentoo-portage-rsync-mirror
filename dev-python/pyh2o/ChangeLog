@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyh2o
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyh2o/ChangeLog,v 1.9 2014/11/24 13:04:19 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyh2o/ChangeLog,v 1.10 2015/04/08 08:05:24 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyh2o-9999.ebuild:
+  Drop old Python implementations
 
   24 Nov 2014; Pacho Ramos <pacho@gentoo.org> pyh2o-9999.ebuild:
   Support python 3.4

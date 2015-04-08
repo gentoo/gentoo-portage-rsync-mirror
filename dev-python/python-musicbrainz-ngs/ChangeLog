@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-musicbrainz-ngs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.10 2014/11/25 18:42:02 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz-ngs/ChangeLog,v 1.11 2015/04/08 08:05:18 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  python-musicbrainz-ngs-0.4.ebuild:
+  Drop old Python implementations
 
   25 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -python-musicbrainz-ngs-0.2.ebuild, -python-musicbrainz-ngs-0.3.ebuild,

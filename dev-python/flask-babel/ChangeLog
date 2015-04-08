@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-babel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.11 2015/03/25 19:10:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.12 2015/04/08 08:05:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> flask-babel-0.8-r1.ebuild:
+  Drop old Python implementations
 
   25 Mar 2015; Maxim Koltsov <maksbotan@gentoo.org> flask-babel-0.9.ebuild:
   Add python 3.3 and 3.4 to PYTHON_COMPAT

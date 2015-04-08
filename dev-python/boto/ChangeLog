@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.110 2015/03/08 23:40:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.111 2015/04/08 08:04:56 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> boto-2.11.0.ebuild,
+  boto-2.19.0.ebuild, boto-2.20.0.ebuild, boto-2.20.1.ebuild,
+  boto-2.21.0.ebuild, boto-2.21.1.ebuild, boto-2.22.0.ebuild,
+  boto-2.23.0.ebuild, boto-2.24.0.ebuild, boto-2.25.0.ebuild,
+  boto-2.26.0.ebuild, boto-2.26.1.ebuild, boto-2.27.0.ebuild,
+  boto-2.28.0.ebuild, boto-2.29.1.ebuild:
+  Drop old Python implementations
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> boto-2.35.1.ebuild:
   x86 stable, bug 540290

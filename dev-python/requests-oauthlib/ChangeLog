@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests-oauthlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/ChangeLog,v 1.9 2015/03/27 22:12:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests-oauthlib/ChangeLog,v 1.10 2015/04/08 08:05:24 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> requests-oauthlib-0.4.1.ebuild:
+  Drop old Python implementations
 
   27 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -requests-oauthlib-0.3.3.ebuild,
   -requests-oauthlib-0.4.0.ebuild:

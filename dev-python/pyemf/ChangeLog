@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyemf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyemf/ChangeLog,v 1.1 2014/01/29 18:37:44 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyemf/ChangeLog,v 1.2 2015/04/08 08:05:19 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyemf-2.0.0.ebuild:
+  Drop old Python implementations
 
 *pyemf-2.0.0 (29 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fpconst
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.51 2015/01/26 13:15:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.52 2015/04/08 08:04:56 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> fpconst-0.7.3-r1.ebuild:
+  Drop old Python implementations
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -fpconst-0.7.3.ebuild:
   Remove old.

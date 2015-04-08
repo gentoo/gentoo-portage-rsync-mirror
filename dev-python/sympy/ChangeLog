@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sympy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.33 2015/04/07 14:20:48 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.34 2015/04/08 08:05:04 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sympy-0.7.4.1.ebuild,
+  sympy-0.7.6.ebuild:
+  Drop old Python implementations
 
 *sympy-0.7.6 (15 Dec 2014)
 

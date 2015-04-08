@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pathtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pathtools/ChangeLog,v 1.7 2015/02/28 20:02:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pathtools/ChangeLog,v 1.8 2015/04/08 08:04:53 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pathtools-0.1.2.ebuild:
+  Drop old Python implementations
 
   28 Feb 2015; Markus Meier <maekke@gentoo.org> pathtools-0.1.2.ebuild:
   add ~arm, bug #539730

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-gflags
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.22 2015/03/13 16:47:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gflags/ChangeLog,v 1.23 2015/04/08 08:05:19 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-gflags-2.0.ebuild:
+  Drop old Python implementations
 
   13 Mar 2015; Mike Frysinger <vapier@gentoo.org> python-gflags-2.0.ebuild:
   Add ia64 love.

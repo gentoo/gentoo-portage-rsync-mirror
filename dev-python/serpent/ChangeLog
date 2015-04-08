@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/serpent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.19 2015/03/19 06:32:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.20 2015/04/08 08:04:59 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> serpent-1.7.ebuild:
+  Drop old Python implementations
 
 *serpent-1.9 (19 Mar 2015)
 

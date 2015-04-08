@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.116 2015/03/07 08:20:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.117 2015/04/08 08:05:11 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyro-3.16-r1.ebuild,
+  pyro-4.23.ebuild:
+  Drop old Python implementations
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> pyro-4.25.ebuild:
   ppc stable, bug 540290

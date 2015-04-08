@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyds
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.26 2014/12/25 12:31:37 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.27 2015/04/08 08:05:26 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyds-0.7.3-r1.ebuild:
+  Drop old Python implementations
 
   25 Dec 2014; Michał Górny <mgorny@gentoo.org> pyds-0.7.3-r1.ebuild:
   Add missing PYTHON_USEDEP.

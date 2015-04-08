@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/netifaces
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.22 2015/03/28 07:01:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.23 2015/04/08 08:05:00 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> netifaces-0.10.4.ebuild,
+  netifaces-0.8-r2.ebuild:
+  Drop old Python implementations
 
   28 Mar 2015; Markus Meier <maekke@gentoo.org> netifaces-0.10.4.ebuild:
   arm stable, bug #535340

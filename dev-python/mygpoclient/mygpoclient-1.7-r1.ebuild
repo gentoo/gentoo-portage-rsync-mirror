@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/mygpoclient-1.7-r1.ebuild,v 1.5 2015/03/08 23:54:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mygpoclient/mygpoclient-1.7-r1.ebuild,v 1.6 2015/04/08 08:05:23 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1 eutils
 

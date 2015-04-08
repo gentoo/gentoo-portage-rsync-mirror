@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pretend
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.17 2015/04/04 19:53:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pretend/ChangeLog,v 1.18 2015/04/08 08:05:24 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pretend-1.0.7.ebuild,
+  pretend-1.0.8.ebuild:
+  Drop old Python implementations
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> pretend-1.0.8.ebuild:
   Mark arm64/ia64/m68k/s390/sh stable.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/libasyncns-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.8 2015/02/17 09:18:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.9 2015/04/08 08:05:20 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  libasyncns-python-0.7.1-r1.ebuild:
+  Drop old Python implementations
 
   17 Feb 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Take over maintainer ship

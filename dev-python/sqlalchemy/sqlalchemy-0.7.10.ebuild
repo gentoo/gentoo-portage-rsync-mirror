@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.10.ebuild,v 1.8 2015/04/02 18:40:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.10.ebuild,v 1.9 2015/04/08 08:04:59 mgorny Exp $
 
 EAPI=5
 # py3 appears underdone,
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils flag-o-matic
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.35 2015/03/08 23:49:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.36 2015/04/08 08:05:20 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> h5py-2.3.1.ebuild,
+  h5py-2.4.0.ebuild:
+  Drop old Python implementations
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> h5py-2.3.1.ebuild:
   x86 stable, bug 540290

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sh/ChangeLog,v 1.8 2015/02/17 12:01:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sh/ChangeLog,v 1.9 2015/04/08 08:05:09 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sh-1.07.ebuild, sh-1.08.ebuild,
+  sh-1.09.ebuild, sh-1.11.ebuild:
+  Drop old Python implementations
 
 *sh-1.11 (17 Feb 2015)
 

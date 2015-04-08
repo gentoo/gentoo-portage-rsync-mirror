@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/suds
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.11 2013/10/04 16:20:09 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.12 2015/04/08 08:05:22 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> suds-0.4-r1.ebuild:
+  Drop old Python implementations
 
   04 Oct 2013; Michał Górny <mgorny@gentoo.org> suds-0.4-r1.ebuild:
   Fix the distutils-r1 conversion.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/genshi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.37 2015/01/26 14:31:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.38 2015/04/08 08:04:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> genshi-0.7.ebuild:
+  Drop old Python implementations
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -genshi-0.6.ebuild:
   Remove old.

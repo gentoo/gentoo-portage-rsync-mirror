@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/socketpool-0.5.2.ebuild,v 1.6 2014/03/31 20:45:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socketpool/socketpool-0.5.2.ebuild,v 1.7 2015/04/08 08:05:01 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_6 python2_7 pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 

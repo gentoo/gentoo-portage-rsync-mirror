@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.84 2015/03/26 07:25:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.85 2015/04/08 08:05:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> requests-2.3.0.ebuild,
+  requests-2.4.1.ebuild:
+  Drop old Python implementations
 
 *requests-2.6.0 (26 Mar 2015)
 

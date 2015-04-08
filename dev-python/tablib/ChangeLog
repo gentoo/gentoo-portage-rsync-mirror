@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tablib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tablib/ChangeLog,v 1.1 2013/11/23 07:29:25 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tablib/ChangeLog,v 1.2 2015/04/08 08:05:27 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> tablib-0.9.11.ebuild:
+  Drop old Python implementations
 
 *tablib-0.9.11 (23 Nov 2013)
 

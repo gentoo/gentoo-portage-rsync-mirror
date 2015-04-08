@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r4.ebuild,v 1.13 2014/04/21 10:29:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r4.ebuild,v 1.14 2015/04/08 08:04:51 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME_TARBALL_SUFFIX="bz2"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils flag-o-matic gnome2 python-r1 virtualx
 

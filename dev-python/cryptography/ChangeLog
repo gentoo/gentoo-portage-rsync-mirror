@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.39 2015/04/04 19:58:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.40 2015/04/08 08:05:07 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cryptography-0.5.4.ebuild:
+  Drop old Python implementations
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> cryptography-0.6.1.ebuild,
   cryptography-0.7.1-r1.ebuild, cryptography-0.7.2.ebuild,

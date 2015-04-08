@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.7 2014/05/09 22:44:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/yasm-9999.ebuild,v 1.8 2015/04/08 08:22:10 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit autotools eutils python-r1
 if [[ ${PV} == 9999* ]] ; then
 	EGIT_REPO_URI="git://github.com/yasm/yasm.git"

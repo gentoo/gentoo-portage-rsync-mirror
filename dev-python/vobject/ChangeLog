@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/vobject
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.20 2015/01/23 02:06:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vobject/ChangeLog,v 1.21 2015/04/08 08:05:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> vobject-0.8.1c-r1.ebuild:
+  Drop old Python implementations
 
   23 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -vobject-0.8.1c.ebuild:
   Remove old.

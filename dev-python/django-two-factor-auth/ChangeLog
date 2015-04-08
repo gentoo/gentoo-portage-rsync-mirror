@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/django-two-factor-auth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-two-factor-auth/ChangeLog,v 1.4 2015/02/15 12:57:57 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-two-factor-auth/ChangeLog,v 1.5 2015/04/08 08:05:21 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  django-two-factor-auth-1.1.1.ebuild:
+  Drop old Python implementations
 
   15 Feb 2015; Johann Schmitz <ercpe@gentoo.org>
   django-two-factor-auth-1.1.1.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.54.ebuild,v 1.1 2015/03/22 01:37:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-memcached/python-memcached-1.54.ebuild,v 1.2 2015/04/08 08:04:56 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy pypy2_0 )
+PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 

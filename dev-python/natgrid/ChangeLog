@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/natgrid
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/natgrid/ChangeLog,v 1.10 2014/12/28 19:26:58 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/natgrid/ChangeLog,v 1.11 2015/04/08 08:05:05 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> natgrid-0.2.1-r1.ebuild,
+  natgrid-0.2.1-r2.ebuild:
+  Drop old Python implementations
 
   28 Dec 2014; Mike Gilbert <floppym@gentoo.org> natgrid-0.2.1-r1.ebuild,
   natgrid-0.2.1-r2.ebuild:

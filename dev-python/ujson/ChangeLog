@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ujson
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.9 2015/03/09 00:01:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ujson/ChangeLog,v 1.10 2015/04/08 08:05:24 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> ujson-1.33.ebuild:
+  Drop old Python implementations
 
   09 Mar 2015; Pacho Ramos <pacho@gentoo.org> ujson-1.33.ebuild:
   x86 stable, bug 540290

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-display
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.12 2014/08/10 21:12:47 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-display/ChangeLog,v 1.13 2015/04/08 08:05:05 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> kaa-display-0.1.0-r1.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   kaa-display-0.1.0-r1.ebuild, kaa-display-0.1.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/squaremap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/squaremap/ChangeLog,v 1.5 2014/10/23 10:23:10 swegener Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/squaremap/ChangeLog,v 1.6 2015/04/08 08:05:09 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> squaremap-1.0.3.ebuild,
+  squaremap-1.0.4.ebuild:
+  Drop old Python implementations
 
 *squaremap-1.0.4 (23 Oct 2014)
 
@@ -23,4 +27,3 @@
   24 Feb 2013; Sven Wegener <swegener@gentoo.org> +squaremap-1.0.1.ebuild,
   +metadata.xml:
   Initial commit, thanks to Martin Mokrejš, bug #408221.
-

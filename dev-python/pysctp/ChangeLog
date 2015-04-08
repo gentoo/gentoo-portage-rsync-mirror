@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysctp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysctp/ChangeLog,v 1.6 2014/08/10 21:17:56 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysctp/ChangeLog,v 1.7 2015/04/08 08:05:28 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pysctp-0.6.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pysctp-0.6.ebuild:
   QA: drop trailing '.' from DESCRIPTION

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mecab-python
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.24 2014/11/29 13:27:52 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.25 2015/04/08 08:05:25 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> mecab-python-0.996.ebuild:
+  Drop old Python implementations
 
   29 Nov 2014; Pacho Ramos <pacho@gentoo.org> mecab-python-0.996.ebuild:
   Support python 3.4

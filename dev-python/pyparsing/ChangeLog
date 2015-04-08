@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.118 2015/03/07 06:04:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.119 2015/04/08 08:05:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyparsing-1.5.6-r2.ebuild,
+  pyparsing-2.0.1.ebuild:
+  Drop old Python implementations
 
   07 Mar 2015; Mike Frysinger <vapier@gentoo.org> pyparsing-2.0.3.ebuild:
   Mark arm64/s390/sh stable.

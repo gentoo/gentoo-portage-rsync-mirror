@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/empy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.26 2015/01/30 10:03:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.27 2015/04/08 08:05:15 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> empy-3.3-r1.ebuild,
+  empy-3.3.2.ebuild:
+  Drop old Python implementations
 
 *empy-3.3.2 (30 Jan 2015)
 

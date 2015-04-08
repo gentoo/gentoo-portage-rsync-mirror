@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cliapp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.18 2015/03/23 00:05:18 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliapp/ChangeLog,v 1.19 2015/04/08 08:05:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cliapp-1.20130808.ebuild,
+  cliapp-1.20140315.ebuild, cliapp-1.20150305.ebuild:
+  Drop old Python implementations
 
 *cliapp-1.20150305 (23 Mar 2015)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.255 2015/04/03 23:10:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.256 2015/04/08 08:05:08 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> numpy-1.8.0-r1.ebuild,
+  numpy-1.8.1.ebuild, numpy-1.8.2.ebuild, numpy-1.9.0.ebuild,
+  numpy-1.9.1.ebuild:
+  Drop old Python implementations
 
   03 Apr 2015; Mike Frysinger <vapier@gentoo.org> numpy-1.9.0-r1.ebuild:
   Mark arm64/s390/sh stable.

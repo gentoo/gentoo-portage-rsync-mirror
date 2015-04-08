@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pSQL
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pSQL/ChangeLog,v 1.3 2014/05/03 09:22:02 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pSQL/ChangeLog,v 1.4 2015/04/08 08:04:53 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pSQL-1.2.0.ebuild,
+  pSQL-1.2.1.ebuild:
+  Drop old Python implementations
 
 *pSQL-1.2.1 (03 May 2014)
 

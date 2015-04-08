@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subvertpy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.58 2015/02/02 00:02:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.59 2015/04/08 08:05:01 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> subvertpy-0.9.1.ebuild:
+  Drop old Python implementations
 
   02 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -subvertpy-0.8.10.ebuild,
   -subvertpy-0.9.0.ebuild:

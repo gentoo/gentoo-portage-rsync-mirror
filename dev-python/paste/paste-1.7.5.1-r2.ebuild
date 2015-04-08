@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1-r2.ebuild,v 1.2 2014/10/15 23:08:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/paste-1.7.5.1-r2.ebuild,v 1.3 2015/04/08 08:05:09 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 # notes wrt py-3 compatibility:
 # Debian ships paste for py3 using 2to3. Many tests fail when using such converted code and
 # the fact that the errors are sometimes nested inside paste indicate that the
