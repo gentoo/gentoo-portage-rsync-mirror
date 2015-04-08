@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.62 2015/04/07 14:05:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.63 2015/04/08 15:18:14 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ansible-1.8.4.ebuild:
+  Stable for amd64, wrt bug #544746
 
 *ansible-1.9.0.1 (28 Mar 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-print/fax4cups
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.24 2015/03/29 12:40:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.25 2015/04/08 15:18:19 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fax4cups-1.29-r1.ebuild:
+  Stable for amd64, wrt bug #544926
 
 *fax4cups-1.29-r1 (29 Mar 2015)
 

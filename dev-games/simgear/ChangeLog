@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.70 2015/03/27 10:32:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.71 2015/04/08 15:17:50 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> simgear-3.4.0.ebuild:
+  Stable for amd64, wrt bug #544714
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> simgear-3.2.0.ebuild:
   Stable for x86, wrt bug #541288

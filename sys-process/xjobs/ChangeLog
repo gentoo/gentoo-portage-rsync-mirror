@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/xjobs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/xjobs/ChangeLog,v 1.1 2014/10/19 00:19:49 mjo Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/xjobs/ChangeLog,v 1.2 2015/04/08 15:17:39 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> xjobs-20140125.ebuild:
+  Stable for amd64, wrt bug #544680
 
 *xjobs-20140125 (19 Oct 2014)
 

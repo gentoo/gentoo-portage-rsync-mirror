@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/t-coffee
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.54 2015/03/29 13:10:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/ChangeLog,v 1.55 2015/04/08 15:17:29 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> t-coffee-9.03.1318-r1.ebuild:
+  Stable for amd64, wrt bug #544930
 
 *t-coffee-11.00 (29 Mar 2015)
 
