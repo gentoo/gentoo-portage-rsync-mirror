@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.124 2015/04/07 14:43:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.125 2015/04/08 12:14:45 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> scipy-0.15.1.ebuild:
+  Stable for amd64, wrt bug #545936
 
   07 Mar 2015; Justin Lecher <jlec@gentoo.org>
   +files/scipy-0.14.0-cython-0.22-backport.patch, scipy-0.14.0-r1.ebuild:

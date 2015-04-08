@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/mygui-3.2.2.ebuild,v 1.1 2015/03/14 05:27:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/mygui-3.2.2.ebuild,v 1.2 2015/04/08 12:13:56 ago Exp $
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/MyGUI/mygui/archive/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug doc +ogre -opengl plugins samples static-libs test tools linguas_ru"
 REQUIRED_USE="ogre? ( !opengl )
 	opengl? ( !ogre )"

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-extensions
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/ChangeLog,v 1.13 2015/03/01 17:08:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-extensions/ChangeLog,v 1.14 2015/04/08 12:01:37 jlec Exp $
+
+*django-extensions-1.5.2 (08 Apr 2015)
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org> +django-extensions-1.5.2.ebuild:
+  Version Bump
 
   01 Mar 2015; Justin Lecher <jlec@gentoo.org>
   -django-extensions-1.0.2-r1.ebuild, -django-extensions-1.3.3.ebuild,

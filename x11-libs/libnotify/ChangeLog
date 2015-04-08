@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.106 2015/03/31 20:26:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.107 2015/04/08 12:14:36 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libnotify-0.7.6-r1.ebuild:
+  Stable for amd64, wrt bug #545858
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> libnotify-0.7.5-r1.ebuild,
   libnotify-0.7.6.ebuild, libnotify-0.7.6-r1.ebuild:

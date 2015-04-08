@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/mygui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/ChangeLog,v 1.10 2015/03/26 18:02:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mygui/ChangeLog,v 1.11 2015/04/08 12:13:56 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mygui-3.2.2.ebuild:
+  Stable for amd64, wrt bug #545890
 
   26 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/mygui-3.2.1-FHS.patch, -mygui-3.2.1.ebuild:

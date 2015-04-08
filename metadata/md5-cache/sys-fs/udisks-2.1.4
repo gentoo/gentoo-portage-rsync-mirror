@@ -4,10 +4,10 @@ DESCRIPTION=Daemon providing interfaces to work with storage devices
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/udisks
 IUSE=debug cryptsetup +gptfdisk +introspection selinux systemd
-KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.32 >=dev-libs/libatasmart-0.19 >=sys-auth/polkit-0.110 virtual/acl virtual/libgudev:= virtual/udev introspection? ( >=dev-libs/gobject-introspection-1.30 ) systemd? ( sys-apps/systemd ) >=sys-apps/util-linux-2.20.1-r2 >=sys-block/parted-3 virtual/eject cryptsetup? ( sys-fs/cryptsetup[udev(+)] sys-fs/lvm2[udev(+)] ) gptfdisk? ( >=sys-apps/gptfdisk-0.8 ) selinux? ( sec-policy/selinux-devicekit )
 SLOT=2
 SRC_URI=http://udisks.freedesktop.org/releases/udisks-2.1.4.tar.bz2
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	udev	da001465a2e939c93f7ae16947ce3438	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=5adcbea4d444dc625ac393857451382e
+_md5_=e167a273da8f26fe7d0ca42dfb8314cd

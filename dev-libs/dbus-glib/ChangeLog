@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.155 2015/03/03 06:19:23 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.156 2015/04/08 12:14:55 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> dbus-glib-0.102.ebuild:
+  Stable for amd64, wrt bug #545844
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> dbus-glib-0.102.ebuild:
   add arm64 support, tested on A53 board
