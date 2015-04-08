@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elasticsearch-py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elasticsearch-py/ChangeLog,v 1.5 2015/03/08 23:46:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elasticsearch-py/ChangeLog,v 1.6 2015/04/08 06:48:01 jlec Exp $
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org> -elasticsearch-py-1.3.0.ebuild,
+  elasticsearch-py-1.4.0.ebuild, metadata.xml:
+  Add pypy support, drop old
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> elasticsearch-py-1.4.0.ebuild:
   x86 stable, bug 540290
