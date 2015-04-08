@@ -62,6 +62,7 @@ cp -vi /usr/local/src/freebsd/src/usr.sbin/ntp/doc/*.5 ${MANDIR}
 (
 d=${PWD}
 cd ${MANDIR}
+shopt -s nullglob
 for p in $d/*.5.patch ; do
 	patch -F0 -p0 < $p || exit 1
 done
