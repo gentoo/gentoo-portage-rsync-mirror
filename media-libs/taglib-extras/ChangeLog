@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/taglib-extras
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.14 2015/04/02 15:46:31 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.15 2015/04/08 11:16:12 kensington Exp $
+
+  08 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  taglib-extras-1.0.1-r1.ebuild, taglib-extras-1.0.1.ebuild:
+  Use new upstream SRC_URI.
 
 *taglib-extras-1.0.1-r1 (02 Apr 2015)
 
