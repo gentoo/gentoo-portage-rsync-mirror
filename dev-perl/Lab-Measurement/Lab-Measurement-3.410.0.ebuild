@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.17 2015/04/07 23:33:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-3.410.0.ebuild,v 1.1 2015/04/07 23:33:43 dilfridge Exp $
 
 EAPI=5
 
 if [[ "${PV}" != "9999" ]]; then
-	MODULE_VERSION=9999 # change this!!!
+	MODULE_VERSION=3.41 # change this!!!
 	MODULE_AUTHOR="AKHUETTEL"
 	KEYWORDS="~amd64 ~x86"
 	inherit perl-module
@@ -14,11 +14,14 @@ else
 	EGIT_BRANCH="master"
 	EGIT_SOURCEDIR=${S}
 	S=${WORKDIR}/${P}/Measurement
-	inherit perl-module git-r3
+	inherit perl-module git-2
 fi
 
 DESCRIPTION="Measurement control and automation with Perl"
 HOMEPAGE="http://www.labmeasurement.de/"
+
+# this is perl's license, whatever it means
+LICENSE="|| ( Artistic GPL-2 )"
 
 SLOT="0"
 IUSE="debug +xpression"
