@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r3.ebuild,v 1.1 2015/04/04 08:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.8-r3.ebuild,v 1.2 2015/04/08 04:54:45 vapier Exp $
 
 EAPI="4"
 
@@ -53,6 +53,10 @@ src_prepare() {
 	# ran in the top level.  But the libtool call there updated files in
 	# the subdir which broke timestamps causing autotools to re-run.  #538270
 	find -type f -exec touch -r . {} +
+
+	# We want to force a rebuild of this source file though as the shipped one
+	# is broken.  #545546
+	rm libparse/info_trimble.c || die
 }
 
 src_configure() {

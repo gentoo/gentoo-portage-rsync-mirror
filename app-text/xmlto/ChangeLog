@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.102 2015/02/28 14:00:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.103 2015/04/08 04:53:47 vapier Exp $
+
+  08 Apr 2015; Mike Frysinger <vapier@gentoo.org> xmlto-0.0.26.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   28 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -xmlto-0.0.25.ebuild:
   Remove old.

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.474 2015/02/28 22:22:15 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.475 2015/04/08 04:54:14 vapier Exp $
+
+  08 Apr 2015; Mike Frysinger <vapier@gentoo.org> dbus-1.8.16.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   28 Feb 2015; Kristian Fiskerstrand <k_f@gentoo.org> -dbus-1.8.10.ebuild,
   -dbus-1.8.12.ebuild:

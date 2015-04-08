@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.234 2015/04/04 08:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.235 2015/04/08 04:54:45 vapier Exp $
+
+  08 Apr 2015; Mike Frysinger <vapier@gentoo.org> ntp-4.2.8-r3.ebuild:
+  Delete broken info_trimble.c that ships with the source #545546 by Conrad
+  Kostecki.
 
 *ntp-4.2.8-r3 (04 Apr 2015)
 

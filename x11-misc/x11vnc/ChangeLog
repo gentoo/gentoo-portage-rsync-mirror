@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.117 2015/03/03 12:10:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.118 2015/04/08 04:57:29 jer Exp $
+
+  08 Apr 2015; Jeroen Roovers <jer@gentoo.org> x11vnc-0.9.13-r1.ebuild:
+  Stable for HPPA (bug #518214).
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> x11vnc-0.9.13-r1.ebuild:
   add arm64 support, tested on A53 board
