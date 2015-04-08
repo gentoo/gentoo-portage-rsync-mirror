@@ -5,7 +5,7 @@
 EAPI=5
 
 WX_GTK_VER="3.0"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit autotools-utils fdo-mime python-r1 wxwidgets
 
@@ -25,7 +25,7 @@ CDEPEND="
 	>=dev-lang/lua-5.1
 	nlopt? ( sci-libs/nlopt )
 	python? ( ${PYTHON_DEPS} )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:* )
 	wxwidgets? ( x11-libs/wxGTK:${WX_GTK_VER} )"
 DEPEND="${CDEPEND}
 	dev-libs/boost
