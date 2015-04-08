@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/omniORB
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.71 2012/02/05 01:53:54 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.72 2015/04/08 09:25:31 jlec Exp $
+
+*omniORB-4.1.4-r2 (08 Apr 2015)
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +files/omniORB-4.1.4-format-security.patch, +omniORB-4.1.4-r2.ebuild,
+  metadata.xml, omniORB-4.1.4-r1.ebuild:
+  Bump EAPI and python support; fix for format-security, bug #520590
 
   05 Feb 2012; Mike Gilbert <floppym@gentoo.org> omniORB-4.1.4-r1.ebuild:
   Inherit multilib.
@@ -301,4 +308,3 @@
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> omniORB-304.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
-

@@ -1,13 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4-r1.ebuild,v 1.8 2015/04/08 09:25:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.1.4-r2.ebuild,v 1.1 2015/04/08 09:25:31 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
-# 2.5 is problematic due to bug #261330
-PYTHON_DEPEND="2:2.7"
+PYTHON_COMPAT=( python2_7 )
 
-inherit python eutils multilib
+inherit eutils multilib python-single-r1
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 HOMEPAGE="http://omniorb.sourceforge.net/"
@@ -15,25 +14,24 @@ SRC_URI="mirror://sourceforge/omniorb/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
-IUSE="doc ssl"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="doc ssl static-libs"
 
-RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b:0 )"
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b:0= )"
 DEPEND="${RDEPEND}"
-
-pkg_setup() {
-	python_set_active_version 2
-}
 
 src_prepare() {
 	# respect ldflags, bug #284191
-	epatch "${FILESDIR}"/ldflags.patch \
-		"${FILESDIR}"/${P}-openssl-1.patch
+	epatch \
+		"${FILESDIR}"/ldflags.patch \
+		"${FILESDIR}"/${P}-openssl-1.patch \
+		"${FILESDIR}"/${P}-format-security.patch
 
-	sed -i -e 's/^CXXDEBUGFLAGS.*/CXXDEBUGFLAGS = $(OPTCXXFLAGS)/' \
+	sed \
+		-e 's/^CXXDEBUGFLAGS.*/CXXDEBUGFLAGS = $(OPTCXXFLAGS)/' \
 		-e 's/^CDEBUGFLAGS.*/CDEBUGFLAGS = $(OPTCFLAGS)/' \
-		mk/beforeauto.mk.in \
-		mk/platforms/i586_linux_2.0*.mk || die "sed failed"
+		-i mk/beforeauto.mk.in mk/platforms/i586_linux_2.0*.mk || \
+		die "sed failed"
 }
 
 src_configure() {
@@ -44,55 +42,50 @@ src_configure() {
 
 	use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
 
-	PYTHON="$(PYTHON -a)" ECONF_SOURCE=".." econf ${MY_CONF}
+	ECONF_SOURCE=".." econf ${MY_CONF} $(use_enable static-libs static)
 }
 
 src_compile() {
 	cd build || die
-	emake OPTCFLAGS="${CFLAGS}" OPTCXXFLAGS="${CXXFLAGS}" || die "emake failed"
+	emake OPTCFLAGS="${CFLAGS}" OPTCXXFLAGS="${CXXFLAGS}"
 }
 
 src_install() {
 	cd build || die
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 	# this looks redundant
-	rm "${D}/usr/bin/omniidlrun.py" || die
+	rm "${ED}/usr/bin/omniidlrun.py" || die
 
-	cd "${S}"
-	dodoc COPYING* CREDITS README* ReleaseNotes* || die
+	cd "${S}" || die
 
 	if use doc; then
-		dohtml doc/*.html || die
-		dohtml -r doc/omniORB || die
+		dohtml doc/*.html
+		dohtml -r doc/omniORB
 		docinto print
-		dodoc doc/*.pdf || die
+		dodoc doc/*.pdf
 	fi
 
-	dodir /etc/env.d/
 	cat <<- EOF > "${T}/90omniORB"
 		PATH="/usr/share/omniORB/bin/scripts"
 		OMNIORB_CONFIG="/etc/omniorb/omniORB.cfg"
 	EOF
-	doenvd "${T}/90omniORB" || die
-	doinitd "${FILESDIR}"/omniNames || die
+	doenvd "${T}/90omniORB"
+	doinitd "${FILESDIR}"/omniNames
 
 	cp "sample.cfg" "${T}/omniORB.cfg" || die
 	cat <<- EOF >> "${T}/omniORB.cfg"
 		# resolve the omniNames running on localhost
 		InitRef = NameService=corbaname::localhost
 	EOF
-	dodir /etc/omniorb
 	insinto /etc/omniorb
-	doins "${T}/omniORB.cfg" || die
+	doins "${T}"/omniORB.cfg
 
 	keepdir /var/log/omniORB
+
+	python_optimize
+	python_fix_shebang "${ED}"/usr/bin/omniidl
 }
 
 pkg_postinst() {
 	elog "Since 4.1.2, the omniORB init script has been renamed to omniNames for clarity."
-	python_mod_optimize omniidl omniidl_be
-}
-
-pkg_postrm() {
-	python_mod_cleanup omniidl omniidl_be
 }
