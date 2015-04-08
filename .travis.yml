@@ -19,3 +19,10 @@ install:
 
 script:
   - bash travis-repo-checks-master/run-tests.bash ${JOB} 8
+
+notifications:
+  email:
+    recipients:
+      - travis-ci@gentoo.org
+    on_success: change
+    on_failure: change
