@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/mendeleydesktop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.27 2015/04/07 14:44:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/ChangeLog,v 1.28 2015/04/08 06:16:58 jlec Exp $
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org> mendeleydesktop-1.13.6.ebuild:
+  Drop 'free' from DESCRIPTION to reduce confusion with free software, bug
+  #545396
 
 *mendeleydesktop-1.13.6 (03 Apr 2015)
 

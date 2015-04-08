@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.13.6.ebuild,v 1.1 2015/04/03 12:18:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/mendeleydesktop/mendeleydesktop-1.13.6.ebuild,v 1.2 2015/04/08 06:16:58 jlec Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit eutils fdo-mime multilib python-single-r1
 MY_P_AMD64="${P}-linux-x86_64"
 MY_P_X86="${P}-linux-i486"
 
-DESCRIPTION="A free research management tool for desktop and web"
+DESCRIPTION="Research management tool for desktop and web"
 HOMEPAGE="http://www.mendeley.com/"
 SRC_URI="
 	amd64? ( ${MY_P_AMD64}.tar.bz2 )
