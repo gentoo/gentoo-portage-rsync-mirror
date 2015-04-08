@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/django-crispy-forms
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-crispy-forms/ChangeLog,v 1.1 2015/04/08 14:39:31 jlec Exp $
+
+*django-crispy-forms-1.4.0 (08 Apr 2015)
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +django-crispy-forms-1.4.0.ebuild, +metadata.xml:
+  New package written by me

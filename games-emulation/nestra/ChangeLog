@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/nestra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.18 2015/02/07 04:51:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/ChangeLog,v 1.20 2015/04/08 14:54:13 mr_bones_ Exp $
+
+  08 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> nestra-0.66-r2.ebuild:
+  mark stable
+
+  08 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> nestra-0.66-r2.ebuild:
+  tidy
 
   07 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> nestra-0.66-r2.ebuild:
   tidy
