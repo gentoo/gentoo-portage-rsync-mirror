@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/burp/burp-1.3.8.ebuild,v 1.1 2014/12/01 16:28:47 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/burp/burp-1.3.8.ebuild,v 1.2 2015/04/08 19:13:54 aidecoe Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ DEPEND="
 	acl? ( sys-apps/acl )
 	afs? ( net-fs/openafs )
 	nls? ( sys-devel/gettext )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xattr? ( sys-apps/attr )
 	"
@@ -69,14 +69,6 @@ src_install() {
 	fperms 0750 /etc/burp/clientconfdir
 	fowners root:burp /etc/burp/burp-server.conf
 	fperms 0640 /etc/burp/burp-server.conf
-
-	if use ssl; then
-		# The server will create this directory if it doesn't exist, but the
-		# client won't.  It must be writable by both.
-		dodir /etc/burp/CA
-		fowners root:burp /etc/burp/CA
-		fperms 0775 /etc/burp/CA
-	fi
 
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	dodoc docs/*
