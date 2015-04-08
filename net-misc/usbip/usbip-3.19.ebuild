@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/usbip/usbip-3.19.ebuild,v 1.1 2015/03/17 15:49:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/usbip/usbip-3.19.ebuild,v 1.2 2015/04/08 10:08:46 chithanh Exp $
 
 EAPI=5
 ETYPE="sources"
@@ -30,6 +30,8 @@ DOCS="AUTHORS README ../../../drivers/usb/usbip/usbip_protocol.txt"
 S=${WORKDIR}/linux-${PV}/tools/usb/${PN}
 
 src_prepare() {
+	# remove -Werror from build, bug #545398
+	sed -i 's/-Werror[^ ]* //g' configure.ac || die
 	eautoreconf
 }
 
@@ -46,6 +48,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "For using USB/IP you need to enable USB_IP_VHCI_HCD in the client"
-	elog "machine's kernel config and USB_IP_HOST on the server."
+	elog "For using USB/IP you need to enable USBIP_VHCI_HCD in the client"
+	elog "machine's kernel config and USBIP_HOST on the server."
 }
