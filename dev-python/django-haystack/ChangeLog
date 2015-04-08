@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-haystack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-haystack/ChangeLog,v 1.4 2015/03/08 23:44:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-haystack/ChangeLog,v 1.5 2015/04/08 07:37:50 jlec Exp $
+
+*django-haystack-2.3.1 (08 Apr 2015)
+
+  08 Apr 2015; Justin Lecher <jlec@gentoo.org> +django-haystack-2.3.1.ebuild,
+  -django-haystack-2.1.0.ebuild, metadata.xml:
+  Version Bump, bug #545438
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-haystack-2.2.0.ebuild:
   x86 stable, bug 540290

@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/glib-2.22 !<app-emulation/qemu-1.1.1-r1 !<sys-apps/sysvinit-2
 SLOT=0
 SRC_URI=http://wiki.qemu.org/download/qemu-1.6.0.tar.bz2 http://dev.gentoo.org/~cardoe/distfiles/qemu-1.6.0-49bdd50f.tar.xz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	6d3a3cb5705b9fff1aeb7cfa4e3336fe	python-utils-r1	096f8247eae93026af13ab88cf4305cd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	udev	da001465a2e939c93f7ae16947ce3438
-_md5_=96c36d7e68fa807360e49eb7967d1747
+_md5_=bccb48656836199c69406a4e87d90897
