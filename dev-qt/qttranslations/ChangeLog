@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qttranslations
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.15 2015/04/07 15:08:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.16 2015/04/07 23:15:12 pesa Exp $
+
+  07 Apr 2015; Davide Pesavento <pesa@gentoo.org>
+  qttranslations-4.8.6-r1.ebuild:
+  Empty RDEPEND in qt4 ebuild as well.
 
   07 Apr 2015; Michael Palimaka <kensington@gentoo.org>
   qttranslations-4.8.6-r1.ebuild:

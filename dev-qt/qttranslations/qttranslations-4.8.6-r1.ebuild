@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/qttranslations-4.8.6-r1.ebuild,v 1.2 2015/04/07 15:08:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/qttranslations-4.8.6-r1.ebuild,v 1.3 2015/04/07 23:15:12 pesa Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="
 	~dev-qt/qtcore-${PV}
 "
-RDEPEND="${DEPEND}"
+RDEPEND=""
 
 QT4_TARGET_DIRECTORIES="translations"
 
