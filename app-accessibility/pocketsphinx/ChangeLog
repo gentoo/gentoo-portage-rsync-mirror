@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/pocketsphinx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pocketsphinx/ChangeLog,v 1.4 2014/11/25 23:01:30 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/pocketsphinx/ChangeLog,v 1.5 2015/04/08 07:30:37 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pocketsphinx-0.8.ebuild:
+  Remove old Python implementations
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

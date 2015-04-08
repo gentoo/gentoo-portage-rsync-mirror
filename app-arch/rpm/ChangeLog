@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.193 2014/11/17 23:28:00 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.194 2015/04/08 07:30:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> rpm-4.11.0.1.ebuild,
+  rpm-4.11.1.ebuild, rpm-4.11.2-r1.ebuild, rpm-4.11.2.ebuild,
+  rpm-4.12.0.1.ebuild:
+  Remove old Python implementations
 
   17 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org> rpm-4.11.0.1.ebuild,
   rpm-4.11.1.ebuild, rpm-4.11.2.ebuild, rpm-4.11.2-r1.ebuild,

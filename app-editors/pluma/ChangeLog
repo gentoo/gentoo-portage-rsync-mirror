@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/pluma
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/ChangeLog,v 1.8 2014/12/10 09:27:39 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/pluma/ChangeLog,v 1.9 2015/04/08 07:30:32 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pluma-1.8.0.ebuild,
+  pluma-1.8.1.ebuild:
+  Remove old Python implementations
 
   10 Dec 2014; Matthias Maier <tamiko@gentoo.org> pluma-1.8.0.ebuild:
   do not call to python-single-r1_pkg_setup if USE=-python, bug #518026

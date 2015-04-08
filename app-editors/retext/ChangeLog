@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/retext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.17 2015/03/15 13:28:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.18 2015/04/08 07:30:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> retext-4.0.1-r2.ebuild:
+  Remove old Python implementations
 
 *retext-5.0.1 (15 Mar 2015)
 

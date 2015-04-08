@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/openssl-blacklist
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.15 2015/01/03 19:42:35 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/openssl-blacklist/ChangeLog,v 1.16 2015/04/08 07:30:37 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> openssl-blacklist-0.5.3.ebuild:
+  Remove old Python implementations
 
   03 Jan 2015; <hanno@gentoo.org> -openssl-blacklist-0.4.1.ebuild,
   -openssl-blacklist-0.4.2.ebuild:
@@ -68,4 +71,3 @@
   17 May 2008; Hanno Boeck <hanno@gentoo.org> +openssl-blacklist-0.1.ebuild:
   Initial commit of ubuntus tool to detect weak ssl-keys according to
   CVE-2008-0166.
-

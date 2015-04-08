@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/install-mask
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.24 2014/11/26 10:42:16 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.25 2015/04/08 07:30:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r3.ebuild,
+  install-mask-0.1.1.ebuild, install-mask-9999.ebuild:
+  Remove old Python implementations
 
   26 Nov 2014; Pacho Ramos <pacho@gentoo.org> install-mask-9999.ebuild:
   Support python 3.4

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/goobook
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/ChangeLog,v 1.9 2014/07/06 12:30:56 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/goobook/ChangeLog,v 1.10 2015/04/08 07:30:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> goobook-1.4-r1.ebuild:
+  Remove old Python implementations
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> goobook-1.4-r1.ebuild:
   Clean up obsolete dependencies on virtual/python-argparse and virtual/python-

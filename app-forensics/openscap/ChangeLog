@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/openscap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.32 2014/12/23 10:17:17 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.33 2015/04/08 07:30:34 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> openscap-1.0.8-r1.ebuild,
+  openscap-1.1.1.ebuild, openscap-1.2.0.ebuild, openscap-9999.ebuild:
+  Remove old Python implementations
 
 *openscap-1.2.0 (23 Dec 2014)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.1.ebuild,v 1.3 2014/07/23 15:13:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.1.ebuild,v 1.4 2015/04/08 07:30:37 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils gnome2 python-single-r1
 

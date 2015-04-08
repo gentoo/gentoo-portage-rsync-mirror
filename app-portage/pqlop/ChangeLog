@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pqlop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/ChangeLog,v 1.7 2014/11/24 13:18:47 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pqlop/ChangeLog,v 1.8 2015/04/08 07:30:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pqlop-0.02-r1.ebuild:
+  Remove old Python implementations
 
   24 Nov 2014; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml,
   pqlop-0.02-r1.ebuild:

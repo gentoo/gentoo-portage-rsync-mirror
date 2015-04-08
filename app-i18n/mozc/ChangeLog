@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/mozc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.16 2015/03/18 02:32:57 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.17 2015/04/08 07:30:31 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> mozc-1.10.1390.102-r1.ebuild,
+  mozc-1.13.1651.102.ebuild, mozc-2.16.2037.102.ebuild:
+  Remove old Python implementations
 
   18 Mar 2015; Naohiro Aota <naota@gentoo.org> mozc-2.16.2037.102.ebuild:
   Fix ibus-qt dependency suggested by hrnr. #542376

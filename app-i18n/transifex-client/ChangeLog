@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/transifex-client
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.33 2014/12/19 20:35:48 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.34 2015/04/08 07:30:36 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> transifex-client-0.10.ebuild,
+  transifex-client-0.11.1_beta.ebuild:
+  Remove old Python implementations
 
 *transifex-client-0.11.1_beta (19 Dec 2014)
 

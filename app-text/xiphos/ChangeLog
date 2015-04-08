@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xiphos
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.18 2015/02/18 15:06:08 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.19 2015/04/08 07:30:34 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> xiphos-3.1.5.ebuild:
+  Remove old Python implementations
 
   18 Feb 2015; Chris Reffett <creffett@gentoo.org> -xiphos-3.1.6.ebuild,
   xiphos-3.2.2.ebuild:

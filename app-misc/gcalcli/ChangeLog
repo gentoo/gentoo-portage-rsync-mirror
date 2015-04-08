@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcalcli
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/ChangeLog,v 1.7 2015/01/11 05:41:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/ChangeLog,v 1.8 2015/04/08 07:30:36 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gcalcli-3.2.ebuild:
+  Remove old Python implementations
 
 *gcalcli-3.2 (11 Jan 2015)
 

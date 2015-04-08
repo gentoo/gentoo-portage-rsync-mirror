@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.139 2015/03/23 02:25:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.140 2015/04/08 07:30:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  gentoolkit-dev-0.2.8.3-r1.ebuild, gentoolkit-dev-9999.ebuild:
+  Remove old Python implementations
 
   23 Mar 2015; Patrick Lauer <patrick@gentoo.org> gentoolkit-dev-9999.ebuild:
   Whitespace

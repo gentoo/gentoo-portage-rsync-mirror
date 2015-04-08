@@ -1,6 +1,9 @@
 # ChangeLog for app-text/keepnote
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.15 2014/12/31 16:08:36 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.16 2015/04/08 07:30:30 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> keepnote-0.7.9-r2.ebuild:
+  Remove old Python implementations
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org>
   -keepnote-0.7.8-r1.ebuild:

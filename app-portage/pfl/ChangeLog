@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.73 2015/04/04 11:21:10 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.74 2015/04/08 07:30:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pfl-2.4-r3.ebuild,
+  pfl-2.4-r4.ebuild:
+  Remove old Python implementations
 
 *pfl-2.4-r4 (04 Apr 2015)
 

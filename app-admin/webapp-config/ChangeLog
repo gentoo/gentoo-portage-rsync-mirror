@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.122 2015/03/03 05:36:13 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.123 2015/04/08 07:30:31 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> webapp-config-1.52-r1.ebuild,
+  webapp-config-9999.ebuild:
+  Remove old Python implementations
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> webapp-config-1.53-r2.ebuild:
   add arm64 support, tested on A53 board

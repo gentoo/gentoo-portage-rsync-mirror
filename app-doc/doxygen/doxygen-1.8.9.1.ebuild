@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.9.1.ebuild,v 1.1 2015/01/21 15:25:13 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.9.1.ebuild,v 1.2 2015/04/08 07:30:32 mgorny Exp $
 
 EAPI=4
-PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit eutils fdo-mime flag-o-matic python-any-r1 qt4-r2 toolchain-funcs
 

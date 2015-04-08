@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/duplicity
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/ChangeLog,v 1.99 2014/10/23 03:21:08 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/ChangeLog,v 1.100 2015/04/08 07:30:37 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> duplicity-0.6.22.ebuild,
+  duplicity-0.6.23-r1.ebuild:
+  Remove old Python implementations
 
 *duplicity-0.6.25 (23 Oct 2014)
 

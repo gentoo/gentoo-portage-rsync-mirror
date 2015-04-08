@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/youcompleteme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/ChangeLog,v 1.5 2015/03/29 10:09:31 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/ChangeLog,v 1.6 2015/04/08 07:30:37 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> youcompleteme-20130910.ebuild:
+  Remove old Python implementations
 
   29 Mar 2015; Maxim Koltsov <maksbotan@gentoo.org>
   youcompleteme-99999999.ebuild:

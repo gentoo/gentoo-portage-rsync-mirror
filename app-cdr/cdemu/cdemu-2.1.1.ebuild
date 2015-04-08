@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-2.1.1.ebuild,v 1.4 2015/02/21 22:55:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-2.1.1.ebuild,v 1.5 2015/04/08 07:30:32 mgorny Exp $
 
 EAPI="5"
 
 CMAKE_MIN_VERSION="2.8.5"
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 PLOCALES="de fr no pl sl sv"
 
 inherit bash-completion-r1 cmake-utils eutils fdo-mime l10n python-single-r1

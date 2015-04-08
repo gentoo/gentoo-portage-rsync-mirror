@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.57 2015/03/31 18:20:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.58 2015/04/08 07:30:29 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.6.ebuild,
+  gentoopm-0.2.8.ebuild, gentoopm-0.2.9.ebuild, gentoopm-9999.ebuild:
+  Remove old Python implementations
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> gentoopm-0.2.6.ebuild,
   gentoopm-0.2.8.ebuild, gentoopm-0.2.9.ebuild, gentoopm-9999.ebuild:

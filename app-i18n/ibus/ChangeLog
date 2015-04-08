@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.157 2015/02/28 15:36:43 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.158 2015/04/08 07:30:32 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> ibus-1.5.5.ebuild:
+  Remove old Python implementations
 
 *ibus-1.5.10 (28 Feb 2015)
 

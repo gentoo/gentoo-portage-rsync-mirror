@@ -1,6 +1,10 @@
 # ChangeLog for app-office/dia
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.177 2014/12/19 13:34:02 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.178 2015/04/08 07:30:34 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> dia-0.97.3.ebuild,
+  dia-0.97.3_pre20140417-r1.ebuild:
+  Remove old Python implementations
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> dia-0.97.3.ebuild:
   amd64 stable, bug 529964

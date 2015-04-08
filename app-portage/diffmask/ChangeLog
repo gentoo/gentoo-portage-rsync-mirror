@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/diffmask
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.26 2014/11/26 10:29:31 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.27 2015/04/08 07:30:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3-r2.ebuild,
+  diffmask-9999.ebuild:
+  Remove old Python implementations
 
   26 Nov 2014; Pacho Ramos <pacho@gentoo.org> diffmask-9999.ebuild:
   Support python 3.4

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.66 2015/04/03 08:34:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.67 2015/04/08 07:30:31 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> xen-pvgrub-4.2.5.ebuild,
+  xen-pvgrub-4.4.2.ebuild, xen-pvgrub-4.5.0-r1.ebuild:
+  Remove old Python implementations
 
   03 Apr 2015; Agostino Sarubbo <ago@gentoo.org> -xen-pvgrub-4.4.1.ebuild:
   Remove old

@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/pylize-1.3b-r1.ebuild,v 1.6 2015/03/08 23:37:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/pylize-1.3b-r1.ebuild,v 1.7 2015/04/08 07:30:34 mgorny Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils-r1

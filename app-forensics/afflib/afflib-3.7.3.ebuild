@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.3.ebuild,v 1.1 2013/11/10 07:31:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.3.ebuild,v 1.2 2015/04/08 07:30:31 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=modules
 

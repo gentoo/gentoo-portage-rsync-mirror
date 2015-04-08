@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/trash-cli
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.20 2014/11/26 09:19:58 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/trash-cli/ChangeLog,v 1.21 2015/04/08 07:30:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> trash-cli-0.12.9.14-r2.ebuild:
+  Remove old Python implementations
 
   26 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   udpate meatadata.xml, add Alex Xu as maintainer

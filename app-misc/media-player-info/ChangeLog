@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/media-player-info
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.40 2015/03/03 05:52:31 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/ChangeLog,v 1.41 2015/04/08 07:30:32 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> media-player-info-21-r1.ebuild:
+  Remove old Python implementations
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> media-player-info-21-r1.ebuild:
   add arm64 support, tested on A53 board

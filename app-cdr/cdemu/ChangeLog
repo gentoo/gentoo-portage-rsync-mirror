@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.51 2015/03/27 10:15:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.52 2015/04/08 07:30:32 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cdemu-2.1.1.ebuild:
+  Remove old Python implementations
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> cdemu-3.0.0.ebuild:
   Stable for x86, wrt bug #544156

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.330 2015/03/30 16:27:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.331 2015/04/08 07:30:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> lyx-2.0.8.1.ebuild,
+  lyx-2.1.2.ebuild, lyx-2.1.3.ebuild:
+  Remove old Python implementations
 
   30 Mar 2015; Jeroen Roovers <jer@gentoo.org> lyx-2.1.3.ebuild:
   Stable for HPPA (bug #544700).

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.101 2015/04/05 16:09:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.102 2015/04/08 07:30:37 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> workrave-1.10.1.ebuild,
+  workrave-1.10.6-r1.ebuild:
+  Remove old Python implementations
 
 *workrave-1.10.6-r1 (05 Apr 2015)
 

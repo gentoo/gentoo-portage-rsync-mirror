@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.320 2015/04/05 15:10:46 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.321 2015/04/08 07:30:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> qemu-2.1.2-r2.ebuild,
+  qemu-2.1.3.ebuild, qemu-2.2.0.ebuild, qemu-2.2.1.ebuild:
+  Remove old Python implementations
 
   05 Apr 2015; Matthias Maier <tamiko@gentoo.org> qemu-2.1.3.ebuild,
   qemu-2.2.0.ebuild:

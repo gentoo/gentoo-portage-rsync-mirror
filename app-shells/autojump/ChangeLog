@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/autojump
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.16 2015/04/05 02:28:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/autojump/ChangeLog,v 1.17 2015/04/08 07:30:31 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> autojump-21.3.0-r1.ebuild,
+  autojump-21.5.8-r1.ebuild:
+  Remove old Python implementations
 
   05 Apr 2015; Ian Delaney <idella4@gentoo.org> autojump-21.6.9.ebuild:
   Clean old impls, add py3.4 support

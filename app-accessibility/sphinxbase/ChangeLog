@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinxbase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.11 2015/04/07 14:04:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinxbase/ChangeLog,v 1.12 2015/04/08 07:30:36 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sphinxbase-0.8.ebuild:
+  Remove old Python implementations
 
   29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -sphinxbase-0.7.ebuild:
   Remove old.

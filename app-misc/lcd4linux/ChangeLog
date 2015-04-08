@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd4linux
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.47 2014/12/05 14:27:41 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.48 2015/04/08 07:30:32 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> lcd4linux-0.10.1_rc2-r3.ebuild:
+  Remove old Python implementations
 
   05 Dec 2014; Michael Palimaka <kensington@gentoo.org>
   -lcd4linux-0.10.1_rc2-r2.ebuild:
