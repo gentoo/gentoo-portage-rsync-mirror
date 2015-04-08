@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r6.ebuild,v 1.6 2015/03/17 02:06:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.02_beta2-r6.ebuild,v 1.7 2015/04/08 20:32:47 mgorny Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ AUTOTOOLS_AUTORECONF=1
 GRUB_AUTOGEN=1
 
 if [[ -n ${GRUB_AUTOGEN} ]]; then
-	PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+	PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 	inherit python-any-r1
 fi
 

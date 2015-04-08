@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.18.ebuild,v 1.1 2015/03/04 21:16:04 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.18.ebuild,v 1.2 2015/04/08 20:37:45 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=(
 	pypy
-	python3_2 python3_3 python3_4
+	python3_3 python3_4
 	python2_7
 )
 # Note: substituted below
@@ -49,7 +49,7 @@ RDEPEND="
 	xattr? ( kernel_linux? (
 		>=sys-apps/install-xattr-0.3
 		$(python_gen_cond_dep 'dev-python/pyxattr[${PYTHON_USEDEP}]' \
-			python{2_7,3_2} pypy)
+			python2_7 pypy)
 	) )
 	!<app-admin/logrotate-3.8.0"
 PDEPEND="

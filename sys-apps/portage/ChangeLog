@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1433 2015/03/04 21:55:51 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1434 2015/04/08 20:37:45 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> portage-2.2.14.ebuild,
+  portage-2.2.15.ebuild, portage-2.2.17.ebuild, portage-2.2.18.ebuild,
+  portage-9999.ebuild:
+  Drop old Python implementations
 
 *portage-2.2.18 (04 Mar 2015)
 
