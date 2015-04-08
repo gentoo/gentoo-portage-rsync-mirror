@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.8.8.ebuild,v 1.5 2013/09/05 19:44:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.8.8.ebuild,v 1.6 2015/04/08 17:29:19 mgorny Exp $
 
 EAPI=5
 
 #dev-python/pygobject and dev-python/pygtk do not support python3
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1 eutils
 
 DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy"

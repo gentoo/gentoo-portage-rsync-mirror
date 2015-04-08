@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nts/nts-82.ebuild,v 1.1 2014/01/09 13:00:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nts/nts-82.ebuild,v 1.2 2015/04/08 17:27:17 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="Note Taking made Simple, an intuitive note taking application"

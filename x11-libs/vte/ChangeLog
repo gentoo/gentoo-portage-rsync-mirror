@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.407 2015/03/29 11:19:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.408 2015/04/08 17:28:02 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> vte-0.28.2-r206.ebuild:
+  Drop old Python implementations
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> vte-0.38.3.ebuild:
   Stable for HPPA (bug #534012).

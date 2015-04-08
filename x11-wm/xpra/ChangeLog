@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.116 2015/02/04 01:16:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.117 2015/04/08 17:29:19 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> xpra-0.8.8.ebuild:
+  Drop old Python implementations
 
 *xpra-0.14.18 (04 Feb 2015)
 

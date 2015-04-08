@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/compton
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.20 2014/11/25 23:28:02 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.21 2015/04/08 17:27:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> compton-0.1_beta1.ebuild,
+  compton-0.1_beta2.ebuild, compton-9999.ebuild:
+  Drop old Python implementations
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership

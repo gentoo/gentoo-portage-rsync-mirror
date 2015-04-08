@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xbattbar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.18 2014/05/12 17:42:27 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/ChangeLog,v 1.19 2015/04/08 17:27:16 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> xbattbar-1.4.4.ebuild,
+  xbattbar-1.4.5.ebuild:
+  Drop old Python implementations
 
 *xbattbar-1.4.5 (12 May 2014)
 
@@ -67,4 +71,3 @@
   19 Jun 2003; mkeadle <mkeadle@gentoo.org> xbattbar-1.4.2.ebuild:
   Initial import of xbattbar. thanks to Mamoru Komachi
   <usata@sodan.ecc.u-tokyo.ac.jp> for the ebuild in bug #21568.
-

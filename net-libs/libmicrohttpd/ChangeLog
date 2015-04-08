@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.84 2015/04/08 12:14:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.86 2015/04/08 17:27:00 jer Exp $
+
+  08 Apr 2015; Jeroen Roovers <jer@gentoo.org> libmicrohttpd-0.9.39.ebuild:
+  Stable for HPPA (bug #545814).
+
+  08 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  libmicrohttpd-0.9.39.ebuild:
+  Stable for arm, ppc and ppc64. Bug #545814.
 
   08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.39.ebuild:
   Stable for amd64, wrt bug #545814

@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r206.ebuild,v 1.13 2015/03/03 11:52:44 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r206.ebuild,v 1.14 2015/04/08 17:28:02 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils gnome2 python-r1
 

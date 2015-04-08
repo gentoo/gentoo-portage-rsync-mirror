@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/hippo-canvas-0.3.0-r2.ebuild,v 1.3 2015/01/29 10:09:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/hippo-canvas/hippo-canvas-0.3.0-r2.ebuild,v 1.4 2015/04/08 17:28:02 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
 GNOME_TARBALL_SUFFIX="bz2"
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit eutils gnome2 multilib python-single-r1
 

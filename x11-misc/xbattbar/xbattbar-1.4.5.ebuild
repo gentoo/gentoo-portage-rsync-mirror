@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/xbattbar-1.4.5.ebuild,v 1.1 2014/05/12 17:42:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbattbar/xbattbar-1.4.5.ebuild,v 1.2 2015/04/08 17:27:16 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 inherit eutils flag-o-matic multilib python-single-r1 toolchain-funcs
 
 DESCRIPTION="Advanced Power Management battery status display for X"

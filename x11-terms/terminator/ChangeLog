@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/terminator
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.31 2015/04/07 14:48:42 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.32 2015/04/08 17:26:26 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> terminator-0.96-r2.ebuild,
+  terminator-0.96-r3.ebuild, terminator-0.97-r1.ebuild, terminator-0.97.ebuild:
+  Drop old Python implementations
 
 *terminator-0.97-r1 (25 Sep 2013)
 
@@ -131,4 +135,3 @@
   +metadata.xml:
   Import from sunrise, #213243
   Thanks Ivan Toshkov for the initial contribution
-

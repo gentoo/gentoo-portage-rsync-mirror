@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dex/dex-0.6.ebuild,v 1.5 2014/11/25 18:52:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dex/dex-0.6.ebuild,v 1.6 2015/04/08 17:27:17 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{3_3,3_4} )
 inherit eutils python-r1
 
 DESCRIPTION="DesktopEntry eXecution - tool to manage and launch autostart entries"

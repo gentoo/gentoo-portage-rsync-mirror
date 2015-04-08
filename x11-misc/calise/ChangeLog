@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/calise
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/calise/ChangeLog,v 1.1 2014/05/14 14:17:10 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/calise/ChangeLog,v 1.2 2015/04/08 17:27:17 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> calise-0.4.2.ebuild:
+  Drop old Python implementations
 
 *calise-0.4.2 (14 May 2014)
 

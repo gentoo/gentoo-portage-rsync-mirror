@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/qtile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/ChangeLog,v 1.16 2015/02/26 01:17:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/ChangeLog,v 1.17 2015/04/08 17:29:19 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> qtile-0.5-r1.ebuild,
+  qtile-0.6.ebuild, qtile-0.7.0.ebuild, qtile-0.8.0.ebuild:
+  Drop old Python implementations
 
 *qtile-0.9.1-r1 (26 Feb 2015)
 

@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r3.ebuild,v 1.2 2014/12/02 14:38:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-0.8.0-r3.ebuild,v 1.3 2015/04/08 17:28:02 mgorny Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/vaapi/xvba-driver"
 [[ ${PV} = 9999 ]] && inherit git-2
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 AUTOTOOLS_AUTORECONF="yes"
 inherit eutils autotools-multilib python-any-r1
 

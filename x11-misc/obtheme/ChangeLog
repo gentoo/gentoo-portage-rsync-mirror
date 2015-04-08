@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obtheme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obtheme/ChangeLog,v 1.8 2015/03/13 19:12:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obtheme/ChangeLog,v 1.9 2015/04/08 17:27:17 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> obtheme-2013.2.20.2.ebuild:
+  Drop old Python implementations
 
   13 Mar 2015; Jeroen Roovers <jer@gentoo.org> -obtheme-0.7_p20110404.ebuild,
   obtheme-2013.2.20.2.ebuild:

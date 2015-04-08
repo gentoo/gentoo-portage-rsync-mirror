@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.4.1-r1.ebuild,v 1.6 2014/08/10 20:04:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.4.1-r1.ebuild,v 1.7 2015/04/08 17:27:16 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
 inherit eutils python-single-r1
