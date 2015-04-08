@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/sdlmametools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmametools/ChangeLog,v 1.4 2013/11/22 22:18:49 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmametools/ChangeLog,v 1.5 2015/04/08 18:10:41 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sdlmametools-0.148_p1.ebuild,
+  sdlmametools-0.149.ebuild:
+  Drop old Python implementations
 
   22 Nov 2013; Julian Ospald <hasufell@gentoo.org> sdlmametools-0.148_p1.ebuild:
   stable on x86 wrt #486686

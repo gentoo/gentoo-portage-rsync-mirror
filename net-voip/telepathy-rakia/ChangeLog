@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-rakia
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.21 2014/11/13 12:36:32 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.22 2015/04/08 18:20:12 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> telepathy-rakia-0.8.0.ebuild:
+  Drop old Python implementations
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org>
   -files/telepathy-rakia-0.7.4-gio-linking.patch, -telepathy-rakia-0.7.4.ebuild:

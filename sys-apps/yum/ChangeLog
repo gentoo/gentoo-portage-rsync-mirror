@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/yum
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.20 2013/09/17 22:00:54 creffett Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/ChangeLog,v 1.21 2015/04/08 18:27:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> yum-3.4.3_p20130218.ebuild:
+  Drop old Python implementations
 
 *yum-3.4.3_p20130218 (17 Sep 2013)
 

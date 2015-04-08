@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.291 2015/03/31 18:55:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.292 2015/04/08 18:09:20 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> java-config-2.1.12-r1.ebuild,
+  java-config-2.2.0.ebuild:
+  Drop old Python implementations
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> java-config-2.1.11.ebuild,
   java-config-2.1.12-r1.ebuild:

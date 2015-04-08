@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.9 2014/08/05 18:34:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.10 2015/04/08 18:03:12 mgorny Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ EGIT_REPO_URI="git://github.com/leafnode/${PN}.git
 inherit git-r3
 #endif
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 inherit autotools-utils python-single-r1
 
 DESCRIPTION="Text-based, multi-protocol instant messenger"

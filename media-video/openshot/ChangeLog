@@ -1,6 +1,9 @@
 # ChangeLog for media-video/openshot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/openshot/ChangeLog,v 1.3 2014/11/14 01:52:27 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/openshot/ChangeLog,v 1.4 2015/04/08 18:16:25 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> openshot-1.4.3.ebuild:
+  Drop old Python implementations
 
   14 Nov 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Maintainer needed.

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.114 2015/03/25 13:51:47 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.115 2015/04/08 18:18:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> notmuch-0.16-r1.ebuild,
+  notmuch-0.17.ebuild, notmuch-0.18.2.ebuild, notmuch-0.19-r1.ebuild:
+  Drop old Python implementations
 
   25 Mar 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.19.ebuild:
   Remove old, testing revision of 0.19.

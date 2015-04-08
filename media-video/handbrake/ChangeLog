@@ -1,6 +1,10 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.28 2015/02/01 23:18:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.29 2015/04/08 18:16:25 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> handbrake-0.10.0-r1.ebuild,
+  handbrake-0.10.0.ebuild, handbrake-0.9.9-r1.ebuild, handbrake-9999.ebuild:
+  Drop old Python implementations
 
 *handbrake-0.10.0-r1 (01 Feb 2015)
 

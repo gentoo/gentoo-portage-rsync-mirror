@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r3.ebuild,v 1.8 2015/03/31 16:24:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pathological/pathological-1.1.3-r3.ebuild,v 1.9 2015/04/08 18:11:57 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1 games
 
 DESCRIPTION="An enriched clone of the game 'Logical' by Rainbow Arts"

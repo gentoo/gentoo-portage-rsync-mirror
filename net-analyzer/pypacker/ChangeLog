@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pypacker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pypacker/ChangeLog,v 1.5 2014/07/16 21:11:45 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pypacker/ChangeLog,v 1.6 2015/04/08 18:01:21 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pypacker-2.4.ebuild,
+  pypacker-2.9.ebuild:
+  Drop old Python implementations
 
   16 Jul 2014; Jeroen Roovers <jer@gentoo.org> pypacker-2.9.ebuild:
   Drop python3_1 support, add python3_4 support.

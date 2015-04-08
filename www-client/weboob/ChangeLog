@@ -1,6 +1,10 @@
 # ChangeLog for www-client/weboob
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/ChangeLog,v 1.8 2014/08/10 20:10:43 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/ChangeLog,v 1.9 2015/04/08 18:30:30 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> weboob-0g.ebuild,
+  weboob-0h.ebuild, weboob-9998.ebuild, weboob-9999.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> weboob-0g.ebuild,
   weboob-0h.ebuild, weboob-9998.ebuild, weboob-9999.ebuild:

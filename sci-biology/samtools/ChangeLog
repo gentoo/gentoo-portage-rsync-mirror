@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/samtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.24 2015/04/07 14:35:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.25 2015/04/08 18:20:42 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> samtools-0.1.19-r2.ebuild:
+  Drop old Python implementations
 
   28 Feb 2015; Justin Lecher <jlec@gentoo.org>
   files/samtools-1.2-buildsystem.patch, samtools-1.2.ebuild:

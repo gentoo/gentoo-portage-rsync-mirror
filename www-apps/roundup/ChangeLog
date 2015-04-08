@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/roundup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.70 2014/08/10 20:15:02 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.71 2015/04/08 18:29:22 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> roundup-1.4.21.ebuild,
+  roundup-1.5.0.ebuild:
+  Drop old Python implementations
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> roundup-1.4.20.ebuild,
   roundup-1.4.21.ebuild, roundup-1.5.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.238 2015/04/04 11:19:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.239 2015/04/08 18:20:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> bluez-4.101-r9.ebuild,
+  bluez-5.25.ebuild, bluez-5.28.ebuild, bluez-5.30.ebuild:
+  Drop old Python implementations
 
 *bluez-5.30 (04 Apr 2015)
 

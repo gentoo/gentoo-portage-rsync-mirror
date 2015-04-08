@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.72 2015/03/09 22:12:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.73 2015/04/08 18:20:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> crda-1.1.3-r1.ebuild:
+  Drop old Python implementations
 
   09 Mar 2015; Mike Frysinger <vapier@gentoo.org>
   files/crda-3.18-libreg-link.patch:

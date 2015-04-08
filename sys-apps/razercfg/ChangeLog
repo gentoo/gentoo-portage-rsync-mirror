@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/razercfg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.33 2015/03/15 14:02:21 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.34 2015/04/08 18:27:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> razercfg-0.23.ebuild,
+  razercfg-0.24.ebuild, razercfg-0.25.ebuild, razercfg-0.26.ebuild,
+  razercfg-0.29.ebuild, razercfg-0.30.ebuild, razercfg-0.31.ebuild:
+  Drop old Python implementations
 
   15 Mar 2015; Christian Birchinger <joker@gentoo.org>
   -razercfg-0.19_p20121013.ebuild, -razercfg-0.20.ebuild, -razercfg-0.21.ebuild,

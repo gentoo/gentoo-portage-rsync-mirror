@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.122 2014/11/29 15:03:07 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.123 2015/04/08 18:04:58 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> libproxy-0.4.11-r1.ebuild,
+  libproxy-0.4.11-r2.ebuild:
+  Drop old Python implementations
 
   29 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   libproxy-0.4.11-r1.ebuild, libproxy-0.4.11-r2.ebuild:

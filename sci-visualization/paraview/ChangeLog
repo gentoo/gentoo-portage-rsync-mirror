@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.87 2015/03/20 15:18:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.88 2015/04/08 18:23:57 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> paraview-4.0.1-r2.ebuild,
+  paraview-4.1.0-r2.ebuild, paraview-4.2.0-r1.ebuild:
+  Drop old Python implementations
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
   paraview-4.0.1-r2.ebuild, paraview-4.1.0-r2.ebuild, paraview-4.2.0-r1.ebuild:

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16468 2015/04/07 21:02:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16470 2015/04/08 18:25:14 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (08 Apr 2015)
+# Upstream went away; GPL but no source.
+# masked for removal on 20150508
+games-arcade/mtp-target-bin
 
 # Andreas K. Huettel <dilfridge@gentoo.org) (07 Apr 2015)
 # EAPI=1, last upstream release 2007, last significant
@@ -94,6 +99,7 @@ dev-games/libgrapple
 games-simulation/stoned-bin
 games-sports/racer-bin
 games-strategy/savage-bin
+games-puzzle/drod-bin
 
 # Michael Sterrett <mr_bones_@gentoo.org> (30 Mar 2015)
 # Last release in 2004; doesn't work with newer tcl
@@ -667,14 +673,6 @@ dev-perl/IP-Country
 # Anthony G. Basile <blueness@gentoo.org> (9 Jan 2015)
 # p.mask the -9999 version
 =dev-misc/i2pd-9999
-
-# Aaron W. Swenson <titanofold@gentoo.org) (7 Jan 2015)
-# pgtune is masked for removal 2015-03-08. It's dead upstream, has a
-# critical bug 530868, and doesn't use a real distribution
-# model. Adopt the package upstream to save it.
-# An online alternative lives at:
-#    http://pgtune.leopard.in.ua/
-dev-db/pgtune
 
 # Tony Vroon <chainsaw@gentoo.org> (5 Jan 2015)
 # Asterisk 13 is an LTS release but has not seen

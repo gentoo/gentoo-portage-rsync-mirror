@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeorion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.14 2015/03/27 14:05:26 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.15 2015/04/08 18:11:44 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> freeorion-0.4.5_pre.ebuild:
+  Drop old Python implementations
 
 *freeorion-0.4.5_pre (27 Mar 2015)
 

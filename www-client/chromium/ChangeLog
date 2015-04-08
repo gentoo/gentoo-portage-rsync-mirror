@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1219 2015/04/07 14:14:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1220 2015/04/08 18:30:30 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> chromium-41.0.2272.118.ebuild,
+  chromium-42.0.2311.50.ebuild, chromium-42.0.2311.60.ebuild,
+  chromium-43.0.2342.2.ebuild, chromium-43.0.2351.3.ebuild:
+  Drop old Python implementations
 
   07 Apr 2015; Mike Gilbert <floppym@gentoo.org> -chromium-41.0.2272.76.ebuild:
   Remove old.

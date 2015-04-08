@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.88 2015/02/20 03:52:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.89 2015/04/08 18:16:54 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> unbound-1.4.22-r1.ebuild:
+  Drop old Python implementations
 
 *unbound-1.5.2 (20 Feb 2015)
 

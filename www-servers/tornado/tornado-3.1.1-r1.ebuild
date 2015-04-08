@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.1.1-r1.ebuild,v 1.10 2015/03/21 09:35:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-3.1.1-r1.ebuild,v 1.11 2015/04/08 18:30:55 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 
 inherit distutils-r1
 

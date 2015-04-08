@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/pathod
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pathod/ChangeLog,v 1.8 2014/11/22 02:26:57 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pathod/ChangeLog,v 1.9 2015/04/08 18:30:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pathod-0.10.ebuild:
+  Drop old Python implementations
 
 *pathod-0.11.1 (22 Nov 2014)
 
@@ -40,4 +43,3 @@
   16 May 2013; Tim Harder <radhermit@gentoo.org> +pathod-0.9.ebuild,
   +metadata.xml:
   Initial import.
-

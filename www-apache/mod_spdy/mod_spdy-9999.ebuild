@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.6 2014/04/26 22:09:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-9999.ebuild,v 1.7 2015/04/08 18:28:33 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=(  python2_7 )
 inherit apache-module eutils python-any-r1
 
 if [[ ${PV} == 9999 ]] ; then

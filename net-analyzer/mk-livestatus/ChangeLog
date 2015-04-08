@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mk-livestatus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.10 2014/03/22 19:25:13 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.11 2015/04/08 18:01:21 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> mk-livestatus-1.2.2_p3.ebuild:
+  Drop old Python implementations
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -mk-livestatus-1.2.0_p2.ebuild:

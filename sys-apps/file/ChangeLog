@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.310 2015/03/21 09:42:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.311 2015/04/08 18:27:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> file-5.22.ebuild:
+  Drop old Python implementations
 
 *file-5.22-r1 (21 Mar 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.10.1_p1.ebuild,v 1.14 2015/03/21 21:34:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.10.1_p1.ebuild,v 1.15 2015/04/08 18:16:54 mgorny Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -13,7 +13,7 @@
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_7 python3_2 python3_3 python3_4 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 
 inherit python-r1 eutils autotools toolchain-funcs flag-o-matic multilib db-use user systemd
 

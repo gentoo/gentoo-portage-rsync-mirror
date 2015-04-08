@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.173 2015/01/24 15:33:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.174 2015/04/08 18:14:13 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> msmtp-1.4.32.ebuild:
+  Drop old Python implementations
 
 *msmtp-1.6.1 (24 Jan 2015)
 

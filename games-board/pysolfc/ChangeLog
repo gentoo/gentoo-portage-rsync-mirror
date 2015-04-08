@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pysolfc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.22 2014/07/08 17:08:40 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.23 2015/04/08 18:10:28 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> pysolfc-2.0-r3.ebuild:
+  Drop old Python implementations
 
   08 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -pysolfc-2.0-r2.ebuild:
   old

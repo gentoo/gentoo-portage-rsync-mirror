@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.307 2015/04/04 06:34:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.308 2015/04/08 18:01:22 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> net-snmp-5.7.3_pre5-r1.ebuild,
+  net-snmp-5.7.3_pre5-r2.ebuild, net-snmp-5.7.3_pre5-r3.ebuild:
+  Drop old Python implementations
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> net-snmp-5.7.3_pre5-r1.ebuild:
   Mark arm64/s390/sh stable.

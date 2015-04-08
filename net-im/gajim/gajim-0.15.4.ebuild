@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.4.ebuild,v 1.14 2014/05/17 13:57:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.4.ebuild,v 1.15 2015/04/08 18:03:12 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
 
 AUTOTOOLS_AUTORECONF=true

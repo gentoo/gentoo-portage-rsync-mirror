@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.14.5.ebuild,v 1.4 2015/01/26 09:48:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.14.5.ebuild,v 1.5 2015/04/08 18:10:19 mgorny Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
 EAPI=5
-PYTHON_COMPAT=( python2_6 python2_7 )
+PYTHON_COMPAT=( python2_7 )
 inherit python-r1 confutils eutils qt4-r2 games
 
 DESCRIPTION="A modern gaming engine for Doom, Heretic, and Hexen"

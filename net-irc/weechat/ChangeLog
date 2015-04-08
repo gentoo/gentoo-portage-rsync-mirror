@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.152 2015/04/01 20:52:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.153 2015/04/08 18:01:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> weechat-0.4.3-r1.ebuild:
+  Drop old Python implementations
 
   01 Apr 2015; Tim Harder <radhermit@gentoo.org> weechat-1.1.1.ebuild,
   weechat-9999.ebuild:

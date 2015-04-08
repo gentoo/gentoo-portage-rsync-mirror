@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/sdlmame
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.70 2014/05/15 16:40:11 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.71 2015/04/08 18:10:41 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> sdlmame-0.148_p1-r1.ebuild,
+  sdlmame-0.149.ebuild:
+  Drop old Python implementations
 
   15 May 2014; Ulrich Müller <ulm@gentoo.org> sdlmame-0.148_p1-r1.ebuild,
   sdlmame-0.149.ebuild:

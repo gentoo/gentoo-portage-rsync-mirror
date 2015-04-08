@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/s3ql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.43 2015/01/19 21:24:57 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3ql/ChangeLog,v 1.44 2015/04/08 18:27:24 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> s3ql-1.19.ebuild:
+  Drop old Python implementations
 
   19 Jan 2015; Patrick McLean <chutzpah@gentoo.org> metadata.xml:
   Add myself as maintainer

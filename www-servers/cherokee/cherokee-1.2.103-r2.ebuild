@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.103-r2.ebuild,v 1.3 2015/03/07 17:29:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.103-r2.ebuild,v 1.4 2015/04/08 18:30:55 mgorny Exp $
 
 EAPI="5"
 
 WANT_AUTOMAKE="1.11"
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools python-r1 eutils multilib pam systemd user
 

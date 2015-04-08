@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/radiotray
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.34 2014/04/26 08:24:41 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.35 2015/04/08 18:14:38 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> radiotray-9999.ebuild:
+  Drop old Python implementations
 
   26 Apr 2014; Pacho Ramos <pacho@gentoo.org> -radiotray-0.7.2.ebuild,
   radiotray-0.7.3-r2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/mitmproxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/ChangeLog,v 1.15 2015/01/04 04:51:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/mitmproxy/ChangeLog,v 1.16 2015/04/08 18:18:27 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> mitmproxy-0.10.1.ebuild:
+  Drop old Python implementations
 
 *mitmproxy-0.11.3 (04 Jan 2015)
 

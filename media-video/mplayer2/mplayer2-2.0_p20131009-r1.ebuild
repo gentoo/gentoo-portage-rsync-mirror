@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20131009-r1.ebuild,v 1.1 2015/02/01 23:21:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0_p20131009-r1.ebuild,v 1.2 2015/04/08 18:16:25 mgorny Exp $
 
 EAPI=5
 
 # https://bugs.gentoo.org/show_bug.cgi?id=434356#c4
-PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 EGIT_REPO_URI="git://git.mplayer2.org/mplayer2.git"
 

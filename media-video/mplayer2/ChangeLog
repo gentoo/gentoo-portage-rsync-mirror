@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.145 2015/03/17 03:40:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.146 2015/04/08 18:16:25 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  mplayer2-2.0_p20131009-r1.ebuild, mplayer2-2.0_p20131009.ebuild,
+  mplayer2-9999.ebuild:
+  Drop old Python implementations
 
   17 Mar 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag descriptions from metadata.xml

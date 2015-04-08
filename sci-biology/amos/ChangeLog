@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/amos
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.19 2013/12/29 00:24:16 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/ChangeLog,v 1.20 2015/04/08 18:20:42 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> amos-3.1.0-r1.ebuild:
+  Drop old Python implementations
 
 *amos-3.1.0-r1 (29 Dec 2013)
 

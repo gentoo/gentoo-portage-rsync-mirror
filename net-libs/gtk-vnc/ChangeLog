@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.126 2015/03/15 13:30:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.127 2015/04/08 18:04:57 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gtk-vnc-0.5.3.ebuild:
+  Drop old Python implementations
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtk-vnc-0.5.4.ebuild:
   x86 stable, bug 534012

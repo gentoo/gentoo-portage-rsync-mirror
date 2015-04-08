@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/zfs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.89 2014/12/18 18:09:07 ryao Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.90 2015/04/08 18:27:24 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> zfs-0.6.2-r1.ebuild,
+  zfs-0.6.2-r2.ebuild, zfs-0.6.2-r3.ebuild, zfs-0.6.2-r4.ebuild,
+  zfs-0.6.2-r5.ebuild, zfs-0.6.2.ebuild, zfs-0.6.3-r2.ebuild, zfs-0.6.3.ebuild,
+  zfs-9999.ebuild:
+  Drop old Python implementations
 
   18 Dec 2014; Richard Yao <ryao@gentoo.org> zfs-9999.ebuild:
   Fix typo in dracut module installation on 9999 ebuild, thanks prometheanfire

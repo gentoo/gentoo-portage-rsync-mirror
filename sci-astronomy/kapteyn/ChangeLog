@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/kapteyn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.14 2014/02/05 23:44:50 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/kapteyn/ChangeLog,v 1.15 2015/04/08 18:20:00 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> kapteyn-2.2-r1.ebuild:
+  Drop old Python implementations
 
   05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> kapteyn-2.2-r1.ebuild:
   Calling distutils-r1 functions

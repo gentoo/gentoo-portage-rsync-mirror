@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.62 2015/03/21 09:35:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.63 2015/04/08 18:30:55 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> tornado-3.1.1-r1.ebuild,
+  tornado-3.1.1.ebuild, tornado-3.2.1.ebuild, tornado-3.2.ebuild:
+  Drop old Python implementations
 
   21 Mar 2015; Jeroen Roovers <jer@gentoo.org> tornado-3.1.1-r1.ebuild,
   tornado-3.2.ebuild, tornado-3.2.1.ebuild, tornado-4.0.1.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gsutil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.21 2015/01/27 22:07:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsutil/ChangeLog,v 1.22 2015/04/08 18:04:50 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gsutil-3.37.ebuild,
+  gsutil-3.38.ebuild, gsutil-3.42.ebuild, gsutil-4.4.ebuild:
+  Drop old Python implementations
 
 *gsutil-4.8 (27 Jan 2015)
 

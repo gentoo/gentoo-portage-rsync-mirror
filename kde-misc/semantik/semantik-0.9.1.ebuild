@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.9.1.ebuild,v 1.2 2014/08/05 16:31:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/semantik-0.9.1.ebuild,v 1.3 2015/04/08 18:12:52 mgorny Exp $
 
 EAPI=5
 
 CMAKE_REQUIRED="never"
 NO_WAF_LIBDIR="true"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 inherit python-single-r1 flag-o-matic kde4-base multilib toolchain-funcs waf-utils
 

@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.2.ebuild,v 1.1 2014/10/06 12:27:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.2.ebuild,v 1.2 2015/04/08 18:28:33 mgorny Exp $
 
 EAPI="4"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=1
 
 inherit eutils distutils-r1 libtool multilib-minimal toolchain-funcs

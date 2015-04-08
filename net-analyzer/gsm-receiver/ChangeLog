@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gsm-receiver
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gsm-receiver/ChangeLog,v 1.5 2014/02/05 02:47:25 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gsm-receiver/ChangeLog,v 1.6 2015/04/08 18:01:22 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gsm-receiver-9999.ebuild:
+  Drop old Python implementations
 
   05 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/0001-gsm-receiver-build-against-gnuradio-3.7.patch,

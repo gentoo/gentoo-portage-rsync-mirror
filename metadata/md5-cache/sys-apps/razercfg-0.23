@@ -10,4 +10,4 @@ RDEPEND=pm-utils? ( sys-power/pm-utils ) qt4? ( dev-python/PyQt4 )
 SLOT=0
 SRC_URI=http://bues.ch/razercfg/razercfg-0.23.tar.bz2
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	udev	da001465a2e939c93f7ae16947ce3438
-_md5_=5c7cc4aaa0aa145b63ba395941d4c5a6
+_md5_=0ce294ff0c87aa186ad4efd8d2c44d11

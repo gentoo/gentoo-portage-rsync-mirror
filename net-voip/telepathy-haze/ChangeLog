@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-haze
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.51 2014/11/13 12:35:46 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.52 2015/04/08 18:20:12 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> telepathy-haze-0.8.0.ebuild:
+  Drop old Python implementations
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -telepathy-haze-0.6.0.ebuild:
   Drop old (#508854)

@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.104 2015/03/26 14:59:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.105 2015/04/08 18:30:35 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> gnash-0.8.10_p20131019.ebuild,
+  gnash-0.8.10_p20150316.ebuild:
+  Drop old Python implementations
 
 *gnash-0.8.10_p20150316 (26 Mar 2015)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.6.1-r1.ebuild,v 1.1 2013/08/11 17:55:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.6.1-r1.ebuild,v 1.2 2015/04/08 18:22:13 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit cmake-utils multilib python-single-r1 versionator
 

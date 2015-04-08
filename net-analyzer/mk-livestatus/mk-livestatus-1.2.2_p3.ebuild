@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.2.2_p3.ebuild,v 1.1 2013/12/03 23:24:23 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/mk-livestatus-1.2.2_p3.ebuild,v 1.2 2015/04/08 18:01:21 mgorny Exp $
 
 EAPI=5
 
 GENTOO_DEPEND_ON_PERL=no
 PERL_EXPORT_PHASE_FUNCTIONS=no
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools perl-module python-r1 eutils
 

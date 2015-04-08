@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.196 2015/02/10 23:05:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.197 2015/04/08 18:27:24 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> cryptsetup-1.6.2.ebuild:
+  Drop old Python implementations
 
   10 Feb 2015; Michał Górny <mgorny@gentoo.org> files/1.0.6-dmcrypt.confd:
   Fix example in conf.d, bug #518592, patch by Michael Mair-Keimberger.

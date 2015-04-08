@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/adonthell
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.31 2014/10/20 12:26:24 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.32 2015/04/08 18:11:42 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> adonthell-0.3.5-r1.ebuild:
+  Drop old Python implementations
 
   20 Oct 2014; Alfredo Tupone <tupone@gentoo.org> adonthell-0.3.5-r1.ebuild,
   +files/adonthell-0.3.5-format.patch:

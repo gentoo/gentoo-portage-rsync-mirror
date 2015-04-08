@@ -1,6 +1,9 @@
 # ChangeLog for net-news/canto
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/canto/ChangeLog,v 1.4 2014/02/20 20:41:07 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/canto/ChangeLog,v 1.5 2015/04/08 18:17:12 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> canto-0.7.10-r1.ebuild:
+  Drop old Python implementations
 
 *canto-0.7.10-r1 (20 Feb 2014)
 

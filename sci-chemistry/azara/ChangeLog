@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/azara
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.15 2014/07/06 11:24:53 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.16 2015/04/08 18:22:14 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> azara-2.8-r5.ebuild:
+  Drop old Python implementations
 
   06 Jul 2014; Justin Lecher <jlec@gentoo.org> azara-2.8-r4.ebuild,
   azara-2.8-r5.ebuild:
@@ -75,4 +78,3 @@
   07 Feb 2010; Justin Lecher (jlec) <jlec@gentoo.org> +azara-2.7.ebuild,
   +files/help-makefile.patch, +metadata.xml:
   New Ebuild
-

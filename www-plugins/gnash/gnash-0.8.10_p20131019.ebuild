@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20131019.ebuild,v 1.3 2015/03/02 09:21:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.10_p20131019.ebuild,v 1.4 2015/04/08 18:30:35 mgorny Exp $
 
 EAPI=5
 CMAKE_REQUIRED="never"
 KDE_REQUIRED="optional"
 AT_M4DIR="cygnal"
 # won't build with python-3, bug #392969
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils kde4-base multilib nsplugins python-any-r1 flag-o-matic
 

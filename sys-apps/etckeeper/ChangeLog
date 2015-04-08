@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/etckeeper
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.47 2014/11/24 11:30:46 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.48 2015/04/08 18:27:32 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> etckeeper-1.11-r1.ebuild,
+  etckeeper-1.12.ebuild:
+  Drop old Python implementations
 
   24 Nov 2014; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Drop hasufell from metadata as requested.

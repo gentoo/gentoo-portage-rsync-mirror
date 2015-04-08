@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.93 2015/04/02 20:14:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.94 2015/04/08 18:04:50 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> spice-gtk-0.20-r1.ebuild,
+  spice-gtk-0.21.ebuild, spice-gtk-0.25-r1.ebuild:
+  Drop old Python implementations
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> spice-gtk-0.25-r1.ebuild:
   arm stable, bug #542890

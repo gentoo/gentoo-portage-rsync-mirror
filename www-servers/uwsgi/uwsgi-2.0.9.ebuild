@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.9.ebuild,v 1.4 2015/03/27 16:27:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.9.ebuild,v 1.5 2015/04/08 18:30:55 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_7 python3_{2,3,4} )
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby19 ruby20"

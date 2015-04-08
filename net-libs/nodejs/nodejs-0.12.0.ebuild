@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.12.0.ebuild,v 1.3 2015/03/08 18:54:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.12.0.ebuild,v 1.4 2015/04/08 18:04:57 mgorny Exp $
 
 EAPI=5
 
 # has known failures. sigh.
 RESTRICT="test"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit python-any-r1 pax-utils toolchain-funcs
 

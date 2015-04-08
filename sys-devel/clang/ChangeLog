@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.122 2015/04/03 09:03:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.123 2015/04/08 18:25:48 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> clang-3.2.ebuild,
+  clang-9999.ebuild:
+  Drop old Python implementations
 
 *clang-3.5.2-r100 (03 Apr 2015)
 

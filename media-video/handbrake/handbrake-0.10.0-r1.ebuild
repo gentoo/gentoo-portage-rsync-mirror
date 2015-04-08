@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.10.0-r1.ebuild,v 1.1 2015/02/01 23:18:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.10.0-r1.ebuild,v 1.2 2015/04/08 18:16:25 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils gnome2-utils python-any-r1
 

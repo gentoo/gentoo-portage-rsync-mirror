@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.0.5.ebuild,v 1.1 2014/02/23 02:16:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.0.5.ebuild,v 1.2 2015/04/08 18:23:27 mgorny Exp $
 
 EAPI=5
 
 AUTOTOOLS_IN_SOURCE_BUILD=yes
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3} )
 
 inherit versionator autotools-utils distutils-r1
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.78 2015/03/12 15:04:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.79 2015/04/08 18:28:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> talloc-2.1.0-r1.ebuild,
+  talloc-2.1.1.ebuild, talloc-2.1.2.ebuild:
+  Drop old Python implementations
 
 *talloc-2.1.2 (12 Mar 2015)
 

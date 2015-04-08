@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/apparmor-utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/ChangeLog,v 1.5 2014/11/09 22:18:12 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apparmor-utils/ChangeLog,v 1.6 2015/04/08 18:27:32 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> apparmor-utils-2.8.3.ebuild,
+  apparmor-utils-2.8.4.ebuild:
+  Drop old Python implementations
 
   09 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   apparmor-utils-2.8.3.ebuild, apparmor-utils-2.8.4.ebuild:

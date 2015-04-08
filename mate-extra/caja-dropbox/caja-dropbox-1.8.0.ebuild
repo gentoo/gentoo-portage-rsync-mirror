@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mate-extra/caja-dropbox/caja-dropbox-1.8.0.ebuild,v 1.1 2014/07/22 19:04:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/mate-extra/caja-dropbox/caja-dropbox-1.8.0.ebuild,v 1.2 2015/04/08 18:13:51 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 GNOME2_LA_PUNT="yes"
 
 inherit autotools eutils gnome2 python-single-r1 linux-info user versionator

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/biosdisk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.15 2014/10/19 11:49:14 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/biosdisk/ChangeLog,v 1.16 2015/04/08 18:27:33 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> biosdisk-0_p20100611-r1.ebuild:
+  Drop old Python implementations
 
   19 Oct 2014; Pacho Ramos <pacho@gentoo.org> biosdisk-0_p20100611-r1.ebuild:
   remove app-text/unix2dos from RDEPEND (#525824 by Michael Orlitzky)

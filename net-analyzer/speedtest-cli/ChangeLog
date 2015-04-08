@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/speedtest-cli
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/speedtest-cli/ChangeLog,v 1.6 2015/02/10 22:45:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/speedtest-cli/ChangeLog,v 1.7 2015/04/08 18:01:21 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> speedtest-cli-0.2.4.ebuild,
+  speedtest-cli-0.2.5.ebuild:
+  Drop old Python implementations
 
   10 Feb 2015; Michał Górny <mgorny@gentoo.org> speedtest-cli-0.2.4.ebuild,
   speedtest-cli-0.2.5.ebuild:

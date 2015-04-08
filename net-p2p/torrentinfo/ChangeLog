@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/torrentinfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.16 2014/11/26 16:14:20 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.17 2015/04/08 18:17:51 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> torrentinfo-1.8.4.ebuild,
+  torrentinfo-1.8.6.ebuild:
+  Drop old Python implementations
 
   26 Nov 2014; Pacho Ramos <pacho@gentoo.org> torrentinfo-1.8.6.ebuild:
   Support python 3.4

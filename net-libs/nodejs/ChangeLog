@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.140 2015/04/02 06:23:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.141 2015/04/08 18:04:57 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> nodejs-0.10.30.ebuild,
+  nodejs-0.10.36.ebuild, nodejs-0.12.0.ebuild, nodejs-0.12.1.ebuild,
+  nodejs-0.12.2.ebuild:
+  Drop old Python implementations
 
 *nodejs-0.12.2 (02 Apr 2015)
 

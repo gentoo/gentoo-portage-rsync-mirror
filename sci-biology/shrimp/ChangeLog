@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/shrimp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.24 2015/01/29 21:21:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/shrimp/ChangeLog,v 1.25 2015/04/08 18:20:42 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> shrimp-2.2.3.ebuild:
+  Drop old Python implementations
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> shrimp-2.2.3.ebuild:
   Switch to CPU_FLAGS_X86.

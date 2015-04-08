@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libxml2 sys-libs/zlib !gnutls? ( >=dev-libs/openssl-1.0.1h:0[st
 SLOT=0/5
 SRC_URI=ftp://ftp.infradead.org/pub/openconnect/openconnect-7.01.tar.gz http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/df5808b3:/vpnc-script -> vpnc-script-df5808b3.sh
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=91e66add13774e6d2b6f0189942cf5be
+_md5_=df60474fcd05ead5407e7f0dfa7f52b4

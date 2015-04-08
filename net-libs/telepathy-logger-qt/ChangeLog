@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-logger-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/ChangeLog,v 1.16 2015/04/03 19:49:17 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-logger-qt/ChangeLog,v 1.17 2015/04/08 18:04:58 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  telepathy-logger-qt-0.8.0.ebuild:
+  Drop old Python implementations
 
   03 Apr 2015; Michael Palimaka <kensington@gentoo.org>
   telepathy-logger-qt-0.8.0.ebuild:

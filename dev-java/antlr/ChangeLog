@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.105 2015/03/26 17:59:16 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.106 2015/04/08 18:09:20 mgorny Exp $
+
+  08 Apr 2015; Michał Górny <mgorny@gentoo.org> antlr-2.7.7-r5.ebuild:
+  Drop old Python implementations
 
 *antlr-4.4 (26 Mar 2015)
 
