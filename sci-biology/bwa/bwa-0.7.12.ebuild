@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/bwa-0.7.12.ebuild,v 1.1 2015/03/03 15:17:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/bwa-0.7.12.ebuild,v 1.2 2015/04/08 13:35:53 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/bio-bwa/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86 ~x64-macos"
+KEYWORDS="amd64 ~x86 ~x64-macos"
 
 PATCHES=( "${FILESDIR}"/${P}-Makefile.patch )
 

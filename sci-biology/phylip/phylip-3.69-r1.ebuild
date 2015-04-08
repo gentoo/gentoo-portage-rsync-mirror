@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.69-r1.ebuild,v 1.2 2015/03/29 14:05:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phylip/phylip-3.69-r1.ebuild,v 1.3 2015/04/08 13:35:58 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://evolution.gs.washington.edu/${PN}/download/${P}.tar.gz"
 SLOT="0"
 LICENSE="freedist"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 RDEPEND="x11-libs/libXaw"
 DEPEND="${RDEPEND}

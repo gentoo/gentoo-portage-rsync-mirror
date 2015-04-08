@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.25 2015/04/03 14:22:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.26 2015/04/08 13:35:08 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cdf-3.4.1.ebuild:
+  Stable for amd64, wrt bug #545408
 
 *cdf-3.5.0.2 (03 Apr 2015)
 

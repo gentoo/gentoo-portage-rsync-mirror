@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.150 2015/04/07 14:34:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.151 2015/04/08 13:35:23 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> rebase-1503.ebuild:
+  Stable for amd64, wrt bug #545430
 
 *rebase-1504 (03 Apr 2015)
 

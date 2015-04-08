@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/fasttree-2.1.7.ebuild,v 1.3 2015/03/29 14:30:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasttree/fasttree-2.1.7.ebuild,v 1.4 2015/04/08 13:36:33 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="double-precision openmp cpu_flags_x86_sse3"
 
 REQUIRED_USE="?? ( double-precision cpu_flags_x86_sse3 )"

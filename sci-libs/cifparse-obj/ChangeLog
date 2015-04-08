@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cifparse-obj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.17 2015/04/03 14:29:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.18 2015/04/08 13:35:13 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cifparse-obj-7.025-r1.ebuild:
+  Stable for amd64, wrt bug #545414
 
   03 Apr 2015; Justin Lecher <jlec@gentoo.org> -cifparse-obj-6.302.ebuild:
   Drop old

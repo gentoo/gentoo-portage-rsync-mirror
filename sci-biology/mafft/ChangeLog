@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mafft
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.22 2015/04/07 14:33:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.23 2015/04/08 13:36:38 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mafft-7.050.ebuild:
+  Stable for amd64, wrt bug #544952
 
 *mafft-7.215 (29 Mar 2015)
 
