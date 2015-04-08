@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/superlu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.28 2015/03/03 19:58:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/ChangeLog,v 1.29 2015/04/08 15:32:39 ago Exp $
+
+  08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> superlu-4.3-r1.ebuild:
+  Stable for amd64, wrt bug #544676
 
 *superlu-4.3-r1 (03 Mar 2015)
 

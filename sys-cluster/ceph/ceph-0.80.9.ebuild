@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.80.9.ebuild,v 1.1 2015/03/13 03:33:12 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.80.9.ebuild,v 1.2 2015/04/08 15:32:45 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -14,7 +14,7 @@ if [[ $PV = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://ceph.com/download/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 fi
 
 inherit autotools eutils multilib python-any-r1 udev readme.gentoo ${scm_eclass}
