@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.301 2015/01/16 20:35:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.302 2015/04/09 17:45:50 kensington Exp $
+
+*cmake-3.2.1 (09 Apr 2015)
+
+  09 Apr 2015; Michael Palimaka <kensington@gentoo.org> +cmake-3.2.1.ebuild:
+  Version bump wrt bug #543700.
 
 *cmake-3.1.0 (16 Jan 2015)
 

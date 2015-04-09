@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20140929c.ebuild,v 1.1 2015/03/01 17:39:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20140929d.ebuild,v 1.1 2015/04/09 17:42:18 jmbsvicetto Exp $
 
 EAPI=5
 

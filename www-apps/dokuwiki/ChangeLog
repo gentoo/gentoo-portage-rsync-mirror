@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.76 2015/03/03 21:03:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.77 2015/04/09 17:42:18 jmbsvicetto Exp $
+
+*dokuwiki-20140929d (09 Apr 2015)
+*dokuwiki-20140505e (09 Apr 2015)
+
+  09 Apr 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +dokuwiki-20140505e.ebuild, +dokuwiki-20140929d.ebuild,
+  -dokuwiki-20140505c.ebuild, -dokuwiki-20140505d.ebuild,
+  -dokuwiki-20140929c.ebuild:
+  Security bump - fixes bug 544224.
 
 *dokuwiki-20140505d (03 Mar 2015)
 
