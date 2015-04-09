@@ -1,6 +1,15 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.828 2015/03/18 17:30:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.830 2015/04/09 03:46:41 jer Exp $
+
+  09 Apr 2015; Jeroen Roovers <jer@gentoo.org> opera-28.0.1750.51.ebuild:
+  Remove unneeded libudev hack.
+
+*opera-28.0.1750.51 (09 Apr 2015)
+
+  09 Apr 2015; Jeroen Roovers <jer@gentoo.org> -opera-28.0.1750.40.ebuild,
+  +opera-28.0.1750.51.ebuild:
+  Version bump.
 
 *opera-28.0.1750.48 (18 Mar 2015)
 
