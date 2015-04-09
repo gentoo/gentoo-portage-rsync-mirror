@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.1.1.ebuild,v 1.5 2015/04/09 05:36:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.1.1-r1.ebuild,v 1.1 2015/04/09 05:37:20 vapier Exp $
 
 EAPI="5"
 
-inherit libtool multilib-minimal eutils
+inherit libtool multilib-minimal eutils autotools
 
 DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://libgd.org/ http://www.boutell.com/gd/"
@@ -22,7 +22,7 @@ RDEPEND="fontconfig? ( >=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}] )
 	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
 	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
 	truetype? ( >=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}] )
-	webp? ( <media-libs/libvpx-1.4.0[${MULTILIB_USEDEP}] )
+	webp? ( media-libs/libwebp[${MULTILIB_USEDEP}] )
 	xpm? ( >=x11-libs/libXpm-3.5.10-r1[${MULTILIB_USEDEP}] >=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
@@ -32,8 +32,11 @@ S="${WORKDIR}/lib${P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-headers.patch" #540376
+	epatch "${FILESDIR}/${P}-webp-pre.patch" #545956
+	epatch "${FILESDIR}/${P}-webp.patch" #545956
 
-	elibtoolize  # for shared library on Solaris
+	#elibtoolize  # for shared library on Solaris
+	eautoreconf
 }
 
 multilib_src_configure() {
@@ -48,7 +51,7 @@ multilib_src_configure() {
 		$(use_with png) \
 		$(use_with truetype freetype) \
 		$(use_with jpeg) \
-		$(use_with webp vpx) \
+		$(use_with webp) \
 		$(use_with xpm) \
 		$(use_with zlib)
 }
