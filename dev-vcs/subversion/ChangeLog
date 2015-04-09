@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.222 2015/04/08 17:53:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.223 2015/04/09 12:58:45 polynomial-c Exp $
+
+*subversion-1.8.13 (09 Apr 2015)
+
+  09 Apr 2015; Lars Wendler <polynomial-c@gentoo.org>
+  +subversion-1.8.13.ebuild, +files/svnserve.initd3:
+  Security bump (bug #545348). Added slightly rewritten init script.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> subversion-1.7.19.ebuild,
   subversion-1.8.11.ebuild:
