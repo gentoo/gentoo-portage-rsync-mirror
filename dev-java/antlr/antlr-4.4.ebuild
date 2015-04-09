@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-4.4.ebuild,v 1.2 2015/04/09 08:45:12 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-4.4.ebuild,v 1.3 2015/04/09 17:18:48 monsieurp Exp $
 
 EAPI="5"
 
@@ -42,8 +42,8 @@ src_install() {
 	fi
 
 	if use source; then
-		java-pkg_dosrc tool/src/org/antlr \
-			runtime/Java/src/org/antlr
+		java-pkg_dosrc tool/src/org \
+			runtime/Java/src/org
 	fi
 }
 
