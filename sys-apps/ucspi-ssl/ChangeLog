@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.32 2015/04/09 03:29:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.33 2015/04/09 07:35:57 ago Exp $
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ucspi-ssl-0.94.ebuild:
+  Stable for x86, wrt bug #516868
 
   09 Apr 2015; Jeroen Roovers <jer@gentoo.org> ucspi-ssl-0.94.ebuild:
   Drop trailing '.' from DESCRIPTION.
