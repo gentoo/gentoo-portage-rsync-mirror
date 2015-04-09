@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-4.4.ebuild,v 1.1 2015/03/26 17:59:16 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-4.4.ebuild,v 1.2 2015/04/09 08:45:12 monsieurp Exp $
 
 EAPI="5"
 
@@ -36,10 +36,15 @@ src_install() {
 	# Single jar like upstream
 	java-pkg_newjar dist/antlr-4.4-complete.jar antlr.jar
 	java-pkg_dolauncher antlr4 --main org.antlr.v4.Tool
-	use gunit && java-pkg_dolauncher gunit --main org.antlr.v4.gunit.Interp
 
-	use source && java-pkg_dosrc tool/src/main/org \
-		runtime/Java/src/main/java/org/
+	if use gunit; then
+		java-pkg_dolauncher gunit --main org.antlr.v4.gunit.Interp
+	fi
+
+	if use source; then
+		java-pkg_dosrc tool/src/org/antlr \
+			runtime/Java/src/org/antlr
+	fi
 }
 
 pkg_postinst() {

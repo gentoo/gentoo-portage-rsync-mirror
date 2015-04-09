@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.106 2015/04/08 18:09:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.107 2015/04/09 08:45:12 monsieurp Exp $
+
+  09 Apr 2015; Patrice Clement <monsieurp@gentoo.org> antlr-4.4.ebuild:
+  Adjust path passed to java-pkg_dosrc. Fix bug 545916.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> antlr-2.7.7-r5.ebuild:
   Drop old Python implementations
