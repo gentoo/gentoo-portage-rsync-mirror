@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libwacom
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.30 2015/04/01 08:25:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/ChangeLog,v 1.31 2015/04/09 21:01:25 maekke Exp $
+
+  09 Apr 2015; Markus Meier <maekke@gentoo.org> libwacom-0.11.ebuild:
+  arm stable, bug #544618
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libwacom-0.11.ebuild:
   Stable for sparc, wrt bug #544618
