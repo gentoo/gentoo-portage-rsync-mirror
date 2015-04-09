@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16470 2015/04/08 18:25:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16471 2015/04/09 14:20:48 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,6 +38,7 @@ games-arcade/mtp-target-bin
 # Andreas K. Huettel <dilfridge@gentoo.org) (07 Apr 2015)
 # EAPI=1, last upstream release 2007, last significant
 # ebuild commit 2007. Masked for removal in 30 days.
+# Bug 540796 and bug 540812
 app-laptop/gtkpbbuttons
 app-laptop/gkrellm-pmu
 
