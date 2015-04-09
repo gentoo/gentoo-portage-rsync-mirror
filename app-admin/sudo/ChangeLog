@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.386 2015/04/02 19:55:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.387 2015/04/09 20:51:23 blueness Exp $
+
+*sudo-9999 (09 Apr 2015)
+
+  09 Apr 2015; Anthony G. Basile <blueness@gentoo.org> +sudo-9999.ebuild:
+  Add live ebuild for testing.
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> sudo-1.8.12.ebuild:
   arm stable, bug #539532

@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.170 2015/03/03 10:11:02 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.171 2015/04/09 20:50:56 maekke Exp $
+
+  09 Apr 2015; Markus Meier <maekke@gentoo.org> upower-0.99.2-r1.ebuild:
+  arm stable, bug #537878
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> upower-0.99.2.ebuild:
   add arm64 support, tested on A53 board

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.119 2015/03/27 06:41:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.120 2015/04/09 20:47:58 alonbl Exp $
+
+*nettle-3.1 (09 Apr 2015)
+
+  09 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> +nettle-3.1.ebuild:
+  Version bump, bug#512874
 
 *nettle-2.7.1-r4 (27 Mar 2015)
 

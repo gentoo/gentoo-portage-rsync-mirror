@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.9.ebuild,v 1.4 2015/04/08 13:13:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.9.ebuild,v 1.5 2015/04/09 20:41:20 nimiux Exp $
 
 EAPI=5
 
@@ -23,12 +23,11 @@ CDEPEND="
 	acl? ( virtual/acl )"
 
 DEPEND="${CDEPEND}
-	>=sys-apps/sed-4
-	virtual/cron
-"
+	>=sys-apps/sed-4"
+
 RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-logrotate )
-"
+	virtual/cron"
 
 src_prepare() {
 	epatch \
