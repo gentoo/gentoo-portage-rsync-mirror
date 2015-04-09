@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/wargus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.28 2015/03/12 19:05:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/ChangeLog,v 1.30 2015/04/09 16:54:51 mr_bones_ Exp $
+
+  09 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/wargus-2.2.5.5-libpng.patch, -wargus-2.2.5.5.ebuild:
+  old
+
+  09 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> wargus-2.2.7.ebuild:
+  mark stable
 
   12 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> wargus-2.2.7.ebuild:
   EAPI=5
