@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-3.0.1.ebuild,v 1.2 2015/03/26 15:56:30 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-3.0.2.ebuild,v 1.1 2015/04/09 20:05:54 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="2.3.0"
@@ -28,6 +28,7 @@ RDEPEND="app-arch/snappy
 	dev-libs/snowball-stemmer
 	dev-util/google-perftools[-minimal]
 	net-libs/libpcap
+	sys-libs/zlib
 	mms-agent? ( app-admin/mms-agent )
 	ssl? ( >=dev-libs/openssl-1.0.1g:= )"
 DEPEND="${RDEPEND}

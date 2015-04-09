@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-aes/cipher-aes-0.2.10.ebuild,v 1.2 2015/04/09 07:55:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-aes/cipher-aes-0.2.10.ebuild,v 1.3 2015/04/09 20:01:50 slyfox Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
-IUSE="cpu_flags_x86_aes"
+IUSE="cpu_flags_x86_aes cpu_flags_x86_ssse3"
 
 RDEPEND="dev-haskell/byteable:=[profile?]
 	>=dev-haskell/crypto-cipher-types-0.0.6:=[profile?] <dev-haskell/crypto-cipher-types-0.1:=[profile?]
@@ -33,6 +33,12 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
+	local want_aes="-"
+
+	use cpu_flags_x86_aes && \
+		use cpu_flags_x86_ssse3 && \
+			want_aes=""
+
 	haskell-cabal_src_configure \
-		$(cabal_flag cpu_flags_x86_aes support_aesni)
+		--flag=${want_aes}support_aesni
 }
