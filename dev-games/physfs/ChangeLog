@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.61 2015/02/21 14:17:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.62 2015/04/09 13:14:54 jmorgan Exp $
+
+  09 Apr 2015; <jmorgan@gentoo.org> physfs-2.0.3-r1.ebuild:
+  ppc64 stable wrt 526060
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> physfs-2.0.3-r1.ebuild:
   Stable for ppc, wrt bug #526068
