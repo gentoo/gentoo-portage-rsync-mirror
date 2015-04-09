@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.14.ebuild,v 1.4 2014/06/24 19:23:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.14.ebuild,v 1.5 2015/04/09 15:47:56 polynomial-c Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm x86"
 IUSE="polarssl"
 
-DEPEND=">=dev-libs/protobuf-c-0.14
+DEPEND="<dev-libs/protobuf-c-1.0.0
 	dev-libs/libconfig
 	polarssl? ( >=net-libs/polarssl-1.0.0 )
 	!polarssl? ( dev-libs/openssl:0 )"

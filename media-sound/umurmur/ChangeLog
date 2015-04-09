@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/umurmur
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.20 2014/11/26 09:28:10 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.21 2015/04/09 15:47:56 polynomial-c Exp $
+
+  09 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> umurmur-0.2.14.ebuild:
+  Fixed dependency on dev-libs/protobuf-c (bug #546064).
 
   26 Nov 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
   udpate meatadata.xml, add Alex Xu as maintainer
