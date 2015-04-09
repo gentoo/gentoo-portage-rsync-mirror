@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/opencollada-1.2.2_p20150207.ebuild,v 1.3 2015/04/04 13:37:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencollada/opencollada-1.2.2_p20150207.ebuild,v 1.5 2015/04/09 07:22:12 ago Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ if [[ ${PV} != *9999* ]]; then
 	COMMIT="ceb409cabdccda3000aa2e5c065850b8fde60b0f"
 	#
 	SRC_URI="https://github.com/KhronosGroup/OpenCOLLADA/tarball/${COMMIT} -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~ppc64 ~x86"
+	KEYWORDS="amd64 ~ppc64 x86"
 else
 	EGIT_REPO_URI="http://github.com/KhronosGroup/OpenCOLLADA.git"
 fi

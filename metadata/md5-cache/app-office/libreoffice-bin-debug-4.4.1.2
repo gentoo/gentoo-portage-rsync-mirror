@@ -4,10 +4,10 @@ DESCRIPTION=LibreOffice, a full office productivity suite. Binary package, debug
 EAPI=5
 HOMEPAGE=http://www.libreoffice.org
 IUSE=gnome java kde
-KEYWORDS=-* ~amd64 ~x86
+KEYWORDS=-* amd64 x86
 LICENSE=LGPL-3
 RDEPEND==app-office/libreoffice-bin-4.4.1.2[gnome=,java=,kde=]
 RESTRICT=test strip
 SLOT=0
 SRC_URI=amd64? ( http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-debug-libreoffice-4.4.1.2.tar.xz kde? ( !java? ( http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-debug-libreoffice-kde-4.4.1.2.xd3 ) java? ( http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-debug-libreoffice-kde-java-4.4.1.2.xd3 ) ) gnome? ( !java? ( http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-debug-libreoffice-gnome-4.4.1.2.xd3 ) java? ( http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-debug-libreoffice-gnome-java-4.4.1.2.xd3 ) ) !kde? ( !gnome? ( java? ( http://packages.gentooexperimental.org/packages/amd64-libreoffice/amd64-debug-libreoffice-java-4.4.1.2.xd3 ) ) ) ) x86? ( http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-debug-libreoffice-4.4.1.2.tar.xz kde? ( !java? ( http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-debug-libreoffice-kde-4.4.1.2.xd3 ) java? ( http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-debug-libreoffice-kde-java-4.4.1.2.xd3 ) ) gnome? ( !java? ( http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-debug-libreoffice-gnome-4.4.1.2.xd3 ) java? ( http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-debug-libreoffice-gnome-java-4.4.1.2.xd3 ) ) !kde? ( !gnome? ( java? ( http://packages.gentooexperimental.org/packages/x86-libreoffice/x86-debug-libreoffice-java-4.4.1.2.xd3 ) ) ) )
-_md5_=0d29d5cd7eb92bf66fc692e68671a4d8
+_md5_=5886a6f9e5631ea8742054bb05a5d51f

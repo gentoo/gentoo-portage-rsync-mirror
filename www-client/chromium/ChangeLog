@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1220 2015/04/08 18:30:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1221 2015/04/09 07:11:22 phajdan.jr Exp $
+
+*chromium-43.0.2357.2 (09 Apr 2015)
+
+  09 Apr 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-43.0.2342.2.ebuild, +chromium-43.0.2357.2.ebuild,
+  +files/chromium-system-libvpx-r0.patch:
+  Dev channel bump. Use system libvpx. Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> chromium-41.0.2272.118.ebuild,
   chromium-42.0.2311.50.ebuild, chromium-42.0.2311.60.ebuild,
