@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/burp/burp-1.3.48.ebuild,v 1.2 2015/04/08 19:13:54 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/burp/burp-1.3.48.ebuild,v 1.3 2015/04/09 16:19:20 aidecoe Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="acl afs ipv6 nls ssl tcpd xattr"
 
 DEPEND="
