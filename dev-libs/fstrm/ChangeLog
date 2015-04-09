@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/fstrm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fstrm/ChangeLog,v 1.3 2014/11/27 18:17:41 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fstrm/ChangeLog,v 1.5 2015/04/09 09:05:15 ago Exp $
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fstrm-0.2.0-r1.ebuild:
+  Stable for x86, wrt bug #532000
+
+  09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fstrm-0.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #532000
 
   27 Nov 2014; Tim Harder <radhermit@gentoo.org> fstrm-0.2.0-r1.ebuild:
   Fix multilib deps.
@@ -16,4 +22,3 @@
   27 Nov 2014; Tim Harder <radhermit@gentoo.org> +fstrm-0.2.0.ebuild,
   +metadata.xml:
   Initial import.
-
