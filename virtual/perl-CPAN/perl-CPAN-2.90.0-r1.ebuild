@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/perl-CPAN-2.90.0-r1.ebuild,v 1.7 2015/04/08 17:30:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN/perl-CPAN-2.90.0-r1.ebuild,v 1.8 2015/04/09 10:22:03 zlogene Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""

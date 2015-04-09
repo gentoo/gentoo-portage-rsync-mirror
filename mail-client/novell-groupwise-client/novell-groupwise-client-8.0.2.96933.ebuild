@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.8 2015/04/07 16:47:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.9 2015/04/09 10:28:02 dilfridge Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RDEPEND="
 	>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
 	>=x11-libs/libXtst-1.2.2[abi_x86_32(-)]
 	>=x11-libs/libxcb-1.11-r1[abi_x86_32(-)]
-	>=x11-libs/motif-2.3.4-r1:0[abi_x86_32(-)]
+	x11-libs/motif:2.2[abi_x86_32(-)]
 	>=media-libs/alsa-lib-1.0.28[abi_x86_32(-)]
 	>=media-libs/freetype-2.5.5[abi_x86_32(-)]
 "
