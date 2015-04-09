@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/c++-gtk-utils-2.2.9.ebuild,v 1.1 2014/10/07 07:09:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/c++-gtk-utils/c++-gtk-utils-2.0.28.ebuild,v 1.1 2015/04/09 04:24:25 jer Exp $
 
 EAPI=5
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN/++/xx}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+gtk nls static-libs"
-SLOT="0"
+SLOT="3"
 
 RDEPEND="
 	>=dev-libs/glib-2.26
