@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/file-tail
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/file-tail/ChangeLog,v 1.15 2014/10/29 19:30:10 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/file-tail/ChangeLog,v 1.16 2015/04/10 17:26:17 graaff Exp $
+
+  10 Apr 2015; Hans de Graaff <graaff@gentoo.org> file-tail-1.1.0.ebuild:
+  Add ruby22.
 
   29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -file-tail-1.0.12-r1.ebuild,
   -file-tail-1.0.12-r2.ebuild, file-tail-1.1.0.ebuild:
