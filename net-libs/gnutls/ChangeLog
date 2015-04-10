@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.532 2015/04/10 07:48:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.533 2015/04/10 08:30:28 alonbl Exp $
+
+  10 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> gnutls-3.3.14.ebuild,
+  gnutls-3.4.0.ebuild, metadata.xml:
+  Add openssl USE to enable/disable the openssl compatibility library
 
   10 Apr 2015; Patrick Lauer <patrick@gentoo.org> gnutls-3.3.10-r2.ebuild,
   gnutls-3.3.12.ebuild, gnutls-3.3.14.ebuild:

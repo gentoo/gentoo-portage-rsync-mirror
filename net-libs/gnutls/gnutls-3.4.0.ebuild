@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.4.0.ebuild,v 1.1 2015/04/10 01:15:50 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.4.0.ebuild,v 1.2 2015/04/10 08:30:28 alonbl Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="GPL-3 LGPL-3"
 SLOT="0/30" # libgnutls.so number
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE_LINGUAS=" en cs de fi fr it ms nl pl sv uk vi zh_CN"
-IUSE="+cxx +crywrap dane doc examples guile nls pkcs11 static-libs test +tools zlib ${IUSE_LINGUAS// / linguas_}"
+IUSE="+cxx +crywrap dane doc examples guile nls +openssl pkcs11 static-libs test +tools zlib ${IUSE_LINGUAS// / linguas_}"
 # heartbeat support is not disabled until re-licensing happens fullyf
 
 # NOTICE: sys-devel/autogen is required at runtime as we
@@ -105,6 +105,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable crywrap) \
 		$(multilib_native_use_enable test tests) \
 		$(use_enable nls) \
+		$(use_enable openssl openssl-compatibility) \
 		$(use_enable static-libs static) \
 		$(use_with pkcs11 p11-kit) \
 		$(use_with zlib) \
