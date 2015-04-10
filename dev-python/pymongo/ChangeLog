@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.47 2015/04/08 08:05:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.48 2015/04/10 08:45:31 ultrabug Exp $
+
+*pymongo-3.0 (10 Apr 2015)
+
+  10 Apr 2015; Ultrabug <ultrabug@gentoo.org> +pymongo-3.0.ebuild:
+  version bump
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pymongo-2.6.3.ebuild,
   pymongo-2.7.2.ebuild, pymongo-2.8.ebuild:
