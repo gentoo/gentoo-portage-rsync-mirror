@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.531 2015/04/10 01:15:50 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.532 2015/04/10 07:48:34 patrick Exp $
+
+  10 Apr 2015; Patrick Lauer <patrick@gentoo.org> gnutls-3.3.10-r2.ebuild,
+  gnutls-3.3.12.ebuild, gnutls-3.3.14.ebuild:
+  Tighten dependencies for nettle #546100
 
 *gnutls-3.4.0 (10 Apr 2015)
 

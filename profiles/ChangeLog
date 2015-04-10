@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9917 2015/04/09 14:20:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9918 2015/04/10 07:38:28 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Apr 2015; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Mask gnutls-3.4.0 #546124
 
   09 Apr 2015; Andreas K. Hüttel <dilfridge@gentoo.org> package.mask:
   Reference bugs added
