@@ -18,6 +18,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
+	dev-libs/libfoohahaha
 	>=app-accessibility/at-spi2-core-2.5.2:2
 	>=dev-python/pygobject-2.90.3:3[${PYTHON_USEDEP}]
 	>=x11-libs/gtk+-3.1.13:3[introspection]
