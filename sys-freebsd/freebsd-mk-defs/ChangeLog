@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.60 2015/03/08 14:01:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.61 2015/04/10 13:30:26 mgorny Exp $
+
+  10 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +files/freebsd-mk-defs-10.1-gnu.patch, -files/freebsd-mk-defs-10.0-gnu.patch,
+  freebsd-mk-defs-10.1.ebuild:
+  Update mk-defs patch, bump to EAPI=5. Bug #543808, patch by nigoro.
 
 *freebsd-mk-defs-10.1 (08 Mar 2015)
 
