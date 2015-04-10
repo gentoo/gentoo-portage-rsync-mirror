@@ -1,8 +1,8 @@
 diff --git a/share/mk/bsd.lib.mk b/share/mk/bsd.lib.mk
-index 0a33fdb..cd7ca2f 100644
+index a5eacf9..01d1045 100644
 --- a/share/mk/bsd.lib.mk
 +++ b/share/mk/bsd.lib.mk
-@@ -165,11 +165,7 @@ _LIBS=		lib${LIB}.a
+@@ -166,11 +166,7 @@ _LIBS=		lib${LIB}.a
  lib${LIB}.a: ${OBJS} ${STATICOBJS}
  	@${ECHO} building static ${LIB} library
  	@rm -f ${.TARGET}
@@ -12,10 +12,10 @@ index 0a33fdb..cd7ca2f 100644
 -	@${AR} ${ARFLAGS} ${.TARGET} `NM='${NM}' lorder ${OBJS} ${STATICOBJS} | tsort -q` ${ARADD}
 -.endif
 +	@${AR} ${ARFLAGS} ${.TARGET} ${OBJS} ${STATICOBJS} ${ARADD}
- 	${RANLIB} ${.TARGET}
+ 	${RANLIB} ${RANLIBFLAGS} ${.TARGET}
  .endif
  
-@@ -182,11 +178,7 @@ POBJS+=		${OBJS:.o=.po} ${STATICOBJS:.o=.po}
+@@ -183,11 +179,7 @@ POBJS+=		${OBJS:.o=.po} ${STATICOBJS:.o=.po}
  lib${LIB}_p.a: ${POBJS}
  	@${ECHO} building profiled ${LIB} library
  	@rm -f ${.TARGET}
@@ -25,10 +25,10 @@ index 0a33fdb..cd7ca2f 100644
 -	@${AR} ${ARFLAGS} ${.TARGET} `NM='${NM}' lorder ${POBJS} | tsort -q` ${ARADD}
 -.endif
 +	@${AR} ${ARFLAGS} ${.TARGET} ${POBJS} ${ARADD}
- 	${RANLIB} ${.TARGET}
+ 	${RANLIB} ${RANLIBFLAGS} ${.TARGET}
  .endif
  
-@@ -213,15 +205,9 @@ ${SHLIB_NAME_FULL}: ${SOBJS}
+@@ -214,15 +206,9 @@ ${SHLIB_NAME_FULL}: ${SOBJS}
  .if defined(SHLIB_LINK)
  	@${INSTALL_SYMLINK} ${SHLIB_NAME} ${SHLIB_LINK}
  .endif
@@ -45,7 +45,7 @@ index 0a33fdb..cd7ca2f 100644
  .if ${MK_CTF} != "no"
  	${CTFMERGE} ${CTFFLAGS} -o ${.TARGET} ${SOBJS}
  .endif
-@@ -279,13 +265,6 @@ _EXTRADEPEND:
+@@ -280,13 +266,6 @@ _EXTRADEPEND:
  
  .if !target(install)
  
@@ -60,10 +60,10 @@ index 0a33fdb..cd7ca2f 100644
  .for ie in ${INSTALLFLAGS_EDIT}
  _INSTALLFLAGS:=	${_INSTALLFLAGS${ie}}
 diff --git a/share/mk/bsd.prog.mk b/share/mk/bsd.prog.mk
-index 02024e0..0f9010d 100644
+index a53ea14..af3f37c 100644
 --- a/share/mk/bsd.prog.mk
 +++ b/share/mk/bsd.prog.mk
-@@ -180,13 +180,6 @@ _EXTRADEPEND:
+@@ -179,13 +179,6 @@ _EXTRADEPEND:
  
  .if !target(install)
  
