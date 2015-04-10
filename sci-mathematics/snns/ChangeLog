@@ -1,6 +1,18 @@
 # ChangeLog for sci-mathematics/snns
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.25 2013/07/21 09:45:08 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.27 2015/04/10 20:09:40 axs Exp $
+
+  10 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> snns-4.3-r1.ebuild:
+  added REQUIRED_USE to properly support the python-optional distutils-r1
+  required use flags
+
+*snns-4.3-r1 (10 Apr 2015)
+
+  10 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +snns-4.3-r1.ebuild,
+  +files/4.3-bison-version.patch, +files/4.3-unstrip.patch, metadata.xml:
+  Took over package maintainership and restored 4.3 version to the tree with
+  nod from xarthisius. 4.3-r1 ebuild resolves file parsing bug introduced in
+  4.2-r9 (bug 546066) and converts to distutils-r1 (bug 544920).
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #473480
