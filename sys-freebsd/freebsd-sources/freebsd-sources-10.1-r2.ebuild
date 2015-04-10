@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r1.ebuild,v 1.2 2015/03/15 18:06:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r2.ebuild,v 1.1 2015/04/10 13:34:44 mgorny Exp $
 
 EAPI=5
 
@@ -43,10 +43,13 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
 	"${FILESDIR}/${PN}-7.1-includes.patch"
 	"${FILESDIR}/${PN}-9.0-sysctluint.patch"
-	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch"
-	"${FILESDIR}/${PN}-10.1-cve-2014-8612.patch"
+	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch" )
+
+# Fix Security Advisory and Errata.
+PATCHES+=( "${FILESDIR}/${PN}-10.1-cve-2014-8612.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2014-8613.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2015-1414.patch"
+	"${FILESDIR}/${PN}-10.1-cve-2015-2923.patch"
 	"${FILESDIR}/${PN}-10.1-en-1501-vt.patch" )
 
 pkg_setup() {
