@@ -1,0 +1,16 @@
+diff --git a/doc/manpages/Makefile.am b/doc/manpages/Makefile.am
+index 8e793d3..1bce3f5 100644
+--- a/doc/manpages/Makefile.am
++++ b/doc/manpages/Makefile.am
+@@ -134,11 +134,8 @@ APIMANS += gnutls_certificate_get_peers.3
+ APIMANS += gnutls_certificate_get_peers_subkey_id.3
+ APIMANS += gnutls_certificate_get_trust_list.3
+ APIMANS += gnutls_certificate_get_verify_flags.3
+-APIMANS += gnutls_certificate_get_verify_flags.3
+-APIMANS += gnutls_certificate_get_x509_crt.3
+ APIMANS += gnutls_certificate_get_x509_crt.3
+ APIMANS += gnutls_certificate_get_x509_key.3
+-APIMANS += gnutls_certificate_get_x509_key.3
+ APIMANS += gnutls_certificate_send_x509_rdn_sequence.3
+ APIMANS += gnutls_certificate_server_set_request.3
+ APIMANS += gnutls_certificate_set_dh_params.3

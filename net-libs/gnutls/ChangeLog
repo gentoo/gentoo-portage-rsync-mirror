@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.530 2015/04/03 17:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.531 2015/04/10 01:15:50 alonbl Exp $
+
+*gnutls-3.4.0 (10 Apr 2015)
+
+  10 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> +files/gnutls-3.4.0-build.patch,
+  +gnutls-3.4.0.ebuild, metadata.xml:
+  Version bump, removed most of complexity of multilib as tools are optional,
+  multilib is probably broken, we fix it fast once issue reported. removed
+  unknown undocumented complexity so we can document and fix, add subslot
 
   03 Apr 2015; Mike Frysinger <vapier@gentoo.org> gnutls-2.12.23-r6.ebuild:
   Fix cross-compiling by not searching the host paths directly.  The toolchain
