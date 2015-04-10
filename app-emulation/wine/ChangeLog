@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.531 2015/03/22 20:07:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.532 2015/04/10 06:24:37 idella4 Exp $
+
+*wine-1.7.40 (10 Apr 2015)
+
+  10 Apr 2015; Ian Delaney <idella4@gentoo.org> +wine-1.7.40.ebuild:
+  bump; builds and installs, run tested by proxy maintainer, committing in
+  absence of tetromino
 
 *wine-1.7.39 (22 Mar 2015)
 
