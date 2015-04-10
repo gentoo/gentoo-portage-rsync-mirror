@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.6-r1.ebuild,v 1.4 2015/03/30 03:45:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/bmon-3.6-r1.ebuild,v 1.5 2015/04/10 19:45:49 jer Exp $
 
 EAPI=5
 inherit autotools eutils linux-info toolchain-funcs
@@ -34,8 +34,12 @@ ERROR_NET_SCHED="
 "
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-docdir-examples.patch
+	epatch \
+		"${FILESDIR}"/${P}-docdir-examples.patch \
+		"${FILESDIR}"/${P}-net_if.h.patch
+
 	epatch_user
+
 	eautoreconf
 }
 

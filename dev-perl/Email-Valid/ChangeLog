@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Valid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.74 2015/04/06 07:11:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.75 2015/04/10 19:38:48 zlogene Exp $
+
+  10 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Email-Valid-1.196.0.ebuild:
+  Add ~mips keyword wrt bug #545660
 
   06 Apr 2015; Jeroen Roovers <jer@gentoo.org> Email-Valid-1.196.0.ebuild:
   Marked ~hppa (bug #545660).

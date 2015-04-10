@@ -1,0 +1,10 @@
+--- a/src/in_netlink.c
++++ b/src/in_netlink.c
+@@ -23,6 +23,7 @@
+  * DEALINGS IN THE SOFTWARE.
+  */
+ 
++#include <net/if.h>
+ #include <bmon/bmon.h>
+ #include <bmon/input.h>
+ #include <bmon/element.h>
