@@ -3,10 +3,10 @@ DEPEND=dev-lang/perl app-arch/unzip dev-lang/perl:=[-build(-)]
 DESCRIPTION=Extensible, multi-language source code documentation generator
 EAPI=5
 HOMEPAGE=http://www.naturaldocs.org/
-KEYWORDS=alpha amd64 hppa ia64 ppc sparc x86
+KEYWORDS=alpha amd64 hppa ia64 ppc ~ppc64 sparc x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/perl dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://sourceforge/naturaldocs/NaturalDocs-1.52.zip
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=66c06e697f43d356a91fc376e5bbb647
+_md5_=c766b6aa4405f3fd8896d7bdd0096367

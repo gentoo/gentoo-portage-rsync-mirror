@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.59 2015/01/05 22:39:00 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.60 2015/04/10 00:14:26 blueness Exp $
+
+  10 Apr 2015; Anthony G. Basile <blueness@gentoo.org> augeas-0.10.0-r1.ebuild,
+  augeas-0.10.0-r2.ebuild, augeas-0.10.0.ebuild, augeas-1.1.0.ebuild,
+  augeas-1.3.0.ebuild:
+  Keyword ~ppc64.  Bug #540540.
 
 *augeas-1.3.0 (05 Jan 2015)
 

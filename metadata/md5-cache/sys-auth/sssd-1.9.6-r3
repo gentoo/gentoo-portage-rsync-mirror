@@ -4,10 +4,10 @@ DESCRIPTION=System Security Services Daemon provides access to identity and auth
 EAPI=5
 HOMEPAGE=http://fedorahosted.org/sssd/
 IUSE=autofs doc +locator netlink nls +manpages python selinux sudo ssh test python_targets_python2_7
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=GPL-3
 RDEPEND=virtual/pam >=dev-libs/popt-1.16 dev-libs/glib:2 >=dev-libs/ding-libs-0.2 >=sys-libs/talloc-2.0.7 >=sys-libs/tdb-1.2.9 >=sys-libs/tevent-0.9.16 >=sys-libs/ldb-1.1.17-r1:= >=net-nds/openldap-2.4.30[sasl] >=dev-libs/libpcre-8.30 >=app-crypt/mit-krb5-1.10.3 >=sys-apps/keyutils-1.5 >=net-dns/c-ares-1.7.4 >=dev-libs/nss-3.12.9 selinux? ( >=sys-libs/libselinux-2.1.9 >=sys-libs/libsemanage-2.1 >=sec-policy/selinux-sssd-2.20120725-r9 ) >=net-dns/bind-tools-9.9[gssapi] >=dev-libs/cyrus-sasl-2.1.25-r3[kerberos] >=sys-apps/dbus-1.6 nls? ( >=sys-devel/gettext-0.18 ) virtual/libintl netlink? ( dev-libs/libnl:3 ) || ( <=sys-libs/glibc-2.16.9999 >=sys-libs/glibc-2.17[nscd] )
 SLOT=0
 SRC_URI=http://fedorahosted.org/released/sssd/sssd-1.9.6.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=ba4c4106af8d269c41221c3cea84f43a
+_md5_=141ec4c2f31aaef48af7cefed4561351

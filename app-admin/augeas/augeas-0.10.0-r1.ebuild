@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.10.0-r1.ebuild,v 1.4 2013/09/18 14:12:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/augeas-0.10.0-r1.ebuild,v 1.5 2015/04/10 00:14:26 blueness Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://augeas.net/download/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static-libs test"
 
 RDEPEND="
