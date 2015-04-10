@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-3.1.ebuild,v 1.1 2015/04/09 20:47:58 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-3.1.ebuild,v 1.2 2015/04/10 04:24:17 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -25,6 +25,7 @@ RDEPEND="${DEPEND}
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/nettle/nettle-stdint.h
+	/usr/include/nettle/version.h
 )
 
 src_prepare() {
