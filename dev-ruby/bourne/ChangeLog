@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bourne
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.18 2015/03/24 20:09:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bourne/ChangeLog,v 1.19 2015/04/10 16:37:32 graaff Exp $
+
+  10 Apr 2015; Hans de Graaff <graaff@gentoo.org> bourne-1.6.0.ebuild:
+  Add ruby22.
 
   24 Mar 2015; Markus Meier <maekke@gentoo.org> bourne-1.6.0.ebuild:
   add ~arm, bug #540978
