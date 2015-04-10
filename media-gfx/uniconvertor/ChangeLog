@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/uniconvertor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.30 2015/04/10 20:21:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/uniconvertor/ChangeLog,v 1.31 2015/04/10 22:19:16 dilfridge Exp $
+
+  10 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -uniconvertor-1.1.5.ebuild, -uniconvertor-1.1.5-r1.ebuild,
+  -files/uniconvertor-1.1.5_export_raster.py_fix_import.patch:
+  Remove old
 
   10 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
   uniconvertor-2.0_pre379-r1.ebuild:

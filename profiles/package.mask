@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16472 2015/04/10 07:38:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16473 2015/04/10 22:26:02 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (11 Apr 2015)
+# media-libs/lcms:0 has serious security issues, is unmaintained
+# and will be removed in 30 days, see bug 526642
+# With it we remove its last reverse dependencies,
+# media-libs/sk1libs and media-gfx/univonvw, see bug 526838
+media-libs/lcms:0
+media-gfx/uniconvw
+media-libs/sk1libs
 
 # Patrick Lauer <patrick@gentoo.org> (10 Apr 2015)
 # Breaks pretty much all consumers, like samba

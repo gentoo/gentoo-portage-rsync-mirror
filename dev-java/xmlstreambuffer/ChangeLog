@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/xmlstreambuffer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/ChangeLog,v 1.13 2014/08/17 08:58:00 ercpe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlstreambuffer/ChangeLog,v 1.14 2015/04/10 22:01:12 chewi Exp $
+
+  10 Apr 2015; James Le Cuirot <chewi@gentoo.org>
+  -xmlstreambuffer-0.5.20070412-r1.ebuild,
+  -xmlstreambuffer-0.5.20070412-r2.ebuild,
+  -xmlstreambuffer-0.5.20070412-r3.ebuild, xmlstreambuffer-0.5.20070412.ebuild,
+  xmlstreambuffer-1.5.3.ebuild:
+  Add ~ppc keyword to latest version and mark amd64 and x86 stable in accordance
+  with ALLARCHES policy. Drop ~x86-fbsd altogether as agreed with BSD team.
+  Remove old versions, except the oldest, which has to stay until the latest can
+  be marked stable for ppc. These need to go because of bug #545706.
 
 *xmlstreambuffer-0.5.20070412-r3 (17 Aug 2014)
 
