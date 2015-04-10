@@ -4,5 +4,6 @@
 <herd>x11</herd>
 <use>
  <flag name='python'>Install python based register dumper utilities</flag>
+ <flag name='test-programs'>Install test programs for DRM driver development</flag>
 </use>
 </pkgmetadata>

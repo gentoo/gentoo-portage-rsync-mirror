@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/intel-gpu-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/ChangeLog,v 1.22 2015/02/19 08:51:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/ChangeLog,v 1.23 2015/04/10 12:26:47 chithanh Exp $
+
+*intel-gpu-tools-1.10 (10 Apr 2015)
+
+  10 Apr 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +intel-gpu-tools-1.10.ebuild, metadata.xml:
+  Version bump, bug #533306. Optionally install test programs for DRM driver
+  development, bug #484618.
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org> intel-gpu-tools-1.7.ebuild:
   Stable for x86, wrt bug #530652
