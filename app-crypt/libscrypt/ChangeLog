@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/libscrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libscrypt/ChangeLog,v 1.5 2015/04/09 16:56:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libscrypt/ChangeLog,v 1.6 2015/04/10 09:51:25 ago Exp $
+
+  10 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libscrypt-1.20.ebuild:
+  Stable for amd64/x86/sparc, wrt bug #545940
 
   09 Apr 2015; Anthony G. Basile <blueness@gentoo.org> libscrypt-1.20.ebuild:
   Stable on arm, ppc and ppc64.  Bug #545940.
