@@ -22,7 +22,7 @@ IUSE="+npm"
 
 RDEPEND="dev-libs/openssl[-bindist]
 	>=net-libs/http-parser-2.3
-	=dev-libs/libuv-1.1.0"
+	=dev-libs/libuv-1.4.2"
 DEPEND="${PYTHON_DEPS}
 	${RDEPEND}"
 
