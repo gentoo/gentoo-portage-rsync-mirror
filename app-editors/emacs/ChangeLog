@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.675 2015/04/09 21:29:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.676 2015/04/09 23:36:08 ulm Exp $
+
+*emacs-24.5_rc3-r1 (09 Apr 2015)
+
+  09 Apr 2015; Ulrich Müller <ulm@gentoo.org> -emacs-24.5_rc3.ebuild,
+  +emacs-24.5_rc3-r1.ebuild:
+  Update Manifest, after upstream distfile was modified in place.
 
   09 Apr 2015; Ulrich Müller <ulm@gentoo.org> -emacs-24.4-r1.ebuild:
   Remove old.
