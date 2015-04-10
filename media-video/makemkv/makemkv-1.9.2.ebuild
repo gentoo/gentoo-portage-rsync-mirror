@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.10.ebuild,v 1.3 2014/10/15 20:44:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.9.2.ebuild,v 1.1 2015/04/10 09:27:52 chewi Exp $
 
 EAPI=5
 inherit eutils gnome2-utils multilib flag-o-matic
@@ -8,15 +8,15 @@ inherit eutils gnome2-utils multilib flag-o-matic
 MY_P=makemkv-oss-${PV}
 MY_PB=makemkv-bin-${PV}
 
-DESCRIPTION="Tool for ripping Blu-Ray, HD-DVD and DVD discs and copying content to a Matroska container"
+DESCRIPTION="Tool for ripping and streaming Blu-Ray, HD-DVD and DVD discs"
 HOMEPAGE="http://www.makemkv.com/"
-SRC_URI="http://www.makemkv.com/download/old/${MY_P}.tar.gz
-	http://www.makemkv.com/download/old/${MY_PB}.tar.gz"
+SRC_URI="http://www.makemkv.com/download/${MY_P}.tar.gz
+	http://www.makemkv.com/download/${MY_PB}.tar.gz"
 
 LICENSE="LGPL-2.1 MPL-1.1 MakeMKV-EULA openssl"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="multilib"
+IUSE="libav multilib qt4"
 
 QA_PREBUILT="opt/bin/makemkvcon opt/bin/mmdtsdec"
 
@@ -25,24 +25,29 @@ RDEPEND="
 	dev-libs/expat
 	dev-libs/openssl:0
 	sys-libs/zlib
-	virtual/opengl
-	dev-qt/qtcore:4
-	dev-qt/qtdbus:4
-	dev-qt/qtgui:4
-	|| ( >=media-video/ffmpeg-1.0.0 >=media-video/libav-0.8.9 )
+	qt4? (
+		virtual/opengl
+		dev-qt/qtcore:4
+		dev-qt/qtdbus:4
+		dev-qt/qtgui:4
+	)
+	!libav? ( >=media-video/ffmpeg-1.0.0:0= )
+	libav? ( >=media-video/libav-0.8.9:0= )
 "
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/makemkv-oss-${PV}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.linux.patch
+	epatch "${FILESDIR}"/${PN}-{makefile,path}.patch
 }
 
 src_configure() {
 	replace-flags -O* -Os
+	local args=""
+	use qt4 || args="--disable-gui"
 	if [[ -x ${ECONF_SOURCE:-.}/configure ]] ; then
-		econf
+		econf $args
 	fi
 }
 
@@ -62,14 +67,17 @@ src_install() {
 	dosym libmmbd.so.0    /usr/$(get_libdir)/libmmbd.so
 	dosym libmmbd.so.0    /usr/$(get_libdir)/libmmbd.so.0.${PV}
 	into /opt
-	dobin out/makemkv
 
-	local res
-	for res in 16 22 32 64 128; do
-		newicon -s ${res} makemkvgui/share/icons/${res}x${res}/makemkv.png ${PN}.png
-	done
+	if use qt4; then
+		dobin out/makemkv
 
-	make_desktop_entry ${PN} MakeMKV ${PN} 'Qt;AudioVideo;Video'
+		local res
+		for res in 16 22 32 64 128; do
+			newicon -s ${res} makemkvgui/share/icons/${res}x${res}/makemkv.png ${PN}.png
+		done
+
+		make_desktop_entry ${PN} MakeMKV ${PN} 'Qt;AudioVideo;Video'
+	fi
 
 	# install bin package
 	pushd "${WORKDIR}"/${MY_PB}/bin >/dev/null
@@ -105,6 +113,12 @@ pkg_postinst() {
 	elog "If this is a new install, remember to copy the default profile"
 	elog "to the config directory:"
 	elog "cp /usr/share/MakeMKV/default.mmcp.xml ~/.MakeMKV/"
+	elog ""
+	elog "MakeMKV can also act as a drop-in replacement for libaacs and"
+	elog "libbdplus, allowing transparent decryption of a wider range of"
+	elog "titles under players like VLC and mplayer. To enable this, set"
+	elog "the following variables when launching the player:"
+	elog "LIBAACS_PATH=libmmbd LIBBDPLUS_PATH=libmmbd"
 }
 
 pkg_postrm() { gnome2_icon_cache_update; }

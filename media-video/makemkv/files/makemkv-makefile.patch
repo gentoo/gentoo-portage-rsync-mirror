@@ -1,0 +1,19 @@
+--- makemkv-oss-1.9.2/Makefile.in.orig	2015-04-07 14:28:32.000000000 +0100
++++ makemkv-oss-1.9.2/Makefile.in	2015-04-09 22:00:26.821163836 +0100
+@@ -50,7 +50,7 @@
+ endif
+ 
+ out/%: out/%.full
+-	$(OBJCOPY) --strip-all --strip-debug --strip-unneeded --discard-all $< $@ 
++	$(OBJCOPY) --discard-all $< $@ 
+ 
+ out/libdriveio.so.0.full:
+ 	mkdir -p out
+@@ -94,6 +94,6 @@
+ 
+ tmp/image_data.o : makemkvgui/bin/image_data.bin
+ 	mkdir -p tmp
+-	$(LD) -r -b binary -o $@.rw $<
++	$(LD) -r -b binary -z noexecstack -o $@.rw $<
+ 	$(OBJCOPY) --rename-section .data=.rodata2,readonly,alloc,load,data,contents $@.rw $@
+ 
