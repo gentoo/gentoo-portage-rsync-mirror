@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.12.ebuild,v 1.8 2015/04/02 19:55:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.12.ebuild,v 1.9 2015/04/10 21:54:14 blueness Exp $
 
 EAPI=5
 
@@ -50,6 +50,7 @@ REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 MAKEOPTS+=" SAMPLES="
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-include-sys-types-h.patch
 	elibtoolize
 }
 

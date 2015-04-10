@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.387 2015/04/09 20:51:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.388 2015/04/10 21:54:14 blueness Exp $
+
+  10 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/sudo-1.8.12-include-sys-types-h.patch, sudo-1.8.12.ebuild:
+  Fix builds on uClibc and musl.  Bug #546086.
 
 *sudo-9999 (09 Apr 2015)
 
