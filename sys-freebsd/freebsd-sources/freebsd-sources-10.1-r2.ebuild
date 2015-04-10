@@ -43,10 +43,13 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
 	"${FILESDIR}/${PN}-7.1-includes.patch"
 	"${FILESDIR}/${PN}-9.0-sysctluint.patch"
-	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch"
-	"${FILESDIR}/${PN}-10.1-cve-2014-8612.patch"
+	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch" )
+
+# Fix Security Advisory and Errata.
+PATCHES+=( "${FILESDIR}/${PN}-10.1-cve-2014-8612.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2014-8613.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2015-1414.patch"
+	"${FILESDIR}/${PN}-10.1-cve-2015-2923.patch"
 	"${FILESDIR}/${PN}-10.1-en-1501-vt.patch" )
 
 pkg_setup() {
