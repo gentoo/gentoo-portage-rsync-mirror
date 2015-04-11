@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.14.4.ebuild,v 1.1 2015/03/28 09:33:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.14.4.ebuild,v 1.2 2015/04/11 15:21:21 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -89,7 +89,6 @@ RDEPEND="${COMMON_DEPEND}
 
 	>=gnome-base/gnome-session-2.91.91
 	>=gnome-base/gnome-settings-daemon-3.8.3
-	>=gnome-base/gnome-control-center-3.8.3[bluetooth(+)?]
 
 	!openrc-force? ( >=sys-apps/systemd-31 )
 
@@ -103,8 +102,10 @@ RDEPEND="${COMMON_DEPEND}
 		net-misc/mobile-broadband-provider-info
 		sys-libs/timezone-data )
 "
-# avoid circular dependency
-PDEPEND=">=gnome-base/gdm-3.5[introspection]
+# avoid circular dependency, see bug #546134
+PDEPEND="
+	>=gnome-base/gdm-3.5[introspection]
+	>=gnome-base/gnome-control-center-3.8.3[bluetooth(+)?]
 "
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
