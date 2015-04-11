@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.476 2015/04/10 09:53:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.477 2015/04/11 10:52:11 blueness Exp $
+
+  11 Apr 2015; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.5.11.ebuild:
+  Remove insecure version.  Bug #545940.
 
   10 Apr 2015; Agostino Sarubbo <ago@gentoo.org> tor-0.2.5.12.ebuild,
   tor-0.2.6.7.ebuild:
