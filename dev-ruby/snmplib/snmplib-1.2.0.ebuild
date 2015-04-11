@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-1.2.0.ebuild,v 1.1 2014/07/15 05:48:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-1.2.0.ebuild,v 1.2 2015/04/11 15:57:28 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_NAME="snmp"
 
@@ -29,7 +29,7 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	${RUBY} -Ilib -S testrb test/test_*.rb || die
+	${RUBY} -Ilib:test:. -e 'Dir["test/test_*.rb"].each{|f| require f}' || die
 }
 
 all_ruby_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/snmplib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.51 2014/07/15 05:48:01 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.52 2015/04/11 15:57:28 graaff Exp $
+
+  11 Apr 2015; Hans de Graaff <graaff@gentoo.org> snmplib-1.2.0.ebuild:
+  Add ruby22.
 
 *snmplib-1.2.0 (15 Jul 2014)
 

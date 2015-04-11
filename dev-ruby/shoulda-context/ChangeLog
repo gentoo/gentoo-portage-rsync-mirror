@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda-context
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/ChangeLog,v 1.10 2014/10/29 19:34:27 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/ChangeLog,v 1.11 2015/04/11 15:52:27 graaff Exp $
+
+  11 Apr 2015; Hans de Graaff <graaff@gentoo.org> shoulda-context-1.1.6.ebuild:
+  Add ruby22.
 
   29 Oct 2014; Manuel Rüger <mrueg@gentoo.org> shoulda-context-1.1.6.ebuild:
   Drop jruby target.

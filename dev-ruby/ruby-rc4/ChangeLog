@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-rc4
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ChangeLog,v 1.18 2014/11/03 20:02:30 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-rc4/ChangeLog,v 1.19 2015/04/11 15:43:43 graaff Exp $
+
+  11 Apr 2015; Hans de Graaff <graaff@gentoo.org> ruby-rc4-0.1.5-r2.ebuild:
+  Add ruby22.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> ruby-rc4-0.1.5-r1.ebuild,
   ruby-rc4-0.1.5-r2.ebuild:
