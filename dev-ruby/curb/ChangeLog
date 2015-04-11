@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/curb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/ChangeLog,v 1.9 2015/01/31 17:42:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/ChangeLog,v 1.10 2015/04/11 05:22:45 graaff Exp $
+
+*curb-0.8.8 (11 Apr 2015)
+
+  11 Apr 2015; Hans de Graaff <graaff@gentoo.org> +curb-0.8.8.ebuild:
+  Version bump.
 
   31 Jan 2015; Hans de Graaff <graaff@gentoo.org> curb-0.8.6.ebuild:
   Add ruby22.

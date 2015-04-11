@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/jquery-rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.41 2015/03/05 06:14:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.42 2015/04/11 05:26:55 graaff Exp $
+
+  11 Apr 2015; Hans de Graaff <graaff@gentoo.org>
+  -jquery-rails-1.0.19-r1.ebuild:
+  Remove masked ruby19-only packages.
 
   05 Mar 2015; Hans de Graaff <graaff@gentoo.org> -jquery-rails-2.2.2.ebuild,
   -jquery-rails-3.0.4.ebuild, -jquery-rails-3.1.0.ebuild,

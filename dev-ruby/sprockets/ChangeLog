@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sprockets
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.31 2014/11/17 19:21:24 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.32 2015/04/11 05:28:11 graaff Exp $
+
+  11 Apr 2015; Hans de Graaff <graaff@gentoo.org> -sprockets-2.1.4.ebuild:
+  Remove masked ruby19-only packages.
 
   17 Nov 2014; Hans de Graaff <graaff@gentoo.org> sprockets-2.11.3.ebuild:
   Don't install the bin script to avoid a file collision with later slots.
