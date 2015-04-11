@@ -1,0 +1,9 @@
+# ChangeLog for sec-policy/selinux-uwsgi
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-uwsgi/ChangeLog,v 1.1 2015/04/11 11:54:08 perfinion Exp $
+
+*selinux-uwsgi-9999 (11 Apr 2015)
+
+  11 Apr 2015; <jason@gentoo.org> +selinux-uwsgi-9999.ebuild, +metadata.xml:
+  Initial commit
+

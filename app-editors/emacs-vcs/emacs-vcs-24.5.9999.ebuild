@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.5.9999.ebuild,v 1.2 2015/03/31 17:25:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.5.9999.ebuild,v 1.3 2015/04/11 11:50:01 ulm Exp $
 
 EAPI=5
 
@@ -94,10 +94,6 @@ if [[ ${PV##*.} = 9999 ]]; then
 	DEPEND="${DEPEND}
 	sys-apps/texinfo"
 fi
-
-# temporary blocker, because the emacs-24 branch installs as version 24.5
-RDEPEND="${RDEPEND}
-	!=app-editors/emacs-24.5*"
 
 EMACS_SUFFIX="${PN/emacs/emacs-${SLOT}}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
