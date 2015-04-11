@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/guice-2.0.ebuild,v 1.2 2015/04/11 22:25:46 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/guice-2.0-r1.ebuild,v 1.1 2015/04/11 22:25:47 monsieurp Exp $
 
 EAPI="5"
 
@@ -20,10 +20,10 @@ IUSE=""
 
 COMMON_DEPEND="dev-java/aopalliance:1
 	dev-java/asm:3
-	dev-java/cglib:2.2"
-RDEPEND=">=virtual/jre-1.5
+	dev-java/cglib:3"
+RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEPEND}"
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 	${COMMON_DEPEND}"
 
 S="${WORKDIR}/${P}-src/"
@@ -34,7 +34,7 @@ JAVA_PKG_BSFIX_NAME="build.xml common.xml servlet/build.xml"
 JAVA_ANT_CLASSPATH_TAGS="${JAVA_ANT_CLASSPATH_TAGS} javadoc"
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
-EANT_GENTOO_CLASSPATH="aopalliance-1,asm-3,cglib-2.2"
+EANT_GENTOO_CLASSPATH="aopalliance-1,asm-3,cglib-3"
 
 java_prepare() {
 	find . -name '*.jar' -delete || die

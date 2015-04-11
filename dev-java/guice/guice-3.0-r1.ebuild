@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/guice-2.0.ebuild,v 1.2 2015/04/11 22:25:46 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/guice-3.0-r1.ebuild,v 1.1 2015/04/11 22:25:47 monsieurp Exp $
 
 EAPI="5"
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,39 +13,38 @@ HOMEPAGE="http://code.google.com/p/google-guice/"
 SRC_URI="http://google-guice.googlecode.com/files/${P}-src.zip"
 
 LICENSE="Apache-2.0"
-SLOT="2"
+SLOT="3"
 KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
 COMMON_DEPEND="dev-java/aopalliance:1
+	dev-java/javax-inject:0
 	dev-java/asm:3
-	dev-java/cglib:2.2"
-RDEPEND=">=virtual/jre-1.5
-	${COMMON_DEPEND}"
-DEPEND=">=virtual/jdk-1.5
+	dev-java/cglib:3"
+
+RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEPEND}"
 
-S="${WORKDIR}/${P}-src/"
+DEPEND=">=virtual/jdk-1.6
+	${COMMON_DEPEND}"
 
 RESTRICT="test"
 
-JAVA_PKG_BSFIX_NAME="build.xml common.xml servlet/build.xml"
-JAVA_ANT_CLASSPATH_TAGS="${JAVA_ANT_CLASSPATH_TAGS} javadoc"
+S="${WORKDIR}/${P}-src/"
 
+JAVA_PKG_BSFIX_NAME="build.xml common.xml servlet/build.xml"
 JAVA_ANT_REWRITE_CLASSPATH="yes"
-EANT_GENTOO_CLASSPATH="aopalliance-1,asm-3,cglib-2.2"
+EANT_GENTOO_CLASSPATH="aopalliance-1,asm-3,cglib-3,javax-inject"
 
 java_prepare() {
-	find . -name '*.jar' -delete || die
-	find . -name '*.class' -delete || die
+	find . -name '*.jar' -exec rm -v {} + || die
+	find . -name '*.class' -exec rm -v {} + || die
 	epatch "${FILESDIR}"/${PV}-common.xml.patch
 	epatch "${FILESDIR}"/${PV}-build.xml.patch
 }
 
 src_install() {
 	java-pkg_dojar build/${PN}.jar
-
-	use doc && java-pkg_dojavadoc javadoc/
-	use source && java-pkg_dosrc src/com
+	use source && java-pkg_dosrc core/src/com
 }

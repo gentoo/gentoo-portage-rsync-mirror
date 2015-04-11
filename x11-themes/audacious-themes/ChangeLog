@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/audacious-themes
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/ChangeLog,v 1.16 2009/06/02 20:12:41 klausman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/ChangeLog,v 1.17 2015/04/11 22:17:09 mrueg Exp $
+
+  11 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -audacious-themes-0.0.3.ebuild:
+  Remove old.
 
   02 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   audacious-themes-0.0.4.ebuild:
@@ -71,4 +74,3 @@
   +audacious-themes-0.0.3.ebuild:
   Initial commit, ebuild based on bmp-themes. By request of Jory Pratt
   <anarchy@gentoo.org>.
-

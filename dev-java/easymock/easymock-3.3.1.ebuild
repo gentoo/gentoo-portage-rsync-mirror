@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/easymock-3.2-r1.ebuild,v 1.3 2015/04/11 22:23:20 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/easymock-3.3.1.ebuild,v 1.1 2015/04/11 22:23:20 monsieurp Exp $
 
 EAPI="5"
 
@@ -20,19 +20,19 @@ IUSE=""
 COMMON_DEPEND="
 	dev-java/junit:4
 	dev-java/objenesis:0
-	dev-java/cglib:2.2
+	dev-java/cglib:3
 "
 
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 	app-arch/unzip
 	${COMMON_DEPEND}"
 
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEPEND}"
 
 S="${WORKDIR}/${P}"
 
-JAVA_GENTOO_CLASSPATH="junit-4,objenesis,cglib-2.2"
+JAVA_GENTOO_CLASSPATH="junit-4,objenesis,cglib-3"
 JAVA_SRC_DIR="src"
 
 src_unpack() {
@@ -54,5 +54,7 @@ java_prepare() {
 src_install() {
 	java-pkg-simple_src_install
 
-	use examples && java-pkg_doexamples examples
+	if use examples; then
+		java-pkg_doexamples examples
+	fi
 }
