@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install preinst prepare setup
-DEPEND=>=virtual/jdk-1.5 userland_GNU? ( sys-apps/findutils ) dev-java/hamcrest-generator:1.3 dev-java/hamcrest-core:1.3 dev-java/qdox:1.12 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
+DEPEND=>=virtual/jdk-1.6 userland_GNU? ( sys-apps/findutils ) dev-java/hamcrest-generator:1.3 dev-java/hamcrest-core:1.3 dev-java/qdox:1.12 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
 DESCRIPTION=Core library of matchers for building test expressions
 EAPI=5
 HOMEPAGE=http://code.google.com/p/hamcrest/
 IUSE=elibc_FreeBSD source elibc_FreeBSD
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD-2
-RDEPEND=>=virtual/jre-1.5 dev-java/hamcrest-generator:1.3 dev-java/hamcrest-core:1.3 dev-java/qdox:1.12 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+RDEPEND=>=virtual/jre-1.6 dev-java/hamcrest-generator:1.3 dev-java/hamcrest-core:1.3 dev-java/qdox:1.12 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=1.3
 SRC_URI=http://hamcrest.googlecode.com/files/hamcrest-1.3.tgz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	85dc5414cfdfbdf5b56e6d8345d2c658	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=0dce3ab6801a0b9c74b5f6b501fa0717
+_md5_=a4f52a3e6149cdd3a9400b91ddb16096

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmock
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.24 2014/08/10 20:18:36 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.25 2015/04/11 22:50:29 monsieurp Exp $
+
+  11 Apr 2015; Patrice Clement <monsieurp@gentoo.org> jmock-2.5.1.ebuild:
+  Adjust dev-java/hamcrest-* SLOTs.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jmock-1.1.0-r2.ebuild,
   jmock-1.2.0.ebuild, jmock-2.5.1.ebuild:
