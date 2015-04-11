@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.314 2015/03/29 19:01:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.315 2015/04/11 12:07:31 zlogene Exp $
+
+  11 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> package.use.stable.mask:
+  Stable mask x265 dependency for ffmpeg (bug #538798)
 
   29 Mar 2015; Mike Frysinger <vapier@gentoo.org> use.mask:
   Unmask USE=cilk.

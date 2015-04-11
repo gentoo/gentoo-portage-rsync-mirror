@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.127 2015/04/03 07:51:52 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.128 2015/04/11 12:07:31 zlogene Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Mikle Kolyada (11 Apr 2015)
+# media-libs/x265 is not stable (bug #538798)
+media-video/ffmpeg x265
 
 # Yixun Lan <dlan@gentoo.org> (02 Apr 2015)
 # sys-fs/zfs is not stable.
