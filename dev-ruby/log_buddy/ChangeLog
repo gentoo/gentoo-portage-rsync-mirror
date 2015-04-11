@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/log_buddy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log_buddy/ChangeLog,v 1.10 2014/11/18 21:50:39 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log_buddy/ChangeLog,v 1.11 2015/04/11 09:01:08 graaff Exp $
+
+  11 Apr 2015; Hans de Graaff <graaff@gentoo.org> log_buddy-0.7.0.ebuild:
+  Add ruby22.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/log_buddy-0.6.0-gentoo.patch:

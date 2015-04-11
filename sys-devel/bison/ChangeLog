@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.134 2015/04/03 07:03:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.135 2015/04/11 08:59:45 hwoarang Exp $
+
+  11 Apr 2015; Markos Chandras <hwoarang@gentoo.org> bison-3.0.4-r1.ebuild:
+  Depend on automake >= 1.14. Bug #545610
 
 *bison-3.0.4-r1 (03 Apr 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-3.0.4-r1.ebuild,v 1.1 2015/04/03 07:03:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-3.0.4-r1.ebuild,v 1.2 2015/04/11 08:59:45 hwoarang Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ IUSE="examples nls static test"
 
 RDEPEND=">=sys-devel/m4-1.4.16"
 DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.14
 	sys-devel/flex
 	examples? ( dev-lang/perl )
 	nls? ( sys-devel/gettext )

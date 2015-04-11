@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm prepare
-DEPEND=>=sys-devel/m4-1.4.16 sys-devel/flex examples? ( dev-lang/perl ) nls? ( sys-devel/gettext ) test? ( dev-lang/perl ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=sys-devel/m4-1.4.16 >=sys-devel/automake-1.14 sys-devel/flex examples? ( dev-lang/perl ) nls? ( sys-devel/gettext ) test? ( dev-lang/perl ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A general-purpose (yacc-compatible) parser generator
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/bison/
@@ -10,4 +10,4 @@ RDEPEND=>=sys-devel/m4-1.4.16
 SLOT=0
 SRC_URI=mirror://gnu/bison/bison-3.0.4.tar.xz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=61825b182c5c39c9b68fd5c37f08a00d
+_md5_=523490db204e539f72912f3c8ad85283
