@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.48 2015/04/07 14:14:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.49 2015/04/11 07:02:57 idella4 Exp $
+
+*ipy-0.83 (11 Apr 2015)
+
+  11 Apr 2015; Ian Delaney <idella4@gentoo.org> +ipy-0.83.ebuild:
+  bump
 
 *ipy-0.82a (27 Feb 2015)
 
