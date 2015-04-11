@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/List-MoreUtils-0.408.0.ebuild,v 1.6 2015/04/05 19:29:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/List-MoreUtils-0.408.0.ebuild,v 1.7 2015/04/11 17:49:17 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Provide the missing functionality from List::Util"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~s390 ~sh ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~mips ~s390 ~sh ~x86"
 IUSE="test"
 
 RDEPEND="

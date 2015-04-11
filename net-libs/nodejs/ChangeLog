@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.141 2015/04/08 18:04:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.142 2015/04/11 17:39:36 mgorny Exp $
+
+*nodejs-0.12.2-r1 (11 Apr 2015)
+
+  11 Apr 2015; Michał Górny <mgorny@gentoo.org> +nodejs-0.12.2-r1.ebuild,
+  -nodejs-0.12.2.ebuild:
+  Bump dependency on libuv due to runtime failures, bug #545618.
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/92 by Matthew
+  Dawson.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> nodejs-0.10.30.ebuild,
   nodejs-0.10.36.ebuild, nodejs-0.12.0.ebuild, nodejs-0.12.1.ebuild,

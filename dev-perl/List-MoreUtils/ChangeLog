@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.52 2015/04/05 19:29:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.53 2015/04/11 17:49:17 zlogene Exp $
+
+  11 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> List-MoreUtils-0.408.0.ebuild:
+  Add ~arm64 keyword wrt bug #543632
 
   05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> List-MoreUtils-0.408.0.ebuild:
   Add ~sh keyword wrt bug #543632

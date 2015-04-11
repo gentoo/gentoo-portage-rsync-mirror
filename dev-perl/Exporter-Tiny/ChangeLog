@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Exporter-Tiny
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Tiny/ChangeLog,v 1.7 2015/04/05 19:28:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Tiny/ChangeLog,v 1.8 2015/04/11 17:47:07 zlogene Exp $
+
+  11 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Exporter-Tiny-0.42.0.ebuild:
+  Add ~arm64 keyword wrt bug #543632
 
   05 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Exporter-Tiny-0.42.0.ebuild:
   Add ~sh keyword wrt bug #543632
