@@ -1,6 +1,30 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.629 2015/04/11 20:43:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.630 2015/04/11 21:20:57 dilfridge Exp $
+
+  11 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libreoffice-4.3.5.2.ebuild, -libreoffice-4.3.6.2.ebuild,
+  -libreoffice-4.3.9999.ebuild, -libreoffice-4.4.0.3.ebuild,
+  -files/libreoffice-3.7-system-pyuno.patch,
+  -files/libreoffice-4.1.3.2-kde-calchang.patch,
+  -files/libreoffice-4.1.3.2-kde-recursiverepaint.patch,
+  -files/libreoffice-4.1.4.2-curl-config.patch,
+  -files/libreoffice-4.2.0.4-curl-config.patch,
+  -files/libreoffice-4.2.3.3-kde4-startup.patch,
+  -files/libreoffice-4.2.3.3-kde4-timer-mutex.patch,
+  -files/libreoffice-4.2.6.3-jpeg9.patch,
+  -files/libreoffice-4.2.8.2-boost-1.56.0.patch,
+  -files/libreoffice-4.3.1.2-handle-collada-libs-seperately.patch,
+  -files/libreoffice-4.3.1.2-implement--with-system-coinmp.patch,
+  -files/libreoffice-4.3.1.2-implement--with-system-gltf.patch,
+  -files/libreoffice-4.3.1.2-upgrade-to-libgltf-0.0.1.patch,
+  -files/libreoffice-4.3.4.1-boost-1.56.0.patch,
+  -files/libreoffice-4.3.5.2-DPI.patch,
+  -files/libreoffice-4.3.5.2-detect-KDE5-fallback-to-KDE4UI.patch,
+  -files/libreoffice-4.3.5.2-return-IsUserDefined-w-o-negation.patch,
+  -files/libreoffice-4.3.5.2-system-opencollada.patch,
+  -files/libreoffice-9999-curl-config.patch:
+  Remove old
 
   11 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-4.4.1.2.ebuild, libreoffice-4.4.2.2.ebuild,

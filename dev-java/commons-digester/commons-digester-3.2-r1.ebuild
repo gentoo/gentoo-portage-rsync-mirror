@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-3.2.ebuild,v 1.4 2015/04/11 21:05:13 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-3.2-r1.ebuild,v 1.1 2015/04/11 21:05:13 monsieurp Exp $
 
 EAPI="5"
 
@@ -18,15 +18,18 @@ SRC_URI="mirror://apache/commons/digester/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="3.2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 
-RDEPEND=">=virtual/jre-1.5
+CDEPEND="dev-java/cglib:3
 	dev-java/commons-beanutils:1.7
-	>=dev-java/commons-logging-1.0.2:0
-	dev-java/cglib:2.2"
+	>=dev-java/commons-logging-1.0.2:0"
 
-DEPEND=">=virtual/jdk-1.5
+RDEPEND=">=virtual/jre-1.6
+	${CDEPEND}"
+
+DEPEND=">=virtual/jdk-1.6
 	${RDEPEND}"
+
 #	test? (
 #		dev-java/junit:4
 #		dev-java/ant-junit
@@ -35,7 +38,7 @@ DEPEND=">=virtual/jdk-1.5
 S="${WORKDIR}/${MY_P}"
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
-EANT_GENTOO_CLASSPATH="commons-beanutils-1.7,commons-logging,cglib-2.2"
+EANT_GENTOO_CLASSPATH="commons-beanutils-1.7,commons-logging,cglib-3"
 EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},junit-4"
 
 java_prepare() {

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-digester
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.66 2014/08/10 20:10:27 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.67 2015/04/11 21:05:13 monsieurp Exp $
+
+*commons-digester-3.2-r1 (11 Apr 2015)
+
+  11 Apr 2015; Patrice Clement <monsieurp@gentoo.org>
+  +commons-digester-3.2-r1.ebuild, commons-digester-3.2.ebuild:
+  Bump SLOT dep dev-java/cglib:2.2 to :3 wrt bug 546288. Drop ppc ppc64 and
+  x86-fbsd keywords.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   commons-digester-1.8.1-r1.ebuild, commons-digester-2.1.ebuild,
