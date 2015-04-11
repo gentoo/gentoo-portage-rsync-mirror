@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/rbpdf
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbpdf/ChangeLog,v 1.1 2015/04/11 02:59:00 mjo Exp $
+
+*rbpdf-1.18.5 (11 Apr 2015)
+
+  11 Apr 2015; Michael Orlitzky <mjo@gentoo.org> +metadata.xml,
+  +rbpdf-1.18.5.ebuild:
+  New package, dev-ruby/rbpdf, a TCPDF plugin for Rails.
