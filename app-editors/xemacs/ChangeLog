@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.191 2015/03/31 17:41:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.192 2015/04/11 00:44:43 matsl Exp $
+
+*xemacs-21.4.24 (11 Apr 2015)
+
+  11 Apr 2015; Mats Lidell <matsl@gentoo.org> +xemacs-21.4.24.ebuild:
+  Upstream stable release. Announced as the final 21.4 ever!?
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> xemacs-21.4.22-r4.ebuild,
   xemacs-21.5.31.ebuild, xemacs-21.5.33.ebuild, xemacs-21.5.34-r2.ebuild:

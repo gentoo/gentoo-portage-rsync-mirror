@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.707 2015/03/30 15:43:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.708 2015/04/11 00:46:45 jer Exp $
+
+  11 Apr 2015; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.4.ebuild,
+  wireshark-1.99.5.ebuild, wireshark-99999999.ebuild,
+  +files/wireshark-1.12.4-pkgconfig.patch,
+  +files/wireshark-99999999-pkgconfig.patch:
+  Install pkgconfig files (bug #546126).
 
   30 Mar 2015; Jeroen Roovers <jer@gentoo.org> -wireshark-1.12.3.ebuild:
   Old.
