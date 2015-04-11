@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.5 2015/03/18 13:04:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5-functions.eclass,v 1.6 2015/04/11 17:11:22 kensington Exp $
 
 # @ECLASS: kde5-functions.eclass
 # @MAINTAINER:
@@ -23,15 +23,10 @@ case ${EAPI} in
 	*) die "EAPI=${EAPI:-0} is not supported" ;;
 esac
 
-# @ECLASS-VARIABLE: ECM_MINIMAL
-# @DESCRIPTION:
-# Minimal extra-cmake-modules version to require for the package.
-: ${ECM_MINIMAL:=1.7.0}
-
 # @ECLASS-VARIABLE: FRAMEWORKS_MINIMAL
 # @DESCRIPTION:
 # Minimal Frameworks version to require for the package.
-: ${FRAMEWORKS_MINIMAL:=5.7.0}
+: ${FRAMEWORKS_MINIMAL:=5.8.0}
 
 # @ECLASS-VARIABLE: PLASMA_MINIMAL
 # @DESCRIPTION:

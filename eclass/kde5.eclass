@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.5 2015/04/11 16:31:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.6 2015/04/11 17:11:22 kensington Exp $
 
 # @ECLASS: kde5.eclass
 # @MAINTAINER:
@@ -11,8 +11,6 @@
 
 if [[ -z ${_KDE5_ECLASS} ]]; then
 _KDE5_ECLASS=1
-
-CMAKE_MIN_VERSION="2.8.12"
 
 # @ECLASS-VARIABLE: VIRTUALX_REQUIRED
 # @DESCRIPTION:
@@ -40,7 +38,7 @@ EXPORT_FUNCTIONS pkg_pretend pkg_setup src_unpack src_prepare src_configure src_
 # @ECLASS-VARIABLE: KDE_AUTODEPS
 # @DESCRIPTION:
 # If set to "false", do nothing.
-# For any other value, add a dependency on dev-libs/extra-cmake-modules and dev-qt/qtcore:5.
+# For any other value, add a dependency on dev-qt/qtcore:5 and kde-frameworks/extra-cmake-modules:5.
 : ${KDE_AUTODEPS:=true}
 
 # @ECLASS-VARIABLE: KDE_DEBUG
@@ -107,32 +105,26 @@ fi
 case ${KDE_AUTODEPS} in
 	false)	;;
 	*)
-		if [[ ${CATEGORY} = kde-frameworks ]]; then
-			ECM_MINIMAL=1.$(get_version_component_range 2).0
-		fi
-
 		if [[ ${KDE_BUILD_TYPE} = live ]]; then
 			case ${CATEGORY} in
 				kde-frameworks)
-					ECM_MINIMAL=9999
 					FRAMEWORKS_MINIMAL=9999
 				;;
 				kde-plasma)
-					ECM_MINIMAL=9999
 					FRAMEWORKS_MINIMAL=9999
 				;;
 				*) ;;
 			esac
 		fi
 
-		DEPEND+=" >=kde-frameworks/extra-cmake-modules-${ECM_MINIMAL}"
+		DEPEND+=" $(add_frameworks_dep extra-cmake-modules)"
 		RDEPEND+=" >=kde-frameworks/kf-env-3"
 		COMMONDEPEND+="	>=dev-qt/qtcore-${QT_MINIMAL}:5"
 
 		if [[ ${CATEGORY} = kde-plasma ]]; then
 			RDEPEND+="
 				!kde-apps/kde-l10n[-minimal]
-				!kde-base/kde-l10n:4
+				!kde-base/kde-l10n:4[-minimal(-)]
 			"
 		fi
 
@@ -142,8 +134,6 @@ case ${KDE_AUTODEPS} in
 				!kde-base/${PN}
 			"
 		fi
-
-		unset ecm_version
 		;;
 esac
 
@@ -373,11 +363,21 @@ kde5_src_prepare() {
 	# enable only the requested translations
 	# when required
 	if [[ ${KDE_BUILD_TYPE} = release ]] ; then
-		for lang in $(ls po) ; do
+		for lang in $(ls po 2> /dev/null) ; do
 			if ! has ${lang} ${LINGUAS} ; then
 				rm -rf po/${lang}
 			fi
 		done
+
+		if [[ ${KDE_HANDBOOK} = true ]] ; then
+			pushd doc > /dev/null
+			for lang in $(ls) ; do
+				if ! has ${lang} ${LINGUAS} ; then
+					comment_add_subdirectory ${lang}
+				fi
+			done
+			popd > /dev/null
+		fi
 	else
 		rm -rf po
 	fi
@@ -453,7 +453,7 @@ kde5_src_test() {
 		fi
 
 		cmake-utils_src_test
-	}		
+	}
 
 	# When run as normal user during ebuild development with the ebuild command, the
 	# kde tests tend to access the session DBUS. This however is not possible in a real
