@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/kodi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.14 2015/04/08 18:15:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/ChangeLog,v 1.15 2015/04/11 20:46:30 vapier Exp $
+
+  11 Apr 2015; Mike Frysinger <vapier@gentoo.org> kodi-9999.ebuild:
+  Drop sdl deps for USE=texturepacker as upstream no longer needs it #546052 by
+  hal.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> kodi-14.1.ebuild,
   kodi-9999.ebuild:

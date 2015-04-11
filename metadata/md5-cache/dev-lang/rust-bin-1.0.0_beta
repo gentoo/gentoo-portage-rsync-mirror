@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm unpack
+DEPEND=>=app-eselect/eselect-rust-0.2_pre20150206 !dev-lang/rust:0 cargo-bundled? ( !dev-rust/cargo )
+DESCRIPTION=Systems programming language from Mozilla
+EAPI=5
+HOMEPAGE=http://www.rust-lang.org/
+IUSE=cargo-bundled doc
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA
+RDEPEND=>=app-eselect/eselect-rust-0.2_pre20150206 !dev-lang/rust:0 cargo-bundled? ( !dev-rust/cargo )
+SLOT=0
+SRC_URI=amd64? ( http://static.rust-lang.org/dist/rust-1.0.0-beta-x86_64-unknown-linux-gnu.tar.gz ) x86? ( http://static.rust-lang.org/dist/rust-1.0.0-beta-i686-unknown-linux-gnu.tar.gz )
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_md5_=69db23f9ba014921c25dcabb57353b0d

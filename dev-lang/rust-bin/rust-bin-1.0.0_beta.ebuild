@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0_alpha2.ebuild,v 1.2 2015/03/31 19:12:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0_beta.ebuild,v 1.1 2015/04/11 20:41:26 jauhien Exp $
 
-EAPI="5"
+EAPI=5
 
-inherit eutils
+inherit eutils bash-completion-r1
 
-MY_PV="1.0.0-alpha.2"
+MY_PV="${PV/_/-}"
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
 SRC_URI="amd64? ( http://static.rust-lang.org/dist/rust-${MY_PV}-x86_64-unknown-linux-gnu.tar.gz )
@@ -16,10 +16,11 @@ LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="emacs vim-syntax zsh-completion"
+IUSE="cargo-bundled doc"
 
 DEPEND=">=app-eselect/eselect-rust-0.2_pre20150206
 	!dev-lang/rust:0
+	cargo-bundled? ( !dev-rust/cargo )
 "
 RDEPEND="${DEPEND}"
 
@@ -33,7 +34,11 @@ src_unpack() {
 }
 
 src_install() {
+	local components=rustc
+	use cargo-bundled && components="${components},cargo"
+	use doc && components="${components},rust-docs"
 	./install.sh \
+		--components="${components}" \
 		--disable-verify \
 		--prefix="${D}/opt/${P}" \
 		--mandir="${D}/usr/share/${P}/man" \
@@ -59,6 +64,12 @@ src_install() {
 
 	dodir /etc/env.d/rust
 	touch "${D}/etc/env.d/rust/provider-${P}" || die
+	if use cargo-bundled ; then
+		dosym "/opt/${P}/bin/cargo" /usr/bin/cargo
+		dosym "/opt/${P}/share/zsh/site-functions/_cargo" /usr/share/zsh/site-functions/_cargo
+		newbashcomp "${D}/opt/${P}/etc/bash_completion.d/cargo" cargo
+		rm -rf "${D}/opt/${P}/etc"
+	fi
 }
 
 pkg_postinst() {
