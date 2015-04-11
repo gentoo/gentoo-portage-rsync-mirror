@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/extra-cmake-modules/extra-cmake-modules-1.8.0.ebuild,v 1.1 2015/04/11 16:25:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/extra-cmake-modules/extra-cmake-modules-1.8.0.ebuild,v 1.2 2015/04/11 16:46:26 kensington Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/extra-cmake-modules"
 SRC_URI="mirror://kde/stable/frameworks/${FRAMEWORKS_DIR}/${P}.tar.xz"
 
 LICENSE="BSD"
-SLOT="0"
+SLOT="5"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 

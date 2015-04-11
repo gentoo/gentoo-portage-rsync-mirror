@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.198 2015/03/30 05:47:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.199 2015/04/11 16:36:59 kensington Exp $
+
+  11 Apr 2015; Michael Palimaka <kensington@gentoo.org> quassel-0.12_rc1.ebuild,
+  quassel-9999.ebuild:
+  extra-cmake-modules moved from dev-libs to kde-frameworks.
 
 *quassel-0.11.0-r1 (30 Mar 2015)
 

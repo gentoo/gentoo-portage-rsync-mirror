@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=app-i18n/fcitx-4.2.8 dev-libs/extra-cmake-modules dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=>=app-i18n/fcitx-4.2.8 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 kde-frameworks/extra-cmake-modules sys-devel/make >=dev-util/cmake-2.8.12 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Qt5 input module for Fcitx
 EAPI=5
 HOMEPAGE=http://fcitx-im.org/
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=>=app-i18n/fcitx-4.2.8 dev-libs/extra-cmake-modules dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5
+RDEPEND=>=app-i18n/fcitx-4.2.8 dev-qt/qtcore:5 dev-qt/qtdbus:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 kde-frameworks/extra-cmake-modules
 SLOT=0
 SRC_URI=http://download.fcitx-im.org/fcitx-qt5/fcitx-qt5-1.0.0.tar.xz
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
-_md5_=425263c22dff6424026efd62ce8475f1
+_md5_=6f28955fb610a453a4806f67c45bdb54

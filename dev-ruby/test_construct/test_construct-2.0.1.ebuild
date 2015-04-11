@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_construct/test_construct-2.0.1.ebuild,v 1.3 2015/03/04 11:19:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_construct/test_construct-2.0.1.ebuild,v 1.4 2015/04/11 16:45:41 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-qt5/fcitx-qt5-1.0.0.ebuild,v 1.1 2015/02/03 08:03:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-qt5/fcitx-qt5-1.0.0.ebuild,v 1.2 2015/04/11 16:33:28 kensington Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=app-i18n/fcitx-4.2.8
-	dev-libs/extra-cmake-modules
 	dev-qt/qtcore:5
 	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
-	dev-qt/qtwidgets:5"
+	dev-qt/qtwidgets:5
+	kde-frameworks/extra-cmake-modules"
 DEPEND="${RDEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.4 2015/03/18 13:04:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.5 2015/04/11 16:31:36 kensington Exp $
 
 # @ECLASS: kde5.eclass
 # @MAINTAINER:
@@ -125,7 +125,7 @@ case ${KDE_AUTODEPS} in
 			esac
 		fi
 
-		DEPEND+=" >=dev-libs/extra-cmake-modules-${ECM_MINIMAL}"
+		DEPEND+=" >=kde-frameworks/extra-cmake-modules-${ECM_MINIMAL}"
 		RDEPEND+=" >=kde-frameworks/kf-env-3"
 		COMMONDEPEND+="	>=dev-qt/qtcore-${QT_MINIMAL}:5"
 

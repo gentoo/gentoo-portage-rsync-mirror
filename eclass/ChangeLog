@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1584 2015/04/04 21:04:49 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1585 2015/04/11 16:31:36 kensington Exp $
+
+  11 Apr 2015; Michael Palimaka <kensington@gentoo.org> kde5.eclass:
+  extra-cmake-modules moved from dev-libs to kde-frameworks.
 
   04 Apr 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass,
   java-pkg-simple.eclass:
