@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.3.ebuild,v 1.3 2014/12/19 13:39:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.6.ebuild,v 1.1 2015/04/11 10:29:56 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -13,18 +13,18 @@ SRC_URI="http://people.freedesktop.org/~hughsient/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.31.10:2
-	dev-libs/libgusb
+	>=dev-libs/libgusb-0.2.2
 	media-libs/lcms:2
-	media-libs/libcanberra[gtk3]
+	>=media-libs/libcanberra-0.10[gtk3]
 	net-libs/libsoup:2.4
 	>=x11-libs/gtk+-3.11.2:3
-	>=x11-misc/colord-1.2.4:0=
+	>=x11-misc/colord-1.2.9:0=
 	>=x11-libs/colord-gtk-0.1.24
 "
 DEPEND="${RDEPEND}
@@ -46,9 +46,11 @@ src_prepare() {
 
 src_configure() {
 	# introspection checked but not needed by anything
-	gnome2_src_configure --disable-introspection
+	# Install completions manually to prevent dependency on bash-completion, bug #546166
+	gnome2_src_configure --disable-introspection --disable-bash-completion
 }
 
 src_install() {
-	gnome2_src_install bashcompletiondir="$(get_bashcompdir)"
+	gnome2_src_install
+	dobashcomp data/bash/colorhug-cmd
 }

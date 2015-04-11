@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/colorhug-client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/ChangeLog,v 1.25 2015/03/15 13:27:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/ChangeLog,v 1.26 2015/04/11 10:29:56 pacho Exp $
+
+*colorhug-client-0.2.6 (11 Apr 2015)
+
+  11 Apr 2015; Pacho Ramos <pacho@gentoo.org> +colorhug-client-0.2.6.ebuild,
+  -colorhug-client-0.2.3.ebuild:
+  Version bump, install bash-completion manually to avoid dependency on bash-
+  completion package (#546166), drop old
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> colorhug-client-0.2.5.ebuild:
   x86 stable, bug 534012

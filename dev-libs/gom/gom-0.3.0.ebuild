@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gom/gom-0.3.0.ebuild,v 1.4 2015/03/15 13:17:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gom/gom-0.3.0.ebuild,v 1.5 2015/04/11 10:15:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/Gom"
 LICENSE="LGPL-2+"
 SLOT="0"
 
-IUSE="+introspection"
+IUSE="+introspection test"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 RDEPEND="
@@ -26,10 +26,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.0
 	sys-devel/gettext
 	virtual/pkgconfig
+	test? ( x11-libs/gdk-pixbuf )
 "
 
 src_configure() {
 	gnome2_src_configure \
 		--disable-static \
-		$(use_enable introspection)
+		$(use_enable introspection) \
+		$(use_enable test glibtest)
 }
