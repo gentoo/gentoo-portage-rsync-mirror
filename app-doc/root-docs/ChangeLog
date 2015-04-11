@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.47 2015/03/25 21:39:33 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.48 2015/04/11 11:29:10 bircoph Exp $
+
+  11 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> root-docs-5.34.26.ebuild,
+  root-docs-5.34.28.ebuild:
+  root and fonts are needed for api docs only.
 
 *root-docs-5.34.28 (25 Mar 2015)
 

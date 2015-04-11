@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.93 2015/03/25 08:04:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.94 2015/04/11 11:16:42 hwoarang Exp $
+
+*redis-3.0.0 (11 Apr 2015)
+
+  11 Apr 2015; Markos Chandras <hwoarang@gentoo.org> +redis-3.0.0.ebuild,
+  +files/redis-3.0.0-sharedlua.patch:
+  Version bump. Thanks to Johan Bergström <bugs@bergstroem.nu>.
 
   25 Mar 2015; Justin Lecher <jlec@gentoo.org> redis-2.6.15-r1.ebuild,
   redis-2.6.16.ebuild, redis-2.8.11.ebuild, redis-2.8.13.ebuild,

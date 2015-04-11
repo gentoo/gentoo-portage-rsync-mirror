@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=~sci-physics/root-5.34.28[X,graphviz,opengl] app-text/pandoc app-text/texlive dev-haskell/pandoc-citeproc[bibutils] media-fonts/dejavu virtual/pkgconfig test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DEPEND=app-text/pandoc app-text/texlive dev-haskell/pandoc-citeproc[bibutils] virtual/pkgconfig api? ( media-fonts/dejavu ~sci-physics/root-5.34.28[X,graphviz,opengl] ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
 DESCRIPTION=Documentation for ROOT Data Analysis Framework
 EAPI=5
 HOMEPAGE=http://root.cern.ch/drupal
@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=ftp://root.cern.ch/root/root_v5.34.28.source.tar.gz math? ( http://tmva.sourceforge.net/docu/TMVAUsersGuide.pdf -> TMVAUsersGuide-v4.2.0.pdf http://root.cern.ch/download/doc/RooFit_Users_Manual_2.91-33.pdf http://root.cern.ch/drupal/sites/default/files/roofit_quickstart_3.00.pdf ) api? ( http://root.cern.ch/drupal/sites/all/themes/newsflash/images/blue/root-banner.png http://root.cern.ch/drupal/sites/all/themes/newsflash/images/info.png )
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=446e89091fc6b0e76e2f980efbf22280
+_md5_=28b659b2a4380d6160b8a6e759b4c540

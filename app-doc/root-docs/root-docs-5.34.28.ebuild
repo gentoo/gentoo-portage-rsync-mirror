@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.28.ebuild,v 1.1 2015/03/25 21:39:33 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.28.ebuild,v 1.2 2015/04/11 11:29:10 bircoph Exp $
 
 EAPI=5
 
@@ -40,12 +40,14 @@ IUSE="api +math +metric http"
 VIRTUALX_REQUIRED="api"
 
 DEPEND="
-	~sci-physics/root-${PV}[X,graphviz,opengl]
 	app-text/pandoc
 	app-text/texlive
 	dev-haskell/pandoc-citeproc[bibutils]
-	media-fonts/dejavu
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	api? (
+		media-fonts/dejavu
+		~sci-physics/root-${PV}[X,graphviz,opengl]
+	)"
 RDEPEND=""
 
 DOC_DIR="/usr/share/doc/${ROOT_PN}-${PV}"
