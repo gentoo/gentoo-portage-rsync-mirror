@@ -1,11 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.94.ebuild,v 1.1 2015/02/03 20:34:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.94.ebuild,v 1.2 2015/04/11 09:50:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python3_4 )
+PYTHON_REQ_USE="sqlite"
 
 inherit gnome2 python-single-r1 eutils virtualx multilib
 

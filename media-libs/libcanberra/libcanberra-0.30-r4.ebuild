@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.30-r4.ebuild,v 1.2 2015/01/02 12:10:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.30-r4.ebuild,v 1.3 2015/04/11 09:57:45 pacho Exp $
 
 EAPI="5"
-
 inherit eutils systemd
 
 DESCRIPTION="Portable sound event library"
@@ -16,8 +15,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x
 IUSE="alsa gnome gstreamer +gtk +gtk3 oss pulseaudio +sound tdb udev"
 
 COMMON_DEPEND="
+	dev-libs/libltdl:0
 	media-libs/libvorbis
-	>=sys-devel/libtool-2.2.6b
 	alsa? (
 		media-libs/alsa-lib:=
 		udev? ( virtual/libudev:= ) )
@@ -34,11 +33,14 @@ COMMON_DEPEND="
 	tdb? ( sys-libs/tdb:= )
 "
 RDEPEND="${COMMON_DEPEND}
-	gnome? ( gnome-base/gsettings-desktop-schemas )
+	gnome? (
+		gnome-base/dconf
+		gnome-base/gsettings-desktop-schemas )
 	sound? ( x11-themes/sound-theme-freedesktop )" # Required for index.theme wrt #323379
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 REQUIRED_USE="udev? ( alsa )"
 

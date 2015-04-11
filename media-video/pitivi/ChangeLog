@@ -1,6 +1,10 @@
 # ChangeLog for media-video/pitivi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.37 2015/02/03 20:34:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.38 2015/04/11 09:50:28 pacho Exp $
+
+  11 Apr 2015; Pacho Ramos <pacho@gentoo.org> -pitivi-0.93.ebuild,
+  pitivi-0.94.ebuild:
+  python[sqlite] is needed, bug #545626 by Fpemud; drop old
 
 *pitivi-0.94 (03 Feb 2015)
 

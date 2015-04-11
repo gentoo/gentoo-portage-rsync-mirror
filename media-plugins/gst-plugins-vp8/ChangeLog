@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-vp8
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.28 2014/08/07 20:04:10 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.29 2015/04/11 09:41:55 pacho Exp $
+
+*gst-plugins-vp8-0.10.23-r3 (11 Apr 2015)
+
+  11 Apr 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/gst-plugins-vp8-0.10.23-drop-vpx-compat-defines.patch,
+  +gst-plugins-vp8-0.10.23-r3.ebuild, -gst-plugins-vp8-0.10.23-r1.ebuild:
+  Drop old compat code that makes this break with libvpx-1.4, bug #545958 (from
+  Fedora)
 
   07 Aug 2014; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-vp8-0.10.23-r2.ebuild:
