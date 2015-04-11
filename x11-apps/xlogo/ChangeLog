@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlogo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/ChangeLog,v 1.42 2012/08/26 16:58:27 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/ChangeLog,v 1.43 2015/04/11 21:49:31 mrueg Exp $
+
+  11 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xlogo-1.0.3.ebuild:
+  Remove old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xlogo-1.0.4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -148,4 +151,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xlogo-0.99.0.ebuild:
   Initial commit for modular X.
-

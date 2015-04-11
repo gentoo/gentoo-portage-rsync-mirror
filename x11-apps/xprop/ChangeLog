@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xprop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/ChangeLog,v 1.84 2015/03/03 10:47:52 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/ChangeLog,v 1.85 2015/04/11 21:46:43 mrueg Exp $
+
+  11 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xprop-1.2.0.ebuild,
+  -xprop-1.2.1.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> xprop-1.2.2.ebuild:
   add arm64 support, tested on A53 board

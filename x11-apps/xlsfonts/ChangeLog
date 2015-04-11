@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlsfonts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsfonts/ChangeLog,v 1.48 2012/08/26 17:02:05 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsfonts/ChangeLog,v 1.49 2015/04/11 21:43:52 mrueg Exp $
+
+  11 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xlsfonts-1.0.3.ebuild:
+  Remove old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xlsfonts-1.0.4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -177,4 +180,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xlsfonts-0.99.0.ebuild:
   Initial commit for modular X.
-
