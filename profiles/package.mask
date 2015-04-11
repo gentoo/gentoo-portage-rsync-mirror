@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16473 2015/04/10 22:26:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16474 2015/04/11 01:04:50 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -553,12 +553,6 @@ media-gfx/yafray
 # See bugs 452484, 485994, 512082, 519212. Removal in 30 days.
 media-video/mplayer2
 media-video/smplayer2
-
-# Michael Sterrett <mr_bones_@gentoo.org> (11 Mar 2015)
-# Doesn't build with modern gcc, randomly fails to build (bug #494170)
-# and no upstream updates for over 10 years.
-# masked for removal on 20150410
-games-roguelike/ivan
 
 # Alice Ferrazzi <alicef@gentoo.org> (10 Mar 2015)
 # Masked new version of pypy as experimental.
