@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_alpha2.ebuild,v 1.4 2015/04/11 14:05:16 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_beta.ebuild,v 1.1 2015/04/11 14:05:16 jauhien Exp $
 
 EAPI=5
 
@@ -8,13 +8,13 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit eutils python-any-r1
 
-MY_PV="rustc-1.0.0-alpha.2"
+MY_PV="rustc-1.0.0-beta"
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
 
 SRC_URI="http://static.rust-lang.org/dist/${MY_PV}-src.tar.gz
-	x86?   ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-02-17-f1bb6c2-linux-i386-191ed5ec4f17e32d36abeade55a1c6085e51245c.tar.bz2 )
-	amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-02-17-f1bb6c2-linux-x86_64-acec86045632f4f3f085c072ba696f889906dffe.tar.bz2 )"
+	x86?   ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-03-27-5520801-linux-i386-1ef82402ed16f5a6d2f87a9a62eaa83170e249ec.tar.bz2 )
+	amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-03-27-5520801-linux-x86_64-ef2154372e97a3cb687897d027fd51c8f2c5f349.tar.bz2 )"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
 SLOT="1.0"

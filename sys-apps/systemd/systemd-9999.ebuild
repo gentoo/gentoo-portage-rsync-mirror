@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.161 2015/04/08 18:27:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.162 2015/04/11 14:05:50 mgorny Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gudev http
+IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gnuefi gudev http
 	idn importd introspection kdbus +kmod +lz4 lzma nat pam policykit python
 	qrcode +seccomp selinux ssl sysv-utils terminal test vanilla xkb"
 REQUIRED_USE="importd? ( curl gcrypt lzma )"
@@ -98,6 +98,7 @@ DEPEND="${COMMON_DEPEND}
 	ia64? ( >=sys-kernel/linux-headers-3.9 )
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )
+	gnuefi? ( sys-boot/gnu-efi )
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
 	terminal? ( media-fonts/unifont[utils(+)] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
@@ -216,6 +217,7 @@ multilib_src_configure() {
 		$(multilib_native_use_enable doc gtk-doc)
 		$(multilib_native_use_enable elfutils)
 		$(use_enable gcrypt)
+		$(multilib_native_use_enable gnuefi)
 		$(use_enable gudev)
 		$(multilib_native_use_enable http microhttpd)
 		$(usex http $(multilib_native_use_enable ssl gnutls) --disable-gnutls)
@@ -247,6 +249,11 @@ multilib_src_configure() {
 		# hardcode a few paths to spare some deps
 		QUOTAON=/usr/sbin/quotaon
 		QUOTACHECK=/usr/sbin/quotacheck
+
+		# TODO: we may need to restrict this to gcc
+		EFI_CC="$(tc-getCC)"
+		--with-efi-libdir="${EPREFIX}/usr/lib"
+		--with-efi-ldsdir="${EPREFIX}/usr/lib"
 
 		# dbus paths
 		--with-dbuspolicydir="${EPREFIX}/etc/dbus-1/system.d"
