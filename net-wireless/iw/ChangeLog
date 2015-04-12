@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.79 2015/01/28 10:36:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.80 2015/04/12 08:16:44 radhermit Exp $
+
+*iw-4.0 (12 Apr 2015)
+
+  12 Apr 2015; Tim Harder <radhermit@gentoo.org> +iw-4.0.ebuild:
+  Version bump (bug #545260).
 
   28 Jan 2015; Agostino Sarubbo <ago@gentoo.org> iw-3.17.ebuild:
   Stable for ppc, wrt bug #535636
