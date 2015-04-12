@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.18 2015/01/31 20:42:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.19 2015/04/12 06:32:01 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs games
@@ -53,12 +53,9 @@ default_client() {
 pkg_setup() {
 	games_pkg_setup
 
-	local alert_user
-
 	if ! use qmax && $( use opengl || use sdl ) ; then
 		elog "The 'qmax' graphical improvements are recommended."
 		echo
-		alert_user=y
 	fi
 
 	if use debug ; then
@@ -67,7 +64,6 @@ pkg_setup() {
 		ewarn "src/qcommon/cmd.c:364: warning: dereferencing type-punned"
 		ewarn "pointer will break strict-aliasing rules."
 		echo
-		alert_user=y
 	fi
 
 	# Determine the default sound driver, in order of preference
@@ -87,13 +83,7 @@ pkg_setup() {
 			# OSS is the default sound driver in the Makefile
 			ewarn "The 'oss' USE flag is recommended instead."
 			echo
-			alert_user=y
 		fi
-	fi
-
-	if [[ -n "${alert_user}" ]] ; then
-		ebeep
-		epause
 	fi
 }
 
