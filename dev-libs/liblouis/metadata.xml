@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>accessibility</herd>
-<maintainer>
-  <email>teiresias@gentoo.org</email>
-  <name>Chris Brannon</name>
-</maintainer>
 </pkgmetadata>

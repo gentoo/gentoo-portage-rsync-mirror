@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.61 2015/03/10 15:29:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.62 2015/04/12 08:45:48 pacho Exp $
+
+  12 Apr 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to bug #353756
 
   10 Mar 2015; William Hubbs <williamh@gentoo.org> emacspeak-9999.ebuild:
   Upstream moved to github, so adjust the live ebuild

@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>accessibility</herd>
-<maintainer>
-  <email>teiresias@gentoo.org</email>
-  <name>Chris Brannon</name>
-</maintainer>
  <use>
   <flag name="api">build brltty's application program interface</flag>
   <flag name="beeper">support the console tone generator</flag>
