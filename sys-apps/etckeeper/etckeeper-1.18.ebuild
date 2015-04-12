@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.12.ebuild,v 1.2 2015/04/08 18:27:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/etckeeper-1.18.ebuild,v 1.1 2015/04/12 21:43:56 mrueg Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit eutils bash-completion-r1 prefix python-r1
 
 DESCRIPTION="A collection of tools to let /etc be stored in a repository"
-HOMEPAGE="http://kitenet.net/~joey/code/etckeeper/"
+HOMEPAGE="https://etckeeper.branchable.com/"
 SRC_URI="https://github.com/joeyh/etckeeper/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -51,9 +51,9 @@ src_install(){
 	fi
 
 	newbashcomp bash_completion ${PN}
-	dodoc README.md TODO
+	dodoc doc/README.mdwn
 	docinto examples
-	dodoc "${FILESDIR}"/bashrc
+	newdoc "${FILESDIR}"/bashrc-r1 bashrc
 
 	if use cron ; then
 		exeinto /etc/cron.daily

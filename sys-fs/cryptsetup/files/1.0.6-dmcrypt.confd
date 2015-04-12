@@ -34,6 +34,9 @@
 # target=<name>                      == Mapping name for partition.
 # swap=<name>                        == Mapping name for swap partition.
 # source='<dev>'                     == Real device for partition.
+#                                    Note: You can (and should) specify a tag like UUID
+#                                    for blkid (see -t option).  This is safer than using
+#                                    the full path to the device.
 # key='</path/to/keyfile>[:<mode>]'  == Fullpath from / or from inside removable media.
 # remdev='<dev>'                     == Device that will be assigned to removable media.
 # gpg_options='<opts>'               == Default are --quiet --decrypt

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.48 2015/04/08 18:27:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.49 2015/04/12 21:43:56 mrueg Exp $
+
+*etckeeper-1.18 (12 Apr 2015)
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +etckeeper-1.18.ebuild,
+  +files/etckeeper-1.18-gentoo.patch, -etckeeper-1.12.ebuild,
+  -files/etckeeper-1.12-gentoo.patch:
+  Version bump. Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> etckeeper-1.11-r1.ebuild,
   etckeeper-1.12.ebuild:
