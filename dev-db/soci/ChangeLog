@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/soci
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/soci/ChangeLog,v 1.3 2014/12/28 15:19:00 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/soci/ChangeLog,v 1.4 2015/04/12 20:02:27 jauhien Exp $
+
+*soci-3.2.3 (12 Apr 2015)
+
+  12 Apr 2015;  <jauhien@gentoo.org> +soci-3.2.3.ebuild, soci-3.2.2.ebuild:
+  version bump
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> soci-3.2.2.ebuild:
   Rename virtual/postgresql to dev-db/postgresql

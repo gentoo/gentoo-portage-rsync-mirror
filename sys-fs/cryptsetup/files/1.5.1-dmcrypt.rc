@@ -1,10 +1,14 @@
 #!/sbin/runscript
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/1.5.1-dmcrypt.rc,v 1.2 2014/10/19 04:37:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/1.5.1-dmcrypt.rc,v 1.5 2015/04/12 20:19:59 vapier Exp $
 
 depend() {
 	before checkfs fsck
+
+	if grep -qs ^swap= "${conf_file}" ; then
+		before swap
+	fi
 }
 
 # We support multiple dmcrypt instances based on $SVCNAME
@@ -103,8 +107,8 @@ dm_crypt_execute_dmcrypt() {
 		}
 
 		# Notes: sed not used to avoid case where /usr partition is encrypted.
-		mode=${key/*:/} && ( [ "${mode}" = "${key}" ] || [ -z "${mode}" ] ) && mode=reg
-		key=${key/:*/}
+		mode=${key##*:} && ( [ "${mode}" = "${key}" ] || [ -z "${mode}" ] ) && mode=reg
+		key=${key%:*}
 		case "${mode}" in
 		gpg|reg)
 			# handle key on removable device
@@ -162,11 +166,11 @@ dm_crypt_execute_dmcrypt() {
 	if [ "${mode}" = "gpg" ] ; then
 		: ${gpg_options:='-q -d'}
 		# gpg available ?
-		if type -p gpg >/dev/null ; then
+		if command -v gpg >/dev/null ; then
 			for i in 0 1 2 ; do
 				# paranoid, don't store key in a variable, pipe it so it stays very little in ram unprotected.
 				# save stdin stdout stderr "values"
-				gpg ${gpg_options} ${key} 2>/dev/null | cryptsetup ${options} ${arg1} ${arg2} ${arg3}
+				gpg ${gpg_options} ${key} 2>/dev/null | cryptsetup --key-file - ${options} ${arg1} ${arg2} ${arg3}
 				ret=$?
 				[ ${ret} -eq 0 ] && break
 			done
@@ -262,7 +266,7 @@ start() {
 		esac
 	done
 
-	while read -u 3 targetline ; do
+	while read targetline <&3 ; do
 		case ${targetline} in
 		# skip comments and blank lines
 		""|"#"*) continue ;;
