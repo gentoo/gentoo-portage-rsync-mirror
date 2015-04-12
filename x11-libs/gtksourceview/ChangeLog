@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.285 2015/03/15 13:33:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.286 2015/04/12 22:05:20 eva Exp $
+
+*gtksourceview-3.14.4 (12 Apr 2015)
+
+  12 Apr 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtksourceview-3.14.4.ebuild:
+  Version bump. Fixes search related crash.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gtksourceview-3.14.3.ebuild:
   x86 stable, bug 534012

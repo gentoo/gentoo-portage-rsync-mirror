@@ -1,6 +1,18 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.205 2015/04/12 21:44:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.207 2015/04/12 22:25:40 vapier Exp $
+
+*cryptsetup-1.6.7 (12 Apr 2015)
+
+  12 Apr 2015; Mike Frysinger <vapier@gentoo.org> +cryptsetup-1.6.7.ebuild,
+  +files/1.6.7-dmcrypt.confd, +files/1.6.7-dmcrypt.rc:
+  Adapt the timeout logic to apply to the gpg command too #357449 by Vespian.
+  Version bump #546140 by Nikoli.
+
+  12 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/1.0.6-dmcrypt.confd,
+  files/1.5.1-dmcrypt.rc:
+  Allow loopbacks to be allocated dynamically from a free one #282626 by Zeev
+  Tarantov.
 
   12 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/1.0.6-dmcrypt.confd,
   files/1.5.1-dmcrypt.rc:
