@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-smartbookmark-plugin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/ChangeLog,v 1.27 2013/05/05 17:17:45 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-smartbookmark-plugin/ChangeLog,v 1.28 2015/04/12 19:37:48 mgorny Exp $
+
+*xfce4-smartbookmark-plugin-0.4.6 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-smartbookmark-plugin-0.4.6.ebuild:
+  Version bump with minor fixes.
 
   05 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   -files/xfce4-smartbookmark-plugin-0.4.4-exo-open_and_argument_handling.patch,

@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-sensors-plugin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.43 2013/04/25 08:58:59 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/ChangeLog,v 1.44 2015/04/12 19:35:20 mgorny Exp $
+
+*xfce4-sensors-plugin-1.2.6 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-sensors-plugin-1.2.6.ebuild:
+  Version bump with minor fixes.
 
   25 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-sensors-plugin-1.2.5.ebuild:
@@ -202,4 +208,3 @@
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-sensors-plugin-0.10.99.6.ebuild:
   Rename xfce4-sensors to xfce4-sensors-plugin.
-

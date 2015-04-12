@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/grubconfig
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.20 2012/01/15 15:31:16 phajdan.jr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.21 2015/04/12 19:58:34 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -grubconfig-1.26.ebuild,
+  -grubconfig-1.28.ebuild:
+  Remove old.
 
   15 Jan 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   grubconfig-1.28-r1.ebuild:

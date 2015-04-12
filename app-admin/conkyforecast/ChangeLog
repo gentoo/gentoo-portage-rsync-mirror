@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conkyforecast
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/ChangeLog,v 1.5 2014/12/14 23:16:01 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conkyforecast/ChangeLog,v 1.6 2015/04/12 19:57:10 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -conkyforecast-2.20.ebuild,
+  -conkyforecast-2.24.ebuild:
+  Remove old.
 
 *conkyforecast-2.24-r1 (14 Dec 2014)
 
