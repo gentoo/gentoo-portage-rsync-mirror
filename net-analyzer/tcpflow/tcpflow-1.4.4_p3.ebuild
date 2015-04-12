@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.4.4_p3.ebuild,v 1.3 2014/12/27 19:28:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-1.4.4_p3.ebuild,v 1.4 2015/04/12 17:58:03 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -15,7 +15,7 @@ SRC_URI="
 LICENSE="GPL-3"
 KEYWORDS="amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 SLOT="0"
-IUSE="+pcap test"
+IUSE="cairo +pcap test"
 
 RDEPEND="
 	app-forensics/afflib
@@ -24,7 +24,9 @@ RDEPEND="
 	net-libs/http-parser
 	pcap? ( net-libs/libpcap )
 	sys-libs/zlib
-	x11-libs/cairo
+	cairo? (
+		x11-libs/cairo
+	)
 "
 DEPEND="
 	${RDEPEND}
@@ -46,5 +48,6 @@ src_prepare() {
 src_configure() {
 	econf \
 		$(usex pcap --enable-pcap=true --enable-pcap=false) \
+		$(usex cairo --enable-cairo=true --enable-cairo=false) \
 		--without-o3
 }

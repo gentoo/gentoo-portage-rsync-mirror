@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/padre
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.26 2014/10/19 20:12:20 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/ChangeLog,v 1.27 2015/04/12 17:59:16 dilfridge Exp $
+
+*padre-1.0.0 (12 Apr 2015)
+
+  12 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> +padre-1.0.0.ebuild:
+  Version bump
 
   19 Oct 2014; Andreas K. Huettel <dilfridge@gentoo.org> -padre-0.920.0.ebuild,
   -padre-0.940.0.ebuild, -padre-0.960.0.ebuild:

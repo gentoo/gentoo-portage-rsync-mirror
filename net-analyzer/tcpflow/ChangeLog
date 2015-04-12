@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpflow
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.53 2014/12/27 19:28:37 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.54 2015/04/12 17:58:03 jer Exp $
+
+  12 Apr 2015; Jeroen Roovers <jer@gentoo.org> tcpflow-1.4.4_p3.ebuild,
+  -files/tcpflow-1.4.4_p2-deps.patch:
+  Add USE=cairo (bug #546102 by Adrian).
 
   27 Dec 2014; Agostino Sarubbo <ago@gentoo.org> tcpflow-1.4.4_p3.ebuild:
   Stable for amd64, wrt bug #517336
