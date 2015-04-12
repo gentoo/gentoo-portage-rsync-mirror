@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.40 2015/04/08 08:05:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.41 2015/04/12 16:32:28 jlec Exp $
+
+  12 Apr 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  rst2pdf-0.93-r2.ebuild:
+  Fix QA warning
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> rst2pdf-0.93-r2.ebuild:
   Drop old Python implementations

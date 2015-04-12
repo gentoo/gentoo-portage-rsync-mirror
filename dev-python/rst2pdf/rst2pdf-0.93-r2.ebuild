@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.93-r2.ebuild,v 1.8 2015/04/08 08:05:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/rst2pdf-0.93-r2.ebuild,v 1.9 2015/04/12 16:32:28 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -34,6 +34,7 @@ python_prepare_all() {
 python_install_all() {
 	dodoc doc/*.pdf
 	doman doc/rst2pdf.1
+	distutils-r1_python_install_all
 }
 
 pkg_postinst() {
