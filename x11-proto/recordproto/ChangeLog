@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/recordproto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.68 2015/03/03 12:34:58 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/recordproto/ChangeLog,v 1.69 2015/04/12 21:18:01 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -recordproto-1.14.1.ebuild,
+  -recordproto-1.14.2.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> recordproto-1.14.2-r1.ebuild:
   add arm64 support, tested on A53 board

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.203 2015/04/12 20:40:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.204 2015/04/12 21:27:43 vapier Exp $
+
+  12 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/1.5.1-dmcrypt.rc:
+  Delete old dm_crypt_execute_localmount hook as no one uses it anymore #321507
+  by forums.
 
   12 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/1.5.1-dmcrypt.rc:
   Run ebegin message through eval so the output is expanded #442374 by Toralf

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9924 2015/04/11 20:33:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9925 2015/04/12 21:15:39 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Apr 2015; Ulrich Müller <ulm@gentoo.org> license_groups:
+  CPAL-1.0, gnuplot, CC-BY-*, and CC-BY-SA-* licenses are FSF approved now.
+  Move them to the appropriate groups.
 
   11 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add libecwj2 to lcms:0 revdeps mask
