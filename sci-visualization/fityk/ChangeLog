@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/fityk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/ChangeLog,v 1.24 2015/04/08 18:23:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/ChangeLog,v 1.25 2015/04/12 16:25:37 jlec Exp $
+
+*fityk-1.2.9 (12 Apr 2015)
+
+  12 Apr 2015; Justin Lecher <jlec@gentoo.org> +fityk-1.2.9.ebuild,
+  -fityk-0.9.8.ebuild, -fityk-1.1.1.ebuild, fityk-1.2.1.ebuild, metadata.xml:
+  Version Bump, fixes https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/85; thanks Marius Brehler for the bump; clean old
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> fityk-1.2.1.ebuild:
   Drop old Python implementations

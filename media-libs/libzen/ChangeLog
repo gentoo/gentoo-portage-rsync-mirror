@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.61 2015/01/08 04:55:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.62 2015/04/12 16:24:47 radhermit Exp $
+
+*libzen-0.4.31 (12 Apr 2015)
+
+  12 Apr 2015; Tim Harder <radhermit@gentoo.org> +libzen-0.4.31.ebuild:
+  Version bump.
 
   08 Jan 2015; Tim Harder <radhermit@gentoo.org> libzen-0.4.30.ebuild:
   Stabilize for amd64/x86 (bug #535468).

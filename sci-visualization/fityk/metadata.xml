@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
   Fityk is a program for nonlinear fitting of analytical functions
   (especially peak-shaped) to data. It can also be used to display
   data or to remove baseline from data.
@@ -21,7 +21,7 @@
   (eg. zero-shift of instrument), handling series of datasets,
   automation of common tasks with scripts, and more.
 </longdescription>
-<use>
-  <flag name="nlopt">Enable optimization with <pkg>sci-libs/nlopt</pkg></flag>
-</use>
+  <use>
+    <flag name="nlopt">Enable optimization with <pkg>sci-libs/nlopt</pkg></flag>
+  </use>
 </pkgmetadata>

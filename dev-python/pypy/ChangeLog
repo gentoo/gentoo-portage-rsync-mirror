@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.85 2015/04/12 12:58:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.86 2015/04/12 16:13:21 mgorny Exp $
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org> -pypy-2.5.0.ebuild,
+  pypy-2.5.1.ebuild:
+  Add KEYWORDS to 2.5.1. Remove 2.5.0 because of missing binpackage.
 
 *pypy-2.5.1 (12 Apr 2015)
 

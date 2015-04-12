@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.5.7.1.ebuild,v 1.7 2014/03/22 19:19:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gimmix/gimmix-0.5.7.1.ebuild,v 1.8 2015/04/12 16:30:34 angelos Exp $
 
 EAPI=4
 inherit eutils
 
 DESCRIPTION="a graphical music player daemon (MPD) client using GTK+2"
-HOMEPAGE="http://gimmix.berlios.de/"
-SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
+HOMEPAGE="https://code.google.com/p/gimmix/"
+SRC_URI="mirror://gentoo/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

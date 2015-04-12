@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmpdclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.61 2014/01/26 12:15:37 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/ChangeLog,v 1.62 2015/04/12 16:24:51 angelos Exp $
+
+*libmpdclient-2.10 (12 Apr 2015)
+
+  12 Apr 2015;  <christoph@gentoo.org> +libmpdclient-2.10.ebuild,
+  -libmpdclient-2.8.ebuild:
+  Version bump, remove old
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libmpdclient-2.9.ebuild:
   Stable for sparc, wrt bug #495740
