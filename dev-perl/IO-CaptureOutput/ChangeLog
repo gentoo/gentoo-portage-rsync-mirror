@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-CaptureOutput
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-CaptureOutput/ChangeLog,v 1.4 2015/04/11 17:56:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-CaptureOutput/ChangeLog,v 1.5 2015/04/12 13:07:12 zlogene Exp $
+
+  12 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  IO-CaptureOutput-1.110.400.ebuild:
+  Add ~x86-linux keyword wrt bug #545660
 
   11 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
   IO-CaptureOutput-1.110.400.ebuild:

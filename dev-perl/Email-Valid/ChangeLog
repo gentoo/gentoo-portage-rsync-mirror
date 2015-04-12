@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Valid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.76 2015/04/11 17:57:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.77 2015/04/12 13:08:46 zlogene Exp $
+
+  12 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Email-Valid-1.196.0.ebuild:
+  Add ~x86-linux keyword wrt bug #545660
 
   11 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Email-Valid-1.196.0.ebuild:
   Add ~ppc and ~ppc64 keywords wrt bug #545660
