@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-mpc-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/ChangeLog,v 1.27 2012/11/28 12:20:04 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-mpc-plugin/ChangeLog,v 1.28 2015/04/12 19:20:29 mgorny Exp $
+
+*xfce4-mpc-plugin-0.4.5 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org> +xfce4-mpc-plugin-0.4.5.ebuild:
+  Version bump with minor fixes. Default to using libmpd.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-mpc-plugin-0.4.4.ebuild:
@@ -121,4 +126,3 @@
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-mpc-plugin-0.3.3.ebuild:
   Rename xfce4-mpc to xfce4-mpc-plugin.
-

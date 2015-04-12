@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-netload-plugin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/ChangeLog,v 1.38 2014/11/05 09:10:16 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-netload-plugin/ChangeLog,v 1.39 2015/04/12 19:22:09 mgorny Exp $
+
+*xfce4-netload-plugin-1.2.4 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-netload-plugin-1.2.4.ebuild:
+  Version bump with minor fixes.
 
 *xfce4-netload-plugin-1.2.2 (05 Nov 2014)
 

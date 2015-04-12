@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/paxtest
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.45 2014/12/12 18:15:44 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.46 2015/04/12 19:16:25 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/paxtest-0.9.9-Makefile.patch, -paxtest-0.9.9-r2.ebuild:
+  Remove old.
 
   12 Dec 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg signature

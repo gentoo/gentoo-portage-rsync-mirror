@@ -6673,12 +6673,17 @@ sci-physics/root:c++11 - Build ROOT using the C++11 standard
 sci-physics/root:c++14 - Build ROOT using the C++14 standard
 sci-physics/root:clarens - Build the Clarens and PEAC plug-ins, to use in a GRID enabled analysis
 sci-physics/root:fits - Support for images and data from FITS files with sci-libs/cfitsio
+sci-physics/root:gdml - Enable GDML writer and reader
+sci-physics/root:geocad - Enable ROOT-CAD interface using sci-libs/opencascade
 sci-physics/root:htmldoc - Generate html documentation
 sci-physics/root:http - Enable http server support including but not limited to fastcgi support
 sci-physics/root:math - Build all math related libraries plugins, needs sci-libs/gsl
+sci-physics/root:memstat - Build memory statistics library, helps to detect memory leaks
 sci-physics/root:pythia6 - Build the interface for sci-physics/pythia version 6.x
 sci-physics/root:pythia8 - Build the interface for sci-physics/pythia version 8.x
 sci-physics/root:reflex - Build the reflection database for the C++ interpreter
+sci-physics/root:shadow - Enable shadow authentication in rootd and proofd
+sci-physics/root:table - Build libTable contrib library
 sci-physics/root:xrootd - Build the interface for net-libs/xrootd
 sci-visualization/fityk:nlopt - Enable optimization with sci-libs/nlopt
 sci-visualization/gnuplot:bitmap - Enable dot-matrix printers and pbm terminal

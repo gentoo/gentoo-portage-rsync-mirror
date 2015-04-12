@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/showconsole
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.21 2012/05/31 02:42:52 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.22 2015/04/12 19:14:43 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -showconsole-1.07.ebuild:
+  Remove old.
 
   31 May 2012; Zac Medico <zmedico@gentoo.org> showconsole-1.07.ebuild,
   showconsole-1.08.ebuild:
