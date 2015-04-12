@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/x11rdp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x11rdp/ChangeLog,v 1.1 2014/10/27 10:21:40 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x11rdp/ChangeLog,v 1.2 2015/04/12 18:39:09 mgorny Exp $
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org> x11rdp-0.8.0.1.9.5.ebuild:
+  Add a dependency on (old) xorg-server, bugs #542160 and #528624.
 
 *x11rdp-0.8.0.1.9.5 (27 Oct 2014)
 

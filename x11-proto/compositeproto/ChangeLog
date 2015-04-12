@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/compositeproto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.66 2015/03/03 12:21:28 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.67 2015/04/12 18:56:23 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -compositeproto-0.4.2.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> compositeproto-0.4.2-r1.ebuild:
   add arm64 support, tested on A53 board

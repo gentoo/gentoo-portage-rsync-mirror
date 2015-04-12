@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Apache-Session
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.74 2014/08/23 21:34:53 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.75 2015/04/12 18:38:58 dilfridge Exp $
+
+*Apache-Session-1.930.0 (12 Apr 2015)
+
+  12 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Apache-Session-1.930.0.ebuild:
+  Version bump
 
 *Apache-Session-1.900.0-r1 (23 Aug 2014)
 

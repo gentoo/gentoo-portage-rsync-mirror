@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Apache-AuthCookie
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/ChangeLog,v 1.32 2014/08/25 02:17:39 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthCookie/ChangeLog,v 1.33 2015/04/12 18:33:53 dilfridge Exp $
+
+*Apache-AuthCookie-3.220.0 (12 Apr 2015)
+
+  12 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Apache-AuthCookie-3.220.0.ebuild:
+  Version bump
 
 *Apache-AuthCookie-3.180.0-r1 (25 Aug 2014)
 

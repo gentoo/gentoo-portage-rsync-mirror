@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/smproxy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.52 2012/05/15 14:14:27 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.53 2015/04/12 18:42:16 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -smproxy-1.0.4.ebuild:
+  Remove old.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> smproxy-1.0.5.ebuild:
   keyword ~amd64-fbsd
@@ -189,4 +192,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +smproxy-0.99.0.ebuild:
   Initial commit for modular X.
-

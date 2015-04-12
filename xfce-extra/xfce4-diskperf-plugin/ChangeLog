@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-diskperf-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.30 2012/11/28 12:22:31 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf-plugin/ChangeLog,v 1.31 2015/04/12 18:56:28 mgorny Exp $
+
+*xfce4-diskperf-plugin-2.5.5 (12 Apr 2015)
+
+  12 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-diskperf-plugin-2.5.5.ebuild:
+  Version bump with minor fixes.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-diskperf-plugin-2.5.4.ebuild:
@@ -141,4 +147,3 @@
   25 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-diskperf-plugin-2.2.0.ebuild:
   Rename xfce4-diskperf to xfce4-diskperf-plugin.
-

@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/quimup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/ChangeLog,v 1.22 2014/06/29 14:53:42 angelos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quimup/ChangeLog,v 1.23 2015/04/12 18:47:01 angelos Exp $
+
+*quimup-1.4.0 (12 Apr 2015)
+
+  12 Apr 2015;  <christoph@gentoo.org> +quimup-1.4.0.ebuild:
+  Version bump
 
 *quimup-1.3.2 (29 Jun 2014)
 

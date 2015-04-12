@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86bigfontproto
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.54 2014/06/15 00:44:51 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.55 2015/04/12 18:49:53 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xf86bigfontproto-1.2.0.ebuild:
+  Remove old.
 
   15 Jun 2014; Mike Frysinger <vapier@gentoo.org>
   xf86bigfontproto-1.2.0-r1.ebuild:
