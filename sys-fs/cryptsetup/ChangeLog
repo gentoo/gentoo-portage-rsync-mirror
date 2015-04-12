@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.197 2015/04/08 18:27:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.198 2015/04/12 18:13:44 vapier Exp $
+
+  12 Apr 2015; Mike Frysinger <vapier@gentoo.org> cryptsetup-1.6.5.ebuild,
+  cryptsetup-1.6.6.ebuild, metadata.xml:
+  Add USE=pwquality to control libpwquality dep #492624 by Nikoli.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> cryptsetup-1.6.2.ebuild:
   Drop old Python implementations
