@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r2.ebuild,v 1.4 2015/03/23 12:07:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.17-r2.ebuild,v 1.5 2015/04/12 17:21:04 jlec Exp $
 
 EAPI=5
 
@@ -53,6 +53,9 @@ src_configure() {
 		$(use_enable python python-binding)
 		$(usex debug "--enable-logging=verbose" "")
 	)
+
+	use python && python_setup
+
 	autotools-utils_src_configure
 	use python && cd "${BUILD_DIR}"/bindings/python && distutils-r1_src_configure
 }
