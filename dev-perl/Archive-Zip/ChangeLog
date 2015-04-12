@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Archive-Zip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.95 2015/04/12 19:00:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.96 2015/04/12 22:33:49 dilfridge Exp $
+
+  12 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Archive-Zip-1.460.0.ebuild:
+  RDEPEND and DEPEND was swapped
 
 *Archive-Zip-1.460.0 (12 Apr 2015)
 
