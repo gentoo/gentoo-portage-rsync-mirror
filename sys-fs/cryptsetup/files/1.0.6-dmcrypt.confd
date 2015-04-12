@@ -96,3 +96,5 @@
 #target='crypt-loop-home'
 #source='/dev/loop0'
 #loop_file='/mnt/crypt/home'
+
+# The file must be terminated by a newline.  Or leave this comment last.

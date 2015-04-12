@@ -1,6 +1,14 @@
 # ChangeLog for games-simulation/simutrans
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.37 2014/10/27 18:51:36 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.38 2015/04/12 20:42:02 mr_bones_ Exp $
+
+*simutrans-0.120.0.1 (12 Apr 2015)
+
+  12 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/simutrans-0.120.0.1-Makefile.patch, +simutrans-0.120.0.1.ebuild,
+  files/simutrans-0.112.3-Makefile.patch,
+  files/simutrans-0.112.3-overflow.patch:
+  version bump (bug #520650)
 
   27 Oct 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -files/simutrans-0.102.2.2-gcc46.patch,

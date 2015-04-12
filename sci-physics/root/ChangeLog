@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.141 2015/04/12 19:15:40 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.142 2015/04/12 20:55:34 bircoph Exp $
+
+  12 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> root-6.02.05-r2.ebuild:
+  Depend on shadow conditionally.
 
 *root-6.02.05-r2 (12 Apr 2015)
 

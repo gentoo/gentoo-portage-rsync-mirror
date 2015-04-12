@@ -1,5 +1,5 @@
---- besch/reader/obj_reader.cc.orig	2013-01-22 17:22:02.509818038 -0500
-+++ besch/reader/obj_reader.cc	2013-01-22 17:22:58.650846577 -0500
+--- besch/reader/obj_reader.cc.orig
++++ besch/reader/obj_reader.cc
 @@ -308,7 +308,7 @@
  void obj_reader_t::skip_nodes(FILE *fp,uint32 version)
  {

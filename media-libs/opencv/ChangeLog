@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.120 2015/04/08 17:59:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.122 2015/04/12 20:49:19 dilfridge Exp $
+
+  12 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.9.ebuild,
+  opencv-2.4.10.ebuild:
+  Pin slots
+
+*opencv-2.4.10 (12 Apr 2015)
+
+  12 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> +opencv-2.4.10.ebuild:
+  Version bump
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> opencv-2.4.9.ebuild:
   Drop old Python implementations

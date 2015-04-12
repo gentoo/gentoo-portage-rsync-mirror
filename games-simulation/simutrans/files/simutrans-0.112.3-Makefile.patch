@@ -1,5 +1,5 @@
---- Makefile.orig	2013-05-28 17:58:03.379228527 -0400
-+++ Makefile	2013-05-28 17:58:24.768491369 -0400
+--- Makefile.orig
++++ Makefile
 @@ -88,8 +88,6 @@
        endif
      endif

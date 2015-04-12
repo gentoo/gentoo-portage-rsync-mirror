@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-6.02.05-r2.ebuild,v 1.1 2015/04/12 19:15:40 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-6.02.05-r2.ebuild,v 1.2 2015/04/12 20:55:34 bircoph Exp $
 
 EAPI=5
 
@@ -48,7 +48,6 @@ CDEPEND="
 	media-libs/libpng:0=
 	>=sys-devel/clang-3.4:=
 	sys-libs/zlib:0=
-	virtual/shadow
 	X? (
 		media-libs/ftgl:0=
 		media-libs/glew:0=
@@ -92,6 +91,7 @@ CDEPEND="
 	pythia6? ( sci-physics/pythia:6= )
 	pythia8? ( >=sci-physics/pythia-8.1.80:8= )
 	python? ( ${PYTHON_DEPS} )
+	shadow? ( virtual/shadow )
 	sqlite? ( dev-db/sqlite:3= )
 	ssl? ( dev-libs/openssl:0= )
 	xml? ( dev-libs/libxml2:2= )
@@ -308,9 +308,9 @@ src_configure() {
 		--disable-builtin-ftgl
 		--disable-builtin-freetype
 		--disable-builtin-glew
+		--disable-builtin-lzma
 		--disable-builtin-pcre
 		--disable-builtin-zlib
-		--disable-builtin-lzma
 		--disable-werror
 		--enable-explicitlink
 		--enable-shared

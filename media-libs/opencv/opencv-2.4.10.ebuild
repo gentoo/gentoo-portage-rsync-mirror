@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.9.ebuild,v 1.12 2015/04/12 20:49:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.10.ebuild,v 1.2 2015/04/12 20:49:19 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/opencvlibrary/opencv-unix/${PV}/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0/2.4"
-KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux"
 IUSE="cuda doc +eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k libav opencl openexr opengl openmp pch png +python qt4 testprograms threads tiff v4l vtk xine"
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
@@ -78,7 +78,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.4.3-gcc47.patch"
 	"${FILESDIR}/${PN}-2.4.2-cflags.patch"
 	"${FILESDIR}/${PN}-2.4.8-javamagic.patch"
-	"${FILESDIR}/${PN}-2.4.9-cuda.patch"
 	"${FILESDIR}/${PN}-2.4.9-libav10.patch"
 	"${FILESDIR}/${PN}-2.4.9-cuda-pkg-config.patch"
 )
