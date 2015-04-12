@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webrobots
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.21 2015/04/09 06:07:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.22 2015/04/12 07:23:03 graaff Exp $
+
+  12 Apr 2015; Hans de Graaff <graaff@gentoo.org> webrobots-0.1.1-r2.ebuild:
+  Add ruby22.
 
   09 Apr 2015; Hans de Graaff <graaff@gentoo.org> -webrobots-0.1.1.ebuild:
   Cleanup.
