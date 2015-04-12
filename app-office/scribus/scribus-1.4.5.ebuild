@@ -1,23 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.11 2015/04/12 14:51:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.5.ebuild,v 1.1 2015/04/12 14:51:58 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="tk?"
 
-inherit cmake-utils fdo-mime multilib python-single-r1 subversion
+inherit cmake-utils fdo-mime python-single-r1
 
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
-SRC_URI=""
-ESVN_REPO_URI="svn://scribus.net/branches/Version14x/Scribus"
-ESVN_PROJECT=Scribus-1.4
+SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
@@ -57,6 +55,7 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.4.2-docs.patch
+	"${FILESDIR}"/${PN}-1.4.0-minizip.patch
 	)
 
 src_prepare() {
@@ -69,17 +68,12 @@ src_prepare() {
 	EOF
 
 	rm scribus/{ioapi,unzip}.[ch] || die
-	sed \
-		-e "/^\s*unzip\.[ch]/d" \
-		-e "/^\s*ioapi\.[ch]/d" \
-		-i scribus/CMakeLists.txt || die
 
 	sed \
 		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \
 		-i resources/templates/CMakeLists.txt || die
 
 	cmake-utils_src_prepare
-	subversion_src_prepare
 }
 
 src_configure() {
