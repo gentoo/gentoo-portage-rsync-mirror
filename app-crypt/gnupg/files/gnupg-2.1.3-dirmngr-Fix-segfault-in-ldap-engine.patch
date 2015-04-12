@@ -1,0 +1,29 @@
+From c3216513bf12cdeec154b6430a50ef6dfd271ee6 Mon Sep 17 00:00:00 2001
+From: Kristian Fiskerstrand <kf@sumptuouscapital.com>
+Date: Sun, 12 Apr 2015 01:11:07 +0200
+Subject: [PATCH] dirmngr: Fix segfault in ldap engine
+
+(ks-engine-ldap.c) Fix segfault caused by missing check whether uri is
+initialized
+---
+ dirmngr/ks-engine-ldap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/dirmngr/ks-engine-ldap.c b/dirmngr/ks-engine-ldap.c
+index aefd12a..4497025 100644
+--- a/dirmngr/ks-engine-ldap.c
++++ b/dirmngr/ks-engine-ldap.c
+@@ -306,7 +306,9 @@ ks_ldap_help (ctrl_t ctrl, parsed_uri_t uri)
+     "Supported methods: search, get, put\n";
+   gpg_error_t err;
+ 
+-  if (strcmp (uri->scheme, "ldap") == 0
++  if(!uri)
++    err = ks_print_help (ctrl, "  ldap");
++  else if (strcmp (uri->scheme, "ldap") == 0
+       || strcmp (uri->scheme, "ldaps") == 0
+       || strcmp (uri->scheme, "ldapi") == 0)
+     err = ks_print_help (ctrl, data);
+-- 
+2.3.0
+

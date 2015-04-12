@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.2.ebuild,v 1.1 2015/02/13 09:35:33 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.3.ebuild,v 1.1 2015/04/11 23:32:47 k_f Exp $
 
 EAPI="5"
 
@@ -60,6 +60,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.17-gpgsm-gencert.patch"
+	epatch "${FILESDIR}/${P}-dirmngr-Fix-segfault-in-ldap-engine.patch"
 	epatch_user
 }
 
