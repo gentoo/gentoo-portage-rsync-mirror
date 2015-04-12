@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/appres
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.67 2015/03/03 10:28:16 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.68 2015/04/12 10:25:37 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -appres-1.0.3.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> appres-1.0.4.ebuild:
   add arm64 support, tested on A53 board

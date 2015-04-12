@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libltdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.20 2015/04/02 20:02:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libltdl/ChangeLog,v 1.21 2015/04/12 10:05:30 zlogene Exp $
+
+  12 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> libltdl-2.4.6.ebuild:
+  x86 stable wrt bug #540408
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> libltdl-2.4.6.ebuild:
   arm stable, bug #540408

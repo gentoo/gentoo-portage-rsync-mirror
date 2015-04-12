@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xedit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.45 2015/02/21 21:52:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.46 2015/04/12 10:29:44 mrueg Exp $
+
+  12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xedit-1.2.0.ebuild:
+  Remove old.
 
 *xedit-1.2.2 (21 Feb 2015)
 
