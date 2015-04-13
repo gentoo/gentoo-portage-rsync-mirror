@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1367 2015/04/09 18:19:14 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1368 2015/04/12 23:55:53 mpagano Exp $
+
+*vanilla-sources-4.0.0 (12 Apr 2015)
+
+  12 Apr 2015; Mike Pagano <mpagano@gentoo.org> +vanilla-sources-4.0.0.ebuild:
+  Rejoice. 4.0.0 kernel is released.
 
 *vanilla-sources-3.12.40 (09 Apr 2015)
 
