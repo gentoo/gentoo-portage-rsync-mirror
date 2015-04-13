@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/happydoc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.33 2015/04/08 08:05:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/happydoc/ChangeLog,v 1.34 2015/04/13 09:25:59 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> happydoc-3.1-r2.ebuild:
+  Stable for alpha, wrt bug #540290
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> happydoc-3.1-r2.ebuild:
   Drop old Python implementations

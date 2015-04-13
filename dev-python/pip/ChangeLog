@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.60 2015/04/08 04:08:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.61 2015/04/13 09:12:58 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pip-1.5.6.ebuild:
+  Stable for alpha, wrt bug #530600
 
   08 Apr 2015; Tim Harder <radhermit@gentoo.org> -pip-6.0.2.ebuild,
   -pip-6.0.3.ebuild, -pip-6.0.6.ebuild, -pip-6.0.7.ebuild:

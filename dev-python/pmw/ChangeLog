@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pmw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.51 2015/04/08 08:05:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.52 2015/04/13 09:26:19 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pmw-1.3.3-r2.ebuild,
+  pmw-2.0.0-r2.ebuild:
+  Stable for alpha, wrt bug #540290
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pmw-1.3.3-r2.ebuild:
   Drop old Python implementations

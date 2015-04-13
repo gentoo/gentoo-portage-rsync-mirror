@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.155 2015/03/19 05:34:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.156 2015/04/13 09:26:05 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> logilab-common-0.63.2.ebuild:
+  Stable for alpha, wrt bug #540290
 
   19 Mar 2015; Patrick Lauer <patrick@gentoo.org> logilab-common-0.63.2.ebuild:
   Remove obsolete fixes for testphase that now fail themselves #543750

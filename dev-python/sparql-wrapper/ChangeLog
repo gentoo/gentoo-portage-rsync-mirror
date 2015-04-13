@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sparql-wrapper
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sparql-wrapper/ChangeLog,v 1.14 2015/04/08 08:04:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sparql-wrapper/ChangeLog,v 1.15 2015/04/13 09:26:57 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sparql-wrapper-1.6.4.ebuild:
+  Stable for alpha, wrt bug #540290
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> sparql-wrapper-1.5.2.ebuild,
   sparql-wrapper-1.6.0.ebuild, sparql-wrapper-1.6.1.ebuild,

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/hamcrest-library
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-library/ChangeLog,v 1.6 2015/04/13 07:56:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hamcrest-library/ChangeLog,v 1.7 2015/04/13 09:07:14 monsieurp Exp $
+
+  13 Apr 2015; Patrice Clement <monsieurp@gentoo.org>
+  hamcrest-library-1.3-r1.ebuild:
+  Retroactively marking x86 stable (ALLARCHES). Fix bug 546296.
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> hamcrest-library-1.3-r1.ebuild:
   Stable for amd64, wrt bug #546296

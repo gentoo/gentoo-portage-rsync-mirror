@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.152 2015/04/08 08:04:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.153 2015/04/13 09:13:05 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sqlalchemy-0.7.10.ebuild,
+  sqlalchemy-0.9.8.ebuild:
+  Stable for alpha, wrt bug #530600
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> sqlalchemy-0.7.10.ebuild,
   sqlalchemy-0.8.0.ebuild, sqlalchemy-0.8.1.ebuild, sqlalchemy-0.8.2-r1.ebuild,

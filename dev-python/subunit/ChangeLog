@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.69 2015/04/08 08:04:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.70 2015/04/13 09:09:32 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> subunit-0.0.21-r1.ebuild:
+  Stable for alpha, wrt bug #525994
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> subunit-0.0.10-r1.ebuild,
   subunit-0.0.16.ebuild, subunit-0.0.18-r2.ebuild, subunit-0.0.19.ebuild:

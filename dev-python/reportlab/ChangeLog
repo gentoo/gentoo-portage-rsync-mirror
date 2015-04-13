@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.124 2015/03/07 08:22:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.125 2015/04/13 09:26:50 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> reportlab-3.1.8-r2.ebuild:
+  Stable for alpha, wrt bug #540290
 
   07 Mar 2015; Pacho Ramos <pacho@gentoo.org> reportlab-3.1.8-r2.ebuild:
   ppc stable, bug 540290
