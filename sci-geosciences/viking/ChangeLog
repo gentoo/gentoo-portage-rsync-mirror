@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/viking
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.30 2015/04/06 07:10:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.31 2015/04/13 17:42:59 graaff Exp $
+
+*viking-1.6-r1 (13 Apr 2015)
+
+  13 Apr 2015; Hans de Graaff <graaff@gentoo.org> +viking-1.6-r1.ebuild,
+  metadata.xml:
+  Fix USE=exif to depend on gexiv2 by default and add USE=libexif to built
+  against libexif instead, fixing bug 545732.
 
 *viking-1.6 (06 Apr 2015)
 

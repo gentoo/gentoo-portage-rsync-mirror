@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.2.2.ebuild,v 1.4 2015/04/13 17:23:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.2.2.ebuild,v 1.5 2015/04/13 17:47:47 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="proxy account container object test +memcache"
 REQUIRED_USE="|| ( proxy account container object )"
-
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]

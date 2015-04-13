@@ -6410,6 +6410,7 @@ sci-geosciences/qlandkartegt:gpsbabel - Enable support for wide range of geodata
 sci-geosciences/qlandkartegt:gpx-extensions - Enable support for GPX extensions
 sci-geosciences/qlandkartegt:mikrokopter - Enable telemtry with a mikrokopter
 sci-geosciences/qlandkartegt:rmap - Enable support for TwoNav RMAP file format
+sci-geosciences/viking:libexif - Use media-libs/libexif for EXIF support
 sci-geosciences/viking:magic - Use libmagic to determine mimetypes
 sci-geosciences/viking:mapnik - Enable a layer based on sci-geosciences/mapnik
 sci-geosciences/viking:sqlite3 - Enable MBTiles support based on dev-db/sqlite
