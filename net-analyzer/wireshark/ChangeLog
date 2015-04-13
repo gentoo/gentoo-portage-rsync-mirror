@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.709 2015/04/13 05:00:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.710 2015/04/13 17:29:19 jer Exp $
+
+  13 Apr 2015; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.4.ebuild,
+  -files/wireshark-1.12.4-pkgconfig.patch,
+  files/wireshark-99999999-pkgconfig.patch:
+  Drop pkgconfig patch for stable. Add indirection to PLUGIN_INSTALL_DIR.
 
   13 Apr 2015; Jeroen Roovers <jer@gentoo.org> wireshark-99999999.ebuild,
   files/wireshark-99999999-pkgconfig.patch:
