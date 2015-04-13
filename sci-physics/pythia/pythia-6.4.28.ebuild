@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.28.ebuild,v 1.1 2013/10/29 19:52:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.28.ebuild,v 1.2 2015/04/13 07:55:59 ago Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ SRC_URI="
 
 SLOT="6"
 LICENSE="public-domain"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs"
 
 src_prepare() {

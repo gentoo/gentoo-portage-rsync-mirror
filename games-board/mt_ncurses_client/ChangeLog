@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mt_ncurses_client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mt_ncurses_client/ChangeLog,v 1.6 2015/01/02 17:39:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mt_ncurses_client/ChangeLog,v 1.7 2015/04/13 07:55:44 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
+  mt_ncurses_client-0.1.98.ebuild:
+  Stable for amd64, wrt bug #546312
 
   02 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   mt_ncurses_client-0.1.98.ebuild:
