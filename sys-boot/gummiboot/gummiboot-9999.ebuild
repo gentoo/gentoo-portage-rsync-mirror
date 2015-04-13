@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gummiboot/gummiboot-9999.ebuild,v 1.1 2014/08/02 07:54:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gummiboot/gummiboot-9999.ebuild,v 1.2 2015/04/13 07:21:47 mgorny Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="sys-apps/util-linux"
 DEPEND="${RDEPEND}
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
-	=sys-boot/gnu-efi-3.0s"
+	>=sys-boot/gnu-efi-3.0.2"
 
 pkg_pretend() {
 	# CONFIG_EFI_STUB  is required to boot a kernel with gummiboot
