@@ -10,6 +10,6 @@
 		<flag name="view-captcha">View captcha with aview</flag>
 	</use>
 	<upstream>
-		<remote-id type="google-code">plowshare</remote-id>
+		<remote-id type="github">mcrapet/plowshare</remote-id>
 	</upstream>
 </pkgmetadata>

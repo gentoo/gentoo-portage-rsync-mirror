@@ -1,24 +1,25 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-1.0.2.ebuild,v 1.1 2014/05/14 15:41:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-2.1.0.ebuild,v 1.1 2015/04/13 21:50:02 voyageur Exp $
 
 EAPI=5
 
 inherit bash-completion-r1
 
 DESCRIPTION="Command-line downloader and uploader for file-sharing websites"
-HOMEPAGE="http://code.google.com/p/plowshare/"
-# Fetched from http://${PN}.googlecode.com/archive/v${PV}.tar.gz
-SRC_URI="http://dev.gentoo.org/~voyageur/distfiles/${P}.tar.gz"
+HOMEPAGE="https://github.com/mcrapet/plowshare"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="bash-completion +javascript view-captcha"
 
+SRC_URI="https://github.com/mcrapet/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
 RDEPEND="
 	>=app-shells/bash-4
 	|| ( app-text/recode ( dev-lang/perl dev-perl/HTML-Parser ) )
+	dev-vcs/git
 	|| ( media-gfx/imagemagick[tiff] media-gfx/graphicsmagick[imagemagick,tiff] )
 	net-misc/curl
 	sys-apps/util-linux
@@ -29,17 +30,7 @@ DEPEND=""
 # NOTES:
 # javascript dep should be any javascript interpreter using /usr/bin/js
 
-# Modules using detect_javascript
-JS_MODULES="letitbit nowdownload_co oboom rapidgator zalaa zalil_ru zippyshare"
-
 src_prepare() {
-	if ! use javascript; then
-		for module in ${JS_MODULES}; do
-			sed -i -e "s:^${module}.*::" src/modules/config || die "${module} sed failed"
-			rm src/modules/${module}.sh || die "${module} rm failed"
-		done
-	fi
-
 	# Fix doc install path
 	sed -i -e "/^DOCDIR/s|plowshare4|${P}|" Makefile || die "sed failed"
 
@@ -66,8 +57,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "plowshare is not delivered with modules by default anymore"
+	elog "Per-user modules can be installed/updated with the plowmod command"
 	if ! use javascript; then
-		ewarn "Without javascript you will not be able to use:"
-		ewarn " ${JS_MODULES}"
+		ewarn "Without javascript you will not be able to use modules"
+		ewarn "requering a Javascript shell (/usr/bin/js)"
 	fi
 }
