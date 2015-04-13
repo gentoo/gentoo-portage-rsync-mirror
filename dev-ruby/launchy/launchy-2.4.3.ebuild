@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/launchy/launchy-2.4.3.ebuild,v 1.3 2015/04/11 08:39:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/launchy/launchy-2.4.3.ebuild,v 1.4 2015/04/13 18:26:46 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/addressable-2.3"
+# File collision conflict with x11-misc/launchy, bug 545170
+ruby_add_rdepend ">=dev-ruby/addressable-2.3 !!x11-misc/launchy"
 
 ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.0:5 )"
 

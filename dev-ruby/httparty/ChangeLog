@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/httparty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.34 2014/11/13 22:07:24 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.35 2015/04/13 18:30:55 graaff Exp $
+
+  13 Apr 2015; Hans de Graaff <graaff@gentoo.org> httparty-0.13.1.ebuild:
+  Create stable candidate.
 
 *httparty-0.13.3 (13 Nov 2014)
 
