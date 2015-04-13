@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.166 2015/04/09 20:52:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.167 2015/04/13 15:02:02 alonbl Exp $
+
+*libksba-1.3.3 (13 Apr 2015)
+
+  13 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> +libksba-1.3.3.ebuild:
+  Version bump, bug#546464
 
   09 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> -files/libksba-1.3.0-aix.patch:
   Remove leftover patch, thanks to Hanno Boeck

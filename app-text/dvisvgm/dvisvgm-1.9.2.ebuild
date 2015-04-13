@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.9.2.ebuild,v 1.1 2015/04/13 09:11:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.9.2.ebuild,v 1.2 2015/04/13 15:06:21 aballier Exp $
 
 EAPI=4
 
@@ -24,5 +24,7 @@ RDEPEND="virtual/tex-base
 	media-libs/freetype:2
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
+	app-text/xmlto
+	app-text/asciidoc
 	virtual/pkgconfig
 	test? ( dev-cpp/gtest )"
