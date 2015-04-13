@@ -10,5 +10,5 @@ RDEPEND=!minimal? ( || ( x11-themes/gnome-icon-theme kde-apps/oxygen-icons kde-b
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://ubuntu/pool/universe/t/tangerine-icon-theme/tangerine-icon-theme_0.27.tar.gz http://www.gentoo.org/images/gentoo-logo.svg
-_eclasses_=gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=63099899490ffb490b901d216bafbbc2

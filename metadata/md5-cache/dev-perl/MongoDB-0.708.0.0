@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-perl/Authen-SCRAM virtual/perl-Carp dev-perl/Moose >=dev-perl/DateTime-0.780.0 virtual/perl-Digest-MD5 virtual/perl-Encode >=virtual/perl-Exporter-5.570.0 virtual/perl-IO virtual/perl-MIME-Base64 dev-perl/Safe-Isa virtual/perl-Scalar-List-Utils dev-perl/Syntax-Keyword-Junction dev-perl/Throwable dev-perl/Tie-IxHash virtual/perl-Time-HiRes dev-perl/Try-Tiny virtual/perl-XSLoader dev-perl/boolean virtual/perl-if dev-perl/namespace-clean dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MO/MONGODB/MongoDB-v0.708.0.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
 _md5_=abaeb291ea22702fe19cb5767696ea73

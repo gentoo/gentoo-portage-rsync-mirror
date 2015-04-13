@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=>=dev-games/etrophy-0.5.1 dev-libs/e_dbus dev-libs/efl x11-wm/enlightenment:0.17= nls? ( sys-devel/gettext )
 SLOT=0
 SRC_URI=http://download.enlightenment.org/releases/echievements-2.tar.bz2
-_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=a9ca059d3e67c9e6fdb68d6483c8df8b

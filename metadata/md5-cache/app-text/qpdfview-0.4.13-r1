@@ -10,5 +10,5 @@ RDEPEND=cups? ( net-print/cups ) djvu? ( app-text/djvu ) fitz? ( app-text/mupdf:
 REQUIRED_USE=^^ ( qt4 qt5 ) ?? ( fitz pdf )
 SLOT=0
 SRC_URI=https://launchpad.net/qpdfview/trunk/0.4.13/+download/qpdfview-0.4.13.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=c2de7268dc80e3b58cf472e8eb44ff11

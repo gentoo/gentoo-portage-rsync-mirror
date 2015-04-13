@@ -10,5 +10,5 @@ RDEPEND=dev-libs/openssl sys-libs/zlib qt4? ( dev-qt/qtgui:4 dev-qt/qtmultimedia
 REQUIRED_USE=^^ ( qt4 qt5 )
 SLOT=0
 SRC_URI=https://github.com/JulyIGHOR/QtBitcoinTrader/archive/v1.08.01.tar.gz -> QtBitcoinTrader-1.08.01.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=c5f4768a4a21dbed36d06ec4695450b0

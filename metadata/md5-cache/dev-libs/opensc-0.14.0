@@ -10,5 +10,5 @@ RDEPEND=zlib? ( sys-libs/zlib ) readline? ( sys-libs/readline ) ssl? ( dev-libs/
 REQUIRED_USE=pcsc-lite? ( !openct !ctapi ) openct? ( !pcsc-lite !ctapi ) ctapi? ( !pcsc-lite !openct ) || ( pcsc-lite openct ctapi )
 SLOT=0
 SRC_URI=mirror://sourceforge/opensc/opensc-0.14.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=05814a18baa67ff0c7dee638137a98ca

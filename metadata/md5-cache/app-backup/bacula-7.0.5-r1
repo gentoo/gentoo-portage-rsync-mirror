@@ -10,5 +10,5 @@ RDEPEND=dev-libs/gmp !bacula-clientonly? ( postgres? ( dev-db/postgresql[threads
 REQUIRED_USE=|| ( ^^ ( mysql postgres sqlite3 ) bacula-clientonly ) static? ( bacula-clientonly )
 SLOT=0
 SRC_URI=mirror://sourceforge/bacula/bacula-7.0.5.tar.gz
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	qt4-r2	7199e3db5b5908325487d379c6f67cf0	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	qt4-r2	7199e3db5b5908325487d379c6f67cf0	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=caf36c4e157f61e9678b437457cbb275

@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/openssl sys-libs/zlib qt4? ( dev-qt/qtgui:4 dev-qt/qtmultimedia:4 dev-qt/qtscript:4 ) qt5? ( dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtnetwork:5 dev-qt/qtscript:5 dev-qt/qtwidgets:5 dev-qt/qtmultimedia:5 )
 REQUIRED_USE=^^ ( qt4 qt5 )
 SLOT=0
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=1f8733a9634da664e46f3e0c4abd1a89

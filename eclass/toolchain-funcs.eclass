@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.136 2015/03/31 04:27:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.137 2015/04/13 05:38:17 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -352,7 +352,10 @@ tc-ld-disable-gold() {
 	ewarn "Forcing usage of the BFD linker instead of GOLD"
 
 	# Set up LD to point directly to bfd if it's available.
-	local bfd_ld="$(tc-getLD "$@").bfd"
+	# We need to extract the first word in case there are flags appended
+	# to its value (like multilib).  #545218
+	local ld=$(tc-getLD "$@")
+	local bfd_ld="${ld%% *}.bfd"
 	local path_ld=$(which "${bfd_ld}" 2>/dev/null)
 	[[ -e ${path_ld} ]] && export LD=${bfd_ld}
 

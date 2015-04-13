@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/libspectre-0.2.6:= >=dev-libs/glib-2.38.0:2 dev-libs/libxslt >=gnome-base/librsvg-2.22:2 >=gnome-extra/libgsf-1.14.24:=[introspection?] >=dev-libs/libxml2-2.4.12:2 >=x11-libs/pango-1.24:= >=x11-libs/cairo-1.10:=[svg] x11-libs/libXext:= x11-libs/libXrender:= >=x11-libs/gdk-pixbuf-2.22:2 >=x11-libs/gtk+-3.8.7:3 introspection? ( >=dev-libs/gobject-introspection-1:= >=gnome-extra/libgsf-1.14.23:= )
 SLOT=0.10
 SRC_URI=mirror://gnome/sources/goffice/0.10/goffice-0.10.20.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	c77a2c791ae15742c3c796344e279142	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=73806b5d00aeded56bd2e5a5e4b3c1cc

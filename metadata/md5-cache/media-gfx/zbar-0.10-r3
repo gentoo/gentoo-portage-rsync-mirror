@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=gtk? ( dev-libs/glib:2 x11-libs/gtk+:2 ) imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) jpeg? ( virtual/jpeg:0 ) python? ( gtk? ( >=dev-python/pygtk-2 ) ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 ) X? ( x11-libs/libXext xv? ( x11-libs/libXv ) ) =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=mirror://sourceforge/zbar/zbar-0.10.tar.bz2
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=5b8537a7bc3c8e98f4156b9cad5e8c3c

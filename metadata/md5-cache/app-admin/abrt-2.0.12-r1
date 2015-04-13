@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/btparser-0.18 >=dev-libs/glib-2.21:2 >=dev-libs/libreport-2.0.11 dev-libs/libxml2 dev-libs/nss sys-apps/dbus sys-auth/polkit sys-fs/inotify-tools x11-libs/gtk+:3 x11-libs/libnotify app-arch/cpio dev-libs/elfutils >=sys-devel/gdb-7 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=https://fedorahosted.org/released/abrt/abrt-2.0.12.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=f590f0e8d06081d8d86893cc0128576e

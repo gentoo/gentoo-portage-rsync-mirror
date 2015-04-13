@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://re2.googlecode.com/files/re2-20130115.tgz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=2ffc29c208e8d6ab6cba07f5a48aee6c

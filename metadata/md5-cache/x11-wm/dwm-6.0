@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/libX11 xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=http://dl.suckless.org/dwm/dwm-6.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	portability	a45c088f246ef5091e029f6285d7ce42	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=b5ccd61611ae3bbdc9a68080eb2964b4

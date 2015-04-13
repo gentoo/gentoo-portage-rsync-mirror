@@ -10,5 +10,5 @@ RDEPEND=dev-java/eclipse-ecj:4.4 ~dev-java/tomcat-servlet-api-8.0.18 extra-webap
 RESTRICT=test
 SLOT=8
 SRC_URI=mirror://apache/tomcat/tomcat-8/v8.0.18/src/apache-tomcat-8.0.18-src.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	85dc5414cfdfbdf5b56e6d8345d2c658	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	85dc5414cfdfbdf5b56e6d8345d2c658	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=71a0f99df1fad24d8cf753434f752c69

@@ -10,5 +10,5 @@ RDEPEND=dev-lang/perl[berkdb] dev-perl/DBI dev-perl/DateManip dev-perl/File-Copy
 REQUIRED_USE=cgi? ( !minimal ) apache? ( cgi )
 SLOT=0
 SRC_URI=mirror://sourceforge/munin/munin-2.0.25.tar.gz http://dev.gentoo.org/~jlec/distfiles/munin-2.0.25-gentoo-1.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	85dc5414cfdfbdf5b56e6d8345d2c658	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	85dc5414cfdfbdf5b56e6d8345d2c658	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=49ab0ed32f958d1b4871567c70c74248

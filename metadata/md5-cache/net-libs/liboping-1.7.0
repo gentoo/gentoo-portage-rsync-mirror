@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 GPL-2
 RDEPEND=sys-libs/ncurses perl? ( dev-lang/perl )
 SLOT=0
 SRC_URI=http://verplant.org/liboping/files/liboping-1.7.0.tar.bz2
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=a67b85e4635c4bf73682918191c3f3cd

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/pysam
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/pysam/ChangeLog,v 1.4 2014/06/30 04:27:29 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/pysam/ChangeLog,v 1.5 2015/04/13 06:22:56 jlec Exp $
+
+  13 Apr 2015; Justin Lecher <jlec@gentoo.org> pysam-0.6-r1.ebuild:
+  Keyword for x86
 
 *pysam-0.6-r1 (30 Jun 2014)
 

@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/inetd
 SLOT=0
 SRC_URI=http://fex.rus.uni-stuttgart.de/download/sendfile-2.1b.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=f2f3ef605bdf7d27b5606eca88631f0f

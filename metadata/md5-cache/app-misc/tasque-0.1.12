@@ -10,5 +10,5 @@ RDEPEND=>=dev-dotnet/gtk-sharp-2.12.7-r5 >=dev-dotnet/notify-sharp-0.4.0_pre2008
 REQUIRED_USE=|| ( rememberthemilk sqlite hiveminder )
 SLOT=0
 SRC_URI=mirror://gnome/sources/tasque/0.1/tasque-0.1.12.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gnome.org	8fef8f967214f56e08fa92d61163d891	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gnome.org	8fef8f967214f56e08fa92d61163d891	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=84de18f9af79e42334cb8b33b4e2985a

@@ -8,5 +8,5 @@ LICENSE=Artistic-2
 RDEPEND=dev-lang/mono
 SLOT=0
 SRC_URI=https://github.com/sorear/niecza/zipball/v22 -> niecza-22-src.zip
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=6e2feba22718438d752d1485e25e41c3

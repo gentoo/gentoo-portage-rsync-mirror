@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/t1utils-1.25 || ( media-gfx/potrace >=media-gfx/autotrace-0.30 ) truetype? ( media-gfx/fontforge ) virtual/latex-base =dev-lang/python-2*
 SLOT=1
 SRC_URI=http://lilypond.org/download/sources/mftrace/mftrace-1.2.17.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=f3516f2da1dbf1f7284bf9df846367ee

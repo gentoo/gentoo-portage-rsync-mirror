@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=net-libs/libnet:1.1 >=net-libs/libpcap-0.8.3-r1
 SLOT=0
 SRC_URI=http://nixgeneration.com/~jaime/netdiscover/releases/netdiscover-0.3-beta6.tar.gz https://dev.gentoo.org/~jer/netdiscover-0.3-beta6-oui-db-update-20091010.patch.bz2
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=942ecaf8fb134b4f16bbff5d391f2203

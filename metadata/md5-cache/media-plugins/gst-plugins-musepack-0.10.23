@@ -9,5 +9,5 @@ RDEPEND=>=media-sound/musepack-tools-444 >=dev-libs/glib-2.6:2 media-libs/gstrea
 RESTRICT=test
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-0.10.23.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gst-plugins-bad	c250fc5cfd38c387759418ebf5aee12b	gst-plugins10	120ff9188b4303d014826ecd020530ec	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	79b635d29abf0572d6a1b0dc8e63c0e4	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	gst-plugins-bad	c250fc5cfd38c387759418ebf5aee12b	gst-plugins10	120ff9188b4303d014826ecd020530ec	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=f7377b8fe1f02e518a374965dc985058
