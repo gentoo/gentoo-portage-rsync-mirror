@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-debian
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/ChangeLog,v 1.9 2015/04/08 08:05:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/ChangeLog,v 1.10 2015/04/13 09:31:18 jlec Exp $
+
+*python-debian-0.1.26 (13 Apr 2015)
+
+  13 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +files/python-debian-0.1.26-CVE-2015-0840.patch,
+  +files/python-debian-0.1.26-fix-tests.patch, +python-debian-0.1.26.ebuild,
+  -python-debian-0.1.21_p2.ebuild, metadata.xml:
+  Version Bump; drop old; import fix for CVE-2015-0840, bug #546416
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-debian-0.1.21_p2.ebuild:
   Drop old Python implementations

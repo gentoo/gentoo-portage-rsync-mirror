@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.234 2015/04/09 20:54:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.235 2015/04/13 09:45:21 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libtasn1-4.4.ebuild:
+  Stable for alpha, wrt bug #544922
 
   09 Apr 2015; Markus Meier <maekke@gentoo.org> libtasn1-4.4.ebuild:
   arm stable, bug #544922

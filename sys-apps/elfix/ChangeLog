@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/elfix
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.94 2014/12/28 23:30:20 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/ChangeLog,v 1.95 2015/04/13 09:42:01 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> elfix-0.9.0-r1.ebuild:
+  Stable for alpha, wrt bug #530570
 
   28 Dec 2014; Anthony G. Basile <blueness@gentoo.org> -elfix-0.9.0.ebuild:
   Remove buggy version, bug #533758

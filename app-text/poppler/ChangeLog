@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.451 2015/04/09 20:48:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.452 2015/04/13 09:45:16 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> poppler-0.32.0.ebuild:
+  Stable for alpha, wrt bug #542220
 
   09 Apr 2015; Markus Meier <maekke@gentoo.org> poppler-0.32.0.ebuild:
   arm stable, bug #542220

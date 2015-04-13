@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.90 2015/04/09 07:33:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.91 2015/04/13 09:44:57 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libvncserver-0.9.10.ebuild:
+  Stable for alpha, wrt bug #523590
 
   09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libvncserver-0.9.10.ebuild:
   Stable for x86, wrt bug #523590
