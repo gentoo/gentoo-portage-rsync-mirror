@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.558 2015/04/06 20:29:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.559 2015/04/13 05:12:11 vapier Exp $
+
+  13 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/sshd.rc6.4:
+  Use SSHD_CONFIG everywhere #546008 by Alexander Sulfrian.
 
 *openssh-6.8_p1-r4 (06 Apr 2015)
 
