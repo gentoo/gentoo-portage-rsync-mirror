@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.3.10.ebuild,v 1.1 2014/06/17 12:50:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/firewalld-0.3.10.ebuild,v 1.2 2015/04/13 06:32:01 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 #BACKPORTS=190680ba
 
 inherit autotools eutils gnome2-utils python-r1 systemd multilib bash-completion-r1
@@ -43,7 +43,7 @@ src_prepare() {
 }
 
 src_configure() {
-	python_export_best
+	python_setup
 
 	econf \
 		--enable-systemd \
@@ -53,31 +53,31 @@ src_configure() {
 
 src_install() {
 	# manually split up the installation to avoid "file already exists" errors
-	emake -C config DESTDIR="${ED}" install
-	emake -C po DESTDIR="${ED}" install
-	emake -C shell-completion DESTDIR="${ED}" install
+	emake -C config DESTDIR="${D}" install
+	emake -C po DESTDIR="${D}" install
+	emake -C shell-completion DESTDIR="${D}" install
 
 	install_python() {
-		emake -C src DESTDIR="${ED}" pythondir="$(python_get_sitedir)" install
+		emake -C src DESTDIR="${D}" pythondir="$(python_get_sitedir)" install
 		python_optimize
 	}
 	python_foreach_impl install_python
 
-	python_replicate_script "${ED}"/usr/bin/firewall-{offline-cmd,cmd,applet,config}
-	python_replicate_script "${ED}/usr/sbin/firewalld"
+	python_replicate_script "${D}"/usr/bin/firewall-{offline-cmd,cmd,applet,config}
+	python_replicate_script "${D}/usr/sbin/firewalld"
 
 	# Get rid of junk
-	rm -f "${ED}/etc/rc.d/init.d/firewalld"
-	rm -f "${ED}/etc/sysconfig/firewalld"
-	rm -rf "${ED}/etc/rc.d/"
-	rm -rf "${ED}/etc/sysconfig/"
+	rm -f "${D}/etc/rc.d/init.d/firewalld"
+	rm -f "${D}/etc/sysconfig/firewalld"
+	rm -rf "${D}/etc/rc.d/"
+	rm -rf "${D}/etc/sysconfig/"
 
 	# For non-gui installs we need to remove GUI bits
 	if ! use gui; then
-		rm -f "${ED}/usr/bin/firewall-applet"
-		rm -f "${ED}/usr/bin/firewall-config"
-		rm -rf "${ED}/usr/share/icons"
-		rm -rf "${ED}/usr/share/applications"
+		rm -f "${D}/usr/bin/firewall-applet"
+		rm -f "${D}/usr/bin/firewall-config"
+		rm -rf "${D}/usr/share/icons"
+		rm -rf "${D}/usr/share/applications"
 	fi
 
 	newinitd "${FILESDIR}"/firewalld.init firewalld

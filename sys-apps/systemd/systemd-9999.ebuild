@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.162 2015/04/11 14:05:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.163 2015/04/13 06:53:14 mgorny Exp $
 
 EAPI=5
 
@@ -98,7 +98,7 @@ DEPEND="${COMMON_DEPEND}
 	ia64? ( >=sys-kernel/linux-headers-3.9 )
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )
-	gnuefi? ( sys-boot/gnu-efi )
+	gnuefi? ( >=sys-boot/gnu-efi-3.0.2 )
 	python? ( dev-python/lxml[${PYTHON_USEDEP}] )
 	terminal? ( media-fonts/unifont[utils(+)] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
@@ -252,8 +252,6 @@ multilib_src_configure() {
 
 		# TODO: we may need to restrict this to gcc
 		EFI_CC="$(tc-getCC)"
-		--with-efi-libdir="${EPREFIX}/usr/lib"
-		--with-efi-ldsdir="${EPREFIX}/usr/lib"
 
 		# dbus paths
 		--with-dbuspolicydir="${EPREFIX}/etc/dbus-1/system.d"
