@@ -1,0 +1,246 @@
+From 5cde5bf37339cdeb0bd0a33d39477382eafebede Mon Sep 17 00:00:00 2001
+From: "Neal H. Walfield" <neal@g10code.com>
+Date: Mon, 13 Apr 2015 12:02:40 +0200
+Subject: [PATCH 1/1] dirmngr: If LDAP is not enable, don't build the LDAP
+ bits.
+
+* dirmngr/Makefile.am (dirmngr_SOURCES): Only include
+ks-engine-ldap.c, ldap-parse-uri.c and ldap-parse-uri.h if USE_LDAP
+is TRUE.
+(module_tests): Only add t-ldap-parse-uri if USE_LDAP is TRUE.
+* dirmngr/ks-action.c: Only include "ldap-parse-uri.h" if USE_LDAP is
+TRUE.
+(ks_action_help): Don't invoke LDAP functionality if USE_LDAP is not
+TRUE.
+(ks_action_search): Likewise.
+(ks_action_get): Likewise.
+(ks_action_put): Likewise.
+* dirmngr/server.c: Only include "ldap-parse-uri.h" if USE_LDAP is
+TRUE.
+(cmd_keyserver): Don't invoke LDAP functionality if USE_LDAP is not
+TRUE.
+
+--
+Signed-off-by: Neal H. Walfield <neal@g10code.com>
+GnuPG-bug-id: 1949
+---
+ dirmngr/Makefile.am | 14 ++++++----
+ dirmngr/ks-action.c | 76 ++++++++++++++++++++++++++++++++++++++---------------
+ dirmngr/server.c    | 10 +++++--
+ 3 files changed, 72 insertions(+), 28 deletions(-)
+
+diff --git a/dirmngr/Makefile.am b/dirmngr/Makefile.am
+index a8b1c52..c5713a7 100644
+--- a/dirmngr/Makefile.am
++++ b/dirmngr/Makefile.am
+@@ -62,13 +62,12 @@ dirmngr_SOURCES = dirmngr.c dirmngr.h server.c crlcache.c crlfetch.c	\
+ 	cdb.h cdblib.c misc.c dirmngr-err.h  \
+ 	ocsp.c ocsp.h validate.c validate.h  \
+ 	ks-action.c ks-action.h ks-engine.h \
+-        ks-engine-hkp.c ks-engine-http.c ks-engine-finger.c ks-engine-kdns.c \
+-	ks-engine-ldap.c \
+-	ldap-parse-uri.c ldap-parse-uri.h
++	ks-engine-hkp.c ks-engine-http.c ks-engine-finger.c ks-engine-kdns.c
+ 
+ if USE_LDAP
+ dirmngr_SOURCES += ldapserver.h ldapserver.c ldap.c w32-ldap-help.h \
+-                   ldap-wrapper.h $(ldap_url) $(extraldap_src)
++                   ldap-wrapper.h ldap-parse-uri.c ldap-parse-uri.h \
++                   ks-engine-ldap.c $(ldap_url) $(extraldap_src)
+ ldaplibs = $(LDAPLIBS)
+ else
+ ldaplibs =
+@@ -114,7 +113,12 @@ t_common_ldadd = $(libcommontls) $(libcommon) no-libgcrypt.o \
+                  $(NTBTLS_LIBS) $(LIBGNUTLS_LIBS) \
+                  $(DNSLIBS) $(LIBINTL) $(LIBICONV)
+ 
+-module_tests = t-ldap-parse-uri
++module_tests =
++
++if USE_LDAP
++module_tests += t-ldap-parse-uri
++endif
++
+ t_ldap_parse_uri_SOURCES = \
+ 	t-ldap-parse-uri.c ldap-parse-uri.c ldap-parse-uri.h \
+         $(ldap_url) $(t_common_src)
+diff --git a/dirmngr/ks-action.c b/dirmngr/ks-action.c
+index c76aaaa..dd4516a 100644
+--- a/dirmngr/ks-action.c
++++ b/dirmngr/ks-action.c
+@@ -30,7 +30,9 @@
+ #include "misc.h"
+ #include "ks-engine.h"
+ #include "ks-action.h"
+-#include "ldap-parse-uri.h"
++#if USE_LDAP
++# include "ldap-parse-uri.h"
++#endif
+ 
+ /* Called by the engine's help functions to print the actual help.  */
+ gpg_error_t
+@@ -73,10 +75,14 @@ ks_action_help (ctrl_t ctrl, const char *url)
+     }
+   else
+     {
++#if USE_LDAP
+       if (ldap_uri_p (url))
+ 	err = ldap_parse_uri (&parsed_uri, url);
+       else
+-	err = http_parse_uri (&parsed_uri, url, 1);
++#endif
++	{
++	  err = http_parse_uri (&parsed_uri, url, 1);
++	}
+ 
+       if (err)
+         return err;
+@@ -90,8 +96,10 @@ ks_action_help (ctrl_t ctrl, const char *url)
+     err = ks_finger_help (ctrl, parsed_uri);
+   if (!err)
+     err = ks_kdns_help (ctrl, parsed_uri);
++#if USE_LDAP
+   if (!err)
+     err = ks_ldap_help (ctrl, parsed_uri);
++#endif
+ 
+   if (!parsed_uri)
+     ks_print_help (ctrl,
+@@ -151,16 +159,23 @@ ks_action_search (ctrl_t ctrl, uri_item_t keyservers,
+   for (uri = keyservers; !err && uri; uri = uri->next)
+     {
+       int is_http = uri->parsed_uri->is_http;
+-      int is_ldap = (strcmp (uri->parsed_uri->scheme, "ldap") == 0
+-		     || strcmp (uri->parsed_uri->scheme, "ldaps") == 0
+-		     || strcmp (uri->parsed_uri->scheme, "ldapi") == 0);
++      int is_ldap = 0;
++#if USE_LDAP
++      is_ldap = (strcmp (uri->parsed_uri->scheme, "ldap") == 0
++		 || strcmp (uri->parsed_uri->scheme, "ldaps") == 0
++		 || strcmp (uri->parsed_uri->scheme, "ldapi") == 0);
++#endif
+       if (is_http || is_ldap)
+         {
+           any_server = 1;
+-	  if (is_http)
+-	    err = ks_hkp_search (ctrl, uri->parsed_uri, patterns->d, &infp);
+-	  else if (is_ldap)
++#if USE_LDAP
++	  if (is_ldap)
+ 	    err = ks_ldap_search (ctrl, uri->parsed_uri, patterns->d, &infp);
++	  else
++#endif
++	    {
++	      err = ks_hkp_search (ctrl, uri->parsed_uri, patterns->d, &infp);
++	    }
+ 
+           if (!err)
+             {
+@@ -203,18 +218,27 @@ ks_action_get (ctrl_t ctrl, uri_item_t keyservers,
+   for (uri = keyservers; !err && uri; uri = uri->next)
+     {
+       int is_http = uri->parsed_uri->is_http;
+-      int is_ldap = (strcmp (uri->parsed_uri->scheme, "ldap") == 0
+-		     || strcmp (uri->parsed_uri->scheme, "ldaps") == 0
+-		     || strcmp (uri->parsed_uri->scheme, "ldapi") == 0);
++      int is_ldap = 0;
++
++#if USE_LDAP
++      is_ldap = (strcmp (uri->parsed_uri->scheme, "ldap") == 0
++		 || strcmp (uri->parsed_uri->scheme, "ldaps") == 0
++		 || strcmp (uri->parsed_uri->scheme, "ldapi") == 0);
++#endif
++
+       if (is_http || is_ldap)
+         {
+           any_server = 1;
+           for (sl = patterns; !err && sl; sl = sl->next)
+             {
+-	      if (is_http)
+-		err = ks_hkp_get (ctrl, uri->parsed_uri, sl->d, &infp);
+-	      else
++#if USE_LDAP
++	      if (is_ldap)
+ 		err = ks_ldap_get (ctrl, uri->parsed_uri, sl->d, &infp);
++	      else
++#endif
++		{
++	          err = ks_hkp_get (ctrl, uri->parsed_uri, sl->d, &infp);
++	        }
+ 
+               if (err)
+                 {
+@@ -322,22 +346,32 @@ ks_action_put (ctrl_t ctrl, uri_item_t keyservers,
+   int any_server = 0;
+   uri_item_t uri;
+ 
++  (void) info;
++  (void) infolen;
++
+   for (uri = keyservers; !err && uri; uri = uri->next)
+     {
+       int is_http = uri->parsed_uri->is_http;
+-      int is_ldap = (strcmp (uri->parsed_uri->scheme, "ldap") == 0
+-		     || strcmp (uri->parsed_uri->scheme, "ldaps") == 0
+-		     || strcmp (uri->parsed_uri->scheme, "ldapi") == 0);
++      int is_ldap = 0;
++
++#if USE_LDAP
++      is_ldap = (strcmp (uri->parsed_uri->scheme, "ldap") == 0
++		|| strcmp (uri->parsed_uri->scheme, "ldaps") == 0
++		|| strcmp (uri->parsed_uri->scheme, "ldapi") == 0);
++#endif
+ 
+       if (is_http || is_ldap)
+         {
+           any_server = 1;
+-	  if (is_http)
+-	    err = ks_hkp_put (ctrl, uri->parsed_uri, data, datalen);
+-	  else
++#if USE_LDAP
++	  if (is_ldap)
+ 	    err = ks_ldap_put (ctrl, uri->parsed_uri, data, datalen,
+ 			       info, infolen);
+-
++	  else
++#endif
++	    {
++	      err = ks_hkp_put (ctrl, uri->parsed_uri, data, datalen);
++	    }
+           if (err)
+             {
+               first_err = err;
+diff --git a/dirmngr/server.c b/dirmngr/server.c
+index 506b137..3e6d99d 100644
+--- a/dirmngr/server.c
++++ b/dirmngr/server.c
+@@ -48,7 +48,9 @@
+ #endif
+ #include "ks-action.h"
+ #include "ks-engine.h"  /* (ks_hkp_print_hosttable) */
+-#include "ldap-parse-uri.h"
++#if USE_LDAP
++# include "ldap-parse-uri.h"
++#endif
+ 
+ /* To avoid DoS attacks we limit the size of a certificate to
+    something reasonable. */
+@@ -1530,10 +1532,14 @@ cmd_keyserver (assuan_context_t ctx, char *line)
+       item->parsed_uri = NULL;
+       strcpy (item->uri, line);
+ 
++#if USE_LDAP
+       if (ldap_uri_p (item->uri))
+ 	err = ldap_parse_uri (&item->parsed_uri, line);
+       else
+-	err = http_parse_uri (&item->parsed_uri, line, 1);
++#endif
++	{
++	  err = http_parse_uri (&item->parsed_uri, line, 1);
++	}
+       if (err)
+         {
+           xfree (item);
+-- 
+2.1.4
+

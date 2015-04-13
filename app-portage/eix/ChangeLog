@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.489 2015/03/16 16:35:23 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.490 2015/04/13 16:54:24 axs Exp $
+
+*eix-0.30.8 (13 Apr 2015)
+
+  13 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +eix-0.30.8.ebuild:
+  version bump; minor fixes, and treatment of /etc/portage/package.* has become
+  more compatible to portage (concerning sorting); also, users of eix-remote
+  will need to upgrade to avoid strange errors and incomplete data from zugaina.
 
 *eix-0.30.7 (16 Mar 2015)
 

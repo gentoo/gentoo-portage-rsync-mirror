@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.3.ebuild,v 1.2 2015/04/12 14:50:03 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.3.ebuild,v 1.3 2015/04/13 16:53:46 k_f Exp $
 
 EAPI="5"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit autotools eutils flag-o-matic toolchain-funcs
 
-DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
+DESCRIPTION="The GNU Privacy Guard, a GPL OpenPGP implementation"
 HOMEPAGE="http://www.gnupg.org/"
 MY_P="${P/_/-}"
 SRC_URI="mirror://gnupg/gnupg/${MY_P}.tar.bz2"
@@ -61,7 +61,9 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.17-gpgsm-gencert.patch"
 	epatch "${FILESDIR}/${P}-dirmngr-Fix-segfault-in-ldap-engine.patch"
+	epatch "${FILESDIR}/${P}-dirmngr-no-ldap.patch"
 	epatch_user
+	eautoreconf
 }
 
 src_configure() {
