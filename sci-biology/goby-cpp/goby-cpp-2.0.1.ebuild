@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/goby-cpp/goby-cpp-2.0.1.ebuild,v 1.1 2012/07/19 10:46:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/goby-cpp/goby-cpp-2.0.1.ebuild,v 1.2 2015/04/13 08:26:36 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=yes
 
@@ -24,9 +24,19 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PV}/cpp"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-underlinking.patch
+)
+
 src_prepare() {
 	sed \
 		-e '/BUILD_TIMESTAMP/s:\(goby/timestamp.h\):$(top_srcdir)/src/\1:g' \
 		-i src/Makefile.am || die
+
+	pushd src/goby > /dev/null || die
+	cp "${FILESDIR}"/*.proto . || die
+	protoc --cpp_out=. *.proto || die
+	popd > /dev/null || die
+
 	autotools-utils_src_prepare
 }

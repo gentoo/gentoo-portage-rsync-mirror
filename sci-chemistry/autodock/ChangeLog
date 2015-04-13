@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/autodock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/ChangeLog,v 1.10 2015/03/13 11:04:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/ChangeLog,v 1.11 2015/04/13 08:02:47 jlec Exp $
+
+  13 Apr 2015; Justin Lecher <jlec@gentoo.org> -autodock-4.2.3-r1.ebuild:
+  Drop old
 
 *autodock-4.2.6 (13 Mar 2015)
 

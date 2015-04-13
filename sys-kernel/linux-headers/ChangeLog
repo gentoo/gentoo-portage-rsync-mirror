@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.434 2015/04/01 08:33:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.435 2015/04/13 08:22:51 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.18.ebuild:
+  Stable for alpha, wrt bug #541048
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.18.ebuild:
   Stable for sparc, wrt bug #541048

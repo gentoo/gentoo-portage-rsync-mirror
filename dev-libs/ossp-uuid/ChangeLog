@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ossp-uuid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.54 2015/04/01 08:26:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.55 2015/04/13 08:20:09 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ossp-uuid-1.6.2-r4.ebuild:
+  Stable for alpha, wrt bug #536704
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ossp-uuid-1.6.2-r4.ebuild:
   Stable for sparc, wrt bug #536704

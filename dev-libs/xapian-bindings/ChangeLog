@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.96 2015/04/08 17:51:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.97 2015/04/13 08:19:31 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> xapian-bindings-1.2.19.ebuild:
+  Stable for alpha, wrt bug #531758
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> xapian-bindings-1.2.17.ebuild,
   xapian-bindings-1.2.18.ebuild:
