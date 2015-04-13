@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.26 2015/04/04 10:45:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.27 2015/04/13 11:53:59 mrueg Exp $
+
+*bones-3.8.3 (13 Apr 2015)
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +bones-3.8.3.ebuild:
+  Version bump.
 
   04 Apr 2015; Hans de Graaff <graaff@gentoo.org> bones-3.8.1-r1.ebuild:
   Add ruby22.
