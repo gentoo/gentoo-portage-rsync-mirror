@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.519 2015/03/23 11:19:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.520 2015/04/13 12:34:35 chainsaw Exp $
+
+*asterisk-13.3.2 (13 Apr 2015)
+*asterisk-12.8.2 (13 Apr 2015)
+*asterisk-11.17.1 (13 Apr 2015)
+
+  13 Apr 2015; Tony Vroon <chainsaw@gentoo.org> -asterisk-11.16.0.ebuild,
+  +asterisk-11.17.1.ebuild, -asterisk-12.8.1.ebuild, +asterisk-12.8.2.ebuild,
+  -asterisk-13.1.1.ebuild, -asterisk-13.2.0.ebuild, +asterisk-13.3.2.ebuild:
+  Upgrades on branches 11, 12 & 13 to address a null-byte exploit in TLS
+  certificate CN field verification (CVE-2015-3008 / AST-2015-003). Removed all
+  vulnerable non-stable ebuilds. For security bug #546040 by Agostino "ago"
+  Sarubbo.
 
 *asterisk-13.2.0 (23 Mar 2015)
 *asterisk-11.16.0 (23 Mar 2015)
