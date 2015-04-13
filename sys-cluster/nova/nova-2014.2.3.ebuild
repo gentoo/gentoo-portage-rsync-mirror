@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.2.2-r1.ebuild,v 1.2 2015/03/24 04:20:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2014.2.3.ebuild,v 1.1 2015/04/13 03:31:07 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -100,7 +100,6 @@ RDEPEND="
 		   app-emulation/xen-tools )"
 
 PATCHES=(
-	"${FILESDIR}/CVE-2015-0259-2014.2.2.patch"
 )
 
 pkg_setup() {
