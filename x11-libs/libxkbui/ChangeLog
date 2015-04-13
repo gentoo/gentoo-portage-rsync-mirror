@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxkbui
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.41 2012/08/26 19:05:35 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbui/ChangeLog,v 1.42 2015/04/13 00:05:25 mrueg Exp $
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -libxkbui-1.0.2.ebuild:
+  Remove old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libxkbui-1.0.2-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -155,4 +158,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libxkbui-0.99.0.ebuild:
   Initial commit for modular X.
-

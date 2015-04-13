@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1530 2015/04/11 23:26:49 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1531 2015/04/13 00:28:19 mpagano Exp $
+
+*gentoo-sources-4.0.0 (13 Apr 2015)
+
+  13 Apr 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-4.0.0.ebuild:
+  Linux patch 4.0.0. Add patch to support namespace user.pax.* on tmpfs, bug
+  #470644. Patch to enable link security restrictions by default. Patch to
+  disable Windows 8 compatibility for some Lenovo ThinkPads. Patch to ensure
+  that /dev/root doesn't appear in /proc/mounts when bootint without an
+  initramfs. Path to not not lock when UMH is waiting on current thread spawned
+  by linuxrc. (bug #481344) fbcondecor bootsplash patch. Add Gentoo Linux
+  support config settings and defaults. Kernel patch that enables gcc < v4.9
+  optimizations for additional CPUs. Kernel patch enables gcc >= v4.9
+  optimizations for additional CPUs. Update the distro kernel patch to add an
+  option to the Gentoo menu that enables CGROUPS for cgroup, IPC_NS for
+  ipc-sandbox, and NET_NS for network-sandbox. Update gcc >= 4.9 optimization
+  patch. See bug #544028.
 
 *gentoo-sources-3.12.40 (11 Apr 2015)
 

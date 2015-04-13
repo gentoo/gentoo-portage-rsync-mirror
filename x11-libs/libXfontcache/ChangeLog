@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfontcache
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfontcache/ChangeLog,v 1.57 2012/08/26 17:46:11 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfontcache/ChangeLog,v 1.58 2015/04/13 00:14:54 mrueg Exp $
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -libXfontcache-1.0.5.ebuild:
+  Remove old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> libXfontcache-1.0.5-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -225,4 +228,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +libXfontcache-0.99.0.ebuild:
   Initial commit for modular X.
-

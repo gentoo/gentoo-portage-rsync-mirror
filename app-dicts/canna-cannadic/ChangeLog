@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-cannadic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.27 2009/08/23 17:21:51 flameeyes Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.28 2015/04/13 00:17:38 mrueg Exp $
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -canna-cannadic-0.95a.ebuild,
+  -canna-cannadic-0.95b.ebuild, -files/01cannadic.dics.dir:
+  Remove old.
 
   23 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   canna-cannadic-0.95c.ebuild:
@@ -111,4 +115,3 @@
   18 May 2003; <masatomo@gentoo.org> canna-cannadic-0.94h.ebuild,
   files/01cannadic.dics.dir:
   Initial import. #21060 Thanks to Sadayuki Kobayashi <desperado@s17.xrea.com>
-

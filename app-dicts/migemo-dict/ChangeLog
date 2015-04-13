@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/migemo-dict
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.23 2010/09/27 09:20:53 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/migemo-dict/ChangeLog,v 1.24 2015/04/13 00:22:04 mrueg Exp $
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -migemo-dict-200309.ebuild:
+  Remove old.
 
   27 Sep 2010; Michael Weber <xmw@gentoo.org> migemo-dict-200812.ebuild:
   Added ~arm keyword
@@ -73,4 +76,3 @@
   01 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> migemo-dict-200309.ebuild:
   Initial import.  Ebuild and dictionary file submitted by Hattya
   <hattya@inter7.jp> in Bug #30003.
-

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/tslib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.34 2015/03/31 20:23:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.35 2015/04/13 00:04:16 mrueg Exp $
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -tslib-1.0-r1.ebuild,
+  -tslib-1.0-r2.ebuild:
+  Remove old.
 
   31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> tslib-1.0-r3.ebuild:
   stable for fringe archs to support libsdl stablereq
