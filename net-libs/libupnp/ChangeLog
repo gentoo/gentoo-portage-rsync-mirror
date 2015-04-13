@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.54 2015/04/08 13:36:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.55 2015/04/13 08:31:56 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libupnp-1.6.18-r1.ebuild:
+  Stable for alpha, wrt bug #545206
 
   08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libupnp-1.6.18-r1.ebuild:
   Stable for amd64, wrt bug #545206

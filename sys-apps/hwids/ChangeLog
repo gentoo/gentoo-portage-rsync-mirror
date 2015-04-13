@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.159 2015/04/12 07:28:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.160 2015/04/13 08:38:52 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> hwids-20150129.ebuild:
+  Stable for alpha, wrt bug #546184
 
   12 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> hwids-20150129.ebuild:
   amd64 stable wrt bug #546184

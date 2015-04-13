@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yajl-ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.38 2015/03/26 17:14:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.39 2015/04/13 08:53:14 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> yajl-ruby-1.1.0-r1.ebuild:
+  Stable for alpha, wrt bug #542574
 
   26 Mar 2015; Hans de Graaff <graaff@gentoo.org> yajl-ruby-1.2.1.ebuild:
   Add ruby22.

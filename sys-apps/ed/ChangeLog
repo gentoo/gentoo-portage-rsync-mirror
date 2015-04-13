@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.110 2015/04/08 13:36:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.111 2015/04/13 08:32:14 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ed-1.10.ebuild:
+  Stable for alpha, wrt bug #545204
 
   08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ed-1.10.ebuild:
   Stable for amd64, wrt bug #545204

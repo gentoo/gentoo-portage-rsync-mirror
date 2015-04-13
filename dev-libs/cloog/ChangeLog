@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.30 2015/03/17 05:29:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.31 2015/04/13 08:58:39 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cloog-0.18.1.ebuild:
+  Stable for alpha, wrt bug #545124
 
   17 Mar 2015; Mike Frysinger <vapier@gentoo.org> cloog-0.18.0.ebuild,
   cloog-0.18.1.ebuild, cloog-0.18.3.ebuild, cloog-9999.ebuild:

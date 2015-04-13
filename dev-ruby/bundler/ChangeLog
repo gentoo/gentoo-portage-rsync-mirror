@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.79 2015/03/20 13:29:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.80 2015/04/13 08:52:53 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.3.ebuild:
+  Stable for alpha, wrt bug #542574
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.13.ebuild:
   Add ruby22.

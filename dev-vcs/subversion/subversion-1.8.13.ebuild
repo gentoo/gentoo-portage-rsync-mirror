@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.13.ebuild,v 1.1 2015/04/09 12:58:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.13.ebuild,v 1.2 2015/04/13 08:32:27 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -46,15 +46,18 @@ RDEPEND="${COMMON_DEPEND}
 	perl? ( dev-perl/URI )"
 # Note: ctypesgen doesn't need PYTHON_USEDEP, it's used once
 DEPEND="${COMMON_DEPEND}
-	test? ( ${PYTHON_DEPS} )
 	!!<sys-apps/sandbox-1.6
 	ctypes-python? ( dev-python/ctypesgen )
 	doc? ( app-doc/doxygen )
 	gnome-keyring? ( virtual/pkgconfig )
+	http? ( virtual/pkgconfig )
 	java? ( >=virtual/jdk-1.5 )
 	kde? ( virtual/pkgconfig )
 	nls? ( sys-devel/gettext )
-	http? ( virtual/pkgconfig )"
+	perl? ( dev-lang/swig )
+	python? ( dev-lang/swig )
+	ruby? ( dev-lang/swig )
+	test? ( ${PYTHON_DEPS} )"
 
 REQUIRED_USE="
 	ctypes-python? ( ${PYTHON_REQUIRED_USE} )

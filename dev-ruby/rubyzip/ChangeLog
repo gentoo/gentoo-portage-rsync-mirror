@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.49 2015/03/27 10:15:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.50 2015/04/13 08:53:11 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> rubyzip-0.9.9-r1.ebuild:
+  Stable for alpha, wrt bug #542574
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> rubyzip-0.9.9-r1.ebuild:
   Stable for x86, wrt bug #542574

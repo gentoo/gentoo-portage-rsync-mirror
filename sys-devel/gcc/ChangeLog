@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1060 2015/04/06 18:16:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1061 2015/04/13 08:58:35 ago Exp $
+
+  13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> gcc-4.8.4.ebuild:
+  Stable for alpha, wrt bug #545124
 
   06 Apr 2015; Mike Frysinger <vapier@gentoo.org> gcc-3.3.6-r1.ebuild,
   gcc-3.4.6-r2.ebuild:
