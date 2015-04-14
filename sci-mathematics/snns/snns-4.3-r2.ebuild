@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.3-r1.ebuild,v 1.2 2015/04/10 20:09:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.3-r2.ebuild,v 1.1 2015/04/14 15:10:59 axs Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -18,14 +18,16 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE="X doc python"
 
-RDEPEND="X? ( x11-libs/libXaw3d )
-	python? ( ${PYTHON_DEPS} )"
-DEPEND=">=sys-devel/bison-1.2.2
-	X? (
+RDEPEND="X? (
+		x11-libs/libX11
 		x11-libs/libXaw3d
-		x11-proto/xproto
+		x11-libs/libXt
 	)"
+DEPEND="${RDEPEND}
+	X? ( x11-proto/xproto )
+	>=sys-devel/bison-1.2.2"
 
+RDEPEND+=" python? ( ${PYTHON_DEPS} )"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 S="${WORKDIR}/${MY_P}"
@@ -34,6 +36,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/4.3-unstrip.patch
 	epatch "${FILESDIR}"/4.3-bison-version.patch
 	epatch "${FILESDIR}"/4.2-ldflags.patch
+	epatch "${FILESDIR}"/4.3-snns-netperf.patch # bug 248322
 
 	# change all references of Xaw to Xaw3d
 	cd "${S}"/xgui/sources
@@ -41,7 +44,9 @@ src_prepare() {
 		sed -e "s:X11/Xaw/:X11/Xaw3d/:g" -i "${file}"
 	done
 
-	# clean up files that apparently are not removed by any clean rules
+	# clean up the dirty dist sources and remove files that apparently
+	# are not removed by any clean rules
+	emake clean
 	rm -Rf "${S}"/{tools,xgui}/bin \
 		"${S}"/{Makefile.def,config.h} \
 		"${S}"/configuration/config.{guess,log}
@@ -70,9 +75,6 @@ src_compile() {
 	local compileopts=( compile-kernel compile-tools )
 	use X && compileopts+=( compile-xgui )
 
-	# tarball is sometimes left dirty
-	emake clean
-
 	# parallel make sometimes fails (phosphan)
 	# so emake each phase separately (axs)
 	for tgt in "${compileopts[@]}"; do
@@ -87,12 +89,9 @@ src_compile() {
 }
 
 src_install() {
-	for file in `find tools -type f -perm +100`; do
-		dobin $file
-	done
-
-	# bug 248322
-	mv "${ED}"/usr/bin/{,snns-}netperf || die
+	pushd "${S}"/tools/sources > /dev/null || die
+	emake TOOLSBINDIR="${ED}"usr/bin install
+	popd > /dev/null || die
 
 	if use X; then
 		newbin xgui/sources/xgui snns

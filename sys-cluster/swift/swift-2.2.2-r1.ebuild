@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.2.2.ebuild,v 1.5 2015/04/13 17:47:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.2.2-r1.ebuild,v 1.1 2015/04/14 15:25:39 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -55,6 +55,7 @@ CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 ~ZFS"
 
 PATCHES=(
+"${FILESDIR}/cve-2015-1856-master-kilo.patch"
 )
 
 pkg_setup() {

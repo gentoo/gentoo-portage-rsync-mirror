@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/snns
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.27 2015/04/10 20:09:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.28 2015/04/14 15:10:59 axs Exp $
+
+*snns-4.3-r2 (14 Apr 2015)
+
+  14 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/4.3-snns-netperf.patch, +snns-4.3-r2.ebuild, -snns-4.3-r1.ebuild:
+  Reworked the solution for the netperf collision, dropped the 'find all
+  executable files' method of installing tools for 'emake install', added
+  missing deps; resolves bug 546566
 
   10 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> snns-4.3-r1.ebuild:
   added REQUIRED_USE to properly support the python-optional distutils-r1

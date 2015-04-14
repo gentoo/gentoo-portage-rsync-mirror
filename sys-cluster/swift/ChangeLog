@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/swift
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.41 2015/04/13 17:47:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.42 2015/04/14 15:25:39 prometheanfire Exp $
+
+*swift-2.2.2-r1 (14 Apr 2015)
+
+  14 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +files/cve-2015-1856-master-kilo.patch, +swift-2.2.2-r1.ebuild,
+  -swift-2.2.0.ebuild, -swift-2.2.2.ebuild:
+  fixing cve-2015-1856
 
   13 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> swift-2.2.2.ebuild:
   signing should work now

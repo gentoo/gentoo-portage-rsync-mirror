@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-2.0.1.ebuild,v 1.2 2015/03/05 09:41:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-2.0.2.ebuild,v 1.1 2015/04/14 15:19:30 alonbl Exp $
 
 EAPI=5
 inherit eutils linux-info
@@ -34,11 +34,16 @@ pkg_setup() {
 	linux-info_pkg_setup
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-autosave.patch"
+}
+
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--with-autosave="${EPREFIX}/var/lib/iptables/rules-save" \
-		--with-autosave6="${EPREFIX}/var/lib/ip6tables/rules-save"
+		--with-autosave6="${EPREFIX}/var/lib/ip6tables/rules-save" \
+		$(use_enable doc)
 }
 
 src_install() {
@@ -48,7 +53,4 @@ src_install() {
 	newinitd "${FILESDIR}"/firehol.initrd.1 firehol
 	newconfd "${FILESDIR}"/fireqos.conf.d fireqos
 	newinitd "${FILESDIR}"/fireqos.initrd fireqos
-
-	# no --disable-doc yet
-	use doc || rm -fr "${D}/usr/share/doc/${PF}"/*.pdf "${D}/usr/share/doc/${PF}/html"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-3.2.1.ebuild,v 1.2 2015/04/14 07:42:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-3.2.1.ebuild,v 1.3 2015/04/14 15:14:19 floppym Exp $
 
 EAPI=5
 
@@ -133,7 +133,7 @@ src_prepare() {
 src_configure() {
 	local mycmakeargs=(
 		-DCMAKE_USE_SYSTEM_LIBRARIES=ON
-		-DCMAKE_USE_SYSTEM_JSONCPP=$(usex !internal-jsoncpp)
+		$(cmake-utils_useno internal-jsoncpp CMAKE_USE_SYSTEM_LIBRARY_JSONCPP)
 		-DCMAKE_INSTALL_PREFIX="${EPREFIX}"/usr
 		-DCMAKE_DOC_DIR=/share/doc/${PF}
 		-DCMAKE_MAN_DIR=/share/man
