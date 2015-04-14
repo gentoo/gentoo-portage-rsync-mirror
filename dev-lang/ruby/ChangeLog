@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.704 2015/04/14 05:26:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.705 2015/04/14 05:42:58 graaff Exp $
+
+*ruby-1.9.3_p551-r1 (14 Apr 2015)
+
+  14 Apr 2015; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.3_p551-r1.ebuild:
+  New revision with backported fix for security bug 546042.
 
 *ruby-2.2.2 (14 Apr 2015)
 *ruby-2.1.6 (14 Apr 2015)
