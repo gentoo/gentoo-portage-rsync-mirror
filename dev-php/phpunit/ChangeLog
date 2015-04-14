@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpunit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.21 2015/02/25 15:41:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.22 2015/04/14 18:12:46 grknight Exp $
+
+  14 Apr 2015; Brian Evans <grknight@gentoo.org> phpunit-3.7.20.ebuild,
+  phpunit-4.3.1.ebuild:
+  Fix repoman warning wrt slot operator
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> phpunit-4.3.1.ebuild:
   Stable for x86, wrt bug #535306

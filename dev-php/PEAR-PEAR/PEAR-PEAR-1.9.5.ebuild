@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.5.ebuild,v 1.1 2015/01/16 19:42:40 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.5.ebuild,v 1.2 2015/04/14 18:03:37 grknight Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-lang/php[cli,pcre(+),xml,zlib]"
+DEPEND="dev-lang/php:*[cli,pcre(+),xml,zlib]"
 
 RDEPEND="${DEPEND}"
 

@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/glib-2.34.3:2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,a
 SLOT=0.10
 SRC_URI=http://gstreamer.freedesktop.org/src/gstreamer/gstreamer-0.10.36.tar.xz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=104a151d6a2064d56b9a719e83882baf
+_md5_=4ff3061785d4771ac1c7cecc7d1a70f7

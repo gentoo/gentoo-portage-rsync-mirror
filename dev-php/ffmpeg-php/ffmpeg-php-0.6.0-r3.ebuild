@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r3.ebuild,v 1.5 2015/01/22 17:55:56 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ffmpeg-php/ffmpeg-php-0.6.0-r3.ebuild,v 1.6 2015/04/14 18:05:58 grknight Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="virtual/ffmpeg
-		dev-lang/php[gd]"
+		dev-lang/php:*[gd]"
 RDEPEND="${DEPEND}"
 
 # The test breaks with the test movie, but it the same code works fine with
