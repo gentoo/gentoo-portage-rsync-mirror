@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.212 2015/04/04 07:37:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.213 2015/04/14 12:17:13 ago Exp $
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> puppet-3.7.3.ebuild:
+  Stable for sparc, wrt bug #536168
 
   04 Apr 2015; Hans de Graaff <graaff@gentoo.org> puppet-3.7.4.ebuild:
   Add missing test dependency on dev-ruby/mocha.
