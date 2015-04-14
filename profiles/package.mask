@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16479 2015/04/14 07:45:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16480 2015/04/14 19:25:11 monsieurp Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrice Clement <monsieurp@gentoo.org> (14 Apr 2014)
+# Upstream seems to be dead. No updates since 12 March 2007.
+# Masked for removal in 30 days. See bug 546506.
+dev-java/openjms
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (11 Apr 2015)
 # media-libs/lcms:0 has serious security issues, is unmaintained
