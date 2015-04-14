@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.02.ebuild,v 1.4 2015/04/13 08:29:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-4.02.ebuild,v 1.5 2015/04/14 11:02:20 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/linuxquota/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ldap netlink nls rpc tcpd"
 
 RDEPEND="ldap? ( >=net-nds/openldap-2.3.35 )

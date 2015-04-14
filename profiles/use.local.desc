@@ -1353,6 +1353,7 @@ dev-db/spatialite:geos - Add the sci-libs/geos library for exact topological tes
 dev-db/spatialite:proj - Add the sci-libs/proj library for reprojection features
 dev-db/spatialite:xls - Add the dev-libs/freexl library for xls import support
 dev-db/sqlite:secure-delete - Overwrite deleted information with zeros in addition to marking the space as available for reuse. This causes a performance penalty.
+dev-db/tokumx:pax_kernel - Apply patch needed for hardened kernels
 dev-db/unixODBC:minimal - Disable bundled drivers and extra libraries (most users don't need these)
 dev-db/unixODBC:odbcmanual - Administrator, Internal Structure, Programmer and User documentation
 dev-embedded/avrdude:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi

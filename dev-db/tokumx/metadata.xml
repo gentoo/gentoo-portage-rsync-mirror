@@ -10,5 +10,7 @@
 		<name>Alexys Jacob</name>
 		<description>Secondary Maintainer. CC on bugs</description>
 	</maintainer>
+	<use>
+		<flag name="pax_kernel">Apply patch needed for hardened kernels</flag>
+	</use>
 </pkgmetadata>
-
