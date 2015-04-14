@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/criu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.21 2015/04/13 02:21:24 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/ChangeLog,v 1.22 2015/04/14 10:06:22 dlan Exp $
+
+  14 Apr 2015; Yixun Lan <dlan@gentoo.org> -criu-1.5-r2.ebuild,
+  criu-1.5.1.ebuild, +files/criu-1.5.1-arm64-ptrace.patch:
+  arm64 support added & drop old
 
 *criu-1.5.1 (13 Apr 2015)
 
