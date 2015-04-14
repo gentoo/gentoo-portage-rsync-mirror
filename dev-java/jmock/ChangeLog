@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.25 2015/04/11 22:50:29 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.26 2015/04/14 18:54:51 monsieurp Exp $
+
+*jmock-2.6.1 (14 Apr 2015)
+
+  14 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +jmock-2.6.1.ebuild,
+  jmock-2.5.1.ebuild:
+  Bumped to latest version in order to mend SLOTs and compile issues. Fix bug
+  546548.
 
   11 Apr 2015; Patrice Clement <monsieurp@gentoo.org> jmock-2.5.1.ebuild:
   Adjust dev-java/hamcrest-* SLOTs.

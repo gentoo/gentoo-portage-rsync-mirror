@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1587 2015/04/14 14:08:34 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1588 2015/04/14 18:32:51 grknight Exp $
+
+  14 Apr 2015; <grknight@gentoo.org> php-lib-r1.eclass:
+  Specify :* as slot by default to silence repoman warnings
 
   14 Apr 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass:
   Consider SLOTs when checking Java dependencies. Comment out the longer error
