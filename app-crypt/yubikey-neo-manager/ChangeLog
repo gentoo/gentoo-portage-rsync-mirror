@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/yubikey-neo-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/ChangeLog,v 1.7 2014/12/26 13:26:29 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/yubikey-neo-manager/ChangeLog,v 1.8 2015/04/14 07:05:05 jlec Exp $
+
+*yubikey-neo-manager-1.2.1 (14 Apr 2015)
+
+  14 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +yubikey-neo-manager-1.2.1.ebuild, -yubikey-neo-manager-0.2.5-r1.ebuild,
+  -yubikey-neo-manager-1.0.0.ebuild, yubikey-neo-manager-1.1.0.ebuild:
+  Version Bump
 
 *yubikey-neo-manager-1.1.0 (26 Dec 2014)
 
