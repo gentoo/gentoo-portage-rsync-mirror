@@ -1,6 +1,18 @@
 # ChangeLog for sys-process/lsof
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.109 2014/12/06 16:38:45 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/ChangeLog,v 1.112 2015/04/14 22:51:33 vapier Exp $
+
+*lsof-4.88-r1 (14 Apr 2015)
+
+  14 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/lsof-4.88-linux.dnode.c.patch, +lsof-4.88-r1.ebuild:
+  Add fix from upstream.
+
+  14 Apr 2015; Mike Frysinger <vapier@gentoo.org> files/lsof-4.85-cross.patch:
+  Fix building with gcc-5 #546636.
+
+  14 Apr 2015; Mike Frysinger <vapier@gentoo.org> lsof-4.88.ebuild:
+  Fix building with POSIX /bin/sh.
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> lsof-4.87-r1.ebuild:
   Stable for ia64, wrt bug #529126

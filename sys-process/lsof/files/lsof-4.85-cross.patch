@@ -2,6 +2,10 @@ let the preprocessor work its magic rather than executing the code
 
 https://bugs.gentoo.org/432120
 
+make sure to use -P here
+
+https://bugs.gentoo.org/546636
+
 --- a/Configure
 +++ b/Configure
 @@ -2730,20 +2730,17 @@ LOCKF_OWNER4
@@ -22,7 +26,7 @@ https://bugs.gentoo.org/432120
 -return(0); }
  .LSOF_END_HERE_DOC1
 -      $LINUX_CONF_CC ${LSOF_TMPC}.c -I$LSOF_INCLUDE -o ${LSOF_TMPC}.x > /dev/null 2>&1
-+      $LINUX_CONF_CC ${LSOF_TMPC}.c -E -I$LSOF_INCLUDE 2>/dev/null | sed -n '/^XXX:/s|.*:||p' > ${LSOF_TMPC}.x
++      $LINUX_CONF_CC ${LSOF_TMPC}.c -E -P -I$LSOF_INCLUDE 2>/dev/null | sed -n '/^XXX:/s|.*:||p' > ${LSOF_TMPC}.x
 -      if test -x ${LSOF_TMPC}.x	# {
 +      if test -s ${LSOF_TMPC}.x	# {
        then
