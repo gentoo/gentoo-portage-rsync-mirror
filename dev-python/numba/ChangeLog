@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.14 2015/04/08 08:05:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.15 2015/04/14 03:14:25 patrick Exp $
+
+*numba-0.18.2 (14 Apr 2015)
+
+  14 Apr 2015; Patrick Lauer <patrick@gentoo.org> +numba-0.18.2.ebuild:
+  Bump, disable broken test phase
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> numba-0.12.1.ebuild,
   numba-0.12.2.ebuild, numba-0.13.0.ebuild:
