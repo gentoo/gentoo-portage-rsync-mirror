@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fonttools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.35 2015/04/08 08:05:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.36 2015/04/14 10:55:38 ago Exp $
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fonttools-2.4.ebuild:
+  Stable for ia64, wrt bug #535322
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> fonttools-2.3-r1.ebuild,
   fonttools-2.4.ebuild:

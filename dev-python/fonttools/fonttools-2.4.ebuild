@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.4.ebuild,v 1.5 2015/04/08 08:05:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.4.ebuild,v 1.6 2015/04/14 10:55:38 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~arm64 ~ia64 ppc ~x86"
+KEYWORDS="amd64 arm ~arm64 ia64 ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-python/numpy-1.0.2[${PYTHON_USEDEP}]"
