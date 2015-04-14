@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/ykpers
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ChangeLog,v 1.15 2014/12/26 13:23:03 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ChangeLog,v 1.16 2015/04/14 06:55:44 jlec Exp $
+
+*ykpers-1.17.1 (14 Apr 2015)
+
+  14 Apr 2015; Justin Lecher <jlec@gentoo.org> +ykpers-1.17.1.ebuild,
+  -ykpers-1.13.0.ebuild, -ykpers-1.14.0.ebuild, -ykpers-1.14.1.ebuild,
+  -ykpers-1.15.2.ebuild, -ykpers-1.16.0.ebuild, -ykpers-1.16.1.ebuild,
+  -ykpers-1.7.0.ebuild, -ykpers-1.9.0.ebuild:
+  Version Bump; drop old
 
 *ykpers-1.16.2 (26 Dec 2014)
 

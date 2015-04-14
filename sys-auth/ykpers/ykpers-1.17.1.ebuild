@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ykpers-1.16.1.ebuild,v 1.1 2014/11/20 07:31:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykpers/ykpers-1.17.1.ebuild,v 1.1 2015/04/14 06:55:44 jlec Exp $
 
 EAPI=5
 
