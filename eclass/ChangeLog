@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1586 2015/04/11 17:11:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1587 2015/04/14 14:08:34 chewi Exp $
+
+  14 Apr 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass:
+  Consider SLOTs when checking Java dependencies. Comment out the longer error
+  message for now to avoid spamming both users and ourselves because this issue
+  is currently widespread.
 
   11 Apr 2015; Michael Palimaka <kensington@gentoo.org> kde5-functions.eclass,
   kde5.eclass:
