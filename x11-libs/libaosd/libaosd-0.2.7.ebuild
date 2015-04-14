@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/libaosd-0.2.7.ebuild,v 1.11 2015/03/11 20:46:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libaosd/libaosd-0.2.7.ebuild,v 1.12 2015/04/14 13:14:52 ago Exp $
 
 EAPI=5
 inherit autotools-utils
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/atheme/${PN}/archive/0.2.7.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc ~sparc x86"
 IUSE="pango +tools xcomposite"
 
 RDEPEND="
