@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm2/ChangeLog,v 1.11 2014/10/31 00:51:04 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm2/ChangeLog,v 1.12 2015/04/14 17:56:03 grknight Exp $
+
+  14 Apr 2015; Brian Evans <grknight@gentoo.org>
+  PEAR-HTML_QuickForm2-2.0.2.ebuild:
+  Fix repoman warning wrt slot operator
 
 *PEAR-HTML_QuickForm2-2.0.2 (31 Oct 2014)
 
