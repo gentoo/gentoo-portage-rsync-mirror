@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16478 2015/04/11 20:33:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16479 2015/04/14 07:45:36 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -554,13 +554,6 @@ media-gfx/yafray
 # See bugs 452484, 485994, 512082, 519212. Removal in 30 days.
 media-video/mplayer2
 media-video/smplayer2
-
-# Alice Ferrazzi <alicef@gentoo.org> (10 Mar 2015)
-# Masked new version of pypy as experimental.
-# Not to unmask before -bin is ready.
-=virtual/pypy-2.5.0
-=dev-python/pypy-2.5.0
-=dev-python/pypy-bin-2.5.0
 
 # Ulrich Müller <ulm@gentoo.org> (9 Mar 2015)
 # Broken multilib dependencies causing blockers, bug 542728.

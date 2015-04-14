@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/yubikey-personalization-gui/yubikey-personalization-gui-3.1.16.ebuild,v 1.1 2014/10/06 07:53:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/yubikey-personalization-gui/yubikey-personalization-gui-3.1.20.ebuild,v 1.1 2015/04/14 07:34:28 jlec Exp $
 
 EAPI=5
 
-inherit eutils qt4-r2
+inherit eutils qmake-utils
 
 DESCRIPTION="GUI for personalization of Yubico's YubiKey"
 SRC_URI="http://yubico.github.io/yubikey-personalization-gui/releases/${P}.tar.gz"

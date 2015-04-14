@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9926 2015/04/12 21:36:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9927 2015/04/14 07:45:36 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Apr 2015; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Drop obsolete pypy mask
 
   12 Apr 2015; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add OSL-2.1 and UoI-NCSA licenses to the OSI-APPROVED group.

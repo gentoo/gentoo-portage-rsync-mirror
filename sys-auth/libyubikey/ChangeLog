@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/libyubikey
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libyubikey/ChangeLog,v 1.7 2014/08/19 02:32:27 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libyubikey/ChangeLog,v 1.8 2015/04/14 07:36:29 jlec Exp $
+
+*libyubikey-1.13 (14 Apr 2015)
+
+  14 Apr 2015; Justin Lecher <jlec@gentoo.org> +libyubikey-1.13.ebuild,
+  -libyubikey-1.10.ebuild, -libyubikey-1.9.ebuild, metadata.xml:
+  Version Bump; drop old
 
 *libyubikey-1.12 (19 Aug 2014)
 

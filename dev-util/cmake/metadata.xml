@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>kde</herd>
+	<use>
+		<flag name='internal-jsoncpp'>Use bundled copy of <pkg>dev-libs/jsoncpp</pkg>. Enable this in order solve the circular dependency between cmake and jsoncpp, disable afterwards.</flag>
+	</use>
 </pkgmetadata>
