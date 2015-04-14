@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install preinst prepare setup test unpack
+DEPEND=>=virtual/jdk-1.6 app-arch/unzip dev-java/cglib:3 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2
+DESCRIPTION=Transparent threading solution for non-freezing Swing applications
+EAPI=5
+HOMEPAGE=http://spin.sourceforge.net
+IUSE=elibc_FreeBSD doc source elibc_FreeBSD
+KEYWORDS=~amd64 ~x86
+LICENSE=LGPL-2.1
+RDEPEND=>=virtual/jre-1.6 dev-java/cglib:3 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/spin/spin-1.5-all.zip
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2257adeaac9408ab545ef49ae751bae6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=dd85662c2866ab25bac4d54562e93f27
