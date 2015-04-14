@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/r10k
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/ChangeLog,v 1.7 2014/02/05 02:03:28 vikraman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/ChangeLog,v 1.8 2015/04/13 23:15:21 mrueg Exp $
+
+  13 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -r10k-1.1.0.ebuild,
+  -r10k-1.1.1.ebuild, r10k-1.1.3.ebuild:
+  Remove old. Drop ruby18.
 
 *r10k-1.1.3 (05 Feb 2014)
 *r10k-1.1.1-r1 (05 Feb 2014)

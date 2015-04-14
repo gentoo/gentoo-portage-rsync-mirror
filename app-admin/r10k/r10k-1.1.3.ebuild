@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.3.ebuild,v 1.1 2014/02/05 02:03:28 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.3.ebuild,v 1.2 2015/04/13 23:15:21 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC=""
