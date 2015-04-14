@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.703 2015/03/31 18:33:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.704 2015/04/14 05:26:56 graaff Exp $
+
+*ruby-2.2.2 (14 Apr 2015)
+*ruby-2.1.6 (14 Apr 2015)
+*ruby-2.0.0_p645 (14 Apr 2015)
+
+  14 Apr 2015; Hans de Graaff <graaff@gentoo.org> +ruby-2.0.0_p645.ebuild,
+  +ruby-2.1.6.ebuild, +ruby-2.2.2.ebuild:
+  Version bumps for security bug 546042.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> ruby-1.9.3_p551.ebuild,
   ruby-2.0.0_p598.ebuild, ruby-2.0.0_p643.ebuild, ruby-2.1.5.ebuild,
