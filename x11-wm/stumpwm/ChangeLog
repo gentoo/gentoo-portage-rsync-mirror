@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/stumpwm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.13 2015/01/06 13:42:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/stumpwm/ChangeLog,v 1.14 2015/04/14 20:22:47 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -stumpwm-0.9.7.ebuild:
+  Remove old.
 
   06 Jan 2015; Chema Alonso <nimiux@gentoo.org> stumpwm-0.9.9.ebuild,
   metadata.xml:

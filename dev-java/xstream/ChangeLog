@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xstream
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.31 2014/10/19 04:08:35 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.32 2015/04/14 20:13:59 monsieurp Exp $
+
+*xstream-1.3.1-r2 (14 Apr 2015)
+
+  14 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +xstream-1.3.1-r2.ebuild:
+  SLOT and EAPI bump wrt bug 546288. Drop ppc and ppc64 keywords.
 
   19 Oct 2014; Patrick Lauer <patrick@gentoo.org> xstream-1.3.1-r1.ebuild:
   Move test dependencies to DEPEND only

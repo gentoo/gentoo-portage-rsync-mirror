@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/latencytop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/ChangeLog,v 1.11 2012/11/17 08:11:54 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/latencytop/ChangeLog,v 1.12 2015/04/14 20:29:38 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -latencytop-0.4.ebuild:
+  Remove old.
 
   17 Nov 2012; Mike Frysinger <vapier@gentoo.org>
   files/latencytop-0.5-03-clean-up-build-system.patch:
