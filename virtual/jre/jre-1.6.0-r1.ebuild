@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/jre-1.6.0-r1.ebuild,v 1.2 2014/05/30 11:20:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/jre-1.6.0-r1.ebuild,v 1.3 2015/04/14 21:35:32 chewi Exp $
 
 EAPI="5"
 
@@ -11,6 +11,5 @@ KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-fre
 RDEPEND="|| (
 		=virtual/jdk-1.6.0*
 		=dev-java/ibm-jre-bin-1.6.0*
-		=dev-java/diablo-jre-bin-1.6.0*
 	)"
 DEPEND=""

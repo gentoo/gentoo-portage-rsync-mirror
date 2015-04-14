@@ -1,6 +1,11 @@
 # ChangeLog for java-virtuals/jdk-with-com-sun
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.22 2014/08/02 18:49:02 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.23 2015/04/14 21:40:53 chewi Exp $
+
+  14 Apr 2015; James Le Cuirot <chewi@gentoo.org>
+  jdk-with-com-sun-20111111-r2.ebuild:
+  diablo-jdk is about to be last-rited. Also remove ye olde apple-jdk-bin
+  versions.
 
   02 Aug 2014; Ralph Sennhauser <sera@gentoo.org>
   -jdk-with-com-sun-20111111-r1.ebuild:

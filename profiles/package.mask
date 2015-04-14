@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16481 2015/04/14 20:00:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16482 2015/04/14 21:55:35 chewi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# James Le Cuirot <chewi@gentoo.org> (14 Apr 2015)
+# Not updated beyond Java 6, no longer supported upstream, full of
+# holes, and probably doesn't work. This is the last VM currently
+# available to FreeBSD until we try icedtea but BSD team are cool with
+# this. Removal in 30 days.
+dev-java/diablo-jdk
+dev-java/diablo-jre-bin
 
 # Patrice Clement <monsieurp@gentoo.org> (14 Apr 2014)
 # Upstream seems to be dead. No updates since 12 March 2007.

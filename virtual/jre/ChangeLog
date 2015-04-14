@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.50 2015/02/11 08:51:06 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.51 2015/04/14 21:35:32 chewi Exp $
+
+  14 Apr 2015; James Le Cuirot <chewi@gentoo.org> jre-1.6.0-r1.ebuild:
+  diablo-jre-bin is about to be last-rited.
 
   11 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> -jre-1.5.0-r2.ebuild:
   removed slot 1.5 per bug #292001
