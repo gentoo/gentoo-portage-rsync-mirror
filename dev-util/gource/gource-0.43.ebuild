@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.43.ebuild,v 1.1 2014/11/26 02:14:54 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.43.ebuild,v 1.2 2015/04/14 09:32:38 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/acaudwell/Gource/releases/download/${P}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="

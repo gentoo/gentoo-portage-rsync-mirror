@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.520 2015/04/13 12:34:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.521 2015/04/14 09:33:14 ago Exp $
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> asterisk-11.17.1.ebuild:
+  Stable for amd64, wrt bug #546040
 
 *asterisk-13.3.2 (13 Apr 2015)
 *asterisk-12.8.2 (13 Apr 2015)

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.6.0.ebuild,v 1.1 2015/03/16 06:09:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/pv-1.6.0.ebuild,v 1.2 2015/04/14 09:32:54 ago Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.ivarch.com/programs/sources/${P}.tar.bz2"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc64-solaris ~x86-solaris"
 IUSE="debug nls"
 
 PV_LINGUAS=( de fr pl pt )
