@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.187 2015/04/13 09:07:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.188 2015/04/14 12:38:24 ago Exp $
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> kmod-19.ebuild:
+  Stable for ia64, wrt bug #530424
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> kmod-19.ebuild:
   Stable for alpha, wrt bug #530424

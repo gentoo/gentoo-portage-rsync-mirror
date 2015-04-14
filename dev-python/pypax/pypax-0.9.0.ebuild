@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.9.0.ebuild,v 1.7 2015/04/13 09:26:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/pypax-0.9.0.ebuild,v 1.8 2015/04/14 12:50:51 ago Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/elfix-${PV}/scripts"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sparc x86"
 IUSE="+ptpax +xtpax"
 
 REQUIRED_USE="|| ( ptpax xtpax )"

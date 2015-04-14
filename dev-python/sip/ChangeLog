@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.306 2015/04/08 08:04:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.307 2015/04/14 12:36:29 ago Exp $
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sip-4.16.2.ebuild:
+  Stable for ia64, wrt bug #523322
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> sip-4.15.3.ebuild:
   Drop old Python implementations

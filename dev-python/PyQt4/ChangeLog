@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.284 2015/04/08 08:05:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.285 2015/04/14 12:36:33 ago Exp $
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.11.1.ebuild:
+  Stable for ia64, wrt bug #523322
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> PyQt4-4.10.3-r2.ebuild:
   Drop old Python implementations

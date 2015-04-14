@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.35 2015/04/13 09:44:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.36 2015/04/14 12:32:10 ago Exp $
+
+  14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ucspi-ssl-0.94.ebuild:
+  Stable for ia64, wrt bug #516868
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ucspi-ssl-0.94.ebuild:
   Stable for alpha, wrt bug #516868
