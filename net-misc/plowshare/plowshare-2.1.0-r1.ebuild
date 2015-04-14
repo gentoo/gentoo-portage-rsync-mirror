@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-2.1.0.ebuild,v 1.1 2015/04/13 21:50:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-2.1.0-r1.ebuild,v 1.1 2015/04/14 11:55:28 voyageur Exp $
 
 EAPI=5
 
-inherit bash-completion-r1
+inherit bash-completion-r1 eutils
 
 DESCRIPTION="Command-line downloader and uploader for file-sharing websites"
 HOMEPAGE="https://github.com/mcrapet/plowshare"
@@ -31,6 +31,8 @@ DEPEND=""
 # javascript dep should be any javascript interpreter using /usr/bin/js
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix_git_invocation.patch
+
 	# Fix doc install path
 	sed -i -e "/^DOCDIR/s|plowshare4|${P}|" Makefile || die "sed failed"
 
