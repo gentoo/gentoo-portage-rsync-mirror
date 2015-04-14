@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycadf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycadf/ChangeLog,v 1.4 2014/11/10 06:49:00 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycadf/ChangeLog,v 1.5 2015/04/14 16:06:18 prometheanfire Exp $
+
+*pycadf-0.8.0 (14 Apr 2015)
+
+  14 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> +pycadf-0.8.0.ebuild:
+  updating as a dep for other updates
 
 *pycadf-0.6.0 (10 Nov 2014)
 

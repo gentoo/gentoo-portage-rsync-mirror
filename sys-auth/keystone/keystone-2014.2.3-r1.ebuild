@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.3.ebuild,v 1.3 2015/04/13 03:17:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.3-r1.ebuild,v 1.1 2015/04/14 16:08:20 prometheanfire Exp $
 
 EAPI=5
 
@@ -107,9 +107,7 @@ RDEPEND="
 	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
 	<dev-python/iso8601-0.1.11[${PYTHON_USEDEP}]
 	>=dev-python/python-keystoneclient-0.10.0[${PYTHON_USEDEP}]
-	<dev-python/python-keystoneclient-1.1.1[${PYTHON_USEDEP}]
 	>=dev-python/keystonemiddleware-1.0.0[${PYTHON_USEDEP}]
-	<dev-python/keystonemiddleware-1.4.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.4.0[${PYTHON_USEDEP}]
 	<dev-python/oslo-config-1.6.1[${PYTHON_USEDEP}]
 	>=dev-python/oslo-messaging-1.4.0[${PYTHON_USEDEP}]
