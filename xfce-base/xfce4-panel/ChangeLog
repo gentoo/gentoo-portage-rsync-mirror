@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.255 2015/03/08 15:06:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.256 2015/04/14 22:22:08 mgorny Exp $
+
+  14 Apr 2015; Michał Górny <mgorny@gentoo.org> xfce4-panel-4.12.0.ebuild:
+  Add a blocker against broken timezone-data versions, fixes deadlock bug
+  #538484
 
 *xfce4-panel-4.12.0 (08 Mar 2015)
 
