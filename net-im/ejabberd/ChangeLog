@@ -1,6 +1,13 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.128 2015/04/12 05:27:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.129 2015/04/14 03:39:56 radhermit Exp $
+
+*ejabberd-15.03-r1 (14 Apr 2015)
+
+  14 Apr 2015; Tim Harder <radhermit@gentoo.org> -ejabberd-15.03.ebuild,
+  +ejabberd-15.03-r1.ebuild:
+  Sync missing systemd setup, run configure steps in the correct order, make
+  config file conversion directions more specific, and add nls use flag.
 
 *ejabberd-15.03 (12 Apr 2015)
 

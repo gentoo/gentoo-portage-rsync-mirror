@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-15.03.ebuild,v 1.1 2015/04/12 05:27:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-15.03-r1.ebuild,v 1.1 2015/04/14 03:39:56 radhermit Exp $
 
 EAPI=5
 
-inherit eutils multilib pam ssl-cert
+inherit eutils multilib pam ssl-cert systemd
 
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://www.ejabberd.im/ https://github.com/processone/ejabberd/"
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
 EJABBERD_MODULES="mod_bosh mod_irc mod_muc mod_proxy65 mod_pubsub"
-IUSE="captcha debug elixir ldap mysql odbc pam postgres riak redis tools zlib ${EJABBERD_MODULES}"
+IUSE="captcha debug elixir ldap mysql nls odbc pam postgres riak redis tools zlib ${EJABBERD_MODULES}"
 
 DEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/expat-1.95
@@ -55,13 +55,15 @@ src_prepare() {
 		-e "s|\(SPOOL_DIR=\){{localstatedir}}.*|\1${JABBER_SPOOL}|" \
 			-i ejabberdctl.template || die
 
-	# fix up the ssl cert paths in ejabberd.yml to use our cert
+	# fix up the ssl cert paths in ejabberd.yml to use our cert and
+	# also use the correct pam service name
 	sed -e "s:/path/to/ssl.pem:/etc/ssl/ejabberd/server.pem:g" \
+		-e "s:pamservicename:xmpp:" \
 		-i ejabberd.yml.example || die
 
 	# correct path to captcha script in default ejabberd.yml
 	sed -e 's|\({captcha_cmd,[[:space:]]*"\).\+"}|\1/usr/'$(get_libdir)'/erlang/lib/'${P}'/priv/bin/captcha.sh"}|' \
-			-i ejabberd.yml.example || die
+		-i ejabberd.yml.example || die
 
 	# disable mod_irc in ejabberd.yml
 	if ! use mod_irc; then
@@ -73,9 +75,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# run configure scripts for all prefetched deps
-	./rebar get-deps
-
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)/erlang/lib/" \
@@ -88,11 +87,14 @@ src_configure() {
 		$(use_enable riak) \
 		$(use_enable redis) \
 		$(use_enable mod_bosh json) \
+		$(use_enable nls iconv) \
 		$(use_enable elixir) \
-		$(use_enable mod_irc iconv) \
 		$(use_enable debug) \
 		--enable-lager \
 		--enable-user=jabber
+
+	# run configure scripts for all prefetched deps
+	./rebar get-deps || die
 }
 
 src_compile() {
@@ -103,12 +105,20 @@ src_install() {
 	default
 
 	# Pam helper module permissions
+	# https://www.process-one.net/docs/ejabberd/guide_en.html#pam
 	if use pam; then
 		pamd_mimic_system xmpp auth account || die "Cannot create pam.d file"
+		fowners root:jabber "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam"
+		fperms 4750 "/usr/$(get_libdir)/erlang/lib/${PF}/priv/bin/epam"
 	fi
 
 	newinitd "${FILESDIR}"/${PN}-3.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}-3.confd ${PN}
+	systemd_dounit "${FILESDIR}"/${PN}.service
+	systemd_dotmpfilesd "${FILESDIR}"/${PN}.tmpfiles.conf
+
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/${PN}.logrotate ${PN}
 }
 
 pkg_postinst() {
@@ -118,8 +128,17 @@ pkg_postinst() {
 		elog "http://www.process-one.net/en/ejabberd/docs/guide_en/"
 	else
 		elog "Ejabberd now defaults to using a YAML format for its config file."
-		elog "To convert your old Erlang term file run the following as root:"
-		elog "ejabberdctl convert_to_yaml /etc/jabber/ejabberd.cfg /etc/jabber/ejabberd.yml"
+		elog "The old ejabberd.cfg file can be converted using the following instructions:"
+		echo
+		elog "1. Make sure all processes related to the previous version of ejabberd aren't running."
+		elog "   Usually this just means the ejabberd daemon and possibly the pam-related processes"
+		elog "   (epmd and epam) if pam support is enabled."
+		elog "2. Run \`ejabberdctl start\` with sufficient permissions. Note that this can fail to"
+		elog "   start ejabberd properly for various reasons. Check ejabberd's main log file"
+		elog "   at /var/log/jabber/ejabberd.log to confirm it started successfully."
+		elog "3. Run \`ejabberdctl convert_to_yaml /etc/jabber/ejabberd.cfg /etc/jabber/ejabberd.yml.new\`"
+		elog "   with sufficient permissions, edit and rename /etc/jabber/ejabberd.yml.new to"
+		elog "   /etc/jabber/ejabberd.yml, and finally restart ejabberd with the new config file."
 		echo
 	fi
 
