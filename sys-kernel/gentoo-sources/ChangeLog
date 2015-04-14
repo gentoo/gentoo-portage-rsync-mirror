@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1533 2015/04/14 10:21:19 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1534 2015/04/14 13:35:26 mpagano Exp $
+
+*gentoo-sources-3.10.74 (14 Apr 2015)
+
+  14 Apr 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.10.74.ebuild:
+  Linux patch 3.10.74. Add check to saved_root_name for supported filesystem
+  path naming.
 
 *gentoo-sources-3.14.38 (14 Apr 2015)
 
