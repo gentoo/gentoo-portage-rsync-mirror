@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.94 2015/04/14 11:45:15 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.96 2015/04/15 22:00:36 nicolasbock Exp $
+
+  15 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> -files/chunk.patch:
+  sci-physics/lammps: Removing obsolete patch.
+
+  15 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> -lammps-20150201.ebuild,
+  -lammps-20150202.ebuild, -lammps-20150203.ebuild, -lammps-20150206.ebuild,
+  -lammps-20150213.ebuild, -lammps-20150216.ebuild, -lammps-20150219.ebuild:
+  sci-physics/lammps: Spring cleaning.
 
 *lammps-20150411 (14 Apr 2015)
 
