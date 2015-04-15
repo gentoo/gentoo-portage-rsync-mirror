@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qttest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.25 2015/03/08 14:03:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.26 2015/04/15 04:38:29 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qttest-5.4.1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qttest-5.4.1.ebuild:
   Remove all keywords from "live" branch.

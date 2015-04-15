@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.28 2015/03/05 09:50:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.29 2015/04/15 04:41:43 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtwebkit-5.4.1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   05 Mar 2015; Michael Palimaka <kensington@gentoo.org> qtwebkit-5.4.1.ebuild:
   Add missing dependency wrt bug #540124.

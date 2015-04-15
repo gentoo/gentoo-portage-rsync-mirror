@@ -1,6 +1,10 @@
 # ChangeLog for kde-frameworks/kguiaddons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kguiaddons/ChangeLog,v 1.11 2015/04/11 17:09:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kguiaddons/ChangeLog,v 1.12 2015/04/15 04:45:59 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> kguiaddons-5.8.0.ebuild,
+  kguiaddons-5.9.0.ebuild:
+  keyword arm64, tested on cortex-a53 hardware; support lxqt, bug 528676
 
 *kguiaddons-5.9.0 (11 Apr 2015)
 

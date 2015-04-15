@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtquick1
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquick1/ChangeLog,v 1.15 2015/03/17 17:10:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtquick1/ChangeLog,v 1.16 2015/04/15 04:32:51 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtquick1-5.4.1-r1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   17 Mar 2015; Davide Pesavento <pesa@gentoo.org> -qtquick1-5.4.1.ebuild,
   qtquick1-5.4.1-r1.ebuild:

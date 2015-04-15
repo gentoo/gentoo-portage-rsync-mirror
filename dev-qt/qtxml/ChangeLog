@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtxml/ChangeLog,v 1.12 2015/03/08 14:03:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtxml/ChangeLog,v 1.13 2015/04/15 04:42:04 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtxml-5.4.1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtxml-5.4.1.ebuild:
   Remove all keywords from "live" branch.

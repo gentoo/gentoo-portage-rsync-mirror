@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/extra-cmake-modules/extra-cmake-modules-5.9.0.ebuild,v 1.1 2015/04/11 17:09:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/extra-cmake-modules/extra-cmake-modules-5.9.0.ebuild,v 1.2 2015/04/15 04:46:54 dlan Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Extra modules and scripts for CMake"
 HOMEPAGE="https://projects.kde.org/projects/kdesupport/extra-cmake-modules"
 
 LICENSE="BSD"
-KEYWORDS=" ~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="doc"
 
 DEPEND="

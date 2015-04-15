@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera-beta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-beta/ChangeLog,v 1.20 2015/04/10 04:36:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-beta/ChangeLog,v 1.21 2015/04/15 04:35:41 jer Exp $
+
+*opera-beta-29.0.1795.41 (15 Apr 2015)
+
+  15 Apr 2015; Jeroen Roovers <jer@gentoo.org> -opera-beta-29.0.1795.30.ebuild,
+  +opera-beta-29.0.1795.41.ebuild:
+  Version bump.
 
 *opera-beta-29.0.1795.35 (10 Apr 2015)
 
