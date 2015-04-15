@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.93 2015/03/10 20:32:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.94 2015/04/15 15:13:28 polynomial-c Exp $
+
+*nbd-3.10 (15 Apr 2015)
+
+  15 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> +nbd-3.10.ebuild:
+  Version bump.
 
   10 Mar 2015; Mike Frysinger <vapier@gentoo.org> nbd-3.9.1.ebuild:
   Switch gznbd handling to the new configure flag #542840 by Jeroen Roovers.
