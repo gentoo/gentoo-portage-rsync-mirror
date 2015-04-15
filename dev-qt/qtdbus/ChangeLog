@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtdbus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/ChangeLog,v 1.24 2015/03/08 14:00:15 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/ChangeLog,v 1.25 2015/04/15 03:44:07 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtdbus-4.8.6-r1.ebuild,
+  qtdbus-5.4.1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtdbus-5.4.1.ebuild:
   Remove all keywords from "live" branch.

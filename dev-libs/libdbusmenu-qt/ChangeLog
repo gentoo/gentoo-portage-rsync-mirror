@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdbusmenu-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.42 2015/03/10 16:26:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/ChangeLog,v 1.43 2015/04/15 03:34:26 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org>
+  libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   10 Mar 2015; Michael Palimaka <kensington@gentoo.org>
   libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild:

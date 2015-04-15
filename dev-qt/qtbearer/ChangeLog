@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtbearer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.17 2015/01/08 22:27:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.18 2015/04/15 03:40:03 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtbearer-4.8.6-r1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   08 Jan 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Update upstream bugtracker URL.

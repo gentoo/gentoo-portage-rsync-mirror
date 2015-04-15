@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist-tools/linguist-tools-5.4.1.ebuild,v 1.2 2015/03/08 13:59:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist-tools/linguist-tools-5.4.1.ebuild,v 1.3 2015/04/15 03:37:34 dlan Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Tools for working with Qt translation data files"
 if [[ ${QT5_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~amd64 ~arm ~hppa ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~x86"
 fi
 
 IUSE="qml"

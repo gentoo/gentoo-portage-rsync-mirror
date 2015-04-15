@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.75 2015/03/31 19:19:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.76 2015/04/15 03:47:56 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtgui-4.8.6-r2.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> qtgui-4.8.5-r4.ebuild,
   qtgui-4.8.6-r2.ebuild:

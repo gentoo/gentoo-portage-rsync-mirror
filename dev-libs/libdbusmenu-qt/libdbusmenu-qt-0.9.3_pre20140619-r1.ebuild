@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild,v 1.3 2015/03/10 16:26:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu-qt/libdbusmenu-qt-0.9.3_pre20140619-r1.ebuild,v 1.4 2015/04/15 03:34:26 dlan Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ else
 	# upstream has no permissions to use some kde written code so repack git
 	# repo every time
 	#SRC_URI="http://dev.gentoo.org/~scarabeus/${P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 	PATCHES=( "${FILESDIR}/${P}-optionaltests.patch" )
 fi
 

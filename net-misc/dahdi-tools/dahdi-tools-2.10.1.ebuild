@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.10.1.ebuild,v 1.1 2015/03/02 10:00:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/dahdi-tools-2.10.1.ebuild,v 1.2 2015/04/15 03:39:45 vapier Exp $
 
 EAPI=5
 
@@ -26,6 +26,13 @@ RDEPEND="${DEPEND}"
 
 EPATCH_SUFFIX="diff"
 PATCHES=( "${WORKDIR}/${PN}-patchset" )
+
+src_prepare() {
+	base_src_prepare
+	sed -i \
+		-e 's:-Werror::' \
+		Makefile xpp/Makefile || die
+}
 
 src_compile() {
 	default_src_compile
