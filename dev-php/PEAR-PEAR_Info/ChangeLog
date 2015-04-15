@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-PEAR_Info
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.42 2012/03/05 08:33:53 olemarkus Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_Info/ChangeLog,v 1.43 2015/04/15 01:05:11 grknight Exp $
+
+*PEAR-PEAR_Info-1.9.2-r3 (15 Apr 2015)
+
+  15 Apr 2015; Brian Evans <grknight@gentoo.org>
+  +PEAR-PEAR_Info-1.9.2-r3.ebuild, -PEAR-PEAR_Info-1.9.2-r2.ebuild:
+  Revbump for repoman warnings and dependency change
 
 *PEAR-PEAR_Info-1.9.2-r2 (05 Mar 2012)
 
@@ -171,4 +177,3 @@
   25 Dec 2003; Tal Peer <coredumb@gentoo.org> PEAR-PEAR_Info-1.5.1.ebuild,
   metadata.xml:
   Initial commit, closes bug #36436. Ebuild by Roman Weber <gentoo@gonzo.ch>
-
