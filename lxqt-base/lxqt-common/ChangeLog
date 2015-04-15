@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-common
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/ChangeLog,v 1.7 2015/02/20 11:44:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/ChangeLog,v 1.8 2015/04/15 05:03:56 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> lxqt-common-0.9.1.ebuild:
+  keyword arm/arm64, tested on cortex-A9/A53 hardware; support lxqt, bug 528676
 
 *lxqt-common-0.9.1 (20 Feb 2015)
 

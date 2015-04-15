@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-notificationd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/ChangeLog,v 1.9 2015/02/20 11:45:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-notificationd/ChangeLog,v 1.10 2015/04/15 05:08:40 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> lxqt-notificationd-0.9.0-r1.ebuild:
+  keyword arm/arm64, tested on cortex-A9/A53 hardware; support lxqt, bug 528676
 
 *lxqt-notificationd-0.9.0-r1 (20 Feb 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/lxqt-common-0.9.1.ebuild,v 1.1 2015/02/20 11:44:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-common/lxqt-common-0.9.1.ebuild,v 1.2 2015/04/15 05:03:56 dlan Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -13,7 +13,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.lxde.org/git/lxde/${PN}.git"
 else
 	SRC_URI="http://downloads.lxqt.org/lxqt/${PV}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 fi
 
 LICENSE="LGPL-2.1+"
