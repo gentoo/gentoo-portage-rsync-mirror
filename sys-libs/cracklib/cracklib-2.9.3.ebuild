@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.2.ebuild,v 1.2 2015/04/08 18:28:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.9.3.ebuild,v 1.1 2015/04/15 11:44:04 polynomial-c Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=1
 
