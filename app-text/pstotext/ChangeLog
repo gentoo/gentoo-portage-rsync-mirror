@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pstotext
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.40 2012/03/25 15:42:35 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.41 2015/04/14 23:50:53 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -pstotext-1.9-r2.ebuild:
+  Remove old.
 
   25 Mar 2012; Raúl Porcel <armin76@gentoo.org> pstotext-1.9-r2.ebuild,
   pstotext-1.9-r3.ebuild:

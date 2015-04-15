@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wiki2beamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wiki2beamer/ChangeLog,v 1.6 2015/01/18 23:29:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wiki2beamer/ChangeLog,v 1.7 2015/04/14 23:52:12 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -wiki2beamer-0.9.2-r2.ebuild,
+  -wiki2beamer-0.9.4.ebuild, -wiki2beamer-0.9.5.ebuild:
+  Remove old.
 
 *wiki2beamer-0.9.5-r1 (18 Jan 2015)
 

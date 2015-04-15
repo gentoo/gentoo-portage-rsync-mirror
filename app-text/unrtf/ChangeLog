@@ -1,6 +1,14 @@
 # ChangeLog for app-text/unrtf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.54 2015/03/30 10:02:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/ChangeLog,v 1.55 2015/04/14 23:49:42 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -files/unrtf-0.19.3-final.patch,
+  -files/unrtf-0.21.1-automake-fix.patch,
+  -files/unrtf-0.21.1-iconv-detection.patch,
+  -files/unrtf-0.21.2-iconv-detection.patch, -unrtf-0.19.9.ebuild,
+  -unrtf-0.20.1.ebuild, -unrtf-0.20.5.ebuild, -unrtf-0.21.2-r1.ebuild,
+  -unrtf-0.21.8.ebuild:
+  Remove old.
 
   30 Mar 2015; Agostino Sarubbo <ago@gentoo.org> unrtf-0.21.9.ebuild:
   Stable for alpha, wrt bug #531544

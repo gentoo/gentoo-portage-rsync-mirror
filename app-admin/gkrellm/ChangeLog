@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.205 2015/03/24 20:01:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.206 2015/04/14 23:36:49 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -gkrellm-2.3.5-r1.ebuild,
+  -gkrellm-2.3.5.ebuild:
+  Remove old.
 
 *gkrellm-2.3.5-r3 (24 Mar 2015)
 

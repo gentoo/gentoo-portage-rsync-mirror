@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sloccount
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.34 2014/03/12 10:17:34 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.35 2015/04/14 23:58:59 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -sloccount-2.26-r1.ebuild,
+  -sloccount-2.26-r2.ebuild:
+  Remove old.
 
   12 Mar 2014; Agostino Sarubbo <ago@gentoo.org> sloccount-2.26-r3.ebuild:
   Stable for sparc, wrt bug #495354

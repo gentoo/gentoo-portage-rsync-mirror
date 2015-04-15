@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hyperestraier
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.62 2014/07/08 00:52:07 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.63 2015/04/14 23:56:55 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -hyperestraier-1.4.10-r1.ebuild:
+  Remove old.
 
   08 Jul 2014; Naohiro Aota <naota@gentoo.org> hyperestraier-1.4.13.ebuild:
   Use fine-grained match to install docs #515418

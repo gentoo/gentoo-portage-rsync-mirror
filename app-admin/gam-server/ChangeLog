@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gam-server
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.34 2014/12/06 16:39:30 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.35 2015/04/14 23:38:38 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -gam-server-0.1.10-r1.ebuild:
+  Remove old.
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> gam-server-0.1.10-r2.ebuild:
   Stable for ia64, wrt bug #529392

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conserver
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.83 2014/06/27 23:10:42 chutzpah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.84 2015/04/14 23:33:31 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -conserver-8.1.16-r1.ebuild,
+  -conserver-8.1.16.ebuild, -files/conserver.initd,
+  -files/conserver.pam-include.1:
+  Remove old.
 
 *conserver-8.1.18-r1 (27 Jun 2014)
 

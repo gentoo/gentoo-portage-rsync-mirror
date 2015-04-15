@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/bastille
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.24 2014/12/09 22:30:09 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.25 2015/04/14 23:39:42 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -bastille-3.0.9.ebuild:
+  Remove old.
 
 *bastille-3.0.9-r1 (09 Dec 2014)
 
@@ -125,4 +128,3 @@
 
   This was patched heavily to work with Gentoo (gentooficated) by the 
   venerable: Bryan Stine <admin@kentonet.net>
-

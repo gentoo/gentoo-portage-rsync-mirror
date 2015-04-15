@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmldiff
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.24 2015/01/18 23:19:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.25 2015/04/14 23:44:40 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xmldiff-0.6.9-r1.ebuild,
+  -xmldiff-0.6.9.ebuild:
+  Remove old.
 
 *xmldiff-0.6.10-r1 (18 Jan 2015)
 

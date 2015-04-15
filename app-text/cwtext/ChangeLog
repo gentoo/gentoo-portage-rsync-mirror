@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cwtext
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.27 2012/03/08 21:25:06 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.28 2015/04/14 23:55:26 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -cwtext-0.94.ebuild:
+  Remove old.
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> cwtext-0.96.ebuild:
   Marking cwtext-0.96 ppc64 for bug 393803
@@ -84,4 +87,3 @@
   22 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> cwtext-0.94.ebuild:
   Initial import. Ebuild submitted by Robert Cernansky
   <openhs@users.sourceforge.net>, closing bug #30594
-
