@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sparklines
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.23 2015/04/14 07:06:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.24 2015/04/14 23:19:33 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -sparklines-0.5.2-r3.ebuild:
+  Remove old.
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> sparklines-0.5.2-r4.ebuild:
   Stable for x86, wrt bug #546242

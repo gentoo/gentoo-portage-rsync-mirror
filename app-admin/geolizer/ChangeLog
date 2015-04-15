@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/geolizer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/geolizer/ChangeLog,v 1.4 2012/06/19 21:09:55 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/geolizer/ChangeLog,v 1.5 2015/04/14 23:25:17 mrueg Exp $
+
+  14 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
+  -geolizer-2.01.10_p20070115.ebuild:
+  Remove old.
 
   19 Jun 2012; Jeroen Roovers <jer@gentoo.org>
   geolizer-2.01.10_p20070115-r1.ebuild:
@@ -25,4 +29,3 @@
   +files/geolizer-2.01.10_p20070115-etc-geolizer-conf.patch,
   +files/apache.geolizer, +files/geolizer-language-list.txt, +metadata.xml:
   New package split off from webalizer
-
