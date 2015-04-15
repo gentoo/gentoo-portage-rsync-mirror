@@ -1,13 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-caver/pymol-plugins-caver-2.1.2.ebuild,v 1.1 2011/03/18 10:22:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-caver/pymol-plugins-caver-2.1.2.ebuild,v 1.2 2015/04/15 14:14:33 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+PYTHON_COMPAT=( python2_7 )
 
-inherit multilib python eutils versionator java-utils-2
+inherit multilib python-r1 eutils versionator java-utils-2
 
 MY_PV="$(replace_all_version_separators _)"
 MY_P="Caver${MY_PV}_pymol_plugin"
@@ -23,7 +22,7 @@ IUSE=""
 
 RDEPEND="
 	>=virtual/jre-1.6
-	sci-chemistry/pymol"
+	sci-chemistry/pymol[${PYTHON_USEDEP}]"
 DEPEND="app-arch/unzip"
 
 RESTRICT="fetch"
@@ -36,10 +35,6 @@ pkg_nofetch() {
 	elog "Place tarballs in ${DISTDIR}."
 }
 
-src_prepare() {
-	python_copy_sources
-}
-
 src_install() {
 	java-pkg_dojar Caver${MY_PV}/*.jar
 
@@ -47,20 +42,13 @@ src_install() {
 	java-pkg_dojar Caver${MY_PV}/lib/*.jar
 
 	installation() {
-	sed \
-		-e "s:directory/where/jar/with/plugin/is/located:${EPREFIX}/usr/share/${PN}/lib/:g" \
-		-i Caver${MY_PV}.py || die
+		sed \
+			-e "s:directory/where/jar/with/plugin/is/located:${EPREFIX}/usr/share/${PN}/lib/:g" \
+			-i Caver${MY_PV}.py || die
 
-		insinto $(python_get_sitedir)/pmg_tk/startup/
-		doins Caver${MY_PV}.py || die
+		python_moduleinto pmg_tk/startup/
+		python_domodule Caver${MY_PV}.py
+		python_optimize
 	}
-	python_execute_function -s installation
-}
-
-pkg_postinst() {
-	python_mod_optimize pmg_tk/startup/Caver${MY_PV}.py
-}
-
-pkg_postrm() {
-	python_mod_cleanup pmg_tk/startup/Caver${MY_PV}.py
+	python_foreach_impl installation
 }

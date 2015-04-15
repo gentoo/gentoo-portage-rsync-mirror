@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libosmocore
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/ChangeLog,v 1.13 2014/11/03 15:37:14 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/ChangeLog,v 1.14 2015/04/15 14:25:49 chithanh Exp $
+
+*libosmocore-0.8.0 (15 Apr 2015)
+
+  15 Apr 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libosmocore-0.8.0.ebuild, -libosmocore-0.6.3.ebuild,
+  -libosmocore-0.6.4.ebuild, libosmocore-9999.ebuild, metadata.xml:
+  Version bump. Unify live and non-live ebuilds.
 
   03 Nov 2014; Rick Farina <zerochaos@gentoo.org> libosmocore-0.6.6.ebuild,
   libosmocore-9999.ebuild:

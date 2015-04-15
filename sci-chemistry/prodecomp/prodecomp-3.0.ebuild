@@ -1,52 +1,46 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prodecomp/prodecomp-3.0.ebuild,v 1.1 2010/10/20 06:25:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/prodecomp/prodecomp-3.0.ebuild,v 1.2 2015/04/15 14:18:54 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="tk"
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="tk"
 
-inherit python
+inherit python-single-r1
 
 DESCRIPTION="Decomposition-based analysis of NMR projections"
 HOMEPAGE="http://www.lundberg.gu.se/nmr/software.php?program=PRODECOMP"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="examples"
 
-RDEPEND="sci-libs/scipy"
+RDEPEND="sci-libs/scipy[${PYTHON_USEDEP}]"
 DEPEND=""
 
 S="${WORKDIR}"/NMRProjAnalys
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_install() {
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r ExampleData Results || die
+		doins -r ExampleData Results
 	fi
 
-	insinto /usr/share/doc/${PF}
-	doins ProjTools/Manual.pdf || die
+	dodoc ProjTools/Manual.pdf
 	rm -rf ProjTools/Manual.pdf ProdecompOutput || die
 
-	insinto $(python_get_sitedir)
-	doins -r ProjTools || die
-	mv "${ED}"/$(python_get_sitedir)/{ProjTools,${PN}} || die
+	python_moduleinto ${PN}
+	python_domodule ProjTools/.
+	python_optimize
 
 	cat >> "${T}"/${PN} <<- EOF
 	#!/bin/bash
-	$(PYTHON) -O "${EPREFIX}"/$(python_get_sitedir)/${PN}/ProjAnalys.py $@
+	${PYTHON} -O "${EPREFIX}"/$(python_get_sitedir)/${PN}/ProjAnalys.py $@
 	EOF
-	dobin "${T}"/${PN} || die
+	dobin "${T}"/${PN}
 
 	dosym ../../../../share/doc/${PF}/Manual.pdf $(python_get_sitedir)/${PN}/Manual.pdf
 }
