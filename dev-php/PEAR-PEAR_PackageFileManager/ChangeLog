@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR_PackageFileManager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_PackageFileManager/ChangeLog,v 1.8 2014/08/10 20:54:12 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR_PackageFileManager/ChangeLog,v 1.9 2015/04/15 01:31:39 grknight Exp $
+
+  15 Apr 2015; Brian Evans <grknight@gentoo.org>
+  PEAR-PEAR_PackageFileManager-1.7.0.ebuild:
+  Fix Copyright
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   PEAR-PEAR_PackageFileManager-1.6.3.ebuild,
