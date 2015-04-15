@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-meta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.10 2015/03/15 03:16:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/ChangeLog,v 1.11 2015/04/15 07:04:51 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> lxqt-meta-0.9.0-r2.ebuild:
+  keyword arm/arm64, tested on cortex-A9/A53 hardware; support lxqt, bug 528676
 
 *lxqt-meta-0.9.0-r2 (15 Mar 2015)
 
