@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.109 2015/04/14 09:32:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.110 2015/04/15 04:22:54 jer Exp $
+
+  15 Apr 2015; Jeroen Roovers <jer@gentoo.org> pv-1.6.0.ebuild:
+  Stable for HPPA (bug #546518).
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pv-1.6.0.ebuild:
   Stable for amd64, wrt bug #546518

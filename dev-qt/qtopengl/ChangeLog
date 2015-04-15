@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtopengl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.25 2015/03/08 14:01:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.26 2015/04/15 04:28:47 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtopengl-4.8.6-r1.ebuild,
+  qtopengl-5.4.1.ebuild:
+  keyword arm64, tested on cortex-a53 hardware
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qtopengl-5.4.1.ebuild:
   Remove all keywords from "live" branch.
