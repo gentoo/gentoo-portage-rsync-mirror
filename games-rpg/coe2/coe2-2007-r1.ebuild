@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/coe2-2007-r1.ebuild,v 1.2 2014/04/16 17:02:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/coe2/coe2-2007-r1.ebuild,v 1.3 2015/04/15 06:51:01 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils games
 
 DESCRIPTION="Precursor to the Dominions series"
@@ -20,16 +19,15 @@ RDEPEND="media-libs/libsdl"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S="${WORKDIR}/coe"
+S=${WORKDIR}/coe
 
 # bug #430026
 QA_PREBUILT="/opt/coe2/coe_linux"
 
 src_prepare() {
-	rm *.{dll,exe} || die 'rm failed'
-	rm -r old || die 'rm failed'
+	rm -r *.{dll,exe} old || die
 	if use amd64 ; then
-		mv -f coe_linux64bit coe_linux || die "mv amd64 image failed"
+		mv -f coe_linux64bit coe_linux || die
 	fi
 }
 

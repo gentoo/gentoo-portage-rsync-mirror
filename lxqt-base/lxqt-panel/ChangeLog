@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-panel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/ChangeLog,v 1.13 2015/03/22 06:25:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-panel/ChangeLog,v 1.14 2015/04/15 06:51:56 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> lxqt-panel-0.9.0.ebuild:
+  keyword arm/arm64, tested on cortex-A9/A53 hardware; support lxqt, bug 528676
 
   22 Mar 2015; Ben de Groot <yngwin@gentoo.org> lxqt-panel-0.9.0.ebuild:
   Specify X useflag for kwindowsystem dependency (bug #543708)

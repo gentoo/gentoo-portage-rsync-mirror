@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-about
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-about/ChangeLog,v 1.8 2015/04/03 18:21:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-about/ChangeLog,v 1.9 2015/04/15 06:43:08 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> lxqt-about-0.9.0.ebuild:
+  restore arm keyword, bug 528676
 
   03 Apr 2015; Michael Palimaka <kensington@gentoo.org> lxqt-about-0.9.0.ebuild:
   Drop ~arm keyword due to unsatisfied dependencies wrt bug #545432.

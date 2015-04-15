@@ -1,6 +1,9 @@
 # ChangeLog for lxqt-base/lxqt-openssh-askpass
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-openssh-askpass/ChangeLog,v 1.4 2015/04/03 18:21:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-openssh-askpass/ChangeLog,v 1.5 2015/04/15 06:49:32 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> lxqt-openssh-askpass-0.9.0.ebuild:
+  restore arm keyword, bug 528676
 
   03 Apr 2015; Michael Palimaka <kensington@gentoo.org>
   lxqt-openssh-askpass-0.9.0.ebuild:
