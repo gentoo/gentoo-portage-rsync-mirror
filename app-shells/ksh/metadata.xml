@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>floppym@gentoo.org</email>
 		<name>Mike Gilbert</name>
-	</maintainer>
-	<maintainer>
-		<email>ormaaj@gmail.com</email>
-		<name>Dan Douglas</name>
 	</maintainer>
 	<longdescription lang="en">
 		The KornShell language was designed and developed by David G. Korn at

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ksh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.65 2014/09/29 02:14:32 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ChangeLog,v 1.66 2015/04/15 20:02:54 floppym Exp $
+
+  15 Apr 2015; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Drop inactive proxy maintainer.
 
 *ksh-93.20140625 (29 Sep 2014)
 
