@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.144 2015/04/12 22:50:44 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.145 2015/04/15 08:48:36 bircoph Exp $
+
+  15 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> root-6.02.05-r2.ebuild:
+  Set ROOTSYS during make install, since a different value (e.g. from
+  older installed version) may broke make install.
 
   12 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> -root-5.34.28.ebuild:
   Remove old.

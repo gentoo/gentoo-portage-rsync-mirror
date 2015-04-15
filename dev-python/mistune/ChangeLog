@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mistune
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mistune/ChangeLog,v 1.1 2015/02/28 11:44:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mistune/ChangeLog,v 1.2 2015/04/15 08:45:46 jlec Exp $
+
+*mistune-0.5.1 (15 Apr 2015)
+
+  15 Apr 2015; Justin Lecher <jlec@gentoo.org> +mistune-0.5.1.ebuild:
+  Version Bump
 
 *mistune-0.5 (28 Feb 2015)
 

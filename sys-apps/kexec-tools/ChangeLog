@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.65 2015/04/07 14:45:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.66 2015/04/15 08:37:14 vapier Exp $
+
+*kexec-tools-2.0.9-r1 (15 Apr 2015)
+
+  15 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/kexec-tools-2.0.9-hardened.patch, +kexec-tools-2.0.9-r1.ebuild,
+  kexec-tools-9999.ebuild:
+  Improve handling of hardened toolchains by only disabling PIE/etc... in the
+  purgatory subdir.
 
 *kexec-tools-2.0.9 (11 Feb 2015)
 

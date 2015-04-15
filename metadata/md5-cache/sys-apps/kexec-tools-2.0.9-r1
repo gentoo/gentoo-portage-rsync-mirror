@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test
+DEPEND=lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib ) virtual/pkgconfig
+DESCRIPTION=Load another kernel from the currently executing Linux kernel
+EAPI=5
+HOMEPAGE=http://kernel.org/pub/linux/utils/kernel/kexec/
+IUSE=booke lzma xen zlib
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=lzma? ( app-arch/xz-utils ) zlib? ( sys-libs/zlib )
+REQUIRED_USE=lzma? ( zlib )
+SLOT=0
+SRC_URI=mirror://kernel/linux/utils/kernel/kexec/kexec-tools-2.0.9.tar.xz
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=aecae2188aecd5c6c0e35dbccb5f6c72

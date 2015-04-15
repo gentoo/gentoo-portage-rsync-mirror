@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9930 2015/04/14 21:55:35 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9931 2015/04/15 09:00:49 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Apr 2015; Michał Górny <mgorny@gentoo.org> profiles.desc:
+  arm: stable -> dev because of prolonged tree breakage in keywording. Please
+  restore the stable status when you are done.
 
   14 Apr 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
   Mask dev-java/diablo-jdk and dev-java/diablo-jre-bin.
