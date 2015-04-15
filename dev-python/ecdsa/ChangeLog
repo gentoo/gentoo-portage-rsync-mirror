@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.39 2015/04/14 10:48:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.40 2015/04/15 11:16:46 blueness Exp $
+
+  15 Apr 2015; Anthony G. Basile <blueness@gentoo.org> -ecdsa-0.11-r2.ebuild,
+  ecdsa-0.13.ebuild:
+  Add dep on setuptools.
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ecdsa-0.11-r1.ebuild:
   Stable for ia64, wrt bug #531396
