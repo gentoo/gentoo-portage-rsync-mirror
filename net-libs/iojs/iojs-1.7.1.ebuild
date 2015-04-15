@@ -21,15 +21,16 @@ KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
 IUSE="bundled-libs debug icu +npm snapshot +ssl"
 
 RDEPEND="icu? ( dev-libs/icu )
+	${PYTHON_DEPS}
 	!bundled-libs? (
 		>=net-libs/http-parser-2.3
 		>=dev-libs/libuv-1.4.2
 		>=dev-libs/openssl-1.0.1m[-bindist]
 	)"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	!!net-libs/nodejs"
 S="${WORKDIR}/${MY_P}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 pkg_pretend() {
 	if ! test-flag-CXX -std=c++11 ; then
