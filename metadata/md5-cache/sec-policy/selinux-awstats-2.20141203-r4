@@ -3,10 +3,10 @@ DEPEND=sec-policy/selinux-apache >=sys-apps/policycoreutils-2.0.82 >=sec-policy/
 DESCRIPTION=SELinux policy for awstats
 EAPI=5
 HOMEPAGE=https://wiki.gentoo.org/wiki/Project:SELinux
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=sec-policy/selinux-apache >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-2.20141203-r4
 SLOT=0
 SRC_URI=https://raw.githubusercontent.com/wiki/TresysTechnology/refpolicy/files/refpolicy-2.20141203.tar.bz2 http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-2.20141203-r4.tar.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	selinux-policy-2	a6753968a2a6567cd31154d6428719c7	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=d700542e1cd5e265618e82e96a4b3d4c
+_md5_=6af4b70d0d22c8a4590e9ed809cda5c7
