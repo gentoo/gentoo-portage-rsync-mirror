@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9931 2015/04/15 09:00:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9932 2015/04/15 12:17:11 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Apr 2015; Ulrich Müller <ulm@gentoo.org> profiles.desc:
+  [QA] Revert default/linux/arm/13.0 profile back to stable. This has been
+  acknowledged by the QA team lead and three other QA members.
 
   15 Apr 2015; Michał Górny <mgorny@gentoo.org> profiles.desc:
   arm: stable -> dev because of prolonged tree breakage in keywording. Please
