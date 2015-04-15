@@ -1,0 +1,32 @@
+diff -ur spacefm-1.0.0.orig/src/main-window.c spacefm-1.0.0/src/main-window.c
+--- spacefm-1.0.0.orig/src/main-window.c	2015-04-14 06:36:08.000000000 +0800
++++ spacefm-1.0.0/src/main-window.c	2015-04-15 15:05:34.082309417 +0800
+@@ -965,28 +965,6 @@
+     GdkColor color;
+     //GdkColor color_white;
+ 
+-    if ( xset_get_b( "root_bar" ) )
+-    {
+-        color.pixel = 0;
+-        color.red = 30000;
+-        color.blue = 1000;
+-        color.green = 0;
+-
+-        //gdk_color_parse( "#ffffff", &color_white );
+-
+-        for ( l = all_windows; l; l = l->next )
+-        {
+-            a_window = (FMMainWindow*)l->data;
+-            gtk_widget_modify_bg( GTK_WIDGET( a_window ), GTK_STATE_NORMAL, &color );
+-            gtk_widget_modify_bg( GTK_WIDGET( a_window->menu_bar ),
+-                                                        GTK_STATE_NORMAL, &color );
+-            gtk_widget_modify_bg( GTK_WIDGET( a_window->panelbar ),
+-                                                        GTK_STATE_NORMAL, &color );
+-            // how to change menu bar text color?
+-            //gtk_widget_modify_fg( GTK_MENU_ITEM( a_window->file_menu_item ), GTK_STATE_NORMAL, &color_white );
+-        }
+-    }
+-    else
+     {
+         for ( l = all_windows; l; l = l->next )
+         {
