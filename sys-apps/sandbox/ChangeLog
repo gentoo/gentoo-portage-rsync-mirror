@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sandbox
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.182 2014/01/18 01:59:21 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.183 2015/04/15 03:25:06 vapier Exp $
+
+  15 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/sandbox-2.6-gcc-5.patch, sandbox-2.6-r1.ebuild:
+  Fix building w/gcc-5.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> sandbox-2.6-r1.ebuild:
   Add arm64 love.

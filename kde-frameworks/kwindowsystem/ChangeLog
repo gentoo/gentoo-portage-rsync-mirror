@@ -1,6 +1,10 @@
 # ChangeLog for kde-frameworks/kwindowsystem
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kwindowsystem/ChangeLog,v 1.12 2015/04/11 17:09:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kwindowsystem/ChangeLog,v 1.13 2015/04/15 03:24:59 dlan Exp $
+
+  15 Apr 2015; Yixun Lan <dlan@gentoo.org> kwindowsystem-5.8.0.ebuild,
+  kwindowsystem-5.9.0.ebuild:
+  keyword arm/arm64, tested on cortex-A9/A53 hardware; support lxqt, bug 528676
 
 *kwindowsystem-5.9.0 (11 Apr 2015)
 

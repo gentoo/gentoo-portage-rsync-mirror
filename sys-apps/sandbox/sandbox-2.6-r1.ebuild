@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.6-r1.ebuild,v 1.16 2014/01/18 01:59:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.6-r1.ebuild,v 1.17 2015/04/15 03:25:06 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -53,6 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-open-nofollow.patch #413441
 	epatch "${FILESDIR}"/${P}-check-empty-paths-at.patch #346929
 	epatch "${FILESDIR}"/${P}-no-pch.patch #425524
+	epatch "${FILESDIR}"/${P}-gcc-5.patch
 	epatch_user
 }
 
