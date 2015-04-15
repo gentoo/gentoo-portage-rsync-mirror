@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/collectl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.21 2014/09/15 06:24:38 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/collectl/ChangeLog,v 1.22 2015/04/15 14:50:58 polynomial-c Exp $
+
+*collectl-4.0.0 (15 Apr 2015)
+
+  15 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> +collectl-4.0.0.ebuild:
+  Version bump.
 
 *collectl-3.7.4 (15 Sep 2014)
 

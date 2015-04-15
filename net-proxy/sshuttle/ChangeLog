@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/sshuttle
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.18 2014/07/01 06:18:41 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.19 2015/04/15 14:47:04 jlec Exp $
+
+*sshuttle-0.61-r2 (15 Apr 2015)
+
+  15 Apr 2015; Justin Lecher <jlec@gentoo.org> +sshuttle-0.61-r2.ebuild,
+  metadata.xml:
+  Bump EAPI and python eclasses
 
   01 Jul 2014; Tim Harder <radhermit@gentoo.org> -sshuttle-0.61.ebuild:
   Remove old.
