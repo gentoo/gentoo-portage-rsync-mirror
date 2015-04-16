@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/remmina
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.62 2014/12/07 09:45:36 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.63 2015/04/16 11:06:11 maksbotan Exp $
+
+*remmina-1.2.0_rc3 (16 Apr 2015)
+*remmina-1.1.2 (16 Apr 2015)
+
+  16 Apr 2015; Maxim Koltsov <maksbotan@gentoo.org> +remmina-1.1.2.ebuild,
+  +remmina-1.2.0_rc3.ebuild:
+  Bump to 1.1.2 and 1.2.0_rc3. Add missing dependencies. Update HOMEPAGE.
 
   07 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org> remmina-1.1.1.ebuild,
   remmina-9999.ebuild:
