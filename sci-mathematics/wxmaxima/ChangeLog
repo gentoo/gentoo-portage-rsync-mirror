@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.45 2015/03/27 16:30:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.46 2015/04/16 14:44:32 grozin Exp $
+
+*wxmaxima-15.04.0 (16 Apr 2015)
+
+  16 Apr 2015; Andrey Grozin <grozin@gentoo.org> +wxmaxima-15.04.0.ebuild:
+  Version bump
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> wxmaxima-13.04.2.ebuild:
   Stable for amd64, wrt bug #406779
