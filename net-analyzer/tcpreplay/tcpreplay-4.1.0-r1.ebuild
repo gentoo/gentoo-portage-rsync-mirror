@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-4.1.0.ebuild,v 1.1 2015/03/31 05:21:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-4.1.0-r1.ebuild,v 1.1 2015/04/16 16:35:31 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -27,6 +27,8 @@ RDEPEND="${DEPEND}"
 DOCS=( docs/{CHANGELOG,CREDIT,HACKING,TODO} )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-4.1.0-enable-pcap_findalldevs.patch
+
 	sed -i \
 		-e 's|-O3||g' \
 		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
