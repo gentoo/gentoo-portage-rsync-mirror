@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpipe/zpipe-2.01-r1.ebuild,v 1.1 2015/04/16 09:08:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpipe/zpipe-2.01-r1.ebuild,v 1.2 2015/04/16 20:26:33 mgorny Exp $
 
 EAPI=5
 inherit toolchain-funcs
@@ -18,6 +18,8 @@ IUSE=""
 RDEPEND="<app-arch/libzpaq-7"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
+
+S=${WORKDIR}
 
 src_compile() {
 	emake CXX="$(tc-getCXX)" LDLIBS=-lzpaq "${PN}"
