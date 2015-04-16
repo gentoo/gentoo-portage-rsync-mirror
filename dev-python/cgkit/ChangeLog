@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.46 2015/04/08 08:05:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.47 2015/04/16 12:39:59 idella4 Exp $
+
+  16 Apr 2015; Ian Delaney <idella4@gentoo.org> cgkit-2.0.0.ebuild:
+  set version border to dep media-libs/lib3ds wrt bug #545092
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> cgkit-2.0.0.ebuild:
   Drop old Python implementations
