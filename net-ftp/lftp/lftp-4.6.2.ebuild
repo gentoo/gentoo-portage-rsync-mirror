@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.6.1.ebuild,v 1.2 2015/03/02 10:23:14 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.6.2.ebuild,v 1.1 2015/04/16 15:47:19 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https/torrent client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
-SRC_URI="${HOMEPAGE}/ftp/${P}.tar.xz"
+SRC_URI="${HOMEPAGE}ftp/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -60,10 +60,14 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4.0.2.91-lafile.patch \
 		"${FILESDIR}"/${PN}-4.3.8-gets.patch \
 		"${FILESDIR}"/${PN}-4.5.3-autopoint.patch \
-		"${FILESDIR}"/${PN}-4.5.5-am_config_header.patch
+		"${FILESDIR}"/${PN}-4.5.5-am_config_header.patch \
+		"${FILESDIR}"/${PN}-4.6.1-liblftp-tasks.patch
 
 	eautoreconf
 	elibtoolize # for Darwin bundles
+
+	# bug #536036
+	printf 'set fish:auto-confirm no\nset sftp:auto-confirm no\n' >> ${PN}.conf || die
 }
 
 src_configure() {
