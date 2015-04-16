@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.512 2015/04/16 15:47:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.513 2015/04/16 17:04:38 jer Exp $
+
+  16 Apr 2015; Jeroen Roovers <jer@gentoo.org> lftp-4.6.2.ebuild,
+  -files/lftp-4.6.1-liblftp-tasks.patch:
+  Remove obsolete patch.
 
 *lftp-4.6.2 (16 Apr 2015)
 
