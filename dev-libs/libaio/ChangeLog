@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.94 2015/03/09 19:22:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.95 2015/04/16 03:02:15 dlan Exp $
+
+  16 Apr 2015; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  add Gokturk Yeksek as proxy-maintainer
 
   09 Mar 2015; Mike Frysinger <vapier@gentoo.org> libaio-0.3.110.ebuild:
   Disable frame-pointer usage for arm systems when thumb is enabled.
