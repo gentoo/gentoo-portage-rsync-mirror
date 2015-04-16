@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.210 2015/04/15 11:44:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.211 2015/04/16 08:41:43 polynomial-c Exp $
+
+*cracklib-2.9.4 (16 Apr 2015)
+
+  16 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> +cracklib-2.9.4.ebuild:
+  Version bump.
 
 *cracklib-2.9.3 (15 Apr 2015)
 
