@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.7.1.ebuild,v 1.3 2015/04/16 17:54:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-4.0.0.ebuild,v 1.1 2015/04/16 17:54:50 prometheanfire Exp $
 
 EAPI="5"
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -33,11 +33,10 @@ ruby_add_rdepend "
 	virtual/ruby-ssl"
 
 DEPEND="${DEPEND}
-	ruby_targets_ruby19? ( dev-lang/ruby:1.9[yaml] )
+	dev-lang/ruby
 	emacs? ( virtual/emacs )
 	xemacs? ( app-editors/xemacs )"
 RDEPEND="${RDEPEND}
-	ruby_targets_ruby19? ( dev-lang/ruby:1.9[yaml] )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
 	selinux? (
 		sys-libs/libselinux[ruby]
@@ -57,15 +56,9 @@ all_ruby_prepare() {
 	# Avoid spec that require unpackaged json-schema.
 	rm spec/lib/matchers/json.rb $( grep -Rl matchers/json spec) || die
 
-	# Avoid Rails specs to avoid this dependency and because they
-	# currently fail against Rails 4.1.
-	find spec -type f -name '*rails*' -o -name '*active_record*' | xargs rm || die
-	rm -r spec/unit/rails || die
-	rm spec/unit/parser/collector_spec.rb || die
-
 	# Avoid specs that can only run in the puppet.git repository. This
 	# should be narrowed down to the specific specs.
-	rm spec/integration/parser/compiler_spec.rb spec/integration/parser/future_compiler_spec.rb || die
+	rm spec/integration/parser/compiler_spec.rb || die
 
 	# Avoid failing spec that need further investigation.
 	rm spec/unit/module_tool/metadata_spec.rb || die

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.213 2015/04/14 12:17:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.214 2015/04/16 17:54:50 prometheanfire Exp $
+
+*puppet-4.0.0 (16 Apr 2015)
+
+  16 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> +puppet-4.0.0.ebuild,
+  puppet-2.7.24.ebuild, puppet-2.7.25.ebuild, puppet-3.4.1.ebuild,
+  puppet-3.6.2.ebuild, puppet-3.7.1.ebuild, puppet-3.7.2.ebuild,
+  puppet-3.7.3.ebuild, puppet-3.7.4.ebuild:
+  src_uri had to change, also, puppet 4.0.0
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> puppet-3.7.3.ebuild:
   Stable for sparc, wrt bug #536168

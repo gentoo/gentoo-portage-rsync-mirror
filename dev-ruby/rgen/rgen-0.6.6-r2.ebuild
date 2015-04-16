@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/rgen-0.7.0.ebuild,v 1.2 2015/04/16 17:58:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/rgen-0.6.6-r2.ebuild,v 1.1 2015/04/16 17:58:13 mrueg Exp $
 
 EAPI=5
 
@@ -20,12 +20,6 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 ruby_add_rdepend "dev-ruby/nokogiri"
 
-all_ruby_prepare() {
-	# Skip Bignum test since it fails on 64bit machines. Reported
-	# upstream: https://github.com/mthiede/rgen/pull/18
-	sed -e '273 s:^:#:' -i test/metamodel_builder_test.rb || die
-}
-
 each_ruby_test() {
-	${RUBY} -Ilib -S testrb $(find test -type f -name '*_test.rb') || die
+	${RUBY} -S testrb $(find test -type f -name '*_test.rb') || die
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.24.ebuild,v 1.6 2014/01/06 09:29:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.24.ebuild,v 1.7 2015/04/16 17:54:50 prometheanfire Exp $
 
 EAPI="5"
 USE_RUBY="ruby19"
@@ -13,7 +13,7 @@ inherit elisp-common xemacs-elisp-common eutils ruby-fakegem user
 
 DESCRIPTION="A system automation and configuration management software"
 HOMEPAGE="http://puppetlabs.com/"
-SRC_URI="http://www.puppetlabs.com/downloads/puppet/${P}.tar.gz"
+SRC_URI="http://downloads.puppetlabs.com/puppet/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
