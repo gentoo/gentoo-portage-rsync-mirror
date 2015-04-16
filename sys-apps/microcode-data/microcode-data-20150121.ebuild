@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20150121.ebuild,v 1.2 2015/04/14 09:32:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/microcode-data-20150121.ebuild,v 1.3 2015/04/16 19:16:15 vapier Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="http://downloadmirror.intel.com/${NUM}/eng/microcode-${PV}.tgz"
 
 LICENSE="intel-ucode"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RDEPEND="!<sys-apps/microcode-ctl-1.17-r2" #268586

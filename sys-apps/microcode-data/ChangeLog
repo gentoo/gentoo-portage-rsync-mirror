@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/microcode-data
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.35 2015/04/14 09:32:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.36 2015/04/16 19:16:15 vapier Exp $
+
+  16 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  microcode-data-20150121.ebuild:
+  Mark x86 stable #546182.
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> microcode-data-20150121.ebuild:
   Stable for amd64, wrt bug #546182
