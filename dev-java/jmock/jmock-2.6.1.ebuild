@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-2.6.1.ebuild,v 1.1 2015/04/14 18:54:51 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/jmock-2.6.1.ebuild,v 1.3 2015/04/16 09:10:38 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.jmock.org"
 
 LICENSE="BSD"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 CDEPEND="dev-java/hamcrest-core:1.3

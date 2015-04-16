@@ -4,15 +4,24 @@
 	<herd>proxy-maintainers</herd>
         <maintainer>
                 <email>bugs@bergstroem.nu</email>
-                <name>Johan Bergstroem</name>
+                <name>Johan Bergström</name>
         </maintainer>
 	<maintainer>
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>
+	<upstream>
+		<maintainer status="active">
+			<email>bugs@bergstroem.nu</email>
+			<name>Johan Bergström</name>
+		</maintainer>
+		<doc lang="en">https://iojs.org/api/</doc>
+		<changelog>https://github.com/iojs/io.js/blob/v1.x/CHANGELOG.md</changelog>
+		<bugs-to>https://github.com/iojs/io.js/issues</bugs-to>
+	</upstream>
 	<use>
-	<flag name='bundled-libs'>Use bundled libs instead of system libs</flag>
-	<flag name='npm'>Enable NPM package manager</flag>
-	<flag name='snapshot'>Enable snapshot creation for faster startup</flag>
+		<flag name='bundled-libs'>Use bundled libs instead of system libs</flag>
+		<flag name='npm'>Enable NPM package manager</flag>
+		<flag name='snapshot'>Enable snapshot creation for faster startup</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/translate-toolkit-1.12.0.ebuild,v 1.1 2015/01/10 06:57:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/translate-toolkit-1.12.0.ebuild,v 1.2 2015/04/16 09:27:57 jlec Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -34,10 +34,9 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 python_prepare_all() {
 	# Prevent unwanted d'loading in doc build
-	sed -e "/^    'sphinx.ext.intersphinx',/d" -i docs/conf.py
+	sed -e "/^    'sphinx.ext.intersphinx',/d" -i docs/conf.py || die
 
 	distutils-r1_python_prepare_all
-	mkdir man
 }
 
 python_compile_all() {
@@ -48,35 +47,25 @@ python_install_all() {
 	use doc && local HTML_DOCS=( "${S}"/docs/_build/html/. )
 	distutils-r1_python_install_all
 	rm -Rf docs || die
-
-	local filename binary
-	einfo "Generating man pages..."
-	for binary in "${D}"/usr/bin/*; do
-		filename=$(basename "${binary}")
-		${file} --man > "${S}"/man/${filename}.1 2> /dev/null
-	done
-	# doman doesn't want to work
-	insinto /usr/share/man
-	doins man/*.1
 }
 
 python_install() {
 	distutils-r1_python_install
 
 	if ! use html; then
-		rm "${D}"/usr/bin/html2po || die
-		rm "${D}"/usr/bin/po2html || die
+		rm "${ED}"/usr/bin/html2po || die
+		rm "${ED}"/usr/bin/po2html || die
 	fi
 	if ! use ical; then
-		rm "${D}"/usr/bin/ical2po || die
-		rm "${D}"/usr/bin/po2ical || die
+		rm "${ED}"/usr/bin/ical2po || die
+		rm "${ED}"/usr/bin/po2ical || die
 	fi
 	if ! use ini; then
-		rm "${D}"/usr/bin/ini2po || die
-		rm "${D}"/usr/bin/po2ini || die
+		rm "${ED}"/usr/bin/ini2po || die
+		rm "${ED}"/usr/bin/po2ini || die
 	fi
 	if ! use subtitles; then
-		rm "${D}"/usr/bin/sub2po || die
-		rm "${D}"/usr/bin/po2sub || die
+		rm "${ED}"/usr/bin/sub2po || die
+		rm "${ED}"/usr/bin/po2sub || die
 	fi
 }

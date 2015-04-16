@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.26 2015/04/14 18:54:51 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.28 2015/04/16 09:10:38 ago Exp $
+
+  16 Apr 2015; Agostino Sarubbo <ago@gentoo.org> jmock-2.6.1.ebuild:
+  Stable for x86, wrt bug #546298
+
+  16 Apr 2015; Agostino Sarubbo <ago@gentoo.org> jmock-2.6.1.ebuild:
+  Stable for amd64, wrt bug #546298
 
 *jmock-2.6.1 (14 Apr 2015)
 
