@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+<<<<<<< HEAD
 # $Header: $
+=======
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/clearlooks-phenix/clearlooks-phenix-6.0.3.ebuild,v 1.2 2015/04/16 08:50:32 idella4 Exp $
+>>>>>>> upstream/master
 
 EAPI=5
 
@@ -15,10 +19,18 @@ IUSE=""
 
 RDEPEND="
 	>=x11-libs/gtk+-3.14.0:3
+<<<<<<< HEAD
 	x11-themes/gtk-engines
 "
+=======
+	x11-themes/gtk-engines"
+>>>>>>> upstream/master
 
 src_install() {
 	insinto "/usr/share/themes/Clearlooks-Phenix"
 	doins -r *
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/master
