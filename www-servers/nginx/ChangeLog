@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.405 2015/04/07 14:47:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.406 2015/04/16 07:48:37 mgorny Exp $
+
+*nginx-1.7.12 (16 Apr 2015)
+
+  16 Apr 2015; Michał Górny <mgorny@gentoo.org> +nginx-1.7.12.ebuild:
+  Version bump along with http_headers_more module update.
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/97 by jbergstroem.
 
 *nginx-1.7.11 (28 Mar 2015)
 
