@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/r8168-8.039.00.ebuild,v 1.1 2015/03/24 22:44:54 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/r8168/r8168-8.039.00.ebuild,v 1.2 2015/04/16 22:48:37 chewi Exp $
 
 EAPI=5
 
@@ -20,6 +20,10 @@ BUILD_TARGETS="modules"
 CONFIG_CHECK="!R8169"
 
 ERROR_R8169="${P} requires Realtek 8169 PCI Gigabit Ethernet adapter (CONFIG_R8169) to be DISABLED"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-linux-4-compat.patch"
+}
 
 pkg_setup() {
 	linux-mod_pkg_setup
