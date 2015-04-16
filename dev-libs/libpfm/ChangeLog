@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpfm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpfm/ChangeLog,v 1.1 2014/07/31 11:13:34 slis Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpfm/ChangeLog,v 1.2 2015/04/16 04:45:56 slis Exp $
+
+*libpfm-4.6.0 (16 Apr 2015)
+
+  16 Apr 2015; Sławek Lis <slis@gentoo.org> +libpfm-4.6.0.ebuild:
+  version bump (#538404)
 
 *libpfm-4.4.0 (31 Jul 2014)
 
