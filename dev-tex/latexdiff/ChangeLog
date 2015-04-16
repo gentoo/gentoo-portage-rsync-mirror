@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latexdiff
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.28 2015/02/28 21:25:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.29 2015/04/15 23:30:16 ottxor Exp $
+
+*latexdiff-1.1.0 (15 Apr 2015)
+
+  15 Apr 2015; Christoph Junghans <ottxor@gentoo.org> +latexdiff-1.1.0.ebuild:
+  version bump
 
 *latexdiff-1.0.4 (28 Feb 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kapidox/kapidox-5.9.0.ebuild,v 1.1 2015/04/11 17:09:50 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kapidox/kapidox-5.9.0.ebuild,v 1.2 2015/04/15 23:30:30 dlan Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit kde5 distutils-r1
 
 DESCRIPTION="Framework for building KDE API documentation in a standard format and style"
 LICENSE="BSD-2"
-KEYWORDS=" ~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE=""
 
 RDEPEND="

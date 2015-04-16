@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.17 2015/03/30 23:31:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.18 2015/04/15 23:10:51 blueness Exp $
 
 EAPI=5
 
@@ -26,13 +26,11 @@ if [[ ${PV} != "9999" ]] ; then
 	KEYWORDS="-* ~amd64 ~arm ~mips ~ppc ~x86"
 fi
 
-LICENSE="MIT"
+LICENSE="MIT LGPL-2 GPL-2"
 SLOT="0"
 IUSE="crosscompile_opts_headers-only"
 
-if [[ ${CATEGORY} != cross-* ]] ; then
-	RDEPEND+=" sys-apps/getent"
-fi
+RDEPEND="!sys-apps/getent"
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
@@ -84,6 +82,13 @@ src_install() {
 	is_crosscompile && sysroot=/usr/${CTARGET}
 	local ldso=$(basename "${D}"${sysroot}/lib/ld-musl-*)
 	dosym ${sysroot}/lib/${ldso} ${sysroot}/usr/bin/ldd
+
+	if [[ ${CATEGORY} != cross-* ]] ; then
+		into /usr
+		dobin "${FILESDIR}"/getent
+		into /
+		dosbin "${FILESDIR}"/ldconfig
+	fi
 }
 
 pkg_postinst() {
@@ -91,8 +96,6 @@ pkg_postinst() {
 
 	[ "${ROOT}" != "/" ] && return 0
 
-	# TODO: musl doesn't use ldconfig, instead here we can
-	# create sym links to libraries outside of /lib and /usr/lib
 	ldconfig
 	# reload init ...
 	/sbin/telinit U 2>/dev/null

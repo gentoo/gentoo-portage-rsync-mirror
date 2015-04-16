@@ -4,11 +4,11 @@ DESCRIPTION=Framework for building KDE API documentation in a standard format an
 EAPI=5
 HOMEPAGE=http://www.kde.org/
 IUSE=python_targets_python2_7 python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~arm64 ~x86
 LICENSE=BSD-2
 RDEPEND=app-doc/doxygen dev-python/jinja[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/pyyaml[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)] media-gfx/graphviz[python] >=kde-frameworks/kf-env-3 >=dev-qt/qtcore-5.4.1:5 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 python_targets_python3_4 )
 SLOT=5/5.9
 SRC_URI=mirror://kde/stable/frameworks/5.9/kapidox-5.9.0.tar.xz
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c263990f1b677b0f0be0a3299f179762	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	kde5	37cffb3dabdcf4e2868319abe52df014	kde5-functions	dfc28407fa320e8dacf9c2f3beefa93f	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	6d3a3cb5705b9fff1aeb7cfa4e3336fe	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=54c15b4dc156e608a699a77a0ac8afb4
+_md5_=9dc26bd511b8998748fb17c2f74b4f50

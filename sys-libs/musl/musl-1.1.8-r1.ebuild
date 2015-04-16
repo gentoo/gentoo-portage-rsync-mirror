@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.6.ebuild,v 1.3 2015/02/27 08:07:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.8-r1.ebuild,v 1.1 2015/04/15 23:10:51 blueness Exp $
 
 EAPI=5
 
@@ -23,16 +23,14 @@ HOMEPAGE="http://www.musl-libc.org/"
 if [[ ${PV} != "9999" ]] ; then
 	PATCH_VER=""
 	SRC_URI="http://www.musl-libc.org/releases/${P}.tar.gz"
-	KEYWORDS="-* amd64 arm ~mips ppc x86"
+	KEYWORDS="-* ~amd64 ~arm ~mips ~ppc ~x86"
 fi
 
-LICENSE="MIT"
+LICENSE="MIT LGPL-2 GPL-2"
 SLOT="0"
 IUSE="crosscompile_opts_headers-only"
 
-if [[ ${CATEGORY} != cross-* ]] ; then
-	RDEPEND+=" sys-apps/getent"
-fi
+RDEPEND="!sys-apps/getent"
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
@@ -57,9 +55,12 @@ src_configure() {
 	tc-getCC ${CTARGET}
 	just_headers && export CC=true
 
+	local sysroot
+	is_crosscompile && sysroot=/usr/${CTARGET}
 	./configure \
-		--target="${CTARGET}" \
-		--prefix="/usr" \
+		--target=${CTARGET} \
+		--prefix=${sysroot}/usr \
+		--syslibdir=${sysroot}/lib \
 		--disable-gcc-wrapper
 }
 
@@ -71,18 +72,22 @@ src_compile() {
 }
 
 src_install() {
-	local sysroot=${D}
-	is_crosscompile && sysroot+="/usr/${CTARGET}"
-
 	local target="install"
 	just_headers && target="install-headers"
-	emake DESTDIR="${sysroot}" ${target} || die
+	emake DESTDIR="${D}" ${target} || die
+	just_headers && return 0
 
-	# Make sure we install the sys-include symlink so that when
-	# we build a 2nd stage cross-compiler, gcc finds the target
-	# system headers correctly.  See gcc/doc/gccinstall.info
-	if is_crosscompile ; then
-		dosym usr/include /usr/${CTARGET}/sys-include
+	# musl provides ldd via a sym link to its ld.so
+	local sysroot
+	is_crosscompile && sysroot=/usr/${CTARGET}
+	local ldso=$(basename "${D}"${sysroot}/lib/ld-musl-*)
+	dosym ${sysroot}/lib/${ldso} ${sysroot}/usr/bin/ldd
+
+	if [[ ${CATEGORY} != cross-* ]] ; then
+		into /usr
+		dobin "${FILESDIR}"/getent
+		into /
+		dosbin "${FILESDIR}"/ldconfig
 	fi
 }
 
@@ -91,8 +96,6 @@ pkg_postinst() {
 
 	[ "${ROOT}" != "/" ] && return 0
 
-	# TODO: musl doesn't use ldconfig, instead here we can
-	# create sym links to libraries outside of /lib and /usr/lib
 	ldconfig
 	# reload init ...
 	/sbin/telinit U 2>/dev/null
