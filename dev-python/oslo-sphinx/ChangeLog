@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/oslo-sphinx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-sphinx/ChangeLog,v 1.11 2015/03/25 18:29:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-sphinx/ChangeLog,v 1.12 2015/04/16 06:17:59 mgorny Exp $
+
+  16 Apr 2015; Michał Górny <mgorny@gentoo.org> -oslo-sphinx-2.1.0.ebuild,
+  -oslo-sphinx-2.2.0.ebuild:
+  Drop old versions due to removed dependent dev-python/pbr versions
 
 *oslo-sphinx-2.5.0 (25 Mar 2015)
 
