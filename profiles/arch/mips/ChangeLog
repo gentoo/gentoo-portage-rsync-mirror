@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.160 2015/04/12 11:26:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.161 2015/04/16 22:05:25 vapier Exp $
+
+  16 Apr 2015; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Drop USE=wifi mask since it works on mips.
 
   12 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> package.use.mask:
   Mask gnome-shell use flag for net-misc/wicd (bug #537040)

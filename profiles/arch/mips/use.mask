@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.82 2015/02/11 16:09:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.83 2015/04/16 22:05:25 vapier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -187,11 +187,6 @@ mono
 # Temporarily masking ieee1394 until it can be tested
 # Quick fix to my tree b0rkage
 ieee1394
-
-# Hardave Riar <hardave@gentoo.org>
-# Temporarily masking wifi until I can test it
-# Preventing kde from going stable
-wifi
 
 # Henrik Brix Andersen <brix@gentoo.org>
 # According to the mips herd, we currently have no way of testing
