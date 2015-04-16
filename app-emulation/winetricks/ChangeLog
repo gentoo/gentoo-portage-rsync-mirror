@@ -2,6 +2,12 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.31 2015/03/23 05:34:46 tetromino Exp $
 
+*winetricks-20150416 (16 Apr 2015)
+
+  16 Apr 2015; NP-Hardass <np.hardass@gmail.com> +winetricks-20150416.ebuild,
+  -winetricks-20141130.ebuild, winetricks-99999999.ebuild:
+  Version bump to 20150416. Drop old. Update SRC_URI to use git tags.
+
   23 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   winetricks-20141130.ebuild, winetricks-99999999.ebuild:
   Move live git uri from google code (shutting down) to github.
@@ -188,4 +194,3 @@
   01 Mar 2011; Mike Frysinger <vapier@gentoo.org> +winetricks-185.ebuild,
   +metadata.xml:
   Initial ebuild.
-
