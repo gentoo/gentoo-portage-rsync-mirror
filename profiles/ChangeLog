@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9932 2015/04/15 12:17:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9933 2015/04/16 11:48:16 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Apr 2015; Ben de Groot <yngwin@gentoo.org> base/make.defaults:
+  Remove USE=libav default. See news item 2015-04-16 ffmpeg default.
 
   15 Apr 2015; Ulrich Müller <ulm@gentoo.org> profiles.desc:
   [QA] Revert default/linux/arm/13.0 profile back to stable. This has been
