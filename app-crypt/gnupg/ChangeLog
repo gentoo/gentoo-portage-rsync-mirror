@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.595 2015/04/14 12:23:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.596 2015/04/17 09:13:05 k_f Exp $
+
+*gnupg-2.1.3-r2 (17 Apr 2015)
+
+  17 Apr 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.1.3-r2.ebuild,
+  -gnupg-2.1.3-r1.ebuild:
+  Remove the warning about being a developer version that showed up due to the
+  LDAP fix
 
   14 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gnupg-2.1.3-r1.ebuild:
   Add ~amd64 keyword wrt bug #546478

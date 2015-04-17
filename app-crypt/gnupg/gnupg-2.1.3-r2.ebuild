@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.3-r1.ebuild,v 1.3 2015/04/14 12:23:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.3-r2.ebuild,v 1.1 2015/04/17 09:13:05 k_f Exp $
 
 EAPI="5"
 
@@ -102,6 +102,13 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_with readline) \
 		CC_FOR_BUILD="$(tc-getBUILD_CC)"
+
+	# Due to the LDAP patch specific to 2.1.3 is causing an eautoreconf 
+        # it shows up as being a developer version and with "unknown" suffix
+        # we remove this explicitly for the 2.1.3 release as it does not contain
+        # unstable code
+	sed -i "s/#define IS_DEVELOPMENT_VERSION 1//" config.h || die
+	sed -i "s/2.1.3-unknown/2.1.3/" config.h || die
 }
 
 src_compile() {
