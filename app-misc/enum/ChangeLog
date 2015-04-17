@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/enum
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/enum/ChangeLog,v 1.5 2012/02/02 20:23:00 sping Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/enum/ChangeLog,v 1.6 2015/04/17 00:27:50 mrueg Exp $
+
+  17 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -enum-1.0.1-r1.ebuild,
+  -enum-1.0.1.ebuild, -enum-1.0.2.ebuild, -enum-1.0.3.ebuild:
+  Remove old.
 
 *enum-1.1 (02 Feb 2012)
 
@@ -27,4 +31,3 @@
   25 Oct 2010; Sebastian Pipping <sping@gentoo.org> +enum-1.0.1.ebuild,
   +metadata.xml:
   New package
-

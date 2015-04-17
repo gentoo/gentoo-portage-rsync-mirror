@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/g15stats
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/ChangeLog,v 1.10 2013/11/03 12:09:00 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15stats/ChangeLog,v 1.11 2015/04/17 00:23:32 mrueg Exp $
+
+  17 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -files/g15stats-1.0.confd,
+  -files/g15stats-1.0.initd, -g15stats-1.0.ebuild:
+  Remove old.
 
   03 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
   Added myself as maintainer.

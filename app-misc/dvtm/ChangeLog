@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvtm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.18 2014/05/23 13:40:11 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvtm/ChangeLog,v 1.19 2015/04/17 00:28:37 mrueg Exp $
+
+  17 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -dvtm-0.7.ebuild:
+  Remove old.
 
 *dvtm-0.11 (23 May 2014)
 

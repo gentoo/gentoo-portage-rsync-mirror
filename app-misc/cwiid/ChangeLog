@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/cwiid
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/ChangeLog,v 1.9 2014/12/27 14:01:42 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cwiid/ChangeLog,v 1.10 2015/04/17 00:24:52 mrueg Exp $
+
+  17 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -cwiid-20110107-r1.ebuild:
+  Remove old.
 
 *cwiid-20110107-r2 (27 Dec 2014)
 
