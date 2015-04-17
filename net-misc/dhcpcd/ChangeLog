@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.451 2015/03/27 17:02:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.452 2015/04/17 08:29:05 zlogene Exp $
+
+  17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> dhcpcd-6.6.7.ebuild:
+  sparc stable wrt bug #538418
 
   27 Mar 2015; William Hubbs <williamh@gentoo.org> -dhcpcd-6.4.5.ebuild,
   -dhcpcd-6.5.0.ebuild, -dhcpcd-6.5.1.ebuild, -dhcpcd-6.6.6.ebuild:

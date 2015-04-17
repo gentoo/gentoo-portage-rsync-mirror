@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.7.5.ebuild,v 1.1 2015/04/17 02:00:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.7.5.ebuild,v 1.2 2015/04/17 08:29:33 idella4 Exp $
 
 EAPI=5
 
@@ -29,7 +29,6 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 DOCS=( NEWS docs/{evolution.txt,faq.txt} )
-#DISTUTILS_IN_SOURCE_BUILD=1
 
 python_test() {
 	# Draws 1 trivial fail under django django-1.4.x

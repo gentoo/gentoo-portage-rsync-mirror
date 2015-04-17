@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ncdu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.50 2015/04/17 08:00:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.51 2015/04/17 08:03:38 jlec Exp $
+
+*ncdu-1.11 (17 Apr 2015)
+
+  17 Apr 2015; Justin Lecher <jlec@gentoo.org> +ncdu-1.11.ebuild:
+  Version Bump
 
   17 Apr 2015; Justin Lecher <jlec@gentoo.org> -ncdu-1.9.ebuild:
   Drop old
