@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.6.7.ebuild,v 1.3 2015/04/05 22:15:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.6.7.ebuild,v 1.4 2015/04/17 04:55:28 phajdan.jr Exp $
 
 EAPI=5
 
@@ -307,6 +307,9 @@ src_prepare() {
 		sed -e 's|PHP_ADD_LIBRARY(k5crypto, 1, $1)||g' -i acinclude.m4 \
 			|| die "Failed to fix heimdal crypt library reference"
 	fi
+
+	# Fix build with libvpx-1.4.0, bug #545952 .
+	epatch "${FILESDIR}/${PN}-libvpx.patch"
 
 	#Add user patches #357637
 	epatch_user
