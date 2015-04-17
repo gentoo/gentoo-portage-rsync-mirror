@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.13.ebuild,v 1.1 2015/03/13 12:38:04 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.13-r1.ebuild,v 1.1 2015/04/17 14:30:51 tamiko Exp $
 
 EAPI=5
 
@@ -400,8 +400,8 @@ src_install() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	use systemd && \
-		systemd_install_serviced "${FILESDIR}"/libvirtd.service.conf libvirtd
+	use systemd && systemd_install_serviced \
+		"${FILESDIR}"/libvirtd.service.conf libvirtd.service
 
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
@@ -451,7 +451,7 @@ pkg_postinst() {
 		elog ""
 		elog "The systemd service-file configuration under /etc/sysconfig has"
 		elog "been removed. Please use"
-		elog "    /etc/systemd/system/libvirt.d/00gentoo.conf"
+		elog "    /etc/systemd/system/libvirtd.service.d/00gentoo.conf"
 		elog "to control the '--listen' parameter for libvirtd. The configuration"
 		elog "for the libvirt-guests.service is now found under"
 		elog "    /etc/libvirt/libvirt-guests.conf"

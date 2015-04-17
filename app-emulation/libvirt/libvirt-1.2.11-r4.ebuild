@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.73 2015/04/17 14:30:51 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.11-r4.ebuild,v 1.1 2015/04/17 14:30:51 tamiko Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${P/_rc/-rc}"
 
 inherit eutils user autotools linux-info systemd readme.gentoo
 
-BACKPORTS=""
+BACKPORTS="20150127"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -115,7 +115,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
 	dev-lang/perl
-	dev-perl/XML-XPath
 	dev-libs/libxslt"
 
 DOC_CONTENTS="For the basic networking support (bridged and routed networks)

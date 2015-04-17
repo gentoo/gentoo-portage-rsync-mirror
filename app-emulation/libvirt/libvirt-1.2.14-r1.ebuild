@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.11-r3.ebuild,v 1.1 2015/01/27 10:42:52 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.14-r1.ebuild,v 1.1 2015/04/17 14:30:51 tamiko Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${P/_rc/-rc}"
 
 inherit eutils user autotools linux-info systemd readme.gentoo
 
-BACKPORTS="20150127"
+BACKPORTS=""
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -36,10 +36,10 @@ S="${WORKDIR}/${P%_rc*}"
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
+# TODO: Reenable IUSE wireshark-plugins
 IUSE="audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm lxc \
 	+macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
-	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
-	elibc_glibc systemd"
+	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc systemd"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	lxc? ( caps libvirtd )
 	openvz? ( libvirtd )
@@ -56,6 +56,8 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 # We can use both libnl:1.1 and libnl:3, but if you have both installed, the
 # package will use 3 by default. Since we don't have slot pinning in an API,
 # we must go with the most recent
+
+# wireshark-plugins? ( net-analyzer/wireshark:= )
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
@@ -99,7 +101,6 @@ RDEPEND="sys-libs/readline
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	systemd? ( sys-apps/systemd )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
-	wireshark-plugins? ( net-analyzer/wireshark:= )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( virtual/udev >=x11-libs/libpciaccess-0.10.9 )
 	virt-network? ( net-dns/dnsmasq[script]
@@ -115,6 +116,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
 	dev-lang/perl
+	dev-perl/XML-XPath
 	dev-libs/libxslt"
 
 DOC_CONTENTS="For the basic networking support (bridged and routed networks)
@@ -331,7 +333,7 @@ src_configure() {
 	myconf+=" $(use_with audit)"
 
 	# wireshark dissector
-	myconf+=" $(use_with wireshark-plugins wireshark-dissector)"
+	# myconf+=" $(use_with wireshark-plugins wireshark-dissector)"
 
 	## stuff we don't yet support
 	myconf+=" --without-netcf"
@@ -399,8 +401,8 @@ src_install() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	use systemd && \
-		systemd_install_serviced "${FILESDIR}"/libvirtd.service.conf libvirtd
+	use systemd && systemd_install_serviced \
+		"${FILESDIR}"/libvirtd.service.conf libvirtd.service
 
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
@@ -450,7 +452,7 @@ pkg_postinst() {
 		elog ""
 		elog "The systemd service-file configuration under /etc/sysconfig has"
 		elog "been removed. Please use"
-		elog "    /etc/systemd/system/libvirt.d/00gentoo.conf"
+		elog "    /etc/systemd/system/libvirtd.service.d/00gentoo.conf"
 		elog "to control the '--listen' parameter for libvirtd. The configuration"
 		elog "for the libvirt-guests.service is now found under"
 		elog "    /etc/libvirt/libvirt-guests.conf"
