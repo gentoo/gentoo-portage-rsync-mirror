@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.121 2015/04/14 10:51:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.122 2015/04/17 10:40:33 zlogene Exp $
+
+  17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  emacs-common-gentoo-1.5.ebuild:
+  sparc stable wrt bug #544448
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> emacs-common-gentoo-1.5.ebuild:
   Stable for ia64, wrt bug #544448
