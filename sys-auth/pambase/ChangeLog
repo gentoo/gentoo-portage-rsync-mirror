@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.142 2015/02/21 18:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.143 2015/04/17 15:07:25 swift Exp $
+
+  17 Apr 2015; Sven Vermeulen <swift@gentoo.org> pambase-20150213.ebuild,
+  +files/pambase-20150213-selinux-note.patch:
+  Fix note in system-login so it is not seen as a processor directive (bug
+  #540096)
 
   21 Feb 2015; Mike Frysinger <vapier@gentoo.org> pambase-20150213.ebuild:
   Fix typo in SRC_URI after typo fix
