@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/noip-updater
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.50 2014/07/08 15:44:33 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.51 2015/04/17 06:03:40 idella4 Exp $
+
+  17 Apr 2015; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  set proxy maintainer under supervision of the proxy-maintainers project per
+  request to the project via email
 
   08 Jul 2014; Pacho Ramos <pacho@gentoo.org> files/noip.service:
   Needs network-online (#512056 by Martin Vath)
