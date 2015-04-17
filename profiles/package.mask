@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16483 2015/04/17 04:58:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16484 2015/04/17 05:04:27 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (17 Apr 2015)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-44
 
 # James Le Cuirot <chewi@gentoo.org> (14 Apr 2015)
 # Not updated beyond Java 6, no longer supported upstream, full of
@@ -454,11 +459,6 @@ media-sound/rubyripper
 # No longer required as it's now part of www-apps/trac
 # (#542092). Removal in a month.
 www-apps/trac-git
-
-# Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (19 Mar 2015)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-43
 
 # Pacho Ramos <pacho@gentoo.org> (19 Mar 2015)
 # Dead for years, unmaintained, doesn't respect CFLAGS,
