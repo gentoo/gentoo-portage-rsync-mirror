@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-0.3.5.ebuild,v 1.2 2015/01/26 05:21:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-1.0.0.ebuild,v 1.1 2015/04/17 09:58:06 idella4 Exp $
 
 EAPI=5
 
