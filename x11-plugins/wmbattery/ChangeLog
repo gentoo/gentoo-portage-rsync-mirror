@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbattery
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.35 2014/11/05 13:05:51 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/ChangeLog,v 1.36 2015/04/17 12:10:54 voyageur Exp $
+
+*wmbattery-2.47 (17 Apr 2015)
+
+  17 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> +wmbattery-2.47.ebuild:
+  Version bump, better upower support and apm is now optional
 
   05 Nov 2014; Bernard Cafarelli <voyageur@gentoo.org> wmbattery-2.45.ebuild:
   Host tarball on my devspace, bug #527610
