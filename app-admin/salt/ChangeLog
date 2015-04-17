@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.58 2015/04/08 07:30:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.59 2015/04/17 21:29:28 chutzpah Exp $
+
+  17 Apr 2015; Patrick McLean <chutzpah@gentoo.org> -salt-2014.7.0.ebuild,
+  -salt-2014.7.2.ebuild, salt-2014.1.13.ebuild:
+  Remove old 2014.7 versions, unkeyword 2014.1.13 for security bug #546904.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> salt-2014.1.13.ebuild:
   Remove old Python implementations

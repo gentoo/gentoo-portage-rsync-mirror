@@ -4,11 +4,11 @@ DESCRIPTION=Oracle's Java SE Runtime Environment
 EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IUSE=X alsa fontconfig jce nsplugin pax_kernel selinux
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=Oracle-BCLA-JavaSE
 RDEPEND=X? ( x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst x11-libs/libX11 ) alsa? ( media-libs/alsa-lib ) fontconfig? ( media-libs/fontconfig ) !prefix? ( sys-libs/glibc ) selinux? ( sec-policy/selinux-java ) =dev-java/java-config-2* || ( app-eselect/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
 SLOT=1.8
 SRC_URI=x86? ( jre-8u45-linux-i586.tar.gz ) amd64? ( jre-8u45-linux-x64.tar.gz ) jce? ( jce_policy-8.zip )
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	3be2b41fb351dbaa00c7d14a732c75cd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=dd77a5717d6f2f4ee09c95859d2b5d33
+_md5_=6715c605731fa23c3416d95e437f494d
