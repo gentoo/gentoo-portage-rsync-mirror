@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16484 2015/04/17 05:04:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16485 2015/04/17 19:53:56 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -334,7 +334,7 @@ net-irc/xchat-gnome
 
 # Pacho Ramos <pacho@gentoo.org> (22 Mar 2015)
 # Hardmasked for a long time and still broken (#533626).
-# Removal in a month.
+# Removal postponed waiting for bug #463362
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2014)
 # Dead upstream, has known dataloss bugs.
 # Please use something more sane: rsnapshot, backuppc, obnam, ...
