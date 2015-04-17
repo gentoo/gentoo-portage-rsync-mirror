@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.941 2015/03/05 21:17:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.942 2015/04/17 03:16:43 idella4 Exp $
+
+  17 Apr 2015; Ian Delaney <idella4@gentoo.org> metadata.xml, vlc-2.2.0.ebuild:
+  substitute proxy maintainer, P. Stankowski gave notice of withdrawal, new
+  maintainer set in metadata
 
   05 Mar 2015; Luca Barbato <lu_zero@gentoo.org> vlc-2.2.0.ebuild:
   Drop the postproc constrain over specific user request
