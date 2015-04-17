@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmfsm
-# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.15 2014/09/01 21:18:24 voyageur Exp $
+# Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.16 2015/04/17 11:31:20 voyageur Exp $
+
+*wmfsm-0.35 (17 Apr 2015)
+
+  17 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> +wmfsm-0.35.ebuild:
+  Version bump with new homepage
 
 *wmfsm-0.34-r2 (01 Sep 2014)
 
