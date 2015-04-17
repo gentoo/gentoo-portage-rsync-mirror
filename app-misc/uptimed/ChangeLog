@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.109 2015/02/24 09:11:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.110 2015/04/17 11:42:00 polynomial-c Exp $
+
+*uptimed-0.4.0 (17 Apr 2015)
+
+  17 Apr 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -uptimed-0.3.17-r2.ebuild, +uptimed-0.4.0.ebuild:
+  Version bump. Removed old.
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> uptimed-0.3.18.ebuild:
   Stable for alpha, wrt bug #533278

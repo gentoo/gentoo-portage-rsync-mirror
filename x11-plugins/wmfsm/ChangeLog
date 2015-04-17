@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfsm
 # Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.16 2015/04/17 11:31:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/ChangeLog,v 1.17 2015/04/17 11:35:13 voyageur Exp $
+
+  17 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> wmfsm-0.35.ebuild:
+  Unneeded dependency
 
 *wmfsm-0.35 (17 Apr 2015)
 

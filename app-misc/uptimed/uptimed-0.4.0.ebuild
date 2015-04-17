@@ -1,18 +1,18 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.17-r2.ebuild,v 1.1 2013/12/22 08:29:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.4.0.ebuild,v 1.1 2015/04/17 11:42:00 polynomial-c Exp $
 
 EAPI=5
 
 inherit autotools eutils user systemd
 
 DESCRIPTION="System uptime record daemon that keeps track of your highest uptimes"
-HOMEPAGE="http://podgorny.cz/uptimed"
-SRC_URI="http://podgorny.cz/uptimed/releases/${P}.tar.bz2"
+HOMEPAGE="https://github.com/rpodgorny/uptimed/"
+SRC_URI="https://github.com/rpodgorny/uptimed/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="static-libs"
 
 pkg_setup() {
@@ -37,8 +37,8 @@ src_install() {
 	prune_libtool_files --all
 	keepdir /var/spool/uptimed
 	fowners uptimed:uptimed /var/spool/uptimed
-	dodoc ChangeLog README TODO AUTHORS CREDITS INSTALL.cgi sample-cgi/*
-	newinitd "${FILESDIR}"/uptimed.init uptimed
+	dodoc ChangeLog README.md TODO AUTHORS CREDITS INSTALL.cgi sample-cgi/*
+	newinitd "${FILESDIR}"/${PN}.init uptimed
 	systemd_dounit "${FILESDIR}/${PN}.service"
 }
 

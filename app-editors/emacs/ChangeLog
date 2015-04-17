@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.680 2015/04/17 10:42:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.681 2015/04/17 11:51:07 ulm Exp $
+
+  17 Apr 2015; Ulrich Müller <ulm@gentoo.org> -emacs-23.4-r11.ebuild,
+  -emacs-24.3-r6.ebuild:
+  Remove old.
 
   17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> emacs-23.4-r13.ebuild,
   emacs-24.4-r4.ebuild:

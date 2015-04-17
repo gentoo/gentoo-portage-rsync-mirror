@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.35.ebuild,v 1.1 2015/04/17 11:31:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfsm/wmfsm-0.35.ebuild,v 1.2 2015/04/17 11:35:13 voyageur Exp $
 
 EAPI=5
 
@@ -21,8 +21,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	x11-proto/xproto
-	x11-proto/xextproto"
+	x11-proto/xproto"
 
 S=${WORKDIR}/dockapps
 
