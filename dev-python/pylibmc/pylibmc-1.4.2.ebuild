@@ -25,10 +25,6 @@ python_prepare_all() {
 	distutils-r1_python_prepare_all
 }
 
-src_test() {
-	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
-}
-
 python_test() {
 	local PIDDIR="${T}/${EPYTHON}-pylibmc"
 	mkdir "${PIDDIR}" || die
