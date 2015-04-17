@@ -1,21 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.51 2015/04/17 15:37:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.7.ebuild,v 1.1 2015/04/17 15:37:50 xmw Exp $
 
 EAPI=5
 
-inherit eutils git-2 multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs vcs-snapshot
 
 DESCRIPTION="a lightweight PDF viewer and toolkit written in portable C"
 HOMEPAGE="http://mupdf.com/"
-EGIT_REPO_URI="git://git.ghostscript.com/mupdf.git"
-#EGIT_HAS_SUBMODULES=1
+SRC_URI="http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=0fd24cefd86fb5bb627ee490d3f8127052516c5a;sf=tgz -> ${P}.tar.gz"
 
 LICENSE="AGPL-3"
 MY_SOVER=1.7
 SLOT="0/${MY_SOVER}"
-KEYWORDS=""
-IUSE="X vanilla curl openssl static static-libs"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+IUSE="X vanilla +curl +openssl static static-libs"
 
 LIB_DEPEND="dev-libs/openssl[static-libs?]
 	media-libs/freetype:2[static-libs?]

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-0.2.7.ebuild,v 1.1 2014/10/24 18:29:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/zathura-pdf-mupdf-0.2.7.ebuild,v 1.2 2015/04/17 15:34:08 xmw Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ IUSE=""
 
 RDEPEND="!app-text/zathura-pdf-poppler
 	>=app-text/mupdf-1.3:=
+	<app-text/mupdf-1.7:=
 	>=app-text/zathura-0.3.1
 	media-libs/jbig2dec:=
 	media-libs/openjpeg:2=
