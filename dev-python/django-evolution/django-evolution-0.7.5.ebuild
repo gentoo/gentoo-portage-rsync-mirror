@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.7.3.ebuild,v 1.1 2014/08/02 02:02:13 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-evolution/django-evolution-0.7.5.ebuild,v 1.1 2015/04/17 02:00:17 idella4 Exp $
 
 EAPI=5
 
-# This is NOT py3 compatible
-PYTHON_COMPAT=( python2_7 pypy )
+# This is now py3 compatible however is only re'd for Djblets which is py2.7 compat only
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
@@ -28,10 +28,11 @@ DEPEND="${RDEPEND}
 		test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 S=${WORKDIR}/${MY_P}
-DOCS=( AUTHORS NEWS docs/{evolution.txt,faq.txt} )
+DOCS=( NEWS docs/{evolution.txt,faq.txt} )
+#DISTUTILS_IN_SOURCE_BUILD=1
 
 python_test() {
-	# http://code.google.com/p/django-evolution/issues/detail?id=135
-	# This is tested, any delay in die subsequent to (implicitly inherited) multiprocessing eclass
+	# Draws 1 trivial fail under django django-1.4.x
+	einfo "The testsuite is not compatible with >=django-1.7"
 	"${PYTHON}" tests/runtests.py || die
 }
