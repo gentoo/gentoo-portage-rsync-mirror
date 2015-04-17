@@ -1,29 +1,29 @@
 --- Isabelle2013-2-orig/lib/Tools/java	2013-12-06 02:18:34.000000000 +1100
-+++ Isabelle2013-2/lib/Tools/java	2014-02-09 20:53:30.085279943 +1100
++++ Isabelle2013-2/lib/Tools/java	2015-04-17 12:23:11.535463796 +1000
 @@ -10,5 +10,5 @@
  unset CLASSPATH
  
  isabelle_jdk java "${JAVA_ARGS[@]}" \
 -  -classpath "$(jvmpath "$ISABELLE_CLASSPATH")" "$@"
-+  -classpath "$(jvmpath "$ISABELLE_CLASSPATH:$(java-config -p scala | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
++  -classpath "$(jvmpath "$ISABELLE_CLASSPATH:$(java-config -p scala-2.11 | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
  
 --- Isabelle2013-2-orig/lib/Tools/scala	2013-12-06 02:18:34.000000000 +1100
-+++ Isabelle2013-2/lib/Tools/scala	2014-02-09 20:54:22.418737591 +1100
++++ Isabelle2013-2/lib/Tools/scala	2015-04-17 12:23:24.836455672 +1000
 @@ -7,5 +7,5 @@
  isabelle_admin_build jars || exit $?
  
  isabelle_scala scala -Dfile.encoding=UTF-8 \
 -  -classpath "$(jvmpath "$ISABELLE_CLASSPATH")" "$@"
-+  -classpath "$(jvmpath "$ISABELLE_CLASSPATH:$(java-config -p scala | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
++  -classpath "$(jvmpath "$ISABELLE_CLASSPATH:$(java-config -p scala-2.11 | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
  
 --- Isabelle2013-2-orig/lib/Tools/scalac	2013-12-06 02:18:34.000000000 +1100
-+++ Isabelle2013-2/lib/Tools/scalac	2014-02-09 20:55:03.999895037 +1100
++++ Isabelle2013-2/lib/Tools/scalac	2015-04-17 12:23:33.084450628 +1000
 @@ -7,5 +7,5 @@
  isabelle_admin_build jars || exit $?
  
  isabelle_scala scalac -Dfile.encoding=UTF-8 \
 -  -classpath "$(jvmpath "$ISABELLE_CLASSPATH")" "$@"
-+  -classpath "$(jvmpath "$ISABELLE_CLASSPATH:$(java-config -p scala | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
++  -classpath "$(jvmpath "$ISABELLE_CLASSPATH:$(java-config -p scala-2.11 | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
  
 --- Isabelle2013-2-orig/src/Tools/jEdit/lib/Tools/jedit	2013-12-06 02:19:04.000000000 +1100
 +++ Isabelle2013-2/src/Tools/jEdit/lib/Tools/jedit	2014-02-09 20:59:14.026841490 +1100

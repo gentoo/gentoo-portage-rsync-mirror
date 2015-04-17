@@ -1,13 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.2.ebuild,v 1.2 2012/08/20 03:00:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.2-r1.ebuild,v 1.1 2015/04/17 14:39:37 gienah Exp $
 
-EAPI="3"
+EAPI="5"
 JAVA_PKG_IUSE="doc examples source"
 WANT_ANT_TASKS="ant-nodeps"
 inherit eutils check-reqs java-pkg-2 java-ant-2 versionator
 
 MY_P="${PN}-sources-${PV}"
+SV="$(get_version_component_range 1-2)"
 
 # creating the binary:
 # JAVA_PKG_FORCE_VM="$available-1.6" USE="doc examples source" ebuild scala-*.ebuild compile
@@ -20,7 +21,7 @@ HOMEPAGE="http://www.scala-lang.org/"
 SRC_URI="!binary? ( ${HOMEPAGE}downloads/distrib/files/${MY_P}.tgz -> ${P}.tar.gz )
 	binary? ( http://dev.gentoo.org/~ali_bush/distfiles/${P}-gentoo-binary.tar.bz2 )"
 LICENSE="BSD"
-SLOT="0"
+SLOT="${SV}/${PV}"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="binary emacs"
 # one fails with 1.7, two with 1.4 (blackdown)
@@ -33,11 +34,14 @@ DEPEND="virtual/jdk:1.6
 	)
 	app-arch/xz-utils"
 RDEPEND=">=virtual/jre-1.6
+	app-eselect/eselect-scala
 	!dev-java/scala-bin"
 
 PDEPEND="emacs? ( app-emacs/scala-mode )"
 
 S="${WORKDIR}/${P}-sources"
+
+CHECKREQS_MEMORY="1532M"
 
 pkg_setup() {
 	java-pkg-2_pkg_setup
@@ -97,7 +101,7 @@ src_test() {
 src_install() {
 	cd dists/latest || die
 
-	local SCALADIR="/usr/share/${PN}/"
+	local SCALADIR="/usr/share/${PN}-${SV}"
 
 	exeinto "${SCALADIR}/bin"
 	doexe $(find bin/ -type f ! -iname '*.bat')
@@ -111,7 +115,11 @@ src_install() {
 
 	java-pkg_dojar lib/*.jar
 
-	doman man/man1/*.1 || die
+	pushd man/man1 || die
+	for i in *.1; do
+		newman "${i}" "${i/./-${SV}.}"
+	done
+	popd
 
 	#docs and examples are not contained in the binary tgz anymore
 	if ! use binary; then
@@ -129,7 +137,7 @@ src_install() {
 	for b in $(find bin/ -type f ! -iname '*.bat'); do
 		#pushd "${ED}/usr/bin" &>/dev/null
 		local _name=$(basename "${b}")
-		dosym "/usr/share/${JAVA_PKG_NAME}/bin/${_name}" "/usr/bin/${_name}"
+		dosym "/usr/share/${PN}-${SV}/bin/${_name}" "/usr/bin/${_name}-${SV}"
 		#popd &>/dev/null
 	done
 	#scala_launcher fsc scala.tools.nsc.CompileClient

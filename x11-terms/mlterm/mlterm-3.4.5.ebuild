@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.4.2.ebuild,v 1.1 2015/01/08 12:25:15 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-3.4.5.ebuild,v 1.1 2015/04/17 14:35:24 hattya Exp $
 
 EAPI="5"
 
@@ -77,6 +77,8 @@ src_configure() {
 		myeconfargs+=(--with-imagelib=gdk-pixbuf)
 		if has_version x11-libs/gtk+:3; then
 			myeconfargs+=(--with-gtk=3.0)
+		else
+			myeconfargs+=(--with-gtk=2.0)
 		fi
 		scrollbars+=",pixmap_engine"
 		tools+=",mlconfig,mlimgloader"

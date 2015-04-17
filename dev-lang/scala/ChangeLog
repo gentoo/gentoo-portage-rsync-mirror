@@ -1,6 +1,23 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.44 2015/01/15 12:36:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.45 2015/04/17 14:39:37 gienah Exp $
+
+*scala-2.9.2-r1 (17 Apr 2015)
+*scala-2.11.1-r1 (17 Apr 2015)
+*scala-2.11.2-r1 (17 Apr 2015)
+*scala-2.10.2-r2 (17 Apr 2015)
+*scala-2.11.4-r1 (17 Apr 2015)
+*scala-2.10.3-r1 (17 Apr 2015)
+*scala-2.10.4-r1 (17 Apr 2015)
+*scala-2.11.6 (17 Apr 2015)
+
+  17 Apr 2015; Mark Wright <gienah@gentoo.org> +files/scala-2.11.6-no-git.patch,
+  +scala-2.10.2-r2.ebuild, +scala-2.10.3-r1.ebuild, +scala-2.10.4-r1.ebuild,
+  +scala-2.11.1-r1.ebuild, +scala-2.11.2-r1.ebuild, +scala-2.11.4-r1.ebuild,
+  +scala-2.11.6.ebuild, +scala-2.9.2-r1.ebuild, -scala-2.10.2-r1.ebuild,
+  -scala-2.10.3.ebuild, -scala-2.10.4.ebuild, -scala-2.11.1.ebuild,
+  -scala-2.11.2.ebuild, -scala-2.11.4.ebuild, -scala-2.9.2.ebuild:
+  Slot scala. Bump scala to 2.11.6.
 
   15 Jan 2015; Mark Wright <gienah@gentoo.org> -scala-2.10.2.ebuild,
   -scala-2.9.0.1.ebuild, -scala-2.9.1.ebuild, scala-2.11.1.ebuild,

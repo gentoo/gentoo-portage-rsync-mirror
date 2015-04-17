@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.1.ebuild,v 1.3 2015/01/15 12:36:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.4-r1.ebuild,v 1.1 2015/04/17 14:39:37 gienah Exp $
 
 EAPI="5"
 
@@ -11,16 +11,17 @@ EANT_TEST_TARGET="test.suite"
 inherit eutils check-reqs java-pkg-2 java-ant-2 versionator
 
 MY_P="${PN}-sources-${PV}"
+SV="$(get_version_component_range 1-2)"
 
 # creating the binary:
-# JAVA_PKG_FORCE_VM="$available-1.6" USE="doc source" ebuild scala-*.ebuild compile
+# JAVA_PKG_FORCE_VM="$available-1.7" USE="doc source" ebuild scala-*.ebuild compile
 # cd $WORDKIR
-# tar -cjf scala-2.11.1-gentoo-binary.tar.bz2 scala-2.11.1/build/pack/bin \
-# scala-2.11.1/build/pack/lib/ scala-2.11.1/build/pack/man \
-# scala-2.11.1/src/actors/ scala-2.11.1/src/forkjoin/ \
-# scala-2.11.1/src/library scala-2.11.1/src/library-aux/ \
-# scala-2.11.1/src/reflect/ scala-2.11.1/docs/TODO \
-# scala-2.11.1/doc/README scala-2.11.1/build/scaladoc/compiler
+# tar -cjf scala-2.11.4-gentoo-binary.tar.bz2 scala-2.11.4/build/pack/bin \
+# scala-2.11.4/build/pack/lib/ scala-2.11.4/build/pack/man \
+# scala-2.11.4/src/actors/ scala-2.11.4/src/forkjoin/ \
+# scala-2.11.4/src/library scala-2.11.4/src/library-aux/ \
+# scala-2.11.4/src/reflect/ scala-2.11.4/docs/TODO \
+# scala-2.11.4/doc/README scala-2.11.4/build/scaladoc/compiler
 
 # In the pullJarFiles function in tools/binary-repo-lib.sh it executes find commands
 # to search for .desired.sha1 files, which contain sha1 hashes that are appended
@@ -31,24 +32,24 @@ MY_P="${PN}-sources-${PV}"
 
 BURI="http://repo.typesafe.com/typesafe/scala-sha-bootstrap/org/scala-lang/bootstrap"
 
-declare -a JURI=( \
-	"${BURI}/943cd5c8802b2a3a64a010efb86ec19bac142e40/lib/ant/ant-contrib.jar -> ${P}-ant-contrib.jar" \
-	"${BURI}/3fc1e35ca8c991fc3488548f7a276bd9053c179d/lib/ant/ant-dotnet-1.0.jar -> ${P}-ant-dotnet-1.0.jar" \
-	"${BURI}/7b456ca6b93900f96e58cc8371f03d90a9c1c8d1/lib/ant/ant.jar -> ${P}-ant.jar" \
-	"${BURI}/7e50e3e227d834695f1e0bf018a7326e06ee4c86/lib/ant/maven-ant-tasks-2.1.1.jar -> ${P}-maven-ant-tasks-2.1.1.jar" \
-	"${BURI}/2c61d6e9a912b3253194d5d6d3e1db7e2545ac4b/lib/ant/vizant.jar -> ${P}-vizant.jar" \
-	"${BURI}/ddd7d5398733c4fbbb8355c049e258d47af636cf/lib/forkjoin.jar -> ${P}-forkjoin.jar" \
-	"${BURI}/0392ecdeb306263c471ce51fa368223388b82b61/test/benchmarks/lib/jsr166_and_extra.jar -> ${P}-jsr166_and_extra.jar" \
-	"${BURI}/e737b123d31eede5594ceda07caafed1673ec472/test/files/codelib/code.jar -> ${P}-code.jar" \
-	"${BURI}/02fe2ed93766323a13f22c7a7e2ecdcd84259b6c/test/files/lib/annotations.jar -> ${P}-annotations.jar" \
-	"${BURI}/981392dbd1f727b152cd1c908c5fce60ad9d07f7/test/files/lib/enums.jar -> ${P}-enums.jar" \
-	"${BURI}/b1ec8a095cec4902b3609d74d274c04365c59c04/test/files/lib/genericNest.jar -> ${P}-genericNest.jar" \
-	"${BURI}/346d3dff4088839d6b4d163efa2892124039d216/test/files/lib/jsoup-1.3.1.jar -> ${P}-jsoup-1.3.1.jar" \
-	"${BURI}/3794ec22d9b27f2b179bd34e9b46db771b934ec3/test/files/lib/macro210.jar -> ${P}-macro210.jar" \
-	"${BURI}/be8454d5e7751b063ade201c225dcedefd252775/test/files/lib/methvsfield.jar -> ${P}-methvsfield.jar" \
-	"${BURI}/cd33e0a0ea249eb42363a2f8ba531186345ff68c/test/files/lib/nest.jar -> ${P}-nest.jar" \
-	"${BURI}/1b11ac773055c1e942c6b5eb4aabdf02292a7194/test/files/speclib/instrumented.jar -> ${P}-instrumented.jar" \
-	"${BURI}/a1883f4304d5aa65e1f6ee6aad5900c62dd81079/tools/push.jar -> ${P}-push.jar" \
+declare -a JURI=(
+	"${BURI}/943cd5c8802b2a3a64a010efb86ec19bac142e40/lib/ant/ant-contrib.jar -> ${P}-ant-contrib.jar"
+	"${BURI}/3fc1e35ca8c991fc3488548f7a276bd9053c179d/lib/ant/ant-dotnet-1.0.jar -> ${P}-ant-dotnet-1.0.jar"
+	"${BURI}/7b456ca6b93900f96e58cc8371f03d90a9c1c8d1/lib/ant/ant.jar -> ${P}-ant.jar"
+	"${BURI}/7e50e3e227d834695f1e0bf018a7326e06ee4c86/lib/ant/maven-ant-tasks-2.1.1.jar -> ${P}-maven-ant-tasks-2.1.1.jar"
+	"${BURI}/2c61d6e9a912b3253194d5d6d3e1db7e2545ac4b/lib/ant/vizant.jar -> ${P}-vizant.jar"
+	"${BURI}/ddd7d5398733c4fbbb8355c049e258d47af636cf/lib/forkjoin.jar -> ${P}-forkjoin.jar"
+	"${BURI}/0392ecdeb306263c471ce51fa368223388b82b61/test/benchmarks/lib/jsr166_and_extra.jar -> ${P}-jsr166_and_extra.jar"
+	"${BURI}/e737b123d31eede5594ceda07caafed1673ec472/test/files/codelib/code.jar -> ${P}-code.jar"
+	"${BURI}/02fe2ed93766323a13f22c7a7e2ecdcd84259b6c/test/files/lib/annotations.jar -> ${P}-annotations.jar"
+	"${BURI}/981392dbd1f727b152cd1c908c5fce60ad9d07f7/test/files/lib/enums.jar -> ${P}-enums.jar"
+	"${BURI}/b1ec8a095cec4902b3609d74d274c04365c59c04/test/files/lib/genericNest.jar -> ${P}-genericNest.jar"
+	"${BURI}/346d3dff4088839d6b4d163efa2892124039d216/test/files/lib/jsoup-1.3.1.jar -> ${P}-jsoup-1.3.1.jar"
+	"${BURI}/3794ec22d9b27f2b179bd34e9b46db771b934ec3/test/files/lib/macro210.jar -> ${P}-macro210.jar"
+	"${BURI}/be8454d5e7751b063ade201c225dcedefd252775/test/files/lib/methvsfield.jar -> ${P}-methvsfield.jar"
+	"${BURI}/cd33e0a0ea249eb42363a2f8ba531186345ff68c/test/files/lib/nest.jar -> ${P}-nest.jar"
+	"${BURI}/1b11ac773055c1e942c6b5eb4aabdf02292a7194/test/files/speclib/instrumented.jar -> ${P}-instrumented.jar"
+	"${BURI}/a1883f4304d5aa65e1f6ee6aad5900c62dd81079/tools/push.jar -> ${P}-push.jar"
 )
 
 DESCRIPTION="The Scala Programming Language"
@@ -61,7 +62,7 @@ SRC_URI="!binary?
 binary? ( http://dev.gentoo.org/~gienah/files/dist/${P}-gentoo-binary.tar.bz2 )"
 
 LICENSE="BSD"
-SLOT="0/${PV}"
+SLOT="${SV}/${PV}"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 IUSE="binary emacs"
@@ -87,6 +88,7 @@ DEPEND="${COMMON_DEP}
 
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.6
+	app-eselect/eselect-scala
 	!dev-java/scala-bin:0"
 
 PDEPEND="emacs? ( app-emacs/scala-mode:0 )"
@@ -163,6 +165,8 @@ src_compile() {
 			# java.lang.OutOfMemoryError: PermGen space
 			eant -Djavac.args="-encoding UTF-8" -Duser.home="${WORKDIR}" \
 				docscomp
+			eant -Djavac.args="-encoding UTF-8" -Duser.home="${WORKDIR}" \
+				docs
 		fi
 	else
 		einfo "Skipping compilation, USE=binary is set."
@@ -175,7 +179,7 @@ src_test() {
 
 src_install() {
 	pushd build/pack || die
-	local SCALADIR="/usr/share/${PN}/"
+	local SCALADIR="/usr/share/${PN}-${SV}"
 	exeinto "${SCALADIR}/bin"
 	doexe $(find bin/ -type f ! -iname '*.bat')
 	dodir "${SCALADIR}/lib"
@@ -191,10 +195,14 @@ src_install() {
 	dodir /usr/bin
 	for b in $(find bin/ -type f ! -iname '*.bat'); do
 		local _name=$(basename "${b}")
-		dosym "${SCALADIR}/bin/${_name}" "/usr/bin/${_name}"
+		dosym "${SCALADIR}/bin/${_name}" "/usr/bin/${_name}-${SV}"
 	done
 
-	doman man/man1/*.1
+	pushd man/man1 || die
+	for i in *.1; do
+		newman "${i}" "${i/./-${SV}.}"
+	done
+	popd
 	popd
 
 	#sources are .scala so no use for java-pkg_dosrc
@@ -206,9 +214,9 @@ src_install() {
 	fi
 	popd
 
-	local docdir="build/scaladoc/compiler"
+	local docdir="build/scaladoc"
 	dodoc docs/TODO doc/README
 	if use doc; then
-		dohtml -r "${docdir}"
+		dohtml -r "${docdir}"/{compiler,library}
 	fi
 }

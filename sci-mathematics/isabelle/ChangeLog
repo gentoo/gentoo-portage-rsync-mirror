@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/isabelle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.13 2015/03/25 01:46:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.14 2015/04/17 14:41:21 gienah Exp $
+
+*isabelle-2013-r2 (17 Apr 2015)
+*isabelle-2013.2-r1 (17 Apr 2015)
+
+  17 Apr 2015; Mark Wright <gienah@gentoo.org> +isabelle-2013-r2.ebuild,
+  +isabelle-2013.2-r1.ebuild, -isabelle-2013-r1.ebuild, -isabelle-2013.2.ebuild,
+  files/isabelle-2013-classpath.patch, files/isabelle-2013.2-classpath.patch:
+  Slot scala
 
   25 Mar 2015; Mark Wright <gienah@gentoo.org> isabelle-2011.1-r2.ebuild,
   isabelle-2012-r1.ebuild, isabelle-2013-r1.ebuild, isabelle-2013.2.ebuild:

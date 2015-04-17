@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013-r1.ebuild,v 1.3 2015/03/25 01:46:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013-r2.ebuild,v 1.1 2015/04/17 14:41:21 gienah Exp $
 
 EAPI="5"
 
@@ -21,6 +21,8 @@ JFREECHART_PN="jfreechart"
 JFREECHART_P="${JFREECHART_PN}-${JFREECHART_PV}"
 JFREECHART_IC_PN="${JFREECHART_PN}-isabelle-component"
 JFREECHART_IC_P="${JFREECHART_IC_PN}-${JFREECHART_PV}"
+
+SS="2.10"
 
 DESCRIPTION="Isabelle is a generic proof assistant"
 HOMEPAGE="http://www.cl.cam.ac.uk/research/hvg/Isabelle/index.html"
@@ -51,7 +53,7 @@ DEPEND=">=app-shells/bash-3.0:*
 		virtual/latex-base
 		dev-tex/rail
 	)
-	>=dev-lang/scala-2.10.2 <dev-lang/scala-2.11.1
+	>=dev-lang/scala-2.10.2:${SS}
 	ledit? (
 		app-misc/ledit
 	)
@@ -73,7 +75,7 @@ JFREECHART_S="${WORKDIR}/${JFREECHART_P}"
 TARGETDIR="/usr/share/Isabelle"${MY_PV}
 LIBDIR="/usr/"$(get_libdir)"/Isabelle"${MY_PV}
 
-LIBRARY_PKGS="scala,itext,jcommon-1.0,jfreechart-1.0,xml-xmlbeans-1"
+LIBRARY_PKGS="scala-${SS},itext,jcommon-1.0,jfreechart-1.0,xml-xmlbeans-1"
 
 src_unpack() {
 	unpack "${MY_P}.tar.gz"
@@ -120,7 +122,7 @@ src_prepare() {
 		ISABELLE_OCAML="${ROOT}usr/bin/ocaml"
 		ISABELLE_SWIPL="${ROOT}usr/bin/swipl"
 		ISABELLE_JDK_HOME="\$(java-config --jdk-home)"
-		SCALA_HOME="${ROOT}usr/share/scala"
+		SCALA_HOME="${ROOT}usr/share/scala-${SS}"
 		SHA1_HOME="/usr/$(get_libdir)/sha1-polyml"
 	EOF
 	cat <<- EOF >> "${S}/etc/components"

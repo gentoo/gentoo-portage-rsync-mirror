@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.2.ebuild,v 1.2 2015/03/25 01:46:06 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.2-r1.ebuild,v 1.1 2015/04/17 14:41:21 gienah Exp $
 
 EAPI="5"
 
@@ -27,6 +27,8 @@ POLYML_PN="polyml"
 POLYML_P="${POLYML_PN}-${POLYML_PV}"
 POLYML_IC_PN="${POLYML_PN}-isabelle-component"
 POLYML_IC_P="${POLYML_IC_PN}-${POLYML_PV}"
+
+SS="2.11"
 
 DESCRIPTION="Isabelle is a generic proof assistant"
 HOMEPAGE="http://www.cl.cam.ac.uk/research/hvg/Isabelle/index.html"
@@ -59,7 +61,7 @@ DEPEND=">=app-shells/bash-3.0:*
 		virtual/latex-base
 		dev-tex/rail
 	)
-	>=dev-lang/scala-2.11.1
+	>=dev-lang/scala-2.11.1:${SS}
 	ledit? (
 		app-misc/ledit
 	)
@@ -91,7 +93,7 @@ LIBDIR="/usr/"$(get_libdir)"/Isabelle"${MY_PV}
 # marker/MarkerSetsPlugin.class                   http://plugins.jedit.org/plugins/?MarkerSets
 # projectviewer/gui/OptionPaneBase.class          http://plugins.jedit.org/plugins/?ProjectViewer
 
-LIBRARY_PKGS="ant-core,itext,jcommon-1.0,jfreechart-1.0,scala,xml-xmlbeans-1,xz-java"
+LIBRARY_PKGS="ant-core,itext,jcommon-1.0,jfreechart-1.0,scala-${SS},xml-xmlbeans-1,xz-java"
 
 src_unpack() {
 	unpack "${MY_P}.tar.gz"
@@ -139,7 +141,7 @@ src_prepare() {
 		ISABELLE_OCAML="${ROOT}usr/bin/ocaml"
 		ISABELLE_SWIPL="${ROOT}usr/bin/swipl"
 		ISABELLE_JDK_HOME="\$(java-config --jdk-home)"
-		SCALA_HOME="${ROOT}usr/share/scala"
+		SCALA_HOME="${ROOT}usr/share/scala-${SS}"
 		SHA1_HOME="/usr/$(get_libdir)/sha1-polyml"
 	EOF
 	cat <<- EOF >> "${S}/etc/components"
@@ -308,16 +310,16 @@ src_install() {
 	dodoc ANNOUNCE CONTRIBUTORS COPYRIGHT NEWS README
 
 	java-pkg_regjar \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/Console.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/ErrorList.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/Highlight.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/idea-icons.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/jedit-5.1.0-patched/jars/QuickNotepad.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/jedit-5.1.0-patched/jedit.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/jsr305-2.0.0.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/MacOSX.jar" \
-		"${ED}${TARGETDIR}/contrib/jedit_build-20131106/contrib/SideKick.jar" \
-		"${ED}${TARGETDIR}/contrib/jfreechart-1.0.14-1/jfreechart-1.0.14-demo.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/Console.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/ErrorList.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/Highlight.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/idea-icons.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/jedit-5.1.0-patched/jars/QuickNotepad.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/jedit-5.1.0-patched/jedit.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/jsr305-2.0.0.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/MacOSX.jar" \
+		"${ED}${TARGETDIR}/contrib/${JEDIT_P}/contrib/SideKick.jar" \
+		"${ED}${TARGETDIR}/contrib/${JFREECHART_P}/jfreechart-1.0.14-demo.jar" \
 		"${ED}${TARGETDIR}/lib/browser/GraphBrowser.jar" \
 		"${ED}${TARGETDIR}/lib/classes/Graphview.jar" \
 		"${ED}${TARGETDIR}/lib/classes/Pure.jar" \

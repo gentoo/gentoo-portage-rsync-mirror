@@ -1,0 +1,9 @@
+# ChangeLog for app-eselect/eselect-scala
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-scala/ChangeLog,v 1.1 2015/04/17 14:36:02 gienah Exp $
+
+*eselect-scala-0.1.0 (17 Apr 2015)
+
+  17 Apr 2015; Mark Wright <gienah@gentoo.org> +eselect-scala-0.1.0.ebuild,
+  +metadata.xml:
+  Add eselect-scala module to slot scala

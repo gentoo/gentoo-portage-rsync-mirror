@@ -1,28 +1,28 @@
 --- Isabelle2013-orig/lib/Tools/java	2013-02-13 00:31:02.000000000 +1100
-+++ Isabelle2013/lib/Tools/java	2013-08-18 14:07:51.704133000 +1000
++++ Isabelle2013/lib/Tools/java	2015-04-17 12:16:04.734716358 +1000
 @@ -6,5 +6,5 @@
  
  CLASSPATH="$(jvmpath "$CLASSPATH")"
  isabelle_jdk java -Dfile.encoding=UTF-8 -server \
 -  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext")" "$@"
-+  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext:$(java-config -p scala | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
++  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext:$(java-config -p scala-2.10 | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
  
 --- Isabelle2013-orig/lib/Tools/scala	2013-02-13 00:31:02.000000000 +1100
-+++ Isabelle2013/lib/Tools/scala	2013-08-18 14:07:00.795248000 +1000
++++ Isabelle2013/lib/Tools/scala	2015-04-17 12:12:21.606890256 +1000
 @@ -8,4 +8,4 @@
  
  CLASSPATH="$(jvmpath "$CLASSPATH")"
  isabelle_scala scala -Dfile.encoding=UTF-8 \
 -  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext")" "$@"
-+  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext:$(java-config -p scala | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
++  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext:$(java-config -p scala-2.10 | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
 --- Isabelle2013-orig/lib/Tools/scalac	2013-02-13 00:31:02.000000000 +1100
-+++ Isabelle2013/lib/Tools/scalac	2013-08-18 14:07:32.751448000 +1000
++++ Isabelle2013/lib/Tools/scalac	2015-04-17 12:12:36.895871214 +1000
 @@ -8,5 +8,5 @@
  
  CLASSPATH="$(jvmpath "$CLASSPATH")"
  isabelle_scala scalac -Dfile.encoding=UTF-8 \
 -  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext")" "$@"
-+  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext:$(java-config -p scala | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
++  "-Djava.ext.dirs=$(jvmpath "$ISABELLE_JAVA_EXT:$ISABELLE_HOME/lib/classes/ext:$(java-config -p scala-2.10 | sed 's@\([^:]*\)/[^:]*:.*@\1@')")" "$@"
  
 --- Isabelle2013-orig/src/Pure/build-jars	2013-02-13 00:31:15.000000000 +1100
 +++ Isabelle2013/src/Pure/build-jars	2013-08-18 12:55:51.400924000 +1000

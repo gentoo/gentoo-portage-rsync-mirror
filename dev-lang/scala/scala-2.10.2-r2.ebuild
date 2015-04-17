@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.2-r1.ebuild,v 1.1 2013/09/20 23:17:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.2-r2.ebuild,v 1.1 2015/04/17 14:39:37 gienah Exp $
 
 EAPI="5"
 
@@ -11,6 +11,7 @@ EANT_TEST_TARGET="test.suite"
 inherit eutils check-reqs java-pkg-2 java-ant-2 versionator
 
 MY_P="${PN}-sources-${PV}"
+SV="$(get_version_component_range 1-2)"
 
 # creating the binary:
 # JAVA_PKG_FORCE_VM="$available-1.6" USE="doc examples source" ebuild scala-*.ebuild compile
@@ -60,7 +61,7 @@ SRC_URI="!binary?
 binary? ( http://dev.gentoo.org/~tomwij/files/dist/${P}-gentoo-binary.tar.bz2 )"
 
 LICENSE="BSD"
-SLOT="0/${PV}"
+SLOT="${SV}/${PV}"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 IUSE="binary emacs"
@@ -81,6 +82,7 @@ DEPEND="${COMMON_DEP}
 
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.7
+	app-eselect/eselect-scala
 	!dev-java/scala-bin:0"
 
 PDEPEND="emacs? ( app-emacs/scala-mode:0 )"
@@ -214,7 +216,7 @@ src_test() {
 src_install() {
 	cd dists/latest || die
 
-	local SCALADIR="/usr/share/${PN}/"
+	local SCALADIR="/usr/share/${PN}-${SV}"
 
 	exeinto "${SCALADIR}/bin"
 	doexe $(find bin/ -type f ! -iname '*.bat')
@@ -228,7 +230,11 @@ src_install() {
 
 	java-pkg_dojar lib/*.jar
 
-	doman man/man1/*.1
+	pushd man/man1 || die
+	for i in *.1; do
+		newman "${i}" "${i/./-${SV}.}"
+	done
+	popd
 
 	#docs and examples are not contained in the binary tgz anymore
 	if ! use binary; then
@@ -245,6 +251,6 @@ src_install() {
 	dodir /usr/bin
 	for b in $(find bin/ -type f ! -iname '*.bat'); do
 		local _name=$(basename "${b}")
-		dosym "/usr/share/${PN}/bin/${_name}" "/usr/bin/${_name}"
+		dosym "/usr/share/${PN}-${SV}/bin/${_name}" "/usr/bin/${_name}-${SV}"
 	done
 }
