@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.597 2015/04/17 13:38:01 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.598 2015/04/17 16:39:24 zlogene Exp $
+
+  17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gnupg-2.1.3-r2.ebuild:
+  Add ~x86 keyword wrt bug #546478
 
   17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gnupg-2.1.3-r2.ebuild:
   Whitespace
