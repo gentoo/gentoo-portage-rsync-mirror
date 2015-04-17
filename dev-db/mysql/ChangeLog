@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.729 2015/04/17 07:08:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.730 2015/04/17 17:02:39 jer Exp $
+
+  17 Apr 2015; Jeroen Roovers <jer@gentoo.org> mysql-5.6.24.ebuild:
+  Stable for HPPA (bug #546722).
 
   17 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mysql-5.6.24.ebuild:
   Stable for x86, wrt bug #546722
