@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/magic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/magic/ChangeLog,v 1.5 2014/10/26 13:49:46 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/magic/ChangeLog,v 1.6 2015/04/18 05:41:30 graaff Exp $
+
+*magic-0.2.9 (18 Apr 2015)
+
+  18 Apr 2015; Hans de Graaff <graaff@gentoo.org> +magic-0.2.9.ebuild:
+  Version bump.
 
   26 Oct 2014; Hans de Graaff <graaff@gentoo.org> magic-0.2.8-r1.ebuild:
   Add missing dependency on sys-apps/file for the libmagic library. Hopefully

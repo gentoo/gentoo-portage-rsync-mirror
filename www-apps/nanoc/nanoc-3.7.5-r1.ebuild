@@ -1,22 +1,22 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/nanoc-3.6.5.ebuild,v 1.3 2014/08/10 20:14:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/nanoc-3.7.5-r1.ebuild,v 1.1 2015/04/18 05:55:36 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_EXTRADOC="ChangeLog NEWS.md README.md"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
-RUBY_FAKEGEM_TASK_TEST="test"
+RUBY_FAKEGEM_TASK_TEST="test:all"
 
 inherit ruby-fakegem
 
 DESCRIPTION="nanoc is a simple but very flexible static site generator written in Ruby"
-HOMEPAGE="http://nanoc.stoneship.org/"
+HOMEPAGE="http://nanoc.ws/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 SLOT="0"
 IUSE="${IUSE} minimal"
 
@@ -33,6 +33,7 @@ ruby_add_bdepend "test? (
 	dev-ruby/minitest
 	=dev-ruby/rdoc-4*
 	dev-ruby/systemu
+	dev-ruby/vcr
 	dev-ruby/yard
 )
 doc? (
@@ -45,7 +46,8 @@ all_ruby_prepare() {
 	use doc || use test || (rm tasks/doc.rake || die)
 	use test || (rm tasks/test.rake || die)
 
-	rm Gemfile.lock || die
+	# Avoid dependency on coveralls.
+	sed -i -e '/coverall/I s:^:#:' test/helper.rb || die
 
 	# Avoid non-optional tests for w3c_validators which we don't have
 	# packaged and which require network access.

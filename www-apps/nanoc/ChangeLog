@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/nanoc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.17 2015/01/25 09:54:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoc/ChangeLog,v 1.19 2015/04/18 05:55:36 graaff Exp $
+
+*nanoc-3.7.5-r1 (18 Apr 2015)
+
+  18 Apr 2015; Hans de Graaff <graaff@gentoo.org> +nanoc-3.7.5-r1.ebuild:
+  Add missing test dependency on dev-ruby/vcr and drop x86 keyword because of
+  it, bug 546964.
+
+  18 Apr 2015; Hans de Graaff <graaff@gentoo.org> -nanoc-3.6.5.ebuild:
+  Cleanup.
 
   25 Jan 2015; Hans de Graaff <graaff@gentoo.org> -nanoc-3.6.4.ebuild:
   Cleanup.
