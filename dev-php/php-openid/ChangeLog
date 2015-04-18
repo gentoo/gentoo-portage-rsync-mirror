@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-openid
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.6 2014/10/10 02:04:19 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.7 2015/04/18 13:01:30 swegener Exp $
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org>
+  php-openid-2.2.3_pre20140423.ebuild:
+  Rename distfile to include package name.
 
 *php-openid-2.2.3_pre20140423 (07 Oct 2014)
 

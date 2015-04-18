@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1588 2015/04/14 18:32:51 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1589 2015/04/18 13:19:47 pacho Exp $
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
+  Ban eapi2 and 3 for gnome2.eclass (#539118)
 
   14 Apr 2015; <grknight@gentoo.org> php-lib-r1.eclass:
   Specify :* as slot by default to silence repoman warnings

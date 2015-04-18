@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtommath
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.65 2015/02/17 01:30:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.66 2015/04/18 13:03:10 swegener Exp $
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org> libtommath-0.42.0-r1.ebuild:
+  Rename distfile to include package name.
 
   17 Feb 2015; Ian Delaney <idella4@gentoo.org> libtommath-0.42.0-r1.ebuild:
   update HOMEPAGE, SRC-URI

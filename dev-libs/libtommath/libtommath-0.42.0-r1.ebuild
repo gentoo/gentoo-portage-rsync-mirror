@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.20 2015/02/17 01:30:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.42.0-r1.ebuild,v 1.21 2015/04/18 13:03:10 swegener Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools eutils multilib toolchain-funcs
 
 DESCRIPTION="highly optimized and portable routines for integer based number theoretic applications"
 HOMEPAGE="https://github.com/libtom/libtommath"
-SRC_URI="https://github.com/libtom/libtommath/archive/v${PV}.tar.gz"
+SRC_URI="https://github.com/libtom/libtommath/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
