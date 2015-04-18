@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9936 2015/04/17 19:53:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9937 2015/04/18 07:28:07 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Delay app-backup/pdumpfs removal as it's going to be fixed and proxy
+  maintained soon
 
   17 Apr 2015; Pacho Ramos <pacho@gentoo.org> package.mask:
   rdiff-backup removal postponed

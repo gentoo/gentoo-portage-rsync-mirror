@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/beets
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/ChangeLog,v 1.22 2014/05/13 16:48:34 sochotnicky Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/ChangeLog,v 1.23 2015/04/18 07:26:43 mr_bones_ Exp $
+
+  18 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -beets-1.3.3.ebuild:
+  old
 
 *beets-1.3.3-r1 (13 May 2014)
 

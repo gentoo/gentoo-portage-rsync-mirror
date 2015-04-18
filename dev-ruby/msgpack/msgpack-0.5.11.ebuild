@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/msgpack-0.5.11.ebuild,v 1.2 2015/04/06 16:54:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/msgpack-0.5.11.ebuild,v 1.3 2015/04/18 07:23:02 graaff Exp $
 
 EAPI=5
 
@@ -27,6 +27,8 @@ all_ruby_prepare() {
 
 	# Remove jruby-specific specs that are run also for other rubies.
 	rm -rf spec/jruby || die
+
+	sed -i -e '/git ls-files/d' msgpack.gemspec || die
 }
 
 each_ruby_configure() {

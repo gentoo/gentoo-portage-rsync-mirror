@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.945 2015/04/18 06:27:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.946 2015/04/18 07:05:35 idella4 Exp $
+
+  18 Apr 2015; Ian Delaney <idella4@gentoo.org> +files/vlc-2.2.0-fix-xcb.patch,
+  vlc-2.2.0.ebuild:
+  add patch to fix issue with xcb, fixes bug #541928, thx to maintainer for
+  patch lodged upstream
 
   18 Apr 2015; Ian Delaney <idella4@gentoo.org> vlc-2.2.9999.ebuild,
   vlc-9999.ebuild:

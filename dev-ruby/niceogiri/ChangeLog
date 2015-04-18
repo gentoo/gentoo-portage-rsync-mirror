@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/niceogiri
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/niceogiri/ChangeLog,v 1.6 2015/03/24 16:18:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/niceogiri/ChangeLog,v 1.7 2015/04/18 07:31:01 graaff Exp $
+
+  18 Apr 2015; Hans de Graaff <graaff@gentoo.org> niceogiri-1.1.2.ebuild:
+  Add missing build dependency on dev-ruby/yard.
 
   24 Mar 2015; Hans de Graaff <graaff@gentoo.org> niceogiri-1.1.2.ebuild:
   Add ruby22.

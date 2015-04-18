@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.6 2015/04/18 06:11:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.7 2015/04/18 07:05:35 idella4 Exp $
 
 EAPI="5"
 
@@ -257,6 +257,9 @@ src_prepare() {
 
 	# Fix up broken audio when skipping using a fixed reversed bisected commit.
 	epatch "${FILESDIR}"/${PN}-2.1.0-TomWij-bisected-PA-broken-underflow.patch
+
+	# Bug #541928
+	epatch "${FILESDIR}"/${P}-fix-xcb.patch
 
 	# Don't use --started-from-file when not using dbus.
 	if ! use dbus ; then
