@@ -4,7 +4,7 @@ DESCRIPTION=Mediastreaming library for telephony application
 EAPI=5
 HOMEPAGE=http://www.linphone.org/
 IUSE=+alsa amr bindist coreaudio debug doc examples +filters g726 g729 gsm ilbc ipv6 ntp-timestamp opengl opus +ortp oss pcap portaudio pulseaudio sdl silk +speex static-libs test theora upnp v4l video x264 X
-KEYWORDS=amd64 ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 ppc ~ppc64 x86
 LICENSE=GPL-2
 PDEPEND=amr? ( !bindist? ( media-plugins/mediastreamer-amr ) ) g729? ( !bindist? ( media-plugins/mediastreamer-bcg729 ) ) ilbc? ( media-plugins/mediastreamer-ilbc ) video? ( x264? ( media-plugins/mediastreamer-x264 ) ) silk? ( !bindist? ( media-plugins/mediastreamer-silk ) )
 RDEPEND=alsa? ( media-libs/alsa-lib ) g726? ( >=media-libs/spandsp-0.0.6_pre1 ) gsm? ( media-sound/gsm ) opus? ( media-libs/opus ) ortp? ( >=net-libs/ortp-0.21.0[ipv6?] ) pcap? ( sys-libs/libcap ) portaudio? ( media-libs/portaudio ) pulseaudio? ( >=media-sound/pulseaudio-0.9.21 ) speex? ( >=media-libs/speex-1.2_beta3 ) upnp? ( net-libs/libupnp ) video? ( virtual/ffmpeg opengl? ( media-libs/glew virtual/opengl x11-libs/libX11 ) v4l? ( media-libs/libv4l sys-kernel/linux-headers ) theora? ( media-libs/libtheora ) sdl? ( media-libs/libsdl[video,X] ) X? ( x11-libs/libX11 x11-libs/libXv ) )
@@ -12,4 +12,4 @@ REQUIRED_USE=|| ( oss alsa portaudio coreaudio pulseaudio ) video? ( || ( opengl
 SLOT=0/3
 SRC_URI=mirror://nongnu/linphone/mediastreamer/mediastreamer-2.9.0.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=a7f0b26055eab13ac18ce0a012167e8c
+_md5_=d7d4d7bab3a474a66aac249531d837cc
