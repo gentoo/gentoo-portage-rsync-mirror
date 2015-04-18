@@ -7,3 +7,4 @@ slotmove kde-frameworks/extra-cmake-modules 0 5
 slotmove =dev-lang/scala-2.9* 0 2.9
 slotmove =dev-lang/scala-2.10* 0 2.10
 slotmove =dev-lang/scala-2.11* 0 2.11
+move dev-perl/Cgi-Simple dev-perl/CGI-Simple

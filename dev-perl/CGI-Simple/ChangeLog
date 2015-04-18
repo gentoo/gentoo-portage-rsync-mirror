@@ -1,6 +1,18 @@
-# ChangeLog for dev-perl/Cgi-Simple
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.64 2014/08/23 21:49:23 axs Exp $
+# ChangeLog for dev-perl/CGI-Simple
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Simple/ChangeLog,v 1.2 2015/04/18 19:19:56 dilfridge Exp $
+
+*CGI-Simple-1.115.0 (18 Apr 2015)
+
+  18 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +CGI-Simple-1.115.0.ebuild:
+  Version bump
+
+*CGI-Simple-1.113.0-r1 (18 Apr 2015)
+
+  18 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +CGI-Simple-1.113.0-r1.ebuild, +metadata.xml:
+  Fix capitalization of PN
 
 *Cgi-Simple-1.113.0-r1 (23 Aug 2014)
 
