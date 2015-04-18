@@ -222,7 +222,6 @@ app-admin/sagan:smtp - Build witch SMTP (E-Mail) support
 app-admin/sagan:snort - Add support to interact with Snort IDE using net-analyzer/snortsam'
 app-admin/sagan-rules:lognorm - Install normalize rules support with dev-libs/liblognorm
 app-admin/salt:api - Enable support for salt-api.
-app-admin/salt:cherrypy - Enable support for cherrypy.
 app-admin/salt:gnupg - Enable support for gnupg via python-gnupg.
 app-admin/salt:keyring - Enable support for keyrings via python-keyring.
 app-admin/salt:libcloud - Enable salt-cloud support via libcloud.

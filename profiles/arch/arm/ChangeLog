@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.351 2015/04/03 08:10:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.353 2015/04/18 11:09:29 hwoarang Exp $
+
+  18 Apr 2015; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Mask samba useflag for sys-auth/sssd
 
   03 Apr 2015; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask net-misc/openconnect[java] for bug #542444

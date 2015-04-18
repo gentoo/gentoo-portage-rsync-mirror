@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.58 2015/04/18 10:53:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.59 2015/04/18 11:08:31 ulm Exp $
+
+  18 Apr 2015; Ulrich Müller <ulm@gentoo.org> +ptlib-2.10.11.ebuild:
+  Restore deleted ebuild from attic. Version >=2.12.0 is in package.mask,
+  therefore 2.10.11 was the latest visible version.
 
   18 Apr 2015; Ulrich Müller <ulm@gentoo.org>
   -files/ptlib-2.6.4-vxml-ptones.patch:
