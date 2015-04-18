@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-2.0.1-r1.ebuild,v 1.4 2015/03/04 11:19:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-2.0.1-r1.ebuild,v 1.5 2015/04/18 06:31:03 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -51,4 +51,7 @@ all_ruby_prepare() {
 
 	# Use a non-deprecated version of construct
 	sed -i -e 's/construct/test_construct/' -e 's/Construct/TestConstruct/' test/test_helper.rb || die
+
+	# Avoid dependency on cucumber
+	sed -i -e '/cucumber/,$ s:^:#:' Rakefile || die
 }

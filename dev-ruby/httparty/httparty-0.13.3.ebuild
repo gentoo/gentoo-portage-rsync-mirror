@@ -1,10 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.13.3.ebuild,v 1.1 2014/11/13 22:07:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/httparty-0.13.3.ebuild,v 1.2 2015/04/18 06:27:24 graaff Exp $
 
 EAPI=5
 
-# jruby → testsuite fails (seems like a testuite bug)
 USE_RUBY="ruby19 ruby20 ruby21"
 
 # We have a custom test function, but don't null this out so that the
@@ -33,7 +32,9 @@ all_ruby_prepare() {
 	rm Gemfile || die
 	sed -i -e '/[Bb]undler/ s:^:#:' Rakefile || die
 
-#	sed -i -e '/git ls-files/ s:^:#:' ${PN}.gemspec || die
+	# Avoid test dependency on cucumber. We can't run the features since
+	# they depend on mongrel which is no longer packaged.
+	sed -i -e '/cucumber/I s:^:#:' Rakefile || die
 }
 
 each_ruby_test() {

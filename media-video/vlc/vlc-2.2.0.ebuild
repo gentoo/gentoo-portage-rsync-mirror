@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.5 2015/03/05 21:17:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.6 2015/04/18 06:11:19 idella4 Exp $
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 jack jpeg kate kde libass libav libcaca libnotify
-	libsamplerate libtiger linsys libtar lirc live lua
+	+libsamplerate libtiger linsys libtar lirc live lua
 	macosx-dialog-provider macosx-eyetv macosx-quartztext macosx-qtkit
 	matroska media-library cpu_flags_x86_mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory opus

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-converter/gns3-converter-1.2.0.ebuild,v 1.1 2015/04/06 10:07:03 bman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-converter/gns3-converter-1.2.3.ebuild,v 1.1 2015/04/18 06:30:36 bman Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit distutils-r1
 
 DESCRIPTION="Designed to convert old ini-style GNS3 topologies"
 HOMEPAGE="https://github.com/dlintott/gns3-converter"
-SRC_URI="https://github.com/GNS3/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

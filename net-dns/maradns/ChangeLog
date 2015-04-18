@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/maradns
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.63 2014/02/28 09:57:10 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/ChangeLog,v 1.64 2015/04/18 06:24:24 mr_bones_ Exp $
+
+  18 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -maradns-1.4.14.ebuild:
+  old
 
   28 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -maradns-1.4.12.ebuild,
   -maradns-2.0.06.ebuild, -files/maradns-2.0.06-build.patch,
