@@ -1,10 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20150102.ebuild,v 1.2 2015/03/31 17:34:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20150102.ebuild,v 1.3 2015/04/17 23:23:53 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE="threads"
+
 inherit eutils fdo-mime flag-o-matic prefix python-single-r1
 
 DESCRIPTION="Qt GUI version of the Vim text editor"
@@ -15,13 +16,12 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI=(
 		"https://bitbucket.org/equalsraf/${PN}.git"
 		"https://github.com/equalsraf/${PN}.git"
-		"git://gitorious.org/${PN}/${PN}.git"
 	)
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/equalsraf/${PN}/archive/package-${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${PN}-package-${PV}"
+	S=${WORKDIR}/${PN}-package-${PV}
 fi
 
 LICENSE="vim"
@@ -31,11 +31,12 @@ IUSE="acl cscope debug lua luajit nls perl python racket ruby"
 REQUIRED_USE="luajit? ( lua )
 	python? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND=">=app-eselect/eselect-vi-1.1.8
+RDEPEND="
 	>=app-editors/vim-core-7.4.560[acl?]
-	sys-libs/ncurses
+	>=app-eselect/eselect-vi-1.1.8
 	>=dev-qt/qtcore-4.7.0:4
 	>=dev-qt/qtgui-4.7.0:4
+	sys-libs/ncurses
 	acl? ( kernel_linux? ( sys-apps/acl ) )
 	cscope? ( dev-util/cscope )
 	lua? ( luajit? ( dev-lang/luajit )
