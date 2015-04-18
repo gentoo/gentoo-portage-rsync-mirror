@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.2-r1.ebuild,v 1.1 2015/04/17 14:39:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.11.2-r1.ebuild,v 1.2 2015/04/18 07:42:09 gienah Exp $
 
 EAPI="5"
 
@@ -137,7 +137,7 @@ java_prepare() {
 		# Note: to bump scala, some things to try are:
 		# 1. update all the sha1s in JURI
 		# 2. remove the http://dev.gentoo.org/~gienah/snapshots/${P}-maven-deps.tar.gz from SRC_URI
-		# 3. try emerge scala.  Check if it downloads more stuff in src_compile to ${WORDIR}/.m2
+		# 3. try emerge scala.  Check if it downloads more stuff in src_compile to ${WORKDIR}/.m2
 		# or /var/tmp/portage/.m2 or /root/.m2
 		# 4. tar up all the .m2 junk into ${P}-maven-deps.tar.gz and add it to SRC_URI.
 		sed -e "s@\(<mkdir dir=\"\)\${user.home}\(/.m2/repository\"/>\)@\1${WORKDIR}\2\n      <artifact:localRepository id=\"localrepo\" path=\"${WORKDIR}/.m2/repository\" />@" \

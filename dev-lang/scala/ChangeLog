@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.45 2015/04/17 14:39:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.46 2015/04/18 07:42:09 gienah Exp $
+
+  18 Apr 2015; Mark Wright <gienah@gentoo.org> scala-2.10.2-r2.ebuild,
+  scala-2.10.3-r1.ebuild, scala-2.10.4-r1.ebuild, scala-2.11.1-r1.ebuild,
+  scala-2.11.2-r1.ebuild, scala-2.11.4-r1.ebuild, scala-2.11.6.ebuild,
+  scala-2.9.2-r1.ebuild:
+  Correct typo in the comments: sed -e s@WORDIR@WORKDIR@g -i *.ebuild
 
 *scala-2.9.2-r1 (17 Apr 2015)
 *scala-2.11.1-r1 (17 Apr 2015)

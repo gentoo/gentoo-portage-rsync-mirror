@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-1.0.0.ebuild,v 1.4 2014/08/25 14:17:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/oauth2-1.0.0.ebuild,v 1.5 2015/04/18 07:36:47 graaff Exp $
 
 EAPI=5
 
@@ -32,7 +32,8 @@ ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.5.0:2 )"
 all_ruby_prepare() {
 	sed -i -e '/simplecov/,/^end/ s:^:#:' spec/helper.rb || die
 
-	sed -i -e '/yardstick/,/^end/ s:^:#:' Rakefile || die
+	sed -i -e '/yardstick/,/^end/ s:^:#:' \
+		-e '/bundler/I s:^:#:' Rakefile || die
 }
 
 each_ruby_test() {

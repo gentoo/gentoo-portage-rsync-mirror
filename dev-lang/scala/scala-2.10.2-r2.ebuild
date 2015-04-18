@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.2-r2.ebuild,v 1.1 2015/04/17 14:39:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.2-r2.ebuild,v 1.2 2015/04/18 07:42:09 gienah Exp $
 
 EAPI="5"
 
@@ -137,8 +137,8 @@ java_prepare() {
 		# Note: to bump scala, some things to try are:
 		# 1. update all the sha1s in JURI
 		# 2. comment out applying the maven-deps patch and all the stuff here up to and including the sed of build.xml
-		# 3. try emerge scala, it will likely download more stuff in src_compile to ${WORDIR}/.m2
-		# 4. tar up the stuff in ${WORDIR}/.m2 and change the ${P}-maven-deps.tar.gz in SRC_URI to point to it.
+		# 3. try emerge scala, it will likely download more stuff in src_compile to ${WORKDIR}/.m2
+		# 4. tar up the stuff in ${WORKDIR}/.m2 and change the ${P}-maven-deps.tar.gz in SRC_URI to point to it.
 		# 5. uncomment the maven-deps patch apply and all the stuff up to and including the sed of build.xml
 		# 6. the hash in ${P}-no-git.patch should be updated by searching for hash matching the scala release
 		# tag, so that the source code hyper-links in the scala documentation will point to the correct version of

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/egypt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.9 2014/12/31 15:28:43 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.10 2015/04/18 07:33:32 mr_bones_ Exp $
+
+  18 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -egypt-1.9-r1.ebuild:
+  old
 
 *egypt-1.10 (31 Dec 2014)
 

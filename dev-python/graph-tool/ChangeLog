@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/graph-tool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.28 2015/03/27 02:08:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/graph-tool/ChangeLog,v 1.29 2015/04/18 07:54:02 idella4 Exp $
+
+*graph-tool-2.2.40 (18 Apr 2015)
+
+  18 Apr 2015; Ian Delaney <idella4@gentoo.org> +graph-tool-2.2.40.ebuild:
+  bump, runtested to installed state
 
 *graph-tool-2.2.38 (27 Mar 2015)
 
