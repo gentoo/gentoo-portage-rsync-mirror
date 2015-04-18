@@ -15,8 +15,4 @@
 	pyrax should work with most OpenStack-based cloud deployments,
 	though it specifically targets the Rackspace public cloud.
   </longdescription>
-  <use>
-      <flag name="keyring">adds support for the keyring auth backend</flag>
-  </use>
 </pkgmetadata>
-
