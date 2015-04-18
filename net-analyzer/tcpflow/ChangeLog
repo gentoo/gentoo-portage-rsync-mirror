@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpflow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.54 2015/04/12 17:58:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/ChangeLog,v 1.55 2015/04/18 15:56:34 pacho Exp $
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> tcpflow-1.4.4_p3.ebuild:
+  x86 stable wrt bug #517336
 
   12 Apr 2015; Jeroen Roovers <jer@gentoo.org> tcpflow-1.4.4_p3.ebuild,
   -files/tcpflow-1.4.4_p2-deps.patch:

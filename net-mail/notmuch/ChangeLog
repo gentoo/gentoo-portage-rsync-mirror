@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.115 2015/04/08 18:18:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.116 2015/04/18 15:56:03 pacho Exp $
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> notmuch-0.18.2.ebuild:
+  x86 stable wrt bug #516756
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> notmuch-0.16-r1.ebuild,
   notmuch-0.17.ebuild, notmuch-0.18.2.ebuild, notmuch-0.19-r1.ebuild:

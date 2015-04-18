@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.106 2015/03/02 09:30:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.107 2015/04/18 15:56:46 pacho Exp $
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> traceroute-2.0.20.ebuild:
+  x86 stable wrt bug #517380
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> traceroute-2.0.20.ebuild:
   Stable for ppc, wrt bug #517380

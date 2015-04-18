@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.8.ebuild,v 1.2 2015/03/27 16:29:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/sumwars/sumwars-0.5.8.ebuild,v 1.4 2015/04/18 16:00:51 mr_bones_ Exp $
 
-EAPI=4
-
+EAPI=5
 inherit cmake-utils eutils flag-o-matic gnome2-utils games
 
 DESCRIPTION="a multi-player, 3D action role-playing game"
@@ -12,7 +11,7 @@ SRC_URI="mirror://sourceforge/sumwars/${P//_/-}-src.tar.bz2"
 
 LICENSE="GPL-3 CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="+tools debug"
 
 LANGS="de en it pl pt ru uk"
@@ -36,7 +35,7 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libXrandr
 	tools? ( dev-libs/boost )"
-DEPEND="${RDEPEND}"
+DEPEND=${RDEPEND}
 
 S=${WORKDIR}/${PN}-${PV%_*}
 
