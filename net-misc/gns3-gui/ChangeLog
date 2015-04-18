@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gns3-gui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/ChangeLog,v 1.5 2015/04/06 09:53:13 bman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/ChangeLog,v 1.6 2015/04/18 06:37:22 bman Exp $
+
+*gns3-gui-1.3.1 (18 Apr 2015)
+
+  18 Apr 2015; Aaron Bauman <bman@gentoo.org> +gns3-gui-1.3.1.ebuild,
+  -gns3-gui-1.2.3.ebuild, -gns3-gui-1.3.0.ebuild:
+  rm old; add gns3-gui-1.3.1; remove PyQt4 blocker; update gns3-converter
+  requirement
 
 *gns3-gui-1.3.0 (06 Apr 2015)
 
