@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/hpx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/ChangeLog,v 1.5 2015/04/14 11:03:14 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/ChangeLog,v 1.6 2015/04/18 18:15:24 ottxor Exp $
+
+  18 Apr 2015; Christoph Junghans <ottxor@gentoo.org> hpx-0.9.10.ebuild:
+  drop old python version, fixed deps
 
 *hpx-0.9.10 (14 Apr 2015)
 

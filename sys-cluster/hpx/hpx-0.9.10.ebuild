@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/hpx-0.9.10.ebuild,v 1.1 2015/04/14 11:03:14 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/hpx/hpx-0.9.10.ebuild,v 1.2 2015/04/18 18:15:24 ottxor Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit cmake-utils fortran-2 multilib python-single-r1 versionator
 
@@ -31,6 +31,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( dev-lang/python )
+	doc? ( >=dev-libs/boost-1.56.0-r1[tools] )
 "
 REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )
 	jemalloc? ( !perftools !tbb )

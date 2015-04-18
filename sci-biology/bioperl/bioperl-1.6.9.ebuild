@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.9.ebuild,v 1.4 2015/04/08 08:03:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.9.ebuild,v 1.5 2015/04/18 18:29:09 dilfridge Exp $
 
 EAPI="5"
 
@@ -17,6 +17,8 @@ HOMEPAGE="http://www.bioperl.org/"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="-minimal graphviz sqlite ${SUBPROJECTS}"
+
+REQUIRED_USE="minimal? ( !graphviz )"
 
 CDEPEND="
 	dev-perl/libwww-perl
@@ -59,11 +61,6 @@ RDEPEND="${CDEPEND}"
 PDEPEND="db? ( >=sci-biology/bioperl-db-${MIN_PV} )
 	network? ( >=sci-biology/bioperl-network-${MIN_PV} )
 	run? ( >=sci-biology/bioperl-run-${MIN_PV} )"
-
-src_configure() {
-	if use minimal && use graphviz; then die "USE flags minimal and graphviz cannot be used together"; fi
-	perl-module_src_configure
-}
 
 src_install() {
 	mydoc="AUTHORS BUGS FAQ"
