@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.942 2015/04/17 03:16:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.943 2015/04/18 03:43:44 idella4 Exp $
+
+  18 Apr 2015; Ian Delaney <idella4@gentoo.org> -vlc-2.1.4.ebuild,
+  -vlc-2.1.5.ebuild:
+  remove old, hold back on 2.1.2 for now
 
   17 Apr 2015; Ian Delaney <idella4@gentoo.org> metadata.xml, vlc-2.2.0.ebuild:
   substitute proxy maintainer, P. Stankowski gave notice of withdrawal, new
