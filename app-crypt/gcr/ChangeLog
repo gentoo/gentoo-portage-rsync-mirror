@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.53 2015/04/05 12:44:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.54 2015/04/18 08:24:38 leio Exp $
+
+  18 Apr 2015; Mart Raudsepp <leio@gentoo.org> gcr-3.14.0.ebuild:
+  Fix glib version requirement
 
   05 Apr 2015; Pacho Ramos <pacho@gentoo.org> gcr-3.14.0.ebuild:
   vala-common is needed with eautoreconf (#545222 by brakarov)

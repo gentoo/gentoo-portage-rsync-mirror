@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.7 2015/04/08 17:56:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.8 2015/04/18 08:08:07 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -61,6 +61,7 @@ RDEPEND="
 #	vala? ( dev-libs/libgee:0.8 )
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.9
+	app-text/yelp-tools
 	dev-util/gtk-doc-am
 	>=dev-util/intltool-0.40.6
 	virtual/pkgconfig

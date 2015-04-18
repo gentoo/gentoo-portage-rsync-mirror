@@ -1,6 +1,15 @@
 # ChangeLog for app-text/paperwork
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/paperwork/ChangeLog,v 1.5 2015/04/08 07:30:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/paperwork/ChangeLog,v 1.7 2015/04/18 08:07:50 voyageur Exp $
+
+  18 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> paperwork-0.2.3.ebuild:
+  Drop postinst log, this version mostly relies on OCR tool for orientation
+  detection
+
+*paperwork-0.2.3 (18 Apr 2015)
+
+  18 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> +paperwork-0.2.3.ebuild:
+  Version bump
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> paperwork-0.2.1.ebuild,
   paperwork-0.2.2.ebuild, paperwork-0.2.ebuild:
