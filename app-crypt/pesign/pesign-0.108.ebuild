@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/pesign-0.108.ebuild,v 1.3 2014/05/13 02:22:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/pesign-0.108.ebuild,v 1.4 2015/04/18 12:18:22 swegener Exp $
 
 EAPI="4"
 inherit eutils multilib
 
 DESCRIPTION="Tools for manipulating signed PE-COFF binaries"
 HOMEPAGE="https://github.com/vathpela/pesign"
-SRC_URI="https://github.com/vathpela/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/vathpela/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

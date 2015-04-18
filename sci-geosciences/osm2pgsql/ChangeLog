@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/osm2pgsql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.17 2015/03/25 07:41:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.18 2015/04/18 12:30:41 swegener Exp $
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org> osm2pgsql-0.84.0.ebuild,
+  osm2pgsql-0.86.0.ebuild, osm2pgsql-0.87.0.ebuild:
+  Rename distfile to include package name.
 
 *osm2pgsql-0.87.0 (25 Mar 2015)
 

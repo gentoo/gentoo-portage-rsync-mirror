@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/vsqlite++-0.3.13-r1.ebuild,v 1.2 2015/03/07 08:05:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/vsqlite++/vsqlite++-0.3.13-r1.ebuild,v 1.3 2015/04/18 12:12:20 swegener Exp $
 
 EAPI=5
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -10,7 +10,7 @@ inherit autotools-utils
 
 DESCRIPTION="VSQLite++ - A welldesigned and portable SQLite3 Wrapper for C++"
 HOMEPAGE="http://evilissimo.fedorapeople.org/releases/vsqlite--/"
-SRC_URI="https://github.com/vinzenz/vsqlite--/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/vinzenz/vsqlite--/archive/${PV}.tar.gz -> ${P}.tar.gz"
 IUSE="static-libs"
 
 LICENSE="BSD"
