@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.20.0.ebuild,v 1.1 2015/03/08 03:31:46 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.25.0.ebuild,v 1.1 2015/04/18 14:25:29 yngwin Exp $
 
 EAPI=5
 inherit eutils fdo-mime bash-completion-r1 multilib toolchain-funcs
@@ -46,10 +46,12 @@ COMMON_DEPEND="
 	>=dev-python/dnspython-1.6.0[python_targets_python2_7(-)]
 	>=dev-python/cssselect-0.7.1[python_targets_python2_7(-)]
 	>=dev-python/cssutils-0.9.9[python_targets_python2_7(-)]
-	>=dev-python/dbus-python-0.82.2[python_targets_python2_7(-)]
+	>=dev-python/dbus-python-1.2.0[python_targets_python2_7(-)]
 	>=dev-python/lxml-3.2.1[python_targets_python2_7(-)]
 	>=dev-python/mechanize-0.1.11[python_targets_python2_7(-)]
 	dev-python/netifaces[python_targets_python2_7(-)]
+	dev-python/psutil[python_targets_python2_7(-)]
+	>=dev-python/pygments-2.0.1[python_targets_python2_7(-)]
 	>=dev-python/python-dateutil-1.4.1[python_targets_python2_7(-)]
 	>=dev-python/PyQt5-5.2.0[gui,svg,webkit,widgets,network,printsupport,python_targets_python2_7(-)]
 	dev-qt/qtcore:5
