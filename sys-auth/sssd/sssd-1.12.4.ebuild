@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.4.ebuild,v 1.4 2015/04/10 00:23:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.12.4.ebuild,v 1.5 2015/04/18 18:00:00 hwoarang Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://fedorahosted.org/released/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="acl augeas autofs +locator netlink nfsv4 nls +manpages python selinux sudo ssh test"
+IUSE="acl augeas autofs +locator netlink nfsv4 nls +manpages python samba selinux sudo ssh test"
 
 COMMON_DEP="
 	>=virtual/pam-0-r1[${MULTILIB_USEDEP}]
@@ -49,6 +49,7 @@ COMMON_DEP="
 	nls? ( >=sys-devel/gettext-0.18 )
 	virtual/libintl
 	netlink? ( dev-libs/libnl:3 )
+	samba? ( >=net-fs/samba-4.0 )
 	"
 
 RDEPEND="${COMMON_DEP}
@@ -92,7 +93,6 @@ src_configure() {
 }
 
 multilib_src_configure() {
-	# no samba4 per 447022
 	# set initscript to sysv because the systemd option needs systemd to
 	# be installed. We provide our own systemd file anyway.
 	local myconf=(
@@ -106,7 +106,7 @@ multilib_src_configure() {
 		--disable-rpath
 		--enable-silent-rules
 		--sbindir=/usr/sbin
-		--without-samba
+		$(multilib_native_use_with samba)
 		$(multilib_native_use_enable acl cifs-idmap-plugin)
 		$(multilib_native_use_enable augeas config-lib)
 		$(multilib_native_use_with selinux)
