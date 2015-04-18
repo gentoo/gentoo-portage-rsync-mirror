@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-scala/eselect-scala-0.1.0.ebuild,v 1.1 2015/04/17 14:36:02 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-scala/eselect-scala-0.1.1.ebuild,v 1.1 2015/04/18 02:55:04 gienah Exp $
 
 EAPI=5
 
