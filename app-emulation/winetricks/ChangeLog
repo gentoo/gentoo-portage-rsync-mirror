@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/winetricks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.31 2015/03/23 05:34:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/ChangeLog,v 1.32 2015/04/18 16:57:15 mgorny Exp $
+
+*winetricks-20150416 (18 Apr 2015)
+
+  18 Apr 2015; Michał Górny <mgorny@gentoo.org> +winetricks-20150416.ebuild,
+  -winetricks-20141130.ebuild, winetricks-99999999.ebuild:
+  Version bump. Update HOMEPAGE & SRC_URI. Drop old. https://github.com/gentoo
+  /gentoo-portage-rsync-mirror/pull/102 by NP-Hardass.
 
   23 Mar 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   winetricks-20141130.ebuild, winetricks-99999999.ebuild:
@@ -188,4 +195,3 @@
   01 Mar 2011; Mike Frysinger <vapier@gentoo.org> +winetricks-185.ebuild,
   +metadata.xml:
   Initial ebuild.
-
