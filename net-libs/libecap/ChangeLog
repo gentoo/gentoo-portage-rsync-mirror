@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.46 2015/03/20 15:34:09 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.47 2015/04/18 20:39:04 pacho Exp $
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> libecap-1.0.0.ebuild:
+  ppc64 stable wrt bug #495854
 
   20 Mar 2015; Andreas Schuerch <nativemad@gentoo.org> libecap-1.0.0.ebuild:
   x86 stable, see bug 495854

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rapidsvn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.27 2015/04/08 17:53:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/ChangeLog,v 1.28 2015/04/18 20:39:49 pacho Exp $
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> rapidsvn-0.12.1-r1.ebuild:
+  ppc64 stable wrt bug #502814
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> rapidsvn-0.12.1-r1.ebuild:
   Drop old Python implementations
