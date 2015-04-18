@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ccrtp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.38 2015/03/29 17:25:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.39 2015/04/18 04:22:49 mr_bones_ Exp $
+
+  18 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -ccrtp-2.0.5.ebuild,
+  -files/ccrtp-1.7.0-cstddef.patch, -files/ccrtp-stdlib.patch:
+  old
 
 *ccrtp-2.1.2 (29 Mar 2015)
 

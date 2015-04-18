@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.50 2015/01/16 20:33:56 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.51 2015/04/18 04:25:21 jer Exp $
+
+  18 Apr 2015; Jeroen Roovers <jer@gentoo.org> PEAR-Text_Wiki-1.2.2.ebuild:
+  Stable for HPPA (bug #546664).
 
 *PEAR-Text_Wiki-1.2.2 (16 Jan 2015)
 

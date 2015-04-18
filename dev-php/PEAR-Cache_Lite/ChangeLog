@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Cache_Lite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache_Lite/ChangeLog,v 1.38 2015/02/19 17:42:29 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache_Lite/ChangeLog,v 1.39 2015/04/18 04:26:09 jer Exp $
+
+  18 Apr 2015; Jeroen Roovers <jer@gentoo.org> PEAR-Cache_Lite-1.7.16.ebuild:
+  Stable for HPPA (bug #546650).
 
 *PEAR-Cache_Lite-1.7.16 (19 Feb 2015)
 
