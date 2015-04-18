@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/faraday
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.27 2015/04/03 13:38:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.28 2015/04/18 12:50:14 swegener Exp $
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org> faraday-0.9.0.ebuild,
+  faraday-0.9.1.ebuild:
+  Rename distfile to include package name.
 
   03 Apr 2015; Hans de Graaff <graaff@gentoo.org> faraday-0.9.1.ebuild:
   Add missing test dependency on dev-ruby/httpclient.

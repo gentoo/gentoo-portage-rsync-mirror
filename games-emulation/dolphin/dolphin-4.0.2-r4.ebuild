@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0.2-r4.ebuild,v 1.1 2015/02/09 00:00:07 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0.2-r4.ebuild,v 1.2 2015/04/18 12:47:01 swegener Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ WX_GTK_VER="2.9"
 
 inherit cmake-utils eutils pax-utils toolchain-funcs versionator wxwidgets games
 
-SRC_URI="https://github.com/${PN}-emu/${PN}/archive/${PV}.zip"
+SRC_URI="https://github.com/${PN}-emu/${PN}/archive/${PV}.zip -> ${P}.zip"
 KEYWORDS="~amd64"
 
 DESCRIPTION="Gamecube and Wii game emulator"

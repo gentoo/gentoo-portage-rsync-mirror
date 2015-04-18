@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.5.ebuild,v 1.3 2015/03/21 14:46:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/w3af-1.5.ebuild,v 1.4 2015/04/18 12:41:35 swegener Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit multilib python-single-r1
 
 DESCRIPTION="Web Application Attack and Audit Framework"
 HOMEPAGE="http://w3af.sourceforge.net/"
-SRC_URI="https://github.com/andresriancho/${PN}/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/andresriancho/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

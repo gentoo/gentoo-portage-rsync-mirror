@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/astmanproxy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/ChangeLog,v 1.10 2014/02/10 11:34:11 chainsaw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/ChangeLog,v 1.11 2015/04/18 12:37:40 swegener Exp $
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org> astmanproxy-1.28.2.ebuild:
+  Rename distfile to include package name.
 
 *astmanproxy-1.28.2 (10 Feb 2014)
 

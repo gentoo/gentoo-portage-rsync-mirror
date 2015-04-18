@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/websockify
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/websockify/ChangeLog,v 1.7 2015/01/16 11:11:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/websockify/ChangeLog,v 1.8 2015/04/18 12:52:24 swegener Exp $
+
+  18 Apr 2015; Sven Wegener <swegener@gentoo.org> websockify-0.6.0.ebuild:
+  Rename distfile to include package name.
 
   16 Jan 2015; Ian Delaney <idella4@gentoo.org> -websockify-0.3.0.ebuild,
   -websockify-0.4.1.ebuild, -websockify-0.5.1.ebuild, websockify-0.6.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.64 2015/03/14 09:39:07 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.65 2015/04/18 12:46:17 pacho Exp $
+
+  18 Apr 2015; Pacho Ramos <pacho@gentoo.org> vuze-4.8.1.2-r1.ebuild:
+  ppc64 stable wrt bug #432146
 
 *vuze-5.6.0.0 (14 Mar 2015)
 

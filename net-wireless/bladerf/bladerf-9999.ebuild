@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-9999.ebuild,v 1.6 2015/03/23 01:51:24 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bladerf/bladerf-9999.ebuild,v 1.7 2015/04/18 12:34:38 swegener Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_PV=${PV/\_/-}
 	S="${WORKDIR}/${MY_PN}-${MY_PV}"
-	SRC_URI="https://github.com/Nuand/${MY_PN}/archive/${MY_PV}.tar.gz"
+	SRC_URI="https://github.com/Nuand/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 

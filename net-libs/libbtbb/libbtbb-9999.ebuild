@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.14 2015/03/19 20:45:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.15 2015/04/18 12:39:52 swegener Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ else
 	MY_PV=${PV/\./-}
 	MY_PV=${MY_PV/./-R}
 	S=${WORKDIR}/${PN}-${MY_PV}
-	SRC_URI="https://github.com/greatscottgadgets/${PN}/archive/${MY_PV}.tar.gz"
+	SRC_URI="https://github.com/greatscottgadgets/${PN}/archive/${MY_PV}.tar.gz -> ${PN}-${MY_PV}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
