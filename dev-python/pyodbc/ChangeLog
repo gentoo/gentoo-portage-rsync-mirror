@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyodbc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.10 2015/02/01 21:38:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.11 2015/04/18 23:43:58 floppym Exp $
+
+  18 Apr 2015; Mike Gilbert <floppym@gentoo.org> pyodbc-3.0.7-r1.ebuild:
+  Append -fno-strict-aliasing to CXXFLAGS.
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org>
   -files/pyodbc-3.0.3-py25-compat.patch, -pyodbc-2.1.11.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.361 2015/04/14 12:37:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.362 2015/04/18 23:54:18 floppym Exp $
+
+  18 Apr 2015; Mike Gilbert <floppym@gentoo.org> -systemd-219-r1.ebuild,
+  systemd-216-r3.ebuild, systemd-216-r4.ebuild, systemd-218-r3.ebuild,
+  systemd-219-r2.ebuild, systemd-9999.ebuild:
+  Adjust glibc blocker, bug 546194.
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> systemd-216-r3.ebuild:
   Stable for ia64, wrt bug #525112

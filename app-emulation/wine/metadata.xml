@@ -33,7 +33,5 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 		http://wiki.winehq.org/NtlmAuthSetupGuide and
 		http://wiki.winehq.org/NtlmSigningAndSealing</flag>
 	<flag name='staging'>Apply unofficial Wine-Staging patches for advanced feature support that haven't made it into upstream Wine yet</flag>
-	<flag name='win32'>Build a 32bit version of Wine (won't run Win64 binaries)</flag>
-	<flag name='win64'>Build a 64bit version of Wine (won't run Win32 binaries)</flag>
 </use>
 </pkgmetadata>
