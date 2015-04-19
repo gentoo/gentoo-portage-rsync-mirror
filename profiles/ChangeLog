@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9942 2015/04/19 05:02:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9943 2015/04/19 06:18:25 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2015; Ben de Groot <yngwin@gentoo.org>
+  arch/amd64/package.use.stable.mask, arch/x86/package.use.stable.mask,
+  default/linux/powerpc/ppc32/13.0/package.use.stable.mask:
+  Re-apply stable use mask for opus on vlc (and also chromaprint for ppc32).
+  See bug #530254 and #504826.
 
   19 Apr 2015; Ben de Groot <yngwin@gentoo.org>
   arch/amd64/package.use.stable.mask, arch/arm/package.use.stable.mask,
@@ -369,7 +375,7 @@
 
   28 Feb 2015; Andrew Savchenko <bircoph@gentoo.org> use.desc:
   Add "seccomp" global USE flag.
-  
+
   28 Feb 2015; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Add dev-libs/libzypp to zypper mask too.
 

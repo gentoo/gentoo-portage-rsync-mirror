@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.6.0.ebuild,v 1.3 2015/01/03 01:22:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.6.0.ebuild,v 1.4 2015/04/19 06:05:27 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -29,6 +29,12 @@ ruby_add_bdepend "test? ( dev-ruby/bacon )"
 
 # Block against versions in older slots that also try to install a binary.
 RDEPEND="${RDEPEND} !<dev-ruby/rack-1.4.5-r1:1.4 !<dev-ruby/rack-1.5.2-r4:1.5"
+
+all_ruby_prepare() {
+	# The build system tries to generate the ChangeLog from git. Create
+	# an empty file to avoid a needless dependency on git.
+	touch ChangeLog || die
+}
 
 each_ruby_test() {
 	# Since the Rakefile calls specrb directly rather than loading it, we
