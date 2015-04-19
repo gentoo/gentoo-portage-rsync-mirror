@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.36 2015/04/14 12:32:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.37 2015/04/19 04:39:44 idella4 Exp $
+
+*ucspi-ssl-0.94-r1 (19 Apr 2015)
+
+  19 Apr 2015; Ian Delaney <idella4@gentoo.org> +ucspi-ssl-0.94-r1.ebuild,
+  +files/ucspi-ssl-0.94-verbose.patch:
+  revbump; patch to fix deficit in qmail eclass wrt Bugs #516868 #546992
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ucspi-ssl-0.94.ebuild:
   Stable for ia64, wrt bug #516868
@@ -28,7 +34,7 @@
 *ucspi-ssl-0.94 (03 Apr 2015)
 
   03 Apr 2015; Ian Delaney <idella4@gentoo.org> +ucspi-ssl-0.94.ebuild:
-  bump; ebuild preapred by Alex Efrox in Bug #516868
+  bump; ebuild preapred by Alex Efros in Bug #516868
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
