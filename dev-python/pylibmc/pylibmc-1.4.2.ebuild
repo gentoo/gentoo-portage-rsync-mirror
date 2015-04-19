@@ -26,10 +26,7 @@ python_prepare_all() {
 }
 
 python_test() {
-	local PIDDIR="${T}/${EPYTHON}-pylibmc"
-	mkdir "${PIDDIR}" || die
-	chmod 0777 "${PIDDIR}" || die
-	memcached -d -p 11219 -u nobody -l localhost -P "${PIDDIR}/m.pid" || die
+	memcached -d -p 11219 -u nobody -l localhost -P "${T}/m.pid" || die
 	MEMCACHED_PORT=11219 nosetests || die
-	kill `cat "${PIDDIR}/m.pid"`
+	kill $(cat "${T}/m.pid") || die
 }
