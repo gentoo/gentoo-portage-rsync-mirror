@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/oracle-instantclient-jdbc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.37 2014/04/04 08:31:20 haubi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-jdbc/ChangeLog,v 1.38 2015/04/19 13:28:09 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
+  oracle-instantclient-jdbc-11.2.0.4.ebuild:
+  Stable for amd64, wrt bug #524924
 
 *oracle-instantclient-jdbc-11.2.0.4 (04 Apr 2014)
 
@@ -196,4 +200,3 @@
   22 Mar 2004; Don Seiler <rizzo@gentoo.org>; metadata.xml,
   oracle-instantclient-jdbc-10.1.0.2.ebuild:
   Initial import, thanks to Jamis Buck for the good work.  Bug #43813
-

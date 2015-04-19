@@ -1,6 +1,17 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.88 2015/04/08 18:23:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.89 2015/04/19 13:15:00 tamiko Exp $
+
+*paraview-4.3.1 (19 Apr 2015)
+
+  19 Apr 2015; Matthias Maier <tamiko@gentoo.org>
+  +files/paraview-4.1.0-vtk-freetype.patch,
+  +files/paraview-4.2.0-protobuf-2.patch, +files/paraview-4.2.0-protobuf.patch,
+  +paraview-4.3.1.ebuild, -files/paraview-4.2.0-Protobuf.patch,
+  -paraview-4.0.1-r2.ebuild, paraview-4.1.0-r2.ebuild, paraview-4.2.0-r1.ebuild:
+  version bump (bug #538690), fix dependencies (bug #538168), fix freetype-2.5.5
+  compatibility also in 4.1.0-r2 (bug #541012), fix protobuf compatibility in
+  4.2.0 and 4.3.1 (bug #537988)
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> paraview-4.0.1-r2.ebuild,
   paraview-4.1.0-r2.ebuild, paraview-4.2.0-r1.ebuild:

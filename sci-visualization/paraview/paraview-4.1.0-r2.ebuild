@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r2.ebuild,v 1.3 2015/04/08 18:23:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r2.ebuild,v 1.4 2015/04/19 13:15:00 tamiko Exp $
 
 EAPI=5
 
@@ -35,8 +35,8 @@ RDEPEND="
 	media-libs/libtheora
 	media-libs/tiff:0=
 	sci-libs/hdf5[mpi=]
-	|| ( ( >=sci-libs/netcdf-4.2[hdf5] >=sci-libs/netcdf-cxx-4.2:3 )
-		~sci-libs/netcdf-4.1.3[cxx,hdf5] )
+	>=sci-libs/netcdf-4.2[hdf5]
+	>=sci-libs/netcdf-cxx-4.2:3
 	sys-libs/zlib
 	virtual/jpeg:0
 	virtual/opengl
@@ -45,6 +45,7 @@ RDEPEND="
 	x11-libs/libXext
 	x11-libs/libXmu
 	x11-libs/libXt
+	boost? ( >=dev-libs/boost-1.40.0[mpi?,${PYTHON_USEDEP}] )
 	coprocessing? (
 		plugins? (
 			dev-python/PyQt4
@@ -57,12 +58,11 @@ RDEPEND="
 	python? (
 		${PYTHON_DEPS}
 		dev-python/matplotlib[${PYTHON_USEDEP}]
-		dev-python/mpi4py
 		dev-python/numpy[${PYTHON_USEDEP}]
 		dev-python/sip[${PYTHON_USEDEP}]
-		dev-python/twisted-core
+		dev-python/twisted-core[${PYTHON_USEDEP}]
 		dev-python/zope-interface[${PYTHON_USEDEP}]
-		mpi? ( dev-python/mpi4py )
+		mpi? ( dev-python/mpi4py[${PYTHON_USEDEP}] )
 		qt4? ( dev-python/PyQt4[opengl,webkit,${PYTHON_USEDEP}] )
 	)
 	qt4? (
@@ -77,8 +77,6 @@ RDEPEND="
 	tcl? ( dev-lang/tcl:0= )
 	tk? ( dev-lang/tk:0= )"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
-	boost? ( >=dev-libs/boost-1.40.0[mpi?,${PYTHON_USEDEP}] )
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${MY_P%-source}
@@ -96,7 +94,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-4.0.1-vtk-cg-path.patch \
 		"${FILESDIR}"/${PN}-4.0.1-Protobuf.patch \
 		"${FILESDIR}"/${P}-glxext-legacy.patch \
-		"${FILESDIR}"/${P}-no-fatal-warnings.patch
+		"${FILESDIR}"/${P}-no-fatal-warnings.patch \
+		"${FILESDIR}"/${P}-vtk-freetype.patch
 
 	# lib64 fixes
 	sed -i \

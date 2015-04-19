@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/pdumpfs/pdumpfs-1.3-r2.ebuild,v 1.1 2015/04/19 12:49:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/pdumpfs/pdumpfs-1.3-r2.ebuild,v 1.2 2015/04/19 13:14:35 idella4 Exp $
 
 EAPI=5
 
@@ -24,17 +24,17 @@ src_prepare() {
 }
 
 src_compile() {
-	emake pdumpfs || die "make pdumpfs failed"
+	emake pdumpfs
 }
 
 src_test() {
 	# RUBYOPT=-rauto_gem without rubygems installed will cause ruby to fail, bug #158455 and #163473.
 	export RUBYOPT="${GENTOO_RUBYOPT}"
-	emake check || die "make check failed"
+	emake check
 }
 
 src_install() {
-	dobin pdumpfs || die
+	dobin pdumpfs
 
 	doman man/man8/pdumpfs.8
 	dohtml -r doc/*
