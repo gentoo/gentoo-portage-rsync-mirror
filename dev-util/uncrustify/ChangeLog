@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/uncrustify
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.22 2014/04/14 06:40:55 alexxy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.23 2015/04/19 07:42:27 grobian Exp $
+
+*uncrustify-0.61 (19 Apr 2015)
+
+  19 Apr 2015; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.61.ebuild:
+  Version bump, bug #546806
 
 *uncrustify-9999 (14 Apr 2014)
 
