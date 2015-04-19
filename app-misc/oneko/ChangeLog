@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/oneko
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.24 2015/04/18 12:46:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.25 2015/04/19 04:17:44 jer Exp $
+
+  19 Apr 2015; Jeroen Roovers <jer@gentoo.org> -oneko-1.2.ebuild,
+  -oneko-1.2-r1.ebuild, files/oneko-1.2-include.patch:
+  Old.
 
   18 Apr 2015; Pacho Ramos <pacho@gentoo.org> oneko-1.2-r2.ebuild:
   ppc64 stable wrt bug #391475
