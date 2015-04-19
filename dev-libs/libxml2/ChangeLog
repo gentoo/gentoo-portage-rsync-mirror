@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.443 2015/04/08 17:51:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.444 2015/04/19 16:09:17 tetromino Exp $
+
+*libxml2-2.9.2-r1 (19 Apr 2015)
+
+  19 Apr 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libxml2-2.9.2-r1.ebuild, +files/libxml2-2.9.2-constant-memory.patch,
+  +files/libxml2-2.9.2-missing-entities.patch,
+  +files/libxml2-2.9.2-threads-declarations.patch,
+  +files/libxml2-2.9.2-timsort.patch:
+  Add important patches from upstream, including a fix for a DoS vulnerability
+  (CVE-2015-1819, bug #546720, thanks to Agostino Sarubbo).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> libxml2-2.9.2.ebuild:
   Drop old Python implementations

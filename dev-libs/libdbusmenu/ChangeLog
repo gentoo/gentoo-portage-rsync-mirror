@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.35 2015/04/08 17:51:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.36 2015/04/19 16:30:45 mgorny Exp $
+
+*libdbusmenu-12.10.2-r2 (19 Apr 2015)
+
+  19 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +files/libdbusmenu-12.10.2-gtk2-signal-fix.patch,
+  +libdbusmenu-12.10.2-r2.ebuild, metadata.xml:
+  Enable optional GTK+2 support. Enable multilib support. Remove gtk-doc install
+  hacks, just install into the proper gtk-doc location. Based on the work done
+  by Karol Herbst on https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/65. Part of bug #462764.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> libdbusmenu-12.10.2-r1.ebuild:
   Drop old Python implementations
