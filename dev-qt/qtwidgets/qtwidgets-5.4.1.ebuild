@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/qtwidgets-5.4.1.ebuild,v 1.3 2015/04/15 04:40:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/qtwidgets-5.4.1.ebuild,v 1.4 2015/04/19 18:52:22 kensington Exp $
 
 EAPI=5
 
@@ -17,14 +17,14 @@ else
 fi
 
 # keep IUSE defaults in sync with qtgui
-IUSE="gles2 +opengl +png +xcb"
+IUSE="gles2 gtkstyle +opengl +png +xcb"
 REQUIRED_USE="
 	gles2? ( opengl )
 "
 
 DEPEND="
 	~dev-qt/qtcore-${PV}[debug=]
-	~dev-qt/qtgui-${PV}[debug=,gles2=,opengl=,png=,xcb?]
+	~dev-qt/qtgui-${PV}[debug=,gles2=,gtkstyle=,opengl=,png=,xcb?]
 "
 RDEPEND="${DEPEND}"
 
@@ -48,6 +48,7 @@ src_configure() {
 	local myconf=(
 		# copied from qtgui
 		${gl}
+		$(qt_use gtkstyle)
 		$(qt_use png libpng system)
 		$(qt_use xcb xcb system)
 		$(qt_use xcb xkbcommon system)

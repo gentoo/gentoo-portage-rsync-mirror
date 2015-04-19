@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1435 2015/04/19 17:04:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1436 2015/04/19 18:45:08 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> portage-2.2.18.ebuild:
+  ppc/ppc64/x86 stable, bug #541116
 
   19 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
   amd64 stable wrt bug #541116

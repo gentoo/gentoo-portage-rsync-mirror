@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-5.4.1-r1.ebuild,v 1.1 2015/03/17 14:24:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-5.4.1-r1.ebuild,v 1.2 2015/04/19 18:49:57 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ fi
 
 # TODO: directfb, linuxfb, offscreen (auto-depends on X11)
 
-IUSE="accessibility egl eglfs evdev +gif gles2 +harfbuzz ibus jpeg kms +opengl +png udev +xcb"
+IUSE="accessibility egl eglfs evdev +gif gles2 gtkstyle +harfbuzz ibus jpeg kms +opengl +png udev +xcb"
 REQUIRED_USE="
 	egl? ( evdev opengl )
 	eglfs? ( egl )
@@ -34,6 +34,11 @@ RDEPEND="
 	sys-libs/zlib
 	egl? ( media-libs/mesa[egl] )
 	evdev? ( sys-libs/mtdev )
+	gtkstyle? (
+		x11-libs/gtk+:2
+		x11-libs/pango
+		!!x11-libs/cairo[qt4]
+	)
 	gles2? ( media-libs/mesa[gles2] )
 	harfbuzz? ( >=media-libs/harfbuzz-0.9.32:= )
 	ibus? ( ~dev-qt/qtdbus-${PV}[debug=] )
@@ -92,6 +97,8 @@ QT5_GENTOO_CONFIG=(
 	!gif:no-gif:
 	gles2::OPENGL_ES
 	gles2:opengles2:OPENGL_ES_2
+	gtkstyle:gtkstyle:
+	gtkstyle:gtk2:STYLE_GTK
 	!:no-gui:
 	harfbuzz:system-harfbuzz:HARFBUZZ
 	!harfbuzz:no-harfbuzz:
@@ -114,9 +121,10 @@ QT5_GENTOO_CONFIG=(
 )
 
 pkg_setup() {
-	use opengl && QT5_TARGET_SUBDIRS+=(src/openglextensions)
-	use ibus   && QT5_TARGET_SUBDIRS+=(src/plugins/platforminputcontexts/ibus)
-	use xcb	   && QT5_TARGET_SUBDIRS+=(src/plugins/platforminputcontexts/compose)
+	use opengl   && QT5_TARGET_SUBDIRS+=(src/openglextensions)
+	use gtkstyle && QT5_TARGET_SUBDIRS+=(src/plugins/platformthemes/gtk2)
+	use ibus     && QT5_TARGET_SUBDIRS+=(src/plugins/platforminputcontexts/ibus)
+	use xcb	     && QT5_TARGET_SUBDIRS+=(src/plugins/platforminputcontexts/compose)
 
 	# egl_x11 is activated when both egl and xcb are enabled
 	use egl && QT5_GENTOO_CONFIG+=(xcb:egl_x11) || QT5_GENTOO_CONFIG+=(egl:egl_x11)
@@ -141,6 +149,7 @@ src_configure() {
 		-system-freetype
 		$(use gif || echo -no-gif)
 		${gl}
+		$(qt_use gtkstyle)
 		$(qt_use harfbuzz harfbuzz system)
 		$(qt_use jpeg libjpeg system)
 		$(qt_use kms)

@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtwidgets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.14 2015/04/15 04:40:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.15 2015/04/19 18:52:22 kensington Exp $
+
+  19 Apr 2015; Michael Palimaka <kensington@gentoo.org> metadata.xml,
+  qtwidgets-5.4.1.ebuild:
+  Add gtkstyle USE flag wrt bug #526866.
 
   15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtwidgets-5.4.1.ebuild:
   keyword arm64, tested on cortex-a53 hardware
