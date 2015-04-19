@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakechroot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.22 2014/05/30 13:35:56 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.23 2015/04/19 10:38:25 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fakechroot-2.17.2.ebuild:
+  Stable for amd64, wrt bug #517676
 
 *fakechroot-2.17.2 (30 May 2014)
 

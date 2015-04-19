@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/fakechroot-2.17.2.ebuild,v 1.1 2014/05/30 13:35:56 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/fakechroot-2.17.2.ebuild,v 1.2 2015/04/19 10:38:25 ago Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/f/${PN}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RESTRICT="test"

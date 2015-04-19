@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmudmount
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.18 2015/04/01 18:53:04 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmudmount/ChangeLog,v 1.19 2015/04/19 10:38:40 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> wmudmount-2.2.ebuild:
+  Stable for amd64, wrt bug #517702
 
   01 Apr 2015; Andreas Schuerch <nativemad@gentoo.org> wmudmount-2.2.ebuild:
   x86 stable, see bug 517702
@@ -78,4 +81,3 @@
 
   07 Apr 2010; Samuli Suominen <ssuominen@gentoo.org> +wmudmount-1.4.ebuild:
   Initial commit wrt #313395 by Bernard Cafarelli.
-
