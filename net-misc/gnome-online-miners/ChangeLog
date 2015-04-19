@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/gnome-online-miners
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/ChangeLog,v 1.16 2015/03/15 13:31:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/ChangeLog,v 1.18 2015/04/19 15:50:35 eva Exp $
+
+  19 Apr 2015; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Remove local USE flags descriptions added by error.
+
+*gnome-online-miners-3.14.2 (19 Apr 2015)
+
+  19 Apr 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-online-miners-3.14.2.ebuild, metadata.xml:
+  Version bump.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-online-miners-3.14.1.ebuild:
   x86 stable, bug 534012

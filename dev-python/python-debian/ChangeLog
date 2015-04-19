@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-debian
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/ChangeLog,v 1.10 2015/04/13 09:31:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/ChangeLog,v 1.11 2015/04/19 15:59:46 floppym Exp $
+
+  19 Apr 2015; Mike Gilbert <floppym@gentoo.org> python-debian-0.1.26.ebuild:
+  Simplify python_test function.
 
 *python-debian-0.1.26 (13 Apr 2015)
 

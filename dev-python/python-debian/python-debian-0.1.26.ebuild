@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.26.ebuild,v 1.1 2015/04/13 09:31:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.26.ebuild,v 1.2 2015/04/19 15:59:46 floppym Exp $
 
 EAPI="5"
 
@@ -35,11 +35,7 @@ python_compile_all() {
 
 python_test() {
 	pushd tests > /dev/null || die
-	local t
-	for t in test_*.py ; do
-		einfo "Running ${t} using ${EPYTHON}"
-		"${PYTHON}" "${t}" || die "Testing failed with ${EPYTHON}"
-	done
+	"${PYTHON}" -m unittest discover || die "Testing failed with ${EPYTHON}"
 	popd > /dev/null || die
 }
 
