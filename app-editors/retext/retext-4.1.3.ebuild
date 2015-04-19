@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-4.1.3.ebuild,v 1.3 2015/01/31 13:16:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-4.1.3.ebuild,v 1.4 2015/04/19 06:56:33 pacho Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ if [[ ${PV} == *9999* ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 DESCRIPTION="A Qt-based text editor for Markdown and reStructuredText"

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.12 2012/05/03 06:35:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.13 2015/04/19 06:41:02 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit autotools eutils
 
 MY_P=CEGUI-${PV%b}
@@ -45,12 +45,11 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gcc46.patch
 	sed -i \
 		-e 's/ILvoid/void/g' \
-		ImageCodecModules/DevILImageCodec/CEGUIDevILImageCodec.cpp \
-		|| die "sed failed"
+		ImageCodecModules/DevILImageCodec/CEGUIDevILImageCodec.cpp || die
 	if use examples ; then
-		cp -r Samples Samples.clean
-		rm -f $(find Samples.clean -name 'Makefile*')
-		rm -rf Samples.clean/bin
+		cp -r Samples Samples.clean || die
+		rm -f $(find Samples.clean -name 'Makefile*') || die
+		rm -rf Samples.clean/bin || die
 	fi
 	eautoreconf #220040
 }
@@ -84,14 +83,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	default
 	if use doc ; then
-		dohtml -r documentation/api_reference || die "dohtml failed"
-		dodoc documentation/*.pdf || die "dodoc failed"
+		dohtml -r documentation/api_reference
+		dodoc documentation/*.pdf
 	fi
 	if use examples ; then
 		insinto /usr/share/doc/${PF}/Samples
-		doins -r Samples.clean/* || die "doins failed"
+		doins -r Samples.clean/*
 	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/impressive
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/ChangeLog,v 1.18 2015/04/08 07:30:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/ChangeLog,v 1.19 2015/04/19 06:55:24 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> impressive-0.10.5.ebuild:
+  x86 stable wrt bug #532436
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> impressive-0.10.3-r2.ebuild:
   Remove old Python implementations

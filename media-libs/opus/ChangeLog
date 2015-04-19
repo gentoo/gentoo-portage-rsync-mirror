@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.37 2014/08/10 09:30:32 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.38 2015/04/19 06:32:56 yngwin Exp $
+
+  19 Apr 2015; Ben de Groot <yngwin@gentoo.org> -opus-1.0.1.ebuild,
+  -opus-1.0.2-r1.ebuild, -opus-1.0.2.ebuild, -opus-1.0.3.ebuild, metadata.xml:
+  remove old
 
   10 Aug 2014; Agostino Sarubbo <ago@gentoo.org> opus-1.0.2-r2.ebuild:
   Stable for sparc, wrt bug #515234

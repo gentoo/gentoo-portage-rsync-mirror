@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Search-Xapian
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/ChangeLog,v 1.65 2015/04/14 10:53:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/ChangeLog,v 1.66 2015/04/19 06:56:14 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> Search-Xapian-1.2.19.0.ebuild:
+  x86 stable wrt bug #531758
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> Search-Xapian-1.2.19.0.ebuild:
   Stable for ia64, wrt bug #531758
