@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.244 2015/04/18 15:15:02 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.245 2015/04/19 14:41:15 yngwin Exp $
+
+  19 Apr 2015; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Take over maintainership, since proxied maintainers no longer wish to do so.
 
   18 Apr 2015; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Add myself as maintainer. Fix typos.

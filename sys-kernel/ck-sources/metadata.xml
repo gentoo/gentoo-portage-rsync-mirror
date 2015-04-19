@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>proxy-maintainers</herd>
-  <maintainer>
-    <email>harold@alum.mit.edu</email>
-    <name>Harold Naparst</name>
-    <description>Active Maintainer, Assign bugs</description>
-  </maintainer>
-  <maintainer>
-    <email>eric-f.garioud@wanadoo.fr</email>
-    <name>Eric F. GARIOUD</name>
-    <description>Previous Maintainer, CC bugs</description>
-  </maintainer>
   <maintainer>
     <email>yngwin@gentoo.org</email>
   </maintainer>
