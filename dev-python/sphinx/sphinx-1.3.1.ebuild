@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.3.1.ebuild,v 1.1 2015/04/08 10:50:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.3.1.ebuild,v 1.2 2015/04/19 13:45:31 floppym Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE="doc latex test"
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/docutils-0.11[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.3[${PYTHON_USEDEP}]
-	>=dev-python/pygments-2.0[${PYTHON_USEDEP}]
+	>=dev-python/pygments-2.0.1-r1[${PYTHON_USEDEP}]
 	>=dev-python/six-1.4[${PYTHON_USEDEP}]
 	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 	=dev-python/alabaster-0.7*[${PYTHON_USEDEP}]
