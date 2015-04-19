@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9941 2015/04/18 23:46:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9942 2015/04/19 05:02:44 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2015; Ben de Groot <yngwin@gentoo.org>
+  arch/amd64/package.use.stable.mask, arch/arm/package.use.stable.mask,
+  arch/x86/package.use.stable.mask,
+  default/linux/powerpc/ppc32/13.0/package.use.stable.mask:
+  Drop stable vlc useflags mask (bug #530254), except slacking alpha
 
   18 Apr 2015; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Old wine ebuilds gone from the tree, mask no longer needed (bug #543336).

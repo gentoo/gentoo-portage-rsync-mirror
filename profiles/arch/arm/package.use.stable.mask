@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.stable.mask,v 1.6 2014/10/11 20:02:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.stable.mask,v 1.7 2015/04/19 05:02:44 yngwin Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (02 Jul 2014)
 # Mask due Gnome3 not going to be stabilized on this arch
@@ -10,7 +10,3 @@ net-libs/libproxy webkit
 >=net-libs/webkit-gtk-2.4 geoloc
 >=x11-libs/gtk+-3.12.2 cloudprint
 x11-libs/gksu gnome
-
-# Tom Wijsman <TomWij@gentoo.org (16 Mar 2014)
-# Mask unstable USE flags on media-video/vlc, see security bug #499806.
-media-video/vlc gnutls kde linsys opus zvbi
