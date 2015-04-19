@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.27.ebuild,v 1.1 2015/04/19 16:18:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.27.ebuild,v 1.2 2015/04/19 16:37:26 floppym Exp $
 
 EAPI="5"
 
@@ -34,6 +34,7 @@ python_compile_all() {
 
 python_test() {
 	# Tests currently fail with >=app-crypt/gnupg-2.1
+	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=782904
 	pushd tests > /dev/null || die
 	"${PYTHON}" -m unittest discover || die "Testing failed with ${EPYTHON}"
 	popd > /dev/null || die

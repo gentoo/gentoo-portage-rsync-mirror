@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/systemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.28 2015/04/19 09:52:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.29 2015/04/19 16:51:19 graaff Exp $
+
+  19 Apr 2015; Hans de Graaff <graaff@gentoo.org> -systemu-2.5.2.ebuild:
+  Cleanup.
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> systemu-2.6.4.ebuild:
   Stable for x86, wrt bug #546970
