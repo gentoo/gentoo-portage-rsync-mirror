@@ -1,6 +1,14 @@
 # ChangeLog for xfce-extra/xfce4-notes-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/ChangeLog,v 1.38 2012/11/28 12:25:19 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes-plugin/ChangeLog,v 1.39 2015/04/19 22:05:58 mgorny Exp $
+
+*xfce4-notes-plugin-1.8.0 (19 Apr 2015)
+
+  19 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-notes-plugin-1.8.0.ebuild, metadata.xml:
+  Version bump with a few misc fixes. Upstream also added experimental GTK+3
+  support but since it is incomplete and requires regenerating Vala, we disable
+  it for now.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-notes-plugin-1.7.7.ebuild:
@@ -166,4 +174,3 @@
   25 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   +xfce4-notes-plugin-1.6.3.ebuild, +xfce4-notes-plugin-1.7.0.ebuild:
   Rename xfce4-notes to xfce4-notes-plugin.
-
