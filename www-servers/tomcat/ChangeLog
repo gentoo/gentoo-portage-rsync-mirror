@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.344 2015/03/28 15:54:37 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.345 2015/04/19 09:44:25 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> tomcat-7.0.57.ebuild:
+  x86 stable wrt bug #539596
 
 *tomcat-8.0.21 (28 Mar 2015)
 

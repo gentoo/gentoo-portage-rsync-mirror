@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/xstow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.23 2015/04/12 19:08:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/ChangeLog,v 1.24 2015/04/19 09:37:52 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> xstow-1.0.1.ebuild:
+  x86 stable wrt bug #538222
 
   12 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xstow-0.5.1.ebuild,
   -xstow-1.0.0.ebuild:

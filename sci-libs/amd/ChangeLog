@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/amd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.42 2015/02/22 00:53:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/amd/ChangeLog,v 1.43 2015/04/19 09:48:16 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> amd-2.3.1.ebuild:
+  x86 stable wrt bug #534626
 
   22 Feb 2015; Matt Turner <mattst88@gentoo.org> amd-2.2.0.ebuild,
   amd-2.3.1.ebuild:

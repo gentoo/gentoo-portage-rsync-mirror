@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl2-ttf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-ttf/ChangeLog,v 1.8 2015/03/08 06:47:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-ttf/ChangeLog,v 1.9 2015/04/19 09:49:17 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> sdl2-ttf-2.0.12-r1.ebuild:
+  x86 stable wrt bug #537322
 
   08 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
   sdl2-ttf-2.0.12-r1.ebuild:

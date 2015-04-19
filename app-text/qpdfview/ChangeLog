@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.68 2015/03/27 16:28:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.69 2015/04/19 09:48:38 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> qpdfview-0.4.13-r1.ebuild:
+  Stable for x86, wrt bug #540738
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> qpdfview-0.4.13-r1.ebuild:
   Stable for amd64, wrt bug #540738

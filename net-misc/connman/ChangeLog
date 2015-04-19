@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.94 2015/04/03 08:11:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.95 2015/04/19 09:41:24 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> connman-1.27.ebuild:
+  Stable for x86, wrt bug #542444
 
   03 Apr 2015; Markus Meier <maekke@gentoo.org> connman-1.27.ebuild:
   arm stable, bug #542444

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1-r1.ebuild,v 1.3 2015/03/02 09:30:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1-r1.ebuild,v 1.4 2015/04/19 09:40:50 pacho Exp $
 
 EAPI=2
 WANT_AUTOMAKE=1.9
@@ -12,7 +12,7 @@ SRC_URI="http://www.coyotegulch.com/distfiles/lib${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="static-libs"
 
 RDEPEND=">=dev-libs/libcoyotl-3.1.0

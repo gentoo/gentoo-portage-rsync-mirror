@@ -4,10 +4,10 @@ DESCRIPTION=Minimalistic Murmur (Mumble server)
 EAPI=5
 HOMEPAGE=http://code.google.com/p/umurmur/ https://github.com/fatbob313/umurmur
 IUSE=polarssl
-KEYWORDS=amd64 ~arm ~x86
+KEYWORDS=amd64 ~arm x86
 LICENSE=BSD
 RDEPEND=>=dev-libs/protobuf-c-1.0.0_rc2 dev-libs/libconfig polarssl? ( >=net-libs/polarssl-1.0.0 ) !polarssl? ( dev-libs/openssl:0 )
 SLOT=0
 SRC_URI=https://github.com/fatbob313/umurmur/archive/0.2.15.tar.gz -> umurmur-0.2.15.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=83be5f3d828c5a17ba70e32f3ff2267d
+_md5_=e4ca86480de40ecb745c6e8df43bcacc

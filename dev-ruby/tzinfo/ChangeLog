@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.146 2015/04/14 07:09:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.147 2015/04/19 09:53:08 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> tzinfo-0.3.43.ebuild:
+  Stable for x86, wrt bug #545462
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> tzinfo-0.3.43.ebuild:
   Stable for ppc64, wrt bug #545462

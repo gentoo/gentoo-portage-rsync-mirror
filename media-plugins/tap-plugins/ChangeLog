@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/tap-plugins
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.32 2015/03/27 16:28:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/tap-plugins/ChangeLog,v 1.33 2015/04/19 09:42:47 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> tap-plugins-0.7.3.ebuild:
+  x86 stable wrt bug #535478
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> tap-plugins-0.7.3.ebuild:
   Stable for amd64, wrt bug #535478

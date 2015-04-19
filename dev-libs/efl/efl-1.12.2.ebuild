@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.12.2.ebuild,v 1.6 2015/04/03 14:44:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/efl-1.12.2.ebuild,v 1.7 2015/04/19 09:48:04 pacho Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ inherit autotools enlightenment
 DESCRIPTION="Enlightenment Foundation Libraries all-in-one package"
 
 LICENSE="BSD-2 GPL-2 LGPL-2.1 ZLIB"
-KEYWORDS="amd64 arm ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE="+bmp debug drm +eet egl fbcon +fontconfig fribidi gif gles glib gnutls gstreamer harfbuzz +ico ibus jpeg2k neon oldlua opengl ssl physics pixman +png +ppm +psd pulseaudio scim sdl sound systemd tga tiff tslib v4l2 wayland webp X xim xine xpm"
 
 REQUIRED_USE="

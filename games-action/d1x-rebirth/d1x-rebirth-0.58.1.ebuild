@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.58.1.ebuild,v 1.1 2015/01/27 07:45:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.58.1.ebuild,v 1.2 2015/04/19 09:47:40 pacho Exp $
 
 EAPI=5
 CDROM_OPTIONAL="yes"
@@ -19,7 +19,7 @@ SRC_URI="http://www.dxx-rebirth.com/download/dxx/${MY_P}.tar.gz
 
 LICENSE="D1X GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="cdinstall debug demo ipv6 linguas_de +music opengl opl3-musicpack sc55-musicpack"
 REQUIRED_USE="?? ( cdinstall demo )
 	?? ( opl3-musicpack sc55-musicpack )

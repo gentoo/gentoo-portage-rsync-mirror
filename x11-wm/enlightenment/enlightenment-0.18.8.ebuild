@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.18.8.ebuild,v 1.3 2015/04/03 14:47:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.18.8.ebuild,v 1.4 2015/04/19 09:47:14 pacho Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ inherit enlightenment
 DESCRIPTION="Enlightenment DR17 window manager"
 
 LICENSE="BSD-2"
-KEYWORDS="amd64 arm ~x86"
+KEYWORDS="amd64 arm x86"
 SLOT="0.17/${PV%%_*}"
 
 # The @ is just an anchor to expand from

@@ -4,10 +4,10 @@ DESCRIPTION=A screen color temperature adjusting software
 EAPI=5
 HOMEPAGE=http://jonls.dk/redshift/
 IUSE=appindicator geoclue gtk nls python_targets_python3_3 python_targets_python3_4
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=>=x11-libs/libX11-1.4 x11-libs/libXxf86vm x11-libs/libxcb x11-libs/libdrm geoclue? ( app-misc/geoclue:2.0 dev-libs/glib:2 ) gtk? ( python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] ) gtk? ( dev-python/pygobject[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] x11-libs/gtk+:3[introspection] dev-python/pyxdg[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] )
 SLOT=0
 SRC_URI=https://github.com/jonls/redshift/archive/v1.10.tar.gz -> redshift-1.10.tar.gz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-r1	6d3a3cb5705b9fff1aeb7cfa4e3336fe	python-utils-r1	096f8247eae93026af13ab88cf4305cd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=52b74d460a28ae4a95a7192650d959c4
+_md5_=0008a8168aa0ff917b906be62cb2c914

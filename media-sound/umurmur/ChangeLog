@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/umurmur
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.23 2015/04/13 07:56:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.24 2015/04/19 09:56:49 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> umurmur-0.2.15.ebuild:
+  Stable for x86, wrt bug #546302
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> umurmur-0.2.15.ebuild:
   Stable for amd64, wrt bug #546302

@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/duply
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duply/ChangeLog,v 1.8 2015/04/08 15:32:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duply/ChangeLog,v 1.9 2015/04/19 09:46:34 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> duply-1.9.1.ebuild:
+  Stable for x86, wrt bug #544264
 
   08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> duply-1.9.1.ebuild:
   Stable for amd64, wrt bug #544264

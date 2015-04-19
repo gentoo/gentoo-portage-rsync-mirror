@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.93 2015/04/19 08:57:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/ChangeLog,v 1.94 2015/04/19 09:58:18 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> nx-3.5.0.30.ebuild:
+  Stable for x86, wrt bug #546624
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> nx-3.5.0.30.ebuild:
   Stable for amd64, wrt bug #546624

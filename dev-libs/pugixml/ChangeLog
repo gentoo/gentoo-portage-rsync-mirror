@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pugixml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.22 2015/04/04 03:17:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.23 2015/04/19 09:50:12 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pugixml-1.5.ebuild:
+  Stable for x86, wrt bug #535124
 
   04 Apr 2015; Tim Harder <radhermit@gentoo.org> Manifest:
   Update manifest since upstream retagged the release (bug #545424).

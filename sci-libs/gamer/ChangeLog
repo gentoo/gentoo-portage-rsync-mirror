@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gamer/ChangeLog,v 1.10 2015/01/31 13:15:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gamer/ChangeLog,v 1.11 2015/04/19 09:31:51 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> gamer-1.5-r2.ebuild:
+  x86 stable wrt bug #534666
 
   31 Jan 2015; Agostino Sarubbo <ago@gentoo.org> gamer-1.5-r2.ebuild:
   Stable for amd64, wrt bug #534666

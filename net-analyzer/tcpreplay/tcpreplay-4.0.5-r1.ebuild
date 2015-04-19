@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-4.0.5-r1.ebuild,v 1.1 2015/04/16 16:35:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-4.0.5-r1.ebuild,v 1.3 2015/04/19 09:32:23 ago Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic
@@ -11,7 +11,7 @@ LICENSE="BSD GPL-3"
 SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="debug pcapnav +tcpdump"
 
 DEPEND="
