@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.14.3.ebuild,v 1.7 2015/04/18 07:35:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.14.3.ebuild,v 1.8 2015/04/19 02:19:48 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -44,6 +44,7 @@ COMMON_DEPEND="
 	>=x11-libs/libXfixes-5.0
 	x11-libs/libXtst
 	>=x11-wm/mutter-3.14.3[introspection]
+	<x11-wm/mutter-3.15
 	>=x11-libs/startup-notification-0.11
 
 	${PYTHON_DEPS}

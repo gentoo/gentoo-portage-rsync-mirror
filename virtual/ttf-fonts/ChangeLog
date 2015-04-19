@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ttf-fonts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ChangeLog,v 1.13 2014/01/18 11:58:03 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ttf-fonts/ChangeLog,v 1.14 2015/04/19 02:31:08 yngwin Exp $
+
+  19 Apr 2015; Ben de Groot <yngwin@gentoo.org> ttf-fonts-1.ebuild:
+  Make liberation-fonts default. Add source-pro.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> ttf-fonts-1.ebuild:
   Add arm64 love.
