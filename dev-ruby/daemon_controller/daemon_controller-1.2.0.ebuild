@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemon_controller/daemon_controller-1.2.0.ebuild,v 1.6 2015/04/14 09:32:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemon_controller/daemon_controller-1.2.0.ebuild,v 1.7 2015/04/19 10:16:53 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://github.com/FooBarWidget/daemon_controller"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 all_ruby_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-5.3.0.0.ebuild,v 1.2 2015/03/14 09:39:07 rhill Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-5.3.0.0.ebuild,v 1.3 2015/04/19 10:03:51 rhill Exp $
 
 EAPI="5"
 
@@ -23,10 +23,10 @@ IUSE=""
 # bundles parts of http://www.programmers-friend.org/
 # bundles bcprov - 1.37 required but not in the tree
 RDEPEND="
-	dev-java/commons-cli
+	dev-java/commons-cli:1
 	dev-java/commons-lang:2.1
-	dev-java/json-simple
-	dev-java/log4j
+	dev-java/json-simple:0
+	dev-java/log4j:0
 	dev-java/swt:3.8[cairo]
 	>=virtual/jre-1.6:*"
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/emutos
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.27 2015/04/13 07:55:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/emutos/ChangeLog,v 1.28 2015/04/19 10:06:55 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> emutos-0.9.4.ebuild:
+  Stable for x86, wrt bug #546304
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> emutos-0.9.4.ebuild:
   Stable for amd64, wrt bug #546304

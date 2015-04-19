@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/cifparse-obj-7.025-r1.ebuild,v 1.2 2015/04/08 13:35:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/cifparse-obj-7.025-r1.ebuild,v 1.3 2015/04/19 10:04:21 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://sw-tools.pdb.org/apps/CIFPARSE-OBJ/source/${MY_P}.tar.gz"
 
 LICENSE="PDB"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=""

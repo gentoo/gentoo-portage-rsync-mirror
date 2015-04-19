@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.4.0_alpha.ebuild,v 1.5 2015/04/14 11:00:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.4.0_alpha.ebuild,v 1.6 2015/04/19 10:02:55 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/${PN}2/${PN}$(delete_version_separator
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ia64 ~sparc x86"
 IUSE="doc static-libs"
 
 RDEPEND="~sci-biology/hmmer-2.3.2"

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/vuze-coreplugins
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/ChangeLog,v 1.48 2015/04/18 12:46:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze-coreplugins/ChangeLog,v 1.49 2015/04/19 10:02:29 rhill Exp $
+
+  19 Apr 2015; Ryan Hill <rhill@gentoo.org> -vuze-coreplugins-4.5.1.0.ebuild:
+  Remove old.
 
   18 Apr 2015; Pacho Ramos <pacho@gentoo.org> vuze-coreplugins-4.8.1.2.ebuild:
   ppc64 stable wrt bug #432146

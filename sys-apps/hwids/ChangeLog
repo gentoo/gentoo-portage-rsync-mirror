@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.163 2015/04/17 08:25:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.164 2015/04/19 10:09:44 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> hwids-20150129.ebuild:
+  Stable for x86, wrt bug #546184
 
   17 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> hwids-20150129.ebuild:
   sparc stable wrt bug #546184
