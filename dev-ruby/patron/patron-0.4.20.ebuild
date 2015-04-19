@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/patron-0.4.20.ebuild,v 1.1 2015/03/16 06:53:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/patron-0.4.20.ebuild,v 1.2 2015/04/19 05:54:52 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -25,7 +25,10 @@ all_ruby_prepare() {
 	# Fix Rakefile
 	sed -i -e 's:rake/rdoctask:rdoc/task:' \
 		-e 's/README.txt/README.md/' \
-		-e '/bundler/I s:^:#:' Rakefile || die
+		-e '/bundler/I s:^:#:' \
+		-e '/extensiontask/ s:^:#:' \
+		-e '/ExtensionTask/,/^end/ s:^:#:' \
+		Rakefile || die
 
 	# Avoid specs with failures. We were not running any specs before.
 	rm spec/session_ssl_spec.rb spec/session_spec.rb spec/response_spec.rb || die

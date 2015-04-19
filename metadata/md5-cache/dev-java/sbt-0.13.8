@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install preinst prepare setup test unpack
+DEPEND=virtual/jdk:1.6 >=dev-lang/scala-2.10.4-r1:2.10 >=dev-java/java-config-2.1.9-r1
+DESCRIPTION=sbt is a build tool for Scala and Java projects that aims to do the basics well
+EAPI=5
+HOMEPAGE=http://www.scala-sbt.org/
+IUSE=binary elibc_FreeBSD
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=virtual/jre-1.6 dev-lang/scala:* >=dev-java/java-config-2.1.9-r1
+RESTRICT=test
+SLOT=0
+SRC_URI=!binary? ( http://dev.gentoo.org/~gienah/snapshots/sbt-0.13.8-src.tar.bz2 http://dev.gentoo.org/~gienah/snapshots/sbt-0.13.8-ivy2-deps.tar.bz2 http://dev.gentoo.org/~gienah/snapshots/sbt-0.13.8-sbt-deps.tar.bz2 http://dev.gentoo.org/~gienah/snapshots/sbt-0.13.8-test-deps.tar.bz2 http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.8/sbt-launch.jar -> sbt-launch-0.13.7.jar ) binary? ( http://dev.gentoo.org/~gienah/files/dist/sbt-0.13.8-gentoo-binary.tar.bz2 )
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2257adeaac9408ab545ef49ae751bae6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=95c58d53e14c43ab313803d6a19b911f
