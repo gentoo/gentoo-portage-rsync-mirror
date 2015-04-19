@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/fcitx-unikey
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-unikey/ChangeLog,v 1.8 2014/11/02 08:47:44 yngwin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-unikey/ChangeLog,v 1.9 2015/04/19 12:05:06 blueness Exp $
+
+  19 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  fcitx-unikey-0.2.0.ebuild, fcitx-unikey-0.2.2.ebuild,
+  fcitx-unikey-0.2.3.ebuild, fcitx-unikey-0.2.4.ebuild:
+  Keyword ~ppc and ~ppc64.  Bug #498686.
 
 *fcitx-unikey-0.2.4 (02 Nov 2014)
 

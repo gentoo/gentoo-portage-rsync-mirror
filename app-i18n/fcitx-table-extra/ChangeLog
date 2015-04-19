@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/fcitx-table-extra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-table-extra/ChangeLog,v 1.9 2015/03/26 13:07:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-table-extra/ChangeLog,v 1.10 2015/04/19 12:06:55 blueness Exp $
+
+  19 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  fcitx-table-extra-0.3.3.ebuild, fcitx-table-extra-0.3.4.ebuild,
+  fcitx-table-extra-0.3.5.ebuild, fcitx-table-extra-0.3.6.ebuild,
+  fcitx-table-extra-0.3.7.ebuild:
+  Keyword ~ppc and ~ppc64.  Bug #498686.
 
 *fcitx-table-extra-0.3.7 (26 Mar 2015)
 

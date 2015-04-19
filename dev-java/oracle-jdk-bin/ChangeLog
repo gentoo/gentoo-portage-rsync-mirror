@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.96 2015/04/17 21:22:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.97 2015/04/19 12:08:16 chewi Exp $
+
+  19 Apr 2015; James Le Cuirot <chewi@gentoo.org>
+  -oracle-jdk-bin-1.7.0.76.ebuild, -oracle-jdk-bin-1.8.0.40-r1.ebuild:
+  Drop vulnerable versions wrt #546678.
 
   17 Apr 2015; Agostino Sarubbo <ago@gentoo.org> oracle-jdk-bin-1.7.0.80.ebuild,
   oracle-jdk-bin-1.8.0.45.ebuild:
