@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1589 2015/04/18 13:19:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1590 2015/04/19 18:22:15 kensington Exp $
+
+  19 Apr 2015; Michael Palimaka <kensington@gentoo.org> qt5-build.eclass:
+  Sync with qt overlay - export AR and OBJDUMP too, use new configure option
+  '-no-libproxy' beginning with Qt 5.5, and update gtkstyle comment.
 
   18 Apr 2015; Pacho Ramos <pacho@gentoo.org> gnome2.eclass:
   Ban eapi2 and 3 for gnome2.eclass (#539118)

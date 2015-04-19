@@ -1,13 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.3.ebuild,v 1.2 2015/04/13 23:15:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.3-r1.ebuild,v 1.1 2015/04/19 18:05:10 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_TASK_DOC=""
+
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
@@ -19,20 +21,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+git"
 
-ruby_add_bdepend "test? ( =dev-ruby/rspec-2.14* )"
-
 ruby_add_rdepend "
 	>=dev-ruby/colored-1.2
-	=dev-ruby/cri-2.4*
+	=dev-ruby/cri-2*
 	>=dev-ruby/systemu-2.5.2
-	<dev-ruby/systemu-2.6.0
 	>=dev-ruby/log4r-1.1.10
 	dev-ruby/json"
 
 RDEPEND="${RDEPEND} git? ( >=dev-vcs/git-1.6.6 )"
 
 all_ruby_prepare() {
-	sed -i 's/json_pure/json/' "${WORKDIR}/all/metadata" || die "metadata fix failed"
+	sed -i -e 's/json_pure/json/' \
+		-e '/cri/ s/2.4.0/2.4/' \
+		-e '/systemu/ s/2.5.2/2.5/' \
+		-e '/s.files/d' ${RUBY_FAKEGEM_GEMSPEC} || die
 }
 
 pkg_postinst() {

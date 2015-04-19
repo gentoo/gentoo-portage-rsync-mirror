@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.9.2.ebuild,v 1.15 2014/11/18 11:46:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.9.2.ebuild,v 1.16 2015/04/19 18:25:29 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="none"
 
@@ -24,7 +24,7 @@ SLOT="0"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/rake"
-USE_RUBY="ruby19 ruby20 jruby" ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
+USE_RUBY="ruby19 ruby20" ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
 USE_RUBY="ruby19" ruby_add_bdepend "test? ( dev-util/cucumber )"
 
 each_ruby_prepare() {

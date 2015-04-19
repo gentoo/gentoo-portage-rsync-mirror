@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16492 2015/04/19 13:23:58 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16493 2015/04/19 18:14:33 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (19 Apr 2015)
+# Pure-ruby implementation of dev-ruby/json for uses where a compiled
+# version is not possible. This implementation is not needed on Gentoo
+# and slower than the compiled version, so all packages should depend
+# on dev-ruby/json instead. Nothing depends on this package.
+# Removal in 30 days.
+dev-ruby/json_pure
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Apr 2015)
 # Old releases are broken due to Google API changes. 2.4

@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r2.ebuild,v 1.16 2015/01/17 19:39:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.6-r2.ebuild,v 1.17 2015/04/19 18:22:49 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.md"
@@ -29,8 +29,7 @@ USE_RUBY="${USE_RUBY/jruby/}" \
 # Probably needs the same jdk as JRuby but I'm not sure how to express
 # that just yet.
 DEPEND+="
-	dev-util/ragel
-	ruby_targets_jruby? ( >=virtual/jdk-1.5 )"
+	dev-util/ragel"
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/ s:^:#:' Rakefile || die

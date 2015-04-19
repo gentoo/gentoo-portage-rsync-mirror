@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.5-r1.ebuild,v 1.12 2014/08/01 10:13:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.5-r1.ebuild,v 1.13 2015/04/19 18:26:28 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -20,7 +20,7 @@ USE_RUBY="${USE_RUBY/ruby20/}" ruby_add_bdepend "doc? ( dev-ruby/yard )"
 # jruby. Since we build documentation with the main ruby implementation
 # only we skip the dependency for jruby in this roundabout way, assuming
 # that jruby won't be the main ruby.
-USE_RUBY="${USE_RUBY/ruby20 jruby/}" ruby_add_bdepend "doc? ( dev-ruby/redcloth )"
+USE_RUBY="${USE_RUBY/ruby20/}" ruby_add_bdepend "doc? ( dev-ruby/redcloth )"
 
 DESCRIPTION="An improved version of the Test::Unit framework from Ruby 1.8"
 HOMEPAGE="http://test-unit.rubyforge.org/"
