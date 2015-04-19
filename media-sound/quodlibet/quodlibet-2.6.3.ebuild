@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.6.3.ebuild,v 1.1 2014/02/17 19:52:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.6.3.ebuild,v 1.2 2015/04/19 07:09:22 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,23 +15,23 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="+dbus gstreamer ipod +udev"
 
-COMMON_DEPEND=">=dev-python/pygtk-2.24"
+COMMON_DEPEND=">=dev-python/pygtk-2.24[${PYTHON_USEDEP}]"
 RDEPEND="${COMMON_DEPEND}
-	dev-libs/keybinder:0[python]
-	dev-python/feedparser
-	dev-python/pygobject:2
-	>=media-libs/mutagen-1.20
+	dev-libs/keybinder:0
+	dev-python/feedparser[${PYTHON_USEDEP}]
+	dev-python/pygobject:2[${PYTHON_USEDEP}]
+	>=media-libs/mutagen-1.20[${PYTHON_USEDEP}]
 	gstreamer? (
-		>=dev-python/gst-python-0.10.2:0.10
+		>=dev-python/gst-python-0.10.2:0.10[${PYTHON_USEDEP}]
 		media-libs/gst-plugins-good:0.10
 		media-plugins/gst-plugins-meta:0.10
 		)
 	!gstreamer? ( media-libs/xine-lib )
 	dbus? (
 		app-misc/media-player-info
-		dev-python/dbus-python
+		dev-python/dbus-python[${PYTHON_USEDEP}]
 		)
-	ipod? ( media-libs/libgpod[python] )
+	ipod? ( media-libs/libgpod[python,${PYTHON_USEDEP}] )
 	udev? ( virtual/udev )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool"

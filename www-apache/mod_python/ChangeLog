@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.32 2015/04/14 12:37:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.33 2015/04/19 07:03:01 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> mod_python-3.5.0.ebuild:
+  x86 stable wrt bug #529544
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mod_python-3.5.0.ebuild:
   Stable for ia64, wrt bug #529544

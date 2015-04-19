@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.109 2014/11/30 16:46:45 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.110 2015/04/19 07:09:22 yngwin Exp $
+
+  19 Apr 2015; Ben de Groot <yngwin@gentoo.org> -quodlibet-3.0.2.ebuild,
+  -quodlibet-3.1.1.ebuild, quodlibet-2.6.3.ebuild, quodlibet-3.1.2.ebuild:
+  Add more missing PYTHON_USEDEPs (bug #546266). Drop old.
 
   30 Nov 2014; Michał Górny <mgorny@gentoo.org> quodlibet-3.0.2.ebuild,
   quodlibet-3.1.1.ebuild, quodlibet-3.1.2.ebuild:
