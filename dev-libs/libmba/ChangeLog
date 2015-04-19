@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/ChangeLog,v 1.13 2015/04/19 09:32:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmba/ChangeLog,v 1.14 2015/04/19 15:27:27 kensington Exp $
+
+  19 Apr 2015; Michael Palimaka <kensington@gentoo.org> -libmba-0.9.1-r2.ebuild:
+  Remove old.
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libmba-0.9.1-r3.ebuild:
   Stable for x86, wrt bug #545332

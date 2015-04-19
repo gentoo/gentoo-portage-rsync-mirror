@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fuse-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.24 2015/04/19 09:37:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fuse-python/ChangeLog,v 1.25 2015/04/19 15:30:10 kensington Exp $
+
+  19 Apr 2015; Michael Palimaka <kensington@gentoo.org>
+  -files/fuse-python-0.2-fix-ctors.patch, -files/fuse_python_accept_none.patch,
+  -fuse-python-0.2.1.ebuild:
+  Remove old.
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> fuse-python-0.2.1-r1.ebuild:
   x86 stable wrt bug #535324
