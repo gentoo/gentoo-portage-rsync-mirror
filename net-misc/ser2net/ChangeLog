@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.38 2015/03/02 09:26:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.39 2015/04/19 09:30:30 pacho Exp $
+
+  19 Apr 2015; Pacho Ramos <pacho@gentoo.org> ser2net-2.9.1.ebuild:
+  x86 stable wrt bug #538752
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ser2net-2.9.1.ebuild:
   Stable for ppc, wrt bug #538752

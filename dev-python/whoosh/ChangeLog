@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.26 2015/01/16 10:57:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.27 2015/04/19 09:10:44 idella4 Exp $
+
+*whoosh-2.7.0 (19 Apr 2015)
+
+  19 Apr 2015; Ian Delaney <idella4@gentoo.org> +whoosh-2.7.0.ebuild:
+  bump; tidy to ebuild re change to eclass, comment added re 1 missing text file
+  in testsuite
 
   16 Jan 2015; Ian Delaney <idella4@gentoo.org> -whoosh-2.4.1.ebuild,
   -whoosh-2.5.7.ebuild:
