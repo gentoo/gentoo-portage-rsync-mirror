@@ -6,6 +6,5 @@
     <flag name="hylafax">Install net-misc/hylafax backend</flag>
     <flag name="efax">Install net-misc/efax backend</flag>
     <flag name="mgetty-fax">Install net-dialup/mgetty backend</flag>
-    <flag name="capisuite-fax">Install net-dialup/capisuite backend</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.421 2015/04/17 14:30:51 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.422 2015/04/19 11:07:53 tamiko Exp $
+
+*libvirt-1.2.14-r2 (19 Apr 2015)
+*libvirt-1.2.13-r2 (19 Apr 2015)
+
+  19 Apr 2015; Matthias Maier <tamiko@gentoo.org> +files/libvirtd.tmpfiles.conf,
+  +libvirt-1.2.13-r2.ebuild, +libvirt-1.2.14-r2.ebuild,
+  -libvirt-1.2.13-r1.ebuild, -libvirt-1.2.14-r1.ebuild, libvirt-9999.ebuild:
+  Manually create /run/libvirt/lxc on libvirtd startup (see
+  https://bugzilla.suse.com/show_bug.cgi?id=926153)
 
 *libvirt-1.2.13-r1 (17 Apr 2015)
 *libvirt-1.2.14-r1 (17 Apr 2015)
