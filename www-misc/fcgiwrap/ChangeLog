@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/fcgiwrap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.20 2014/10/23 19:46:50 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.21 2015/04/19 22:54:18 mrueg Exp $
+
+  19 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -fcgiwrap-1.0.3-r1.ebuild,
+  -fcgiwrap-1.1.0.ebuild:
+  Remove old.
 
   23 Oct 2014; Markus Meier <maekke@gentoo.org> fcgiwrap-1.1.0-r1.ebuild:
   add ~arm, bug #525066

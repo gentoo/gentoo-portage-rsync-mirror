@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/boxbackup
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/boxbackup/ChangeLog,v 1.27 2012/05/24 04:36:57 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/boxbackup/ChangeLog,v 1.28 2015/04/19 22:49:38 mrueg Exp $
+
+  19 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -boxbackup-0.10.ebuild,
+  -files/boxbackup-0.10-gcc41-noll.patch, -files/boxbackup-0.10-gcc43.patch,
+  -files/boxbackup-0.10-gentoo.patch, -files/boxbackup-0.10-malloc.patch:
+  Remove old.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> boxbackup-0.10.ebuild,
   boxbackup-0.11.1.ebuild:
@@ -117,4 +122,3 @@
   Initial import of boxbackup ebuild, largerly based on the work done by Mark
   Spanbroek <mark at spanbroek (dot] net>.  The Gentoo-patches were made by
   Anatoly Shipitsin <sauron [at) infocentr dot ru>.
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/cpdup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/cpdup/ChangeLog,v 1.7 2014/04/23 10:00:27 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/cpdup/ChangeLog,v 1.8 2015/04/19 22:42:26 mrueg Exp $
+
+  19 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -cpdup-1.17.ebuild:
+  Remove old.
 
 *cpdup-1.18 (23 Apr 2014)
 

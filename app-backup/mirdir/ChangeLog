@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/mirdir
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/mirdir/ChangeLog,v 1.9 2014/08/10 01:54:01 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/mirdir/ChangeLog,v 1.10 2015/04/19 22:45:47 mrueg Exp $
+
+  19 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -mirdir-2.1.ebuild:
+  Remove old.
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> mirdir-2.1.ebuild:
   Fix description for more repoman happy

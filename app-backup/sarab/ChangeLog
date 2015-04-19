@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/sarab
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/ChangeLog,v 1.15 2014/08/10 01:54:01 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/ChangeLog,v 1.16 2015/04/19 22:44:55 mrueg Exp $
+
+  19 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/0.2.4-better-defaults-gentoo.patch,
+  -files/0.2.7-better-defaults-gentoo.patch, -sarab-0.2.4.ebuild,
+  -sarab-0.2.7.ebuild:
+  Remove old.
 
   10 Aug 2014; Patrick Lauer <patrick@gentoo.org> sarab-0.2.4.ebuild,
   sarab-0.2.7.ebuild, sarab-1.0.0.ebuild:

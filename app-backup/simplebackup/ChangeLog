@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/simplebackup
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/simplebackup/ChangeLog,v 1.4 2010/09/10 19:08:39 robbat2 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/simplebackup/ChangeLog,v 1.5 2015/04/19 22:43:09 mrueg Exp $
+
+  19 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -simplebackup-1.7.1.ebuild:
+  Remove old.
 
   10 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Duplicate <maintainer> block of the herd is pointless.
@@ -19,4 +22,3 @@
   02 Jun 2006; Lisa Seelye <lisa@gentoo.org> +metadata.xml,
   +simplebackup-1.7.1.ebuild:
   New package submitted by Thomas Seifert, ts77 at gmx dot de. Bug 97121
-
