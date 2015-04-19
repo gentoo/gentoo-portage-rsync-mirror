@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/pdumpfs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/pdumpfs/ChangeLog,v 1.15 2015/04/18 10:06:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/pdumpfs/ChangeLog,v 1.16 2015/04/19 12:49:08 idella4 Exp $
+
+*pdumpfs-1.3-r2 (19 Apr 2015)
+
+  19 Apr 2015; Ian Delaney <idella4@gentoo.org> +files/pdumpfs-in.patch,
+  +files/pdumpfs-test.patch, +pdumpfs-1.3-r2.ebuild, -pdumpfs-1.3-r1.ebuild:
+  revbump; add patches by proxy maintainer fixing tests and modern versions of
+  ruby, rm broken ebuild, fixes bug #509960
 
   18 Apr 2015; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Paul Healy set as new proxy maintainer, endorsed by pacho in Bug #509960
