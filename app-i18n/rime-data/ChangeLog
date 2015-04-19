@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/rime-data
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.13 2014/08/01 06:50:36 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.14 2015/04/19 11:38:47 blueness Exp $
+
+  19 Apr 2015; Anthony G. Basile <blueness@gentoo.org> rime-data-0.22.ebuild,
+  rime-data-0.32.ebuild, rime-data-0.35.ebuild:
+  Keyword ~ppc and ~ppc64.  Bug #498686.
 
 *rime-data-0.35 (01 Aug 2014)
 

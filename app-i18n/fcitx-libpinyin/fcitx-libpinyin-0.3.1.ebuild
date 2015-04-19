@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-libpinyin/fcitx-libpinyin-0.3.1.ebuild,v 1.3 2015/02/03 07:16:06 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-libpinyin/fcitx-libpinyin-0.3.1.ebuild,v 1.4 2015/04/19 12:00:15 blueness Exp $
 
 EAPI=5
 inherit cmake-utils gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://download.fcitx-im.org/${PN}/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="dictmanager"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8

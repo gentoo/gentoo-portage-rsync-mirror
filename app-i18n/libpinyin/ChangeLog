@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libpinyin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libpinyin/ChangeLog,v 1.9 2015/03/02 10:13:50 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libpinyin/ChangeLog,v 1.10 2015/04/19 11:42:57 blueness Exp $
+
+  19 Apr 2015; Anthony G. Basile <blueness@gentoo.org> libpinyin-0.8.0.ebuild,
+  libpinyin-0.9.93.ebuild, libpinyin-1.0.0.ebuild:
+  Keyword ~ppc and ~ppc64.  Bug #498686.
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> libpinyin-1.0.0.ebuild:
   add arm64 support, tested on A53 board

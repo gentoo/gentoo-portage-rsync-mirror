@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/sunpinyin-data
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin-data/ChangeLog,v 1.3 2014/03/08 12:05:45 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/sunpinyin-data/ChangeLog,v 1.4 2015/04/19 11:34:01 blueness Exp $
+
+  19 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  sunpinyin-data-20121025.ebuild, sunpinyin-data-20130220.ebuild:
+  Keyword ~ppc and ~ppc64.  Bug #498686.
 
   08 Mar 2014; Pacho Ramos <pacho@gentoo.org> sunpinyin-data-20130220.ebuild:
   amd64 stable, bug 498688

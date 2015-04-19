@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libhangul
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.33 2014/08/10 17:49:37 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.34 2015/04/19 11:35:36 blueness Exp $
+
+  19 Apr 2015; Anthony G. Basile <blueness@gentoo.org> libhangul-0.0.10.ebuild,
+  libhangul-0.0.12.ebuild, libhangul-0.1.0.ebuild:
+  Keyword ~ppc64.  Bug #498686.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libhangul-0.0.10.ebuild,
   libhangul-0.0.12.ebuild, libhangul-0.1.0.ebuild:

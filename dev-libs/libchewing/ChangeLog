@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libchewing
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.32 2014/12/04 22:33:02 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.33 2015/04/19 11:41:03 blueness Exp $
+
+  19 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  libchewing-0.3.3-r1.ebuild, libchewing-0.3.3.ebuild,
+  libchewing-0.4.0-r1.ebuild:
+  Keyword ~ppc64.  Bug #498686.
 
   04 Dec 2014; Yixun Lan <dlan@gentoo.org> libchewing-0.4.0-r1.ebuild,
   metadata.xml:
