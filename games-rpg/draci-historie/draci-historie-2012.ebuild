@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/draci-historie/draci-historie-2012.ebuild,v 1.1 2015/03/17 21:38:16 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/draci-historie/draci-historie-2012.ebuild,v 1.2 2015/04/19 08:57:33 ago Exp $
 
 EAPI=5
 inherit unpacker eutils games
@@ -16,7 +16,7 @@ SRC_URI="linguas_cs? ( ${BASE_URL}-cz-${PV}.zip )
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="linguas_cs linguas_de linguas_en linguas_pl"
 
 RDEPEND=">=games-engines/scummvm-1.1"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.71.0.ebuild,v 1.2 2015/02/28 14:02:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.71.0.ebuild,v 1.3 2015/04/19 08:56:37 ago Exp $
 
 EAPI=5
 inherit toolchain-funcs gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/crossfire/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="alsa lua opengl oss sdl"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/stomp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/ChangeLog,v 1.38 2015/04/18 06:11:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/ChangeLog,v 1.39 2015/04/19 08:56:42 ago Exp $
+
+  19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> stomp-1.3.2.ebuild:
+  Stable for amd64, wrt bug #546972
 
 *stomp-1.3.2-r1 (18 Apr 2015)
 

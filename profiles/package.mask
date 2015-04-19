@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16489 2015/04/18 23:46:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16490 2015/04/19 09:00:59 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (19 Apr 2015)
+# Old releases are broken due to Google API changes. 2.4
+# has some API support but it is not very user friendly.
+# Head over to #546866 for more information
+media-video/minitube
 
 # James Le Cuirot <chewi@gentoo.org> (18 Apr 2015)
 # Old, unmaintained, not used by anything, and superseded by

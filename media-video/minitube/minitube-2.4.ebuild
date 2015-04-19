@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.2.ebuild,v 1.2 2014/12/31 13:31:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.4.ebuild,v 1.1 2015/04/19 08:58:32 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -11,8 +11,8 @@ inherit l10n qt4-r2
 
 DESCRIPTION="Qt4 YouTube Client"
 HOMEPAGE="http://flavio.tordini.org/minitube"
-# As usual, upstream never releases proper tarballs
-SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
+SRC_URI="https://github.com/flaviotordini/${PN}/archive/${PV}.tar.gz ->
+${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -31,15 +31,30 @@ DEPEND=">=dev-qt/qtgui-4.8:4[accessibility]
 		media-plugins/gst-plugins-faad:0.10
 		media-plugins/gst-plugins-theora
 	)
+	dev-qt/qtsingleapplication[X]
 "
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/${PN}
 
 DOCS="AUTHORS CHANGES TODO"
 
 #455976
 PATCHES=( "${FILESDIR}"/${PN}-2.1.3-disable-updates.patch )
+
+pkg_pretend() {
+	if [[ -z ${MINITUBE_GOOGLE_API_KEY} ]]; then
+		eerror ""
+		eerror "Since version 2.4, you need to generate a Google API Key to use"
+		eerror "with this application. Please head over to"
+		eerror "https://console.developers.google.com/ and"
+		eerror "https://github.com/flaviotordini/minitube/blob/master/README.md"
+		eerror "for more information. Once you have generated your key,"
+		eerror "please export to to your environment ie :"
+		eerror "'export MINITUBE_GOOGLE_API_KEY=\"YourAPIKeyHere\""
+		eerror "and then try to merge this package again"
+		eerror ""
+		die "MINITUBE_GOOGLE_API_KEY env variable not defined!"
+	fi
+}
 
 src_prepare() {
 	qt4-r2_src_prepare
@@ -52,11 +67,12 @@ src_prepare() {
 	if [[ -n ${trans} ]]; then
 		sed -i -e "/^TRANSLATIONS/s/+=.*/+=${trans}/" locale/locale.pri || die
 	fi
-	# gcc-4.7. Bug #422977. Will probably be fixed
-	# once ubuntu moves to gcc-4.7
-	epatch "${FILESDIR}"/${PN}-1.9-gcc47.patch
+	sed -i \
+		's|include(src/qtsingleapplication/qtsingleapplication.pri)|CONFIG += qtsingleapplication|g' \
+		${PN}.pro || die "Failed to unbundle qtsingleapplication"
 	# Enable video downloads. Bug #491344
 	use download && { echo "DEFINES += APP_DOWNLOADS" >> ${PN}.pro; }
+	echo "DEFINES += APP_GOOGLE_API_KEY=${MINITUBE_GOOGLE_API_KEY}" >> ${PN}.pro
 }
 
 src_install() {

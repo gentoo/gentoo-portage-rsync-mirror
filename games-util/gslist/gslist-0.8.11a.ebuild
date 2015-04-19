@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.11a.ebuild,v 1.1 2015/03/16 15:52:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gslist/gslist-0.8.11a.ebuild,v 1.2 2015/04/19 08:56:53 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa ~x86"
 IUSE="web"
 
 RDEPEND="dev-libs/geoip"
