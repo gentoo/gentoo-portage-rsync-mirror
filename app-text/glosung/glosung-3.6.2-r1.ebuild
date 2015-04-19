@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.6.2-r1.ebuild,v 1.3 2013/01/30 19:02:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/glosung-3.6.2-r1.ebuild,v 1.4 2015/04/19 01:23:29 creffett Exp $
 
 EAPI=5
 
@@ -32,7 +32,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.6.2-glib-includes.patch"
-	epatch "${FILESDIR}/${PN}-3.6.2-scons-respectflags.patch"
+	if has_version '>=dev-util/scons-2.3.2'; then
+		epatch "${FILESDIR}/${PN}-3.6.2-scons-2.3.2-respectflags.patch"
+	else
+		epatch "${FILESDIR}/${PN}-3.6.2-scons-respectflags.patch"
+	fi
 }
 
 src_compile() {

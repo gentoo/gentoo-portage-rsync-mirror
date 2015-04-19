@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.41 2015/03/24 09:37:19 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.42 2015/04/19 01:30:47 creffett Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 net-misc/teamviewer
@@ -139,6 +139,7 @@ games-misc/little-inferno
 games-puzzle/drod-bin
 games-puzzle/hoh-bin
 games-roguelike/adom
+games-roguelike/dwarf-fortress
 games-rpg/dear-esther
 games-rpg/eschalon-book-1-demo
 games-rpg/nwmouse
