@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1226 2015/04/17 15:11:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1227 2015/04/20 02:05:02 floppym Exp $
+
+  20 Apr 2015; Mike Gilbert <floppym@gentoo.org> chromium-42.0.2311.90.ebuild,
+  chromium-43.0.2357.18.ebuild, chromium-44.0.2369.0.ebuild:
+  Prevent libvpx build failures. Bug 530248, 544702, 546984.
 
 *chromium-44.0.2369.0 (17 Apr 2015)
 
