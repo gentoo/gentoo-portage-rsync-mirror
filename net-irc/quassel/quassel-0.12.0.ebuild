@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12_rc1.ebuild,v 1.4 2015/04/11 16:36:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12.0.ebuild,v 1.1 2015/04/20 03:02:39 patrick Exp $
 
 EAPI=5
 
@@ -11,11 +11,10 @@ EGIT_REPO_URI="git://git.quassel-irc.org/quassel"
 
 DESCRIPTION="Qt/KDE IRC client supporting a remote daemon for 24/7 connectivity"
 HOMEPAGE="http://quassel-irc.org/"
-[[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P/_/-}.tar.bz2
-https://github.com/quassel/quassel/commit/32c0bb666209932d7540c22ddc393fd4550d5418.patch -> quassel-0.12_rc1-fix-ftbfs.patch"
+[[ "${PV}" == "9999" ]] || SRC_URI="http://quassel-irc.org/pub/${P}.tar.bz2"
 
 LICENSE="GPL-3"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~sparc-solaris"
 SLOT="0"
 IUSE="ayatana crypt dbus debug kde monolithic phonon postgres qt5 +server +ssl syslog webkit X"
 
@@ -98,8 +97,6 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog README )
 
-S="${WORKDIR}/${P/_/-}"
-
 REQUIRED_USE="
 	|| ( X server monolithic )
 	ayatana? ( || ( X monolithic ) )
@@ -121,10 +118,6 @@ pkg_setup() {
 		enewgroup "${QUASSEL_USER}"
 		enewuser "${QUASSEL_USER}" -1 -1 "${QUASSEL_DIR}" "${QUASSEL_USER}"
 	fi
-}
-
-src_prepare() {
-	epatch "${DISTDIR}/${P}-fix-ftbfs.patch"
 }
 
 src_configure() {

@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.199 2015/04/11 16:36:59 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.201 2015/04/20 03:05:38 patrick Exp $
+
+  20 Apr 2015; Patrick Lauer <patrick@gentoo.org> -quassel-0.12_rc1.ebuild:
+  Remove old
+
+*quassel-0.12.0 (20 Apr 2015)
+
+  20 Apr 2015; Patrick Lauer <patrick@gentoo.org> +quassel-0.12.0.ebuild:
+  Bump
 
   11 Apr 2015; Michael Palimaka <kensington@gentoo.org> quassel-0.12_rc1.ebuild,
   quassel-9999.ebuild:

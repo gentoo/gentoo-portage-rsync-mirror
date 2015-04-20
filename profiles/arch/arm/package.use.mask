@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.251 2015/04/18 11:08:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.252 2015/04/20 03:01:53 patrick Exp $
+
+# Patrick Lauer <patrick@gentoo.org> (20 Apr 2015)
+# qt5/kf5 not keyworded on arm
+net-irc/quassel qt5
 
 # Markos Chandras <hwoarang@gentoo.org> (18 Apr 2015)
 # samba-4 not keyworded on arm
