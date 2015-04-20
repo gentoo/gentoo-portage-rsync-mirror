@@ -1,6 +1,12 @@
 # ChangeLog for games-action/d1x-rebirth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.16 2015/04/19 09:47:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/ChangeLog,v 1.18 2015/04/20 17:14:06 mr_bones_ Exp $
+
+  20 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  clean out unused use flags
+
+  20 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -d1x-rebirth-0.50.ebuild:
+  old
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> d1x-rebirth-0.58.1.ebuild:
   x86 stable wrt bug #539068

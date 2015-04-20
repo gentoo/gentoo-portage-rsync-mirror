@@ -9,10 +9,7 @@ graphics, movement, and light sourcing.  D1X-Rebirth is a modification of the
 Descent 1 source that was released by Parallax and is based on the D1X source.
 </longdescription>
   <use>
-    <flag name="awe32">Enable AWE32 support</flag>
     <flag name="demo">Use the demo data instead of the full game</flag>
-    <flag name="mixer">Enable mixer support</flag>
-	<flag name="mpu401">Enable MPU401 music support</flag>
 	<flag name="music">Support for ingame music</flag>
     <flag name="linguas_de">Provides German translations for the game's
       briefings, robot descriptions, and outro of the original campaign</flag>
