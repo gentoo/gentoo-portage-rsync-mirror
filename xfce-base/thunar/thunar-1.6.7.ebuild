@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.6.7.ebuild,v 1.1 2015/04/20 17:01:56 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/thunar-1.6.7.ebuild,v 1.2 2015/04/20 21:46:52 mgorny Exp $
 
 EAPI=5
 inherit virtualx xfconf
@@ -14,24 +14,23 @@ SRC_URI="mirror://xfce/src/xfce/${PN}/${PV%.*}/${MY_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="+dbus debug exif libnotify pcre startup-notification test udisks +xfce_plugins_trash"
+IUSE="+dbus debug exif libnotify pcre test udisks +xfce_plugins_trash"
 
 GVFS_DEPEND=">=gnome-base/gvfs-1.18.3"
 COMMON_DEPEND=">=dev-lang/perl-5.6
-	>=dev-libs/glib-2.30
-	>=x11-libs/gdk-pixbuf-2.14
-	>=x11-libs/gtk+-2.24:2
-	>=xfce-base/exo-0.10
-	>=xfce-base/libxfce4ui-4.10
-	>=xfce-base/libxfce4util-4.10.1
-	>=xfce-base/xfconf-4.10
-	dbus? ( >=dev-libs/dbus-glib-0.100 )
-	exif? ( >=media-libs/libexif-0.6.19 )
-	libnotify? ( >=x11-libs/libnotify-0.7 )
-	pcre? ( >=dev-libs/libpcre-6 )
-	startup-notification? ( x11-libs/startup-notification )
+	>=dev-libs/glib-2.30:=
+	>=x11-libs/gdk-pixbuf-2.14:=
+	>=x11-libs/gtk+-2.24:2=
+	>=xfce-base/exo-0.10:=
+	>=xfce-base/libxfce4ui-4.10:=
+	>=xfce-base/libxfce4util-4.10.1:=
+	>=xfce-base/xfconf-4.10:=
+	dbus? ( >=dev-libs/dbus-glib-0.100:= )
+	exif? ( >=media-libs/libexif-0.6.19:= )
+	libnotify? ( >=x11-libs/libnotify-0.7:= )
+	pcre? ( >=dev-libs/libpcre-6:= )
 	udisks? ( virtual/libgudev:= )
-	xfce_plugins_trash? ( >=xfce-base/xfce4-panel-4.10 )"
+	xfce_plugins_trash? ( >=xfce-base/xfce4-panel-4.10:= )"
 RDEPEND="${COMMON_DEPEND}
 	>=dev-util/desktop-file-utils-0.20-r1
 	x11-misc/shared-mime-info
@@ -53,7 +52,9 @@ pkg_setup() {
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 		$(use_enable dbus)
-		$(use_enable startup-notification)
+		# no code uses this, it's all in libxfce4ui now
+		# https://bugzilla.xfce.org/show_bug.cgi?id=11837
+		--disable-startup-notification
 		$(use_enable udisks gudev)
 		$(use_enable libnotify notifications)
 		$(xfconf_use_debug)

@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/thunar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.178 2015/04/20 17:01:56 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/thunar/ChangeLog,v 1.179 2015/04/20 21:46:52 mgorny Exp $
+
+  20 Apr 2015; Michał Górny <mgorny@gentoo.org> thunar-1.6.7.ebuild:
+  Add slot operators. Disable unused startup-notification support,
+  https://bugzilla.xfce.org/show_bug.cgi?id=11837.
 
 *thunar-1.6.7 (20 Apr 2015)
 
