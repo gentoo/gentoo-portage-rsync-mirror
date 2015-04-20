@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117-r1.ebuild,v 1.3 2015/03/31 18:16:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/intel-ocl-sdk-4.4.0.117-r1.ebuild,v 1.4 2015/04/20 16:43:29 zerochaos Exp $
 
 EAPI=5
 
@@ -12,18 +12,18 @@ SRC_URI="http://registrationcenter.intel.com/irc_nas/4181/intel_sdk_for_ocl_appl
 
 LICENSE="Intel-SDP"
 SLOT="0"
-IUSE="android bundled_libs"
+IUSE="android +system-tbb system-clang +system-boost +system-qt"
 KEYWORDS="-* ~amd64"
 RESTRICT="mirror"
 
 RDEPEND="app-eselect/eselect-opencl
 	sys-process/numactl
-	!bundled_libs? (
-		dev-cpp/tbb
-		sys-devel/clang
-		dev-libs/boost
-		dev-qt/qtgui:4
-		dev-qt/qtcore:4
+	system-tbb? ( >=dev-cpp/tbb-4.2.20131118 )
+	system-clang? ( =sys-devel/clang-3.4* )
+	system-boost? ( >=dev-libs/boost-1.52.0:= )
+	system-qt? (
+		>=dev-qt/qtgui-4.8.5:4
+		>=dev-qt/qtcore-4.8.5:4
 		)
 	"
 DEPEND=""
@@ -50,11 +50,17 @@ src_unpack() {
 }
 
 src_prepare() {
-	if ! use bundled_libs; then
-		# Remove unnecessary and bundled stuff
+	# Remove bundled stuff
+	if use system-boost; then
 		rm -f "${WORKDIR}/${INTEL_CL}"/lib64/libboost*.so*
+	fi
+	if use system-clang; then
 		rm -f "${WORKDIR}/${INTEL_CL}"/lib64/libclang*
+	fi
+	if use system-qt; then
 		rm -f "${WORKDIR}/${INTEL_CL}"/lib64/libQt*
+	fi
+	if use system-tbb; then
 		rm -f "${WORKDIR}/${INTEL_CL}"/lib64/libtbb*
 	fi
 }

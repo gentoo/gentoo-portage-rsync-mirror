@@ -2576,7 +2576,10 @@ dev-util/google-perftools:minimal - Only build the tcmalloc_minimal library, ign
 dev-util/gtk-doc:highlight - Enable source code highlighting
 dev-util/gtk-doc:vim - Enable source code highlighting through app-editors/vim
 dev-util/intel-ocl-sdk:android - Install android related files
-dev-util/intel-ocl-sdk:bundled_libs - Keep bundled-libs (not recommended)
+dev-util/intel-ocl-sdk:system-boost - Use system boost (dev-libs/boost) instead of bundled one
+dev-util/intel-ocl-sdk:system-clang - Use system clang (sys-devel/clang) instead of bundled one
+dev-util/intel-ocl-sdk:system-qt - Use system Qt (sys-devel-qtcore, sys-devel/qtgui) instead of bundled one
+dev-util/intel-ocl-sdk:system-tbb - Use sytem Thread Building Blocks (dev-cpp/tbb) instead of bundled one
 dev-util/intel-ocl-sdk:tools - Install Intel Offline Compiler
 dev-util/kdevelop:cmake - Enable support for CMake build system
 dev-util/kdevelop:gdbui - Enable GUI for attaching GDB to a running process

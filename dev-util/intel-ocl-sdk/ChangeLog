@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/intel-ocl-sdk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.15 2015/03/31 18:16:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel-ocl-sdk/ChangeLog,v 1.16 2015/04/20 16:43:29 zerochaos Exp $
+
+  20 Apr 2015; Rick Farina <zerochaos@gentoo.org>
+  intel-ocl-sdk-4.4.0.117-r1.ebuild, metadata.xml:
+  fixing bug 525184, allowing bundled libs to be set individually
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> intel-ocl-sdk-2.0.31360.ebuild,
   intel-ocl-sdk-4.4.0.117-r1.ebuild:

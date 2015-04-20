@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/trigger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.30 2015/04/19 10:08:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.31 2015/04/20 16:58:47 mr_bones_ Exp $
+
+  20 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/trigger-0.6.0-ldflags.patch, -trigger-0.6.0.ebuild:
+  old
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> trigger-0.6.1.ebuild:
   Stable for x86, wrt bug #546396
