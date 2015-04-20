@@ -203,7 +203,6 @@ app-admin/rsyslog:mongodb - Build the MongoDB output module (requires dev-libs/l
 app-admin/rsyslog:mysql - Build the MySQL databse output module (requires virtual/mysql)
 app-admin/rsyslog:normalize - Build the normalize modify module (requires dev-libs/libee and dev-libs/liblognorm)
 app-admin/rsyslog:omudpspoof - Build the udpspoof output module (requires net-libs/libnet)
-app-admin/rsyslog:oracle - Build the Oracle database output module (requires dev-db/oracle-instantclient-basic)
 app-admin/rsyslog:postgres - Build the PostgreSQL database output module (requires dev-db/postgresql-base)
 app-admin/rsyslog:rabbitmq - Build the RabbitMQ output module (requires net-libs/rabbitmq-c)
 app-admin/rsyslog:redis - Build the Redis output module using (requires dev-libs/hiredis)

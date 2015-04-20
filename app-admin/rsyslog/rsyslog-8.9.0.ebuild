@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.4.2.ebuild,v 1.6 2014/12/28 14:45:28 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-8.9.0.ebuild,v 1.1 2015/04/20 13:06:49 ultrabug Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -9,15 +9,36 @@ inherit autotools-utils eutils systemd
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more"
 HOMEPAGE="http://www.rsyslog.com/"
-SRC_URI="
-	http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
-	doc? ( http://www.rsyslog.com/files/download/${PN}/${PN}-doc-${PV}.tar.gz )
-"
+
+BRANCH="8-stable"
+
+PATCHES=(
+	"${FILESDIR}"/${BRANCH}/10-respect_CFLAGS-r1.patch
+)
+
+if [[ ${PV} == "9999" ]]; then
+	EGIT_REPO_URI="
+		git://github.com/rsyslog/${PN}.git
+		https://github.com/rsyslog/${PN}.git
+	"
+
+	DOC_REPO_URI="
+		git://github.com/rsyslog/${PN}-doc.git
+		https://github.com/rsyslog/${PN}-doc.git
+	"
+
+	inherit git-r3
+else
+	SRC_URI="
+		http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
+		doc? ( http://www.rsyslog.com/files/download/${PN}/${PN}-doc-${PV}.tar.gz )
+	"
+	KEYWORDS="~amd64 ~arm ~hppa ~x86"
+fi
 
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
-KEYWORDS="amd64 ~arm hppa x86"
 SLOT="0"
-IUSE="dbi debug doc elasticsearch +gcrypt jemalloc kerberos mongodb mysql normalize omudpspoof oracle postgres rabbitmq redis relp rfc3195 rfc5424hmac snmp ssl systemd usertools zeromq"
+IUSE="dbi debug doc elasticsearch +gcrypt jemalloc kerberos mongodb mysql normalize omudpspoof postgres rabbitmq redis relp rfc3195 rfc5424hmac snmp ssl systemd test usertools zeromq"
 
 RDEPEND="
 	>=dev-libs/json-c-0.11:=
@@ -33,16 +54,15 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	normalize? (
 		>=dev-libs/libee-0.4.0
-		>=dev-libs/liblognorm-1.0.0:=
+		>=dev-libs/liblognorm-1.1.0:=
 	)
 	omudpspoof? ( >=net-libs/libnet-1.1.6 )
-	oracle? ( >=dev-db/oracle-instantclient-basic-10.2 )
-	postgres? ( >=dev-db/postgresql-8.4.20 )
+	postgres? ( >=dev-db/postgresql-8.4.20:= )
 	rabbitmq? ( >=net-libs/rabbitmq-c-0.3.0 )
 	redis? ( >=dev-libs/hiredis-0.11.0 )
 	relp? ( >=dev-libs/librelp-1.2.5 )
 	rfc3195? ( >=dev-libs/liblogging-1.0.1:=[rfc3195] )
-	rfc5424hmac? ( >=dev-libs/openssl-0.9.8y )
+	rfc5424hmac? ( >=dev-libs/openssl-0.9.8y:= )
 	snmp? ( >=net-analyzer/net-snmp-5.7.2 )
 	ssl? ( >=net-libs/gnutls-2.12.23 )
 	systemd? ( >=sys-apps/systemd-208 )
@@ -50,10 +70,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-BRANCH="8-stable"
-
-# Test suite requires a special setup or will always fail
-RESTRICT="test"
+if [[ ${PV} == "9999" ]]; then
+	DEPEND+=" doc? ( >=dev-python/sphinx-1.1.3-r7 )"
+fi
 
 # Maitainer note : open a bug to upstream
 # showing that building in a separate dir fails
@@ -67,18 +86,38 @@ DOCS=(
 	"${FILESDIR}"/${BRANCH}/README.gentoo
 )
 
-PATCHES=( "${FILESDIR}"/${BRANCH}/10-respect_CFLAGS.patch )
-
 src_unpack() {
-	unpack ${P}.tar.gz
+	if [[ ${PV} == "9999" ]]; then
+		git-r3_fetch
+		git-r3_checkout
+	else
+		unpack ${P}.tar.gz
+	fi
 
 	if use doc; then
-		local doc_tarball="${PN}-doc-${PV}.tar.gz"
+		if [[ ${PV} == "9999" ]]; then
+			local _EGIT_BRANCH=
+			if [ -n "${EGIT_BRANCH}" ]; then
+				# Cannot use rsyslog commits/branches for documentation repository
+				_EGIT_BRANCH=${EGIT_BRANCH}
+				unset EGIT_BRANCH
+			fi
 
-		cd "${S}" || die "Cannot change dir into '$S'"
-		mkdir docs || die "Failed to create docs directory"
-		cd docs || die "Failed to change dir into '${S}/docs'"
-		unpack ${doc_tarball}
+			git-r3_fetch "${DOC_REPO_URI}"
+			git-r3_checkout "${DOC_REPO_URI}" "${S}"/docs
+
+			if [ -n "${_EGIT_BRANCH}" ]; then
+				# Restore previous EGIT_BRANCH information
+				EGIT_BRANCH=${_EGIT_BRANCH}
+			fi
+		else
+			local doc_tarball="${PN}-doc-${PV}.tar.gz"
+
+			cd "${S}" || die "Cannot change dir into '$S'"
+			mkdir docs || die "Failed to create docs directory"
+			cd docs || die "Failed to change dir into '${S}/docs'"
+			unpack ${doc_tarball}
+		fi
 	fi
 }
 
@@ -100,11 +139,13 @@ src_configure() {
 
 	local myeconfargs=(
 		--disable-generate-man-pages
+		--without-valgrind-testbench
+		$(use_enable test testbench)
 		# Input Plugins without depedencies
+		--enable-imdiag
 		--enable-imfile
 		--enable-impstats
 		--enable-imptcp
-		--enable-imttcp
 		# Message Modificiation Plugins without depedencies
 		--enable-mmanon
 		--enable-mmaudit
@@ -124,19 +165,16 @@ src_configure() {
 		--enable-pmciscoios
 		--enable-pmcisconames
 		--enable-pmlastmsg
-		--enable-pmrfc3164sd
 		--enable-pmsnare
 		# DB
 		$(use_enable dbi libdbi)
 		$(use_enable mongodb ommongodb)
 		$(use_enable mysql)
-		$(use_enable oracle)
 		$(use_enable postgres pgsql)
 		$(use_enable redis omhiredis)
 		# Debug
 		$(use_enable debug)
 		$(use_enable debug diagtools)
-		$(use_enable debug imdiag)
 		$(use_enable debug memcheck)
 		$(use_enable debug rtinst)
 		$(use_enable debug valgrind)
@@ -165,6 +203,39 @@ src_configure() {
 	autotools-utils_src_configure
 }
 
+src_compile() {
+	autotools-utils_src_compile
+
+	if use doc && [[ "${PV}" == "9999" ]]; then
+		einfo "Building documentation ..."
+		local doc_dir="${S}/docs"
+		cd "${doc_dir}" || die "Cannot chdir into \"${doc_dir}\"!"
+		sphinx-build -b html source build || die "Building documentation failed!"
+	fi
+}
+
+src_test() {
+	local _has_increased_ulimit=
+
+	if ulimit -n 3072; then
+		_has_increased_ulimit="true"
+	fi
+
+	if ! emake --jobs 1 check; then
+		eerror "Test suite failed! :("
+
+		if [ -z "${_has_increased_ulimit}" ]; then
+			eerror "Probably because open file limit couldn't be set to 3072."
+		fi
+
+		if has userpriv $FEATURES; then
+			eerror "Please try to reproduce the test suite failure with FEATURES=-userpriv " \
+				"before you submit a bug report."
+		fi
+
+	fi
+}
+
 src_install() {
 	use doc && HTML_DOCS=( "${S}/docs/build/" )
 	autotools-utils_src_install
@@ -188,7 +259,7 @@ src_install() {
 
 	if use mysql; then
 		insinto /usr/share/doc/${PF}/scripts/mysql
-		doins plugins/ommysql/{createDB.sql,contrib/delete_mysql}
+		doins plugins/ommysql/createDB.sql
 	fi
 
 	if use postgres; then
