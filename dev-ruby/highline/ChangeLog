@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.103 2015/04/03 15:01:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.104 2015/04/20 17:36:52 mrueg Exp $
+
+*highline-1.7.2 (20 Apr 2015)
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +highline-1.7.2.ebuild:
+  Version bump.
 
   03 Apr 2015; Hans de Graaff <graaff@gentoo.org> -highline-1.6.19.ebuild:
   Cleanup.

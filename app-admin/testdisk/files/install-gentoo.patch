@@ -1,0 +1,14 @@
+--- Makefile.am-original	2015-04-20 11:31:03.000000000 -0600
++++ Makefile.am	2015-04-20 11:34:10.000000000 -0600
+@@ -24,9 +24,9 @@
+ 
+ AUTOMAKE_OPTIONS = gnits
+ 
++data_DATA =  AUTHORS ChangeLog NEWS README THANKS documentation.html
++
+ install-data-hook:
+-	$(mkinstalldirs) $(DESTDIR)$(docdir)
+-	$(INSTALL_DATA) $(top_srcdir)/AUTHORS $(top_srcdir)/ChangeLog $(top_srcdir)/NEWS $(top_srcdir)/README $(top_srcdir)/THANKS $(top_srcdir)/documentation.html $(DESTDIR)$(docdir)
+ if USEQT
+ 	$(mkinstalldirs) $(DESTDIR)$(datadir)/applications
+ 	$(INSTALL_DATA) $(top_srcdir)/linux/qphotorec.desktop $(DESTDIR)$(datadir)/applications

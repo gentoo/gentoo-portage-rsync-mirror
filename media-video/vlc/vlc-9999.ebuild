@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.236 2015/04/18 06:27:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.237 2015/04/20 17:34:18 floppym Exp $
 
 EAPI="5"
 
@@ -379,7 +379,7 @@ src_configure() {
 		$(use_enable omxil) \
 		$(use_enable omxil omxil-vout) \
 		$(use_enable opencv) \
-		$(use_enable opengl glx) $(use_enable opengl glspectrum) \
+		$(use_enable opengl glspectrum) \
 		$(use_enable opus) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable png) \

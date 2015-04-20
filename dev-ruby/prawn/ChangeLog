@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/prawn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/ChangeLog,v 1.26 2014/12/07 13:59:14 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/ChangeLog,v 1.27 2015/04/20 17:54:00 mrueg Exp $
+
+*prawn-2.0.1 (20 Apr 2015)
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +prawn-2.0.1.ebuild:
+  Version bump.
 
   07 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -prawn-0.8.4-r1.ebuild:
   Drop masked deprecated slot.

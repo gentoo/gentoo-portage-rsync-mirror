@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.949 2015/04/20 05:28:35 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.950 2015/04/20 17:34:18 floppym Exp $
+
+  20 Apr 2015; Mike Gilbert <floppym@gentoo.org> vlc-2.2.1.ebuild,
+  vlc-9999.ebuild:
+  Drop glx flag here as well.
 
   20 Apr 2015; Ian Delaney <idella4@gentoo.org> vlc-2.2.0.ebuild,
   vlc-2.2.9999.ebuild:
