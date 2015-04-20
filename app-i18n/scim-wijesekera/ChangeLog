@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-wijesekera
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wijesekera/ChangeLog,v 1.5 2012/10/02 02:12:59 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-wijesekera/ChangeLog,v 1.6 2015/04/20 19:37:39 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -scim-wijesekera-0.3.3.ebuild:
+  Remove old.
 
   02 Oct 2012;  <naota@gentoo.org> scim-wijesekera-0.3.3-r1.ebuild,
   scim-wijesekera-0.3.3.ebuild:

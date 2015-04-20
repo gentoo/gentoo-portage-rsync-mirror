@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-skk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/ChangeLog,v 1.22 2012/05/03 19:24:33 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-skk/ChangeLog,v 1.23 2015/04/20 19:36:53 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -scim-skk-0.5.2.ebuild:
+  Remove old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-skk-0.5.2.ebuild,
   scim-skk-0.5.2-r1.ebuild:
@@ -97,4 +100,3 @@
 
   21 Jan 2005; Mamoru KOMACHI <usata@gentoo.org> +scim-skk-0.1.2.ebuild:
   Initial import.
-

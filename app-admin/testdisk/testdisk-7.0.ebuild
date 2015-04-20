@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-7.0.ebuild,v 1.3 2015/04/20 18:39:48 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-7.0.ebuild,v 1.4 2015/04/20 19:59:01 nicolasbock Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="
 		static? (
 			sys-apps/util-linux[static-libs]
 			>=sys-libs/ncurses-5.2[static-libs]
-			jpeg? ( virtual/jpeg[static-libs] )
+			jpeg? ( virtual/jpeg:*[static-libs] )
 			ntfs? ( <=sys-fs/ntfs3g-2013.1.13[static-libs] )
 			reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8[static-libs] )
 			>=sys-fs/e2fsprogs-1.35[static-libs]
@@ -30,7 +30,7 @@ DEPEND="
 		!static? (
 			sys-apps/util-linux
 			>=sys-libs/ncurses-5.2
-			jpeg? ( virtual/jpeg )
+			jpeg? ( virtual/jpeg:* )
 			ntfs? ( <=sys-fs/ntfs3g-2013.1.13 )
 			reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
 			>=sys-fs/e2fsprogs-1.35
@@ -38,13 +38,10 @@ DEPEND="
 			)"
 RDEPEND="!static? ( ${DEPEND} )"
 
+PATCHES=( "${FILESDIR}/install-gentoo.patch" )
+DOCS=( )
 AUTOTOOLS_AUTORECONF=1
 BUILD_DIR="${S}"
-
-src_prepare() {
-	epatch "${FILESDIR}/install-gentoo.patch"
-	autotools-utils_src_prepare
-}
 
 src_configure() {
 	local myconf
@@ -61,7 +58,6 @@ src_configure() {
 	use jpeg || myconf+=" --without-jpeg"
 
 	econf \
-		--docdir="${ED}/usr/share/doc/${PF}" \
 		--disable-qt \
 		--without-ewf \
 		--enable-sudo \

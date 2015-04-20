@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.14.ebuild,v 1.2 2014/12/30 19:51:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.14.ebuild,v 1.3 2015/04/20 19:59:01 nicolasbock Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="jpeg ntfs reiserfs static"
 DEPEND="
 		sys-apps/util-linux
 		>=sys-libs/ncurses-5.2
-		jpeg? ( virtual/jpeg )
+		jpeg? ( virtual/jpeg:* )
 		ntfs? ( sys-fs/ntfs3g )
 		reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
 		>=sys-fs/e2fsprogs-1.35

@@ -1,10 +1,21 @@
 --- Makefile.am-original	2015-04-20 11:31:03.000000000 -0600
-+++ Makefile.am	2015-04-20 11:34:10.000000000 -0600
-@@ -24,9 +24,9 @@
++++ Makefile.am	2015-04-20 13:27:01.000000000 -0600
+@@ -1,9 +1,8 @@
+ SUBDIRS = icons man src
+ 
+-EXTRA_DIST = AUTHORS COPYING ChangeLog INFO INSTALL NEWS README THANKS compile.sh \
++EXTRA_DIST = compile.sh \
+ 	progsreiserfs-journal.patch progsreiserfs-file-read.patch \
+ 	darwin/readme_mac_powerpc.txt darwin/readme_mac_intel.txt \
+-	documentation.html \
+ 	dos/readme.txt \
+ 	linux/testdisk.spec.in \
+ 	linux/qphotorec.desktop \
+@@ -24,9 +23,9 @@
  
  AUTOMAKE_OPTIONS = gnits
  
-+data_DATA =  AUTHORS ChangeLog NEWS README THANKS documentation.html
++dist_doc_DATA =  AUTHORS COPYING ChangeLog NEWS INFO INSTALL README THANKS documentation.html
 +
  install-data-hook:
 -	$(mkinstalldirs) $(DESTDIR)$(docdir)

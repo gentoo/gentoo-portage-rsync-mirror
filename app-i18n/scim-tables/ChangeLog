@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.76 2015/01/03 11:28:07 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.77 2015/04/20 19:36:22 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -scim-tables-0.5.10.ebuild,
+  -scim-tables-0.5.11.ebuild, -scim-tables-0.5.12.ebuild,
+  -scim-tables-0.5.8-r1.ebuild:
+  Remove old.
 
   03 Jan 2015; Benda Xu <heroxbd@gentoo.org> scim-tables-0.5.13.ebuild:
   keyword ~arm

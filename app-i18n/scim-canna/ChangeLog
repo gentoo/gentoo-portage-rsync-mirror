@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-canna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.17 2012/05/03 19:24:29 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.18 2015/04/20 19:32:16 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -scim-canna-1.0.0.ebuild:
+  Remove old.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-canna-1.0.0.ebuild,
   scim-canna-1.0.1.ebuild:
@@ -73,4 +76,3 @@
   30 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +scim-canna-0.0.0.ebuild:
   Initial import.
-
