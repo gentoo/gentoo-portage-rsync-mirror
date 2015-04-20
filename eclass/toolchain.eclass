@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.663 2015/04/20 09:00:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.664 2015/04/20 09:04:09 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1718,13 +1718,9 @@ toolchain_src_install() {
 	# between binary and source package borks things ....
 	if ! is_crosscompile ; then
 		insinto "${DATAPATH}"
-		if tc_version_is_at_least 4.0 ; then
-			newins "${GCC_FILESDIR}"/awk/fixlafiles.awk-no_gcc_la fixlafiles.awk || die
-			find "${D}/${LIBPATH}" -name libstdc++.la -type f -delete
-			find "${D}/${LIBPATH}" -name 'lib*san.la' -type f -delete #487550 #546700
-		else
-			doins "${GCC_FILESDIR}"/awk/fixlafiles.awk || die
-		fi
+		newins "${GCC_FILESDIR}"/awk/fixlafiles.awk-no_gcc_la fixlafiles.awk || die
+		find "${D}/${LIBPATH}" -name libstdc++.la -type f -delete
+		find "${D}/${LIBPATH}" -name 'lib*san.la' -type f -delete #487550 #546700
 		exeinto "${DATAPATH}"
 		doexe "${GCC_FILESDIR}"/fix_libtool_files.sh || die
 		doexe "${GCC_FILESDIR}"/c{89,99} || die
