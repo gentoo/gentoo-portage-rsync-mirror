@@ -1,6 +1,11 @@
 # ChangeLog for app-text/djview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.29 2015/03/11 13:32:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.30 2015/04/20 08:03:28 aballier Exp $
+
+*djview-4.10.3 (20 Apr 2015)
+
+  20 Apr 2015; Alexis Ballier <aballier@gentoo.org> +djview-4.10.3.ebuild:
+  version bump
 
   11 Mar 2015; Alexis Ballier <aballier@gentoo.org> djview-4.10.ebuild:
   add missing dep on qtopengl, bug #542904
