@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fwts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwts/ChangeLog,v 1.13 2014/12/21 21:46:42 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwts/ChangeLog,v 1.14 2015/04/20 14:24:15 mrueg Exp $
+
+*fwts-15.03.01 (20 Apr 2015)
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +fwts-15.03.01.ebuild:
+  Version bump.
 
   21 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -fwts-14.11.00.ebuild:
   Forgot to drop the actual ebuild in the last commit.
