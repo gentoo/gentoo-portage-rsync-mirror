@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.62 2015/04/08 18:49:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.63 2015/04/20 15:31:36 jlec Exp $
+
+*plplot-5.11.0 (20 Apr 2015)
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org>
+  +files/plplot-5.11.0-multiarch.patch, +files/plplot-5.11.0-ocaml.patch,
+  +files/plplot-5.11.0-octave.patch, +plplot-5.11.0.ebuild:
+  Version Bump
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> plplot-5.10.0-r1.ebuild:
   Drop old Python implementations
