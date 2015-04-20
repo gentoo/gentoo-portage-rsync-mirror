@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.94-r1.ebuild,v 1.2 2015/04/20 01:00:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.94-r1.ebuild,v 1.3 2015/04/20 05:30:23 jer Exp $
 
 EAPI=5
 
@@ -15,24 +15,29 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="perl"
 
-DEPEND=">=dev-libs/openssl-0.9.6g:="
-RDEPEND="${DEPEND}
-	sys-apps/ucspi-tcp"
+DEPEND="
+	>=dev-libs/openssl-0.9.6g:=
+	perl? ( dev-lang/perl:= )
+"
+RDEPEND="
+	${DEPEND}
+	sys-apps/ucspi-tcp
+"
 
 S="${WORKDIR}"/host/superscript.com/net/${P}/src
 
 src_prepare() {
 	ht_fix_all
-	sed -i -e 's:HOME/command:/usr/bin:' sslcat.sh sslconnect.sh https\@.sh
-	sed -i -e 's:auto:gcc:' conf-cc conf-ld
-	sed -i -e 's:-m64::' conf-ld
+	sed -i -e 's:HOME/command:/usr/bin:' sslcat.sh sslconnect.sh https\@.sh || die
+	sed -i -e 's:auto:gcc:' conf-cc || die
+	sed -i -e 's:-m64::' conf-ld || die
 
 	qmail_set_cc
 
-	echo "/usr/bin" > conf-tcpbin
-	echo "/usr/" > home
-	echo "/usr/share/ca-certificates/" > conf-cadir
-	echo "${QMAIL_HOME}/control/dh1024.pem" > conf-dhfile
+	echo "/usr/bin" > conf-tcpbin || die
+	echo "/usr/" > home || die
+	echo "/usr/share/ca-certificates/" > conf-cadir || die
+	echo "${QMAIL_HOME}/control/dh1024.pem" > conf-dhfile || die
 }
 
 src_compile() {

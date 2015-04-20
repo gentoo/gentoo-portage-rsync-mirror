@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.948 2015/04/19 06:30:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.949 2015/04/20 05:28:35 idella4 Exp $
+
+  20 Apr 2015; Ian Delaney <idella4@gentoo.org> vlc-2.2.0.ebuild,
+  vlc-2.2.9999.ebuild:
+  drop 'use_enable opengl glx' due to option --enable-glx made defunct, adresses
+  Bug #539840
 
 *vlc-2.2.1 (19 Apr 2015)
 
