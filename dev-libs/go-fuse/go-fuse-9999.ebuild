@@ -46,7 +46,7 @@ done
 
 insinto /usr/lib/go/
 doins -r "${S}/pkg"
-insinto "/usr/lib/go/src/pkg/${GO_PN}/"
+insinto "/usr/lib/go/src/${GO_PN}/"
 #for this ebuild, to fix bug #503324 I have limited what is installed
 #another possible solution would have been using adddeny to the
 #hide installed filed during build
