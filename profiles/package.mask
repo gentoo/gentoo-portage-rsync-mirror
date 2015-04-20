@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16493 2015/04/19 18:14:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16494 2015/04/20 20:31:49 chewi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -880,13 +880,6 @@ app-eselect/eselect-lua
 # Alexander Vershilov <qnikst@gentoo.org> (02 Apr 2014)
 # Multiple vulnerabilities, see #504724, #505860
 <sys-kernel/openvz-sources-2.6.32.85.17
-
-# Tom Wijsman <TomWij@gentoo.org> (31 Mar 2014)
-# Prevent users from switching JDK / JRE implementation.
-#
-# Unmask this if you want to upgrade or switch to Oracle JDK / JRE 1.8.
->=virtual/jdk-1.8
->=virtual/jre-1.8
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (26 Mar 2014)
 # Affected by multiple vulnerabilities, #445916, #471098 and #472280

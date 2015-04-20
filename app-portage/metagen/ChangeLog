@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.45 2015/04/08 07:30:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.46 2015/04/20 20:43:04 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -metagen-0.5.2.ebuild,
+  -metagen-0.6.2.ebuild:
+  Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> metagen-0.6.2-r1.ebuild,
   metagen-9999.ebuild:

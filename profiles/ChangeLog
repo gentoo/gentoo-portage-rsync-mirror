@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9948 2015/04/19 18:14:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9949 2015/04/20 20:31:49 chewi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Apr 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
+  Unmask Java 8. This is long overdue and it's looking good now.
 
   19 Apr 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/json_pure for removal.

@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.40 2015/01/30 08:21:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.41 2015/04/20 20:39:34 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -porticron-0.6.ebuild,
+  -porticron-0.7_p20131113.ebuild:
+  Remove old.
 
   30 Jan 2015; Sergey Popov <pinkbyte@gentoo.org> porticron-0.6.ebuild,
   porticron-0.7_p20131113.ebuild, porticron-0.7_p20140126.ebuild:

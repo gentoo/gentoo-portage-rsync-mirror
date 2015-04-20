@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.15 2015/04/11 20:46:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kodi/kodi-9999.ebuild,v 1.16 2015/04/20 20:59:03 vapier Exp $
 
 EAPI="5"
 
@@ -33,7 +33,7 @@ HOMEPAGE="http://kodi.tv/ http://kodi.wiki/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio +rsxs rtmp +samba sftp test +texturepacker udisks upnp upower +usb vaapi vdpau webserver +X +xrandr"
+IUSE="airplay alsa avahi bluetooth bluray caps cec css debug +fishbmc gles goom java joystick midi mysql nfs +opengl profile +projectm pulseaudio +rsxs rtmp +samba sftp +spectrum test +texturepacker udisks upnp upower +usb vaapi vdpau +waveform webserver +X +xrandr"
 REQUIRED_USE="
 	rsxs? ( X )
 	xrandr? ( X )
@@ -217,12 +217,14 @@ src_configure() {
 		$(use_enable rtmp) \
 		$(use_enable samba) \
 		$(use_enable sftp ssh) \
+		$(use_enable spectrum) \
 		$(use_enable usb libusb) \
 		$(use_enable test gtest) \
 		$(use_enable texturepacker) \
 		$(use_enable upnp) \
 		$(use_enable vaapi) \
 		$(use_enable vdpau) \
+		$(use_enable waveform) \
 		$(use_enable webserver) \
 		$(use_enable X x11) \
 		$(use_enable xrandr)
@@ -239,14 +241,12 @@ src_install() {
 	domenu tools/Linux/kodi.desktop
 	newicon media/icon48x48.png kodi.png
 
-	# Remove optional addons (platform specific and disabled by USE flag).
+	# Remove optional addons (platform specific).
 	local disabled_addons=(
 		repository.pvr-{android,ios,osx{32,64},win32}.xbmc.org
 		visualization.dxspectrum
+		visualization.vortex
 	)
-	use fishbmc  || disabled_addons+=( visualization.fishbmc )
-	use projectm || disabled_addons+=( visualization.{milkdrop,projectm} )
-	use rsxs     || disabled_addons+=( screensaver.rsxs.{euphoria,plasma,solarwinds} )
 	rm -rf "${disabled_addons[@]/#/${ED}/usr/share/kodi/addons/}"
 
 	# Remove fonconfig settings that are used only on MacOSX.

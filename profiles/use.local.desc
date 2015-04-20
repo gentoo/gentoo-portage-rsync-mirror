@@ -4270,7 +4270,9 @@ media-tv/kodi:pvr - Enable MythTV support
 media-tv/kodi:rsxs - Enable really slick X screensavers
 media-tv/kodi:rtmp - Enable Real Time Messaging Protocol using librtmp
 media-tv/kodi:sftp - Support browsing files over SFTP
+media-tv/kodi:spectrum - Enable spectrum visualization plugin
 media-tv/kodi:texturepacker - Support packing skin textures
+media-tv/kodi:waveform - Enable waveform visualization plugin
 media-tv/kodi:webserver - Enable internal webserver
 media-tv/kodi:xrandr - Support X randr extension
 media-tv/linuxtv-dvb-apps:alevt - Build videotext decoder

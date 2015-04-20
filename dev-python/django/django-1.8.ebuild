@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.8.ebuild,v 1.2 2015/04/02 10:15:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.8.ebuild,v 1.3 2015/04/20 20:36:15 jlec Exp $
 
 EAPI=5
 
@@ -90,7 +90,7 @@ src_install() {
 pkg_postinst() {
 	elog "Additional Backend support can be enabled via"
 	optfeature "MySQL backend support in python 2.7 only" dev-python/mysql-python
-	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysqlcient
+	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysqlclient
 	optfeature "PostgreSQL backend support" dev-python/psycopg:2
 	echo ""
 	elog "Other features can be enhanced by"

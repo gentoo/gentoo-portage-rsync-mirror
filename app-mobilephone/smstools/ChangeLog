@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/smstools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.21 2014/05/06 12:18:49 chainsaw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.22 2015/04/20 20:37:51 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -smstools-2.2.20.ebuild:
+  Remove old.
 
 *smstools-3.1.15-r2 (06 May 2014)
 

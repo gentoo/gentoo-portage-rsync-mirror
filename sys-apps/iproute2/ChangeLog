@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.251 2015/04/15 11:58:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.252 2015/04/20 20:51:18 vapier Exp $
+
+*iproute2-4.0.0-r1 (20 Apr 2015)
+
+  20 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/iproute2-4.0.0-tc-show-buffer-overflow.patch,
+  +iproute2-4.0.0-r1.ebuild:
+  Add fix from upstream for buffer overflows when running `tc qdisc show`
+  #546928 by jamesrutledge.
 
 *iproute2-4.0.0 (15 Apr 2015)
 

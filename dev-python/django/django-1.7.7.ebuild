@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.7.7.ebuild,v 1.3 2015/04/19 09:50:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.7.7.ebuild,v 1.4 2015/04/20 20:36:15 jlec Exp $
 
 EAPI=5
 
@@ -75,7 +75,7 @@ src_install() {
 
 	elog "Additional Backend support can be enabled via"
 	optfeature "MySQL backend support in python 2.7 only" dev-python/mysql-python
-	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysqlcient
+	optfeature "MySQL backend support in python 2.7 - 3.4" dev-python/mysqlclient
 	optfeature "PostgreSQL backend support" dev-python/psycopg:2
 	optfeature "GEO Django" sci-libs/gdal[geos]
 	optfeature "Memcached support" dev-python/python-memcached
