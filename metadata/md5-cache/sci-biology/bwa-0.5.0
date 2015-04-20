@@ -1,9 +1,0 @@
-DEFINED_PHASES=install prepare
-DESCRIPTION=Burrows-Wheeler Alignment Tool, a fast short genomic sequence aligner
-EAPI=2
-HOMEPAGE=http://maq.sourceforge.net/
-KEYWORDS=amd64 x86
-LICENSE=GPL-3
-SLOT=0
-SRC_URI=mirror://sourceforge/maq/bwa-0.5.0.tar.bz2
-_md5_=4f591885ecc8c626bd93a2849a75bf19

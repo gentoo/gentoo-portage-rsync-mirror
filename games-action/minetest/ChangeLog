@@ -1,6 +1,13 @@
 # ChangeLog for games-action/minetest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.19 2015/04/19 06:58:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.20 2015/04/20 20:15:58 mr_bones_ Exp $
+
+  20 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/minetest-0.4.9-as-needed.patch, -files/minetest-0.4.9-freetype.patch,
+  -files/minetest-0.4.9-lua-luajit-option.patch,
+  -files/minetest-0.4.9-opengles.patch,
+  -files/minetest-0.4.9-shared-irrlicht.patch, -minetest-0.4.9.ebuild:
+  old
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> minetest-0.4.10-r1.ebuild:
   x86 stable wrt bug #522906

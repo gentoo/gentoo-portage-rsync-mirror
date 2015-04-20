@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci-physics</herd>
-<longdescription lang="en">
+  <herd>sci-physics</herd>
+  <longdescription lang="en">
   PYTHIA is a program for the generation of high-energy physics
   events, i.e. for the description of collisions at high energies
   between elementary particles such as e+, e-, p and pbar in various
@@ -13,8 +13,8 @@
   but also borrows many formulae and other knowledge from the
   literature.
 </longdescription>
-<use>
-  <flag name="hepmc">Adds support for High Energy Physics Monte Carlo
+  <use>
+    <flag name="hepmc">Adds support for High Energy Physics Monte Carlo
   Generators <pkg>sci-physics/hepmc</pkg></flag>
-</use>
+  </use>
 </pkgmetadata>

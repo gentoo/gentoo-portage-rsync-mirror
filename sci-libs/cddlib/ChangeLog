@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cddlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/ChangeLog,v 1.9 2015/04/19 10:03:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/ChangeLog,v 1.10 2015/04/20 20:26:41 jlec Exp $
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org> -cddlib-094f-r2.ebuild:
+  Drop old
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cddlib-094g.ebuild:
   Stable for x86, wrt bug #545406

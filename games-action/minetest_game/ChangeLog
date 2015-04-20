@@ -1,6 +1,10 @@
 # ChangeLog for games-action/minetest_game
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_game/ChangeLog,v 1.16 2015/04/19 06:59:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_game/ChangeLog,v 1.17 2015/04/20 20:14:24 mr_bones_ Exp $
+
+  20 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -minetest_game-0.4.9.ebuild:
+  old
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> minetest_game-0.4.10.ebuild:
   x86 stable wrt bug #522906

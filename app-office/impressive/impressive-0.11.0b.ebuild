@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.11.0b.ebuild,v 1.1 2015/03/12 08:50:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/impressive/impressive-0.11.0b.ebuild,v 1.2 2015/04/20 20:11:51 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,6 @@ RDEPEND="${PYTHON_DEPS}
 	|| (
 		app-text/mupdf
 		app-text/poppler
-		app-text/xpdf
 		app-text/ghostscript-gpl
 		)
 	|| ( media-fonts/dejavu media-fonts/corefonts )"
@@ -56,6 +55,5 @@ pkg_postinst() {
 	optfeature "Sound and video playback" media-video/mplayer2
 	optfeature "Alternate PDF rendering" app-text/mupdf
 	optfeature "Alternate PDF rendering" app-text/poppler
-	optfeature "Alternate PDF rendering" app-text/xpdf
 	optfeature "Alternate PDF rendering" app-text/ghostscript-gpl
 }

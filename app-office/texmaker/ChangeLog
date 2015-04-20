@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.150 2015/04/19 09:48:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.151 2015/04/20 20:20:07 jlec Exp $
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org> -texmaker-4.0.1.ebuild,
+  -texmaker-4.1.1.ebuild, -texmaker-4.1.ebuild, -texmaker-4.2.ebuild:
+  Drop old
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> texmaker-4.3.ebuild:
   Stable for x86, wrt bug #542714

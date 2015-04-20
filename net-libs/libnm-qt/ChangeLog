@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnm-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/ChangeLog,v 1.18 2015/01/26 11:07:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/ChangeLog,v 1.19 2015/04/20 20:27:38 mrueg Exp $
+
+*libnm-qt-0.9.8.4 (20 Apr 2015)
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +libnm-qt-0.9.8.4.ebuild:
+  Version bump.
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -libnm-qt-0.9.8.2-r1.ebuild:
   Remove old.
