@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.79 2015/04/19 09:27:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.80 2015/04/20 14:36:01 grknight Exp $
+
+  20 Apr 2015; Brian Evans <grknight@gentoo.org> -PEAR-DB-1.7.14.ebuild:
+  Drop old
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-DB-1.8.2.ebuild:
   Stable for alpha/amd64/arm/ia64/ppc/ppc64/sparc/x86, wrt bug #546652
