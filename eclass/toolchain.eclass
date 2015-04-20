@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.662 2015/04/13 04:16:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.663 2015/04/20 09:00:20 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1720,8 +1720,8 @@ toolchain_src_install() {
 		insinto "${DATAPATH}"
 		if tc_version_is_at_least 4.0 ; then
 			newins "${GCC_FILESDIR}"/awk/fixlafiles.awk-no_gcc_la fixlafiles.awk || die
-			find "${D}/${LIBPATH}" -name libstdc++.la -type f -exec rm "{}" \;
-			find "${D}/${LIBPATH}" -name "lib?san.la" -type f -exec rm "{}" \; # 487550
+			find "${D}/${LIBPATH}" -name libstdc++.la -type f -delete
+			find "${D}/${LIBPATH}" -name 'lib*san.la' -type f -delete #487550 #546700
 		else
 			doins "${GCC_FILESDIR}"/awk/fixlafiles.awk || die
 		fi
