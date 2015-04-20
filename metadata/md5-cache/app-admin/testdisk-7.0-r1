@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=static? ( sys-apps/util-linux[static-libs] >=sys-libs/ncurses-5.2[static-libs] jpeg? ( virtual/jpeg:*[static-libs] ) ntfs? ( <=sys-fs/ntfs3g-2013.1.13[static-libs] ) reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8[static-libs] ) >=sys-fs/e2fsprogs-1.35[static-libs] sys-libs/zlib[static-libs] ) !static? ( sys-apps/util-linux >=sys-libs/ncurses-5.2 jpeg? ( virtual/jpeg:* ) ntfs? ( <=sys-fs/ntfs3g-2013.1.13 ) reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 ) >=sys-fs/e2fsprogs-1.35 sys-libs/zlib )
+DESCRIPTION=Checks and undeletes partitions + PhotoRec, signature based recovery tool
+EAPI=5
+HOMEPAGE=http://www.cgsecurity.org/wiki/TestDisk
+IUSE=jpeg ntfs reiserfs static
+KEYWORDS=~amd64 ~arm ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=!static? ( static? ( sys-apps/util-linux[static-libs] >=sys-libs/ncurses-5.2[static-libs] jpeg? ( virtual/jpeg:*[static-libs] ) ntfs? ( <=sys-fs/ntfs3g-2013.1.13[static-libs] ) reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8[static-libs] ) >=sys-fs/e2fsprogs-1.35[static-libs] sys-libs/zlib[static-libs] ) !static? ( sys-apps/util-linux >=sys-libs/ncurses-5.2 jpeg? ( virtual/jpeg:* ) ntfs? ( <=sys-fs/ntfs3g-2013.1.13 ) reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 ) >=sys-fs/e2fsprogs-1.35 sys-libs/zlib ) )
+SLOT=0
+SRC_URI=http://www.cgsecurity.org/testdisk-7.0.tar.bz2
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_md5_=23c314e240a8ec25cd8662662f3fe103

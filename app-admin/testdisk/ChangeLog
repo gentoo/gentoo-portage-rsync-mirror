@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.57 2015/04/20 19:59:01 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.58 2015/04/20 21:21:56 nicolasbock Exp $
+
+*testdisk-7.0-r1 (20 Apr 2015)
+
+  20 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> +testdisk-7.0-r1.ebuild:
+  app-admin/testdisk: Fix doc installation path.
 
   20 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> files/install-gentoo.patch,
   testdisk-6.14.ebuild, testdisk-7.0.ebuild:
