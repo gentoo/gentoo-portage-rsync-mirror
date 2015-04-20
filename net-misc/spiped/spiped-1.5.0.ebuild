@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spiped/spiped-1.5.0.ebuild,v 1.1 2015/03/05 16:24:03 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spiped/spiped-1.5.0.ebuild,v 1.2 2015/04/20 07:38:34 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tarsnap.com/${PN}/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl:*"

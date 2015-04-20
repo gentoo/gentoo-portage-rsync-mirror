@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flexmock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.42 2015/04/19 18:59:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.43 2015/04/20 07:38:46 ago Exp $
+
+  20 Apr 2015; Agostino Sarubbo <ago@gentoo.org> flexmock-1.3.3.ebuild:
+  Stable for amd64, wrt bug #547126
 
 *flexmock-1.3.3-r1 (19 Apr 2015)
 

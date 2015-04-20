@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-tcpwrap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.26 2015/04/19 18:45:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.27 2015/04/20 07:38:40 ago Exp $
+
+  20 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ruby-tcpwrap-0.6-r2.ebuild:
+  Stable for amd64, wrt bug #547124
 
 *ruby-tcpwrap-0.6-r3 (19 Apr 2015)
 

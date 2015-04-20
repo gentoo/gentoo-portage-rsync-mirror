@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/senken
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/ChangeLog,v 1.12 2015/02/18 19:10:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/senken/ChangeLog,v 1.13 2015/04/20 07:38:55 ago Exp $
+
+  20 Apr 2015; Agostino Sarubbo <ago@gentoo.org> senken-0.3.0.ebuild:
+  Stable for amd64, wrt bug #547160
 
   18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> senken-0.3.0.ebuild:
   update HOMEPAGE

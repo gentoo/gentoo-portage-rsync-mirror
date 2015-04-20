@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-3.18_p20150126.ebuild,v 1.1 2015/01/25 17:44:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/aufs-util-4.0_p20150420.ebuild,v 1.1 2015/04/20 07:53:06 jlec Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit flag-o-matic linux-info multilib toolchain-funcs
 DESCRIPTION="Utilities are always necessary for aufs"
 HOMEPAGE="http://aufs.sourceforge.net/"
 SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
-# git archive -v --prefix=${P}/ --remote=git://git.code.sf.net/p/aufs/aufs-util aufs3.14 -o ${P}.tar
+# git archive -v --prefix=${P}/ --remote=git://git.code.sf.net/p/aufs/aufs-util aufs4.0 -o ${P}.tar
 # xz -ve9 *.tar
 
 SLOT="0"
@@ -21,7 +21,7 @@ RDEPEND="
 	!sys-fs/aufs2
 	!<sys-fs/aufs3-3_p20130318"
 DEPEND="${RDEPEND}
-	>=sys-fs/aufs-headers-3.15_p20141006"
+	~sys-fs/aufs-headers-${PV}"
 
 src_prepare() {
 	sed \
