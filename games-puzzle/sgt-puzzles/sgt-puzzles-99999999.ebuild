@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.5 2012/05/04 04:45:28 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.7 2015/04/20 03:58:09 mr_bones_ Exp $
 
-EAPI=2
-inherit eutils toolchain-funcs games
+EAPI=5
+inherit eutils gnome2-utils toolchain-funcs games
 if [[ ${PV} == "99999999" ]] ; then
-	ESVN_REPO_URI="svn://svn.tartarus.org/sgt/puzzles"
-	inherit subversion
+	EGIT_REPO_URI="git://git.tartarus.org/simon/puzzles.git"
+	inherit autotools git-r3
 	SRC_URI=""
 	KEYWORDS=""
 else
@@ -29,37 +29,40 @@ DEPEND="${RDEPEND}
 	doc? ( >=app-doc/halibut-1.0 )"
 
 src_prepare() {
-	sed -i \
-		-e 's/-O2 -Wall -Werror -ansi -pedantic -g//' \
-		-e "s/libstr =/libstr = '\$(LDFLAGS) ' ./" \
-		mkfiles.pl \
-		|| die
-	./mkfiles.pl
-	sed -i \
-		-e '1iPKG_CONFIG ?= pkg-config' \
-		-e '/^GTK_CONFIG/s:=.*:= $(PKG_CONFIG) gtk+-2.0:' \
-		Makefile || die
+	if [[ ${PV} == "99999999" ]] ; then
+		sed -i \
+			-e 's/-O2 -Wall -Werror -ansi -pedantic -g//' \
+			-e "s/libstr =/libstr = '\$(LDFLAGS) ' ./" \
+			mkfiles.pl || die
+		./mkfiles.pl || die
+		eautoreconf
+	else
+		sed -i \
+			-e 's:= -O2 -Wall -Werror -ansi -pedantic -g:= $(CPPFLAGS):' \
+			-e '/LDFLAGS/s:=:=$(LDFLAGS) :' \
+			Makefile || die
+	fi
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)"
 	if use doc ; then
-		halibut --text --html --info --pdf --ps puzzles.but
+		halibut --text --html --info --pdf --ps puzzles.but || die
 	fi
 }
 
 src_install() {
 	dodir "${GAMES_BINDIR}"
-	emake DESTDIR="${D}" gamesdir="${GAMES_BINDIR}" install || die
+	emake DESTDIR="${D}" gamesdir="${GAMES_BINDIR}" install
 	dodoc README
 
 	local file name
 	for file in *.R ; do
 		[[ ${file} == "nullgame.R" ]] && continue
-		name=$(sed -n 's/^[a-z]*\.exe://p' "${file}")
+		name=$(awk -F: '/exe:/ { print $3 }' "${file}")
 		file=${file%.R}
 		if [[ ${PV} -lt 99999999 ]] ; then
-			newicon icons/${file}-48d24.png ${PN}-${file}.png || die
+			newicon -s 48 icons/${file}-48d24.png ${PN}-${file}.png
 			make_desktop_entry "${GAMES_BINDIR}/${file}" "${name}" "${PN}-${file}"
 		else
 			# No icons with the live version
@@ -74,4 +77,18 @@ src_install() {
 	fi
 
 	prepgamesdirs
+}
+
+pkg_preinst() {
+	games_pkg_preinst
+	[[ ${PV} -lt 99999999 ]] && gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	[[ ${PV} -lt 99999999 ]] && gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	[[ ${PV} -lt 99999999 ]] && gnome2_icon_cache_update
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/unicodecsv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unicodecsv/ChangeLog,v 1.5 2015/04/14 03:04:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unicodecsv/ChangeLog,v 1.6 2015/04/20 03:31:37 patrick Exp $
+
+*unicodecsv-0.12.0 (20 Apr 2015)
+
+  20 Apr 2015; Patrick Lauer <patrick@gentoo.org> +unicodecsv-0.12.0.ebuild:
+  Bump
 
 *unicodecsv-0.11.1 (14 Apr 2015)
 
