@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.10.1.ebuild,v 1.1 2015/03/29 18:38:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.10.2.ebuild,v 1.1 2015/04/20 16:06:54 xarthisius Exp $
 
 EAPI=5
 
