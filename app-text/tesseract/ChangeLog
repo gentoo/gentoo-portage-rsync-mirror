@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.55 2015/04/02 19:56:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.56 2015/04/20 19:28:49 tomka Exp $
+
+  20 Apr 2015; Thomas Kahle <tomka@gentoo.org> tesseract-3.03_rc1-r1.ebuild:
+  opencl requires tiff (bug 546356)
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> tesseract-3.03_rc1-r1.ebuild:
   add ~arm, bug #544622

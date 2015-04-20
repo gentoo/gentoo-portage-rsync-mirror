@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.73 2012/12/18 17:04:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.74 2015/04/20 19:16:13 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -canna-3.7_p2.ebuild,
+  -canna-3.7_p3.ebuild:
+  Remove old.
 
   18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> canna-3.7_p3-r1.ebuild:
   Stable for ia64, wrt bug #441080

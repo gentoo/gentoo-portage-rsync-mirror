@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libguess
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.28 2014/08/10 17:49:02 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/ChangeLog,v 1.29 2015/04/20 19:25:12 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -libguess-1.0.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libguess-1.0.ebuild,
   libguess-1.1.ebuild, libguess-1.2.ebuild:

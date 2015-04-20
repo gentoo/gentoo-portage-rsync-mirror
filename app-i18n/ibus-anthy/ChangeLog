@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus-anthy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.50 2015/04/08 07:30:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ChangeLog,v 1.51 2015/04/20 19:19:07 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/ibus-anthy-1.5.0-configure.patch, -ibus-anthy-1.2.0.20100115.ebuild,
+  -ibus-anthy-1.2.6.ebuild, -ibus-anthy-1.2.7.ebuild:
+  Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> ibus-anthy-1.5.4.ebuild:
   Remove old Python implementations

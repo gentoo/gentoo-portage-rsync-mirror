@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/avp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.20 2015/03/27 10:16:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.21 2015/04/20 19:29:06 mr_bones_ Exp $
+
+  20 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -avp-20070130-r1.ebuild,
+  -files/avp-20070130-gcc42.patch, -files/avp-20070130-glibc2.10.patch:
+  old
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> avp-20150214.ebuild:
   Stable for x86, wrt bug #544628

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.142 2015/01/04 03:43:04 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.143 2015/04/20 19:17:21 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -anthy-9100h.ebuild:
+  Remove old.
 
   04 Jan 2015; Benda Xu <heroxbd@gentoo.org> anthy-9100h-r1.ebuild:
   keyword ~arm
