@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.87 2014/01/18 03:23:26 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.88 2015/04/20 12:24:39 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -mime-types-8.ebuild:
+  Remove old.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> mime-types-9.ebuild:
   Add arm64 love.

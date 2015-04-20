@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/slashtime
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.23 2014/02/24 01:07:30 phajdan.jr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.24 2015/04/20 12:21:36 mrueg Exp $
+
+  20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -slashtime-0.5.11.ebuild:
+  Remove old.
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   slashtime-0.5.13-r1.ebuild:
