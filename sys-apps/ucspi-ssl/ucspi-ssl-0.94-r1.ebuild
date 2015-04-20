@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.94-r1.ebuild,v 1.1 2015/04/19 04:39:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ucspi-ssl-0.94-r1.ebuild,v 1.2 2015/04/20 01:00:32 idella4 Exp $
 
 EAPI=5
 
@@ -22,11 +22,10 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}"/host/superscript.com/net/${P}/src
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-verbose.patch"
-
 	ht_fix_all
 	sed -i -e 's:HOME/command:/usr/bin:' sslcat.sh sslconnect.sh https\@.sh
 	sed -i -e 's:auto:gcc:' conf-cc conf-ld
+	sed -i -e 's:-m64::' conf-ld
 
 	qmail_set_cc
 

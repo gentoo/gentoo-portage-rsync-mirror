@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.37 2015/04/19 04:39:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.38 2015/04/20 01:00:32 idella4 Exp $
+
+  20 Apr 2015; Ian Delaney <idella4@gentoo.org> ucspi-ssl-0.94-r1.ebuild:
+  drop use of patch, add sed stmnt from patch supplied by maintainer in
+  attachment of Bug #516868 wrt bug #545682
 
 *ucspi-ssl-0.94-r1 (19 Apr 2015)
 
