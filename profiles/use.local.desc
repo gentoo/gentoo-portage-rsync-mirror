@@ -7150,6 +7150,14 @@ sys-fs/aufs3:kernel-patch - Patch the current kernel for aufs3 support
 sys-fs/aufs3:nfs - Enable support for nfs export
 sys-fs/aufs3:pax_kernel - Apply patch needed for pax enabled kernels
 sys-fs/aufs3:ramfs - Enable initramfs/rootfs support
+sys-fs/aufs4:debug - Enable additional debugging support
+sys-fs/aufs4:fuse - Enable fuse support
+sys-fs/aufs4:hfs - Enable hfs support
+sys-fs/aufs4:inotify - Enable inotify support
+sys-fs/aufs4:kernel-patch - Patch the current kernel for aufs3 support
+sys-fs/aufs4:nfs - Enable support for nfs export
+sys-fs/aufs4:pax_kernel - Apply patch needed for pax enabled kernels
+sys-fs/aufs4:ramfs - Enable initramfs/rootfs support
 sys-fs/btrfs-progs:convert - Build ext2 conversion utility (btrfs-convert)
 sys-fs/btrfs-progs:debug-utils - Build additional utils for debugging
 sys-fs/cryptsetup:gcrypt - Use dev-libs/libgcrypt crypto backend

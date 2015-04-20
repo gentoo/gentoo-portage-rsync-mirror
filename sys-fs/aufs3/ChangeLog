@@ -1,6 +1,26 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.126 2015/04/07 14:46:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.129 2015/04/20 07:17:08 jlec Exp $
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org> aufs3-3_p20150406.ebuild:
+  Fix Versions
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org> -files/README.gentoo-r1,
+  aufs3-3_p20150406.ebuild, files/README.gentoo:
+  Drop old README
+
+  20 Apr 2015; Justin Lecher <jlec@gentoo.org> -aufs3-3_p20140811.ebuild,
+  -aufs3-3_p20140818.ebuild, -aufs3-3_p20140908.ebuild,
+  -aufs3-3_p20140915.ebuild, -aufs3-3_p20141006.ebuild,
+  -aufs3-3_p20141013.ebuild, -aufs3-3_p20141020.ebuild,
+  -aufs3-3_p20141103.ebuild, -aufs3-3_p20141110.ebuild,
+  -aufs3-3_p20141208.ebuild, -aufs3-3_p20141215.ebuild,
+  -aufs3-3_p20150106.ebuild, -aufs3-3_p20150119.ebuild,
+  -aufs3-3_p20150126.ebuild, -aufs3-3_p20150216.ebuild,
+  -aufs3-3_p20150223.ebuild, -aufs3-3_p20150309.ebuild,
+  -aufs3-3_p20150323.ebuild, -aufs3-3_p20150330.ebuild,
+  aufs3-3_p20150406.ebuild:
+  Drop old; block new version
 
 *aufs3-3_p20150406 (07 Apr 2015)
 

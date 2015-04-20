@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.1 2015/04/07 06:25:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20150406.ebuild,v 1.4 2015/04/20 07:17:08 jlec Exp $
 
 EAPI=5
 
@@ -8,9 +8,9 @@ inherit eutils flag-o-matic linux-info linux-mod multilib readme.gentoo toolchai
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
-PATCH_MAX_VER=18
+PATCH_MAX_VER=19
 # highest supported version
-KERN_MAX_VER=19
+KERN_MAX_VER=20
 # lowest supported version
 KERN_MIN_VER=14
 
@@ -29,13 +29,12 @@ DEPEND="
 RDEPEND="
 	sys-fs/aufs-util
 	!sys-fs/aufs
-	!sys-fs/aufs2"
+	!sys-fs/aufs2
+	!sys-fs/aufs4"
 
 S="${WORKDIR}"/${PN}-standalone
 
 MODULE_NAMES="aufs(misc:${S})"
-
-README_GENTOO_SUFFIX="-r1"
 
 pkg_setup() {
 	CONFIG_CHECK+=" !AUFS_FS"

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20141215.ebuild,v 1.1 2014/12/15 08:25:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs4/aufs4-0_pre20150420.ebuild,v 1.1 2015/04/20 07:24:21 jlec Exp $
 
 EAPI=5
 
@@ -8,15 +8,15 @@ inherit eutils flag-o-matic linux-info linux-mod multilib readme.gentoo toolchai
 
 AUFS_VERSION="${PV%%_p*}"
 # highest branch version
-PATCH_MAX_VER=18
+PATCH_MAX_VER=0
 # highest supported version
-KERN_MAX_VER=19
+KERN_MAX_VER=1
 # lowest supported version
-KERN_MIN_VER=10
+KERN_MIN_VER=0
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
-SRC_URI="http://dev.gentoo.org/~jlec/distfiles/aufs3-standalone-${PV}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~jlec/distfiles/aufs4-standalone-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,13 +29,12 @@ DEPEND="
 RDEPEND="
 	sys-fs/aufs-util
 	!sys-fs/aufs
-	!sys-fs/aufs2"
+	!sys-fs/aufs2
+	!sys-fs/aufs3"
 
 S="${WORKDIR}"/${PN}-standalone
 
 MODULE_NAMES="aufs(misc:${S})"
-
-README_GENTOO_SUFFIX="-r1"
 
 pkg_setup() {
 	CONFIG_CHECK+=" !AUFS_FS"
@@ -49,35 +48,27 @@ pkg_setup() {
 	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
 
 	get_version
-	kernel_is lt 3 ${KERN_MIN_VER} 0 && die "the kernel version isn't supported by upstream anymore. Please upgrade."
-	kernel_is gt 3 ${KERN_MAX_VER} 99 && die "kernel too new"
+	kernel_is lt 4 ${KERN_MIN_VER} 0 && die "the kernel version isn't supported by upstream anymore. Please upgrade."
+	kernel_is gt 4 ${KERN_MAX_VER} 99 && die "kernel too new"
 
 	linux-mod_pkg_setup
 
 	if [[ "${KV_MINOR}" -gt "${PATCH_MAX_VER}" ]]; then
 		PATCH_BRANCH="x-rcN"
-	elif [[ "${KV_MINOR}" == "10" ]] && [[ "${KV_PATCH}" -ge "28" ]]; then
-		PATCH_BRANCH="${KV_MINOR}".x
-	elif [[ "${KV_MINOR}" == "12" ]]; then
-		PATCH_BRANCH="${KV_MINOR}".x
-	elif [[ "${KV_MINOR}" == "12" ]] && [[ "${KV_PATCH}" -ge "31" ]]; then
-		PATCH_BRANCH="${KV_MINOR}".31+
-	elif [[ "${KV_MINOR}" == "14" ]] && [[ "${KV_PATCH}" -ge "21" ]]; then
-		PATCH_BRANCH="${KV_MINOR}".12+
 	else
 		PATCH_BRANCH="${KV_MINOR}"
 	fi
 
 	case ${KV_EXTRA} in
 			"")
-				elog "It seems you are using vanilla-sources with aufs3"
+				elog "It seems you are using vanilla-sources with aufs4"
 				elog "Please use sys-kernel/aufs-sources with USE=vanilla"
-				elog "This will save you the nasty reemerge of sys-fs/aufs3 on every kernel upgrade"
+				elog "This will save you the nasty reemerge of sys-fs/aufs4 on every kernel upgrade"
 			;;
 			"-gentoo")
-				elog "It seems you are using gentoo-sources with aufs3"
+				elog "It seems you are using gentoo-sources with aufs4"
 				elog "Please use sys-kernel/aufs-sources"
-				elog "This will save you the nasty reemerge of sys-fs/aufs3 on every kernel upgrade"
+				elog "This will save you the nasty reemerge of sys-fs/aufs4 on every kernel upgrade"
 			;;
 	esac
 
@@ -135,11 +126,7 @@ src_prepare() {
 	use ramfs && set_config BR_RAMFS
 
 	if use pax_kernel; then
-		if kernel_is ge 3 11; then
-			epatch "${FILESDIR}"/pax-3.11.patch
-		else
-			epatch "${FILESDIR}"/pax-3.patch
-		fi
+		epatch "${FILESDIR}"/pax-4.patch
 	fi
 
 	sed -i "s:aufs.ko usr/include/linux/aufs_type.h:aufs.ko:g" Makefile || die
@@ -166,7 +153,7 @@ src_install() {
 
 	use kernel-patch || doins "${T}"/${PN}-standalone/${PN}-standalone-base-mmap-combined.patch
 
-	dodoc Documentation/filesystems/aufs/README "${T}"/${PN}-standalone/{aufs3-loopback,vfs-ino,tmpfs-idr}.patch
+	dodoc Documentation/filesystems/aufs/README "${T}"/${PN}-standalone/{aufs4-loopback,vfs-ino,tmpfs-idr}.patch
 
 	readme.gentoo_create_doc
 }
