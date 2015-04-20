@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.220 2015/04/14 12:14:12 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.221 2015/04/20 10:43:40 grozin Exp $
+
+  20 Apr 2015; Andrey Grozin <grozin@gentoo.org> sbcl-1.2.10.ebuild:
+  Fixed CFLAGS handling, closing #544070
 
 *sbcl-1.2.10 (14 Apr 2015)
 
