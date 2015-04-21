@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/Search-Xapian
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/ChangeLog,v 1.66 2015/04/19 06:56:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/ChangeLog,v 1.68 2015/04/20 23:45:28 blueness Exp $
+
+  20 Apr 2015; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signiture.
+
+*Search-Xapian-1.2.20.0 (20 Apr 2015)
+
+  20 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  +Search-Xapian-1.2.20.0.ebuild, -Search-Xapian-1.2.14.0.ebuild,
+  -Search-Xapian-1.2.17.0.ebuild, -Search-Xapian-1.2.18.0.ebuild:
+  Clean up.
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> Search-Xapian-1.2.19.0.ebuild:
   x86 stable wrt bug #531758
