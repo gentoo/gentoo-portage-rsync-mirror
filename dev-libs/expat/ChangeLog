@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.169 2015/04/19 09:49:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.170 2015/04/21 18:40:52 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> expat-2.1.0-r4.ebuild:
+  ppc stable wrt bug #545846
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> expat-2.1.0-r4.ebuild:
   Stable for x86, wrt bug #545846

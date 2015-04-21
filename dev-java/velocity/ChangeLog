@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/velocity
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.50 2015/03/27 10:21:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.51 2015/04/21 18:41:36 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> velocity-1.7.ebuild:
+  ppc stable wrt bug #535098
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> velocity-1.7.ebuild:
   Stable for x86, wrt bug #535098

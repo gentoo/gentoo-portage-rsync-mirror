@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20150129.ebuild,v 1.7 2015/04/19 10:09:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/hwids-20150129.ebuild,v 1.8 2015/04/21 18:58:22 pacho Exp $
 
 EAPI=5
 inherit udev eutils
@@ -12,7 +12,7 @@ if [[ ${PV} == "99999999" ]]; then
 	inherit git-2
 else
 	SRC_URI="${HOMEPAGE}/archive/${P}.tar.gz"
-	KEYWORDS="alpha amd64 ~arm ~arm64 hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="alpha amd64 ~arm ~arm64 hppa ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 
 LICENSE="|| ( GPL-2 BSD ) public-domain"

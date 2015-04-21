@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jakarta-regexp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.36 2015/03/27 10:25:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.37 2015/04/21 18:37:42 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> jakarta-regexp-1.5.ebuild:
+  ppc stable wrt bug #535068
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> jakarta-regexp-1.5.ebuild:
   Stable for x86, wrt bug #535068

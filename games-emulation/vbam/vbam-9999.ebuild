@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.7 2014/08/03 04:25:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.8 2015/04/21 18:41:16 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -18,7 +18,7 @@ KEYWORDS=""
 IUSE="cairo ffmpeg gtk link lirc nls openal +sdl wxwidgets"
 REQUIRED_USE="|| ( sdl gtk wxwidgets )"
 
-RDEPEND=">=media-libs/libpng-1.4
+RDEPEND=">=media-libs/libpng-1.4:0=
 	media-libs/libsdl[joystick]
 	link? ( <media-libs/libsfml-2.0 )
 	sys-libs/zlib
@@ -41,7 +41,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/pkgconfig"
 
+src_unpack() {
+	subversion_src_unpack
+}
+
 src_prepare() {
+	subversion_src_prepare
 	# fix issue with zlib-1.2.5.1 macros (bug #383179)
 	sed -i '1i#define OF(x) x' src/common/memgzio.c || die
 
@@ -87,6 +92,7 @@ src_install() {
 }
 
 pkg_preinst() {
+	subversion_pkg_preinst
 	games_pkg_preinst
 	if use gtk || use wxwidgets ; then
 		gnome2_icon_savelist

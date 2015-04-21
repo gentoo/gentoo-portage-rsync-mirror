@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1228.ebuild,v 1.3 2014/08/03 04:25:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1228.ebuild,v 1.4 2015/04/21 18:41:16 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cairo ffmpeg gtk link lirc nls openal +sdl wxwidgets"
 REQUIRED_USE="|| ( sdl gtk wxwidgets )"
 
-RDEPEND=">=media-libs/libpng-1.4
+RDEPEND=">=media-libs/libpng-1.4:0=
 	media-libs/libsdl[joystick]
 	link? ( <media-libs/libsfml-2.0 )
 	sys-libs/zlib

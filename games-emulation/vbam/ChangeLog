@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/vbam
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.26 2015/03/23 15:43:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.27 2015/04/21 18:41:16 mr_bones_ Exp $
+
+  21 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> vbam-1.8.0.1228.ebuild,
+  vbam-9999.ebuild:
+  call subversion eclass functions
 
   23 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself as maintainer.
@@ -124,4 +128,3 @@
   +files/vbam-1.8.0_p20110206-cflags.patch,
   +files/vbam-1.8.0_p20110206-disable-asm.patch, +metadata.xml:
   Initial import (bug #254480). Ebuild by me.
-

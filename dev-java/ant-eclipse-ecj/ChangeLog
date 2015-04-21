@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.48 2015/03/15 21:09:37 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.49 2015/04/21 18:50:25 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> ant-eclipse-ecj-3.6-r1.ebuild,
+  ant-eclipse-ecj-3.7.2.ebuild:
+  ppc stable wrt bug #503890
 
 *ant-eclipse-ecj-4.4.2 (15 Mar 2015)
 

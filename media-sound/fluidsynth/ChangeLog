@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.85 2015/03/29 22:28:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.86 2015/04/21 18:38:27 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> fluidsynth-1.1.6-r1.ebuild:
+  ppc stable wrt bug #525744
 
   29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -fluidsynth-1.1.1.ebuild,
   -fluidsynth-1.1.5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/relaxngcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.17 2015/03/27 10:22:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/relaxngcc/ChangeLog,v 1.18 2015/04/21 18:40:07 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> relaxngcc-1.12-r2.ebuild:
+  ppc stable wrt bug #535090
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> relaxngcc-1.12-r2.ebuild:
   Stable for x86, wrt bug #535090

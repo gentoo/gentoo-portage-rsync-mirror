@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16495 2015/04/21 07:46:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16496 2015/04/21 19:00:10 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (21 Apr 2015)
+# Upstream has discontinued the project; doesn't build on modern systems.
+# Bug #510262
+# masked for removal on 20150521
+games-util/searchtool
 
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Apr 2015)
 # Upstream is dead; doesn't build on modern systems.
