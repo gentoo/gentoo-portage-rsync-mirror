@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.89 2015/04/17 12:46:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.90 2015/04/21 19:23:43 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> requests-2.6.0.ebuild:
+  ppc stable wrt bug #543480
 
   17 Apr 2015; Agostino Sarubbo <ago@gentoo.org> requests-2.6.0.ebuild:
   Stable for ppc64, wrt bug #543480

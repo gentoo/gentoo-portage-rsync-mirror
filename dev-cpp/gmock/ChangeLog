@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gmock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.32 2015/04/02 18:17:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.33 2015/04/21 19:04:03 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> gmock-1.7.0-r1.ebuild:
+  ppc stable wrt bug #525970
 
   02 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> gmock-1.7.0-r1.ebuild:
   add missing test to IUSE

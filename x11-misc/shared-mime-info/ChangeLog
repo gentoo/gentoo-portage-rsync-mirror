@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.219 2015/04/19 10:12:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.220 2015/04/21 19:10:01 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> shared-mime-info-1.4.ebuild:
+  ppc stable wrt bug #545866
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> shared-mime-info-1.4.ebuild:
   Stable for x86, wrt bug #545866

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_IPv6
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IPv6/ChangeLog,v 1.4 2014/11/06 18:17:45 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IPv6/ChangeLog,v 1.5 2015/04/21 19:11:47 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #398377
 
 *PEAR-Net_IPv6-1.2.1-r1 (06 Nov 2014)
 

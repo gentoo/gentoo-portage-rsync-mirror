@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dfc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dfc/ChangeLog,v 1.2 2013/12/29 17:17:41 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dfc/ChangeLog,v 1.3 2015/04/21 19:12:48 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due to #398377
 
   29 Dec 2013; Markus Meier <maekke@gentoo.org> dfc-3.0.0.ebuild:
   add ~arm, bug #491722
@@ -10,4 +13,3 @@
   01 Jun 2012; Corentin Chary <iksaif@gentoo.org> +dfc-3.0.0.ebuild,
   +metadata.xml:
   New ebuild for dfc. Original ebuild from Laurent Bachelier.
-

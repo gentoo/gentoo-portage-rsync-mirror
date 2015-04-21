@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.42 2015/04/08 17:46:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.43 2015/04/21 19:04:11 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> gtest-1.7.0.ebuild:
+  ppc stable wrt bug #525970
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> gtest-1.6.0-r2.ebuild,
   gtest-1.7.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.119 2015/04/16 14:25:34 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.120 2015/04/21 19:23:28 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> maxima-5.34.1.ebuild:
+  ppc stable wrt bug #406773
 
 *maxima-5.36.0 (16 Apr 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/jsmath
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jsmath/ChangeLog,v 1.4 2015/04/21 17:51:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jsmath/ChangeLog,v 1.5 2015/04/21 19:24:21 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> jsmath-1.0.ebuild:
+  ppc stable wrt bug #406779
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> jsmath-1.0.ebuild:
   x86 stable wrt bug #406779

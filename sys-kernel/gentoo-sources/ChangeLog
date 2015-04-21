@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1537 2015/04/20 14:15:50 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1538 2015/04/21 19:10:43 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> gentoo-sources-3.18.11.ebuild:
+  ppc stable wrt bug #540866
 
 *gentoo-sources-3.19.5 (20 Apr 2015)
 

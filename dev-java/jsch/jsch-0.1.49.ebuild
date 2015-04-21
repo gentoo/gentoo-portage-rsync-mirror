@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.49.ebuild,v 1.4 2014/08/16 10:09:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.49.ebuild,v 1.5 2015/04/21 19:06:50 pacho Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source examples"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.jcraft.com/jsch/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="zlib"
 
 RDEPEND=">=virtual/jdk-1.5

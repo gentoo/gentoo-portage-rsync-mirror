@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1-r2.ebuild,v 1.4 2015/04/19 07:01:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1-r2.ebuild,v 1.5 2015/04/21 19:19:04 pacho Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ampasctl/${P}.tar.gz"
 
 LICENSE="AMPAS"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="static-libs"
 
 RDEPEND=">=media-libs/ilmbase-2.0.1:=

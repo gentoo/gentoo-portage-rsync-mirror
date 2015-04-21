@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-13.04.2.ebuild,v 1.4 2015/04/21 17:51:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-13.04.2.ebuild,v 1.5 2015/04/21 19:24:13 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 DEPEND="
 	dev-libs/libxml2:2

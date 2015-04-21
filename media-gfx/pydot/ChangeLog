@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.82 2015/04/19 09:37:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.83 2015/04/21 19:04:25 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> pydot-1.0.28-r2.ebuild:
+  ppc stable wrt bug #535448
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> pydot-1.0.28-r2.ebuild:
   x86 stable wrt bug #535448

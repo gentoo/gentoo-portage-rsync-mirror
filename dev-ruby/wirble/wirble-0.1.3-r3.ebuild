@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.3-r3.ebuild,v 1.6 2015/04/14 07:12:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.3-r3.ebuild,v 1.7 2015/04/21 19:08:05 pacho Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -17,7 +17,7 @@ HOMEPAGE="http://pablotron.org/software/wirble/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 pkg_postinst() {

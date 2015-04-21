@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/euses
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.73 2012/11/24 16:33:34 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euses/ChangeLog,v 1.74 2015/04/21 19:08:26 jer Exp $
+
+  21 Apr 2015; Jeroen Roovers <jer@gentoo.org> euses-2.5.9.ebuild:
+  Stable for PPC64 too.
 
   24 Nov 2012; Jeroen Roovers <jer@gentoo.org> -euses-2.5.8.ebuild:
   Old.
