@@ -69,9 +69,6 @@ src_prepare() {
 	# with more gentoo-knowledge than me (jbergstroem) figures it out.
 	rm test/parallel/test-stdout-close-unref.js || die
 
-	# fix upstream bug regarding shared build logic (my own fault, jbergstroem)
-	sed -i -e "s/== True/== 'true'/g" configure || die
-
 	# debug builds. change install path, remove optimisations and override buildtype
 	if use debug; then
 		sed -i -e "s|out/Release/|out/Debug/|g" tools/install.py
