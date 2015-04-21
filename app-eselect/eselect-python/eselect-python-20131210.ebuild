@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-python/eselect-python-20131210.ebuild,v 1.1 2015/03/31 16:54:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-python/eselect-python-20131210.ebuild,v 1.2 2015/04/21 11:25:02 mrueg Exp $
 
 # Keep the EAPI low here because everything else depends on it.
 # We want to make upgrading simpler.
 
 if [[ ${PV} == "99999999" ]] ; then
 	inherit autotools git-r3
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/${PN}.git"
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
 		http://dev.gentoo.org/~floppym/dist/${P}.tar.bz2"
