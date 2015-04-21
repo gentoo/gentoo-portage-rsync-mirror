@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r2.ebuild,v 1.1 2015/04/20 20:34:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-1.0.4-r2.ebuild,v 1.2 2015/04/21 02:22:53 patrick Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ src_install() {
 #		emake DESTDIR="${D}" install -C src/unikey-gtk || die
 	fi
 #	dobin src/xim/ukxim src/gui/unikey
-	emake DESTDIR="${D}" install 
+	emake DESTDIR="${D}" install
 	doenvd "${FILESDIR}/01x-unikey"
 
 	dodoc AUTHORS CREDITS ChangeLog NEWS README TODO

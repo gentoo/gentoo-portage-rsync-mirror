@@ -2852,7 +2852,6 @@ games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... o
 games-fps/urbanterror:altgamma - Clearskies - X11-based gamma for Linux
 games-fps/urbanterror:pax_kernel - Triggers a paxmarking of the binary
 games-fps/urbanterror:server - Build server target
-games-fps/warsow:angelscript - Enable AngelScript support
 games-fps/warsow:irc - Enable IRC support
 games-fps/warsow:server - Build server binaries additionally
 games-fps/worldofpadman:maps - Install extra maps (PadPack)
