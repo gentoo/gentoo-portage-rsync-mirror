@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mccabe
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.17 2015/04/14 12:50:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mccabe/ChangeLog,v 1.18 2015/04/21 05:02:42 idella4 Exp $
+
+*mccabe-0.3 (21 Apr 2015)
+
+  21 Apr 2015; Ian Delaney <idella4@gentoo.org> +mccabe-0.3.ebuild:
+  bump; tarball missing testsuite file, closes bug #547176 by Coacher
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mccabe-0.2.1.ebuild:
   Stable for ia64, wrt bug #540290
