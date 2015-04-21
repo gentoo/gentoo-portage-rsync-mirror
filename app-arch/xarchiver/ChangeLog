@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/xarchiver
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/ChangeLog,v 1.42 2014/05/11 17:57:05 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/ChangeLog,v 1.43 2015/04/21 04:04:46 calchan Exp $
+
+*xarchiver-0.5.4 (21 Apr 2015)
+
+  21 Apr 2015; Denis Dupeyron <calchan@gentoo.org> +xarchiver-0.5.4.ebuild:
+  Version bump, bug #524688.
 
 *xarchiver-0.5.3 (11 May 2014)
 
