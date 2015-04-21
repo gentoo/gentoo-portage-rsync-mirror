@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/mcomix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.20 2015/04/08 17:58:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/ChangeLog,v 1.21 2015/04/21 05:40:16 rhill Exp $
+
+*mcomix-1.01 (21 Apr 2015)
+
+  21 Apr 2015; Ryan Hill <rhill@gentoo.org> +mcomix-1.01.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> mcomix-1.00-r1.ebuild:
   Drop old Python implementations

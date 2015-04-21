@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.280 2015/03/18 00:06:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.281 2015/04/21 05:54:06 eras Exp $
+
+*bind-tools-9.10.2 (21 Apr 2015)
+
+  21 Apr 2015; Eray Aslan <eras@gentoo.org> +bind-tools-9.10.2.ebuild:
+  Non-maintainer bump.  Add dnssec tools - bug #473400
 
   18 Mar 2015; Mike Gilbert <floppym@gentoo.org> bind-tools-9.10.1_p1.ebuild:
   Pass --with-idnlib=-lidnkit to work around bug 543664.
