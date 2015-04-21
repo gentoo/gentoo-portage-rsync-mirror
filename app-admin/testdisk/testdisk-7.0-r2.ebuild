@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-7.0-r2.ebuild,v 1.1 2015/04/21 03:04:22 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-7.0-r2.ebuild,v 1.2 2015/04/21 16:27:26 nicolasbock Exp $
 
 EAPI=5
 
@@ -13,7 +13,9 @@ SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="jpeg ntfs reiserfs static"
+IUSE="ewf jpeg ntfs reiserfs static qt4"
+
+REQUIRED_USE="static? ( !qt4 )"
 
 # WARNING: reiserfs support does NOT work with reiserfsprogs
 # you MUST use progsreiserfs-0.3.1_rc8 (the last version ever released).
@@ -26,6 +28,7 @@ DEPEND="
 			reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8[static-libs] )
 			>=sys-fs/e2fsprogs-1.35[static-libs]
 			sys-libs/zlib[static-libs]
+			!arm? ( ewf? ( app-forensics/libewf:*[static-libs] ) )
 			)
 		!static? (
 			sys-apps/util-linux
@@ -35,6 +38,8 @@ DEPEND="
 			reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
 			>=sys-fs/e2fsprogs-1.35
 			sys-libs/zlib
+			!arm? ( ewf? ( app-forensics/libewf:* ) )
+			qt4? ( >=dev-qt/qtgui-4.0.1:* )
 			)"
 RDEPEND="!static? ( ${DEPEND} )"
 
@@ -56,11 +61,11 @@ src_configure() {
 	use reiserfs || myconf+=" --without-reiserfs"
 	use ntfs || myconf+=" --without-ntfs --without-ntfs3g"
 	use jpeg || myconf+=" --without-jpeg"
+	use qt4 || myconf+=" --disable-qt"
+	use ewf || myconf+=" --without-ewf"
 
 	econf \
 		--docdir "${ROOT}/usr/share/doc/${P}" \
-		--disable-qt \
-		--without-ewf \
 		--enable-sudo \
 		${myconf}
 

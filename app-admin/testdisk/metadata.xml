@@ -9,6 +9,7 @@
     </maintainer>
 	<use>
 		<flag name='ntfs'>Include the ability to read NTFS filesystems</flag>
-		<flag name='reiserfs'>include reiserfs reading ability</flag>
+		<flag name='reiserfs'>Include reiserfs reading ability</flag>
+		<flag name='ewf'>Include ewf library</flag>
 	</use>
 </pkgmetadata>
