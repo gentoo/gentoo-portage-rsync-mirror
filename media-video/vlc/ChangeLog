@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.950 2015/04/20 17:34:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.951 2015/04/21 06:06:09 idella4 Exp $
+
+  21 Apr 2015; Ian Delaney <idella4@gentoo.org> vlc-2.2.0.ebuild,
+  vlc-2.2.1.ebuild:
+  update subslot to 5-8 in versioned ebuilds -2.2*, noted by floppym, fixes bug
+  #547232 by him, discussed with proxy maintainer
 
   20 Apr 2015; Mike Gilbert <floppym@gentoo.org> vlc-2.2.1.ebuild,
   vlc-9999.ebuild:
