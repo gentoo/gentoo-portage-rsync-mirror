@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.60 2015/04/18 11:14:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.61 2015/04/21 22:25:07 chutzpah Exp $
+
+*salt-2014.7.5 (21 Apr 2015)
+
+  21 Apr 2015; Patrick McLean <chutzpah@gentoo.org>
+  +files/salt-2014.7.5-archive-test.patch, +salt-2014.7.5.ebuild:
+  Version bump.
 
   18 Apr 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Remove unused USEflag desc from metadata.
