@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.172 2015/04/15 15:55:26 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.173 2015/04/21 10:33:02 perfinion Exp $
+
+  21 Apr 2015; Jason Zaman <perfinion@gentoo.org>
+  selinux-base-policy-9999.ebuild:
+  update git urls and migrate git-2 -> git-r3
 
   15 Apr 2015; Jason Zaman <perfinion@gentoo.org>
   selinux-base-policy-2.20141203-r4.ebuild:

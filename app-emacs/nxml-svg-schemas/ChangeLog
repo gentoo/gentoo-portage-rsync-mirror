@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-svg-schemas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/ChangeLog,v 1.5 2014/06/07 11:27:51 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/ChangeLog,v 1.6 2015/04/21 10:56:35 nimiux Exp $
+
+  21 Apr 2015; Chema Alonso <nimiux@gentoo.org>
+  nxml-svg-schemas-1.1.20081123.ebuild:
+  Stable for amd64 wrt bug #538014
 
   07 Jun 2014; Ulrich Müller <ulm@gentoo.org>
   nxml-svg-schemas-1.1.20081123.ebuild:

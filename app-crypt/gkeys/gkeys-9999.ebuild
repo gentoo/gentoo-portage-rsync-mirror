@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-9999.ebuild,v 1.6 2015/01/09 22:31:56 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys/gkeys-9999.ebuild,v 1.7 2015/04/21 10:58:38 mrueg Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ EGIT_BRANCH="master"
 
 inherit distutils-r1 git-r3
 
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/gentoo-keys.git"
+EGIT_REPO_URI="git://anongit.gentoo.org/proj/gentoo-keys.git"
 
 DESCRIPTION="An OpenPGP/GPG key management tool and python libs"
 HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Gentoo-keys"

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gkeys-gen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/ChangeLog,v 1.8 2015/02/05 14:26:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gkeys-gen/ChangeLog,v 1.9 2015/04/21 10:59:51 mrueg Exp $
+
+  21 Apr 2015; Manuel Rüger <mrueg@gentoo.org> gkeys-gen-9999.ebuild:
+  Fix EGIT_REPO_URI.
 
   05 Feb 2015; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove invalid herd reference.

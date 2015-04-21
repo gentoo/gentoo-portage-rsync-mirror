@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/nxml-svg-schemas-1.1.20081123.ebuild,v 1.5 2014/06/07 11:27:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-svg-schemas/nxml-svg-schemas-1.1.20081123.ebuild,v 1.6 2015/04/21 10:56:35 nimiux Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ LICENSE="HPND"
 # install this one anyway because the schemas.xml syntax is not
 # sophisticated enough.
 SLOT="1.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 # Yes this requires Java, but I'd rather not repackage this, if you
 # know something better in C, I'll be glad to use that.
