@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.219 2015/04/20 21:27:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.220 2015/04/21 04:43:29 jer Exp $
+
+  21 Apr 2015; Jeroen Roovers <jer@gentoo.org> stunnel-5.14.ebuild:
+  Stable for HPPA (bug #546908).
 
 *stunnel-5.16 (20 Apr 2015)
 

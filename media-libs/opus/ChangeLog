@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.38 2015/04/19 06:32:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.39 2015/04/21 04:41:29 jer Exp $
+
+  21 Apr 2015; Jeroen Roovers <jer@gentoo.org> opus-1.1.ebuild:
+  Stable for HPPA (bug #500868).
 
   19 Apr 2015; Ben de Groot <yngwin@gentoo.org> -opus-1.0.1.ebuild,
   -opus-1.0.2-r1.ebuild, -opus-1.0.2.ebuild, -opus-1.0.3.ebuild, metadata.xml:

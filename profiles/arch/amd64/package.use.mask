@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.197 2015/03/28 22:11:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.198 2015/04/21 04:33:18 mr_bones_ Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,11 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (21 Apr 2015)
+# None of the fusionsound deps support multilib currently, maybe later.
+# Hiding the use flag fixes bug #545662 for now.
+media-libs/libsdl2 fusionsound
 
 # Michał Górny <mgorny@gentoo.org> (14 Sep 2014)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
