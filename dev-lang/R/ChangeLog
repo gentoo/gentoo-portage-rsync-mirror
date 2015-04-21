@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.243 2015/04/07 14:09:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.244 2015/04/21 21:17:14 calchan Exp $
+
+*R-3.2.0 (21 Apr 2015)
+
+  21 Apr 2015; Denis Dupeyron <calchan@gentoo.org> +R-3.2.0.ebuild:
+  Version bump, bug #547050.
 
   07 Apr 2015; Justin Lecher <jlec@gentoo.org> R-3.0.1.ebuild:
   Fix Slot operators
