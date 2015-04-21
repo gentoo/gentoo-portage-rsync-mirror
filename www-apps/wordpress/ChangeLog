@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.167 2015/04/21 17:43:30 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.168 2015/04/21 18:22:46 sping Exp $
+
+*wordpress-4.1.2-r1 (21 Apr 2015)
+
+  21 Apr 2015; Sebastian Pipping <sping@gentoo.org> +wordpress-4.1.2-r1.ebuild,
+  metadata.xml:
+  Guard installation of Akismet and Hello Dolly plug-ins behind use flags (bug
+  #544984) with Akismet enabled by default to smooth transition (only); update
+  license from GPLv2 to GPLv2+
 
 *wordpress-4.1.2 (21 Apr 2015)
 
