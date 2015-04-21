@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uconv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.34 2015/04/21 17:49:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.35 2015/04/21 20:46:24 mrueg Exp $
+
+  21 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -uconv-0.6.1.ebuild:
+  Remove old.
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> uconv-0.6.1-r1.ebuild:
   x86 stable wrt bug #545460

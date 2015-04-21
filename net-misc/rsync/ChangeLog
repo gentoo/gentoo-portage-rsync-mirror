@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.261 2015/03/16 04:52:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.262 2015/04/21 20:36:36 jer Exp $
+
+  21 Apr 2015; Jeroen Roovers <jer@gentoo.org> rsync-3.1.1.ebuild:
+  Stable for PPC64 (bug #540000).
 
   16 Mar 2015; Mike Frysinger <vapier@gentoo.org> rsync-3.1.1.ebuild:
   Mark arm64/ia64/m68k/s390/sh stable.
