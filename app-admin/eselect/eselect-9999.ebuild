@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.17 2015/04/01 00:55:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.18 2015/04/21 11:36:34 mrueg Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/eselect.git"
+EGIT_REPO_URI="git://anongit.gentoo.org/proj/eselect.git"
 
 inherit autotools git-r3 bash-completion-r1
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/python-updater
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.95 2014/04/07 14:12:34 floppym Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.96 2015/04/21 11:34:00 mrueg Exp $
+
+  21 Apr 2015; Manuel Rüger <mrueg@gentoo.org> python-updater-0.11.ebuild,
+  python-updater-0.12.ebuild, python-updater-0.13.ebuild,
+  python-updater-9999.ebuild:
+  Fix EGIT_REPO_URI.
 
 *python-updater-0.13 (07 Apr 2014)
 

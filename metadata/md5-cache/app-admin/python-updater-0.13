@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/gentoo-functions || ( >=sys-apps/portage-2.1.6 >=sys-apps/paludis-0.56.0 sys-apps/pkgcore )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~floppym/dist/python-updater-0.13.tar.bz2
-_md5_=4a680d5b9ebfec387d46e68ee003c52d
+_md5_=5fcd0f2f016f941301240939b5c7d33a
