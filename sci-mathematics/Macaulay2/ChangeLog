@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.35 2015/04/08 18:23:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.36 2015/04/21 17:40:45 pacho Exp $
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> Macaulay2-1.7_pre.ebuild:
+  x86 stable wrt bug #542572
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> Macaulay2-1.7_pre.ebuild:
   Drop old Python implementations

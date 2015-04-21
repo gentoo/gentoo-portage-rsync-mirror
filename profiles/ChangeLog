@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9949 2015/04/20 20:31:49 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9950 2015/04/21 17:31:51 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Apr 2015; Pacho Ramos <pacho@gentoo.org> targets/systemd/package.mask:
+  Mask other udev providers apart of systemd for systemd subprofiles to help
+  portage to not try to pull in wrong provider leading to strange blockers
 
   20 Apr 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
   Unmask Java 8. This is long overdue and it's looking good now.
