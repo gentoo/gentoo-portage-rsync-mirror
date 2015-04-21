@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/googlecl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/googlecl/ChangeLog,v 1.13 2013/02/21 15:07:40 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/googlecl/ChangeLog,v 1.14 2015/04/21 00:57:56 mrueg Exp $
+
+  21 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -googlecl-0.9.11.ebuild,
+  -googlecl-0.9.12-r1.ebuild, -googlecl-0.9.12.ebuild, -googlecl-0.9.13.ebuild:
+  Remove old.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> googlecl-0.9.14.ebuild:
   Add ~arm-linux and ~x86-linux keywords.

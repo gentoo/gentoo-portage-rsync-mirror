@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.13 2015/03/28 21:25:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pssh/ChangeLog,v 1.14 2015/04/21 00:55:01 mrueg Exp $
+
+  21 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -pssh-2.1.1.ebuild:
+  Remove old.
 
   28 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pssh-2.3.1-r1.ebuild:
   Stable for ppc, wrt bug #542592
