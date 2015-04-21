@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/xarchiver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/ChangeLog,v 1.43 2015/04/21 04:04:46 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xarchiver/ChangeLog,v 1.44 2015/04/21 14:01:01 calchan Exp $
+
+  21 Apr 2015; Denis Dupeyron <calchan@gentoo.org> -xarchiver-0.5.3.ebuild,
+  -xarchiver-0.5.3-r1.ebuild, -files/xarchiver-0.5.3-fix-double-escaping.patch,
+  -files/xarchiver-0.5.3-rar5-whitespace.patch:
+  Cleanup.
 
 *xarchiver-0.5.4 (21 Apr 2015)
 

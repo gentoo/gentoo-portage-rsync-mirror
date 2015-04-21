@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.281 2015/04/21 05:54:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.282 2015/04/21 13:55:53 floppym Exp $
+
+  21 Apr 2015; Mike Gilbert <floppym@gentoo.org> bind-tools-9.10.2.ebuild:
+  Add blocker on <net-dns/bind-9.10.2 so that portage does not complain about
+  file collisions.
 
 *bind-tools-9.10.2 (21 Apr 2015)
 
