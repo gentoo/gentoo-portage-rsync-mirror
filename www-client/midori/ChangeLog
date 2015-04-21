@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.130 2015/01/03 15:06:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.131 2015/04/21 14:09:22 calchan Exp $
+
+  21 Apr 2015; Denis Dupeyron <calchan@gentoo.org> -midori-0.5.5.ebuild:
+  Remove midori-0.5.5 because it depends on old and no longer maintained (by
+  upstream) vala-0.20. Bug #536594.
 
   03 Jan 2015; Michał Górny <mgorny@gentoo.org> midori-0.5.5.ebuild,
   midori-0.5.8-r1.ebuild, midori-0.5.8.ebuild:
