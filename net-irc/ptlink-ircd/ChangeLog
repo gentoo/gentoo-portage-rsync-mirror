@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ptlink-ircd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.17 2015/03/21 13:55:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.18 2015/04/21 09:08:59 jlec Exp $
+
+  21 Apr 2015; Justin Lecher <jlec@gentoo.org> -ptlink-ircd-6.19.6-r1.ebuild,
+  metadata.xml:
+  Drop old
 
 *ptlink-ircd-6.19.6-r2 (21 Mar 2015)
 

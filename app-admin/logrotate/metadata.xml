@@ -20,6 +20,7 @@
 	</longdescription>
 	<use>
 		<flag name="acl">Installs acl support</flag>
+		<flag name="cron">Installs cron file</flag>
 		<flag name="selinux">Installs Security Enhanced Linux support</flag>
 	</use>
 </pkgmetadata>
