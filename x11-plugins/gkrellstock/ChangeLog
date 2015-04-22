@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellstock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/ChangeLog,v 1.20 2015/04/21 19:08:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/ChangeLog,v 1.21 2015/04/22 06:50:46 jlec Exp $
+
+  22 Apr 2015; Justin Lecher <jlec@gentoo.org> -gkrellstock-0.5.ebuild:
+  Drop old
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> gkrellstock-0.5-r1.ebuild:
   ppc stable wrt bug #543926

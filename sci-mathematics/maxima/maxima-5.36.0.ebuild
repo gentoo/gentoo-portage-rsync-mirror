@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.36.0.ebuild,v 1.1 2015/04/16 14:25:34 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.36.0.ebuild,v 1.2 2015/04/22 06:55:34 jlec Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ done
 
 RDEPEND="X? ( x11-misc/xdg-utils
 		 sci-visualization/gnuplot[gd]
-		 tk? ( dev-lang/tk ) )
+		 tk? ( dev-lang/tk:0 ) )
 	latex? ( virtual/latex-base )
 	emacs? ( virtual/emacs
 		latex? ( app-emacs/auctex ) )

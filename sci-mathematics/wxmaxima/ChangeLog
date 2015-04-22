@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/wxmaxima
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.48 2015/04/21 19:24:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/ChangeLog,v 1.49 2015/04/22 06:57:11 jlec Exp $
+
+  22 Apr 2015; Justin Lecher <jlec@gentoo.org> -wxmaxima-0.8.2.ebuild,
+  -wxmaxima-12.01.0.ebuild, -wxmaxima-12.04.0.ebuild, -wxmaxima-12.09.0.ebuild,
+  -wxmaxima-14.12.0.ebuild:
+  Drop old
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> wxmaxima-13.04.2.ebuild:
   ppc stable wrt bug #406779

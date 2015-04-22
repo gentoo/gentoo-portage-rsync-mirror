@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<longdescription lang="en">
+  <longdescription lang="en">
 		LAMMPS is a classical molecular dynamics code, and an acronym for
 		Large-scale Atomic/Molecular Massively Parallel Simulator.
 
@@ -15,14 +15,13 @@
 		techniques and a spatial-decomposition of the simulation domain. The
 		code is designed to be easy to modify or extend with new functionality. 
 	</longdescription>
-	<use>
-		<flag name="lammps-memalign">Enables the use of the posix_memalign()
+  <use>
+    <flag name="lammps-memalign">Enables the use of the posix_memalign()
 			call instead of malloc() when large chunks or memory are allocated
 			by LAMMPS</flag>
-	</use>
-	<herd>sci-physics</herd>
-	<maintainer>
-		<email>nicolasbock@gentoo.org</email>
-	</maintainer>
+  </use>
+  <herd>sci-physics</herd>
+  <maintainer>
+    <email>nicolasbock@gentoo.org</email>
+  </maintainer>
 </pkgmetadata>
-

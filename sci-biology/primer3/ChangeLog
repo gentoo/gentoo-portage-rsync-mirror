@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/primer3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.45 2015/04/21 19:22:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.46 2015/04/22 06:51:36 jlec Exp $
+
+  22 Apr 2015; Justin Lecher <jlec@gentoo.org> -primer3-2.3.1.ebuild:
+  Drop old
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> primer3-2.3.5.ebuild:
   ppc stable wrt bug #544908
