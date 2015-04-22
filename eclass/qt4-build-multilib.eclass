@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.9 2015/04/01 18:45:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.10 2015/04/22 20:23:47 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -198,7 +198,7 @@ qt4-build-multilib_src_prepare() {
 		configure || die "sed SYSTEM_VARIABLES failed"
 
 	# Reset QMAKE_*FLAGS_{RELEASE,DEBUG} variables,
-	# or they will override user's flags (.qmake.cache)
+	# or they will override the user's flags (via .qmake.cache)
 	sed -i -e '/^SYSTEM_VARIABLES=/ i \
 		QMakeVar set QMAKE_CFLAGS_RELEASE\
 		QMakeVar set QMAKE_CFLAGS_DEBUG\
@@ -215,8 +215,12 @@ qt4-build-multilib_src_prepare() {
 			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
 		|| die "sed config.tests failed"
 
-	# Bug 172219
-	sed -e 's:/X11R6/:/:' -i mkspecs/$(qt4_get_mkspec)/qmake.conf || die
+	# Delete references to the obsolete /usr/X11R6 directory
+	# On prefix, this also prevents looking at non-prefix stuff
+	sed -i -re '/^QMAKE_(LIB|INC)DIR(_X11|_OPENGL|)\s+/ s/=.*/=/' \
+		mkspecs/common/linux.conf \
+		mkspecs/$(qt4_get_mkspec)/qmake.conf \
+		|| die "sed QMAKE_(LIB|INC)DIR failed"
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS and remove -arch, since our gcc-apple is multilib crippled (by design)
@@ -254,22 +258,10 @@ qt4-build-multilib_src_prepare() {
 		fi
 	fi
 
-	# this is needed for all systems with a separate -liconv, except
-	# Darwin, for which the sources already cater for -liconv
-	if use !elibc_glibc && [[ ${CHOST} != *-darwin* ]]; then
-		sed -e 's|mac:\(LIBS += -liconv\)|\1|g' \
-			-i config.tests/unix/iconv/iconv.pro \
-			|| die "sed iconv.pro failed"
+	if [[ ${CHOST} == *-solaris* ]]; then
+		sed -i -e '/^QMAKE_LFLAGS_THREAD/a QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
+			mkspecs/$(qt4_get_mkspec)/qmake.conf || die
 	fi
-
-	# we need some patches for Solaris
-	sed -i -e '/^QMAKE_LFLAGS_THREAD/a\QMAKE_LFLAGS_DYNAMIC_LIST = -Wl,--dynamic-list,' \
-		mkspecs/$(qt4_get_mkspec)/qmake.conf || die
-	# use GCC over SunStudio
-	sed -i -e '/PLATFORM=solaris-cc/s/cc/g++/' configure || die
-	# do not flirt with non-Prefix stuff, we're quite possessive
-	sed -i -e '/^QMAKE_\(LIB\|INC\)DIR\(_X11\|_OPENGL\|\)\t/s/=.*$/=/' \
-		mkspecs/$(qt4_get_mkspec)/qmake.conf || die
 
 	# apply patches
 	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"

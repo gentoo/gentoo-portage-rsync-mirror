@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1591 2015/04/21 11:19:10 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1592 2015/04/22 20:23:47 pesa Exp $
+
+  22 Apr 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  Sync with qt overlay: cleanup prefix-related patching and fix bug #542780.
 
   21 Apr 2015; Jason Zaman <perfinion@gentoo.org> selinux-policy-2.eclass:
   update git urls and migrate git-2 -> git-r3

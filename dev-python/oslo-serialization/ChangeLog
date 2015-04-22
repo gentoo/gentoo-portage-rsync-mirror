@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/oslo-serialization
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-serialization/ChangeLog,v 1.6 2015/03/11 05:17:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-serialization/ChangeLog,v 1.7 2015/04/22 20:04:44 prometheanfire Exp $
+
+*oslo-serialization-1.5.0 (22 Apr 2015)
+
+  22 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +oslo-serialization-1.5.0.ebuild:
+  bup
 
 *oslo-serialization-1.4.0 (11 Mar 2015)
 
