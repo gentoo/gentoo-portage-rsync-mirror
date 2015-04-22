@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.284 2015/04/13 08:22:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.285 2015/04/22 14:33:43 mgorny Exp $
+
+*shorewall-4.6.8.1 (22 Apr 2015)
+
+  22 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +files/4.6/shorewall-init.systemd-r1, +files/4.6/shorewall-lite.systemd-r1,
+  +files/4.6/shorewall.systemd-r1, +files/4.6/shorewall6-lite.systemd-r1,
+  +files/4.6/shorewall6.systemd-r1, +shorewall-4.6.8.1.ebuild,
+  -shorewall-4.6.5.3.ebuild, -shorewall-4.6.6.1.ebuild:
+  Version bump, drop old. https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/101 by Whissi.
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> shorewall-4.6.6.2.ebuild:
   Stable for alpha, wrt bug #543450

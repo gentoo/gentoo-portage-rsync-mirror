@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-pimp/git-pimp-0.7.ebuild,v 1.1 2015/04/22 13:58:50 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-pimp/git-pimp-0.7-r1.ebuild,v 1.1 2015/04/22 14:43:57 yac Exp $
 
 EAPI=5
 inherit eutils
@@ -20,7 +20,7 @@ DEPEND=""
 RDEPEND="
 	dev-vcs/git
 	app-shells/zsh
-	net-mail/git-mailz
+	dev-vcs/git-mailz
 	dev-vcs/git-mantle
 "
 

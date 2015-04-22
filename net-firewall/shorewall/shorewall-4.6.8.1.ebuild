@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.6.5.3.ebuild,v 1.1 2015/01/04 09:49:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-4.6.8.1.ebuild,v 1.1 2015/04/22 14:33:43 mgorny Exp $
 
 EAPI="5"
 
@@ -11,7 +11,6 @@ DESCRIPTION+=' a high-level tool for configuring Netfilter'
 HOMEPAGE="http://www.shorewall.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc +init +ipv4 ipv6 lite4 lite6"
 
 MY_PV=${PV/_rc/-RC}
@@ -57,7 +56,6 @@ MY_P_DOCS=${MY_PN_DOCS/#S/s}-${MY_PV}
 MY_URL_PREFIX=
 MY_URL_SUFFIX=
 if [[ ${MY_PV} = *-Beta* ]] || [[ ${MY_PV} = *-RC* ]]; then
-	KEYWORDS=""
 	MY_URL_PREFIX='development/'
 
 	_tmp_last_index=$(($(get_last_version_component_index ${MY_PV})+1))
@@ -69,6 +67,8 @@ if [[ ${MY_PV} = *-Beta* ]] || [[ ${MY_PV} = *-RC* ]]; then
 	# Cleaning up temporary variables
 	unset _tmp_last_index
 	unset _tmp_suffix
+else
+	KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 fi
 
 SRC_URI="
@@ -145,6 +145,13 @@ pkg_pretend() {
 	check_extra_config
 }
 
+pkg_setup() {
+	if [ -n "${DIGEST}" ]; then
+		einfo "Unsetting environment variable \"DIGEST\" to prevent conflicts with package's \"install.sh\" script ..."
+		unset DIGEST
+	fi
+}
+
 src_prepare() {
 	# We are moving each unpacked source from MY_P_* to MY_PN_*.
 	# This allows us to use patches from upstream and keeps epatch_user working
@@ -166,7 +173,7 @@ src_prepare() {
 		ln -s ../shorewallrc.gentoo ${MY_PN_IPV4}/shorewallrc.gentoo || die "Failed to symlink shorewallrc.gentoo"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall.confd "${S}"/${MY_PN_IPV4}/default.gentoo || die "Copying shorewall.confd failed"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall.initd "${S}"/${MY_PN_IPV4}/init.gentoo.sh || die "Copying shorewall.initd failed"
-		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall.systemd "${S}"/${MY_PN_IPV4}/gentoo.service || die "Copying shorewall.systemd failed"
+		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall.systemd-r1 "${S}"/${MY_PN_IPV4}/gentoo.service || die "Copying shorewall.systemd failed"
 		eend 0
 	fi
 
@@ -177,7 +184,7 @@ src_prepare() {
 		ln -s ../shorewallrc.gentoo ${MY_PN_IPV6}/shorewallrc.gentoo || die "Failed to symlink shorewallrc.gentoo"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6.confd "${S}"/${MY_PN_IPV6}/default.gentoo || die "Copying shorewall6.confd failed"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6.initd "${S}"/${MY_PN_IPV6}/init.gentoo.sh || die "Copying shorewall6.initd failed"
-		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6.systemd "${S}"/${MY_PN_IPV6}/gentoo.service || die "Copying shorewall6.systemd failed"
+		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6.systemd-r1 "${S}"/${MY_PN_IPV6}/gentoo.service || die "Copying shorewall6.systemd failed"
 		eend 0
 	fi
 
@@ -188,7 +195,7 @@ src_prepare() {
 		ln -s ../shorewallrc.gentoo ${MY_PN_LITE4}/shorewallrc.gentoo || die "Failed to symlink shorewallrc.gentoo"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-lite.confd "${S}"/${MY_PN_LITE4}/default.gentoo || die "Copying shorewall-lite.confd failed"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-lite.initd "${S}"/${MY_PN_LITE4}/init.gentoo.sh || die "Copying shorewall-lite.initd failed"
-		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-lite.systemd "${S}"/${MY_PN_LITE4}/gentoo.service || die "Copying shorewall-lite.systemd failed"
+		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-lite.systemd-r1 "${S}"/${MY_PN_LITE4}/gentoo.service || die "Copying shorewall-lite.systemd failed"
 		eend 0
 	fi
 
@@ -199,7 +206,7 @@ src_prepare() {
 		ln -s ../shorewallrc.gentoo ${MY_PN_LITE6}/shorewallrc.gentoo || die "Failed to symlink shorewallrc.gentoo"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6-lite.confd "${S}"/${MY_PN_LITE6}/default.gentoo || die "Copying shorewall6-lite.confd failed"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6-lite.initd "${S}"/${MY_PN_LITE6}/init.gentoo.sh || die "Copying shorewall6-lite.initd failed"
-		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6-lite.systemd "${S}"/${MY_PN_LITE6}/gentoo.service || die "Copying shorewall6-lite.systemd failed"
+		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall6-lite.systemd-r1 "${S}"/${MY_PN_LITE6}/gentoo.service || die "Copying shorewall6-lite.systemd failed"
 		eend 0
 	fi
 
@@ -210,7 +217,7 @@ src_prepare() {
 		ln -s ../shorewallrc.gentoo ${MY_PN_INIT}/shorewallrc.gentoo || die "Failed to symlink shorewallrc.gentoo"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-init.confd "${S}"/${MY_PN_INIT}/default.gentoo || die "Copying shorewall-init.confd failed"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-init.initd "${S}"/${MY_PN_INIT}/init.gentoo.sh || die "Copying shorewall-init.initd failed"
-		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-init.systemd "${S}"/${MY_PN_INIT}/gentoo.service || die "Copying shorewall-init.systemd failed"
+		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-init.systemd-r1 "${S}"/${MY_PN_INIT}/gentoo.service || die "Copying shorewall-init.systemd failed"
 		cp "${FILESDIR}"/${MY_MAJOR_RELEASE_NUMBER}/shorewall-init.readme "${S}"/${MY_PN_INIT}/shorewall-init.README.Gentoo.txt || die "Copying shorewall-init.systemd failed"
 		eend 0
 

@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.91 2015/03/22 14:31:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.92 2015/04/22 14:54:07 calchan Exp $
+
+  22 Apr 2015; Denis Dupeyron <calchan@gentoo.org>
+  -xfce4-power-manager-1.4.0.ebuild, -xfce4-power-manager-1.4.2.ebuild,
+  -xfce4-power-manager-1.4.3.ebuild,
+  -files/xfce4-power-manager-1.4.0-fix-handle-lid-switch.patch:
+  Cleanup. Make sure to keep xfce4-power-manager-1.4.1 as long as bug #531694
+  is not resolved upstream.
 
 *xfce4-power-manager-1.4.4 (22 Mar 2015)
 
