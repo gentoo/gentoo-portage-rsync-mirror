@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtnetwork
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.13 2015/04/15 03:48:13 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.14 2015/04/22 16:22:56 kensington Exp $
+
+  22 Apr 2015; Michael Palimaka <kensington@gentoo.org> qtnetwork-5.4.1.ebuild:
+  Introduce bindist USE flag to better handle OpenSSL EC support wrt bug
+  #546828.
 
   15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtnetwork-5.4.1.ebuild:
   keyword arm64, tested on cortex-a53 hardware
