@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.14.38.ebuild,v 1.1 2015/04/14 10:35:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.14.38.ebuild,v 1.2 2015/04/22 06:28:22 jlec Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ SRC_URI="
 	!vanilla? ( ${GENPATCHES_URI} )
 	"
 
-PDEPEND=">=sys-fs/aufs-util-3.9"
+PDEPEND="=sys-fs/aufs-util-3*"
 
 README_GENTOO_SUFFIX="-r1"
 
