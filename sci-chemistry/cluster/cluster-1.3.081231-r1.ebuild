@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cluster/cluster-1.3.081231-r1.ebuild,v 1.1 2012/06/07 15:03:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cluster/cluster-1.3.081231-r1.ebuild,v 1.2 2015/04/22 09:39:23 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs
 

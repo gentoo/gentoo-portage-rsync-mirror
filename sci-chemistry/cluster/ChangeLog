@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/cluster
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cluster/ChangeLog,v 1.6 2012/06/13 07:58:36 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cluster/ChangeLog,v 1.7 2015/04/22 09:39:23 jlec Exp $
+
+  22 Apr 2015; Justin Lecher <jlec@gentoo.org> cluster-1.3.081231-r1.ebuild,
+  metadata.xml:
+  Bump EAPI
 
   13 Jun 2012; Jeff Horelick <jdhore@gentoo.org> cluster-1.3.081231.ebuild:
   marked x86 per bug 419861
@@ -26,4 +30,3 @@
   +files/1.3.081231-includes.patch, +files/1.3.081231-ldflags.patch,
   +cluster-1.3.081231.ebuild, +metadata.xml:
   New Addition
-
