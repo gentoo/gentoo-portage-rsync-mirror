@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.3_p1100.ebuild,v 1.4 2015/04/22 22:27:05 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.4_p1201.ebuild,v 1.1 2015/04/22 22:27:05 monsieurp Exp $
 
 EAPI="5"
 
@@ -29,7 +29,8 @@ DEPEND="
 	)
 	test? (
 		dev-java/ant-junit
-		dev-db/postgresql[server]
+		dev-java/junit:4
+		>=dev-db/postgresql-9.3[server]
 	)"
 RDEPEND=">=virtual/jre-1.6"
 
@@ -37,12 +38,32 @@ S="${WORKDIR}/postgresql-jdbc-${MY_PV}.src"
 
 java_prepare() {
 	find -name "*.class" -type f -exec rm -v {} + || die
+
+	# Strip build.xml of maven deps
+	sed -i -e '/<classpath.*dependency\.compile\.classpath/c\' build.xml || die
+	sed -i -e '/<classpath.*dependency\.runtime\.classpath/c\' build.xml || die
+	sed -i -e '/<classpath.*dependency\.test\.classpath/c\' build.xml || die
+	sed -i -e '/<target name="artifact-version"/,/<[/]target>/{s/depends="maven-dependencies"//}' build.xml || die
+	sed -i -e '/<target name="compile"/ s/,maven-dependencies//' build.xml || die
+
+	# Remove SSPI, it pulls in Waffle-JNA and is only used on Windows
+	sed -i -e '/<include.*sspi/c\' build.xml || die
+	rm -vrf org/postgresql/sspi || die "Error removing sspi"
+	epatch "${FILESDIR}"/${P}-remove-sspi.patch
+
+	# FIXME @someone who cares: enable through osgi flag?
+	sed -i -e '/<include.*osgi/c\' build.xml || die
+	sed -i -e '/<test.*osgi/c\' build.xml || die
+	rm -vrf org/postgresql/osgi || die "Error removing osgi"
+	rm -vrf org/postgresql/test/osgi || die "Error removing osgi tests"
+	epatch "${FILESDIR}"/${P}-remove-osgi.patch
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
 EANT_DOC_TARGET="publicapi"
 
 src_compile() {
+	EANT_BUILD_TARGET="release-version jar"
 	java-pkg-2_src_compile
 
 	# There is a task that creates this doc but I didn't find a way how to use system catalog
@@ -57,18 +78,18 @@ src_compile() {
 src_test() {
 	einfo "In order to run the tests successfully, you have to have:"
 	einfo "1) PostgreSQL server running"
-	einfo "2) database 'test' defined with user 'test' with password 'password'"
+	einfo "2) database 'test' defined with user 'test' with password 'test'"
 	einfo "   as owner of the database"
 	einfo "3) plpgsql support in the 'test' database"
 	einfo
 	einfo "You can find a general info on how to perform these steps at"
 	einfo "https://wiki.gentoo.org/wiki/PostgreSQL"
 
-	ANT_TASKS="ant-junit" eant test -Dgentoo.classpath=$(java-pkg_getjars --build-only junit)
+	ANT_TASKS="ant-junit" eant test -Dgentoo.classpath=$(java-pkg_getjars --build-only junit-4)
 }
 
 src_install() {
-	java-pkg_newjar jars/postgresql.jar jdbc-postgresql.jar
+	java-pkg_newjar build/jars/postgresql*.jar jdbc-postgresql.jar
 
 	if use doc ; then
 		java-pkg_dojavadoc build/publicapi

@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jdbc-postgresql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.56 2014/12/28 15:24:21 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.57 2015/04/22 22:27:05 monsieurp Exp $
+
+*jdbc-postgresql-9.4_p1201 (22 Apr 2015)
+
+  22 Apr 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/jdbc-postgresql-9.4_p1201-remove-osgi.patch,
+  +files/jdbc-postgresql-9.4_p1201-remove-sspi.patch,
+  +jdbc-postgresql-9.4_p1201.ebuild, jdbc-postgresql-9.3_p1100.ebuild:
+  Version bump courtesy of Andreas Sturmlechner
+  <andreas.sturmlechner@gmail.com>. Fix bug 545004.
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   jdbc-postgresql-8.3_p603.ebuild, jdbc-postgresql-8.4_p701-r1.ebuild,

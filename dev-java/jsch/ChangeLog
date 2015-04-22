@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jsch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.88 2015/04/21 19:06:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.89 2015/04/22 22:01:13 monsieurp Exp $
+
+*jsch-0.1.52 (22 Apr 2015)
+
+  22 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +jsch-0.1.52.ebuild:
+  Version bump courtesy of William L. Thomson Jr. <wlt@obsidian-studios.com>.
+  Fix bug 546200.
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> jsch-0.1.49.ebuild:
   ppc stable wrt bug #518940
