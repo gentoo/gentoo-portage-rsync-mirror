@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/python-glanceclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.15 2015/04/05 02:21:15 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.16 2015/04/22 21:19:50 prometheanfire Exp $
+
+*python-glanceclient-0.17.1 (22 Apr 2015)
+*python-glanceclient-0.18.0 (22 Apr 2015)
+
+  22 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +python-glanceclient-0.17.1.ebuild, +python-glanceclient-0.18.0.ebuild:
+  double bup
 
 *python-glanceclient-0.17.0 (05 Apr 2015)
 

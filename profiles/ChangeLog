@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9950 2015/04/21 17:31:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9951 2015/04/22 21:14:29 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Apr 2015; Mike Gilbert <floppym@gentoo.org> targets/systemd/package.mask,
+  +targets/systemd/package.use.force:
+  Force systemd for udev virtuals, bug 547360.
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> targets/systemd/package.mask:
   Mask other udev providers apart of systemd for systemd subprofiles to help
