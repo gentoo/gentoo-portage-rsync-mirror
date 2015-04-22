@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.29 2015/04/08 08:05:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.30 2015/04/22 19:39:46 prometheanfire Exp $
+
+*stevedore-1.4.0 (22 Apr 2015)
+
+  22 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +stevedore-1.4.0.ebuild:
+  bup
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> stevedore-0.15.ebuild:
   Drop old Python implementations
