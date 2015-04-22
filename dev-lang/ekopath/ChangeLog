@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.23 2015/02/28 21:55:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.24 2015/04/22 12:44:23 mgorny Exp $
+
+*ekopath-6.0.334_p20150421 (22 Apr 2015)
+
+  22 Apr 2015; Michał Górny <mgorny@gentoo.org>
+  +ekopath-6.0.334_p20150421.ebuild, metadata.xml:
+  Version bump. Upstream fixed a few irritating bugs, including the sandbox
+  violations and lack of AMD k8 support. Cleaned up the ebuild a bit, added
+  RESTRICT=bindist per bug #536262.
 
 *ekopath-5.0.5_pre20150226 (28 Feb 2015)
 
