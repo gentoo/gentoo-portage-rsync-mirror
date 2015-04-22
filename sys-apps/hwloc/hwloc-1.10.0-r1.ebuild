@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.10.0-r1.ebuild,v 1.2 2015/01/05 17:56:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.10.0-r1.ebuild,v 1.3 2015/04/22 15:30:39 jsbronder Exp $
 
 EAPI=5
 
@@ -69,4 +69,9 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install
+
+	# Fixed by upstream, but it seems overkill to require an autoregen for what
+	# is just a sed fix.
+	# https://github.com/open-mpi/hwloc/commit/6d42748f8604f3c1d0ca6cf122e8776b3c153ac4?diff=unified
+	sed -i 's|bindir/lstopo/|bindir/|' "${ED}"/usr/bin/hwloc-gather-topology || die
 }

@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.50 2015/02/20 15:26:40 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.51 2015/04/22 15:30:39 jsbronder Exp $
+
+  22 Apr 2015; Justin Bronder <jsbronder@gentoo.org> hwloc-1.10.0-r1.ebuild,
+  hwloc-1.10.1.ebuild,
+  +files/hwloc-gather-topology-fix-lstopo-path-after-install.patch:
+  Backport upstream hwloc-gather-topology fix (6d42748). Resolves #547366
 
 *hwloc-1.10.1 (20 Feb 2015)
 

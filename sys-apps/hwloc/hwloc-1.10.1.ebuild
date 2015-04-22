@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.10.1.ebuild,v 1.1 2015/02/20 15:26:40 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.10.1.ebuild,v 1.2 2015/04/22 15:30:39 jsbronder Exp $
 
 EAPI=5
 
@@ -37,7 +37,10 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS NEWS README VERSION )
 
-PATCHES=( "${FILESDIR}/${PN}-1.8.1-gl.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-1.8.1-gl.patch"
+	"${FILESDIR}/hwloc-gather-topology-fix-lstopo-path-after-install.patch"
+)
 AUTOTOOLS_AUTORECONF=1
 
 src_prepare() {
