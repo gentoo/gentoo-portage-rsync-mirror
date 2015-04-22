@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sbt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sbt/ChangeLog,v 1.1 2015/04/19 05:55:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sbt/ChangeLog,v 1.2 2015/04/22 16:47:18 monsieurp Exp $
+
+  22 Apr 2015; Patrice Clement <monsieurp@gentoo.org> sbt-0.13.8.ebuild:
+  Recalculate Manifest file due to a checksum mismatch with sbt-
+  launch-0.13.7.jar.
 
 *sbt-0.13.8 (19 Apr 2015)
 

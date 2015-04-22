@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sbt/sbt-0.13.8.ebuild,v 1.1 2015/04/19 05:55:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sbt/sbt-0.13.8.ebuild,v 1.2 2015/04/22 16:47:18 monsieurp Exp $
 
 EAPI="5"
 
@@ -104,6 +104,7 @@ java_prepare() {
 		# Something like:
 		# tar --owner=portage --group=portage -cjf sbt-0.13.8-test-deps.tar.bz2 <list of files as described above>
 		# 7. Undo the earlier temporary edits to the ebuild.
+
 		mkdir "${WORKDIR}/${B_P}" || die
 		cp -p "${DISTDIR}/${BL_P}.jar" "${WORKDIR}/${B_P}/${L_PN}.jar" || die
 		cat <<- EOF > "${WORKDIR}/${B_P}/sbt"
