@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gs-pypi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-pypi/ChangeLog,v 1.3 2014/11/24 14:12:17 jauhien Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-pypi/ChangeLog,v 1.4 2015/04/22 07:39:44 jauhien Exp $
+
+  22 Apr 2015; Jauhien Piatlicki <jauhien@gentoo.org> gs-pypi-9999.ebuild:
+  new DB format support in master
 
   24 Nov 2014; Jauhien Piatlicki <jauhien@gentoo.org> gs-pypi-0.1.ebuild,
   gs-pypi-9999.ebuild:

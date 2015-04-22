@@ -5,4 +5,7 @@
     <email>jauhien@gentoo.org</email>
     <name>Jauhien Piatlicki</name>
   </maintainer>
+  <use>
+    <flag name="bson">Support BSON file format for package DB</flag>
+  </use>
 </pkgmetadata>
