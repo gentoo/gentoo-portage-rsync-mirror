@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hike
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hike/ChangeLog,v 1.18 2015/01/29 06:56:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hike/ChangeLog,v 1.19 2015/04/22 05:39:21 graaff Exp $
+
+  22 Apr 2015; Hans de Graaff <graaff@gentoo.org> hike-1.2.3-r1.ebuild:
+  Add ruby22.
 
   29 Jan 2015; Hans de Graaff <graaff@gentoo.org> hike-2.1.2.ebuild:
   Add ruby22.
