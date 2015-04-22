@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.68 2015/02/09 15:14:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.69 2015/04/22 11:56:33 zlogene Exp $
+
+  22 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> binutils-config-4-r2.ebuild:
+  amd64 stable wrt bug #547330
 
 *binutils-config-4-r2 (09 Feb 2015)
 
