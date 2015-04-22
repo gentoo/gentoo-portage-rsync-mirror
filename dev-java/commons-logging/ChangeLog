@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/commons-logging
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.72 2014/08/10 20:11:43 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.73 2015/04/22 21:50:06 monsieurp Exp $
+
+*commons-logging-1.2 (22 Apr 2015)
+
+  22 Apr 2015; Patrice Clement <monsieurp@gentoo.org>
+  +commons-logging-1.2.ebuild, +files/commons-logging-1.2-gentoo.patch,
+  +files/commons-logging-1.2-servletapi.patch, commons-logging-1.1.1.ebuild:
+  Version bump courtesy of Andreas Sturmlechner
+  <andreas.sturmlechner@gmail.com>. Fix bug 496036.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   commons-logging-1.1.1.ebuild:

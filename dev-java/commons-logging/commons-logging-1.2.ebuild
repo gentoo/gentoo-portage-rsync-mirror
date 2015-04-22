@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1.1.ebuild,v 1.14 2015/04/22 21:50:06 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.2.ebuild,v 1.1 2015/04/22 21:50:06 monsieurp Exp $
 
-EAPI="1"
+EAPI="5"
 JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-ant-2 java-osgi
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/commons/logging/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="avalon-logkit log4j servletapi avalon-framework"
 
 COMMON_DEP="
@@ -23,9 +23,9 @@ COMMON_DEP="
 	avalon-framework? ( dev-java/avalon-framework:4.2 )"
 # ATTENTION: Add this when log4j-1.3 is out
 #	=dev-java/log4j-1.3*
-RDEPEND=">=virtual/jre-1.4
+RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEP}"
-DEPEND=">=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.6
 	${COMMON_DEP}
 	test? ( dev-java/ant-junit:0 )"
 
@@ -33,10 +33,7 @@ S="${WORKDIR}/${P}-src/"
 
 RESTRICT="!servletapi? ( test )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+java_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	# patch to make the build.xml respect no servletapi
 	# TODO file upstream -nichoj
@@ -63,12 +60,12 @@ src_unpack() {
 EANT_BUILD_TARGET="compile"
 
 src_install() {
-	java-osgi_newjar-fromfile "target/${P}-SNAPSHOT.jar" "${FILESDIR}/${P}-manifest" "Apache Commons Logging"
-	java-pkg_newjar target/${PN}-api-${PV}-SNAPSHOT.jar ${PN}-api.jar
-	java-pkg_newjar target/${PN}-adapters-${PV}-SNAPSHOT.jar ${PN}-adapters.jar
+	java-osgi_newjar "target/${P}.jar" "org.apache.commons.logging" "Apache Commons Logging" "org.apache.commons.logging;version=\"${PV}\", org.apache.commons.logging.impl;version=\"${PV}\""
+	java-pkg_newjar target/${PN}-api-${PV}.jar ${PN}-api.jar
+	java-pkg_newjar target/${PN}-adapters-${PV}.jar ${PN}-adapters.jar
 
 	dodoc RELEASE-NOTES.txt || die
-	dohtml PROPOSAL.html STATUS.html || die
+	dohtml PROPOSAL.html || die
 	use doc && java-pkg_dojavadoc target/docs/
-	use source && java-pkg_dosrc src/java/org
+	use source && java-pkg_dosrc src/main/java/org
 }
