@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12.0.ebuild,v 1.1 2015/04/20 03:02:39 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.12.0.ebuild,v 1.2 2015/04/22 08:36:21 patrick Exp $
 
 EAPI=5
 
@@ -105,7 +105,7 @@ REQUIRED_USE="
 	kde? ( || ( X monolithic ) )
 	phonon? ( || ( X monolithic ) )
 	postgres? ( || ( server monolithic ) )
-	qt5? ( !ayatana phonon )
+	qt5? ( !ayatana )
 	syslog? ( || ( server monolithic ) )
 	webkit? ( || ( X monolithic ) )
 "
