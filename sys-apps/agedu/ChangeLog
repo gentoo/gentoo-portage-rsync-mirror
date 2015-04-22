@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/agedu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/agedu/ChangeLog,v 1.6 2014/10/24 12:21:39 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/agedu/ChangeLog,v 1.7 2015/04/22 11:28:22 blueness Exp $
+
+*agedu-20150422.3922 (22 Apr 2015)
+
+  22 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  +agedu-20150422.3922.ebuild, -agedu-10126.ebuild,
+  -agedu-20140925.10244.ebuild:
+  Version bump.  Remove old.
 
 *agedu-20141024.10297 (24 Oct 2014)
 
