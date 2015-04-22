@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.394 2015/04/22 11:56:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.395 2015/04/22 12:11:48 blueness Exp $
+
+  22 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  -files/curl-7.30.0-configure.patch, -files/curl-7.35.0-tests.patch,
+  -files/curl-7.36.0-hostcheck.patch, -files/curl-7.37.0-host-krb5-config.patch:
+  Remove old patches.
 
   22 Apr 2015; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg signature.

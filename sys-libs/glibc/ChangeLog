@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1045 2015/04/21 18:38:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1047 2015/04/22 12:23:35 zlogene Exp $
+
+  22 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> glibc-2.20-r2.ebuild:
+  arm stable wrt bug #544034
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> glibc-2.20-r2.ebuild:
   ppc stable wrt bug #544034
