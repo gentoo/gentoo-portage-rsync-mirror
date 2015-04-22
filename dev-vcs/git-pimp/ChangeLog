@@ -1,0 +1,8 @@
+# ChangeLog for dev-vcs/git-pimp
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-pimp/ChangeLog,v 1.1 2015/04/22 13:58:50 yac Exp $
+
+*git-pimp-0.7 (22 Apr 2015)
+
+  22 Apr 2015; Jan Matejka <yac@gentoo.org> +git-pimp-0.7.ebuild, +metadata.xml:
+  Add git-pimp, fixes bgo#546590  Thanks Ondřej Súkup for the initial ebuild
