@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.407 2015/03/26 11:36:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.408 2015/04/23 07:29:48 polynomial-c Exp $
+
+*nss-3.18.1 (23 Apr 2015)
+
+  23 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> +nss-3.18.1.ebuild,
+  +files/nss-cacert-class3.patch:
+  Version bump. Install man pages for utils (bug #516810). Include cacert.org
+  Class 3 PKI Key (bug #521462). Added dev-db/sqlite and sys-libs/zlib to
+  DEPEND (bug #544774).
 
   26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> nss-3.17.4.ebuild:
   Stable for x86, wrt bug #544056
