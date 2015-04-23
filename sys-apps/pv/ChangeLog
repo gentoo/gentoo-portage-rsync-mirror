@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.112 2015/04/21 19:16:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.113 2015/04/23 09:27:30 zlogene Exp $
+
+  23 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> pv-1.6.0.ebuild:
+  sparc stable wrt bug #546518
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> pv-1.6.0.ebuild:
   ppc stable wrt bug #546518
