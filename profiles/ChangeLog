@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9952 2015/04/23 16:41:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9953 2015/04/23 19:15:09 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Apr 2015; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Unmask newer isl & cloog #547480.
 
   23 Apr 2015; Markos Chandras <hwoarang@gentoo.org> package.mask:
   unmask minitube again

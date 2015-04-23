@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1063 2015/04/23 13:04:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1065 2015/04/23 19:21:44 vapier Exp $
+
+*gcc-5.1.0 (23 Apr 2015)
+
+  23 Apr 2015; Mike Frysinger <vapier@gentoo.org> +gcc-5.1.0.ebuild:
+  Version bump #547470.
+
+  23 Apr 2015; Mike Frysinger <vapier@gentoo.org> gcc-4.8.4.ebuild,
+  gcc-4.9.2.ebuild:
+  Fix building with isl-0.13+ #547480.
 
   23 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gcc-4.8.4.ebuild:
   sparc stable wrt bug #545124
