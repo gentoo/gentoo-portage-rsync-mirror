@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.410 2015/04/06 22:38:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.411 2015/04/23 13:14:26 polynomial-c Exp $
+
+*firefox-37.0.2 (23 Apr 2015)
+
+  23 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> +firefox-37.0.2.ebuild:
+  Security bump.
 
   06 Apr 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> firefox-37.0.1.ebuild,
   +files/firefox-37.0-jemalloc_configure_unbashify.patch:
