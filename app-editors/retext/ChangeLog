@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/retext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.20 2015/04/20 20:12:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.21 2015/04/22 23:49:07 mrueg Exp $
+
+*retext-5.0.2 (22 Apr 2015)
+
+  22 Apr 2015; Manuel Rüger <mrueg@gentoo.org> +retext-5.0.2.ebuild:
+  Version bump.
 
   20 Apr 2015; Justin Lecher <jlec@gentoo.org> -retext-4.0.1-r2.ebuild:
   Drop old

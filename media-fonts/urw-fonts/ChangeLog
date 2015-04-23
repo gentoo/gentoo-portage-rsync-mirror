@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/urw-fonts
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.63 2014/06/10 00:53:28 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.64 2015/04/22 23:59:03 mrueg Exp $
+
+  22 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -urw-fonts-2.4.6.ebuild:
+  Remove old.
 
   10 Jun 2014; Mike Frysinger <vapier@gentoo.org> urw-fonts-2.4.9.ebuild:
   Add arm64 love.
