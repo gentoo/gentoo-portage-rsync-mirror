@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.13 2015/01/17 19:13:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.14 2015/04/23 08:10:50 aballier Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ fi
 LICENSE="BSD-2"
 SLOT="0"
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64 ~mips ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="~amd64 ~mips ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 else
 	KEYWORDS=""
 fi
