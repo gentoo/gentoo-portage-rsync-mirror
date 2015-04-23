@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-30.0.1812.0.ebuild,v 1.1 2015/03/25 05:34:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-30.0.1835.6.ebuild,v 1.1 2015/04/23 04:36:42 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -16,9 +16,10 @@ LICENSE="OPERA-2014"
 SLOT="0"
 SRC_URI_BASE="http://get.geo.opera.com/pub/"
 SRC_URI="
-	amd64? ( "${SRC_URI_BASE}${PN}/${PV}/linux/${PN}_${PV}_amd64.deb" )
+	amd64?	( "${SRC_URI_BASE}${PN}/${PV}/linux/${PN}_${PV}_amd64.deb" )
+	x86?	( "${SRC_URI_BASE}${PN}/${PV}/linux/${PN}_${PV}_i386.deb" )
 "
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	dev-libs/expat
@@ -58,8 +59,15 @@ src_unpack() {
 }
 
 src_prepare() {
-	mv usr/lib/x86_64-linux-gnu usr/$(get_libdir) || die
-	rm -r usr/lib || die
+	case ${ARCH} in
+		amd64)
+			mv usr/lib/x86_64-linux-gnu usr/$(get_libdir) || die
+			rm -r usr/lib || die
+			;;
+		x86)
+			mv usr/lib/i386-linux-gnu/${PN} usr/$(get_libdir)/ || die
+			;;
+	esac
 
 	rm usr/bin/${PN} || die
 
