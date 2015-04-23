@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.189 2015/04/23 02:30:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.190 2015/04/23 17:01:33 williamh Exp $
+
+  23 Apr 2015; William Hubbs <williamh@gentoo.org> kmod-20.ebuild:
+  amd64 stable wrt #547502
 
   23 Apr 2015; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Add better descriptions for lzma and zlib.
