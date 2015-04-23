@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.4.ebuild,v 1.6 2015/02/22 20:22:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/meandmyshadow/meandmyshadow-0.4.ebuild,v 1.7 2015/04/23 21:38:04 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-utils gnome2-utils games
@@ -24,7 +24,13 @@ DEPEND="media-libs/libsdl[sound,video]
 	app-arch/libarchive
 	x11-libs/libX11
 	opengl? ( virtual/opengl )"
-RDEPEND="${DEPEND}"
+RDEPEND=${DEPEND}
+
+PATCHES=( "${FILESDIR}"/${P}-cmake.patch )
+
+src_prepare() {
+	cmake-utils_src_prepare
+}
 
 src_configure() {
 	local mycmakeargs=(
