@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.213 2015/03/13 19:42:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.214 2015/04/23 05:15:47 jer Exp $
+
+  23 Apr 2015; Jeroen Roovers <jer@gentoo.org> whois-5.1.5.ebuild:
+  Stable for PPC64 (bug #524264).
 
   13 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> whois-5.1.5.ebuild:
   x86 stable wrt bug #524264

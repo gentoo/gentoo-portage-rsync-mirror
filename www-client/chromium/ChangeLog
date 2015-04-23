@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1228 2015/04/22 04:42:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1229 2015/04/23 05:12:36 phajdan.jr Exp $
+
+  23 Apr 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-44.0.2376.0.ebuild:
+  Add available memory check to pkg_pretend, bug #471810 by hasufell.
 
 *chromium-44.0.2376.0 (22 Apr 2015)
 
