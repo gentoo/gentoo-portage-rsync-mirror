@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/enum34
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.17 2015/04/04 19:41:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enum34/ChangeLog,v 1.18 2015/04/23 22:33:58 jer Exp $
+
+  23 Apr 2015; Jeroen Roovers <jer@gentoo.org> enum34-1.0.4.ebuild:
+  Marked ~ppc64 (bug #533430).
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> enum34-1.0.4.ebuild,
   enum34-1.0.ebuild:
