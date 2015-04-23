@@ -6,6 +6,8 @@
 		<email>udev-bugs@gentoo.org</email>
 	</maintainer>
 	<use>
+		<flag name='lzma'>Enable support for XZ compressed modules</flag>
 		<flag name='tools'>Install module loading/unloading tools.</flag>
+		<flag name='zlib'>Enable support for gzipped modules</flag>
 	</use>
 </pkgmetadata>
