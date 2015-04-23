@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bmpanel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/ChangeLog,v 1.7 2014/12/20 19:51:23 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bmpanel/ChangeLog,v 1.8 2015/04/23 21:06:06 hwoarang Exp $
+
+  23 Apr 2015; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Drop myself as maintainer
 
   20 Dec 2014; Markos Chandras <hwoarang@gentoo.org> bmpanel-0.9.27-r1.ebuild:
   Update imlib dependency. Bug #533034
